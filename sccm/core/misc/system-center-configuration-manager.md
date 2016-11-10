@@ -6,6 +6,9 @@ ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
+ms.prod: configuration-manager
+ms.service: 
+ms.technology: configmgr-other
 ms.assetid: c8b8f6c1-b8d6-4528-8a06-e9dee1d68969
 caps.latest.revision: 4
 author: Brenduns
@@ -22,9 +25,8 @@ ms.openlocfilehash: aee3ba5e1014c96a16615988b416c04b51cc64ee
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 Willkommen bei Microsoft System Center Configuration Manager. Mit Configuration Manager können Sie effizientere IT-Dienste anbieten, indem Sie die sichere und skalierbare Bereitstellung von Software, die Verwaltung von Kompatibilitätseinstellungen sowie eine umfassende Assetverwaltung für Server, Desktops und mobile Geräte ermöglichen.  
-  
- Die neuesten Inhalte zu dieser Version von Configuration Manager finden Sie in der [Onlinedokumentation zu System Center Configuration Manager](https://go.microsoft.com/fwlink/?LinkID=533344).
 
+ Die neuesten Inhalte zu dieser Version von Configuration Manager finden Sie in der [Onlinedokumentation zu System Center Configuration Manager](https://go.microsoft.com/fwlink/?LinkID=533344).
 
 
 
