@@ -33,7 +33,7 @@ Mit der lokalen Verwaltung mobiler Geräte in System Center Configuration Manage
 >   
 >  -  Windows 10 Enterprise  
 > -   Windows 10 Pro  
-> -   Microsoft 10 Team \(ab Configuration Manager-Version 1602\)  
+> -   Microsoft 10 Team \(ab Configuration Manager Version 1602\)  
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise
 
