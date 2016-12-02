@@ -95,7 +95,7 @@ Da im Statussystem getrennte Konfigurationen für jeden Standort verwaltet werde
 
     5.  Sie können ein Speicherobjekt löschen, indem Sie das Objekt auswählen und auf die Schaltfläche **Löschen** klicken.  
 
-    6.  Wiederholen Sie die Schritte 7.b bis 7.e bei Bedarf. Klicken Sie abschließend auf **OK** , um die Zusammenfassungseigenschaften zu schließen.  
+    6.  Wiederholen Sie die Schritte 7.b bis 7.e. nach Bedarf. Klicken Sie abschließend auf **OK** , um die Zusammenfassungseigenschaften zu schließen.  
 
     7.  Klicken Sie auf **OK** , um das Dialogfeld **Statuszusammenfassungen** zu schließen und dieses Verfahren abzuschließen.  
 
@@ -204,7 +204,7 @@ Da im Statussystem getrennte Konfigurationen für jeden Standort verwaltet werde
 |Konfigurieren von E-Mail-Abonnements für Warnungen|Weitere Informationen finden Sie in diesem Thema im Abschnitt [Management tasks for alerts](#BKMK_Manage) .|  
 |Überwachen von Warnungen|Weitere Informationen finden Sie in diesem Thema im Abschnitt [Überwachen von Warnungen](#BKMK_MonitorAlerts)|  
 
-###  <a name="a-namebkmkmanagea-management-tasks-for-alerts"></a><a name="BKMK_Manage"></a> Verwaltungstasks für Warnungen  
+###  <a name="a-namebkmkmanagea-management-tasks-for-alerts"></a><a name="BKMK_Manage"></a> Management tasks for alerts  
 
 ##### <a name="to-manage-general-alerts"></a>So verwalten Sie allgemeine Warnungen  
 
@@ -241,9 +241,9 @@ Da im Statussystem getrennte Konfigurationen für jeden Standort verwaltet werde
 
 5.  Wählen Sie auf der Registerkarte **Warnungen** in der Liste **Bedingungen** die einzelnen Clientstatuswarnungen aus, und geben Sie für jede Warnung die folgenden Informationen an:  
 
-    -   **Warnungsname**: Übernehmen Sie den Standardnamen, oder geben Sie einen neuen Namen für die Warnung ein.  
+    -   **Warnungsname** – Übernehmen Sie den Standardnamen, oder geben Sie einen neuen Namen für die Warnung ein.  
 
-    -   **Warnungsschweregrad**: Wählen Sie in der Dropdownliste den Schweregrad aus, der in der Configuration Manager-Konsole angezeigt werden soll.  
+    -   **Warnungsschweregrad** – Wählen Sie in der Dropdownliste den Schweregrad aus, der in der Configuration Manager-Konsole angezeigt werden soll.  
 
     -   **Warnung auslösen**: Geben Sie den Schwellenwert für die Warnung in Prozent an.  
 
