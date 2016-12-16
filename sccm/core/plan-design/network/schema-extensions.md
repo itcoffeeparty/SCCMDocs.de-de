@@ -82,7 +82,7 @@ Bevor Sie [das Active Directory-Schema erweitern](https://msdnstage.redmond.corp
 
     -   **Veröffentlichen des Verwaltungspunkts in DNS oder WINS** und Konfigurieren von Clients für die Verwendung dieser Dienstidentifizierungsmethode.  
 
-**Portkonfiguration für die Kommunikation zwischen Client und Server** – Wenn ein Client installiert wird, wird er mit Portinformationen konfiguriert, die in Active Directory gespeichert sind. Wenn Sie den Port für die Kommunikation zwischen Client und Server für einen Standort später ändern, kann ein Client diesen neuen Port aus en Active Directory-Domänendienste abrufen.  
+**Portkonfiguration für die Kommunikation zwischen Client und Server** – Wenn ein Client installiert wird, wird er mit Portinformationen konfiguriert, die in Active Directory gespeichert sind. Wenn Sie den Port für die Kommunikation zwischen Client und Server für einen Standort später ändern, kann ein Client diesen neuen Port aus en Active Directory-Domänendienste abrufen.  
 
 -   **Problemumgehung:** Wenn Sie das Schema nicht erweitern, verwenden Sie eine der folgenden Optionen, um die neuen Portkonfigurationen für vorhandene Clients bereitzustellen:  
 

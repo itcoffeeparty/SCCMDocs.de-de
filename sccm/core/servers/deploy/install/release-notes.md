@@ -136,7 +136,7 @@ Dieses Problem wurde in Version 1606 behoben.
 ## <a name="client-deployment-and-upgrade"></a>Clientbereitstellung und -upgrade  
 
 ### <a name="expansion-to-central-administration-site-stops-automatic-client-upgrades"></a>Durch Erweiterung auf einen Standort der zentralen Verwaltung werden automatische Clientupgrades beendet  
-Gilt nur für Version 1511: Sie können keine automatischen Clientupgrades für einen Standort durchführen, der von einem primären Standort auf einen Standort der zentralen Verwaltung erweitert wurde. Wenn der Standort erweitert wird, wird der autorisierende Standort im Clientupgradepaket nicht ordnungsgemäß auf den neuen Standort der zentralen Verwaltung festgelegt, sodass automatische Clientupgrades nicht erfolgreich ausgeführt werden können. Dieses Problem besteht nur in Version 1511. In Version 1602 und höhere wurde das Problem behoben.  
+Gilt nur für Version 1511: Sie können keine automatischen Clientupgrades für einen Standort durchführen, der von einem primären Standort auf einen Standort der zentralen Verwaltung erweitert wurde. Wenn der Standort erweitert wird, wird der autorisierende Standort im Clientupgradepaket nicht ordnungsgemäß auf den neuen Standort der zentralen Verwaltung festgelegt, sodass automatische Clientupgrades nicht erfolgreich ausgeführt werden können. Dieses Problem besteht nur in Version 1511. In Version 1602 und höhere wurde das Problem behoben.  
 
 **Problemumgehung**: Führen Sie das folgende SQL-Skript in der Datenbank am Standort der zentralen Verwaltung aus. Nach Ausführung des Skripts sollten automatische Clientupgrades normal ausgeführt werden.  
 
@@ -187,24 +187,24 @@ Sie können „smsts.log“ anzeigen, um zu bestimmen, ob bei der Installation e
 
 **Problemumgehung**: Verwenden Sie die **_TSAppInstallStatus** -Variable in einem nachfolgenden Schritt in einer Tasksequenz als eine Bedingung, wodurch die Tasksequenz fehlschlägt, wenn bei einer der dynamischen Anwendungen ein Fehler auftritt.  
 
-### <a name="smb-might-not-work-properly-after-you-use-a-task-sequence-to-install-windows-10"></a>SMB funktioniert nach Verwendung einer Tasksequenz zur Installation von Windows 10 möglicherweise nicht ordnungsgemäß  
-Wenn Sie zum Installieren von Windows 10 eine Tasksequenz verwenden, funktioniert SMB möglicherweise nicht ordnungsgemäß, nachdem der Configuration Manager-Client installiert wurde. Bei folgenden Tasksequenzschritten tritt möglicherweise ein Fehler auf:  
+### <a name="smb-might-not-work-properly-after-you-use-a-task-sequence-to-install-windows-10"></a>SMB funktioniert nach Verwendung einer Tasksequenz zur Installation von Windows 10 möglicherweise nicht ordnungsgemäß  
+Wenn Sie zum Installieren von Windows 10 eine Tasksequenz verwenden, funktioniert SMB möglicherweise nicht ordnungsgemäß, nachdem der Configuration Manager-Client installiert wurde. Bei folgenden Tasksequenzschritten tritt möglicherweise ein Fehler auf:  
 
 -   Benutzerzustand wiederherstellen – bei Verwendung mit einem Zustandsmigrationspunkt  
 
 -   Verbindung mit Netzwerkordner herstellen  
 
-Sie können den Computer von einer Administratoreingabeaufforderung (F8) weiterhin pingen, bei jeglichem SMB-Netzwerkdatenverkehr (beispielsweise NET USE von einer Eingabeaufforderung) tritt jedoch der Fehler 1231 auf – die Netzwerkadresse ist nicht erreichbar.  
+Sie können den Computer von einer Administratoreingabeaufforderung (F8) weiterhin pingen, bei jeglichem SMB-Netzwerkdatenverkehr (beispielsweise NET USE von einer Eingabeaufforderung) tritt jedoch der Fehler 1231 auf – die Netzwerkadresse ist nicht erreichbar.  
 
 **Problemumgehung**:  
 Fügen Sie nach dem Tasksequenzschritt „Windows und ConfigMgr einrichten“ einen Tasksequenzschritt „Befehlszeile ausführen“ ein, um die Tasksequenz anzuhalten, und starten Sie anschließend den Arbeitsstationsdienst wie folgt:    
 **net stop workstation /y & net start workstation**  
 
 ### <a name="servicing-plans-create-a-lot-of-duplicate-software-update-groups-and-deployments-by-default"></a>Wartungspläne erstellen standardmäßig eine Vielzahl von doppelten Softwareupdategruppen und -bereitstellungen  
-Der Assistent zum Erstellen eines Wartungsplans wird zurzeit standardmäßig nach jedem Synchronisierungsvorgang für Softwareupdates ausgeführt. Bei jeder Ausführung erstellt der Assistent eine neue Softwareupdategruppe und -bereitstellung. Wenn Sie z. B. über einen Synchronisierungszeitplan für Softwareupdates verfügen, der mehrmals täglich ausgeführt wird, erstellt der Assistent zum Erstellen eines Wartungsplans jeden Tag mehrere, wahrscheinlich identische, Softwareupdategruppen und -bereitstellungen.  
+Der Assistent zum Erstellen eines Wartungsplans wird zurzeit standardmäßig nach jedem Synchronisierungsvorgang für Softwareupdates ausgeführt. Bei jeder Ausführung erstellt der Assistent eine neue Softwareupdategruppe und -bereitstellung. Wenn Sie z. B. über einen Synchronisierungszeitplan für Softwareupdates verfügen, der mehrmals täglich ausgeführt wird, erstellt der Assistent zum Erstellen eines Wartungsplans jeden Tag mehrere, wahrscheinlich identische, Softwareupdategruppen und -bereitstellungen.  
 
 **Problemumgehung**:    
-Nachdem Sie einen Wartungsplan erstellt haben, öffnen Sie die Eigenschaften des Plans, wechseln Sie zur Registerkarte **Auswertungszeitplan**, wählen Sie **Regel nach Zeitplan ausführen** aus, klicken Sie auf **Anpassen**, und erstellen Sie einen benutzerdefinierten Zeitplan. Sie können den Wartungsplan beispielsweise alle 60 Tage ausführen.  
+Nachdem Sie einen Wartungsplan erstellt haben, öffnen Sie die Eigenschaften des Plans, wechseln Sie zur Registerkarte **Auswertungszeitplan**, wählen Sie **Regel nach Zeitplan ausführen** aus, klicken Sie auf **Anpassen**, und erstellen Sie einen benutzerdefinierten Zeitplan. Sie können den Wartungsplan beispielsweise alle 60 Tage ausführen.  
 
 ## <a name="mobile-device-management"></a>Verwaltung mobiler Geräte  
 

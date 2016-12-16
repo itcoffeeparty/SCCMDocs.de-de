@@ -88,7 +88,7 @@ ms.openlocfilehash: 862291f52d5a1bb34fb5483806972fcf70f158a8
 
 **Anforderungen und Einschränkungen:**  
 
--   Alle Clientfeatures werden auf unterstützten Windows Embedded-Systemen ohne aktivierte Schreibfilter unterstützt.  
+-   Alle Clientfeatures werden auf unterstützten Windows Embedded-Systemen ohne aktivierte Schreibfilter unterstützt.  
 
 -   Clients, die einen der folgenden Filter verwenden, werden für alle Features (ausgenommen Energieverwaltung) unterstützt:  
 
@@ -98,7 +98,7 @@ ms.openlocfilehash: 862291f52d5a1bb34fb5483806972fcf70f158a8
 
     -   Vereinheitlichte Schreibfilter (Unified Write Filters, UWF)  
 
--   Der Anwendungskatalog wird für Windows Embedded-Geräte grundsätzlich nicht unterstützt.  
+-   Der Anwendungskatalog wird für Windows Embedded-Geräte grundsätzlich nicht unterstützt.  
 
 -   Bevor Sie erkannte Schadsoftware auf Windows XP-basierten Windows Embedded-Geräten überwachen können, müssen Sie das Microsoft Windows-WMI-Skriptpaket auf dem eingebetteten Gerät installieren. Verwenden Sie Windows Embedded Target Designer zur Installation dieses Pakets. Die Dateien **WBEMDISP.DLL** und **WBEMDISP.TLB** müssen vorhanden und im Ordner **%windir%\System32\WBEM** auf dem Embedded-Gerät registriert sein, um sicherzustellen, dass die erkannte Schadsoftware gemeldet wird.  
 
@@ -137,13 +137,13 @@ ms.openlocfilehash: 862291f52d5a1bb34fb5483806972fcf70f158a8
 
 **Anforderungen und Einschränkungen:**  
 
--   Zur Installation des Clients für mobile Geräte sind 0,78 MB Speicherplatz erforderlich. Die Protokollierung auf dem mobilen Gerät kann bis zu 256 KB zusätzlichen Speicherplatz erfordern.    
+-   Zur Installation des Clients für mobile Geräte sind 0,78 MB Speicherplatz erforderlich. Die Protokollierung auf dem mobilen Gerät kann bis zu 256 KB zusätzlichen Speicherplatz erfordern.    
 
 -   Die für diese mobilen Geräte verfügbaren Funktionen sind von Plattform und Clienttyp abhängig. Informationen dazu, welche Verwaltungsfunktionen Configuration Manager für den Legacyclient für mobile Geräte unterstützt, finden Sie unter [Choose a device management solution for System Center Configuration Manager (Wählen einer Geräteverwaltungslösung für System Center Configuration Manager)](../../../core/plan-design/choose-a-device-management-solution.md).  
 
 **Unterstützte Betriebssysteme:**  
 
--   Windows CE 7.0 (ARM- und x86-Prozessoren)  
+-   Windows CE 7.0 (ARM- und x86-Prozessoren)  
 
 **Zu den unterstützten Sprachen zählen:**  
 
@@ -197,7 +197,7 @@ ms.openlocfilehash: 862291f52d5a1bb34fb5483806972fcf70f158a8
 
 -   Eine Übersicht über die Verwaltungsfunktionen, die für Computer unterstützt werden, auf denen Linux oder UNIX ausgeführt wird, finden Sie unter [How to deploy clients to UNIX and Linux servers in System Center Configuration Manager (Bereitstellen von Clients auf UNIX- und Linux-Servern in System Center Configuration Manager)](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md).  
 
--   Für unterstützte Versionen von Linux- und UNIX-Clients schließt die aufgeführte Version alle nachfolgenden Nebenversionen ein. Wenn beispielsweise Unterstützung für CentOS Version 6 angegeben ist, schließt dies alle nachfolgenden Nebenversionen von CentOS 6 ein, z. B. CentOS 6.3. Wenn die Unterstützung für ein Betriebssystem angegeben ist, das Service Packs verwendet (z. B. SUSE Linux Enterprise Server 11 SP1), schließt die Unterstützung entsprechend alle nachfolgenden Service Packs für diese Betriebssystemversion ein.  
+-   Für unterstützte Versionen von Linux- und UNIX-Clients schließt die aufgeführte Version alle nachfolgenden Nebenversionen ein. Wenn beispielsweise Unterstützung für CentOS Version 6 angegeben ist, schließt dies alle nachfolgenden Nebenversionen von CentOS 6 ein, z. B. CentOS 6.3. Wenn die Unterstützung für ein Betriebssystem angegeben ist, das Service Packs verwendet (z. B. SUSE Linux Enterprise Server 11 SP1), schließt die Unterstützung entsprechend alle nachfolgenden Service Packs für diese Betriebssystemversion ein.  
 
 -   Informationen zu Clientinstallationspaketen und dem Universal Agent finden Sie unter [Bereitstellen von Clients auf UNIX- und Linux-Servern in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md).  
 

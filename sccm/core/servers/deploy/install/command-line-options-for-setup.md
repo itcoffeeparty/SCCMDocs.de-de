@@ -765,7 +765,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
          80 = Datenbankwiederherstellung überspringen  
 
-    -   **Details:** Hiermit wird angegeben, wie die Standortdatenbank in SQL Server durch Setup wiederhergestellt wird.  
+    -   **Details:** Hiermit wird angegeben, wie die Standortdatenbank in SQL Server durch Setup wiederhergestellt wird.  
 
 -   **Schlüsselname:** ReferenceSite  
 
@@ -1029,7 +1029,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
          80 = Datenbankwiederherstellung überspringen  
 
-    -   **Details:** Hiermit wird angegeben, wie die Standortdatenbank in SQL Server durch Setup wiederhergestellt wird.  
+    -   **Details:** Hiermit wird angegeben, wie die Standortdatenbank in SQL Server durch Setup wiederhergestellt wird.  
 
 -   **Schlüsselname:** SiteServerBackupLocation  
 
