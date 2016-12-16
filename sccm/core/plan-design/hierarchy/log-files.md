@@ -315,7 +315,7 @@ Vom Configuration Manager-Client für Macintosh-Computer werden Informationen in
 |inboxmon.log|Zeichnet Aktivitäten in Zusammenhang mit der Verarbeitung von Eingangsboxdateien und Updates von Leistungsindikatoren auf.|Standortserver|  
 |invproc.log|Zeichnet die Weiterleitung von MIF-Dateien von einem sekundären Standort an dessen übergeordneten Standort auf.|Standortserver|  
 |migmctrl.log|Zeichnet Informationen zu Migrationsaktionen auf, einschließlich Migrationsaufträge, freigegebener Verteilungspunkte und Upgrades von Verteilungspunkten.|Der Standort der obersten Ebene in der Configuration Manager-Hierarchie und jeder untergeordnete primäre Standort<br /><br /> Verwenden Sie in einer Hierarchie mit mehreren primären Standorten die Protokolldatei, die auf dem Standort der zentralen Verwaltung erstellt wurde.|  
-|mpcontrol.log|Zeichnet die Registrierung des Verwaltungspunks in WINS auf. Zeichnet alle 10 Minuten die Verfügbarkeit des Verwaltungspunkts auf.|Standortsystemserver|  
+|mpcontrol.log|Zeichnet die Registrierung des Verwaltungspunks in WINS auf. Zeichnet alle 10 Minuten die Verfügbarkeit des Verwaltungspunkts auf.|Standortsystemserver|  
 |mpfdm.log|Zeichnet die Aktionen der Verwaltungspunktkomponente auf, von der Clientdateien in den entsprechenden Ordner INBOXES auf dem Standortserver verschoben werden.|Standortsystemserver|  
 |mpMSI.log|Zeichnet Details zur Installation des Verwaltungspunkts auf.|Standortserver|  
 |MPSetup.log|Zeichnet den Wrapperprozess der Verwaltungspunktinstallation auf.|Standortserver|  

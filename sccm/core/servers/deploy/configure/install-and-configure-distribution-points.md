@@ -30,7 +30,7 @@ Verteilungspunkte in System Center Configuration Manager werden installiert, um 
 
 -   **Einstellungen, die nur beider Installation eines Verteilungspunkts verfügbar sind:**  
 
-    -   Zulassen, dass Configuration Manager IIS auf dem Verteilungspunktcomputer installiert  
+    -   Zulassen, dass Configuration Manager IIS auf dem Verteilungspunktcomputer installiert  
 
     -   Konfigurieren der Laufwerksspeicherplatzeinstellungen für den Verteilungspunkt  
 
