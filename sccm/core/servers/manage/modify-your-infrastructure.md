@@ -104,7 +104,7 @@ Stellen Sie sich beispielsweise ein Szenario vor, in dem Sie die Configuration M
 
 ##### <a name="to-temporarily-disable-a-console-language-on-an-existing-configuration-manager-console-installation"></a>So deaktivieren Sie vorübergehend eine Konsolensprache bei einer vorhandenen Configuration Manager-Konsoleninstallation  
 
-1.  Schließen Sie auf dem Computer, auf dem die Configuration Manager-Konsole ausgeführt wird, die Configuration Manager-Konsole.  
+1.  Schließen Sie auf dem Computer, auf dem die Configuration Manager-Konsole ausgeführt wird, die Configuration Manager-Konsole.  
 
 2.  Wechseln Sie in Windows Explorer auf dem Computer mit der Configuration Manager-Konsole zu &lt;*ConsoleInstallationPath*>\Bin\.  
 
@@ -207,9 +207,9 @@ Sie können einen SPN für das SQL Server-Dienstkonto des Standortdatenbankserve
     > [!IMPORTANT]  
     >  Wenn Sie einen SPN für einen gruppierten SQL Server erstellen, müssen Sie den virtuellen Namen des SQL Server-Clusters als SQL Server-Computernamen angeben.  
 
-    -   Zum Erstellen eines SPN für den NetBIOS-Namen des SQL Server-Computers geben Sie den folgenden Befehl ein: **setspn -A MSSQLSvc/&lt;SQL Server-Computername\>:1433 &lt;Domäne\Konto>**  
+    -   Zum Erstellen eines SPN für den NetBIOS-Namen des SQL Server-Computers geben Sie den folgenden Befehl ein: **setspn -A MSSQLSvc/&lt;SQL Server-Computername\>:1433 &lt;Domäne\Konto>**  
 
-    -   Zum Erstellen eines SPN für den FQDN des SQL Server-Computers geben Sie den folgenden Befehl ein: **setspn -A MSSQLSvc/&lt;SQL Server- FQDN\>:1433 &lt;Domäne\Konto>**  
+    -   Zum Erstellen eines SPN für den FQDN des SQL Server-Computers geben Sie den folgenden Befehl ein: **setspn -A MSSQLSvc/&lt;SQL Server- FQDN\>:1433 &lt;Domäne\Konto>**  
 
     > [!NOTE]  
     >  Der Befehl zum Registrieren eines SPN für eine benannte SQL Server-Instanz ist der gleiche wie zum Registrieren eines SPN für eine Standardinstanz. Allerdings muss die Portnummer mit der von der benannten Instanz verwendeten Portnummer übereinstimmen.  
@@ -230,7 +230,7 @@ Sie können einen SPN für das SQL Server-Dienstkonto des Standortdatenbankserve
 
 3.  Erweitern Sie im Konsolenbereich die Domäne des Standortservers, erweitern Sie **DC=&lt;definierter Name des Servers\>** und anschließend **CN=Benutzer**, klicken Sie mit der rechten Maustaste auf **CN=&lt;Dienstkontobenutzer\>**, und klicken Sie dann auf **Eigenschaften**.  
 
-4.  Überprüfen Sie im Dialogfeld **CN=&lt;Eigenschaften von \>Dienstkontobenutzer** den Wert **servicePrincipalName**, um sicherzustellen, dass ein gültiger SPN erstellt und dem richtigen SQL Server-Computer zugeordnet wurde.  
+4.  Überprüfen Sie im Dialogfeld **CN=&lt;Eigenschaften von \>Dienstkontobenutzer** den Wert **servicePrincipalName**, um sicherzustellen, dass ein gültiger SPN erstellt und dem richtigen SQL Server-Computer zugeordnet wurde.  
 
 #### <a name="to-change-the-sql-server-service-account-from-local-system-to-a-domain-user-account"></a>So ändern Sie das SQL Server-Dienstkonto von einem lokalen Systembenutzerkonto in ein Domänenbenutzerkonto  
 

@@ -181,7 +181,7 @@ Weitere Informationen zu Voraussetzungsprüfungen finden Sie unter [List of Prer
 
     -   **/INSTALLSQLEXPRESS**  
 
-         Nicht erforderlich. – Mit dieser Option wird überprüft, ob SQL Server Express auf dem angegebenen Computer installiert werden kann.  
+         Nicht erforderlich. – Mit dieser Option wird überprüft, ob SQL Server Express auf dem angegebenen Computer installiert werden kann.  
 
     -   **/Ssbport**  
 
@@ -190,7 +190,7 @@ Weitere Informationen zu Voraussetzungsprüfungen finden Sie unter [List of Prer
 
     -   **/Sqlport**  
 
-         Nicht erforderlich. – Mit dieser Option wird überprüft, ob eine Firewallausnahme eingerichtet wurde, um die Verbindung mit dem SQL Server-Dienstport zuzulassen, und ob der Port von keiner anderen benannten SQL Server-Instanz verwendet wird. Der Standardport ist 1433.  
+         Nicht erforderlich. – Mit dieser Option wird überprüft, ob eine Firewallausnahme eingerichtet wurde, um die Verbindung mit dem SQL Server-Dienstport zuzulassen, und ob der Port von keiner anderen benannten SQL Server-Instanz verwendet wird. Der Standardport ist 1433.  
 
     -   **InstallDir &lt;*ConfigMgrInstallationPath*>**  
 

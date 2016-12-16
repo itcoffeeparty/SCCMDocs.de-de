@@ -127,7 +127,7 @@ Diese Apps werden im Knoten **Anwendungen** der Configuration Manager-Konsole an
  Weitere Informationen finden Sie unter [Manage access to O365 services for PCs managed by System Center Configuration Manager (Verwalten des Zugriffs auf Office 365-Dienste für PCs, die von System Center Configuration Manager verwalteten)](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
 
 ### <a name="restricting-access-based-on-device-health-attestation-status"></a>Einschränken des Zugriffs basierend auf dem Status des Integritätsnachweises für Geräte  
- Sie können jetzt den Zugriff auf E-Mail- und Office 365-Dienste basierend auf der Integrität von Geräten gemäß der Meldung des Health Attestation-Diensts einschränken. Darüber hinaus werden Geräte, die von Intune verwaltet werden, in die Geräte-Integritätsberichte einbezogen.  
+ Sie können jetzt den Zugriff auf E-Mail- und Office 365-Dienste basierend auf der Integrität von Geräten gemäß der Meldung des Health Attestation-Diensts einschränken. Darüber hinaus werden Geräte, die von Intune verwaltet werden, in die Geräte-Integritätsberichte einbezogen.  
 
  Eine neue Kompatibilitätsregel wurde der Configuration Manager-Konsole hinzugefügt, mit der Sie angeben können, ob den Geräten basierend auf ihrem Integritätsstatus der Zugriff erlaubt werden soll oder nicht.   Details zum Health Attestation-Dienst und zur Meldung der Integrität der Geräte in Intune finden Sie unter [Health attestation for System Center Configuration Manager (Integritätsnachweis für System Center Configuration Manager)](../../../core/servers/manage/health-attestation.md).  
 

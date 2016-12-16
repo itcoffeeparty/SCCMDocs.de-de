@@ -43,9 +43,9 @@ Die unterstützen Zahlen in diesem Artikel basieren auf Verwendung der empfohlen
 
 **Primärer Standort:**  
 
--   Jeder primäre Standort unterstützt bis zu 250 sekundäre Standorte.  
+-   Jeder primäre Standort unterstützt bis zu 250 sekundäre Standorte.  
 
--   Die maximale Anzahl sekundärer Standorte pro primärem Standort wurde auf Basis von kontinuierlich verbundenen und stabilen WAN (Wide Area Network)-Verbindungen ermittelt. Für Standorte mit weniger als 500 Clients können Sie einen Verteilungspunkt anstatt eines sekundären Standorts erwägen.  
+-   Die maximale Anzahl sekundärer Standorte pro primärem Standort wurde auf Basis von kontinuierlich verbundenen und stabilen WAN (Wide Area Network)-Verbindungen ermittelt. Für Standorte mit weniger als 500 Clients können Sie einen Verteilungspunkt anstatt eines sekundären Standorts erwägen.  
 
  Informationen zur Anzahl von Clients und Geräten, die von einem primären Standort unterstützt werden können, finden Sie in diesem Thema unter [Anzahl der Clients für Standorte und Hierarchien](#bkmk_clientnumbers).  
 
@@ -62,7 +62,7 @@ Die unterstützen Zahlen in diesem Artikel basieren auf Verwendung der empfohlen
     > [!TIP]  
     >  Es wird empfohlen, den Anwendungskatalog-Websitepunkt und den Anwendungskatalog-Webservicepunkt gemeinsam auf dem gleichen Standortsystem zu installieren, wenn die Dienste für Clients im Intranet bereitgestellt werden.  
 
-    -   Planen Sie aus Leistungsgründen, bis zu 50.000 Clients pro Instanz zu unterstützen.  
+    -   Planen Sie aus Leistungsgründen, bis zu 50.000 Clients pro Instanz zu unterstützen.  
 
     -   Jede Instanz dieser Standortsystemrolle unterstützt die maximale Anzahl von Clients, die von der Hierarchie unterstützt werden.  
 
@@ -75,7 +75,7 @@ Die unterstützen Zahlen in diesem Artikel basieren auf Verwendung der empfohlen
     > [!TIP]  
     >  Es wird empfohlen, den Anwendungskatalog-Websitepunkt und den Anwendungskatalog-Webservicepunkt gemeinsam auf dem gleichen Standortsystem zu installieren, wenn die Dienste für Clients im Intranet bereitgestellt werden.  
 
-    -   Planen Sie aus Leistungsgründen, bis zu 50.000 Clients pro Instanz zu unterstützen.  
+    -   Planen Sie aus Leistungsgründen, bis zu 50.000 Clients pro Instanz zu unterstützen.  
 
     -   Jede Instanz dieser Standortsystemrolle unterstützt die maximale Anzahl von Clients, die von der Hierarchie unterstützt werden.  
 
@@ -83,7 +83,7 @@ Die unterstützen Zahlen in diesem Artikel basieren auf Verwendung der empfohlen
 
 -   Verteilungspunkte pro Standort:  
 
-    -   An jedem primären und sekundären Standort werden bis zu 250 Verteilungspunkte unterstützt.  
+    -   An jedem primären und sekundären Standort werden bis zu 250 Verteilungspunkte unterstützt.  
 
     -   Jeder primäre und sekundäre Standort unterstützt bis zu 2.000 zusätzliche Verteilungspunkte, die als Pullverteilungspunkte konfiguriert sind. **Beispiel:** Ein einzelner primärer Standort unterstützt 2250 Verteilungspunkte, wenn 2000 dieser Verteilungspunkte als Pullverteilungspunkte konfiguriert sind.  
 
@@ -91,7 +91,7 @@ Die unterstützen Zahlen in diesem Artikel basieren auf Verwendung der empfohlen
 
     -   Ein Pullverteilungspunkt verhält sich wie ein Client, wenn er auf Inhalte von einem Quellverteilungspunkt zugreift.  
 
--   An jedem primären Standort werden insgesamt bis zu 5.000 Verteilungspunkte unterstützt. Darin eingeschlossen sind alle Verteilungspunkte des primären Standorts und alle Verteilungspunkte, die zu den untergeordneten sekundären Standorten des primären Standorts gehören.  
+-   An jedem primären Standort werden insgesamt bis zu 5.000 Verteilungspunkte unterstützt. Darin eingeschlossen sind alle Verteilungspunkte des primären Standorts und alle Verteilungspunkte, die zu den untergeordneten sekundären Standorten des primären Standorts gehören.  
 
 -   Jeder Verteilungspunkt unterstützt eine Gesamtgröße von bis zu 10.000 Paketen und Anwendungen.  
 
@@ -103,11 +103,11 @@ Die unterstützen Zahlen in diesem Artikel basieren auf Verwendung der empfohlen
 
 **Fallbackstatuspunkt:**  
 
--   Von jedem Fallbackstatuspunkt können bis zu 100.000 Clients unterstützt werden.  
+-   Von jedem Fallbackstatuspunkt können bis zu 100.000 Clients unterstützt werden.  
 
 **Verwaltungspunkt:**  
 
--   Jeder primäre Standort unterstützt bis zu 15 Verwaltungspunkte.  
+-   Jeder primäre Standort unterstützt bis zu 15 Verwaltungspunkte.  
 
     > [!TIP]  
     >  Installieren Sie Verwaltungspunkte nicht auf Servern, die über eine langsame Verknüpfung vom primären Standortserver oder Standortdatenbankserver verbunden sind.  
@@ -118,7 +118,7 @@ Die unterstützen Zahlen in diesem Artikel basieren auf Verwendung der empfohlen
 
 **Softwareupdatepunkt:**  
 
--   Von einem Softwareupdatepunkt, der auf dem Standortserver installiert ist, können bis zu 25.000 Clients unterstützt werden.  
+-   Von einem Softwareupdatepunkt, der auf dem Standortserver installiert ist, können bis zu 25.000 Clients unterstützt werden.  
 
 -   Ein remote vom Standortserver installierter Softwareupdatepunkt kann bis zu 150.000 Clients unterstützen, wenn der Remotecomputer die WSUS-Anforderungen zur Unterstützung dieser Anzahl von Clients erfüllt.  
 

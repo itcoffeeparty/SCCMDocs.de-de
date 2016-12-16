@@ -61,11 +61,11 @@ In Ihrer System Center Configuration Manager-Umgebung können Sie Tasksequenzen 
 |Tasksequenzschritt 5|Nicht festgelegt.|  
 |Tasksequenzschritt 6|Nicht festgelegt.|  
 
--   Tritt bei Tasksequenzschritt 1 ein Fehler auf, wird die Tasksequenz mit Tasksequenzschritt 2 fortgesetzt.  
+-   Tritt bei Tasksequenzschritt 1 ein Fehler auf, wird die Tasksequenz mit Tasksequenzschritt 2 fortgesetzt.  
 
--   Tritt bei Tasksequenzschritt 2 ein Fehler auf, wird die Tasksequenz nicht mit Tasksequenzschritt 3 fortgesetzt, sondern mit den Tasksequenzschritten 4 und 5, die sich in einer anderen Tasksequenzgruppe befinden.  
+-   Tritt bei Tasksequenzschritt 2 ein Fehler auf, wird die Tasksequenz nicht mit Tasksequenzschritt 3 fortgesetzt, sondern mit den Tasksequenzschritten 4 und 5, die sich in einer anderen Tasksequenzgruppe befinden.  
 
--   Tritt bei Tasksequenzschritt 4 ein Fehler auf, werden keine weiteren Schritte ausgeführt. Die Tasksequenz kann nicht ausgeführt werden, da die Einstellung **Bei Fehler fortsetzen** für die Tasksequenzgruppe 2 nicht konfiguriert wurde.  
+-   Tritt bei Tasksequenzschritt 4 ein Fehler auf, werden keine weiteren Schritte ausgeführt. Die Tasksequenz kann nicht ausgeführt werden, da die Einstellung **Bei Fehler fortsetzen** für die Tasksequenzgruppe 2 nicht konfiguriert wurde.  
 
  Sie müssen den Tasksequenzgruppen Namen zuweisen. Allerdings muss der Gruppenname nicht eindeutig sein. Sie können auch eine optionale Beschreibung für die Tasksequenzgruppe angeben.  
 
@@ -87,7 +87,7 @@ In Ihrer System Center Configuration Manager-Umgebung können Sie Tasksequenzen 
  Beispiel: Eine Tasksequenz enthält den Tasksequenzschritt **Einer Domäne oder Arbeitsgruppe beitreten**. Die Tasksequenz kann für verschiedene Sammlungen bereitgestellt werden, wobei die Sammlungsmitgliedschaft durch die Domänenmitgliedschaft bestimmt wird. In diesem Fall können Sie eine sammlungsspezifische Tasksequenzvariable für den Domänennamen jeder Sammlung festlegen und dann anhand dieser Tasksequenzvariablen den jeweiligen Domänennamen in der Tasksequenz angeben.  
 
 ###  <a name="a-namebkmktscreatevariablesa-create-task-sequence-variables"></a><a name="BKMK_TSCreateVariables"></a> Erstellen von Tasksequenzvariablen  
- Sie können neue Tasksequenzvariablen hinzufügen, um die Schritte in einer Tasksequenz anzupassen und zu steuern. Zum Beispiel können Sie eine Tasksequenzvariable erstellen, um eine Einstellung für einen integrierten Tasksequenzschritt außer Kraft zu setzen. Sie können auch eine benutzerdefinierte Tasksequenzvariable erstellen, die in Bedingungen, Befehlszeilen oder benutzerdefinierten Schritten in der Tasksequenz verwendet werden kann. Wenn Sie eine Tasksequenzvariable erstellen, werden diese Tasksequenzvariable und der ihr zugeordnete Wert innerhalb der Tasksequenzumgebung beibehalten, auch wenn der Zielcomputer von der Sequenz neu gestartet wird. Die Variable und ihr Wert können innerhalb der Tasksequenz in verschiedenen Betriebssystemumgebungen verwendet werden. Sie können sie beispielsweise in einem vollständigen Windows-Betriebssystem und in der Windows PE-Umgebung einsetzen.  
+ Sie können neue Tasksequenzvariablen hinzufügen, um die Schritte in einer Tasksequenz anzupassen und zu steuern. Zum Beispiel können Sie eine Tasksequenzvariable erstellen, um eine Einstellung für einen integrierten Tasksequenzschritt außer Kraft zu setzen. Sie können auch eine benutzerdefinierte Tasksequenzvariable erstellen, die in Bedingungen, Befehlszeilen oder benutzerdefinierten Schritten in der Tasksequenz verwendet werden kann. Wenn Sie eine Tasksequenzvariable erstellen, werden diese Tasksequenzvariable und der ihr zugeordnete Wert innerhalb der Tasksequenzumgebung beibehalten, auch wenn der Zielcomputer von der Sequenz neu gestartet wird. Die Variable und ihr Wert können innerhalb der Tasksequenz in verschiedenen Betriebssystemumgebungen verwendet werden. Sie können sie beispielsweise in einem vollständigen Windows-Betriebssystem und in der Windows PE-Umgebung einsetzen.  
 
  In der folgenden Tabelle werden die Methoden zum Erstellen einer Tasksequenzvariablen beschrieben und zusätzliche Informationen zur Verwendung aufgeführt.  
 
@@ -103,7 +103,7 @@ In Ihrer System Center Configuration Manager-Umgebung können Sie Tasksequenzen 
 
  Zum Löschen einer Tasksequenzvariablen aus der Tasksequenzumgebung stehen Ihnen die gleichen Methoden wie zum Erstellen einer Tasksequenzvariablen zur Verfügung. Zum Löschen einer Variablen aus der Tasksequenzumgebung legen Sie den Wert der Tasksequenzvariablen auf eine leere Zeichenfolge fest.  
 
- Sie können die Methoden kombinieren, um eine Umgebungstasksequenz-Variable auf verschiedene Werte für die gleiche Sequenz festzulegen. In einem erweiterten Szenario können Sie z. B. die Standardwerte für Schritte in einer Sequenz mit dem Tasksequenz-Editor festlegen und dann einen benutzerdefinierten Variablenwert mithilfe der verschiedenen Erstellungsmethoden festlegen. In der folgenden Liste werden die Regeln beschrieben, von denen bestimmt wird, welcher Wert beim Erstellen einer Tasksequenzvariablen anhand mehrerer Methoden verwendet wird.  
+ Sie können die Methoden kombinieren, um eine Umgebungstasksequenz-Variable auf verschiedene Werte für die gleiche Sequenz festzulegen. In einem erweiterten Szenario können Sie z. B. die Standardwerte für Schritte in einer Sequenz mit dem Tasksequenz-Editor festlegen und dann einen benutzerdefinierten Variablenwert mithilfe der verschiedenen Erstellungsmethoden festlegen. In der folgenden Liste werden die Regeln beschrieben, von denen bestimmt wird, welcher Wert beim Erstellen einer Tasksequenzvariablen anhand mehrerer Methoden verwendet wird.  
 
 1.  Mit dem Schritt **Tasksequenzvariable festlegen** werden alle anderen Erstellungsmethoden außer Kraft gesetzt.  
 
@@ -117,9 +117,9 @@ In Ihrer System Center Configuration Manager-Umgebung können Sie Tasksequenzen 
 
 -   Der von Ihnen für die Tasksequenzvariable angegebene Name kann Buchstaben, Ziffern, das Unterstrichzeichen (_) und einen Bindestrich (-) enthalten.  
 
--   Für Tasksequenzvariablen-Namen gelten eine Mindestlänge von 1 Zeichen und eine maximale Länge von 256 Zeichen.  
+-   Für Tasksequenzvariablen-Namen gelten eine Mindestlänge von 1 Zeichen und eine maximale Länge von 256 Zeichen.  
 
--   Benutzerdefinierte Variablen müssen mit einem Buchstaben (A - Z oder a - z) beginnen.  
+-   Benutzerdefinierte Variablen müssen mit einem Buchstaben (A - Z oder a - z) beginnen.  
 
 -   Benutzerdefinierte Variablennamen dürfen nicht mit einem Unterstrich beginnen. Nur schreibgeschützte Tasksequenzvariablen beginnen mit dem Unterstrich.  
 
@@ -140,7 +140,7 @@ In Ihrer System Center Configuration Manager-Umgebung können Sie Tasksequenzen 
 
  Allgemeine Beschränkungen für Tasksequenzvariablen:  
 
--   Tasksequenzvariablen-Werte dürfen 4.000 Zeichen nicht überschreiten.  
+-   Tasksequenzvariablen-Werte dürfen 4.000 Zeichen nicht überschreiten.  
 
 -   Schreibgeschützte Tasksequenzvariablen können weder erstellt noch außer Kraft gesetzt werden. Die Namen von schreibgeschützten Variablen beginnen mit einem Unterstrich (_). Sie können auf den Wert von schreibgeschützten Tasksequenzvariablen in einer Tasksequenz zugreifen, die zugeordneten Werte aber nicht ändern.  
 
@@ -161,7 +161,7 @@ In Ihrer System Center Configuration Manager-Umgebung können Sie Tasksequenzen 
 |Bereitstellen von Informationen für ein benutzerdefiniertes Skript|Tasksequenzvariablen können während der Ausführung der Tasksequenz mithilfe des COM-Objekts „Microsoft.SMS.TSEnvironment“ gelesen und geschrieben werden.<br /><br /> Im folgenden Beispiel sehen Sie eine Visual Basic-Skriptdatei, mit der die Tasksequenzvariable **_SMSTSLogPath** nach dem aktuellen Protokollpfad abgefragt wird. Das Skript legt außerdem eine benutzerdefinierte Variable fest.<br /><br /> <br /><br /> **dim osd: set env = CreateObject("Microsoft.SMS.TSEnvironment")**<br /><br /> <br /><br /> **dim logPath**<br /><br /> <br /><br /> **' Sie können die Umgebung abfragen, um eine vorhandene Variable zu erhalten.**<br /><br /> **logPath = env("_SMSTSLogPath")**<br /><br /> <br /><br /> **' Sie können auch eine Variable in der OSD-Umgebung festlegen.**<br /><br /> **env("MyCustomVariable") = "varname"**<br /><br /> <br /><br /> Weitere Informationen zur Verwendung von Tasksequenzvariablen in Skripts finden Sie in der SDK-Dokumentation.|  
 
 ###  <a name="a-namebkmkcomputercollectionvariablesa-computer-and-collection-variables"></a><a name="BKMK_ComputerCollectionVariables"></a> Computer- und Sammlungsvariablen  
- Sie können Tasksequenzen so konfigurieren, dass sie auf mehreren Computern oder für mehrere Sammlungen gleichzeitig ausgeführt werden. Sie können eindeutige computer- oder sammlungsspezifische Informationen wie beispielsweise einen eindeutigen Product Key für das Betriebssystem angeben oder alle Mitglieder einer Sammlung einer bestimmten Domäne beitreten lassen.  
+ Sie können Tasksequenzen so konfigurieren, dass sie auf mehreren Computern oder für mehrere Sammlungen gleichzeitig ausgeführt werden. Sie können eindeutige computer- oder sammlungsspezifische Informationen wie beispielsweise einen eindeutigen Product Key für das Betriebssystem angeben oder alle Mitglieder einer Sammlung einer bestimmten Domäne beitreten lassen.  
 
  Sie können Tasksequenzvariablen einem einzelnen Computer oder einer Sammlung zuweisen. Bei der Ausführung der Tasksequenz auf dem Zielcomputer oder für die Zielsammlung werden die angegebenen Werte auf den Zielcomputer bzw. die Zielsammlung angewendet.  
 
@@ -288,10 +288,10 @@ In Ihrer System Center Configuration Manager-Umgebung können Sie Tasksequenzen 
     > [!NOTE]  
     >  Das Netzwerkzugriffskonto wird niemals als Sicherheitskontext für das Ausführen von Programmen, das Installieren von Anwendungen oder Updates oder das Ausführen von Tasksequenzen verwendet. Es wird jedoch zum Zugriff auf die zugehörigen Ressourcen im Netzwerk genutzt.  
 
--   Bei der Initiierung einer Betriebssystembereitstellung über ein Startimage verwendet Configuration Manager die Windows PE-Umgebung, die kein vollständiges Betriebssystem darstellt. Die Windows PE-Umgebung verwendet einen automatisch generierten zufälligen Namen, der keiner Domäne angehört. Wenn Sie das Netzwerkzugriffskonto nicht ordnungsgemäß konfigurieren, verfügt der Computer möglicherweise nicht über die Berechtigungen, die zum Zugriff auf die für den Abschluss der Tasksequenz benötigten Configuration Manager-Pakete erforderlich sind.  
+-   Bei der Initiierung einer Betriebssystembereitstellung über ein Startimage verwendet Configuration Manager die Windows PE-Umgebung, die kein vollständiges Betriebssystem darstellt. Die Windows PE-Umgebung verwendet einen automatisch generierten zufälligen Namen, der keiner Domäne angehört. Wenn Sie das Netzwerkzugriffskonto nicht ordnungsgemäß konfigurieren, verfügt der Computer möglicherweise nicht über die Berechtigungen, die zum Zugriff auf die für den Abschluss der Tasksequenz benötigten Configuration Manager-Pakete erforderlich sind.  
 
 ##  <a name="a-namebkmktscreatemediaa-create-media-for-task-sequences"></a><a name="BKMK_TSCreateMedia"></a> Erstellen von Medien für Tasksequenzen  
- Sie können Tasksequenzen und die damit verbundene Dateien und Abhängigkeiten auf verschiedene Medientypen schreiben. Hierzu gehören z. B. das Schreiben auf Wechselmedien, wie CDs, DVDs oder USB-Speichersticks für Erfassungsmedien, eigenständige oder startbare Medien, oder das Schreiben in eine WIM-Datei für vorab bereitgestellte Medien.  
+ Sie können Tasksequenzen und die damit verbundene Dateien und Abhängigkeiten auf verschiedene Medientypen schreiben. Hierzu gehören z. B. das Schreiben auf Wechselmedien, wie CDs, DVDs oder USB-Speichersticks für Erfassungsmedien, eigenständige oder startbare Medien, oder das Schreiben in eine WIM-Datei für vorab bereitgestellte Medien.  
 
  Sie können die folgenden Medientypen erstellen:  
 
@@ -301,12 +301,12 @@ In Ihrer System Center Configuration Manager-Umgebung können Sie Tasksequenzen 
 
 -   **Eigenständige Medien**. Eigenständige Medien enthalten die Tasksequenz und alle zugeordneten Objekte, die für die Ausführung der Tasksequenz erforderlich sind. Tasksequenzen auf eigenständigen Medien können ausgeführt werden, wenn Configuration Manager keine oder nur begrenzte Verbindungen mit dem Netzwerk aufweist. Eigenständige Medien können auf folgende Arten ausgeführt werden:  
 
-    -   Wenn der Zielcomputer nicht gestartet ist, wird das der Tasksequenz zugeordnete Windows PE-Image vom eigenständigen Medium aus verwendet und die Tasksequenz wird gestartet.  
+    -   Wenn der Zielcomputer nicht gestartet ist, wird das der Tasksequenz zugeordnete Windows PE-Image vom eigenständigen Medium aus verwendet und die Tasksequenz wird gestartet.  
 
     -   Das eigenständige Medium kann auch manuell gestartet werden, sofern ein Benutzer am Netzwerk angemeldet ist und die Installation initiiert.  
 
     > [!IMPORTANT]  
-    >  Die Schritte einer Tasksequenz auf eigenständigen Medien müssen ohne jeglichen Datenabruf aus dem Netzwerk ausgeführt werden können, anderenfalls tritt bei dem Tasksequenzschritt, von dem ein Datenabruf versucht wird, ein Fehler auf. So würde z. B. ein Fehler bei einem Tasksequenzschritt auftreten, für den ein Paketabruf durch einen Verteilungspunkt erforderlich ist. Wenn sich das erforderliche Paket jedoch auf dem eigenständigen Medium befindet, kann der Tasksequenzschritt erfolgreich ausgeführt werden.  
+    >  Die Schritte einer Tasksequenz auf eigenständigen Medien müssen ohne jeglichen Datenabruf aus dem Netzwerk ausgeführt werden können, anderenfalls tritt bei dem Tasksequenzschritt, von dem ein Datenabruf versucht wird, ein Fehler auf. So würde z. B. ein Fehler bei einem Tasksequenzschritt auftreten, für den ein Paketabruf durch einen Verteilungspunkt erforderlich ist. Wenn sich das erforderliche Paket jedoch auf dem eigenständigen Medium befindet, kann der Tasksequenzschritt erfolgreich ausgeführt werden.  
 
      Weitere Informationen finden Sie unter [Erstellen eigenständiger Medien](../deploy-use/create-stand-alone-media.md).  
 

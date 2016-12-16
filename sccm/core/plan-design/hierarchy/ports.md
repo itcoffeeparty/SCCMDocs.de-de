@@ -673,15 +673,15 @@ Die folgenden Ports werden für die Ermittlung und Veröffentlichung von Standor
 ###  <a name="a-namebkmkibcmportsa-installation-requirements-for-site-systems-that-support-internet-based-clients"></a><a name="BKMK_IBCMports"></a> Installationsanforderungen für Standortsysteme, die internetbasierte Clients unterstützen  
  Verwaltungs- und Verteilungspunkte, die internetbasierte Clients unterstützen, sowie Softwareupdatepunkt und Fallbackstatuspunkt verwenden für Installation und Reparatur die folgenden Ports:  
 
--   Standortserver --> Standortsystem: RPC-Endpunktzuordnung, verwendet UDP und TCP-Port 135.  
+-   Standortserver --> Standortsystem: RPC-Endpunktzuordnung, verwendet UDP und TCP-Port 135.  
 
 -   Standortserver--> Standortsystem: RPC Dynamic TCP-Ports.  
 
--   Standortserver &lt; --> Standortsystem: Server Message Blocks (SMB) verwenden TCP-Port 445.  
+-   Standortserver &lt; --> Standortsystem: Server Message Blocks (SMB) verwenden TCP-Port 445.  
 
 Für die Anwendungs- und Paketinstallation auf Verteilungspunkten sind die folgenden RPC-Ports erforderlich:  
 
--   Standortserver -- > Verteilungspunkt: RPC-Endpunktzuordnung, verwendet UDP und TCP-Port 135.  
+-   Standortserver -- > Verteilungspunkt: RPC-Endpunktzuordnung, verwendet UDP und TCP-Port 135.  
 
 -   Standortserver--> Verteilungspunkt: RPC Dynamic TCP-Ports.  
 

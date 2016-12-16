@@ -118,15 +118,15 @@ Optionen, die hohe Verfügbarkeit unterstützen:
 
  **SMS-Anbieter und Configuration Manager-Konsole:**  
 
- Configuration Manager unterstützt die Installation mehrerer SMS-Anbieter auf separaten Computern, damit für die Configuration Manager-Konsole mehrere Zugriffspunkte verfügbar sind. Auf diese Weise wird sichergestellt, dass Sie selbst dann Configuration Manager-Standorte und Clients anzeigen und neu konfigurieren können, wenn ein SMS-Anbietercomputer offline ist.  
+ Configuration Manager unterstützt die Installation mehrerer SMS-Anbieter auf separaten Computern, damit für die Configuration Manager-Konsole mehrere Zugriffspunkte verfügbar sind. Auf diese Weise wird sichergestellt, dass Sie selbst dann Configuration Manager-Standorte und Clients anzeigen und neu konfigurieren können, wenn ein SMS-Anbietercomputer offline ist.  
 
- Beim Herstellen einer Verbindung mit einem Standort stellt eine Configuration Manager-Konsole eine Verbindung mit einer Instanz des SMS-Anbieters an diesem Standort her. Die Instanz des SMS-Anbieters wird nicht deterministisch ausgewählt. Wenn der ausgewählte SMS-Anbieter nicht verfügbar ist, haben Sie folgende Möglichkeiten:  
+ Beim Herstellen einer Verbindung mit einem Standort stellt eine Configuration Manager-Konsole eine Verbindung mit einer Instanz des SMS-Anbieters an diesem Standort her. Die Instanz des SMS-Anbieters wird nicht deterministisch ausgewählt. Wenn der ausgewählte SMS-Anbieter nicht verfügbar ist, haben Sie folgende Möglichkeiten:  
 
 -   Verbinden Sie die Konsole erneut mit dem Standort. Jede neue Verbindungsanforderung wird auf nicht deterministische Weise einer Instanz des SMS-Anbieters zugewiesen. Es ist möglich, dass der neuen Verbindung eine verfügbare Instanz zugewiesen wird.  
 
--   Verbinden Sie die Konsole mit einem anderen Configuration Manager-Standort, und verwalten Sie die Konfiguration über diese Verbindung. Bei dieser Vorgehensweise tritt bei Konfigurationsänderungen eine kurze Verzögerung von ein paar Minuten auf. Sobald der SMS-Anbieter des Standorts online ist, können Sie die Configuration Manager-Konsole wieder direkt mit dem zu verwaltenden Standort verbinden.  
+-   Verbinden Sie die Konsole mit einem anderen Configuration Manager-Standort, und verwalten Sie die Konfiguration über diese Verbindung. Bei dieser Vorgehensweise tritt bei Konfigurationsänderungen eine kurze Verzögerung von ein paar Minuten auf. Sobald der SMS-Anbieter des Standorts online ist, können Sie die Configuration Manager-Konsole wieder direkt mit dem zu verwaltenden Standort verbinden.  
 
- Sie können die Configuration Manager-Konsole auf mehreren Computern installieren, die von Administratoren verwendet werden. Jeder SMS-Anbieter unterstützt Verbindungen von mehreren Configuration Manager-Konsolen.  
+ Sie können die Configuration Manager-Konsole auf mehreren Computern installieren, die von Administratoren verwendet werden. Jeder SMS-Anbieter unterstützt Verbindungen von mehreren Configuration Manager-Konsolen.  
 
  **Verwaltungspunkt:**  
 

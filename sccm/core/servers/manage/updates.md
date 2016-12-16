@@ -26,7 +26,7 @@ ms.openlocfilehash: 7684c4b9a2a12ed7b9ddcddffe1125b3d47daa36
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager verwendet eine konsoleninterne Wartungsmethode namens **Updates und Wartung**, mit der Sie empfohlene Updates für Ihre Configuration Manager-Infrastruktur leicht finden und installieren können. Diese konsoleninterne Wartungsmethode wird durch Out-of-Band-Updates ergänzt, z. B. Hotfixes, die für Kunden bestimmt sind, die möglicherweise für die jeweilige Umgebung spezifische Probleme beheben müssen.  
+System Center Configuration Manager verwendet eine konsoleninterne Wartungsmethode namens **Updates und Wartung**, mit der Sie empfohlene Updates für Ihre Configuration Manager-Infrastruktur leicht finden und installieren können. Diese konsoleninterne Wartungsmethode wird durch Out-of-Band-Updates ergänzt, z. B. Hotfixes, die für Kunden bestimmt sind, die möglicherweise für die jeweilige Umgebung spezifische Probleme beheben müssen.  
 
  **In den folgenden Themen wird erläutert, wie Sie die verschiedenen Updatetypen für System Center Configuration Manager suchen und installieren:**  
 

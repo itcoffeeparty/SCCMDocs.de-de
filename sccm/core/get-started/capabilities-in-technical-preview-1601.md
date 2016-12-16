@@ -73,7 +73,7 @@ In der Technical Preview-Version 1601 haben wir Unterstützung für die folgende
 
     Es folgen die Voraussetzungen für die Verwendung dieses Features:  
 
-    -   Azure Active Directory Premium-Abonnement und AD FS-Synchronisierung.  
+    -   Azure Active Directory Premium-Abonnement und AD FS-Synchronisierung.  
 
     -   Microsoft Intune-Abonnement. Das Microsoft Intune-Abonnement muss in der Configuration Manager-Konsole konfiguriert werden.  
 
@@ -121,7 +121,7 @@ In der Technical Preview-Version 1601 haben wir Unterstützung für die folgende
      Wenn Sie diese Option aktivieren, dürfen Geräte, die bei Intune registriert sind und mit den Kompatibilitätsrichtlinien übereinstimmen, auf lokales Exchange zugreifen. Diese Regel setzt die Standardregel außer Kraft, was bedeutet, dass, selbst wenn Sie die Standardregel so festlegen, dass der Zugriff isoliert bzw. blockiert wird, registrierte und kompatible Geräte weiterhin auf lokales Exchange zugreifen können.  
      Wählen Sie diese Einstellung, wenn registrierte und kompatible Geräte stets über lokales Exchange Zugriff auf E-Mail haben sollen.  
 
-     Dies wird auf den folgenden Plattformen unterstützt: Windows Phone 8 und höher, iOS 6 und höher. Android 4.0 und höher, Samsung KNOX Standard 4.0 und höher  
+     Dies wird auf den folgenden Plattformen unterstützt: Windows Phone 8 und höher, iOS 6 und höher. Android 4.0 und höher, Samsung KNOX Standard 4.0 und höher  
 
      Wechseln Sie zur Seite **Allgemein** des **Assistenten zur Konfiguration der Richtlinie zum bedingten Zugriff** für lokales Exchange, um diese Option zu verwenden.  
 

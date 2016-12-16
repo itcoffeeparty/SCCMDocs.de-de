@@ -71,7 +71,7 @@ Bei der Bereitstellung von Configuration Manager-Clients in einer Umgebung sind 
 > [!NOTE]  
 >  Die Unterstützung für .NET 4.0, 4.5 und 4.5.1 ist am 12. Januar 2016 abgelaufen. Weitere Informationen finden Sie in den [häufig gestellten Fragen zur Microsoft-Support-Lifecycle-Richtlinie für .NET Framework](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update) unter „support.microsoft.com“.  
 
- Zum Abschluss der Installation von Microsoft .NET Framework 4.5.2 ist möglicherweise ein Neustart des Systems erforderlich. Der Benutzer sieht auf der Taskleiste die Benachrichtigung **Neustart erforderlich** .  Allgemeine Szenarien, die den Neustart von Clientcomputern erfordern:  
+ Zum Abschluss der Installation von Microsoft .NET Framework 4.5.2 ist möglicherweise ein Neustart des Systems erforderlich. Der Benutzer sieht auf der Taskleiste die Benachrichtigung **Neustart erforderlich** .  Allgemeine Szenarien, die den Neustart von Clientcomputern erfordern:  
 
 -   .NET-Anwendungen oder -Dienste, die auf dem Computer ausgeführt werden.  
 

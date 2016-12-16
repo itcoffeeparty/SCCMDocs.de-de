@@ -29,7 +29,7 @@ In diesem Artikel werden die Funktionen erläutert, die in System Center Configu
  Im Folgenden werden neue Funktionen aufgelistet, die Sie mit dieser Version ausprobieren können.  
 
 ##  <a name="a-namebkmkdevicehealtha-device-health-attestation"></a><a name="bkmk_devicehealth"></a> Nachweis der Geräteintegrität  
- Ab Technical Preview 1512 können Administratoren den Status des Windows 10-Nachweises zur Geräteintegrität in der Configuration Manager-Konsole anzeigen.  Diese Funktion steht für Configuration Manager und Configuration Manager mit Microsoft Intune zur Verfügung. Mit dem Nachweis der Geräteintegrität kann der Administrator sicherstellen, dass Clientcomputer über vertrauenswürdige BIOS-, TPM- und Bootsoftwarekonfigurationen verfügen. Damit Sie den Nachweis der Geräteintegration unterstützen, müssen die Clientgeräte Windows 10 mit aktiviertem TPM 2 ausführen. Der Nachweis der Geräteintegrität zeigt die Anzahl der Geräte an, die jeweils für Folgendes aktiviert sind:  
+ Ab Technical Preview 1512 können Administratoren den Status des Windows 10-Nachweises zur Geräteintegrität in der Configuration Manager-Konsole anzeigen.  Diese Funktion steht für Configuration Manager und Configuration Manager mit Microsoft Intune zur Verfügung. Mit dem Nachweis der Geräteintegrität kann der Administrator sicherstellen, dass Clientcomputer über vertrauenswürdige BIOS-, TPM- und Bootsoftwarekonfigurationen verfügen. Damit Sie den Nachweis der Geräteintegration unterstützen, müssen die Clientgeräte Windows 10 mit aktiviertem TPM 2 ausführen. Der Nachweis der Geräteintegrität zeigt die Anzahl der Geräte an, die jeweils für Folgendes aktiviert sind:  
 
 -   Antischadsoftware-Frühstart  
 
@@ -81,7 +81,7 @@ In der Technical Preview 1512 haben wir die folgenden neuen Einstellungen zur En
 
     -   Erweitert: **Änderung der Einstellungen für die automatische Beispieldateiübermittlung durch Benutzer zulassen**: Diese Einstellung bestimmt, ob ein Benutzer mit lokalen Administratorrechten auf einem Gerät die Einstellung für die automatische Beispieldateiübermittlung über die Clientbenutzeroberfläche ändern kann. Diese Einstellung ist standardmäßig auf „Nein“ festgelegt, d.h. die Einstellungen können nur in der Configuration Manager-Konsole geändert werden, und lokale Administratoren auf einem Gerät können diese Konfiguration nicht ändern.  
 
-         Folgendes zeigt z. B. die vom Administrator festgelegte Windows Defender-Einstellung in Windows 10 als aktiviert an, und dem Benutzer ist es nicht gestattet, diese zu ändern:  
+         Folgendes zeigt z. B. die vom Administrator festgelegte Windows Defender-Einstellung in Windows 10 als aktiviert an, und dem Benutzer ist es nicht gestattet, diese zu ändern:  
 
          ![TechRef&#95;WinDefender](../../core/get-started/media/TechRef_WinDefender.png "TechRef_WinDefender")  
 

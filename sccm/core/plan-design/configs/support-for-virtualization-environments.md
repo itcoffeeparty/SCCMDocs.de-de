@@ -35,7 +35,7 @@ Configuration Manager unterstützt die Installation von Client- und Standortsyst
 |Microsoft Hyper-V Server 2008 R2|  
 |Windows Server 2012|  
 |Microsoft Hyper-V Server 2012|  
-|Windows Server 2012 R2|  
+|Windows Server 2012 R2|  
 
  Für jeden von Ihnen verwendeten virtuellen Computer gelten die gleichen Mindestanforderungen für Hardware und Software wie für einen physischen Configuration Manager-Computer.  
 

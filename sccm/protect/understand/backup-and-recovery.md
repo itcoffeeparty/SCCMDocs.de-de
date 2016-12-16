@@ -557,7 +557,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Werte:** *<SQL Server-Name\>*  
 
-    -   **Details:** Der Name des Servers oder der gruppierten Instanz mit SQL Server, auf dem bzw. der die Standortdatenbank gehostet werden soll. Sie müssen den Server angeben, von dem die Standortdatenbank vor dem Auftreten des Fehlers gehostet wurde.  
+    -   **Details:** Der Name des Servers oder der gruppierten Instanz mit SQL Server, auf dem bzw. der die Standortdatenbank gehostet werden soll. Sie müssen den Server angeben, von dem die Standortdatenbank vor dem Auftreten des Fehlers gehostet wurde.  
 
 -   **Schlüsselname:** DatabaseName  
 
@@ -571,7 +571,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
          *<Instanzname\>*\\*<Name der Standortdatenbank\>*  
 
-    -   **Details:** Gibt den Namen der SQL Server-Datenbank an, die bei der Installation der Datenbank für den Standort der zentralen Verwaltung erstellt oder verwendet werden soll. Sie müssen den gleichen Datenbanknamen angeben, der vor Auftreten des Fehlers verwendet wurde.  
+    -   **Details:** Gibt den Namen der SQL Server-Datenbank an, die bei der Installation der Datenbank für den Standort der zentralen Verwaltung erstellt oder verwendet werden soll. Sie müssen den gleichen Datenbanknamen angeben, der vor Auftreten des Fehlers verwendet wurde.  
 
         > [!IMPORTANT]  
         >  Sie müssen den Instanznamen und den Namen der Standortdatenbank angeben, falls Sie die Standardinstanz nicht verwenden.  
@@ -756,7 +756,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Werte:** *<SQL Server-Name\>*  
 
-    -   **Details:** Der Name des Servers oder der gruppierten Instanz mit SQL Server, auf dem bzw. der die Standortdatenbank gehostet werden soll. Sie müssen den Server angeben, von dem die Standortdatenbank vor dem Auftreten des Fehlers gehostet wurde.  
+    -   **Details:** Der Name des Servers oder der gruppierten Instanz mit SQL Server, auf dem bzw. der die Standortdatenbank gehostet werden soll. Sie müssen den Server angeben, von dem die Standortdatenbank vor dem Auftreten des Fehlers gehostet wurde.  
 
 -   **Schlüsselname:** DatabaseName  
 
@@ -770,7 +770,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
          *<Instanzname\>*\\*<Name der Standortdatenbank\>*  
 
-    -   **Details:** Gibt den Namen der SQL Server-Datenbank an, die bei der Installation der Datenbank für den Standort der zentralen Verwaltung erstellt oder verwendet werden soll. Sie müssen den gleichen Datenbanknamen angeben, der vor Auftreten des Fehlers verwendet wurde.  
+    -   **Details:** Gibt den Namen der SQL Server-Datenbank an, die bei der Installation der Datenbank für den Standort der zentralen Verwaltung erstellt oder verwendet werden soll. Sie müssen den gleichen Datenbanknamen angeben, der vor Auftreten des Fehlers verwendet wurde.  
 
         > [!IMPORTANT]  
         >  Sie müssen den Instanznamen und den Namen der Standortdatenbank angeben, falls Sie die Standardinstanz nicht verwenden.  

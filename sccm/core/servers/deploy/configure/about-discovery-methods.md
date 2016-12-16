@@ -146,7 +146,7 @@ Von dieser Methode werden standardmäßig Basisinformationen über den Computer 
 
 -   IP-Adresse  
 
--   Active Directory-Standort  
+-   Active Directory-Standort  
 
 -   Zeitstempel der letzten Anmeldung  
 

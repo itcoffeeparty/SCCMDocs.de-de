@@ -39,7 +39,7 @@ Sind für Standortsystemrollen Verbindungen mit dem Internet erforderlich, könn
 
 Die folgenden Standortsystemrollen stellen eine Verbindung zum Internet her und benötigen möglicherweise einen Proxyserver.  Mit einer Ausnahme verwenden Standortsystemrollen, die dies können, einen Proxy ohne zusätzliche Konfiguration. Die Ausnahme ist der Softwareupdatepunkt. Die folgende Liste enthält Informationen zu den zusätzlichen Konfigurationen, die für einen Softwareupdatepunkt erforderlich sind:  
 
-**Asset Intelligence-Synchronisierungspunkt** – diese Standortsystemrolle stellt eine Verbindung mit Microsoft her und verwendet eine Proxyserverkonfiguration auf dem Computer, auf dem der Asset Intelligence-Synchronisierungspunkt gehostet wird.  
+**Asset Intelligence-Synchronisierungspunkt** – diese Standortsystemrolle stellt eine Verbindung mit Microsoft her und verwendet eine Proxyserverkonfiguration auf dem Computer, auf dem der Asset Intelligence-Synchronisierungspunkt gehostet wird.  
 
 **Cloudbasierter Verteilungspunkt** – Um einen Proxyserver für einen cloudbasierten Verteilungspunkt zu konfigurieren, konfigurieren Sie den Proxy auf dem primären Standort, der den cloudbasierten Verteilungspunkt verwaltet.  
 

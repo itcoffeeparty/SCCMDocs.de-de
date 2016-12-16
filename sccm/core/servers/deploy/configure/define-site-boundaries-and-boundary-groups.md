@@ -55,7 +55,7 @@ Von Clients, die sich im Internet befinden oder nur für Internetverbindungen ko
 
 -   In Configuration Manager wird die direkte Eingabe eines Supernetzes als Grenze nicht unterstützt. Verwenden Sie stattdessen den Grenztyp IP-Adressbereich.  
 
--   Wenn von der Active Directory-Gesamtstrukturermittlung ein Supernetz identifiziert wird, das einem Active Directory-Standort zugewiesen ist, konvertiert Configuration Manager das Supernetz in eine Grenze vom Typ IP-Adressbereich.  
+-   Wenn von der Active Directory-Gesamtstrukturermittlung ein Supernetz identifiziert wird, das einem Active Directory-Standort zugewiesen ist, konvertiert Configuration Manager das Supernetz in eine Grenze vom Typ IP-Adressbereich.  
 
 -   Die Grenze, auf der sich ein Client befindet, entspricht dem Active Directory-Standort oder der Netzwerk-IP-Adresse, die den Client identifiziert. (Es ist nicht ungewöhnlich, dass ein Client eine IP-Adresse verwendet, die dem Configuration Manager-Administrator unbekannt ist. Wenn die Netzwerkadresse des Clients zweifelhaft ist, prüfen Sie, was der Client als seine Adresse meldet, indem Sie den Befehl **IPCONFIG** auf dem Client aufrufen.)  
 

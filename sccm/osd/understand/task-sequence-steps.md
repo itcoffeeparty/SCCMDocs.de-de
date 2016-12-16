@@ -1235,7 +1235,7 @@ Es wurde eine neue Tasksequenzvariable, SMSTSSoftwareUpdateScanTimeout, in Confi
 ##  <a name="a-namebkmkrestartcomputera-restart-computer"></a><a name="BKMK_RestartComputer"></a> Computer neu starten  
  Verwenden Sie den Tasksequenzschritt **Computer neu starten** , um den Computer, auf dem die Tasksequenz ausgeführt wird, neu zu starten. Nach dem Neustart wird automatisch der nächste Schritt der Tasksequenz verarbeitet.  
 
- Dieser Schritt kann entweder in einem Standardbetriebssystem oder in Windows PE ausgeführt werden. Weitere Informationen zu den Tasksequenzvariablen für diese Tasksequenzaktion finden Sie unter [Variablen der Tasksequenzaktion „Computer neu starten“](task-sequence-action-variables.md#BKMK_RestartComputer).  
+ Dieser Schritt kann entweder in einem Standardbetriebssystem oder in Windows PE ausgeführt werden. Weitere Informationen zu den Tasksequenzvariablen für diese Tasksequenzaktion finden Sie unter [Variablen der Tasksequenzaktion „Computer neu starten“](task-sequence-action-variables.md#BKMK_RestartComputer).  
 
 ### <a name="details"></a>Details  
  Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
@@ -1472,7 +1472,7 @@ Es wurde eine neue Tasksequenzvariable, SMSTSSoftwareUpdateScanTimeout, in Confi
 
 -   _SMSTSUUID  
 
- Dieser Schritt kann entweder in einem Standardbetriebssystem oder in Windows PE ausgeführt werden. Weitere Informationen zu Tasksequenzvariablen finden Sie unter [Tasksequenz-Aktionsvariablen](task-sequence-action-variables.md).  
+ Dieser Schritt kann entweder in einem Standardbetriebssystem oder in Windows PE ausgeführt werden. Weitere Informationen zu Tasksequenzvariablen finden Sie unter [Tasksequenz-Aktionsvariablen](task-sequence-action-variables.md).  
 
 ### <a name="details"></a>Details  
  Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  

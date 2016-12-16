@@ -227,7 +227,7 @@ Sie können verschiedene Clientbereitstellungsmethoden verwenden, um die System 
 
  Sie können sowohl für CCMSetup.exe als auch für Client.msi Befehlszeileneigenschaften angeben, um das Verhalten der Clientinstallation zu ändern. Geben Sie unbedingt zuerst die CCMSetup-Eigenschaften an (die Eigenschaften, die mit „**/**“ beginnen), bevor Sie die Eigenschaften für „Client.msi“ angeben.  
 
- Sie können z. B. den folgenden Befehl angeben:  
+ Sie können z. B. den folgenden Befehl angeben:  
 
 ```  
 CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=AUTO FSP=SMSFP01  

@@ -46,7 +46,7 @@ Jede Version von Configuration Manager unterstützt eine bestimmte Version von W
 
      Im Fall von Configuration Manager etwa können Sie Startimages aus Windows ADK für Windows 10 (das auf Windows PE 10 basiert) über die Configuration Manager-Konsole anpassen. Zwar werden auf Windows PE 5 basierende Startabbilder unterstützt, doch müssen Sie sie von einem anderen Computer aus anpassen und die mit dem Windows ADK für Windows 8 installierte DISM-Version verwenden. Danach können Sie das Startimage zur Configuration Manager-Konsole hinzufügen.  
 
- Mit den unter diesem Thema beschriebenen Verfahren wird gezeigt, wie die optionalen, für Configuration Manager erforderlichen Komponenten mithilfe der folgenden Windows PE-Pakete zum Startimage hinzugefügt werden:  
+ Mit den unter diesem Thema beschriebenen Verfahren wird gezeigt, wie die optionalen, für Configuration Manager erforderlichen Komponenten mithilfe der folgenden Windows PE-Pakete zum Startimage hinzugefügt werden:  
 
 -   **WinPE-WMI**: Hiermit wird die Unterstützung für die Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI) hinzugefügt.  
 

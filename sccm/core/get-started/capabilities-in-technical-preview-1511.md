@@ -173,7 +173,7 @@ Versuchen Sie, die folgende Aufgabe auszuführen, und verwenden Sie dann die Fee
 
 3.  Wählen Sie auf der Registerkarte **Allgemein** die Option **All devices are part of the same server cluster** (Alle Geräte sind Teil des gleichen Serverclusters) aus, und klicken Sie dann auf **Einstellungen**.  
 
-4.  Wählen Sie auf der Seite **Clustereinstellungen** aus, wie viel Prozent der Server zum Installieren von Softwareupdates gleichzeitig offline geschaltet werden dürfen. Unabhängig von dem hier angegebenen Prozentwert darf immer nur ein Clusterserver offline geschaltet werden. Bei der Auswahl der Anzahl der Server, die gleichzeitig gewartet werden, wird von Configuration Manager abgerundet. Wenn Sie beispielsweise 51 % auswählen, und im Cluster 4 Server vorhanden sind, werden gleichzeitig 2 Server offline geschaltet.  
+4.  Wählen Sie auf der Seite **Clustereinstellungen** aus, wie viel Prozent der Server zum Installieren von Softwareupdates gleichzeitig offline geschaltet werden dürfen. Unabhängig von dem hier angegebenen Prozentwert darf immer nur ein Clusterserver offline geschaltet werden. Bei der Auswahl der Anzahl der Server, die gleichzeitig gewartet werden, wird von Configuration Manager abgerundet. Wenn Sie beispielsweise 51 % auswählen, und im Cluster 4 Server vorhanden sind, werden gleichzeitig 2 Server offline geschaltet.  
 
 5.  Geben Sie an, ob ein Skript vor der Bereitstellung (Knoten sperren) oder ein Skript nach der Bereitstellung (Knoten fortsetzen) verwendet werden soll.  
 

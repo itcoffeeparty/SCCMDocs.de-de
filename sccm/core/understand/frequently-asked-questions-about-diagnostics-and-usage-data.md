@@ -47,7 +47,7 @@ Nachstehend finden Sie häufig gestellte Fragen zu Diagnose- und Verwendungsdate
 
 
 ###  <a name="a-namebkmktablesa-can-you-see-data-in-custom-tables"></a><a name="bkmk_tables"></a> Können Daten in benutzerdefinierten Tabellen angezeigt werden?  
- Nein. Diagnose- und Verwendungsdaten werden mithilfe gespeicherter SQL-Prozeduren gesammelt, die auf Standardprodukttabellen in der Datenbank angewendet werden, die alle das Präfix **TEL_** haben. Als Teil der SQL-Abfrage zur Erkennung des Schemas werden alle Tabellennamen für den Vergleich mit bekannten Standardwerten hashcodiert. Dies dient zum Bestimmen, ob benutzerdefinierte Tabellen in den Daten vorhanden sind (d. h., ob das Datenbankschema abweichend vom Standard erweitert wurde), aber nicht der Daten, die in diesen Tabellen vorhanden waren.  
+ Nein. Diagnose- und Verwendungsdaten werden mithilfe gespeicherter SQL-Prozeduren gesammelt, die auf Standardprodukttabellen in der Datenbank angewendet werden, die alle das Präfix **TEL_** haben. Als Teil der SQL-Abfrage zur Erkennung des Schemas werden alle Tabellennamen für den Vergleich mit bekannten Standardwerten hashcodiert. Dies dient zum Bestimmen, ob benutzerdefinierte Tabellen in den Daten vorhanden sind (d. h., ob das Datenbankschema abweichend vom Standard erweitert wurde), aber nicht der Daten, die in diesen Tabellen vorhanden waren.  
 
 ###  <a name="a-namebkmkdatabasesa-can-you-see-names-of-other-databases-or-data-in-other-databases"></a><a name="bkmk_databases"></a> Können die Namen anderer Datenbanken oder Daten in anderen Datenbanken angezeigt werden?  
  Nein. Die gespeicherten Prozeduren zum Sammeln von Daten sind auf die Standortdatenbank beschränkt.  

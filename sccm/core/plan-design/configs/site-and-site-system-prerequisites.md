@@ -38,7 +38,7 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 
 -   Jeder Standortsystemserver muss ein 64-Bit-Betriebssystem verwenden. Die einzige Ausnahme gilt für die Standortsystemrolle „Verteilungspunkt“, die unter manchen 32-Bit-Betriebssystemen installiert werden kann.  
 
--   Standortsysteme werden unter keinem Betriebssystem auf Server Core-Installationen unterstützt. Eine Ausnahme ist, dass Server Core-Installationen für Verteilungspunkt-Standortsystemrollen ohne PXE- oder Multicast-Unterstützung unterstützt werden.  
+-   Standortsysteme werden unter keinem Betriebssystem auf Server Core-Installationen unterstützt. Eine Ausnahme ist, dass Server Core-Installationen für Verteilungspunkt-Standortsystemrollen ohne PXE- oder Multicast-Unterstützung unterstützt werden.  
 
 -   Nach der Installation eines Standortsystemservers können folgende Elemente nicht geändert werden:  
 
@@ -50,7 +50,7 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 
   Um eines dieser Elemente zu ändern, müssen Sie zuerst die Standortsystemrolle vom Computer entfernen und die Rolle nach der Änderung erneut installieren. Falls sich dies auf den Standortservercomputer auswirkt, müssen Sie den Standort deinstallieren und nach der Änderung erneut installieren.  
 
--   Standortsystemrollen werden auf Instanzen von Windows Server-Clustern nicht unterstützt. Die einzige Ausnahme gilt für den Standortdatenbankserver.  
+-   Standortsystemrollen werden auf Instanzen von Windows Server-Clustern nicht unterstützt. Die einzige Ausnahme gilt für den Standortdatenbankserver.  
 
 -   Die Änderung der Einstellungen für Starttyp und „Anmelden als“ für beliebige Configuration Manager-Dienste wird nicht unterstützt. Wenn Sie die Einstellungen trotzdem ändern, werden wichtige Dienste möglicherweise nicht ordnungsgemäß ausgeführt.  
 
@@ -154,7 +154,7 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 
 -   IIS 6-Verwaltungskompatibilität:  
 
-    -   IIS 6-Metabasiskompatibilität  
+    -   IIS 6-Metabasiskompatibilität  
 
 ###  <a name="a-namebkmk2012acwsitepreqa-application-catalog-web-service-point"></a><a name="bkmk_2012ACwsitepreq"></a> Anwendungskatalog-Webdienstpunkt  
 **Windows Server-Rollen und -Features:**  
@@ -189,9 +189,9 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 
 **Arbeitsspeicher:**  
 
--   Auf dem Computer, der diese Standortsystemrolle hostet, müssen mindestens 5 % Speicher frei sein, um die Verarbeitung von Anforderungen durch die Standortsystemrolle zu ermöglichen.  
+-   Auf dem Computer, der diese Standortsystemrolle hostet, müssen mindestens 5 % Speicher frei sein, um die Verarbeitung von Anforderungen durch die Standortsystemrolle zu ermöglichen.  
 
--   Wenn diese Standortsystemrolle zusammen mit einer anderen Standortsystemrolle installiert wird, für die dieselbe Anforderung gilt, wird die Speicheranforderung für den Computer nicht erhöht, die Mindestanforderung von 5 % besteht jedoch weiter.  
+-   Wenn diese Standortsystemrolle zusammen mit einer anderen Standortsystemrolle installiert wird, für die dieselbe Anforderung gilt, wird die Speicheranforderung für den Computer nicht erhöht, die Mindestanforderung von 5 % besteht jedoch weiter.  
 
 ###  <a name="a-namebkmk2012aipreqa-asset-intelligence-synchronization-point"></a><a name="bkmk_2012AIpreq"></a> Asset Intelligence-Synchronisierungspunkt  
 **Windows Server-Rollen und -Features:**  
@@ -215,7 +215,7 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 
 -   IIS 6-Verwaltungskompatibilität:  
 
-    -   IIS 6-Metabasiskompatibilität  
+    -   IIS 6-Metabasiskompatibilität  
 
     -   IIS 6-WMI-Kompatibilität  
 
@@ -236,13 +236,13 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 
 -   IIS 6-Verwaltungskompatibilität:  
 
-    -   IIS 6-Metabasiskompatibilität  
+    -   IIS 6-Metabasiskompatibilität  
 
     -   IIS 6-WMI-Kompatibilität  
 
 **PowerShell:**  
 
--   Unter Windows Server 2012 oder höher ist PowerShell 3.0 oder 4.0 vor der Installation des Verteilungspunkts erforderlich.  
+-   Unter Windows Server 2012 oder höher ist PowerShell 3.0 oder 4.0 vor der Installation des Verteilungspunkts erforderlich.  
 
 **Visual C++ Redistributable:**  
 
@@ -305,9 +305,9 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 
 **Arbeitsspeicher:**  
 
--   Auf dem Computer, der diese Standortsystemrolle hostet, müssen mindestens 5 % Speicher frei sein, um die Verarbeitung von Anforderungen durch die Standortsystemrolle zu ermöglichen.  
+-   Auf dem Computer, der diese Standortsystemrolle hostet, müssen mindestens 5 % Speicher frei sein, um die Verarbeitung von Anforderungen durch die Standortsystemrolle zu ermöglichen.  
 
--   Wenn diese Standortsystemrolle zusammen mit einer anderen Standortsystemrolle installiert wird, für die dieselbe Anforderung gilt, wird die Speicheranforderung für den Computer nicht erhöht, die Mindestanforderung von 5 % besteht jedoch weiter.  
+-   Wenn diese Standortsystemrolle zusammen mit einer anderen Standortsystemrolle installiert wird, für die dieselbe Anforderung gilt, wird die Speicheranforderung für den Computer nicht erhöht, die Mindestanforderung von 5 % besteht jedoch weiter.  
 
 ###  <a name="a-namebkmk2012enrollproxpreqa-enrollment-proxy-point"></a><a name="bkmk_2012EnrollProxpreq"></a> Anmeldungsproxypunkt  
 **Windows Server-Rollen und -Features:**  
@@ -346,16 +346,16 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 
 **Arbeitsspeicher:**  
 
--   Auf dem Computer, der diese Standortsystemrolle hostet, müssen mindestens 5 % Speicher frei sein, um die Verarbeitung von Anforderungen durch die Standortsystemrolle zu ermöglichen.  
+-   Auf dem Computer, der diese Standortsystemrolle hostet, müssen mindestens 5 % Speicher frei sein, um die Verarbeitung von Anforderungen durch die Standortsystemrolle zu ermöglichen.  
 
--   Wenn diese Standortsystemrolle zusammen mit einer anderen Standortsystemrolle installiert wird, für die dieselbe Anforderung gilt, wird die Speicheranforderung für den Computer nicht erhöht, die Mindestanforderung von 5 % besteht jedoch weiter.  
+-   Wenn diese Standortsystemrolle zusammen mit einer anderen Standortsystemrolle installiert wird, für die dieselbe Anforderung gilt, wird die Speicheranforderung für den Computer nicht erhöht, die Mindestanforderung von 5 % besteht jedoch weiter.  
 
 ###  <a name="a-namebkmk2012fsppreqa-fallback-status-point"></a><a name="bkmk_2012FSPpreq"></a> Fallbackstatuspunkt  
 **Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:**  
 
 -   IIS 6-Verwaltungskompatibilität:  
 
-    -   IIS 6-Metabasiskompatibilität  
+    -   IIS 6-Metabasiskompatibilität  
 
 ###  <a name="a-namebkmk2012mppreqa-management-point"></a><a name="bkmk_2012MPpreq"></a> Verwaltungspunkt  
 **Windows Server-Rollen und -Features:**  
@@ -376,7 +376,7 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 
 -   IIS 6-Verwaltungskompatibilität:  
 
-    -   IIS 6-Metabasiskompatibilität  
+    -   IIS 6-Metabasiskompatibilität  
 
     -   IIS 6-WMI-Kompatibilität  
 
@@ -389,7 +389,7 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 
 -   Sie müssen zur Unterstützung von SQL Server Reporting Services vor dem Installieren des Reporting Services-Punkts mindestens eine SQL Server-Instanz installieren und konfigurieren.  
 
--   Sie können für SQL Server Reporting Services die gleiche Instanz wie für die Standortdatenbank verwenden.  
+-   Sie können für SQL Server Reporting Services die gleiche Instanz wie für die Standortdatenbank verwenden.  
 
 -   Darüber hinaus kann die verwendete Instanz für andere System Center-Produkte freigegeben werden, solange die anderen System Center-Produkte keiner Einschränkung für die Freigabe von SQL Server-Instanzen unterliegen.  
 
@@ -429,7 +429,7 @@ Windows Server 2008 und Windows Server 2008 R2 unterliegen nun dem erweiterten S
 
 **Folgendes gilt für alle .NET Framework-Anforderungen:**  
 
--   Installieren Sie die Vollversion von Microsoft .NET Framework, bevor Sie die Standortsystemrollen installieren. Sie können diese beispielsweise unter [Microsoft .NET Framework 4 (eigenständiger Installer)](http://go.microsoft.com/fwlink/p/?LinkId=193048) herunterladen. Microsoft.NET Framework 4 Client Profile ist für diese Anforderung unzureichend.  
+-   Installieren Sie die Vollversion von Microsoft .NET Framework, bevor Sie die Standortsystemrollen installieren. Sie können diese beispielsweise unter [Microsoft .NET Framework 4 (eigenständiger Installer)](http://go.microsoft.com/fwlink/p/?LinkId=193048) herunterladen. Microsoft.NET Framework 4 Client Profile ist für diese Anforderung unzureichend.  
 
 **Folgendes gilt für alle Anforderungen zur Aktivierung von Windows Communication Foundation (WCF):**  
 
@@ -526,7 +526,7 @@ Windows Server 2008 und Windows Server 2008 R2 unterliegen nun dem erweiterten S
 
 -   IIS 6-Verwaltungskompatibilität:  
 
-    -   IIS 6-Metabasiskompatibilität  
+    -   IIS 6-Metabasiskompatibilität  
 
 ###  <a name="a-namebkmk2008acwsitepreqa-application-catalog-web-service-point"></a><a name="bkmk_2008ACwsitepreq"></a> Anwendungskatalog-Webdienstpunkt  
 **.NET Framework:**  
@@ -555,9 +555,9 @@ Windows Server 2008 und Windows Server 2008 R2 unterliegen nun dem erweiterten S
 
 **Arbeitsspeicher:**  
 
--   Auf dem Computer, der diese Standortsystemrolle hostet, müssen mindestens 5 % Speicher frei sein, um die Verarbeitung von Anforderungen durch die Standortsystemrolle zu ermöglichen.  
+-   Auf dem Computer, der diese Standortsystemrolle hostet, müssen mindestens 5 % Speicher frei sein, um die Verarbeitung von Anforderungen durch die Standortsystemrolle zu ermöglichen.  
 
--   Wenn diese Standortsystemrolle zusammen mit einer anderen Standortsystemrolle installiert wird, für die dieselbe Anforderung gilt, wird die Speicheranforderung für den Computer nicht erhöht, die Mindestanforderung von 5 % besteht jedoch weiter.  
+-   Wenn diese Standortsystemrolle zusammen mit einer anderen Standortsystemrolle installiert wird, für die dieselbe Anforderung gilt, wird die Speicheranforderung für den Computer nicht erhöht, die Mindestanforderung von 5 % besteht jedoch weiter.  
 
 ###  <a name="a-namebkmk2008aipreqa-asset-intelligence-synchronization-point"></a><a name="bkmk_2008AIpreq"></a> Asset Intelligence-Synchronisierungspunkt  
 **.NET Framework:**  
@@ -575,7 +575,7 @@ Windows Server 2008 und Windows Server 2008 R2 unterliegen nun dem erweiterten S
 
 -   IIS 6-Verwaltungskompatibilität:  
 
-    -   IIS 6-Metabasiskompatibilität  
+    -   IIS 6-Metabasiskompatibilität  
 
     -   IIS 6-WMI-Kompatibilität  
 
@@ -592,7 +592,7 @@ Windows Server 2008 und Windows Server 2008 R2 unterliegen nun dem erweiterten S
 
 -   IIS 6-Verwaltungskompatibilität:  
 
-    -   IIS 6-Metabasiskompatibilität  
+    -   IIS 6-Metabasiskompatibilität  
 
     -   IIS 6-WMI-Kompatibilität  
 
@@ -657,9 +657,9 @@ Wenn Sie eine benutzerdefinierte IIS-Konfiguration verwenden, können Sie nicht 
 
 **Arbeitsspeicher:**  
 
--   Auf dem Computer, der diese Standortsystemrolle hostet, müssen mindestens 5 % Speicher frei sein, um die Verarbeitung von Anforderungen durch die Standortsystemrolle zu ermöglichen.  
+-   Auf dem Computer, der diese Standortsystemrolle hostet, müssen mindestens 5 % Speicher frei sein, um die Verarbeitung von Anforderungen durch die Standortsystemrolle zu ermöglichen.  
 
--   Wenn diese Standortsystemrolle zusammen mit einer anderen Standortsystemrolle installiert wird, für die dieselbe Anforderung gilt, wird die Speicheranforderung für den Computer nicht erhöht, die Mindestanforderung von 5 % besteht jedoch weiter.  
+-   Wenn diese Standortsystemrolle zusammen mit einer anderen Standortsystemrolle installiert wird, für die dieselbe Anforderung gilt, wird die Speicheranforderung für den Computer nicht erhöht, die Mindestanforderung von 5 % besteht jedoch weiter.  
 
 ###  <a name="a-namebkmk2008enrollproxpreqa-enrollment-proxy-point"></a><a name="bkmk_2008EnrollProxpreq"></a> Anmeldungsproxypunkt  
 **.NET Framework:**  
@@ -684,16 +684,16 @@ Wenn Sie eine benutzerdefinierte IIS-Konfiguration verwenden, können Sie nicht 
 
 **Arbeitsspeicher:**  
 
--   Auf dem Computer, der diese Standortsystemrolle hostet, müssen mindestens 5 % Speicher frei sein, um die Verarbeitung von Anforderungen durch die Standortsystemrolle zu ermöglichen.  
+-   Auf dem Computer, der diese Standortsystemrolle hostet, müssen mindestens 5 % Speicher frei sein, um die Verarbeitung von Anforderungen durch die Standortsystemrolle zu ermöglichen.  
 
--   Wenn diese Standortsystemrolle zusammen mit einer anderen Standortsystemrolle installiert wird, für die dieselbe Anforderung gilt, wird die Speicheranforderung für den Computer nicht erhöht, die Mindestanforderung von 5 % besteht jedoch weiter.  
+-   Wenn diese Standortsystemrolle zusammen mit einer anderen Standortsystemrolle installiert wird, für die dieselbe Anforderung gilt, wird die Speicheranforderung für den Computer nicht erhöht, die Mindestanforderung von 5 % besteht jedoch weiter.  
 
 ###  <a name="a-namebkmk2008fsppreqa-fallback-status-point"></a><a name="bkmk_2008FSPpreq"></a> Fallbackstatuspunkt  
 **IIS-Konfiguration**: Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:  
 
 -   IIS 6-Verwaltungskompatibilität:  
 
-    -   IIS 6-Metabasiskompatibilität  
+    -   IIS 6-Metabasiskompatibilität  
 
 ###  <a name="a-namebkmk2008mppreqa-management-point"></a><a name="bkmk_2008MPpreq"></a> Verwaltungspunkt  
 **.NET Framework:**  
@@ -715,7 +715,7 @@ Sie müssen die folgenden Optionen für IIS aktivieren, um eine benutzerdefinier
 
 -   IIS 6-Verwaltungskompatibilität:  
 
-    -   IIS 6-Metabasiskompatibilität  
+    -   IIS 6-Metabasiskompatibilität  
 
     -   IIS 6-WMI-Kompatibilität  
 
@@ -741,7 +741,7 @@ Wenn Sie eine benutzerdefinierte IIS-Konfiguration verwenden, können Sie nicht 
 
 -   Sie müssen zur Unterstützung von SQL Server Reporting Services vor dem Installieren des Reporting Services-Punkts mindestens eine SQL Server-Instanz installieren und konfigurieren.  
 
--   Sie können für SQL Server Reporting Services die gleiche Instanz wie für die Standortdatenbank verwenden.  
+-   Sie können für SQL Server Reporting Services die gleiche Instanz wie für die Standortdatenbank verwenden.  
 
 -   Darüber hinaus kann die verwendete Instanz für andere System Center-Produkte freigegeben werden, solange die anderen System Center-Produkte keiner Einschränkung für die Freigabe von SQL Server-Instanzen unterliegen.  
 
