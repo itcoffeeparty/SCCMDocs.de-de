@@ -1,12 +1,12 @@
 ---
 
-title: Planen von Softwareupdates| System Center Configuration Manager
+title: Planen von Softwareupdates | Microsoft Docs
 description: "Ein Plan für die Softwareupdatepunkt-Infrastruktur ist wichtig, bevor Sie Softwareupdates in einer System Center Configuration Manager-Produktionsumgebung verwenden."
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 69f2c9c3c098013679e12d8578a780130adb94be
+ms.sourcegitcommit: b1c68b233097ef3a744dd25b3fb919660f0b2244
+ms.openlocfilehash: 16415fb54a2cf91747990c94ffea0076effe525b
 
 
 ---
@@ -34,8 +34,16 @@ Bevor Sie Softwareupdates in einer System Center Configuration Manager-Produktio
 
 -   Vom Softwareupdatepunkt werden bis zu 25.000 Clients unterstützt, wenn WSUS auf dem Softwareupdatepunkt-Computer ausgeführt wird und neben dem Softwareupdatepunkt noch eine weitere Standortsystemrolle existiert  
 
--   Der Softwareupdatepunkt unterstützt bis zu 150.000 Clients, wenn der Remotecomputer die WSUS-Anforderungen zur Unterstützung dieser Anzahl von Clients erfüllt.   
-    Die Konfiguration von Softwareupdatepunkten als NLB-Cluster wird nicht standardmäßig von Configuration Manager unterstützt. Sie können jedoch das Configuration Manager SDK verwenden, um bis zu vier Softwareupdatepunkte in einem NLB-Cluster zu konfigurieren.  
+-   Der Softwareupdatepunkt kann bis zu 150.000 Clients unterstützt, wenn der Remotecomputer die WSUS-Anforderungen erfüllt, WSUS mit Configuration Manager verwendet wird und Sie Folgendes konfigurieren:
+
+    IIS-Anwendungspools:
+    - Erhöhen Sie die WsusPool-Warteschlangenlänge auf 2000.
+    - Erhöhen Sie die Begrenzung des privaten Speichers für WsusPool auf das Vierfache, oder legen Sie den Wert auf 0 (unbegrenzt) fest.      
+
+    Ausführliche Informationen zu den Hardwareanforderungen für den Softwareupdatepunkt finden Sie unter [Empfohlene Hardware für Standortsysteme](/sccm/core/plan-design/configs/recommended-hardware#a-namebkmkscalesiesystemsa-site-systems).
+
+-   Die Konfiguration von Softwareupdatepunkten als NLB-Cluster wird nicht standardmäßig von Configuration Manager unterstützt. Sie können jedoch das Configuration Manager SDK verwenden, um bis zu vier Softwareupdatepunkte in einem NLB-Cluster zu konfigurieren.  
+
 
 ### <a name="capacity-planning-for-software-updates-objects"></a>Kapazitätsplanung für Softwareupdateobjekte  
  Verwenden Sie die folgenden Kapazitätsinformationen zur Planung von Softwareupdateobjekten.  
@@ -300,6 +308,6 @@ Lesen Sie [Vorbereiten der Softwareupdateverwaltung](../get-started/prepare-for-
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,8 +1,8 @@
 ---
-title: Verwalten von Windows als Dienst | Configuration Manager
+title: Verwalten von Windows als Dienst | Microsoft Docs
 description: "Mithilfe von Features in System Center Configuration Manager können Sie den Zustand von Windows als Dienst in Ihrer Umgebung anzeigen, um Windows auf dem neuesten Stand zu halten."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 0ed06bb30d1277afa71d1eb2d045ea0ebc87912a
+ms.sourcegitcommit: 3f44505c977b511223a083a960f871371c0ff133
+ms.openlocfilehash: 1885968006ef5be1f507e94e0d33918174b1af12
 
 
 ---
@@ -134,14 +134,15 @@ Wartungspläne verwenden nur die Softwareupdateklassifizierung **Upgrades** und 
 
     -   **Geben Sie den Windows-Bereitschaftsstatus an, für den dieser Wartungsplan gelten soll**: Wählen Sie eine der folgenden Optionen aus:  
 
-        -   **Release Ready (Current Branch)**:  
+        -   **Sofortige Bereitstellung (Current Branch):** Beim CB Servicing-Modell sind Funktionsupdates verfügbar, sobald sie von Microsoft veröffentlicht werden.
 
-        -   **Business Ready (Current Branch for Business**:  
+        -   **Bereitstellung zum Testen (Current Branch for Business):** Der CBB Servicing Branch wird normalerweise für die umfassende Bereitstellung verwendet. Windows 10-Clients im CBB Servicing Branch erhalten denselben Build von Windows 10 wie Clients im CB Servicing Branch, allerdings zu einem späteren Zeitpunkt.
 
-    -   **Wie viele Tage möchten Sie nach der Veröffentlichung eines neuen Upgrades durch Microsoft warten, bevor Sie es in Ihrer Umgebung bereitstellen**:  
+    -   **Anzahl der Tage nach der Veröffentlichung eines neuen Updates durch Microsoft, nach der Sie die Bereitstellung in Ihrer Umgebung vornehmen möchten:** In Configuration Manager wird ausgewertet, ob ein Upgrade in die Bereitstellung eingeschlossen werden soll, und zwar, wenn das aktuelle Datum nach dem Veröffentlichungsdatum plus der Anzahl der für diese Einstellung konfigurierten Tage liegt.
 
     -   Klicken Sie in Configuration Manager vor Version 1602 auf **Vorschau**, um die Windows 10-Updates anzuzeigen, die dem Bereitschaftsstatus zugeordnet sind.  
 
+    Weitere Informationen finden Sie unter [Servicing Branches](https://technet.microsoft.com/itpro/windows/manage/waas-overview#servicing-branches).
 7.  Konfigurieren Sie ab Version 1602 von Configuration Manager auf der Seite „Upgrades“ die Suchkriterien zum Filtern der Upgrades, die dem Wartungsplan hinzugefügt werden. Nur Upgrades, die die angegebenen Kriterien erfüllen, werden der entsprechenden Bereitstellung hinzugefügt.  
 
      Klicken Sie auf **Vorschau** , um die Upgrades anzeigen, die die angegebenen Kriterien erfüllen.  
@@ -168,7 +169,7 @@ Wartungspläne verwenden nur die Softwareupdateklassifizierung **Upgrades** und 
         > [!NOTE]  
         >  Der tatsächliche Installationsstichtag ergibt sich aus der Addition des angezeigten Stichtags und eines willkürlichen Zeitraums von bis zu 2 Stunden. Dadurch werden die potenziellen Auswirkungen reduziert, die mit der gleichzeitigen Installation der Updates in der Bereitstellung durch alle Clientcomputer in der Zielsammlung einhergehen.  
         >   
-        >  Sie können die Clienteinstellung **Zufällige Stichtaganordnung deaktivieren** für **Computer-Agent** konfigurieren, um die zufällige Verzögerung der Installation für erforderliche Updates zu deaktivieren. Weitere Informationen finden Sie unter [Computer Agent](../../core/clients/deploy/about-client-settings.md#BKMK_ComputerAgentDeviceSettings).  
+        >  Sie können die Clienteinstellung **Zufällige Stichtaganordnung deaktivieren** für **Computer-Agent** konfigurieren, um die zufällige Verzögerung der Installation für erforderliche Updates zu deaktivieren. Weitere Informationen finden Sie unter [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
 9. Konfigurieren Sie auf der Seite Benutzerfreundlichkeit die folgenden Einstellungen:  
 
@@ -220,7 +221,12 @@ Wartungspläne verwenden nur die Softwareupdateklassifizierung **Upgrades** und 
  Nachdem Sie den Assistenten abgeschlossen haben, wird der Wartungs plan ausgeführt. Dabei werden die Updates, die die angegebenen Kriterien erfüllen, einer Softwareupdategruppe hinzugefügt. Dann werden die Updates in die Inhaltsbibliothek auf dem Standortserver heruntergeladen und an die konfigurierten Verteilungspunkte verteilt. Die Softwareupdategruppe wird schließlich den Clients in der Zielsammlung bereitgestellt.  
 
 ##  <a name="a-namebkmkmodifyservicingplana-modify-a-servicing-plan"></a><a name="BKMK_ModifyServicingPlan"></a> Ändern eines Wartungsplans  
- Nachdem Sie einen grundlegenden Wartungsplan über das Windows 10-Wartungsdashboard erstellt haben, oder wenn Sie die Einstellungen für einen vorhandenen Wartungsplan ändern müssen, können Sie zu den Eigenschaften für den Wartungsplan navigieren. Wenden Sie das folgende Verfahren an, um die Eigenschaften eines Wartungsplans zu ändern.  
+Nachdem Sie einen grundlegenden Wartungsplan über das Windows 10-Wartungsdashboard erstellt haben, oder wenn Sie die Einstellungen für einen vorhandenen Wartungsplan ändern müssen, können Sie zu den Eigenschaften für den Wartungsplan navigieren.
+
+> [!NOTE]
+> Sie können die Einstellungen in den Eigenschaften für den Wartungsplan konfigurieren, die bei der Erstellung des Wartungsplans im Assistenten nicht verfügbar sind. Im Assistenten werden für Downloadeinstellungen, Bereitstellungseinstellungen und Warnungen jeweils die Standardeinstellungen verwendet.  
+
+Wenden Sie das folgende Verfahren an, um die Eigenschaften eines Wartungsplans zu ändern.  
 
 #### <a name="to-modify-the-properties-of-a-servicing-plan"></a>So ändern Sie die Eigenschaften eines Wartungsplans  
 
@@ -228,10 +234,34 @@ Wartungspläne verwenden nur die Softwareupdateklassifizierung **Upgrades** und 
 
 2.  Erweitern Sie **Windows 10-Wartung**in der Softwarebibliothek, klicken Sie auf **Wartungspläne**, und wählen Sie dann den Wartungsplan aus, den Sie ändern möchten.  
 
-3.  Klicken Sie auf der Registerkarte **Startseite** auf **Eigenschaften** , um Eigenschaften für den ausgewählten Wartungsplan zu öffnen.  
+3.  Klicken Sie auf der Registerkarte **Startseite** auf **Eigenschaften** , um Eigenschaften für den ausgewählten Wartungsplan zu öffnen.
+
+    In den Eigenschaften für den Wartungsplan sind folgende Einstellungen verfügbar, die im Assistenten nicht konfiguriert wurden:
+
+    - Bereitstellungseinstellungen: Konfigurieren Sie auf der Registerkarte „Bereitstellungseinstellungen“ die folgenden Einstellungen:  
+
+        -   **Bereitstellungstyp**: Geben Sie für die Softwareupdatebereitstellung den Bereitstellungstyp an. Wählen Sie **Erforderlich** aus, um eine obligatorische Softwareupdatebereitstellung zu erstellen, bei der Softwareupdates automatisch bis zu einem vorgegebenen Installationsstichtag auf Clients installiert werden. Wählen Sie **Verfügbar** aus, um eine optionale Softwareupdatebereitstellung zu erstellen, die im Softwarecenter zur Verfügung gestellt wird und von Benutzern installiert werden kann.  
+
+            > [!IMPORTANT]  
+            >  Nachdem Sie die Softwareupdatebereitstellung einmal erstellt haben, können Sie den Bereitstellungstyp nicht mehr ändern.  
+
+            > [!NOTE]  
+            >  Eine als **Erforderlich** bereitgestellte Softwareupdategruppe wird im Hintergrund heruntergeladen und berücksichtigt BITS-Einstellungen (sofern konfiguriert).  
+            > Als **Verfügbar** bereitgestellte Softwareupdategruppen werden jedoch im Vordergrund heruntergeladen und ignorieren BITS-Einstellungen.  
+
+        -   **Wake-on-LAN verwenden, um Clients für erforderliche Bereitstellungen zu aktivieren**: Geben Sie an, ob Wake-On-LAN am Stichtag aktiviert werden soll, damit Aktivierungspakete an Computer gesendet werden, für die mindestens eines der in der Bereitstellung enthaltenen Softwareupdates erforderlich ist. Alle Computer, die sich am Installationsstichtag im Energiesparmodus befinden, werden aktiviert, damit die Softwareupdateinstallation initiiert werden kann. Clients, die sich im Energiesparmodus befinden und für die keine der in der Bereitstellung enthaltenen Softwareupdates erforderlich sind, werden nicht gestartet. Diese Einstellung ist standardmäßig deaktiviert und nur verfügbar, wenn unter **Bereitstellungstyp** die Einstellung **Erforderlich**ausgewählt wurde.  
+
+            > [!WARNING]  
+            >  Sie können diese Option nur verwenden, wenn Computer und Netzwerke für Wake-On-LAN konfiguriert sind.  
+
+        -   **Detailstufe**: Geben Sie die Detailstufe für die von den Clientcomputern zurückgegebenen Zustandsmeldungen an.  
+
+    - Downloadeinstellungen
+
+    - Warnungen
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

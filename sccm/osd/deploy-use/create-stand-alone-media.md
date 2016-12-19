@@ -1,8 +1,8 @@
 ---
-title: "Erstellen eigenständiger Medien mit System Center Configuration Manager"
+title: "Erstellen eigenständiger Medien mit System Center Configuration Manager | Microsoft Docs"
 description: "Verwenden Sie eigenständige Medien, um das Betriebssystem auf einem Computer ohne Verbindung mit einem Configuration Manager-Standort oder einem Netzwerk bereitzustellen."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 142965671c6808146f9072aeb50e3f4c47e1da68
+ms.sourcegitcommit: 06ade037c580d64503e6b8b5c3bf31004ab0650b
+ms.openlocfilehash: b566c101b58774805a6ff103fd0c9ad16603ed34
 
 
 ---
@@ -39,101 +39,124 @@ Eigenständige Medien in Configuration Manager enthalten alles, was zur Bereitst
 ##  <a name="a-namebkmkcreatestandalonemediaa-create-stand-alone-media"></a><a name="BKMK_CreateStandAloneMedia"></a> Erstellen eigenständiger Medien  
  Bevor Sie eigenständige Medien mithilfe des Assistenten zum Erstellen von Tasksequenzmedien erstellen, achten Sie darauf, dass die folgenden Bedingungen erfüllt sind:  
 
-|Aufgabe|Beschreibung|  
-|----------|-----------------|  
-|Erstellen einer Tasksequenz zum Bereitstellen eines Betriebssystems|Als Teil der eigenständigen Medien müssen Sie die Tasksequenz zum Bereitstellen eines Betriebssystems angeben. Die Schritte zum Erstellen einer neuen Tasksequenz finden Sie unter [Erstellen einer Tasksequenz zum Installieren eines Betriebssystems in System Center Configuration Manager](create-a-task-sequence-to-install-an-operating-system.md).<br /><br /> Die folgenden Aktionen werden für eigenständige Medien nicht unterstützt:<br /><br /> - Der Schritt „Treiber automatisch anwenden“ in der Tasksequenz. Die automatische Anwendung von Gerätetreibern aus dem Treiberkatalog wird nicht unterstützt, Sie können aber den Schritt „Treiberpaket anwenden“ auswählen, um Windows Setup eine angegebene Gruppe von Treibern verfügbar zu machen.<br />- Installieren von Softwareupdates<br />- Installieren von Software vor dem Bereitstellen des Betriebssystems<br />- Zuweisen von Benutzern zum Zielcomputer, um die Affinität zwischen Benutzer und Gerät zu unterstützen<br />- Dynamische Paketinstallationen über den Task „Pakete installieren“<br />- Dynamische Anwendungsinstallationen über den Task „Anwendung installieren“<br /><br /> <br /><br /> Wenn die Tasksequenz zum Bereitstellen eines Betriebssystems den Schritt [Paket installieren](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage) enthält und Sie die eigenständigen Medien an einem Standort der zentralen Verwaltung erstellen, kann ein Fehler auftreten. Der Standort der zentralen Verwaltung verfügt nicht über die erforderlichen Clientkonfigurationsrichtlinien, die während der Ausführung der Tasksequenz zum Aktivieren des Softwareverteilungs-Agents benötigt werden. In der Datei „CreateTsMedia.log“ wird möglicherweise der folgenden Fehler angezeigt:<br /><br /> „WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)“<br /><br /> Sie müssen eigenständige Medien, die den Schritt **Paket installieren** aufweisen, an einem primären Standort erstellen, für den der Softwareverteilungs-Agent aktiviert ist. Alternativ dazu können Sie den Schritt [Befehlszeile ausführen](../understand/task-sequence-steps.md#BKMK_RunCommandLine) nach dem Schritt [Windows und ConfigMgr einrichten](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) und vor dem ersten Schritt **Paket installieren** hinzufügen. Im Schritt **Befehlszeile ausführen** wird ein WMIC-Befehl ausgeführt, um den Softwareverteilungs-Agent vor der Ausführung des ersten Schritts "Paket installieren" zu aktivieren. Sie können im Tasksequenzschritt **Befehlszeile ausführen** Folgendes verwenden:<br /><br /> **Command Line**: **WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE**|  
-|Verteilen aller der Tasksequenz zugeordneten Inhalte|Sie müssen alle für die Tasksequenz erforderlichen Inhalte auf mindestens einen Verteilungspunkt verteilen. Dies schließt das Startabbild, Betriebssystemabbild und andere zugehörige Dateien ein. Die Informationen werden vom Assistenten beim Erstellen des eigenständigen Mediums vom Verteilungspunkt abgerufen. Sie benötigen ** ** Lesezugriffsrechte für die Inhaltsbibliothek an diesem Verteilungspunkt.  Details finden Sie unter [Verteilen von Inhalt, auf den von einer Tasksequenz verwiesen wird](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS).|  
-|Vorbereiten des USB-Wechseldatenträgers|Für einen USB-Wechseldatenträger:<br /><br /> Bei Verwendung eines USB-Wechseldatenträgers muss das USB-Laufwerk mit dem Computer verbunden werden, auf dem der Assistent ausgeführt wird. Das USB-Laufwerk muss zudem für Windows als Wechselmedium erkennbar sein. Beim Erstellen der Medien wird vom Assistenten direkt auf den USB-Datenträger geschrieben. Von eigenständigen Medien wird ein FAT32-Dateisystem verwendet. Sie können keine eigenständigen Medien auf einem USB-Speicherstick erstellen, der eine Datei mit einer Größe von mehr als 4 GB enthält.|  
-|Erstellen eines Ausgabeordners|Für einen CD/DVD-Satz:<br /><br /> Sie müssen für die vom Assistenten zum Erstellen von Tasksequenzmedien erstellten Ausgabedateien einen Ordner anlegen, bevor Sie den Assistenten ausführen, um Medien für einen CD- oder DVD-Satz zu erstellen. Die für einen CD- oder DVD-Satz erstellten Medien werden als ISO-Dateien direkt in den Ordner geschrieben.|  
+### <a name="create-a-task-sequence-to-deploy-an-operating-system"></a>Erstellen einer Tasksequenz zum Bereitstellen eines Betriebssystems
+Als Teil der eigenständigen Medien müssen Sie die Tasksequenz zum Bereitstellen eines Betriebssystems angeben. Die Schritte zum Erstellen einer neuen Tasksequenz finden Sie unter [Erstellen einer Tasksequenz zum Installieren eines Betriebssystems in System Center Configuration Manager](create-a-task-sequence-to-install-an-operating-system.md).
 
- Gehen Sie wie folgt vor, um eigenständige Medien für einen USB-Wechseldatenträger oder einen CD-/DVD-Satz zu erstellen.  
+Die folgenden Aktionen werden für eigenständige Medien nicht unterstützt:
+- Der Schritt „Treiber automatisch anwenden“ in der Tasksequenz. Die automatische Anwendung von Gerätetreibern aus dem Treiberkatalog wird nicht unterstützt, Sie können aber den Schritt „Treiberpaket anwenden“ auswählen, um Windows Setup eine angegebene Gruppe von Treibern verfügbar zu machen.
+- Der Tasksequenzschritt für das Herunterladen von Paketinhalten. Die Informationen vom Verwaltungspunkt sind nicht auf eigenständigen Medien verfügbar, sodass bei dem Schritt ein Fehler auftritt, wenn versucht wird, die Inhaltsspeicherorte aufzulisten.
+- Installieren von Softwareupdates
+- Installieren von Software vor dem Bereitstellen des Betriebssystems
+- Zuweisen von Benutzern zum Zielcomputer, um die Affinität zwischen Benutzer und Gerät zu unterstützen
+- Dynamische Paketinstallationen über den Task „Pakete installieren“.
+- Dynamische Anwendungsinstallationen über den Task „Anwendung installieren“.
 
-#### <a name="to-create-stand-alone-media"></a>So erstellen Sie eigenständige Medien  
+Wenn die Tasksequenz zum Bereitstellen eines Betriebssystems den Schritt [Paket installieren](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage) enthält und Sie die eigenständigen Medien an einem Standort der zentralen Verwaltung erstellen, kann ein Fehler auftreten. Der Standort der zentralen Verwaltung verfügt nicht über die erforderlichen Clientkonfigurationsrichtlinien, die während der Ausführung der Tasksequenz zum Aktivieren des Softwareverteilungs-Agents benötigt werden. In der Datei „CreateTsMedia.log“ wird möglicherweise der folgenden Fehler angezeigt:<br /><br /> „WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)“<br /><br /> Sie müssen eigenständige Medien, die den Schritt **Paket installieren** aufweisen, an einem primären Standort erstellen, für den der Softwareverteilungs-Agent aktiviert ist. Alternativ dazu können Sie den Schritt [Befehlszeile ausführen](../understand/task-sequence-steps.md#BKMK_RunCommandLine) nach dem Schritt [Windows und ConfigMgr einrichten](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) und vor dem ersten Schritt **Paket installieren** hinzufügen. Im Schritt **Befehlszeile ausführen** wird ein WMIC-Befehl ausgeführt, um den Softwareverteilungs-Agent vor der Ausführung des ersten Schritts "Paket installieren" zu aktivieren. Sie können im Tasksequenzschritt **Befehlszeile ausführen** Folgendes verwenden:<br /><br />
+```WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE
+```
 
-1.  Klicken Sie in der Configuration Manager-Konsole auf **Softwarebibliothek**.  
+### Distribute all content associated with the task sequence
+You must distribute all content that is required by the task sequence the  to at least one distribution point. This includes the boot image, operating system image, and other associated files. The wizard gathers the information from the distribution point when it creates the stand-alone media. You must have **Read** access rights to the content library on that distribution point.  For details, see [Distribute content referenced by a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS).
 
-2.  Erweitern Sie im Arbeitsbereich **Softwarebibliothek** den Bereich **Betriebssysteme**, und klicken Sie dann auf **Tasksequenzen**.  
+### Prepare the removable USB drive
+*For a removable USB drive:*
 
-3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Tasksequenzmedien erstellen** , um den Assistenten zum Erstellen von Tasksequenzmedien zu starten.  
+If you are going to use a removable USB drive, the USB  drive must be connected to the computer where the wizard is run and the USB drive must be detectable by Windows as a removal device. The wizard writes directly to the USB drive when it creates the media. Stand-alone media uses a FAT32 file system. You cannot create stand-alone media on a USB flash drive whose content contains a file over 4 GB in size.
 
-4.  Geben Sie auf der Seite **Medientyp wählen** die folgenden Optionen an, und klicken Sie dann auf **Weiter**.  
+### Create an output folder
+*For a CD/DVD set:*
 
-    -   Wählen Sie **Eigenständige Medien**aus.  
+Before you run the Create Task Sequence Media Wizard to create media for a CD or DVD set, you must create a folder for the output files created by the wizard. Media that is created for a CD or DVD set is written as .iso files directly to the folder.
 
-    -   Optional können Sie **Unbeaufsichtigte Betriebssystembereitstellung zulassen**auswählen, wenn Sie die Bereitstellung des Betriebssystems ohne Benutzereingabe gestatten möchten. Wenn Sie diese Option auswählen, wird der Benutzer nicht aufgefordert, Informationen zur Netzwerkkonfiguration oder optionale Tasksequenzen anzugeben. Allerdings wird der Benutzer weiterhin zur Eingabe eines Kennworts aufgefordert, wenn die Medien für den Kennwortschutz konfiguriert sind.  
 
-5.  Geben Sie auf der Seite **Medientyp** an, ob das Medium ein Speicherstick oder ein CD/DVD-Satz ist, und klicken Sie dann, um Folgendes zu konfigurieren:  
+ Use the following procedure to create stand-alone media for a removable USB drive or a CD/DVD set.  
+
+## To create stand-alone media  
+
+1.  In the Configuration Manager console, click **Software Library**.  
+
+2.  In the **Software Library** workspace, expand **Operating Systems**, and then click **Task Sequences**.  
+
+3.  On the **Home** tab, in the **Create** group, click **Create Task Sequence Media** to start the Create Task Sequence Media Wizard.  
+
+4.  On the **Select Media Type** page, specify the following options, and then click **Next**.  
+
+    -   Select **Stand-alone media**.  
+
+    -   Optionally, if you want to allow the operating system to be deployed without requiring user input, select **Allow unattended operating system deployment**. When you select this option the user is not prompted for network configuration information or for optional task sequences. However, the user is still prompted for a password if the media is configured for password protection.  
+
+5.  On the **Media Type** page, specify whether the media is a flash drive or a CD/DVD set, and then click configure the following:  
 
     > [!IMPORTANT]  
-    >  Von eigenständigen Medien wird ein FAT32-Dateisystem verwendet. Sie können keine eigenständigen Medien auf einem USB-Speicherstick erstellen, der eine Datei mit einer Größe von mehr als 4 GB enthält.  
+    >  Stand-alone media uses a FAT32 file system. You cannot create stand-alone media on a USB flash drive whose content contains a file over 4 GB in size.  
 
-    -   Wenn Sie **USB-Speicherstick**auswählen, geben Sie das Laufwerk an, auf dem der Inhalt gespeichert wird.  
+    -   If you select **USB flash drive**, specify the drive where you want to store the content.  
 
-    -   Wenn Sie **CD/DVD-Satz**auswählen, geben Sie die Kapazität der Medien und Namen sowie Pfad der Ausgabedateien an. Die Ausgabedateien werden vom Assistenten an diesen Speicherort geschrieben. Beispiel: **\\\Servername\Ordner\Ausgabedatei.iso**  
+    -   If you select **CD/DVD set**, specify the capacity of the media and the name and path of the output files. The wizard writes the output files to this location. For example: **\\\servername\folder\outputfile.iso**  
 
-         Wenn die Medienkapazität zu gering zum Speichern des gesamten Inhalts ist, werden mehrere Dateien erstellt, und Sie müssen den Inhalt auf mehreren CDs oder DVDs speichern. Falls mehrere Medien erforderlich sind, wird dem Namen jeder von Configuration Manager erstellten Ausgabedatei eine Sequenznummer hinzugefügt. Außerdem wird die Anwendung von Configuration Manager auf mehreren Medien gespeichert, wenn Sie eine Anwendung zusammen mit dem Betriebssystem bereitstellen und die Anwendung nicht auf ein einzelnes Medium passt. Wenn das eigenständige Medium ausgeführt wird, wird der Benutzer von Configuration Manager zum Angeben des nächsten Mediums aufgefordert, auf dem die Anwendung gespeichert ist.  
+         If the capacity of the media is too small to store the entire content, multiple files are created and you must store the content on multiple CDs or DVDs. When multiple media is required, Configuration Manager adds a sequence number to the name of each output file that it creates. In addition, if you deploy an application along with the operating system and the application cannot fit on a single media, Configuration Manager stores the application across multiple media. When the stand-alone media is run, Configuration Manager prompts the user for the next media where the application is stored.  
 
         > [!IMPORTANT]  
-        >  Wenn Sie ein vorhandenes ISO-Abbild auswählen, wird dieses ISO-Abbild vom Assistenten zum Erstellen von Tasksequenzmedien auf dem Laufwerk oder der Freigabe gelöscht, sobald Sie mit der nächsten Seite des Assistenten fortfahren. Das vorhandene Abbild wird selbst dann gelöscht, wenn Sie den Assistenten anschließend abbrechen.  
+        >  If you select an existing .iso image, the Task Sequence Media Wizard deletes that image from the drive or share as soon as you proceed to the next page of the wizard. The existing image is deleted, even if you then cancel the wizard.  
 
-     Klicken Sie auf **Weiter**.  
+     Click **Next**.  
 
-6.  Geben Sie auf der Seite **Sicherheit** ein sicheres Kennwort zum Schutz der Medien an, und klicken Sie dann auf **Weiter**. Wenn Sie ein Kennwort angeben, ist dieses zum Verwenden der Medien erforderlich.  
+6.  On the **Security** page, enter a strong password to help protect the media, and then click **Next**. If you specify a password, the password is required to use the media.  
 
     > [!IMPORTANT]  
-    >  Auf eigenständigen Medien werden nur die Tasksequenzschritte und die dazugehörigen Variablen verschlüsselt. Der restliche Inhalt der Medien wird nicht verschlüsselt. Tasksequenzskripts dürfen daher keine vertraulichen Informationen enthalten. Speichern und implementieren Sie alle vertraulichen Informationen mithilfe von Tasksequenzvariablen.  
+    >  On stand-alone media, only the task sequence steps and their variables are encrypted. The remaining content of the media is not encrypted, so do not include any sensitive information in task sequence scripts. Store and implement all sensitive information by using task sequence variables.  
 
-7.  Geben Sie auf der Seite **Eigenständige CD/DVD** die Tasksequenz an, mit der das Betriebssystem bereitgestellt wird, und klicken Sie dann auf **Weiter**. Im Assistenten können Sie nur die Tasksequenzen auswählen, die einem Startabbild zugewiesen sind.  
+7.  On the **Stand-Alone CD/DVD** page, specify the task sequence that deploys the operating system, and then click **Next**. The wizard lets you select only those task sequences that are associated with a boot image.  
 
-8.  Geben Sie auf der Seite **Verteilungspunkte** die Verteilungspunkte an, die den für die Tasksequenz erforderlichen Inhalt enthalten, und klicken Sie dann auf **Weiter**.  
+8.  On the **Distribution Points** page, specify the distribution points that contain the content required by the task sequence, and then click **Next**.  
 
-     Configuration Manager zeigt nur Verteilungspunkte an, die Inhalt aufweisen. Sie müssen alle der Tasksequenz zugeordneten Inhalte (Startabbild, Betriebssystemabbild usw.) auf mindestens einen Verteilungspunkt aufteilen, bevor Sie fortfahren können. Nachdem Sie den Inhalt verteilt haben, können Sie entweder den Assistenten neu starten oder Verteilungspunkte entfernen, die Sie bereits auf dieser Seite ausgewählt haben, zur vorherigen Seite wechseln und dann zur Seite **Verteilungspunkte** zurückkehren, um die Liste der Verteilungspunkte zu aktualisieren. Weitere Informationen zur Inhaltsverteilung finden Sie unter [Verteilen von Inhalt, auf den von einer Tasksequenz verwiesen wird](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS). Weitere Informationen zu Verteilungspunkten sowie zum Content Management finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+     Configuration Manager will only display distribution points that have the content. You must distribute all of the content associated with the task sequence (boot image, operating system image, etc.) to at least one distribution point before you can continue. After you distribute the content, you can either restart the wizard or remove any distribution points that you already selected  on this page, go to the previous page, and then back to the **Distribution Points** page to refresh the distribution point list. For more information about distributing content, see [Distribute content referenced by a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS). For more information about distribution points and content management, see [Manage content and content infrastructure for System Center Configuration Manager](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
     > [!NOTE]  
-    >  Sie benötigen ** ** Lesezugriffsrechte für die Inhaltsbibliothek an den Verteilungspunkten.  
+    >  You must have **Read** access rights to the content library on the distribution points.  
 
-9. Geben Sie auf der Seite **Anpassung** die folgenden Informationen an, und klicken Sie dann auf **Weiter**.  
+9. On the **Customization** page, specify the following information, and then click **Next**.  
 
-    -   Geben Sie die Variablen an, die von der Tasksequenz zur Bereitstellung des Betriebssystems verwendet werden.  
+    -   Specify the variables that the task sequence uses to deploy the operating system.  
 
-    -   Geben Sie alle Prestart-Befehle an, die Sie vor der Tasksequenz ausführen möchten. Bei Prestart-Befehlen handelt es sich um eine Skriptdatei oder ausführbare Datei, über die eine Interaktion mit dem Benutzer in Windows PE möglich ist, bevor die Tasksequenz zur Installation des Betriebssystems ausgeführt wird. Weitere Informationen zu Prestart-Befehlen für Medien finden Sie unter [Prestart-Befehle für Tasksequenzmedien in System Center Configuration Manager](../understand/prestart-commands-for-task-sequence-media.md).  
+    -   Specify any prestart commands that you want to run before the task sequence. Prestart commands are a script or an executable that can interact with the user in Windows PE before the task sequence runs to install the operating system. For more information about prestart commands for media, see [Prestart commands for task sequence media in System Center Configuration Manager](../understand/prestart-commands-for-task-sequence-media.md).  
 
-         Wählen Sie optional **Dateien für den Prestart-Befehl einbeziehen** aus, um alle für den Prestart-Befehl erforderlichen Dateien einzubeziehen.  
+         Optionally, select **Files for the prestart command** to include any required files for the prestart command.  
 
         > [!TIP]  
-        >  Während der Erstellung der Tasksequenzmedien werden die Paket-ID und die Prestart-Befehlszeile einschließlich des Wertes vorhandener Tasksequenzvariablen von der Tasksequenz in die Protokolldatei „CreateTSMedia.log“ auf dem Computer geschrieben, auf dem die Configuration Manager-Konsole ausgeführt wird. Sie können diese Protokolldatei überprüfen, um den Wert für die Tasksequenzvariablen zu überprüfen.  
+        >  During task sequence media creation, the task sequence writes the package ID and prestart command-line, including the value for any task sequence variables, to the CreateTSMedia.log log file on the computer that runs the Configuration Manager console. You can review this log file to verify the value for the task sequence variables.  
 
-10. Schließen Sie den Assistenten ab.  
+10. Complete the wizard.  
 
- Die Dateien der eigenständigen Medien (ISO) werden im Zielordner erstellt. Wenn Sie **Eigenständige CD/DVD**ausgewählt haben, können Sie nun die Ausgabedateien auf einen Satz von CDs oder DVDs kopieren.  
+ The stand-alone media files (.iso) are created in the destination folder. If you selected **Stand-Alone CD/DVD**, you can now copy the output files to a set of CDs or DVDs.  
 
-##  <a name="a-namebkmkstandalonemediatsexamplea-example-task-sequence-for-stand-alone-media"></a><a name="BKMK_StandAloneMediaTSExample"></a> Beispiel für eine Tasksequenz für eigenständige Medien  
- Orientieren Sie sich an der folgenden Tabelle, während Sie eine Tasksequenz zur Bereitstellung eines Betriebssystems mithilfe eigenständiger Medien erstellen. Mithilfe dieser Tabelle können Sie die allgemeine Sequenz für Ihre Tasksequenzschritte festlegen und diese Tasksequenzschritte in logischen Gruppen organisieren. Die von Ihnen erstellte Tasksequenz kann von diesem Beispiel abweichen und eine andere Anzahl von Tasksequenzschritten und Tasksequenzgruppen enthalten.  
+##  <a name="BKMK_StandAloneMediaTSExample"></a> Example task sequence for stand-alone media  
+ Use the following table as a guide as you create a task sequence to deploy an operating system using stand-alone media. The table will help you decide the general sequence for your task sequence steps and how to organize and structure those task sequence steps into logical groups. The task sequence that you create might vary from this sample and can contain more or fewer task sequence steps and groups.  
 
 > [!NOTE]  
->  Sie müssen eigenständige Medien stets mithilfe des Assistenten zum Erstellen von Tasksequenzmedien erstellen.  
+>  You must always use the Task Sequence Media Wizard to create stand-alone media.  
 
-|Tasksequenzgruppe/-schritt|Beschreibung|  
+|Task Sequence Group or Step|Description|  
 |---------------------------------|-----------------|  
-|Dateien und Einstellungen erfassen – **(Neue Tasksequenzgruppe)**|Erstellen Sie eine Tasksequenzgruppe. Mithilfe einer Tasksequenzgruppe können Sie ähnliche Tasksequenzschritte zur besseren Organisation und Fehlersteuerung gruppieren.|  
-|Windows-Einstellungen erfassen|Identifizieren Sie mithilfe dieses Tasksequenzschritts die Microsoft Windows-Einstellungen, die vom vorhandenen Betriebssystem auf dem Zielcomputer erfasst werden, bevor neue Abbilder erstellt werden. Sie können den Computernamen, Benutzer- und Unternehmensinformationen sowie Zeitzoneneinstellungen erfassen.|  
-|Netzwerkeinstellungen erfassen|Mithilfe dieses Tasksequenzschritts können Sie Netzwerkeinstellungen auf dem Computer erfassen, auf dem die Tasksequenz empfangen wird. Sie können die Domänen- oder Arbeitsgruppenmitgliedschaft des Computers sowie Informationen zur Netzwerkkarteneinstellung erfassen.|  
-|Benutzerdateien und Einstellungen erfassen – **(Neue Tasksequenz-Untergruppe)**|Erstellen Sie eine Tasksequenzgruppe innerhalb einer anderen Tasksequenzgruppe. Diese Untergruppe enthält die Schritte, die erforderlich sind, um Benutzerzustandsdaten vom vorhandenen Betriebssystem auf dem Zielcomputer zu erfassen, bevor neue Abbilder erstellt werden. Ähnlich wie mithilfe der ersten von Ihnen hinzugefügten Gruppe können Sie mithilfe dieser Untergruppe ähnliche Tasksequenzschritte zur besseren Organisation und Fehlersteuerung gruppieren.|  
-|Lokalen Zustandsspeicherort festlegen|Mithilfe dieses Tasksequenzschritts können Sie einen lokalen Speicherort unter Verwendung der Tasksequenzvariablen für den geschützten Pfad angeben. Der Benutzerzustand wird in einem geschützten Verzeichnis auf der Festplatte gespeichert.|  
-|Benutzerzustand erfassen|Mithilfe dieses Tasksequenzschritts können Sie die Benutzerdateien und Einstellungen erfassen, die zum neuen Betriebssystem migriert werden sollen.|  
-|Betriebssystem installieren – **(Neue Tasksequenzgruppe)**|Erstellen Sie eine weitere Untergruppe der Tasksequenz. Diese Untergruppe enthält die zum Installieren des Betriebssystems erforderlichen Schritte.|  
-|Neustart mit Windows PE oder Festplatte ausführen|Mithilfe dieses Tasksequenzschritts können Sie die Neustartoptionen für den Computer angeben, auf dem diese Tasksequenz empfangen wird. In diesem Schritt wird eine Meldung angezeigt, um den Benutzer darüber zu informieren, dass der Computer zum Fortsetzen der Installation neu gestartet wird.<br /><br /> In diesem Schritt wird die schreibgeschützte Tasksequenzvariable **_SMSTSInWinPE** verwendet. Wenn der zugeordnete Wert **false** ist, wird der Tasksequenzschritt fortgesetzt.|  
-|Betriebssystem anwenden|Mithilfe dieses Tasksequenzschritts können Sie das Betriebssystemabbild auf dem Zielcomputer installieren. In diesem Schritt werden alle Dateien auf diesem Volume (mit Ausnahme Configuration Manager-spezifischer Steuerungsdateien) gelöscht und anschließend alle in der WIM-Datei enthaltenen Volumeimages auf das entsprechende sequenzielle Datenträgervolume angewendet. Sie können auch durch Angeben einer **sysprep**-Antwortdatei konfigurieren, welche Festplattenpartition für die Installation verwendet wird.|  
-|Windows-Einstellungen anwenden|Mithilfe dieses Tasksequenzschritts können Sie die Konfigurationsinformationen für die Windows-Einstellungen des Zielcomputers angeben. Folgende Windows-Einstellungen können anwendet werden: Benutzer- und Unternehmensinformationen, Produkt- oder Lizenzschlüsselinformationen, Zeitzone und lokales Administratorkennwort.|  
-|Netzwerkeinstellungen anwenden|Mithilfe dieses Tasksequenzschritts können Sie die Konfigurationsinformationen für das Netzwerk oder die Arbeitsgruppe des Zielcomputers angeben. Sie können auch angeben, ob vom Computer ein DHCP-Server verwendet wird, oder Sie können die IP-Adressinformationen statisch zuweisen.|  
-|Treiberpaket anwenden|Mithilfe dieses Tasksequenzschritts können Sie alle Gerätetreiber in einem Treiberpaket für Windows Setup zur Verfügung stellen. Alle notwendigen Gerätetreiber müssen auf den eigenständigen Medien enthalten sein.|  
-|Betriebssystem einrichten – **(Neue Tasksequenzgruppe)**|Erstellen Sie eine weitere Untergruppe der Tasksequenz. Diese Untergruppe enthält die zum Installieren des Configuration Manager-Clients erforderlichen Schritte.|  
-|Windows und ConfigMgr einrichten|Mit diesem Tasksequenzschritt können Sie die Configuration Manager-Clientsoftware installieren. Mit dem Configuration Manager wird die GUID des Configuration Manager-Clients installiert und registriert. Sie können die erforderlichen Installationsparameter im Fenster **Installationseinstellungen** zuweisen.|  
-|Benutzerdateien und Einstellungen wiederherstellen – **(Neue Tasksequenz-Untergruppe)**|Erstellen Sie eine weitere Untergruppe der Tasksequenz. Diese Untergruppe enthält die zum Wiederherstellen des Benutzerzustands erforderlichen Schritte.|  
-|Benutzerzustand wiederherstellen|Mithilfe dieses Tasksequenzschritts können Sie Windows-EasyTransfer bzw. USMT initiieren, um den Benutzerzustand und die Benutzereinstellungen, die mit der Aktion Benutzerzustand erfassen erfasst wurden, auf einem Zielcomputer wiederzuherstellen.|  
+|Capture File and Settings - **(New Task Sequence Group)**|Create a task sequence group. A task sequence group keeps similar task sequence steps together for better organization and error control.|  
+|Capture Windows Settings|Use this task sequence step to identify the Microsoft Windows settings that are captured from the existing operating system on the destination computer prior to reimaging. You can capture the computer name, user and organizational information, and the time zone settings.|  
+|Capture Network Settings|Use this task sequence step to capture network settings from the computer that receives the task sequence. You can capture the domain or workgroup membership of the computer and the network adapter setting information.|  
+|Capture User Files and Settings - **(New Task Sequence Sub-Group)**|Create a task sequence group within a task sequence group. This sub-group contains the steps needed to capture user state data from the existing operating system on the destination computer prior to reimaging. Similar to the initial group that you added, this sub-group keeps similar task sequence steps together for better organization and error control.|  
+|Set Local State Location|Use this task sequence step to specify a local location using the protected path task sequence variable. The user state is stored on a protected directory on the hard drive.|  
+|Capture User State|Use this task sequence step to capture the user files and settings you want to migrate to the new operating system.|  
+|Install Operating System - **(New Task Sequence Group)**|Create another task sequence sub-group. This sub-group contains the steps needed to install the operating system.|  
+|Reboot to Windows PE or hard disk|Use this task sequence step to specify restart options for the computer that receives this task sequence. This step will display a message to the user indicating that the computer will be restarted so that the installation can continue.<br /><br /> This step uses the read-only **_SMSTSInWinPE** task sequence variable. If the associated value equals **false** the task sequence step will continue.|  
+|Apply Operating System|Use this task sequence step to install the operating system image onto the destination computer. This step deletes all files on that volume (with the exception of Configuration Manager-specific control files) and then applies all volume images contained in the WIM file to the corresponding sequential disk volume. You can also specify a **sysprep** answer file to configure which disk partition to use for the installation.|  
+|Apply Windows Settings|Use this task sequence step to configure the Windows settings configuration information for the destination computer. The windows settings you can apply are user and organizational information, product or license key information, time zone, and the local administrator password.|  
+|Apply Network Settings|Use this task sequence step to specify the network or workgroup configuration information for the destination computer. You can also specify if the computer uses a DHCP server or you can statically assign the IP address information.|  
+|Apply Driver Package|Use this task sequence step to make all device drivers in a driver package available for use by Windows setup. All necessary device drivers must be contained on the stand-alone media.|  
+|Setup Operating System - **(New Task Sequence Group)**|Create another task sequence sub-group. This sub-group contains the steps needed to install the Configuration Manager client.|  
+|Setup Windows and ConfigMgr|Use this task sequence step to install the Configuration Manager client software. Configuration Manager installs and registers the Configuration Manager client GUID. You can assign the necessary installation parameters in the **Installation properties** window.|  
+|Restore User Files and Settings - **(New Task Sequence Group)**|Create another task sequence sub-group. This sub-group contains the steps needed to restore the user state.|  
+|Restore User State|Use this task sequence step to initiate the User State Migration Tool (USMT) to restore the user state and settings that were captured from the Capture User State Action to the destination computer.|  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

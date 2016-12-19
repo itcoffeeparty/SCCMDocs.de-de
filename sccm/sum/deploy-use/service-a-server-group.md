@@ -1,11 +1,11 @@
 ---
-title: Verwalten einer Servergruppe | Configuration Manager
+title: Verwalten einer Servergruppe | Microsoft Docs
 description: "Die System Center Configuration Manager-Konsole stellt Warnungen und Status zum Überwachen von Updates und Kompatibilität bereit."
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: da7a5f1d075eb1fcd7c56b713401bb0f985fa487
+ms.sourcegitcommit: 78524abd4c45f0b7402d6f1e85afc60bb72ab0ee
+ms.openlocfilehash: b89cec7cebb5342da32ec8e11a049edad12f1231
 
 
 ---
@@ -47,8 +47,11 @@ Die Servergruppeneinstellungen werden in den Eigenschaften für eine Gerätesamm
 
 5.  Geben Sie an, ob ein Skript vor der Bereitstellung (Knoten sperren) oder ein Skript nach der Bereitstellung (Knoten fortsetzen) verwendet werden soll.  
 
+    > [!WARNING]
+    > Benutzerdefinierte Skripts werden nicht von Microsoft signiert. Es ist Ihre Aufgabe, die Integrität dieser Skripts zu verwalten.
+
     > [!TIP]  
-    >Die folgenden Beispiele können Sie beim Testen für Skripts vor und nach der Bereitstellung verwenden, die die aktuelle Uhrzeit in eine Textdatei schreiben:  
+    > Die folgenden Beispiele können Sie beim Testen für Skripts vor und nach der Bereitstellung verwenden, die die aktuelle Uhrzeit in eine Textdatei schreiben:  
     >   
     >  **Vor der Bereitstellung**  
     >   
@@ -85,6 +88,6 @@ Wenn auf einem Computer die Bereitstellungssperre nicht freigegeben werden kann,
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

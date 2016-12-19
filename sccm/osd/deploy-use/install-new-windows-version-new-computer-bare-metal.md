@@ -1,8 +1,8 @@
 ---
-title: Installieren einer neuen Version von Windows auf einem neuen Computer (Bare-Metal) mit System Center Configuration Manager
+title: Installieren einer neuen Version von Windows auf einem neuen Computer (Bare-Metal) mit System Center Configuration Manager | Microsoft Docs
 description: "Folgen Sie diesen Schritten in System Center Configuration Manager, um ein Betriebssystem auf einem neuen Computer mithilfe von PXE, OEM oder einem eigenständigen Medium zu installieren."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: c672595a06a45bec840f17743636ef6f502af49f
+ms.sourcegitcommit: 06ade037c580d64503e6b8b5c3bf31004ab0650b
+ms.openlocfilehash: 93b3d99e7391feefc3d706f15f0fe8f8df3b75ac
 
 
 ---
@@ -33,7 +33,7 @@ Dieses Thema enthält die allgemeinen Schritte für System Center Configuration 
 
 -   **Planen und Implementieren von Anforderungen an die Infrastruktur**  
 
-     Vor der Bereitstellung von Betriebssystemen müssen verschiedene Anforderungen an die Infrastruktur erfüllt sein, z. B. Windows ADK, Windows Deployment Services (WDS), unterstützte Festplattenkonfigurationen usw. Weitere Informationen finden Sie unter [Anforderungen an die Infrastruktur für die Betriebssystembereitstellung](../plan-design/infrastructure-requirements-for-operating-system-deployment.md).  
+     Vor der Bereitstellung von Betriebssystemen müssen verschiedene Anforderungen an die Infrastruktur erfüllt sein, z. B. Windows ADK, Windows Deployment Services (WDS), unterstützte Festplattenkonfigurationen usw. Weitere Informationen finden Sie unter [Infrastructure requirements for operating system deployment (Anforderungen an die Infrastruktur für die Betriebssystembereitstellung)](../plan-design/infrastructure-requirements-for-operating-system-deployment.md).
 
 ##  <a name="a-namebkmkconfigurea-configure"></a><a name="BKMK_Configure"></a> Konfigurieren  
 
@@ -81,6 +81,6 @@ Dieses Thema enthält die allgemeinen Schritte für System Center Configuration 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

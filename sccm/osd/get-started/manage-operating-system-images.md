@@ -1,8 +1,8 @@
 ---
-title: Verwalten von Betriebssystemimages | Configuration Manager
+title: Verwalten von Betriebssystemimages | Microsoft Docs
 description: "Erfahren Sie in Configuration Manager mehr über Methoden, mit denen Sie Betriebssystemimages verwalten können, die in WIM-Dateien (Windows Imaging) gespeichert sind."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 3c0801afa6a967faabf186f70685b701ba2a95d8
+ms.sourcegitcommit: 03722ff4f480cd26842e395fe1f7ec8359e2b33e
+ms.openlocfilehash: 6953c3834ca303b949f22436010a87b3da9688dc
 
 
 ---
@@ -67,7 +67,7 @@ Die Schritte zum Erstellen eines benutzerdefinierten Betriebssystemimages finden
 
 3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Betriebssystemabbild hinzufügen** , um den Assistenten zum Hinzufügen von Betriebssystemabbildern zu starten.  
 
-4.  Geben Sie auf der Seite **Datenquelle** den Netzwerkpfad zum Betriebssystemabbild an. Geben Sie z. B.**\\\<Server>\<Pfad>\OS.WIM** ein.  
+4.  Geben Sie auf der Seite **Datenquelle** den Netzwerkpfad zum Betriebssystemabbild an. Geben Sie z. B.**\\\<Server>\<Pfad>\OS.WIM** ein.  
 
 5.  Geben Sie auf der Seite **Allgemein** die folgenden Informationen an, und klicken Sie dann auf **Weiter**. Diese Informationen sind für Identifikationszwecke nützlich, wenn Sie dem gleichen Standort mehrere Betriebssystemabbilder hinzufügen möchten.  
 
@@ -85,7 +85,7 @@ Die Schritte zum Erstellen eines benutzerdefinierten Betriebssystemimages finden
  Betriebssystemabbilder werden genau wie anderer Inhalt an Verteilungspunkte verteilt. In den meisten Fällen müssen Sie das Betriebssystemabbild an mindestens einen Verteilungspunkt verteilen, bevor Sie das Betriebssystem bereitstellen. Die Schritte zum Verteilen von Betriebssystemabbildern finden Sie unter [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).  
 
 ##  <a name="a-namebkmkosimagesapplyupdatesa-apply-software-updates-to-an-operating-system-image"></a><a name="BKMK_OSImagesApplyUpdates"></a>Anwenden von Softwareupdates auf ein Betriebssystemimage  
- Es werden regelmäßig neue Softwareupdates veröffentlicht, die für das Betriebssystem in Ihrem Betriebssystemabbild gelten. Natürlich müssen vor dem Anwenden von Softwareupdates auf ein Abbild die Softwareupdateinfrastruktur vorhanden und Softwareupdates erfolgreich synchronisiert worden sein. Weitere Informationen finden Sie unter [Bereitstellen von Softwareupdates](../../sum/deploy-use/deploy-software-updates.md).  
+ Es werden regelmäßig neue Softwareupdates veröffentlicht, die für das Betriebssystem in Ihrem Betriebssystemabbild gelten. Vor dem Anwenden von Softwareupdates auf ein Image müssen die Softwareupdateinfrastruktur vorhanden, Softwareupdates erfolgreich synchronisiert und die Softwareupdates aus der Inhaltsbibliothek auf den Standortserver heruntergeladen worden sein. Weitere Informationen finden Sie unter [Bereitstellen von Softwareupdates](../../sum/deploy-use/deploy-software-updates.md).  
 
  Sie können relevante Softwareupdates nach einem festgelegten Zeitplan auf ein Abbild anwenden. Basierend auf dem von Ihnen festgelegten Zeitplan wendet Configuration Manager die ausgewählten Softwareupdates auf das Betriebssystemimage an und verteilt das aktualisierte Image dann optional an Verteilungspunkte. Die Informationen zum Betriebssystemabbild werden in der Standortdatenbank gespeichert. Dazu gehören beispielsweise die Softwareupdates, die während des Imports angewendet wurden. Softwareupdates, die nach dem ursprünglichen Hinzufügen auf das Abbild angewendet wurden, werden ebenfalls in der Standortdatenbank gespeichert. Wenn Sie den Assistenten starten, um Softwareupdates auf das Betriebssystemabbild anzuwenden, ruft der Assistent eine Liste mit den verfügbaren Softwareupdates ab, die noch nicht auf das Abbild angewendet wurden und ausgewählt werden können. Configuration Manager kopiert die Softwareupdates aus der Inhaltsbibliothek auf dem Standortserver und wendet die Softwareupdates auf das Betriebssystemimage an.  
 
@@ -142,6 +142,6 @@ Die Schritte zum Erstellen eines benutzerdefinierten Betriebssystemimages finden
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

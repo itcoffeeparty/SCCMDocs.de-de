@@ -1,8 +1,8 @@
 ---
-title: "Verwenden von PXE zum Bereitstellen von Windows über das Netzwerk | Configuration Manager"
+title: "Verwenden von PXE zum Bereitstellen von Windows über das Netzwerk | Microsoft Docs"
 description: Verwenden Sie PXE-initiierte Betriebssystembereitstellungen, um das Betriebssystem eines Computers zu aktualisieren oder eine neue Version von Windows auf einem neuen Computer zu installieren.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4bb62f7479fafac6b57d42cd048fd5bcec29b0e9
+ms.sourcegitcommit: 3f44505c977b511223a083a960f871371c0ff133
+ms.openlocfilehash: b22cdbd42693078caa47f41182ce73ea881c3515
 
 
 ---
@@ -98,6 +98,8 @@ Sie können die RamDisk-TFTP-Blockgröße und ab Configuration Manager Version 1
 ##  <a name="how-is-the-boot-image-selected-for-clients-booting-with-pxe"></a>Wie wird das Startimage für Clients ausgewählt, die mit PXE gestartet werden?
 Wenn ein Client mit PXE gestartet wird, stellt Configuration Manager ein Startimage für den Client bereit. Configuration Manager verwendet ab Version 1606 ein Startimage mit einer exakten architektonischen Übereinstimmung, sofern ein entsprechendes Image verfügbar ist. Ist dies nicht der Fall, verwendet Configuration Manager ein Startimage mit einer kompatiblen Architektur. In der folgenden Liste finden Sie Informationen dazu, wie ein Startimage für Clients ausgewählt wird, die mit PXE gestartet werden.
 1. Configuration Manager sucht in der Standortdatenbank nach dem Systemdatensatz, bei dem die MAC-Adresse oder das SMBIOS mit der MAC-Adresse oder dem SMBIOS des Clients übereinstimmt, der gestartet werden soll.
+    > [!NOTE]
+    > Wenn ein Computer, der einem Standort zugewiesen ist, für einen anderen Standort mit PXE gestartet wird, werden die Richtlinien für den Computer nicht angezeigt. Wenn z.B. ein Client bereits Standort A zugewiesen ist, können ein Verwaltungspunkt und ein Verteilungspunkt an Standort B nicht auf die Richtlinien von Standort A zugreifen, und der Client wird nicht erfolgreich mit PXE gestartet.
 2. Configuration Manager sucht nach Tasksequenzen, die für den Systemdatensatz in Schritt 1 bereitgestellt werden.
 3. In der Liste mit Tasksequenzen in Schritt 2 sucht Configuration Manager nach einem Startimage mit einer Architektur, die mit der des Clients übereinstimmt, der gestartet werden soll. Wenn ein Startimage mit derselben Architektur gefunden wird, wird dieses Startimage verwendet.
 
@@ -105,6 +107,6 @@ Wenn ein Client mit PXE gestartet wird, stellt Configuration Manager ein Startim
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,6 +1,6 @@
 ---
-title: "Überarbeiten und Ablösen von Anwendungen | System Center Configuration Manager"
-description: Verwenden Sie System Center Configuration Manager-Anwendungsversionen, und ersetzen Sie Anwendungen.
+title: "Überarbeiten und Ablösen von Anwendungen | Microsoft Docs"
+description: Erfahren Sie, wie Sie System Center Configuration Manager-Anwendungsversionen verwenden und Anwendungen ersetzen.
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,12 +17,12 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ae6440375d6e801ac9c3932872ec1367d9c601a8
+ms.sourcegitcommit: a04ac74df97741f49d7aae7b599bb60d5725a592
+ms.openlocfilehash: 28bea9210c9c58dabbb00a995e78cfedd1738291
 
 
 ---
-# <a name="how-to-revise-and-supersede-applications-in-system-center-configuration-manager"></a>Überarbeiten und Ablösen von Anwendungen in System Center Configuration Manager
+# <a name="revise-and-supersede-applications-in-system-center-configuration-manager"></a>Überarbeiten und Ablösen von Anwendungen in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -33,13 +33,13 @@ In diesem Thema erfahren Sie, wie Sie mit System Center Configuration Manager-An
 
 ### <a name="to-display-an-application-revision-history"></a>So zeigen Sie einen Anwendungsrevisionsverlauf an  
 
-1.  Klicken Sie in der Configuration Manager-Konsole auf **Softwarebibliothek** > **Anwendungsverwaltung** > **Anwendungen** und anschließend auf die gewünschte Anwendung.  
+1.  Wählen Sie in der Configuration Manager-Konsole **Softwarebibliothek** > **Anwendungsverwaltung** > **Anwendungen** und anschließend die gewünschte Anwendung aus.  
 
-3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Anwendung** auf **Revisionsverlauf** , um das Dialogfeld **Anwendungsrevisionsverlauf** zu öffnen.  
+3.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Anwendung** die Option **Revisionsverlauf** aus, um das Dialogfeld **Anwendungsrevisionsverlauf** zu öffnen.  
 
 ### <a name="to-view-an-application-revision"></a>So zeigen Sie eine Anwendungsrevision an  
 
-1.  Wählen Sie im Dialogfeld **Anwendungsrevisionsverlauf** eine Anwendungsrevision aus, und klicken Sie dann auf **Anzeigen**.  
+1.  Wählen Sie im Dialogfeld **Anwendungsrevisionsverlauf** eine Anwendungsrevision aus, und wählen Sie dann **Anzeigen** aus.  
 
 2.  Sehen Sie sich im Dialogfeld **Eigenschaften** die Eigenschaften der ausgewählten Anwendung an.  
 
@@ -50,21 +50,21 @@ In diesem Thema erfahren Sie, wie Sie mit System Center Configuration Manager-An
 
 ### <a name="to-restore-an-application-revision"></a>So stellen Sie eine Anwendungsrevision wieder her  
 
-1.  Wählen Sie im Dialogfeld **Anwendungsrevisionsverlauf** eine Anwendungsrevision aus, und klicken Sie dann auf **Wiederherstellen**.  
+1.  Wählen Sie im Dialogfeld **Anwendungsrevisionsverlauf** eine Anwendungsrevision aus, und wählen Sie dann **Wiederherstellen** aus.  
 
-2.  Klicken Sie im Dialogfeld zum ** ** Bestätigen der Wiederherstellung der Revision auf **Ja** , um die ausgewählte Anwendungsrevision wiederherzustellen.  
+2.  Wählen Sie im Dialogfeld zum** **Bestätigen der Wiederherstellung der Revision **Ja** aus, um die ausgewählte Anwendungsrevision wiederherzustellen.  
 
 ### <a name="to-delete-an-application-revision"></a>So löschen Sie eine Anwendungsrevision  
 
-1.  Wählen Sie im Dialogfeld **Anwendungsrevisionsverlauf** eine Anwendungsrevision aus, und klicken Sie dann auf **Löschen**.  
+1.  Wählen Sie im Dialogfeld **Anwendungsrevisionsverlauf** eine Anwendungsrevision aus, und wählen Sie dann **Löschen** aus.  
 
-2.  Klicken Sie im Dialogfeld zum ** ** Bestätigen des Löschens der Anwendungsrevision auf **Ja**.  
+2.  Wählen Sie im Dialogfeld zum** **Bestätigen des Löschens der Anwendungsrevision **Ja** aus.  
 
 > [!IMPORTANT]  
 >  Sie können die aktuelle Anwendungsrevision nur löschen, wenn die Anwendung zuvor außer Kraft gesetzt wurde und keine Verweise enthält.  
 
 ##  <a name="application-supersedence"></a>Anwendungsablösung  
- Mithilfe der Anwendungsverwaltung in Configuration Manager können Sie Upgrades für vorhandene Anwendungen ausführen oder diese ersetzen, indem Sie eine Ablösungsbeziehung verwenden. Wenn Sie eine Anwendung ablösen, können Sie einen neuen Bereitstellungstyp als Ersatz für den Bereitstellungstyp der abgelösten Anwendung angeben. Sie können außerdem festlegen, ob vor dem Installieren der ablösenden Anwendung ein Upgrade der abzulösenden Anwendung ausgeführt oder die abzulösende Anwendung deinstalliert werden soll.  
+ Die Anwendungsverwaltung in Configuration Manager ermöglicht es Ihnen, vorhandene Anwendungen mithilfe einer Ablösungsbeziehung zu aktualisieren oder zu ersetzen. Wenn Sie eine Anwendung ablösen, können Sie einen neuen Bereitstellungstyp als Ersatz für den Bereitstellungstyp der abgelösten Anwendung angeben. Sie können außerdem festlegen, ob vor dem Installieren der ablösenden Anwendung ein Upgrade der abzulösenden Anwendung ausgeführt oder die abzulösende Anwendung deinstalliert werden soll.  
 
 > [!IMPORTANT]  
 >  Wenn die Option zum Deinstallieren des abgelösten Bereitstellungstyps ausgewählt wurde, ist es nicht möglich, für die Ablösung einen Bereitstellungstyp zu verwenden, der für einen anderen Sammlungstyp bereitgestellt wurde.  Beispielsweise kann bei dieser Optionsauswahl ein Bereitstellungstyp, der für eine Gerätesammlung bereitgestellt wurde, nicht durch einen Bereitstellungstyp abgelöst werden, der für eine Benutzersammlung bereitgestellt wurde.  
@@ -76,7 +76,7 @@ In diesem Thema erfahren Sie, wie Sie mit System Center Configuration Manager-An
 
 -   Wenn Sie zu einer anderen Anwendung (mit einer anderen Anwendungs-ID) wechseln möchten, aktivieren Sie die Option **Deinstallieren**. Sie müssen die abgelöste Version der Anwendung entfernen.  
 
-### <a name="superseding-dependent-applications"></a>Ablösen abhängiger Anwendungen  
+### <a name="supersede-dependent-applications"></a>Ablösen abhängiger Anwendungen  
  In diesem Beispiel bezieht sich **Masteranwendung** auf die von Ihnen bereitgestellte Anwendung, die die Abhängigkeiten enthält.  
 
  Sie können eine Ablösungsbeziehung erstellen, mit der die abhängige Anwendung auf eine neue Version aktualisiert wird.  
@@ -97,41 +97,41 @@ In diesem Thema erfahren Sie, wie Sie mit System Center Configuration Manager-An
 
 -   Wenn bei neuen Installationen der Masteranwendung mehrere Abhängigkeiten bestehen, bestimmt die Abhängigkeitsreihenfolge, welche Version der abhängigen Anwendung installiert wird.  
 
-### <a name="specify-a-supersedence-relationship"></a>Angeben einer Ablösungsbeziehung  
+### <a name="to-specify-a-supersedence-relationship"></a>So geben Sie eine Ablösungsbeziehung an  
 
-1.  Klicken Sie in der Configuration Manager-Konsole auf **Softwarebibliothek** > **Anwendungsverwaltung** > **Anwendungen** und anschließend auf die Anwendung, die eine andere Anwendung ablösen soll.  
+1.  Wählen Sie in der Configuration Manager-Konsole **Softwarebibliothek** > **Anwendungsverwaltung** > **Anwendungen** und anschließend die Anwendung aus, die eine andere ablösen soll.  
 
-3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Eigenschaften** auf **Eigenschaften**, um das Dialogfeld **Eigenschaften** für die Anwendung zu öffnen.  
+3.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Eigenschaften** die Option **Eigenschaften** aus, um das Dialogfeld **Eigenschaften** für die Anwendung zu öffnen.  
 
-4.  Klicken Sie auf der Registerkarte **Ablösung** im Dialogfeld **Eigenschaften von ***<Name der Anwendung\>* auf **Hinzufügen**.  
+4.  Wählen Sie auf der Registerkarte **Ablösung** im Dialogfeld **Eigenschaften von ***<Anwendungsname\>* die Option **Hinzufügen** aus.  
 
 5.  Klicken Sie im Dialogfeld **Ablösungsbeziehung angeben** auf **Durchsuchen**.  
 
-6.  Wählen Sie im Dialogfeld **Anwendung auswählen** die Anwendung aus, die Sie ablösen möchten, und klicken Sie dann auf **OK**.  
+6.  Wählen Sie im Dialogfeld **Anwendung auswählen** die Anwendung aus, die Sie ablösen möchten, und wählen Sie dann **OK** aus.  
 
 7.  Wählen Sie im Dialogfeld **Ablösungsbeziehung angeben** den Bereitstellungstyp aus, von dem der Bereitstellungstyp der abzulösenden Anwendung abgelöst werden soll.  
 
     > [!NOTE]  
     >  Standardmäßig wird der Bereitstellungstyp der abzulösenden Anwendung nicht vom neuen Bereitstellungstyp deinstalliert. Dieses Szenario wird häufig verwendet, wenn Upgrades für vorhandene Anwendungen bereitgestellt werden sollen. Wählen Sie **Deinstallieren** aus, um den vorhandenen Bereitstellungstyp zu deinstallieren, bevor der neue Bereitstellungstyp installiert wird. Probieren Sie das Upgrade zunächst in einer Testumgebung aus, bevor Sie es für eine Anwendung ausführen.  
 
-8.  Klicken Sie auf **OK** , um das Dialogfeld **Ablösungsbeziehung angeben** zu schließen.  
+8.  Wählen Sie **OK** aus, um das Dialogfeld **Ablösungsbeziehung angeben** zu schließen.  
 
-9. Klicken Sie auf **OK**, um das Dialogfeld **Eigenschaften von***<Name der Anwendung\>* zu schließen.  
+9. Wählen Sie **OK** aus, um das Dialogfeld **Eigenschaften von ***<Anwendungsname\>* zu schließen.  
 
 ### <a name="to-display-applications-that-supersede-the-current-application"></a>So zeigen Sie Anwendungen an, von der die aktuelle Anwendung abgelöst wird  
 
-1.  Klicken Sie in der Configuration Manager-Konsole auf **Softwarebibliothek**.  
+1.  Wählen Sie in der Configuration Manager-Konsole die Option **Softwarebibliothek** aus.  
 
-2.  Erweitern Sie im Arbeitsbereich **Softwarebibliothek** den Bereich **Anwendungsverwaltung**, und klicken Sie auf **Anwendungen**und dann auf die gewünschte Anwendung.  
+2.  Erweitern Sie im Arbeitsbereich **Softwarebibliothek** den Bereich **Anwendungsverwaltung**, und wählen Sie **Anwendungen** und dann die gewünschte Anwendung aus.  
 
-3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Eigenschaften** auf **Eigenschaften**, um das Dialogfeld **Eigenschaften von***<Name der Anwendung\>* zu öffnen.  
+3.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Eigenschaften** die Option **Eigenschaften** aus, um das Dialogfeld **Eigenschaften von ***<Anwendungsname\>* zu öffnen.  
 
-4.  Wählen Sie im Dialogfeld **Eigenschaften von***<Name der Anwendung\>* auf der Registerkarte **Referenzen** in der Dropdownliste **Beziehungstyp** die Option **Anwendungen, die diese Anwendung ablösen** aus.  
+4.  Wählen Sie auf der Registerkarte **Referenzen** im Dialogfeld **Eigenschaften von ***<Anwendungsname\>* in der Dropdownliste **Beziehungstyp** die Option **Anwendungen, die diese Anwendung ablösen** aus.  
 
-5.  Prüfen Sie die Liste der Anwendungen, von denen die ausgewählte Anwendung abgelöst wird, und klicken Sie auf **OK**, um das Dialogfeld **Eigenschaften von***Name der Anwendung\>* zu schließen.  
+5.  Prüfen Sie die Liste der Anwendungen, von denen die ausgewählte Anwendung abgelöst wird, und klicken Sie dann auf **OK**, um das Dialogfeld **Eigenschaften von ***<Anwendungsname\>* zu schließen.  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

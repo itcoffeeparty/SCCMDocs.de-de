@@ -1,5 +1,5 @@
 ---
-title: Windows Defender Advanced Threat Protection | System Center Configuration Manager
+title: Windows Defender Advanced Threat Protection | Microsoft Docs
 description: "Erfahren Sie, wie Sie Windows Defender Advanced Threat Protection, einen neuen Dienst, der Unternehmen dabei hilft, auf erweiterte Angriffe zu reagieren, verwalten und überwachen können."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: a4ad2d93ecd994fff00dab33084a734252cac651
+ms.sourcegitcommit: 299fada2b6587ace44e635c4f26cc7a482d44843
+ms.openlocfilehash: 880ea4fcb0730f0e9adbc9f142262f241f5df9dc
 
 ---
 # <a name="windows-defender-advanced-threat-protection"></a>Windows Defender Advanced Threat Protection
@@ -38,11 +38,11 @@ Windows Defender ATP ist ein Dienst im [Windows-Sicherheitscenter](https://secur
 
  1.  Melden Sie sich am [Windows Defender ATP-Onlinedienst](https://securitycenter.windows.com/) an.   
 
- 2.  Klicken Sie auf das Menüelement **Client On-boarding** (Clientonboarding).  
+ 2.  Klicken Sie auf das Menüelement **Endpoint Management** (Endpunktverwaltung).  
 
- 3.  Wählen Sie **System Center Configuration Manager** aus, und klicken Sie auf **Paket herunterladen**.  
+ 3.  Wählen Sie **System Center Configuration Manager (Current Branch) Version 1606** aus, und klicken Sie auf **Paket herunterladen**.  
 
- 4.  Laden Sie die komprimierte Archivdatei (.zip-Datei) herunter, und extrahieren Sie den Inhalt.
+ 4.  Laden Sie die komprimierte Archiv-Datei (ZIP-Datei) herunter, und extrahieren Sie die Inhalte.
 
 > [!IMPORTANT]
 > Die Windows Defender ATP-Konfigurationsdatei enthält vertrauliche Informationen, die gesichert werden sollten.
@@ -86,7 +86,34 @@ Windows Defender ATP ist ein Dienst im [Windows-Sicherheitscenter](https://secur
         -   **Nicht integriert** – Die Richtlinie wurde angewendet, aber der Agent hat die Richtlinienintegration nicht gemeldet.  
 
 
+## <a name="how-to-create-and-deploy-an-offboarding-configuration-file"></a>Erstellen und Bereitstellen einer Offboardingkonfigurationsdatei  
 
-<!--HONumber=Nov16_HO1-->
+1.  Melden Sie sich am [Windows Defender ATP-Onlinedienst](https://securitycenter.windows.com/) an.   
+
+2.  Klicken Sie auf das Menüelement **Endpoint Management** (Endpunktverwaltung).  
+
+3.  Wählen Sie **System Center Configuration Manager (Current Branch) Version 1606** aus, und klicken Sie auf **Endpoint offboarding** (Endpunktoffboarding).  
+
+4.  Laden Sie die komprimierte Archiv-Datei (ZIP-Datei) herunter, und extrahieren Sie die Inhalte. Offboardingdateien sind 30 Tage lang gültig.
+
+5.  Wechseln Sie in der Configuration Manager-Konsole zu **Bestand und Kompatibilität** > **Übersicht** > **Endpoint Protection** > **Windows Defender ATP-Richtlinien**, und klicken Sie auf **Windows Defender ATP-Richtlinie erstellen**. Der Assistent zum Erstellen von Windows Defender ATP-Richtlinien wird geöffnet.  
+
+6.  Geben Sie den **Namen** und die **Beschreibung** für die Windows Defender ATP-Richtlinie ein, und wählen Sie **Offboarding** aus. Klicken Sie auf **Weiter**.  
+
+7.  **Wechseln** Sie zu der Konfigurationsdatei, die Windows Defender ATP-Clouddienstmandanten Ihrer Organisation bereitstellt. Klicken Sie auf **Weiter**.  
+
+8.  Überprüfen Sie die Zusammenfassung, und schließen Sie den Assistenten ab.  
+
+9.  Sie können nun die Windows Defender ATP-Richtlinie für verwaltete Clientcomputer bereitstellen, indem Sie auf **Bereitstellen** klicken.  
+
+> [!IMPORTANT]
+> Die Windows Defender ATP-Konfigurationsdateien enthalten vertrauliche Informationen, die gesichert werden sollten.
+
+[Windows Defender Advanced Threat Protection](https://technet.microsoft.com/itpro/windows/keep-secure/windows-defender-advanced-threat-protection)
+[Beheben von Onboardingproblemen mit Windows Defender Advanced Threat Protection](https://technet.microsoft.com/itpro/windows/keep-secure/troubleshoot-onboarding-windows-defender-advanced-threat-protection)
+
+
+
+<!--HONumber=Dec16_HO3-->
 
 

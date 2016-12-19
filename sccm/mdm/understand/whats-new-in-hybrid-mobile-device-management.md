@@ -1,8 +1,8 @@
 ---
-title: "Neuheiten bei der hybriden Verwaltung mobiler Geräte | Microsoft Intune |System Center Configuration Manager"
+title: Neuheiten bei hybrider MDM | Microsoft Docs
 description: "Erfahren Sie mehr über die neuen Features der Verwaltung mobiler Geräte, die für Hybridbereitstellungen mit System Center Configuration Manager und Intune verfügbar sind."
 ms.custom: na
-ms.date: 10/25/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f13b38fcc4e7c55f05dbf6a7d8f516643939ba92
-ms.openlocfilehash: 3525fba1b75196bddebc89e49f40cbfd3c75d9d0
+ms.sourcegitcommit: 776c606f8e9ebfd7348d9d3a8f1e038d47bdf7a1
+ms.openlocfilehash: 891638f920a5bf807b17c7f55b9153be45fc3b93
 
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Neuheiten bei der hybriden Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune
@@ -30,9 +30,95 @@ Dieser Artikel bietet Details zu den neuen Features für die Verwaltung mobiler 
 
  Jeder Abschnitt dieses Artikels listet Hybridfeatures in drei verschiedenen Kategorien auf. Verwenden Sie die folgenden Anleitungen, um die Kompatibilität der Features in jeder Kategorie mit verschiedenen Versionen von Configuration Manager zu bestimmen:  
 
-|Featurekategorien|
-|-|  
-|**Neuheiten in Microsoft Intune** – Im Allgemeinen sollten alle in dieser Kategorie aufgelisteten Features mit allen Configuration Manager-Releases, einschließlich Configuration Manager-Releases von System Center 2012 R2, zusammenarbeiten, da für diese Features nur der Intune-Dienst erforderlich ist, aber keine zusätzliche Funktionalität in Configuration Manager.<br /><br /> **Neuheiten in Configuration Manager Technical Preview** – Alle in dieser Kategorie aufgelisteten Features arbeiten nur mit dem angegebenen Technical Preview-Release zusammen. Um diese Features zu testen, müssen Sie die in der Featurebeschreibung angegebene Technical Preview-Version installieren. Weitere Informationen finden Sie unter [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md).<br /><br /> **Neuheiten in Configuration Manager (Current Branch)** – Alle in dieser Kategorie aufgelisteten Features arbeiten nur mit der angegebenen Version von Configuration Manager (Current Branch) zusammen, z.B. Version 1511 oder 1602. Wenn Sie eine ältere Version von Configuration Manager für die Hybridbereitstellung verwenden, müssen Sie ein Upgrade auf die in der Featurebeschreibung angegebene Configuration Manager-Version (Current Branch) ausführen. Weitere Informationen finden Sie unter [Upgrade auf System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|  
+|Featurekategorien|Beschreibung|
+|-|-|
+|**Neuheiten in Microsoft Intune** | Im Allgemeinen sollten alle in dieser Kategorie aufgelisteten Features in allen Configuration Manager-Releases, einschließlich Configuration Manager-Releases von System Center 2012 R2, verwendet werden können, da für diese Features nur der Intune-Dienst, aber keine zusätzlichen Funktionen in Configuration Manager erforderlich sind.|
+|**Neuheiten in Configuration Manager Technical Preview**| Alle in dieser Kategorie aufgelisteten Features können nur mit dem angegebenen Technical Preview-Release verwendet werden. Um diese Features zu testen, müssen Sie die in der Featurebeschreibung angegebene Technical Preview-Version installieren. Weitere Informationen finden Sie unter [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md).|
+|**Neuheiten in Configuration Manager (Current Branch)**| Alle in dieser Kategorie aufgelisteten Features können nur mit der angegebenen Version von Configuration Manager (Current Branch) verwendet werden, z.B. Version 1511 oder 1602. Wenn Sie eine ältere Version von Configuration Manager für die Hybridbereitstellung verwenden, müssen Sie ein Upgrade auf die in der Featurebeschreibung angegebene Configuration Manager-Version (Current Branch) ausführen. Weitere Informationen finden Sie unter [Upgrade auf System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|
+
+## <a name="new-hybrid-features-in-december-2016"></a>Neue Hybridfeatures im Dezember 2016
+
+### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
+
+Die folgenden im Dezember 2016 eingeführten Intune-Features werden in Hybridbereitstellungen unterstützt:
+
+- **Multi-Factor Authentication (MFA) für die Registrierung in das Azure-Portal verschoben**
+
+  Bisher haben Sie MFA für Intune-Registrierungen entweder in der Intune-Konsole oder der Configuration Manager-Konsole festgelegt. Mit diesem aktualisierten Feature melden Sie sich nun beim [Microsoft Azure-Portal] (https://manage.windowsazure.com) mit Ihren Intune-Anmeldeinformationen an und konfigurieren die MFA-Einstellungen über Azure AD. Weitere Informationen finden Sie unter [Multi-factor authentication for Microsoft Intune] (https://aka.ms/mfa_ad) (Mehrstufige Authentifizierung für Microsoft Intune).
+
+- **Unternehmensportal-App für Android jetzt in China verfügbar**
+
+  Die Unternehmensportal-App für Android ist jetzt in China verfügbar. Da der Google Play Store in China nicht zur Verfügung steht, müssen Apps für Android-Geräte von chinesischen App-Marktplätzen abgerufen werden. Die Unternehmensportal-App für Android steht in den folgenden Stores zum Download zur Verfügung:
+
+  - [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
+  - [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
+  - [Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
+  - [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
+  - [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
+
+  In der Unternehmensportal-App für Android erfolgt die Kommunikation mit dem Microsoft Intune-Dienst über Google Play-Dienste. Da Google Play-Dienste in China noch nicht verfügbar sind, kann die Ausführung der folgenden Aufgaben bis zu 8 Stunden dauern.
+
+  | Configuration Manager-Administratorkonsole | Intune-Unternehmensportal-App für Android | Intune-Unternehmensportalwebsite |
+  |----|----|----|      
+  | Abkoppeln/Zurücksetzen (Entfernen aller Daten)   | Entfernen eines Remotegeräts | Entfernen eines Geräts (lokal und remote) |
+  | Abkoppeln/Zurücksetzen (Entfernen von Unternehmensdaten)   | Zurücksetzen eines Geräts | Zurücksetzen eines Geräts|
+  | Neue oder aktualisierte App-Bereitstellungen | Installieren verfügbarer branchenspezifischer Apps | Zurücksetzen der Gerätekennung|
+  | Remotesperre | | |
+  | Zurücksetzen der Kennung | | |        
+
+
+## <a name="new-hybrid-features-in-november-2016"></a>Neue Hybridfeatures im November 2016
+
+### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
+
+Die folgenden im November 2016 eingeführten Intune-Features werden in Hybridbereitstellungen unterstützt:
+
+- **Neues Microsoft Intune-Unternehmensportal für Windows 10-Geräte verfügbar**
+
+  Microsoft hat eine neue [Unternehmensportal-App für Windows 10-Geräte](https://www.microsoft.com/store/apps/9wzdncrfj3pz) veröffentlicht. Diese App, die das neue universelle Windows 10-Format nutzt, bietet neben allen bereits in früheren Unternehmensportal-Apps bereitgestellten Funktionen eine aktualisierte Benutzeroberfläche, die auf allen Windows 10-Geräten (PCs und mobile Geräte) identisch ist.
+
+  Die neue App nutzt Features der Plattform, z.B. einmaliges Anmelden (SSO) und die zertifikatbasierte Authentifizierung, auf Windows 10-Geräten. Die App ist als Upgrade für die vorhandenen Installationen des Unternehmensportals für Windows 8.1 und Windows Phone 8.1 im Windows Store verfügbar. Weitere Informationen finden Sie im [Blog des Intune-Supportteams](http://aka.ms/intunecp_universalapp).
+
+  In der neuen Unternehmensportal-App werden auch alle Windows Store für Unternehmen-Anwendungen angezeigt, die in der Configuration Manager-Konsole als **Verfügbar** markiert sind.
+
+
+### <a name="new-in-configuration-manager-current-branch"></a>Neuheiten in Configuration Manager (Current Branch)
+
+Die folgenden Features, die zuvor in Configuration Manager Technical Preview-Releases verfügbar waren, stehen nun in Hybridbereitstellungen mit Intune und Configuration Manager (Current Branch) Version 1610 zur Verfügung.
+
+* [Zusätzliche Einstellungen und benutzerfreundlichere Konfigurationselemente](/sccm/core/plan-design/changes/whats-new-in-version-1610?branch=sccm-1610-release#new-compliance-settings-for-configuration-items)
+* [Zusätzliche Einstellungen für DEP-Profile](#new-in-configuration-manager-technical-preview-1609)
+* [Kostenpflichtige Apps im Windows Store für Unternehmen](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
+* [Native connection types for Windows 10 VPN profiles (Native Verbindungstypen für Windows 10-VPN-Profile)](#new-in-configuration-manager-technical-preview-1609)
+* [Intune-Kompatibilitätsdiagramme](/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy)
+* [Anforderung zur Richtliniensynchronisierung über die Konsole](/sccm/mdm/deploy-use/sync-intune-device)
+* [Windows Defender-Konfigurationseinstellungen](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client#windows-defender)
+
+Die folgenden zusätzlichen Hybridfeatures sind auch in Version 1610 von Configuration Manager (Current Branch) enthalten:
+
+- **Erhöhte Anzahl registrierter Geräte**
+
+  Sie können jetzt für Benutzer die Registrierung von bis zu 15 Geräten festlegen. Die Beschränkung lag zuvor bei 5 Geräten pro Benutzer.
+
+
+- **Zusätzliche Sicherheitsunterstützung**
+
+  Zusätzlich zu „Hauptadministrator“ haben nun die folgenden integrierten Sicherheitsrollen vollen Zugriff auf Elemente im Knoten „Alle unternehmenseigenen Geräte“, einschließlich vorab deklarierter Geräte, iOS-Registrierungsprofilen und Windows-Registrierungsprofilen:
+
+    - Asset-Manager
+    - Zugriffs-Manager für Unternehmensressourcen
+
+  Der Rolle „Analyst mit Leseberechtigung“ wird weiterhin der schreibgeschützte Zugriff auf diese Bereiche der Configuration Manager-Konsole gewährt.
+
+- **Automatisch ausgelöster VPN-Zugriff über Windows Information Protection-Apps**
+
+  Sie können Windows 10-VPN-Profilen eine primäre Windows Information Protection-Domäne hinzufügen, die bewirkt, dass alle zugeordneten Apps automatisch eine VPN-Verbindung auslösen, wenn sie auf dem Gerät ausgeführt werden. Diese Option ist nur verfügbar, wenn ein nativer Verbindungstyp ausgewählt wird.
+
+- **Bedingter Zugriff für Windows 10-VPN-Profile**
+
+    Sie können jetzt festlegen, dass in Azure Active Directory registrierte Windows 10-Geräte kompatibel sein müssen, damit sie VPN-Zugriff über in der Configuration Manager-Konsole erstellte Windows 10-VPN-Profile haben. Dies ist möglich über das neue Kontrollkästchen **Bedingten Zugriff für diese VPN-Verbindung aktivieren** auf der Seite „Authentifizierungsmethode“ im Assistenten zum Erstellen von VPN-Profilen und den VPN-Profileigenschaften für Windows 10-VPN-Profile. Diese Option ist nur verfügbar, wenn ein nativer Verbindungstyp ausgewählt wird.
+
+    Wenn Sie den bedingten Zugriff für das Profil aktivieren, können Sie auch ein separates Zertifikat für die Einmalanmeldungsauthentifizierung angeben.
 
 ## <a name="new-hybrid-features-in-october-2016"></a>Neue Hybridfeatures im Oktober 2016
 
@@ -48,9 +134,9 @@ Die folgenden im Oktober 2016 eingeführten Intune-Features werden in Hybridbere
 
   Sie können mithilfe des Intune App Wrapping Tools Ihre Apps so einstellen, dass sie die MAM-Richtlinien von Intune verwenden.
 
-- **Android Samsung KNOX-Kompatibilität mit Intune**
+- **Android Samsung KNOX Standard-Kompatibilität mit Intune**
 
-  Bestimmte Modelle des Samsung Galaxy Ace-Telefons können nicht von Intune als Samsung KNOX-Geräte verwaltet werden. Wenn Sie diese Geräte bei Intune registrieren, werden sie stattdessen als Android-Standardgeräte verwaltet.
+  Bestimmte Modelle des Samsung Galaxy Ace-Telefons können nicht von Intune als Samsung KNOX Standard-Geräte verwaltet werden. Wenn Sie diese Geräte bei Intune registrieren, werden sie stattdessen als Android-Standardgeräte verwaltet.
 
   Folgende Modellnummern sind betroffen:
 
@@ -143,14 +229,14 @@ Die folgenden im August 2016 eingeführten Intune-Features werden in Hybridberei
 
   Google entfernt die für IT-Administratoren und Endbenutzer verfügbare Funktion, die Kennung von Android 7.0-Geräten remote zurückzusetzen. Bisher konnten IT-Administratoren die Kennung von Benutzern remote zurücksetzen, und die Endbenutzer konnten ihre Kennungen über die Unternehmensportal-Website zurücksetzen.
 
-- **Richtlinien für zulässige und blockierte Apps für Samsung KNOX-Geräte**
+- **Richtlinien für zulässige und blockierte Apps für Samsung KNOX Standard-Geräte**
 
-  Sie können nun eine benutzerdefinierte Richtlinie für Samsung KNOX-Geräte konfigurieren, mit der Sie eines der folgenden Elemente erstellen können:
+  Sie können nun eine benutzerdefinierte Richtlinie für Samsung KNOX Standard-Geräte konfigurieren, mit der Sie eines der folgenden Elemente erstellen können:
 
   - Eine Liste von Apps, deren Ausführung auf dem Gerät blockiert wurde. Auch wenn sie installiert ist, kann eine in der Liste der blockierten Geräte definierte App nicht auf dem Gerät aktiviert werden.
   - Eine Liste der Apps, die Benutzer des Geräts aus dem Google Play Store installieren dürfen. Keine anderen Apps können aus dem Store installiert werden.
 
-  Diese Einstellungen können nur von Geräten verwendet werden, die Samsung KNOX ausführen. Einzelheiten finden Sie unter [Use custom policies to allow and block apps for Samsung KNOX devices (Verwenden benutzerdefinierter Richtlinien, um Samsung KNOX-Geräte zuzulassen oder zu blockieren)](/intune/deploy-use/custom-policy-to-allow-and-block-samsung-knox-apps).
+  Diese Einstellungen können nur von Geräten verwendet werden, auf denen Samsung KNOX Standard ausgeführt wird. Einzelheiten finden Sie unter [Verwenden von benutzerdefinierten Richtlinien zum Zulassen und Blockieren von Apps für Samsung KNOX Standard-Geräte](/intune/deploy-use/custom-policy-to-allow-and-block-samsung-knox-apps).
 
 - **Feedback-Link vom Unternehmensportal zu Microsoft**
 
@@ -237,6 +323,6 @@ Informationen zu den neuen Funktionen finden Sie in der Dokumentation für das a
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 
