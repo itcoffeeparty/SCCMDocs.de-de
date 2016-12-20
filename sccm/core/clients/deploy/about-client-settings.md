@@ -1,8 +1,8 @@
 ---
-title: Clienteinstellungen | System Center Configuration Manager
+title: Clienteinstellungen | Microsoft Docs
 description: Auswahl von Clienteinstellung mithilfe der Verwaltungskonsole in System Center Configuration Manager.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/12/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: cbe052891c55dd0c0d58c6e65d783314b0ec8ce9
+ms.sourcegitcommit: 809c7938968b4a6efce6ef37fe7b7baf2c9dd3e7
+ms.openlocfilehash: 1615c183c440b44084651d52bfc50be2d65c2e11
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>Informationen zu Clienteinstellungen in System Center Configuration Manager
@@ -27,82 +27,92 @@ ms.openlocfilehash: cbe052891c55dd0c0d58c6e65d783314b0ec8ce9
 
 Alle Clienteinstellungen in System Center Configuration Manager werden in der Configuration Manager-Konsole über den Knoten **Clienteinstellungen** im Arbeitsbereich **Verwaltung** verwaltet. Mit Configuration Manager wird ein Satz Standardeinstellungen geliefert. Wenn Sie die Clientstandardeinstellungen ändern, werden diese Einstellungen auf alle Clients in der Hierarchie angewendet. Sie können auch benutzerdefinierte Clienteinstellungen konfigurieren. Wenn Sie diese Einstellungen Sammlungen zuweisen, werden die Clientstandardeinstellungen überschrieben. Informationen zum Konfigurieren von Clienteinstellungen finden Sie unter [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md).  
 
- Viele der Clienteinstellungen sind selbsterklärend. In den nachfolgenden Abschnitten finden Sie weitere Informationen zu den Clienteinstellungen, für die Sie möglicherweise einige Informationen benötigen, bevor Sie sie konfigurieren:  
+ Viele der Clienteinstellungen sind selbsterklärend. Andere werden hier beschrieben.  
 
-##  <a name="a-namebkmkbitsa-background-intelligent-transfer"></a><a name="BKMK_BITS"></a> Intelligente Hintergrundübertragung  
+## <a name="background-intelligent-transfer"></a>Intelligente Hintergrundübertragung  
 
 -   **Maximale Netzwerkbandbreite für BITS-Übertragungen im Hintergrund begrenzen**  
 
-     Falls für diese Option die Einstellung **Wahr** oder **Ja** ausgewählt wird, wird von Configuration Manager-Clients die BITS-Bandbreitendrosselung verwendet.  
+   Ist diese Option auf **Wahr** oder **Ja** festgelegt, wird von den Clients die BITS-Bandbreiteneinschränkung verwendet.  
 
 -   **Beginn des Einschränkungszeitfensters**  
 
-     Geben Sie in der lokalen Zeit an, wann das BITS-Einschränkungsfenster beginnen soll.  
+   Die lokale Startzeit für das BITS-Einschränkungszeitfenster.  
 
 -   **Ende des Einschränkungszeitfensters**  
 
-     Geben Sie in der lokalen Zeit an, wann das BITS-Einschränkungsfenster enden soll. Wenn Sie hier den gleichen Wert wie für **Beginn des Einschränkungszeitfensters**eingeben, ist die BITS Einschränkung immer aktiviert.  
+  Die lokale Endzeit für das BITS-Einschränkungszeitfenster. Entspricht dieser Wert dem Wert von **Beginn des Einschränkungszeitfensters**, ist die BITS-Einschränkung immer aktiviert.  
 
 -   **Maximale Übertragungsrate während des Einschränkungszeitfensters (KBit/s)**  
 
-     Geben Sie die maximale Übertragungsrate in KBit/s an, die den Configuration-Clients während des angegebenen BITS-Einschränkungsfensters zur Verfügung steht.  
+   Geben Sie die maximale Übertragungsrate an, die den Clients während des Zeitfensters zur Verfügung steht.  
 
 -   **BITS-Downloads außerhalb des Einschränkungszeitfensters zulassen**  
 
-     Wählen Sie diese Option aus, um BITS-Downloads außerhalb des Einschränkungsfensters zu ermöglichen. Bei dieser Option können von Configuration Manager-Clients separate BITS-Einstellungen außerhalb des angegebenen Fensters verwendet werden.  
+   Ermöglicht Configuration Manager-Clients die Verwendung separater BITS-Einstellungen außerhalb des angegebenen Zeitfensters.  
 
 -   **Maximale Übertragungsrate außerhalb des Einschränkungszeitfensters (KBit/s)**  
 
-     Geben Sie die maximale Übertragungsrate in KBit/s an, die den Configuration Manager-Clients außerhalb des angegebenen BITS-Einschränkungsfensters zur Verfügung steht. Diese Option kann nur konfiguriert werden, wenn Sie die BITS-Einschränkung außerhalb des angegebenen Fensters zugelassen haben.  
+   Maximale Übertragungsrate, die von Clients außerhalb des BITS-Einschränkungszeitfensters verwendet werden kann, sofern die BITS-Einschränkung außerhalb des Zeitfensters zugelassen wurde.  
 
-##  <a name="a-namebkmkclientpolicydevicesettingsa-client-policy"></a><a name="BKMK_ClientPolicyDeviceSettings"></a> Clientrichtlinie  
+## <a name="client-cache-settings"></a>Einstellung des Clientcaches
+
+- **BranchCache konfigurieren**
+
+  Wird ab Version 1606 verwendet, um den Clientcomputer für [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache) einzurichten. Um die BranchCache-Zwischenspeicherung auf dem Client zuzulassen, legen Sie **BranchCache aktivieren** auf **Ja** fest. 
+
+- **Konfigurieren der Cachegröße des Clients**
+
+  Der Clientcache auf Windows-Computern speichert temporäre Dateien, die zum Installieren von Anwendungen und Programmen verwendet werden. Wählen Sie **Ja** aus, um die **maximale Cachegröße** (in MB oder als Prozentsatz des Datenträgers) festzulegen. Wird die Option auf **Nein** festgelegt, beträgt die Standardgröße 5120 MB.
+
+## <a name="client-policy"></a>Clientrichtlinie  
 
 -   **Clientrichtlinien-Abrufintervall (Minuten)**  
 
-     Geben Sie an, wie häufig die Clientrichtlinie von den folgenden Configuration Manager-Clients heruntergeladen werden soll:  
+   Geben Sie an, wie häufig die Clientrichtlinie von den folgenden Configuration Manager-Clients heruntergeladen werden soll:  
 
-    -   Windows-Computer (z. B. Desktops, Server, Laptops)  
+  -   Windows-Computer (z. B. Desktops, Server, Laptops)  
 
-    -   Von Configuration Manager registrierte mobile Geräte  
+  -   Von Configuration Manager registrierte mobile Geräte  
 
-    -   Macintosh-Computer  
+  -   Macintosh-Computer  
 
-    -   Computer, auf denen Linux oder UNIX ausgeführt wird  
+  -   Computer, auf denen Linux oder UNIX ausgeführt wird  
 
 -   **Benutzerrichtlinienabruf auf Clients aktivieren**  
 
-     Wenn Sie für diese Einstellung die Option **Wahr** oder **Ja** konfigurieren, und der Benutzer von Configuration Manager ermittelt wird, werden an Configuration Manager-Clients auf Computern Anwendungen und Programme übertragen, die speziell auf den angemeldeten Benutzer abgestimmt sind. Weitere Informationen zum Ermitteln von Benutzern finden Sie unter [Active Directory User Discovery in Configuration Manager (Active Directory-Benutzerermittlung in Configuration Manager)](../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).  
+   Wenn Sie diese Option auf **Wahr** oder **Ja** festlegen, und Configuration Manager [den Benutzer ermittelt hat](../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser), erhalten Clients auf Computern speziell auf den angemeldeten Benutzer abgestimmte Anwendungen und Programme.  
 
-     Da die Liste der für Benutzer verfügbaren Software vom Standortserver an den Anwendungskatalog übertragen wird, muss für diese Einstellung die Option **Wahr** oder **Ja** ausgewählt werden, damit Benutzer die Anwendungen über den Anwendungskatalog anzeigen und anfordern können. Wenn aber diese Einstellung auf **Falsch** oder **Nein**festgelegt wurde, wird die Verwendung des Anwendungskatalogs wie folgt eingeschränkt:  
+   Da die Liste der für Benutzer verfügbaren Software vom Standortserver an den Anwendungskatalog übertragen wird, muss für diese Einstellung die Option **Wahr** oder **Ja** ausgewählt werden, damit Benutzer die Anwendungen über den Anwendungskatalog anzeigen und anfordern können. Wenn aber diese Einstellung auf **Falsch** oder **Nein**festgelegt wurde, wird die Verwendung des Anwendungskatalogs wie folgt eingeschränkt:  
 
-    -   Den Benutzern ist es nicht möglich, die im Anwendungskatalog angezeigten Anwendungen zu installieren.  
+  -   Den Benutzern ist es nicht möglich, die im Anwendungskatalog angezeigten Anwendungen zu installieren.  
 
-    -   Benutzer sehen keine Benachrichtigungen zu ihren Genehmigungsanforderungen für Anwendungen. Sie müssen stattdessen den Anwendungskatalog aktualisieren und den Genehmigungsstatus überprüfen.  
+  -   Benutzer sehen keine Benachrichtigungen zu ihren Genehmigungsanforderungen für Anwendungen. Sie müssen stattdessen den Anwendungskatalog aktualisieren und den Genehmigungsstatus überprüfen.  
 
-    -   Benutzer erhalten keine Revisionen und Updates für Anwendungen, die im Anwendungskatalog veröffentlicht werden. Sie können jedoch im Anwendungskatalog Änderungen an Anwendungsinformationen sehen.  
+  -   Benutzer erhalten keine Revisionen und Updates für Anwendungen, die im Anwendungskatalog veröffentlicht werden. Sie können jedoch im Anwendungskatalog Änderungen an Anwendungsinformationen sehen.  
 
-    -   Wenn Sie eine Anwendungsbereitstellung nach der Installation der Anwendung aus dem Anwendungskatalog entfernen, wird noch bis zu 2 Tage lang von den Clients geprüft, ob die Anwendung installiert ist.  
+  -   Wenn Sie eine Anwendungsbereitstellung nach der Installation der Anwendung aus dem Anwendungskatalog entfernen, wird noch bis zu 2 Tage lang von den Clients geprüft, ob die Anwendung installiert ist.  
 
-     Wenn für diese Einstellung die Option **Falsch** oder **Nein**gewählt wurde, erhalten Benutzer zudem keine erforderlichen Anwendungen, die Sie für Benutzer bereitstellen, und auch keine anderen Verwaltungsvorgänge, die in Benutzerrichtlinien enthalten sind.  
+   Wenn für diese Einstellung die Option **Falsch** oder **Nein**gewählt wurde, erhalten Benutzer zudem keine erforderlichen Anwendungen, die Sie für Benutzer bereitstellen, und auch keine anderen Verwaltungsvorgänge, die in Benutzerrichtlinien enthalten sind.  
 
-     Diese Einstellung gilt für Benutzer, deren Computer mit dem Intranet und Internet verbunden sind. Sie muss auf **Wahr** oder **Ja** gesetzt werden, wenn Sie Benutzerrichtlinien auch im Internet aktivieren möchten.  
+   Diese Einstellung gilt für Benutzer, deren Computer mit dem Intranet und Internet verbunden sind. Sie muss auf **Wahr** oder **Ja** gesetzt werden, wenn Sie Benutzerrichtlinien auch im Internet aktivieren möchten.  
 
 -   **Benutzerrichtlinienanforderungen von Internetclients aktivieren**  
 
-     Wenn der Client und der Standort für die internetbasierte Clientverwaltung konfiguriert sind und Sie diese Option auf **Wahr** oder **Ja** setzen, erhalten Benutzer eine Benutzerrichtlinie, wenn ihr Computer mit dem Internet verbunden ist und die beiden folgenden Bedingungen erfüllt sind:  
+   Wenn der Client und der Standort für die internetbasierte Clientverwaltung konfiguriert sind und Sie diese Option auf **Wahr** oder **Ja** setzen, erhalten Benutzer eine Benutzerrichtlinie, wenn ihr Computer mit dem Internet verbunden ist und die beiden folgenden Bedingungen erfüllt sind:  
 
-    -   Die Clienteinstellung **Benutzerrichtlinie auf Clients aktivieren** ist auf **Wahr** oder **Benutzerrichtlinie auf Clients aktivieren** ist auf **Ja**gesetzt.  
+  -   Die Clienteinstellung **Benutzerrichtlinie auf Clients aktivieren** ist auf **Wahr** oder **Benutzerrichtlinie auf Clients aktivieren** ist auf **Ja**gesetzt.  
 
-    -   Der Benutzer wird vom internetbasierten Verwaltungspunkt erfolgreich mithilfe der Windows-Authentifizierung (Kerberos oder NTLM) authentifiziert.  
+  -   Der Benutzer wird vom internetbasierten Verwaltungspunkt erfolgreich mithilfe der Windows-Authentifizierung (Kerberos oder NTLM) authentifiziert.  
 
-     Wenn Sie für diese Option die Einstellung **Falsch** oder **Nein**einrichten oder eine der Bedingungen nicht zutrifft, werden an einen Computer im Internet nur Computerrichtlinien übertragen. In diesem Fall können Benutzer weiterhin Anwendungen über einen internetbasierten Anwendungskatalog anzeigen, anfordern und installieren. Wenn diese Einstellung auf **Falsch** oder **Nein** gesetzt wurde, aber die Option **Benutzerrichtlinienabruf auf Clients aktivieren** auf **Wahr** oder die Option **Benutzerrichtlinie auf Clients aktivieren** auf **Ja**gesetzt ist, erhalten Benutzer erst nach Trennen der Internetverbindung Benutzerrichtlinien.  
+   Wenn Sie für diese Option die Einstellung **Falsch** oder **Nein**einrichten oder eine der Bedingungen nicht zutrifft, werden an einen Computer im Internet nur Computerrichtlinien übertragen. In diesem Fall können Benutzer weiterhin Anwendungen über einen internetbasierten Anwendungskatalog anzeigen, anfordern und installieren. Wenn diese Einstellung auf **Falsch** oder **Nein** gesetzt wurde, aber die Option **Benutzerrichtlinienabruf auf Clients aktivieren** auf **Wahr** oder die Option **Benutzerrichtlinie auf Clients aktivieren** auf **Ja**gesetzt ist, erhalten Benutzer erst nach Trennen der Internetverbindung Benutzerrichtlinien.  
 
-     Weitere Informationen zur Clientverwaltung im Internet finden Sie unter [Considerations for client communications from the Internet or an untrusted forest (Überlegungen zur Clientkommunikation aus dem Internet oder aus einer nicht vertrauenswürdigen Gesamtstruktur)](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in [Communications between endpoints in System Center Configuration Manager(Datenübertragungen zwischen Endpunkten in System Center Configuration Manager)](../../../core/plan-design/hierarchy/communications-between-endpoints.md).  
+   Weitere Informationen zur Clientverwaltung im Internet finden Sie unter [Considerations for client communications from the Internet or an untrusted forest (Überlegungen zur Clientkommunikation aus dem Internet oder aus einer nicht vertrauenswürdigen Gesamtstruktur)](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in [Communications between endpoints in System Center Configuration Manager(Datenübertragungen zwischen Endpunkten in System Center Configuration Manager)](../../../core/plan-design/hierarchy/communications-between-endpoints.md).  
 
-    > [!NOTE]  
-    >  Genehmigungsanforderungen für Anwendungen von Benutzern erfordern keine Benutzerrichtlinien oder Benutzerauthentifizierung.  
+  > [!NOTE]  
+  >  Genehmigungsanforderungen für Anwendungen von Benutzern erfordern keine Benutzerrichtlinien oder Benutzerauthentifizierung.  
 
-##  <a name="a-namebkmkcompliancea-compliance-settings"></a><a name="BKMK_Compliance"></a> Compliance Settings  
+##  <a name="compliance-settings"></a>Kompatibilitätseinstellungen  
 
 -   **Kompatibilitätsauswertung planen**  
 
@@ -110,11 +120,9 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
 -   **Benutzerdaten und Profile aktivieren**  
 
-     Wählen Sie **Ja** aus, wenn Sie Konfigurationselemente für Benutzerdaten und Profile auf Windows 8-Computern in der Hierarchie bereitstellen möchten.  
+     Wählen Sie **Ja** aus, wenn Sie Konfigurationselemente für [Benutzerdaten und Profile](../../../compliance/deploy-use/create-user-data-and-profiles-configuration-items.md) auf Windows 8-Computern in der Hierarchie bereitstellen möchten.  
 
-     Weitere Informationen zu Benutzerdaten und Profilen finden Sie unter [How to Create User Data and Profiles Configuration Items in System Center Configuration Manager (Erstellen von Konfigurationselementen für Benutzerdaten und Profile in System Center Configuration Manager)](../../../compliance/deploy-use/create-user-data-and-profiles-configuration-items.md).  
-
-##  <a name="a-namebkmkcomputeragentdevicesettingsa-computer-agent"></a><a name="BKMK_ComputerAgentDeviceSettings"></a> Computer-Agent  
+## <a name="computer-agent"></a>Computer-Agent  
 
 -   **Websitepunkt des Standardanwendungskatalogs**  
 
@@ -247,12 +255,17 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
      Wenn erforderliche Softwareupdates am Stichtag ohne Verzögerung installiert werden müssen, wählen Sie für diese Einstellung **Ja** aus.  
 
-##  <a name="a-namebkmkcomputerrestartdevicesettingsa-computer-restart"></a><a name="BKMK_ComputerRestartDeviceSettings"></a> Computerneustart  
+-   **Karenzzeit für Erzwingung nach Bereitstellungsfrist (Stunden)** 
+    
+     In einigen Fällen empfiehlt es sich, Benutzern mehr Zeit zum Installieren von erforderlichen Anwendungsbereitstellungen oder Softwareupdates, über die von Ihnen konfigurierten Fristen hinaus, zu geben. Dies kann erforderlich sein, wenn ein Computer für einen längeren Zeitraum ausgeschaltet war und eine große Anzahl von Anwendungs- oder Updatebereitstellungen installieren muss. Wenn z.B. ein Endbenutzer gerade aus dem Urlaub zurückgekehrt ist, muss er möglicherweise sehr lange warten, bis überfällige Anwendungsbereitstellungen installiert werden. Sie können eine Karenzzeit für die Erzwingung definieren, um dieses Problem zu lösen, indem Sie die Configuration Manager-Clienteinstellungen für eine Sammlung bereitstellen.
+    Sie können eine Karenzzeit zwischen 1 und 120 Stunden festlegen. Diese Einstellung wird in Verbindung mit der Bereitstellungseigenschaft **Erzwingung für diese Bereitstellung basierend auf den Benutzereinstellungen verzögern** verwendet. Weitere Informationen finden Sie unter [Bereitstellen von Anwendungen](/sccm/apps/deploy-use/deploy-applications).
+
+##  <a name="computer-restart"></a>Computerneustart  
  Achten Sie beim Angeben dieser Einstellungen für den Computerneustart darauf, dass die Intervalle für die temporäre Neustartbenachrichtigung und den endgültigen Countdown kürzer sind als das kürzeste auf den Computer angewendete Wartungsfenster.  
 
  Weitere Informationen zu Wartungsfenstern finden Sie unter [Verwenden von Wartungsfenstern in System Center Configuration Manager](../../../core/clients/manage/collections/use-maintenance-windows.md).  
 
-##  <a name="a-namebkmkendpointprotectiondevicesettingsa-endpoint-protection"></a><a name="BKMK_EndpointProtectionDeviceSettings"></a> Endpoint Protection  
+##  <a name="endpoint-protection"></a>Endpoint Protection  
 
 -   **Verwalten des Endpoint Protection-Clients auf Clientcomputern**  
 
@@ -290,7 +303,7 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
      Wählen Sie **Wahr** oder **Ja** aus, wenn durch Configuration Manager nur das erste Definitionsupdate auf Clientcomputern installiert werden soll. Diese Einstellung kann hilfreich sein, um bei der ersten Installation des Definitionsupdates überflüssige Netzwerkverbindungen zu vermeiden und die Auslastung der Netzwerkbandbreite zu verringern.  
 
-##  <a name="a-namebkmkhardwareinventorydevicesettingsa-hardware-inventory"></a><a name="BKMK_HardwareInventoryDeviceSettings"></a> Hardwareinventur  
+##  <a name="hardware-inventory"></a>Hardwareinventur  
 
 -   **Maximale benutzerdefinierte MIF-Dateigröße (KB)**  
 
@@ -316,7 +329,7 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
     > [!NOTE]  
     >  Diese Einstellung ist nur in den Clientstandardeinstellungen verfügbar.  
 
-##  <a name="a-namebkmkmeteredinternetconnetionssettingsa-metered-internet-connections"></a><a name="BKMK_MeteredInternetConnetionsSettings"></a> Getaktete Internetverbindungen  
+##  <a name="metered-internet-connections"></a>Getaktete Internetverbindungen  
  Sie können die Kommunikation zwischen Windows 8-Clientcomputern und Configuration Manager-Standorten verwalten, sofern getaktete Internetverbindungen verwendet werden. Bei getakteten Internetverbindungen berechnen einige Internetanbieter die anfallenden Gebühren anhand der Datenmenge, die Sie senden und empfangen.  
 
 > [!NOTE]  
@@ -348,7 +361,7 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
     -   **Blockieren**: Vom Configuration Manager-Client wird nicht versucht, mit Configuration Manager-Standorten zu kommunizieren, wenn eine getaktete Internetverbindung vorliegt. Dies ist der Standardwert.  
 
-##  <a name="a-namebkmkpowmgmtdevicesettingsa-power-management"></a><a name="BKMK_PowMgmtDeviceSettings"></a> Energieverwaltung  
+##  <a name="power-management"></a>Energieverwaltung  
 
 -   **Benutzern das Ausschließen ihres Geräts aus der Energieverwaltung gestatten**  
 
@@ -376,7 +389,7 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
     > [!IMPORTANT]  
     >  Dieser Wert muss mit dem Wert in den **Eigenschaften**des Standorts übereinstimmen. Wenn Sie den Wert an einem Ort ändern, wird er am anderen Ort nicht automatisch aktualisiert.  
 
-##  <a name="a-namebkmkremotetoolsdevicesettingsa-remote-tools"></a><a name="BKMK_RemoteToolsDeviceSettings"></a> -Remotetools  
+##  <a name="remote-tools"></a>-Remotetools  
 
 -   **Remotesteuerung auf Clients aktivieren** mit der Beschreibung **Firewallausnahmeprofile**  
 
@@ -460,7 +473,7 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
      Wählen Sie diese sicherere Option aus, wenn Sie die Authentifizierung auf Netzwerkebene für das Herstellen von Remotedesktopverbindungen zu Clientcomputern verwenden möchten, auf denen Windows Vista oder höher ausgeführt wird. Für die Authentifizierung auf Netzwerkebene werden anfangs weniger Remotecomputerressourcen verbraucht, da die Benutzerauthentifizierung abgeschlossen ist, bevor eine Remotedesktopverbindung hergestellt wird. Diese Methode ist sicherer, da hierdurch der Computer vor böswilligen Benutzern oder Schadsoftware besser geschützt werden kann und das Risiko von DoS-Angriffen verringert wird.  
 
-##  <a name="a-namebkmksoftwaredeploymentdevicesettingsa-software-deployment"></a><a name="BKMK_SoftwareDeploymentDeviceSettings"></a> Softwarebereitstellung  
+## <a name="software-deployment"></a>Softwarebereitstellung  
 
 -   **Erneute Auswertung für Bereitstellungen planen**  
 
@@ -471,7 +484,7 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
      Sie können diese Aktion auch auf einem Configuration Manager-Clientcomputer initiieren, indem Sie in der Systemsteuerung im Modul **Configuration Manager** auf der Registerkarte **Aktionen** die Aktion **Evaluationszyklus für die Anwendungsbereitstellung** auswählen.  
 
-##  <a name="a-namebkmksoftinventorydevicesettingsa-software-inventory"></a><a name="BKMK_SoftInventoryDeviceSettings"></a> Softwareinventur  
+##  <a name="software-inventory"></a>Softwareinventur  
 
 -   **Inventurberichtsdetail**  
 
@@ -524,7 +537,7 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
         >   
         >  Im Dialogfeld **Clienteinstellung konfigurieren** wird mit dem Wert **Maximale Größe aller gesammelten Dateien (KB)** die maximale Größe für alle gesammelten Dateien angezeigt. Wenn diese Größe erreicht ist, wird die Dateisammlung beendet. Alle bereits gesammelten Dateien werden beibehalten und an den Standortserver gesendet.  
 
-        > [!IMPORTANT]  
+        > [!IMPORTANT]
         >  Wenn Sie die Softwareinventur so konfigurieren, dass viele große Dateien gesammelt werden, kann sich dies nachteilig auf die Leistung des Netzwerks und Standortservers auswirken.  
 
          Informationen zum Anzeigen gesammelter Dateien finden Sie unter [How to use Resource Explorer to view software inventory in System Center Configuration Manager (Verwenden von Ressourcen-Explorer zum Anzeigen des Softwarebestands in System Center Configuration Manager)](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md).  
@@ -543,7 +556,7 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
     -   **Inventarisierte Namen:** – Klicken Sie auf das Symbol "Neu", um einen neuen inventarisierten Namen hinzuzufügen, der bei der Softwareinventur durch den in der Liste **Anzeigename** markierten Namen ersetzt wird. Sie können mehrere Namen hinzufügen, die ersetzt werden.  
 
-##  <a name="a-namebkmksoftwareupdatesdevicesettinga-software-updates"></a><a name="BKMK_SoftwareUpdatesDeviceSetting"></a> Softwareupdates  
+##  <a name="software-updates"></a>Softwareupdates  
 
 -   **Softwareupdates auf Clients aktivieren**  
 
@@ -581,7 +594,7 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
      Verwenden Sie diese Einstellung, um den Zeitrahmen für die vorherige Einstellung anzugeben. Sie können einen Wert von 1 bis 23 Stunden und von 1 bis 365 Tagen eingeben. Der Standardwert liegt bei 7 Tagen.  
 
-##  <a name="a-namebkmkuserdeviceaffinitydevicesettingsa-user-and-device-affinity"></a><a name="BKMK_UserDeviceAffinityDeviceSettings"></a> Affinität zwischen Benutzer und Gerät  
+##  <a name="user-and-device-affinity"></a>Affinität zwischen Benutzer und Gerät  
 
 -   **Nutzungsschwellenwert (Minuten) für Affinität zwischen Benutzer und Gerät**  
 
@@ -598,23 +611,7 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
      Wählen Sie **Wahr** oder **Ja** aus, damit von Configuration Manager automatisch Affinitäten zwischen Benutzern und Geräten erstellt werden, die auf gesammelten Nutzungsstatistiken beruhen.  
 
-## <a name="client-cache-settings"></a>Einstellung des Clientcaches
-
-- **Konfigurieren der Cachegröße des Clients**
-
-  Der Clientcacheordner wird auf Windows-Computern zum Speichern temporärer Dateien verwendet, die zum Installieren von Anwendungen und Programmen verwendet werden. Wählen Sie ab Version 1606 **Ja** aus, um die Größe des Clientcacheordners mithilfe der Einstellung **Maximale Cachegröße** anzugeben. Wenn **Nein** ausgewählt wird, ist der Standardwert des Clientcacheordners 5120 MB.
-
-  Während der Clientinstallation können andere Eigenschaften für das Clientcache festgelegt werden. Weitere Informationen finden Sie unter [Configure the Client Cache for Configuration Manager Clients](../../../core/clients/manage/manage-clients.md#BKMK_ClientCache).
-
-- **Maximale Cachegröße (MB)**
-
-  Ab Version 1606 wird die maximale Größe des Clientcacheordners in Megabytes angegeben.
-
-- **Maximale Cachegröße (Prozentsatz des Datenträgers)** (ab Version 1606)
-
-  Ab Version 1606 wird die maximale Größe des Clientcacheordners als Prozentsatz des Datenträgers angegeben.
-
-##  <a name="a-namebkmkmobiledevicesusersettingsa-mobile-devices"></a><a name="BKMK_MobileDevicesUserSettings"></a> Mobile Geräte  
+##  <a name="mobile-devices"></a>Mobile Geräte  
 
 -   **Anmeldungsprofil für mobile Geräte**  
 
@@ -623,7 +620,7 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
     > [!IMPORTANT]  
     >  Stellen Sie vor dem Konfigurieren dieser Option sicher, dass Sie eine Zertifikatvorlage zur Verwendung für die Anmeldung mobiler Geräte konfiguriert haben.  
 
-##  <a name="a-namebkmkenrollmentusersettingsa-enrollment"></a><a name="BKMK_EnrollmentUserSettings"></a> Anmeldung  
+##  <a name="enrollment"></a>Anmeldung  
 
 -   **Anmeldungsprofil für mobile Geräte**  
 
@@ -632,7 +629,7 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
     > [!IMPORTANT]  
     >  Stellen Sie vor dem Konfigurieren dieser Option sicher, dass Sie eine Zertifikatvorlage für die Anmeldung mobiler Geräte oder für die Anmeldung per Macintosh-Clientzertifikat konfiguriert haben.  
 
-##  <a name="a-namebkmkuserdeviceaffinityusersettingsa-user-and-device-affinity"></a><a name="BKMK_UserDeviceAffinityUserSettings"></a> Affinität zwischen Benutzer und Gerät  
+## <a name="user-and-device-affinity"></a>Affinität zwischen Benutzer und Gerät  
 
 -   **Benutzer das Festlegen primärer Geräte gestatten**  
 
@@ -640,6 +637,6 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,8 +1,8 @@
 ---
-title: "Szenario: Endpoint Protection schützt Computer vor Schadsoftware | System Center Configuration Manager"
+title: "Szenario: Endpoint Protection schützt Computer vor Schadsoftware | Microsoft Docs"
 description: "Erfahren Sie mehr über das Implementieren von Endpoint Protection in Configuration Manager, um Computer vor Angriffen durch Schadsoftware zu schützen."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/9/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,8 +15,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d4506bbbe3533d6d9c2353f99658352ad1671a2f
+ms.sourcegitcommit: 9fcbc0bb9c8ccd4265381ca4db7a363c8ae3b54a
+ms.openlocfilehash: 2cdc57b766b18a6fdf21ec8748172c12b11b08db
 
 
 ---
@@ -72,12 +72,12 @@ Diese Thema enthält ein Beispielszenario zur Implementierung der Endpoint Prote
 |John verwendet den Assistenten zum Erstellen von Windows-Firewall-Richtlinien, um eine Richtlinie zu erstellen, indem die folgenden Einstellungen für das Domänenprofil konfiguriert werden:<br /><br /> 1) **Windows Firewall aktivieren**: **Ja**<br /><br /> 2)<br />                    **Benutzer benachrichtigen, wenn ein neues Programm von der Windows-Firewall blockiert wird**: **Ja**|Informationen hierzu finden Sie unter [Erstellen und Bereitstellen von Windows-Firewall-Richtlinien für Endpoint Protection in System Center Configuration Manager](../../protect/deploy-use/create-windows-firewall-policies.md).|  
 |John stellt die neue Firewallrichtlinie für die Sammlung **Alle durch Endpoint Protection geschützten Computer** bereit, die er zuvor erstellt hat.|Weitere Informationen finden Sie unter „So stellen Sie eine Windows-Firewall-Richtlinie bereit“ in [Erstellen und Bereitstellen von Windows-Firewall-Richtlinien für Endpoint Protection in System Center Configuration Manager](create-windows-firewall-policies.md).|  
 |John verwendet die verfügbaren Verwaltungsaufgaben für Endpoint Protection, um Antischadsoftware und Windows-Firewallrichtlinien zu verwalten, bedarfsgesteuerte Überprüfungen von Computern durchzuführen und auf Computern zu erzwingen, dass die neuesten Definitionen heruntergeladen werden. Außerdem werden sie dazu verwendet, um weitere Maßnahmen anzugeben, die bei der Erkennung von Schadsoftware eingeleitet werden.|Informationen hierzu finden Sie unter [Verwalten von Richtlinien für Antischadsoftware und Firewalleinstellungen für Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-firewall.md).|  
-|John verwendet die folgenden Methoden zum Überwachen des Status von Endpoint Protection und der von Endpoint Protection durchzuführenden Aktionen:<br /><br /> 1) Mithilfe des Knotens **System Center2012 Endpoint Protection-Status** im Arbeitsbereich **Überwachung**<br /><br /> 2) Mithilfe des Knotens **Endpoint Protection** im Arbeitsbereich **Bestand und Kompatibilität**<br /><br /> 3) Mithilfe der integrierten Configuration Manager-Berichte|Informationen finden Sie unter [Überwachen von Endpoint Protection in System Center Configuration Manager](monitor-endpoint-protection.md).|  
+|John verwendet die folgenden Methoden zum Überwachen des Status von Endpoint Protection und der von Endpoint Protection durchzuführenden Aktionen:<br /><br /> 1) Mithilfe des Knotens **Endpoint Protection-Status** unter **Sicherheit** im Arbeitsbereich **Überwachung**<br /><br /> 2) Mithilfe des Knotens **Endpoint Protection** im Arbeitsbereich **Bestand und Kompatibilität**<br /><br /> 3) Mithilfe der integrierten Configuration Manager-Berichte|Informationen finden Sie unter [Überwachen von Endpoint Protection in System Center Configuration Manager](monitor-endpoint-protection.md).|  
 
  John meldet seinem Vorgesetzten eine erfolgreiche Implementierung von Endpoint Protection und bestätigt, dass die Computer der Woodgrove Bank jetzt gemäß den angegebenen Unternehmensanforderungen vor Antischadsoftware geschützt sind.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

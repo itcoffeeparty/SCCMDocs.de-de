@@ -1,5 +1,5 @@
 ---
-title: Dienstverbindungspunkt| System Center Configuration Manager
+title: Dienstverbindungspunkt | Microsoft Docs
 description: "Erfahren Sie mehr über diese Standortsystemrolle von Configuration Manager, und verstehen und planen Sie den Verwendungsbereich."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e30c3d4bbf42e008a3f570c843b2f63251bce158
+ms.sourcegitcommit: 8195abd403d94a96d193289ea6e6bf8880d06078
+ms.openlocfilehash: aaa9a80a8429ab315a25862a78d6eb8733fd2e89
 
 
 ---
@@ -28,7 +28,7 @@ ms.openlocfilehash: e30c3d4bbf42e008a3f570c843b2f63251bce158
 
 Der System Center Configuration Manager-Dienstverbindungspunkt ist eine Standortsystemrolle, die mehrere wichtige Funktionen für die Hierarchie übernimmt. Bevor Sie den Dienstverbindungspunkt konfigurieren, sollten Sie seinen Verwendungsbereich verstehen und planen, da dies Auswirkungen auf die Konfiguration dieser Standortsystemrolle haben kann:  
 
--   **Verwalten mobiler Geräte mit Microsoft Intune** – Diese Rolle ersetzt den Windows Intune-Connector, der von früheren Configuration Manager-Versionen verwendet wurde, und kann mit Ihren Intune-Abonnementdetails konfiguriert werden. Informationen finden Sie unter [Hybride Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune](../../../../mdm/plan-design/hybrid-mobile-device-management.md).  
+-   **Verwalten mobiler Geräte mit Microsoft Intune** – Diese Rolle ersetzt den Windows Intune-Connector, der von früheren Configuration Manager-Versionen verwendet wurde, und kann mit Ihren Intune-Abonnementdetails konfiguriert werden. Informationen finden Sie unter [Hybride Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune](../../../../mdm/understand/hybrid-mobile-device-management.md).  
 
 -   **Verwalten mobiler Geräte mit lokaler Verwaltung mobiler Geräte** – Diese Rolle bietet Unterstützung für lokale Geräte, die Sie verwalten, und die keine Verbindung mit dem Internet herstellen. Informationen finden Sie unter [Verwalten mobiler Geräte mithilfe lokaler Infrastruktur in System Center Configuration Manager](../../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
 
@@ -74,9 +74,11 @@ Wechseln Sie zum Verwenden des Dienst-Managers von Configuration Manager in der 
 
 **Wenn die Rolle auf einem Computer installiert wird, der sich an einem vom Standortserver entfernten Ort befindet:**  
 
+-   Das Computerkonto des Standortservers muss ein lokaler Administrator auf dem Computer sein, der eine Remotedienstverbindung hostet.
+
 -   Sie müssen den Standortsystemserver, der die Rolle hostet, mit einem Standortsystem-Installationskonto konfigurieren.  
 
--   Das Standortsystem-Installationskonto wird vom Verteilungs-Manager auf dem Standortserver zum Übertragen von Updates vom Dienstverbindungspunkt verwendet.  
+-   Das Standortsystem-Installationskonto wird vom Verteilungs-Manager auf dem Standortserver zum Übertragen von Updates vom Dienstverbindungspunkt verwendet.
 
 ##  <a name="a-namebkmkurlsa-internet-access-requirements"></a><a name="bkmk_urls"></a> Erforderliche Berechtigungen für den Internetzugriff  
 Der Computer, der den Dienstverbindungspunkt und alle Firewalls zwischen dem Computer und dem Internet hostet, muss die Kommunikation über den **Port TCP 443** an die folgenden Internet-URLs übergeben, um den Vorgang zu aktivieren. Der Dienstverbindungspunkt unterstützt auch Webproxys (mit oder ohne Authentifizierung) für den Zugriff auf diese URLs.  
@@ -108,8 +110,13 @@ Der Computer, der den Dienstverbindungspunkt und alle Firewalls zwischen dem Com
 
 -   https://go.microsoft.com/fwlink/?LinkID=619849  
 
+## <a name="install-the-service-connection-point"></a>Installieren des Dienstverbindungspunkts
+Beim Ausführen von **Setup** zum Installieren des Standorts der obersten Ebene einer Hierarchie haben Sie die Möglichkeit, den Dienstverbindungspunkt zu installieren.
+
+Nachdem Sie Setup ausgeführt haben oder wenn Sie die Standortsystemrolle neu installieren, verwenden Sie den **Assistenten zum Hinzufügen von Standortsystemrollen ** oder den **Assistenten zum Erstellen von Standortsystemservern**, um das Standortsystem auf einem Server am Standort der obersten Ebene der Hierarchie (dem Standort der zentralen Verwaltung oder einem eigenständigen primären Standort) zu installieren.  Beide Assistenten befinden sich auf der Registerkarte **Startseite** in der Konsole unter **Verwaltung** > **Standortkonfiguration** > **Server und Standortsystemrollen**.
 
 
-<!--HONumber=Nov16_HO1-->
+
+<!--HONumber=Dec16_HO3-->
 
 

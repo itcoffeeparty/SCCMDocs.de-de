@@ -1,8 +1,8 @@
 ---
-title: "Überwachen von Endpoint Protection | System Center Configuration Manager"
+title: "Überwachen von Endpoint Protection | Microsoft Docs"
 description: "Erfahren Sie, wie Sie Endpoint Protection in der System Center Configuration Manager-Hierarchie überwachen."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/9/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fb5b247ae3fc031cd0beea21b03a45affe3add68
+ms.sourcegitcommit: 9fcbc0bb9c8ccd4265381ca4db7a363c8ae3b54a
+ms.openlocfilehash: 590d95f82a30167dcc0d5191feaa39ecab2b3136
 
 
 ---
@@ -25,13 +25,13 @@ ms.openlocfilehash: fb5b247ae3fc031cd0beea21b03a45affe3add68
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Sie können Endpoint Protection in der Microsoft System Center 2012 Configuration Manager-Hierarchie mithilfe des Knotens **Endpoint Protection-Status** im Arbeitsbereich **Überwachung**, mithilfe des Knotens **Endpoint Protection** im Arbeitsbereich **Bestand und Kompatibilität** und mithilfe von Berichten überwachen.  
+Sie können Endpoint Protection in der Microsoft System Center Configuration Manager-Hierarchie mithilfe des Knotens **Endpoint Protection-Status** unter **Sicherheit** im Arbeitsbereich **Überwachung**, mithilfe des Knotens **Endpoint Protection** im Arbeitsbereich **Bestand und Kompatibilität** und mithilfe von Berichten überwachen.  
 
 ##  <a name="a-namebkmk1a-how-to-monitor-endpoint-protection-by-using-the-endpoint-protection-status-node"></a><a name="BKMK_1"></a> Überwachen von Endpoint Protection mithilfe des Knotens „Endpoint Protection-Status“  
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Überwachung**.  
 
-2.  Klicken Sie im Arbeitsbereich **Überwachung** auf **Endpoint Protection-Status**.  
+2.  Erweitern Sie im Arbeitsbereich **Überwachung** die Option **Sicherheit**, und klicken Sie auf **Endpoint Protection-Status**.  
 
 3.  Wählen Sie in der Liste **Sammlung** die Sammlung aus, für die Sie Statusinformationen anzeigen möchten.  
 
@@ -84,6 +84,6 @@ Sie können Endpoint Protection in der Microsoft System Center 2012 Configuratio
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

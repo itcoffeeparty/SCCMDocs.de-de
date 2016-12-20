@@ -1,8 +1,8 @@
 ---
-title: Endpoint Protection | System Center Configuration Manager
+title: Endpoint Protection | Microsoft Docs
 description: "Erfahren Sie, wie Sie Richtlinien für Antischadsoftware und die Sicherheit der Windows-Firewall für Clientcomputer in der Configuration Manager-Hierarchie verwalten."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/9/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 30ac6f2ec03a4c0d50de700f9ce77f9e50eaf1e0
+ms.sourcegitcommit: 9fcbc0bb9c8ccd4265381ca4db7a363c8ae3b54a
+ms.openlocfilehash: 59313bd6f76433782a79ab3ee9d6240f767fbd76
 
 
 ---
@@ -59,7 +59,7 @@ Windows 10-Computer benötigen keinen zusätzlichen Client für die Verwaltung v
 
 
 ## <a name="managing-malware-with-endpoint-protection"></a>Verwalten von Schadsoftware mit Endpoint Protection  
- Mit Endpoint Protection in Configuration Manager können Sie Antischadsoftware-Richtlinien erstellen, in denen Einstellungen für Endpoint Protection-Clientkonfigurationen enthalten sind. Sie können diese Antischadsoftware-Richtlinien auf Clientcomputern bereitstellen und sie im Knoten **Endpoint Protection-Status**im Arbeitsbereich **Überwachung** oder mithilfe von Configuration Manager-Berichten überwachen.  
+ Mit Endpoint Protection in Configuration Manager können Sie Antischadsoftware-Richtlinien erstellen, in denen Einstellungen für Endpoint Protection-Clientkonfigurationen enthalten sind. Sie können diese Antischadsoftware-Richtlinien auf Clientcomputern bereitstellen und sie im Knoten **Endpoint Protection-Status** unter **Sicherheit** im Arbeitsbereich **Überwachung** oder mithilfe von Configuration Manager-Berichten überwachen.  
 
  Weitere Informationen:  
 
@@ -112,6 +112,6 @@ Ab Version 1606 von Configuration Manager (Current Branch) kann Endpoint Protect
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 
