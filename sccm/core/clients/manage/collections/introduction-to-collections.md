@@ -2,7 +2,7 @@
 title: "Einführung in Sammlungen | Microsoft Docs"
 description: "Erhalten Sie eine Einführung in die Verwendung von Sammlungen in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/05/2016
+ms.date: 01/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 08a509cacb711ed6d1ae188d5512a026a12417f2
-ms.openlocfilehash: 8a228a55c198df08701f28123696e35cc73fd98c
+ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
+ms.openlocfilehash: fd4c6fd85d12592b3d4f57a48cf6da6c7a668615
 
 
 ---
@@ -25,13 +25,13 @@ ms.openlocfilehash: 8a228a55c198df08701f28123696e35cc73fd98c
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Sammlungen in System Center Configuration Manager (auch als ConfigMgr und SCCM bezeichnet) bieten Ihnen die Möglichkeit zum Organisieren von Ressourcen in zu verwaltende Einheiten. Sie können Sammlungen erstellen, die mit Ihren Anforderungen zur Clientverwaltung übereinstimmen und um Vorgänge für mehrere Ressourcen gleichzeitig auszuführen. 
+Mithilfe von Sammlungen können Sie Ressourcen in verwaltbaren Einheiten organisieren. Sie können Sammlungen erstellen, die mit Ihren Anforderungen zur Clientverwaltung übereinstimmen und um Vorgänge für mehrere Ressourcen gleichzeitig auszuführen. 
 
-Die meisten Verwaltungsaufgaben basieren auf der Verwendung einer oder mehrerer Sammlungen oder erfordern diese. Obwohl Sie die integrierte Sammlung aller Systeme verwenden können, stellt die Verwendung dieser Sammlung für Verwaltungsaufgaben keine Best Practice dar. Erstellen Sie eigene benutzerdefinierte Sammlungen, um die Geräte oder Benutzer für eine Aufgabe genauer anzugeben.  
+Die meisten Verwaltungsaufgaben basieren auf der Verwendung einer oder mehrerer Sammlungen oder erfordern diese. Obwohl Sie die integrierte Sammlung aller Systeme verwenden können, stellt die Verwendung dieser Sammlung für Verwaltungsaufgaben keine Best Practice dar. Erstellen Sie benutzerdefinierte Sammlungen, um die Geräte oder Benutzer für eine Aufgabe genauer anzugeben.  
 
  Integrierte und benutzerdefinierte Sammlungen werden in den Knoten **Benutzersammlungen** und **Gerätesammlungen** im Arbeitsbereich **Bestände und Kompatibilität** in der Configuration Manager-Konsole angezeigt.  
 
- Vor kurzem angezeigte Sammlungen werden in den Knoten **Benutzer** und **Geräte** des Arbeitsbereichs **Bestände und Kompatibilität** in der Configuration Manager-Konsole angezeigt.  
+ Die zuletzt verwendeten Sammlungen werden im Knoten **Benutzer** sowie im Knoten **Geräte** des Arbeitsbereichs **Bestand und Kompatibilität** angezeigt.  
 
 Hier einige Beispiele für die Verwendung von Sammlungen:  
 
@@ -67,6 +67,6 @@ Hier einige Beispiele für die Verwendung von Sammlungen:
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

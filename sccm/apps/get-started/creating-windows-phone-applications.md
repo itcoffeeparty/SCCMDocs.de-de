@@ -2,7 +2,7 @@
 title: Erstellen von Windows Phone-Anwendungen | Microsoft Docs
 description: "Erfahren Sie, was Sie beim Erstellen und Bereitstellen von Anwendungen für Windows Phone-Geräte berücksichtigen müssen."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 557888d1f1f899e3198c430bbe5ccdd44178f824
-ms.openlocfilehash: 5cd1ba42afd13e98565d24d1ec8a3ee209e8532c
+ms.sourcegitcommit: 5aef08865b232ff2dacec6906098bebf4e42e6b1
+ms.openlocfilehash: c230212d72e1c00856d6869414f2db927b1b79ad
 
 
 ---
@@ -33,13 +33,14 @@ Zusätzlich zu den anderen System Center Configuration Manager-Anforderungen und
 |Gerätetyp|Unterstützte Dateitypen|  
 |-----------------|---------------------|  
 |Windows Phone 8|.xap|  
-|Windows Phone 8.1|.xap, .appx, .appxbundle|  
+|Windows Phone 8.1|.xap, .appx, .appxbundle|
+|Windows 10 Mobile|.xap, .appx, .appxbundle|
 
  Die folgenden Bereitstellungsaktionen werden unterstützt:  
 
 |Gerätetyp|Unterstützte Aktionen|  
 |-----------------|-----------------------|  
-|Windows Phone 8 und Windows Phone 8.1|Verfügbar, Erforderlich, Deinstallieren|  
+|Windows Phone 8, Windows Phone 8.1 und Windows 10 Mobile|Verfügbar, Erforderlich, Deinstallieren|  
 
 ## <a name="steps-to-deploy-the-latest-windows-phone-company-portal-app-with-supersedence"></a>Schritte zur Bereitstellung der neuesten Windows Phone-Unternehmensportal-App mit Ablösung  
  In der folgenden Tabelle finden Sie Schritte, Details und weitere Informationen zum Erstellen und Bereitstellen der aktuellen Windows Phone 8-Unternehmensportal-App.  
@@ -56,6 +57,6 @@ Zusätzlich zu den anderen System Center Configuration Manager-Anforderungen und
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

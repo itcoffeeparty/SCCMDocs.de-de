@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8195abd403d94a96d193289ea6e6bf8880d06078
-ms.openlocfilehash: aaa9a80a8429ab315a25862a78d6eb8733fd2e89
+ms.sourcegitcommit: 4a8d98addcd463eb82d8b7100b44254a10d21992
+ms.openlocfilehash: b5f7ad01f7a32d69d0c75b3c80a053f3c020c036
 
 
 ---
@@ -40,7 +40,9 @@ Der System Center Configuration Manager-Dienstverbindungspunkt ist eine Standort
 
     -   Ermitteln von Updates für Configuration Manager, die für die von Ihnen verwendete Configuration Manager-Version gelten  
 
-     Siehe [Usage data levels and settings](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
+  Informationen zu den auf den einzelnen Ebenen gesammelten Daten und zum Ändern der Sammlungsebene nach der Installation der Rolle finden Sie unter [Diagnose- und Nutzungsdaten](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data). Klicken Sie anschließend auf den Link der Configuration Manager-Version, die Sie verwenden.  
+
+    Weitere Informationen finden Sie unter [Ebenen und Einstellungen für Nutzungsdaten](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
 
 -   **Herunterladen von Updates, die auf Ihre Configuration Manager-Infrastruktur zutreffen** – Auf Grundlage der von Ihnen hochgeladenen Nutzungsdaten werden nur Updates verfügbar gemacht, die für Ihre Infrastruktur relevant sind.  
 
@@ -117,6 +119,6 @@ Nachdem Sie Setup ausgeführt haben oder wenn Sie die Standortsystemrolle neu in
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

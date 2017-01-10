@@ -2,7 +2,7 @@
 title: Verwalten von Windows als Dienst | Microsoft Docs
 description: "Mithilfe von Features in System Center Configuration Manager können Sie den Zustand von Windows als Dienst in Ihrer Umgebung anzeigen, um Windows auf dem neuesten Stand zu halten."
 ms.custom: na
-ms.date: 12/07/2016
+ms.date: 12/21/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3f44505c977b511223a083a960f871371c0ff133
-ms.openlocfilehash: 1885968006ef5be1f507e94e0d33918174b1af12
+ms.sourcegitcommit: 66cd6d099acdd9db2bc913a69993aaf5e17237fe
+ms.openlocfilehash: 79e13074db18a617c7e3fceedaa143dbece90a3d
 
 
 ---
@@ -238,30 +238,45 @@ Wenden Sie das folgende Verfahren an, um die Eigenschaften eines Wartungsplans z
 
     In den Eigenschaften für den Wartungsplan sind folgende Einstellungen verfügbar, die im Assistenten nicht konfiguriert wurden:
 
-    - Bereitstellungseinstellungen: Konfigurieren Sie auf der Registerkarte „Bereitstellungseinstellungen“ die folgenden Einstellungen:  
+    **Bereitstellungseinstellungen**: Konfigurieren Sie auf der Registerkarte „Bereitstellungseinstellungen“ die folgenden Einstellungen:  
 
-        -   **Bereitstellungstyp**: Geben Sie für die Softwareupdatebereitstellung den Bereitstellungstyp an. Wählen Sie **Erforderlich** aus, um eine obligatorische Softwareupdatebereitstellung zu erstellen, bei der Softwareupdates automatisch bis zu einem vorgegebenen Installationsstichtag auf Clients installiert werden. Wählen Sie **Verfügbar** aus, um eine optionale Softwareupdatebereitstellung zu erstellen, die im Softwarecenter zur Verfügung gestellt wird und von Benutzern installiert werden kann.  
+    -   **Bereitstellungstyp**: Geben Sie für die Softwareupdatebereitstellung den Bereitstellungstyp an. Wählen Sie **Erforderlich** aus, um eine obligatorische Softwareupdatebereitstellung zu erstellen, bei der Softwareupdates automatisch bis zu einem vorgegebenen Installationsstichtag auf Clients installiert werden. Wählen Sie **Verfügbar** aus, um eine optionale Softwareupdatebereitstellung zu erstellen, die im Softwarecenter zur Verfügung gestellt wird und von Benutzern installiert werden kann.  
 
-            > [!IMPORTANT]  
-            >  Nachdem Sie die Softwareupdatebereitstellung einmal erstellt haben, können Sie den Bereitstellungstyp nicht mehr ändern.  
+        > [!IMPORTANT]  
+        >  Nachdem Sie die Softwareupdatebereitstellung einmal erstellt haben, können Sie den Bereitstellungstyp nicht mehr ändern.  
 
-            > [!NOTE]  
-            >  Eine als **Erforderlich** bereitgestellte Softwareupdategruppe wird im Hintergrund heruntergeladen und berücksichtigt BITS-Einstellungen (sofern konfiguriert).  
-            > Als **Verfügbar** bereitgestellte Softwareupdategruppen werden jedoch im Vordergrund heruntergeladen und ignorieren BITS-Einstellungen.  
+        > [!NOTE]  
+        >  Eine als **Erforderlich** bereitgestellte Softwareupdategruppe wird im Hintergrund heruntergeladen und berücksichtigt BITS-Einstellungen (sofern konfiguriert).  
+        > Als **Verfügbar** bereitgestellte Softwareupdategruppen werden jedoch im Vordergrund heruntergeladen und ignorieren BITS-Einstellungen.  
 
-        -   **Wake-on-LAN verwenden, um Clients für erforderliche Bereitstellungen zu aktivieren**: Geben Sie an, ob Wake-On-LAN am Stichtag aktiviert werden soll, damit Aktivierungspakete an Computer gesendet werden, für die mindestens eines der in der Bereitstellung enthaltenen Softwareupdates erforderlich ist. Alle Computer, die sich am Installationsstichtag im Energiesparmodus befinden, werden aktiviert, damit die Softwareupdateinstallation initiiert werden kann. Clients, die sich im Energiesparmodus befinden und für die keine der in der Bereitstellung enthaltenen Softwareupdates erforderlich sind, werden nicht gestartet. Diese Einstellung ist standardmäßig deaktiviert und nur verfügbar, wenn unter **Bereitstellungstyp** die Einstellung **Erforderlich**ausgewählt wurde.  
+    -   **Wake-on-LAN verwenden, um Clients für erforderliche Bereitstellungen zu aktivieren**: Geben Sie an, ob Wake-On-LAN am Stichtag aktiviert werden soll, damit Aktivierungspakete an Computer gesendet werden, für die mindestens eines der in der Bereitstellung enthaltenen Softwareupdates erforderlich ist. Alle Computer, die sich am Installationsstichtag im Energiesparmodus befinden, werden aktiviert, damit die Softwareupdateinstallation initiiert werden kann. Clients, die sich im Energiesparmodus befinden und für die keine der in der Bereitstellung enthaltenen Softwareupdates erforderlich sind, werden nicht gestartet. Diese Einstellung ist standardmäßig deaktiviert und nur verfügbar, wenn unter **Bereitstellungstyp** die Einstellung **Erforderlich**ausgewählt wurde.  
 
-            > [!WARNING]  
-            >  Sie können diese Option nur verwenden, wenn Computer und Netzwerke für Wake-On-LAN konfiguriert sind.  
+        > [!WARNING]  
+        >  Sie können diese Option nur verwenden, wenn Computer und Netzwerke für Wake-On-LAN konfiguriert sind.  
 
-        -   **Detailstufe**: Geben Sie die Detailstufe für die von den Clientcomputern zurückgegebenen Zustandsmeldungen an.  
+    -   **Detailstufe**: Geben Sie die Detailstufe für die von den Clientcomputern zurückgegebenen Zustandsmeldungen an.  
 
-    - Downloadeinstellungen
+   **Downloadeinstellungen**: Konfigurieren Sie auf der Registerkarte „Downloadeinstellungen“ die folgenden Einstellungen:  
 
-    - Warnungen
+    -   Geben Sie an, ob die Softwareupdates vom Client heruntergeladen und installiert werden, wenn ein Client mit einer langsamen Netzwerkverbindung oder einer Fallbackinhaltsquelle vorliegt.  
+
+    -   Geben Sie an, ob die Softwareupdates vom Client von einem Fallbackverteilungspunkt heruntergeladen und installiert werden sollen, wenn der Inhalt für die Softwareupdates an einem bevorzugten Verteilungspunkt nicht verfügbar ist.  
+
+    -   **Freigeben von Inhalten für andere Clients im gleichen Subnetz zulassen**: Geben Sie an, ob BranchCache beim Herunterladen von Inhalten verwendet werden soll. Weitere Informationen zu BranchCache finden Sie unter [Grundlegende Konzepte für die Inhaltsverwaltung](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
+
+    -   Geben Sie an, ob von Clients Softwareupdates von Microsoft Update heruntergeladen werden sollen, wenn keine Softwareupdates an Verteilungspunkten verfügbar sind.
+    > [!IMPORTANT]
+    > Verwenden Sie diese Einstellung nicht für Windows 10-Wartungsupdates. Configuration Manager kann (zumindest bis Version 1610) keine Windows 10-Wartungsupdates von Microsoft Update herunterladen.
+
+    -   Geben Sie an, ob es Clients mit einer getakteten Internetverbindung möglich sein soll, Inhalt nach dem Installationsstichtag herunterzuladen. Bei getakteten Internetverbindungen berechnen einige Internetanbieter die anfallenden Gebühren anhand der Datenmenge, die Sie senden und empfangen.   
+
+    **Warnungen**: Geben Sie auf der Seite „Warnungen“ an, wie Configuration Manager und System Center Operations Manager Warnungen für diese Bereitstellung generieren sollen. Warnungen können nur konfiguriert werden, wenn auf der Seite „Bereitstellungseinstellungen“ unter **Bereitstellungstyp** die Option **Erforderlich** ausgewählt wurde.  
+
+    > [!NOTE]  
+    >  Sie können die letzten Warnungen zu Softwareupdates im Arbeitsbereich **Softwarebibliothek** im Knoten **Softwareupdates** prüfen.  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO4-->
 
 

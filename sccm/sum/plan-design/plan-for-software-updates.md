@@ -6,7 +6,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 01/04/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 translationtype: Human Translation
-ms.sourcegitcommit: b1c68b233097ef3a744dd25b3fb919660f0b2244
-ms.openlocfilehash: 16415fb54a2cf91747990c94ffea0076effe525b
+ms.sourcegitcommit: 46c8004afee4b18d5c7a2fcc5dac0f7d0d1f823c
+ms.openlocfilehash: 8a5efdce88127c71547c4f5ef85660a2983aa577
 
 
 ---
@@ -82,7 +82,7 @@ Bevor Sie Softwareupdates in einer System Center Configuration Manager-Produktio
 
 2.  Vom Client werden mindestens vier Wiederholungsversuche in Abständen von 30 Minuten ausgeführt. Nach dem vierten Fehler und einer weiteren Wartezeit von 2 Minuten wird zum nächsten Softwareupdatepunkt in der Softwareupdatepunkt-Liste gewechselt.  
 
-3.  Nach einer erfolgreichen Überprüfung wird vom Client fortan eine Verbindung mit dem entsprechenden Softwareupdatepunkt hergestellt.  
+3.  Der Client durchläuft auf dem neuen Softwareupdatepunkt denselben Prozess. Nach einer erfolgreichen Überprüfung wird vom Client fortan eine Verbindung mit dem neuen Softwareupdatepunkt hergestellt.
 
  Die folgende Liste enthält zusätzliche Informationen, die Sie bei Wiederholungsversuchen und beim Wechseln von Softwareupdatepunkten erwägen müssen:  
 
@@ -91,6 +91,13 @@ Bevor Sie Softwareupdates in einer System Center Configuration Manager-Produktio
 -   Wenn die internetbasierte Clientverwaltung aktiviert ist und es mehrere Softwareupdatepunkte gibt, die dafür konfiguriert sind, Kommunikation von internetbasierten Clients zu akzeptieren, erfolgt der Wechsel nach dem im vorherigen Beispiel beschriebenen Standardwiederholungsprozess.  
 
 -   Wenn der Überprüfungsprozess gestartet, aber der Client vor dessen Abschluss heruntergefahren wurde, gilt dies weder als Überprüfungsfehler noch als eine der vier Wiederholungen.  
+
+Wenn Configuration Manager die folgenden Fehlercodes des Windows Update-Agents erhält, muss der Client den Verbindungsaufbau wiederholen:  
+
+2149842970, 2147954429, 2149859352, 2149859362, 2149859338, 2149859344, 2147954430, 2147747475, 2149842974, 2149859342, 2149859372, 2149859341, 2149904388, 2149859371, 2149859367, 2149859366, 2149859364, 2149859363, 2149859361, 2149859360, 2149859359, 2149859358, 2149859357, 2149859356, 2149859354, 2149859353, 2149859350, 2149859349, 2149859340, 2149859339, 2149859332, 2149859333, 2149859334, 2149859337, 2149859336, 2149859335
+
+Um die Bedeutung eines Fehlercodes nachzuschlagen, müssen Sie den dezimalen Fehlercode in einen Hexadezimalwert umwandeln und diesen dann auf einer Website suchen, wie z. B. im [Wiki zu den Fehlercodes des Windows Update-Agents](https://social.technet.microsoft.com/wiki/contents/articles/15260.windows-update-agent-error-codes.aspx).
+
 
 ###  <a name="a-namebkmkmanuallyswitchsupsamanually-switch-clients-to-a-new-software-update-point"></a><a name="BKMK_ManuallySwitchSUPs"></a> Manuelles Wechseln von Clients auf einen neuen Softwareupdatepunkt
 Ab Version 1606 von Configuration Manager können Sie für Configuration Manager-Clients die Option zum Wechsel zu einem neuen Softwareupdatepunkt aktivieren, wenn beim aktiven Softwareupdatepunkt Probleme auftreten. Diese Option hat nur Änderungen zur Folge, wenn ein Client mehrere Softwareupdatepunkte von einem Verwaltungspunkt erhält.  
@@ -308,6 +315,6 @@ Lesen Sie [Vorbereiten der Softwareupdateverwaltung](../get-started/prepare-for-
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

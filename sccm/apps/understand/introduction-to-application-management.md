@@ -2,7 +2,7 @@
 title: "Einführung in die Anwendungsverwaltung | Microsoft Docs"
 description: "Hier finden Sie die wichtigsten Informationen über das Verwalten und Bereitstellen von System Center Configuration Manager-Anwendungen."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,8 +18,8 @@ manager: angrobe
 experimental: true
 experiment_id: rob-table-161101
 translationtype: Human Translation
-ms.sourcegitcommit: aa985dcb947803f7bc6d770f80a89a2fe6750681
-ms.openlocfilehash: 4be1fdaeeba2859389ea87b49b8e5891a28d052c
+ms.sourcegitcommit: 5aef08865b232ff2dacec6906098bebf4e42e6b1
+ms.openlocfilehash: 699adb5fac0c625c321db011af6989cc4c0778ec
 
 
 ---
@@ -56,12 +56,12 @@ Dieses Thema enthält die Grundlagen, die Sie vor der Arbeit mit System Center C
  Configuration Manager unterstützt die Bereitstellung folgender App-Typen:  
 
 - Windows Installer (MSI-Datei)
-- Windows-App-Paket (*.appx, \*.appxbundle)
+- Windows-App-Paket (*.appx, *.appxbundle)
 - Windows-App-Paket (im Windows Store)
 - Microsoft Application Virtualization 4
 - Microsoft Application Virtualization 5
 - Windows Mobile-CAB-Datei
-- Mac OS X  
+- macOS  
 
 
 Beim Verwalten von Geräten mit Microsoft Intune oder der lokalen Geräteverwaltung von Configuration Manager können Sie zusätzlich folgende App-Typen verwalten:
@@ -113,6 +113,6 @@ Beim Verwalten von Geräten mit Microsoft Intune oder der lokalen Geräteverwalt
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 
