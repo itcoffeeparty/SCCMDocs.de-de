@@ -1,5 +1,5 @@
 ---
-title: Vorbereiten von Windows-Servern | System Center Configuration Manager
+title: Vorbereiten von Computern mit Windows Server | Microsoft-Dokumentation
 description: "Stellen Sie sicher, dass ein Computer die Voraussetzungen für die Verwendung als Standortserver oder Standortsystemserver für System Center Configuration Manager erfüllt."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f0a1cc32285fcb792c3f4cdec616668474708404
-ms.openlocfilehash: acf8a401f1ce67a4d8c905c0126c031b97484271
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: bd89f97f4252ddea2d1bf7ab329417477c77868d
 
 
 ---
@@ -42,11 +42,8 @@ Die Informationen in diesem Artikel bieten einen Überblick über die verschiede
 -   **.NET Framework:** einschließlich  
 
     -   ASP.NET  
-
     -   HTTP-Aktivierung  
-
     -   Nicht-HTTP-Aktivierung  
-
     -   WCF-Dienste  
 
     Verschiedene Versionen von .NET Framework sind je nach Standortsystemrolle erforderlich.  
@@ -68,61 +65,37 @@ Die Informationen in diesem Artikel bieten einen Überblick über die verschiede
  -   **Registrierungsdienst für Netzwerkgeräte** (unter Active Directory-Zertifikatdienste): Diese Windows-Rolle ist eine Voraussetzung für die Verwendung von Zertifikatprofilen in Configuration Manager.  
 
  -   **Webserver (IIS)**: Einschließlich:  
-
     -   Allgemeine HTTP-Features >  
-
         -   HTTP-Umleitung  
-
     -   Anwendungsentwicklung >  
-
         -   .NET-Erweiterbarkeit  
-
         -   ASP.NET  
-
         -   ISAPI-Erweiterungen  
-
         -   ISAPI-Filter  
-
     -   Verwaltungstools >  
-
         -   IIS 6-Verwaltungskompatibilität  
-
         -   IIS 6-Metabasiskompatibilität  
-
         -   IIS 6-WMI-Kompatibilität  
-
     -   Sicherheit >  
-
         -   Anforderungsfilterung  
-
         -   Windows-Authentifizierung  
 
  Die folgenden Standortsystemrollen verwenden eine oder mehrere der aufgelisteten IIS-Konfigurationen:  
-
     -   Anwendungskatalog-Webdienstpunkt  
-
     -   Anwendungskatalog-Websitepunkt  
-
     -   Verteilungspunkt  
-
     -   Anmeldungspunkt  
-
     -   Anmeldungsproxypunkt  
-
     -   Fallbackstatuspunkt  
-
     -   Verwaltungspunkt  
-
     -   Softwareupdatepunkt  
-
-    -   Zustandsmigrationspunkt  
+    -   Zustandsmigrationspunkt     
 
     Die erforderliche Mindestversion von IIS ist die Version, die zum Betriebssystem des Standortservers gehört.  
 
     Zusätzlich zu diesen IIS-Konfigurationen müssen Sie möglicherweise [IIS-Anforderungsfilterung für Verteilungspunkte](#BKMK_IISFiltering)konfigurieren.  
 
 -   **Windows-Bereitstellungsdienste:** Diese Rolle wird mit der Betriebssystembereitstellung verwendet.  
-
 -   **Windows Server Update Services:** Diese Rolle ist erforderlich, wenn Sie Softwareupdates bereitstellen.  
 
 ##  <a name="a-namebkmkiisfilteringa-iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a> IIS-Anforderungsfilterung für Verteilungspunkte  
@@ -133,11 +106,8 @@ Die Informationen in diesem Artikel bieten einen Überblick über die verschiede
  Die folgenden Dateinamenerweiterungen werden außerdem von Configuration Manager für Pakete und Anwendungen verwendet. Stellen Sie sicher, dass Ihre Konfigurationen der Anforderungsfilterung diese Erweiterungen nicht blockieren:  
 
 -   .PCK  
-
 -   .PKG  
-
 -   .STA  
-
 -   .TAR  
 
 Beispiel: Sie verfügen über Quelldateien für eine Softwarebereitstellung, die einen Ordner mit der Bezeichnung **bin**oder eine Datei mit der Dateinamenerweiterung **.mdb** enthalten.  
@@ -167,12 +137,12 @@ Beispiel: Sie verfügen über Quelldateien für eine Softwarebereitstellung, die
 **Verteilungspunkte:** Für Verteilungspunkte müssen die folgenden HTTP-Verben zulässig sein:
  - GET
  - HEAD
- - PROFIND
+ - PROPFIND
 
 Informationen zum Konfigurieren der Anforderungsfilterung finden Sie unter [Konfigurieren der Anforderungsfilterung in IIS](https://technet.microsoft.com/library/hh831621.aspx#Verbs) auf TechNet oder in einer ähnlichen Dokumentation, die sich auf die Version von Windows Server bezieht, die den Verwaltungspunkt hostet.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

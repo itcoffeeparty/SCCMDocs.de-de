@@ -1,5 +1,5 @@
 ---
-title: Konsoleninterne Updates | System Center Configuration Manager
+title: Konsoleninterne Updates | Microsoft-Dokumentation
 description: "System Center Configuration Manager wird mit dem Microsoft-Clouddienst synchronisiert, um Updates abzurufen, die in der Konsole installieren werden können."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: b9721737b4181d8f5e41224c3e2c32ae41647554
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: 1b7063d45c6dc9b42e5002f684043a8e846416a2
 
 
 ---
@@ -51,11 +51,11 @@ Bevor Sie den Dienstverbindungspunkt konfigurieren, sollten Sie die zusätzliche
 
 -   Der Dienstverbindungspunkt wird verwendet, um Nutzungsinformationen zu Ihrem Standort hochzuladen. Diese Informationen helfen dem Microsoft-Clouddienst bei der Identifizierung von Updates, die für die aktuelle Version Ihrer Infrastruktur verfügbar sind. Weitere Informationen finden Sie unter [Diagnose- und Nutzungsdaten für System Center Configuration Manager](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).  
 
--   Der Dienstverbindungspunkt wird verwendet, um Geräte mithilfe von Microsoft Intune und der lokalen Verwaltung mobiler Geräte (Mobile Device Management; MDM) in Configuration Manager zu verwalten. Weitere Informationen finden Sie unter [Hybride Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune](../../../mdm/plan-design/hybrid-mobile-device-management.md).  
+-   Der Dienstverbindungspunkt wird verwendet, um Geräte mithilfe von Microsoft Intune und der lokalen Verwaltung mobiler Geräte (Mobile Device Management; MDM) in Configuration Manager zu verwalten. Weitere Informationen finden Sie unter [Hybride Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md).  
 
 Informationen zum besseren Verständnis darüber, was passiert, wenn Updates heruntergeladen werden, finden Sie unter:  
 
--   [Flussdiagramm: Herunterladen von Updates für System Center Configuration Manager](../../../core/servers/manage/download-updates-flowchart.md).  
+-   [Flussdiagramm – Herunterladen von Updates für System Center Configuration Manager](../../../core/servers/manage/download-updates-flowchart.md)
 
 -   [Flowchart - Update replication for System Center Configuration Manager (Flussdiagramm: Updatereplikation für System Center Configuration Manager)](../../../core/servers/manage/update-replication-flowchart.md)  
 
@@ -69,7 +69,7 @@ In der Standardeinstellung ist die Klasse **Updatepakete** (SMS_CM_Updatepackage
     - Ein Benutzer mit dieser Sicherheitsrolle und Zugriff auf den Sicherheitsbereich **Standard** kann sich Updates anzeigen lassen, Updates installieren und währenddessen Features aktivieren. Zusätzlich kann er sich nach der Updateinstallation Features anzeigen lassen. Eine nachträgliche Aktivierung von Features ist jedoch nicht möglich.
 
 - **Analyst mit Leseberechtigung** mit der Berechtigung **Lesen** :
-  -  Ein Benutzer mit dieser Sicherheitsrolle und Zugriff auf den Bereich **Standard** kann Updates anzeigen, aber nicht installieren, und kann Funktionen anzeigen, nachdem ein Update installiert wurde, kann diese jedoch nicht selbst aktivieren.
+  -  Aktualisierung von 1511 oder ... auf 1606: Ein Benutzer mit dieser Sicherheitsrolle und Zugriff auf den Bereich **Standard** kann Updates anzeigen, sie aber nicht installieren, und er kann Funktionen anzeigen, nachdem ein Update installiert wurde, kann diese aber nicht selbst aktivieren.
 
 **Übersicht über die erforderlichen Berechtigungen für Updates und Wartung:**   
   - Verwenden Sie ein Konto, das einer Sicherheitsrolle zugewiesen ist, die über die Klasse **Updatepakete** mit den Berechtigungen **Ändern** und **Lesen** verfügt.
@@ -100,13 +100,14 @@ Bevor Sie ein neues Update in der Configuration Manager-Konsole installieren, pr
 
 - Update auf 1606 von 1511 oder 1602: Informationen finden Sie unter [Checklist for installing update 1606 for System Center Configuration Manager](../../../core/servers/manage/checklist-for-installing-update-1606.md) (Checkliste für die Installation von Update 1606 für System Center Configuration Manager).  
 
+- Aktualisierung von 1511, 1602 oder 1606 auf 1610: Weitere Informationen finden Sie unter [Checklist for installing update 1610 (Prüfliste für das Installieren von Aktualisierung 1610)](../../../core/servers/manage/checklist-for-installing-update-1610.md).  
 
 ###  <a name="a-namebkmkstep2a-step-2-test-the-database-upgrade-before-installing-an-update"></a><a name="bkmk_step2"></a> Schritt 2: Testen des Datenbankupgrades vor der Installation eines Updates  
 Vor der Installation eines neuen Updates in Ihrer Hierarchie, beispielsweise 1602, sollten Sie das Upgrade der Standortdatenbank testen. Der Name der Befehlszeilenoption, mit der Sie die Installation eines Updates an einer Sicherungskopie Ihrer Standortdatenbank testen, lautet **testdbupgrade**.  
 
 Im Gegensatz zu früheren Versionen von Configuration Manager müssen Sie hier keine Standortwiederherstellung durchführen, wenn bei einem Update ein Fehler auftritt, sondern können stattdessen die Updateinstallation wiederholen. Auch wenn das Testupgrade der Datenbank weniger kritisch ist als in früheren Produktversionen, wird dieser Schritt daher nach wie vor empfohlen.  
 
-##### <a name="to-run-testdbupgrade-before-installing-an-update"></a>So führen Sie vor dem Installieren eines Updates „testdbupgrade“ aus  
+#### <a name="to-run-testdbupgrade-before-installing-an-update"></a>So führen Sie vor dem Installieren eines Updates „testdbupgrade“ aus  
 
 1.  Rufen Sie einen Satz von Quelldateien aus dem Ordner **CD.Latest** eines Standorts ab, an dem die Version ausgeführt wird, auf die Sie aktualisieren möchten. Dazu müssen Sie möglicherweise zuerst einen Standort in einer Labor- oder Testumgebung installieren, an dem diese Version von System Center Configuration Manager ausgeführt wird.  
 
@@ -136,13 +137,13 @@ Im Gegensatz zu früheren Versionen von Configuration Manager müssen Sie hier k
 ###  <a name="a-namebkmkstep3a-step-3-run-the-prerequisite-checker-before-installing-an-update"></a><a name="bkmk_step3"></a> Schritt 3: Ausführen der Voraussetzungsprüfung vor der Installation eines Updates  
 Bevor Sie ein Update installieren, sollten Sie die Voraussetzungsprüfung für das Update ausführen. Wenn Sie vor der Installation eines Updates die Voraussetzungsprüfung ausführen, geschieht Folgendes:  
 
--   Die Updatedateien werden an andere Standorte repliziert, bevor das Update tatsächlich installiert wird.  
+-   Die Updatedateien werden an andere Standorte repliziert, bevor das Update installiert wird.  
 
 -   Die Voraussetzungsprüfung wird automatisch erneut ausgeführt, wenn Sie sich für die Installation des Updates entscheiden.  
 
 Wenn Sie später ein Update installieren, können Sie das Update so konfigurieren, das Warnungen der Voraussetzungsprüfung ignoriert werden.  
 
-##### <a name="to-run-the-prerequisite-checker-before-installing-an-update"></a>So führen Sie vor der Installation eines Updates die Voraussetzungsprüfung aus  
+#### <a name="to-run-the-prerequisite-checker-before-installing-an-update"></a>So führen Sie vor der Installation eines Updates die Voraussetzungsprüfung aus  
 
 1.  Navigieren Sie in der Configuration Manager-Konsole zu **Verwaltung** > **Clouddienste** > **Updates und Wartung**.  
 
@@ -208,12 +209,13 @@ Gehen Sie folgendermaßen vor, um den Fortschritt zu überwachen:
 -   Navigieren Sie in der Configuration Manager-Konsole zum Knoten **Überwachung** > **Übersicht** > **Update- und Wartungsstatus**. Dieser Knoten zeigt nur den Installationsstatus des Updatepakets, das gerade installiert wird.  
 
     Ab Version 1606 ist die Updatepaketinstallation zur Erleichterung der Überwachung in folgende Phasen aufgeteilt. Für jede Phase sind jetzt zusätzliche Details verfügbar, einschließlich welche Protokolldatei Sie für weitere Informationen anzeigen können:  
-    -   **Herunterladen** (Dies gilt nur für den Standort der obersten Ebene, auf dem die Standortsystemrolle des Dienstverbindungspunkts installiert ist)
+    -   **Herunterladen** (Diese Phase gilt nur für den Standort der obersten Ebene, auf dem die Standortsystemrolle des Dienstverbindungspunkts installiert ist.)
     -   **Replikation**
-    - **Prüfung der erforderlichen Komponenten**
-    - **Installation**
+    -   **Prüfung der erforderlichen Komponenten**
+    -   **Installation**
+    -   **Nach der Installation** (Diese Phase ist ab Version 1610 verfügbar.)
 
--   Sie können die Datei **CMUpdate.log** unter **&lt;Configuration Manager-Installationsverzeichnis>\Logs\\** anzeigen.  
+-   Sie können die Datei **CMUpdate.log** unter **&lt;ConfigMgr_Installationsverzeichnis>\Protokolle** anzeigen.  
 
 **4. Beim Abschluss der Updateinstallation**  
 Nach dem Abschluss der Installation des ersten Standortupdates:  
@@ -332,7 +334,7 @@ Sie geben Ihre Zustimmung, indem Sie in der Konsole zu **Verwaltung** > **Stando
 Wenn Ihre Hierarchie Version 1606 oder höher ausführt, und Sie ein Update installieren, das Featurevorabversionen enthält, sind diese Features im Assistenten für Updates und Wartung zusammen mit den regulären Funktionen sichtbar, die im Update enthalten sind.
   - **Wenn Sie Ihre Zustimmung gegeben haben:** Sie können Featurevorabversionen innerhalb des Assistenten für Updates und Wartung aktivieren, wenn Sie das Update installieren. Wählen Sie dazu die Featurevorabversionen aus, so wie Sie jede andere Funktion auswählen würden.     
 
-    Optional können Sie die Featurevorabversionen auch später vom **Verwaltung** > **Clouddienste** > **Updates und Wartung** > **Features** -Knoten der Konsole aktivieren. Wählen Sie dazu im Knoten „Features“ das Feature aus, und klicken Sie anschließend auf **Aktivieren**. (Diese Option ist ausgegraut und nicht verfügbar, bis Sie Ihre Zustimmung geben.)  
+    Optional können Sie die Featurevorabversionen auch später über den Knoten **Verwaltung** > **Cloud Services** > **Updates und Wartung** > **Features** der Konsole aktivieren. Wählen Sie dazu im Knoten „Features“ das Feature aus, und klicken Sie anschließend auf **Aktivieren**. (Diese Option ist ausgegraut und nicht verfügbar, bis Sie Ihre Zustimmung geben.)  
   -   **Wenn Sie nicht Ihre Zustimmung gegeben haben:** Beim Installieren eines Updates sind Featurevorabversionen im Assistenten für Updates und Wartung sichtbar, sie sind jedoch ausgegraut und können nicht aktiviert werden. Nach der Installation des Updates können Sie diese Features auf dem Knoten „Features“ anzeigen, diese jedoch nicht aktivieren, bis sie Ihre Zustimmung in den Hierarchieeinstellungen gegeben haben.
 
  > [!TIP]
@@ -340,13 +342,16 @@ Wenn Ihre Hierarchie Version 1606 oder höher ausführt, und Sie ein Update inst
 
 Wenn Sie an einem eigenständigen primären Standort Ihre Zustimmung erteilt haben, und die Hierarchie durch die Installation eines neuen Standorts der zentralen Verwaltung erweitern, müssen Sie am Standort zentralen Verwaltung erneut Ihre Zustimmung geben.
 
-**Die folgenden, vorab veröffentlichten Features sind verfügbar:**
+**Die folgenden vorab veröffentlichten Features sind verfügbar:**
 
  |Komponente                    |Als Vorabversion hinzugefügt |Als vollständiges Feature hinzugefügt |  
 |----------------------------|---------------------|------------------------|
+| Peercache zur Verteilung von Inhalten an Clients |  [Version 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) |![Noch nicht](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| Cloudverwaltungsgateway |  [Version 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |![Noch nicht](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| Dashboard „Clientdatenquellen“ |  [Version 1610](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard) |![Noch nicht](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Microsoft OMS-Connector (Operations Management Suite)  | [Version 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |![Noch nicht](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Warten einer clusterfähigen Sammlung (Warten einer Servergruppe)| [Version 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#bkmk_servergroups)|![Noch nicht](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-|Bedingter Zugriff für PCs, die von System Center Configuration Manager verwaltet werden | [Version 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     |![Noch nicht](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)                        |
+| Warten einer clusterfähigen Sammlung (Warten einer Servergruppe)| [Version 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_ServerGroups)|![Noch nicht](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+|Bedingten Zugriffs für PCs, die von System Center Configuration Manager verwaltet werden | [Version 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     |![Noch nicht](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)                        |
 
 
 
@@ -369,10 +374,10 @@ Sie können Dienstfenster auf einem Standortserver konfigurieren, um zu steuern,
 
 -   Ihr Konto verfügt nicht über die richtigen rollenbasierten Administratorberechtigungen zum Anzeigen von Updates in der Configuration Manager-Konsole.
 
-    Unter [Berechtigungen zum Verwalten von Updates](../../../core/servers/manage/install-in-console-updates.md#Permissions-to-view-and-manage-updates-and-features) in diesem Thema finden Sie Informationen zu erforderlichen Berechtigungen zum Anzeigen von Updates und Aktivieren von Features in der Konsole.
+    Unter [Berechtigungen zum Verwalten von Updates](../../../core/servers/manage/install-in-console-updates.md#permissions-to-view-and-manage-updates-and-features) in diesem Thema finden Sie Informationen zu erforderlichen Berechtigungen zum Anzeigen von Updates und Aktivieren von Features in der Konsole.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Vorbereiten für System Center Configuration Manager"
+title: "Vorbereiten für System Center Configuration Manager | Microsoft-Dokumentation"
 description: Finden Sie Themen, die Ihnen beim Planen einer System Center Configuration Manager-Bereitstellung helfen.
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 70354ebc19786f9ff322d1c0b9e50d08265e15c0
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: b2d9cf11b944b6ee648b8fc7bc836ed5a82925a5
 
 
 ---
@@ -43,6 +43,6 @@ Verwenden Sie die Informationen in den folgenden Themen beim Planen Ihrer System
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

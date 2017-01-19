@@ -1,8 +1,8 @@
 ---
-title: "Überwachen von Clients | Linux UNIX |System Center Configuration Manager"
+title: "Überwachen von Clients | System Center Configuration Manager | Linux UNIX "
 description: "Clients auf Linux- und UNIX-Servern können in System Center Configuration Manager überwacht werden."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d827cf91-b18f-4ee7-b538-24ba6f003ab9
 caps.latest.revision: 6
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 707cb13bcb62848eb42ca824137a645dfd2f9d82
+ms.sourcegitcommit: 620c1caf50b4859afc8f32490ab7945df810aefd
+ms.openlocfilehash: b2b7c88784eed6fbee6ac1f6348d7d6991df1fbb
 
 
 ---
@@ -35,11 +35,10 @@ Sie können in der System Center Configuration Manager-Konsole Informationen von
 
 -   Inventurdetails im Ressourcen-Explorer  
 
- Die folgenden Abschnitte enthalten Informationen zur Verwendung von Ressourcen-Explorer und Berichten für die Anzeige von Details zu Ihren Linux- und UNIX-Servern.  
+ In den folgenden Abschnitten wird beschrieben, wie man diese Details vom Ressourcen-Explorer und von den Berichten erhält.  
 
-##  <a name="a-namebkmkuseresourceexpforlnua-how-to-use-resource-explorer-to-view-inventory-for-linux-and-unix-servers"></a><a name="BKMK_UseResourceExpforLnU"></a> Verwenden des Ressourcen-Explorers zur Anzeige von Inventuren für Linux- und UNIX-Server  
- Mit dem Ressourcen-Explorer können Sie Details zur Hardware und installierten Software auf Linux- und UNIX-Servern anzeigen.  
-
+##  <a name="a-namebkmkuseresourceexpforlnua-use-resource-explorer-to-view-inventory-for-linux-and-unix-servers"></a><a name="BKMK_UseResourceExpforLnU"></a> Verwenden des Ressourcen-Explorers zur Anzeige von Inventuren für Linux- und UNIX-Server  
+ 
  Nachdem ein Configuration Manager-Client die Hardwareinventur an den Configuration Manager-Standort gesendet hat, können Sie Ressourcen-Explorer zum Anzeigen dieser Informationen verwenden. Der Configuration Manager-Client für Linux und UNIX fügt keine neuen Klassen oder Ansichten für die Inventur zu Ressourcen-Explorer hinzu. Die Linux- und UNIX-Inventurdaten werden vorhandenen WMI-Klassen zugeordnet. Mit dem Ressourcen-Explorer können Sie die Inventurdetails für Ihre Linux- und UNIX-Server in den Windows-basierten Klassifikationen anzeigen.  
 
  Beispielsweise können Sie die Liste aller systemeigen installierten Programme zusammenstellen, die auf den Linux- und UNIX-Servern gefunden werden. Beispiele für systemeigen installierte Programme umfassen **RPMS** in Linux oder **PKGS** in Solaris. Nachdem die Inventur von einem Linux- oder UNIX-Client gesendet wurde, können Sie die Liste aller nativ installierten Linux- oder UNIX-Programme im Ressourcen-Explorer in der Configuration Manager-Konsole anzeigen.  
@@ -57,6 +56,6 @@ Sie können in der System Center Configuration Manager-Konsole Informationen von
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

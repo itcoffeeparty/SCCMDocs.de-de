@@ -1,5 +1,5 @@
 ---
-title: "Erstellen einer Tasksequenz zum Durchführen eines Upgrades für ein Betriebssystem | Configuration Manager"
+title: "Erstellen einer Tasksequenz zum Durchführen eines Upgrades für ein Betriebssystem | Microsoft-Dokumentation"
 description: "Mit den Tasksequenzen in System Center Configuration Manager kann für ein Betriebssystem automatisch ein Upgrade von Windows 7 oder höher auf Windows 10 durchgeführt werden."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fe70a3bfddcc0638a27eccb04324c4e6e2ace1d4
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 32af7da62bfe767a21a891338bd778ebf45f2685
 
 
 ---
@@ -94,6 +94,6 @@ Verwenden Sie die Tasksequenzen in System Center Configuration Manager, um für 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

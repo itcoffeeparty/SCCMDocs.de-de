@@ -1,5 +1,5 @@
 ---
-title: "Verwalten des Internetzugriffs mittels Richtlinien für verwaltete Browser | System Center Configuration Manager"
+title: "Verwalten des Internetzugriffs mittels Richtlinien für verwaltete Browser | Microsoft-Dokumentation"
 description: "Stellen Sie Intune Managed Browser bereit, um den Zugriff auf das Internet zu verwalten und einzuschränken."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e5efee7b94f5c61a610fd9f9fa278c992f9c64b8
+ms.sourcegitcommit: dcdaec52c9eafba3f7ce569f0dabb98921b4dc0a
+ms.openlocfilehash: f870a98fa9e839df16d0ca9deb96a18128f35ba6
 
 
 ---
@@ -26,10 +26,10 @@ ms.openlocfilehash: e5efee7b94f5c61a610fd9f9fa278c992f9c64b8
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-In System Center Configuration Manager können Sie die Webbrowseranwendung Intune Managed Browser bereitstellen und der Anwendung eine Richtlinie für verwaltete Browser zuordnen. Die Richtlinie für verwaltete Browser konfiguriert die Liste "Zulassen" oder "Blockieren", um die Websites einzuschränken, die Benutzer des verwalteten Browsers besuchen können.  
-  
- Da diese App eine verwaltete App ist, können Sie darauf auch Verwaltungsrichtlinien für mobile Anwendungen anwenden. Hierzu zählt beispielsweise, die Verwendung der Funktionen zum Ausschneiden, Kopieren und Einfügen zu steuern, Bildschirmaufnahmen zu verhindern und sicherzustellen, dass Links zu Inhalten, auf die Benutzer klicken, in anderen verwalteten Apps geöffnet werden. Weitere Informationen finden Sie unter [Schützen von Apps mit Verwaltungsrichtlinien für mobile Anwendungen](../../apps/deploy-use/protect-apps-using-mam-policies.md).  
-  
+In System Center Configuration Manager können Sie die Webbrowseranwendung Intune Managed Browser bereitstellen und der Anwendung eine Richtlinie für verwaltete Browser zuordnen. Die Richtlinie für verwaltete Browser konfiguriert die Liste „Zulassen“ oder „Blockieren“, um die Websites einzuschränken, die Benutzer des verwalteten Browsers besuchen können.  
+
+ Da diese App eine verwaltete App ist, können Sie auch Richtlinien zur mobilen Anwendungsverwaltung anwenden, wie die Kontrolle über den Einsatz von „Ausschneiden“, „Kopieren“ und „Einfügen“. Dies verhindert Bildschirmaufnahmen und stellt zudem sicher, dass sich Links zu Inhalten nur in anderen verwalteten Apps öffnen. Weitere Informationen finden Sie unter [Schützen von Apps mit Verwaltungsrichtlinien für mobile Anwendungen](../../apps/deploy-use/protect-apps-using-mam-policies.md).  
+
 > [!IMPORTANT]  
 >  Wenn Benutzer den verwalteten Browser selbst installieren, wird er durch keine von Ihnen angegebenen Richtlinien verwaltet. Um sicherzustellen, dass der Browser von Configuration Manager verwaltet wird, muss die App deinstalliert werden, bevor Sie sie als verwaltete Anwendung bereitstellen können.  
 
@@ -41,52 +41,52 @@ In System Center Configuration Manager können Sie die Webbrowseranwendung Intun
 
 > [!NOTE]  
 >  Weitere Informationen zur Intune Managed Browser-App und wie Sie sie herunterladen können, finden Sie unter [iTunes](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) für iOS und [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser&hl=en) für Android.  
-  
+
 ## <a name="create-a-managed-browser-policy"></a>Erstellen einer Richtlinie für verwaltete Browser  
 
-1.  Klicken Sie in der Configuration Manager-Konsole auf **Softwarebibliothek** > **Anwendungsverwaltung** > **Richtlinien für die Anwendungsverwaltung**.  
+1.  Wählen Sie in der Configuration Manager-Konsole **Softwarebibliothek** > **Anwendungsverwaltung** > **Richtlinien zur Anwendungsverwaltung** aus.  
 
-3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Anwendungsverwaltungsrichtlinie erstellen**.  
+3.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** **Create Application Management Policy** (Anwendungsverwaltungsrichtlinie erstellen).  
 
-4.  Geben Sie auf der Seite **Allgemein** den Namen und die Beschreibung für die Richtlinie ein, und klicken Sie dann auf **Weiter**.  
+4.  Geben Sie auf der Seite **Allgemein** den Namen und die Beschreibung für die Richtlinie ein, und wählen Sie anschließend **Weiter** aus.  
 
-5.  Wählen Sie auf der Seite **Richtlinientyp** die Plattform aus, wählen Sie **Verwalteter Browser** als Richtlinientyp aus, und klicken Sie dann auf **Weiter**.  
+5.  Wählen Sie auf der Seite **Richtlinientyp** die Plattform aus, wählen Sie **Verwalteter Browser** als Richtlinientyp aus, und wählen Sie anschließend **Weiter**.  
 
      Wählen Sie auf der Seite **Verwalteter Browser** eine der folgenden Optionen aus:  
 
-    -   **Der verwaltete Browser kann nur die unten aufgeführten URLs öffnen** – Geben Sie eine Liste mit URLs an, die der verwaltete Browser öffnen kann.  
+    -   **Der verwaltete Browser kann nur die unten aufgeführten URLs öffnen**: Geben Sie eine Liste mit URLs an, die der verwaltete Browser öffnen kann.  
 
-    -   **Der verwaltete Browser kann die unten aufgeführten URLs nicht öffnen** – Geben Sie eine Liste mit URLs an, die der verwaltete Browser nicht öffnen kann.  
+    -   **Der verwaltete Browser kann die unten aufgeführten URLs nicht öffnen**: Geben Sie eine Liste mit URLs an, die der verwaltete Browser nicht öffnen kann.  
 
     > [!NOTE]  
     >  Eine Richtlinie für verwaltete Browser kann nicht sowohl zulässige als auch blockierte URLs enthalten.  
 
-     Weitere Informationen zu den festlegbaren URL-Formaten finden Sie in diesem Thema unter **URL-Format für zulässige und blockierte URLs** .  
+     Weitere Informationen zu den festlegbaren URL-Formaten finden Sie in diesem Artikel unter „URL-Format für zulässige und blockierte URLs“.  
 
     > [!NOTE]  
-    >  Mit dem Richtlinientyp **Allgemein** können Sie die Funktionalität von bereitgestellten Apps ändern, um sie an die Konformitäts- und Sicherheitsrichtlinien Ihres Unternehmens anzupassen. Sie können z. B. Ausschneide-, Kopier- und Einfügevorgänge innerhalb einer eingeschränkten App einschränken. Weitere Informationen zum Richtlinientyp „Allgemein“ finden Sie unter [Schützen von Apps mithilfe von Verwaltungsrichtlinien für mobile Anwendungen in System Center Configuration Manager](../../apps/deploy-use/protect-apps-using-mam-policies.md).  
+    >  Mit dem Richtlinientyp „Allgemein“ können Sie die Funktionalität von bereitgestellten Apps ändern, um sie an die Konformitäts- und Sicherheitsrichtlinien Ihres Unternehmens anzupassen. Sie können z. B. Ausschneide-, Kopier- und Einfügevorgänge innerhalb einer eingeschränkten App einschränken. Weitere Informationen zum Richtlinientyp „Allgemein“ finden Sie unter [Schützen von Apps mithilfe von Verwaltungsrichtlinien für mobile Anwendungen](../../apps/deploy-use/protect-apps-using-mam-policies.md).  
 
-6.  Schließen Sie den Assistenten ab.  
+6.  Beenden Sie den Assistenten.  
 
- Die neue Richtlinie wird im Knoten **Anwendungsverwaltungsrichtlinien** des Arbeitsbereichs **Softwarebibliothek** angezeigt.  
+Die neue Richtlinie wird im Knoten **Anwendungsverwaltungsrichtlinien** des Arbeitsbereichs **Softwarebibliothek** angezeigt.  
 
 ## <a name="create-a-software-deployment-for-the-managed-browser-app"></a>Erstellen einer Softwarebereitstellung für die Managed Browser-App  
- Nachdem Sie die Richtlinie für verwaltete Browser erstellt haben, können Sie einen Softwarebereitstellungstyp für die Managed Browser-App erstellen. Sie müssen der Managed Browser-App eine Richtlinie "Allgemein" und eine Richtlinie "Verwalteter Browser" zuordnen.  
-  
+ Nachdem Sie die Richtlinie für verwaltete Browser erstellt haben, können Sie einen Softwarebereitstellungstyp für die Managed Browser-App erstellen. Sie müssen der Managed Browser-App eine Richtlinie „Allgemein“ und eine Richtlinie „Verwalteter Browser“ zuordnen.  
+
  Weitere Informationen finden Sie unter [Erstellen von Anwendungen](../../apps/deploy-use/create-applications.md).  
-  
+
 ## <a name="security-and-privacy-for-the-managed-browser"></a>Sicherheit und Datenschutz für den verwalteten Browser  
 
--   Auf iOS-Geräten können von Benutzern besuchte Websites, deren Zertifikat abgelaufen oder nicht vertrauenswürdig ist, nicht geöffnet werden.  
+-   Auf iOS-Geräten können Websites, deren Zertifikat abgelaufen oder nicht vertrauenswürdig ist, nicht geöffnet werden.  
 
--   Einstellungen, die Benutzer für den integrierten Browser auf ihren Geräten vornehmen, werden nicht vom verwalteten Browser verwendet. Dies liegt daran, da der verwaltete Browser keinen Zugriff auf diese Einstellungen hat.  
+-   Einstellungen, die Benutzer für den integrierten Browser auf ihren Geräten vornehmen, werden nicht vom verwalteten Browser verwendet. Der verwaltete Browser hat keinen Zugriff auf diese Einstellungen.  
 
--   Wenn Sie die Option **Einfache PIN für Zugriff anfordern** oder **Unternehmensanmeldeinformationen für Zugriff anfordern** in einer Richtlinie für die Verwaltung mobiler Anwendung konfigurieren, die mit dem verwalteten Browser verknüpft ist, und ein Benutzer auf der Authentifizierungsseite auf den Hilfe-Link klickt, kann er beliebige Websites auch dann durchsuchen, wenn diese in der Richtlinie für verwaltete Browser einer Sperrliste hinzugefügt wurden.  
+-   Wenn Sie die Option **Einfache PIN für Zugriff anfordern** oder **Unternehmensanmeldeinformationen für Zugriff anfordern** in einer Richtlinie für die Verwaltung mobiler Anwendung einrichten, die mit dem verwalteten Browser verknüpft ist, kann ein Benutzer auf der Authentifizierungsseite auf „Hilfe“ klicken und anschließend beliebige Websites durchsuchen, selbst wenn diese in der Richtlinie für verwaltete Browser einer Sperrliste hinzugefügt wurden.  
 
 -   Der verwaltete Browser kann nur den Zugriff auf Websites blockieren, wenn darauf direkt zugegriffen wird. Der Zugriff auf die Website kann nicht blockiert werden, wenn dafür Zwischendienste (z. B. ein Übersetzungsdienst) verwendet werden.  
 
 ## <a name="reference-information"></a>Referenzinformationen  
-  
+
 ###  <a name="url-format-for-allowed-and-blocked-urls"></a>URL-Format für zulässige und blockierte URLs  
 
 Nachfolgend wird erläutert, welche Formate und Platzhalter Sie zum Festlegen von URLs in den Zulassungs- und Sperrlisten verwenden können.  
@@ -140,13 +140,13 @@ Nachfolgend wird erläutert, welche Formate und Platzhalter Sie zum Festlegen vo
 
 > [!NOTE]  
 >  *. microsoft.com ist immer zulässig.  
-  
+
 ### <a name="how-conflicts-between-the-allow-and-block-list-are-resolved"></a>Lösen von Konflikten zwischen der Zulassungs- und Sperrliste  
  Wenn mehrere Richtlinien für verwaltete Browser für ein Gerät bereitgestellt werden und Einstellungen in Konflikt stehen, werden sowohl der Modus (zulassen oder blockieren) als auch die URL-Listen ausgewertet. Bei einem Konflikt gilt folgendes Verhalten:  
 
 -   Wenn die Modi in jeder Richtlinie identisch sind, aber die URL-Listen voneinander abweichen, werden die URLs auf dem Gerät nicht erzwungen.  
 
--   Wenn die Modi in jeder Richtlinie voneinander abweichen, aber die URL-Listen identisch sind , werden die URLs auf dem Gerät nicht erzwungen.  
+-   Wenn die Modi in jeder Richtlinie voneinander abweichen, aber die URL-Listen identisch sind, werden die URLs auf dem Gerät nicht erzwungen.  
 
 -   Wenn ein Gerät erstmals Richtlinien für verwaltete Browser empfängt und zwei Richtlinien in Konflikt stehen, werden die URLs auf dem Gerät nicht erzwungen. Sie können die Konflikte über den Knoten **Richtlinienkonflikte** des Arbeitsbereichs **Richtlinie** anzeigen.  
 
@@ -154,6 +154,6 @@ Nachfolgend wird erläutert, welche Formate und Platzhalter Sie zum Festlegen vo
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

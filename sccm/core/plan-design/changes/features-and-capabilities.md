@@ -1,5 +1,5 @@
 ---
-title: Features und Funktionen | System Center Configuration Manager
+title: Features und Funktionen | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über die primären Verwaltungsfunktionen von System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: fc40912a3da034ac0e3f84c72593aa4a9df8d057
-ms.openlocfilehash: c558148104b6338e4038bf690491c88e76dfdcaf
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 851029368d97312ef2766505f933eac72d6950e5
 
 
 ---
@@ -58,7 +58,7 @@ Im Folgenden finden Sie die primären Verwaltungsfunktionen von System Center Co
 
 **Verwaltung mobiler Geräte mit Microsoft Intune**  
 
- Mit Configuration Manager können Sie iOS-, Android- (einschließlich Samsung KNOX), Windows Phone- und Windows-Geräte mithilfe des Microsoft Intune-Diensts über das Internet verwalten.
+ Mit Configuration Manager können Sie iOS-, Android- (einschließlich Samsung KNOX Standard), Windows Phone- und Windows-Geräte mithilfe des Microsoft Intune-Diensts über das Internet verwalten.
 
  Obwohl Sie den Intune-Dienst verwenden, werden Verwaltungstasks mithilfe der Standortsystemrolle „Dienstverbindungspunkt“ ausgeführt, die über die Configuration Manager-Konsole verfügbar ist. Informationen hierzu finden Sie unter [Hybride Verwaltung mobiler Geräte (MDM) mit System Center Configuration Manager und Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md).  
 
@@ -104,6 +104,6 @@ Im Folgenden finden Sie die primären Verwaltungsfunktionen von System Center Co
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

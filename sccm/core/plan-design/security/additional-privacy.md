@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager-Datenschutzbestimmungen – Configuration Manager-Cmdlet-Bibliothek"
+title: "System Center Configuration Manager-Datenschutzbestimmungen – Zusatzinformationen | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr darüber, wie Microsoft Daten aus einer Bereitstellung von System Center Configuration Manager sammelt und verwendet."
 ms.custom: na
 ms.date: 10/06/2016
@@ -36,8 +36,8 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: bcac4e2b6f8377a27417cb2519814ad9e74ee542
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 613b7dbf81de84129e113468d554d8430cbc3182
 
 ---
 # <a name="additional-information-about-privacy-for-system-center-configuration-manager"></a>Weitere Informationen zum Datenschutz für System Center Configuration Manager
@@ -97,7 +97,7 @@ Die Erfassung persönlicher Informationen durch Microsoft Cloud Protection Servi
 
 Weitere Details zu gesammelten Daten finden Sie in der Produktdokumentation unter [http://go.microsoft.com/fwlink/?LinkId=823547](http://go.microsoft.com/fwlink/?LinkId=823547).
 
-## <a name="site-hierarchy-geographical-view-with-bing-maps"></a>Standorthierarchie – geografische Ansicht mit Bing Maps
+## <a name="site-hierarchy--geographical-view-with-bing-maps"></a>Standorthierarchie – geografische Ansicht mit Bing Maps
 Mit „Standorthierarchie – geografische Ansicht“ kann die physische Configuration Manager-Servertopologie anhand von Karten, die von Microsoft Bing Maps bereitgestellt werden, angezeigt werden. Zum Aktivieren dieses Features werden von Ihnen bereitgestellte Standortinformationen von Ihrem Server an den Webdienst Bing Maps übertragen.
 
 Microsoft verwendet die Informationen, um Microsoft Bing Maps sowie andere Websites und Dienste zu betreiben und zu verbessern. Weitere Informationen finden Sie in der Microsoft-Datenschutzbestimmung unter http://go.microsoft.com/fwlink/?LinkId=823548.
@@ -114,6 +114,6 @@ Diese Option wird standardmäßig nicht konfiguriert. Administratoren können st
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

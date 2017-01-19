@@ -1,5 +1,5 @@
 ---
-title: Funktionen in System Center Configuration Manager Technical Preview 1608
+title: "Funktionen in Technical Preview 1608 für System Center Configuration Manager | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr über Funktionen, die in System Center Configuration Manager Technical Preview 1608 zur Verfügung stehen."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4d548f097f0d0b80ca314384c345f9bcd08fbc14
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: c41409e957f43aee3be994ab3e702232c7dfe6ea
 
 ---
 # <a name="capabilities-in-technical-preview-1608-for-system-center-configuration-manager"></a>Funktionen in System Center Configuration Manager Technical Preview 1608
@@ -65,6 +65,6 @@ Dieses Verhalten kann durch den anzeigenden Benutzer deaktiviert werden, wenn di
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

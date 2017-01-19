@@ -1,5 +1,5 @@
 ---
-title: "Verwenden des Softwarecenters zum Bereitstellen von Windows über das Netzwerk | System Center Configuration Manager"
+title: "Verwenden des Softwarecenters zum Bereitstellen von Windows über das Netzwerk | Microsoft-Dokumentation"
 description: "Sie können ein Betriebssystem im Softwarecenter bereitstellen, um einen vorhandenen Computer mit einer neuen Version von Windows zu aktualisieren oder ein Upgrade von Windows auf die neueste Version durchzuführen."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 189fdac38760b75eb3795348f6af4ef7e83c3f20
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 4c3ec20396da37d36f908af527f445a7a736e0ac
 
 
 ---
@@ -45,6 +45,6 @@ Die Tasksequenz zum Installieren eines Betriebssystems in System Center Configur
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: Dienstverbindungstool | System Center Configuration Manager
+title: Dienstverbindungstools | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über das Dienstverbindungstool, mit dem Sie eine Verbindung mit dem Configuration Manager-Clouddienst herstellen können, um manuell Nutzungsinformationen hochzuladen."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 5fab3a4834f30d48c5c000a7c95c7006eb8e4785
+ms.sourcegitcommit: b4642186e42745640f088b7046e70019616935ea
+ms.openlocfilehash: 9a5cd5ce3ce6868b44768d3cbe7b7c594f44d42c
 
 
 ---
@@ -29,7 +29,10 @@ Verwenden Sie das **Dienstverbindungstool** , wenn Ihre Configuration Manager-St
 
  Mit dem Tool können Sie eine Verbindung mit dem Configuration Manager-Clouddienst herstellen, um manuell Nutzungsinformationen für Ihre Hierarchie hochzuladen und Updates herunterzuladen. Das Hochladen der Nutzungsdaten ist erforderlich, damit der Clouddienst die richtigen Updates für Ihre Bereitstellung liefern kann.  
 
- **Voraussetzungen für die Verwendung des Dienstverbindungstools:**  
+## <a name="prerequisites-for-using-the-service-connection-tool"></a>Voraussetzungen für die Verwendung des Dienstverbindungstools
+Im Folgenden finden Sie Voraussetzungen und bekannte Probleme.
+
+**Voraussetzungen:**
 
 -   Sie haben einen Dienstverbindungspunkt installiert und diesen auf **Offline, On-Demand-Verbindung**festgelegt.  
 
@@ -50,26 +53,6 @@ Verwenden Sie das **Dienstverbindungstool** , wenn Ihre Configuration Manager-St
 
 
 -   Sie benötigen ein USB-Laufwerk mit genügend freiem Speicherplatz zum Speichern von Dateien und Updates, oder eine andere Methode zum Übertragen von Dateien zwischen dem Dienstverbindungspunkt-Computer und dem Computer mit Internetzugriff. (Bei diesem Szenario wird davon ausgegangen, dass Ihr Standort und die verwalteten Computer keine direkte Internetverbindung haben.)  
-
-**Zur Verwendung des Dienstverbindungstools müssen Sie drei Hauptschritte ausführen:**  
-
-1.  **Vorbereiten**: In diesem Schritt werden Ihre Nutzungsdaten in einer CAB-Datei abgelegt und auf einem USB-Laufwerk (bzw. auf einem anderen angegebenen Umlagerungsort) gespeichert.  
-
-2.  **Verbinden**: In diesem Schritt führen Sie das Tool auf einem Remotecomputer aus, der eine Verbindung mit dem Internet herstellt, um Daten hochzuladen und Updates herunterzuladen.  
-
-3.  **Importieren**: In diesem Schritt importiert der Standort Updates für Configuration Manager, damit Sie diese über die Configuration Manager-Konsole anzeigen und installieren können.  
-
-Ab Version 1606 können Sie mehrere CAB-Dateien gleichzeitig hochladen (jede aus einer anderen Hierarchie), wenn Sie eine Verbindung mit Microsoft herstellen und einen Proxyserver sowie einen Benutzer für den Proxyserver angeben.   
-
-**Hochladen mehrerer CAB-Dateien:**
- -  Speichern Sie jede CAB-Datei, die Sie aus separaten Hierarchien exportieren, im gleichen Ordner. Der Name jeder Datei muss eindeutig sein. Falls nötig, können Sie sie manuell umbenennen.
- -  Wenn Sie anschließend den Befehl zum Hochladen der Daten zu Microsoft ausführen, geben Sie den Ordner an, der die CAB-Dateien enthält. (Vor dem Update 1606 war nur ein Hochladen von Daten aus einer einzelnen Hierarchie gleichzeitig möglich, und das Tool forderte die Angabe des Namens der CAB-Datei im Ordner.)
- -  Wenn Sie später die Importaufgabe auf einem Dienstverbindungspunkt einer Hierarchie ausführen, importiert das Tool automatisch nur die Daten dieser Hierarchie.  
-
-**So geben Sie einen Proxyserver an:**  
-Sie können die folgenden optionalen Parameter zum Angeben eines Proxyservers verwenden (Weitere Informationen zur Verwendung dieser Parameter sind im Abschnitt „Befehlszeilenparameter“ dieses Themas aufgeführt):
-  - **-proxyserveruri [FQDN_of_proxy_server]**  Mit diesem Parameter können Sie den Proxyserver angeben, der für diese Verbindung genutzt werden soll.
-  -  **proxyusername [Benutzername]**  Verwenden Sie diesen Parameter, wenn Sie einen Benutzer für den Proxyserver angeben müssen.
 
 
 
@@ -98,7 +81,30 @@ Wenn Sie den folgenden Befehl ausführen, bereitet das Tool eine CAB-Datei vor, 
 
 Sie müssen auch den Ordner ServiceConnectionTool mit seinem gesamten Inhalt auf das USB-Laufwerk kopieren, oder andernfalls auf dem Computer zur Verfügung stellen, den Sie für die Schritte 3 und 4 verwenden.  
 
-#### <a name="to-use-the-service-connection-tool"></a>So verwenden Sie das Dienstverbindungstool  
+### <a name="overview"></a>Übersicht
+**Zur Verwendung des Dienstverbindungstools müssen Sie drei Hauptschritte ausführen:**  
+
+1.  **Vorbereiten**: In diesem Schritt werden Ihre Nutzungsdaten in einer CAB-Datei abgelegt und auf einem USB-Laufwerk (bzw. auf einem anderen angegebenen Umlagerungsort) gespeichert.  
+
+2.  **Verbinden**: In diesem Schritt führen Sie das Tool auf einem Remotecomputer aus, der eine Verbindung mit dem Internet herstellt, um Daten hochzuladen und Updates herunterzuladen.  
+
+3.  **Importieren**: In diesem Schritt importiert der Standort Updates für Configuration Manager, damit Sie diese über die Configuration Manager-Konsole anzeigen und installieren können.  
+
+Ab Version 1606 können Sie mehrere CAB-Dateien gleichzeitig hochladen (jede aus einer anderen Hierarchie), wenn Sie eine Verbindung mit Microsoft herstellen und einen Proxyserver sowie einen Benutzer für den Proxyserver angeben.   
+
+**Hochladen mehrerer CAB-Dateien:**
+ -  Speichern Sie jede CAB-Datei, die Sie aus separaten Hierarchien exportieren, im gleichen Ordner. Der Name jeder Datei muss eindeutig sein. Falls nötig, können Sie sie manuell umbenennen.
+ -  Wenn Sie anschließend den Befehl zum Hochladen der Daten zu Microsoft ausführen, geben Sie den Ordner an, der die CAB-Dateien enthält. (Vor dem Update 1606 war nur ein Hochladen von Daten aus einer einzelnen Hierarchie gleichzeitig möglich, und das Tool forderte die Angabe des Namens der CAB-Datei im Ordner.)
+ -  Wenn Sie später die Importaufgabe auf einem Dienstverbindungspunkt einer Hierarchie ausführen, importiert das Tool automatisch nur die Daten dieser Hierarchie.  
+
+**So geben Sie einen Proxyserver an:**  
+Sie können die folgenden optionalen Parameter zum Angeben eines Proxyservers verwenden (Weitere Informationen zur Verwendung dieser Parameter sind im Abschnitt „Befehlszeilenparameter“ dieses Themas aufgeführt):
+  - **-proxyserveruri [FQDN_of_proxy_server]**  Mit diesem Parameter können Sie den Proxyserver angeben, der für diese Verbindung genutzt werden soll.
+  -  **proxyusername [Benutzername]**  Verwenden Sie diesen Parameter, wenn Sie einen Benutzer für den Proxyserver angeben müssen.
+
+
+
+### <a name="to-use-the-service-connection-tool"></a>So verwenden Sie das Dienstverbindungstool  
 
 1.  Schritte auf dem Computer, von dem der Dienstverbindungspunkt gehostet wird.  
 
@@ -156,6 +162,6 @@ Sie müssen auch den Ordner ServiceConnectionTool mit seinem gesamten Inhalt auf
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

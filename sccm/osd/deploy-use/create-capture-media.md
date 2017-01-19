@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Erfassungsmedien | Configuration Manager
+title: Erstellen von Erfassungsmedien | Microsoft-Dokumentation
 description: Verwenden Sie den Assistenten zum Erstellen von Tasksequenzmedien, um Erfassungsmedien in Configuration Manager zum Erfassen eines Betriebssystemimages von einem Referenzcomputer zu erstellen.
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 604844d073ca3caedbbfc77d76cb3368965980af
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: f948c993099786432b76d1486bbb5eded4ec38eb
 
 
 ---
@@ -83,6 +83,6 @@ Sie erstellen vorab Erfassungsmedien mit dem Assistenten zum Erstellen von Tasks
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

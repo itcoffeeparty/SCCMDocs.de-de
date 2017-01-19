@@ -1,5 +1,5 @@
 ---
-title: "Planen der Berechtigungen für Zertifikatvorlagen | System Center Configuration Manager"
+title: Planen der Berechtigungen von Zertifikatvorlagen | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über das Planen der Berechtigungen, die Sie für das Konfigurieren von Zertifikatvorlagen benötigen, die System Center Configuration Manager verwendet."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 38f4176d40bffd20b9e3076213957765dfb0c7f3
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: 3c3725678561c32fce316ed1209ac8fe73a0eed1
 
 
 ---
@@ -36,7 +36,7 @@ Die folgenden Informationen können Ihnen beim Planen der Konfiguration von Bere
 
 -   „Lesen“ für das Konto, unter dem die System Center Configuration Manager-Konsole ausgeführt wird  
 
- Weitere Informationen zu diesen Sicherheitsberechtigungen finden Sie unter [Schritt 1: Installieren und Konfigurieren des Registrierungsdiensts für Netzwerkgeräte und der Abhängigkeiten](../deploy-use/certificate-infrastructure.md#BKMK_Step1).  
+ Weitere Informationen zu diesen Sicherheitsberechtigungen finden Sie unter [Schritt 1: Installieren und Konfigurieren des Registrierungsdiensts für Netzwerkgeräte und der Abhängigkeiten](../deploy-use/certificate-infrastructure.md#step-1-install-and-configure-the-network-device-enrollment-service-and-dependencies).  
 
  Indem Sie diese Standardkonfiguration verwenden, können Benutzer und Geräte Zertifikate nicht direkt von den Zertifikatvorlagen anfordern, und Sie können festlegen, dass alle Anforderungen vom Registrierungsdienst für Netzwerkgeräte initiiert werden müssen. Dies ist eine wichtige Einschränkung, da diese Zertifikatvorlagen mit **Informationen werden in der Anforderung angegeben** für den Zertifikatantragsteller konfiguriert werden müssen. Das bedeutet, dass die Gefahr des Identitätswechsels besteht, wenn von einem nicht autorisierten Benutzer oder von einem gefährdeten Gerät ein Zertifikat angefordert wird. Mit der Standardkonfiguration muss eine Anforderung vom Registrierungsdienst für Netzwerkgeräte initiiert werden. Die Gefahr des Identitätswechsels bleibt jedoch bestehen, wenn der Dienst, unter dem der Registrierungsdienst für Netzwerkgeräte ausgeführt wird, gefährdet ist. Wenn Sie diese Gefahr vermeiden möchten, befolgen Sie alle bewährten Sicherheitsmethoden für den Registrierungsdienst für Netzwerkgeräte und den Computer, auf dem dieser Rollendienst ausgeführt wird.  
 
@@ -65,6 +65,6 @@ Die folgenden Informationen können Ihnen beim Planen der Konfiguration von Bere
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

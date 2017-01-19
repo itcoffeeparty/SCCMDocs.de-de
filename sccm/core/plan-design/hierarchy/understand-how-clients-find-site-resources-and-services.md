@@ -1,5 +1,5 @@
 ---
-title: Suchen von Standortressourcen | System Center Configuration Manager
+title: Suchen von Standortressourcen | Microsoft-Dokumentation
 description: Erfahren Sie, wie und wann System Center Configuration Manager-Clients Dienstspeicherorte zum Suchen von Standortressourcen verwenden.
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5d718d0f9b8c6121f3124a8ade7507c61b7313f2
-ms.openlocfilehash: cad4ebd3f8fa275d7d2cad9b2b87c32b971c580d
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: b006896091901fab7b141f99f4c95eb22ea61b82
 
 
 ---
@@ -176,7 +176,6 @@ Die Veröffentlichung von Verwaltungspunkten in DNS ist nur möglich, wenn die b
 **Falls von den DNS-Servern automatische Updates unterstützt werden**, können Sie festlegen, dass Verwaltungspunkte von Configuration Manager im Intranet automatisch in DNS veröffentlicht werden. Alternativ können Sie diese Datensätze manuell in DNS veröffentlichen. Bei der Veröffentlichung von Verwaltungspunkten in DNS werden der zugehörige Intranet-FQDN und die Portnummer im SRV-Eintrag veröffentlicht. Sie konfigurieren die DNS-Veröffentlichung an einem Standort über die Eigenschaften für Verwaltungspunktkomponenten am Standort. Weitere Informationen finden Sie unter [Standortkomponenten für System Center Configuration Manager](../../../core/servers/deploy/configure/site-components.md).  
 
 **Wenn Ihre DNS-Zone für dynamische Updates auf „Secure only“ (Nur sichern) festgelegt ist**, kann nur der erste Verwaltungpunkt, der unter DNS veröffentlicht werden soll, dies ohne Standardberechtigungten ausführen.
-- Sie können jeden Server zur DnsAdmins-Gruppe hinzufügen, der einen Verwaltungspunkt hostet, um sicherzustellen, dass diese Verwaltungspunkte über Berechtigungen zum Ändern Ihrer Einträge verfügten.  
 - Wenn nur ein Verwaltungspunkt erfolgreich seinen DNS-Eintrag veröffentlichen und ändern kann, können Clients die vollständige MP-Liste von diesem Verwaltungspunkt erhalten und anschließend ihren bevorzugten Verwaltungspunkt finden, solange der Verwaltungspunktserver fehlerfrei arbeitet.
 
 
@@ -251,6 +250,6 @@ Wenn Sie nicht wünschen, dass ein HTTP-Verwaltungspunkt in WINS gefunden wird, 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von Wake-On-LAN | System Center Configuration Manager
+title: Konfigurieren von Wake-on-LAN | Microsoft-Dokumentation
 description: "Wählen Sie Wake-On-LAN-Einstellungen in System Center Configuration Manager aus."
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
 caps.latest.revision: 7
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: b8274f9da1ec82aebf43115236f2409995a0052b
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 09f8bc7ee04ff64934030f825a791bc043341963
 
 ---
 # <a name="how-to-configure-wake-on-lan-in-system-center-configuration-manager"></a>Konfigurieren von Wake-On-LAN in System Center Configuration Manager
@@ -47,7 +47,7 @@ Ein Computer, der die Clienteinstellungen des Aktivierungsproxys erhält, wird s
 1. Navigieren Sie in der Configuration Manager-Konsole zu **Verwaltung > Clienteinstellungen**.
 2. Klicken Sie auf **Clientstandardeinstellungen**, und klicken Sie auf **Eigenschaften**.
 3. Wählen Sie **Energieverwaltung** aus, und wählen Sie dann für **Aktivierungsproxy zulassen**, **Ja** aus.
-4. Überprüfen und konfigurieren Sie ggf. weitere Einstellungen für den Aktivierungsproxy. Weitere Informationen zu diesen Einstellungen finden Sie unter [Power management settings (Konfigurieren der Energieverwaltungseinstellungen)](../../../core/clients/deploy/about-client-settings.md#BKMK_PowMgmtDeviceSettings).
+4. Überprüfen und konfigurieren Sie ggf. weitere Einstellungen für den Aktivierungsproxy. Weitere Informationen zu diesen Einstellungen finden Sie unter [Power management settings (Konfigurieren der Energieverwaltungseinstellungen)](../../../core/clients/deploy/about-client-settings.md#power-management).
 5. Klicken Sie auf **OK**, um das Dialogfeld zu schließen, und klicken Sie dann erneut auf **OK**, um das Dialogfeld Clientstandardeinstellungen zu schließen.
 
 Sie können die folgenden Wake-On-LAN-Berichte zum Überwachen der Installation und Konfiguration des Aktivierungsproxys verwenden:
@@ -60,6 +60,6 @@ Sie können die folgenden Wake-On-LAN-Berichte zum Überwachen der Installation 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

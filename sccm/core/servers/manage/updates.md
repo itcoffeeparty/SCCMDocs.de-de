@@ -1,5 +1,5 @@
 ---
-title: Updates | System Center Configuration Manager
+title: Updates | Microsoft-Dokumentation
 description: "Hier finden Sie Informationen zu einer Dienstmethode in der Konsole namens **Updates und Wartung**, mit der Sie empfohlene Updates leicht finden und installieren können."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: cfb523c6198e4ac2782de6fa8a8654050a283ca7
-ms.openlocfilehash: 7684c4b9a2a12ed7b9ddcddffe1125b3d47daa36
+ms.sourcegitcommit: 6e964f015d5f007311f46f51126b31e181abd0ec
+ms.openlocfilehash: e7b19b6e1f4720c0bdc69ef7f78366fd5d3414d0
 
 
 ---
@@ -38,6 +38,8 @@ System Center Configuration Manager verwendet eine konsoleninterne Wartungsmetho
 
 -   [Use the Hotfix Installer to install updates for System Center Configuration Manager (Verwenden des Hotfixinstallationsprogramms zum Installieren von Updates für System Center Configuration Manager)](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md)  
 
+> [!TIP]  
+> Wenn Sie die Verzweigung „Technical Preview“ verwenden, finden Sie unter [Technical Preview für System Center Configuration Manager](/sccm/core/get-started/technical-preview) zusätzliche Informationen, die speziell diese Verzweigung betreffen.
 
 ##  <a name="a-namebkmkbaselinesa-baseline-and-update-versions"></a><a name="bkmk_Baselines"></a> Baseline- und Updateversionen  
  Die erste Version des aktuellen Branch von System Center Configuration Manager ist Version 1511. Dies ist eine Baselineversion:  
@@ -72,12 +74,13 @@ Die folgenden Versionen von Configuration Manager sind als Baseline- und/oder Up
 |**1602**<br /><br /> 5.00.8355.1000|3/11/2016|Nein|Ja|
 |**1606**<br /><br /> 5.00.8412.1000|7/22/2016|Nein|Ja|
 |**1606** mit dem Hotfixrollup 1606 (KB3186654) </br></br>5.00.8412.1307 *(Hinweis 1)* |10/12/2016|Ja|Nein|
+|**1610**<br /><br /> 5.00.8458.1000|18.11.2016|Nein|Ja|
 *(Hinweis 1)* Dieses 1606-Baselinemedium ist als Teil des Microsoft System Center 2016- oder des System Center Configuration Manager-Release (Current Branch und Long-Term Servicing Branch 1606) verfügbar.
 
 Um die Version Ihres Configuration Manager-Standorts zu überprüfen, wechseln Sie oben links in der Konsole, wo die neue Version des Standorts und der Konsole angezeigt wird, zu **Info zu System Center Configuration Manager** .  
 
 ##  <a name="a-namebkmkinconsolea-in-console-updates-and-servicing"></a><a name="bkmk_inconsole"></a> Konsoleninterne Updates und Wartung  
- Bei Verwendung einer für die Produktionsumgebung geeigneten Installation von System Center Configuration Manager, auch als Current Branch bezeichnet, sind die meisten zu installierenden Updates über den Kanal „Updates und Wartung“ verfügbar. Mit dieser Methode können Sie die Updates für Ihre aktuelle Infrastrukturversion und Konfiguration ermitteln, herunterladen und zur Verfügung stellen. Dies umfasst nur Updates, die Microsoft allen Kunden empfiehlt.   
+ Bei Verwendung einer für die Produktionsumgebung geeigneten Installation von System Center Configuration Manager (die auch als „Current Branch“ bezeichnet wird) sind die meisten zu installierenden Updates über den Kanal „Updates und Wartung“ verfügbar. Mit dieser Methode können Sie die Updates für Ihre aktuelle Infrastrukturversion und Konfiguration ermitteln, herunterladen und zur Verfügung stellen. Dies umfasst nur Updates, die Microsoft allen Kunden empfiehlt.   
  Dazu gehören:  
 
 -   Neue Versionen, z. B. Version 1602  
@@ -130,16 +133,16 @@ In der Regel erfahren Sie über den Microsoft-Kundendienst, einen Knowledge Base
 
 Sie installieren diese Hotfixes manuell unter Verwendung einer der beiden folgenden Methoden:  
 
--   **Tool zur Updateregistrierung:** Dieses Tool importiert den Hotfix manuell in Ihre Configuration Manager-Konsole, von wo aus Sie das Update dann wie ein automatisch ermitteltes, konsoleninternes Update installieren können. Diese Methode wird für Updates mit der folgenden Dateinamenstruktur verwendet: **.update.exe**.  Der vollständige Dateiname für diese Art von Hotfix sieht etwa folgendermaßen aus: **&lt;Produkt\>-&lt;Produktversion\>-&lt;KB-Artikel-ID\>-ConfigMgr.Update.exe**  
+-   **Tool zur Updateregistrierung:** Dieses Tool importiert den Hotfix manuell in Ihre Configuration Manager-Konsole, von wo aus Sie das Update dann wie ein automatisch ermitteltes, konsoleninternes Update installieren können. Diese Methode wird für Updates mit der folgenden Dateinamenstruktur verwendet: **.update.exe**.  Der vollständige Dateiname für diese Art von Hotfix sieht in etwa folgendermaßen aus: **&lt;Produkt\>-&lt;Produktversion\>-&lt;KB-Artikel-ID\>-ConfigMgr.Update.exe**.  
 
-     Weitere Informationen finden Sie unter [Use the Update Registration Tool to import hotfixes to System Center Configuration Manager (Verwenden des Tools zur Updateregistrierung, um Hotfixes in System Center Configuration Manager zu importieren)](../../../core/servers/manage/use-the-update-registration-tool-to-import-hotfixes.md).  
+     Weitere Informationen finden Sie unter [Verwenden des Tools zur Updateregistrierung, um Hotfixes in System Center Configuration Manager zu importieren](../../../core/servers/manage/use-the-update-registration-tool-to-import-hotfixes.md).  
 
--   **Hotfix-Installer:** Dieses Tool wird verwendet, um einen Hotfix, der nicht mit der konsoleninternen Methode installiert werden kann, manuell zu installieren . Diese Methode wird für Hotfixes mit der folgenden Dateinamenstruktur verwendet: **&lt;Produkt\>-&lt;Produktversion\>-&lt;KB-Artikel-ID\>-&lt;Plattform\>-&lt;Sprache\>.exe**  
+-   **Hotfix-Installer:** Dieses Tool wird verwendet, um einen Hotfix, der nicht mit der konsoleninternen Methode installiert werden kann, manuell zu installieren . Diese Methode wird für Hotfixes mit der folgenden Dateinamenstruktur verwendet: **&lt;Produkt\>-&lt;Produktversion\>-&lt;KB-Artikel-ID\>-&lt;Plattform\>-&lt;Sprache\>.exe**.
 
-     Weitere Informationen finden Sie unter [Use the Hotfix Installer to install updates for System Center Configuration Manager (Verwenden des Hotfixinstallationsprogramms zum Installieren von Updates für System Center Configuration Manager)](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md).  
+     Weitere Informationen finden Sie unter [Verwenden des Hotfixinstallationsprogramms zum Installieren von Updates für System Center Configuration Manager](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md).
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

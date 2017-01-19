@@ -1,5 +1,5 @@
 ---
-title: Softwareinventur | System Center Configuration Manager
+title: Softwareinventur | Microsoft-Dokumentation
 description: "Erhalten Sie eine Einführung in die Softwareinventur in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 8d664616e222119f7821a70a7c8f9cdbfca38538
+ms.sourcegitcommit: a468ce93e9536fe3f6bf0fc191ff9764dd1c3343
+ms.openlocfilehash: 401ba6e37d740310d49ab9e96112ce576d7130e4
 
 
 ---
@@ -34,7 +34,7 @@ Sammeln Sie mit der Softwareinventur in System Center Configuration Manager Info
 
 -   Erstellen von Abfragen, von denen Geräte basierend auf den von Ihnen angegebenen, auf den Geräten befindlichen Dateien zurückgegeben werden. Weitere Informationen finden Sie unter [Abfragen – Technische Referenz für System Center Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md).  
 
--   Erstellen von abfragebasierten Sammlungen basierend auf von Ihnen angegebenen, auf den Geräten befindlichen Dateien. Mitgliedschaften abfragebasierter Sammlungen werden automatisch nach einem Zeitplan aktualisiert. Sie können für eine Reihe von Tasks, wie z. B. die Softwarebereitstellung, Sammlungen verwenden. Weitere Informationen finden Sie unter [Sammlungen – Technische Referenz für System Center Configuration Manager](../../../../core/clients/manage/collections/collections-technical-reference.md).  
+-   Erstellen von abfragebasierten Sammlungen basierend auf von Ihnen angegebenen, auf den Geräten befindlichen Dateien. Mitgliedschaften abfragebasierter Sammlungen werden automatisch nach einem Zeitplan aktualisiert. Sie können für eine Reihe von Tasks, wie z. B. die Softwarebereitstellung, Sammlungen verwenden. Weitere Informationen finden Sie unter [Einführung in Sammlungen in System Center Configuration Manager](../../../../core/clients/manage/collections/introduction-to-collections.md).  
 
 -   Ausführen von Berichten, in denen spezifische Details zu Geräten in Ihrer Organisation angezeigt werden. Weitere Informationen finden Sie unter [Berichterstellung in System Center Configuration Manager](../../../../core/servers/manage/reporting.md).  
 
@@ -54,6 +54,7 @@ Sammeln Sie mit der Softwareinventur in System Center Configuration Manager Info
 
 |Plattform|Geräte, die einem Benutzer gehören|Geräte, die dem Unternehmen gehören|  
 |--------------|---------------------------------|--------------------------------|  
+|Windows 10 (ohne Configuration Manager-Client)|Nur verwaltete Apps|Nur verwaltete Apps| 
 |Windows 8.1 (ohne Configuration Manager-Client)|Nur verwaltete Apps|Nur verwaltete Apps|  
 |Windows Phone 8|Nur verwaltete Apps|Nur verwaltete Apps|  
 |Windows RT|Nur verwaltete Apps|Nur verwaltete Apps|  
@@ -62,6 +63,6 @@ Sammeln Sie mit der Softwareinventur in System Center Configuration Manager Info
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

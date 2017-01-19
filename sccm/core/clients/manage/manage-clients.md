@@ -1,8 +1,8 @@
 ---
-title: Verwalten von Clients | System Center Configuration Manager
+title: Verwalten von Clients | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie Clients in System Center Configuration Manager verwalten.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 caps.latest.revision: 17
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 67a814330123a1615a0663872bf4af64e5b81a84
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: dfdb5a95b672d3858d094750625cb5f6ef50700d
 
 
 ---
@@ -160,7 +160,7 @@ Wenn ein System Center Configuration Manager-Client installiert und erfolgreich 
 
         Sie müssen zum Anzeigen des Besitz-Werts in der Geräteliste möglicherweise der Ansicht die Spalte hinzufügen, indem Sie mit der rechten Maustaste auf eine beliebige Spaltenüberschrift klicken und **Gerätebesitzer**auswählen.
 
-         Weitere Informationen finden Sie unter [Hybride Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune](../../../mdm/plan-design/hybrid-mobile-device-management.md).  
+         Weitere Informationen finden Sie unter [Hybride Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md).  
 
 ##  <a name="a-namebkmkmanagingclientsdevicecollectionsnodea-manage-clients-from-the-device-collections-node"></a><a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> Verwalten von Clients mithilfe des Knotens „Gerätesammlungen“  
  Verwenden Sie das folgende Verfahren und die folgende Tabelle, um Geräte in einer Sammlung im Arbeitsbereich **Bestand und Kompatibilität** mithilfe des Knotens **Gerätesammlungen** zu verwalten.  
@@ -239,7 +239,7 @@ Führen Sie den Befehl CCMSetup.exe vom Installationsquellspeicherort aus. Geben
     -   SMSCACHESIZE  
 
         > [!NOTE]
-        > Verwenden Sie für Version 1606 die Einstellungen für die Cachegröße, die in den **Clienteinstellungen** in der Configuration Manager-Konsole statt in SMSCACHESIZE verfügbar sind. Weitere Informationen finden Sie unter [Informationen zu Clienteinstellungen in System Center Configuration Manager](../../../core/clients/deploy/about-client-settings.md#Client-Cache-Settings)
+        > Verwenden Sie für Version 1606 die Einstellungen für die Cachegröße, die in den **Clienteinstellungen** in der Configuration Manager-Konsole statt in SMSCACHESIZE verfügbar sind. Weitere Informationen finden Sie unter [Informationen zu Clienteinstellungen in System Center Configuration Manager](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)
 
 Weitere Informationen zur Verwendungsweise dieser Befehlszeileneigenschaften für „CCMSetup.exe“ finden Sie unter [Informationen zu Clientinstallationseigenschaften in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
 
@@ -264,7 +264,7 @@ Weitere Informationen zur Verwendungsweise dieser Befehlszeileneigenschaften fü
     -   SMSCACHESIZE  
 
         > [!NOTE]
-        > Verwenden Sie für Version 1606 die Einstellungen für die Cachegröße, die in den **Clienteinstellungen** in der Configuration Manager-Konsole statt in SMSCACHESIZE verfügbar sind. Weitere Informationen finden Sie unter [Informationen zu Clienteinstellungen in System Center Configuration Manager](../../../core/clients/deploy/about-client-settings.md#Client-Cache-Settings)
+        > Verwenden Sie für Version 1606 die Einstellungen für die Cachegröße, die in den **Clienteinstellungen** in der Configuration Manager-Konsole statt in SMSCACHESIZE verfügbar sind. Weitere Informationen finden Sie unter [Informationen zu Clienteinstellungen in System Center Configuration Manager](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)
 
        Weitere Informationen zur Verwendungsweise dieser Befehlszeileneigenschaften für „CCMSetup.exe“ finden Sie unter [Informationen zu Clientinstallationseigenschaften in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
 
@@ -323,6 +323,7 @@ Ab Version 1606 können Sie die Größe des Clientcacheordners anpassen, ohne de
 
  Wenn ein Konflikt von Configuration Manager mithilfe der Windows-Authentifizierung des Computerkontos oder mithilfe eines PKI-Zertifikats aus einer vertrauenswürdigen Quelle aufgelöst werden kann, geschieht dies automatisch. Wenn Configuration Manager den Konflikt dagegen nicht auflösen kann, wird eine Hierarchieeinstellung verwendet, um entweder beim Erkennen doppelter Hardware-IDs automatisch neue Datensätze zu erstellen (dies ist die Standardeinstellung) oder die Entscheidung über eine Zusammenführung, Sperrung oder Erstellung neuer Clientdatensätze Ihnen zu überlassen. Wenn Sie sich für das manuelle Verwalten duplizierter Datensätze entscheiden, müssen Sie die in Konflikt stehenden Datensätze mithilfe der Configuration Manager-Konsole manuell bearbeiten, um den Konflikt aufzulösen.  
 
+
 #### <a name="to-change-the-hierarchy-setting-for-managing-conflicting-records"></a>So ändern Sie die Hierarchieeinstellung zum Verwalten von in Konflikt stehenden Datensätzen  
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung**.  
@@ -351,6 +352,18 @@ Ab Version 1606 können Sie die Größe des Clientcacheordners anpassen, ohne de
     -   **Neu** : Hiermit erstellen Sie einen neuen Datensatz für den in Konflikt stehenden Clientdatensatz.  
 
     -   **Sperren** : Hiermit erstellen Sie einen neuen Datensatz für den in Konflikt stehenden Clientdatensatz, markieren ihn jedoch als gesperrt.  
+
+## <a name="manage-duplicate-hardware-identifiers"></a>Verwalten von in Konflikt stehenden Datensätzen bei Configuration Manager-Clients
+Ab Configuration Manager Version 1610 können Sie eine Liste der Hardware-IDs angeben, die Configuration Manager für den PXE-Start und die Clientregistrierung ignoriert. Es gibt zwei häufige Probleme, die dadurch behandelt werden können.
+
+1. Viele neue Geräte wie Surface Pro 3 haben keinen integrierten Ethernet-Anschluss. Ein USB-zu-Ethernet-Adapter wird im Allgemeinen verwendet, um eine Kabelverbindung für die Bereitstellung des Betriebssystems einzurichten. Allerdings handelt es sich hierbei aus Kostengründen und Gründen der allgemeinen Nutzbarkeit oft um gemeinsame Adapter. Nachdem die MAC-Adresse des Adapters zur Identifizierung des Geräts verwendet wird, ist es problematisch, den Adapter ohne zusätzliche Aktionen eines Administrators zwischen den Bereitstellungen wiederzuverwenden. Sie können nun in Configuration Manager mit Version 1610 von Current Branch die MAC-Adresse dieses Adapters ausschließen, damit er in diesem Szenario einfach wiederverwendet werden kann.
+2. Während es sich bei SMBIOS-ID um eine eindeutige Hardware-ID handeln sollte, werden einige spezielle Hardwaregeräte mit doppelten IDs gebaut. Obwohl es nicht so häufig ist wie das oben beschriebene USB-zu-Ethernet-Adapter-Szenario, kann die Liste von Hardware-IDs ebenfalls dazu verwendet werden, das Problem zu behandeln.
+
+#### <a name="to-add-hardware-identifiers-for-configuration-manager-to-ignore"></a>So fügen Sie von Hardware-IDs hinzu, die Configuration Manager ignorieren soll  
+1. Navigieren Sie in der Configuration Manager-Konsole zu **Verwaltung** > **Übersicht** > **Standortkonfiguration** > **Standorte**.
+2. Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Standorte** auf **Hierarchieeinstellungen**.
+3. Klicken Sie auf die Registerkarte **Clientgenehmigung und in Konflikt stehende Datensätze**.
+4. Klicken Sie im Abschnitt **Doppelte Hardware-IDs** auf **Hinzufügen**, um neue Hardware-IDs hinzuzufügen.
 
 ##  <a name="a-namebkmkpolicyretrievala-initiate-policy-retrieval-for-a-configuration-manager-client"></a><a name="BKMK_PolicyRetrieval"></a> Initiieren des Richtlinienabrufs für einen Configuration Manager-Client  
  Clientrichtlinien werden von Windows-Configuration Manager-Clients nach einem als Clienteinstellung konfigurierten Zeitplan heruntergeladen. Es kann jedoch vorkommen, dass Sie Richtlinien ad hoc vom Client abrufen möchten, z.B. zur Problembehandlung oder während eines Tests.  
@@ -440,6 +453,6 @@ Ab Version 1606 können Sie die Größe des Clientcacheordners anpassen, ohne de
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

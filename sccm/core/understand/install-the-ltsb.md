@@ -1,5 +1,5 @@
 ---
-title: "Installieren eines Standorts mit dem 1606-Baselinemedium | für System Center Configuration Manager"
+title: Installieren eines Standorts mit dem 1606-Baselinemedium | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über das 1606-Baselinemedium zum Installieren oder Upgraden von Standorten für System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/12/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5e97fbcdc21022e98b4cbdb198273dfe544a561f
-ms.openlocfilehash: 3df46a00f2208ffa687c8c99ce610266e206eef0
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: a80095fb3b227653126a028ab4ab8f4e2dbd612b
 
 
 ---
@@ -83,7 +83,7 @@ Um eine lizenzierte Current Branch-Edition zu erstellen, würden Sie z.B. Folgen
   **Schlüsselname: SABranchOptions**
    -    **SSActive = 1**
    - **CurrentBranch = 1**
- 
+
 
 > [!IMPORTANT]  
 > **SABranchOptions** funktioniert nur mit dem Setup vom Baselinemedium. Es funktioniert nicht, wenn Sie das Setup aus dem Ordner „CD.Latest“ ausführen, den Sie zuvor mithilfe des Baselinemediums von Version 1606 installiert haben.
@@ -148,6 +148,6 @@ Verwenden Sie das Configuration Manager-Setup im Ordner „CD.Latest“ der Sich
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

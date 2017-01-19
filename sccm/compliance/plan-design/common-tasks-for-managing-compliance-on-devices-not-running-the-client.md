@@ -1,5 +1,5 @@
 ---
-title: "Allgemeine Aufgaben zur Verwaltung der Kompatibilität auf Geräten, auf denen der System Center Configuration Manager-Client nicht ausgeführt wird | System Center Configuration Manager"
+title: "Allgemeine Aufgaben zur Verwaltung der Konformität auf Geräten, auf denen der System Center Configuration Manager-Client nicht ausgeführt wird | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr über System Center Configuration Manager-Kompatibilitätseinstellungen, indem Sie einige Szenarios durcharbeiten."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f69250fbe51ea8902a0446a613d66be390ea7434
+ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
+ms.openlocfilehash: e24ef149e2a2648c9a7acaedfaa8f0b5bb173ab3
 
 
 ---
@@ -101,7 +101,7 @@ Diese Szenarios dienen zur Einführung in das Verwenden von System Center Config
 
  Sie können nun die Informationen im Thema [Common tasks for creating and deploying configuration baselines with System Center Configuration Manager (Allgemeine Aufgaben zum Erstellen und Bereitstellen von Konfigurationsbaselines System Center Configuration Manager)](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) verwenden, die Ihnen beim Bereitstellen der von Ihnen erstellten Konfiguration auf Geräten helfen.  
 
-## <a name="scenarios-for-android-and-samsung-knox-devices-managed-without-the-configuration-manager-client"></a>Szenarien für Android- und Samsung KNOX-Geräte, die ohne Configuration Manager-Client verwaltet werden  
+## <a name="scenarios-for-android-and-samsung-knox-standard-devices-managed-without-the-configuration-manager-client"></a>Szenarios für Android- und Samsung KNOX Standard-Geräte, die ohne Configuration Manager-Client verwaltet werden  
 
 ### <a name="scenario-require-a-password-on-all-android-5-devices"></a>Szenario: Anfordern eines Kennworts auf allen Android 5-Geräten  
  In diesem Szenario erstellen Sie ein Konfigurationselement nur für Android 5-Geräte, das Benutzern auffordert, auf ihren Geräten ein Kennwort mit mindestens 6 Zeichen zu konfigurieren. Wenn ein Benutzer zudem fünfmal ein falsches Kennwort eingibt, wird das Gerät zurückgesetzt.  
@@ -126,7 +126,6 @@ Diese Szenarios dienen zur Einführung in das Verwenden von System Center Config
 
 
 
-
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

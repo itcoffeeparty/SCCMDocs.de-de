@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Remoteverbindungsprofilen | System Center Configuration Manager
+title: Erstellen von Remoteverbindungsprofilen | Microsoft-Dokumentation
 description: "Verwenden Sie Remoteverbindungsprofile für System Center Configuration Manager, um Ihren Benutzern das Herstellen einer Remoteverbindung zu Ihren Arbeitscomputern zu ermöglichen."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fd05211959d844c3658e3c5ead70b0c9a7f90116
+ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
+ms.openlocfilehash: 72fc94c6449649656a7e8b81659c2b5cc2551107
 
 
 ---
@@ -186,6 +186,6 @@ Bereitstellen eines Remoteverbindungsprofils
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

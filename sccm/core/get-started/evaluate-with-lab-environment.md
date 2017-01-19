@@ -1,5 +1,5 @@
 ---
-title: Auswerten von System Center Configuration Manager durch Einrichtung Ihrer eigenen Laborumgebung
+title: Auswerten von System Center Configuration Manager durch Einrichtung Ihrer eigenen Laborumgebung | Microsoft-Dokumentation
 description: "Richten Sie eine Laborumgebung ein, um System Center Configuration Manager für die Verwendung in Ihrer Organisation zu bewerten."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 363e6a929b72e027d5fff7584905fb552dc695b0
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: e72acbe0a2f5592b5bdf9a3612db62bfb066fadf
 
 
 ---
@@ -64,12 +64,12 @@ Erfahren Sie mehr über das Einrichtung einer Laborumgebung, um System Center Co
 
 -   Informationen zur Bedeutung von Sicherheitsrollen finden Sie unter [Grundlagen der rollenbasierten Verwaltung für System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
 
--   Das Verständnis dieser [Konzepte für das Content Management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_Concepts) vermittelt Ihnen bestimmte Konzepte im Zusammenhang mit Content Management.  
+-   Das Verständnis dieser [Konzepte für das Content Management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md) vermittelt Ihnen bestimmte Konzepte im Zusammenhang mit Content Management.  
 
 -   [Erfahren Sie, wie Clients Standortressourcen und Dienste für System Center Configuration Manager suchen](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md), um tägliche Vorgänge in der gesamten Bereitstellung erfolgreich zu unterstützen.  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

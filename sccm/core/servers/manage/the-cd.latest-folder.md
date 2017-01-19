@@ -1,5 +1,5 @@
 ---
-title: "Der Ordner „CD.Latest“ | System Center Configuration Manager"
+title: "Der Ordner „CD.Latest“ | Microsoft-Dokumentation"
 description: "Enthält Informationen über den neuen Updatevorgang, in dem Updates des Produkts aus der Configuration Manager-Konsole heraus bereitstellt werden."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fc63227aa4345fb58e7efc15abd55071fb33e5d5
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: dcf56f6b82f89e81d636ea920f36133e245cbb1e
 
 
 ---
@@ -28,6 +28,8 @@ ms.openlocfilehash: fc63227aa4345fb58e7efc15abd55071fb33e5d5
 In System Center Configuration Manager wird ein neuer Updatevorgang eingeführt, der Updates des Produkts aus der Configuration Manager-Konsole heraus bereitstellt. Zur Unterstützung dieser neuen Methode zur Aktualisierung von Configuration Manager wird ein neuer Ordner namens **CD.Latest** erstellt, der eine Kopie der Configuration Manager-Installationsdateien für die aktualisierte Version der Website enthält.  
 
 Ab dem Update 1606 enthält der Ordner „CD.Latest“ einen Ordner namens **Redist** , der die verteilbaren Dateien enthält, die während des Setupvorgangs heruntergeladen und verwendet werden. Diese Dateien sind der Version der Configuration Manager-Dateien zugeordnet, die sich im Ordner „CD.Latest“ befinden. Wenn Sie den Setupvorgang aus einem „CD.Latest“-Ordner ausführen, müssen Sie Dateien verwenden, die zu dieser Setup-Version passen. Dazu können sie Setup anweisen, neue und aktuelle Dateien von Microsoft herunterzuladen, oder die Dateien aus dem „Redist“-Ordner verwenden, der sich im „CD.Latest“-Ordner befindet.
+
+Baselinemedien beinhalten genau wie die Baselineversion 1606, die im Oktober 2016 herausgegeben wurde, keinen Redist-Ordner. Der Ordner „Redist“ wird nicht erstellt, bis Sie ein Update in der Konsole installieren. Verwenden Sie in der Zwischenzeit den Redist-Ordner, den Sie auch bei der Installation von Standorten mit dem Baselinemedium verwendet haben.  
 
 > [!TIP]
 > Wenn Sie Version 1606 noch nicht installiert haben, stellen Sie sicher, dass die von Ihnen verwendeten „Redist“-Dateien aktuell sind. Falls Sie die „Redist“-Dateien noch nicht heruntergeladen haben, weisen Sie das Setup an, diese von Microsoft herunterzuladen.   
@@ -61,6 +63,6 @@ Die Quelldateien aus dem Ordner „CD.Latest“ werden für Folgendes unterstüt
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,8 +1,8 @@
 ---
-title: Upgrade auf System Center Configuration Manager | System Center Configuration Manager
+title: Upgrade auf System Center Configuration Manager | Microsoft-Dokumentation
 description: "Erfahren Sie die Schritte für die Ausführung eines direkten Upgrades an einem Standort und einer Hierarchie, wo System Center 2012 Configuration Manager ausgeführt wird."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/16/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 473d4f9a39898ff5a664013f91ab95e58cd6d161
-ms.openlocfilehash: 7ccf6cb010226c1874fc015af00e0950b4ea63d6
+ms.sourcegitcommit: 6cf3ac76ea3fb9c9b093ed4927255102930bbe26
+ms.openlocfilehash: d4e6a4c128ae077d2a3cb2883d80b6bf71b7f458
 
 
 ---
@@ -31,8 +31,22 @@ Sie können ein direktes Upgrade zur Aktualisierung auf System Center Configurat
 
 
 ##  <a name="a-namebkmkpatha-in-place-upgrade-paths"></a><a name="bkmk_path"></a> Pfade für ein direktes Upgrade  
- **Sie können die folgenden Versionen auf eine vollständig lizenzierte Version von System Center Configuration Manager Version 1511 aktualisieren:**  
+**Upgrade auf Version 1606**  
+Am 15. Dezember 2016 wurde das Baselinemedium für Version 1606 erneut veröffentlicht, um Unterstützung für zusätzliche Upgradeszenarios hinzufügen. Die neue Version unterstützt Upgrades der folgenden Versionen und Installationen auf eine vollständig lizenzierte Version von System Center Configuration Manager Version 1606:  
+-   Eine Evaluierungsinstallation von System Center Configuration Manager Version 1606
+-   Eine Release Candidate-Install von System Center Configuration Manager  
+-   System Center 2012 Configuration Manager mit Service Pack 1  
+-   System Center 2012 Configuration Manager mit Service Pack 2  
+-   System Center 2012 R2 – Configuration Manager  
+-   System Center 2012 R2 Configuration Manager mit Service Pack 1  
 
+Wenn Sie ein vor dem 15. Dezember 2016 heruntergeladenes Baselinemedium für Version 1606 verwenden, können Sie nur die folgenden Versionen und Installationen auf eine vollständig lizenzierte Version von System Center Configuration Manager Version 1606 aktualisieren:
+-   Eine Evaluierungsinstallation von System Center Configuration Manager Version 1606
+-   System Center 2012 Configuration Manager mit Service Pack 2
+-   System Center 2012 R2 Configuration Manager mit Service Pack 1
+
+**Upgrade auf Version 1511**  
+Wenn Sie über das Baselinemedium für Version 1511 verfügen, können Sie die folgenden Versionen und Installationen auf eine vollständig lizenzierte Version von System Center Configuration Manager Version 1511 aktualisieren:  
 -   Eine Evaluierungsinstallation von System Center Configuration Manager Version 1511
 -   Eine Release Candidate-Installation von System Center Configuration Manager  
 -   System Center 2012 Configuration Manager mit Service Pack 1  
@@ -40,11 +54,6 @@ Sie können ein direktes Upgrade zur Aktualisierung auf System Center Configurat
 -   System Center 2012 R2 – Configuration Manager  
 -   System Center 2012 R2 Configuration Manager mit Service Pack 1  
 
-**Sie können die folgenden Versionen auf eine vollständig lizenzierte Version von System Center Configuration Manager Version 1606 aktualisieren:**
-
--   Eine Evaluierungsinstallation von System Center Configuration Manager Version 1606
--   System Center 2012 Configuration Manager mit Service Pack 2
--   System Center 2012 R2 Configuration Manager mit Service Pack 1
 
 
 > [!TIP]  
@@ -54,7 +63,6 @@ Sie können ein direktes Upgrade zur Aktualisierung auf System Center Configurat
 >  -   [Der Ordner „CD.Latest“ für System Center Configuration Manager](../../../../core/servers/manage/the-cd.latest-folder.md)  
 
  **Folgendes wird nicht unterstützt:**  
-
 -   Das Upgrade einer Technical Preview für System Center Configuration Manager auf eine vollständig lizenzierte Installation wird nicht unterstützt.  Eine Technical Preview-Version kann nur auf eine neuere Version der Technical Preview aktualisiert werden.  
 
 -   Die Migration von einer Technical Preview auf eine vollständig lizenzierte Version wird nicht unterstützt.  
@@ -68,7 +76,6 @@ Sie können ein direktes Upgrade zur Aktualisierung auf System Center Configurat
 Überprüfen Sie die zum Hosten der Standortsystemrollen verwendeten Serverbetriebssysteme:  
 
 -   Einige von System Center 2012 Configuration Manager unterstützte ältere Betriebssysteme werden von System Center Configuration Manager nicht unterstützt, und die Standortsystemrollen auf diesen Betriebssystemen müssen vor dem Upgrade verschoben oder entfernt werden.  
-
 -   Mit der Voraussetzungsprüfung für Configuration Manager werden die Voraussetzungen für Standortsystemrollen auf dem Standortserver oder auf Remotecomputern nicht geprüft.  
 
 Überprüfen Sie die Voraussetzungen für jeden Computer, auf dem eine Standortsystemrolle gehostet wird:  
@@ -79,52 +86,40 @@ Allgemeine Informationen über unterstützte Plattformen und die Konfiguration v
 
 Weitere Informationen zur Verwendung von Windows ADK mit Configuration Manager finden Sie unter [Anforderungen an die Infrastruktur für die Betriebssystembereitstellung in System Center Configuration Manager](../../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md).  
 
-**Überprüfen Sie den Status des Standorts und der Hierarchie.** Es dürfen keine ungelösten Probleme vorliegen.  
-
+**Überprüfen des Standort- und Hierarchiestandorts, um ungelöste Probleme zu beheben:**  
 Bevor Sie das Upgrade für einen Standort durchführen, sollten Sie alle Betriebsprobleme beheben, die den Standortserver, den Standortdatenbankserver und die auf Remotecomputern installierten Standortsystemrollen betreffen. Betriebsprobleme können die Ursache für Fehler beim Upgrade von Standorten sein.  
 
-**Installieren Sie alle anwendbaren wichtigen Updates** für Betriebssysteme auf Computern, auf denen der Standort, der Standortdatenbankserver und Remotestandort-Systemrollen gehostet werden.  
-
+**Installieren aller anwendbaren wichtigen Updates für Betriebssysteme auf Computern, auf denen der Standort, der Standortdatenbankserver und die Remotestandort-Systemrollen gehostet werden:**  
 Bevor Sie das Upgrade für einen Standort durchführen, sollten Sie für jedes relevante Standortsystem sämtliche wichtigen Updates installieren. Wenn für ein von Ihnen installiertes Update ein Neustart erforderlich ist, starten Sie die jeweiligen Computer neu, bevor Sie mit dem Service Pack-Update beginnen.  
 
 Weitere Informationen erhalten Sie unter [Windows Update](http://go.microsoft.com/fwlink/p/?LinkId=105851).  
 
-**Deinstallieren der Standortsystemrollen**, die von System Center Configuration Manager nicht unterstützt werden:  
-
+**Deinstallieren der Standortsystemrollen, die von System Center Configuration Manager nicht unterstützt werden:**  
 Die folgenden Standortsystemrollen werden in System Center Configuration Manager nicht mehr verwendet und müssen deinstalliert werden, bevor Sie von System Center 2012 Configuration Manager upgraden:  
 
 -   Out-of-Band-Verwaltungspunkt  
-
 -   Dienstintegritätsprüfungspunkt  
 
-**Deaktivieren Sie Datenbankreplikate** für Verwaltungspunkte an primären Standorten:  
-
+**Deaktivieren von Datenbankreplikaten für Verwaltungspunkte an primären Standorten:**  
 Configuration Manager kann kein Upgrade eines primären Standorts durchführen, wenn dort Datenbankreplikate für Verwaltungspunkte aktiviert sind. Deaktivieren Sie die Datenbankreplikation, bevor Sie folgende Schritte ausführen:  
 
 -   Erstellen einer Sicherung der Standortdatenbank zum Testen des Datenbankupgrades  
-
 -   Upgrade des Produktionsstandorts auf System Center Configuration Manager  
 
 Weitere Informationen finden Sie unter:  
-
 -   System Center 2012 Configuration Manager: [Konfigurieren von Datenbankreplikaten für Verwaltungspunkte](https://technet.microsoft.com/library/hh846234.aspx)  
-
 -   System Center Configuration Manager: [Datenbankreplikate für Verwaltungspunkte für System Center Configuration Manager](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)  
 
-**Führen Sie eine erneute Konfiguration der Softwareupdatepunkte durch, von denen NLBs verwendet werden.**:  
-
+**Erneutes Konfigurieren von Softwareupdatepunkten, die NLBs verwenden:**  
 Configuration Manager kann kein Upgrade für Standorte durchführen, an denen Softwareupdatepunkte mithilfe eines NLB-Clusters gehostet werden.  
 
 Wenn Sie für Softwareupdatepunkte NLB-Cluster verwenden, entfernen Sie den NLB-Cluster mithilfe von PowerShell. (Ab System Center 2012 Configuration Manager SP1 gab es in der Configuration Manager-Konsole keine Option zum Konfigurieren von NLB-Cluster)  
 
-**Deaktivieren Sie alle Standortwartungstasks** an allen Standorten für die Dauer des Standortupgrades:  
-
+**Deaktivieren aller Standortwartungsaufgaben an allen Standorten für die Dauer des Standortupgrades:**  
 Bevor Sie ein Upgrade auf System Center Configuration Manager durchführen, deaktivieren Sie alle Standortwartungstasks, die möglicherweise zu dem Zeitpunkt ausgeführt werden, zu dem der Upgradeprozess aktiv ist. Zu diesen Tasks gehören u. a. folgende:  
 
 -   Standortserver sichern  
-
 -   Veraltete Clientvorgänge löschen  
-
 -   Veraltete Ermittlungsdaten löschen  
 
 Wenn während des Upgradeprozesses ein Wartungstask für die Standortdatenbank ausgeführt wird, tritt beim Standortupgrade möglicherweise ein Fehler auf.  
@@ -134,29 +129,31 @@ Zeichnen Sie den Zeitplan eines Tasks vor dem Deaktivieren auf, sodass Sie die K
 Weitere Informationen zu Standortwartungstasks finden Sie unter:  
 
 -   System Center 2012 Configuration Manager: [Planen von Wartungstasks für Configuration Manager](https://technet.microsoft.com/library/gg712686.aspx)  
-
 -   System Center Configuration Manager: [Referenz für Wartungstasks für System Center Configuration Manager](../../../../core/servers/manage/reference-for-maintenance-tasks.md)  
 
 **Führen Sie die Setup-Voraussetzungsprüfung aus.**:  
+Bevor Sie das Upgrade für einen Standort durchführen, können Sie die **Voraussetzungsprüfung** unabhängig von Setup ausführen, um zu prüfen, ob Ihr Standort die Voraussetzungen erfüllt. Beim späteren Durchführen des Upgrades wird die Voraussetzungsprüfung erneut ausgeführt.  
 
-Bevor Sie das Upgrade für einen Standort durchführen, können Sie die **Voraussetzungsprüfung** unabhängig von Setup ausführen, um zu prüfen, ob Ihr Standort die Voraussetzungen erfüllt. Beim Durchführen des Upgrades wird die Voraussetzungsprüfung erneut ausgeführt.  
+Wenn Sie das Baselinemedium für Version 1606 aus der Oktober 2016-Version verwenden, durchsucht die unabhängige Voraussetzungsprüfung die Website nach Upgrades für die Current Branch-Version und die Long-Term Servicing Branch-Version (LTSB) von System Center Configuration Manager. Da einige Funktionen nicht von der LTSB-Version unterstützt werden, werden möglicherweise im Protokoll *ConfigMgrPrereq.log* Einträge wie die folgenden angezeigt:
+ - INFO: The site is a LTSB edition. (Info: Die Website ist eine LTSB-Edition.)
+ - Unsupported site system role 'Asset Intelligence synchronization point' for the LTSB edition;    Error;    Configuration Manager has detected that the 'Asset Intelligence synchronization point' is installed. (Nicht unterstützte Standortsystemrolle „Asset Intelligence-Synchronisierungspunkt“ für die LTSB-Edition;...Fehler;...Configuration Manager hat eine Installation von „Asset Intelligence-Synchronisierungspunkt“ erkannt.) Asset Intelligence is not supported on the LTSB edition. (Asset Intelligence wird auf der LTSB-Edition nicht unterstützt.) You must uninstall the Asset Intelligence synchronization point site system role before you can continue. (Sie müssen die Synchronisierungspunkt-Standortsystemrolle von Asset Intelligence deinstallieren, bevor Sie fortfahren können.)
 
-Weitere Informationen finden Sie im [Prerequisite Checker](/sccm/core/servers/deploy/install/prerequisite-checker) und in der [List of Prerequisite Checks for System Center Configuration Manager](/sccm/core/servers/deploy/install/list-of-prerequisite-checks).  
+Wenn Sie ein Upgrade auf die Current Branch-Version planen, können Fehler für die LTSB-Edition einfach ignoriert werden. Sie sind nur dann relevant, wenn Sie ein Upgrade auf die LTSB-Edition planen.
 
-**Laden Sie die erforderlichen und weitervertreibbaren Dateien für System Center Configuration Manage herunter**:  
+Wenn Sie später Configuration Manager-Setup für das Upgrade ausführen, wird die Voraussetzungsprüfung erneut ausgeführt und bewertet Ihren Standort auf der Basis der Branch-Version von System Center Configuration Manager, die Sie installieren möchten (Current Branch oder LTSB). Wenn Sie sich für ein Upgrade auf die Current Branch-Version entscheiden, wird die Prüfung von Features, die nicht von der LTSB-Edition unterstützt werden, nicht ausgeführt.
 
+Weitere Informationen finden Sie unter [Voraussetzungsprüfung für System Center Configuration Manager](/sccm/core/servers/deploy/install/prerequisite-checker) und in der [Liste der Voraussetzungsprüfungen für System Center Configuration Manager](/sccm/core/servers/deploy/install/list-of-prerequisite-checks).  
+
+**Herunterladen von Dateien für die Voraussetzungsprüfung sowie von weitervertreibbaren Dateien für System Center Configuration Manager:**    
 Verwenden Sie das **Setup-Downloadprogramm**, um die erforderlichen weitervertreibbaren Dateien, die Sprachpakete und die neuesten Produktupdates für System Center Configuration Manager herunterzuladen.  
 
-Informationen hierzu finden Sie unter [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader).  
+Informationen hierzu finden Sie unter [Setup-Downloadprogramm für System Center Configuration Manager](/sccm/core/servers/deploy/install/setup-downloader).  
 
 **Planen Sie die Verwaltung von Server- und Clientsprachen ein.**:  
-
 Beim Aktualisieren eines Standorts werden nur die Sprachpaketversionen installiert, die Sie während des Upgrades auswählen.  
 
 -   Setup überprüft die aktuelle Sprachkonfiguration Ihres Standorts. Es wird ermittelt, welche Sprachpakete in dem Ordner verfügbar sind, in dem die zuvor heruntergeladenen erforderlichen Dateien gespeichert wurden.  
-
 -   Anschließend können Sie die Auswahl der aktuellen Server- und Clientsprachpakete bestätigen oder diese ändern und die Unterstützung von Sprachen hinzufügen oder entfernen.  
-
 -   Nur die Sprachpakete, die beim Ausführen von Setup verfügbar sind (die Sie mit den erforderlichen heruntergeladenen Dateien erhalten), können ausgewählt werden.  
 
 > [!NOTE]  
@@ -165,31 +162,23 @@ Beim Aktualisieren eines Standorts werden nur die Sprachpaketversionen installie
 Weitere Informationen zu Sprachpaketen finden Sie unter [Sprachpakete in System Center Configuration Manager](../../../../core/servers/deploy/install/language-packs.md).  
 
 **Sehen Sie sich die Überlegungen zum Upgrade von Standorten an.**:  
-
 Wenn Sie ein Upgrade für einen Standort durchführen, werden einige Funktionen und Konfigurationen auf die Standardkonfiguration zurückgesetzt. Informationen zur Vorbereitung auf diese und ähnliche Änderungen finden Sie unter  [Upgradeüberlegungen](#bkmk_considerations).  
 
-**Erstellen Sie eine Sicherung** der Standortdatenbank am Standort der zentralen Verwaltung und an primären Standorten:  
-
+**Erstellen einer Sicherung der Standortdatenbank am Standort der zentralen Verwaltung und an primären Standorten:**  
 Bevor Sie das Upgrade für einen Standort durchführen, sollten Sie die Standortdatenbank sichern, damit Sie über eine Sicherung für die Notfallwiederherstellung verfügen.  
 
-Informationen finden Sie unter [Backup and recovery for System Center Configuration Manager](../../../../protect/understand/backup-and-recovery.md).  
+Informationen finden Sie unter [Sicherung und Wiederherstellung für System Center Configuration Manager](../../../../protect/understand/backup-and-recovery.md).  
 
 **Erstellen Sie eine Sicherung der benutzerdefinierten Datei „Configuration.mof“**:  
-
 Wenn Sie eine benutzerdefinierte Datei „Configuration.mof“ verwenden, um die bei der Hardwareinventur verwendeten Datenklassen zu definieren, müssen Sie vor dem Upgrade des Standorts eine Sicherung dieser Datei erstellen. Nach dem Upgrade stellen Sie diese Datei an dem Standort wieder her. Weitere Informationen zur Verwendung dieser Datei finden Sie unter [Erweitern der Hardwareinventur in System Center Configuration Manager](../../../../core/clients/manage/inventory/extend-hardware-inventory.md).  
 
-**Testen Sie den Datenbankupgradeprozess** mit einer Kopie der letzten Sicherung der Standortdatenbank.  
-
+**Testen des Datenbank-Upgradeprozesses mit einer Kopie der letzten Sicherung der Standortdatenbank:**  
 Bevor Sie das Upgrade für einen Standort der zentralen Verwaltung oder einen primären Standort von Configuration Manager durchführen, testen Sie den Datenbankupgradeprozess mit einer Kopie der letzten Sicherung der Standortdatenbank.  
 
 -   Sie sollten den Standortdatenbank-Upgradeprozess testen, da die Standortdatenbank während der Aktualisierung eines Standorts geändert werden kann.  
-
 -   Ein Testdatenbankupgrade ist zwar nicht erforderlich, doch können dadurch Probleme beim Upgrade ermittelt werden, bevor die Produktionsdatenbank betroffen ist.  
-
 -   Wenn beim Upgrade einer Standortdatenbank Fehler auftreten, ist die Datenbank möglicherweise nicht mehr betriebsfähig, und es müsste eine Standortwiederherstellung erfolgen.  
-
 -   Obwohl die Standortdatenbank von allen Standorten in einer Hierarchie gemeinsam genutzt wird, sollten Sie die Datenbank an jedem relevanten Standort testen, bevor Sie das Upgrade für diesen Standort durchführen.  
-
 -   Wenn Sie an einem primären Standort Datenbankreplikate für Verwaltungspunkte verwenden, deaktivieren Sie die Replikation, bevor Sie die Sicherung der Standortdatenbank erstellen.  
 
 Configuration Manager unterstützt weder die Sicherung sekundärer Standorte noch das Testupgrade einer sekundären Standortdatenbank.  
@@ -198,23 +187,20 @@ Das Testen des Datenbankupgrades für die Datenbank des Produktionsstandorts wir
 
 Weitere Informationen finden Sie unter [Testen des Standortdatenbankupgrades](#bkmk_test).  
 
-**Führen Sie einen Neustart des Standortservers und jedes Computers durch, auf dem eine Standortsystemrolle gehostet wird.** Damit können Sie sicherstellen, dass keine Aktionen aus kürzlich durchgeführten Installationen von Updates oder hinsichtlich der Voraussetzungen mehr ausstehen.  
-
-Interner unternehmensspezifischer Prozess  
+**Erneutes Starten des Standortservers und aller Computer, auf denen eine Standortsystemrolle gehostet wird:**  
+Damit können Sie sicherstellen, dass keine Aktionen aus kürzlich durchgeführten Installationen von Updates oder hinsichtlich der Voraussetzungen mehr ausstehen. Es handelt sich um einen internen Prozess, der unternehmensspezifisch ist.  
 
 **Aktualisieren Sie Standorte.**:  
-
-**Beginnend am Standort der obersten Ebene in der Hierarchie** führen Sie „Setup.exe“ aus dem Quellmedium von System Center Configuration Manager aus.  
+Beginnen Sie mit dem Standort der obersten Ebene in der Hierarchie, und führen Sie „Setup.exe“ aus dem Quellmedium von System Center Configuration Manager aus.  
 
 Wenn das Upgrade am Standort der obersten Ebene abgeschlossen ist, können Sie mit dem Upgrade der untergeordneten Standorte beginnen. Schließen Sie jeweils das Upgrade eines Standorts ab, bevor Sie das Upgrade des nächsten Standorts durchführen.  
 
 Bis für alle Standorte in der Hierarchie das Upgrade auf System Center Configuration Manager durchgeführt wurde, erfolgt der Betrieb im gemischten Versionsmodus.  
 
-Informationen zum Ausführen des Upgrades finden Sie unter [Aktualisieren Sie Standorte.](#bkmk_upgrade).  
+Informationen zum Ausführen des Upgrades finden Sie unter [Aktualisieren Sie Standorte](#bkmk_upgrade).  
 
 ### <a name="after-you-upgrade"></a>Nach dem Upgrade  
 **Upgrade der eigenständigen Configuration Manager-Konsolen**:  
-
 Standardmäßig wird beim Upgrade eines Standorts der zentralen Verwaltung oder eines primären Standorts auch für eine auf dem Standortserver installierte Configuration Manager-Konsole ein Upgrade ausgeführt. Allerdings müssen Sie für jede Konsole, die auf einem anderen Computer als dem Standortserver installiert ist, ein manuelles Upgrade ausführen.  
 
 > [!TIP]  
@@ -222,17 +208,14 @@ Standardmäßig wird beim Upgrade eines Standorts der zentralen Verwaltung oder 
 
 Weitere Informationen finden Sie unter [Install System Center Configuration Manager consoles](../../../../core/servers/deploy/install/install-consoles.md) (Installieren von System Center Configuration Manager-Konsolen).  
 
-**Neukonfigurieren von Datenbankreplikaten** für Verwaltungspunkte an primären Standorten:  
-
+**Neukonfigurieren von Datenbankreplikaten für Verwaltungspunkte an primären Standorten:**  
 Beim Verwenden von Datenbankreplikaten für Verwaltungspunkte an primären Standorten müssen Sie die Datenbankreplikate deinstallieren, bevor Sie den Standort aktualisieren. Konfigurieren Sie das Datenbankreplikat für Verwaltungspunkte nach dem Upgrade eines primären Standorts neu.   
 Weitere Informationen finden Sie unter  [Database replicas for management points for System Center Configuration Manager](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md).  
 
-**Konfigurieren Sie vor dem Upgrade deaktivierte Datenbankwartungstasks neu:**  
-
+**Erneutes Konfigurieren von Datenbankwartungsaufgaben, die Sie vor dem Upgrade deaktiviert haben:**  
 Wenn Sie die Datenbank-[Referenz für Wartungstasks für System Center Configuration Manager](../../../../core/servers/manage/reference-for-maintenance-tasks.md) vor dem Upgrade an einem Standort deaktiviert haben, konfigurieren Sie diese Tasks an dem Standort mithilfe der vor dem Upgrade verwendeten Einstellungen neu.  
 
 **Aktualisieren Sie Clients.**:  
-
 Nach der Aktualisierung aller Standorte auf System Center Configuration Manager planen Sie das Upgraden von Clients.  
 
 Wenn Sie ein Upgrade für einen Client ausführen, wird die aktuelle Clientsoftware deinstalliert und die neue Version der Clientsoftware installiert. Für Upgrades von Clients können Sie ein beliebiges Verfahren verwenden, das von Configuration Manager unterstützt wird.  
@@ -243,40 +226,31 @@ Wenn Sie ein Upgrade für einen Client ausführen, wird die aktuelle Clientsoftw
 Informationen zum Ausführen eines Upgrades für vorhandene Clients und zum Installieren neuer Clients finden Sie unter [Aktualisieren von Clients für Windows-Computer in System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
 
 ##  <a name="a-namebkmkconsiderationsa-considerations-for-upgrading"></a><a name="bkmk_considerations"></a> Upgradeüberlegungen  
-**Automatische Aktionen**: Wenn Sie ein Upgrade auf System Center Configuration Manager durchführen, werden die folgenden Aktionen automatisch ausgeführt:  
+**Automatische Aktionen:**  
+Wenn Sie ein Upgrade auf System Center Configuration Manager durchführen, werden die folgenden Aktionen automatisch ausgeführt:  
 
 -   Vom Standort wird eine Standortrücksetzung ausgeführt, die auch eine Neuinstallation aller Standortsystemrollen umfasst.  
-
 -   Wenn es sich bei dem Standort um den Standort der obersten Ebene einer Hierarchie handelt, wird das Clientinstallationspaket auf allen Verteilungspunkten der Hierarchie aktualisiert. Vom Standort werden auch die Standardstartabbilder aktualisiert, sodass die neue Windows PE-Version verwendet wird, die in Windows Assessment and Deployment Kit 10 enthalten ist. Beim Durchführen des Upgrades werden vorhandene Medien jedoch nicht für die Verwendung mit der Abbildbereitstellung aktualisiert.  
-
 -   Wenn es sich bei dem Standort um einen primären Standort handelt, wird das Clientupgradepaket für den Standort aktualisiert.  
 
-**Manuelle Aktionen für den Administrator nach einem Upgrade** : Nachdem Sie für einen Standort ein Upgrade durchgeführt haben, müssen Sie sicherstellen, dass die folgenden Aktionen ausgeführt werden:  
+**Manuelle Aktionen für den Administrator nach einem Upgrade:**   
+Nachdem Sie für einen Standort ein Upgrade ausgeführt haben, müssen Sie sicherstellen, dass die folgenden Aktionen durchgeführt werden:  
 
 -   Vergewissern Sie sich, dass auf Clients, die den einzelnen primären Standorten zugewiesen sind, das Upgrade ausgeführt und die Clientsoftware für die neue Version installiert wird.  
-
 -   Führen Sie ein Upgrade für jede Configuration Manager-Konsole aus, die eine Verbindung zum Standort herstellt und auf einem Computer ausgeführt wird, der sich gegenüber dem Standortserver an einem Remotestandort befindet.  
-
 -   Konfigurieren Sie die Datenbankreplikate an den primären Standorten neu, an denen Sie Datenbankreplikate für Verwaltungspunkte verwenden.  
-
 -   Nach dem Upgrade des Standorts müssen Sie physische Medien wie ISO-Dateien für CDs und DVDs, USB-Flashlaufwerke, oder vorab bereitgestellte für Windows To Go-Bereitstellungen verwendete oder für Hardwarehersteller bereitgestellte Medien manuell aktualisieren. Obwohl durch das Upgrade die standardmäßigen Startimages aktualisiert werden, werden diese von Configuration Manager extern verwendeten Mediendateien nicht upgegradet.  
-
 -   Planen Sie die Aktualisierung von nicht standardmäßigen Startabbildern ein, wenn die ursprüngliche (ältere) Version von Windows PE nicht erforderlich ist.  
 
-**Aktionen, die sich auf Konfigurationen und Einstellungen auswirken**: Wenn für einen Standort ein Upgrade auf System Center Configuration Manager durchgeführt wird, werden einige Konfigurationen und Einstellungen nach dem Upgrade nicht beibehalten oder auf eine neue Standardkonfiguration festgelegt. Die folgende Tabelle enthält Einstellungen, die nicht beibehalten oder geändert werden, und Details zur damit verbundenen Planung während des Upgrades eines Standorts:  
+**Aktionen, die sich auf Konfigurationen und Einstellungen auswirken:**   
+Wenn für einen Standort ein Upgrade auf System Center Configuration Manager durchgeführt wird, werden einige Konfigurationen und Einstellungen nach dem Upgrade nicht beibehalten oder auf eine neue Standardkonfiguration festgelegt. Die folgende Tabelle enthält Einstellungen, die nicht beibehalten oder geändert werden, und Details zur damit verbundenen Planung während des Upgrades eines Standorts:  
 
 -   **Softwarecenter:**  
-
     Die folgenden Elemente des Softwarecenters werden auf ihre Standardwerte zurückgesetzt:  
-
     -   Die Option**Arbeitsinformationen** wird auf die Geschäftszeiten **5:00** bis **22:00** Monday bis Friday.  
-
     -   Der Wert für **Computerwartung** wird auf **Softwarecenter-Aktivitäten anhalten, wenn sich der Computer im Präsentationsmodus befindet**festgelegt.  
-
     -   Der Wert für **Remotesteuerung** wird auf den Wert in den Clienteinstellungen festgelegt, die dem Computer zugewiesen sind.  
-
 -   **Zeitpläne für Softwareupdate-Zusammenfassung:**  
-
      Benutzerdefinierte Zusammenfassungszeitpläne für Softwareupdates oder Softwareupdategruppen werden auf den Standardwert von einer Stunde zurückgesetzt. Setzen Sie benutzerdefinierte Zusammenfassungswerte nach Abschluss des Upgrades auf die erforderliche Häufigkeit zurück.  
 
 ##  <a name="a-namebkmktesta-test-the-site-database-upgrade"></a><a name="bkmk_test"></a> Testen des Standortdatenbankupgrades  
@@ -287,9 +261,7 @@ Zum Testen der Datenbank für ein Upgrade stellen Sie zunächst eine Kopie der S
 Führen Sie nach dem Wiederherstellen der Standortdatenbank auf dem SQL Server-Computer das Configuration Manager-Setup aus dem System Center Configuration Manager-Ordner auf dem Quellmedium aus. Verwenden Sie dazu die Befehlszeilenoption **/TESTDBUPGRADE**.  
 
 -   Weitere Informationen über das Erstellen und Wiederherstellen der Sicherung einer Standortdatenbank erhalten Sie unter [Command-line options for Setup](../../../../core/servers/deploy/install/command-line-options-for-setup.md) (Befehlszeilenoption für Setup).  
-
 -   Informationen über die Befehlszeilenoption **/TESTDBUPGRADE** bietet die Tabelle im unter [Command-line options for Setup](../../../../core/servers/deploy/install/command-line-options-for-setup.md) (Befehlszeilenoption für Setup).  
-
 -   Weitere Informationen über die unterstützten SQL Server-Versionen finden Sie unter [Unterstützung für SQL Server-Versionen für System Center Configuration Manager](../../../../core/plan-design/configs/support-for-sql-server-versions.md).  
 
 > [!TIP]  
@@ -300,7 +272,7 @@ Führen Sie nach dem Wiederherstellen der Standortdatenbank auf dem SQL Server-C
 >  -   WARNUNG: Upgrade erzwingt eine vollständige Synchronisierung mit der Cloud.  
 >  -   FEHLER: Datenbankupgrade erzwingt eine vollständige Synchronisierung mit der Cloud.  
 >   
-> Diese beiden Meldungen können während des Tests eines Datenbankupgrades ohne weitere Auswirkungen ignoriert werden, wie sie nicht auf Fehler oder Probleme mit dem Testupgrade hinweisen. Stattdessen zeigen sie an, dass während des tatsächlichen Upgrades Daten aus der Datenbankreplikationsgruppe **Cloud** möglicherweise mit Microsoft Intune synchronisiert werden.  
+> Beide Meldungen können während des Tests eines Datenbankupgrades ohne weitere Auswirkungen ignoriert werden, da sie nicht auf Fehler oder Probleme mit dem Testupgrade hinweisen. Stattdessen zeigen sie an, dass während des tatsächlichen Upgrades Daten aus der Datenbankreplikationsgruppe **Cloud** möglicherweise mit Microsoft Intune synchronisiert werden.  
 
 Führen Sie für alle Standorte der zentralen Verwaltung sowie für alle primären Standorte, für die ein Upgrade geplant ist, folgende Schritte aus.  
 
@@ -317,7 +289,6 @@ Führen Sie für alle Standorte der zentralen Verwaltung sowie für alle primär
 3.  Überprüfen Sie den Fortschritt und den Erfolg des Upgrades auf der Instanz von SQL Server, auf der Sie den Test ausführen. Die nötigen Angaben dazu finden Sie in der Datei ConfigMgrSetup.log im Stamm des Systemlaufwerks:  
 
     -   Wenn beim Testen des Upgrades Fehler auftreten, beheben Sie die Probleme, die mit dem Upgrade der Standortdatenbank in Verbindung stehen. Erstellen Sie eine neue Sicherung der Standortdatenbank, und testen Sie anschließend das Upgrade der neuen Kopie der Standortdatenbank.  
-
     -   Wenn der Prozess erfolgreich abgeschlossen ist, können Sie die Datenbankkopie löschen.  
 
         > [!NOTE]  
@@ -332,7 +303,7 @@ Beim Durchführen eines Upgrades für einen Standort in einer Hierarchie führen
 
 Führen Sie Setup über das System Center Configuration Manager-Quellmedium aus, um ein Upgrade für einen Standort der zentralen Verwaltung oder einen primären Standort durchzuführen. Für ein Upgrade sekundärer Standorte führen Sie dagegen Seutp nicht aus. Stattdessen verwenden Sie die Configuration Manager-Konsole, um das Upgrade eines sekundären Standorts durchzuführen, nachdem das Upgrade des primären übergeordneten Standorts abgeschlossen ist.  
 
-Schließen Sie die auf dem Standortserver installierte Configuration Manager-Konsole, bevor Sie das Upgrade eines Standorts durchführen, bis dieses abgeschlossen ist. Schließen Sie außerdem jede Configuration Manager-Konsole, die auf anderen Computern ausgeführt wird. Sie können die Konsole nach Abschluss des Upgrades wieder verbinden. Bis Sie allerdings das Upgrade einer Configuration Manager-Konsole auf die neue Configuration Manager-Version durchführen, können in dieser Konsole nicht alle Objekte und Informationen angezeigt werden, die in der neuen Configuration Manager-Version verfügbar sind.  
+Schließen Sie die auf dem Standortserver installierte Configuration Manager-Konsole, bevor Sie das Upgrade eines Standorts durchführen, bis dieses abgeschlossen ist. Schließen Sie außerdem jede Configuration Manager-Konsole, die auf anderen Computern als dem Standortserver ausgeführt wird. Sie können die Konsole nach Abschluss des Upgrades wieder verbinden. Bis Sie allerdings das Upgrade einer Configuration Manager-Konsole auf die neue Configuration Manager-Version durchführen, können in dieser Konsole nicht alle Objekte und Informationen angezeigt werden, die in der neuen Configuration Manager-Version verfügbar sind.  
 
 Verwenden Sie die folgenden Verfahren zum Aktualisieren von Configuration Manager-Standorten:  
 
@@ -341,8 +312,7 @@ Verwenden Sie die folgenden Verfahren zum Aktualisieren von Configuration Manage
 1.  Überprüfen Sie, ob der Benutzer, der Setup ausführt, über die folgenden Sicherheitsrechte verfügt:  
 
     -   Lokale Administratorrechte auf dem primären Standortservercomputer  
-
-    -   Lokale Administratorrechte auf dem Datenbankserver des Remotestandorts für den Standort, falls es sich um einen Remotestandort handelt  
+    -   Lokale Administratorrechte auf dem Datenbankserver des Remotestandorts für den Standort, falls es sich um einen Remotestandort handelt    </br></br>
 
 2.  Öffnen Sie auf dem Standortservercomputer den Windows-Explorer, und wechseln Sie zu **&lt;ConfigMgSourceMedia\>\SMSSETUP\BIN\X64**.  
 
@@ -362,7 +332,6 @@ Verwenden Sie die folgenden Verfahren zum Aktualisieren von Configuration Manage
      >  Microsoft überprüft das angegebene Ablaufdatum nicht und verwendet es ebenso wenig, um die Lizenz zu überprüfen.  Stattdessen können Sie das Ablaufdatum angeben, um daran erinnert zu werden. Dies ist hilfreich, da Configuration Manager regelmäßig überprüft, ob neue Softwareupdates online angeboten werden, und Ihr Software Assurance-Lizenzstatus sollte aktuell sein, damit Sie von diesen zusätzlichen Updates profitieren können.    
 
      Weitere Informationen finden Sie unter [Lizenzierung und Branches für System Center Configuration Manager](/sccm/core/understand/learn-more-editions).
-
 
 7.  Lesen und akzeptieren Sie auf der Seite **Microsoft Software-Lizenzbedingungen** die Lizenzbedingungen, und klicken Sie anschließend auf **Weiter**.  
 
@@ -394,11 +363,9 @@ Auf der Seite **Upgrade** wird der Gesamtstatus der Installation angezeigt. Wenn
 1.  Überprüfen Sie, ob der Administrator, der die Installation ausführt, über die folgenden Sicherheitsrechte verfügt:  
 
     -   Lokale Administratorrechte auf dem sekundären Standortcomputer  
-
     -   Sicherheitsrolle „Infrastrukturadministrator“ oder „Hauptadministrator“ am übergeordneten primären Standort  
-
     -   Systemadministratorrechte (SA) für die Standortdatenbank des sekundären Standorts  
-
+    </br>
 2.  Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung**.  
 
 3.  Erweitern Sie im Arbeitsbereich **Verwaltung** den Bereich **Standortkonfiguration**, und klicken Sie dann auf **Standorte**.  
@@ -412,16 +379,13 @@ Das Upgrade des sekundären Standorts erfolgt im Hintergrund. Nach Abschluss des
 ##  <a name="a-namebkmkpostupgradea-perform-post-upgrade-tasks"></a><a name="BKMK_PostUpgrade"></a> Ausführen der Aufgaben nach einem Upgrade  
 Nachdem Sie für einen Standort ein Upgrade auf ein neues Service Pack durchgeführt haben, müssen Sie möglicherweise einige zusätzliche Aufgaben ausführen, um das Upgrade oder die Neukonfiguration des Standorts abzuschließen. Dazu zählt beispielsweise das Durchführen eines Upgrades von Configuration Manager-Clients oder Configuration Manager-Konsolen, das erneute Aktivieren von Datenbankreplikaten für Verwaltungspunkte oder das Wiederherstellen von Configuration Manager-Funktionen, die Sie verwenden und die nach dem Service Pack-Upgrade nicht beibehalten werden.  
 
-**Bekannte Probleme:**  
-Sekundäre Standorte:
-- Wenn Sie auf Version 1511 aktualisieren:  
-Um sicherzustellen, dass Clients auf sekundären Standorten den Verwaltungspunkt vom sekundären Standort (Proxyverwaltungspunkt) finden, fügen Sie den Verwaltungspunkt manuell Begrenzungsgruppen hinzu, die auch die Verteilungspunkte am sekundären Standort enthalten.
+**Bekannte Probleme bei sekundären Standorten:**  
+- **Bei einem Upgrade auf Version 1511:** Um sicherzustellen, dass Clients auf sekundären Standorten den Verwaltungspunkt vom sekundären Standort (Proxyverwaltungspunkt) finden, fügen Sie den Verwaltungspunkt manuell zu Begrenzungsgruppen hinzu, die auch die Verteilungspunkte am sekundären Standort enthalten.  
 
-- Wenn Sie auf Version 1606 oder höher aktualisieren:  
-  Proxyverwaltungspunkte werden automatisch Begrenzungsgruppen hinzugefügt, die Verteilungspunkte am sekundären Standort enthalten.
+- **Bei einem Upgrade auf Version 1606 oder höher:** Proxyverwaltungspunkte werden automatisch zu Begrenzungsgruppen hinzugefügt, die Verteilungspunkte am sekundären Standort enthalten.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

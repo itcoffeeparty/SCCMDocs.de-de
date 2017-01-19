@@ -1,5 +1,5 @@
 ---
-title: "Verwalten von mobilen Geräten | System Center Configuration Manager und Exchange"
+title: "Verwalten von mobilen Geräten | Microsoft-Dokumentation"
 description: "Verwalten Sie mobile Geräte mithilfe des Exchange Server-Connectors in Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 18da1455796e265af2adb8852c9f2b610dc672a8
+ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
+ms.openlocfilehash: 4a2b60d893e8d430b107a5bc43ec0748177c27c3
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 18da1455796e265af2adb8852c9f2b610dc672a8
 
 Verwenden Sie den Exchange Server-Connector in System Center Configuration Manager, um mobile Geräte zu verwalten, die über das Exchange ActiveSync-Protokoll mit Exchange Server (lokal gehostet oder online) verbunden sind und nicht mithilfe von Configuration Manager registriert werden können. Sie können in der Configuration Manager-Konsole Exchange-Verwaltungsfunktionen für mobile Geräte konfigurieren, wie z.B. das Remotezurücksetzen von Geräten und Einstellungen zum Steuern mehrerer Exchange-Server.  
 
- ![ConfigMgr&#45;mit&#45;Exchange](../../mdm/deploy-use/media/configmgr-with-exchange.png "configmgr-with-exchange")  
+ ![configmgr&#45;with&#45;exchange](../../mdm/deploy-use/media/configmgr-with-exchange.png "configmgr-with-exchange")  
 
  Wenn Sie mobile Geräte mithilfe des Exchange Server-Connectors verwalten, wird der Configuration Manager-Client auf den mobilen Geräten nicht installiert. Aus diesem Grund sind einige Verwaltungsfunktionen eingeschränkt. Zum Beispiel können Sie keine Software auf diesen Geräten installieren oder sie mithilfe von Konfigurationselementen konfigurieren. Informationen dazu, welche unterschiedlichen Verwaltungsfunktionen von Configuration Manager Sie für mobile Geräte verwenden können, finden Sie unter [Wählen einer Geräteverwaltungslösung für System Center Configuration Manager](../../core/plan-design/choose-a-device-management-solution.md).  
 
@@ -138,6 +138,6 @@ Verwenden Sie den Exchange Server-Connector in System Center Configuration Manag
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

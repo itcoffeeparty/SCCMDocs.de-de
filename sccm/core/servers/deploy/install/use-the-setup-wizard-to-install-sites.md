@@ -1,5 +1,5 @@
 ---
-title: Setup-Assistent | System Center Configuration Manager
+title: Setup-Assistent | Microsoft-Dokumentation
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -15,8 +15,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: ffcdf4285d5f182e8d625200989f65c748bc2067
-ms.openlocfilehash: 9552ac1b77acfce6a398ec6e74f1be3686ee15a4
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 28ce074469469b6a7c1c456da051b5f8dea43dbb
 
 ---
 # <a name="use-the-setup-wizard-to-install-system-center-configuration-manager-sites"></a>Verwenden des Setup-Assistenten zum Installieren von System Center Configuration Manager-Standorten
@@ -28,7 +28,7 @@ Verwenden Sie zum Installieren eines neuen System Center Configuration Manager-S
 
 Installieren Sie einen sekundären Standort über die Configuration Manager-Konsole.  Sekundäre Standorte unterstützen keine Installation per Skript über die Befehlszeile.
 
-## <a name="a-namebkmkprimarya-install-a-central-administration-site-or-primary-site"></a><a name="bkmk_primary"></a> Installieren eines primären Standorts oder eines Standorts der zentralen Verwaltung
+## <a name="a-namebkmkprimarya--install-a-central-administration-site-or-primary-site"></a><a name="bkmk_primary"></a> Installieren eines primären Standorts oder eines Standorts der zentralen Verwaltung
 Verwenden Sie das folgende Verfahren,um einen Standort der zentralen Verwaltung oder einen primären Standort zu installieren oder ein Upgrade eines Evaluierungsstandorts auf einen vollständig lizenzierten Configuration Manager-Standort durchzuführen.   
 
 Machen Sie sich vor der Installation des Standorts mit den Details in den folgenden Artikeln vertraut:
@@ -37,7 +37,7 @@ Machen Sie sich vor der Installation des Standorts mit den Details in den folgen
 
 Wenn Sie einen Standort der zentralen Verwaltung als Teil eines Standorterweiterungsszenarios installieren, lesen Sie den Abschnitt [Erweitern eines eigenständigen primären Standorts](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_expand) dieses Themas, bevor Sie das folgende Verfahren anwenden.
 
-### <a name="a-namebkmkinstallpria-to-install-a-primary-or-central-administration-site"></a><a name="bkmk_installpri"></a> So installieren Sie einen primären Standort oder einen Standort der zentralen Verwaltung
+### <a name="a-namebkmkinstallpria---to-install-a-primary-or-central-administration-site"></a><a name="bkmk_installpri"></a> So installieren Sie einen primären Standort oder einen Standort der zentralen Verwaltung
 
 1.  Führen Sie auf dem Computer, auf dem der Standort installiert werden soll, **&lt;InstallationMedia\>\SMSSETUP\BIN\X64\Setup.exe** aus, um den **Setup-Assistenten von System Center Configuration Manager** zu starten.  
 
@@ -389,6 +389,6 @@ Um einen eigenständigen primären Standort zu erweitern, verwenden Sie das Verf
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

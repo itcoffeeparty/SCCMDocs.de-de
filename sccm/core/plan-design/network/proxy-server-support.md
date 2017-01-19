@@ -1,5 +1,5 @@
 ---
-title: "Unterstützung von Proxyservern | System Center Configuration Manager"
+title: "Unterstützung von Proxyservern | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr zur Unterstützung der von Standortsystemservern und Clients verwendeten Proxyserver durch System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d20c734ba8050037cdf4ae290f72723f34781518
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 97f9cc792d1fea20c32f38bc98cbdfb9ba90640d
 
 
 ---
@@ -89,6 +89,6 @@ Konfigurieren Sie die Proxyservereinstellungen im Assistent zum Hinzufügen von 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

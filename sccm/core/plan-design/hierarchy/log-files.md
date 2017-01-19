@@ -1,8 +1,8 @@
 ---
-title: Protokolldateien | System Center Configuration Manager
+title: "Protokolldateien für Configuration Manager | Microsoft-Dokumentation"
 description: Verwenden Sie Protokolldateien bei der Problembehandlung in einer System Center Configuration Manager-Hierarchie.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/01/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: cb27f2f2a6e0b0e3d6fca2d616d8ab806b74f9df
+ms.sourcegitcommit: f36cdecd96d50bd62892b262024e43d64f7c8205
+ms.openlocfilehash: 5b7afc3e00bc8ee317b8d8c3660808c465758f91
 
 
 ---
@@ -70,6 +70,8 @@ Von Client- und Standortserverkomponenten in System Center Configuration Manager
 
     -   [Zertifikateinschreibung](#BKMK_CertificateEnrollment)  
 
+    - [Cloudverwaltungsgateway](#cloud-management-gateway)
+
     -   [Kompatibilitätseinstellungen und Zugriff auf Unternehmensressourcen](#BKMK_CompSettingsLog)  
 
     -   [Configuration Manager-Konsole](#BKMK_ConsoleLog)  
@@ -105,6 +107,8 @@ Von Client- und Standortserverkomponenten in System Center Configuration Manager
     -   [Softwareupdates](#BKMK_SU_NAPLog)  
 
     -   [Wake-On-LAN](#BKMK_WOLLog)  
+
+    -   [Windows 10-Wartung](#BKMK_WindowsServicingLog)
 
     -   [Windows Update-Agent](#BKMK_WULog)  
 
@@ -503,6 +507,15 @@ Vom Configuration Manager-Client für Macintosh-Computer werden Informationen in
 |BgbHttpProxy.log|Zeichnet die Aktivitäten des Benachrichtigungs-HTTP-Proxys auf, wenn von diesem die Meldungen von Clients mittels HTTP von und an den Benachrichtigungsserver übermittelt werden.|Client|  
 |CCMNotificationAgent.log|Zeichnet die Aktivitäten des Benachrichtigungs-Agenten auf, wie Client-Server-Kommunikation und Informationen zu empfangenen und an andere Client-Agenten versendeten Tasks.|Client|  
 
+### <a name="cloud-management-gateway"></a>Cloudverwaltungsgateway
+
+In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit Cloudverwaltungsgateways enthalten.
+
+|Protokollname|Beschreibung|Computer mit Protokolldatei|  
+|--------------|-----------------|----------------------------|  
+|CloudMgr.log|Zeichnet Details zur Bereitstellung des Cloudverwaltungsgateway-Dienstes, den laufenden Dienststatus, und Nutzungsdaten, die mit dem Dienst verknüpft sind, auf.|Standortsystemserver|
+|SMS_Cloud_ProxyConnector.log|Zeichnet Details zum Einrichten von Verbindungen zwischen dem Cloud-Management-Gateway-Dienst und dem Verbindungspunkt für das Cloudverwaltungsgateway auf.|Standortsystemserver|
+
 ###  <a name="a-namebkmkcompsettingsloga-compliance-settings-and-company-resource-access"></a><a name="BKMK_CompSettingsLog"></a> Kompatibilitätseinstellungen und Zugriff auf Unternehmensressourcen  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit Kompatibilitätseinstellungen und dem Zugriff auf Unternehmensressourcen enthalten.  
 
@@ -535,6 +548,7 @@ Vom Configuration Manager-Client für Macintosh-Computer werden Informationen in
 |PrestageContent.log|Zeichnet die Details zur Verwendung des Tools ExtractContent.exe auf einem vorab bereitgestellten Remoteverteilungspunkt auf. Mit diesem Tool werden Inhalte extrahiert, die in eine Datei exportiert wurden.|Standortsystemrolle|  
 |SMSdpmon.log|Zeichnet Details zum geplanten Task für die Integritätsüberwachung des Verteilungspunkts auf, der auf einem Verteilungspunkt konfiguriert wurde.|Standortsystemrolle|  
 |smsdpprov.log|Zeichnet Details zur Extrahierung komprimierter Dateien auf, die von einem primären Standort stammen. Dieses Protokoll wird vom WMI-Anbieter des Remoteverteilungspunkts generiert.|Ein Verteilungspunktcomputer an einem anderen Standort als der Standortserver|  
+
 
 ###  <a name="a-namebkmkdiscoveryloga-discovery"></a><a name="BKMK_DiscoveryLog"></a> Ermittlung  
 In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen zur Ermittlung enthalten.  
@@ -731,11 +745,10 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |Statesys.log|Zeichnet die Verarbeitung von Verwaltungsmeldungen zu mobilen Geräten auf.|Primärer Standort und Standort der zentralen Verwaltung|  
 
 ###  <a name="a-namebkmksunaploga-software-updates"></a><a name="BKMK_SU_NAPLog"></a> Softwareupdates  
- In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit Softwareupdates enthalten.  Darüber hinaus stehen einige Details weiterhin mit dem Netzwerkzugriffsschutz (Network Access Protection; NAP) im Zusammenhang, einer Funktion, die bei System Center Configuration Manager nicht mehr verfügbar ist.  
+ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit Softwareupdates enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
 |--------------|-----------------|----------------------------|  
-|ccmcca.log|Zeichnet Details zur Verarbeitung der Kompatibilitätsbewertung auf, basierend auf der Verarbeitung der Configuration Manager-NAP-Richtlinie. Das Protokoll enthält zudem die Verarbeitung der Wiederherstellung für jedes Softwareupdate, das für die Kompatibilität notwendig ist.|Client|  
 |Ccmperf.log|Zeichnet Aktivitäten im Zusammenhang mit Wartung und Erfassung von Daten zu Clientleistungsindikatoren auf.|Client|  
 |PatchDownloader.log|Zeichnet Details zum Download von Softwareupdates von der Updatequelle in das Downloadziel auf dem Standortserver.|Der Computer, auf dem die Configuration Manager-Konsole gehostet wird, von der Downloads initiiert werden|  
 |PolicyEvaluator.log|Zeichnet Details zur Auswertung von Richtlinien auf Clientcomputern, einschließlich Softwareupdates, auf.|Client|  
@@ -743,13 +756,6 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |ScanAgent.log|Zeichnet Details zu Überprüfungsanforderungen für Softwareupdates, zum WSUS-Speicherort sowie zu entsprechenden Aktionen auf.|Client|  
 |SdmAgent.log|Zeichnet Details zur Nachverfolgung von Wiederherstellung und Kompatibilität auf. Die Protokolldatei für Softwareupdates „Updateshandler.log“ bietet jedoch umfangreichere Informationen zur Installation der für die Kompatibilität benötigten Softwareupdates.<br /><br /> Diese Protokolldatei wird mit Kompatibilitätseinstellungen gemeinsam genutzt.|Client|  
 |ServiceWindowManager.log|Zeichnet Details zur Auswertung von Wartungsfenstern auf.|Client|  
-|smssha.log|Dies ist die Hauptprotokolldatei für den Netzwerkzugriffsschutz-Client in Configuration Manager. Sie enthält eine Zusammenfassung der Integritätsinformationen der folgenden beiden Configuration Manager-Komponenten: Standortdienste (Location Services, LS) und Konfigurationskompatibilitäts-Agent (Configuration Compliance Agent, CCA). Darüber hinaus enthält diese Protokolldatei Informationen zu Interaktionen zwischen dem Systemintegritäts-Agent des Configuration Managers und dem NAP-Agent des Betriebssystems sowie zwischen dem Systemintegritäts-Agent des Configuration Managers und dem Konfigurationskompatibilitäts-Agent des Computers sowie den Standortdiensten. Sie bietet Informationen dazu, ob der NAP-Agent erfolgreich initialisiert wurde, und enthält SoH-Daten (Statement of Health) sowie die SoH-Antwort.|Client|  
-|Smsshv.log|Dies ist die wichtigste Protokolldatei für den Systemintegritätsprüfungspunkt. Hier werden die grundlegenden Operationen des Systemintegritätsprüfungsdiensts protokolliert, z. B. der Fortschritt der Initialisierung.|Standortsystemserver|  
-|Smsshvadcacheclient.log|Zeichnet Details zum Abrufen von Configuration Manager-Integritätszustandsreferenzen von Active Directory Domain Services auf|Standortsystemserver|  
-|SmsSHVCacheStore.log|Zeichnet Details zum Cachespeicher auf, in dem sich die Configuration Manager-NAP-Integritätszustandsreferenzen befinden, die von Active Directory Domain Services abgerufen werden, z.B. das Lesen des Speichers und das Löschen von Einträgen aus der lokalen Cachespeicherdatei. Der Cachespeicher kann nicht konfiguriert werden.|Standortsystemserver|  
-|smsSHVQuarValidator.log|Zeichnet Informationen zum Client-SoH und zu Verarbeitungsvorgängen auf. Zum Anzeigen vollständiger Informationen ändern Sie den Registrierungsschlüssel **LogLevel** im folgenden Pfad von 1 auf 0: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMSSHV\Logging\\@GLOBAL**|Standortsystemserver|  
-|smsshvregistrysettings.log|Zeichnet alle dynamischen Änderungen an der Konfiguration der Systemintegritätsprüfungs-Komponente auf, die während der Ausführung des Diensts auftreten.|Standortsystemserver|  
-|SMSSHVSetup.log|Zeichnet die erfolgreiche bzw. fehlerhafte Installation des Systemintegritätsprüfungspunkts (mit Fehlerursache) auf.|Standortsystemserver|  
 |SmsWusHandler.log|Zeichnet Details zum Überprüfungsvorgang für das Inventurprogramm für Microsoft Updates auf.|Client|  
 |StateMessage.log|Zeichnet Details zu Softwareupdate-Zustandsmeldungen auf, die erstellt und an den Verwaltungspunkt gesendet werden.|Client|  
 |SUPSetup.log|Zeichnet Details zur Installation des Softwareupdatepunkts auf. Nach Abschluss der Softwareupdatepunkt-Installation wird **Installation was successful** in diese Protokolldatei geschrieben.|Standortsystemserver|  
@@ -772,6 +778,31 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |wolcmgr.log|Zeichnet Details dazu auf, welche Clients Aktivierungspakete erhalten müssen, die Anzahl der gesendeten Aktivierungspakete und die Anzahl an wiederholten Aktivierungspaketen.|Standortserver|  
 |wolmgr.log|Zeichnet Details zu Aktivierungsverfahren auf, beispielsweise zum Zeitpunkt der Aktivierung von Bereitstellungen, die für Wake-On-LAN konfiguriert wurden.|Standortserver|  
 
+###  <a name="a-namebkmkwindowsservicinglogawindows-10-servicing"></a>Windows 10-Wartung<a name="BKMK_WindowsServicingLog"></a>  
+ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit der Windows 10-Wartung enthalten.  
+
+|Protokollname|Beschreibung|Computer mit Protokolldatei|  
+|--------------|-----------------|----------------------------|  
+|Ccmperf.log|Zeichnet Aktivitäten im Zusammenhang mit Wartung und Erfassung von Daten zu Clientleistungsindikatoren auf.|Client|  
+|CcmRepair.log|Zeichnet Reparaturaktivitäten des Client-Agents auf.|Client|
+|PatchDownloader.log|Zeichnet Details zum Download von Softwareupdates von der Updatequelle in das Downloadziel auf dem Standortserver.|Der Computer, auf dem die Configuration Manager-Konsole gehostet wird, von der Downloads initiiert werden|  
+|PolicyEvaluator.log|Zeichnet Details zur Auswertung von Richtlinien auf Clientcomputern, einschließlich Softwareupdates, auf.|Client|  
+|RebootCoordinator.log|Zeichnet Details zur Koordinierung von Systemneustarts auf Clientcomputern nach der Installation von Softwareupdates auf.|Client|  
+|ScanAgent.log|Zeichnet Details zu Überprüfungsanforderungen für Softwareupdates, zum WSUS-Speicherort sowie zu entsprechenden Aktionen auf.|Client|  
+|SdmAgent.log|Zeichnet Details zur Nachverfolgung von Wiederherstellung und Kompatibilität auf. Die Protokolldatei für Softwareupdates „Updateshandler.log“ bietet jedoch umfangreichere Informationen zur Installation der für die Kompatibilität benötigten Softwareupdates.<br /><br /> Diese Protokolldatei wird mit Kompatibilitätseinstellungen gemeinsam genutzt.|Client|  
+|ServiceWindowManager.log|Zeichnet Details zur Auswertung von Wartungsfenstern auf.|Client|  
+|setupact.log|Primäre Protokolldatei für die meisten Fehler, die während der Installation von Windows auftreten. Die Protokolldatei befindet sich im Ordner *% windir%\$Windows.~BT\sources\panther*.|Client|
+|SmsWusHandler.log|Zeichnet Details zum Überprüfungsvorgang für das Inventurprogramm für Microsoft Updates auf.|Client|  
+|StateMessage.log|Zeichnet Details zu Softwareupdate-Zustandsmeldungen auf, die erstellt und an den Verwaltungspunkt gesendet werden.|Client|  
+|SUPSetup.log|Zeichnet Details zur Installation des Softwareupdatepunkts auf. Nach Abschluss der Softwareupdatepunkt-Installation wird **Installation was successful** in diese Protokolldatei geschrieben.|Standortsystemserver|  
+|UpdatesDeployment.log|Zeichnet Details zu Bereitstellungen auf dem Client auf, einschließlich Softwareupdateaktivierung, Auswertung und Erzwingung. Die ausführliche Protokollierung zeigt zusätzliche Informationen zur Interaktion mit der Clientbenutzeroberfläche an.|Client|  
+|UpdatesHandler.log|Zeichnet Details zur Softwareupdate-Kompatibilitätsüberprüfung, zum Download und zur Installation von Softwareupdates auf dem Client auf.|Client|  
+|UpdatesStore.log|Zeichnet Details zum Kompatibilitätsstatus für Softwareupdates auf, die im Rahmen des Kompatibilitätsüberprüfungszyklus bewertet wurden.|Client|  
+|WCM.log|Zeichnet Details zu Konfigurationen des Softwareupdatepunkts und zu Verbindungen mit dem WSUS-Server für abonnierte Updatekategorien, Klassifizierungen und Sprachen auf.|Standortserver|  
+|WSUSCtrl.log|Zeichnet Details zur Konfiguration, Datenbankverbindungen und der Integrität von WSUS-Servern für den Standort auf.|Standortsystemserver|  
+|wsyncmgr.log|Zeichnet Details zum Softwareupdate-Synchronisierungsprozess auf.|Standortserver|  
+|WUAHandler.log|Zeichnet Details zum Windows Update-Agent auf dem Client bei der Suche nach Softwareupdates auf.|Client|  
+
 ###  <a name="a-namebkmkwuloga-windows-update-agent"></a><a name="BKMK_WULog"></a> Windows Update-Agent  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit dem Windows Update-Agent enthalten.  
 
@@ -789,6 +820,6 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

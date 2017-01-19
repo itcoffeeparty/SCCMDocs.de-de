@@ -1,5 +1,5 @@
 ---
-title: "Einführung in E-Mail-Profile | System Center Configuration Manager"
+title: "Einführung in E-Mail-Profile | Microsoft-Dokumentation"
 description: "Erfahren Sie, wie E-Mail-Profile es Benutzern ermöglichen, bei minimaler Einrichtung über ihre eigenen Geräte auf Unternehmens-E-Mails zuzugreifen."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 83066e1f0e3c6536649e9b74ca13562c9d817619
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: b936a0914f8811f755cbb6983fefc063fbc4f97c
 
 
 ---
@@ -38,10 +38,10 @@ E-Mail-Profile tragen zusammen mit Microsoft Intune dazu bei, dass Sie Geräte m
 
 -   iPhone-Geräte unter iOS 5, iOS 6, iOS 7 und iOS 8  
 
--   iPad-Geräte unter iOS 5, iOS 6, iOS 7 und iOS 8  
+-   iPad-Geräte mit iOS 5, iOS 6, iOS 7 und iOS 8  
 
 > [!IMPORTANT]  
->  Um Profile für iOS-, Android-, Samsung KNOX-, Windows Phone- und Windows 8.1- oder Windows 10-Geräte bereitzustellen, müssen diese Geräte bei Microsoft Intune registriert sein. Informationen zum Registrieren von Geräten finden Sie unter [Verwalten mobiler Geräte mit Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).  
+>  Um Profile für iOS-, Android-, Samsung KNOX Standard-, Windows Phone- und Windows 8.1- oder Windows 10-Geräte bereitzustellen, müssen diese Geräte bei Microsoft Intune registriert sein. Informationen zum Registrieren von Geräten finden Sie unter [Verwalten mobiler Geräte mit Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).  
 
  Zusätzlich zum Konfigurieren eines E-Mail-Kontos auf dem Gerät können Sie auch die Synchronisierungseinstellungen für Kontakte, Kalender und Aufgaben konfigurieren.  
 
@@ -49,6 +49,6 @@ E-Mail-Profile tragen zusammen mit Microsoft Intune dazu bei, dass Sie Geräte m
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

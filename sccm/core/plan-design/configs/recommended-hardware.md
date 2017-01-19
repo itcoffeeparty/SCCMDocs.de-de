@@ -1,5 +1,5 @@
 ---
-title: Empfohlene Hardware | System Center Configuration Manager
+title: Empfohlene Hardware | Microsoft-Dokumentation
 description: "Hier finden Sie Informationen über empfohlene Hardware, mit deren Hilfe Sie Ihre System Center Configuration Manager-Umgebung über eine einfache Bereitstellung hinaus skalieren können."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d5aa39a9551cc872631895bb1664de5a35531854
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 3155c877a14f99e054cfa7ca4afaa73bae3f8cac
 
 
 ---
@@ -185,6 +185,6 @@ Sie können PowerShell vor oder nach Installation der Configuration Manager-Kons
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

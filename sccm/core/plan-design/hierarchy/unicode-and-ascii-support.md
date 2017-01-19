@@ -1,5 +1,5 @@
 ---
-title: "Unicode- und ASCII-Unterstützung | System Center Configuration Manager"
+title: "Unicode- und ASCII-Unterstützung | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr über die Unterstützung für Unicode- und ASCII-Zeichen in System Center Configuration Manager-Objekten."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 125cc72389f6dc95668c8a2f73a4c50597eb3186
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 1888ce257232b63e4671aa619da190ea570b8a57
 
 
 ---
@@ -147,6 +147,6 @@ System Center Configuration Manager erstellt die meisten Objekte mithilfe von Un
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

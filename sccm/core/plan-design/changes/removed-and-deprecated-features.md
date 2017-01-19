@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c899b4beaa2aae4eb609291dca0e23f3c266627a
-ms.openlocfilehash: 294166af3d5c6062e3508249c767779876b23931
+ms.sourcegitcommit: ffebee1e85008611a9841dc849bea735d15a88c6
+ms.openlocfilehash: 888b6de9fd2b70e8b4f58e32cca7cf5e615d1dca
 
 
 ---
@@ -51,7 +51,8 @@ Weitere Informationen finden Sie in folgenden Quellen:
 |-|-|-|  
 |Netzwerkzugriffsschutz (Network Access Protection, NAP) wie in System Center 2012 Configuration Manager|10.7.2015|Version 1511|  
 |Out-of-Band-Verwaltung wie in System Center 2012 Configuration Manager|16.10.2015|Version 1511|
-|Tasksequenzen: <br /> - In dynamischen Datenträger konvertieren <br /> - Bereitstellungstools installieren |18.11.2016|Der Support für diese Tasksequenzen endet mit dem ersten Update, das nach dem 1. Juni 2017 veröffentlicht wird.|  
+|Tasksequenzen: <br /> - In dynamischen Datenträger konvertieren <br /> - Bereitstellungstools installieren |18.11.2016|Der Support für diese Tasksequenzen endet mit dem ersten Update, das nach dem 1. Juni 2017 veröffentlicht wird.|
+|Das neue Softwarecenter weist einen neuen, modernen Look auf, und Apps, die bisher nur im von Silverlight abhängigen Anwendungskatalog angezeigt wurden (für Benutzer verfügbare Apps), werden jetzt im Softwarecenter auf der Registerkarte **Anwendungen** angezeigt. Auf den Anwendungskatalog kann weiterhin über den Link unter der Registerkarte **Installationsstatus** im Softwarecenter zugegriffen werden.<br><br>In den kommenden Monaten wird die vorherige Version des Softwarecenters entfernt, und sie wird Ihnen nicht länger zur Verfügung stehen.<br><br>Sie können Clients für die Verwendung des neuen Softwarecenters konfigurieren, indem Sie die Clienteinstellung **Computer-Agent** > **Neues Softwarecenter verwenden**.<br><br>Weitere Informationen zum Softwarecenter finden Sie unter [Planen und Konfigurieren der Anwendungsverwaltung in System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management).|12/13/2016|Wird bekanntgegeben| 
 
  **Veraltete Serverbetriebssysteme:**  
 
@@ -111,6 +112,6 @@ Weitere Informationen finden Sie in folgenden Quellen:
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

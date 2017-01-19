@@ -1,5 +1,5 @@
 ---
-title: Configuration Manager in Azure | System Center Configuration Manager
+title: Configuration Manager in Azure | Microsoft-Dokumentation
 description: Informationen zur Verwendung von Configuration Manager in einer Azure-Umgebung.
 ms.custom: na
 ms.date: 10/21/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6d304ddb87b9c9abe37b5dc9cf4252580cbcf048
-ms.openlocfilehash: d8f8ea98c4383783c95e6425af29987bdee1429a
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 5866c1d9ad88e49b69fa0c863b1ef8748a8c8111
 
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Configuration Manager in Azure – Häufig gestellte Fragen
@@ -80,7 +80,7 @@ Sie können sie auch für die Configuration Manager-Standortserver verwenden. Be
 ### <a name="how-can-i-make-my-database-highly-available-can-i-use-azure-sql-database-or-do-i-have-to-use-microsoft-sql-server-in-a-vm"></a>Wie kann ich meine Datenbank hoch verfügbar machen? Kann ich Azure SQL-Datenbank verwenden? Oder muss ich auf einer VM Microsoft SQL Server verwenden?
 Sie müssen auf einer VM Microsoft SQL Server verwenden. Azure SQL Server wird von Configuration Manager derzeit nicht unterstützt. Sie können jedoch Funktionen wie Always On-Verfügbarkeitsgruppen für Ihren SQL Server verwenden. [Always On-Verfügbarkeitsgruppen](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database) werden empfohlen und ab Version 1602 von Configuration Manager offiziell unterstützt.
 
-### <a name="can-i-use-azure-load-balancers-with-site-system-roles-like-management-points-or-software-update-points"></a>Kann ich Azure Load Balancer mit Standortsystemrollen wie Verwaltungspunkten oder Softwareupdatepunkten verwenden?
+### <a name="can-i-use-azure-load-balancers-with-site-system-roles-like-management-points--or-software-update-points"></a>Kann ich Azure Load Balancer mit Standortsystemrollen wie Verwaltungspunkten oder Softwareupdatepunkten verwenden?
 Obwohl Configuration Manager nicht mit Azure Load Balancer getestet wurde, sollte dies keine negativen Auswirkungen auf normale Vorgänge haben, wenn die Funktionalität für die Anwendung transparent ist.
 
 
@@ -114,6 +114,9 @@ Die folgenden Tabellen enthalten die anfänglich vorgeschlagene Anzahl von Daten
 |**Bis zu 25.000**       | Standortserver: F4S </br>Datenbankserver: DS12_V2 | Standortserver: 1xP30 </br>Datenbankserver: 2xP30 |
 |**25.000-50.000**      | Standortserver: F4S </br>Datenbankserver: DS13_V2 | Standortserver: 1xP30 </br>Datenbankserver: 2xP30 |
 |**50.000-100.000**     | Standortserver: F8S </br>Datenbankserver: DS14_V2 | Standortserver: 2xP30 </br>Datenbankserver: 3xP30 |
+
+Die folgende Abbildung zeigt eine Beispielkonfiguration für 50.000-100.000-Clients auf DS14_V2 mit 3xP30-Datenträgern in einem Stripesetvolume mit separaten logischen Volumes für die Installations- und Datenbankdateien von Configuration Manager:  ![VM-Datenträger](media/vm_disks.png)  
+
 
 
 ## <a name="user-experience"></a>Benutzerfreundlichkeit
@@ -177,6 +180,6 @@ Das ist schwer zu sagen, da jede Umgebung anders ist. Am besten ermitteln Sie di
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

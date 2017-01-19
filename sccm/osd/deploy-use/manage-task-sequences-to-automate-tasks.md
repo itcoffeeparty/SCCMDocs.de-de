@@ -1,5 +1,5 @@
 ---
-title: Verwalten von Tasksequenzen zum Automatisieren von Aufgaben | Configuration Manager
+title: Verwalten von Tasksequenzen zum Automatisieren von Tasks | Microsoft-Dokumentation
 description: "Sie können Tasksequenzen erstellen, bearbeiten, bereitstellen, importieren und exportieren, um sie in Ihrer System Center Configuration Manager-Umgebung zu verwalten."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 04e4e8193d427289a3b84a14efe18511bf5c9731
+ms.sourcegitcommit: d04d28bbd5116a841c0872cf3f9ca18783dddc78
+ms.openlocfilehash: 417b31fa1feb6d0f674f14ef9e5c7cebd7013916
 
 
 ---
@@ -237,6 +237,8 @@ Verwenden Sie Tasksequenzen, um Schritte in Ihrer System Center Configuration Ma
 
 -   Kennwörter, die in der Tasksequenz gespeichert sind, werden nicht exportiert. Wenn Sie eine Tasksequenz exportieren und importieren, die Kennwörter enthält, müssen Sie die importierte Tasksequenz bearbeiten und sämtliche Kennwörter erneut angeben. Achten Sie darauf, Kennwörter für die Aktionen [Einer Domäne oder Arbeitsgruppe beitreten](../understand/task-sequence-steps.md#BKMK_JoinDomainorWorkgroup), [Verbindung mit Netzwerkordner herstellen](../understand/task-sequence-steps.md#BKMK_ConnectToNetworkFolder) und [Befehlszeile ausführen](../understand/task-sequence-steps.md#BKMK_RunCommandLine) anzugeben.  
 
+- Wenn Sie eine Tasksequenz mit dem Schritt **Set Dynamic Variables** (Dynamische Variablen festlegen) exportieren, werden keine Werte für Variablen exportiert, die die Einstellung **Secret value** (Geheimer Wert) haben. Sie müssen die Werte für diese Variablen erneut eingeben, nachdem Sie die Tasksequenz importiert haben.
+
 -   Wenn mehrere primäre Standorte vorliegen, wird empfohlen, Tasksequenzen am Standort der zentralen Verwaltung zu importieren.  
 
  Gehen Sie wie folgt vor, um eine Tasksequenz zu exportieren und zu importieren.  
@@ -367,6 +369,6 @@ Verwenden Sie Tasksequenzen, um Schritte in Ihrer System Center Configuration Ma
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: Endpoint Protection-Schadsoftwaredefinitionen von der Netzwerkfreigabe | System Center Configuration Manager
+title: Endpoint Protection-Schadsoftwaredefinitionen von der Netzwerkfreigabe | Microsoft-Dokumentation
 description: "Erfahren Sie, wie Sie Schadsoftwaredefinitionen für Endpoint Protection aus Microsoft Updates für Configuration Manager herunterladen."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 23c19256f3f38d44c57e5d3d25b36ceb023f3214
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 344f551a370378620d3d11870993a77e60f9f685
 
 
 ---
@@ -49,6 +49,6 @@ ms.openlocfilehash: 23c19256f3f38d44c57e5d3d25b36ceb023f3214
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

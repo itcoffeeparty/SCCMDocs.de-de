@@ -1,5 +1,5 @@
 ---
-title: Ports | System Center Configuration Manager
+title: Von Configuration Manager verwendete Ports | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über die erforderlichen und anpassbaren Ports, die System Center Configuration Manager für Verbindungen verwendet."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 2e0ccf8cc419545abe8c87c8d9379618f13f47b1
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 41000b978f1add9ec6910bfa86f13e92bf93c4e4
 
 
 ---
@@ -79,39 +79,39 @@ In den folgenden Abschnitten sind die Ports beschrieben, die für die Kommunikat
 
 -   &lt; -- > zeigt, dass beide Computer die Kommunikation initiieren können  
 
-###  <a name="a-namebkmkportsaia-asset-intelligence-synchronization-point----microsoft"></a><a name="BKMK_PortsAI"></a> Asset Intelligence-Synchronisierungspunkt  -- &gt;  Microsoft  
+###  <a name="a-namebkmkportsaia-asset-intelligence-synchronization-point-----microsoft"></a><a name="BKMK_PortsAI"></a> Asset Intelligence-Synchronisierungspunkt  -- &gt;  Microsoft  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Secure Hypertext Transfer-Protokoll (HTTPS)|--|443|  
 
-###  <a name="a-namebkmkportsai-to-sqla-asset-intelligence-synchronization-point----sql-server"></a><a name="BKMK_PortsAI-to-SQL"></a> Asset Intelligence-Synchronisierungspunkt --&gt; SQL Server  
+###  <a name="a-namebkmkportsai-to-sqla-asset-intelligence-synchronization-point-----sql-server"></a><a name="BKMK_PortsAI-to-SQL"></a> Asset Intelligence-Synchronisierungspunkt --&gt; SQL Server  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
-###  <a name="a-namebkmkportsappcatalogservice-sqla-application-catalog-web-service-point----sql-server"></a><a name="BKMK_PortsAppCatalogService-SQL"></a> Anwendungskatalog-Webdienstpunkt -- &gt; SQL Server  
+###  <a name="a-namebkmkportsappcatalogservice-sqla-application-catalog-web-service-point-----sql-server"></a><a name="BKMK_PortsAppCatalogService-SQL"></a> Anwendungskatalog-Webdienstpunkt -- &gt; SQL Server  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
-###  <a name="a-namebkmkportsappcatalogwebsitepointappcatalogwebservicepointa-application-catalog-website-point----application-catalog-web-service-point"></a><a name="BKMK_PortsAppCatalogWebSitePoint_AppCatalogWebServicePoint"></a> Anwendungskatalog-Websitepunkt -- &gt; Anwendungskatalog-Webdienstpunkt  
+###  <a name="a-namebkmkportsappcatalogwebsitepointappcatalogwebservicepointa-application-catalog-website-point-----application-catalog-web-service-point"></a><a name="BKMK_PortsAppCatalogWebSitePoint_AppCatalogWebServicePoint"></a> Anwendungskatalog-Websitepunkt -- &gt; Anwendungskatalog-Webdienstpunkt  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Hypertext Transfer-Protokoll (HTTP)|--|80 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 |Secure Hypertext Transfer-Protokoll (HTTPS)|--|443 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
-###  <a name="a-namebkmkportsclient-appcatalogwebsitepointa-client----application-catalog-website-point"></a><a name="BKMK_PortsClient-AppCatalogWebsitePoint"></a> Client -- &gt; Anwendungskatalog-Websitepunkt  
+###  <a name="a-namebkmkportsclient-appcatalogwebsitepointa-client-----application-catalog-website-point"></a><a name="BKMK_PortsClient-AppCatalogWebsitePoint"></a> Client -- &gt; Anwendungskatalog-Websitepunkt  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Hypertext Transfer-Protokoll (HTTP)|--|80 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 |Secure Hypertext Transfer-Protokoll (HTTPS)|--|443 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
-###  <a name="a-namebkmkportsclient-clientwakeupa-client----client"></a><a name="BKMK_PortsClient-ClientWakeUp"></a> Client -- &gt; Client  
+###  <a name="a-namebkmkportsclient-clientwakeupa-client-----client"></a><a name="BKMK_PortsClient-ClientWakeUp"></a> Client -- &gt; Client  
  Zusätzlich zu den in der folgenden Tabelle aufgeführten Ports nutzt der Aktivierungsproxy auch ICMP-Echoanforderungsmeldungen (Internet Control Message Protocol) von einem Client zum anderen, sofern diese für den Aktivierungsproxy konfiguriert wurden. Diese Kommunikation wird verwendet, um zu überprüfen, ob der andere Clientcomputer im Netzwerk aktiviert ist. ICMP (Internet Control Message Protocol) wird gelegentlich als „TCP/IP-Ping-Befehle“ bezeichnet. ICMP hat keine UDP- oder TCP-Protokollnummer und wird daher in der folgenden Tabelle nicht aufgeführt. Von allen hostbasierten Firewalls auf diesen Clientcomputern oder beteiligten Netzwerkgeräten im Subnetz muss jedoch der ICMP-Datenverkehr zugelassen werden, damit die Aktivierungsproxykommunikation erfolgreich durchgeführt werden kann.  
 
 |Beschreibung|UDP|TCP|  
@@ -119,34 +119,34 @@ In den folgenden Abschnitten sind die Ports beschrieben, die für die Kommunikat
 |Wake-On-LAN|9 (siehe Hinweis 2, **Alternativer Port verfügbar**)|--|  
 |Aktivierungsproxy|25536 (siehe Hinweis 2, **Alternativer Port verfügbar**)|--|  
 
-###  <a name="a-namebkmkportsclient-policymodulea-client----configuration-manager-policy-module-network-device-enrollment-service"></a><a name="BKMK_PortsClient-PolicyModule"></a> Client -- &gt; Configuration Manager-Richtlinienmodul (Registrierungsdienst für Netzwerkgeräte)  
+###  <a name="a-namebkmkportsclient-policymodulea-client-----configuration-manager-policy-module-network-device-enrollment-service"></a><a name="BKMK_PortsClient-PolicyModule"></a> Client -- &gt; Configuration Manager-Richtlinienmodul (Registrierungsdienst für Netzwerkgeräte)  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Hypertext Transfer-Protokoll (HTTP)||80|  
 |Secure Hypertext Transfer-Protokoll (HTTPS)|--|443|  
 
-###  <a name="a-namebkmkportsclient-clouddpa-client----cloud-based-distribution-point"></a><a name="BKMK_PortsClient-CloudDP"></a> Client -- &gt; Cloudbasierter Verteilungspunkt  
+###  <a name="a-namebkmkportsclient-clouddpa-client-----cloud-based-distribution-point"></a><a name="BKMK_PortsClient-CloudDP"></a> Client -- &gt; Cloudbasierter Verteilungspunkt  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Secure Hypertext Transfer-Protokoll (HTTPS)|--|443|  
 
-###  <a name="a-namebkmkportsclient-dpa-client----distribution-point"></a><a name="BKMK_PortsClient-DP"></a> Client -- &gt; Verteilungspunkt  
+###  <a name="a-namebkmkportsclient-dpa-client-----distribution-point"></a><a name="BKMK_PortsClient-DP"></a> Client -- &gt; Verteilungspunkt  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Hypertext Transfer-Protokoll (HTTP)|--|80 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 |Secure Hypertext Transfer-Protokoll (HTTPS)|--|443 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
-###  <a name="a-namebkmkportsclient-dp2a-client----distribution-point-configured-for-multicast"></a><a name="BKMK_PortsClient-DP2"></a> Client -- &gt; für Multicast konfigurierter Verteilungspunkt  
+###  <a name="a-namebkmkportsclient-dp2a-client-----distribution-point-configured-for-multicast"></a><a name="BKMK_PortsClient-DP2"></a> Client -- &gt; für Multicast konfigurierter Verteilungspunkt  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Server Message Block (SMB)|--|445|  
 |Multicast-Protokoll|63000-64000|--|  
 
-###  <a name="a-namebkmkportsclient-dp3a-client----distribution-point-configured-for-pxe"></a><a name="BKMK_PortsClient-DP3"></a> Client -- &gt; für PXE konfigurierter Verteilungspunkt  
+###  <a name="a-namebkmkportsclient-dp3a-client-----distribution-point-configured-for-pxe"></a><a name="BKMK_PortsClient-DP3"></a> Client -- &gt; für PXE konfigurierter Verteilungspunkt  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -154,13 +154,13 @@ In den folgenden Abschnitten sind die Ports beschrieben, die für die Kommunikat
 |Trivial File Transfer-Protokoll (TFTP)|69 (siehe Hinweis 4, **Daemon für „Trivial FTP“ (TFTP)**)|--|  
 |Boot Information Negotiation Layer (BINL)|4011|--|  
 
-###  <a name="a-namebkmkportsclient-fspa-client----fallback-status-point"></a><a name="BKMK_PortsClient-FSP"></a> Client -- &gt; Fallbackstatuspunkt  
+###  <a name="a-namebkmkportsclient-fspa-client-----fallback-status-point"></a><a name="BKMK_PortsClient-FSP"></a> Client -- &gt; Fallbackstatuspunkt  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Hypertext Transfer-Protokoll (HTTP)|--|80 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
-###  <a name="a-namebkmkportsclient-gcdca-client----global-catalog-domain-controller"></a><a name="BKMK_PortsClient-GCDC"></a> Client -- &gt; Domänencontroller des globalen Katalogs  
+###  <a name="a-namebkmkportsclient-gcdca-client-----global-catalog-domain-controller"></a><a name="BKMK_PortsClient-GCDC"></a> Client -- &gt; Domänencontroller des globalen Katalogs  
  Ein Configuration Manager-Client stellt keine Verbindung mit einem globalen Katalogserver her, wenn er für die reine Internetkommunikation konfiguriert ist oder einen Arbeitsgruppencomputer darstellt.  
 
 |Beschreibung|UDP|TCP|  
@@ -168,7 +168,7 @@ In den folgenden Abschnitten sind die Ports beschrieben, die für die Kommunikat
 |Global Catalog LDAP|--|3268|  
 |Global Catalog LDAP SSL|--|3269|  
 
-###  <a name="a-namebkmkportsclient-mpa-client----management-point"></a><a name="BKMK_PortsClient-MP"></a> Client -- &gt; Verwaltungspunkt  
+###  <a name="a-namebkmkportsclient-mpa-client-----management-point"></a><a name="BKMK_PortsClient-MP"></a> Client -- &gt; Verwaltungspunkt  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -176,14 +176,14 @@ In den folgenden Abschnitten sind die Ports beschrieben, die für die Kommunikat
 |Hypertext Transfer-Protokoll (HTTP)|--|80 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 |Secure Hypertext Transfer-Protokoll (HTTPS)|--|443 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
-###  <a name="a-namebkmkportsclient-supa-client----software-update-point"></a><a name="BKMK_PortsClient-SUP"></a> Client -- &gt; Softwareupdatepunkt  
+###  <a name="a-namebkmkportsclient-supa-client-----software-update-point"></a><a name="BKMK_PortsClient-SUP"></a> Client -- &gt; Softwareupdatepunkt  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Hypertext Transfer-Protokoll (HTTP)|--|80 oder 8530 (siehe Hinweis 3, **Windows Server Update Services**)|  
 |Secure Hypertext Transfer-Protokoll (HTTPS)|--|443 oder 8531 (siehe Hinweis 3, **Windows Server Update Services**)|  
 
-###  <a name="a-namebkmkportsclient-smpa-client----state-migration-point"></a><a name="BKMK_PortsClient-SMP"></a> Client -- &gt; Zustandsmigrationspunkt  
+###  <a name="a-namebkmkportsclient-smpa-client-----state-migration-point"></a><a name="BKMK_PortsClient-SMP"></a> Client -- &gt; Zustandsmigrationspunkt  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -191,20 +191,20 @@ In den folgenden Abschnitten sind die Ports beschrieben, die für die Kommunikat
 |Secure Hypertext Transfer-Protokoll (HTTPS)|--|443 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 |Server Message Block (SMB)|--|445|  
 
-###  <a name="a-namebkmkportsconsole-clienta-configuration-manager-console----client"></a><a name="BKMK_PortsConsole-Client"></a> Configuration Manager-Konsole -- &gt; Client  
+###  <a name="a-namebkmkportsconsole-clienta-configuration-manager-console-----client"></a><a name="BKMK_PortsConsole-Client"></a> Configuration Manager-Konsole -- &gt; Client  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Remotesteuerung (Steuerung)|--|2701|  
 |Remoteunterstützung (RDP und RTC)|--|3389|  
 
-###  <a name="a-namebkmkportsconsole-interneta-configuration-manager-console----internet"></a><a name="BKMK_PortsConsole-Internet"></a> Configuration Manager-Konsole -- &gt; Internet  
+###  <a name="a-namebkmkportsconsole-interneta-configuration-manager-console-----internet"></a><a name="BKMK_PortsConsole-Internet"></a> Configuration Manager-Konsole -- &gt; Internet  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Hypertext Transfer-Protokoll (HTTP)|--|80|  
 
-###  <a name="a-namebkmkportsconsole-rspa-configuration-manager-console----reporting-services-point"></a><a name="BKMK_PortsConsole-RSP"></a> Configuration Manager-Konsole -- &gt; Reporting Services-Punkt  
+###  <a name="a-namebkmkportsconsole-rspa-configuration-manager-console-----reporting-services-point"></a><a name="BKMK_PortsConsole-RSP"></a> Configuration Manager-Konsole -- &gt; Reporting Services-Punkt  
 
 ||||  
 |-|-|-|  
@@ -212,26 +212,26 @@ In den folgenden Abschnitten sind die Ports beschrieben, die für die Kommunikat
 |Hypertext Transfer-Protokoll (HTTP)|--|80 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 |Secure Hypertext Transfer-Protokoll (HTTPS)|--|443 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
-###  <a name="a-namebkmkportsconsole-sitea-configuration-manager-console----site-server"></a><a name="BKMK_PortsConsole-Site"></a> Configuration Manager-Konsole -- &gt; Standortserver  
+###  <a name="a-namebkmkportsconsole-sitea-configuration-manager-console-----site-server"></a><a name="BKMK_PortsConsole-Site"></a> Configuration Manager-Konsole -- &gt; Standortserver  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |RPC (erstes Verbinden mit WMI zur Suche des Anbietersystems)|--|135|  
 
-###  <a name="a-namebkmkportsconsole-providera-configuration-manager-console----sms-provider"></a><a name="BKMK_PortsConsole-Provider"></a> Configuration Manager-Konsole -- &gt; SMS-Anbieter  
+###  <a name="a-namebkmkportsconsole-providera-configuration-manager-console-----sms-provider"></a><a name="BKMK_PortsConsole-Provider"></a> Configuration Manager-Konsole -- &gt; SMS-Anbieter  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |RPC-Endpunktzuordnung|135|135|  
 |RPC|--|DYNAMISCH (siehe Hinweis 6, **Dynamische Ports**)|  
 
-###  <a name="a-namebkmkportscertificateregistationpointpolicymodulea-configuration-manager-policy-module-network-device-enrollment-service----certificate-registration-point"></a><a name="BKMK_PortsCertificateRegistationPoint_PolicyModule"></a> Configuration Manager-Richtlinienmodul (Registrierungsdienst für Netzwerkgeräte) -- &gt; Zertifikatregistrierungspunkt  
+###  <a name="a-namebkmkportscertificateregistationpointpolicymodulea-configuration-manager-policy-module-network-device-enrollment-service-----certificate-registration-point"></a><a name="BKMK_PortsCertificateRegistationPoint_PolicyModule"></a> Configuration Manager-Richtlinienmodul (Registrierungsdienst für Netzwerkgeräte) -- &gt; Zertifikatregistrierungspunkt  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Secure Hypertext Transfer-Protokoll (HTTPS)|--|443 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
-###  <a name="a-namebkmkportsdistmpa-distribution-point----management-point"></a><a name="BKMK_PortsDist_MP"></a> Verteilungspunkt --&gt; Verwaltungspunkt  
+###  <a name="a-namebkmkportsdistmpa-distribution-point-----management-point"></a><a name="BKMK_PortsDist_MP"></a> Verteilungspunkt --&gt; Verwaltungspunkt  
  Ein Verteilungspunkt kommuniziert mit dem Verwaltungspunkt in den folgenden Szenarien:  
 
 -   Um den Status von vorab bereitgestellten Inhalten zu melden  
@@ -247,49 +247,49 @@ In den folgenden Abschnitten sind die Ports beschrieben, die für die Kommunikat
 |Hypertext Transfer-Protokoll (HTTP)|--|80 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 |Secure Hypertext Transfer-Protokoll (HTTPS)|--|443 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
-###  <a name="a-namebkmkportsendpointprotectioninterneta-endpoint-protection-point----internet"></a><a name="BKMK_PortsEndpointProtection_Internet"></a> Endpoint Protection-Punkt -- &gt; Internet  
+###  <a name="a-namebkmkportsendpointprotectioninterneta-endpoint-protection-point-----internet"></a><a name="BKMK_PortsEndpointProtection_Internet"></a> Endpoint Protection-Punkt -- &gt; Internet  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Hypertext Transfer-Protokoll (HTTP)|--|80|  
 
-###  <a name="a-namebkmkportsep-to-sqla-endpoint-protection-point----sql-server"></a><a name="BKMK_PortsEP-to-SQL"></a> Endpoint Protection-Punkt -- &gt; SQL Server  
+###  <a name="a-namebkmkportsep-to-sqla-endpoint-protection-point-----sql-server"></a><a name="BKMK_PortsEP-to-SQL"></a> Endpoint Protection-Punkt -- &gt; SQL Server  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
-###  <a name="a-namebkmkportsenrollmentproxyenrollmentpointa-enrollment-proxy-point----enrollment-point"></a><a name="BKMK_PortsEnrollmentProxyEnrollmentPoint"></a> Anmeldungsproxypunkt -- &gt; Anmeldungspunkt  
+###  <a name="a-namebkmkportsenrollmentproxyenrollmentpointa-enrollment-proxy-point-----enrollment-point"></a><a name="BKMK_PortsEnrollmentProxyEnrollmentPoint"></a> Anmeldungsproxypunkt -- &gt; Anmeldungspunkt  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Secure Hypertext Transfer-Protokoll (HTTPS)|--|443 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
-###  <a name="a-namebkmkportsenrollmentenrollmentsqla-enrollment-point----sql-server"></a><a name="BKMK_PortsEnrollmentEnrollmentSQL"></a> Anmeldungspunkt -- &gt; SQL Server  
+###  <a name="a-namebkmkportsenrollmentenrollmentsqla-enrollment-point-----sql-server"></a><a name="BKMK_PortsEnrollmentEnrollmentSQL"></a> Anmeldungspunkt -- &gt; SQL Server  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
-###  <a name="a-namebkmkportsexchangeconnectorhosteda-exchange-server-connector----exchange-online"></a><a name="BKMK_PortsExchangeConnectorHosted"></a> Exchange Server-Connector -- &gt; Exchange Online  
+###  <a name="a-namebkmkportsexchangeconnectorhosteda-exchange-server-connector-----exchange-online"></a><a name="BKMK_PortsExchangeConnectorHosted"></a> Exchange Server-Connector -- &gt; Exchange Online  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Windows-Remoteverwaltung über HTTPS|--|5986|  
 
-###  <a name="a-namebkmkportsexchangeconnectoronprema-exchange-server-connector----on-premises-exchange-server"></a><a name="BKMK_PortsExchangeConnectorOnPrem"></a> Exchange Server-Connector -- &gt; Exchange Server (lokal)  
+###  <a name="a-namebkmkportsexchangeconnectoronprema-exchange-server-connector-----on-premises-exchange-server"></a><a name="BKMK_PortsExchangeConnectorOnPrem"></a> Exchange Server-Connector -- &gt; Exchange Server (lokal)  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Windows-Remoteverwaltung über HTTP|--|5985|  
 
-###  <a name="a-namebkmkportsmacenrollmentproxypointa-mac-computer----enrollment-proxy-point"></a><a name="BKMK_PortsMacEnrollmentProxyPoint"></a> Macintosh-Computer -- &gt; Anmeldungsproxypunkt  
+###  <a name="a-namebkmkportsmacenrollmentproxypointa-mac-computer-----enrollment-proxy-point"></a><a name="BKMK_PortsMacEnrollmentProxyPoint"></a> Macintosh-Computer -- &gt; Anmeldungsproxypunkt  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Secure Hypertext Transfer-Protokoll (HTTPS)|--|443|  
 
-###  <a name="a-namebkmkportsmp-dca-management-point----domain-controller"></a><a name="BKMK_PortsMP-DC"></a> Verwaltungspunkt -- &gt; Domänencontroller  
+###  <a name="a-namebkmkportsmp-dca-management-point-----domain-controller"></a><a name="BKMK_PortsMP-DC"></a> Verwaltungspunkt -- &gt; Domänencontroller  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -300,7 +300,7 @@ In den folgenden Abschnitten sind die Ports beschrieben, die für die Kommunikat
 |RPC-Endpunktzuordnung|135|135|  
 |RPC|--|DYNAMISCH (siehe Hinweis 6, **Dynamische Ports**)|  
 
-###  <a name="a-namebkmkportsmp-sitea-management-point-lt----site-server"></a><a name="BKMK_PortsMP-Site"></a> Verwaltungspunkt &lt; --> Standortserver  
+###  <a name="a-namebkmkportsmp-sitea-management-point-lt-----site-server"></a><a name="BKMK_PortsMP-Site"></a> Verwaltungspunkt &lt; --> Standortserver  
  (siehe Hinweis 5, **Kommunikation zwischen dem Standortserver und Standortsystemen**)  
 
 |Beschreibung|UDP|TCP|  
@@ -309,38 +309,38 @@ In den folgenden Abschnitten sind die Ports beschrieben, die für die Kommunikat
 |RPC|--|DYNAMISCH (siehe Hinweis 6, **Dynamische Ports**)|  
 |Server Message Block (SMB)|--|445|  
 
-###  <a name="a-namebkmkportsmp-sqla-management-point----sql-server"></a><a name="BKMK_PortsMP-SQL"></a> Verwaltungspunkt -- &gt; SQL Server  
+###  <a name="a-namebkmkportsmp-sqla-management-point-----sql-server"></a><a name="BKMK_PortsMP-SQL"></a> Verwaltungspunkt -- &gt; SQL Server  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
-###  <a name="a-namebkmkportsmobiledeviceclient-enrollmentproxypointa-mobile-device----enrollment-proxy-point"></a><a name="BKMK_PortsMobileDeviceClient-EnrollmentProxyPoint"></a> Mobiles Gerät -- &gt; Anmeldungsproxypunkt  
+###  <a name="a-namebkmkportsmobiledeviceclient-enrollmentproxypointa-mobile-device-----enrollment-proxy-point"></a><a name="BKMK_PortsMobileDeviceClient-EnrollmentProxyPoint"></a> Mobiles Gerät -- &gt; Anmeldungsproxypunkt  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Secure Hypertext Transfer-Protokoll (HTTPS)|--|443|  
 
-###  <a name="a-namebkmkportsmobiledeviceclient-windowsintunea-mobile-device----microsoft-intune"></a><a name="BKMK_PortsMobileDeviceClient-WindowsIntune"></a> Mobiles Gerät --&gt; Microsoft Intune  
+###  <a name="a-namebkmkportsmobiledeviceclient-windowsintunea-mobile-device-----microsoft-intune"></a><a name="BKMK_PortsMobileDeviceClient-WindowsIntune"></a> Mobiles Gerät --&gt; Microsoft Intune  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Secure Hypertext Transfer-Protokoll (HTTPS)|--|443|  
 
-###  <a name="a-namebkmkportsrsp-sqla-reporting-services-point----sql-server"></a><a name="BKMK_PortsRSP-SQL"></a> Reporting Services-Punkt -- &gt; SQL Server  
+###  <a name="a-namebkmkportsrsp-sqla-reporting-services-point-----sql-server"></a><a name="BKMK_PortsRSP-SQL"></a> Reporting Services-Punkt -- &gt; SQL Server  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL über TCP|--|1433 (siehe Hinweis 2, Alternativer Port verfügbar)|  
 
-###  <a name="a-namebkmkportsintuneconnector-windowsintunea-service-connection-point----microsoft-intune"></a><a name="BKMK_PortsIntuneConnector-WindowsIntune"></a> Dienstverbindungspunkt --&gt; Microsoft Intune  
+###  <a name="a-namebkmkportsintuneconnector-windowsintunea-service-connection-point-----microsoft-intune"></a><a name="BKMK_PortsIntuneConnector-WindowsIntune"></a> Dienstverbindungspunkt --&gt; Microsoft Intune  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Secure Hypertext Transfer-Protokoll (HTTPS)|--|443|
 Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls) für den Dienstverbindungspunkt.
 
-###  <a name="a-namebkmkportsappcatalogwebservicepointsiteservera-site-server-lt----application-catalog-web-service-point"></a><a name="BKMK_PortsAppCatalogWebServicePoint_SiteServer"></a> Standortserver &lt; -- > Anwendungskatalog-Webdienstpunkt  
+###  <a name="a-namebkmkportsappcatalogwebservicepointsiteservera-site-server-lt-----application-catalog-web-service-point"></a><a name="BKMK_PortsAppCatalogWebServicePoint_SiteServer"></a> Standortserver &lt; -- > Anwendungskatalog-Webdienstpunkt  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -348,7 +348,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 |RPC-Endpunktzuordnung|135|135|  
 |RPC|--|DYNAMISCH (siehe Hinweis 6, **Dynamische Ports**)|  
 
-###  <a name="a-namebkmkportsappcatalogwebsitepointsiteservera-site-server-lt----application-catalog-website-point"></a><a name="BKMK_PortsAppCatalogWebSitePoint_SiteServer"></a> Standortserver &lt; -- > Anwendungskatalog-Websitepunkt  
+###  <a name="a-namebkmkportsappcatalogwebsitepointsiteservera-site-server-lt-----application-catalog-website-point"></a><a name="BKMK_PortsAppCatalogWebSitePoint_SiteServer"></a> Standortserver &lt; -- > Anwendungskatalog-Websitepunkt  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -356,7 +356,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 |RPC-Endpunktzuordnung|135|135|  
 |RPC|--|DYNAMISCH (siehe Hinweis 6, **Dynamische Ports**)|  
 
-###  <a name="a-namebkmkportssite-aispa-site-server-lt----asset-intelligence-synchronization-point"></a><a name="BKMK_PortsSite-AISP"></a> Standortserver &lt; --> Asset Intelligence-Synchronisierungspunkt  
+###  <a name="a-namebkmkportssite-aispa-site-server-lt-----asset-intelligence-synchronization-point"></a><a name="BKMK_PortsSite-AISP"></a> Standortserver &lt; --> Asset Intelligence-Synchronisierungspunkt  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -364,19 +364,19 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 |RPC-Endpunktzuordnung|135|135|  
 |RPC|--|DYNAMISCH (siehe Hinweis 6, **Dynamische Ports**)|  
 
-###  <a name="a-namebkmkportssite-clienta-site-server----client"></a><a name="BKMK_PortsSite-Client"></a> Standortserver -- &gt; Client  
+###  <a name="a-namebkmkportssite-clienta-site-server-----client"></a><a name="BKMK_PortsSite-Client"></a> Standortserver -- &gt; Client  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Wake-On-LAN|9 (siehe Hinweis 2, **Alternativer Port verfügbar**)|--|  
 
-###  <a name="a-namebkmkportssiteserver-clouddpa-site-server----cloud-based-distribution-point"></a><a name="BKMK_PortsSiteServer-CloudDP"></a> Standortserver -- &gt; Cloudbasierter Verteilungspunkt  
+###  <a name="a-namebkmkportssiteserver-clouddpa-site-server-----cloud-based-distribution-point"></a><a name="BKMK_PortsSiteServer-CloudDP"></a> Standortserver -- &gt; Cloudbasierter Verteilungspunkt  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Secure Hypertext Transfer-Protokoll (HTTPS)|--|443|  
 
-###  <a name="a-namebkmkportssite-dpa-site-server----distribution-point"></a><a name="BKMK_PortsSite-DP"></a> Standortserver -- &gt; Verteilungspunkt  
+###  <a name="a-namebkmkportssite-dpa-site-server-----distribution-point"></a><a name="BKMK_PortsSite-DP"></a> Standortserver -- &gt; Verteilungspunkt  
  (siehe Hinweis 5, **Kommunikation zwischen dem Standortserver und Standortsystemen**)  
 
 |Beschreibung|UDP|TCP|  
@@ -385,7 +385,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 |RPC-Endpunktzuordnung|135|135|  
 |RPC|--|DYNAMISCH (siehe Hinweis 6, **Dynamische Ports**)|  
 
-###  <a name="a-namebkmkportssite-dca-site-server----domain-controller"></a><a name="BKMK_PortsSite-DC"></a> Standortserver -- &gt; Domänencontroller  
+###  <a name="a-namebkmkportssite-dca-site-server-----domain-controller"></a><a name="BKMK_PortsSite-DC"></a> Standortserver -- &gt; Domänencontroller  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -396,7 +396,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 |RPC-Endpunktzuordnung|135|135|  
 |RPC|--|DYNAMISCH (siehe Hinweis 6, **Dynamische Ports**)|  
 
-###  <a name="a-namebkmkportscertificateregistrationpointsiteservera-site-server-lt----certificate-registration-point"></a><a name="BKMK_PortsCertificateRegistrationPoint_SiteServer"></a> Standortserver &lt; -- > Zertifikatregistrierungspunkt  
+###  <a name="a-namebkmkportscertificateregistrationpointsiteservera-site-server-lt-----certificate-registration-point"></a><a name="BKMK_PortsCertificateRegistrationPoint_SiteServer"></a> Standortserver &lt; -- > Zertifikatregistrierungspunkt  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -404,7 +404,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 |RPC-Endpunktzuordnung|135|135|  
 |RPC|--|DYNAMISCH (siehe Hinweis 6, **Dynamische Ports**)|  
 
-###  <a name="a-namebkmkportsendpointprotectionsiteservera-site-server-lt----endpoint-protection-point"></a><a name="BKMK_PortsEndpointProtection_SiteServer"></a> Standortserver &lt; -- > Endpoint Protection-Punkt  
+###  <a name="a-namebkmkportsendpointprotectionsiteservera-site-server-lt-----endpoint-protection-point"></a><a name="BKMK_PortsEndpointProtection_SiteServer"></a> Standortserver &lt; -- > Endpoint Protection-Punkt  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -412,7 +412,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 |RPC-Endpunktzuordnung|135|135|  
 |RPC|--|DYNAMISCH (siehe Hinweis 6, **Dynamische Ports**)|  
 
-###  <a name="a-namebkmkenrollmentpointsiteservera-site-server-lt----enrollment-point"></a><a name="BKMK_EnrollmentPoint_SiteServer"></a> Standortserver &lt; -- > Registrierungspunkt  
+###  <a name="a-namebkmkenrollmentpointsiteservera-site-server-lt-----enrollment-point"></a><a name="BKMK_EnrollmentPoint_SiteServer"></a> Standortserver &lt; -- > Registrierungspunkt  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -420,7 +420,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 |RPC-Endpunktzuordnung|135|135|  
 |RPC|--|DYNAMISCH (siehe Hinweis 6, **Dynamische Ports**)|  
 
-###  <a name="a-namebkmkenrollmentproxypointsiteservera-site-server-lt----enrollment-proxy-point"></a><a name="BKMK_EnrollmentProxyPoint_SiteServer"></a> Standortserver &lt; -- > Registrierungsproxypunkt  
+###  <a name="a-namebkmkenrollmentproxypointsiteservera-site-server-lt-----enrollment-proxy-point"></a><a name="BKMK_EnrollmentProxyPoint_SiteServer"></a> Standortserver &lt; -- > Registrierungsproxypunkt  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -428,7 +428,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 |RPC-Endpunktzuordnung|135|135|  
 |RPC|--|DYNAMISCH (siehe Hinweis 6, **Dynamische Ports**)|  
 
-###  <a name="a-namebkmkportssite-fspa-site-server-lt----fallback-status-point"></a><a name="BKMK_PortsSite-FSP"></a> Standortserver &lt; -- > Fallbackstatuspunkt  
+###  <a name="a-namebkmkportssite-fspa-site-server-lt-----fallback-status-point"></a><a name="BKMK_PortsSite-FSP"></a> Standortserver &lt; -- > Fallbackstatuspunkt  
  (siehe Hinweis 5, **Kommunikation zwischen dem Standortserver und Standortsystemen**)  
 
 |Beschreibung|UDP|TCP|  
@@ -437,13 +437,13 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 |RPC-Endpunktzuordnung|135|135|  
 |RPC|--|DYNAMISCH (siehe Hinweis 6, **Dynamische Ports**)|  
 
-###  <a name="a-namebkmkportsite-interneta-site-server----internet"></a><a name="BKMK_PortSite-Internet"></a> Standortserver -- &gt; Internet  
+###  <a name="a-namebkmkportsite-interneta-site-server-----internet"></a><a name="BKMK_PortSite-Internet"></a> Standortserver -- &gt; Internet  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Hypertext Transfer-Protokoll (HTTP)|--|80 (siehe Hinweis 1, **Proxyserverport**)|  
 
-###  <a name="a-namebkmkportsissuingcasiteservera-site-server-lt----issuing-certification-authority-ca"></a><a name="BKMK_PortsIssuingCA_SiteServer"></a> Standortserver &lt; -- > Ausstellende Zertifizierungsstelle (CA)  
+###  <a name="a-namebkmkportsissuingcasiteservera-site-server-lt-----issuing-certification-authority-ca"></a><a name="BKMK_PortsIssuingCA_SiteServer"></a> Standortserver &lt; -- > Ausstellende Zertifizierungsstelle (CA)  
  Diese Kommunikation wird verwendet, wenn Sie Zertifikatprofile über den Zertifikatregistrierungspunkt bereitstellen. Sie dienst nicht für jeden Standortserver in der Hierarchie, sondern nur für den Standortserver der obersten Ebene.  
 
 |Beschreibung|UDP|TCP|  
@@ -451,7 +451,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 |RPC-Endpunktzuordnung|135|135|  
 |RPC (DCOM)|--|DYNAMISCH (siehe Hinweis 6, **Dynamische Ports**)|  
 
-###  <a name="a-namebkmkportssite-rspa-site-server-lt----reporting-services-point"></a><a name="BKMK_PortsSite-RSP"></a> Standortserver &lt; -- > Reporting Services-Punkt  
+###  <a name="a-namebkmkportssite-rspa-site-server-lt-----reporting-services-point"></a><a name="BKMK_PortsSite-RSP"></a> Standortserver &lt; -- > Reporting Services-Punkt  
  (siehe Hinweis 5, **Kommunikation zwischen dem Standortserver und Standortsystemen**)  
 
 |Beschreibung|UDP|TCP|  
@@ -460,13 +460,13 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 |RPC-Endpunktzuordnung|135|135|  
 |RPC|--|DYNAMISCH (siehe Hinweis 6, **Dynamische Ports**)|  
 
-###  <a name="a-namebkmkportssite-sitea-site-server-lt----site-server"></a><a name="BKMK_PortsSite-Site"></a> Standortserver &lt; -- > Standortserver  
+###  <a name="a-namebkmkportssite-sitea-site-server-lt-----site-server"></a><a name="BKMK_PortsSite-Site"></a> Standortserver &lt; -- > Standortserver  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Server Message Block (SMB)|--|445|  
 
-###  <a name="a-namebkmkportssite-sqla-site-server----sql-server"></a><a name="BKMK_PortsSite-SQL"></a> Standortserver -- &gt; SQL Server  
+###  <a name="a-namebkmkportssite-sqla-site-server-----sql-server"></a><a name="BKMK_PortsSite-SQL"></a> Standortserver -- &gt; SQL Server  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -480,7 +480,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 |RPC-Endpunktzuordnung|135|135|  
 |RPC|--|DYNAMISCH (siehe Hinweis 6, **Dynamische Ports**)|  
 
-###  <a name="a-namebkmkportssite-providera-site-server----sms-provider"></a><a name="BKMK_PortsSite-Provider"></a> Standortserver -- &gt; SMS-Anbieter  
+###  <a name="a-namebkmkportssite-providera-site-server-----sms-provider"></a><a name="BKMK_PortsSite-Provider"></a> Standortserver -- &gt; SMS-Anbieter  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -488,7 +488,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 |RPC-Endpunktzuordnung|135|135|  
 |RPC|--|DYNAMISCH (siehe Hinweis 6, **Dynamische Ports**)|  
 
-###  <a name="a-namebkmkportssite-supa-site-server-lt----software-update-point"></a><a name="BKMK_PortsSite-SUP"></a> Standortserver &lt; -- > Softwareupdatepunkt  
+###  <a name="a-namebkmkportssite-supa-site-server-lt-----software-update-point"></a><a name="BKMK_PortsSite-SUP"></a> Standortserver &lt; -- > Softwareupdatepunkt  
  (siehe Hinweis 5, **Kommunikation zwischen dem Standortserver und Standortsystemen**)  
 
 |Beschreibung|UDP|TCP|  
@@ -497,7 +497,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 |Hypertext Transfer-Protokoll (HTTP)|--|80 oder 8530 (siehe Hinweis 3, Windows Server Update Services)|  
 |Secure Hypertext Transfer-Protokoll (HTTPS)|--|443 oder 8531 (siehe Hinweis 3, Windows Server Update Services)|  
 
-###  <a name="a-namebkmkportssite-smpa-site-server-lt----state-migration-point"></a><a name="BKMK_PortsSite-SMP"></a> Standortserver &lt; -- > Zustandsmigrationspunkt  
+###  <a name="a-namebkmkportssite-smpa-site-server-lt-----state-migration-point"></a><a name="BKMK_PortsSite-SMP"></a> Standortserver &lt; -- > Zustandsmigrationspunkt  
  (siehe Hinweis 5, **Kommunikation zwischen dem Standortserver und Standortsystemen**)  
 
 |Beschreibung|UDP|TCP|  
@@ -505,19 +505,19 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 |Server Message Block (SMB)|--|445|  
 |RPC-Endpunktzuordnung|135|135|  
 
-###  <a name="a-namebkmkportsprovider-sqla-sms-provider----sql-server"></a><a name="BKMK_PortsProvider-SQL"></a> SMS-Anbieter -- &gt; SQL Server  
+###  <a name="a-namebkmkportsprovider-sqla-sms-provider-----sql-server"></a><a name="BKMK_PortsProvider-SQL"></a> SMS-Anbieter -- &gt; SQL Server  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL über TCP|--|1433 (siehe Hinweis 2, Alternativer Port verfügbar)|  
 
-###  <a name="a-namebkmkportssup-interneta-software-update-point----internet"></a><a name="BKMK_PortsSUP-Internet"></a> Softwareupdatepunkt -- &gt; Internet  
+###  <a name="a-namebkmkportssup-interneta-software-update-point-----internet"></a><a name="BKMK_PortsSUP-Internet"></a> Softwareupdatepunkt -- &gt; Internet  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Hypertext Transfer-Protokoll (HTTP)|--|80 (siehe Hinweis 1, **Proxyserverport**)|  
 
-###  <a name="a-namebkmkportssup-wsusa-software-update-point----upstream-wsus-server"></a><a name="BKMK_PortsSUP-WSUS"></a> Softwareupdatepunkt -- &gt; WSUS-Upstreamserver  
+###  <a name="a-namebkmkportssup-wsusa-software-update-point-----upstream-wsus-server"></a><a name="BKMK_PortsSUP-WSUS"></a> Softwareupdatepunkt -- &gt; WSUS-Upstreamserver  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -535,7 +535,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 > [!TIP]  
 >  Configuration Manager erfordert keinen SQL Server-Browser, der den Port UDP 1434 verwendet.  
 
-###  <a name="a-namebkmkportsstatemigrationpoint-to-sqla-state-migration-point----sql-server"></a><a name="BKMK_PortsStateMigrationPoint-to-SQL"></a> Zustandsmigrationspunkt --&gt; SQL Server  
+###  <a name="a-namebkmkportsstatemigrationpoint-to-sqla-state-migration-point-----sql-server"></a><a name="BKMK_PortsStateMigrationPoint-to-SQL"></a> Zustandsmigrationspunkt --&gt; SQL Server  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -711,6 +711,6 @@ Der Standortserver, der Migration die ausführt, verwendet verschiedene Ports, u
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

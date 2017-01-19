@@ -1,5 +1,5 @@
 ---
-title: Softwareinventursicherheit und -datenschutz | System Center Configuration Manager
+title: "Sicherheit und Datenschutz für die Softwareinventur | Microsoft-Dokumentation"
 description: "Rufen Sie Sicherheits- und Datenschutzinformationen für die Softwareinventur in System Center Configuration Manager ab."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 1e588db325ea6c3e83614892d3bf76d86ed1b041
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: 2144dfa87f40fcb2195f7278a21b47e05d6d6f38
 
 
 ---
@@ -63,6 +63,6 @@ Dieses Thema enthält Sicherheits- und Datenschutzinformationen für die Softwar
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

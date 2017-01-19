@@ -1,5 +1,5 @@
 ---
-title: Migrationsquellhierarchien | System Center Configuration Manager
+title: Migrationsquellhierarchien | Microsoft-Dokumentation
 description: "Konfigurieren Sie eine Quellhierarchie und Quellstandorte, damit Daten zu Ihrer System Center Configuration Manager-Umgebung migriert werden können."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 75b1515f85787cefc60d98d6f6affa3a447a39f2
+ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
+ms.openlocfilehash: 1ecac05cb7aba822047bbc519d8a0ca316c600a5
 
 
 ---
@@ -107,6 +107,6 @@ Verwenden Sie das folgende Verfahren für die Konfiguration zusätzlicher Quells
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

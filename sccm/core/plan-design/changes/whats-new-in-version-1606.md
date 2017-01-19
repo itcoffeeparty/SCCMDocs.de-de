@@ -1,5 +1,5 @@
 ---
-title: Neu in 1606 | System Center Configuration Manager
+title: Neuerungen in 1606 | Microsoft-Dokumentation
 description: "Enthält Details zu Änderungen und neuen Funktionen, die in Version 1606 von System Center Configuration Manager eingeführt wurden."
 ms.custom: na
 ms.date: 10/09/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fbce476b8a9b91a88354fb4abfadfd2526ca5e8
-ms.openlocfilehash: 8de28e112a2d7faf1d8aca9b7214498e9a65f919
+ms.sourcegitcommit: f6e34e39d267f3bba26d6aa6a912eb4ba4aa3ab2
+ms.openlocfilehash: 16d10bdf1ddd810800e776c33f3f059899b7f92b
 
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>Neues in Version 1606 von System Center Configuration Manager
@@ -164,11 +164,11 @@ Einzelheiten finden Sie unter [Prepare site system roles for operating system de
 ## <a name="compliance-settings"></a>Kompatibilitätseinstellungen
 
 ### <a name="smart-lock-setting-for-android-devices"></a>Smart Lock-Einstellung für Android-Geräte
-Eine neue Einstellung, **Zulassen von Smart Lock und anderen Vertrauens-Agents**, wurde zum Konfigurationselement Android und Samsung KNOX hinzugefügt.
+Eine neue Einstellung, **Allow Smart Lock and other trust agents** (Smart Lock und andere Vertrauens-Agents zulassen), wurde zum Konfigurationselement Android und Samsung KNOX Standard hinzugefügt.
 
 Mit dieser Einstellung können Sie die Smart Lock-Funktion auf kompatiblen Android-Geräten steuern. Diese Telefonfunktion wird manchmal als Vertrauens-Agent bezeichnet und ermöglicht Ihnen das Deaktivieren oder Umgehen des Kennworts für den Gerätesperrbildschirm, wenn sich das Gerät an einem vertrauenswürdigen Standort befindet, z. B. wenn es mit einem bestimmten Bluetooth-Gerät verbunden ist oder sich in der Nähe eines NFC-Tags befindet. Mit dieser Einstellung können Sie verhindern, dass Endbenutzer Smart Lock konfigurieren.
 
-Einzelheiten finden Sie unter [How to create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client (Erstellen von Konfigurationselementen für Android- und Samsung KNOX-Geräte, die ohne den System Center Configuration Manager-Client verwaltet werden)](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md).
+Einzelheiten finden Sie unter [Erstellen von Konfigurationselementen für Android- und Samsung KNOX Standard-Geräte, die ohne den System Center Configuration Manager-Client verwaltet werden](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md).
 
 ## <a name="device-configuration-and-protection"></a>Gerätekonfiguration und -schutz
 
@@ -218,13 +218,13 @@ Einzelheiten finden Sie unter [Predeclare devices with IMEI or iOS serial number
 
 Sie können jetzt Überwachung durch Integritätsnachweisdienste für Windows 10-PCs aktivieren, die nur die lokale Infrastruktur benutzen, damit Computer ohne Internetzugang den Nachweis der Geräteintegrität (Device Health Attestation, DHA) berichten können.
 
-Einzelheiten finden Sie unter [Health attestation for System Center Configuration Manager (Integritätsnachweis für System Center Configuration Manager)](../../../core/servers/manage/health-attestation.md#How-to-enable-Health-Attestation-service-communication-on-Configuration-Manager-client-computers).  
+Einzelheiten finden Sie unter [Health attestation for System Center Configuration Manager (Integritätsnachweis für System Center Configuration Manager)](../../../core/servers/manage/health-attestation.md#how-to-enable-health-attestation-service-communication-on-configuration-manager-client-computers).  
 
 ## <a name="remote-control"></a>Remotesteuerung
 Geben Sie Endbenutzern die Möglichkeit, Datenübertragungen zu akzeptieren oder zu verweigern, bevor Inhalt aus der freigegebenen Zwischenablage in einer Remotesteuerungssitzung übertragen wird. Endbenutzer müssen nur einmal pro Sitzung die Berechtigung erteilen, und die Viewer können sich nicht selbst die Erlaubnis erteilen, mit dem Datentransfer fortzufahren. Sie finden diese neue Einstellung im Arbeitsbereich **Verwaltung**. Navigieren Sie dann zu den **Clienteinstellungen**, öffnen Sie anschließend den Bereich**Remotetools** unter **Standardeinstellungen**.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

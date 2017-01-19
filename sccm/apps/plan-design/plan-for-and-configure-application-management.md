@@ -2,7 +2,7 @@
 title: Planen und Konfigurieren der Anwendungsverwaltung | Microsoft Docs
 description: "Implementieren und konfigurieren Sie die erforderlichen Abhängigkeiten für die Bereitstellung von Anwendungen in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/06/2016
+ms.date: 12/13/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f1aaaf1c4fba8613b82d2c7a344a4dab572449a6
-ms.openlocfilehash: e9179a16d6fef73c7e50c3cf1dbfdc41623d1d15
+ms.sourcegitcommit: 7634d5326265d7947a01e5b83374f65911e33aeb
+ms.openlocfilehash: 3ab905192c091cb5ad013c8e0c8590597fb0422a
 
 
 ---
@@ -65,7 +65,11 @@ Implementieren Sie anhand der Informationen in diesem Artikel die erforderlichen
  Unabhängig von der verwendeten Version wird das Softwarecenter automatisch installiert, wenn Sie den Configuration Manager-Client auf Windows-PCs installieren.  
 
     > [!TIP]  
-    >  Die Version des Softwarecenters, die Benutzern angezeigt wird, basiert auf Configuration Manager-Clienteinstellungen. Dadurch können Sie flexibel steuern, welche Version basierend auf benutzerdefinierten Clienteinstellungen verwendet wird, die Sie in einer Sammlung bereitstellen.  
+    >  Die Version des Softwarecenters, die Benutzern angezeigt wird, basiert auf Configuration Manager-Clienteinstellungen. Dadurch können Sie flexibel steuern, welche Version basierend auf benutzerdefinierten Clienteinstellungen verwendet wird, die Sie in einer Sammlung bereitstellen. 
+
+    > [!IMPORTANT]
+    > In den kommenden Monaten wird die vorherige Version des Softwarecenters entfernt, und sie wird Ihnen nicht länger zur Verfügung stehen.
+    > Sie können Clients für die Verwendung des neuen Softwarecenters konfigurieren, indem Sie die Clienteinstellung **Computer-Agent** > **Neues Softwarecenter verwenden**. 
 
 ## <a name="steps-to-install-and-configure-the-application-catalog-and-software-center"></a>Schritte zum Installieren und Konfigurieren von Anwendungskatalog und Softwarecenter  
 
@@ -130,7 +134,7 @@ Implementieren Sie anhand der Informationen in diesem Artikel die erforderlichen
     Suchen Sie nach den Protokolldateien **awebsvcMSI.log** und **portlwebMSI.log**, um weitere Informationen zu erhalten.  
 
 ###  <a name="step-4-configure-the-client-settings-for-the-application-catalog-and-software-center"></a>Schritt 4: Konfigurieren der Clienteinstellungen für Anwendungskatalog und Softwarecenter  
- Mithilfe dieses Verfahrens werden die Clientstandardeinstellungen für Anwendungskatalog und Softwarecenter konfiguriert, die für alle Geräte in der Hierarchie gelten. Wenn Sie diese Einstellungen nur auf einige Geräte anwenden möchten, können Sie eine benutzerdefinierte Clienteinstellung erstellen und diese für eine Sammlung mit den Geräten bereitstellen, auf die Sie diese Einstellungen anwenden möchten. Weitere Informationen zum Erstellen von benutzerdefinierten Geräteeinstellungen finden Sie im Abschnitt [Erstellen und Bereitstellen von benutzerdefinierten Clienteinstellungen](../../core/clients/deploy/configure-client-settings.md#BKMK_CustomClientSettings) im Artikel [Konfigurieren von Clienteinstellungen in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md).  
+ Mithilfe dieses Verfahrens werden die Clientstandardeinstellungen für Anwendungskatalog und Softwarecenter konfiguriert, die für alle Geräte in der Hierarchie gelten. Wenn Sie diese Einstellungen nur auf einige Geräte anwenden möchten, können Sie eine benutzerdefinierte Clienteinstellung erstellen und diese für eine Sammlung mit den Geräten bereitstellen, auf die Sie diese Einstellungen anwenden möchten. Weitere Informationen zum Erstellen von benutzerdefinierten Geräteeinstellungen finden Sie im Abschnitt [Erstellen und Bereitstellen von benutzerdefinierten Clienteinstellungen](../../core/clients/deploy/configure-client-settings.md#create-and-deploy-custom-client-settings) im Artikel [Konfigurieren von Clienteinstellungen in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md).  
 
 1.  Wählen Sie in der Configuration Manager-Konsole die Optionen **Verwaltung** > **Clienteinstellungen** > **Clientstandardeinstellungen** aus.  
 
@@ -224,6 +228,6 @@ Benutzerdefiniertes Branding für das Softwarecenter wird gemäß den folgenden 
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: Erstellen von PFX-Zertifikatprofilen | System Center Configuration Manager
+title: Erstellen von PFX-Zertifikatprofilen | Microsoft-Dokumentation
 description: "Erfahren Sie, wie Sie PFX-Dateien in System Center Configuration Manager verwenden, um benutzerspezifische Zertifikate zu generieren, die den verschlüsselten Datenaustausch unterstützen."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4a4025325e635061cb99caed9cdb07390e90ea90
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 36c20af00e5a83be7038c3a0c01a33c546011427
 
 
 ---
@@ -117,6 +117,6 @@ System Center Configuration Manager ermöglicht Ihnen die Bereitstellung von PFX
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

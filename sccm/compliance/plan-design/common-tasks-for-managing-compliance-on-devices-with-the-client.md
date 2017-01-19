@@ -1,6 +1,6 @@
 ---
-title: "Allgemeine Aufgaben zur Verwaltung der Kompatibilität auf Geräten mit dem System Center Configuration Manager-Client | System Center Configuration Manager"
-description: "Erfahren Sie mehr zu den System Center Configuration Manager-Kompatibilitätseinstellungen, indem Sie einige gängige Szenarios durcharbeiten."
+title: "Allgemeine Aufgaben zur Verwaltung der Konformität auf Geräten mit dem System Center Configuration Manager-Client | Microsoft-Dokumentation"
+description: "Erfahren Sie mehr über System Center Configuration Manager-Kompatibilitätseinstellungen, indem Sie einige Szenarios durcharbeiten."
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 9be045df8433463d01d6cfca9271f230b5bf991d
+ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
+ms.openlocfilehash: feadb8b5b75832e914dfe62bd2d486e5bac1458d
 
 
 ---
@@ -113,6 +113,6 @@ Die Szenarios in diesem Thema dienen zur Einführung in das Verwenden der System
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

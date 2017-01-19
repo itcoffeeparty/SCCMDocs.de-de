@@ -1,8 +1,8 @@
 ---
-title: Erstellen von VPN-Profilen in System Center Configuration Manager
+title: Erstellen von VPN-Profilen in System Center Configuration Manager | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie VPN-Profile in System Center Configuration Manager erstellen.
-ms.custom: na
-ms.date: 10/28/2016
+ms.custom: 
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f338e4db-73b5-45ff-92f4-1b89a8ded989
 caps.latest.revision: 15
+author: nbigman
 caps.handback.revision: 0
 ms.author: nbigman
 ms.manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: a65de5feae2ff44f938ce8b7e3c8d23d560bb180
-ms.openlocfilehash: bcea8676c163a8aba1bc7f3364fde52375f52429
+ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
+ms.openlocfilehash: f674aa5502e4b3b45d0eda119419863892d72cff
 
 
 ---
@@ -29,7 +30,7 @@ ms.openlocfilehash: bcea8676c163a8aba1bc7f3364fde52375f52429
 > [!NOTE]  
 >
 > - Informationen zu den für verschiedene Geräteplattformen verfügbaren Verbindungstypen finden Sie unter [VPN-Profile in System Center Configuration Manager](../../protect/deploy-use/vpn-profiles.md).  
-> - Verteilen Sie die VPN-App für Drittanbieter-VPN-Verbindungen vor der Bereitstellung des VPN-Profils. Wenn Sie die App nicht bereitstellen, werden die Benutzer dazu aufgefordert, sobald sie versuchen, sich mit dem VPN zu verbinden. Weitere Informationen zum Bereitstellen von Apps finden Sie unter [Bereitstellen von Anwendungen mit System Center Configuration Manager](../../apps/deploy-use/deploy-applications).
+> - Verteilen Sie die VPN-App für Drittanbieter-VPN-Verbindungen vor der Bereitstellung des VPN-Profils. Wenn Sie die App nicht bereitstellen, werden die Benutzer dazu aufgefordert, sobald sie versuchen, sich mit dem VPN zu verbinden. Weitere Informationen zum Bereitstellen von Apps finden Sie unter [Bereitstellen von Anwendungen mit System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md).
 
 ### <a name="start-the-create-vpn-profile-wizard"></a>Starten des Assistenten zum Erstellen von VPN-Profilen  
 
@@ -131,11 +132,19 @@ ms.openlocfilehash: bcea8676c163a8aba1bc7f3364fde52375f52429
             >  
             >  Geräte unter iOS unterstützen nur RSA SecurID und MSCHAP v2 als Authentifizierungsmethode, wenn der Verbindungstyp PPTP lautet. Um die Ausgabe von Fehlern zu vermeiden, stellen Sie auf Geräten unter IOS ein separates PPTP-VPN-Profil bereit.  
 
-               - Die Einstellungen für den **bedingten Zugriff** und die **primäre Domäne für den Unternehmensdatenschutz:** Werden nur bei Verwendung von Configuration Manager ohne Intune unterstützt und können über die Option **Erweitert** ausgewählt werden Weitere Informationen zum Unternehmensdatenschutz finden Sie unter [Create a Windows Information Protection (WIP) policy using Microsoft Intune (Erstellen einer Windows Information Protection-Richtlinie (WIP) mit Microsoft Intune)](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/create-wip-policy-using-intune).
-        
-        ![Konfigurieren des bedingten Zugriffs für VPN](../media/vpn-conditional-access.png)
+        - **Bedingter Zugriff**
+            - Wählen Sie **Enable conditional access for this VPN connection** (Bedingten Zugriff für diese VPN-Verbindung aktivieren) aus, um sicherzustellen, dass Geräte, die eine Verbindung mit dem VPN herstellen, vor der Verbindung auf Konformität mit bedingtem Zugriff getestet werden. Weitere Informationen zu Konformitätsrichtlinien finden Sie unter [Device compliance policies in System Center Configuration Manager (Verwalten von Konformitätsrichtlinien für Geräte in System Center Configuration Manager)](https://docs.microsoft.com/en-us/sccm/protect/deploy-use/device-compliance-policies.md)
+            - Wählen Sie **Enable single sign-on (SSO) with alternate certificate** (Einmaliges Anmelden (SSO) mit alternativem Zertifikat aktivieren) aus, um ein anderes Zertifikat als das Zertifikat für die VPN-Authentifizierung für die Gerätekonformität auszuwählen. Wenn Sie diese Option wählen, geben Sie **EKU** (durch Komma getrennte Liste) und **Issuer Hash** (Ausstellerhash) an, um das korrekte Zertifikat auszuwählen, dass der VPN-Client suchen soll.
 
-        -   Bei manchen Authentifizierungsmethoden können Sie auf **Konfigurieren** klicken, um das Dialogfeld für Windows-Eigenschaften zu öffnen (falls die Windows-Version, unter der die System Center Configuration Manager-Konsole ausgeführt wird, diese Authentifizierungsmethode unterstützt). Dort können Sie die Eigenschaften der Authentifizierungsmethode konfigurieren.  
+         - **Windows Information Protection**: Geben Sie die vom Unternehmen verwaltete Unternehmensidentität an. Diese ist normalerweise die primäre Domäne Ihres Unternehmens, z.B. *contoso.com*. Sie können mehrere Domänen angeben, die Ihrer Organisation gehören, indem Sie sie durch das Zeichen „|“ trennen. Beispiel: *contoso.com|newcontoso.com*.   
+            Weitere Informationen zu Windows Information Protection finden Sie unter [Create a Windows Information Protection (WIP) policy using Microsoft Intune (Erstellen einer Windows Information Protection-Richtlinie (WIP) mit Microsoft Intune)](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/create-wip-policy-using-intune).   
+
+         ![Konfigurieren des bedingten Zugriffs für VPN](../media/vpn-conditional-access.png)
+
+
+        > [!NOTE]  
+        >
+        >Bei manchen Authentifizierungsmethoden können Sie auf **Konfigurieren** klicken, um das Dialogfeld für Windows-Eigenschaften zu öffnen (falls die Windows-Version, unter der die System Center Configuration Manager-Konsole ausgeführt wird, diese Authentifizierungsmethode unterstützt). Dort können Sie die Eigenschaften der Authentifizierungsmethode konfigurieren.  
 
 ### <a name="configure-proxy-settings-for-the-vpn-profile"></a>Konfigurieren von Proxyeinstellungen für das VPN-Profil  
 
@@ -194,12 +203,12 @@ Wählen Sie auf der Seite **Unterstützte Plattformen** des **Assistenten zum Er
 
 ### <a name="next-steps"></a>Nächste Schritte
 
-- Verteilen Sie die VPN-App für Drittanbieter-VPN-Verbindungen vor der Bereitstellung des VPN-Profils. Wenn Sie die App nicht bereitstellen, werden die Benutzer dazu aufgefordert, sobald sie versuchen, sich mit dem VPN zu verbinden. Weitere Informationen zum Bereitstellen von Apps finden Sie unter [Bereitstellen von Anwendungen mit System Center Configuration Manager](../../apps/deploy-use/deploy-applications).
+- Verteilen Sie die VPN-App für Drittanbieter-VPN-Verbindungen vor der Bereitstellung des VPN-Profils. Wenn Sie die App nicht bereitstellen, werden die Benutzer dazu aufgefordert, sobald sie versuchen, sich mit dem VPN zu verbinden. Weitere Informationen zum Bereitstellen von Apps finden Sie unter [Bereitstellen von Anwendungen mit System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md).
 
 - Stellen Sie die VPN-Profile wie in [Erstellen von VPN-Profilen in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md) beschrieben bereit.  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

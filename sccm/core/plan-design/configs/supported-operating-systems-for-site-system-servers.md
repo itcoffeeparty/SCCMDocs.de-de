@@ -1,5 +1,5 @@
 ---
-title: "Unterstützte Standortsystemserver | System Center Configuration Manager"
+title: "Unterstützte Standortsystemserver | Microsoft-Dokumentation"
 description: "Erfahren Sie, welche Windows-Versionen Sie verwenden können, um einen System Center Configuration Manager-Standort oder eine entsprechende Standortsystemrolle zu hosten."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,12 +16,12 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 00d5d8d9ce90b2da79485250d25f943ca1c4547b
+ms.sourcegitcommit: d23b98b362fb016c53974f851c48fa7200d2b2e3
+ms.openlocfilehash: b7c24dee94bca4ce69e0ba8f33129a0b21819d13
 
 
 ---
-# <a name="supported-operating-systems-for-system-center-configuration-manager-site-system-servers"></a>Unterstützte Betriebssysteme für System Center Configuration Manager-Standortsystemserver
+# <a name="supported-operating-systems-for-system-center-configuration-manager--site-system-servers"></a>Unterstützte Betriebssysteme für System Center Configuration Manager-Standortsystemserver
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -36,7 +36,7 @@ Verwenden Sie die Informationen in diesem Thema mit den Informationen in den fol
 
 
 
-## <a name="windows-server-2016---standard-datacenter"></a>Windows Server 2016 – Standard, Datacenter
+## <a name="windows-server-2016-----standard-datacenter"></a>Windows Server 2016 – Standard, Datacenter
 Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrollup von KB3186654 (oder Baselineversion 1606, die im Oktober 2016 veröffentlicht wurde) unterstützt.
 
 **Standortserver:**  
@@ -68,6 +68,8 @@ Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrol
 -   Anmeldungsproxypunkt  
 
 -   Fallbackstatuspunkt  
+
+-   Verwaltungspunkt
 
 -   Reporting Services-Punkt  
 
@@ -114,6 +116,8 @@ Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrol
 
 -   Fallbackstatuspunkt  
 
+-   Verwaltungspunkt
+
 -   Reporting Services-Punkt  
 
 -   Dienstverbindungspunkt  
@@ -159,6 +163,8 @@ Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrol
 
 -   Fallbackstatuspunkt  
 
+-   Verwaltungspunkt
+
 -   Reporting Services-Punkt  
 
 -   Dienstverbindungspunkt  
@@ -173,8 +179,8 @@ Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrol
 
 -   Zustandsmigrationspunkt  
 
-## <a name="windows-server-2008-r2-with-sp1-x64---standard-enterprise-datacenter"></a>Windows Server 2008 R2 mit SP1 (x64) – Standard, Enterprise, Datacenter  
- Windows Server 2008 R2 unterliegt nun dem erweiterten Support und nicht mehr dem grundlegenden Support, wie im  [Microsoft-Support-Lifecycle](https://support.microsoft.com/lifecycle)ausführlich erläutert. Weitere Informationen bezüglich des zukünftigen Supports für diese Betriebssysteme als Standortsysteme mit Configuration Manager finden Sie unter [Entfernte und veraltete Features für System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
+## <a name="windows-server-2008-r2-with-sp1-x64-----standard-enterprise-datacenter"></a>Windows Server 2008 R2 mit SP1 (x64) – Standard, Enterprise, Datacenter  
+ Windows Server 2008 R2 unterliegt nun dem erweiterten Support und nicht mehr dem grundlegenden Support, wie im [Microsoft-Support-Lifecycle](https://support.microsoft.com/lifecycle) ausführlich erläutert. Weitere Informationen zur Featureunterstützung für diese Betriebssysteme als Standortsysteme mit Configuration Manager finden Sie unter [Entfernte und veraltete Features für System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
 
 **Standortserver:**  
 
@@ -206,6 +212,8 @@ Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrol
 
 -   Fallbackstatuspunkt  
 
+-   Verwaltungspunkt
+
 -   Reporting Services-Punkt  
 
 -   Dienstverbindungspunkt  
@@ -221,7 +229,7 @@ Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrol
 -   Zustandsmigrationspunkt  
 
 ## <a name="windows-server-2008-with-sp2-x86-x64---standard-enterprise-datacenter"></a>Windows Server 2008 mit SP2 (x86, x64) – Standard, Enterprise, Datacenter  
- Windows Server 2008 unterliegt nun dem erweiterten Support und nicht mehr dem grundlegenden Support, wie im  [Microsoft-Support-Lifecycle](https://support.microsoft.com/lifecycle)ausführlich erläutert. Weitere Informationen bezüglich des zukünftigen Supports für diese Betriebssysteme als Standortsysteme mit Configuration Manager finden Sie unter [Entfernte und veraltete Features für System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
+ Windows Server 2008 unterliegt nun dem erweiterten Support und nicht mehr dem grundlegenden Support, wie im [Microsoft-Support-Lifecycle](https://support.microsoft.com/lifecycle) ausführlich erläutert. Weitere Informationen zur Featureunterstützung für diese Betriebssysteme als Standortsysteme mit Configuration Manager finden Sie unter [Entfernte und veraltete Features für System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
 
 **Standortserver:**  
 
@@ -256,6 +264,8 @@ Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrol
 -   Anmeldungsproxypunkt  
 
 -   Fallbackstatuspunkt  
+
+-   Verwaltungspunkt
 
 -   Reporting Services-Punkt  
 
@@ -331,6 +341,6 @@ Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrol
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

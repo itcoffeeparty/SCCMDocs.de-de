@@ -1,6 +1,6 @@
 ---
 
-title: "Integration mit Windows Update für Unternehmen in Windows 10 | Configuration Manager"
+title: "Integration mit Windows Update für Unternehmen in Windows 10 | Microsoft-Dokumentation"
 description: "Verwenden Sie Windows Update for Business, um Windows 10-basierte Geräte in Ihrer Organisation, die mit Windows Update verbunden sind, auf dem neuesten Stand zu halten."
 keywords: 
 author: dougeby
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: c4c6e50d0e1a34653226369cffdc0bde905398fc
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 8bdbacd54632475ac69a0d0a9a34b2567c3daa13
 
 
 ---
@@ -45,7 +45,7 @@ Mit Windows Update for Business (WUfB) können Sie Windows 10-basierte Geräte i
 
 -   Die vollständige Clientbereitstellung von Configuration Manager, die die Softwareupdateinfrastruktur verwendet, funktioniert nicht für Clients, die für den Empfang von Updates mit WUfB verbunden sind.  
 
-## <a name="identify-clients-that-use-wufb-for-windows-10-updates"></a>Identifizieren von Clients, die WUfB für Windows 10-Updates verwenden  
+## <a name="identify-clients-that-use--wufb-for-windows-10-updates"></a>Identifizieren von Clients, die WUfB für Windows 10-Updates verwenden  
  Verwenden Sie das folgende Verfahren, um Clients zu identifizieren, die WUfB zum Abrufen von Windows 10-Updates und -Upgrades verwenden. Konfigurieren Sie diese Clients derart, dass sie zum Abrufen von Updates kein WSUS verwenden, und stellen Sie eine Einstellung für den Client-Agent bereit, um den Workflow der Softwareupdates für diese Clients zu deaktivieren.  
 
  **Voraussetzungen**  
@@ -69,6 +69,6 @@ Mit Windows Update for Business (WUfB) können Sie Windows 10-basierte Geräte i
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

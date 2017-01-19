@@ -1,5 +1,5 @@
 ---
-title: Funktionen in System Center Configuration Manager Technical Preview 1512
+title: "Funktionen in Technical Preview 1512 für System Center Configuration Manager | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr über Funktionen, die in System Center Configuration Manager Technical Preview 1512 zur Verfügung stehen."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 1d97e7646adbb02a03b33b5efc56c1658364956e
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: ea6cb27fc229854ba7c1c39bb735ed9b9a88bb61
 
 ---
 # <a name="capabilities-in-technical-preview-1512-for-system-center-configuration-manager"></a>Funktionen in System Center Configuration Manager Technical Preview 1512
@@ -93,6 +93,6 @@ Vor der Verwendung von Endpoint Protection-Richtlinien müssen Sie den Endpoint 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

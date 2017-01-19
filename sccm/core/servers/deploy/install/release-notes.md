@@ -1,5 +1,5 @@
 ---
-title: Anmerkungen zu dieser Version | System Center Configuration Manager
+title: Anmerkungen zu dieser Version | Microsoft-Dokumentation
 description: In diesen Anmerkungen finden Sie Informationen zu dringenden Problemen, die im Produkt noch nicht behoben oder bisher in keinem Microsoft Knowledge Base-Artikel beschrieben wurden.
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 0b6c49f3c5e817f1dbd40b40c78d89c4a018e0f1
+ms.sourcegitcommit: ea723a6694feb2c9584b35498aa9c3519383f08d
+ms.openlocfilehash: a9dc046a54c15d9d299664cd1f2a149383f53489
 
 
 ---
@@ -35,16 +35,31 @@ Bei System Center Configuration Manager sind Anmerkungen zur Produktversion auf 
 
 ## <a name="setup-and-upgrade"></a>Setup und Upgrade  
 
+### <a name="when-installing-a-long-term-service-branch-site-using-version-1606-a-current-branch-site-is-installed"></a>Wenn Sie einen Long-Term Servicing Branch-Standort (LTSB) mit Version 1606 installieren, wird ein aktueller Current Branch-Standort installiert
+Wenn Sie das Baselinemedium von Version 1606 aus der Version vom Oktober 2016 zum Installieren eines Long-Term Servicing Branch-Standorts (LTSB) verwenden, installiert Setup stattdessen einen Current Branch-Standort. Dies geschieht, weil die Option zum Installieren eines Dienstverbindungspunkts mit der Installation des Standorts nicht ausgewählt ist.
+
+ - Obwohl ein Dienstverbindungspunkt nicht erforderlich ist, muss er während des Setups beim Installieren eines LTSB-Standorts zum Installieren ausgewählt werden.
+
+Nach Abschluss der Installation können Sie den Dienstverbindungspunkt deinstallieren.  Allerdings benötigen Sie einen Dienstverbindungspunkt im Offline- oder Onlinemodus zum Senden von Telemetriedaten und Abrufen von Sicherheitsupdates für die Current Branch- und LTSB-Standorte.
+
+Wenn Ihr Standort als Current Branch-Standort installiert ist und Sie einen LTSB-Standort installieren wollten, können Sie den Standort deinstallieren und anschließend neu installieren. Sie können auch [Microsoft-Hilfe und -Support](http://go.microsoft.com/fwlink/?LinkId=243064) aufrufen, um Unterstützung zu erhalten.  
+
+Damit Sie sehen, welcher Standort installiert ist, wechseln Sie in der Konsole zu **Verwaltung** > **Standortkonfiguration** > **Standorte**, und öffnen Sie die **Hierarchieeinstellungen**. Die Option zum Konvertieren des Standorts zu einem Current Branch-Standort ist nur verfügbar, wenn ein LTSB-Standort installiert ist.  
+
+**Problemumgehung:**  Keine.   
 
 
-### <a name="the-sql-server-backup-model-in-use-by-configuration-manager-can-change-from-full-to-simple"></a>Das von Configuration Manager verwendete SQL Server-Sicherungsmodell kann von „Vollständig“ auf „Einfach“ geändert werden.  
+
+
+
+### <a name="the--sql-server-backup-model-in-use-by-configuration-manager-can-change-from-full-to-simple"></a>Das von Configuration Manager verwendete SQL Server-Sicherungsmodell kann von „Vollständig“ auf „Einfach“ geändert werden.  
  Beim Upgrade auf System Center Configuration Manager, Version 1511, kann sich das von Configuration Manager verwendete SQL Server-Sicherungsmodell vom vollständigen in das einfache Modell ändern.  
 
 -   Wenn Sie einen benutzerdefinierten SQL Server-Sicherungstask mit dem vollständigen Sicherungsmodell (anstelle des integrierten Sicherungstasks für Configuration Manager) verwenden, kann das Sicherungsmodell durch das Upgrade vom vollständigen in das einfache Modell geändert werden.  
 
 **Problemumgehung**: Überprüfen Sie nach dem Upgrade auf Version 1511 die SQL Server-Konfiguration, und stellen Sie ggf. das vollständige Modell wieder her.  
 
-### <a name="when-you-add-a-service-window-to-a-new-site-server-service-windows-that-were-configured-for-another-site-server-are-deleted"></a>Wenn Sie einem neuen Standortserver ein Dienstfenster hinzufügen, werden die für einen anderen Standortserver konfigurierten Dienstfenster gelöscht.  
+### <a name="when-you-add-a-service-window-to-a-new-site-server-service-windows-that-were---configured-for-another-site-server-are-deleted"></a>Wenn Sie einem neuen Standortserver ein Dienstfenster hinzufügen, werden die für einen anderen Standortserver konfigurierten Dienstfenster gelöscht.  
  Bei Verwendung von Dienstfenstern mit System Center Configuration Manager, Version 1511, können diese nur für einen einzelnen Standortserver in einer Hierarchie konfiguriert werden. Wenn Sie nach dem Konfigurieren von Dienstfenstern auf einem Server ein Dienstfenster auf einem zweiten Standortserver konfigurieren, werden die Dienstfenster auf dem ersten Standortserver im Hintergrund und ohne Warnung oder Fehler gelöscht.  
 
 **Problemumgehung**: Installieren Sie den Hotfix aus dem [Microsoft Knowledge Base-Artikel 3142341](http://support.microsoft.com/kb/3142341). Dieses Problem wird auch durch Installation von Update 1602 für System Center Configuration Manager behoben.  
@@ -120,6 +135,32 @@ Fehler beim Ausführen von Setup mit den folgenden Fehlermeldungen im Setup-Prot
 **Problemumgehung:** Folgende Problemumgehungen sind möglich:
  - Laden Sie beim Ausführen des Setups die aktuellen verteilbaren Dateien von Microsoft herunter, um diese anstelle der im Ordner „CD.latest“ enthaltenden Dateien zu verwenden.
  - Löschen Sie den Ordner *cd.latest\redist\languagepack\zhh*, und führen Sie anschließend Setup erneut aus.
+
+### <a name="service-connection-tool-throws-an-exception-when-sql-server-is-remote-or-when-shared-memory-is-disabled"></a>Das Dienstverbindungstool löst eine Ausnahme aus, wenn SQL Server remote verfügbar ist oder Shared Memory deaktiviert ist
+Ab Version 1606 generiert das Dienstverbindungstool eine Ausnahme, wenn eine der folgenden Aussagen zutrifft:  
+ -  Die Standortdatenbank befindet sich nicht auf dem Computer, der den Dienstverbindungspunkt hostet, und verwendet einen nicht standardmäßigen Port (nicht Port 1433)
+ -  Die Standortdatenbank ist auf demselben Server wie der Dienstverbindungspunkt, aber das SQL-Protokoll **Shared Memory** ist deaktiviert
+
+Die Ausnahme ist ähnlich der folgenden:
+ - *Nicht behandelte Ausnahme: System.Data.SqlClient.SqlException: Netzwerkbezogener oder instanzspezifischer Fehler beim Herstellen einer Verbindung mit SQL Server. Der Server wurde nicht gefunden oder war nicht zugänglich. Stellen Sie sicher, dass der Instanzname richtig ist und dass SQL Server für das Zulassen von Remoteverbindungen konfiguriert ist. (Anbieter: Named Pipes-Provider, Fehler: 40 – Verbindung mit SQL Server konnte nicht geöffnet werden) --*
+
+**Problemumgehung**: Bei Verwendung des Tools müssen Sie die Registrierung des Servers, der den Dienstverbindungspunkt hostet, mit Informationen zum SQL Server-Port ändern:
+
+   1.   Bearbeiten Sie vor der Verwendung des Tools den folgenden Registrierungsschlüssel, und fügen Sie die Nummer des verwendeten Ports dem Namen des SQL Servers hinzu:
+    - Schlüssel: HKLM\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\
+      - Wert: &lt;SQL Server-Name>
+    - Hinzufügen: **,&lt;PORT>**
+
+    Z.B. bei Hinzufügen des Ports *15001* zu einem Server namens *testserver.test.net* wäre der resultierende Schlüssel: ***HKLM\Software\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\testserver.test.net,15001***
+
+   2.   Nachdem Sie den Port in der Registrierung hinzufügen, sollte das Tool normal funktionieren.  
+
+   3.   Nachdem Sie das Tool verwendet haben, ändern Sie für die Schritte **Verbindung** und **Import** den Registrierungsschlüssel auf den ursprünglichen Wert zurück.  
+
+
+
+
+
 
 ## <a name="backup-and-recovery"></a>Sicherung und Wiederherstellung
 ### <a name="pre-production-client-is-not-available-after-a-site-restore"></a>Der Präproduktionsclient ist nach einer Standortwiederherstellung nicht verfügbar
@@ -250,6 +291,6 @@ Dieses Problem betrifft den bedingten Zugriff von System Center Configuration Ma
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

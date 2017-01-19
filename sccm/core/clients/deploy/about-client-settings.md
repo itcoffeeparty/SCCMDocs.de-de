@@ -1,6 +1,6 @@
 ---
 title: Clienteinstellungen | Microsoft Docs
-description: Auswahl von Clienteinstellung mithilfe der Verwaltungskonsole in System Center Configuration Manager.
+description: Auswahl von Clienteinstellungen mithilfe der Verwaltungskonsole in System Center Configuration Manager.
 ms.custom: na
 ms.date: 12/12/2016
 ms.prod: configuration-manager
@@ -17,31 +17,31 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 809c7938968b4a6efce6ef37fe7b7baf2c9dd3e7
-ms.openlocfilehash: 1615c183c440b44084651d52bfc50be2d65c2e11
+ms.sourcegitcommit: 21eeba4d35f19930f26ed820295d6f142adae1ac
+ms.openlocfilehash: 6c63d63c5b5a7fc1406027dd9380ea799c1aa318
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>Informationen zu Clienteinstellungen in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Alle Clienteinstellungen in System Center Configuration Manager werden in der Configuration Manager-Konsole über den Knoten **Clienteinstellungen** im Arbeitsbereich **Verwaltung** verwaltet. Mit Configuration Manager wird ein Satz Standardeinstellungen geliefert. Wenn Sie die Clientstandardeinstellungen ändern, werden diese Einstellungen auf alle Clients in der Hierarchie angewendet. Sie können auch benutzerdefinierte Clienteinstellungen konfigurieren. Wenn Sie diese Einstellungen Sammlungen zuweisen, werden die Clientstandardeinstellungen überschrieben. Informationen zum Konfigurieren von Clienteinstellungen finden Sie unter [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md).  
+Alle Clienteinstellungen in System Center Configuration Manager werden in der Configuration Manager-Konsole über den Knoten **Clienteinstellungen** im Arbeitsbereich **Verwaltung** verwaltet. Mit Configuration Manager wird ein Satz Standardeinstellungen geliefert. Wenn Sie die Clientstandardeinstellungen verändern, werden diese Einstellungen auf alle Clients in der Hierarchie angewendet. Sie können auch benutzerdefinierte Clienteinstellungen konfigurieren. Wenn Sie diese Einstellungen Sammlungen zuweisen, werden die Clientstandardeinstellungen überschrieben. Informationen zum Konfigurieren von Clienteinstellungen finden Sie unter [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md).  
 
- Viele der Clienteinstellungen sind selbsterklärend. Andere werden hier beschrieben.  
+Viele der Clienteinstellungen sind selbsterklärend. Andere werden hier beschrieben.  
 
-## <a name="background-intelligent-transfer"></a>Intelligente Hintergrundübertragung  
+## <a name="background-intelligent-transfer-service"></a>Background Intelligent Transfer Service  
 
 -   **Maximale Netzwerkbandbreite für BITS-Übertragungen im Hintergrund begrenzen**  
 
-   Ist diese Option auf **Wahr** oder **Ja** festgelegt, wird von den Clients die BITS-Bandbreiteneinschränkung verwendet.  
+   Wenn für diese Option **Wahr** oder **Ja** festgelegt ist, verwenden die Clients die BITS-Bandbreiteneinschränkung.  
 
 -   **Beginn des Einschränkungszeitfensters**  
 
-   Die lokale Startzeit für das BITS-Einschränkungszeitfenster.  
+   Geben Sie die lokale Startzeit für das BITS-Einschränkungszeitfenster an.  
 
 -   **Ende des Einschränkungszeitfensters**  
 
-  Die lokale Endzeit für das BITS-Einschränkungszeitfenster. Entspricht dieser Wert dem Wert von **Beginn des Einschränkungszeitfensters**, ist die BITS-Einschränkung immer aktiviert.  
+   Geben Sie die lokale Endzeit für das BITS-Einschränkungszeitfenster an. Entspricht dieser Wert dem Wert von **Throttling window start time** (Beginn des Einschränkungszeitfensters), ist die BITS-Einschränkung immer aktiviert.  
 
 -   **Maximale Übertragungsrate während des Einschränkungszeitfensters (KBit/s)**  
 
@@ -49,21 +49,21 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
 -   **BITS-Downloads außerhalb des Einschränkungszeitfensters zulassen**  
 
-   Ermöglicht Configuration Manager-Clients die Verwendung separater BITS-Einstellungen außerhalb des angegebenen Zeitfensters.  
+   Wählen Sie diese Option aus, damit Configuration Manager-Clients separate BITS-Einstellungen außerhalb des angegebenen Fensters verwenden können.  
 
 -   **Maximale Übertragungsrate außerhalb des Einschränkungszeitfensters (KBit/s)**  
 
-   Maximale Übertragungsrate, die von Clients außerhalb des BITS-Einschränkungszeitfensters verwendet werden kann, sofern die BITS-Einschränkung außerhalb des Zeitfensters zugelassen wurde.  
+   Geben Sie die maximale Übertragungsrate an, die von Clients außerhalb des BITS-Einschränkungszeitfensters verwendet werden kann, sofern die BITS-Einschränkung außerhalb des Zeitfensters zugelassen wurde.  
 
-## <a name="client-cache-settings"></a>Einstellung des Clientcaches
+## <a name="client-cache-settings"></a>Einstellungen des Clientcaches
 
 - **BranchCache konfigurieren**
 
-  Wird ab Version 1606 verwendet, um den Clientcomputer für [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache) einzurichten. Um die BranchCache-Zwischenspeicherung auf dem Client zuzulassen, legen Sie **BranchCache aktivieren** auf **Ja** fest. 
+  Ab Version 1606 wird diese Einstellung verwendet, um den Clientcomputer für [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache) einzurichten. Um die BranchCache-Zwischenspeicherung auf dem Client zuzulassen, legen Sie **BranchCache aktivieren** auf **Ja** fest.
 
 - **Konfigurieren der Cachegröße des Clients**
 
-  Der Clientcache auf Windows-Computern speichert temporäre Dateien, die zum Installieren von Anwendungen und Programmen verwendet werden. Wählen Sie **Ja** aus, um die **maximale Cachegröße** (in MB oder als Prozentsatz des Datenträgers) festzulegen. Wird die Option auf **Nein** festgelegt, beträgt die Standardgröße 5120 MB.
+  Der Clientcache auf Windows-Computern speichert temporäre Dateien, die zum Installieren von Anwendungen und Programmen verwendet werden. Wählen Sie **Ja** aus, um die **maximale Cachegröße** (in Megabytes oder als Prozentsatz des Datenträgers) festzulegen. Wenn die Option **Nein** festgelegt ist, beträgt die Standardgröße 5.120 MB.
 
 ## <a name="client-policy"></a>Clientrichtlinie  
 
@@ -83,7 +83,7 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
    Wenn Sie diese Option auf **Wahr** oder **Ja** festlegen, und Configuration Manager [den Benutzer ermittelt hat](../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser), erhalten Clients auf Computern speziell auf den angemeldeten Benutzer abgestimmte Anwendungen und Programme.  
 
-   Da die Liste der für Benutzer verfügbaren Software vom Standortserver an den Anwendungskatalog übertragen wird, muss für diese Einstellung die Option **Wahr** oder **Ja** ausgewählt werden, damit Benutzer die Anwendungen über den Anwendungskatalog anzeigen und anfordern können. Wenn aber diese Einstellung auf **Falsch** oder **Nein**festgelegt wurde, wird die Verwendung des Anwendungskatalogs wie folgt eingeschränkt:  
+   Da die Liste der für Benutzer verfügbaren Software vom Standortserver an den Anwendungskatalog übertragen wird, muss für diese Einstellung die Option **Wahr** oder **Ja** ausgewählt werden, damit Benutzer die Anwendungen über den Anwendungskatalog anzeigen und anfordern können. Wenn diese Einstellung aber auf **Falsch** oder **Nein**festgelegt wurde, wird die Verwendung des Anwendungskatalogs wie folgt eingeschränkt:  
 
   -   Den Benutzern ist es nicht möglich, die im Anwendungskatalog angezeigten Anwendungen zu installieren.  
 
@@ -93,19 +93,19 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
   -   Wenn Sie eine Anwendungsbereitstellung nach der Installation der Anwendung aus dem Anwendungskatalog entfernen, wird noch bis zu 2 Tage lang von den Clients geprüft, ob die Anwendung installiert ist.  
 
-   Wenn für diese Einstellung die Option **Falsch** oder **Nein**gewählt wurde, erhalten Benutzer zudem keine erforderlichen Anwendungen, die Sie für Benutzer bereitstellen, und auch keine anderen Verwaltungsvorgänge, die in Benutzerrichtlinien enthalten sind.  
+   Wenn für diese Einstellung die Option **Falsch** oder **Nein** gewählt wurde, erhalten Benutzer zudem keine erforderlichen Anwendungen, die Sie für Benutzer bereitstellen, und auch keine anderen Verwaltungsaufgaben, die in Benutzerrichtlinien enthalten sind.  
 
-   Diese Einstellung gilt für Benutzer, deren Computer mit dem Intranet und Internet verbunden sind. Sie muss auf **Wahr** oder **Ja** gesetzt werden, wenn Sie Benutzerrichtlinien auch im Internet aktivieren möchten.  
+   Diese Einstellung gilt für Benutzer, deren Computer mit dem Intranet und dem Internet verbunden sind. Es muss **Wahr** oder **Ja** festgelegt sein, wenn Sie auch Benutzerrichtlinien im Internet aktivieren möchten.  
 
 -   **Benutzerrichtlinienanforderungen von Internetclients aktivieren**  
 
-   Wenn der Client und der Standort für die internetbasierte Clientverwaltung konfiguriert sind und Sie diese Option auf **Wahr** oder **Ja** setzen, erhalten Benutzer eine Benutzerrichtlinie, wenn ihr Computer mit dem Internet verbunden ist und die beiden folgenden Bedingungen erfüllt sind:  
+   Wenn der Client und der Standort für die internetbasierte Clientverwaltung konfiguriert sind, und Sie diese Option auf **Wahr** oder **Ja** setzen, erhalten Benutzer eine Benutzerrichtlinie, wenn ihr Computer mit dem Internet verbunden ist, und die beiden folgenden Bedingungen erfüllt sind:  
 
-  -   Die Clienteinstellung **Benutzerrichtlinie auf Clients aktivieren** ist auf **Wahr** oder **Benutzerrichtlinie auf Clients aktivieren** ist auf **Ja**gesetzt.  
+  -   Die Clienteinstellung **Enable user policy polling on clients** (Benutzerrichtlinie auf Clients aktivieren) ist auf **Wahr** oder **Enable user policy polling on clients** (Benutzerrichtlinie auf Clients aktivieren) ist auf **Ja** festgesetzt.  
 
   -   Der Benutzer wird vom internetbasierten Verwaltungspunkt erfolgreich mithilfe der Windows-Authentifizierung (Kerberos oder NTLM) authentifiziert.  
 
-   Wenn Sie für diese Option die Einstellung **Falsch** oder **Nein**einrichten oder eine der Bedingungen nicht zutrifft, werden an einen Computer im Internet nur Computerrichtlinien übertragen. In diesem Fall können Benutzer weiterhin Anwendungen über einen internetbasierten Anwendungskatalog anzeigen, anfordern und installieren. Wenn diese Einstellung auf **Falsch** oder **Nein** gesetzt wurde, aber die Option **Benutzerrichtlinienabruf auf Clients aktivieren** auf **Wahr** oder die Option **Benutzerrichtlinie auf Clients aktivieren** auf **Ja**gesetzt ist, erhalten Benutzer erst nach Trennen der Internetverbindung Benutzerrichtlinien.  
+   Wenn Sie für diese Option die Einstellung **Falsch** oder **Nein**einrichten oder eine der Bedingungen nicht zutrifft, werden an einen Computer im Internet nur Computerrichtlinien übertragen. In diesem Fall können Benutzer weiterhin Anwendungen über einen internetbasierten Anwendungskatalog anzeigen, anfordern und installieren. Wenn diese Einstellung auf **Falsch** oder **Nein** gesetzt wurde, aber die Option **Enable user policy polling on clients** (Benutzerrichtlinienabruf auf Clients aktivieren) auf **Wahr** oder die Option **Benutzerrichtlinie auf Clients aktivieren** auf **Ja**gesetzt ist, erhalten Benutzer erst nach Trennen der Internetverbindung Benutzerrichtlinien.  
 
    Weitere Informationen zur Clientverwaltung im Internet finden Sie unter [Considerations for client communications from the Internet or an untrusted forest (Überlegungen zur Clientkommunikation aus dem Internet oder aus einer nicht vertrauenswürdigen Gesamtstruktur)](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in [Communications between endpoints in System Center Configuration Manager(Datenübertragungen zwischen Endpunkten in System Center Configuration Manager)](../../../core/plan-design/hierarchy/communications-between-endpoints.md).  
 
@@ -116,7 +116,7 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
 -   **Kompatibilitätsauswertung planen**  
 
-     Klicken Sie auf **Zeitplan** , um den Standardzeitplan zu erstellen, der für Benutzer angezeigt wird, wenn diese eine Konfigurationsbasislinie bereitstellen. Dieser Wert kann im Dialogfeld **Konfigurationsbasislinie bereitstellen** für jede Basislinie konfiguriert werden.  
+     Wählen Sie **Zeitplan** aus, um den Standardzeitplan zu erstellen, der für Benutzer angezeigt wird, wenn diese eine Konfigurationsbaseline bereitstellen. Dieser Wert kann im Dialogfeld **Konfigurationsbasislinie bereitstellen** für jede Basislinie konfiguriert werden.  
 
 -   **Benutzerdaten und Profile aktivieren**  
 
@@ -128,34 +128,34 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
      Diese Einstellung wird von Configuration Manager verwendet, um Benutzer über das Softwarecenter mit dem Anwendungskatalog zu verbinden. Sie können für einen Server, von dem der Anwendungskatalog-Websitepunkt gehostet wird, den NetBIOS-Namen oder FQDN angeben. Alternativ können Sie die automatische Erkennung verwenden oder eine URL für benutzerdefinierte Bereitstellungen angeben. Die automatische Erkennung stellt aus folgenden Gründen meist die beste Lösung dar:  
 
-    -   Clients wird automatisch ein Anwendungskatalog-Websitepunkt von ihrem Standort zugewiesen, sofern ihr Standort einen Anwendungskatalog-Websitepunkt enthält.  
+    -   Clients wird automatisch ein Anwendungskatalog-Websitepunkt von ihrem Standort zugewiesen, sofern ihr Standort über einen Anwendungskatalog-Websitepunkt verfügt.  
 
-    -   Da Anwendungskatalog-Websitepunkte im Intranet, die für HTTPS konfiguriert sind, Vorrang vor Anwendungskatalog-Websitepunkten haben, die nicht für HTTPS konfiguriert sind, wird der Schutz vor nicht autorisierten Servern verstärkt.  
+    -   Anwendungskatalog-Websitepunkte im Intranet, die für HTTPS konfiguriert sind, haben Vorrang vor Anwendungskatalog-Websitepunkten, die nicht für HTTPS konfiguriert sind. Dadurch wird der Schutz vor nicht autorisierten Servern verstärkt.
 
     -   Clients, die für die intranet- und internetbasierte Clientverwaltung konfiguriert sind, wird ein internetbasierter Anwendungskatalog-Websitepunkt zugewiesen, wenn sie sich im Internet befinden. Wenn sie sich im Intranet befinden, wird ihnen ein intranetbasierter Anwendungskatalog-Websitepunkt zugewiesen.  
 
      Bei der automatischen Ermittlung kann nicht garantiert werden, dass Clients der nächstgelegene Anwendungskatalog-Websitepunkt zugewiesen wird. Aus den folgenden Gründen ist die Verwendung von **Automatisch ermitteln** für Ihre Zwecke möglicherweise nicht geeignet:  
 
-    -   Sie möchten den nächstgelegenen Server für Clients manuell konfigurieren oder dafür sorgen, dass die Verbindung mit dem Server nicht über eine langsame Netzwerkverbindung erfolgt.  
+     -   Sie möchten den nächstgelegenen Server für Clients manuell konfigurieren oder dafür sorgen, dass die Verbindung mit dem Server nicht über eine langsame Netzwerkverbindung erfolgt.  
 
-    -   Sie möchten steuern, von welchen Clients mit welchen Servern eine Verbindung hergestellt wird. Dies kann zu Testzwecken bzw. aus leistungsbezogenen oder geschäftlichen Gründen erforderlich sein.  
+     -   Sie möchten steuern, von welchen Clients mit welchen Servern eine Verbindung hergestellt wird. Dies kann zu Testzwecken bzw. aus leistungsbezogenen oder geschäftlichen Gründen erforderlich sein.  
 
-    -   Sie möchten nicht bis zu 25 Stunden auf eine Netzwerkänderung für Clients warten, die mit einem anderen Anwendungskatalog-Websitepunkt konfiguriert werden sollen.  
+     -   Sie möchten nicht bis zu 25 Stunden auf eine Netzwerkänderung für Clients warten, die mit einem anderen Anwendungskatalog-Websitepunkt konfiguriert werden sollen.  
 
-     Wenn Sie den Anwendungskatalog-Websitepunkt angeben, anstatt die automatische Erkennung zu verwenden, geben Sie anstelle des Intranet-FQDN den NetBIOS-Namen an. Hierdurch verringern Sie die Wahrscheinlichkeit, dass Benutzer zur Eingabe von Anmeldeinformationen aufgefordert werden, wenn sie eine Verbindung mit dem Anwendungskatalog im Intranet herstellen. Sie können den NetBIOS-Namen nur verwenden, wenn die folgenden Bedingungen erfüllt sind:  
+     Wenn Sie den Anwendungskatalog-Websitepunkt angeben, anstatt die automatische Erkennung zu verwenden, geben Sie anstelle des Intranet-FQDN den NetBIOS-Namen an. Dadurch verringert sich die Wahrscheinlichkeit, dass Benutzer zur Eingabe von Anmeldeinformationen aufgefordert werden, wenn Sie eine Verbindung mit dem Anwendungskatalog im Intranet herstellen. Sie können den NetBIOS-Namen nur verwenden, wenn die folgenden Bedingungen erfüllt sind:  
 
-    -   Der NetBIOS-Name ist in den Eigenschaften des Anwendungskatalog-Websitepunkts angegeben.  
+     -   Der NetBIOS-Name ist in den Eigenschaften des Anwendungskatalog-Websitepunkts angegeben.  
 
-    -   Sie verwenden WINS, oder alle Clients befinden sich in der gleichen Domäne wie der Anwendungskatalog-Websitepunkt.  
+     -   Sie verwenden WINS, oder alle Clients befinden sich in der gleichen Domäne wie der Anwendungskatalog-Websitepunkt.  
 
-    -   Der Anwendungskatalog-Websitepunkt ist für HTTP- oder HTTPS-Clientverbindungen konfiguriert, und das Webserverzertifikat enthält den NetBIOS-Namen.  
+     -   Der Anwendungskatalog-Websitepunkt ist für HTTP- oder HTTPS-Clientverbindungen konfiguriert. Das Webserverzertifikat enthält den NetBIOS-Namen.  
 
-     Benutzer werden in der Regel zur Eingabe von Anmeldeinformationen aufgefordert, wenn die URL einen FQDN enthält. Dies ist nicht der Fall, wenn die URL ein NetBIOS-Name ist. Sie können davon ausgehen, dass Benutzer beim Herstellen einer Verbindung über das Internet immer zur Eingabe von Anmeldeinformationen aufgefordert werden, da für diese Verbindung der Internet-FQDN verwendet werden muss. Wenn Benutzer im Internet zur Eingabe von Anmeldeinformationen aufgefordert werden, achten Sie darauf, dass von dem Server, von dem der Anwendungskatalog-Websitepunkt ausgeführt wird, eine Verbindung mit einem Domänencontroller für das Benutzerkonto hergestellt werden kann, damit die Authentifizierung des Benutzers über Kerberos möglich ist.  
+     Benutzer werden in der Regel zur Eingabe von Anmeldeinformationen aufgefordert, wenn die URL über einen FQDN verfügt. Dies ist nicht der Fall, wenn die URL ein NetBIOS-Name ist. Sie können davon ausgehen, dass Benutzer beim Herstellen einer Verbindung über das Internet immer zur Eingabe von Anmeldeinformationen aufgefordert werden, da für diese Verbindung der Internet-FQDN verwendet werden muss. Wenn Benutzer im Internet zur Eingabe von Anmeldeinformationen aufgefordert werden, achten Sie darauf, dass von dem Server, von dem der Anwendungskatalog-Websitepunkt ausgeführt wird, eine Verbindung mit einem Domänencontroller für das Benutzerkonto hergestellt werden kann, damit die Authentifizierung des Benutzers über Kerberos möglich ist.  
 
     > [!NOTE]  
     >  Funktionsweise der automatischen Erkennung:  
     >   
-    >  Vom Client wird eine Dienstidentifizierungsanforderung an einen Verwaltungspunkt gesendet. Wenn es an dem Standort, an dem der Client sich befindet, einen Anwendungskatalog-Websitepunkt gibt, wird der Client angewiesen, diesen Server als Anwendungskatalog-Server zu verwenden. Wenn an dem Standort mehrere Anwendungskatalog-Websitepunkte verfügbar sind, hat ein HTTPS-fähiger Server Vorrang vor einem Server, der nicht für HTTPS aktiviert ist. Nach dieser Filterung wird allen Clients einer der Server als Anwendungskatalog zugewiesen. In Configuration Manager wird kein Lastenausgleich zwischen mehreren Servern ausgeführt. Wenn der Standort des Clients keinen Anwendungskatalog-Websitepunkt enthält, wird vom Verwaltungspunkt auf nicht deterministische Weise ein Anwendungskatalog-Websitepunkt aus der Hierarchie zurückgegeben.  
+    >  Vom Client wird eine Dienstidentifizierungsanforderung an einen Verwaltungspunkt gesendet. Wenn es an dem Standort, an dem der Client sich befindet, einen Anwendungskatalog-Websitepunkt gibt, wird der Client angewiesen, diesen Server als Anwendungskatalog-Server zu verwenden. Wenn an dem Standort mehrere Anwendungskatalog-Websitepunkte verfügbar sind, hat ein HTTPS-fähiger Server Vorrang vor einem Server, der nicht für HTTPS aktiviert ist. Nach dieser Filterung wird allen Clients einer der Server als Anwendungskatalog zugewiesen. In Configuration Manager wird kein Lastenausgleich zwischen mehreren Servern ausgeführt. Wenn der Standort des Clients nicht über einen Anwendungskatalog-Websitepunkt verfügt, wird vom Verwaltungspunkt auf nicht deterministische Weise ein Anwendungskatalog-Websitepunkt aus der Hierarchie zurückgegeben.  
     >   
     >  Wenn der Client sich im Intranet befindet und der ausgewählte Anwendungskatalog-Websitepunkt mit einem NetBIOS-Namen für die Anwendungskatalog-URL konfiguriert ist, wird dieser NetBIOS-Name anstelle des Intranet-FQDN an Clients übermittelt. Wenn der Client sich im Internet befindet, wird nur der Internet-FQDN an ihn übermittelt.  
     >   
@@ -172,11 +172,11 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
     > [!NOTE]  
     >  Wenn ein Standardanwendungskatalog von Configuration Manager der Zone der vertrauenswürdigen Standorte hinzugefügt wird, wird von Configuration Manager zunächst eine frühere Standardanwendungskatalog-URL entfernt, die von Configuration Manager hinzugefügt wurde. Danach wird ein neuer Eintrag hinzugefügt.  
     >   
-    >  Die URL kann von Configuration Manager nicht hinzugefügt werden, wenn sie bereits in einer der Sicherheitszonen angegeben ist. In diesem Fall müssen Sie entweder die URL aus der anderen Zone entfernen oder die erforderlichen Internet Explorer-Einstellungen manuell konfigurieren.  
+    >  Die URL kann von Configuration Manager nicht hinzugefügt werden, wenn sie bereits in einer der Sicherheitszonen angegeben ist. In diesem Fall müssen Sie entweder die URL aus der anderen Zone entfernen, oder die erforderlichen Internet Explorer-Einstellungen manuell konfigurieren.  
 
 -   **Ausführen von Silverlight-Anwendungen im Modus mit höherer Vertrauensstellung zulassen**  
 
-     Diese Einstellung muss mit **Ja** konfiguriert sein, wenn Benutzer den Configuration Manager-Client ausführen und den Anwendungskatalog verwenden.  
+     Diese Einstellung muss auf **Ja** festgelegt sein, wenn Benutzer den Configuration Manager-Client ausführen und den Anwendungskatalog verwenden.  
 
      Eine Änderung dieser Einstellung wird wirksam, wenn Benutzer ihren Browser das nächste Mal laden oder wenn sie das gegenwärtig geöffnete Browserfenster aktualisieren.  
 
@@ -188,9 +188,9 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
 -   **Verwenden des neuen Softwarecenters**  
 
-     Wenn aktiviert, verwenden alle Clientcomputer, für die diese Clienteinstellungen gelten, das neue Softwarecenter. Dort werden die für Benutzer verfügbaren Apps angezeigt, auf die zuvor nur im Silverlight-abhängigen Anwendungskatalog zugegriffen werden konnte.  
+     Wenn aktiviert, verwenden alle Clientcomputer, für die diese Clienteinstellungen gelten, das neue Softwarecenter. Das Softwarecenter zeigt für Benutzer verfügbare Apps an, auf die vorher nur im Silverlight-abhängigen Anwendungskatalog zugegriffen werden konnte.  
 
-     Allerdings sind die Standortsystemrollen "Anwendungskatalog-Websitepunkt" und "Anwendungskatalog-Webdienstpunkt" nach wie vor erforderlich, damit für Benutzer verfügbare Apps im Softwarecenter angezeigt werden.  
+     Die Standortsystemrollen „Anwendungskatalog-Websitepunkt“ und „Anwendungskatalog-Webdienstpunkt“ sind nach wie vor erforderlich, damit für Benutzer verfügbare Apps im Softwarecenter angezeigt werden.  
 
      Weitere Informationen finden Sie unter [Planen und Konfigurieren der Anwendungsverwaltung in System Center Configuration Manager](../../../apps/plan-design/plan-for-and-configure-application-management.md).  
 
@@ -207,13 +207,13 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
     -   **Nur Administratoren und Hauptbenutzer**: Benutzer, die sich bei einem Clientcomputer angemeldet haben, müssen der lokalen Administratorengruppe angehören oder ein Hauptbenutzer des Computers sein, um die Installation von Software, Softwareupdates und Tasksequenzen zu initiieren.  
 
-    -   **Keine Benutzer**: Keiner der Benutzer, die sich bei einem Clientcomputer angemeldet haben, kann die Installation von Software, Softwareupdates und Tasksequenzen initiieren. Erforderliche Bereitstellungen für den Computer werden immer am Stichtag installiert. Den Benutzern ist es nicht möglich, die Installation von Software über den Anwendungskatalog oder das Softwarecenter zu initiieren.  
+    -   **Keine Benutzer**: Keiner der Benutzer, die sich bei einem Clientcomputer angemeldet haben, kann die Installation von Software, Softwareupdates und Tasksequenzen initiieren. Erforderliche Bereitstellungen für den Computer werden immer am Stichtag installiert. Benutzer können die Installation von Software über den Anwendungskatalog oder das Softwarecenter nicht initiieren.  
 
 -   **BitLocker-PIN-Eingabe bei Neustart anhalten**  
 
      Wenn die BitLocker-PIN-Eingabe auf Computern konfiguriert ist, kann die obligatorische Eingabe einer PIN bei einem Computerneustart nach einer Softwareinstallation umgangen werden.  
 
-    -   **Immer** – Die BitLocker-Anforderung zur Eingabe einer PIN beim nächsten Computerstart wird von Configuration Manager nach der Installation von Software, für die ein Neustart erforderlich ist, und der Initiierung eines Computerneustarts vorübergehend ausgesetzt. Diese Einstellung gilt nur für Computerneustarts, die von Configuration Manager initiiert werden. Wenn der Benutzer den Computer neu startet, ist die Eingabe einer BitLocker-PIN weiterhin erforderlich. Die BitLocker-Anforderung zur Eingabe einer PIN wird nach dem Start von Windows wieder eingesetzt.  
+    -   **Immer**: Die BitLocker-Anforderung zur Eingabe einer PIN beim nächsten Computerstart wird von Configuration Manager nach der Installation von Software, für die ein Neustart erforderlich ist, und der Initiierung eines Computerneustarts vorübergehend ausgesetzt. Diese Einstellung gilt nur für Computerneustarts, die von Configuration Manager initiiert werden. Wenn der Benutzer den Computer neu startet, ist die Eingabe einer BitLocker-PIN weiterhin erforderlich. Die BitLocker-Anforderung zur Eingabe einer PIN wird nach dem Start von Windows wieder eingesetzt.  
 
     -   **Nie**: Die BitLocker-Anforderung zur Eingabe einer PIN beim nächsten Computerstart wird von Configuration Manager nach der Installation von Software, für die ein Neustart erforderlich ist, nicht ausgesetzt. In diesem Fall kann die Softwareinstallation erst abgeschlossen werden, wenn der Benutzer die PIN eingibt, um den Standardstartprozess abzuschließen und Windows zu laden.  
 
@@ -226,39 +226,40 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
     -   Sie verwalten Client-Agent-Benachrichtigungen und die Installation von Anwendungen und Softwareupdates mit dem Configuration Manager SDK (Software Development Kit).  
 
     > [!WARNING]  
-    >  Wenn Sie diese Option auswählen, obwohl keine dieser Bedingungen erfüllt ist, werden Softwareupdates und erforderliche Anwendungen nicht auf Clients installiert. Durch diese Einstellung wird nicht verhindert, dass Benutzer Anwendungen über den Anwendungskatalog installieren oder dass Pakete, Programme und Tasksequenzen auf Clientcomputern installiert werden.  
+    >  Wenn Sie diese Option auswählen, obwohl keine dieser Bedingungen erfüllt ist, werden Softwareupdates und erforderliche Anwendungen nicht auf Clients installiert. Durch diese Einstellung wird nicht verhindert, dass Benutzer Anwendungen über den Anwendungskatalog installieren, oder dass Pakete, Programme und Tasksequenzen auf Clientcomputern installiert werden.  
 
 -   **PowerShell-Ausführungsrichtlinie**  
 
-     Konfigurieren Sie, wie Windows PowerShell-Skripts von Configuration Manager-Clients ausgeführt werden können. Diese Skripts werden oft zur Erkennung von Kompatibilitätseinstellungen in Konfigurationselementen eingesetzt, können aber auch als Standardskripts in einer Bereitstellung gesendet werden.  
+     Konfigurieren Sie, wie Windows PowerShell-Skripts von Configuration Manager-Clients ausgeführt werden können. Diese Skripts werden oft zur Erkennung von Konformitätseinstellungen in Konfigurationselementen eingesetzt. Sie können aber auch als Standardskripts in einer Bereitstellung gesendet werden.  
 
     -   **Umgehen**: Die Windows PowerShell-Konfiguration auf dem Clientcomputer wird vom Configuration Manager-Client umgangen, sodass nicht signierte Skripts ausgeführt werden können.  
 
-    -   **Eingeschränkt**: Anhand der aktuellen Windows PowerShell-Konfiguration auf dem Clientcomputer wird vom Configuration Manager-Client festgestellt, ob nicht signierte Skripts ausgeführt werden können.  
+    -   **Eingeschränkt**: Der Configuration Manager-Client verwendet die aktuelle Windows PowerShell-Konfiguration auf dem Client-Computer. Diese Konfiguration bestimmt, ob nicht signierte Skripts ausgeführt werden können.  
 
     -   **Alle signiert**: Nur die von einem vertrauenswürdigen Herausgeber signierten Skripts werden vom Configuration Manager-Client ausgeführt. Diese Einschränkung gilt unabhängig von der aktuellen Windows PowerShell-Konfiguration auf dem Clientcomputer.  
 
-     Für diese Option ist mindestens Windows PowerShell 2.0 erforderlich. Die Standardeinstellung ist **Alle signiert**.  
+     Für diese Option ist mindestens Windows PowerShell 2.0 erforderlich. Der Standardwert ist **Alle Signiert**.  
 
     > [!TIP]  
     >  Wenn nicht signierte Skripts wegen dieser Clienteinstellung nicht ausgeführt werden können, wird dieser Fehler von Configuration Manager wie folgt gemeldet:  
     >   
-    >  -   Die Fehler-ID **0X87D00327** und die Beschreibung **Das Skript wurde nicht signiert** werden in der Configuration Manager-Konsole im Arbeitsbereich **Überwachung** als Bereitstellungsstatusfehler angezeigt.  
-    > -   Der Fehlercode **0X87D00327** mit der Beschreibung **Das Skript wurde nicht signiert** bzw. **0X87D00320** mit der Beschreibung **Der Skripthost wurde noch nicht installiert** und dem Fehlertyp **Ermittlungsfehler** wird in Berichten angezeigt, z. B. in **Details zu Fehlern von Konfigurationselementen in einer Konfigurationsbasislinie für einen Bestand**.  
+    > -   Die Fehler-ID **0X87D00327** und die Beschreibung **Das Skript wurde nicht signiert** werden in der Configuration Manager-Konsole im Arbeitsbereich **Überwachung** als Bereitstellungsstatusfehler angezeigt.  
+    > -   Der Fehlercode **0X87D00327** mit der Beschreibung **Script is not signed** (Das Skript wurde nicht signiert) bzw. **0X87D00320** mit der Beschreibung **The script host has not been installed yet** (Der Skripthost wurde noch nicht installiert) und dem Fehlertyp **Ermittlungsfehler** wird in Berichten angezeigt. Ein Beispiel ist **Details zu Fehlern von Konfigurationselementen in einer Konfigurationsbaseline für einen Bestand**.  
     > -   Die Meldung **Script is not signed (Error: 87D00327; Source: CCM)** wird in der Datei **DcmWmiProvider.log** angezeigt.  
 
 -   **Zufällige Stichtaganordnung deaktivieren**  
 
      Mit dieser Einstellung bestimmen Sie, ob vom Client bei der Installation erforderlicher Softwareupdates eine Aktivierungsverzögerung von bis zu zwei Stunden verwendet wird, wenn der Stichtag erreicht wurde. Die Aktivierungsverzögerung ist standardmäßig deaktiviert.  
 
-     Bei Verwendung einer virtuellen Desktopinfrastruktur (VDI) lassen sich dank dieser Verzögerung die Prozessorauslastung und die Datenübertragung für einen Computer, der mehrere virtuelle Maschinen mit dem Configuration Manager-Client hat, verteilen. Selbst wenn Sie VDI nicht verwenden und die gleichen Updates von vielen Clients gleichzeitig installiert werden, kann dies zu einer negativen Steigerung der CPU-Auslastung auf dem Standortserver, einer Verlangsamung der Verteilungspunkte und einer erheblichen Verringerung der verfügbaren Netzwerkbandbreite führen.  
+     Bei Verwendung einer virtuellen Desktopinfrastruktur (VDI) lassen sich dank dieser Verzögerung die Prozessorauslastung und die Datenübertragung für einen Computer, der mehrere virtuelle Maschinen mit dem Configuration Manager-Client hat, verteilen. Selbst wenn Sie VDI nicht verwenden, und die gleichen Updates von vielen Clients gleichzeitig installiert werden, kann dies zu einer negativen Steigerung der CPU-Auslastung auf dem Standortserver führen. Außerdem kann es zu einer Verlangsamung der Verteilungspunkte und einer erheblichen Verringerung der verfügbaren Netzwerkbandbreite kommen.  
 
      Wenn erforderliche Softwareupdates am Stichtag ohne Verzögerung installiert werden müssen, wählen Sie für diese Einstellung **Ja** aus.  
 
--   **Karenzzeit für Erzwingung nach Bereitstellungsfrist (Stunden)** 
-    
+-   **Karenzzeit für Erzwingung nach Bereitstellungsfrist (Stunden)**
+
      In einigen Fällen empfiehlt es sich, Benutzern mehr Zeit zum Installieren von erforderlichen Anwendungsbereitstellungen oder Softwareupdates, über die von Ihnen konfigurierten Fristen hinaus, zu geben. Dies kann erforderlich sein, wenn ein Computer für einen längeren Zeitraum ausgeschaltet war und eine große Anzahl von Anwendungs- oder Updatebereitstellungen installieren muss. Wenn z.B. ein Endbenutzer gerade aus dem Urlaub zurückgekehrt ist, muss er möglicherweise sehr lange warten, bis überfällige Anwendungsbereitstellungen installiert werden. Sie können eine Karenzzeit für die Erzwingung definieren, um dieses Problem zu lösen, indem Sie die Configuration Manager-Clienteinstellungen für eine Sammlung bereitstellen.
-    Sie können eine Karenzzeit zwischen 1 und 120 Stunden festlegen. Diese Einstellung wird in Verbindung mit der Bereitstellungseigenschaft **Erzwingung für diese Bereitstellung basierend auf den Benutzereinstellungen verzögern** verwendet. Weitere Informationen finden Sie unter [Bereitstellen von Anwendungen](/sccm/apps/deploy-use/deploy-applications).
+
+     Sie können eine Karenzzeit von 1 bis 120 Stunden festlegen. Diese Einstellung wird in Verbindung mit der Bereitstellungseigenschaft **Erzwingung für diese Bereitstellung basierend auf den Benutzereinstellungen verzögern** verwendet. Weitere Informationen finden Sie unter [Bereitstellen von Anwendungen](/sccm/apps/deploy-use/deploy-applications).
 
 ##  <a name="computer-restart"></a>Computerneustart  
  Achten Sie beim Angeben dieser Einstellungen für den Computerneustart darauf, dass die Intervalle für die temporäre Neustartbenachrichtigung und den endgültigen Countdown kürzer sind als das kürzeste auf den Computer angewendete Wartungsfenster.  
@@ -273,14 +274,14 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
      Wählen Sie diese Option aus, wenn der Endpoint Protection-Client bereits installiert ist, und Sie ihn mit Configuration Manager verwalten möchten.  
 
-     Wählen Sie diese Option auch dann aus, wenn Sie ein Skript zum Deinstallieren einer bestehenden Antischadsoftwarelösung sowie zum Installieren des Endpoint Protection-Client erstellen und das Skript mithilfe einer Configuration Manager-Anwendung bzw. eines Pakets und Programms bereitstellen möchten.  
+     Wählen Sie diese Option auch dann aus, wenn Sie ein Skript zum Deinstallieren einer bestehenden Antischadsoftwarelösung sowie zum Installieren des Endpoint Protection-Clients erstellen und das Skript mithilfe einer Configuration Manager-Anwendung bzw. eines Pakets und Programms bereitstellen möchten.  
 
 -   **Installieren des Endpoint Protection-Clients auf Clientcomputern**  
 
      Wählen Sie **Wahr** oder **Ja** aus, um den Endpoint Protection-Client auf Clientcomputern zu installieren und zu aktivieren, auf denen er noch nicht installiert wurde.  
 
     > [!NOTE]  
-    >  Wenn der Endpoint Protection-Client bereits installiert ist, wird dieser durch die Auswahl von **Falsch** oder **Nein** nicht deinstalliert. Zum Deinstallieren des Endpoint Protection-Clients müssen Sie die Clienteinstellung **Endpoint Protection-Client auf Clientcomputern verwalten** auf **Falsch** bzw. **Nein**festsetzen. Stellen Sie dann ein Paket und ein Programm bereit, um den Endpoint Protection-Client zu deinstallieren.  
+    >  Wenn der Endpoint Protection-Client bereits installiert ist, wird dieser durch die Auswahl von **Falsch** oder **Nein** nicht deinstalliert. Legen Sie zum Deinstallieren des Endpoint Protection-Clients die Clienteinstellung **Endpoint Protection-Client auf Clientcomputern verwalten** auf **Falsch** oder **Nein** fest. Stellen Sie dann ein Paket und Programm zum Deinstallieren des Endpoint Protection-Clients bereit.  
 
 -   **Für Windows Embedded-Geräte mit Schreibfiltern Commit für Endpoint Protection-Clientinstallation ausführen (hierdurch werden Neustarts erforderlich)**  
 
@@ -293,13 +294,13 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
      Wählen Sie **Wahr** oder **Ja** aus, um einen Computerneustart zu unterdrücken, sofern dieser nach der Installation des Endpoint Protection-Clients erforderlich ist.  
 
     > [!IMPORTANT]  
-    >  Wenn für den Endpoint Protection-Client ein Computerneustart erforderlich ist und diese Einstellung als **Falsch**konfiguriert ist, wird der Neustart unabhängig von konfigurierten Wartungsfenstern ausgeführt.  
+    >  Wenn für den Endpoint Protection-Client ein Computerneustart erforderlich ist und diese Einstellung als **Falsch** festgelegt ist, wird der Neustart unabhängig von konfigurierten Wartungsfenstern ausgeführt.  
 
 -   **Zulässiges Zeitintervall (Stunden), um das Benutzer einen für den Abschluss der Installation von Endpoint Protection erforderlichen Neustart verschieben können**  
 
      Geben Sie die Anzahl der Stunden an, um die Benutzer einen Computerneustart verschieben können, sofern dieser nach der Installation des Endpoint Protection-Clients erforderlich ist. Diese Option kann nur dann konfiguriert werden, wenn für die Option **Erforderliche Neustarts nach der Installation des Endpoint Protection-Clients unterdrücken** die Einstellung **Falsch** festgelegt wird.  
 
--   **Alternative Quellen (wie z. B. Microsoft Windows Update, Microsoft Windows Server Update Services oder UNC-Freigaben) für das erste Definitionsupdate auf Clientcomputern deaktivieren**  
+-   **Disable alternate sources (like Windows Update, Microsoft Windows Server Update Services, or UNC shares) for the initial definition update on client computers** (Alternative Quellen (wie z.B. Windows Update, Microsoft Windows Server Update Services oder UNC-Freigaben) für das erste Definitionsupdate auf Clientcomputern deaktivieren)  
 
      Wählen Sie **Wahr** oder **Ja** aus, wenn durch Configuration Manager nur das erste Definitionsupdate auf Clientcomputern installiert werden soll. Diese Einstellung kann hilfreich sein, um bei der ersten Installation des Definitionsupdates überflüssige Netzwerkverbindungen zu vermeiden und die Auslastung der Netzwerkbandbreite zu verringern.  
 
@@ -307,24 +308,24 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
 -   **Maximale benutzerdefinierte MIF-Dateigröße (KB)**  
 
-     Geben Sie die maximale zulässige Größe (in KB) einer einzelnen benutzerdefinierten MIF-Datei (Management Information Format) an, die auf einem Client während eines Hardwareinventurzyklus gesammelt wird. Wenn eine MIF-Datei diese Größe überschreitet, wird sie von der Configuration Manager-Hardwareinventur nicht verarbeitet. Sie können eine Größe zwischen 1 und 5.000 KB angeben. Standardmäßig ist diese Option auf 250 KB festgelegt. Diese Einstellung wirkt sich nicht auf die Größe der regulären Hardwareinventur-Datendatei aus.  
+     Geben Sie die maximale zulässige Größe (in Kilobytes) einer einzelnen benutzerdefinierten MIF-Datei (Management Information Format) an, die auf einem Client während eines Hardwareinventurzyklus gesammelt wird. Wenn eine MIF-Datei diese Größe überschreitet, wird sie von der Configuration Manager-Hardwareinventur nicht verarbeitet. Sie können eine Größe von 1 bis 5.000 KB angeben. Standardmäßig ist diese Option auf 250 KB festgelegt. Diese Einstellung wirkt sich nicht auf die Größe der regulären Hardwareinventur-Datendatei aus.  
 
     > [!NOTE]  
     >  Diese Einstellung ist nur in den Clientstandardeinstellungen verfügbar.  
 
 -   **Hardwareinventurklassen**  
 
-     In Configuration Manager können Sie die von Clients gesammelten Hardwareinformationen ohne manuelles Editieren der Datei sms_def.mof erweitern. Klicken Sie auf **Klassen festlegen**, wenn Sie die Configuration Manager-Hardwareinventur erweitern möchten. Weitere Informationen finden Sie unter [How to configure hardware inventory in System Center Configuration Manager (Konfigurieren der Hardwareinventur in System Center Configuration Manager)](../../../core/clients/manage/inventory/configure-hardware-inventory.md).  
+     In Configuration Manager können Sie die von Clients gesammelten Hardwareinformationen ohne manuelles Editieren der Datei sms_def.mof erweitern. Wählen Sie **Klassen festlegen** aus, wenn Sie die Configuration Manager-Hardwareinventur erweitern möchten. Weitere Informationen finden Sie unter [How to configure hardware inventory in System Center Configuration Manager (Konfigurieren der Hardwareinventur in System Center Configuration Manager)](../../../core/clients/manage/inventory/configure-hardware-inventory.md).  
 
 -   **MIF-Dateien sammeln**  
 
-     Mit dieser Einstellung können Sie angeben, ob bei der Hardwareinventur MIF-Dateien (Managed Information Format) von Configuration Manager-Clients gesammelt werden sollen.  
+     Mit dieser Einstellung können Sie angeben, ob bei der Hardwareinventur MIF-Dateien von Configuration Manager-Clients gesammelt werden sollen.  
 
-     Damit eine MIF-Datei durch die Hardwareinventur gesammelt werden kann, muss sie sich im korrekten Verzeichnis auf dem Clientcomputer befinden. Standardmäßig sollten sich die Dateien in folgenden Verzeichnissen befinden:  
+     Damit eine MIF-Datei durch die Hardwareinventur gesammelt werden kann, muss sie sich im korrekten Verzeichnis auf dem Clientcomputer befinden. Standardmäßig befinden sich die Dateien in folgenden Verzeichnissen:  
 
-    -   IDMIF-Dateien sollten sich im Verzeichnis Windows\System32\CCM\Inventory\Idmif befinden.  
+    -   IDMIF-Dateien sollten sich im Ordner „Windows\System32\CCM\Inventory\Idmif“ befinden.  
 
-    -   NOIDMIF-Dateien sollten sich im Verzeichnis Windows\System32\CCM\Inventory\Noidmif befinden.  
+    -   NOIDMIF-Dateien sollten sich im Ordner „Windows\System32\CCM\Inventory\Noidmif“ befinden.  
 
     > [!NOTE]  
     >  Diese Einstellung ist nur in den Clientstandardeinstellungen verfügbar.  
@@ -335,7 +336,7 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 > [!NOTE]  
 >  Die konfigurierte Clienteinstellung wird in den folgenden Fällen nicht auf Windows 8-Clientcomputer angewendet:  
 >   
->  -   Der Computer befindet sich in einer Roamingdatenverbindung: Vom Configuration Manager-Client werden keine Vorgänge ausgeführt, bei denen Daten an Configuration Manager-Standorte übertragen werden müssen.  
+> -   Der Computer befindet sich in einer Roamingdatenverbindung: Vom Configuration Manager-Client werden keine Vorgänge ausgeführt, bei denen Daten an Configuration Manager-Standorte übertragen werden müssen.  
 > -   Die Eigenschaften der Windows-Netzwerkverbindung sind als nicht getaktet konfiguriert: Die Daten werden vom Configuration Manager-Client wie bei nicht getakteten Internetverbindungen an die Configuration Manager-Standorte übertragen.  
 
 -   **Clientkommunikation über getaktete Internetverbindungen**  
@@ -380,20 +381,20 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
      Übernehmen Sie den Standardwert für die Portnummer, über die Aktivierungspakete von Manager-Computern an Computer im Energiesparmodus gesendet werden. Sie können die Nummer auch durch einen beliebigen Wert ersetzen.  
 
-     Die hier angegebene Portnummer wird automatisch für Clients konfiguriert, auf denen Windows-Firewall ausgeführt wird, wenn Sie die Option **Windows-Firewall-Ausnahme für Aktivierungsproxy** konfigurieren. Falls auf Clients eine andere Firewall ausgeführt wird, müssen Sie diese manuell so konfigurieren, dass die für diese Einstellung angegebene UDP-Portnummer zugelassen wird.  
+     Die hier angegebene Portnummer wird automatisch für Clients konfiguriert, auf denen Windows-Firewall ausgeführt wird, wenn Sie die Option **Windows-Firewall-Ausnahme für Aktivierungsproxy** verwenden. Falls auf Clients eine andere Firewall ausgeführt wird, müssen Sie diese manuell so konfigurieren, dass die für diese Einstellung angegebene UDP-Portnummer zugelassen wird.  
 
 -   **Wake-On-LAN-Portnummer (UDP)**  
 
-     Behalten Sie den Standardwert 9 bei, es sei denn, Sie haben die Wake-On-LAN-Portnummer (UDP) in den **Eigenschaften**des Standorts auf der Registerkarte **Ports** geändert.  
+     Behalten Sie den Standardwert 9 bei, es sei denn, Sie haben die Wake-On-LAN-Portnummer (UDP) in den **Eigenschaften** des Standorts auf der Registerkarte **Ports** geändert.  
 
     > [!IMPORTANT]  
     >  Dieser Wert muss mit dem Wert in den **Eigenschaften**des Standorts übereinstimmen. Wenn Sie den Wert an einem Ort ändern, wird er am anderen Ort nicht automatisch aktualisiert.  
 
-##  <a name="remote-tools"></a>-Remotetools  
+##  <a name="remote-tools"></a>Remotetools  
 
 -   **Remotesteuerung auf Clients aktivieren** mit der Beschreibung **Firewallausnahmeprofile**  
 
-     Wählen Sie aus, ob die Configuration Manager-Remotesteuerung für alle Clientcomputer aktiviert wird, die diese Clienteinstellungen erhalten. Klicken Sie zum Aktivieren der Remotesteuerung auf **Konfigurieren** , und konfigurieren Sie die Firewall-Einstellungen zum Zulassen der Remotesteuerung auf Clientcomputern (optional).  
+     Wählen Sie aus, ob die Configuration Manager-Remotesteuerung für alle Clientcomputer aktiviert wird, die diese Clienteinstellungen erhalten. Wählen Sie **Konfigurieren** aus, um die Remotesteuerung zu aktivieren. Konfigurieren Sie optional die Firewall-Einstellungen zum Zulassen der Remotesteuerung auf Clientcomputern.  
 
      Die Remotesteuerung ist standardmäßig deaktiviert.  
 
@@ -428,7 +429,7 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
 -   **Zugelassene Viewer**  
 
-     Klicken Sie auf **Betrachter festlegen** , um das Dialogfeld **Clienteinstellung konfigurieren** zu öffnen, und geben Sie die Namen der Windows-Benutzer an, die Remotesteuerungssitzungen auf Clientcomputern herstellen können.  
+     Wählen Sie **Betrachter festlegen** aus, um das Dialogfeld **Clienteinstellung konfigurieren** zu öffnen, und geben Sie die Namen der Windows-Benutzer an, die Remotesteuerungssitzungen auf Clientcomputern herstellen können.  
 
 -   **Benachrichtigungssymbol für Sitzung auf Taskleiste anzeigen**  
 
@@ -452,7 +453,7 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
      Wählen Sie diese Option aus, um die Verwaltung angeforderter Remoteunterstützungssitzungen durch Configuration Manager zuzulassen.  
 
-     Bei angeforderten Remoteunterstützungssitzungen hat der Benutzer am Clientcomputer eine Remoteunterstützungsanforderung an den Administrator gesendet.  
+     Bei angeforderten Remoteunterstützungssitzungen hat der Benutzer am Clientcomputer zum Initiieren einer Sitzung Unterstützung angefordert.  
 
 -   **Zugriffsstufe für Remoteunterstützung**  
 
@@ -480,7 +481,7 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
      Konfigurieren Sie einen Zeitplan für die Neuauswertung der Anforderungsregeln für alle Bereitstellungen durch Configuration Manager. Der Standardwert ist 7 Tage.  
 
     > [!IMPORTANT]  
-    >  Sie sollten keinen geringeren Wert auswählen, da dies negative Auswirkungen auf die Leistung von Netzwerk und Clientcomputern haben kann.  
+    >  Es wird empfohlen, diesen Wert nicht auf einen niedrigeren Wert als den Standardwert zu ändern. Dies könnte sich negativ auf die Leistung des Netzwerks und der Clientcomputer auswirken.  
 
      Sie können diese Aktion auch auf einem Configuration Manager-Clientcomputer initiieren, indem Sie in der Systemsteuerung im Modul **Configuration Manager** auf der Registerkarte **Aktionen** die Aktion **Evaluationszyklus für die Anwendungsbereitstellung** auswählen.  
 
@@ -488,73 +489,73 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
 -   **Inventurberichtsdetail**  
 
-     Geben Sie die Ebene der zu inventarisierenden Dateiinformationen an. Sie können Details ausschließlich zu der Datei, Details zu dem mit der Datei verknüpften Produkt oder alle Informationen zur Datei inventarisieren.  
+     Geben Sie die Ebene der zu inventarisierenden Dateiinformationen an. Sie können Details zu der Datei, Details zu dem mit der Datei verknüpften Produkt oder alle Informationen zur Datei inventarisieren.  
 
 -   **Diese Dateitypen inventarisieren**  
 
-     Wenn Sie die Typen der zu inventarisierenden Dateien festlegen möchten, klicken Sie auf **Typen festlegen...** , und konfigurieren Sie dann im Dialogfeld **Clienteinstellung konfigurieren** die folgenden Einstellungen:  
+     Wenn Sie die Typen der zu inventarisierenden Dateien festlegen möchten, wählen Sie **Typen festlegen...** aus, und konfigurieren Sie dann im Dialogfeld **Clienteinstellung konfigurieren** die folgenden Einstellungen:  
 
     > [!NOTE]  
     >  Wenn mehr als eine benutzerdefinierte Clienteinstellung auf einen Computer angewendet wurde, werden die von allen Einstellungen zurückgegebenen Inventare zusammengeführt.  
 
-    -   Klicken Sie auf das Symbol "Neu", um einen neuen zu inventarisierenden Dateityp hinzuzufügen, und geben Sie dann im Dialogfeld **Eigenschaften für inventarisierte Datei(en)** die folgenden Informationen an:  
+    -   Wählen Sie das Symbol **Neu** aus, um einen neuen Dateityp zum Inventar hinzuzufügen. Geben Sie anschließend im Dialogfeld **Eigenschaften für inventarisierte Datei(en)** die folgenden Informationen an:  
 
-    -   **Name** – geben Sie einen Namen für die Datei an, die Sie inventarisieren möchten. Sie können das Sternchen ( **\*** ) stellvertretend für eine beliebige Textzeichenfolge und das Fragezeichen ( **?** ) stellvertretend für ein beliebiges einzelnes Zeichen angeben. Geben Sie als Dateinamen z.B. **\*.doc** an, um alle Dateien mit der Erweiterung DOC zu inventarisieren.  
+        -   **Name**: Geben Sie einen Namen für die Datei an, die Sie inventarisieren möchten. Sie können das Zeichen **\** stellvertretend für eine beliebige Textzeichenfolge und das Zeichen **?** stellvertretend für ein beliebiges einzelnes Zeichen angeben. Geben Sie als Dateinamen z.B. **\*.doc** an, um alle Dateien mit der Erweiterung .doc zu inventarisieren.  
 
-    -   **Ort** – klicken Sie auf **Festlegen** , um das Dialogfeld **Pfadeigenschaften** zu öffnen. Sie können die Softwareinventur so konfigurieren, dass alle Clientfestplatten nach der angegebenen Datei, nach einem angegebenen Pfad (z. B. **C:\Ordner**) oder nach einer angegebenen Variablen (z. B. *%windir%*) durchsucht werden. Sie können auch alle Unterordner unter dem angegebenen Pfad durchsuchen.  
+        -   **Ort**: Wählen Sie **Festlegen** aus, um das Dialogfeld **Pfadeigenschaften** zu öffnen. Sie können die Softwareinventur so konfigurieren, dass alle Clientfestplatten nach der angegebenen Datei, nach einem angegebenen Pfad (z.B. **C:\Ordner**) oder nach einer angegebenen Variablen (z.B. *%windir%*) durchsucht werden. Sie können auch alle Unterordner unter dem angegebenen Pfad durchsuchen.  
 
-    -   **Verschlüsselte und komprimierte Dateien ausschließen** – Wenn Sie diese Option aktivieren, werden alle komprimierten oder verschlüsselten Dateien nicht inventarisiert.  
+        -   **Verschlüsselte und komprimierte Dateien ausschließen**: Wenn Sie diese Option aktivieren, werden alle komprimierten oder verschlüsselten Dateien nicht inventarisiert.  
 
-    -   **Dateien im Windows-Ordner ausschließen** – Wenn Sie diese Option aktivieren, werden alle Dateien im Windows-Ordner und seinen Unterordnern nicht inventarisiert.  
+        -   **Dateien im Windows-Ordner ausschließen**: Wenn Sie diese Option aktivieren, werden alle Dateien im Windows-Ordner und seinen Unterordnern nicht inventarisiert.  
 
-    -   Klicken Sie auf **OK** , um das Dialogfeld **Eigenschaften für inventarisierte Datei(en)** zu schließen.  
+    -   Wählen Sie **OK** aus, um das Dialogfeld **Eigenschaften für inventarisierte Datei(en)** zu schließen.  
 
-    -   Fügen Sie alle zu inventarisierenden Dateien hinzu, und klicken Sie dann auf **OK** , um das Dialogfeld **Clienteinstellung konfigurieren** zu schließen.  
+    -   Fügen Sie alle zu inventarisierenden Dateien hinzu, und wählen Sie dann **OK** aus, um das Dialogfeld **Clienteinstellung konfigurieren** zu schließen.  
 
 -   **Dateien sammeln**  
 
-     Wenn Sie Dateien von Clientcomputern sammeln möchten, klicken Sie auf **Dateien festlegen** , und konfigurieren Sie dann Folgendes:  
+     Wenn Sie Dateien von Clientcomputern sammeln möchten, wählen Sie **Dateien festlegen** aus, und konfigurieren Sie dann Folgendes:  
 
     > [!NOTE]  
     >  Wenn mehr als eine benutzerdefinierte Clienteinstellung auf einen Computer angewendet wurde, werden die von allen Einstellungen zurückgegebenen Inventare zusammengeführt.  
 
-    -   Klicken Sie im Dialogfeld **Clienteinstellung konfigurieren** auf das Symbol "Neu", um eine zu sammelnde Datei hinzuzufügen.  
+    -   Wählen Sie im Dialogfeld **Clienteinstellung konfigurieren** das Symbol **Neu** aus, um eine zu sammelnde Datei hinzuzufügen.  
 
     -   Geben Sie im Dialogfeld **Eigenschaften für gesammelte Datei(en)** die folgenden Informationen an:  
 
-    -   **Name** – Geben Sie einen Namen für die Datei an, die Sie sammeln möchten. Sie können das Sternchen ( **\*** ) stellvertretend für eine beliebige Textzeichenfolge und das Fragezeichen ( **?** ) stellvertretend für ein beliebiges einzelnes Zeichen angeben.  
+        -   **Name**: Geben Sie einen Namen für die Datei an, die Sie sammeln möchten. Sie können das Zeichen **\** stellvertretend für eine beliebige Textzeichenfolge und das Zeichen **?** stellvertretend für ein beliebiges einzelnes Zeichen angeben.  
 
-    -   **Ort** – klicken Sie auf **Festlegen** , um das Dialogfeld **Pfadeigenschaften** zu öffnen. Sie können die Softwareinventur so konfigurieren, dass alle Clientfestplatten nach der zu sammelnden Datei, nach einem angegebenen Pfad (z. B. **C:\Ordner**) oder nach einer angegebenen Variable (z. B. *%windir%*) durchsucht werden. Sie können auch alle Unterordner unter dem angegebenen Pfad durchsuchen.  
+        -   **Ort**: Wählen Sie **Festlegen** aus, um das Dialogfeld **Pfadeigenschaften** zu öffnen. Sie können die Softwareinventur so konfigurieren, dass alle Clientfestplatten nach der zu sammelnden Datei, nach einem angegebenen Pfad (z.B. **C:\Ordner**) oder nach einer angegebenen Variable (z.B. *%windir%*) durchsucht werden. Sie können auch alle Unterordner unter dem angegebenen Pfad durchsuchen.  
 
-    -   **Verschlüsselte und komprimierte Dateien ausschließen** – Wenn Sie diese Option aktivieren, werden alle komprimierten oder verschlüsselten Dateien nicht gesammelt.  
+        -   **Verschlüsselte und komprimierte Dateien ausschließen**: Wenn Sie diese Option auswählen, werden keine komprimierten oder verschlüsselten Dateien gesammelt.  
 
-    -   **Dateisammlung beenden, wenn die Gesamtgröße der Dateien folgenden Wert (KB) überschreitet** – Geben Sie die Dateigröße (in KB) an, ab der keine der unter **Name** angegebenen Dateien mehr gesammelt wird.  
+        -   **Dateisammlung beenden, wenn die Gesamtgröße der Dateien folgenden Wert (KB) überschreitet**: Geben Sie die Dateigröße (in KB) an, ab der keine der unter **Name** angegebenen Dateien mehr gesammelt wird.  
 
-        > [!NOTE]  
-        >  Die fünf zuletzt geänderten Versionen von gesammelten Dateien werden vom Standortserver gesammelt und im Verzeichnis *&lt;ConfigMgr-Installationsverzeichnis\>***\Inboxes\Sinv.box\Filecol** gespeichert. Wenn eine Datei seit der letzten Softwareinventursammlung nicht geändert wurde, wird die Datei nicht noch einmal gesammelt.  
-        >   
-        >  Dateien mit mehr als 20 MB werden von der Softwareinventur nicht gesammelt.  
-        >   
-        >  Im Dialogfeld **Clienteinstellung konfigurieren** wird mit dem Wert **Maximale Größe aller gesammelten Dateien (KB)** die maximale Größe für alle gesammelten Dateien angezeigt. Wenn diese Größe erreicht ist, wird die Dateisammlung beendet. Alle bereits gesammelten Dateien werden beibehalten und an den Standortserver gesendet.  
+          > [!NOTE]  
+          >  Die fünf zuletzt geänderten Versionen von gesammelten Dateien werden vom Standortserver gesammelt und im Verzeichnis *&lt;ConfigMgr-Installationsverzeichnis\>*\Inboxes\Sinv.box\Filecol gespeichert. Wenn eine Datei seit der letzten Softwareinventursammlung nicht geändert wurde, wird die Datei nicht noch einmal gesammelt.  
+          >   
+          >  Dateien mit mehr als 20 MB werden von der Softwareinventur nicht gesammelt.  
+          >   
+          >  Im Dialogfeld **Clienteinstellung konfigurieren** wird mit dem Wert **Maximale Größe aller gesammelten Dateien (KB)** die maximale Größe für alle gesammelten Dateien angezeigt. Wenn diese Größe erreicht ist, wird die Dateisammlung beendet. Alle bereits gesammelten Dateien werden beibehalten und an den Standortserver gesendet.  
 
-        > [!IMPORTANT]
-        >  Wenn Sie die Softwareinventur so konfigurieren, dass viele große Dateien gesammelt werden, kann sich dies nachteilig auf die Leistung des Netzwerks und Standortservers auswirken.  
+          > [!IMPORTANT]
+          >  Wenn Sie die Softwareinventur so konfigurieren, dass viele große Dateien gesammelt werden, kann sich dies nachteilig auf die Leistung des Netzwerks und Standortservers auswirken.  
 
-         Informationen zum Anzeigen gesammelter Dateien finden Sie unter [How to use Resource Explorer to view software inventory in System Center Configuration Manager (Verwenden von Ressourcen-Explorer zum Anzeigen des Softwarebestands in System Center Configuration Manager)](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md).  
+        Informationen zum Anzeigen gesammelter Dateien finden Sie unter [How to use Resource Explorer to view software inventory in System Center Configuration Manager (Verwenden von Ressourcen-Explorer zum Anzeigen des Softwarebestands in System Center Configuration Manager)](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md).  
 
-    -   Klicken Sie auf **OK** , um das Dialogfeld **Eigenschaften für gesammelte Datei(en)** zu schließen.  
+    -   Wählen Sie **OK** aus, um das Dialogfeld **Eigenschaften für gesammelte Datei(en)** zu schließen.  
 
-    -   Fügen Sie alle zu sammelnden Dateien hinzu, und klicken Sie dann auf **OK** , um das Dialogfeld **Clienteinstellung konfigurieren** zu schließen.  
+    -   Fügen Sie alle zu sammelnden Dateien hinzu, und klicken Sie dann auf **OK**, um das Dialogfeld **Clienteinstellung konfigurieren** zu schließen.  
 
 -   **Namen festlegen**  
 
-     Während der Softwareinventur werden Hersteller- und Produktnamen aus den Kopfzeileninformationen der Dateien abgerufen, die auf Clients am Standort installiert sind. Da diese Namen in den Dateiheaderinformationen nicht immer in standardisierter Form vorliegen, werden beim Anzeigen der Softwareinventurinformationen im Ressourcen-Explorer oder beim Ausführen von Abfragen mitunter verschiedene Versionen desselben Hersteller- oder Produktnamens angezeigt. Wenn Sie diese Anzeigenamen standardisieren möchten, klicken Sie auf **Namen festlegen** , und konfigurieren Sie dann im Dialogfeld **Clienteinstellung konfigurieren** die folgenden Einstellungen:  
+     Während der Softwareinventur werden Hersteller- und Produktnamen aus den Kopfzeileninformationen der Dateien abgerufen, die auf Clients am Standort installiert sind. Da diese Namen in den Dateiheaderinformationen nicht immer in standardisierter Form vorliegen, werden beim Anzeigen der Softwareinventurinformationen im Ressourcen-Explorer oder beim Ausführen von Abfragen mitunter verschiedene Versionen desselben Hersteller- oder Produktnamens angezeigt. Wenn Sie diese Anzeigenamen standardisieren möchten, wählen Sie **Namen festlegen** aus, und konfigurieren Sie dann im Dialogfeld **Clienteinstellung konfigurieren** die folgenden Einstellungen:  
 
-    -   **Namenstyp** : Von der Softwareinventur werden Informationen zu Herstellern und Produkten gesammelt. Wählen Sie in der Dropdownliste aus, ob Sie Anzeigenamen für einen **Hersteller** oder ein **Produkt**konfigurieren möchten.  
+    -   **Namenstyp**: Von der Softwareinventur werden Informationen zu Herstellern und Produkten gesammelt. Wählen Sie in der Dropdownliste aus, ob Sie Anzeigenamen für einen **Hersteller** oder ein **Produkt**konfigurieren möchten.  
 
-    -   **Anzeigename** : Dient zum Festlegen des Anzeigenamens, den Sie anstelle der Namen in der Liste **Inventarisierte Namen** verwenden möchten. Sie können auf das Symbol "Neu" klicken, um einen neuen Anzeigenamen anzugeben.  
+    -   **Anzeigename**: Dient zum Festlegen des Anzeigenamens, den Sie anstelle der Namen in der Liste **Inventarisierte Namen** verwenden möchten. Sie können das Symbol **Neu** auswählen, um einen neuen Anzeigenamen anzugeben.  
 
-    -   **Inventarisierte Namen:** – Klicken Sie auf das Symbol "Neu", um einen neuen inventarisierten Namen hinzuzufügen, der bei der Softwareinventur durch den in der Liste **Anzeigename** markierten Namen ersetzt wird. Sie können mehrere Namen hinzufügen, die ersetzt werden.  
+    -   **Inventarisierte Namen:**: Wählen Sie das Symbol **Neu** aus, um einen neuen inventarisierten Namen hinzuzufügen, der bei der Softwareinventur durch den in der Liste **Anzeigename** markierten Namen ersetzt wird. Sie können mehrere Namen hinzufügen, die ersetzt werden.  
 
 ##  <a name="software-updates"></a>Softwareupdates  
 
@@ -563,13 +564,13 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
      Verwenden Sie diese Einstellung, um Softwareupdates auf Configuration Manager-Clients zu aktivieren. Wenn Sie diese Einstellung deaktivieren, werden die vorhandenen Bereitstellungsrichtlinien von Configuration Manager vom Client entfernt. Wenn Sie diese Einstellung wieder aktivieren, wird vom Client die aktuelle Bereitstellungsrichtlinie heruntergeladen.  
 
     > [!IMPORTANT]  
-    >  Wenn Sie diese Einstellung deaktivieren, funktionieren NAP- und Kompatibilitätseinstellungsrichtlinien nicht mehr, die auf der Softwareupdate-Geräteeinstellung basieren.  
+    >  Wenn Sie diese Einstellung deaktivieren, funktionieren NAP- und Konformitätseinstellungsrichtlinien nicht mehr, die auf der Softwareupdate-Geräteeinstellung basieren.  
 
 -   **Zeitplan für Softwareupdateprüfung**  
 
      Mit dieser Einstellung geben Sie an, wie häufig vom Client eine Überprüfung der Softwareupdatekompatibilität initiiert wird. Bei der Kompatibilitätsüberprüfung wird der Zustand von Softwareupdates auf dem Client (z. B. erforderlich oder installiert) bestimmt. Weitere Informationen zur Kompatibilitätsbewertung finden Sie unter [Software updates compliance assessment (Bewertung der Kompatibilität von Softwareupdates)](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance).  
 
-     Standardmäßig wird ein einfacher Zeitplan verwendet. Die Kompatibilitätsprüfung wird alle 7 Tage initiiert. Nach Wunsch können Sie einen benutzerdefinierten Zeitplan erstellen und die genaue Startzeit am gewünschten Tag angeben. Sie können außerdem angeben, ob UTC oder die lokale Zeit verwendet werden soll, und das Wiederholungsintervall für einen bestimmten Wochentag konfigurieren.  
+     Standardmäßig wird ein einfacher Zeitplan verwendet. Die Konformitätsprüfung wird alle 7 Tage initiiert. Nach Wunsch können Sie einen benutzerdefinierten Zeitplan erstellen und die genaue Startzeit am gewünschten Tag angeben. Sie können außerdem angeben, ob UTC oder die lokale Zeit verwendet werden soll, und das Wiederholungsintervall für einen bestimmten Wochentag konfigurieren.  
 
     > [!NOTE]  
     >  Wenn Sie ein Intervall von weniger als 1 Tag angeben können, wird in Configuration Manager automatisch der Standardwert von 1 Tag angezeigt.  
@@ -579,7 +580,9 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
 -   **Bereitstellungsneuauswertung planen**  
 
-     Geben Sie mit dieser Einstellung an, wie oft der Installationsstatus von Softwareupdates auf Configuration Manager-Clientcomputern vom Softwareupdateclient-Agent erneut bewertet werden soll. Wenn bereits installierte Softwareupdates nicht mehr auf Clientcomputern vorhanden, aber weiterhin erforderlich sind, werden sie erneut installiert. Der Zeitplan für die Bereitstellungsneuauswertung sollte unter anderem ausgehend von den Unternehmensrichtlinien für Softwareupdatekompatibilität und der Fähigkeit der Benutzer, Softwareupdates zu deinstallieren, angepasst werden. Dabei ist zu berücksichtigen, dass bei jedem Zyklus der Bereitstellungsneuauswertung das Netzwerk und die CPU der Clientcomputer in gewissem Umfang in Anspruch genommen werden. Standardmäßig wird ein einfacher Zeitplan verwendet. Die Bereitstellungsneuauswertung wird alle 7 Tage initiiert.  
+     Geben Sie mit dieser Einstellung an, wie oft der Installationsstatus von Softwareupdates auf Configuration Manager-Clientcomputern vom Softwareupdateclient-Agent erneut bewertet werden soll. Wenn bereits installierte Softwareupdates nicht mehr auf Clientcomputern vorhanden, aber weiterhin erforderlich sind, werden sie erneut installiert.
+
+     Der Zeitplan für die erneute Bewertung der Bereitstellung sollte basierend auf Unternehmensrichtlinien für Softwareupdatekonformität, der Eigenschaft von Benutzern, Softwareupdates zu deinstallieren und Ähnlichem angepasst werden. Beachten Sie dabei, dass bei jedem Zyklus der Bereitstellungsneuauswertung das Netzwerk und die CPU der Clientcomputer in gewissem Umfang in Anspruch genommen werden. Standardmäßig wird ein einfacher Zeitplan verwendet. Die Bereitstellungsneuauswertung wird alle 7 Tage initiiert.  
 
     > [!NOTE]  
     >  Wenn Sie ein Intervall von weniger als 1 Tag angeben können, wird in Configuration Manager automatisch der Standardwert von 1 Tag angezeigt.  
@@ -615,7 +618,7 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
 -   **Anmeldungsprofil für mobile Geräte**  
 
-     Bevor Sie diese Einstellung konfigurieren können, müssen Sie zunächst die Benutzereinstellung **Benutzern das Anmelden mobiler Geräte gestatten** für das mobile Gerät auf **Wahr**festlegen. Anschließend können Sie auf **Profil festlegen** klicken, um ein Anmeldungsprofil mit Informationen zur Zertifikatvorlage für die Anmeldung, zum Standort, der einen Anmeldungspunkt und einen Anmeldungsproxypunkt enthält, und zum Standort anzugeben, über den das Gerät nach der Anmeldung verwaltet wird.  
+     Bevor Sie diese Einstellung konfigurieren können, müssen Sie zunächst die Benutzereinstellung **Benutzern das Anmelden mobiler Geräte gestatten** für das mobile Gerät auf **Wahr**festlegen. Anschließend können Sie **Profil festlegen** auswählen, um ein Anmeldungsprofil mit Informationen zur Zertifikatvorlage für die Anmeldung, zum Standort, der einen Anmeldungspunkt und einen Anmeldungsproxypunkt enthält, und zum Standort anzugeben, über den das Gerät nach der Anmeldung verwaltet wird.  
 
     > [!IMPORTANT]  
     >  Stellen Sie vor dem Konfigurieren dieser Option sicher, dass Sie eine Zertifikatvorlage zur Verwendung für die Anmeldung mobiler Geräte konfiguriert haben.  
@@ -624,7 +627,7 @@ Alle Clienteinstellungen in System Center Configuration Manager werden in der Co
 
 -   **Anmeldungsprofil für mobile Geräte**  
 
-     Bevor Sie diese Einstellung konfigurieren können, müssen Sie zunächst die Benutzereinstellung **Benutzern die Anmeldung mobiler Geräte und von Macintosh-Computern gestatten** für die Anmeldung auf **Ja**festlegen. Anschließend können Sie auf **Profil festlegen** klicken, um ein Anmeldungsprofil mit Informationen zur Zertifikatvorlage für die Anmeldung, zum Standort, der einen Anmeldungspunkt und einen Anmeldungsproxypunkt enthält, und zum Standort anzugeben, über den das Gerät nach der Anmeldung verwaltet wird.  
+     Bevor Sie diese Einstellung konfigurieren können, müssen Sie zunächst die Benutzereinstellung **Benutzern die Anmeldung mobiler Geräte und von Macintosh-Computern gestatten** für die Anmeldung auf **Ja**festlegen. Anschließend können Sie **Profil festlegen** auswählen, um ein Anmeldungsprofil mit Informationen zur Zertifikatvorlage für die Anmeldung, zum Standort, der einen Anmeldungspunkt und einen Anmeldungsproxypunkt enthält, und zum Standort anzugeben, über den das Gerät nach der Anmeldung verwaltet wird.  
 
     > [!IMPORTANT]  
     >  Stellen Sie vor dem Konfigurieren dieser Option sicher, dass Sie eine Zertifikatvorlage für die Anmeldung mobiler Geräte oder für die Anmeldung per Macintosh-Clientzertifikat konfiguriert haben.  

@@ -1,8 +1,8 @@
 ---
-title: "Erstellen und Bereitstellen einer Gerätekonformitätsrichtlinie | System Center Configuration Manager"
+title: "Erstellen und Bereitstellen einer Gerätekonformitätsrichtlinie | Microsoft-Dokumentation"
 description: "Erfahren Sie, wie Sie eine Gerätekonformitätsrichtlinie in System Center Configuration Manager erstellen und bereitstellen."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/15/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,13 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0cba232e-319f-4ae6-9ffa-4cd76c8bcb29
 caps.latest.revision: 
-author: karthikaraman
-ms.author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: 5c6cf3c1697b49708aa5192b67b08b700da7dc72
-ms.openlocfilehash: bb91f4a711699790bb01f48d32183cf1215b1952
+ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
+ms.openlocfilehash: 4cc7148be602367b579d63535a4938919bacf829
 
 ---
 
@@ -79,7 +79,7 @@ ms.openlocfilehash: bb91f4a711699790bb01f48d32183cf1215b1952
 
 ## <a name="monitor-the-compliance-policy"></a>Überwachen der Konformitätsrichtlinie
 
-#### <a name="to-view-compliance-results-in-the-configuration-manager-console"></a>So zeigen Sie Kompatibilitätsergebnisse in der Configuration Manager-Konsole an
+### <a name="to-view-compliance-results-in-the-configuration-manager-console"></a>So zeigen Sie Kompatibilitätsergebnisse in der Configuration Manager-Konsole an
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Überwachung**.
 
@@ -98,6 +98,14 @@ ms.openlocfilehash: bb91f4a711699790bb01f48d32183cf1215b1952
     -   **Nicht kompatibel**: Zeigt eine Liste aller nicht kompatiblen Regeln innerhalb der Richtlinie basierend auf der Anzahl der betroffenen Bestände an. Sie können auf eine Regel klicken, um unter dem Knoten **Benutzer** oder **Geräte** im Arbeitsbereich **Bestand und Kompatibilität** einen temporären Knoten zu erstellen, in dem alle Benutzer oder Geräte enthalten sind, die nicht mit dieser Regel kompatibel sind. Wenn Sie einen Benutzer oder ein Gerät auswählen, werden im Bereich **Bestandsdetails** die Benutzer oder Geräte angezeigt, die vom ausgewählten Problem betroffen sind. Doppelklicken Sie auf einen Benutzer oder ein Gerät in der Liste, um weitere Informationen zu diesem Problem anzuzeigen.
 
     -   **Unbekannt**: Zeigt eine Liste aller Benutzer und Geräte an, für die keine Kompatibilität mit der ausgewählten Richtlinienbereitstellung zusammen mit dem aktuellen Clientstatus von Geräten gemeldet wurde.
+
+### <a name="to-view-intune-compliance-policies-charts"></a>Anzeigen von Diagrammen zu Konformitätsrichtlinien von Intune
+1. Klicken Sie ab Version 1610 von Configuration Manager in der Configuration Manager-Konsole auf **Überwachung**.
+2. Wechseln Sie im Arbeitsbereich **Überwachung** zu **Übersicht** > **Konformitätseinstellungen** >  **Konformitätsrichtlinien**.
+3. Die folgenden Diagramme werden angezeigt:
+    - **Overall Device Compliance**: (Allgemeine Gerätekonformität) Zeigt die Gesamtkonformität von Geräten für alle Konformitätsrichtlinien.
+    - **Top Non-Compliance Reasons**: (Häufigste Gründe für Nichtkonformität) Zeigt die häufigsten Richtlinien an, mit denen Geräte nicht konform sind.
+4. Klicken Sie einen Bereich im Diagramm an, um einen Drilldown zu einer Liste der Geräte innerhalb dieser Kategorie auszuführen.
 
 ### <a name="to-view-a-health-attestation-report"></a>So zeigen Sie einen Integritätsnachweisbericht an
 
@@ -214,10 +222,8 @@ ms.openlocfilehash: bb91f4a711699790bb01f48d32183cf1215b1952
   **Unterstützt auf:**
   * Windows 10 und Windows 10 Mobile
 
-  
 
 
-
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: Windows Hello for Business-Einstellungen | System Center Configuration Manager
+title: Windows Hello for Business-Einstellungen | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie Windows Hello for Business in System Center Configuration Manager integrieren.
 ms.custom: na
 ms.date: 10/10/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2a45cfb3e00d8078fbf45bdc8a2668b7dd0a62c6
-ms.openlocfilehash: 80f586763d034891aac9b87dcb38120602aa2b85
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 1f254ee31bae1c3d7b1506e68c40baf78793bf66
 
 
 ---
@@ -109,7 +109,7 @@ Sie können Windows Hello for Business-Einstellungen auf einer Domäne angehöre
 
 Beachten Sie, dass Sie zusätzlich zu dieser Konfiguration, wie unter [Configure a certificate profile (Konfigurieren eines Zertifikatprofils)](#configure-a-certificate-profile) beschrieben, ein Zertifikatprofil bereitstellen müssen.
 
-### <a name="recommended-approach---configure-a-windows-hello-for-business-profile"></a>Empfohlener Ansatz – Konfigurieren eines Windows Hello for Business-Profils  
+### <a name="recommended-approach----configure-a-windows-hello-for-business-profile"></a>Empfohlener Ansatz – Konfigurieren eines Windows Hello for Business-Profils  
 
 Klicken Sie in der Verwaltungskonsole mit der rechten Maustaste unter **Zugriff auf Unternehmensressourcen** auf **Profile für Windows Hello für Unternehmen**, und wählen Sie **Neu** aus, um den Profilassistenten zu starten. Stellen Sie die Einstellungen bereit, die der Assistent anfordert, überprüfen und bestätigen Sie die Einstellungen auf der letzten Seite, und klicken Sie auf **Schließen**. Beispiel von möglichen Einstellungen:  
 
@@ -166,6 +166,6 @@ Weitere Informationen zur Configuration Manager-Anwendungsverwaltung finden Sie 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

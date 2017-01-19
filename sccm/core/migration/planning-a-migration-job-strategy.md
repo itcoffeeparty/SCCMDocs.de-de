@@ -1,5 +1,5 @@
 ---
-title: "Planen von Migrationsaufträgen | System Center Configuration Manager"
+title: Planung des Migrationsauftrags | Microsoft-Dokumentation
 description: "Verwenden Sie Migrationsaufträge zur Konfiguration von Daten, die zur System Center Configuration Manager-Umgebung migriert werden sollen."
 ms.custom: na
 ms.date: 10/06/2016
@@ -18,8 +18,8 @@ ms.author: brenduns
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 21e00064a8ecad3dd1c24b7f02bd0a8a8c36924f
+ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
+ms.openlocfilehash: 4e1ad4e8a043d1a6ede5dc88ca6b6c703f46e9da
 
 
 ---
@@ -226,7 +226,7 @@ Verwenden Sie Migrationsaufträge zur Konfiguration von bestimmten Daten, die zu
 ### <a name="data-selection"></a>Datenauswahl  
  Für die Erstellung eines Sammlungsmigrationsauftrags müssen eine oder mehrere Sammlungen ausgewählt werden. Nach Auswahl der Sammlungen werden vom Assistenten zum Erstellen von Migrationsaufträgen die den Sammlungen zugeordneten Objekte angezeigt. Standardmäßig werden alle Objekte migriert, die den ausgewählten Sammlungen zugeordnet sind, Sie können jedoch Objekte löschen, die bei diesem Auftrag nicht migriert werden sollen. Wenn Sie ein Objekt mit abhängigen Objekten löschen, werden auch die abhängigen Objekte gelöscht. Alle gelöschten Objekte werden einer Ausschlussliste hinzugefügt. Objekte auf einer Ausschlussliste werden für zukünftige Migrationsaufträge aus der automatischen Auswahl entfernt. Damit Objekte entfernt werden, die automatisch zur Migration bei zukünftig erstellten Migrationsaufträgen ausgewählt werden sollen, müssen Sie die Ausschlussliste manuell bearbeiten.  
 
-### <a name="site-ownership-for-migrated-content"></a>Standortbesitz migrierter Inhalte  
+### <a name="site-ownership-for--migrated-content"></a>Standortbesitz migrierter Inhalte  
  Wenn Sie Inhalte für Bereitstellungen migrieren, müssen Sie das Inhaltsobjekt einem Standort in der Zielhierarchie zuweisen. Dieser Standort wird dann zum Besitzer dieses Inhalts in der Zielhierarchie. Vom Standort der obersten Ebene der Zielhierarchie werden die Metadaten der Inhalte zwar eigentlich migriert, doch es ist der zugewiesene Standort, durch den über das Netzwerk ein Zugriff auf die Originalquelle der Inhalte erfolgt.  
 
  Erwägen Sie, den Besitz auf den nächsten verfügbaren Standort zu übertragen, um die Netzwerkbandbreite zu minimieren, die bei der Migration verwendet wird. Die Inhaltsinformationen sind in System Center Configuration Manager global freigegeben und daher an jedem Standort verfügbar.  
@@ -322,6 +322,6 @@ Verwenden Sie Migrationsaufträge zur Konfiguration von bestimmten Daten, die zu
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: Integrierte Tasksequenzvariablen | Configuration Manager
+title: Integrierte Tasksequenzvariablen | Microsoft-Dokumentation
 description: "Mithilfe integrierter Tasksequenzvariablen werden Informationen über die Umgebung bereitgestellt, in der die zugehörige Tasksequenz ausgeführt wird. Sie sind in der gesamten Tasksequenz verfügbar."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4b1014bc9a5c17dd571e69e7f5bfdae060a3eb55
+ms.sourcegitcommit: c9fb0fa46058c773eec6ac23999357d35d9f970f
+ms.openlocfilehash: a75adebfe2bbec8f6fe5206561530a720c0bfbf1
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 4b1014bc9a5c17dd571e69e7f5bfdae060a3eb55
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 
- Integrierte Tasksequenzvariablen werden von System Center Configuration Manager bereitgestellt. Mithilfe integrierter Variablen werden Informationen über die Umgebung bereitgestellt, in der die zugehörige Tasksequenz ausgeführt wird. Die Werte dieser Variablen sind in der gesamten Tasksequenz verfügbar. Üblicherweise werden integrierte Variablen initialisiert, bevor Schritte in der Tasksequenz ausgeführt werden. Beispiel: Die integrierte Variable **_SMSTSLogPath** ist eine Umgebungsvariable und wird zum Festlegen des Pfads verwendet, in den Configuration Manager-Komponenten beim Ausführen der Tasksequenz Protokolldateien schreiben. Auf diese Umgebungsvariable kann von jedem Tasksequenzschritt aus zugegriffen werden. Einige Variablen werden jedoch vor jedem Schritt ausgewertet. Hierzu gehört z. B. die Variable _SMSTSCurrentActionName. Die Werte der integrierten Variablen sind im Allgemeinen schreibgeschützt. Die Werte sind für integrierte Variablen mit einem Namen schreibgeschützt, der mit einem Unterstrich beginnt.  
+ Integrierte Tasksequenzvariablen werden von System Center Configuration Manager bereitgestellt. Mithilfe integrierter Variablen werden Informationen über die Umgebung bereitgestellt, in der die zugehörige Tasksequenz ausgeführt wird. Die Werte dieser Variablen sind in der gesamten Tasksequenz verfügbar. Üblicherweise werden integrierte Variablen initialisiert, bevor Schritte in der Tasksequenz ausgeführt werden. Beispiel: Die integrierte Variable **_SMSTSLogPath** ist eine Umgebungsvariable und wird zum Festlegen des Pfads verwendet, in den Configuration Manager-Komponenten beim Ausführen der Tasksequenz Protokolldateien schreiben. Auf diese Umgebungsvariable kann von jedem Tasksequenzschritt aus zugegriffen werden. Einige Variablen werden jedoch vor jedem Schritt ausgewertet. Hierzu gehört z.B. die Variable &#95;SMSTSCurrentActionName. Die Werte der integrierten Variablen sind im Allgemeinen schreibgeschützt. Die Werte sind für integrierte Variablen mit einem Namen schreibgeschützt, der mit einem Unterstrich beginnt.  
 
 ## <a name="task-sequence-built-in-variable-list"></a>Liste der integrierten Tasksequenzvariablen  
  In der folgenden Liste werden die integrierten Variablen beschrieben, die in Configuration Manager zur Verfügung stehen:  
@@ -67,9 +67,11 @@ ms.openlocfilehash: 4b1014bc9a5c17dd571e69e7f5bfdae060a3eb55
 |_SMSTSUseSSL|Gibt an, ob die Tasksequenz SSL zur Kommunikation mit dem Configuration Manager-Verwaltungspunkt verwendet. Bei Ausführung des Standorts im einheitlichen Modus wird der Wert auf **true**festgelegt.|  
 |_SMSTSWTG|Gibt an, ob der Computer als Windows To Go-Gerät ausgeführt wird.|  
 |OSDPreserveDriveLetter|Ab Configuration Manager Version 1606 wurde die Tasksequenzvariable als veraltet markiert. Während einer Bereitstellung eines Betriebssystems bestimmt Windows Setup standardmäßig den Laufwerkbuchstaben, der am besten verwendet wird (in der Regel C:). <br /><br />In früheren Versionen bestimmte die Variable „OSDPreverveDriveLetter“, ob die Tasksequenz bei der Anwendung des Images auf einen Zielcomputer den in der WIM-Datei des Betriebssystemimages erfassten Laufwerkbuchstaben verwendet. Sie können den Wert dieser Variablen auf **False** festlegen, um den Speicherort, den Sie für die Einstellung **Ziel** angeben, im Tasksequenzschritt **Betriebssystem anwenden** zu verwenden. Weitere Informationen finden Sie unter [Apply Operating System Image](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage).|  
+|OSDSetupAdditionalUpgradeOptions|Ab Version 1602 von Configuration Manager können Sie diese Variable verwenden, um zusätzliche Optionen für das Windows-Installationsupgrade zu bestimmten.
 |SMSTSAssignmentsDownloadInterval|Geben Sie mithilfe dieser Variablen die Wartezeit in Sekunden an, nach der vom Client nach dem letzten erfolglosen Versuch ein neuer Versuch zum Herunterladen der Richtlinie unternommen wird. Standardmäßig wartet der Client **0** Sekunden, bevor er einen neuen Versuch startet.<br /><br /> Sie können diese Variable festlegen, indem Sie einen Prestart-Befehl von einem Medium oder per PXE verwenden.|  
 |SMSTSAssignmentsDownloadRetry|Geben Sie mithilfe dieser Variablen an, wie häufig ein Client versucht, nach einem ersten erfolglosen Versuch die Richtlinie herunterzuladen. Standardmäßig unternimmt der Client **0** neue Versuche.<br /><br /> Sie können diese Variable festlegen, indem Sie einen Prestart-Befehl von einem Medium oder per PXE verwenden.|  
 |SMSTSAssignUsersMode|Gibt an, auf welche Weise die Zuordnung zwischen Benutzern und dem Zielcomputer durch die Tasksequenz erfolgt. Legen Sie einen der folgenden Werte für die Variable fest.<br /><br /> -   Auto: Die Tasksequenz erstellt während der Bereitstellung des Betriebssystems auf dem Zielcomputer eine Beziehung zwischen den angegebenen Benutzern und dem Zielcomputer.<br />-   Ausstehend: Die Tasksequenz erstellt eine Beziehung zwischen den angegebenen Benutzern und dem Zielcomputer, wartet jedoch auf die Genehmigung durch den Administrator, bevor die Beziehung festgelegt wird.<br />-   Deaktiviert: Während der Betriebssystembereitstellung erfolgt keine Zuordnung von Benutzern zum Zielcomputer.|  
+|SMSTSDownloadAbortCode|Diese Variable enthält den Abbruchscodewert für die externe Software zum Programmdownload (angegeben in der Variablen SMSTSDownloadProgram). Wenn das Programm einen Fehlercode zurückgibt, der dem Wert der SMSTSDownloadAbortCode-Variablen entspricht, dann schlägt der Download des Inhalts fehl, und es wird keine Downloadmethode versucht.
 |SMSTSDownloadProgram|Geben Sie mithilfe dieser Variablen einen alternativen Inhaltsanbieter für die Tasksequenz an. Der Inhalt wird dann statt mit dem Standard-Downloadprogramm von Configuration Manager mit diesem Downloadprogramm heruntergeladen. Beim Herunterladen von Inhalten überprüft die Tasksequenz die Variable auf ein angegebenes Downloadprogramm. Wenn ein Programm angegeben ist, wird es von der Tasksequenz ausgeführt, um die Daten herunterzuladen.|  
 |SMSTSDownloadRetryCount|Geben Sie mit dieser Variable an, wie häufig Configuration Manager versuchen soll, Inhalt von einem Verteilungspunkt herunterzuladen. Standardmäßig unternimmt der Client **2** neue Versuche.|  
 |SMSTSDownloadRetryDelay|Geben Sie mit dieser Variablen an, wie viele Sekunden Configuration Manager warten soll, bevor der Download von Inhalt von einem Verteilungspunkt erneut versucht wird. Standardmäßig wartet der Client **15** Sekunden, bevor er einen neuen Versuch startet.|  
@@ -80,7 +82,7 @@ ms.openlocfilehash: 4b1014bc9a5c17dd571e69e7f5bfdae060a3eb55
 |SMSTSMPListRequestTimeout|Geben Sie mit dieser Variable an, wie viele Millisekunden eine Tasksequenz nach dem erfolglosen Abrufen der Verwaltungspunktliste von Standortdiensten warten soll, bevor sie erneut versucht, eine Anwendung oder einen Softwareupdate zu installieren. Standardmäßig wartet die Tasksequenz 60.000 Millisekunden (60 Sekunden), bevor sie diesen Schritt wiederholt, und führt die Wiederholung bis zu drei Mal durch. Diese Variable gilt nur für die Tasksequenzschritte „Anwendung installieren“ und „Softwareupdates installieren“.|  
 |SMSTSMPListRequestTimeoutEnabled|Verwenden Sie diese Variable, um wiederholte MPList-Anforderungen bei der Clientaktualisierung zu ermöglichen, wenn der Client sich nicht im Intranet befindet. <br />Dieser Wert ist standardmäßig auf „True“ festgelegt. Wenn Clients sich im Internet befinden, können Sie diese Variable auf „False“ festlegen, um unnötige Verzögerungen zu vermeiden. Diese Variable gilt nur für die Tasksequenzschritte „Anwendung installieren“ und „Softwareupdates installieren“.|  
 |SMSTSPeerDownload|Verwenden Sie diese Variable, um dem Client die Verwendung des Windows PE-Peercaches zu ermöglichen.<br /><br /> Beispiel:<br /><br /> SMSTSPeerDownload = **TRUE** ermöglicht diese Funktion.|  
-|SMSTSPeerRequestPort|Verwenden Sie diese Variable für den Windows PE-Peercache, um einen benutzerdefinierten Netzwerkport für die erste Übertragung anzugeben, wenn Sie nicht die in den Clienteinstellungen konfigurierten Standardports (8003 und 8004) verwenden.|  
+|SMSTSPeerRequestPort|Verwenden Sie diese Variable für den Windows PE-Peercache, um einen benutzerdefinierten Netzwerkport für die erste Übertragung anzugeben, wenn Sie nicht die in den Clienteinstellungen konfigurierten Standardports (8004) verwenden.|  
 |SMSTSPersistContent|Verwenden Sie diese Variable, um Inhalt im Tasksequenzcache vorübergehend beizubehalten.|  
 |SMSTSPostAction|Gibt einen Befehl an, der nach Abschluss der Tasksequenz ausgeführt wird. Mit dieser Variablen können Sie beispielsweise ein Skript angeben, welches das Schreiben von Filtern auf eingebetteten Geräten ermöglicht, nachdem die Tasksequenz ein Betriebssystem auf dem Gerät bereitgestellt hat.|  
 |SMSTSPreferredAdvertID|Erzwingt die Ausführung einer bestimmten zielgerichteten Bereitstellung auf dem Zielcomputer. Dies kann durch einen Prestart-Befehl von einem Medium oder über PXE festgelegt werden. Wenn diese Variable festgelegt ist, setzt die Tasksequenz alle erforderlichen Bereitstellungen außer Kraft.|  
@@ -95,6 +97,6 @@ ms.openlocfilehash: 4b1014bc9a5c17dd571e69e7f5bfdae060a3eb55
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

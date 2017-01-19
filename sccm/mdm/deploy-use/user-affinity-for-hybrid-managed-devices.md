@@ -1,5 +1,5 @@
 ---
-title: "Benutzeraffinität für hybridverwaltete Geräte in Configuration Manager"
+title: "Benutzeraffinität für hybridverwaltete Geräte in Configuration Manager | Microsoft-Dokumentation"
 description: "Konfigurieren der Benutzeraffinität für verwaltete Geräte in Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b5d520a7-e9e5-40ee-91f9-f2684214beb6
 caps.latest.revision: 6
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 789374b48d27ffaaec5ca02a910ca6e1899b3d3c
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 74dcc0f4e680893db804956615248b7e1230d2b5
 
 ---
 # <a name="user-affinity-for-hybrid-managed-devices-in-configuration-manager"></a>Benutzeraffinität für hybridverwaltete Geräte in Configuration Manager
@@ -52,10 +52,10 @@ Beim Konfigurieren von Profilen für firmeneigene Geräte kann der Administrator
 8.  Die Registrierung ist damit abgeschlossen. Sie können nun die Funktionen des Geräts in vollem Umfang nutzen.  
 
 ##  <a name="a-namebkmknouaa-managed-devices-without-user-affinity"></a><a name="BKMK_noUA"></a> Verwaltete Geräte ohne Benutzeraffinität  
- Auf mit **no user affinity** konfiguriert wurden, unterstützen sie auch das Unternehmensportal nicht. Die App sollte auf solchen Geräten nicht installiert werden. Das Unternehmensportal ist für Benutzer gedacht, die über Anmeldeinformationen ihres Unternehmens verfügen und Zugriff auf personalisierte Unternehmensressourcen (z. B. E-Mail) benötigen. Geräte, die **ohne Benutzeraffinität** registriert wurden, bieten keine Anmeldung für dedizierte Benutzer. Kiosk-, Verkaufsstellen- (POS-) oder gemeinsam genutzte Geräte sind typisch Anwendungsfälle für Geräte, die ohne Benutzeraffinität registriert werden. Wenn Benutzeraffinität erforderlich ist, muss vor der Registrierung des Geräts in dessen Registrierungsprofil **Benutzeraffinität** ausgewählt worden sein. Zum Ändern des Affinitätsstatus eines Geräts müssen Sie das Gerät deaktivieren und erneut registrieren.
+ Auf mit **no user affinity** konfiguriert wurden, unterstützen sie auch das Unternehmensportal nicht. Die App sollte auf solchen Geräten nicht installiert werden. Das Unternehmensportal ist für Benutzer gedacht, die über Anmeldeinformationen ihres Unternehmens verfügen und Zugriff auf personalisierte Unternehmensressourcen (z. B. E-Mail) benötigen. Geräte, die **ohne Benutzeraffinität** registriert wurden, bieten keine Anmeldung für dedizierte Benutzer. Kiosk-, Verkaufsstellen- (POS-) oder gemeinsam genutzte Geräte sind typisch Anwendungsfälle für Geräte, die ohne Benutzeraffinität registriert werden. Wenn Benutzeraffinität erforderlich ist, muss vor der Registrierung des Geräts in dessen Registrierungsprofil **Benutzeraffinität** ausgewählt worden sein. Zum Ändern des Affinitätsstatus eines Geräts müssen Sie das Gerät abkoppeln und erneut registrieren.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: Migrieren von Objekten | System Center Configuration Manager
+title: Migration von Objekten | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie die Migration von Objekten zwischen Hierarchien in einer Umgebung mit System Center Configuration Manager planen.
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 243b1eeac2536e3e63e9f8cbe132d36ea2aba39a
+ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
+ms.openlocfilehash: 182610aa98bf39ab809657991ec8befc4743ab19
 
 
 ---
@@ -189,6 +189,6 @@ Weitere Informationen über die Berichterstellung finden Sie unter [Berichterste
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

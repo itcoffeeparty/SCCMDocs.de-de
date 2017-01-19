@@ -1,5 +1,5 @@
 ---
-title: Sicherung und Wiederherstellung | System Center Configuration Manager
+title: Sicherung und Wiederherstellung | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie Standorte bei Ausfall oder Datenverlust in System Center Configuration Manager sichern und wiederherstellen.
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
+ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
+ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
 
 
 ---
@@ -114,9 +114,9 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
     -   **Lokale Laufwerke auf dem Standortserver und SQL Server**: Bei Auswahl dieser Option werden die Sicherungsdateien für den Standort im angegebenen Pfad auf dem lokalen Laufwerk des Standortservers gespeichert, und die Sicherungsdateien für die Standortdatenbank werden im angegebenen Pfad auf dem lokalen Laufwerk des Standortdatenbankservers gespeichert. Sie müssen die lokalen Ordner erstellen, bevor der Sicherungstask ausgeführt wird. Für das Computerkonto des Standortservers müssen die NTFS-Berechtigungen **Schreiben** für den Ordner vorliegen, den Sie auf dem Standortserver erstellen. Für das Computerkonto des SQL Servers müssen die NTFS-Berechtigungen **Schreiben** für den Ordner vorliegen, den Sie auf dem Standortdatenbankserver erstellen. Diese Option ist nur verfügbar, wenn die Standortdatenbank nicht auf dem Standortserver installiert ist.  
 
     > [!NOTE]  
-    >    - Die Option zum Durchsuchen des Sicherungsziels ist nur verfügbar, wenn Sie den UNC-Pfad des Sicherungsziels angeben.
+    >   - Die Option zum Durchsuchen des Sicherungsziels ist nur verfügbar, wenn Sie den UNC-Pfad des Sicherungsziels angeben.
 
-    >- Der Ordner- oder Freigabename, der für das Sicherungsziel verwendet wird, darf keine Unicode-Zeichen enthalten.  
+    > - Der Ordner- oder Freigabename, der für das Sicherungsziel verwendet wird, darf keine Unicode-Zeichen enthalten.  
 
 
 6.  Konfigurieren Sie einen Zeitplan für den Standortsicherungstask. Empfehlenswert ist ein Sicherungszeitplan, der außerhalb der Arbeitszeit liegt. Falls Sie über eine Hierarchie verfügen, empfiehlt sich ein Zeitplan, der mindestens zweimal pro Woche ausgeführt wird. Auf diese Weise bleibt bei einem Standortausfall ein Maximum an Daten erhalten.  
@@ -190,7 +190,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
  Achten Sie darauf, bei der Dateisystemsicherung für den Standortserver sowohl die Inhaltsbibliothek als auch die Paketquellspeicherorte einzuschließen.  
 
 #### <a name="back-up-custom-software-updates"></a>Sichern benutzerdefinierter Softwareupdates  
-     System Center Updates Publisher 2011 is a stand-alone tool that lets you publish custom software updates to Windows Server Update Services (WSUS), synchronize the software updates to Configuration Manager, assess software updates compliance, and deploy the custom software updates to clients. Updates Publisher uses a local database for its software update repository. When you use Updates Publisher to manage custom software updates, determine whether you have to include the Updates Publisher database in your backup plan. For more information about Updates Publisher, see [System Center Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkId=228726) in the System Center TechCenter Library.  
+ System Center Updates Publisher 2011 ist ein eigenständiges Tool, mit dem Sie benutzerdefinierte Softwareupdates in Windows Server Update Services (WSUS) veröffentlichen, die Softwareupdates mit Configuration Manager synchronisieren, die Konformität der Softwareupdates bewerten sowie die benutzerdefinierten Softwareupdates für Clients bereitstellen können. Updates Publisher verwendet eine lokale Datenbank für das Softwareupdaterepository. Wenn Sie den Updates Publisher zur Verwaltung benutzerdefinierter Softwareupdates verwenden, legen Sie fest, ob die Updates Publisher-Datenbank in Ihrem Sicherungsplan beinhaltet sein muss. Weitere Informationen zu Updates Publisher finden Sie unter [System Center Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkId=228726) in der System Center TechNet-Bibliothek.  
 
  Gehen Sie wie folgt vor, um die Updates Publisher-Datenbank zu sichern.  
 
@@ -206,7 +206,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 ### <a name="user-state-migration-data"></a>Daten zur Benutzerzustandsmigration  
  Mit Configuration Manager-Tasksequenzen können Sie bei der Betriebssystembereitstellung die Benutzerstatusdaten erfassen und wiederherstellen, wenn Sie den Benutzerstatus des aktuellen Betriebssystems beibehalten möchten. Die Ordner, in denen die Benutzerzustandsdaten gespeichert werden, werden in den Eigenschaften des Zustandsmigrationspunkts aufgeführt. Diese Daten zur Benutzerzustandsmigration werden vom Wartungstask „Standortserver sichern“ nicht gesichert. Im Rahmen Ihres Sicherungsplans müssen Sie die Ordner, in denen die Daten zur Benutzerzustandsmigration gespeichert werden, manuell sichern.   
 
-##### <a name="to-determine-the-folders-used-to-store-user-state-migration-data"></a>So bestimmen Sie die Ordner, in denen die Daten zur Benutzerzustandsmigration gespeichert werden  
+#### <a name="to-determine-the-folders-used-to-store-user-state-migration-data"></a>So bestimmen Sie die Ordner, in denen die Daten zur Benutzerzustandsmigration gespeichert werden  
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung**.  
 
@@ -384,7 +384,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Details:** Mit diesem Schlüssel wird ein Standort der zentralen Verwaltung wiederhergestellt.  
 
- **RecoveryOptions**  
+**RecoveryOptions**  
 
 -   **Schlüsselname:** ServerRecoveryOptions  
 
@@ -454,7 +454,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Details:** Hiermit wird der Pfad zum Sicherungssatz der Standortdatenbank angegeben. Der Schlüssel **BackupLocation** ist erforderlich, wenn Sie für den Schlüssel **ServerRecoveryOptions** den Wert **1** oder **4** konfigurieren und für den Schlüssel **DatabaseRecoveryOptions** den Wert **10** .  
 
- **Optionen**  
+**Optionen**  
 
 -   **Schlüsselname:** ProductID  
 
@@ -549,7 +549,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Details:** Gibt an, ob am Programm zur Verbesserung der Benutzerfreundlichkeit teilgenommen wird.  
 
- **SQLConfigOptions**  
+**SQLConfigOptions**  
 
 -   **Schlüsselname:** SQLServerName  
 
@@ -597,7 +597,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Details:** Mit diesem Schlüssel wird ein primärer Standort wiederhergestellt.  
 
- **RecoveryOptions**  
+**RecoveryOptions**  
 
 -   **Schlüsselname:** ServerRecoveryOptions  
 
@@ -653,7 +653,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Details:** Hiermit wird der Pfad zum Sicherungssatz der Standortdatenbank angegeben. Der Schlüssel **BackupLocation** ist erforderlich, wenn Sie für den Schlüssel **ServerRecoveryOptions** den Wert **1** oder **4** konfigurieren und für den Schlüssel **DatabaseRecoveryOptions** den Wert **10** .  
 
- **Optionen**  
+**Optionen**  
 
 -   **Schlüsselname:** ProductID  
 
@@ -748,7 +748,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Details:** Gibt an, ob am Programm zur Verbesserung der Benutzerfreundlichkeit teilgenommen wird.  
 
- **SQLConfigOptions**  
+**SQLConfigOptions**  
 
 -   **Schlüsselname:** SQLServerName  
 
@@ -783,7 +783,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Details:** Gibt den Port des SQL Server-Service Brokers (SSB) an, der von SQL Server verwendet wird. Von SSB wird zwar in der Regel TCP-Port 4022 verwendet, aber es werden auch andere Ports unterstützt. Sie müssen den gleichen SSB-Port angeben, der vor Auftreten des Fehlers verwendet wurde.  
 
- **Hierarchie-ExpansionOption**  
+**Hierarchie-ExpansionOption**  
 
 -   **Schlüsselname:** CCARSiteServer  
 
@@ -839,7 +839,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
  Nach der Wiederherstellung eines Standortservers müssen Sie die Windows-Sideload-Schlüssel für den Standort erneut eingeben, weil diese im Rahmen der Standortwiederherstellung zurückgesetzt werden. Nach dem erneuten Eingeben der Sideload-Schlüssel wird der Zähler in der Spalte **Verwendete Aktivierungen** für Windows-Sideload-Schlüssel in der Configuration Manager-Konsole zurückgesetzt. Angenommen, vor dem Standortausfall hätte der Zähler **Aktivierungen insgesamt** den Wert **100** und **Verwendete Aktivierungen** den Wert **90** für die Anzahl der von Geräten verwendeten Schlüssel gehabt. Nach der Standortwiederherstellung zeigt die Spalte **Aktivierungen insgesamt** weiterhin **100**an, der Wert in **Verwendete Aktivierungen** wurde jedoch fälschlich auf **0**zurückgesetzt. Wenn nun jedoch Sideload-Schlüssel von zehn weiteren Geräten verwendet werden, sind nachfolgend keine Sideload-Schlüssel mehr übrig, und für das nächste Gerät wird kein Sideload-Schlüssel mehr zur Anwendung verfügbar sein.  
 
 #### <a name="recreate-the-microsoft-intune-subscription"></a>Neuerstellen des Microsoft Intune-Abonnements  
- Wenn Sie einen Configuration Manager-Standortserver wiederherstellen, nachdem ein neues Image auf den Standortservercomputer aufgespielt wurde, wird das Microsoft Intune-Abonnement nicht wiederhergestellt. Sie müssen das Abonnement nach dem Wiederherstellen des Standorts erneut erstellen. Weitere Informationen finden Sie unter [Configuring the Microsoft Intune subscription](../../mdm/plan-design/hybrid-mobile-device-management.md#bkmk_witsub).  
+ Wenn Sie einen Configuration Manager-Standortserver wiederherstellen, nachdem ein neues Image auf den Standortservercomputer aufgespielt wurde, wird das Microsoft Intune-Abonnement nicht wiederhergestellt. Sie müssen das Abonnement nach dem Wiederherstellen des Standorts erneut erstellen. Weitere Informationen finden Sie unter [Configuring the Microsoft Intune subscription](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription).  
 
 #### <a name="configure-ssl-for-site-system-roles-that-use-iis"></a>Konfigurieren von SSL für Standortsystemrollen, die IIS verwenden  
  Wenn Sie Standortserver wiederherstellen, auf denen IIS ausgeführt wird und die vor dem Auftreten des Fehlers für HTTPS konfiguriert wurden, müssen Sie IIS für die Verwendung des Webserverzertifikats umkonfigurieren.  
@@ -913,6 +913,6 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

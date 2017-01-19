@@ -1,5 +1,5 @@
 ---
-title: Migrieren von Inhalt | System Center Configuration Manager
+title: Migrieren von Inhalten | Microsoft-Dokumentation
 description: "Verwenden Sie Verteilungspunkte für das Verwalten von Inhalten beim Migrieren von Daten zu einer Zielhierarchie in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: aa88f18247b49995bff4a4a6f5fd1e1ed70ca214
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: c96fa0995b5de87f50e1146b338058f26daeb624
 
 
 ---
@@ -188,8 +188,23 @@ Zur Identifizierung von Verteilungspunkten, die für eine Neuzuweisung berechtig
 
  Zum Neuzuweisen des Verteilungspunkts wird von der Zielhierarchie das Zugriffskonto des Quellstandorts verwendet, das für die Sammlung von Daten des SMS-Anbieters des Quellstandorts konfiguriert ist. Informationen zu erforderlichen Berechtigungen und zusätzlichen Voraussetzungen finden Sie unter [Voraussetzungen für die Migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md).  
 
+## <a name="migrate-multiple-shared-distribution-points-at-the-same-time"></a>Gleichzeitiges Migrieren mehrerer freigegebener Verteilungspunkte
+Ab Version 1610 können Sie die Option **Verteilungspunkt neu zuweisen** verwenden, damit Configuration Manager die Neuzuweisung von bis zu 50 freigegebenen Verteilungspunkten parallel zur selben Zeit ausführen kann. Dies umfasst freigegebene Verteilungspunkte von unterstützten Quellstandorten, auf denen eines der folgenden Programme ausgeführt wird:  
+- Configuration Manager 2007
+- System Center 2012 Configuration Manager
+- System Center 2012 R2 – Configuration Manager
+- System Center Configuration Manager Current Branch-Standort
+
+Wenn Sie Verteilungspunkte neu zuweisen, muss jeder Verteilungspunkt für das Upgrade oder die Neuzuweisung infrage kommen. Der Name der Aktion und der zugehörige Prozess (Upgrade oder Neuzuweisung) hängen von der Configuration Manager-Version ab, die am Quellstandort ausgeführt wird. Das Endergebnis ist unabhängig vom Upgrade oder der Neuzuweisung jedoch dasselbe: Der Verteilungspunkt wird einem Ihrer Current Branch-Standorte und dessen Inhalt direkt zugewiesen.
+
+Vor Version 1610 konnte Configuration Manager jeweils nur einen Verteilungspunkt verwalten. Jetzt können Sie beliebig viele Verteilungspunkte neu zuweisen. Dabei gelten jedoch folgende Einschränkungen:  
+- Eine Mehrfachauswahl zuzuweisender Verteilungspunkte ist nicht möglich. Wenn sich mehrere Verteilungspunkte in der Warteschlange befinden, verarbeitet Configuration Manager sie parallel und wartet nicht, bis ein Verteilungspunkt abgeschlossen ist, um erst dann mit dem nächsten Verteilungspunkt zu beginnen.  
+- Standardmäßig werden bis zu 50 Verteilungspunkte gleichzeitig parallel verarbeitet. Wenn die Neuzuweisung des ersten Verteilungspunkts abgeschlossen ist, beginnt Configuration Manager mit der Verarbeitung des 51. Verteilungspunkts usw.  
+- Wenn Sie das Configuration Manager-SDK verwenden, können Sie die Eigenschaft **SharedDPImportThreadLimit** ändern, um die Anzahl der neu zugewiesenen Verteilungspunkte anzupassen, die Configuration Manager parallel verarbeiten kann.
+
+
 ##  <a name="a-nameaboutmigratingcontenta-content-ownership-when-migrating-content"></a><a name="About_Migrating_Content"></a> Inhaltsbesitz beim Migrieren von Inhalten  
- Wenn Sie Inhalte für Bereitstellungen migrieren, müssen Sie das Inhaltsobjekt einem Standort in der Zielhierarchie zuweisen. Dieser Standort wird dann zum Besitzer dieses Inhalts in der Zielhierarchie. Vom Standort der obersten Ebene der Zielhierarchie werden die Metadaten der Inhalte zwar eigentlich migriert, doch es ist der zugewiesene Standort, durch den über das Netzwerk ein Zugriff auf die Originalquelle der Inhalte erfolgt.  
+ Wenn Sie Inhalte für Bereitstellungen migrieren, müssen Sie das Inhaltsobjekt einem Standort in der Zielhierarchie zuweisen. Dieser Standort wird dann zum Besitzer dieses Inhalts in der Zielhierarchie. Vom Standort der obersten Ebene der Zielhierarchie werden die Metadaten der Inhalte zwar migriert, doch es ist der zugewiesene Standort, durch den über das Netzwerk ein Zugriff auf die Originalquelle der Inhalte erfolgt.  
 
  Zum Minimieren der beim Migrieren von Inhalten verwendeten Netzwerkbandbreite übertragen Sie den Besitz des Inhalts auf einen Standort in der Zielhierarchie, der sich im Netzwerk in der Nähe des Inhaltsorts in der Quellhierarchie befindet. Die Inhaltsinformationen sind in der Zielhierarchie global freigegeben und daher an jedem Standort verfügbar.  
 
@@ -197,6 +212,6 @@ Zur Identifizierung von Verteilungspunkten, die für eine Neuzuweisung berechtig
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

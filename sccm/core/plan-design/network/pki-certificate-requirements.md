@@ -1,8 +1,8 @@
 ---
-title: PKI-Zertifikatanforderungen | System Center Configuration Manager
+title: PKI-Zertifikatanforderungen | Microsoft-Dokumentation
 description: "Suchen Sie Anforderungen für die PKI-Zertifikate, die Sie möglicherweise für System Center Configuration Manager benötigen."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fbc85f65e4ad952d40161e6f6282bb6c0796662b
+ms.sourcegitcommit: db0642e95bbd7e704d2052aa1e0f5c27cd7bf568
+ms.openlocfilehash: 00c3c355fc43eff18b86112b0b9272cbcdf38e85
 
 
 ---
@@ -32,7 +32,7 @@ Die für System Center Configuration Manager erforderlichen PKI-Zertifikate (Pub
 -   Für Windows Server 2008: [Active Directory-Zertifikatdienste in Windows Server 2008](http://go.microsoft.com/fwlink/p/?LinkId=115018)  
 
 > [!IMPORTANT]  
->  Ab dem 1. Januar 2017 werden SHA-1-signierte Zertifikate von Windows nicht mehr als vertrauenswürdig eingestuft.  Es wird empfohlen, neue SHA-2-signierte Zertifikate für die Server- und Clientauthentifizierung auszustellen.  
+>  Ab dem 1. Januar 2017 werden SHA-1-signierte Zertifikate von Windows nicht mehr als vertrauenswürdig eingestuft.  Es wird empfohlen, neue Zertifikate für die Server- und Clientauthentifizierung auszustellen, die mit SHA-2-signiert sind (welches SHA-256 umfasst).  
 >   
 >  Weitere Informationen zu dieser Änderung und möglichen Verschiebungen des Stichtags finden Sie in diesem Blogbeitrag: [Erzwingen der Verwendung von Signaturen und Zeitstempeln für Authentifizierungscode in Windows](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-authenticode-code-signing-and-timestamping.aspx)  
 
@@ -86,6 +86,6 @@ Die für System Center Configuration Manager erforderlichen PKI-Zertifikate (Pub
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Prüflisten für die Migration | System Center Configuration Manager"
+title: "Checklisten für die Migration | Microsoft-Dokumentation"
 description: "Verwenden Sie Administratorprüflisten zum Planen einer Strategie zur Migration zu System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f3912de04aa3e6196137a7034753013c35180d64
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
 
 ---
@@ -147,7 +147,7 @@ Verwenden Sie die folgende Checkliste für die Datenmigration von der Quellhiera
 
     Wenn Sie beispielsweise Inhalte migrieren, müssen Sie unabhängig vom verwendeten Migrationsauftrag einen Standort in der Zielhierarchie für die Verwaltung dieser Inhalte zuweisen. Der zugewiesene Standort greift auf den ursprünglichen Quelldateispeicherort für den Inhalt zu und ist für das Verteilen des Inhalts auf die Verteilungspunkte in der Zielhierarchie verantwortlich.  
 
-    Weitere Informationen finden Sie im Abschnitt [Create and Edit Migration Jobs for System Center Configuration Manager](../../core/migration/operations-for-migration.md#create_edit_migration_jobs) des Themas [Operations for migrating to System Center Configuration Manager](../../core/migration/operations-for-migration.md) .  
+    Weitere Informationen finden Sie im Abschnitt [Create and Edit Migration Jobs for System Center Configuration Manager](../../core/migration/operations-for-migration.md#Create_Edit_migration_Jobs) des Themas [Operations for migrating to System Center Configuration Manager](../../core/migration/operations-for-migration.md) .  
 
 -   **Migrieren Sie Clients in die Zielhierarchie:**  
 
@@ -167,7 +167,7 @@ Verwenden Sie die folgende Checkliste für die Datenmigration von der Quellhiera
 
     Sie können auch ein Upgrade von einem Configuration Manager 2007-Verteilungspunkt durchführen, der sich auf einem sekundären Standortserver befindet. Hierbei wird der sekundäre Standort entfernt, sodass sich in der Zielhierarchie nur ein Verteilungspunkt ergibt.  
 
-    Informationen zu freigegebenen Verteilungspunkten finden Sie im Abschnitt [Share Distribution Points Between Source and Destination Hierarchies](../../core/migration/planning-a-content-deployment-migration-strategy.md#about_shared_dps_in_migrations) des Themas [Planning a content deployment migration strategy in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md) .  
+    Informationen zu freigegebenen Verteilungspunkten finden Sie im Abschnitt [Share Distribution Points Between Source and Destination Hierarchies](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration) des Themas [Planning a content deployment migration strategy in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md) .  
 
 -   **Abschließen der Migration:**  
 
@@ -175,6 +175,6 @@ Verwenden Sie die folgende Checkliste für die Datenmigration von der Quellhiera
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

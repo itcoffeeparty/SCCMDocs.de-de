@@ -1,5 +1,5 @@
 ---
-title: "Erstellen einer Tasksequenz für Nicht-Betriebssystembereitstellungen | System Center Configuration Manager"
+title: "Erstellen einer Tasksequenz für Nicht-Betriebssystembereitstellungen | Microsoft-Dokumentation"
 description: "Erstellen von Tasksequenzen, die nicht mit Systemen zur Betriebssystembereitstellung verknüpft sind, z.B. Verteilen von Software, Aktualisieren von Treibern, Bearbeiten von Benutzerzuständen, usw."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: bc8ef5912f753031191a677d58d5e88f62b8d36a
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: ec146270ef39d48673ae6f3ca405b3f0bd7e8afa
 
 
 ---
@@ -58,6 +58,6 @@ Tasksequenzen in System Center Configuration Manager dienen zum Automatisieren e
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

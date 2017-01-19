@@ -1,5 +1,5 @@
 ---
-title: "Planungsüberlegungen für das Automatisieren von Tasks | System Center Configuration Manager"
+title: "Planungsüberlegungen für das Automatisieren von Tasks | Microsoft-Dokumentation"
 description: Planen Sie Ihre automatisierten Tasks in System Center Configuration Manager.
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: a439d847adb129a341b33be8e1a1674c72184e77
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 830f715b688cc9929a179da94eba9c81de8db11a
 
 
 ---
@@ -183,7 +183,7 @@ In Ihrer System Center Configuration Manager-Umgebung können Sie Tasksequenzen 
 > [!TIP]  
 >  Die Paket-ID und die Prestart-Befehlszeile einschließlich des Wertes vorhandener Tasksequenzvariablen werden von der Tasksequenz in die Protokolldatei „CreateTSMedia.log“ auf dem Computer geschrieben, auf dem die Configuration Manager-Konsole ausgeführt wird. Sie können diese Protokolldatei überprüfen, um den Wert für die Tasksequenzvariablen zu überprüfen.  
 
-##  <a name="a-namebkmktscreatea-create-a-task-sequence"></a><a name="BKMK_TSCreate"></a> Erstellen einer Tasksequenz  
+##  <a name="a-namebkmktscreatea-create-a--task-sequence"></a><a name="BKMK_TSCreate"></a> Erstellen einer Tasksequenz  
  Sie erstellen Tasksequenzen mithilfe des Tasksequenzerstellungs-Assistenten. Mit dem Assistenten können integrierte Sequenzen zur Ausführung bestimmter Tasks oder benutzerdefinierte Tasksequenzen zur Ausführung vieler verschiedener Tasks erstellt werden.  
 
  Beispielsweise können Sie Tasksequenzen erstellen, mit denen ein Betriebssystemabbild eines Referenzcomputers erstellt und erfasst oder ein vorhandenes Betriebssystemabbild auf einem Zielcomputer installiert wird. Sie können auch eine benutzerdefinierte Tasksequenz erstellen, mit der ein benutzerdefinierter Task ausgeführt wird. Sie können benutzerdefinierte Tasksequenzen verwenden, um spezielle Betriebssystembereitstellungen durchzuführen.  
@@ -326,6 +326,6 @@ In Ihrer System Center Configuration Manager-Umgebung können Sie Tasksequenzen 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

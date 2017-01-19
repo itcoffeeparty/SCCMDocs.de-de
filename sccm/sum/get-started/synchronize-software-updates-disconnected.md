@@ -1,6 +1,6 @@
 ---
 
-title: Synchronisieren von Softwareupdates bei einem getrennten Softwareupdatepunkt | Configuration Manager
+title: Synchronisieren von Softwareupdates bei einem getrennten Softwareupdatepunkt | Microsoft-Dokumentation
 description: "Gehen Sie wie folgt vor, um zu überprüfen, ob die Synchronisierung von Softwareupdates auf dem Exportserver erfolgreich war, um Updates zu exportieren und um Metadaten von Updates zu importieren."
 keywords: 
 author: dougeby
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f821433d017f2e14f874eca359df0f38e896ab69
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 73a54ddb896bfa7fb770e02d188a262230762c7f
 
 
 
@@ -111,6 +111,6 @@ Nachdem Sie Softwareupdates mit den erforderlichen Kriterien synchronisiert habe
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

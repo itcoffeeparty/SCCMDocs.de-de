@@ -1,5 +1,5 @@
 ---
-title: Verwalten des E-Mail-Zugriffs | System Center Configuration Manager
+title: Verwalten des E-Mail-Zugriffs | Microsoft-Dokumentation
 description: Hier erfahren Sie, wie mit dem bedingten Zugriff in System Center Configuration Manager der Zugriff auf Exchange-E-Mail verwaltet wird.
 ms.custom: na
 ms.date: 10/04/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4544088a-4752-4e3a-aa0a-049f10d8f178
 caps.latest.revision: 24
-author: karthikaraman
-ms.author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5c6cf3c1697b49708aa5192b67b08b700da7dc72
-ms.openlocfilehash: c1797910f2b7ceda451c2ccb23f66a4b2bd4b6ff
+ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
+ms.openlocfilehash: 0bbe25598f38f9cf3c15375748fee09c43dfb928
 
 
 ---
@@ -363,6 +363,6 @@ Nicht unterstützte Browser werden blockiert. Die OWA-Apps für iOS und Android 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

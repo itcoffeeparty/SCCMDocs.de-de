@@ -1,5 +1,5 @@
 ---
-title: Active Directory-Schema | System Center Configuration Manager
+title: "Veröffentlichung und das Active Directory-Schema | Microsoft-Dokumentation"
 description: "Das Erweitern des Active Directory-Schemas für System Center Configuration Manager vereinfacht das Bereitstellen und Konfigurieren von Clients."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,12 +17,12 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d4cdaa646265b2d05ec93aeaefaf3a6e7a2c269f
+ms.sourcegitcommit: 2083a2ca7a199771f26981cdbe04e4e2ef6e8958
+ms.openlocfilehash: 3bd18e2de76d886b275c80d0dce3b824f2598008
 
 
 ---
-# <a name="extend-the-active-directory-schema-for-system-center-configuration-manager"></a>Erweitern des Active Directory-Schemas für System Center Configuration Manager
+# <a name="prepare-active-directory-for-site-publishing"></a>Vorbereiten von Active Directory für die Veröffentlichung eines Standorts
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -70,7 +70,7 @@ Für das Erweitern des Schemas für Configuration Manager wird Folgendes benöti
 
 3.  Sie können prüfen, ob die Schemaerweiterung erfolgreich war, indem Sie die Protokolldatei untersuchen, die mithilfe der Befehlszeile aus dem vorherigen Schritt erstellt wurde.  
 
-## <a name="step-2-create-the-system-management-container-and-grant-sites-permissions-to-the-container"></a>Schritt 2.  Erstellen des System Management-Containers und Gewähren von Standortberechtigungen für den Container  
+## <a name="step-2--create-the-system-management-container-and-grant-sites-permissions-to-the-container"></a>Schritt 2.  Erstellen des System Management-Containers und Gewähren von Standortberechtigungen für den Container  
  Nach dem Erweitern des Schemas müssen Sie in Active Directory Domain Services (AD DS) den Container **Systemverwaltung** erstellen:  
 
 -   Sie erstellen diesen Containers einmal in jeder Domäne, die über einen primären oder sekundären Standort verfügt, der Daten in Active Directory veröffentlicht.  
@@ -114,6 +114,6 @@ Für das Erweitern des Schemas für Configuration Manager wird Folgendes benöti
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

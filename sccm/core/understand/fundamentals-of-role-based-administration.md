@@ -1,5 +1,5 @@
 ---
-title: Grundlagen der rollenbasierten Verwaltung | System Center Configuration Manager
+title: Grundlagen der rollenbasierten Verwaltung | Microsoft-Dokumentation
 description: Verwenden Sie die rollenbasierte Verwaltung zum Steuern des administrativen Zugriffs auf Configuration Manager und Objekte, die Sie verwalten.
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 3e70794144caa5a1993cc65089b1076476fc6106
+ms.sourcegitcommit: 6cf3ac76ea3fb9c9b093ed4927255102930bbe26
+ms.openlocfilehash: 5bdfe43c86d5b700c50b4d55d2f3bbb15bb504e9
 
 
 ---
@@ -78,7 +78,7 @@ Beim Entwerfen und Implementieren der administrativen Sicherheit für Configurat
 > [!TIP]  
 >  Sie können die Liste der integrierten und benutzerdefinierten Sicherheitsrollen mit ihren Beschreibungen in der Configuration Manager-Konsole anzeigen. Erweitern Sie dazu im Arbeitsbereich **Verwaltung** den Knoten **Sicherheit**, und wählen Sie dann **Sicherheitsrollen**aus.  
 
- Jeder Sicherheitsrolle sind bestimmte Berechtigungen für die verschiedenen Objekttypen zugeordnet. Beispielsweise umfasst die Sicherheitsrolle **Anwendungsadministrator** die folgenden Berechtigungen für Anwendungen: **Genehmigen**, **Erstellen**, **Löschen**, **Ändern**, **Ordner ändern**, **Objekte verschieben**, **Lesen/Bereitstellen**, **Sicherheitsbereich festlegen**. Sie können die Berechtigungen der integrierten Sicherheitsrollen nicht ändern. Es ist aber möglich, eine Rolle zu kopieren, zu ändern und die geänderte Rolle als neue benutzerdefinierte Sicherheitsrolle zu speichern. Sie können Sicherheitsrollen importieren, die Sie zuvor aus einer anderen Hierarchie (z. B. einem Testnetzwerk) exportiert haben. Überprüfen Sie die Sicherheitsrollen und deren Berechtigungen, um zu bestimmen, ob Sie die integrierten Sicherheitsrollen verwenden können oder eigene benutzerdefinierte Sicherheitsrollen erstellen müssen.  
+ Jeder Sicherheitsrolle sind bestimmte Berechtigungen für die verschiedenen Objekttypen zugeordnet. Beispielsweise umfasst die Sicherheitsrolle **Application MMM** die folgenden Berechtigungen für Anwendungen: **Genehmigen**, **Erstellen**, **Löschen**, **Ändern**, **Ordner ändern**, **Objekte verschieben**, **Lesen/Bereitstellen**, **Sicherheitsbereich festlegen**. Sie können die Berechtigungen der integrierten Sicherheitsrollen nicht ändern. Es ist aber möglich, eine Rolle zu kopieren, zu ändern und die geänderte Rolle als neue benutzerdefinierte Sicherheitsrolle zu speichern. Sie können Sicherheitsrollen importieren, die Sie zuvor aus einer anderen Hierarchie (z. B. einem Testnetzwerk) exportiert haben. Überprüfen Sie die Sicherheitsrollen und deren Berechtigungen, um zu bestimmen, ob Sie die integrierten Sicherheitsrollen verwenden können oder eigene benutzerdefinierte Sicherheitsrollen erstellen müssen.  
 
  **Gehen Sie wie folgt vor, um Sicherheitsrollen zu planen:**  
 
@@ -212,6 +212,6 @@ Informationen zum Konfigurieren von Sicherheitsbereichen für die rollenbasierte
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

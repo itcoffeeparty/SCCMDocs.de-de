@@ -1,5 +1,5 @@
 ---
-title: Erstellen von globalen Bedingungen | System Center Configuration Manager
+title: Erstellen von globalen Bedingungen | Microsoft-Dokumentation
 description: "Erstellen Sie globale Bedingungen, die festlegen, wie eine Anwendung auf Clientgeräten bereitgestellt werden soll."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: c4dfe52d5537d83d5ea17d1da4984e05d2a92cde
+ms.sourcegitcommit: 85e254f1074e02a52fea6a3cda21a37c332f249e
+ms.openlocfilehash: 8a59a1769eec4cd6d78d7686a1d8008e832dd924
 
 
 ---
@@ -34,11 +34,11 @@ In System Center Configuration Manager sind globale Bedingungen Regeln für gesc
  Gehen Sie wie folgt vor, um globale Configuration Manager-Bedingungen zu erstellen.  
 
 ## <a name="provide-basic-information-about-the-global-condition"></a>Bereitstellen grundlegender Informationen zu der globalen Bedingung  
- Es sind verschiedene Arten von globalen Bedingungen verfügbar. Den unterschiedlichen Arten globaler Bedingungen sind auch unterschiedliche Optionen zugeordnet. Wenn Sie eine bestimmte Art von globaler Bedingung auswählen, werden in Configuration Manager die jeweils zur Auswahl passenden Optionen angezeigt.  
+ Es sind verschiedene Arten von globalen Bedingungen verfügbar. Den unterschiedlichen Arten globaler Bedingungen sind auch unterschiedliche Optionen zugeordnet. Wenn Sie eine bestimmte Art von globaler Bedingung auswählen, werden in Configuration Manager die jeweils zur Auswahl passenden Optionen gezeigt.  
 
-1.  Klicken Sie in der Configuration Manager-Konsole auf **Softwarebibliothek** > **Anwendungsverwaltung** > **Globale Bedingungen**.  
+1.  Wählen Sie in der Configuration Manager-Konsole **Softwarebibliothek** > **Anwendungsverwaltung** > **Globale Bedingungen** aus.  
 
-3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Globale Bedingung erstellen**.  
+3.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** **Globale Bedingung erstellen** aus.  
 
 4.  Geben Sie im Dialogfeld **Globale Bedingung erstellen** einen Namen und eine optionale Beschreibung für die globale Bedingung ein.  
 
@@ -46,14 +46,14 @@ In System Center Configuration Manager sind globale Bedingungen Regeln für gesc
 
 6.  Wählen Sie in der Dropdownliste **Bedingungstyp** eine der folgenden Optionen aus:  
 
-    -   **Einstellung** : Mithilfe dieser Option wird das Vorhandensein von einem oder mehreren Elementen auf Clientgeräten überprüft. Sie können beispielsweise überprüfen, ob eine bestimmte Datei, ein Ordner oder ein Registrierungsschlüsselwert auf einem Clientgerät vorhanden ist.  
+    -   **Einstellung** : Mithilfe dieser Option wird das Vorhandensein von einem oder mehreren Elementen auf Clientgeräten überprüft. Sie können beispielsweise überprüfen, ob eine Datei, ein Ordner oder ein Registrierungsschlüsselwert auf einem Clientgerät vorhanden ist.  
 
-    -   **Ausdruck** : Mithilfe dieser Option können Sie komplexere Regeln zum Überprüfen von Bedingungen auf Clientgeräten konfigurieren. Beispielsweise können Sie überprüfen, ob der physische Arbeitsspeicher auf einem Computer zwischen 2 GB und 4 GB beträgt oder ob ein mobiles Gerät über einen Touchscreen verfügt.  
+    -   **Ausdruck**: Mithilfe dieser Option können Sie komplexere Regeln zum Überprüfen von Bedingungen auf Clientgeräten einrichten. Sie können beispielsweise überprüfen, ob der physische Arbeitsspeicher auf einem Computer zwischen 2 GB und 4 GB beträgt, oder ob ein mobiles Gerät die Eingabe über einen Touchscreen unterstützt.  
 
-## <a name="configure-rules-for-the-global-condition"></a>Konfigurieren von Regeln für die globale Bedingung  
- Das Verfahren zum Definieren der globalen Bedingungsregeln ist davon abhängig, ob Sie eine Einstellung oder einen Ausdruck konfigurieren. Verwenden Sie das jeweilige Verfahren, um eine Einstellung oder einen Ausdruck für die globale Bedingung zu konfigurieren.  
+## <a name="set-up-rules-for-the-global-condition"></a>Einrichten von Regeln für die globale Bedingung  
+ Das Verfahren zum Definieren der globalen Bedingungsregeln ist davon abhängig, ob Sie eine Einstellung oder einen Ausdruck konfigurieren. Verwenden Sie das jeweilige Verfahren, um eine Einstellung oder einen Ausdruck für die globale Bedingung einzurichten.  
 
-### <a name="to-configure-a-setting-for-the-global-condition"></a>So konfigurieren Sie eine Einstellung für die globale Bedingung  
+### <a name="to-set-up-a-setting-for-the-global-condition"></a>So richten Sie eine Einstellung für die globale Bedingung ein  
 
 1.  Wählen Sie in der Dropdownliste **Bedingungstyp** die Option **Einstellung**aus.  
 
@@ -63,32 +63,32 @@ In System Center Configuration Manager sind globale Bedingungen Regeln für gesc
 
         -   **LDAP-Präfix** : Geben Sie ein gültiges LDAP-Präfix für die Active Directory-Domänendiensteabfrage an, mit der die Kompatibilität auf Clientcomputern bewertet wird. Sie können **LDAP://** oder **GC://**verwenden.  
 
-        -   **Distinguished Name (DN)** : Geben Sie den Distinguished Name des Active Directory-Domänendiensteobjekts an, das auf Clientcomputern auf Kompatibilität bewertet wird.  
+        -   **Definierter Name (DN)**: Geben Sie den Definierten Namen des Active Directory Domain Services-Diensts an, das auf Clientcomputern auf Konformität bewertet wird.  
 
         -   **Suchfilter** : Geben Sie einen optionalen LDAP-Filter an, mit dem die Ergebnisse der Active Directory-Domänendiensteabfrage zur Bewertung der Kompatibilität auf Clientcomputern optimiert werden.  
 
         -   **Suchbereich** : Geben Sie den Suchbereich in den Active Directory-Domänendiensten an:  
 
-            -   **Basis** : Hiermit wird nur das angegebene Objekt abgefragt.  
+            -   **Basis**: Hiermit wird nur das angegebene Objekt abgefragt.  
 
             -   **Eine Ebene**: Diese Option wird in dieser Version von Configuration Manager nicht verwendet.  
 
-            -   **Unterstruktur** : Hiermit werden das angegebene Objekt und dessen vollständige untergeordnete Struktur im Verzeichnis abgefragt.  
+            -   **Unterstruktur**: Hiermit werden das angegebene Objekt und dessen vollständige untergeordnete Struktur im Verzeichnis abgefragt.  
 
         -   **Eigenschaft** : Geben Sie die Eigenschaft des Active Directory-Domänendiensteobjekts an, mit dem auf Clientcomputern die Kompatibilität bewertet wird.  
 
-        -   **Abfrage** : zeigt die LDAP-Abfrage an, die aus den Einträgen unter **LDAP-Präfix**, **Distinguished Name (DN)**, **Suchfilter** (falls angegeben) und **Eigenschaft**erstellt wird. Diese Abfrage wird zur Bewertung der Kompatibilität auf Clientcomputern verwendet.  
+        -   **Abfrage**: Zeigt die LDAP-Abfrage an, die aus den Einträgen unter **LDAP-Präfix**, **Definierter Name (DN)**, **Suchfilter** (falls angegeben) und **Eigenschaft**erstellt wird. Diese Abfrage wird zur Bewertung der Kompatibilität auf Clientcomputern verwendet.  
 
     -   **Assembly**  
 
-        -   **Assemblyname** : Gibt den Namen des Assemblyobjekts an, nach dem gesucht wird. Der Name darf nicht mit einem Namen eines anderen Assemblyobjekts vom gleichen Typ identisch sein und muss im globalen Assemblycache (Global Assembly Cache, GAC) registriert sein. Der Assemblyname darf maximal 256 Zeichen umfassen.  
+        -   **Assemblyname** : Gibt den Namen des Assemblyobjekts an, nach dem gesucht wird. Der Name darf nicht mit einem Namen eines anderen Assemblyobjekts vom gleichen Typ identisch sein, und muss im globalen Assemblycache (Global Assembly Cache, GAC) registriert sein. Der Assemblyname darf maximal 256 Zeichen umfassen.  
 
         > [!NOTE]  
-        >  Eine Assembly ist ein Programmcode, der zwischen Anwendungen freigegeben werden kann. Assemblys können die Dateinamenerweiterung DLL oder EXE haben. Der GAC ist ein Ordner mit dem Namen *%systemroot%\assembly* auf Clientcomputern, in dem alle freigegebenen Assemblys gespeichert werden.  
+        >  Eine Assembly ist ein Programmcode, der zwischen Anwendungen freigegeben werden kann. Assemblys können die Dateinamenerweiterung .dll oder .exe haben. Der GAC ist ein Ordner mit dem Namen *%systemroot%\assembly* auf Clientcomputern, in dem alle freigegebenen Assemblys gespeichert werden.  
 
     -   **Dateisystem**  
 
-        -   **Typ** : Wählen Sie in der Dropdownliste aus, ob Sie nach einer **Datei** oder nach einem **Ordner**suchen möchten.  
+        -   **Typ**: Wählen Sie in der Dropdownliste aus, ob Sie nach einer **Datei** oder nach einem **Ordner**suchen möchten.  
 
         -   **Pfad** : Geben Sie den Pfad zur Datei bzw. zum Ordner auf Clientcomputern an. Sie können Systemumgebungsvariablen und die Umgebungsvariable *%USERPROFILE%* im Pfad angeben.  
 
@@ -98,7 +98,7 @@ In System Center Configuration Manager sind globale Bedingungen Regeln für gesc
         -   **Datei- oder Ordnername** : Geben Sie den Namen des Datei- oder Ordnerobjekts an, nach dem gesucht werden soll. Sie können Systemumgebungsvariablen und die *%USERPROFILE%* -Umgebungsvariable im Datei- oder Ordnernamen angeben. Sie können auch die Platzhalter * und ? im Dateinamen verwenden.  
 
             > [!NOTE]  
-            >  Wenn Sie einen Datei- oder Ordnernamen angeben und dabei Platzhalter verwenden, kann dies zu einer großen Anzahl von Ergebnissen führen. Dies kann zu hoher Ressourcenauslastung auf dem Clientcomputer und zu erhöhtem Netzwerkverkehr beim Berichten an Configuration Manager führen.  
+            >  Wenn Sie einen Datei- oder Ordnernamen angeben und dabei Platzhalter verwenden, kann dies zu einer großen Anzahl von Ergebnissen führen. Dies kann zu hoher Ressourcenauslastung auf dem Clientcomputer und zu erhöhtem Netzwerkverkehr beim Berichten von Ergebnissen an Configuration Manager führen.  
 
         -   **Unterordner einschließen** : Aktivieren Sie diese Option, wenn auch Unterordner unter dem angegebenen Pfad durchsucht werden sollen.  
 
@@ -117,7 +117,7 @@ In System Center Configuration Manager sind globale Bedingungen Regeln für gesc
 
     -   **Registrierungsschlüssel**  
 
-        -   **Struktur** : Wählen Sie aus der Dropdownliste die Registrierungsstruktur aus, die durchsucht werden soll.  
+        -   **Struktur**: Wählen Sie aus der Dropdownliste die Registrierungsstruktur aus, die durchsucht werden soll.  
 
         -   **Schlüssel** : Geben Sie den Namen des Registrierungsschlüssels an, nach dem gesucht werden soll. Das zu verwendende Format ist *Schlüssel\Unterschlüssel*.  
 
@@ -141,12 +141,12 @@ In System Center Configuration Manager sind globale Bedingungen Regeln für gesc
 
     -   **Skript**  
 
-        -   **Ermittlungsskript** : Klicken Sie auf **Hinzufügen** , um ein zu verwendendes Skript einzugeben oder zu suchen. Sie können Windows PowerShell-, VBScript- oder JScript-Skripts verwenden.  
+        -   **Ermittlungsskript**: Wählen Sie **Hinzufügen** aus, um ein zu verwendendes Skript einzugeben oder zu suchen. Sie können Windows PowerShell-, VBScript- oder JScript-Skripts verwenden.  
 
-        -   **Skripts durch Verwendung der Anmeldeinformationen angemeldeter Benutzer ausführen** : Wenn Sie diese Option aktivieren, wird das Skript auf Clientcomputern unter Verwendung der Anmeldeinformationen angemeldeter Benutzer ausgeführt.  
+        -   **Skripts durch Verwendung der Anmeldeinformationen angemeldeter Benutzer ausführen**: Wenn Sie diese Option aktivieren, wird das Skript auf Clientcomputern unter Verwendung der Anmeldeinformationen des angemeldeten Benutzers ausgeführt.  
 
             > [!NOTE]  
-            >  Der Wert, der vom Skript zurückgegeben wird, wird zur Bewertung der Kompatibilität der globalen Bedingung verwendet. Bei der Verwendung von VBScript können Sie beispielsweise den Befehl **WScript.Echo Result** verwenden, um den Wert der Variablen "Result" der globalen Bedingung zurückzugeben.  
+            >  Der Wert, der vom Skript zurückgegeben wird, wird zur Bewertung der Kompatibilität der globalen Bedingung verwendet. Bei der Verwendung von VBScript können Sie beispielsweise den Befehl **WScript.Echo Result** verwenden, um den Wert der Variablen „Result“ der globalen Bedingung zurückzugeben.  
             >   
             >  Wenn das Skript mehrere Werte zurückgibt, müssen sich diese Werte in einer einzigen Zeile befinden und durch ein Semikolon getrennt werden. Wenn sich jeder Wert in einer separaten Zeile befindet, kann die Auswertung nicht durchgeführt werden.  
 
@@ -161,7 +161,7 @@ In System Center Configuration Manager sind globale Bedingungen Regeln für gesc
 
         -   **Spalte** : Geben Sie den für die Bewertung der Kompatibilität der globalen Bedingung zu verwendenden Spaltennamen an, der von der Transact-SQL-Anweisung zurückgegeben wird.  
 
-        -   **Transact-SQL-Anweisung** : Geben Sie die vollständige SQL-Abfrage an, die für die globale Bedingung verwendet werden soll. Sie können zum Öffnen einer vorhandenen SQL-Abfrage auch auf **Öffnen** klicken.  
+        -   **Transact-SQL-Anweisung** : Geben Sie die vollständige SQL-Abfrage an, die für die globale Bedingung verwendet werden soll. Sie können zum Öffnen einer vorhandenen SQL-Abfrage auch **Öffnen** auswählen.  
 
     -   **WQL-Abfrage**  
 
@@ -177,7 +177,7 @@ In System Center Configuration Manager sind globale Bedingungen Regeln für gesc
 
         -   **Pfad** – Geben Sie den Pfad zur XML-Datei auf Clientcomputern an, die zur Bewertung der Kompatibilität verwendet wird. Configuration Manager unterstützt im Pfadnamen die Verwendung aller Windows-Systemumgebungsvariablen und der Benutzervariablen *%USERPROFILE%*.  
 
-        -   **XML-Dateiname** : Geben Sie den Namen der Datei mit der XML-Abfrage an, die für die Bewertung der Kompatibilität auf Clientcomputern verwendet wird.  
+        -   **XML-Dateiname**: Geben Sie den Namen der Datei an, die die XML-Abfrage enthält, die für die Bewertung der Konformität auf Clientcomputern verwendet wird.  
 
         -   **Unterordner einschließen** – Aktivieren Sie diese Option, wenn auch Unterordner unter dem angegebenen Pfad durchsucht werden sollen.  
 
@@ -192,15 +192,15 @@ In System Center Configuration Manager sind globale Bedingungen Regeln für gesc
     > [!NOTE]  
     >  Die Dropdownliste **Datentyp** wird nicht für alle Einstellungstypen angezeigt.  
 
-4.  Konfigurieren Sie weitere Details zu dieser Einstellung unterhalb der Dropdownliste **Einstellungstyp** . Die konfigurierbaren Elemente sind je nach gewähltem Einstellungstyp unterschiedlich.  
+4.  Richten Sie weitere Details zu dieser Einstellung unterhalb der Dropdownliste **Einstellungstyp** ein. Die Elemente, die Sie einrichten können, sind je nach gewähltem Einstellungstyp unterschiedlich.  
 
-5.  Klicken Sie auf **OK** , um die Regel zu speichern und das Dialogfeld **Globale Bedingung erstellen** zu schließen.  
+5.  Wählen Sie **OK** aus, um die Regel zu speichern, und das Dialogfeld **Globale Bedingung erstellen** zu schließen.  
 
-### <a name="configure-an-expression-for-the-global-condition"></a>Konfigurieren eines Ausdrucks für die globale Bedingung  
+### <a name="set-up-an-expression-for-the-global-condition"></a>Einrichten eines Ausdrucks für die globale Bedingung  
 
 1.  Wählen Sie in der Dropdownliste **Bedingungstyp** die Option **Ausdruck**aus.  
 
-2.  Klicken Sie auf **Klausel hinzufügen** , um das Dialogfeld **Klausel hinzufügen** zu öffnen.  
+2.  Wählen Sie **Klausel hinzufügen** aus, um das Dialogfeld **Klausel hinzufügen** zu öffnen.  
 
 3.  Wählen Sie in der Dropdownliste **Kategorie auswählen** aus, ob dieser Ausdruck für ein Gerät oder einen Benutzer bestimmt ist. Sie können auch **Benutzerdefiniert** auswählen, um eine zuvor konfigurierte globale Bedingung zu verwenden.  
 
@@ -210,12 +210,12 @@ In System Center Configuration Manager sind globale Bedingungen Regeln für gesc
 
 6.  Geben Sie im Feld **Wert** die Werte ein, die zusammen mit der ausgewählten Bedingung und dem Operator verwendet werden sollen, um zu bewerten, ob der Benutzer bzw. das Gerät die Regelanforderungen erfüllt. Welche Werte verfügbar sind, ist von der ausgewählten Bedingung und dem ausgewählten Operator abhängig.  
 
-7.  Klicken Sie auf **OK** , um den Ausdruck zu speichern und das Dialogfeld **Klausel hinzufügen** zu schließen.  
+7.  Wählen Sie **OK** aus, um den Ausdruck zu speichern und das Dialogfeld **Klausel hinzufügen** zu schließen.  
 
-8.  Wenn der globalen Bedingung alle gewünschten Klauseln hinzugefügt wurden, klicken Sie auf **OK** , um die globale Bedingung zu speichern und das Dialogfeld **Globale Bedingung erstellen** zu schließen.  
+8.  Wenn der globalen Bedingung alle gewünschten Klauseln hinzugefügt wurden, wählen Sie**OK** aus, um die globale Bedingung zu speichern und das Dialogfeld **Globale Bedingung erstellen** zu schließen.  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

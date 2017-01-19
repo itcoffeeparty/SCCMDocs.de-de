@@ -1,5 +1,5 @@
 ---
-title: Verwalten von Verteilungspunkten | System Center Configuration Manager
+title: Verwalten von Verteilungspunkten | Microsoft-Dokumentation
 description: "Hosten Sie den Inhalt (Dateien und Software), den Sie für Geräte und Benutzer bereitstellen, mithilfe von Verteilungspunkten. In diesem Artikel erhalten Sie eine Installations- und Konfigurationsanleitung."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: dedfcc77cb94ede1abfd65e22f9d3d116b9ed68e
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 8684bf1231ff9d663717b4c9874dac98d50e3647
 
 ---
 # <a name="install-and-configure-distribution-points-for-system-center-configuration-manager"></a>Installieren und Konfigurieren von Verteilungspunkten für System Center Configuration Manager
@@ -26,7 +26,7 @@ ms.openlocfilehash: dedfcc77cb94ede1abfd65e22f9d3d116b9ed68e
 
 Verteilungspunkte in System Center Configuration Manager werden installiert, um den Inhalt (Dateien und Software) zu hosten, den Sie für Geräte und Benutzer bereitstellen. Sie können auch Verteilungspunktgruppen erstellen, die die Verwaltung von Verteilungspunkten und die Verteilung von Inhalt an die Verteilungspunkte erleichtern.  
 
- Wenn Sie **einen neuen Verteilungspunkt installieren** (mithilfe des Installations-Assistenten) oder **die Eigenschaften eines vorhandenen Verteilungspunkts verwalten** (durch Bearbeiten der Verteilungspunkteigenschaften), haben Sie die Gelegenheit, einen Großteil der Einstellungen des Verteilungspunkts zu konfigurieren. Es gibt jedoch einige Einstellungen, die entweder bei der Installation oder bei der Bearbeitung, aber nicht gleichzeitig verfügbar sind:  
+ Wenn Sie **einen neuen Verteilungspunkt installieren** (mithilfe des Installations-Assistenten) oder **die Eigenschaften eines vorhandenen Verteilungspunkts verwalten** (durch Bearbeiten der Verteilungspunkteigenschaften), können Sie einen Großteil der Einstellungen des Verteilungspunkts konfigurieren. Es gibt jedoch einige Einstellungen, die entweder bei der Installation oder bei der Bearbeitung, aber nicht gleichzeitig verfügbar sind:  
 
 -   **Einstellungen, die nur beider Installation eines Verteilungspunkts verfügbar sind:**  
 
@@ -330,9 +330,11 @@ Zum Anzeigen der Ergebnisse der Inhaltsprüfung erweitern Sie im Arbeitsbereich 
 >  Sie geben den Zeitplan für die Inhaltsprüfung zwar anhand der lokalen Zeit des Computers an, der Zeitplan wird in der Configuration Manager-Konsole jedoch anhand der UTC (Coordinated Universal Time, koordinierte Weltzeit) angezeigt.  
 
 ### <a name="boundary-group"></a>Begrenzungsgruppe  
-Verwalten Sie die Begrenzungsgruppen, denen dieser Verteilungspunkt zugeordnet ist. Sie können einem Verteilungspunkt Begrenzungsgruppen zuordnen. Bei der Inhaltsbereitstellung müssen sich die Clients in einer dem Verteilungspunkt zugeordneten Begrenzungsgruppe befinden, damit der Verteilungspunkt als Quellort für Inhalt verwendet werden kann. Sie können das Kontrollkästchen **Die Verwendung eines Fallbackquellpfads für den Inhalt durch Clients zulassen** aktivieren, um für Clients außerhalb dieser Begrenzungsgruppen ein Ausweichen auf den Verteilungspunkt als Quellort für Inhalt zu ermöglichen, wenn keine anderen Verteilungspunkte verfügbar sind.  
+Verwalten Sie die Begrenzungsgruppen, denen dieser Verteilungspunkt zugeordnet ist. Sie können einem Verteilungspunkt Begrenzungsgruppen zuordnen. Bei der Inhaltsbereitstellung müssen sich die Clients in einer dem Verteilungspunkt zugeordneten Begrenzungsgruppe befinden, damit der Verteilungspunkt als Quellort für Inhalt verwendet werden kann.
+Darüber hinaus gilt:
+- Vor Version 1610 können Sie das Kontrollkästchen **Die Verwendung eines Fallbackquellpfads für den Inhalt durch Clients zulassen** aktivieren, um für Clients außerhalb dieser Begrenzungsgruppen ein Ausweichen auf den Verteilungspunkt als Quellort für Inhalt zu ermöglichen, wenn keine anderen Verteilungspunkte verfügbar sind. Weitere Informationen zu Begrenzungsgruppen finden Sie unter [Boundary groups for versions 1511, 1602, and 1606 (Begrenzungsgruppen für die Versionen 1511, 1602 und 1606)](/sccm/core/servers/deploy/configur/boundary-groups-for-1511-1602-and-1606), und Informationen zu bevorzugten Verteilungspunkten finden Sie unter [Grundlegende Konzepte für die Inhaltsverwaltung in System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).
+- Mit Version 1610 oder höher können Sie *Beziehungen* für Begrenzungsgruppen definieren, um festzulegen, wann und auf welche Begrenzungsgruppen ein Client ausweichen kann, um nach Inhalten zu suchen. Weitere Informationen finden Sie unter [Begrenzungsgruppen](/sccm/core/servers/deploy/configur/define-site-boundaries-and-boundary-groups#boundary-groups).
 
-Weitere Informationen zu bevorzugten Verteilungspunkten finden Sie unter [Grundlegende Konzepte für die Inhaltsverwaltung in System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
 
 ### <a name="schedule"></a>Zeitplan  
 
@@ -377,6 +379,6 @@ Geben Sie an, ob eine Begrenzung der Datenübertragungsrate konfiguriert werden 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

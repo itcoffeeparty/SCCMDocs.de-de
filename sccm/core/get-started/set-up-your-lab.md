@@ -1,5 +1,5 @@
 ---
-title: Einrichten Ihrer System Center Configuration Manager-Laborumgebung
+title: Einrichten Ihrer System Center Configuration Manager-Laborumgebung | Microsoft-Dokumentation
 description: "Richten Sie eine Laborumgebung ein, um Configuration Manager mit simulierten realen Aktivitäten zu evaluieren."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ea084f30a1a6ec731e97cec46448d0ffbfca42e0
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 36e5307449bd843156307598ccdde717b4b59be3
 
 
 ---
@@ -29,7 +29,7 @@ ms.openlocfilehash: ea084f30a1a6ec731e97cec46448d0ffbfca42e0
 Gemäß der Anleitung in diesem Thema können Sie eine Laborumgebung einrichten, um Configuration Manager mit simulierten realen Aktivitäten zu evaluieren.  
 
 ##  <a name="a-namebkmklabcorea-core-components"></a><a name="BKMK_LabCore"></a> Kernkomponenten  
- Das Einrichten der Umgebung für System Center Configuration Manager erfordert einige Kernkomponenten, um die Installation von Configuration Manager zu unterstützen.  
+ Das Einrichten der Umgebung für System Center Configuration Manager erfordert einige Kernkomponenten, um die Installation von Configuration Manager zu unterstützen.    
 
 -   **Für die Laborumgebung wird das Betriebssystem Windows Server 2012 R2 verwendet**, unter dem System Center Configuration Manager installiert wird.  
 
@@ -401,6 +401,6 @@ Jeder Configuration Manager-Standort veröffentlicht standortspezifische Informa
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

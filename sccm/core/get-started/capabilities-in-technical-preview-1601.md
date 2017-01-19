@@ -1,5 +1,5 @@
 ---
-title: "Funktionen in Technical Preview 1601 für System Center Configuration Manager"
+title: "Funktionen in Technical Preview 1601 für System Center Configuration Manager | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr zu den Features, die in Technical Preview für System Center Configuration Manager 1601 zur Verfügung stehen."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: be158c1d893a1c1aae19c6cf2fd3a678a59d4f9e
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 7321645f17a143afe2fd848f45511a374de78c4b
 
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1601 für System Center Configuration Manager
@@ -211,8 +211,8 @@ Ein Client ist online, wenn er aktuell mit einer Standortsystemrolle des Typs �
 
  Weitere Informationen finden Sie unter [Erstellen von Konfigurationselementen für Windows 8.1- und Windows 10-Geräte, die ohne den System Center Configuration Manager-Client verwaltet werden](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
 
-### <a name="android---kiosk-mode-for-samsung-knoxbr-hybrid"></a>Android – Kioskmodus für Samsung KNOX<br />Hybrid  
- Sie können im Kioskmodus ein Gerät so sperren, dass nur bestimmte Features funktionieren. Beispielsweise können Sie festlegen, dass auf einem Gerät nur eine von Ihnen angegebene verwaltete App ausgeführt werden kann, oder Sie können die Lautstärkeregler eines Geräts deaktivieren. Diese Einstellungen können für ein Demomodell eines Geräts oder ein Gerät nützlich sein, das nur eine bestimmte Funktion ausführen soll, wie z. B. ein Point-of-Sale-Gerät. Diese Einstellungen sind nicht im Konfigurationselement **Windows 8.1 und Windows 10** (Einstellungen gelten nur für Windows 10-Geräte) für Samsung KNOX-Geräte verfügbar.  
+### <a name="android---kiosk-mode-for-samsung-knox-standardbr-hybrid"></a>Android – Kioskmodus für Samsung KNOX Standard<br />Hybrid  
+ Sie können im Kioskmodus ein Gerät so sperren, dass nur bestimmte Features funktionieren. Beispielsweise können Sie festlegen, dass auf einem Gerät nur eine von Ihnen angegebene verwaltete App ausgeführt werden kann, oder Sie können die Lautstärkeregler eines Geräts deaktivieren. Diese Einstellungen können für ein Demomodell eines Geräts oder ein Gerät nützlich sein, das nur eine bestimmte Funktion ausführen soll, wie z. B. ein Point-of-Sale-Gerät. Diese Einstellungen sind nicht im Konfigurationselement **Windows 8.1 und Windows 10** (Einstellungen gelten nur für Windows 10-Geräte) für Samsung KNOX Standard-Geräte verfügbar.  
 
  Um die neuen Einstellungen anzuzeigen, wählen Sie auf der Seite für die **Geräteeinstellungen** des Konfigurationselements im Assistenten zum **Erstellen von Konfigurationselementen** die Option **Kioskmodus – Samsung KNOX** aus.  
 
@@ -220,6 +220,6 @@ Ein Client ist online, wenn er aktuell mit einer Standortsystemrolle des Typs �
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

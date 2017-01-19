@@ -1,5 +1,5 @@
 ---
-title: "Windows-Firewall- und -Porteinstellungen für Clients | System Center Configuration Manager"
+title: "Windows-Firewall und Porteinstellungen für Clients | Microsoft-Dokumentation"
 description: "Wählen Sie Windows-Firewall- und -Porteinstellungen für Clients in System Center Configuration Manager aus."
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: dce4b640-c92f-401a-9873-ce9aa9262014
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d74f882e99383ed1f159bcdb24b2c5fe6052c349
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 140bbc676fe0e3df1037c6bead2211b84486494b
 
 
 ---
@@ -176,6 +176,6 @@ Für Clientcomputer in System Center Configuration Manager, auf denen die Window
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Planen der lokalen Verwaltung mobiler Geräte | System Center Configuration Manager"
+title: "Planen der lokalen Verwaltung mobiler Geräte | Microsoft-Dokumentation"
 description: "Planen Sie die lokale Verwaltung mobiler Geräte in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 6bc3bf68d098fec7b6ac976d8e7ee7a7d71fab6a
+ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
+ms.openlocfilehash: cc5b04dc41b13993fca35f202437b71e96bc9cdd
 
 
 ---
@@ -40,7 +40,7 @@ Berücksichtigen Sie die folgenden Anforderungen vor der Vorbereitung der Config
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise   
 
-##  <a name="a-namebkmkintunea-use-of-the-microsoft-intune-subscription"></a><a name="bkmk_intune"></a> Verwenden des Microsoft Intune-Abonnements  
+##  <a name="a-namebkmkintunea-use-of-the--microsoft-intune-subscription"></a><a name="bkmk_intune"></a> Verwenden des Microsoft Intune-Abonnements  
  Für den Einstieg in die lokale Verwaltung mobiler Geräte benötigen Sie ein Microsoft Intune\-Abonnement. Das Abonnement ist nur erforderlich, um die Lizenzierung der Geräten zu verfolgen und dient nicht zum Verwalten oder Speichern von Geräteverwaltungsinformationen. Die gesamte Verwaltung erfolgt mithilfe der lokalen Configuration Manager-Infrastruktur in Ihrem Unternehmen.  
 
 > [!IMPORTANT]  
@@ -122,6 +122,6 @@ Berücksichtigen Sie die folgenden Anforderungen vor der Vorbereitung der Config
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

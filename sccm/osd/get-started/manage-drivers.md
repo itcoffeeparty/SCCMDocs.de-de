@@ -1,5 +1,5 @@
 ---
-title: Verwalten von Treibern | Configuration Manager
+title: Verwalten von Treibern | Microsoft-Dokumentation
 description: "Verwenden Sie den Configuration Manager-Treiberkatalog zum Importieren von Gerätetreibern und Gruppentreibern in Paketen und zum Verteilen dieser Pakete an Verteilungspunkte."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 82cddeb0f2f5210f8bf246b0c757e15815f78669
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 361a18b7da8249fc6cccc333f39313a52dd8ab88
 
 
 ---
@@ -198,7 +198,7 @@ System Center Configuration Manager stellt einen Treiberkatalog bereit, den Sie 
 
  Gehen Sie wie folgt vor, um Gerätetreiber in einem Startabbild hinzuzufügen oder zu entfernen.  
 
-#### <a name="to-modify-the-device-drivers-associated-with-a-boot-image"></a>So ändern Sie Gerätetreiber, die einem Startabbild zugeordnet sind  
+#### <a name="to-modify-the--device-drivers-associated-with-a-boot-image"></a>So ändern Sie Gerätetreiber, die einem Startabbild zugeordnet sind  
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Softwarebibliothek**.  
 
@@ -278,6 +278,6 @@ System Center Configuration Manager stellt einen Treiberkatalog bereit, den Sie 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

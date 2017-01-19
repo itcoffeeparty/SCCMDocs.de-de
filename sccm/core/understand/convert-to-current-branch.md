@@ -1,5 +1,5 @@
 ---
-title: Upgrade von Long-Term Servicing Branch auf Current Branch| System Center Configuration Manager
+title: Upgrade von Long-Term Servicing Branch auf Current Branch | Microsoft-Dokumentation
 description: "Enthält Informationen zum Konvertieren eines Long-Term Servicing Branch-Standorts auf einen Current Branch-Standort."
 ms.custom: na
 ms.date: 10/12/2016
@@ -16,15 +16,15 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 835469e78e83bb54c43e530303d27b0918c531e6
-ms.openlocfilehash: efccff6e2a0b1708d4124648da4e173d41663bd1
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 37fa8da8b4acc3f22c9c435206eedde58d2754f0
 
 ---
 
 
 # <a name="upgrade-the-long-term-servicing-branch-to-the-current-branch"></a>Upgrade von Long-Term Servicing Branch auf Current Branch
 
-*Gilt für: System Center Configuration Manager (Long-Term Servicing Branch)* 
+*Gilt für: System Center Configuration Manager (Long-Term Servicing Branch)*
 
 In diesem Thema erfahren Sie, wie man ein Upgrade eines Standorts und einer Hierarchie durchführt (konvertiert), die Long-Term Servicing Branch (LTSB) von Configuration Manager auf Current Branch ausführen.
 
@@ -56,6 +56,6 @@ Abschließend wird Ihre Seite auf Current Branch konvertiert. Dadurch werden Fea
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

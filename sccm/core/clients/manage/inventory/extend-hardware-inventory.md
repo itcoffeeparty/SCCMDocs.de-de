@@ -1,5 +1,5 @@
 ---
-title: Erweitern der Hardwareinventur | System Center Configuration Manager
+title: Erweitern der Hardwareinventur | Microsoft-Dokumentation
 description: "Erfahren Sie, wie Sie die Hardwareinventur in System Center Configuration Manager erweitern können."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 4a42e266c4152145a4a1c291804ff98934671692
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: cf325aec385f570b297f753f37c2c39abe93154f
 
 
 ---
@@ -163,7 +163,7 @@ System Center Configuration Manager-Hardwareinventur liest Informationen zu Ger�
 8.  Legen Sie im Dialogfeld **Exportieren** die MOF (Managed Object Format)-Datei fest, in die Sie die Klassen exportieren möchten, und klicken Sie dann auf **Speichern**.  
 
 ## <a name="how-to-use-management-information-files-mif-files-to-extend-hardware-inventory"></a>Verwenden von MIF (Management Information Format)-Dateien zum Erweitern der Hardwareinventur  
- Verwenden Sie MIF (Management Information Format)-Dateien zum Erweitern von Hardwareinventurinformationen, die Configuration Manager von Clients sammelt. Während der Hardwareinventur werden die in MIF-Dateien gespeicherten Informationen dem Clientinventurbericht hinzugefügt und in der Standortdatenbank gespeichert, wo Sie die Daten auf die gleiche Weise wie Standard-Clientinventurdaten verwenden können. Es gibt zwei Arten von MIF-Dateien, NOIDMIF- und IDMIF. 
+ Verwenden Sie MIF (Management Information Format)-Dateien zum Erweitern von Hardwareinventurinformationen, die Configuration Manager von Clients sammelt. Während der Hardwareinventur werden die in MIF-Dateien gespeicherten Informationen dem Clientinventurbericht hinzugefügt und in der Standortdatenbank gespeichert, wo Sie die Daten auf die gleiche Weise wie Standard-Clientinventurdaten verwenden können. Es gibt zwei Arten von MIF-Dateien, NOIDMIF- und IDMIF.
 
 > [!IMPORTANT]  
 >  Vor dem Hinzufügen von Informationen aus MIF-Dateien an die Configuration Manager-Datenbank müssen Sie Klasseninformationen für sie erstellen oder importieren. Weitere Informationen finden Sie in den Abschnitten [So fügen Sie eine neue Inventurklasse hinzu](#BKMK_Add) und [So importieren Sie Hardwareinventurklassen](#BKMK_Import) dieses Themas.  
@@ -181,11 +181,11 @@ System Center Configuration Manager-Hardwareinventur liest Informationen zu Ger�
 
  Nachdem Sie eine IDMIF-Datei erstellt haben, speichern Sie diese im Ordner *%windir%***\System32\CCM\Inventory\Idmifs** Ordner auf den Clientcomputern. Während des nächsten geplanten Hardwareinventurzyklus wird Configuration Manager Informationen aus dieser Datei sammeln. Sie müssen für die in der Datei enthaltenen Informationen neue Klassen deklarieren, indem Sie sie hinzufügen oder importieren.  
 
-> [!NOTE] 
+> [!NOTE]
 > MIF-Dateien können große Datenmengen enthalten. Das Sammeln dieser Daten kann sich negativ auf die Leistung Ihres Standorts auswirken. Aktivieren Sie die MIF-Sammlung nur im Bedarfsfall, und konfigurieren Sie die Option **Maximale benutzerdefinierte MIF-Dateigröße (KB)** in den Einstellungen der Hardwareinventur. Weitere Informationen finden Sie unter [Einführung in die Hardwareinventur in System Center Configuration Manager](introduction-to-hardware-inventory.md).
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

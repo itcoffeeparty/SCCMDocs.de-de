@@ -87,7 +87,8 @@
 ##   [Auswerten von Configuration Manager in einer Laborumgebung](get-started/evaluate-with-lab-environment.md)
 ###  [Einrichten der Laborumgebung](get-started/set-up-your-lab.md)
 
-##   [Technical Preview](get-started/technical-preview.md)
+##   [Technical Preview](get-started/technical-preview.md) 
+###  [Funktionen in 1612](get-started/capabilities-in-technical-preview-1612.md)
 ###  [Funktionen in 1611](get-started/capabilities-in-technical-preview-1611.md)
 ###  [Funktionen in 1610](get-started/capabilities-in-technical-preview-1610.md)
 ###  [Funktionen in 1609](get-started/capabilities-in-technical-preview-1609.md)

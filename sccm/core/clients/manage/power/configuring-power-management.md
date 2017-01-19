@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren der Energieverwaltung | System Center Configuration Manager
+title: Konfigurieren der Energieverwaltung | Microsoft-Dokumentation
 description: Konfigurieren Sie die Energieverwaltung in System Center Configuration Manager.
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ca1277ba0c2be68a393da930769151e25e997210
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: e111ac2545dd9e0b96a50c10246bb75d286a737a
 
 
 ---
@@ -47,7 +47,7 @@ Bevor Sie die Energieverwaltung in System Center Configuration Manager verwenden
 
     -   **Energieverwaltung von Geräten zulassen** – Wählen Sie aus der Dropdownliste den Wert **Wahr** aus, um die Energieverwaltung zu aktivieren.  
 
-7.  Konfigurieren Sie die erforderlichen Clienteinstellungen. Eine Liste der Clienteinstellungen zur Energieverwaltung, die Sie konfigurieren können, finden Sie im Abschnitt [Power Management](../../../../core/clients/deploy/about-client-settings.md#BKMK_PowMgmtDeviceSettings) des Themas [About client settings in System Center Configuration Manager (Informationen zu Clienteinstellungen in System Center Configuration Manager)](../../../../core/clients/deploy/about-client-settings.md).  
+7.  Konfigurieren Sie die erforderlichen Clienteinstellungen. Eine Liste der Clienteinstellungen zur Energieverwaltung, die Sie konfigurieren können, finden Sie im Abschnitt [Power Management](../../../../core/clients/deploy/about-client-settings.md#power-management) des Themas [About client settings in System Center Configuration Manager (Informationen zu Clienteinstellungen in System Center Configuration Manager)](../../../../core/clients/deploy/about-client-settings.md).  
 
 8.  Klicken Sie auf **OK** , um das Dialogfeld **Clientstandardeinstellungen** zu schließen.  
 
@@ -88,6 +88,6 @@ Bevor Sie die Energieverwaltung in System Center Configuration Manager verwenden
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Voraussetzungen für Softwareupdates | Configuration Manager"
+title: "Voraussetzungen für Softwareupdates | Microsoft-Dokumentation"
 description: "Hier finden Sie Informationen über die Voraussetzungen für Softwareupdates in System Center Configuration Manager."
 keywords: 
 author: dougeby
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fe56129c09b8936ba59181add86acb239111fea7
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: 179f076f228daa5adf612275a822cd379b0ce1e3
 
 
 ---
@@ -78,7 +78,7 @@ In diesem Thema werden die Voraussetzungen für Softwareupdates in System Center
 
 -   [Clienteinstellungen für Softwareupdates](../get-started/manage-settings-for-software-updates.md#a-namebkmkclientsettingsa-client-settings-for-software-updates).  
 
--   [Software updates client settings](../../core/clients/deploy/about-client-settings.md#a-namebkmksoftwareupdatesdevicesettinga-software-updates) („Softwareupdates“ im Thema „Clienteinstellungen“).  
+-   [Software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates) („Softwareupdates“ im Thema „Clienteinstellungen“).  
 
 ### <a name="reporting-services-point"></a>Reporting Services-Punkt  
  Mithilfe der Standortsystemrolle Reporting Services-Punkt können Berichte für Softwareupdates angezeigt werden. Diese Rolle ist optional. Ihre Verwendung wird jedoch empfohlen. Weitere Informationen zum Erstellen eines Reporting Services-Punkts finden Sie unter [Configuring reporting (Konfigurieren der Berichterstellung)](../../core/servers/manage/configuring-reporting.md).  
@@ -114,6 +114,6 @@ In diesem Thema werden die Voraussetzungen für Softwareupdates in System Center
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

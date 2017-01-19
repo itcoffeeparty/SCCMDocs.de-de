@@ -1,5 +1,5 @@
 ---
-title: "Hochverfügbarkeit | System Center Configuration Manager"
+title: "Hohe Verfügbarkeit | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr über das Bereitstellen von System Center Configuration Manager mithilfe von Optionen, die eine hohe Dienstverfügbarkeit gewährleisten."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 7d8dff8779fbf146a57f753dee9f98488fa5fa61
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: d3e9afb90cdc85bc7299626b642c52be659e3bdf
 
 ---
 # <a name="high-availability-options-for-system-center-configuration-manager"></a>Hochverfügbarkeitsoptionen für System Center Configuration Manager
@@ -153,7 +153,7 @@ Optionen, die hohe Verfügbarkeit unterstützen:
 
  Von jeder Standortsystemrolle für den Anwendungskatalog werden die gleichen Informationen wie von anderen Instanzen dieser Standortsystemrolle bereitgestellt, unabhängig davon, wo diese Standortsystemrolle sich in der Hierarchie befindet. Wenn von einem Client also eine Anforderung an den Anwendungskatalog gesendet wird und Sie für die Geräteclienteinstellung „Websitepunkt des Standardanwendungskatalogs“ die Option „Automatisch ermitteln“ konfiguriert haben, kann der Client an eine verfügbare Instanz weitergeleitet werden. Dabei wird, ausgehend vom aktuellen Netzwerkort des Clients, lokalen Standortsystemservern für den Anwendungskatalog Priorität eingeräumt.  
 
- Weitere Informationen zu dieser Clienteinstellung und zur automatischen Ermittlung finden Sie im Abschnitt zur [Computer-Agent](../../core/clients/deploy/about-client-settings.md#BKMK_ComputerAgentDeviceSettings) des Themas [Informationen zu Clienteinstellungen in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md).  
+ Weitere Informationen zu dieser Clienteinstellung und zur automatischen Ermittlung finden Sie im Abschnitt zur [Computer-Agent](../../core/clients/deploy/about-client-settings.md#computer-agent) des Themas [Informationen zu Clienteinstellungen in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md).  
 
 ##  <a name="a-namebkmkclienta-high-availability-for-clients"></a><a name="bkmk_client"></a> Hohe Verfügbarkeit für Clients  
  **Autonomie von Clientvorgängen:**  
@@ -264,6 +264,6 @@ Optionen, die hohe Verfügbarkeit unterstützen:
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: Vorbereiten des Windows PE-Peercache zum Reduzieren des WAN-Datenverkehrs | Configuration Manager
+title: Vorbereiten des Windows PE-Peercache zum Reduzieren des WAN-Datenverkehrs | Microsoft-Dokumentation
 description: Der Windows PE-Peercache funktioniert in der Windows PE, von wo Inhalt von einem lokalen Peer abgerufen und WAN-Datenverkehr minimiert wird, wenn kein lokaler Verteilungspunkt vorhanden ist.
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: dc21868f99e17070b25c8b490e86477227a96c8e
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 814c6133a30b1116d05aaeafddb0dfb7fe2a390e
 
 
 ---
@@ -52,17 +52,17 @@ In den folgenden Abschnitten erfahren Sie, wie Sie Peercache verwalten.
 
 -   Softwareupdates  
 
-##  <a name="a-namebkmkpeercacheworka-how-does-windows-pe-peer-cache-work"></a><a name="BKMK_PeerCacheWork"></a> Funktionsweise von Windows PE-Peercache  
+##  <a name="a-namebkmkpeercacheworka-how-does--windows-pe-peer-cache-work"></a><a name="BKMK_PeerCacheWork"></a> Funktionsweise von Windows PE-Peercache  
  Stellen sie sich ein Szenario mit einer Zweigstelle vor, die über keinen Verteilungspunkt, aber über mehrere Clients verfügt, die für die Verwendung von Windows PE-Peercache aktiviert sind. Sie stellen die Tasksequenz, die für die Verwendung von Peerchache konfiguriert ist, auf mehreren Clients bereit, die als Teil der Peercachequelle konfiguriert sind. Der erste Client, der die Tasksequenz ausführt, sendet eine Anforderung nach einem Peer mit dem Inhalt. Er findet keinen, daher erhält er den Inhalt von einem Verteilungspunkt über das WAN. Der Client installiert das neue Image und speichert den Inhalt dann in seinem Configuration Manager-Clientcache, sodass er anschließend als Peercachequelle für andere Clients fungieren kann. Wenn der nächste Client die Tasksequenz ausführt, sendet er eine Anforderung zur Suche nach einer Peercachequelle im Subnetz, und der erste Client antwortet und stellt den zwischengespeicherten Inhalt zur Verfügung.  
 
-##  <a name="a-namebkmkpeercachedeterminea-determine-what-clients-will-be-part-of-the-windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheDetermine"></a> Ermitteln der Clients, die Teil der Windows PE-Peercachequelle sein werden  
+##  <a name="a-namebkmkpeercachedeterminea-determine-what--clients-will-be-part-of-the-windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheDetermine"></a> Ermitteln der Clients, die Teil der Windows PE-Peercachequelle sein werden  
  Es müssen verschiedene Dinge berücksichtigt werden, um Sie bei der Ermittlung der Computer zu unterstützen, die als Windows PE-Peercachequelle ausgewählt werden:  
 
 -   Die Windows PE-Peercachequelle sollte ein Desktopcomputer sein, der immer eingeschaltet und für Peercacheclients verfügbar ist.  
 
 -   Der Windows PE-Peercache verfügt über einen ausreichend großen Clientcache, um die Images zu speichern.  
 
-##  <a name="a-namebkmkpeercacherequirementsa-requirements-for-a-client-to-use-a-windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheRequirements"></a> Anforderungen für einen Client zur Verwendung einer Windows PE-Peercachequelle  
+##  <a name="a-namebkmkpeercacherequirementsa-requirements-for-a-client-to-use-a--windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheRequirements"></a> Anforderungen für einen Client zur Verwendung einer Windows PE-Peercachequelle  
  Damit Clients eine Windows PE-Peercachequelle verwenden können, müssen die folgenden Anforderungen erfüllt werden:  
 
 -   Der Configuration Manager-Client muss in der Lage sein, über die folgenden Ports in Ihrem Netzwerk zu kommunizieren:  
@@ -144,6 +144,6 @@ In den folgenden Abschnitten erfahren Sie, wie Sie Peercache verwalten.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Unterstützung für AD-Domänen| System Center Configuration Manager"
+title: "Unterstützung für AD-Domänen | Microsoft-Dokumentation"
 description: "Rufen Sie die Anforderungen für die Mitgliedschaft eines System Center Configuration Manager-Standortsystems in einer Active Directory-Domäne ab."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fdcd1b3b59dbe2b5bd82499e8d29230b3d8ca5cd
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 2da3da29eb4dcd3886254c506bd29f38b3ef0ab5
 
 
 ---
@@ -82,6 +82,6 @@ In der folgenden Tabelle werden die bei zusammenhanglosen Namespaces unterstütz
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

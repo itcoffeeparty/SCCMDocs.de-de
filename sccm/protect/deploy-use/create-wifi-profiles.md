@@ -2,7 +2,7 @@
 title: Erstellen von WLAN-Profilen | Microsoft Docs
 description: "Hier erfahren Sie, wie Sie in System Center Configuration Manager mit WLAN-Profilen Funknetzwerkeinstellungen für Benutzer in Ihrer Organisation bereitstellen."
 ms.custom: na
-ms.date: 12/04/2016
+ms.date: 12/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: e433fc450a2d033c24bc37333dd59fdec41dcdb6
-ms.openlocfilehash: c629d1bf8d17573cdbde783b4ec3264bed3f4b1e
+ms.sourcegitcommit: 22a74f3b12fe4f4559b682a8fcb287863a7686af
+ms.openlocfilehash: 1262cb7d524fdce21f778e2179275bd177e9330f
 
 
 ---
@@ -47,7 +47,7 @@ Verwenden Sie WLAN-Profile in System Center Configuration Manager, um für Benut
 
 -   iPad-Geräte mit iOS 5, iOS 6, iOS 7 und iOS 8  
 
--   Android-Geräte mit Version 4  
+-   Android-Geräte mit Version 4 oder höher
 
 > [!IMPORTANT]  
 >  Um Profile für Android-, iOS-, Windows Phone- und registrierte Windows 8.1-Geräte (und höher) bereitzustellen, müssen diese Geräte bei Microsoft Intune registriert werden. Informationen zum Registrieren von Geräten finden Sie unter [Enroll devices for management in Intune (Registrieren von Geräten für die Verwaltung in Intune)](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune).  
@@ -136,6 +136,6 @@ Verwenden Sie WLAN-Profile in System Center Configuration Manager, um für Benut
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

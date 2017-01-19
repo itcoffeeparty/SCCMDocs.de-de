@@ -1,5 +1,5 @@
 ---
-title: Planen der Clientmigration | System Center Configuration Manager
+title: Planen der Clientmigration | Microsoft-Dokumentation
 description: Erfahren Sie mehr zu den Aufgaben, die Clients aus einer Quellhierarchie zu einer Zielhierarchie in System Center Configuration Manager migrieren.
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 6044f9b8116687fca80deeea87abd4652f773db0
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: 11da338af9d7dd4d6f9c5fc1c6c62e277139f852
 
 
 ---
@@ -43,7 +43,7 @@ Sie müssen zwei Tasks ausführen, um Clients aus einer Quellhierarchie zu einer
 -   **Eine System Center 2012 Configuration Manager-Quellhierarchie oder höher:** Wenn Sie Clients zwischen Hierarchien der gleichen Produktversion migrieren, erfolgen keine Änderung und kein Upgrade der Clientsoftware. Stattdessen wird der Client aus der Quellhierarchie einem Standort in der Zielhierarchie neu zugewiesen.  
 
     > [!NOTE]  
-    >  Wenn für die Produktversion einer Hierarchie die Migration zu Ihrer Zielhierarchie nicht unterstützt wird, führen Sie für alle Standorte und Clients in der Quellhierarchie ein Upgrade auf eine kompatible Produktversion aus. Nach der Aktualisierung der Quellhierarchie auf eine unterstützte Produktversion können Sie Migrationen zwischen den einzelnen Hierarchien ausführen. Weitere Informationen finden Sie im Abschnitt [Versionen von Configuration Manager, die für die Migration unterstützt werden](../../core/migration/prerequisites-for-migration.md#BKMK_supportedmigrationversions) des Themas [Voraussetzungen für die Migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md).  
+    >  Wenn für die Produktversion einer Hierarchie die Migration zu Ihrer Zielhierarchie nicht unterstützt wird, führen Sie für alle Standorte und Clients in der Quellhierarchie ein Upgrade auf eine kompatible Produktversion aus. Nach der Aktualisierung der Quellhierarchie auf eine unterstützte Produktversion können Sie Migrationen zwischen den einzelnen Hierarchien ausführen. Weitere Informationen finden Sie im Abschnitt [Versionen von Configuration Manager, die für die Migration unterstützt werden](../../core/migration/prerequisites-for-migration.md#BKMK_SupportedMigrationVersions) des Themas [Voraussetzungen für die Migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md).  
 
 Die folgenden Informationen helfen Ihnen bei der Planung der Clientmigration:  
 
@@ -98,13 +98,13 @@ Wenn ein Client migriert wird, werden die in der Configuration Manager-Clientreg
 
 Darüber hinaus müssen Sie einige Anwendungen eventuell erneut installieren.  
 
-##  <a name="a-nameplanningforinventorydatamigrationa-plan-for-inventory-and-compliance-data-during-migration"></a><a name="Planning_for_Inventory_data_migration"></a> Planen der Inventur- und Kompatibilitätsdaten während der Migration  
+##  <a name="a-nameplanningforinventorydatamigrationa-plan-for--inventory-and-compliance-data-during-migration"></a><a name="Planning_for_Inventory_data_migration"></a> Planen der Inventur- und Kompatibilitätsdaten während der Migration  
 Die Inventur- und Kompatibilitätsdaten des Clients werden nicht gespeichert, wenn Sie einen Client zu einer Zielhierarchie migrieren. Stattdessen werden diese Informationen erneut in der Zielhierarchie erstellt, wenn von Clients das erste Mal Informationen an den zugewiesenen Standort gesendet werden. Damit die Anforderungen an Netzwerkbandbreite und Serververarbeitung verringert werden, wird empfohlen, eine begrenzte Anzahl von Clients in mehreren Phasen zu migrieren, anstelle einer großen Anzahl von Clients auf einmal.  
 
  Außerdem können Sie keine Anpassungen der Hardwareinventur aus einer Quellhierarchie migrieren. Diese müssen Sie unabhängig von der Migration in der Zielhierarchie einfügen. Informationen zum Erweitern der Hardwareinventur finden Sie unter [Konfigurieren der Hardwareinventur in System Center Configuration Manager](../../core/clients/manage/inventory/configure-hardware-inventory.md).  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

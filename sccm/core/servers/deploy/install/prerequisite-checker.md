@@ -1,5 +1,5 @@
 ---
-title: "Voraussetzungsprüfung | System Center Configuration Manager"
+title: "Voraussetzungsprüfung | Microsoft-Dokumentation"
 description: "Hier erfahren Sie, wie Sie mit der Voraussetzungsprüfung Probleme erkennen und beheben, die die tatsächliche Installation eines Standorts oder einer Standortsystemrolle verhindern würden."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4c2322ed0805b5f087409ec487ebec9d7c4f10d5
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: f30d7a451f47a3ab1efe6f7ac9c3e0151b8cda96
 
 ---
 # <a name="prerequisite-checker-for-system-center-configuration-manager"></a>Voraussetzungsprüfung für System Center Configuration Manager
@@ -91,7 +91,7 @@ Weitere Informationen zu Voraussetzungsprüfungen finden Sie unter [List of Prer
 
 2.  Geben Sie  **prereqchk.exe /LOCAL** ein, um die Voraussetzungsprüfung zu starten und alle Prüfungen auf dem Server auszuführen.  
 
-## <a name="run-prerequisite-checker-from-a-command-prompt-for-specified-options"></a>Ausführen der Voraussetzungsprüfung über eine Eingabeaufforderung für angegebene Optionen  
+## <a name="run-prerequisite-checker-from-a-command-prompt--for-specified-options"></a>Ausführen der Voraussetzungsprüfung über eine Eingabeaufforderung für angegebene Optionen  
 
 1.  Öffnen Sie ein Eingabeaufforderungsfenster, und wechseln Sie zu einem der folgenden Speicherorte:  
 
@@ -216,6 +216,6 @@ Weitere Informationen zu Voraussetzungsprüfungen finden Sie unter [List of Prer
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

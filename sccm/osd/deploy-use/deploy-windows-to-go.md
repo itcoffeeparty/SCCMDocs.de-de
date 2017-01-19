@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen von Windows to Go mit System Center Configuration Manager.
+title: Bereitstellen von Windows To Go mit System Center Configuration Manager | Microsoft-Dokumentation
 description: "Erfahren Sie, wie Sie Windows To Go in System Center Configuration Manager bereitstellen, um einen Arbeitsbereich in Windows To Go zu erstellen, der über eine externe Festplatte neu startet."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 104355185c5bbb4c15f3b9cc80cf8fa0e529cf6d
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: a8b1a42c43438553cfbb62328bed933378bb344c
 
 
 ---
@@ -450,7 +450,9 @@ In diesem Thema finden Sie die Schritte zum Bereitstellen von Windows To Go in S
 
     -   **Remoteverteilungspunkt verwenden, wenn kein lokaler Verteilungspunkt verfügbar ist**: Geben Sie an, ob Verteilungspunkte in langsamen und unzuverlässigen Netzwerken von Clients zum Herunterladen des Inhalts verwendet werden können, der für die Tasksequenz erforderlich ist.  
 
-    -   **Die Verwendung eines Fallbackquellpfads für den Inhalt durch Clients zulassen**: Geben Sie an, ob Clients ein Ausweichen und Verwenden eines nicht bevorzugten Verteilungspunkts als Quellspeicherort für Inhalt ermöglicht werden soll, wenn der Inhalt an keinem bevorzugten Verteilungspunkt verfügbar ist.  
+    -   **Die Verwendung eines Fallbackquellpfads für den Inhalt durch Clients zulassen**:
+        - *Vor Version 1610* können Sie das Kontrollkästchen „Fallbackquellpfad für Inhalt zulassen“ aktivieren, um für Clients außerhalb solcher Begrenzungsgruppen ein Ausweichen auf den Verteilungspunkt als Quellort für Inhalt zu ermöglichen, wenn keine anderen Verteilungspunkte verfügbar sind.
+        - *Ab Version 1610* können Sie **Fallbackquellpfad für Inhalt zulassen** nicht mehr konfigurieren.  Stattdessen können Sie Beziehungen zwischen Begrenzungsgruppen konfigurieren, die bestimmen, ab wann ein Client mit der Suche nach zusätzlichen Begrenzungsgruppen für einen gültigen Quellspeicherort für den Inhalt suchen kann. 
 
 11. Schließen Sie den Assistenten ab.  
 
@@ -468,6 +470,6 @@ In diesem Thema finden Sie die Schritte zum Bereitstellen von Windows To Go in S
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

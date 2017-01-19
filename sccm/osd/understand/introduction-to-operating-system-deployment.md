@@ -1,5 +1,5 @@
 ---
-title: "Einführung in die Betriebssystembereitstellung | System Center Configuration Manager"
+title: "Einführung in die Betriebssystembereitstellung | Microsoft-Dokumentation"
 description: Verstehen Sie die Konzepte, bevor Sie Betriebssysteme in Ihrer Configuration Manager-Umgebung bereitstellen.
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ece68bd30e31595226f154fd1148b0ee55feceaf
+ms.sourcegitcommit: 55a9f1caedcfa810e9a97e43626e4cf5fdbcfa0d
+ms.openlocfilehash: 2baa6b7dbd66ab41bc9b67e8f43c313be233153c
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: ece68bd30e31595226f154fd1148b0ee55feceaf
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Sie können Configuration Manager dazu verwenden, Betriebssysteme auf vielen verschiedenen Wegen bereitzustellen. Verwenden Sie die Informationen in diesem Abschnitt, um zu verstehen, wie Betriebssysteme bereitgestellt und Tasks automatisiert werden.
+Sie können Configuration Manager dazu verwenden, Betriebssysteme auf vielen verschiedenen Wegen bereitzustellen. Verwenden Sie die Informationen in diesem Abschnitt, um zu verstehen, wie Betriebssysteme bereitgestellt und Tasks automatisiert werden. 
 
 ##  <a name="a-namebkmkosdeploymentprocessa-the-operating-system-deployment-process"></a><a name="BKMK_OSDeploymentProcess"></a> Vorgang der Betriebssystembereitstellung  
  In Configuration Manager gibt es mehrere Methoden, die Sie zum Bereitstellen eines Betriebssystems verwenden können. Unabhängig von der verwendeten Bereitstellungsmethode müssen Sie mehrere Aktionen ausführen:  
@@ -81,7 +81,7 @@ Sie können Configuration Manager dazu verwenden, Betriebssysteme auf vielen ver
 ##  <a name="a-namebkmkbootimagesa-boot-images"></a><a name="BKMK_BootImages"></a> Startabbilder  
  Ein Startimage in Configuration Manager ist ein Windows PE-Image (WinPE), das während einer Betriebssystembereitstellung verwendet wird. Startimages dienen zum Starten eines Computers in Windows PE, einem minimalen Betriebssystem mit begrenzten Komponenten und Diensten zur Vorbereitung des Zielcomputers für die Windows-Installation. Configuration Manager stellt zwei Startimages bereit: eines zur Unterstützung von x86-Plattformen und eines zur Unterstützung von x64-Plattformen. Diese werden als Standardstartimages bezeichnet. Startimages, die Sie erstellen und zu Configuration Manager hinzufügen, werden als benutzerdefinierte Images bezeichnet. Standardstartimages können bei einem Update von Configuration Manager automatisch ersetzt werden. Weitere Informationen zu Startabbildern finden Sie im Thema [Verwalten von Startabbildern (Startimages)](../get-started/manage-boot-images.md).  
 
-##  <a name="a-namebkmkosimagesa-operating-system-images"></a><a name="BKMK_OSImages"></a> Betriebssystemimages  
+##  <a name="a-namebkmkosimagesa-operating--system-images"></a><a name="BKMK_OSImages"></a> Betriebssystemimages  
  Betriebssystemabbilder in Configuration Manager werden im WIM-Dateiformat (Windows Imaging) gespeichert. Sie stellen eine komprimierte Sammlung von Verweisdateien und -ordnern dar, die für die erfolgreiche Installation und Konfiguration eines Betriebssystems auf einem Computer erforderlich sind. Bei allen Szenarien für die Betriebssystembereitstellung müssen Sie ein Betriebssystemabbild auswählen. Sie können das Standardimage des Betriebssystems verwenden oder das Betriebssystemimage von einem von Ihnen konfigurierten Referenzcomputer erstellen. Weitere Informationen finden Sie unter [Verwalten von Betriebssystemimages](../get-started/manage-operating-system-images.md).  
 
 ##  <a name="a-namebkmkosupgradepackagesa-operating-system-upgrade-packages"></a><a name="BKMK_OSUpgradePackages"></a> Betriebssystem-Upgradepakete  
@@ -135,6 +135,6 @@ Sie können Configuration Manager dazu verwenden, Betriebssysteme auf vielen ver
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

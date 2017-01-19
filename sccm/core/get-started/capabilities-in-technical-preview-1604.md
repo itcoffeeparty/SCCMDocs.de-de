@@ -1,5 +1,5 @@
 ---
-title: "Funktionen in Technical Preview 1604 für System Center Configuration Manager"
+title: "Funktionen in Technical Preview 1604 für System Center Configuration Manager | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr zu Features, die in Technical Preview für System Center Configuration Manager 1604 zur Verfügung stehen."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 512bbb1c8f2b4811be7770bda5fa2236a2dc7e06
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 7358e310ad672a1a0ba4cbcb6b008506aaaa5d2b
 
 ---
 # <a name="capabilities-in-technical-preview-1604-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1604 für System Center Configuration Manager
@@ -172,6 +172,6 @@ Konfigurieren Sie zu Testzwecken den lokalen Health Attestation-Dienst anhand de
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

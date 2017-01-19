@@ -1,5 +1,5 @@
 ---
-title: Inkrementelle Versionen | System Center Configuration Manager
+title: Inkrementelle Versionen | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über das Bereitstellen und Verwalten von Softwareupdates in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 2b3fe48d0c878063886618d4390e6f5f53f311af
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: afc73be528c3ac4a35b72631e4479338e127e4dc
 
 ---
 # <a name="whats-new-in-system-center-configuration-manager-incremental-versions"></a>Neuerungen in Inkrementelle Versionen von System Center Configuration Manager
@@ -36,6 +36,7 @@ ms.openlocfilehash: 2b3fe48d0c878063886618d4390e6f5f53f311af
  Diese Updateversionen sind wichtig zum Verständnis der inkrementellen Version Ihrer System Center Configuration Manager-Installation und der Features, die Ihnen ggf. zur Aktivierung in Ihrer Bereitstellung zur Verfügung stehen.
 
  Der erste Release von System Center Configuration Manager Current Branch ist auch als Version 1511 bekannt. Seit diesem ersten Release sind weitere Updates verfügbar. Verwenden Sie die folgenden Links, um herauszufinden, welche Neuheiten jede Version enthält:
+  - [Neuigkeiten in Version 1610](../../../core/plan-design/changes/whats-new-in-version-1610.md)
   - [What's new in version 1606 (Neuheiten in Version 1606)](../../../core/plan-design/changes/whats-new-in-version-1606.md)
   - [What's new in version 1602 (Neuheiten in Version 1602)](../../../core/plan-design/changes/whats-new-in-version-1602.md)
 
@@ -44,6 +45,6 @@ ms.openlocfilehash: 2b3fe48d0c878063886618d4390e6f5f53f311af
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

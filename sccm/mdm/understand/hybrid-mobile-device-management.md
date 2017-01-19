@@ -1,5 +1,5 @@
 ---
-title: Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune
+title: "Hybride Verwaltung mobiler Geräte (MDM) mit System Center Configuration Manager und Microsoft Intune | Microsoft-Dokumentation"
 description: "Enthält Informationen zur hybriden Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune."
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 caps.latest.revision: 34
 caps.handback.revision: 0
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 22e673122f0f664d1240c11451b7e6db78481b26
-ms.openlocfilehash: 83832465e93997a2893e024c565ee00f471036d1
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: caedfa2f89daf9ebad72602161dd618f0d18b4ab
 
 ---
 # <a name="hybrid-mobile-device-management-mdm-with-system-center-configuration-manager-and-microsoft-intune"></a>Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune
@@ -66,7 +66,7 @@ Um Geräte hybrid zu verwalten, müssen diese Geräte zuerst mit dem Dienst regi
 
 | **Methode** |  **Zurücksetzen** |  **Affinität**    |   **Sperren** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | Nein|    Ja |   Nein | [Mehr](../deploy-use/setup-hybrid-mdm.md#set-up-device-management)|
+|**[BYOD](#byod)** | Nein|    Ja |   Nein | [Mehr](../deploy-use/setup-hybrid-mdm.md#windows-enrollment-setup)|
 |**[DEM](#dem)**|   Nein |Nein |Nein  |[Mehr](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
 
 Eine Reihe von Fragen, die Sie beim Ermitteln der richtigen Methode unterstützen, finden Sie unter [Auswählen der Registrierungsart von Geräten](/intune/get-started/choose-how-to-enroll-devices1).
@@ -117,6 +117,6 @@ Hybride Verwaltung mobiler Geräte in Configuration Manager kann die folgenden P
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: Anpassen von Betriebssystemimages | Configuration Manager
+title: Anpassen von Betriebssystemabbildern | Microsoft-Dokumentation
 description: Verwenden Sie die Tasksequenzen zum Erfassen und Erstellen, die manuelle Konfiguration oder eine Kombination aus beidem, um ein Betriebssystemimage anzupassen.
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e7e0ecf394297799c2a3d0c14e719182b403e1e8
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: c183fbde6de29ccd7c78ae066d305f0e99e37bda
 
 
 ---
@@ -28,7 +28,7 @@ ms.openlocfilehash: e7e0ecf394297799c2a3d0c14e719182b403e1e8
 
 Betriebssystemimages in System Center Configuration Manager sind WIM-Dateien und stellen eine komprimierte Sammlung von Referenzdateien und -ordnern dar, die für die erfolgreiche Installation und Konfiguration eines Betriebssystems auf einem Computer erforderlich sind. Ein benutzerdefiniertes Betriebssystemabbild wird von einem Referenzcomputer erstellt und erfasst, den Sie mit allen erforderlichen Betriebssystemdateien, Unterstützungsdateien, Softwareupdates, Tools und sonstigen Softwareapps konfigurieren. Sie entscheiden, in welchem Umfang der Referenzcomputer manuell konfiguriert wird. Mithilfe einer Tasksequenz zum Erstellen und Erfassen können Sie die Konfiguration des Referenzcomputers vollständig automatisieren. Alternativ konfigurieren Sie bestimmte Aspekte des Referenzcomputers manuell und automatisieren dann den Rest, indem Sie Tasksequenzen verwenden, oder Sie konfigurieren Referenzcomputer ohne Tasksequenzen vollständig manuell. Folgende Abschnitte bieten Informationen zum Anpassen eines Betriebssystems.
 
-##  <a name="a-namebkmkpreparereferencecomputera-prepare-for-the-reference-computer"></a><a name="BKMK_PrepareReferenceComputer"></a> Vorbereiten des Referenzcomputers  
+##  <a name="a-namebkmkpreparereferencecomputera-prepare-for-the--reference-computer"></a><a name="BKMK_PrepareReferenceComputer"></a> Vorbereiten des Referenzcomputers  
  Bevor Sie ein Betriebssystemabbild von einem Referenzcomputer erfassen, müssen einige Punkte bedacht werden.  
 
 ###  <a name="a-namebkmkrefcomputerdecidea-decide-between-an-automated-or-manual-configuration"></a><a name="BKMK_RefComputerDecide"></a> Entscheiden zwischen automatisierter oder manueller Konfiguration  
@@ -140,6 +140,6 @@ Betriebssystemimages in System Center Configuration Manager sind WIM-Dateien und
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

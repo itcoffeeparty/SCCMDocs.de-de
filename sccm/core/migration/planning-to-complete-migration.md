@@ -1,5 +1,5 @@
 ---
-title: "Abschließen der Migration | System Center Configuration Manager"
+title: "Überwachen der Migration | Microsoft-Dokumentation"
 description: "Erfahren Sie, wie Sie die Migration zu einer System Center Configuration Manager-Zielhierarchie abschließen, nachdem eine Quellhierarchie keine Daten mehr enthält."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 862a039ada302c9432fc86d68f5ba9aad360f69b
+ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
+ms.openlocfilehash: 0595ab87222aca543ae67a33c2b9fab780c6160f
 
 
 ---
@@ -62,6 +62,6 @@ Weitere Informationen zu Quellstandorten und der Datensammlung finden Sie unter 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,8 +1,8 @@
 ---
-title: "Unterstützung für SQL Server | System Center Configuration Manager"
+title: "Unterstützung für SQL Server | Microsoft-Dokumentation"
 description: Abrufen der SQL Server-Version und Konfigurationsanforderungen zum Hosten einer System Center Configuration Manager-Standortdatenbank.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
+ms.sourcegitcommit: 814feb4e833230285b4092a8feb6f11a75f2e4f6
+ms.openlocfilehash: ecf790893a5604250810310cfdb09c4cff7d97b6
 
 
 ---
@@ -29,7 +29,6 @@ Jeder System Center Configuration Manager-Standort erfordert zum Hosten der Stan
 
 ##  <a name="a-namebkmkinstancesa-sql-server-instances-and-locations"></a><a name="bkmk_Instances"></a> SQL Server-Instanzen und -Speicherorte  
  **Standort der zentralen Verwaltung und primäre Standorte:**  
-
 Die Standortdatenbank muss eine vollständige Installation von SQL Server verwenden.  
 
  Möglicher Speicherort von SQL Server:  
@@ -49,7 +48,6 @@ Die folgenden Instanzen werden unterstützt:
 
 
  **Sekundäre Standorte:**  
-
  Die Standortdatenbank kann die Standardinstanz einer vollständigen Installation von SQL Server oder SQL Server Express verwenden.  
 
  Der Speicherort von SQL Server muss sich auf dem Standortservercomputer befinden.  
@@ -57,14 +55,19 @@ Die folgenden Instanzen werden unterstützt:
 ##  <a name="a-namebkmksqlversionsa-supported-versions-of-sql-server"></a><a name="bkmk_SQLVersions"></a> Unterstützte Versionen von SQL Server  
  In einer Hierarchie mit mehreren Standorten kann jeder Standort eine unterschiedliche SQL Server-Version zum Hosten der Standortdatenbank verwenden, solange diese Versionen von SQL Server von der verwendeten Version von Configuration Manager unterstützt werden.  
 
- Die folgenden Versionen von SQL Server werden von System Center Configuration Manager-Versionen ab 1511 unterstützt.  
+ Sofern nicht anders angegeben, werden die folgenden SQL Server-Versionen von System Center Configuration Manager-Versionen ab 1511 unterstützt.  
 
 > [!IMPORTANT]  
 >  Bei Verwenden von SQL Server Standard für die Datenbank am Standort der zentralen Verwaltung ist die Gesamtanzahl der Clients begrenzt, die die Hierarchie unterstützen kann. Informationen hierzu finden Sie unter [Size and scale numbers for System Center Configuration Manager](../../../core/plan-design/configs/size-and-scale-numbers.md) (Anpassen und Skalieren von Zahlen für System Center Configuration Manager).
 
-### <a name="sql-server-2016---standard-enterprise"></a>SQL Server 2016 – Standard, Enterprise  
+### <a name="sql-server-2016-sp1---standard-enterprise"></a>SQL Server 2016 SP1 – Standard, Enterprise  
+Sie können diese Version von SQL Server ohne minimale kumulative Updateversion für Folgendes verwenden:  
 
-Für die Verwendung mit Version 1606 unterstützt   
+-   Standort der zentralen Verwaltung  
+-   Primärer Standort  
+-   Sekundärer Standort  
+
+### <a name="sql-server-2016---standard-enterprise"></a>SQL Server 2016 – Standard, Enterprise  
 Sie können diese Version von SQL Server ohne minimale kumulative Updateversion für Folgendes verwenden:  
 
 -   Standort der zentralen Verwaltung  
@@ -73,8 +76,6 @@ Sie können diese Version von SQL Server ohne minimale kumulative Updateversion 
 
 
 ### <a name="sql-server-2014-sp2---standard-enterprise"></a>SQL Server 2014 SP2 – Standard, Enterprise  
-
-Für Version 1511 und höher unterstützt  
 Sie können diese Version von SQL Server ohne minimale kumulative Updateversion für Folgendes verwenden:  
 
 -   Standort der zentralen Verwaltung  
@@ -84,8 +85,6 @@ Sie können diese Version von SQL Server ohne minimale kumulative Updateversion 
 
 
 ### <a name="sql-server-2014-sp1---standard-enterprise"></a>SQL Server 2014 SP1 – Standard, Enterprise  
-
-Für Version 1511 und höher unterstützt  
  Sie können diese Version von SQL Server ohne minimale kumulative Updateversion für Folgendes verwenden:  
 
 -   Standort der zentralen Verwaltung  
@@ -94,8 +93,6 @@ Für Version 1511 und höher unterstützt
 
 
 ### <a name="sql-server-2012-sp3---standard-enterprise"></a>SQL Server 2012 SP3 – Standard, Enterprise  
-
-Für Version 1511 und höher unterstützt  
  Sie können diese Version von SQL Server ohne minimale kumulative Updateversion für Folgendes verwenden:  
 
 -   Standort der zentralen Verwaltung  
@@ -103,9 +100,7 @@ Für Version 1511 und höher unterstützt
 -   Sekundärer Standort  
 
 
-### <a name="sql-server-2012-sp2---standard-enterprise"></a>SQL Server 2012 SP2 – Standard, Enterprise  
-
-Für Version 1511 und höher unterstützt  
+### <a name="sql-server-2012-sp2---standard-enterprise"></a>SQL Server 2012 SP2 – Standard, Enterprise   
  Sie können diese Version von SQL Server ohne minimale kumulative Updateversion für Folgendes verwenden:  
 
 -   Standort der zentralen Verwaltung  
@@ -113,41 +108,41 @@ Für Version 1511 und höher unterstützt
 -   Sekundärer Standort  
 
 
-### <a name="sql-server-2008-r2-sp3---standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3 – Standard, Enterprise, Datacenter  
-
-Für Version 1511 und höher unterstützt    
+### <a name="sql-server-2008-r2-sp3---standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3 – Standard, Enterprise, Datacenter     
 Sie können diese Version von SQL Server ohne minimale kumulative Updateversion für Folgendes verwenden:  
 
 -   Standort der zentralen Verwaltung  
 -   Primärer Standort  
 -   Sekundärer Standort  
 
-### <a name="sql-server-2016-express"></a>SQL Server 2016 Express
-Für die Verwendung mit Version 1606 unterstützt  
+
+
+### <a name="sql-server-2016-express-sp1"></a>SQL Server 2016 Express SP1  
 Sie können diese Version von SQL Server ohne minimale kumulative Updateversion für Folgendes verwenden:
 -   Sekundärer Standort
 
-### <a name="sql-server-2014-express-sp2"></a>SQL Server 2014 Express SP2  
-Für die Verwendung mit Version 1511 und höher unterstützt  
+### <a name="sql-server-2016-express"></a>SQL Server 2016 Express
+Sie können diese Version von SQL Server ohne minimale kumulative Updateversion für Folgendes verwenden:
+-   Sekundärer Standort
+
+
+### <a name="sql-server-2014-express-sp2"></a>SQL Server 2014 Express SP2   
 Sie können diese Version von SQL Server ohne minimale kumulative Updateversion für Folgendes verwenden:  
 
 -   Sekundärer Standort  
 
 
-### <a name="sql-server-2014-express-sp1"></a>SQL Server 2014 Express SP1  
- Für die Verwendung mit Version 1511 und höher unterstützt   
+### <a name="sql-server-2014-express-sp1"></a>SQL Server 2014 Express SP1   
  Sie können diese Version von SQL Server ohne minimale kumulative Updateversion für Folgendes verwenden:  
 
 -   Sekundärer Standort  
 
 ### <a name="sql-server-2012-express-sp3"></a>SQL Server 2012 Express SP3  
-Für die Verwendung mit Version 1511 und höher unterstützt   
 Sie können diese Version von SQL Server ohne minimale kumulative Updateversion für Folgendes verwenden:  
 
 -   Sekundärer Standort  
 
-### <a name="sql-server-2012-express-sp2"></a>SQL Server 2012 Express SP2  
- Für die Verwendung mit Version 1511 und höher unterstützt  
+### <a name="sql-server-2012-express-sp2"></a>SQL Server 2012 Express SP2   
  Sie können diese Version von SQL Server ohne minimale kumulative Updateversion für Folgendes verwenden:  
 
 -   Sekundärer Standort  
@@ -187,12 +182,10 @@ Sie können diese Version von SQL Server ohne minimale kumulative Updateversion 
     -   Primärer Standort: Mindestens 8 Gigabyte (GB)  
     -   Sekundärer Standort: Mindestens 4 Gigabyte (GB)  
 
- **Geschachtelte SQL-Trigger:**  
-
+**Geschachtelte SQL-Trigger:**  
  [Geschachtelte SQL-Trigger](http://go.microsoft.com/fwlink/?LinkId=528802) muss aktiviert sein.  
 
  **SQL Server-CLR-Integration**  
-
   Die Standortdatenbank erfordert, dass die CLR (Common Language Runtime) von SQL Server aktiviert ist. Dies wird automatisch bei der Installation von Configuration Manager aktiviert. Weitere Informationen zur CLR finden Sie unter [Einführung in die CLR-Integration für SQL Server](https://msdn.microsoft.com/library/ms254498\(v=vs.110\).aspx).  
 
 ##  <a name="a-namebkmkoptionala-optional-configurations-for-sql-server"></a><a name="bkmk_optional"></a> Optionale Konfigurationen für SQL Server  
@@ -220,6 +213,10 @@ Informationen zum Ändern des vom SQL Server-Dienst verwendeten Kontos finden Si
 **SQL Server Reporting Services:**  
 Zur Installation eines Reporting Services-Punkts erforderlich, mit dem Sie Berichte ausführen können.  
 
+> [!IMPORTANT]  
+> Nach dem Aktualisieren von SQL Server von einer früheren Version wird möglicherweise der folgende Fehler angezeigt: *Report Builder Does Not Exist* (Berichts-Generator nicht vorhanden).    
+> Zum Beheben dieses Problems müssen Sie die Reporting Services-Standortsystemrolle installieren.
+
 **SQL Server-Ports:**  
 Für die Kommunikation mit dem SQL Server-Datenbankmodul und für die standortübergreifende Replikation können Sie die Standardkonfigurationen für SQL Server-Ports verwenden oder benutzerdefinierte Ports angeben:  
 
@@ -242,6 +239,6 @@ Wie Sie SQL Server für die Verwendung eines bestimmten Ports konfigurieren, wir
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: Verwalten von iOS-Apps, die per Volumenlizenz erworben wurden | System Center Configuration Manager
+title: Verwalten von per Volumenlizenz erworbenen iOS-Apps | Microsoft-Dokumentation
 description: "Sie können Lizenzen für Apps, die Sie über den iOS App Store erworben haben, bereitstellen, verwalten und nachverfolgen."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4289f4853f77392df420e44e179961609f83683f
+ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
+ms.openlocfilehash: cd9edf61d151ac8334ace0bf668fa4c919d8c75b
 
 
 ---
@@ -28,20 +28,20 @@ ms.openlocfilehash: 4289f4853f77392df420e44e179961609f83683f
 
 
 
- Der iOS App Store bietet die Möglichkeit, mehrere Lizenzen für eine App zu erwerben, die in Ihrem Unternehmen ausgeführt werden soll. Dadurch können Sie den Verwaltungsaufwand reduzieren, der durch das Nachverfolgen mehrerer erworbener App-Kopien entsteht.  
+ Der iOS App Store bietet die Möglichkeit, mehrere Lizenzen für eine App zu kaufen, die in Ihrem Unternehmen ausgeführt werden soll. Dadurch können Sie den Verwaltungsaufwand reduzieren, der durch das Nachverfolgen mehrerer App-Kopien entsteht, die Sie erworben haben.  
 
- System Center Configuration Manager unterstützt Sie nun bei der Bereitstellung und Verwaltung von iOS-Apps, die über das Programm erworben wurden, indem die Lizenzinformationen aus dem App-Store importiert werden und nachverfolgt wird, wie viele Lizenzen Sie verwendet haben.  
+ System Center Configuration Manager unterstützt Sie nun bei der Bereitstellung und Verwaltung von iOS-Apps, die über das Programm erworben wurden, indem die Lizenzinformationen aus dem App-Store importiert werden, und die Anzahl der Lizenzen, die Sie verwendet haben, nachverfolgt wird.  
 
 ## <a name="manage-volume-purchased-apps-for-ios-devices"></a>Verwalten von Apps für iOS-Geräte, die über ein Volumenprogramm erworben wurden  
- Sie erwerben mehrere Lizenzen für iOS-Apps über das Programm für Volumenlizenzen (Volume Purchase Program, VPP) von Apple. Dies umfasst das Einrichten eines Apple VPP-Kontos auf der Apple-Website und das Hochladen des Apple VPP-Tokens in Configuration Manager. Dabei haben Sie folgende Möglichkeiten:  
+ Sie erwerben mehrere Lizenzen für iOS-Apps über das Programm „Volume Purchase Program“ (VPP) von Apple. Dies umfasst das Einrichten eines Apple VPP-Kontos auf der Apple-Website, und das Hochladen des Apple VPP-Tokens zu Configuration Manager. Dadurch haben Sie folgende Möglichkeiten:  
 
 -   Sie können Ihre Volume Purchase-Informationen mit Configuration Manager synchronisieren.  
 
 -   Erworbene Apps werden in der Configuration Manager-Konsole angezeigt.  
 
--   Sie können diese Apps bereitstellen und überwachen und die Anzahl von Lizenzen für die verwendeten Apps nachverfolgen.  
+-   Sie können diese Apps bereitstellen und überwachen, und die Anzahl von Lizenzen für die verwendeten Apps nachverfolgen.  
 
--   Configuration Manager kann Sie dabei unterstützen, bei Bedarf Lizenzen durch die Deinstallation von Apps freizugeben, die per Volumenlizenz erworben und für Benutzer bereitgestellt wurden.  
+-   Configuration Manager kann Sie dabei unterstützen, bei Bedarf Lizenzen durch Deinstallieren von Apps freizugeben, die per Volumenlizenz erworben und für Benutzer bereitgestellt wurden.  
 
 ## <a name="before-you-start"></a>Vorbereitung  
  Bevor Sie beginnen, müssen Sie ein VPP-Token von Apple abrufen und es in Configuration Manager hochladen.  
@@ -49,49 +49,49 @@ ms.openlocfilehash: 4289f4853f77392df420e44e179961609f83683f
 > [!IMPORTANT]  
 >  -   Derzeit kann jede Organisation nur über ein VPP-Konto und -Token verfügen.  
 > -   Es wird nur das Apple Volume Purchase Program für Unternehmen unterstützt.  
-> -   Sobald Sie Intune ein Apple VPP-Konto zugeordnet haben, können Sie anschließend kein anderes Konto zuordnen. Aus diesem Grund ist es sehr wichtig, dass mehreren Personen die Details des verwendeten Kontos bekannt sind.  
+> -   Sobald Sie Intune ein Apple VPP-Konto zugeordnet haben, können Sie anschließend kein anderes Konto zuordnen. Aus diesem Grund müssen Sie sicherstellen, dass mehreren Personen die Details des verwendeten Kontos bekannt sind.  
 > -   Wenn Sie zuvor ein VPP-Token für ein anderes Produkt für die Verwaltung mobiler Geräte in Ihrem vorhandenen Apple VPP-Konto verwendet haben, müssen Sie für die Verwendung mit Configuration Manager ein neues erstellen.  
 > -   Jedes Token ist ein Jahr lang gültig.  
 > -   Standardmäßig wird Configuration Manager zweimal am Tag mit dem Apple VPP-Dienst synchronisiert, um sicherzustellen, dass Ihre Lizenzen mit Configuration Manager synchronisiert sind.  
 >   
->      Dabei werden nur Änderungen an Ihren Lizenzen synchronisiert. Allerdings wird einmal alle 7 Tage eine vollständige Synchronisierung durchgeführt.  
+>      Dabei werden nur Änderungen an Ihren Lizenzen synchronisiert. Allerdings wird einmal pro Woche eine vollständige Synchronisierung ausgeführt.  
 >   
->      Wenn Sie auf **Synchronisieren** klicken, um eine manuelle Synchronisierung durchzuführen, wird immer eine vollständige Synchronisierung durchgeführt.  
-> -   Wenn Sie eine Configuration Manager-Datenbank wiederherstellen müssen, sollten Sie im Anschluss daran eine manuelle Synchronisierung durchführen, um sicherzustellen, dass die synchronisierten Lizenzdaten auf dem aktuellen Stand sind.  
-> -   Per Volumenlizenz erworbene iOS-Apps können für Benutzer- oder Gerätesammlungen bereitgestellt werden. VPP-Apps, die Sie für ein Gerät ohne einen Benutzer bereitstellen (z.B. ein für Gerät, das Sie ohne Benutzeraffinität mit dem Device Enrollment Program (DEP) oder mit Apple Configurator registrieren) werden dagegen nicht installiert.  
+>      Wenn Sie bei **Synchronisierung** auswählen, dass eine manuelle Synchronisierung ausgeführt werden soll, wird immer eine vollständige Synchronisierung ausgeführt.  
+> -   Wenn Sie eine Configuration Manager-Datenbank wiederherstellen müssen, sollten Sie im Anschluss daran eine manuelle Synchronisierung ausführen, um sicherzustellen, dass die synchronisierten Lizenzdaten auf dem aktuellen Stand sind.  
+> -   Per Volumenlizenz erworbene iOS-Apps können für Benutzer- oder Gerätesammlungen bereitgestellt werden. VPP-Apps, die Sie für ein Gerät ohne einen Benutzer bereitstellen (z.B. für ein Gerät, das Sie ohne Benutzeraffinität mit dem Device Enrollment Program (DEP) oder mit Apple Configurator registrieren) werden dagegen nicht installiert.  
 
- Darüber hinaus müssen Sie ein gültiges APNs-Zertifikat (Apple Push Notification Service) von Apple importieren, damit Sie iOS-Geräte verwalten und Apps bereitstellen können. Weitere Informationen finden Sie unter [Set up iOS hybrid device management (Einrichten der hybriden Verwaltung von iOS-Geräten)](../../mdm/deploy-use/set-up-ios-hybrid-device-management.md).  
+ Darüber hinaus müssen Sie ein gültiges APNs-Zertifikat (Apple Push Notification Service) von Apple importieren, damit Sie iOS-Geräte verwalten und Apps bereitstellen können. Weitere Informationen finden Sie unter [Set up iOS hybrid device management (Einrichten der hybriden Verwaltung von iOS-Geräten)](../../mdm/deploy-use/enroll-hybrid-ios-mac.md).  
 
 ## <a name="step-1---to-get-and-upload-an-apple-vpp-token"></a>Schritt 1: Abrufen und Hochladen eines Apple VPP-Tokens  
-  
-1.  Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung** > **Cloud Services** > **Apple Volume Purchase Program-Token**.   
-  
-3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Apple Volume Purchase Program-Token** auf **Apple Volume Purchase Program-Token hinzufügen**.  
+
+1.  Wählen Sie in der Configuration Manager-Konsole **Verwaltung** > **Cloud Services** > **Apple Volume Purchase Program Tokens** (Apple Volume Purchase Program-Token) aus.   
+
+3.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Apple Volume Purchase Program Tokens** (Apple Volume Purchase Program-Token) **Add Apple Volume Purchase Program Token** (Apple Volume Purchase Program-Token hinzufügen) aus.  
 
 4.  Konfigurieren Sie auf der Seite **Allgemein** des **Assistenten zum Hinzufügen von Apple Volume Purchase Program-Token** folgende Optionen:   
 
     -   **Name**: Geben Sie einen Namen für dieses Token ein, der dann in der Configuration Manager-Konsole angezeigt wird.  
 
-    -   **Token**: Klicken Sie auf **Durchsuchen**, und wählen Sie das VPP-Token, das Sie von der Apple-Website heruntergeladen haben.  
+    -   **Token**: Klicken Sie auf **Durchsuchen**, und wählen Sie das VPP-Token aus, das Sie von der Apple-Website heruntergeladen haben.  
 
-         Klicken Sie auf den Link **Siehe Apple VPP-Konto**. Wenn Sie sich nicht bereits für das Volume Purchase Program für Unternehmen oder Bildungseinrichtungen registriert haben, registrieren Sie sich jetzt. Sobald Sie registriert sind, laden Sie das Apple VPP-Token für Ihr Konto herunter.  
+         Klicken Sie auf den Link **See Apple VPP account** (Siehe Apple VPP-Konto). Wenn Sie sich nicht bereits für das Volume Purchase Program für Unternehmen oder Bildungseinrichtungen registriert haben, registrieren Sie sich jetzt. Sobald Sie registriert sind, laden Sie das Apple VPP-Token für Ihr Konto herunter.  
 
     -   **Beschreibung**: Wenn Sie möchten, können Sie eine Beschreibung eingeben, anhand derer Sie dieses VPP-Token in der Configuration Manager-Konsole erkennen können.  
 
     -   **Zur Verbesserung der Suche und Filterung zugewiesene Kategorien**: Optional können Sie dem VPP-Token Kategorien zuweisen, um die Suche in der Configuration Manager-Konsole zu erleichtern.  
 
-5.  Klicken Sie auf **Weiter**, und schließen Sie den Assistenten ab.  
-  
-Über den Knoten **Apple Volume Purchase Program-Token** werden nun Informationen zum Apple VPP-Token angezeigt, einschließlich der letzten Aktualisierung, des Ablaufdatums und der letzten Synchronisierung. 
-  
-Die von Apple gespeicherten Daten können jederzeit mit Configuration Manager vollständig synchronisiert werden. Klicken Sie hierzu auf der Registerkarte **Startseite** in der Gruppe **Synchronisieren** auf **Synchronisieren**.  
-  
+5.  Wählen Sie **Weiter** aus, und schließen Sie den Assistenten ab.  
+
+Über den Knoten **Apple Volume Purchase Program Tokens** (Apple Volume Purchase Program-Token) werden nun Informationen zum Apple VPP-Token angezeigt, einschließlich der letzten Aktualisierung, des Ablaufdatums und der letzten Synchronisierung.
+
+Die von Apple gespeicherten Daten können jederzeit mit Configuration Manager vollständig synchronisiert werden. Wählen Sie hierzu auf der Registerkarte **Startseite** in der Gruppe **Synchronisieren** **Synchronisieren** aus.  
+
 ## <a name="step-2---deploy-a-volume-purchased-app"></a>Schritt 2: Bereitstellen einer im Rahmen des Volumenprogramms erworbenen App  
 
-1.  Klicken Sie in der Configuration Manager-Konsole auf **Softwarebibliothek** > **Anwendungsverwaltung** > **Lizenzinformationen für Store-Apps**.  
+1.  Wählen Sie in der Configuration Manager-Konsole **Softwarebibliothek** > **Anwendungsverwaltung** > **License Information for Store Apps** (Lizenzinformationen für Store-Apps) aus.  
 
-3.  Wählen Sie die App aus, die Sie bereitstellen möchten. Klicken Sie anschließend auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Anwendung erstellen**.
-Eine Configuration Manager-App wird erstellt, die eine App aus dem Windows Store für Unternehmen enthält. Sie können diese Anwendung wie jede andere Configuration Manager-Anwendung bereitstellen und überwachen.
+3.  Wählen Sie zunächst die App aus, die Sie bereitstellen möchten. Klicken Sie anschließend auf der Registerkarte **Start** in der Gruppe **Erstellen** auf **Anwendung erstellen**.
+Die Configuration Manager-Anwendung, die erstellt wird, enthält die App „Windows Store für Unternehmen“. Sie können diese Anwendung wie jede andere Configuration Manager-Anwendung bereitstellen und überwachen.
 
     > [!IMPORTANT]  
     > Wählen Sie als Bereitstellungszweck **Erforderlich** aus. Verfügbare Installationen werden derzeit nicht unterstützt.
@@ -101,9 +101,9 @@ Eine Configuration Manager-App wird erstellt, die eine App aus dem Windows Store
  Zum Freigeben einer Lizenz müssen Sie die Bereitstellungsaktion in **Deinstallieren**ändern. Die Lizenz wird freigegeben, sobald die App deinstalliert ist.  
 
 ## <a name="step-3---monitor-ios-vpp-apps"></a>Schritt 3: Überwachen von iOS VPP-Apps  
- Unter dem Knoten **Lizenzinformationen für Store-Apps** im Arbeitsbereich **Softwarebibliothek** werden Informationen zu den von Ihnen per Volumenlizenz erworbenen iOS-Apps, darunter die Gesamtzahl der Lizenzen, die Sie für die einzelnen Apps besitzen, sowie die Gesamtzahl der bereitgestellten Apps, angezeigt.
+ Auf dem Knoten **License Information for Store Apps** (Lizenzinformationen für Store-Apps) im Arbeitsbereich **Softwarebibliothek** werden Informationen über per Volumenlizenz erworbene iOS-Apps angezeigt. Diese Informationen enthalten auch die Gesamtzahl der Lizenzen, die Sie für jede App besitzen, sowie die Anzahl, die bereitgestellt wurde.
 
- Zudem können Sie auch die Lizenzverwendung für alle von Ihnen erworbenen VPP-Apps mit dem Bericht **Apple Volume Purchase Program-Apps für iOS mit Lizenzanzahl** überwachen.  
+ Zudem können Sie auch die Lizenzverwendung für alle von Ihnen erworbenen VPP-Apps mithilfe des Berichts **Apple Volume Purchase Program apps for iOS with license counts** (Apple Volume Purchase Program-Apps für iOS mit Lizenzanzahl) überwachen.  
 
  In diesem Bericht wird der Name jeder Anwendung zusammen mit der Gesamtzahl der erworbenen Lizenzen, der Anzahl der verfügbaren Lizenzen und weiteren Informationen angezeigt.  
 
@@ -111,6 +111,6 @@ Eine Configuration Manager-App wird erstellt, die eine App aus dem Windows Store
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

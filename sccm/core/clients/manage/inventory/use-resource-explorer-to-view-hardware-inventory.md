@@ -1,5 +1,5 @@
 ---
-title: Anzeigen des Hardwareinventars | Ressourcen-Explorer | System Center Configuration Manager
+title: Anzeigen des Hardwareinventars | Microsoft-Dokumentation | Resource Explorer
 description: Verwenden Sie den Ressourcen-Explorer zum Anzeigen des Hardwareinventars in System Center Configuration Manager.
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 12bf49b6a68d277c7f505ddfe37556363d0e3e53
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: 2cd138b3bbb437d84f0ff7c2aeef869518bd817d
 
 
 ---
@@ -56,6 +56,6 @@ Zeigen Sie mithilfe des Ressourcen-Explorers in System Center Configuration Mana
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

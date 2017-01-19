@@ -1,5 +1,5 @@
 ---
-title: Die Inhaltsbibliothek | System Center Configuration Manager
+title: Inhaltsbibliothek | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über die Inhaltsbibliothek, die System Center Configuration Manager verwendet, um die Gesamtgröße der verteilten Inhalte zu reduzieren."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 5406dcbc8b1ca04f2754e19b171c55ab20a00d46
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 8bdb4e4209ea557afa9d8140d54e98637e560944
 
 ---
 # <a name="the-content-library-in-system-center-configuration-manager"></a>Die Inhaltsbibliothek in System Center Configuration Manager
@@ -65,6 +65,6 @@ Weitere Informationen zum Konfigurieren der Laufwerkseigenschaften für den Vert
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

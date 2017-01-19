@@ -1,5 +1,5 @@
 ---
-title: "Für Softwareupdates verwendete Symbole | Configuration Manager"
+title: "Für Softwareupdates verwendete Symbole | Microsoft-Dokumentation"
 description: "Die Configuration Manager-Konsole enthält Symbole, die einen Status für das synchronisierte Update oder die Softwareupdategruppe angeben."
 keywords: 
 author: dougeby
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 48b0296809400805bdba9e6ebd163a0c39b37968
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 04c5ccc53263b2672096b564695a636bfb28d952
 
 
 ---
@@ -28,7 +28,7 @@ Synchronisierte Softwareupdates werden in der Configuration Manager-Konsole ange
  Synchronisierte Softwareupdates werden durch eines der folgenden Symbole dargestellt.  
 
 ### <a name="normal-icon"></a>Symbol „Normal“  
- ![Symbol](../media/Normal.jpg "Normal icon") Das Symbol mit dem grünen Pfeil kennzeichnet ein normales Softwareupdate.  
+ ![Symbol](../media/Normal.jpg "Symbol „Normal“") Das Symbol mit dem grünen Pfeil kennzeichnet ein normales Softwareupdate.  
 
  **Beschreibung:**  
 
@@ -39,7 +39,7 @@ Synchronisierte Softwareupdates werden in der Configuration Manager-Konsole ange
  Keine Einsatzbedenken.  
 
 ### <a name="expired-icon"></a>Symbol „Abgelaufen“  
- ![Symbol](../media/Expired.jpg "Expired icon") Das Symbol mit dem schwarzen X kennzeichnet ein abgelaufenes Softwareupdate. Sie können abgelaufene Softwareupdates auch erkennen, indem Sie die Spalte **Abgelaufen** für das Softwareupdate anzeigen, wenn es in der Configuration Manager-Konsole eingeblendet wird.  
+ ![Symbol](../media/Expired.jpg "Symbol „Abgelaufen“") Das Symbol mit dem schwarzen X kennzeichnet ein abgelaufenes Softwareupdate. Sie können abgelaufene Softwareupdates auch erkennen, indem Sie die Spalte **Abgelaufen** für das Softwareupdate anzeigen, wenn es in der Configuration Manager-Konsole eingeblendet wird.  
 
  **Beschreibung:**  
 
@@ -50,7 +50,7 @@ Synchronisierte Softwareupdates werden in der Configuration Manager-Konsole ange
  Keine Einsatzbedenken.
 
 ### <a name="superseded-icon"></a>Symbol „Abgelöst“  
- ![Symbol](../media/Superseded.jpg "Superseded icon") Das Symbol mit dem gelben Stern kennzeichnet ein abgelöstes Softwareupdate. Sie können ein abgelöstes Softwareupdate auch erkennen, indem Sie die Spalte **Abgelöst** für das Softwareupdate anzeigen, wenn es in der Configuration Manager-Konsole eingeblendet wird.  
+ ![Symbol](../media/Superseded.jpg "Symbol „Abgelöst“") Das Symbol mit dem gelben Stern kennzeichnet ein abgelöstes Softwareupdate. Sie können ein abgelöstes Softwareupdate auch erkennen, indem Sie die Spalte **Abgelöst** für das Softwareupdate anzeigen, wenn es in der Configuration Manager-Konsole eingeblendet wird.  
 
  **Beschreibung:**  
 
@@ -69,7 +69,7 @@ Synchronisierte Softwareupdates werden in der Configuration Manager-Konsole ange
  Nach Möglichkeit sollten Sie für Clientcomputer nicht das abgelöste Softwareupdate, sondern das ablösende Softwareupdate bereitstellen. Sie können eine Liste der Softwareupdates, die das Softwareupdate ablösen, auf der Registerkarte **Ablösungsinformationen** in den Eigenschaften des Softwareupdates anzeigen.  
 
 ### <a name="invalid-icon"></a>Symbol „Ungültig“  
- ![Symbol](../media/Invalid.jpg "Invalid icon") Das Symbol mit dem roten X kennzeichnet ein ungültiges Softwareupdate.  
+ ![Symbol](../media/Invalid.jpg "Symbol „Ungültig“") Das Symbol mit dem roten X kennzeichnet ein ungültiges Softwareupdate.  
 
  **Beschreibung:**  
 
@@ -84,7 +84,7 @@ Synchronisierte Softwareupdates werden in der Configuration Manager-Konsole ange
  Wenn der Inhalt für ein Softwareupdate fehlt, können Clients das Softwareupdate solange nicht installieren, bis der Inhalt auf einem Verteilungspunkt verfügbar geworden ist. Sie können den Inhalt erneut an Verteilungspunkte verteilen, indem Sie die **Neu verteilen** -Aktion verwenden. Wenn Inhalt für ein Softwareupdate in einer Bereitstellung fehlt, die in einem übergeordneten Standort erstellt wurde, muss das Softwareupdate erneut an den untergeordneten Standort repliziert oder verteilt werden. Weitere Informationen zur erneuten Verteilung von Inhalt finden Sie unter [Verwalten der Inhalte, die Sie verteilt haben](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage).  
 
 ### <a name="metadata-only-icon"></a>Symbol für reines Metadatensoftwareupdate
- ![Symbol](../media/MetadataOnly.png "Metadata-only icon") Das Symbol mit dem blauen Pfeil kennzeichnet ein nur Metadaten enthaltendes Softwareupdate.
+ ![Symbol](../media/MetadataOnly.png "Symbol „Nur Metadaten“") Das Symbol mit dem blauen Pfeil kennzeichnet ein nur Metadaten enthaltendes Softwareupdate.
 
  **Beschreibung:**  
 
@@ -98,28 +98,28 @@ Synchronisierte Softwareupdates werden in der Configuration Manager-Konsole ange
  Softwareupdategruppen werden durch eines der folgenden Symbole dargestellt.  
 
 ### <a name="normal-icon"></a>Symbol „Normal“  
- ![Symbol](../media/Normal.jpg "Normal icon") Das Symbol mit dem grünen Pfeil kennzeichnet eine Softwareupdategruppe, die nur normale Softwareupdates enthält.  
+ ![Symbol](../media/Normal.jpg "Symbol „Normal“") Das Symbol mit dem grünen Pfeil kennzeichnet eine Softwareupdategruppe, die nur normale Softwareupdates enthält.  
 
  **Einsatzbedenken:**  
 
  Keine Einsatzbedenken.  
 
 ### <a name="expired-icon"></a>Symbol „Abgelaufen“  
- ![Symbol](../media/Expired.jpg "Expired icon") Das Symbol mit dem schwarzen X kennzeichnet eine Softwareupdategruppe, die mindestens ein abgelaufenes Softwareupdate enthält.  
+ ![Symbol](../media/Expired.jpg "Symbol „Abgelaufen“") Das Symbol mit dem schwarzen X kennzeichnet eine Softwareupdategruppe, die mindestens ein abgelaufenes Softwareupdate enthält.  
 
  **Einsatzbedenken:**  
 
  Sie sollten abgelaufene Softwareupdates in der Softwareupdategruppe nach Möglichkeit entfernen oder ersetzen.  
 
 ### <a name="superseded-icon"></a>Symbol „Abgelöst“  
- ![Symbol](../media/Superseded.jpg "Superseded icon") Das Symbol mit dem gelben Stern kennzeichnet eine Softwareupdategruppe, die mindestens ein abgelöstes Softwareupdate enthält.  
+ ![Symbol](../media/Superseded.jpg "Symbol „Abgelöst“") Das Symbol mit dem gelben Stern kennzeichnet eine Softwareupdategruppe, die mindestens ein abgelöstes Softwareupdate enthält.  
 
  **Einsatzbedenken:**  
 
  Sie sollten ein abgelöstes Softwareupdates in der Softwareupdategruppe nach Möglichkeit durch das ablösende Softwareupdate ersetzen.  
 
 ### <a name="invalid-icon"></a>Symbol „Ungültig“  
- ![Symbol](../media/Invalid.jpg "Invalid icon") Das Symbol mit dem roten X kennzeichnet eine Softwareupdategruppe, die mindestens ein ungültiges Softwareupdate enthält.  
+ ![Symbol](../media/Invalid.jpg "Symbol „Ungültig“") Das Symbol mit dem roten X kennzeichnet eine Softwareupdategruppe, die mindestens ein ungültiges Softwareupdate enthält.  
 
  **Einsatzbedenken:**  
 
@@ -127,6 +127,6 @@ Synchronisierte Softwareupdates werden in der Configuration Manager-Konsole ange
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

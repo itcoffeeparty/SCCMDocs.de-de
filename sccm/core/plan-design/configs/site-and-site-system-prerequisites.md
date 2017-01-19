@@ -1,5 +1,5 @@
 ---
-title: "Voraussetzungen für Standorte | System Center Configuration Manager"
+title: "Voraussetzungen für Standorte | Microsoft-Dokumentation"
 description: Erfahren Sie, wie ein Windows-Computer als System Center Configuration Manager-Standortsystemserver konfiguriert wird.
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: c3dd761a739b7b55dafefce7fbcd24439b7b292b
 
 ---
 # <a name="site-and-site-system-prerequisites-for-system-center-configuration-manager"></a>Voraussetzungen für Standorte und Standortsysteme für System Center Configuration Manager
@@ -778,6 +778,6 @@ Wenn Sie eine benutzerdefinierte IIS-Konfiguration verwenden, können Sie nicht 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

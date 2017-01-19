@@ -1,5 +1,5 @@
 ---
-title: Planen einer Migration | System Center Configuration Manager
+title: Planen der Migration | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über Standorte und Hierarchien, bevor Sie Daten in eine Zielhierarchie in System Center Configuration Manager migrieren."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: a80c7af58f88f76afd00771778411a4842a204c8
+ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
+ms.openlocfilehash: ccc9973c07da9eca4bfacfb3bc7d1228a976c78b
 
 
 ---
@@ -61,6 +61,6 @@ Stellen Sie sicher, dass Sie mit Standorten und Hierarchien in Configuration Man
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

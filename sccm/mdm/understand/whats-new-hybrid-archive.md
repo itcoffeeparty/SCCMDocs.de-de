@@ -1,5 +1,5 @@
 ---
-title: "Archiv | Was ist neu bei der hybriden Verwaltung mobiler Geräte | Microsoft Intune |System Center Configuration Manager"
+title: 'Archiv: Neuheiten bei hybrider MDM | Microsoft-Dokumentation'
 description: "Archiv der früheren Features der Verwaltung mobiler Geräte, die für Hybridbereitstellungen mit System Center Configuration Manager und Intune verfügbar sind"
 ms.custom: na
 ms.date: 10/25/2016
@@ -16,8 +16,8 @@ ms.author: mtillman
 manager: angrobe
 ROBOTS: NOINDEX, NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: bfc4baefbdddc5125c38272f2087d214151c91d5
-ms.openlocfilehash: 4c0910ae365e1fda7b9747b79e13782a6056c0da
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: 086b350005e9665e8b91c11e664563f9687aca27
 
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>Frühere Hybridfeatures mit System Center Configuration Manager und Microsoft Intune
@@ -146,7 +146,7 @@ Im Juni 2016 wurden keine neuen Hybridfeatures für Configuration Manager (Curre
 
 - **Vorabdeklarieren von firmeneigenen Geräten mit IMEI- oder iOS-Seriennummer**
 
-  Sie können nun firmeneigene Geräte identifizieren, indem Sie deren IMEI-Nummern (International Station Mobile Equipment Identity) importieren. Sie können eine CSV-Datei (comma-separated values, durch Trennzeichen getrennte Datei) hochladen, die die IMEI-Nummern der Geräte enthält, oder Geräteinformationen manuell eingeben.  Sie können auch die Seriennummern für iOS-Geräte importieren.  Weitere Informationen finden Sie unter [Vorabdeklarieren von firmeneigenen Geräten mit IMEI- oder iOS-Seriennummer](../../core/get-started/capabilities-in-technical-preview-1605.md#pre-declare-corporate-owned-devices-with-with-imei-or-ios-serial-number) in [Funktionen in Technical Preview 1605 für System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1605).  
+  Sie können nun firmeneigene Geräte identifizieren, indem Sie deren IMEI-Nummern (International Station Mobile Equipment Identity) importieren. Sie können eine CSV-Datei (comma-separated values, durch Trennzeichen getrennte Datei) hochladen, die die IMEI-Nummern der Geräte enthält, oder Geräteinformationen manuell eingeben.  Sie können auch die Seriennummern für iOS-Geräte importieren.  Weitere Informationen finden Sie unter [Vorabdeklarieren von firmeneigenen Geräten mit IMEI- oder iOS-Seriennummer](../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_IMEI) in [Funktionen in Technical Preview 1605 für System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1605).  
 
 - **Windows Information Protection (WIP)**
 
@@ -202,7 +202,7 @@ Im Juni 2016 wurden keine neuen Hybridfeatures für Configuration Manager (Curre
 
 - **SmartLock-Einstellung für Android-Geräte**
 
-  Eine neue Einstellung wurde dem Konfigurationselement „Android und Samsung KNOX“ hinzugefügt. Mit dieser Einstellung können Sie das SmartLock-Feature auf kompatiblen Android-Geräten steuern.  Mit dieser Einstellung können Sie verhindern, dass Endbenutzer Smart Lock konfigurieren. Weitere Informationen finden Sie unter [SmartLock-Einstellung für Android-Geräte](/sccm/get-started/capabilities-in-technical-preview-1604#smartlock-setting-for-android-devices) in [Funktionen in Technical Preview 1604 für System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1604.md).  
+  Eine neue Einstellung wurde dem Konfigurationselement „Android und Samsung KNOX Standard“ hinzugefügt. Mit dieser Einstellung können Sie das SmartLock-Feature auf kompatiblen Android-Geräten steuern.  Mit dieser Einstellung können Sie verhindern, dass Endbenutzer Smart Lock konfigurieren. Weitere Informationen finden Sie unter [SmartLock-Einstellung für Android-Geräte](/sccm/get-started/capabilities-in-technical-preview-1604#smartlock-setting-for-android-devices) in [Funktionen in Technical Preview 1604 für System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1604.md).  
 
 ### <a name="new-in-configuration-manager-current-branch"></a>Neuheiten in Configuration Manager (Current Branch)  
  Im April 2016 wurden keine neuen Hybridfeatures für Configuration Manager (Current Branch) eingeführt.  
@@ -283,9 +283,9 @@ Im Juni 2016 wurden keine neuen Hybridfeatures für Configuration Manager (Curre
 
   Sie finden diese Apps im Knoten „Anwendungen“ der Configuration Manager-Konsole. Weitere Informationen zum Bereitstellen von Anwendungen finden Sie unter [Bereitstellen von Anwendungen mit System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md).  
 
-- **Einstellungen für den Kioskmodus für Android Samsung KNOX-Geräte**
+- **Einstellungen für den Kioskmodus für Android Samsung KNOX Standard-Geräte**
 
-  Über den Kioskmodus können Sie ein Gerät sperren, damit nur bestimmte Features funktionieren.  Ab Version 1602 von Configuration Manager (Current Branch) können Sie jetzt Einstellungen für den Kioskmodus für Samsung KNOX-Geräte angeben. Einzelheiten finden Sie unter [Erstellen von Konfigurationselementen für Android- und Samsung KNOX-Geräte, die ohne den System Center Configuration Manager-Client verwaltet werden](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client).  
+  Über den Kioskmodus können Sie ein Gerät sperren, damit nur bestimmte Features funktionieren.  Ab Version 1602 von Configuration Manager (Current Branch) können Sie jetzt Einstellungen für den Kioskmodus für Samsung KNOX Standard-Geräte angeben. Einzelheiten finden Sie unter [Erstellen von Konfigurationselementen für Android- und Samsung KNOX Standard-Geräte, die ohne den System Center Configuration Manager-Client verwaltet werden](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client).  
 
 - **iOS-Aktivierungssperre**
 
@@ -293,6 +293,6 @@ Im Juni 2016 wurden keine neuen Hybridfeatures für Configuration Manager (Curre
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

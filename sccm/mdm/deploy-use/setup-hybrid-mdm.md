@@ -1,5 +1,5 @@
 ---
-title: "Einrichten der hybriden Verwaltung mobiler Geräte | System Center Configuration Manager und Microsoft Intune"
+title: "Einrichten der hybriden Verwaltung mobiler Geräte | Microsoft-Dokumentation"
 description: "Richten Sie die Registrierung von Hybridgeräten mit Configuration Manager und Intune ein."
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 caps.latest.revision: 34
 caps.handback.revision: 0
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 44c0947fcb7abdc4369fe0b4f47409b49d068861
+ms.sourcegitcommit: 48b91e88f78752cf7c05162b701ea2ca2f401de3
+ms.openlocfilehash: 85df3df19f01f8ed6f5240851c47afce01a92880
 
 ---
 
@@ -173,6 +173,7 @@ Nachdem Sie Ihr Abonnement erstellt haben, können Sie die Standortsystemrolle �
   - [Windows-Registrierungs-Setup](#windows-enrollment-setup): Konfigurieren Sie DNS, und aktivieren Sie die Registrierung für Windows-PCs, Windows 10 Mobile- und Windows Phone-Geräte.
   - Android: Für Android-Geräte sind keine weiteren Schritte für die Aktivierung der Registrierung erforderlich.
 
+Sobald Sie die MDM-Verwaltung aktiviert haben, können Sie die Anzahl der Geräte festlegen, die jeder Benutzer registrieren kann – max. 15 Geräte pro Benutzer.
 
 ### <a name="ios-and-mac-enrollment-setup"></a>iOS- und Macintosh-Registrierungs-Setup
   Mit den folgenden Schritten aktivieren Sie die Verwaltung für Apple-Geräte, indem Sie ein Apple-MDM-Push-Zertifikat in den Intune-Dienst hochladen.
@@ -245,7 +246,7 @@ Weitere Informationen finden Sie unter [Android](enroll-hybrid-android.md).
 - [Windows 10- und Windows 8.1-Geräte](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)
 - [Windows Phone-Geräte](/sccm/compliance/deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client)
 - [iOS- und Macintosh-Geräte](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)
-- [Android- und Samsung KNOX-Geräte](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client)
+- [Android- und Samsung KNOX Standard-Geräte](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client)
 
 **Anwendungen** können auf verwalteten Geräten bereitgestellt werden:
 - [iOS-Anwendungen](/sccm/apps/get-started/creating-ios-applications)
@@ -273,30 +274,38 @@ Das Hybridsetup ist jetzt abgeschlossen. Die Geräte können im Configuration Ma
 - Benutzergeräte (BYOD): [Benutzer informieren, wie sie ihre Geräte registrieren](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune) – Die Registrierungsanleitung ist für Intune- und hybrid verwaltete Geräte die gleiche.
 - Unternehmenseigene Geräte (COD): [Registrieren von unternehmenseigenen Geräten](enroll-company-owned-devices.md) enthält Anleitungen für bestimmte Arten der Registrierung von unternehmenseigenen Geräten.
 
-### <a name="managing-intune-subscriptions-associated-with-configuration-manager"></a>Verwalten von zu Configuration Manager zugeordneten Intune-Abonnements
- Wenn Sie Configuration Manager ein Microsoft Intune-Abonnement (Testabonnement oder kostenpflichtiges Abonnement) hinzufügen und dann zu einem anderen Intune-Abonnement wechseln müssen, müssen Sie sowohl das **Microsoft Intune-Abonnement** als auch den **Dienstverbindungspunkt** aus der Configuration Manager-Konsole löschen, bevor Sie ein neues Abonnement hinzufügen können.
+## <a name="managing-intune-subscriptions-associated-with-configuration-manager"></a>Verwalten von zu Configuration Manager zugeordneten Intune-Abonnements
 
-#### <a name="how-to-delete-an-intune-subscription-from-configuration-manager"></a>Löschen eines Intune-Abonnements aus Configuration Manager
+Wenn Sie Configuration Manager ein Microsoft Intune-Abonnement (Testabonnement oder kostenpflichtiges Abonnement) hinzufügen und dann zu einem anderen Intune-Abonnement wechseln müssen, müssen Sie sowohl das **Microsoft Intune-Abonnement** als auch den **Dienstverbindungspunkt** aus der Configuration Manager-Konsole löschen, bevor Sie ein neues Abonnement hinzufügen können.
 
-1.  Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung**.
+### <a name="how-to-delete-an-intune-subscription-from-configuration-manager"></a>Löschen eines Intune-Abonnements aus Configuration Manager
 
-2.  Erweitern Sie im Arbeitsbereich **Verwaltung** den Eintrag **Übersicht**, wechseln Sie zu **Clouddienste**, und klicken Sie auf **Microsoft Intune-Abonnements**.
+> [!IMPORTANT]
+>  Alle Inhalte, einschließlich Benutzerregistrierungen, Richtlinien und App-Bereitstellungen, die für Geräte konfiguriert sind, die vom Intune-Abonnement verwaltet werden, werden beim Löschen des Abonnements entfernt.
 
-3.  Klicken Sie mit der rechten Maustaste auf **Microsoft Intune-Abonnement**, und klicken Sie anschließend auf **Löschen**. Das **Microsoft Intune-Abonnement**.
+1.  Wählen Sie in der Configuration Manager-Konsole **Verwaltung** > **Übersicht** > **Clouddienste** > **Microsoft Intune-Abonnements** aus.
 
-    > [!IMPORTANT]
-    >  Der gesamte Inhalt einschließlich Benutzerregistrierungen, Richtlinien und App-Bereitstellungen, die für das Intune-Evaluierungsabonnement konfiguriert wurden, gehen verloren.
+2.  Klicken Sie mit der rechten Maustaste auf das aufgeführte **Microsoft Intune-Abonnement**, und klicken Sie anschließend auf **Löschen**.
 
-4.  Erweitern Sie im Arbeitsbereich **Verwaltung** den Eintrag **Übersicht**, wechseln Sie zu **Standortkonfiguration**, und klicken Sie anschließend auf **Server und Standortsystemrollen**.
-
-5.  Wählen Sie den Server aus, auf dem die Rolle **Dienstverbindungspunkt** gehostet wird.
-
-6.  Wählen Sie in der Liste **Standortsystemrollen** die Option **Dienstverbindungspunkt** aus, und klicken Sie anschließend im Menüband auf **Rolle entfernen**. Bestätigen Sie, dass Sie die Rolle entfernen möchten. Der Dienstverbindungspunkt wird gelöscht.
-
-7.  Sie können jetzt einen neuen Dienstverbindungspunkt erstellen, Configuration Manager ein neues Intune-Abonnement hinzufügen und Configuration Manager als MDM-Autorität festlegen.
+3.   Klicken Sie im Assistenten auf **Microsoft Intune-Abonnement aus Configuration Manager entfernen**, klicken Sie auf **Weiter**, und klicken Sie anschließend erneut auf **Weiter**, um das Abonnement zu entfernen.
 
 
+### <a name="how-to-remove-the-service-connection-point-role"></a>So entfernen Sie die Rolle „Dienstverbindungspunkt“
 
-<!--HONumber=Nov16_HO1-->
+1.  Wechseln Sie zu **Verwaltung** > **Übersicht** > **-Standortkonfiguration** > **Server und Standortsystemrollen**.
+
+2.  Wählen Sie den Server aus, auf dem die Rolle **Dienstverbindungspunkt** gehostet wird.
+
+3.  Wählen Sie in der Liste **Standortsystemrollen** die Option **Dienstverbindungspunkt** aus, und klicken Sie anschließend im Menüband auf **Rolle entfernen**. Bestätigen Sie, dass Sie die Rolle entfernen möchten. Der Dienstverbindungspunkt wird gelöscht.
+
+Sie können jetzt einen neuen Dienstverbindungspunkt erstellen, Configuration Manager ein neues Intune-Abonnement hinzufügen und Configuration Manager als MDM-Autorität festlegen.
+
+### <a name="how-to-change-mdm-authority-to-intune"></a>So stellen Sie die MDM-Autorität auf Intune um
+
+Ab Version 1610 können Sie die MDM-Autorität von Configuration Manager auf Intune ändern. Informationen zu dieser Funktion sind in Kürze verfügbar.
+
+
+
+<!--HONumber=Dec16_HO3-->
 
 

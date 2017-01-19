@@ -1,5 +1,5 @@
 ---
-title: "Registrieren von unternehmenseigenen Geräten für Hybridbereitstellungen mit Configuration Manager"
+title: "Registrieren von unternehmenseigenen Geräten für Hybridbereitstellungen mit Configuration Manager | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr über verschiedene Methoden für die Registrierung unternehmenseigener Geräte für Hybridbereitstellungen mit Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e2754ce6-1460-4ddd-9050-2cc87e7964f4
 caps.latest.revision: 13
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 91f1d0d775236fe4cb6675b1017161520a281df5
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 490b89f8174667d232a2ca3729d36ead8fc4d46c
 
 
 ---
@@ -47,10 +47,10 @@ Organisations- oder unternehmenseigene Geräte (COD) können mit einer Vielzahl 
 Sie können unternehmenseigene Geräte identifizieren, indem Sie deren IMEI-Nummern (International Station Mobile Equipment Identity) oder iOS-Seriennummern importieren. Sie können eine CSV-Datei (comma-separated values, durch Trennzeichen getrennte Datei) hochladen, die die IMEI-Nummern der Geräte enthält, oder Geräteinformationen manuell eingeben.  Siehe [Vorabdeklarieren von Geräten mit Hardware-ID-Nummern](../../mdm/deploy-use/predeclare-devices-with-hardware-id.md).
 
 ## <a name="see-also"></a>Siehe auch  
- [Hybridverwaltung mobiler Geräte (MDM) mit System Center Configuration Manager und Microsoft Intune](../../mdm/plan-design/hybrid-mobile-device-management.md)
+ [Hybridverwaltung mobiler Geräte (MDM) mit System Center Configuration Manager und Microsoft Intune](https://docs.microsoft.com/sccm/mdm/understand/hybrid-mobile-device-management)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

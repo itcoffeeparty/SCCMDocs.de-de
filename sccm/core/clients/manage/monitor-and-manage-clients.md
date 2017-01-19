@@ -1,8 +1,8 @@
 ---
-title: "Überwachen von Clients | System Center Configuration Manager"
+title: "Überwachen von Clients | Microsoft-Dokumentation"
 description: "Erfahren Sie, wie Sie Clients in System Center Configuration Manager überwachen und verwalten."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 110b65b3-2202-466f-bb5d-e5ee282506fc
 caps.latest.revision: 5
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ea3358696496e761463b5da45e275dfc7f1ebd1d
+ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
+ms.openlocfilehash: dbdc74cc2f94553745eb50aeadf6d33a54064c6b
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: ea3358696496e761463b5da45e275dfc7f1ebd1d
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager bietet verschiedene Methoden zum Überwachen und Verwalten der Clientsoftware, nachdem diese auf Computern und Geräten in Ihrer Organisation bereitgestellt wurde.  Sie können Clients überwachen, um ihren Status zu überprüfen. In einigen Fällen kann Configuration Manager basierend auf dem erkannten Problem eine automatische Wiederherstellung oder Korrektur vornehmen. Die Configuration Manage-Konsole bietet auch Methoden zum Verwalten von Clients für einzelne Geräte oder Gerätesammlungen.  
+System Center Configuration Manager (auch ConfigMgr oder SCCM genannt) bietet verschiedene Methoden zum Überwachen und Verwalten der Clientsoftware, nachdem diese auf Computern und Geräten in Ihrer Organisation bereitgestellt wurde.  Sie können Clients überwachen, um ihren Status zu überprüfen. In einigen Fällen kann Configuration Manager basierend auf dem erkannten Problem eine automatische Wiederherstellung oder Korrektur vornehmen. Die Configuration Manage-Konsole bietet auch Methoden zum Verwalten von Clients für einzelne Geräte oder Gerätesammlungen.  
 
  Anhand der Informationen in den folgenden Themen erfahren Sie, wie Sie Clients überwachen und verwalten. Außerdem erfahren Sie detailliert, wie Sie Clients für Linux- und UNIX-Server überwachen und verwalten:  
 
@@ -39,6 +39,6 @@ System Center Configuration Manager bietet verschiedene Methoden zum Überwachen
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

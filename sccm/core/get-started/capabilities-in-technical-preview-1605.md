@@ -1,5 +1,5 @@
 ---
-title: "Funktionen in Technical Preview 1605 für System Center Configuration Manager"
+title: "Funktionen in Technical Preview 1605 für System Center Configuration Manager | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr zu Features, die in Technical Preview für System Center Configuration Manager-Version 1605 zur Verfügung stehen."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 0137d6e2c69480d6de88fbf8fa3450d1699007e5
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 06741d03e208c6f5c8093130780dcdc8f0fcfbf7
 
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1605 für System Center Configuration Manager
@@ -273,7 +273,7 @@ Wenn das Unternehmensportal in dieser Technical Preview länger als 15 Minuten g
 
 -   Die Registerkarte **Anwendungen** wurde in drei separate Registerkarten aufgeteilt: **Updates**, **Betriebssysteme** (die beide zuvor in der Liste **Filter** zu finden waren) und **Anwendungen**.  
 
-##  <a name="a-namebkmkservergroupsa-service-a-server-group"></a><a name="BKMK_ServerGroups"></a> Bereitstellung einer Servergruppe  
+##  <a name="a-namebkmkservergroupsa-service-a--server-group"></a><a name="BKMK_ServerGroups"></a> Bereitstellung einer Servergruppe  
  Technical Preview für System Center Configuration Manager Version 1511 enthält die Möglichkeit, eine Sammlung zu erstellen, in der alle Geräte in der Sammlung eine Servergruppe bilden. Anschließend könnten Sie die Einstellungen der Servergruppe konfigurieren, die Sie verwenden, wenn Sie Softwareupdates für die Servergruppe bereitstellen, den Prozentsatz der Computer überprüfen, die zu jedem Zeitpunkt aktualisiert werden und die PowerShell-Skripts vor und nach der Bereitstellung zur Ausführung benutzerdefinierter Aktionen konfigurieren.  
 
  Mit der Technical Preview für System Center Configuration Manager Version 1605 haben Sie ebenso die Möglichkeit, die Computer in der Servergruppe in einer bestimmten Reihenfolge, die Sie definieren, zu aktualisieren, eine erweiterte Überwachung zum Anzeigen des Status für die Computer in der Servergruppe hinzuzufügen und die Bereitstellungssperren zu deaktivieren. Dies ist hilfreich, wenn Clients die Softwareupdates nicht installieren konnten und verhindern, dass andere Clients die Softwareupdates installieren.  
@@ -472,6 +472,6 @@ Wenn das Unternehmensportal in dieser Technical Preview länger als 15 Minuten g
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

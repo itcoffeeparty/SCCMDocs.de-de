@@ -1,8 +1,8 @@
 ---
-title: "Schützen der Daten und Standortinfrastruktur | System Center Configuration Manager"
+title: "Schützen der Daten und Standortinfrastruktur | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr darüber, wie Sie die Ressourcen Ihrer Organisation mit System Center Configuration Manager vor Risiken oder böswilligen Angriffen schützen."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 366a3626e2ab4894bbb515176890d508761b6561
+ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
+ms.openlocfilehash: c80750358d64cf87f8a3ce3a4c4f4030a9dfd742
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: 366a3626e2ab4894bbb515176890d508761b6561
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 
-Sie möchten, dass Ihre Benutzer sicher auf die Ressourcen Ihrer Organisation zugreifen können, und zwar so, dass sowohl Ihre Infrastruktur als auch Ihre Daten vor Offenlegung und böswilligen Angriffen geschützt sind. In den folgenden Themen wird beschrieben, wie Sie diesen Zugriff aktivieren und die Ressourcen Ihres Unternehmens schützen können.  
+Sie möchten, dass Ihre Benutzer sicher auf die Ressourcen Ihrer Organisation zugreifen können, und zwar so, dass sowohl Ihre Infrastruktur als auch Ihre Daten vor Offenlegung und böswilligen Angriffen geschützt sind. In den folgenden Themen wird beschrieben, wie Sie System Center Configuration Manager (ConfigMgr bzw. SCCM) verwenden, um diesen Zugriff zu aktivieren und die Ressourcen Ihres Unternehmens zu schützen.  
 
 -   Sie können den Aufwand Ihrer Benutzer zum Herstellen einer Verbindung mit Unternehmensressourcen minimieren, indem Sie VPN-Verbindungen mithilfe von VPN-Profilen aktivieren. Weitere Informationen finden Sie unter [VPN profiles in System Center Configuration Manager (VPN-Profile in System Center Configuration Manager)](../deploy-use/vpn-profiles.md).  
 
@@ -44,6 +44,6 @@ Sie möchten, dass Ihre Benutzer sicher auf die Ressourcen Ihrer Organisation zu
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

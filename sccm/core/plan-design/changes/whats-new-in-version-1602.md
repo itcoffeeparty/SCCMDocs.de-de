@@ -1,5 +1,5 @@
 ---
-title: Neu in 1602 | System Center Configuration Manager
+title: Neuerungen in 1602 | Microsoft-Dokumentation
 description: "Enthält Details zu Änderungen und neuen Funktionen, die in Version 1602 von System Center Configuration Manager eingeführt wurden."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 0803a13bb58f0d02803c34e6a3cb20f5e6ba60b7
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 4d7b93c95730edde3af254e813c72df279c7285d
 
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>Neuerungen in Version 1602 von System Center Configuration Manager
@@ -114,10 +114,10 @@ Diese Apps werden im Knoten **Anwendungen** der Configuration Manager-Konsole an
 
  Einzelheiten finden Sie unter [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client (Erstellen von Konfigurationselementen für Windows 8.1- und Windows 10-Geräte, die ohne den System Center Configuration Manager-Client verwaltet werden)](../../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
 
-### <a name="kiosk-mode-settings-for-android-samsung-knox-devices"></a>Einstellungen für den Kioskmodus für Android Samsung KNOX-Geräte  
- Über den Kioskmodus können Sie ein Gerät sperren, damit nur bestimmte Features funktionieren. Beispielsweise können Sie festlegen, dass auf einem Gerät nur eine von Ihnen angegebene verwaltete App ausgeführt werden kann, oder Sie können die Lautstärkeregler eines Geräts deaktivieren. Diese Einstellungen können für ein Demomodell eines Geräts oder ein Gerät nützlich sein, das nur eine bestimmte Funktion ausführen soll, wie z. B. ein Point-of-Sale-Gerät. In Configuration Manager können Sie jetzt Einstellungen für den Kioskmodus für Samsung KNOX-Geräte angeben.  
+### <a name="kiosk-mode-settings-for-android-samsung-knox-standard-devices"></a>Einstellungen für den Kioskmodus für Android Samsung KNOX Standard-Geräte  
+ Über den Kioskmodus können Sie ein Gerät sperren, damit nur bestimmte Features funktionieren. Beispielsweise können Sie festlegen, dass auf einem Gerät nur eine von Ihnen angegebene verwaltete App ausgeführt werden kann, oder Sie können die Lautstärkeregler eines Geräts deaktivieren. Diese Einstellungen können für ein Demomodell eines Geräts oder ein Gerät nützlich sein, das nur eine bestimmte Funktion ausführen soll, wie z. B. ein Point-of-Sale-Gerät. In Configuration Manager können Sie jetzt Einstellungen für den Kioskmodus für Samsung KNOX Standard-Geräte angeben.  
 
- Einzelheiten finden Sie unter [How to create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client (Erstellen von Konfigurationselementen für Android- und Samsung KNOX-Geräte, die ohne den System Center Configuration Manager-Client verwaltet werden)](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md).  
+ Einzelheiten finden Sie unter [Erstellen von Konfigurationselementen für Android- und Samsung KNOX Standard-Geräte, die ohne den System Center Configuration Manager-Client verwaltet werden](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md).  
 
 ## <a name="conditional-access"></a>Bedingter Zugriff  
 
@@ -225,6 +225,6 @@ Configuration Manager kann den Status der Aktivierungssperre von überwachten un
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

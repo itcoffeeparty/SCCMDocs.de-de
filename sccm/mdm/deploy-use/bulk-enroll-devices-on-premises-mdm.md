@@ -1,6 +1,6 @@
 ---
 
-title: "Massenregistrierung von Geräten| Lokale Verwaltung mobiler Geräte | System Center Configuration Manager"
+title: "Massenregistrierung von Geräten | Microsoft-Dokumentation | Lokale MDM"
 description: "Automatische Massenregistrierung von Geräten mit der lokalen Verwaltung mobiler Geräte in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -18,8 +18,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 92f30335c412fb1ddf790de7218bb4b704562298
+ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
+ms.openlocfilehash: ef68a9f998ea6ff9628e01f6ac622711de68375d
 
 
 ---
@@ -168,6 +168,6 @@ In den folgenden Aufgaben wird erläutert, wie Sie eine Massenregistrierung von 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

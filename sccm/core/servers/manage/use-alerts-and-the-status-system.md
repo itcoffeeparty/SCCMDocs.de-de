@@ -1,5 +1,5 @@
 ---
-title: Warnungen und das Statussystem | System Center Configuration Manager
+title: Benachrichtigungen und Statussystem | Microsoft-Dokumentation
 description: "Konfigurieren Sie Warnungen, und verwenden Sie das Statussystem, damit Sie ständig über den Status Ihrer Configuration Manager-Bereitstellung informiert werden."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: dda2e3af6ae14a949af5c70f300f8c7c6772e1a8
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: ed692bdea055775890535d2666f09ba5f5c7c4e1
 
 
 ---
@@ -313,6 +313,6 @@ Da im Statussystem getrennte Konfigurationen für jeden Standort verwaltet werde
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

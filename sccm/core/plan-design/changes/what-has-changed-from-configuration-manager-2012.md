@@ -1,5 +1,5 @@
 ---
-title: "Änderungen im Vergleich zu Configuration Manager 2012 | System Center Configuration Manager "
+title: "Änderungen gegenüber Configuration Manager 2012 | Microsoft-Dokumentation "
 description: "Identifizieren Sie die Änderungen und neuen Funktionen in System Center Configuration Manager im Vergleich zu System Center 2012 Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 0f3b68fb17920b0abacc1428c8763ec8c06e6b22
+ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
+ms.openlocfilehash: 3ede76bd60372dcef2b1b3230577ee3c3f1e2dcd
 
 
 ---
@@ -140,7 +140,7 @@ Das Entfernen integrierter AMT für System Center Configuration Manager umfasst 
 
     -   Ohne den Configuration Manager-Client verwaltete iOS- und Mac OS X-Geräte  
 
-    -   Ohne den Configuration Manager-Client verwaltete Android- und Samsung KNOX-Geräte  
+    -   Ohne den Configuration Manager-Client verwaltete Android- und Samsung KNOX Standard-Geräte  
 
      Informationen finden Sie unter [Erstellen von Konfigurationselementen in System Center Configuration Manager](../../../compliance/deploy-use/create-configuration-items.md).  
 
@@ -158,7 +158,7 @@ Das Entfernen integrierter AMT für System Center Configuration Manager umfasst 
 
 -   Hinzufügen einer Verwaltungsrolle für die Geräteregistrierung zur Unterstützung der Verwaltung einer großen Anzahl von Geräten  
 
-Weitere Informationen zu Funktionen zur Verwaltung mobiler Geräte mit Configuration Manager und Intune finden Sie unter [Hybride Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune](../../../mdm/plan-design/hybrid-mobile-device-management.md).  
+Weitere Informationen zu Funktionen zur Verwaltung mobiler Geräte mit Configuration Manager und Intune finden Sie unter [Hybride Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md).  
 
 ## <a name="on-premises-mobile-device-management"></a>Lokale Verwaltung mobiler Geräte  
  Mit System Center Configuration Manager können Sie jetzt mobile Geräte mit einer lokalen Configuration Manager-Infrastruktur verwalten. Alle Geräteverwaltungs- und sonstigen Verwaltungsdaten werden lokal verarbeitet und sind nicht Teil von Microsoft Intune oder anderer Clouddienste. Diese Art von Geräteverwaltung erfordert keine Clientsoftware, da die von Configuration Manager zum Verwalten der Geräte verwendeten Funktionen in die Gastbetriebssysteme integriert sind.  
@@ -167,6 +167,6 @@ Weitere Informationen zu Funktionen zur Verwaltung mobiler Geräte mit Configura
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

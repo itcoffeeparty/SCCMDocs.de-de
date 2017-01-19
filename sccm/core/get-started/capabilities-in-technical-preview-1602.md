@@ -1,5 +1,5 @@
 ---
-title: "Funktionen in Technical Preview 1602 für System Center Configuration Manager"
+title: "Funktionen in Technical Preview 1602 für System Center Configuration Manager | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr zu Funktionen, die in System Center Configuration Manager Technical Preview 1602 zur Verfügung stehen."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 25bceb4ab23f9c5e9ba9b7f9bdf028ea21564178
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: da69e2363114faa4f2e701f2784c90ec23537e42
 
 ---
 # <a name="capabilities-in-technical-preview-1602-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1602 für System Center Configuration Manager
@@ -61,6 +61,6 @@ In diesem Artikel werden die Funktionen erläutert, die in der Technical Preview
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

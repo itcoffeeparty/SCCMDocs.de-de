@@ -1,5 +1,5 @@
 ---
-title: "Ändern der Infrastruktur | System Center Configuration Manager"
+title: "Ändern der Infrastruktur | Microsoft-Dokumentation"
 description: "Erfahren Sie, wie Sie Änderungen vornehmen oder Aktionen durchführen, die sich auf die von Ihnen bereitgestellte Configuration Manager-Infrastruktur auswirken."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fc58e77841baedd45649d676e98c736fa91e5bf2
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: fa9881e06abd410438fe5985151309c45f337802
 
 
 ---
@@ -172,6 +172,8 @@ Stellen Sie sich beispielsweise ein Szenario vor, in dem Sie die Configuration M
 -   **Konfigurieren des Zugriffs** : Wenn Sie die Standortdatenbank auf einen neuen Computer verschieben, fügen Sie das Computerkonto des Standortservers der Gruppe **Lokale Administratoren** auf dem Computer, auf dem SQL Server ausgeführt wird, hinzu. Wenn Sie für die Standortdatenbank einen SQL Server-Cluster verwenden, müssen Sie das Computerkonto der Gruppe **Lokale Administratoren** jedes Windows Server-Clusterknotencomputers hinzufügen.  
 
 -   **Aktivieren der CLR-Integration (Common Language Runtime):**  Wenn Sie die Standortdatenbank auf eine neue SQL Server-Instanz oder einen neuen SQL Server-Computer verschieben, müssen Sie die CLR-Integration (Common Language Runtime) aktivieren. Stellen Sie zum Aktivieren der CLR-Integration mithilfe von **SQL Server Management Studio** eine Verbindung mit der SQL Server-Instanz her, auf der die Standortdatenbank gehostet wird, und führen Sie dann die folgende gespeicherte Prozedur als Abfrage aus: **sp_configure 'clr enabled',1; reconfigure**.  
+-  **Stellen Sie sicher, dass der neue SQL-Server Zugriff auf den Speicherort der Sicherung hat:** Wenn Sie eine UNC verwenden, um die Sicherung der Standortdatenbank nach dem Verschieben der Datenbank einschließlich dem Verschieben einer SQL Server Always On-Verfügbarkeitsgruppe zu einem neuen SQL Server oder zu einem SQL Server-Cluster zu speichern, müssen Sie sicherstellen, dass das Computerkonto des neuen SQL Servers über **Schreibberechtigungen** für den UNC-Standort verfügt.  
+
 
 > [!IMPORTANT]  
 >  Vor dem Verschieben einer Datenbank, die über mindestens ein Datenbankreplikat für Verwaltungspunkte verfügt, müssen Sie zuerst die Datenbankreplikate entfernen. Nachdem das Verschieben der Datenbank abgeschlossen ist, können Sie die Datenbankreplikate neu konfigurieren. Weitere Informationen finden Sie unter [Database replicas for management points for System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md).  
@@ -369,6 +371,6 @@ Informationen zu den von Configuration Manager unterstützten Client- und Server
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

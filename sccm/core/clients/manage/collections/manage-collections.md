@@ -1,5 +1,5 @@
 ---
-title: Verwalten von Sammlungen | System Center Configuration Manager
+title: Verwalten von Sammlungen | Microsoft-Dokumentation
 description: "Hier erhalten Sie Informationen zum Ausführen von allgemeinen Verwaltungstasks für Sammlungen in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d7d0b9c40f22bf1a7c477d1b8626d5a531c959d7
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: b41b50c75f1b89c8fc712b53988bd8e24813106d
 
 
 ---
@@ -88,6 +88,6 @@ Mithilfe der Übersichtsinformationen in diesem Thema können Sie Verwaltungstas
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

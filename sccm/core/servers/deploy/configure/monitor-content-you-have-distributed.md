@@ -1,5 +1,5 @@
 ---
-title: "Überwachen von Inhalt | System Center Configuration Manager"
+title: "Überwachen von Inhalt | Microsoft-Dokumentation"
 description: "Hier finden Sie Informationen zur Überwachung von verteiltem Inhalt mithilfe der Configuration Manager-Konsole."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 402c06ed92bbfe509206d3e7800e41e90c5d3a38
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 9a5d2c3a3c6bdca05b5b00fa4d746c437a56ef89
 
 ---
 # <a name="monitor-content-you-have-distributed-with-system-center-configuration-manager"></a>Überwachen von mit System Center Configuration Manager verteilten Inhalten
@@ -27,13 +27,9 @@ ms.openlocfilehash: 402c06ed92bbfe509206d3e7800e41e90c5d3a38
 Mit der System Center Configuration Manager-Konsole können Sie folgende verteilten Inhalte überwachen:  
 
 -   Den Status aller Pakettypen im Zusammenhang mit den zugeordneten Verteilungspunkten  
-
 -   Den Inhaltsprüfungsstatus des Paketinhalts  
-
 -   Den Status von Inhalt, der einer bestimmten Verteilungspunktgruppe zugeordnet ist  
-
 -   Den Zustand von Inhalt, der einem Verteilungspunkt zugeordnet ist  
-
 -   Den Status optionaler Funktionen jedes Verteilungspunkts (Inhaltsprüfung, PXE und Multicast)  
 
 > [!NOTE]  
@@ -43,37 +39,27 @@ Mit der System Center Configuration Manager-Konsole können Sie folgende verteil
  Im Arbeitsbereich **Überwachung** finden Sie im Knoten **Inhaltsstatus** Informationen zu Inhaltspaketen. In der Configuration Manager-Konsole können Sie z.B. folgende Informationen überprüfen:  
 
 -   Den Paketnamen  
-
 -   Typ  
-
 -   An wie viele Verteilungspunkte ein Paket gesendet wurde  
-
 -   Die Kompatibilitätsrate  
-
 -   Wann das Paket erstellt wurde  
-
 -   Paketkennung  
-
 -   Quellversion  
 
 Außerdem finden Sie hier detaillierte Statusinformationen zu allen Paketen sowie den Verteilungsstatus eines Pakets, einschließlich:  
 
 -   Fehleranzahl  
-
 -   Ausstehende Verteilungen  
-
 -   Anzahl der Installationen  
 
 Sie können außerdem Verteilungen an einen Verteilungspunkt verwalten, die noch in Bearbeitung sind bzw. aufgrund von Fehlern nicht erfolgreich ausgeführt werden konnten:  
 
 -   Die zutreffende Option zum Abbrechen oder erneuten Verteilen des Inhalts ist verfügbar, wenn Sie im Fensterbereich **Bestandsdetails** auf einer der Registerkarten **In Bearbeitung** oder **Fehler** des Knotens **Inhaltsstatus** die Statusmeldung zu einem Verteilungsauftrag an einen Verteilungspunkt anzeigen.  
-
 -   Außerdem werden beim Einsehen der Auftragsdetails folgende Informationen angezeigt: auf der Registerkarte **In Bearbeitung** der Prozentsatz, zu dem der Auftrag abgeschlossen ist; auf der Registerkarte **Fehler** die Anzahl der noch ausstehenden Wiederholungen für einen Auftrag sowie das Intervall bis zur nächten Wiederholung.  
 
 Beim Abbrechen einer Bereitstellung, die noch nicht abgeschlossen ist, wird der Verteilungsauftrag zur Übertragung des betreffenden Inhalts beendet:  
 
 -   Der Status der Bereitstellung wird dann aktualisiert, um anzuzeigen, dass die Verteilung fehlgeschlagen ist oder von einem Benutzer abgebrochen wurde.  
-
 -   Dieser neue Status wird auf der Registerkarte **Fehler** angezeigt.  
 
 > [!TIP]  
@@ -124,23 +110,16 @@ Gehen Sie wie folgt vor, um den Inhaltsstatus anzuzeigen und Verteilungen zu ver
 Im Arbeitsbereich **Überwachung** finden Sie im Knoten **Status der Verteilungspunktgruppe** Informationen zu Verteilungspunktgruppen. Sie können z. B. folgende Informationen überprüfen:  
 
 -   Namen von Verteilungspunktgruppen  
-
 -   Beschreibung  
-
 -   Wie viele Verteilungspunkte zur Verteilungspunktgruppe gehören  
-
 -   Wie viele Pakete der Gruppe zugewiesen wurden  
-
 -   Status der Verteilungspunktgruppe  
-
 -   Kompatibilitätsrate  
 
 Außerdem werden folgende detaillierte Statusinformationen angezeigt:  
 
 -   Fehler für die Verteilungspunktgruppe  
-
 -   Wie viele Verteilungen aktuell in Bearbeitung sind  
-
 -   Wie viele erfolgreich verteilt wurde  
 
 #### <a name="to-monitor-distribution-point-group-status"></a>So überwachen Sie den Status einer Verteilungspunktgruppe  
@@ -171,8 +150,18 @@ Gehen Sie wie folgt vor, um den Status einer Verteilungspunktkonfiguration anzuz
 
 4.  Klicken Sie im Ergebnisbereich auf die Registerkarte **Details** . Statusinformationen zum Verteilungspunkt werden angezeigt.  
 
+## <a name="client-data-sources-dashboard"></a>Dashboard „Clientdatenquellen“
+Ab Version 1610 können Sie auch das Dashboard **Clientdatenquellen** verwenden, um mehr über die Verwendung des [Peercaches](/sccm/core/plan-design/hierarchy/client-peer-cache) in Ihrer Umgebung zu erfahren. Dieses Dashboard ist in der Konsole nicht sichtbar, bis die Clients Inhalt unter der Verwendung von Peercache heruntergeladen haben und diese Informationen zurück an den Standort melden. Mit dem Meldeintervall kann das bis zu 24 Stunden dauern.
+
+> [!TIP]  
+> Peercache und das Dashboard „Clientdatenquellen“ sind vorab veröffentliche Features in Version 1610. Informationen zum Aktivieren dieser Funktionen finden Sie unter [Verwenden von vorab veröffentlichten Features von Updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
+
+Wechseln Sie in der Konsole zu **Überwachung** > **Clientstatus** > **Clientdatenquellen**. Hier können Sie einen Zeitraum auswählen, der auf das Dashboard angewendet werden soll. Anschließend können Sie in der Anzeige die Begrenzungsgruppe oder das Paket auswählen, für die bzw. das Sie Informationen anzeigen möchten. Beim Anzeigen der Informationen können Sie Ihre Maus über der Oberfläche bewegen, um weitere Details zu den verschiedenen Inhalts- oder Richtlinienquellen zu erhalten.  
+
+Sie können auch einen neuen Bericht, **Clientdatenquellen – Zusammenfassung**, verwenden, um eine Zusammenfassung der Clientdatenquellen für die einzelnen Begrenzungsgruppen anzuzeigen.
 
 
-<!--HONumber=Nov16_HO1-->
+
+<!--HONumber=Dec16_HO3-->
 
 

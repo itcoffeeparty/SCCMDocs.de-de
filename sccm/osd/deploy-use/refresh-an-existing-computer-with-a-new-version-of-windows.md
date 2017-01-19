@@ -1,5 +1,5 @@
 ---
-title: Aktualisieren eines vorhandenen Computers mit einer neuen Version von Windows | Configuration Manager
+title: Aktualisieren eines vorhandenen Computers mit einer neuen Version von Windows | Microsoft-Dokumentation
 description: "Zum Partitionieren und Formatieren (Zurücksetzen) eines vorhandenen Computers und zum Installieren eines neuen Betriebssystems auf dem Computer können verschiedene Methoden in Configuration Manager verwendet werden."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ae331ee9f1cc276f64b7f6501b383c67648f72f3
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: b247cbb68ed63a8eb99715a248686d68a28c53e2
 
 
 ---
@@ -90,6 +90,6 @@ Dieses Thema enthält die allgemeinen Schritte in System Center Configuration Ma
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Schützen von Daten mit Remotezurücksetzung, Remotesperre oder Kennungsrücksetzung mithilfe von System Center Configuration Manager"
+title: "Schützen von Daten mit Remotezurücksetzung, Remotesperre oder Zurücksetzen der Kennung mithilfe von System Center Configuration Manager | Microsoft-Dokumentation"
 description: "Schützen von Gerätedaten mit vollständigem Zurücksetzen, selektivem Zurücksetzen, Remotesperre oder Kennungsrücksetzung mithilfe von System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 49a2220616bb6c6734643885bf969245e4c67c77
+ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
+ms.openlocfilehash: d3dd55b496a124c478f1cf2880a096e2fbdd9145
 
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-using-system-center-configuration-manager"></a>Schützen von Daten mit Remotezurücksetzung, Remotesperre oder Kennungsrücksetzung mithilfe von System Center Configuration Manager
@@ -65,9 +65,9 @@ In Configuration Manager sind Funktionen zum selektiven und vollständigen Zurü
 |Verwaltungs-Agent|Das Verwaltungsprofil wird entfernt.|  
 |E-Mail-Profile|Für E-Mail-Profile, die von Intune bereitgestellt wurden, werden das E-Mail-Konto und die E-Mails entfernt.|  
 
- **Android und Android Samsung KNOX**  
+ **Android und Android Samsung KNOX Standard**  
 
-|Beim Abkoppeln eines Geräts entfernte Inhalte|Android|Samsung KNOX|  
+|Beim Abkoppeln eines Geräts entfernte Inhalte|Android|Samsung KNOX Standard|  
 |--------------------------------------------|-------------|------------------|  
 |Unternehmens-Apps und die entsprechenden Daten, die mit Configuration Manager und Intune installiert wurden.|Apps und Daten bleiben installiert.|Apps werden deinstalliert.|  
 |VPN- und WLAN-Profile|Entfernt.|Entfernt.|  
@@ -243,10 +243,10 @@ In Configuration Manager sind Funktionen zum selektiven und vollständigen Zurü
 
 ## <a name="see-also"></a>Siehe auch  
  [Windows Selective Wipe for Device Data Management](http://technet.microsoft.com/library/dn486874.aspx)   
- [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune (Hybride Verwaltung mobiler Geräte mit System Center Configuration Manager und Microsoft Intune)](../../mdm/plan-design/hybrid-mobile-device-management.md)
+ [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune (Hybride Verwaltung mobiler Geräte mit System Center Configuration Manager und Microsoft Intune)](../../mdm/understand/hybrid-mobile-device-management.md)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

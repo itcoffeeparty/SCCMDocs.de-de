@@ -1,14 +1,14 @@
-#  [Verstehen und Kennenlernen](understand/hybrid-mobile-device-management.md)
+#  Verstehen und Kennenlernen
 ## [Hybride Verwaltung mobiler Geräte](understand/hybrid-mobile-device-management.md)
 ## [Wählen der Verwaltung mobiler Geräte mit Intune oder der hybriden Verwaltung mobiler Geräte](understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md)
 ## [Neues bei der hybriden Verwaltung mobiler Geräte](understand/whats-new-in-hybrid-mobile-device-management.md)
 ## [Lokale Verwaltung mobiler Geräte](understand/manage-mobile-devices-with-on-premises-infrastructure.md)
 
-# [Planung und Entwurf](plan-design/plan-hybrid-mobile-device-management.md)
+# Planung und Entwurf
 ## [Planen für die hybride Verwaltung mobiler Geräte](plan-design/plan-hybrid-mobile-device-management.md)
 ## [Planen für die lokale Verwaltung mobiler Geräte](plan-design/plan-on-premises-mdm.md)
 
-# [Bereitstellen und Verwenden](deploy-use/setup-hybrid-mdm.md)
+# Bereitstellen und Verwenden
 
 ## [Einrichten der hybriden Verwaltung mobiler Geräte](deploy-use/setup-hybrid-mdm.md)
 ### [iOS und Mac](deploy-use/enroll-hybrid-ios-mac.md)
@@ -33,9 +33,10 @@
 ### [Massenregistrierung](deploy-use/bulk-enroll-devices-on-premises-mdm.md)
 
 ## [Außerkraftsetzen, Sperren und Zurücksetzen verwalteter Geräte](deploy-use/wipe-lock-reset-devices.md)
+## [Synchronisieren von Intune-registrierten Geräten](deploy-use/sync-intune-device.md)
 ## [Verwalten von Geräten mit Exchange](deploy-use/manage-mobile-devices-with-exchange-activesync.md)
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

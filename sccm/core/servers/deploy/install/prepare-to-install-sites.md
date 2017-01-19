@@ -1,5 +1,5 @@
 ---
-title: Vorbereiten auf die Installation von Standorten | System Center Configuration Manager
+title: Vorbereitung zur Installation von Standorten | Microsoft-Dokumentation
 description: Lesen Sie diese Angaben, um Zeit bei der Installation mehrerer Standorte zu sparen und Fehler zu vermeiden.
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 6f240f1da4561c05bee974b78f43bfcdba591df6
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 0534d1eb587cb01f35d811d72ddfe6ceb07e5b7c
 
 ---
 # <a name="prepare-to-install-system-center-configuration-manager-sites"></a>Vorbereiten auf die Installation von System Center Configuration Manager-Standorten
@@ -73,7 +73,7 @@ Sie verwenden die Configuration Manager-Konsole zur Installation eines sekundär
 
 
 
-## <a name="a-namebkmktasksa-common-tasks-to-complete-before-starting-an-install"></a><a name="bkmk_tasks"></a> Gängige vor dem Starten einer Installation auszuführende Tasks
+## <a name="a-namebkmktasksa--common-tasks-to-complete-before-starting-an-install"></a><a name="bkmk_tasks"></a> Gängige vor dem Starten einer Installation auszuführende Tasks
 -   Vertrautmachen mit der Topologie der Hierarchie, die Sie für Ihre Bereitstellung verwenden    
      (siehe [Entwerfen einer Hierarchie von Standorten für System Center Configuration Manager](../../../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md))  
 
@@ -90,7 +90,7 @@ Sie verwenden die Configuration Manager-Konsole zur Installation eines sekundär
 
 
 
-## <a name="a-namebkmksitecodesa-about-site-names-and-site-codes"></a><a name="bkmk_sitecodes"></a> Informationen zu Standortnamen und Standortcodes
+## <a name="a-namebkmksitecodesa--about-site-names-and-site-codes"></a><a name="bkmk_sitecodes"></a> Informationen zu Standortnamen und Standortcodes
 Mithilfe von Standortcodes und Standortnamen werden die Standorte einer Configuration Manager-Hierarchie identifiziert und verwaltet. In der Configuration Manager-Konsole werden Standortcode und Standortname im Format &lt;Standortcode\> - &lt;Standortname\> angezeigt. Jeder in Ihrer Hierarchie verwendete Standortcode muss eindeutig sein. Wenn Active Directory für Configuration Manager erweitert wurde und Daten an Standorten veröffentlicht werden, müssen die Standortcodes innerhalb der Active Directory-Gesamtstruktur eindeutig sein. Dies gilt auch dann, wenn sie in verschiedenen Configuration Manager-Hierarchien verwendet werden oder in früheren Configuration Manager-Installationen verwendet wurden. Planen Sie die Standortcodes und Standortnamen sorgfältig, bevor Sie die Hierarchie bereitstellen.
 
 ### <a name="specify-a-site-code-and-site-name"></a>Angeben eines Standortcodes und Standortnamens
@@ -126,7 +126,7 @@ Beachten Sie vor der Installation von Standorten die für Standorte und Hierarch
     -   Configuration Manager unterstützt nicht das Verschieben eines untergeordneten primären Standorts aus einer Hierarchie zum Erstellen eines eigenständigen primären Standorts oder zum Hinzufügen des Standorts zu einer anderen Hierarchie. Stattdessen müssen Sie den untergeordneten primären Standort deinstallieren und dann erneut als neuen eigenständigen primären Standort oder untergeordneten Standort der zentralen Verwaltung von einer anderen Hierarchie installieren.  
 
 
-## <a name="a-namebkmkoptionalstepsa-optional-steps-to-run-before-starting-setup"></a><a name="bkmk_optionalsteps"></a> Optionale Schritte vor Beginn der Installation
+## <a name="a-namebkmkoptionalstepsa--optional-steps-to-run-before-starting-setup"></a><a name="bkmk_optionalsteps"></a> Optionale Schritte vor Beginn der Installation
 **Sie können das [Setup-Downloadprogramm](../../../../core/servers/deploy/install/setup-downloader.md) manuell ausführen**, um die aktualisierten Setupdateien für Configuration Manager herunterzuladen.
 
 Wenn der Computer, auf dem Sie Setup ausführen möchten, nicht mit dem Internet verbunden ist oder Sie die Installation mehrerer Standortserver erwarten, erwägen Sie den Einsatz des Setup-Downloadprogramms zum Herunterladen der erforderlichen Updates in Setupdateien:
@@ -148,6 +148,6 @@ Wenn der Computer, auf dem Sie Setup ausführen möchten, nicht mit dem Internet
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

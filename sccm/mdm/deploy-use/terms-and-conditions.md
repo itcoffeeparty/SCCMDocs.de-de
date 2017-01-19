@@ -1,5 +1,5 @@
 ---
-title: Terms and Conditions in System Center Configuration Manager
+title: "Geschäftsbedingungen von System Center Configuration Manager | Microsoft-Dokumentation"
 description: "Stellen Sie Geschäftsbedingungen für Benutzergruppen in System Center Configuration Manager bereit."
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4d3f9e6b-4d71-4fc4-9b91-47f1bfbd8c70
 caps.latest.revision: 9
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: a7b99bed3186ab8ff817ef5f420d7a55d60b1c14
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 2f8b14bef14d82584fd2bf6cdd05018bdd463ce4
 
 
 ---
@@ -89,7 +89,7 @@ Sie können die Geschäftsbedingungen von System Center Configuration Manager f�
 
      Auf dem Bildschirm „Bereitstellungsstatus“ können Sie die Statusregisterkarten auswählen, um Benutzer mit dem jeweiligen Status anzuzeigen. Klicken Sie zum Aktualisieren der Daten in der gesamten Hierarchie auf **Zusammenfassung ausführen** . Klicken Sie zum Aktualisieren von Daten in der Konsole auf **Aktualisieren** .  
 
-## <a name="to-view-a-terms-and-conditions-report"></a>So zeigen Sie einen Bericht zu den Geschäftsbedingungen an  
+## <a name="to-view--a-terms-and-conditions-report"></a>So zeigen Sie einen Bericht zu den Geschäftsbedingungen an  
 
 1.  Wechseln Sie in der Configuration Manager-Konsole zu **Überwachung** > **Übersicht** > **Berichterstellung** > **Bericht**.  
 
@@ -122,6 +122,6 @@ Sie können die Geschäftsbedingungen von System Center Configuration Manager f�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

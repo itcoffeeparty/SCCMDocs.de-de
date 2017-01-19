@@ -1,5 +1,5 @@
 ---
-title: "Diagnosedaten für 1511 | System Center Configuration Manager"
+title: "Diagnosedaten für 1511 | Microsoft-Dokumentation"
 description: "In dieser Lektion erfahren Sie mehr über die Ebenen der Diagnose- und Nutzungsdaten, die Version 1511 von System Center Configuration Manager sammelt."
 ms.custom: na
 ms.date: 10/06/2016
@@ -34,8 +34,8 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 3488efcd6638b538f05fae52dfd8918423a32b58
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: fa3c2f9c9bdc1f095b450babd675db4a160992d9
 
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1511-of-system-center-configuration-manager"></a>Die Ebenen der Sammlung von Nutzungsdaten zu Diagnosezwecken für Version 1511 von System Center Configuration Manager
@@ -48,7 +48,10 @@ Die Version 1511 von System Center Configuration Manager sammelt drei Ebenen von
 >  Configuration Manager sammelt auf den Ebenen „Basis“ und „Erweitert“ keine Standortcodes oder Standortnamen, IP-Adressen, Benutzer- oder Computernamen, physischen Adressen und keine E-Mail-Adressen. Die auf der Ebene „Vollständig“ erfassten Daten (möglicherweise in erweiterten Diagnoseinformationen wie Protokolldateien oder Arbeitsspeicher-Momentaufnahmen enthaltene Daten) werden nicht zielgerichtet gesammelt und von Microsoft nicht zu Werbezwecken oder dazu verwendet, Sie zu identifizieren bzw. Kontakt mit Ihnen aufzunehmen.  
 
 ##  <a name="a-namebkmkchangea-how-to-change-the-level"></a><a name="bkmk_change"></a> Ändern der Ebene  
- Administratoren mit einem rollenbasierten Verwaltungsbereich, der die Berechtigung **Ändern** für die **Standort**-Objektklasse umfasst, können in den Einstellungen der Configuration Manager-Konsole unter „Diagnose- und Nutzungsdaten“ die Ebene der erfassten Daten ändern.  
+ Administratoren mit einem rollenbasierten Verwaltungsbereich, der die Berechtigung **Ändern** für die **Standort**-Objektklasse umfasst, können in den Einstellungen der Configuration Manager-Konsole unter „Diagnose- und Nutzungsdaten“ die Ebene der erfassten Daten ändern.
+
+ Wechseln Sie in der Konsole zur Registerkarte „Backstage“ (die obere linke Registerkarte mit Dropdownpfeil), und wählen Sie **Nutzungsdaten** und anschließend die Datenebene aus, die Sie benutzen möchten.  
+
 
 ##  <a name="a-namebkmklevel1a-level-1---basic"></a><a name="bkmk_level1"></a> Ebene 1: Basis  
  Die Ebene „Basis“ erfasst Daten über Ihre Hierarchie und wird für die Verbesserung Ihrer Installations- oder Upgradeerfahrung und zur Ermittlung der für Ihre Hierarchie infrage kommenden Configuration Manager-Updates benötigt.  
@@ -278,6 +281,6 @@ Ab Version 1511 von System Center Configuration Manager enthält diese Ebene Fol
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

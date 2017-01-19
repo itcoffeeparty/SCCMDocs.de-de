@@ -1,5 +1,5 @@
 ---
-title: "Interoperabilität zwischen verschiedenen Versionen | System Center Configuration Manager"
+title: "Interoperabilität zwischen den Configuration Manager-Versionen | Microsoft-Dokumentation"
 description: "Hier erfahren Sie, wie Konflikte zwischen verschiedenen System Center Configuration Manager-Hierarchien im selben Netzwerk vermieden werden können."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: db0bf04b73050cb42f8230227c8db6ebfb3c6987
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 32182f06a90d768c40e29ed8a8e89cb45114bd15
 
 
 ---
@@ -61,12 +61,12 @@ Die Installation und der Betrieb mehrerer unabhängiger Hierarchien von System C
 
  Um zu verhindern, dass Clients irrtümlich einem falschen Standort zugewiesen werden, wenn zwei Hierarchien überlappende Grenzen haben, konfigurieren Sie die Configuration Manager-Clientinstallationsparameter so, dass Clients einem bestimmten Standort zugewiesen werden.  
 
-##  <a name="a-namebkmkmixeda-configuration-manager-limitations-in-a-mixed-version-hierarchy"></a><a name="bkmk_mixed"></a> Configuration Manager-Einschränkungen in einer Hierarchie mit unterschiedlichen Versionen  
+##  <a name="a-namebkmkmixeda-configuration-manager-limitations--in-a-mixed-version-hierarchy"></a><a name="bkmk_mixed"></a> Configuration Manager-Einschränkungen in einer Hierarchie mit unterschiedlichen Versionen  
  Wenn Sie für einen System Center Configuration Manager-Standort ein Upgrade durchführen, gibt es Zeiten, zu denen verschiedene Standorte verschiedene Versionsstände haben.  Beispielsweise könnten Sie für einen Standort der zentralen Verwaltung ein Upgrade auf eine neue Version durchführen, aber aufgrund von Standortwartungsfenstern kann es passieren, dass das Upgrade für mindestens einen primären Standort erst zu einem späteren Zeitpunkt durchgeführt werden kann.  
 
  Wenn in verschiedenen Standorten einer einzelnen Hierarchie unterschiedliche Versionen ausgeführt werden, sind einige Funktionen möglicherweise nicht verfügbar. Dies kann sich darauf auswirken, wie Sie Configuration Manager-Objekte in der Configuration Manager-Konsole verwalten und welche Funktionen für Clients verfügbar sind. Normalerweise sind Funktionen aus neueren Configuration Manager-Versionen für Standorte oder Clients mit einer niedrigeren Service Pack-Version nicht verfügbar.  
 
-### <a name="limitations-when-upgrading-configuration-manager"></a>Einschränkungen beim Durchführen eines Upgrades von Configuration Manager  
+### <a name="limitations-when-upgrading--configuration-manager"></a>Einschränkungen beim Durchführen eines Upgrades von Configuration Manager  
 
 |Objekt|Details|  
 |------------|-------------|  
@@ -85,6 +85,6 @@ Die Installation und der Betrieb mehrerer unabhängiger Hierarchien von System C
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

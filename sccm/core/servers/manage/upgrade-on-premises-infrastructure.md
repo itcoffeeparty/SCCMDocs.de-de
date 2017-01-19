@@ -1,5 +1,5 @@
 ---
-title: "Durchführen eines Upgrades für die lokale Infrastruktur | System Center Configuration Manager"
+title: Aktualisieren der lokalen Infrastruktur | Microsoft-Dokumentation
 description: "Hier erfahren Sie, wie für eine Infrastruktur wie etwa SQL Server und das Standortbetriebssystem von Standortsystemen ein Upgrade durchgeführt wird."
 ms.custom: na
 ms.date: 10/28/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c8115fba0722fc902e60ce201d8a9914036c1245
-ms.openlocfilehash: 1239bf81991bb233a9640606bb47f598a70d5e50
+ms.sourcegitcommit: 8b4c80aa092369ec251757d82a1b4bb2863aa96a
+ms.openlocfilehash: f3742dcb930444bab7eb02374fd77ebd0e455734
 
 
 ---
@@ -73,12 +73,12 @@ Für dieses Szenario für ein Betriebssystemupgrade gelten folgende Bedingungen:
 **Bekanntes Problem für die Configuration Manager-Remotekonsole:**  
 Nach dem Upgrade des Standortservers oder eines Servers, auf dem eine Instanz des SMS-Anbieters gehostet wird, auf Windows Server 2016 können Administratoren möglicherweise keine Verbindung mit einer Configuration Manager-Konsole am Standort herstellen. Um dieses Problem zu umgehen, müssen Sie Berechtigungen für die SMS-Administratorengruppe in WMI manuell wiederherstellen. Berechtigungen müssen auf dem Standortserver sowie auf allen Remoteservern, auf denen eine Instanz des SMS-Anbieters gehostet wird, festgelegt werden:
 
-1. Öffnen Sie auf den entsprechenden Servern die Microsoft Management Console (MMC), fügen Sie das Snap-In für die **WMI-Steuerung** hinzu, und wählen Sie **Lokaler Computer**.
+1. Öffnen Sie auf den entsprechenden Servern die Microsoft Management Console (MMC), fügen Sie das Snap-In für die **WMI-Steuerung** hinzu, und wählen Sie **Lokaler Computer** aus.
 2. Öffnen Sie in der MMC die **Eigenschaften** von **WMI-Steuerung (Lokal)**, und wählen Sie die Registerkarte **Sicherheit** aus.
 3. Erweitern Sie die Struktur unter dem Stamm, wählen Sie den Knoten **SMS** aus, und klicken Sie auf **Sicherheit**.  Stellen Sie sicher, dass die Gruppe **SMS-Administratoren** über folgende Berechtigungen verfügt:
   -     Konto aktivieren
   -     Remoteaktivierung
-4. Als Nächstes wählen Sie auf der Registerkarte **Sicherheit** unter dem Knoten „SMS“ den Knoten **site_<sitecode>**. Klicken Sie anschließend auf **Sicherheit**. Stellen Sie sicher, dass die Gruppe **SMS-Administratoren** über folgende Berechtigungen verfügt:
+4. Als Nächstes wählen Sie auf der Registerkarte **Sicherheit** unter dem Knoten „SMS“ den Knoten **Standort_&lt;Standortcode>** aus. Klicken Sie anschließend auf **Sicherheit**. Stellen Sie sicher, dass die Gruppe **SMS-Administratoren** über folgende Berechtigungen verfügt:
   -   Methoden ausführen
   -   Anbieterschreibzugriff
   -   Konto aktivieren
@@ -176,6 +176,19 @@ Wenn Sie für die Version von SQL Server, unter der die Standortdatenbank gehost
  2. Aktualisieren Sie sekundäre Standorte, bevor Sie den übergeordneten primären Standort der sekundären Standorte aktualisieren.
  3. Aktualisieren Sie übergeordnete primäre Standorte zuletzt. Dies schließt sowohl untergeordnete primäre Standorte, die einem Standort der zentralen Verwaltung unterstellt sind, als auch eigenständige primäre Standorte ein, die den Standort der obersten Ebene einer Hierarchie darstellen.
 
+**SQL Server-Kardinalitätsschätzungsgrad und Standortdatenbank:**   
+Wenn eine Standortdatenbank von einer früheren Version von SQL Server aktualisiert wird, behält die Datenbank den vorhandenen SQL-Kardinalitätsschätzungsgrad (CE-Grad), wenn dieser dem Minimum entspricht, der für diese Instanz von SQL Server zulässig ist. Wenn SQL Server mit einer Datenbank aktualisiert wird, deren Kompatibilitätsgrad niedriger ist als der zulässige Grad, wird die Datenbank automatisch auf den niedrigsten Kompatibilitätsgrad gesetzt, der in SQL zulässig ist.
+
+Die folgende Tabelle zeigt die empfohlenen Kompatibilitätsgrade für Standortdatenbanken von Configuration Manager:
+
+|SQL Server-Version | Unterstützte Kompatibilitätsgrade |Empfohlener Grad|
+|----------------|--------------------|--------|
+| SQL Server 2016| 130, 120, 110, 100 | 130|
+| SQL Server 2014| 120, 110, 100      | 110|
+
+Um den SQL Server-CE-Kompatibilitätsgrad zu ermitteln, der für Ihre Standortdatenbank verwendet wird, führen Sie die folgende SQL-Abfrage auf dem Standortdatenbankserver aus: **SELECT name, compatibility_level FROM sys.databases**.
+
+ Weitere Informationen zu SQL-CE-Kompatibilitätsgraden und deren Festlegung finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)](https://msdn.microsoft.com/library/bb510680.aspx).
 
 
 **Weitere Informationen zu SQL Server finden Sie in der SQL Server-Dokumentation auf TechNet:**  
@@ -196,6 +209,6 @@ Wenn Sie für die Version von SQL Server, unter der die Standortdatenbank gehost
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

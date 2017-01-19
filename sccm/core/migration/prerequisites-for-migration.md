@@ -1,5 +1,5 @@
 ---
-title: "Voraussetzungen für die Migration | System Center Configuration Manager"
+title: "Voraussetzungen für die Migration | Microsoft-Dokumentation"
 description: "Hier erhalten Sie Informationen zu den unterstützten Versionen von Configuration Manager, zu den unterstützten Quellstandortsprachen sowie zu den erforderlichen Konfigurationen für die Migration."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 1b310aeee487087e79c2d0fd6469f8f63b932045
+ms.sourcegitcommit: 6cbb790df47c9a87514b0233e2d0c12dd6f23ee9
+ms.openlocfilehash: 70e2531076abedc1381b6e3bccf15b5afe27b465
 
 
 ---
@@ -113,13 +113,6 @@ Folgende Konfigurationen sind für Migration und Migrationsvorgänge erforderlic
 
      Außerdem muss das **Konto des Quellstandorts** (über das auf den SMS-Anbieter für den Quellstandortserver zugegriffen wird) über die Berechtigung **Ändern** für das Objekt **Standort** am Quellstandort verfügen, um einen Verteilungspunkt von einem System Center 2012 Configuration Manager- oder System Center Configuration Manager-Quellstandort freizugeben. Sie erteilen dem Konto diese Berechtigung mithilfe der rollenbasierten Verwaltung. Informationen zur Verwendung der rollenbasierten Verwaltung finden Sie unter [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
 
--   **Freigeben von Verteilungspunkten:**  
-
-     Damit Verteilungspunkte von einem Quellstandort erfolgreich freigegeben werden können, müssen von mindestens einem primären Standort oder dem Standort der zentralen Verwaltung dieselben Portnummern für Clientanforderungen wie beim Quellstandort verwendet werden. Weitere Informationen zu Clientanforderungsports finden Sie unter [Konfigurieren von Clientkommunikationsports in System Center Configuration Manager](../../core/clients/deploy/configure-client-communication-ports.md).  
-
-     Für jeden Quellstandort werden nur Verteilungspunkte freigegeben, die auf den mit einem FQDN konfigurierten Servern des Standortsystems installiert sind.  
-
-     Außerdem muss das **Konto des Quellstandorts** (über das auf den SMS-Anbieter für den Quellstandortserver zugegriffen wird) über die Berechtigung **Ändern** für das Objekt **Standort** am Quellstandort verfügen, um einen Verteilungspunkt von einem System Center 2012 Configuration Manager- oder System Center Configuration Manager-Quellstandort freizugeben. Sie erteilen dem Konto diese Berechtigung mithilfe der rollenbasierten Verwaltung. Informationen zur Verwendung der rollenbasierten Verwaltung finden Sie unter [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
 
 -   **Aktualisieren oder erneutes Zuweisen von Verteilungspunkten:**  
 
@@ -133,6 +126,6 @@ Folgende Konfigurationen sind für Migration und Migrationsvorgänge erforderlic
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

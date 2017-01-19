@@ -1,8 +1,8 @@
 ---
-title: Upgraden von Clients | Windows |System Center Configuration Manager
+title: 'Aktualisieren von Clients | Microsoft-Dokumentation | Windows '
 description: "Upgraden von Clients für Windows-Computer in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 2b1600e6f04095506f18f4c2cd0988a320fbb951
+ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
+ms.openlocfilehash: 8a3028a562aa657ea39a0f5ff763311db6def00a
 
 
 ---
@@ -36,10 +36,16 @@ Sie können den Client auf Windows-Computern mithilfe von Clientinstallationsmet
 
 -   Upgradeinstallation  
 
- Wenn Sie an einem Upgrade des Clients mithilfe einer Clientinstallationsmethode interessiert sind, finden Sie mehr dazu unter [Bereitstellen von Clients auf Windows-Computern in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)  
+ Wenn Sie an einer Aktualisierung des Clients mithilfe einer Clientinstallationsmethode interessiert sind, finden Sie mehr dazu unter [Bereitstellen von Clients auf Windows-Computern in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md).
+
+ Ab Version 1610 können Sie Clients vom Upgrade ausschließen, indem Sie eine Ausschlussgruppe angeben. Weitere Informationen finden Sie unter [How to exclude upgrading clients for Windows computers (Ausschließen von Clients für Windows-Computer vom Upgrade)](exclude-clients-windows.md).  
+
 
 > [!TIP]  
->  Wenn Sie ein Upgrade Ihrer Serverinfrastruktur von einer früheren Version von Configuration Manager durchführen \(z.B. Configuration Manager 2007 oder System Center 2012 Configuration Manager\), empfiehlt es sich, das Serverupgrade einschließlich der Installation sämtlicher Branchupdates vollständig abzuschließen, bevor Sie ein Upgrade der Configuration Manager-Clients durchführen.   Das neueste Branchupdate enthält die neueste Version des Clients, Sie sollten das Clientupgrade also durchführen, nachdem Sie alle Configuration Manager-Updates installiert haben, die Sie verwenden möchten.  
+>  Wenn Sie ein Upgrade Ihrer Serverinfrastruktur von einer früheren Version von Configuration Manager durchführen \(z.B. Configuration Manager 2007 oder System Center 2012 Configuration Manager\), empfiehlt es sich, das Serverupgrade einschließlich der Installation sämtlicher Branchupdates vollständig abzuschließen, bevor Sie ein Upgrade der Configuration Manager-Clients durchführen.   Das neueste Branchupdate enthält die neueste Version des Clients, Sie sollten das Clientupgrade also durchführen, nachdem Sie alle Configuration Manager-Updates installiert haben, die Sie verwenden möchten.
+
+> [!NOTE]
+> Wenn Sie den Standort für die Clients während des Upgrades neu zuweisen möchten, können Sie den neuen Standort mithilfe der client.msi-Eigenschaft SMSSITECODE angeben. Wenn Sie für SMSSITECODE die Einstellung AUTO verwenden, müssen Sie auch SITEREASSIGN=TRUE angeben, um eine automatische Standortneuzuordnung während des Upgrades zuzulassen. Weitere Informationen finden Sie unter [SMSSITECODE](../../deploy/about-client-installation-properties.md#smssitecode).
 
 ## <a name="use-automatic-client-upgrade"></a>Verwenden des automatischen Clientupgrades  
  Sie können Configuration Manager auch so konfigurieren, dass die Clientsoftware automatisch auf die aktuelle Configuration Manager-Clientversion aktualisiert wird, wenn in Configuration Manager festgestellt wird, dass ein der Configuration Manager-Hierarchie zugewiesener Client in einer niedrigeren als der in der Hierarchie verwendeten Version vorhanden ist. Dieses Szenario umfasst das Upgrade des Clients auf die neueste Version, wenn versucht wird, den Client einem Configuration Manager-Standort zuzuweisen.  
@@ -62,11 +68,11 @@ Sie können den Client auf Windows-Computern mithilfe von Clientinstallationsmet
 > [!NOTE]  
 >  Configuration Manager sendet das Clientupgradepaket nicht automatisch an cloudbasierte Verteilungspunkte von Configuration Manager.  
 
- Automatische Clientupgrades sind nützlich bei einer geringen Anzahl von Clientcomputern, die von Ihrer Hauptmethode für die Clientinstallation nicht erfasst wurden. Dies kann beispielsweise der Fall sein, wenn einige Clients während der Bereitstellung des Clientupgrades offline waren. Daraufhin führen Sie das Clientupgrade für diese Computer mithilfe dieser Methode aus, sobald die Computer wieder aktiv sind.  
+ Es wird empfohlen, die automatischen Clientupgrades in Ihrer Hierarchie zu aktivieren. So werden die Clients mit minimalem Verwaltungsaufwand aktualisiert.  
 
  Gehen Sie wie folgt vor, um das automatische Clientupgrade zu konfigurieren. Das automatische Clientupgrade muss an einem Standort der zentralen Verwaltung konfiguriert werden, und diese Konfiguration gilt für alle Clients in der Hierarchie.  
 
-#### <a name="to-configure-automatic-client-upgrades"></a>So konfigurieren Sie automatische Clientupgrades  
+### <a name="to-configure-automatic-client-upgrades"></a>So konfigurieren Sie automatische Clientupgrades  
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung**.  
 
@@ -87,12 +93,14 @@ Sie können den Client auf Windows-Computern mithilfe von Clientinstallationsmet
     >     
     > Aufgrund dieses Verhaltens dauert das Upgrade von Computern, die regelmäßig am Ende des Arbeitstags heruntergefahren werden, möglicherweise länger als erwartet, wenn die zufällig geplante Upgradezeit nicht in die normale Arbeitszeit fällt.
 
+7. Um das Upgrade bestimmter Clients zu verhindern, können Sie ab Version 1610 auf **Angegebene Clients von Upgrade ausschließen** klicken und die auszuschließende Sammlung angeben.
+
 8.  Klicken Sie auf **Installationspakete des Clients automatisch an Verteilungspunkte verteilen, die für vorab bereitgestellten Inhalt aktiviert wurden**, wenn das Clientinstallationspaket auf Verteilungspunkte kopiert werden soll, die für vorab bereitgestellten Inhalt aktiviert wurden.  
 
 9. Klicken Sie auf **OK** , um die Einstellungen zu speichern und das Dialogfeld **Eigenschaften von Hierarchieeinstellungen** zu schließen. Diese Einstellungen werden beim nächsten Herunterladen einer Richtlinie auf Clients übertragen.  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

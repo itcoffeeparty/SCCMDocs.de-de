@@ -1,5 +1,5 @@
 ---
-title: "Registrierung des iOS-Programms zur Geräteregistrierung (Device Enrollment Program, DEP) für Hybridbereitstellungen mit Configuration Manager"
+title: "Registrierung des iOS-Programms zur Geräteregistrierung (Device Enrollment Program, DEP) für Hybridbereitstellungen mit Configuration Manager | Microsoft-Dokumentation"
 description: "Aktivieren der Registrierung des iOS-Programms zur Geräteregistrierung (Device Enrollment Program, DEP) für Hybridbereitstellungen in Configuration Manager mit Intune."
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 78d44adc-9b1c-4bc6-b72d-e93873916ea6
 caps.latest.revision: 9
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 730b0e6b0ad9eb0ee3bf58c9419920c3a28a27d1
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 0421589d928a88eee6f4629726fbd0171aba7436
 
 ---
 # <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>Registrierung des iOS-Programms zur Geräteregistrierung (Device Enrollment Program, DEP) für Hybridbereitstellungen mit Configuration Manager
@@ -91,22 +91,18 @@ Unternehmen können iOS-Geräte mit dem Geräteregistrierungsprogramm von Apple 
 
             -   **Deaktivieren** – Das Verwaltungsprofil kann aus dem Menü **Einstellungen** entfernt werden.  
 
-            -   Aktivieren – (Erfordert **Vorbereitungsmodus** = **Überwacht**) Deaktiviert iOS-Einstellungen, die die Entfernung des Verwaltungsprofils erlauben könnten  
+            -   **Aktivieren** – (Erfordert **Preparation Mode** (Vorbereitungsmodus) = **Supervised** (Überwacht)) Deaktiviert iOS-Einstellungen, die die Entfernung des Verwaltungsprofils erlauben könnten.  
 
     3.  Konfigurieren Sie auf der Seite **Setup-Assistent** die Einstellungen, die den iOS-Setup-Assistenten anpassen, der gestartet wird, wenn das Gerät erstmalig eingeschaltet wird, und klicken Sie anschließend auf **Weiter**. Zu diesen Einstellungen zählen:  
-
         -   **Kennung** – Aufforderung zur Eingabe der Kennung während der Aktivierung. Fordern Sie immer eine Kennung an, es sei denn, das Gerät wird gesichert oder der Zugriff wird auf andere Weise verwaltet (z.B. der Kioskmodus, der das Gerät auf eine App beschränkt).  
-
         -   **Standortdienste** – Falls aktiviert, fragt der Setup-Assistent ab, ob der Diensts aktiviert werden soll.  
-
         -   **Wiederherstellung** – Falls aktiviert, fordert der Setup-Assistent die iCloud-Sicherung während der Aktivierung auf  
-
         -   **Apple-ID** – Für den Download von Apps aus dem iOS App Store, einschließlich der Apps, die von Intune installiert werden, ist eine Apple-ID erforderlich. Wenn aktiviert, fordert iOS Benutzer auf, eine Apple-ID bereitzustellen, wenn Intune eine App ohne eine ID installieren möchte.  
-
         -   **Geschäftsbedingungen** – Wenn aktiviert, fordert der Setup-Assistent Benutzer auf, die Geschäftsbedingungen Apple während der Aktivierung zu akzeptieren  
-
+        -   **Touch ID**: Falls aktiviert, fordert der Setup-Assistent zur Ausführung dieses Dienst während der Aktivierung auf.
+        -   **Apple Pay**: Falls aktiviert, fordert der Setup-Assistent zur Ausführung dieses Dienst während der Aktivierung auf.
+        -   **Zoom**: Falls aktiviert, fordert der Setup-Assistent zur Ausführung dieses Dienst während der Aktivierung auf.
         -   **Siri** – Falls aktiviert, fordert der Setup-Assistent zur Ausführung dieses Dienst während der Aktivierung auf  
-
         -   **Diagnosedaten an Apple senden** – Falls aktiviert, fordert der Setup-Assistent zur Ausführung dieses Dienst während der Aktivierung auf  
 
     4.  Geben Sie auf der Seite **Additional Management** (Zusatzverwaltung) an, ob eine USB-Verbindung für die Einstellungen der Zusatzverwaltung verwendet werden kann. Wenn Sie die Option **Require certificate**auswählen, müssen Sie ein Apple Configurator-Verwaltungszertifikat für die Verwendung dieses Profil importieren.  Legen Sie die Option auf **Nicht zulassen** fest, um die Synchronisierung von Dateien mit iTunes oder die Verwaltung über Apple Configurator zu verhindern. Microsoft empfiehlt Ihnen, die Einstellung **Nicht zulassen** zu verwenden, weitere Konfigurationen von Apple Configurator zu exportieren und die Bereitstellung als benutzerdefiniertes iOS-Konfigurationsprofil durchzuführen, anstatt diese Einstallung zu verwenden, um die manuelle Bereitstellung mit oder ohne einem Zertifikat zuzulassen.  
@@ -128,6 +124,6 @@ Unternehmen können iOS-Geräte mit dem Geräteregistrierungsprogramm von Apple 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Voraussetzungen für die Windows-Clientbereitstellung | System Center Configuration Manager"
+title: "Voraussetzungen für die Bereitstellung des Windows-Clients | Microsoft-Dokumentation"
 description: "Hier erhalten Sie Informationen über die Voraussetzungen für die Bereitstellung von Clients auf Windows-Computern in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 caps.latest.revision: 16
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 03ae6de34742ed0030e42c13639ef853d6b2bedc
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: cbcffea0fe2b4c8a05d3a835ff1193b528e55762
 
 
 ---
@@ -58,7 +58,7 @@ Bei der Bereitstellung von Configuration Manager-Clients in einer Umgebung sind 
 |Microsoft Core XML Services (MSXML) Version 6.20.5002 oder höher|Wird unter Windows zur Unterstützung der Verarbeitung von XML-Dokumenten benötigt.|  
 |Microsoft Remote Differential Compression (RDC)|Ist erforderlich, um die Datenübertragung über das Netzwerk zu optimieren.|  
 |Microsoft Visual C++ 2013 Redistributable Version 12.0.21005.1|Ist zur Unterstützung von Clientoperationen erforderlich. Wenn dieses Update auf den Clientcomputern installiert wird, ist möglicherweise ein Neustart erforderlich, um die Installation abzuschließen.|  
-|Microsoft Visual C++ 2005 Redistributable Version 8.0.50727.42|Ist erforderlich zur Unterstützung von Microsoft SQL Server Compact-Operationen.|  
+|Microsoft Visual C++ 2005 Redistributable Version 8.0.50727.42|Für die Version 1606 und ältere Versionen ist erforderlich, das Microsoft SQL Server Compact-Operationen unterstützt werden.|  
 |Windows Imaging APIs 6.0.6001.18000|Ist erforderlich für die Verwaltung von Windows-Imagedateien (*.wim) mit Configuration Manager.|  
 |Microsoft-Richtlinienplattform 1.2.3514.0|Ist erforderlich, damit Kompatibilitätseinstellungen von Clients ausgewertet werden können.|  
 |Microsoft Silverlight 5.1.41212.0 (beginnend in Configuration Manager-Version 1602)|Ist erforderlich, um die Benutzerfreundlichkeit der Anwendungskatalog-Website zu unterstützen.|  
@@ -238,6 +238,6 @@ Bei der Bereitstellung von Configuration Manager-Clients in einer Umgebung sind 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,6 +1,6 @@
 ---
 
-title: Entfernen eines Softwareupdatepunkts | Configuration Manager
+title: Entfernen eines Softwareupdatepunkts | Microsoft-Dokumentation
 description: Gehen Sie wie folgt vor, um die Softwareupdatepunkt-Standortsystemrolle an einem Standort in der Configuration Manager-Konsole zu entfernen.
 keywords: 
 author: dougeby
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 2486375c-d4a2-4cf2-9124-9bee02bbf173
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e95e3fc2aafde2d947f08d32e2b2130a313e7328
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 22de02c51be3a0cd66b1be0f04b2fbdeb897858c
 
 
 ---
@@ -42,6 +42,6 @@ Sie können die Softwareupdatepunkt-Standortsystemrolle an einem Standort in der
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

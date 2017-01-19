@@ -1,5 +1,5 @@
 ---
-title: "Sicherheit und Datenschutz für die Standortverwaltung | System Center Configuration Manager"
+title: "Sicherheit und Datenschutz für die Standortverwaltung | Microsoft-Dokumentation"
 description: "Optimieren Sie Sicherheit und Datenschutz für die Standortverwaltung in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: be8002edb48506286e18b1fb8c09f92f46ff0e10
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: aca2169c8f5f855e84ca924ca56f6b64bba80fd6
 
 
 ---
@@ -365,6 +365,6 @@ Ermitteln Sie die bewährten Methoden für Ihre Version von IIS-Server, und wend
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Funktionen in Technical Preview 1610 für System Center Configuration Manager"
+title: "Funktionen in Technical Preview 1610 für System Center Configuration Manager | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr zu den Features, die in Technical Preview für System Center Configuration Manager 1610 zur Verfügung stehen."
 ms.custom: na
 ms.date: 10/21/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c9fe6961a63495d08a3e58e3ddf46c5d316e2613
-ms.openlocfilehash: 865b5078282bf240aa6a2aef5cb2662f2471fb71
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 6ffcb33e94f942fc9400457d3f16b65e12332956
 
 ---
 # <a name="capabilities-in-technical-preview-1610-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1610 für System Center Configuration Manager
@@ -82,7 +82,6 @@ So konfigurieren Sie Ausschlüsse aus automatischen Upgrades:
 > [!NOTE]
 > Obwohl die Benutzeroberfläche angibt, dass Upgrades für Clients nicht mit einer beliebigen Methode durchgeführt werden können, gibt es zwei Methoden, die Sie verwenden können, um diese Einstellungen außer Kraft zu setzen. Die Clientpushinstallation und eine manuelle Clientinstallation können verwendet werden, um diese Konfiguration außer Kraft zu setzen. Weitere Details erfahren Sie im nächsten Abschnitt.
 
-
 ### <a name="how-to-upgrade-a-client-that-is-in-an-excluded-collection"></a>So führen Sie für einen Client in einer ausgeschlossenen Sammlung ein Upgrade durch
 Solange eine Sammlung für den Ausschluss konfiguriert ist, können Mitglieder dieser Sammlung ihre Clientsoftware nur mit einer der beiden Methoden, die den Ausschluss außer Kraft setzen, upgegradet werden:
  - **Clientpushinstallation** – Sie können die Clientpushinstallation verwenden, um einen Client in einer ausgeschlossen Sammlung upzugraden. Dies ist zulässig, da es als Absicht des Administrators betrachtet wird und Ihnen ermöglicht, Clients upzugraden, ohne die gesamte Sammlung aus der Ausschlussliste zu entfernen.       
@@ -92,12 +91,80 @@ Solange eine Sammlung für den Ausschluss konfiguriert ist, können Mitglieder d
 
 Weitere Informationen zu Clientinstallationsmethoden finden Sie unter [Bereitstellen von Clients auf Windows-Computern in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
 
+## <a name="windows-defender-configuration-settings"></a>Windows Defender-Konfigurationseinstellungen
+
+Sie können Windows Defender-Clienteinstellungen auf Intune-registrierten Windows 10-Computern mithilfe von Konfigurationselementen in der Configuration Manager-Konsole konfigurieren.
+
+Dabei können Sie insbesondere die folgenden Windows Defender-Einstellungen konfigurieren:
+- Echtzeitüberwachung zulassen
+- Verhaltensüberwachung zulassen
+- Netzwerkinspektionssystem aktivieren
+- Alle heruntergeladene Dateien überprüfen
+- Skriptüberprüfung zulassen
+- Datei- und Programmaktivität überwachen
+  - Überwachte Dateien
+- Tage für Nachverfolgung behandelter Schadsoftware
+- Zugriff auf die Clientbenutzeroberfläche zulassen
+- Systemüberprüfung planen
+  - Geplanter Tag
+  - Geplante Zeit
+- Eine tägliche Schnellüberprüfung planen
+  - Geplante Zeit
+- CPU-Auslastung während einer Überprüfungen begrenzen auf % Archivdateien überprüfen
+- Scannen von E-Mail-Nachrichten
+- Wechseldatenträger überprüfen
+- Zugeordnete Laufwerke überprüfen
+- Scan files opened from net shares (Von Netzwerkfreigaben geöffnete Dateien überprüfen)
+- Intervall zum Aktualisieren von Signaturen
+- Cloudschutz zulassen
+- Beim Senden von Beispielen beim Benutzer nachfragen
+- Erkennung möglicherweise unerwünschter Anwendungen
+- Ausgeschlossene Dateien und Ordner
+- Ausgeschlossene Dateierweiterungen
+- Ausgeschlossene Prozesse
+
+> [!NOTE]
+> Diese Einstellungen können nur auf Clientcomputern unter Windows 10 November-Update (1511) und höher konfiguriert werden.
+
+### <a name="try-it-out"></a>Probieren Sie es aus!
+
+1.  Navigieren Sie in der Configuration Manager-Konsole zu **Bestand und Konformität** > **Überblick** > **Konformitätseinstellungen** > **Konfigurationselemente**, und erstellen Sie ein neues **Konfigurationselement**.
+2.  Geben Sie einen Namen ein, und wählen Sie dann unter **Settings for devices managed without the Configuration Manager client** (Einstellungen für Geräte, die ohne Configuration Manager-Client verwaltet werden) die Option **Windows 8.1 und Windows 10** aus. Klicken Sie dann auf **Weiter**.
+3.  Stellen Sie sicher, dass auf der Seite **Unterstützte Plattformen** die Optionen **All Windows 10 (64-bit)** (Alle Windows 10 (64-Bit)) und **All Windows 10 (32-bit)** (Alle Windows 10 (32-Bit)) ausgewählt wurden. Klicken Sie dann auf **Weiter**.
+4.  Wählen Sie die Einstellungsgruppe **Windows Defender** aus, und klicken Sie dann auf **Weiter**.
+5.  Konfigurieren Sie die gewünschten Einstellungen auf dieser Seite, und klicken Sie dann auf **Weiter**.
+6.  Schließen Sie den Assistenten ab.
+7.  Fügen Sie dieses Konfigurationselement zu einer Konfigurationsbaseline hinzu, und stellen Sie diese Baseline auf Computern bereit, auf denen das Update von November für Windows 10 (1511) oder höher ausgeführt wird.
+
+> [!NOTE]
+> Vergessen Sie nicht, das Kontrollkästchen **Nicht konforme Einstellungen wiederherstellen** zu aktivieren, wenn Sie die Konfigurationsbaseline bereitstellen.
+
+## <a name="request-policy-sync-from-administrator-console"></a>Anfordern der Richtliniensynchronisierung von der Administratorkonsole
+
+Sie können nun eine Richtliniensynchronisierung für ein mobiles Gerät auf der Configuration Manager-Konsole anfordern, anstatt dies auf dem Gerät selbst tun zu müssen. Informationen zum Status der Synchronisierungsanforderung stehen nun in Geräteansichten als neue Spalte **Remote Sync State** (Remotesynchronisierungsstatus) zur Verfügung. Der Status wird auch im Bereich **Ermittlungsdaten** des Dialogfelds **Eigenschaften** für jedes mobile Gerät angezeigt.
+
+### <a name="try-it-out"></a>Probieren Sie es aus!
+
+1.  Navigieren Sie in der Configuration Manager-Konsole zu **Bestand und Konformität** > **Übersicht** > „Geräte“.
+2.  Wählen Sie im Menü **Remote Device Actions** (Remotegeräteaktionen) die Option **Send Sync Request** (Synchronisationsanforderung senden) aus.
+
+Die Synchronisierung kann fünf bis zehn Minuten dauern. Alle Änderungen an der Richtlinie werden mit dem Gerät synchronisiert. Sie können den Status der Synchronisierungsanforderung in der Spalte **Remote Sync State (Remotesynchronisierungsstatus)** der Ansicht **Geräte** oder im Dialogfeld **Eigenschaften** des Geräts verfolgen.
+
+## <a name="additional-security-role-support"></a>Unterstützung zusätzlicher Sicherheitsrollen
+
+Zusätzlich zum Hauptadministrator haben nun die folgenden integrierten Sicherheitsrollen vollen Zugriff auf Elemente des Knotens **Alle unternehmenseigenen Geräte**, einschließlich **Predeclared Devices** (Vorab deklarierte Geräte), **iOS Enrollment Profiles** (iOS-Anmeldungsprofile)a und **Windows Enrollment Profiles** (Windows-Anmeldungsprofile): •   **Asset-Manager** •   **Company Resource Access Manager** (Manager für Zugriff auf Unternehmensressourcen)
+
+Der Rolle **Analyst mit Leseberechtigung** wird weiterhin der schreibgeschützte Zugriff auf diese Bereiche der Configuration Manager-Konsole gewährt.
+
+## <a name="conditional-access-for-windows-10-vpn-profiles"></a>Bedingter Zugriff für Windows 10-VPN-Profile
+
+Sie können jetzt festlegen, dass in Azure Active Directory registrierte Windows 10-Geräte kompatibel sein müssen, damit sie VPN-Zugriff über in der Configuration Manager-Konsole erstellte Windows 10-VPN-Profile haben. Möglich ist dies über das neue Kontrollkästchen **Bedingten Zugriff für diese VPN-Verbindung aktivieren** auf der Seite **Authentifizierungsmethode** im Assistenten zum Erstellen von VPN-Profilen und in den VPN-Profileigenschaften für Windows 10-VPN-Profile. Wenn Sie den bedingten Zugriff für das Profil aktivieren, können Sie auch ein separates Zertifikat für die Einmalanmeldungsauthentifizierung angeben.
 
 ## <a name="see-also"></a>Siehe auch
 [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Always On | System Center Configuration Manager
+title: SQL Server Always On | Microsoft-Dokumentation
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -15,8 +15,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 570e651d486a6120eb062ef845930445596054da
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 9d4d0c741418af29edc586a5d629fc61f86da426
 
 
 ---
@@ -152,15 +152,7 @@ ms.openlocfilehash: 570e651d486a6120eb062ef845930445596054da
 
      Siehe [Anzeigen oder Ändern des Wiederherstellungsmodells einer Datenbank](https://msdn.microsoft.com/library/ms189272\(v=sql.120\).aspx) in der SQL Server-Dokumentation. (Verfügbarkeitsgruppen unterstützen nur VOLLSTÄNDIG).  
 
-3.  Verwenden Sie SQL Server, um eine vollständige Sicherung Ihrer Standortdatenbank zu erstellen, und dann:  
-
-    -   Wenn Ihr aktueller Datenbankserver kein Mitglied der Verfügbarkeitsgruppe sein soll oder nicht als anfängliches primäres Replikat für die Verfügbarkeitsgruppe verwendet wird, stellen Sie eine Kopie der Standortdatenbank auf dem Server wieder her, der das primäre Replikat der Gruppe hostet.  
-
-    -   Wenn der aktuellen Datenbankserver Mitglied der Verfügbarkeitsgruppe sein wird, planen Sie die Verwendung dieses Servers als primäres Replikatsmitglied der Verfügbarkeitsgruppe. Wenn Sie dies tun, müssen Sie keine Kopie der Standortdatenbank auf diesem oder einem anderen Server wiederherstellen.  
-
-    Informationen zum Ausführen dieses Schritts finden Sie unter [Erstellen einer vollständigen Datenbanksicherung](https://msdn.microsoft.com/library/ms187510\(v=sql.120\).aspx) und [Wiederherstellen einer Datenbanksicherung (SQL Server Management Studio)](https://msdn.microsoft.com/library/ms177429\(v=sql.120\).aspx)in der SQL Server-Dokumentation.  
-
-4.  Verwenden Sie auf dem Server, auf dem das primäre Replikat der Gruppe gehostet wird, den **Assistenten für neue Verfügbarkeitsgruppen** zum Erstellen der Verfügbarkeitsgruppe. Gehen Sie im Assistenten so vor:  
+3.  Verwenden Sie auf dem Server, auf dem das primäre Replikat der Gruppe gehostet wird, den **Assistenten für neue Verfügbarkeitsgruppen** zum Erstellen der Verfügbarkeitsgruppe. Gehen Sie im Assistenten so vor:  
 
     -   Wählen Sie auf der Seite **Datenbank auswählen** die Datenbank für Ihren Configuration Manager-Standort aus.  
 
@@ -174,15 +166,15 @@ ms.openlocfilehash: 570e651d486a6120eb062ef845930445596054da
 
     Weitere Informationen finden Sie unter [Verwenden des Assistenten für Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/hh403415\(v=sql.120\).aspx) in der SQL Server-Dokumentation.  
 
-5.  Nach der Konfiguration der Verfügbarkeitsgruppe konfigurieren Sie die Standortdatenbank für das primäre Replikat mit der **TRUSTWORTHY** -Eigenschaft, und **aktivieren Sie dann die CLR-Integration**. Informationen zur entsprechenden Konfiguration finden Sie unter [TRUSTWORTHY-Datenbankeigenschaft](https://msdn.microsoft.com/library/ms187861\(v=sql.120\).aspx) und  [Aktivieren der CLR-Integration](https://msdn.microsoft.com/library/ms131048\(v=sql.120\).aspx) in der SQL Server-Dokumentation.  
+4.  Nach der Konfiguration der Verfügbarkeitsgruppe konfigurieren Sie die Standortdatenbank für das primäre Replikat mit der **TRUSTWORTHY** -Eigenschaft, und **aktivieren Sie dann die CLR-Integration**. Informationen zur entsprechenden Konfiguration finden Sie unter [TRUSTWORTHY-Datenbankeigenschaft](https://msdn.microsoft.com/library/ms187861\(v=sql.120\).aspx) und  [Aktivieren der CLR-Integration](https://msdn.microsoft.com/library/ms131048\(v=sql.120\).aspx) in der SQL Server-Dokumentation.  
 
-6.  Führen Sie die folgenden Schritte aus, um alle sekundären Replikate in der Verfügbarkeitsgruppe zu konfigurieren:  
+5.  Führen Sie die folgenden Schritte aus, um alle sekundären Replikate in der Verfügbarkeitsgruppe zu konfigurieren:  
 
     1.  Führen Sie für das aktuelle primäre Replikat ein manuelles Failover in ein sekundäres Replikat aus. Siehe [Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe](https://msdn.microsoft.com/library/hh231018\(v=sql.120\).aspx) in der SQL Server-Dokumentation.  
 
     2.  Konfigurieren Sie die Datenbank für das neue primäre Replikat mit der **TRUSTWORTHY** -Eigenschaft, und **aktivieren Sie dann die CLR-Integration**.  
 
-7.  Nachdem alle Replikate zu primären Replikaten höher gestuft und die Datenbanken konfiguriert wurden, ist die Verfügbarkeitsgruppe für die Verwendung mit Configuration Manager bereit.  
+6.  Nachdem alle Replikate zu primären Replikaten höher gestuft und die Datenbanken konfiguriert wurden, ist die Verfügbarkeitsgruppe für die Verwendung mit Configuration Manager bereit.  
 
 
 
@@ -220,15 +212,13 @@ ms.openlocfilehash: 570e651d486a6120eb062ef845930445596054da
 
 2.  Beenden Sie den Configuration Manager-Standort, indem Sie **Preinst.exe /stopsite** ausführen. Informationen hierfür finden Sie unter [Hierarchiewartungstool (Preinst.exe) für System Center Configuration Manager](../../../../core/servers/manage/hierarchy-maintenance-tool-preinst.exe.md).  
 
-3.  Verwenden Sie SQL Server, um eine Sicherung der Standortdatenbank aus dem primären Replikat zu erstellen, und stellen Sie dann diese Sicherung auf dem neuen sekundären Replikatserver wieder her. Siehe [Erstellen einer vollständigen Datenbanksicherung](https://msdn.microsoft.com/library/ms187510\(v=sql.120\).aspx) und [Wiederherstellen einer Datenbanksicherung (SQL Server Management Studio)](https://msdn.microsoft.com/library/ms177429\(v=sql.120\).aspx) in der SQL Server-Dokumentation.  
-
-4.  Konfigurieren Sie alle sekundären Replikate. Führen Sie die folgenden Schritte für alle sekundären Replikate in der Verfügbarkeitsgruppe aus:  
+3.  Konfigurieren Sie alle sekundären Replikate. Führen Sie die folgenden Schritte für alle sekundären Replikate in der Verfügbarkeitsgruppe aus:  
 
     1.  Führen Sie für das primäre Replikat ein manuelles Failover in ein neues sekundäres Replikat aus. Siehe [Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe](https://msdn.microsoft.com/library/hh231018\(v=sql.120\).aspx) in der SQL Server-Dokumentation.  
 
     2.  Konfigurieren Sie die Datenbank auf dem neuen Server mit der „Trustworthy“-Eigenschaft, und aktivieren Sie die CLR-Integration. Siehe [TRUSTWORTHY-Datenbankeigenschaft](https://msdn.microsoft.com/library/ms187861\(v=sql.120\).aspx) und  [Aktivieren der CLR-Integration](https://msdn.microsoft.com/library/ms131048\(v=sql.120\).aspx)in der SQL Server-Dokumentation.  
 
-5.  Starten Sie den Standort neu, indem Sie die Dienste Standortkomponenten-Manager (**sitecomp**) und **SMS_Executive** starten.  
+4.  Starten Sie den Standort neu, indem Sie die Dienste Standortkomponenten-Manager (**sitecomp**) und **SMS_Executive** starten.  
 
 #### <a name="to-remove-a-replica-member-from-the-availability-group"></a>So entfernen ein Replikatsmitglied aus der Verfügbarkeitsgruppe  
 
@@ -270,6 +260,6 @@ ms.openlocfilehash: 570e651d486a6120eb062ef845930445596054da
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

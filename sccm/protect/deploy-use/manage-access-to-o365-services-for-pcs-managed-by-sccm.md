@@ -1,8 +1,8 @@
 ---
-title: "Verwalten des Zugriffs auf Office 365-Dienste für verwaltete PCs | System Center Configuration Manager"
+title: "Verwalten des Zugriffs auf Office 365-Dienste für verwaltete PCs | Microsoft-Dokumentation"
 description: "Erfahren Sie, wie Sie den bedingten Zugriff für PCs konfigurieren, die von System Center Configuration Manager verwaltet werden."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ccdb424a-b603-4ccc-af36-558924248022
 caps.latest.revision: 15
-author: karthikaraman
-ms.author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5c6cf3c1697b49708aa5192b67b08b700da7dc72
-ms.openlocfilehash: c475c560971ab73e8be7671164a010a91bd3f229
+ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
+ms.openlocfilehash: da5fcd65d7af8d73aa23f4a7d96cd8fc6e48f9dc
 
 
 ---
@@ -30,7 +30,7 @@ ms.openlocfilehash: c475c560971ab73e8be7671164a010a91bd3f229
  Ab Version 1602 von Configuration Manager können Sie einen bedingten Zugriff für PCs konfigurieren, die von System Center Configuration Manager verwaltet werden.  
 
 > [!IMPORTANT]  
->  Dieses Vorabfeature ist in Update 1602 und Update 1606 verfügbar. Vorab veröffentlichte Features werden in das Produkt aufgenommen, um sie in einem frühen Stadium in einer Produktionsumgebung zu testen. Sie sollten nicht als für den Produktivbetrieb geeignet betrachtet werden. Weitere Informationen finden Sie unter [Use pre-release features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease) (Verwenden von Vorabfeatures aus Updates).
+>  Dieses Vorabfeature ist in Update 1602, Update 1606 und Update 1610 verfügbar. Vorab veröffentlichte Features werden in das Produkt aufgenommen, um sie in einem frühen Stadium in einer Produktionsumgebung zu testen. Sie sollten nicht als für den Produktivbetrieb geeignet betrachtet werden. Weitere Informationen finden Sie unter [Use pre-release features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease) (Verwenden von Vorabfeatures aus Updates).
 > - Nach der Installation von Update 1602 wird der Featuretyp als endgültige Version angezeigt, obwohl es sich um eine Vorabversion handelt.
 > - Wenn Sie anschließend von 1602 auf 1606 aktualisieren, wird der Featuretyp als endgültige Version angezeigt, obwohl es sich weiterhin um eine Vorabversion handelt.
 > - Wenn Sie von Version 1511 direkt auf 1606 aktualisieren, wird der Featuretyp als Vorabversion angezeigt.
@@ -96,16 +96,16 @@ ms.openlocfilehash: c475c560971ab73e8be7671164a010a91bd3f229
 
  Active Directory-Sicherheitsbenutzergruppen. Diese Benutzergruppen müssen mit Azure Active Directory synchronisiert werden. Sie können diese Gruppen auch im Office 365 Admin Center oder im Intune-Kontenportal konfigurieren.  
 
- Sie können für jede Richtlinie zwei Arten von Gruppen angeben:  
+ Sie können für jede Richtlinie zwei Arten von Gruppen angeben :  
 
--   **Zielgruppen:** Benutzergruppen, auf die die Richtlinie angewendet wird  
+-   **Zielgruppen:** Benutzergruppen, auf die die Richtlinie angewendet wird Die gleiche Gruppe sollte sowohl für Konformität und die Richtlinie für bedingten Zugriff verwendet werden.  
 
 -   **Ausgenommene Gruppen:** Benutzergruppen, die von der Richtlinie ausgenommen sind (optional)  
     Benutzer, die in beiden Gruppen enthalten sind, werden von der Richtlinie ausgenommen.  
 
      Es werden nur die Gruppen ausgewertet, für die die Richtlinie für bedingten Zugriff gilt.  
 
-### <a name="step-3-create-a-conditional-access-policy-for-exchange-online-and-sharepoint-online"></a>Schritt 3:  Erstellen einer Richtlinie für bedingten Zugriff für Exchange Online und SharePoint Online  
+### <a name="step-3--create-a-conditional-access-policy-for-exchange-online-and-sharepoint-online"></a>Schritt 3:  Erstellen einer Richtlinie für bedingten Zugriff für Exchange Online und SharePoint Online  
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Bestand und Kompatibilität**.  
 
@@ -126,7 +126,7 @@ ms.openlocfilehash: c475c560971ab73e8be7671164a010a91bd3f229
 6.  Klicken Sie unter **Zielgruppen**auf **Ändern** , um die Active Directory-Sicherheitsgruppen auszuwählen, für die die Richtlinie gelten soll.  
 
     > [!NOTE]  
-    >  Auf die Benutzergruppen, auf die die Richtlinien für bedingten Zugriff angewendet werden, muss auch die Kompatibilitätsrichtlinie angewendet werden.  
+    >  Die gleiche Sicherheitsbenutzergruppe sollte für die Bereitstellung von Konformitätsrichtlinien und die Zielgruppe für bedingte Zugriffsrichtlinien verwendet werden.  
 
      Klicken Sie unter **Ausgenommene Gruppen**optional auf **Ändern** , um die Active Directory-Sicherheitsgruppen auszuwählen, die von dieser Richtlinie ausgenommen werden.  
 
@@ -148,6 +148,6 @@ ms.openlocfilehash: c475c560971ab73e8be7671164a010a91bd3f229
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

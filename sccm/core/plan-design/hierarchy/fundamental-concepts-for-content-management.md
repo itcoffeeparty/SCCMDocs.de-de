@@ -1,5 +1,5 @@
 ---
-title: "Grundlegende Konzepte für das Content Management | System Center Configuration Manager"
+title: Grundlagen der Inhaltsverwaltung | Microsoft-Dokumentation
 description: Verwenden Sie Tools und Optionen in System Center Configuration Manager, um den Inhalt zu verwalten, den Sie bereitstellen.
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 27342ef83d877c31f39bc232e3e19e37b78e62da
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 577d7e3acc27e3b50e22fc42d5db2f68d9cdde29
 
 
 ---
@@ -39,7 +39,7 @@ Nachstehend finden Sie die Schlüsselkonzepte für die Inhaltsverwaltung. Wenn f
 
      Dieses Konto wird auch von Pullverteilungspunkten verwendet, um Inhalte von einem Quellverteilungspunkt in einer Remotegesamtstruktur abzurufen.  
 
--   **Paketzugriffskonto** – Standardmäßig gewährt Configuration Manager den generischen Zugriffskonten „Benutzer“ und „Administratoren“ Zugriff auf Inhalte auf einem Verteilungspunkt. Sie können jedoch weitere Berechtigungen konfigurieren, um den Zugriff zu beschränken. Siehe &lt;Verwalten von Konten für den Zugriff auf Paketinhalte\>  
+-   **Paketzugriffskonto** – Standardmäßig gewährt Configuration Manager den generischen Zugriffskonten „Benutzer“ und „Administratoren“ Zugriff auf Inhalte auf einem Verteilungspunkt. Sie können jedoch weitere Berechtigungen konfigurieren, um den Zugriff zu beschränken.   
 
 -   **Multicastverbindungskonto** – Wird für Betriebssystembereitstellungen verwendet  
 
@@ -48,7 +48,7 @@ Weitere Informationen zu diesen Konten finden Sie unter [Verwalten von Konten f�
 ## <a name="bandwidth-throttling-and-scheduling"></a>Zeitplanung und Einschränkung der Bandbreite  
  Sowohl Einschränkung als auch Zeitplanung sind Optionen, mit denen Sie steuern können, wann Inhalte von einem Standortserver an Verteilungspunkte verteilt werden. Dies ist mit der Bandbreitensteuerung für dateibasierte Replikation von Standort zu Standort vergleichbar, steht damit aber in keinem direkten Zusammenhang.  
 
- Weitere Informationen finden Sie unter [Manage network bandwidth](/sccm/core/plan-design/hierarchy/manage-network-bandwidth) (Verwalten der Netzwerkbandbreite).
+ Weitere Informationen finden Sie unter [Verwalten der Netzwerkbandbreite für Inhalt](/sccm/core/plan-design/hierarchy/manage-network-bandwidth).
 
 ## <a name="binary-differential-replication"></a>Binäre differenzielle Replikation  
  Bei der Verteilung von Aktualisierungen für Inhalte, die Sie zuvor an anderen Standorten oder einem Remoteverteilungspunkt bereitgestellt haben, wird zum Reduzieren der Netzwerkbandbreite automatisch eine Voraussetzung für Verteilungspunkte verwendet, die binäre differenzielle Replikation (BDR), manchmal auch als Deltareplikation bezeichnet.  
@@ -75,8 +75,12 @@ Für Anwendungen wird immer die binäre differenzielle Replikation verwendet. F�
 
 -   Auf diese Weise muss der Inhalt von Clients im gleichen Subnetz später nicht erneut vom Verteilungspunkt heruntergeladen werden, da der Inhalt für spätere Übertragungen über mehrere Clients verteilt ist.  
 
+## <a name="peer-cache"></a>Peercache
+Ab Version 1610 unterstützt Clientpeercache Sie beim Verwalten von Bereitstellungen von Inhalten an Clients an Remotestandorten. Peercache ist eine integrierte Configuration Manager-Lösung für Clients zum Freigeben von Inhalten für andere Clients direkt aus ihrem lokalen Cache.
 
+Nachdem Sie Clienteinstellungen bereitgestellt haben, die Peercache für eine Sammlung aktivieren, können Mitglieder dieser Sammlung als Peerinhaltsquelle für andere Clients in der gleichen Begrenzungsgruppe fungieren.
 
+Weitere Informationen finden Sie unter [Peer Cache for Configuration Manager clients](/sccm/core/plan-design/hierarchy/client-peer-cache) (Peercache für Configuration Manager-Clients).
 
 
 ## <a name="windows-pe-peer-cache"></a>Windows PE-Peercache
@@ -94,7 +98,7 @@ Weitere Informationen finden Sie unter [Windows PE-Peercache](../../../osd/get-s
 
     -   Ein cloudbasierter Verteilungspunkt wird nur dann für ein Fallback verwendet, wenn keine lokalen Verteilungspunkte verfügbar sind.  
 
--   **Internet** :  
+-   **Internet**:  
 
     -   Verteilungspunkte müssen HTTPS akzeptieren.  
 
@@ -111,7 +115,7 @@ Weitere Informationen finden Sie unter [Windows PE-Peercache](../../../osd/get-s
 ## <a name="content-library"></a>Inhaltsbibliothek  
  Der Einzelinstanz-Inhaltsspeicher, der von Configuration Manager verwendet wird, um die Gesamtgröße des kombinierten Inhaltstexts zu reduzieren, den Sie verteilen.  
 
-Weitere Informationen zur [Inhaltsbibliothek](../../../core/plan-design/hierarchy/the-content-library.md)
+Weitere Informationen zur [Inhaltsbibliothek](../../../core/plan-design/hierarchy/the-content-library.md).
 
 
 ## <a name="distribution-point"></a>Verteilungspunkt  
@@ -119,9 +123,9 @@ Weitere Informationen zur [Inhaltsbibliothek](../../../core/plan-design/hierarch
 
  Der (nicht spezialisierte) Basisverteilungspunkt wird häufig als Standardverteilungspunkt bezeichnet.  Es gibt zwei Variationen auf dem Standardverteilungspunkt, die besondere Aufmerksamkeit erhalten:  
 
--   **Pullverteilungspunkt** – Eine Variante eines Verteilungspunkts, bei der der Verteilungspunkt Inhalt von einem anderen Verteilungspunkt (einem Quellverteilungspunkt) in ähnlicher Weise erhält, wie Clients Inhalte von Verteilungspunkten herunterladen. Pullverteilungspunkte können Ihnen dabei helfen, Engpässe bei der Netzwerkbandbreite zu vermeiden, die auftreten können, wenn der Standortserver Inhalt an jeden Verteilungspunkt direkt verteilen muss.  [Verwenden eines Pullverteilungspunkts mit System Center Configuration Manager](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)  
+-   **Pullverteilungspunkt** – Eine Variante eines Verteilungspunkts, bei der der Verteilungspunkt Inhalt von einem anderen Verteilungspunkt (einem Quellverteilungspunkt) in ähnlicher Weise erhält, wie Clients Inhalte von Verteilungspunkten herunterladen. Pullverteilungspunkte können Ihnen dabei helfen, Engpässe bei der Netzwerkbandbreite zu vermeiden, die auftreten können, wenn der Standortserver Inhalt an jeden Verteilungspunkt direkt verteilen muss.  [Verwenden eines Pullverteilungspunkts mit System Center Configuration Manager](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).
 
--   **Cloudbasierter Verteilungspunkt** – Eine Variante eines in Microsoft Azure installierten Verteilungspunkts. [Verwenden eines cloudbasierten Verteilungspunkts mit System Center Configuration Manager](../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)  
+-   **Cloudbasierter Verteilungspunkt** – Eine Variante eines in Microsoft Azure installierten Verteilungspunkts. [Verwenden eines cloudbasierten Verteilungspunkts mit System Center Configuration Manager](../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md).  
 
 
 Standardverteilungspunkte unterstützen eine Reihe von Konfigurationen und Features, z. B. Einschränkung und Zeitplanung, PXE und Multicast oder vorab bereitgestellten Inhalt.  
@@ -155,18 +159,29 @@ Standardverteilungspunkte unterstützen eine Reihe von Konfigurationen und Featu
 >  Bei Pullverteilungspunkten wird das Konzept der Priorität außerdem verwendet, um die Sequenz von deren Quellverteilungspunkten zu ordnen.  
 >   
 >  -   Die Verteilungspunktpriorität für Inhaltsübertragungen an den Verteilungspunkt unterscheidet sich von der Priorität, die von Pullverteilungspunkten bei der Inhaltssuche auf Quellverteilungspunkten genutzt wird.  
-> -   Weitere Informationen finden Sie unter [Verwenden eines Pullverteilungspunkts mit System Center Configuration Manager](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).  
+>  -   Weitere Informationen finden Sie unter [Verwenden eines Pullverteilungspunkts mit System Center Configuration Manager](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).  
 
 
 ## <a name="fallback"></a>Fallback  
- Fallbackeinstellungen stehen im Zusammenhang mit der Verwendung von **bevorzugten Verteilungspunkten** und mit den von Clients verwendeten Quellspeicherorten für Inhalt.  
+ Ab Version 1610 haben sich einige Konzepte geändert, wie Clients einen Verteilungspunkt finden, der Inhalte enthält, einschließlich der Ausführung von Fallbacks. Bitte verwenden Sie die folgenden Informationen, die für die von Ihnen verwendete Version gelten:
+
+**Version 1610 und höher:**   
+Clients, die keine Inhalte eines Verteilungspunkts finden können, der ihrer aktuellen Begrenzungsgruppe zugeordnet ist, können einen Fallback ausführen, um Quellspeicherorte zu verwenden, die benachbarten Begrenzungsgruppen zugeordnet sind. Damit eine benachbarte Begrenzungsgruppe für Fallbacks verwendet werden kann, muss eine Beziehung zu der aktuellen Begrenzungsgruppe des Clients definiert sein. Diese Beziehung muss eine konfigurierte Zeitspanne enthalten. Diese Zeit muss abgelaufen sein, bevor ein Client, der lokal keinen Inhalt finden kann, Inhaltsquellen der benachbarten Begrenzungsgruppe in seine Suche mit aufnehmen kann.
+
+Die Konzepte der bevorzugten Verteilungspunkte werden nicht mehr verwendet, und Einstellungen für die Option „Allow fallback source locations for content“ (Fallbackspeicherorte für Inhalt zulassen) sind nicht mehr verfügbar oder erzwungen.
+
+Weitere Informationen finden Sie unter [Begrenzungsgruppen](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+
+
+**Version 1511, 1602 und 1606:**   
+Fallbackeinstellungen stehen im Zusammenhang mit der Verwendung von **bevorzugten Verteilungspunkten** und mit den von Clients verwendeten Quellspeicherorten für Inhalt.
 
 -   Standardmäßig laden Clients Inhalt nur von einem bevorzugten Verteilungspunkt herunter (einem den Begrenzungsgruppen des Clients zugeordneten Verteilungspunkt).  
 
 -   Wenn für einen Verteilungspunkt jedoch die Option **Die Verwendung eines Fallbackquellpfads für den Inhalt durch Clients zulassen** aktiviert ist, können Clients diesen Verteilungspunkt nur als gültige Inhaltsquelle verwenden, die keine Bereitstellung von einem ihrer bevorzugten Verteilungspunkte abrufen können.  
 
 
-Informationen zu den verschiedenen Inhaltsorten und Fallbackszenarien finden Sie unter [Szenarien für Quellspeicherorte für Inhalt](../../../core/plan-design/hierarchy/content-source-location-scenarios.md).
+Informationen zu den verschiedenen Inhaltsorten und Fallbackszenarios finden Sie unter [Szenarios für Quellspeicherorte für Inhalt in System Center Configuration Manager](../../../core/plan-design/hierarchy/content-source-location-scenarios.md). Informationen zu Begrenzungsgruppen finden Sie unter [Boundary groups for versions 1511,1602, and 1606 (Begrenzungsgruppen für Version 1511, 1602 und 1606)](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606).
 
 ## <a name="network-bandwidth"></a>Netzwerkbandbreite  
  Zum Verwalten der beim Verteilen von Inhalt verwendeten Menge an Netzwerkbandbreite stehen Ihnen die folgenden Optionen zur Verfügung:  
@@ -175,19 +190,26 @@ Informationen zu den verschiedenen Inhaltsorten und Fallbackszenarien finden Sie
 
 -   Verwenden von Zeitplanung und Einschränkung: Konfigurationen, mit denen Sie steuern, wann und wie Inhalt an Verteilungspunkte verteilt wird.  
 
-Weitere Informationen finden Sie unter [Manage network bandwidth](/sccm/core/plan-design/hierarchy/manage-network-bandwidth) (Verwalten der Netzwerkbandbreite).
+Weitere Informationen finden Sie unter [Verwalten der Netzwerkbandbreite für Inhalt](/sccm/core/plan-design/hierarchy/manage-network-bandwidth).
 
 ## <a name="network-connection-speed-to-content-source"></a>Geschwindigkeit der Netzwerkverbindung zur Inhaltsquelle  
+Ab Version 1610 haben sich einige Konzepte geändert, wie Clients einen Verteilungspunkt finden, der Inhalte enthält, einschließlich die Netzwerkverbindungsgeschwindigkeit zu einer Inhaltsquelle. Bitte verwenden Sie die folgenden Informationen, die für die von Ihnen verwendete Version gelten:
+
+**Version 1610 und höher:**   
+Netzwerkgeschwindigkeiten die einen Verteilungspunkt als **Schnell** oder **Langsam** definieren, werden nicht mehr verwendet. Stattdessen wird jedes Standortsystem, das einer Begrenzungsgruppe zugeordnet ist, auf die gleiche Weise behandelt.
+
+Weitere Informationen finden Sie unter [Begrenzungsgruppen](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+
+
+**Version 1511, 1602 und 1606:**   
+
  Sie können die Netzwerkverbindungsgeschwindigkeit der einzelnen Verteilungspunkte in einer Begrenzungsgruppe konfigurieren:  
 
 -   Dieser Wert wird von den Clients bei der Verbindung mit dem Verteilungspunkt verwendet.  
-
 -   Für die Netzwerkverbindungsgeschwindigkeit ist standardmäßig die Einstellung **Schnell**festgelegt, es kann aber auch **Langsam**festgelegt werden.  
-
 -   Anhand der **Netzwerkverbindungsgeschwindigkeit** und der Konfiguration einer Bereitstellung wird festgelegt, ob Inhalt von Verteilungspunkten heruntergeladen werden kann, wenn der betreffende Client Mitglied in einer zugeordneten Begrenzungsgruppe ist.  
 
-
-Informationen zu den verschiedenen Inhaltsorten und Fallbackszenarien finden Sie unter [Szenarien für Quellspeicherorte für Inhalt](../../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
+Informationen zu den verschiedenen Inhaltsorten und Fallbackszenarios finden Sie unter [Szenarios für Quellspeicherorte für Inhalt in System Center Configuration Manager](../../../core/plan-design/hierarchy/content-source-location-scenarios.md). Informationen zu Begrenzungsgruppen finden Sie unter [Boundary groups for versions 1511,1602, and 1606 (Begrenzungsgruppen für Version 1511, 1602 und 1606)](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606).
 
 ## <a name="on-demand-content-distribution"></a>Bedarfsgesteuerte Inhaltsverteilung  
  Eine Option, die Sie für einzelne Anwendungen und Pakete (Bereitstellungen) festlegen können, um die bedarfsgesteuerte Inhaltsverteilung an bevorzugte Verteilungspunkte zu aktivieren.  
@@ -198,8 +220,9 @@ Informationen zu den verschiedenen Inhaltsorten und Fallbackszenarien finden Sie
 
 -   Obwohl dies bewirkt, dass Configuration Manager den Inhalt automatisch an die bevorzugten Verteilungspunkte dieses Clients verteilt, erhält der Client den Inhalt möglicherweise von anderen Verteilungspunkten, bevor die Bereitstellung an die bevorzugten Verteilungspunkte des Clients übertragen wurden. In diesem Fall ist der Inhalt auf diesem Verteilungspunkt anschließend für den nächsten Client verfügbar, der nach der Bereitstellung sucht.  
 
+Wenn Sie Version 1610 oder höher verwenden, finden Sie weitere Informationen unter [Begrenzungsgruppen](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+Wenn Sie Version 1511, 1602 oder 1606 verwenden, finden Sie Informationen zu den verschiedenen Inhaltsorten und Fallbackszenarios unter [Szenarios für Quellspeicherorte für Inhalt](../../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
 
-Informationen zu den verschiedenen Inhaltsorten und Fallbackszenarien finden Sie unter [Szenarien für Quellspeicherorte für Inhalt](../../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
 
 
 ## <a name="package-transfer-manager"></a>Paketübertragungs-Manager  
@@ -208,24 +231,25 @@ Informationen zu den verschiedenen Inhaltsorten und Fallbackszenarien finden Sie
  Weitere Informationen finden Sie unter [Paketübertragungs-Manager](../../../core/plan-design/hierarchy/package-transfer-manager.md).  
 
 ## <a name="preferred-distribution-point"></a>Bevorzugter Verteilungspunkt  
- Verteilungspunkte, die aktuellen Begrenzungsgruppen eines Clients zugeordnet sind.  
+ Ein bevorzugter Verteilungspunkt enthält Verteilungspunkte, die aktuellen Begrenzungsgruppen eines Clients zugeordnet sind.  
 
  Sie haben die Möglichkeit, jedem Verteilungspunkt einen oder mehrere Begrenzungsgruppen zuzuordnen:  
 
 -   Diese Zuweisung hilft dem Client, die Verteilungspunkte zu erkennen, von denen er Inhalt herunterladen kann.  
-
 -   Standardmäßig können Clients Inhalt nur von einem bevorzugten Verteilungspunkt herunterladen.  
 
 
-Informationen zu den verschiedenen Inhaltsorten und Fallbackszenarien finden Sie unter [Szenarien für Quellspeicherorte für Inhalt](../../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
+Weitere Informationen:
+ - Wenn Sie Version 1610 oder höher verwenden, finden Sie weitere Informationen unter [Begrenzungsgruppen](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+ - Wenn Sie Version 1511, 1602 oder 1606 verwenden, finden Sie weitere Informationen unter [Szenarios für Quellspeicherorte für Inhalt](../../../core/plan-design/hierarchy/content-source-location-scenarios.md).
 
 ## <a name="prestage-content"></a>Vorabbereitstellen von Inhalt  
  Ein Vorgang der Übertragung von Inhalt an einen Verteilungspunkt, ohne dass auf Configuration Manager zurückgegriffen wird, um den Inhalt im Netzwerk zu verteilen.  
 
- Weitere Informationen finden Sie unter [Manage network bandwidth](/sccm/core/plan-design/hierarchy/manage-network-bandwidth) (Verwalten der Netzwerkbandbreite).
+ Weitere Informationen finden Sie unter [Verwalten der Netzwerkbandbreite für Inhalt](/sccm/core/plan-design/hierarchy/manage-network-bandwidth).
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

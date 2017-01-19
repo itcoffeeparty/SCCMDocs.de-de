@@ -1,5 +1,5 @@
 ---
-title: "Optionen für Standortsystemrollen | System Center Configuration Manager"
+title: "Optionen für Standortsystemrollen | Microsoft-Dokumentation"
 description: "In diesem Artikel finden Sie Informationen über Configuration Manager-Standortsystemrollen, die nicht unbedingt selbsterklärend sind."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: a3c370dedc23e2eda38bd942b1d5bed91bdc3876
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 2ff7c8b35538cf475aad665b29a95304d794c4ff
 
 ---
 # <a name="configuration-options-for-site-system-roles-for-system-center-configuration-manager"></a>Konfigurationsoptionen für Standortsystemrollen für System Center Configuration Manager
@@ -65,15 +65,12 @@ Die meisten Konfigurationsoptionen für System Center Configuration Manager-Stan
  Informationen zum Konfigurieren der Verteilungspunkte für Multicast-Bereitstellungen finden Sie unter [Verwenden von Multicast zum Bereitstellen von Windows über das Netzwerk mit System Center Configuration Manager](../../../../osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md).  
 
  **IIS installieren und konfigurieren, sofern dies für Configuration Manager erforderlich ist**  
-
  Aktivieren Sie diese Option, damit IIS von Configuration Manager auf dem Server installiert und konfiguriert werden, sofern sie noch nicht installiert sind. IIS müssen auf allen Verteilungspunkten installiert sein, und Sie müssen diese Einstellung auswählen, um mit dem Assistenten fortzufahren.  
 
  **Standortsystem-Installationskonto**  
-
  Bei Verteilungspunkten, die auf einem Standortserver installiert sind, wird nur die Verwendung des Computerkontos des Standortservers als Standortsystem-Installationskonto unterstützt.  
 
  **Erstellen Sie ein selbstsigniertes Zertifikat, oder importieren Sie ein PKI-Clientzertifikat.**  
-
  Von diesem Zertifikat werden zwei Zwecke erfüllt:  
 
 1.  Durch das Zertifikat wird der Verteilungspunkt gegenüber einem Verwaltungspunkt authentifiziert, bevor vom Verteilungspunkt Statusmeldungen gesendet werden.  
@@ -93,12 +90,12 @@ Es bestehen keine speziellen Anforderungen für den Zertifikatantragsteller oder
 Weitere Informationen zu den Zertifikatanforderungen finden Sie unter [PKI-Zertifikatanforderungen für System Center Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md). Eine Beispielbereitstellung dieses Zertifikats finden Sie im Abschnitt *Bereitstellen des Clientzertifikats für Verteilungspunkte* des Themas [Beispiel für die schrittweise Bereitstellung der PKI-Zertifikate für System Center Configuration Manager: Windows Server 2008-Zertifizierungsstelle](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
 **Diesen Verteilungspunkt für vorab bereitgestellten Inhalt aktivieren**  
-
 Aktivieren Sie dieses Kontrollkästchen, um den Verteilungspunkt für vorab bereitgestellten Inhalt zu aktivieren. Ist diese Einstellung ausgewählt, können Sie das Verteilungsverhalten bei der Inhaltsverteilung konfigurieren. Sie können zwischen den folgenden Möglichkeiten wählen: Inhalt wird vorab am Verteilungspunkt bereitgestellt, nur der Anfangsinhalt des Pakets wird vorab bereitgestellt und Updates erfolgen mithilfe des regulären Inhaltsverteilungsvorgangs, oder für Inhalt des Pakets wird stets der reguläre Inhaltsverteilungsvorgang verwendet.  
 
 **Begrenzungsgruppen**  
-
- Sie können einem Verteilungspunkt Begrenzungsgruppen zuordnen. Bei der Inhaltsbereitstellung müssen sich die Clients in einer dem Verteilungspunkt zugeordneten Begrenzungsgruppe befinden, damit der Verteilungspunkt als Quellort für Inhalt verwendet werden kann. Sie können das Kontrollkästchen **Fallbackquellpfad für Inhalt zulassen** aktivieren, um für Clients außerhalb solcher Begrenzungsgruppen ein Ausweichen auf den Verteilungspunkt als Quellort für Inhalt zu ermöglichen, wenn keine anderen Verteilungspunkte verfügbar sind.  
+ Sie können einem Verteilungspunkt Begrenzungsgruppen zuordnen. Bei der Inhaltsbereitstellung müssen sich die Clients in einer dem Verteilungspunkt zugeordneten Begrenzungsgruppe befinden, damit der Verteilungspunkt als Quellort für Inhalt verwendet werden kann.
+ - **Vor Version 1610** können Sie das Kontrollkästchen **Fallbackquellpfad für Inhalt zulassen** aktivieren, um für Clients außerhalb solcher Begrenzungsgruppen ein Ausweichen auf den Verteilungspunkt als Quellort für Inhalt zu ermöglichen, wenn keine anderen Verteilungspunkte verfügbar sind.
+ - **Ab Version 1610** können Sie **Fallbackquellpfad für Inhalt zulassen** nicht mehr konfigurieren.  Stattdessen können Sie Beziehungen zwischen Begrenzungsgruppen konfigurieren, die bestimmen, ab wann ein Client mit der Suche nach zusätzlichen Begrenzungsgruppen für einen gültigen Quellspeicherort für den Inhalt suchen kann.
 
 ##  <a name="a-namebkmkenrollmentpointa-enrollment-point"></a><a name="BKMK_Enrollment_Point"></a> Anmeldungspunkt  
 Anmeldungspunkte werden zur Installation von Macintosh-Computern und Anmeldung mobiler Geräte  verwendet, die Sie mithilfe der lokalen Geräteverwaltung verwalten. Weitere Informationen finden Sie unter:  
@@ -108,7 +105,6 @@ Anmeldungspunkte werden zur Installation von Macintosh-Computern und Anmeldung m
 -   [Informationen zur Registrierung von Geräten mit der lokalen Verwaltung mobiler Geräte in System Center Configuration Manager](../../../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md)  
 
 **Zulässige Verbindungen**  
-
  Die HTTPS-Einstellung wird automatisch verwendet. Für diese ist ein PKI-Zertifikat für den Server zur Serverauthentifizierung beim Anmeldungsproxypunkt und beim Out-of-Band-Dienstpunkt sowie zur SSL-Datenverschlüsselung erforderlich. Weitere Informationen zu den Zertifikatanforderungen finden Sie unter [PKI-Zertifikatanforderungen für System Center Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md).  
 
  Eine Beispielbereitstellung des Serverzertifikats sowie Informationen zum Konfigurieren des Zertifikats in IIS finden Sie im Abschnitt *Bereitstellen des Webserverzertifikats für Standortsysteme, von denen IIS ausgeführt werden* des Themas [Beispiel für die schrittweise Bereitstellung der PKI-Zertifikate für System Center Configuration Manager: Windows Server 2008-Zertifizierungsstelle](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
@@ -117,14 +113,12 @@ Anmeldungspunkte werden zur Installation von Macintosh-Computern und Anmeldung m
 Weitere Informationen zum Konfigurieren eines Anmeldungsproxypunkts für mobile Geräte finden Sie unter [Informationen zur Registrierung von Geräten mit der lokalen Verwaltung mobiler Geräte in System Center Configuration Manager](../../../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md).  
 
 **Clientverbindungen**  
-
  Die HTTPS-Einstellung wird automatisch verwendet. Für diese ist ein PKI-Zertifikat für den Server zur Serverauthentifizierung bei mobilen Geräten und Macintosh-Computern, die mithilfe von Configuration Management angemeldet wurden, sowie zur SSL-Datenverschlüsselung (Secure Sockets Layer) erforderlich. Weitere Informationen zu den Zertifikatanforderungen finden Sie unter [PKI-Zertifikatanforderungen für System Center Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md).  
 
  Eine Beispielbereitstellung des Serverzertifikats sowie Informationen zum Konfigurieren des Zertifikats in IIS finden Sie im Abschnitt *Bereitstellen des Webserverzertifikats für Standortsysteme, von denen IIS ausgeführt werden* des Themas [Beispiel für die schrittweise Bereitstellung der PKI-Zertifikate für System Center Configuration Manager: Windows Server 2008-Zertifizierungsstelle](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
 ##  <a name="a-namebkmkfallbackstatuspointa-fallback-status-point"></a><a name="BKMK_Fallback_Status_Point"></a> Fallbackstatuspunkt  
 **Anzahl der Zustandsmeldungen** und **Einschränkungsintervall (in Sekunden)**  
-
 Die Standardeinstellungen dieser beiden Optionen (10.000 Zustandsmeldungen und 3.600 Sekunden beim Einschränkungsintervall) sind unter den meisten Umständen ausreichend. Dennoch kann es erforderlich sein, dass Sie diese Einstellungen ändern, wenn die beiden folgenden Bedingungen erfüllt sind:  
 
 -   Vom Fallbackstatuspunkt werden Verbindungen nur aus dem Intranet akzeptiert.  
@@ -161,6 +155,6 @@ Setzen Sie die Einschränkungswerte für den Fallbackstatuspunkt zurück, wenn e
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

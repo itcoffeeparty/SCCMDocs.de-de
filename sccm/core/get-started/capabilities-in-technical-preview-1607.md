@@ -1,5 +1,5 @@
 ---
-title: "Funktionen in Technical Preview 1607 für System Center Configuration Manager"
+title: "Funktionen in Technical Preview 1607 für System Center Configuration Manager | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr zu den Features, die in System Center Configuration Manager Technical Preview 1607 zur Verfügung stehen."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: e3cbc1adc6dc20a9e67adf76472aef0c6cf54ae0
-ms.openlocfilehash: 4d2a9f9b32b898bfe549f2613689c8dbfd22e339
+ms.sourcegitcommit: f6e34e39d267f3bba26d6aa6a912eb4ba4aa3ab2
+ms.openlocfilehash: 1f91cda68204346913bee382a8bbf52b5a58e227
 
 ---
 # <a name="capabilities-in-technical-preview-1607-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1607 für System Center Configuration Manager
@@ -57,7 +57,7 @@ Benutzerdefiniertes Branding für das Softwarecenter wird gemäß den folgenden 
 
 1. Wenn die Standortserverrolle „Anwendungskatalog-Websitepunkt“ nicht installiert ist, zeigt das Softwarecenter den Organisationsnamen an, der in der **Computer-Agent**-Clienteinstellung **Im Softwarecenter angezeigter Organisationsname** angegeben ist. Eine Anleitung hierzu finden Sie unter [Konfigurieren von Clienteinstellungen](../../core/clients/deploy/configure-client-settings.md).
 
-2. Wenn die Standortserverrolle „Anwendungskatalog-Websitepunkt“ installiert ist, zeigt Software Center den Organisationsnamen und die Farbe an, der bzw. die in den Eigenschaften der Standortserverrolle „Anwendungskatalog-Websitepunkt“ angegeben sind. Weitere Informationen finden Sie unter [Konfigurationsoptionen für den Anwendungskatalog-Websitepunkt](../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md#Application-Catalog-website-point).
+2. Wenn die Standortserverrolle „Anwendungskatalog-Websitepunkt“ installiert ist, zeigt Software Center den Organisationsnamen und die Farbe an, der bzw. die in den Eigenschaften der Standortserverrolle „Anwendungskatalog-Websitepunkt“ angegeben sind. Weitere Informationen finden Sie unter [Konfigurationsoptionen für den Anwendungskatalog-Websitepunkt](../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md#BKMK_ApplicationCatalog_Website).
 
 3. Wenn ein Microsoft Intune-Abonnement konfiguriert und mit der Configuration Manager-Umgebung verbunden ist, zeigt das Softwarecenter den Organisationsnamen, die Farbe und das Unternehmenslogo entsprechend den Angaben in den Eigenschaften des Intune-Abonnements an. Weitere Informationen finden Sie unter [Configuring the Microsoft Intune subscription](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription).
 
@@ -79,6 +79,6 @@ Weitere Informationen zu diesem Problem finden Sie auf dem englischsprachigen [B
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

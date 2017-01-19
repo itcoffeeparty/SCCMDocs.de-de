@@ -1,5 +1,5 @@
 ---
-title: "Diagnosedaten für 1602 | System Center Configuration Manager"
+title: "Diagnosedaten für 1602 | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr über die Ebenen der Diagnose- und Nutzungsdaten, die System Center Configuration Manager-Version 1602 sammelt."
 ms.custom: na
 ms.date: 10/06/2016
@@ -34,8 +34,8 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: b38de0ef8886b34ffe091fbfcb185fc42ba66064
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 0f1be7aec8b15c4c61a325f2afb2caa2332cd31a
 
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1602-of-system-center-configuration-manager"></a>Ebenen der Sammlung von Nutzungsdaten zu Diagnosezwecken für System Center Configuration Manager-Version 1602
@@ -51,6 +51,9 @@ System Center Configuration Manager-Version 1602 sammelt drei Ebenen von Diagnos
 
 ##  <a name="a-namebkmkchangea-how-to-change-the-level"></a><a name="bkmk_change"></a> Ändern der Ebene
  Administratoren mit einem rollenbasierten Verwaltungsbereich, der die Berechtigung **Ändern** für die **Standort**-Objektklasse umfasst, können in den Einstellungen der Configuration Manager-Konsole unter „Diagnose- und Nutzungsdaten“ die Ebene der erfassten Daten ändern.
+
+
+  Wechseln Sie in der Konsole zur Registerkarte „Backstage“ (die obere linke Registerkarte mit dem Dropdownpfeil), und wählen Sie **Nutzungsdaten**, und anschließend die Datenebene, die Sie benutzen möchten aus.  
 
 ##  <a name="a-namebkmklevel1a-level-1---basic"></a><a name="bkmk_level1"></a> Ebene 1: Basis
  Die Ebene „Basis“ erfasst Daten über Ihre Hierarchie und wird für die Verbesserung Ihrer Installations- oder Upgradeerfahrung und zur Ermittlung der für Ihre Hierarchie infrage kommenden Configuration Manager-Updates benötigt.
@@ -313,6 +316,6 @@ Ab System Center Configuration Manager-Version 1602 enthält diese Ebene Folgend
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

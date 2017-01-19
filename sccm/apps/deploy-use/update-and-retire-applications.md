@@ -1,5 +1,5 @@
 ---
-title: "Aktualisieren und Außerkraftsetzen von Anwendungen | System Center Configuration Manager"
+title: Aktualisieren und Deinstallieren von Anwendungen | Microsoft-Dokumentation
 description: "Überarbeiten, Ablösen oder Deinstallieren bereitgestellter Anwendungen mithilfe von System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 5eafaca3317f22b0e0b434d9161785cc90c701b7
+ms.sourcegitcommit: c9fb0fa46058c773eec6ac23999357d35d9f970f
+ms.openlocfilehash: 805e04c447747b4d12350b692880dbc005bd7168
 
 
 ---
@@ -26,23 +26,22 @@ ms.openlocfilehash: 5eafaca3317f22b0e0b434d9161785cc90c701b7
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 
-Nach einiger Zeit möchten Sie wahrscheinlich Änderungen an einer Anwendung vornehmen, diese deinstallieren oder eine bereits bereitgestellte Anwendung durch eine neue Anwendung ersetzen. System Center Configuration Manager bietet diese Funktionen, die Ihnen bei Folgendem behilflich sind:  
-  
--   **Überarbeiten von Anwendungen** – Wenn Sie Änderungen an einer Anwendung vornehmen, pflegt Configuration Manager den Verlauf dieser Änderungen. Sie können jederzeit zu einer früheren Version der Anwendung zurückkehren. Außerdem können Sie die Eigenschaften anzeigen, eine ältere Revision einer Anwendung wiederherstellen oder eine ältere Revision löschen.  
+Nach einiger Zeit möchten Sie wahrscheinlich Änderungen an einer Anwendung vornehmen, eine Anwendung deinstallieren oder eine bereits bereitgestellte Anwendung durch eine neue Anwendung ersetzen. System Center Configuration Manager bietet Ihnen diese Funktionen zum Aktualisieren und Deinstallieren von Anwendungen:  
 
-     Weitere Informationen finden Sie unter [Anwendungsrevisionen](/sccm/apps/deploy-use/revise-and-supersede-applications#application-revisions).  
+-   **Überarbeiten von Anwendungen**. Wenn Sie Änderungen an einer Anwendung vornehmen, pflegt Configuration Manager den Verlauf der Änderungen. Sie können jederzeit zu einer früheren Version der Anwendung zurückkehren. Außerdem können Sie die Eigenschaften anzeigen, eine ältere Revision einer Anwendung wiederherstellen oder eine ältere Revision löschen.  
 
--   **Supersede applications** – Ermöglicht es Ihnen, vorhandene Anwendungen mithilfe einer Ablösungsbeziehung zu aktualisieren oder zu ersetzen. Wenn Sie eine Anwendung ablösen, können Sie einen neuen Bereitstellungstyp als Ersatz für den Bereitstellungstyp der abgelösten Anwendung angeben. Sie können außerdem festlegen, ob vor dem Installieren der ablösenden Anwendung ein Upgrade der abzulösenden Anwendung ausgeführt oder die abzulösende Anwendung deinstalliert werden soll.  
+  Weitere Informationen finden Sie unter [Anwendungsrevisionen](revise-and-supersede-applications.md#application-revisions).  
 
-     Weitere Informationen finden Sie unter [Anwendungsablösung](/sccm/apps/deploy-use/revise-and-supersede-applications#application-supersedence).  
+-   **Ablösen von Anwendungen**. Sie können vorhandene Anwendungen mithilfe einer Ablösungsbeziehung aktualisieren oder ersetzen. Wenn Sie eine Anwendung ablösen, können Sie einen neuen Bereitstellungstyp als Ersatz für den Bereitstellungstyp der abgelösten Anwendung angeben. Sie können auch festlegen, ob vor dem Installieren der ablösenden Anwendung ein Upgrade der abzulösenden Anwendung ausgeführt oder die abzulösende Anwendung deinstalliert werden soll.  
 
--   **Deinstallieren von Anwendungen** – Dank Configuration Manager ist das Deinstallieren von Anwendungen einfach. Dies kann im Hintergrund ausgeführt werden, ohne dass der Endbenutzers eingreifen muss.  
-  
-Weitere Informationen finden Sie unter [Deinstallieren von Anwendungen](../../apps/deploy-use/uninstall-applications.md).  
-   
+  Weitere Informationen finden Sie unter [Anwendungsablösung](revise-and-supersede-applications.md#application-supersedence).  
 
+-   **Deinstallieren von Anwendungen**. Dank Configuration Manager ist das Deinstallieren von Anwendungen einfach. Dies kann im Hintergrund ausgeführt werden, ohne dass der Anwendungs- oder Gerätebenutzer eingreifen muss.  
+
+  Weitere Informationen finden Sie unter [Deinstallieren von Anwendungen](uninstall-applications.md).  
 
 
-<!--HONumber=Nov16_HO1-->
+
+<!--HONumber=Dec16_HO3-->
 
 

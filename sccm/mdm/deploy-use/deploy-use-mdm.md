@@ -1,9 +1,9 @@
 ---
-title: "Bereitstellen und Verwenden der Verwaltung mobiler Geräte | System Center Configuration Manager"
+title: "Bereitstellen und Verwenden der Verwaltung mobiler Geräte | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr über die zahlreichen Möglichkeiten, mobile Geräte mit System Center Configuration Manager zu verwalten."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 ms.date: 10/06/2016
 ms.topic: article
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-hybrid
 ms.assetid: 756694f3-4d62-4463-9334-a21991c30ba3
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4347a305124e023d069aa28499fdc3eb3a7de7ef
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 7a7b64a187d66f0dc965fe3568dd14004b2d090e
 
 ---
 
@@ -31,6 +31,6 @@ Sie können System Center Configuration Manager auf verschiedene Arten zum Verwa
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

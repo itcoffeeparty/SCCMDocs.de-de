@@ -1,5 +1,5 @@
 ---
-title: Clientverwaltung Grundlagen | System Center Configuration Manager
+title: Grundlagen der Clientverwaltung | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über Tasks, die Sie für die Verwaltung von System Center Configuration Manager-Clients ausführen können."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: b746c051eee42bcea5c01ced359f568c5aae5fd8
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 9648fc831e21f8a5ee6e12cfe7754933ba9f6239
 
 
 ---
@@ -66,6 +66,6 @@ Mithilfe von Warnungen und Statusinformationen können Sie diese Vorgänge über
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

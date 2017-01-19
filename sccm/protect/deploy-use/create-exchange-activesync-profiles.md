@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Exchange ActiveSync-E-Mail-Profilen | System Center Configuration Manager
+title: Erstellen von Exchange ActiveSync-E-Mail-Profilen | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie E-Mail-Profile in System Center Configuration Manager erstellen und konfigurieren, die mit Microsoft Intune verwendet werden.
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 613ed15742322e2eb90eec3c9f493e3b1755d93a
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 3ff5d53464c61e0dc1836d032bcb3815bae05d1f
 
 
 ---
@@ -39,10 +39,10 @@ E-Mail-Profile tragen zusammen mit Microsoft Intune dazu bei, dass Sie Geräte m
 
 -   iPhone-Geräte unter iOS 5, iOS 6, iOS 7 und iOS 8  
 
--   iPad-Geräte unter iOS 5, iOS 6, iOS 7 und iOS 8  
+-   iPad-Geräte mit iOS 5, iOS 6, iOS 7 und iOS 8  
 
 > [!IMPORTANT]  
->  Um Profile für iOS-, Android-, Samsung KNOX-, Windows Phone- und Windows 8.1- oder Windows 10-Geräte bereitzustellen, müssen diese Geräte bei Microsoft Intune registriert sein. Informationen zum Registrieren von Geräten finden Sie unter [Verwalten mobiler Geräte mit Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).  
+>  Um Profile für iOS-, Android-, Samsung KNOX Standard-, Windows Phone- und Windows 8.1- oder Windows 10-Geräte bereitzustellen, müssen diese Geräte bei Microsoft Intune registriert sein. Informationen zum Registrieren von Geräten finden Sie unter [Verwalten mobiler Geräte mit Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).  
 
  Zusätzlich zum Konfigurieren eines E-Mail-Kontos auf dem Gerät können Sie auch die Synchronisierungseinstellungen für Kontakte, Kalender und Aufgaben konfigurieren.  
 
@@ -57,7 +57,7 @@ Starten des Assistenten zum Erstellen von Exchange ActiveSync-E-Mail-Profilen
 
 2.  Erweitern Sie im Arbeitsbereich **Bestand und Kompatibilität** die **Kompatibilitätseinstellungen**, den **Zugriff auf Unternehmensressourcen**, und klicken Sie dann auf **E-Mail-Profile**.  
 
-3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Exchange ActiveSync-Profil erstellen**. 
+3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Exchange ActiveSync-Profil erstellen**.
 
 4.  Befolgen Sie die Anweisungen im Assistenten.   
 
@@ -173,7 +173,7 @@ Starten des Assistenten zum Erstellen von Exchange ActiveSync-E-Mail-Profilen
         -   **Aufgaben**  
 
 ###  <a name="specify-supported-platforms-for-the-exchange-activesync-email-profile"></a>Angeben der unterstützten Plattformen für das Exchange ActiveSync-E-Mail-Profil  
- 
+
 1.  Wählen Sie auf der Seite **Unterstützte Plattformen** des Assistenten zum Erstellen von Exchange ActiveSync-E-Mail-Profilen die Betriebssysteme aus, unter denen das E-Mail-Profil installiert wird, oder klicken Sie auf **Alle auswählen** , um das E-Mail-Profil unter allen verfügbaren Betriebssystemen zu installieren.  
 
 2.  Schließen Sie den Assistenten ab.
@@ -182,6 +182,6 @@ Informationen zum Bereitstellen von Exchange ActiveSync-E-Mail-Profilen finden S
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

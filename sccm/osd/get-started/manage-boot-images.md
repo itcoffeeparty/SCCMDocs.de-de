@@ -1,5 +1,5 @@
 ---
-title: "Verwalten von Startimages – Configuration Manager"
+title: Verwalten von Startimages | Microsoft-Dokumentation
 description: "Erfahren Sie, wie Sie in Configuration Manager die Windows PE-Startimages verwalten, die Sie während der Bereitstellung von Betriebssystemen verwenden."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 43b87f7fd9d710cb4e7784dc34b4a8b14585b247
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 8c41c39a7f984be2612ae882d3bc08d92278dba6
 
 
 ---
@@ -251,6 +251,6 @@ Ein Startimage in Configuration Manager ist ein [Windows PE-Image (WinPE)](https
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

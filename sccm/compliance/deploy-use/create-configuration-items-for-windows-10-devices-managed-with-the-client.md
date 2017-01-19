@@ -1,8 +1,8 @@
 ---
-title: "Erstellen von Konfigurationselementen für Windows 10-Geräte, die mit dem System Center Configuration Manager-Client verwaltet werden | System Center Configuration Manager"
+title: "Erstellen von Konfigurationselementen für Windows 10-Geräte, die mit dem System Center Configuration Manager-Client verwaltet werden | Microsoft-Dokumentation"
 description: "Verwenden Sie das System Center Configuration Manager-Konfigurationselement für Windows 10, um Einstellungen für Windows 10-Geräte zu verwalten, die mit dem Configuration Manager-Client verwaltet werden"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d5248e7262f758c2de2a1deaf42282d4e77e3e0c
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 2b24570aa2e9d9aa45584842011dcd49c6e5e8cc
 
 
 ---
@@ -125,7 +125,7 @@ Verwenden Sie das System Center Configuration Manager-Konfigurationselement für
 |**Virenschutz**|Erfordert, dass Antivirensoftware installiert und konfiguriert ist.|  
 |**Virenschutzsignaturen sind aktuell**|Erfordert, dass die Signaturdateien für die Antivirensoftware auf dem Gerät auf dem aktuellen Stand sind|  
 
-### <a name="windows-information-protection-formerly-enterprise-data-protection"></a>Windows Information Protection (zuvor als Unternehmensdatenschutz bezeichnet)
+### <a name="windows-information-protection"></a>Windows Information Protection
 
 Mit dem Anstieg von Geräten im Besitz der Mitarbeiter im Unternehmen entsteht auch ein höheres Risiko unbeabsichtigter Datenpreisgabe durch Apps und Dienste, z.B. E-Mail, soziale Medien und die öffentliche Cloud, die sich außerhalb der Kontrolle des Unternehmens befinden. Wenn ein Mitarbeiter beispielsweise die aktuellsten technischen Zeichnungen von seinem privaten E-Mail-Konto versendet, Produktinformationen kopiert und in einen Tweet einfügt oder einen Verkaufsbericht, der sich in Bearbeitung befindet, im öffentlichen Cloudspeicher speichert.
 
@@ -137,6 +137,6 @@ Weitere Informationen zum Konfigurieren von WIP mit Configuration Manager finden
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

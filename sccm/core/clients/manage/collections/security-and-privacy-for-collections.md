@@ -1,5 +1,5 @@
 ---
-title: "Sicherheit und Datenschutz für Sammlungen | System Center Configuration Manager"
+title: "Sicherheit und Datenschutz für Sammlungen | Microsoft-Dokumentation"
 description: "Informieren Sie sich über die bewährten Sicherheits- und Datenschutzmethoden für Sammlungen in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 72082fb8970371929938ca0e15b425ea1a04638c
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: 3379494824804c6be5c051c67a79d25e7eed88f0
 
 
 ---
@@ -48,6 +48,6 @@ Dieses Thema enthält bewährte Sicherheitsmethoden und Datenschutzinformationen
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

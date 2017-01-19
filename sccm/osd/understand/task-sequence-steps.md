@@ -1,8 +1,8 @@
 ---
-title: Tasksequenzschritte | Configuration Manager
+title: Tasksequenzschritte | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über die Tasksequenzschritte, die einer Configuration Manager-Tasksequenz hinzugefügt werden können."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2a45cfb3e00d8078fbf45bdc8a2668b7dd0a62c6
-ms.openlocfilehash: 538cb9795586115ad8b52b44fb82b50a0abdbaa2
+ms.sourcegitcommit: 3f44505c977b511223a083a960f871371c0ff133
+ms.openlocfilehash: 6e324eb97c0e803d382371ace541a4b9f96e6ba3
 
 
 ---
@@ -153,7 +153,7 @@ Die folgenden Tasksequenzschritte können einer Configuration Manager-Tasksequen
 
  Wenn ein Betriebssystemabbild verwendet wird, werden mit dem Schritt **Betriebssystemabbild anwenden** die folgenden Aktionen ausgeführt:  
 
-1.  Mit Ausnahme der Dateien in dem mit der Tasksequenzvariablen _SMSTSUserStatePath angegebenen Ordner wird der gesamte Inhalt auf dem Zielvolume gelöscht.  
+1.  Mit Ausnahme der Dateien in dem mit der Tasksequenzvariablen &#95;SMSTSUserStatePath angegebenen Ordner wird der gesamte Inhalt auf dem Zielvolumen gelöscht.  
 
 2.  Extrahiert den Inhalt der angegebenen WIM-Datei in die angegebene Zielpartition.  
 
@@ -169,7 +169,7 @@ Die folgenden Tasksequenzschritte können einer Configuration Manager-Tasksequen
 
  Wenn ein Installationspaket für das Betriebssystemabbild verwendet wird, werden mit dem Schritt **Betriebssystemabbild anwenden** die folgenden Aktionen ausgeführt:  
 
-1.  Mit Ausnahme der Dateien in dem mit der Tasksequenzvariablen _SMSTSUserStatePath angegebenen Ordner wird der gesamte Inhalt auf dem Zielvolume gelöscht.  
+1.  Mit Ausnahme der Dateien in dem mit der Tasksequenzvariablen &#95;SMSTSUserStatePath angegebenen Ordner wird der gesamte Inhalt auf dem Zielvolumen gelöscht.  
 
 2.  Bereitet die Antwortdatei vor:  
 
@@ -627,7 +627,7 @@ Dieser Tasksequenzschritt wird nur in Windows PE ausgeführt. Er wird nicht in e
 
 -   Um dynamisch ein passendes Treiberpaket herunterzuladen, verwenden Sie zwei **Paketinhalt herunterladen** -Schritte mit Bedingungen zum Ermitteln des geeigneten Hardwaretyps für jedes Treiberpaket. Konfigurieren Sie jeden **Paketinhalt herunterladen** -Schritt zur Verwendung derselben Variablen, und verwenden Sie die Variable für den **Bereitgestellter Inhalt** -Wert im Bereich „Treiber“ im Schritt **Betriebssystem aktualisieren** .  
 
- Dieser Schritt wird nur in Standardbetriebssystemen ausgeführt. Er wird nicht in Windows PE ausgeführt.  
+Dieser Schritt wird entweder in einem Standardbetriebssystem oder in Windows PE ausgeführt. WinPE unterstützt die Option, die Pakete im Clientcache des Configuration Manager zu speichern, jedoch nicht.
 
 ### <a name="details"></a>Details  
  Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
@@ -1062,8 +1062,12 @@ Es wurde eine neue Tasksequenzvariable, SMSTSSoftwareUpdateScanTimeout, in Confi
 
  *Domäne\Konto*  
 
-##  <a name="a-namebkmkprepareconfigmgrclientforcapturea-prepare-configmgr-client-for-capture"></a><a name="BKMK_PrepareConfigMgrClientforCapture"></a> ConfigMgr-Client für Erfassung vorbereiten  
- Mithilfe des Tasksequenzschritts **ConfigMgr-Client für Erfassung vorbereiten** können Sie den Configuration Manager-Client auf dem Referenzcomputer im Rahmen des Imageerstellungsprozesses für die Erfassung vorbereiten. Dazu werden folgende Aufgaben ausgeführt:  
+## <a name="a-namebkmkprepareconfigmgrclientforcapturea-prepare-configmgr-client-for-capture"></a><a name="BKMK_PrepareConfigMgrClientforCapture"></a> ConfigMgr-Client für Erfassung vorbereiten  
+Mithilfe des Tasksequenzschritts **ConfigMgr-Client für Erfassung vorbereiten** können Sie den Configuration Manager-Client vom Referenzcomputer entfernen oder konfigurieren, um ihn im Rahmen des Imageerstellungsprozesses für die Erfassung vorzubereiten.
+
+Ab Version 1610 von Configuration Manager wird der Configuration Manager-Client im Schritt „Configuration Manager-Client vorbereiten“ vollständig entfernt, und es werden nicht nur die wichtigen Informationen entfernt. Wenn die Tasksequenz das erfasste Betriebssystemimage bereitstellt, wird jedes Mal ein neuer Configuration Manager-Client installiert.  
+
+Vor der Configuration Manager-Version 1610 werden bei diesem Schritt folgende Aufgaben ausgeführt:  
 
 -   Entfernt den Abschnitt mit den Clientkonfigurationseigenschaften aus der Datei „smscfg.ini“ im Windows-Verzeichnis. Diese Eigenschaften umfassen clientspezifische Informationen, darunter die Configuration Manager-GUID und andere Clientbezeichner.  
 
@@ -1458,21 +1462,21 @@ Es wurde eine neue Tasksequenzvariable, SMSTSSoftwareUpdateScanTimeout, in Confi
 
  Die Tasksequenz legt automatisch die folgenden schreibgeschützten Tasksequenzvariablen fest:  
 
--   _SMSTSMake  
+ -   &#95;SMSTSMake  
 
--   _SMSTSModel  
+ -   &#95;SMSTSModel  
 
--   _SMSTSMacAddresses  
+ -   &#95;SMSTSMacAddresses  
 
--   _SMSTSIPAddresses  
+ -   &#95;SMSTSIPAddresses  
 
--   _SMSTSSerialNumber  
+ -   &#95;SMSTSSerialNumber  
 
--   _SMSTSAssetTag  
+ -   &#95;SMSTSAssetTag  
 
--   _SMSTSUUID  
+ -   &#95;SMSTSUUID  
 
- Dieser Schritt kann entweder in einem Standardbetriebssystem oder in Windows PE ausgeführt werden. Weitere Informationen zu Tasksequenzvariablen finden Sie unter [Tasksequenz-Aktionsvariablen](task-sequence-action-variables.md).  
+ Dieser Schritt kann entweder in einem Standardbetriebssystem oder in Windows PE ausgeführt werden. Weitere Informationen zu Tasksequenzvariablen finden Sie unter [Tasksequenz-Aktionsvariablen](task-sequence-action-variables.md).  
 
 ### <a name="details"></a>Details  
  Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
@@ -1485,32 +1489,34 @@ Es wurde eine neue Tasksequenzvariable, SMSTSSoftwareUpdateScanTimeout, in Confi
 
 -   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
 
- **Name**  
+**Name**  
  Ein kurzer benutzerdefinierter Name für diesen Tasksequenzschritt.  
 
- **Beschreibung**  
+**Beschreibung**  
  Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
 
- **Dynamische Regeln und Variablen**  
+**Dynamische Regeln und Variablen**  
  Um eine dynamische Variable für die Verwendung in der Tasksequenz festzulegen, können Sie eine Regel hinzufügen und anschließend einen Wert für jede Variable angeben, die Sie für die Regel angeben, oder eine oder mehrere Variablen hinzufügen, ohne eine Regel hinzuzufügen. Wenn Sie eine Regel hinzufügen, können Sie unter den folgenden Regelkategorien wählen:  
 
--   **Computer**: Verwenden Sie diese Regelkategorie, um Werte für Bestandskennzeichen, UUID, Seriennummer oder Mac-Adresse auszuwerten. Sie können mehrere Werte festlegen, und wenn jeder Wert wahr ist, wird die Regel als „Wahr“ ausgewertet. Die folgende Regel wird z. B. als „Wahr“ ausgewertet, wenn die Seriennummer 5892087 lautet, unabhängig davon, ob die MAC-Adresse 26-78-13-5A-A4-22 entspricht.  
+ -   **Computer**: Verwenden Sie diese Regelkategorie, um Werte für Bestandskennzeichen, UUID, Seriennummer oder Mac-Adresse auszuwerten. Sie können mehrere Werte festlegen, und wenn jeder Wert wahr ist, wird die Regel als „Wahr“ ausgewertet. Die folgende Regel wird z. B. als „Wahr“ ausgewertet, wenn die Seriennummer 5892087 lautet, unabhängig davon, ob die MAC-Adresse 26-78-13-5A-A4-22 entspricht.  
 
      `IF Serial Number = 5892087 OR MAC address = 26-78-13-5A-A4-22 THEN`  
 
 -   **Speicherort**: Verwenden Sie diese Regelkategorie, um Werte für das Standardgateway auszuwerten.  
 
--   **Hersteller und Modell**: Verwenden Sie diese Regelkategorie, um Werte für den Hersteller und das Modell eines Computers auszuwerten. Sowohl Hersteller als auch Modell müssen als „Wahr“ ausgewertet werden, damit die Regel als „Wahr“ ausgewertet wird.  
+-   **Hersteller und Modell**: Verwenden Sie diese Regelkategorie, um Werte für den Hersteller und das Modell eines Computers auszuwerten. Sowohl Hersteller als auch Modell müssen als „Wahr“ ausgewertet werden, damit die Regel als „Wahr“ ausgewertet wird.   
+
+    Ab Version 1610 von Configuration Manager können Sie ein Sternchen (*) und ein Fragezeichen (**?**) als Platzhalter an der Stelle angeben, an der ***** mehreren Zeichen und **?** entspricht. entspricht einem einzelnen Zeichen. Zum Beispiel die Zeichenfolge „DELL*900?“ wird „DELL-ABC-9001“ und „DELL9009“ entsprechen.
 
 -   **Tasksequenzvariable**: Verwenden Sie diese Regelkategorie, um eine Tasksequenzvariable, eine Bedingung und einen Wert zum Auswerten anzugeben. Die Regel wird als „Wahr“ ausgewertet, wenn der für die Variable festgelegte Wert die angegebene Bedingung erfüllt.  
 
- Sie können eine oder mehrere Variablen angeben, die für eine Regel festgelegt werden, die als „Wahr“ ausgewertet wird, oder Variablen ohne Verwendung einer Regel festlegen. Sie können eine vorhandene Variable auswählen oder eine benutzerdefinierte Variable erstellen.  
+Sie können eine oder mehrere Variablen angeben, die für eine Regel festgelegt werden, die als „Wahr“ ausgewertet wird, oder Variablen ohne Verwendung einer Regel festlegen. Sie können eine vorhandene Variable auswählen oder eine benutzerdefinierte Variable erstellen.  
 
--   **Vorhandene Tasksequenzvariablen**: Verwenden Sie diese Einstellung, um eine oder mehrere Variablen aus einer Liste vorhandener Tasksequenzvariablen auszuwählen. Arrayvariablen stehen nicht zur Auswahl.  
+ -   **Vorhandene Tasksequenzvariablen**: Verwenden Sie diese Einstellung, um eine oder mehrere Variablen aus einer Liste vorhandener Tasksequenzvariablen auszuwählen. Arrayvariablen stehen nicht zur Auswahl.  
 
--   **Benutzerdefinierte Tasksequenzvariablen**: Verwenden Sie diese Einstellung, um eine benutzerdefinierte Tasksequenzvariable zu definieren. Sie können auch eine vorhandene Tasksequenzvariable angeben. Dies ist nützlich, um ein vorhandenes Variablenarray wie z. B. OSDAdapter anzugeben, da Variablenarrays nicht in der Liste der vorhandenen Tasksequenzvariablen enthalten sind.  
+ -   **Benutzerdefinierte Tasksequenzvariablen**: Verwenden Sie diese Einstellung, um eine benutzerdefinierte Tasksequenzvariable zu definieren. Sie können auch eine vorhandene Tasksequenzvariable angeben. Dies ist nützlich, um ein vorhandenes Variablenarray wie z. B. OSDAdapter anzugeben, da Variablenarrays nicht in der Liste der vorhandenen Tasksequenzvariablen enthalten sind.  
 
- Nachdem Sie die Variablen für eine Regel ausgewählt haben, müssen Sie einen Wert für jede Variable angeben. Die Variable wird auf den angegebenen Wert festgelegt, wenn die Regel als „Wahr“ ausgewertet wird. Sie können für jede Variable **Geheimer Wert** auswählen, um den Wert der Variablen auszublenden. Standardmäßig werden Werte für einige vorhandene Variablen ausgeblendet, z. B. für die Tasksequenzvariable OSDCaptureAccountPassword.  
+Nachdem Sie die Variablen für eine Regel ausgewählt haben, müssen Sie einen Wert für jede Variable angeben. Die Variable wird auf den angegebenen Wert festgelegt, wenn die Regel als „Wahr“ ausgewertet wird. Sie können für jede Variable **Geheimer Wert** auswählen, um den Wert der Variablen auszublenden. Standardmäßig werden Werte für einige vorhandene Variablen ausgeblendet, z. B. für die Tasksequenzvariable OSDCaptureAccountPassword.  
 
 > [!IMPORTANT]  
 >  Wenn Sie eine Tasksequenz mit dem Schritt „Dynamische Variablen festlegen“ importieren und **Geheimer Wert** für den Wert der Variablen ausgewählt ist, wird der Wert beim Importieren der Tasksequenz entfernt. Daher müssen Sie den Wert für die dynamische Variable nach dem Import der Tasksequenz erneut eingeben.  
@@ -1690,6 +1696,6 @@ Es wurde eine neue Tasksequenzvariable, SMSTSSoftwareUpdateScanTimeout, in Confi
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

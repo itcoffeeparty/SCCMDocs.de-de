@@ -1,5 +1,5 @@
 ---
-title: "Konten für den Zugriff auf Inhalt | System Center Configuration Manager"
+title: "Konten für den Zugriff auf Inhalt | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr über die Konten, mit denen Clients auf System Center Configuration Manager-Inhalt zugreifen."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: c7d5dc2767621ac2e494d24af07ca20513d6d63f
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 4bf8dbd007f2ff122d1447ffcb2a963579034033
 
 ---
 # <a name="manage-accounts-to-access-content-in-system-center-configuration-manager"></a>Verwalten von Konten für den Zugriff auf Inhalt in System Center Configuration Manager
@@ -120,6 +120,6 @@ Erstellen Sie dieses Konto ggf. als lokales Konto mit geringen Rechten auf dem C
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

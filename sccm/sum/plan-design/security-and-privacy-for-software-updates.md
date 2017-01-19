@@ -1,6 +1,6 @@
 ---
 
-title: "Sicherheit und Datenschutz für Softwareupdates | Configuration Manager"
+title: "Sicherheit und Datenschutz für Softwareupdates | Microsoft-Dokumentation"
 description: "Befolgen Sie diese bewährten Methoden für die Sicherheit von Softwareupdates, und erfahren Sie mehr über die Behandlung von Informationen zum Datenschutz in Configuration Manager."
 keywords: 
 author: dougeby
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 41d6d5d8-ba84-4efb-b105-4d1eed239824
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d1eb920dfed3be06837c2cd4635b61e3964cf0e5
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 4b4f045138abc14b6e93b3b990c5f3a8b4f2f952
 
 
 
@@ -75,6 +75,6 @@ Dieses Thema enthält Sicherheits- und Datenschutzinformationen für Softwareupd
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 
