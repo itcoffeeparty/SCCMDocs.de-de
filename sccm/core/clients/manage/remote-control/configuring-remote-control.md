@@ -2,7 +2,7 @@
 title: Konfigurieren der Remotesteuerung | Microsoft Docs
 description: Richten Sie die Remotesteuerung in System Center Configuration Manager ein.
 ms.custom: na
-ms.date: 12/12/2016
+ms.date: 12/26/2016
 ms.prod: configuration-manager
 ms.reviewer: dudeso
 ms.suite: na
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 809c7938968b4a6efce6ef37fe7b7baf2c9dd3e7
-ms.openlocfilehash: 6741c6aa11a8a7c868bff36916afe4d066b9924d
+ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
+ms.openlocfilehash: 20c28a625adb69f239b9c0e7673e57dd39e8d561
 
 
 ---
@@ -55,6 +55,21 @@ Wählen Sie zum Aktivieren der Tastaturübersetzung in **Configuration Manager-R
 > Spezielle Schlüssel wie z.B. ~!#@$%, werden nicht richtig übersetzt.
 
 
-<!--HONumber=Dec16_HO3-->
+## <a name="keyboard-shortcuts-for-the-remote-control-viewer"></a>Tastenkombinationen für den Remotesteuerungsviewer
+
+|Tastenkombination|Beschreibung|  
+|-----------------------|-----------------|  
+|ALT+BILD-AUF|Wechselt zwischen gerade ausgeführten Programmen von links nach rechts.|  
+|ALT+BILD-AB|Wechselt zwischen gerade ausgeführten Programmen von rechts nach links.|  
+|ALT+EINFG|Wechselt zwischen gerade ausgeführten Programmen in der Reihenfolge, in der sie geöffnet wurden.|  
+|ALT+POS1|Zeigt das Menü **Start** an.|  
+|STRG+ALT+ENDE|Zeigt das Dialogfeld "Windows-Sicherheit" an (STRG+ALT+ENTF).|  
+|ALT+ENTF|Zeigt das Windows-Menü an.|  
+|STRG+ALT+Minuszeichen (auf der Zehnertastatur)|Kopiert das aktive Fenster des lokalen Computers in die Zwischenablage des Remotecomputers.|  
+|STRG+ALT+Pluszeichen (auf der Zehnertastatur)|Kopiert den gesamten Fensterbereich des lokalen Computers in die Zwischenablage des Remotecomputers.|  
+
+
+
+<!--HONumber=Dec16_HO5-->
 
 
