@@ -2,7 +2,7 @@
 title: Clientpeercache | System Center Configuration Manager
 description: "Verwenden Sie Peercache für Quellspeicherorte für Clientinhalte beim Bereitstellen von Inhalten mit System Center Configuration Manager."
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 1/9/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: e2a72fd9fb9ae5e64b7eb92e1d2106162fc7ea5d
-ms.openlocfilehash: 599ba03a1934b9feb030f27c827625c2c9471d8e
+ms.sourcegitcommit: f3e8cb3a7a4c1de9b8e9866ed192a8a0a7aec106
+ms.openlocfilehash: 86129a7fd5bfac676b5f03336cf97d07747b48d1
 
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Peercache für Configuration Manager-Clients
@@ -48,6 +48,8 @@ Um besser zu verstehen, wann der Peercache erfolgreich verwendet wird, sehen Sie
 
 
 ## <a name="requirements-and-considerations-for-peer-cache"></a>Anforderungen und Überlegungen für den Peercache
+- Der Peercache wird von jedem Windows-Betriebssystem unterstützt, das als Configuration Manager-Client unterstützt wird. Nicht-Windows-Betriebssysteme werden für den Peercache nicht unterstützt.
+
 - Sie müssen Ihren Standort mit einem **Netzwerkzugriffskonto** konfigurieren, das auf jedem Client **Vollzugriff** auf den Cacheordner besitzt. Standardmäßig ist dies ***%windir%\ccmcache***.
 
 - Clients können nur Inhalte von Peercacheclients übertragen, die sich in ihrer aktuellen Begrenzungsgruppe befinden.
@@ -67,6 +69,6 @@ Wenn die Windows-Firewall verwendet wird, wird sie auf jedem für den Peercache 
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO2-->
 
 

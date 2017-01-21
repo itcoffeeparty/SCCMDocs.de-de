@@ -1,8 +1,8 @@
 ---
-title: Dienstverbindungspunkt | Microsoft Docs
+title: Dienstverbindungspunkt | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über diese Standortsystemrolle von Configuration Manager, und verstehen und planen Sie den Verwendungsbereich."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4a8d98addcd463eb82d8b7100b44254a10d21992
-ms.openlocfilehash: b5f7ad01f7a32d69d0c75b3c80a053f3c020c036
+ms.sourcegitcommit: 4409d32593e3ab22482b08335005bd2a278a7e35
+ms.openlocfilehash: 36f33e0ce898ccdd5fa25aa59b8cf032805769b9
 
 
 ---
@@ -83,7 +83,7 @@ Wechseln Sie zum Verwenden des Dienst-Managers von Configuration Manager in der 
 -   Das Standortsystem-Installationskonto wird vom Verteilungs-Manager auf dem Standortserver zum Übertragen von Updates vom Dienstverbindungspunkt verwendet.
 
 ##  <a name="a-namebkmkurlsa-internet-access-requirements"></a><a name="bkmk_urls"></a> Erforderliche Berechtigungen für den Internetzugriff  
-Der Computer, der den Dienstverbindungspunkt und alle Firewalls zwischen dem Computer und dem Internet hostet, muss die Kommunikation über den **Port TCP 443** an die folgenden Internet-URLs übergeben, um den Vorgang zu aktivieren. Der Dienstverbindungspunkt unterstützt auch Webproxys (mit oder ohne Authentifizierung) für den Zugriff auf diese URLs.  
+Der Computer, der den Dienstverbindungspunkt und alle Firewalls zwischen dem Computer und dem Internet hostet, muss die Kommunikation über den **TCP-Port 443** und den **TCP-Port 443** an die folgenden Internet-URLs übergeben, um den Vorgang zu aktivieren. Der Dienstverbindungspunkt unterstützt auch Webproxys (mit oder ohne Authentifizierung) für den Zugriff auf diese URLs.  
 
 **Updates und Wartung**  
 
@@ -96,6 +96,8 @@ Der Computer, der den Dienstverbindungspunkt und alle Firewalls zwischen dem Com
 -   blob.core.windows.net  
 
 -   download.microsoft.com  
+
+-   download.windowsupdate.com
 
 -   sccmconnected-a01.cloudapp.net  
 
@@ -119,6 +121,6 @@ Nachdem Sie Setup ausgeführt haben oder wenn Sie die Standortsystemrolle neu in
 
 
 
-<!--HONumber=Dec16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

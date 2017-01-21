@@ -1,5 +1,5 @@
 ---
-title: Verwalten einer Servergruppe | Microsoft Docs
+title: Verwalten einer Servergruppe | Microsoft-Dokumentation
 description: "Die System Center Configuration Manager-Konsole stellt Warnungen und Status zum Überwachen von Updates und Kompatibilität bereit."
 keywords: 
 author: dougeby
@@ -13,11 +13,15 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
 translationtype: Human Translation
-ms.sourcegitcommit: 78524abd4c45f0b7402d6f1e85afc60bb72ab0ee
-ms.openlocfilehash: b89cec7cebb5342da32ec8e11a049edad12f1231
+ms.sourcegitcommit: af5f58dd5fe1f19d7a70cb9516af159c6682d194
+ms.openlocfilehash: ae09a02dd5d67113b9a7e2ce146c844efa4caf55
 
 
 ---
+>[!IMPORTANT]
+>Dies ist ein Vorabfeature, das in den Configuration Manager-Versionen 1606 und 1610 verfügbar ist. Vorab veröffentlichte Features werden in das Produkt aufgenommen, um sie in einem frühen Stadium in einer Produktionsumgebung zu testen. Sie sollten nicht als für den Produktivbetrieb geeignet betrachtet werden. Aktivieren Sie dieses Feature, um es verfügbar zu machen. Weitere Informationen finden Sie unter [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease) (Verwenden von Vorabfeatures aus Updates).
+
+
 # <a name="service-a-server-group"></a>Bereitstellung einer Servergruppe
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -88,6 +92,6 @@ Wenn auf einem Computer die Bereitstellungssperre nicht freigegeben werden kann,
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 
