@@ -70,6 +70,6 @@ Wählen Sie zum Aktivieren der Tastaturübersetzung in **Configuration Manager-R
 
 
 
-<!--HONumber=Dec16_HO5-->
+<!--HONumber=Jan17_HO4-->
 
 
