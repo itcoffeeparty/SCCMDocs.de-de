@@ -81,6 +81,6 @@
 9. Überprüfen Sie auf der Seite **Abschluss**, ob die Softwareupdates erfolgreich heruntergeladen wurden. Klicken Sie dann auf **Schließen**.  
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 
