@@ -1,8 +1,8 @@
 ---
-title: "Funktionen in Technical Preview 1610 für System Center Configuration Manager | Microsoft-Dokumentation"
+title: "Funktionen in Technical Preview 1610 für Configuration Manager"
 description: "Erfahren Sie mehr zu den Features, die in Technical Preview für System Center Configuration Manager 1610 zur Verfügung stehen."
 ms.custom: na
-ms.date: 10/21/2016
+ms.date: 01/23/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
-ms.openlocfilehash: 6ffcb33e94f942fc9400457d3f16b65e12332956
+ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
+ms.openlocfilehash: 59633ce68e2bb2d722900215751f345d6d098721
 
 ---
 # <a name="capabilities-in-technical-preview-1610-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1610 für System Center Configuration Manager
@@ -165,6 +165,6 @@ Sie können jetzt festlegen, dass in Azure Active Directory registrierte Windows
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

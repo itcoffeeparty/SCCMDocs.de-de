@@ -1,5 +1,5 @@
 ---
-title: Auswerten von System Center Configuration Manager durch Einrichtung Ihrer eigenen Laborumgebung | Microsoft-Dokumentation
+title: Auswerten von Configuration Manager | Microsoft-Dokumentation
 description: "Richten Sie eine Laborumgebung ein, um System Center Configuration Manager für die Verwendung in Ihrer Organisation zu bewerten."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
-ms.openlocfilehash: e72acbe0a2f5592b5bdf9a3612db62bfb066fadf
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: ad3c849bd3ebfc6c0aa795e5b49a4850371cda47
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: e72acbe0a2f5592b5bdf9a3612db62bfb066fadf
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Erfahren Sie mehr über das Einrichtung einer Laborumgebung, um System Center Configuration Manager für die Verwendung in Ihrer Organisation zu testen.  
+Erfahren Sie mehr über die Einrichtung einer Laborumgebung, um System Center Configuration Manager für die Verwendung in Ihrer Organisation zu testen.  
 
 ## <a name="evaluate-system-center-configuration-manager-by-building-your-own-lab-environment"></a>Auswerten von System Center Configuration Manager durch Einrichtung Ihrer eigenen Laborumgebung  
  System Center Configuration Manager ist ein komplexes und leistungsstarkes Tool zum Verwalten Ihrer Benutzer, Geräte und Software. Es wird empfohlen, vor der vollständigen Bereitstellung von System Center Configuration Manager eine gründliche Bewertung durchzuführen, damit Sie über ein grundlegendes Verständnis hinaus die Möglichkeit haben, Ihr Wissen in praktischen Übungen anzuwenden.  
@@ -70,6 +70,6 @@ Erfahren Sie mehr über das Einrichtung einer Laborumgebung, um System Center Co
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

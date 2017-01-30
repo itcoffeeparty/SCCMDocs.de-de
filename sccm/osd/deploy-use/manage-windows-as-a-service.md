@@ -1,8 +1,8 @@
 ---
-title: Verwalten von Windows als Dienst | Microsoft Docs
-description: "Mithilfe von Features in System Center Configuration Manager können Sie den Zustand von Windows als Dienst in Ihrer Umgebung anzeigen, um Windows auf dem neuesten Stand zu halten."
+title: "Verwalten von Windows as a Service – Configuration Manager | Microsoft-Dokumentation"
+description: "Lassen Sie sich mit Configuration Manager den Status von Windows as a Service anzeigen, erstellen Sie Wartungspläne, um Bereitstellungsringe zu bilden, und lassen Sie sich Warnungen anzeigen, wenn Windows 10-Clients das Supportende erreichen."
 ms.custom: na
-ms.date: 12/21/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 66cd6d099acdd9db2bc913a69993aaf5e17237fe
-ms.openlocfilehash: 79e13074db18a617c7e3fceedaa143dbece90a3d
+ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
+ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: 79e13074db18a617c7e3fceedaa143dbece90a3d
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 
- In System Center Configuration Manager können Sie den Zustand von Windows als Dienst in Ihrer Umgebung anzeigen, Wartungspläne zur Bildung von Bereitstellungsringen erstellen und sicherstellen, dass Windows 10-Systeme des aktuellen Branch auf dem neuesten Stand gehalten werden, wenn neue Builds veröffentlicht werden. Außerdem können Sie Warnungen anzeigen, wenn sich Windows 10-Clients dem Ende des Supports für ihren Build von Current Branch oder von Current Branch for Business (CBB) nähern.  
+ In System Center Configuration Manager können Sie den Zustand von Windows as a Service in Ihrer Umgebung anzeigen, Wartungspläne zur Bildung von Bereitstellungsringen erstellen und sicherstellen, dass Windows 10 Current Branch-Systeme auf dem neuesten Stand gehalten werden, wenn neue Builds veröffentlicht werden. Außerdem können Sie Warnungen anzeigen, wenn sich Windows 10-Clients dem Ende des Supports für ihren Build von Current Branch oder von Current Branch for Business (CBB) nähern.  
 
  Weitere Informationen zu den Windows 10-Wartungsoptionen finden Sie unter  [Windows 10-Wartungsoptionen für Updates und Upgrades](https://technet.microsoft.com/library/mt598226\(v=vs.85\).aspx).  
 
@@ -277,6 +277,6 @@ Wenden Sie das folgende Verfahren an, um die Eigenschaften eines Wartungsplans z
 
 
 
-<!--HONumber=Dec16_HO4-->
+<!--HONumber=Jan17_HO4-->
 
 

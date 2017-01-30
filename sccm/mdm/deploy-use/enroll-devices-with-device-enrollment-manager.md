@@ -1,5 +1,5 @@
 ---
-title: "Registrieren von Geräten mit dem Geräteregistrierungs-Manager mit Configuration Manager | Microsoft-Dokumentation"
+title: "Registrieren von Geräten mit dem Geräteregistrierungsmanager – Configuration Manager | Microsoft-Dokumentation"
 description: "Registrieren Sie unternehmenseigene Geräte mit dem Geräteregistrierungs-Managerkonto mit System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: ed60b23f7e7a194676cd7b055da9bc3517af8026
+ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
+ms.openlocfilehash: b356d2351b8a28bdca78176fdf0ff3c913a36bd3
 
 
 ---
@@ -92,6 +92,6 @@ Ein Restaurant möchte Point-of-Sale-Tablets für sein Bedienpersonal und Bestel
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

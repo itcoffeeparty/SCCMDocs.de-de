@@ -1,8 +1,8 @@
 ---
-title: Anpassen von Betriebssystemabbildern | Microsoft-Dokumentation
+title: "Anpassen von Betriebssystemimages – Configuration Manager | Microsoft-Dokumentation"
 description: Verwenden Sie die Tasksequenzen zum Erfassen und Erstellen, die manuelle Konfiguration oder eine Kombination aus beidem, um ein Betriebssystemimage anzupassen.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: c183fbde6de29ccd7c78ae066d305f0e99e37bda
+ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
+ms.openlocfilehash: 485cb3ca4988f983c1ec71b6c8daf136571bf0ea
 
 
 ---
@@ -140,6 +140,6 @@ Betriebssystemimages in System Center Configuration Manager sind WIM-Dateien und
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

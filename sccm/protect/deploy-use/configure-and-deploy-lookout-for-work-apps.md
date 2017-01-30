@@ -1,6 +1,6 @@
 ---
-title: Bereitstellen der Lookout for Work-App | System Center Configuration Manager
-description: Konfigurieren und Bereitstellen von Lookout for Work-Apps.
+title: Konfigurieren und Bereitstellen von Lookout for Work-Apps | Microsoft-Dokumentation
+description: "Anleitungen zum Konfigurieren und Bereitstellen der Lookout for Work-App für Android und iOS"
 ms.custom: na
 ms.date: 11/18/2016
 ms.prod: configuration-manager
@@ -16,12 +16,12 @@ author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
-ms.openlocfilehash: 947393796043dcc3916a5f8e09898bb8a7cd347d
+ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
+ms.openlocfilehash: 5e7d67855dc7929b19ec1ae32457aa11700be56e
 
 
 ---
-# <a name="configure-and-deploy-lookout-for-work-apps"></a>Konfigurieren und Bereitstellen von Lookout for Work-Apps
+# <a name="deploy-lookout-for-work-apps"></a>Lookout for Work-Apps bereitstellen
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -92,6 +92,6 @@ Wenn der Benutzer Lookout for Work auf dem Gerät öffnet, wird er aufgefordert,
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

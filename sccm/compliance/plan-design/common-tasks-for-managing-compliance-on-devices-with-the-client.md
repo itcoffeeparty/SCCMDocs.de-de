@@ -1,5 +1,5 @@
 ---
-title: "Allgemeine Aufgaben zur Verwaltung der Konformität auf Geräten mit dem System Center Configuration Manager-Client | Microsoft-Dokumentation"
+title: "Übliche Tasks für die Konformitätsverwaltung von clientverwalteten Geräten | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr über System Center Configuration Manager-Kompatibilitätseinstellungen, indem Sie einige Szenarios durcharbeiten."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
-ms.openlocfilehash: feadb8b5b75832e914dfe62bd2d486e5bac1458d
+ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
+ms.openlocfilehash: 2012ab5e55da8d707fd668e0163b42fe7d56c72f
 
 
 ---
@@ -113,6 +113,6 @@ Die Szenarios in diesem Thema dienen zur Einführung in das Verwenden der System
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

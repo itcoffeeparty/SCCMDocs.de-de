@@ -1,5 +1,5 @@
 ---
-title: Allgemeine Aufgaben zum Erstellen und Bereitstellen von Konfigurationsbaselines mit System Center Configuration Manager | System Center Configuration Manager
+title: "Allgemeine Aufgaben für Konfigurationsbaselines – Configuration Manager | Microsoft-Dokumentation"
 description: Erfahren Sie, wie Sie System Center Configuration Manager-Konfigurationsbaselines erstellen und bereitstellen.
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 0d66240408dcd65576954ffb27395d3f05f5a41e
+ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
+ms.openlocfilehash: 5682cacb43af5bf9248446f1c35b08f137bdae9d
 
 
 ---
@@ -93,6 +93,6 @@ Im folgenden Verfahren erfahren Sie, wie dieses Konfigurationselement einer Konf
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

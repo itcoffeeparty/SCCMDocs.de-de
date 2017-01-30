@@ -1,8 +1,8 @@
 ---
-title: Verwalten des Benutzerzustands | Microsoft-Dokumentation
+title: "Verwalten des Benutzerstatus – Configuration Manager | Microsoft-Dokumentation"
 description: "System Center Configuration Manager verwendet das Migrationstool für den Benutzerstatus, um in Szenarios für die Betriebssystembereitstellung den Benutzerstatus zu erfassen und wiederherzustellen."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: 65ebfd385a27ebda8d5057f503c01b8b33628a72
+ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
+ms.openlocfilehash: a0bd86587669c32377b1eafa6a890d37e10ac3f6
 
 
 ---
@@ -133,6 +133,6 @@ Mit System Center Configuration Manager-Tasksequenzen können Sie bei der Betrie
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

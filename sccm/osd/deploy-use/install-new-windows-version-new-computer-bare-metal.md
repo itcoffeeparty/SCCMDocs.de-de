@@ -1,8 +1,8 @@
 ---
-title: Installieren einer neuen Version von Windows auf einem neuen Computer (Bare-Metal) mit System Center Configuration Manager | Microsoft Docs
-description: "Folgen Sie diesen Schritten in System Center Configuration Manager, um ein Betriebssystem auf einem neuen Computer mithilfe von PXE, OEM oder einem eigenständigen Medium zu installieren."
+title: "Installieren von Windows auf einem neuen Computer – Configuration Manager | Microsoft-Dokumentation"
+description: "Verwenden Sie Configuration Manager, um mithilfe von PXE, OEM oder einem eigenständigen Medium ein Betriebssystem auf einem neuen Computer (Bare-Metal-Computer) zu installieren."
 ms.custom: na
-ms.date: 12/06/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 06ade037c580d64503e6b8b5c3bf31004ab0650b
-ms.openlocfilehash: 93b3d99e7391feefc3d706f15f0fe8f8df3b75ac
+ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
+ms.openlocfilehash: 584dad7d8b05a2da9f7a66b73028ae99ff1a594f
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 93b3d99e7391feefc3d706f15f0fe8f8df3b75ac
 
 Dieses Thema enthält die allgemeinen Schritte für System Center Configuration Manager, um ein Betriebssystem auf einem neuen Computer zu installieren. In diesem Szenario können Sie aus vielen unterschiedlichen Bereitstellungsmethoden auswählen, z. B. PXE, OEM oder eigenständige Medien. Wenn Sie nicht sicher sind, ob dies das richtige Szenario der Betriebssystembereitstellung für Sie ist, ziehen Sie [Szenarien für die Bereitstellung von Unternehmensbetriebssystemen](scenarios-to-deploy-enterprise-operating-systems.md) zurate.  
 
- Verwenden Sie die folgenden Abschnitte, um einen vorhandenen Computer mit einer neuen Version von Windows zu aktualisieren.  
+Verwenden Sie die folgenden Abschnitte, um einen vorhandenen Computer mit einer neuen Version von Windows zu aktualisieren.  
 
 ##  <a name="a-namebkmkplana-plan"></a><a name="BKMK_Plan"></a> Plan  
 
@@ -81,6 +81,6 @@ Dieses Thema enthält die allgemeinen Schritte für System Center Configuration 
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

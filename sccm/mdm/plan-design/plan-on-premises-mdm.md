@@ -17,8 +17,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: cc5b04dc41b13993fca35f202437b71e96bc9cdd
+ms.sourcegitcommit: cec595d473ca2459e43a7fa1c70b7668a8a48986
+ms.openlocfilehash: d529a058968cf99dce77997844b33ff5dc7c0004
 
 
 ---
@@ -43,8 +43,8 @@ Berücksichtigen Sie die folgenden Anforderungen vor der Vorbereitung der Config
 ##  <a name="a-namebkmkintunea-use-of-the--microsoft-intune-subscription"></a><a name="bkmk_intune"></a> Verwenden des Microsoft Intune-Abonnements  
  Für den Einstieg in die lokale Verwaltung mobiler Geräte benötigen Sie ein Microsoft Intune\-Abonnement. Das Abonnement ist nur erforderlich, um die Lizenzierung der Geräten zu verfolgen und dient nicht zum Verwalten oder Speichern von Geräteverwaltungsinformationen. Die gesamte Verwaltung erfolgt mithilfe der lokalen Configuration Manager-Infrastruktur in Ihrem Unternehmen.  
 
-> [!IMPORTANT]  
->  Configuration Manager unterstützt nicht die gleichzeitige Verwendung von Microsoft Intune und der lokalen Configuration Management-Infrastruktur als Verwaltungsstellen. Somit deaktivieren Sie beim Einrichten des Intune-Abonnements für die lokale Verwaltung tatsächlich die Intune-Verwaltung.  
+ > [!NOTE]  
+ > Ab Version 1610 unterstützt Configuration Manager für die Verwaltung mobiler Geräte die gleichzeitige Verwendung von Microsoft Intune und der lokalen Configuration Manager-Infrastruktur.   
 
  Wenn an Ihrem Standort Geräte mit Internetverbindung vorhanden sind, können Geräte über Intune benachrichtigt werden, dass sie den Geräteverwaltungspunkt nach Richtlinienupdates überprüfen sollen. Diese Verwendung von Intune dient ausschließlich zur Benachrichtigung von mit dem Internet verbundenen Geräten. Geräte ohne Internetverbindung (die nicht von Intune kontaktiert werden können) überprüfen im konfigurierten Abrufintervall die Standortsystemrollen auf Verwaltungsfunktionen.  
 
@@ -122,6 +122,6 @@ Berücksichtigen Sie die folgenden Anforderungen vor der Vorbereitung der Config
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

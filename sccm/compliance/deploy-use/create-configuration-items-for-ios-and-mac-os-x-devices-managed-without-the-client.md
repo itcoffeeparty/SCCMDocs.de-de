@@ -1,5 +1,5 @@
 ---
-title: "Erstellen von Konfigurationselementen für iOS- und Mac OS X-Geräte, die ohne den System Center Configuration Manager-Client verwaltet werden | Microsoft Docs"
+title: "Erstellen von Konfigurationselementen für iOS-Geräte und Macs ohne Client – Configuration Manager | Microsoft-Dokumentation"
 description: "Verwenden Sie das Konfigurationselement für iOS und Mac OS X von System Center Configuration Manager, um Einstellungen für iOS und Mac OS X-Geräte zu verwalten."
 ms.custom: na
 ms.date: 12/14/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d023df79e0bcb7d5583224802976a5059c4ee753
-ms.openlocfilehash: ea4024aaa07d40781663725127d64388055c6501
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: 0614753a68e98675ccae99b792b03481f4ca7ab1
 
 
 ---
@@ -80,7 +80,7 @@ Verwenden Sie das Konfigurationselement **iOS und Mac OS X** von System Center C
 |**Minimale Kennwortlänge (Zeichen)**|Die Mindestlänge für das Kennwort.|  
 |**Kennwortablauf in Tagen**|Die Anzahl der Tage, bevor ein Kennwort geändert werden muss.|  
 |**Anzahl der gespeicherten Kennwörter**|Verhindert die Wiederverwendung zuvor verwendeter Kennwörter.|  
-|**Anzahl der gescheiterten Anmeldeversuche vor dem Zurücksetzen eines Geräts**|Setzt das Gerät zurück, wenn diese Anzahl von Anmeldeversuchen fehlschlägt.<br>(nur iOS)| 
+|**Anzahl der gescheiterten Anmeldeversuche vor dem Zurücksetzen eines Geräts**|Setzt das Gerät zurück, wenn diese Anzahl von Anmeldeversuchen fehlschlägt.<br>(nur iOS)|
 |**Leerlaufzeit vor dem Sperren des Geräts**|Legt fest, nach wie vielen Minuten Inaktivität das Gerät automatisch gesperrt wird.|
 |**Kennwortkomplexität**|Wählen Sie aus, ob Sie eine PIN wie „1234“ angeben können oder ob ein sicheres Kennwort erforderlich ist.|
 |**Einfache Kennwörter zulassen**|Erlaubt die Verwendung einfacher Kennwörter wie „0000“ und „1234“.|
@@ -370,6 +370,6 @@ Verwenden Sie das Konfigurationselement **iOS und Mac OS X** von System Center C
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

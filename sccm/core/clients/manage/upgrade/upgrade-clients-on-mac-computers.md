@@ -1,5 +1,5 @@
 ---
-title: Upgraden von Clients | Macs | System Center Configuration Manager
+title: "Upgraden von macOS-Clients – Configuration Manager | Microsoft-Dokumentation"
 description: Upgraden Sie Clients auf Macintosh-Computern in System Center Configuration Manager.
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 74c60941-5eae-4905-9e58-252bdb39df96
 caps.latest.revision: 10
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e2e13d31ccdeba155b4030a78d12b82939394f54
+ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
+ms.openlocfilehash: 6bdc5cca01bf5a79a6177d7cf1de96b8ff2c2305
 
 
 ---
@@ -105,6 +105,6 @@ Befolgen Sie die oben beschriebenen allgemeinen Schritte, um den Client für Mac
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

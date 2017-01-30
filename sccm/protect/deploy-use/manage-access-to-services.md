@@ -1,5 +1,5 @@
 ---
-title: Bedingter Zugriff | Microsoft-Dokumentation
+title: Verwalten des Zugriffs auf Dienste in Configuration Manager | Microsoft-Dokumentation
 description: "Erfahren Sie, wie Sie den bedingten Zugriff in System Center Configuration Manager verwenden, um Ihre E-Mails und andere Dienste zu schützen."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,13 +16,13 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
-ms.openlocfilehash: d33a515ad2bf0a7fb8680447f2bf83544f2eb30f
+ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
+ms.openlocfilehash: 011d9345f6f2ec05b23fb574d9ab71d43ede7f69
 
 
 ---
 
-# <a name="manage-access-to-services-in-system-center-configuration-manager"></a>Verwalten des Zugriffs auf Dienste in System Center Configuration Manager
+# <a name="manage-access-to-services"></a>Verwalten des Zugriffs auf Dienste
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -30,7 +30,7 @@ ms.openlocfilehash: d33a515ad2bf0a7fb8680447f2bf83544f2eb30f
 ## <a name="conditional-access-in-system-center-configuration-manager"></a>Bedingter Zugriff in System Center Configuration Manager
 Verwenden Sie den **bedingten Zugriff**, um E-Mails und andere Dienste auf den Geräten, die mit Microsoft Intune registriert sind, basierend auf den von Ihnen festgelegten Bedingungen zu schützen.  
 
- Informationen zum **bedingten Zugriff auf PCs, die mit System Center Configuration Manager** verwaltet und auf Kompatibilität bewertet werden, finden Sie unter [Verwalten des Zugriffs auf Office 365-Dienste für PCs, die von System Center Configuration Manager verwaltet werden](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
+ Informationen zum **bedingten Zugriff auf PCs, die mit System Center Configuration Manager** verwaltet und auf Kompatibilität bewertet werden, finden Sie unter [Verwalten des Zugriffs auf Office&365;-Dienste für PCs, die von System Center Configuration Manager verwaltet werden](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
 
 
  Ein typischer Ablauf für bedingten Zugriff könnte wie folgt aussehen:  
@@ -184,6 +184,6 @@ Bedingter Zugriff auf SharePoint Online unterstützt Geräte, die Folgendes ausf
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

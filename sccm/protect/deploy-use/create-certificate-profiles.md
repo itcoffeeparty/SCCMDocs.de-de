@@ -1,5 +1,5 @@
 ---
-title: "Überwachen von Zertifikatprofilen | Microsoft-Dokumentation"
+title: Erstellen von SCEP-Zertifikatprofilen | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über die Verwendung von Zertifikatprofilen, um für verwaltete Geräten die Zertifikate bereitzustellen, die sie in System Center Configuration Manager benötigen."
 ms.custom: na
 ms.date: 11/22/2016
@@ -17,12 +17,12 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: fdf0915d937e9555ef4f84797f70391dbf2543d3
-ms.openlocfilehash: 4293cb586046791c0a75c913794cb223b6823a8f
+ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
+ms.openlocfilehash: cb9351fc63e49af611c494ec82a6c8651afae30f
 
 
 ---
-# <a name="how-to-create-scep-certificate-profiles-in-system-center-configuration-manager"></a>Erstellen von SCEP-Zertifikatprofilen in System Center Configuration Manager
+# <a name="create-certificate-profiles"></a>Erstellen von Zertifikatprofilen
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -187,6 +187,6 @@ Geben Sie auf der Seite **Allgemein** des Assistenten zum Erstellen von Zertifik
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

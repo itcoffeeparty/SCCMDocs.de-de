@@ -1,5 +1,5 @@
 ---
-title: "Erstellen von Konfigurationselementen für Android- und Samsung KNOX Standard-Geräte, die ohne den System Center Configuration Manager-Client verwaltet werden | Microsoft Docs"
+title: "Erstellen von Konfigurationselementen für Android & Samsung KNOX Standard – Configuration Manager | Microsoft-Dokumentation"
 description: "Verwenden Sie das Konfigurationselement von System Center Configuration Manager für Android- und Samsung KNOX Standard-Geräte, die Geräteeinstellungen zu verwalten."
 ms.custom: na
 ms.date: 12/14/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d023df79e0bcb7d5583224802976a5059c4ee753
-ms.openlocfilehash: c699c9c807f864fe161255522a8d694ab71d1a4e
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: 12f5db5839fe66fb07d7055af45f8020abd43e24
 
 
 ---
@@ -109,7 +109,7 @@ Verwenden Sie das System Center Configuration Manager Konfigurationselement für
 
 ### <a name="browser"></a>Browser
 |Einstellung|Details|  
-|-------------|-------------| 
+|-------------|-------------|
 |**Webbrowser zulassen**|Legt fest, ob der Standardwebbrowser des Geräts verwendet werden kann.|
 |**Automatisch ausfüllen**|Erlaubt die Verwendung der AutoAusfüllen-Funktion des Webbrowsers.|
 |**Active Scripting**|Ermöglicht dem Webbrowser des Geräts die Verwendung von Active Scripting.|
@@ -135,9 +135,9 @@ Verwenden Sie das System Center Configuration Manager Konfigurationselement für
 |**Kamera**|Ermöglicht die Verwendung der Gerätekamera.<br /><br /> Gilt für Android- und Samsung KNOX Standard-Geräte.|  
 |**NFC (Near Field Communication)**|Erlaubt Vorgänge, die NFC (Near Field Communication) verwenden, wenn dies vom Gerät unterstützt wird.|
 |**YouTube**|Ermöglicht die Verwendung der YouTube-App auf dem Gerät.<br /><br /> Gilt nur für Samsung KNOX Standard-Geräte.|  
-|**Ausschalten**|Ermöglicht das Ausschalten des Geräts.<br /><br /> Gilt nur für Samsung KNOX Standard-Geräte.| 
+|**Ausschalten**|Ermöglicht das Ausschalten des Geräts.<br /><br /> Gilt nur für Samsung KNOX Standard-Geräte.|
 
-### <a name="roaming"></a>Roaming 
+### <a name="roaming"></a>Roaming
 |Einstellung|Details|  
 |-------------|-------------|
 |**Sprachroaming**|Lässt Sprachroaming über das Mobilfunknetz zu.|
@@ -199,6 +199,6 @@ Geben Sie im **Assistenten zum Erstellen von Konfigurationselementen** auf der S
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

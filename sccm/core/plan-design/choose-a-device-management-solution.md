@@ -1,5 +1,5 @@
 ---
-title: "Wählen einer Geräteverwaltungslösung für System Center Configuration Manager | Microsoft Docs"
+title: "Wählen einer Geräteverwaltungslösung – Configuration Manager | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr über Lösungen, die System Center Configuration Manager zum Verwalten von PCs, Servern und Geräten anbietet."
 ms.custom: na
 ms.date: 12/08/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d56b2a8090dd798bceda63e29df6c6ff4a4afe4e
-ms.openlocfilehash: 792d9b03904193c1c302c2f8373448a44887ed9c
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: 854373b56052cee7e63dd71c1b9e7e980af30744
 
 
 ---
@@ -96,6 +96,6 @@ Sie können diese Geräteverwaltungslösungen eigenständig oder in Kombination 
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

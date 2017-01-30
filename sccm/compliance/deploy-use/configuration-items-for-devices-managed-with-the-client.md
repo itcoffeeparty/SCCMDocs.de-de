@@ -1,5 +1,5 @@
 ---
-title: "Konfigurationselemente für Geräte, die mit dem System Center Configuration Manager-Client verwaltet werden | System Center Configuration Manager"
+title: "Konfigurationselemente für clientverwaltete Geräte – Configuration Manager | Microsoft-Dokumentation"
 description: "Erfahren Sie, wie Sie Windows- und Macintosh-Geräte konfigurieren, die mit dem System Center Configuration Manager-Client verwaltet werden."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4d8947fc9708c8c6d05a4507ef67501efade91d5
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: c0648c8c6ca3b36e2c2cf311bc4ae9edc7e8f906
 
 
 ---
@@ -36,6 +36,6 @@ Dieses Thema enthält eine Liste der verfügbaren System Center Configuration Ma
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

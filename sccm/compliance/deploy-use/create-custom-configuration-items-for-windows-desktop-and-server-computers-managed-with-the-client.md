@@ -1,5 +1,5 @@
 ---
-title: "Erstellen benutzerdefinierter Konfigurationselemente für Windows-Desktop- und -Servercomputer, die mit dem System Center Configuration Manager-Client verwaltet werden | Microsoft-Dokumentation"
+title: "Erstellen von Konfigurationselementen für clientverwaltete Windows-Computer – Configuration Manager | Microsoft-Dokumentation"
 description: "Verwalten Sie Windows-Computer und -Server mithilfe benutzerdefinierter Konfigurationselemente für Windows-Desktop- und -Servercomputer."
 ms.custom: na
 ms.date: 11/18/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: f5509d1ffb88bc128f7be6c74e6b65dc33605c9e
+ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
+ms.openlocfilehash: e55883471fde63036c91b315ed6db6dceb315207
 
 
 ---
@@ -359,6 +359,6 @@ Wählen Sie aus der Liste auf der Seite **Unterstützte Plattformen** des **Assi
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

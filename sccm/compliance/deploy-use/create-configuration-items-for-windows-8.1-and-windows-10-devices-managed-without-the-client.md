@@ -1,5 +1,5 @@
 ---
-title: "Erstellen von Konfigurationselementen für Windows 8.1- und Windows 10-Geräte, die ohne den System Center Configuration Manager-Client verwaltet werden | Microsoft Docs"
+title: "Erstellen von Konfigurationselementen für Windows 10 ohne Client – Configuration Manager | Microsoft-Dokumentation"
 description: "Verwenden Sie das Windows 10-Konfigurationselement von System Center Configuration Manager, um die Einstellungen für Windows 10-Computer zu verwalten."
 ms.custom: na
 ms.date: 12/08/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8f6e6fd1d2a9a6352c9191ea7e2a1f9c6f6e2199
-ms.openlocfilehash: 7efde8dda724d71775313290b13a6aad2f9a7d6c
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: 4c34ace72905b286c3582f09993bd897a87cce45
 
 
 ---
@@ -74,7 +74,7 @@ Verwenden Sie das **Windows 8.1- und Windows 10**-Konfigurationselement von Syst
 ##  <a name="windows-81-and-windows-10-configuration-item-settings-reference"></a>Referenz zu Einstellungen des Konfigurationselements für Windows 8.1 und Windows 10  
 
 ### <a name="password"></a>Kennwort  
- 
+
 |Einstellung|Details|  
 |-------------|-------------|  
 |**Kennworteinstellungen auf Geräten erforderlich**|Auf unterstützten Geräten ein Kennwort erfordern.|  
@@ -100,8 +100,8 @@ Verwenden Sie das **Windows 8.1- und Windows 10**-Konfigurationselement von Syst
 |**Bluetooth**|Ermöglicht die Verwendung der Bluetooth-Funktion des Geräts.|  
 |**Sichtbarer Modus für Bluetooth**|Ermöglicht die Ermittlung anderer Bluetooth-Geräte durch das Gerät.<br>(ausschließlich Windows 10)|  
 |**Bluetooth-Werbung**|Ermöglicht die Verwendung von Bluetooth-Werbung.<br> (ausschließlich Windows 10)|  
-|**Sprachaufzeichnung**|Ermöglicht die Verwendung von Sprachaufzeichnungsfeatures auf dem Gerät.<br>(ausschließlich Windows 10)| 
-|**Cortana**|Aktivieren oder deaktivieren Sie den Sprach-Assistenten Cortana.| 
+|**Sprachaufzeichnung**|Ermöglicht die Verwendung von Sprachaufzeichnungsfeatures auf dem Gerät.<br>(ausschließlich Windows 10)|
+|**Cortana**|Aktivieren oder deaktivieren Sie den Sprach-Assistenten Cortana.|
 
 ### <a name="email-management"></a>E-Mail-Verwaltung  
 
@@ -153,7 +153,7 @@ Verwenden Sie das **Windows 8.1- und Windows 10**-Konfigurationselement von Syst
 |**Durch Eingabe eines einzelnen Worts zu einer Intranetsite wechseln**|Aktiviert oder deaktiviert die Einstellung, die Internet Explorer den automatischen Wechsel zu einer Intranetsite ermöglicht, wenn ein gültiger Sitename ohne voranstehendes „HTTP:“ eingegeben wird.|  
 |**Menüoption für Unternehmensmodus**|Ermöglicht Benutzern das Aktivieren und Deaktivieren des Unternehmensmodus über das Internet Explorer-Menü **Extras** .|  
 |**Protokollieren des Berichtsspeicherorts (URL)**|Geben Sie eine URL an, unter der besuchte Websites protokolliert werden, wenn der Unternehmensmodus aktiv ist.|  
-|**Unternehmensmodus-Websitelistenspeicherort (URL)**|Geben Sie den Speicherort der Liste der Websites an, die den Unternehmensmodus verwenden, wenn er aktiv ist.| 
+|**Unternehmensmodus-Websitelistenspeicherort (URL)**|Geben Sie den Speicherort der Liste der Websites an, die den Unternehmensmodus verwenden, wenn er aktiv ist.|
 
 ### <a name="microsoft-edge"></a>Microsoft Edge  
  Diese Einstellungen gelten für Geräte unter Windows 10 und höher.  
@@ -175,7 +175,7 @@ Verwenden Sie das **Windows 8.1- und Windows 10**-Konfigurationselement von Syst
  Diese Einstellungen gelten für Geräte unter Windows 10, Update von November (1511), und höher.  
 
 |Name der Einstellung|Details|  
-|------------------|-------------| 
+|------------------|-------------|
 |**Echtzeitüberwachung zulassen**|Ermöglicht die Echtzeitüberprüfung auf Schadsoftware, Spyware und andere unerwünschte Software.|
 |**Verhaltensüberwachung zulassen**|Erlaubt Defender, Geräte auf bestimmte bekannte verdächtige Aktivitätsmuster zu überprüfen.|
 |**Netzwerkinspektionssystem aktivieren**|Das Netzwerkinspektionssystem (NIS) trägt zum Schutz von Geräten vor netzwerkbasierten Angriffen bei, indem es Signaturen bekannter Sicherheitsrisiken aus dem Microsoft-Endpoint Protection-Center verwendet, um schädlichen Datenverkehr zu ermitteln und zu blockieren.|
@@ -201,7 +201,7 @@ Verwenden Sie das **Windows 8.1- und Windows 10**-Konfigurationselement von Syst
 |**Dateierweiterungsausschlüsse**|Fügen Sie der Ausschlussliste eine oder mehrere Dateierweiterungen hinzu, z.B. JPG oder TXT. Dateien mit diesen Erweiterungen werden in Echtzeitüberprüfungen oder geplanten Überprüfungen nicht berücksichtigt.|
 |**Prozessausschlüsse**|Fügen Sie der Ausschlussliste einen oder mehrere Prozesse vom Typ EXE, COM, oder SCR hinzu. Diese Prozesse werden in Echtzeitüberprüfungen oder geplanten Überprüfungen nicht berücksichtigt.|
 
- 
+
 
 ###  <a name="cloud"></a>Cloud  
 
@@ -244,9 +244,9 @@ Verwenden Sie das **Windows 8.1- und Windows 10**-Konfigurationselement von Syst
 |**Geräteverwaltung beim Roaming**|Ermöglicht die Verwaltung des Geräts durch Configuration Manager beim Roaming.<br>(ausschließlich Windows 10)|  
 |**Softwaredownload beim Roaming**|Ermöglicht das Herunterladen von Apps und Software beim Roaming.<br>(ausschließlich Windows 10)|  
 |**E-Mail-Download beim Roaming**|Ermöglicht E-Mail-Downloads beim Roaming.<br>(ausschließlich Windows 10)|  
-|**Datenroaming**|Ermöglicht beim Zugriff auf Daten das Roaming zwischen Netzwerken.| 
+|**Datenroaming**|Ermöglicht beim Zugriff auf Daten das Roaming zwischen Netzwerken.|
 |**VPN über Mobilfunknetz**|Steuert, ob das Gerät über ein Mobilfunknetz auf VPN-Verbindungen zugreifen kann.<br>(ausschließlich Windows 10)|
-|**VPN-Roaming über Mobilfunknetz**|Steuert, ob das Gerät beim Roaming über ein Mobilfunknetz auf VPN-Verbindungen zugreifen kann.<br>(ausschließlich Windows 10)| 
+|**VPN-Roaming über Mobilfunknetz**|Steuert, ob das Gerät beim Roaming über ein Mobilfunknetz auf VPN-Verbindungen zugreifen kann.<br>(ausschließlich Windows 10)|
 
 ###  <a name="encryption"></a>Verschlüsselung  
 
@@ -287,7 +287,7 @@ Verwenden Sie das **Windows 8.1- und Windows 10**-Konfigurationselement von Syst
 |**Proxyservereinstellungen**|Geben Sie je nach Bedarf die Einstellungen **Server** und **Port** für **HTTP**, **WAP** und **Sockets**an.|  
 |**802.1X-Netzwerkzugriff aktivieren**|Wählen Sie diese Option aus, wenn Sie die Verbindung sichern möchten, indem Sie einen EAP-Typ angeben.|  
 |**EAP-Typ**|Wählen Sie den EAP-Typ aus:<br>- **PEAP**<br>- **Smartcard oder Zertifikat**|  
- 
+
 
 ### <a name="certificates"></a>Zertifikate  
  Ermöglicht Ihnen das Importieren von Zertifikaten für die Installation auf mobilen Geräten.  
@@ -356,11 +356,11 @@ Verwenden Sie das **Windows 8.1- und Windows 10**-Konfigurationselement von Syst
 |------------------|-------------|  
 |**Zulassen der automatischen Aktivierung des Bildschirms, wenn Sensoren eine Person im Raum erkennen**|Ermöglicht das automatische Aktivieren des Geräts, wenn der Sensor eine Person im Raum erkennt.|  
 |**Erforderliche PIN für drahtlose Projektion**|Gibt an, ob Sie eine PIN eingeben müssen, bevor Sie die drahtlosen Projektionsfunktionen des Geräts verwenden können.|  
-|**Wartungsfenster**|Konfiguriert das Fenster, in dem Updates am Gerät vorgenommen werden können. Sie können die Startzeit und Länge des Fensters (1 bis 5 Stunden) konfigurieren.| 
+|**Wartungsfenster**|Konfiguriert das Fenster, in dem Updates am Gerät vorgenommen werden können. Sie können die Startzeit und Länge des Fensters (1 bis 5 Stunden) konfigurieren.|
 |**Azure Operational Insights**|Azure Operational Insights, Teil der Microsoft Operations Manager-Suite, sammelt, speichert und analysiert Daten aus Protokolldateien von Windows 10 Team-Geräten.<br>Zum Herstellen einer Verbindung mit Azure Operational Insights geben Sie eine **Arbeitsbereichs-ID** und einen **Arbeitsbereichsschlüssel ** ein.|
 |**Miracast-Funkprojektion**|Aktivieren Sie diese Option, wenn Sie dem Windows 10 Team-Gerät ermöglichen möchten, Miracast-fähige Geräte für die Projektion zu verwenden.<br>Wenn Sie diese Option aktivieren, wählen Sie unter **Miracast-Kanal wählen** den zum Projizieren von Inhalten verwendeten Miracast-Kanal aus.|
 |**Besprechungsinformationen auf Willkommensbildschirm anzeigen**|Wenn Sie diese Option aktivieren, können Sie die Informationen auswählen, die auf der Kachel **Besprechungen** des Willkommensbildschirms angezeigt werden. Sie können:<br>- **Nur Organisator und Zeit anzeigen**<br>- **Organisator, Zeit und Thema anzeigen (Thema bei privaten Besprechungen ausblenden)**|
-|**URL zum Bild für den Sperrbildschirmhintergrund**|Aktivieren Sie diese Einstellung, um auf dem **Willkommensbildschirm** von Windows 10 Team-Geräten einen benutzerdefinierten Hintergrund aus der angegebenen URL anzuzeigen.<br>Das Bild muss im PNG-Format vorliegen, und die URL muss mit **https://** beginnen.| 
+|**URL zum Bild für den Sperrbildschirmhintergrund**|Aktivieren Sie diese Einstellung, um auf dem **Willkommensbildschirm** von Windows 10 Team-Geräten einen benutzerdefinierten Hintergrund aus der angegebenen URL anzuzeigen.<br>Das Bild muss im PNG-Format vorliegen, und die URL muss mit **https://** beginnen.|
 
 ### <a name="windows-information-protection"></a>Windows Information Protection
  Diese Einstellungen gelten nur für Geräte unter Windows 10.
@@ -393,7 +393,6 @@ Weitere Informationen zum Konfigurieren von WIP mit Configuration Manager finden
 
 
 
-
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von Endpoint Protection | Microsoft-Dokumentation
+title: "Erstellen einer Standortsystemrolle für einen Endpoint Protection-Punkt | Microsoft-Dokumentation"
 description: "Informationen über das Konfigurieren von Endpoint Protection zum Verwalten von Sicherheit und Schadsoftware auf Configuration Manager-Clientcomputern."
 defintion: 
 definition: 
@@ -18,12 +18,12 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: 4639203bf5e90486ce4b97abc2fc4f54eae3afe9
+ms.sourcegitcommit: 9db108fb2d4d16013f416b8ee87a57ff1c91e21f
+ms.openlocfilehash: 25ce24d16bd55366d23a176b21b38ed53aa40644
 
 
 ---
-# <a name="create-an-endpoint-protection-point-site-system-role"></a>Erstellen einer Endpoint Protection-Standortsystemrolle
+# <a name="create-an-endpoint-protection-point-site-system-role"></a>Erstellen einer Standortsystemrolle für einen Endpoint Protection-Punkt
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -98,6 +98,6 @@ ms.openlocfilehash: 4639203bf5e90486ce4b97abc2fc4f54eae3afe9
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

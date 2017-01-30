@@ -1,5 +1,5 @@
 ---
-title: Verwalten des E-Mail-Zugriffs | Microsoft-Dokumentation
+title: Verwalten des Zugriffs auf Exchange-E-Mail mit Configuration Manager | Microsoft-Dokumentation
 description: Hier erfahren Sie, wie mit dem bedingten Zugriff in System Center Configuration Manager der Zugriff auf Exchange-E-Mail verwaltet wird.
 ms.custom: na
 ms.date: 10/04/2016
@@ -16,12 +16,12 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
-ms.openlocfilehash: 0bbe25598f38f9cf3c15375748fee09c43dfb928
+ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
+ms.openlocfilehash: 26179c0c92773dc0b69be500c165a52e15afc6fd
 
 
 ---
-# <a name="manage-email-access-in-system-center-configuration-manager"></a>Verwalten des E-Mail-Zugriffs in System Center Configuration Manager
+# <a name="manage-email-access"></a>Verwalten des E-Mail-Zugriffs 
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -237,7 +237,7 @@ Nicht unterstützte Browser werden blockiert. Die OWA-Apps für iOS und Android 
 6.  Unter **Anwendungszugriff**können Sie für Outlook und andere Apps mit moderner Authentifizierung den Zugriff auf ausschließlich Geräte beschränken, die für jede Plattform kompatibel sind.  Windows-Geräte müssen entweder in die Domäne eingebunden oder in Intune registriert und kompatibel sein.  
 
     > [!TIP]  
-    > Die **moderne Authentifizierung** ermöglicht das ADAL-basierte (Active Directory Authentication Library) Anmelden für Office-Clients.  
+    >  Die**moderne Authentifizierung** ermöglicht das ADAL-basierte (Active Directory Authentication Library) Anmelden für Office-Clients.  
     >   
     >  -   Die ADAL-basierte Authentifizierung ermöglicht Office-Clients die Einbindung in die browserbasierte Authentifizierung (auch als passive Authentifizierung bekannt).  Der Benutzer wird zur Authentifizierung zu einer Anmeldewebseite umgeleitet.  
     > -   Diese neue Anmeldemethode ermöglicht neue Szenarien, z. B. den bedingten Zugriff, auf Grundlage der **Gerätekompatibilität** und in Abhängigkeit davon, ob eine **mehrstufige Authentifizierung** erfolgt ist.  
@@ -363,6 +363,6 @@ Nicht unterstützte Browser werden blockiert. Die OWA-Apps für iOS und Android 
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 
