@@ -2,7 +2,7 @@
 title: Konfigurieren des Endpoint Protection-Clients | Microsoft-Dokumentation
 description: "Erfahren Sie, wie Sie benutzerdefinierte Clienteinstellungen für Endpoint Protection konfigurieren, die in der Computersammlung in Ihrer Hierarchie bereitgestellt werden können."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
