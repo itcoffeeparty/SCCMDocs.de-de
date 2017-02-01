@@ -15,8 +15,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 54089ac8aa95154534d010bee8c7e2cbd70d1c7e
-ms.openlocfilehash: 30838ed3ad045f781a748f96c874bf543ea05462
+ms.sourcegitcommit: c92d88517b4e1d54add489a53cd34b0f23be0c4c
+ms.openlocfilehash: 04951b3ed50206941850ddcc893fcf9c9596f89f
 
 
 ---
@@ -28,7 +28,8 @@ Fügen Sie in einer vorhandenen Tasksequenz zum Installieren eines Betriebssyste
 
 1. Erstellen Sie eine neue Tasksequenzgruppe nach den Schritten zum Erfassen von Dateien und Einstellungen und vor den Schritten zum Installieren des Betriebssystems. Erstellen Sie z.B. eine Gruppe nach der Gruppe **Dateien und Einstellungen erfassen** namens **BIOS zu UEFI**.
 2. Fügen Sie auf der Registerkarte **Optionen** der neuen Gruppe eine neue Tasksequenzvariable als Bedingung hinzu, wobei **_SMSTSBootUEFI** **ungleich** **TRUE** ist. Dadurch wird verhindert, dass die Schritte in der Gruppe ausgeführt werden, wenn sich ein Computer bereits im UEFI-Modus befindet.
-![Gruppe „BIOS zu UEFI“](../../core/get-started/media/BIOS-to-UEFI-group.png)
+
+   ![Gruppe „BIOS zu UEFI“](../../core/get-started/media/BIOS-to-UEFI-group.png)
 3. Fügen Sie der neuen Gruppe den Tasksequenzschritt **Computer neu starten** hinzu. Wählen Sie unter **Geben Sie an, was nach dem Neustart ausgeführt werden soll** **The boot image assigned to this task sequence is selected** (Das dieser Tasksequenz zugewiesene Startimage wird ausgewählt) aus, um den Computer in Windows PE zu starten.  
 4. Fügen Sie auf der Registerkarte **Optionen** eine Tasksequenzvariable als Bedingung hinzu, wobei **_SMSTSInWinPE ist gleich FALSE**. Dadurch wird verhindert, dass dieser Schritt ausgeführt, wenn sich der Computer bereits in Windows PE befindet.
 
@@ -36,14 +37,16 @@ Fügen Sie in einer vorhandenen Tasksequenz zum Installieren eines Betriebssyste
 5. Fügen Sie einen Schritt zum Starten des OEM-Tools hinzu, das die Firmware von BIOS in UEFI konvertiert. Dabei handelt es sich normalerweise um einen Tasksequenzschritt **Befehlszeile ausführen** mit einer Befehlszeile zum Starten des OEM-Tools.
 6.  Fügen Sie den Tasksequenzschritt „Datenträger formatieren und partitionieren“ hinzu, durch den die Festplatte formatiert und partitioniert wird. Führen Sie im Schritt Folgendes aus:
     1.  Erstellen Sie die FAT32-Partition, die in UEFI konvertiert wird, bevor das Betriebssystem installiert wird. Wählen Sie **GPT** als **Datenträgertyp** aus.
-    ![Schritt „Datenträger formatieren und partitionieren“](../../core/get-started/media/format-and-partition-disk.png)
+
+       ![Schritt „Datenträger formatieren und partitionieren“](../media/format-and-partition-disk.png)
     2.  Wechseln Sie zu den Eigenschaften für die FAT32-Partition. Geben Sie **TSUEFIDrive** in das Feld **Variable** ein. Wenn diese Variable von der Tasksequenz erkannt wird, wird diese sich vor dem Neustart des Computers auf den Übergang zu UEFI vorbereiten.
-    ![Partitionseigenschaften](../../core/get-started/media/partition-properties.png)
+
+       ![Partitionseigenschaften](../../core/get-started/media/partition-properties.png)
     3. Erstellen Sie eine NTFS-Partition, die vom Tasksequenzmodul verwendet wird, um dessen Zustand sowie Protokolldateien zu speichern.
-6.  Fügen Sie den Tasksequenzschritt **Computer neu starten** hinzu. Wählen Sie unter **Geben Sie an, was nach dem Neustart ausgeführt werden soll** **The boot image assigned to this task sequence is selected** (Das dieser Tasksequenz zugewiesene Startimage wird ausgewählt) aus, um den Computer in Windows PE zu starten.  
+7.  Fügen Sie den Tasksequenzschritt **Computer neu starten** hinzu. Wählen Sie unter **Geben Sie an, was nach dem Neustart ausgeführt werden soll** **The boot image assigned to this task sequence is selected** (Das dieser Tasksequenz zugewiesene Startimage wird ausgewählt) aus, um den Computer in Windows PE zu starten.  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

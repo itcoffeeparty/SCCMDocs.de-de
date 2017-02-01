@@ -2,7 +2,7 @@
 title: Konfigurieren der Sicherheit in System Center Configuration Manager | Microsoft-Dokumentation
 description: "Konfigurieren von sicherheitsbezogenen Vorgängen für System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: c486c196335174290a925ca59fe42b806d50889d
+ms.sourcegitcommit: cf29123923436ed4cefc17c69630fc39989caeb4
+ms.openlocfilehash: 0034381a7a388ddc3eda5e774f3c63d741336301
 
 
 ---
@@ -25,48 +25,40 @@ ms.openlocfilehash: c486c196335174290a925ca59fe42b806d50889d
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Anhand der Informationen in diesem Thema können Sie die folgenden sicherheitsbezogenen Optionen für System Center Configuration Manager konfigurieren:  
-
--   [Configure Settings for Client PKI Certificates](#BKMK_ConfigureClientPKI)  
-
--   [Konfigurieren von Signierung und Verschlüsselung](#BKMK_ConfigureSigningEncryption)  
-
--   [Configure Role-Based Administration](#BKMK_ConfigureRBA)  
-
--   [Manage Accounts that are Used by Configuration Manager](#BKMK_ManageAccounts)  
+Anhand der Informationen in diesem Artikel können Sie die folgenden sicherheitsbezogenen Optionen für System Center Configuration Manager einrichten.  
 
 ##  <a name="a-namebkmkconfigureclientpkia-configure-settings-for-client-pki-certificates"></a><a name="BKMK_ConfigureClientPKI"></a> Konfigurieren von Einstellungen für Client-PKI-Zertifikate  
 Wenn Sie Public Key-Infrastrukturzertifikate (PKI) für Clientverbindungen mit Standortsystemen verwenden möchten, von denen Internet Information Services (IIS) verwendet werden, konfigurieren Sie die Einstellungen für diese Zertifikate mithilfe des folgenden Verfahrens.  
 
 #### <a name="to-configure-client-pki-certificate-settings"></a>So konfigurieren Sie Einstellungen von Client-PKI-Zertifikaten  
 
-1.  Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung**.  
+1.  Wählen Sie in der Configuration Manager-Konsole **Verwaltung** aus.  
 
-2.  Erweitern Sie im Bereich **Verwaltung** den Knoten **Standortkonfiguration**, klicken Sie auf **Standorte**und dann auf den zu konfigurierenden primären Standort.  
+2.  Erweitern Sie im Arbeitsbereich **Verwaltung** den Knoten **Standortkonfiguration**, wählen Sie **Standorte** und dann den zu konfigurierenden primären Standort aus.  
 
-3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Eigenschaften** auf **Eigenschaften**, und klicken Sie dann auf die Registerkarte **Kommunikation mit Clientcomputern** .  
+3.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Eigenschaften** **Eigenschaften** und anschließend die Registerkarte **Kommunikation mit Clientcomputern** aus.  
 
     Diese Registerkarte ist nur an einem primären Standort verfügbar. Wenn die Registerkarte **Kommunikation mit Clientcomputern** nicht angezeigt wird, sollten Sie sicherstellen, dass Sie nicht mit einem Standort der zentralen Verwaltung oder einem sekundären Standort verbunden sind.  
 
-4.  Klicken Sie auf **Nur HTTPS** , wenn Sie möchten, dass von Clients, die dem Standort zugewiesen sind, immer ein Client-PKI-Zertifikat verwendet wird, wenn eine Verbindung mit Standortsystemen mit IIS hergestellt wird. Klicken Sie alternativ auf **HTTPS oder HTTP** , wenn Sie die Verwendung eines Client-PKI-Zertifikats nicht erzwingen möchten.  
+4.  Wählen Sie **Nur HTTPS** aus, wenn Sie möchten, dass von Clients, die dem Standort zugewiesen sind, immer ein Client-PKI-Zertifikat verwendet wird, wenn eine Verbindung mit Standortsystemen mit IIS hergestellt wird. Wählen Sie alternativ **HTTPS oder HTTP** aus, wenn Sie die Verwendung eines Client-PKI-Zertifikats nicht erzwingen möchten.  
 
-5.  Wenn Sie die Option **HTTPS oder HTTP**ausgewählt haben und für HTTP-Verbindungen ein Client-PKI-Zertifikat verwenden möchten, klicken Sie auf **PKI-Clientzertifikat (Clientauthentifizierungsfunktion) verwenden, sofern dieses verfügbar ist** . Zur Authentifizierung bei Standortsystemen wird vom Client dieses Zertifikat anstatt eines selbstsignierten Zertifikats verwendet. Wenn Sie **Nur HTTPS**auswählen, wird diese Option automatisch ausgewählt.  
+5.  Wenn Sie die Option **HTTPS oder HTTP** ausgewählt haben und für HTTP-Verbindungen ein Client-PKI-Zertifikat verwenden möchten, wählen Sie **Use client PKI certificate (client authentication capability) when available** (PKI-Clientzertifikat (Clientauthentifizierungsfunktion) verwenden, sofern dieses verfügbar ist) aus. Zur Authentifizierung bei Standortsystemen wird vom Client dieses Zertifikat anstatt eines selbstsignierten Zertifikats verwendet. Wenn Sie **Nur HTTPS** auswählen, wird diese Option automatisch ausgewählt.  
 
     Wenn erkannt wird, dass Clients sich im Internet befinden oder für internetbasierte Clientverwaltung konfiguriert sind, wird immer ein Client-PKI-Zertifikat verwendet.  
 
-6.  Klicken Sie auf **Ändern** , um die Clientauswahlmethode Ihrer Wahl zu konfigurieren, wenn auf einem Client mehrere gültige PKI-Zertifikate verfügbar sind. Klicken Sie dann auf **OK**.  
+6.  Wählen Sie **Ändern** aus, um die Clientauswahlmethode Ihrer Wahl zu konfigurieren, wenn auf einem Client mehrere gültige PKI-Zertifikate verfügbar sind. Wählen Sie dann **OK** aus.  
 
-    Weitere Informationen zur Clientauswahlmethode finden Sie unter [Planning for PKI client certificate selection (Planen der PKI-Clientzertifikatauswahl)](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForClientCertificateSelection).  
+    Weitere Informationen zur Auswahlmethode für Clientzertifikate finden Sie unter [Planning for PKI client certificate selection (Planen der PKI-Clientzertifikatauswahl)](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForClientCertificateSelection).  
 
 7.  Legen Sie mithilfe des Kontrollkästchens fest, ob die Überprüfung der Zertifikatsperrlisten von Clients ausgeführt werden soll.  
 
-    Weitere Informationen zur Überprüfung der Zertifikatsperrlisten durch Clients finden Sie unter [Planning for PKI certificate revocation (Planen der PKI-Zertifikatsperrung)](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs).  
+    Weitere Informationen zur Überprüfung der Zertifikatsperrlisten durch Clients finden Sie unter [Planen der PKI-Zertifikatsperrung](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs).  
 
-8.  Wenn Sie Zertifikate vertrauenswürdiger Zertifizierungsstellen (CA) für Clients angeben müssen, klicken Sie auf **Festlegen**, importieren die Dateien der Stamm-Zertifizierungsstellenzertifikate und klicken dann auf **OK**.  
+8.  Wenn Sie Zertifikate vertrauenswürdiger Zertifizierungsstellen (trusted root certification authority, CA) für Clients angeben müssen, wählen Sie **Festlegen** aus, importieren Sie die Dateien der Zertifikate der Stammzertifizierungsstelle, und wählen Sie dann **OK** aus.  
 
-    Weitere Informationen zu dieser Einstellung finden Sie unter [Planning for the PKI Trusted Root certificates and the Certificate Issuers List (Planen von vertrauenswürdigen PKI-Stammzertifikaten, und der Liste der Zertifikataussteller)](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRootCAs).  
+    Weitere Informationen zu dieser Einstellung finden Sie unter [Planen von vertrauenswürdigen PKI-Stammzertifikaten und der Liste der Zertifikataussteller](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRootCAs).  
 
-9. Klicken Sie auf **OK** , um das Eigenschaftendialogfeld für den Standort zu schließen.  
+9. Wählen Sie **OK** aus, um das Dialogfeld „Eigenschaften“ für den Standort zu schließen.  
 
 Wiederholen Sie diesen Vorgang für alle primären Standorte in der Hierarchie.  
 
@@ -75,31 +67,31 @@ Konfigurieren Sie für Standortsysteme die sichersten Einstellungen für Signier
 
 #### <a name="to-configure-signing-and-encryption-for-a-site"></a>So konfigurieren Sie die Signierung und Verschlüsselung für einen Standort  
 
-1.  Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung**.  
+1.  Wählen Sie in der Configuration Manager-Konsole **Verwaltung** aus.  
 
-2.  Erweitern Sie im Bereich **Verwaltung** den Knoten **Standortkonfiguration**, klicken Sie auf **Standorte**und dann auf den zu konfigurierenden primären Standort.  
+2.  Erweitern Sie im Arbeitsbereich **Verwaltung** den Knoten **Standortkonfiguration**, wählen Sie **Standorte** und dann den zu konfigurierenden primären Standort aus.  
 
-3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Eigenschaften** auf **Eigenschaften**, und klicken Sie dann auf die Registerkarte **Signierung und Verschlüsselung** .  
+3.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Eigenschaften** **Eigenschaften** und dann die Registerkarte **Signierung und Verschlüsselung** aus.  
 
     Diese Registerkarte ist nur an einem primären Standort verfügbar. Wenn die Registerkarte **Signierung und Verschlüsselung** nicht angezeigt wird, sollten Sie sicherstellen, dass Sie nicht mit einem Standort der zentralen Verwaltung oder einem sekundären Standort verbunden sind.  
 
-4.  Konfigurieren Sie die gewünschten Optionen für die Signierung und Verschlüsselung, und klicken Sie dann auf **OK**.  
+4.  Konfigurieren Sie die gewünschten Optionen für die Signierung und Verschlüsselung, und wählen Sie dann **OK** aus.  
 
     > [!WARNING]  
-    >  Wählen Sie die Option **SHA-256 erforderlich** nur dann aus, wenn Sie überprüft haben, ob dieser Hashalgorithmus von allen Clients, die dem Standort zugewiesen werden könnten, unterstützt wird bzw. ob ein gültiges PKI-Zertifikat zur Authentifizierung für die Clients verfügbar ist. Möglicherweise müssen Sie Updates oder Hotfixes auf Clients installieren, damit SHA-256 unterstützt wird. Beispielsweise muss auf Computern mit Windows Server 2003 SP2 das im [KB-Artikel 938397](http://go.microsoft.com/fwlink/p/?LinkId=226666)genannte Hotfix installiert werden.  
+    >  Wählen Sie die Option **SHA-256 erforderlich** nur dann aus, wenn Sie überprüft haben, ob dieser Hashalgorithmus von allen Clients, die dem Standort zugewiesen werden könnten, unterstützt wird, bzw. ob ein gültiges PKI-Zertifikat zur Authentifizierung für die Clients verfügbar ist. Möglicherweise müssen Sie Updates oder Hotfixes auf Clients installieren, damit SHA-256 unterstützt wird. Beispielsweise muss auf Computern mit Windows Server 2003 SP2 das im [KB-Artikel 938397](http://go.microsoft.com/fwlink/p/?LinkId=226666)genannte Hotfix installiert werden.  
     >   
     >  Wenn Sie diese Option auswählen, wenn SHA-256 von Clients nicht unterstützt wird und selbstsignierte Zertifikate verwendet werden, werden die Zertifikate von Configuration Manager zurückgewiesen. In diesem Szenario wird von der Komponente SMS_MP_CONTROL_MANAGER eine Meldung mit der ID 5443 protokolliert.  
 
-5.  Klicken Sie auf **OK** , um das Dialogfeld **Eigenschaften** für den Standort zu schließen.  
+5.  Wählen Sie **OK** aus, um das Dialogfeld **Eigenschaften** für den Standort zu schließen.  
 
 Wiederholen Sie diesen Vorgang für alle primären Standorte in der Hierarchie.  
 
 ##  <a name="a-namebkmkconfigurerbaa-configure-role-based-administration"></a><a name="BKMK_ConfigureRBA"></a> Konfigurieren der rollenbasierten Verwaltung  
-Bei der rollenbasierten Verwaltung werden Sicherheitsrollen, Sicherheitsbereiche und zugewiesene Sammlungen kombiniert, um den Verwaltungsbereich für jeden Administrator zu definieren. Zu einem Verwaltungsbereich gehören die Objekte, die ein Administrator in der Configuration Manager-Konsole anzeigen kann, und die Tasks im Zusammenhang mit diesen Objekten, die der Administrator ausführen darf. Die Konfigurationen der rollenbasierten Verwaltung werden auf jeden Standort in einer Hierarchie angewendet.  
+Bei der rollenbasierten Verwaltung werden Sicherheitsrollen, Sicherheitsbereiche und zugewiesene Sammlungen kombiniert, um den Verwaltungsbereich für jeden Administrator zu definieren. Zu einem Verwaltungsbereich gehören die Objekte, die ein Administrator in der Configuration Manager-Konsole anzeigen kann, sowie die Tasks im Zusammenhang mit diesen Objekten, die der Administrator ausführen darf. Die Konfigurationen der rollenbasierten Verwaltung werden auf jeden Standort in einer Hierarchie angewendet.  
 
-Die folgenden Links führen zu den relevanten Abschnitten des Themas [Configure role-based administration for System Center Configuration Manager (Konfigurieren der rollenbasierten Verwaltung für System Center Configuration Manager)](../../../core/servers/deploy/configure/configure-role-based-administration.md):  
+Die folgenden Links führen zu den relevanten Abschnitten des Artikels [Konfigurieren der rollenbasierten Verwaltung für System Center Configuration Manager](../../../core/servers/deploy/configure/configure-role-based-administration.md):  
 
--   [Create custom security roles (Erstellen benutzerdefinierter Sicherheitsrollen)](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_CreateSecRole)  
+-   [Erstellen benutzerdefinierter Sicherheitsrollen](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_CreateSecRole)  
 
 -   [Konfigurieren von Sicherheitsrollen](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecRole)  
 
@@ -121,23 +113,23 @@ Gehen Sie wie folgt vor, um anzuzeigen, welche Konten für verschiedene Tasks ko
 
 #### <a name="to-manage-accounts-that-are-used-by-configuration-manager"></a>So verwalten Sie Konten, die von Configuration Manager verwendet werden  
 
-1.  Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung**.  
+1.  Wählen Sie in der Configuration Manager-Konsole **Verwaltung** aus.  
 
-2.  Erweitern Sie im Arbeitsbereich **Verwaltung** den Eintrag **Sicherheit**, und klicken Sie dann auf **Konten**, um die Konten anzuzeigen, die für Configuration Manager konfiguriert sind.  
+2.  Erweitern Sie im Arbeitsbereich **Verwaltung** den Eintrag **Sicherheit**, und wählen Sie dann **Konten** aus, um die Konten anzuzeigen, die für Configuration Manager konfiguriert sind.  
 
 3.  Wenn Sie das Kennwort für ein Konto ändern möchten, das für Configuration Manager konfiguriert ist, wählen Sie das Konto aus.  
 
-4.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Eigenschaften** auf **Eigenschaften**.  
+4.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Eigenschaften** die Option **Eigenschaften** aus.  
 
-5.  Klicken Sie auf **Festlegen**, um das Dialogfeld **Windows-Benutzerkonto** zu öffnen, und geben Sie das neue Kennwort ein, das in Configuration Manager für das Konto verwendet werden soll.  
+5.  Wählen Sie **Festlegen** aus, um das Dialogfeld **Windows-Benutzerkonto** zu öffnen, und geben Sie das neue Kennwort ein, das in Configuration Manager für das Konto verwendet werden soll.  
 
     > [!NOTE]  
     >  Das angegebene Kennwort muss mit dem Kennwort übereinstimmen, das in Active Directory-Benutzer und -Computer für das Konto angegeben wurde.  
 
-6.  Klicken Sie auf **OK** , um das Verfahren abzuschließen.  
+6.  Wählen Sie **OK** aus, um den Vorgang abzuschließen.  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

@@ -2,7 +2,7 @@
 title: Features und Funktionen | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über die primären Verwaltungsfunktionen von System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 851029368d97312ef2766505f933eac72d6950e5
+ms.sourcegitcommit: 53b27dcb5c8bb670556fe4cee9e990619a9a63e9
+ms.openlocfilehash: 4691f43dccdf73936107f4635321897b9779bead
 
 
 ---
@@ -32,7 +32,7 @@ Im Folgenden finden Sie die primären Verwaltungsfunktionen von System Center Co
 
  **Anwendungsverwaltung**  
 
- Zu dieser Funktion gehören mehrere Tools und Ressourcen, mit denen Sie Anwendungen auf vielen verschiedenen von Ihnen verwalteten Geräten erstellen, verwalten, bereitstellen und überwachen können. Darüber hinaus bietet Configuration Manager Tools, mit denen Sie Ihre Unternehmensdaten in Apps in den Apps der Benutzer schützen können. Informationen hierzu finden Sie unter [Einführung in die Anwendungsverwaltung](/sccm/apps/understand/introduction-to-application-management).
+ Zu dieser Funktion gehören mehrere Tools und Ressourcen, mit denen Sie Anwendungen auf vielen verschiedenen von Ihnen verwalteten Geräten erstellen, verwalten, bereitstellen und überwachen können. Darüber hinaus bietet Configuration Manager Tools, mit denen Sie Ihre Unternehmensdaten in den Apps der Benutzer schützen können. Informationen hierzu finden Sie unter [Einführung in die Anwendungsverwaltung](/sccm/apps/understand/introduction-to-application-management).
 
  **Zugriff auf Unternehmensressourcen**  
 
@@ -40,7 +40,7 @@ Im Folgenden finden Sie die primären Verwaltungsfunktionen von System Center Co
 
  **Kompatibilitätseinstellungen**  
 
- Zu dieser Funktion gehören mehrere Tools und Ressourcen, mit deren Hilfe Sie die Konfigurationskompatibilität von Clientgeräten im Unternehmen bewerten, verfolgen und korrigieren können.  Darüber hinaus können Sie Kompatibilitätseinstellungen verwenden, um eine Reihe von Features und Sicherheitseinstellungen auf Geräten zu konfigurieren, die Sie verwalten. Informationen hierzu finden Sie unter [Sicherstellen der Gerätekompatibilität mit System Center Configuration Manager](../../../compliance/understand/ensure-device-compliance.md).  
+ Zu dieser Funktion gehören mehrere Tools und Ressourcen, mit deren Hilfe Sie die Konfigurationskompatibilität von Clientgeräten im Unternehmen bewerten, verfolgen und korrigieren können. Darüber hinaus können Sie Kompatibilitätseinstellungen verwenden, um eine Reihe von Features und Sicherheitseinstellungen auf Geräten zu konfigurieren, die Sie verwalten. Informationen hierzu finden Sie unter [Sicherstellen der Gerätekompatibilität mit System Center Configuration Manager](../../../compliance/understand/ensure-device-compliance.md).  
 
  **Endpoint Protection**  
 
@@ -64,11 +64,11 @@ Im Folgenden finden Sie die primären Verwaltungsfunktionen von System Center Co
 
  **Lokale Verwaltung mobiler Geräte**  
 
- Registriert und verwaltet PCs und mobile Geräte mithilfe der lokalen Configuration Manager-Infrastruktur und -Verwaltungsfunktionalität, die in die Geräteplattformen integriert ist (anstatt mit einem getrennt installierten Configuration Manager-Client zu arbeiten). Derzeit unterstützt wird die Verwaltung von Windows 10 Enterprise- und Windows 10 Mobile-Geräten.  Informationen hierzu finden Sie unter [Verwalten mobiler Geräte mit lokaler Infrastruktur in System Center Configuration Manager](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
+ Registriert und verwaltet PCs und mobile Geräte mithilfe der lokalen Configuration Manager-Infrastruktur und -Verwaltungsfunktionalität, die in die Geräteplattformen integriert ist (anstatt mit einem getrennt installierten Configuration Manager-Client zu arbeiten). Derzeit unterstützt wird die Verwaltung von Windows 10 Enterprise- und Windows 10 Mobile-Geräten. Informationen hierzu finden Sie unter [Verwalten mobiler Geräte mit lokaler Infrastruktur in System Center Configuration Manager](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
 
  **Betriebssystembereitstellung**  
 
- Zu dieser Funktion gehört ein Tool zum Erstellen von Betriebssystemabbildern. Dann können Sie diese Images mittels PXE-Start oder mithilfe von startfähigen Medien wie CDs, DVDs oder USB-Flashlaufwerken auf Computern, die von Configuration Manager verwaltet werden, und auf nicht verwalteten Computern bereitstellen. Informationen hierzu finden Sie unter [Einführung in die Bereitstellung von Betriebssystemen in System Center Configuration Manager](../../../osd/understand/introduction-to-operating-system-deployment.md).  
+ Zu dieser Funktion gehört ein Tool zum Erstellen von Betriebssystemabbildern. Sie können diese Images verwenden, um die Betriebssysteme mittels PXE-Start oder mithilfe von startfähigen Medien wie CD-Sets, DVDs oder USB-Speichersticks auf Computern bereitzustellen. Beachten Sie, dass dies auch für Computer, die durch Configuration Manager verwaltet werden, sowie für nicht verwaltete Computer gilt. Informationen hierzu finden Sie unter [Einführung in die Bereitstellung von Betriebssystemen in System Center Configuration Manager](../../../osd/understand/introduction-to-operating-system-deployment.md).  
 
  **Energieverwaltung**  
 
@@ -76,11 +76,11 @@ Im Folgenden finden Sie die primären Verwaltungsfunktionen von System Center Co
 
  **Abfragen**  
 
- Zu dieser Funktion gehört ein Tool, mit dessen Hilfe Sie Informationen zu Ressourcen in Ihrer Hierarchie sowie zu Inventurdaten und Statusmeldungen abrufen können. Anschließend können Sie diese Informationen verwenden, um Berichte zu erstellen oder Sammlungen von Geräten oder Benutzern für Softwarebereitstellungs- und Konfigurationseinstellungen zu definieren. Informationen hierzu finden Sie unter [Einführung in Abfragen in System Center Configuration Manager](../../../core/servers/manage/introduction-to-queries.md).  
+ Zu dieser Funktion gehört ein Tool, mit dessen Hilfe Sie Informationen zu Ressourcen in Ihrer Hierarchie sowie zu Inventurdaten und Statusmeldungen abrufen können. Anschließend können Sie diese Informationen verwenden, um Berichte zu erstellen, oder Sammlungen von Geräten oder Benutzern für Softwarebereitstellungs- und Konfigurationseinstellungen zu definieren. Informationen hierzu finden Sie unter [Einführung in Abfragen in System Center Configuration Manager](../../../core/servers/manage/introduction-to-queries.md).  
 
  **Remoteverbindungsprofile**  
 
- Zu dieser Funktion gehört eine Reihe von Tools und Ressourcen, mit deren Hilfe Sie Remoteverbindungeinstellungen für Geräte in Ihrer Organisation erstellen, bereitstellen und überwachen können. Durch Bereitstellen dieser Einstellungen erleichtern Sie dem Endbenutzer das Herstellen einer Verbindung mit dem Unternehmensnetzwerk. Informationen hierzu finden Sie unter [Arbeiten mit Remoteverbindungsprofile in System Center Configuration Manager](/sccm/compliance/deploy-use/create-remote-connection-profiles).  
+ Zu dieser Funktion gehört eine Reihe von Tools und Ressourcen, mit deren Hilfe Sie Remoteverbindungeinstellungen für Geräte in Ihrer Organisation erstellen, bereitstellen und überwachen können. Durch Bereitstellen dieser Einstellungen erleichtern Sie den Benutzern das Herstellen einer Verbindung zu ihren Computern über das Unternehmensnetzwerk. Informationen hierzu finden Sie unter [Arbeiten mit Remoteverbindungsprofile in System Center Configuration Manager](/sccm/compliance/deploy-use/create-remote-connection-profiles).  
 
  **Konfigurationselemente für Benutzerdaten und -profile**  
 
@@ -104,6 +104,6 @@ Im Folgenden finden Sie die primären Verwaltungsfunktionen von System Center Co
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

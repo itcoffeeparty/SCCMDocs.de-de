@@ -2,7 +2,7 @@
 title: "Quellspeicherort für Inhalt | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr über die System Center Configuration Manager-Einstellungen, mit denen Clients Inhalte in einem langsamen Netzwerk finden können."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: b0f54daecfc3e958d3196f3f0b08606725d86c39
+ms.sourcegitcommit: 7f2fd3e550c7dc1b27996dc309b53f74e8c865e9
+ms.openlocfilehash: a823458dc3b891b1c32d1cb44a96e8cafd376ed5
 
 ---
 # <a name="content-source-location-scenarios-in-system-center-configuration-manager"></a>Szenarios für Quellspeicherorte für Inhalt in System Center Configuration Manager
@@ -27,9 +27,9 @@ ms.openlocfilehash: b0f54daecfc3e958d3196f3f0b08606725d86c39
 System Center Configuration Manager unterstützt vor Version 1610 mehrere Einstellungen, die festlegen, wie und wo Clients Inhalte finden, wenn sie sich in einem langsamen Netzwerk befinden. Die möglichen Kombinationen wirken sich auf die Inhaltsspeicherort-Clients und darauf aus, ob sie erfolgreich einen Fallbackpfad verwenden können, wenn eine bevorzugte Quelle für Inhalte nicht verfügbar ist.  
 
 > [!IMPORTANT]  
-> **Wenn an Ihren Standorten die Versionen 1511, 1602 oder 1606 laufen**, gelten die Informationen in diesem Thema für Ihre Infrastruktur. Siehe auch [Boundary groups for System Center Configuration Manager version 1511, 1602, and 1606 (Begrenzungsgruppen für die Versionen 1511, 1602, und 1606)](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606) für Informationen, die für Begrenzungsgruppen mit diesen Versionen von Configuration Manager spezifisch sind.
+> **Wenn an Ihren Standorten die Versionen 1511, 1602 oder 1606 laufen**, gelten die Informationen in diesem Thema für Ihre Infrastruktur. Siehe auch [Begrenzungsgruppen für die System Center Configuration Manager-Versionen 1511, 1602 und 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606) für Informationen, die für Begrenzungsgruppen mit diesen Versionen von Configuration Manager spezifisch sind.
 >
-> **Wenn an Ihre Standorten die Version 1610 oder höher läuft**, verwenden Sie die Informationen in [Begrenzungsgruppen](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups), um zu verstehen, wie Ihre Clients Verteilungspunkte finden, die über verfügbare Inhalte verfügen.
+> **Wenn an Ihren Standorten die Version 1610 oder höher läuft**, verwenden Sie die Informationen in [Definieren von Standortgrenzen und Begrenzungsgruppen für Configuration Manager](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups), um zu verstehen, wie Ihre Clients Verteilungspunkte finden, die verfügbare Inhalte haben.
 
 
 
@@ -37,17 +37,17 @@ System Center Configuration Manager unterstützt vor Version 1610 mehrere Einste
 
 **Die folgenden drei Einstellungen definieren das Verhalten, wenn Clients Inhalte anfordern:**
 
--  **Fallbackquellpfad für Inhalt zulassen** (aktiviert oder deaktiviert): Diese Option können Sie auf der Registerkarte „Begrenzungsgruppen“ eines Verteilungspunkts aktivieren.  Dadurch kann der Client einen als Fallbackpfad konfigurierten Verteilungspunkt nutzen, wenn der Inhalt auf einem bevorzugten Verteilungspunkt nicht verfügbar ist.  
+-  **Fallbackquellpfad für Inhalt zulassen** (aktiviert oder deaktiviert): Diese Option können Sie auf der Registerkarte **Begrenzungsgruppen** eines Verteilungspunkts aktivieren. Dadurch kann der Client einen als Fallbackpfad konfigurierten Verteilungspunkt nutzen, wenn der Inhalt auf einem bevorzugten Verteilungspunkt nicht verfügbar ist.  
 
  - **Bereitstellungsverhalten für die Netzwerkverbindungsgeschwindigkeit**: Bei jeder Bereitstellung wird für den Fall von langsamen Verbindungen zum Verteilungspunkt eine der folgenden Verhaltensweisen konfiguriert:  
 
     -   **Inhalt vom Verteilungspunkt herunterladen und lokal ausführen**  
 
-    -   **Inhalt nicht herunterladen**: Diese Option wird nur verwendet, wenn ein Client einen Fallbackpfad verwendet, um Inhalt abzurufen  
+    -   **Inhalt nicht herunterladen**: Diese Option wird nur verwendet, wenn ein Client einen Fallbackpfad verwendet, um Inhalt abzurufen.  
 
-    Die Verbindungsgeschwindigkeit für einen Verteilungspunkt wird auf der Registerkarte „Referenzen“ der Begrenzungsgruppe konfiguriert und gilt nur für diese Begrenzungsgruppe.  
+    Die Verbindungsgeschwindigkeit für einen Verteilungspunkt wird auf der Registerkarte **Referenzen** der Begrenzungsgruppe konfiguriert und gilt nur für diese Begrenzungsgruppe.  
 
- -  **Paketverteilung auf Anfrage** (an bevorzugte Verteilungspunkte): Dieses Verhalten wird aktiviert, wenn Sie auf der Registerkarte „Verteilungseinstellungen“ eines Pakets oder in den Anwendungseigenschaften die Option **Distribute the content for this package to preferred distribution points** (Den Inhalt für dieses Paket an bevorzugte Verteilungspunkte verteilen) auswählen. Das Aktivieren dieser Option veranlasst Configuration Manager, nach einer auf einem Verteilungspunkt eingehenden Inhaltsanforderung durch einen Client den betreffenden Inhalt automatisch auf einen bevorzugten Verteilungspunkt zu kopieren, der den Inhalt noch nicht enthält.  
+ -  **On-demand package distribution (Paketverteilung auf Anfrage)** (an bevorzugte Verteilungspunkte): Dieses Verhalten wird aktiviert, wenn Sie auf der Registerkarte **Verteilungseinstellungen** eines Pakets oder in den Anwendungseigenschaften die Option **Den Inhalt für dieses Paket an bevorzugte Verteilungspunkte verteilen** auswählen. Das Aktivieren dieser Option veranlasst Configuration Manager, nach einer auf einem Verteilungspunkt eingehenden Inhaltsanforderung durch einen Client den betreffenden Inhalt automatisch auf einen bevorzugten Verteilungspunkt zu kopieren, der den Inhalt noch nicht enthält.  
 
 
  **Die folgenden Anforderungen gelten für alle Szenarios:**
@@ -68,7 +68,7 @@ System Center Configuration Manager unterstützt vor Version 1610 mehrere Einste
 -   **Bereitstellungsverhalten für langsame Netzwerke**: beliebige Konfiguration  
 
 
-**Details**: (Die Konfiguration für die bedarfsgesteuerte Paketverteilung ist in diesem Szenario nicht relevant)  
+**Details:** (Die Konfiguration für die bedarfsgesteuerte Paketverteilung ist in diesem Szenario nicht relevant.)  
 
 1.  Vom Client wird eine Inhaltsanforderung an den Verwaltungspunkt gesendet.  
 
@@ -86,9 +86,9 @@ System Center Configuration Manager unterstützt vor Version 1610 mehrere Einste
 -   **Bereitstellungsverhalten für langsame Netzwerke**: Inhalt nicht herunterladen  
 
 
-**Details**: (Die Konfiguration für die bedarfsgesteuerte Paketverteilung ist in diesem Szenario nicht relevant)  
+**Details:** (Die Konfiguration für die bedarfsgesteuerte Paketverteilung ist in diesem Szenario nicht relevant.)  
 
-1.  Vom Client wird eine Inhaltsanforderung an den Verwaltungspunkt gesendet. Vom Client wird in die Anforderung ein Kennzeichen eingeschlossen mit der Information, dass Fallbackverteilungspunkte zulässig sind.  
+1.  Vom Client wird eine Inhaltsanforderung an den Verwaltungspunkt gesendet. Vom Client wird in die Anforderung ein Kennzeichen mit der Information eingeschlossen, dass Fallbackverteilungspunkte zulässig sind.  
 
 2.  Vom Verwaltungspunkt wird eine Inhaltsortliste mit bevorzugten Verteilungspunkten sowie Fallbackverteilungspunkten, an denen der Inhalt verfügbar ist, an den Client zurückgegeben.  
 
@@ -104,9 +104,9 @@ System Center Configuration Manager unterstützt vor Version 1610 mehrere Einste
 -   **Bereitstellungsverhalten für langsame Netzwerke**: Inhalt herunterladen und installieren  
 
 
-**Details**: (Die Konfiguration für die bedarfsgesteuerte Paketverteilung ist in diesem Szenario nicht relevant)  
+**Details:** (Die Konfiguration für die bedarfsgesteuerte Paketverteilung ist in diesem Szenario nicht relevant.)  
 
-1.  Vom Client wird eine Inhaltsanforderung an den Verwaltungspunkt gesendet. Vom Client wird in die Anforderung ein Kennzeichen eingeschlossen mit der Information, dass Fallbackverteilungspunkte zulässig sind.  
+1.  Vom Client wird eine Inhaltsanforderung an den Verwaltungspunkt gesendet. Vom Client wird in die Anforderung ein Kennzeichen mit der Information eingeschlossen, dass Fallbackverteilungspunkte zulässig sind.  
 
 2.  Vom Verwaltungspunkt wird eine Inhaltsortliste mit bevorzugten Verteilungspunkten sowie Fallbackverteilungspunkten, an denen der Inhalt verfügbar ist, an den Client zurückgegeben.  
 
@@ -146,11 +146,11 @@ System Center Configuration Manager unterstützt vor Version 1610 mehrere Einste
 
 **Details:**  
 
-1.  Vom Client wird eine Inhaltsanforderung an den Verwaltungspunkt gesendet. Vom Client wird in die Anforderung ein Kennzeichen eingeschlossen mit der Information, dass Fallbackverteilungspunkte zulässig sind.  
+1.  Vom Client wird eine Inhaltsanforderung an den Verwaltungspunkt gesendet. Vom Client wird in die Anforderung ein Kennzeichen mit der Information eingeschlossen, dass Fallbackverteilungspunkte zulässig sind.  
 
 2.  Vom Verwaltungspunkt wird eine Inhaltsortliste mit bevorzugten Verteilungspunkten sowie Fallbackverteilungspunkten, an denen der Inhalt verfügbar ist, an den Client zurückgegeben. Der Inhalt ist an keinem bevorzugten Verteilungspunkt, jedoch an mindestens einem Fallbackverteilungspunkt verfügbar.  
 
-3.  Der Inhalt wird nicht heruntergeladen, weil die Bereitstellungseigenschaft für den Fall der Verwendung eines Fallbackverteilungspunkts auf **Do not download content** (Inhalt nicht herunterladen) festgelegt ist (diese Einstellung wird verwendet, wenn Clients zum Abrufen des Inhalts auf den Fallback ausweichen). Es tritt ein Clientfehler auf, die Fehlermeldung **Inhalt ist nicht verfügbar** wird angezeigt, und vom Client wird in den Wiederholungsmodus gewechselt. Jede Stunde wird eine neue Inhaltsanforderung gesendet.  
+3.  Der Inhalt wird nicht heruntergeladen, weil die Bereitstellungseigenschaft für den Fall der Verwendung eines Fallbackverteilungspunkts auf **Inhalt nicht herunterladen** festgelegt ist (diese Einstellung wird verwendet, wenn Clients zum Abrufen des Inhalts auf den Fallback ausweichen). Es tritt ein Clientfehler auf, die Fehlermeldung **Inhalt ist nicht verfügbar** wird angezeigt, und vom Client wird in den Wiederholungsmodus gewechselt. Jede Stunde wird eine neue Inhaltsanforderung gesendet.  
 
 ## <a name="scenario-6"></a>Szenario 6  
  Folgende Konfigurationseinstellungen sind vorhanden:  
@@ -214,7 +214,7 @@ System Center Configuration Manager unterstützt vor Version 1610 mehrere Einste
 
 **Details:**  
 
-1.  Vom Client wird eine Inhaltsanforderung an den Verwaltungspunkt gesendet. Vom Client wird in die Anforderung ein Kennzeichen eingeschlossen mit der Information, dass Fallbackverteilungspunkte zulässig sind.  
+1.  Vom Client wird eine Inhaltsanforderung an den Verwaltungspunkt gesendet. Vom Client wird in die Anforderung ein Kennzeichen mit der Information eingeschlossen, dass Fallbackverteilungspunkte zulässig sind.  
 
 2.  Vom Verwaltungspunkt wird eine Inhaltsortliste mit bevorzugten Verteilungspunkten sowie Fallbackverteilungspunkten, an denen der Inhalt verfügbar ist, an den Client zurückgegeben. Der Inhalt ist an keinem bevorzugten Verteilungspunkt, jedoch an mindestens einem Fallbackverteilungspunkt verfügbar.  
 
@@ -244,7 +244,7 @@ System Center Configuration Manager unterstützt vor Version 1610 mehrere Einste
 
 **Details:**  
 
-1.  Vom Client wird eine Inhaltsanforderung an den Verwaltungspunkt gesendet. Vom Client wird in die Anforderung ein Kennzeichen eingeschlossen mit der Information, dass Fallbackverteilungspunkte zulässig sind.  
+1.  Vom Client wird eine Inhaltsanforderung an den Verwaltungspunkt gesendet. Vom Client wird in die Anforderung ein Kennzeichen mit der Information eingeschlossen, dass Fallbackverteilungspunkte zulässig sind.  
 
 2.  Vom Verwaltungspunkt wird eine Inhaltsortliste mit bevorzugten Verteilungspunkten sowie Fallbackverteilungspunkten, an denen der Inhalt verfügbar ist, an den Client zurückgegeben. Der Inhalt ist an keinem bevorzugten Verteilungspunkt, jedoch an mindestens einem Fallbackverteilungspunkt verfügbar.  
 
@@ -256,6 +256,6 @@ System Center Configuration Manager unterstützt vor Version 1610 mehrere Einste
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

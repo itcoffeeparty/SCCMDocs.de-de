@@ -2,7 +2,7 @@
 title: "Checklisten für die Migration | Microsoft-Dokumentation"
 description: "Verwenden Sie Administratorprüflisten zum Planen einer Strategie zur Migration zu System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
-ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
+ms.sourcegitcommit: 5e6e8a18a8fc705c993177b3c5b4113a351a45a4
+ms.openlocfilehash: 36f7c37e4da3f2bce64a25d266dae57d9fe98c36
 
 
 ---
@@ -26,13 +26,7 @@ ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Verwenden Sie die folgenden Administratorprüflisten zum Planen einer Strategie zur Migration zu System Center Configuration Manager:  
-
--   [Administratorprüfliste zum Planen der Migration](#Checklist_Migraiton_Planning)  
-
--   [Administratorprüfliste für die Hierarchiemigration](#Checklist_Hierarchy_for_migration)  
-
--   [Administratorprüfliste für die Migration](#Checklisit_Migration)  
+Verwenden Sie die folgenden Administratorprüflisten zum Planen einer Strategie zur Migration zu System Center Configuration Manager.
 
 ##  <a name="a-namechecklistmigraitonplanninga-administrator-checklist-for-migration-planning"></a><a name="Checklist_Migraiton_Planning"></a> Administratorprüfliste zum Planen der Migration  
  Verwenden Sie die folgende Checkliste für die Planungsschritte vor der Migration.  
@@ -50,9 +44,7 @@ Verwenden Sie die folgenden Administratorprüflisten zum Planen einer Strategie 
 
     Weitere Informationen finden Sie unter [Grundlagen der rollenbasierten Verwaltung für System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
 
--   **Bewerten Sie Ihre Netzwerk- und Active Directory-Topologie:**  
-
-    Überprüfen Sie Ihre bestehende Domänenstruktur und Netzwerktopologie. Beachten Sie, inwiefern Ihr Hierarchieentwurf dadurch beeinflusst wird.  
+-   **Analysieren Sie Ihre Netzwerk- und Active Directory-Topologie:** Überprüfen Sie Ihre bestehende Domänenstruktur und Netzwerktopologie. Beachten Sie, inwiefern Ihr Hierarchieentwurf und Ihre Migrationsaufgabe dadurch beeinflusst wird.  
 
 -   **Stellen Sie den Entwurf Ihrer Zielhierarchie fertig:**  
 
@@ -60,11 +52,11 @@ Verwenden Sie die folgenden Administratorprüflisten zum Planen einer Strategie 
 
 -   **Ordnen Sie die Hierarchie den Computern zu, die für die Standorte und Standortserver in der Zielhierarchie verwendet werden sollen:**  
 
-    Identifizieren Sie die Computer, die von Standorten und Standortsystemservern in der Zielhierarchie verwendet werden sollen, und vergewissern Sie sich, dass diese über entsprechende Kapazitäten für aktuelle und zukünftige Betriebsanforderungen verfügen.  
+    Identifizieren Sie die Computer, die von Standorten und Standortsystemservern in der Zielhierarchie verwendet werden sollen, und vergewissern Sie sich dann, dass diese über entsprechende Kapazitäten für aktuelle und zukünftige Betriebsanforderungen verfügen.  
 
 -   **Planen Sie Ihre Objektmigrationsstrategie:**  
 
-    Planen Sie den Einsatz der verfügbaren Migrationsaufträge zum Migrieren unterschiedlicher Objekte, z. B. Standortgrenzen, Sammlungen, Ankündigungen und Bereitstellungen. Weitere Informationen finden Sie unter [Types of Migration Jobs](../../core/migration/planning-a-migration-job-strategy.md#Types_of_Migration) in [Planning a migration job strategy in System Center Configuration Manager](../../core/migration/planning-a-migration-job-strategy.md).  
+    Planen Sie den Einsatz der verfügbaren Migrationsaufträge zum Migrieren unterschiedlicher Objekte, z.B. Standortgrenzen, Sammlungen, Ankündigungen und Bereitstellungen. Weitere Informationen finden Sie unter [Typen von Migrationsaufträgen](../../core/migration/planning-a-migration-job-strategy.md#Types_of_Migration) in [Planen einer Strategie für Migrationsaufträge in System Center Configuration Manager](../../core/migration/planning-a-migration-job-strategy.md).  
 
     Von Configuration Manager werden nur Objekte migriert, die Sie ausgewählt haben. Alle Objekte, die nicht migriert werden und in der Zielhierarchie erforderlich sind, müssen in der Zielhierarchie neu erstellt werden.  
 
@@ -72,7 +64,7 @@ Verwenden Sie die folgenden Administratorprüflisten zum Planen einer Strategie 
 
 -   **Planen Sie Ihre Clientmigrationsstrategie:**  
 
-    Planen Sie die Migration von Clients anhand eines kontrollierten Ansatzes, mit dem beim Migrieren von Clients zur Zielhierarchie die Netzwerkbandbreite und Serververarbeitung begrenzt wird. Weitere Informationen zum Planen einer Strategie für die Clientmigration finden Sie unter [Planning a client migration strategy in System Center Configuration Manager](../../core/migration/planning-a-client-migration-strategy.md).  
+    Planen Sie die Migration von Clients anhand eines kontrollierten Ansatzes, mit dem beim Migrieren von Clients zur Zielhierarchie die Netzwerkbandbreite und Serververarbeitung begrenzt wird. Weitere Informationen zum Planen einer Strategie für die Clientmigration finden Sie unter [Planen einer Strategie für die Clientmigration in System Center Configuration Manager](../../core/migration/planning-a-client-migration-strategy.md).  
 
 -   **Planen Sie Inventur- und Kompatibilitätsdaten:**  
 
@@ -97,7 +89,7 @@ Verwenden Sie die folgende Checkliste, um eine Zielhierarchie zu planen, bevor S
 
     Installieren und konfigurieren Sie zur Vorbereitung der Migration eine System Center Configuration Manager-Zielhierarchie mit einem primären Standort. Beispiel:  
 
-    -   Installieren eines Standorts der zentralen Verwaltung und mindestens eines untergeordneten primären Standorts  
+    -   Installieren Sie einen Standort der zentralen Verwaltung und mindestens einen untergeordneten primären Standort.  
 
     -   Installieren Sie einen eigenständigen primären Standort, wenn Sie keinen Standort der zentralen Verwaltung verwenden möchten.  
 
@@ -108,7 +100,7 @@ Verwenden Sie die folgende Checkliste, um eine Zielhierarchie zu planen, bevor S
 
 -   **Installieren und konfigurieren Sie zusätzliche Standortsystemrollen in der Zielhierarchie:**  
 
-    Konfigurieren Sie zusätzliche Standortsystemrollen und Standortsysteme, die Sie benötigen werden.  
+    Konfigurieren Sie zusätzliche Standortsystemrollen und Standortsysteme, die Sie benötigen.  
 
 -   **Überprüfen Sie den ordnungsgemäßen Betrieb der Zielhierarchie:**  
 
@@ -116,9 +108,9 @@ Verwenden Sie die folgende Checkliste, um eine Zielhierarchie zu planen, bevor S
 
     -   Vergewissern Sie sich, dass die Datenbankreplikation zwischen Standorten funktioniert, wenn die Zielhierarchie mehrere Standorte enthält. Die Datenbankreplikation ist nicht auf eigenständige primäre Standorte anwendbar.  
 
-    -   Stellen Sie sicher, dass alle installierten Standortsystemrollen funktionsfähig sind.  
+    -   Überprüfen Sie, ob alle installierten Standortsystemrollen betriebsbereit sind.  
 
-    -   Stellen Sie sicher, dass Configuration Manager-Clients, die Sie unter der Zielhierarchie installieren, mit dem jeweils zugewiesenen Standort kommunizieren können.  
+    -   Überprüfen Sie, ob die Configuration Manager-Clients, die Sie unter der Zielhierarchie installieren, mit dem jeweils zugewiesenen Standort kommunizieren können.  
 
 
 ##  <a name="a-namechecklisitmigrationa-administrator-checklist-for-migration"></a><a name="Checklisit_Migration"></a> Administratorprüfliste für die Migration  
@@ -126,11 +118,11 @@ Verwenden Sie die folgende Checkliste für die Datenmigration von der Quellhiera
 
 -   **Aktivieren Sie die Migration in der Zielhierarchie:**  
 
-    Konfigurieren Sie eine Quellhierarchie, indem Sie den Standort der obersten Ebene der Quellhierarchie angeben. Weitere Informationen zum Angeben des Quellstandorts finden Sie unter [Planning a source hierarchy strategy in System Center Configuration Manager](../../core/migration/planning-a-source-hierarchy-strategy.md).  
+    Konfigurieren Sie eine Quellhierarchie, indem Sie den Standort der obersten Ebene der Quellhierarchie angeben. Weitere Informationen zum Angeben des Quellstandorts finden Sie unter [Planen einer Strategie für Quellhierarchien in System Center Configuration Manager](../../core/migration/planning-a-source-hierarchy-strategy.md).  
 
 -   **Wählen Sie weitere Standorte in der Quellhierarchie aus, und konfigurieren Sie diese, wenn in der Quellhierarchie Configuration Manager 2007 SP2 ausgeführt wird:**  
 
-    Für jeden zusätzlichen Standort in der Configuration Manager 2007 SP2-Quellhierarchie, von dem Sie Daten sammeln möchten, müssen Sie Anmeldeinformationen für die Datensammlung konfigurieren. Wenn Sie die einzelnen Quellstandorte konfigurieren, beginnt der Datensammlungsvorgang sofort und wird während der gesamten Migrationsphase fortgesetzt, bis Sie das Sammeln von Daten für den jeweiligen Standort beenden. Die Datensammlung ermöglicht das Migrieren von Objekten aus der Quellhierarchie, die seit der letzten Datensammlung neu dazugekommen sind oder aktualisiert wurden.  
+    Für jeden zusätzlichen Standort in der Configuration Manager 2007 SP2-Quellhierarchie, von dem Sie Daten sammeln möchten, müssen Sie Anmeldeinformationen für die Datensammlung konfigurieren. Wenn Sie die einzelnen Quellstandorte konfigurieren, beginnt der Datensammlungsvorgang sofort und wird während der gesamten Migrationsphase fortgesetzt, bis Sie das Sammeln von Daten für den jeweiligen Standort beenden. Die Datensammlung ermöglicht das Migrieren von Objekten aus der Quellhierarchie, die seit der letzten Datensammlung aktualisiert oder hinzugefügt wurden.
 
     > [!NOTE]  
     >  Wenn von der Quellhierarchie System Center 2012 Configuration Manager oder höher ausgeführt wird, müssen Sie keine zusätzlichen Quellstandorte konfigurieren.  
@@ -139,7 +131,7 @@ Verwenden Sie die folgende Checkliste für die Datenmigration von der Quellhiera
 
     Sie können Verteilungspunkte zwischen den beiden Hierarchien freigeben, damit Clients in der Zielhierarchie auf Inhalte migrierter Objekte zugreifen können. So bleiben dieselben Inhalte für Clients in beiden Hierarchien verfügbar und können beibehalten werden, bis die Datensammlung beendet und die Migration abgeschlossen ist.  
 
-    Informationen zu freigegebenen Verteilungspunkten finden Sie im Abschnitt *Share Distribution Points Between Source and Destination Hierarchies* des Themas [Planning a content deployment migration strategy in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md) .  
+    Informationen zu freigegebenen Verteilungspunkten finden Sie im Abschnitt [Freigeben von Verteilungspunkten zwischen Quell- und Zielhierarchien](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration) des Themas [Planen einer Migrationsstrategie für die Inhaltsbereitstellung in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md).  
 
 -   **Erstellen und führen Sie Migrationsaufträge aus, um die Objekte zu migrieren, die den Clients in der Quellhierarchie zugeordnet sind:**  
 
@@ -147,13 +139,13 @@ Verwenden Sie die folgende Checkliste für die Datenmigration von der Quellhiera
 
     Wenn Sie beispielsweise Inhalte migrieren, müssen Sie unabhängig vom verwendeten Migrationsauftrag einen Standort in der Zielhierarchie für die Verwaltung dieser Inhalte zuweisen. Der zugewiesene Standort greift auf den ursprünglichen Quelldateispeicherort für den Inhalt zu und ist für das Verteilen des Inhalts auf die Verteilungspunkte in der Zielhierarchie verantwortlich.  
 
-    Weitere Informationen finden Sie im Abschnitt [Create and Edit Migration Jobs for System Center Configuration Manager](../../core/migration/operations-for-migration.md#Create_Edit_migration_Jobs) des Themas [Operations for migrating to System Center Configuration Manager](../../core/migration/operations-for-migration.md) .  
+    Weitere Informationen finden Sie im Abschnitt [Erstellen und Bearbeiten von Migrationsaufträgen](../../core/migration/operations-for-migration.md#Create_Edit_migration_Jobs) des Themas [Vorgänge der Migration zu System Center Configuration Manager](../../core/migration/operations-for-migration.md).  
 
 -   **Migrieren Sie Clients in die Zielhierarchie:**  
 
     Der Prozess für die Migration von Clients richtet sich nach Ihrem Migrationsszenario:  
 
-    -   Beim Migrieren von Clients, deren Clientversion nicht der Version der Zielhierarchie entspricht, muss für die Clientsoftware ein Upgrade ausgeführt werden. Das Upgrade erfordert die Entfernung des aktuellen Configuration Manager-Clients und die anschließende Installation der neuen Clientversion, die der Version des Zielstandorts entspricht.  
+    -   Beim Migrieren von Clients, deren Clientversion nicht der Version der Zielhierarchie entspricht, müssen Sie für die Clientsoftware ein Upgrade ausführen. Das Upgrade erfordert die Entfernung des aktuellen Configuration Manager-Clients und die anschließende Installation der neuen Clientversion, die der Version des Zielstandorts entspricht.  
 
     -   Beim Migrieren von Clients, deren Clientversion der Version der Zielhierarchie entspricht, wird für den Client kein Upgrade und keine Neuinstallation ausgeführt. Stattdessen wird der Client einem primären Standort in der Zielhierarchie neu zugewiesen.  
 
@@ -167,14 +159,14 @@ Verwenden Sie die folgende Checkliste für die Datenmigration von der Quellhiera
 
     Sie können auch ein Upgrade von einem Configuration Manager 2007-Verteilungspunkt durchführen, der sich auf einem sekundären Standortserver befindet. Hierbei wird der sekundäre Standort entfernt, sodass sich in der Zielhierarchie nur ein Verteilungspunkt ergibt.  
 
-    Informationen zu freigegebenen Verteilungspunkten finden Sie im Abschnitt [Share Distribution Points Between Source and Destination Hierarchies](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration) des Themas [Planning a content deployment migration strategy in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md) .  
+    Informationen zu freigegebenen Verteilungspunkten finden Sie im Abschnitt [Freigeben von Verteilungspunkten zwischen Quell- und Zielhierarchien](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration) des Themas [Planen einer Migrationsstrategie für die Inhaltsbereitstellung in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md).  
 
--   **Abschließen der Migration:**  
+-   **Fertigstellen der Migration:**  
 
-    Nachdem Sie die Daten und Clients aller Standorte der Quellhierarchie migriert und ein Upgrade der relevanten Verteilungspunkte durchgeführt haben, können Sie die Migration abschließen. Zum Abschließen der Migration beenden Sie das Sammeln von Daten für jeden Quellstandort in der Quellhierarchie. Dann können nicht benötigte Migrationsinformationen entfernt werden, und die Infrastruktur der Quellhierarchie kann außer Betrieb genommen werden. Weitere Informationen finden Sie unter [Planning to complete migration in System Center Configuration Manager](../../core/migration/planning-to-complete-migration.md).  
+    Nachdem Sie die Daten und Clients aller Standorte der Quellhierarchie migriert und ein Upgrade der relevanten Verteilungspunkte durchgeführt haben, können Sie die Migration fertig stellen. Beenden Sie das Sammeln von Daten für jeden Quellstandort in der Quellhierarchie, um die Migration fertigzustellen. Dann können nicht benötigte Migrationsinformationen entfernt werden, und die Infrastruktur der Quellhierarchie kann außer Betrieb genommen werden. Weitere Informationen finden Sie unter [Planning to complete migration in System Center Configuration Manager](../../core/migration/planning-to-complete-migration.md).  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

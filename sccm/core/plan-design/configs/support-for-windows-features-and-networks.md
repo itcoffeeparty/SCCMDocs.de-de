@@ -2,7 +2,7 @@
 title: "Unterstützung für Windows-Features | Microsoft-Dokumentation"
 description: "Hier erfahren Sie, welche Windows-und Netzwerkfeatures in System Center Configuration Manager unterstützt werden."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 29e4f8a70b56b772a54ee858a392533780ccbaf9
+ms.sourcegitcommit: 086efdd180ba3de12f84cabfa6c2abca1fe57537
+ms.openlocfilehash: 3315098f271a5b365914772943094c33f63f25c4
 
 
 ---
@@ -30,11 +30,13 @@ In diesem Thema wird beschrieben, welche allgemeinen Windows- und Netzwerkfeatur
 
 
 ##  <a name="a-namebkmkbranchcachea-branchcache"></a><a name="bkmk_branchcache"></a> BranchCache  
-Windows BranchCache wurde in Configuration Manager integriert. Sie können die BranchCache-Einstellungen bei einem Bereitstellungstyp für Anwendungen, bei der Bereitstellung für ein Paket und für Tasksequenzen konfigurieren.  
+Windows BranchCache ist in Configuration Manager integriert. Sie können die BranchCache-Einstellungen bei einem Bereitstellungstyp für Anwendungen, bei der Bereitstellung für ein Paket und für Tasksequenzen konfigurieren.  
 
 Wenn alle Voraussetzungen für BranchCache erfüllt sind, können mithilfe dieser Funktion Inhalte von lokalen Clients abgerufen werden, auf denen die Inhalte zwischengespeichert sind.  
 
-Beispiel: Wenn der erste Clientcomputer mit aktivierter BranchCache-Funktion Inhalt von einem Verteilungspunkt anfordert, der als BranchCache-Server konfiguriert ist, lädt der Clientcomputer den Inhalt herunter und speichert ihn im Cache zwischen. Dieser Inhalt wird Clients im gleichen Subnetz, die den gleichen Inhalt anfordern, zur Verfügung gestellt und von diesen ebenfalls zwischengespeichert. Auf diese Weise muss der Inhalt von Clients im gleichen Subnetz später nicht erneut vom Verteilungspunkt heruntergeladen werden, und der Inhalt ist bei späteren Übertragungen über mehrere Clients verteilt.  
+Beispiel: Wenn der erste Clientcomputer mit aktivierter BranchCache-Funktion Inhalt von einem Verteilungspunkt anfordert, der als BranchCache-Server konfiguriert ist, lädt der Clientcomputer den Inhalt herunter und speichert ihn im Cache zwischen. Dieser Inhalt wird dann für Clients in dem Subnetz verfügbar, das den Inhalt auch angefordert hat.
+
+Diese Clients führen auch eine Zwischenspeicherung des Inhalts durch. Auf diese Weise muss der Inhalt von Clients im gleichen Subnetz später nicht erneut vom Verteilungspunkt heruntergeladen werden, und der Inhalt ist bei späteren Übertragungen über mehrere Clients verteilt.  
 
 **Gehen Sie wie folgt vor, um BranchCache mit Configuration Manager zu unterstützen:**  
 
@@ -50,7 +52,7 @@ Beispiel: Wenn der erste Clientcomputer mit aktivierter BranchCache-Funktion Inh
 
 -   Die Betriebssystemeinstellung für BITS-Clienteinstellungen muss zur Unterstützung von BranchCache aktiviert sein.  
 
-**Die folgenden Clientbetriebssysteme werden mit Windows BranchCache unterstützt:**  
+**Configuration Manager unterstützt die folgenden Clientbetriebssysteme mit Windows BranchCache:**  
 
 |Betriebssystem|Details zur Unterstützung|  
 |----------------------|---------------------|  
@@ -71,7 +73,7 @@ Configuration Manager stellt Unterstützung für Clients in Arbeitsgruppen berei
 -   Configuration Manager unterstützt das Verschieben eines Clients aus einer Arbeitsgruppe in eine Domäne bzw. aus einer Domäne in eine Arbeitsgruppe. Weitere Informationen finden Sie im Abschnitt [How to Install Configuration Manager Clients on Workgroup Computers (Installieren von Configuration Manager-Clients auf Arbeitsgruppencomputern)](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientWorkgroup) im Thema [How to deploy clients to Windows computers in System Center Configuration Manager (Bereitstellen von Clients für Windows-Computer in System Center Configuration Manager)](../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
 
 > [!NOTE]  
->  Wenngleich Clients in Arbeitsgruppen unterstützt werden, müssen alle Standortsysteme Mitglieder einer unterstützten Active Directory-Domäne sein.  
+>  Obwohl Clients in Arbeitsgruppen unterstützt werden, müssen alle Standortsysteme Mitglieder einer unterstützten Active Directory-Domäne sein.  
 
 
 ##  <a name="a-namebkmmkdatadedupa-data-deduplication"></a><a name="bkmmk_datadedup"></a> Datendeduplizierung  
@@ -82,20 +84,20 @@ Configuration Manager unterstützt die Verwendung der Datendeduplizierung mit Ve
 -   Windows Server 2012 R2  
 
 > [!IMPORTANT]  
->  Das Volume, das Paketquelldateien hostet, kann nicht für die Datendeduplizierung gekennzeichnet werden. Dies liegt daran, dass die Datendeduplizierung Analysepunkte verwendet und Configuration Manager keinen Inhaltsquellspeicherort mit Dateien unterstützt, die auf Analysepunkten gespeichert sind.  
+>  Das Volume, das Paketquelldateien hostet, kann nicht für die Datendeduplizierung gekennzeichnet werden. Dies liegt daran, dass die Datendeduplizierung Analysepunkte verwendet und Configuration Manager die Verwendung eines Inhaltsquellspeicherorts mit Dateien, die auf Analysepunkten gespeichert sind, nicht unterstützt.  
 
 Weitere Informationen finden Sie unter [Configuration Manager-Verteilungspunkte und Windows Server 2012-Datendeduplizierung](http://blogs.technet.com/b/configmgrteam/archive/2014/02/18/configuration-manager-distribution-points-and-windows-server-2012-data-deduplication.aspx) im Configuration Manager-Teamblog und unter [Datendeduplizierung: Übersicht](http://technet.microsoft.com/library/hh831602.aspx) in der TechNet-Bibliothek für Windows Server.  
 
 ##  <a name="a-namebkmkdaa-directaccess"></a><a name="bkmk_DA"></a> DirectAccess  
 Configuration Manager unterstützt das DirectAccess-Feature in Windows Server 2008 R2 für die Kommunikation zwischen Clients und Servern des Standortsystems.  
 
--   Wenn alle Voraussetzungen für DirectAccess erfüllt sind, kann die Kommunikation zwischen Configuration Manager-Clients im Internet und dem zugewiesenen Standort so erfolgen, als befänden sie sich im Intranet.  
+-   Wenn alle Voraussetzungen für DirectAccess erfüllt sind, ermöglicht DirectAccess Configuration Manager-Clients, im Internet so mit ihrem zugewiesenen Standort zu kommunizieren, als befänden sie sich im Intranet.  
 
 -   Für serverseitig initiierte Aktionen, wie z. B. Remotesteuerung und Clientpushinstallation, muss auf dem initiierenden Computer (z. B. dem Standortserver) IPv6 ausgeführt werden, und dieses Protokoll muss von allen beteiligten Netzwerkgeräten unterstützt werden.  
 
 Configuration Manager bietet keine DirectAccess-Unterstützung für folgende Aktionen:  
 
--   Bereitstellen von Betriebssystemen  
+-   Bereitstellung von Betriebssystemen  
 
 -   Kommunikation zwischen Configuration Manager-Standorten  
 
@@ -120,7 +122,9 @@ Configuration Manager bietet keine DirectAccess-Unterstützung für folgende Akt
  Die Netzwerkadressenübersetzung wird in Configuration Manager nicht unterstützt, es sei denn, der Standort unterstützt Clients aus dem Internet und der Client erkennt, dass er mit dem Internet verbunden ist. Weitere Informationen zur internetbasierten Clientverwaltung finden Sie unter [Planen der Verwaltung internetbasierter Clients in System Center Configuration Manager](../../../core/clients/deploy/plan/plan-for-managing-internet-based-clients.md).  
 
 ##  <a name="a-namebkmkstoragea-specialized-storage-technology"></a><a name="bkmk_storage"></a> Spezielle Speichertechnologien  
- Configuration Manager ist für die Hardware ausgelegt, die auf der Windows-Hardwarekompatibilitätsliste für die unterstützte Version des Betriebssystems zertifiziert ist, auf dem die Configuration Manager-Komponente installiert ist. Für Standortserverrollen ist das NTFS-Dateisystem erforderlich, damit Verzeichnis- und Dateiberechtigungen festgelegt werden können. Da der Besitz des logischen Laufwerks vollständig von Configuration Manager beansprucht wird, ist die gemeinsame Nutzung einer logischen Partition durch Standortsysteme auf separaten Computern mit beliebiger Speichertechnologie nicht möglich. Allerdings kann von jedem Computer eine separate logische Partition auf der gleichen physischen Partition eines gemeinsam genutzten Speichergeräts verwendet werden.  
+ Configuration Manager ist für die Hardware ausgelegt, die auf der Windows-Hardwarekompatibilitätsliste für die unterstützte Version des Betriebssystems zertifiziert ist, auf dem die Configuration Manager-Komponente installiert ist.
+
+Für Standortserverrollen ist das NTFS-Dateisystem erforderlich, damit Verzeichnis- und Dateiberechtigungen festgelegt werden können. Da der Besitz des logischen Laufwerks vollständig von Configuration Manager beansprucht wird, ist die gemeinsame Nutzung einer logischen Partition durch Standortsysteme auf separaten Computern mit beliebiger Speichertechnologie nicht möglich. Allerdings kann von jedem Computer eine separate logische Partition auf der gleichen physischen Partition eines gemeinsam genutzten Speichergeräts verwendet werden.  
 
  **Aspekte für die Unterstützung:**  
 
@@ -134,6 +138,6 @@ Configuration Manager bietet keine DirectAccess-Unterstützung für folgende Akt
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

@@ -2,7 +2,7 @@
 title: Anzeigen des Hardwareinventars | Microsoft-Dokumentation | Resource Explorer
 description: Verwenden Sie den Ressourcen-Explorer zum Anzeigen des Hardwareinventars in System Center Configuration Manager.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 2cd138b3bbb437d84f0ff7c2aeef869518bd817d
+ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
+ms.openlocfilehash: 6265ee70b70a715862b1651d2f3760bef096ee8a
 
 
 ---
@@ -30,11 +30,11 @@ Zeigen Sie mithilfe des Ressourcen-Explorers in System Center Configuration Mana
 > [!NOTE]  
 >  Im Ressourcen-Explorer werden keine Inventurdaten angezeigt, bis auf dem Client, mit dem eine Verbindung hergestellt wird, ein Hardwareinventurzyklus ausgeführt wurde.  
 
- Der Ressourcen-Explorer in Configuration Manager enthält die folgenden Bereiche im Zusammenhang mit Hardwareinventar:  
+ Der Ressourcen-Explorer enthält die folgenden Bereiche im Zusammenhang mit Hardwareinventur:  
 
--   **Hardware** - enthält das neueste Hardwareinventar von dem angegebenen Configuration Manager Client-Gerät. Sie können das Inventarelement **Status der Arbeitsstation** zum Ermitteln von Uhrzeit und Datum, wenn das Gerät eine Hardwareinventur zuletzt ausgeführt.  
+-   **Hardware**: Enthält das neueste Hardwareinventar, das vom angegebenen Clientgerät gesammelt wird.  **Status der Arbeitsstation**: Enthält Uhrzeit und Datum der letzten Ausführung einer Hardwareinventur.  
 
--   **Hardwareverlauf** – enthält einen Verlauf inventarisierter Elemente, die sich seit der letzten Hardwareinventur geändert haben. Jedes Listenelement verfügt über einen **Current**-Knoten (Aktuell) und mindestens einen *<date\>*-Knoten (Datum). Sie können die Daten im aktuellen Knoten mit denen eines Verlaufsknotens vergleichen, um Elemente zu ermitteln, die sich im Hardwareinventar des Clientcomputers geändert haben.  
+-   **Hardwareverlauf**: Enthält einen Verlauf inventarisierter Elemente, die sich seit der letzten Hardwareinventur geändert haben. Jedes Element verfügt über einen **Current**-Knoten (Aktuell) und mindestens einen *<date\>*-Knoten (Datum). Sie können die Daten im aktuellen Knoten mit denen eines Verlaufsknotens vergleichen, um Elemente zu ermitteln, die sich geändert haben.  
 
     > [!NOTE]  
     >  Der Hardwareinventurverlauf wird von Configuration Manager für die Anzahl von Tagen beibehalten, die Sie im Standortwartungstask **Veralteten Inventurverlauf löschen** festlegen.  
@@ -44,18 +44,15 @@ Zeigen Sie mithilfe des Ressourcen-Explorers in System Center Configuration Mana
 
 ### <a name="how-to-run-resource-explorer-from-the-configuration-manager-console"></a>Ausführen des Ressourcen-Explorers über die Configuration Manager-Konsole  
 
-1.  Klicken Sie in der Configuration Manager-Konsole auf **Bestand und Kompatibilität**.  
+1.  Wählen Sie in der Configuration Manager-Konsole **Bestand und Konformität** > **Geräte** aus, oder öffnen Sie eine beliebige Sammlung, die Geräte anzeigt.  
 
-2.  Klicken Sie im Arbeitsbereich **Bestand und Kompatibilität** auf **Geräte** , oder öffnen Sie eine beliebige Sammlung, in der Geräte angezeigt werden.  
+3.  Wählen Sie den Computer aus, der die anzuzeigende Inventur enthält. Wählen Sie danach auf der Registerkarte **Start** > Gruppe **Geräte** **Start** >  **Ressourcen-Explorer** aus.   
 
-3.  Klicken Sie auf den Computer, der die anzuzeigende Inventur enthält. Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Geräte** auf **Start** und dann auf **Ressourcen-Explorer**. Das Fenster **Ressourcen-Explorer** wird geöffnet.  
-
-4.  Sie können auf allen Elementen im rechten Bereich des **Ressourcen-Explorer**-Fensters einen Rechtsklick ausführen und anschließend auf **Eigenschaften** klicken, um das Dialogfeld *<Elementname\>***Eigenschaften** zu öffnen. Dies kann nützlich sein, um die gesammelten Inventurinformationen in einem besser lesbaren Format anzuzeigen.  
-
-5.  Wenn Sie fertig sind, schließen Sie das Fenster **Ressourcen-Explorer** .  
+4.  Klicken Sie mit der rechten Maustaste auf ein beliebiges Element im rechten Bereich des Fensters **Ressourcen-Explorer**, und wählen Sie anschließend **Eigenschaften** aus, um das Dialogfeld *<Elementname\>***Eigenschaften** zu öffnen. Dort werden die gesammelten Inventurinformationen in einem besser lesbaren Format angezeigt.  
 
 
 
-<!--HONumber=Dec16_HO3-->
+
+<!--HONumber=Jan17_HO1-->
 
 

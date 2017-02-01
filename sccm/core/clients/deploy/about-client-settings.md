@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 21eeba4d35f19930f26ed820295d6f142adae1ac
-ms.openlocfilehash: 6c63d63c5b5a7fc1406027dd9380ea799c1aa318
+ms.sourcegitcommit: d7265aec46474ba7fc317ddb5e20b91b7b134585
+ms.openlocfilehash: 36f6eb3fe48e904adf4d04450906fada9b477246
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>Informationen zu Clienteinstellungen in System Center Configuration Manager
@@ -328,7 +328,11 @@ Viele der Clienteinstellungen sind selbsterklärend. Andere werden hier beschrie
     -   NOIDMIF-Dateien sollten sich im Ordner „Windows\System32\CCM\Inventory\Noidmif“ befinden.  
 
     > [!NOTE]  
-    >  Diese Einstellung ist nur in den Clientstandardeinstellungen verfügbar.  
+    >  Diese Einstellung ist nur in den Clientstandardeinstellungen verfügbar. 
+
+-   **Maximale zufällige Verzögerung**
+
+    Die Sammlung von Hardwareinformationen wird um bis zu zwei Stunden zufällig festgelegt, damit der Vorgang nicht auf allen Clients gleichzeitig stattfindet. Sie können die maximale Verzögerung festlegen, um die Zeit zu beschränken, während der Vorgang durchgeführt wird.      
 
 ##  <a name="metered-internet-connections"></a>Getaktete Internetverbindungen  
  Sie können die Kommunikation zwischen Windows 8-Clientcomputern und Configuration Manager-Standorten verwalten, sofern getaktete Internetverbindungen verwendet werden. Bei getakteten Internetverbindungen berechnen einige Internetanbieter die anfallenden Gebühren anhand der Datenmenge, die Sie senden und empfangen.  
@@ -640,6 +644,6 @@ Viele der Clienteinstellungen sind selbsterklärend. Andere werden hier beschrie
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

@@ -2,7 +2,7 @@
 title: WLAN- und VPN-Profile Sicherheit und Datenschutz | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über bewährte Sicherheitsmethoden für die Verwaltung von WLAN- und VPN-Profilen für Geräte in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/19/2016
+ms.date: 12/28/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: fb168e3af33648e06c2c6be77ddd7d0c1f65d95d
+ms.sourcegitcommit: 8a5dc7361da34f3e6b926acd35c72c0c0767ce70
+ms.openlocfilehash: 6d1d0a393a2ce614ae5f819475bd47b05e699b45
 
 
 ---
@@ -26,15 +26,12 @@ ms.openlocfilehash: fb168e3af33648e06c2c6be77ddd7d0c1f65d95d
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-
-Dieses Thema enthält Sicherheits- und Datenschutzinformationen für WLAN- und VPN-Profile in System Center Configuration Manager.  
-
-##  <a name="a-namebkmksecurityremoteconnectionsa-security-best-practices-for-wi-fi--and-vpn-profiles"></a><a name="BKMK_Security_RemoteConnections"></a> Bewährte Sicherheitsmethoden für WLAN- und VPN-Profile  
+##  <a name="security-best-practices-for-wi-fi--and-vpn-profiles"></a>Bewährte Sicherheitsmethoden für WLAN- und VPN-Profile  
  Verwenden Sie die folgenden bewährten Sicherheitsmethoden bei der Verwaltung von WLAN- und VPN-Profilen für Geräte.  
 
 |Bewährte Sicherheitsmethode|Weitere Informationen|  
 |----------------------------|----------------------|  
-|Wählen Sie nach Möglichkeit die sichersten Optionen aus, die von der WLAN- und VPN-Infrastruktur sowie den Clientbetriebssystemen unterstützt werden.|WLAN- und VPN-Profile stellen eine praktische Methode dar, um von Ihren Geräten bereits unterstützte WLAN- und VPN-Einstellungen zentral zu verteilen und zu verwalten. System Center Configuration Manager bietet keine zusätzlichen WLAN- oder VPN-Funktionen.<br /><br /> Bestimmen, implementieren und beachten Sie die bewährten Sicherheitsmethoden, die für Ihre Geräte und die Infrastruktur empfohlen wurden.|  
+|Wählen Sie nach Möglichkeit die sichersten Optionen aus, die von der WLAN- und VPN-Infrastruktur sowie den Clientbetriebssystemen unterstützt werden.|WLAN- und VPN-Profile stellen eine praktische Methode dar, um von Ihren Geräten bereits unterstützte WLAN- und VPN-Einstellungen zentral zu verteilen und zu verwalten. Configuration Manager bietet keine zusätzlichen WLAN- oder VPN-Funktionen.<br /><br /> Bestimmen, implementieren und beachten Sie die bewährten Sicherheitsmethoden, die für Ihre Geräte und die Infrastruktur empfohlen wurden.|  
 
 ## <a name="privacy-information-for-wi-fi-profiles"></a>Datenschutzinformationen für WLAN-Profile  
  Sie können WLAN- und VPN-Profile verwenden, um Clientgeräte für die Verbindung mit WLAN- und VPN-Servern zu konfigurieren, und dann auswerten, ob diese Geräte nach der Anwendung der Profile Kompatibilität erreichen. Vom Verwaltungspunkt werden Kompatibilitätsinformationen an den Standortserver gesendet, die dann in der Standortdatenbank gespeichert werden. Die Informationen werden verschlüsselt, wenn sie von Geräten an den Verwaltungspunkt gesendet werden, sie werden aber nicht in einem verschlüsselten Format in der Standortdatenbank gespeichert. Die Informationen verbleiben in der Datenbank, bis sie mit dem Standortwartungstask **Veraltete Konfigurationsverwaltungsdaten löschen** gelöscht werden. Das Löschintervall beträgt standardmäßig 90 Tage, kann aber geändert werden. Die Kompatibilitätsinformationen werden nicht an Microsoft gesendet.  
@@ -45,6 +42,6 @@ Dieses Thema enthält Sicherheits- und Datenschutzinformationen für WLAN- und V
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 
