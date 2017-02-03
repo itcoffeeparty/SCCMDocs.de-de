@@ -1,8 +1,8 @@
 ---
-title: Installieren von Standorten | Microsoft-Dokumentation
-description: "Gehen Sie die Liste der Themen durch, die Ihnen bei Ihrer ersten System Center Configuration Manager-Installation helfen, oder fügen Sie Standorte zu Ihrer Hierarchie hinzu."
+title: "Ressourcen für die Standortinstallation | Microsoft-Dokumentation"
+description: "Gehen Sie die Liste der Themen durch, die Ihnen dabei helfen, System Center Configuration Manager zu installieren oder Standorte zu Ihrer Hierarchie hinzuzufügen."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,41 +17,43 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 973daaa168aea64944563c69d13ef44a6e319809
+ms.sourcegitcommit: 9fa9a9b2f57106e36c45248feb400ec125adcad1
+ms.openlocfilehash: 75511c744d7d2bae960273c845ce68f06a82b697
 
 
 ---
-# <a name="installing-system-center-configuration-manager-sites"></a>Installieren von System Center Configuration Manager-Standorten
+# <a name="resources-for-installing-system-center-configuration-manager-sites"></a>Ressourcen für die Installation von System Center Configuration Manager-Standorten
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
+Die folgenden Themen unterstützen Sie beim Installieren von System Center Configuration Manager bzw. beim Hinzufügen von Standorten zu Ihrer vorhandenen Configuration Manager-Hierarchie.
 
-Wenn Sie bereit sind, zum ersten Mal System Center Configuration Manager zu installieren oder Ihrer Hierarchie zusätzliche Standorte hinzuzufügen, können Ihnen die folgenden Themen dabei helfen, dies erfolgreich in die Tat umzusetzen.
+- [Vorbereitung zur Installation von Standorten ](prepare-to-install-sites.md)
+
+  Dieses Thema enthält wichtige Informationen, die Ihnen helfen, einen Standort in einer neuen oder vorhandenen Hierarchie zu installieren. Sie erhalten Hilfestellung, wann Sie nicht standardmäßige Quelldateien auswählen können, welche Einschränkungen für alle Standorte gelten und welche optionalen Aktionen Sie ausführen können, um Ihre Tasks zu vereinfachen, wenn Sie mehrere Standorte installieren müssen.
+
+- [Voraussetzungen für die Installation von Standorten](prerequisites-for-installing-sites.md)
+
+  Erfahren Sie mehr über die für Ihr Konto erforderlichen Benutzerrechte und Berechtigungen, um einen Standort zu installieren, sowie über verwandte Voraussetzungen für die einzelnen Arten von Standorten, die Sie installieren können.
+
+- [Verwenden des Setup-Assistenten zum Installieren von System Center Configuration Manager-Standorten](use-the-setup-wizard-to-install-sites.md)
+
+  Dieses Thema führt Sie durch den Assistenten zum Installieren von Standorten. Es enthält ausführliche Informationen zu Optionen, die in der Benutzeroberfläche des Assistenten möglicherweise nicht verständlich sind.  
+
+- [Verwenden einer Befehlszeile zum Installieren von System Center Configuration Manager-Standorten](use-a-command-line-to-install-sites.md)
+
+  Erfahren Sie, wie Sie ein Standortinstallationsskript erhalten und für unbeaufsichtigte Standortinstallationen verwenden.
+
+- [Installieren von System Center Configuration Manager-Konsolen](install-consoles.md)
+
+  Dieses Thema enthält eine Anleitung zum Installieren der Configuration Manager-Konsole auf einem Computer, auf dem Sie keinen Standort installieren.
+
+- [Upgrade von Evaluierungsinstallationen von System Center Configuration Manager auf eine vollständige Installation](upgrade-an-evaluation-install-to-a-full-install.md)
+
+  Lesen Sie dieses Thema, wenn Sie bereit sind, die Evaluierungsversion Ihres Standorts auf eine voll lizenzierte Configuration Manager-Version upzugraden.
 
 
-[Prepare to install System Center Configuration Manager sites (Vorbereitung zur Installation von System Center Configuration Manager-Standorten)](../../../../core/servers/deploy/install/prepare-to-install-sites.md)    
-Wichtige Informationen, mit denen Sie erfolgreich einen Standort auf eine neue oder vorhandene Hierarchie installieren. Dies schließt Fälle ein, bei denen Sie verschiedene Quelldateien verwenden müssen, Einschränkungen, die für alle Standorte gelten sowie optionale Aktionen, die Sie durchführen können, um Ihre Tasks zu vereinfachen, wenn Sie mehr als einen einzelnen Standort installieren müssen.
 
-
-[Prerequisites for installing System Center Configuration Manager sites (Voraussetzungen für die Installation von System Center Configuration Manager-Standorten)](../../../../core/servers/deploy/install/prerequisites-for-installing-sites.md)   
-Erfahren Sie mehr über die für Ihr Konto erforderlichen Berechtigungen, um einen Standort zu installieren sowie verwandte Voraussetzungen für jede Art Standort, den Sie installieren können.
-
-
-[Use the Setup Wizard to install System Center Configuration Manager sites (Verwenden des Setup-Assistenten zum Installieren von System Center Configuration Manager-Standorten)](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)    
-Dieses Thema führt sie durch den Standortinstallations-Assistenten und bietet Ihnen Informationen über Optionen, die auf der Benutzeroberfläche des Assistenten möglicherweise unklar sind.  
-
-[Use a command line to install System Center Configuration Manager sites (Installieren von Standorten mithilfe einer Befehlszeile und eines Skripts)](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md)   
-Erfahren Sie, wie Sie ein Installationsskript erhalten, und wie Sie es für unbeaufsichtigte Installation an einem Standort verwenden.
-
-[Install System Center Configuration Manager consoles (Installieren von System Center Configuration Manager-Konsolen)](../../../../core/servers/deploy/install/install-consoles.md)     
-Dieses Thema stellt eine Anleitung zum Installieren einer Configuration Manager-Konsole auf einem Computer bereit, auf dem Sie keinen Standort installieren.
-
-[Upgrade an Evaluation install of System Center Configuration Manager to a Full install (Upgrade einer Evaluierungsversion von System Center Configuration Manager auf eine Vollversion)](../../../../core/servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md)   
-Lesen Sie dieses Thema, wenn Sie bereit sind, die Evaluierungsversion Ihres Standorts auf eine voll lizenzierte Configuration Manager-Version upzugraden.
-
-
-
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

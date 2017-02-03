@@ -1,7 +1,7 @@
 ---
 title: Planen des Cloudverwaltungsgateways | Microsoft-Dokumentation
 description: 
-ms.date: 11/22/2016
+ms.date: 12/19/2016
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-client
@@ -10,8 +10,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1f8fbd8a16548ab2c34f5d3dac2b439f3908cea9
-ms.openlocfilehash: e6befef692518a5622250af1c71d517b435f9058
+ms.sourcegitcommit: 1df2d8bcd73633ac1d37cc3ef31343be9c5bc95d
+ms.openlocfilehash: 6e2895565e868eb80a8f4f4b46b8a28eb4961e28
 
 ---
 
@@ -19,11 +19,11 @@ ms.openlocfilehash: e6befef692518a5622250af1c71d517b435f9058
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Ab Version 1610 stellt das Cloudverwaltungsgateway eine einfache Methode für die Verwaltung von Configuration Manager-Clients im Internet dar. Dieser Dienst, der in Microsoft Azure bereitgestellt wird und ein Azure-Abonnement erfordert, stellt mithilfe einer neuen Rolle namens Cloudverwaltungsgateway-Connectorpunkt eine Verbindung zu Ihrer lokalen Configuration Manager-Infrastruktur her. Nachdem er bereitgestellt und konfiguriert wurde, können Clients auf lokale Configuration Manager-Standortsystemrollen zugreifen, unabhängig davon, ob sie mit dem internen, privaten Netzwerk oder über das Internet verbunden sind.
+Ab Version 1610 stellt das Cloudverwaltungsgateway eine einfache Methode für die Verwaltung von Configuration Manager-Clients im Internet dar. Der Cloudverwaltungsgateway-Dienst wird für Microsoft Azure bereitgestellt und erfordert ein Azure-Abonnement. Er stellt mithilfe einer neuen Rolle, die als Cloudverwaltungsgateway-Connectorpunkt bezeichnet wird, eine Verbindung mit der lokalen Configuration Manager-Infrastruktur her. Nachdem er bereitgestellt und konfiguriert wurde, können Clients auf lokale Configuration Manager-Standortsystemrollen zugreifen, unabhängig davon, ob sie sich im internen, privaten Netzwerk oder im Internet befinden.
 
-Sie verwenden die Configuration Manager-Konsole zum Bereitstellen des Diensts in Azure, fügen die Cloudverwaltungsgateway-Connectorpunktrolle hinzu und konfigurieren Standortsystemrollen, um den Cloudverwaltungsgateway-Datenverkehr zuzulassen. Der Cloudverwaltungsgateway unterstützt derzeit nur die Rollen „Verwaltungspunkt“ und „Softwareupdatepunkt“.
+Verwenden Sie die Configuration Manager-Konsole zum Bereitstellen des Diensts in Azure, zum Hinzufügen der Cloudverwaltungsgateway-Connectorpunktrolle sowie zum Konfigurieren von Standortsystemrollen, um den Cloudverwaltungsgateway-Datenverkehr zuzulassen. Der Cloudverwaltungsgateway unterstützt derzeit nur die Rollen „Verwaltungspunkt“ und „Softwareupdatepunkt“.
 
-Client-Zertifikate und Zertifikate für Secure Socket Layer (SSL) sind erforderlich, um Computer zu authentifizieren und die Kommunikation zwischen den verschiedenen Ebenen des Diensts verschlüsseln. In der Regel erhalten die Clientcomputer ein Clientzertifikat über das Durchsetzen von Gruppenrichtlinien. Zum Verschlüsseln des Datenverkehrs zwischen Clients und Standortsystemserver, der die Rollen hostet, müssen Sie ein benutzerdefiniertes SSL-Zertifikat von der Zertifizierungsstelle erstellen. Zusätzlich zu diesen beiden Zertifikattypen müssen Sie auch ein Verwaltungszertifikat in Azure einrichten, mit dem Configuration Manager den Cloudverwaltungsgateway-Dienst bereitstellen kann.
+Client-Zertifikate und Zertifikate für Secure Socket Layer (SSL) sind erforderlich, um Computer zu authentifizieren und die Kommunikation zwischen den verschiedenen Ebenen des Diensts verschlüsseln. In der Regel erhalten die Clientcomputer ein Clientzertifikat über das Durchsetzen von Gruppenrichtlinien. Zum Verschlüsseln des Datenverkehrs zwischen Clients und Standortsystemserver, der die Rollen hostet, müssen Sie ein benutzerdefiniertes SSL-Zertifikat von der Zertifizierungsstelle erstellen. Darüber hinaus müssen Sie auch ein Verwaltungszertifikat in Azure einrichten, mit dem Configuration Manager den Cloudverwaltungsgateway-Dienst bereitstellen kann.
 
 ## <a name="requirements-for-cloud-management-gateway"></a>Anforderungen für das Cloudverwaltungsgateway
 
@@ -35,36 +35,25 @@ Client-Zertifikate und Zertifikate für Secure Socket Layer (SSL) sind erforderl
 
 -   Azure-Verwaltungszertifikat ‒ Wird zur Authentifizierung von Configuration Manager mit Azure verwendet.
 
-## <a name="limitations-of-cloud-management-gateway"></a>Einschränkungen des Cloudverwaltungsgateways
+## <a name="specifications-for-cloud-management-gateway"></a>Spezifikationen für das Cloudverwaltungsgateway
 
--   Der Cloudverwaltungsgateway unterstützt nur die Rollen „Verwaltungspunkt“ und „Softwareupdatepunkt“.
-
+- Jede Cloudverwaltungsgateway-Instanz unterstützt 4.000 Clients.
+- Es wird empfohlen, zur Verbesserung der Verfügbarkeit mindestens zwei Cloudverwaltungsgateway-Instanzen zu erstellen.
+- Der Cloudverwaltungsgateway unterstützt nur die Rollen „Verwaltungspunkt“ und „Softwareupdatepunkt“.
 -   Die folgenden Funktionen in Configuration Manager werden derzeit für den Cloudverwaltungsgateway nicht unterstützt:
 
     -   Clientbereitstellung und -aktualisierung mit Clientpush
-
     -   Automatische Standortzuweisung
-
     -   Richtlinien für Benutzer
-
     -   Anwendungskatalog (einschließlich Softwaregenehmigungsanforderungen)
-
     -   Vollständige Betriebssystembereitstellung (OSD)
-
     -   Configuration Manager-Konsole
-
     -   Remotetools
-
     -   Berichterstellungswebsite
-
     -   Wake-On-LAN
-
     -   Mac-, Linux- und UNIX-Clients
-
     -   Azure Resource Manager
-
     -   Peercache
-
     -   Lokale Verwaltung mobiler Geräte
 
 ## <a name="cost-of-cloud-management-gateway"></a>Kosten des Cloudverwaltungsgateways

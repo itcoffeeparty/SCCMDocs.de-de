@@ -2,7 +2,7 @@
 title: Remotesteuerung | Microsoft-Dokumentation
 description: "Hier erhalten Sie eine Einführung in die Remotesteuerung in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/26/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 00c9e6bff02d534af2be975e0d5d41bcf0e7cb1c
+ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
+ms.openlocfilehash: 47bfeec5bd5d9b843e9064560d0cd0b14bd7d6a1
 
 
 ---
@@ -26,9 +26,9 @@ ms.openlocfilehash: 00c9e6bff02d534af2be975e0d5d41bcf0e7cb1c
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Verwenden Sie die Remotesteuerung in System Center Configuration Manager zum Verwalten, Unterstützen oder Anzeigen von beliebigen Clientcomputern in der Hierarchie. Sie können die Remotesteuerung für die Problembehandlung bei Hardware- und Softwarekonfigurationsproblemen auf Clientcomputern und für die Helpdeskunterstützung verwenden, falls ein Zugriff auf den Benutzercomputer notwendig ist. Configuration Manager unterstützt die Remotesteuerung von Arbeitsgruppencomputern und Computern, die einer Active Directory-Domäne angehören.  
+Verwenden Sie die Remotesteuerung für die Remoteverwaltung, -unterstützung oder -anzeige von beliebigen Clientcomputern in der Hierarchie. Sie können die Remotesteuerung für die Problembehandlung bei Hardware- und Softwarekonfigurationsproblemen auf Clientcomputern und für die Unterstützung verwenden. Configuration Manager unterstützt die Remotesteuerung von Arbeitsgruppencomputern und in die Domäne eingebundenen Computern.  
 
- Zusätzlich können Sie mit Configuration Manager Clienteinstellungen zum Ausführen von Windows-Remotedesktop und -Remoteunterstützung über die Configuration Manager-Konsole konfigurieren.  
+Zusätzlich können Sie mit Configuration Manager Clienteinstellungen zum Ausführen von Windows-Remotedesktop und -Remoteunterstützung über die Configuration Manager-Konsole konfigurieren.  
 
 > [!NOTE]  
 >  Die Herstellung einer Remoteunterstützungssitzung auf einen Clientcomputer über die Configuration Manager-Konsole ist in den folgenden Szenarios nicht möglich:  
@@ -40,6 +40,6 @@ Verwenden Sie die Remotesteuerung in System Center Configuration Manager zum Ver
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

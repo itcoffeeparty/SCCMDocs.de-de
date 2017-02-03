@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: a80095fb3b227653126a028ab4ab8f4e2dbd612b
+ms.sourcegitcommit: 0c084e9f630a96c7b22c3dbdd72e18ad4a86926d
+ms.openlocfilehash: 9631b5622fec19e0248eb919bc8bd876152f66d7
 
 
 ---
@@ -27,9 +27,9 @@ ms.openlocfilehash: a80095fb3b227653126a028ab4ab8f4e2dbd612b
 
 In diesem Thema erfahren Sie, wie Sie das Configuration Manager-Setup ausführen, wenn Sie das Baselinemedium des Releases 1606 des Microsoft System Center 2016- oder des System Center Configuration Manager-Release (Current Branch und Long-Term Servicing Branch 1606) verwenden. Sie können das Installationsmedium zur Installation eines neuen Standorts verwenden oder ein Upgrade von System Center 2012 Configuration Manager mit Service Pack 2 oder auf System Center 2012 R2 Configuration Manager mit Service Pack 1 ausführen. Während des Setups können Sie auswählen, ob Sie Current Branch oder Long-Term Servicing Branch (LTSB) installieren möchten.
 
-Wenn Sie das Baselinemedium von Version 1606 verwenden, ist der Standort, den Sie installieren (oder auf den Sie aktualisieren):
-- **Ein Current Branch-Standort**, der einem Standort entspricht, der anfänglich mit dem 1511-Baselinemedium installiert wurde und später auf Version 1606 und das entsprechende 1606-Hotfixrollup „KB3186654“ aktualisiert wurde.
--   **Ein LTSB-Standort**, der dem Current Branch-Standort entspricht, der die Version 1606 und das entsprechende 1606-Hotfixrollup „KB3186654“ ausführt (das Baselinemedium enthält bereits das Hotfixrollup).  Allerdings unterstützt LTSB nicht alle Features oder Funktionen, die in Current Branch verfügbar sind, wie im Artikel [Introduction to the Long-Term Servicing Branch of System Center Configuration Manager (Einführung in Long-Term Servicing Branch von System Center Configuration Manager)](introduction-to-the-ltsb.md) beschrieben.
+Wenn Sie das Baselinemedium von Version 1606 verwenden, ist der Standort, den Sie installieren oder auf den Sie aktualisieren:
+- Ein *Current Branch-Standort*, der einem Standort entspricht, der anfänglich mit dem 1511-Baselinemedium installiert wurde und später auf Version 1606 und das entsprechende 1606-Hotfixrollup „KB3186654“ aktualisiert wurde.
+-   Ein *LTSB-Standort*, der dem Current Branch-Standort entspricht, der die Version 1606 und das entsprechende 1606-Hotfixrollup „KB3186654“ ausführt. Das Baselinemedium enthält bereits das Hotfixrollup.  Wie im Artikel [Einführung in Long-Term Servicing Branch von System Center Configuration Manager](introduction-to-the-ltsb.md) beschrieben wird, unterstützt LTSB jedoch nicht alle Features oder Funktionen, die in Current Branch verfügbar sind.
 
 Wenn Sie nicht mit den verschiedenen Branches von System Center Configuration Manager vertraut sind, finden Sie weitere Informationen unter [Which branch of Configuration Manager should I use (Welchen Configuration Manager-Branch sollte ich verwenden?)](which-branch-should-i-use.md).
 
@@ -40,18 +40,18 @@ Das 1606-Baselinemedium führt die folgenden Neuerungen für das Configuration M
 ### <a name="branch-and-edition"></a>Branch und Edition
 Wenn Sie das Setup ausführen, wird Ihnen jetzt eine Lizenzierungsseite angezeigt, in dem Sie den Branch von Configuration Manager auswählen können, den Sie installieren möchten. Sie können Current Branch oder LTSB als lizenzierte Installation auswählen. Alternativ können Sie sich für eine Evaluierungsversion von Current Branch als nicht lizenzierte Installation entscheiden.
 
-Weitere Informationen finden Sie unter [Licensing and branches for System Center Configuration Manager (Lizenzierung und Branches für System Center Configuration Manager)](learn-more-editions.md).
+Weitere Informationen finden Sie unter [Lizenzierung und Branches für System Center Configuration Manager](learn-more-editions.md).
 
 ### <a name="software-assurance-expiration"></a>Ablauf der Software Assurance
-Während der Installation haben Sie die Option, das **Software Assurance-Ablaufdatum** einzugeben. Dies ist ein optionaler Wert, den Sie als praktische Erinnerung angeben können.
+Während des Setups können Sie das **Software Assurance-Ablaufdatum** eingeben. Dies ist ein optionaler Wert, den Sie als praktische Erinnerung angeben können.
 
 > [!NOTE]
-> Das angegebene Ablaufdatum wird von Microsoft nicht überprüft. Microsoft verwendet das von Ihnen angegebene Datum ebenso wenig, um die Lizenz zu überprüfen.  Stattdessen können Sie das Ablaufdatum angeben, um daran erinnert zu werden. Dies ist hilfreich, da Configuration Manager regelmäßig überprüft, ob neue Softwareupdates online angeboten werden, und Ihr Software Assurance-Lizenzstatus sollte aktuell sein, damit Sie von diesen zusätzlichen Updates profitieren können.    
+> Microsoft überprüft das eingegebene Ablaufdatum nicht und verwendet es auch nicht für die Lizenzüberprüfung.  Stattdessen können Sie das Ablaufdatum angeben, um daran erinnert zu werden. Dies ist hilfreich, da Configuration Manager regelmäßig überprüft, ob neue Softwareupdates online angeboten werden, und Ihr Software Assurance-Lizenzstatus sollte aktuell sein, damit Sie von diesen zusätzlichen Updates profitieren können.    
 
-- Geben Sie den Wert auf der Seite **Product Key** des Setup-Assistenten an, wenn Sie das Setup vom Baselinemedium von System Center Configuration Manager-Version 1606 ausführen
-- Sie können das Datum auch auf Registerkarte **Lizenzierung** der **Eigenschaften von Hierarchieeinstellungen** in der Configuration Manager-Konsole angeben.
+- Sie können das Datum auf der Seite **Product Key** des Setup-Assistenten angeben, wenn Sie das Setup vom Baselinemedium von System Center Configuration Manager-Version 1606 ausführen.
+- Sie können dieses Datum ferner angeben, indem Sie auf der Configuration Manager-Konsole **Eigenschaften von Hierarchieeinstellungen** > **Lizenzierung** auswählen.
 
-Weitere Informationen finden Sie unter *Software Assurance agreements (Software Assurance-Verträge)* in [Licensing and branches for System Center Configuration Manager (Lizenzierung und Branches für System Center Configuration Manager)](learn-more-editions.md).
+Weitere Informationen finden Sie im Abschnitt „Software Assurance-Verträge“ des Artikels [Lizenzierung und Branches für System Center Configuration Manager](learn-more-editions.md).
 
 
 ### <a name="additional-pre-upgrade-configurations"></a>Zusätzliche Konfigurationen vor dem Upgrade
@@ -64,10 +64,10 @@ Deinstallieren Sie die nicht von LTSB unterstützten Standortsystemrollen:
 Weitere Informationen finden Sie unter [Upgrade auf System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).
 
 
-### <a name="new-scripted-install-options"></a>Neue Skriptinstallationsoptionen
+### <a name="new-scripted-installation-options"></a>Neue Skriptinstallationsoptionen
 Das Baselinemedium von Version 1606 unterstützt einen neuen, unbeaufsichtigten Skriptdateischlüssel für skriptgesteuerte Installationen eines neuen Standorts der obersten Ebene. Dies gilt sowohl für die Installation eines neuen, eigenständigen primären Standorts als auch eines Standorts der zentralen Verwaltung im Rahmen eines Standorterweiterungsszenarios.
 
-Bei Verwendung eines unbeaufsichtigten Skripts für die Installation eines Lizenzbranches müssen Sie den folgenden Abschnitt, Schlüsselnamen und die Werte für den Abschnitt „Optionen“ Ihres Skripts hinzufügen (Sie müssen diese Werte nicht verwenden, um die Installation einer Evaluierungsedition von Current Branch):  
+Wenn Sie ein unbeaufsichtigtes Skript verwenden, um einen lizenzierten Branch zu installieren, müssen Sie den folgenden Abschnitt, Schlüsselnamen und Werte im Abschnitt „Optionen“ Ihres Skripts hinzufügen. Sie müssen diese Werte nicht verwenden, um ein Skript für die Installation einer Evaluierungsversion von Current Branch zu erstellen:  
 
  **SABranchOptions**
 -   **Schlüsselname: SSActive**
@@ -97,26 +97,26 @@ Weitere Informationen finden Sie unter [Install System Center Configuration Mana
 Wenn Sie das 1606-Baselinemedium verwenden, um einen neuen Standort für jeden Branch zu installieren, verwenden Sie die Standortplanung, die Vorbereitung und die Installationsprozedur, die im Thema [Installieren von System Center Configuration Manager-Standorten](/sccm/core/servers/deploy/install/installing-sites) dokumentiert sind, zusätzlich zu den folgenden Überlegungen zum Setup:
 
 - Während des Setups müssen Sie den Configuration Manager-Branch auswählen, den Sie installieren möchten, und Sie können Details zu Ihrem Software Assurance-Vertrag angeben.
--   Neue Skriptinstallationsoptionen
+-   Neue Skriptinstallation. Weitere Informationen finden Sie unter „Neue Skriptinstallationsoptionen“ weiter oben in diesem Artikel.
 
 ## <a name="expand-a-stand-alone-primary-site"></a>Erweitern eines eigenständigen primären Standorts
 Sie können einen eigenständigen primären Standort erweitern, auf dem LTSB ausgeführt wird.  Der Prozess unterscheidet sich nicht von dem, der für einen Current Branch-Standort verwendet wird, jedoch mit einer Einschränkung:
 
-- Bei der Installation des neuen Standorts der zentralen Verwaltung müssen Sie das Setup vom ursprünglichen Quellmedium verwenden, das Sie zum Installieren des LTSB-Standorts verwendet haben. (Die Ausführung des Setups aus dem Ordner „CD.Latest“ wird für dieses Szenario nicht unterstützt).
+- Bei der Installation des neuen Standorts der zentralen Verwaltung müssen Sie das Setup vom ursprünglichen Quellmedium verwenden, das Sie zum Installieren des LTSB-Standorts verwendet haben. Die Ausführung des Setups aus dem Ordner „CD.Latest“ wird für dieses Szenario nicht unterstützt.
 
-Weitere Informationen zur Standorterweiterung finden Sie unter *Expand a stand-alone primary site (Erweitern eines eigenständigen primären Standorts)* im Thema [Use the Setup Wizard to install System Center Configuration Manager sites (Verwenden des Setup-Assistenten zum Installieren von System Center Configuration Manager-Standorten)](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites).
+Weitere Informationen zur Standorterweiterung finden Sie im Abschnitt „Erweitern eines eigenständigen primären Standorts“ des Artikels [Verwenden des Setup-Assistenten zum Installieren von System Center Configuration Manager-Standorten](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites).
 
 ## <a name="upgrade-from-system-center-2012-configuration-manager"></a>Upgrade von System Center 2012 Configuration Manager
-Bei einem Upgrade von System Center 2012 Configuration Manager sollten Sie die Standortplanung, die Vorbereitung und die Prozeduren wie im Thema [Upgrade auf System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager) beschrieben verwenden, jedoch mit den folgenden Änderungen:
+Bei einem Upgrade von System Center 2012 Configuration Manager sollten Sie die im Thema [Upgrade auf System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager) beschriebene(n) Standortplanung, Vorbereitung und Prozeduren verwenden, allerdings mit den folgenden Änderungen:
 
 **Upgrade auf Current Branch:**
-- Während des Setups müssen Sie Current Branch auswählen, den Sie installieren möchten, und Sie können Details zu Ihrem Software Assurance-Vertrag angeben.
--   Neue Skriptinstallationsoptionen
+- Während des Setups müssen Sie Current Branch auswählen, und Sie können Details zu Ihrem Software Assurance-Vertrag angeben.
+-   Neue Skriptinstallation. Weitere Informationen finden Sie unter „Neue Skriptinstallationsoptionen“ weiter oben in diesem Artikel.
 
 **Upgrade auf LTSB:**  
 - Zusätzliche Schritte zu der vor dem Upgrade durchzugehenden Prüfliste
-- Während des Setups müssen Sie LTSB auswählen, den Sie installieren möchten, und Sie können Details zu Ihrem Software Assurance-Vertrag angeben.
-- Sie können ausschließlich Standorte upgraden, an denen System Center 2012 Configuration Manager mit Service Pack 2 oder System Center 2012 R2 Configuration Manager mit Service Pack 1 ausgeführt wird.
+- Während des Setups müssen Sie LTSB auswählen, und Sie können Details zu Ihrem Software Assurance-Vertrag angeben.
+- Sie können ausschließlich Standorte aktualisieren, an denen System Center 2012 Configuration Manager mit Service Pack 2 oder System Center 2012 R2 Configuration Manager mit Service Pack 1 ausgeführt wird.
 
 ### <a name="in-place-upgrade-paths-for-the-1606-baseline-media"></a>Pfade für direkte Upgrades für das 1606-Baselinemedium
 Sie können das 1606-Baselinemedium verwenden, um folgende Versionen auf eine lizenzierte Version von System Center Configuration Manager upzugraden:
@@ -126,15 +126,17 @@ Sie können das 1606-Baselinemedium verwenden, um folgende Versionen auf eine li
 Sie können diese Medien auch dazu verwenden, um eine nicht lizenzierte Evaluierungsversion von Current Branch auf eine vollständig lizenzierte Version von Current Branch upzugraden.
 
 Das Medium unterstützt kein Upgrade von:
-- Andere Versionen von System Center 2012 Configuration Manager
+- Anderen Versionen von System Center 2012 Configuration Manager
 - Configuration Manager 2007 oder früher
-- Eine Release Candidate-Install von System Center Configuration Manager
+- Einer Release Candidate-Installation von System Center Configuration Manager
 
 ## <a name="about-the-cdlatest-folder-and-the-ltsb"></a>Informationen zu dem Ordner „CD.Latest“ und LTSB
-Die sind die Einschränkungen der Verwendung des Mediums, das Configuration Manager im Ordner „CD.Latest“ auf dem Standortserver erstellt. Diese gelten für Websites, auf denen LTSB ausgeführt wird: Medien im Ordner „CD.Latest“ werden unterstützt für:
+Die folgenden Einschränkungen betreffen die Verwendung der Medien, die Configuration Manager im Ordner „CD.Latest“ auf dem Standortserver erstellt. Diese Einschränkungen gelten für Standorte, die LTSB ausführen:
+
+Medien im Ordner „CD.Latest“ werden unterstützt für:
 - Standortwiederherstellung
 - Standortwartung
-- Installieren zusätzlicher, untergeordneter primärer Standorte
+- Installation zusätzlicher untergeordneter primärer Standorte
 
 Medien werden im Ordner „CD.Latest“ nicht unterstützt für:  
 - Die Installation eines Standorts der zentralen Verwaltung im Rahmen eines Szenarios zur Standorterweiterung.
@@ -142,12 +144,12 @@ Medien werden im Ordner „CD.Latest“ nicht unterstützt für:
 Weitere Informationen finden Sie unter [Der Ordner „CD.Latest“ für System Center Configuration Manager](/sccm/core/servers/manage/the-cd.latest-folder).
 
 ## <a name="backup-recovery-and-site-maintenance-for-the-ltsb"></a>Sicherung, Wiederherstellung und Standartwartung für LTSB
-Verwenden Sie zum Sichern, Wiederherstellen oder Ausführen der Wartung eines LTSB-Standorts den Leitfaden und die Prozeduren in [Sicherung und Wiederherstellung für System Center Configuration Manager](/sccm/protect/understand/backup-and-recovery).  
+Verwenden Sie zum Sichern, Wiederherstellen oder Ausführen der Wartung eines Standorts, der LTSB ausführt, den Leitfaden und die Prozeduren, die im Artikel [Sicherung und Wiederherstellung in System Center Configuration Manager](/sccm/protect/understand/backup-and-recovery) beschrieben werden.  
 
 Verwenden Sie das Configuration Manager-Setup im Ordner „CD.Latest“ der Sicherung Ihres LTSB-Standorts.
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

@@ -2,7 +2,7 @@
 title: Planen der Clientmigration | Microsoft-Dokumentation
 description: Erfahren Sie mehr zu den Aufgaben, die Clients aus einer Quellhierarchie zu einer Zielhierarchie in System Center Configuration Manager migrieren.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,12 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
-ms.openlocfilehash: 11da338af9d7dd4d6f9c5fc1c6c62e277139f852
+ms.sourcegitcommit: ac4576035fda943e38d960dd425d44b7a6ef6a01
+ms.openlocfilehash: b52ca4059dfeed08cabf1f75319da40d6499622f
 
 
 ---
-# <a name="planning-a-client-migration-strategy-in-system-center-configuration-manager"></a>Planen einer Strategie für die Clientmigration in System Center Configuration Manager
+# <a name="plan-a-client-migration-strategy-in-system-center-configuration-manager"></a>Planen einer Strategie für die Clientmigration in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -36,14 +36,14 @@ Sie müssen zwei Tasks ausführen, um Clients aus einer Quellhierarchie zu einer
 -   [Planen der Inventur- und Kompatibilitätsdaten während der Migration](#Planning_for_Inventory_data_migration)  
 
 ##  <a name="a-nameplanningforclientagentmigrationa-plan-to-migrate-clients-to-the-destination-hierarchy"></a><a name="Planning_for_Client_Agent_Migration"></a> Planen der Migration von Clients in die Zielhierarchie  
- Wenn Sie Clients von einer Quellhierarchie migrieren, wird die Clientsoftware auf dem Clientcomputer so aktualisiert, dass sie mit der Produktversion der Zielhierarchie übereinstimmt:  
+ Wenn Sie Clients von einer Quellhierarchie migrieren, wird für die Clientsoftware auf dem Clientcomputer ein Upgrade durchgeführt, sodass sie mit der Produktversion der Zielhierarchie übereinstimmt.  
 
 -   **Eine Configuration Manager 2007-Quellhierarchie:** Wenn Sie Clients aus einer Quellhierarchie migrieren, in der eine unterstützte Version von Configuration Manager ausgeführt wird, führt die Clientsoftware für die Zielhierarchie ein Upgrade auf die Clientversion durchgeführt.  
 
 -   **Eine System Center 2012 Configuration Manager-Quellhierarchie oder höher:** Wenn Sie Clients zwischen Hierarchien der gleichen Produktversion migrieren, erfolgen keine Änderung und kein Upgrade der Clientsoftware. Stattdessen wird der Client aus der Quellhierarchie einem Standort in der Zielhierarchie neu zugewiesen.  
 
     > [!NOTE]  
-    >  Wenn für die Produktversion einer Hierarchie die Migration zu Ihrer Zielhierarchie nicht unterstützt wird, führen Sie für alle Standorte und Clients in der Quellhierarchie ein Upgrade auf eine kompatible Produktversion aus. Nach der Aktualisierung der Quellhierarchie auf eine unterstützte Produktversion können Sie Migrationen zwischen den einzelnen Hierarchien ausführen. Weitere Informationen finden Sie im Abschnitt [Versionen von Configuration Manager, die für die Migration unterstützt werden](../../core/migration/prerequisites-for-migration.md#BKMK_SupportedMigrationVersions) des Themas [Voraussetzungen für die Migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md).  
+    >  Wenn für die Produktversion einer Hierarchie die Migration zu Ihrer Zielhierarchie nicht unterstützt wird, führen Sie für alle Standorte und Clients in der Quellhierarchie ein Upgrade auf eine kompatible Produktversion aus. Nach der Aktualisierung der Quellhierarchie auf eine unterstützte Produktversion können Sie Migrationen zwischen den einzelnen Hierarchien ausführen. Weitere Informationen finden Sie im Abschnitt [Versionen von Configuration Manager, die für die Migration unterstützt werden](../../core/migration/prerequisites-for-migration.md#BKMK_SupportedMigrationVersions) des Artikels [Voraussetzungen für die Migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md).  
 
 Die folgenden Informationen helfen Ihnen bei der Planung der Clientmigration:  
 
@@ -53,11 +53,11 @@ Die folgenden Informationen helfen Ihnen bei der Planung der Clientmigration:
 
 -   Bevor Sie einen Client migrieren, führen Sie einen Migrationsauftrag aus, um die Informationen zu migrieren, die vom Client in der Zielhierarchie verwendet werden.  
 
--   Für Clients, für die ein Upgrade durchgeführt wird, wird der Ausführungsverlauf beibehalten, um zu verhindern, dass Bereitstellungen in der Zielhierarchie unnötigerweise mehrmals vorgenommen werden:  
+-   Für Clients, für die ein Upgrade durchgeführt wird, wird der Ausführungsverlauf beibehalten. So wird verhindert, dass Bereitstellungen in der Zielhierarchie unnötigerweise erneut ausgeführt werden.  
 
     -   Für Configuration Manager 2007-Clients wird der Ausführungsverlauf der Ankündigungen beibehalten.  
 
-    -   Mit System Center 2012 Configuration Manager-Clients oder Clients von Current Branch von System Center Configuration Manager wird der Ausführungsverlauf der Bereitstellungen beibehalten.  
+    -   Für System Center 2012 Configuration Manager-Clients oder Clients von Current Branch von System Center Configuration Manager wird der Ausführungsverlauf der Bereitstellungen beibehalten.  
 
 -   Sie können Clients in beliebiger Reihenfolge von Standorten in der Quellhierarchie migrieren. Es wird jedoch empfohlen, eine begrenzte Anzahl von Clients in mehreren Phasen zu migrieren, anstelle einer großen Anzahl von Clients auf einmal. Eine Migration in Phasen reduziert die Anforderungen an Netzwerkbandbreite und Serververarbeitung, wenn von den aktualisierten Clients die erste vollständige Inventur und die Kompatibilitätsdaten an den zugewiesenen Standort übermittelt werden.  
 
@@ -105,6 +105,6 @@ Die Inventur- und Kompatibilitätsdaten des Clients werden nicht gespeichert, we
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

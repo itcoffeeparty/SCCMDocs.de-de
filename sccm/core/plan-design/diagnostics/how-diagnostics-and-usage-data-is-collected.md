@@ -2,7 +2,7 @@
 title: Sammeln von Diagnosedaten | Microsoft-Dokumentation
 description: "Erfahren Sie mehr darüber, wie System Center Configuration Manager Diagnose- und Nutzungsdaten über sich selbst sammelt."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: f0a992139ad1bc516df2f6ea947509e3e4a77c54
+ms.sourcegitcommit: 24a233516058e645df2a43623855665b97b041b0
+ms.openlocfilehash: 9c0165212fe34f460be2ce870d0542b616f3bc4d
 
 
 ---
@@ -37,6 +37,6 @@ Weitere Informationen finden Sie unter [About the service connection point in Sy
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

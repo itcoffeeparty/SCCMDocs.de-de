@@ -2,7 +2,7 @@
 title: "Diagnosedaten für 1610 | System Center Configuration Manager"
 description: "Erfahren Sie mehr über die Ebenen der Diagnose- und Nutzungsdaten, die System Center Configuration Manager-Version 1610 sammelt."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -34,8 +34,8 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 6b4af705fa148261634d38dbb2df9988c5672180
-ms.openlocfilehash: df8a4c84da8e73aae2455e5f5af26d097449cddd
+ms.sourcegitcommit: 688e05aae0e0b15b54835f8d64a98487f4d7b64d
+ms.openlocfilehash: 82bcd1a9fe22bf7ecc2dc5765f64f5198494152e
 
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1610-of-system-center-configuration-manager"></a>Ebenen der Sammlung von Nutzungsdaten zu Diagnosezwecken für System Center Configuration Manager-Version 1610
@@ -48,15 +48,15 @@ Die Version 1610 von System Center Configuration Manager sammelt drei Ebenen von
 
 
 > [!IMPORTANT]
->  Configuration Manager sammelt auf den Ebenen „Basis“ und „Erweitert“ keine Standortcodes, Standortnamen, IP-Adressen, Benutzer- oder Computernamen, physische Adressen oder E-Mail-Adressen. Die auf der Ebene „Vollständig“ erfassten Daten (möglicherweise in erweiterten Diagnoseinformationen wie Protokolldateien oder Arbeitsspeicher-Momentaufnahmen enthaltene Daten) werden nicht zielgerichtet gesammelt und von Microsoft nicht zu Werbezwecken oder dazu verwendet, Sie zu identifizieren bzw. Kontakt mit Ihnen aufzunehmen.
+>  Configuration Manager sammelt auf den Ebenen „Basis“ und „Erweitert“ keine Standortcodes, Standortnamen, IP-Adressen, Benutzer- oder Computernamen, physischen Adressen oder E-Mail-Adressen. Die auf der Ebene „Vollständig“ erfassten Daten (möglicherweise in erweiterten Diagnoseinformationen wie Protokolldateien oder Arbeitsspeicher-Momentaufnahmen enthaltene Daten) werden nicht zielgerichtet gesammelt. Sie werden von Microsoft auch nicht zu Werbezwecken oder dazu verwendet, Sie zu identifizieren bzw. Kontakt mit Ihnen aufzunehmen.
 
 ##  <a name="a-namebkmkchangea-how-to-change-the-level"></a><a name="bkmk_change"></a> Ändern der Ebene
- Administratoren mit einem rollenbasierten Verwaltungsbereich, der die Berechtigung **Ändern** für die **Standort**-Objektklasse umfasst, können in den Einstellungen der Configuration Manager-Konsole unter „Diagnose- und Nutzungsdaten“ die Ebene der erfassten Daten ändern.
+ Administratoren mit einem rollenbasierten Verwaltungsbereich, der **Ändern**-Berechtigungen für die **Standort**-Objektklasse umfasst, können in den Einstellungen der Configuration Manager-Konsole unter „Diagnose- und Nutzungsdaten“ die Ebene der erfassten Daten ändern.
 
 Ab Version 1610 können Sie die Datensammlungsebene innerhalb der Konsole ändern, indem Sie zu **Verwaltung** > **Überblick** > **Standortkonfiguration** > **Standorte** navigieren. Öffnen Sie die **Hierarchieeinstellungen**, und wählen Sie die Datenebene aus, die Sie verwenden möchten.  
 
 ##  <a name="a-namebkmklevel1a-level-1---basic"></a><a name="bkmk_level1"></a> Ebene 1: Basis
- Die Ebene „Basis“ erfasst Daten über Ihre Hierarchie und wird für die Verbesserung Ihrer Installations- oder Upgradeerfahrung und zur Ermittlung der für Ihre Hierarchie infrage kommenden Configuration Manager-Updates benötigt.
+ Die Ebene „Basis“ umfasst Daten über Ihre Hierarchie, Daten, die für die Verbesserung Ihrer Installations- oder Upgradeerfahrung nötig sind, sowie Daten, die zur Ermittlung der für Ihre Hierarchie infrage kommenden Configuration Manager-Updates benötigt werden.
 
  Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgendes:
 
@@ -64,7 +64,7 @@ Ab Version 1610 können Sie die Datensammlungsebene innerhalb der Konsole änder
  -   Setupinformationen:
       - Build, Installationstyp, Sprachpakete, Funktionen, die Sie aktiviert haben  
 
-      -   Aktualisieren des Paketbereitstellungsstatus und der Fehler, des Downloadstatus und der Prereq-Fehler    
+      -   Aktualisieren des Paketbereitstellungsstatus und der Fehler, des Downloadstatus und der Voraussetzungsfehler  
 
       -  Skriptversion nach dem Upgrade
 
@@ -72,34 +72,34 @@ Ab Version 1610 können Sie die Datensammlungsebene innerhalb der Konsole änder
 
     -  ***[Neu]*** Verwendung der Vorabversion, Setup Medientyp, Verzweigungstyp
 
-    - ***[Neu]*** SA Ablaufdatum
+    - ***[Neu]*** Ablaufdatum der Software Assurance
 
 
 -   Metriken zur Datenbankleistung (Informationen zur Replikationsverarbeitung, die wichtigsten gespeicherten SQL Server-Prozeduren nach Prozessor und Datenträgerverwendung)
 
--   Grundlegende Informationen zur Datenbankkonfiguration (Prozessoren, Clusterkonfiguration, Konfiguration verteilter Ansichten)
+-   Grundlegende Informationen zur Datenbankkonfiguration (Prozessoren, Clusterkonfiguration und Konfiguration verteilter Ansichten)
 
 -   Configuration Manager-Datenbankschema (Hash aller Objektdefinitionen)
 
 -   Anzahl der Configuration Manager-Client- und -Betriebssystemversionen
 
--   Anzahl und Betriebssystem der verwalteten Geräte und von Exchange Connector festgelegte Richtlinien
+-   Anzahl der Betriebssysteme für verwaltete Geräte und der von Exchange Connector festgelegten Richtlinien
 
--   Anzahl der Sprachen und Gebietsschemas der Clients
+-   Anzahl der Clientsprachen und -gebietsschemas
 
 -   Anzahl von Windows 10-Geräten nach Branch und Build
 
 -   Grundlegende Daten zur Configuration Manager-Standorthierarchie (Standortliste, Typ, Version, Status, Anzahl der Clients und Zeitzone)
 
--   Grundlegende Informationen zum Standortsystemserver (verwendete Standortsystemrollen, Internet- und SSL-Status, Betriebssystem, Prozessoren, physischer oder virtueller Computer)
+-   Grundlegende Informationen zum Standortsystemserver (verwendete Standortsystemrollen, Internet- und SSL-Status, Betriebssystem, Prozessoren sowie physischer oder virtueller Computer)
 
--   Grundlegende Statistiken zur Benutzerermittlung (Benutzerermittlungsanzahl, minimale/maximale/durchschnittliche Gruppengröße)
+-   Grundlegende Statistiken zur Benutzerermittlung (Benutzerermittlungsanzahl und minimale/maximale/durchschnittliche Gruppengröße)
 
 -   Grundlegende Informationen zu Endpoint Protection (Antischadsoftware-Clientversionen)
 
--   Anzahl der grundlegenden Anwendungs- und Bereitstellungstypen (Gesamtanzahl der Apps, Gesamtanzahl der Apps mit mehreren Bereitstellungstypen, Gesamtanzahl der Apps mit Abhängigkeiten, Gesamtanzahl der ersetzten Apps, Anzahl der verwendeten Bereitstellungstechnologien)
+-   Anzahl der grundlegenden Anwendungs- und Bereitstellungstypen (Gesamtzahl der Apps, Gesamtzahl der Apps mit mehreren Bereitstellungstypen, Gesamtzahl der Apps mit Abhängigkeiten, Gesamtzahl der ersetzten Apps und Anzahl der verwendeten Bereitstellungstechnologien)
 
--   Grundlegende OSD-Anzahl (Images)
+-   Anzahl der grundlegenden Betriebssystembereitstellungen (OSDs) (Images)
 
 -   Informationen zu Verteilungspunkt- und Verwaltungspunkttypen sowie zur grundlegenden Konfiguration (geschützt, vorab bereitgestellt, PXE, Multicast, SSL-Status, Pull-/Peerverteilungspunkte, MDM-aktiviert, SSL-fähig usw.)
 
@@ -110,14 +110,14 @@ Ab Version 1610 können Sie die Datensammlungsebene innerhalb der Konsole änder
 -  Verwenden der Netzwerkermittlung (aktiviert oder deaktiviert)
 -  Verwaltungskonsole:
 
-     -  Statistiken zu den Konsolenverbindungen (OS-Version, Sprache, SKU und Architektur; Systemspeicher, Anzahl der logischen Prozessoren, connect site-ID, installierte .NET-Releases und Sprachpakete für die Konsole)    
+     -  Statistiken zu den Konsolenverbindungen (Betriebssystemversion, Sprache, SKU und Architektur, Systemspeicher, Anzahl der logischen Prozessoren, Connect-Website-ID, installierte .NET-Versionen und Konsolensprachpakete)    
 
 
-- SQL-Version, Service Pack-Ebene, Edition, Sortierungs-ID, Zeichensatz
+- SQL-Version, Service Pack-Ebene, Edition, Sortierungs-ID und Zeichensatz
 
 
 ##  <a name="a-namebkmklevel2a-level-2---enhanced"></a><a name="bkmk_level2"></a> Ebene 2: Erweitert
-Die Ebene „Erweitert“ ist die Standardeinstellung nach dem Setup. Diese Ebene schließt die auf der Ebene „Basis“ erfassten Daten ein und enthält darüber hinaus featurespezifische Daten (Häufigkeit und Dauer der Verwendung), Configuration Manager-Clienteinstellungen (Name der Komponente, Status und bestimmte Einstellungen wie Abrufintervalle) sowie grundlegende Informationen zu Softwareupdates.
+Die Ebene „Erweitert“ ist die Standardeinstellung nach dem Setup. Diese Ebene enthält die auf der Ebene „Basis“ erfassten Daten und featurespezifische Daten (Häufigkeit und Dauer der Verwendung), Configuration Manager-Clienteinstellungen (Name der Komponente, Status und bestimmte Einstellungen wie Abrufintervalle) sowie grundlegende Informationen zu Softwareupdates.
 
 Diese Ebene wird empfohlen, weil sie Microsoft die Daten bereitstellt, die mindestens erforderlich sind, um in künftigen Versionen der Produkte und Dienste nützliche Verbesserungen vorzunehmen. Diese Ebene erfasst keine Objektnamen (Websites, Benutzer, Computer oder Objekte) und keine Details zu sicherheitsrelevanten Objekten oder Sicherheitsrisiken, wie etwa die Anzahl der Systeme, die Softwareupdates erfordern.
 
@@ -125,9 +125,9 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
 -   **Anwendungsverwaltung:**  
 
-    -    Grundlegende Informationen zu Verwendung/Zielgruppenadressierung für innerhalb der Organisation verwendete Bereitstellungstypen (adressierter Benutzer/adressiertes Gerät, erforderlich/verfügbar, universelle Apps)  
+    -    Grundlegende Informationen zu Verwendung/Zielgruppenadressierung für innerhalb der Organisation verwendete Bereitstellungstypen (adressierter Benutzer/adressiertes Gerät, erforderlich/verfügbar und universelle Apps)  
 
-    -   Informationen zur Anwendungsbereitstellung (Installieren/Deinstallieren, Genehmigung erforderlich, Benutzerinteraktion aktiviert/deaktiviert, Abhängigkeit, Ablösung)  
+    -   Informationen zur Anwendungsbereitstellung (Installieren/Deinstallieren, Genehmigung erforderlich, Benutzerinteraktion aktiviert/deaktiviert, Abhängigkeit und Ablösung)  
 
     -   Statistiken zur Anforderung verfügbarer Anwendungen  
 
@@ -147,17 +147,17 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
     -  Größe der Anwendungsrichtlinie und Komplexitätsstatistiken
 
-    - ***[Aktualisiert]*** Anzahl der Apps im Windows Store für Unternehmen (Windows Store for Business, WSfB) und Synchronisierungsstatistiken (einschließlich zusammengefasste App-Typen und die Anzahl der Online- und Offline-lizenzierten Apps)  
+    - ***[Aktualisiert]*** Anzahl der Apps im Windows Store für Unternehmen und Synchronisierungsstatistiken (einschließlich zusammengefasste App-Typen, Status lizenzierter Apps und Anzahl der Online- und Offline-lizenzierten Apps)  
 
-    - Statistiken für Begrenzungsgruppen (wie viele schnelle, langsame pro Gruppe)
+    - Statistiken für Begrenzungsgruppen (wie viele schnelle, wie viele langsame sowie Anzahl pro Gruppe)
 
     - Konfigurationsoptionen für und Anzahl von MSI
 
-    - App-Anforderungen (Anzahl der integrierten Bedingungen wird von welcher Bereitstellungstechnologie referenziert)
+    - App-Anforderungen (Anzahl der integrierten Bedingungen wird von der Bereitstellungstechnologie referenziert)
 
     - App-Ablösung, maximale Kettentiefe
 
-    - UDA-Verwendung, wie erstellt
+    - Nutzung des Universal Data Access (UDA), Art der Erstellung
 
     - ***[Neu] *** Statistiken über Genehmigungen für Anwendungen und Häufigkeit der Nutzung
 
@@ -171,13 +171,13 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
     -   Anzahl der Fehler bei der Clientinstallation  
 
-    -  ***[Aktualisiert]*** Automatisches Upgrade des Client: Konfigurierung der Bereitstellung einschließlich Pilottests von Clients, Verwendung des Ausschlusses (erweiterter Interoperabilitätsclient)
+    -  ***[Aktualisiert]*** Automatisches Clientupgrade: Konfigurierung der Bereitstellung einschließlich Pilottests von Clients und Verwendung des Ausschlusses (erweiterter Interoperabilitätsclient)
 
     -  Clientintegritätsstatistiken und Zusammenfassung wichtiger Probleme
 
     - BIOS-Alter in Jahren
 
-    - OS-Alter in Monaten
+    - Alter des Betriebssystems in Monaten
 
     - Anzahl der Softwarecenteraktionen
 
@@ -185,9 +185,9 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
     - Downloadfehler in der Clientbereitstellung
 
-    - Status der Aktion der Clientbenachrichtigung (wie oft jede ausgeführt wird, max. Anzahl von Zielclients, durchschnittliche Erfolgsrate)
+    - Status der Clientbenachrichtigungsaktion (wie oft jede Aktion ausgeführt wird, max. Anzahl von Zielclients und durchschnittliche Erfolgsrate)
 
-    - Bereitstellungsmethoden für Clients, Anzahl der Clients pro Bereitstellungsmethode
+    - Bereitstellungsmethoden für Clients und Anzahl der Clients pro Bereitstellungsmethode
 
     - Konfigurieren der Cachegrößen des Clients
 
@@ -198,9 +198,9 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
 - **Cloud Services:**
 
-  - Die Anzahl der Sammlungen, die mit OMS synchronisiert sind
+  - Anzahl der Sammlungen, die mit Operations Management Suite synchronisiert werden
 
-  -  Ist der OMS-Cloud-Connector aktiviert
+  -  Angabe, ob der Operations Management Suite-Cloud-Connector aktiviert ist
 
   - ***[Neu] *** Statistiken zur Konfigurierung und Verwendung des Cloudverwaltungsgateways
 
@@ -228,9 +228,9 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
     -   Anzahl von Bereitstellungen, die auf integrierte Einstellungen verweisen (wiederhergestellte Einstellungen werden jetzt erfasst)  
 
     -   Anzahl von Regeln und Bereitstellungen, die für benutzerdefinierte Einstellungen erstellt wurden (wiederhergestellte Einstellungen werden jetzt erfasst)  
-    -   Anzahl der bereitgestellten Simple Certificate Enrollment-Protokollvorlagen, VPN-, WLAN-, Zertifikat- (.pfx) und Kompatibilitätsrichtlinienvorlagen
+    -   Anzahl der bereitgestellten Simple Certificate Enrollment-Protokollvorlagen (SCEP) und der VPN-, WLAN-, Zertifikat- (.PFX) und Konformitätsrichtlinienvorlagen
 
-    -  Anzahl von SCEP-, VPN- WLAN-Zertifikaten (.pfx) und Bereitstellungen von Kompatibilitätsrichtlinien je Plattform
+    -  Anzahl der SCEP-Zertifikat-, VPN-, WLAN-, Zertifikat- (.PFX) und Konformitätsrichtlinienbereitstellungen je Plattform
 
     - Passport for Work-Richtlinie (erstellt, bereitgestellt)
 
@@ -246,9 +246,9 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
     -   Informationen zur Verteilungspunktgruppe (Anzahl der jeder Verteilungspunktgruppe zugewiesenen Pakete und Verteilungspunkte)  
 
-    -   Informationen zur Verteilungspunktkonfiguration (Verwenden von Branch-Cache, Verteilungspunktüberwachung)  
+    -   Informationen zur Verteilungspunktkonfiguration (Verwenden von Branch-Cache und Verteilungspunktüberwachung)  
 
-    -   Informationen zur Verteilungs-Manager-Konfiguration (Threads, Wiederholungsverzögerung, Anzahl der Wiederholungsversuche, Einstellungen für Pullverteilungspunkte)  
+    -   Informationen zur Verteilungs-Manager-Konfiguration (Threads, Wiederholungsverzögerung, Anzahl der Wiederholungsversuche und Einstellungen für Pullverteilungspunkte)  
 
     - ***[Neu] *** Anzahl von Peercacheclients und Nutzungsstatistiken
 
@@ -257,15 +257,15 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
 -   **Endpoint Protection:**  
 
-    -   Verwendung der Endpoint Protection-Antischadsoftware- und der Windows-Firewall-Richtlinie (Anzahl der einer Gruppe zugewiesenen eindeutigen Richtlinien; dies schließt keine Informationen zu den in der Richtlinie enthaltenen Einstellungen ein)  
+    -   Endpoint Protection-Antischadsoftware und Windows-Firewall-Richtliniennutzung (Anzahl der eindeutigen der Gruppe zugewiesenen Richtlinien)<br /><br /> Dies umfasst keine Informationen über in der Richtlinie enthaltene Einstellungen.  
 
-    -   Fehler bei der Endpoint Protection-Bereitstellung (Anzahl der Endpoint Protection-Bereitstellungsfehlercodes)  
+    -   Fehler bei der Endpoint Protection-Bereitstellung (Anzahl der Endpoint Protection-Richtlinien-Bereitstellungsfehlercodes)  
 
     -   Anzahl der ausgewählten Sammlungen, die im Endpoint Protection-Dashboard angezeigt werden sollen  
 
-    -   Anzahl der Warnungen für das konfigurierte Endpoint Protection-Feature  
+    -   Anzahl der Warnungen, die für das Endpoint Protection-Feature konfiguriert sind  
 
-    - ATP-Richtlinien (Anzahl der Richtlinien, ist es bereitgestellt)
+    -   Advanced Threat Protection-Richtlinien (ATP) (Anzahl der Richtlinien und Angabe, ob Richtlinien bereitgestellt werden)
 
 
 - **Migration:**
@@ -276,11 +276,11 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
 -   **Verwaltung mobiler Geräte (MDM):**  
 
-    -   ***[Aktualisiert]*** Anzahl der Aktionen für mobile Geräte (Sperren, PIN zurücksetzen, Zurücksetzen, Außerkraftsetzen, und Jetzt synchronisieren), ausgegebene Befehle  
+    -   ***[Aktualisiert]*** Anzahl der ausgegebenen Aktionen für mobile Geräte: Befehle Sperren, PIN zurücksetzen, Zurücksetzen, Außerkraftsetzen und Jetzt synchronisieren  
 
-    -   Anzahl der von Configuration Manager und Microsoft Intune verwalteten mobilen Geräte und ihre Registrierungsweise (Massenregistrierung, benutzerbasierte Registrierung)  
+    -   Anzahl der von Configuration Manager und Microsoft Intune verwalteten mobilen Geräte und Art ihrer Registrierung (Massenregistrierung, benutzerbasierte Registrierung)  
 
-    -   Zeitplan und Statistiken zu Abrufvorgängen für mobile Geräte, Eincheckdauer mobiler Geräte  
+    -   Zeitplan zu Abrufvorgängen für mobile Geräte und Statistiken zur Eincheckdauer mobiler Geräte  
 
     -   Anzahl der Richtlinien für mobile Geräte  
 
@@ -288,7 +288,7 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
 -   **Problembehandlung für Microsoft Intune:**
 
-    -   Anzahl und Größe der von Microsoft Intune heruntergeladenen Meldungen zum Zustand, Status und Mandantenzustand, zur Inventur und Kompatibilität und zu RDR, DDR, UDX, POL, LOG, Cert, CRP, Resync, CFD, RDO, BEX und ISM
+    -   Anzahl und Größe der von Microsoft Intune heruntergeladenen Meldungen zum Zustand, Status und Mandantenzustand, zur Inventur und Konformität und zu RDR, DDR, UDX, POL, LOG, Cert, CRP, Resync, CFD, RDO, BEX und ISM
 
     -   Anzahl und Größe von Geräteaktionen (Zurücksetzen, Außerkraftsetzen, Sperren), Telemetrie und Datenmeldungen, die auf Microsoft Intune repliziert wurden
 
@@ -322,7 +322,7 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
 -   **Softwareupdates:**  
 
-    -   Gesamtanzahl bzw. durchschnittliche Anzahl von Sammlungen mit Softwareupdatebereitstellungen sowie maximale/durchschnittliche Anzahl der bereitgestellten Updates  
+    -   Gesamtzahl bzw. durchschnittliche Anzahl von Sammlungen mit Softwareupdatebereitstellungen sowie maximale/durchschnittliche Anzahl der bereitgestellten Updates  
 
     -   Anzahl der an die Synchronisierung gebundenen Regeln zur automatischen Bereitstellung  
 
@@ -340,7 +340,7 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
     -   Anzahl der Updategruppen und minimale/maximale/durchschnittliche Anzahl der Updates pro Gruppe  
 
-    -   Anzahl von Updates und Prozentsatz der bereitgestellten, abgelaufenen, ersetzten und heruntergeladenen Updates sowie von Updates mit EULAs  
+    -   Anzahl von Updates und Prozentsatz der bereitgestellten, abgelaufenen, ersetzten und heruntergeladenen Updates sowie der Updates mit EULAs  
 
     -   Updateüberprüfungs-Fehlercodes und Anzahl der Computer  
 
@@ -387,14 +387,14 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
 - **Verschiedenes**
 
-    - Anzahl der WOL-Standorte
+    - Anzahl der Wake-On-LAN-Standorte (WOL)
 
     - ***[Neu] *** Berichte von Nutzungs- und Leistungsstatistiken  
 
 
 
 ##  <a name="a-namebkmklevel3a-level-3---full"></a><a name="bkmk_level3"></a> Ebene 3: Vollständig
-Die Ebene „Vollständig“ umfasst alle Daten der Ebenen „Basis“ und „Erweitert“. Darüber hinaus werden zusätzliche Informationen zu Endpoint Protection, die Prozentsätze zur Updatekompatibilität sowie Informationen zu Softwareupdates erfasst.  Diese Ebene kann auch erweiterte Diagnoseinformationen wie Systemdateien und Momentaufnahmen des Arbeitsspeichers einschließen. Darin können wiederum personenbezogene Informationen enthalten sein, die zum Zeitpunkt der Erfassung im Arbeitsspeicher oder in den Protokolldateien vorhanden waren.
+Die Ebene „Vollständig“ umfasst alle Daten der Ebenen „Basis“ und „Erweitert“. Darüber hinaus werden zusätzliche Informationen zu Endpoint Protection, die Prozentsätze zur Updatekompatibilität sowie Informationen zu Softwareupdates erfasst.  Diese Ebene kann auch erweiterte Diagnoseinformationen wie Systemdateien und Momentaufnahmen des Arbeitsspeichers einschließen. Darin können wiederum personenbezogene Informationen enthalten sein, die zum Zeitpunkt der Erfassung im Arbeitsspeicher oder in Protokolldateien vorhanden waren.
 
 Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgendes:
 
@@ -404,7 +404,7 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
 -   Endpoint Protection-Richtlinienkonfiguration
 
--   Informationen zur Softwareupdatebereitstellung (Prozentsatz der Zielbereitstellungen mit Client- bzw. UTC-Zeit, erforderlich bzw. optional bzw. automatisch, Neustartunterdrückung)
+-   Informationen zur Softwareupdatebereitstellung (Prozentsatz der Zielbereitstellungen mit Client- bzw. UTC-Zeit, erforderlich bzw. optional bzw. automatisch und Neustartunterdrückung)
 
 -   Gesamtkompatibilität der Softwareupdatebereitstellungen
 
@@ -423,15 +423,15 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 -   Minimale/maximale/durchschnittliche Anzahl von Stunden seit der letzten Überprüfung auf Softwareupdates
 
 -    Vom Softwareupdatepunkt synchronisierte Softwareupdateprodukte
--    Kompatibilitätseinstellungen: Konfigurationsdetails zu SCEP-, VPN-, WLAN- und Kompatibilitätsrichtlinienvorlagen
+-    Konformitätseinstellungen: Konfigurationsdetails zu SCEP-, VPN-, WLAN- und Konformitätsrichtlinienvorlagen
 
 -    Typ der EAS-Richtlinien für den bedingten Zugriff (blockiert oder in Quarantäne) für mit Intune verwaltete Geräte
 
 -   Die besten 50 CPUs in der Umgebung
 
--   DCM-Config-Pack für die SCCM-Verwendung
+-   DCM-Konfigurationspaket für die System Center Configuration Manager-Nutzung
 
--   MSI-Produktcode (welche sind die gängigen Apps, die Kunden bereitstellen)
+-   MSI-Produktcode (gängige Apps, die Kunden bereitstellen)
 
 -   Zusammenfassung zur ATP-Integrität
 
@@ -441,6 +441,6 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

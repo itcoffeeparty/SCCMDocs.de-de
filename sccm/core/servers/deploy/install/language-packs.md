@@ -1,8 +1,8 @@
 ---
 title: Sprachpakete | Microsoft-Dokumentation
-description: "Erfahren Sie mehr über die Sprachunterstützung, die Ihnen in System Center Configuration Manager zur Verfügung steht."
+description: "Erfahren Sie mehr über die Sprachunterstützung, die in System Center Configuration Manager zur Verfügung steht."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 35d1008752a3275febef46b8817e97afdb91d580
+ms.sourcegitcommit: e7075eb675353be130fdcc867d9e4dd1009dab35
+ms.openlocfilehash: 47da3c531289ddf13d357bde8bbda85d79ed2803
 
 
 ---
@@ -27,14 +27,16 @@ ms.openlocfilehash: 35d1008752a3275febef46b8817e97afdb91d580
 
 Dieses Thema enthält technische Details zur Sprachunterstützung in System Center Configuration Manager.  
 
-##  <a name="a-namebkmksuplanguagepacksa-supported-operating-system-languages"></a><a name="BKMK_SupLanguagePacks"></a> Unterstützte Betriebssystemsprachen  
- Sie können Unterstützung für die folgenden Anzeigesprachen installieren, indem Sie **Serversprachpakete** oder **Clientsprachpakete** an einem Standort der zentralen Verwaltung und an primären Standorten installieren. Sprachpaketdateien werden beim Ausführen von Setup im Rahmen des Downloads der erforderlichen Komponenten und Redistributable-Datei heruntergeladen. Sie können auch das [Setup-Downloadprogramm](setup-downloader.md) verwenden, um diese Dateien herunterzuladen, bevor Sie Setup ausführen. Während der Installation eines Standorts wählen Sie an diesem Standort zu unterstützenden Server- und Clientsprachen aus den verfügbaren verfügbaren Sprachpaketdateien aus.  
+## <a name="a-namebkmksuplanguagepacksa-supported-operating-system-languages"></a><a name="BKMK_SupLanguagePacks"></a> Unterstützte Betriebssystemsprachen  
+ Sie können Unterstützung für die in den folgenden Tabellen aufgeführten Anzeigesprachen installieren, indem Sie **Serversprachpakete** oder **Clientsprachpakete** an einem Standort der zentralen Verwaltung und an primären Standorten installieren. Während der Standortinstallation wählen Sie die an diesem Standort zu unterstützenden Server- und Clientsprachen aus den verfügbaren Sprachpaketdateien aus.
 
- Verwenden Sie die folgende Tabelle, um eine Gebietsschema-ID einer Sprache zuzuordnen, die auf Servern oder Clients unterstützt werden soll. Weitere Informationen zu Gebietsschema-IDs finden Sie unter [Von Microsoft zugewiesene Gebietsschema-IDs](http://go.microsoft.com/fwlink/p/?LinkId=252609) in der MSDN-Onlinebibliothek.  
+ Sprachpaketdateien werden beim Ausführen von Setup im Rahmen des Downloads der erforderlichen Komponenten und verteilbaren Datei heruntergeladen. Sie können auch das [Setup-Downloadprogramm](setup-downloader.md) verwenden, um diese Dateien herunterzuladen, bevor Sie das Setup ausführen.   
+
+ Verwenden Sie die folgende Tabelle, um eine Gebietsschema-ID einer Sprache zuzuordnen, die auf Servern oder Clientcomputern unterstützt werden soll. Weitere Informationen zu Gebietsschema-IDs finden Sie unter [Locale IDs assigned by Microsoft (Von Microsoft zugewiesene Gebietsschema-IDs)](http://go.microsoft.com/fwlink/p/?LinkId=252609).  
 
 ### <a name="server-languages"></a>Serversprachen  
 
-|Serversprache|Gebietsschema-ID (LCID)|Code mit drei Buchstaben|  
+|Serversprache|Gebietsschema-ID (LCID)|Dreistelliger Code|  
 |---------------------|------------------------|-----------------------|  
 |Englisch (Standard)|0409|ENU|  
 |Chinesisch (traditionell, Hongkong SAR)|0c04|ZHH|  
@@ -58,7 +60,7 @@ Dieses Thema enthält technische Details zur Sprachunterstützung in System Cent
 
 ### <a name="client-languages"></a>Clientsprachen  
 
-|Clientsprache|Gebietsschema-ID (LCID)|Code mit drei Buchstaben|  
+|Clientsprache|Gebietsschema-ID (LCID)|Dreistelliger Code|  
 |---------------------|------------------------|-----------------------|  
 |Englisch (Standard)|0409|ENG|  
 |Chinesisch (traditionell, Hongkong SAR)|0c04|ZHH|  
@@ -85,17 +87,17 @@ Dieses Thema enthält technische Details zur Sprachunterstützung in System Cent
 |Türkisch|041f|TRK|  
 
 ### <a name="mobile-device-client-languages"></a>Clientsprachen für mobile Geräte  
- Wenn Sie die Unterstützung für Sprachen mobiler Geräte hinzufügen, werden alle Clientsprachen für mobile Geräte einbezogen. Sie können keine einzelnen Sprachpakete für die Unterstützung mobiler Geräte auswählen.  
+ Wenn Sie die Unterstützung für Sprachen mobiler Geräte hinzufügen, werden alle unterstützen Clientsprachen für mobile Geräte einbezogen. Sie können keine einzelnen Sprachpakete für die Unterstützung mobiler Geräte auswählen.  
 
-### <a name="how-to-identify-installed-language-packs"></a>Ermitteln installierter Sprachpakete  
-Auf einem Computer, auf dem der Configuration Manager-Client ausgeführt wird, können Sie die installierten Language Packs ermitteln, indem Sie die Gebietsschema-ID (LCID) der installierten Language Packs in der Registrierung des Computers anzeigen. Diese Informationen sind unter folgendem Speicherort verfügbar:  
+### <a name="identify-installed-language-packs"></a>Ermitteln installierter Sprachpakete  
+Um die Sprachpakete zu ermitteln, die auf einem Computer installiert sind, auf dem der Configuration Manager-Client ausgeführt wird, suchen Sie nach der Gebietsschema-ID (LCID) der installierten Sprachpakete in der Registrierung des Computers. Diese Informationen sind verfügbar unter:
 
--   **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCMSetup\InstalledLangs**  
+ **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCMSetup\InstalledLangs**  
 
-Sie können diese Informationen mithilfe der Hardwareinventur sammeln und dann einen benutzerdefinierten Bericht erstellen, um die Sprachdetails anzuzeigen. Informationen zum Sammeln einer benutzerdefinierten Hardwareinventur finden Sie unter [Konfigurieren der Hardwareinventur in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md). Informationen zum Erstellen von Berichten finden Sie im Abschnitt [ (Verwalten von Configuration Manager-Berichten)](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md#BKMK_ManageReports) des Themas [Operations and maintenance for reporting in System Center Configuration Manager (Vorgänge und Wartungstasks für die Berichterstattung in Configuration Manager)](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
+Sie können diese Informationen mithilfe der Hardwareinventur sammeln und dann einen benutzerdefinierten Bericht erstellen, um die Sprachdetails anzuzeigen. Informationen zum Sammeln einer benutzerdefinierten Hardwareinventur finden Sie unter [Konfigurieren der Hardwareinventur in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md). Informationen zum Erstellen von Berichten finden Sie im Abschnitt [Verwalten von Configuration Manager-Berichten](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md#BKMK_ManageReports) des Themas [Vorgänge und Wartungstasks für die Berichterstellung in System Center Configuration Manager](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

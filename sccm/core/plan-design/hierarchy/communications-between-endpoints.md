@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
-ms.openlocfilehash: 7ab79fb69188fa5fe6b89b070829ec0f918137b9
+ms.sourcegitcommit: 2ac9f98dc7b455d3b72d794d4311863186ed53ef
+ms.openlocfilehash: cd94f9ccc7e196b30e5dc7ae9368d073b7cff5d2
 
 
 ---
@@ -35,7 +35,7 @@ ms.openlocfilehash: 7ab79fb69188fa5fe6b89b070829ec0f918137b9
 
 -   HTTPS  
 
-Die Kommunikation zwischen den Servern an einem Standort kann jederzeit und ohne Steuerung der Netzwerkbandbreite auftreten. Dies trifft nicht auf die Kommunikation zwischen dem Standortserver und einem Verteilungspunkt zu. Da Sie die Kommunikation zwischen Standortsystemen nicht steuern können, achten Sie darauf, die Standortsystemserver an Orten mit guter Verbindung und schnellen Netzwerken zu installieren.  
+Die Kommunikation zwischen den Servern an einem Standort kann jederzeit und ohne Steuerung der Netzwerkbandbreite auftreten. Dies trifft nicht auf die Kommunikation zwischen dem Standortserver und einem Verteilungspunkt zu. Da Sie die Kommunikation zwischen Standortsystemen nicht steuern können, achten Sie darauf, die Standortsystemserver an Orten mit schnellen Netzwerken mit guter Verbindung zu installieren.  
 
 Für die Verwaltung der Inhaltsübertragung vom Standortserver zu Verteilungspunkten haben Sie folgende Möglichkeiten:  
 
@@ -43,44 +43,44 @@ Für die Verwaltung der Inhaltsübertragung vom Standortserver zu Verteilungspun
 
 -   Sie können einen Verteilungspunkt als vorab bereitgestellten Verteilungspunkt installieren. Mithilfe eines vorab bereitgestellten Verteilungspunkts können Sie Inhalt verwenden, der auf dem Verteilungspunktserver manuell abgelegt wird. Die Notwendigkeit, Inhaltsdateien über das Netzwerk zu übertragen, entfällt damit.  
 
-Weitere Informationen finden Sie unter [Manage network bandwidth for content management in System Center Configuration Manager](manage-network-bandwidth.md) (Verwalten von Netzwerk-Bandbreite für die Inhaltsverwaltung in System Center Configuration Manager).
+Weitere Informationen finden Sie unter [Verwalten von Netzwerk-Bandbreite für das Content Management in System Center Configuration Manager](manage-network-bandwidth.md).
 
 
 ##  <a name="a-nameplanningclienttositesystema-communications-from-clients-to-site-systems-and-services"></a><a name="Planning_Client_to_Site_System"></a> Kommunikation von Clients mit Standortsystemen und Diensten  
 Clients initiieren die Kommunikation mit Standortsystemrollen, Active Directory-Domänendiensten und Onlinediensten. Damit diese Kommunikation möglich ist, müssen die Firewalls den Netzwerkdatenverkehr zwischen Clients und dem Endpunkt der Kommunikation zulassen. Endpunkte können Folgendes sein:  
 
--   **Anwendungskatalog-Websitepunkt** (unterstützt HTTP- und HTTPS-Kommunikation)  
+-   **Anwendungskatalog-Websitepunkt**: Unterstützt HTTP- und HTTPS-Kommunikation
 
--   **Cloudbasierte Ressourcen** wie Microsoft Azure und Microsoft Intune  
+-   **Cloudbasierte Ressourcen**: Dazu gehören Microsoft Azure und Microsoft Intune  
 
--   **Configuration Manager-Richtlinienmodul (NDES)** (unterstützt HTTP- und HTTPS-Kommunikation)  
+-   **Configuration Manager-Richtlinienmodul (NDES)**: Unterstützt HTTP- und HTTPS-Kommunikation
 
--   **Verteilungspunkte** (unterstützt HTTP- und HTTPS-Kommunikation, und HTTPS ist für cloudbasierte Verteilungspunkte erforderlich)  
+-   **Verteilungspunkte**: Unterstützt HTTP- und HTTPS-Kommunikation, und HTTPS ist für cloudbasierte Verteilungspunkte erforderlich  
 
--   **Fallbackstatuspunkt** (unterstützt HTTP-Kommunikation)  
+-   **Fallbackstatuspunkt**: Unterstützt HTTP-Kommunikation  
 
--   **Verwaltungspunkt** (unterstützt HTTP- und HTTPS-Kommunikation)  
+-   **Verwaltungspunkt**: Unterstützt HTTP- und HTTPS-Kommunikation  
 
 -   **Microsoft Update**  
 
--   **Softwareupdatepunkte** (unterstützt HTTP- und HTTPS-Kommunikation)  
+-   **Softwareupdatepunkte**: Unterstützt HTTP- und HTTPS-Kommunikation  
 
--   **Zustandsmigrationspunkt** (unterstützt HTTP- und HTTPS-Kommunikation)  
+-   **Zustandsmigrationspunkt**: Unterstützt HTTP- und HTTPS-Kommunikation  
 
 -   **Verschiedene Domänendienste**  
 
-Bevor ein Client mit einer Standortsystemrolle kommunizieren kann, verwendet der Client die Dienstidentifizierung, um nach einer Standortsystemrolle zu suchen, die das Protokoll des Clients (HTTP oder HTTPS) unterstützt. Die Wahl fällt standardmäßig auf die sicherste der verfügbaren Methoden:  
+Bevor ein Client mit einer Standortsystemrolle kommunizieren kann, verwendet der Client die Dienstidentifizierung, um nach einer Standortsystemrolle zu suchen, die das Protokoll des Clients (HTTP oder HTTPS) unterstützt. Clients verwenden standardmäßig die sicherste Methode, die ihnen zur Verfügung steht:  
 
 -   Zur Verwendung von HTTPS müssen Sie über eine Public Key-Infrastruktur (PKI) verfügen und PKI-Zertifikate auf Clients und Servern installieren. Informationen zum Verwenden von Zertifikaten finden Sie unter [PKI-Zertifikatanforderungen für System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  
 
--   Wenn Sie eine Standortsystemrolle bereitstellen, die Internetinformationsdienst (IIS) verwendet und die Kommunikation von Clients unterstützt, müssen Sie angeben, ob Clients eine Verbindung mit dem Standortsystem über HTTP oder HTTPS herstellen. Falls Sie sich für HTTP entscheiden, müssen Sie auch Signierungs- und Verschlüsselungsoptionen erwägen. Weitere Informationen finden Sie unter [Planning for Signing and Encryption](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption) in [Plan for security in System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md).  
+-   Wenn Sie eine Standortsystemrolle bereitstellen, die Internetinformationsdienst (IIS) verwendet und die Kommunikation von Clients unterstützt, müssen Sie angeben, ob Clients eine Verbindung mit dem Standortsystem über HTTP oder HTTPS herstellen. Falls Sie sich für HTTP entscheiden, müssen Sie auch Signierungs- und Verschlüsselungsoptionen erwägen. Weitere Informationen finden Sie unter [Planen von Signierung und Verschlüsselung](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption) in [Planen der Sicherheit in System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md).  
 
 Weitere Informationen zur Dienstidentifizierung durch Clients finden Sie unter [Verstehen, wie Clients Standortressourcen und -dienste für System Center Configuration Manager suchen](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).  
 
-Details zu Ports und Protokollen, die von Clients verwendet werden, wenn diese mit diesen Endpunkten kommunizieren, finden Sie unter [In System Center Configuration Manager verwendete Ports](../../../core/plan-design/hierarchy/ports.md).  
+Details zu Ports und Protokollen, die von Clients verwendet werden, wenn diese mit den Endpunkten kommunizieren, finden Sie unter [In System Center Configuration Manager verwendete Ports](../../../core/plan-design/hierarchy/ports.md).  
 
 ###  <a name="a-namebkmkclientspana-considerations-for-client-communications-from-the-internet-or-an-untrusted-forest"></a><a name="BKMK_clientspan"></a> Überlegungen zur Clientkommunikation aus dem Internet oder einer nicht vertrauenswürdigen Gesamtstruktur  
-Die folgenden, an primären Standorten installierten Standortsystemrollen unterstützen Verbindungen von Clients, die sich an nicht vertrauenswürdigen Standorten wie dem Internet oder einer nicht vertrauenswürdigen Gesamtstruktur befinden (sekundäre Standorte unterstützen keine Clientverbindungen von nicht vertrauenswürdigen Standorten):  
+Die folgenden, an primären Standorten installierten Standortsystemrollen unterstützen Verbindungen von Clients, die sich an nicht vertrauenswürdigen Standorten wie dem Internet oder einer nicht vertrauenswürdigen Gesamtstruktur befinden. (Sekundäre Standorte unterstützen Clientverbindungen von nicht vertrauenswürdigen Standorten nicht):  
 
 -   Anwendungskatalog-Websitepunkt  
 
@@ -97,7 +97,7 @@ Die folgenden, an primären Standorten installierten Standortsystemrollen unters
 -   Softwareupdatepunkt  
 
 **Informationen zu Standortsystemen mit Internetzugriff:**   
-Es gibt zwar keine Voraussetzung, eine Vertrauensstellung zwischen der Gesamtstruktur eines Clients und der des Standortservers einzurichten, aber wenn die Gesamtstruktur mit einem Standortsystem mit Internetzugriff der Gesamtstruktur vertraut, die die Benutzerkonten enthält, unterstützt diese Konfiguration benutzerbasierte Richtlinien für Geräte im Internet, wenn Sie die **Clientrichtlinien**-Clienteinstellung **Benutzerrichtlinienanforderungen von Internetclients aktivieren** aktivieren.  
+Eine Vertrauensstellung zwischen der Gesamtstruktur eines Clients und des Standortsystemservers ist nicht erforderlich. Wenn die Gesamtstruktur jedoch mit einem Standortsystem mit Internetzugriff der Gesamtstruktur vertraut, die die Benutzerkonten enthält, unterstützt diese Konfiguration benutzerbasierte Richtlinien für Geräte im Internet, wenn Sie die **Clientrichtlinie**-Clienteinstellung **Benutzerrichtlinienanforderungen von Internetclients aktivieren** aktivieren.  
 
 Aus den nachstehenden Konfigurationsbeispielen geht hervor, unter welchen Umständen Benutzerrichtlinien für Geräte im Internet von der internetbasierten Clientverwaltung unterstützt werden:  
 
@@ -110,7 +110,7 @@ Aus den nachstehenden Konfigurationsbeispielen geht hervor, unter welchen Umstä
 > [!NOTE]  
 >  Sollte die Kerberos-Authentifizierung nicht möglich sein, wird automatisch die Authentifizierung über NTLM versucht.  
 
-Wie aus dem vorstehenden Beispiel hervorgeht, können Sie internetbasierte Standortsysteme im Intranet platzieren, wenn diese über einen Webproxyserver wie ISA Server und Forefront Threat Management Gateway im Internet veröffentlicht werden. Sie können für diese Standortsysteme festlegen, dass Clientverbindungen nur aus dem Internet oder sowohl aus dem Intranet als auch aus dem Internet unterstützt werden. Einen Webproxyserver können Sie für SSL-zu-SSL-Bridging (Secure Sockets Layer) oder SSL-Tunneling konfigurieren (wobei von Ersterem ein höheres Maß an Sicherheit geboten wird):  
+Wie aus dem vorstehenden Beispiel hervorgeht, können Sie internetbasierte Standortsysteme im Intranet platzieren, wenn diese über einen Webproxyserver wie ISA Server und Forefront Threat Management Gateway im Internet veröffentlicht werden. Sie können für diese Standortsysteme festlegen, dass Clientverbindungen nur aus dem Internet oder sowohl aus dem Intranet als auch aus dem Internet unterstützt werden. Einen Webproxyserver können Sie für SSL-zu-SSL-Bridging (Secure Sockets Layer) oder SSL-Tunneling wie folgt konfigurieren (wobei von Ersterem ein höheres Maß an Sicherheit geboten wird):  
 
 -   **SSL-zu-SSL-Bridging:**   
     Wenn Sie Proxywebserver bei der internetbasierten Clientverwaltung einsetzen, ist SSL-zu-SSL-Bridging empfehlenswert, bei dem ein SSL-Tunnelabschluss mit Authentifizierung verwendet wird. Die Authentifizierung von Clientcomputern muss über die Computerauthentifizierung erfolgen. Die Authentifizierung der Legacyclients mobiler Geräte erfolgt über die Benutzerauthentifizierung. SSL-Bridging wird von mobilen Geräten, die mithilfe von Configuration Manager angemeldet wurden, nicht unterstützt.  
@@ -118,7 +118,7 @@ Wie aus dem vorstehenden Beispiel hervorgeht, können Sie internetbasierte Stand
      Der SSL-Tunnelabschluss für den Proxywebserver hat den Vorteil, dass Pakete aus dem Internet überprüft werden, bevor sie an das interne Netzwerk weitergeleitet werden. Die vom Client eingehende Verbindung wird vom Proxywebserver authentifiziert und beendet, und dann wird eine neue authentifizierte Verbindung mit dem internetbasierten Standortsystem hergestellt. Wenn von Configuration Manager-Clients ein Proxywebserver verwendet wird, wird die Clientidentität (Client-GUID) sicher als Bestandteil der Paketnutzdaten transportiert, sodass der Proxywebserver vom Verwaltungspunkt nicht als Client betrachtet wird. In Configuration Manager wird kein HTTP-zu-HTTPS- oder HTTPS-zu-HTTP-Bridging unterstützt.  
 
 -   **Tunneling**:   
-    Falls die Anforderungen für SSL-Bridging vom Proxywebserver nicht erfüllt werden können oder falls Sie die Internetunterstützung für mobile Geräte, die mithilfe von Configuration Manager angemeldet wurden, konfigurieren möchten, wird auch SSL-Tunneling unterstützt. Diese Option ist weniger sicher, da die SSL-Pakete aus dem Internet ohne SSL-Tunnelabschluss an die Standortsysteme weitergeleitet werden und daher nicht auf schädliche Inhalte überprüft werden können. Bei der Verwendung von SSL-Tunneling müssen vom Proxywebserver keine Zertifikatanforderungen erfüllt werden.  
+    Falls die Anforderungen für SSL-Bridging vom Proxywebserver nicht erfüllt werden können oder falls Sie die Internetunterstützung für mobile Geräte, die mithilfe von Configuration Manager registriert wurden, konfigurieren möchten, wird auch SSL-Tunneling unterstützt. Diese Option ist weniger sicher, da die SSL-Pakete aus dem Internet ohne SSL-Tunnelabschluss an die Standortsysteme weitergeleitet werden und daher nicht auf schädliche Inhalte überprüft werden können. Bei der Verwendung von SSL-Tunneling müssen vom Proxywebserver keine Zertifikatanforderungen erfüllt werden.  
 
 ##  <a name="a-nameplancomx-foresta-communications-across-active-directory-forests"></a><a name="Plan_Com_X-Forest"></a> Kommunikation zwischen Active Directory-Gesamtstrukturen  
 System Center Configuration Manager unterstützt Standorte und Hierarchien, die mehrere Active Directory-Gesamtstrukturen umfassen.  
@@ -129,7 +129,7 @@ Configuration Manager unterstützt auch Domänencomputer, die sich nicht in der 
 
     -   Installieren von Standortsystemrollen in dieser nicht vertrauenswürdigen Gesamtstruktur mit der Option, Standortinformationen an diese Active Directory-Gesamtstruktur zu veröffentlichen  
 
-    -   Verwalten dieser Computer, als wären sie Arbeitsgruppencomputer  
+    -   Verwalten Sie diese Computer, als wären sie Arbeitsgruppencomputer.  
 
   Wenn Sie Standortsystemserver in einer nicht vertrauenswürdigen Active Directory-Gesamtstruktur installieren, erfolgt die Kommunikation zwischen Clients und Servern dieser Gesamtstruktur ausschließlich in der Gesamtstruktur, und Configuration Manager kann die Computer über Kerberos authentifizieren. Wenn Sie Standortinformationen in der Gesamtstruktur des Clients veröffentlichen, hat dies Vorteile für die Clients, denn Standortinformationen, beispielsweise eine Liste verfügbarer Verwaltungspunkte, werden aus ihrer Active Directory-Gesamtstruktur abgerufen und müssen nicht vom ihnen zugewiesenen Verwaltungspunkt heruntergeladen werden.  
 
@@ -142,7 +142,7 @@ Configuration Manager unterstützt auch Domänencomputer, die sich nicht in der 
 
     -   Konfigurieren von Arbeitsgruppenclients, sodass sie das Netzwerkzugriffskonto verwenden, damit diese Computer Inhalte vom Verteilungspunkt abrufen können.  
 
-    -   Bereitstellen eines alternativen Mechanismus für Arbeitsgruppenclients, über den sie nach Verwaltungspunkten suchen können. Sie können die DNS-Veröffentlichung oder WINS verwenden bzw. einen Verwaltungspunkt direkt zuweisen. Dies ist erforderlich, weil diese Clients keine Standortinformationen aus Active Directory-Domänendiensten abrufen können.  
+    -   Bereitstellen eines alternativen Mechanismus für Arbeitsgruppenclients, über den sie nach Verwaltungspunkten suchen können. Sie können die DNS-Veröffentlichung oder WINS verwenden oder einen Verwaltungspunkt direkt zuweisen. Dies ist erforderlich, weil diese Clients keine Standortinformationen aus Active Directory-Domänendiensten abrufen können.  
 
     Zugehörige Ressourcen in dieser Inhaltsbibliothek:  
 
@@ -155,16 +155,16 @@ Configuration Manager unterstützt auch Domänencomputer, die sich nicht in der 
 ###  <a name="a-namebkmkspana-scenarios-to-support-a-site-or-hierarchy-that-spans-multiple-domains-and-forests"></a><a name="bkmk_span"></a> Szenarien zum Unterstützen eines Standorts oder einer Hierarchie, der oder die sich über mehrere Domänen und Gesamtstrukturen erstreckt  
 
 #### <a name="communication-between-sites-in-a-hierarchy-that-spans-forests"></a>Kommunikation zwischen Standorten in einer Hierarchie, die mehrere Gesamtstrukturen umfasst:  
-Dieses Szenario erfordert eine bidirektionale Vertrauensstellung, die die Kerberos-Authentifizierung unterstützt.  Falls es keine bidirektionale Gesamtstrukturvertrauensstellung gibt, die Kerberos-Authentifizierung unterstützt, wird von Configuration Manager kein untergeordneter Standort in der Remotegesamtstruktur unterstützt.  
+Dieses Szenario erfordert eine bidirektionale Vertrauensstellung, die die Kerberos-Authentifizierung unterstützt.  Falls keine bidirektionale Gesamtstrukturvertrauensstellung vorhanden ist, die die Kerberos-Authentifizierung unterstützt, wird von Configuration Manager kein untergeordneter Standort in der Remotegesamtstruktur unterstützt.  
 
  **Configuration Manager unterstützt das Installieren eines untergeordneten Standorts in einer Remotegesamtstruktur, die über die erforderliche bidirektionale Vertrauensstellung mit der Gesamtstruktur des übergeordneten Standorts verfügt.**  
 
--   Beispielsweise können Sie einen sekundären Standort in einer Gesamtstruktur platzieren, die nicht mit seinem übergeordneten primären Standort identisch ist, sofern die erforderliche Vertrauensstellung vorliegt.  
+-   Beispiel: Sie können einen sekundären Standort in einer Gesamtstruktur platzieren, die nicht mit seinem übergeordneten primären Standort identisch ist, sofern die erforderliche Vertrauensstellung vorliegt.  
 
 > [!NOTE]  
 >  Bei einem untergeordneten Standort kann es sich um einen primären Standort (wobei der Standort der zentralen Verwaltung der übergeordnete Standort ist) oder um einen sekundären Standort handeln.  
 
-Für die standortübergreifende Kommunikation werden in Configuration Manager die Datenbankreplikation und dateibasierte Übertragungen verwendet. Beim Installieren eines Standorts müssen Sie ein Konto angeben, um den Standort auf dem gewünschten Server zu installieren. Über dieses Konto wird auch die Kommunikation zwischen Standorten hergestellt und verwaltet.  
+Für die standortübergreifende Kommunikation werden in Configuration Manager die Datenbankreplikation und dateibasierte Übertragungen verwendet. Beim Installieren eines Standorts müssen Sie ein Konto angeben, mit dem Sie den Standort auf dem gewünschten Server installieren. Über dieses Konto wird auch die Kommunikation zwischen Standorten hergestellt und verwaltet.  
 
 Nachdem der Standort erfolgreich installiert wurde und dateibasierte Übertragungen sowie die Datenbankreplikation initiiert wurden, ist die Konfiguration der Kommunikation für diesen Standort abgeschlossen.  
 
@@ -191,17 +191,17 @@ Dieses Szenario erfordert keine bidirektionale Vertrauensstellung.
 
 -   Der Anwendungskatalog-Webdienstpunkt ist die einzige Ausnahme.  Er wird nur in derselben Gesamtstruktur wie der Standortserver unterstützt.  
 
-Wenn von einer Standortsystemrolle Verbindungen aus dem Internet akzeptiert werden, wird empfohlen, diese Standortsystemrollen an einem Standort zu installieren, an dem die Gesamtstrukturgrenze Schutz für den Standortserver bereitstellt (z. B. in einem Umkreisnetzwerk).  
+-   Wenn von einer Standortsystemrolle Verbindungen aus dem Internet akzeptiert werden, wird empfohlen, diese Standortsystemrollen an einem Standort zu installieren, an dem die Gesamtstrukturgrenze Schutz für den Standortserver bereitstellt (z. B. in einem Umkreisnetzwerk).  
 
 **So installieren Sie eine Standortsystemrolle auf einem Computer in einer nicht vertrauenswürdigen Gesamtstruktur:**  
 
--   Geben Sie ein **Standortsystem-Installationskonto** an, das verwendet wird, um die Standortsystemrolle zu installieren. Für dieses Konto sind lokale Administratorrechte zum Herstellen einer Verbindung mit dem angegebenen Computer sowie zum Installieren von Standortsystemrollen auf diesem Computer erforderlich.  
+-   Geben Sie ein **Standortsystem-Installationskonto** an, das verwendet wird, um die Standortsystemrolle zu installieren. (Dieses Konto benötigt lokale Administratoranmeldeinformationen für die Verbindung.) Danach installieren Sie Standortsystemrollen auf dem angegebenen Computer.  
 
 -   Sie müssen die Standortsystemoption **Verbindungen mit diesem Standortsystem müssen vom Standortserver hergestellt werden**aktivieren. Damit müssen vom Standortserver Verbindungen mit dem Standortsystemserver hergestellt werden, um Daten zu übertragen. Dies verhindert, dass der Computer am nicht vertrauenswürdigen Standort einen Kontakt mit dem Standortserver initiiert, der sich in Ihrem vertrauenswürdigen Netzwerk befindet. Diese Verbindungen verwenden das **Standortsystem-Installationskonto**.  
 
 **Wenn Sie eine Standortsystemrolle verwenden möchten, die in einer nicht vertrauenswürdigen Gesamtstruktur installiert war,** müssen Firewalls den Netzwerkdatenverkehr zulassen, und zwar selbst dann, wenn der Standortserver die Datenübertragung initiiert.  
 
-Außerdem benötigen die folgenden Standortsystemrollen einen direkten Zugriff auf die Standortdatenbank. Aus diesem Grund müssen Firewalls entsprechenden Datenverkehr aus der nicht vertrauenswürdigen Gesamtstruktur an SQL-Standortserver zulassen:  
+Außerdem benötigen die folgenden Standortsystemrollen einen direkten Zugriff auf die Standortdatenbank. Aus diesem Grund müssen Firewalls entsprechenden Datenverkehr aus der nicht vertrauenswürdigen Gesamtstruktur an den SQL Server des Standorts zulassen:  
 
 -   Asset Intelligence-Synchronisierungspunkt  
 
@@ -221,7 +221,7 @@ Weitere Informationen finden Sie unter [In System Center Configuration Manager v
 
 Von beiden Standortsystemrollen „Verwaltungspunkt“ und „Anmeldungspunkt“ wird eine Verbindung mit der Standortdatenbank hergestellt.  
 
--   Bei der Installation dieser Standortsystemrollen wird das Computerkonto des neuen Standortsystemservers von Configuration Manager standardmäßig als Verbindungskonto für die Standortsystemrolle konfiguriert und der entsprechenden SQL Server-Datenbankrolle hinzugefügt.  
+-   Bei der Installation dieser Standortsystemrollen wird das Computerkonto des neuen Standortsystemservers von Configuration Manager standardmäßig als Verbindungskonto für die Standortsystemrolle konfiguriert und dann der entsprechenden SQL Server-Datenbankrolle hinzugefügt.  
 
 -   Wenn Sie diese Standortsystemrollen in einer nicht vertrauenswürdigen Domäne installieren, müssen Sie das Verbindungskonto der Standortsystemrolle konfigurieren, damit von der Standortsystemrolle Informationen aus der Datenbank abgerufen werden können.  
 
@@ -233,7 +233,7 @@ Wenn Sie ein Domänenbenutzerkonto so konfigurieren, dass es das Verbindungskont
 
 Erwägen Sie beim Planen von Standortsystemrollen in anderen Gesamtstrukturen auch die folgenden Punkte:  
 
--   Legen Sie bei Verwendung einer Windows-Firewall in den entsprechenden Firewall-Profilen fest, dass die Kommunikation zwischen dem Standortdatenbankserver und Computern, auf den Remote-Standortsystemrollen installiert sind, zulässig ist. Informationen zu Firewall-Profilen finden Sie unter [Grundlegendes zu Firewall-Profilen](http://go.microsoft.com/fwlink/p/?LinkId=233629).  
+-   Legen Sie bei Verwendung von Windows-Firewall in den entsprechenden Firewall-Profilen fest, dass die Kommunikation zwischen dem Standortdatenbankserver und Computern, auf den Remote-Standortsystemrollen installiert sind, zulässig ist. Informationen zu Firewall-Profilen finden Sie unter [Grundlegendes zu Firewall-Profilen](http://go.microsoft.com/fwlink/p/?LinkId=233629).  
 
 -   Wenn die Gesamtstruktur, die die Benutzerkonten enthält, von den internetbasierten Verwaltungspunkten als vertrauenswürdig eingestuft wird, werden Benutzerrichtlinien unterstützt. Wenn keine Vertrauensstellung vorhanden ist, werden nur Computerrichtlinien unterstützt.  
 
@@ -261,6 +261,6 @@ Damit dieser Fall unterstützt wird, müssen Sie darauf achten, dass die Namensa
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

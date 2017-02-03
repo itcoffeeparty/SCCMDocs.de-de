@@ -2,7 +2,7 @@
 title: "Überwachen von Inhalt | Microsoft-Dokumentation"
 description: "Hier finden Sie Informationen zur Überwachung von verteiltem Inhalt mithilfe der Configuration Manager-Konsole."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/4/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: 9a5d2c3a3c6bdca05b5b00fa4d746c437a56ef89
+ms.sourcegitcommit: 4d34a272a93100426cccd2308c5b3b0b0ae94a60
+ms.openlocfilehash: 60f30fd6477f1ee8755e50ceb9cc17d43ef8ea68
 
 ---
 # <a name="monitor-content-you-have-distributed-with-system-center-configuration-manager"></a>Überwachen von mit System Center Configuration Manager verteilten Inhalten
@@ -156,12 +156,21 @@ Ab Version 1610 können Sie auch das Dashboard **Clientdatenquellen** verwenden,
 > [!TIP]  
 > Peercache und das Dashboard „Clientdatenquellen“ sind vorab veröffentliche Features in Version 1610. Informationen zum Aktivieren dieser Funktionen finden Sie unter [Verwenden von vorab veröffentlichten Features von Updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
 
-Wechseln Sie in der Konsole zu **Überwachung** > **Clientstatus** > **Clientdatenquellen**. Hier können Sie einen Zeitraum auswählen, der auf das Dashboard angewendet werden soll. Anschließend können Sie in der Anzeige die Begrenzungsgruppe oder das Paket auswählen, für die bzw. das Sie Informationen anzeigen möchten. Beim Anzeigen der Informationen können Sie Ihre Maus über der Oberfläche bewegen, um weitere Details zu den verschiedenen Inhalts- oder Richtlinienquellen zu erhalten.  
+Wechseln Sie in der Konsole zu **Überwachung** > **Clientstatus** > **Clientdatenquellen**. Hier können Sie einen Zeitraum auswählen, der auf das Dashboard angewendet werden soll. Anschließend können Sie in der Anzeige die Begrenzungsgruppe oder das Paket auswählen, für die bzw. das Sie Informationen anzeigen möchten. Beim Anzeigen der Informationen können Sie Ihre Maus über der Oberfläche bewegen, um weitere Details zu den verschiedenen Inhalts- oder Richtlinienquellen zu erhalten.
+
+Details:  
+- **Client Content Sources** (Clientinhaltsquelle): Zeigt die Quelle an, von der Clients Inhalte beziehen.
+- **Verteilungspunkte**: Zeigt die Anzahl der Verteilungspunkte an, die zur ausgewählten Begrenzungsgruppe gehören.
+- **Clients, die einen Verteilungspunkt verwendet haben**: Zeigt an, wie viele Clients in der ausgewählten Begrenzungsgruppe zum Abrufen von Inhalten einen Verteilungspunkt verwendet haben.
+- **Peer Cache sources** (Peercachequellen): Zeigt für die ausgewählte Begrenzungsgruppe an, von wie vielen Peercachequellen ein Downloadverlauf gemeldet wurde.
+- **Clients, die einen Peer verwendet haben**: Zeigt an, wie viele Clients in der ausgewählten Begrenzungsgruppe zum Abrufen von Inhalten eine Peercachequelle verwendet haben.
+
+
 
 Sie können auch einen neuen Bericht, **Clientdatenquellen – Zusammenfassung**, verwenden, um eine Zusammenfassung der Clientdatenquellen für die einzelnen Begrenzungsgruppen anzuzeigen.
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

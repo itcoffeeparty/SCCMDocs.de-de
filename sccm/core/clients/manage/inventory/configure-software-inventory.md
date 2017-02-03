@@ -1,8 +1,8 @@
 ---
 title: Konfigurieren einer Softwareinventur | Microsoft-Dokumentation
-description: Richten Sie die Softwareinventur und einen Inventurausschlussordner in System Center Configuration Manager ein.
+description: "Konfigurieren Sie die Softwareinventur, und schließen Sie Ordner aus der Softwareinventur in Configuration Manager aus."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -10,15 +10,15 @@ ms.technology:
 - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
-ms.assetid: cc226259-0e28-410a-94d3-223bdc948818
-caps.latest.revision: 4
+ms.assetid: f86559de-092a-4ce8-9b43-5d7530e0b763
+caps.latest.revision: 5
 caps.handback.revision: 0
 author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 7ba943bee7faf417099cde0388649e4907525738
+ms.sourcegitcommit: dacfdf02f04c6bd731ca0fc11e5af371b409c8b4
+ms.openlocfilehash: 1cee12d6f9c406e2438a3ed76674c3498fe9abbd
 
 
 ---
@@ -26,12 +26,28 @@ ms.openlocfilehash: 7ba943bee7faf417099cde0388649e4907525738
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Sie können eine ausgeblendete Datei namens **Skpswi.dat** erstellen und im Stammverzeichnis einer Clientfestplatte speichern, um diese aus der System Center Configuration Manager-Softwareinventur auszuschließen. Sie können diese Datei auch im Stammordner einer Ordnerstruktur ablegen, die Sie von der Softwareinventur ausschließen möchten. Mit dieser Prozedur können Sie die Softwareinventur auf einer Arbeitsstation oder einem Serverclient, z. B. einem großen Dateiserver, deaktivieren.  
+ Mithilfe dieses Verfahrens werden die Clientstandardeinstellungen für die Softwareinventur konfiguriert. Sie gilt für alle Computer in der Hierarchie. Wenn Sie diese Einstellungen nur auf manche Computer anwenden möchten, erstellen Sie eine benutzerdefinierte Geräteclienteinstellung und weisen diese einer Sammlung mit den Computern zu, auf denen Sie die Softwareinventur verwenden möchten. Weitere Informationen zum Erstellen benutzerdefinierter Geräteeinstellungen finden Sie unter [Konfigurieren von Geräteclienteinstellungen in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md).  
 
-> [!NOTE]  
->  Die Softwareinventur inventarisiert das Clientlaufwerk nicht noch einmal, außer diese Datei wird vom Laufwerk auf dem Clientcomputer gelöscht.  
+## <a name="to-configure-software-inventory"></a>So konfigurieren Sie die Softwareinventur  
 
-### <a name="to-exclude-folders-from-software-inventory"></a>So schließen Sie Ordner aus der Softwareinventur aus  
+1.  Wählen Sie in der Configuration Manager-Konsole die Optionen **Verwaltung** > **Clienteinstellungen** > **Clientstandardeinstellungen** aus.  
+
+4.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Eigenschaften** die Option **Eigenschaften** aus.  
+
+5.  Wählen Sie im Dialogfeld **Standardeinstellungen** die Option **Softwareinventur** aus.  
+
+6.  Konfigurieren Sie in der Liste **Geräteeinstellungen** die folgenden Werte:  
+
+    -   **Softwareinventur für Clients aktivieren** – Wählen Sie in der Dropdownliste **Wahr** aus.  
+
+    -   **Zeitplan für die Softwareinventur und Dateisammlung planen** – Konfiguriert das Intervall, in dem der Client Softwareinventur und Dateien sammelt.   
+
+7.  Konfigurieren Sie die erforderlichen Clienteinstellungen. Eine Liste der Clienteinstellungen für Softwareinventur, die Sie konfigurieren können, finden Sie im Abschnitt [Softwareinventur](../../../../core/clients/deploy/about-client-settings.md#software-inventory) des Themas [Clienteinstellungen in System Center Configuration Manager](../../../../core/clients/deploy/about-client-settings.md).  
+
+ Die Clientcomputer werden beim nächsten Clientrichtliniendownload mit diesen Einstellungen konfiguriert. Informationen zum Initiieren des Abrufens von Richtlinien für einen einzelnen Client finden Sie unter [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
+
+
+## <a name="to-exclude-folders-from-software-inventory"></a>So schließen Sie Ordner aus der Softwareinventur aus  
 
 1.  Erstellen Sie mit "Notepad.exe" eine leere Datei namens **Skpswi.dat**.  
 
@@ -39,8 +55,10 @@ Sie können eine ausgeblendete Datei namens **Skpswi.dat** erstellen und im Stam
 
 3.  Platzieren Sie die Datei **Skpswi.dat** im Stammverzeichnis jeder Clientfestplatte oder Ordnerstruktur, die von der Softwareinventur ausgeschlossen werden soll.  
 
+> [!NOTE]  
+>  Die Softwareinventur inventarisiert das Clientlaufwerk nicht noch einmal, außer diese Datei wird vom Laufwerk auf dem Clientcomputer gelöscht.
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

@@ -2,7 +2,7 @@
 title: "Konten für den Zugriff auf Inhalt | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr über die Konten, mit denen Clients auf System Center Configuration Manager-Inhalt zugreifen."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/4/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 4bf8dbd007f2ff122d1447ffcb2a963579034033
+ms.sourcegitcommit: 4d34a272a93100426cccd2308c5b3b0b0ae94a60
+ms.openlocfilehash: ee83aa6fdbd1a82384a4684055ed72620a3f474e
 
 ---
 # <a name="manage-accounts-to-access-content-in-system-center-configuration-manager"></a>Verwalten von Konten für den Zugriff auf Inhalt in System Center Configuration Manager
@@ -30,7 +30,7 @@ Nehmen Sie sich vor der Bereitstellung von Inhalt in System Center Configuration
 
      Dieses Konto wird auch von Pullverteilungspunkten verwendet, um Inhalte von einem Quellverteilungspunkt in einer Remotegesamtstruktur abzurufen.  
 
--   **Paketzugriffskonto** – Standardmäßig gewährt Configuration Manager den generischen Zugriffskonten „Benutzer“ und „Administratoren“ Zugriff auf Inhalt auf einem Verteilungspunkt. Sie können jedoch weitere Berechtigungen konfigurieren, um den Zugriff zu beschränken.  
+-   **Paketzugriffskonto**: Standardmäßig gewährt Configuration Manager den integrierten Konten **Benutzer** und **Administratoren** Zugriff auf Inhalt auf einem Verteilungspunkt. Sie können weitere Berechtigungen konfigurieren, um den Zugriff zu beschränken.  
 
 -   **Multicastverbindungskonto** – Wird für Betriebssystembereitstellungen verwendet.  
 
@@ -120,6 +120,6 @@ Erstellen Sie dieses Konto ggf. als lokales Konto mit geringen Rechten auf dem C
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

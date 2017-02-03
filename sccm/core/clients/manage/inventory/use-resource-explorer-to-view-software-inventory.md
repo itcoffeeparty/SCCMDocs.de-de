@@ -2,7 +2,7 @@
 title: Anzeigen des Softwareinventars | Microsoft-Dokumentation | Ressourcen-Explorer
 description: Zeigen Sie die Softwareinventur mit dem Ressourcen-Explorer in System Center Configuration Manager an.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/26/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: a15c593bed4fe7ecce22990bbdcecc8dc2ed2962
+ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
+ms.openlocfilehash: 6189726bbcade8229e0b2e929ebedeefdbf266a4
 
 
 ---
@@ -29,37 +29,33 @@ ms.openlocfilehash: a15c593bed4fe7ecce22990bbdcecc8dc2ed2962
 Zeigen Sie mithilfe des Ressourcen-Explorers in System Center Configuration Manager Softwareinventurinformationen an, die von Computern in Ihrer Hierarchie gesammelt wurden.  
 
 > [!NOTE]  
->  Der Ressourcen-Explorer zeigt keine Inventurdaten an, bis auf dem Client, mit dem Sie eine Verbindung herstellen, ein Softwareinventurzyklus ausgeführt wurde.  
+>  Der Ressourcen-Explorer zeigt erst dann Inventurdaten an, wenn auf dem Client ein Softwareinventurzyklus ausgeführt wurde.  
 
- Der Ressourcen-Explorer in Configuration Manager enthält die folgenden Bereiche im Zusammenhang mit der Softwareinventur:  
+ Der Ressourcen-Explorer bietet folgende Informationen zu Hardware- und Softwareinventur:  
 
--   **Software**: Der Softwarebereich des Ressourcen-Explorers enthält vier Teilbereiche:  
+-   **Software**:  
 
-    -   **Gesammelte Dateien**: Zeigt Informationen zu Dateien an, die während der Softwareinventur gesammelt wurden  
+    -   **Gesammelte Dateien**: Dateien, die während der Softwareinventur gesammelt wurden.  
 
-    -   **Dateidetails**: Zeigt Informationen zu Dateien an, die bei der Softwareinventur inventarisiert wurden und keinem bestimmten Produkt oder Hersteller zugeordnet sind  
+    -   **Dateidetails**: Dateien, die bei der Softwareinventur inventarisiert wurden und keinem bestimmten Produkt oder Hersteller zugeordnet sind.  
 
-    -   **Letzte Softwareüberprüfung**: Zeigt Datum und Uhrzeit der letzten Softwareinventur und Dateisammlung an, die auf dem Clientcomputer ausgeführt wurde  
+    -   **Letzte Softwareüberprüfung**: Datum und Uhrzeit der letzten Softwareinventur und Dateisammlung, die auf dem Clientcomputer ausgeführt wurde.  
 
-    -   **Produktdetails**: Zeigt Informationen zu den nach Herstellern sortierten Softwareprodukten an, die von der Softwareinventur inventarisiert wurden  
+    -   **Produktdetails**: Nach Herstellern gruppierte Softwareprodukte, die von der Softwareinventur inventarisiert wurden.  
 
 ## <a name="to-run-resource-explorer-from-the-configuration-manager-console"></a>So führen Sie den Ressourcen-Explorer über die Configuration Manager-Konsole aus  
- Gehen Sie wie folgt vor, um den Ressourcen-Explorer in Configuration Manager auszuführen.  
 
-#### <a name="to-run-resource-explorer-from-the-configuration-manager-console"></a>So führen Sie den Ressourcen-Explorer über die Configuration Manager-Konsole aus  
+1.  Wählen Sie in der Configuration Manager-Konsole **Bestand und Konformität** aus.
 
-1.  Klicken Sie in der Configuration Manager-Konsole auf **Bestand und Kompatibilität**.  
+2.  Wählen Sie im Arbeitsbereich **Bestand und Konformität** die Option **Geräte** aus, oder öffnen Sie eine beliebige Sammlung, in der Geräte angezeigt werden.  
 
-2.  Klicken Sie im Arbeitsbereich **Bestand und Kompatibilität** auf **Geräte** , oder öffnen Sie eine beliebige Sammlung, in der Geräte angezeigt werden.  
+3.  Wählen Sie den Computer aus, der die anzuzeigende Inventur enthält. Wählen Sie danach auf der Registerkarte **Start** > Gruppe **Geräte** **Start** > **Ressourcen-Explorer** aus.
 
-3.  Klicken Sie auf den Computer, der die anzuzeigende Inventur enthält. Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Geräte** auf **Start** und dann auf **Ressourcen-Explorer**. Das Fenster **Ressourcen-Explorer** wird geöffnet.  
-
-4.  Sie können auf allen Elementen im rechten Bereich des Ressourcen-Explorer-Fensters mit der rechten Maustaste klicken und dann auf **Eigenschaften** klicken, um das Dialogfeld *<Elementname\>***Eigenschaften** zu öffnen. Dies kann nützlich sein, um die gesammelten Inventurinformationen in einem besser lesbaren Format anzuzeigen.  
-
-5.  Wenn Sie fertig sind, schließen Sie das Fenster **Ressourcen-Explorer** .  
+4.  Sie können mit der rechten Maustaste auf ein beliebiges Element im Fenster „Ressourcen-Explorer“ klicken und **Eigenschaften** auswählen, um die gesammelten Inventurinformationen in einem besser lesbaren Format anzuzeigen.  
+ 
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

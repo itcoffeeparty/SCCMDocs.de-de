@@ -2,7 +2,7 @@
 title: "Unterstützte Standortsystemserver | Microsoft-Dokumentation"
 description: "Erfahren Sie, welche Windows-Versionen Sie verwenden können, um einen System Center Configuration Manager-Standort oder eine entsprechende Standortsystemrolle zu hosten."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,12 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d23b98b362fb016c53974f851c48fa7200d2b2e3
-ms.openlocfilehash: b7c24dee94bca4ce69e0ba8f33129a0b21819d13
+ms.sourcegitcommit: bebbeebba76ab5cf0c517fcb00b7b6a516a08e3e
+ms.openlocfilehash: 12fe730d924979eec2ef55ea80a1fa90b7b47464
 
 
 ---
-# <a name="supported-operating-systems-for-system-center-configuration-manager--site-system-servers"></a>Unterstützte Betriebssysteme für System Center Configuration Manager-Standortsystemserver
+# <a name="supported-operating-systems-for-system-center-configuration-manager-site-system-servers"></a>Unterstützte Betriebssysteme für System Center Configuration Manager-Standortsystemserver
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -36,8 +36,8 @@ Verwenden Sie die Informationen in diesem Thema mit den Informationen in den fol
 
 
 
-## <a name="windows-server-2016-----standard-datacenter"></a>Windows Server 2016 – Standard, Datacenter
-Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrollup von KB3186654 (oder Baselineversion 1606, die im Oktober 2016 veröffentlicht wurde) unterstützt.
+## <a name="windows-server-2016-standard-and-datacenter"></a>Windows Server 2016: Standard und Datacenter
+Windows Server 2016 wird ab Configuration Manager Version 1606 mit dem Hotfixrollup von KB3186654 (oder der Baselineversion 1606, die im Oktober 2016 veröffentlicht wurde) unterstützt.
 
 **Standortserver:**  
 
@@ -59,7 +59,7 @@ Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrol
 
 -   Verteilungspunkt  
 
-     Verteilungspunkte können unter mehreren unterschiedlichen Konfigurationen mit jeweils verschiedenen Anforderungen verwendet werden. In einigen Fällen ist die Installation nicht nur auf Servern möglich, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+     Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 -   Endpoint Protection-Punkt  
 
@@ -85,7 +85,7 @@ Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrol
 
 -   Zustandsmigrationspunkt
 
-## <a name="windows-server-2012-r2-x64---standard-datacenter"></a>Windows Server 2012 R2 (x64) – Standard, Datacenter  
+## <a name="windows-server-2012-r2-x64-standard-and-datacenter"></a>Windows Server 2012 R2 (x64): Standard und Datacenter  
 **Standortserver:**  
 
 -   Standort der zentralen Verwaltung  
@@ -106,7 +106,7 @@ Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrol
 
 -   Verteilungspunkt  
 
-     Verteilungspunkte können unter mehreren unterschiedlichen Konfigurationen mit jeweils verschiedenen Anforderungen verwendet werden. In einigen Fällen ist die Installation nicht nur auf Servern möglich, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+     Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 -   Endpoint Protection-Punkt  
 
@@ -132,7 +132,7 @@ Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrol
 
 -   Zustandsmigrationspunkt  
 
-## <a name="windows-server-2012-x64---standard-datacenter"></a>Windows Server 2012 (x64) – Standard, Datacenter  
+## <a name="windows-server-2012-x64-standard-and-datacenter"></a>Windows Server 2012 (x64): Standard und Datacenter  
 **Standortserver:**  
 
 -   Standort der zentralen Verwaltung  
@@ -153,7 +153,7 @@ Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrol
 
 -   Verteilungspunkt  
 
-     Verteilungspunkte können unter mehreren unterschiedlichen Konfigurationen mit jeweils verschiedenen Anforderungen verwendet werden. In einigen Fällen ist die Installation nicht nur auf Servern möglich, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+     Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 -   Endpoint Protection-Punkt  
 
@@ -179,8 +179,8 @@ Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrol
 
 -   Zustandsmigrationspunkt  
 
-## <a name="windows-server-2008-r2-with-sp1-x64-----standard-enterprise-datacenter"></a>Windows Server 2008 R2 mit SP1 (x64) – Standard, Enterprise, Datacenter  
- Windows Server 2008 R2 unterliegt nun dem erweiterten Support und nicht mehr dem grundlegenden Support, wie im [Microsoft-Support-Lifecycle](https://support.microsoft.com/lifecycle) ausführlich erläutert. Weitere Informationen zur Featureunterstützung für diese Betriebssysteme als Standortsysteme mit Configuration Manager finden Sie unter [Entfernte und veraltete Features für System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
+## <a name="windows-server-2008-r2-with-sp1-x64-standard-enterprise-and-datacenter"></a>Windows Server 2008 R2 mit SP1 (x64): Standard, Enterprise und Datacenter  
+ Windows Server 2008 R2 unterliegt nun dem erweiterten Support und nicht mehr dem grundlegenden Support, wie im [Microsoft-Support-Lifecycle](https://support.microsoft.com/lifecycle) ausführlich erläutert. Weitere Informationen zum künftigen Support für diese Betriebssysteme als Standortsystemserver mit Configuration Manager finden Sie unter [Entfernte und veraltete Features für System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
 
 **Standortserver:**  
 
@@ -202,7 +202,7 @@ Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrol
 
 -   Verteilungspunkt  
 
-     Verteilungspunkte können unter mehreren unterschiedlichen Konfigurationen mit jeweils verschiedenen Anforderungen verwendet werden. In einigen Fällen ist die Installation nicht nur auf Servern möglich, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+     Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 -   Endpoint Protection-Punkt  
 
@@ -228,8 +228,8 @@ Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrol
 
 -   Zustandsmigrationspunkt  
 
-## <a name="windows-server-2008-with-sp2-x86-x64---standard-enterprise-datacenter"></a>Windows Server 2008 mit SP2 (x86, x64) – Standard, Enterprise, Datacenter  
- Windows Server 2008 unterliegt nun dem erweiterten Support und nicht mehr dem grundlegenden Support, wie im [Microsoft-Support-Lifecycle](https://support.microsoft.com/lifecycle) ausführlich erläutert. Weitere Informationen zur Featureunterstützung für diese Betriebssysteme als Standortsysteme mit Configuration Manager finden Sie unter [Entfernte und veraltete Features für System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
+## <a name="windows-server-2008-with-sp2-x86-x64-standard-enterprise-and-datacenter"></a>Windows Server 2008 mit SP2 (x86, x64): Standard, Enterprise und Datacenter  
+ Windows Server 2008 unterliegt nun dem erweiterten Support und nicht mehr dem grundlegenden Support, wie im [Microsoft-Support-Lifecycle](https://support.microsoft.com/lifecycle) ausführlich erläutert. Weitere Informationen zum künftigen Support für diese Betriebssysteme als Standortsystemserver mit Configuration Manager finden Sie unter [Entfernte und veraltete Features für System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
 
 **Standortserver:**  
 
@@ -255,7 +255,7 @@ Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrol
 
     -   Verteilungspunkte unter dieser Betriebssystemversion werden für PXE unterstützt, sie unterstützen jedoch keinen Netzwerkstart von Clientcomputern im EFI-Modus. Clientcomputer mit BIOS oder EFI-Start im Legacymodus werden unterstützt.  
 
-    -   Verteilungspunkte können unter mehreren unterschiedlichen Konfigurationen mit jeweils verschiedenen Anforderungen verwendet werden. In einigen Fällen ist die Installation nicht nur auf Servern möglich, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    -   Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 -   Endpoint Protection-Punkt  
 
@@ -281,7 +281,7 @@ Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrol
 
 -   Zustandsmigrationspunkt  
 
-## <a name="windows-10-x86-x64---pro-enterprise"></a>Windows 10 (x86, x64) – Pro, Enterprise  
+## <a name="windows-10-x86-x64-pro-and-enterprise"></a>Windows 10 (x86, x64): Pro und Enterprise  
 **Standortsystemserver:**  
 
 -   Verteilungspunkt  
@@ -290,9 +290,9 @@ Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrol
 
     -   Von Verteilungspunkten unter dieser Betriebssystemversion wird Multicast nicht unterstützt.  
 
-    -   Verteilungspunkte können unter mehreren unterschiedlichen Konfigurationen mit jeweils verschiedenen Anforderungen verwendet werden. In einigen Fällen ist die Installation nicht nur auf Servern möglich, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    -   Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
-## <a name="windows-81-x86-x64---professional-enterprise"></a>Windows 8.1 (x86, x64) – Professional, Enterprise  
+## <a name="windows-81-x86-x64-professional-and-enterprise"></a>Windows 8.1 (x86, x64): Professional und Enterprise  
 **Standortsystemserver:**  
 
 -   Verteilungspunkt  
@@ -301,9 +301,9 @@ Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrol
 
     -   Von Verteilungspunkten unter dieser Betriebssystemversion wird Multicast nicht unterstützt.  
 
-    -   Verteilungspunkte können unter mehreren unterschiedlichen Konfigurationen mit jeweils verschiedenen Anforderungen verwendet werden. In einigen Fällen ist die Installation nicht nur auf Servern möglich, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    -   Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
-## <a name="windows-8-x86-x64---professional-enterprise-distribution-point"></a>Windows 8 (x86, x64) – Professional, Enterprise Verteilungspunkt  
+## <a name="windows-8-x86-x64-professional-and-enterprise"></a>Windows 8 (x86, x64): Professional und Enterprise
 **Standortsystemserver:**  
 
 -   Verteilungspunkt  
@@ -312,9 +312,9 @@ Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrol
 
     -   Von Verteilungspunkten unter dieser Betriebssystemversion wird Multicast nicht unterstützt.  
 
-    -   Verteilungspunkte können unter mehreren unterschiedlichen Konfigurationen mit jeweils verschiedenen Anforderungen verwendet werden. In einigen Fällen ist die Installation nicht nur auf Servern möglich, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    -   Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
-## <a name="windows-7-with-sp1-x86-x64---professional-enterprise-ultimate"></a>Windows 7 mit SP1 (x86, x64) – Professional, Enterprise, Ultimate  
+## <a name="windows-7-with-sp1-x86-x64-professional-enterprise-and-ultimate"></a>Windows 7 mit SP1 (x86, x64): Professional, Enterprise und Ultimate  
 **Standortsystemserver:**  
 
 -   Verteilungspunkt  
@@ -323,24 +323,24 @@ Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrol
 
     -   Von Verteilungspunkten unter dieser Betriebssystemversion wird Multicast nicht unterstützt.  
 
-    -   Verteilungspunkte können unter mehreren unterschiedlichen Konfigurationen mit jeweils verschiedenen Anforderungen verwendet werden. In einigen Fällen ist die Installation nicht nur auf Servern möglich, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    -   Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 ## <a name="the-server-core-installation-of-windows-server-2012"></a>Die Server Core-Installation von Windows Server 2012  
- Zusätzlich zu den vorherigen Betriebssystemen wird die Server Core-Installation von Windows Server 2012 mit folgenden Einschränkungen für die Verwendung als Verteilungspunkte unterstützt:  
+ Zusätzlich zu den oben aufgeführten Betriebssystemen wird die Server Core-Installation von Windows Server 2012 mit folgenden Einschränkungen für die Verwendung als Verteilungspunkt unterstützt:  
 
--   Nur x64 wird unterstützt.  
+-   Nur die 64-Bit-Version wird unterstützt.  
 
--   Von Verteilungspunkten unter diesem Betriebssystem wird PXE oder Multicast nicht unterstützt.  
+-   Verteilungspunkte unter diesem Betriebssystem unterstützen PXE oder Multicast nicht.
 
 ## <a name="the-server-core-installation-of-windows-server-2012-r2"></a>Die Server Core-Installation von Windows Server 2012 R2  
- Zusätzlich zu den vorherigen Betriebssystemen wird die Server Core-Installation von Windows Server 2012 R2 mit folgenden Einschränkungen für die Verwendung als Verteilungspunkte unterstützt:  
+ Zusätzlich zu den oben aufgeführten Betriebssystemen wird die Server Core-Installation von Windows Server 2012 R2 mit folgenden Einschränkungen für die Verwendung als Verteilungspunkt unterstützt:  
 
--   Nur x64 wird unterstützt.  
+-   Nur die x64-Bit-Version wird unterstützt.
 
--   Von Verteilungspunkten unter diesem Betriebssystem wird PXE oder Multicast nicht unterstützt.  
+-   Verteilungspunkte unter diesem Betriebssystem unterstützen PXE oder Multicast nicht.  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 856ee34621816155d4ad95ed7240cf585e322486
+ms.sourcegitcommit: 4a8d98addcd463eb82d8b7100b44254a10d21992
+ms.openlocfilehash: 7d252fbbdc23ff676b87643408caf977f5636b67
 
 
 ---
@@ -28,7 +28,9 @@ ms.openlocfilehash: 856ee34621816155d4ad95ed7240cf585e322486
 Nachstehend finden Sie häufig gestellte Fragen zu Diagnose- und Verwendungsdaten für System Center Configuration Manager:  
 
 ###  <a name="a-namebkmkoffa-how-do-i-turn-off-telemetry"></a><a name="bkmk_off"></a> Wie schalte ich Telemetrie aus?  
- Der aktuelle Branch von Configuration Manager muss in regelmäßigen Abständen aktualisiert werden, um neue Versionen von Windows 10 und Microsoft Intune zu unterstützen. Microsoft erfordert mindestens die Ebene „Standard“ der Diagnose- und Verwendungsdaten, um das Produkt auf dem neuesten Stand zu halten, den Updateprozess zu optimieren sowie die Qualität und Sicherheit des Produkts zu verbessern.  
+Telemetrie kann nicht ausgeschaltet werden. Sie können jedoch die Menge der gesammelten Telemetriedaten auswählen und einen Dienstverbindungspunkt im Offline-Modus verwenden, um Sie bei der Verwaltung zu unterstützen, wenn Telemetriedaten übermittelt werden.
+
+Der aktuelle Branch von Configuration Manager muss in regelmäßigen Abständen aktualisiert werden, um neue Versionen von Windows 10 und Microsoft Intune zu unterstützen. Microsoft erfordert mindestens die Ebene „Standard“ der Diagnose- und Verwendungsdaten, um das Produkt auf dem neuesten Stand zu halten, den Updateprozess zu optimieren sowie die Qualität und Sicherheit des Produkts zu verbessern.
 
 ###  <a name="a-namebkmkretentiona-what-is-the-data-retention-period"></a><a name="bkmk_retention"></a> Wie lange ist der Datenaufbewahrungszeitraum?  
  Diagnose- und Nutzungsdaten werden ein Jahr aufbewahrt.  
@@ -44,6 +46,7 @@ Nachstehend finden Sie häufig gestellte Fragen zu Diagnose- und Verwendungsdate
  - [Diagnosedaten für 1511](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511)
  - [Diagnosedaten für 1602](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602)
  - [Diagnosedaten für 1606](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606)
+ - [Diagnosedaten für 1610](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610)
 
 
 ###  <a name="a-namebkmktablesa-can-you-see-data-in-custom-tables"></a><a name="bkmk_tables"></a> Können Daten in benutzerdefinierten Tabellen angezeigt werden?  
@@ -57,6 +60,6 @@ Nachstehend finden Sie häufig gestellte Fragen zu Diagnose- und Verwendungsdate
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

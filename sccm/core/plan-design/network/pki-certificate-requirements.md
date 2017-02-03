@@ -16,8 +16,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: db0642e95bbd7e704d2052aa1e0f5c27cd7bf568
-ms.openlocfilehash: 00c3c355fc43eff18b86112b0b9272cbcdf38e85
+ms.sourcegitcommit: eff38aafbbbbb077ca63474cde738ee8ec57307a
+ms.openlocfilehash: 186a9f1a58c2c4d123c14a8774999dbc19e77dac
 
 
 ---
@@ -32,7 +32,7 @@ Die für System Center Configuration Manager erforderlichen PKI-Zertifikate (Pub
 -   Für Windows Server 2008: [Active Directory-Zertifikatdienste in Windows Server 2008](http://go.microsoft.com/fwlink/p/?LinkId=115018)  
 
 > [!IMPORTANT]  
->  Ab dem 1. Januar 2017 werden SHA-1-signierte Zertifikate von Windows nicht mehr als vertrauenswürdig eingestuft.  Es wird empfohlen, neue Zertifikate für die Server- und Clientauthentifizierung auszustellen, die mit SHA-2-signiert sind (welches SHA-256 umfasst).  
+>  Ab dem 1. Januar 2017 werden bestimmte SHA-1-signierte Zertifikate von Windows nicht mehr als vertrauenswürdig eingestuft.  Es wird empfohlen, neue Zertifikate für die Server- und Clientauthentifizierung auszustellen, die mit SHA-2-signiert sind (welches SHA-256 umfasst).  
 >   
 >  Weitere Informationen zu dieser Änderung und möglichen Verschiebungen des Stichtags finden Sie in diesem Blogbeitrag: [Erzwingen der Verwendung von Signaturen und Zeitstempeln für Authentifizierungscode in Windows](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-authenticode-code-signing-and-timestamping.aspx)  
 

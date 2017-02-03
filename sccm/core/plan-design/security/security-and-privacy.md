@@ -2,7 +2,7 @@
 title: "Sicherheit und Datenschutz für System Center Configuration Manager | Microsoft-Dokumentation"
 description: "Hier finden Sie Ressourcen zu Sicherheit und Datenschutz für System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: a0cc96d1bde1ab895a4560d89dbc162f34a8443b
+ms.sourcegitcommit: b470aee50669bcded176d55d8b1496768d1f3cde
+ms.openlocfilehash: de9df79c7adc24b415fd1be6e45a42aec7e16f9a
 
 
 ---
@@ -25,11 +25,11 @@ ms.openlocfilehash: a0cc96d1bde1ab895a4560d89dbc162f34a8443b
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Dieses Thema enthält Ressourcen zu Sicherheit und Datenschutz für System Center Configuration Manager.  
+Dieser Artikel enthält Ressourcen zu Sicherheit und Datenschutz für System Center Configuration Manager.  
 
  Bevor Sie fortfahren, machen Sie sich mit den [Grundlagen von System Center Configuration Manager](../../../core/understand/fundamentals.md) vertraut. Wenn System Center Configuration Manager bereits installiert wurde, treffen Sie Entscheidungen zum Entwurf Ihrer Implementierung. Die Planungs- und Bereitstellungsinformationen zu Configuration Manager können ebenfalls hilfreich sein.  
 
- In den folgenden Themen finden Sie Informationen zu sicherheitsrelevanten Produktfunktionen:  
+ In den folgenden Artikeln finden Sie Informationen zu sicherheitsrelevanten Produktfunktionen:  
 
 -   [Security and privacy for operating system deployment in System Center Configuration Manager (Sicherheit und Datenschutz für die Betriebssystembereitstellung in System Center Configuration Manager)](../../../osd/plan-design/security-and-privacy-for-operating-system-deployment.md)  
 
@@ -59,7 +59,7 @@ Dieses Thema enthält Ressourcen zu Sicherheit und Datenschutz für System Cente
 
 
 
- **Themen zu Sicherheit und Datenschutz:**  
+ **Artikel zu Sicherheit und Datenschutz:**  
 
 -   [Plan for security in System Center Configuration Manager (Planen der Sicherheit in System Center Configuration Manager)](../../../core/plan-design/security/plan-for-security.md)  
 
@@ -76,6 +76,6 @@ Dieses Thema enthält Ressourcen zu Sicherheit und Datenschutz für System Cente
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager-Datenschutzbestimmungen – Configuration Manager-Cmdlet-Bibliothek | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr darüber, wie Microsoft Daten zur System Center Configuration Manager-Cmdlet-Bibliothek sammelt und verwendet."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 767d0594eb871462df038997ea3b7e29615e05f7
-ms.openlocfilehash: 10d8e8948d66a6b9b74e16a02cfbfc4ced66596c
+ms.sourcegitcommit: 3d6799ad46e0fe69333aba0662f18c9153c17bda
+ms.openlocfilehash: 3936075555cc0bb370ea6e42c7e720b864d565f7
 
 
 ---
@@ -29,11 +29,11 @@ ms.openlocfilehash: 10d8e8948d66a6b9b74e16a02cfbfc4ced66596c
 Diese Datenschutzbestimmungen gelten für die Features der System Center Configuration Manager-Cmdlet-Bibliothek.  
 
 ## <a name="usage-data"></a>Nutzungsdaten  
- **Funktion dieses Features:**   
-Mit der System Center Configuration Manager-Cmdlet-Bibliothek können Sie eine Configuration Manager-Hierarchie mithilfe von Windows PowerShell-Cmdlets und -Skripts verwalten. Die Cmdlet-Bibliothek sammelt Informationen darüber, wie Sie die in der Bibliothek enthaltenen Cmdlets verwenden, um Trends und Verwendungsmuster zu ermitteln.  Die Cmdlet-Bibliothek erfasst auch die Art und die Anzahl der Fehler, die beim Verwenden der Cmdlets auftreten.  
+ **Funktionsweise dieses Features:**   
+Mit der System Center Configuration Manager-Cmdlet-Bibliothek können Sie eine Configuration Manager-Hierarchie mithilfe von Windows PowerShell-Cmdlets und -Skripts verwalten. Von der Cmdlet-Bibliothek werden Informationen darüber gesammelt, wie Sie die Cmdlets in der Bibliothek verwenden, um Trends und Verwendungsmuster zu ermitteln. Von der Cmdlet-Bibliothek werden auch Art und Anzahl der Fehler ermittelt, die beim Verwenden der Cmdlets auftreten.  
 
  **Erfasste, verarbeitete oder übertragene Informationen:**   
-Zu den gesammelten Nutzungsdaten gehören das Starten, Anhalten und Beenden von Cmdlets und das Ausführen von veralteten Cmdlets und Aktivitätsmetriken für Vorgänge im Zusammenhang mit Cmdlets, die mit SMS-Anbietern verknüpft sind. Diese Informationen sind nicht personenbezogen.  Zu den gesammelten Informationen gehören u. a. die von Cmdlets zurückgegebenen Fehler sowie Details zu Ausnahmefehlern. Einige Detailberichte zu Fehlern enthalten möglicherweise unbeabsichtigt personenbezogene Daten, z. B. Seriennummern von Geräten, die mit dem Computer verbunden sind. Die Cmdlet-Bibliothek filtert und anonymisiert diese Informationen in den Fehlerberichten, um etwaige persönliche Informationen vor der Übertragung an Microsoft zu entfernen.  
+Zu den gesammelten Nutzungsdaten gehören das Starten, Anhalten und Beenden von Cmdlets und das Ausführen von veralteten Cmdlets und Aktivitätsmetriken für Vorgänge im Zusammenhang mit Cmdlets, die mit SMS-Anbietern (Systems Management Server) verknüpft sind. Diese Informationen sind nicht personenbezogen.  Zu den gesammelten Informationen gehören u.a. die von Cmdlets zurückgegebenen Fehler sowie Details zu Ausnahmefehlern. Einige Detailberichte zu Fehlern enthalten möglicherweise unbeabsichtigt personenbezogene Daten, z.B. Seriennummern von Geräten, die mit dem Computer verbunden sind. Diese Informationen in den Fehlerberichten werden von der Cmdlet-Bibliothek gefiltert und anonymisiert, um etwaige persönliche Informationen vor der Übertragung an Microsoft zu entfernen.  
 
  **Verwendung der Informationen:**   
 Wir verwenden diese Informationen zur Verbesserung der Qualität, der Sicherheit und der Integrität der von uns angebotenen Produkte und Dienste.  
@@ -49,10 +49,10 @@ Das Feature zur Erfassung von Nutzungsdaten ist standardmäßig aktiviert. Die S
 
  Die Einstellungen für Nutzungsdaten gelten nur für den betreffenden Computer, auf dem sie festgelegt wurden.  
 
- Weitere Informationen zum Konfigurieren von Nutzungsdaten (Sammlung) finden Sie in der [Dokumentation für die System Center Configuration Manager-Cmdlets-Bibliothek](https://technet.microsoft.com/en-us/library/dn958404.aspx).   
+ Weitere Informationen zum Konfigurieren von Nutzungsdaten (Sammlung) finden Sie in der [Dokumentation zur System Center Configuration Manager-Cmdlets-Bibliothek](https://technet.microsoft.com/en-us/library/dn958404.aspx).   
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

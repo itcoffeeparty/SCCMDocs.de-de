@@ -1,7 +1,7 @@
 ---
 title: SQL Server Always On | Microsoft-Dokumentation
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/4/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,8 +15,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 9d4d0c741418af29edc586a5d629fc61f86da426
+ms.sourcegitcommit: 4d34a272a93100426cccd2308c5b3b0b0ae94a60
+ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
 
 
 ---
@@ -98,9 +98,12 @@ ms.openlocfilehash: 9d4d0c741418af29edc586a5d629fc61f86da426
 
  **Anforderungen an die AlwaysOn-Verfügbarkeitsgruppen, die Sie mit System Center Configuration Manager verwenden:**  
 
--   Jeder Knoten (oder jedes Replikat) in der Verfügbarkeitsgruppe muss eine Version von SQL Server ausführen, die von System Center Configuration Manager unterstützt wird.  
+-  *Version*: Jeder Knoten (oder jedes Replikat) in der Verfügbarkeitsgruppe muss eine Version von SQL Server ausführen, die von System Center Configuration Manager unterstützt wird. Wenn von SQL Server unterstützt, können die verschiedenen Knoten der Verfügbarkeitsgruppe unterschiedliche Versionen von SQL Server ausführen.   
 
--   Die Verfügbarkeitsgruppe muss ein primäres Replikat und kann bis zu zwei synchrone sekundäre Replikate enthalten.  
+- *Edition*: Sie müssen eine Enterprise Edition von SQL Server verwenden.  SQL Server 2016 Standard Edition bietet Basis-Verfügbarkeitsgruppen, die nicht von Configuration Manager unterstützt werden.
+
+
+-   Die Verfügbarkeitsgruppe muss über ein primäres Replikat verfügen und kann bis zu zwei synchrone sekundäre Replikate enthalten.  
 
 -  Nach dem Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe müssen Sie ein Failover für das primäre Replikat in ein sekundäres Replikat ausführen (wodurch dies das neue primäre Replikat wird) und anschließend die Datenbank mit Folgendem konfigurieren:
     - Aktivieren von „Vertrauenswürdig“: auf TRUE setzen
@@ -131,7 +134,9 @@ ms.openlocfilehash: 9d4d0c741418af29edc586a5d629fc61f86da426
         >  System Center Configuration Manager unterstützt bei Festlegung auf „Automatisches Failover“ die Verwendung der Verfügbarkeitsgruppenreplikate. „Manuelles Failover“ muss allerdings festgelegt werden, wenn Sie das Setup ausführen, um die Verwendung der Standortdatenbank in der Verfügbarkeitsgruppe anzugeben, und wenn Sie Updates für Configuration Manager installieren (nicht nur Updates, die Sie auf die Standortdatenbank anwenden).  
 
   **Einschränkungen für Verfügbarkeitsgruppen**
-   - Verfügbarkeitsgruppen werden nur für die Standortdatenbank unterstützt, und nicht für die Softwareupdatedatenbank oder Berichtsdatenbank.   
+   - Basis-Verfügbarkeitsgruppen (mit SQL Server 2016 Standard Edition eingeführt) werden nicht unterstützt. Dies ist darauf zurückzuführen, dass Basis-Verfügbarkeitsgruppen den Lesezugriff auf sekundäre Replikate – und somit eine Voraussetzung für die Verwendung mit Configuration Manager – nicht unterstützen. Weitere Informationen finden Sie unter [Basis-Verfügbarkeitsgruppen (Always On-Verfügbarkeitsgruppen)](https://msdn.microsoft.com/en-us/library/mt614935.aspx).
+
+   - Verfügbarkeitsgruppen werden nur für die Standortdatenbank, aber nicht für die Softwareupdatedatenbank oder Berichtsdatenbank unterstützt.   
    - Wenn Sie eine verfügbarkeitsgruppe verwenden, müssen Sie Ihren Berichterstattungspunkt manuell so konfigurieren, damit dieser das aktuelle primäre Replikat und nicht den Verfügbarkeitsgruppenlistener verwendet. Wenn ein Failover des primären Replikats auf ein anderes Replikat durchgeführt wird, müssen Sie den Berichterstattungspunkt für das neue primäre Replikat umkonfigurieren.  
    - Vor der Installation von Updates, z.B. Version 1606, stellen Sie sicher, dass die Verfügbarkeitsgruppe auf manuelles Failover festgelegt ist. Nachdem der Standort aktualisiert wurde, können Sie wieder auf automatisches Failover umstellen.
 
@@ -260,6 +265,6 @@ ms.openlocfilehash: 9d4d0c741418af29edc586a5d629fc61f86da426
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

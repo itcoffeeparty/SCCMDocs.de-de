@@ -2,7 +2,7 @@
 title: Diagnose- und Nutzungsdaten | Microsoft-Dokumentation
 description: "Erfahren Sie mehr zu Diagnose- und Nutzungsdaten, die System Center Configuration Manager über sich selbst sammelt."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3d113c55726efe674b79ef5ecb26aac8c893cba2
-ms.openlocfilehash: ac3395c82cb570960bf2c3b98cd06e282e64b1a5
+ms.sourcegitcommit: 24a233516058e645df2a43623855665b97b041b0
+ms.openlocfilehash: 54ec4886eaad6999cdf3ffff7411942859f1a5b2
 
 
 ---
@@ -26,16 +26,16 @@ ms.openlocfilehash: ac3395c82cb570960bf2c3b98cd06e282e64b1a5
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager sammelt Diagnose- und Nutzungsdaten über sich selbst, die von Microsoft zur Verbesserung der Anwendungsinstallation, Qualität und Sicherheit künftiger Releases verwendet werden.  
+System Center Configuration Manager sammelt Diagnose- und Nutzungsdaten über sich selbst, die von Microsoft zur Verbesserung der Anwendungsinstallation, der Qualität und der Sicherheit künftiger Releases verwendet werden.  
 
- Diagnose- und Nutzungsdaten sind für jede System Center Configuration Manager-Hierarchie aktiviert. Es besteht aus SQL Server-Abfragen, die wöchentlich an jedem primären Standort und am Standort der zentralen Verwaltung ausgeführt werden. Wenn die Hierarchie einen Standort der zentralen Verwaltung verwendet, werden die Daten von primären Standorten dann an diesen Standort repliziert. Am obersten Standort Ihrer Hierarchie sendet der Dienstverbindungspunkt diese Informationen, wenn er prüft, ob Updates vorhanden sind. Wenn sich der Dienstverbindungspunkt im Offlinemodus befindet, werden die Informationen mithilfe des Dienstverbindungstools übertragen.  
+ Diagnose- und Nutzungsdaten sind für jede System Center Configuration Manager-Hierarchie aktiviert. Sie bestehen aus SQL Server-Abfragen, die wöchentlich an jedem primären Standort und am Standort der zentralen Verwaltung ausgeführt werden. Wenn die Hierarchie einen Standort der zentralen Verwaltung verwendet, werden die Daten von primären Standorten dann an diesen Standort repliziert. Am obersten Standort Ihrer Hierarchie sendet der Dienstverbindungspunkt diese Informationen, wenn er prüft, ob Updates vorhanden sind. Wenn sich der Dienstverbindungspunkt im Offlinemodus befindet, werden die Informationen mithilfe des Dienstverbindungstools übertragen.  
 
 > [!NOTE]  
->  Configuration Manager erfasst nur Daten von der SQL Server-Datenbank des Standorts und nicht direkt von Clients oder Standortservern.  
+>  Configuration Manager sammelt Daten nur von der SQL Server-Datenbank des Standorts und nicht direkt von Clients oder Standortservern.  
 
  Weitere Informationen finden Sie in der [Datenschutzerklärung für System Center Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=626527).  
 
- In den folgenden Themen erfahren Sie mehr über Diagnose- und Nutzungsdaten für System Center Configuration Manager:  
+ In den folgenden Artikeln erfahren Sie mehr über Diagnose- und Nutzungsdaten für System Center Configuration Manager:  
 
 -   [Verwenden von Diagnose- und Nutzungsdaten für System Center Configuration Manager](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)  
 
@@ -58,6 +58,6 @@ System Center Configuration Manager sammelt Diagnose- und Nutzungsdaten über si
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

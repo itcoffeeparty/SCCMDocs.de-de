@@ -2,7 +2,7 @@
 title: Auswahl von zu Migrierenden Daten | Microsoft-Dokumentation
 description: "Erfahren Sie, welche Daten migriert werden können und welche Daten Sie nicht zu System Center Configuration Manager migrieren können."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
-ms.openlocfilehash: 66e01cbe84206cb1b29893b768c1bc831f2f6cfc
+ms.sourcegitcommit: d37261c03fddc3d576fcef73fabd7189e4c46d38
+ms.openlocfilehash: 9dc5f6c9f58e1fc33b2dc9dd76737ae23af81993
 
 
 ---
@@ -26,19 +26,21 @@ ms.openlocfilehash: 66e01cbe84206cb1b29893b768c1bc831f2f6cfc
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-In System Center Configuration Manager bezeichnet Migration einen Prozess zum Übertragen vorhandener Daten und Konfigurationen aus unterstützten Versionen von Configuration Manager in Ihre neue Hierarchie.  Damit können die folgenden Zwecke erfüllt werden:  
+In System Center Configuration Manager bezeichnet „Migration“ einen Prozess zum Übertragen vorhandener Daten und Konfigurationen, die Sie erstellt haben, aus unterstützten Versionen von Configuration Manager in Ihre neue Hierarchie.  Damit können die folgenden Zwecke erfüllt werden:  
 
--   Kombinieren mehrerer Hierarchien zu einer  
+-   Kombinieren mehrerer Hierarchien zu einer.  
 
--   Verschieben von Daten und Konfigurationen aus einer Testbereitstellung in Ihre Produktionsbereitstellung  
+-   Verschieben von Daten und Konfigurationen aus einer Testbereitstellung in Ihre Produktionsbereitstellung.
 
--   Verschieben Sie Daten und Konfigurationen aus einer früheren Configuration Manager-Version, z.B. Configuration Manager 2007, die über keinen Upgradepfad zu System Center Configuration Manager verfügt, oder aus System Center 2012 Configuration Manager (unterstützt keinen Upgradepfad zu System Center Configuration Manager).  
+-   Verschieben von Daten und Konfigurationen aus einer früheren Configuration Manager-Version, z.B. Configuration Manager 2007, die über keinen Upgradepfad zu System Center Configuration Manager verfügt, oder aus System Center 2012 Configuration Manager (unterstützt keinen Upgradepfad zu System Center Configuration Manager).  
 
 Mit Ausnahme der Standortsystemrolle Verteilungspunkt und der Computer, auf denen Verteilungspunkte gehostet werden, kann keine Infrastruktur (z. B. Standorte, Standortsystemrollen oder Computer, auf denen eine Standortsystemrolle gehostet wird) migriert, übertragen oder zwischen Hierarchien freigegeben werden.  
 
- Obwohl Sie keine Serverinfrastrukturen migrieren können, können Sie Configuration Manager-Clients zwischen Hierarchien migrieren. Die Clientmigration umfasst das Migrieren der von Clients verwendeten Daten aus der Quell- in die Zielhierarchie und die anschließende Installation oder Neuzuweisung der Clientsoftware, wobei der Client der neuen Hierarchie unterstellt wird. Sobald ein Client nach seiner Installation in der neuen Hierarchie seine Daten übermittelt, kann Configuration Manager mithilfe von dessen eindeutiger Configuration Manager-ID den Bezug zwischen den Daten, die Sie zuvor migriert haben, und den einzelnen Clients herstellen.  
+ Obwohl Sie keine Serverinfrastrukturen migrieren können, können Sie Configuration Manager-Clients zwischen Hierarchien migrieren. Die Clientmigration umfasst das Migrieren der von Clients verwendeten Daten aus der Quell- in die Zielhierarchie und die anschließende Installation oder Neuzuweisung der Clientsoftware, wobei der Client der neuen Hierarchie unterstellt wird.
 
- Mithilfe dieser Migrationsfunktionalität können Sie nicht nur weiterhin von Investitionen profitieren, die bereits in Konfigurationen und Bereitstellungen erfolgt sind, sondern auch von allen wesentlichen Produktänderungen, die zunächst in System Center 2012 Configuration Manager und dann in System Center Configuration Manager eingeführt wurden. Zu den Änderungen gehören eine vereinfachte Configuration Manager-Hierarchie, die weniger Standorte und Ressourcen benötigt, und eine verbesserte Verarbeitung durch Verwenden von nativem 64-Bit-Code, der auf 64-Bit-Hardware läuft.  
+Sobald ein Client nach seiner Installation in der neuen Hierarchie seine Daten übermittelt, kann Configuration Manager mithilfe dessen eindeutiger Configuration Manager-ID den Bezug zwischen den Daten, die Sie zuvor migriert haben, und den einzelnen Clients herstellen.  
+
+ Mithilfe dieser Migrationsfunktionalität können Sie nicht nur weiterhin von Investitionen profitieren, die bereits in Konfigurationen und Bereitstellungen erfolgt sind, sondern auch von allen wesentlichen Produktänderungen (die zuerst in System Center 2012 Configuration Manager und dann in System Center Configuration Manager eingeführt wurden). Zu den Änderungen gehören eine vereinfachte Configuration Manager-Hierarchie, die weniger Standorte und Ressourcen benötigt, und eine verbesserte Verarbeitung durch Verwenden von nativem 64-Bit-Code, der auf 64-Bit-Hardware läuft.  
 
  Informationen zu den Versionen von Configuration Manager, in denen die Migration unterstützt wird, finden Sie unter [Prerequisites for migration in System Center Configuration Manager (Voraussetzungen für die Migration in System Center Configuration Manager)](../../core/migration/prerequisites-for-migration.md).  
 
@@ -49,11 +51,13 @@ Mit Ausnahme der Standortsystemrolle Verteilungspunkt und der Computer, auf dene
 -   [Daten, die nicht zu System Center Configuration Manager migriert werden können](#Cannot_migrate)  
 
 ##  <a name="a-namecanmigratea-data-that-you-can-migrate-to-system-center-configuration-manager"></a><a name="Can_Migrate"></a> Daten, die zu System Center Configuration Manager migriert werden können  
- Die meisten Objekte können zwischen unterstützten Configuration Manager-Hierarchien migriert werden. Die migrierten Instanzen einiger Objekte einer unterstützten Version von Configuration Manager2007 müssen geändert werden, um dem Schema- und Objektformat von System Center 2012 Configuration Manager zu entsprechen. Diese Änderungen haben keine Auswirkungen auf die Daten in der Datenbank des Quellstandorts. Objekte, die aus einer unterstützten Version von System Center 2012 Configuration Manager oder System Center Configuration Manager migriert wurden, erfordern keine Änderungen.  
+ Die meisten Objekte können zwischen unterstützten Configuration Manager-Hierarchien migriert werden. Die migrierten Instanzen einiger Objekte einer unterstützten Version von Configuration Manager2007 müssen geändert werden, um dem Schema- und Objektformat von System Center 2012 Configuration Manager zu entsprechen.
 
- Die folgenden Objekte auf Grundlage der Configuration Manager-Version in der Quellhierarchie migriert werden können. Einige Objekte, wie z. B. Abfragen, werden nicht migriert. Wenn Sie diese Objekte, die nicht migriert werden, weiterhin verwenden möchten, müssen Sie sie in der neuen Hierarchie neu erstellen. Andere Objekte, z. B. einige Clientdaten, werden in der neuen Hierarchie automatisch neu erstellt, wenn Sie Clients in der Hierarchie verwalten.  
+Diese Änderungen haben keine Auswirkungen auf die Daten in der Datenbank des Quellstandorts. Objekte, die aus einer unterstützten Version von System Center 2012 Configuration Manager oder System Center Configuration Manager migriert wurden, erfordern keine Änderungen.  
 
- **Folgende Objekte können Sie von System Center 2012 Configuration Manager oder Current Branch von System Center Configuration Manager migrieren:**  
+ Die folgenden Objekte auf Grundlage der Configuration Manager-Version in der Quellhierarchie migriert werden können. Einige Objekte, wie z. B. Abfragen, werden nicht migriert. Wenn Sie diese Objekte, die nicht migriert werden, weiterhin verwenden möchten, müssen Sie sie in der neuen Hierarchie neu erstellen. Andere Objekte, z.B. einige Clientdaten, werden in der neuen Hierarchie automatisch neu erstellt, wenn Sie Clients in der Hierarchie verwalten.  
+
+### <a name="objects-that-you-can-migrate-from-system-center-2012-configuration-manager-or-system-center-configuration-manager-current-branch"></a>Folgende Objekte können Sie von System Center 2012 Configuration Manager oder Current Branch von System Center Configuration Manager migrieren:
 
 -   Ankündigungen  
 
@@ -65,7 +69,7 @@ Mit Ausnahme der Standortsystemrolle Verteilungspunkt und der Computer, auf dene
 
 -   Standortgrenzen  
 
--   Sammlungen: Um Sammlungen von einer unterstützten Version von System Center 2012 Configuration Manager oder System Center Configuration Manager zu migrieren, verwenden Sie einen Objektmigrationsauftrag.  
+-   Sammlungen: Verwenden Sie einen Objektmigrationsauftrag, um Sammlungen von einer unterstützten Version von System Center 2012 Configuration Manager oder System Center Configuration Manager zu migrieren.  
 
 -   Kompatibilitätseinstellungen:  
 
@@ -105,7 +109,7 @@ Mit Ausnahme der Standortsystemrolle Verteilungspunkt und der Computer, auf dene
 
 -   Virtuelle Anwendungspakete  
 
- **Folgende Objekte können von Configuration Manager 2007 SP2 migriert werden:**  
+### <a name="objects-that-you-can-migrate-from-configuration-manager-2007-sp2"></a>Folgende Objekte können von Configuration Manager 2007 SP2 migriert werden:
 
 -   Ankündigungen  
 
@@ -162,7 +166,7 @@ Mit Ausnahme der Standortsystemrolle Verteilungspunkt und der Computer, auf dene
 
 -   AMT-Client-Bereitstellungsinformationen  
 
--   Dateien auf Clients, z. B.:  
+-   Dateien auf Clients, einschließlich:  
 
     -   Clientinventur- und -verlaufsdaten  
 
@@ -186,6 +190,6 @@ Mit Ausnahme der Standortsystemrolle Verteilungspunkt und der Computer, auf dene
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

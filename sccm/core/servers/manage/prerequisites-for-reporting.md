@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: ae750188b0258122d8561b163a5ecd85c4179f18
+ms.sourcegitcommit: 59e63cf223424f9930524e3ed3833c30dc9ca9a7
+ms.openlocfilehash: f43764acd13b0257481614fc79aebecac75542d7
 
 
 ---
@@ -50,21 +50,22 @@ Die Berichterstellung in System Center Configuration Manager hat externe Abhäng
 
 |SQL Server-Version|Reporting Services-Punkt|  
 |------------------------|------------------------------|  
-|SQL Server 2008 SP2 (mindestens mit kumulativem Update 9)<br /><br /> - Standard<br />- Enterprise<br />- Datacenter|?|  
-|SQL Server 2008 SP3 (mindestens mit kumulativem Update 4)<br /><br /> - Standard<br />- Enterprise<br />- Datacenter|?|  
-|SQL Server 2008 R2 mit SP1 (mindestens mit kumulativem Update 6)<br /><br /> - Standard<br />- Enterprise<br />- Datacenter|?|  
-|SQL Server 2008 R2 mit SP2<br /><br /> - Standard<br />- Enterprise<br />- Datacenter|?|  
+|SQL Server 2008 SP2 (mindestens mit kumulativem Update 9)<br /><br /> - Standard<br />- Enterprise<br />- Datacenter|Ja|  
+|SQL Server 2008 SP3 (mindestens mit kumulativem Update 4)<br /><br /> - Standard<br />- Enterprise<br />- Datacenter|Ja|  
+|SQL Server 2008 R2 mit SP1 (mindestens mit kumulativem Update 6)<br /><br /> - Standard<br />- Enterprise<br />- Datacenter|Ja|  
+|SQL Server 2008 R2 mit SP2<br /><br /> - Standard<br />- Enterprise<br />- Datacenter|Ja|  
 |SQL Server Express 2008 R2 mit SP1 (mindestens mit kumulativem Update 4)|Nicht unterstützt|  
 |SQL Server Express 2008 R2 mit SP2|Nicht unterstützt|  
-|SQL Server 2012 (mindestens mit kumulativem Update 2)<br /><br /> - Standard<br />- Enterprise|?|  
-|SQL Server 2012 mit SP1 (ohne kumulativem Update)<br /><br /> - Standard<br />- Enterprise|?|  
-|SQL Server 2014<br /><br /> - Standard<br />- Enterprise|?|  
-
+|SQL Server 2012 (mindestens mit kumulativem Update 2)<br /><br /> - Standard<br />- Enterprise|Ja|  
+|SQL Server 2012 mit SP1 (ohne kumulativem Update)<br /><br /> - Standard<br />- Enterprise|Ja|  
+|SQL Server 2016<br /><br /> - Standard<br />- Enterprise|Ja|
+|SQL Server 2016<br /><br /> - Standard<br />- Enterprise|Ja|
+|SQL Server 2016 mit SP1<br /><br /> - Standard<br />- Enterprise|Ja|
 ## <a name="next-steps"></a>Nächste Schritte
 [Vorgänge und Wartungstasks für die Berichterstellung](operations-and-maintenance-for-reporting.md)
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

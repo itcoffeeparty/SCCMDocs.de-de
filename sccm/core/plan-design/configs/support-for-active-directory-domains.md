@@ -1,8 +1,8 @@
 ---
-title: "Unterstützung für AD-Domänen | Microsoft-Dokumentation"
+title: "Unterstützte Active Directory-Domänen | Microsoft-Dokumentation"
 description: "Rufen Sie die Anforderungen für die Mitgliedschaft eines System Center Configuration Manager-Standortsystems in einer Active Directory-Domäne ab."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,16 +17,16 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 2da3da29eb4dcd3886254c506bd29f38b3ef0ab5
+ms.sourcegitcommit: a3da133205506ba0463dd3207da5ceb5a5d1ab49
+ms.openlocfilehash: ea527a7767b33eaf495e78522364d8a7a47712ca
 
 
 ---
-# <a name="support-for-active-directory-domains-for-system-center-configuration-manager"></a>Unterstützung für Active Directory-Domänen für System Center Configuration Manager
+# <a name="supported-active-directory-domains-for-system-center-configuration-manager"></a>Unterstützte Active Directory-Domänen für System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Alle System Center Configuration Manager-Standortsysteme müssen Mitglieder einer unterstützten Windows Active Directory-Domäne sein. Configuration Manager-Clientcomputer können Mitglieder der Domäne oder der Arbeitsgruppe sein.  
+Alle System Center Configuration Manager-Standortsysteme müssen Mitglieder einer unterstützten Windows Server Active Directory-Domäne sein. Configuration Manager-Clientcomputer können Mitglieder der Domäne oder der Arbeitsgruppe sein.  
 
  **Anforderungen und Einschränkungen:**  
 
@@ -55,7 +55,7 @@ Sie müssen die Standortsystemrolle (einschließlich des Standorts bei einem Sta
 ##  <a name="a-namebkmkdisjointa-disjoint-namespace"></a><a name="bkmk_Disjoint"></a> Zusammenhanglose Namespaces  
 Configuration Manager unterstützt die Installation von Standortsystemen und Clients in einer Domäne mit einem zusammenhanglosen Namespace.  
 
-Ein zusammenhangloser Namespace liegt vor, wenn das primäre DNS-Suffix (Domain Name System) eines Computers nicht mit dem Active Directory DNS-Domänennamen an dem Ort, an dem der Computer sich befindet, übereinstimmt. Der Computer mit dem abweichenden primären DNS-Suffix wird als zusammenhanglos betrachtet. Ein zusammenhangloser Namespace liegt auch vor, wenn der NetBIOS-Domänenname eines Domänencontrollers nicht mit dem Active Directory DNS-Domänennamen übereinstimmt.  
+Ein zusammenhangloser Namespace liegt vor, wenn das primäre DNS-Suffix (Domain Name System) eines Computers nicht mit dem Active Directory DNS-Domänennamen an dem Ort übereinstimmt, an dem der Computer sich befindet. Der Computer mit dem abweichenden primären DNS-Suffix wird als zusammenhanglos betrachtet. Ein zusammenhangloser Namespace liegt auch vor, wenn der NetBIOS-Domänenname eines Domänencontrollers nicht mit dem Active Directory DNS-Domänennamen übereinstimmt.  
 
 In der folgenden Tabelle werden die bei zusammenhanglosen Namespaces unterstützten Szenarien aufgeführt.  
 
@@ -66,7 +66,7 @@ In der folgenden Tabelle werden die bei zusammenhanglosen Namespaces unterstütz
 
  Damit ein Computer auf zusammenhanglose Domänencontroller zugreifen kann, müssen Sie das Active Directory-Attribut **msDS-AllowedDNSSuffixes** für den Domänenobjektcontainer ändern. Sie müssen dem Attribut beide DNS-Suffixe hinzufügen.  
 
- Darüber hinaus müssen Sie die Suchliste für jeden zusammenhanglosen Computer in der Domäne konfigurieren und so sicherstellen, dass in der Suchliste für die DNS-Suffixe alle im Unternehmen bereitgestellten DNS-Namespaces enthalten sind. Fügen Sie der Liste der Namespaces das primäre DNS-Suffix des Domänencontrollers, den DNS-Domänennamen und alle zusätzlichen Namespaces für andere Server mit Interoperabilität mit Configuration Manager hinzu. Sie können die Gruppenrichtlinien-Verwaltungskonsole verwenden, um die Suchliste für DNS-Suffixe **** zu konfigurieren.  
+ Darüber hinaus müssen Sie die Suchliste für jeden zusammenhanglosen Computer in der Domäne konfigurieren und so sicherstellen, dass in der Suchliste für die DNS-Suffixe alle im Unternehmen bereitgestellten DNS-Namespaces enthalten sind. Stellen Sie sicher, dass Sie Folgendes in der Liste der Namespaces berücksichtigen: Das primäre DNS-Suffix des Domänencontrollers, den DNS-Domänennamen und alle zusätzlichen Namespaces für andere Server mit Interoperabilität mit Configuration Manager. Sie können die Gruppenrichtlinien-Verwaltungskonsole verwenden, um die Suchliste für DNS-Suffixe **** zu konfigurieren.  
 
 > [!IMPORTANT]  
 >  Wenn Sie in Configuration Manager auf einen Computer verweisen, geben Sie das primäre DNS-Suffix des Computers an. Das Suffix muss mit dem FQDN, der als Attribut **dnsHostName** in der Active Directory-Domäne registriert ist, und mit dem Dienstprinzipalnamen (SPN) des Systems übereinstimmen.  
@@ -78,10 +78,11 @@ In der folgenden Tabelle werden die bei zusammenhanglosen Namespaces unterstütz
 
      **Beispiel:** Die einteilige Domäne „Contoso“ ist so konfiguriert, dass sie im DNS von „contoso.com“ einen zusammenhanglosen Namespace aufweist. Wenn Sie das DNS-Suffix in Configuration Manager also für einen Computer in der Domäne „Contoso“ festlegen, geben Sie „Contoso.com“ und nicht „Contoso“ an.  
 
--   DCOM-Verbindungen zwischen Standortservern im Systemkontext müssen erfolgreich sein, was durch die Kerberos-Authentifizierung sichergestellt wird.  
+-   Distributed Component Object Model-Verbindungen (DCOM) zwischen Standortservern im Systemkontext müssen erfolgreich sein, was durch die Kerberos-Authentifizierung sichergestellt wird.  
+  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

@@ -2,7 +2,7 @@
 title: Anzeigen von Diagnosedaten | Microsoft-Dokumentation
 description: "Zeigen Sie Diagnose- und Nutzungsdaten an, um zu bestätigen, dass die System Center Configuration Manager-Hierarchie keine vertraulichen Informationen enthält."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 5b5d6b6c176de8acbc1161f6820aa1cc3e9fca49
+ms.sourcegitcommit: 688e05aae0e0b15b54835f8d64a98487f4d7b64d
+ms.openlocfilehash: fcd7ac43f7b2d2c92d6aadd7c490f198ac99e5e6
 
 
 ---
@@ -25,27 +25,27 @@ ms.openlocfilehash: 5b5d6b6c176de8acbc1161f6820aa1cc3e9fca49
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Sie können in Ihrer System Center Configuration Manager-Hierarchie Diagnose- und Nutzungsdaten anzeigen und überprüfen, um sicherzustellen, dass keine sensiblen oder identifizierbaren Informationen enthalten sind. Telemetriedaten werden zusammengefasst, in der Tabelle **TEL_TelemetryResults** der Standortdatenbank gespeichert und so formatiert, dass sie programmgesteuert und effizient zu verwenden sind. Die folgenden Optionen geben Ihnen einen Überblick über die genauen Daten, die an Microsoft gesendet werden. Diese werden nicht für andere Zwecke (z. B. zur Datenanalyse) verwendet.  
+Sie können in Ihrer System Center Configuration Manager-Hierarchie Diagnose- und Nutzungsdaten anzeigen und überprüfen, um sicherzustellen, dass keine sensiblen oder identifizierbaren Informationen enthalten sind. Telemetriedaten werden zusammengefasst, in der Tabelle **TEL_TelemetryResults** der Standortdatenbank gespeichert und so formatiert, dass sie programmgesteuert und effizient zu verwenden sind. Obwohl Ihnen die folgenden Optionen einen Überblick über die genauen Daten verschaffen, die an Microsoft gesendet werden, sollen diese nicht für andere Zwecke (z.B. zur Datenanalyse) verwendet werden.  
 
-Mit dem folgenden SQL-Befehl können Sie den Inhalt dieser Tabelle und die genauen Daten anzeigen, die gesendet werden (Sie können diese Daten auch in eine Textdatei exportieren):  
+Verwenden Sie den folgenden SQL-Befehl, um den Inhalt dieser Tabelle und die Daten anzuzeigen, die gesendet werden. (Sie können diese Daten auch in eine Textdatei exportieren):  
 
 -   **SELECT \* FROM TEL_TelemetryResults**  
 
 > [!NOTE]  
->  Vor der Installation der Version 1602 lautet die Tabelle, in der Telemetriedaten gespeichert werden, **TelemetryResults**.  
+>  Bevor Sie Version 1602 installieren, sind die Telemetriedaten in der Tabelle **TelemetryResults** gespeichert.  
 
-Wenn sich der Dienstverbindungspunkt im Offlinemodus befindet, können Sie die aktuellen Diagnose- und Verwendungsdaten mit dem Dienstverbindungstool in eine Datei mit kommagetrennten Werten (CSV) exportieren. Führen Sie das Dienstverbindungstool auf dem Dienstverbindungspunkt mit dem Parameter **-Export** aus.  
+Wenn sich der Dienstverbindungspunkt im Offlinemodus befindet, können Sie die aktuellen Diagnose- und Verwendungsdaten mit dem Dienstverbindungstool in eine Datei mit kommagetrennten Werten (CSV) exportieren. Führen Sie das Dienstverbindungstool auf dem Dienstverbindungspunkt mithilfe des Parameters **-Export** aus.  
 
 ##  <a name="a-namebkmkhashesa-one-way-hashes"></a><a name="bkmk_hashes"></a> Unidirektionale Hashes  
-Einige der Daten bestehen aus Zeichenfolgen aus zufälligen alphanumerischen Zeichen. Configuration Manager verwendet unidirektionale Hashs unter Verwendung des SHA-256-Algorithmus zum Sicherstellen, dass wir möglicherweise sensible Daten nicht sammeln. Dabei bleiben die Daten in einem Zustand, der ihre Nutzung zu Korrelations- und Vergleichszwecken erlaubt. Anstatt z. B. die Namen von Tabellen in der Standortdatenbank zu erfassen, wird für jeden Tabellennamen ein unidirektionaler Hash erfasst. Dadurch wird sichergestellt, dass keine benutzerdefinierten Tabellennamen sichtbar sind, die von Ihnen oder durch Produkt-Add-Ons von Drittanbietern erstellt wurden. Anschließend kann derselbe unidirektionale Hash der standardmäßig im Produkt enthaltenen SQL-Tabellennamen erstellt und verglichen werden, um die Abweichung Ihres Datenbankschemas gegenüber der Standardeinstellung des Produkts zu bestimmen. Das Ergebnis wird anschließend verwendet, um Updates zu verbessern, die Änderungen des SQL-Schemas erforderlich machen.  
+Einige Daten bestehen aus Zeichenfolgen aus zufälligen alphanumerischen Zeichen. Configuration Manager verwendet den SHA-256-Algorithmus, der mit unidirektionalen Hashes sicherstellt, dass keine potentiell sensiblen Daten gesammelt werden. Der Algorithmus belässt Daten in einem Zustand, in dem sie dennoch für Korrelations- und Vergleichszwecke verwendet werden können. Anstatt z. B. die Namen von Tabellen in der Standortdatenbank zu erfassen, wird für jeden Tabellennamen ein unidirektionaler Hash erfasst. Dadurch wird sichergestellt, dass benutzerdefinierte Tabellennamen, die Sie erstellt haben, oder Produkt-Add-Ons von Dritten nicht sichtbar sind. Anschließend können Sie denselben unidirektionalen Hash der standardmäßig im Produkt enthaltenen SQL-Tabellennamen ausführen und die Ergebnisse der beiden Abfragen vergleichen, um die Abweichung Ihres Datenbankschemas von der Standardeinstellung des Produkts zu bestimmen. Das Ergebnis wird anschließend verwendet, um Updates zu verbessern, die Änderungen des SQL-Schemas erforderlich machen.  
 
-Beim Anzeigen der Rohdaten enthält jede Datenzeile einen allgemeinen Hashwert. Dies ist die Hierarchie-ID. Dieser Hashwert dient zum Sicherstellen, dass die Daten mit der gleichen Hierarchie korreliert werden, ohne den Kunden oder die Quelle zu identifizieren.  
+Beim Anzeigen der Rohdaten enthält jede Datenzeile einen allgemeinen Hashwert. Dies ist die Hierarchie-ID. Mit diesem Hashwert wird dann sichergestellt, dass die Daten mit der gleichen Hierarchie korreliert werden, ohne den Kunden oder die Quelle zu identifizieren.  
 
 #### <a name="to-see-how-the-one-way-hash-works"></a>Funktionsweise eines unidirektionale Hashs  
 
 1.  Sie rufen Ihre Hierarchie-ID ab, indem Sie die folgende SQL-Anweisung in SQL Management Studio auf die Configuration Manager-Datenbank anwenden: **select [dbo].[fnGetHierarchyID](\)**  
 
-2.  Als Nächstes verwenden Sie das folgende Windows PowerShell-Skript zum Anwenden des unidirektionalen Hashs auf die GUID, die aus der Datenbank abgerufen wurde. Sie können dann diesen Wert mit der Hierarchie-ID in den Rohdaten vergleichen, um zu prüfen, wie wir diese Daten maskiert haben.  
+2.  Verwenden Sie das folgende Windows PowerShell-Skript zum Anwenden des unidirektionalen Hashs auf die GUID, die aus der Datenbank abgerufen wurde. Sie können dann diesen Wert mit der Hierarchie-ID in den Rohdaten vergleichen, um zu prüfen, wie wir diese Daten maskiert haben.  
 
     ```  
     Param( [Parameter(Mandatory=$True)] [string]$value )  
@@ -69,6 +69,6 @@ Beim Anzeigen der Rohdaten enthält jede Datenzeile einen allgemeinen Hashwert. 
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8b4c80aa092369ec251757d82a1b4bb2863aa96a
-ms.openlocfilehash: f3742dcb930444bab7eb02374fd77ebd0e455734
+ms.sourcegitcommit: 4a8d98addcd463eb82d8b7100b44254a10d21992
+ms.openlocfilehash: b79346968edf88443f8e30691aa4baec7b81699f
 
 
 ---
@@ -26,7 +26,11 @@ ms.openlocfilehash: f3742dcb930444bab7eb02374fd77ebd0e455734
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Verwenden Sie die folgenden Informationen, um die Infrastruktur zu aktualisieren, in der System Center Configuration Manager ausgeführt wird.  
+Verwenden Sie die Informationen in diesem Thema, um die Serverinfrastruktur zu aktualisieren, in der System Center Configuration Manager ausgeführt wird.  
+
+ - Informationen über das Upgrade von einer früheren Version von Configuration Manager auf System Center Configuration Manager finden Sie unter [Upgrade auf System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).
+
+- Wenn Sie Ihre System Center Configuration Manager-Infrastruktur auf eine neue Version aktualisieren möchten, lesen Sie [Updates für System Center Configuration Manager](/sccm/core/servers/manage/updates).
 
 ##  <a name="a-namebkmksupconfigupgradesitesrva-upgrade-site-operating-system-of-site-systems"></a><a name="BKMK_SupConfigUpgradeSiteSrv"></a> Durchführen eines Upgrades für das Standortbetriebssystem von Standortsystemen  
  Configuration Manager unterstützt in folgenden Situationen das direkte Upgrade des Betriebssystems von Servern, auf denen ein Standortserver gehostet wird, sowie von Remoteservern, auf denen eine Standortsystemrolle gehostet wird:  
@@ -209,6 +213,6 @@ Um den SQL Server-CE-Kompatibilitätsgrad zu ermitteln, der für Ihre Standortda
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

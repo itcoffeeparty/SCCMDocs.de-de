@@ -17,8 +17,8 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 48b91e88f78752cf7c05162b701ea2ca2f401de3
-ms.openlocfilehash: 85df3df19f01f8ed6f5240851c47afce01a92880
+ms.sourcegitcommit: 0a6cb36aad455b38db628f26b97e1b4c00adc741
+ms.openlocfilehash: 12ef5c1faf5fe5780ddb7c12cfe6d533e9785f6d
 
 ---
 
@@ -46,7 +46,12 @@ Möchten Sie Intune ohne Configuration Manager?
 [Intune Dokumente anzeigen >](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune)
 
 ## <a name="step-1-create-an-mdm-collection"></a>Schritt 1: Erstellen einer MDM-Sammlung
-Sie benötigen die Configuration Manager-Benutzersammlung, um Benutzer anzugeben, durch die Geräte zur Verwaltung registriert werden können. Nur Benutzersammlungen kommen in Frage, da Intune-Lizenzen Benutzern zugewiesen werden. Sie können zu Testzwecken eine **Direktregel** einrichten und bestimmte Benutzer hinzufügen, die Geräte registrieren können. Wählen Sie an der Configuration Manager-Konsole **Bestand und Kompatibilität** > **Benutzersammlungen** aus, und klicken Sie auf die Registerkarte **Startseite** > Gruppe **Erstellen** und dann auf **Benutzersammlung erstellen**. Verwenden Sie für eine größer angelegte Verteilung **Abfrageregeln**, um Benutzer zu definieren. Weitere Informationen zu Sammlungen finden Sie unter [Erstellen von Sammlungen](https://technet.microsoft.com/library/mt629371.aspx).
+Zum Angeben der Benutzer, die Geräte in der Verwaltung registrieren können, ist eine Configuration Manager-Benutzersammlung erforderlich. Es können nur Benutzersammlungen (keine Gerätesammlungen) verwendet werden, da Intune-Lizenzen nach Benutzer zugewiesen werden.
+
+> [!NOTE]
+> Zum Registrieren von Geräten mit Intune ist es nicht erforderlich, im Office 365-Portal oder im Azure Active Directory-Portal Benutzern Lizenzen zuzuweisen. Sie müssen lediglich die Benutzer in eine Sammlung einbinden, die (in einem [späteren Schritt](#step-3-configure-intune-subscription)) dem Intune-Abonnement zugeordnet wird.
+
+Sie können zu Testzwecken eine **Direktregel** einrichten und bestimmte Benutzer hinzufügen, die Geräte registrieren können. Wählen Sie an der Configuration Manager-Konsole **Bestand und Kompatibilität** > **Benutzersammlungen** aus, und klicken Sie auf die Registerkarte **Startseite** > Gruppe **Erstellen** und dann auf **Benutzersammlung erstellen**. Verwenden Sie für eine größer angelegte Verteilung **Abfrageregeln**, um Benutzer zu definieren. Weitere Informationen zu Sammlungen finden Sie unter [Erstellen von Sammlungen](https://technet.microsoft.com/library/mt629371.aspx).
 
 ![Erstellen einer Benutzersammlung für MDM](../media/mdm-create-user-collection.png)
 

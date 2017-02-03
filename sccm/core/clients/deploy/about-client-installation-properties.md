@@ -2,7 +2,7 @@
 title: Clientinstallationseigenschaften | Microsoft-Dokumentation
 description: Informationen zu Clientinstallationseigenschaften in System Center Configuration Manager.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,64 +16,63 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: fa6a613bb2b69be923917399da6b45f0c5cfcc6f
+ms.sourcegitcommit: a1fc9f2db7c9c2b40d986bb39a0b27d6cc699987
+ms.openlocfilehash: 454828d64b5643e57da4cff3aa3f671e8cd157b1
 
 ---
 # <a name="about-client-installation-properties-in-system-center-configuration-manager"></a>Informationen zu Clientinstallationseigenschaften in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Verwenden Sie den Befehl „CCMSetup.exe“ von System Center Configuration Manager, um die Configuration Manager-Clientsoftware auf Computern in Ihrem Unternehmen zu installieren.  
+Verwenden Sie den Befehl „CCMSetup.exe“ von System Center Configuration Manager, um den Configuration Manager-Client manuell zu installieren.  
 
 ##  <a name="a-nameaboutccmsetupa-about-ccmsetupexe"></a><a name="aboutCCMSetup"></a> Informationen zu „CCMSetup.exe“  
- Mit dem Befehl „CCMSetup.exe“ werden alle Dateien, die zum Abschließen der Clientinstallation erforderlich sind, vom angegebenen Verwaltungspunkt oder Quellspeicherort heruntergeladen. Dazu zählen unter anderem folgende Dateien:  
+ Der Befehl „CCMSetup.exe“ lädt die Dateien herunter, die zum Installieren des Clients über einen Verwaltungspunkt oder einen Quellspeicherort erforderlich sind. Dazu zählen unter anderem folgende Dateien:  
 
--   Windows Installer-Paket zur Installation der Configuration Manager-Clientsoftware  
+-   Windows Installer-Paket „Client.msi“ zur Installation der Clientsoftware  
 
--   BITS-Installationsdateien (Background Intelligent Transfer Service, intelligenter Hintergrundübertragungsdienst) von Microsoft bei Bedarf  
+-   BITS-Installationsdateien (Background Intelligent Transfer Service, intelligenter Hintergrundübertragungsdienst) von Microsoft  
 
--   Windows Installer-Installationsdateien bei Bedarf  
+-   Windows Installer-Installationsdateien  
 
--   Updates und Korrekturen für den Configuration Manager-Client bei Bedarf  
+-   Updates und Korrekturen für den Configuration Manager-Client.  
 
 > [!NOTE]  
 >  In Configuration Manager können Sie die Datei client.msi nicht direkt ausführen.  
 
- Die Datei CCMSetup.exe enthält mehrere Befehlszeileneigenschaften, mit denen das Installationsverhalten angepasst werden kann. Zusätzlich können Sie auch Eigenschaften angeben, um das Verhalten von Client.msi mithilfe der Befehlszeile CCMSetup.exe zu ändern.  
+ Die Datei CCMSetup.exe enthält mehrere [Befehlszeileneigenschaften](#ccmsetup-exe-command-line-properties), mit denen das Installationsverhalten angepasst werden kann. Sie können auch Eigenschaften angeben, um das Verhalten von Client.msi mithilfe der Befehlszeile CCMSetup.exe zu ändern.  
 
 > [!IMPORTANT]  
->  Sie müssen alle erforderlichen CCMSetup-Eigenschaften angeben, bevor Sie die Eigenschaften für Client.msi angeben.  
+>  Geben Sie alle erforderlichen CCMSetup-Eigenschaften an, bevor Sie die Eigenschaften für Client.msi angeben.  
 
  Die Datei CCMSetup.exe und die unterstützenden Dateien befinden sich auf dem -Standortserver im Ordner **Client** des Configuration Manager-Installationsordners. Dieser Ordner ist im Netzwerk unter **&lt;Standortservername\>\SMS_&lt;Standortcode\>\Client** freigegeben.  
 
  Bei der Eingabeaufforderung wird vom Befehl CCMSetup.exe das folgende Format verwendet:  
 
- **CCMSetup.exe [&lt;Ccmsetup-Eigenschaften\>] [&lt;client.msi-Setupeigenschaften>]**  
+ `CCMSetup.exe [&lt;Ccmsetup properties\>] [&lt;client.msi setup properties>]`  
 
  Beispiel:  
 
- **CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=S01 FSP=SMSFSP01**  
+ „CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=S01 FSP=SMSFSP01“  
 
- Mit diesem Beispielbefehl werden die folgenden Aktionen ausgeführt:  
+ Dieses Beispiel dient zu Folgendem:  
 
--   Gibt den Verwaltungspunkt mit dem Namen SMSMP01 an, um eine Liste mit Verteilungspunkten zum Herunterladen der Quelldateien für die Clientinstallation anzufordern.  
+-   Gibt den Verwaltungspunkt mit dem Namen SMSMP01 an, um eine Liste mit Verteilungspunkten zum Herunterladen der Clientinstallationsdateien anzufordern.  
 
--   Hiermit wird angegeben, dass die Installation beendet werden soll, wenn bereits eine Version des Configuration Manager-Client auf dem Computer vorhanden ist.  
+-   Gibt an, dass die Installation beendet wird, wenn bereits eine Version des Clients auf dem Computer vorhanden ist.  
 
 -   Weist „client.msi“ an, den Client dem Standortcode „S01“ zuzuweisen.  
 
 -   Weist „client.msi“ an, den Fallbackstatuspunkt „SMSFP01“ zu verwenden.  
 
 > [!NOTE]  
->  Wenn die Eigenschaft Leerzeichen aufweist, setzen Sie sie in Anführungszeichen ("").  
+>  Wenn eine Eigenschaft Leerzeichen enthält, setzen Sie sie zwischen Anführungszeichen.  
 
- Die in der folgenden Tabelle beschriebenen Eigenschaften sind zum Ändern des Installationsverhaltens von „CCMSetup.exe“ verfügbar.  
 
 > [!IMPORTANT]  
 >  Wenn Sie das Active Directory-Schema für Configuration Manager erweitert haben, werden viele Clientinstallationseigenschaften in den Active Directory-Domänendiensten veröffentlicht und automatisch vom Configuration Manager-Client gelesen. Eine Liste der in den Active Directory-Domänendiensten veröffentlichten Clientinstallationseigenschaften finden Sie unter [Informationen zu Clientinstallationseigenschaften in System Center Configuration Manager, die in Active Directory-Domänendiensten veröffentlicht wurden](about-client-installation-properties-published-to-active-directory-domain-services.md).  
 
-##  <a name="a-namebkmkccmsetupcommandlinea-ccmsetupexe-command-line-properties"></a><a name="BKMK_CCMSetupCommandLine"></a> Befehlszeileneigenschaften der Datei „CCMSetup.exe“  
+##  <a name="ccmsetupexe-command-line-properties"></a>Befehlszeileneigenschaften der Datei „CCMSetup.exe“  
 
 ### <a name=""></a>/?  
 
@@ -83,70 +82,65 @@ Beispiel: **ccmsetup.exe /?**
 
 ### <a name="sourceltpath"></a>/source:&lt;Pfad\>  
 
- Hiermit wird der Speicherort angegeben, von dem die Installationsdateien heruntergeladen werden sollen. Sie können einen lokalen oder UNC-Installationspfad verwenden. Die Dateien werden mithilfe des SMB-Protokolls (Server Message Block) heruntergeladen.  
+ Gibt den Speicherort für den Dateidownload an. Verwenden Sie einen lokalen oder einen UNC-Pfad. Die Dateien werden mithilfe des SMB-Protokolls (Server Message Block) heruntergeladen.  Zum Verwenden von **/source** muss das Windows-Benutzerkonto der Clientinstallation über Leseberechtigungen für den Speicherort verfügen.
 
 > [!NOTE]  
->  Sie können die Eigenschaft **/source** mehrmals in der Befehlszeile verwenden, um alternative Speicherorte zum Herunterladen der Installationsdateien anzugeben.  
-
-> [!IMPORTANT]  
->  Die Befehlszeileneigenschaft **/source** kann nur verwendet werden, wenn dem Windows-Benutzerkonto, das für die Clientinstallation verwendet wird, die Berechtigung "Lesen" für den Installationsspeicherort erteilt wurde.  
+>  Sie können die Eigenschaft **/source** mehrmals in der Befehlszeile verwenden, um alternative Downloadspeicherorte anzugeben.  
 
  Beispiel: **ccmsetup.exe /source:"\\\Computer\Ordner"**  
 
 ### <a name="mpltcomputer"></a>/mp:&lt;Computer\>
 
- Gibt einen Quellverwaltungspunkt an, mit dem Computer eine Verbindung herstellen können, um den nächsten Verteilungspunkt zum Herunterladen der Dateien für die Clientinstallation zu ermitteln. Wenn keine Verteilungspunkte vorhanden sind oder Computer die Dateien auch nach Ablauf von vier Stunden nicht von den Verteilungspunkten herunterladen können, werden die Dateien von den Clients vom angegebenen Verwaltungspunkt heruntergeladen.  
-
- Computer laden die Dateien je nach Standortsystemrollen-Konfiguration für Clientverbindungen über eine HTTP- oder eine HTTPS-Verbindung herunter. Beim Herunterladen wird die BITS-Einschränkung verwendet, sofern sie konfiguriert ist. Wenn alle Verteilungspunkte und Verwaltungspunkte ausschließlich für HTTPS-Clientverbindungen konfiguriert sind, müssen Sie sicherstellen, dass für den Clientcomputer ein gültiges PKI-Clientzertifikat (Public Key Infrastructure) verfügbar ist.  
-
-> [!NOTE]  
->  Sie können die Befehlszeileneigenschaft **/mp** verwenden, um mehrere Verwaltungspunkte anzugeben, damit Computer bei einem Fehler bei der ersten Verbindungsherstellung den nächsten Verwaltungspunkt verwenden können usw. Wenn Sie mehrere Verwaltungspunkte angeben, trennen Sie die Werte durch Semikolons.  
+ Gibt einen Quellverwaltungspunkt an, mit dem Computer eine Verbindung herstellen können, um den nächsten Verteilungspunkt für die Installationsdateien zu ermitteln. Wenn keine Verteilungspunkte vorhanden sind oder Computer die Dateien auch nach Ablauf von vier Stunden nicht von den Verteilungspunkten herunterladen können, werden die Dateien von den Clients vom angegebenen Verwaltungspunkt heruntergeladen.  
 
 > [!IMPORTANT]  
->  Diese Eigenschaft wird nur zum Angeben eines ersten Verwaltungspunkts verwendet, damit die nächste Quelle zum Herunterladen der Clientinstallationsdateien ermittelt werden kann. Sie dient nicht zur Angabe des Verwaltungspunkts, dem der Client nach der Installation zugewiesen wird. Sie können einen beliebigen Configuration Manager-Verwaltungspunkt an einem beliebigen Standort angeben, um für Computer eine Liste mit Verteilungspunkten bereitzustellen, von denen diese die Clientinstallationsdateien herunterladen können.  
+>  Mit dieser Eigenschaft wird ein erster Verwaltungspunkt für Computer angegeben, um eine Downloadquelle zu ermitteln. Hierfür kommt jeder Verwaltungspunkt jedes Standorts in Frage. Der Client wird nicht einem Verwaltungspunkt *zugewiesen*.   
 
- Beispiel für die Verwendung des Computernamens: **ccmsetup.exe /mp:SMSMP01**  
+ Computer laden die Dateien je nach Standortsystemrollen-Konfiguration für Clientverbindungen über eine HTTP- oder eine HTTPS-Verbindung herunter. Beim Herunterladen wird die BITS-Einschränkung verwendet, sofern sie konfiguriert ist. Wenn alle Verteilungspunkte und Verwaltungspunkte ausschließlich für HTTPS-Clientverbindungen konfiguriert sind, stellen Sie sicher, dass für den Clientcomputer ein gültiges Clientzertifikat verfügbar ist.  
 
- Beispiel für die Verwendung des vollqualifizierten Domänennamens: **ccmsetup.exe /mp:smsmp01.contoso.com**  
+Sie können die Befehlszeileneigenschaft **/mp** verwenden, um mehrere Verwaltungspunkte anzugeben, damit Computer bei einem Fehler bei der ersten Verbindungsherstellung den nächsten Verwaltungspunkt verwenden können usw. Wenn Sie mehrere Verwaltungspunkte angeben, trennen Sie die Werte durch Semikolons.
 
-> [!TIP]  
->  Wenn der Client per HTTPS eine Verbindung zum Verwaltungspunkt herstellt, müssen Sie für diese Option anstelle des Computernamens in der Regel den vollqualifizierten Domänennamen (FQDN) angeben. Der angegebene Wert muss in den Antragstellernamen oder alternativen Antragstellernamen des PKI-Zertifikats für den Verwaltungspunkt eingefügt werden. Obwohl Configuration Manager als bewährte Sicherheitsmethode einen Computernamen für Verbindungen im Intranet nur in diesem PKI-Zertifikat unterstützt, wird die Verwendung eines vollqualifizierten Domänennamens empfohlen.  
+Wenn der Client per HTTPS eine Verbindung mit einem Verwaltungspunkt herstellt, müssen Sie anstelle des Computernamens normalerweise den vollqualifizierten Domänennamen (FQDN) angeben. Der Wert muss mit dem Antragstellernamen oder alternativen Antragstellernamen des PKI-Zertifikats für den Verwaltungspunkt übereinstimmen. Obwohl Configuration Manager einen Computernamen im Zertifikat für Verbindungen im Intranet unterstützt, wird als bewährte Sicherheitsmethode die Verwendung eines vollqualifizierten Domänennamens empfohlen.
+
+Beispiel für die Verwendung des Computernamens: `ccmsetup.exe /mp:SMSMP01`  
+
+Beispiel für die Verwendung des vollqualifizierten Domänennamens: `ccmsetup.exe /mp:smsmp01.contoso.com`  
 
 ### <a name="retryltminutes"></a>/retry:&lt;Minuten\>
 
-Hiermit wird das Wiederholungsintervall angegeben für den Fall, dass die Installationsdateien nicht von CCMSetup.exe heruntergeladen werden können. Der Standardwert beträgt **10** Minuten. Der Vorgang wird von CCMSetup wiederholt, bis die in der Installationseigenschaft **downloadtimeout** angegebene Grenze erreicht ist.  
+Wiederholungsintervall, wenn „CCMSetup.exe“ die Installationsdateien nicht herunterladen kann.  Der Vorgang wird von CCMSetup wiederholt, bis die in der Eigenschaft **downloadtimeout** angegebene Grenze erreicht ist.  
 
-Beispiel: **ccmsetup.exe /retry:20**  
+Beispiel: `ccmsetup.exe /retry:20`  
 
 ### <a name="noservice"></a>/noservice
 
-Verhindert, dass CCMSetup als Dienst ausgeführt wird. Wenn CCMSetup als Dienst ausgeführt wird, erfolgt die Ausführung im Kontext des lokalen Systemkontos des Computers, das möglicherweise nicht über ausreichende Rechte für den Zugriff auf die für den Installationsvorgang erforderlichen Netzwerkressourcen verfügt. Wenn Sie die Option **/noservice** angeben, wird "CCMSetup.exe" im Kontext des Benutzerkontos ausgeführt, das Sie zum Starten des Installationsvorgangs verwenden. Wenn Sie zum Ausführen von "CCMSetup.exe" mit der Eigenschaft **/service** ein Skript verwenden, wird "CCMSetup.exe" nach dem Starten des Diensts beendet. In diesem Fall werden die Installationsdetails möglicherweise nicht ordnungsgemäß gemeldet, weil der CCMSetup-Dienst die Clientinstallation ausführt. Wenn diese Befehlszeileneigenschaft nicht angegeben wird, wird standardmäßig **/service** verwendet.  
+Verhindert, dass CCMSetup als Dienst ausgeführt wird, was das Standardverhalten ist. Wenn CCMSetup als Dienst ausgeführt wird, erfolgt die Ausführung im Kontext des lokalen Systemkontos des Computers, das möglicherweise nicht über ausreichende Rechte für den Zugriff auf die für die Installation erforderlichen Netzwerkressourcen verfügt. Mit **/noservice** wird „CCMSetup.exe“ im Kontext des Benutzerkontos ausgeführt, mit dem Sie die Installation starten. Wenn Sie zum Ausführen von „CCMSetup.exe“ mit der Eigenschaft **/service** ein Skript verwenden, wird „CCMSetup.exe“ nach dem Starten des Diensts beendet und meldet die Installationsdetails möglicherweise nicht ordnungsgemäß.   
 
-Beispiel: **ccmsetup.exe /noservice**  
+Beispiel: `ccmsetup.exe /noservice`  
 
 ### <a name="service"></a>/service
 
 Hiermit wird angegeben, dass CCMSetup mithilfe des lokalen Systemkontos als Dienst ausgeführt werden soll.  
 
-Beispiel: **ccmsetup.exe /service**  
+Beispiel: `ccmsetup.exe /service`  
 
 ### <a name="uninstall"></a>/uninstall
 
-Hiermit wird angegeben, dass die Configuration Manager-Clientsoftware deinstalliert werden soll. Weitere Informationen finden Sie unter [How to manage clients in System Center Configuration Manager](../manage/manage-clients.md).  
+Gibt an, dass die Clientsoftware deinstalliert werden soll. Weitere Informationen finden Sie unter [How to manage clients in System Center Configuration Manager](../manage/manage-clients.md).  
 
-Beispiel: **ccmsetup.exe /uninstall**  
+Beispiel: `ccmsetup.exe /uninstall`  
 
 ### <a name="logon"></a>/logon
 
-Hiermit wird angegeben, dass die Clientinstallation beendet werden soll, wenn bereits eine Version des Configuration Manager- oder Configuration Manager-Clients installiert ist.  
+Gibt an, dass die Clientinstallation angehalten werden soll, wenn bereits eine Version des Clients installiert ist.  
 
-Beispiel: **ccmsetup.exe /logon**  
+Beispiel: `ccmsetup.exe /logon`  
 
 ### <a name="forcereboot"></a>/forcereboot
 
- Hiermit wird angegeben, dass ein Neustart des Clientcomputers erzwungen werden soll, wenn dies zum Abschließen der Clientinstallation erforderlich ist. Wenn diese Option nicht angegeben und ein Neustart erforderlich ist, wird CCMSetup beendet und nach dem nächsten manuellen Neustart fortgesetzt.  
+ Gibt an, dass CCMSetup einen Neustart des Clientcomputers erzwingen soll, wenn dies zum Abschließen der Installation erforderlich ist. Falls diese Option nicht angegeben ist, wird CCMSetup beendet, wenn ein Neustart erforderlich ist, und dann nach dem nächsten manuellen Neustart fortgesetzt.  
 
- Beispiel: **CCMSetup.exe /forcereboot**  
+ Beispiel: `CCMSetup.exe /forcereboot`  
 
 ### <a name="bitspriorityltpriority"></a>/BITSPriority:&lt;Priorität\>
 
@@ -162,67 +156,68 @@ Beispiel: **ccmsetup.exe /logon**
 
  Der Standardwert ist NORMAL.  
 
- Beispiel: **ccmsetup.exe /BITSPriority:HIGH**  
+ Beispiel: `ccmsetup.exe /BITSPriority:HIGH`  
 
 ### <a name="downloadtimeoutltminutes"></a>/downloadtimeout:&lt;Minuten\>
 
-Hiermit wird die Zeitspanne in Minuten angegeben, in der versucht wird, die Clientinstallationsdateien herunterzuladen, bevor der Vorgang abgebrochen wird. Der Standardwert beträgt **1440** Minuten (1 Tag).  
+Die Zeitspanne in Minuten, in der CCMSetup versucht, die Installationsdateien herunterzuladen, bevor der Vorgang angehalten wird. Der Standardwert beträgt **1440** Minuten (1 Tag).  
 
-Beispiel: **ccmsetup.exe /downloadtimeout:100**  
+Beispiel: `ccmsetup.exe /downloadtimeout:100`  
 
 ### <a name="usepkicert"></a>/UsePKICert
 
- Wenn diese Option angegeben ist, wird vom Client ein PKI-Zertifikat einschließlich Clientauthentifizierung verwendet, sofern vorhanden. Wird kein gültiges Zertifikat gefunden, wird vom Client auf eine HTTP-Verbindung ausgewichen, und ein selbstsigniertes Zertifikat wird verwendet. Wenn diese Option nicht angegeben ist, wird vom Client ein selbstsigniertes Zertifikat verwendet, und die gesamte Kommunikation mit Standortsystemen erfolgt über HTTP.  
+ Wenn diese Option angegeben ist, verwendet der Client ein PKI-Zertifikat mit Clientauthentifizierung, sofern vorhanden. Wenn kein gültiges Zertifikat gefunden werden kann, verwendet der Client eine HTTP-Verbindung und ein selbstsigniertes Zertifikat. Der Client zeigt dieses Verhalten auch, wenn Sie diese Eigenschaft nicht verwenden. 
 
 > [!NOTE]  
->  In einigen Szenarien muss diese Eigenschaft bei der Clientinstallation für die Verwendung eines PKI-Zertifikats nicht angegeben werden. Dazu gehören die Installation eines Clients mithilfe von Clientpushinstallation sowie die Installation eines Clients mithilfe eines Softwareupdatepunkts. Sie müssen diese Eigenschaft jedoch immer angeben, wenn Sie einen Client manuell installieren und die Eigenschaft **/mp** verwenden, um einen Verwaltungspunkt anzugeben, der ausschließlich für Clientverbindungen über HTTPS konfiguriert ist. Dies gilt auch beim Installieren eines Clients mit dem Kommunikationsstatus Nur Internet mithilfe der Eigenschaft CCMALWAYSINF=1 (zusammen mit den Eigenschaften des internetbasierten Verwaltungspunkts sowie dem Standortcode). Weitere Informationen zur internetbasierten Clientverwaltung finden Sie unter [Überlegungen zur Clientkommunikation aus dem Internet oder aus einer nicht vertrauenswürdigen Gesamtstruktur](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in [Datenübertragungen zwischen Endpunkten in System Center Configuration Manager](../../plan-design/hierarchy/communications-between-endpoints.md).  
+>  In einigen Szenarios müssen Sie diese Eigenschaft nicht angeben, wenn Sie einen Client installieren und dennoch ein Clientzertifikat verwenden. Dazu gehören die Installation eines Clients mithilfe von Clientpushinstallation sowie die Installation eines Clients mithilfe eines Softwareupdatepunkts. Sie müssen diese Eigenschaft jedoch immer angeben, wenn Sie einen Client manuell installieren und die Eigenschaft **/mp** verwenden, um einen Verwaltungspunkt anzugeben, der ausschließlich für Clientverbindungen über HTTPS konfiguriert ist. Dies gilt auch beim Installieren eines Clients mit dem Kommunikationsstatus Nur Internet mithilfe der Eigenschaft CCMALWAYSINF=1 (zusammen mit den Eigenschaften des internetbasierten Verwaltungspunkts sowie dem Standortcode). Weitere Informationen zur internetbasierten Clientverwaltung finden Sie unter [Überlegungen zur Clientkommunikation aus dem Internet oder aus einer nicht vertrauenswürdigen Gesamtstruktur](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in [Datenübertragungen zwischen Endpunkten in System Center Configuration Manager](../../plan-design/hierarchy/communications-between-endpoints.md).  
 
- Beispiel: **CCMSetup.exe /UsePKICert**  
+ Beispiel: `CCMSetup.exe /UsePKICert`  
 
 ### <a name="nocrlcheck"></a>/NoCRLCheck
 
- Hiermit wird angegeben, dass die Überprüfung der Zertifikatsperrlisten von einem Client nicht ausgeführt werden soll, wenn die Kommunikation über HTTPS unter Verwendung eines PKI-Zertifikats erfolgt.  
+ Gibt an, dass ein Client die Zertifikatssperrlisten nicht überprüfen soll, wenn dieser über HTTPS unter Verwendung eines PKI-Zertifikats kommuniziert.  
 
- Wenn diese Option nicht angegeben ist, wird die Zertifikatsperrliste vom Client geprüft, bevor eine Verbindung über HTTPS unter Verwendung von PKI-Zertifikaten hergestellt wird.  
+ Wenn diese Option nicht angegeben ist, überprüft der Client die Zertifikatssperrliste, bevor er eine Verbindung über HTTPS herstellt.  
 
  Weitere Informationen zur Überprüfung der Zertifikatsperrlisten finden Sie unter [Planning for PKI certificate revocation](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs) in[Plan for security in System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
 
- Beispiel: **CCMSetup.exe /UsePKICert /NoCRLCheck**  
+ Beispiel: `CCMSetup.exe /UsePKICert /NoCRLCheck`  
 
 ### <a name="configltconfiguration-file"></a>/config:&lt;Konfigurationsdatei\>
 
-Gibt den Namen der Textdatei mit den Clientinstallationseigenschaften an. Diese Datei muss sich im Ordner „CCMSetup“ befinden, es sei denn, Sie geben auch die CCMSetup-Eigenschaft **/noservice** an. Der Ordner befindet sich bei 32-Bit-Betriebssystemen und 64-Bit-Betriebssystemen unter „%Windir%\\Ccmsetup“. Wenn Sie die Eigenschaft **/noservice** angeben, muss sich diese Datei in dem Ordner befinden, von dem aus Sie "CCMSetup.exe" ausführen.  
+Gibt den Namen der Textdatei mit den Clientinstallationseigenschaften an. 
 
-Beispiel: **CCMSetup.exe /config:&lt;Konfigurationsdateiname.txt\>**  
+- Wenn Sie die CCMSetup-Eigenschaft **/noservice** nicht angeben, muss diese Datei im Ordner „CCMSetup“ abgelegt sein, d.h. bei 32-Bit- und 64-Bit-Betriebssystemen unter „%Windir%\\Ccmsetup“. 
+- Wenn Sie die Eigenschaft **/noservice** angeben, muss sich diese Datei in dem Ordner befinden, von dem aus Sie "CCMSetup.exe" ausführen.  
 
-Das richtige Format für die Datei entnehmen Sie bitte der Datei „mobileclienttemplate.tcf“, die sich auf dem Standortservercomputer im &lt;Verzeichnis Configuration Manager\>\\bin\\&lt;Plattform\> befindet. Diese Datei enthält auch Informationen in Kommentarform zu den Abschnitten und deren Verwendung. Geben Sie die Clientinstallationseigenschaften im Abschnitt [Client Install] nach folgendem Text ein: **Install=INSTALL=ALL**.  
+Beispiel: `CCMSetup.exe /config:&lt;Configuration File Name.txt\>`  
 
-Beispiel für einen Abschnitteintrag [Client Install]: **Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100**  
+Das richtige Dateiformat entnehmen Sie der Datei „mobileclienttemplate.tcf“, die sich auf dem Standortservercomputer im &lt;Verzeichnis Configuration Manager\>\\bin\\&lt;Plattform\> befindet. Die Datei enthält auch Kommentare zu den Abschnitten und deren Verwendung. Geben Sie die Clientinstallationseigenschaften im Abschnitt [Client Install] nach folgendem Text ein: **Install=INSTALL=ALL**.  
+
+Beispiel für einen Abschnitteintrag [Client Install]: `Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
 
 ### <a name="skipprereqltfilename"></a>/skipprereq:&lt;Dateiname\>
 
- Hiermit wird angegeben, dass das angegebene erforderliche Programm von „CCMSetup.exe“ nicht installiert werden darf, wenn der Configuration Manager-Client installiert wird.  
+ Hiermit wird angegeben, dass das angegebene erforderliche Programm von „CCMSetup.exe“ nicht installiert werden darf, wenn der Configuration Manager-Client installiert wird. Diese Eigenschaft unterstützt die Eingabe mehrerer Werte. Verwenden Sie zum Trennen der Werte jeweils ein Semikolon (;).  
+ 
 
- Beispiele: **CCMSetup.exe /skipprereq:silverlight.exe** oder **CCMSetup.exe /skipprereq:dotnetfx40_client_x86_x64.exe;Silverlight.exe**  
-
-> [!NOTE]  
->  Diese Eigenschaft unterstützt die Eingabe mehrerer Werte. Verwenden Sie zum Trennen der Werte jeweils ein Semikolon (;).  
+ Beispiele: `CCMSetup.exe /skipprereq:silverlight.exe` oder `CCMSetup.exe /skipprereq:dotnetfx40_client_x86_x64.exe;Silverlight.exe`  
 
 ### <a name="forceinstall"></a>/forceinstall
 
- Gibt an, dass alle vorhandenen Clients deinstalliert werden und dann ein neuer Client installiert wird.  
+ Gibt an, dass alle vorhandenen Clients deinstalliert werden und ein neuer Client installiert wird.  
 
 ### <a name="excludefeaturesltfeature"></a>/ExcludeFeatures:&lt;Funktion\>
 
-Hiermit wird festgelegt, dass die angegebene Funktion bei der Configuration Manager-Clientinstallation von „CCMSetup.exe“ nicht installiert wird.  
+Gibt an, dass CCMSetup.exe die angegebene Funktion nicht installiert, wenn der Client installiert ist.  
 
-Beispiel: **CCMSetup.exe /ExcludeFeatures:ClientUI** installiert das Softwarecenter nicht auf dem Client.  
+Beispiel: `CCMSetup.exe /ExcludeFeatures:ClientUI` installiert das Softwarecenter nicht auf dem Client.  
 
 > [!NOTE]  
 >  In dieser Version ist **ClientUI** die einzige Option, die für die Eigenschaft **/ExcludeFeatures** unterstützt wird.  
 
 ##  <a name="a-nameccmsetupreturncodesa-ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a> Rückgabecodes von „CCMSetup.exe“  
- Nach Ausführung des Befehls „CCMSetup.exe“ werden die im Folgenden aufgeführten Rückgabecodes ausgegeben. Wenn Sie Probleme im Zusammenhang mit dem Befehl beheben müssen, informieren Sie sich in der Datei „ccmsetup.log“ auf dem Clientcomputer über den jeweiligen Kontext und weitere Details wie z. B. die Rückgabecodes.  
+ Der Befehl „CCMSetup.exe“ gibt die im Folgenden aufgeführten Rückgabecodes aus. Zur Problembehandlung informieren Sie sich in der Datei „ccmsetup.log“ auf dem Clientcomputer über den jeweiligen Kontext und weitere Details zu Rückgabecodes.  
 
 |Rückgabecode|Bedeutung|  
 |-----------------|-------------|  
@@ -238,13 +233,13 @@ Beispiel: **CCMSetup.exe /ExcludeFeatures:ClientUI** installiert das Softwarecen
 
 ### <a name="ccmadmins"></a>CCMADMINS  
 
-Gibt eine oder mehrere Windows-Benutzerkonten oder -Gruppen an, denen der Zugriff auf die Clienteinstellungen und -richtlinien erlaubt werden soll. Dies ist nützlich, wenn der Configuration Manager-Administrator über keine lokalen Administratoranmeldeinformationen auf dem Clientcomputer verfügt. Sie können eine Reihe von Konten angeben, die Sie durch Semikolons trennen.  
+Gibt eine oder mehrere Windows-Benutzerkonten oder -Gruppen an, denen der Zugriff auf die Clienteinstellungen und -richtlinien erlaubt werden soll. Dies ist nützlich, wenn der Configuration Manager-Administrator über keine lokalen Administratoranmeldeinformationen auf dem Clientcomputer verfügt. Geben Sie eine Liste von Konten an, die Sie durch Semikolons trennen.  
 
-Beispiel: **CCMSetup.exe CCMADMINS="Domäne\Konto1;Domäne\Konto1"**  
+Beispiel: `CCMSetup.exe CCMADMINS="Domain\Account1;Domain\Group1"`  
 
 ### <a name="ccmallowsilentreboot"></a>CCMALLOWSILENTREBOOT
 
-Hiermit wird angegeben, dass ggf. ein Neustart des Computers nach der Clientinstallation zulässig ist.  
+Geben Sie an, dass ein Neustart des Computers nach der Clientinstallation ggf. zulässig ist.  
 
 > [!IMPORTANT]  
 >  Der Computer führt den Neustart ohne vorherige Warnung aus, auch wenn ein Benutzer angemeldet ist.  
@@ -259,7 +254,7 @@ Beispiel: **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 
  Weitere Informationen zur internetbasierten Clientverwaltung finden Sie unter [Überlegungen zur Clientkommunikation aus dem Internet oder aus einer nicht vertrauenswürdigen Gesamtstruktur](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in [Datenübertragungen zwischen Endpunkten in System Center Configuration Manager](../../plan-design/hierarchy/communications-between-endpoints.md).  
 
- Beispiel: **CCMSetup.exe /UsePKICert  CCMALWAYSINF=1 CCMHOSTNAME=SERVER3.CONTOSO.COM SMSSITECODE=ABC**  
+ Beispiel: `CCMSetup.exe /UsePKICert  CCMALWAYSINF=1 CCMHOSTNAME=SERVER3.CONTOSO.COM SMSSITECODE=ABC`  
 
 ### <a name="ccmcertissuers"></a>CCMCERTISSUERS
 
@@ -269,31 +264,31 @@ Beispiel: **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 
  Bei dieser Suche nach Übereinstimmungen für Antragstellerattribute im Stamm-Zertifizierungsstellenzertifikat wird die Groß-/Kleinschreibung beachtet. Attribute können durch ein Komma (,) oder ein Semikolon (;) getrennt werden. Mehrere Stamm-Zertifizierungsstellenzertifikate können mithilfe einer Trennlinie angegeben werden. Beispiel:  
 
- **CCMCERTISSUERS=”CN=Contoso Root CA; OU=Servers; O=Contoso, Ltd; C=US &amp;#124; CN=Litware Corporate Root CA; O=Litware, Inc.”**  
+ `CCMCERTISSUERS=”CN=Contoso Root CA; OU=Servers; O=Contoso, Ltd; C=US &#124; CN=Litware Corporate Root CA; O=Litware, Inc.”`  
 
 > [!TIP]  
 >  Verweisen Sie auf die Datei „mobileclient.tcf“ im &lt;Configuration Manager-Verzeichnis\>\bin\\&lt;Plattform\> auf dem Standortservercomputer, um den für den Standort konfigurierten Eintrag **CertificateIssuers=&lt;Zeichenfolge\>** zu kopieren.  
 
 ### <a name="ccmcertsel"></a>CCMCERTSEL
 
- Hiermit werden die Zertifikatauswahlkriterien angegeben, wenn der Client mehr als ein Zertifikat aufweist, das für die HTTPS-Kommunikation verwendet werden kann (ein gültiges Zertifikat mit Clientauthentifizierungsfunktionen).  
+ Gibt die Zertifikatauswahlkriterien an, wenn der Client mehrere Zertifikate für die HTTPS-Kommunikation besitzt (ein gültiges Zertifikat mit Clientauthentifizierungsfunktionen).  
 
- Sie können in den Feldern "Antragstellername" oder "Alternativer Antragstellername" nach einer genauen Übereinstimmung (verwenden Sie **Subject:**:) oder nach einer teilweisen Übereinstimmung suchen (verwenden Sie **SubjectStr:)**. Beispiele:  
+ Sie können in den Feldern „Antragstellername“ oder „Alternativer Antragstellername“ nach einer genauen Übereinstimmung (verwenden Sie **Subject:**:) oder nach einer teilweisen Übereinstimmung suchen (verwenden Sie **SubjectStr:)**. Beispiele:  
 
- **CCMCERTSEL="Subject:computer1.contoso.com"** sucht nach einem Zertifikat, das im Antragstellernamen oder im alternativen Antragstellernamen genau mit dem Computernamen „computer1.contoso.com“ übereinstimmt.  
+ `CCMCERTSEL="Subject:computer1.contoso.com"` sucht nach einem Zertifikat, das im Antragstellernamen oder im alternativen Antragstellernamen genau mit dem Computernamen „computer1.contoso.com“ übereinstimmt.  
 
- **CCMCERTSEL="SubjectStr:contoso.com"** sucht nach einem Zertifikat, das im Antragstellernamen oder alternativen Antragstellernamen „contoso.com“ aufweist.  
+ `CCMCERTSEL="SubjectStr:contoso.com"` sucht nach einem Zertifikat, das im Antragstellernamen oder alternativen Antragstellernamen „contoso.com“ aufweist.  
 
  Sie können für die Attribute „Antragstellername“ und „Alternativer Antragstellername“ auch Objekt-IDs (OIDs) oder einen definierten Namen verwenden. Beispiel:  
 
- Mit**CCMCERTSEL="SubjectAttr:2.5.4.11 = Computers"** wird nach dem Attribut von Organisationseinheiten gesucht, das als Objekt-ID angegeben wird und „Computers“ heißt.  
+ `CCMCERTSEL="SubjectAttr:2.5.4.11 = Computers"` sucht nach dem Organisationseinheitenattribut, das als Objektbezeichner angegeben wird und „Computers“ heißt.  
 
- **CCMCERTSEL="SubjectAttr:OU = Computers"** sucht nach dem Organisationseinheitenattribut, das als definierter Name angegeben wird und „Computers“ heißt.  
+ `CCMCERTSEL="SubjectAttr:OU = Computers"` sucht nach dem Organisationseinheitenattribut, das als definierter Name angegeben wird und „Computers“ heißt.  
 
 > [!IMPORTANT]  
->  Wenn Sie das Feld Antragstellername verwenden, wird die Groß-/Kleinschreibung bei der Suche nach Übereinstimmungen beachtet, wenn Sie das Auswahlkriterium **Subject:** angeben, nicht jedoch, wenn Sie das Auswahlkriterium **SubjectStr:** angeben.  
+>  Wenn Sie das Feld „Antragstellername“ verwenden, muss bei **Subject:** die Groß-/Kleinschreibung beachtet werden, bei **SubjectStr:** dagegen nicht.  
 >   
->  Wenn Sie das Feld „Alternativer Antragstellername“ verwenden, wird bei der Suche nach Übereinstimmungen für beide Auswahlkriterien ( **Subject:** und **SubjectStr:** ) zwischen Groß-/Kleinschreibung unterschieden.  
+>  Wenn Sie das Feld „Alternativer Antragstellername“ verwenden, spielt die Groß-/Kleinschreibung bei **Subject:** und bei **SubjectStr:** keine Rolle.  
 
  Eine vollständige Liste der Attribute, die für die Zertifikatauswahl verwendet werden können, finden Sie unter [Unterstützte Attributwerte für die PKI-Zertifikatauswahlkriterien](#BKMK_attributevalues).  
 
@@ -301,35 +296,35 @@ Beispiel: **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 
 ### <a name="ccmcertstore"></a>CCMCERTSTORE
 
- Hiermit wird ein alternativer Zertifikatsspeichername angegeben, wenn das Clientzertifikat, das für die HTTPS-Kommunikation verwendet werden soll, nicht im Standardzertifikatspeicher **Persönlich** im Computerspeicher gespeichert ist.  
+ Gibt einen alternativen Zertifikatspeichernamen an, wenn das Clientzertifikat für HTTPS nicht im Standardzertifikatspeicher **Persönlich** im Computerspeicher abgelegt ist.  
 
- Beispiel: **CCMSetup.exe /UsePKICert CCMCERTSTORE="ConfigMgr"**  
+ Beispiel: `CCMSetup.exe /UsePKICert CCMCERTSTORE="ConfigMgr"`  
 
 ### <a name="ccmdebuglogging"></a>CCMDEBUGLOGGING
 
-  Aktiviert die Debugprotokollierung. Die Werte können auf  0 (deaktiviert) oder 1 (aktiviert) festgelegt werden. Der Standardwert lautet 0. Hierdurch protokolliert der Client Basisinformationen, die für die Fehlerbehandlung bei Problemen nützlich sein können. Zur Vermeidung einer zu umfangreichen Protokollierung, durch die es schwierig werden kann, relevante Informationen in den Protokolldateien finden, sollte diese Eigenschaft an Produktionsstandorten möglichst nicht verwendet werden. CCMENABLELOGGING muss auf TRUE festgelegt sein, damit die Debugprotokollierung aktiviert wird.  
+  Aktiviert die Debugprotokollierung. Die Werte können auf 0 (aus, Standardeinstellung) oder 1 (ein) festgelegt werden. Hierdurch protokolliert der Client Basisinformationen für die Problembehandlung. Zur Vermeidung einer zu umfangreichen Protokollierung, durch die es schwierig werden kann, relevante Informationen in den Protokolldateien finden, sollte diese Eigenschaft an Produktionsstandorten möglichst nicht verwendet werden. CCMENABLELOGGING muss zudem auf TRUE festgelegt sein, damit die Debugprotokollierung aktiviert wird.  
 
-  Beispiel: **CCMSetup.exe CCMDEBUGLOGGING=1**  
+  Beispiel: `CCMSetup.exe CCMDEBUGLOGGING=1`  
 
 ### <a name="ccmenablelogging"></a>CCMENABLELOGGING
 
-  Aktiviert die Protokollierung, wenn die Eigenschaft auf TRUE festgelegt ist. Standardmäßig ist die Protokollierung aktiviert. Die Protokolldateien werden im Configuration Manager-Clientinstallationsorder im Ordner **Logs** gespeichert. Standardmäßig ist dies der Ordner %Windir%\CCM\Logs.  
+  Standardmäßig ist TRUE eingestellt, damit die Protokollierung aktiviert wird. Die Protokolldateien werden im Configuration Manager-Clientinstallationsorder im Ordner **Logs** gespeichert. Standardmäßig ist dies der Ordner %Windir%\CCM\Logs.  
 
-  Beispiel: **CCMSetup.exe CCMENABLELOGGING=TRUE**  
+  Beispiel: `CCMSetup.exe CCMENABLELOGGING=TRUE`  
 
 ### <a name="ccmevalinterval"></a>CCMEVALINTERVAL  
 
- Hiermit wird die Ausführungshäufigkeit des Tools zur Clientintegritätsauswertung (ccmeval.exe) angegeben. Sie können einen Wert zwischen **1** und **1440** Minuten angeben. Wenn Sie diese Eigenschaft nicht angeben oder einen ungültigen Wert angeben, wird die Auswertung einmal täglich ausgeführt.  
+ Die Ausführungshäufigkeit des Tools zur Clientintegritätsauswertung (ccmeval.exe). Ein Wert zwischen **1** und **1440** Minuten ist hier möglich. Standardmäßig wird das Tool einmal täglich ausgeführt.  
 
 ### <a name="ccmevalhour"></a>CCMEVALHOUR
 
- Hiermit wird der Ausführungszeitpunkt des Tools zur Clientintegritätsauswertung (ccmeval.exe) in Stunden angegeben. Sie können einen Wert zwischen **0** Uhr (Mitternacht) und **23** Uhr angeben. Wenn Sie diese Eigenschaft nicht angeben oder einen ungültigen Wert angeben, wird die Auswertung um Mitternacht ausgeführt.  
+ Der Ausführungszeitpunkt des Tools zur Clientintegritätsauswertung (ccmeval.exe) in Stunden, d.h. zwischen **0** (Mitternacht) und **23** (23 Uhr). Standardmäßig wird das Tool um Mitternacht ausgeführt.  
 
 ### <a name="ccmfirstcert"></a>CCMFIRSTCERT
 
  Wenn für diese Eigenschaft der Wert 1 festgelegt ist, wird vom Client das PKI-Zertifikat mit der längsten Gültigkeitsdauer ausgewählt. Diese Einstellung ist möglicherweise erforderlich, wenn Sie Netzwerkzugriffsschutz mit IPsec-Erzwingung verwenden.  
 
- Beispiel: **CCMSetup.exe /UsePKICert CCMFIRSTCERT=1**  
+ Beispiel: `CCMSetup.exe /UsePKICert CCMFIRSTCERT=1`  
 
 ### <a name="ccmhostname"></a>CCMHOSTNAME
 
@@ -337,33 +332,31 @@ Beispiel: **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 
  Geben Sie diese Option nicht mit der Installationseigenschaft „SMSSITECODE=AUTO“ an. Internetbasierte Clients müssen direkt ihrem internetbasierten Standort zugewiesen werden.  
 
- Beispiel: **CCMSetup.exe  /UsePKICert/ CCMHOSTNAME="SMSMP01.corp.contoso.com"**  
+ Beispiel: `CCMSetup.exe  /UsePKICert/ CCMHOSTNAME="SMSMP01.corp.contoso.com"`  
 
 ### <a name="ccmhttpport"></a>CCMHTTPPORT
 
- Hiermit wird der Port angegeben, der vom Client für die Kommunikation mit den Standortsystemservern über HTTP verwendet werden soll.  
+ Hiermit wird der Port angegeben, der vom Client für die Kommunikation mit den Standortsystemservern über HTTP verwendet werden soll. Standardmäßig auf Port 80 festgelegt.  
 
- Wenn kein Port angegeben ist, wird der Standardwert 80 verwendet.  
-
- Beispiel: **CCMSetup.exe CCMHTTPPORT=80**  
+ Beispiel: `CCMSetup.exe CCMHTTPPORT=80`  
 
 ### <a name="ccmhttpsport"></a>CCMHTTPSPORT
 
-Hiermit wird der Port angegeben, der vom Client für die Kommunikation mit den Standortsystemservern über HTTPS verwendet werden soll. Wenn kein Port angegeben ist, wird der Standardwert 443 verwendet.  
+Hiermit wird der Port angegeben, der vom Client für die Kommunikation mit den Standortsystemservern über HTTPS verwendet werden soll. Standardmäßig auf Port 443 festgelegt.  
 
-Beispiel: **CCMSetup.exe /UsePKICert CCMHTTPSPORT=443**  
+Beispiel: `CCMSetup.exe /UsePKICert CCMHTTPSPORT=443`  
 
 ### <a name="ccminstalldir"></a>CCMINSTALLDIR
 
- Hiermit wird der Ordner identifiziert, in dem die Configuration Manager-Clientdateien installiert sind. Wenn diese Eigenschaft nicht festgelegt ist, wird die Clientsoftware im Ordner *%Windir%*\CCM installiert. Unabhängig vom Installationsort dieser Dateien wird die Datei "Ccmcore.dll" immer im Ordner *%Windir%\System32* installiert. Bei 64-Bit-Betriebssystemen wird außerdem immer eine Kopie der Datei „Ccmcore.dll“ im Ordner *%Windir%*\SysWOW64 installiert, um 32-Bit-Anwendungen zu unterstützen, von denen die 32-Bit-Version der Configuration Manager-Client-APIs aus dem Configuration Manager-Software Developer Kit (SDK) verwendet wird.  
+ Weist den Ordner aus, in dem die Configuration Manager-Clientdateien installiert sind. Standardmäßig ist dies *%Windir%*\CCM. Unabhängig vom Installationsort dieser Dateien wird die Datei „Ccmcore.dll“ stets im Ordner *%Windir%\System32* installiert. Bei 64-Bit-Betriebssystemen wird außerdem immer eine Kopie der Datei „Ccmcore.dll“ im Ordner *%Windir%*\SysWOW64 installiert, um 32-Bit-Anwendungen zu unterstützen, von denen die 32-Bit-Version der Configuration Manager-Client-APIs aus dem Configuration Manager-Software Developer Kit (SDK) verwendet wird.  
 
- Beispiel: **CCMSetup.exe CCMINSTALLDIR="C:\ConfigMgr"**  
+ Beispiel: `CCMSetup.exe CCMINSTALLDIR="C:\ConfigMgr"`  
 
 ### <a name="ccmloglevel"></a>CCMLOGLEVEL
 
-Gibt die Anzahl der Details an, die in die Configuration Manager-Protokolldateien geschrieben werden. Geben Sie eine ganze Zahl zwischen 0 und 3 an, wobei 0 für die ausführlichste Protokollierung und 3 für die reine Fehlerprotokollierung steht. Der Standardwert lautet 1.  
+Gibt die Detailebene für das Schreiben in die Configuration Manager-Protokolldateien an. Geben Sie eine ganze Zahl zwischen 0 und 3 an, wobei 0 für die ausführlichste Protokollierung und 3 für die reine Fehlerprotokollierung steht. Der Standardwert lautet 1.  
 
-Beispiel: **CCMSetup.exe CCMLOGLEVEL=3**  
+Beispiel: `CCMSetup.exe CCMLOGLEVEL=3`  
 
 ### <a name="ccmlogmaxhistory"></a>CCMLOGMAXHISTORY
 
@@ -371,17 +364,17 @@ Wenn eine Configuration Manager-Protokolldatei die Größe von 250000 Bytes erre
 
 Diese Eigenschaft gibt an, wie viele vorherige Versionen der Protokolldatei beibehalten werden sollen. Der Standardwert lautet 1. Wird der Wert auf 0 festgelegt, werden keine alten Protokolldateien beibehalten.  
 
-Beispiel: **CCMSetup.exe CCMLOGMAXHISTORY=0**  
+Beispiel: `CCMSetup.exe CCMLOGMAXHISTORY=0`  
 
 ### <a name="ccmlogmaxsize"></a>CCMLOGMAXSIZE
 
-Gibt die maximale Protokolldateigröße in Bytes an. Wenn ein Protokoll die angegebene Größe erreicht, wird es als Verlaufsdatei umbenannt, und eine neue Datei wird erstellt. Diese Eigenschaft muss auf mindestens 10000 Bytes festgelegt werden. Der Standardwert beträgt 250000 Bytes.  
+Die maximale Protokolldateigröße in Bytes. Wenn ein Protokoll die angegebene Größe erreicht, wird es als Verlaufsdatei umbenannt, und eine neue Datei wird erstellt. Diese Eigenschaft muss auf mindestens 10000 Bytes festgelegt werden. Der Standardwert beträgt 250000 Bytes.  
 
-Beispiel: **CCMSetup.exe CCMLOGMAXSIZE=300000**  
+Beispiel: `CCMSetup.exe CCMLOGMAXSIZE=300000`  
 
 ### <a name="disablesiteopt"></a>DISABLESITEOPT
 
- Wenn diese Eigenschaft auf TRUE festgelegt ist, wird verhindert, dass Endbenutzer mit Administratoranmeldeinformationen auf dem Clientcomputer den für den Configuration Manager-Client zugewiesenen Standort mithilfe von Configuration Manager in der Systemsteuerung des Clientcomputers ändern können.  
+ Wenn diese Eigenschaft auf TRUE festgelegt ist, wird verhindert, dass Endbenutzer mit Administratoranmeldeinformationen auf dem Clientcomputer den für Configuration Manager zugewiesenen Standort in **Configuration Manager** in der Systemsteuerung ändern können.  
 
  Beispiel: **CCMSetup.exe DISABLESITEOPT=TRUE**  
 
@@ -389,7 +382,7 @@ Beispiel: **CCMSetup.exe CCMLOGMAXSIZE=300000**
 
 Wenn für diese Eigenschaft der Wert TRUE festgelegt wurde, können Endbenutzer, die über Administratoranmeldeinformationen auf dem Clientcomputer verfügen, die Einstellungen des Clientcacheordners für den Configuration Manager-Client nicht mithilfe von Configuration Manager in der Systemsteuerung des Clientcomputers ändern.  
 
-Beispiel: **CCMSetup.exe DISABLECACHEOPT=TRUE**  
+Beispiel: `CCMSetup.exe DISABLECACHEOPT=TRUE`  
 
 ### <a name="dnssuffix"></a>DNSSUFFIX
 
@@ -403,60 +396,62 @@ Beispiel: **CCMSetup.exe DISABLECACHEOPT=TRUE**
 > [!NOTE]  
 >  Die DNS-Veröffentlichung ist in Configuration Manager standardmäßig nicht aktiviert.  
 
- Beispiel: **CCMSetup.exe SMSSITECODE=ABC DNSSUFFIX=contoso.com**  
+ Beispiel: `CCMSetup.exe SMSSITECODE=ABC DNSSUFFIX=contoso.com`  
 
 ### <a name="fsp"></a>FSP
 
 Gibt den Fallbackstatuspunkt an, von dem die von Configuration Manager-Clientcomputern gesendeten Zustandsmeldungen empfangen und verarbeitet werden.  
 
-Weitere Informationen zum Fallbackstatuspunkt, finden Sie unter [Bestimmen, ob ein Fallbackstatuspunkt erforderlich ist](plan/determine-the-site-system-roles-for-clients.md#BKMK_Determine_FSP) im Artikel [Ermitteln der Standortsystemrollen für System Center Configuration Manager-Clients](plan/determine-the-site-system-roles-for-clients.md).  
+Weitere Informationen zum Fallbackstatuspunkt finden Sie unter [Bestimmen, ob ein Fallbackstatuspunkt erforderlich ist](/sccm/core/clients/deploy/plan#determine-if-you-need-a-fallback-status-point).  
 
-Beispiel: **CCMSetup.exe FSP=SMSFP01**  
+Beispiel: `CCMSetup.exe FSP=SMSFP01`  
 
 ### <a name="ignoreappvversioncheck"></a>IGNOREAPPVVERSIONCHECK
 
- Hiermit wird angegeben, dass vor der Clientinstallation nicht geprüft wird, ob die minimal erforderliche Version von Microsoft Application Virtualization (App-V) vorhanden ist.  
+ Gibt an, dass vor der Clientinstallation nicht geprüft wird, ob die erforderliche Mindestversion von Microsoft Application Virtualization (App-V) vorhanden ist.  
 
 > [!IMPORTANT]  
 >  Wenn Sie den Configuration Manager-Client installieren, ohne App-V zu installieren, können Sie keine virtuellen Anwendungen bereitstellen.  
 
- Beispiel: **CCMSetup.exe IGNOREAPPVVERSIONCHECK=TRUE**  
+ Beispiel: `CCMSetup.exe IGNOREAPPVVERSIONCHECK=TRUE`  
 
 ### <a name="notifyonly"></a>NOTIFYONLY
 
-Gibt an, dass der Clientstatus gemeldet wird, jedoch keine Probleme behoben werden, die für den Configuration Manager-Client auftreten.  
+Gibt an, dass der Clientstatus gemeldet wird, jedoch keine Probleme behoben werden, die in Verbindung mit dem Client auftreten.  
 
-Beispiel: **CCMSetup.exe NOTIFYONLY=TRUE**  
+Beispiel: `CCMSetup.exe NOTIFYONLY=TRUE`  
 
 Weitere Informationen finden Sie unter [Konfigurieren des Clientstatus in System Center Configuration Manager](configure-client-status.md).  
 
 ### <a name="resetkeyinformation"></a>RESETKEYINFORMATION
 
- Wenn ein Configuration Manager-Client den falschen vertrauenswürdigen Configuration Manager-Stammschlüssel aufweist und keine Verbindung mit dem vertrauenswürdigen Verwaltungspunkt herstellen kann, um eine gültige Kopie des neuen vertrauenswürdigen Stammschlüssels abzurufen, müssen Sie den alten vertrauenswürdigen Stammschlüssel manuell mithilfe dieser Eigenschaft entfernen. Diese Situation tritt häufig auf, wenn Sie einen Client in eine andere Standorthierarchie verschieben. Diese Eigenschaft gilt für Clients, von denen HTTP- und HTTPS-Clientkommunikation verwendet wird.  
+ Wenn ein Configuration Manager-Client den falschen vertrauenswürdigen Configuration Manager-Stammschlüssel aufweist und keine Verbindung mit dem vertrauenswürdigen Verwaltungspunkt herstellen kann, um den neuen vertrauenswürdigen Stammschlüssel abzurufen, müssen Sie den alten vertrauenswürdigen Stammschlüssel manuell mithilfe dieser Eigenschaft entfernen. Dieser Fall tritt möglicherweise ein, wenn Sie einen Client aus einer Standorthierarchie in eine andere verschieben. Diese Eigenschaft gilt für Clients, von denen HTTP- und HTTPS-Clientkommunikation verwendet wird.  
 
- Beispiel: **CCMSetup.exe RESETKEYINFORMATION=TRUE**  
+ Beispiel: `CCMSetup.exe RESETKEYINFORMATION=TRUE`  
 
 ### <a name="sitereassign"></a>SITEREASSIGN
 
 Ermöglicht eine automatische Standortneuzuordnung für Clientupgrades bei Verwendung mit [SMSSITECODE](#smssitecode)=AUTO.
 
-Beispiel: **CCMSetup.exe SMSSITECODE=AUTO SITEREASSIGN=TRUE**
+Beispiel: `CCMSetup.exe SMSSITECODE=AUTO SITEREASSIGN=TRUE`
 
 ### <a name="smscachedir"></a>SMSCACHEDIR
 
 Hiermit wird der Speicherort des Clientcacheordners angegeben, in dem temporäre Dateien auf dem Clientcomputer gespeichert werden. Standardmäßig ist dies der Speicherort *%Windir \ccmcache*.  
 
-Beispiel: **CCMSetup.exe SMSCACHEDIR="C:\Temp"**  
+Beispiel: `CCMSetup.exe SMSCACHEDIR="C:\Temp"`  
 
-Diese Eigenschaft kann in Verbindung mit der Eigenschaft SMSCACHEFLAGS verwendet werden, um den Speicherort des Clientcacheordners genauer zu steuern.  
+Diese Eigenschaft kann in Verbindung mit der Eigenschaft SMSCACHEFLAGS verwendet werden, um den Speicherort des Clientcacheordners zu steuern.  
 
-Beispiel: Mit **CCMSetup.exe SMSCACHEDIR=Cache SMSCACHEFLAGS=MAXDRIVE** wird der Clientcacheordner auf dem größten verfügbaren Laufwerk des Clients installiert.  
+Beispiel: Mit `CCMSetup.exe SMSCACHEDIR=Cache SMSCACHEFLAGS=MAXDRIVE` wird der Clientcacheordner auf dem größten verfügbaren Laufwerk des Clients installiert.  
 
 ### <a name="smscacheflags"></a>SMSCACHEFLAGS
 
-Hiermit wird der Configuration Manager-Cacheordner konfiguriert, in dem temporäre Dateien gespeichert werden. Sie können die SMSCACHEFLAGS-Eigenschaften einzeln oder zusammen durch Kommas getrennt verwenden. Wenn diese Eigenschaft nicht angegeben wird, wird der Clientcacheordner der Eigenschaft SMSCACHEDIR entsprechend installiert und nicht komprimiert, und der Wert der Eigenschaft SMSCACHESIZE wird als Größe des Ordners in MB verwendet.  
+Hiermit werden weitere Installationsdetails für den Clientcacheordner angegeben. Sie können die SMSCACHEFLAGS-Eigenschaften einzeln oder zusammen durch Kommas getrennt verwenden. Wenn diese Eigenschaft nicht angegeben wird, wird der Clientcacheordner der Eigenschaft SMSCACHEDIR entsprechend installiert und nicht komprimiert, und der Wert der Eigenschaft SMSCACHESIZE wird als Größe des Ordners in MB verwendet.  
 
-Hiermit werden weitere Installationsdetails für den Clientcacheordner angegeben. Die folgenden Eigenschaften können angegeben werden:  
+Diese Einstellung wird ignoriert, wenn ein Upgrade eines vorhandenen Clients ausgeführt wird.  
+
+Eigenschaften:  
 
 -   PERCENTDISKSPACE: Gibt die Ordnergröße als Prozentsatz des gesamten Speicherplatzes an. Wenn Sie diese Eigenschaft angeben, müssen Sie auch die Eigenschaft SMSCACHESIZE als Prozentwert angeben.  
 
@@ -466,26 +461,19 @@ Hiermit werden weitere Installationsdetails für den Clientcacheordner angegeben
 
 -   MAXDRIVESPACE: Gibt an, dass der Ordner auf dem Laufwerk mit dem meisten verfügbaren Speicherplatz installiert werden soll. Dieser Wert wird ignoriert, wenn ein Pfad mit der Eigenschaft SMSCACHEDIR angegeben wurde.  
 
--   NTFSONLY: Gibt an, dass der Ordner nur auf Laufwerken installiert werden kann, die mit NTFS formatiert sind. Dieser Wert wird ignoriert, wenn ein Pfad mit der Eigenschaft SMSCACHEDIR angegeben wurde.  
+-   NTFSONLY: Gibt an, dass der Ordner nur auf NTFS-Laufwerken installiert werden kann. Dieser Wert wird ignoriert, wenn ein Pfad mit der Eigenschaft SMSCACHEDIR angegeben wurde.  
 
 -   COMPRESS: Gibt an, dass der Ordner komprimiert gespeichert werden soll.  
 
 -   FAILIFNOSPACE: Gibt an, dass die Clientsoftware entfernt werden soll, wenn ausreichend Speicherplatz zum Installieren des Ordners verfügbar ist.  
 
-> [!NOTE]  
->  Für diese Eigenschaft können mehrere Eigenschaften angegeben werden, indem diese mit einem Strichpunkt getrennt eingegeben werden.  
+Beispiel: `CCMSetup.exe SMSCACHEFLAGS=NTFSONLY;COMPRESS`  
 
-Wenn diese Eigenschaft nicht angegeben wird, wird der Clientcacheordner der Eigenschaft SMSCACHEDIR entsprechend erstellt und nicht komprimiert, und seine Größe entspricht dem für die Eigenschaft SMSCACHESIZE angegebenen Wert.  
-
-Beispiel: **CCMSetup.exe SMSCACHEFLAGS=NTFSONLY;COMPRESS**  
-
-> [!NOTE]  
->  Diese Einstellung wird ignoriert, wenn ein Upgrade eines vorhandenen Clients ausgeführt wird.  
 
 ### <a name="smscachesize"></a>SMSCACHESIZE
 
 > [!IMPORTANT]
-> In Configuration Manager Version 1606 sind neue Clienteinstellungen für die Angabe der Größe des Clientcacheordners verfügbar. Das Hinzufügen dieser Clienteinstellungen ersetzt SMSCACHESIZE als client.msi-Eigenschaft, um die Größe des Clientcaches anzugeben. Weitere Informationen zu den Clienteinstellungen finden Sie unter [client settings for cache size](about-client-settings.md#client-cache-settings) (Clienteinstellungen für Cachegröße).  
+> Ab Configuration Manager Version 1606 sind neue Clienteinstellungen für die Angabe der Größe des Clientcacheordners verfügbar. Das Hinzufügen dieser Clienteinstellungen ersetzt SMSCACHESIZE als client.msi-Eigenschaft, um die Größe des Clientcaches anzugeben. Weitere Informationen zu den Clienteinstellungen finden Sie unter [client settings for cache size](about-client-settings.md#client-cache-settings) (Clienteinstellungen für Cachegröße).  
 
 Wenn diese Eigenschaft für 1602 und früher in Verbindung mit der Eigenschaft PERCENTDISKSPACE oder PERCENTFREEDISKSPACE verwendet wird, gibt SMSCACHESIZE hiermit die Größe des Clientcacheordners in Megabyte (MB) oder als Prozentsatz an. Wenn diese Eigenschaft nicht festgelegt ist, wird für den Ordner standardmäßig die maximale Größe von 5120 MB verwendet. Der niedrigste Wert, den Sie angeben können, beträgt 1 MB.  
 
@@ -494,17 +482,14 @@ Wenn diese Eigenschaft für 1602 und früher in Verbindung mit der Eigenschaft P
 
 Diese Einstellung wird ignoriert, wenn ein Upgrade eines vorhandenen Clients ausgeführt wird und wenn Softwareupdates vom Client heruntergeladen werden.  
 
-Beispiel: **CCMSetup.exe SMSCACHESIZE=100**  
+Beispiel: `CCMSetup.exe SMSCACHESIZE=100`  
 
 > [!NOTE]  
->  Wenn Sie einen Client neu installieren, können Sie die Installationseigenschaften SMSCACHESIZE und SMSCACHEFLAGS nicht verwenden, um die Cachegröße auf einen niedrigeren Wert als vorher festzulegen. Wenn Sie dies versuchen, wird der Wert ignoriert und die Cachegröße automatisch auf die letzte Größe festgelegt.  
->   
->  Wenn Sie den Client z. B. mit der standardmäßigen Cachegröße von 5120 MB installieren und den Client dann mit einer Cachegröße von 100 MB neu installieren, wird die Cacheordnergröße auf dem neu installierten Client auf 5120 MB festgelegt.  
-
+>  Wenn Sie einen Client neu installieren, können Sie die Installationseigenschaften SMSCACHESIZE und SMSCACHEFLAGS nicht verwenden, um die Cachegröße auf einen niedrigeren Wert als vorher festzulegen. Wenn Sie dies versuchen, wird der Wert ignoriert und die Cachegröße wird automatisch auf die vorherige Größe festgelegt.  
 
 ### <a name="smsconfigsource"></a>SMSCONFIGSOURCE
 
-Gibt den zu überprüfenden Speicherort und die Reihenfolge an, die das Configuration Manager-Installationsprogramm für die Überprüfung der Konfigurationseinstellungen verwendet. Bei der Eigenschaft handelt es sich um eine Zeichenfolge aus einem oder mehreren Zeichen, die jeweils eine spezielle Konfigurationsquelle angibt. Verwenden Sie die Zeichenwerte R, P, M und U wie in den folgenden Beispielen allein oder zusammen:  
+Gibt den zu überprüfenden Speicherort und die Reihenfolge an, die das Configuration Manager-Installationsprogramm für die Überprüfung der Konfigurationseinstellungen verwendet. Bei der Eigenschaft handelt es sich um eine Zeichenfolge aus einem oder mehreren Zeichen, die jeweils eine spezielle Konfigurationsquelle angibt. Verwenden Sie die Zeichenwerte R, P, M und U alleine oder zusammen:  
 
 -   R: Überprüfung der Konfigurationseinstellungen in der Registrierung.  
 
@@ -518,48 +503,47 @@ Gibt den zu überprüfenden Speicherort und die Reihenfolge an, die das Configur
 
  Bei der Clientinstallation wird standardmäßig `PU` verwendet, um zuerst die Installationseinstellungen und dann die vorhandenen Einstellungen zu überprüfen.  
 
- Beispiel: **CCMSetup.exe SMSCONFIGSOURCE=RP**  
+ Beispiel: `CCMSetup.exe SMSCONFIGSOURCE=RP`  
 
 ### <a name="smsdirectorylookup"></a>SMSDIRECTORYLOOKUP
 
  Hiermit wird angegeben, ob Windows Internet Name Service (WINS) vom Client verwendet werden kann, um einen Verwaltungspunkt zu finden, von dem HTTP-Verbindungen zugelassen werden. Diese Methode wird von den Clients verwendet, wenn kein Verwaltungspunkt in den Active Directory-Domänendiensten oder in DNS gefunden werden kann.  
 
- Diese Eigenschaft ist unabhängig davon, ob vom Client WINS für die Namensauflösung verwendet wird.  
+ Diese Eigenschaft beeinflusst nicht, ob der Client WINS für die Namensauflösung verwendet.  
 
  Sie können zwei verschiedene Modi für diese Eigenschaft konfigurieren:  
 
 -   NOWINS: Dies ist die sicherste Einstellung für diese Eigenschaft. Es wird verhindert, dass von Clients ein Verwaltungspunkt in WINS gefunden wird.  Wenn Sie diese Einstellung verwenden, ist eine alternative Methode für die Clients erforderlich, mit der ein Verwaltungspunkt im Intranet gefunden werden kann, beispielsweise Active Directory-Domänendienste oder DNS-Veröffentlichung.  
 
--   WINSSECURE: In diesem Modus kann WINS von einem Client, von dem HTTP-Kommunikation verwendet wird, zum Finden eines Verwaltungspunkts verwendet werden. Für den Client ist jedoch eine Kopie des vertrauenswürdigen Stammschlüssels erforderlich, bevor eine Verbindung mit dem Verwaltungspunkt hergestellt werden kann. Weitere Informationen finden Sie unter [Planning for the Trusted Root Key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) in [Plan for security in System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
+-   WINSSECURE (Standardeinstellung): In diesem Modus kann ein Client, der HTTP-Kommunikation verwendet, mithilfe von WINS einen Verwaltungspunkt suchen. Für den Client ist jedoch eine Kopie des vertrauenswürdigen Stammschlüssels erforderlich, bevor eine Verbindung mit dem Verwaltungspunkt hergestellt werden kann. Weitere Informationen finden Sie unter [Planning for the Trusted Root Key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) in [Plan for security in System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
 
- Wenn diese Eigenschaft nicht angegeben ist, wird der Standardwert WINSSECURE verwendet.  
 
- Beispiel: **CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS**  
+ Beispiel: `CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS`  
 
 ### <a name="smsmp"></a>SMSMP
 
 Hiermit wird ein erster Verwaltungspunkt für die Verwendung durch den Configuration Manager-Client angegeben.  
 
 > [!IMPORTANT]  
->  Wenn vom Verwaltungspunkt nur Clientverbindungen über HTTPS akzeptiert werden (keine HTTP-Clientverbindungen), müssen Sie dem Namen des Verwaltungspunkts das Präfix „https://“ voranstellen.  
+>  Wenn der Verwaltungspunkt nur Clientverbindungen über HTTPS akzeptiert, müssen Sie dem Namen des Verwaltungspunkts das Präfix „https://“ voranstellen.  
 
-Beispiel: **CCMSetup.exe SMSMP=smsmp01.contoso.com**  
+Beispiel:`CCMSetup.exe SMSMP=smsmp01.contoso.com`  
 
-Beispiel: **CCMSetup.exe SMSMP=smsmp01.contoso.com**  
+Beispiel: `CCMSetup.exe SMSMP=smsmp01.contoso.com`
 
-Beispiel: **CCMSetup.exe SMSMP=https://smsmp01.contoso.com**  
+Beispiel: `CCMSetup.exe SMSMP=https://smsmp01.contoso.com`  
 
 ### <a name="smspublicrootkey"></a>SMSPUBLICROOTKEY
 
- Hiermit wird der vertrauenswürdige Configuration Manager-Stammschlüssel angegeben für den Fall, dass dieser nicht aus den Active Directory-Domänendiensten abgerufen werden kann. Diese Eigenschaft gilt für Clients, von denen HTTP- und HTTPS-Clientkommunikation verwendet wird. Weitere Informationen finden Sie unter [Planning for the Trusted Root Key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) in [Plan for security in System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
+ Gibt den vertrauenswürdigen Configuration Manager-Stammschlüssel für den Fall an, dass dieser nicht aus den Active Directory-Domänendiensten abgerufen werden kann. Diese Eigenschaft gilt für Clients, von denen HTTP- und HTTPS-Clientkommunikation verwendet wird. Weitere Informationen finden Sie unter [Planning for the Trusted Root Key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) in [Plan for security in System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
 
- Beispiel: **CCMSetup.exe SMSPUBLICROOTKEY=&lt;Schlüssel\>**  
+ Beispiel: `CCMSetup.exe SMSPUBLICROOTKEY=&lt;key\>`  
 
 ### <a name="smsrootkeypath"></a>SMSROOTKEYPATH
 
  Diese Eigenschaft wird verwendet, um den vertrauenswürdigen Configuration Manager-Stammschlüssel neu zu installieren. Hiermit werden der vollständige Pfad und der Dateiname einer Datei mit dem vertrauenswürdigen Stammschlüssel angegeben. Diese Eigenschaft gilt für Clients, von denen HTTP- und HTTPS-Clientkommunikation verwendet wird. Weitere Informationen finden Sie unter [Planning for the Trusted Root Key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) in [Plan for security in System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
 
- Beispiel: CCMSetup.exe **SMSROOTKEYPATH=&lt;Vollständiger Pfad und Dateiname\>**  
+ Beispiel: 'CCMSetup.exe SMSROOTKEYPATH=&lt;Vollständiger Pfad und Dateiname\>`  
 
 ### <a name="smssigncert"></a>SMSSIGNCERT
 
@@ -574,9 +558,9 @@ Beispiel: **CCMSetup.exe SMSMP=https://smsmp01.contoso.com**
  Gibt den Configuration Manager-Standort an, um diesem den Configuration Manager-Client zuzuweisen. Dies kann entweder ein dreistelliger Standortcode oder das Wort AUTO sein. Wenn AUTO angegeben ist oder diese Eigenschaft nicht angegeben ist, wird vom Client versucht, die Configuration Manager-Standortzuweisung anhand der Active Directory-Domänendienste oder eines angegebenen Verwaltungspunkts zu bestimmen. Um AUTO für Clientupgrades festzulegen, müssen Sie ferner [SITEREASSIGN](#sitereassign) auf TRUE setzen.    
 
 > [!NOTE]  
->  Verwenden Sie nicht „Automatisch“, wenn Sie auch den internetbasierten Verwaltungspunkt (CCMHOSTNAME) angegeben. In diesen Fällen müssen Sie den Client direkt dem Standort zuweisen.  
+>  Verwenden Sie nicht „Automatisch“, wenn Sie auch den internetbasierten Verwaltungspunkt (CCMHOSTNAME) angegeben. In diesem Fall müssen Sie den Client direkt dem Standort zuweisen.  
 
- Beispiel: **CCMSetup.exe SMSSITECODE=XZY**  
+ Beispiel: `CCMSetup.exe SMSSITECODE=XZY`  
 
 ##  <a name="a-namebkmkattributevaluesa-supported-attribute-values-for-the-pki-certificate-selection-criteria"></a><a name="BKMK_attributevalues"></a> Unterstützte Attributwerte für die PKI-Zertifikatauswahlkriterien  
  Configuration Manager unterstützt die folgenden Attributwerte für die PKI-Zertifikatauswahlkriterien:  
@@ -601,6 +585,6 @@ Beispiel: **CCMSetup.exe SMSMP=https://smsmp01.contoso.com**
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 
