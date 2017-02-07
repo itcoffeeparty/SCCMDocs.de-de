@@ -2,7 +2,7 @@
 title: Configuration Manager in Azure | Microsoft-Dokumentation
 description: Informationen zur Verwendung von Configuration Manager in einer Azure-Umgebung.
 ms.custom: na
-ms.date: 10/21/2016
+ms.date: 01/30/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 5866c1d9ad88e49b69fa0c863b1ef8748a8c8111
+ms.sourcegitcommit: 264e009952db34a6f4929ecb70dc6857117ce4fe
+ms.openlocfilehash: e8798adc0e479417c682450d181611284c148e6d
 
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Configuration Manager in Azure – Häufig gestellte Fragen
@@ -92,7 +92,7 @@ Obwohl Configuration Manager nicht mit Azure Load Balancer getestet wurde, sollt
 Im Allgemeinen muss Ihre Rechenleistung (CPU und Arbeitsspeicher) der [empfohlenen Hardware für System Center Configuration Manager](/sccm/core/plan-design/configs/recommended-hardware) entsprechen. Es bestehen jedoch einige Unterschiede zwischen regulärer Computerhardware und Azure-VMs, besonders bei den Datenträgern, die von diesen VMs verwendet werden.  Welche VM-Größe Sie verwenden, hängt von der Größe Ihrer Umgebung ab. Im Folgenden finden Sie jedoch einige Empfehlungen:
 - Für Produktionsbereitstellungen von signifikanter Größe empfehlen wir Azure-VMs der Klasse „**S**“. Der Grund dafür ist, dass diese Storage Premium-Datenträger nutzen können.  VMs, die nicht zur Klasse „S“ gehören, verwenden Blob Storage und erfüllen in der Regel die Anforderungen für eine akzeptable Produktionserfahrung nicht.
 - Mehrere Storage Premium-Datenträger sollten für eine höhere Skalierung verwendet und für maximale IOPS in der Windows-Datenverwaltungskonsole in Stripes aufgeteilt werden.  
-- Wir empfehlen die Verwendung besserer oder mehrerer Premium-Datenträger während der Erstbereitstellung Ihres Standorts (wie P30 statt P20 und 2xP30 statt 1xP30). Wenn Ihr Standort dann später aufgrund zusätzlicher Last hinsichtlich der VM-Größe aufgestockt werden muss, können Sie die zusätzliche CPU und den zusätzlichen Speicher verwenden, die bzw. den eine größere VM-Größe bietet. Außerdem verfügen Sie dadurch bereits über Datenträger, die den zusätzlichen IOPS-Durchsatz nutzen können, der durch eine größere VM-Größe ermöglicht wird.
+- Wir empfehlen die Verwendung besserer oder mehrerer Premium-Datenträger während der Erstbereitstellung Ihres Standorts (wie P30 statt P20 und 2xP30 in einem Stripesetvolume statt 1xP30). Wenn Ihr Standort dann später aufgrund zusätzlicher Last hinsichtlich der VM-Größe aufgestockt werden muss, können Sie die zusätzliche CPU und den zusätzlichen Speicher verwenden, die bzw. den eine größere VM-Größe bietet. Außerdem verfügen Sie dadurch bereits über Datenträger, die den zusätzlichen IOPS-Durchsatz nutzen können, der durch eine größere VM-Größe ermöglicht wird.
 
 
 
@@ -102,18 +102,18 @@ Die folgenden Tabellen enthalten die anfänglich vorgeschlagene Anzahl von Daten
 
 | Desktopclients    |Empfohlene VM-Größe|Empfohlene Datenträger|
 |--------------------|-------------------|-----------------|
-|**Bis zu 25.000**       |   DS4_V2          |2xP30            |
-|**25.000-50.000**      |   DS13_V2         |2xP30            |
-|**50.000-100.000**     |   DS14_V2         |3xP30            |
+|**Bis zu 25.000**       |   DS4_V2          |2xP30 (Stripeset)  |
+|**25.000-50.000**      |   DS13_V2         |2xP30 (Stripeset)  |
+|**50.000-100.000**     |   DS14_V2         |3xP30 (Stripeset)  |
 
 
 **Remotestandortdatenbank** – Standort der primären oder zentralen Verwaltung mit der Standortdatenbank auf einem Remoteserver:
 
 | Desktopclients    |Empfohlene VM-Größe|Empfohlene Datenträger |
 |--------------------|-------------------|------------------|
-|**Bis zu 25.000**       | Standortserver: F4S </br>Datenbankserver: DS12_V2 | Standortserver: 1xP30 </br>Datenbankserver: 2xP30 |
-|**25.000-50.000**      | Standortserver: F4S </br>Datenbankserver: DS13_V2 | Standortserver: 1xP30 </br>Datenbankserver: 2xP30 |
-|**50.000-100.000**     | Standortserver: F8S </br>Datenbankserver: DS14_V2 | Standortserver: 2xP30 </br>Datenbankserver: 3xP30 |
+|**Bis zu 25.000**       | Standortserver: F4S </br>Datenbankserver: DS12_V2 | Standortserver: 1xP30 </br>Datenbankserver: 2xP30 (Stripeset)  |
+|**25.000-50.000**      | Standortserver: F4S </br>Datenbankserver: DS13_V2 | Standortserver: 1xP30 </br>Datenbankserver: 2xP30 (Stripeset)   |
+|**50.000-100.000**     | Standortserver: F8S </br>Datenbankserver: DS14_V2 | Standortserverserver: 2xP30 (Stripeset)   </br>Datenbankserver: 3xP30 (Stripeset)   |
 
 Die folgende Abbildung zeigt eine Beispielkonfiguration für 50.000-100.000-Clients auf DS14_V2 mit 3xP30-Datenträgern in einem Stripesetvolume mit separaten logischen Volumes für die Installations- und Datenbankdateien von Configuration Manager:  ![VM-Datenträger](media/vm_disks.png)  
 
@@ -139,9 +139,11 @@ Der Ansatz für das Content Management ist ähnlich wie bei Standortservern und 
 
 
 ### <a name="while-i-am-ok-with-the-limitations-of-cloud-based-distribution-points-i-dont-want-to-put-my-management-point-into-a-dmz-even-though-that-is-needed-to-support-my-internet-based-clients-do-i-have-any-other-options"></a>Die Einschränkungen cloudbasierter Verteilungspunkte sind für mich in Ordnung, trotzdem möchte ich meinen Verwaltungspunkt nicht in einer DMZ platzieren, obwohl dies für den Support meiner internetbasierten Clients erforderlich ist. Stehen mir irgendwelche anderen Optionen zur Verfügung?
-Bald! Mit Configuration Manager Technical Preview Version 1606 wurde der [Cloudproxydienst](/sccm/core/get-started/capabilities-in-technical-preview-1606#a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet) eingeführt. Der Cloudproxydienst bietet eine einfache Möglichkeit zum Verwalten von Configuration Manager-Clients im Internet. Der Dienst, der in Microsoft Azure bereitgestellt wird und ein Azure-Abonnement erfordert, stellt mithilfe einer neuen Rolle namens Cloudproxy-Connectorpunkt eine Verbindung mit Ihrer lokalen Configuration Manager-Infrastruktur her. Nachdem er bereitgestellt und konfiguriert wurde, können Clients auf lokale Configuration Manager-Standortsystemrollen zugreifen, unabhängig davon, ob sie mit dem internen, privaten Netzwerk oder über das Internet verbunden sind.
+Ja! Mit Version 1610 von Configuration Manager wurde das [Cloudverwaltungsgateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) als Vorabfunktion eingeführt. (Dieses Feature erschien in der Technical Preview-Version 1606 zunächst als [Cloudproxydienst](/sccm/core/get-started/capabilities-in-technical-preview-1606#a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet)).
 
-Sie können damit beginnen, das Clouddienstproxy in Ihrer Testumgebung zu testen und uns Feedback zu geben, um es zu verbessern.
+Das **Cloudverwaltungsgateway** bietet eine einfache Möglichkeit zum Verwalten von Configuration Manager-Clients im Internet. Der Dienst, der in Microsoft Azure bereitgestellt wird und ein Azure-Abonnement erfordert, stellt mithilfe einer neuen Rolle namens Cloudverwaltungsgateway eine Verbindung mit Ihrer lokalen Configuration Manager-Infrastruktur her. Nachdem er bereitgestellt und konfiguriert wurde, können Clients auf lokale Configuration Manager-Standortsystemrollen zugreifen, unabhängig davon, ob sie mit dem internen, privaten Netzwerk oder über das Internet verbunden sind.
+
+Sie können damit beginnen, das Cloudverwaltungsgateway in Ihrer Umgebung zu testen und uns Feedback zu geben, um es zu verbessern. Weitere Informationen finden Sie unter [Use pre-release features from updates (Verwenden von Vorabfeatures aus Updates)](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkprereleasea-use-pre-release-features-from-updates).
 
 ### <a name="i-also-heard-that-you-have-another-new-feature-called-peer-cache-in-the-technical-preview-version-1604-is-that-different-than-branchcache-which-one-should-i-choose"></a>Außerdem habe ich gehört, dass die Technical Preview Version 1604 eine weitere neue Funktion namens Peercache umfasst. Unterscheidet sich diese von BranchCache? Welche sollte ich auswählen?
 Ja, sie unterscheidet sich komplett. Bei [Peercache](/sccm/core/get-started/capabilities-in-technical-preview-1604#bkmk_peercache) handelt es sich um eine 100% native Configuration Manager-Technologie, wobei BranchCache eine Windows-Funktion ist. Beide können hilfreich sein. BranchCache verwendet eine Übertragung, um den erforderlichen Inhalt zu suchen, während Peercache den üblichen Verteilungsworkflow und die Begrenzungsgruppeneinstellungen von Configuration Manager verwendet.
@@ -180,6 +182,6 @@ Das ist schwer zu sagen, da jede Umgebung anders ist. Am besten ermitteln Sie di
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO5-->
 
 

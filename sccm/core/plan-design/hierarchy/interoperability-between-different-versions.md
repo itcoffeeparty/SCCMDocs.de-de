@@ -2,7 +2,7 @@
 title: "Interoperabilität zwischen den Configuration Manager-Versionen | Microsoft-Dokumentation"
 description: "Hier erfahren Sie, wie Konflikte zwischen verschiedenen System Center Configuration Manager-Hierarchien im selben Netzwerk vermieden werden können."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 32182f06a90d768c40e29ed8a8e89cb45114bd15
+ms.sourcegitcommit: f9886d9d83cd23ddd294d5af5eed3ec00946a4f4
+ms.openlocfilehash: 8a4c52f6adb18c7e170ea87764cc38c3bbfbf9ca
 
 
 ---
@@ -81,10 +81,10 @@ Die Installation und der Betrieb mehrerer unabhängiger Hierarchien von System C
 |Interoperabilitätsumgebung|Weitere Informationen|  
 |----------------------------------|----------------------|  
 |Eine Umgebung mit System Center 2012 Configuration Manager und System Center Configuration Manager|Zum Verwalten eines Configuration Manager-Standorts muss auf der Konsole und am Standort, mit dem die Konsole verbunden ist, dieselbe Configuration Manager-Version ausgeführt werden. So kann beispielsweise nicht eine System Center 2012 Configuration Manager-Konsole zum Verwalten eines System Center Configuration Manager-Standorts und umgekehrt verwendet werden.<br /><br /> Die parallele Installation der System Center 2012 Configuration Manager-Konsole und der System Center Configuration Manager-Konsole auf einem Computer wird nicht unterstützt.|  
-|Eine Umgebung mit mehreren Versionen von System Center Configuration Manager|Von System Center Configuration Manager wird die Installation von mehreren Configuration Manager-Konsolen auf einem Computer nicht unterstützt. Wenn Sie mehrere, zu unterschiedlichen System Center Configuration Manager-Versionen gehörende Konsolen verwenden möchten, müssen Sie diese auf unterschiedlichen Computern installieren.<br /><br /> Bei laufender Aktualisierung von Standorten in einer Hierarchie können Sie eine Konsole mit einem Standort verbinden, auf dem eine neuere Version ausgeführt wird, und Informationen zu anderen Standorten in dieser Hierarchie anzeigen. Diese Konfiguration wird aber nicht empfohlen, weil die Möglichkeit besteht, dass Unterschiede zwischen der Konsolenversion und der Configuration Manager-Standortversion zu Datenproblemen führen und einige Funktionen, die in der neuesten Produktversion verfügbar sind, in der Konsole nicht zur Verfügung stehen.|  
+|Eine Umgebung mit mehreren Versionen von System Center Configuration Manager|Von System Center Configuration Manager wird die Installation von mehreren Configuration Manager-Konsolen auf einem Computer nicht unterstützt. Wenn Sie mehrere, zu unterschiedlichen System Center Configuration Manager-Versionen gehörende Konsolen verwenden möchten, müssen Sie diese auf unterschiedlichen Computern installieren.<br /><br /> Bei laufender Aktualisierung von Standorten in einer Hierarchie auf eine neue Version können Sie eine Konsole mit einem Standort verbinden, auf dem eine neuere Version ausgeführt wird, und Informationen zu anderen Standorten in dieser Hierarchie anzeigen. Diese Konfiguration wird aber nicht empfohlen, weil die Möglichkeit besteht, dass Unterschiede zwischen der Konsolenversion und der Configuration Manager-Standortversion zu Datenproblemen führen und einige Funktionen, die in der neuesten Produktversion verfügbar sind, in der Konsole nicht zur Verfügung stehen. <br /></br /> Das Verwalten eines Standorts bei Verwendung einer Konsole mit einer Version, die nicht mit der Standortversion übereinstimmt, wird nicht unterstützt. Dies kann dazu führen, dass Daten verloren gehen und dass Ihre Website gefährdet wird. Es wird z.B. nicht unterstützt, eine Konsole der Version 1610 zu verwenden, um einen Standort zu verwalten, der Version 1606 ausführt. |
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO5-->
 
 

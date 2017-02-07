@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8e0090bd671e2c566447579974a38474c2f898ea
-ms.openlocfilehash: 1ca51e256ea2f406f393e4b0d3634ea0f6f637bc
+ms.sourcegitcommit: a8cb3c9850b183eec156c37a181c04088b71805e
+ms.openlocfilehash: 40837306816639ff8cea8930fec75b05edc5164a
 
 
 ---
@@ -29,7 +29,7 @@ Mit System Center Configuration Manager verwenden Sie die rollenbasierte Verwalt
 
  Über das rollenbasierte Verwaltungsmodell werden Sicherheitszugriffseinstellungen für alle Standorte und Standorteinstellungen hierarchieweit zentral definiert und verwaltet. Dazu dienen die folgenden Elemente:  
 
--   *Sicherheitsrollen* werden Administratoren zugewiesen, um diesen Benutzern (oder Benutzergruppen) Berechtigungen für verschiedene Configuration Manager-Objekte zu erteilen, z.B. zum Erstellen oder Ändern von Clienteinstellungen.  
+-   *Sicherheitsrollen* werden Administratoren zugewiesen, um diesen Benutzern (oder Benutzergruppen) Berechtigungen für verschiedene Configuration Manager-Objekte zu erteilen. Dies ist z.B. zum Erstellen oder Ändern von Clienteinstellungen der Fall.  
 
 -   Mithilfe von *Sicherheitsbereichen* werden bestimmte Instanzen von Objekten gruppiert, für deren Verwaltung ein Administrator verantwortlich ist, z.B. eine Anwendung zum Installieren von Microsoft Office 2010.  
 
@@ -72,9 +72,9 @@ Beim Entwerfen und Implementieren der administrativen Sicherheit für Configurat
 
 -   *Hauptadministrator* gewährt sämtliche Berechtigungen in Configuration Manager.  
 
--   *Asset-Manager* gewährt Administratoren die Berechtigung, Daten anzuzeigen, die mithilfe von Asset Intelligence, Softwareinventur, Hardwareinventur und Softwaremessung gesammelt wurden. Administratoren können Messungsregeln sowie Asset Intelligence-Kategorien, -Familien und -Bezeichnungen erstellen.  
+-   Der *Asset-Manager* gewährt Berechtigungen zum Verwalten des Asset Intelligence-Synchronisierungspunkts, von Asset Intelligence-Berichtsklassen, Softwareinventur, Hardwareinventur sowie Messungsregeln.  
 
--   *Softwareupdate-Manager* gewährt Berechtigungen zum Definieren und Bereitstellen von Softwareupdates. Administratoren, denen diese Rolle zugeordnet ist, können Sammlungen, Softwareupdategruppen, Bereitstellungen und Vorlagen erstellen und Softwareupdates für Netzwerkzugriffsschutz (Network Access Protection, NAP) einrichten.  
+-   *Softwareupdate-Manager* gewährt Berechtigungen zum Definieren und Bereitstellen von Softwareupdates. Administratoren, denen diese Rolle zugeordnet ist, können Sammlungen, Softwareupdategruppen, Bereitstellungen und Vorlagen erstellen.  
 
 > [!TIP]  
 >  Sie können die Liste der integrierten und benutzerdefinierten Sicherheitsrollen mit ihren Beschreibungen in der Configuration Manager-Konsole anzeigen. Um die Rollen anzuzeigen, erweitern Sie im Arbeitsbereich **Verwaltung** den Knoten **Sicherheit**, und wählen Sie dann **Sicherheitsrollen** aus.  
@@ -215,6 +215,6 @@ Informationen zum Konfigurieren von Sicherheitsbereichen für die rollenbasierte
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO5-->
 
 

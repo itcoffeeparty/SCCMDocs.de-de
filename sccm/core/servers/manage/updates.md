@@ -1,8 +1,8 @@
 ---
 title: Updates | Microsoft-Dokumentation
-description: "Hier finden Sie Informationen zu einer Dienstmethode in der Konsole namens **Updates und Wartung**, mit der Sie empfohlene Updates leicht finden und installieren können."
+description: "Hier finden Sie Informationen zu einer konsoleninternen Dienstmethode namens **Updates und Wartung**, mit der Sie empfohlene Updates leicht finden und installieren können."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6e964f015d5f007311f46f51126b31e181abd0ec
-ms.openlocfilehash: e7b19b6e1f4720c0bdc69ef7f78366fd5d3414d0
+ms.sourcegitcommit: 816c6bd33e42b70bbafed0dea7624bc5a5421544
+ms.openlocfilehash: 55d4f1805937405c4101f5b814875818d2aa72c0
 
 
 ---
@@ -27,6 +27,10 @@ ms.openlocfilehash: e7b19b6e1f4720c0bdc69ef7f78366fd5d3414d0
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager verwendet eine konsoleninterne Wartungsmethode namens **Updates und Wartung**, mit der Sie empfohlene Updates für Ihre Configuration Manager-Infrastruktur leicht finden und installieren können. Diese konsoleninterne Wartungsmethode wird durch Out-of-Band-Updates ergänzt, z. B. Hotfixes, die für Kunden bestimmt sind, die möglicherweise für die jeweilige Umgebung spezifische Probleme beheben müssen.  
+
+> [!TIP]
+> Beim Verwalten des System Center Configuration Manager-Standorts und der Hierarchieinfrastruktur werden die Begriffe *Upgrade*, *Update* und *Installation* verwendet, um drei verschiedene Konzepte zu beschreiben. Erfahren Sie mehr über die Verwendung der Begriffe unter [Informationen zu Upgrade, Update und Installation für einen Standort und eine Hierarchieinfrastruktur](/sccm/core/understand/upgrade-update-install).
+
 
  **In den folgenden Themen wird erläutert, wie Sie die verschiedenen Updatetypen für System Center Configuration Manager suchen und installieren:**  
 
@@ -38,17 +42,18 @@ System Center Configuration Manager verwendet eine konsoleninterne Wartungsmetho
 
 -   [Use the Hotfix Installer to install updates for System Center Configuration Manager (Verwenden des Hotfixinstallationsprogramms zum Installieren von Updates für System Center Configuration Manager)](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md)  
 
-> [!TIP]  
-> Wenn Sie die Verzweigung „Technical Preview“ verwenden, finden Sie unter [Technical Preview für System Center Configuration Manager](/sccm/core/get-started/technical-preview) zusätzliche Informationen, die speziell diese Verzweigung betreffen.
+
+Wenn Sie die Verzweigung „Technical Preview“ verwenden, finden Sie unter [Technical Preview für System Center Configuration Manager](/sccm/core/get-started/technical-preview) zusätzliche Informationen, die speziell diese Verzweigung betreffen.
+
 
 ##  <a name="a-namebkmkbaselinesa-baseline-and-update-versions"></a><a name="bkmk_Baselines"></a> Baseline- und Updateversionen  
- Die erste Version des aktuellen Branch von System Center Configuration Manager ist Version 1511. Dies ist eine Baselineversion:  
+ Die erste Version von System Center Configuration Manager Current Branch ist auch als Version 1511, eine Baselineversion, bekannt. Die neuere Version 1606 wurde als Baseline veröffentlicht:  
 
 -   Verwenden Sie die neueste Baselineversion, wenn Sie einen neuen Standort in einer neuen Hierarchie installieren.  
 
 -   Sie müssen eine Baselineversion verwenden, um ein Upgrade von System Center 2012 Configuration Manager auszuführen.  
 
--   In regelmäßigen Abständen werden neue Baselineversionen veröffentlicht. Indem Sie zum Installieren einer neuen Hierarchie eine neuere Baselineversion verwenden, können Sie vermeiden, die ursprüngliche Baselineversion 1511, gefolgt von einem Upgrade Ihrer Infrastruktur zu installieren.  
+-   In regelmäßigen Abständen werden neue Baselineversionen veröffentlicht. Wenn Sie die neueste Baselineversion zur Installation einer neuen Hierarchie verwenden, dann vermeiden Sie die Installation einer veralteten Version von Configuration Manager, gefolgt von einem Upgrade Ihrer Infrastruktur, um sie auf den neuesten Stand zu bringen.  
 
 Nach dem Installieren einer Baselineversion sind zusätzliche Versionen von Configuration Manager als konsoleninterne Updates verfügbar. Mit den konsoleninternen Updates wird Ihre Infrastruktur auf die neueste Version von Configuration Manager aktualisiert.  
 
@@ -68,13 +73,13 @@ Einige Updates für Configuration Manager sind sowohl eine konsoleninterne Updat
 
 Die folgenden Versionen von Configuration Manager sind als Baseline- und/oder Updateversion verfügbar:  
 
-|Version|Verfügbarkeitsdatum|Baseline|konsoleninternes Update|  
-|-------------|-----------------------|--------------|------------------------|  
-|**1511**<br /><br /> 5.00.8325.1000|12/8/2015|Ja|Nein|  
-|**1602**<br /><br /> 5.00.8355.1000|3/11/2016|Nein|Ja|
-|**1606**<br /><br /> 5.00.8412.1000|7/22/2016|Nein|Ja|
-|**1606** mit dem Hotfixrollup 1606 (KB3186654) </br></br>5.00.8412.1307 *(Hinweis 1)* |10/12/2016|Ja|Nein|
-|**1610**<br /><br /> 5.00.8458.1000|18.11.2016|Nein|Ja|
+|Version|Verfügbarkeitsdatum|[Supportenddatum](/sccm/core/servers/manage/current-branch-versions-supported) |Baseline|konsoleninternes Update|  
+|-------------|-----------|------------|--------------|------------------------|  
+| 1511 <br /><br /> 5.00.8325.1000|12/8/2015| 12/8/2016|Ja|Nein|  
+|[1602](/sccm/core/plan-design/changes/whats-new-in-version-1602)<br /><br /> 5.00.8355.1000|3/11/2016| 3/11/2017|Nein|Ja|
+|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606)<br /><br /> 5.00.8412.1000|7/22/2016| 7/22/2017|Nein|Ja|
+|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606) mit dem Hotfixrollup 1606 (KB3186654) </br></br>5.00.8412.1307 *(Hinweis 1)* |10/12/2016| 7/22/2017|Ja|Nein|
+|[1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)<br /><br /> 5.00.8458.1000|18.11.2016| 11/18/2017|Nein|Ja|
 *(Hinweis 1)* Dieses 1606-Baselinemedium ist als Teil des Microsoft System Center 2016- oder des System Center Configuration Manager-Release (Current Branch und Long-Term Servicing Branch 1606) verfügbar.
 
 Um die Version Ihres Configuration Manager-Standorts zu überprüfen, wechseln Sie oben links in der Konsole, wo die neue Version des Standorts und der Konsole angezeigt wird, zu **Info zu System Center Configuration Manager** .  
@@ -115,7 +120,7 @@ Wenn Sie ein konsoleninternes Update installieren:
 
 -   Wird automatisch eine Voraussetzungsprüfung durchgeführt. Sie können diese Prüfung auch vor dem Start der Installation ausführen.  
 
--   Wird es am Standort der zentralen Verwaltung (falls vorhanden) und an primären Standorten automatisch installiert. Mit [Servicezeitfenstern für Standortserver](../../../core/servers/manage/install-in-console-updates.md#bkmk_ServiceWindow) können Sie steuern, wann die einzelnen primären Standortserver ihre Infrastruktur aktualisieren dürfen.  
+-   Wird es am Standort der zentralen Verwaltung (falls vorhanden) und an primären Standorten automatisch installiert. Mit [Dienstfenster für Standortserver](../../../core/servers/manage/service-windows.md) können Sie steuern, wann die einzelnen primären Standortserver ihre Infrastruktur aktualisieren dürfen.  
 
 -   Nach dem Aktualisieren eines Standortservers werden alle Standortsystemrollen (einschließlich Instanzen des SMS-Anbieters) automatisch aktualisiert. Zudem werden die Konsolenbenutzer von den Configuration Manager-Konsolen aufgefordert, nach der Installation des Updates auf dem Standort die Konsole zu aktualisieren.  
 
@@ -143,6 +148,6 @@ Sie installieren diese Hotfixes manuell unter Verwendung einer der beiden folgen
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 
