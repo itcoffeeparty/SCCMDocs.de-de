@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4c0e6824-2dfe-4700-b817-d5631e0eb872
 caps.latest.revision: 
-author: nathbarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
@@ -93,11 +93,11 @@ Erkennen Sie Bedrohungen für Ihr Netzwerk wie Man-in-the-Middle-Angriffe, und v
 
 ## <a name="next-steps"></a>Nächste Schritte
 Hier sind die wichtigsten Schritte, die Sie ausführen müssen, um diese Lösung zu implementieren:
-1.  [Set up your subscription with Lookout mobile threat protection (Einrichten Ihres Abonnements mit Lookout Mobile Threat Protection)](set-up-your-subscription-with-lookout.md)
-2.  [Enable Lookout MTP connection in Intune (Aktivieren einer Lookout MTP-Verbindung in Intune)](enable-lookout-connection-in-intune.md)
+1.    [Set up your subscription with Lookout mobile threat protection (Einrichten Ihres Abonnements mit Lookout Mobile Threat Protection)](set-up-your-subscription-with-lookout.md)
+2.    [Enable Lookout MTP connection in Intune (Aktivieren einer Lookout MTP-Verbindung in Intune)](enable-lookout-connection-in-intune.md)
 3.  [Configure and deploy Lookout for work application (Konfigurieren und Bereitstellen von Lookout for Work-Anwendungen)](configure-and-deploy-lookout-for-work-apps.md)
-4.  [Configure compliance policy (Konfigurieren von Konformitätsrichtlinien)](enable-device-threat-protection-rule-compliance-policy.md)
-5.  [Behandeln von Problemen bei der Lookout-Integration](troubleshoot-lookout-integration.md)
+4.    [Configure compliance policy (Konfigurieren von Konformitätsrichtlinien)](enable-device-threat-protection-rule-compliance-policy.md)
+5.    [Behandeln von Problemen bei der Lookout-Integration](troubleshoot-lookout-integration.md)
 
 
 

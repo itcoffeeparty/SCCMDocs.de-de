@@ -225,10 +225,16 @@ Weitere Informationen finden Sie unter [Verwalten von Office 365 ProPlus-Updates
 
 ### <a name="set-the-configuration-manager-client-setting-to-manage-the-office-365-client-agent"></a>Einrichten der Configuration Manager-Clienteinstellung, zum Verwalten des Office 365-Client-Agents
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung** > **Übersicht** > **Clienteinstellungen**.
-1. Öffnen Sie die entsprechenden Geräteeinstellungen zum Aktivieren des Client-Agents. Weitere Informationen zu standardmäßigen und benutzerdefinierten Clienteinstellungen finden Sie unter [Konfigurieren von Clienteinstellungen in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md).
-2. Klicken Sie auf **Softwareupdates** und wählen Sie **Ja** für die Einstellung **Verwaltung des Office 365-Client-Agents aktivieren** aus.
+2. Öffnen Sie die entsprechenden Geräteeinstellungen zum Aktivieren des Client-Agents. Weitere Informationen zu standardmäßigen und benutzerdefinierten Clienteinstellungen finden Sie unter [Konfigurieren von Clienteinstellungen in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md).
+3. Klicken Sie auf **Softwareupdates** und wählen Sie **Ja** für die Einstellung **Verwaltung des Office 365-Client-Agents aktivieren** aus.  
+
+
 ## <a name="a-nameosdpreservedriveletterathe-osdpreservedriveletter-task-sequence-variable-has-been-deprecated"></a><a name="osdpreservedriveletter"></a>Die Tasksequenzvariable „OSDPreserveDriveLetter“ wurde als veraltet markiert.
-Die Tasksequenzvariable „OSDPreverveDriveLetter“ bestimmt, ob die Tasksequenz bei der Anwendung des Images auf einen Zielcomputer den in der WIM-Datei des Betriebssystemimages erfassten Laufwerkbuchstaben verwendet. Die Tasksequenzvariable wurde in Technical Preview 1606 als veraltet markiert. Während einer standardmäßigen Betriebssystembereitstellung bestimmt Windows Setup den Laufwerkbuchstaben, der am besten zur Verwendung geeignet ist (in der Regel C:). Wenn Sie ein anderes Laufwerk zur Verwendung angeben möchten, können Sie den Speicherort im Tasksequenzschritt „Betriebssystem anwenden“ ändern. Wechseln Sie zur Einstellung **Wählen Sie den Standort aus, an dem Sie dieses Betriebssystem anwenden möchten. **, wählen Sie **Bestimmter Buchstabe für logisches Laufwerk ** aus und wählen Sie das Laufwerk aus, das Sie verwenden möchten. Sie müssen dem gewählten Buchstaben auf dem Zielcomputer ein Laufwerk zuordnen.
+Die Tasksequenzvariable „OSDPreverveDriveLetter“ bestimmt, ob die Tasksequenz bei der Anwendung des Images auf einen Zielcomputer den in der WIM-Datei des Betriebssystemimages erfassten Laufwerkbuchstaben verwendet.
+- Die Tasksequenzvariable wurde in Technical Preview 1606 als veraltet markiert.
+
+Während einer standardmäßigen Betriebssystembereitstellung bestimmt Windows Setup den Laufwerkbuchstaben, der am besten zur Verwendung geeignet ist (in der Regel C:). Wenn Sie ein anderes Laufwerk zur Verwendung angeben möchten, können Sie den Speicherort im Tasksequenzschritt „Betriebssystem anwenden“ ändern. Wechseln Sie zur Einstellung **Wählen Sie den Standort aus, an dem Sie dieses Betriebssystem anwenden möchten. **, wählen Sie **Bestimmter Buchstabe für logisches Laufwerk ** aus und wählen Sie das Laufwerk aus, das Sie verwenden möchten. Sie müssen dem gewählten Buchstaben auf dem Zielcomputer ein Laufwerk zuordnen. 
+
 ## <a name="a-nameupdatesandservicingachanges-for-the-updates-and-servicing-node"></a><a name="updatesandservicing"></a>Änderungen am Knoten „Updates und Wartung“
 Mit Technical Preview 1606 wurden mehrere Änderungen eingeführt, die für Updates und Wartung in der Configuration Manager-Konsole gelten:
 - **Änderung des Knotennamen:**
