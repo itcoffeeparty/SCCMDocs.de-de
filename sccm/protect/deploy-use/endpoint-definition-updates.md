@@ -3,7 +3,7 @@
 title: Konfigurieren von Endpoint Protection | Microsoft-Dokumentation
 description: "Erfahren Sie, wie Sie Methoden mit Endpoint Protection in System Center Configuration Manager auswählen und konfigurieren, um Antischadsoftwaredefinitionen auf den Clientcomputern auf dem neuesten Stand zu halten."
 ms.custom: na
-ms.date: 01/31/2017
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
