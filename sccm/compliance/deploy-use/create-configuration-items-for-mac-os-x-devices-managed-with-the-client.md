@@ -1,8 +1,8 @@
 ---
-title: "Erstellen von Konfigurationselementen für Mac OS X-Geräte, die mit dem System Center Configuration Manager-Client verwaltet werden | Microsoft-Dokumentation"
+title: "Erstellen von Konfigurationselementen für clientverwaltete Macs – Configuration Manager | Microsoft-Dokumentation"
 description: "Verwenden Sie das System Center Configuration Manager-Konfigurationselement für Max OS X, um Einstellungen für Mac OS X-Geräte zu verwalten."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 12/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: f3d08d7f8efb592383e1099850665a2e9f3b2b5f
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: 60d147986425e7a3048d57b5b7412feab12efafd
 
 
 ---
@@ -54,7 +54,11 @@ Verwenden Sie das System Center Configuration Manager-Konfigurationselement **Ma
 
              Beispielsweise, wenn Sie Einstellungen für den Safari-Webbrowser bearbeiten möchten, können **com.apple.Safari.plist**.  
 
-        -   **Schlüssel** – Geben Sie den Namen des Schlüssels, der Kompatibilität auf Macintosh-Computer ausgewertet werden soll. Verwenden Sie die folgende Syntax: */<Wörterbuch\>/<Schlüsselname\>*.  
+        -   **Schlüssel** – Geben Sie den Namen des Schlüssels, der Kompatibilität auf Macintosh-Computer ausgewertet werden soll. Verwenden Sie die folgende Syntax:
+
+            ```
+            */<dictionary\>/<keyname\>*.  
+            ```     
 
             > [!IMPORTANT]  
             >  Für den Schlüsselnamen muss die Groß-/Kleinschreibung beachtet werden, und er wird nicht ausgewertet, wenn er sich vom Schlüsselnamen auf dem Macintosh-Computer unterscheidet. Außerdem können Sie den Namen des Schlüssels nicht mehr bearbeiten, nachdem Sie ihn angegeben haben. Wenn Sie den Schlüsselnamen bearbeiten müssen, löschen und erstellen Sie dann die Einstellung erneut.  
@@ -173,6 +177,6 @@ Wenn Sie dieses Konfigurationselement zu einer Konfigurationsbaseline hinzufüge
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

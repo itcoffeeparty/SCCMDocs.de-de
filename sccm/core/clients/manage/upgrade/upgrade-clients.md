@@ -1,8 +1,8 @@
 ---
-title: Aktualisieren von Clients | System Center Configuration Manager
+title: "Aktualisieren von Clients – Configuration Manager | Microsoft-Dokumentation"
 description: "Enthält Informationen über das Aktualisieren von Clients in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 446c83b5-c292-4e74-ba19-0792ac6b3472
 caps.latest.revision: 8
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 1571d31af1e2697c5ecbdc709a3eea9d6e28dbf0
+ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
+ms.openlocfilehash: 56a3ec8ddfaaa233b41347da0ff853fdf92c275c
 
 
 ---
@@ -25,10 +25,10 @@ ms.openlocfilehash: 1571d31af1e2697c5ecbdc709a3eea9d6e28dbf0
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Es gibt verschiedene Methoden zur Aktualisierung der Clientsoftware von System Center Configuration Manager auf Windows-Computern, UNIX- und Linux-Servern sowie Macintosh-Computern in Ihrem Unternehmen. In den folgenden Abschnitten sind die Vor- und Nachteile der einzelnen Clientaktualisierungsmethoden aufgeführt, um Ihnen die Auswahl der für Ihre Organisation am besten geeigneten Methode zu erleichtern.  
+Es gibt verschiedene Methoden zum Upgrade der Clientsoftware von System Center Configuration Manager auf Windows-Computern, UNIX- und Linux-Servern sowie Macintosh-Computern. Die Vor- und Nachteile der einzelnen Methoden sind nachfolgend beschrieben.  
 
 > [!TIP]  
->  Wenn Sie ein Upgrade Ihrer Serverinfrastruktur von einer früheren Version von Configuration Manager durchführen \(z.B. Configuration Manager 2007 oder System Center 2012 Configuration Manager\), empfiehlt es sich, das Serverupgrade einschließlich der Installation sämtlicher Branchupdates vollständig abzuschließen, bevor Sie ein Upgrade der Configuration Manager-Clients durchführen.   Das neueste Branchupdate enthält die neueste Version des Clients, Sie sollten das Clientupgrade also durchführen, nachdem Sie alle Configuration Manager-Updates installiert haben, die Sie verwenden möchten.  
+>  Wenn Sie ein Upgrade Ihrer Serverinfrastruktur von einer früheren Version von Configuration Manager durchführen \(z.B. Configuration Manager 2007 oder System Center 2012 Configuration Manager\), empfiehlt es sich, das Serverupgrade einschließlich der Installation sämtlicher Branchupdates vollständig abzuschließen, bevor Sie ein Upgrade der Configuration Manager-Clients durchführen. Auf diese Weise erhalten Sie auch die aktuellste Version der Clientsoftware.  
 
 ## <a name="group-policy-installation"></a>Gruppenrichtlinieninstallation  
  **Unterstützte Clientplattformen:** Windows  
@@ -45,11 +45,10 @@ Es gibt verschiedene Methoden zur Aktualisierung der Clientsoftware von System C
 
  **Nachteile**  
 
--   Kann beträchtlichen Netzwerkverkehr verursachen, wenn eine große Anzahl an Clients aktualisiert wird.  
+-   Kann ein hohes Netzwerkverkehrsaufkommen verursachen, wenn Sie eine große Anzahl von Clients upgraden.  
 
--   Wenn das Active Directory-Schema nicht für Configuration Manager erweitert wurde, müssen Sie die Clientinstallationseigenschaften mithilfe von Gruppenrichtlinieneinstellungen den Computern des Standorts hinzufügen.  
+-   Wenn das Active Directory-Schema nicht für Configuration Manager erweitert wurde, müssen Sie die Clientinstallationseigenschaften mithilfe von [Gruppenrichtlinieneinstellungen](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientGP) den Computern des Standorts hinzufügen.  
 
- Weitere Informationen finden Sie unter [Installieren von Configuration Manager-Clients mithilfe von Gruppenrichtlinien](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientGP).  
 
 ## <a name="logon-script-installation"></a>Anmeldeskriptinstallation  
  **Unterstützte Clientplattformen:** Windows  
@@ -64,9 +63,9 @@ Es gibt verschiedene Methoden zur Aktualisierung der Clientsoftware von System C
 
  **Nachteile**  
 
--   Kann beträchtlichen Netzwerkverkehr verursachen, wenn in kurzer Zeit eine große Anzahl von Clients aktualisiert wird.  
+-   Kann ein hohes Netzwerkverkehrsaufkommen verursachen, wenn Sie in kurzer Zeit eine große Anzahl von Clients aktualisieren.  
 
--   Die Aktualisierung auf allen Clientcomputern kann sehr lange dauern, wenn Benutzer sich nicht regelmäßig beim Netzwerk anmelden.  
+-   Die Aktualisierung aller Clientcomputer kann lange dauern, wenn Benutzer sich nicht regelmäßig beim Netzwerk anmelden.  
 
  Weitere Informationen finden Sie unter [Installieren von Configuration Manager-Clients mithilfe von Anmeldeskripts](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientLogonScript).  
 
@@ -105,7 +104,7 @@ Es gibt verschiedene Methoden zur Aktualisierung der Clientsoftware von System C
 
  **Nachteile**  
 
--   Kann beträchtlichen Netzwerkverkehr verursachen, wenn der Client auf große Sammlungen verteilt wird.  
+-   Kann ein hohes Netzwerkverkehrsaufkommen verursachen, wenn Sie den Client auf große Sammlungen verteilen.  
 
 -   Kann nur verwendet werden, um Clientsoftware auf Computern zu aktualisieren, die ermittelt und dem Standort zugewiesen wurden.  
 
@@ -122,7 +121,7 @@ Es gibt verschiedene Methoden zur Aktualisierung der Clientsoftware von System C
 
 -   Kann verwendet werden, um Clients eines Standorts automatisch auf die neueste Version zu aktualisieren.  
 
--   Erfordert minimalen Verwaltungsaufwand durch den Administrator.  
+-   Erfordert minimalen Verwaltungsaufwand.  
 
  **Nachteile**  
 
@@ -141,9 +140,9 @@ Es gibt verschiedene Methoden zur Aktualisierung der Clientsoftware von System C
 
  **Vorteile**  
 
--   Dient zum Testen neuer Clientversionen in einer kleineren Präproduktionssammlung.  
+-   Kann zum Testen neuer Clientversionen in einer kleineren Präproduktionssammlung verwendet werden.  
 
--   Nach Abschluss der Tests werden Clients in der Präproduktionsphase auf die Produktionsebene heraufgestuft, und automatisch am gesamten Configuration Manager-Standort aktualisiert.  
+-   Nach Abschluss der Tests werden Clients in der Präproduktionsphase auf die Produktionsebene heraufgestuft und automatisch am gesamten Configuration Manager-Standort aktualisiert.  
 
  **Nachteile**  
 
@@ -153,6 +152,6 @@ Es gibt verschiedene Methoden zur Aktualisierung der Clientsoftware von System C
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

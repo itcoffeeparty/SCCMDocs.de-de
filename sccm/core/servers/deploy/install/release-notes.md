@@ -1,5 +1,5 @@
 ---
-title: Anmerkungen zu dieser Version | Microsoft-Dokumentation
+title: "Versionshinweise – Configuration Manager | Microsoft-Dokumentation"
 description: In diesen Anmerkungen finden Sie Informationen zu dringenden Problemen, die im Produkt noch nicht behoben oder bisher in keinem Microsoft Knowledge Base-Artikel beschrieben wurden.
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: ea723a6694feb2c9584b35498aa9c3519383f08d
-ms.openlocfilehash: a9dc046a54c15d9d299664cd1f2a149383f53489
+ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
+ms.openlocfilehash: 9e853c8fda236125717c3912f6f3cb02d6dd1058
 
 
 ---
@@ -91,7 +91,7 @@ Ab Update 1606 müssen Sie vor der Nutzung von Vorabfeatures Ihr Einverständnis
 
 Mit der System Center Configuration Manager Version 1602 werden zwei neue vorab veröffentlichte Features eingeführt:  
 
--   Bedingter Zugriff für PCs, die von System Center Configuration Manager verwaltet werden. Weitere Informationen finden Sie unter [Manage access to O365 services for PCs managed by System Center Configuration Manager (Verwalten des Zugriffs auf Office 365-Dienste für PCs, die von System Center Configuration Manager verwaltet werden)](../../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).
+-   Bedingter Zugriff für PCs, die von System Center Configuration Manager verwaltet werden. Weitere Informationen finden Sie unter [Manage access to O365 services for PCs managed by System Center Configuration Manager (Verwalten des Zugriffs auf Office&365;-Dienste für PCs, die von System Center Configuration Manager verwaltet werden)](../../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).
     - Nach der Installation von Update 1602 wird der Featuretyp als endgültige Version angezeigt, obwohl es sich um eine Vorabversion handelt.
     - Wenn Sie anschließend von 1602 auf 1606 aktualisieren, wird der Featuretyp als endgültige Version angezeigt, obwohl es sich weiterhin um eine Vorabversion handelt.
     - Wenn Sie von Version 1511 direkt auf 1606 aktualisieren, wird der Featuretyp als Vorabversion angezeigt.
@@ -247,6 +247,12 @@ Der Assistent zum Erstellen eines Wartungsplans wird zurzeit standardmäßig nac
 **Problemumgehung**:    
 Nachdem Sie einen Wartungsplan erstellt haben, öffnen Sie die Eigenschaften des Plans, wechseln Sie zur Registerkarte **Auswertungszeitplan**, wählen Sie **Regel nach Zeitplan ausführen** aus, klicken Sie auf **Anpassen**, und erstellen Sie einen benutzerdefinierten Zeitplan. Sie können den Wartungsplan beispielsweise alle 60 Tage ausführen.  
 
+### <a name="when-a-high-risk-deployment-dialog-is-visible-to-a-user-subsequent-high-risk-dialogs-with-a-sooner-deadline-are-not-displayed"></a>Wenn einem Benutzer ein Dialogfeld über eine risikoreiche Bereitstellung angezeigt wird, werden keine nachfolgenden Dialogfelder über risikoreiche Bereitstellungen mit einem früheren Stichtag angezeigt.
+Nachdem Sie eine risikoreiche Taskbereitstellung für Benutzer erstellt und bereitgestellt haben, wird dem Benutzer ein Dialogfeld über eine risikoreiche Bereitstellung angezeigt. Wenn der Benutzer das Dialogfeld nicht schließt und Sie eine weitere risikoreiche Bereitstellung mit einem früheren Stichtag erstellen, wird dem Benutzer das aktualisierte Dialogfeld nicht angezeigt, weil er das erste Dialogfeld nicht geschlossen hat. Die Bereitstellungen werden dennoch am konfigurierten Stichtag ausgeführt.
+
+**Problemumgehung**:  
+Der Benutzer muss das Dialogfeld für die erste risikoreiche Bereitstellung schließen, damit das Dialogfeld für die nächste risikoreiche Bereitstellung angezeigt wird.
+
 ## <a name="mobile-device-management"></a>Verwaltung mobiler Geräte  
 
 ### <a name="cannot-create-an-enrollment-profile-on-a-primary-site"></a>An einem primären Standort konnte kein Anmeldungsprofil erstellt werden  
@@ -291,6 +297,6 @@ Dieses Problem betrifft den bedingten Zugriff von System Center Configuration Ma
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

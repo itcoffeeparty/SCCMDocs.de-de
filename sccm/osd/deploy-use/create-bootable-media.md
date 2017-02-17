@@ -1,8 +1,8 @@
 ---
-title: Erstellen startbarer Medien | Microsoft-Dokumentation
+title: "Erstellen von startbaren Medien – Configuration Manager | Microsoft-Dokumentation"
 description: "Startbare Medien in Configuration Manager erleichtern die Installation einer neuen Version von Windows oder ersetzen einen Computer und Übertragungseinstellungen."
 ms.custom: na
-ms.date: 12/06/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 03722ff4f480cd26842e395fe1f7ec8359e2b33e
-ms.openlocfilehash: a7bdad82dc55b4c0fe7d892ef34cc6aa0dfbf476
+ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
+ms.openlocfilehash: 9032698fa12bf453041ea06bf330d3b4687c2a97
 
 
 ---
@@ -47,7 +47,7 @@ Startbare Medien in Configuration Manager enthalten das Startimage, optionale Pr
 
  Wenden Sie das folgende Verfahren an, um startbare Medien zu erstellen.  
 
-#### <a name="to-create-bootable-media"></a>So erstellen Sie startbare Medien  
+### <a name="to-create-bootable-media"></a>So erstellen Sie startbare Medien  
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Softwarebibliothek**.  
 
@@ -146,11 +146,18 @@ Startbare Medien in Configuration Manager enthalten das Startimage, optionale Pr
 
 10. Schließen Sie den Assistenten ab.  
 
+## <a name="create-bootable-media-on-a-usb-drive-from-a-network-share"></a>Erstellen startbarer Medien auf einem USB-Laufwerk über eine Netzwerkfreigabe
+Die Informationen in diesem Abschnitt unterstützen Sie beim Erstellen startbarer Medien auf einem USB-Speicherstick, wenn der Speicherstick nicht mit dem Computer verbunden ist, auf dem die Configuration Manager-Konsole ausgeführt wird. Sie können zum Erstellen startbarer Medien auf dem USB-Laufwerk Tasksequenz-Bootmedien erstellen, die das ISO-Image bereitstellen, und die Dateien aus dem ISO-Image in das USB-Laufwerk verschieben.
+
+1. [Create the task sequence boot media (Erstellen der Tasksquenz-Bootmedien)](#to-create-task-boobable-media). Wählen Sie auf der Seite **Medientyp** **CD/DVD-Satz** aus. Die Ausgabedateien werden vom Assistenten an den Speicherort geschrieben, den Sie angeben. Beispiel: **\\\Servername\Ordner\Ausgabedatei.iso**.  
+2. Bereiten Sie den USB-Wechseldatenträger vor. Der Datenträger muss formatiert, leer und startbar sein.
+3. Stellen Sie die ISO-Datei aus dem freigegebenen Speicherort bereit, und übertragen Sie die Dateien aus der ISO-Datei in das USB-Laufwerk.
+
 ## <a name="next-steps"></a>Nächste Schritte  
 [Verwenden startbarer Medien zum Bereitstellen von Windows über das Netzwerk](use-bootable-media-to-deploy-windows-over-the-network.md)  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -4,6 +4,7 @@
 ### [Barrierefreiheitsfunktionen](understand/accessibility-features.md)
 ##  [Grundlagen von Configuration Manager](understand/fundamentals.md)
 ### [Grundlagen von Standorten und Hierarchien](understand/fundamentals-of-sites-and-hierarchies.md)
+#### [Informationen zu Upgrade, Update und Installation für einen Standort und eine Hierarchieinfrastruktur](understand/upgrade-update-install.md)
 ### [Grundlagen der Verwaltung von Geräten](understand/fundamentals-of-managing-devices.md)
 ### [Grundlagen der Clientverwaltung](understand/fundamentals-of-client-management-tasks.md)
 ### [Grundlagen der Sicherheit](understand/fundamentals-of-security.md)
@@ -60,7 +61,7 @@
 ###  [Sicherheit und Datenschutz für die Standortverwaltung](plan-design/hierarchy/security-and-privacy-for-site-administration.md)
 
 ##   [Planen der Netzwerkinfrastruktur](plan-design/network/configure-firewalls-ports-domains.md)
-###  [Erweitern des Active Directory-Schemas](plan-design/network/extend-the-active-directory-schema.md)
+###  [Vorbereiten des Active Directory-Schemas](plan-design/network/extend-the-active-directory-schema.md)
 ###  [Vorbereiten von Computern mit Windows Server zur Unterstützung von Standortsystemen](plan-design/network/prepare-windows-servers.md)
 ###  [Websites für Standortsystemserver](plan-design/network/websites-for-site-system-servers.md)
 ###  [PKI-Zertifikatanforderungen](plan-design/network/pki-certificate-requirements.md)
@@ -87,7 +88,8 @@
 ##   [Auswerten von Configuration Manager in einer Laborumgebung](get-started/evaluate-with-lab-environment.md)
 ###  [Einrichten der Laborumgebung](get-started/set-up-your-lab.md)
 
-##   [Technical Preview](get-started/technical-preview.md) 
+##   [Technical Preview](get-started/technical-preview.md)
+###  [Funktionen in 1701](get-started/capabilities-in-technical-preview-1701.md)
 ###  [Funktionen in 1612](get-started/capabilities-in-technical-preview-1612.md)
 ###  [Funktionen in 1611](get-started/capabilities-in-technical-preview-1611.md)
 ###  [Funktionen in 1610](get-started/capabilities-in-technical-preview-1610.md)
@@ -122,7 +124,8 @@
 #    [Bereitstellen von Servern und Rollen](servers/deploy/start-using.md)
 
 ##   Installieren der Infrastruktur
-###  [Vor dem Ausführen des Setups](servers/deploy/install/setup-downloader.md)
+###  [Erhalten von Installationsmedium](servers/deploy/install/get-install-media.md)
+###  vor der Ausführung des Setup
 #### [Setup-Downloadprogramm](servers/deploy/install/setup-downloader.md)
 #### [Voraussetzungsprüfung](servers/deploy/install/prerequisite-checker.md)
 ###  [Installieren von Standorten](servers/deploy/install/installing-sites.md)
@@ -167,6 +170,7 @@
 ###  [Installieren von konsoleninternen Updates](servers/manage/install-in-console-updates.md)
 #### [Flussdiagramm: Herunterladen von Updates](servers/manage/download-updates-flowchart.md)
 #### [Flussdiagramm: Aktualisieren von Replikationen](servers/manage/update-replication-flowchart.md)
+###  [Dienstfenster für Standortserver](servers/manage/service-windows.md)
 ###  [Verwenden des Dienstverbindungstools](servers/manage/use-the-service-connection-tool.md)
 ###  [Verwenden des Tools zur Updateregistrierung](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [Verwenden des Hotfixinstallationsprogramms](servers/manage/use-the-hotfix-installer-to-install-updates.md)
@@ -218,6 +222,7 @@
 ###  [Konfigurieren von Wake-On-LAN](clients/deploy/configure-wake-on-lan.md)
 ###  [Bereitstellen von Clients auf Windows-Computern](clients/deploy/deploy-clients-to-windows-computers.md)
 ###  [Bereitstellen von Clients auf UNIX- und Linux-Servern](clients/deploy/deploy-clients-to-unix-and-linux-servers.md)
+###  [Vorbereiten der Bereitstellung von Clients auf Macintosh-Computern](clients/deploy/prepare-to-deploy-mac-clients.md)
 ###  [Bereitstellen von Clients auf Macintosh-Computern](clients/deploy/deploy-clients-to-macs.md)
 ###  [Zuweisen von Clients zu einem Standort](clients/deploy/assign-clients-to-a-site.md)
 ###  [Konfigurieren des Clientstatus](clients/deploy/configure-client-status.md)
@@ -231,6 +236,7 @@
 ###  [Verwalten von Clients](clients/manage/manage-clients.md)
 ###  [Verwalten von Linux- und UNIX-Clients](clients/manage/manage-clients-for-linux-and-unix-servers.md)
 ###  [Synchronisieren von Daten mit OMS](clients/manage/sync-data-microsoft-operations-management-suite.md)
+###  [Warten von Macintosh-Clients](clients/manage/maintain-mac-clients.md)
 
 ##   [Verwalten von Clients im Internet](clients/manage/manage-clients-internet.md)
 ###  [Planen des Cloudverwaltungsgateways](clients/manage/plan-cloud-management-gateway.md)
@@ -253,14 +259,12 @@
 ###  [Erweitern der Hardwareinventur](clients/manage/inventory/extend-hardware-inventory.md)
 ###  [Konfigurieren der Hardwareinventur](clients/manage/inventory/configure-hardware-inventory.md)
 ###  [Konfigurieren der Hardwareinventur für mobile Geräte in einer hybriden Bereitstellung](clients/manage/inventory/mobile-device-hardware-inventory-hybrid.md)
-<!--- ###  [Operations and maintenance for hardware inventory](clients/manage/inventory/hardware-inventory.md) --->
 ###  [Verwenden von Ressourcen-Explorer zum Anzeigen des Hardwarebestands](clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)
 ###  [Hardwareinventur für Linux und UNIX](clients/manage/inventory/hardware-inventory-for-linux-and-unix.md)
 ###  [Sicherheit und Datenschutz für die Hardwareinventur](clients/manage/inventory/security-and-privacy-for-hardware-inventory.md)
 
 ##   Softwareinventur
 ###  [Einführung in die Softwareinventur](clients/manage/inventory/introduction-to-software-inventory.md)
-###  [Ausschließen von Ordnern aus der Softwareinventur](clients/manage/inventory/exclude-folders-from-software-inventory.md)
 ###  [Konfigurieren der Softwareinventur](clients/manage/inventory/configure-software-inventory.md)
 ###  [Verwenden von Ressourcen-Explorer zum Anzeigen des Softwarebestands](clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)
 ###  [Sicherheit und Datenschutz für die Softwareinventur](clients/manage/inventory/security-and-privacy-for-software-inventory.md)
@@ -301,6 +305,6 @@
 ###  [Aktualisieren von Analytics](clients/manage/upgrade/upgrade-analytics.md)
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 
