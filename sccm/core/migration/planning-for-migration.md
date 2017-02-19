@@ -2,7 +2,7 @@
 title: Planen der Migration | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über Standorte und Hierarchien, bevor Sie Daten in eine Zielhierarchie in System Center Configuration Manager migrieren."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,12 +17,12 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
-ms.openlocfilehash: ccc9973c07da9eca4bfacfb3bc7d1228a976c78b
+ms.sourcegitcommit: a2405bc04889bd6ae46069fe447228149bbaf468
+ms.openlocfilehash: fffef1e95e1dfa03971f140a6e5a7fff9bfe5e27
 
 
 ---
-# <a name="planning-for-migration-to-system-center-configuration-manager"></a>Planen der Migration zu System Center Configuration Manager
+# <a name="plan-for-migration-to-system-center-configuration-manager"></a>Planen der Migration zu System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -30,14 +30,14 @@ Stellen Sie sicher, dass Sie mit Standorten und Hierarchien in Configuration Man
 
  Sie müssen zuerst eine System Center Configuration Manager-Hierarchie als Zielhierarchie installieren, bevor Sie Daten aus einer unterstützten Quellhierarchie migrieren können.  
 
- Konfigurieren Sie nach dem Installieren der Zielhierarchie die Verwaltungsfunktionen, die Sie in der Zielhierarchie verwenden möchten, bevor Sie mit dem Migrieren von Daten beginnen.  
+ Richten Sie nach dem Installieren der Zielhierarchie die Verwaltungsfeatures und -funktionen ein, die Sie in Ihrer Zielhierarchie verwenden möchten, bevor Sie mit dem Migrieren von Daten beginnen.  
 
- Möglicherweise müssen Sie zusätzlich Vorkehrungen für eine Überlappung der Quellhierarchie mit der Zielhierarchie treffen. Beispielsweise können Sie beim Konfigurieren der Quellhierarchie angeben, dass die gleichen Netzwerkspeicherorte oder -grenzen wie für die Zielhierarchie verwendet werden sollen. Anschließend installieren Sie neue Clients für die Zielhierarchie und verwenden die automatische Standortzuweisung. Bei diesem Szenario ist es möglich, dass vom Client eine fehlerhafte Zuweisung zur Quellhierarchie vorgenommen wird, weil vom neu installierten Configuration Manager-Client aus beiden Hierarchien ein Standort für den Beitritt ausgewählt werden kann. Planen Sie daher die Zuweisung jedes neuen Clients in der Zielhierarchie zu einem bestimmten Standort dieser Hierarchie, anstatt die automatische Standortzuweisung zu verwenden.  
+ Möglicherweise müssen Sie zusätzlich Vorkehrungen für eine Überlappung der Quellhierarchie mit der Zielhierarchie treffen. Beispielsweise können Sie beim Einrichten der Quellhierarchie angeben, dass die gleichen Netzwerkspeicherorte oder -grenzen wie für die Zielhierarchie verwendet werden sollen. Anschließend installieren Sie neue Clients für Ihre Zielhierarchie und verwenden die automatische Standortzuweisung. Bei diesem Szenario ist es möglich, dass vom Client eine fehlerhafte Zuweisung zur Quellhierarchie vorgenommen wird, weil vom neu installierten Configuration Manager-Client aus beiden Hierarchien ein Standort für den Beitritt ausgewählt werden kann. Planen Sie daher die Zuweisung jedes neuen Clients in der Zielhierarchie zu einem bestimmten Standort dieser Hierarchie, anstatt die automatische Standortzuweisung zu verwenden.  
 
  Weitere Informationen zu Standortzuweisungen finden Sie im Abschnitt [Überlegungen zur Clientstandortzuweisung](../../core/plan-design/hierarchy/interoperability-between-different-versions.md#BKMK_SupConfigSiteAssignment) des Themas [Interoperabilität zwischen verschiedenen Versionen von System Center Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md).  
 
-## <a name="planning-topics"></a>Planungsthemen  
- Die folgenden Themen sind bei der Migration einer unterstützten Quellhierarchie in eine System Center Configuration Manager-Zielhierarchie hilfreich:  
+## <a name="plan-topics"></a>Planen von Themen  
+ Die folgenden Themen sind bei der Migration einer unterstützten Quellhierarchie in eine System Center Configuration Manager-Zielhierarchie hilfreich:
 
 -   [Voraussetzungen für die Migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md)  
 
@@ -61,6 +61,6 @@ Stellen Sie sicher, dass Sie mit Standorten und Hierarchien in Configuration Man
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

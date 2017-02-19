@@ -2,7 +2,7 @@
 title: "Unterstützte Konfiguration für LTSB | Microsoft-Dokumentation"
 description: "Hier finden Sie Informationen dazu, welche Betriebssysteme und abhängigen Produkte mit LTSB (Long-Term Servicing Branch) von System Center Configuration Manager verwendet werden."
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 1/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 573115e54d734d492ca776a040bad804a792ada6
+ms.sourcegitcommit: 12aa9f0a1ad4ce8acf0b914e9911bb50ba887919
+ms.openlocfilehash: 5b2ab25d7f645ea9eada81d241ef14168b017304
 
 
 ---
@@ -36,58 +36,58 @@ Darüber hinaus werden auch Produkte und Produktversionen, die in den folgenden 
 **Einschränkungen für zukünftigen Support:** Der LTSB bietet für zukünftige Server- und Clientbetriebssysteme sowie Produktabhängigkeiten nur eingeschränkten Support. Die Liste der Plattformen für den LTSB ist für die Lebensdauer des Releases festgeschrieben:
 
 **Windows:**
-- Nur Qualitäts- und Sicherheitsupdates für Windows werden unterstützt.
+- Es werden nur Qualitäts- und Sicherheitsupdates für Windows unterstützt.
 - Current Branches (CB), Current Branches for Business (CBB) oder LTSB von Windows 10 werden nicht unterstützt.
 -   Neue Hauptversionen von Windows Server werden nicht unterstützt.
 
 **SQL Server:**
-- Nur Qualitäts- und Sicherheitsupdates bzw. kleinere Updates für SQL Server wie Service Packs werden unterstützt.
+- Es werden nur Qualitäts- und Sicherheitsupdates bzw. kleinere Updates für SQL Server wie Service Packs unterstützt.
 - Neue Hauptversionen von SQL Server werden nicht unterstützt.  
 
 ## <a name="site-systems-and-servers"></a>Standortsysteme und Server
-Der LTSB bietet Unterstützung unter Verwendung der folgenden Windows-Computerbetriebssysteme als Standortsysteme.  Für jedes Betriebssystem gelten dieselben Anforderungen und Einschränkungen wie im entsprechenden Eintrag unter [Unterstützte Betriebssysteme für Standortsystemserver](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers) beschrieben.  So muss es sich bei der Server Core-Installation von Windows 2012 R2 beispielsweise um eine x64-Version handeln. Zudem wird für diese Installation nur das Hosten eines Verteilungspunkts unterstützt. PXE bzw. Multicast wird nicht unterstützt.
+LTSB bietet Unterstützung unter Verwendung der folgenden Windows-Computerbetriebssysteme als Standortsysteme.  Für jedes Betriebssystem gelten dieselben Anforderungen und Einschränkungen wie im entsprechenden Eintrag unter [Unterstützte Betriebssysteme für Standortsystemserver](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers) beschrieben.  So muss es sich bei der Server Core-Installation von Windows 2012 R2 beispielsweise um eine x64-Version handeln. Zudem wird für diese Installation nur das Hosten eines Verteilungspunkts unterstützt. PXE bzw. Multicast wird nicht unterstützt.
 
 **Unterstützte Betriebssysteme:**
-- **Windows Server 2016**
-- **Windows Server 2012** (x64) – Standard, Datacenter
-- **Windows Server 2008 R2 mit SP1** (x64) – Standard, Enterprise, Datacenter
-- **Windows Server 2008 mit SP2** (x86, x64) – Standard, Enterprise, Datacenter
-- **Windows 10 Enterprise 2015 LTSB** (x86, x64)
-- **Windows 10 Enterprise 2016 LTSB** (x86, x64)
-- **Windows 8.1** (x86, x64) – Professional, Enterprise
-- **Windows 7 mit SP1** (x86, x64) – Professional, Enterprise, Ultimate
-- **Die Server Core-Installation von Windows Server 2012**
-- **Die Server Core-Installation von Windows Server 2012 R2**  
+- Windows Server 2016
+- Windows Server 2012 (x64) – Standard, Datacenter
+- Windows Server 2008 R2 mit SP1 (x64) – Standard, Enterprise, Datacenter
+- Windows Server 2008 mit SP2 (x86, x64) - Standard, Enterprise, Datacenter
+- Windows 10 Enterprise 2015 LTSB (x86, x64)
+- Windows 10 Enterprise 2016 LTSB (x86, x64)
+- Windows 8.1 (x86, x64) – Professional, Enterprise
+- Windows 7 mit SP1 (x86, x64) – Professional, Enterprise, Ultimate
+- Die Server Core-Installation von Windows Server 2012
+- Server Core-Installation von Windows Server 2012 R2  
 
 ## <a name="client-management"></a>Clientverwaltung
 In den folgenden Abschnitten sind die Clientbetriebssysteme aufgeführt, die mit LTSB verwaltet werden können. Vom LTSB werden neue, als unterstützte Clients hinzugefügte Betriebssysteme nicht unterstützt.
 
 ### <a name="windows-computers"></a>Windows-Computer
-Die folgenden Windows-Computerbetriebssysteme können vom LTSB mit der in Configuration Manager enthaltenen Configuration Manager-Clientsoftware verwaltet werden. Weitere Informationen finden Sie unter [How to deploy clients to Windows computers in System Center Configuration Manager (Bereitstellen von Clients auf Windows-Computern in System Center Configuration Manager)](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
+Die folgenden Windows-Computerbetriebssysteme können vom LTSB mit der in Configuration Manager enthaltenen Configuration Manager-Clientsoftware verwaltet werden. Weitere Informationen finden Sie unter [Bereitstellen von Clients auf Windows-Computern in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
 
 **Unterstützte Betriebssysteme:**
-- **Windows Server 2016**
-- **Windows Server 2012 R2** (x64) – Standard, Datacenter (Hinweis 1)
-- **Windows Server 2012** (x64) – Standard, Datacenter (Note 1)
-- **Windows Storage Server 2012 R2** (x64)
-- **Windows Storage Server 2012** (x64)
-- **Windows Server 2008 R2 with SP1** (x64) – Standard, Enterprise, Datacenter (Hinweis 1)
-- **Windows Storage Server 2008 R2** (x86, x64) – Workgroup, Standard, Enterprise
-- **Windows Server 2008 with SP2** (x86, x64) – Standard, Enterprise, Datacenter (Hinweis 1)
-- **Windows 10 Enterprise 2015 LTSB** (x86, x64)
-- **Windows 10 Enterprise 2016 LTSB** (x86, x64)
-- **Windows 8.1** (x86, x64) – Professional, Enterprise
-- **Windows 7 mit SP1** (x86, x64) – Professional, Enterprise, Ultimate
-- **Die Server Core-Installation von Windows Server 2012 R2** (x64) (Hinweis 2)
-- **Die Server Core-Installation von Windows Server 2012** (x64) (Hinweis 2)
-- **Die Server Core-Installation von Windows Server 2008 R2 SP1** (x64)
-- **Die Server Core-Installation von Windows Server 2008 SP2** (x86, x64)
+- Windows Server 2016
+- Windows Server 2012 R2 (x64) – Standard, Datacenter (Hinweis 1)
+- Windows Server 2012 (x64) – Standard, Datacenter (Hinweis 1)
+- Windows Storage Server 2012 R2 (x64)
+- Windows Storage Server 2012 (x64)
+- Windows Server 2008 R2 mit SP1 (x64) – Standard, Enterprise, Datacenter (Hinweis 1)
+- Windows Storage Server 2008 R2 (x86, x64) – Workgroup, Standard, Enterprise
+- Windows Server 2008 mit SP2 (x86, x64) – Standard, Enterprise, Datacenter (Hinweis 1)
+- Windows 10 Enterprise 2015 LTSB (x86, x64)
+- Windows 10 Enterprise 2016 LTSB (x86, x64)
+- Windows 8.1 (x86, x64) – Professional, Enterprise
+- Windows 7 mit SP1 (x86, x64) – Professional, Enterprise, Ultimate
+- Die Server Core-Installation von Windows Server 2012 R2 (x64) (Hinweis 2)
+- Die Server Core-Installation von Windows Server 2012 (x64) (Hinweis 2)
+- Die Server Core-Installation von Windows Server 2008 R2 SP1 (x64)
+- Server Core-Installation von Windows Server 2008 SP2 (x86, x64)
 
 **(Hinweis 1)** Datacenter-Releases werden von Configuration Manager zwar unterstützt, sind jedoch nicht dafür zertifiziert.  
-**(Hinweis 2)** Zur Unterstützung der Clientpushinstallation muss auf dem Computer, auf dem diese Betriebssystemversion ausgeführt wird, der Dateiserver-Rollendienst für die Serverrolle „Datei- und Speicherdienste“ ausgeführt werden. Informationen zum Installieren von Windows-Features auf einem Server Core-Computer finden Sie unter „Install Server Roles and Features on a Server Core Server (Installieren von Serverrollen und -features auf einem Server Core-Server)“ in der TechNet-Bibliothek für Windows Server 2012.
+**(Hinweis 2)** Zur Unterstützung der Clientpushinstallation muss auf dem Computer, auf dem diese Betriebssystemversion ausgeführt wird, der Dateiserver-Rollendienst für die Serverrolle „Datei- und Speicherdienste“ ausgeführt werden. Informationen zum Installieren von Windows-Features auf einem Server Core-Computer finden Sie unter [Installieren von Serverrollen und -features auf einem Server Core-Server](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx) in der TechNet-Bibliothek für Windows Server 2012.
 
-### <a name="windows-embedded"></a>Windows Embedded:
-Sie können den LTSB zum Verwalten der folgenden Windows Embedded-Geräte verwenden, indem Sie die Clientsoftware auf dem Gerät installieren.  Weitere Informationen finden Sie unter [Planning for client deployment to Windows Embedded devices in System Center Configuration Manager (Planen der Clientbereitstellung auf Windows Embedded-Geräten in System Center Configuration Manager)](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices).
+### <a name="windows-embedded"></a>Windows Embedded
+Sie können den LTSB zum Verwalten der folgenden Windows Embedded-Geräte verwenden, indem Sie die Clientsoftware auf dem Gerät installieren.  Weitere Informationen finden Sie unter [Planen der Clientbereitstellung auf Windows Embedded-Geräten in System Center Configuration Manager](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices).
 
 **Anforderungen und Einschränkungen:**  
 
@@ -103,26 +103,26 @@ Sie können den LTSB zum Verwalten der folgenden Windows Embedded-Geräte verwen
 
 -   Der Anwendungskatalog wird für Windows Embedded-Geräte grundsätzlich nicht unterstützt.  
 
--   Bevor Sie erkannte Schadsoftware auf Windows XP-basierten Windows Embedded-Geräten überwachen können, müssen Sie das Microsoft Windows-WMI-Skriptpaket auf dem eingebetteten Gerät installieren. Verwenden Sie Windows Embedded Target Designer zur Installation dieses Pakets. Die Dateien **WBEMDISP.DLL** und **WBEMDISP.TLB** müssen vorhanden und im Ordner **%windir%\System32\WBEM** auf dem Embedded-Gerät registriert sein, um sicherzustellen, dass die erkannte Schadsoftware gemeldet wird.  
+-   Bevor Sie erkannte Schadsoftware auf Windows XP-basierten Windows Embedded-Geräten überwachen können, müssen Sie das Microsoft Windows-WMI-Skriptpaket auf dem eingebetteten Gerät installieren. Verwenden Sie Windows Embedded Target Designer zur Installation dieses Pakets. Die Dateien *WBEMDISP.DLL* und *WBEMDISP.TLB* müssen vorhanden und im Ordner %windir%\System32\WBEM auf dem Embedded-Gerät registriert sein, um sicherzustellen, dass die erkannte Schadsoftware gemeldet wird.  
 
 **Unterstützte Betriebssysteme:**  
--   **Windows 10 Enterprise 2016 LTSB** (x86, x64)  
--   **Windows 10 Enterprise 2015 LTSB** (x86, x64)  
--   **Windows Embedded 8.1 Industry** (x86, x64)    
--   **Windows Thin PC** (x86, x64)    
--   **Windows Embedded POSReady 7** (x86, x64)    
--   **Windows Embedded Standard 7 mit SP1** (x86, x64)    
--   **Windows Embedded POSReady 2009** (x86)   
--   **Windows Embedded Standard 2009** (x86)  
+-   Windows 10 Enterprise 2016 LTSB (x86, x64)  
+-   Windows 10 Enterprise 2015 LTSB (x86, x64)  
+-   Windows Embedded 8.1 Industry (x86, x64)    
+-   Windows Thin PC (x86, x64)    
+-   Windows Embedded POSReady 7 (x86, x64)    
+-   Windows Embedded Standard 7 mit SP1 (x86, x64)    
+-   Windows Embedded POSReady 2009 (x86)   
+-   Windows Embedded Standard 2009 (x86)  
 
 ### <a name="windows-ce"></a>Windows CE  
  Sie können Windows CE-Geräte mit dem Configuration Manager-Legacyclient für mobile Geräte verwalten, der im Configuration Manager enthalten ist.  
 
 **Anforderungen und Einschränkungen:**  
 
--   Zur Installation des Clients für mobile Geräte sind 0,78 MB Speicherplatz erforderlich. Die Protokollierung auf dem mobilen Gerät kann bis zu 256 KB zusätzlichen Speicherplatz erfordern.    
+-   Zur Installation des Clients für mobile Geräte sind 0,78 MB Speicherplatz erforderlich. Die Anmeldung auf dem mobilen Gerät kann bis zu 256 KB zusätzlichen Speicherplatz erfordern.    
 
--   Die für diese mobilen Geräte verfügbaren Funktionen sind von Plattform und Clienttyp abhängig. Informationen dazu, welche Verwaltungsfunktionen Configuration Manager für den Legacyclient für mobile Geräte unterstützt, finden Sie unter [Choose a device management solution for System Center Configuration Manager (Wählen einer Geräteverwaltungslösung für System Center Configuration Manager)](/sccm/core/plan-design/choose-a-device-management-solution).  
+-   Die für diese mobilen Geräte verfügbaren Funktionen sind von Plattform und Clienttyp abhängig. Informationen dazu, welche Verwaltungsfunktionen Configuration Manager für den Legacyclient für mobile Geräte unterstützt, finden Sie unter [Wählen einer Geräteverwaltungslösung für System Center Configuration Manager](/sccm/core/plan-design/choose-a-device-management-solution).  
 
 **Unterstützte Betriebssysteme:**  
 
@@ -143,23 +143,23 @@ Sie können den LTSB zum Verwalten der folgenden Windows Embedded-Geräte verwen
 ### <a name="mac-computers"></a>Macintosh-Computer  
  Sie können den LTSB verwenden, um Mac OS X-Computer mit dem Configuration Manager-Client für Macintosh zu verwalten.
 
-Das Macintosh-Clientinstallationspaket wird nicht mit den Configuration Manager-Medien geliefert. Sie können es als Teil des Clients für zusätzliche Betriebssysteme im [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184) herunterladen.  
+Das Macintosh-Clientinstallationspaket wird nicht mit den Configuration Manager-Medien geliefert. Sie können es als Teil des „Clients für zusätzliche Betriebssysteme“ im [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184) herunterladen.  
 
-Bei den Mac-Betriebssystemen werden nur die in diesem Abschnitt aufgeführten Betriebssysteme unterstützt. Andere Betriebssysteme, die möglicherweise von einem zukünftigen Update für Mac-Clientinstallationspakete für den Current Branch unterstützt werden, werden nicht unterstützt.
+Unterstützung für Macintosh-Betriebssysteme ist auf die in diesem Abschnitt aufgeführten Clients beschränkt. Zusätzliche Betriebssysteme, die möglicherweise von einem zukünftigen Update für Mac-Clientinstallationspakete für Current Branch unterstützt werden, werden nicht unterstützt.
 
 Weitere Informationen finden Sie unter [How to deploy clients to Macs in System Center Configuration Manager (Bereitstellen von Clients auf Macs in System Center Configuration Manager)](/sccm/core/clients/deploy/deploy-clients-to-macs).
 
 **Unterstützte Versionen:**  
--   **Mac OS X 10.9** (Mavericks)  
--   **Mac OS X 10.10** (Yosemite)  
--   **Mac OS X 10.11** (El Capitan)  
+-   Mac OS X 10.9 (Mavericks)  
+-   Mac OS X 10.10 (Yosemite)  
+-   Mac OS X 10.11 (El Capitan)  
 
 ## <a name="linux-and-unix-servers"></a>Linux- und UNIX-Server
 Sie können LTSB verwenden, um Linux- und UNIX-Server mit dem Configuration Manager-Client für Linux und UNIX zu verwalten.
 
-Die Clientinstallationspakete für Linux und UNIX werden nicht mit den Configuration Manager-Medien geliefert. Sie können sie als Teil des Clients für weitere Betriebssysteme im [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184) herunterladen. Zusätzlich zu den Clientinstallationspaketen umfasst der Clientdownload das Installationsskript zur Verwaltung der Clientinstallation auf den einzelnen Computern.
+Die Clientinstallationspakete für Linux und UNIX werden nicht mit den Configuration Manager-Medien geliefert. Sie können sie als Teil des „Clients für weitere Betriebssysteme“ im [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184) herunterladen. Zusätzlich zu den Clientinstallationspaketen umfasst der Clientdownload das Installationsskript zur Verwaltung der Clientinstallation auf den einzelnen Computern.
 
-Bei den Linux- und UNIX-Betriebssystemen werden nur die in diesem Abschnitt aufgeführten Betriebssysteme unterstützt. Andere Betriebssysteme, die möglicherweise von einem zukünftigen Update für Linux- und UNIX-Pakete für den Current Branch unterstützt werden, werden nicht unterstützt.
+Unterstützung für Linux- und UNIX-Betriebssysteme ist auf die in diesem Abschnitt aufgeführten Clients beschränkt. Zusätzliche Betriebssysteme, die möglicherweise von einem zukünftigen Update für Linux- und UNIX-Clientinstallationspakete für Current Branch unterstützt werden, werden nicht unterstützt.
 
 **Anforderungen und Einschränkungen:**  
 
@@ -266,18 +266,18 @@ Die folgenden Versionen werden mit der angegebenen TAR-Datei unterstützt.
 |Version 14.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
 
 ### <a name="exchange-server-connector"></a>Exchange Server-Connector
- Vom LTSB wird die Verwaltung der Geräte, die Sie mit Ihrem Exchange-Server verbinden, ohne die Clientsoftware zu installieren, mit Einschränkungen unterstützt. Weitere Informationen finden Sie unter [Manage mobile devices with System Center Configuration Manager and Exchange (Verwalten von mobilen Geräten mit System Center Configuration Manager und Exchange)](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).
+ Von LTSB wird die Verwaltung der Geräte, die Sie mit Ihrer Exchange Server-Instanz verbinden, ohne die Clientsoftware zu installieren, mit Einschränkungen unterstützt. Weitere Informationen finden Sie unter [Verwalten von mobilen Geräten mit System Center Configuration Manager und Microsoft Intune](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).
 
  **Anforderungen und Einschränkungen:**  
 
--   Configuration Manager bietet eingeschränkte Verwaltungsfunktionen für mobile Geräte, wenn Sie den Exchange Server-Connector für EAS-fähige (Exchange Active Sync) Geräte verwenden, die mit einem Server kommunizieren, auf dem Exchange Server oder Exchange Online ausgeführt wird.  
+-   Configuration Manager bietet begrenzte Verwaltungsfunktionen für mobile Geräte. Begrenzte Verwaltung ist verfügbar, wenn Sie den Exchange Server-Connector für EAS-fähige (Exchange Active Sync) Geräte verwenden, die mit einem Server kommunizieren, auf dem Exchange Server oder Exchange Online ausgeführt wird.  
 
--   Weitere Informationen dazu, welche Verwaltungsfunktionen von Configuration Manager für mobile Geräte unterstützt, die vom Exchange Server-Connector verwaltet werden, finden Sie unter [Choose a device management solution for System Center Configuration Manager (Wählen einer Geräteverwaltungslösung für System Center Configuration Manager)](/sccm/core/plan-design/choose-a-device-management-solution).  
+-   Weitere Informationen zu den Verwaltungsfunktionen, die Configuration Manager für mobile Geräte unterstützt, die vom Exchange Server-Connector verwaltet werden, finden Sie unter [Wählen einer Geräteverwaltungslösung für System Center Configuration Manager](/sccm/core/plan-design/choose-a-device-management-solution).  
 
 **Unterstützte Versionen von Exchange Server:**  
--   **Exchange Server 2010 SP1**  
--   **Exchange Server 2010 SP2**  
--   **Exchange Server 2013**  
+-   Exchange Server 2010 SP1  
+-   Exchange Server 2010 SP2  
+-   Exchange Server 2013  
 
 > [!NOTE]
 > Der LTSB bietet keine Unterstützung für die Verwaltung von Geräten, die über einen Onlinedienst wie Exchange Online (Office 365) eine Verbindung herstellen.
@@ -287,40 +287,42 @@ Die folgenden Versionen werden mit der angegebenen TAR-Datei unterstützt.
 Vom LTSB wird die Ausführung der Configuration Manager-Konsole unter den folgenden Betriebssystemen unterstützt. Auf einem Computer, auf dem die Konsole gehostet wird, muss mindestens .NET Framework Version 4.5.2 installiert sein, für Windows 10 mindestens .NET Framework 4.6.
 
 **Unterstützte Betriebssysteme:**
-- **Windows Server 2016**
-- **Windows Server 2012 R2** (x64) – Standard, Datacenter
-- **Windows Server 2012** (x64) – Standard, Datacenter
-- **Windows Server 2008 R2 mit SP1** (x64) – Standard, Enterprise, Datacenter
-- **Windows Server 2008 mit SP2** (x86, x64) – Standard, Enterprise, Datacenter
-- **Windows 10 Enterprise 2016 LTSB** (x86, x64)
-- **Windows 10 Enterprise 2015 LTSB** (x86, x64)
-- **Windows 8.1** (x86, x64) – Professional, Enterprise Windows 7 mit SP1** (x86, x64) – Professional, Enterprise, Ultimate
+- Windows Server 2016
+- Windows Server 2012 R2 (x64) – Standard, Datacenter
+- Windows Server 2012 (x64) – Standard, Datacenter
+- Windows Server 2008 R2 mit SP1 (x64) – Standard, Enterprise, Datacenter
+- Windows Server 2008 mit SP2 (x86, x64) - Standard, Enterprise, Datacenter
+- Windows 10 Enterprise 2016 LTSB (x86, x64)
+- Windows 10 Enterprise 2015 LTSB (x86, x64)
+- Windows 8.1 (x86, x64) – Professional, Enterprise
+- Windows 7 mit SP1 (x86, x64) – Professional, Enterprise, Ultimate
+
 
 ## <a name="sql-server-versions-supported-for-the-site-database-and-reporting-point"></a>Für die Standortdatenbank und den Berichterstattungspunkt unterstützte SQL Server-Versionen
 Vom LTSB wird das Hosten der Standortdatenbank und des Berichterstattungspunkts durch die folgenden Versionen von SQL Server unterstützt. Für die unterstützten Versionen gelten für den LTSB die Konfigurationsanforderungen und -einschränkungen, die unter [Unterstützung für SQL Server-Versionen](/sccm/core/plan-design/configs/support-for-sql-server-versions) für Current Branch beschrieben werden.  Dies schließt die Verwendung eines SQL Server-Clusters oder einer SQL Server-Always On-Verfügbarkeitsgruppe ein.  
 
 **Unterstützte Versionen:**
 
-- **SQL Server 2016** – Standard, Enterprise
-- **SQL Server 2014 SP2** – Standard, Enterprise
-- **SQL Server 2014 SP1** – Standard, Enterprise
-- **SQL Server 2012 SP3** – Standard, Enterprise
-- **SQL Server 2012 SP2** – Standard, Enterprise
-- **SQL Server 2008 R2 SP3** – Standard, Enterprise, Datacenter
-- **SQL Server 2016 Express**
-- **SQL Server 2014 Express SP2**
-- **SQL Server 2014 Express SP1**
-- **SQL Server 2012 Express SP3**
-- **SQL Server 2012 Express SP2**
+- SQL Server 2016: Standard, Enterprise
+- SQL Server 2014 SP2: Standard, Enterprise
+- SQL Server 2014 SP1: Standard, Enterprise
+- SQL Server 2012 SP3: Standard, Enterprise
+- SQL Server 2012 SP2: Standard, Enterprise
+- SQL Server 2008 R2 SP3: Standard, Enterprise, Datacenter
+- SQL Server 2016 Express
+- SQL Server 2014 Express SP2
+- SQL Server 2014 Express SP1
+- SQL Server 2012 Express SP3
+- SQL Server 2012 Express SP2
 
 ## <a name="support-for-active-directory-domains"></a>Unterstützung für Active Directory-Domänen
 Alle LTSB-Standortsysteme müssen Mitglieder einer unterstützten Windows Active Directory-Domäne sein. Für die Unterstützung von Active Directory-Domänen gelten die Anforderungen und Einschränkungen, die unter [Unterstützung für Active Directory-Domänen](/sccm/core/plan-design/configs/support-for-active-directory-domains) aufgeführt sind. Die Unterstützung ist jedoch auf die folgenden Domänenfunktionsebenen beschränkt:
 
 **Unterstützte Ebenen:**
-- **Windows Server 2008**
-- **Windows Server 2008 R2**
-- **Windows Server 2012**
-- **Windows Server 2012 R2**
+- Windows Server 2008
+- Windows Server 2008 R2
+- Windows Server 2012
+- Windows Server 2012 R2
 
 ## <a name="additional-support-topics-that-apply-to-the-long-term-servicing-branch"></a>Weitere Themen zur Unterstützung, die für Long-Term Servicing Branch gelten
 Die Informationen in den folgenden Current Branch-Themen gelten für den LTSB:
@@ -328,11 +330,11 @@ Die Informationen in den folgenden Current Branch-Themen gelten für den LTSB:
 - [Voraussetzungen für Standorte und Standortsysteme](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)
 - [High availability options (Optionen für hohe Verfügbarkeit)](/sccm/protect/understand/high-availability-options)
 - [Empfohlene Hardware](/sccm/core/plan-design/configs/recommended-hardware)
-- [Unterstützung für Windows-Features und -Netzwerke](/sccm/core/plan-design/configs/support-for-windows-features-and-networks)
-- [Support for Virtualization Environments (Unterstützung für Virtualisierungsumgebungen)](/sccm/core/plan-design/configs/support-for-virtualization-environments)
+- [Unterstützung für Windows-Features und Netzwerke](/sccm/core/plan-design/configs/support-for-windows-features-and-networks)
+- [Unterstützung für Virtualisierungsumgebungen](/sccm/core/plan-design/configs/support-for-virtualization-environments)
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

@@ -2,7 +2,7 @@
 title: "Überwachen der Migration | Microsoft-Dokumentation"
 description: "Erfahren Sie, wie Sie die Migration zu einer System Center Configuration Manager-Zielhierarchie abschließen, nachdem eine Quellhierarchie keine Daten mehr enthält."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,16 +17,16 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
-ms.openlocfilehash: 0595ab87222aca543ae67a33c2b9fab780c6160f
+ms.sourcegitcommit: 0f4a10ba7bbe397f05d724141b562b6cd8b78ea8
+ms.openlocfilehash: eb1d2e320df02b26423ed4341d5bd1568b9444ad
 
 
 ---
-# <a name="planning-to-complete-migration-in-system-center-configuration-manager"></a>Planen des Abschließens der Migration in System Center Configuration Manager
+# <a name="plan-to-complete-migration-in-system-center-configuration-manager"></a>Planen des Abschließens der Migration in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Wenn in System Center Configuration Manager eine Quellhierarchie keine Daten mehr enthält, die Sie zur Zielhierarchie migrieren möchten, können Sie den Migrationsprozess abschließen. Der Abschluss der Migration umfasst die folgenden allgemeinen Schritte:  
+Wenn eine Quellhierarchie in System Center Configuration Manager keine Daten mehr enthält, die Sie zu Ihrer Zielhierarchie migrieren möchten, können Sie den Migrationsprozess abschließen. Der Abschluss der Migration umfasst die folgenden allgemeinen Schritte:  
 
 -   Stellen Sie sicher, dass alle benötigten Daten migriert wurden. Vergewissern Sie sich vor dem Abschließen der Migration aus einer Quellhierarchie, dass Sie alle Ressourcen aus der Quellhierarchie migriert haben, die Sie in der Zielhierarchie benötigen. Bei diesen Ressourcen kann es sich um Daten und Clients handeln.  
 
@@ -34,9 +34,9 @@ Wenn in System Center Configuration Manager eine Quellhierarchie keine Daten meh
 
 -   Bereinigen Sie die Migrationsdaten. Nachdem Sie die Datensammlung für alle Quellstandorte einer Quellhierarchie beendet haben, können Sie die Daten zum Migrationsprozess und zur Quellhierarchie aus der Datenbank der Zielhierarchie entfernen.  
 
--   Nehmen Sie die Quellhierarchie außer Betrieb. Wenn die Migration aus einer Quellhierarchie abgeschlossen ist und in dieser Hierarchie keine Ressourcen mehr enthalten sind, die von Ihnen verwaltet werden, können Sie die Standorte der Quellhierarchie außer Betrieb nehmen und die entsprechende Infrastruktur aus der Umgebung entfernen. Informationen zur Außerbetriebnahme von Standorten und Quellhierarchien finden Sie in der Dokumentation zur entsprechenden Version von Configuration Manager.  
+-   Nehmen Sie die Quellhierarchie außer Betrieb. Wenn die Migration aus einer Quellhierarchie abgeschlossen ist und in dieser Hierarchie keine Ressourcen mehr enthalten sind, die von Ihnen verwaltet werden, können Sie die Standorte der Quellhierarchie außer Betrieb nehmen und die entsprechende Infrastruktur aus Ihrer Umgebung entfernen. Informationen zur Außerbetriebnahme von Standorten und Quellhierarchien finden Sie in der Dokumentation zur entsprechenden Version von Configuration Manager.  
 
-Verwenden Sie die Informationen in den folgenden Abschnitten, um die Migration aus einer Quellhierarchie zu planen, indem Sie die Datensammlung beenden und anschließend die Migrationsdaten bereinigen:  
+Verwenden Sie die Informationen in den folgenden Abschnitten, um das Abschließen der Migration aus einer Quellhierarchie zu planen, indem Sie die Datensammlung beenden und anschließend die Migrationsdaten bereinigen:  
 
 -   [Planen des Beendens der Datensammlung](#Plan_to_Stop_Data_Gath)  
 
@@ -49,7 +49,7 @@ Verwenden Sie die Informationen in den folgenden Abschnitten, um die Migration a
 
 -   Verteilen Sie Inhalte in der Zielhierarchie an mindestens einen Verteilungspunkt.  
 
--   Bevor Sie die Datensammlung an einem Quellstandort beenden, sollten Sie freigegebene Verteilungspunkte, auf denen erforderliche Inhalte vorliegen, aktualisieren oder neu zuweisen. Informationen zum Aktualisieren oder erneuten Zuweisen freigegebener Verteilungspunkte finden Sie in den betreffenden Abschnitten im Thema [Planen einer Migrationsstrategie für die Inhaltsbereitstellung in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md).  
+-   Bevor Sie die Datensammlung an einem Quellstandort beenden, sollten Sie freigegebene Verteilungspunkte, auf denen erforderliche Inhalte vorliegen, aktualisieren oder neu zuweisen. Weitere Informationen zum Aktualisieren oder erneuten Zuweisen freigegebener Verteilungspunkte finden Sie in den betreffenden Abschnitten im Thema [Planen einer Migrationsstrategie für die Inhaltsbereitstellung in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md).  
 
 Wenn keine Daten mehr von den Quellstandorten in der Quellhierarchie gesammelt werden, können die Migrationsdaten bereinigt werden. Bis die Migrationsdaten bereinigt wurden, sind alle geplanten und ausgeführten Migrationsaufträge in der Configuration Manager-Konsole verfügbar.  
 
@@ -62,6 +62,6 @@ Weitere Informationen zu Quellstandorten und der Datensammlung finden Sie unter 
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

@@ -2,7 +2,7 @@
 title: "Beispielszenario – Bereitstellen von Windows Embedded-Clients | Microsoft-Dokumentation"
 description: "Stellt ein Beispielszenario für die Bereitstellung und Verwaltung von System Center Configuration Manager-Clients auf Windows Embedded-Geräten dar."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/12/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 7b5cd35b22b610902628142d9cc52b8f3d54069d
+ms.sourcegitcommit: a650ad8e7b1f9468dd04165a3e43a89387b5d696
+ms.openlocfilehash: b07af49e2fecf6cc41258c87794ca7952206bb8a
 
 
 ---
@@ -25,11 +25,11 @@ ms.openlocfilehash: 7b5cd35b22b610902628142d9cc52b8f3d54069d
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-In diesem Szenario wird gezeigt, wie Sie mithilfe von System Center Configuration Manager Windows Embedded-Geräte mit aktivierten Schreibfiltern verwalten können. Wenn die eingebetteten Geräte keine Schreibfilter unterstützen, entspricht ihr Verhalten dem Verhalten von Configuration Manager-Standardclients, und Sie müssen die in diesem Szenario beschriebenen Schritte zur Verwaltung von Schreibfiltern nicht ausführen.  
+In diesem Szenario wird gezeigt, wie Sie mithilfe von Configuration Manager Windows Embedded-Geräte mit aktivierten Schreibfiltern verwalten können. Wenn Ihre eingebetteten Geräte keine Schreibfilter unterstützen, entspricht ihr Verhalten dem Verhalten von Configuration Manager-Standardclients, und diese Verfahren werden nicht übernommen.  
 
- Coho Vineyard & Winery eröffnet demnächst ein Besucherzentrum und ist daran interessiert, interaktive Präsentation an Kiosken anzubieten, auf denen Windows Embedded ausgeführt wird. Das Gebäude, in dem das neue Besucherzentrum untergebracht ist, liegt nicht in unmittelbarer Nähe der IT-Abteilung. Es ist daher wichtig, dass die Kioske remote verwaltet werden können. Abgesehen von der Software zur Ausführung der interaktiven Präsentationen muss auf den Geräten den Sicherheitsrichtlinien des Unternehmens entsprechend eine aktuelle Antischadsoftware ausgeführt werden. Die Kioske müssen sieben Tage in der Woche einsatzbereit sein, damit die interaktiven Präsentationen den Besuchern stets zur Verfügung stehen. Während der Öffnungszeiten des Besucherzentrums darf es keine Downtime geben.  
+Coho Vineyard & Winery eröffnet demnächst ein Besucherzentrum und benötigt Kioske, auf denen Windows Embedded-Geräte ausgeführt werden, um interaktive Präsentationen auszuführen. Das Gebäude, in dem das neue Besucherzentrum untergebracht ist, liegt nicht in unmittelbarer Nähe der IT-Abteilung. Es ist daher wichtig, dass die Kioske remote verwaltet werden können. Zusätzlich von der Software zur Ausführung der Präsentationen muss auf den Geräten den Sicherheitsrichtlinien des Unternehmens entsprechend eine aktuelle Antischadsoftware ausgeführt werden. Die Kioske müssen während der Öffnungszeiten des Besucherzentrums sieben Tage die Woche ohne Ausfallzeiten geöffnet haben.  
 
- Coho Vineyard & Winery verwendet Configuration Manager bereits zur Verwaltung von Geräten in ihrem Netzwerk. Configuration Manager wird so konfiguriert, dass Endpoint Protection ausgeführt wird und Softwareupdates und Anwendungen installiert werden. Allerdings hat das IT-Team keinerlei Erfahrungen mit der Verwaltung von Windows Embedded-Geräten. Jane, die für Configuration Manager zuständige Administratorin, führt daher einen Pilotversuch mit zwei Kiosken durch, die sich im Eingangsbereich des Unternehmens befinden. Wenn die Geräte sich im Rahmen des Pilotversuchs erfolgreich verwalten lassen, kann die Bestellung der Kioske für das Besucherzentrum genehmigt werden.  
+ Coho führt Configuration Manager bereits zur Verwaltung von Geräten in ihrem Netzwerk aus. Configuration Manager wird so konfiguriert, dass Endpoint Protection ausgeführt wird und Softwareupdates und Anwendungen installiert werden. Allerdings hat das IT-Team keinerlei Erfahrungen mit der Verwaltung von Windows Embedded-Geräten. Jane, die für Configuration Manager zuständige Administratorin, führt daher einen Pilotversuch mit zwei zu verwaltenden Kiosken im Eingangsbereich durch.   
 
  Zur Verwaltung dieser Windows Embedded-Geräte mit aktivierten Schreibfiltern führt Jane die nachstehenden Schritte aus, um den Configuration Manager-Client zu installieren, den Schutz des Clients mithilfe von Endpoint Protection zu gewährleisten und die Software für interaktive Präsentationen zu installieren.  
 
@@ -70,7 +70,7 @@ In diesem Szenario wird gezeigt, wie Sie mithilfe von System Center Configuratio
 
      Andrea weiß, dass es immer eine Weile dauert, bis die Installation von Clients abgeschlossen ist und der Clientstatus an den entsprechenden Standort gesendet wird. Darum prüft sie erst nach einer gewissen Wartezeit, ob die Clients installiert und dem Standort zugewiesen wurden und ob sie in der Sammlung, die sie für die Windows Embedded-Geräte erstellt hat, als Clients erscheinen.  
 
-     Zusätzlich prüft sie auf den Windows Embedded-Geräten in der Systemsteuerung die Eigenschaften von Configuration Manager und vergleicht diese mit Windows-Standardcomputern, die vom Standort verwaltet werden. Beispielsweise wird auf der Registerkarte **Komponenten** unter **Hardwareinventur-Agent** die Einstellung **Aktiviert**angezeigt. Auf der Registerkarte **Aktionen** sind 11 Aktionen verfügbar, darunter **Evaluationszyklus für die Anwendungsbereitstellung** und **Ermittlungsdaten-Sammlungszyklus**.  
+     Zusätzlich prüft sie Eigenschaften von Configuration Manager in der Systemteuerung der Geräte und vergleicht diese mit Windows-Standardcomputern, die vom Standort verwaltet werden. Beispielsweise wird auf der Registerkarte **Komponenten** unter **Hardwareinventur-Agent** die Einstellung **Aktiviert**angezeigt. Auf der Registerkarte **Aktionen** sind 11 Aktionen verfügbar, darunter **Evaluationszyklus für die Anwendungsbereitstellung** und **Ermittlungsdaten-Sammlungszyklus**.  
 
      Andrea ist sich nun sicher, dass die Clients erfolgreich installiert und zugewiesen wurden und dass bei ihnen Clientrichtlinien vom Verwaltungspunkt eingehen. Als Nächstes aktiviert sie die Schreibfilter anhand der OEM-Anweisungen manuell.  
 
@@ -182,6 +182,6 @@ In diesem Szenario wird gezeigt, wie Sie mithilfe von System Center Configuratio
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 
