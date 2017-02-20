@@ -16,8 +16,8 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d242c9ae0ca6e3a3f3bee3a93176b9ab802319ae
-ms.openlocfilehash: a75cba2a6bb280c29f300c8ef2d3fbfbc7a558d2
+ms.sourcegitcommit: 76cb0c41865859fd410a187435d73c6a23b0c57e
+ms.openlocfilehash: 7b53b094eeb1d59d052c63831eeab0e10edb5913
 
 
 ---
@@ -57,7 +57,7 @@ Die automatische Registrierung ermöglicht Benutzern das Registrieren von untern
 
 5. Geben Sie die URLs für Intune an:
 
-  - **MDM-Registrierungs-URL** – Verwenden Sie `https://enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc` für die MDM-Registrierungs-URL.
+  - **URL für MDM-Registrierung** – Verwenden Sie den Standardwert.
   - **URL für MDM-Nutzungsbedingungen** – Verwenden Sie den Standardwert. Diese URL zeigt Nutzungsbedingungen für Benutzer bei der Registrierung von Geräten.
   - **URL für MDM-Kompatibilität** – Verwenden Sie den Standardwert. Wenn ein Gerät nicht kompatibel ist, wird die Nachricht **Zugriff verweigert** mit dieser URL angezeigt. Die URL verweist auf eine Seite, mit der Benutzer verstehen können, warum ihr Gerät nicht mit Richtlinien kompatibel ist, und wie sie die Kompatibilität wiederherstellen können.
 
@@ -75,7 +75,7 @@ Die automatische Registrierung ermöglicht Benutzern das Registrieren von untern
 ### <a name="create-dns-alias-for-device-enrollment"></a>Erstellen eines DNS-Alias für die Geräteregistrierung  
  Wenn ein DNS-Alias (CNAME-Eintrag) vorhanden ist, können Benutzer ihre Geräte einfacher registrieren, da der Servername bei der Geräteregistrierung automatisch eingetragen wird. Zum Erstellen eines DNS-Alias (CNAME-Eintragstyp) müssen Sie einen CNAME in den DNS-Einträgen Ihres Unternehmens konfigurieren, der Anforderungen, die an eine URL Ihrer Unternehmensdomäne gesendet werden, an die Microsoft-Server für Clouddienste umleitet.  Wenn die Domäne Ihres Unternehmens beispielsweise „contoso.com“ heißt, sollten Sie einen CNAME im DNS erstellen, der „EnterpriseEnrollment.contoso.com“ an „EnterpriseEnrollment-s.manage.microsoft.com“ umleitet.  
 
- Obwohl das Erstellen eines CNAME-DNS-Eintrags optional ist, ist die Registrierung mit einem CNAME-Eintrag für den Benutzer leichter. Wenn kein CNAME-Eintrag für die Registrierung gefunden wurde, werden Benutzer aufgefordert, manuell den MDM-Servernamen [https://enrollment.manage.microsoft.com](https://enrollment.manage.microsoft.com) einzugeben.
+ Obwohl das Erstellen eines CNAME-DNS-Eintrags optional ist, ist die Registrierung mit einem CNAME-Eintrag für den Benutzer leichter. Wenn kein CNAME-Eintrag für die Registrierung gefunden wurde, werden Benutzer aufgefordert, manuell den MDM-Servernamen „enrollment.manage.microsoft.com“ einzugeben.
 
 |Typ|Hostname|Verweist auf|  
 |----------|---------------|---------------|  
@@ -120,6 +120,6 @@ Die automatische Registrierung ermöglicht Benutzern das Registrieren von untern
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

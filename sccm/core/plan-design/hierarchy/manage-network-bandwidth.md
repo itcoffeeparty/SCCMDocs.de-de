@@ -2,7 +2,7 @@
 title: "Verwalten der Netzwerk-Bandbreite für Inhalt | Microsoft-Dokumentation"
 description: "Konfigurieren Sie Zeitplanung, Bandbreiteneinschränkung und vorab bereitgestellten Inhalt für System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,65 +17,67 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 14ce376f385ec19d224e8b1a2918eed5379a64e5
+ms.sourcegitcommit: 37e4f27fcea0bbdd39c9fd3ab38aa46e3059f73a
+ms.openlocfilehash: d9dff97126c34a726677de60dd7647370c553b6e
 
 
 ---
 
+# <a name="manage-network-bandwidth-for-content"></a>Verwalten von Netzwerkbandbreite für Inhalte
+Um Ihnen die Verwaltung der Netzwerkbandbreite zu erleichtern, die für den Inhaltsverwaltungsvorgang von System Center Configuration Manager verwendet wird, können Sie die integrierten Steuerelemente für Zeitplanung und Drosselung verwenden. Sie können auch vorab bereitgestellte Inhalte nutzen. In den folgenden Abschnitten werden diese Optionen detaillierter beschrieben.
+
 ##  <a name="a-namebkmkplanningforthrottlingascheduling-and-throttling"></a><a name="BKMK_PlanningForThrottling"></a>Zeitplanung und Bandbreiteneinschränkung  
- Um Ihnen die Verwaltung der Netzwerkbandbreite zu erleichtern, die für den Inhaltsverwaltungsvorgang verwendet wird, können Sie die integrierten Configuration Manager-Steuerelemente für Zeitplanung und Einschränkung oder vorab bereitgestellten Inhalt verwenden.  
 
- Wenn Sie ein Paket erstellen, den Quellpfad für den Inhalt ändern oder Inhalt am Verteilungspunkt aktualisieren, werden die Dateien aus dem Quellpfad auf die Inhaltsbibliothek auf dem Standortserver kopiert. Dann wird der Inhalt aus der Inhaltsbibliothek auf dem Standortserver in die Inhaltsbibliothek an den Verteilungspunkten kopiert. Wenn ein Update bei Inhaltsquelldateien ausgeführt wird und die Quelldateien bereits verteilt wurden, werden von Configuration Manager nur die Dateien abgerufen und an den Verteilungspunkt gesendet, die neu sind oder bei denen das Update ausgeführt wurde. Die Steuerung der Zeitplanung und Einschränkung kann für die Kommunikation zwischen Standorten sowie zwischen Standortserver und Remoteverteilungspunkt konfiguriert werden. Wenn die Netzwerkbandbreite zwischen Standortserver und Remoteverteilungspunkt begrenzt ist, obwohl Sie die Einstellungen für Zeitplanung und Einschränkung konfiguriert haben, können Sie eine Vorabbereitstellung des Inhalts am Verteilungspunkt erwägen.  
+ Wenn Sie ein Paket erstellen, den Quellpfad für den Inhalt ändern oder ein Update bei Inhalt am Verteilungspunkt ausführen, werden die Dateien aus dem Quellpfad auf die Inhaltsbibliothek auf dem Standortserver kopiert. Dann wird der Inhalt aus der Inhaltsbibliothek auf dem Standortserver in die Inhaltsbibliothek an den Verteilungspunkten kopiert. Wenn ein Update bei Inhaltsquelldateien ausgeführt wird und die Quelldateien bereits verteilt wurden, werden von Configuration Manager nur die Dateien abgerufen und an den Verteilungspunkt gesendet, die neu sind oder bei denen das Update ausgeführt wurde.
 
- Sie können in Configuration Manager einen Zeitplan konfigurieren und spezifische Einschränkungseinstellungen an Remoteverteilungspunkten festlegen, von denen bestimmt wird, wann und wie die Inhaltsverteilung ausgeführt wird. Es sind für jeden Remoteverteilungspunkt andere Konfigurationen möglich, mithilfe derer Sie mit Netzwerkbandbreiteneinschränkungen zwischen Standortserver und Remoteverteilungspunkt umgehen können. Die Steuerelemente für die Zeitplanung und die Einschränkung am Remoteverteilungspunkt sind mit den Einstellungen für eine Standardabsenderadresse vergleichbar, allerdings werden die Einstellungen in diesem Fall von der neuen Komponente „Paketübertragungs-Manager“ verwendet. Vom Paketübertragungs-Manager wird Inhalt von einem Standortserver als primärem oder sekundärem Standort an einen Verteilungspunkt verteilt, der auf einem Standortsystem installiert ist. Bei einem Verteilungspunkt, der sich nicht auf einem Standortserver befindet, werden die Einschränkungseinstellungen auf der Registerkarte **Begrenzung der Datenübertragungsrate** konfiguriert, und die Zeitplaneinstellungen werden auf der Registerkarte **Zeitplan** konfiguriert. Die Zeiteinstellungen basieren auf der Zeitzone am sendenden Standort, nicht auf der am Verteilungspunkt.  
+ Sie können die Steuerelemente für Zeitplanung und Drosselung für die Kommunikation zwischen Standorten sowie zwischen Standortserver und Remoteverteilungspunkt verwenden. Wenn die Netzwerkbandbreite auch nach dem Einrichten der Steuerelemente für Zeitplanung und Drosselung eingeschränkt ist, sollten Sie eine Vorabbereitstellung des Inhalts auf dem Verteilungspunkt in Betracht ziehen.  
 
-> [!WARNING]  
+ Sie können in Configuration Manager einen Zeitplan einrichten und Drosselungseinstellungen für Remoteverteilungspunkte angeben, mit denen festgelegt wird, wann und wie die Inhaltsverteilung ausgeführt wird. Es sind für jeden Remoteverteilungspunkt andere Konfigurationen möglich, mithilfe derer Sie mit Netzwerkbandbreiteneinschränkungen zwischen Standortserver und Remoteverteilungspunkt umgehen können. Die Steuerelemente für Zeitplanung und Drosselung für den Remoteverteilungspunkt sind mit den Einstellungen für eine Standardabsenderadresse vergleichbar. In diesem Fall werden die Einstellungen von einer neuen Komponente namens Paketübertragungs-Manager verwendet.
+
+ Vom Paketübertragungs-Manager wird Inhalt von einem Standortserver als primärem oder sekundärem Standort an einen Verteilungspunkt verteilt, der auf einem Standortsystem installiert ist. Bei einem Verteilungspunkt, der sich nicht auf einem Standortserver befindet, werden die Drosselungseinstellungen auf der Registerkarte **Begrenzung der Datenübertragungsrate** und die Zeitplaneinstellungen auf der Registerkarte **Zeitplan** konfiguriert. Die Zeiteinstellungen basieren auf der Zeitzone am sendenden Standort, nicht auf der am Verteilungspunkt.  
+
+> [!IMPORTANT]  
 >  Die Registerkarten **Begrenzung der Datenübertragungsrate** und **Zeitplan** werden nur in den Eigenschaften von Verteilungspunkten, die nicht auf einem Standortserver installiert sind, angezeigt.  
 
-Weitere Informationen zum Konfigurieren von Zeitplanungs- und Einschränkungseinstellungen für einen Remoteverteilungspunkt finden Sie unter [Install and configure distribution points for System Center Configuration Manager (Installieren und Konfigurieren von Verteilungspunkten in System Center Configuration Manager)](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points).  
+Weitere Informationen finden Sie unter [Installieren und Konfigurieren von Verteilungspunkten für System Center Configuration Manager](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points).  
 
 ##  <a name="a-namebkmkprestagingcontentaprestaged-content"></a><a name="BKMK_PrestagingContent"></a>Vorab bereitgestellter Inhalt  
- Sie können Inhalt vorab bereitstellen, um der Inhaltsbibliothek auf einem Standortserver oder Verteilungspunkt vor der Verteilung des Inhalts Inhaltsdateien hinzuzufügen.  
+ Sie können Inhalt vorab bereitstellen, um der Inhaltsbibliothek auf einem Standortserver oder Verteilungspunkt vor der Verteilung des Inhalts Inhaltsdateien hinzuzufügen. Da die Inhaltsdateien sich bereits in der Inhaltsbibliothek befinden, werden sie bei der Verteilung des Inhalts nicht über das Netzwerk übertragen. Sie können Inhaltsdateien für Anwendungen und Pakete vorab bereitstellen.  
 
--   Da die Inhaltsdateien sich bereits in der Inhaltsbibliothek befinden, werden sie bei der Verteilung des Inhalts nicht über das Netzwerk übertragen.  
-
--   Sie können Inhaltsdateien für Anwendungen und Pakete vorab bereitstellen.  
-
-Wählen Sie in der Configuration Manager-Konsole den Inhalt aus, den Sie vorab bereitstellen möchten, und erstellen Sie anschließend mit dem **Assistenten zum Erstellen von vorab bereitgestellten Inhaltsdateien** eine komprimierte, vorab bereitgestellte Inhaltsdatei, die die Dateien und die zugeordneten Metadaten für den Inhalt enthält. Anschließend können Sie den Inhalt zur Bereitstellung auf einem Standortserver oder Verteilungspunkt manuell importieren.  
+Wählen Sie in der Configuration Manager-Konsole den Inhalt, den Sie vorab bereitstellen möchten, und verwenden Sie dann den **Assistenten zum Erstellen von vorab bereitgestellten Inhaltsdateien**. Durch diesen wird eine komprimierte, vorab bereitgestellte Inhaltsdatei erstellt, die die Dateien und zugeordneten Metadaten für den ausgewählten Inhalt umfasst. Anschließend können Sie den Inhalt zur Bereitstellung auf einem Standortserver oder Verteilungspunkt manuell importieren. Beachten Sie dabei folgende Punkte:  
 
 -   Wenn Sie die vorab bereitgestellte Inhaltsdatei in einen Standortserver importieren, wird sie der Inhaltsbibliothek auf dem Standortserver hinzugefügt und dann in der Datenbank des Standortservers registriert.  
 
--   Wenn Sie die vorab bereitgestellte Inhaltsdatei in einen Verteilungspunkt importieren, wird sie der Inhaltsbibliothek des Verteilungspunkts hinzugefügt, und an den Standortserver wird eine Statusmeldung über die Verfügbarkeit des Inhalts am Verteilungspunkt gesendet.  
+-   Wenn Sie die vorab bereitgestellte Inhaltsdatei auf einem Verteilungspunkt importieren, werden die Inhaltsdateien zur Inhaltsbibliothek auf dem Verteilungspunkt hinzugefügt. Eine Statusmeldung wird an den Standortserver gesendet, in der der Standort über die Verfügbarkeit des Inhalts auf dem Verteilungspunkt informiert wird.  
 
 Optional können Sie den Verteilungspunkt als **vorab bereitgestellt** konfigurieren, um die Inhaltsverteilung einfacher verwalten zu können. Anschließend können Sie beim Verteilen von Inhalt zwischen folgenden Möglichkeiten auswählen:  
 
--   Inhalt wird vorab am Verteilungspunkt bereitgestellt  
+-   Inhalt wird immer vorab auf dem Verteilungspunkt bereitgestellt.  
 
--   Der Anfangsinhalt des Pakets wird vorab bereitgestellt, Inhaltsaktualisierungen erfolgen mithilfe des regulären Inhaltsverteilungsvorgangs  
+-   Der Anfangsinhalt des Pakets wird vorab bereitgestellt, Inhaltsaktualisierungen erfolgen mithilfe des regulären Inhaltsverteilungsvorgangs.  
 
--   Für Inhalt des Pakets wird stets der reguläre Inhaltsverteilungsvorgang verwendet  
+-   Für Inhalt des Pakets wird stets der reguläre Inhaltsverteilungsvorgang verwendet.  
 
 ###  <a name="a-namebkmkdeterminetoprestagecontentadetermine-whether-to-prestage-content"></a><a name="BKMK_DetermineToPrestageContent"></a>Bestimmen, ob Inhalt vorab bereitgestellt werden soll  
  Erwägen Sie, in den folgenden Szenarien Inhalte für Anwendungen und Pakete vorab bereitzustellen:  
 
--   **Begrenzte Netzwerkbandbreite zwischen Standortserver und Verteilungspunkt**: Wenn Sie Probleme beim Verteilen von Inhalt über das Netzwerk an einen Remoteverteilungspunkt auch mit Zeitplanung und Einschränkung nicht lösen können, erwägen Sie eine Vorabbereitstellung des Inhalts am Verteilungspunkt. Bei jedem Verteilungspunkt können Sie in den Verteilungspunkteigenschaften die Einstellung **Diesen Verteilungspunkt für vorab bereitgestellten Inhalt aktivieren** konfigurieren. Wenn Sie diese Option aktivieren, wird der Verteilungspunkt als vorab bereitgestellter Verteilungspunkt identifiziert, und Sie können auswählen, wie der Inhalt pro Paket verwaltet werden soll.  
+-   **Beheben des Problems der begrenzten Netzwerkbandbreite zwischen Standortserver und Verteilungspunkt.** Wenn Planung und Drosselung zum Beheben Ihrer Bandbreitenprobleme nicht ausreichen, ziehen Sie die Vorabbereitstellung des Inhalts auf dem Verteilungspunkt in Betracht. Bei jedem Verteilungspunkt können Sie in den Verteilungspunkteigenschaften die Einstellung **Diesen Verteilungspunkt für vorab bereitgestellten Inhalt aktivieren** wählen. Wenn Sie diese Option aktivieren, wird der Verteilungspunkt als vorab bereitgestellter Verteilungspunkt identifiziert, und Sie können auswählen, wie der Inhalt pro Paket verwaltet werden soll.  
 
-     Die folgenden Einstellungen sind in den Eigenschaften von Anwendungen, Paketen, Treiberpaketen, Startabbildern, Installationsprogrammen für Betriebssysteme sowie Abbildern von Betriebssystemen verfügbar. Mithilfe dieser Einstellungen können Sie konfigurieren, wie die Inhaltsverteilung auf Remoteverteilungspunkten, die als vorab bereitgestellt identifiziert werden, verwaltet werden soll:  
+    Die folgenden Einstellungen stehen in den Eigenschaften für eine Anwendung, ein Paket, ein Treiberpaket, ein Startabbild, ein Installationsprogramm für Betriebssysteme und ein Image zur Verfügung. Mit diesen Einstellungen können Sie auswählen, wie die Inhaltsverteilung auf Remoteverteilungspunkten verwaltet wird, die als vorab bereitgestellt identifiziert werden:  
 
-    -   **Inhalt automatisch herunterladen, wenn Pakete Verteilungspunkten zugeordnet sind**: Verwenden Sie diese Option, wenn Sie kleinere Pakete haben, bei denen durch die Zeitplanungs- und Einschränkungseinstellungen eine ausreichende Kontrolle der Inhaltsverteilung gegeben ist.  
+    -   **Inhalt automatisch herunterladen, wenn Pakete Verteilungspunkten zugeordnet sind**: Verwenden Sie diese Option, wenn Sie kleinere Pakete haben und die Zeitplanungs- und Drosselungseinstellungen für die Inhaltsverteilung eine ausreichende Steuerung bieten.  
 
-    -   **Nur Inhaltsänderungen auf den Verteilungspunkt herunterladen**: Verwenden Sie diese Option, wenn Sie ein erstes Paket haben, das möglicherweise groß ist, jedoch mit zukünftigen Updates für den Paketinhalt rechnen, die allgemein kleiner sind. Beispielsweise könnten Sie eine Anwendung wie Microsoft Office vorab bereitstellen, da die Größe des ersten Pakets mehr als 700 MB beträgt, sodass das Paket nicht über das Netzwerk gesendet werden kann. Die Inhaltsupdates bei diesem Paket könnten jedoch kleiner als 10 MB und damit über das Netzwerk verteilbar sein. Ein weiteres Beispiel wären Treiberpakete, bei denen das erste Paket groß ist, inkrementelle Treiberergänzungen zum Paket jedoch klein sind.  
+    -   **Nur Inhaltsänderungen auf den Verteilungspunkt herunterladen**: Verwenden Sie diese Option, wenn Sie damit rechnen, dass zukünftige Aktualisierungen des Paketinhalts im Allgemeinen kleiner sind als das Anfangspaket. Beispielsweise könnten Sie eine Anwendung wie Microsoft Office vorab bereitstellen, da die Größe des Anfangspakets mehr als 700 MB beträgt, sodass das Paket nicht über das Netzwerk gesendet werden kann. Die Inhaltsupdates bei diesem Paket könnten jedoch kleiner als 10 MB und damit über das Netzwerk verteilbar sein. Ein weiteres Beispiel wären Treiberpakete, bei denen das Anfangspaket groß ist, inkrementelle Treiberergänzungen zum Paket jedoch klein sind.  
 
     -   **Den Inhalt dieses Pakets manuell an den Verteilungspunkt kopieren**: Verwenden Sie diese Option, wenn Sie große Pakete mit Inhalt wie einem Betriebssystem haben, die sie niemals über das Netzwerk an den Verteilungspunkt verteilen möchten. Wenn Sie diese Option auswählen, müssen Sie den Inhalt am Verteilungspunkt vorab bereitstellen.  
 
-    > [!WARNING]  
-    >  Die genannten Optionen sind pro Paket gültig und können nur dann verwendet werden, wenn ein Verteilungspunkt als vorab bereitgestellt identifiziert wurde. Von Verteilungspunkten, die nicht als vorab bereitgestellt identifiziert wurden, werden diese Einstellungen ignoriert. In diesem Fall wird Inhalt vom Standortserver stets über das Netzwerk an diese Verteilungspunkte verteilt.  
+    > [!IMPORTANT]  
+    >  Die genannten Optionen sind pro Paket anwendbar und können nur dann verwendet werden, wenn ein Verteilungspunkt als vorab bereitgestellt identifiziert wurde. Von Verteilungspunkten, die nicht als vorab bereitgestellt identifiziert wurden, werden diese Einstellungen ignoriert. In diesem Fall wird Inhalt vom Standortserver stets über das Netzwerk an diese Verteilungspunkte verteilt.  
 
--   **Wiederherstellen der Inhaltsbibliothek auf einem Standortserver**: Beim Ausfall eines Standortservers werden Informationen zu Paketen und Anwendungen, die in der Inhaltsbibliothek enthalten sind, im Rahmen des Wiederherstellungsvorgangs auf der Standortdatenbank wiederhergestellt. Die Dateien der Inhaltsbibliothek werden bei diesem Vorgang jedoch nicht wiederhergestellt. Wenn Sie nicht über eine Sicherung des Dateisystems verfügen, um die Inhaltsbibliothek wiederherzustellen, können Sie eine vorab bereitgestellte Inhaltsdatei mit den erforderlichen Paketen und Anwendungen von einem anderen Standort erstellen und diese vorab bereitgestellte Inhaltsdatei auf dem wiederhergestellten Standortserver extrahieren. Weitere Informationen zur Standortserversicherung und -wiederherstellung finden Sie unter [Backup and recovery for System Center Configuration Manager (Sicherung und Wiederherstellung für System Center Configuration Manager)](/sccm/protect/understand/backup-and-recovery).  
+-   **Wiederherstellen der Inhaltsbibliothek auf einem Standortserver.** Beim Ausfall eines Standortservers werden Informationen zu Paketen und Anwendungen, die in der Inhaltsbibliothek enthalten sind, im Rahmen des Wiederherstellungsvorgangs auf der Standortdatenbank wiederhergestellt. Die Dateien der Inhaltsbibliothek werden bei diesem Vorgang jedoch nicht wiederhergestellt. Wenn Sie nicht über eine Sicherung des Dateisystems verfügen, um die Inhaltsbibliothek wiederherzustellen, können Sie eine vorab bereitgestellte Inhaltsdatei mit den erforderlichen Paketen und Anwendungen von einem anderen Standort erstellen. Anschließend können Sie die vorab bereitgestellte Inhaltsdatei auf dem wiederhergestellten Standortserver extrahieren. Weitere Informationen zur Standortserversicherung und -wiederherstellung finden Sie unter [Sicherung und Wiederherstellung für System Center Configuration Manager](/sccm/protect/understand/backup-and-recovery).  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 

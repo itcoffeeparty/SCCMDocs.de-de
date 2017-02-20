@@ -2,7 +2,7 @@
 title: Planen und Konfigurieren der Anwendungsverwaltung | Microsoft Docs
 description: "Implementieren und konfigurieren Sie die erforderlichen Abhängigkeiten für die Bereitstellung von Anwendungen in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/13/2016
+ms.date: 02/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 7634d5326265d7947a01e5b83374f65911e33aeb
-ms.openlocfilehash: 3ab905192c091cb5ad013c8e0c8590597fb0422a
+ms.sourcegitcommit: 50c08d63e7220a47d21dcbdcd7abafba7c7f5f75
+ms.openlocfilehash: 4eca69f54ec0bca5f1f972d3814ceb87d4a30d67
 
 
 ---
@@ -33,7 +33,7 @@ Implementieren Sie anhand der Informationen in diesem Artikel die erforderlichen
 |------------------|----------------------|  
 |Auf den Standortsystemservern, auf denen der Anwendungskatalog-Websitepunkt, der Anwendungskatalog-Webdienstpunkt, der Verwaltungspunkt und der Verteilungspunkt ausgeführt werden, muss Internetinformationsdienste (IIS) installiert sein.|Weitere Informationen zu dieser Anforderung finden Sie unter [Unterstützte Konfigurationen](../../core/plan-design/configs/supported-configurations.md).|  
 |Von Configuration Manager registrierte mobile Geräte|Verwenden Sie für die Codesignierung von Anwendungen zur Bereitstellung auf mobilen Geräten kein Zertifikat, das mithilfe einer Vorlage der Version 3 (**Windows Server 2008 Enterprise Edition**) generiert wurde. Bei Verwendung dieser Zertifikatvorlage wird ein Zertifikat generiert, das nicht mit Configuration Manager-Anwendungen für mobile Geräte kompatibel ist.<br /><br /> Wenn Sie Active Directory-Zertifikatdienste für die Codesignierung von Anwendungen für mobile Geräte nutzen, verwenden Sie keine Zertifikatvorlage der Version 3.|  
-|Clients müssen für die Überwachung von Anmeldeereignissen konfiguriert sein, wenn Affinitäten zwischen Benutzern und Geräten automatisch erstellt werden sollen.|Von Configuration Manager werden die folgenden beiden Einstellungen der lokalen Sicherheitsrichtlinie auf Clientcomputern gelesen, um automatisch Affinitäten zwischen Benutzern und Geräten zu bestimmen:<br /><br /><ul><li> **Anmeldeversuche überwachen**</li><li>**Anmeldeereignisse überwachen**</li></ul> Für die automatische Erstellung von Beziehungen zwischen Benutzern und Geräten müssen Sie sicherstellen, dass diese beiden Einstellungen auf Clientcomputern aktiviert sind. Sie können diese Einstellungen mithilfe von Windows-Gruppenrichtlinien konfigurieren.|  
+|Clients müssen für die Überwachung von Anmeldeereignissen konfiguriert sein, wenn Affinitäten zwischen Benutzern und Geräten automatisch erstellt werden sollen.|Der Configuration Manager-Client liest Anmeldeereignisse vom Typ **Success** (Erfolg) vom Sicherheitsereignisprotokoll des PCs, um automatisch Affinitäten zwischen Benutzen und Geräten zu bestimmen.  Diese Ereignisse werden durch die folgenden zwei Überwachungsrichtlinien aktiviert.<br>**Anmeldeversuche überwachen**<br>**Anmeldeereignisse überwachen**<br>Für die automatische Erstellung von Beziehungen zwischen Benutzern und Geräten müssen Sie sicherstellen, dass diese beiden Einstellungen auf Clientcomputern aktiviert sind. Sie können diese Einstellungen mithilfe von Windows-Gruppenrichtlinien konfigurieren.|  
 
 ## <a name="configuration-manager-dependencies"></a>Abhängigkeiten in Configuration Manager   
 
@@ -79,7 +79,7 @@ Implementieren Sie anhand der Informationen in diesem Artikel die erforderlichen
 |Schritte|Details|Weitere Informationen|  
 |-----------|-------------|----------------------|  
 |**Schritt 1:** Wenn Sie planen, HTTPS-Verbindungen zu verwenden, muss zuvor ein Webserverzertifikat auf den Standortsystemservern bereitgestellt werden.|Stellen Sie ein Webserverzertifikat auf den Standortsystemservern bereit, auf denen der Anwendungskatalog-Websitepunkt und der Anwendungskatalog-Webdienstpunkt ausgeführt werden sollen.<br /><br /> Wenn darüber hinaus Clients den Anwendungskatalog über das Internet verwenden sollen, stellen Sie ein Webserverzertifikat auf mindestens einem Verwaltungspunkt-Standortsystemserver bereit, und konfigurieren Sie ihn für Clientverbindungen über das Internet.|Weitere Informationen zu den Zertifikatanforderungen finden Sie unter [PKI-Zertifikatanforderungen](../../core/plan-design/network/pki-certificate-requirements.md).|  
-|**Schritt 2:** Wenn Sie planen, ein PKI-Clientzertifikat für Verbindungen mit Verwaltungspunkten zu verwenden, stellen Sie ein Clientauthentifizierungszertifikat auf den Clientcomputern bereit.|Obwohl für die Verbindung von Clients mit dem Anwendungskatalog kein PKI-Clientzertifikat verwendet werden muss, ist eine Verbindung mit einem Verwaltungspunkt erforderlich, um den Anwendungskatalog verwenden zu können. In folgenden Situationen müssen Sie ein Clientauthentifizierungszertifikat auf Clientcomputern bereitstellen:<br /><br /><ul><li>Von allen Verwaltungspunkten im Intranet werden nur HTTPS-Clientverbindungen akzeptiert.</li><li>Die Verbindung von Clients mit dem Anwendungskatalog wird über das Internet hergestellt.</li></ul>|Weitere Informationen zu den Zertifikatanforderungen finden Sie unter [PKI-Zertifikatanforderungen](../../core/plan-design/network/pki-certificate-requirements.md).|  
+|**Schritt 2:** Wenn Sie planen, ein PKI-Clientzertifikat für Verbindungen mit Verwaltungspunkten zu verwenden, stellen Sie ein Clientauthentifizierungszertifikat auf den Clientcomputern bereit.|Obwohl für die Verbindung von Clients mit dem Anwendungskatalog kein PKI-Clientzertifikat verwendet werden muss, ist eine Verbindung mit einem Verwaltungspunkt erforderlich, damit sie den Anwendungskatalog verwenden zu können. In folgenden Situationen müssen Sie ein Clientauthentifizierungszertifikat auf Clientcomputern bereitstellen:<br /><br /><ul><li>Von allen Verwaltungspunkten im Intranet werden nur HTTPS-Clientverbindungen akzeptiert.</li><li>Die Verbindung von Clients mit dem Anwendungskatalog wird über das Internet hergestellt.</li></ul>|Weitere Informationen zu den Zertifikatanforderungen finden Sie unter [PKI-Zertifikatanforderungen](../../core/plan-design/network/pki-certificate-requirements.md).|  
 |**Schritt 3:** Installieren und konfigurieren Sie den Anwendungskatalog-Webdienstpunkt und die Anwendungskatalog-Website.|Sie müssen beide Standortsystemrollen an demselben Standort installieren. Die Installation auf demselben Standortsystemserver oder in derselben Active Directory-Gesamtstruktur ist nicht erforderlich. Allerdings muss der Anwendungskatalog-Webdienstpunkt sich in der gleichen Gesamtstruktur befinden wie die Standortdatenbank.|Weitere Informationen zur Platzierung der Standortsystemrolle finden Sie unter [Planen für Standortsystemserver und Standortsystemrollen](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).<br /><br /> Informationen zum Konfigurieren des Anwendungskatalog-Webdienstpunkts und des Anwendungskatalog-Websitepunkts finden Sie unter **Schritt 3: Installieren und Konfigurieren der Standortsystemrollen für den Anwendungskatalog**.|  
 |**Schritt 4:** Konfigurieren Sie die Clienteinstellungen für Anwendungskatalog und Softwarecenter.|Konfigurieren Sie die Clientstandardeinstellungen, wenn alle Benutzer über die gleichen Einstellungen verfügen sollen. Andernfalls können Sie auch benutzerdefinierte Clienteinstellungen für bestimmte Sammlungen konfigurieren.|Weitere Informationen zu Clienteinstellungen finden Sie unter [Informationen zu Clienteinstellungen](../../core/clients/deploy/about-client-settings.md).<br /><br /> Weitere Informationen zum Konfigurieren dieser Clienteinstellungen finden Sie unter **Schritt 4: Konfigurieren der Clienteinstellungen für Anwendungskatalog und Softwarecenter**.|  
 |**Schritt 5:** Überprüfen Sie, ob der Anwendungskatalog betriebsbereit ist.|Sie können den Anwendungskatalog direkt über einen Browser oder über das Softwarecenter verwenden.|Informationen hierzu finden Sie unter **Schritt 5: Überprüfen Sie, ob der Anwendungskatalog betriebsbereit ist**.|  
@@ -112,7 +112,7 @@ Implementieren Sie anhand der Informationen in diesem Artikel die erforderlichen
 
 1.  Wählen Sie in der Configuration Manager-Konsole die Optionen **Verwaltung** > **Standortkonfiguration** > **Server und Standortsystemrollen** und anschließend den Server aus, den Sie für den Anwendungskatalog verwenden möchten.  
 
-3.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** die Option **Standortsystemrollen hinzufügen** aus.  
+3.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Server** die Option **Standortsystemrollen hinzufügen**.  
 
 4.  Geben Sie auf der Seite **Allgemein** die allgemeinen Einstellungen für den Standortsystemserver an, und wählen Sie dann **Weiter** aus.  
 
@@ -228,6 +228,6 @@ Benutzerdefiniertes Branding für das Softwarecenter wird gemäß den folgenden 
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 

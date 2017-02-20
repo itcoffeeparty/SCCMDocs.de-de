@@ -1,8 +1,8 @@
 ---
 title: "Hinzufügen von Standortsystemrollen | Microsoft-Dokumentation"
-description: "Grundlegendes zu Configuration Manager-Standortsystemrollen, und wie sie zum Erweitern der Funktionalität und der Kapazität Ihres Standorts hinzugefügt werden"
+description: "Grundlegendes zu Configuration Manager-Standortsystemrollen und wie sie zum Erweitern der Funktionalität und der Kapazität Ihres Standorts hinzugefügt werden"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: e0cc69baa2fdc5bb9c1327c89840e28d0f885608
+ms.sourcegitcommit: 7fa191ce37a68f604673fe9b9724f76c3ff10032
+ms.openlocfilehash: 1ad4abf1f06ed24bd1d505648280b5e5d80220c7
 
 
 ---
@@ -26,12 +26,12 @@ ms.openlocfilehash: e0cc69baa2fdc5bb9c1327c89840e28d0f885608
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Jeder System Center Configuration Manager-Standort unterstützt mehrere Standortsystemrollen, die alle die Funktionalität und Kapazität erweitern, um Benutzer und Geräten Dienste bereitzustellen und diese zu verwalten. Jede Standortsystemrolle auf einem Standortserver muss sich am selben Standort befinden.   
+Jeder System Center Configuration Manager-Standort unterstützt mehrere Standortsystemrollen. Jede Rolle erweitert die Funktionalität und Kapazität Ihres Standorts, um dem Standort Dienste bereitzustellen und Benutzer und Geräten zu verwalten. Jede Standortsystemrolle auf einem Standortserver muss sich am selben Standort befinden.   
 
 Von Configuration Manager werden keine Standortsystemrollen für mehrere Standorte auf einem einzigen Standortsystemserver unterstützt.  
 
 > [!TIP]  
->  Wenn Sie mit den Grundlagen von Standortsystemrollen oder den Unterschieden zwischen Standortserver, Standortsystemserver und Standortsystemrollen nicht vertraut sind, lesen Sie [Fundamentals of System Center Configuration Manager](../../../../core/understand/fundamentals.md).  
+>  Wenn Sie mit den Grundlagen von Standortsystemrollen oder den Unterschieden zwischen Standortserver, Standortsystemserver und Standortsystemrollen nicht vertraut sind, lesen Sie [Grundlagen von System Center Configuration Manager](../../../../core/understand/fundamentals.md).  
 
  In den folgenden Themen werden Verfahren und die zugehörigen Details für die Installation von Standortsystemrollen ausführlich beschrieben:  
 
@@ -41,11 +41,11 @@ Von Configuration Manager werden keine Standortsystemrollen für mehrere Standor
 
 -   [Installieren von cloudbasierten Verteilungspunkten in Microsoft Azure für System Center Configuration Manager.](../../../../core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md)  
 
-    Wenn Sie Microsoft Azure verwenden möchten, um Inhalte für die Bereitstellung auf Clients zu hosten, können Sie mithilfe der Informationen in diesem Thema die erforderlichen Zertifikatsdateien konfigurieren und Configuration Manager die Kommunikation mit Ihrem Microsoft Azure-Abonnement sowie dessen Verwendung ermöglichen. Darüber hinaus müssen Sie die Konfiguration der Namensauflösung so konfigurieren, dass Ihre Clients die cloudbasierten Verteilungspunkte finden können.  
+    Wenn Sie Microsoft Azure verwenden möchten, um Inhalte für die Bereitstellung auf Clients zu hosten, können Sie mithilfe der Informationen in diesem Thema die erforderlichen Zertifikatsdateien einrichten und Configuration Manager die Kommunikation mit Ihrem Microsoft Azure-Abonnement sowie dessen Verwendung ermöglichen. Darüber hinaus müssen Sie die Einrichtung der Namensauflösung so konfigurieren, dass Ihre Clients die cloudbasierten Verteilungspunkte finden können.  
 
 -   [Installieren von Standortsystemrollen für die lokale Verwaltung mobiler Geräte in System Center Configuration Manager](../../../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md)  
 
-     Dieses Thema hilft Ihnen bei der erfolgreichen Konfiguration Ihrer Standortsystemrollen, damit diese die Verwaltung moderner Geräte mit der lokalen Configuration Manager-Verwaltung mobiler Geräte unterstützen.  
+     Dieses Thema hilft Ihnen bei der erfolgreichen Einrichtung Ihrer Standortsystemrollen, damit diese die Verwaltung moderner Geräte mit der lokalen Configuration Manager-Verwaltung mobiler Geräte unterstützen.  
 
 -   [Konfigurationsoptionen für Standortsystemrollen für System Center Configuration Manager](../../../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md)  
 
@@ -53,6 +53,6 @@ Von Configuration Manager werden keine Standortsystemrollen für mehrere Standor
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 

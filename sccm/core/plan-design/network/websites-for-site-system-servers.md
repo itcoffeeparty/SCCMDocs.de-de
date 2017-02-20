@@ -2,7 +2,7 @@
 title: "Websites für Standortsysteme | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr über Standard- und Benutzerdefinierte Websites für Standortsystemserver in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 005c9f33367f173993d9626f10a72dd5b0141fbc
+ms.sourcegitcommit: 26bbec1e8d6c53ce297689ba4390b9347229eb15
+ms.openlocfilehash: 886ff3b8e867fc340c79648a57feae81653b0ccd
 
 
 ---
@@ -35,24 +35,24 @@ Mehrere Configuration Manager-Standortsystemrollen erfordern die Verwendung von 
 
 
 ##  <a name="a-namebkmkwhat2knowa-what-to-know-before-choosing-to-use-custom-websites"></a><a name="BKMK_What2Know"></a> Wissenswertes vor der Entscheidung für den Einsatz benutzerdefinierter Websites  
- Standortsystemrollen verwenden standardmäßig die **Standardwebsite** in IIS. Diese wird automatisch konfiguriert, wenn die Standortsystemrolle installiert wird. An primären Standorten können Sie jedoch stattdessen benutzerdefinierte Websites verwenden. Wenn Sie benutzerdefinierte Websites verwenden:  
+ Standortsystemrollen verwenden standardmäßig die **Standardwebsite** in IIS. Diese wird automatisch bei der Installation der Standortsystemrolle eingerichtet. An primären Standorten können Sie jedoch stattdessen benutzerdefinierte Websites verwenden. Wenn Sie benutzerdefinierte Websites verwenden:  
 
--   Benutzerdefinierte Websites sind für den gesamten Standort, nicht für einzelne Standortsystemserver oder Rollen aktiviert.  
+-   Benutzerdefinierte Websites sind für den gesamten Standort, nicht für einzelne Standortsystemserver oder -rollen aktiviert.  
 
--   An primären Standorten muss jeder Computer, der eine anwendbare Standortsystemrolle hosten wird, mit einer benutzerdefinierten Website namens **SMSWEB** konfiguriert werden. Bis diese Website erstellt wird und die Standortsystemrollen auf diesem Computer so konfiguriert werden, dass sie die benutzerdefinierte Website verwenden, können Clients möglicherweise nicht mit Standortsystemrollen auf diesem Computer kommunizieren.  
+-   An primären Standorten muss jeder Computer, der eine anwendbare Standortsystemrolle hosten soll, mit einer benutzerdefinierten Website namens **SMSWEB** eingerichtet werden. Erst wenn Sie diese Website erstellt und die Standortsystemrollen auf diesem Computer so eingerichtet haben, dass sie die benutzerdefinierte Website verwenden, können Clients mit Standortsystemrollen auf diesem Computer kommunizieren.  
 
--   Da sekundäre Standorte automatisch für die Verwendung einer benutzerdefinierten Website konfiguriert sind, wenn Sie diese Option für den übergeordneten primären Standort aktiviert haben, müssen Sie auch benutzerdefinierte Websites in IIS auf jedem sekundären Standortsystemserver erstellen, der IIS benötigt.  
+-   Da sekundäre Standorte automatisch für die Verwendung einer benutzerdefinierten Website eingerichtet werden, wenn Sie diese Option für den übergeordneten primären Standort aktiviert haben, müssen Sie auch benutzerdefinierte Websites in IIS auf jedem sekundären Standortsystemserver erstellen, der IIS benötigt.  
 
 
   **Voraussetzungen für die Verwendung benutzerdefinierter Websites:**  
 
- Vor der Aktivierung der Option zur Verwendung benutzerdefinierter Websites an einem Standort müssen Sie  
+ Vor der Aktivierung der Option zur Verwendung benutzerdefinierter Websites an einem Standort müssen Sie folgende Schritte durchführen:  
 
--   eine benutzerdefinierte Website mit dem Namen **SMSWEB** in IIS auf jedem Standortsystemserver erstellen, der IIS erfordert. Führen Sie dies am primären Standort und an allen untergeordneten sekundären Standorten durch.  
+-   Erstellen Sie eine benutzerdefinierte Website mit dem Namen **SMSWEB** in IIS auf jedem Standortsystemserver, der IIS erfordert. Führen Sie dies am primären Standort und an allen untergeordneten sekundären Standorten durch.  
 
--   die benutzerdefinierte Website so konfigurieren, dass sie auf den gleichen Port reagiert, den Sie für die Configuration Manager-Clientkommunikation (Portnummer für Clientanfragen) konfigurieren.  
+-   Richten Sie die benutzerdefinierte Website so ein, dass sie auf den gleichen Port reagiert, den Sie für die Configuration Manager-Clientkommunikation (Portnummer für Clientanfragen) eingerichtet haben.  
 
--   für jede benutzerdefinierte Website oder Standardwebsite, die einen benutzerdefinierten Ordner verwendet, eine Kopie des verwendeten Standarddokumenttyps im Stammordner platzieren, der die Website hostet. Auf einem Windows Server 2008 R2-Computer beispielsweise mit Standardkonfigurationen ist **iisstart.htm** eins der verfügbaren Standarddokumenttypen. Suchen Sie im Stammverzeichnis der Standardwebsite nach dieser Datei, und legen Sie eine Kopie dieser Datei (oder eine Kopie des verwendeten Standarddokumenttyps) in den Stammordner, der die benutzerdefinierte SMSWEB-Website hostet. Weitere Informationen zu Standarddokumenttypen finden Sie unter [Standarddokument&lt; defaultDocument\> für IIS](http://www.iis.net/configreference/system.webserver/defaultdocument).  
+-   Platzieren Sie für jede benutzerdefinierte Website oder Standardwebsite, die einen benutzerdefinierten Ordner verwendet, eine Kopie des verwendeten Standarddokumenttyps in dem Stammordner, der die Website hostet. Auf einem Windows Server 2008 R2-Computer mit Standardkonfigurationen ist **iisstart.htm** beispielsweise einer der verfügbaren Standarddokumenttypen. Suchen Sie im Stammverzeichnis der Standardwebsite nach dieser Datei, und legen Sie eine Kopie dieser Datei (oder eine Kopie des verwendeten Standarddokumenttyps) in den Stammordner, der die benutzerdefinierte SMSWEB-Website hostet. Weitere Informationen zu Standarddokumenttypen finden Sie unter [Default Document &lt;defaultDocument\> for IIS](http://www.iis.net/configreference/system.webserver/defaultdocument).  
 
 **Informationen zu IIS-Anforderungen:**
 **Für die folgenden Standortsystemrollen sind IIS und eine Website zum Hosten der Standortsystemdienste erforderlich:**  
@@ -83,12 +83,12 @@ Weitere Aspekte:
 
 -   Standortsystemrollen wie der Reporting Services-Punkt, die IIS verwenden, aber keine Clientverbindungen akzeptieren, verwenden ebenfalls die Website SMSWEB anstelle der Standardwebsite.  
 
--   Benutzerdefinierte Websites erfordern das Zuweisen von Portnummern, die sich von denjenigen unterscheiden, die von der Standardwebsite der Computer verwendet werden. Eine Standardwebsite und benutzerdefinierte Website können nicht gleichzeitig ausgeführt werden, wenn beide Websites versuchen, dieselben TCP/IP-Ports zu verwenden.  
+-   Benutzerdefinierte Websites erfordern das Zuweisen von Portnummern, die sich von denjenigen unterscheiden, die von der Standardwebsite des Computers verwendet werden. Eine Standardwebsite und benutzerdefinierte Website können nicht gleichzeitig ausgeführt werden, wenn beide Websites versuchen, dieselben TCP/IP-Ports zu verwenden.  
 
--   Die TCP/IP-Ports, die Sie in IIS für die benutzerdefinierte Website konfigurieren, müssen mit den Clientanforderungsports des Standorts übereinstimmen.  
+-   Die TCP/IP-Ports, die Sie in IIS für die benutzerdefinierte Website einrichten, müssen mit den Clientanforderungsports für den Standort übereinstimmen.  
 
-## <a name="switching-between-default-and-custom-websites"></a>Wechseln zwischen Standard- und benutzerdefinierten Websites  
-Obwohl Sie das Kontrollkästchen zur Verwendung benutzerdefinierter Websites bei einem primären Standort jederzeit aktivieren bzw. deaktivieren können (Sie finden es auf der Seite „Eigenschaften“ auf der Registerkarte „Allgemein“), sollten Sie sorgfältig planen, bevor Sie diese Änderung vornehmen. Wenn diese Konfiguration geändert wird, müssen alle betreffenden Standortsystemrollen am primären Standort und untergeordneten sekundären Standorten deinstalliert und erneut installiert werden:  
+## <a name="switch-between-default-and-custom-websites"></a>Wechseln zwischen Standard- und benutzerdefinierten Websites  
+Obwohl Sie das Kontrollkästchen zur Verwendung benutzerdefinierter Websites bei einem primären Standort jederzeit aktivieren bzw. deaktivieren können (Sie finden es auf der Seite „Eigenschaften“ auf der Registerkarte „Allgemein“), sollten Sie sorgfältig planen, bevor Sie diese Änderung vornehmen. Wenn diese Konfiguration geändert wird, müssen alle betreffenden Standortsystemrollen am primären Standort und an untergeordneten sekundären Standorten deinstalliert und erneut installiert werden:  
 
 Die folgenden Rollen werden **automatisch neu installiert**:  
 
@@ -118,23 +118,23 @@ Darüber hinaus gilt:
 
 -   Wenn Sie am Standort zu benutzerdefinierten Websites wechseln, müssen Clients, die bereits dem Standort zugewiesen sind, so neu konfiguriert werden, dass die neuen Clientanforderungsports für die benutzerdefinierten Websites verwendet werden. Weitere Informationen finden Sie unter [Konfigurieren von Clientkommunikationsports in System Center Configuration Manager](../../../core/clients/deploy/configure-client-communication-ports.md).  
 
-## <a name="configure-custom-websites"></a>Konfigurieren benutzerdefinierter Websites  
+## <a name="set-up-custom-websites"></a>Einrichten benutzerdefinierter Websites  
 Da die Schritte zum Erstellen einer benutzerdefinierten Website bei verschiedenen Betriebssystemversionen variieren, konsultieren Sie die Dokumentation Ihrer Betriebssystemversion hinsichtlich der genauen Schritte, doch befolgen Sie, sofern zutreffend, die folgenden Vorgaben:  
 
--   Der Websitename muss **SMSWEB**lauten.  
+-   Der Websitename muss **SMSWEB** lauten.  
 
--   Beim Konfigurieren von HTTPS müssen Sie ein SSL-Zertifikat angeben, bevor Sie die Konfiguration speichern können.  
+-   Beim Einrichten von HTTPS müssen Sie ein SSL-Zertifikat angeben, bevor Sie die Konfiguration speichern können.  
 
--   Nachdem Sie die benutzerdefinierte Website erstellt haben, entfernen Sie die benutzerdefinierten Websiteports, die von anderen Websites in IIS genutzt werden:  
+-   Nachdem Sie die benutzerdefinierte Website erstellt haben, entfernen Sie die benutzerdefinierten Websiteports, die Sie von anderen Websites in IIS aus verwenden:  
 
     1.  Bearbeiten Sie die **Bindungen** der anderen Websites so, dass Ports entfernt werden, die denjenigen entsprechen, die der Website **SMSWEB** zugewiesen sind.  
 
-    2.  Starten Sie die Website **SMSWEB** .  
+    2.  Starten Sie die Website **SMSWEB**.  
 
     3.  Starten Sie den Dienst **SMS_SITE_COMPONENT_MANAGER** auf dem Standortserver des Standorts neu.  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

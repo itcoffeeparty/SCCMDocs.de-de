@@ -2,7 +2,7 @@
 title: Aktualisieren der lokalen Infrastruktur | Microsoft-Dokumentation
 description: "Hier erfahren Sie, wie für eine Infrastruktur wie etwa SQL Server und das Standortbetriebssystem von Standortsystemen ein Upgrade durchgeführt wird."
 ms.custom: na
-ms.date: 10/28/2016
+ms.date: 2/2/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4a8d98addcd463eb82d8b7100b44254a10d21992
-ms.openlocfilehash: b79346968edf88443f8e30691aa4baec7b81699f
+ms.sourcegitcommit: 83c8492191f40fc4d582562268db0d58a0f9cdde
+ms.openlocfilehash: a5d8496d98bd7f202ffbe8859981e94457ffa5c4
 
 
 ---
@@ -32,7 +32,7 @@ Verwenden Sie die Informationen in diesem Thema, um die Serverinfrastruktur zu a
 
 - Wenn Sie Ihre System Center Configuration Manager-Infrastruktur auf eine neue Version aktualisieren möchten, lesen Sie [Updates für System Center Configuration Manager](/sccm/core/servers/manage/updates).
 
-##  <a name="a-namebkmksupconfigupgradesitesrva-upgrade-site-operating-system-of-site-systems"></a><a name="BKMK_SupConfigUpgradeSiteSrv"></a> Durchführen eines Upgrades für das Standortbetriebssystem von Standortsystemen  
+##  <a name="a-namebkmksupconfigupgradesitesrva-upgrade-the-operating-system-of-site-systems"></a><a name="BKMK_SupConfigUpgradeSiteSrv"></a> Durchführen eines Upgrades für das Betriebssystem von Standortsystemen  
  Configuration Manager unterstützt in folgenden Situationen das direkte Upgrade des Betriebssystems von Servern, auf denen ein Standortserver gehostet wird, sowie von Remoteservern, auf denen eine Standortsystemrolle gehostet wird:  
 
 -   Direktes Upgrade auf ein höheres Windows Server Service Pack, sofern die gewählte Windows Service Pack-Stufe von Configuration Manager unterstützt wird.  
@@ -213,6 +213,6 @@ Um den SQL Server-CE-Kompatibilitätsgrad zu ermitteln, der für Ihre Standortda
 
 
 
-<!--HONumber=Dec16_HO5-->
+<!--HONumber=Feb17_HO1-->
 
 

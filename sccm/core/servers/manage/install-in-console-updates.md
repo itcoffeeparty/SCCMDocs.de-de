@@ -2,7 +2,7 @@
 title: Konsoleninterne Updates | Microsoft-Dokumentation
 description: "System Center Configuration Manager wird mit dem Microsoft-Clouddienst synchronisiert, um Updates abzurufen, die in der Konsole installieren werden können."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
-ms.openlocfilehash: 1b7063d45c6dc9b42e5002f684043a8e846416a2
+ms.sourcegitcommit: 2f90f3204b3c31caaed1359e11451285b21eef50
+ms.openlocfilehash: b3a58503ea4d49825e93ea3a2e9bfedf975145e6
 
 
 ---
@@ -69,7 +69,7 @@ In der Standardeinstellung ist die Klasse **Updatepakete** (SMS_CM_Updatepackage
     - Ein Benutzer mit dieser Sicherheitsrolle und Zugriff auf den Sicherheitsbereich **Standard** kann sich Updates anzeigen lassen, Updates installieren und währenddessen Features aktivieren. Zusätzlich kann er sich nach der Updateinstallation Features anzeigen lassen. Eine nachträgliche Aktivierung von Features ist jedoch nicht möglich.
 
 - **Analyst mit Leseberechtigung** mit der Berechtigung **Lesen** :
-  -  Aktualisierung von 1511 oder ... auf 1606: Ein Benutzer mit dieser Sicherheitsrolle und Zugriff auf den Bereich **Standard** kann Updates anzeigen, sie aber nicht installieren, und er kann Funktionen anzeigen, nachdem ein Update installiert wurde, kann diese aber nicht selbst aktivieren.
+  -  Ein Benutzer mit dieser Sicherheitsrolle und Zugriff auf den Bereich **Standard** kann Updates anzeigen, aber nicht installieren, und kann Funktionen anzeigen, nachdem ein Update installiert wurde, kann diese jedoch nicht selbst aktivieren.
 
 **Übersicht über die erforderlichen Berechtigungen für Updates und Wartung:**   
   - Verwenden Sie ein Konto, das einer Sicherheitsrolle zugewiesen ist, die über die Klasse **Updatepakete** mit den Berechtigungen **Ändern** und **Lesen** verfügt.
@@ -162,7 +162,7 @@ Wenn Sie später ein Update installieren, können Sie das Update so konfiguriere
 
  Es wird empfohlen, die Installation des Updates für jeden Standort außerhalb der normalen Geschäftszeiten zu planen, wenn die Installation des Updates und die zugehörigen Aktionen zum Neuinstallieren von Standortkomponenten und Standortsystemrollen die geringsten Auswirkungen auf die Geschäftsvorgänge haben.  
 
--   An untergeordneten primären Standorten wird das Update automatisch gestartet, sobald die Installation des Updates am Standort der zentralen Verwaltung abgeschlossen ist. Dies ist der standardmäßige und empfohlene Prozess. Mithilfe von [Dienstfenstern für Standortserver](#bkmk_ServiceWindow) können Sie jedoch steuern, wann Updates an einem primären Standort installiert werden.  
+-   An untergeordneten primären Standorten wird das Update automatisch gestartet, sobald die Installation des Updates am Standort der zentralen Verwaltung abgeschlossen ist. Dies ist der standardmäßige und empfohlene Prozess. Mithilfe von [Dienstfenstern für Standortserver](/sccm/core/servers/manage/service-windows) können Sie jedoch steuern, wann Updates an einem primären Standort installiert werden.  
 
 -   Sekundäre Standorte müssen Sie von der Configuration Manager-Konsole aus manuell aktualisieren, nachdem das Update des primären, übergeordneten Standorts abgeschlossen wurde. Die automatische Aktualisierung sekundärer Standortserver wird nicht unterstützt.  
 
@@ -354,18 +354,9 @@ Wenn Sie an einem eigenständigen primären Standort Ihre Zustimmung erteilt hab
 |Bedingten Zugriffs für PCs, die von System Center Configuration Manager verwaltet werden | [Version 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     |![Noch nicht](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)                        |
 
 
+## <a name="known-issues"></a>Bekannte Probleme
 
-
-##  <a name="a-namebkmkservicewindowa-service-windows-for-site-servers"></a><a name="bkmk_ServiceWindow"></a> Dienstfenster für Standortserver  
-Sie können Dienstfenster auf einem Standortserver konfigurieren, um zu steuern, wann Infrastruktur-Updates für Configuration Manager auf diesem Standortserver angewendet werden können.  Jeder Standortserver unterstützt mehrere Fenster. Dabei wird das zulässige Fenster für die Installation von Infrastruktur-Updates von einer Kombination aller für den jeweiligen Server konfigurierten Fenster bestimmt.  
-
-**So konfigurieren Sie ein Dienstfenster**  
-
-1.  Öffnen Sie in der Configuration Manager-Konsole **Verwaltung** > **Standortkonfiguration** > **Standorte**, und wählen Sie anschließend den Standort aus, für den Sie ein Dienstfenster konfigurieren möchten.  
-
-2.  Als Nächstes bearbeiten Sie die **Eigenschaften** der Standortserver und wählen die Registerkarte **Dienstfenster** aus, auf der Sie mindestens ein Dienstfenster für den jeweiligen Standortserver festlegen können.  
-
-##  <a name="a-namebkmkfaqa-why-dont-i-see-certain-updates-in-my-console"></a><a name="bkmk_faq"></a> Warum werden bestimmte Updates nicht in der Konsole angezeigt?  
+###  <a name="a-namebkmkfaqa-why-dont-i-see-certain-updates-in-my-console"></a><a name="bkmk_faq"></a> Warum werden bestimmte Updates nicht in der Konsole angezeigt?  
  Wenn Sie nach einer erfolgreichen Synchronisierung mit dem Microsoft-Clouddienst ein bestimmtes Update nicht finden oder gar keine Updates in der Konsole angezeigt werden, kann dies folgende Ursachen haben:  
 
 -   Für das Update ist eine Konfiguration erforderlich, die von Ihrer Infrastruktur nicht verwendet wird, oder eine Voraussetzung für den Empfang des Updates wird von der aktuellen Produktversion nicht erfüllt.  
@@ -376,8 +367,21 @@ Sie können Dienstfenster auf einem Standortserver konfigurieren, um zu steuern,
 
     Unter [Berechtigungen zum Verwalten von Updates](../../../core/servers/manage/install-in-console-updates.md#permissions-to-view-and-manage-updates-and-features) in diesem Thema finden Sie Informationen zu erforderlichen Berechtigungen zum Anzeigen von Updates und Aktivieren von Features in der Konsole.
 
+### <a name="why-do-i-see-two-updates-for-version-1610"></a>Warum werden mir zwei Updates für Version 1610 angezeigt?
+Wenn Sie Updates in der Konsole anzeigen, werden möglicherweise zwei Updates zur Installation von Version 1610 aufgeführt. Diese Updates weisen unterschiedliche Datumsangaben auf. Dies geschieht, wenn eine der folgenden Situationen eintritt:   
+-   Sie haben eine frühere Version (z.B. 1606) installiert, nachdem Version 1610 verfügbar wurde.
+
+-   In Ihrer Hierarchie wird Version 1511 oder 1602 ausgeführt, und Sie konnten Version 1606 nicht herunterladen.
+
+Es gibt zwei Updateversionen für Version 1610, weil dieses Update erneut veröffentlicht wurde, nachdem einige kleinere Änderungen an einigen Binärdateien vorgenommen wurden. Diese Änderungen wirken sich nicht auf die Funktionalität von Configuration Manager oder das Update aus.
+
+Wenn beide Updates in der Konsole verfügbar sind, empfehlen wir die Installation des Updates mit dem neueren Datum. Da beide jedoch die gleiche Funktionalität bereitstellen, müssen Sie keine weiteren Maßnahmen ergreifen, wenn Sie eine von ihnen bereits installiert haben.
+-   Wenn Sie zuvor das ältere Update installiert haben, müssen Sie nicht unbedingt das Update mit dem neueren Datum installieren. Wenn Sie nach der Installation des ersten Updates dennoch das neuere Update installieren, werden die betreffenden Binärdateien aktualisiert, es werden jedoch keine weiteren Änderungen durchgeführt, und es ist ihrerseits keine weitere Aktion erforderlich.
+
+-   Wenn Sie zuvor das neueste Update installiert haben und dann das Update mit dem älteren Datum installieren, ist keine weitere Aktion erforderlich, da die bereits installierten neueren Binärdateien nicht durch die gleichen Binärdateien aus dem ursprünglichen Update überschrieben werden.
 
 
-<!--HONumber=Dec16_HO3-->
+
+<!--HONumber=Feb17_HO1-->
 
 

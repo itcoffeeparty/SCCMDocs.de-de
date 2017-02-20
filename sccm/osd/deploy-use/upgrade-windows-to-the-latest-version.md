@@ -1,8 +1,8 @@
 ---
 title: Aktualisieren von Windows auf die neueste Version | Microsoft-Dokumentation
-description: "Erfahren Sie mehr über das Verwenden eigenständiger Medien oder Softwarecenter in Configuration Manager, um ein Upgrade eines Betriebssystems von Windows 7 oder höher auf Windows 10 durchzuführen."
+description: "Erfahren Sie mehr über das Verwenden von Configuration Manager, um ein Upgrade eines Betriebssystems von Windows 7 oder höher auf Windows 10 durchzuführen."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/06/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: 147841212dbb85dd9d4ee7c8a79ca7869584fd99
+ms.sourcegitcommit: 288a4c649f371d9701fe7249449356aa222bf372
+ms.openlocfilehash: 35f04e237efffbdb12893f658950a99dc0b98b85
 
 
 ---
@@ -69,6 +69,9 @@ Dieses Thema enthält die Schritte in System Center Configuration Manager zum Du
 
      Verwenden Sie die Schritte unter [Create a task sequence to upgrade an operating system (Erstellen einer Tasksequenz zum Aktualisieren eines Betriebssystems)](create-a-task-sequence-to-upgrade-an-operating-system.md), um das Durchführen eines Upgrades des Betriebssystems zu automatisieren.  
 
+    > [WICHTIG] Wenn Sie eigenständige Medien verwenden, müssen Sie ein Startimage in die Tasksequenz einschließen, damit sie im Tasksequenzmedien-Assistenten zur Verfügung stehen.
+
+
     > [!NOTE]  
     >  In der Regel verwenden Sie die Schritte unter [Create a task sequence to upgrade an operating system (Erstellen einer Tasksequenz zum Aktualisieren eines Betriebssystems)](create-a-task-sequence-to-upgrade-an-operating-system.md), um eine Tasksequenz zu erstellen, um ein Upgrade eines Betriebssystems auf Windows 10 durchzuführen. Die Tasksequenz enthält den Schritt „Betriebssystem aktualisieren“ sowie weitere empfohlene Schritte und Gruppen für den End-to-End-Aktualisierungsprozess. Sie können jedoch eine benutzerdefinierte Tasksequenz erstellen und den Tasksequenzschritt [Betriebssystem aktualisieren](../understand/task-sequence-steps.md#BKMK_UpgradeOS) zum Aktualisieren des Betriebssystems hinzufügen. Dies ist der einzige Schritt, der zum Aktualisieren des Betriebssystems auf Windows 10 erforderlich ist. Wenn Sie diese Methode auswählen, fügen Sie nach dem Schritt „Betriebssystem aktualisieren“ außerdem den Schritt [Computer neu starten](../understand/task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer) hinzu, um das Upgrade abzuschließen. Stellen Sie sicher, dass die Einstellung **Aktuell installiertes Standardbetriebssystem** aktiviert ist, um den Computer mit dem installierten Betriebssystem und nicht mit Windows PE neu zu starten.  
 
@@ -88,6 +91,6 @@ Dieses Thema enthält die Schritte in System Center Configuration Manager zum Du
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 

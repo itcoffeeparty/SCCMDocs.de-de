@@ -2,7 +2,7 @@
 title: Endpoint Protection | Microsoft Docs
 description: "Erfahren Sie, wie Sie Richtlinien für Antischadsoftware und die Sicherheit der Windows-Firewall für Clientcomputer in der Configuration Manager-Hierarchie verwalten."
 ms.custom: na
-ms.date: 12/9/2016
+ms.date: 02/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,12 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 9fcbc0bb9c8ccd4265381ca4db7a363c8ae3b54a
-ms.openlocfilehash: 59313bd6f76433782a79ab3ee9d6240f767fbd76
+ms.sourcegitcommit: 4688b4b12a7afa5fcfdc0e42f984271d98f10316
+ms.openlocfilehash: 90e6d82e7fd1ff0ad4f1d616cc23201769fe26e2
 
 
 ---
-# <a name="endpoint-protection-in-system-center-configuration-manager"></a>Endpoint Protection in System Center Configuration Manager
+# <a name="endpoint-protection"></a>Endpoint Protection
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -38,7 +38,7 @@ Mithilfe von Endpoint Protection in System Center Configuration Manager können 
 
 -   Sie können E-Mail-Benachrichtigungen senden, die Überwachung in der Konsole nutzen und Berichte anzeigen, damit Administratoren über erkannte Schadsoftware auf Clientcomputern informiert werden.  
 
-Windows 10-Computer benötigen keinen zusätzlichen Client für die Verwaltung von Endpoint Protection. Auf Windows 8.1 und älteren Computern installiert Endpoint Protection zusätzlich zum Configuration Manager-Client einen eigenen Client. Endpoint Protection kann verwalten. Der Endpoint Protection-Client verfügt über folgende Funktionen:  
+Ab Windows 10 und Windows Server 2016 benötigen Computer keinen zusätzlichen Client für die Verwaltung von Endpoint Protection. Auf Windows 8.1 und älteren Computern installiert Endpoint Protection zusätzlich zum Configuration Manager-Client einen eigenen Client. Der Endpoint Protection-Client verfügt über folgende Funktionen:  
 
 -   Erkennung von Schadsoftware und Spyware sowie Wiederherstellung  
 
@@ -108,10 +108,20 @@ Ab Version 1606 von Configuration Manager (Current Branch) kann Endpoint Protect
 
  Diese Produkte können nicht über die Configuration Manager-Konsole verwaltet werden. Allerdings wird mit den Installationsdateien ein System Center Operations Manager-Management Pack bereitgestellt, das es Ihnen ermöglicht, den Client für Linux mit Operations Manager zu verwalten.  
 
+### <a name="how-to-get-the-endpoint-protection-client-for-mac-computers-and-linux-servers"></a>Abrufen des Endpoint Protection-Clients für Macintosh-Computer und Linux-Server
+
+Gehen Sie folgendermaßen vor, um die Imagedatei mit der Endpoint Protection-Clientsoftware und Dokumentation für Macintosh-Computer und Linux-Server herunterzuladen.
+1. Melden Sie sich im [Microsoft Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter/default.aspx) an.
+2. Wählen Sie die Registerkarte **Downloads and Keys** (Downloads und Schlüssel) oben auf der Website aus.
+3. Filtern Sie nach dem Produkt **System Center Endpoint Protection (Current Branch)**.
+4. Klicken Sie auf den Link **Herunterladen**.
+5. Klicken Sie auf **Continue**(Weiter). Es sollten mehrere Dateien angezeigt werden, einschließlich eine namens **System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage   32/64 bit   1507 MB ISO** (System Center Endpoint Protection (Current Branch –Version 1606) für das Linux- und Macintosh-Betriebssystem Mehrsprachig 32/64 bit 1507 MB ISO).
+6. Klicken Sie auf das Pfeilsymbol, um die Datei herunterzuladen. Der Dateiname lautet **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_EptProt_Lin_Mac_MLF_X21-30777.ISO**.
+
  Weitere Informationen zum Installieren und Verwalten von Endpoint Protection-Clients für Linux und Macintosh-Computer finden Sie in der Dokumentation des jeweiligen Produkts im Ordner **Documentation** .
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 

@@ -2,7 +2,7 @@
 title: Upgrade von Long-Term Servicing Branch auf Current Branch | Microsoft-Dokumentation
 description: "Enthält Informationen zum Konvertieren eines Long-Term Servicing Branch-Standorts auf einen Current Branch-Standort."
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 2/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 37fa8da8b4acc3f22c9c435206eedde58d2754f0
+ms.sourcegitcommit: 60631bc0346bd78d704e7129bb755af504c59b1b
+ms.openlocfilehash: 6e7edc85630d22c5bbba1ff66bd1199903db76db
 
 ---
 
@@ -28,16 +28,16 @@ ms.openlocfilehash: 37fa8da8b4acc3f22c9c435206eedde58d2754f0
 
 In diesem Thema erfahren Sie, wie man ein Upgrade eines Standorts und einer Hierarchie durchführt (konvertiert), die Long-Term Servicing Branch (LTSB) von Configuration Manager auf Current Branch ausführen.
 
-Wenn Sie über einen aktuellen Software Assurance-Vertrag (oder ähnliche Lizenzrechte) verfügen, der Ihnen Rechte gewährt, Current Branch zu verwenden, können Sie Ihre Installation von LTSB auf Current Branch konvertieren.  Dies ist eine undirektionale Konvertierung, nachdem es keine Unterstützung für das Konvertieren von Current Branch auf LTSB gibt.
+Wenn Sie über einen aktuellen Software Assurance-Vertrag (oder ähnliche Lizenzrechte) verfügen, der Ihnen Rechte gewährt, Current Branch zu verwenden, können Sie Ihre Installation von LTSB auf Current Branch konvertieren.  Dies ist eine unidirektionale Konvertierung, weil das Konvertieren eines Current Branch-Standorts nach LTSB nicht unterstützt wird.
 
 Wenn Sie über mehrere Standorte verfügen, müssen Sie nur den Standort der obersten Ebene Ihrer Hierarchie konvertieren. Nachdem der Standort der obersten Ebene konvertiert ist:
 - Konvertieren untergeordnete primäre Standorte automatisch.
--   Müssen Sie sekundäre Standorte in der Configuration Manager-Konsole manuell aktualisieren.
+-    Müssen Sie sekundäre Standorte in der Configuration Manager-Konsole manuell aktualisieren.
 
-## <a name="run-setup-to-convert"></a>Ausführen des Setups zum Konvertieren
+## <a name="run-setup-to-convert-the-long-term-servicing-branch"></a>Ausführen von Setup zum Konvertieren von Long-Term Servicing Branch
 Sie können auf dem Standort der obersten Ebene Ihrer Hierarchie das Configuration Manager-Setup mit einem berechtigtem Baselinemedium ausführen, und **Standortwartung** auswählen.  Wählen Sie dann auf der Lizenzierungsseite die Option für Current Branch aus, und schließen Sie den Assistenten ab.
 
-Abschließend wird Ihre Seite auf Current Branch konvertiert. Dadurch werden Features und Funktionen, die bisher nicht verfügbar waren, verfügbar gemacht.
+Sobald Ihr Standort in Current Branch konvertiert wurde, stehen Ihnen Features und Funktionen zur Verfügung, die bisher nicht verfügbar waren.
 
 > [!NOTE]  
 > Ein berechtigtes Baselinemedium ist ein Medium der gleichen oder höheren Version Ihrer LTSB-Installation.
@@ -46,16 +46,17 @@ Beispiel: Da LTSB auf Version 1606 basiert, können Sie kein Baselinemedium der 
 
 Sie finden eine Liste der Baselineversionen unter **Baseline and update versions (Baseline- und Updateversionen)** in [Updates for Configuration Manager (Updates für Configuration Manager)](/sccm/core/servers/manage/updates).
 
-## <a name="use-the-configuration-manager-console-to-convert"></a>Verwenden der Configuration Manager-Konsole zum Konvertieren
+## <a name="use-the-configuration-manager-console-to-convert-the-long-term-servicing-branch"></a>Verwenden der Configuration Manager-Konsole zum Konvertieren von Long-Term Servicing Branch
 Wenn Ihr Standort LTSB ausführt, können Sie die folgende Option in der Configuration Manager-Konsole ausführen, um auf Current Branch zu konvertieren:
 
- 1. Wechseln Sie in der Konsole zu **Verwaltung** > **Standortkonfiguration** > **Standorte**, und öffnen Sie die **Hierarchieeinstellungen**.  
- 2. Wählen Sie die Option zum Konvertieren von Current Branch aus, und klicken Sie auf **Übernehmen**.  
+ 1. Wechseln Sie in der Konsole zu **Verwaltung** > **Standortkonfiguration** > **Standorte**, und öffnen Sie dann die **Hierarchieeinstellungen**.  
 
-Abschließend wird Ihre Seite auf Current Branch konvertiert. Dadurch werden Features und Funktionen, die bisher nicht verfügbar waren, verfügbar gemacht.
+ 2. Wählen Sie die Option zum Konvertieren von Current Branch aus, und klicken Sie auf **Anwenden**.  
+
+Sobald Ihr Standort in Current Branch konvertiert wurde, stehen Ihnen Features und Funktionen zur Verfügung, die bisher nicht verfügbar waren.
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

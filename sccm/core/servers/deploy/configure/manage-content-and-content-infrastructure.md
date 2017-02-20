@@ -2,7 +2,7 @@
 title: Inhaltsinfrastruktur | Microsoft-Dokumentation
 description: "Erfahren Sie, wie Sie Ihre Inhaltsverwaltungsinfrastruktur für System Center Configuration Manager bereitstellen und anschließend verwalten können."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 35247425252cb3724de2871d713f08469e72555a
+ms.sourcegitcommit: e30538ed925af66e8b7459eb4add9dd992c1ae19
+ms.openlocfilehash: b0f297fddca4252f106dee9d3d5d8911a347825b
 
 
 ---
@@ -26,16 +26,16 @@ ms.openlocfilehash: 35247425252cb3724de2871d713f08469e72555a
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Wenn Sie zur Bereitstellung und anschließenden Verwaltung Ihrer Inhaltsverwaltungsinfrastruktur für System Center Configuration Manager bereit sind, nutzen Sie die Informationen in den folgenden Themen:  
+Wenn Sie zur Einrichtung und anschließenden Verwaltung Ihrer Inhaltsverwaltungsinfrastruktur für System Center Configuration Manager bereit sind, nutzen Sie die Informationen in den folgenden Themen:  
 
--   Informationen hierzu finden Sie unter [Installieren und Konfigurieren von Verteilungspunkten für System Center Configuration Manager](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md) – Bevor Sie Inhalt bereitstellen können, müssen Sie Verteilungspunkte installieren und konfigurieren. Anschließend können Sie Verteilungspunktgruppen konfigurieren, um die Verwaltung von Inhalten in der gesamten Infrastruktur zu vereinfachen. Die Informationen in diesem Thema helfen Ihnen beim Ausführen dieser Aufgaben. Außerdem werden die umfassenden und vielfältigen Einstellungen beschrieben, die für einzelne Verteilungspunkte unterstützt werden.  
+-   [Installieren und Konfigurieren von Verteilungspunkten für System Center Configuration Manager](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md). Bevor Sie Inhalt bereitstellen können, müssen Sie Verteilungspunkte installieren und einrichten. Anschließend können Sie Verteilungspunktgruppen einrichten, um die Verwaltung von Inhalten in der gesamten Infrastruktur zu vereinfachen. Die Informationen in diesem Thema helfen Ihnen beim Ausführen dieser Aufgaben. Außerdem werden die umfassenden und vielfältigen Einstellungen beschrieben, die für einzelne Verteilungspunkte unterstützt werden.  
 
--   [Deploy and manage content for System Center Configuration Manager (Bereitstellen und Verwalten von Inhalt für System Center Configuration Manager)](../../../../core/servers/deploy/configure/deploy-and-manage-content.md) – Beim Bereitstellen von Inhalten werden Dateien und Software an die Verteilungspunktserver überall in Ihrem Netzwerk übertragen. Zusätzlich zur einfachen Übertragung können Sie Inhalt auch vorab bereitstellen. Durch diese Vorabbereitstellung vermeiden Sie eine übermäßige Beanspruchung der Netzwerkbandbreite. Die Informationen in diesem Thema helfen Ihnen bei den grundlegenden Aufgaben zum Senden von Inhalt und zum effektiven Verwenden vorab bereitgestellten Inhalts.  
+-   [Bereitstellen und Verwalten von Inhalt für System Center Configuration Manager](../../../../core/servers/deploy/configure/deploy-and-manage-content.md). Beim Bereitstellen von Inhalt werden Dateien und Software an die Verteilungspunktserver überall in Ihrem Netzwerk übertragen. Zusätzlich zur einfachen Übertragung können Sie Inhalt auch vorab bereitstellen. Durch diese Vorabbereitstellung vermeiden Sie eine übermäßige Beanspruchung der Netzwerkbandbreite. Die Informationen in diesem Thema helfen Ihnen bei den grundlegenden Aufgaben zum Senden von Inhalt und zum effektiven Verwenden vorab bereitgestellten Inhalts.  
 
--   [Monitor content you have distributed with System Center Configuration Manager (Überwachen von mit System Center Configuration Manager verteiltem Inhalt)](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md) – Während Sie Inhalt bereitstellen, können Sie ihren Status in Ihrer gesamten Infrastruktur überwachen. Sie können auch Inhalt neu verteilen, wenn er Verteilungspunkte nicht erreicht, oder Verteilungen abbrechen, wenn sie für einen zu langen Zeitraum in Bearbeitung bleiben. Die Informationen in diesem Thema helfen Ihnen zu verstehen, welchen Inhalt Sie überwachen können und wie Sie ihn überwachen. Außerdem wird beschrieben, wie Sie einige mögliche Probleme und Fehler beim Übertragen von Inhalten beheben.  
+-   [Überwachen von mit System Center Configuration Manager verteilten Inhalten](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md). Während der Inhaltsbereitstellung können Sie deren Status in der gesamten Infrastruktur überwachen. Sie können auch Inhalt neu verteilen, wenn er Verteilungspunkte nicht erreicht, oder Verteilungen abbrechen, wenn sie für einen zu langen Zeitraum in Bearbeitung bleiben. Die Informationen in diesem Thema helfen Ihnen zu verstehen, wie Sie Ihre Inhalte überwachen können. Außerdem wird beschrieben, wie Sie einige mögliche Probleme und Fehler beim Übertragen von Inhalten beheben.  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

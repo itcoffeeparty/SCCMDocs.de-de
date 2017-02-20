@@ -1,8 +1,8 @@
 ---
-title: "Ausführen der Ermittlung | Microsoft-Dokumentation"
+title: "Ermitteln von Geräte- und Benutzerressourcen | Microsoft-Dokumentation"
 description: "Lesen Sie eine Übersicht über den Ermittlungsprozess und die Ermittlung von Datensätzen."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 1d225b9f904215280feef5efd4283cbd51f84577
+ms.sourcegitcommit: 7b6674f331c82cc7899b8661cf38b9d3022cf21b
+ms.openlocfilehash: 647826e9d340d3ef97abab0dba51041a3727dedc
 
 
 ---
@@ -26,8 +26,7 @@ ms.openlocfilehash: 1d225b9f904215280feef5efd4283cbd51f84577
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Sie können mindestens eine Ermittlungsmethode in    
-      System Center Configuration Manager verwenden, um Geräte- und Benutzerressourcen zu finden, die Sie verwalten können. Sie können mithilfe der Ermittlung auch die Netzwerkinfrastruktur in Ihrer Umgebung bestimmen.  Es gibt verschiedene Ermittlungsmethoden, mit denen Sie unterschiedliche Dinge ermitteln können, wobei jede Methode ihre eigenen Konfigurationen und Einschränkungen hat.  
+Zum Bestimmen von Geräte- und Benutzerressourcen, die Sie verwalten können, verwenden Sie eine oder mehrere Ermittlungsmethoden in System Center Configuration Manager. Sie können mithilfe der Ermittlung auch die Netzwerkinfrastruktur in Ihrer Umgebung bestimmen. Es gibt verschiedene Methoden, mit denen Sie unterschiedliche Dinge ermitteln können, wobei jede Methode ihre eigenen Konfigurationen und Einschränkungen hat.  
 
 ## <a name="overview-of-discovery"></a>Übersicht über die Ermittlung  
  Die Ermittlung ist der Prozess, über den Configuration Manager erfährt, welche Ressourcen Sie verwalten können. Es folgen die verfügbaren Ermittlungsmethoden:  
@@ -49,24 +48,24 @@ Sie können mindestens eine Ermittlungsmethode in
 > [!TIP]  
 >  Informationen zu den einzelnen Ermittlungsmethoden finden Sie unter [About discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/about-discovery-methods.md) (Informationen zu Ermittlungsmethoden in System Center Configuration Manager).  
 >   
->  Entscheidungshilfen hinsichtlich der Methoden und den Standorten in Ihrer Hierarchie finden Sie unter [Select discovery methods to use for System Center Configuration Manager](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md) (Auswählen von Ermittlungsmethoden zur Verwendung in System Center Configuration Manager).  
+>  Entscheidungshilfen hinsichtlich der Methoden und den Standorten in Ihrer Hierarchie finden Sie unter [Auswählen von Ermittlungsmethoden zur Verwendung in System Center Configuration Manager](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md).  
 
- Für die meisten Ermittlungsmethoden müssen Sie die jeweilige Methode am Standort aktivieren und so konfigurieren, dass bestimmte Netzwerk- oder Active Directory-Standorte durchsucht werden. Während der Ausführung wird der angegebene Speicherort auf Informationen zu Geräten oder Benutzern abgefragt, die Configuration Manager verwalten kann.  Wenn eine Ermittlungsmethode Informationen zu einer Ressource findet, werden diese in einer Datei abgelegt, die als DDR (Discovery Data Record) bezeichnet und von einem primären Standort oder Standort der zentralen Verwaltung verarbeitet wird. Bei der Verarbeitung eines DDR wird ein neuer Datensatz in der Standortdatenbank für neu ermittelte Ressourcen erstellt, oder vorhandene Datensätze werden mit neuen Informationen aktualisiert.  
+ Für die meisten Ermittlungsmethoden müssen Sie die jeweilige Methode am Standort aktivieren und so einrichten, dass bestimmte Netzwerk- oder Active Directory-Standorte durchsucht werden. Während der Ausführung wird der angegebene Speicherort auf Informationen zu Geräten oder Benutzern abgefragt, die Configuration Manager verwalten kann. Wenn eine Ermittlungsmethode Informationen zu einer Ressource findet, werden diese in einer Datei abgelegt, die als DDR (Discovery Data Record) bezeichnet wird. Diese Datei wird anschließend von einem primären Standort oder einem Standort der zentralen Verwaltung verarbeitet. Bei der Verarbeitung eines DDR wird ein neuer Datensatz in der Standortdatenbank für neu ermittelte Ressourcen erstellt, oder vorhandene Datensätze werden mit neuen Informationen aktualisiert.  
 
- Bei einigen Ermittlungsmethoden kann hoher Netzwerkdatenverkehr entstehen, und bei der Verarbeitung der resultierenden DDRs werden gegebenenfalls erhebliche CPU-Ressourcen in Anspruch genommen. Sie sollten sich daher auf die Ermittlungsmethoden beschränken, die zur Erreichung Ihrer Ziele erforderlich sind. Möglicherweise genügen ein oder zwei Ermittlungsmethoden für Ihre Zwecke. Später können Sie weitere Methoden Schritt für Schritt hinzufügen, um die Ermittlung in Ihrer Umgebung auszuweiten.  
+ Bei einigen Ermittlungsmethoden kann hoher Netzwerkdatenverkehr entstehen, und bei der Verarbeitung der von ihnen erstellten DDRs werden gegebenenfalls erhebliche CPU-Ressourcen in Anspruch genommen. Sie sollten sich daher auf die Ermittlungsmethoden beschränken, die zum Erreichen Ihrer Ziele erforderlich sind. Möglicherweise genügen ein oder zwei Ermittlungsmethoden für Ihre Zwecke. Später können Sie weitere Methoden Schritt für Schritt hinzufügen, um die Ermittlung in Ihrer Umgebung auszuweiten.  
 
- Die der Standortdatenbank hinzugefügten Ermittlungsinformationen werden anschließend an jeden Standort in der Hierarchie unabhängig davon repliziert, an welchen Standort sie ermittelt oder verarbeitet wurden. Daher können Sie an verschiedenen Standorten unterschiedliche Zeitpläne und Einstellungen für Ermittlungsmethoden konfigurieren. Es empfiehlt sich, eine bestimmte Ermittlungsmethode nur an einem einzelnen Standort ausführen, um die Belegung von Netzwerkbandbreite aufgrund der Duplizierung von Ermittlungsaktionen und die Verarbeitung redundanter Ermittlungsdaten an mehreren Standorten zu reduzieren.  
+ Die der Standortdatenbank hinzugefügten Ermittlungsinformationen werden anschließend an jeden Standort in der Hierarchie repliziert, unabhängig davon, wo sie ermittelt oder verarbeitet wurden. Während Sie an verschiedenen Standorten unterschiedliche Zeitpläne und Einstellungen für Ermittlungsmethoden einrichten können, führen Sie eine bestimmte Ermittlungsmethode möglicherweise nur an einem einzigen Standort aus. Dies verringert die Nutzung der Netzwerkbandbreite durch doppelte Ermittlungsaktionen und reduziert die Verarbeitung redundanter Ermittlungsdaten an mehreren Standorten.  
 
- Sie können Ermittlungsdaten verwenden, um benutzerdefinierte Sammlungen und Abfragen zu erstellen, um Ressourcen für die folgenden Verwaltungsaufgaben logisch zu gruppieren:  
+ Anhand von Ermittlungsdaten können Sie benutzerdefinierte Sammlungen und Abfragen erstellen, mit denen Ressourcen für Verwaltungsaufgaben logisch gruppiert werden. Beispiel:  
 
--   Pushübertragung von Clientinstallationen oder Upgrades  
+-   Pushübertragung von Clientinstallationen oder Upgrades.  
 
--   Bereitstellen von Inhalten für Benutzer oder Geräte  
+-   Bereitstellen von Inhalten für Benutzer oder Geräte.  
 
--   Bereitstellen von Clienteinstellungen und zugehörigen Konfigurationen  
+-   Bereitstellen von Clienteinstellungen und zugehörigen Konfigurationen.
 
 ##  <a name="a-namebkmkddrsa-about-discovery-data-records"></a><a name="BKMK_DDRs"></a> Informationen zu Discovery Data Records  
- Discovery Data Records (DDRs) sind Dateien, die durch eine Ermittlungsmethode erstellt wurden. Sie enthalten Informationen zu einer Ressource, die Sie in Configuration Manager verwalten können. DDRs enthalten Informationen über Computer, Benutzer und in einigen Fällen über die Netzwerkinfrastruktur. Sie werden auf primären Standorten oder auf Standorten der zentralen Verwaltung verarbeitet. Nachdem die im DDR enthaltenen Ressourceninformationen in die Datenbank eingetragen wurden, wird der DDR gelöscht, und die Informationen werden als globale Daten auf alle Standorte in der Hierarchie repliziert.  
+ DDRs sind Dateien, die durch eine Ermittlungsmethode erstellt werden. Sie enthalten Informationen zu einer Ressource, die Sie im Konfigurations-Manager verwalten können, wie z.B. Computer, Benutzer und in einigen Fällen die Netzwerkinfrastruktur. Sie werden auf primären Standorten oder auf Standorten der zentralen Verwaltung verarbeitet. Nachdem die im DDR enthaltenen Ressourceninformationen in die Datenbank eingetragen wurden, wird der DDR gelöscht, und die Informationen werden als globale Daten an alle Standorte in der Hierarchie repliziert.  
 
  Auf welchem Standort ein DDR verarbeitet wird, ist abhängig von den enthaltenen Informationen:  
 
@@ -74,22 +73,23 @@ Sie können mindestens eine Ermittlungsmethode in
 
 -   DDRs für bereits ermittelte Objekte werden auf primären Standorten verarbeitet. Von untergeordneten Standorten werden DDRs nicht an den Standort der zentralen Verwaltung übertragen, wenn der DDR Informationen über eine Ressource enthält, die sich bereits in der Datenbank befindet.  
 
--   Discovery Data Records werden von sekundären Standorten nicht verarbeitet, sondern von diesen immer mithilfe von dateibasierter Replikation an den übergeordneten primären Standort übertragen.  
+-   DDRs werden von sekundären Standorten nicht verarbeitet, sondern von diesen immer mithilfe von dateibasierter Replikation an den übergeordneten primären Standort übertragen.  
 
 DDR-Dateien verfügen über die Erweiterung DDR und über eine Größe von in der Regel ca. 1 KB.  
 
 ## <a name="get-started-with-discovery"></a>Erste Schritte mit der Ermittlung:  
- Vor Verwendung der Configuration Manager-Konsole zum Konfigurieren der Ermittlung sollten sich mit den Unterschieden zwischen den Methoden, ihren Möglichkeiten und (bei einigen) ihren Einschränkungen vertraut machen.  
+ Vor Verwendung der Configuration Manager-Konsole zum Einrichten der Ermittlung sollten sich mit den Unterschieden zwischen den Methoden, ihren Möglichkeiten und (bei einigen) ihren Einschränkungen vertraut machen.  
+
 Die folgenden Themen bieten grundlegende Informationen zur erfolgreichen Nutzung von Ermittlungsmethoden:  
 
 -   [About discovery methods for System Center Configuration Manager (Informationen zu Ermittlungsmethoden in System Center Configuration Manager)](../../../../core/servers/deploy/configure/about-discovery-methods.md)  
 
 -   [Select discovery methods to use for System Center Configuration Manager (Auswählen von Ermittlungsmethoden zur Verwendung in System Center Configuration Manager)](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md)  
 
-Wenn Sie die Methoden verstehen, die Sie verwenden möchten, finden Sie einen Leitfaden zum Konfigurieren jeder einzelnen Methode in [Configure discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md) (Konfigurieren von Ermittlungsmethoden für System Center Configuration Manager).  
+Wenn Sie die Methoden kennen, die Sie verwenden möchten, finden Sie einen Leitfaden zum Einrichten der einzelnen Methoden unter [Konfigurieren von Ermittlungsmethoden für System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -2,7 +2,7 @@
 title: Verwalten von per Volumenlizenz erworbenen iOS-Apps | Microsoft-Dokumentation
 description: "Sie können Lizenzen für Apps, die Sie über den iOS App Store erworben haben, bereitstellen, verwalten und nachverfolgen."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/08/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
-ms.openlocfilehash: cd9edf61d151ac8334ace0bf668fa4c919d8c75b
+ms.sourcegitcommit: 191e01f6b8a1ef2b9e193abd62d7981e6c977c1d
+ms.openlocfilehash: fb771bc94f49f25cfe01ff67c88572c8f2b18909
 
 
 ---
@@ -91,7 +91,7 @@ Die von Apple gespeicherten Daten können jederzeit mit Configuration Manager vo
 1.  Wählen Sie in der Configuration Manager-Konsole **Softwarebibliothek** > **Anwendungsverwaltung** > **License Information for Store Apps** (Lizenzinformationen für Store-Apps) aus.  
 
 3.  Wählen Sie zunächst die App aus, die Sie bereitstellen möchten. Klicken Sie anschließend auf der Registerkarte **Start** in der Gruppe **Erstellen** auf **Anwendung erstellen**.
-Die Configuration Manager-Anwendung, die erstellt wird, enthält die App „Windows Store für Unternehmen“. Sie können diese Anwendung wie jede andere Configuration Manager-Anwendung bereitstellen und überwachen.
+Die erstellte Configuration Manager-Anwendung enthält die von Ihnen erworbene iOS-App. Sie können diese Anwendung wie jede andere Configuration Manager-Anwendung bereitstellen und überwachen.
 
     > [!IMPORTANT]  
     > Wählen Sie als Bereitstellungszweck **Erforderlich** aus. Verfügbare Installationen werden derzeit nicht unterstützt.
@@ -111,6 +111,6 @@ Die Configuration Manager-Anwendung, die erstellt wird, enthält die App „Wind
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

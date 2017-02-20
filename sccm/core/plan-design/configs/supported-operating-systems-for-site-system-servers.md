@@ -2,7 +2,7 @@
 title: "Unterstützte Standortsystemserver | Microsoft-Dokumentation"
 description: "Erfahren Sie, welche Windows-Versionen Sie verwenden können, um einen System Center Configuration Manager-Standort oder eine entsprechende Standortsystemrolle zu hosten."
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 2/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bebbeebba76ab5cf0c517fcb00b7b6a516a08e3e
-ms.openlocfilehash: 12fe730d924979eec2ef55ea80a1fa90b7b47464
+ms.sourcegitcommit: 4688b4b12a7afa5fcfdc0e42f984271d98f10316
+ms.openlocfilehash: bb017e575e0318b73cc5ea4e27fd33b1e9c2a02a
 
 
 ---
@@ -37,7 +37,7 @@ Verwenden Sie die Informationen in diesem Thema mit den Informationen in den fol
 
 
 ## <a name="windows-server-2016-standard-and-datacenter"></a>Windows Server 2016: Standard und Datacenter
-Windows Server 2016 wird ab Configuration Manager Version 1606 mit dem Hotfixrollup von KB3186654 (oder der Baselineversion 1606, die im Oktober 2016 veröffentlicht wurde) unterstützt.
+Ab Version 1606 mit dem Hotfixrollup von KB3186654 (oder Baselineversion 1606, die im Oktober 2016 veröffentlicht wurde) wird dieses Betriebssystem für folgende Komponenten unterstützt:
 
 **Standortserver:**  
 
@@ -325,12 +325,12 @@ Windows Server 2016 wird ab Configuration Manager Version 1606 mit dem Hotfixrol
 
     -   Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
-## <a name="the-server-core-installation-of-windows-server-2012"></a>Die Server Core-Installation von Windows Server 2012  
- Zusätzlich zu den oben aufgeführten Betriebssystemen wird die Server Core-Installation von Windows Server 2012 mit folgenden Einschränkungen für die Verwendung als Verteilungspunkt unterstützt:  
 
--   Nur die 64-Bit-Version wird unterstützt.  
+## <a name="the-server-core-installation-of-windows-server-2016"></a>Die Server Core-Installation von Windows Server 2016
+Ab Version 1606 mit dem Hotfixrollup von KB3186654 (oder Baselineversion 1606, die im Oktober 2016 veröffentlicht wurde) wird die Verwendung dieses Betriebssystems als Verteilungspunkt mit folgenden Einschränkungen unterstützt:  
+  -   Nur die x64-Bit-Version wird unterstützt.
+  -   Verteilungspunkte unter diesem Betriebssystem unterstützen PXE oder Multicast nicht.  
 
--   Verteilungspunkte unter diesem Betriebssystem unterstützen PXE oder Multicast nicht.
 
 ## <a name="the-server-core-installation-of-windows-server-2012-r2"></a>Die Server Core-Installation von Windows Server 2012 R2  
  Zusätzlich zu den oben aufgeführten Betriebssystemen wird die Server Core-Installation von Windows Server 2012 R2 mit folgenden Einschränkungen für die Verwendung als Verteilungspunkt unterstützt:  
@@ -339,8 +339,15 @@ Windows Server 2016 wird ab Configuration Manager Version 1606 mit dem Hotfixrol
 
 -   Verteilungspunkte unter diesem Betriebssystem unterstützen PXE oder Multicast nicht.  
 
+## <a name="the-server-core-installation-of-windows-server-2012"></a>Die Server Core-Installation von Windows Server 2012  
+ Zusätzlich zu den oben aufgeführten Betriebssystemen wird die Server Core-Installation von Windows Server 2012 mit folgenden Einschränkungen für die Verwendung als Verteilungspunkt unterstützt:  
+
+-   Nur die 64-Bit-Version wird unterstützt.  
+
+-   Verteilungspunkte unter diesem Betriebssystem unterstützen PXE oder Multicast nicht.
 
 
-<!--HONumber=Jan17_HO1-->
+
+<!--HONumber=Feb17_HO1-->
 
 

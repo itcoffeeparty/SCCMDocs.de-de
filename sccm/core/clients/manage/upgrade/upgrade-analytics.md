@@ -2,10 +2,10 @@
 title: Upgrade Analytics | System Center Configuration Manager
 description: "Integrieren Sie Upgrade Analytics mit Configuration Manager. Greifen Sie auf Daten zur Upgradekompatibilität in Ihrer Administratorkonsole zu. Führen Sie Upgrades oder Wartungen von Geräten aus."
 keywords: 
-author: nbigman
-ms.author: nbigman
+author: brenduns
+ms.author: brenduns
 manager: angerobe
-ms.date: 11/23/2016
+ms.date: 12/3/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
 translationtype: Human Translation
-ms.sourcegitcommit: bf28164fc2594d2557db5626a6f52c32ad99a1fe
-ms.openlocfilehash: fa90fa0da348e7cca186ff8066c7a9fa98c57cf5
+ms.sourcegitcommit: 831d8a66c827d246069c7415cdce7a7c4bb95b33
+ms.openlocfilehash: 07747b86bad0d1ce6302521093fc3c4433c59325
 
 
 ---
@@ -73,13 +73,13 @@ Das Bereitstellungsskript von Upgrade Analytics bietet folgende Möglichkeiten:
 - Legt den kommerziellen ID-Schlüssel und die Schlüssel „CommercialDataOptIn“ + „RequestAllAppraiserVersions“ fest  
 - Stellt sicher, dass Computernutzer für Microsoft Daten bereitstellen können  
 - Überprüft, ob für den Computer ein Neustart aussteht   
-- Stellt sicher, dass die neueste Version des 10.0.x-Pakets der KB installiert ist (10.0.14348 oder nachfolgenden Versionen erforderlich)  
+- Stellt sicher, dass die neueste Version des 10.0.x-Pakets der KB installiert ist (10.0.14913 oder nachfolgenden Versionen erforderlich).  
 - Aktiviert den ausführlichen Modus zur Problembehandlung (sofern aktiviert)  
 - Initiiert die Sammlung von Telemetriedaten, die Microsoft für die Bewertung der Upgradebereitschaft Ihres Unternehmens benötigt  
 - Wenn aktiviert, wird der Fortschritt des Skripts in einem Cmd-Fenster angezeigt und macht dadurch Probleme sichtbar (Erfolg oder Fehler für jeden Schritt) bzw. schreibt in die Protokolldatei  
-  
+
 ### <a name="to-run-the-upgrade-analytics-deployment-script"></a>So führen Sie das Upgrade Analytics-Bereitstellungsskript aus  
-  
+
 1. Laden Sie das [Upgrade Analytics-Bereitstellungsskript](https://go.microsoft.com/fwlink/?LinkID=822966&clcid=0x409) herunter, und extrahieren Sie die Datei „UpgradeAnalytics.zip“. Die Dateien im Ordner **Diagnostics** sind nur dann erforderlich, wenn Sie das Skript im Problembehandlungsmodus ausführen möchten.  
 2. Bearbeiten Sie diese Parameter in „RunConfig.bat“:  
 - Speicherort für Protokollinformationen. Beispiel: % SystemDrive%\UADiagnostics. Sie können die Protokollinformationen auf einer Remotedateifreigabe oder in einem lokalen Verzeichnis speichern. Wenn das Skript die Protokolldatei für den angegebenen Pfad nicht erstellen kann, werden die Protokolldateien auf dem Laufwerk mit dem Windows-Verzeichnis erstellt.  
@@ -90,12 +90,12 @@ Das Bereitstellungsskript von Upgrade Analytics bietet folgende Möglichkeiten:
     - logMode = 2 Protokolle, nur in die Datei  
     - Setzen Sie für die Problembehandlung den Eintrag **IsVerboseLogging** auf **$true**, um Protokollinformationen zu generieren, die bei der Diagnose von Problemen hilfreich sein können. Der Eintrag **IsVerboseLogging** ist standardmäßig auf **$false** eingestellt. Vergewissern Sie sich, dass der Diagnoseordner im gleichen Verzeichnis installiert ist wie das Skript, das diesen Modus verwendet.  
     - Benachrichtigen Sie Benutzer, wenn sie ihren Computer neu starten müssen. Diese Eigenschaft ist standardmäßig nicht aktiviert.  
-  
+
 3. Nachdem Sie die Parameter in „RunConfig.bat“ bearbeitet haben, führen Sie das Skript als Administrator an.  
-  
-  
+
+
 ## <a name="view-microsoft-upgrade-analytics-properties-in-configuration-manager"></a>Anzeigen der Eigenschaften von Microsoft Upgrade Analytics in Configuration Manager  
-  
+
 1.  Navigieren Sie in der Configuration Manager-Konsole zu **Cloud Services**, und wählen Sie **OMS Connector** (OMS-Connector) aus, um die Seite **OMS Connection Properties** (OMS-Verbindungseigenschaften) zu öffnen.  
 
 2.  Auf dieser Seite befinden sich zwei Registerkarten:
@@ -113,6 +113,6 @@ Nachdem Sie Upgrade Analytics mit Configuration Manager integriert haben, könne
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

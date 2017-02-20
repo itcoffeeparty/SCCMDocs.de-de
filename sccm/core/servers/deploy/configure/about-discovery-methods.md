@@ -1,7 +1,7 @@
 ---
 title: Ermittlungsmethoden | Microsoft-Dokumentation
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,15 +15,15 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 223ebc3009b33c43818636a9e19b9b482619550b
+ms.sourcegitcommit: 81d7516b814d2db74d4d857871071c8911755754
+ms.openlocfilehash: 6e53f501281e31f2b7df54b9740eac970f108257
 
 ---
 # <a name="about-discovery-methods-for-system-center-configuration-manager"></a>About discovery methods for System Center Configuration Manager (Informationen zu Ermittlungsmethoden in System Center Configuration Manager)
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Jede System Center Configuration Manager-Ermittlungsmethode kann andere Geräte im Netzwerk oder Geräte und Benutzer aus Active Directory suchen. Um effizient eine Ermittlungsmethode zu verwenden, sollten Sie die verfügbaren Konfigurationen und Einschränkungen verstehen.  
+Mit System Center Configuration Manager-Ermittlungsmethoden können Sie andere Geräte im Netzwerk oder Geräte und Benutzer aus Active Directory suchen. Um effizient eine Ermittlungsmethode zu verwenden, sollten Sie die verfügbaren Konfigurationen und Einschränkungen kennen.  
 
 ##  <a name="a-namebkmkaboutforesta-active-directory-forest-discovery"></a><a name="bkmk_aboutForest"></a> Active Directory-Gesamtstrukturermittlung  
  **Konfigurierbar:** Ja  
@@ -38,15 +38,15 @@ Jede System Center Configuration Manager-Ermittlungsmethode kann andere Geräte 
 
 Im Unterschied zu anderen Active Directory-Ermittlungsmethoden werden von der Active Directory-Gesamtstrukturermittlung keine Ressourcen, die Sie verwalten können, erkannt. Stattdessen erkennt diese Methode Netzwerkorte, die in Active Directory konfiguriert sind, und kann diese Orte zur hierarchieweiten Verwendung in Grenzen konvertieren.  
 
-Wenn diese Methode ausgeführt wird, sucht sie in der lokalen Active Directory-Gesamtstruktur, allen vertrauenswürdigen Gesamtstrukturen und alle weiteren von Ihnen im Knoten **Active Directory-Gesamtstrukturen** der Configuration Manager-Konsole konfigurierten Gesamtstrukturen.  
+Wenn diese Methode ausgeführt wird, sucht sie in der lokalen Active Directory-Gesamtstruktur, in allen vertrauenswürdigen Gesamtstrukturen und in allen weiteren Gesamtstrukturen, die Sie im Knoten **Active Directory-Gesamtstrukturen** der Configuration Manager-Konsole konfigurieren.  
 
-Verwenden Sie die Active Directory-Gesamtstrukturermittlung für:  
+Verwenden Sie die Active Directory-Gesamtstrukturermittlung zu folgenden Zwecken:  
 
--   Die Ermittlung von Active Directory-Standorten und Subnetzen, und das anschließende Erstellen von Configuration Manager-Grenzen basierend auf diesen Netzwerkorten  
+-   Ermitteln von Active Directory-Standorten und -Subnetzen und anschließendes Erstellen von Configuration Manager-Grenzen basierend auf diesen Netzwerkorten  
 
--   Das Identifizieren von Supernetzen, die einem Active Directory-Standort zugewiesen sind, und das Konvertieren des Supernetzes in eine IP-Adressbereichsgrenze  
+-   Identifizieren von Supernetzen, die einem Active Directory-Standort zugewiesen sind, und Konvertieren der einzelnen Supernetze in eine IP-Adressbereichsgrenze  
 
--   Veröffentlichen in den Active Directory-Domänendiensten einer Gesamtstruktur, sofern die Veröffentlichung in dieser Gesamtstruktur aktiviert ist und dem angegebenen Active Directory-Gesamtstrukturkonto entsprechende Berechtigungen für diese Gesamtstruktur erteilt wurden  
+-   Veröffentlichen in Active Directory Domain Services (AD DS) in einer Gesamtstruktur, sofern die Veröffentlichung in dieser Gesamtstruktur aktiviert ist und dem angegebenen Active Directory-Gesamtstrukturkonto entsprechende Berechtigungen für diese Gesamtstruktur erteilt wurden  
 
 Sie können die Active Directory-Gesamtstrukturermittlung in der Configuration Manager-Konsole im Arbeitsbereich **Verwaltung** unter **Hierarchiekonfiguration** in den folgenden Knoten verwalten:  
 
@@ -68,7 +68,7 @@ Zum Konfigurieren aller Standorte in einer Hierarchie für die Veröffentlichung
 >  Die Veröffentlichung in Active Directory durch sekundäre Standorte erfolgt immer über das Computerkonto des sekundären Standortservers. Wenn Sie die Veröffentlichung durch sekundäre Standorte in Active Directory wünschen, stellen Sie sicher, dass das Computerkonto des sekundären Standortservers zur Veröffentlichung in Active Directory berechtigt ist. In einer nicht vertrauenswürdigen Gesamtstruktur können von einem sekundären Standort keine Daten veröffentlicht werden.  
 
 > [!CAUTION]  
->  Wenn Sie die Option zum Veröffentlichen eines Standorts in einer Active Directory-Gesamtstruktur deaktivieren, werden alle bereits veröffentlichten Informationen dieses Standorts, einschließlich der verfügbaren Standortsystemrollen, aus dieser Active Directory-Gesamtstruktur entfernt.  
+>  Wenn Sie die Option zum Veröffentlichen eines Standorts in einer Active Directory-Gesamtstruktur deaktivieren, werden alle bereits veröffentlichten Informationen dieses Standorts, einschließlich der verfügbaren Standortsystemrollen, aus Active Directory entfernt.  
 
 Aktionen im Rahmen der Active Directory-Gesamtstrukturermittlung werden in den folgenden Protokollen aufgezeichnet:  
 
@@ -92,7 +92,7 @@ Weitere Informationen zum Konfigurieren dieser Ermittlungsmethode finden Sie unt
 > [!TIP]  
 >  Neben den Informationen in diesem Abschnitt finden Sie weitere unter [Allgemeine Features von Active Directory-Gruppe, System und Ermittlung](#bkmk_shared).  
 
-Verwenden Sie diese Methode, um Active Directory Domain Services (AD DS) zur Identifizierung zu suchen:  
+Verwenden Sie diese Methode zum Durchsuchen von Active Directory Domain Services, um Folgendes zu identifizieren:  
 
 -   Lokale, globale und universelle Sicherheitsgruppen  
 
@@ -100,9 +100,9 @@ Verwenden Sie diese Methode, um Active Directory Domain Services (AD DS) zur Ide
 
 -   Eingeschränkte Informationen über die Mitgliedscomputer und Benutzer einer Gruppe, auch wenn diese Computer und Benutzer zuvor nicht von einer anderen Ermittlungsmethode ermittelt wurden  
 
-Mithilfe dieser Ermittlungsmethode lassen sich Gruppen sowie Gruppenbeziehungen der Mitglieder von Gruppen identifizieren. Standardmäßig werden nur Sicherheitsgruppen ermittelt. Sie können auch die Mitgliedschaften in Verteilergruppen ermitteln, indem Sie im Dialogfeld Eigenschaften der Active Directory-Gruppenermittlung auf der Registerkarte **Option** das Kontrollkästchen für die Option **Mitgliedschaft von Verteilergruppen ermitteln** aktivieren.  
+Mithilfe dieser Ermittlungsmethode lassen sich Gruppen sowie Gruppenbeziehungen der Mitglieder von Gruppen identifizieren. Standardmäßig werden nur Sicherheitsgruppen ermittelt. Sie können auch die Mitgliedschaften in Verteilergruppen ermitteln, indem Sie im Dialogfeld **Eigenschaften von Active Directory-Gruppenermittlung** auf der Registerkarte **Option** das Kontrollkästchen für die Option **Mitgliedschaft von Verteilergruppen ermitteln** aktivieren.  
 
-Die Active Directory-Gruppenermittlung unterstützt nicht die erweiterten Active Directory-Attribute, die mithilfe der Active Directory-Systemermittlung oder der Active Directory-Benutzerermittlung identifiziert werden können. Da diese Ermittlungsmethode nicht für die Ermittlung von Computer- und Benutzerressourcen optimiert ist, sollten Sie sie ausführen, nachdem Sie die Active Directory-Systemermittlung und die Active Directory-Benutzerermittlung ausgeführt haben. Dies liegt daran, dass von dieser Methode ein vollständiger DDR für Gruppen erstellt wird, während für Computer, die Mitglieder von Gruppen sind, nur ein eingeschränkter DDR erstellt wird.  
+Die Active Directory-Gruppenermittlung unterstützt nicht die erweiterten Active Directory-Attribute, die mithilfe der Active Directory-Systemermittlung oder der Active Directory-Benutzerermittlung identifiziert werden können. Da diese Ermittlungsmethode nicht für die Ermittlung von Computer- und Benutzerressourcen optimiert ist, sollten Sie sie ausführen, nachdem Sie die Active Directory-Systemermittlung und die Active Directory-Benutzerermittlung ausgeführt haben. Dies liegt daran, dass von dieser Methode ein vollständiger Discovery Data Record (DDR) für Gruppen erstellt wird, während für Computer und Benutzer, die Mitglieder von Gruppen sind, nur ein eingeschränkter DDR erstellt wird.  
 
 Sie können die folgenden Ermittlungsbereiche konfigurieren; von diesen wird gesteuert, auf welche Art von dieser Methode nach Informationen gesucht wird:  
 
@@ -111,7 +111,7 @@ Sie können die folgenden Ermittlungsbereiche konfigurieren; von diesen wird ges
 -   **Gruppen**: Verwenden Sie Gruppen, wenn Sie eine oder mehrere bestimmte Active Directory-Gruppen durchsuchen möchten. Sie können die **Active Directory-Domäne** zum Verwenden von Standarddomäne und Standardgesamtstruktur konfigurieren, oder Sie können die Suche auf einen einzelnen Domänencontroller beschränken. Zusätzlich können Sie eine oder mehrere zu durchsuchende Gruppen angeben. Wenn Sie nicht mindestens eine Gruppe angeben, werden alle Gruppen, die am angegebenen ** ** Active Directory-Domänenspeicherort gefunden werden, durchsucht.  
 
 > [!CAUTION]  
->  Wenn Sie einen Ermittlungsbereich konfigurieren, wählen Sie nur die Gruppen aus, die ermittelt werden müssen. Dies ist notwendig, weil von der Active Directory-Gruppenermittlung versucht wird, jedes Mitglied in allen Gruppen innerhalb des Ermittlungsbereichs zu ermitteln. Bei der Ermittlung großer Gruppen kann es zu einer übermäßigen Beanspruchung von Bandbreite und Active Directory-Ressourcen kommen.  
+>  Wenn Sie einen Ermittlungsbereich konfigurieren, wählen Sie nur die Gruppen aus, die ermittelt werden müssen. Dies ist notwendig, weil die Active Directory-Gruppenermittlung versucht, jedes Mitglied in allen Gruppen innerhalb des Ermittlungsbereichs zu ermitteln. Bei der Ermittlung großer Gruppen kann es zu einer übermäßigen Beanspruchung von Bandbreite und Active Directory-Ressourcen kommen.  
 
 > [!NOTE]  
 >  Je nachdem, was Sie ermitteln möchten, müssen Sie entweder die Active Directory-Systemerkennung oder die Active Directory-Benutzererkennung ausführen, um Sammlungen auf Basis von erweiterten Active Directory-Attributen zu erstellen und um zu gewährleisten, dass die Ermittlungsergebnisse für Computer und Benutzer korrekt sind.  
@@ -134,7 +134,7 @@ Weitere Informationen zum Konfigurieren dieser Ermittlungsmethode finden Sie unt
 > [!TIP]  
 >  Neben den Informationen in diesem Abschnitt finden Sie weitere unter [Allgemeine Features von Active Directory-Gruppe, System und Ermittlung](#bkmk_shared).  
 
-Verwenden Sie diese Ermittlungsmethode, um nach den angegebenen Active Directory Domain Services.Speicherorten (AD DS) für Computerressourcen zu suchen, die zum Erstellen von Sammlungen und Abfragen verwendet werden können. Sie können auch Configuration Manager-Client für ein ermitteltes Gerät mithilfe der Clientpushinstallation installieren.  
+Verwenden Sie diese Ermittlungsmethode, um nach den angegebenen Active Directory Domain Services-Speicherorten für Computerressourcen zu suchen, die zum Erstellen von Sammlungen und Abfragen verwendet werden können. Sie können auch Configuration Manager-Client für ein ermitteltes Gerät mithilfe der Clientpushinstallation installieren.  
 
 Von dieser Methode werden standardmäßig Basisinformationen über den Computer einschließlich der folgenden Informationen ermittelt:  
 
@@ -146,13 +146,13 @@ Von dieser Methode werden standardmäßig Basisinformationen über den Computer 
 
 -   IP-Adresse  
 
--   Active Directory-Standort  
+-   Active Directory-Standort  
 
 -   Zeitstempel der letzten Anmeldung  
 
-Damit erfolgreich ein Discovery Data Record (DDR) für einen Computer erstellt werden kann, muss das Computerkonto von der Active Directory-Systemermittlung identifiziert werden, und der Computername muss erfolgreich in eine IP-Adresse aufgelöst werden.  
+Damit erfolgreich ein DDR für einen Computer erstellt werden kann, muss das Computerkonto von der Active Directory-Systemermittlung identifiziert werden, und der Computername muss erfolgreich in eine IP-Adresse aufgelöst werden.  
 
-Sie können im Dialogfeld **Eigenschaften der Active Directory-Systemermittlung** auf der Registerkarte **Active Directory-Attribute** die Standardliste von Objektattributen anzeigen, welche von der Active Directory-Systemermittlung zurückgegeben werden, und Sie können zusätzliche Attribute konfigurieren, die ermittelt werden sollen.  
+Im Dialogfeld **Eigenschaften von Active Directory-Systemermittlung** können Sie auf der Registerkarte **Active Directory-Attribute** die vollständige Liste der Standardobjektattribute anzeigen, die von der Active Directory-Systemermittlung zurückgegeben wurden. Sie können die Methode auch zum Ermitteln zusätzlicher (erweiterter) Attribute konfigurieren.  
 
 Die Aktionen der Active Directory-Systemermittlung werden in der Datei **adsysdis.log** im Ordner **&lt;InstallationPath\>\LOGS** auf dem Standortserver aufgezeichnet.  
 
@@ -172,7 +172,7 @@ Weitere Informationen zum Konfigurieren dieser Ermittlungsmethode finden Sie unt
 > [!TIP]  
 >  Neben den Informationen in diesem Abschnitt finden Sie weitere unter [Allgemeine Features von Active Directory-Gruppe, System und Ermittlung](#bkmk_shared).  
 
-Verwenden Sie diese Ermittlungsmethode zum Suchen von Active Directory Domain Services (AD DS) zum Identifizieren von Benutzerkonten und zugeordneter Attribute.  Standardmäßig ermittelt diese Methode grundlegende Informationen über das Benutzerkonto, einschließlich der folgenden:  
+Verwenden Sie diese Ermittlungsmethode zum Durchsuchen von Active Directory Domain Services, um Benutzerkonten und zugeordnete Attribute zu identifizieren. Standardmäßig ermittelt diese Methode grundlegende Informationen über das Benutzerkonto, einschließlich der folgenden:  
 
 -   Benutzername  
 
@@ -182,7 +182,7 @@ Verwenden Sie diese Ermittlungsmethode zum Suchen von Active Directory Domain Se
 
 -   Active Directory-Containernamen  
 
-Sie können im Dialogfeld **Eigenschaften der Active Directory-Benutzerermittlung** auf der Registerkarte **Active Directory-Attribute** die Standardliste von Objektattributen anzeigen, welche von der Active Directory-Benutzerermittlung zurückgegeben werden, und Sie können zusätzliche Attribute konfigurieren, die ermittelt werden sollen.  
+Im Dialogfeld **Eigenschaften von Active Directory-Benutzerermittlung** können Sie auf der Registerkarte **Active Directory-Attribute** die vollständige Standardliste der Objektattribute anzeigen, die von der Active Directory-Benutzerermittlung zurückgegeben wurden. Sie können die Methode auch zum Ermitteln zusätzlicher (erweiterter) Attribute konfigurieren.
 
 Die Aktionen der Active Directory-Benutzerermittlung werden in der Datei **adusrdis.log** im Ordner **&lt;InstallationPath\>\LOGS** auf dem Standortserver aufgezeichnet.  
 
@@ -197,11 +197,11 @@ Weitere Informationen zum Konfigurieren dieser Ermittlungsmethode finden Sie unt
 
 -   **Computerkonto** des Standortservers  
 
-Die Frequenzermittlung unterscheidet sich von anderen Configuration Manager-Ermittlungsmethoden. Sie ist standardmäßig aktiviert und wird auf jedem Computerclient (statt auf einem Standortserver) ausgeführt, um einen Discovery Data Record (DDR) zu erstellen. Für mobile Geräteclients wird dieser DDR von dem Verwaltungspunkt erstellt, der vom mobilen Geräteclient verwendet wird.  Es wird empfohlen, die Frequenzermittlung nicht zu deaktivieren, um den Datenbankdatensatz von Configuration Manager-Clients aufrechtzuerhalten.  Zusätzlich zum Erhalt des Datenbankdatensatzes kann bei dieser Methode die Ermittlung eines Computers als neuer Ressourceneintrag erzwungen oder der Datenbankdatensatz eines aus der Datenbank gelöschten Computers neu aufgefüllt werden.  
+Die Frequenzermittlung unterscheidet sich von anderen Configuration Manager-Ermittlungsmethoden. Sie ist standardmäßig aktiviert und wird auf jedem Computerclient (statt auf einem Standortserver) ausgeführt, um einen DDR zu erstellen. Für mobile Geräteclients wird dieser DDR von dem Verwaltungspunkt erstellt, der vom mobilen Geräteclient verwendet wird. Es wird empfohlen, die Frequenzermittlung nicht zu deaktivieren, um den Datenbankdatensatz von Configuration Manager-Clients aufrechtzuerhalten. Zusätzlich zum Erhalt des Datenbankdatensatzes kann bei dieser Methode die Ermittlung eines Computers als neuer Ressourceneintrag erzwungen oder der Datenbankdatensatz eines aus der Datenbank gelöschten Computers neu aufgefüllt werden.  
 
 Die Frequenzermittlung wird entweder nach einem für alle Clients in der Hierarchie festgelegten Zeitplan ausgeführt oder manuell für einen bestimmten Client aufgerufen. Zur manuellen Ausführung muss im Configuration Manager-Programm des betreffenden Clients auf der Registerkarte **Aktion** der **Ermittlungsdaten-Sammlungszyklus** ausgeführt werden. Laut Standardzeitplan wird die Frequenzermittlung alle 7 Tage ausgeführt. Achten Sie bei einer Änderung des Frequenzermittlungsintervalls darauf, dass die Frequenzermittlung häufiger als der Standortwartungstask **Veraltete Ermittlungsdaten löschen**ausgeführt wird. Von diesem Task werden inaktive Clientdatensätze aus der Standortdatenbank gelöscht. Sie können den Task **Veraltete Ermittlungsdaten löschen** nur für primäre Standorte konfigurieren.  
 
-Bei der Frequenzermittlung wird ein DDR erstellt, der die aktuellen Informationen des Clients enthält. Der Client kopiert anschließend diese kleine Datei (ca. 1 kB Größe) an einen Verwaltungspunkt, damit sie von einem primären Standort verarbeitet werden kann.  Die Datei enthält die folgenden Informationen:  
+Bei der Frequenzermittlung wird ein DDR erstellt, der die aktuellen Informationen des Clients enthält. Der Client kopiert anschließend diese kleine Datei (ca. 1 KB) an einen Verwaltungspunkt, damit sie von einem primären Standort verarbeitet werden kann. Die Datei enthält die folgenden Informationen:  
 
 -   Netzwerkadresse  
 
@@ -235,7 +235,7 @@ Weitere Informationen zum Konfigurieren dieser Ermittlungsmethode finden Sie unt
 
 Verwenden Sie diese Methode zum Ermitteln der Topologie Ihres Netzwerks und von Geräten in Ihrem Netzwerk, die über eine IP-Adresse verfügen. Bei der Netzwerkermittlung wird ein Netzwerk nach IP-fähigen Ressourcen durchsucht. Dazu werden Server abgefragt, auf denen eine Microsoft-Implementierung von DHCP, ARP-Caches (Address Resolution Protocol) in Routern, SNMP-fähige Geräte und Active Directory-Domänen ausgeführt werden.  
 
-Falls Sie die Netzwerkermittlung verwenden möchten, müssen Sie die auszuführende **Ermittlungsebene** festlegen. Sie müssen außerdem mindestens einen Ermittlungsmechanismus konfigurieren, mit dessen Hilfe von der Netzwerkermittlung eine Abfrage nach Netzwerksegmenten oder -geräten ausgeführt werden kann. Außerdem können Sie Einstellungen festlegen, die die Steuerung von Ermittlungsaktionen im Netzwerk erleichtern. Abschließend definieren Sie mindestens einen Zeitplan für die Ausführung der Netzwerkermittlung.  
+Falls Sie die Netzwerkermittlung verwenden möchten, müssen Sie die auszuführende *Ermittlungsebene* festlegen. Sie müssen außerdem mindestens einen Ermittlungsmechanismus konfigurieren, mit dessen Hilfe von der Netzwerkermittlung eine Abfrage nach Netzwerksegmenten oder -geräten ausgeführt werden kann. Außerdem können Sie Einstellungen festlegen, die die Steuerung von Ermittlungsaktionen im Netzwerk erleichtern. Abschließend definieren Sie mindestens einen Zeitplan für die Ausführung der Netzwerkermittlung.  
 
 Die erfolgreiche Ermittlung einer Ressource mit dieser Methode setzt voraus, dass die IP-Adresse und die Subnetzmaske der Ressource von der Netzwerkermittlung identifiziert werden. Die folgenden Methoden werden verwendet, um die Subnetzmaske eines Objekts zu identifizieren:  
 
@@ -243,9 +243,9 @@ Die erfolgreiche Ermittlung einer Ressource mit dieser Methode setzt voraus, das
 
 -   **DHCP:** Bei der Netzwerkermittlung wird jeder angegebene DHCP-Server abgefragt, um die Geräte zu ermitteln, für die eine Lease des DHCP-Servers verfügbar ist. Bei der Netzwerkermittlung werden nur DHCP-Server unterstützt, auf denen die Microsoft-Implementierung von DHCP ausgeführt wird.  
 
--   **SNMP-Gerät:** Bei der Netzwerkermittlung kann ein SNMP-Gerät direkt abgefragt werden. Damit ein Gerät bei der Netzwerkermittlung abgefragt werden kann, muss auf dem Gerät ein lokaler SNMP-Agent installiert sein. Sie müssen die Netzwerkermittlung zur Verwendung des Communitynamens konfigurieren, der vom SNMP-Agent verwendet wird.  
+-   **SNMP-Gerät:** Bei der Netzwerkermittlung kann ein SNMP-Gerät direkt abgefragt werden. Damit ein Gerät bei der Netzwerkermittlung abgefragt werden kann, muss auf dem Gerät ein lokaler SNMP-Agent installiert sein. Sie müssen die Netzwerkermittlung für die Verwendung des Communitynamens konfigurieren, der vom SNMP-Agent verwendet wird.  
 
-Wenn bei der Ermittlung ein IP-fähiges Objekt identifiziert wird und die Subnetzmaske des Objekts bestimmt werden kann, wird für dieses Objekt ein Discovery Data Record (DDR) erstellt. Da unterschiedliche Gerätetypen eine Verbindung mit dem Netzwerk herstellen können, werden bei der Netzwerkermittlung gegebenenfalls Ressourcen ermittelt, von denen die Configuration Manager-Clientsoftware nicht unterstützt werden kann. Zu den Geräten, die ermittelt, aber nicht verwaltet werden können, gehören beispielsweise Drucker und Router.  
+Wenn bei der Ermittlung ein IP-fähiges Objekt identifiziert wird und die Subnetzmaske des Objekts bestimmt werden kann, wird für dieses Objekt ein DDR erstellt. Da unterschiedliche Gerätetypen eine Verbindung mit dem Netzwerk herstellen können, werden bei der Netzwerkermittlung gegebenenfalls Ressourcen ermittelt, von denen die Configuration Manager-Clientsoftware nicht unterstützt werden kann. Zu den Geräten, die ermittelt, aber nicht verwaltet werden können, gehören beispielsweise Drucker und Router.  
 
 Von der Netzwerkermittlung können mehrere Attribute als Teil des von ihr erstellten Ermittlungsdatensatzes zurückgegeben werden. Dazu gehören:  
 
@@ -261,9 +261,9 @@ Von der Netzwerkermittlung können mehrere Attribute als Teil des von ihr erstel
 
 -   MAC-Adressen  
 
-Die Netzwerkermittlungsaktivität wird in der Datei **Netdisc.log** im Ordner **&lt;InstallationPath\>\Logs** auf dem Standortserver, auf dem die Ermittlung ausgeführt wird, aufgezeichnet.  
+Die Netzwerkermittlungsaktivität wird in der Datei **Netdisc.log** im Ordner *&lt;InstallationPath\>\Logs* auf dem Standortserver aufgezeichnet, auf dem die Ermittlung ausgeführt wird.  
 
- Weitere Informationen zum Konfigurieren dieser Ermittlungsmethode finden Sie unter [Konfigurieren der Active Directory-Ermittlung in Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
+ Weitere Informationen zum Konfigurieren dieser Ermittlungsmethode finden Sie unter [Configure discovery methods for System Center Configuration Manager (Konfigurieren der Active Directory-Ermittlung in Configuration Manager)](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
 
 > [!NOTE]  
 >  Durch komplexe Netzwerke und Verbindungen mit geringer Bandbreite kann die Ausführung der Netzwerkermittlung beeinträchtigt werden und ein starker Netzwerkdatenverkehr entstehen. Es wird empfohlen, die Netzwerkermittlung nur auszuführen, wenn die zu ermittelnden Ressourcen von den anderen Ermittlungsmethoden nicht gefunden werden. Die Netzwerkermittlung bietet sich beispielsweise an, wenn Sie Arbeitsgruppencomputer ermitteln müssen. Arbeitsgruppencomputer werden von anderen Ermittlungsmethoden nicht erkannt.  
@@ -279,13 +279,13 @@ Beim Konfigurieren der Netzwerkermittlung stehen drei Ermittlungsebenen zur Ausw
 
  Je höher die Stufe, desto stärker die Aktivität der Netzwerkermittlung und die Auslastung der Netzwerkbandbreite. Es empfiehlt sich, die Folgen für den Netzwerkdatenverkehr sorgfältig zu erwägen, bevor Sie alle Optionen der Netzwerkermittlung aktivieren.  
 
- Beispielsweise wäre es sinnvoll, sich beim ersten Einsatz der Netzwerkermittlung mit der Topologieebene zu begnügen und nur die Netzwerkinfrastruktur zu ermitteln. Anschließend könnten Sie die Netzwerkermittlung neu konfigurieren, damit auch Objekte und deren Gerätebetriebssysteme ermittelt werden. Sie könnten auch Einstellungen festlegen, durch die die Netzwerkermittlung auf bestimmte Netzwerksegmente beschränkt wird und nur Objekte an den erforderlichen Netzwerkorten ermittelt werden. Auf diese Weise können Sie unnötigen Netzwerkdatenverkehr und die Ermittlung von Objekten vermeiden, die sich auf Edgeroutern oder außerhalb des Netzwerks befinden.  
+ Beispielsweise wäre es sinnvoll, sich beim ersten Einsatz der Netzwerkermittlung mit der Topologieebene zu begnügen und nur die Netzwerkinfrastruktur zu ermitteln. Anschließend können Sie die Netzwerkermittlung neu konfigurieren, damit auch Objekte und deren Gerätebetriebssysteme ermittelt werden. Sie können auch Einstellungen konfigurieren, durch die die Netzwerkermittlung auf einen bestimmten Bereich von Netzwerksegmenten beschränkt wird. Auf diese Weise können Sie Objekte an benötigten Netzwerkadressen ermitteln und unnötigen Netzwerkdatenverkehr vermeiden. Zudem können Sie Objekte von Edgeroutern oder von Standorten außerhalb Ihres Netzwerks aus ermitteln.  
 
 ###  <a name="a-namebkmknetdiscoptionsa-network-discovery-options"></a><a name="BKMK_NetDiscOptions"></a> Optionen für die Netzwerkermittlung  
 Damit bei der Netzwerkermittlung IP-fähige Geräte gesucht werden können, müssen Sie durch Konfigurieren mindestens einer der folgenden Optionen angeben, wie Geräte abgefragt werden sollen.  
 
 > [!NOTE]  
->  Die Netzwerkermittlung wird im Kontext des Computerkontos auf dem Standortserver, auf dem die Ermittlung ausgeführt wird, ausgeführt. Falls das Computerkonto keine Berechtigungen für eine nicht vertrauenswürdige Domäne hat, kann es vorkommen, dass weder von der Serverkonfiguration „Domäne“, noch von der Konfiguration „DHCP“ Ressourcen ermittelt werden können.  
+>  Die Netzwerkermittlung wird im Kontext des Computerkontos auf dem Standortserver, auf dem die Ermittlung ausgeführt wird, ausgeführt. Falls das Computerkonto keine Berechtigungen für eine nicht vertrauenswürdige Domäne hat, kann es vorkommen, dass von den Konfigurationen der Domäne und des DHCP-Servers keine Ressourcen ermittelt werden können.  
 
 **DHCP:**  
 
@@ -334,14 +334,14 @@ Beim Abfragen eines SNMP-Geräts am Rand des Netzwerks können von der Netzwerke
 
 **Subnetze:**  
 
-Konfigurieren Sie die Subnetze, die bei der Netzwerkermittlung abgefragt werden, sofern die Ermittlungsoptionen SNMP-Geräte und DHCP ausgewählt wurden. Von diesen beiden Optionen werden nur die aktivierten Subnetze durchsucht.  
+Konfigurieren Sie die Subnetze, die bei der Netzwerkermittlung abgefragt werden, sofern die Ermittlungsoptionen SNMP-Geräte und DHCP ausgewählt wurden. Bei diesen beiden Optionen werden nur die aktivierten Subnetze durchsucht.  
 
-Beispielsweise können von einer DHCP-Anforderung Geräte von Orten im gesamten Netzwerk zurückgegeben werden. Falls Sie nur Geräte in einem bestimmten Subnetz ermitteln möchten, müssen Sie im Dialogfeld **Eigenschaften von Netzwerkermittlung** auf der Registerkarte **Subnetze** dieses Subnetz angeben und aktivieren. Wenn Sie Subnetze angeben und aktivieren, beschränken Sie künftige DHCP- und SNMP-Ermittlungsvorgänge auf diese Subnetze.  
+Beispielsweise können von einer DHCP-Anforderung Geräte von Orten im gesamten Netzwerk zurückgegeben werden. Falls Sie nur Geräte in einem bestimmten Subnetz ermitteln möchten, müssen Sie im Dialogfeld **Eigenschaften von Netzwerkermittlung** auf der Registerkarte **Subnetze** das jeweilige Subnetz angeben und aktivieren. Wenn Sie Subnetze angeben und aktivieren, beschränken Sie künftige DHCP- und SNMP-Ermittlungsaufgaben auf diese Subnetze.  
 
 > [!NOTE]  
->  Die Objekte, die von der Ermittlungsoption Domänen ermittelt werden, werden durch die Subnetzkonfigurationen nicht beschränkt.  
+>  Die Objekte, die von der Ermittlungsoption **Domänen** ermittelt werden, werden durch die Subnetzkonfigurationen nicht beschränkt.  
 
-**SNMP-Community-Namen:**  
+**SNMP-Communitynamen:**  
 
 Damit ein SNMP-Gerät erfolgreich abgefragt werden kann, müssen Sie beim Konfigurieren der Netzwerkermittlung den Communitynamen des Geräts angeben. Wird die Netzwerkermittlung nicht anhand des Communitynamens des SNMP-Geräts konfiguriert, wird die Abfrage vom Gerät abgelehnt.  
 
@@ -349,27 +349,27 @@ Damit ein SNMP-Gerät erfolgreich abgefragt werden kann, müssen Sie beim Konfig
 
 Wenn Sie die maximale Anzahl der Routerhops festlegen, schränken Sie die Anzahl der Netzwerksegmente und Router ein, die von der Netzwerkermittlung mithilfe von SNMP abgefragt werden kann.  
 
--   Durch die konfigurierte Hopanzahl wird die Anzahl der zusätzlichen Geräte und Netzwerksegmente eingeschränkt, die bei der Netzwerkermittlung abgefragt werden können.  
+Durch die konfigurierte Hopanzahl wird die Anzahl der zusätzlichen Geräte und Netzwerksegmente eingeschränkt, die bei der Netzwerkermittlung abgefragt werden können.  
 
- Beispielsweise wird bei einer auf die Topologie beschränkten Ermittlung mit **0** (null) Routerhops das Subnetz ermittelt, in dem sich der ursprüngliche Server befindet, und alle Router in diesem Subnetz werden mit eingeschlossen.  
+Beispielsweise wird bei einer auf die Topologie beschränkten Ermittlung mit **0** (null) Routerhops das Subnetz ermittelt, in dem sich der ursprüngliche Server befindet. Alle Router in diesem Subnetz werden mit eingeschlossen.  
 
-Im folgenden Diagramm ist dargestellt, was bei einer auf die Topologie beschränkten Netzwerkermittlung gefunden wird, wenn sie auf Server 1 ausgeführt wird und 0 Routerhops angegeben sind: Subnetz D und Router 1.  
+Im folgenden Diagramm ist dargestellt, was bei einer auf die Topologie beschränkten Abfrage der Netzwerkermittlung gefunden wird, wenn sie auf Server 1 ausgeführt wird und 0 Routerhops angegeben sind: Subnetz D und Router 1.  
 
- ![Bild der Ermittlung mit 0 (null) Routerjumps](media/Disc-0.gif)  
+ ![Bild der Ermittlung mit&0; (null) Routerjumps](media/Disc-0.gif)  
 
- Im folgenden Diagramm ist dargestellt, was bei einer Topologie- und Clientnetzwerkermittlung gefunden wird, wenn sie auf Server 1 ausgeführt wird und 0 Routerhops angegeben sind: Subnetz D, Router 1 und alle potenziellen Clients in Subnetz D.  
+ Im folgenden Diagramm ist dargestellt, was bei einer Abfrage der Topologie- und Clientnetzwerkermittlung gefunden wird, wenn sie auf Server 1 ausgeführt wird und 0 Routerhops angegeben sind: Subnetz D, Router 1 und alle potenziellen Clients in Subnetz D.  
 
- ![Bild der Ermittlung mit 1 (einem) Routerjump](media/Disc-1.gif)  
+ ![Bild der Ermittlung mit&1; (einem) Routerjump](media/Disc-1.gif)  
 
  Damit Sie besser verstehen, wie Routerhops die Anzahl der ermittelten Netzwerkressourcen erhöhen können, stellen Sie sich folgendes Netzwerk vor:  
 
- ![Bild der Ermittlung mit 2 (zwei) Routerjumps](media/Disc-2.gif)  
+ ![Bild der Ermittlung mit&2; (zwei) Routerjumps](media/Disc-2.gif)  
 
  Beim Ausführen einer nur auf die Topologie bezogenen Netzwerkermittlung auf Server 1 mit einem einzigen Routerhop wird Folgendes ermittelt:  
 
--   Router 1 und Subnetz 10.1.10.0 (nach 0 Hops gefunden).  
+-   Router 1 und Subnetz 10.1.10.0 (nach 0 Hops gefunden)  
 
--   Subnetze 10.1.20.0 und 10.1.30.0, Subnetz A und Router 2 (auf dem ersten Hop gefunden).  
+-   Subnetze 10.1.20.0 und 10.1.30.0, Subnetz A und Router 2 (auf dem ersten Hop gefunden)  
 
 > [!WARNING]  
 >  Durch jede Erhöhung der Anzahl von Routerhops kann die Anzahl der ermittelten Ressourcen deutlich erhöht und die von der Netzwerkermittlung verwendete Netzwerkbandbreite gesteigert werden.  
@@ -377,9 +377,9 @@ Im folgenden Diagramm ist dargestellt, was bei einer auf die Topologie beschrän
 ##  <a name="a-namebkmkaboutservera-server-discovery"></a><a name="bkmk_aboutServer"></a> Serverermittlung  
 **Konfigurierbar:** Nein  
 
-Zusätzlich zu den benutzerkonfigurierbaren Ermittlungsmethoden wird von Configuration Manager auch ein als **Serverermittlung** (SMS_WINNT_SERVER_DISCOVERY_AGENT) bezeichneter Prozess verwendet. Bei dieser Ermittlungsmethode werden Ressourceneinträge für Computer, bei denen es sich um Standortsysteme handelt, erstellt. Dazu gehören beispielsweise Computer, die als Verwaltungspunkte konfiguriert sind.  
+Zusätzlich zu den benutzerkonfigurierbaren Ermittlungsmethoden wird von Configuration Manager ein als **Serverermittlung** (SMS_WINNT_SERVER_DISCOVERY_AGENT) bezeichneter Prozess verwendet. Bei dieser Ermittlungsmethode werden Ressourceneinträge für Computer erstellt, bei denen es sich um Standortsysteme handelt. Dazu gehören beispielsweise Computer, die als Verwaltungspunkte konfiguriert sind.  
 
-##  <a name="a-namebkmkshareda-common-features-of-active-directory-group-system-and-user-discovery"></a><a name="bkmk_shared"></a> Allgemeine Funktionen der Active Directory-Gruppen-, System- und Benutzerermittlung  
+##  <a name="a-namebkmkshareda-common-features-of-active-directory-group-discovery-system-discovery-and-user-discovery"></a><a name="bkmk_shared"></a> Allgemeine Funktionen der Active Directory-Gruppenermittlung, Systemermittlung und Benutzerermittlung  
 Dieser Abschnitt enthält Informationen zu den Funktionen, die folgende Ermittlungsmethoden gemeinsam haben:  
 
 -   Active Directory-Gruppenermittlung  
@@ -391,19 +391,23 @@ Dieser Abschnitt enthält Informationen zu den Funktionen, die folgende Ermittlu
 > [!NOTE]  
 >  Die Informationen in diesem Abschnitt gelten nicht für die Active Directory-Gesamtstrukturermittlung.  
 
-Diese drei Ermittlungsmethoden weisen Ähnlichkeiten in Bezug auf die Konfiguration und die Vorgänge auf. Mit ihnen können Computer, Benutzer und Informationen über die Gruppenmitgliedschaften von Ressourcen, die in den Active Directory-Domänendiensten gespeichert sind, ermittelt werden. Der Ermittlungsprozess wird von einem Ermittlungs-Agent verwaltet. Dieser wird an jedem Standort, an dem die Ermittlung konfigurationsgemäß ausgeführt werden soll, auf dem Standortserver ausgeführt. Sie können für jede dieser Ermittlungsmethoden festlegen, dass mindestens ein Active Directory-Ort als Ortsinstanz in der lokalen Gesamtstruktur oder in Remotegesamtstrukturen durchsucht werden soll.  
+Diese drei Ermittlungsmethoden ähneln sich im Hinblick auf Konfiguration und Betrieb. Sie dienen zum Ermitteln von Computern, Benutzern und Informationen über die Gruppenmitgliedschaften von Ressourcen, die in Active Directory Domain Services gespeichert sind. Der Ermittlungsprozess wird von einem Ermittlungs-Agent verwaltet. Dieser wird an jedem Standort, an dem die Ermittlung konfigurationsgemäß ausgeführt werden soll, auf dem Standortserver ausgeführt. Sie können für jede dieser Ermittlungsmethoden festlegen, dass mindestens ein Active Directory-Ort als Ortsinstanz in der lokalen Gesamtstruktur oder in Remotegesamtstrukturen durchsucht werden soll.  
 
 Beim Durchsuchen einer als nicht vertrauenswürdig eingestuften Gesamtstruktur nach Ressourcen muss vom Ermittlungs-Agent Folgendes aufgelöst werden können:  
 
 -   Der FQDN der Ressource muss vom Ermittlungs-Agent aufgelöst werden können, um eine Computerressource mit der Active Directory-Systemermittlung zu ermitteln. Ist dies nicht möglich, wird versucht, die Ressource anhand ihres NetBIOS-Namens aufzulösen.  
 
--   Der FQDN des von Ihnen für den Active Directory-Ort angegebenen Domänencontrollernamens muss vom Ermittlungs-Agent aufgelöst werden können, um einen Benutzer oder eine Benutzergruppe mit der Active Directory-Benutzerermittlung oder der Active Directory-Gruppenermittlung zu ermitteln.  
+-   Der FQDN des von Ihnen für den Active Directory-Standort angegebenen Domänencontrollernamens muss vom Ermittlungs-Agent aufgelöst werden können, um eine Benutzer- oder eine Gruppenressource mit der Active Directory-Benutzerermittlung bzw. der Active Directory-Gruppenermittlung zu ermitteln.  
 
-Sie können für jeden von Ihnen angegebenen Ort individuelle Suchoptionen konfigurieren. Beispielsweise können Sie das rekursive Durchsuchen der untergeordneten Active Directory-Container an diesen Orten aktivieren. Außerdem können Sie ein eindeutiges Konto konfigurieren, das beim Durchsuchen dieses Orts verwendet werden soll. Sie haben somit die flexible Möglichkeit, eine Ermittlungsmethode an einem Standort zu konfigurieren und zum Durchsuchen mehrerer Active Directory-Orte in vielen Gesamtstrukturen anzuweisen, ohne ein einzelnes Konto mit Berechtigungen für sämtliche Orte konfigurieren zu müssen.  
+Sie können für jeden von Ihnen angegebenen Ort individuelle Suchoptionen konfigurieren. Beispielsweise können Sie das rekursive Durchsuchen der untergeordneten Active Directory-Container an diesen Standorten aktivieren. Außerdem können Sie ein eindeutiges Konto konfigurieren, das beim Durchsuchen dieses Orts verwendet werden soll. Sie haben somit die flexible Möglichkeit, eine Ermittlungsmethode an einem Standort zu konfigurieren und zum Durchsuchen mehrerer Active Directory-Orte in vielen Gesamtstrukturen anzuweisen, ohne ein einzelnes Konto mit Berechtigungen für sämtliche Orte konfigurieren zu müssen.  
 
-Bei der Ausführung dieser drei Ermittlungsmethoden an einem bestimmten Standort wird vom Configuration Manager-Standortserver an diesem Standort eine Verbindung mit dem nächstgelegenen Domänencontroller in der angegebenen Active Directory-Gesamtstruktur hergestellt, um Active Directory-Ressourcen zu suchen. Die Domäne und die Gesamtstruktur können sich in einem beliebigen unterstützten Active Directory-Modus befinden. Das Konto, das Sie jeder Ortsinstanz zuweisen, muss über die Berechtigung **Lesen** für die angegebenen Active Directory-Orte verfügen. Bei der Ermittlung werden zunächst die angegebenen Orte nach Objekten durchsucht. Anschließend wird versucht, Informationen über diese Objekte zu sammeln. Falls genügend Informationen zu einer Ressource identifiziert werden können, wird ein DDR erstellt. Welche Informationen erforderlich sind, hängt jeweils von der verwendeten Ermittlungsmethode ab.  
+Bei der Ausführung dieser drei Ermittlungsmethoden an einem bestimmten Standort wird vom Configuration Manager-Standortserver an diesem Standort eine Verbindung mit dem nächstgelegenen Domänencontroller in der angegebenen Active Directory-Gesamtstruktur hergestellt, um Active Directory-Ressourcen zu suchen. Die Domäne und die Gesamtstruktur können in einem beliebigen unterstützten Active Directory-Modus befinden. Das Konto, das Sie jeder Standortinstanz zuweisen, muss über die Berechtigung **Lesen** für die angegebenen Active Directory-Standorte verfügen.
 
-Sie können die gleiche Ermittlungsmethode für die Ausführung an mehreren Configuration Manager-Standorten konfigurieren, um den Vorteil von Abfragen an die lokalen Active Directory-Server zu nutzen. In diesem Fall können Sie jeden Standort mit einem eindeutigen Satz von Ermittlungsoptionen konfigurieren. Da die Ermittlungsdaten für alle Standorte in der Hierarchie freigegeben werden, sollten Sie ein Überlappen zwischen diesen Konfigurationen vermeiden, um jede Ressource effektiv ein Mal ermitteln zu können. In kleineren Umgebungen können Sie erwägen, jede Ermittlungsmethode nur an einem einzigen Standort in der Hierarchie auszuführen. So können Sie den Verwaltungsaufwand gering halten und die Wahrscheinlichkeit, dass die gleichen Ressourcen von mehreren Ermittlungsaktionen ermittelt werden, senken. Wenn Sie die Anzahl von Standorten, an denen die Ermittlung ausgeführt wird, so gering wie möglich halten, können Sie dadurch die gesamte Netzwerkbandbreite, die von der Ermittlung verwendet wird, sowie die Gesamtzahl von DDRs, die von den Standortservern erstellt und verarbeitet werden müssen, senken.  
+Bei der Ermittlung werden zunächst die angegebenen Orte nach Objekten durchsucht. Anschließend wird versucht, Informationen über diese Objekte zu sammeln. Falls genügend Informationen zu einer Ressource identifiziert werden können, wird ein DDR erstellt. Welche Informationen erforderlich sind, hängt jeweils von der verwendeten Ermittlungsmethode ab.  
+
+Sie können die gleiche Ermittlungsmethode für die Ausführung an mehreren Configuration Manager-Standorten konfigurieren, um den Vorteil von Abfragen an die lokalen Active Directory-Server zu nutzen. In diesem Fall können Sie jeden Standort mit einem eindeutigen Satz von Ermittlungsoptionen konfigurieren. Da die Ermittlungsdaten für alle Standorte in der Hierarchie freigegeben werden, sollten Sie ein Überlappen zwischen diesen Konfigurationen vermeiden, um jede Ressource effektiv ein Mal ermitteln zu können. 
+
+In kleineren Umgebungen können Sie erwägen, jede Ermittlungsmethode nur an einem einzigen Standort in der Hierarchie auszuführen. So können Sie den Verwaltungsaufwand gering halten und die Wahrscheinlichkeit senken, dass die gleichen Ressourcen von mehreren Ermittlungsaktionen ermittelt werden. Wenn Sie die Anzahl der Standorte, in denen die Ermittlung ausgeführt wird, auf ein Mindestmaß beschränken, können Sie die von der Ermittlung verwendete Netzwerkbandbreite insgesamt verringern. Sie können auch die Anzahl der DDRs reduzieren, die erstellt und von Ihren Standortservern verarbeitet werden müssen.  
 
 Viele Konfigurationen von Ermittlungsmethoden sind selbsterklärend. In den nachfolgenden Abschnitten finden Sie weitere Informationen, die Sie möglicherweise benötigen, bevor Sie sie die entsprechenden Ermittlungsoptionen konfigurieren.  
 
@@ -426,9 +430,9 @@ Verfügbar für:
 
 -   Active Directory-Benutzerermittlung  
 
-Deltaermittlung ist eine unabhängige Ermittlungsmethode, jedoch als Option für die entsprechenden Methoden verfügbar. Deltaermittlung sucht bestimmte Active Directory-Attribute für die Änderungen, die seit dem letzten vollständigen Ermittlungszyklus der entsprechenden Ermittlungsmethode vorgenommen wurden.  Diese Suche benötigt weniger Ressourcen als bei einem vollständigen Ermittlungszyklus, und die Attributänderungen werden an die Configuration Manager-Datenbank zur Aktualisierung des Ermittlungsdatensatzes der Ressource gesendet.  
+Deltaermittlung ist eine unabhängige Ermittlungsmethode, jedoch als Option für die entsprechenden Methoden verfügbar. Die Deltaermittlung sucht bestimmte Active Directory-Attribute für Änderungen, die seit dem letzten vollständigen Ermittlungszyklus der entsprechenden Ermittlungsmethode vorgenommen wurden. Die Attributänderungen werden an die Configuration Manager-Datenbank gesendet, um den Ermittlungsdatensatz der Ressource zu aktualisieren.  
 
-Die Deltaermittlung wird standardmäßig in einem Fünfminutenzyklus ausgeführt. Dies ist sehr viel häufiger als der normale Zeitplan für einen vollständigen Ermittlungszyklus.  Dieser häufige Zyklus ist möglich, da Deltaermittlung weniger Standortserver- und Netzwerkressourcen verwendet als ein vollständiger Ermittlungszyklus. Bei der Verwendung der Deltaermittlung können Sie die Häufigkeit des vollständigen Ermittlungszyklus der betreffenden Ermittlungsmethode reduzieren.  
+Die Deltaermittlung wird standardmäßig in einem Fünfminutenzyklus ausgeführt. Dies ist sehr viel häufiger als der normale Zeitplan für einen vollständigen Ermittlungszyklus vorsieht.  Dieser häufige Zyklus ist möglich, da Deltaermittlung weniger Standortserver- und Netzwerkressourcen verwendet als ein vollständiger Ermittlungszyklus. Bei der Verwendung der Deltaermittlung können Sie die Häufigkeit des vollständigen Ermittlungszyklus der betreffenden Ermittlungsmethode reduzieren.  
 
 Die gängigsten Änderungen, die von der Deltaermittlung erkannt werden, sind:  
 
@@ -442,7 +446,7 @@ Die gängigsten Änderungen, die von der Deltaermittlung erkannt werden, sind:
 
 -   Änderungen an Systemgruppenobjekten  
 
-Bei der Deltaermittlung können zwar neue Ressourcen und Änderungen an der Gruppenmitgliedschaft erkannt werden, jedoch nicht, ob eine Ressource aus dem Active Directory gelöscht wurde. DDRs, die von der Deltaermittlung erstellt werden, werden wie von einem vollständigen Ermittlungszyklus erstellte DDRs verarbeitet.  
+Bei der Deltaermittlung können zwar neue Ressourcen und Änderungen an der Gruppenmitgliedschaft erkannt werden, jedoch nicht, ob eine Ressource aus Active Directory gelöscht wurde. DDRs, die von der Deltaermittlung erstellt werden, werden wie von einem vollständigen Ermittlungszyklus erstellte DDRs verarbeitet.  
 
 Die Deltaermittlung wird in den Eigenschaften einer Ermittlungsmethode auf der Registerkarte **Abfragezeitplan** konfiguriert.  
 
@@ -455,15 +459,15 @@ Verfügbar für:
 
 Sie können die Ermittlung so konfigurieren, dass veraltete Computerdatensätze auf Basis der letzten Domänenanmeldung des Computers von der Ermittlung ausgeschlossen werden. Wenn diese Option aktiviert ist, wird jeder identifizierte Computer von der Active Directory-Systemermittlung ausgewertet. Von der Active Directory-Gruppenermittlung wird jeder Computer ausgewertet, der Mitglied in einer ermittelten Gruppe ist.  
 
-Verwendungszweck der Option:  
+Voraussetzungen für die Verwendung dieser Option:  
 
 -   Computer müssen so konfiguriert werden, dass das Attribut **LastLogonTimeStamp** in Active Directory Domain Services aktualisiert wird.  
 
 -   Die Active Directory-Domänenfunktionsebene muss auf Windows Server 2003 oder höher festgelegt sein.  
 
-Berücksichtigen Sie das Intervall der Replikation zwischen Domänencontrollern, wenn Sie die Zeit nach der letzten Anmeldung konfigurieren, die Sie verwenden möchten.  
+Berücksichtigen Sie das Intervall der Replikation zwischen Domänencontrollern, wenn Sie die Zeit nach der letzten Anmeldung konfigurieren, die Sie für diese Einstellung verwenden möchten.  
 
-Konfigurieren Sie das Filtern auf der Registerkarte **Option** sowohl im Dialogfeld **Eigenschaften der Active Directory-Systemermittlung** als auch im Dialogfeld **Eigenschaften der Active Directory-Gruppenermittlung** , indem Sie die Option **Nur Computer ermitteln, die in einem bestimmten Zeitraum bei einer Domäne angemeldet waren**auswählen.  
+Sie konfigurieren die Filterung auf der Registerkarte **Option** in den Dialogfeldern **Eigenschaften von Active Directory-Systemermittlung** und **Eigenschaften von Active Directory-Gruppenermittlung**. Wählen Sie die Option **Nur Computer ermitteln, die in einem bestimmten Zeitraum bei einer Domäne angemeldet waren**.  
 
 > [!WARNING]  
 >  Wenn Sie diesen Filter konfigurieren und **Filtern veralteter Datensätze nach Computerkennwort** verwenden, werden Computer, die die Kriterien mindestens eines Filters erfüllen, von der Ermittlung ausgeschlossen.  
@@ -477,13 +481,13 @@ Verfügbar für:
 
 Sie können die Ermittlung so konfigurieren, dass Computer mit veralteten Computerdatensätzen auf Basis der letzten Aktualisierung des Computerkontokennworts von der Ermittlung ausgeschlossen werden. Wenn diese Option aktiviert ist, wird jeder identifizierte Computer von der Active Directory-Systemermittlung ausgewertet. Von der Active Directory-Gruppenermittlung wird jeder Computer ausgewertet, der Mitglied in einer ermittelten Gruppe ist.  
 
-Verwendungszweck der Option:  
+Voraussetzungen für die Verwendung dieser Option:  
 
 -   Computer müssen so konfiguriert werden, dass das Attribut **pwdLastSet** in Active Directory Domain Services aktualisiert wird.  
 
-Berücksichtigen Sie das Updateintervall des Attributs sowie das Intervall der Replikation zwischen Domänencontrollern, wenn Sie diese Option konfigurieren.  
+Berücksichtigen Sie beim Konfigurieren dieser Option das Updateintervall des Attributs sowie das Intervall der Replikation zwischen Domänencontrollern.  
 
-Konfigurieren Sie das Filtern auf der Registerkarte **Option** sowohl im Dialogfeld **Eigenschaften der Active Directory-Systemermittlung** als auch im Dialogfeld **Eigenschaften der Active Directory-Gruppenermittlung** , indem Sie die Option **Nur Computer ermitteln, von denen in einem bestimmten Zeitraum das Kennwort für das Computerkonto aktualisiert wurde**auswählen.  
+Sie konfigurieren die Filterung auf der Registerkarte **Option** in den Dialogfeldern **Eigenschaften von Active Directory-Systemermittlung** und **Eigenschaften von Active Directory-Gruppenermittlung**. Wählen Sie die Option **Nur Computer ermitteln, von denen in einem bestimmten Zeitraum das Kennwort für das Computerkonto aktualisiert wurde**.  
 
 > [!WARNING]  
 >  Wenn Sie diesen Filter konfigurieren und **Filtern veralteter Datensätze nach Anmeldung an der Domäne** verwenden, werden Computer, die die Kriterien mindestens eines Filters erfüllen, von der Ermittlung ausgeschlossen.  
@@ -497,10 +501,10 @@ Konfigurieren Sie das Filtern auf der Registerkarte **Option** sowohl im Dialogf
 
 Von jeder Ermittlungsmethode wird eine eindeutige Liste von Active Directory Attributen, die ermittelt werden können, unterstützt.  
 
-Prüfen und konfigurieren Sie die Liste benutzerdefinierter Attribute auf der Registerkarte **Active Directory-Attribute** sowohl im Dialogfeld **Eigenschaften der Active Directory-Systemermittlung** als auch im Dialogfeld **Eigenschaften der Active Directory-Benutzerermittlung**.  
+Prüfen und konfigurieren Sie die Liste benutzerdefinierter Attribute auf der Registerkarte **Active Directory-Attribute** im Dialogfeld **Eigenschaften der Active Directory-Systemermittlung** und im Dialogfeld **Eigenschaften der Active Directory-Benutzerermittlung**.  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 

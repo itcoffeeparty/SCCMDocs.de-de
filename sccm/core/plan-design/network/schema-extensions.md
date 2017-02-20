@@ -2,7 +2,7 @@
 title: Schemaerweiterungen | Microsoft-Dokumentation
 description: "Erweitern des Active Directory-Schemas für System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,8 +18,8 @@ ms.author: brenduns
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: f230b6cbe97b72fee4f5d2e45260e6217ef2cec0
+ms.sourcegitcommit: 7479e54b5db2eff893bf9fbaf52c104836cda519
+ms.openlocfilehash: 5b5540c35c02df6e3d06e4aa9269b8da3238233e
 
 
 ---
@@ -27,27 +27,27 @@ ms.openlocfilehash: f230b6cbe97b72fee4f5d2e45260e6217ef2cec0
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Sie können das Active Directory-Schema so erweitern, dass es Configuration Manager unterstützt. Sie bearbeiten ein Active Directory-Schema einer Gesamtstruktur, um einen neuen Container und mehrere Attribute hinzuzufügen, die von Configuration Manager-Standorten dazu verwendet werden, wichtige Informationen in Active Directory zu veröffentlichen, wo Clients sicher darauf zugreifen können.  Diese Informationen können die Bereitstellung und Konfiguration von Clients vereinfachen und versetzen Clients in die Lage, Standortressourcen, etwa Server mit bereitgestellten Inhalten, oder Standortressourcen zu finden, die verschiedene Dienste für Clients bereitstellen.  
+Sie können das Active Directory-Schema so erweitern, dass es Configuration Manager unterstützt. Hierdurch wird das Active Directory-Schema einer Gesamtstruktur so bearbeitet, dass ein neuer Container und mehrere Attribute hinzugefügt werden. Diese werden von Configuration Manager-Standorten dazu verwendet, wichtige Informationen in Active Directory zu veröffentlichen, wo Clients sicher darauf zugreifen können. Diese Informationen können die Bereitstellung und Konfiguration von Clients vereinfachen und versetzen Clients in die Lage, Standortressourcen, etwa Server mit bereitgestellten Inhalten, oder Standortressourcen zu finden, die verschiedene Dienste für Clients bereitstellen.  
 
--   Das Erweitern des Active Directory-Schemas ist nicht erforderlich, aber zu empfehlen.  
+-   Es ist ratsam, das Active Directory-Schema zu erweitern, aber es ist nicht erforderlich.  
 
 Bevor Sie [das Active Directory-Schema erweitern](https://msdnstage.redmond.corp.microsoft.com/en-US/library/mt345589\(TechNet.10\).aspx), sollten Sie mit Active Directory-Domänendienste vertraut sein und wissen, wie ein [Ändern des Active Directory-Schemas](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx)vorgenommen wird.  
 
 ## <a name="considerations-for-extending-the-active-directory-schema-for-configuration-manager"></a>Überlegungen zum Erweitern des Active Directory-Schemas für Configuration Manager  
 
--   Die Active Directory-Schemaerweiterungen für System Center Configuration Manager sind gegenüber den von Configuration Manager 2007 und Configuration Manager 2012 verwendeten unverändert. Wenn Sie das Schema bereits für eine der Versionen erweitert haben, müssen Sie es nicht erneut erweitern.  
+-   Die Active Directory-Schemaerweiterungen für System Center Configuration Manager sind dieselben, die auch in Configuration Manager 2007 und Configuration Manager 2012 verwendet wurden. Wenn Sie das Schema bereits für eine der Versionen erweitert haben, müssen Sie es nicht erneut erweitern.  
 
 -   Das Erweitern des Schemas ist eine gesamtstrukturweite, einmalige, nicht rückgängig zu machende Aktion.  
 
--   Das Erweitern des Schemas kann nur von einem Mitglied der Gruppe „Schema-Admins“ oder von einem Benutzer ausgeführt werden, der die erforderlichen Berechtigungen zum Ändern des Schemas hat.  
+-   Das Erweitern des Schemas kann nur von einem Mitglied der Gruppe „Schema-Admins“ oder von einem Benutzer ausgeführt werden, der die erforderlichen Berechtigungen zum Ändern des Schemas besitzt.  
 
--   Sie können das Schema zwar vor oder nach dem Ausführen von Setup für Configuration Manager erweitern, aber es empfiehlt sich, die Erweiterung vorzunehmen, bevor Sie damit beginnen, Ihre Standorte und Hierarchieeinstellungen zu konfigurieren.  Dadurch lassen sich viele der späteren Konfigurationsschritte vereinfachen.  
+-   Sie können das Schema zwar vor oder nach dem Ausführen von Setup für Configuration Manager erweitern, aber es empfiehlt sich, das Schema zu erweitern, bevor Sie damit beginnen, Ihre Standorte und Hierarchieeinstellungen zu konfigurieren. Dadurch lassen sich viele der späteren Konfigurationsschritte vereinfachen.  
 
 -   Nachdem Sie das Schema erweitert haben, wird der globale Katalog von Active Directory in der Gesamtstruktur repliziert. Daher sollten Sie die Schemaerweiterung vornehmen, wenn der Replikationsdatenverkehr keine negativen Auswirkungen auf andere vom Netzwerk abhängige Prozesse hat:  
 
     -   In Windows 2000-Gesamtstrukturen führt das Erweitern des Schemas zu einer vollständigen Synchronisierung des gesamten globalen Katalogs.  
 
-    -   Seit der Einführung von Windows 2003-Gesamtstrukturen werden nur die neu hinzugefügten Attribute repliziert.  
+    -   Bei Gesamtstrukturen ab Windows 2003 werden nur die neu hinzugefügten Attribute repliziert.  
 
 **Geräte und Clients, die das Active Directory-Schema nicht verwenden:**  
 
@@ -72,7 +72,7 @@ Bevor Sie [das Active Directory-Schema erweitern](https://msdnstage.redmond.corp
 
 -   **Problemumgehung:** Wenn Sie das Schema nicht erweitern, sollten Sie eine der folgenden Optionen verwenden, um für die Installation auf Computern erforderliche Konfigurationsdaten bereitzustellen:  
 
-    -   **Verwenden Sie die Clientpushinstallation**. Bevor Sie die Clientinstallationsmethode verwenden, müssen alle Voraussetzungen erfüllt sein. Weitere Informationen finden Sie im Abschnitt „Installationsmethodenabhängigkeiten“ unter „Voraussetzungen für die Windows-Clientbereitstellung in Configuration Manager“.  
+    -   **Verwenden Sie die Clientpushinstallation**. Bevor Sie eine Clientinstallationsmethode verwenden, stellen Sie sicher, dass alle Voraussetzungen erfüllt sind. Weitere Informationen finden Sie unter [Voraussetzungen für die Windows-Clientbereitstellung in Configuration Manager](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers) im Abschnitt „Installationsmethodenabhängigkeiten“.  
 
     -   **Manuelles Installieren von Clients** und Bereitstellen von Installationseigenschaften über die CCMSetup-Befehlszeileneigenschaften für die Installation. Dies umfasst folgende Aktionen:  
 
@@ -86,15 +86,15 @@ Bevor Sie [das Active Directory-Schema erweitern](https://msdnstage.redmond.corp
 
 -   **Problemumgehung:** Wenn Sie das Schema nicht erweitern, verwenden Sie eine der folgenden Optionen, um die neuen Portkonfigurationen für vorhandene Clients bereitzustellen:  
 
-    -   **Installieren Sie Clients neu** mit Optionen, die den neuen Port konfigurieren  
+    -   **Installieren Sie Clients neu** mit Optionen, die den neuen Port konfigurieren.  
 
     -   **Stellen Sie auf den Clients ein benutzerdefiniertes Skript zum Aktualisieren der Portinformationen bereit**. Können Clients wegen einer Portänderung nicht mit einem Standort kommunizieren, können Sie Configuration Manager nicht für die Skriptbereitstellung verwenden. Sie könnten beispielsweise Gruppenrichtlinien verwenden.  
 
-**Szenarios für die Inhaltsbereitstellung** – Wenn Sie Inhalte an einem Standort erstellen und an einem anderen Standort in der Hierarchie bereitstellen, muss der Zielstandort in der Lage sein, die Signatur der signierten Inhaltsdaten zu überprüfen. Dazu ist der Zugriff auf den öffentlichen Schlüssel des Quellstandorts erforderlich, auf dem die Daten erstellt wurde. Wenn Sie das Active Directory-Schema für Configuration Manager erweitern, wird der öffentliche Schlüssel eines Standorts allen Standorten in der Hierarchie zur Verfügung gestellt.  
+**Szenarios für die Inhaltsbereitstellung** – Wenn Sie Inhalte an einem Standort erstellen und an einem anderen Standort in der Hierarchie bereitstellen, muss der Zielstandort in der Lage sein, die Signatur der signierten Inhaltsdaten zu überprüfen. Dazu ist der Zugriff auf den öffentlichen Schlüssel des Quellstandorts erforderlich, auf dem die Daten erstellt wurde. Wenn Sie das Active Directory-Schema für Configuration Manager erweitern, steht der öffentliche Schlüssel eines Standorts allen Standorten in der Hierarchie zur Verfügung.  
 
 -   **Problemumgehung:** Wenn Sie das Schema nicht erweitern, können Sie die Informationen zu dem sicheren Schlüssel über das Hierarchieverwaltungstool, **preinst.exe**, zwischen Standorten austauschen.  
 
-     Wenn Sie beispielsweise planen, Inhalte auf einem primären Standort zu erstellen und diese dann auf einem sekundären Standort unterhalb eines anderen primären Standorts bereitzustellen, müssen Sie entweder das Active Directory-Schema erweitern, damit der öffentliche Schlüssel des primären Quellstandorts durch den sekundären Standort abgerufen werden kann, oder die Schlüssel mithilfe von preinst.exe direkt zwischen beiden Standorten freigeben.  
+     Wenn Sie beispielsweise planen, Inhalte an einem primären Standort zu erstellen und diese dann an einem sekundären Standort unterhalb eines anderen primären Standorts bereitzustellen, müssen Sie entweder das Active Directory-Schema erweitern, damit der öffentliche Schlüssel des primären Quellstandorts durch den sekundären Standort abgerufen werden kann, oder die Schlüssel mithilfe von „preinst.exe“ direkt zwischen beiden Standorten freigeben.  
 
 ## <a name="active-directory-attributes-and-classes"></a>Active Directory-Attribute und -Klassen  
 Wenn Sie das Schema für System Center Configuration Manager erweitern, werden dem Schema die folgenden Klassen und Attribute hinzugefügt und für alle Configuration Manager-Standorte in der Active Directory-Gesamtstruktur verfügbar gemacht.  
@@ -141,7 +141,9 @@ Wenn Sie das Schema für System Center Configuration Manager erweitern, werden d
     -   cn=MS-SMS-Site  
 
 > [!NOTE]  
->  Die -Schemaerweiterungen können Attribute und Klassen enthalten, die aus vorherigen Versionen des Produkts übernommen wurden, aber von Configuration Manager 2015 nicht verwendet werden. Beispiel:  
+
+>  Die Schemaerweiterungen können Attribute und Klassen enthalten, die aus vorherigen Versionen des Produkts übernommen wurden, aber von System Center Configuration Manager nicht verwendet werden. Beispiel:  
+
 >   
 >  -   Attribut: cn=MS-SMS-Site-Boundaries  
 > -   Klasse: cn=MS-SMS-Server-Locator-Point  
@@ -150,6 +152,6 @@ Sie können sicherstellen, dass die vorangehenden Listen aktuell sind, indem Sie
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

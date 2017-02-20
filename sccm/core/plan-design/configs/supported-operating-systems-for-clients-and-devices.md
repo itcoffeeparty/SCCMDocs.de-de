@@ -2,7 +2,7 @@
 title: "Unterstützte Clients und Geräte | Microsoft-Dokumentation"
 description: "Erfahren Sie, welche Betriebssysteme System Center Configuration Manager für Clients und Geräte unterstützt."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: a8d3f1a3fb945b9af21dd65387cd507c06337c6c
+ms.sourcegitcommit: 4688b4b12a7afa5fcfdc0e42f984271d98f10316
+ms.openlocfilehash: d2d888edf51d46a2dd13ef6b7ed39c066179a088
 
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>Unterstützte Betriebssysteme für Clients und Geräte für System Center Configuration Manager
@@ -25,48 +25,50 @@ ms.openlocfilehash: a8d3f1a3fb945b9af21dd65387cd507c06337c6c
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 
-
-
  System Center Configuration Manager unterstützt die Installation von Clientsoftware auf einer Vielzahl von Windows-, Macintosh-, Linux- und UNIX-Computern.  
 
  **Anforderungen und Einschränkungen für alle Clients:**  
 
--   Die Änderung der Einstellungen für Starttyp und „Anmelden als“ für beliebige Configuration Manager-Dienste wird nicht unterstützt. Wenn Sie die Einstellungen trotzdem ändern, werden wichtige Dienste möglicherweise nicht ordnungsgemäß ausgeführt.    
+-   Die Änderung der Einstellungen für den Starttyp und **Anmelden als** für beliebige Configuration Manager-Dienste wird nicht unterstützt. Wenn Sie die Einstellungen trotzdem ändern, werden wichtige Dienste möglicherweise nicht ordnungsgemäß ausgeführt.    
 
 -   Die Installation oder Ausführung des Configuration Manager-Clients für Linux oder UNIX bzw. des Macintosh-Clients auf Computern unter einem anderen Konto als Root wird nicht unterstützt. Wenn Sie die Einstellungen trotzdem ändern, werden wichtige Dienste möglicherweise nicht ordnungsgemäß ausgeführt.  
 
-##  <a name="a-namebkmkwinclientosa-windows-computers"></a><a name="bkmk_WinClientos"></a> Windows-Computer  
+##  <a name="windows-computers"></a>Windows-Computer  
  Sie können Windows-Computer mit dem Configuration Manager-Client verwalten, der im Configuration Manager enthalten ist. Weitere Informationen finden Sie unter [Bereitstellen von Clients auf Windows-Computern in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
 
 **Unterstützte Betriebssysteme:**  
 
--  **Windows Server 2016** – Standard, Datacenter <sup>1</sup>
-  - Windows Server 2016 wird ab Configuration Manager Release 1606 mit dem Hotfixrollup von KB3186654 (oder Baselineversion 1606, die im Oktober 2016 veröffentlicht wurde) unterstützt.  
+-  **Windows Server 2016**: Standard, Datacenter <sup>1</sup>
+  - Dieses Betriebssystem wird ab Configuration Manager Version 1606 mit dem Hotfixrollup von KB3186654 (oder der Baselineversion 1606, die im Oktober 2016 veröffentlicht wurde) unterstützt.  
 
 
--   **Windows Server 2012 R2** (x64) – Standard, Datacenter <sup>1</sup>    
+-   **Windows Server 2012 R2** (x64): Standard, Datacenter <sup>1</sup>    
 
 -   **Windows Storage Server 2012 R2** (x64)    
 
--   **Windows Server 2012** (x64) – Standard, Datacenter <sup>1</sup>    
+-   **Windows Server 2012** (x64): Standard, Datacenter <sup>1</sup>    
 
 -   **Windows Storage Server 2012** (x64)    
 
--   **Windows Server 2008 R2 with SP1** (x64) – Standard, Enterprise, Datacenter <sup>1</sup>    
+-   **Windows Server 2008 R2 mit SP1** (x64): Standard, Enterprise, Datacenter <sup>1</sup>    
 
--   **Windows Storage Server 2008 R2** (x86, x64) – Workgroup, Standard, Enterprise    
+-   **Windows Storage Server 2008 R2** (x86, x64): Workgroup, Standard, Enterprise    
 
--   **Windows  Server 2008 with SP2** (x86, x64) - Standard, Enterprise, Datacenter <sup>1</sup>    
+-   **Windows  Server 2008 mit SP2** (x86, x64): Standard, Enterprise, Datacenter <sup>1</sup>    
 
 -   **Windows 10 Enterprise LTSB** (x86, x64) <sup>3</sup>    
 
--   **Windows 10** (x86, x64) – Pro, Enterprise    
+-   **Windows 10** (x86, x64): Pro, Enterprise    
 
--   **Windows 8.1** (x86, x64) – Professional, Enterprise    
+-   **Windows 8.1** (x86, x64): Professional, Enterprise    
 
--   **Windows 8** (x86, x64) – Professional, Enterprise    
+-   **Windows 8** (x86, x64): Professional, Enterprise    
 
--   **Windows 7 mit SP1** (x86, x64) – Professional, Enterprise, Ultimate    
+-   **Windows 7 mit SP1** (x86, x64): Professional, Enterprise und Ultimate    
+
+-   **Server Core-Installation von Windows Server 2016** (x64) <sup>2</sup>
+  - Dieses Betriebssystem wird ab Version 1606 mit dem Hotfixrollup von KB3186654 (oder Baselineversion 1606, die im Oktober 2016 veröffentlicht wurde) unterstützt. Allerdings unterstützt dieses Betriebssystem nicht die Verwendung mit Endpoint Protection.
+
 
 -   **The Server Core-Installation von Windows Server 2012 R2** (x64) <sup>2</sup>    
 
@@ -81,14 +83,14 @@ ms.openlocfilehash: a8d3f1a3fb945b9af21dd65387cd507c06337c6c
 
  <sup>2</sup> Zur Unterstützung der Clientpushinstallation muss auf dem Computer, auf dem diese Betriebssystemversion ausgeführt wird, der Dateiserver-Rollendienst für die Serverrolle „Datei- und Speicherdienste“ ausgeführt werden. Informationen zum Installieren von Windows-Features auf einem Server Core-Computer finden Sie unter [Installieren von Serverrollen und -features auf einem Server Core-Server](http://go.microsoft.com/fwlink/p/?LinkId=299359) in der TechNet-Bibliothek für Windows Server 2012.  
 
- <sup>3</sup> Die Nutzung dieses Betriebssystems setzt Version 1602 oder höher voraus.  
+ <sup>3</sup> Die Nutzung dieses Betriebssystems setzt Configuration Manager Version 1602 oder höher voraus.  
 
-##  <a name="a-namebkmkembeddedosa-windows-embedded"></a><a name="bkmk_EmbeddedOS"></a> Windows Embedded  
- Sie können die Windows Embedded-Geräte durch die Installation von Configuration Manager-Clientsoftware auf dem Gerät verwalten.  Weitere Informationen finden Sie unter [Planen der Clientbereitstellung für Windows Embedded-Geräte in System Center Configuration Manager](../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
+##  <a name="windows-embedded-computers"></a>Windows Embedded-Computer  
+ Sie können die Windows Embedded-Geräte durch die Installation von Configuration Manager-Clientsoftware auf dem Gerät verwalten.  Weitere Informationen finden Sie unter [Planen der Clientbereitstellung auf Windows Embedded-Geräten in System Center Configuration Manager](../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
 
 **Anforderungen und Einschränkungen:**  
 
--   Alle Clientfeatures werden auf unterstützten Windows Embedded-Systemen ohne aktivierte Schreibfilter unterstützt.  
+-   Alle Clientfeatures werden auf Windows Embedded-Systemen ohne aktivierte Schreibfilter unterstützt.  
 
 -   Clients, die einen der folgenden Filter verwenden, werden für alle Features (ausgenommen Energieverwaltung) unterstützt:  
 
@@ -100,7 +102,8 @@ ms.openlocfilehash: a8d3f1a3fb945b9af21dd65387cd507c06337c6c
 
 -   Der Anwendungskatalog wird für Windows Embedded-Geräte grundsätzlich nicht unterstützt.  
 
--   Bevor Sie erkannte Schadsoftware auf Windows XP-basierten Windows Embedded-Geräten überwachen können, müssen Sie das Microsoft Windows-WMI-Skriptpaket auf dem eingebetteten Gerät installieren. Verwenden Sie Windows Embedded Target Designer zur Installation dieses Pakets. Die Dateien **WBEMDISP.DLL** und **WBEMDISP.TLB** müssen vorhanden und im Ordner **%windir%\System32\WBEM** auf dem Embedded-Gerät registriert sein, um sicherzustellen, dass die erkannte Schadsoftware gemeldet wird.  
+-   Bevor Sie erkannte Schadsoftware auf Windows XP-basierten Windows Embedded-Geräten überwachen können, müssen Sie das Microsoft Windows-WMI-Skriptpaket auf dem Gerät installieren. Verwenden Sie Windows Embedded Target Designer zur Installation dieses Pakets.
+Die Dateien **WBEMDISP.DLL** und **WBEMDISP.TLB** müssen vorhanden und im Ordner **%windir%\System32\WBEM** auf dem Embedded-Gerät registriert sein, um sicherzustellen, dass die erkannte Schadsoftware gemeldet wird.  
 
 **Unterstützte Betriebssysteme:**  
 
@@ -132,14 +135,14 @@ ms.openlocfilehash: a8d3f1a3fb945b9af21dd65387cd507c06337c6c
 
 -   **Windows Embedded Standard 2009** (x86)  
 
-## <a name="windows-ce"></a>Windows CE  
+## <a name="windows-ce-computers"></a>Windows CE-Computer
  Sie können Windows CE-Geräte mit dem Configuration Manager-Legacyclient für mobile Geräte verwalten, der im Configuration Manager enthalten ist.  
 
 **Anforderungen und Einschränkungen:**  
 
--   Zur Installation des Clients für mobile Geräte sind 0,78 MB Speicherplatz erforderlich. Die Protokollierung auf dem mobilen Gerät kann bis zu 256 KB zusätzlichen Speicherplatz erfordern.    
+-   Zur Installation des Clients für mobile Geräte sind 0,78 MB Speicherplatz erforderlich. Die Anmeldung auf dem mobilen Gerät kann bis zu 256 KB zusätzlichen Speicherplatz erfordern.    
 
--   Die für diese mobilen Geräte verfügbaren Funktionen sind von Plattform und Clienttyp abhängig. Informationen dazu, welche Verwaltungsfunktionen Configuration Manager für den Legacyclient für mobile Geräte unterstützt, finden Sie unter [Choose a device management solution for System Center Configuration Manager (Wählen einer Geräteverwaltungslösung für System Center Configuration Manager)](../../../core/plan-design/choose-a-device-management-solution.md).  
+-   Die für diese mobilen Geräte verfügbaren Funktionen sind von Plattform und Clienttyp abhängig. Informationen dazu, welche Verwaltungsfunktionen unterstützt werden, finden Sie unter [Wählen einer Geräteverwaltungslösung für System Center Configuration Manager](../../../core/plan-design/choose-a-device-management-solution.md).  
 
 **Unterstützte Betriebssysteme:**  
 
@@ -170,34 +173,38 @@ ms.openlocfilehash: a8d3f1a3fb945b9af21dd65387cd507c06337c6c
 ## <a name="mac-computers"></a>Macintosh-Computer  
  Sie können Macintosh OS X-Computer mit dem Configuration Manager-Client für Macintosh verwalten.  
 
- Das Macintosh-Clientinstallationspaket wird nicht mit den Configuration Manager-Medien geliefert. Sie können es als Teil des Clients für zusätzliche Betriebssysteme im [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184) herunterladen.  
-
-**Anforderungen und Einschränkungen:**  
-
- Sie müssen den separat herunterzuladenden Configuration Manager-Client für Macintosh (Version 5.0.8333.1 oder höher) verwenden. Im Gegensatz zum Windows-Client ist der Macintosh-Client nicht in der Configuration Manager-Software enthalten, wenn Sie sie installieren. Um den Macintosh-Client herunterzuladen, navigieren Sie zu [Microsoft System Center Configuration Manager – Clients for Additional Operating Systems (Microsoft System Center Configuration Manager – Clients für weitere Betriebssysteme)](http://go.microsoft.com/fwlink/?LinkID=525184).  
+ Das Macintosh-Clientinstallationspaket wird nicht mit den Configuration Manager-Medien geliefert. Laden Sie die **Clients für weitere Betriebssysteme** aus dem [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184) herunter.  
 
  Weitere Informationen finden Sie unter [How to deploy clients to Macs in System Center Configuration Manager (Bereitstellen von Clients auf Macs in System Center Configuration Manager)](../../../core/clients/deploy/deploy-clients-to-macs.md).  
 
 **Unterstützte Versionen:**  
 
--   **Mac OS X 10.9** (Mavericks)  
+-   **Mac OS X 10.6** (Snow Leopard)
+
+-   **Mac OS X 10.7** (Lion)
+
+-   **Mac OS X 10.8** (Mountain Lion)
+
+-   **Mac OS X 10.9** (Mavericks)
 
 -   **Mac OS X 10.10** (Yosemite)  
 
 -   **Mac OS X 10.11** (El Capitan)  
 
-##  <a name="a-namebkmklinuxosa-linux-and-unix-servers"></a><a name="bkmk_LinuxOS"></a> Linux- und UNIX-Server  
+-   **Mac OS X 10.12** (macOS Sierra)
+
+##  <a name="linux-and-unix-servers"></a>Linux- und UNIX-Server  
  Sie können Linux- und UNIX-Server mit dem Configuration Manager-Client für Linux und UNIX verwalten.  
 
- Die Clientinstallationspakete für Linux und UNIX werden nicht mit den Configuration Manager-Medien geliefert. Sie können sie als Teil des Clients für weitere Betriebssysteme im [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184) herunterladen. Zusätzlich zu den Clientinstallationspaketen umfasst der Clientdownload das Installationsskript zur Verwaltung der Clientinstallation auf den einzelnen Computern.  
+ Die Clientinstallationspakete für Linux und UNIX werden nicht mit den Configuration Manager-Medien geliefert. Laden Sie die **Clients für weitere Betriebssysteme** aus dem [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184) herunter. Zusätzlich zu den Clientinstallationspaketen umfasst der Clientdownload das Skript zur Verwaltung der Clientinstallation auf den einzelnen Computern.  
 
 **Anforderungen und Einschränkungen:**  
 
 -   Informationen zum Überprüfen von Betriebssystemdateiabhängigkeiten für den Client für Linux und UNIX finden Sie unter [Prerequisites for Client Deployment to Linux and UNIX Servers (Voraussetzungen für die Clientbereitstellung auf Linux- und UNIX-Servern)](../../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md#BKMK_ClientDeployPrereqforLnU).  
 
--   Eine Übersicht über die Verwaltungsfunktionen, die für Computer unterstützt werden, auf denen Linux oder UNIX ausgeführt wird, finden Sie unter [How to deploy clients to UNIX and Linux servers in System Center Configuration Manager (Bereitstellen von Clients auf UNIX- und Linux-Servern in System Center Configuration Manager)](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md).  
+-   Eine Übersicht über die Verwaltungsfunktionen, die für Computer unterstützt werden, auf denen Linux oder UNIX ausgeführt wird, finden Sie unter [Bereitstellen von Clients auf UNIX- und Linux-Servern in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md).  
 
--   Für unterstützte Versionen von Linux- und UNIX-Clients schließt die aufgeführte Version alle nachfolgenden Nebenversionen ein. Wenn beispielsweise Unterstützung für CentOS Version 6 angegeben ist, schließt dies alle nachfolgenden Nebenversionen von CentOS 6 ein, z. B. CentOS 6.3. Wenn die Unterstützung für ein Betriebssystem angegeben ist, das Service Packs verwendet (z. B. SUSE Linux Enterprise Server 11 SP1), schließt die Unterstützung entsprechend alle nachfolgenden Service Packs für diese Betriebssystemversion ein.  
+-   Für unterstützte Versionen von Linux- und UNIX-Clients schließt die aufgeführte Version alle nachfolgenden Nebenversionen ein. Beispielsweise enthält die CentOS-Version 6 CentOS 6.3. Ebenso schließt die Unterstützung für ein Betriebssystem, das Service Packs verwendet (z.B. SUSE Linux Enterprise Server 11 SP1), die Unterstützung für alle nachfolgenden Service Packs für diese Betriebssystemversion ein.  
 
 -   Informationen zu Clientinstallationspaketen und dem Universal Agent finden Sie unter [Bereitstellen von Clients auf UNIX- und Linux-Servern in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md).  
 
@@ -297,7 +304,7 @@ ms.openlocfilehash: a8d3f1a3fb945b9af21dd65387cd507c06337c6c
 |Version 14.04 LTS x86|ccm-Universalx86.&lt;build\>.tar|  
 |Version 14.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
 
-##  <a name="a-namebkmkintuneosa-mobile-devices-enrolled-by-microsoft-intune"></a><a name="bkmk_IntuneOS"></a> Durch Microsoft Intune registrierte mobile Geräte  
+##  <a name="mobile-devices-enrolled-by-microsoft-intune"></a>Durch Microsoft Intune registrierte mobile Geräte  
  Ausführliche Informationen über die Computer und Geräte, die Sie verwalten können, wenn Sie Microsoft Intune in Configuration Manager integrieren, finden Sie unter den folgenden beiden Themen in der Microsoft Intune-Dokumentationsbibliothek:  
 
 -   [Verwaltungsfunktionen für mobile Geräte in Microsoft Intune](https://docs.microsoft.com/intune/get-started/choose-how-to-manage-devices)  
@@ -310,7 +317,7 @@ ms.openlocfilehash: a8d3f1a3fb945b9af21dd65387cd507c06337c6c
 
 -   Sie müssen den **Dienstverbindungspunkt** am Standort auf der obersten Ebene Ihrer Hierarchie konfigurieren  
 
- **Unterstützte Betriebssysteme:**  
+**Unterstützte Betriebssysteme:**  
 
 -   **Windows 10 Pro** (x86, x64)  
 
@@ -325,11 +332,11 @@ ms.openlocfilehash: a8d3f1a3fb945b9af21dd65387cd507c06337c6c
 -  **Windows 10 IoT Mobile Enterprise**
 
 ##  <a name="a-namebkmkexsrvconosa-exchange-server-connector"></a><a name="bkmk_ExSrvConOS"></a> Exchange Server-Connector  
- Configuration Manager unterstützt mit Einschränkungen die Verwaltung der Geräte, die Sie mit Ihrem Exchange-Server verbinden, ohne die Clientsoftware zu installieren.  Weitere Informationen finden Sie unter [Verwalten von mobilen Geräten mit System Center Configuration Manager und Exchange](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
+Configuration Manager unterstützt mit Einschränkungen die Verwaltung der Geräte, die Sie mit Ihrem Exchange-Server verbinden, ohne den Configuration Manager-Client zu installieren. Weitere Informationen finden Sie unter [Verwalten von mobilen Geräten mit System Center Configuration Manager und Microsoft Intune](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
 
  **Anforderungen und Einschränkungen:**  
 
--   Configuration Manager bietet eingeschränkte Verwaltungsfunktionen für mobile Geräte, wenn Sie den Exchange Server-Connector für EAS-fähige (Exchange Active Sync) Geräte verwenden, die mit einem Server kommunizieren, auf dem Exchange Server oder Exchange Online ausgeführt wird.  
+-   Configuration Manager bietet eingeschränkte Verwaltungsfunktionen für mobile Geräte, wenn Sie Geräte mit dem Exchange Server-Connector für Exchange Active Sync verwenden, die mit einem Server kommunizieren, auf dem Exchange Server oder Exchange Online ausgeführt wird.  
 
 -   Weitere Informationen dazu, welche Verwaltungsfunktionen von Configuration Manager für mobile Geräte unterstützt werden, die vom Exchange Server-Connector verwaltet werden, finden Sie unter „Bestimmen, wie mobile Geräte in Configuration Manager verwaltet werden“.  
 
@@ -341,10 +348,10 @@ ms.openlocfilehash: a8d3f1a3fb945b9af21dd65387cd507c06337c6c
 
 -   **Exchange Server 2013**  
 
--   **Exchange Online (Office 365)** – Dies beinhaltet die Business Productivity Online Standard Suite  
+-   **Exchange Online (Office 365)**: Dies beinhaltet die Business Productivity Online Standard Suite  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 
