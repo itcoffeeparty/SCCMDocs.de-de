@@ -1,6 +1,6 @@
 ---
 title: Vorbereiten der Bereitstellung von Clientsoftware auf Macs | Microsoft-Dokumentation
-description: Konfigurationsausfgaben von dem Bereitstellen des Configuration Manager-Clients auf Mac-Computern.
+description: Konfigurationsaufgaben vor dem Bereitstellen des Configuration Manager-Clients auf Mac-Computern.
 ms.custom: na
 ms.date: 01/02/2017
 ms.prod: configuration-manager
@@ -68,11 +68,11 @@ Weitere Informationen zur Zertifikatanforderung für Macintosh-Clients und zu an
 Macintosh-Clients werden automatisch dem Configuration Manager-Standort zugewiesen, von dem aus sie verwaltet werden. Macintosh-Clients werden als reine Internetclients installiert, selbst wenn die Kommunikation auf das Intranet beschränkt ist. Diese Clientkonfiguration bedeutet, dass die Kommunikation zwischen den Clients und den Standortsystemrollen (Verwaltungspunkte und Verteilungspunkte) am zugewiesenen Standort erfolgt, wenn Sie diese Standortsystemrollen so konfigurieren, dass Clientverbindungen aus dem Internet zulässig sind. Eine Kommunikation mit Standortsystemrollen außerhalb des zugewiesenen Standorts findet auf Macintosh-Computern nicht statt.  
 
 > [!IMPORTANT]  
->  Der Configuration Manager-Macintosh-Client kann nicht zum Herstellen der Verbindung mit einem Verwaltungspunkt verwendet werden, der für die Verwendung eines [Datenbankreplikats](../../../core/servers/deploy/configure/database-replicas-for-management-points.md) konfiguriert ist.  
+>  Der Configuration Manager-Client für den Mac kann nicht zum Herstellen der Verbindung mit einem Verwaltungspunkt verwendet werden, der für die Verwendung eines [Datenbankreplikats](../../../core/servers/deploy/configure/database-replicas-for-management-points.md) konfiguriert ist.  
 
 
 ## <a name="deploy-a-web-server-certificate-to-site-system-servers"></a>Bereitstellen eines Webserverzertifikats für Standortsystemserver  
-Wenn diese Standortsysteme nicht darüber verfügen, stellen Sie ein Webserverzertifikat den Computern mit diesen Standortsystemrollen bereit:  
+Wenn diese Standortsysteme nicht darüber verfügen, stellen Sie ein Webserverzertifikat für die Computer mit diesen Standortsystemrollen bereit:  
 
 -   Verwaltungspunkt  
 
@@ -90,7 +90,7 @@ Eine Beispielbereitstellung, bei der dieses Webserverzertifikat erstellt und ins
 
 
 ## <a name="deploy-a-client-authentication-certificate-to-site-system-servers"></a>Bereitstellen eines Clientauthentifizierungszertifikat für Standortsystemserver  
- Wenn diese Standortsysteme nicht darüber verfügen, stellen Sie ein Clientauthentifizierungszertifikat den Computern mit diesen Standortsystemrollen bereit:  
+ Wenn diese Standortsysteme nicht darüber verfügen, stellen Sie ein Clientauthentifizierungszertifikat für die Computer mit diesen Standortsystemrollen bereit:  
 
 -   Verwaltungspunkt  
 

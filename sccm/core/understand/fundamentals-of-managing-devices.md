@@ -68,7 +68,7 @@ Die Configuration Manager-Clientsoftware kann auf zwei Weisen zum Verwalten von 
 
  -  Ob Benutzer ihre mobilen Geräte so registrieren können, dass sie von Configuration Manager verwaltet werden  
 
-Sie können benutzerdefinierte Clienteinstellungen erstellen und diese dann Sammlungen zuweisen.  Mitglieder der Sammlung sind so konfiguriert, dass sie die benutzerdefinierten Einstellungen haben. Sie können auch mehrere benutzerdefinierte Clienteinstellungen erstellen, die in der angegebenen (numerischen) Reihenfolge angewendet werden.  Bei Konflikten setzt die Einstellung mit der niedrigsten Reihenfolgennummer die anderen Einstellungen außer Kraft.  
+Sie können benutzerdefinierte Clienteinstellungen erstellen und diese dann Sammlungen zuweisen.  Elemente der Sammlung sind so konfiguriert, dass sie die benutzerdefinierten Einstellungen haben. Sie können auch mehrere benutzerdefinierte Clienteinstellungen erstellen, die in der angegebenen (numerischen) Reihenfolge angewendet werden.  Bei Konflikten setzt die Einstellung mit der niedrigsten Reihenfolgennummer die anderen Einstellungen außer Kraft.  
 
 Die folgende Abbildung zeigt ein Beispiel der Erstellung und Anwendung benutzerdefinierter Clienteinstellungen.  
 
@@ -81,7 +81,7 @@ Die folgende Abbildung zeigt ein Beispiel der Erstellung und Anwendung benutzerd
  Configuration Manager unterstützt die Verwaltung einiger Geräte, auf denen die Clientsoftware nicht installiert ist und die nicht von Intune verwaltet werden. Weitere Informationen finden Sie unter [Verwalten mobiler Geräte mithilfe lokaler Infrastruktur in System Center Configuration Manager](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md) und [Verwalten von mobilen Geräten mit System Center Configuration Manager und Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
 
 ## <a name="user-based-management"></a>Benutzerbasierte Verwaltung  
- Configuration Manager-Sammlungen von Active Directory Domain Services-Benutzern. Wenn Sie eine Benutzersammlung verwenden, können Sie Software auf allen Computern installieren, die von Mitgliedern der Sammlung verwendet werden. Um sicherzustellen, dass die von Ihnen bereitgestellte Software nur auf den Geräten installiert wird, die als primäres Gerät eines Benutzers angegeben sind, richten Sie die Affinität zwischen Benutzer und Gerät ein. Ein Benutzer kann über ein oder mehrere primäre Geräte verfügen.  
+ Configuration Manager unterstützt Sammlungen von Active Directory Domain Services-Benutzern. Wenn Sie eine Benutzersammlung verwenden, können Sie Software auf allen Computern installieren, die von Mitgliedern der Sammlung verwendet werden. Um sicherzustellen, dass die von Ihnen bereitgestellte Software nur auf den Geräten installiert wird, die als primäres Gerät eines Benutzers angegeben sind, richten Sie die Affinität zwischen Benutzer und Gerät ein. Ein Benutzer kann über ein oder mehrere primäre Geräte verfügen.  
 
  Eine der Möglichkeiten, mit denen Benutzer die Softwarebereitstellung auf ihren Geräten steuern können, ist die Verwendung der Clientbenutzeroberfläche **Softwarecenter**. Das **Softwarecenter** wird automatisch auf Clientcomputern installiert und über das **Startmenü** aufgerufen. Mithilfe des **Softwarecenters** können Benutzer ihre eigene Software verwalten und folgende Aufgaben ausführen:  
 
