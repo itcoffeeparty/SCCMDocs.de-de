@@ -2,7 +2,7 @@
 title: Neuheiten bei hybrider MDM | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über die neuen Features der Verwaltung mobiler Geräte, die für Hybridbereitstellungen mit System Center Configuration Manager und Intune verfügbar sind."
 ms.custom: na
-ms.date: 01/12/2017
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 07578e3aaa93a06a2fa90e72de2b7c71ce2a14b9
-ms.openlocfilehash: f405514402d7140e26bff6da5e8c2759a80b8a7f
+ms.sourcegitcommit: 7972aa2c39f5b86e69087b1ed5a1c3b50ba69940
+ms.openlocfilehash: f74bd019b5403f3f5702795279759270261ce4db
 
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Neuheiten bei der hybriden Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune
@@ -35,6 +35,20 @@ Dieser Artikel bietet Details zu den neuen Features für die Verwaltung mobiler 
 |**Neuheiten in Microsoft Intune** | Im Allgemeinen sollten alle in dieser Kategorie aufgelisteten Features in allen Configuration Manager-Releases, einschließlich Configuration Manager-Releases von System Center 2012 R2, verwendet werden können, da für diese Features nur der Intune-Dienst, aber keine zusätzlichen Funktionen in Configuration Manager erforderlich sind.|
 |**Neuheiten in Configuration Manager Technical Preview**| Alle in dieser Kategorie aufgelisteten Features können nur mit dem angegebenen Technical Preview-Release verwendet werden. Um diese Features zu testen, müssen Sie die in der Featurebeschreibung angegebene Technical Preview-Version installieren. Weitere Informationen finden Sie unter [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md).|
 |**Neuheiten in Configuration Manager (Current Branch)**| Alle in dieser Kategorie aufgelisteten Features können nur mit der angegebenen Version von Configuration Manager (Current Branch) verwendet werden, z.B. Version 1511 oder 1602. Wenn Sie eine ältere Version von Configuration Manager für die Hybridbereitstellung verwenden, müssen Sie ein Upgrade auf die in der Featurebeschreibung angegebene Configuration Manager-Version (Current Branch) ausführen. Weitere Informationen finden Sie unter [Upgrade auf System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|
+
+## <a name="new-hybrid-features-in-february-2017"></a>Neue Hybridfeatures im Februar 2017
+
+### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
+
+Die folgenden im Februar 2017 eingeführten Intune-Features werden in Hybridbereitstellungen unterstützt:
+
+- **Modernisieren der Unternehmensportal-Website**
+
+  Die Unternehmensportal-Website unterstützt Apps, die für Benutzer ausgelegt sind, die nicht über verwaltete Geräte verfügen. Die Website richtet sich nach anderen Microsoft-Produkten und Diensten, indem sie ein neues kontrastreiches Farbschema, dynamische Illustrationen und ein „Hamburger-Menü“ verwendet, das Helpdesk-Kontaktinformationen und Informationen zu vorhandenen verwalteten Geräte enthält. Die Zielseite wird neu angeordnet, um für Benutzer verfügbare Apps mit Karussellsteuerelementen für unterstützte und vor kurzem aktualisierte Apps hervorzuheben. Vorher-Nachher-Bilder sind auf der Seite [UI-Updates](/intune/whats-new/whats-new-in-intune-app-ui) verfügbar.
+
+- **Neue MDM-Serveradresse für Windows-Geräte**
+
+  Die MDM-Serveradresse für die Registrierung von Windows- und Windows Phone-Geräten wurde von „manage.microsoft.com“ in „enrollment.manage.microsoft.com“ geändert. Benachrichtigen Sie Ihre Benutzer, dass „enrollment.manage.microsoft.com“ als Adresse des MDM-Servers verwendet werden soll, wenn sie bei der Registrierung eines Windows- oder und Windows Phone-Geräts zur Eingabe der Adresse aufgefordert werden. Dieses Update erfordert zudem, dass jeder CNAME-Eintrag im DNS, der von „EnterpriseEnrollment.contoso.com“ zu „manage.microsoft.com“ umleitet, durch einen CNAME-Eintrag im DNS ersetzt wird, der von „EnterpriseEnrollment.contoso.com“ zu „EnterpriseEnrollment-s.manage.microsoft.com“ umleitet. Weitere Informationen zu dieser Änderung finden Sie unter „http://aka.ms/intuneenrollsvrchange“. 
 
 ## <a name="new-hybrid-features-in-january-2017"></a>Neue Hybridfeatures im Januar 2017
 
@@ -71,20 +85,20 @@ Die folgenden im Dezember 2016 eingeführten Intune-Features werden in Hybridber
 
   Die Unternehmensportal-App für Android ist jetzt in China verfügbar. Da der Google Play Store in China nicht zur Verfügung steht, müssen Apps für Android-Geräte von chinesischen App-Marktplätzen abgerufen werden. Die Unternehmensportal-App für Android steht in den folgenden Stores zum Download zur Verfügung:
 
-  - [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
-  - [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
-  - [Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
-  - [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
-  - [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
+  -    [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
+  -    [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
+  -    [Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
+  -    [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
+  -    [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
 
   In der Unternehmensportal-App für Android erfolgt die Kommunikation mit dem Microsoft Intune-Dienst über Google Play-Dienste. Da Google Play-Dienste in China noch nicht verfügbar sind, kann die Ausführung der folgenden Aufgaben bis zu 8 Stunden dauern.
 
   | Configuration Manager-Administratorkonsole | Intune-Unternehmensportal-App für Android | Intune-Unternehmensportalwebsite |
-  |----|----|----|      
-  | Abkoppeln/Zurücksetzen (Entfernen aller Daten)   | Entfernen eines Remotegeräts | Entfernen eines Geräts (lokal und remote) |
-  | Abkoppeln/Zurücksetzen (Entfernen von Unternehmensdaten)   | Zurücksetzen eines Geräts | Zurücksetzen eines Geräts|
+  |----|----|----|        
+  | Abkoppeln/Zurücksetzen (Entfernen aller Daten)    | Entfernen eines Remotegeräts | Entfernen eines Geräts (lokal und remote) |
+  | Abkoppeln/Zurücksetzen (Entfernen von Unternehmensdaten)    | Zurücksetzen eines Geräts | Zurücksetzen eines Geräts|
   | Neue oder aktualisierte App-Bereitstellungen | Installieren verfügbarer branchenspezifischer Apps | Zurücksetzen der Gerätekennung|
-  | Remotesperre | | |
+  | Remotesperre    | | |
   | Zurücksetzen der Kennung | | |        
 
 
@@ -153,9 +167,9 @@ Die Unterstützung für System Center 2012 Configuration Manager SP1 und Sys
 Wenn Sie eine hybride Bereitstellung mit Configuration Manager 2012 SP1 oder R2 RTM ausführen, wird die Durchführung eines Upgrades auf Configuration Manager (Current Branch) oder das letzte unterstütze Service Pack für Configuration Manager 2012 (R2 SP1 oder SP2) noch vor dem 10. April 2017 empfohlen, um eine Dienstunterbrechung zu vermeiden.
 
 Zusätzliche Ressourcen:
--   [Upgrade auf System Center Configuration Manager (Current Branch)](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)
--   [Planen von Upgrades auf System Center 2012 R2 Configuration Manager SP1](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningR2SP1Upgrade)
--   [Planen von Upgrades auf System Center 2012 Configuration Manager SP2](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningSP2Upgrade)
+-    [Upgrade auf System Center Configuration Manager (Current Branch)](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)
+-    [Planen von Upgrades auf System Center 2012 R2 Configuration Manager SP1](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningR2SP1Upgrade)
+-    [Planen von Upgrades auf System Center 2012 Configuration Manager SP2](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningSP2Upgrade)
 
 ### <a name="windows-phone-8-company-portal-upload-deprecated"></a>Upload in Unternehmensportal für Windows Phone 8 eingestellt
 *25. Oktober 2016*
@@ -170,6 +184,6 @@ Die Funktion zum Hochladen einer signierten Unternehmensportal-App wurde aus der
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -2,7 +2,7 @@
 title: "Verwalten von Apps aus dem Windows Store für Unternehmen | Microsoft-Dokumentation"
 description: "Verwalten Sie Apps aus dem Windows Store für Unternehmen, und stellen Sie sie mithilfe von System Center Configuration Manager bereit."
 ms.custom: na
-ms.date: 11/19/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3847a85c11d7b72b84095ba9add563bdf5c49a75
-ms.openlocfilehash: 605cdd01d767dda3467198f5e6539448f9b559f6
+ms.sourcegitcommit: f955b5aadfc617e08d5d933dee8e42de838f83c0
+ms.openlocfilehash: bf2937f5ba86db19d9cb40e2c98cbb8ba365f7eb
 
 ---
 # <a name="manage-apps-from-the-windows-store-for-business-with-system-center-configuration-manager"></a>Verwalten von Apps aus dem Windows Store für Unternehmen mit System Center Configuration Manager
@@ -74,9 +74,9 @@ Because this is a pre-release feature, before you can connect Configuration Mana
 > [!IMPORTANT]
 > Wenn Sie eine Verbindung zwischen Configuration Manager und dem Windows Store für Unternehmen herstellen, müssen Sie einen Ordner angeben, in dem App-Inhalte, die aus dem Store synchronisiert werden, gespeichert werden.
 Um sicherzustellen, dass es sich um einen sicheren Ordner handelt, und dass der Inhalt auf Geräten bereitgestellt werden kann, müssen Sie sichergehen, dass die folgenden Berechtigungen vorhanden sind:
--   Der Computer, auf dem Sie die Standortsystemrolle „Dienstverbindungspunkt“ installieren (der Standort der obersten Ebene in der Hierarchie), muss über Lese- und Schreibberechtigungen für den Ordner verfügen, den Sie bei der Verwendung des Kontos **Computer$** angegeben haben.
--   Der Autor der App muss über Leseberechtigungen für den angegebenen Ordner verfügen.
--   Das Konto **Computer$** jedes Computers, der eine Instanz des SMS-Anbieters hostet, muss den angegebenen Ordner verwenden können.
+-    Der Computer, auf dem Sie die Standortsystemrolle „Dienstverbindungspunkt“ installieren (der Standort der obersten Ebene in der Hierarchie), muss über Lese- und Schreibberechtigungen für den Ordner verfügen, den Sie bei der Verwendung des Kontos **Computer$** angegeben haben.
+-    Der Autor der App muss über Leseberechtigungen für den angegebenen Ordner verfügen.
+-    Das Konto **Computer$** jedes Computers, der eine Instanz des SMS-Anbieters hostet, muss den angegebenen Ordner verwenden können.
 
 
 Registrieren Sie Configuration Manager über Webanwendung oder Web-API als Verwaltungstool in Azure Active Directory. Sie erhalten eine Client-ID, die Sie später benötigen.
@@ -98,6 +98,9 @@ Konfigurieren Sie im Windows Store für Unternehmen Configuration Manager als Sp
 5.  Wählen Sie neben der Anwendung, die Sie gerade importiert haben, **Aktivieren** aus.
 6.  Wählen Sie auf der Seite **Manage > Account Information** (Verwalten > Kontoinformationen) die Option **Show Offline-Licensed Apps** (Offline lizenzierte Apps anzeigen) aus, wenn Sie den Einkauf offline lizenzierter Anwendungen zulassen möchten.
 
+> [!Note]
+> Wenn Sie zur Bereitstellung von Windows Store für Business-Apps mehrere Verwaltungstools verwenden, konnten Sie zuvor nur eines dieser Tools dem Windows Store für Business-Apps zuordnen. Sie können dem Store jetzt mehrere Verwaltungstools zuordnen, z. B. Intune und Configuration Manager.
+
 Fügen Sie das Store-Konto zu Configuration Manager hinzu.
 
 1. Stellen Sie sicher, dass Sie mindestens eine App aus dem Windows Store für Unternehmen gekauft haben. Erweitern Sie in der Configuration Manager-Konsole im Arbeitsbereich **Verwaltung** den Eintrag **Cloud Services**, und wählen Sie dann **Windows Store für Unternehmen** aus.
@@ -107,10 +110,10 @@ Fügen Sie das Store-Konto zu Configuration Manager hinzu.
 
 Ändern Sie die App-Sprachen, die Benutzern im Anwendungskatalog zum Herunterladen angezeigt werden.
 
-1.  Klicken Sie im Arbeitsbereich **Verwaltung** der Configuration Manager-Konsole auf **Cloud Services** > **Updates und Wartung** > **Windows Store für Unternehmen**.
-2.  Wählen Sie Ihr Windows Store für Unternehmen-Konto und anschließend **Eigenschaften** aus.
-3.  Wählen Sie die Registerkarte **Sprache** aus.
-4.  Fügen Sie die Sprachen hinzu, die im Anwendungskatalog angezeigt werden sollen, oder entfernen Sie sie. Wählen Sie die Standardsprache des Anwendungskatalogs aus, die den Benutzern zur Verfügung gestellt wird.
+1.    Klicken Sie im Arbeitsbereich **Verwaltung** der Configuration Manager-Konsole auf **Cloud Services** > **Updates und Wartung** > **Windows Store für Unternehmen**.
+2.    Wählen Sie Ihr Windows Store für Unternehmen-Konto und anschließend **Eigenschaften** aus.
+3.    Wählen Sie die Registerkarte **Sprache** aus.
+4.    Fügen Sie die Sprachen hinzu, die im Anwendungskatalog angezeigt werden sollen, oder entfernen Sie sie. Wählen Sie die Standardsprache des Anwendungskatalogs aus, die den Benutzern zur Verfügung gestellt wird.
 
 >[!IMPORTANT]
 >Wenn Sie die Sprachen ändern, die synchronisiert werden, müssen Sie in diesem Release den SMS-Executive-Dienst auf dem Standortserver neu starten, bevor die Spracheinstellungen wirksam werden.
@@ -118,17 +121,17 @@ Fügen Sie das Store-Konto zu Configuration Manager hinzu.
 
 Ändern Sie den geheimen Clientschlüssels aus Azure Active Directory.
 
-1.  Klicken Sie im Arbeitsbereich **Verwaltung** der Configuration Manager-Konsole auf **Cloud Services** > **Updates und Wartung** > **Windows Store für Unternehmen**.
-2.  Wählen Sie Ihr Windows Store für Unternehmen-Konto und anschließend **Eigenschaften** aus.
-3.  Geben Sie im Dialogfeld **Windows Store for Business Account Properties** (Windows Store für Unternehmen-Kontoeigenschaften) einen neuen Schlüssel in das Feld **Client secret key** (Geheimer Clientschlüssel) ein, und wählen Sie anschließend **Überprüfen** aus. Sobald die Überprüfung abgeschlossen ist, wählen Sie **Übernehmen** aus, und schließen Sie dann das Dialogfeld.
+1.    Klicken Sie im Arbeitsbereich **Verwaltung** der Configuration Manager-Konsole auf **Cloud Services** > **Updates und Wartung** > **Windows Store für Unternehmen**.
+2.    Wählen Sie Ihr Windows Store für Unternehmen-Konto und anschließend **Eigenschaften** aus.
+3.    Geben Sie im Dialogfeld **Windows Store for Business Account Properties** (Windows Store für Unternehmen-Kontoeigenschaften) einen neuen Schlüssel in das Feld **Client secret key** (Geheimer Clientschlüssel) ein, und wählen Sie anschließend **Überprüfen** aus. Sobald die Überprüfung abgeschlossen ist, wählen Sie **Übernehmen** aus, und schließen Sie dann das Dialogfeld.
 
-## <a name="synch-apps-from-the-store-with-configuration-manager"></a>Synchronisieren von Apps aus dem Store mit Configuration Manager
+## <a name="sync-apps-from-the-store-with-configuration-manager"></a>Synchronisieren von Apps aus dem Store mit Configuration Manager
 
 Die Synchronisierung findet alle 24 Stunden statt, oder es kann eine sofortige Synchronisierung mithilfe dieses Vorgangs ausgeführt werden:
 
 1. Klicken Sie im Arbeitsbereich **Verwaltung** der Configuration Manager-Konsole auf **Cloud Services** > **Updates und Wartung** > **Windows Store für Unternehmen**.
-3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Synchronisieren** auf **Jetzt synchronisieren**.
-4.  Die App, die Sie erworben haben, wird im Knoten **License Information for Store Apps** (Lizenzinformationen für Store-Apps) des Arbeitsbereichs **Anwendungsverwaltung** angezeigt.
+3.    Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Synchronisieren** auf **Jetzt synchronisieren**.
+4.    Die App, die Sie erworben haben, wird im Knoten **License Information for Store Apps** (Lizenzinformationen für Store-Apps) des Arbeitsbereichs **Anwendungsverwaltung** angezeigt.
 
 
 ## <a name="create-and-deploy-a-configuration-manager-application-from-a-windows-store-for-business-app"></a>Erstellen und Bereitstellen einer Configuration Manager-Anwendung aus einer App aus dem Windows Store für Unternehmen
@@ -150,6 +153,6 @@ Sie können für jede von Ihnen verwaltete Store-App Informationen anzeigen, wie
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 

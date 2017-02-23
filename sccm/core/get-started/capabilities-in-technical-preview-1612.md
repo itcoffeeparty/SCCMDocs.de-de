@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
-ms.openlocfilehash: cd970dacd29916c2de2db3dd5498b1949f5174e6
+ms.sourcegitcommit: 3c8f968276cb6d412a4a06cb70f1c8e45e91c605
+ms.openlocfilehash: cd53f093056fbaa2ef6fd88d5451b7698f296569
 
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1612 für System Center Configuration Manager
@@ -50,11 +50,11 @@ Zusätzlich zur Installation und Konfiguration der Data Warehouse-Datenbank werd
 
 | Schritt         | Details  |
 |:------:|-----------|  
-| **1**  |  Der Standortserver überträgt und speichert Daten in der Standortdatenbank.  |  
-| **2** |   Basierend auf Zeitplan und Konfiguration, ruft der Data Warehouse-Dienstpunkt Daten aus der Standortdatenbank ab.  |  
+| **1**  |     Der Standortserver überträgt und speichert Daten in der Standortdatenbank.  |  
+| **2** |      Basierend auf Zeitplan und Konfiguration, ruft der Data Warehouse-Dienstpunkt Daten aus der Standortdatenbank ab.  |  
 | **3** |  Der Data Warehouse-Dienstpunkt überträgt und speichert eine Kopie der synchronisierten Daten in der Data Warehouse-Datenbank. |  
 | **A** |  Mit integrierten Berichten werden Daten angefragt, die mittels SQL Server Reporting Services an den Reporting Services-Punkt übertragen werden. |  
-| **B** |   Die meisten Berichte gelten für aktuelle Informationen. Diese Anfragen werden in der Standortdatenbank ausgeführt. |  
+| **B** |      Die meisten Berichte gelten für aktuelle Informationen. Diese Anfragen werden in der Standortdatenbank ausgeführt. |  
 | **C** | Wenn ein Bericht Verlaufsdaten mit einem der Berichte mit einer *Kategorie* des **Data Warehouse** anfragt, wird diese Anfrage in der Data Warehouse-Datenbank ausgeführt.   |  
 
 ### <a name="prerequisites-for-the-data-warehouse-service-point-and-database"></a>Voraussetzungen für den Data Warehouse-Dienstpunkt und die Datenbank
@@ -85,12 +85,12 @@ Seite **Allgemeines**: Die folgenden allgemeinen Informationen werden benötigt:
 - **Configuration Manager-Datenbankeinstellungen:**   
   - **Servername**: Geben Sie den FQDN des Servers an, der die Standortdatenbank hostet. Wenn Sie nicht die Standardinstanz von SQL Server verwenden, müssen Sie die Instanz nach dem FQDN im folgenden Format angeben: ***&lt;Sqlserver_FQDN>\&lt;Instance_name>***
   - **Name der Datenbank**: Geben Sie den Namen der Standortdatenbank an.
-  - **Überprüfen**: Klicken Sie auf **Überprüfen**, um sicherzustellen, dass die Verbindung mit der Standortdatenbank funktioniert.
+  -    **Überprüfen**: Klicken Sie auf **Überprüfen**, um sicherzustellen, dass die Verbindung mit der Standortdatenbank funktioniert.
 </br></br>
 - **Data Warehouse-Datenbankeinstellungen:**
-  - **Servername**: Geben Sie den FQDN des Servers an, der den Data Warehouse-Dienstpunkt hostet. Wenn Sie nicht die Standardinstanz von SQL Server verwenden, müssen Sie die Instanz nach dem FQDN im folgenden Format angeben: ***&lt;Sqlserver_FQDN>\&lt;Instance_name>***
-  - **Name der Datenbank**: Geben Sie den FQDN für die Data Warehouse-Datenbank an.  Configuration Manager erstellt die Datenbank mit diesem Namen. Wenn ein Datenbankname angegeben wird, der bereits in der Instanz von SQL Server existiert, verwendet Configuration Manager diese Datenbank.
-  - **Überprüfen**: Klicken Sie auf **Überprüfen**, um sicherzustellen, dass die Verbindung mit der Standortdatenbank funktioniert.
+  -    **Servername**: Geben Sie den FQDN des Servers an, der den Data Warehouse-Dienstpunkt hostet. Wenn Sie nicht die Standardinstanz von SQL Server verwenden, müssen Sie die Instanz nach dem FQDN im folgenden Format angeben: ***&lt;Sqlserver_FQDN>\&lt;Instance_name>***
+  -    **Name der Datenbank**: Geben Sie den FQDN für die Data Warehouse-Datenbank an.  Configuration Manager erstellt die Datenbank mit diesem Namen. Wenn ein Datenbankname angegeben wird, der bereits in der Instanz von SQL Server existiert, verwendet Configuration Manager diese Datenbank.
+  -    **Überprüfen**: Klicken Sie auf **Überprüfen**, um sicherzustellen, dass die Verbindung mit der Standortdatenbank funktioniert.
 
 Seite **Synchronisierungseinstellungen**:   
 - **Dateneinstellungen:**
@@ -107,7 +107,7 @@ Stellen Sie nach dem Installieren der Data Warehouse-Rolle sicher, dass das als 
 #### <a name="troubleshoot-installation-and-data-synchronization"></a>Problembehandlung bei Installation und Datensynchronisierung
 Verwenden Sie die folgenden Protokolle zur Untersuchung von Problemen bei der Installation des Data Warehouse-Dienstpunktes oder der Synchronisierung von Daten:
 - **DWSSMSI.log** und **DWSSSetup.log**: Verwenden Sie diese Protokolle, um Fehler bei der Installation des Data Warehouse-Dienstpunktes zu untersuchen.
--   **Microsoft.ConfigMgrDataWarehouse.log**: Verwenden Sie dieses Protokoll, um die Datensynchronisation zwischen der Standortdatenbank und der Data Warehouse-Datenbank zu untersuchen.
+-     **Microsoft.ConfigMgrDataWarehouse.log**: Verwenden Sie dieses Protokoll, um die Datensynchronisation zwischen der Standortdatenbank und der Data Warehouse-Datenbank zu untersuchen.
 
 ### <a name="reporting"></a>Berichterstellung
 Nach der Installation einer Data Warehouse-Standortsystemrolle sind die folgenden Berichte auf Ihrem Reporting Services-Punkt mit einer *Kategorie* des **Data Warehouse** verfügbar:
@@ -143,7 +143,7 @@ Führen Sie zum Verschieben der Data Warehouse-Datenbank auf einen neuen Server 
 
 Sie können die folgenden Configuration Manager-Protokolle überprüfen, um sicherzugehen, dass die Standortsystemrolle erfolgreich neu installiert wurde:  
 - **DWSSMSI.log** und **DWSSSetup.log**: Verwenden Sie diese Protokolle, um Fehler bei der Installation des Data Warehouse-Dienstpunktes zu untersuchen.
--   **Microsoft.ConfigMgrDataWarehouse.log**: Verwenden Sie dieses Protokoll, um die Datensynchronisation zwischen der Standortdatenbank und der Data Warehouse-Datenbank zu untersuchen.
+-     **Microsoft.ConfigMgrDataWarehouse.log**: Verwenden Sie dieses Protokoll, um die Datensynchronisation zwischen der Standortdatenbank und der Data Warehouse-Datenbank zu untersuchen.
 
 
 ## <a name="content-library-cleanup-tool"></a>Inhaltsbibliothek-Bereinigungstool
@@ -173,7 +173,7 @@ Das Tool kann in zwei Modi ausgeführt werden:
   2. **Löschmodus**: Wenn Sie das Tool mit dem **/delete**-Schalter ausführen, wird das Tool im Löschmodus ausgeführt.
 
      - Wenn das Tool in diesem Modus ausgeführt wird, können verwaiste Inhalte, die auf den angegebenen Verteilungspunkt gefunden werden, aus der Inhaltsbibliothek des Verteilungspunktes gelöscht werden.
-     -  Vor dem Löschen jeder Datei, wird der Benutzer aufgefordert, zu bestätigen, dass die Datei gelöscht werden soll.  Sie können **Y** für „Ja“, **N** für „Nein“, oder **Ja, alle** auswählen, um weitere Aufforderungen zu überspringen und alle verwaisten Inhalte zu löschen.  
+     -     Vor dem Löschen jeder Datei, wird der Benutzer aufgefordert, zu bestätigen, dass die Datei gelöscht werden soll.  Sie können **Y** für „Ja“, **N** für „Nein“, oder **Ja, alle** auswählen, um weitere Aufforderungen zu überspringen und alle verwaisten Inhalte zu löschen.  
      </br>
 
      Wir empfehlen Ihnen das Tool im „Was-wäre-wenn“-Modus auszuführen und die daraus resultierenden Protokolldateien zu überprüfen, bevor Sie das Tool mit dem /delete-Schalter ausführen.  
@@ -206,7 +206,7 @@ Aufgrund des User Voice-Feedbacks haben wir die folgenden Verbesserungen für di
   Viele Objekte unterstützen jetzt eine neue Spalte namens **Objektpfad**.  Wenn Sie bei Ihrer Suche diese Spalte bei Ihrer Ergebnisanzeige hinzufügen, können Sie den Pfad für jedes Objekt sehen. Wenn Sie beispielsweise eine Suche nach Apps im Knoten „Anwendungen“ durchführen und auch nach untergeordnete Knoten suchen, wird in der *Objektpfad*-Spalte im Ergebnisbereich der Pfad für jedes zurückgegebene Objekt angezeigt.   
 
 - **Erhalt des Suchtextes:**  
-  Wenn Sie einen Text in das Suchfeld eingeben, und dann den Knoten ändern, in dem Sie suchen, wird der von Ihnen eingegebene Text beibehalten werden und steht für die weitere Verwendung zur Verfügung, ohne dass er erneut eingeben werden muss.  
+  Wenn Sie Text in das Suchfeld eingeben, und dann zwischen der Suche nach einem untergeordneten und dem aktuellen Knoten wechseln, wird der von Ihnen eingegebene Text beibehalten und für die weitere Verwendung zur Verfügung stehen, ohne dass er erneut eingeben werden muss.
 
 - **Entscheidungserhalt bei der Suche in untergeordneten Knoten:**  
  Wenn Sie den Knoten ändern, in dem Sie arbeiten, wird die Option, die Sie sowohl für die Suche in *aktuellen Knoten* als auch für die Suche in *allen untergeordneten Knoten* auswählen, jetzt beibehalten.   Dieses neue Verhalten bedeutet, dass Sie die Entscheidung nicht ständig zurücksetzen müssen, während Sie sich auf der Konsole bewegen.  Beim Öffnen der Konsole ist die Option standardmäßig so festgelegt, dass nur im aktuellen Knoten gesucht wird.
@@ -216,9 +216,9 @@ Sie können jetzt eine Liste der ausführbaren Dateien (mit der Erweiterung .exe
 
 ### <a name="try-it-out"></a>Probieren Sie es aus
 So konfigurieren Sie eine Liste mit ausführbaren Dateien
-1.  Wählen Sie auf der Eigenschaftenseite eines beliebigen Bereitstellungstyps die Registerkarte **Installer Handling** (Handler für Installer) aus.
-2.  Klicken Sie auf **Hinzufügen**, um eine weitere ausführbare Datei zur Liste hinzuzufügen (z.B. **Edge.exe**)
-3.  Klicken Sie auf **OK**, um das Dialogfeld zu Bereitstellungstyp-Eigenschaften zu schließen.
+1.    Wählen Sie auf der Eigenschaftenseite eines beliebigen Bereitstellungstyps die Registerkarte **Installer Handling** (Handler für Installer) aus.
+2.    Klicken Sie auf **Hinzufügen**, um eine weitere ausführbare Datei zur Liste hinzuzufügen (z.B. **Edge.exe**)
+3.    Klicken Sie auf **OK**, um das Dialogfeld zu Bereitstellungstyp-Eigenschaften zu schließen.
 
 Wenn Sie diese Anwendung jetzt für einen Benutzer oder ein Gerät bereitstellen und eine der von Ihnen hinzugefügten ausführbaren Dateien ausgeführt wird, sieht der Endbenutzer ein Software Center-Dialogfeld, das ihn darüber informiert, dass die Installation fehlgeschlagen ist, weil eine Anwendung ausgeführt wird.
 
@@ -248,16 +248,16 @@ Für Windows 10-Updates wurde Support für die Expressinstallationsdateien in Co
 
 ### <a name="to-enable-the-download-of-express-installation-files-for-windows-10-updates-on-the-server"></a>So aktivieren Sie den Download von Expressinstallationsdateien für Windows 10-Updates auf dem Server
 Um mit der Synchronisierung der Metadaten für Windows 10-Expressinstallationsdatein zu beginnen, müssen Sie dies in den Punkteigenschaften des Software Updates aktivieren.
-1.  Wechseln Sie in der Configuration Manager-Konsole zu **Verwaltung** > **Standortkonfiguration** > **Standorte**.
-2.  Wählen Sie entweder den Standort der zentralen Verwaltung oder den eigenständigen primären Standort aus.
-3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Einstellungen** auf **Standortkomponenten konfigurieren**, und klicken Sie dann auf **Softwareupdatepunkt**. Wählen Sie in der Registerkarte **Updatedateien** **Download full files for all approved updates and express installation files for Windows 10** (Vollständige Dateien für alle genehmigten Windows 10-Expressinstallationsdateien herunterladen) aus.
+1.    Wechseln Sie in der Configuration Manager-Konsole zu **Verwaltung** > **Standortkonfiguration** > **Standorte**.
+2.    Wählen Sie entweder den Standort der zentralen Verwaltung oder den eigenständigen primären Standort aus.
+3.    Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Einstellungen** auf **Standortkomponenten konfigurieren**, und klicken Sie dann auf **Softwareupdatepunkt**. Wählen Sie in der Registerkarte **Updatedateien** **Download full files for all approved updates and express installation files for Windows 10** (Vollständige Dateien für alle genehmigten Windows 10-Expressinstallationsdateien herunterladen) aus.
 
 ### <a name="to-enable-support-for-clients-to-download-and-install-express-installation-files"></a>So aktivieren Sie die Clientunterstützung für das Herunterladen und Installieren von Expressinstallationsdateien
 Um die Unterstützung der Expressinstallationsdatein auf Clients zu aktivieren, müssen Sie die Expressinstallationsdateien auf Clients im Bereich Software Updates der Clienteinstellungen aktivieren. Dadurch wird ein neuer HTTP-Listener erstellt, der Anfragen zum Herunterladen von Expressinstallationsdateien auf den Port, den Sie angeben, abruft. Sobald Sie die Clienteinstellungen zur Aktivierung dieser Funktionalität auf dem Client bereitstellen, wird diese versuchen, das Delta zwischen dem kumulativen Update von Windows 10 des aktuellen Monat und dem Update des Vormonats herunterzuladen (Clients müssen eine Version von Windows 10 ausführen, die Espressinstallationsdateien unterstützt).
-1.  Aktivieren Sie „Expressinstallationsdateien unterstützten“ in den Komponenteneigenschaften des Softwareupdatepunks (vorheriger Vorgang).
-2.  Navigieren Sie in der Configuration Manager-Konsole zu **Verwaltung** > **Clienteinstellungen**.
-3.  Wählen Sie die entsprechenden Clienteinstellungen aus, und klicken Sie dann in der Registerkarte **Home** auf **Eigenschaften**.
-4.  Wählen Sie die Seite **Softwareupdates** aus, konfigurieren Sie **Ja** für die Einstellung **Enable installation of Express Updates on clients** (Installation von Express-Updates auf Clients aktivieren), und konfigurieren Sie den Port, der für den HTTP-Listener auf dem Client für die Einstellung **Port used to download content for Express Updates** (Zum Herunterladen von Inhalt für Express-Updates verwendeter Port) verwendet wird.
+1.    Aktivieren Sie „Expressinstallationsdateien unterstützten“ in den Komponenteneigenschaften des Softwareupdatepunks (vorheriger Vorgang).
+2.    Navigieren Sie in der Configuration Manager-Konsole zu **Verwaltung** > **Clienteinstellungen**.
+3.    Wählen Sie die entsprechenden Clienteinstellungen aus, und klicken Sie dann in der Registerkarte **Home** auf **Eigenschaften**.
+4.    Wählen Sie die Seite **Softwareupdates** aus, konfigurieren Sie **Ja** für die Einstellung **Enable installation of Express Updates on clients** (Installation von Express-Updates auf Clients aktivieren), und konfigurieren Sie den Port, der für den HTTP-Listener auf dem Client für die Einstellung **Port used to download content for Express Updates** (Zum Herunterladen von Inhalt für Express-Updates verwendeter Port) verwendet wird.
 
 
 ## <a name="odata-endpoint-data-access"></a>Datenzugriff für OData-Endpunkt
@@ -317,6 +317,6 @@ Jetzt da Sie Multi-Factor Authentication (MFA) zur Geräteregistrierung im Azure
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

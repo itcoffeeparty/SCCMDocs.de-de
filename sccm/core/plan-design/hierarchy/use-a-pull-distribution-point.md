@@ -2,7 +2,7 @@
 title: Pullverteilungspunkt | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über Konfigurationen und Einschränkungen zur Verwendung eines Pullverteilungspunkts mit System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: f94d928244699c1c926dca05823f0029c588c7f1
+ms.sourcegitcommit: 9b366262ae59a8cb57c0f1760b961194d17bcf52
+ms.openlocfilehash: db5039ff6cb93e3099b096196d49a1f06c315a6b
 
 
 ---
@@ -48,7 +48,7 @@ Von Pullverteilungspunkten werden die gleichen Konfigurationen und Funktionen wi
 
 -   Wenn vom Paketübertragungs-Manager die Verfügbarkeit des Inhalts bestätigt wird, wird der Pullverteilungspunkt benachrichtigt, damit der Inhalt heruntergeladen wird. Nach Eingang dieser Benachrichtigung auf dem Pullverteilungspunkt wird versucht, den Inhalt von den Quellverteilungspunkten herunterzuladen.  
 
--   Sobald das Herunterladen auf den Pullverteilungspunkt abgeschlossen ist, wird dieser Status an den Verwaltungspunkt übermittelt. Wenn dieser Status allerdings nach 60 Minuten nicht empfangen wird, wird der Paketübertragungs-Manager aktiviert, um auf dem Pullverteilungspunkt zu überprüfen, ob der Inhalt heruntergeladen wurde. Ist das Herunterladen des Inhalts noch nicht abgeschlossen, wird der Paketübertragungs-Manager für 60 Minuten deaktiviert, bevor der Pullverteilungspunkt erneut überprüft wird. Dieser Zyklus wird bis zum Abschluss der Inhaltsübertragung an den Pullverteilungspunkt fortgesetzt.  
+-   Sobald das Herunterladen auf den Pullverteilungspunkt abgeschlossen ist, wird dieser Status an den Verwaltungspunkt übermittelt. Wenn dieser Status allerdings nach 60 Minuten nicht empfangen wurde, wird der Paketübertragungs-Manager aktiviert, um auf dem Pullverteilungspunkt zu überprüfen, ob der Inhalt heruntergeladen wurde. Ist das Herunterladen des Inhalts noch nicht abgeschlossen, wird der Paketübertragungs-Manager für 60 Minuten deaktiviert, bevor der Pullverteilungspunkt erneut überprüft wird. Dieser Zyklus wird bis zum Abschluss der Inhaltsübertragung an den Pullverteilungspunkt fortgesetzt.  
 
 **Ein Pullverteilungspunkt kann bei der Installation des Verteilungspunkts bzw. danach konfiguriert werden** , indem Sie die Eigenschaften der Standortsystemrolle „Verteilungspunkt“ bearbeiten.  
 
@@ -67,9 +67,9 @@ Von Pullverteilungspunkten werden die gleichen Konfigurationen und Funktionen wi
     > [!NOTE]  
     >  Wenn ein Verteilungspunkt als Pullverteilungspunkt konfiguriert ist, wird die Registerkarte **Begrenzung der Datenübertragungsrate** in den Eigenschaften des Verteilungspunkts nicht angezeigt.  
 
--   Bei der Inhaltsverteilung werden von einem Verteilungspunkt die **Wiederholungseinstellungen** nicht verwendet. **Wiederholungseinstellungen** können als Teil der **Eigenschaften der Softwareverteilungskomponente** für jeden Standort konfiguriert werden. Sie können diese Einstellungen konfigurieren, indem Sie im Arbeitsbereich **Verwaltung** der Configuration Manager-Konsole **Standortkonfiguration** erweitern und anschließend **Standorte** auswählen. Wählen Sie im Ergebnisbereich einen Standort aus, und wählen Sie dann auf der Registerkarte **Startseite** die Option **Standortkomponenten konfigurieren**und anschließend **Softwareverteilung**aus.  
+-   Bei der Inhaltsverteilung werden von einem Verteilungspunkt die **Wiederholungseinstellungen** nicht verwendet. **Wiederholungseinstellungen** können als Teil der **Eigenschaften der Softwareverteilungskomponente** für jeden Standort konfiguriert werden. Sie können diese Einstellungen konfigurieren, indem Sie im Arbeitsbereich **Verwaltung** der Configuration Manager-Konsole **Standortkonfiguration** erweitern und anschließend **Standorte** auswählen. Wählen Sie im Ergebnisbereich einen Standort aus, und wählen Sie dann auf der Registerkarte **Startseite** die Option **Standortkomponenten konfigurieren** aus. Abschließend wählen Sie **Softwareverteilung** aus.  
 
--   Zur Übertragung von Inhalten von einem Quellverteilungspunkt in einer Gesamtstruktur muss auf dem Computer, auf dem der Pullverteilungspunkt gehostet wird, ein Configuration Manager-Client installiert sein. Außerdem muss ein Netzwerkzugriffskonto konfiguriert sein, über das der Zugriff auf den Quellverteilungspunkt möglich ist.  
+-   Zur Übertragung von Inhalt von einem Quellverteilungspunkt in einer Remotegesamtstruktur muss auf dem Computer, auf dem der Pullverteilungspunkt gehostet wird, ein Configuration Manager-Client installiert sein. Außerdem muss ein Netzwerkzugriffskonto konfiguriert sein, über das der Zugriff auf den Quellverteilungspunkt möglich ist.  
 
 -   Auf einem als Pullverteilungspunkt konfigurierten Computer mit einem Configuration Manager-Client muss die Version des Clients mit der des Configuration Manager-Standorts übereinstimmen, von dem der Pullverteilungspunkt installiert wird. Diese Anforderung gilt für den Pullverteilungspunkt, damit die Komponente „CCMFramework“ verwendet werden kann, die vom Pullverteilungspunkt und dem Configuration Manager-Client genutzt wird.  
 
@@ -103,17 +103,17 @@ Wenn von einem Pullverteilungspunkt Inhalt von einem Quellverteilungspunkt herun
 ## <a name="about-content-transfers"></a>Informationen zur Übertragung von Inhalten  
  Die Inhaltsübertragung wird von den Pullverteilungspunkten über die Komponente **CCMFramework** der Configuration Manager-Clientsoftware verwaltet.  
 
--   Dieses Framework wird von **Pulldp.msi** installiert, wenn Sie den Verteilungspunkt als Pullverteilungspunkt konfigurieren. Der Configuration Manager-Client muss hierbei nicht installiert sein.  
+-   Dieses Framework wird von **Pulldp.msi** installiert, wenn Sie den Verteilungspunkt als Pullverteilungspunkt konfigurieren. Der Configuration Manager-Client ist für das Framework nicht erforderlich.  
 
 -   Nach der Installation des Pullverteilungspunkts muss der Dienst „CCMExec“ auf dem Verteilungspunktcomputer funktionstüchtig sein, damit der Pullverteilungspunkt eingesetzt werden kann.  
 
 -   Der Vorgang der Inhaltsübertragung wird vom Pullverteilungspunkt mithilfe der **intelligenten Hintergrundübertragung** (Background Intelligent Transfer Service, BITS) ausgeführt und auf dem Verteilungspunktcomputer in **datatransferservice.log** und **pulldp.log** protokolliert.  
 
-## <a name="see-also"></a>Siehe auch  
- [Fundamental concepts for content management in System Center Configuration Manager (Grundlegende Konzepte für das Content Management in System Center Configuration Manager)](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)   
+## <a name="see-also"></a>Weitere Informationen:  
+ [Grundlegende Konzepte für die Inhaltsverwaltung in System Center Configuration Manager](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)   
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 

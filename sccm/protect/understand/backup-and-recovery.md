@@ -16,12 +16,12 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8d638d7e8f203ff2501a09918ab3424706d1261f
-ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
+ms.sourcegitcommit: 3aa9f2e4d3f7210981b5b84942485de11fe15cb2
+ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
 
 ---
 
-# <a name="backup-and-recovery"></a>Sicherung und Wiederherstellung 
+# <a name="backup-and-recovery"></a>Sicherung und Wiederherstellung
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -89,7 +89,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 >  Configuration Manager kann die Standortdatenbank aus dem Configuration Manager-Sicherungswartungstask oder aus der Standortdatenbanksicherung wiederherstellen, die Sie mit einem anderen Prozess erstellt haben. Beispielsweise können Sie die Standortdatenbank anhand einer Sicherung wiederherstellen, die im Rahmen des Microsoft SQL Server-Wartungsplans erstellt wurde. Sie können die Standortdatenbank anhand einer Sicherung wiederherstellen, die mithilfe von System Center 2012 Data Protection Manager (DPM) erstellt wurde. Weitere Informationen finden Sie unter [Verwenden von Data Protection Manager zur Sicherung der Standortdatenbank](#BKMK_DPMBackup).  
 
 ###  <a name="a-namebkmkbackupmaintenancetaska-backup-maintenance-task"></a><a name="BKMK_BackupMaintenanceTask"></a> Sicherungswartungstask  
- Durch Planen des vordefinierten Wartungstasks „Standortserver sichern“ können Sie die Sicherung von Configuration Manager-Standorten automatisieren. Sie können einen Standort der zentralen Verwaltung und einen primären Standort sichern. Bei sekundären Standorten oder Standortsystemservern hingegen wird eine Sicherung nicht unterstützt. Wenn der Configuration Manager-Sicherungsdienst ausgeführt wird, läuft dieser Vorgang den in der Sicherungssteuerungsdatei (**<Configuration Manager-Installationsordner\>\Inboxes\Smsbkup.box\Smsbkup.ctl**) definierten Anweisungen entsprechend ab. Sie können die Sicherungssteuerungsdatei ändern, um das Verhalten des Sicherungsdienstes zu ändern. Informationen zum Status der Standortsicherung werden in die Datei **Smsbkup.log** geschrieben. Diese Datei wird in dem Zielordner erstellt, den Sie in den Eigenschaften des Wartungstasks „Standortserver sichern“ angeben.  
+ Durch Planen des vordefinierten Wartungstasks „Standortserver sichern“ können Sie die Sicherung von Configuration Manager-Standorten automatisieren. Sie können einen Standort der zentralen Verwaltung und einen primären Standort sichern. Bei sekundären Standorten oder Standortsystemservern hingegen wird eine Sicherung nicht unterstützt. Wenn der Configuration Manager-Sicherungsdienst ausgeführt wird, läuft dieser Vorgang den in der Sicherungssteuerungsdatei (**&lt;Configuration Manager-Installationsordner\>\Inboxes\Smsbkup.box\Smsbkup.ctl**) definierten Anweisungen entsprechend ab. Sie können die Sicherungssteuerungsdatei ändern, um das Verhalten des Sicherungsdienstes zu ändern. Informationen zum Status der Standortsicherung werden in die Datei **Smsbkup.log** geschrieben. Diese Datei wird in dem Zielordner erstellt, den Sie in den Eigenschaften des Wartungstasks „Standortserver sichern“ angeben.  
 
 
 ##### <a name="to-enable-the-site-backup-maintenance-task"></a>So aktivieren Sie den Wartungstask zur Standortsicherung  
@@ -116,7 +116,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
     -   **Lokale Laufwerke auf dem Standortserver und SQL Server**: Bei Auswahl dieser Option werden die Sicherungsdateien für den Standort im angegebenen Pfad auf dem lokalen Laufwerk des Standortservers gespeichert, und die Sicherungsdateien für die Standortdatenbank werden im angegebenen Pfad auf dem lokalen Laufwerk des Standortdatenbankservers gespeichert. Sie müssen die lokalen Ordner erstellen, bevor der Sicherungstask ausgeführt wird. Für das Computerkonto des Standortservers müssen die NTFS-Berechtigungen **Schreiben** für den Ordner vorliegen, den Sie auf dem Standortserver erstellen. Für das Computerkonto des SQL Servers müssen die NTFS-Berechtigungen **Schreiben** für den Ordner vorliegen, den Sie auf dem Standortdatenbankserver erstellen. Diese Option ist nur verfügbar, wenn die Standortdatenbank nicht auf dem Standortserver installiert ist.  
 
     > [!NOTE]  
-    >   - Die Option zum Durchsuchen des Sicherungsziels ist nur verfügbar, wenn Sie den UNC-Pfad des Sicherungsziels angeben.
+    >    - Die Option zum Durchsuchen des Sicherungsziels ist nur verfügbar, wenn Sie den UNC-Pfad des Sicherungsziels angeben.
 
     > - Der Ordner- oder Freigabename, der für das Sicherungsziel verwendet wird, darf keine Unicode-Zeichen enthalten.  
 
@@ -139,7 +139,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   Wenn vom Wartungstask „Standortserver sichern“ bei einem Sicherungsfehler konfigurationsgemäß eine Warnung generiert wird, können Sie die Systemfehler im Arbeitsbereich **Überwachung** im Knoten **Warnungen** überprüfen.  
 
-    -   Prüfen Sie die Datei „Smsbkup.log“ unter „<*Configuration Manager-Installationsordner*>\Logs“ auf Warnungen und Fehler. Wenn die Standortsicherung erfolgreich abgeschlossen ist, wird `Backup completed` zusammen mit einem Zeitstempel und der Meldungs-ID `STATMSG: ID=5035`angezeigt.  
+    -   Prüfen Sie die Datei „Smsbkup.log“ unter „&lt;*Configuration Manager-Installationsordner*>\Logs“ auf Warnungen und Fehler. Wenn die Standortsicherung erfolgreich abgeschlossen ist, wird `Backup completed` zusammen mit einem Zeitstempel und der Meldungs-ID `STATMSG: ID=5035`angezeigt.  
 
     > [!TIP]  
     >  Wenn beim Sicherungswartungstask ein Fehler auftritt, können Sie den Task durch Anhalten und Neustarten des Dienstes SMS_SITE_BACKUP neu starten.  
@@ -164,7 +164,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 -   Für den Standort gibt es möglicherweise keine Sicherungsmomentaufnahme, beispielsweise weil beim Wartungstask „Standortserver sichern“ ein Fehler aufgetreten ist. Da der Sicherungstask den vorherigen Sicherungssnapshot entfernt, bevor er mit dem Sichern der aktuellen Daten beginnt, gibt es zeitweise keinen gültigen Sicherungssnapshot.  
 
 ###  <a name="a-namebkmkusingafterbackupa-using-the-afterbackupbat-file"></a><a name="BKMK_UsingAfterBackup"></a> Verwenden der Datei „AfterBackup.bat“  
- Nach der erfolgreichen Sicherung des Standorts wird vom Task „Standortserver sichern“ automatisch versucht, eine Datei namens AfterBackup.bat auszuführen. Sie müssen die Datei „AfterBackup.bat“ manuell in „<*Configuration Manager-Installationsordner*>\Inboxes\Smsbkup“ erstellen. Wenn eine Datei „AfterBackup.bat“ vorhanden ist und sich im richtigen Ordner befindet, wird sie nach Abschluss des Sicherungstasks automatisch ausgeführt. Mit der Datei AfterBackup.bat können Sie die Sicherungsmomentaufnahme am Ende jedes Sicherungsvorgangs archivieren und automatisch andere nach der Sicherung erforderliche Tasks ausführen, die nicht zum Wartungstask „Standortserver sichern“ gehören. Mit der Datei AfterBackup.bat werden die Archivierungs- und Sicherungsvorgänge integriert. Dadurch wird sichergestellt, dass jede neue Sicherungsmomentaufnahme archiviert wird. Wenn die Datei AfterBackup.bat nicht vorhanden ist, wird sie vom Sicherungstask übersprungen. Dies hat keine Auswirkungen auf den Sicherungsvorgang. Prüfen Sie im Arbeitsbereich **Überwachung** im Knoten **Komponentenstatus** die Statusmeldungen für SMS_SITE_BACKUP. Daran erkennen Sie, ob die Datei "AfterBackup.bat" vom Standortsicherungstask erfolgreich ausgeführt wurde. Wenn die Befehlsdatei „AfterBackup.bat“ erfolgreich gestartet wurde, wird die Meldungs-ID 5040 angezeigt.  
+ Nach der erfolgreichen Sicherung des Standorts wird vom Task „Standortserver sichern“ automatisch versucht, eine Datei namens AfterBackup.bat auszuführen. Sie müssen die Datei „AfterBackup.bat“ manuell in „&lt;*Configuration Manager-Installationsordner*>\Inboxes\Smsbkup“ erstellen. Wenn eine Datei „AfterBackup.bat“ vorhanden ist und sich im richtigen Ordner befindet, wird sie nach Abschluss des Sicherungstasks automatisch ausgeführt. Mit der Datei AfterBackup.bat können Sie die Sicherungsmomentaufnahme am Ende jedes Sicherungsvorgangs archivieren und automatisch andere nach der Sicherung erforderliche Tasks ausführen, die nicht zum Wartungstask „Standortserver sichern“ gehören. Mit der Datei AfterBackup.bat werden die Archivierungs- und Sicherungsvorgänge integriert. Dadurch wird sichergestellt, dass jede neue Sicherungsmomentaufnahme archiviert wird. Wenn die Datei AfterBackup.bat nicht vorhanden ist, wird sie vom Sicherungstask übersprungen. Dies hat keine Auswirkungen auf den Sicherungsvorgang. Prüfen Sie im Arbeitsbereich **Überwachung** im Knoten **Komponentenstatus** die Statusmeldungen für SMS_SITE_BACKUP. Daran erkennen Sie, ob die Datei "AfterBackup.bat" vom Standortsicherungstask erfolgreich ausgeführt wurde. Wenn die Befehlsdatei „AfterBackup.bat“ erfolgreich gestartet wurde, wird die Meldungs-ID 5040 angezeigt.  
 
 > [!TIP]  
 >  Sie müssen ein Kopierbefehlstool wie Robocopy in der Batchdatei verwenden, um die Datei „AfterBackup.bat“ zum Archivieren der Sicherungsdateien für den Standortserver zu erstellen. Beispielsweise können Sie die Datei "AfterBackup.bat" erstellen und der ersten Zeile Folgendes hinzufügen: `Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`. Weitere Informationen zu Robocopy finden Sie in der Befehlszeilenreferenz unter [Robocopy](http://go.microsoft.com/fwlink/p/?LinkId=228408) .  
@@ -220,7 +220,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 4.  Klicken Sie auf der Registerkarte **Standortrolle** in der Gruppe **Eigenschaften** auf **Eigenschaften**.  
 5.  Die Ordner, in denen die Daten zur Benutzerzustandsmigration gespeichert werden, werden auf der Registerkarte **Allgemein** im Abschnitt **Ordnerdetails** aufgeführt.  
 
-
+## <a name="recover-a-configuration-manager-site"></a>Wiederherstellen eines Configuration Manager-Standorts
  Eine Configuration Manager-Standortwiederherstellung ist bei einem Configuration Manager-Standortausfall oder bei einem Datenverlust in der Standortdatenbank erforderlich. Bei der Standortwiederherstellung geht es primär darum, Daten zu reparieren und erneut zu synchronisieren, um eine Unterbrechung von Vorgängen zu vermeiden.  
 
 > [!IMPORTANT]  
@@ -433,7 +433,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Erforderlich:** Vielleicht  
 
-    -   **Werte:** <FQDN des Referenzstandorts\>  
+    -   **Werte:** &lt;ReferenceSiteFQDN\>  
 
     -   **Details:** Hiermit wird der primäre Referenzstandort angegeben, der vom Standort der zentralen Verwaltung verwendet wird, um globale Daten wiederherzustellen, wenn die Datenbanksicherung älter ist als die Beibehaltungsdauer der Änderungsnachverfolgung, oder wenn Sie den Standort ohne Sicherung wiederherstellen.  
 
@@ -447,7 +447,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Erforderlich:** Nein  
 
-    -   **Werte:** <Pfad zum Sicherungssatz des Standortservers\>  
+    -   **Werte:** &lt;PathToSiteServerBackupSet\>  
 
     -   **Details:** Hiermit wird der Pfad zum Sicherungssatz des Standortservers angegeben. Dieser Schlüssel ist optional, wenn für die Einstellung **ServerRecoveryOptions** der Wert **1** oder **2**konfiguriert wurde. Geben Sie einen Wert für den Schlüssel **SiteServerBackupLocation** an, um den Standort aus einer Standortsicherung wiederherstellen zu lassen. Wenn Sie keinen Wert angeben, wird der Standort erneut installiert, ohne ihn aus einem Sicherungssatz wiederherzustellen.  
 
@@ -455,7 +455,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Erforderlich:** Vielleicht  
 
-    -   **Werte:** <Pfad zum Sicherungssatz der Standortdatenbank\>  
+    -   **Werte:** &lt;PathToSiteDatabaseBackupSet\>  
 
     -   **Details:** Hiermit wird der Pfad zum Sicherungssatz der Standortdatenbank angegeben. Der Schlüssel **BackupLocation** ist erforderlich, wenn Sie für den Schlüssel **ServerRecoveryOptions** den Wert **1** oder **4** konfigurieren und für den Schlüssel **DatabaseRecoveryOptions** den Wert **10** .  
 
@@ -477,7 +477,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Erforderlich:** Ja  
 
-    -   **Werte:** <Standortcode\>  
+    -   **Werte:** &lt;Standortcode\>  
 
     -   **Details:** Drei alphanumerische Zeichen, die den Standort in der Hierarchie eindeutig angeben. Sie müssen den Standortcode angeben, der vor dem Auftreten des Fehlers vom Standort verwendet wurde.  
 
@@ -493,7 +493,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Erforderlich:** Ja  
 
-    -   **Werte:** <*Configuration Manager-Installationspfad*>  
+    -   **Werte:** &lt;*ConfigMgrInstallationPath*>  
 
     -   **Details:** Hiermit wird der Installationsordner für die Configuration Manager-Programmdateien angegeben.  
 
@@ -504,7 +504,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Erforderlich:** Ja  
 
-    -   **Werte:** <*FQDN des SMS-Anbieters*>  
+    -   **Werte:**&lt;*FQDN des SMS-Anbieters*>  
 
     -   **Details:** Hiermit wird der FQDN des Servers angegeben, auf dem der SMS-Anbieter gehostet wird. Sie müssen den Server angeben, von dem der SMS-Anbieter vor Auftreten des Fehlers gehostet wurde.  
 
@@ -526,7 +526,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Erforderlich:** Ja  
 
-    -   **Werte:** <*Pfad zu erforderlichen Dateien für Setup*>  
+    -   **Werte:**&lt;*PathToSetupPrerequisiteFiles*>  
 
     -   **Details:** Über diesen Schlüssel wird der Pfad zu den für Setup erforderlichen Dateien angegeben. Je nach dem Wert unter **PrerequisiteComp** wird dieser Pfad von Setup zum Speichern heruntergeladener Dateien oder zum Suchen der zuvor heruntergeladenen Dateien verwendet.  
 
@@ -560,7 +560,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Erforderlich:** Ja  
 
-    -   **Werte:** *<SQL Server-Name\>*  
+    -   **Werte:** *&lt;SQLServerName\>*  
 
     -   **Details:** Der Name des Servers oder der gruppierten Instanz mit SQL Server, auf dem bzw. der die Standortdatenbank gehostet werden soll. Sie müssen den Server angeben, von dem die Standortdatenbank vor dem Auftreten des Fehlers gehostet wurde.  
 
@@ -570,11 +570,11 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Werte:**  
 
-         *&lt;Name der Standortdatenbank\>*  
+         *&lt;Name_der_Standortdatenbank\>*  
 
          auf der Registerkarte  
 
-         *<Instanzname\>*\\*<Name der Standortdatenbank\>*  
+         *&lt;Instanzname\>*\\*&lt;Name_der_Standortdatenbank\>*  
 
     -   **Details:** Gibt den Namen der SQL Server-Datenbank an, die bei der Installation der Datenbank für den Standort der zentralen Verwaltung erstellt oder verwendet werden soll. Sie müssen den gleichen Datenbanknamen angeben, der vor Auftreten des Fehlers verwendet wurde.  
 
@@ -585,7 +585,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Erforderlich:** Nein  
 
-    -   **Werte:** <*SSB-Portnummer*>  
+    -   **Werte:** &lt;*SSBPortNumber*>  
 
     -   **Details:** Gibt den Port des SQL Server-Service Brokers (SSB) an, der von SQL Server verwendet wird. Von SSB wird zwar in der Regel TCP-Port 4022 verwendet, aber es werden auch andere Ports unterstützt. Sie müssen den gleichen SSB-Port angeben, der vor Auftreten des Fehlers verwendet wurde.  
 
@@ -646,7 +646,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Erforderlich:** Nein  
 
-    -   **Werte:** <Pfad zum Sicherungssatz des Standortservers\>  
+    -   **Werte:** &lt;PathToSiteServerBackupSet\>  
 
     -   **Details:** Hiermit wird der Pfad zum Sicherungssatz des Standortservers angegeben. Dieser Schlüssel ist optional, wenn für die Einstellung **ServerRecoveryOptions** der Wert **1** oder **2**konfiguriert wurde. Geben Sie einen Wert für den Schlüssel **SiteServerBackupLocation** an, um den Standort aus einer Standortsicherung wiederherstellen zu lassen. Wenn Sie keinen Wert angeben, wird der Standort erneut installiert, ohne ihn aus einem Sicherungssatz wiederherzustellen.  
 
@@ -654,7 +654,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Erforderlich:** Vielleicht  
 
-    -   **Werte:** <Pfad zum Sicherungssatz der Standortdatenbank\>  
+    -   **Werte:** &lt;PathToSiteDatabaseBackupSet\>  
 
     -   **Details:** Hiermit wird der Pfad zum Sicherungssatz der Standortdatenbank angegeben. Der Schlüssel **BackupLocation** ist erforderlich, wenn Sie für den Schlüssel **ServerRecoveryOptions** den Wert **1** oder **4** konfigurieren und für den Schlüssel **DatabaseRecoveryOptions** den Wert **10** .  
 
@@ -676,7 +676,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Erforderlich:** Ja  
 
-    -   **Werte:** <Standortcode\>  
+    -   **Werte:** &lt;Standortcode\>  
 
     -   **Details:** Drei alphanumerische Zeichen, die den Standort in der Hierarchie eindeutig angeben. Sie müssen den Standortcode angeben, der vor dem Auftreten des Fehlers vom Standort verwendet wurde.  
 
@@ -692,7 +692,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Erforderlich:** Ja  
 
-    -   **Werte:** <*Configuration Manager-Installationspfad*>  
+    -   **Werte:** &lt;*ConfigMgrInstallationPath*>  
 
     -   **Details:** Hiermit wird der Installationsordner für die Configuration Manager-Programmdateien angegeben.  
 
@@ -703,7 +703,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Erforderlich:** Ja  
 
-    -   **Werte:** <*FQDN des SMS-Anbieters*>  
+    -   **Werte:**&lt;*FQDN des SMS-Anbieters*>  
 
     -   **Details:** Hiermit wird der FQDN des Servers angegeben, auf dem der SMS-Anbieter gehostet wird. Sie müssen den Server angeben, von dem der SMS-Anbieter vor Auftreten des Fehlers gehostet wurde.  
 
@@ -725,7 +725,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Erforderlich:** Ja  
 
-    -   **Werte:** <*Pfad zu erforderlichen Dateien für Setup*>  
+    -   **Werte:**&lt;*PathToSetupPrerequisiteFiles*>  
 
     -   **Details:** Über diesen Schlüssel wird der Pfad zu den für Setup erforderlichen Dateien angegeben. Je nach dem Wert unter **PrerequisiteComp** wird dieser Pfad von Setup zum Speichern heruntergeladener Dateien oder zum Suchen der zuvor heruntergeladenen Dateien verwendet.  
 
@@ -759,7 +759,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Erforderlich:** Ja  
 
-    -   **Werte:** *<SQL Server-Name\>*  
+    -   **Werte:** *&lt;SQLServerName\>*  
 
     -   **Details:** Der Name des Servers oder der gruppierten Instanz mit SQL Server, auf dem bzw. der die Standortdatenbank gehostet werden soll. Sie müssen den Server angeben, von dem die Standortdatenbank vor dem Auftreten des Fehlers gehostet wurde.  
 
@@ -769,11 +769,11 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Werte:**  
 
-         *&lt;Name der Standortdatenbank\>*  
+         *&lt;Name_der_Standortdatenbank\>*  
 
          auf der Registerkarte  
 
-         *<Instanzname\>*\\*<Name der Standortdatenbank\>*  
+         *&lt;Instanzname\>*\\*&lt;Name_der_Standortdatenbank\>*  
 
     -   **Details:** Gibt den Namen der SQL Server-Datenbank an, die bei der Installation der Datenbank für den Standort der zentralen Verwaltung erstellt oder verwendet werden soll. Sie müssen den gleichen Datenbanknamen angeben, der vor Auftreten des Fehlers verwendet wurde.  
 
@@ -784,7 +784,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Erforderlich:** Nein  
 
-    -   **Werte:** <*SSB-Portnummer*>  
+    -   **Werte:** &lt;*SSBPortNumber*>  
 
     -   **Details:** Gibt den Port des SQL Server-Service Brokers (SSB) an, der von SQL Server verwendet wird. Von SSB wird zwar in der Regel TCP-Port 4022 verwendet, aber es werden auch andere Ports unterstützt. Sie müssen den gleichen SSB-Port angeben, der vor Auftreten des Fehlers verwendet wurde.  
 
@@ -794,7 +794,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Erforderlich:** Vielleicht  
 
-    -   **Werte:** <**>  
+    -   **Werte:** &lt;*SiteCodeForCentralAdministrationSite*>  
 
     -   **Details:** Über diesen Schlüssel wird der Standort der zentralen Verwaltung angegeben, dem ein primärer Standort beim Hinzufügen zur Configuration Manager-Hierarchie zugeordnet wird. Diese Einstellung ist erforderlich, wenn der primäre Standort vor dem Fehler mit einem zentralen Verwaltungsstandort verbunden war. Sie müssen den Standortcode angeben, der vor dem Auftreten des Fehlers vom zentralen Verwaltungsstandort verwendet wurde.  
 
@@ -802,7 +802,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Erforderlich:** Nein  
 
-    -   **Werte:** <*Intervall*>  
+    -   **Werte:** &lt;*Intervall*>  
 
     -   **Details:** Über diesen Schlüssel wird das Wiederholungsintervall angegeben (in Minuten), wenn beim Herstellen der Verbindung mit dem Standort der zentralen Verwaltung ein Fehler aufgetreten ist. Wenn beispielsweise beim Herstellen der Verbindung mit dem Standort der zentralen Verwaltung ein Fehler auftritt, wird der Verbindungsversuch auf dem primären Standort nach der für CASRetryInterval angegebenen Anzahl von Minuten wiederholt.  
 
@@ -810,7 +810,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Erforderlich:** Nein  
 
-    -   **Werte:** <*Timeout*>  
+    -   **Werte:** &lt;*Timeout*>  
 
     -   **Details:** Über diesen Schlüssel wird der maximale Timeoutwert (in Minuten) für die Verbindung eines primären Standorts mit dem Standort der zentralen Verwaltung angegeben. Wenn beispielsweise beim Herstellen der Verbindung mit dem Standort der zentralen Verwaltung ein Fehler auftritt, wird der Verbindungsversuch auf dem primären Standort basierend auf dem Wert für CASRetryInterval solange wiederholt, bis der für WaitForCASTimeout angegebene Zeitraum abgelaufen ist. Sie können einen Wert von 0 bis 100 angeben.  
 
@@ -903,7 +903,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
  Während des Sicherungsprozesses findet zwischen dem SMS-Writer-Dienst und dem Volumeschattenkopie-Dienst (Volume Shadow Copy Service, VSS) eine Interaktion statt. Der SMS-Writer-Dienst muss ausgeführt werden, damit die Configuration Manager-Standortsicherung erfolgreich abgeschlossen werden kann.  
 
 ### <a name="purpose"></a>Zweck  
- SMS-Writer wird beim VSS registriert und an dessen Schnittstellen und Ereignissse gebunden. Wenn vom VSS Ereignisse übertragen oder bestimmte Benachrichtigungen an SMS-Writer gesendet werden, wird von SMS-Writer daraufhin eine entsprechende Aktion ausgeführt. Zunächst wird die Sicherungssteuerungsdatei smsbkup.ctl, die sich unter „<*Configuration Manager-Installationspfad*>\inboxes\smsbkup.box“ befindet, von SMS-Writer gelesen, und dann werden die zu sichernden Dateien und Daten ermittelt. Anschließend werden von SMS-Writer Metadaten erstellt, die sich aus verschiedenen Komponenten zusammensetzen. Dabei dienen die ermittelten Informationen sowie bestimmte Daten aus den SMS-Registrierungsschlüsseln und Unterschlüsseln als Grundlage. Die Metadaten werden an den VSS gesendet, wenn sie angefordert werden. Vom VSS werden die Metadaten wiederum an die anfordernde Anwendung gesendet (Configuration Manager-Sicherungs-Manager). Vom Sicherungs-Manager werden die zu sichernden Daten ausgewählt und über den VSS an SMS-Writer gesendet. Von SMS-Writer werden geeignete Maßnahmen zur Vorbereitung der Sicherung ergriffen. Vom VSS wird ein Ereignis gesendet, wenn er für die Momentaufnahme bereit ist. Daraufhin werden von SMS-Write sämtliche Configuration Manager-Dienste angehalten, und es wird sichergestellt, dass die Configuration Manager-Aktivitäten während der Erstellung der Momentaufnahme gesperrt sind. Nachdem die Momentaufnahme erstellt wurde, werden die Dienste und Aktivitäten von SMS-Writer neu gestartet.  
+ SMS-Writer wird beim VSS registriert und an dessen Schnittstellen und Ereignissse gebunden. Wenn vom VSS Ereignisse übertragen oder bestimmte Benachrichtigungen an SMS-Writer gesendet werden, wird von SMS-Writer daraufhin eine entsprechende Aktion ausgeführt. Zunächst wird die Sicherungssteuerungsdatei „smsbkup.ctl“, die sich unter „&lt;*Configuration Manager-Installationspfad*>\inboxes\smsbkup.box“ befindet, von SMS-Writer gelesen, und dann werden die zu sichernden Dateien und Daten ermittelt. Anschließend werden von SMS-Writer Metadaten erstellt, die sich aus verschiedenen Komponenten zusammensetzen. Dabei dienen die ermittelten Informationen sowie bestimmte Daten aus den SMS-Registrierungsschlüsseln und Unterschlüsseln als Grundlage. Die Metadaten werden an den VSS gesendet, wenn sie angefordert werden. Vom VSS werden die Metadaten wiederum an die anfordernde Anwendung gesendet (Configuration Manager-Sicherungs-Manager). Vom Sicherungs-Manager werden die zu sichernden Daten ausgewählt und über den VSS an SMS-Writer gesendet. Von SMS-Writer werden geeignete Maßnahmen zur Vorbereitung der Sicherung ergriffen. Vom VSS wird ein Ereignis gesendet, wenn er für die Momentaufnahme bereit ist. Daraufhin werden von SMS-Write sämtliche Configuration Manager-Dienste angehalten, und es wird sichergestellt, dass die Configuration Manager-Aktivitäten während der Erstellung der Momentaufnahme gesperrt sind. Nachdem die Momentaufnahme erstellt wurde, werden die Dienste und Aktivitäten von SMS-Writer neu gestartet.  
 
  Der SMS-Writer-Dienst wird automatisch installiert. Dieser Dienst muss ausgeführt werden, wenn eine Sicherungs- oder Wiederherstellungsanforderung von der VSS-Anwendung eingeht.  
 
@@ -918,6 +918,6 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -2,7 +2,7 @@
 title: Vorbereiten von Computern mit Windows Server | Microsoft-Dokumentation
 description: "Stellen Sie sicher, dass ein Computer die Voraussetzungen für die Verwendung als Standortserver oder Standortsystemserver für System Center Configuration Manager erfüllt."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: bd89f97f4252ddea2d1bf7ab329417477c77868d
+ms.sourcegitcommit: dd102603356864add4084c6881c39bebcbd635f2
+ms.openlocfilehash: 9b97dedb5d2be0bd2e47260033e6e4361467dc4e
 
 
 ---
@@ -26,35 +26,35 @@ ms.openlocfilehash: bd89f97f4252ddea2d1bf7ab329417477c77868d
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Ehe Sie einen Windows-Computer als Standortsystemserver für System Center Configuration Manager nutzen können, müssen Sie sicherstellen, dass der Computer die Voraussetzung für die vorgesehene Verwendung als Standortserver oder Standortsystemserver erfüllt.  
+Ehe Sie einen Windows-Computer als Standortsystemserver für System Center Configuration Manager nutzen können, muss der Computer die Voraussetzung für die vorgesehene Verwendung als Standortserver oder Standortsystemserver erfüllen.  
 
--   Dazu gehören häufig ein(e) oder mehrere Windows-Features oder -Rollen, die mithilfe von Server-Manager auf dem Computer aktiviert werden.  
+-   Zu diesen Voraussetzungen gehören häufig ein(e) oder mehrere Windows-Features oder -Rollen, die mithilfe von Server-Manager auf dem Computer aktiviert werden.  
 
--   Da sich die Methode zum Aktivieren von Windows-Features und -Rollen je nach Betriebssystem unterscheidet, konsultieren Sie die Dokumentation Ihres Betriebssystems hinsichtlich detaillierter Informationen zur entsprechenden Konfiguration.  
+-   Da sich die Methode zum Aktivieren von Windows-Features und -Rollen je nach Betriebssystem unterscheidet, konsultieren Sie die Dokumentation Ihres Betriebssystems hinsichtlich detaillierter Informationen zur entsprechenden Einrichtung.  
 
 Die Informationen in diesem Artikel bieten einen Überblick über die verschiedenen Windows-Konfigurationstypen, die zur Unterstützung von Configuration Manager-Standortsystemen erforderlich sind. Konfigurationsdetails für bestimmte Standortsystemrollen finden Sie unter [Voraussetzungen für Standorte und Standortsysteme](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).
 
 ##  <a name="a-namebkmkwinfeaturesa-windows-features-and-roles"></a><a name="BKMK_WinFeatures"></a> Windows-Features und -Rollen  
- Wenn Sie Windows-Features und -Rollen auf einem Computer konfigurieren, müssen Sie möglicherweise den Computer neu starten, um die Konfiguration abzuschließen. Daher empfehlen wir, dass Sie vor der Installation eines Configuration Manager-Standort- oder Standortsystemservers bestimmen, welche Computer die einzelnen Standortsystemrollen hosten sollen.
+ Wenn Sie Windows-Features und -Rollen auf einem Computer einrichten, müssen Sie möglicherweise den Computer neu starten, um die Konfiguration abzuschließen. Daher ist es eine gute Idee, die Computer zu identifizieren, die bestimmte Standortsystemrollen hosten, bevor Sie einen Configuration Manager-Standort oder Standortsystemserver installieren.
 ### <a name="features"></a>Features  
- Die folgenden Windows-Features sind auf bestimmten Standortsystemservern erforderlich und müssen konfiguriert werden, bevor Sie eine Standortsystemrolle auf dem jeweiligen Computer installieren.  
+ Die folgenden Windows-Features sind auf bestimmten Standortsystemservern erforderlich und müssen eingerichtet werden, bevor Sie eine Standortsystemrolle auf dem jeweiligen Computer installieren.  
 
 -   **.NET Framework:** einschließlich  
 
     -   ASP.NET  
     -   HTTP-Aktivierung  
     -   Nicht-HTTP-Aktivierung  
-    -   WCF-Dienste  
+    -   Windows Communication Foundation (WCF)  
 
     Verschiedene Versionen von .NET Framework sind je nach Standortsystemrolle erforderlich.  
 
-    Da .NET Framework 4.0 und höher nicht so abwärtskompatibel ist, dass 3.5 oder niedriger ersetzt wird, müssen Sie entsprechende Versionen auf demselben Computer aktivieren, sofern diese als erforderlich angegeben sind.  
+    Da .NET Framework 4.0 und höher nicht so abwärtskompatibel ist, dass 3.5 oder ältere Versionen ersetzt werden, müssen Sie entsprechende Versionen auf demselben Computer aktivieren, sofern diese als erforderlich angegeben sind.  
 
 -   **Background Intelligent Transfer Service (BITS)**: Verwaltungspunkte erfordern BITS (und automatisch ausgewählte Optionen), damit die Kommunikation mit verwalteten Geräten unterstützt wird.  
 
--   **BranchCache:** Verteilungspunkte können mit BranchCache so konfiguriert werden, dass Sie Clients unterstützen, die BranchCache verwenden.  
+-   **BranchCache:** Verteilungspunkte können mit BranchCache so eingerichtet werden, dass Sie Clients unterstützen, die BranchCache verwenden.  
 
--   **Datendeduplizierung:** Verteilungspunkte können mit Datendeduplizierung konfiguriert werden und davon profitieren.  
+-   **Datendeduplizierung:** Verteilungspunkte können mit Datendeduplizierung eingerichtet werden und davon profitieren.  
 
 -   **Remotedifferenzialkomprimierung (Remote Differential Compression, RDC)**: Jeder Computer, der einen Standortserver oder Verteilungspunkt hostet, benötigt RDC.   
     RDC wird zum Erstellen von Paketsignaturen und Durchführen von Signaturvergleichen verwendet.  
@@ -74,7 +74,7 @@ Die Informationen in diesem Artikel bieten einen Überblick über die verschiede
         -   ISAPI-Filter  
     -   Verwaltungstools >  
         -   IIS 6-Verwaltungskompatibilität  
-        -   IIS 6-Metabasiskompatibilität  
+        -   IIS 6-Metabasiskompatibilität  
         -   IIS 6-WMI-Kompatibilität  
     -   Sicherheit >  
         -   Anforderungsfilterung  
@@ -93,15 +93,15 @@ Die Informationen in diesem Artikel bieten einen Überblick über die verschiede
 
     Die erforderliche Mindestversion von IIS ist die Version, die zum Betriebssystem des Standortservers gehört.  
 
-    Zusätzlich zu diesen IIS-Konfigurationen müssen Sie möglicherweise [IIS-Anforderungsfilterung für Verteilungspunkte](#BKMK_IISFiltering)konfigurieren.  
+    Zusätzlich zu diesen IIS-Konfigurationen müssen Sie möglicherweise [IIS-Anforderungsfilterung für Verteilungspunkte](#BKMK_IISFiltering) einrichten.  
 
 -   **Windows-Bereitstellungsdienste:** Diese Rolle wird mit der Betriebssystembereitstellung verwendet.  
 -   **Windows Server Update Services:** Diese Rolle ist erforderlich, wenn Sie Softwareupdates bereitstellen.  
 
 ##  <a name="a-namebkmkiisfilteringa-iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a> IIS-Anforderungsfilterung für Verteilungspunkte  
- IIS verwendet standardmäßig die Filterung von Benutzeranforderungen, um Dateinamenerweiterungen und Ordnerpfade für den Zugriff über HTTP- oder HTTPS-Verbindungen zu blockieren. Auf einem Verteilungspunkt verhindert dies, dass Clients Pakete mit blockierten Erweiterungen oder Ordnerpfaden herunterladen.  
+ IIS verwendet standardmäßig die Filterung von Benutzeranforderungen, um Dateierweiterungen und Ordnerpfade für den Zugriff über HTTP- oder HTTPS-Verbindungen zu blockieren. Auf einem Verteilungspunkt verhindert dies, dass Clients Pakete mit blockierten Erweiterungen oder Ordnerpfaden herunterladen.  
 
- Wenn Ihre Paketquelldateien Erweiterungen enthalten, die in IIS durch Ihre Konfiguration der Anforderungsfilterung blockiert werden, müssen Sie eine Konfiguration wählen, die diese zulässt. Dies erfolgt durch [Bearbeiten des Anforderungsfilterfeatures](https://technet.microsoft.com/library/hh831621.aspx) im IIS-Manager auf Ihren Verteilungspunktcomputern.  
+ Wenn Ihre Paketquelldateien Erweiterungen aufweisen, die in IIS durch Ihre Konfiguration der Anforderungsfilterung blockiert werden, müssen Sie die Anforderungsfilterung so einrichten, dass sie diese zulässt. Dies erfolgt durch [Bearbeiten des Anforderungsfilterfeatures](https://technet.microsoft.com/library/hh831621.aspx) im IIS-Manager auf Ihren Verteilungspunktcomputern.  
 
  Die folgenden Dateinamenerweiterungen werden außerdem von Configuration Manager für Pakete und Anwendungen verwendet. Stellen Sie sicher, dass Ihre Konfigurationen der Anforderungsfilterung diese Erweiterungen nicht blockieren:  
 
@@ -110,13 +110,13 @@ Die Informationen in diesem Artikel bieten einen Überblick über die verschiede
 -   .STA  
 -   .TAR  
 
-Beispiel: Sie verfügen über Quelldateien für eine Softwarebereitstellung, die einen Ordner mit der Bezeichnung **bin**oder eine Datei mit der Dateinamenerweiterung **.mdb** enthalten.  
+Beispiel: Sie verfügen über Quelldateien für eine Softwarebereitstellung, die möglicherweise einen Ordner mit der Bezeichnung **bin** oder eine Datei mit der Dateierweiterung **.mdb** aufweisen.  
 
--   Standardmäßig blockiert die IIS-Anforderungsfilterung den Zugriff auf diese Elemente (**bin** wird als ausgeblendetes Segment und **.mdb** als Dateinamenerweiterung blockiert).  
+-   Standardmäßig blockiert die IIS-Anforderungsfilterung den Zugriff auf diese Elemente (**bin** wird als ausgeblendetes Segment und **.mdb** als Dateierweiterung blockiert).  
 
 -   Wenn Sie die IIS-Standardkonfiguration auf einem Verteilungspunkt verwenden, treten beim Herunterladen dieser Softwarebereitstellung vom Verteilungspunkt Fehler auf, wenn die Clients BITS verwenden. Außerdem geben die Clients an, dass sie auf Inhalte warten.  
 
--   Damit die Clients diese Inhalte herunterladen können, bearbeiten Sie auf jedem betreffenden Verteilungspunkt im IIS-Manager das Feature **Anforderungsfilterung** , um den Zugriff auf die Dateinamenerweiterungen und Ordner in den Paketen und Anwendungen zuzulassen, die Sie bereitstellen.  
+-   Damit die Clients diese Inhalte herunterladen können, bearbeiten Sie auf jedem betreffenden Verteilungspunkt im IIS-Manager das Feature **Anforderungsfilterung**, um den Zugriff auf die Dateierweiterungen und Ordner in den Paketen und Anwendungen zuzulassen, die Sie bereitstellen.  
 
 > [!IMPORTANT]  
 >  Durch Bearbeitung des Anforderungsfilters kann sich die Angriffsfläche des Computers erhöhen.  
@@ -143,6 +143,6 @@ Informationen zum Konfigurieren der Anforderungsfilterung finden Sie unter [Konf
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 

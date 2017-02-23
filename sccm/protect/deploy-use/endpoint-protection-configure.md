@@ -2,7 +2,7 @@
 title: Konfigurieren von Endpoint Protection | Microsoft-Dokumentation
 description: "Erfahren Sie, wie Sie Configuration Manager einrichten, sodass Schadsoftwaredefinitionen für Windows Defender aktualisiert und verteilt werden."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 9db108fb2d4d16013f416b8ee87a57ff1c91e21f
-ms.openlocfilehash: 3b0092c203201fefa51d1f9d9fea7180e10735b0
+ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
+ms.openlocfilehash: 92ab3f7470fd977e5f849bea54aca1a7ef460562
 
 
 ---
@@ -39,14 +39,14 @@ Bevor Sie Endpoint Protection zum Verwalten von Sicherheit und Schadsoftware auf
 
 |Schritte|Details|  
 |-----------|-------------|  
-|**Schritt 1:** Erstellen Sie eine Standortsystemrolle für den Endpoint Protection-Punkt.|Die Standortsystemrolle für den Endpoint Protection-Punkt muss installiert sein, bevor Sie Endpoint Protection verwenden können. Sie darf nur auf einem einzigen Standortsystemserver installiert sein, und sie muss auf der obersten Hierarchieebene eines zentralen Verwaltungsstandorts oder eines eigenständigen primären Standorts installiert sein. Siehe [Schritt 1: Erstellen Sie eine Standortsystemrolle für den Endpoint Protection-Punkt](../../protect/deploy-use/configure-endpoint-protection.md).|  
-|**Schritt 2:** Konfigurieren Sie Warnungen für Endpoint Protection.|Von Warnungen wird der Administrator über bestimmte Ereignisse wie Infektionen mit Schadsoftware informiert. Die Warnungen werden im Knoten **Warnungen** des Arbeitsbereichs **Überwachung** angezeigt oder können optional per E-Mail an angegebene Benutzer versendet werden. Siehe [Schritt 2: Konfigurieren Sie Warnungen für Endpoint Protection](../../protect/deploy-use/configure-endpoint-protection.md).|  
-|**Schritt 3:** Konfigurieren Sie Definitionsupdatequellen für Endpoint Protection-Clients.|Endpoint Protection kann so konfiguriert werden, dass verschiedene Quellen zum Herunterladen von Definitionsupdates verwendet werden. Siehe [Schritt 3: Konfigurieren Sie die Definitionsupdates für Endpoint Protection](../../protect/deploy-use/configure-endpoint-protection.md).|  
-|**Schritt 4:** Konfigurieren Sie die Standardrichtlinie für Antischadsoftware, und erstellen Sie benutzerdefinierte Richtlinien für Antischadsoftware.|Bei der Installation des Endpoint Protection-Clients wird die Standardrichtlinie für Antischadsoftware angewendet. Alle benutzerdefinierten Richtlinien für Antischadsoftware, die Sie bereitgestellt haben, werden innerhalb von 60 Minuten nach der Bereitstellung des Clients in der Standardeinstellung angewendet. Stellen Sie sicher, dass Sie Richtlinien für Antischadsoftware konfiguriert haben, bevor Sie den Endpoint Protection-Client bereitstellen. Siehe [Erstellen und Bereitstellen von Richtlinien für Antischadsoftware für Endpoint Protection in System Center Configuration Manager](../../protect/deploy-use/endpoint-antimalware-policies.md).|  
-|**Schritt 5:** Konfigurieren Sie benutzerdefinierte Clienteinstellungen für Endpoint Protection.|Verwenden Sie benutzerdefinierte Clienteinstellungen, um Endpoint Protection-Einstellungen für Computersammlungen in Ihrer Hierarchie zu konfigurieren.<br /><br /> Hinweis: Konfigurieren Sie nicht die Standard-Endpoint Protection-Clienteinstellungen, es sei denn, Sie sind sicher, dass diese Einstellungen auf alle Computer in Ihrer Hierarchie angewendet werden sollen. Siehe [Schritt 5: Konfigurieren Sie benutzerdefinierte Clienteinstellungen für Endpoint Protection](../../protect/deploy-use/configure-endpoint-protection.md).|  
+|**Schritt 1:** [Erstellen Sie eine Standortsystemrolle für den Endpoint Protection-Punkt](endpoint-protection-site-role.md)|Die Standortsystemrolle für den Endpoint Protection-Punkt muss installiert sein, bevor Sie Endpoint Protection verwenden können. Sie darf nur auf einem einzigen Standortsystemserver installiert sein, und sie muss auf der obersten Hierarchieebene eines zentralen Verwaltungsstandorts oder eines eigenständigen primären Standorts installiert sein. |  
+|**Schritt 2:** [Konfigurieren Sie Warnungen für Endpoint Protection](endpoint-configure-alerts.md)|Von Warnungen wird der Administrator über bestimmte Ereignisse wie Infektionen mit Schadsoftware informiert. Die Warnungen werden im Knoten **Warnungen** des Arbeitsbereichs **Überwachung** angezeigt oder können optional per E-Mail an angegebene Benutzer versendet werden. |  
+|**Schritt 3:** [Konfigurieren Sie Definitionsupdatequellen für Endpoint Protection-Clients](endpoint-definition-updates.md)|Endpoint Protection kann so konfiguriert werden, dass verschiedene Quellen zum Herunterladen von Definitionsupdates verwendet werden. |  
+|**Schritt 4:** [Konfigurieren Sie die Standardrichtlinie für Antischadsoftware, und erstellen Sie benutzerdefinierte Richtlinien für Antischadsoftware](endpoint-antimalware-policies.md)|Bei der Installation des Endpoint Protection-Clients wird die Standardrichtlinie für Antischadsoftware angewendet. Alle benutzerdefinierten Richtlinien für Antischadsoftware, die Sie bereitgestellt haben, werden innerhalb von 60 Minuten nach der Bereitstellung des Clients in der Standardeinstellung angewendet. Vergewissern Sie sich, dass Richtlinien für Antischadsoftware konfiguriert sind, bevor Sie den Endpoint Protection-Client bereitstellen. |  
+|**Schritt 5:** [Konfigurieren Sie benutzerdefinierte Clienteinstellungen für Endpoint Protection](endpoint-protection-configure-client.md)|Verwenden Sie benutzerdefinierte Clienteinstellungen, um Endpoint Protection-Einstellungen für Computersammlungen in Ihrer Hierarchie zu konfigurieren.<br /><br /> Hinweis: Konfigurieren Sie nicht die Standard-Endpoint Protection-Clienteinstellungen, es sei denn, Sie sind sicher, dass diese Einstellungen auf alle Computer in Ihrer Hierarchie angewendet werden sollen. |  
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO3-->
 
 
