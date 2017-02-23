@@ -2,7 +2,7 @@
 title: Konfigurieren von Asset Intelligence | Microsoft-Dokumentation
 description: Richten Sie Asset Intelligence in System Center Configuration Manager ein.
 ms.custom: na
-ms.date: 12/28/2016
+ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 8a5dc7361da34f3e6b926acd35c72c0c0767ce70
@@ -224,7 +224,7 @@ Von Asset Intelligence werden die Produkte, die Sie in der allgemeinen Lizenzerk
 
 4.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Einstellungen** **Standortwartung** aus. Wählen Sie einen Task und anschließend **Bearbeiten** aus, um die Einstellungen zu ändern. 
 
-    Es wird empfohlen, den Zeitpunkt außerhalb der Spitzenzeiten des Standorts zu legen. Der Zeitraum ist das Zeitintervall, in dem der Task ausgeführt werden kann. Er wird über die Optionen **Start nach** und **Spätester Startzeitpunkt** im Dialogfeld **Taskeigenschaften** definiert.  
+      Es wird empfohlen, den Zeitpunkt außerhalb der Spitzenzeiten des Standorts zu legen. Der Zeitraum ist das Zeitintervall, in dem der Task ausgeführt werden kann. Er wird über die Optionen **Start nach** und **Spätester Startzeitpunkt** im Dialogfeld **Taskeigenschaften** definiert.  
 
     Sie können den Task direkt initiieren, indem Sie den aktuellen Tag auswählen und für die Option **Start nach** eine Zeit wenige Minuten nach der aktuellen Zeit festlegen.  
 
