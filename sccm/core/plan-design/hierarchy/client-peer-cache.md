@@ -1,3 +1,4 @@
+
 ---
 title: Clientpeercache | System Center Configuration Manager
 description: "Verwenden Sie Peercache für Quellspeicherorte für Clientinhalte beim Bereitstellen von Inhalten mit System Center Configuration Manager."
@@ -16,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6aaa833c1301cf82f7d8df3bc13f0a6936fc6e9d
-ms.openlocfilehash: 96b3a72a7beb31396813ae468ae3eeacc845b582
+ms.sourcegitcommit: 2dd898c9b022c6f0bc243623835af0eece94128f
+ms.openlocfilehash: 95d1671501f672e1d5abe3f0fbbd7d2dfb21e0a3
 
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Peercache für Configuration Manager-Clients
@@ -51,8 +52,6 @@ Um besser zu verstehen, wann der Peercache erfolgreich verwendet wird, sehen Sie
 ## <a name="requirements-and-considerations-for-peer-cache"></a>Anforderungen und Überlegungen für den Peercache
 - Der Peercache wird von jedem Windows-Betriebssystem unterstützt, das als Configuration Manager-Client unterstützt wird. Nicht-Windows-Betriebssysteme werden für den Peercache nicht unterstützt.
 
-- Sie müssen Ihren Standort mit einem **Netzwerkzugriffskonto** konfigurieren, das auf jedem Client **Vollzugriff** auf den Cacheordner besitzt. Standardmäßig ist dies ***%windir%\ccmcache***.
-
 - Clients können nur Inhalte von Peercacheclients übertragen, die sich in ihrer aktuellen Begrenzungsgruppe befinden.
 
 -     Da die aktuelle Begrenzung einer Inhaltsquelle des Peercaches durch die letzte Hardwareinventurübermittlung des Clients bestimmt wird, gilt ein Client, der zu einem Netzwerkort in einer anderen Begrenzungsgruppe wechselt, für den Peercache weiterhin als Mitglied seiner früheren Begrenzungsgruppe. Dadurch kann ein Client als Inhaltsquelle des Peercaches angeboten werden, der sich nicht an seinem unmittelbaren Netzwerkort befindet. Es wird empfohlen, Clients, die für diese Konfiguration anfällig sind, von der Teilnahme als Peercachequelle auszuschließen.
@@ -70,6 +69,6 @@ Wenn die Windows-Firewall verwendet wird, wird sie auf jedem für den Peercache 
 
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO4-->
 
 
