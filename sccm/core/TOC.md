@@ -35,6 +35,7 @@
 ###  [Voraussetzungen für Standorte und Standortsysteme](plan-design/configs/site-and-site-system-prerequisites.md)
 ###  [Unterstützte Betriebssysteme für Standortsystemserver](plan-design/configs/supported-operating-systems-for-site-system-servers.md)
 ###  [Unterstützte Betriebssysteme für Clients und Geräte](plan-design/configs/supported-operating-systems-for-clients-and-devices.md)
+###  [Unterstützung für Windows 10 als client](plan-design/configs/support-for-windows-10.md)
 ###  [Unterstützte Betriebssysteme für Konsolen](plan-design/configs/supported-operating-systems-consoles.md)
 ###  [Empfohlene Hardware](plan-design/configs/recommended-hardware.md)
 ###  [Unterstützung für SQL Server-Versionen](plan-design/configs/support-for-sql-server-versions.md)
@@ -89,6 +90,7 @@
 ###  [Einrichten der Laborumgebung](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
+<!-- ###  [Capabilities in 1702](get-started/capabilities-in-technical-preview-1702.md) -->
 ###  [Funktionen in 1701](get-started/capabilities-in-technical-preview-1701.md)
 ###  [Funktionen in 1612](get-started/capabilities-in-technical-preview-1612.md)
 ###  [Funktionen in 1611](get-started/capabilities-in-technical-preview-1611.md)
@@ -305,6 +307,6 @@
 ###  [Aktualisieren von Analytics](clients/manage/upgrade/upgrade-analytics.md)
 
 
-<!--HONumber=Feb17_HO3-->
+<!--HONumber=Feb17_HO4-->
 
 
