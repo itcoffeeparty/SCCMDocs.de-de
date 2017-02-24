@@ -2,7 +2,7 @@
 title: Aktualisieren der lokalen Infrastruktur | Microsoft-Dokumentation
 description: "Hier erfahren Sie, wie für eine Infrastruktur wie etwa SQL Server und das Standortbetriebssystem von Standortsystemen ein Upgrade durchgeführt wird."
 ms.custom: na
-ms.date: 2/2/2017
+ms.date: 2/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 83c8492191f40fc4d582562268db0d58a0f9cdde
-ms.openlocfilehash: a5d8496d98bd7f202ffbe8859981e94457ffa5c4
+ms.sourcegitcommit: 2e711cce2435957f3e85dad08f17260e1a224fc2
+ms.openlocfilehash: c6448932e91a02984ca57cef0b75c10ea3f43fa1
 
 
 ---
@@ -37,12 +37,12 @@ Verwenden Sie die Informationen in diesem Thema, um die Serverinfrastruktur zu a
 
 -   Direktes Upgrade auf ein höheres Windows Server Service Pack, sofern die gewählte Windows Service Pack-Stufe von Configuration Manager unterstützt wird.  
 -   Direktes Upgrade von:
-    - Windows Server 2012 R2 auf Windows Server 2016 ([weitere Informationen finden Sie weiter unten in diesem Artikel](#upgrade-windows-server-2012-r2-to-2016))
-    - Windows Server 2012 auf Windows Server 2012 R2 ([weitere Informationen finden Sie weiter unten in diesem Artikel](#upgrade-windows-server-2012-to-windows-server-2012-r2))
-    - Wenn Sie Configuration Manager Version 1602 oder höher verwenden wird darüber hinaus auch ein Upgrade von Windows Server 2008 R2 auf Windows Server 2012 R2 unterstützt ([weitere Informationen finden Sie weiter unten in diesem Artikel](#upgrade-windows-server-2008-r2-to-windows-server-2012-r2)).
+    - Windows Server 2012 R2 auf Windows Server 2016 ([weitere Informationen](#upgrade-windows-server-2012-r2-to-2016)).
+    - Windows Server 2012 auf Windows Server 2012 R2 ([weitere Informationen](#upgrade-windows-server-2012-to-windows-server-2012-r2)).
+    - Wenn Sie Configuration Manager Version 1602 oder höher verwenden, wird darüber hinaus auch ein Upgrade von Windows Server 2008 R2 auf Windows Server 2012 R2 unterstützt ([weitere Informationen](#upgrade-windows-server-2008-r2-to-windows-server-2012-r2)).
 
     > [!WARNING]  
-    >  Vor dem Upgrade auf Windows Server 2012 R2 **müssen Sie WSUS 3.2 vom Server deinstallieren** .  
+    >  Vor dem Upgrade auf Windows Server 2012 R2 *müssen Sie WSUS 3.2 vom Server deinstallieren* .  
     >   
     >  Informationen zu diesem wichtigen Schritt finden Sie im Abschnitt „Neue und geänderte Funktionalität“ in der [Übersicht über Windows Server Update Services](https://technet.microsoft.com/library/hh852345.aspx) in der Windows Server-Dokumentation.  
 
@@ -54,35 +54,35 @@ Verwenden Sie für das Upgrade eines Servers die Upgradeverfahren, die von dem B
 Für dieses Szenario für ein Betriebssystemupgrade gelten folgende Bedingungen:
 
 **Vor dem Upgrade:**  
--   Entfernen Sie den SCEP-Client (System Center Endpoint Protection). In Windows Server 2016 ist Windows Defender integriert, sodass der SCEP-Client nicht mehr erforderlich ist. Durch das Vorhandensein des SCEP-Clients wird ein Upgrade auf Windows Server 2016 möglicherweise verhindert.
+-     Entfernen Sie den SCEP-Client (System Center Endpoint Protection). In Windows Server 2016 ist Windows Defender integriert, sodass der SCEP-Client nicht mehr erforderlich ist. Durch das Vorhandensein des SCEP-Clients wird ein Upgrade auf Windows Server 2016 möglicherweise verhindert.
 
 **Nach dem Upgrade:**
--   Stellen Sie sicher, dass Windows Defender aktiviert ist, automatisch gestartet und ausgeführt wird.
--   Stellen Sie sicher, dass die folgenden Configuration Manager-Dienste ausgeführt werden:
+-     Stellen Sie sicher, dass Windows Defender aktiviert ist, automatisch gestartet und ausgeführt wird.
+-     Stellen Sie sicher, dass die folgenden Configuration Manager-Dienste ausgeführt werden:
   -     SMS_EXECUTIVE
   -     SMS_SITE_COMPONENT_MANAGER
 
 
--   Stellen Sie sicher, dass der **Windows-Prozessaktivierungsdienst** und der Dienst **WWW/W3svc** aktiviert sind, automatisch gestartet und für die folgenden Standortsystemrollen ausgeführt werden (diese Dienste werden beim Upgrade deaktiviert):
+-     Stellen Sie sicher, dass der **Windows-Prozessaktivierungsdienst** und der Dienst **WWW/W3svc** aktiviert sind, automatisch gestartet und für die folgenden Standortsystemrollen ausgeführt werden (diese Dienste werden beim Upgrade deaktiviert):
   -     Standortserver
   -     Verwaltungspunkt
   -     Anwendungskatalog-Webdienstpunkt
   -     Anwendungskatalog-Websitepunkt
 
 
--   Stellen Sie sicher, dass alle Server, auf denen eine Standortsystemrolle gehostet wird, weiterhin alle [Voraussetzungen für Standortsystemrollen](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) erfüllen, die auf diesem Server ausgeführt werden. Möglicherweise müssen Sie BITS oder WSUS neu installieren oder bestimmte Einstellungen für IIS konfigurieren.
+-     Stellen Sie sicher, dass alle Server, auf denen eine Standortsystemrolle gehostet wird, weiterhin alle [Voraussetzungen für Standortsystemrollen](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) erfüllen, die auf diesem Server ausgeführt werden. Möglicherweise müssen Sie BITS oder WSUS neu installieren oder bestimmte Einstellungen für IIS konfigurieren.
 
   Nachdem Sie alle erforderlichen Komponenten wiederhergestellt haben, starten Sie den Server erneut, um sicherzustellen, dass alle Dienste gestartet wurden und funktionsfähig sind.
 
 **Bekanntes Problem für die Configuration Manager-Remotekonsole:**  
 Nach dem Upgrade des Standortservers oder eines Servers, auf dem eine Instanz des SMS-Anbieters gehostet wird, auf Windows Server 2016 können Administratoren möglicherweise keine Verbindung mit einer Configuration Manager-Konsole am Standort herstellen. Um dieses Problem zu umgehen, müssen Sie Berechtigungen für die SMS-Administratorengruppe in WMI manuell wiederherstellen. Berechtigungen müssen auf dem Standortserver sowie auf allen Remoteservern, auf denen eine Instanz des SMS-Anbieters gehostet wird, festgelegt werden:
 
-1. Öffnen Sie auf den entsprechenden Servern die Microsoft Management Console (MMC), fügen Sie das Snap-In für die **WMI-Steuerung** hinzu, und wählen Sie **Lokaler Computer** aus.
+1. Öffnen Sie auf den entsprechenden Servern die Microsoft Management Console (MMC), fügen Sie das Snap-In für die **WMI-Steuerung** hinzu, und wählen Sie dann **Lokaler Computer** aus.
 2. Öffnen Sie in der MMC die **Eigenschaften** von **WMI-Steuerung (Lokal)**, und wählen Sie die Registerkarte **Sicherheit** aus.
-3. Erweitern Sie die Struktur unter dem Stamm, wählen Sie den Knoten **SMS** aus, und klicken Sie auf **Sicherheit**.  Stellen Sie sicher, dass die Gruppe **SMS-Administratoren** über folgende Berechtigungen verfügt:
+3. Erweitern Sie die Struktur unter dem Stamm, wählen Sie den Knoten **SMS** aus, und wählen Sie dann **Sicherheit**.  Stellen Sie sicher, dass die Gruppe **SMS-Administratoren** über folgende Berechtigungen verfügt:
   -     Konto aktivieren
   -     Remoteaktivierung
-4. Als Nächstes wählen Sie auf der Registerkarte **Sicherheit** unter dem Knoten „SMS“ den Knoten **Standort_&lt;Standortcode>** aus. Klicken Sie anschließend auf **Sicherheit**. Stellen Sie sicher, dass die Gruppe **SMS-Administratoren** über folgende Berechtigungen verfügt:
+4. Wählen Sie auf der Registerkarte **Sicherheit** unter dem Knoten **SMS** den Knoten **Standort_**&lt;*Standortcode*> aus. Wählen Sie anschließend **Sicherheit**. Stellen Sie sicher, dass die Gruppe **SMS-Administratoren** über folgende Berechtigungen verfügt:
   -   Methoden ausführen
   -   Anbieterschreibzugriff
   -   Konto aktivieren
@@ -95,7 +95,7 @@ Nach dem Upgrade des Standortservers oder eines Servers, auf dem eine Instanz de
 -  Im Gegensatz zu den anderen unterstützten Szenarios müssen bei diesem Szenario vor dem Upgrade keine weiteren Aspekte berücksichtigt werden.
 
 **Nach dem Upgrade:**
-  - Stellen Sie sicher, dass der Windows-Bereitstellungsdienst gestartet wurde und für die folgenden Standortsystemrollen ausgeführt wird (dieser Dienst wird beim Upgrade beendet):
+  -    Stellen Sie sicher, dass der Windows-Bereitstellungsdienst gestartet wurde und für die folgenden Standortsystemrollen ausgeführt wird (dieser Dienst wird beim Upgrade beendet):
     - Standortserver
     - Verwaltungspunkt
     - Anwendungskatalog-Webdienstpunkt
@@ -103,10 +103,10 @@ Nach dem Upgrade des Standortservers oder eines Servers, auf dem eine Instanz de
 
 
   -     Stellen Sie sicher, dass der **Windows-Prozessaktivierungsdienst** und der Dienst **WWW/W3svc** aktiviert sind, automatisch gestartet und für die folgenden Standortsystemrollen ausgeführt werden (diese Dienste werden beim Upgrade deaktiviert):
-    -   Standortserver
-    -   Verwaltungspunkt
-    -   Anwendungskatalog-Webdienstpunkt
-    -   Anwendungskatalog-Websitepunkt
+    -     Standortserver
+    -     Verwaltungspunkt
+    -     Anwendungskatalog-Webdienstpunkt
+    -     Anwendungskatalog-Websitepunkt
 
 
   -     Stellen Sie sicher, dass alle Server, auf denen eine Standortsystemrolle gehostet wird, weiterhin alle [Voraussetzungen für Standortsystemrollen](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) erfüllen, die auf diesem Server ausgeführt werden. Möglicherweise müssen Sie BITS oder WSUS neu installieren oder bestimmte Einstellungen für IIS konfigurieren.
@@ -117,11 +117,11 @@ Nach dem Upgrade des Standortservers oder eines Servers, auf dem eine Instanz de
 Für dieses Szenario für ein Betriebssystemupgrade gelten folgende Bedingungen:  
 
 **Vor dem Upgrade:**
--   Deinstallieren Sie WSUS 3.2.  
+-     Deinstallieren Sie WSUS 3.2.  
     Vor dem Upgrade eines Serverbetriebssystems auf Windows Server 2012 R2 müssen Sie WSUS 3.2 auf dem Server deinstallieren. Informationen zu diesem wichtigen Schritt finden Sie im Abschnitt „Neue und geänderte Funktionalität“ in der „Übersicht über Windows Server Update Services“ in der Windows Server-Dokumentation.
 
 **Nach dem Upgrade:**
-  - Stellen Sie sicher, dass der Windows-Bereitstellungsdienst gestartet wurde und für die folgenden Standortsystemrollen ausgeführt wird (dieser Dienst wird beim Upgrade beendet):
+  -    Stellen Sie sicher, dass der Windows-Bereitstellungsdienst gestartet wurde und für die folgenden Standortsystemrollen ausgeführt wird (dieser Dienst wird beim Upgrade beendet):
     - Standortserver
     - Verwaltungspunkt
     - Anwendungskatalog-Webdienstpunkt
@@ -129,10 +129,10 @@ Für dieses Szenario für ein Betriebssystemupgrade gelten folgende Bedingungen:
 
 
   -     Stellen Sie sicher, dass der **Windows-Prozessaktivierungsdienst** und der Dienst **WWW/W3svc** aktiviert sind, automatisch gestartet und für die folgenden Standortsystemrollen ausgeführt werden (diese Dienste werden beim Upgrade deaktiviert):
-    -   Standortserver
-    -   Verwaltungspunkt
-    -   Anwendungskatalog-Webdienstpunkt
-    -   Anwendungskatalog-Websitepunkt
+    -     Standortserver
+    -     Verwaltungspunkt
+    -     Anwendungskatalog-Webdienstpunkt
+    -     Anwendungskatalog-Websitepunkt
 
 
   -     Stellen Sie sicher, dass alle Server, auf denen eine Standortsystemrolle gehostet wird, weiterhin alle [Voraussetzungen für Standortsystemrollen](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) erfüllen, die auf diesem Server ausgeführt werden. Möglicherweise müssen Sie BITS oder WSUS neu installieren oder bestimmte Einstellungen für IIS konfigurieren.
@@ -158,9 +158,9 @@ Die folgenden Windows Server-Upgradeszenarios werden zwar häufig angefragt, wer
 -   Windows 10-Dienstupgrades von Build zu Build.  Weitere Informationen finden Sie unter [Verwalten von Windows als Dienst mit System Center Configuration Manager](../../../osd/deploy-use/manage-windows-as-a-service.md).  
 
 ##  <a name="a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server"></a><a name="BKMK_SupConfigUpgradeDBSrv"></a> Ausführen eines Upgrades für SQL Server auf dem Standortdatenbankserver  
-  Configuration Manager unterstützt ein direktes Upgrade von SQL Server von einer unterstützten Version von SQL auf dem Standortdatenbankserver. Im Folgenden finden Sie ausführliche Informationen zu den SQL Server-Upgradeszenarios, die von Configuration Manager unterstützt werden, sowie zu den Anforderungen für die einzelnen Szenarios.
+  Configuration Manager unterstützt ein direktes Upgrade von SQL Server von einer unterstützten Version von SQL auf dem Standortdatenbankserver. Der SQL Server-Upgradeszenarios in diesem Bereich, die von Configuration Manager unterstützt werden, und enthalten Anforderungen für die einzelnen Szenarios.
 
- Weitere Informationen darüber, welche SQL Server-Versionen von Configuration Manager unterstützt werden, finden Sie unter [Support for SQL Server versions for System Center Configuration Manager (Unterstützung für SQL Server-Versionen für System Center Configuration Manager)](../../../core/plan-design/configs/support-for-sql-server-versions.md).  
+ Weitere Informationen über SQL Server-Versionen, die von Configuration Manager unterstützt werden, finden Sie unter [Support for SQL Server versions for System Center Configuration Manager (Unterstützung für SQL Server-Versionen für System Center Configuration Manager)](../../../core/plan-design/configs/support-for-sql-server-versions.md).  
 
  **Upgrade der Service Pack-Version von SQL Server:**    
  Configuration Manager unterstützt das direkte Upgrade von SQL Server auf ein höheres Service Pack, sofern die gewählte SQL Server Service Pack-Stufe von Configuration Manager unterstützt wird.
@@ -181,7 +181,7 @@ Wenn Sie für die Version von SQL Server, unter der die Standortdatenbank gehost
  3. Aktualisieren Sie übergeordnete primäre Standorte zuletzt. Dies schließt sowohl untergeordnete primäre Standorte, die einem Standort der zentralen Verwaltung unterstellt sind, als auch eigenständige primäre Standorte ein, die den Standort der obersten Ebene einer Hierarchie darstellen.
 
 **SQL Server-Kardinalitätsschätzungsgrad und Standortdatenbank:**   
-Wenn eine Standortdatenbank von einer früheren Version von SQL Server aktualisiert wird, behält die Datenbank den vorhandenen SQL-Kardinalitätsschätzungsgrad (CE-Grad), wenn dieser dem Minimum entspricht, der für diese Instanz von SQL Server zulässig ist. Wenn SQL Server mit einer Datenbank aktualisiert wird, deren Kompatibilitätsgrad niedriger ist als der zulässige Grad, wird die Datenbank automatisch auf den niedrigsten Kompatibilitätsgrad gesetzt, der in SQL zulässig ist.
+Wenn eine Standortdatenbank von einer früheren Version von SQL Server aktualisiert wird, behält die Datenbank den vorhandenen SQL-Kardinalitätsschätzungsgrad (CE-Grad), wenn dieser dem Minimum entspricht, der für diese Instanz von SQL Server zulässig ist. Wenn SQL Server mit einer Datenbank aktualisiert wird, deren Kompatibilitätsgrad niedriger ist als der zulässige Grad, wird die Datenbank automatisch auf den niedrigsten Kompatibilitätsgrad gesetzt, der in SQL Server zulässig ist.
 
 Die folgende Tabelle zeigt die empfohlenen Kompatibilitätsgrade für Standortdatenbanken von Configuration Manager:
 
@@ -195,9 +195,9 @@ Um den SQL Server-CE-Kompatibilitätsgrad zu ermitteln, der für Ihre Standortda
  Weitere Informationen zu SQL-CE-Kompatibilitätsgraden und deren Festlegung finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)](https://msdn.microsoft.com/library/bb510680.aspx).
 
 
-**Weitere Informationen zu SQL Server finden Sie in der SQL Server-Dokumentation auf TechNet:**  
--   [Upgrade auf SQL Server 2014](http://technet.microsoft.com/library/ms143393\(v=sql.120)  
+Weitere Informationen zu SQL Server finden Sie in der SQL Server-Dokumentation auf TechNet:
 -   [Upgrade auf SQL Server 2012](http://technet.microsoft.com/library/ms143393\(v=sql.110)
+-   [Upgrade auf SQL Server 2014](http://technet.microsoft.com/library/ms143393\(v=sql.120)  
 -   [Upgrade auf SQL Server 2016](https://technet.microsoft.com/library/bb677622(v=sql.130))
 
 
@@ -213,6 +213,6 @@ Um den SQL Server-CE-Kompatibilitätsgrad zu ermitteln, der für Ihre Standortda
 
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 

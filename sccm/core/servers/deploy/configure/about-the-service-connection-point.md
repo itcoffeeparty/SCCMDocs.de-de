@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d3e6f011527f05b35e411af52d723f459aad66ca
-ms.openlocfilehash: 99b218f23ff8ad0fbac9dbdc28c46829e6800f85
+ms.sourcegitcommit: 3a24fe53cc243294694b779fad4c3ab83ca2ecb7
+ms.openlocfilehash: ae2cc7030c1fc404dcc7392b8c3067fc0f8cafc0
 
 
 ---
@@ -83,7 +83,7 @@ Wechseln Sie zum Verwenden des Dienst-Managers von Configuration Manager in der 
 -   Der Verteilungs-Manager auf dem Standortserver verwendet das Standortsystem-Installationskonto zum Übertragen von Updates vom Dienstverbindungspunkt.
 
 ##  <a name="a-namebkmkurlsa-internet-access-requirements"></a><a name="bkmk_urls"></a> Erforderliche Berechtigungen für den Internetzugriff  
-Der Computer, der den Dienstverbindungspunkt und alle Firewalls zwischen dem Computer und dem Internet hostet, muss die Kommunikation über den **TCP-Port 443** und den **TCP-Port 443** an die folgenden Internet-URLs übergeben, um den Vorgang zu aktivieren. Der Dienstverbindungspunkt unterstützt auch Webproxys (mit oder ohne Authentifizierung) für die Verwendung dieser URLs.  
+Der Computer, der den Dienstverbindungspunkt und alle Firewalls zwischen dem Computer und dem Internet hostet, muss die Kommunikation über den **TCP-Port 443** und den **TCP-Port 443** an die folgenden Internet-URLs übergeben, um den Vorgang zu aktivieren. Der Dienstverbindungspunkt unterstützt auch Webproxys (mit oder ohne Authentifizierung) für die Verwendung dieser URLs.  Informationen zur Konfiguration eines Web Proxy Accounts finden Sie unter [Unterstützung von Proxyservern in System Center Configuration Manager](/sccm/core/plan-design/network/proxy-server-support).
 
 **Updates und Wartung**  
 
@@ -121,6 +121,6 @@ Nachdem Sie Setup ausgeführt haben oder wenn Sie die Standortsystemrolle neu in
 
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 

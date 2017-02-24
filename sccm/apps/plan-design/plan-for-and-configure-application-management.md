@@ -2,7 +2,7 @@
 title: Planen und Konfigurieren der Anwendungsverwaltung | Microsoft Docs
 description: "Implementieren und konfigurieren Sie die erforderlichen Abhängigkeiten für die Bereitstellung von Anwendungen in System Center Configuration Manager."
 ms.custom: na
-ms.date: 02/03/2017
+ms.date: 02/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 50c08d63e7220a47d21dcbdcd7abafba7c7f5f75
-ms.openlocfilehash: 4eca69f54ec0bca5f1f972d3814ceb87d4a30d67
+ms.sourcegitcommit: 1c43c4968f93985515249ddb117269f8ed61302a
+ms.openlocfilehash: 46cc3fcfd9516cf1c124e24b50d0aac0cb0025dc
 
 
 ---
@@ -127,7 +127,7 @@ Implementieren Sie anhand der Informationen in diesem Artikel die erforderlichen
 
     Statusmeldungen: Verwenden Sie die Komponenten **SMS_PORTALWEB_CONTROL_MANAGER** und **SMS_AWEBSVC_CONTROL_MANAGER**.  
 
-    Beispielsweise wird anhand der Status-ID **1015** für **SMS_PORTALWEB_CONTROL_MANAGER** bestätigt, dass der Anwendungskatalog-Websitepunkt vom Standortkomponenten-Manager erfolgreich installiert wurde.  
+    Zum Beispiel wird durch die Status-ID **1015** für **SMS_PORTALWEB_CONTROL_MANAGER** bestätigt, dass der Anwendungskatalog-Websitepunkt von Standortkomponenten-Manager erfolgreich installiert wurde.  
 
     Protokolldateien: Suchen Sie nach **SMSAWEBSVCSetup.log** und **SMSPORTALWEBSetup.log**.  
 
@@ -228,6 +228,6 @@ Benutzerdefiniertes Branding für das Softwarecenter wird gemäß den folgenden 
 
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 
