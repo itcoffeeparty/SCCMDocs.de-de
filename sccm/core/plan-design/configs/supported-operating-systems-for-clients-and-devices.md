@@ -16,8 +16,9 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4688b4b12a7afa5fcfdc0e42f984271d98f10316
-ms.openlocfilehash: d2d888edf51d46a2dd13ef6b7ed39c066179a088
+ms.sourcegitcommit: bdd7961d9126dc6f3c1ae1fec1842c862e8a7c6d
+ms.openlocfilehash: 12633a7b9f799ffc74e0ee657e091595ed7eaf67
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>Unterstützte Betriebssysteme für Clients und Geräte für System Center Configuration Manager
@@ -34,13 +35,13 @@ ms.openlocfilehash: d2d888edf51d46a2dd13ef6b7ed39c066179a088
 -   Die Installation oder Ausführung des Configuration Manager-Clients für Linux oder UNIX bzw. des Macintosh-Clients auf Computern unter einem anderen Konto als Root wird nicht unterstützt. Wenn Sie die Einstellungen trotzdem ändern, werden wichtige Dienste möglicherweise nicht ordnungsgemäß ausgeführt.  
 
 ##  <a name="windows-computers"></a>Windows-Computer  
- Sie können Windows-Computer mit dem Configuration Manager-Client verwalten, der im Configuration Manager enthalten ist. Weitere Informationen finden Sie unter [Bereitstellen von Clients auf Windows-Computern in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
+ Die folgenden Windows-Computerbetriebssysteme können mit dem im Configuration Manager enthaltenen Configuration Manager-Client verwaltet werden. Weitere Informationen finden Sie unter [Bereitstellen von Clients auf Windows-Computern in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
 
 **Unterstützte Betriebssysteme:**  
 
+
 -  **Windows Server 2016**: Standard, Datacenter <sup>1</sup>
   - Dieses Betriebssystem wird ab Configuration Manager Version 1606 mit dem Hotfixrollup von KB3186654 (oder der Baselineversion 1606, die im Oktober 2016 veröffentlicht wurde) unterstützt.  
-
 
 -   **Windows Server 2012 R2** (x64): Standard, Datacenter <sup>1</sup>    
 
@@ -56,9 +57,8 @@ ms.openlocfilehash: d2d888edf51d46a2dd13ef6b7ed39c066179a088
 
 -   **Windows  Server 2008 mit SP2** (x86, x64): Standard, Enterprise, Datacenter <sup>1</sup>    
 
--   **Windows 10 Enterprise LTSB** (x86, x64) <sup>3</sup>    
-
--   **Windows 10** (x86, x64): Pro, Enterprise    
+-   **Windows 10**: Pro, Enterprise  
+   Unter [Support für Versionen von Windows 10](/sccm/core/plan-design/configs/support-for-windows-10) finden Sie ausführliche Informationen zu den verschiedenen Versionen von Windows 10, die von den verschiedenen Versionen von Configuration Manager unterstützt werden.
 
 -   **Windows 8.1** (x86, x64): Professional, Enterprise    
 
@@ -83,7 +83,6 @@ ms.openlocfilehash: d2d888edf51d46a2dd13ef6b7ed39c066179a088
 
  <sup>2</sup> Zur Unterstützung der Clientpushinstallation muss auf dem Computer, auf dem diese Betriebssystemversion ausgeführt wird, der Dateiserver-Rollendienst für die Serverrolle „Datei- und Speicherdienste“ ausgeführt werden. Informationen zum Installieren von Windows-Features auf einem Server Core-Computer finden Sie unter [Installieren von Serverrollen und -features auf einem Server Core-Server](http://go.microsoft.com/fwlink/p/?LinkId=299359) in der TechNet-Bibliothek für Windows Server 2012.  
 
- <sup>3</sup> Die Nutzung dieses Betriebssystems setzt Configuration Manager Version 1602 oder höher voraus.  
 
 ##  <a name="windows-embedded-computers"></a>Windows Embedded-Computer  
  Sie können die Windows Embedded-Geräte durch die Installation von Configuration Manager-Clientsoftware auf dem Gerät verwalten.  Weitere Informationen finden Sie unter [Planen der Clientbereitstellung auf Windows Embedded-Geräten in System Center Configuration Manager](../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
@@ -349,9 +348,4 @@ Configuration Manager unterstützt mit Einschränkungen die Verwaltung der Gerä
 -   **Exchange Server 2013**  
 
 -   **Exchange Online (Office 365)**: Dies beinhaltet die Business Productivity Online Standard Suite  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

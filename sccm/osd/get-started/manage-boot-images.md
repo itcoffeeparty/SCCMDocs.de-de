@@ -17,8 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
-ms.openlocfilehash: 3b7125e782b60853e750aeb7ba923490e46a76b0
+ms.sourcegitcommit: 4edf7d09d39fa22fb5812aecc88febd763001eba
+ms.openlocfilehash: 369aa062d0f38eedebc0a7c351a7ce67b53d199b
+ms.lasthandoff: 02/21/2017
 
 
 ---
@@ -29,11 +30,11 @@ ms.openlocfilehash: 3b7125e782b60853e750aeb7ba923490e46a76b0
 Ein Startimage in Configuration Manager ist ein [Windows PE-Image (WinPE)](https://msdn.microsoft.com/library/windows/hardware/dn938389%28v=vs.85%29.aspx), das während einer Betriebssystembereitstellung verwendet wird. Startimages dienen zum Starten eines Computers in Windows PE, einem minimalen Betriebssystem mit begrenzten Komponenten und Diensten zur Vorbereitung des Zielcomputers für die Windows-Installation.  Gehen Sie wie in den folgenden Abschnitten beschrieben vor, um Startimages zu verwalten:
 
 ##  <a name="a-namebkmkbootimagedefaulta-default-boot-images"></a><a name="BKMK_BootImageDefault"></a> Standardstartimages  
- Configuration Manager stellt zwei Standardstartimages bereit: ein Startimage zur Unterstützung von x86-Plattformen und eines zur Unterstützung von x64-Plattformen. Diese Images sind hier gespeichert: \\\\*Servername*>\SMS_<*Standortcode*>\osd\boot\\<*x64 oder i386*.  
+ Configuration Manager stellt zwei Standardstartimages bereit: ein Startimage zur Unterstützung von x86-Plattformen und eines zur Unterstützung von x64-Plattformen. Diese Images sind hier gespeichert: \\\\*Servername*>\SMS_<*Standortcode*>\osd\boot\\<*x64*> oder <*i386*>.  
 
- Wenn Sie ein Upgrade von Configuration Manager auf eine neue Version durchführen, ersetzt Configuration Manager die Standardstartimages und darauf basierende benutzerdefinierte Startimages an diesem Speicherort durch aktualisierte Dateien. Die Optionen, die Sie für die Standardstartimages am Standort konfigurieren (z. B. optionale Komponenten), werden einschließlich Treiber übernommen, wenn die Startimages aktualisiert werden. Die Quelltreiberobjekte müssen gültig sein, einschließlich der Treiberquelldateien, da die Treiber andernfalls nicht den aktualisierten Startimages im Speicherort hinzugefügt werden. Andere Startimages, die nicht auf den standardmäßigen Startstartimages basieren, werden auch dann nicht aktualisiert, wenn sie auf derselben Windows ADK-Version basieren. Nachdem Startimages aktualisiert wurden, müssen Sie sie erneut an die Verteilungspunkte verteilen. Alle Medien, die die Startimages verwenden, müssen neu erstellt werden. Wenn die angepassten Standardstartimages nicht automatisch aktualisiert werden sollen, sollten Sie sie an einem anderen Speicherort speichern.  
+ Wenn Sie ein Upgrade von Configuration Manager auf eine neue Version durchführen, ersetzt Configuration Manager die Standardstartimages und darauf basierende benutzerdefinierte Startimages an diesem Speicherort durch aktualisierte Dateien. Die Optionen, die Sie für die Standardstartimages am Standort konfigurieren (z. B. optionale Komponenten), werden einschließlich Treiber übernommen, wenn die Startimages aktualisiert werden. Die Quelltreiberobjekte müssen gültig sein, einschließlich der Treiberquelldateien, da die Treiber andernfalls nicht den aktualisierten Startimages im Speicherort hinzugefügt werden. Andere Startimages, die nicht auf den standardmäßigen Startstartimages basieren, werden auch dann nicht aktualisiert, wenn sie auf derselben Windows ADK-Version basieren. Nachdem Startimages aktualisiert wurden, müssen Sie sie erneut an die Verteilungspunkte verteilen. Alle Medien, die die Startimages verwenden, müssen neu erstellt werden. Wenn die benutzerdefinierten oder Standardstartimages nicht automatisch aktualisiert werden sollen, sollten Sie sie an einem anderen Ort speichern.  
 
- Das Ablaufprotokolltool von Configuration Manager wird allen Startimages hinzugefügt, die Sie der **Softwarebibliothek** hinzufügen. In WinPE können Sie das Ablaufprotokolltool von Configuration Manager starten, indem Sie **CMTrace** in einer Befehlszeile eingeben.  
+ Das Ablaufprotokolltool von Configuration Manager wird allen Startimages hinzugefügt, die Sie der **Softwarebibliothek** hinzufügen. In WinPE können Sie das Ablaufprotokolltool vom Configuration Manager starten, indem Sie **CMTrace** in einer Befehlszeile eingeben.  
 
 ##  <a name="a-namebkmkbootimagecustoma-customize-a-boot-image"></a><a name="BKMK_BootImageCustom"></a> Anpassen eines Startimages  
  Sie können ein Startimage über die Configuration Manager-Konsole anpassen oder [ein Startimage ändern](#BKMK_ModifyBootImages), wenn das Image auf einer Windows PE-Version aus der unterstützten Version von Windows ADK basiert. Wenn ein Standort mit einer neuen Version aktualisiert wird und eine neue Version von Windows ADK installiert wird, werden benutzerdefinierte Startimages (die sich nicht im Standardspeicherort für Startimages befinden) nicht mit der neuen Version von Windows ADK aktualisiert. In diesem Fall können Sie die Startimages in der Configuration Manager-Konsole nicht mehr anpassen. Diese funktionieren jedoch weiterhin wie vor dem Upgrade.  
@@ -248,9 +249,4 @@ Ein Startimage in Configuration Manager ist ein [Windows PE-Image (WinPE)](https
 1.  Vergewissern Sie sich vor dem Aktualisieren des Startabbilds, dass sich die richtige Tasksequenz-Ressourcendatei (tsres.dll) im entsprechenden Sprachordner auf dem Standortserver befindet. Die Ressourcendatei für Englisch befindet sich z.B. am folgenden Speicherort: <*ConfigMgr-Installationsordner*>\OSD\bin\x64\00000409\tsres.dll.  
 
 2.  Legen Sie als Teil des Prestart-Befehls die Umgebungsvariable SMSTSLanguageFolder auf die gewünschte Sprach-ID fest. Die Sprach-ID muss im Dezimalformat angegeben werden (nicht hexadezimal). Wenn Sie die Sprach-ID auf Englisch festlegen möchten, geben Sie z. B. den Dezimalwert 1033 an, und nicht den Hexadezimalwert 00000409, der für den Ordnernamen verwendet wird.  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
