@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
 ms.openlocfilehash: f29d5834b82dd8888cff56fb0ad8024629f829ab
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -129,9 +130,4 @@ Der Lookout-Schutz vor Gerätebedrohungen sieht unterschiedliche Klassifizierung
 Nach Abschluss des Setups beginnt der Lookout-Schutz vor Gerätebedrohung mit der Suche nach Geräten in Azure AD, die den angegebenen Registrierungsgruppen entsprechen.  Informationen zu den registrierten Geräten finden Sie im Gerätemodul.  Der anfängliche Status für Geräte wird als „ausstehend“ angezeigt.  Dieser Status ändert sich, sobald die Lookout for Work-App installiert, geöffnet und auf dem Gerät aktiviert wird.  Weitere Informationen zum Installieren der Lookout for Work-App auf dem Gerät finden Sie unter dem Thema [Configure and deploy Lookout for work apps (Konfigurieren und Bereitstellen von Lookout for Work-Apps)](configure-and-deploy-lookout-for-work-apps.md).
 ## <a name="next-steps"></a>Nächste Schritte
 [Enable Lookout MTP connection in Intune (Aktivieren einer Lookout MTP-Verbindung in Intune)](enable-lookout-connection-in-intune.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

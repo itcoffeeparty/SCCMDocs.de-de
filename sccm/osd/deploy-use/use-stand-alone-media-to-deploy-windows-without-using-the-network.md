@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 30ae794381c6894e11b21a8167d0af60463c5279
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -79,9 +80,4 @@ Sie können eigenständige Medien in folgenden Szenarien für die Betriebssystem
 
 ## <a name="install-the-operating-system-from-stand-alone-media"></a>Installieren des Betriebssystems von eigenständigen Medien  
  Legen Sie die eigenständigen Medien in ein startfähiges Laufwerk des Computers ein. Schalten Sie dann den Computer ein, um das Betriebssystem zu installieren.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
