@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: dcdaec52c9eafba3f7ce569f0dabb98921b4dc0a
 ms.openlocfilehash: f870a98fa9e839df16d0ca9deb96a18128f35ba6
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -134,7 +135,7 @@ Nachfolgend wird erläutert, welche Formate und Platzhalter Sie zum Festlegen vo
 
     -   http://*  
 
-    -   http://www.contoso.com :*  
+    -   http://www.contoso.com:*  
 
     -   http://www.contoso.com: / *  
 
@@ -151,9 +152,4 @@ Nachfolgend wird erläutert, welche Formate und Platzhalter Sie zum Festlegen vo
 -   Wenn ein Gerät erstmals Richtlinien für verwaltete Browser empfängt und zwei Richtlinien in Konflikt stehen, werden die URLs auf dem Gerät nicht erzwungen. Sie können die Konflikte über den Knoten **Richtlinienkonflikte** des Arbeitsbereichs **Richtlinie** anzeigen.  
 
 -   Wenn ein Gerät bereits ein Richtlinie für verwaltete Browser erhalten hat und eine zweite Richtlinie mit in Konflikt stehenden Einstellungen bereitgestellt wird, bleiben die ursprünglichen Einstellungen auf dem Gerät bestehen. Sie können die Konflikte über den Knoten **Richtlinienkonflikte** des Arbeitsbereichs **Richtlinie** anzeigen.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
