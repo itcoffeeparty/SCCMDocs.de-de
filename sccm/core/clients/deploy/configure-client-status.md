@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 22cc286baa72d3e356a07b91ee0a1be646fa8a9e
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -112,9 +113,4 @@ Sie müssen zunächst für Ihren Standort die Parameter einrichten, anhand derer
 4.  Schließen Sie den Registrierungs-Editor.  
 
  Sie können Clients auch mithilfe der CCMSetup-Installationseigenschaft **NotifyOnly** installieren, um sie von der automatischen Wiederherstellung auszuschließen. Weitere Informationen zu den Clientinstallationseigenschaften finden Sie unter [Informationen zu Clientinstallationseigenschaften in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

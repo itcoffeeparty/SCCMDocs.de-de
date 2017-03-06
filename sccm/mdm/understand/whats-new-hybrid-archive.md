@@ -2,7 +2,7 @@
 title: 'Archiv: Neuheiten bei hybrider MDM | Microsoft-Dokumentation'
 description: "Archiv der früheren Features der Verwaltung mobiler Geräte, die für Hybridbereitstellungen mit System Center Configuration Manager und Intune verfügbar sind"
 ms.custom: na
-ms.date: 10/25/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ ROBOTS: NOINDEX, NOFOLLOW
 translationtype: Human Translation
 ms.sourcegitcommit: bd870d66bb1a482cb5985f1fc0fe66a7dee206eb
 ms.openlocfilehash: d286b038c900873154d3a0761aa1eaface47e186
+ms.lasthandoff: 01/14/2017
 
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>Frühere Hybridfeatures mit System Center Configuration Manager und Microsoft Intune
@@ -44,7 +45,7 @@ Die folgenden im Oktober 2016 eingeführten Intune-Features werden in Hybridbere
 
   Sie können den Zugriff auf Exchange Online einschränken, sodass nur Apps, die Verwaltungsrichtlinien für mobile Anwendungen von Intune unterstützen, z.B. Outlook, Zugriff haben. [Die neuen Features](/intune/deploy-use/allow-policy-managed-apps-access-to-o365) passen perfekt zu den Verwaltungsrichtlinien für mobile Apps (Mobile App Management, MAM) von Intune, da Sie den Zugriff auf integrierte Mailclients oder andere Apps, die nicht mit den MAM-Richtlinien von Intune konfiguriert wurden, blockieren können. Dadurch wird sichergestellt, dass Ihre Benutzer auf die Daten Ihrer Organisation mit Apps zugreifen, die mit Intune MAM geschützt werden können. Sie können Ihre ersten Schritte mit den Verwaltungsrichtlinien für mobile Apps von Intune über das Azure-Portal unternehmen. Suchen Sie den neuen Abschnitt „Bedingter Zugriff“ auf dem Blatt „Einstellungen“.
 
--   **Intune App Wrapping Tool für Android**
+-    **Intune App Wrapping Tool für Android**
 
   Sie können mithilfe des Intune App Wrapping Tools Ihre Apps so einstellen, dass sie die MAM-Richtlinien von Intune verwenden.
 
@@ -55,10 +56,10 @@ Die folgenden im Oktober 2016 eingeführten Intune-Features werden in Hybridbere
   Folgende Modellnummern sind betroffen:
 
   - SM-G313HU
-  - SM-G313HY
-  - SM-G313M
-  - SM-G313MY
-  - SM-G313U
+  -    SM-G313HY
+  -    SM-G313M
+  -    SM-G313MY
+  -    SM-G313U
 
   Sie und Ihre Endbenutzer müssen keine weiteren Maßnahmen ergreifen. Weitere Informationen finden Sie auf der Samsung KNOX-Website.
 
@@ -212,14 +213,14 @@ Im Juli 2016 wurden keine neuen Hybridfeatures für Configuration Manager Techni
 Die folgenden Features, die zuvor in Configuration Manager Technical Preview-Releases verfügbar waren, stehen nun in Hybridbereitstellungen mit Intune und Configuration Manager (Current Branch) Release 1606 zur Verfügung.
 
 * Suchen, Verwalten und Verteilen von Windows Store für Unternehmen-Apps für Windows 10-Geräte über die Configuration Manager-Konsole ([1604](#new-in-1604-technical-preview))
-*   SmartLock-Einstellung für Android-Geräte ([1604](#new-in-1604-technical-preview))
-*   Per App ausgelöstes VPN für Windows 10-Geräte ([1605](#new-in-1605-technical-preview))
-*   Benutzerfreundlichere Remotegeräteaktionen ([1605](#new-in-1605-technical-preview))
-*   Windows Store für Unternehmen-Apps ([1605](#new-in-1605-technical-preview))
-*   Allgemeine Verbesserungen für per Volumenlizenz erworbene Apps ([1605](#new-in-1605-technical-preview))
-*   Windows Information Protection (WIP) ([1605](#new-in-1605-technical-preview))
-*   Vorabdeklarieren von firmeneigenen Geräten mit IMEI- oder iOS-Seriennummer ([1605](#new-in-1605-technical-preview))
-*   Automatisches Kategorisieren von Geräten in Sammlungen ([1606](#new-in-1606-technical-preview))
+*     SmartLock-Einstellung für Android-Geräte ([1604](#new-in-1604-technical-preview))
+*    Per App ausgelöstes VPN für Windows 10-Geräte ([1605](#new-in-1605-technical-preview))
+*    Benutzerfreundlichere Remotegeräteaktionen ([1605](#new-in-1605-technical-preview))
+*    Windows Store für Unternehmen-Apps ([1605](#new-in-1605-technical-preview))
+*    Allgemeine Verbesserungen für per Volumenlizenz erworbene Apps ([1605](#new-in-1605-technical-preview))
+*    Windows Information Protection (WIP) ([1605](#new-in-1605-technical-preview))
+*    Vorabdeklarieren von firmeneigenen Geräten mit IMEI- oder iOS-Seriennummer ([1605](#new-in-1605-technical-preview))
+*    Automatisches Kategorisieren von Geräten in Sammlungen ([1606](#new-in-1606-technical-preview))
 
 Informationen zu den neuen Funktionen finden Sie in der Dokumentation für das angegebene Technical Preview-Release.
 
@@ -479,9 +480,4 @@ Im Juni 2016 wurden keine neuen Hybridfeatures für Configuration Manager (Curre
 - **iOS-Aktivierungssperre**
 
   Ab Version 1602 von Configuration Manager (Current Branch) können Sie die iOS-Aktivierungssperre verwalten, ein Feature der App „Mein iPhone suchen“ für iOS 7.1 und höher. Die Aktivierungssperre wird automatisch aktiviert, wenn die iPhone-App „Mein iPhone suchen“ auf einem Gerät verwendet wird.  Einzelheiten finden Sie unter [Manage iOS Activation Lock Bypass with System Center Configuration Manager (Verwalten der iOS-Aktivierungssperre-Umgehung mit System Center Configuration Manager)](/sccm/mdm/deploy-use/manage-ios-activation-lock#bypass-activation-lock).  
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

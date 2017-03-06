@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 29350919-6a25-446b-a0da-05e8914fbb26
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
 ms.openlocfilehash: 47bfeec5bd5d9b843e9064560d0cd0b14bd7d6a1
+ms.lasthandoff: 12/29/2016
 
 
 ---
@@ -37,9 +38,4 @@ Zusätzlich können Sie mit Configuration Manager Clienteinstellungen zum Ausfü
 > -   Auf dem Computer, auf dem die Configuration Manager-Konsole ausgeführt wird, wird Windows XP Service Pack 3 ausgeführt, nicht aber auf dem Hostcomputer. Weitere Informationen finden Sie in der Dokumentation zur Windows-Remoteunterstützung.  
 
  Sie können eine Remotesteuerungssitzung über eine beliebige Gerätesammlung in der Configuration Manager-Konsole, über das Fenster der Windows-Eingabeaufforderung oder das Windows-Menü **Start** starten.  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

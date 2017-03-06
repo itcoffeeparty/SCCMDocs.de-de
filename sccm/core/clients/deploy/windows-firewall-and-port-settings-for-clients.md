@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: dce4b640-c92f-401a-9873-ce9aa9262014
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 140bbc676fe0e3df1037c6bead2211b84486494b
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -173,9 +174,4 @@ Für Clientcomputer in System Center Configuration Manager, auf denen die Window
  Wenn der HTTP-Port 80 verwendet wird, muss der HTTPS-Port 443 sein.  
 
  Wenn ein anderer HTTP-Port verwendet wird, muss der HTTPS-Port eine Nummer höher sein. Bei Port 8530 wäre dies z.B. Port 8531.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

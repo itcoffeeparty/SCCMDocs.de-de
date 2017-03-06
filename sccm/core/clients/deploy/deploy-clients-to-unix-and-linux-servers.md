@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
 caps.latest.revision: 9
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 0e5f65552045e9cef06f5286b0087153751c79b0
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -237,9 +238,4 @@ Jeder Client-Installationspaket enthält die erforderlichen Dateien zum Abschlie
  Der Configuration Manager-Client für Linux und UNIX stellt bei der Clientinstallation eine Verbindung mit diesem Verwaltungspunkt her. Wenn der Client keine Verbindung mit dem Verwaltungspunkt herstellen kann, wiederholt die Clientsoftware den Vorgang so lange, bis die Verbindung erfolgreich hergestellt wird.  
 
  Weitere Informationen dazu, wie Clients Verwaltungspunkte suchen, finden Sie unter [Locating Management Points](../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_LocatingMPs).
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

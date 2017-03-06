@@ -2,7 +2,7 @@
 title: "Remotesynchronisierung von Richtlinien auf Intune-registrierten Geräten | Microsoft-Dokumentation"
 description: "Lernen Sie, wie Sie Richtlinien auf Intune-registrierten Geräten von der Configuration Manager-Konsole aus synchronisieren"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: dcdccc34fa55ce3d3e4459d209c7aeb74752214b
 ms.openlocfilehash: c6496e9694314f1910ca944f6c083a9f3fd2bf79
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="remotely-synchronize-policy-on-intune-enrolled-devices-from-the-configuration-manager-console"></a>Remotesynchronisierung von Richtlinien auf Intune-registrierten Geräten von der Configuration Manager-Konsole
@@ -30,14 +31,9 @@ Sie können auf der Configuration Manager-Konsole eine Richtliniensynchronisieru
 
 Dazu ist Folgendes erforderlich:
 
-1.  Wählen Sie unter **Bestand und Konformität** > **Übersicht** > **Geräte** ein Gerät aus.
-2.  Klicken Sie im Menü **Remotegeräteaktionen** auf **Send Sync Request** (Synchronisierungsanforderung senden).
+1.    Wählen Sie unter **Bestand und Konformität** > **Übersicht** > **Geräte** ein Gerät aus.
+2.    Klicken Sie im Menü **Remotegeräteaktionen** auf **Send Sync Request** (Synchronisierungsanforderung senden).
 
 
 Innerhalb von fünf bis zehn Minuten werden alle Änderungen an der Richtlinie auf dem Gerät synchronisiert. Sie können die Statusinformationen der Synchronisierungsanforderung in einer neuen Spalte namens **Remote Sync State** (Remotesynchronisierungsstatus) in den Geräteansichten und im Ermittlungsdatenbereich des Dialogfelds **Eigenschaften** jedes Geräts anzeigen.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

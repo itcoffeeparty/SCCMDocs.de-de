@@ -2,7 +2,7 @@
 title: Verwalten der iOS-Aktivierungssperre | Microsoft-Dokumentation
 description: Die iOS-Aktivierungssperre kann mit System Center Configuration Manager verwaltet werden.
 ms.custom: na
-ms.date: 12/15/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: a25c6b409ea6501ead762fabb8cc11c62c84885d
 ms.openlocfilehash: cf98bbb9dee6142e8b085dbffcadb3ed712adcb9
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -104,9 +105,4 @@ Sie können die Aktivierungssperre nur umgehen oder den Umgehungscode der Aktivi
     - In den Ermittlungsdaten für das Gerät im Dialogfeld mit den Geräteeigenschaften.
     - In der Spalte **Umgehungsstatus für Aktivierungssperre** in der Ansicht **Geräte** (diese Spalte ist standardmäßig ausgeblendet).
     - Im Abschnitt **Remote Device Actions Information** (Informationen über Remotegeräteaktionen) auf der Registerkarte **Summary** (Zusammenfassung) im Detailbereich (wenn ein Gerät ausgewählt wurde).
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

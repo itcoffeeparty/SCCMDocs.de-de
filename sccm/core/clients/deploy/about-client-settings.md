@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: d7265aec46474ba7fc317ddb5e20b91b7b134585
 ms.openlocfilehash: 36f6eb3fe48e904adf4d04450906fada9b477246
+ms.lasthandoff: 12/29/2016
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>Informationen zu Clienteinstellungen in System Center Configuration Manager
@@ -641,9 +642,4 @@ Viele der Clienteinstellungen sind selbsterklärend. Andere werden hier beschrie
 -   **Benutzer das Festlegen primärer Geräte gestatten**  
 
      Geben Sie an, ob es Benutzern gestattet werden soll, im Anwendungskatalog auf der Registerkarte **Eigene Geräte** ihre eigenen primären Geräte zu identifizieren.  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

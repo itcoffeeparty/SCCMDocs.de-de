@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a933d69c-5feb-4b2b-84e8-56b3b64d5947
 caps.latest.revision: 11
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
 ms.openlocfilehash: 9c2fd7cea178716f81571856608ce517049a3e8d
+ms.lasthandoff: 12/29/2016
 
 
 ---
@@ -78,9 +79,4 @@ Es wird empfohlen, Clientsprachpakete vor dem Bereitstellen des Clients zu insta
  Wenn Sie die Wahl haben, welche Art von Schreibfilter Sie aktivieren möchten, wählen Sie für die Netzwerk- und Prozessoreffizienz auf dem Configuration Manager-Client die dateibasierten Schreibfilter aus, und konfigurieren Sie Ausnahmen, um den Clientzustand sowie Inventurdaten zwischen den Geräteneustarts beizubehalten. Weitere Informationen zu Schreibfiltern finden Sie unter   [Planen der Clientbereitstellung für Windows Embedded-Geräte in System Center Configuration Manager](../../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
 
  Weitere Informationen zur maximalen Anzahl von Windows Embedded-Clients, die von einem primären Standort unterstützt werden können, finden Sie unter [Supported operating systems for sites and clients for System Center Configuration Manager](../../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md) (Unterstützte Betriebssysteme für Standorte und Clients für System Center Configuration Manager).  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

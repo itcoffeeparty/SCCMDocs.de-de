@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: 44153689-70e8-42ad-9ae8-17ae35f6a2e3
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: dad941d5984fc7e0b43954b14c3966bb2632ad05
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -309,9 +310,4 @@ Sie können den System Center Configuration Manager-Client auf Computern install
 
 > [!NOTE]  
 >  Die Befehlszeilenoption **ignoreSHA256validation** wird auf Computern mit einer Version von Linux und UNIX, die veröffentlicht mit OpenSSL-Versionen, die SHA-256-Unterstützung ignoriert.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

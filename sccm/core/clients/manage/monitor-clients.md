@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 caps.latest.revision: 23
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
 ms.openlocfilehash: 85afe010e734d20ae1f1479b3edd166c54cc8fd2
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -109,9 +110,4 @@ ms.openlocfilehash: 85afe010e734d20ae1f1479b3edd166c54cc8fd2
 |Überprüfen Sie die Integrität des Client-WMI-Anbieters|Starten Sie den Dienst Windows-Verwaltungsinstrumentation (WMI) neu|Eine Behebung dieser Clientprüfung wird nur auf Computern mit Windows Server 2003, Windows XP (64-Bit) oder früher durchgeführt.|  
 |Überprüfen Sie, ob der Aktivierungsproxydienst (ConfigMgr-Aktivierungsproxy) ausgeführt wird|Starten Sie den ConfigMgr-Aktivierungsproxydienst|Diese Clientprüfung wird nur vorgenommen, wenn die Clienteinstellung unter **Energieverwaltung**: **Aktivierungsproxy zulassen** auf unterstützten Clientbetriebssystemen auf **Ja** eingestellt ist.|  
 |Überprüfen Sie, ob der Starttyp für den Aktivierungsproxydienst (ConfigMgr-Aktivierungsproxy) auf Automatisch eingestellt ist|Setzen Sie den Dienststarttyp für den ConfigMgr-Aktivierungsproxy zurück auf Automatisch|Diese Clientprüfung wird nur vorgenommen, wenn die Clienteinstellung unter **Energieverwaltung**: **Aktivierungsproxy zulassen** auf unterstützten Clientbetriebssystemen auf **Ja** eingestellt ist.|  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

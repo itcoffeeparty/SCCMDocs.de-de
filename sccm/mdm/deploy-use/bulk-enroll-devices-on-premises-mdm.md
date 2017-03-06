@@ -3,7 +3,7 @@
 title: "Massenregistrierung von Geräten | Microsoft-Dokumentation | Lokale MDM"
 description: "Automatische Massenregistrierung von Geräten mit der lokalen Verwaltung mobiler Geräte in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -20,6 +20,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
 ms.openlocfilehash: ef68a9f998ea6ff9628e01f6ac622711de68375d
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -165,9 +166,4 @@ In den folgenden Aufgaben wird erläutert, wie Sie eine Massenregistrierung von 
 -   Starten Sie hierzu die Configuration Manager-Konsole.  
 
 -   Klicken Sie auf **Bestand und Kompatibilität** > **Übersicht** > **Geräte**erforderlichen Standortsystemrollen benötigt. Das registrierte Gerät wird in der Liste angezeigt.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

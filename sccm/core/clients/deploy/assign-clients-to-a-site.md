@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: ba9b623f-6e86-4006-93f2-83d563de0cd0
 caps.latest.revision: 10
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 08afca8b422474639cbdb860e555fe0da27361a4
 ms.openlocfilehash: d8f25e849a8456f1658c4c7da32be733282bbde8
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="how-to-assign-clients-to-a-site-in-system-center-configuration-manager"></a>Zuweisen von Clients zu einem Standort in System Center Configuration Manager
@@ -162,9 +163,4 @@ Wenn der Client die Clientrichtlinie von einem Verwaltungspunkt seines Standorts
  Für diese Clientcomputer, für die per Roaming ein Wechsel an andere Standorte vorgenommen wird (alle primären und alle sekundären Standorte), können immer Verwaltungspunkte an anderen Standorten für Anfragen zum Inhaltsort verwendet werden. Über die Verwaltungspunkte am aktuellen Standort kann Clients eine Liste an Verteilungspunkten zur Verfügung gestellt werden, an denen der von Clients angeforderte Inhalt verfügbar ist.  
 
  Bei Clientcomputern, die für eine Clientverwaltung ausschließlich über das Internet konfiguriert wurden, sowie bei mobilen Geräten und Macintosh-Computern, die von Configuration Manager angemeldet wurden, können diese Clients nur mit Verwaltungspunkten an ihrem zugewiesenen Standort kommunizieren. Für diese Clients ist keine Verbindung mit Verwaltungspunkten an sekundären Standorten oder an anderen primären Standorten hergestellt werden.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

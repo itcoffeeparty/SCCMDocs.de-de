@@ -2,7 +2,7 @@
 title: "Installieren von Rollen für die lokale Verwaltung mobiler Geräte – Configuration Manager | Microsoft-Dokumentation"
 description: "Installieren Sie Standortsystemrollen für die lokale Verwaltung mobiler Geräte in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
 ms.openlocfilehash: 916b971f851f968f6534ac834bd3182cc61614aa
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -71,9 +72,4 @@ Die lokale Verwaltung mobiler Geräte für System Center Configuration Manager e
      Dadurch wird der Verwaltungspunkt faktisch zu einem Geräteverwaltungspunkt.  
 
  Nachdem die Standortsystemrollen hinzugefügt und für die Verwaltung von modernen Geräte konfiguriert wurden, müssen Sie die Server konfigurieren, die die Rollen als vertrauenswürdige Endpunkte für die Registrierung und die Kommunikation mit verwalteten Geräten hosten. Weitere Informationen finden Sie unter [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager (Einrichten von Zertifikaten für vertrauenswürdige Verbindungen für die lokale Verwaltung von mobilen Geräten in System Center Configuration Manager)](../../mdm/get-started/set-up-certificates-on-premises-mdm.md).  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -11,12 +11,13 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4cd6031f-8844-4d0b-8166-b24d6528a94e
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 6451ce59e01254d96ca4aa9bbe07cde829fae9ce
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -53,9 +54,4 @@ Solange eine Sammlung für den Ausschluss konfiguriert ist, können Mitglieder d
   Wenn Sie versuchen, einen Client, der Mitglied der ausgeschlossenen Sammlung ist, manuell upzugraden, und diesen Schalter nicht verwenden, wird der Client die neue Clientsoftware nicht installieren. Weitere Informationen finden Sie unter [Manuelles Installieren von Configuration Manager-Clients](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual).
 
 Weitere Informationen zu Clientinstallationsmethoden finden Sie unter [Bereitstellen von Clients auf Windows-Computern in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

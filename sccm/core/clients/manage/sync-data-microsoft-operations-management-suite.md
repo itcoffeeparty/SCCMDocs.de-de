@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 33bcf8b3-a6b6-4fc9-bb59-70a9621b2b0d
 caps.latest.revision: 9
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 0d8944bef9578a41b529a2d53b5a4d0094eaa21c
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="sync-data-from-configuration-manager-to-the-microsoft-operations-management-suite"></a>Synchronisieren von Daten von System Center Configuration Manager mit der Microsoft Operations Management Suite
@@ -51,9 +52,4 @@ Nachdem Sie Configuration Manager mit OMS verbunden haben, können Sie Sammlunge
 2.  Auf dieser Seite befinden sich zwei Registerkarten:
   * Die Registerkarte **Azure Active Directory** zeigt **Mandant**, **Client-ID**, **Client secret key expiration** (Ablauf des geheimen Clientschlüssels) an und ermöglicht Ihnen zu **Überprüfen**, ob **Geheimer Clientschlüssel** abgelaufen ist.
   * Die Registerkarte **OMS-Verbindungseigenschaften** zeigt **Azure-Abonnement**, **Azure-Ressourcengruppe**, **Operations Management Suite-Arbeitsbereich** und eine Liste der **Gerätesammlungen, für die die Operations Management Suite Daten abrufen kann**. Geben Sie mithilfe der Schaltfläche **Hinzufügen** und **Entfernen** an, welche Sammlungen zulässig sind.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -2,7 +2,7 @@
 title: "Registrieren von Geräten mit dem Geräteregistrierungsmanager – Configuration Manager | Microsoft-Dokumentation"
 description: "Registrieren Sie unternehmenseigene Geräte mit dem Geräteregistrierungs-Managerkonto mit System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
 ms.openlocfilehash: b356d2351b8a28bdca78176fdf0ff3c913a36bd3
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -89,9 +90,4 @@ Ein Restaurant möchte Point-of-Sale-Tablets für sein Bedienpersonal und Bestel
 -   können über die Kontoanmeldedaten für den Geräteregistrierungs-Manager weiterhin keine Geräte zurückgesetzt oder deaktiviert werden  
 
 -   bleibt die Beziehung des gelöschten Geräteregistrierungs-Manager-Kontos zu registrierten Geräten bestehen, es können jedoch keine zusätzlichen Geräte registriert werden.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

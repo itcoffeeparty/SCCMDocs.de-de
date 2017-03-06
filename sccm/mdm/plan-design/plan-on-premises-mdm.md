@@ -2,7 +2,7 @@
 title: "Planen der lokalen Verwaltung mobiler Geräte | Microsoft-Dokumentation"
 description: "Planen Sie die lokale Verwaltung mobiler Geräte in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: cec595d473ca2459e43a7fa1c70b7668a8a48986
 ms.openlocfilehash: d529a058968cf99dce77997844b33ff5dc7c0004
+ms.lasthandoff: 01/21/2017
 
 
 ---
@@ -119,9 +120,4 @@ Berücksichtigen Sie die folgenden Anforderungen vor der Vorbereitung der Config
 -   [Einrichten der Geräteregistrierung für die lokale Verwaltung mobiler Geräte in System Center Configuration Manager](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)  
 
 -   [Registrieren von Geräten für die lokale Verwaltung mobiler Geräte in System Center Configuration Manager](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md)  
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 

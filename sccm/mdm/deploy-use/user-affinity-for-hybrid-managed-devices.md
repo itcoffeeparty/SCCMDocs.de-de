@@ -2,7 +2,7 @@
 title: "Benutzeraffinität für hybridverwaltete Geräte in Configuration Manager | Microsoft-Dokumentation"
 description: "Konfigurieren der Benutzeraffinität für verwaltete Geräte in Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 74dcc0f4e680893db804956615248b7e1230d2b5
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="user-affinity-for-hybrid-managed-devices-in-configuration-manager"></a>Benutzeraffinität für hybridverwaltete Geräte in Configuration Manager
@@ -53,9 +54,4 @@ Beim Konfigurieren von Profilen für firmeneigene Geräte kann der Administrator
 
 ##  <a name="a-namebkmknouaa-managed-devices-without-user-affinity"></a><a name="BKMK_noUA"></a> Verwaltete Geräte ohne Benutzeraffinität  
  Auf mit **no user affinity** konfiguriert wurden, unterstützen sie auch das Unternehmensportal nicht. Die App sollte auf solchen Geräten nicht installiert werden. Das Unternehmensportal ist für Benutzer gedacht, die über Anmeldeinformationen ihres Unternehmens verfügen und Zugriff auf personalisierte Unternehmensressourcen (z. B. E-Mail) benötigen. Geräte, die **ohne Benutzeraffinität** registriert wurden, bieten keine Anmeldung für dedizierte Benutzer. Kiosk-, Verkaufsstellen- (POS-) oder gemeinsam genutzte Geräte sind typisch Anwendungsfälle für Geräte, die ohne Benutzeraffinität registriert werden. Wenn Benutzeraffinität erforderlich ist, muss vor der Registrierung des Geräts in dessen Registrierungsprofil **Benutzeraffinität** ausgewählt worden sein. Zum Ändern des Affinitätsstatus eines Geräts müssen Sie das Gerät abkoppeln und erneut registrieren.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

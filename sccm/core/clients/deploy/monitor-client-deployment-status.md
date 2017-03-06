@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: 20a573b3-53cb-4ed5-bae1-7542f533ed20
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
 ms.openlocfilehash: 0ca218e4276699dd9029308e1d8ac524563da7c5
+ms.lasthandoff: 01/03/2017
 
 
 ---
@@ -63,9 +64,4 @@ Das standortweite Bereitstellen von Clients nimmt einige Zeit in Anspruch, und e
  Informationen zur Statusüberwachung bei bereitgestellten Clients finden Sie unter [How to monitor clients in System Center Configuration Manager](../../../core/clients/manage/monitor-clients.md) (Überwachen von Clients in System Center Configuration Manager).  
 
  Sie können mithilfe von Configuration Manager-Berichten weitere Informationen zum Status von Clients an Ihrem Standort erhalten. Weitere Informationen zum Ausführen von Berichten finden Sie unter [Berichterstellung in System Center Configuration Manager](../../../core/servers/manage/reporting.md).  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

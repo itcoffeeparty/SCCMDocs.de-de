@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 49ef2ed2-2e15-4637-8b63-1d5b7f9c17e1
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
 ms.openlocfilehash: 250c9312b932670c408554f3968ae43ae4f3dbaa
+ms.lasthandoff: 01/03/2017
 
 
 ---
@@ -79,9 +80,4 @@ Sie können eine neue Configuration Manager-Clientversion in einer Präproduktio
 2.  Überprüfen Sie die Clientversionen in Produktion und Präproduktion, und stellen Sie sicher, dass die richtige Präproduktionssammlung angegeben ist. Klicken Sie anschließend erst auf **Höher stufen** und dann auf **Ja**.  
 
 3.  Nach Schließen des Dialogfelds wird die Clientversion in Ihrer Hierarchie durch die aktualisierte Clientversion ersetzt. Anschließend können Sie die Clients für den gesamten Standort aktualisieren. Informationen finden Sie unter [Aktualisieren von Clients für Windows-Computer in System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 
