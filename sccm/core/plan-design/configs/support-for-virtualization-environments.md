@@ -2,7 +2,7 @@
 title: "Virtualisierungsunterstützung | Microsoft-Dokumentation"
 description: "Rufen Sie die Anforderungen für die Installation der System Center Configuration Manager-Client- und Standortsystemrollen in einer Virtualisierungsumgebung ab."
 ms.custom: na
-ms.date: 11/30/2016
+ms.date: 1/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 13df135828e383e666bfc11051011207245a774c
-ms.openlocfilehash: 1c00324d2e7cc9a082ba837b29879e3a778d0c54
+ms.sourcegitcommit: 10192da2633555ab3bae60dbb1156d1926f9a4a0
+ms.openlocfilehash: b49bd179da850cee35b2487a353bb1788df03d58
+ms.lasthandoff: 01/12/2017
 
 
 ---
@@ -25,9 +26,9 @@ ms.openlocfilehash: 1c00324d2e7cc9a082ba837b29879e3a778d0c54
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Configuration Manager unterstützt die Installation von Client- und Standortsystemrollen auf unterstützten Betriebssystemen, die als virtueller Computer in den folgenden Virtualisierungsumgebungen ausgeführt werden. Dies gilt auch, wenn der Host für virtuelle Computer (Virtualisierungsumgebung) nicht als Client oder Standortserver unterstützt wird.  
+Configuration Manager unterstützt die Installation von Client- und Standortsystemrollen auf unterstützten Betriebssystemen, die als virtueller Computer in den in diesem Artikel angegebenen Virtualisierungsumgebungen ausgeführt werden. Dies gilt auch, wenn der Host für virtuelle Computer (Virtualisierungsumgebung) nicht als Client oder Standortserver unterstützt wird.  
 
- **Beispiel:**Wenn Sie Microsoft Hyper-V Server 2012 beispielsweise zum Hosten eines virtuellen Computers verwenden, auf dem Windows Server 2012 ausgeführt wird, können Sie die Client- oder Standortsystemrollen auf dem virtuellen Computer (Windows Server 2012), aber nicht auf dem Host (Microsoft Hyper-V Server 2012) installieren.  
+ Beispiel: Wenn Sie Microsoft Hyper-V Server 2012 beispielsweise zum Hosten eines virtuellen Computers verwenden, auf dem Windows Server 2012 ausgeführt wird, können Sie die Client- oder Standortsystemrollen auf dem virtuellen Computer (Windows Server 2012), aber nicht auf dem Host (Microsoft Hyper-V Server 2012) installieren.  
 
 |Virtualisierungsumgebung|  
 |--------------------------------|  
@@ -35,7 +36,11 @@ Configuration Manager unterstützt die Installation von Client- und Standortsyst
 |Microsoft Hyper-V Server 2008 R2|  
 |Windows Server 2012|  
 |Microsoft Hyper-V Server 2012|  
-|Windows Server 2012 R2|  
+|Windows Server 2012 R2|
+|Windows Server 2016 <sup>(siehe *Hinweis 1*)</sup>|
+|Microsoft Hyper-V Server 2016 <sup>(siehe *Hinweis 1*)|
+-  *Hinweis 1*: Configuration Manager unterstützt keine [geschachtelte Virtualisierung](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/what-s-new-in-hyper-v-on-windows#a-namebkmknestedanested-virtualization-new), das ist neu in Windows Server 2016.
+
 
  Für jeden von Ihnen verwendeten virtuellen Computer gelten die gleichen Mindestanforderungen für Hardware und Software wie für einen physischen Configuration Manager-Computer.  
 
@@ -48,24 +53,19 @@ Mit Configuration Manager ist die Verwaltung virtueller Computer nur möglich, w
 
 Für virtuelle Computer werden keine speziellen Vorkehrungen getroffen. Beispielsweise erkennt Configuration Manager möglicherweise nicht, ob auf das Image eines virtuellen Computers, auf den ein Update angewendet wurde, das Update erneut angewendet werden muss, wenn der virtuelle Computer ohne vorheriges Speichern seines Status heruntergefahren und neu gestartet wird.  
 
-##  <a name="a-namebkmkazurea-microsoft-azure-virtual-machines"></a><a name="bkmk_Azure"></a> Virtuelle Microsoft Azure-Computer  
- Configuration Manager kann auf virtuellen Computern in Microsoft Azure genau wie auf lokalen Computern innerhalb des physischen Unternehmensnetzwerks ausgeführt werden. Sie können Configuration Manager mit virtuellen Computern in Microsoft Azure in den folgenden Szenarios nutzen:  
+##  <a name="bkmk_Azure"></a> Virtuelle Microsoft Azure-Computer  
+ Configuration Manager kann auf virtuellen Microsoft Azure-Computern genau wie auf lokalen Computern innerhalb des physischen Unternehmensnetzwerks ausgeführt werden. Sie können Configuration Manager mit virtuellen Microsoft Azure-Computern in den folgenden Szenarios nutzen:  
 
 -   **Szenario 1:** Sie können Configuration Manager auf einem virtuellen Microsoft Azure-Computer ausführen und zum Verwalten von auf anderen virtuellen Microsoft Azure-Computern installierten Clients verwenden.  
 
--   **Szenario 2:** Sie können Configuration Manager auf einem virtuellen Microsoft Azure-Computer ausführen und zum Verwalten von Clients verwenden, die nicht in Microsoft Azure ausgeführt werden.  
+-   **Szenario 2:** Sie können Configuration Manager auf einem virtuellen Microsoft Azure-Computer ausführen, und zum Verwalten von Clients verwenden, die nicht in Azure ausgeführt werden.  
 
 -   **Szenario 3:** Sie können verschiedene Configuration Manager-Standortsystemrollen auf virtuellen Microsoft Azure-Computern ausführen, während Sie andere Rollen im physischen Unternehmensnetzwerk (mit der entsprechenden Netzwerkkonnektivität für die Kommunikation) ausführen.  
 
-Für die Installation in Microsoft Azure gelten die gleichen System Center Configuration Manager-Anforderungen für Netzwerke, unterstützte Konfigurationen und Hardwareanforderungen wie für die lokale Installation von Configuration Manager in Ihrem physischen Unternehmensnetzwerk.  
+Für die Installation auf Microsoft Azure-Computern gelten die gleichen System Center Configuration Manager-Anforderungen für Netzwerke, unterstützte Konfigurationen und Hardwareanforderungen wie für die lokale Installation von Configuration Manager in Ihrem physischen Unternehmensnetzwerk.  
 
-Weitere Informationen finden Sie unter [Configuration Manager on Azure - Frequently Asked Questions (Configuration Manager in Azure – Häufig gestellte Fragen)](/sccm/core/understand/configuration-manager-on-azure).
+Weitere Informationen finden Sie unter [Configuration Manager in Azure – Häufig gestellte Fragen](/sccm/core/understand/configuration-manager-on-azure).
 
 > [!IMPORTANT]  
 >  Für Configuration Manager-Standorte und -Clients, die auf virtuellen Azure-Computern ausgeführt werden, gelten die gleichen Lizenzanforderungen wie für lokale Installationen.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
