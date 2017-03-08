@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen von Inhalt | System Center Configuration Manager
+title: Inhalt bereitstellen | Microsoft-Dokumentation
 description: "Hier finden Sie eine Anleitung zur Bereitstellung von Inhalten, nachdem Sie Verteilungspunkte für System Center Configuration Manager installiert haben."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: c6bf461a762b8aa51678a17cb7b294c803d05f37
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 36b08285ef78d0acb9ba9c44abe2d57e311d44b3
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="deploy-and-manage-content-for-system-center-configuration-manager"></a>Bereitstellen und Verwalten von Inhalt mit System Center Configuration Manager
@@ -26,7 +27,7 @@ ms.openlocfilehash: c6bf461a762b8aa51678a17cb7b294c803d05f37
 
 Nach der Installation von Verteilungspunkten für System Center Configuration Manager können Sie mit der Bereitstellung von Inhalten beginnen. In der Regel werden Inhalte über das Netzwerk an Verteilungspunkte übertragen. Es gibt aber auch andere Optionen zum Übermitteln von Inhalten an die Verteilungspunkte. Nachdem Inhalt an einen Verteilungspunkt übertragen wurde, können Sie ihn auf Verteilungspunkten aktualisieren, neu verteilen, entfernen und überprüfen.  
 
-##  <a name="a-namebkmkdistributea-distribute-content"></a><a name="bkmk_distribute"></a> Treiberpakete  
+##  <a name="bkmk_distribute"></a> Treiberpakete  
  Normalerweise verteilen Sie Inhalte an Verteilungspunkte, damit diese für Clientcomputer verfügbar sind. (Ausnahme: Verwendung einer bedarfsgesteuerten Verteilung von Inhalten für eine bestimmte Bereitstellung.)  Wenn Sie Inhalt verteilen, werden Inhaltsdateien von Configuration Manager in einem Paket gespeichert, das anschließend an den Verteilungspunkt verteilt wird. Die verteilbaren Inhaltstypen lauten z.B.:  
 
 -   Anwendungsbereitstellungstypen  
@@ -105,7 +106,7 @@ Wenden Sie das folgende Verfahren an, um Inhalt an Verteilungspunkte zu verteile
 
 9. Auf der Seite **Bestätigung** wird angezeigt, ob der Inhalt den Punkten erfolgreich zugewiesen wurde. Informationen zum Überwachen der Verteilung von Inhalten finden Sie unter [Monitor content you have distributed with System Center Configuration Manager (Überwachen von mit System Center Configuration Manager verteilten Inhalten)](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md).  
 
-##  <a name="a-namebkmkprestagea-use-prestaged-content"></a><a name="bkmk_prestage"></a> Verwenden von vorab bereitgestellten Inhalten  
+##  <a name="bkmk_prestage"></a> Verwenden von vorab bereitgestellten Inhalten  
  Sie können Inhaltsdateien für Anwendungen und Pakettypen vorab bereitstellen:  
 
 -   Wählen Sie den erforderlichen Inhalt in der Configuration Manager-Konsole aus, und verwenden Sie dann den **Assistenten zum Erstellen von vorab bereitgestellten Inhaltsdateien**, um eine komprimierte vorab bereitgestellte Inhaltsdatei zu erstellen, die die Dateien und die zugehörigen Metadaten für den ausgewählten Inhalt enthält.  
@@ -130,7 +131,7 @@ Informationen zum Vorabbereitstellen von Inhaltsdateien finden Sie unter *Presta
 
 Gehen Sie wie in den folgenden Abschnitten beschrieben vor, um Inhalt vorab bereitzustellen.  
 
-###  <a name="a-namebkmkcreateprestagedcontentfilea-step-1-create-a-prestaged-content-file"></a><a name="BKMK_CreatePrestagedContentFile"></a> Schritt 1: Erstellen einer vorab bereitgestellten Inhaltsdatei  
+###  <a name="BKMK_CreatePrestagedContentFile"></a> Schritt 1: Erstellen einer vorab bereitgestellten Inhaltsdatei  
  Sie können eine komprimierte, vorab bereitgestellte Inhaltsdatei erstellen, die die Dateien und zugeordneten Metadaten für den in der Configuration Manager-Konsole ausgewählten Inhalt umfasst. Gehen Sie wie folgt vor, um eine vorab bereitgestellte Inhaltsdatei zu erstellen.  
 
 ##### <a name="to-create-a-prestaged-content-file"></a>So erstellen Sie eine vorab bereitgestellte Inhaltsdatei  
@@ -176,7 +177,7 @@ Gehen Sie wie in den folgenden Abschnitten beschrieben vor, um Inhalt vorab bere
 
 11. Überprüfen Sie auf der Seite **Abschluss des Vorgangs** , ob die vorab bereitgestellte Inhaltsdatei erfolgreich erstellt wurde. Klicken Sie dann auf **Schließen**.  
 
-###  <a name="a-namebkmkassigncontenttodistributionpointa-step-2-assign-the-content-to-distribution-points"></a><a name="BKMK_AssignContentToDistributionPoint"></a> Schritt 2: Zuweisen des Inhalts zu Verteilungspunkten  
+###  <a name="BKMK_AssignContentToDistributionPoint"></a> Schritt 2: Zuweisen des Inhalts zu Verteilungspunkten  
  Nachdem Sie die Inhaltsdatei vorab bereitgestellt haben, weisen Sie den Inhalt Verteilungspunkten zu.  
 
 > [!NOTE]  
@@ -238,7 +239,7 @@ Gehen Sie wie in den folgenden Abschnitten beschrieben vor, um Inhalt vorab bere
 
 9. Auf der Seite **Bestätigung** wird angezeigt, ob der Inhalt den Verteilungspunkten erfolgreich zugewiesen wurde. Informationen zum Überwachen der Verteilung von Inhalten finden Sie unter [Monitor content you have distributed with System Center Configuration Manager (Überwachen von mit System Center Configuration Manager verteilten Inhalten)](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md).  
 
-###  <a name="a-namebkmkexportcontentfromprestagedcontentfilea-step-3-extract-the-content-from-the-prestaged-content-file"></a><a name="BKMK_ExportContentFromPrestagedContentFile"></a> Schritt 3: Extrahieren des Inhalts aus der vorab bereitgestellten Inhaltsdatei  
+###  <a name="BKMK_ExportContentFromPrestagedContentFile"></a> Schritt 3: Extrahieren des Inhalts aus der vorab bereitgestellten Inhaltsdatei  
  Nachdem Sie die vorab bereitgestellte Inhaltsdatei erstellt und den Inhalt Verteilungspunkten zugewiesen haben, können Sie die Inhaltsdateien in die Inhaltsbibliothek auf einem Standortserver oder Verteilungspunkt extrahieren. In der Regel dürften Sie die vorab bereitgestellte Inhaltsdatei auf ein tragbares Laufwerk wie ein USB-Laufwerk kopiert oder den Inhalt auf Medien wie eine DVD gebrannt haben. Die Inhaltsdatei bzw. der Inhalt müsste am Ort des Standortservers oder Verteilungspunkts, für den der Inhalt erforderlich ist, zur Verfügung stehen.  
 
  Gehen Sie wie folgt vor, um die Inhaltsdateien mit dem Befehlszeilentool „ExtractContent“ manuell aus der vorab bereitgestellten Inhaltsdatei zu exportieren.  
@@ -279,7 +280,7 @@ Gehen Sie wie in den folgenden Abschnitten beschrieben vor, um Inhalt vorab bere
     >   
     > Configuration Manager verteilt nicht automatisch Paketversion 2 an den Verteilungspunkt. Sie müssen eine neue vorab bereitgestellte Inhaltsdatei erstellen, die die neue Dateiversion enthält, und dann den Inhalt extrahieren, für den Verteilungspunkt ein Update ausführen, um die geänderten Dateien zu verteilen, oder alle Dateien im Paket erneut verteilen.  
 
-###  <a name="a-namebkmkdpsiteservera-how-to-prestage-content-on-a-distribution-point-on-a-site-server"></a><a name="bkmk_dpsiteserver"></a> So stellen Sie Inhalt vorab auf einem Verteilungspunkt an einem Standortserver bereit  
+###  <a name="bkmk_dpsiteserver"></a> So stellen Sie Inhalt vorab auf einem Verteilungspunkt an einem Standortserver bereit  
  Wenn ein Verteilungspunkt auf einem Standortserver installiert ist, müssen Sie wie folgt vorgehen, um Inhalte erfolgreich vorab bereitstellen zu können. Grund hierfür ist, dass die Inhaltsdateien sich bereits in der Inhaltsbibliothek befinden.  
 
  Wenn der Verteilungspunkt nicht für die Vorabbereitstellung konfiguriert ist oder sich nicht auf einem Standortserver befindet, folgen Sie den Hinweisen im Abschnitt [Verwenden von vorab bereitgestellten Inhalten](#bkmk_prestage) dieses Themas.  
@@ -305,45 +306,21 @@ Gehen Sie wie in den folgenden Abschnitten beschrieben vor, um Inhalt vorab bere
     > [!NOTE]  
     >  Wenn der Verteilungspunkt sich an einem sekundären Standort befindet, warten Sie mindestens 10 Minuten. Verwenden Sie dann eine mit dem übergeordneten primären Standort verbundene Configuration Manager-Konsole, um den Inhalt dem Verteilungspunkt auf dem sekundären Standort zuzuweisen.  
 
-##  <a name="a-namebkmkmanagea-manage-the-content-you-have-distributed"></a><a name="bkmk_manage"></a> Verwalten der Inhalte, die Sie verteilt haben  
+##  <a name="bkmk_manage"></a> Verwalten der Inhalte, die Sie verteilt haben  
  Für das Verwalten von Inhalten haben Sie die folgenden Optionen:  
+ - [Inhalt aktualisieren](#update-content)
+ - [Inhalt neu verteilen](#redistribute-content)
+ - [Inhalt entfernen](#remove-content)
+ - [Inhalt prüfen](#validate-content)
 
-**Inhalt aktualisieren:** Wenn der Speicherort der Quelldatei für eine Bereitstellung aktualisiert wird, indem neue Dateien hinzugefügt oder vorhandene Dateien durch aktuellere Versionen ersetzt werden, können Sie die Inhaltsdateien an den Verteilungspunkten aktualisieren, indem Sie die Aktionen **Verteilungspunkte aktualisieren** oder **Inhalt aktualisieren** ausführen:  
-
+### <a name="update-content"></a>Inhalt aktualisieren
+Wenn der Speicherort der Quelldatei für eine Bereitstellung aktualisiert wird, indem neue Dateien hinzugefügt oder vorhandene Dateien durch aktuellere Versionen ersetzt werden, können Sie die Inhaltsdateien an den Verteilungspunkten aktualisieren, indem Sie die Aktionen **Verteilungspunkte aktualisieren** oder **Inhalt aktualisieren** ausführen.  
 -   Die Inhaltsdateien werden vom Quelldateipfad in die Inhaltsbibliothek auf dem Standort kopiert, der Besitzer der Paketinhaltsquelle ist.  
-
 -   Die Paketversion wird erhöht  
-
 -   Für jede Instanz der Inhaltsbibliothek auf Standortservern und Verteilungspunkten werden nur die geänderten Dateien aktualisiert.  
 
 > [!WARNING]  
 >  Die Paketversion von Clientanwendungen ist immer 1. Wenn Sie den Inhalt eines Anwendungsbereitstellungstyps aktualisieren, erstellt Configuration Manager eine neue Inhalts-ID für den Bereitstellungstyp, und im Paket wird auf die neue Inhalts-ID verwiesen.  
-
-**Inhalt neu verteilen:** Sie können ein Paket neu verteilen, um alle Inhaltsdateien im Paket an Verteilungspunkte oder Verteilungspunktgruppen zu kopieren und damit die vorhandenen Dateien zu überschreiben.  
-
- Verwenden Sie diesen Vorgang, um Inhaltsdateien im Paket zu reparieren oder den Inhalt erneut zu senden, wenn die erste Verteilung nicht erfolgreich war. Sie können ein Paket über die folgenden Optionen neu verteilen:  
-
--   Paketeigenschaften  
-
--   Verteilungspunkteigenschaften  
-
--   Eigenschaften für Verteilungspunktgruppen  
-
-**Inhalt entfernen:** Wenn Sie an Verteilungspunkten keinen Inhalt mehr benötigen, können Sie die Inhaltsdateien vom Verteilungspunkt entfernen.  
-
--   Paketeigenschaften  
-
--   Verteilungspunkteigenschaften  
-
--   Eigenschaften für Verteilungspunktgruppen  
-
- Wenn der Inhalt jedoch einem anderen Paket zugeordnet ist, das an den gleichen Verteilungspunkt verteilt wurde, können Sie den Inhalt nicht entfernen. Sie können den Inhalt entfernen aus:  
-
-**Inhalt überprüfen:** Bei der Inhaltsprüfung wird die Integrität der Inhaltsdateien auf Verteilungspunkten überprüft. Die Inhaltsprüfung wird nach einem Zeitplan ausgeführt, oder Sie können die Inhaltsprüfung über die Eigenschaften von Verteilungspunkten und Paketen manuell initiieren.  
-
- Zu Beginn der Inhaltsprüfung werden die Inhaltsdateien auf Verteilungspunkten von Configuration Manager überprüft. Wenn der Dateihash für die Dateien auf dem Verteilungspunkt nicht den Erwartungen entspricht, gibt Configuration Manager eine Statusmeldung aus, die Sie im Arbeitsbereich **Überwachung** überprüfen können.  
-
- Weitere Informationen zum Konfigurieren des Zeitplans für die Inhaltsprüfung finden Sie unter [Distribution point configurations (Konfigurationen von Verteilungspunkten)](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs) im Thema [Install and configure distribution points for System Center Configuration Manager (Installieren und Konfigurieren von Verteilungspunkten in System Center Configuration Manager)](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md).  
 
 #### <a name="to-update-content-on-distribution-points"></a>So führen Sie ein Update für Inhalt an Verteilungspunkten aus  
 
@@ -372,6 +349,16 @@ Gehen Sie wie in den folgenden Abschnitten beschrieben vor, um Inhalt vorab bere
 
     > [!NOTE]  
     >  Wenn Sie Updates für Startabbildinhalte ausführen, wird der Assistent zum Verwalten von Verteilungspunkten geöffnet. Überprüfen Sie die Informationen auf der Seite **Zusammenfassung** , und schließen Sie den Assistenten ab, um das Update auszuführen.  
+
+### <a name="redistribute-content"></a>Inhalt neu verteilen
+Sie können ein Paket neu verteilen, um alle Inhaltsdateien im Paket an Verteilungspunkte oder Verteilungspunktgruppen zu kopieren und damit die vorhandenen Dateien zu überschreiben.  
+
+ Verwenden Sie diesen Vorgang, um Inhaltsdateien im Paket zu reparieren oder den Inhalt erneut zu senden, wenn die erste Verteilung nicht erfolgreich war. Sie können ein Paket über die folgenden Optionen neu verteilen:  
+
+-   Paketeigenschaften  
+-   Verteilungspunkteigenschaften  
+-   Eigenschaften für Verteilungspunktgruppen  
+
 
 #### <a name="to-redistribute-content-from-package-properties"></a>So verteilen Sie Inhalt mithilfe der Paketeigenschaften neu  
 
@@ -420,6 +407,23 @@ Gehen Sie wie in den folgenden Abschnitten beschrieben vor, um Inhalt vorab bere
     > [!IMPORTANT]  
     >  Der Paketinhalt wird an alle Verteilungspunkte in der Verteilungspunktgruppe neu verteilt.  
 
+
+#### <a name="use-the-sdk-to-force-replication-of-content"></a>Verwenden des SDKs zum Erzwingen der Inhaltsreplikation
+Sie können die Windows Management Instrumentation-Klassenmethode (WMI) **RetryContentReplication** aus dem Configuration Manager-SDK verwenden, um den Verteilungs-Manager dazu zu zwingen, Inhalt in die Inhaltsbibliothek vom Quellspeicherort zu kopieren.  
+
+Verwenden Sie diese Methode nur, um Replikation zu erzwingen, wenn Sie Inhalt erneut verteilen müssen, nachdem es Probleme mit der normalen Inhaltsreplikation gab (In der Regel wird dies mit der Verwendung des Überwachungsknotens der Konsole bestätigt).   
+
+Weitere Informationen zu dieser SDK-Option finden Sie unter [RetryContentReplication Method in Class SMS_CM_UpdatePackages](https://msdn.microsoft.com/library/mt762092(CMSDK.16).aspx) („RetryContentReplication“-Methode in der Klasse „SMS_CM_UpdatePackages“) auf MSDN.Microsoft.com.
+
+### <a name="remove-content"></a>Inhalt entfernen
+Wenn Sie an Verteilungspunkten keinen Inhalt mehr benötigen, können Sie die Inhaltsdateien vom Verteilungspunkt entfernen.  
+
+-   Paketeigenschaften  
+-   Verteilungspunkteigenschaften  
+-   Eigenschaften für Verteilungspunktgruppen  
+
+Wenn der Inhalt jedoch einem anderen Paket zugeordnet ist, das an den gleichen Verteilungspunkt verteilt wurde, können Sie den Inhalt nicht entfernen.  
+
 #### <a name="to-remove-package-content-files-from-distribution-points"></a>So entfernen Sie Paketinhaltsdateien aus Verteilungspunkten  
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Softwarebibliothek**.  
@@ -464,6 +468,15 @@ Gehen Sie wie in den folgenden Abschnitten beschrieben vor, um Inhalt vorab bere
 
 4.  Klicken Sie auf die Registerkarte **Inhalt** , wählen Sie den zu entfernenden Inhalt aus, und klicken Sie auf **Entfernen**. Klicken Sie dann auf **OK**.  
 
+
+### <a name="validate-content"></a>Inhalt prüfen
+Bei der Inhaltsprüfung wird die Integrität der Inhaltsdateien auf Verteilungspunkten überprüft. Die Inhaltsprüfung wird nach einem Zeitplan ausgeführt, oder Sie können die Inhaltsprüfung über die Eigenschaften von Verteilungspunkten und Paketen manuell initiieren.  
+
+ Zu Beginn der Inhaltsprüfung werden die Inhaltsdateien auf Verteilungspunkten von Configuration Manager überprüft. Wenn der Dateihash für die Dateien auf dem Verteilungspunkt nicht den Erwartungen entspricht, gibt Configuration Manager eine Statusmeldung aus, die Sie im Arbeitsbereich **Überwachung** überprüfen können.  
+
+ Weitere Informationen zum Konfigurieren des Zeitplans für die Inhaltsprüfung finden Sie unter [Distribution point configurations (Konfigurationen von Verteilungspunkten)](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs) im Thema [Install and configure distribution points for System Center Configuration Manager (Installieren und Konfigurieren von Verteilungspunkten in System Center Configuration Manager)](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md).  
+
+
 #### <a name="to-initiate-content-validation-for-all-content-on-a-distribution-point"></a>So initiieren Sie die Inhaltsprüfung für alle Inhalte auf einem Verteilungspunkt  
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung**.  
@@ -501,9 +514,4 @@ Gehen Sie wie in den folgenden Abschnitten beschrieben vor, um Inhalt vorab bere
 4.  Wählen Sie auf der Registerkarte **Inhaltsorte** den Verteilungspunkt bzw. die Verteilungspunktgruppe mit dem zu überprüfenden Inhalt aus, klicken Sie auf **Überprüfen**und dann auf **OK**. Klicken Sie anschließend erneut auf **OK**. Die Inhaltsprüfung für den ausgewählten Verteilungspunkt bzw. die ausgewählte Verteilungspunktgruppe wird initiiert.  
 
 5.  Zum Anzeigen der Ergebnisse der Inhaltsprüfung erweitern Sie im Arbeitsbereich **Überwachung** den Knoten **Verteilungsstatus**, und klicken Sie dann auf den Knoten **Inhaltsstatus** . Der Inhalt jedes Pakettyps (z. B. Anwendung, Softwareupdatepaket und Startabbild) wird angezeigt. Weitere Informationen zum Überwachen des Status von Inhalten finden Sie unter [Monitor content you have distributed with System Center Configuration Manager (Überwachen von mit System Center Configuration Manager verteilten Inhalten)](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md).  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

@@ -1,5 +1,5 @@
 ---
-title: "Überwachen von Betriebssystembereitstellungen | Configuration Manager"
+title: "Überwachen von Betriebssystembereitstellungen | Microsoft-Dokumentation"
 description: "Um Betriebssystembereitstellungsobjekte zu überwachen, bietet die Configuration Manager-Konsole Warnungen, Berichte und verschiedene Statusanzeigen."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 893e5fe2acee0ffedb7759be85fb2f911f631611
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 154c0a286e6b9ccedc7545eb010967ac00d35407
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -29,7 +30,7 @@ ms.openlocfilehash: 893e5fe2acee0ffedb7759be85fb2f911f631611
 Die Configuration Manager-Konsole bietet die folgenden Möglichkeiten zum Überwachen von Objekten bei der Betriebssystembereitstellung.  
 
 
-##  <a name="a-namebkmkosdalertsa-alerts-for-operating-system-deployments"></a><a name="BKMK_OSDAlerts"></a> Benachrichtigungen zu Betriebssystembereitstellungen  
+##  <a name="BKMK_OSDAlerts"></a> Benachrichtigungen zu Betriebssystembereitstellungen  
  Sie können eine Benachrichtigung in den Bereitstellungseinstellungen der Tasksequenz konfigurieren, um Administratoren zu informieren, dass die Kompatibilitätsstufen für die Bereitstellung unter dem konfigurierten Prozentsatz liegen.  
 
  Nachdem Sie die Warnungseinstellungen konfiguriert haben, wird von Configuration Manager eine Warnung ausgegeben, wenn die angegebenen Bedingungen erfüllt sind. Sie können Bereitstellungsbenachrichtigungen für die Tasksequenz an den folgenden Stellen überprüfen:  
@@ -38,7 +39,7 @@ Die Configuration Manager-Konsole bietet die folgenden Möglichkeiten zum Überw
 
 2.  Verwalten Sie die konfigurierten Warnungen im Arbeitsbereich **Überwachung** im Knoten **Warnungen** .  
 
-##  <a name="a-namebkmktsdeploystatusa-task-sequence-deployment-status"></a><a name="BKMK_TSDeployStatus"></a> Tasksequenz – Bereitstellungsstatus  
+##  <a name="BKMK_TSDeployStatus"></a> Tasksequenz – Bereitstellungsstatus  
  Nachdem Sie eine Tasksequenz bereitgestellt haben, können Sie den Bereitstellungsstatus überwachen. Gehen Sie wie folgt vor, um den Bereitstellungsstatus einer Tasksequenz zu überwachen.  
 
 #### <a name="to-monitor-deployment-status"></a>So überwachen Sie den Bereitstellungsstatus  
@@ -51,13 +52,13 @@ Die Configuration Manager-Konsole bietet die folgenden Möglichkeiten zum Überw
 
 4.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Bereitstellung** auf **Status anzeigen**.  
 
-##  <a name="a-namebkmktsreportsa-operating-system-deployment-reports"></a><a name="BKMK_TSReports"></a> Betriebssystembereitstellung – Berichte  
+##  <a name="BKMK_TSReports"></a> Betriebssystembereitstellung – Berichte  
  Es stehen viele vordefinierte Berichte zur Betriebssystembereitstellung zur Verfügung. Diese sind in verschiedene Kategorien unterteilt und dienen dazu, spezifische Informationen zur Zustandsmigration und Bereitstellungen von Tasksequenzen zu liefern. Zusätzlich zu den vorkonfigurierten Berichten können Sie auch benutzerdefinierte Softwareupdateberichte erstellen, die auf die Anforderungen Ihres Unternehmens zugeschnitten sind. Weitere Informationen finden Sie unter [Vorgänge und Wartungstasks für die Berichterstellung](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
 
-##  <a name="a-namebkmkmonitorcontenta-monitor-content"></a><a name="BKMK_MonitorContent"></a> Überwachen von Inhalt  
+##  <a name="BKMK_MonitorContent"></a> Überwachen von Inhalt  
  Sie können den Inhalt in der Configuration Manager-Konsole überwachen, und so den Status aller Pakettypen im Zusammenhang mit den zugeordneten Verteilungspunkten prüfen. Dies kann den Inhaltsprüfungsstatus des Paketinhalts, den Status von Inhalt, der einer bestimmten Verteilungspunktgruppe zugeordnet ist, den Zustand von Inhalt, der einem Verteilungspunkt zugeordnet ist, und den Status optionaler Funktionen jedes Verteilungspunkts (Inhaltsprüfung, PXE und Multicast) umfassen.  
 
-###  <a name="a-namebkmkcontentstatusa-content-status-monitoring"></a><a name="BKMK_ContentStatus"></a> Überwachung des Inhaltsstatus  
+###  <a name="BKMK_ContentStatus"></a> Überwachung des Inhaltsstatus  
  Im Arbeitsbereich **Überwachung** finden Sie im Knoten **Inhaltsstatus** Informationen zu Inhaltspaketen. Sie können allgemeine Informationen zum Paket, den Verteilungsstatus des Pakets sowie detaillierte Statusinformationen zum Paket prüfen. Gehen Sie wie folgt vor, um den Inhaltsstatus anzuzeigen.  
 
 #### <a name="to-monitor-content-status"></a>So überwachen Sie den Inhaltsstatus  
@@ -70,7 +71,7 @@ Die Configuration Manager-Konsole bietet die folgenden Möglichkeiten zum Überw
 
 4.  Klicken Sie auf der Registerkarte **Startseite** auf **Status anzeigen**. Detaillierte Statusinformationen zum Paket werden angezeigt.  
 
-###  <a name="a-namebkmkdpgroupstatusa-distribution-point-group-status"></a><a name="BKMK_DPGroupStatus"></a> Status der Verteilungspunktgruppe  
+###  <a name="BKMK_DPGroupStatus"></a> Status der Verteilungspunktgruppe  
  Im Arbeitsbereich **Überwachung** finden Sie im Knoten **Status der Verteilungspunktgruppe** Informationen zu Verteilungspunktgruppen. Sie können allgemeine Informationen zur Verteilungspunktgruppe, wie beispielsweise den Status der Verteilungspunktgruppe und die Kompatibilitätsstufe, sowie detaillierte Informationen zur Verteilungspunktgruppe anzeigen. Gehen Sie wie folgt vor, um den Status einer Verteilungspunktgruppe anzuzeigen.  
 
 #### <a name="to-monitor-distribution-point-group-status"></a>So überwachen Sie den Status einer Verteilungspunktgruppe  
@@ -83,7 +84,7 @@ Die Configuration Manager-Konsole bietet die folgenden Möglichkeiten zum Überw
 
 4.  Klicken Sie auf der Registerkarte **Startseite** auf **Status anzeigen**. Detaillierte Statusinformationen zur Verteilungspunktgruppe werden angezeigt.  
 
-###  <a name="a-namebkmkdpconfigstatusa-distribution-point-configuration-status"></a><a name="BKMK_DPConfigStatus"></a> Status der Verteilungspunktkonfiguration  
+###  <a name="BKMK_DPConfigStatus"></a> Status der Verteilungspunktkonfiguration  
  Im Arbeitsbereich **Überwachung** finden Sie im Knoten **Status der Verteilungspunktkonfiguration** Informationen zum Verteilungspunkt. Sie können prüfen, welche Attribute für den Verteilungspunkt aktiviert sind, wie z. B. PXE, Multicast und Inhaltsprüfung. Außerdem können Sie detaillierte Statusinformationen zum Verteilungspunkt anzeigen. Gehen Sie wie folgt vor, um den Status einer Verteilungspunktkonfiguration anzuzeigen.  
 
 #### <a name="to-monitor-distribution-point-configuration-status"></a>So überwachen Sie den Status einer Verteilungspunktkonfiguration  
@@ -95,9 +96,4 @@ Die Configuration Manager-Konsole bietet die folgenden Möglichkeiten zum Überw
 3.  Wählen Sie den Verteilungspunkt aus, für den Statusinformationen angezeigt werden sollen.  
 
 4.  Klicken Sie im Ergebnisbereich auf die Registerkarte **Details** . Statusinformationen zum Verteilungspunkt werden angezeigt.  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

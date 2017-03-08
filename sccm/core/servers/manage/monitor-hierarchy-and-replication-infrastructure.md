@@ -1,5 +1,5 @@
 ---
-title: "Überwachen der Replikation | System Center Configuration Manager"
+title: "Überwachen der Replikation | Microsoft-Dokumentation"
 description: "Erfahren Sie, wie Sie Infrastruktur und Vorgänge in Configuration Manager durch Verwendung des Arbeitsbereichs „Überwachung“ in der Konsole überwachen."
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 92ded1197d1dcdd6e5f3a8917718e6232b18bce4
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 132803a1aa9aad5c5462686bd656688418e47d07
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -55,7 +56,7 @@ Wenn Überwachungstasks Anzeichen für Probleme finden, sollten Sie die Ursache 
 
 
 
-##  <a name="a-namebkmkmonintormgmttasksa-monitor-common-management-tasks-for-configuration-manager"></a><a name="BKMK_MonintorMgmtTasks"></a> Überwachen allgemeiner Verwaltungstasks für Configuration Manager  
+##  <a name="BKMK_MonintorMgmtTasks"></a> Überwachen allgemeiner Verwaltungstasks für Configuration Manager  
  Configuration Manager bietet integrierte Überwachungsfunktionen in der Configuration Manager-Konsole. Sie können zahlreiche Tasks überwachen, darunter Tasks im Zusammenhang mit Softwareupdates, Energieverwaltung und Bereitstellung von Inhalten in der gesamten Hierarchie.  
 
  Verwenden Sie die folgenden Informationen, um allgemeine Configuration Manager-Tasks zu überwachen:  
@@ -87,10 +88,10 @@ Informationen finden Sie unter [Überwachen der App-Nutzung mit der Softwaremess
  Weitere Informationen finden Sie unter [Überwachen von Softwareupdates in System Center Configuration Manager](../../../sum/deploy-use/monitor-software-updates.md).  
 
 
-##  <a name="a-namebkmkmonitorinfrastructurea-monitor-hierarchy-infrastructure-for-configuration-manager"></a><a name="BKMK_MonitorInfrastructure"></a> Überwachen der Hierarchieinfrastruktur für Configuration Manager  
+##  <a name="BKMK_MonitorInfrastructure"></a> Überwachen der Hierarchieinfrastruktur für Configuration Manager  
 Configuration Manager bietet mehrere Methoden zum Überwachen von Status und Vorgängen in Ihrer Hierarchie. Sie können den Systemstatus von Standorten hierarchieweit überprüfen, die Replikation zwischen Standorten anhand von Standorthierarchie- oder geografischen Ansichten überwachen, Replikationslinks zwischen Standorten zur Datenbankreplikation überwachen und das Replikationslinkanalyse-Tool verwenden, um Replikationsprobleme zu beheben.  
 
-###  <a name="a-namebkmkshnodea-about-the-site-hierarchy-node"></a><a name="BKMK_SH_Node"></a> Informationen zum Knoten "Standorthierarchie"  
+###  <a name="BKMK_SH_Node"></a> Informationen zum Knoten "Standorthierarchie"  
 Im Knoten **Standorthierarchie** des Arbeitsbereichs **Überwachung** finden Sie eine Übersicht Ihrer Configuration Manager-Hierarchie sowie Links zwischen Standorten. Sie können zwei Ansichten verwenden:  
 
 -   **Hierarchiediagramm**: In dieser Ansicht wird Ihre Hierarchie als Topologiezuordnung angezeigt, die so vereinfacht wurde, dass nur wichtige Informationen dargestellt werden.  
@@ -126,13 +127,13 @@ Mit der folgenden Option können Sie die geografische Ansicht ändern:
 
      Wenn Sie einen geografischen Ort angeben, können Sie das Feld **Ort** verwenden, um nach einem bestimmten Standort in Ihrer Hierarchie zu suchen. Wenn Sie den Standort ausgewählt haben, geben Sie den Ort als Namen einer Stadt oder als Straßenadresse in die Spalte **Ort** ein. Configuration Manager verwendet Bing Maps zur Auflösung des Orts.  
 
-###  <a name="a-namebkmkmonitorreplinksandstatussa-how-to-monitor-database-replication-links-and-replication-status"></a><a name="BKMK_MonitorRepLinksAndStatuss"></a> Überwachen der Datenbankreplikationslinks und des Replikationsstatus  
+###  <a name="BKMK_MonitorRepLinksAndStatuss"></a> Überwachen der Datenbankreplikationslinks und des Replikationsstatus  
  Zusätzlich zu den Details auf hoher Ebene, auf die über den Knoten **Standorthierarchie** im Arbeitsbereich **Überwachung** zugegriffen werden kann, können Sie Details zur Datenbankreplikation auch über den Knoten **Datenbankreplikation** im Arbeitsbereich **Überwachung** überwachen. Aus der **Datenbankreplikation** können Sie den Status der Replikationslinks zwischen Standorten überwachen, ebenso wie die Initialisierungs- und Replikationsdetails für Replikationsgruppen an dem Standort, mit dem Ihre Configuration Manager-Konsole verbunden ist.  
 
 > [!TIP]  
 >  Obwohl auch im Arbeitsbereich **Verwaltung** unter dem Knoten **Hierarchiekonfiguration** ein Knoten zur **Datenbankreplikation** vorhanden ist, können Sie sich den Replikationsstatus für Datenbankreplikationslinks von diesem Ort aus nicht anzeigen lassen.  
 
-####  <a name="a-namebkmkmonitorreplicationlinksa-replication-link-status"></a><a name="BKMK_MonitorReplicationLinks"></a> Replikationslinkstatus  
+####  <a name="BKMK_MonitorReplicationLinks"></a> Replikationslinkstatus  
 Bei der Datenbankreplikation zwischen Standorten werden mehrere Informationssätze, genannt Replikationsgruppen, repliziert. Jede Replikationsgruppe wird mit unterschiedlichen Replikationsprioritäten repliziert. Standardmäßig können weder die in einer Replikationsgruppe enthaltenen Daten noch die Replikationshäufigkeit geändert werden.  
 
  Wenn ein Replikationslink aktiv ist und sein Status weder Fehlgeschlagennoch Heruntergestuftist, dann werden alle Replikationsgruppen rechtzeitig repliziert. Wenn die Replikation nicht innerhalb des erwarteten Zeitraums von einer oder mehreren Repliaktionsgruppen abgeschlossen wird, dann wird der Link als Heruntergestuft angezeigt. Heruntergestufte Links sind zwar noch funktionsfähig, Sie sollten sie jedoch überwachen, um zu gewährleisten, dass der aktive Status wiederhergestellt wird, oder sie untersuchen, um weitere Herabstufungen und Fehler bei der Linkreplikation auszuschließen.  
@@ -149,7 +150,7 @@ Bei der Datenbankreplikation zwischen Standorten werden mehrere Informationssät
 
  Wenn Sie während des Upgrades eines übergeordneten Standorts auf ein neues Service Pack den Linkstatus vom untergeordneten Standort anzeigen, wird dieser als aktiv angezeigt. Nach dem Upgrade und bis am untergeordneten Standort dasselbe Service Pack wie am übergeordnete Standort ausgeführt wird, wird der Linkstatus als aktiv angezeigt, wenn er vom übergeordneten Standort angezeigt wird, und als konfiguriert, wenn er vom untergeordneten Standort angezeigt wird.  
 
-####  <a name="a-namebkmkmonitorreplicationstatusa-replication-status"></a><a name="BKMK_MonitorReplicationStatus"></a> Replikationsstatus  
+####  <a name="BKMK_MonitorReplicationStatus"></a> Replikationsstatus  
  Über den Knoten **Datenbankreplikation** im Arbeitsbereich **Überwachung** können Sie sich den Status der Replikation für einen Replikationslink anzeigen lassen, sowie die Details zur Standortdatenbank an jedem Standort des Replikationslinks. Sie können auch Details zu Replikationsgruppen anzeigen lassen. Für das Anzeigen von Details wählen Sie einen Replikationslink und anschließend die entsprechende Registerkarte für den Replikationsstatus aus, den Sie sich anzeigen lassen möchten. Es folgen Details zu den verschiedenen Registerkarten für den Replikationsstatus.  
 
  **Zusammenfassung**  
@@ -190,7 +191,7 @@ Bei der Datenbankreplikation zwischen Standorten werden mehrere Informationssät
 > [!TIP]  
 >  Replikationsgruppen für Standortdaten werden nur vom untergeordneten Standort an den übergeordneten Standort versendet. Replikationsgruppen für globale Daten werden in beide Richtungen repliziert.  
 
-###  <a name="a-namebkmkrlaa-about-the-replication-link-analyzer"></a><a name="BKMK_RLA"></a> Informationen zur Replikationslinkanalyse  
+###  <a name="BKMK_RLA"></a> Informationen zur Replikationslinkanalyse  
  Configuration Manager schließt die **Replikationslinkanalyse** ein, die Sie zum Analysieren und Beheben von Replikationsproblemen verwenden können. Sie können mithilfe der Replikationslinkanalyse Fehler bei den Replikationslinks beheben, wenn bei der Replikation ein Fehler aufgetreten ist oder die Replikation nicht richtig ausgeführt wird, obwohl noch keine Fehlermeldung vorliegt. Die Replikationslinkanalyse kann zur Fehlerbehebung bei Replikationsproblemen zwischen den folgenden Computern in der Configuration Manager-Hierarchie verwendet werden (die Richtung des Replikationsfehlers ist dabei nicht maßgeblich):  
 
 -   Zwischen einem Standortserver und dem Standortdatenbankserver  
@@ -229,7 +230,7 @@ Es werden erfolgreiche sowie nicht erfolgreiche Aktionen zur Problembehebung pro
 
 -   Seit der Veröffentlichung des System Center Configuration Manager-Release 1511 generiert die Replikationslinkanalyse für primäre Standorte, die von System Center 2012 Configuration Manager upgegradet wurden, Fehler in Verbindung mit SQL Server Service Broker-Zertifikaten. Dies liegt daran, dass die Namen der mit Version 1511 eingeführten Zertifikate geändert wurden und dass die Replikationslinkanalyse noch nicht für die neue Version aktualisiert wurde. Diese Fehler können problemlos ignoriert werden.  
 
-###  <a name="a-namebkmkprocsformonitoringreplicationa-procedures-for-monitoring-database-replication"></a><a name="BKMK_ProcsforMonitoringReplication"></a> Prozeduren zum Überwachen der Datenbankreplikation  
+###  <a name="BKMK_ProcsforMonitoringReplication"></a> Prozeduren zum Überwachen der Datenbankreplikation  
 
 ##### <a name="to-monitor-high-level-site-to-site-database-replication-status"></a>So überwachen Sie den allgemeinen Datenbankreplikationsstatus zwischen Standorten    
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Überwachung**.  
@@ -242,9 +243,4 @@ Es werden erfolgreiche sowie nicht erfolgreiche Aktionen zur Problembehebung pro
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Überwachung**.  
 
 2.  Klicken Sie im Arbeitsbereich **Überwachung** auf **Datenbankreplikation**, und wählen Sie dann den Replikationslink aus, der überwacht werden soll. Wählen Sie anschließend im Arbeitsbereich die entsprechende Registerkarte aus, um sich die verschiedenen Details zum Replikationsstatus für diesen Link anzeigen zu lassen.  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

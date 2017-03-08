@@ -1,8 +1,8 @@
 ---
-title: Clientinstallationsmethoden | System Center Configuration Manager
+title: Clientinstallationsmethoden | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über Clientinstallationsmethoden für System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: 51b5964b-374d-4abc-8619-414a9fffad2d
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 169e7871bc1fbc83964ecb17e277d64ce4fd472c
+ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
+ms.openlocfilehash: a7d5a04cf34c49246f768f9a4757c5da3b4db31a
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -26,9 +27,7 @@ ms.openlocfilehash: 169e7871bc1fbc83964ecb17e277d64ce4fd472c
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Es gibt verschiedene Methoden zur Installation der Clientsoftware von System Center Configuration Manager auf Windows-Geräten, UNIX- und Linux-Servern sowie Macintosh-Computern in Ihrem Unternehmen. Sie können je nach Anforderungen eine Methode oder eine beliebige Kombination dieser Methoden verwenden.  
-
- In den folgenden Abschnitten werden die Vor- und Nachteile der einzelnen Clientinstallationsmethoden aufgeführt, um Ihnen die Auswahl der für Ihre Organisation am besten geeigneten Methode zu erleichtern.  
+Sie können andere Methoden verwenden, um Configuration Manager-Clientsoftware zu installieren (auch bekannt als ConfigMgr oder SCCM). Sie können eine Methode oder eine Kombination von Methoden verwenden. In diesem Thema können Sie weiterlesen, um zu erfahren, welche Methode für Ihrer Organisation am besten geeignet ist.  
 
 ## <a name="client-push-installation"></a>Clientpushinstallation  
 
@@ -147,9 +146,4 @@ Es gibt verschiedene Methoden zur Installation der Clientsoftware von System Cen
 -   [Bereitstellen von Clients auf UNIX- und Linux-Servern in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md)  
 
 -   [Bereitstellen von Clients auf Macintosh-Computern in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-macs.md)  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

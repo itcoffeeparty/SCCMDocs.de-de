@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren der Zertifikatinfrastruktur | System Center Configuration Manager
+title: Konfigurieren der Zertifikatinfrastruktur | Microsoft-Dokumentation
 description: Erfahren Sie mehr zum Konfigurieren der Zertifikatregistrierung in System Center Configuration Manager.
 ms.custom: na
 ms.date: 10/10/2016
@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fbce476b8a9b91a88354fb4abfadfd2526ca5e8
-ms.openlocfilehash: 9af69a813a1fe2a07e3b7b289e258b2d0b51a6f7
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 56e0a1923305c5134386623b1e306b8ebd013d53
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="certificate-infrastructure"></a>Zertifikatinfrastruktur
@@ -191,9 +192,4 @@ ms.openlocfilehash: 9af69a813a1fe2a07e3b7b289e258b2d0b51a6f7
  Nachdem Sie die Konfigurationsschritte für die Installation des Registrierungsdiensts für Netzwerkgeräte und der Abhängigkeiten, des Zertifikatregistrierungspunkts und des System Center Configuration Manager-Richtlinienmoduls abgeschlossen haben, können Sie Zertifikate für Benutzer und Geräte bereitstellen, indem Sie Zertifikatprofile erstellen und bereitstellen. Weitere Informationen zum Erstellen von Zertifikatprofilen finden Sie unter [Erstellen von Zertifikatprofilen in System Center Configuration Manager](../../protect/deploy-use/create-certificate-profiles.md).  
 
  Wenn Sie das System Center Configuration Manager-Richtlinienmodul deinstallieren möchten, verwenden Sie hierzu die Option **Programme und Features** in der Systemsteuerung.  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

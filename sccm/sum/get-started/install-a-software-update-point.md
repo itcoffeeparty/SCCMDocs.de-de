@@ -1,6 +1,6 @@
 ---
 
-title: Installieren und Konfigurieren eines Softwareupdatepunkts | Configuration Manager
+title: Installieren und Konfigurieren eines Softwareupdatepunkts | Microsoft-Dokumentation
 description: "Primäre Standorte setzen einen Softwareupdatepunkt am Standort der zentralen Verwaltung voraus, da damit die Bewertung der Kompatibilität von Softwareupdates und die Bereitstellung von Softwareupdates an Clients durchgeführt werden können."
 keywords: 
 author: dougeby
@@ -14,8 +14,9 @@ ms.technology:
 - configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 62a3b720abbc93460a782928e6cbdcb5d6f215aa
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 1d9911274fd76942131054231cdcc2bcebbd3fcb
+ms.lasthandoff: 12/16/2016
 
 
 
@@ -58,7 +59,7 @@ ms.openlocfilehash: 62a3b720abbc93460a782928e6cbdcb5d6f215aa
 ## <a name="wsus-settings"></a>WSUS-Einstellungen  
  Sie müssen die WSUS-Einstellungen je nach verwendeter Configuration Manager-Version auf verschiedenen Seiten des **Assistenten zum Erstellen von Standortsystemservern** oder des **Assistenten zum Hinzufügen von Standortsystemrollen** konfigurieren. In manchen Fällen kann die Konfiguration auch nur in den Eigenschaften des Softwareupdatepunkts vorgenommen werden, die auch als Eigenschaften der Softwareupdatepunkt-Komponente bezeichnet werden. In den folgenden Abschnitten wird erläutert, wie Sie die WSUS-Einstellungen konfigurieren.  
 
-### <a name="a-namebkmkwsusportawsus-port-settings"></a><a name="BKMK_wsusport"></a> WSUS-Porteinstellungen  
+### <a name="BKMK_wsusport"></a> WSUS-Porteinstellungen  
  Sie müssen die WSUS-Porteinstellungen im Assistenten auf der Seite Softwareupdatepunkt oder in den Eigenschaften des Softwareupdatepunkts konfigurieren. Führen Sie die folgende Prozedur durch, um die von WSUS verwendeten Porteinstellungen zu bestimmen.  
 
 #### <a name="to-determine-the-port-settings-used-in-iis"></a>So bestimmen Sie die Porteinstellungen in IIS  
@@ -151,9 +152,4 @@ ms.openlocfilehash: 62a3b720abbc93460a782928e6cbdcb5d6f215aa
 Sie haben den Softwareupdatepunkt ausgehend vom obersten Standort in der Configuration Manager-Hierarchie installiert. Wiederholen Sie die Verfahren in diesem Thema zum Installieren des Softwareupdatepunkts an untergeordneten Standorten.
 
 Nachdem Sie die Softwareupdatepunkte installiert haben, wechseln Sie zu [Synchronisieren von Softwareupdates](synchronize-software-updates.md).
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

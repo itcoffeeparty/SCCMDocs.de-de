@@ -1,5 +1,5 @@
 ---
-title: "Clientbereitstellungstasks für System Center Configuration Manager"
+title: "Clientbereitstellungstasks für System Center Configuration Manager | Microsoft-Dokumentation"
 description: Erfahren Sie, wie Sie Clients in System Center Configuration Manager bereitstellen und konfigurieren.
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 54dd2e8e-66f3-4a10-987a-ed7dde4d32f6
 caps.latest.revision: 3
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 9b5bec94eb5d7fd0fbe85f879ac64119b4dac1dc
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 39a797891386c3711263451b05aaca7a02d42239
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -36,9 +37,4 @@ Sie können den System Center Configuration Manager-Client je nach Anforderungen
 -   [Zuweisen von Clients zu einem Standort in System Center Configuration Manager](../../../core/clients/deploy/assign-clients-to-a-site.md)  
 
 -   [How to configure client status in System Center Configuration Manager (Konfigurieren des Clientstatus in System Center Configuration Manager)](../../../core/clients/deploy/configure-client-status.md)  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

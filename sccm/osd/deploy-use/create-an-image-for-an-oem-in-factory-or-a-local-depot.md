@@ -1,5 +1,5 @@
 ---
-title: "Erstellen eines Images für ein OEM-Vorinstallations- oder lokales Depot | Configuration Manager"
+title: "Erstellen eines Images für ein OEM-Vorinstallations- oder lokales Depot | Microsoft-Dokumentation"
 description: "Verwenden Sie vorab bereitgestellte Medienbereitstellungen zum Reduzieren des Netzwerkverkehrs, während Sie ein Betriebssystem für Computer bereitstellen, die nicht vollständig bereitgestellt sind."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d604577fdb9af7c7789840ea6281c371e35c46b0
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 07aba04fb1b845e389a5f75b115d536136c1569c
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -55,9 +56,4 @@ Durch diese Bereitstellungsmethode wird der Netzwerkdatenverkehr reduziert, da d
 
 ## <a name="start-the-computer-to-install-the-operating-system"></a>Starten des Computers, um das Betriebssystem zu installieren  
  Die vorab bereitgestellte Mediendatei wird auf Computern installiert. Beim erstmaligen Starten des Computers wird die Betriebssysteminstallation gestartet.  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 
