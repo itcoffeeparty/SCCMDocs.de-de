@@ -1,5 +1,5 @@
 ---
-title: 'Aktualisieren von Clients | Microsoft-Dokumentation | Windows '
+title: Aktualisieren von Clients | Microsoft-Dokumentation
 description: "Upgraden von Clients für Windows-Computer in System Center Configuration Manager."
 ms.custom: na
 ms.date: 01/01/2017
@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
-ms.openlocfilehash: a35724a5b839b47904c46361709f248e432eff1e
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: a5b59a1d31d897473262edcd0912ef0fcbedd100
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -98,9 +99,4 @@ Sie können den Client auf Windows-Computern mithilfe von Clientinstallationsmet
 8.  Klicken Sie auf **Installationspakete des Clients automatisch an Verteilungspunkte verteilen, die für vorab bereitgestellten Inhalt aktiviert wurden**, wenn das Clientinstallationspaket auf Verteilungspunkte kopiert werden soll, die für vorab bereitgestellten Inhalt aktiviert wurden.  
 
 9. Klicken Sie auf **OK** , um die Einstellungen zu speichern und das Dialogfeld **Eigenschaften von Hierarchieeinstellungen** zu schließen. Diese Einstellungen werden beim nächsten Herunterladen einer Richtlinie auf Clients übertragen.  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

@@ -16,14 +16,15 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f83dc12aab96ad76a62582fc2f2fe3e0b99b3b67
-ms.openlocfilehash: efda1a8f010bb0125ef726d0b960317a4fdc4f28
+ms.sourcegitcommit: 8728d9f2ae63282a8f58b20105e488fb1a5ef55b
+ms.openlocfilehash: 4c94e4de5bbfe621492e8682c9424a48eb38196d
+ms.lasthandoff: 03/03/2017
 
 ---
 # <a name="install-and-configure-distribution-points-for-system-center-configuration-manager"></a>Installieren und Konfigurieren von Verteilungspunkten für System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
-
+ 
 Verteilungspunkte in System Center Configuration Manager werden installiert, um den Inhalt (Dateien und Software) zu hosten, den Sie für Geräte und Benutzer bereitstellen. Sie können auch Verteilungspunktgruppen erstellen, die die Verwaltung von Verteilungspunkten und die Verteilung von Inhalt an die Verteilungspunkte erleichtern.  
 
  Wenn Sie *einen neuen Verteilungspunkt installieren* (mithilfe des Installations-Assistenten) oder *die Eigenschaften eines vorhandenen Verteilungspunkts verwalten* (durch Bearbeiten der Verteilungspunkteigenschaften), können Sie einen Großteil der Einstellungen des Verteilungspunkts konfigurieren. Es gibt jedoch einige Einstellungen, die entweder bei der Installation oder bei der Bearbeitung, aber nicht gleichzeitig verfügbar sind:  
@@ -44,7 +45,7 @@ Verteilungspunkte in System Center Configuration Manager werden installiert, um 
 
     -   **Konfigurieren der Zeitpläne für Datenübertragungen an Verteilungspunkte**  
 
-##  <a name="a-namebkmkinstalla-install-a-distribution-point"></a><a name="bkmk_install"></a> Installieren eines Verteilungspunkts  
+##  <a name="bkmk_install"></a> Installieren eines Verteilungspunkts  
  Sie müssen einen Standortsystemserver als Verteilungspunkt festlegen, bevor Inhalt für Clientcomputer verfügbar gemacht werden kann. Sie können die Standortrolle „Verteilungspunkt“ einem neuen oder einem vorhandenen Standortsystemserver hinzufügen.  
 
  Wenn Sie einen neuen Verteilungspunkt installieren, verwenden Sie einen Installations-Assistenten, der mit Ihnen die verfügbaren Einstellungen durchgeht. Bevor Sie beginnen, beachten Sie Folgendes:  
@@ -95,7 +96,7 @@ Verwenden Sie die folgenden grundlegenden Verfahren zum Installieren oder Änder
 
 4.  Nachdem Sie die gewünschten Änderungen vorgenommen haben, speichern Sie Ihre Einstellungen, und schließen Sie die Verteilungspunkteigenschaften.  
 
-##  <a name="a-namebkmkmanagea-manage-distribution-point-groups"></a><a name="bkmk_manage"></a> Verwalten von Verteilungspunktgruppen  
+##  <a name="bkmk_manage"></a> Verwalten von Verteilungspunktgruppen  
  Verteilungspunktgruppen stellen eine logische Gruppierung von Verteilungspunkten für die Inhaltsverteilung dar. Mithilfe dieser Gruppen können Sie Inhalte von einem zentralen Speicherort für Verteilungspunkte, die mehrere Standorte umfassen, verwalten und überwachen. Beachten Sie die folgenden Punkte:
 
 -   Sie können der Verteilungspunktgruppe von beliebigen Standorten innerhalb einer Hierarchie Verteilungspunkte hinzufügen.  
@@ -159,7 +160,7 @@ Verwenden Sie die folgenden grundlegenden Verfahren zum Installieren oder Änder
 
 3.  Wählen Sie unter **Verfügbare Verteilungspunktgruppen**die Verteilungspunktgruppen aus, denen die ausgewählten Verteilungspunkte als Mitglieder hinzugefügt werden sollen, und wählen Sie dann **OK** aus.  
 
-##  <a name="a-namebkmkconfigsa-configure-a-distribution-point"></a><a name="bkmk_configs"></a> Konfigurieren eines Verteilungspunkts  
+##  <a name="bkmk_configs"></a> Konfigurieren eines Verteilungspunkts  
  Einzelne Verteilungspunkte unterstützen viele verschiedene Konfigurationen. Allerdings unterstützen nicht alle Verteilungspunkttypen alle Konfigurationen. Cloudbasierte Verteilungspunkte unterstützen beispielsweise keine Inhaltsbereitstellungen, die für PXE oder Multicast aktiviert sind. Informationen zu den spezifischen Einschränkungen finden in den folgenden Themen:  
 
 -   [Verwenden eines cloudbasierten Verteilungspunkts mit System Center Configuration Manager](../../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)  
@@ -343,9 +344,9 @@ Verwalten Sie die Begrenzungsgruppen, denen dieser Verteilungspunkt zugeordnet i
 
 Darüber hinaus gilt:
 
-- Vor Version 1610 können Sie das Kontrollkästchen **Die Verwendung eines Fallbackquellpfads für den Inhalt durch Clients zulassen** aktivieren, um für Clients außerhalb dieser Begrenzungsgruppen ein Ausweichen auf den Verteilungspunkt als Quellort für Inhalt zu ermöglichen, wenn keine anderen Verteilungspunkte verfügbar sind. Weitere Informationen zu Begrenzungsgruppen finden Sie unter [Begrenzungsgruppen für Version 1511, 1602 und 1606](/sccm/core/servers/deploy/configur/boundary-groups-for-1511-1602-and-1606). Informationen zu bevorzugten Verteilungspunkten finden Sie unter [Grundlegende Konzepte für die Inhaltsverwaltung in System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).
+- Vor Version 1610 können Sie das Kontrollkästchen **Die Verwendung eines Fallbackquellpfads für den Inhalt durch Clients zulassen** aktivieren, um für Clients außerhalb dieser Begrenzungsgruppen ein Ausweichen auf den Verteilungspunkt als Quellort für Inhalt zu ermöglichen, wenn keine anderen Verteilungspunkte verfügbar sind. Weitere Informationen zu Begrenzungsgruppen finden Sie unter [Begrenzungsgruppen für Version 1511, 1602 und 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606). Informationen zu bevorzugten Verteilungspunkten finden Sie unter [Grundlegende Konzepte für die Inhaltsverwaltung in System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).
 
-- Mit Version 1610 oder höher können Sie *Beziehungen* für Begrenzungsgruppen definieren, um festzulegen, wann und auf welche Begrenzungsgruppen ein Client ausweichen kann, um nach Inhalten zu suchen. Weitere Informationen finden Sie unter [Begrenzungsgruppen](/sccm/core/servers/deploy/configur/define-site-boundaries-and-boundary-groups#boundary-groups).
+- Mit Version 1610 oder höher können Sie *Beziehungen* für Begrenzungsgruppen definieren, um festzulegen, wann und auf welche Begrenzungsgruppen ein Client ausweichen kann, um nach Inhalten zu suchen. Weitere Informationen finden Sie unter [Begrenzungsgruppen](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
 
 
 ### <a name="schedule"></a>Zeitplan  
@@ -388,9 +389,4 @@ Geben Sie an, ob eine Begrenzung der Datenübertragungsrate konfiguriert werden 
 -   **Pulsmodus**: Gibt die Größe der Datenblöcke beim Senden an den Verteilungspunkt an. Sie können auch eine zeitliche Verzögerung zwischen dem Senden der einzelnen Datenblöcke angeben. Verwenden Sie diese Option, wenn Sie Daten über Netzwerke mit sehr niedriger Bandbreite an den Verteilungspunkt senden müssen. Dies kann beispielsweise der Fall sein, wenn eine Beschränkung vorliegt, dass unabhängig von der Geschwindigkeit der Verknüpfung oder deren Auslastung zu einem bestimmten Zeitpunkt nur alle fünf Sekunden 1 KB Daten gesendet werden dürfen.  
 
 -   **Begrenzt auf angegebene maximale Übertragungsraten pro Stunde**: Geben Sie diese Einstellung an, damit die Datenübertragung auf einen Verteilungspunkt nur im konfigurierten Zeitanteil erfolgt. Wenn Sie diese Option verwenden, ermittelt Configuration Manager nicht die verfügbare Netzwerkbandbreite. Stattdessen wird die Zeit, innerhalb derer Daten gesendet werden können, aufgeteilt. Die Daten werden dann innerhalb eines kurzen Zeitblocks gesendet. In den darauffolgenden Zeitblöcken werden keine Daten gesendet. Wenn die Höchstrate beispielsweise auf **50 %**festgelegt ist, überträgt Configuration Manager die Daten für eine bestimmte Dauer, und für eine ebenso lange Dauer werden anschließend keine Daten übertragen. Die tatsächliche Datenmenge bzw. die Größe der Datenblöcke wird nicht verwaltet. Stattdessen wird nur die Dauer der Datenübertragung verwaltet.  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

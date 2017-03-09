@@ -2,7 +2,7 @@
 title: "Informationen zur Registrierung von Geräten mit der lokalen Verwaltung mobiler Geräte – Configuration Manager | Microsoft-Dokumentation"
 description: "Hier erhalten Sie Informationen zur Registrierung von Geräten mit der lokalen Verwaltung mobiler Geräte in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
-ms.openlocfilehash: 43a30709473939829d82d822503537d448159a1c
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: 7d852843d0d3fe7c9ab0947c4b396cee0a92c754
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -45,7 +46,7 @@ In den folgenden Aufgaben wird erläutert, wie Sie die Registrierung von Compute
 
 -   [Überprüfen der Geräteregistrierung](#bkmk_verify)  
 
-##  <a name="a-namebkmkenrolldeska-enroll-a-windows-10-computer"></a><a name="bkmk_enrollDesk"></a> Registrieren eines Windows 10-Computers  
+##  <a name="bkmk_enrollDesk"></a> Registrieren eines Windows 10-Computers  
 
 1.  Wechseln Sie auf einem Computer mit Windows 10 zu **Einstellungen**.  
 
@@ -59,7 +60,7 @@ In den folgenden Aufgaben wird erläutert, wie Sie die Registrierung von Compute
 
 6.  Klicken Sie bei der Frage, ob die Anmeldeinformationen gespeichert werden sollen, auf **Überspringen** . Kurze Zeit später ist Ihr Gerät verbunden.  
 
-##  <a name="a-namebkmkenrollmoba-enroll-a-windows-10-mobile-device"></a><a name="bkmk_enrollMob"></a> Registrieren eines Windows 10 Mobile-Geräts  
+##  <a name="bkmk_enrollMob"></a> Registrieren eines Windows 10 Mobile-Geräts  
 
 1.  Wechseln Sie auf einem Windows 10 Mobile-Gerät zu **Einstellungen**.  
 
@@ -71,18 +72,10 @@ In den folgenden Aufgaben wird erläutert, wie Sie die Registrierung von Compute
 
 5.  Geben Sie auf dem nächsten Bildschirm Ihre geschäftliche E-Mail-Adresse und das Kennwort ein, und klicken Sie dann auf **Anmelden**. Nach kurzer Zeit wird das Gerät registriert. Klicken Sie auf **Fertig**.  
 
-##  <a name="a-namebkmkverifya-verify-device-enrollment"></a><a name="bkmk_verify"></a> Überprüfen der Geräteregistrierung  
+##  <a name="bkmk_verify"></a> Überprüfen der Geräteregistrierung  
  Sie können überprüfen, ob Geräte in der Configuration Manager-Konsole erfolgreich registriert wurden.  
 
 1.  Starten Sie hierzu die Configuration Manager-Konsole.  
 
 2.  Klicken Sie auf **Bestand und Kompatibilität** > **Übersicht** > **Geräte**erforderlichen Standortsystemrollen benötigt. Das registrierte Gerät wird in der Liste angezeigt.  
-
-## <a name="see-also"></a>Siehe auch  
- [Registrieren von Geräten für die lokale Verwaltung mobiler Geräte in System Center Configuration Manager](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

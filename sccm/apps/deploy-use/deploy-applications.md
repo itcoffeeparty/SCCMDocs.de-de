@@ -17,8 +17,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 7be9abadeb51d4f9e862f69c332756b19ce3e110
-ms.openlocfilehash: a52bef3c8d12ffe2d9b13dc79cbc8950d3f36aea
+ms.sourcegitcommit: cb42b6f324dc0019c2109be4d91e0eab4dca4d70
+ms.openlocfilehash: 8c54bc455828712c7f9ea297f26c98c41848cf9c
+ms.lasthandoff: 03/08/2017
 
 
 ---
@@ -84,8 +85,8 @@ Sie können die Aktion einer Bereitstellung nicht mehr ändern, nachdem sie erst
 
     > [!NOTE]
     >  Genehmigungsanforderungen für Anwendungen werden im Arbeitsbereich **Softwarebibliothek** unter **Anwendungsverwaltung** im Knoten **Genehmigungsanforderungen** angezeigt. Wenn eine Anforderung nicht innerhalb von 45 Tagen genehmigt wird, wird sie entfernt. Außerdem können ausstehende Genehmigungsanforderungen durch eine Neuinstallation des Configuration Manager-Client abgebrochen werden.
-    > Nachdem Sie eine Anwendung für die Installation genehmigt haben, können Sie anschließend auswählen, die Anforderung zu verweigern, indem Sie in der Configuration Manager-Konsole auf **Verweigern** klicken (bisher war diese Schaltfläche nach der Genehmigung ausgegraut).
-    > Diese Aktion führt nicht dazu, dass die Anwendung auf allen Geräten deinstalliert wird, sondern hindert Benutzer daran, neue Kopien der Anwendung aus dem Softwarecenter herunterzuladen.
+    >  Nachdem Sie eine Anwendung für die Installation genehmigt haben, können Sie anschließend auswählen, die Anforderung zu verweigern, indem Sie in der Configuration Manager-Konsole auf **Verweigern** klicken (bisher war diese Schaltfläche nach der Genehmigung ausgegraut).
+    >  Diese Aktion führt nicht dazu, dass die Anwendung auf allen Geräten deinstalliert wird, sondern hindert Benutzer daran, neue Kopien der Anwendung aus dem Softwarecenter herunterzuladen.
 
 
 
@@ -116,8 +117,7 @@ Beim Bereitstellen von Anwendungen für Windows Embedded-Geräte mit Schreibfilt
 
 >[!NOTE]
     >  Stellen Sie beim Bereitstellen einer Anwendung auf einem Windows Embedded-Gerät sicher, dass das Gerät Mitglied einer Sammlung ist, für die ein Wartungsfenster konfiguriert ist. Weitere Informationen zur Verwendung von Wartungsfenstern beim Bereitstellen von Anwendungen auf Windows Embedded-Geräten finden Sie unter [Erstellen von Windows Embedded-Anwendungen](../../apps/get-started/creating-windows-embedded-applications.md).
-
-    >  The options **Software Installation** and **System restart (if required to complete the installation)** are not used if the deployment purpose is set to **Available**. You can also configure the level of notification a user sees when the application is installed.
+    > Die Optionen **Softwareinstallation** und **Systemneustart (falls dieser zum Abschluss der Installation erforderlich ist)** werden nicht verwendet, wenn der Bereitstellungszweck auf **Verfügbar**gesetzt ist. Sie können auch die Ebene für die Benutzerbenachrichtigung bei der Anwendungsinstallation konfigurieren.
 
 ### <a name="specify-alert-options-for-the-deployment"></a>Angeben von Optionen zu Warnungen für die Bereitstellung
 
@@ -159,9 +159,4 @@ Darüber hinaus fällt bei Bereitstellungen mit hohem Risiko, z.B. einer Taskseq
 ## <a name="for-more-information"></a>Weitere Informationen:
 - [Einstellungen zum Verwalten von Bereitstellungen mit hohem Risiko](../../protect/understand/settings-to-manage-high-risk-deployments.md)
 - [Konfigurieren von Clienteinstellungen](../../core/clients/deploy/configure-client-settings.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
