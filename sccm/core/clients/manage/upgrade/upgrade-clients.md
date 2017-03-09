@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
 ms.openlocfilehash: 56a3ec8ddfaaa233b41347da0ff853fdf92c275c
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -149,9 +150,4 @@ Es gibt verschiedene Methoden zum Upgrade der Clientsoftware von System Center C
 -   Kann nur für ein Upgrade der Clientsoftware verwendet werden, nicht für die Installation eines neuen Clients.  
 
  [Testen von Clientupgrades in einer Präproduktionssammlung in System Center Configuration Manager](../../../../core/clients/manage/upgrade/test-client-upgrades.md)  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
