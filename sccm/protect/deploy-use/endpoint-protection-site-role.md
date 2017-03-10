@@ -4,7 +4,7 @@ description: "Informationen über das Konfigurieren von Endpoint Protection zum 
 defintion: 
 definition: 
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,8 +18,9 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 9db108fb2d4d16013f416b8ee87a57ff1c91e21f
-ms.openlocfilehash: 25ce24d16bd55366d23a176b21b38ed53aa40644
+ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
+ms.openlocfilehash: 884b5f2ec3f1aa273128dfeaaf88d969c9d8669d
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -60,11 +61,6 @@ ms.openlocfilehash: 25ce24d16bd55366d23a176b21b38ed53aa40644
 
 8.  Schließen Sie den Assistenten ab.
 
-> [!div class="button"]
-[Nächster Schritt >](endpoint-configure-alerts.md)
-
-> [!div class="button"]
-[Zurück >](endpoint-protection-configure.md)
 
 ## <a name="existing-site-system-server"></a>bestehender Standortsystemserver
 
@@ -89,15 +85,4 @@ ms.openlocfilehash: 25ce24d16bd55366d23a176b21b38ed53aa40644
     >  Mit dieser Option werden die Einstellungen des Cloud Protection Service (ehem. Microsoft Active Protection Service oder MAPS) konfiguriert, die als Standard verwendet werden. Anschließend können Sie benutzerdefinierte Einstellungen für jede Richtlinie für Antischadsoftware konfigurieren, die Sie erstellen. Weitere Informationen finden Sie unter [Erstellen und Bereitstellen von Richtlinien für Antischadsoftware für Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
 
 8.  Schließen Sie den Assistenten ab.
-
-> [!div class="button"]
-[Nächster Schritt >](endpoint-configure-alerts.md)
-
-> [!div class="button"]
-[Zurück >](endpoint-protection-configure.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

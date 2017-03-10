@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2117f786-d521-4790-9e8d-ec096c63c9d7
 caps.latest.revision: 8
-author: Nbigman
-ms.author: nbigman
+author: Robstack
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
-ms.openlocfilehash: c80750358d64cf87f8a3ce3a4c4f4030a9dfd742
+ms.sourcegitcommit: 8679df3f8a3b692391537bacd6144a4f2fae357b
+ms.openlocfilehash: d527cb4bfb55ca50c8d2a0fed7c427af5747fe99
+ms.lasthandoff: 02/09/2017
 
 
 ---
@@ -30,7 +31,7 @@ Sie möchten, dass Ihre Benutzer sicher auf die Ressourcen Ihrer Organisation zu
 
 -   Sie können den Aufwand Ihrer Benutzer zum Herstellen einer Verbindung mit Unternehmensressourcen minimieren, indem Sie VPN-Verbindungen mithilfe von VPN-Profilen aktivieren. Weitere Informationen finden Sie unter [VPN profiles in System Center Configuration Manager (VPN-Profile in System Center Configuration Manager)](../deploy-use/vpn-profiles.md).  
 
--   Über WLAN-Profile stehen eine Reihe von Tools und Ressourcen zur Verfügung, mit deren Hilfe Sie Einstellungen für Funknetzwerke für Geräte in Ihrer Organisation erstellen, bereitstellen und überwachen können. Durch Bereitstellen dieser Einstellungen erleichtern Sie den Endbenutzern das Herstellen einer Verbindung mit Unternehmens-WLANs. Weitere Informationen finden Sie unter [Wi-Fi Profiles in System Center Configuration Manager (WLAN-Profile in System Center Configuration Manager)](../deploy-use/introduction-to-wifi-profiles.md).  
+-   Über WLAN-Profile stehen eine Reihe von Tools und Ressourcen zur Verfügung, mit deren Hilfe Sie Einstellungen für Funknetzwerke für Geräte in Ihrer Organisation erstellen, bereitstellen und überwachen können. Durch Bereitstellen dieser Einstellungen erleichtern Sie den Endbenutzern das Herstellen einer Verbindung mit Unternehmens-WLANs. Weitere Informationen finden Sie unter [Wi-Fi Profiles in System Center Configuration Manager (WLAN-Profile in System Center Configuration Manager)](/sccm/protect/deploy-use/create-wifi-profiles).  
 
 -   [Certificate profiles in System Center Configuration Manager (Zertifikatprofile in System Center Configuration Manager)](../deploy-use/introduction-to-certificate-profiles.md) wird das Bereitstellen der Zertifikate auf den Geräten Ihrer Benutzer beschrieben, die diese zum Verbinden mit Unternehmensressourcen benötigen.  
 
@@ -41,9 +42,4 @@ Sie möchten, dass Ihre Benutzer sicher auf die Ressourcen Ihrer Organisation zu
 -   E-Mail-Profile stellen eine Reihe von Tools und Ressourcen zum Erstellen, Bereitstellen und Überwachen von E-Mail-Einstellungen auf Geräten bereit. Dies gibt Benutzern die Möglichkeit, von ihren persönlichen Geräten aus auf Unternehmens-E-Mails zuzugreifen, ohne dass eine Konfiguration ihrerseits erforderlich ist. Weitere Informationen finden Sie unter [Email profiles in System Center Configuration Manager (E-Mail-Profile in System Center Configuration Manager)](../deploy-use/introduction-to-email-profiles.md).  
 
 -   Configuration Manager ermöglicht die Integration in Windows Hello for Business (ehemals Microsoft Passport for Work), eine alternative Anmeldemethode, die Active Directory oder ein Azure Active Directory-Konto verwendet, um ein Kennwort, eine Smartcard oder eine virtuelle Smartcard zu ersetzen. Weitere Informationen finden Sie unter [Windows Hello for Business settings in System Center Configuration Manager (Windows Hello for Business-Einstellungen in System Center Configuration Manager)](../deploy-use/windows-hello-for-business-settings.md).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
