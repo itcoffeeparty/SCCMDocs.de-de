@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 168650cca28fe1331e48ea5e8e025e110dda835f
-ms.openlocfilehash: 4ca43db385ea97d5d026c50a799b783096c05d36
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
+ms.openlocfilehash: a60b8c103a303dcae0bd66f3060d5a8f17d1cef9
+ms.lasthandoff: 03/04/2017
 
 
 ---
@@ -306,7 +306,8 @@ Ermitteln Sie die bewährten Methoden für Ihre Version von IIS-Server, und wend
 ##  <a name="BKMK_Security_FSP"></a> Bewährte Sicherheitsmethoden für den Fallbackstatuspunkt  
  Wenden Sie die folgenden bewährten Sicherheitsmethoden an, wenn Sie einen Fallbackstatuspunkt in Configuration Manager installieren.  
 
- Weitere Informationen zu den Sicherheitserwägungen beim Installieren eines Fallbackstatuspunkts finden Sie unter [Determine whether you require a fallback status point](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#BKMK_Determine_FSP).  
+ Weitere Informationen zu den Sicherheitserwägungen beim Installieren eines Fallbackstatuspunkts finden Sie unter [Determine Whether You Require a Fallback Status Point](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#determine-if-you-need-a-fallback-status-point).  
+
 
 **Führen Sie keine anderen Standortsystemrollen auf dem Standortsystem aus, und installieren Sie den Fallbackstatuspunkt nicht auf einem Domänencontroller.**  
 
