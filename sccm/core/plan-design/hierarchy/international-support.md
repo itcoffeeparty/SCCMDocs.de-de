@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 37e45e604e89d3ce280bb2bff47d4a55b6cdfaf8
+ms.sourcegitcommit: 40e018084dd2703327ff653f962f488432b1ec98
+ms.openlocfilehash: 3bab51be96445f766e8f5bbf54eee854e5d09cee
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -26,7 +27,7 @@ ms.openlocfilehash: 37e45e604e89d3ce280bb2bff47d4a55b6cdfaf8
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-In den folgenden Abschnitten finden Sie technische Details zu einer System Center Configuration Manager-Konfiguration, die mit spezifischen internationalen Anforderungen kompatibel ist.  
+In den folgenden Abschnitten finden Sie technische Details dazu, wie Sie System Center Configuration Manager mit bestimmten internationalen Anforderungen kompatibel machen können.  
 
 ## <a name="gb18030-requirements"></a>GB18030-Anforderungen  
  Configuration Manager erfüllt die von GB18030 definierten Standards, sodass Sie Configuration Manager auch in China einsetzen können. Laut GB18030-Anforderungen müssen für eine Configuration Manager-Bereitstellung folgende Konfigurationen erfüllt sein:  
@@ -43,9 +44,4 @@ In den folgenden Abschnitten finden Sie technische Details zu einer System Cente
     >  Die Datenbanksortierungen sind eine Ausnahme in den unter [Unterstützung für SQL Server-Versionen für System Center Configuration Manager](../../../core/plan-design/configs/support-for-sql-server-versions.md) beschriebenen Voraussetzungen.  
 
 -   Sie müssen eine Datei namens **GB18030.SMS** im Stammordner des Systemvolumes auf jedem Standortservercomputer in der Hierarchie ablegen. In dieser Datei sind keine Daten enthalten. Es kann sich um eine leere Textdatei handeln, die entsprechend dieser Anforderung benannt wurde.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

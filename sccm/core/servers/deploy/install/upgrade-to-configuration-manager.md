@@ -2,7 +2,7 @@
 title: Upgrade auf System Center Configuration Manager | Microsoft-Dokumentation
 description: "Erfahren Sie die Schritte für die Ausführung eines direkten Upgrades an einem Standort und einer Hierarchie, wo System Center 2012 Configuration Manager ausgeführt wird."
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 2/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6cf3ac76ea3fb9c9b093ed4927255102930bbe26
-ms.openlocfilehash: d4e6a4c128ae077d2a3cb2883d80b6bf71b7f458
+ms.sourcegitcommit: 30af3326578d39c6d995672071705bcaeb877e4d
+ms.openlocfilehash: 8af2a797ad4e87d870bb27873a7428e96f63b76d
+ms.lasthandoff: 02/23/2017
 
 
 ---
@@ -29,8 +30,10 @@ Sie können ein direktes Upgrade zur Aktualisierung auf System Center Configurat
 
  Vor dem Upgrade von System Center 2012 Configuration Manager müssen Sie die Standorte vorbereiten. Dazu müssen Sie bestimmte Konfigurationen entfernen, die ein erfolgreiches Upgrade verhindern könnten, und dann die Upgradeschritte ausführen, wenn mehr als ein einzelner Standort beteiligt ist.  
 
+ > [!TIP]
+ > Beim Verwalten des System Center Configuration Manager-Standorts und der Hierarchieinfrastruktur werden die Begriffe *Upgrade*, *Update* und *Installation* verwendet, um drei verschiedene Konzepte zu beschreiben. Erfahren Sie mehr über die Verwendung der Begriffe unter [Informationen zu Upgrade, Update und Installation für einen Standort und eine Hierarchieinfrastruktur](/sccm/core/understand/upgrade-update-install).
 
-##  <a name="a-namebkmkpatha-in-place-upgrade-paths"></a><a name="bkmk_path"></a> Pfade für ein direktes Upgrade  
+##  <a name="bkmk_path"></a> Pfade für ein direktes Upgrade  
 **Upgrade auf Version 1606**  
 Am 15. Dezember 2016 wurde das Baselinemedium für Version 1606 erneut veröffentlicht, um Unterstützung für zusätzliche Upgradeszenarios hinzufügen. Die neue Version unterstützt Upgrades der folgenden Versionen und Installationen auf eine vollständig lizenzierte Version von System Center Configuration Manager Version 1606:  
 -   Eine Evaluierungsinstallation von System Center Configuration Manager Version 1606
@@ -67,7 +70,7 @@ Wenn Sie über das Baselinemedium für Version 1511 verfügen, können Sie die f
 
 -   Die Migration von einer Technical Preview auf eine vollständig lizenzierte Version wird nicht unterstützt.  
 
-##  <a name="a-namebkmkchecklista-upgrade-checklists"></a><a name="bkmk_checklist"></a> Checklisten zu Aktualisierungen  
+##  <a name="bkmk_checklist"></a> Checklisten zu Aktualisierungen  
  Die folgenden Checklisten helfen Ihnen bei der Planung einer erfolgreichen Aktualisierung auf System Center Configuration Manager.  
 
 ### <a name="before-you-upgrade"></a>Vor dem Upgrade  
@@ -225,7 +228,7 @@ Wenn Sie ein Upgrade für einen Client ausführen, wird die aktuelle Clientsoftw
 
 Informationen zum Ausführen eines Upgrades für vorhandene Clients und zum Installieren neuer Clients finden Sie unter [Aktualisieren von Clients für Windows-Computer in System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
 
-##  <a name="a-namebkmkconsiderationsa-considerations-for-upgrading"></a><a name="bkmk_considerations"></a> Upgradeüberlegungen  
+##  <a name="bkmk_considerations"></a> Upgradeüberlegungen  
 **Automatische Aktionen:**  
 Wenn Sie ein Upgrade auf System Center Configuration Manager durchführen, werden die folgenden Aktionen automatisch ausgeführt:  
 
@@ -253,7 +256,9 @@ Wenn für einen Standort ein Upgrade auf System Center Configuration Manager dur
 -   **Zeitpläne für Softwareupdate-Zusammenfassung:**  
      Benutzerdefinierte Zusammenfassungszeitpläne für Softwareupdates oder Softwareupdategruppen werden auf den Standardwert von einer Stunde zurückgesetzt. Setzen Sie benutzerdefinierte Zusammenfassungswerte nach Abschluss des Upgrades auf die erforderliche Häufigkeit zurück.  
 
-##  <a name="a-namebkmktesta-test-the-site-database-upgrade"></a><a name="bkmk_test"></a> Testen des Standortdatenbankupgrades  
+##  <a name="bkmk_test"></a> Testen des Standortdatenbankupgrades  
+Die folgenden Informationen gelten nur, wenn Sie eine vorherige Version wie System Center 2012 Configuration Manager auf System Center Configuration Manager aktualisieren. Wenn Ihre Website bereits System Center Configuration Manager ausführt, und Sie ein neues Update installieren, siehe [Step 2: Test the database upgrade before installing an update (Schritt 2: Testen Sie das Upgrade der Datenbank vor der Installation eines Updates)](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2) von **Before you install an in-console update (Vor der Installation eines konsoleninternen Updates)**.
+
 Bevor Sie das Upgrade eines Standorts durchführen, sollten Sie es anhand einer Kopie der Datenbank dieses Standorts testen.  
 
 Zum Testen der Datenbank für ein Upgrade stellen Sie zunächst eine Kopie der Standortdatenbank auf einer Instanz von SQL Server wieder her, von der kein Configuration Manager-Standort gehostet wird. Zum Hosten der Datenbankkopie müssen Sie eine Version von SQL Server verwenden, die von der Version von Configuration Manager, die Quelle der Datenbank ist, unterstützt wird.  
@@ -296,7 +301,7 @@ Führen Sie für alle Standorte der zentralen Verwaltung sowie für alle primär
 
 Nachdem Sie für eine Kopie der Standortdatenbank erfolgreich ein Upgrade durchgeführt haben, fahren Sie mit dem Upgrade des Configuration Manager-Standorts und dessen Standortdatenbank fort.  
 
-##  <a name="a-namebkmkupgradea-upgrade-sites"></a><a name="bkmk_upgrade"></a> Aktualisieren Sie Standorte.  
+##  <a name="bkmk_upgrade"></a> Aktualisieren Sie Standorte.  
 Wenn Sie die Konfigurationen vor dem Upgrade für Ihren Standort abgeschlossen sowie das Upgrade der Standortdatenbank an einer Datenbankkopie getestet und die für die geplante Service Pack-Installation erforderlichen Dateien und Sprachpakete heruntergeladen haben, können Sie das Upgrade für Ihren Configuration Manager-Standort durchführen.  
 
 Beim Durchführen eines Upgrades für einen Standort in einer Hierarchie führen Sie als Erstes ein Upgrade für den Standort der obersten Ebene der Hierarchie durch. Bei dem Standort der obersten Ebene handelt es sich entweder um einen Standort der zentralen Verwaltung oder um einen eigenständigen primären Standort. Wenn das Upgrade des Standorts der zentralen Verwaltung abgeschlossen ist, können Sie für die untergeordneten primären Standorte in beliebiger Reihenfolge Upgrades durchführen. Nach dem Durchführen eines Upgrades für einen primären Standort können Sie für dessen untergeordnete sekundäre Standorte oder für zusätzliche primäre Standorte ein Upgrade durchführen, bevor Sie sekundäre Standorte aktualisieren.  
@@ -376,16 +381,11 @@ Auf der Seite **Upgrade** wird der Gesamtstatus der Installation angezeigt. Wenn
 
 Das Upgrade des sekundären Standorts erfolgt im Hintergrund. Nach Abschluss des Upgrades können Sie den Status in der Configuration Manager-Konsole bestätigen. Wenn Sie den Status bestätigen möchten, wählen Sie den Server des sekundären Standorts aus, und klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Standort** auf **Installationsstatus anzeigen**.  
 
-##  <a name="a-namebkmkpostupgradea-perform-post-upgrade-tasks"></a><a name="BKMK_PostUpgrade"></a> Ausführen der Aufgaben nach einem Upgrade  
+##  <a name="BKMK_PostUpgrade"></a> Ausführen der Aufgaben nach einem Upgrade  
 Nachdem Sie für einen Standort ein Upgrade auf ein neues Service Pack durchgeführt haben, müssen Sie möglicherweise einige zusätzliche Aufgaben ausführen, um das Upgrade oder die Neukonfiguration des Standorts abzuschließen. Dazu zählt beispielsweise das Durchführen eines Upgrades von Configuration Manager-Clients oder Configuration Manager-Konsolen, das erneute Aktivieren von Datenbankreplikaten für Verwaltungspunkte oder das Wiederherstellen von Configuration Manager-Funktionen, die Sie verwenden und die nach dem Service Pack-Upgrade nicht beibehalten werden.  
 
 **Bekannte Probleme bei sekundären Standorten:**  
 - **Bei einem Upgrade auf Version 1511:** Um sicherzustellen, dass Clients auf sekundären Standorten den Verwaltungspunkt vom sekundären Standort (Proxyverwaltungspunkt) finden, fügen Sie den Verwaltungspunkt manuell zu Begrenzungsgruppen hinzu, die auch die Verteilungspunkte am sekundären Standort enthalten.  
 
 - **Bei einem Upgrade auf Version 1606 oder höher:** Proxyverwaltungspunkte werden automatisch zu Begrenzungsgruppen hinzugefügt, die Verteilungspunkte am sekundären Standort enthalten.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -2,7 +2,7 @@
 title: "Unicode- und ASCII-Unterstützung | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr über die Unterstützung für Unicode- und ASCII-Zeichen in System Center Configuration Manager-Objekten."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 1888ce257232b63e4671aa619da190ea570b8a57
+ms.sourcegitcommit: b35e747c8c297d61bb549b9767c4318f51e5fdb4
+ms.openlocfilehash: 18f1c64c1f27001a0fdfbab4236d09a5bc279272
+ms.lasthandoff: 03/01/2017
 
 
 ---
@@ -36,7 +37,7 @@ System Center Configuration Manager erstellt die meisten Objekte mithilfe von Un
 
 -   [Nicht lokalisierte Configuration Manager-Objekte](#BKMK_LangNonLocalize)  
 
-##  <a name="a-namebkmkasciichara-objects-that-use-ascii-characters"></a><a name="BKMK_ASCIIchar"></a> Objekte, die ASCII-Zeichen verwenden  
+##  <a name="BKMK_ASCIIchar"></a> Objekte, die ASCII-Zeichen verwenden  
  Von Configuration Manager wird beim Erstellen der folgenden Objekte nur der ASCII-Zeichensatz unterstützt:  
 
 -   Standortcode  
@@ -73,7 +74,7 @@ System Center Configuration Manager erstellt die meisten Objekte mithilfe von Un
     >   
     >  Vom Konto des Reporting Services-Punkts wird Unicode mit Ausnahme kyrillischer Zeichen (RUS) unterstützt.  
 
--   FQDN für Standortserver und Standortsysteme  
+-   Vollständig qualifizierter Domänenname (FQDN) für Standortserver und Standortsysteme  
 
 -   Installationspfad für Configuration Manager  
 
@@ -133,20 +134,15 @@ System Center Configuration Manager erstellt die meisten Objekte mithilfe von Un
 
 -   ISO-Dateinamen für Startmedien  
 
-##  <a name="a-namebkmkothercharlimitationsa-additional-limitations"></a><a name="BKMK_OtherCharLimitations"></a> Zusätzliche Einschränkungen  
+##  <a name="BKMK_OtherCharLimitations"></a> Zusätzliche Einschränkungen  
  Nachfolgend sind weitere Einschränkungen für unterstützte Zeichensätze und Sprachversionen aufgelistet:  
 
 -   In Configuration Manager wird eine Änderung des Gebietsschemas für den Standortservercomputer nicht unterstützt.  
 
 -   Von einer Unternehmenszertifizierungsstelle (CA) werden keine Clientcomputernamen mit Doppelbyte-Zeichensätzen (DBCS) unterstützt. Welche Clientcomputernamen verwendet werden können, ist durch die PKI-Einschränkung des IA5-Zeichensatzes eingeschränkt. Außerdem werden von Configuration Manager keine Zertifizierungsstellennamen oder Werte für Antragstellernamen unterstützt, in denen Doppelbyte-Zeichensätze (DBCS) verwendet werden.  
 
-##  <a name="a-namebkmklangnonlocalizea-configuration-manager-objects-that-are-not-localized"></a><a name="BKMK_LangNonLocalize"></a> Nicht lokalisierte Configuration Manager-Objekte  
+##  <a name="BKMK_LangNonLocalize"></a> Nicht lokalisierte Configuration Manager-Objekte  
  Bei den meisten in der Configuration Manager-Datenbank gespeicherten Objekten wird Unicode unterstützt. Sofern möglich, werden diese Informationen in der Betriebssystemsprache angezeigt, die dem Gebietsschema eines Computers entspricht. Damit Informationen von der Clientschnittstelle oder der Configuration Manager-Konsole in der Betriebssystemsprache des Computers angezeigt werden, muss das Gebietsschema des Computers mit einer am Standort installierten Client- oder Serversprache übereinstimmen.  
 
  Allerdings wird Unicode nicht von allen Configuration Manager-Objekten unterstützt. Diese Objekte werden in der Datenbank in ASCII gespeichert. Es gibt auch Objekte mit zusätzlichen Einschränkungen hinsichtlich der Sprache. Diese Informationen werden immer im ASCII-Zeichensatz oder in der Sprache, in der das betreffende Objekt ursprünglich erstellt wurde, angezeigt.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

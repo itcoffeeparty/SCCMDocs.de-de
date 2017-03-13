@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 97051d9c65ef5ea28c94468b24863120624e8de0
-ms.openlocfilehash: b78b3b20a8b317a242cd06f9fda6326f41673915
+ms.sourcegitcommit: 3eab8e62ace29c0fcb24d47ec7e398d807347a38
+ms.openlocfilehash: a1d701c77afb4d6317d8a137fdf46422063df085
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -62,7 +63,7 @@ Cloudbasierte Verteilungspunkte bieten die folgenden zusätzlichen Vorteile:
 
 Bei cloudbasierten Verteilungspunkten ergeben sich die folgenden Einschränkungen:  
 
--   Ein cloudbasierter Verteilungspunkt kann nicht zum Hosten von Softwareupdatepaketen verwendet werden.  
+-  Vor der Verwendung von Version 1610 mit dem Hotfix KB4010155 kann ein cloudbasierter Verteilungspunkt nicht zum Hosten von Softwareupdatepaketen verwendet werden. Die nächste Current Branch-Version nach Version 1610 wird diese Option unterstützen, ohne dass dieser Fix installiert werden muss.  
 
 -   Ein cloudbasierter Verteilungspunkt kann nicht für PXE- oder multicastfähige Bereitstellungen verwendet werden.  
 
@@ -76,7 +77,7 @@ Bei cloudbasierten Verteilungspunkten ergeben sich die folgenden Einschränkunge
 
 -   Ein cloudbasierter Verteilungspunkt kann nicht als Pullverteilungspunkt konfiguriert werden.  
 
-##  <a name="a-namebkmkprereqsclouddpa-prerequisites-for-cloud-based-distribution-points"></a><a name="BKMK_PrereqsCloudDP"></a> Voraussetzungen für cloudbasierte Verteilungspunkte  
+##  <a name="BKMK_PrereqsCloudDP"></a> Voraussetzungen für cloudbasierte Verteilungspunkte  
  Die Verwendung eines cloudbasierten Verteilungspunkts setzt Folgendes voraus:  
 
 -   Ein Azure-Abonnement (Informationen hierzu finden Sie unter dem Thema [Informationen zu Abonnements und Zertifikaten](#BKMK_CloudDPCerts)).
@@ -91,7 +92,7 @@ Bei cloudbasierten Verteilungspunkten ergeben sich die folgenden Einschränkunge
 
 -   Ein Client muss Zugriff auf das Internet haben, damit der cloudbasierte Verteilungspunkt verwendet werden kann.  
 
-##  <a name="a-namebkmkclouddpcosta-cost-of-using-cloud-based-distribution"></a><a name="BKMK_CloudDPCost"></a> Kosten einer cloudbasierten Verteilung  
+##  <a name="BKMK_CloudDPCost"></a> Kosten einer cloudbasierten Verteilung  
  Planen Sie beim Verwenden eines cloudbasierten Verteilungspunkts die Kosten der Datenspeicherung und der von Configuration Manager-Clients durchgeführten Downloadübertragungen ein.  
 
  Configuration Manager bietet Optionen zum Kontrollieren der Kosten und Überwachen des Datenzugriffs:  
@@ -139,7 +140,7 @@ Bei cloudbasierten Verteilungspunkten ergeben sich die folgenden Einschränkunge
 
      Wählen Sie zum Beenden eines Clouddiensts in der Configuration Manager-Konsole den Verteilungspunkt im Arbeitsbereich **Verwaltung** im Knoten **Cloudverteilungspunkte** unter **Clouddienste** aus. Wählen Sie als Nächstes **Dienst beenden** aus, um den Clouddienst zu beenden, der in Azure ausgeführt wird.  
 
-##  <a name="a-namebkmkclouddpcertsa-about-subscriptions-and-certificates-for-cloud-based-distribution-points"></a><a name="BKMK_CloudDPCerts"></a> Informationen zu Abonnements und Zertifikaten für cloudbasierte Verteilungspunkte  
+##  <a name="BKMK_CloudDPCerts"></a> Informationen zu Abonnements und Zertifikaten für cloudbasierte Verteilungspunkte  
  Für cloudbasierte Verteilungspunkte sind Zertifikate erforderlich, damit Configuration Manager den Clouddienst verwalten kann, von dem der Verteilungspunkt gehostet wird, und Clients auf Inhalte vom Verteilungspunkt zugreifen können. Die folgenden Informationen bieten einen Überblick über diese Zertifikate. Ausführlichere Informationen finden Sie unter [PKI-Zertifikatanforderungen für System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  
 
  **Zertifikate**  
@@ -163,7 +164,7 @@ Bei cloudbasierten Verteilungspunkten ergeben sich die folgenden Einschränkunge
 
    Eine Beispielbereitstellung dieses Zertifikats finden Sie im Abschnitt **Bereitstellen des Dienstzertifikats für cloudbasierte Verteilungspunkte** des Themas [Beispiel für die schrittweise Bereitstellung der PKI-Zertifikate für System Center Configuration Manager: Windows Server 2008-Zertifizierungsstelle](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
-##  <a name="a-namebkmktasksa-common-management-tasks-for-cloud-based-distribution-points"></a><a name="bkmk_Tasks"></a> Allgemeine Verwaltungsaufgaben für cloudbasierte Verteilungspunkte  
+##  <a name="bkmk_Tasks"></a> Allgemeine Verwaltungsaufgaben für cloudbasierte Verteilungspunkte  
 
 -   **Kommunikation zwischen Standortserver und cloudbasiertem Verteilungspunkt:**Beim Installieren eines cloudbasierten Verteilungspunkts müssen Sie einen primären Standort zuweisen, um die Übertragung von Inhalt an den Clouddienst zu verwalten. Diese Aktion entspricht der Installation der Standortsystemrolle „Verteilungspunkt“ an einem bestimmten Standort.  
 
@@ -185,7 +186,7 @@ Von Clients, die cloudbasierter Verteilungspunkte nutzen, befolgen bei Inhaltssp
 
 3.  Falls kein bevorzugter Verteilungspunkt oder Remoteverteilungspunkt verfügbar ist, kann der Inhalt vom Client als Fallbackoption von einem cloudbasierten Verteilungspunkt abgerufen werden.  
 
-    
+
 
   Wenn von einem Client ein cloudbasierter Verteilungspunkt als Inhaltsspeicherort verwendet wird, wird die Authentifizierung des Clients beim cloudbasierten Verteilungspunkt mithilfe eines Configuration Manager-Zugriffstokens durchgeführt. Falls das Zertifikat des cloudbasierten Verteilungspunkts von Configuration Manager für den Client vertrauenswürdig ist, kann der angeforderte Inhalt vom Client heruntergeladen werden.  
 
@@ -212,9 +213,4 @@ Von Clients, die cloudbasierter Verteilungspunkte nutzen, befolgen bei Inhaltssp
 -   **Deinstallieren eines cloudbasierten Verteilungspunkts**: Zur Deinstallation eines cloudbasierten Verteilungspunkts wählen Sie diesen in der Configuration Manager-Konsole und anschließend **Löschen** aus.  
 
     Wenn Sie einen cloudbasierten Verteilungspunkt aus einer Hierarchie löschen, dann entfernt Configuration Manager den Inhalt aus dem Clouddienst in Azure.  
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

@@ -17,8 +17,9 @@ ms.author: andredm
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
-ms.openlocfilehash: fd5830fef3759def7806dbbe1802872df19ca939
+ms.sourcegitcommit: b1295fff41d99b0bd6fc00ccab7a4b8bbdb60866
+ms.openlocfilehash: 99d1d14e89903d78167ec2f7d91f8393827bd616
+ms.lasthandoff: 02/27/2017
 
 ---
 # <a name="device-compliance-policies-in-system-center-configuration-manager"></a>Kompatibilitätsrichtlinien für Geräte in System Center Configuration Manager
@@ -29,7 +30,7 @@ ms.openlocfilehash: fd5830fef3759def7806dbbe1802872df19ca939
 
 
 > [!IMPORTANT]  
->  In diesem Artikel werden die Kompatibilitätsrichtlinien für Geräte beschrieben, die von Microsoft Intune verwaltet werden.    Die Kompatibilitätsrichtlinien für PCs, die von System Center Configuration Manager verwaltet werden, sind unter [Verwalten des Zugriffs auf Office 365-Dienste für PCs, die von System Center Configuration Manager verwaltet werden](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md) beschrieben.  
+>  In diesem Artikel werden die Kompatibilitätsrichtlinien für Geräte beschrieben, die von Microsoft Intune verwaltet werden.    Die Kompatibilitätsrichtlinien für PCs, die von System Center Configuration Manager verwaltet werden, sind unter [Verwalten des Zugriffs auf Office&365;-Dienste für PCs, die von System Center Configuration Manager verwaltet werden](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md) beschrieben.  
 
  Diese Richtlinien schließen Anforderungen wie die folgenden ein:  
 
@@ -40,6 +41,7 @@ ms.openlocfilehash: fd5830fef3759def7806dbbe1802872df19ca939
 -   Ob das Gerät per Jailbreak oder Rooting manipuliert wurde  
 
 -   Ob der E-Mail-Dienst auf dem Gerät über eine Intune-Richtlinie verwaltet wird, oder ob das Gerät vom Windows-Integritätsnachweisdienst als fehlerhaft gemeldet wird.  
+-   Apps, die auf dem Gerät nicht installiert werden können
 
 
  Sie stellen Kompatibilitätsrichtlinien für Benutzer- und Gerätegruppen bereit. Wenn Sie eine Konformitätsrichtlinie für einen Benutzer bereitstellen, wird die Konformität aller Geräte des Benutzers überprüft.  
@@ -54,7 +56,8 @@ ms.openlocfilehash: fd5830fef3759def7806dbbe1802872df19ca939
 |**E-Mail-Profil**|N/V|N/V|Isoliert|N/V|  
 |**Minimales Release des Betriebssystems**|Isoliert|Isoliert|Isoliert|Isoliert|  
 |**Maximales Release des Betriebssystems**|Isoliert|Isoliert|Isoliert|Isoliert|  
-|**Integritätsnachweis des Geräts (Update 1602)**|Einstellung gilt nicht für Windows 8.1.<br /><br /> Windows 10 und Windows 10 Mobile werden isoliert.|N/V|N/V|N/V|  
+|**Integritätsnachweis des Geräts (Update&1602;)**|Einstellung gilt nicht für Windows 8.1.<br /><br /> Windows 10 und Windows 10 Mobile werden isoliert.|N/V|N/V|N/V|
+|**Apps, die nicht installiert werden können**|N/V|N/V|Isoliert|Isoliert|
 
  **Wiederhergestellt** = Konformität wird vom Betriebssystem des Geräts erzwungen (z. B. wird der Benutzer gezwungen, eine PIN festzulegen).  Es gibt keinen Fall, in dem die Einstellung nicht konform ist.  
 
@@ -62,16 +65,10 @@ ms.openlocfilehash: fd5830fef3759def7806dbbe1802872df19ca939
 
 -   Das Gerät wird blockiert, wenn dem Benutzer eine bedingte Zugriffsrichtlinie zugewiesen wird.  
 
--   Das Unternehmensportal oder Webportal benachrichtigt den Benutzer bezüglich aller Konformitätsprobleme.  
-
+-   Das Unternehmensportal oder Webportal benachrichtigt den Benutzer bezüglich aller Konformitätsprobleme.
 
 ### <a name="next-steps"></a>Nächste Schritte  
 [Erstellen und Bereitstellen einer Gerätekompatibilitätsrichtlinie](create-compliance-policy.md)
 ### <a name="see-also"></a>Weitere Informationen:  
  [Verwalten des Zugriffs auf Dienste in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

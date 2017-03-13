@@ -2,7 +2,7 @@
 title: "Sicherheit und Datenschutz für die Standortverwaltung | Microsoft-Dokumentation"
 description: "Optimieren Sie Sicherheit und Datenschutz für die Standortverwaltung in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: aca2169c8f5f855e84ca924ca56f6b64bba80fd6
+ms.sourcegitcommit: 168650cca28fe1331e48ea5e8e025e110dda835f
+ms.openlocfilehash: 4ca43db385ea97d5d026c50a799b783096c05d36
+ms.lasthandoff: 03/01/2017
 
 
 ---
@@ -27,14 +28,14 @@ ms.openlocfilehash: aca2169c8f5f855e84ca924ca56f6b64bba80fd6
 
 Diese Thema enthält Sicherheits- und Datenschutzinformationen für System Center Configuration Manager-Standorte und die Hierarchie.
 
-##  <a name="a-namebkmksecuritysitesa-security-best-practices-for-site-administration"></a><a name="BKMK_Security_Sites"></a> Bewährte Sicherheitsmethoden für die Standortverwaltung  
+##  <a name="BKMK_Security_Sites"></a> Bewährte Sicherheitsmethoden für die Standortverwaltung  
  Wenden Sie die folgenden bewährten Sicherheitsmethoden an, um System Center Configuration Manager-Standorte und die Hierarchie zu sichern.  
 
  **Führen Sie Setup nur von einer vertrauenswürdigen Quelle aus aus, und sichern Sie den Kommunikationskanal zwischen Setupmedien und Standortserver.**  
 
  Führen Sie Setup nur von einer vertrauenswürdigen Quelle aus aus, um Manipulationen der Quelldateien zu vermeiden. Wenn Sie die Dateien im Netzwerk speichern, Sichern Sie den Speicherort im Netzwerk.  
 
- Wenn Sie Setup von einem Speicherort im Netzwerk aus ausführen, verwenden Sie IPsec oder SMB-Signaturen zwischen dem Quellspeicherort der Setupdateien und dem Standortserver, um Manipulationen an den Dateien während der Übertragung über das Netzwerk zu verhindern.  
+ Wenn Sie Setup von einem Speicherort im Netzwerk aus ausführen, verwenden Sie IPsec oder Server Message Block (SMB)-Signaturen zwischen dem Quellspeicherort der Setupdateien und dem Standortserver, um Manipulationen an den Dateien während der Übertragung über das Netzwerk zu verhindern.  
 
  Wenn Sie das Setup-Downloadprogramm zum Herunterladen der für Setup erforderlichen Dateien verwenden, sichern Sie auch den Ort, an dem diese Dateien gespeichert werden, sowie den Kommunikationskanal mit diesem Speicherort, wenn Sie Setup ausführen.  
 
@@ -42,7 +43,7 @@ Diese Thema enthält Sicherheits- und Datenschutzinformationen für System Cente
 
  Schemaerweiterungen sind zum Ausführen von System Center Configuration Manager nicht erforderlich, jedoch lässt sich die Sicherheit der Umgebung durch sie erhöhen, da so ein Abrufen von Informationen durch Configuration Manager-Clients und Standortserver aus vertrauenswürdigen Quellen ermöglicht wird.  
 
- Bei Clients in einer nicht vertrauenswürdigen Domäne stellen Sie die folgenden Standortsystemrollen in der Domäne der Clients bereit:  
+ Stellen Sie bei Clients in einer nicht vertrauenswürdigen Domäne die folgenden Standortsystemrollen in den Domänen der Clients bereit:  
 
 -   Verwaltungspunkt  
 
@@ -51,7 +52,7 @@ Diese Thema enthält Sicherheits- und Datenschutzinformationen für System Cente
 -   Anwendungskatalog-Websitepunkt  
 
 > [!NOTE]  
->  Für eine vertrauenswürdige Domäne für Configuration Manager ist eine Kerberos-Authentifizierung erforderlich, daher werden Clients in einer anderen Gesamtstruktur ohne bidirektionale Vertrauensstellung mit der Gesamtstruktur des Standortservers als Clients in einer nicht vertrauenswürdigen Domäne betrachtet. Eine externe Vertrauensstellung ist für diesen Zweck nicht ausreichend.  
+>  Eine vertrauenswürdige Domäne für den Configuration Manager erfordert Kerberos-Authentifizierung. Daher werden Clients in einer anderen Gesamtstruktur ohne bidirektionale Vertrauensstellung mit der Gesamtstruktur des Standortservers als Clients in einer nicht vertrauenswürdigen Domäne betrachtet. Eine externe Vertrauensstellung ist für diesen Zweck nicht ausreichend.  
 
  **Verwenden Sie IPsec zum Sichern der Kommunikation zwischen Standortsystemservern und Standorten.**  
 
@@ -80,11 +81,11 @@ Bearbeiten Sie diese Gruppen nicht manuell, um die Dienstkontinuität und das Pr
 
 Wenn eine Abfrage von Configuration Manager-Informationen vom globalen Katalog durch die Clients nicht möglich ist, ist der vertrauenswürdige Stammschlüssel zur Authentifizierung gültiger Verwaltungspunkte erforderlich. Der vertrauenswürdige Stammschlüssel wird in der Clientregistrierung gespeichert und kann mithilfe der Gruppenrichtlinie oder manuell konfiguriert werden.  
 
-Wenn der Client beim ersten Kontakt mit einem Verwaltungspunkt keine Kopie des vertrauenswürdigen Stammschlüssels aufweist, wird dem ersten Verwaltungspunkt vertraut, mit dem kommuniziert wird. Sie können für den Client im Voraus einen vertrauenswürdigen Stammschlüssel bereitstellen, um das Risiko zu reduzieren, dass Clients von einem Angreifer an einen nicht autorisierten Verwaltungspunkt umgeleitet werden. Weitere Informationen finden Sie unter [Planning for the Trusted Root Key](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
+Wenn der Client beim ersten Kontakt mit einem Verwaltungspunkt keine Kopie des vertrauenswürdigen Stammschlüssels aufweist, wird dem ersten Verwaltungspunkt vertraut, mit dem kommuniziert wird. Sie können für den Client im Voraus einen vertrauenswürdigen Stammschlüssel bereitstellen, um das Risiko zu reduzieren, dass Clients von einem Angreifer an einen nicht autorisierten Verwaltungspunkt umgeleitet werden. Weitere Informationen finden Sie unter [Planning for the trusted root key (Planen des vertrauenswürdigen Stammschlüssels)](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
 
 **Verwenden Sie nicht die Standardportnummern.**  
 
-Aus Sicherheitsgründen sollten Sie Portnummern verwenden, die nicht der Standardeinstellung entsprechen. Dadurch wird Angreifern die Erkundung der Umgebung zur Vorbereitung eines Angriffs erschwert. Wenn Sie sich für die Verwendung von Portnummern entscheiden, die nicht der Standardeinstellung entsprechen, planen Sie diese Nummern, bevor Sie Configuration Manager installieren, und verwenden Sie die Nummern konsistent in allen Standorten der Hierarchie. Portnummern, die nicht der Standardeinstellung entsprechen, können Sie beispielsweise als Clientanforderungsports und für Wake-On-LAN verwenden.  
+Aus Sicherheitsgründen sollten Sie Portnummern verwenden, die nicht der Standardeinstellung entsprechen. Dadurch wird Angreifern die Erkundung der Umgebung zur Vorbereitung eines Angriffs erschwert. Wenn Sie sich für die Verwendung von Portnummern entscheiden, die nicht der Standardeinstellung entsprechen, planen Sie diese Nummern, bevor Sie Configuration Manager installieren, und verwenden Sie diese Nummern konsistent in allen Standorten der Hierarchie. Portnummern, die nicht der Standardeinstellung entsprechen, können Sie beispielsweise als Clientanforderungsports und für Wake-On-LAN verwenden.  
 
 **Verwenden Sie die Rollentrennung für Standortsysteme.**  
 
@@ -95,7 +96,7 @@ Sie können zwar sämtliche Standortsystemrollen auf einem einzigen Computer ins
 Wenn Sie jede Standortserverrolle auf einem anderen Server installieren, reduzieren Sie damit das Risiko, dass ein Angriff gegen Schwachstellen in einem Standortsystem auch gegen ein anderes Standortsystem verwendet werden kann. Für viele Standortsystemrollen ist die Installation von Internetinformationsdiensten (IIS) auf dem Standortsystem erforderlich. Dadurch vergrößert sich die Angriffsfläche. Wenn Sie Standortsystemrollen kombinieren müssen, um die Hardwareausgaben zu reduzieren, sollten Sie IIS-Standortsystemrollen nur mit Rollen kombinieren, für die ebenfalls IIS erforderlich sind.  
 
 > [!IMPORTANT]  
->  Für die Fallbackstatuspunkt-Rolle gilt eine Ausnahme: Von dieser Standortsystemrolle werden nicht authentifizierte Daten von Clients akzeptiert, daher sollte die Fallbackstatuspunkt-Rolle niemals einer anderen Configuration Manager-Standortsystemrolle zugewiesen werden.  
+>  Für die Fallbackstatuspunkt-Rolle gilt eine Ausnahme. Von dieser Standortsystemrolle werden nicht authentifizierte Daten von Clients akzeptiert, daher sollte die Fallbackstatuspunkt-Rolle niemals einer anderen Configuration Manager-Standortsystemrolle zugewiesen werden.  
 
 
 **Befolgen Sie die bewährten Sicherheitsmethoden für Windows Server, und führen Sie auf allen Standortsystemen den Sicherheitskonfigurations-Assistenten aus.**  
@@ -108,7 +109,7 @@ Der Sicherheitskonfigurations-Assistent ist im Toolkit für System Center 2012 C
 
 Statische IP-Adressen können leichter vor Namensauflösungsangriffen geschützt werden.  
 
-Durch statische IP-Adressen wird zudem die Konfiguration von IPsec als bewährte Sicherheitsmethode zur Kommunikationssicherung zwischen Standortsystemen in Configuration Manager vereinfacht.  
+Statische IP-Adressen erleichtern auch die Konfiguration von IPsec. Die Verwendung von IPsec ist eine bewährte Sicherheitsmethode zur Kommunikationssicherung zwischen Standortsystemen in Configuration Manager.  
 
 **Installieren Sie keine anderen Anwendungen auf Standortsystemservern.**  
 
@@ -138,11 +139,11 @@ Schränken Sie die Anzahl der Personen ein, die auf den Netzwerkordner zugreifen
 
 Verwenden Sie SMB-Signaturen oder IPsec zwischen Netzwerkspeicherort und Standortserver sowie zwischen dem Computer, auf dem die Configuration Manager-Konsole ausgeführt wird, und dem Standortserver, um Manipulationen an den exportierten Daten zu verhindern. Verwenden Sie IPsec zum Verschlüsseln der Daten im Netzwerk, um die Offenlegung von Informationen zu verhindern.  
 
-**Wenn sich ein Standortsystem nicht deinstallieren lässt oder bei Funktionsausfall nicht wiederhergestellt werden kann, entfernen Sie die Configuration Manager-Zertifikate für diesen Server manuell von anderen Configuration Manager-Servern.**  
+**Wenn ein Standortsystem nicht richtig deinstalliert wird oder bei Funktionsausfall nicht wiederhergestellt werden kann, entfernen Sie die Configuration Manager-Zertifikate für diesen Server manuell von anderen Configuration Manager-Servern.**  
 
 Zum Entfernen von PeerTrust, das ursprünglich mit dem Standortsystem und den Standortsystemrollen erstellt wurde, entfernen Sie die Configuration Manager-Zertifikate für den ausgefallenen Server im Zertifikatspeicher **Vertrauenswürdige Personen** auf anderen Standortsystemservern manuell. Dies ist besonders dann wichtig, wenn Sie den Server ohne Neuformatieren wiederverwenden.  
 
-Weitere Informationen zu diesen Zertifikaten finden Sie im Abschnitt „Kryptografische Steuerelemente für die Serverkommunikation“ unter [Kryptographische Steuerelemente – Technische Referenz für System Center Configuration Manager](../../../protect/deploy-use/cryptographic-controls-technical-reference.md).  
+Weitere Informationen zu diesen Zertifikaten finden Sie im Abschnitt **Kryptografische Steuerelemente für die Serverkommunikation** unter [Technische Referenz für kryptografische Steuerelemente](../../../protect/deploy-use/cryptographic-controls-technical-reference.md).  
 
 **Konfigurieren Sie internetbasierte Standortsysteme nicht als Brücke zu Umkreisnetzwerk und Intranet.**  
 
@@ -169,13 +170,13 @@ Von den Standortsystemen werden standardmäßig Verbindungen mit dem Standortser
 
 -   Wenn subnetzgesteuerte Broadcasts verwendet werden müssen, konfigurieren Sie die Router so, dass IP-gesteuerte Broadcasts nur über den Standortserver und nur über eine nicht standardmäßig konfigurierte Portnummer möglich sind.  
 
-Weitere Informationen zu den verschiedenen Wake-On-LAN-Technologien finden Sie unter [Plan how to wake up clients in System Center Configuration Manager](../../../core/clients/deploy/plan/plan-wake-up-clients.md) (Planen der Aktivierung von Clients in System Center Configuration Manager).
+Weitere Informationen zu den verschiedenen Wake-On-LAN-Technologien finden Sie unter [Planning how to wake up clients in System Center Configuration Manager (Planen der Aktivierung von Clients in System Center Configuration Manager)](../../../core/clients/deploy/plan/plan-wake-up-clients.md).
 
 **Wenn Sie E-Mail-Benachrichtigungen verwenden, konfigurieren Sie einen authentifizierten Zugriff auf den SMTP-E-Mail-Server.**  
 
-Verwenden Sie einen E-Mail-Server mit Unterstützung für authentifizierten Zugriff, wann immer möglich, und authentifizieren Sie den Zugriff mithilfe des Computerkontos des Standortservers. Falls Sie ein Benutzerkonto für die Authentifizierung angeben müssen, verwenden Sie eines mit den geringsten Berechtigungen.  
+Verwenden Sie nach Möglichkeit einen E-Mail-Server mit Unterstützung für authentifizierten Zugriff, und authentifizieren Sie den Zugriff mithilfe des Computerkontos des Standortservers. Falls Sie ein Benutzerkonto für die Authentifizierung angeben müssen, verwenden Sie eines mit den geringsten Berechtigungen.  
 
-##  <a name="a-namebkmksecuritysiteservera-security-best-practices-for-the-site-server"></a><a name="BKMK_Security_SiteServer"></a> Bewährte Sicherheitsmethoden für den Standortserver  
+##  <a name="BKMK_Security_SiteServer"></a> Bewährte Sicherheitsmethoden für den Standortserver  
  Wenden Sie die folgenden bewährten Sicherheitsmethoden an, um den Configuration Manager-Standortserver zu sichern.  
 
  **Installieren Sie Configuration Manager auf einem Mitgliedsserver anstatt auf einem Domänencontroller.**  
@@ -186,13 +187,13 @@ Verwenden Sie einen E-Mail-Server mit Unterstützung für authentifizierten Zugr
 
  **Vermeiden Sie es beim Installieren sekundärer Standorte, die Dateien über das Netzwerk auf den sekundären Standortserver zu kopieren.**  
 
- Wenn Sie Setup ausführen und einen sekundären Standort erstellen, aktivieren Sie nicht die Option zum Kopieren der Dateien vom übergeordneten in den sekundären Standort, und verwenden Sie keinen Quellspeicherort im Netzwerk. Wenn Sie Dateien über das Netzwerk kopieren, könnte ein geschickter Angreifer auf das Installationspaket des sekundären Standorts zugreifen und die darin enthaltenen Dateien vor der Installation manipulieren, auch wenn die zeitliche Organisation eines solchen Angriffs schwierig wäre. Dieses Risiko können Sie minimieren, indem Sie beim Übertragen der Dateien IPsec oder SMB verwenden.  
+ Wenn Sie das Setup ausführen und einen sekundären Standort erstellen, aktivieren Sie nicht die Option zum Kopieren der Dateien vom übergeordneten in den sekundären Standort, und verwenden Sie keinen Quellspeicherort im Netzwerk. Wenn Sie Dateien über das Netzwerk kopieren, könnte ein geschickter Angreifer auf das Installationspaket des sekundären Standorts zugreifen und die darin enthaltenen Dateien vor der Installation manipulieren, auch wenn die zeitliche Organisation eines solchen Angriffs schwierig wäre. Dieses Risiko können Sie minimieren, indem Sie beim Übertragen der Dateien IPsec oder SMB verwenden.  
 
- Kopieren Sie die Quelldateien auf dem sekundären Standortserver von den Medien in einen lokalen Ordner, anstatt sie über das Netzwerk zu kopieren. Wenn Sie dann Setup ausführen, um einen sekundären Standort zu erstellen, wählen Sie auf der Seite **Installationsquelldateien** die Option **Quelldateien in folgendem lokalen Speicherort auf dem sekundären Standortcomputer verwenden (am sichersten)**aus, und geben Sie diesen Ordner an.  
+ Kopieren Sie die Quelldateien auf dem sekundären Standortserver aus dem Medienordner in einen lokalen Ordner, anstatt sie über das Netzwerk zu kopieren. Wenn Sie dann das Setup ausführen, um einen sekundären Standort zu erstellen, wählen Sie auf der Seite **Installationsquelldateien** die Option **Quelldateien in folgendem lokalen Speicherort auf dem sekundären Standortcomputer verwenden (am sichersten)** aus, und geben Sie diesen Ordner an.  
 
  Weitere Informationen finden Sie unter [Install a secondary site](../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_secondary) (Installieren eines sekundären Standorts) im Thema [Use the Setup Wizard to install sites](../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md) (Verwenden des Setup-Assistenten zum Installieren von Standorten).  
 
-##  <a name="a-namebkmksecuritysqlservera-security-best-practices-for-sql-server"></a><a name="BKMK_Security_SQLServer"></a> Bewährte Sicherheitsmethoden für SQL Server  
+##  <a name="BKMK_Security_SQLServer"></a> Bewährte Sicherheitsmethoden für SQL Server  
  Configuration Manager verwendet SQL Server als Back-End-Datenbank. Wenn die Datenbank beschädigt ist, können Angreifer Configuration Manager umgehen und direkt auf SQL Server zugreifen, um Angriffe über Configuration Manager zu starten. Angriffe auf SQL Server müssen als hochriskant angesehen werden, und es müssen entsprechende Vorkehrungen getroffen werden.  
 
  Wenden Sie die folgenden bewährten Sicherheitsmethoden an, um SQL Server für Configuration Manager zu sichern.  
@@ -207,7 +208,7 @@ Verwenden Sie einen E-Mail-Server mit Unterstützung für authentifizierten Zugr
 
  **Unternehmen Sie zusätzliche Schritte, um zu gewährleisten, dass an sekundären Standorten, an denen SQL Server Express verwendet wird, die neuesten Softwareupdates verfügbar sind.**  
 
- Wenn Sie einen primären Standort installieren, wird SQL Server Express durch Configuration Manager vom Microsoft Download Center heruntergeladen, und die Dateien werden auf den primären Standortserver kopiert. Wenn Sie einen sekundären Standort installieren und die Option zum Installieren von SQL Server Express auswählen, wird die zuvor heruntergeladene Version von Configuration Manager installiert. Eine Prüfung, ob neue Versionen verfügbar sind, findet nicht statt. Führen Sie eines der folgenden Verfahren aus, um zu überprüfen, ob am sekundären Standort die neuesten Versionen verfügbar sind:  
+ Wenn Sie einen primären Standort installieren, wird SQL Server Express durch Configuration Manager vom Microsoft Download Center heruntergeladen, und die Dateien werden auf den primären Standortserver kopiert. Wenn Sie einen sekundären Standort installieren und die Option zum Installieren von SQL Server Express auswählen, wird die zuvor heruntergeladene Version von Configuration Manager installiert. Eine Prüfung, ob neue Versionen verfügbar sind, findet nicht statt. Führen Sie eines der folgenden Verfahren aus, um sicherzustellen, dass am sekundären Standort die neuesten Versionen verfügbar sind:  
 
 -   Wenn der sekundäre Standort installiert ist, führen Sie Windows Update auf dem sekundären Standortserver aus.  
 
@@ -223,7 +224,7 @@ Identifizieren Sie die bewährten Methoden für Ihre Version von SQL Server, und
 
 -   Wenn Sie SQL Server mithilfe eines Domänenbenutzerkontos installieren, vergewissern Sie sich, dass das Computerkonto des Standortservers für einen Dienstprinzipalnamen (Service Principal Name, SPN), der in den Active Directory-Domänendiensten veröffentlicht wird, konfiguriert ist. Ohne den SPN treten bei der Kerberos-Authentifizierung und bei Configuration Manager-Setup Fehler auf.  
 
-##  <a name="a-namebkmksecurityiisa-security-best-practices-for-site-systems-that-run-iis"></a><a name="BKMK_Security_IIS"></a> Bewährte Sicherheitsmethoden für Standortsysteme, von denen IIS ausgeführt werden  
+##  <a name="BKMK_Security_IIS"></a> Bewährte Sicherheitsmethoden für Standortsysteme, die IIS ausführen  
 Mehrere Standortsystemrollen in Configuration Manager erfordern IIS. Wenn Sie IIS sichern, ist ein ordnungsgemäßer Betrieb von Configuration Manager möglich, und das Gefahrenpotenzial in Bezug auf Sicherheitsprobleme wird verringert. Minimieren Sie die Anzahl der Server, für die IIS erforderlich sind. Führen Sie beispielsweise nur so viele Verwaltungspunkte aus, wie Sie für Ihre Client-Basis benötigen. Berücksichtigen Sie dabei Faktoren wie hohe Verfügbarkeit und Netzwerkisolation für internetbasierte Clientverwaltung.  
 
  Wenden Sie die folgenden bewährten Sicherheitsmethoden zur Sicherung von Standortsystemen an, von denen IIS ausgeführt werden.  
@@ -236,7 +237,7 @@ Mehrere Standortsystemrollen in Configuration Manager erfordern IIS. Wenn Sie II
 
  Wenn von Clients eine Verbindung mit einem Standortsystem über HTTP statt HTTPS hergestellt wird, wird die Windows-Authentifizierung verwendet. Dies kann dazu führen, dass keine Kerberos-Authentifizierung, sondern NTLM-Authentifizierung verwendet wird. In diesem Fall können von den Clients Verbindungen mit einem nicht autorisierten Server hergestellt werden.  
 
- Eine Ausnahme von dieser bewährten Sicherheitsmethode gilt für Verteilungspunkte, da Paketzugriffskonten nicht funktionsfähig sind, wenn der Verteilungspunkt für HTTPS konfiguriert ist. Bei Paketzugriffskonten erfolgt eine Autorisierung für den Inhalt, sodass Sie den Zugriff auf den Inhalt auf bestimmte Benutzer beschränken können. Weitere Informationen finden Sie unter [Security Best Practices for Content Management](../../../core/plan-design/hierarchy/security-and-privacy-for-content-management.md#BKMK_Security_ContentManagement).  
+ Eine Ausnahme von dieser bewährten Sicherheitsmethode gilt für Verteilungspunkte, da Paketzugriffskonten nicht funktionsfähig sind, wenn der Verteilungspunkt für HTTPS konfiguriert ist. Bei Paketzugriffskonten erfolgt eine Autorisierung für den Inhalt, sodass Sie den Zugriff auf den Inhalt auf bestimmte Benutzer beschränken können. Weitere Informationen finden Sie unter [Security best practices for content management (Bewährte Sicherheitsmethoden für die Inhaltsverwaltung)](../../../core/plan-design/hierarchy/security-and-privacy-for-content-management.md#BKMK_Security_ContentManagement).  
 
 **Konfigurieren Sie für Standortsystemrollen eine Zertifikatvertrauensliste (Certificate Trust List, CTL) in IIS.**  
 
@@ -244,11 +245,13 @@ Standortsystemrollen:
 
 -   Verteilungspunkte, die für HTTPS konfiguriert sind  
 
--   Verwaltungspunkte, die für HTTPS konfiguriert und für die Unterstützung von mobilen Geräten aktiviert sind  
+-   Verwaltungspunkte, die für HTTPS konfiguriert und für die Unterstützung von mobilen Geräten aktiviert sind
 
-Eine Zertifikatvertrauensliste (Certificate Trust List, CTL) ist eine definierte Liste von vertrauenswürdigen Stammzertifizierungsstellen. Wenn Sie eine Zertifikatvertrauensliste zusammen mit einer Gruppenrichtlinie und einer PKI-Bereitstellung verwenden, können Sie die vorhandenen vertrauenswürdigen Stammzertifizierungsstellen ergänzen, die im Netzwerk konfiguriert sind (beispielsweise von Microsoft Windows automatisch installiert oder durch Windows-Unternehmens-Stammzertifizierungsstellen hinzugefügt). Ist in den IIS jedoch eine Zertifikatvertrauensliste konfiguriert, wird eine Teilmenge der vertrauenswürdigen Stammzertifizierungsstellen durch diese Zertifikatvertrauensliste definiert.  
+Eine Zertifikatvertrauensliste (Certificate Trust List, CTL) ist eine definierte Liste von vertrauenswürdigen Stammzertifizierungsstellen. Wenn Sie eine Zertifikatvertrauensliste zusammen mit einer Gruppenrichtlinie und einer Public-Key-Infrastruktur (PKI)-Bereitstellung verwenden, können Sie die vorhandenen vertrauenswürdigen Stammzertifizierungsstellen ergänzen, die im Netzwerk konfiguriert sind (beispielsweise von Microsoft Windows automatisch installiert oder durch Windows-Unternehmens-Stammzertifizierungsstellen hinzugefügt). Ist in IIS jedoch eine Zertifikatvertrauensliste konfiguriert, wird eine Teilmenge der vertrauenswürdigen Stammzertifizierungsstellen durch diese definiert.  
 
-Hierdurch haben Sie mehr Kontrolle über die Sicherheit, da von der Zertifikatvertrauensliste nur solche Zertifikate zugelassen werden, die von den aufgelisteten Zertifizierungsstellen ausgestellt wurden. Beispiel: Windows wird mit einer Anzahl von bekannten Zertifikaten von Drittanbieter-Zertifizierungsstellen geliefert, z. B. VeriSign und Thawte. Zertifikate von diesen bekannten Zertifizierungsstellen werden von Computern mit IIS standardmäßig als vertrauenswürdig eingestuft. Wenn Sie die IIS nicht mit einer Zertifikatvertrauensliste für die aufgelisteten Standortsystemrollen konfigurieren, werden alle Geräte mit Clientzertifikaten dieser Zertifizierungsstellen als gültige Configuration Manager-Clients zugelassen. Wenn Sie IIS mit einer CTL konfigurieren, die diese Zertifizierungsstellen nicht enthält, werden Clientverbindungen mit Zertifikaten dieser Zertifizierungsstellen abgelehnt. Damit Configuration Manager-Clients jedoch für die aufgelisteten Standortsystemrollen zugelassen werden, müssen Sie IIS mit einer CTL konfigurieren, die die von Configuration Manager-Clients verwendeten Zertifizierungsstellen angibt.  
+Hierdurch haben Sie mehr Kontrolle über die Sicherheit, da von der Zertifikatvertrauensliste nur solche Zertifikate zugelassen werden, die von den aufgelisteten Zertifizierungsstellen ausgestellt wurden. Windows wird beispielsweise mit einer Anzahl von bekannten Zertifikaten von Drittanbieter-Zertifizierungsstellen geliefert, z.B. VeriSign und Thawte.
+
+Zertifikate von diesen bekannten Zertifizierungsstellen werden von Computern mit IIS standardmäßig als vertrauenswürdig eingestuft. Wenn Sie IIS nicht mit einer Zertifikatvertrauensliste für die aufgelisteten Standortsystemrollen konfigurieren, werden alle Geräte mit Clientzertifikaten dieser Zertifizierungsstellen als gültige Configuration Manager-Clients zugelassen. Wenn Sie IIS mit einer CTL konfigurieren, die diese Zertifizierungsstellen nicht enthält, werden Clientverbindungen mit Zertifikaten dieser Zertifizierungsstellen abgelehnt. Damit Configuration Manager-Clients jedoch für die aufgelisteten Standortsystemrollen zugelassen werden, müssen Sie IIS mit einer CTL konfigurieren, die die von Configuration Manager-Clients verwendeten Zertifizierungsstellen angibt.  
 
 > [!NOTE]  
 >  Die Konfiguration einer Zertifikatvertrauensliste in IIS ist nur für die aufgelisteten Standortsystemrollen erforderlich. Für Clientcomputer, die mit HTTPS-Verwaltungspunkten verbunden werden, wird diese Funktionalität über die Liste der Zertifikataussteller bereitgestellt, die von Configuration Manager für Verwaltungspunkte verwendet wird.  
@@ -289,7 +292,7 @@ Bei einem Verteilungspunkt müssen Sie beispielsweise die folgenden virtuellen V
 
 Ermitteln Sie die bewährten Methoden für Ihre Version von IIS-Server, und wenden Sie sie an. Berücksichtigen Sie jedoch alle Anforderungen, die unter Configuration Manager für bestimmte Standortsystemrollen gelten. Weitere Informationen finden Sie unter [Site and site system prerequisites for System Center Configuration Manager](../../../core/plan-design/configs/site-and-site-system-prerequisites.md) (Standort- und Standortsystemanforderungen für System Center Configuration Manager).  
 
-##  <a name="a-namebkmksecuritymanagementpointa-security-best-practices-for-the-management-point"></a><a name="BKMK_Security_ManagementPoint"></a> Bewährte Sicherheitsmethoden für den Verwaltungspunkt  
+##  <a name="BKMK_Security_ManagementPoint"></a> Bewährte Sicherheitsmethoden für den Verwaltungspunkt  
  Verwaltungspunkte sind die primäre Schnittstelle zwischen Geräten und Configuration Manager. Angriffe auf den Verwaltungspunkt und auf den Server, auf dem der Verwaltungspunkt ausgeführt wird, sind hochriskant. Es müssen daher entsprechende Vorkehrungen getroffen werden. Wenden Sie alle entsprechenden bewährten Sicherheitsmethoden an, und führen Sie eine Überwachung auf ungewöhnliche Aktivitäten hin aus.  
 
  Wenden Sie die folgenden bewährten Sicherheitsmethoden an, um Verwaltungspunkte in Configuration Manager zu sichern.  
@@ -300,10 +303,10 @@ Ermitteln Sie die bewährten Methoden für Ihre Version von IIS-Server, und wend
 
  Wenn Sie von einer früheren Version zu System Center Configuration Manager migrieren, migrieren Sie so bald wie möglich die Clientsoftware auf dem Verwaltungspunkt zu System Center Configuration Manager.  
 
-##  <a name="a-namebkmksecurityfspa-security-best-practices-for-the-fallback-status-point"></a><a name="BKMK_Security_FSP"></a> Bewährte Sicherheitsmethoden für den Fallbackstatuspunkt  
+##  <a name="BKMK_Security_FSP"></a> Bewährte Sicherheitsmethoden für den Fallbackstatuspunkt  
  Wenden Sie die folgenden bewährten Sicherheitsmethoden an, wenn Sie einen Fallbackstatuspunkt in Configuration Manager installieren.  
 
- Weitere Informationen zu den Sicherheitserwägungen beim Installieren eines Fallbackstatuspunkts finden Sie unter [Determine Whether You Require a Fallback Status Point](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#BKMK_Determine_FSP).  
+ Weitere Informationen zu den Sicherheitserwägungen beim Installieren eines Fallbackstatuspunkts finden Sie unter [Determine whether you require a fallback status point](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#BKMK_Determine_FSP).  
 
 **Führen Sie keine anderen Standortsystemrollen auf dem Standortsystem aus, und installieren Sie den Fallbackstatuspunkt nicht auf einem Domänencontroller.**  
 
@@ -311,7 +314,7 @@ Ermitteln Sie die bewährten Methoden für Ihre Version von IIS-Server, und wend
 
 **Wenn Sie PKI-Zertifikate für die Clientkommunikation in Configuration Manager verwenden, installieren Sie den Fallbackstatuspunkt, bevor Sie die Clients installieren.**  
 
- Wenn von den Configuration Manager-Standortsystemen keine HTTP-Clientkommunikation akzeptiert wird, bemerken Sie möglicherweise nicht, dass Clients ggf. aufgrund von Problemen mit PKI-Zertifikaten nicht verwaltet werden. Wenn die Clients jedoch einem Fallbackstatuspunkt zugewiesen sind, werden solche Zertifikatprobleme vom Fallbackstatuspunkt gemeldet.  
+ Wenn von den Configuration Manager-Standortsystemen keine HTTP-Clientkommunikation akzeptiert wird, bemerken Sie möglicherweise nicht, dass Clients ggf. aufgrund von Problemen mit PKI-Zertifikaten nicht verwaltet werden. Wenn die Clients jedoch einem Fallbackstatuspunkt zugewiesen sind, werden solche Zertifikatsprobleme vom Fallbackstatuspunkt gemeldet.  
 
  Aus Sicherheitsgründen können Sie Clients nach deren Installation keinen Fallbackstatuspunkt mehr zuweisen. Diese Rolle können Sie nur während der Installation der Clients zuweisen.  
 
@@ -321,10 +324,10 @@ Ermitteln Sie die bewährten Methoden für Ihre Version von IIS-Server, und wend
 
  Wenn Sie den Fallbackstatuspunkt doch im Umkreisnetzwerk oder in einem nicht vertrauenswürdigen Netzwerk installieren, verwenden Sie nicht die Standardeinstellung, bei der vom Fallbackstatuspunkt eine Verbindung mit dem Standortserver initiiert werden kann. Konfigurieren Sie stattdessen den Standortserver so, dass Datenübertragungen von diesem initiiert werden.  
 
-##  <a name="a-namebkmksecurityissuesclientsa-security-issues-for-site-administration"></a><a name="BKMK_SecurityIssues_Clients"></a> Sicherheitsprobleme bei der Standortverwaltung  
+##  <a name="BKMK_SecurityIssues_Clients"></a> Sicherheitsprobleme bei der Standortverwaltung  
  Überprüfen Sie die folgenden Sicherheitsprobleme für Configuration Manager:  
 
--   In Configuration Manager ist kein Schutz gegen autorisierte Administratoren verfügbar, die Configuration Manager zum Angriff auf das Netzwerk verwenden. Nicht autorisierte Administratoren stellen ein hohes Sicherheitsrisiko dar. Sie könnten zahlreiche Angriffe unternehmen, darunter die folgenden:  
+-   In Configuration Manager ist kein Schutz gegen autorisierte Administratoren verfügbar, die Configuration Manager zum Angriff auf das Netzwerk verwenden. Nicht autorisierte Administratoren stellen ein hohes Sicherheitsrisiko dar. Sie könnten zahlreiche Angriffe unternehmen, darunter die folgenden Strategien:  
 
     -   Verwenden der Softwarebereitstellung zum automatischen Installieren und Ausführen von Schadsoftware auf jedem Configuration Manager-Clientcomputer im Unternehmen  
 
@@ -334,13 +337,13 @@ Ermitteln Sie die bewährten Methoden für Ihre Version von IIS-Server, und wend
 
     -   Verwenden eines Standorts der Hierarchie, um in die Active Directory-Daten eines anderen Standorts zu schreiben  
 
-    Die Standorthierarchie ist die Sicherheitsgrenze. Betrachten Sie Standorte ausschließlich als Verwaltungsgrenzen.  
+    Die Standorthierarchie ist die Sicherheitsgrenze. Betrachten Sie Standorte nur als Verwaltungsgrenzen.  
 
     Überwachen Sie alle Administratoraktivitäten, und überprüfen Sie die Überwachungsprotokolle regelmäßig. Unterziehen Sie alle Configuration Manager-Administratoren vor der Einstellung einer zwingenden Hintergrundüberprüfung, und machen Sie regelmäßige erneute Überprüfungen zur Bedingung für die Beschäftigung.  
 
 -   Wenn der Anmeldungspunkt gefährdet ist, könnte ein Angreifer Authentifizierungszertifikate abrufen und die Anmeldeinformationen von Benutzern stehlen, die ihre mobilen Geräte anmelden.  
 
-    Zwischen Anmeldungspunkt und Zertifizierungsstelle findet Kommunikation statt, und vom Anmeldungspunkt können Active Directory-Objekte erstellt, geändert und gelöscht werden. Installieren Sie einen Anmeldungspunkt niemals im Umkreisnetzwerk. Überwachen Sie den Anmeldungspunkt auf ungewöhnliche Aktivitäten hin.  
+    Zwischen Anmeldungspunkt und Zertifizierungsstelle findet Kommunikation statt, und vom Anmeldungspunkt können Active Directory-Objekte erstellt, geändert und gelöscht werden. Installieren Sie einen Anmeldungspunkt niemals im Umkreisnetzwerk. Überwachen Sie den Anmeldungspunkt immer auf ungewöhnliche Aktivitäten hin.  
 
 -   Wenn Sie Benutzerrichtlinien für die internetbasierte Clientverwaltung zulassen oder den Anwendungskatalog-Websitepunkt für die Verwendung durch Benutzer mit Internetzugang konfigurieren, erhöhen Sie die Angriffsfläche.  
 
@@ -354,17 +357,12 @@ Ermitteln Sie die bewährten Methoden für Ihre Version von IIS-Server, und wend
 
     Identifizieren und befolgen Sie alle bewährten Sicherheitsmethoden für die Version von DNS und WINS, die Sie zur Namensauflösung verwenden.  
 
-##  <a name="a-namebkmkprivacycliientsa-privacy-information-for-discovery"></a><a name="BKMK_Privacy_Cliients"></a> Datenschutzinformationen zur Ermittlung  
- Bei der Ermittlung werden Datensätze für Netzwerkressourcen erstellt und in der System Center Configuration Manager-Datenbank gespeichert. Discovery Data Records (DDRs) enthalten Computerinformationen wie IP-Adresse, Betriebssystem und Computernamen. Außerdem können Active Directory-Ermittlungsmethoden zur Ermittlung jeglicher in den Active Directory-Domänendiensten gespeicherter Informationen konfiguriert werden.  
+##  <a name="BKMK_Privacy_Cliients"></a> Datenschutzinformationen zur Ermittlung  
+ Bei der Ermittlung werden Datensätze für Netzwerkressourcen erstellt und in der System Center Configuration Manager-Datenbank gespeichert. Discovery Data Records (DDRs) enthalten Computerinformationen wie IP-Adressen, Betriebssysteme und Computernamen. Außerdem können Active Directory-Ermittlungsmethoden zur Ermittlung jeglicher in den Active Directory-Domänendiensten gespeicherter Informationen konfiguriert werden.  
 
  Die einzige standardmäßig aktivierte Ermittlungsmethode ist die Frequenzermittlung. Hiermit werden jedoch nur Computer ermittelt, auf denen die System Center Configuration Manager-Clientsoftware bereits installiert ist.  
 
- Die ermittelten Informationen werden nicht an Microsoft gesendet. Die ermittelten Informationen werden in der Configuration Manager-Datenbank gespeichert. Die Informationen verbleiben bis zum Löschen durch den Standortwartungstask **Veraltete Ermittlungsdaten löschen** in der Datenbank. Der Löschvorgang wird alle 90 Tage ausgeführt. Sie können das Löschintervall konfigurieren.  
+ Die ermittelten Informationen werden nicht an Microsoft gesendet. Sie werden stattdessen in der Configuration Manager-Datenbank gespeichert. Die Informationen verbleiben bis zum Löschen durch den Standortwartungstask **Veraltete Ermittlungsdaten löschen** in der Datenbank. Der Löschvorgang wird alle 90 Tage ausgeführt.  
 
  Berücksichtigen Sie beim Konfigurieren zusätzlicher Ermittlungsmethoden oder beim Erweitern der Active Directory-Ermittlung Ihre Datenschutzanforderungen.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

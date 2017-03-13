@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 012d5b313487640faeebe5b49064c74d41a7edb9
+ms.sourcegitcommit: cec63ed7781e236dbf5e8baa0a468193ea794339
+ms.openlocfilehash: d4efe1f013dbb74efca79cd27f7248fc085c7424
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -26,18 +27,32 @@ ms.openlocfilehash: 012d5b313487640faeebe5b49064c74d41a7edb9
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Der Standortdatenbankserver ist ein Computer, auf dem eine unterstützte Version von Microsoft SQL Server ausgeführt wird, auf der Informationen für Configuration Manager-Standorte gespeichert werden. Jeder Standort in einer Configuration Manager-Hierarchie enthält eine Standortdatenbank und einen Server, dem die Rolle „Standortdatenbankserver“ zugewiesen wird.  
+Der Standortdatenbankserver ist ein Computer, auf dem eine unterstützte Version von Microsoft SQL Server ausgeführt wird. Von SQL Server werden Informationen für Configuration Manager-Standorte gespeichert. Jeder Standort in einer Configuration Manager-Hierarchie enthält eine Standortdatenbank und einen Server, dem die Rolle „Standortdatenbankserver“ zugewiesen wird.  
 
 -   Für Standorte der zentralen Verwaltung und primäre Standorte können Sie SQL Server auf dem Standortserver oder auf einem anderen Computer installieren.  
 
--   Für sekundäre Standorte können Sie anstelle einer vollständigen SQL Server-Installation SQL Server Express verwenden. Allerdings muss der Datenbankserver auf dem sekundären Standortserver ausgeführt werden.  
+-   Für sekundäre Standorte können Sie anstelle einer vollständigen SQL Server-Installation SQL Server Express verwenden. Der Datenbankserver muss jedoch auf dem sekundären Standortserver ausgeführt werden.  
 
-Wenn Sie einen Computer als Remote-Datenbankserver verwenden, müssen Sie darauf achten, dass die beteiligte Netzwerkverbindung eine hohe Verfügbarkeit und Bandbreite aufweist. Der Grund hierfür ist, dass der Standortserver und einige Standortsystemrollen kontinuierlich mit dem SQL Server, auf dem die Standortdatenbank gehostet wird, kommunizieren müssen.  
+Die folgenden SQL Server-Konfigurationen können zum Hosten der Standortdatenbank verwendet werden:  
+
+-   Die Standardinstanz von SQL Server  
+
+-   Eine benannte Instanz auf einem einzelnen Computer mit SQL Server  
+
+-   Eine benannte Instanz auf einer gruppierten Instanz von SQL Server  
+
+-   Eine SQL Server Always On-Verfügbarkeitsgruppe (ab Version 1602 von System Center Configuration Manager)
 
 
-**Beachten Sie bei der Auswahl des Standorts für den Remote-Datenbankserver Folgendes:**  
+Der SQL Server muss zum Hosten der Standortdatenbank die unter [Unterstützung für SQL Server-Versionen für System Center Configuration Manager](../../../core/plan-design/configs/support-for-sql-server-versions.md) ausführlich beschriebenen Voraussetzungen erfüllen.  
 
--   Die für die Kommunikation mit dem Datenbankserver erforderliche Bandbreite hängt von der jeweiligen Kombination vieler verschiedener Standort- und Clientkonfigurationen ab. Die tatsächlich erforderliche Bandbreite kann daher nicht genau vorhergesagt werden.  
+
+
+## <a name="remote-database-server-location-considerations"></a>Beim Standort des Remotedatenbankservers zu berücksichtigen  
+
+Wenn Sie einen Computer als Remotedatenbankserver verwenden, müssen Sie darauf achten, dass die beteiligte Netzwerkverbindung eine hohe Verfügbarkeit und Bandbreite aufweist. Der Standortserver und einige Standortsystemrollen müssen kontinuierlich mit dem Remoteserver kommunizieren, auf dem die Standortdatenbank gehostet wird.
+
+-   Die für die Kommunikation mit dem Datenbankserver erforderliche Bandbreite hängt von einer Kombination vieler verschiedener Standort- und Clientkonfigurationen ab. Die tatsächlich erforderliche Bandbreite kann daher nicht genau vorhergesagt werden.  
 
 -   Die Anforderungen an die Netzwerkbandbreite steigen mit jedem Computer, auf dem der SMS-Anbieter ausgeführt wird und von dem eine Verbindung mit der Standortdatenbank herstellt wird.  
 
@@ -46,26 +61,5 @@ Wenn Sie einen Computer als Remote-Datenbankserver verwenden, müssen Sie darauf
 -   Sie können für den Standortdatenbankserver keinen gruppierten SQL Server verwenden, wenn die Standortdatenbank sich auf dem gleichen Computer wie der Standortserver befindet.  
 
 
-In der Regel werden von einem Standortsystemserver nur Standortsystemrollen von einem einzelnen Configuration Manager-Standort unterstützt. Allerdings können Sie mithilfe unterschiedlicher SQL Server-Instanzen auf gruppierten oder nicht gruppierten Servern, auf denen SQL Server ausgeführt wird, eine Datenbank von verschiedenen Configuration Manager-Standorten aus hosten. Die Unterstützung von Datenbanken von unterschiedlichen Standorten setzt voraus, dass Sie jede SQL Server-Instanz für die Verwendung eindeutiger Kommunikationsports konfigurieren.  
-
-
-**Die folgenden SQL Server-Konfigurationen können zum Hosten der Standortdatenbank verwendet werden:**  
-
--   Die Standardinstanz von SQL Server  
-
--   Eine benannte Instanz auf einem einzelnen Computer mit SQL Server  
-
--   Eine benannte Instanz auf einer gruppierten Instanz von SQL Server  
-
--   Eine SQL Server Always On-Verfügbarkeitsgruppe (ab Version 1602)
-
-
-**Voraussetzungen für die Standortdatenbank:**  
-
--   Der SQL Server muss zum Hosten der Standortdatenbank die unter [Unterstützung für SQL Server-Versionen für System Center Configuration Manager](../../../core/plan-design/configs/support-for-sql-server-versions.md) ausführlich beschriebenen Voraussetzungen erfüllen.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
+In der Regel unterstützt ein Standortsystemserver nur die Standortsystemrollen von einem einzigen Configuration Manager-Standort. Sie können jedoch verschiedene Instanzen von SQL Server auf gruppierten oder nicht gruppierten Servern mit SQL Server verwenden, um eine Datenbank von verschiedenen Configuration Manager-Standorten zu hosten. Die Unterstützung von Datenbanken von unterschiedlichen Standorten setzt voraus, dass Sie jede SQL Server-Instanz für die Verwendung eindeutiger Kommunikationsports konfigurieren.  
 

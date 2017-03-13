@@ -1,8 +1,8 @@
 ---
-title: Setup-Downloadprogramm | System Center Configuration Manager
+title: Setup-Downloadprogramm | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über diese eigenständige Anwendung, die sicherstellen soll, dass Ihre Standortinstallation aktuelle Versionen der wichtigsten Installationsdateien verwendet."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,67 +16,66 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 574e4d450126d2c4411292b6dd52e18049d296f6
+ms.sourcegitcommit: 34e24deb90a39bf655a2e24d16cdbe07528e6193
+ms.openlocfilehash: b72148ecc16141843178cbd220fe021fab8be992
+ms.lasthandoff: 03/01/2017
 
 ---
 # <a name="setup-downloader-for-system-center-configuration-manager"></a>Setup-Downloadprogramm für System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Bevor Sie das Setup zum Installieren oder Aktualisieren eines System Center Configuration Manager-Standorts ausführen, können Sie diese eigenständige Anwendung (**Setupdl.exe**) für die zu installierende Version von Configuration Manager verwenden, um vom Setup benötigte aktualisierte Setupdateien herunterzuladen.  
+Bevor Sie das Setup zum Installieren oder Upgraden eines System Center Configuration Manager-Standorts ausführen, können Sie die eigenständige Setup-Downloadanwendung für die zu installierende Version von Configuration Manager verwenden, um aktualisierte Setupdateien herunterzuladen.  
 
-Die Verwendung aktualisierter Setupdateien stellt sicher, dass für Ihre Standortinstallation aktuelle Versionen der wichtigsten Installationsdateien verwendet werden:  
-
+Die Verwendung aktualisierter Setupdateien stellt sicher, dass für Ihre Standortinstallation aktuelle Versionen der wichtigsten Installationsdateien verwendet werden. Übersicht:   
 -   Wenn Sie das Setup-Downloadprogramm zum Herunterladen von Dateien vor dem Starten des Setups verwenden, geben Sie einen Ordner zum Speichern der Dateien an.  
-
 -   Das Konto, mit dem Sie das Setup-Downloadprogramm ausführen, benötigt **Vollzugriff**-Berechtigungen für den Downloadordner.  
-
 -   Beim Ausführen von Setup zum Installieren oder Aktualisieren eines Standorts können Sie das Setup anweisen, diese lokale Kopie von Dateien zu verwenden, die Sie zuvor heruntergeladen haben. Dies verhindert, dass das Setup eine Verbindung mit Microsoft herstellen muss, wenn Sie die Installation oder das Upgrade des Standorts starten.  
-
 -   Sie können die gleiche lokale Kopie der Setupdateien für nachfolgende Standortinstallationen oder -upgrades verwenden.  
 
 Die folgenden Dateitypen werden vom Setup-Downloadprogramm heruntergeladen:  
-
 -   Erforderliche verteilbare Dateien  
-
 -   Sprachpakete  
-
 -   Die neuesten Produktupdates für Setup  
 
-Es gibt zwei Optionen für die Ausführung des Setup-Downloadprogramms:  
+Sie haben zwei Optionen zum Ausführen des Setup-Downloadprogramms:
+- Die Anwendung mit der Benutzeroberfläche ausführen
+- Die Anwendung für Befehlszeilenoptionen an einer Eingabeaufforderung ausführen
+
 
 ## <a name="run-setup-downloader-with-the-user-interface"></a>Führen Sie das Setup-Downloadprogramm auf der Benutzeroberfläche aus  
 
 1.  Öffnen Sie auf einem Computer mit Internetzugriff den Windows-Explorer, und wechseln Sie zu **&lt;ConfigMgrInstallationMedia\>\SMSSETUP\BIN\X64**.  
 
-2.  Doppelklicken Sie auf **Setupdl.exe**. Das Setup-Downloadprogramm wird geöffnet.  
+2.  Doppelklicken Sie auf **Setupdl.exe**, um das Setup-Downloadprogramm zu öffnen.   
 
-3.  Geben Sie den Pfad zu dem Ordner mit den aktuellen Installationsdateien an, und klicken Sie dann auf **Herunterladen**. Es wird überprüft, welche Dateien aktuell im Downloadordner enthalten sind, und nur fehlende oder aktuellere Dateien werden heruntergeladen. Es werden Unterordner für die heruntergeladenen Sprachen erstellt. Wenn der Ordner nicht vorhanden ist, wird er vom Setup-Downloadprogramm erstellt.  
+3. Geben Sie den Pfad zu dem Ordner mit den aktuellen Installationsdateien an, und klicken Sie dann auf **Herunterladen**. Das Setup-Downloadprogramm überprüft die Dateien im Downloadordner. Es werden nur die Dateien heruntergeladen, die fehlen oder die neuer sind als vorhandene Dateien. Es werden Unterordner für die heruntergeladenen Sprachen und weitere erforderliche Unterordner erstellt.  
 
-4.  Überprüfen Sie die Downloadergebnisse anhand der Datei **ConfigMgrSetup.log** im Stamm des Laufwerks C.  
+4.  Überprüfen Sie die Downloadergebnisse anhand der Datei **ConfigMgrSetup.log** im Stammverzeichnis von Laufwerk C.  
 
 ## <a name="run-setup-downloader-from-a-command-prompt"></a>Starten Sie das Setup-Downloadprogramm mithilfe einer Eingabeaufforderung.  
 
-1.  Öffnen Sie ein Eingabeaufforderungsfenster, und wechseln Sie zu **&lt;ConfigMgrInstallationMedia\>\SMSSETUP\BIN\X64**.  
+1.  Gehen Sie in einem Eingabeaufforderungsfenster auf **&lt;*Configuration Manager-Installationsmedium*\>\SMSSETUP\BIN\X64**.   
 
-2.  Geben Sie **setupdl.exe** ein, um das Setup-Downloadprogramm zu öffnen. Optional können Sie die folgenden Befehlszeilenoptionen mit „setupdl.exe“ verwenden:  
+2.  Führen Sie **Setupdl.exe** aus, um das Setup-Downloadprogramm zu öffnen.
 
-    -   **/VERIFY**: Verwenden Sie diese Option, um die Dateien im Downloadordner einschließlich der Sprachdateien zu überprüfen. Überprüfen Sie anhand der Liste in der Datei ConfigMgrSetup.log im Stamm des Laufwerks C, welche Dateien veraltet sind. Wenn Sie diese Option verwenden, werden keine Dateien heruntergeladen.  
+    Sie können die folgenden Befehlszeilenoptionen mit **Setupdl.exe** verwenden:   
 
-    -   **/VERIFYLANG**: Verwenden Sie diese Option, um die Sprachdateien im Downloadordner zu überprüfen. Überprüfen Sie anhand der Liste in der Datei „ConfigMgrSetup.log“ im Stamm des Laufwerks C, welche Sprachdateien veraltet sind.  
+    -   **/VERIFY**: Verwenden Sie diese Option, um die Dateien im Downloadordner einschließlich der Sprachdateien zu überprüfen. Überprüfen Sie anhand der Liste in der Datei ConfigMgrSetup.log im Stammverzeichnis des Laufwerks C, welche Dateien veraltet sind. Wenn Sie diese Option verwenden, werden keine Dateien heruntergeladen.  
+
+    -   **/VERIFYLANG**: Verwenden Sie diese Option, um die Sprachdateien im Downloadordner zu überprüfen. Überprüfen Sie anhand der Liste in der Datei ConfigMgrSetup.log im Stammverzeichnis des Laufwerks C, welche Sprachdateien veraltet sind.
 
     -   **/LANG**: Verwenden Sie diese Option, um nur die Sprachdateien in den Downloadordner herunterzuladen.  
 
-    -   **/NOUI**: Verwenden Sie diese Option, um das Setup-Downloadprogramm zu starten, ohne die Benutzeroberfläche anzuzeigen. Sie müssen dann den **Downloadpfad** als Teil der Befehlszeile angeben.  
+    -   **/NOUI**: Verwenden Sie diese Option, um das Setup-Downloadprogramm zu starten, ohne die Benutzeroberfläche anzuzeigen. Sie müssen dann den **Downloadpfad** als Teil der Befehlszeile bei der Eingabeaufforderung angeben.  
 
     -   **&lt;Downloadpfad\>**: Sie können den Pfad zum Downloadordner angeben, um den Überprüfungs- oder den Downloadvorgang automatisch zu starten. Wenn Sie die Option **/NOUI** verwenden, müssen Sie den Downloadpfad angeben. Geschieht dies nicht, müssen Sie den Pfad angeben, sobald das Setup-Downloadprogramm geöffnet wird. Wenn der Ordner nicht vorhanden ist, wird er vom Setup-Downloadprogramm erstellt.  
 
-    Anwendungsbeispiele:  
+    Beispielbefehle:
 
     -   **setupd &lt;Downloadpfad\>**  
 
-        -   Das Setup-Downloadprogramm wird gestartet. Die Dateien im angegebenen Downloadordner werden überprüft, und nur fehlende oder aktuellere Dateien werden heruntergeladen.  
+        -   Das Setup-Downloadprogramm wird gestartet. Die Dateien im angegebenen Downloadordner werden überprüft, und nur fehlende Dateien oder Dateien mit aktuelleren Versionen werden heruntergeladen.     
 
     -   **setupdl /VERIFY &lt;Downloadpfad\>**  
 
@@ -92,12 +91,7 @@ Es gibt zwei Optionen für die Ausführung des Setup-Downloadprogramms:
 
     -   **setupdl /VERIFY**  
 
-        -   Das Setup-Downloadprogramm wird gestartet. Anschließend müssen Sie den Pfad für den Downloadordner angeben. Nachdem Sie auf „Überprüfen“ geklickt haben, werden die Dateien im Downloadordner vom Setup-Downloadprogramm überprüft.  
+        -   Das Setup-Downloadprogramm wird gestartet. Anschließend müssen Sie den Pfad für den Downloadordner angeben. Nachdem Sie auf **Überprüfen** geklickt haben, werden die Dateien im Downloadordner vom Setup-Downloadprogramm überprüft.  
 
-3.  Überprüfen Sie die Downloadergebnisse anhand der Datei **ConfigMgrSetup.log** im Stamm von Laufwerk C.  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
+3.  Überprüfen Sie die Downloadergebnisse anhand der Datei **ConfigMgrSetup.log** im Stammverzeichnis von Laufwerk C.
 
