@@ -4,7 +4,7 @@ description: "Informationen über das Konfigurieren von Endpoint Protection zum 
 defintion: 
 definition: 
 ms.custom: na
-ms.date: 02/14/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
