@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: a2e2bc5e873c48283d18ea6eaa5d1bb351f2a033
-ms.openlocfilehash: 1c3149b4c0247377ad556b6fe594047a6f14b989
+ms.sourcegitcommit: 30af3326578d39c6d995672071705bcaeb877e4d
+ms.openlocfilehash: e73055707454bc052b753c5e74be9674d6aa5b8c
+ms.lasthandoff: 02/23/2017
 
 
 ---
@@ -112,7 +113,7 @@ Weitere Informationen finden Sie unter [Sicherung und Wiederherstellung für Sys
 -   Wenn Sie an einem primären Standort Datenbankreplikate für Verwaltungspunkte verwenden, deaktivieren Sie die Replikation, bevor Sie die Sicherung der Standortdatenbank erstellen.  
 
 Configuration Manager unterstützt weder die Sicherung sekundärer Standorte noch das Testupgrade einer sekundären Standortdatenbank.   
-Führen Sie kein Testdatenbankupgrade für die Datenbank des Produktionsstandorts aus. Dadurch würde ein Update der Standortdatenbank durchgeführt, und Ihr Standort wäre möglicherweise nicht mehr betriebsfähig. Weitere Informationen finden Sie im Abschnitt [Test the site database upgrade](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_test) (Testen des Standortdatenbankupgrades) des Themas [Upgrade to System Center Configuration Manager](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md) (Upgrade auf System Center Configuration Manager).  
+Führen Sie kein Testdatenbankupgrade für die Datenbank des Produktionsstandorts aus. Dadurch würde ein Update der Standortdatenbank durchgeführt, und Ihr Standort wäre möglicherweise nicht mehr betriebsfähig. Weitere Informationen finden Sie unter **Vor der Installation eines konsoleninternen Updates** und dann im [Schritt 2: Testen des Datenbankupgrades vor der Installation eines Updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2).  
 
  **Planen Sie Pilottests für Clients:** Wenn Sie ein Update zum Aktualisieren des Clients installieren, können Sie dieses neue Clientupdate in der Präproduktionsphase testen, bevor es bereitgestellt und das Upgrade für all Ihre aktiven Clients durchgeführt wird.   
 
@@ -136,9 +137,4 @@ Weitere Informationen finden Sie unter [Updates für System Center Configuration
 
 ## <a name="see-also"></a>Weitere Informationen:  
  [Updates for System Center Configuration Manager (Updates für System Center Configuration Manager)](../../../core/servers/manage/updates.md)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

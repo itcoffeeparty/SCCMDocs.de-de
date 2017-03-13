@@ -17,8 +17,9 @@ ms.author: andredm
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
-ms.openlocfilehash: 4cc7148be602367b579d63535a4938919bacf829
+ms.sourcegitcommit: b1295fff41d99b0bd6fc00ccab7a4b8bbdb60866
+ms.openlocfilehash: dda0916fac15cf768ecc2a44fda3b8939bcd048e
+ms.lasthandoff: 02/27/2017
 
 ---
 
@@ -123,7 +124,7 @@ ms.openlocfilehash: 4cc7148be602367b579d63535a4938919bacf829
     * iOS 6+
     * Android 4.0+
     * Samsung KNOX Standard 4.0+
-* **Kennwort zum Entsperren eines inaktiven Geräts anfordern (Update 1602):** Legen Sie fest, dass Benutzer für den Zugriff auf ein gesperrtes Gerät ein Kennwort benötigen.
+* **Kennwort zum Entsperren eines inaktiven Geräts anfordern (Update&1602;):** Legen Sie fest, dass Benutzer für den Zugriff auf ein gesperrtes Gerät ein Kennwort benötigen.
 
   **Unterstützt auf:**
   * Windows Phone 8+
@@ -131,7 +132,7 @@ ms.openlocfilehash: 4cc7148be602367b579d63535a4938919bacf829
   * Android 4.0+
   * Samsung KNOX Standard 4.0+
 
-* **Minuten Inaktivität vor Anforderung des Kennworts (Update 1602):** Gibt die Leerlaufzeit an, bevor der Benutzer sein Kennwort erneut eingeben muss. Legen Sie den Wert auf eine der verfügbaren Optionen fest: **1 Minute**, **5 Minuten**, **15 Minuten**, **30 Minuten**, **1 Stunde**.
+* **Minuten Inaktivität vor Anforderung des Kennworts (Update&1602;):** Gibt die Leerlaufzeit an, bevor der Benutzer sein Kennwort erneut eingeben muss. Legen Sie den Wert auf eine der verfügbaren Optionen fest: **1 Minute**, **5 Minuten**, **15 Minuten**, **30 Minuten**, **1 Stunde**.
 
   Diese Regel muss mit der Option **Kennwort zum Entsperren eines inaktiven Geräts anfordern**verwendet werden. Der hier festgelegte Wert bestimmt, wann das Gerät als inaktiv betrachtet und gesperrt wird. Wenn  **Kennwort zum Entsperren eines inaktiven Geräts anfordern** auf **TRUE**festgelegt ist, muss der Benutzer ein Kennwort eingeben, um auf das gesperrte Geräte zuzugreifen.
 
@@ -218,12 +219,14 @@ ms.openlocfilehash: 4cc7148be602367b579d63535a4938919bacf829
   - **Secure boot is enabled** (Sicherer Start aktiviert): Wenn der sichere Start aktiviert ist, wird das System gezwungen, in einem vom Hersteller als vertrauenswürdig eingestuften Zustand zu starten. Bei aktiviertem sicheren Start müssen auch die Kernkomponenten, die zum Starten des Computers verwendet werden, über ordnungsgemäße kryptografische Signaturen verfügen, denen das Unternehmen vertraut, das das Gerät hergestellt hat. Die UEFI-Firmware überprüft dies, bevor sie den Computer starten lässt. Wenn Dateien so manipuliert wurden, das ihre Signatur nicht mehr stimmt, startet das System nicht.
   - **Early-launch antimalware is enabled** (Antischadsoftware-Frühstartfeature aktiviert) (diese Einstellung gilt nur für PCs): Dieses Feature bietet Schutz für Computer in Ihrem Netzwerk, sobald diese gestartet und bevor Treiber von Drittanbietern initialisiert werden.<br />Diese Regel ist standardmäßig deaktiviert.
 
+- **Apps, die auf dem Gerät nicht installiert werden können:** Wenn Benutzer Apps installieren, die sich auf der Administratorliste der nicht kompatiblen Apps befinden, werden diese beim Versuch, auf Geschäftsmails zuzugreifen, blockiert. Für diese Regel wird der Name der App benötigt; wenn Sie eine App auf diese Administratorliste der nicht kompatiblen Apps setzen möchten, benötigen Sie dafür zusätzlich die App-ID. Ebenso kann der App-Herausgeber hinzugefügt werden; dies ist jedoch nicht zwingend notwendig.
+
+  **Unterstützt auf:**
+  * iOS 6+
+  * Android 4.0+
+  * Samsung KNOX Standard 4.0+
+
   Informationen zur Funktionsweise des Integritätsnachweisdiensts finden Sie unter [HealthAttestation CSP](https://msdn.microsoft.com/library/dn934876.aspx)(HealthAttestation-Kryptografiedienstanbieter).
   **Unterstützt auf:**
   * Windows 10 und Windows 10 Mobile
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

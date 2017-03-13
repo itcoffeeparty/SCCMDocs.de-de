@@ -2,7 +2,7 @@
 title: "Auswählen von Intune Standalone oder der hybriden Verwaltung mobiler Geräte (MDM) | Microsoft-Dokumentation"
 description: "Wählen Sie aus, ob Sie die hybride Verwaltung mobiler Geräte mit Intune und Configuration Manager bereitstellen oder Intune standalone ausführen."
 ms.custom: na
-ms.date: 11/07/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: a5c9e312641d91ff297fbcfa6066a93c2a0e1ee0
-ms.openlocfilehash: 3480484a96e96a191b4f02208fcf838db5cb6ba7
+ms.sourcegitcommit: 84e3896dd05a8c157f4e94625b0eca60aacc11d3
+ms.openlocfilehash: 8f2625aadfd0aed92d9922c7e3c0d3d166a78cdd
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="choose-between-microsoft-intune-standalone-and-hybrid-mobile-device-management-with-system-center-configuration-manager"></a>Wählen zwischen Microsoft Intune standalone und der hybriden Verwaltung mobiler Geräte mit System Center Configuration Manager
@@ -44,16 +45,11 @@ Wenn Sie zwischen standalone und hybrid auswählen, sollten Sie über Features n
 
 -   Rollenbasierte Zugriffssteuerung: Einschränken des Zugriffs auf Verwaltungsfunktionen auf Grundlage zugewiesener Rollen
 
--   Skalieren: Bereitstellen und Verwalten von über 50.000 mobiler Geräte
+-   Skalieren: Bereitstellen und Verwalten von über 100.000 mobilen Geräten.
 
 -   Zentralisiert: Verwalten sowohl von herkömmlichen PC-Clients als auch von mit Intune verwalteten Geräten mit derselben Konsole
 
 Wenn Sie noch heute Ihre Intune-Bereitstellung planen und einige Monate für Pilottests, Akzeptanztests und für die Bereitstellung erübrigen können, denken Sie vielleicht darüber nach, nun Intune standalone auszuwählen, da Sie wissen, dass die Updates für den Clouddienst über mehr Funktionalität verfügen. In der ersten Hälfte des Kalenderjahres 2017, erhält Intune standalone Updates, die den Großteil der erweiterten Funktionalität einer hybriden Bereitstellung mit Configuration Manager erhalten werden. Intune standalone wird schon bald in die Microsoft Azure-Cloudplattform verschoben und erhält so verbesserte Skalierbarkeit, rollenbasierten Zugriff über das Azure-Portal, benutzerdefinierte Berichterstellung sowie programmgesteuerten Zugriff über die Azure Graph-API.
 
 Sie können von Hybrid-MDM zu Intune standalone wechseln und auch wieder zurück. Sie benötigen für diesen Vorgang jedoch die Hilfe des Microsoft-Supports sowie vom Microsoft Operations Support. Dazu muss die Registrierung aller Geräte aufgehoben und wieder erneuert werden, nachdem die Verwaltungsstelle geändert wurde.  Microsoft arbeitet daran, die Erfahrung zum Umschalten von Konfigurationen in einem zukünftigen Dienstupdate zu verbessern.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

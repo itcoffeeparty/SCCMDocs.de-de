@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 73feb75f6727134f977ea2baabf36a832812ccc1
-ms.openlocfilehash: 715dadc10fe86acd7e324ff8f80be057d0e01f11
+ms.sourcegitcommit: 30af3326578d39c6d995672071705bcaeb877e4d
+ms.openlocfilehash: 640fc5ddb4e0a6828901b7f406ca72fc210b2970
+ms.lasthandoff: 02/23/2017
 
 ---
 # <a name="checklist-for-installing-update-1610-for-system-center-configuration-manager"></a>Checkliste für die Installation von Update 1610 für System Center Configuration Manager
@@ -137,7 +138,7 @@ Weitere Informationen finden Sie unter [Sicherung und Wiederherstellung für Sys
 
 Configuration Manager unterstützt weder die Sicherung sekundärer Standorte noch das Testupgrade einer sekundären Standortdatenbank.
 
-Führen Sie kein Testdatenbankupgrade für die Datenbank des Produktionsstandorts aus. Dadurch würde ein Update der Standortdatenbank durchgeführt, und Ihr Standort wäre möglicherweise nicht mehr betriebsfähig. Weitere Informationen finden Sie im Abschnitt [Test the site database upgrade](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#bkmk_test) (Testen des Standortdatenbankupgrades) des Themas [Upgrade to System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager) (Upgrade auf System Center Configuration Manager).
+Führen Sie kein Testdatenbankupgrade für die Datenbank des Produktionsstandorts aus. Dadurch würde ein Update der Standortdatenbank durchgeführt, und Ihr Standort wäre möglicherweise nicht mehr betriebsfähig. Weitere Informationen finden Sie unter **Vor der Installation eines konsoleninternen Updates** und dann im [Schritt 2: Testen des Datenbankupgrades vor der Installation eines Updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2).
 
 **Planen von Pilottests für Clients:**   
 Bei der Installation eines Updates, das den Client aktualisiert, können Sie das neue Clientupdate in der Präproduktionsphase testen, bevor es bereitgestellt wird und all Ihre aktiven Clients aktualisiert.
@@ -167,9 +168,4 @@ Sie können nun die Updateinstallation für Ihre Hierarchie starten. Weitere Inf
 Es wird empfohlen, die Installation des Updates für jeden Standort außerhalb der normalen Geschäftszeiten zu planen, wenn die Installation des Updates und die zugehörigen Aktionen zum Neuinstallieren von Standortkomponenten und Standortsystemrollen die geringsten Auswirkungen auf die Geschäftsvorgänge haben.
 
 Weitere Informationen finden Sie unter [Updates für System Center Configuration Manager](/sccm/core/servers/manage/updates).
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
