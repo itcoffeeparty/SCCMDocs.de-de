@@ -36,6 +36,7 @@ translation.priority.ht:
 translationtype: Human Translation
 ms.sourcegitcommit: 34a4c3d0d641c4ab03e068c6dad78300057861bd
 ms.openlocfilehash: 4c7717e4f5a20c5c8d20fef21d0c67172b3198bd
+ms.lasthandoff: 03/16/2017
 
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1511-of-system-center-configuration-manager"></a>Die Ebenen der Sammlung von Nutzungsdaten zu Diagnosezwecken für Version 1511 von System Center Configuration Manager
@@ -47,13 +48,13 @@ Die Version 1511 von System Center Configuration Manager sammelt drei Ebenen von
 > [!IMPORTANT]  
 >  Configuration Manager sammelt auf den Ebenen „Basis“ und „Erweitert“ keine Standortcodes, Standortnamen, IP-Adressen, Benutzer- oder Computernamen, physischen Adressen oder E-Mail-Adressen. Die auf der Ebene „Vollständig“ erfassten Daten (möglicherweise in erweiterten Diagnoseinformationen wie Protokolldateien oder Arbeitsspeicher-Momentaufnahmen enthaltene Daten) werden nicht zielgerichtet gesammelt. Sie werden von Microsoft auch nicht zu Werbezwecken oder dazu verwendet, Sie zu identifizieren oder sich mit Ihnen in Verbindung zu setzen.  
 
-##  <a name="a-namebkmkchangea-how-to-change-the-level"></a><a name="bkmk_change"></a> Ändern der Ebene  
+##  <a name="bkmk_change"></a> Ändern der Ebene  
  Administratoren mit einem rollenbasierten Verwaltungsbereich, der **Ändern**-Berechtigungen für die **Standort**-Objektklasse umfasst, können in den Einstellungen der Configuration Manager-Konsole unter „Diagnose- und Nutzungsdaten“ die Ebene der erfassten Daten ändern.
 
  Wechseln Sie dazu in der Konsole zur Registerkarte „Backstage“ (die obere linke Registerkarte mit Dropdownpfeil), und wählen Sie **Nutzungsdaten** und anschließend die Datenebene aus, die Sie verwenden möchten.  
 
 
-##  <a name="a-namebkmklevel1a-level-1---basic"></a><a name="bkmk_level1"></a> Ebene 1: Basis  
+##  <a name="bkmk_level1"></a> Ebene 1: Basis  
  Die Ebene „Basis“ umfasst Daten über Ihre Hierarchie, Daten, die für die Verbesserung Ihrer Installations- oder Upgradeerfahrung nötig sind, sowie Daten, die zur Ermittlung der für Ihre Hierarchie infrage kommenden Configuration Manager-Updates benötigt werden.  
 
  Ab Version 1511 von System Center Configuration Manager enthält diese Ebene Folgendes:  
@@ -94,7 +95,7 @@ Die Version 1511 von System Center Configuration Manager sammelt drei Ebenen von
 
 -   Telemetriestatistiken (Ausführungszeit, Laufzeit und Fehler)  
 
-##  <a name="a-namebkmklevel2a-level-2---enhanced"></a><a name="bkmk_level2"></a> Ebene 2: Erweitert  
+##  <a name="bkmk_level2"></a> Ebene 2: Erweitert  
 Die Ebene „Erweitert“ ist die Standardeinstellung nach dem Setup. Diese Ebene enthält die auf der Ebene „Basis“ erfassten Daten und featurespezifische Daten (Häufigkeit und Dauer der Verwendung), Configuration Manager-Clienteinstellungen (Name der Komponente, Status und bestimmte Einstellungen wie Abrufintervalle) sowie grundlegende Informationen zu Softwareupdates.  
 
 Diese Ebene wird empfohlen, da sie Microsoft die Daten bereitstellt, die mindestens erforderlich sind, um in künftigen Versionen der Produkte und Dienste nützliche Verbesserungen vorzunehmen. Diese Ebene erfasst keine Objektnamen (Websites, Benutzer, Computer oder Objekte) und keine Details zu sicherheitsrelevanten Objekten oder Sicherheitsrisiken, wie etwa die Anzahl der Systeme, die Softwareupdates erfordern.  
@@ -251,7 +252,7 @@ Ab Version 1511 von System Center Configuration Manager enthält diese Ebene Fol
 
     -   Anzahl von Sammlungen nach Typ  
 
-##  <a name="a-namebkmklevel3a-level-3---full"></a><a name="bkmk_level3"></a> Ebene 3: Vollständig  
+##  <a name="bkmk_level3"></a> Ebene 3: Vollständig  
 Die Ebene „Vollständig“ umfasst alle Daten der Ebenen „Basis“ und „Erweitert“. Darüber hinaus werden zusätzliche Informationen zu Endpoint Protection, die Prozentsätze zur Updatekompatibilität sowie Informationen zu Softwareupdates erfasst. Diese Ebene kann auch erweiterte Diagnoseinformationen wie Systemdateien und Momentaufnahmen des Arbeitsspeichers einschließen. Darin können wiederum personenbezogene Informationen enthalten sein, die zum Zeitpunkt der Erfassung im Arbeitsspeicher oder in Protokolldateien vorhanden waren.  
 
 Ab Version 1511 von System Center Configuration Manager enthält diese Ebene Folgendes:  
@@ -281,9 +282,4 @@ Ab Version 1511 von System Center Configuration Manager enthält diese Ebene Fol
 -   Prozentsätze der erfolgreichen Überprüfungen auf Softwareupdates  
 
 -   Minimale/maximale/durchschnittliche Anzahl von Stunden seit der letzten Überprüfung auf Softwareupdates  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 
