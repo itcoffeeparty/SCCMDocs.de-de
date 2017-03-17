@@ -16,9 +16,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: b90519f6f6e3599cd34f5cf93b476739ec17847b
-ms.openlocfilehash: 64ed5982cfd1de6ec135f02c84b9396266001b42
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: dcbcd57b95f304f007e92ebe2b9aeefb4b579662
+ms.openlocfilehash: 991bf551899d810a55a30f1a833de28db6295cf4
+ms.lasthandoff: 03/09/2017
 
 
 ---
@@ -33,8 +33,11 @@ Die für System Center Configuration Manager erforderlichen PKI-Zertifikate (Pub
 -   Für Windows Server 2008: [Active Directory-Zertifikatdienste in Windows Server 2008](http://go.microsoft.com/fwlink/p/?LinkId=115018)  
 
 > [!IMPORTANT]  
->  Ab dem 14. Februar 2017 werden bestimmte SHA-1-signierte Zertifikate von Windows nicht mehr als vertrauenswürdig eingestuft. Weitere Informationen hierzu finden Sie unter [Windows Enforcement of SHA1 certificates (Erzwingung von SHA-1-Zertifikaten in Windows)](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx). Es wird allgemein empfohlen, neue Zertifikate für die Server- und Clientauthentifizierung auszustellen, die mit SHA-2 signiert sind (welches unter anderem SHA-256 und SHA-512 umfasst).
-> Zudem empfehlen wir für alle Dienste mit Internetzugriff die Verwendung eines SHA-2-Zertifikats. Wenn Sie beispielsweise ein öffentliches Zertifikat für die Verwendung mit einem Cloudverwaltungsgateway erwerben, sollten Sie sicherstellen, dass es sich dabei um ein SHA-2-Zertifikat handelt.
+> Ab dem 14. Februar 2017 werden bestimmte SHA-1-signierte Zertifikate von Windows nicht mehr als vertrauenswürdig eingestuft. System Center Configuration Manager unterstützt SHA-2-Zertifikate, und die Verwendung von SHA-2-Zertifikaten bringt einen entscheidenden Sicherheitsvorteil. Daher wird empfohlen:
+> - Stellen Sie neue Zertifikate für die Server- und Clientauthentifizierung aus, die mit SHA-2 signiert sind (welches unter anderem SHA-256 und SHA-512 umfasst).
+> - Verwenden Sie für alle Dienste mit Internetzugriff ein SHA-2-Zertifikat. Wenn Sie beispielsweise ein öffentliches Zertifikat für die Verwendung mit einem Cloudverwaltungsgateway erwerben, sollten Sie sicherstellen, dass es sich dabei um ein SHA-2-Zertifikat handelt.  
+>
+> In den meisten Fällen wirkt sich die Änderung auf SHA-2-Zertifikate nicht auf Vorgänge aus. Weitere Informationen hierzu finden Sie unter [Windows Enforcement of SHA1 certificates (Erzwingung von SHA-1-Zertifikaten unter Windows)](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx).
 
  Mit Ausnahme der Clientzertifikate, die von System Center Configuration Manager auf mobilen Geräten und Macintosh-Computern angemeldet werden, der Zertifikate, die von Microsoft Intune automatisch für die Verwaltung mobiler Geräte erstellt werden, und der Zertifikate, die von System Center Configuration Manager auf AMT-basierten Computern installiert werden, können Sie eine beliebige PKI zum Erstellen, Bereitstellen und Verwalten der folgenden Zertifikate verwenden. Wenn Sie Active Directory-Zertifikatdienste und Zertifikatvorlagen nutzen, kann Ihnen diese Microsoft PKI-Lösung jedoch die Verwaltung der Zertifikate erleichtern. Verwenden Sie in den folgenden Tabellen die Spalte **Zu verwendende Microsoft-Zertifikatvorlage** , um die Zertifikatvorlage zu identifizieren, mit der die Zertifikatanforderungen am ehesten erfüllt werden. Auf Vorlagen basierende Zertifikate können nur von einer Unternehmenszertifizierungsstelle ausgestellt werden, die unter der Enterprise Edition oder Datacenter Edition des Serverbetriebssystems ausgeführt wird, z. B. Windows Server 2008 Enterprise und Windows Server 2008 Datacenter.  
 

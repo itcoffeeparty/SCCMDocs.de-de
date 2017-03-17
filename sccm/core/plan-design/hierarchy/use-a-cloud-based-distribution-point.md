@@ -2,7 +2,7 @@
 title: Verwenden eines cloudbasierten Verteilungspunkts | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über Konfigurationen und Einschränkungen zur Verwendung eines cloudbasierten Verteilungspunkts mit System Center Configuration Manager."
 ms.custom: na
-ms.date: 2/24/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3eab8e62ace29c0fcb24d47ec7e398d807347a38
-ms.openlocfilehash: a1d701c77afb4d6317d8a137fdf46422063df085
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
+ms.openlocfilehash: 489f38d3f88391e42b5271c03151203d22b26d9e
+ms.lasthandoff: 03/04/2017
 
 
 ---
@@ -63,7 +63,7 @@ Cloudbasierte Verteilungspunkte bieten die folgenden zusätzlichen Vorteile:
 
 Bei cloudbasierten Verteilungspunkten ergeben sich die folgenden Einschränkungen:  
 
--  Vor der Verwendung von Version 1610 mit dem Hotfix KB4010155 kann ein cloudbasierter Verteilungspunkt nicht zum Hosten von Softwareupdatepaketen verwendet werden. Die nächste Current Branch-Version nach Version 1610 wird diese Option unterstützen, ohne dass dieser Fix installiert werden muss.  
+-  Vor der Verwendung von Version 1610 mit dem Hotfix KB4010155 kann ein cloudbasierter Verteilungspunkt nicht zum Hosten von Softwareupdatepaketen verwendet werden. Ab Version 1702 und höher wurde das Problem behoben.  
 
 -   Ein cloudbasierter Verteilungspunkt kann nicht für PXE- oder multicastfähige Bereitstellungen verwendet werden.  
 

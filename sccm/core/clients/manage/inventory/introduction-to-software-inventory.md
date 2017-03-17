@@ -17,8 +17,9 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
-ms.openlocfilehash: c9956dd4ef94a1b109d761e44e42f512c42eb8d2
+ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
+ms.openlocfilehash: 969f2d28649853ddc95860fe72597d6d2c9a94e9
+ms.lasthandoff: 03/04/2017
 
 
 ---
@@ -36,7 +37,7 @@ Nachdem die Softwareinventur aktiviert und ein Softwareinventurzyklus von den Cl
 
 -   Erstellen von [abfragebasierten Sammlungen](../../../../core/clients/manage/collections/introduction-to-collections.md), die Geräte mit angegebenen Dateien enthalten   
 
--   [Ausführen von Berichten](../../../../core/servers/manage/reporting.md), die Details zu Dateien auf Geräten bereitstellen 
+-   [Ausführen von Berichten](../../../../core/servers/manage/reporting.md), die Details zu Dateien auf Geräten bereitstellen
 
 -   Verwenden von [Ressourcen-Explorer](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md), um detaillierte Informationen zu den Dateien anzuzeigen, die von Clientgeräten inventarisiert und gesammelt wurden   
 
@@ -44,27 +45,5 @@ Nachdem die Softwareinventur aktiviert und ein Softwareinventurzyklus von den Cl
 
  Eine Ermittlung von Dual-Boot-Computern ist in Configuration Manager zwar möglich, es werden jedoch nur die Inventurinformationen von dem Betriebssystem zurückgegeben, das zum Zeitpunkt der Inventur aktiv war.  
 
-## <a name="software-inventory-for-mobile-devices-enrolled-with-microsoft-intune"></a>Softwareinventur für mobile Geräte, die bei Microsoft Intune registriert sind  
- Sie können Inventurdaten zu Apps sammeln, die auf mobilen Geräten installiert sind. Welche Apps inventarisiert werden, hängt davon ab, ob es sich um ein firmeneigenes Gerät handelt, oder ob das Gerät dem Benutzer gehört. Für persönliche Geräte werden nur von Microsoft Intune verwaltete Apps inventarisiert.  
-
-> [!NOTE]  
->  Inventurdaten zu auf mobilen Geräten installierten Apps werden bei der [Hardwareinventur](../../../../core/clients/manage/inventory/mobile-device-hardware-inventory-hybrid.md) gesammelt.  
-
- Die folgende Liste umfasst die inventarisierten Apps für Geräte, die einem Benutzer gehören, und für Geräte, die dem Unternehmen gehören.  
-
-|Plattform|Geräte, die einem Benutzer gehören|Geräte, die dem Unternehmen gehören|  
-|--------------|---------------------------------|--------------------------------|  
-|Windows 10 (ohne Configuration Manager-Client)|Nur verwaltete Apps|Nur verwaltete Apps| 
-|Windows 8.1 (ohne Configuration Manager-Client)|Nur verwaltete Apps|Nur verwaltete Apps|  
-|Windows Phone 8|Nur verwaltete Apps|Nur verwaltete Apps|  
-|Windows RT|Nur verwaltete Apps|Nur verwaltete Apps|  
-|iOS|Nur verwaltete Apps|Alle auf dem Gerät installierten Apps|  
-|Android|Nur verwaltete Apps|Alle auf dem Gerät installierten Apps|  
-
-
-
-
-
-<!--HONumber=Dec16_HO5-->
-
+**Mobile Geräte:** Unter [software inventory for mobile devices enrolled with Microsoft Intune (Softwareinventur für mobile Geräte, die mit Microsoft Intune registriert sind)](../../../../mdm/deploy-use/software-inventory-mobile-devices.md) finden Sie Informationen zum Sammeln von Inventur für auf mobilen Geräten installierte Apps.
 

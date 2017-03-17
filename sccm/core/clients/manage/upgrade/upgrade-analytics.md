@@ -13,9 +13,9 @@ ms.technology:
 - configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
 translationtype: Human Translation
-ms.sourcegitcommit: 460089ce58910b68eb0a613bce0166754850844b
-ms.openlocfilehash: 9361c66228cf54eb1daf8138cd03fc8f6139f48d
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: dcbcd57b95f304f007e92ebe2b9aeefb4b579662
+ms.openlocfilehash: 986d0446209f6e7eac1b681066d1b2e2305e1975
+ms.lasthandoff: 03/09/2017
 
 
 ---
@@ -49,7 +49,7 @@ Es gibt mehrere Konfigurationsschritte, die Sie durchführen müssen, um sicherz
 
 ### <a name="create-the-connection"></a>Erstellen der Verbindung
 
-1.  Wählen Sie in der Configuration Manager-Konsole **Verwaltung** > **Cloud Services** > **Upgrade Readiness Connector** (Upgrade Readiness-Connector) > **Create Connection to Upgrade Readiness** (Verbindung zu Upgrade Readiness herstellen) aus, um den **Add Upgrade Readiness Connection wizard** (Assistenten zum Hinzufügen der Upgrade Readiness-Verbindung) zu starten.
+1.  Wählen Sie in der Configuration Manager-Konsole **Verwaltung** > **Clouddienste** > **Upgrade Readiness Connector** > **Verbindung mit Upgrade Analytics erstellen** aus, um den **Assistent für das Hinzufügen einer Upgrade Analytics-Verbindung** zu starten.
 3.  Geben Sie auf dem Bildschirm **Azure Active Directory** zunächst den **Mandanten**, die **Client-ID** und den **geheimen Clientschlüssel** ein, und wählen Sie anschließend **Weiter** aus.
 4.  Geben Sie auf dem Bildschirm **Upgrade Readiness** die Verbindungseinstellungen ein, indem Sie Ihr **Azure-Abonnement**, die **Azure-Ressourcengruppe** und den **Operations Management Suite-Arbeitsbereich** angeben.
 5.  Überprüfen Sie die Verbindungseinstellungen auf dem Bildschirm **Zusammenfassung**, und wählen Sie dann **Weiter** aus.

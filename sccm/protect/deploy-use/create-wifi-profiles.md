@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 321b19b2-a093-4b8f-995f-41f74b886eb5
 caps.latest.revision: 13
 caps.handback.revision: 0
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
-ms.openlocfilehash: 7d42ec89300d4eb6b02bafb3f83d341f8e3ca0c0
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: f1ae976899de1fd3efcbde0c7268f071a5d0218b
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -39,15 +40,9 @@ Verwenden Sie WLAN-Profile in System Center Configuration Manager, um für Benut
 
 -   Geräte unter Windows RT 8.1  
 
--   Geräte unter Windows Phone 8.1  
-
 -   Geräte unter Windows 10 Desktop oder Mobile  
 
--   iPhone-Geräte mit iOS 5, iOS 6, iOS 7 und iOS 8  
-
--   iPad-Geräte mit iOS 5, iOS 6, iOS 7 und iOS 8  
-
--   Android-Geräte mit Version 4 oder höher
+[Erstellen von WLAN-Profilen für mobile Geräte](../../mdm/deploy-use/create-wifi-profiles.md) bietet Informationen zur Bereitstellung von Einstellungen für drahtlose Netzwerke in Configuration Manager mit WLAN-Profilen für Benutzer mobiler Geräte.
 
 > [!IMPORTANT]  
 >  Um Profile für Android-, iOS-, Windows Phone- und registrierte Windows 8.1-Geräte (und höher) bereitzustellen, müssen diese Geräte bei Microsoft Intune registriert werden. Informationen zum Registrieren von Geräten finden Sie unter [Enroll devices for management in Intune (Registrieren von Geräten für die Verwaltung in Intune)](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune).  
@@ -92,7 +87,7 @@ Verwenden Sie WLAN-Profile in System Center Configuration Manager, um für Benut
     >  Sicherheitstypen: **WPA2-Enterprise** oder **WPA2-Personal**  
     > Verschlüsselungstypen: **AES** oder **TKIP**  
     > EAP-Typen: **Smartcard- oder anderes Zertifikat** oder **PEAP**  
-  
+
     > Für Android-Geräte werden die Sicherheitstypen **WPA-Personal**, **WPA2-Personal** und **WEP** nicht unterstützt.  
 
 2.  Wählen Sie die Verschlüsselungsmethode aus, die vom Funknetzwerk verwendet wird.  
@@ -133,9 +128,4 @@ Verwenden Sie WLAN-Profile in System Center Configuration Manager, um für Benut
 
 ### <a name="next-steps"></a>Nächste Schritte
  Weitere Informationen zum Bereitstellen des WLAN-Profils finden Sie unter [Bereitstellen von WLAN-Profilen in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md).  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

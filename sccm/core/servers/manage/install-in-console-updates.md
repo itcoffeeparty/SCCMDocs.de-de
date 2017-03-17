@@ -2,7 +2,7 @@
 title: Konsoleninterne Updates | Microsoft-Dokumentation
 description: "System Center Configuration Manager wird mit dem Microsoft-Clouddienst synchronisiert, um Updates abzurufen, die in der Konsole installieren werden können."
 ms.custom: na
-ms.date: 2/23/2017
+ms.date: 3/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: a0d4eb601948aa3abb12409f3475d69cacf4a6aa
-ms.openlocfilehash: a2bf28c724f8e07f32a30ab5e0b832b46cf362bb
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
+ms.openlocfilehash: eafa95922485066632a5da522e6c3de69b45050f
+ms.lasthandoff: 03/04/2017
 
 
 ---
@@ -33,7 +33,7 @@ Nur Updates, die für Ihre Infrastruktur und Version relevant sind, werden herun
 
 -   Im **Onlinemodus**stellt der Dienstverbindungspunkt automatisch eine Verbindung mit dem Microsoft-Clouddienst her und lädt relevante Updates herunter.  
 
-     Configuration Manager sucht standardmäßig alle 24 Stunden nach neuen Updates. Ab Version 1602 können Sie auch sofort nach Updates suchen, indem Sie in der Configuration Manager-Konsole im Knoten **Verwaltung** > **Clouddienste** > **Updates und Wartung** die Option **Auf Updates prüfen** auswählen.  
+     Configuration Manager sucht standardmäßig alle 24 Stunden nach neuen Updates. Sie können auch sofort nach Updates suchen, indem Sie in der Configuration Manager-Konsole im Knoten **Verwaltung** > **Clouddienste** > **Updates und Wartung** die Option **Auf Updates prüfen** auswählen.  
 
 -   Im **Offlinemodus** stellt der Dienstverbindungspunkt keine Verbindung mit dem Microsoft-Clouddienst her. Durch das manuelle [Verwenden des Dienstverbindungstools für System Center Configuration Manager](../../../core/servers/manage/use-the-service-connection-tool.md) können Sie verfügbare Updates herunterladen und importieren.  
 
@@ -44,7 +44,7 @@ Nach der Synchronisierung der Updates können Sie sie in der Configuration Manag
 
 -   Nicht installierte Updates werden als **Verfügbar**angezeigt.
 
--   Installierte Updates werden als **Installiert**angezeigt.  Ab Version 1606 werden nur die aktuellsten Updates angezeigt. Um sich bereits installierte Updates anzeigen zu lassen, wählen Sie die Schaltfläche **Verlauf** im Menüband aus.
+-   Installierte Updates werden als **Installiert**angezeigt.  Nur die aktuellsten Updates werden angezeigt. Um sich bereits installierte Updates anzeigen zu lassen, wählen Sie die Schaltfläche **Verlauf** im Menüband aus.
 
 
 
@@ -61,7 +61,7 @@ Wenn Sie sich ausführlicher über die Vorgänge bei einem Update informieren m�
 -   [Flowchart - Update replication for System Center Configuration Manager (Flussdiagramm: Updatereplikation für System Center Configuration Manager)](../../../core/servers/manage/update-replication-flowchart.md)  
 
 ## <a name="assign-permissions-to-view-and-manage-updates-and-features"></a>Zuweisen von Berechtigungen zum Anzeigen und Verwalten von Updates und Funktionen
-Vor der Installation von Update 1606 musste ein Benutzer einer Sicherheitsrolle, die die Berechtigung **Lesen** in der Berechtigungsgruppe **Standort**umfasst, sowie dem Sicherheitsbereich **Alle**zugewiesen werden, um Updates in der Konsole anzeigen zu können. Seit dem Update 1606 ermöglicht die rollenbasierte Verwaltungssicherheitsklasse **Updatepakete** den Zugriff auf die Ansicht und Verwaltung von Updates in der Configuration Manager-Konsole.    
+Um Updates in der Konsole anzuzeigen, muss einem Benutzer eine rollenbasierte Administratorsicherheitsrolle zugewiesen sein, die die Sicherheitsklasse **Updatepakete** enthält. Diese Klasse gewährt Zugriff auf das Anzeigen und Verwalten von Updates in der Configuration Manager-Konsole.    
 
 **Über die Updatepakete-Klasse:**  
 In der Standardeinstellung ist die Klasse **Updatepakete** (SMS_CM_Updatepackages) Teil der folgenden integrierten Sicherheitsrolle mit den erforderlichen Berechtigungen:
@@ -95,13 +95,10 @@ In der Standardeinstellung ist die Klasse **Updatepakete** (SMS_CM_Updatepackage
 ###  <a name="bkmk_step1"></a> Schritt 1: Überprüfen der Updatecheckliste  
 Überprüfen Sie die zutreffende Updatecheckliste mit vor dem Update durchzuführenden Schritten:
 
--   Upgrade auf 1511 von [Upgrade auf System Center Configuration Manager](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md).    
+- Update auf 1606: Informationen finden Sie unter [Checkliste für die Installation von Update 1606 für System Center Configuration Manager](../../../core/servers/manage/checklist-for-installing-update-1606.md).  
 
--   Update auf 1602 von 1511: Informationen finden Sie unter [Checkliste für die Installation von Update 1602 für System Center Configuration Manager](../../../core/servers/manage/checklist-for-installing-update-1602.md).
-
-- Aktualisierung von 1511 oder 1602 auf 1606: Weitere Informationen finden Sie unter [Checkliste für die Installation von Update 1606 für System Center Configuration Manager](../../../core/servers/manage/checklist-for-installing-update-1606.md).  
-
-- Aktualisierung von 1511, 1602 oder 1606 auf 1610: Weitere Informationen finden Sie unter [Checkliste für die Installation von Update 1610 für System Center Configuration Manager](../../../core/servers/manage/checklist-for-installing-update-1610.md).  
+- Aktualisierung von 1606 auf 1610: Weitere Informationen finden Sie unter [Checkliste für die Installation von Update 1610 für System Center Configuration Manager](../../../core/servers/manage/checklist-for-installing-update-1610.md).  
+<!--- Update to 1702 from either 1606 or 1610: See [Checklist for installing update 1702](../../../core/servers/manage/checklist-for-installing-update-1702.md). -->  
 
 ###  <a name="bkmk_step2"></a> Schritt 2: Testen des Datenbankupgrades vor der Installation eines Updates  
 Die in diesem Schritt gegebenen Informationen gelten nur, wenn Sie ein *Update* für einen Standort von System Center Configuration Manager installieren. Wenn Sie einen System Center 2012 Configuration Manager-Standort auf System Center Configuration Manager *upgraden*, finden Sie weitere Informationen dazu unter [Testen des Standortdatenbankupgrades](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#a-namebkmktesta-test-the-site-database-upgrade).
@@ -172,7 +169,7 @@ Wenn Sie später das Update installieren, können Sie das Update so konfiguriere
 
 -   Wenn Sie nach dem Standortupdate eine Configuration Manager-Konsole verwenden, werden Sie aufgefordert, die Konsole zu aktualisieren.  
 
--  Nachdem der Standortserver die Installation eines Updates erfolgreich abschließt, werden automatisch alle relevanten Standortsystemrollen aktualisiert.  Nur bei Verteilungspunkten müssen Sie auf Folgendes achten. Wenn Sie ein Update an einem Standort, an dem bereits Version 1606 oder höher ausgeführt wird, durchführen, werden für die gleichzeitige Installation eines Updates nicht mehr alle Verteilungspunkte offline geschaltet. Stattdessen verwendet der Standortserver die Einstellungen des Standorts zur Inhaltsverteilung, um das Update nacheinander auf eine Teilmenge von Verteilungspunkten zu verteilen. Das bedeutet, dass nur manche Verteilungspunkte offline geschaltet werden, um das Update zu installieren. Dadurch können Verteilungspunkte, die noch nicht aktualisiert wurden oder bei denen das Update schon abgeschlossen ist, online bleiben und Inhalt an Clients bereitstellen.
+-  Nachdem der Standortserver die Installation eines Updates erfolgreich abschließt, werden automatisch alle relevanten Standortsystemrollen aktualisiert.  Nur bei Verteilungspunkten müssen Sie auf Folgendes achten. Beim Installieren eines Updates werden nicht alle Verteilungspunkte erneut installiert und gehen offline, um gleichzeitig aktualisiert zu werden. Stattdessen verwendet der Standortserver die Einstellungen des Standorts zur Inhaltsverteilung, um das Update nacheinander auf eine Teilmenge von Verteilungspunkten zu verteilen. Das bedeutet, dass nur manche Verteilungspunkte offline geschaltet werden, um das Update zu installieren. Dadurch können Verteilungspunkte, die noch nicht aktualisiert wurden oder bei denen das Update schon abgeschlossen ist, online bleiben und Inhalt an Clients bereitstellen.
 
 
 ###  <a name="bkmk_overview"></a> Übersicht über die konsoleninterne Updateinstallation  
@@ -185,7 +182,7 @@ Der Updates-Assistent zeigt eine Liste der vom Update betroffenen Produktbereich
     -   Bei Voraussetzungswarnungen kann die Updateinstallation ebenfalls beendet werden. Sie sollten Warnungen beheben, bevor Sie die Installation des Updates wiederholen. Weitere Informationen finden Sie unter [Wiederholen der Installation eines fehlerhaften Updates](#bkmk_retry) .  
     -   Durch Auswahl der Option **Alle Warnungen der Voraussetzungsprüfung ignorieren und das Update unabhängig von fehlenden Voraussetzungen installieren** wird eine Bedingung für die Updateinstallation festgelegt, durch die Voraussetzungswarnungen ignoriert werden. So kann mit der Installation des Updates fortgefahren werden. Wenn Sie diese Option nicht auswählen, wird die Updateinstallation beendet, wenn eine Warnung auftritt. Von der Verwendung dieser Option wird abgeraten, wenn Sie vorher keine Voraussetzungsprüfung durchgeführt und Voraussetzungswarnungen für einen Standort nicht behoben haben.  
 
-      Ab Version 1606 enthalten sowohl die Arbeitsbereiche **Verwaltung** und **Überwachung** als auch der Knoten „Updates und Wartung“ die Schaltfläche **Warnungen zu erforderlichen Komponenten ignorieren** auf dem Menüband. Diese Schaltfläche wird verfügbar, wenn ein Updatepaket die Installation aufgrund von Warnungen der Voraussetzungsprüfung nicht erfolgreich abschließen kann. Wenn Sie z.B. ein Update installieren, ohne die Option „Warnungen zu erforderlichen Komponenten ignorieren“ innerhalb des Update-Assistenten zu verwenden und diese Updateinstallation im Status der Voraussetzungswarnung aber ohne Fehler anhält, können Sie später **Warnungen zu erforderlichen Komponenten ignorieren** aus dem Menüband auswählen, um eine automatische Fortsetzung der Updateinstallation auszulösen, bei der die Voraussetzungswarnungen ignoriert werden. Wenn Sie diese Option verwenden, wird die Installation der Updates automatisch nach einigen Minuten fortgesetzt.
+      In den Arbeitsbereichen **Verwaltung** und **Überwachung** enthält der Knoten Updates und Wartung eine Schaltfläche auf dem Menüband **Warnungen der erforderlichen Komponente ignorieren**. Diese Schaltfläche wird verfügbar, wenn ein Updatepaket die Installation aufgrund von Warnungen der Voraussetzungsprüfung nicht erfolgreich abschließen kann. Wenn Sie z.B. ein Update installieren, ohne die Option „Warnungen zu erforderlichen Komponenten ignorieren“ innerhalb des Update-Assistenten zu verwenden und diese Updateinstallation im Status der Voraussetzungswarnung aber ohne Fehler anhält, können Sie später **Warnungen zu erforderlichen Komponenten ignorieren** aus dem Menüband auswählen, um eine automatische Fortsetzung der Updateinstallation auszulösen, bei der die Voraussetzungswarnungen ignoriert werden. Wenn Sie diese Option verwenden, wird die Installation der Updates automatisch nach einigen Minuten fortgesetzt.
 
 
 
@@ -211,7 +208,7 @@ Gehen Sie folgendermaßen vor, um den Fortschritt zu überwachen:
 
 -   Navigieren Sie in der Configuration Manager-Konsole zum Knoten **Überwachung** > **Übersicht** > **Update- und Wartungsstatus**. Dieser Knoten zeigt nur den Installationsstatus des Updatepakets, das gerade installiert wird.  
 
-    Ab Version 1606 ist die Updatepaketinstallation zur Erleichterung der Überwachung in folgende Phasen aufgeteilt. Für jede Phase sind jetzt zusätzliche Details verfügbar, einschließlich der für weitere Informationen anzeigbaren Protokolldateien:  
+  Die Updatepaketinstallation zur Erleichterung der Überwachung ist in folgende Phasen aufgeteilt. Für jede Phase sind jetzt zusätzliche Details verfügbar, einschließlich der für weitere Informationen anzeigbaren Protokolldateien:  
     -   **Herunterladen** (Diese Phase gilt nur für den Standort der obersten Ebene, auf dem die Standortsystemrolle des Dienstverbindungspunkts installiert ist.)
     -   **Replikation**
     -   **Prüfung der erforderlichen Komponenten**
@@ -323,36 +320,7 @@ Wechseln Sie in der Konsole zu **Verwaltung** > **Clouddienste** > **Updates und
 Wenn ein Feature nicht optional ist, wird es automatisch installiert und nicht im Knoten **Features** aufgeführt.  
 
 ##  <a name="bkmk_prerelease"></a> Verwenden von vorab veröffentlichten Features von Updates
-Vorab veröffentlichte Features werden in das Produkt aufgenommen, um sie in einem frühen Stadium in einer Produktionsumgebung zu testen. Sie sollten nicht als für den Produktivbetrieb geeignet betrachtet werden. Ab Version 1606 müssen Sie für die Verwendung von Featurevorabversionen in System Center Configuration Manager Ihre Zustimmung geben, bevor Sie diese auswählen und verwenden können.  
-
-Die Zustimmung ist eine einmalige Aktion pro Hierarchie, die nicht rückgängig gemacht werden kann. Sie können bis zu Ihrer Zustimmung keine Featurevorabversionen aktivieren, die im Update 1606 oder höheren Updateversionen enthalten sind.
-
-Sie geben Ihre Zustimmung, indem Sie in der Konsole zu **Verwaltung** > **Standortkonfiguration** > **Standorte**navigieren, und anschließend **Hierarchieeinstellungen**auswählen. Wählen Sie auf der Registerkarte **Allgemein** **Verwendung von Featurevorabversionen zustimmen** aus.
-
- > [!NOTE]
- > Wenn Sie die Featurevorabversionen von Update 1602 vor der Installation von Update 1606 aktiviert haben, bleiben diese Features nach der Installation von Version 1606 für die Verwendung aktiviert, auch wenn Sie keine Zustimmung zur Verwendung von Featurevorabversionen gegeben haben.
-
-Wenn Ihre Hierarchie Version 1606 oder höher ausführt, und Sie ein Update installieren, das Featurevorabversionen enthält, sind diese Features im Assistenten für Updates und Wartung zusammen mit den regulären Funktionen sichtbar, die im Update enthalten sind.
-  - **Wenn Sie Ihre Zustimmung gegeben haben:** Sie können Featurevorabversionen innerhalb des Assistenten für Updates und Wartung aktivieren, wenn Sie das Update installieren. Wählen Sie dazu die Featurevorabversionen aus, so wie Sie jede andere Funktion auswählen würden.     
-
-    Optional können Sie die Featurevorabversionen auch später über den Knoten **Verwaltung** > **Cloud Services** > **Updates und Wartung** > **Features** der Konsole aktivieren. Wählen Sie unter dem Knoten **Features** das Feature aus, und wählen Sie anschließend **Aktivieren** aus. (Diese Option ist bis zu Ihrer Zustimmung deaktiviert.)  
-  -   **Wenn Sie nicht Ihre Zustimmung gegeben haben:** Beim Installieren eines Updates sind Featurevorabversionen im Assistenten für Updates und Wartung sichtbar, sie sind jedoch deaktiviert und können nicht aktiviert werden. Nach der Installation des Updates können Sie diese Features auf dem Knoten **Features** anzeigen, diese jedoch nicht aktivieren, bis sie Ihre Zustimmung in den **Hierarchieeinstellungen** gegeben haben.
-
- > [!TIP]
- > Wenn Sie Update 1606 installieren, sind Featurevorabversionen, die in Update 1606 enthalten sind, nicht im Assistenten für Updates und Wartung sichtbar und können zu diesem Zeitpunkt nicht aktiviert werden. Nach der Installation des Updates 1606 können Sie sich im Knoten **Features** die noch nicht veröffentlichen Features anzeigen lassen.
-
-Wenn Sie an einem eigenständigen primären Standort Ihre Zustimmung erteilt haben und die Hierarchie durch die Installation eines neuen Standorts der zentralen Verwaltung erweitern, müssen Sie am Standort der zentralen Verwaltung erneut Ihre Zustimmung geben.
-
-**Die folgenden vorab veröffentlichten Features sind verfügbar:**
-
- |Komponente                    |Als Vorabversion hinzugefügt |Als vollständiges Feature hinzugefügt |  
-|----------------------------|---------------------|------------------------|
-| Peercache zur Verteilung von Inhalten an Clients |  [Version 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) |![Noch nicht](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Cloudverwaltungsgateway |  [Version 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |![Noch nicht](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Dashboard „Clientdatenquellen“ |  [Version 1610](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard) |![Noch nicht](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Microsoft Operations Management Suite-Connector  | [Version 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |![Noch nicht](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Warten einer clusterfähigen Sammlung (Warten einer Servergruppe)| [Version 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_ServerGroups)|![Noch nicht](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-|Bedingten Zugriffs für PCs, die von System Center Configuration Manager verwaltet werden | [Version 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     |![Noch nicht](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)                        |
+Features der Vorabversion sind Funktionen, die in Current Branch enthalten sind, um sie in einem frühen Stadium in einer Produktionsumgebung zu testen. Diese Funktionen sollten nicht als produktionsbereit angesehen werden, können aber in der Produktionsumgebung verwendet werden. Weitere Informationen zu Features der Vorabversionen, einschließlich ihrer Aktivierung in Ihrer Umgebung, finden Sie unter [Features der Vorabversion](/sccm/core/servers/manage/pre-release-features).                |
 
 
 ## <a name="known-issues"></a>Bekannte Probleme

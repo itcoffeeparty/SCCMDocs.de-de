@@ -1,8 +1,8 @@
 ---
-title: "Einrichten von Zertifikaten | Microsoft-Dokumentation | Lokale Verwaltung mobiler Geräte"
+title: Einrichten von Zertifikaten | Microsoft-Dokumentation
 description: "Richten Sie in System Center Configuration Manager Zertifikate für vertrauenswürdige Verbindungen für die lokale Verwaltung mobiler Geräte (Mobile Device Management, MDM) ein."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: d7aaad9298308b588f1bc13027082bf07066a3c2
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: ef35e98ccae0c708cd12767eef9f923f211849fb
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -49,7 +50,7 @@ Für die lokale Verwaltung mobiler Geräte in System Center Configuration Manage
 
 -   [Exportieren des Zertifikats mit demselben Stamm wie das Webserverzertifikat](#bkmk_exportCert)  
 
-##  <a name="a-namebkmkconfigcaa-configure-the-certification-authority-ca-for-crl-publishing"></a><a name="bkmk_configCa"></a> Konfigurieren der Zertifizierungsstelle für die Veröffentlichung der Zertifikatsperrliste  
+##  <a name="bkmk_configCa"></a> Konfigurieren der Zertifizierungsstelle für die Veröffentlichung der Zertifikatsperrliste  
  Standardmäßig verwendet die Zertifizierungsstelle LDAP-basierte Zertifikatssperrlisten, die Verbindungen für zur Domäne gehörige Geräte zulassen. Sie müssen der Zertifizierungsstelle HTTP-basierte Zertifikatsperrlisten hinzufügen, damit nicht zur Domäne gehörenden Geräten mithilfe von Zertifikaten vertraut wird, die von der Zertifizierungsstelle ausgestellt wurden. Diese Zertifikate sind für die SSL-Verbindung zwischen den Servern, auf denen die Configuration Manager-Standortsystemrollen gehostet werden, und den Geräten erforderlich, die für die lokale Verwaltung mobiler Geräte registriert sind.  
 
  Führen Sie die nachstehenden Schritte zum Konfigurieren der Zertifizierungsstelle für die automatische Veröffentlichung von Informationen zu Zertifikatsperrlisten und zum Ausstellen von Zertifikaten aus, die vertrauenswürdige Verbindungen für zur Domäne gehörige und nicht zur Domäne gehörige Geräte zulassen:  
@@ -76,7 +77,7 @@ Für die lokale Verwaltung mobiler Geräte in System Center Configuration Manage
 
 8.  Wählen Sie im Dialogfeld „Zertifikatsperrliste veröffentlichen“ **Nur Deltasperrliste** aus, und klicken Sie anschließend auf **OK**.  
 
-##  <a name="a-namebkmkcerttempla-create-the-web-server-certificate-template-on-the-ca"></a><a name="bkmk_certTempl"></a> Erstellen der Webserver-Zertifikatvorlage bei der Zertifizierungsstelle  
+##  <a name="bkmk_certTempl"></a> Erstellen der Webserver-Zertifikatvorlage bei der Zertifizierungsstelle  
  Nach dem Veröffentlichen der neuen Zertifikatsperrliste bei der Zertifizierungsstelle ist der nächste Schritt das Erstellen einer Webserver-Zertifikatvorlage. Diese Vorlage ist erforderlich für das Ausstellen von Zertifikaten für Server, die die Standortsystemrollen „Anmeldungspunkt“, „Anmeldungsproxypunkt“, „Verteilungspunkt“ und „Geräteverwaltungspunkt“ hosten. Diese Server werden SSL-Endpunkte für vertrauenswürdige Verbindungen zwischen Standortsystemrollen und registrierten Geräten.    Gehen Sie folgendermaßen vor, um die Zertifikatvorlage zu erstellen:  
 
 1.  Erstellen Sie eine Sicherheitsgruppe namens **ConfigMgr MDM Servers**, die die Server mit den ausgeführten Standortsystemen enthält, die vertrauenswürdige Verbindungen mit registrierten Geräten erfordern.  
@@ -113,7 +114,7 @@ Für die lokale Verwaltung mobiler Geräte in System Center Configuration Manage
 
 12. Wählen Sie im Dialogfeld **Zertifikatvorlagen aktivieren** die neu erstellte Vorlage **ConfigMgr – Verwaltung mobiler Geräte – Webserver** aus, und klicken Sie dann auf **OK**.  
 
-##  <a name="a-namebkmkrequestcerta-request-the-web-server-certificate-for-each-site-system-role"></a><a name="bkmk_requestCert"></a> Anfordern des Webserverzertifikats für jede Standortsystemrolle  
+##  <a name="bkmk_requestCert"></a> Anfordern des Webserverzertifikats für jede Standortsystemrolle  
  Zwischen Geräten, die für die lokale Verwaltung mobiler Geräte registriert wurden, und SSL\-Endpunkten, auf denen der Registrierungspunkt, der Registrierungsproxypunkt, der Verteilungspunkt und der Geräteverwaltungspunkt gehostet werden, muss eine Vertrauensstellung bestehen.  In den folgenden Schritten wird beschrieben, wie Sie das Webserverzertifikat für IIS anfordern. Dies muss für jeden Server (SSL-Endpunkt) erfolgen, der eine der für die lokale Verwaltung mobiler Geräte erforderlichen Standortsystemrollen hostet.  
 
 1.  Öffnen Sie auf dem primären Standortserver eine Eingabeaufforderung mit Administratorberechtigung, geben Sie **MMC** ein, und drücken Sie die **EINGABETASTE**.  
@@ -132,7 +133,7 @@ Für die lokale Verwaltung mobiler Geräte in System Center Configuration Manage
 
  Da jeder Server ein eindeutiges Webserverzertifikat benötigt, müssen Sie diesen Prozess für jeden Server wiederholen, auf dem eine der für die lokale Verwaltung mobiler Geräte erforderlichen Standortsystemrollen gehostet werden.  Wenn ein Server alle Standortsystemrollen hostet, müssen Sie nur ein Webserverzertifikat anfordern.  
 
-##  <a name="a-namebkmkbindcerta-bind-the-certificate-to-the-web-server"></a><a name="bkmk_bindCert"></a> Binden des Zertifikats an den Webserver  
+##  <a name="bkmk_bindCert"></a> Binden des Zertifikats an den Webserver  
  Das neue Zertifikat muss nun an den Webserver aller Standortsystemserver gebunden werden, auf denen die für die lokale Verwaltung mobiler Geräte erforderlichen Standortsystemrollen gehostet werden. Führen Sie die folgenden Schritte für jeden Server aus, der die Standortsystemrollen „Anmeldungspunkt“ und „Anmeldungsproxypunkt“ hostet. Wenn ein Server alle Standortsystemrollen hostet, müssen Sie die folgenden Schritte nur einmal ausführen. Diese Aufgabe muss nicht für die Standortsystemrollen „Verteilungspunkt“ und „Geräteverwaltungspunkt“ erfolgen, da diese während der Registrierung automatisch das benötigte Zertifikat erhalten.  
 
 1.  Klicken Sie auf dem Server, der den Anmeldungspunkt, Anmeldungsproxypunkt, Verteilungspunkt oder Geräteverwaltungspunkt hostet, auf **Start**  >  **Verwaltung**  >  **IIS-Manager**.  
@@ -145,7 +146,7 @@ Für die lokale Verwaltung mobiler Geräte in System Center Configuration Manage
 
 5.  Wählen Sie in der IIS-Manager-Konsole unter „Verbindungen“ den Webserver aus, und klicken Sie anschließend im rechten Aktionsbereich auf **Neu starten**.  
 
-##  <a name="a-namebkmkexportcerta-export-the-certificate-with-the-same-root-as-the-web-server-certificate"></a><a name="bkmk_exportCert"></a> Exportieren des Zertifikats mit demselben Stamm wie das Webserverzertifikat  
+##  <a name="bkmk_exportCert"></a> Exportieren des Zertifikats mit demselben Stamm wie das Webserverzertifikat  
  Die Active Directory-Zertifikatdienste installieren in der Regel das von der Zertifizierungsstelle benötigte Zertifikat auf allen zur Domäne gehörenden Geräten. Nicht zur Domäne gehörige Geräte können aber ohne Zertifikat von der Stammzertifizierungsstelle nicht mit den Standortsystemrollen kommunizieren. Zum Abrufen des erforderlichen Zertifikats für Geräte zur Kommunikation mit Standortsystemrollen können Sie es mithilfe des Zertifikats exportieren, das an den Webserver gebunden ist.  
 
  Führen Sie diese Schritte aus, um das Stammzertifikat des Zertifikats des Webservers zu exportieren.  
@@ -171,9 +172,4 @@ Für die lokale Verwaltung mobiler Geräte in System Center Configuration Manage
      Klicken Sie auf **Weiter**.  
 
 9. Überprüfen Sie die Einstellungen, und klicken Sie auf **Fertig stellen**.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

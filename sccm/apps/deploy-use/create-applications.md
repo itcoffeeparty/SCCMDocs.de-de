@@ -17,8 +17,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5155cacf8c8747f2fc439208e7adabdfcaaafb63
-ms.openlocfilehash: 066ac5e676091850d04c330f22ebcfbadb787914
+ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
+ms.openlocfilehash: da86fc2f61ce8229fb0d3f58a4f8a24d1514b30e
+ms.lasthandoff: 03/04/2017
 
 
 ---
@@ -35,6 +36,9 @@ Eine System Center Configuration Manager-Anwendung verfügt über die Dateien un
 -   Erstellen Sie die Anwendung manuell, und fügen Sie Bereitstellungstypen später hinzu.  
 
 -   Importieren Sie eine Anwendung aus einer Datei.  
+
+> [!NOTE]  
+>  [Create applications for mobile devices (Erstellen von Anwendungen für mobile Geräte)](../../mdm/deploy-use/create-applications.md) enthält ausführliche Informationen zum Erstellen von iOS-, Windows Phone und Android-Anwendungen.  
 
 Führen Sie die folgenden Schritte aus, um mithilfe von Configuration Manager Anwendungen und Bereitstellungstypen zu erstellen.  
 
@@ -465,9 +469,4 @@ In der folgenden Tabelle sind Beispielskripte für Microsoft Visual Basic (VB) a
 |**Mac OS X**|Hiermit wird ein Bereitstellungstyp für Macintosh-Computer aus einer CMMAC-Datei erstellt, die Sie mit dem Tool „CMAppUtil“ erstellt haben.<br /><br /> Gilt nur für Macintosh-Computer, auf denen der Configuration Manager-Client ausgeführt wird.|  
 |**Webanwendung**|Hiermit wird ein Bereitstellungstyp erstellt, der einen Link zu einer Webanwendung angibt. Mit dem Bereitstellungstyp wird auf dem Gerät des Benutzers eine Verknüpfung mit der Webanwendung installiert.<br /><br /> Wenn Intune Managed Browser auf den von Ihnen verwalteten iOS- oder Android-Geräten installiert wurde, können Sie sicherstellen, dass die Benutzer die App nur über Managed Browser öffnen. Zu diesem Zweck geben Sie den Link zur App in einem der folgenden Formate an – Sie ersetzen dabei **http:** durch **http-intunemam:** oder **https:** durch **https-intunemam:**<br /><br /> - **http-intunemam://<Pfad zur Web-App\>**<br /><br /> - **https-intunemam://<Pfad zur Web-App\>**<br /><br /> Sie können mithilfe der Configuration Manager-Anwendungsanforderungen sicherstellen, dass die Apps, die Sie mit Managed Browser verknüpfen möchten, nur auf iOS- und Android-Geräten installiert werden.<br /><br /> Weitere Informationen zu Intune Managed Browser finden Sie unter [Verwalten des Internetzugriffs mittels Richtlinien für verwaltete Browser mit System Center Configuration Manager](../../apps/deploy-use/manage-internet-access-using-managed-browser-policies.md).|  
 |**Windows Installer über die Verwaltung mobiler Geräte (\*.msi)**|Mit diesem Installationstyp können Sie Windows Installer-basierte Apps auf Windows 10-PCs erstellen und bereitstellen.<br /><br /> Folgendes muss berücksichtigt werden, wenn Sie diese Art Installationsprogramm verwenden:<br><br>– Sie können nur eine einzelne Datei mit der Erweiterung „.msi“ hochladen.<br /><br /> – Produktcode und Produktversion der Datei werden zur Erkennung der App verwendet.<br /><br /> – Es wird das standardmäßige Neustartverhalten der App verwendet. Dies wird nicht von Configuration Manager gesteuert.<br /><br /> – Pro Benutzer definierte MSI-Pakete werden für einen einzelnen Benutzer installiert.<br /><br /> – Pro Gerät definierte MSI-Pakete werden für alle Benutzer des Geräts installiert.<br /><br /> – MSI-Pakete im Dualmodus werden zurzeit nur für alle Benutzer des Geräts installiert.<br /><br /> – App-Updates werden unterstützt, wenn jede Version den gleichen MSI-Produktcode aufweist.|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

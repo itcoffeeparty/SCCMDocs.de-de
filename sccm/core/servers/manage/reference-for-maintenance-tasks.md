@@ -2,7 +2,7 @@
 title: "Referenz für Wartungstasks | Microsoft-Dokumentation"
 description: "Hier finden Sie ausführliche Informationen zu den einzelnen Wartungstasks für System Center Configuration Manager-Standorte sowie dazu, ob diese Tasks standardmäßig aktiviert sind."
 ms.custom: na
-ms.date: 2/7/2017
+ms.date: 3/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6e19d1239cb61b570203fdd13563d5f8c5afc6ad
-ms.openlocfilehash: d2e53e7c0cd0dd1a97d3620a14a15369e1d7e0ec
+ms.sourcegitcommit: dcbcd57b95f304f007e92ebe2b9aeefb4b579662
+ms.openlocfilehash: 92d3c215569916a5557309d7f488aa88f387da92
+ms.lasthandoff: 03/09/2017
 
 
 ---
@@ -52,6 +53,11 @@ Dieses Thema enthält eine Liste der Details zu jedem Wartungstask für System C
 -   **Primärer Standort**: Aktiviert    
 -   Sekundärer Standort: Nicht verfügbar  
 
+**Veralteten Client-Downloadverlauf löschen**: Verwenden Sie diesen Task, um Verlaufsdaten über die von Clients verwendete Downloadquelle zu löschen. Das Herunterladen von Quellinformationen wird zum Auffüllen des [Dashboards „Clientdatenquellen“](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard) verwendet.  
+-  Standortserver der zentralen Verwaltung: Nicht verfügbar
+-     **Primärer Standort** – Aktiviert
+-  Sekundärer Standort: Nicht verfügbar
+
 **Veraltete Clientvorgänge löschen**: Verwenden Sie diesen Task, um alle veralteten Daten für Clientvorgänge aus der Standortdatenbank zu löschen. Dies umfasst beispielsweise Daten für veraltete oder abgelaufene Clientbenachrichtigungen (z.B. Downloadanforderungen für Computer- oder Benutzerrichtlinien) und für Endpoint Protection (z.B. Anforderungen eines administrativen Benutzers, dass auf den Clients eine Überprüfung ausgeführt werden soll oder aktualisierte Definitionen heruntergeladen werden sollen).
 
 -   **Standort der zentralen Verwaltung**: Aktiviert    
@@ -63,6 +69,12 @@ Dieses Thema enthält eine Liste der Details zu jedem Wartungstask für System C
 -   **Standort der zentralen Verwaltung**: Aktiviert   
 -   **Primärer Standort**: Aktiviert    
 -   Sekundärer Standort: Nicht verfügbar  
+
+**Veraltete Daten zum Cloudverwaltungsgateway-Datenverkehr löschen**: Verwenden Sie diesen Task, um alle veraltete Daten über den Datenverkehr zu löschen, die die [Cloudverwaltungsgateway](/sccm/core/clients/manage/plan-cloud-management-gateway) aus der Standortdatenbank durchlaufen. Dies enthält z.B. Daten zur Anzahl von Anforderungen, gesamten Anforderungsbytes, gesamten Antwortbytes, die Anzahl von fehlerhaften Anforderungen und die maximale Anzahl gleichzeitiger Anforderungen.  
+- **Standort der zentralen Verwaltung** – Aktiviert
+- **Primärer Standort** – Aktiviert
+- Sekundärer Standort: Nicht verfügbar
+
 
 **Veraltete gesammelte Dateien löschen**: Verwenden Sie diesen Task, um veraltete Informationen zu gesammelten Dateien aus der Datenbank zu löschen. Mit diesem Task werden darüber hinaus die gesammelten Dateien aus der Ordnerstruktur des Standortservers auf dem ausgewählten Standort gelöscht. Standardmäßig werden die fünf neuesten Kopien der gesammelten Dateien auf dem Standortserver im Verzeichnis **Inboxes\sinv.box\FileCol** gespeichert. Weitere Informationen finden Sie unter [Introduction to software inventory in System Center Configuration Manager (Einführung in die Softwareinventur in System Center Configuration Manager)](/sccm/core/clients/manage/inventory/introduction-to-software-inventory).  
 
@@ -227,6 +239,11 @@ Dieser Task kann nur für Ressourcen ausgeführt werden, bei denen es sich um Co
 -   **Primärer Standort**: Aktiviert    
 -   Sekundärer Standort: Nicht verfügbar  
 
+**Statusdatensätze zur verwaisten Clientbereitstellung löschen**: Verwenden Sie diesen Task, um in regelmäßigen Abständen die Tabelle zu löschen, die Statusinformationen zur Clientbereitstellung enthält. Dieser Task bereinigt Datensätze, die veralteten oder außer Betrieb genommenen Geräten zugeordnet sind.  
+-   **Standort der zentralen Verwaltung**: Aktiviert    
+-   **Primärer Standort**: Aktiviert    
+-   Sekundärer Standort: Nicht verfügbar 
+
 **Nicht verwendete Anwendungsrevisionen löschen**: Verwenden Sie diesen Task, um Anwendungsrevisionen zu löschen, die nicht mehr referenziert werden. Weitere Informationen finden Sie unter [Überarbeiten und Ablösen von Anwendungen in System Center Configuration Manager](../../../apps/deploy-use/revise-and-supersede-applications.md).  
 
 -   Standortserver der zentralen Verwaltung: Nicht verfügbar    
@@ -288,9 +305,4 @@ Diese Zuordnungen werden zur schnellen Bezugnahme in einer Tabelle gespeichert. 
 -   Standortserver der zentralen Verwaltung: Nicht verfügbar    
 -   **Primärer Standort**: Aktiviert    
 -   Sekundärer Standort: Nicht verfügbar  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

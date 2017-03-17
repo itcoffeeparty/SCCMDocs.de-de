@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2dd898c9b022c6f0bc243623835af0eece94128f
-ms.openlocfilehash: 95d1671501f672e1d5abe3f0fbbd7d2dfb21e0a3
+ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
+ms.openlocfilehash: 895b8ae58a9fda3fd22f58d77129053df09c4ccb
+ms.lasthandoff: 03/04/2017
 
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Peercache für Configuration Manager-Clients
@@ -28,7 +29,7 @@ ms.openlocfilehash: 95d1671501f672e1d5abe3f0fbbd7d2dfb21e0a3
 Ab Version 1610 von System Center Configuration Manager können Sie **Peercache** zum Verwalten der Bereitstellung von Inhalten für Clients an Remotestandorten verwenden. Peercache ist eine integrierte Configuration Manager-Lösung, mit deren Hilfe Clients Inhalte für andere Clients direkt aus ihrem lokalen Cache freigeben können.   
 
 > [!TIP]  
-> Peercache und das Dashboard „Clientdatenquellen“ sind vorab veröffentliche Features in Version 1610. Informationen zum Aktivieren dieser Funktionen finden Sie unter [Verwenden von vorab veröffentlichten Features von Updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
+> Peercache und das Dashboard „Clientdatenquellen“ sind vorab veröffentlichte Funktionen, die mit Version 1610 eingeführt wurden. Informationen zum Aktivieren dieser Funktionen finden Sie unter [Verwenden von vorab veröffentlichten Features von Updates](/sccm/core/servers/manage/pre-release-features).
 
  -     Sie verwenden Clienteinstellungen, um Clients für die Verwendung des Peercaches zu aktivieren.
  -     Zur Freigabe von Inhalten müssen Peercacheclients Mitglieder der aktuellen Begrenzungsgruppe des Clients sein, der nach den Inhalten sucht. Peercacheclients in benachbarten Begrenzungsgruppen sind im Pool der verfügbaren Quellspeicherorte für Inhalt nicht enthalten, wenn ein Client ein Fallback verwendet, um nach Inhalten aus einer benachbarten Begrenzungsgruppe zu suchen. Weitere Informationen zu aktuellen und benachbarten Begrenzungsgruppen finden Sie unter [Begrenzungsgruppen](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups).
@@ -66,9 +67,4 @@ Um besser zu verstehen, wann der Peercache erfolgreich verwendet wird, sehen Sie
   -  **Port für Download der Inhalte vom Peer (HTTP/HTTPS)**
 
 Wenn die Windows-Firewall verwendet wird, wird sie auf jedem für den Peercache aktivierten Computer von Configuration Manager so konfiguriert, dass die Verwendung der konfigurierten Ports zulässig ist.
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

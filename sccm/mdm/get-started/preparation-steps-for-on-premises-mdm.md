@@ -1,8 +1,8 @@
 ---
-title: "Schritte zur Vorbereitung | Microsoft-Dokumentation | Lokale Verwaltung mobiler Geräte"
+title: Schritte zur Vorbereitung | Microsoft-Dokumentation
 description: "Bereiten Sie die lokale Verwaltung mobiler Geräte in System Center Configuration Manager vor."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: a5c9fa5994f9b7bd13fe53edb6998609852b98ca
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: 2ba11c8e2d8214ce9aca7c887fcb539b38da4e84
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -44,9 +45,4 @@ Für die lokale Verwaltung mobiler Geräte mit System Center Configuration Manag
 -   [Einrichten der Geräteregistrierung für die lokale Verwaltung mobiler Geräte in System Center Configuration Manager](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)  
 
      In diesem Task erteilen Sie den Benutzern die Berechtigung zum Registrieren von Computern und Geräten. Zudem installieren Sie das vertrauenswürdige Stammzertifikat auf Geräten (in der Regel Geräte, die keiner Domäne angehören), um HTTPS-Verbindungen mit den Standortsystemservern zuzulassen.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

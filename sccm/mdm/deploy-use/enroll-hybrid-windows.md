@@ -2,7 +2,7 @@
 title: "Einrichten einer hybriden Windows-Geräteverwaltung mit System Center Configuration Manager und Microsoft Intune | Microsoft-Dokumentation"
 description: "Richten Sie eine Windows-Geräteverwaltung mit System Center Configuration Manager und Microsoft Intune ein."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 76cb0c41865859fd410a187435d73c6a23b0c57e
-ms.openlocfilehash: 7b53b094eeb1d59d052c63831eeab0e10edb5913
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: a4fc4a16c78b0eaa0dcefdd596b049eacf1d255b
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -31,7 +32,7 @@ Sie können Configuration Manager mit Intune verwenden, um Desktopcomputer, Lapt
 Optionen für Windows-Registrierung:
 
 - [Automatische Registrierung mit Azure AD](#azure-active-directory-enrollment)
-- [Windows-PCs](#set-up-windows-device-enrollment)
+- [Windows-PCs](#configure-windows-pc-enrollment)
 - [Windows 10 Mobile- und Windows Phone-Geräte](#enable-windows-phone-devices)
 
 ## <a name="azure-active-directory-enrollment"></a>Registrierung mit Azure Active Directory
@@ -118,8 +119,6 @@ Die automatische Registrierung ermöglicht Benutzern das Registrieren von untern
 
   Nachdem Sie die Einrichtung abgeschlossen haben, müssen Sie Ihre Benutzer informieren, wie sie ihre Geräte registrieren sollen. Informationen hierzu finden Sie unter [Informieren der Benutzer über den Einsatz von Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune). Diese Informationen gelten für mobile Geräte, die mit Microsoft Intune und Configuration Manager verwaltet werden.  
 
-
-
-<!--HONumber=Feb17_HO2-->
-
+  > [!div class="button"]
+  [< Vorheriger Schritt](create-service-connection-point.md) [Nächster Schritt >](set-up-additional-management.md)
 

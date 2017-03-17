@@ -1,8 +1,8 @@
 ---
-title: Einrichten des Intune-Abonnements | Microsoft-Dokumentation | Lokal
+title: Einrichten des Intune-Abonnements | Microsoft-Dokumentation
 description: "Richten Sie ein Intune-Abonnement ein, um die Lizenzierung für die lokale Verwaltung mobiler Geräte in System Center Configuration Manager zu verfolgen."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
-ms.openlocfilehash: 2cc9f59d9d32d149aa477ba61afba0094f302fc4
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: f86eac30ed0eada92ddbd25891d1693ae55b4851
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -38,7 +39,7 @@ Die lokale Verwaltung mobiler Geräte in System Center Configuration Manager set
  Intune ist erforderlich, damit die lokale Verwaltung mobiler Geräte funktionsfähig ist. [Registrieren](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/) Sie sich einfach für ein Test- oder ein kostenpflichtiges Abonnement, und wechseln Sie dann zum nächsten Schritt, um das Abonnement Configuration Manager hinzuzufügen.  
 
 ##  <a name="add-the-intune-subscription-to-configuration-manager"></a>Hinzufügen des Intune-Abonnements zu Configuration Manager  
- Damit das Abonnement Configuration Manager hinzugefügt wird, befolgen Sie einfach die gleichen grundlegenden Schritte wie beim Hinzufügen des Abonnements für die Verwaltung mobiler Geräte mit Intune. Lesen Sie die nachfolgenden Hinweise zu bestimmten Unterschieden, und verwenden Sie dann die Anweisungen unter [So erstellen Sie das Microsoft Intune-Abonnement](../deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription).  
+ Damit das Abonnement Configuration Manager hinzugefügt wird, befolgen Sie einfach die gleichen grundlegenden Schritte wie beim Hinzufügen des Abonnements für die Verwaltung mobiler Geräte mit Intune. Lesen Sie die nachfolgenden Hinweise zu bestimmten Unterschieden, und verwenden Sie dann die Anweisungen unter [So erstellen Sie das Microsoft Intune-Abonnement](../deploy-use/setup-hybrid-mdm.md#configure-intune-subscription).  
 
 > [!NOTE]  
 >  Bedenken Sie beim Hinzufügen des Intune-Abonnements Folgendes:  
@@ -67,9 +68,4 @@ Die lokale Verwaltung mobiler Geräte in System Center Configuration Manager set
 5.  Wenn Sie beabsichtigen, Desktopcomputer mit Windows 10 zu verwalten, klicken Sie mit der rechten Maustaste auf **Microsoft Intune-Abonnement**, klicken Sie dann auf **Plattformen konfigurieren**, und klicken Sie anschließend auf **Windows-Registrierung aktivieren**.  
 
 6.  Aktivieren Sie das Kontrollkästchen neben **Windows-Registrierung aktivieren**, und klicken Sie dann auf **OK**.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

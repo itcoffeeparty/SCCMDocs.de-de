@@ -2,7 +2,7 @@
 title: "Schützen von Daten mit Remotezurücksetzung, Remotesperre oder Zurücksetzen der Kennung mithilfe von System Center Configuration Manager | Microsoft-Dokumentation"
 description: "Schützen von Gerätedaten mit vollständigem Zurücksetzen, selektivem Zurücksetzen, Remotesperre oder Kennungsrücksetzung mithilfe von System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
-ms.openlocfilehash: d3dd55b496a124c478f1cf2880a096e2fbdd9145
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: 3aa4c2ad3568cc6ced70a65141a2c103af8b740f
+ms.lasthandoff: 03/06/2017
 
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-using-system-center-configuration-manager"></a>Schützen von Daten mit Remotezurücksetzung, Remotesperre oder Kennungsrücksetzung mithilfe von System Center Configuration Manager
@@ -241,12 +242,6 @@ In Configuration Manager sind Funktionen zum selektiven und vollständigen Zurü
 
 3.  Klicken Sie in der **Gerätegruppe** auf **Remotegeräteaktionen**, und wählen Sie dann **Zustand der Remotesperre anzeigen**aus.  
 
-## <a name="see-also"></a>Siehe auch  
- [Windows Selective Wipe for Device Data Management](http://technet.microsoft.com/library/dn486874.aspx)   
- [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune (Hybride Verwaltung mobiler Geräte mit System Center Configuration Manager und Microsoft Intune)](../../mdm/understand/hybrid-mobile-device-management.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
+### <a name="see-also"></a>Siehe auch  
+ [Windows Selective Wipe for Device Data Management (Selektives Zurücksetzen bei der Gerätedatenverwaltung unter Windows)](http://technet.microsoft.com/library/dn486874.aspx)   
 

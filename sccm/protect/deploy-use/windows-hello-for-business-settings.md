@@ -16,8 +16,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: 1f254ee31bae1c3d7b1506e68c40baf78793bf66
+ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
+ms.openlocfilehash: ec3d130674d606410e6da7babee126e017aff234
+ms.lasthandoff: 03/04/2017
 
 
 ---
@@ -35,70 +36,7 @@ Mit Hello for Business können Sie anstelle eines Kennworts eine **Benutzeraktio
 
 -   Sie können Authentifizierungszertifikate im Windows Hello for Business-Schlüsselspeicheranbieter (Key Storage Provider; KSP) speichern. Weitere Informationen finden Sie unter [Zertifikatprofile](introduction-to-certificate-profiles.md).  
 
-- Sie können Richtlinien von „Windows Hello for Business“ für Windows 10-Geräte bereitstellen, die in eine Domäne eingebunden sind und auf denen der Configuration Manager-Client ausgeführt wird. Diese Konfiguration wird unter [Konfigurieren von Windows Hello for Business auf einer Domäne angehörenden Windows 10-Geräten](#configure-windows-hello-for-business-on-domain-joined-windows-10-devices) weiter unten beschrieben. Bei Verwendung von Configuration Manager mit Intune (Hybrid) können Sie diese Einstellungen auf Windows 10- und Windows 10 Mobile-Geräten, aber nicht auf Geräten konfigurieren, die zu einer Domäne gehören und auf denen der Configuration Manager-Client ausgeführt wird.   
-
-## <a name="configure-windows-hello-for-business-settings-hybrid"></a>Konfigurieren von Windows Hello for Business-Einstellungen (hybrid)  
-
-1.  Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung** > **Clouddienste** > **Microsoft Intune-Abonnements**.  
-
-3.  Wählen Sie aus der Liste Ihr Microsoft Intune-Abonnement aus. Klicken Sie auf der Registerkarte **Start** in der Gruppe **Abonnement** auf **Plattformen konfigurieren** > **Windows (MDM)**.  
-
-4.  Wählen Sie auf der Registerkarte **Windows Hello for Business** des Dialogfelds **Microsoft Intune-Abonnementeigenschaften** aus folgenden Werten aus, die Auswirkungen auf alle registrierten Windows 10- und Windows 10 Mobile-Geräte haben:  
-
-    -   **Windows Hello for Business auf registrierten Geräten deaktivieren** oder **Windows Hello for Business auf registrierten Geräten aktivieren** : Aktiviert oder deaktiviert die Verwendung von Windows Hello for Business auf allen registrierten Windows 10 und Windows 10 Mobile-Geräten.  
-
-    -   **Trusted Platform Module (TPM) verwenden** : Ein Trusted Platform Module-Chip (TPM) bietet eine zusätzliche Sicherheitsebene für Daten. Wählen Sie einen der folgenden Werte aus:  
-
-        -   **Erforderlich** (Standard) – Nur Geräte mit verfügbarem TPM können Windows Hello for Business bereitstellen.  
-
-        -   **Bevorzugt** – Geräte versuchen zunächst, ein TPM zu verwenden. Wenn diese Option nicht verfügbar ist, können sie die Softwareverschlüsselung verwenden.  
-
-    -   **Mindestlänge für PIN anfordern** : Geben Sie die Mindestanzahl von Zeichen an, die für die Windows Hello for Business-PIN erforderlich ist. Sie müssen mindestens vier Zeichen verwenden (der Standardwert ist sechs Zeichen).  
-
-    -   **Höchstlänge für PIN anfordern** : Geben Sie die maximale Anzahl von Zeichen an, die für die Windows Hello for Business-PIN zulässig ist. Sie können bis zu 127 Zeichen verwenden.  
-
-    -   **Kleinbuchstaben in PIN vorschreiben** : Gibt an, ob in der Windows Hello for Business-PIN Kleinbuchstaben verwendet werden müssen. Wählen Sie aus:  
-
-        -   **Zulässig** – Benutzer können in ihrer PIN Kleinbuchstaben verwenden.  
-
-        -   **Erforderlich** – Benutzer müssen in ihre PIN mindestens einen Kleinbuchstaben einbeziehen.  
-
-        -   **Nicht zulässig** – (Standardeinstellung) Benutzer dürfen in ihrer PIN keine Kleinbuchstaben verwenden.  
-
-    -   **Großbuchstaben in PIN vorschreiben** : Gibt an, ob in der Windows Hello for Business-PIN Großbuchstaben verwendet werden müssen. Wählen Sie aus:  
-
-        -   **Zulässig** – Benutzer können in ihrer PIN Großbuchstaben verwenden.  
-
-        -   **Erforderlich** – Benutzer müssen in ihre PIN mindestens einen Großbuchstaben einbeziehen.  
-
-        -   **Nicht zulässig** – (Standardeinstellung) Benutzer dürfen in ihrer PIN keine Großbuchstaben verwenden.  
-
-    -   **Sonderzeichen anfordern** : Gibt die Verwendung von Sonderzeichen in der PIN an. Wählen Sie aus:  
-
-        -   **Zulässig** – Benutzer können in ihrer PIN Sonderzeichen verwenden.  
-
-        -   **Erforderlich** – Benutzer müssen in ihre PIN mindestens ein Sonderzeichen einbeziehen.  
-
-        -   **Nicht zulässig,** (Standard) – Benutzer dürfen keine Sonderzeichen in ihrer PIN verwenden (dies trifft auch zu, wenn die Einstellung nicht konfiguriert ist).  
-
-         Sonderzeichen umfassen: **! " # $ % & ' ( ) \* + , - . / : ; < = > ? @ [ \ ] ^ _ ` { &#124; } ~**.  
-
-    -   **PIN-Ablauf (in Tagen) anfordern** : Gibt die Anzahl der Tage an, bevor die Geräte-PIN geändert werden muss. Die Standardeinstellung ist 41 Tage.  
-
-    -   **Wiederverwendung vorheriger PINs verhindern** : Verwenden Sie diese Einstellung, um die Wiederverwendung zuvor verwendeter PINs einzuschränken. Standardmäßig können die letzten fünf PINs nicht erneut verwendet werden.  
-
-    -   **Biometrische Erkennung aktivieren** : Aktiviert die biometrische Authentifizierung, z.B. die Gesichtserkennung oder Fingerabdrücke, als Alternative zu einer PIN für Windows Hello for Business. Benutzer müssen für den Fall dennoch eine PIN konfigurieren, dass die biometrische Authentifizierung fehlschlägt.  
-
-         Wenn diese Eigenschaft auf **Aktiviert**festgelegt ist, lässt Windows Hello for Business die biometrische Authentifizierung zu.  Wenn diese Eigenschaft auf **Deaktiviert**festgelegt ist, verhindert Windows Hello for Business die biometrische Authentifizierung (für alle Kontotypen).  
-
-    -   **Erweitertes Antispoofing verwenden, falls verfügbar** : Konfiguriert, ob das erweiterte Antispoofing auf Geräten verwendet wird, die diese Option unterstützen.  
-
-         Wenn diese Option auf **Aktiviert**festgelegt ist, fordert Windows von allen Benutzern die Verwendung von Antispoofing für Gesichtsmerkmale, sofern dies unterstützt wird.  
-
-    -   **** : Wenn diese Option auf **Aktiviert**festgelegt ist, können die Benutzer eine Remote-Version von Hello for Business als tragbares Begleitgerät für die Authentifizierung von Desktopcomputern verwenden. Der Desktopcomputer muss mit Azure Active Directory verknüpft sein, und das Begleitgerät muss mit einer Windows Hello for Business-PIN konfiguriert werden.  
-
-5.  Klicken Sie zum Abschluss auf **OK**.  
-
+- Sie können Richtlinien von „Windows Hello for Business“ für Windows 10-Geräte bereitstellen, die in eine Domäne eingebunden sind und auf denen der Configuration Manager-Client ausgeführt wird. Diese Konfiguration wird unter [Konfigurieren von Windows Hello for Business auf einer Domäne angehörenden Windows 10-Geräten](#configure-windows-hello-for-business-on-domain-joined-windows-10-devices) weiter unten beschrieben. Bei Verwendung von Configuration Manager mit Intune (Hybrid) können Sie diese Einstellungen auf Windows 10- und Windows 10 Mobile-Geräten, aber nicht auf Geräten konfigurieren, die zu einer Domäne gehören und auf denen der Configuration Manager-Client ausgeführt wird. Weitere Informationen finden Sie unter [Configure Windows Hello for Business settings (hybrid) (So konfigurieren Sie Windows Hello for Business-Einstellungen (hybrid))](../../mdm/deploy-use/windows-hello-for-business-settings.md).
 
 ## <a name="configure-windows-hello-for-business-on-domain-joined-windows-10-devices"></a>Konfigurieren von Windows Hello for Business auf einer Domäne angehörenden Windows 10-Geräten
 Sie können Windows Hello for Business-Einstellungen auf einer Domäne angehörenden Windows 10-Geräten auf drei Arten steuern:
@@ -163,9 +101,4 @@ Weitere Informationen zur Configuration Manager-Anwendungsverwaltung finden Sie 
  [Schützen der Daten und Standortinfrastruktur mit System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)
 
  [Verwalten der Überprüfung der Identität mit Windows Hello for Business](https://technet.microsoft.com/itpro/windows/keep-secure/manage-identity-verification-using-microsoft-passport).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -2,7 +2,7 @@
 title: "Geschäftsbedingungen von System Center Configuration Manager | Microsoft-Dokumentation"
 description: "Stellen Sie Geschäftsbedingungen für Benutzergruppen in System Center Configuration Manager bereit."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,13 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 2f8b14bef14d82584fd2bf6cdd05018bdd463ce4
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: d8235db376fc62a7ac00d6e5a27823710630eca6
+ms.lasthandoff: 03/06/2017
 
 
 ---
-# <a name="terms-and-conditions-in-system-center-configuration-manager"></a>Terms and Conditions in System Center Configuration Manager
+# <a name="add-terms-and-conditions-with-system-center-configuration-manager"></a>Hinzufügen von Geschäftsbedingungen mit System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -120,8 +121,6 @@ Sie können die Geschäftsbedingungen von System Center Configuration Manager f�
 
      Es wird empfohlen, dass Sie die Versionsnummer erhöhen und jedes Mal die Zustimmung zu den Geschäftsbedingungen anfordern, wenn Sie wichtige Änderungen an den Geschäftsbedingungen vornehmen. Behalten Sie die aktuelle Versionsnummer bei, wenn Sie z. B. Tippfehler korrigieren oder die Formatierung ändern.
 
-
-
-<!--HONumber=Dec16_HO3-->
-
+> [!div class="button"]
+ [< Vorheriger Schritt](configure-intune-subscription.md) [Nächster Schritt >](create-service-connection-point.md)
 
