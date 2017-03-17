@@ -8,7 +8,7 @@ ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
 ms.technology:
-- configmgr-client
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: b36f5e4a-2b57-4d18-83f6-197081ac2a0a
@@ -54,14 +54,14 @@ In den folgenden Aufgaben wird erläutert, wie Sie eine Massenregistrierung von 
 
 -   [Überprüfen der Registrierung des Geräts](#bkmk_verifyEnroll)  
 
-##  <a name="a-namebkmkcreatecerta-create-a-certificate-profile"></a><a name="bkmk_createCert"></a> Erstellen eines Zertifikatprofils  
+##  <a name="bkmk_createCert"></a> Erstellen eines Zertifikatprofils  
  Die Hauptkomponente des Registrierungspakets ist ein Zertifikatprofil, mit dem dem Gerät, das registriert wird, automatisch ein vertrauenswürdiges Stammzertifikat bereitgestellt wird.  Das Stammzertifikat wird für die vertrauenswürdige Kommunikation zwischen den Geräten und den erforderlichen Standortsystemrollen für die lokale Verwaltung mobiler Geräte benötigt. Ohne das Stammzertifikat wäre das Gerät in HTTPS-Verbindungen mit den Servern, auf denen der Anmeldungspunkt, der Anmeldungsproxypunkt, der Verteilungspunkt und die Standortsystemrollen des Geräteverwaltungspunkts gehostet werden, nicht vertrauenswürdig.  
 
  Bei der Vorbereitung des Systems für die lokale Verwaltung mobiler Geräte exportieren Sie ein Stammzertifikat, das Sie im Zertifikatprofil des Registrierungspakets verwenden können. Informationen zum Abrufen des vertrauenswürdigen Stammzertifikats finden Sie unter [Export the certificate with the same root as the web server certificate (Exportieren des Zertifikats mit dem Webserverzertifikat entsprechendem Stamm)](../../mdm/get-started/set-up-certificates-on-premises-mdm.md#bkmk_exportCert).  
 
  Verwenden Sie das exportierte Stammzertifikat, um ein Profil zu erstellen. Anweisungen finden Sie unter [How to create certificate profiles in System Center Configuration Manager (Erstellen von Zertifikatprofilen in System Center Configuration Manager)](../../protect/deploy-use/create-certificate-profiles.md).  
 
-##  <a name="a-namecreatewifia-create-a-wi-fi-profile"></a><a name="CreateWifi"></a> Erstellen eines WLAN-Profils  
+##  <a name="CreateWifi"></a> Erstellen eines WLAN-Profils  
  Die andere Komponente des zur Massenregistrierung verwendeten Pakets ist ein WLAN Profil. Einige Geräte verfügen möglicherweise vor der Bereitstellung von Netzwerkeinstellungen nicht über die erforderliche Netzwerkkonnektivität, um die Registrierung zu unterstützen. Durch Hinzufügen eines WLAN-Profils zum Registrierungspaket wird dem Gerät ermöglicht, Netzwerkkonnektivität herzustellen.  
 
  Zum Erstellen eines WLAN-Profils in Configuration Manager, befolgen Sie die Anweisungen unter [How to create Wi-Fi profiles in System Center Configuration Manager (Erstellen von WLAN-Profilen in System Center Configuration Manager)](../../protect/deploy-use/create-wifi-profiles.md).  
@@ -78,7 +78,7 @@ In den folgenden Aufgaben wird erläutert, wie Sie eine Massenregistrierung von 
 >
 > - Obwohl Configuration Manager über eine Einstellung für Proxyserverinformationen im WLAN-Profil verfügt, wird kein Proxyserver bei der Registrierung des Geräts konfiguriert. Wenn Sie einen Proxyserver mit den registrierten Geräten einrichten müssen, können Sie die Einstellungen mithilfe von Konfigurationselementen bereitstellen, sobald die Geräte registriert sind. Andernfalls können Sie ein zweites Paket mithilfe von Windows Bildverarbeitungs- und Konfigurations-Designer (Windows ICD) erstellen, und zusammen mit dem Massenregistrierungsprogramm bereitstellen.
 
-##  <a name="a-namebkmkcreateenrolla-create-an-enrollment-profile"></a><a name="bkmk_createEnroll"></a> Erstellen eines Anmeldungsprofils  
+##  <a name="bkmk_createEnroll"></a> Erstellen eines Anmeldungsprofils  
  Das Anmeldungsprofil ermöglicht Ihnen, Einstellungen festzulegen, die für die Registrierung der Geräte erforderlich sind, z. B. ein Zertifikatprofil, das dem Gerät dynamisch ein vertrauenswürdiges Stammzertifikat bereitstellt, und ein WLAN-Profil, das bei Bedarf die Netzwerkeinstellungen bereitstellt.  
 
  Stellen Sie vor dem Erstellen eines Anmeldungsprofils sicher, dass Sie über ein Zertifikatprofil und (falls erforderlich) ein WLAN-Profil verfügen. Weitere Informationen finden Sie unter [Erstellen eines Zertifikatprofils](#bkmk_createCert) und [Erstellen eines WLAN-Profils](#CreateWifi).  
@@ -104,7 +104,7 @@ In den folgenden Aufgaben wird erläutert, wie Sie eine Massenregistrierung von 
 
 8.  Bestätigen Sie die Einstellungen für das Registrierungspaket, und klicken Sie auf **Weiter**. Klicken Sie auf **Schließen** , um den Assistenten zu beenden.  
 
-##  <a name="a-namebkmkcreateppkga-create-an-enrollment-package-ppkg-file"></a><a name="bkmk_createPpkg"></a> Erstellen einer Registrierungspaketdatei (PPKG-Datei)  
+##  <a name="bkmk_createPpkg"></a> Erstellen einer Registrierungspaketdatei (PPKG-Datei)  
  Das Registrierungspaket ist die Datei, die Sie für die Massenregistrierung von Geräten für die lokale Verwaltung mobiler Geräte verwenden.  Diese Datei muss mit Configuration Manager erstellt werden. Mithilfe von Windows Bildverarbeitungs- und Konfigurations-Designer ( Windows ICD) können Sie ähnliche Pakettypen erstellen, aber nur in Configuration Manager erstellte Pakete können verwendet werden, um Geräte vom Anfang bis zum Ende für die lokale Verwaltung mobiler Geräte zu registrieren. Mit Windows ICD erstellte Pakete können nur den für die Registrierung erforderlichen Benutzerprinzipalnamen (UPN) bereitstellen, den eigentlichen Registrierungsvorgang aber nicht ausführen.  
 
  Zum Erstellen des Registrierungspakets muss das Windows Assessment and Deployment Toolkit (ADK) für Windows 10 verwendet werden.  Stellen Sie sicher, dass auf dem Server mit der Configuration Manager-Konsole Version 1511 von Windows ADK installiert ist. Weitere Informationen finden Sie unter [Herunterladen von Kits und Tools für Windows 10](https://msdn.microsoft.com/windows/hardware/dn913721.aspx)im Abschnitt über das ADK.  
@@ -125,7 +125,7 @@ In den folgenden Aufgaben wird erläutert, wie Sie eine Massenregistrierung von 
 
 4.  Klicken Sie auf **OK**.  
 
-##  <a name="a-namebkmkgetppkga-use-the-package-to-bulk-enroll-a-device"></a><a name="bkmk_getPpkg"></a> Verwenden des Pakets für die Massenregistrierung eines Geräts  
+##  <a name="bkmk_getPpkg"></a> Verwenden des Pakets für die Massenregistrierung eines Geräts  
  Sie können das Paket verwenden, um Geräte vor oder nach der Bereitstellung des Geräts mithilfe des OOBE-Prozesses (Out-of-Box-Experience) zu registrieren.   Das Registrierungspaket kann auch als Teil eines OEM-Bereitstellungspakets (Originalgerätehersteller, Original Equipment Manufacturer) hinzugefügt werden.  
 
  Das Paket muss physisch auf dem Gerät bereitgestellt werden, um es für die Massenregistrierung verwenden zu können. Sie können das Registrierungspaket, je nach Ihren Anforderungen, auf verschiedene Arten an das Gerät übermitteln, zum Beispiel:  
@@ -160,7 +160,7 @@ In den folgenden Aufgaben wird erläutert, wie Sie eine Massenregistrierung von 
 
 6.  Klicken Sie auf das Konto und dann auf **Synchronisieren**. Dadurch wird die Verwaltung mit gestartet.  
 
-##  <a name="a-namebkmkverifyenrolla-verify-enrollment-of-device"></a><a name="bkmk_verifyEnroll"></a> Überprüfen der Registrierung des Geräts  
+##  <a name="bkmk_verifyEnroll"></a> Überprüfen der Registrierung des Geräts  
  Sie können überprüfen, ob Geräte in der Configuration Manager-Konsole erfolgreich registriert wurden.  
 
 -   Starten Sie hierzu die Configuration Manager-Konsole.  
