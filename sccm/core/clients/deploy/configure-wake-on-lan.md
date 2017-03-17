@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 09f8bc7ee04ff64934030f825a791bc043341963
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="how-to-configure-wake-on-lan-in-system-center-configuration-manager"></a>Konfigurieren von Wake-On-LAN in System Center Configuration Manager
@@ -28,7 +29,7 @@ Geben Sie Einstellungen für Wake-On-LAN für System Center Configuration Manage
 
 Sie können Wake-On-LAN erweitern, indem Sie die Clienteinstellungen für den Aktivierungsproxy nutzen. Zum Nutzen des Aktivierungsproxys müssen Sie jedoch zuerst Wake-On-LAN für den Standort aktivieren und **Nur Aktivierungspakete verwenden** sowie die Option **Unicast** für die Wake-On-LAN-Übertragungsmethode angeben. Bei dieser Aktivierungslösung werden auch Ad-hoc-Verbindungen unterstützt, z. B. eine Remotedesktopverbindung.
 
-Verwenden Sie das erste Verfahren, um einen primären Standort für Wake-On-LAN zu konfigurieren. Verwenden Sie das zweite Verfahren, um die Clienteinstellungen für den Aktivierungsproxy zu konfigurieren. Mithilfe des zweiten Verfahrens werden die Clientstandardeinstellungen für die Aktivierungsproxy-Einstellungen konfiguriert, die für alle Computer der Hierarchie gelten. Wenn diese Einstellungen nur auf ausgewählte Computer angewendet werden sollen, erstellen Sie eine benutzerdefinierte Geräteeinstellung und weisen diese einer Sammlung mit den Computern zu, die Sie für den Aktivierungsproxy konfigurieren möchten. Weitere Informationen zum Erstellen benutzerdefinierter Clienteinstellungen finden Sie unter [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md).
+Verwenden Sie das erste Verfahren, um einen primären Standort für Wake-On-LAN zu konfigurieren. Verwenden Sie das zweite Verfahren, um die Clienteinstellungen für den Aktivierungsproxy zu konfigurieren. Mithilfe des zweiten Verfahrens werden die Clientstandardeinstellungen für die Aktivierungsproxy-Einstellungen konfiguriert, die für alle Computer der Hierarchie gelten. Wenn diese Einstellungen nur auf ausgewählte Computer angewendet werden sollen, erstellen Sie eine benutzerdefinierte Geräteeinstellung und weisen diese einer Sammlung mit den Computern zu, die Sie für den Aktivierungsproxy konfigurieren möchten. Weitere Informationen zum Erstellen benutzerdefinierter Clienteinstellungen finden Sie unter [Konfigurieren von Geräteclienteinstellungen in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md).
 
 Ein Computer, der die Clienteinstellungen des Aktivierungsproxys erhält, wird seine Netzwerkverbindung wahrscheinlich für 1-3 Sekunden unterbrechen. Der Grund hierfür ist, dass der Client die Netzwerkschnittstellenkarte zurücksetzen muss, um den Treiber des Aktivierungsproxys zuzulassen.
 
@@ -57,9 +58,4 @@ Sie können die folgenden Wake-On-LAN-Berichte zum Überwachen der Installation 
 
 > [!TIP]
 > Mit einer Verbindung zu einem Computer im Standbymodus können Sie testen, ob der Aktivierungsproxy funktioniert. Stellen Sie beispielsweise eine Verbindung mit einem freigegebenen Ordner auf diesem Computer her, oder versuchen Sie, per Remotedesktop eine Verbindung zu dem Computer herzustellen. Stellen Sie bei Verwendung von DirectAccess sicher, dass die IPv6-Präfixe funktionieren, indem Sie die gleichen Tests für einen Computer im Standbymodus durchführen, der sich momentan im Internet befindet.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
