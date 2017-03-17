@@ -29,7 +29,7 @@ ms.lasthandoff: 01/21/2017
 
 Berücksichtigen Sie die folgenden Anforderungen vor der Vorbereitung der Configuration Manager\-Infrastruktur für die lokale Verwaltung mobiler Geräte.
 
-##  <a name="a-namebkmkdevicesa-supported-devices"></a><a name="bkmk_devices"></a> Unterstützte Geräte  
+##  <a name="bkmk_devices"></a> Unterstützte Geräte  
  Die lokale Verwaltung mobiler Geräte ermöglicht das Verwalten mobiler Geräte mithilfe der in die Gerätebetriebssysteme integrierten Verwaltungsfunktionen.  Die Verwaltungsfunktionen basieren auf dem Geräteverwaltungsstandard von Open Mobile Alliance (OMA), und viele Geräteplattformen nutzen diesen Standard für die Geräteverwaltung.  In der Dokumentation und der Benutzeroberfläche der Configuration Manager-Konsole werden diese Geräte als **moderne Geräte** bezeichnet, um sie von anderen Geräten zu unterscheiden, für deren Verwaltung der Configuration Manager-Client erforderlich ist.  
 
  > [!NOTE]  
@@ -41,7 +41,7 @@ Berücksichtigen Sie die folgenden Anforderungen vor der Vorbereitung der Config
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise   
 
-##  <a name="a-namebkmkintunea-use-of-the--microsoft-intune-subscription"></a><a name="bkmk_intune"></a> Verwenden des Microsoft Intune-Abonnements  
+##  <a name="bkmk_intune"></a> Verwenden des Microsoft Intune-Abonnements  
  Für den Einstieg in die lokale Verwaltung mobiler Geräte benötigen Sie ein Microsoft Intune\-Abonnement. Das Abonnement ist nur erforderlich, um die Lizenzierung der Geräten zu verfolgen und dient nicht zum Verwalten oder Speichern von Geräteverwaltungsinformationen. Die gesamte Verwaltung erfolgt mithilfe der lokalen Configuration Manager-Infrastruktur in Ihrem Unternehmen.  
 
  > [!NOTE]  
@@ -54,7 +54,7 @@ Berücksichtigen Sie die folgenden Anforderungen vor der Vorbereitung der Config
 
  Weitere Informationen zum Einrichten des Intune-Abonnements finden Sie unter [Einrichten eines Microsoft Intune-Abonnements in System Center Configuration Manager](../../mdm/get-started/set-up-intune-subscription-on-premises-mdm.md).  
 
-##  <a name="a-namebkmkrolesa-required-site-system-roles"></a><a name="bkmk_roles"></a> Erforderliche Standortsystemrollen  
+##  <a name="bkmk_roles"></a> Erforderliche Standortsystemrollen  
  Die lokale Verwaltung mobiler Geräte erfordert mindestens jeweils eine der folgenden Standortsystemrollen:  
 
 -   **Anmeldungsproxypunkt** zur Unterstützung von Anmeldungsanforderungen.  
@@ -69,11 +69,11 @@ Berücksichtigen Sie die folgenden Anforderungen vor der Vorbereitung der Config
 
  Diese Standortsystemrollen können auf dem einzigen Standortsystemserver installiert oder separat auf verschiedenen Servern ausgeführt werden, je nach den Bedürfnissen Ihrer Organisation. Jeder für die lokale Verwaltung mobiler Geräte verwendete Standortsystemserver muss als HTTPS\-Endpunkt für die Kommunikation mit vertrauenswürdigen Geräten konfiguriert werden. Weitere Informationen finden Sie unter [Erforderliche vertrauenswürdige Kommunikation](#bkmk_trustedComs).  
 
- Weitere Informationen zur Planung der Standortsystemrollen finden Sie unter [Plan for site system servers and site system roles for System Center Configuration Manager](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).  
+ Weitere Informationen zur Planung der Standortsystemrollen finden Sie unter [Planen von Standortsystemservern und Standortsystemrollen für System Center Configuration Manager](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).  
 
- Weitere Informationen zum Hinzufügen der erforderlichen Standortsystemrollen finden Sie unter [Install site system roles for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md).  
+ Weitere Informationen zum Hinzufügen der erforderlichen Standortsystemrollen finden Sie unter [Installieren von Standortsystemrollen für die lokale Verwaltung mobiler Geräte in System Center Configuration Manager](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md).  
 
-##  <a name="a-namebkmktrustedcomsa-required-trusted-communications"></a><a name="bkmk_trustedComs"></a> Erforderliche vertrauenswürdige Kommunikation  
+##  <a name="bkmk_trustedComs"></a> Erforderliche vertrauenswürdige Kommunikation  
  Die lokale Verwaltung mobiler Geräte erfordert, dass die Standortsystemrollen für die HTTPS\-Kommunikation aktiviert sind. Je nach Ihren Anforderungen können Sie die Zertifizierungsstelle Ihres Unternehmens zum Herstellen der vertrauenswürdigen Verbindungen zwischen Servern und Geräten oder eine öffentlich verfügbare Zertifizierungsstelle als vertrauenswürdige Zertifizierungsstelle verwenden.  In beiden Fällen benötigen Sie ein mit IIS konfiguriertes Webserverzertifikat auf den Standortsystemservern, auf denen die erforderlichen Standortsystemrollen gehostet werden. Außerdem muss auf den Geräten, die eine Verbindung mit diesen Servern herstellen müssen, das Stammzertifikat dieser Zertifizierungsstelle installiert sein.  
 
  Wenn Sie die Zertifizierungsstelle Ihres Unternehmens für die vertrauenswürdige Kommunikation verwenden, müssen Sie die folgenden Aufgaben ausführen:  
@@ -106,7 +106,7 @@ Berücksichtigen Sie die folgenden Anforderungen vor der Vorbereitung der Config
 
  Weitere Informationen finden Sie unter [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)  
 
-##  <a name="a-namebkmkenrollmenta-enrollment-considerations"></a><a name="bkmk_enrollment"></a> Überlegungen zur Registrierung  
+##  <a name="bkmk_enrollment"></a> Überlegungen zur Registrierung  
  Zum Aktivieren der Geräteregistrierung für die lokale Verwaltung mobiler Geräte müssen Benutzer über Registrierungsberechtigungen verfügen, und ihre Geräte müssen zur vertrauenswürdigen Kommunikation mit den Standortsystemservern in der Lage sein, auf denen die erforderlichen Standortsystemrollen gehostet werden.  
 
  Richten Sie zum Erteilen von Registrierungsberechtigungen an Benutzer in den Configuration Manager-Clienteinstellungen ein Anmeldungsprofil ein. Sie können die Clientstandardeinstellungen verwenden, um das Anmeldungsprofil per Push an alle ermittelten Benutzer zu übertragen, oder Sie können das Anmeldungsprofil in benutzerdefinierten Clienteinstellungen einrichten und die Einstellungen per Push an eine oder mehrere Benutzersammlungen senden.  
