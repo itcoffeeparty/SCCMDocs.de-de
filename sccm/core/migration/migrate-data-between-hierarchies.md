@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: a8959c72608a1531fb323176c33a848a4a669b1c
 ms.openlocfilehash: dface33392c2a2a662522656eabf0936b52b28fc
+ms.lasthandoff: 12/29/2016
 
 
 ---
@@ -42,7 +43,7 @@ Berücksichtigen Sie bei der Planung Ihrer Migrationsstrategie die folgenden Pun
 
 -   Sie können Daten von mehreren Quellstandorten an einen einzelnen Standort in der Zielhierarchie verschieben.  
 
-##  <a name="a-namebkmkmigrationconceptsa-concepts-for-migration"></a><a name="BKMK_MigrationConcepts"></a> Konzepte für die Migration  
+##  <a name="BKMK_MigrationConcepts"></a> Konzepte für die Migration  
  Bei einer Migration werden Ihnen möglicherweise die folgenden Konzepte und Begriffe begegnen.  
 
 |Konzept oder Begriff|Weitere Informationen|  
@@ -52,11 +53,11 @@ Berücksichtigen Sie bei der Planung Ihrer Migrationsstrategie die folgenden Pun
 |Zielhierarchie|Eine Hierarchie in System Center Configuration Manager, in die bei der Migration Daten aus einer Quellhierarchie importiert werden.|  
 |Datensammlung|Fortlaufender Vorgang zur Identifikation der Informationen in einer Quellhierarchie, die zur Zielhierarchie migriert werden können. Configuration Manager überprüft die Quellhierarchie nach einem Zeitplan, um Änderungen an Informationen in der Quellhierarchie zu erkennen, die zuvor migriert wurden und die möglicherweise in der Zielhierarchie aktualisiert werden sollen.<br /><br /> Weitere Informationen finden Sie im Abschnitt [Datensammlung](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Data_Gathering) des Themas [Planen einer Strategie für Quellhierarchien in System Center Configuration Manager](../../core/migration/planning-a-source-hierarchy-strategy.md).|  
 |Migrationsaufträge|Prozess, mit dem die zu migrierenden Objekte festgelegt ^werden und die Objektmigration zur Zielhierarchie verwaltet wird.<br /><br /> Weitere Informationen finden Sie unter [Planen einer Strategie für Migrationsaufträge in System Center Configuration Manager](../../core/migration/planning-a-migration-job-strategy.md)|  
-|Clientmigration|Prozess, mit dem von Clients verwendete Daten aus der Datenbank des Quellstandorts in die der Zielhierarchie übertragen werden. Auf diese Datenmigration folgt dann die Aktualisierung der auf Geräten installierten Clientsoftware auf die Version der Zielhierarchie.<br /><br /> Weitere Informationen finden Sie unter [Planning a client migration strategy in System Center Configuration Manager](../../core/migration/planning-a-client-migration-strategy.md).|  
+|Clientmigration|Prozess, mit dem von Clients verwendete Daten aus der Datenbank des Quellstandorts in die der Zielhierarchie übertragen werden. Auf diese Datenmigration folgt dann die Aktualisierung der auf Geräten installierten Clientsoftware auf die Version der Zielhierarchie.<br /><br /> Weitere Informationen finden Sie unter [Planen einer Strategie für Migrationsaufträge in System Center Configuration Manager](../../core/migration/planning-a-client-migration-strategy.md).|  
 |Freigegebene Verteilungspunkte|Die Verteilungspunkte aus der Quellhierarchie, die in der Migrationsphase für die Zielhierarchie freigegeben werden.<br /><br /> Während der Migrationsphase können Clients, die Standorten in der Zielhierarchie zugewiesen sind, Inhalte von freigegebenen Verteilungspunkten erhalten.<br /><br /> Weitere Informationen finden Sie im Abschnitt [Freigeben von Verteilungspunkten zwischen Quell- und Zielhierarchien](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration) des Themas [Planen einer Migrationsstrategie für die Inhaltsbereitstellung in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md).|  
 |Migrationsüberwachung|Überwachen der Migrationsaktivitäten. Sie überwachen den Migrationsfortschritt und -erfolg im Arbeitsbereich **Verwaltung** unter dem Knoten **Migration**.<br /><br /> Weitere Informationen finden Sie unter [Planen der Überwachung der Migrationsaktivitäten in System Center Configuration Manager](../../core/migration/planning-to-monitor-migration-activity.md).|  
 |Sammeln von Daten beenden|Das Beenden der Datensammlung von Quellstandorten. Wenn keine weiteren Daten mehr aus einer Quellhierarchie migriert oder die Migrationsaktivitäten angehalten werden sollen, kann die Zielhierarchie entsprechend konfiguriert werden, dass die Datensammlung in der Quellhierarchie beendet wird.<br /><br /> Weitere Informationen finden Sie im Abschnitt [Datensammlung](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Data_Gathering) des Themas [Planen einer Strategie für Quellhierarchien in System Center Configuration Manager](../../core/migration/planning-a-source-hierarchy-strategy.md).|  
-|Bereinigung der Migrationsdaten|Das Abschließen der Migration von einer Quellhierarchie durch Entfernen von migrationsbezogenen Informationen aus der Datenbank der Zielhierarchie.<br /><br /> Weitere Informationen finden Sie unter [Planning to complete migration in System Center Configuration Manager](../../core/migration/planning-to-complete-migration.md).|  
+|Bereinigung der Migrationsdaten|Das Abschließen der Migration von einer Quellhierarchie durch Entfernen von migrationsbezogenen Informationen aus der Datenbank der Zielhierarchie.<br /><br /> Weitere Informationen finden Sie unter [Planen des Abschließens der Migration in System Center Configuration Manager](../../core/migration/planning-to-complete-migration.md).|  
 
 ## <a name="typical-workflow-for-migration"></a>Typischer Workflow bei der Migration  
 So richten Sie einen typischen Workflows bei der Migration ein:
@@ -75,7 +76,7 @@ So richten Sie einen typischen Workflows bei der Migration ein:
 
 Nach dem Migrieren von Daten aus einer Configuration Manager-Quellhierarchie, die Sie nicht mehr zum Verwalten der Umgebung verwenden, können Sie die diese Quellhierarchie und Infrastruktur außer Betrieb setzen.  
 
-##  <a name="a-namebkmkmigrationscenariosa-migration-scenarios"></a><a name="BKMK_MigrationScenarios"></a> Migrationsszenarien  
+##  <a name="BKMK_MigrationScenarios"></a> Migrationsszenarien  
  Configuration Manager unterstützt die folgenden Migrationsszenarien.  
 
 > [!NOTE]  
@@ -110,9 +111,4 @@ Nach dem Migrieren von Daten aus einer Configuration Manager-Quellhierarchie, di
 
 ## <a name="see-also"></a>Siehe auch  
  [Starten der Verwendung von System Center Configuration Manager](../../core/servers/deploy/start-using.md)
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 
