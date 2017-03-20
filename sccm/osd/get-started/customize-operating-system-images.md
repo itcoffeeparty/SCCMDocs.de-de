@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: 485cb3ca4988f983c1ec71b6c8daf136571bf0ea
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -28,10 +29,10 @@ ms.openlocfilehash: 485cb3ca4988f983c1ec71b6c8daf136571bf0ea
 
 Betriebssystemimages in System Center Configuration Manager sind WIM-Dateien und stellen eine komprimierte Sammlung von Referenzdateien und -ordnern dar, die für die erfolgreiche Installation und Konfiguration eines Betriebssystems auf einem Computer erforderlich sind. Ein benutzerdefiniertes Betriebssystemabbild wird von einem Referenzcomputer erstellt und erfasst, den Sie mit allen erforderlichen Betriebssystemdateien, Unterstützungsdateien, Softwareupdates, Tools und sonstigen Softwareapps konfigurieren. Sie entscheiden, in welchem Umfang der Referenzcomputer manuell konfiguriert wird. Mithilfe einer Tasksequenz zum Erstellen und Erfassen können Sie die Konfiguration des Referenzcomputers vollständig automatisieren. Alternativ konfigurieren Sie bestimmte Aspekte des Referenzcomputers manuell und automatisieren dann den Rest, indem Sie Tasksequenzen verwenden, oder Sie konfigurieren Referenzcomputer ohne Tasksequenzen vollständig manuell. Folgende Abschnitte bieten Informationen zum Anpassen eines Betriebssystems.
 
-##  <a name="a-namebkmkpreparereferencecomputera-prepare-for-the--reference-computer"></a><a name="BKMK_PrepareReferenceComputer"></a> Vorbereiten des Referenzcomputers  
+##  <a name="BKMK_PrepareReferenceComputer"></a> Vorbereiten des Referenzcomputers  
  Bevor Sie ein Betriebssystemabbild von einem Referenzcomputer erfassen, müssen einige Punkte bedacht werden.  
 
-###  <a name="a-namebkmkrefcomputerdecidea-decide-between-an-automated-or-manual-configuration"></a><a name="BKMK_RefComputerDecide"></a> Entscheiden zwischen automatisierter oder manueller Konfiguration  
+###  <a name="BKMK_RefComputerDecide"></a> Entscheiden zwischen automatisierter oder manueller Konfiguration  
  Im Folgenden werden die Vor- und Nachteile der automatischen und manuellen Konfiguration des Referenzcomputers dargestellt:  
 
 #### <a name="automated-configuration"></a>Automatische Konfiguration  
@@ -66,7 +67,7 @@ Betriebssystemimages in System Center Configuration Manager sind WIM-Dateien und
 
 -   Erfordert eine Person, die aktiv am gesamten Prozess beteiligt ist.  
 
-###  <a name="a-namebkmkrefcomputerconsiderationsa-considerations-for-the-reference-computer"></a><a name="BKMK_RefComputerConsiderations"></a> Überlegungen zum Referenzcomputer  
+###  <a name="BKMK_RefComputerConsiderations"></a> Überlegungen zum Referenzcomputer  
  Im Folgenden werden die grundlegenden Punkte aufgezeigt, die Sie bei der Konfiguration eines Referenzcomputers beachten müssen.  
 
 -   **Bereitzustellendes Betriebssystem**  
@@ -110,7 +111,7 @@ Betriebssystemimages in System Center Configuration Manager sind WIM-Dateien und
 
      Sie können den Referenzcomputer mit entsprechenden benutzerdefinierten Desktopeigenschaften konfigurieren, die beim Erfassen des Betriebssystemabbilds vom Referenzcomputer berücksichtigt werden sollen. Zu den Desktopeigenschaften zählen Hintergrundbild, Branding und ein Standardbenutzerprofil.  
 
-##  <a name="a-namebkmkmanuallybuildreferencea-manually-build-a-reference-computer"></a><a name="BKMK_ManuallyBuildReference"></a> Manuelles Erstellen eines Referenzcomputers  
+##  <a name="BKMK_ManuallyBuildReference"></a> Manuelles Erstellen eines Referenzcomputers  
  Gehen Sie wie folgt vor, um einen Referenzcomputer manuell zu erstellen.  
 
 > [!NOTE]  
@@ -133,13 +134,8 @@ Betriebssystemimages in System Center Configuration Manager sind WIM-Dateien und
 
  Sobald der Referenzcomputer bereit ist, erfassen Sie mithilfe einer Tasksequenz das Betriebssystemabbild vom Referenzcomputer.  Detaillierte Anweisungen finden Sie unter [Erfassen eines Betriebssystemabbilds von einem vorhandenen Referenzcomputer](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_CaptureExistingRefComputer).  
 
-##  <a name="a-namebkmkusetstobuildreferencea-use-a-task-sequence-to-build-a-reference-computer"></a><a name="BKMK_UseTSToBuildReference"></a> Verwenden einer Tasksequenz zum Erstellen eines Referenzcomputers  
+##  <a name="BKMK_UseTSToBuildReference"></a> Verwenden einer Tasksequenz zum Erstellen eines Referenzcomputers  
  Sie können den Prozess zum Erstellen eines Referenzcomputers automatisieren, indem Sie mithilfe einer Tasksequenz das Betriebssystem, Treiber, Anwendungen usw. bereitstellen.  Führen Sie die folgenden Schritte aus, um den Referenzcomputer zu erstellen, von dem Sie anschließend das Betriebssystemabbild erfassen.  
 
--   Nutzen Sie eine Tasksequenz zum Erstellen und Erfassen des Betriebssystemabbilds vom Referenzcomputer.  Eine Schritt-für-Schritt-Anleitung finden Sie unter [Use a task sequence to build and capture a reference computer](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS).  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
+-   Nutzen Sie eine Tasksequenz zum Erstellen und Erfassen des Betriebssystemabbilds vom Referenzcomputer.  Eine Schritt-für-Schritt-Anleitung finden Sie unter [Verwenden einer Tasksequenz zum Erstellen und Erfassen eines Referenzcomputers](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS).  
 
