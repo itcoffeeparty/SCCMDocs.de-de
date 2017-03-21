@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 30af3326578d39c6d995672071705bcaeb877e4d
-ms.openlocfilehash: 8af2a797ad4e87d870bb27873a7428e96f63b76d
-ms.lasthandoff: 02/23/2017
+ms.sourcegitcommit: 8f4ec982a54cf3cefef310268a54850e70e2e63a
+ms.openlocfilehash: 49e3a9d6f4b8e1afbb76fcba33a7fb58e5a6b13f
+ms.lasthandoff: 03/13/2017
 
 
 ---
@@ -60,7 +60,7 @@ Wenn Sie über das Baselinemedium für Version 1511 verfügen, können Sie die f
 
 
 > [!TIP]  
->  Wenn Sie das Upgrade für eine Version von System Center 2012 Configuration Manager ausführen, können Sie den Upgradeprozess unter Umständen vereinfachen. Weitere Informationen finden Sie unter:  
+>  Wenn Sie das Upgrade für eine Version von System Center 2012 Configuration Manager auf Current Branch ausführen, können Sie den Upgradeprozess unter Umständen vereinfachen. Weitere Informationen finden Sie unter:  
 >   
 >  -   Der Abschnitt [Baseline und Update-Versionen](../../../../core/servers/manage/updates.md#bkmk_Baselines) unter [Updates für System Center Configuration Manager](../../../../core/servers/manage/updates.md)  
 >  -   [Der Ordner „CD.Latest“ für System Center Configuration Manager](../../../../core/servers/manage/the-cd.latest-folder.md)  
