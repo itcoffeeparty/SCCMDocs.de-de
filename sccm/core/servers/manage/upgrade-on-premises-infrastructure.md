@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 2e711cce2435957f3e85dad08f17260e1a224fc2
 ms.openlocfilehash: c6448932e91a02984ca57cef0b75c10ea3f43fa1
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -32,7 +33,7 @@ Verwenden Sie die Informationen in diesem Thema, um die Serverinfrastruktur zu a
 
 - Wenn Sie Ihre System Center Configuration Manager-Infrastruktur auf eine neue Version aktualisieren möchten, lesen Sie [Updates für System Center Configuration Manager](/sccm/core/servers/manage/updates).
 
-##  <a name="a-namebkmksupconfigupgradesitesrva-upgrade-the-operating-system-of-site-systems"></a><a name="BKMK_SupConfigUpgradeSiteSrv"></a> Durchführen eines Upgrades für das Betriebssystem von Standortsystemen  
+##  <a name="BKMK_SupConfigUpgradeSiteSrv"></a> Durchführen eines Upgrades für das Betriebssystem von Standortsystemen  
  Configuration Manager unterstützt in folgenden Situationen das direkte Upgrade des Betriebssystems von Servern, auf denen ein Standortserver gehostet wird, sowie von Remoteservern, auf denen eine Standortsystemrolle gehostet wird:  
 
 -   Direktes Upgrade auf ein höheres Windows Server Service Pack, sofern die gewählte Windows Service Pack-Stufe von Configuration Manager unterstützt wird.  
@@ -148,7 +149,7 @@ Die folgenden Windows Server-Upgradeszenarios werden zwar häufig angefragt, wer
 
 
 
-##  <a name="a-namebkmksupconfigupgradeclienta-upgrade-the-operating-system-of-configuration-manager-clients"></a><a name="BKMK_SupConfigUpgradeClient"></a> Durchführen eines Upgrades für das Betriebssystem von Configuration Manager-Clients  
+##  <a name="BKMK_SupConfigUpgradeClient"></a> Durchführen eines Upgrades für das Betriebssystem von Configuration Manager-Clients  
  Configuration Manager unterstützt in den folgenden Situationen ein direktes Upgrade für das Betriebssystem von Configuration Manager-Clients:  
 
 -   Direktes Upgrade auf ein höheres Windows Service Pack, sofern die gewählte Service Pack-Stufe von Configuration Manager unterstützt wird.  
@@ -157,7 +158,7 @@ Die folgenden Windows Server-Upgradeszenarios werden zwar häufig angefragt, wer
 
 -   Windows 10-Dienstupgrades von Build zu Build.  Weitere Informationen finden Sie unter [Verwalten von Windows als Dienst mit System Center Configuration Manager](../../../osd/deploy-use/manage-windows-as-a-service.md).  
 
-##  <a name="a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server"></a><a name="BKMK_SupConfigUpgradeDBSrv"></a> Ausführen eines Upgrades für SQL Server auf dem Standortdatenbankserver  
+##  <a name="BKMK_SupConfigUpgradeDBSrv"></a> Ausführen eines Upgrades für SQL Server auf dem Standortdatenbankserver  
   Configuration Manager unterstützt ein direktes Upgrade von SQL Server von einer unterstützten Version von SQL auf dem Standortdatenbankserver. Der SQL Server-Upgradeszenarios in diesem Bereich, die von Configuration Manager unterstützt werden, und enthalten Anforderungen für die einzelnen Szenarios.
 
  Weitere Informationen über SQL Server-Versionen, die von Configuration Manager unterstützt werden, finden Sie unter [Support for SQL Server versions for System Center Configuration Manager (Unterstützung für SQL Server-Versionen für System Center Configuration Manager)](../../../core/plan-design/configs/support-for-sql-server-versions.md).  
@@ -196,8 +197,8 @@ Um den SQL Server-CE-Kompatibilitätsgrad zu ermitteln, der für Ihre Standortda
 
 
 Weitere Informationen zu SQL Server finden Sie in der SQL Server-Dokumentation auf TechNet:
--   [Upgrade auf SQL Server 2012](http://technet.microsoft.com/library/ms143393\(v=sql.110)
--   [Upgrade auf SQL Server 2014](http://technet.microsoft.com/library/ms143393\(v=sql.120)  
+-   [Upgrade auf SQL Server 2012](http://technet.microsoft.com/library/ms143393\(v=sql.110))
+-   [Upgrade auf SQL Server 2014](http://technet.microsoft.com/library/ms143393\(v=sql.120))  
 -   [Upgrade auf SQL Server 2016](https://technet.microsoft.com/library/bb677622(v=sql.130))
 
 
@@ -210,9 +211,4 @@ Weitere Informationen zu SQL Server finden Sie in der SQL Server-Dokumentation a
 
 > [!NOTE]  
 >  Wenn Sie die verwendete SQL Server-Edition am Standort der zentralen Verwaltung von einer Standard Edition entweder in eine Datencenter oder Enterprise Edition ändern, wird die Datenbankpartition, die die Anzahl der von der Hierarchie unterstützten Clients begrenzt, nicht geändert.
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
