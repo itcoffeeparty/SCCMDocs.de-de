@@ -1,7 +1,7 @@
 ---
 title: Planen von Endpoint Protection | Microsoft-Dokumentation
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/07/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,8 +14,9 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: 927732150b99bbe362a3ed36976b49a716efc14c
+ms.sourcegitcommit: 8f4ec982a54cf3cefef310268a54850e70e2e63a
+ms.openlocfilehash: 6c4273dae99ec8db2cf827f463b973e876d0d35b
+ms.lasthandoff: 03/13/2017
 
 
 ---
@@ -92,11 +93,7 @@ Ab Version 1606 von Configuration Manager (Current Branch) kann Endpoint Protect
  ![Endpoint Protection-Workflow](../media/Endpoint-Protection-Workflow.gif)
 
 ## <a name="endpoint-protection-client-for-mac-computers-and-linux-servers"></a>Endpoint Protection-Client für Macintosh-Computer und Linux-Server  
- System Center 2012 umfasst einen Endpoint Protection-Client für Linux- und Macintosh-Computer. Diese Clients sind nicht im Lieferumfang von Configuration Manager enthalten. Stattdessen müssen Sie die folgenden Produkte aus dem [Microsoft Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter/default.aspx) herunterladen.  
-
--   System Center 2012 Endpoint Protection für den Macintosh  
-
--   System Center 2012 Endpoint Protection für Linux  
+ System Center umfasst einen Endpoint Protection-Client für Linux- und Mac-Computer. Diese Clients sind nicht im Lieferumfang von Configuration Manager enthalten. Stattdessen müssen Sie die folgenden Produkte aus dem [Microsoft Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter/default.aspx) herunterladen.  
 
 > [!IMPORTANT]  
 >  Sie müssen ein Microsoft-Volumenlizenz-Kunde sein, damit Sie die Endpoint Protection-Installationsdateien für Linux und den Macintosh herunterladen können.  
@@ -114,16 +111,9 @@ Ab Version 1606 von Configuration Manager (Current Branch) kann Endpoint Protect
  Wenn Sie benutzerdefinierte Clienteinstellungen konfigurieren, können Sie Folgendes tun:  
 
 -   Passen Sie Antischadsoftware und Sicherheitseinstellungen an unterschiedliche Bereiche Ihrer Organisation an.  
-
 -   Testen Sie vor einer Bereitstellung für die gesamte Hierarchie an einer kleinen Gruppe von Computern die Auswirkungen, die das Ausführen von Endpoint Protection hat.  
-
 -   Fügen Sie im Lauf der Zeit weitere Clients zur Sammlung hinzu, um Ihre Bereitstellung des Endpoint Protection-Clients in Phasen zu untergliedern.  
 
 ### <a name="distributing-definition-updates-by-using-software-updates"></a>Verteilen von Definitionsupdates mithilfe von Softwareupdates  
  Bei Verwendung von Configuration Manager-Softwareupdates zur Verteilung der Definitionsupdates, sollten Sie Definitionsupdates in einem Paket platzieren, das keine anderen Softwareupdates enthält. Dadurch wird der Größe des Updatepakets Definition kleiner wodurch an Verteilungspunkte schneller replizieren.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

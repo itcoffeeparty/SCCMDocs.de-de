@@ -2,7 +2,7 @@
 title: "Unterstützte Standortsystemserver | Microsoft-Dokumentation"
 description: "Erfahren Sie, welche Windows-Versionen Sie verwenden können, um einen System Center Configuration Manager-Standort oder eine entsprechende Standortsystemrolle zu hosten."
 ms.custom: na
-ms.date: 2/1/2017
+ms.date: 3/9/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4688b4b12a7afa5fcfdc0e42f984271d98f10316
-ms.openlocfilehash: bb017e575e0318b73cc5ea4e27fd33b1e9c2a02a
+ms.sourcegitcommit: 477ffa5d61d2dfaedf8a3a1f5687e2d72698ad28
+ms.openlocfilehash: f175e11d9402e7c57c45edb4d5bbe969de5dcdf7
+ms.lasthandoff: 03/10/2017
 
 
 ---
@@ -231,24 +232,9 @@ Ab Version 1606 mit dem Hotfixrollup von KB3186654 (oder Baselineversion 1606, d
 ## <a name="windows-server-2008-with-sp2-x86-x64-standard-enterprise-and-datacenter"></a>Windows Server 2008 mit SP2 (x86, x64): Standard, Enterprise und Datacenter  
  Windows Server 2008 unterliegt nun dem erweiterten Support und nicht mehr dem grundlegenden Support, wie im [Microsoft-Support-Lifecycle](https://support.microsoft.com/lifecycle) ausführlich erläutert. Weitere Informationen zum künftigen Support für diese Betriebssysteme als Standortsystemserver mit Configuration Manager finden Sie unter [Entfernte und veraltete Features für System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
 
-**Standortserver:**  
-
--   Standort der zentralen Verwaltung  
-
--   Primärer Standort  
-
--   Sekundärer Standort  
+Dieses Betriebssystem wird für Standortserver oder Standortsystemrollen mit Ausnahme des Verteilungspunkts und des Pullverteilungspunkts nicht unterstützt. Sie können dieses Betriebssystem weiterhin als Verteilungspunkt verwenden, bis die Einstellung dieses Supports angekündigt wird oder der erweiterte Support für dieses Betriebssystem abläuft. Weitere Informationen finden Sie unter [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008 (Bei der Installation von System Center Configuration Manager CB und LTSB auf Windows Server 2008 tritt ein Fehler auf)](https://support.microsoft.com/help/4015095).
 
 **Standortsystemserver:**  
-
--   Anwendungskatalog-Webdienstpunkt  
-
--   Anwendungskatalog-Websitepunkt  
-
--   Asset Intelligence-Synchronisierungspunkt  
-
--   Zertifikatregistrierungspunkt  
-
 -   Verteilungspunkt  
 
     -   Von Verteilungspunkten unter diesem Betriebssystem wird Multicast nicht unterstützt.  
@@ -257,29 +243,7 @@ Ab Version 1606 mit dem Hotfixrollup von KB3186654 (oder Baselineversion 1606, d
 
     -   Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
--   Endpoint Protection-Punkt  
 
--   Anmeldungspunkt  
-
--   Anmeldungsproxypunkt  
-
--   Fallbackstatuspunkt  
-
--   Verwaltungspunkt
-
--   Reporting Services-Punkt  
-
--   Dienstverbindungspunkt  
-
--   Standortdatenbankserver  
-
-     Standortdatenbankserver werden auf einem Domänencontroller ohne Schreibzugriff (Read-Only Domain Controller, RODC) nicht unterstützt. Weitere Informationen finden Sie unter [You may encounter problems when installing SQL Server on a domain controller (Beim Installieren eines SQL Servers auf einem Domänencontroller treten möglicherweise Probleme auf)](http://go.microsoft.com/fwlink/p/?LinkId=264856) in der Microsoft Knowledge Base. Darüber hinaus werden sekundäre Standortserver nicht auf jedem Domänencontroller unterstützt.  
-
--   SMS-Anbieter  
-
--   Softwareupdatepunkt  
-
--   Zustandsmigrationspunkt  
 
 ## <a name="windows-10-x86-x64-pro-and-enterprise"></a>Windows 10 (x86, x64): Pro und Enterprise  
 **Standortsystemserver:**  
@@ -345,9 +309,4 @@ Ab Version 1606 mit dem Hotfixrollup von KB3186654 (oder Baselineversion 1606, d
 -   Nur die 64-Bit-Version wird unterstützt.  
 
 -   Verteilungspunkte unter diesem Betriebssystem unterstützen PXE oder Multicast nicht.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

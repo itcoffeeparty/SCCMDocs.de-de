@@ -2,7 +2,7 @@
 title: Veraltete Features | Microsoft Docs
 description: "Hier finden Sie Informationen zu den Features, Produkten und Betriebssystemen, die von System Center Configuration Manager nicht mehr unterstützt werden."
 ms.custom: na
-ms.date: 1/5/2017
+ms.date: 3/9/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1948e2914fff91f156dd8956c018ff0fabcda2f9
-ms.openlocfilehash: 3a1edd1b59676e59d4bfcd4c01a23f7a04f91f4f
+ms.sourcegitcommit: 477ffa5d61d2dfaedf8a3a1f5687e2d72698ad28
+ms.openlocfilehash: cb57a8699081415af7e2e9dc29b0a321f100823d
+ms.lasthandoff: 03/10/2017
 
 
 ---
@@ -50,7 +51,7 @@ Weitere Informationen finden Sie in folgenden Quellen:
 |-|-|-|  
 |Netzwerkzugriffsschutz (Network Access Protection, NAP) wie in System Center 2012 Configuration Manager|10. Juli 2015|Version 1511|  
 |Out-of-Band-Verwaltung wie in System Center 2012 Configuration Manager|16. Oktober 2015|Version 1511|
-|Tasksequenzen: <br /> – OSDPreserveDriveLetter  <br /><br /> Während einer standardmäßigen Betriebssystembereitstellung bestimmt Windows Setup den Laufwerkbuchstaben, der am besten zur Verwendung geeignet ist (in der Regel C:). Wenn Sie ein anderes Laufwerk zur Verwendung angeben möchten, können Sie den Speicherort im Tasksequenzschritt „Betriebssystem anwenden“ ändern. Wechseln Sie zur Einstellung **Wählen Sie den Standort aus, an dem Sie dieses Betriebssystem anwenden möchten. **, wählen Sie **Bestimmter Buchstabe für logisches Laufwerk ** aus und wählen Sie das Laufwerk aus, das Sie verwenden möchten. |20. Juni 2016 |Version 1606 |
+|Tasksequenzen: <br /> – OSDPreserveDriveLetter  <br /><br /> Während einer standardmäßigen Betriebssystembereitstellung bestimmt Windows Setup den Laufwerkbuchstaben, der am besten zur Verwendung geeignet ist (in der Regel C:). Wenn Sie ein anderes Laufwerk zur Verwendung angeben möchten, können Sie den Speicherort im Tasksequenzschritt „Betriebssystem anwenden“ ändern. Wechseln Sie zur Einstellung **Wählen Sie den Standort aus, an dem Sie dieses Betriebssystem anwenden möchten.**, wählen Sie **Bestimmter Buchstabe für logisches Laufwerk ** aus und wählen Sie das Laufwerk aus, das Sie verwenden möchten. |20. Juni 2016 |Version 1606 |
 |Tasksequenzen: <br /> - In dynamischen Datenträger konvertieren <br /> - Bereitstellungstools installieren |18. November 2016|Der Support für diese Tasksequenzen endet mit dem ersten Update, das nach dem 1. Juni 2017 veröffentlicht wird.|
 |Das Softwarecenter erhält ein neues, modernes Aussehen. Apps, die bisher nur im von Silverlight abhängigen Anwendungskatalog angezeigt wurden (für Benutzer verfügbare Apps), werden jetzt im Softwarecenter auf der Registerkarte **Anwendungen** angezeigt. Auf den Anwendungskatalog kann weiterhin über den Link auf der Registerkarte **Installationsstatus** im Softwarecenter zugegriffen werden.<br><br>In den kommenden Monaten wird die vorherige Version des Softwarecenters nicht länger zur Verfügung stehen.<br><br>Sie können Clients für die Verwendung des neuen Softwarecenters konfigurieren, indem Sie die Clienteinstellung **Computer-Agent** > **Neues Softwarecenter verwenden** aktivieren.<br><br>Weitere Informationen zum Softwarecenter finden Sie unter [Planen und Konfigurieren der Anwendungsverwaltung in System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management).|13. Dezember 2016|Wird bekanntgegeben|
 |Verwaltung von virtuellen Festplatten (VHDs) mit Configuration Manager. </br></br>Dies schließt das Entfernen von Optionen zum Erstellen einer neuen virtuellen Festplatte oder Verwalten einer virtuellen Festplatte mithilfe einer Tasksequenz und das Entfernen des Knotens „Virtuelle Festplatten“ über die Configuration Manager-Konsole ein. </br></br>Wenn dieser Support eingestellt wird, werden vorhandene virtuelle Festplatten nicht gelöscht, es kann aber nicht mehr in der Configuration Manager-Konsole darauf zugegriffen werden.  |6. Januar 2017 |Der Support für virtuelle Festplatten endet mit dem ersten Update, das nach dem 1. Juni 2017 veröffentlicht wird.|
@@ -58,14 +59,14 @@ Weitere Informationen finden Sie in folgenden Quellen:
 
 Zusätzliche Informationen zu Features, die mit Version 1511 der System Center Configuration Manager-Version entfernt wurden:
 
-###  <a name="a-namebkmkamta-out-of-band-management"></a><a name="bkmk_amt"></a> Out-of-Band-Verwaltung  
+###  <a name="bkmk_amt"></a> Out-of-Band-Verwaltung  
  Mit Configuration Manager wurde der native Support für AMT-basierte Computer in der Configuration Manager-Konsole entfernt.  
 
 -   AMT-basierte Computer werden weiterhin vollständig verwaltet, wenn Sie das [Intel SCS-Add-On für Microsoft System Center Configuration Manager](http://www.intel.com/content/www/us/en/software/setup-configuration-software.html) verwenden. Über das Add-On haben Sie Zugriff auf die neuesten AMT-Verwaltungsfunktionen. Gleichzeitig werden die Beschränkungen aufgehoben, die vor der Einbindung dieser Änderungen durch Configuration Manager eingeführt wurden.  
 
 -   Die Out-Band-Verwaltung in System Center 2012 Configuration Manager ist von dieser Änderung nicht betroffen.  
 
-###  <a name="a-namebkmknapa-network-access-protection"></a><a name="bkmk_nap"></a> Netzwerkzugriffsschutz  
+###  <a name="bkmk_nap"></a> Netzwerkzugriffsschutz  
  System Center Configuration Manager hat den Support für den Netzwerkzugriffsschutz eingestellt. Das Feature wurde in Windows Server 2012 R2 als veraltet markiert und aus Windows 10 entfernt.  
 
  Alternativen für den Netzwerkzugriffsschutz finden Sie im Abschnitt *Veraltete Funktionalität* unter [Netzwerkrichtlinien- und Zugriffsdienste: Übersicht](https://technet.microsoft.com/library/hh831683.aspx).  
@@ -76,10 +77,10 @@ Zusätzliche Informationen zu Features, die mit Version 1511 der System Center C
 
 |**Betriebssysteme**|**Erste Ankündigung als veraltetes Feature**|**Support eingestellt** |  
 |-|-|-|  
-|Windows Server 2008|10. Juli 2015|Der Support endet mit dem ersten Update, das nach dem 31. Dezember 2016 veröffentlicht wird (siehe Hinweis 1).|  
+|Windows Server 2008|10. Juli 2015|1511 </br></br>Unterstützung als Standortsystem wird entfernt. (Siehe Hinweis 1).|  
 |Windows Server 2008 R2|10. Juli 2015|Der Support endet mit dem ersten Update, das nach dem 31. Dezember 2016 veröffentlicht wird (siehe Hinweis 2).|  
 
--   Hinweis 1:   Nach Ende des Supports wird dieses Betriebssystem nicht mehr für Standortserver bzw. die meisten Standortsystemrollen unterstützt. Es wird jedoch weiterhin für die Verwendung der Standortsystemrolle „Verteilungspunkt“ (einschließlich Pullverteilungspunkt) unterstützt, bis die Einstellung dieses Supports angekündigt wird oder der erweiterte Support für dieses Betriebssystem abläuft.  
+-   Hinweis 1: Dieses Betriebssystem wird für Standortserver oder Standortsystemrollen mit Ausnahme des Verteilungspunkts und des Pullverteilungspunkts nicht unterstützt. Sie können dieses Betriebssystem weiterhin als Verteilungspunkt verwenden, bis die Einstellung dieses Supports angekündigt wird oder der erweiterte Support für dieses Betriebssystem abläuft. Weitere Informationen finden Sie unter [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008 (Bei der Installation von System Center Configuration Manager CB und LTSB auf Windows Server 2008 tritt ein Fehler auf)](https://support.microsoft.com/help/4015095). 
 
 -   Hinweis 2:   Nach Ende des Supports wird dieses Betriebssystem nicht mehr für Standortserver bzw. die meisten Standortsystemrollen unterstützt. Es wird jedoch weiterhin für die Verwendung der Standortsystemrollen „Zustandsmigrationspunkt“ und „Verteilungspunkt“ unterstützt (einschließlich „Pullverteilungspunkt“, PXE und Multicast), bis der Support eingestellt wird oder der erweiterte Supportzeitraum für dieses Betriebssystem abläuft. Ab Version 1602 können Sie ein direktes Upgrade des Betriebssystems eines Standortservers von Windows Server 2008 R2 auf Windows Server 2012 R2 durchführen.  
 
@@ -110,9 +111,4 @@ Zusätzliche Informationen zu Features, die mit Version 1511 der System Center C
 |-|-|-|  
 |SQL Server 2008|10. Juli 2015|Version 1511|  
 |SQL Server 2008 R2|10. Juli 2015|Der Support endet mit dem ersten Update, das nach dem 31. Dezember 2016 veröffentlicht wird.|  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

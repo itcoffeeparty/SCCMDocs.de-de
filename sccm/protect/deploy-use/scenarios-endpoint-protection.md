@@ -2,7 +2,7 @@
 title: "Szenario: Endpoint Protection schützt Computer vor Schadsoftware | Microsoft Docs"
 description: "Erfahren Sie mehr über das Implementieren von Endpoint Protection in Configuration Manager, um Computer vor Angriffen durch Schadsoftware zu schützen."
 ms.custom: na
-ms.date: 12/9/2016
+ms.date: 03/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,8 +15,9 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 9fcbc0bb9c8ccd4265381ca4db7a363c8ae3b54a
-ms.openlocfilehash: 2cdc57b766b18a6fdf21ec8748172c12b11b08db
+ms.sourcegitcommit: af0aafb4b7209d840676d16723509f399c662aad
+ms.openlocfilehash: b98684d44874ff246e4d675039c6e443aee82a62
+ms.lasthandoff: 03/13/2017
 
 
 ---
@@ -27,7 +28,7 @@ ms.openlocfilehash: 2cdc57b766b18a6fdf21ec8748172c12b11b08db
 
 Diese Thema enthält ein Beispielszenario zur Implementierung der Endpoint Protection in Configuration Manager, um Computer in einer Organisation vor Angriffen durch Schadsoftware zu schützen.  
 
- John ist Configuration Manager-Administrator bei der Woodgrove Bank. Derzeit verwendet die Bank Microsoft Forefront Endpoint Protection 2010 für den Schutz der Computer vor Angriffen durch Schadsoftware. Darüber hinaus verwendet die Bank Windows-Gruppenrichtlinien, um sicherzustellen, dass die Windows-Firewall auf allen Computern im Unternehmen aktiviert ist und Benutzer benachrichtigt werden, wenn die Windows-Firewall ein neues Programm blockiert.  
+ John ist Configuration Manager-Administrator bei der Woodgrove Bank. Derzeit verwendet die Bank System Center Endpoint Protection für den Schutz der Computer vor Angriffen durch Schadsoftware. Darüber hinaus verwendet die Bank Windows-Gruppenrichtlinien, um sicherzustellen, dass die Windows-Firewall auf allen Computern im Unternehmen aktiviert ist und Benutzer benachrichtigt werden, wenn die Windows-Firewall ein neues Programm blockiert.  
 
  John soll ein Upgrade für die Antischadsoftware der Woodgrove Bank auf System Center Endpoint Protection durchführen, sodass die Bank die neuesten Antischadsoftware-Features nutzen und die Antischadsoftware-Lösung über die Configuration Manager-Konsole verwalten kann. Diese Implementierung setzt Folgendes voraus:  
 
@@ -75,9 +76,4 @@ Diese Thema enthält ein Beispielszenario zur Implementierung der Endpoint Prote
 |John verwendet die folgenden Methoden zum Überwachen des Status von Endpoint Protection und der von Endpoint Protection durchzuführenden Aktionen:<br /><br /> 1) Mithilfe des Knotens **Endpoint Protection-Status** unter **Sicherheit** im Arbeitsbereich **Überwachung**<br /><br /> 2) Mithilfe des Knotens **Endpoint Protection** im Arbeitsbereich **Bestand und Kompatibilität**<br /><br /> 3) Mithilfe der integrierten Configuration Manager-Berichte|Informationen finden Sie unter [Überwachen von Endpoint Protection in System Center Configuration Manager](monitor-endpoint-protection.md).|  
 
  John meldet seinem Vorgesetzten eine erfolgreiche Implementierung von Endpoint Protection und bestätigt, dass die Computer der Woodgrove Bank jetzt gemäß den angegebenen Unternehmensanforderungen vor Antischadsoftware geschützt sind.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

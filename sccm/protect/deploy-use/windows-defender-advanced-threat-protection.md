@@ -2,7 +2,7 @@
 title: Windows Defender Advanced Threat Protection | Microsoft Docs
 description: "Erfahren Sie, wie Sie Windows Defender Advanced Threat Protection, einen neuen Dienst, der Unternehmen dabei hilft, auf erweiterte Angriffe zu reagieren, verwalten und überwachen können."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/07/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-other
@@ -16,8 +16,9 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 299fada2b6587ace44e635c4f26cc7a482d44843
-ms.openlocfilehash: 880ea4fcb0730f0e9adbc9f142262f241f5df9dc
+ms.sourcegitcommit: 8f4ec982a54cf3cefef310268a54850e70e2e63a
+ms.openlocfilehash: 237dc9cbccb973720a633490f096aed4bc16d183
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="windows-defender-advanced-threat-protection"></a>Windows Defender Advanced Threat Protection
@@ -110,10 +111,6 @@ Windows Defender ATP ist ein Dienst im [Windows-Sicherheitscenter](https://secur
 > Die Windows Defender ATP-Konfigurationsdateien enthalten vertrauliche Informationen, die gesichert werden sollten.
 
 [Windows Defender Advanced Threat Protection](https://technet.microsoft.com/itpro/windows/keep-secure/windows-defender-advanced-threat-protection)
+
 [Beheben von Onboardingproblemen mit Windows Defender Advanced Threat Protection](https://technet.microsoft.com/itpro/windows/keep-secure/troubleshoot-onboarding-windows-defender-advanced-threat-protection)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

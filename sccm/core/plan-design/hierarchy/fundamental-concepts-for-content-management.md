@@ -2,7 +2,7 @@
 title: Grundlagen der Inhaltsverwaltung | Microsoft-Dokumentation
 description: Verwenden Sie Tools und Optionen in System Center Configuration Manager, um den Inhalt zu verwalten, den Sie bereitstellen.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/15/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 83020f532edd7a640f0087aad40789e026f75913
-ms.openlocfilehash: 00751cd03a3dd49718994e31bc396e4e7d29ed2b
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: 766120f5ca79f279a513b62c35a2374c859b253a
+ms.openlocfilehash: 079be3c97e4239f8c5293bed5a2ce13abfbe7798
+ms.lasthandoff: 03/15/2017
 
 
 ---
@@ -63,7 +63,7 @@ Weitere Informationen zu diesen Konten finden Sie unter [Verwalten von Konten f�
 -   Von Configuration Manager werden bis zu fünf inkrementelle Versionen eines Inhaltssatzes unterstützt, bevor der gesamte Inhaltssatz erneut gesendet wird. Nach der fünften Aktualisierung führt die nächste Änderung am Inhaltssatz dazu, dass von Configuration Manager eine neue Version des Inhaltssatzes erstellt wird. Configuration Manager verteilt dann die neue Version des Inhaltssatzes, um den früheren Satz und die inkrementellen Versionen zu ersetzen. Nach der Verteilung des neuen Inhaltssatzes werden anschließende inkrementelle Änderungen an den Quelldateien erneut durch binäre differenzielle Replikation repliziert.  
 
 
-BDR wird zwischen übergeordneten und untergeordneten Standorten in einer Hierarchie unterstützt. Innerhalb eines Standorts wird BDR zwischen dem Standortserver und dessen Verteilungspunkten unterstützt. Diese Unterstützung umfasst Pullverteilungspunkte, cloudbasierte Verteilungspunkte sind jedoch ausgeschlossen. Von cloudbasierten Verteilungspunkten wird die binäre differenzielle Replikation zum Übertragen von Inhalten nicht unterstützt.  
+BDR wird zwischen übergeordneten und untergeordneten Standorten in einer Hierarchie unterstützt. Innerhalb eines Standorts wird BDR zwischen dem Standortserver und dessen regulären Verteilungspunkten unterstützt. Von Pullverteilungspunkten und cloudbasierten Verteilungspunkten wird jedoch die binäre differenzielle Replikation zum Übertragen von Inhalten nicht unterstützt. Pullverteilungspunkte unterstützen Deltas auf Dateiebene und das Übertragen neuer Dateien, aber keine Blöcke in einer Datei.
 
 Für Anwendungen wird immer die binäre differenzielle Replikation verwendet. Für Pakete ist die binäre differenzielle Replikation optional und standardmäßig nicht aktiviert. Sie müssen die Funktionalität für jedes Paket aktivieren, um die binäre differenzielle Replikation für Pakete zu verwenden. Wählen Sie dazu die Option **Binäre differenzielle Replikation aktivieren** aus, wenn Sie ein neues Paket erstellen oder wenn Sie die Registerkarte **Datenquelle** der Paketeigenschaften bearbeiten.  
 

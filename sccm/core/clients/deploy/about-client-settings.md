@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d7265aec46474ba7fc317ddb5e20b91b7b134585
-ms.openlocfilehash: 36f6eb3fe48e904adf4d04450906fada9b477246
-ms.lasthandoff: 12/29/2016
+ms.sourcegitcommit: 289db441899359f3bf3abe5d38896c7acd2045b6
+ms.openlocfilehash: 5eaca19f2b21b1c62b956d2a44d492d3ddd6d10a
+ms.lasthandoff: 03/10/2017
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>Informationen zu Clienteinstellungen in System Center Configuration Manager
@@ -333,7 +333,7 @@ Viele der Clienteinstellungen sind selbsterklärend. Andere werden hier beschrie
 
 -   **Maximale zufällige Verzögerung**
 
-    Die Sammlung von Hardwareinformationen wird um bis zu zwei Stunden zufällig festgelegt, damit der Vorgang nicht auf allen Clients gleichzeitig stattfindet. Sie können die maximale Verzögerung festlegen, um die Zeit zu beschränken, während der Vorgang durchgeführt wird.      
+    Die Sammlung von Hardwareinformationen wird um bis zu vier Stunden zufällig festgelegt, damit der Vorgang nicht auf allen Clients gleichzeitig stattfindet. Sie können die maximale Verzögerung festlegen, um die Zeit zu beschränken, während der Vorgang durchgeführt wird.      
 
 ##  <a name="metered-internet-connections"></a>Getaktete Internetverbindungen  
  Sie können die Kommunikation zwischen Windows 8-Clientcomputern und Configuration Manager-Standorten verwalten, sofern getaktete Internetverbindungen verwendet werden. Bei getakteten Internetverbindungen berechnen einige Internetanbieter die anfallenden Gebühren anhand der Datenmenge, die Sie senden und empfangen.  
@@ -505,7 +505,7 @@ Viele der Clienteinstellungen sind selbsterklärend. Andere werden hier beschrie
 
     -   Wählen Sie das Symbol **Neu** aus, um einen neuen Dateityp zum Inventar hinzuzufügen. Geben Sie anschließend im Dialogfeld **Eigenschaften für inventarisierte Datei(en)** die folgenden Informationen an:  
 
-        -   **Name**: Geben Sie einen Namen für die Datei an, die Sie inventarisieren möchten. Sie können das Zeichen **\** stellvertretend für eine beliebige Textzeichenfolge und das Zeichen **?** stellvertretend für ein beliebiges einzelnes Zeichen angeben. Geben Sie als Dateinamen z.B. **\*.doc** an, um alle Dateien mit der Erweiterung .doc zu inventarisieren.  
+        -   **Name**: Geben Sie einen Namen für die Datei an, die Sie inventarisieren möchten. Sie können das Zeichen **\** stellvertretend für eine beliebige Textzeichenfolge und das Zeichen**?**stellvertretend für ein beliebiges einzelnes Zeichen angeben. Geben Sie als Dateinamen z.B.**\*.doc** an, um alle Dateien mit der Erweiterung .doc zu inventarisieren.  
 
         -   **Ort**: Wählen Sie **Festlegen** aus, um das Dialogfeld **Pfadeigenschaften** zu öffnen. Sie können die Softwareinventur so konfigurieren, dass alle Clientfestplatten nach der angegebenen Datei, nach einem angegebenen Pfad (z.B. **C:\Ordner**) oder nach einer angegebenen Variablen (z.B. *%windir%*) durchsucht werden. Sie können auch alle Unterordner unter dem angegebenen Pfad durchsuchen.  
 
@@ -528,7 +528,7 @@ Viele der Clienteinstellungen sind selbsterklärend. Andere werden hier beschrie
 
     -   Geben Sie im Dialogfeld **Eigenschaften für gesammelte Datei(en)** die folgenden Informationen an:  
 
-        -   **Name**: Geben Sie einen Namen für die Datei an, die Sie sammeln möchten. Sie können das Zeichen **\** stellvertretend für eine beliebige Textzeichenfolge und das Zeichen **?** stellvertretend für ein beliebiges einzelnes Zeichen angeben.  
+        -   **Name**: Geben Sie einen Namen für die Datei an, die Sie sammeln möchten. Sie können das Zeichen **\** stellvertretend für eine beliebige Textzeichenfolge und das Zeichen**?** stellvertretend für ein beliebiges einzelnes Zeichen angeben.  
 
         -   **Ort**: Wählen Sie **Festlegen** aus, um das Dialogfeld **Pfadeigenschaften** zu öffnen. Sie können die Softwareinventur so konfigurieren, dass alle Clientfestplatten nach der zu sammelnden Datei, nach einem angegebenen Pfad (z.B. **C:\Ordner**) oder nach einer angegebenen Variable (z.B. *%windir%*) durchsucht werden. Sie können auch alle Unterordner unter dem angegebenen Pfad durchsuchen.  
 
