@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: ee7f69bd65152deffb2456d9807e1e8fee8802ec
-ms.openlocfilehash: dd28c8218c77686884bdcff508080185cae97489
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 8f4ec982a54cf3cefef310268a54850e70e2e63a
+ms.openlocfilehash: 3bdbcd1a3c64a1d50f2f6219b2a5e17d60979864
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1702 für System Center Configuration Manager
@@ -188,7 +188,7 @@ Gehen Sie wie folgt vor, um eine Tasksequenz als Tasksequenz mit schwerwiegenden
    **Nachrichtenrest der Benutzerbenachrichtigung**: Es gibt drei Textfelder, die den Text der benutzerdefinierten Benachrichtigungen enthalten.
    - Erstes Textfeld: Gibt den Hauptteil des Texts an, der üblicherweise Anweisungen an den Benutzer enthält. In der Standardbenutzerbenachrichtigung enthält dieser Abschnitt beispielsweise folgenden Text: „Das Upgrade des Betriebssystems kann einige Zeit dauern und mehrere Neustarts des Computers erfordern“ o.Ä.
    - Zweites Textfeld: Gibt den fetten Text unterhalb des Hauptteils an. In der Standardbenutzerbenachrichtigung enthält dieser Abschnitt beispielsweise folgenden Text: „Dieses direkte Upgrade installiert das neue Betriebssystem und führt eine automatische Migration Ihrer Apps, Daten und Einstellungen durch“ o.Ä.
-   - Drittes Textfeld: Gibt die letzte Textzeile unterhalb des fetten Texts an. In der Standardbenutzerbenachrichtigung enthält dieser Abschnitt beispielsweise folgenden Text: „Klicken Sie auf ‚Installieren‘, um den Vorgang zu starten. Klicken Sie andernfalls auf ‚Abbrechen‘.“   
+   - Drittes Textfeld: Gibt die letzte Textzeile unterhalb des fetten Texts an. In der Standardbenutzerbenachrichtigung enthält dieser Abschnitt beispielsweise folgenden Text: „Klicken Sie auf Installieren, um den Vorgang zu starten. Klicken Sie andernfalls auf Abbrechen.“   
 
    Angenommen, Sie konfigurieren folgende benutzerdefinierte Benachrichtigung in den Eigenschaften.
 
@@ -272,7 +272,7 @@ Es wurden neue Einstellungen hinzugefügt, die Sie in Ihren Konfigurationselemen
 <!--- - **Enterprise app trust settings modification** --->
 - **Apps nur mit Apple Configurator und iTunes installieren** (nur im überwachten Modus)
 - **Automatische App-Downloads** (nur im überwachten Modus)
-- **Änderungen an den Einstellungen der App " Meine Freunde suchen" ** (nur im überwachten Modus)
+- **Änderungen an den Einstellungen der App " Meine Freunde suchen"** (nur im überwachten Modus)
 - **Zugriff auf den iBooks Store** (nur im überwachten Modus)
 - **Nachrichten-App** (nur im überwachten Modus)
 - **Podcasts** (nur im überwachten Modus)
@@ -313,6 +313,10 @@ Die folgenden Abschnitte beschreiben die Verwaltung mit Android for Work.
   - **Alle Geräte wie Android verwalten**: (Deaktiviert) Alle Android-Geräte, einschließlich der Geräte, die Android for Work unterstützen, werden als herkömmliche Android-Geräte registriert
   - **Unterstützte Geräte als Android for Work verwalten**: (Aktiviert) Alle Geräte, die Android for Work unterstützen, werden als Android for Work-Geräte registriert. Jedes Android-Gerät, das Android for Work nicht unterstützt, wird als herkömmliches Android-Gerät registriert.
   - **Unterstützte Geräte nur für Benutzer dieser Gruppen als Android for Work verwalten**: (Test) Damit können Sie die Android for Work-Verwaltung auf eine begrenzte Gruppe von Benutzern ausrichten. Nur Mitglieder der ausgewählten Gruppe, die ein Gerät, das Android for Work unterstützt, registrieren, werden als Android for Work-Geräte registriert. Alle anderen werden als Android-Geräte registriert.
+  
+> [!NOTE]
+> Ein bekanntes Problem verhindert, dass die Option **Unterstützte Geräte nur für Benutzer dieser Gruppen als Android for Work verwalten** ordnungsgemäß ausgeführt wird. Geräte von Benutzern in den angegebenen Azure AD-Gruppen werden als Android anstelle von Android for Work registriert. Um Android for Work zu testen, müssen Sie **Manage all supported devices as Android for Work** (Verwalten aller unterstützten Geräte als Android for Work) verwenden.
+
 
   Um die Registrierung mit Android for Work zu aktivieren, müssen Sie eine der beiden unteren Optionen wählen. Für die Option **Unterstützte Geräte nur für Benutzer dieser Gruppen als Android for Work verwalten** müssen Sie zuerst Sicherheitsgruppen von Azure Active Directory einrichten.
 
@@ -350,4 +354,7 @@ Sie können dies ausprobieren, indem Sie ein Konfigurationselement mithilfe des 
 Nur Geräte, die als Android for Work registriert sind, können selektiv zurückgesetzt werden, da Sie nur das Arbeitsprofil verwalten. Das schützt das persönliche Profil vor dem Zurücksetzen. Wenn Sie ein Android for Work-Gerät selektiv zurücksetzen, wird das Arbeitsprofil entfernt, einschließlich aller Apps und Daten, und das Gerät ist nicht mehr registriert.
 
 Um ein Android for Work-Gerät selektiv zurückzusetzen, verwenden Sie den gewohnten [Ablauf zum selektiven Zurücksetzen](https://docs.microsoft.com/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe) in der Configuration Manager-Konsole.
+
+#### <a name="known-issues-for-android-for-work"></a>Bekannte Probleme bei Android for Work
+**Das Konfigurieren des Synchronisierungszeitplans in E-Mail-Profilen von Android for Work schlägt bei der Bereitstellung fehl** Eine Option in der ConfigMgr-Benutzeroberfläche für E-Mail-Profile von Android for Work ist „Schedule“ (Zeitplan). Auf anderen Plattformen kann der Administrator dadurch einen Zeitplan für die Synchronisierung von E-Mails und anderen E-Mail-Kontendaten bis hin zu den mobilen Geräten konfigurieren, auf denen er bereitgestellt wird. Dies funktioniert allerdings nicht für Android for Work-E-Mail-Profile. Die Auswahl einer anderen Option als „Nicht konfiguriert“ führt dazu, dass das Profil auf keinem Gerät bereitgestellt wird.
 
