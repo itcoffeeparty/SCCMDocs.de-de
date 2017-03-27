@@ -15,9 +15,11 @@ caps.latest.revision: 8
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: noindex,nofollow
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 1d3adcf3310d88b1266388aa03ae5ea03e23f2a5
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1603-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1603 für System Center Configuration Manager
@@ -34,7 +36,7 @@ In diesem Artikel werden die Funktionen erläutert, die in der Technical Preview
 
  **Im Folgenden werden neue Features aufgelistet, die Sie mit dieser Version ausprobieren können.**  
 
-##  <a name="a-namebkmksc1603a-improvements-to-software-center"></a><a name="BKMK_SC1603"></a> Verbesserungen für Software Center  
+##  <a name="BKMK_SC1603"></a> Verbesserungen für Software Center  
 
 ### <a name="new-tiled-view-for-apps"></a>Neue Kachelansicht für Apps  
  Endbenutzer können jetzt in Software Center auf der Registerkarte **Anwendungen** zwischen einer Liste von Apps oder einer Kachelansicht von Apps auswählen.  
@@ -42,7 +44,7 @@ In diesem Artikel werden die Funktionen erläutert, die in der Technical Preview
 ### <a name="select-multiple-updates-in-software-center"></a>Auswählen mehrerer Updates in Software Center  
  Auf der Registerkarte **Updates** in Software Center können Sie jetzt mehrere Updates oder **Alle aktualisieren** auswählen, um mehrere Updates gleichzeitig zu installieren.  
 
-##  <a name="a-namebkmkrc1603a-improvements-to-remote-control"></a><a name="BKMK_RC1603"></a> Verbesserungen an der Remotesteuerung  
+##  <a name="BKMK_RC1603"></a> Verbesserungen an der Remotesteuerung  
 
 ### <a name="limit-shared-clipboard-access-in-a-remote-control-session"></a>Beschränken des Zugriffs auf die freigegebene Zwischenablage in einer Remotesteuerungssitzung  
  Sie können in den Remotetools jetzt die neue Clienteinstellung **Benutzer zum Erteilen der Berechtigung zur Freigabe der Zwischenablage für Dateiübertragungen auffordern** aktivieren, um den Zugriff auf die freigegebene Zwischenablage in einer Remotesteuerungssitzung zu beschränken.  
@@ -51,7 +53,7 @@ In diesem Artikel werden die Funktionen erläutert, die in der Technical Preview
 
  Dadurch wird für den Endbenutzer eine weitere Sicherheitsebene hinzugefügt. Wenn dem Remotebetrachter zuvor Vollzugriff auf den Computer des Endbenutzers erteilt wurde, hatte er über die freigegebene Zwischenablage die Möglichkeit, Dateien unbemerkt vom Endbenutzer aus der Sitzung auf den lokalen Computer zu übertragen.  
 
-##  <a name="a-namebkmkramdisktftpa-customize-the-ramdisk-tftp-block-size-and-window-size-on-pxe-enabled-distribution-points"></a><a name="BKMK_RamDiskTFTP"></a> Anpassen der RamDisk-TFTP-Blockgröße und der Fenstergröße auf PXE-fähigen Verteilungspunkten  
+##  <a name="BKMK_RamDiskTFTP"></a> Anpassen der RamDisk-TFTP-Blockgröße und der Fenstergröße auf PXE-fähigen Verteilungspunkten  
  In Technical Preview 1603 können Sie die RamDisk-TFTP-Blockgröße und die Fenstergröße für PXE-fähige Verteilungspunkte anpassen. Wenn Sie Ihr Netzwerk angepasst haben, kann dies wegen übermäßiger Block- oder Fenstergröße zu einem Timeout beim Herunterladen des Startimages führen. Durch Anpassen der RamDisk-TFTP-Blockgröße und der Fenstergröße können Sie den TFTP-Datenverkehr bei Verwendung von PXE für Ihre spezifischen Netzwerkanforderungen optimieren.   
 Sie müssen die benutzerdefinierten Einstellungen in Ihrer Umgebung testen, um die effizienteste Einstellung zu ermitteln.  
 
@@ -91,9 +93,4 @@ Sie müssen die benutzerdefinierten Einstellungen in Ihrer Umgebung testen, um d
      **Wert**: &lt;angepasste Blockgröße\>  
 
  Der Standardwert ist 4096 (4 KB).  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

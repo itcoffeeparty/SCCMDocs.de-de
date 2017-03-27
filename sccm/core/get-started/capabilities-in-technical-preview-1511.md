@@ -15,9 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: noindex,nofollow
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 2e0338267ea9fdc639d57f93adda1e46aea80eec
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>Funktionen in System Center Configuration Manager Technical Preview 1511
@@ -28,7 +30,7 @@ In diesem Artikel werden die Funktionen erläutert, die in System Center Configu
 
 Im Folgenden werden neue Funktionen aufgelistet, die Sie mit dieser Version ausprobieren können.  
 
-##  <a name="a-namebkmkwufba-integration-with-windows-update-for-business-in-windows-10"></a><a name="BKMK_WUfB"></a> Integration mit Windows Update für Unternehmen in Windows 10  
+##  <a name="BKMK_WUfB"></a> Integration mit Windows Update für Unternehmen in Windows 10  
  Configuration Manager verfügt jetzt über die Möglichkeit, einen Windows 10-Computer, der direkt über Windows Update für Unternehmen (WUfB, Windows Update for Business) verbunden ist, von solchen zu unterscheiden, die mit WSUS verbunden sind, um Windows 10-Updates und -Upgrades abzurufen.  Bei Computern, die über WUfB verbunden sind, können die Updates und Upgrades in dem vom administrativen Benutzer mittels Gruppenrichtlinien oder MDM-Richtlinien festgelegten Rhythmus verwaltet werden, und diese Updates/Upgrades können direkt aus WUfB installiert werden.    
 Für Computer, die über WUfB verbunden sind, kann Configuration Manager keine Meldungen zum Kompatibilitätsstatus abgeben (einschließlich Windows Updates oder Definitionsupdates). Außerdem kann Configuration Manager auf diesen Computern weder Microsoft-Updates noch Updates von Drittanbietern bereitstellen.  
 
@@ -52,7 +54,7 @@ Für Computer, die über WUfB verbunden sind, kann Configuration Manager keine M
 
 5.  Die Computer, die über WUfB verwaltet werden, zeigen als Kompatibilitätsstatus **Unbekannt** an und werden im Gesamtprozentsatz der Kompatibilität nicht berücksichtigt.  
 
-##  <a name="a-namebkmkoffice365proplusa-managing-office-365-proplus-client-update-through-system-center-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a> Verwalten von Office 365 ProPlus-Clientupdates über den System Center Configuration Manager  
+##  <a name="BKMK_Office365ProPlus"></a> Verwalten von Office 365 ProPlus-Clientupdates über den System Center Configuration Manager  
  Configuration Manager verfügt jetzt über die Möglichkeit zum Verwalten von Office 365-Desktopclientupdates mithilfe des Softwareupdateverwaltungs-Workflows von Configuration Manager.    
 Wenn Microsoft ein neues Office 365-Desktopclientupdate in Windows Server Updates Services (WSUS) veröffentlicht, kann Configuration Manager das Update mit seinem Katalog synchronisieren, wenn das Office 365-Update als Teil der Katalogsynchronisierung konfiguriert ist.  Der Configuration Manager-Standortserver lädt dann die Office 365-Clientupdates herunter, und verteilt das Paket an die Configuration Manager-Verteilungspunkte.  Der Configuration Manager-Client informiert dann die Office 365-Desktopclients, wo sie die Updates abrufen können und wann der Installationsvorgang gestartet werden soll.  
 
@@ -71,7 +73,7 @@ Wenn Microsoft ein neues Office 365-Desktopclientupdate in Windows Server Update
 
  Detaillierte Anweisungen finden Sie unter [Verwalten von Office 365-Clientupdates mit System Center Configuration Manager Technical Preview](https://technet.microsoft.com/library/mt628083.aspx).  
 
-##  <a name="a-namebkmkalwasyona-support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> Unterstützung für SQL Server AlwaysOn für hoch verfügbare Datenbanken  
+##  <a name="BKMK_AlwasyOn"></a> Unterstützung für SQL Server AlwaysOn für hoch verfügbare Datenbanken  
  Configuration Manager unterstützt jetzt die Verwendung einer SQL Server Always On-Verfügbarkeitsgruppe zum Hosten der Standortdatenbank.  Wenn Sie einen neuen Standort installieren, können Sie das Setup anweisen, anstatt einer normalen Instanz von SQL Server die Verfügbarkeitsgruppe zu verwenden.  
 
 > [!NOTE]  
@@ -147,7 +149,7 @@ So installieren Sie einen Standort, der eine SQL Server-Verfügbarkeitsgruppe ve
 
 3.  Nachdem Sie diese Informationen bereitgestellt haben, schließen Sie das Setup mit der üblichen Vorgehensweise und den normalen Konfigurationen ab.  
 
-##  <a name="a-namebkmkclusterserverupdatesa-service-a--server-cluster"></a><a name="BKMK_ClusterServerUpdates"></a> Wartung eines Serverclusters  
+##  <a name="BKMK_ClusterServerUpdates"></a> Wartung eines Serverclusters  
 Sie können jetzt eine Sammlung mit Servern in einem Cluster erstellen und anschließend die Clustereinstellungen konfigurieren, die beim Bereitstellen von Updates für den Cluster verwendet werden. Sie können den Prozentsatz der Server steuern, die zu jedem beliebigen Zeitpunkt online sind, und Sie können PowerShell-Skripts mit den vor und nach der Bereitstellung auszuführenden benutzerdefinierten Aktionen konfigurieren.  
 
 **Bekannte Probleme in diesem Release:**  
@@ -205,9 +207,4 @@ Versuchen Sie, die folgende Aufgabe auszuführen, und verwenden Sie dann die Fee
 1.  [Stellen Sie Softwareupdates](https://technet.microsoft.com/library/gg712304.aspx) für die Serverclustersammlung bereit.  
 
 2.  [Überwachen Sie die Softwareupdatebereitstellung](https://technet.microsoft.com/library/gg712304.aspx).  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

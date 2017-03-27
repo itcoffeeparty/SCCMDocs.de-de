@@ -15,9 +15,11 @@ caps.latest.revision: 7
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: noindex,nofollow
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 4da12425382c5d64602b2728e0e661c8cb89a5e4
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1601 für System Center Configuration Manager
@@ -59,7 +61,7 @@ In diesem Artikel werden die Features erläutert, die in der Technical Preview f
 
 **Im Folgenden werden neue Features aufgelistet, die Sie mit dieser Version ausprobieren können.**  
 
-##  <a name="a-namebkmkhybrid1a-improvements-to-microsoft-intune-integration"></a><a name="bkmk_hybrid1"></a> Verbesserungen bei der Microsoft Intune-Integration  
+##  <a name="bkmk_hybrid1"></a> Verbesserungen bei der Microsoft Intune-Integration  
 In der Technical Preview-Version 1601 haben wir Unterstützung für die folgenden Features hinzugefügt:  
 
 ### <a name="improvements-to-conditional-access"></a>Verbesserungen beim bedingten Zugriff  
@@ -125,7 +127,7 @@ In der Technical Preview-Version 1601 haben wir Unterstützung für die folgende
 
      Wechseln Sie zur Seite **Allgemein** des **Assistenten zur Konfiguration der Richtlinie zum bedingten Zugriff** für lokales Exchange, um diese Option zu verwenden.  
 
-##  <a name="a-namebkmkclientstatusa-client-online-status"></a><a name="bkmk_clientStatus"></a> Onlinestatus von Clients  
+##  <a name="bkmk_clientStatus"></a> Onlinestatus von Clients  
 Ab Technical Preview Release 1601 können Sie in der Configuration Manager-Konsole auf einen Blick erkennen, ob ein Client online oder offline ist. Über aktualisierte Symbole und Spalten in den Geräteauflistungen in der Konsole können Sie den Status von Clients in Ihrer Umgebung beurteilen, um Problembereiche und andere Aspekte auszumachen, die ggf. Ihre Aufmerksamkeit erfordern.  
 
 Ein Client ist online, wenn er aktuell mit einer Standortsystemrolle des Typs „Configuration Manager-Verwaltungspunkt“ verbunden ist. Solange der Verwaltungspunkt Ping-ähnliche Nachrichten vom Client empfängt, ist dessen Status online. Wenn der Verwaltungspunkt ca. 5 Minuten keine Nachricht erhält, ist der Status des Clients offline.  
@@ -158,7 +160,7 @@ Ein Client ist online, wenn er aktuell mit einer Standortsystemrolle des Typs �
 
  Um die jüngsten Änderungen am Clientstatus anzuzeigen, aktualisieren Sie die Konsole.  
 
-##  <a name="a-namebkmkappmgmt1601a-improvements-to-application-management"></a><a name="bkmk_appmgmt1601"></a> Verbesserungen bei der Anwendungsverwaltung  
+##  <a name="bkmk_appmgmt1601"></a> Verbesserungen bei der Anwendungsverwaltung  
  In der Technical Preview-Version 1601 haben wir Unterstützung für die folgenden Features hinzugefügt:  
 
 ### <a name="manage-volume-purchased-apps-for-ios-devices"></a>Verwalten von Apps für iOS-Geräte, die über ein Volumenprogramm erworben wurden  
@@ -194,7 +196,7 @@ Ein Client ist online, wenn er aktuell mit einer Standortsystemrolle des Typs �
 
 -   Ordnen Sie im **Assistenten zum Bereitstellen von Software** auf der Seite **App-Konfigurationsrichtlinie** die von Ihnen erstellte App-Konfigurationsrichtlinie einem kompatiblen Bereitstellungstyp der Anwendung zu.  
 
-##  <a name="a-namebkmkcompliance1601a-improvements-to-compliance-settings"></a><a name="bkmk_compliance1601"></a> Verbesserungen für Kompatibilitätseinstellungen  
+##  <a name="bkmk_compliance1601"></a> Verbesserungen für Kompatibilitätseinstellungen  
  In der Technical Preview-Version 1601 haben wir Unterstützung für die folgenden Features hinzugefügt:  
 
 ### <a name="microsoft-edge-browser-settings"></a>Microsoft Edge-Browsereinstellungen  
@@ -217,9 +219,4 @@ Ein Client ist online, wenn er aktuell mit einer Standortsystemrolle des Typs �
  Um die neuen Einstellungen anzuzeigen, wählen Sie auf der Seite für die **Geräteeinstellungen** des Konfigurationselements im Assistenten zum **Erstellen von Konfigurationselementen** die Option **Kioskmodus – Samsung KNOX** aus.  
 
  Weitere Informationen finden Sie unter [Erstellen von Konfigurationselementen für Windows 8.1- und Windows 10-Geräte, die ohne den System Center Configuration Manager-Client verwaltet werden](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

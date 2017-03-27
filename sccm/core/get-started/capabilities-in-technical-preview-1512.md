@@ -15,9 +15,11 @@ caps.latest.revision: 6
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: noindex,nofollow
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 7fff6f2807a679b621b736b8ad0b6561fb37affe
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1512-for-system-center-configuration-manager"></a>Funktionen in System Center Configuration Manager Technical Preview 1512
@@ -28,7 +30,7 @@ In diesem Artikel werden die Funktionen erläutert, die in System Center Configu
 
  Im Folgenden werden neue Funktionen aufgelistet, die Sie mit dieser Version ausprobieren können.  
 
-##  <a name="a-namebkmkdevicehealtha-device-health-attestation"></a><a name="bkmk_devicehealth"></a> Nachweis der Geräteintegrität  
+##  <a name="bkmk_devicehealth"></a> Nachweis der Geräteintegrität  
  Ab Technical Preview 1512 können Administratoren den Status des Windows 10-Nachweises zur Geräteintegrität in der Configuration Manager-Konsole anzeigen.  Diese Funktion steht für Configuration Manager und Configuration Manager mit Microsoft Intune zur Verfügung. Mit dem Nachweis der Geräteintegrität kann der Administrator sicherstellen, dass Clientcomputer über vertrauenswürdige BIOS-, TPM- und Bootsoftwarekonfigurationen verfügen. Damit Sie den Nachweis der Geräteintegration unterstützen, müssen die Clientgeräte Windows 10 mit aktiviertem TPM 2 ausführen. Der Nachweis der Geräteintegrität zeigt die Anzahl der Geräte an, die jeweils für Folgendes aktiviert sind:  
 
 -   Antischadsoftware-Frühstart  
@@ -43,7 +45,7 @@ Die Konsole zeigt außerdem die wichtigsten fehlenden Einstellungen für den Int
 
 Wechseln Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Überwachung**, klicken Sie auf den Knoten **Sicherheit** und anschließend auf **Integritätsnachweis**, um eine Vorschau des Nachweises der Geräteintegrität anzuzeigen.  
 
-##  <a name="a-namebkmkviewtermsa-in-console-monitoring-for-terms-and-conditions"></a><a name="bkmk_viewterms"></a> Überwachung in der Konsole hinsichtlich der Geschäftsbedingungen  
+##  <a name="bkmk_viewterms"></a> Überwachung in der Konsole hinsichtlich der Geschäftsbedingungen  
 Ab Technical Preview 1512 können Sie beim Integrieren von Configuration Manager in Microsoft Intune die Configuration Manager-Konsole verwenden, um anzuzeigen, welche Benutzer die von der IT-Abteilung konfigurierten Geschäftsbedingungen akzeptiert haben und welche nicht.  
 
 **So zeigen Sie eine Zusammenfassung an:**  
@@ -56,7 +58,7 @@ Ab Technical Preview 1512 können Sie beim Integrieren von Configuration Manager
 
 2.  Wählen Sie unten in der Konsole die Registerkarte **Bereitstellungen** und dann die Bereitstellung aus, und klicken Sie anschließend auf **Status anzeigen**.  
 
-##  <a name="a-namebkmkeppolicya-improvements-to-endpoint-protection-policy-settings"></a><a name="bkmk_EPpolicy"></a> Verbesserungen an den Richtlinieneinstellungen für Endpoint Protection  
+##  <a name="bkmk_EPpolicy"></a> Verbesserungen an den Richtlinieneinstellungen für Endpoint Protection  
 In der Technical Preview 1512 haben wir die folgenden neuen Einstellungen zur Endpoint Protection-Richtlinie für Antischadsoftware hinzugefügt:  
 
 -   Echtzeitschutz: **Potenziell unerwünschte Programme beim Herunterladen und vor der Installation blockieren**  
@@ -90,9 +92,4 @@ In der Technical Preview 1512 haben wir die folgenden neuen Einstellungen zur En
 **Voraussetzungen für die Verwendung von Endpoint Protection-Richtlinien:**  
 
 Vor der Verwendung von Endpoint Protection-Richtlinien müssen Sie den Endpoint Protection-Client mithilfe der Endpoint Protection-Clienteinstellungen installieren und verwalten. Dies erfolgt mit dem System Center Endpoint Protection-Client für Windows 7, Windows 8, Windows 8.1 oder mit Windows Defender für Windows 10. Weitere Informationen finden Sie unter [Endpoint Protection in System Center Configuration Manager](../../protect/deploy-use/endpoint-protection.md).  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

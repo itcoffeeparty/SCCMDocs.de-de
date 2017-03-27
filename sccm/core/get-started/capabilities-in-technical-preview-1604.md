@@ -15,9 +15,11 @@ caps.latest.revision: 8
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: noindex,nofollow
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: d36de897e6407ec7431d4dbe24ad04423aee2ca1
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1604-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1604 für System Center Configuration Manager
@@ -28,7 +30,7 @@ In diesem Artikel werden die Features erläutert, die in der Technical Preview f
 
  Im Folgenden werden neue Funktionen aufgelistet, die Sie mit dieser Version ausprobieren können.  
 
-##  <a name="a-namebkmkwindowsvppa-manage-volume-purchased-apps-from-the-windows-store-for-business"></a><a name="BKMK_WindowsVPP"></a> Verwalten von per Volumenlizenz aus dem Windows Store für Unternehmen erworbenen Apps  
+##  <a name="BKMK_WindowsVPP"></a> Verwalten von per Volumenlizenz aus dem Windows Store für Unternehmen erworbenen Apps  
  Im [Windows Store für Unternehmen](https://www.microsoft.com/en-us/business-store) können Sie Apps für Ihre Organisation finden und entweder einzeln oder per Volumenlizenz erwerben. Indem Sie den Store mit Configuration Manager verbinden, können Sie per Volumenlizenz erworbene Apps in der Configuration Manager-Konsole verwalten, zum Beispiel:  
 
 -   Sie können die Liste der erworbenen Apps mit Configuration Manager synchronisieren  
@@ -91,10 +93,10 @@ In diesem Artikel werden die Features erläutert, die in der Technical Preview f
 
 3.  Eine Configuration Manager-App wird erstellt, die eine App aus dem Windows Store für Unternehmen enthält. Sie können diese App dann wie jede andere Configuration Manager-App bereitstellen und überwachen.  
 
-##  <a name="a-namebkmkpfwa-improvements-to-microsoft-passport-for-work-management"></a><a name="BKMK_PFW"></a> Verbesserungen an der Microsoft Passport for Work-Verwaltung  
+##  <a name="BKMK_PFW"></a> Verbesserungen an der Microsoft Passport for Work-Verwaltung  
  Sie können nun Passport for Work-Richtlinien für in Domänen eingebundene Windows 10-Geräte bereitstellen, die vom Configuration Manager-Client verwaltet werden.  
 
-##  <a name="a-namebkmkswitchsupa-option-for-clients-to-switch-to-a-new-software-update-point"></a><a name="bkmk_switchsup"></a> Option für Clients zum Wechsel zu einem neuen Softwareupdatepunkt  
+##  <a name="bkmk_switchsup"></a> Option für Clients zum Wechsel zu einem neuen Softwareupdatepunkt  
  In Technical Preview 1604 können Sie die Option zum Wechsel zu einem neuen Softwareupdatepunkt für Configuration Manager-Clients aktivieren, wenn beim aktiven Softwareupdatepunkt Probleme auftreten. Für diese Option müssen an einem primären Standort mehrere Softwareupdatepunkte verfügbar sein. Aktivieren Sie diese Option auf einer Gerätesammlung und einmal aktiviert, suchen die Clients in der Sammlung während der nächsten Überprüfung nach einem anderen Softwareupdatepunkt, wenn der Client keine Verbindung mit dem aktiven Softwareupdatepunkt herstellen kann. Je nach Ihrer WSUS-Konfigurationseinstellung (Updateklassifizierungen, Produkte, usw.) führt der Wechsel auf einen neuen Softwareupdatepunkt zu zusätzlichem Netzwerkdatenverkehr. Aus diesem Grund sollten Sie diese Option nur bei Bedarf verwenden.  
 
 #### <a name="to-enable-the-option-to-switch-software-update-points"></a>So aktivieren Sie die Option zum Wechseln von Softwareupdatepunkten  
@@ -106,7 +108,7 @@ In diesem Artikel werden die Features erläutert, die in der Technical Preview f
 > [!NOTE]  
 >  Diese Option ist nur an Standorten verfügbar, die über mehrere Softwareupdatepunkte verfügen.  
 
-##  <a name="a-namebkmkpeercachea-client-settings-to-manage-client-cache-settings-and-client-peer-cache"></a><a name="bkmk_peercache"></a> Clienteinstellungen zum Verwalten von Clientcacheeinstellungen und Clientpeercache  
+##  <a name="bkmk_peercache"></a> Clienteinstellungen zum Verwalten von Clientcacheeinstellungen und Clientpeercache  
  In der Technical Preview-Version 1604 werden zwei neue Einstellungen für Geräteclients eingeführt, die sich auf die Verwendung des Clientcaches auswirken. Beide sind einzeln verwendbar, werden jedoch auf demselben Eigenschaftenblatt für Clienteinstellungen konfiguriert und helfen Ihnen beim Verwalten der Bereitstellung von Inhalten für Ihre Clients an Remotestandorten.  
 
 -   Die erste Option ist der **Clientpeercache**, eine integrierte Configuration Manager-Lösung für das Freigeben von Inhalten für andere Clients direkt aus ihrem lokalen Cache. Damit Peercacheclients Inhalte gemeinsam nutzen können, müssen sie Mitglieder der gleichen Begrenzungsgruppe sein. Der Peercache ersetzt nicht die Verwendung anderer Lösungen wie BranchCache, sondern wird parallel eingesetzt, um Ihnen weitere Optionen zur Verfügung zu stellen und herkömmliche Lösungen für die Inhaltsbereitstellung (z.B. Verteilungspunkte) zu erweitern.  
@@ -146,7 +148,7 @@ Um besser zu verstehen, wann der Clientpeercache erfolgreich verwendet wird, seh
     > [!NOTE]  
     >  Um diese Aufgabe mit der technischen Vorschau und einem einzelnen Verteilungspunkt durchzuführen, konfigurieren Sie den Verteilungspunkt für die Netzwerkadresse all Ihrer Clients als langsam. Verteilen Sie dann den Inhalt an einen einzelnen Client.  Nachdem der Client den Inhalt erhalten hat, können Sie den Inhalt an weitere Clients verteilen. Diese sollten eher lokale Peers als Inhaltsquelle finden, bevor sie den Verteilungspunkt verwenden, der vom Standort des Clients aus als langsam gilt.  
 
-##  <a name="a-namebkmkpassporta-support-for-passport-for-work-as-a-ksp"></a><a name="bkmk_passport"></a> Unterstützung für Passport for Work als KSP  
+##  <a name="bkmk_passport"></a> Unterstützung für Passport for Work als KSP  
  System Center Configuration Manager ermöglicht die Integration in Microsoft Passport for Work. Dies ist eine alternative Anmeldemethode, die Active Directory oder ein Azure Active Directory-Konto verwendet, um ein Kennwort, eine Smartcard oder eine virtuelle Smartcard zu ersetzen.  
 Mit Passport können Sie anstelle eines Kennworts eine Benutzeraktion zur Anmeldung verwenden. Eine Benutzeraktion kann eine einfache PIN, eine biometrische Authentifizierung wie Windows Hello oder ein externes Gerät sein, z. B. ein Fingerabdruckleser.  
 
@@ -156,7 +158,7 @@ Mit Passport können Sie anstelle eines Kennworts eine Benutzeraktion zur Anmeld
 
 Wenn ein Benutzer eine Passport-PIN erstellt, sendet Windows eine Benachrichtigung, auf die Configuration Manager lauscht.  So kann Configuration Manager schnell erkennen, welche Benutzer eine Passport-PIN erstellt haben. Configuration Manager kann diesen Benutzern dann auch neue Zertifikate ausstellen, wenn Passport als Schlüsselspeicheranbieter in einem Zertifikatprofil dient.  
 
-##  <a name="a-namebkmkonpremdhaa-on-premises-device-health-attestation"></a><a name="bkmk_onpremdha"></a> Integritätsnachweis für lokale Geräte  
+##  <a name="bkmk_onpremdha"></a> Integritätsnachweis für lokale Geräte  
  Der Integritätsnachweis für Windows 10-Geräte kann jetzt so konfiguriert werden, dass die Kommunikation über die lokale Infrastruktur erfolgt.  Administratoren können angeben, ob die Berichterstellung über die Cloud oder über lokale Ressourcen durchgeführt wird.  Wenn für die Berichterstellung für den Integritätsnachweis **lokal** ausgewählt wird, kann ein URI für den Dienst angegeben werden. Dadurch können Client-PCs ohne Internetzugriff Geräte nutzen, aktivieren und verwalten, die den Integritätsnachweis verwenden.  
 
 #### <a name="enable-health-attestation-for-on-premises-devices"></a>Aktivieren des Integritätsnachweises für lokale Geräte  
@@ -167,11 +169,6 @@ Wenn ein Benutzer eine Passport-PIN erstellt, sendet Windows eine Benachrichtigu
 
 Konfigurieren Sie zu Testzwecken den lokalen Health Attestation-Dienst anhand der Client-Agent-Einstellungen.  
 
-##  <a name="a-namebkmksmarta-smartlock-setting-for-android-devices"></a><a name="BKMK_Smart"></a> SmartLock-Einstellung für Android-Geräte  
+##  <a name="BKMK_Smart"></a> SmartLock-Einstellung für Android-Geräte  
  Eine neue Einstellung, **Allow SmartLock and other trust agents** (SmartLock und andere vertrauenswürdigen Agents zulassen), wurde dem Konfigurationselement **Android und Samsung KNOX** hinzugefügt. Mit dieser Einstellung können Sie das Smart Lock-Feature auf kompatiblen Android-Geräten steuern. Diese Telefonfunktion wird manchmal als Vertrauens-Agent bezeichnet und ermöglicht Ihnen das Deaktivieren oder Umgehen des Kennworts für den Gerätesperrbildschirm, wenn sich das Gerät an einem vertrauenswürdigen Standort befindet, z. B. wenn es mit einem bestimmten Bluetooth-Gerät verbunden ist oder sich in der Nähe eines NFC-Tags befindet. Mit dieser Einstellung können Sie verhindern, dass Endbenutzer Smart Lock konfigurieren.  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

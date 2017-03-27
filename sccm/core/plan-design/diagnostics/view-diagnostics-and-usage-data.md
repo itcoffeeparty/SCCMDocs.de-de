@@ -2,7 +2,7 @@
 title: Anzeigen von Diagnosedaten | Microsoft-Dokumentation
 description: "Zeigen Sie Diagnose- und Nutzungsdaten an, um zu bestätigen, dass die System Center Configuration Manager-Hierarchie keine vertraulichen Informationen enthält."
 ms.custom: na
-ms.date: 12/29/2016
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 688e05aae0e0b15b54835f8d64a98487f4d7b64d
 ms.openlocfilehash: fcd7ac43f7b2d2c92d6aadd7c490f198ac99e5e6
+ms.lasthandoff: 12/29/2016
 
 
 ---
@@ -36,7 +37,7 @@ Verwenden Sie den folgenden SQL-Befehl, um den Inhalt dieser Tabelle und die Dat
 
 Wenn sich der Dienstverbindungspunkt im Offlinemodus befindet, können Sie die aktuellen Diagnose- und Verwendungsdaten mit dem Dienstverbindungstool in eine Datei mit kommagetrennten Werten (CSV) exportieren. Führen Sie das Dienstverbindungstool auf dem Dienstverbindungspunkt mithilfe des Parameters **-Export** aus.  
 
-##  <a name="a-namebkmkhashesa-one-way-hashes"></a><a name="bkmk_hashes"></a> Unidirektionale Hashes  
+##  <a name="bkmk_hashes"></a> Unidirektionale Hashes  
 Einige Daten bestehen aus Zeichenfolgen aus zufälligen alphanumerischen Zeichen. Configuration Manager verwendet den SHA-256-Algorithmus, der mit unidirektionalen Hashes sicherstellt, dass keine potentiell sensiblen Daten gesammelt werden. Der Algorithmus belässt Daten in einem Zustand, in dem sie dennoch für Korrelations- und Vergleichszwecke verwendet werden können. Anstatt z. B. die Namen von Tabellen in der Standortdatenbank zu erfassen, wird für jeden Tabellennamen ein unidirektionaler Hash erfasst. Dadurch wird sichergestellt, dass benutzerdefinierte Tabellennamen, die Sie erstellt haben, oder Produkt-Add-Ons von Dritten nicht sichtbar sind. Anschließend können Sie denselben unidirektionalen Hash der standardmäßig im Produkt enthaltenen SQL-Tabellennamen ausführen und die Ergebnisse der beiden Abfragen vergleichen, um die Abweichung Ihres Datenbankschemas von der Standardeinstellung des Produkts zu bestimmen. Das Ergebnis wird anschließend verwendet, um Updates zu verbessern, die Änderungen des SQL-Schemas erforderlich machen.  
 
 Beim Anzeigen der Rohdaten enthält jede Datenzeile einen allgemeinen Hashwert. Dies ist die Hierarchie-ID. Mit diesem Hashwert wird dann sichergestellt, dass die Daten mit der gleichen Hierarchie korreliert werden, ohne den Kunden oder die Quelle zu identifizieren.  
@@ -66,9 +67,4 @@ Beim Anzeigen der Rohdaten enthält jede Datenzeile einen allgemeinen Hashwert. 
     $result = [Convert]::ToBase64String($hashedBytes)    
     return $result   
     ```  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

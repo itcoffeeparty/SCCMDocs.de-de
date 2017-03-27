@@ -36,6 +36,7 @@ translation.priority.ht:
 translationtype: Human Translation
 ms.sourcegitcommit: 688e05aae0e0b15b54835f8d64a98487f4d7b64d
 ms.openlocfilehash: 82bcd1a9fe22bf7ecc2dc5765f64f5198494152e
+ms.lasthandoff: 12/29/2016
 
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1610-of-system-center-configuration-manager"></a>Ebenen der Sammlung von Nutzungsdaten zu Diagnosezwecken für System Center Configuration Manager-Version 1610
@@ -50,73 +51,71 @@ Die Version 1610 von System Center Configuration Manager sammelt drei Ebenen von
 > [!IMPORTANT]
 >  Configuration Manager sammelt auf den Ebenen „Basis“ und „Erweitert“ keine Standortcodes, Standortnamen, IP-Adressen, Benutzer- oder Computernamen, physischen Adressen oder E-Mail-Adressen. Die auf der Ebene „Vollständig“ erfassten Daten (möglicherweise in erweiterten Diagnoseinformationen wie Protokolldateien oder Arbeitsspeicher-Momentaufnahmen enthaltene Daten) werden nicht zielgerichtet gesammelt. Sie werden von Microsoft auch nicht zu Werbezwecken oder dazu verwendet, Sie zu identifizieren bzw. Kontakt mit Ihnen aufzunehmen.
 
-##  <a name="a-namebkmkchangea-how-to-change-the-level"></a><a name="bkmk_change"></a> Ändern der Ebene
+##  <a name="bkmk_change"></a> Ändern der Ebene
  Administratoren mit einem rollenbasierten Verwaltungsbereich, der **Ändern**-Berechtigungen für die **Standort**-Objektklasse umfasst, können in den Einstellungen der Configuration Manager-Konsole unter „Diagnose- und Nutzungsdaten“ die Ebene der erfassten Daten ändern.
 
 Ab Version 1610 können Sie die Datensammlungsebene innerhalb der Konsole ändern, indem Sie zu **Verwaltung** > **Überblick** > **Standortkonfiguration** > **Standorte** navigieren. Öffnen Sie die **Hierarchieeinstellungen**, und wählen Sie die Datenebene aus, die Sie verwenden möchten.  
 
-##  <a name="a-namebkmklevel1a-level-1---basic"></a><a name="bkmk_level1"></a> Ebene 1: Basis
+##  <a name="bkmk_level1"></a> Ebene 1: Basis
  Die Ebene „Basis“ umfasst Daten über Ihre Hierarchie, Daten, die für die Verbesserung Ihrer Installations- oder Upgradeerfahrung nötig sind, sowie Daten, die zur Ermittlung der für Ihre Hierarchie infrage kommenden Configuration Manager-Updates benötigt werden.
 
  Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgendes:
 
 
- -   Setupinformationen:
-      - Build, Installationstyp, Sprachpakete, Funktionen, die Sie aktiviert haben  
+-   Setupinformationen:
+       - Build, Installationstyp, Sprachpakete, Funktionen, die Sie aktiviert haben  
 
-      -   Aktualisieren des Paketbereitstellungsstatus und der Fehler, des Downloadstatus und der Voraussetzungsfehler  
+       - Aktualisieren des Paketbereitstellungsstatus und der Fehler, des Downloadstatus und der Voraussetzungsfehler     
 
-      -  Skriptversion nach dem Upgrade
+       - Skriptversion nach dem Upgrade
 
-      -  Updateverwendung (Fast Ring)
+       - Updateverwendung (Fast Ring)
 
-    -  ***[Neu]*** Verwendung der Vorabversion, Setup Medientyp, Verzweigungstyp
+    - ***[Neu]*** Verwendung der Vorabversion, Setup Medientyp, Verzweigungstyp
 
     - ***[Neu]*** Ablaufdatum der Software Assurance
 
+- Metriken zur Datenbankleistung (Informationen zur Replikationsverarbeitung, die wichtigsten gespeicherten SQL Server-Prozeduren nach Prozessor und Datenträgerverwendung)
 
--   Metriken zur Datenbankleistung (Informationen zur Replikationsverarbeitung, die wichtigsten gespeicherten SQL Server-Prozeduren nach Prozessor und Datenträgerverwendung)
+- Grundlegende Informationen zur Datenbankkonfiguration (Prozessoren, Clusterkonfiguration und Konfiguration verteilter Ansichten)
 
--   Grundlegende Informationen zur Datenbankkonfiguration (Prozessoren, Clusterkonfiguration und Konfiguration verteilter Ansichten)
+- Configuration Manager-Datenbankschema (Hash aller Objektdefinitionen)
 
--   Configuration Manager-Datenbankschema (Hash aller Objektdefinitionen)
+- Anzahl der Configuration Manager-Client- und -Betriebssystemversionen
 
--   Anzahl der Configuration Manager-Client- und -Betriebssystemversionen
+- Anzahl der Betriebssysteme für verwaltete Geräte und der von Exchange Connector festgelegten Richtlinien
 
--   Anzahl der Betriebssysteme für verwaltete Geräte und der von Exchange Connector festgelegten Richtlinien
+- Anzahl der Clientsprachen und -gebietsschemas
 
--   Anzahl der Clientsprachen und -gebietsschemas
+- Anzahl von Windows 10-Geräten nach Branch und Build
 
--   Anzahl von Windows 10-Geräten nach Branch und Build
+- Grundlegende Daten zur Configuration Manager-Standorthierarchie (Standortliste, Typ, Version, Status, Anzahl der Clients und Zeitzone)
 
--   Grundlegende Daten zur Configuration Manager-Standorthierarchie (Standortliste, Typ, Version, Status, Anzahl der Clients und Zeitzone)
+- Grundlegende Informationen zum Standortsystemserver (verwendete Standortsystemrollen, Internet- und SSL-Status, Betriebssystem, Prozessoren sowie physischer oder virtueller Computer)
 
--   Grundlegende Informationen zum Standortsystemserver (verwendete Standortsystemrollen, Internet- und SSL-Status, Betriebssystem, Prozessoren sowie physischer oder virtueller Computer)
+- Grundlegende Statistiken zur Benutzerermittlung (Benutzerermittlungsanzahl und minimale/maximale/durchschnittliche Gruppengröße)
 
--   Grundlegende Statistiken zur Benutzerermittlung (Benutzerermittlungsanzahl und minimale/maximale/durchschnittliche Gruppengröße)
+- Grundlegende Informationen zu Endpoint Protection (Antischadsoftware-Clientversionen)
 
--   Grundlegende Informationen zu Endpoint Protection (Antischadsoftware-Clientversionen)
+- Anzahl der grundlegenden Anwendungs- und Bereitstellungstypen (Gesamtzahl der Apps, Gesamtzahl der Apps mit mehreren Bereitstellungstypen, Gesamtzahl der Apps mit Abhängigkeiten, Gesamtzahl der ersetzten Apps und Anzahl der verwendeten Bereitstellungstechnologien)
 
--   Anzahl der grundlegenden Anwendungs- und Bereitstellungstypen (Gesamtzahl der Apps, Gesamtzahl der Apps mit mehreren Bereitstellungstypen, Gesamtzahl der Apps mit Abhängigkeiten, Gesamtzahl der ersetzten Apps und Anzahl der verwendeten Bereitstellungstechnologien)
+- Anzahl der grundlegenden Betriebssystembereitstellungen (OSDs) (Images)
 
--   Anzahl der grundlegenden Betriebssystembereitstellungen (OSDs) (Images)
+- Informationen zu Verteilungspunkt- und Verwaltungspunkttypen sowie zur grundlegenden Konfiguration (geschützt, vorab bereitgestellt, PXE, Multicast, SSL-Status, Pull-/Peerverteilungspunkte, MDM-aktiviert, SSL-fähig usw.)
 
--   Informationen zu Verteilungspunkt- und Verwaltungspunkttypen sowie zur grundlegenden Konfiguration (geschützt, vorab bereitgestellt, PXE, Multicast, SSL-Status, Pull-/Peerverteilungspunkte, MDM-aktiviert, SSL-fähig usw.)
+- Telemetriestatistiken (Ausführungszeit, Laufzeit, Fehler)
 
--   Telemetriestatistiken (Ausführungszeit, Laufzeit, Fehler)
+- Konfigurierte Telemetrieebene, Modus (online oder offline) und schnelle Updatekonfiguration
 
--  Konfigurierte Telemetrieebene, Modus (online oder offline) und schnelle Updatekonfiguration
+- Verwenden der Netzwerkermittlung (aktiviert oder deaktiviert)
+- Verwaltungskonsole:
 
--  Verwenden der Netzwerkermittlung (aktiviert oder deaktiviert)
--  Verwaltungskonsole:
-
-     -  Statistiken zu den Konsolenverbindungen (Betriebssystemversion, Sprache, SKU und Architektur, Systemspeicher, Anzahl der logischen Prozessoren, Connect-Website-ID, installierte .NET-Versionen und Konsolensprachpakete)    
-
+     - Statistiken zu den Konsolenverbindungen (Betriebssystemversion, Sprache, SKU und Architektur, Systemspeicher, Anzahl der logischen Prozessoren, Connect-Website-ID, installierte .NET-Versionen und Konsolensprachpakete)    
 
 - SQL-Version, Service Pack-Ebene, Edition, Sortierungs-ID und Zeichensatz
 
 
-##  <a name="a-namebkmklevel2a-level-2---enhanced"></a><a name="bkmk_level2"></a> Ebene 2: Erweitert
+##  <a name="bkmk_level2"></a> Ebene 2: Erweitert
 Die Ebene „Erweitert“ ist die Standardeinstellung nach dem Setup. Diese Ebene enthält die auf der Ebene „Basis“ erfassten Daten und featurespezifische Daten (Häufigkeit und Dauer der Verwendung), Configuration Manager-Clienteinstellungen (Name der Komponente, Status und bestimmte Einstellungen wie Abrufintervalle) sowie grundlegende Informationen zu Softwareupdates.
 
 Diese Ebene wird empfohlen, weil sie Microsoft die Daten bereitstellt, die mindestens erforderlich sind, um in künftigen Versionen der Produkte und Dienste nützliche Verbesserungen vorzunehmen. Diese Ebene erfasst keine Objektnamen (Websites, Benutzer, Computer oder Objekte) und keine Details zu sicherheitsrelevanten Objekten oder Sicherheitsrisiken, wie etwa die Anzahl der Systeme, die Softwareupdates erfordern.
@@ -265,7 +264,7 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
     -   Anzahl der Warnungen, die für das Endpoint Protection-Feature konfiguriert sind  
 
-    -   Advanced Threat Protection-Richtlinien (ATP) (Anzahl der Richtlinien und Angabe, ob Richtlinien bereitgestellt werden)
+    -     Advanced Threat Protection-Richtlinien (ATP) (Anzahl der Richtlinien und Angabe, ob Richtlinien bereitgestellt werden)
 
 
 - **Migration:**
@@ -393,7 +392,7 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
 
 
-##  <a name="a-namebkmklevel3a-level-3---full"></a><a name="bkmk_level3"></a> Ebene 3: Vollständig
+##  <a name="bkmk_level3"></a> Ebene 3: Vollständig
 Die Ebene „Vollständig“ umfasst alle Daten der Ebenen „Basis“ und „Erweitert“. Darüber hinaus werden zusätzliche Informationen zu Endpoint Protection, die Prozentsätze zur Updatekompatibilität sowie Informationen zu Softwareupdates erfasst.  Diese Ebene kann auch erweiterte Diagnoseinformationen wie Systemdateien und Momentaufnahmen des Arbeitsspeichers einschließen. Darin können wiederum personenbezogene Informationen enthalten sein, die zum Zeitpunkt der Erfassung im Arbeitsspeicher oder in Protokolldateien vorhanden waren.
 
 Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgendes:
@@ -438,9 +437,4 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 -   Detaillierte Installationsfehler der Client-Bereitstellung
 
 - ***[Neu]*** Anwendungsdetails zu Windows Store für Unternehmen (nicht-aggregierte Liste synchronisierter Anwendungen, darunter App-ID, Status – Online oder Offline, und die Gesamtzahl erworbener Lizenzen)
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

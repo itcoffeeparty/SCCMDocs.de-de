@@ -15,10 +15,11 @@ caps.latest.revision: 36
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-robots: noindex,nofollow
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
+ms.lasthandoff: 01/24/2017
+
 
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1605 für System Center Configuration Manager
@@ -35,7 +36,7 @@ In diesem Artikel werden die Features erläutert, die in der Technical Preview f
 
  **Im Folgenden werden neue Features aufgelistet, die Sie mit dieser Version ausprobieren können.**  
 
-##  <a name="a-namebkmkperappvpna-per-app-vpn-for-windows-10-devices"></a><a name="BKMK_PerAppVPN"></a> VPN pro App für Windows 10-Geräte  
+##  <a name="BKMK_PerAppVPN"></a> VPN pro App für Windows 10-Geräte  
  Für Windows 10-Geräte, die mithilfe von Configuration Manager und Intune verwaltet werden, können Sie eine Liste von Apps hinzufügen, die automatisch eine VPN-Verbindung öffnen, die Sie über die Configuration Manager-Verwaltungskonsole konfiguriert haben. Sie haben die Möglichkeit, den VPN-Datenverkehr auf diese Apps zu beschränken, oder Sie können weiterhin den gesamten Datenverkehr über die VPN-Verbindung ermöglichen.  
 
  **Anforderungen**:  
@@ -44,17 +45,17 @@ In diesem Artikel werden die Features erläutert, die in der Technical Preview f
 
 -   Ein Windows 10-VPN-Profil, das für mindestens ein Gerät bereitgestellt wurde  
 
-##  <a name="a-namebkmkinstallsua-improvements-to-the-install-software-updates-task-sequence"></a><a name="BKMK_InstallSU"></a> Verbesserungen an der Tasksequenz „Softwareupdates installieren“  
+##  <a name="BKMK_InstallSU"></a> Verbesserungen an der Tasksequenz „Softwareupdates installieren“  
  Die folgenden Verbesserungen wurden an der Tasksequenz „Softwareupdates installieren“ durchgeführt:  
 
 -   Eine neue Tasksequenzvariable, „SMSTSSoftwareUpdateScanTimeout“, steht Ihnen zur Verfügung. Mit ihr können Sie das Timeout für die Softwareupdateprüfung während des Tasksequenzschritts „Softwareupdates installieren“ kontrollieren. Der Standardwert beträgt 30 Minuten.  
 
 -   Es wurden Verbesserungen für die Protokollierung durchgeführt. Die Protokolldatei „smsts.log“ wird neue Protokolleinträge enthalten, die auf andere Protokolldateien verweisen, die Sie bei der Problembehandlung während der Installation der Softwareupdates unterstützen.  
 
-##  <a name="a-namebkmkprepareconfigmgrclienta-improvements-to-the-prepare-configmgr-client-for-capture-task-sequence-step"></a><a name="BKMK_PrepareConfigMgrClient"></a> Verbesserungen am Tasksequenzschritt „ConfigMgr-Client für Erfassung vorbereiten“  
+##  <a name="BKMK_PrepareConfigMgrClient"></a> Verbesserungen am Tasksequenzschritt „ConfigMgr-Client für Erfassung vorbereiten“  
  Im Schritt „Configuration Manager-Client vorbereiten“ wird der Configuration Manager-Client nun vollständig entfernt, und nicht nur die wichtigen Informationen. Wenn die Tasksequenz das erfasste Betriebssystemimage bereitstellt, wird jedes Mal ein neuer Configuration Manager-Client installiert.  
 
-##  <a name="a-namebkmkgracea-grace-period-for-required-application-deployments"></a><a name="BKMK_Grace"></a> Karenzzeit für die erforderlichen Anwendungsbereitstellungen  
+##  <a name="BKMK_Grace"></a> Karenzzeit für die erforderlichen Anwendungsbereitstellungen  
  In einigen Fällen empfiehlt es sich, Benutzern mehr Zeit zum Installieren von erforderlichen Anwendungsbereitstellungen zu geben, über die von Ihnen konfigurierten Fristen hinaus. Wenn z.B. ein Endbenutzer gerade aus dem Urlaub zurückgekehrt ist, muss er möglicherweise sehr lange warten, bis überfällige Anwendungsbereitstellungen installiert werden. Sie können jedoch die Anwendung weiterhin zu einem beliebigen Zeitpunkt installieren.  
 
  Sie können jetzt eine **Karenzzeit** definieren, um dieses Problem zu lösen. Dafür müssen Sie die Configuration Manager-Clienteinstellungen für eine Sammlung bereitstellen.  
@@ -71,7 +72,7 @@ In diesem Artikel werden die Features erläutert, die in der Technical Preview f
 
  Ähnliche Optionen wurden zum Bereitstellungsassistenten für Softwareupdates, zum Assistenten für automatische Bereitstellungsregeln und den Eigenschaftenseiten hinzugefügt. Jedoch sind diese zur Zeit nicht in dieser Technical Preview implementiert.  
 
-##  <a name="a-namebkmkremotea-new-experience-for-remote-device-actions"></a><a name="BKMK_Remote"></a> Benutzerfreundlichere Remotegeräteaktionen  
+##  <a name="BKMK_Remote"></a> Benutzerfreundlichere Remotegeräteaktionen  
  Die Ausführung von Remotegeräteaktionen über die Configuration Manager-Konsole wurde verbessert.  
 Häufig verwendete Aktionen, wie z.B. **Abkoppeln/Zurücksetzen**, **Kennung zurücksetzen**, **Remotesperre** und **Aktivierungssperre umgehen**, befinden sich nun im Menü **Remotegeräteaktionen**, auf das Sie über den Arbeitsbereich **Bestand und Kompatibilität** zugreifen können.  
 
@@ -87,7 +88,7 @@ Häufig verwendete Aktionen, wie z.B. **Abkoppeln/Zurücksetzen**, **Kennung zur
 
  Weitere Informationen zu Umgehung der iOS-Aktivierungssperre, finden Sie unter [Unterstützen des Schutzes von iOS-Geräten durch Umgehung der Aktivierungssperre für Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock), insbesondere im Abschnitt **Aktuell bekannte Probleme mit der Umgehung der Aktivierungssperre finden Sie in Configuration Manager Technical Preview**.  
 
-##  <a name="a-namebkmkwsfba-windows-store-for-business-apps"></a><a name="BKMK_WSFB"></a> Windows Store für Unternehmen-Apps  
+##  <a name="BKMK_WSFB"></a> Windows Store für Unternehmen-Apps  
  Im [Windows Store für Unternehmen](https://www.microsoft.com/business-store) können Sie Apps für Ihre Organisation finden und entweder einzeln oder per Volumenlizenz erwerben. Indem Sie den Store mit Configuration Manager verbinden, können Sie per Volumenlizenz erworbene Apps in der Configuration Manager-Konsole verwalten, zum Beispiel:  
 
 -   Sie können die Liste der erworbenen Apps mit Configuration Manager synchronisieren  
@@ -158,7 +159,7 @@ Häufig verwendete Aktionen, wie z.B. **Abkoppeln/Zurücksetzen**, **Kennung zur
 >   
 >  Sie können derzeit keine online lizenzierten Apps mit Configuration Manager bereitstellen.  
 
-##  <a name="a-namebkmkvpp2a-general-improvements-for-volume-purchased-apps"></a><a name="BKMK_VPP2"></a> Allgemeine Verbesserungen für per Volumenlizenz erworbene Apps  
+##  <a name="BKMK_VPP2"></a> Allgemeine Verbesserungen für per Volumenlizenz erworbene Apps  
 
 -   In diesem Release wurden per Volumenlizenz erworbene Apps aus dem Windows Store für Unternehmen und dem iOS App-Store in der gleichen Ansicht, **Lizenzinformationen für Store-Apps**, konsolidiert.  
 
@@ -170,14 +171,14 @@ Häufig verwendete Aktionen, wie z.B. **Abkoppeln/Zurücksetzen**, **Kennung zur
 
 -   Der Ort, die Sie zum Abrufen und Hochladen eines Apple VPP-Token für per Volumenlizenz erworbenen Apps in der Configuration Manager-Konsole verwenden, hat sich geändert. Sie können das jetzt im Arbeitsbereich **Admin** im Knoten **Clouddienste** > **Apple Volume Purchase Program Token** erledigen.  
 
-##  <a name="a-namebkmkvppa-enterprise-data-protection-edp"></a><a name="BKMK_VPP"></a> Unternehmensdatenschutz (Enterprise Data Protection; EDP)  
+##  <a name="BKMK_VPP"></a> Unternehmensdatenschutz (Enterprise Data Protection; EDP)  
  Sie können Konfigurationselemente erstellen, mit denen Sie Ihre EDP-Richtlinien bereitstellen, Ihre geschützten Apps und Ihre EDP-Schutzebene auswählen, und Unternehmensdaten im Netzwerk suchen können. Weitere Informationen zu EDP finden Sie in den folgenden Themen:  
 
 -   [Protect your enterprise data using enterprise data protection (EDP) (Schützen Ihrer Unternehmensdaten mithilfe des Unternehmensdatenschutzes (EDP))](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-edp)  
 
 -   [Create and deploy an enterprise data protection (EDP) policy using System Center Configuration Manager (Erstellen und Bereitstellen einer Richtlinie für den Unternehmensdatenschutz (EDP) mithilfe von System Center Configuration Manager)](https://technet.microsoft.com/itpro/windows/keep-secure/create-edp-policy-using-sccm)  
 
-##  <a name="a-namebkmkenda-end-users-can-install-apps-from-the-company-portal"></a><a name="BKMK_End"></a> Endbenutzer können Apps über das Unternehmensportal installieren.  
+##  <a name="BKMK_End"></a> Endbenutzer können Apps über das Unternehmensportal installieren.  
  Die lokale Verwaltung mobiler Geräte (MDM) wurde in Version 1511 von System Center Configuration Manager eingeführt. In früheren Versionen konnten Sie Anwendungen für MDM-verwaltete Windows 10-Geräte mit dem Bereitstellungszweck **erforderliche Installation** für lokale, MDM-verwaltete Geräte, bereitstellen.  
 
  In diesem Release können Sie jetzt Apps mit dem Bereitstellungszweck **Verfügbar** für Benutzer der lokalen, MDM-verwalteten Windows-10-Computer bereitstellen, und Benutzer können diese Apps jetzt selbst aus dem Unternehmensportal installieren.
@@ -268,12 +269,12 @@ Wenn das Unternehmensportal in dieser Technical Preview länger als 15 Minuten g
 
      Wenn Sie das Unternehmensportal geöffnet haben, sehen Sie ein Authentifizierungsdialogfeld mit dem Namen **System Center Configuration Manager**. Geben Sie die Active Directory-Registrierungsinformationen des Benutzers an (entweder in Form von user@domain oder Domäne\Benutzer), um sich anzumelden.  
 
-##  <a name="a-namebkmksw1a-new-tabs-for-updates-and-operating-systems-in-software-center"></a><a name="BKMK_SW1"></a> Neue Registerkarten für Updates und Betriebssysteme im Software Center  
+##  <a name="BKMK_SW1"></a> Neue Registerkarten für Updates und Betriebssysteme im Software Center  
  In diesem Release wurden die folgenden Änderungen vorgenommen, um das Layout der Software Center-Anwendung zu verbessern:  
 
 -   Die Registerkarte **Anwendungen** wurde in drei separate Registerkarten aufgeteilt: **Updates**, **Betriebssysteme** (die beide zuvor in der Liste **Filter** zu finden waren) und **Anwendungen**.  
 
-##  <a name="a-namebkmkservergroupsa-service-a--server-group"></a><a name="BKMK_ServerGroups"></a> Bereitstellung einer Servergruppe  
+##  <a name="BKMK_ServerGroups"></a> Bereitstellung einer Servergruppe  
  Technical Preview für System Center Configuration Manager Version 1511 enthält die Möglichkeit, eine Sammlung zu erstellen, in der alle Geräte in der Sammlung eine Servergruppe bilden. Anschließend könnten Sie die Einstellungen der Servergruppe konfigurieren, die Sie verwenden, wenn Sie Softwareupdates für die Servergruppe bereitstellen, den Prozentsatz der Computer überprüfen, die zu jedem Zeitpunkt aktualisiert werden und die PowerShell-Skripts vor und nach der Bereitstellung zur Ausführung benutzerdefinierter Aktionen konfigurieren.  
 
  Mit der Technical Preview für System Center Configuration Manager Version 1605 haben Sie ebenso die Möglichkeit, die Computer in der Servergruppe in einer bestimmten Reihenfolge, die Sie definieren, zu aktualisieren, eine erweiterte Überwachung zum Anzeigen des Status für die Computer in der Servergruppe hinzuzufügen und die Bereitstellungssperren zu deaktivieren. Dies ist hilfreich, wenn Clients die Softwareupdates nicht installieren konnten und verhindern, dass andere Clients die Softwareupdates installieren.  
@@ -340,7 +341,7 @@ Wenn das Unternehmensportal in dieser Technical Preview länger als 15 Minuten g
 
 2.  Klicken Sie auf der Registerkarte **Start** in der Gruppe **Bereitstellung** auf **Bereitstellungssperren für Servergruppe löschen**. Wenn Clients die Softwareupdates nicht installiert haben, und dadurch die Installation der Softwareupdates auf anderen Clients verhindert wird, können die Bereitstellungssperren manuell gelöscht werden.  
 
-##  <a name="a-namebkmkatpa-support-for-windows-defender-advanced-threat-protection-service"></a><a name="BKMK_ATP"></a> Unterstützung für Windows Defender Advanced Threat Protection  
+##  <a name="BKMK_ATP"></a> Unterstützung für Windows Defender Advanced Threat Protection  
  Windows Defender Advanced Threat Protection (ATP) ist ein neuer Dienst, der Unternehmen dabei unterstützt, erweiterte Angriffe auf ihre Netzwerke zu entdecken, zu untersuchen und darauf zu reagieren. Weitere Informationen finden Sie unter [Windows Defender ATP](https://blogs.windows.com/windowsexperience/2016/03/01/announcing-windows-defender-advanced-threat-protection). Configuration Manager kann Sie beim Onboarding unterstützen, und verwaltete Windows 10 Anniversary Edition-Clientgeräte überwachen.  
 
 ### <a name="try-it-now"></a>Probieren Sie es jetzt aus!  
@@ -407,7 +408,7 @@ Wenn das Unternehmensportal in dieser Technical Preview länger als 15 Minuten g
 
         -   **Nicht integriert** – Die Richtlinie wurde angewendet, aber der Agent hat die Richtlinienintegration nicht gemeldet  
 
-##  <a name="a-namebkmkdhaa-on-premises-device-health-attestation"></a><a name="BKMK_DHA"></a> Integritätsnachweis für lokale Geräte  
+##  <a name="BKMK_DHA"></a> Integritätsnachweis für lokale Geräte  
  Der Integritätsnachweis für Windows 10-Geräte kann jetzt so konfiguriert werden, dass die Kommunikation über die lokale Infrastruktur erfolgt. Administratoren können angeben, ob die Berichterstellung über die Cloud oder über lokale Ressourcen durchgeführt wird. Wenn für die Berichterstellung für den Integritätsnachweis „lokal“ ausgewählt wird, kann ein URL für den Dienst angegeben werden. Dadurch können Client-PCs ohne Internetzugriff Geräte, die den Integritätsnachweis verwenden, aktivieren und verwalten.  
 
 ### <a name="enable-health-attestation-for-on-premises-devices"></a>Aktivieren des Integritätsnachweises für lokale Geräte  
@@ -417,10 +418,10 @@ Wenn das Unternehmensportal in dieser Technical Preview länger als 15 Minuten g
 
 2.  Geben Sie die **URL für lokalen Integritätsnachweisdienst**an, und klicken Sie anschließend auf **OK**.  
 
-##  <a name="a-namebkmkrestartoptionsa-new-restart-options-for-windows-10-clients-after-software-update-installation"></a><a name="BKMK_RestartOptions"></a> Neue Neustartoptionen für Windows 10-Clients nach der Installation von Softwareupdates  
+##  <a name="BKMK_RestartOptions"></a> Neue Neustartoptionen für Windows 10-Clients nach der Installation von Softwareupdates  
  Wenn ein Softwareupdate, das einen Neustart benötigt, mit Configuration Manager bereitgestellt und auf einem Computer installiert wird, wird ein ausstehender Neustart geplant, und das Neustartdialogfeld wird angezeigt. Wenn Sie in Versionen, die unter Windows 8 oder höher laufen, den Computer mithilfe der Windows Power-Optionen (anstatt über den Neustartdialog) herunterfahren oder neu starten, wird das Neustartdialogfeld auch nach dem Neustart weiterhin angezeigt. Der Computer muss trotzdem innerhalb der konfigurierten Zeitspanne neu gestartet werden. In dieser Technical Preview werden die Optionen **Update und Neustart** und **Update und Herunterfahren** auf Windows 10-Computern in den Windows Power-Optionen verfügbar sein, sobald es einen ausstehenden Neustart für ein Configuration Manager-Softwareupdate gibt. Nach der Verwendung einer dieser Optionen, wird das Dialogfeld „Neustart“ nach dem Neustart des Computers nicht angezeigt.  
 
-##  <a name="a-namebkmkimeia-pre-declare-corporate-owned-devices-with-imei-or-ios-serial-number"></a><a name="BKMK_IMEI"></a> Vorabdeklarieren von firmeneigenen Geräten mit IMEI- oder iOS-Seriennummer  
+##  <a name="BKMK_IMEI"></a> Vorabdeklarieren von firmeneigenen Geräten mit IMEI- oder iOS-Seriennummer  
  Sie können nun unternehmenseigene Geräte identifizieren, indem Sie deren IMEI-Nummern (International Station Mobile Equipment Identity) importieren. Sie können eine CSV-Datei (comma-separated values, durch Trennzeichen getrennte Datei) hochladen, die die IMEI-Nummern der Geräte enthält, oder Geräteinformationen manuell eingeben.  Sie können auch die Seriennummern für iOS-Geräte importieren.  Importierte Informationen legen den Besitz der registrierten Geräte auf „Unternehmen“ fest.  Dennoch wird für jeden Benutzer, der auf den Dienst zugreift, eine Intune-Lizenz benötigt.  
 
 ### <a name="try-it-out"></a>Probieren Sie es aus!  
@@ -469,9 +470,4 @@ Wenn das Unternehmensportal in dieser Technical Preview länger als 15 Minuten g
      Klicken Sie auf **Weiter**.  
 
 4.  Überprüfen der Ergebnisse des Dateiimports. Die Details zuvor importierter IMEI- oder Seriennummern werden mit neuen Details aktualisiert.  Klicken Sie auf **Weiter**, um fortzufahren oder auf **Zurück**, um aktualisierte Details beizubehalten, und schließen Sie dann den Assistenten ab.  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
