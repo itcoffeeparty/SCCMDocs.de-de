@@ -16,9 +16,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 0e5f65552045e9cef06f5286b0087153751c79b0
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 0988899047a0e3464e15055fceb5924ee20b0b88
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -34,14 +34,14 @@ Bevor Sie einen Linux- oder UNIX-Server mit System Center Configuration Manager 
 
  Nach der Installation des Clients geben Sie die Clienteinstellungen in der Configuration Manager-Konsole an, um den Client-Agent auf die gleiche Weise wie Windows-basierte Clients zu konfigurieren. Weitere Informationen finden Sie unter  [Client settings for Linux and UNIX servers](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU).  
 
-##  <a name="a-namebkmkaboutinstallpackagesa-about-client-installation-packages-and-the-universal-agent"></a><a name="BKMK_AboutInstallPackages"></a> Informationen zu Clientinstallationspaketen und der universelle Agent  
+##  <a name="BKMK_AboutInstallPackages"></a> Informationen zu Clientinstallationspaketen und der universelle Agent  
  Um den Client für Linux und UNIX auf einer bestimmten Plattform zu installieren, müssen Sie das entsprechende Clientinstallationspaket für den Computer verwenden, auf dem Sie den Client installieren. Die jeweiligen Clientinstallationspakete sind in jedem Clientdownload aus dem [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184)enthalten. Zusätzlich zu den Clientinstallationspaketen umfasst das Clientdownload das **install** -Skript zur Verwaltung der Clientinstallation auf den einzelnen Computern.  
 
  Wenn Sie einen Client installieren, können Sie die gleichen Prozess und Befehlszeile Eigenschaften unabhängig von der Client-Installationspaket, die Sie verwenden.  
 
- Informationen zu den Betriebssystemen, Plattformen und Clientinstallationspaketen, die von den einzelnen Releases des Configuration Manager-Clients für Linux und UNIX unterstützt werden, finden Sie unter [Linux- und UNIX-Server](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_LinuxOS).  
+ Informationen zu den Betriebssystemen, Plattformen und Clientinstallationspaketen, die von den einzelnen Releases des Configuration Manager-Clients für Linux und UNIX unterstützt werden, finden Sie unter [Linux- und UNIX-Server](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#linux-and-unix-servers).  
 
-##  <a name="a-namebkmkinstalllnuclienta-install-the-client-on-linux-and-unix-servers"></a><a name="BKMK_InstallLnUClient"></a> Installieren Sie den Client auf Linux- und UNIX-Servern  
+##  <a name="BKMK_InstallLnUClient"></a> Installieren Sie den Client auf Linux- und UNIX-Servern  
  Zum Installieren des Clients für Linux und UNIX, führen Sie ein Skript auf jedem Linux- oder UNIX-Computer. Das Skript heißt **Installieren** und unterstützt Eigenschaften, über die Befehlszeile, die das Installationsverhalten zu ändern und das Client-Installationspaket zu verweisen. Das Skript und Client-Installation Installationspaket muss auf dem Client befinden. Das Clientinstallationspaket enthält die Configuration Manager-Clientdateien für ein bestimmtes Linux oder UNIX-Betriebssystem und die entsprechende Plattform.
 Jeder Client-Installationspaket enthält die erforderlichen Dateien zum Abschließen der Clientinstallations und im Gegensatz zu Windows-basierten Computern wird nicht heruntergeladen zusätzliche Dateien aus einem Verwaltungspunkt oder andere Quellspeicherort.  
 
@@ -72,7 +72,7 @@ Jeder Client-Installationspaket enthält die erforderlichen Dateien zum Abschlie
 
      Beispiel: ccm-Universal-x64.&lt;build\>.tar  
 
-###  <a name="a-namebkmktoinstalllnuclinenta-to-install-the-configuration-manager-client-on-linux-and-unix-servers"></a><a name="BKMK_ToInstallLnUClinent"></a> So installieren Sie Configuration Manager-Client auf Linux- und UNIX-Servern  
+###  <a name="BKMK_ToInstallLnUClinent"></a> So installieren Sie Configuration Manager-Client auf Linux- und UNIX-Servern  
 
 1.  Auf einem Windows-Computer müssen Sie [die entsprechende Clientdatei für den Linux- oder UNIX-Server herunterladen](http://go.microsoft.com/fwlink/?LinkID=525184) , den Sie verwalten möchten.  
 
@@ -91,7 +91,7 @@ Jeder Client-Installationspaket enthält die erforderlichen Dateien zum Abschlie
 
 6.  Nachdem das Skript ausgeführt wurde, überprüfen Sie die Installation anhand der Datei **/var/opt/microsoft/scxcm.log** . Darüber hinaus können Sie überprüfen, ob der Client installiert wurde und mit dem Standort kommuniziert, indem Sie die Details für den betreffenden Client unter dem Knoten **Geräte** im Arbeitsbereich **Bestand und Kompatibilität** der Configuration Manager-Konsole anzeigen.  
 
-###  <a name="a-namebkmkcmdlineinstalllnuclienta-command-line-properties-for-installing-the-client-on-linux-and-unix-servers"></a><a name="BKMK_CmdLineInstallLnUClient"></a> Befehlszeileneigenschaften zur Installation des Clients auf Linux- und UNIX-Servern  
+###  <a name="BKMK_CmdLineInstallLnUClient"></a> Befehlszeileneigenschaften zur Installation des Clients auf Linux- und UNIX-Servern  
  Die folgenden Eigenschaften sind zum Ändern des Verhaltens des Installationsskripts verfügbar:  
 
 > [!NOTE]  
@@ -117,7 +117,7 @@ Jeder Client-Installationspaket enthält die erforderlichen Dateien zum Abschlie
 
      (Optional) Gibt an, über den FQDN der Fallbackstatuspunkt-Server, die der Client verwendet, um Status-Nachrichten zu senden.  
 
-     Weitere Informationen zum Fallbackstatuspunkt finden Sie unter [Determine Whether You Require a Fallback Status Point](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#BKMK_Determine_FSP) .  
+     Weitere Informationen zum Fallbackstatuspunkt finden Sie unter [Bestimmen, ob ein Fallbackstatuspunkt erforderlich ist](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point).  
 
 -   **-dir &lt;Verzeichnis\>**  
 
@@ -143,7 +143,7 @@ Jeder Client-Installationspaket enthält die erforderlichen Dateien zum Abschlie
 
 -   **-UsePKICert &lt;Parameter\>**  
 
-     (Optional) Gibt den vollständigen Pfad und Namen mit einem x. 509-PKI-Zertifikat im Format Public Key Certificate Standard (PKCS #12). Dieses Zertifikat wird zur Client-Authentifizierung verwendet. Wenn während der Installation kein Zertifikat angegeben wird und Sie ein Zertifikat hinzufügen oder ändern müssen, verwenden Sie das Hilfsprogramm **certutil** . Weitere Informationen zu „certutil“ finden Sie unter [How to manage certificates on the client for Linux and UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) .  
+     (Optional) Gibt den vollständigen Pfad und Namen mit einem x.&509;-PKI-Zertifikat im Format Public Key Certificate Standard (PKCS&#12;). Dieses Zertifikat wird zur Client-Authentifizierung verwendet. Wenn während der Installation kein Zertifikat angegeben wird und Sie ein Zertifikat hinzufügen oder ändern müssen, verwenden Sie das Hilfsprogramm **certutil** . Weitere Informationen zu „certutil“ finden Sie unter [How to manage certificates on the client for Linux and UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) .  
 
      Bei Verwendung von **-UsePKICert**müssen Sie außerdem den Befehlszeilenparameter **-certpw** verwenden, um das der PKCS#12-Datei zugeordnete Kennwort anzugeben.  
 
@@ -158,7 +158,7 @@ Jeder Client-Installationspaket enthält die erforderlichen Dateien zum Abschlie
 
 -   **-certpw &lt;Parameter\>**  
 
-     (Optional) Gibt das Kennwort mit der angegebenen PKCS #12-Datei mithilfe der der **- UsePKICert** Eigenschaft.  
+     (Optional) Gibt das Kennwort mit der angegebenen PKCS&#12;-Datei mithilfe der der **- UsePKICert** Eigenschaft.  
 
      Beispiel: UsePKICert &lt;Vollständiger Pfad- und Dateiname\> -certpw &lt;Kennwort\>  
 
@@ -216,14 +216,14 @@ Jeder Client-Installationspaket enthält die erforderlichen Dateien zum Abschlie
 
      Beispiel: -Rootcerts &lt;Vollständiger Pfad- und Dateiname\>,&lt; Vollständiger Pfad- und Dateiname\>  
 
-###  <a name="a-namebkmkuninstalllnuclienta-uninstalling-the-client-from-linux-and-unix-servers"></a><a name="BKMK_UninstallLnUClient"></a> So deinstallieren Sie den Client von Linux- und UNIX-Servern  
+###  <a name="BKMK_UninstallLnUClient"></a> So deinstallieren Sie den Client von Linux- und UNIX-Servern  
  Zum Deinstallieren des Configuration Manager-Clients für Linux und UNIX verwenden Sie das Hilfsprogramm **uninstall**. Standardmäßig befindet sich diese Datei der **/opt/Microsoft/Configuration Manager/Bin/** Ordner auf dem Clientcomputer. Dieser Befehl uninstall unterstützt keine Befehlszeilenparameter und alle Dateien, die im Zusammenhang mit der Clientsoftware, vom Server entfernt.  
 
  Um den Client zu deinstallieren, verwenden Sie die folgende Befehlszeile: **/opt/microsoft/configmgr/bin/uninstall**  
 
  Sie müssen nach der Deinstallation des Configuration Manager-Clients für Linux und UNIX den Computer nicht neu starten.  
 
-##  <a name="a-namebkmkconfiglnuclientcommuincationsa-configure-request-ports-for-the-client-for-linux-and-unix"></a><a name="BKMK_ConfigLnUClientCommuincations"></a> Konfigurieren von Anforderungsports für den Client für Linux und UNIX  
+##  <a name="BKMK_ConfigLnUClientCommuincations"></a> Konfigurieren von Anforderungsports für den Client für Linux und UNIX  
  Ähnlich wie Windows-basierte Clients verwendet der Configuration Manager-Client für Linux und UNIX HTTP und HTTPS zur Kommunikation mit Configuration Manager-Standortsystemen. Die Ports, die der Configuration Manager-Client für die Kommunikation verwendet, werden als Anforderungsports bezeichnet.  
 
  Wenn Sie den Configuration Manager-Client für Linux und UNIX installieren, können Sie die Standardanforderungsports des Clients ändern, indem Sie die Installationseigenschaften **-httpport** und **-httpsport** angeben. Wenn Sie nicht die Installationseigenschaft und einen benutzerdefinierten Wert angeben, verwendet der Client die Standardwerte. Die Standardwerte sind **80** für HTTP-Datenverkehr und **443** für HTTPS-Datenverkehr.  
@@ -232,10 +232,10 @@ Jeder Client-Installationspaket enthält die erforderlichen Dateien zum Abschlie
 
  Weitere Informationen zu Portnummern, für die Clientkommunikation finden Sie unter [Konfigurieren von Clientkommunikationsports in System Center Configuration Manager](../../../core/clients/deploy/configure-client-communication-ports.md).  
 
-##  <a name="a-namebkmkconfigclientmpa-configure-the-client-for-linux-and-unix-to-locate-management-points"></a><a name="BKMK_ConfigClientMP"></a> Konfigurieren Sie den Client für Linux und UNIX nach Verwaltungspunkten suchen  
+##  <a name="BKMK_ConfigClientMP"></a> Konfigurieren Sie den Client für Linux und UNIX nach Verwaltungspunkten suchen  
  Beim Installieren des Configuration Manager-Clients für Linux und UNIX müssen Sie einen Verwaltungspunkt als ersten Kontaktpunkt angeben.  
 
  Der Configuration Manager-Client für Linux und UNIX stellt bei der Clientinstallation eine Verbindung mit diesem Verwaltungspunkt her. Wenn der Client keine Verbindung mit dem Verwaltungspunkt herstellen kann, wiederholt die Clientsoftware den Vorgang so lange, bis die Verbindung erfolgreich hergestellt wird.  
 
- Weitere Informationen dazu, wie Clients Verwaltungspunkte suchen, finden Sie unter [Locating Management Points](../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_LocatingMPs).
+ Weitere Informationen dazu, wie Clients Verwaltungspunkte suchen, finden Sie unter [Locating Management Points](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points).
 

@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
-ms.openlocfilehash: 54fc16c104ab25f3650ad1c38a2044abaee96a31
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 4717e0f8eef01501fb5b5790e855c476c1ca4590
+ms.lasthandoff: 03/21/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1607-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1607 für System Center Configuration Manager
@@ -29,7 +30,7 @@ In diesem Artikel werden die Features erläutert, die in der Technical Preview f
 
 **Im Folgenden werden neue Features aufgelistet, die Sie mit dieser Version ausprobieren können.**  
 
-## <a name="a-namedmpeditionaimprovements-to-the-windows-10-edition-upgrade-policy"></a><a name="dmp_edition"></a>Verbesserungen an der Richtlinie für Windows 10-Editionsupgrades
+## <a name="dmp_edition"></a>Verbesserungen an der Richtlinie für Windows 10-Editionsupgrades
 
 In dieser Release wurden die folgenden Verbesserungen an der Richtlinie vorgenommen:
 
@@ -59,7 +60,7 @@ Benutzerdefiniertes Branding für das Softwarecenter wird gemäß den folgenden 
 
 2. Wenn die Standortserverrolle „Anwendungskatalog-Websitepunkt“ installiert ist, zeigt Software Center den Organisationsnamen und die Farbe an, der bzw. die in den Eigenschaften der Standortserverrolle „Anwendungskatalog-Websitepunkt“ angegeben sind. Weitere Informationen finden Sie unter [Konfigurationsoptionen für den Anwendungskatalog-Websitepunkt](../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md#BKMK_ApplicationCatalog_Website).
 
-3. Wenn ein Microsoft Intune-Abonnement konfiguriert und mit der Configuration Manager-Umgebung verbunden ist, zeigt das Softwarecenter den Organisationsnamen, die Farbe und das Unternehmenslogo entsprechend den Angaben in den Eigenschaften des Intune-Abonnements an. Weitere Informationen finden Sie unter [Configuring the Microsoft Intune subscription](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription).
+3. Wenn ein Microsoft Intune-Abonnement konfiguriert und mit der Configuration Manager-Umgebung verbunden ist, zeigt das Softwarecenter den Organisationsnamen, die Farbe und das Unternehmenslogo entsprechend den Angaben in den Eigenschaften des Intune-Abonnements an. Weitere Informationen finden Sie unter [Configuring the Microsoft Intune subscription (Konfigurieren des Microsoft Intune-Abonnements)](/mdm/deploy-use/configure-intune-subscription).
 
 ## <a name="use-the-same-network-adapter-for-multiple-pxe-initiated-deployments"></a>Verwenden derselben Netzwerkadapter für mehrere PXE-initiierte Bereitstellungen
 In Technical Preview-Version 1607 können Sie bei der Verwendung eines Ethernet-Adapters für das Abbilden mehrere Geräte (z.B. ein USB-Ethernetadapter, den Sie auf mehreren Geräten verwenden) eine neue Einstellung aktivieren, mit der Sie Hardware-IDs für die Ethernet-Adapter eingeben können. Configuration Manager ignoriert die Hardware-IDs in der Liste für die Clientregistrierung, oder wenn er eine PXE-Installation ausführt.
@@ -76,9 +77,4 @@ Weitere Informationen zu diesem Problem finden Sie auf dem englischsprachigen [B
 2. Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Standorte** auf **Hierarchieeinstellungen**.
 3. Klicken Sie auf die Registerkarte **Clientgenehmigung und in Konflikt stehende Datensätze**.
 4. Klicken Sie im Abschnitt **Doppelte Hardware-IDs** auf **Hinzufügen**, um neue Hardware-IDs hinzuzufügen.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

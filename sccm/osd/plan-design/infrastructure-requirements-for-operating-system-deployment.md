@@ -16,8 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: 77ac69cecab7aa460001a8d2800e61f20a8565ed
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 562e81df12e46a2332aa5e4de8b7c9e5819bde80
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -27,7 +28,7 @@ ms.openlocfilehash: 77ac69cecab7aa460001a8d2800e61f20a8565ed
 
 Die Betriebssystembereitstellung in System Center 2012 Configuration Manager weist externe Abhängigkeiten sowie Abhängigkeiten innerhalb des Produkts auf. In den folgenden Themen finden Sie hilfreiche Informationen zur Vorbereitung der Betriebssystembereitstellung.  
 
-##  <a name="a-namebkmkexternaldependenciesa-dependencies-external-to-configuration-manager"></a><a name="BKMK_ExternalDependencies"></a> Externe Abhängigkeiten von Configuration Manager  
+##  <a name="BKMK_ExternalDependencies"></a> Externe Abhängigkeiten von Configuration Manager  
  Nachstehend finden Sie Informationen zu externen Tools, Installationskits und Betriebssystemen, die für die Bereitstellung von Betriebssystemen in Configuration Manager erforderlich sind.  
 
 ### <a name="windows-adk-for-windows-10"></a>Windows ADK für Windows 10  
@@ -104,7 +105,7 @@ Sie müssen die folgenden WSUS 4.0-Hotfixes installieren:
 ### <a name="windows-device-drivers"></a>Windows-Gerätetreiber  
  Sie können Windows-Gerätetreiber verwenden, wenn Sie das Betriebssystem auf dem Zielcomputer installieren und Windows PE mithilfe eines Startabbilds ausführen. Weitere Informationen zu Gerätetreibern finden Sie unter [Verwalten von Treibern](../get-started/manage-drivers.md).  
 
-##  <a name="a-namebkmkinternaldependenciesa-configuration-manager-dependencies"></a><a name="BKMK_InternalDependencies"></a> Abhängigkeiten in Configuration Manager  
+##  <a name="BKMK_InternalDependencies"></a> Abhängigkeiten in Configuration Manager  
  Nachstehend finden Sie Informationen zu den Voraussetzungen für die Configuration Manager-Betriebssystembereitstellung.  
 
 ### <a name="operating-system-image"></a>Betriebssystemabbild  
@@ -124,10 +125,10 @@ Sie müssen die folgenden WSUS 4.0-Hotfixes installieren:
  Weitere Informationen zum Installieren von Verteilungspunkten und Verwalten von Inhalt finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 ### <a name="pxe-enabled-distribution-point"></a>PXE-fähiger Verteilungspunkt  
- Für PXE-initiierte Bereitstellungen müssen Sie einen Verteilungspunkt so konfigurieren, dass die von Clients gestellten PXE-Anforderungen vom Verteilungspunkt akzeptiert werden. Weitere Informationen zum Konfigurieren des Verteilungspunkts finden Sie unter [Konfigurationen für Verteilungspunkte](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#a-namebkmkconfigsa-distribution-point-configurations) . Die Kategorie „PXE-Konfiguration“ finden Sie in der Tabelle.  
+ Für PXE-initiierte Bereitstellungen müssen Sie einen Verteilungspunkt so konfigurieren, dass die von Clients gestellten PXE-Anforderungen vom Verteilungspunkt akzeptiert werden. Weitere Informationen zum Konfigurieren des Verteilungspunkts finden Sie unter [Konfigurieren eines Verteilungspunkts](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#pxe).  
 
 ### <a name="multicast-enabled-distribution-point"></a>Multicast-fähiger Verteilungspunkt  
- Wenn Sie Ihre Betriebssystembereitstellungen mithilfe von Multicast optimieren möchten, müssen Sie einen Verteilungspunkt für die Unterstützung von Multicast konfigurieren. Weitere Informationen zum Konfigurieren des Verteilungspunkts finden Sie unter [Konfigurationen für Verteilungspunkte](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#a-namebkmkconfigsa-distribution-point-configurations) . Die Kategorie „Multicast-Konfiguration“ finden Sie in der Tabelle.  
+ Wenn Sie Ihre Betriebssystembereitstellungen mithilfe von Multicast optimieren möchten, müssen Sie einen Verteilungspunkt für die Unterstützung von Multicast konfigurieren. Weitere Informationen zum Konfigurieren des Verteilungspunkts finden Sie unter [Konfigurieren eines Verteilungspunkts](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#multicast).   
 
 ### <a name="state-migration-point"></a>Zustandsmigrationspunkt  
  Wenn Sie Benutzerzustandsdaten für parallele oder aktualisierte Bereitstellungen erfassen und wiederherstellen möchten, müssen Sie einen Zustandsmigrationspunkt zum Speichern der Benutzerzustandsdaten auf einem anderen Computer konfigurieren.  
@@ -162,7 +163,7 @@ Sie müssen die folgenden WSUS 4.0-Hotfixes installieren:
 ### <a name="security-scopes-for-operating-system-deployments"></a>Sicherheitsbereiche für Betriebssystembereitstellungen  
  Verwenden Sie Sicherheitsbereiche, um Administratoren Zugriff auf in Betriebssystembereitstellungen verwendete sicherungsfähige Objekte zu gewähren, beispielsweise auf Betriebssystemabbilder, Startabbilder, Treiberpakete und Tasksequenzpakete. Weitere Informationen finden Sie unter [Sicherheitsbereiche](../../core/understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope).  
 
-##  <a name="a-namebkmkwdsa-windows-deployment-services"></a><a name="BKMK_WDS"></a> Windows-Bereitstellungsdienste  
+##  <a name="BKMK_WDS"></a> Windows-Bereitstellungsdienste  
  Die Windows-Bereitstellungsdienste (Windows Deployment Services, WDS) müssen auf dem gleichen Server installiert sein wie die Verteilungspunkte, die Sie für die Unterstützung von PXE oder Multicast konfigurieren. Der Windows-Bereitstellungsdienst ist im Betriebssystem des Servers enthalten. Bei PXE-Bereitstellungen wird der PXE-Start von den Windows-Bereitstellungsdiensten ausgeführt. Wenn der Verteilungspunkt installiert und PXE-fähig ist, erstellt Configuration Manager einen Anbieter in WDS, von dem die PXE-Startfunktionen der Windows-Bereitstellungsdienste verwendet werden.  
 
 > [!NOTE]  
@@ -176,7 +177,7 @@ Sie müssen die folgenden WSUS 4.0-Hotfixes installieren:
 
 -   Wenn der Anbieter auf einem Remoteserver installiert ist, müssen Sie WDS auf dem Standortserver und dem Remoteanbieter installieren.  
 
-###  <a name="a-namebkmkwdsanddhcpa-considerations-when-you-have-wds-and-dhcp-on-the-same-server"></a><a name="BKMK_WDSandDHCP"></a> Aspekte, wenn sich Windows-Bereitstellungsdienst und DHCP auf demselben Server befinden  
+###  <a name="BKMK_WDSandDHCP"></a> Aspekte, wenn sich Windows-Bereitstellungsdienst und DHCP auf demselben Server befinden  
  Wenn Sie planen, einen PXE-Verteilungspunkt auf dem gleichen Server zu hosten, auf dem DHCP ausgeführt wird, sollten Sie die folgenden Konfigurationsoptionen in Erwägung ziehen.  
 
 -   Sie benötigen einen funktionsfähigen DHCP-Server mit einem aktiven Bereich. Von den Windows-Bereitstellungsdiensten wird PXE verwendet, sodass ein DHCP-Server erforderlich ist.  
@@ -208,10 +209,10 @@ Sie müssen die folgenden WSUS 4.0-Hotfixes installieren:
     > [!NOTE]  
     >  Falls die DHCP-Autorisierung auf dem Server erforderlich ist, muss auf dem Server außerdem DHCP-Clientport 68 geöffnet sein.  
 
-##  <a name="a-namebkmksupportedosa-supported-operating-systems"></a><a name="BKMK_SupportedOS"></a> Unterstützte Betriebssysteme  
+##  <a name="BKMK_SupportedOS"></a> Unterstützte Betriebssysteme  
  Alle Betriebssysteme, die als unterstützte Clientbetriebssysteme unter [Unterstützte Betriebssysteme für Clients und Geräte](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md) aufgeführt werden, werden für Betriebssystembereitstellungen unterstützt.  
 
-##  <a name="a-namebkmksupporteddiskconfiga-supported-disk-configurations"></a><a name="BKMK_SupportedDiskConfig"></a> Unterstützte Festplattenkonfigurationen  
+##  <a name="BKMK_SupportedDiskConfig"></a> Unterstützte Festplattenkonfigurationen  
  In der folgenden Tabelle sind die für die Configuration Manager-Betriebssystembereitstellung unterstützten Kombinationen der Festplattenkonfiguration auf dem Referenzcomputer und dem Zielcomputer aufgelistet.  
 
 |Festplattenkonfiguration auf Referenzcomputer|Festplattenkonfiguration auf Zielcomputer|  
@@ -237,9 +238,4 @@ Sie müssen die folgenden WSUS 4.0-Hotfixes installieren:
 
 ## <a name="next-steps"></a>Nächste Schritte
 [Vorbereiten auf die Betriebssystembereitstellung](../get-started/prepare-for-operating-system-deployment.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

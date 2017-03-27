@@ -2,7 +2,7 @@
 title: Von Configuration Manager verwendete Ports | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über die erforderlichen und anpassbaren Ports, die System Center Configuration Manager für Verbindungen verwendet."
 ms.custom: na
-ms.date: 3/1/2017
+ms.date: 3/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6bfc5c0e3c0bdc8408ad2dd2a7807ef3e018ef60
-ms.openlocfilehash: 8cd1c5363ba05dbb35ca5a0daf32979dd8b51b19
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: 4c2906c2a963e0ae92e3c0d223afb7a47377526a
+ms.openlocfilehash: ffc2adb34427aa62f4a377e887c2ff54d47abeff
+ms.lasthandoff: 03/20/2017
 
 
 ---
@@ -90,13 +90,13 @@ In den folgenden Abschnitten sind die Ports beschrieben, die für die Kommunikat
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2,** Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2,**Alternativer Port verfügbar**)|  
 
 ###  <a name="BKMK_PortsAppCatalogService-SQL"></a> Anwendungskatalog-Webdienstpunkt -- > SQL Server  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2,** Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2,**Alternativer Port verfügbar**)|  
 
 ###  <a name="BKMK_PortsAppCatalogWebSitePoint_AppCatalogWebServicePoint"></a> Anwendungskatalog-Websitepunkt -- > Anwendungskatalog-Webdienstpunkt  
 
@@ -260,7 +260,7 @@ Diese Kommunikation wird verwendet, um zu überprüfen, ob der andere Clientcomp
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2,** Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2,**Alternativer Port verfügbar**)|  
 
 ###  <a name="BKMK_PortsEnrollmentProxyEnrollmentPoint"></a> Anmeldungsproxypunkt -- > Anmeldungspunkt  
 
@@ -272,7 +272,7 @@ Diese Kommunikation wird verwendet, um zu überprüfen, ob der andere Clientcomp
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2,** Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2,**Alternativer Port verfügbar**)|  
 
 ###  <a name="BKMK_PortsExchangeConnectorHosted"></a> Exchange Server-Connector -- &gt; Exchange Online  
 
@@ -316,7 +316,7 @@ Diese Kommunikation wird verwendet, um zu überprüfen, ob der andere Clientcomp
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2,** Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2,**Alternativer Port verfügbar**)|  
 
 ###  <a name="BKMK_PortsMobileDeviceClient-EnrollmentProxyPoint"></a> Mobiles Gerät -- > Anmeldungsproxypunkt  
 
@@ -334,7 +334,7 @@ Diese Kommunikation wird verwendet, um zu überprüfen, ob der andere Clientcomp
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2,** Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2,**Alternativer Port verfügbar**)|  
 
 ###  <a name="BKMK_PortsIntuneConnector-WindowsIntune"></a>Dienstverbindungspunkt -- > Microsoft Intune  
 
@@ -473,7 +473,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2,** Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2,**Alternativer Port verfügbar**)|  
 
  Während der Installation eines Standorts, der einen SQL Server-Remotehost für die Standortdatenbank verwendet, müssen Sie die folgenden Ports zwischen Standortserver und SQL-Server öffnen:  
 
@@ -512,7 +512,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2,** Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2,**Alternativer Port verfügbar**)|  
 
 ###  <a name="BKMK_PortsSUP-Internet"></a> Softwareupdatepunkt -- > Internet  
 
@@ -532,7 +532,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL Server-Dienst|--|1433 (siehe Hinweis 2,** Alternativer Port verfügbar**)|  
+|SQL Server-Dienst|--|1433 (siehe Hinweis 2,**Alternativer Port verfügbar**)|  
 |SQL Server Service Broker|--|4022 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
 > [!TIP]  
@@ -542,7 +542,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2,** Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2,**Alternativer Port verfügbar**)|  
 
 
 
@@ -603,6 +603,14 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
     -   SQL Server-Dienst, erfolgt standardmäßig über TCP-Port 1433.  
 
 -   Die standortinterne Kommunikation zwischen dem SQL Server-Datenbankmodul und verschiedenen Configuration Manager-Standortsystemrollen erfolgt standardmäßig über TCP-Port 1433.  
+
+- Configuration Manager verwendet die gleichen Ports und Protokolle zur Kommunikation mit jedem SQL-Verfügbarkeitsgruppenreplikat, das die Standortdatenbank hostet, als wäre das Replikat eine eigenständige SQL Server-Instanz.
+
+Wenn Sie Azure verwenden und die Standortdatenbank sich hinter einem internen oder externen Lastenausgleich befindet, konfigurieren Sie die folgenden Firewallausnahmen für jedes Replikat, und fügen Sie Lastenausgleichsregeln für die folgenden Ports hinzu:
+ - SQL über TCP: TCP 1433
+ - SQL Server Service Broker: TCP 4022
+ - Server Message Block (SMB): TCP 445
+ - RPC-Endpunktzuordnung: TCP 135
 
 > [!WARNING]  
 >  Dynamische Ports werden von Configuration Manager nicht unterstützt. Da von benannten SQL Server-Instanzen standardmäßig dynamische Ports für die Verbindung mit dem Datenbankmodul verwendet werden, müssen Sie bei der Verwendung einer benannten Instanz den statischen Port, den Sie für die standortinterne Kommunikation einsetzen möchten, manuell konfigurieren.  

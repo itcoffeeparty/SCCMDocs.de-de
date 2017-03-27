@@ -7,7 +7,7 @@ ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
 ms.technology:
-- configmgr-client
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1e42b1c1-3d58-481f-8647-5c7ae640c5f5
@@ -17,9 +17,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: f86eac30ed0eada92ddbd25891d1693ae55b4851
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 6424fb07802b62820b4dc78a58ab30d3b956abef
+ms.openlocfilehash: 5a81ec06e16992ae1c41b0fc98ebcd07386c5381
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -39,7 +39,7 @@ Die lokale Verwaltung mobiler Geräte in System Center Configuration Manager set
  Intune ist erforderlich, damit die lokale Verwaltung mobiler Geräte funktionsfähig ist. [Registrieren](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/) Sie sich einfach für ein Test- oder ein kostenpflichtiges Abonnement, und wechseln Sie dann zum nächsten Schritt, um das Abonnement Configuration Manager hinzuzufügen.  
 
 ##  <a name="add-the-intune-subscription-to-configuration-manager"></a>Hinzufügen des Intune-Abonnements zu Configuration Manager  
- Damit das Abonnement Configuration Manager hinzugefügt wird, befolgen Sie einfach die gleichen grundlegenden Schritte wie beim Hinzufügen des Abonnements für die Verwaltung mobiler Geräte mit Intune. Lesen Sie die nachfolgenden Hinweise zu bestimmten Unterschieden, und verwenden Sie dann die Anweisungen unter [So erstellen Sie das Microsoft Intune-Abonnement](../deploy-use/setup-hybrid-mdm.md#configure-intune-subscription).  
+ Damit das Abonnement Configuration Manager hinzugefügt wird, befolgen Sie einfach die gleichen grundlegenden Schritte wie beim Hinzufügen des Abonnements für die Verwaltung mobiler Geräte mit Intune. Lesen Sie die nachfolgenden Hinweise zu bestimmten Unterschieden, und verwenden Sie dann die Anleitungen unter [Konfigurieren Ihres Intune-Abonnements mit System Center Configuration Manager und Microsoft Intune](../deploy-use/configure-intune-subscription.md).  
 
 > [!NOTE]  
 >  Bedenken Sie beim Hinzufügen des Intune-Abonnements Folgendes:  

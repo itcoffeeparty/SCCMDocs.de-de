@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: a8cb3c9850b183eec156c37a181c04088b71805e
-ms.openlocfilehash: 40837306816639ff8cea8930fec75b05edc5164a
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: ddf2ad1cae51c1e36df5a6d86822e2b9abe604e2
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -65,7 +66,7 @@ Beim Entwerfen und Implementieren der administrativen Sicherheit für Configurat
 > [!IMPORTANT]  
 >  Aufgrund von Verzögerungen bei der standortübergreifenden Replikation können Änderungen an der rollenbasierten Verwaltung möglicherweise nicht von einem Standort empfangen werden. Informationen zur Überwachung der standortübergreifenden Datenbankreplikation finden Sie unter [Datenübertragungen zwischen Standorten in System Center Configuration Manager](../../core/servers/manage/data-transfers-between-sites.md).  
 
-##  <a name="a-namebkmkplanrolesa-security-roles"></a><a name="bkmk_Planroles"></a> Sicherheitsrollen  
+##  <a name="bkmk_Planroles"></a> Sicherheitsrollen  
  Verwenden Sie Sicherheitsrollen, um Administratoren Sicherheitsberechtigungen zu erteilen. Bei Sicherheitsrollen handelt es sich um Gruppen von Sicherheitsberechtigungen, die Sie Administratoren zuweisen, damit diese ihre Verwaltungsaufgaben erfüllen können. Aus diesen Sicherheitsberechtigungen geht hervor, welche Verwaltungsaufgaben ein Administrator ausführen darf und welche Berechtigungen ihm für bestimmte Objekttypen gewährt werden. Aus Sicherheitsgründen wird empfohlen, die Sicherheitsrollen zuzuweisen, mit denen die wenigsten Berechtigungen erteilt werden.  
 
  In Configuration Manager gibt es mehrere integrierte Sicherheitsrollen zur Unterstützung typischer Gruppen von Verwaltungsaufgaben. Sie können auch benutzerdefinierte Sicherheitsrollen erstellen, die im Einklang mit Ihren Geschäftsanforderungen stehen. Beispiele für die integrierten Sicherheitsrollen:  
@@ -79,7 +80,7 @@ Beim Entwerfen und Implementieren der administrativen Sicherheit für Configurat
 > [!TIP]  
 >  Sie können die Liste der integrierten und benutzerdefinierten Sicherheitsrollen mit ihren Beschreibungen in der Configuration Manager-Konsole anzeigen. Um die Rollen anzuzeigen, erweitern Sie im Arbeitsbereich **Verwaltung** den Knoten **Sicherheit**, und wählen Sie dann **Sicherheitsrollen** aus.  
 
- Jeder Sicherheitsrolle sind bestimmte Berechtigungen für die verschiedenen Objekttypen zugeordnet. Beispielsweise umfasst die Sicherheitsrolle *Application MMM* die folgenden Berechtigungen für Anwendungen: Genehmigen, Erstellen, Löschen, Ändern, Ändern von Ordnern, Verschieben von Objekten, Lesen/Bereitstellen und Festlegen des Sicherheitsbereichs.
+ Jeder Sicherheitsrolle sind bestimmte Berechtigungen für die verschiedenen Objekttypen zugeordnet. Beispielsweise umfasst die Sicherheitsrolle *Anwendungsautor* die folgenden Berechtigungen für Anwendungen: Genehmigen, Erstellen, Löschen, Ändern, Ordner ändern, Objekt verschieben, Lesen, Bericht ausführen und Festlegen des Sicherheitsbereichs.
 
  Sie können die Berechtigungen der integrierten Sicherheitsrollen nicht ändern. Es ist aber möglich, eine Rolle zu kopieren, zu ändern und die geänderte Rolle als neue benutzerdefinierte Sicherheitsrolle zu speichern. Sie können außerdem Sicherheitsrollen importieren, die Sie aus einer anderen Hierarchie, z.B. einem Testnetzwerk, exportiert haben. Überprüfen Sie die Sicherheitsrollen und deren Berechtigungen, um festzustellen, ob Sie die integrierten Sicherheitsrollen verwenden können oder ob Sie eigene benutzerdefinierte Sicherheitsrollen erstellen müssen.  
 
@@ -95,7 +96,7 @@ Beim Entwerfen und Implementieren der administrativen Sicherheit für Configurat
 
 Informationen zum Erstellen und Konfigurieren von Sicherheitsrollen für die rollenbasierte Verwaltung finden Sie unter [Erstellen benutzerdefinierter Sicherheitsrollen](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_CreateSecRole) und [Konfigurieren von Sicherheitsrollen](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecRole) im Thema [Konfigurieren der rollenbasierten Verwaltung für System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).  
 
-##  <a name="a-namebkmkplancola-collections"></a><a name="bkmk_planCol"></a> Sammlungen  
+##  <a name="bkmk_planCol"></a> Sammlungen  
  Mithilfe von Sammlungen werden die Benutzer- und Computerressourcen angegeben, die ein Administrator anzeigen oder verwalten kann. Damit Administratoren beispielsweise Anwendungen bereitstellen oder die Remotesteuerung ausführen können, müssen sie einer Sicherheitsrolle zugewiesen werden, mit der Zugriff auf eine Sammlung gewährt wird, die diese Ressourcen enthält. Sie können Sammlungen von Benutzern oder Geräten auswählen.  
 
  Weitere Informationen zu Sammlungen finden Sie unter [Einführung in Sammlungen in System Center Configuration Manager](../../core/clients/manage/collections/introduction-to-collections.md).  
@@ -112,7 +113,7 @@ Informationen zum Erstellen und Konfigurieren von Sicherheitsrollen für die rol
 
 Informationen zum Konfigurieren von Sammlungen für die rollenbasierte Verwaltung finden Sie unter [Konfigurieren von Sammlungen zum Verwalten der Sicherheit](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigColl) im Thema [Konfigurieren der rollenbasierten Verwaltung für System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).  
 
-##  <a name="a-namebkmkplanscopea-security-scopes"></a><a name="bkmk_PlanScope"></a> Sicherheitsbereichen  
+##  <a name="bkmk_PlanScope"></a> Sicherheitsbereichen  
  Mithilfe von Sicherheitsbereichen können Sie Administratoren Zugriff auf sicherungsfähige Objekte gewähren. Bei einem Sicherheitsbereich handelt es sich um benannte Sätze von sicherungsfähigen Objekten, die Administratoren als Gruppe zugewiesen werden. Alle sicherungsfähigen Objekte müssen mindestens einem Sicherheitsbereich zugewiesen werden. Configuration Manager verfügt über zwei integrierte Sicherheitsbereiche:  
 
 -   Der integrierte Sicherheitsbereich *Alle* gewährt Zugriff auf alle Bereiche. Diesem Sicherheitsbereich können keine Objekte zugewiesen werden.  
@@ -212,9 +213,4 @@ Erstellen Sie Sicherheitsbereiche, wenn Sie den Zugriff auf separate Instanzen v
 -   Verschiedene Administratoren benötigen unterschiedliche Zugriffsberechtigungen für einige Instanzen eines Objekttyps. Zum Beispiel benötigt eine Administratorengruppe die Berechtigung „Lesen“ für bestimmte Softwareupdategruppen, und eine andere Administratorengruppe benötigt die Berechtigungen „Ändern“ und „Löschen“ für andere Softwareupdategruppen. Erstellen Sie unterschiedliche Sicherheitsbereiche für diese Softwareupdategruppen.  
 
 Informationen zum Konfigurieren von Sicherheitsbereichen für die rollenbasierte Verwaltung finden Sie unter [Konfigurieren von Sicherheitsbereichen für ein Objekt](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecScope) im Thema [Konfigurieren der rollenbasierten Verwaltung für System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).  
-
-
-
-<!--HONumber=Jan17_HO5-->
-
 

@@ -18,9 +18,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: ef68a9f998ea6ff9628e01f6ac622711de68375d
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: 507bad02c6e028f09a8b0c8a566ac55f7c3942a5
+ms.openlocfilehash: 8e93f6f7b65534d9e3f6b5e46909b076653659a9
+ms.lasthandoff: 03/22/2017
 
 
 ---
@@ -31,14 +31,15 @@ ms.lasthandoff: 12/16/2016
 
 Die Massenregistrierung in System Center Configuration Manager mit der lokalen Verwaltung mobiler Geräte ist eine Methode zum Registrieren von Geräten, die im Vergleich zur Benutzerregistrierung in höherem Maße automatisiert ist. Bei der Benutzerregistrierung müssen Benutzer ihre Anmeldeinformationen zum Registrieren des Geräts eingeben.  Bei der Massenregistrierung wird ein Registrierungspaket zur Authentifizierung des Geräts während der Anmeldung verwendet. Das Paket (eine PPKG-Datei) enthält ein Zertifikatprofil und optional ein WLAN-Profil, zur Unterstützung der Registrierung Intranetkonnektivität auf dem Gerät erforderlich ist.  
 
- > [!NOTE]  
+> [!NOTE]  
 >  Configuration Manager Current Branch unterstützt die Registrierung bei der lokalen Verwaltung mobiler Geräte für Geräte, auf denen folgende Betriebssysteme ausgeführt werden:  
 >   
->  -   Windows 10 Enterprise  
+> -  Windows 10 Enterprise  
 > -   Windows 10 Pro  
 > -   Microsoft 10 Team \(ab Configuration Manager Version 1602\)  
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise
+> -   Windows 10 IoT Enterprise   
 
 In den folgenden Aufgaben wird erläutert, wie Sie eine Massenregistrierung von Computern und Geräten für die lokale Verwaltung mobiler Geräte vornehmen:  
 

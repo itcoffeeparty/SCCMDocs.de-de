@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dcbcd57b95f304f007e92ebe2b9aeefb4b579662
-ms.openlocfilehash: 92d3c215569916a5557309d7f488aa88f387da92
-ms.lasthandoff: 03/09/2017
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: c3ca3b895d54b6dc886068b92b39d0d95c466de2
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -207,6 +207,11 @@ Dieser Task gilt für Geräte, die über Microsoft Intune (hybrid) oder über di
 -   **Primärer Standort**: Aktiviert    
 -   Sekundärer Standort: Nicht verfügbar  
 
+**Löschen von abgelaufenen MDM-Massenregistrierungspaket-Datensätzen**: Verwenden Sie diesen Task, um alte Massenregistrierungszertifikate und dazugehörige Profile zu löschen, nachdem das Registrierungszertifikat abgelaufen ist. Weitere Informationen finden Sie unter [Erstellen von Zertifikatprofilen](/sccm/protect/deploy-use/create-certificate-profiles).
+-   **Standort der zentralen Verwaltung**: Aktiviert
+-   **Primärer Standort**: Aktiviert
+-   Sekundärer Standort: Nicht verfügbar
+
 **Inaktive Clientermittlungsdaten löschen**: Verwenden Sie diesen Task, um Ermittlungsdaten für inaktive Clients aus der Datenbank zu löschen. Clients werden als inaktiv gekennzeichnet, wenn der Client als veraltet markiert wird, sowie durch für den Clientstatus vorgenommene Konfigurationen.
 
 Dieser Task kann nur für Ressourcen ausgeführt werden, bei denen es sich um Configuration Manager-Clients handelt. Er unterscheidet sich vom Task **Veraltete Ermittlungsdaten löschen**, über den alle veralteten Ermittlungsdatensätze gelöscht werden. Wenn dieser Task an einem Standort ausgeführt wird, werden Daten auf allen Standorten in der Hierarchie aus der Datenbank gelöscht. Weitere Informationen finden Sie unter [Konfigurieren des Clientstatus in System Center Configuration Manager](../../../core/clients/deploy/configure-client-status.md).  
@@ -242,7 +247,7 @@ Dieser Task kann nur für Ressourcen ausgeführt werden, bei denen es sich um Co
 **Statusdatensätze zur verwaisten Clientbereitstellung löschen**: Verwenden Sie diesen Task, um in regelmäßigen Abständen die Tabelle zu löschen, die Statusinformationen zur Clientbereitstellung enthält. Dieser Task bereinigt Datensätze, die veralteten oder außer Betrieb genommenen Geräten zugeordnet sind.  
 -   **Standort der zentralen Verwaltung**: Aktiviert    
 -   **Primärer Standort**: Aktiviert    
--   Sekundärer Standort: Nicht verfügbar 
+-   Sekundärer Standort: Nicht verfügbar
 
 **Nicht verwendete Anwendungsrevisionen löschen**: Verwenden Sie diesen Task, um Anwendungsrevisionen zu löschen, die nicht mehr referenziert werden. Weitere Informationen finden Sie unter [Überarbeiten und Ablösen von Anwendungen in System Center Configuration Manager](../../../apps/deploy-use/revise-and-supersede-applications.md).  
 

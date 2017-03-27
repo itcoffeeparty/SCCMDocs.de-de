@@ -15,8 +15,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4d34a272a93100426cccd2308c5b3b0b0ae94a60
-ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
+ms.sourcegitcommit: 4c2906c2a963e0ae92e3c0d223afb7a47377526a
+ms.openlocfilehash: 9c614a842fc9e3a01b0128db94fc12bc0be5b52f
+ms.lasthandoff: 03/20/2017
 
 
 ---
@@ -25,12 +26,18 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 
-
  Beginnend mit der System Center Configuration Manager-Version 1602 können Sie SQL Server-[Always On-Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/hh510230\(v=sql.120\).aspx) zum Hosten der Standortdatenbank an primären Standorten und am Standort der zentralen Verwaltung als Lösung für hohe Verfügbarkeit und Notfallwiederherstellung nutzen. Die Verfügbarkeitsgruppe kann lokal oder in Microsoft Azure gehostet werden.  
 
  Wenn Sie Microsoft Azure zum Hosten der Verfügbarkeitsgruppe verwenden, können Sie die Verfügbarkeit Ihrer Standortdatenbank weiter steigern, indem Sie SQL Server AlwaysOn-Verfügbarkeitsgruppen mit Azure-Verfügbarkeitsgruppen einsetzen. Weitere Informationen zu Azure-Verfügbarkeitsgruppen finden Sie unter [Verwalten der Verfügbarkeit von virtuellen Computern](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-manage-availability/).  
 
- Die folgenden Szenarios werden mit Verfügbarkeitsgruppen unterstützt:  
+ Configuration Manager unterstützt das Hosten der Standortdatenbank auf einer SQL-Verfügbarkeitsgruppe, die sich hinter einem internen oder externen Lastenausgleich befindet. Zusätzlich zum Konfigurieren von Firewallausnahmen für jedes Replikat müssen Sie Lastenausgleichsregeln für die folgenden Ports hinzufügen:
+  - SQL über TCP: TCP 1433
+  - SQL Server Service Broker: TCP 4022
+  - Server Message Block (SMB): TCP 445
+  - RPC-Endpunktzuordnung: TCP 135
+
+
+Die folgenden Szenarios werden mit Verfügbarkeitsgruppen unterstützt:  
 
 -   Sie können Ihre Standortdatenbank in die Standardinstanz einer Verfügbarkeitsgruppe verschieben.  
 
@@ -78,7 +85,7 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
     - **Alle schreibgeschützten Verbindungen zulassen**
 
 
-##  <a name="a-namebkmkbnra-changes-for-backup-and-recovery-when-you-use-a-sql-server-alwayson-availability-group"></a><a name="bkmk_BnR"></a> Änderungen bei Sicherung und Wiederherstellung bei Verwendung einer SQL Server AlwaysOn-Verfügbarkeitsgruppe  
+##  <a name="bkmk_BnR"></a> Änderungen bei Sicherung und Wiederherstellung bei Verwendung einer SQL Server AlwaysOn-Verfügbarkeitsgruppe  
  **Sicherung:**  
 
  Wenn eine Datenbank in einer Verfügbarkeitsgruppe ausgeführt wird, muss der integrierte Serverwartungstask **Standort sichern** weiter ausgeführt werden, um allgemeine Configuration Manager-Einstellungen und -Dateien zu sichern. Planen Sie jedoch nicht das Verwenden der von dieser Sicherung erstellten MDF- und LDF-Dateien. Planen Sie stattdessen das direkte Erstellen von Sicherungskopien der Standortdatenbank mithilfe von SQL Server.  
@@ -93,7 +100,7 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
 
  Weitere Informationen zur Standortserversicherung und -wiederherstellung finden Sie unter [Sicherung und Wiederherstellung für System Center Configuration Manager](../../../../protect/understand/backup-and-recovery.md).  
 
-##  <a name="a-namebkmkcreatea-configure-an-availability-group-for-use-with-configuration-manager"></a><a name="bkmk_create"></a> Konfigurieren einer Verfügbarkeitsgruppe für die Verwendung mit Configuration Manager  
+##  <a name="bkmk_create"></a> Konfigurieren einer Verfügbarkeitsgruppe für die Verwendung mit Configuration Manager  
  Bevor Sie das folgende Verfahren starten, sollten Sie mit den SQL Server-Prozeduren, die für diese Konfiguration erforderlich sind, und mit den folgenden Details vertraut sein, die für Verfügbarkeitsgruppen gelten, die Sie für die Verwendung mit Configuration Manager konfigurieren.  
 
  **Anforderungen an die AlwaysOn-Verfügbarkeitsgruppen, die Sie mit System Center Configuration Manager verwenden:**  
@@ -118,8 +125,7 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
     >     ALTER DATABASE cm_ABC SET TRUSTWORTHY ON;  
     >     USE cm_ABC  
     >     EXEC sp_changedbowner 'sa'  
-    >     Exec sp_configure 'max text repl size (B)', 2147483647
-    >     reconfigure
+    >     Exec sp_configure 'max text repl size (B)', 2147483647 reconfigure
 
 
 
@@ -185,7 +191,7 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
 
 
 
-##  <a name="a-namebkmkdirecta-move-a-site-database-to-an-availability-group"></a><a name="bkmk_direct"></a> Verschieben einer Standortdatenbank zu einer Verfügbarkeitsgruppe  
+##  <a name="bkmk_direct"></a> Verschieben einer Standortdatenbank zu einer Verfügbarkeitsgruppe  
  Sie können eine Standortdatenbank für einen zuvor installierten Standort in eine Verfügbarkeitsgruppe verschieben. Sie müssen zuerst die Verfügbarkeitsgruppe erstellen und anschließend die Datenbank für den Vorgang in der Verfügbarkeitsgruppe konfigurieren.  
 
  Zum Ausführen dieses Verfahrens muss das Computerkonto für die Ausführung des Setups von Configuration Manager Mitglied der Gruppe **Lokale Administratoren** auf allen Computern sein, die zur Verfügbarkeitsgruppe gehören.  
@@ -208,7 +214,7 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
 
 5.  Nachdem Sie die Informationen zum neuen Speicherort der Datenbank bereitgestellt haben, schließen Sie das Setup mit der üblichen Vorgehensweise und den normalen Konfigurationen ab.  
 
-##  <a name="a-namebkmkchangea-add-or-remove-members-of-an-active-availability-group"></a><a name="bkmk_change"></a> Hinzufügen oder Entfernen von Mitgliedern einer aktiven Verfügbarkeitsgruppe  
+##  <a name="bkmk_change"></a> Hinzufügen oder Entfernen von Mitgliedern einer aktiven Verfügbarkeitsgruppe  
  Sobald Configuration Manager eine in einer Verfügbarkeitsgruppe gehostete Standortdatenbank verwendet, können Sie ein Replikatsmitglied entfernen oder ein weiteres hinzufügen (ohne dabei einen primären und zwei sekundäre Knoten zu überschreiten).  
 
 #### <a name="to-add-a-new-replica-member"></a>So fügen Sie ein neue Replikatsmitglied hinzu  
@@ -229,7 +235,7 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
 
 -   Befolgen Sie die Anweisungen unter [Entfernen eines sekundären Replikats aus einer Verfügbarkeitsgruppe](https://msdn.microsoft.com/library/hh213149\(v=sql.120\).aspx) in der SQL Server-Dokumentation.  
 
-##  <a name="a-namebkmkremovea-move-the-site-database-from-an-availability-group-back-to-a-single-instance-sql-server"></a><a name="bkmk_remove"></a> Verschieben der Standortdatenbank aus einer Verfügbarkeitsgruppe zurück in eine einzelne Instanz von SQL Server  
+##  <a name="bkmk_remove"></a> Verschieben der Standortdatenbank aus einer Verfügbarkeitsgruppe zurück in eine einzelne Instanz von SQL Server  
  Führen Sie das folgende Verfahren aus, wenn Sie Ihre Standortdatenbank nicht mehr in einer Verfügbarkeitsgruppe hosten möchten.  
 
 #### <a name="to-move-the-site-database-from-an-availability-group-back-to-a-single-instance-sql-server"></a>So verschieben Sie die Standortdatenbank aus einer Verfügbarkeitsgruppe zurück in eine einzelne Instanz von SQL Server  
@@ -262,9 +268,4 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
 9. Nachdem Sie die Informationen zum neuen Speicherort der Datenbank bereitgestellt haben, schließen Sie das Setup mit der üblichen Vorgehensweise und den normalen Konfigurationen ab. Nach Abschluss des Setups wird der Standort neu gestartet und beginnt mit der Nutzung des neuen Speicherorts der Datenbank.  
 
 10. Zur Bereinigung der Server, die Mitglied der Verfügbarkeitsgruppe waren, befolgen Sie die Anleitung unter [Entfernen einer Verfügbarkeitsgruppe](https://msdn.microsoft.com/library/ff878113\(v=sql.120\).aspx) in der SQL Server-Dokumentation.
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

@@ -16,8 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
-ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 57478d9a9ee5f933000018b47e8a11a80e281252
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -32,7 +33,7 @@ ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
 
  Gehen Sie wie in den folgenden Abschnitten beschrieben vor, um Windows als Dienst zu verwalten.
 
-##  <a name="a-namebkmkprerequisitesa-prerequisites"></a><a name="BKMK_Prerequisites"></a> Voraussetzungen  
+##  <a name="BKMK_Prerequisites"></a> Voraussetzungen  
  Um Daten im Windows 10-Wartungsdashboard anzuzeigen, gehen Sie wie folgt vor:  
 
 -   Auf Windows 10-Computern müssen Configuration Manager-Softwareupdates mit Windows Server Update Services (WSUS) für die Verwaltung von Softwareupdates verwendet werden. Wenn auf Computern Windows Update für Unternehmen (oder Windows-Insider) für die Verwaltung von Softwareupdates verwendet wird, erfolgt in Windows 10-Wartungsplänen keine Auswertung des Computers. Weitere Informationen finden Sie unter [Integration with Windows Update for Business in Windows 10](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md).  
@@ -58,7 +59,7 @@ ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
 
 -   Softwareupdates müssen konfiguriert und synchronisiert werden. Windows 10-Featureupgrades sind erst dann in der Configuration Manager-Konsole verfügbar, wenn Sie die Klassifizierung **Upgrades** ausgewählt und Softwareupdates synchronisiert haben. Weitere Informationen finden Sie unter [Prepare for software updates management (Vorbereiten der Softwareudateverwaltung)](../../sum/get-started/prepare-for-software-updates-management.md).  
 
-##  <a name="a-namebkmkservicingdashboarda-windows-10-servicing-dashboard"></a><a name="BKMK_ServicingDashboard"></a> Windows 10-Wartungsdashboard  
+##  <a name="BKMK_ServicingDashboard"></a> Windows 10-Wartungsdashboard  
  Das Windows 10-Wartungsdashboard stellt Informationen zu Windows 10-Computern in Ihrer Umgebung, aktive Wartungspläne, Informationen zu Kompatibilität usw. bereit. Damit Daten im Windows 10-Wartungsdashboard angezeigt werden, muss der Dienstverbindungspunkt installiert sein. Das Dashboard verfügt über die folgenden Kacheln:  
 
 -   **Kachel „Windows 10-Verwendung“**: Enthält eine Aufschlüsselung der öffentlichen Builds von Windows 10. Windows Insider-Builds sind unter **Sonstige** aufgelistet, genau wie alle Builds, die Ihrem Standort noch nicht bekannt sind. Der Dienstverbindungspunkt lädt die Metadaten herunter, mit denen er über die Windows-Builds informiert wird. Anschließend werden diese Daten mit Ermittlungsdaten verglichen.  
@@ -91,7 +92,7 @@ ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
 
  Wenn ein Upgrade die Kriterien erfüllt, fügt der Wartungsplan das Upgrade zum Bereitstellungspaket hinzu, verteilt das Paket an Verteilungspunkte und stellt der Sammlung das Upgrade basierend auf den im Wartungsplan konfigurierten Einstellungen bereit.  Sie können die Bereitstellungen über die Kachel „Wartungsplanüberwachung“ im Windows 10-Wartungsdashboard überwachen. Weitere Informationen finden Sie unter [Monitor software updates (Überwachen von Softwareupdates)](../../sum/deploy-use/monitor-software-updates.md).  
 
-##  <a name="a-namebkmkservicingplana-windows-10-servicing-plan"></a><a name="BKMK_ServicingPlan"></a> Windows 10-Wartungsplan  
+##  <a name="BKMK_ServicingPlan"></a> Windows 10-Wartungsplan  
  Bei der Bereitstellung von Windows 10 CB können Sie einen oder mehrere Wartungspläne erstellen, um die Bereitstellungsringe für Ihre Umgebung zu definieren, und sie dann im Windows 10-Wartungsdashboard überwachen.   
 Wartungspläne verwenden nur die Softwareupdateklassifizierung **Upgrades** und keine kumulativen Updates für Windows 10. Für diese Updates müssen Sie Bereitstellungen weiterhin mit dem Softwareupdateworkflow vornehmen.  Die Endbenutzerumgebung mit einem Wartungsplan entspricht derjenigen mit Softwareupdates, einschließlich der Einstellungen, die Sie im Wartungsplan konfigurieren.  
 
@@ -203,7 +204,7 @@ Wartungspläne verwenden nur die Softwareupdateklassifizierung **Upgrades** und 
 
     4.  **Sendepriorität**: Geben Sie die Sendepriorität für das Bereitstellungspaket an. Configuration Manager verwendet Sendepriorität für das Bereitstellungspaket beim Senden des Pakets an Verteilungspunkte. Bereitstellungspakete werden in der Reihenfolge ihrer Priorität gesendet: „Hoch“, „Mittel“ oder „Niedrig“. Pakete mit identischer Priorität werden in der Reihenfolge ihrer Erstellung gesendet. Wenn es keinen Rückstand gibt, wird das Paket unabhängig von seiner Priorität sofort verarbeitet.  
 
-11. Geben Sie auf der Seite „Verteilungspunkte“ die Verteilungspunkte oder Verteilungspunktgruppen an, auf denen die Updatedateien gehostet werden sollen. Weitere Informationen zu Verteilungspunkten finden Sie unter [Distribution point configurations](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#a-namebkmkconfigsa-distribution-point-configurations).  
+11. Geben Sie auf der Seite „Verteilungspunkte“ die Verteilungspunkte oder Verteilungspunktgruppen an, auf denen die Updatedateien gehostet werden sollen. Weitere Informationen zu Verteilungspunkten finden Sie unter [Konfigurieren eines Verteilungspunkts](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_configs).
 
     > [!NOTE]  
     >  Diese Seite ist nur verfügbar, wenn Sie ein neues Softwareupdate-Bereitstellungspaket erstellen.  
@@ -220,7 +221,7 @@ Wartungspläne verwenden nur die Softwareupdateklassifizierung **Upgrades** und 
 
  Nachdem Sie den Assistenten abgeschlossen haben, wird der Wartungs plan ausgeführt. Dabei werden die Updates, die die angegebenen Kriterien erfüllen, einer Softwareupdategruppe hinzugefügt. Dann werden die Updates in die Inhaltsbibliothek auf dem Standortserver heruntergeladen und an die konfigurierten Verteilungspunkte verteilt. Die Softwareupdategruppe wird schließlich den Clients in der Zielsammlung bereitgestellt.  
 
-##  <a name="a-namebkmkmodifyservicingplana-modify-a-servicing-plan"></a><a name="BKMK_ModifyServicingPlan"></a> Ändern eines Wartungsplans  
+##  <a name="BKMK_ModifyServicingPlan"></a> Ändern eines Wartungsplans  
 Nachdem Sie einen grundlegenden Wartungsplan über das Windows 10-Wartungsdashboard erstellt haben, oder wenn Sie die Einstellungen für einen vorhandenen Wartungsplan ändern müssen, können Sie zu den Eigenschaften für den Wartungsplan navigieren.
 
 > [!NOTE]
@@ -274,9 +275,4 @@ Wenden Sie das folgende Verfahren an, um die Eigenschaften eines Wartungsplans z
 
     > [!NOTE]  
     >  Sie können die letzten Warnungen zu Softwareupdates im Arbeitsbereich **Softwarebibliothek** im Knoten **Softwareupdates** prüfen.  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

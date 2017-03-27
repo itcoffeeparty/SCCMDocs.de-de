@@ -16,9 +16,9 @@ author: brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3702993d6cf9644d5aebaadd168749668fbcb62c
-ms.openlocfilehash: 4b90384621dd20475ab9ea33ea062c24f5ecf5fa
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: eb2092640f7bd68a25e4826cd7f88cda6822a33a
+ms.lasthandoff: 03/21/2017
 
 ---
 # <a name="support-for-windows-10-as-a-client-of-system-center-configuration-manager"></a>Unterstützung für Windows 10 als ein Client von System Center Configuration Manager
@@ -38,11 +38,11 @@ Configuration Manager versucht jede neue Version von Windows 10 so bald wie mög
 |Windows 10-Versionen |Configuration Manager 1602|Configuration Manager 1606|Configuration Manager 1610|
 |---------------------|-----|-----|-----|
 |Enterprise 2015 LTSB |![Unterstützt](media/green_check.png) |![Unterstützt](media/green_check.png) |![Unterstützt](media/green_check.png) |
-|1507 <br />Enterprise, Pro | ![Unterstützt](media/green_check.png)| ![Unterstützt](media/green_check.png)|![Unterstützt](media/green_check.png) |
-|1511 <br />Enterprise, Pro <br />(CB), (CBB) |![Unterstützt](media/green_check.png) |![Unterstützt](media/green_check.png) |![Unterstützt](media/green_check.png) |
+|1507 <br />Enterprise, Education, Pro | ![Unterstützt](media/green_check.png)| ![Unterstützt](media/green_check.png)|![Unterstützt](media/green_check.png) |
+|1511 <br />Enterprise, Education, Pro <br />(CB), (CBB) |![Unterstützt](media/green_check.png) |![Unterstützt](media/green_check.png) |![Unterstützt](media/green_check.png) |
 |Enterprise 2016 LTSB    |![Nicht unterstützt](media/Red_X.png) |![Unterstützt](media/green_check.png) | ![Unterstützt](media/green_check.png)|
-|1607 <br />Enterprise, Pro<br /> (CB)    |![Nicht unterstützt](media/Red_X.png) |![Abwärtskompatibel](media/blue_compat.png) |![Unterstützt](media/green_check.png) |
-|1607 <br />Enterprise, Pro <br />(CBB)    |![Nicht unterstützt](media/Red_X.png) |![Abwärtskompatibel](media/Red_X.png) |![Unterstützt](media/green_check.png) |
+|1607 <br />Enterprise, Education, Pro<br /> (CB)    |![Nicht unterstützt](media/Red_X.png) |![Abwärtskompatibel](media/blue_compat.png) |![Unterstützt](media/green_check.png) |
+|1607 <br />Enterprise, Education, Pro <br />(CBB)    |![Nicht unterstützt](media/Red_X.png) |![Abwärtskompatibel](media/Red_X.png) |![Unterstützt](media/green_check.png) |
 
 
 |Schlüssel|

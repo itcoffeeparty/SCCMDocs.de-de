@@ -16,9 +16,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c74b553ab76a2b77b0d893151351132da05a640d
-ms.openlocfilehash: 76ce5f413f406088862fb310bbea24140317ca06
-ms.lasthandoff: 01/03/2017
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 9cab5b91a94e8bf2ad96a8a706f46c58e2a3d712
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -28,7 +28,7 @@ ms.lasthandoff: 01/03/2017
 
 Dieses Thema beschreibt, wie der Configuration Manager-Client auf Macintosh-Computern bereitgestellt und gewartet wird. Sie finden Informationen dazu, welche Einstellungen Sie vor der Bereitstellung von Clients auf Macintosh-Computern konfigurieren müssen, unter [Vorbereiten der Bereitstellung von Clientsoftware auf Macs](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients).
 
-Wenn Sie einen neuen Client für Macintosh-Computer installieren, müssen Sie möglicherweise auch Configuration Manager-Updates installieren, um die neuen Clientinformationen in der Configuration Manager-Konsole darzustellen. 
+Wenn Sie einen neuen Client für Macintosh-Computer installieren, müssen Sie möglicherweise auch Configuration Manager-Updates installieren, um die neuen Clientinformationen in der Configuration Manager-Konsole darzustellen.
 
 In diesen Verfahren haben Sie zwei Optionen zum Installieren von Clientzertifikaten. Weitere Informationen zu Clientzertifikaten für Macs finden Sie unter [Vorbereiten der Bereitstellung von Clientsoftware auf Macs](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#certificate-requirements).  
 
@@ -84,7 +84,7 @@ In diesen Verfahren haben Sie zwei Optionen zum Installieren von Clientzertifika
 >  Weitere Informationen zu Configuration Manager-Clienteinstellungen finden Sie unter [Konfigurieren von Clienteinstellungen in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md).  
 
 ## <a name="download-the-client-source-files-for-macs"></a>Die Clientquelldateien für Macintosh-Computer herunterladen  
-  
+
 1.  Laden Sie das Mac OS X-Clientdateipaket, **ConfigmgrMacClient.msi**, herunter, und speichern Sie es auf einem Computer mit Windows.  
 
      Diese Datei wird nicht auf den Configuration Manager-Installationsmedien bereitgestellt. Diese Datei steht im [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184)als Download zur Verfügung.  
@@ -95,7 +95,7 @@ In diesen Verfahren haben Sie zwei Optionen zum Installieren von Clientzertifika
 
 4.  Führen Sie auf dem Macintosh-Computer die Datei Macclient.dmg aus, um die Dateien in einem Ordner auf der lokalen Festplatte zu extrahieren.  
 
-5.  Überprüfen Sie im Ordner, ob die Dateien Ccmsetup und CMClient.pkg extrahiert wurden und ein Ordner mit dem Namen Tools erstellt wurde, in dem die Tools CMDiagnostics, CMUninstall, CMAppUtil und CMEnroll enthalten sind. 
+5.  Überprüfen Sie im Ordner, ob die Dateien Ccmsetup und CMClient.pkg extrahiert wurden und ein Ordner mit dem Namen Tools erstellt wurde, in dem die Tools CMDiagnostics, CMUninstall, CMAppUtil und CMEnroll enthalten sind.
 
     -  **Ccmsetup**: Installiert den Configuration Manager-Client auf Ihren Macintosh-Computern.  
 
@@ -108,7 +108,7 @@ In diesen Verfahren haben Sie zwei Optionen zum Installieren von Clientzertifika
     -   **CMEnroll**: Fordert das Clientzertifikat für einen Macintosh-Computer an und installiert es, damit Sie den Configuration Manager-Client installieren können.   
 
 ## <a name="install-the-client-and-then-enroll-the-client-certificate-on-the-mac"></a>Installieren Sie den Client, und melden Sie anschließend das Clientzertifikat auf dem Macintosh-Computer an  
-  
+
 Sie können einzelne Clients mithilfe des [Assistenten für die Macintosh-Computeranmeldung](#enroll-the-client-with-the-mac-computer-enrollment-wizard) registrieren.
 
 Verwenden Sie das [Tool „CMEnroll“](#client-and-certificate-automation-with-cmenroll) für die Automatisierung, die die Registrierung vieler Clients ermöglicht.   
@@ -196,12 +196,12 @@ Verwenden Sie dieses Verfahren für die Automatisierung der Installation des Cli
 > -   Die BOM-Datei (Bill of Materials) und die Eigenschaftenlistendatei (PLIST-Datei), die im Rahmen der Configuration Manager-Clientinstallation erstellt wurden  
 > -   Der Inhalt des Ordners /Library/Application Support/Microsoft/CCM/Logs  
 >   
->  Die von CmDiagnostics gesammelten Informationen werden einer ZIP-Datei hinzugefügt, die auf dem Desktop des Computers gespeichert und „cmdiag-*<Hostname\>***-***<Datum und Uhrzeit\>*.zip“ benannt wird.  
+>  Die von CmDiagnostics gesammelten Informationen werden einer ZIP-Datei hinzugefügt, die auf dem Desktop des Computers gespeichert und den Namen„cmdiag-*<Hostname\>***-***&gt;Datum und Uhrzeit\>*.zip“ erhält.***
 
 
 ##  <a name="use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager"></a>Verwenden einer von Configuration Manager unabhängigen Zertifikatanforderungs- und -installationsmethode  
 
-Führen Sie zuerst die bestimmten Aufgaben unter [Vorbereiten der Bereitstellung von Clientsoftware auf Macs](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients) aus: 
+Führen Sie zuerst die bestimmten Aufgaben unter [Vorbereiten der Bereitstellung von Clientsoftware auf Macs](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients) aus:
 
 1. [Stellen Sie ein Webserverzertifikat für Standortsystemserver bereit](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#deploy-a-web-server-certificate-to-site-system-servers)
 
@@ -219,7 +219,7 @@ Führen Sie anschließend diese Aufgaben aus:
 
 3.  Geben Sie die folgende Befehlszeile ein: **sudo ./ccmsetup -MP <Verwaltungspunkt_Internet-FQDN\> -SubjectName <Wert für Zertifikatantragsteller\>**.  Beim Wert für den Zertifikatantragsteller muss die Groß-/Kleinschreibung beachtet werden, daher muss dieser genauso eingegeben werden, wie er in den Zertifikatdetails angezeigt wird.  
 
-     Beispiel: Wenn der Internet-FQDN in den Standortsystemeigenschaften **server03.contoso.com** lautet und das Macintosh-Client-Zertifikat den FQDN von **mac12.contoso.com **als allgemeinen Namen für den Zertifikatantragsteller verwendet, geben Sie Folgendes ein: **sudo ./ccmsetup -MP server03.contoso.com -SubjectName mac12.contoso.com**  
+     Beispiel: Wenn der Internet-FQDN in den Standortsystemeigenschaften **server03.contoso.com** lautet und das Macintosh-Client-Zertifikat den FQDN von **mac12.contoso.com**als allgemeinen Namen für den Zertifikatantragsteller verwendet, geben Sie Folgendes ein: **sudo ./ccmsetup -MP server03.contoso.com -SubjectName mac12.contoso.com**  
 
 4.  Warten Sie, bis die Meldung **Installation abgeschlossen** angezeigt wird, und starten Sie anschließend den Macintosh-Computer neu.  
 

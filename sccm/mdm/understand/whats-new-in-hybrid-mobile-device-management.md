@@ -1,8 +1,8 @@
 ---
-title: Neuheiten bei hybrider MDM | Microsoft-Dokumentation
-description: "Erfahren Sie mehr über die neuen Features der Verwaltung mobiler Geräte, die für Hybridbereitstellungen mit System Center Configuration Manager und Intune verfügbar sind."
+title: "Neuigkeiten bei der hybriden Verwaltung mobiler Geräte mit Configuration Manager | Microsoft-Dokumentation"
+description: "Erfahren Sie mehr über die neuen Funktionen der Verwaltung mobiler Geräte, die für Hybridbereitstellungen mit Configuration Manager und Intune verfügbar sind."
 ms.custom: na
-ms.date: 02/14/2017
+ms.date: 03/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 58c64b2e02e5e5eb54cb50a468502ba6f1e4f0c1
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 79135bcea4b0ed21fe8017045226f393a1e09dac
+ms.openlocfilehash: fcaead7cbe637fa76d16976f5052cdcd9975b6e8
+ms.lasthandoff: 03/22/2017
 
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Neuheiten bei der hybriden Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune
@@ -36,6 +36,52 @@ Dieser Artikel bietet Details zu den neuen Features für die Verwaltung mobiler 
 |**Neuheiten in Microsoft Intune** | Im Allgemeinen sollten alle in dieser Kategorie aufgelisteten Features in allen Configuration Manager-Releases, einschließlich Configuration Manager-Releases von System Center 2012 R2, verwendet werden können, da für diese Features nur der Intune-Dienst, aber keine zusätzlichen Funktionen in Configuration Manager erforderlich sind.|
 |**Neuheiten in Configuration Manager Technical Preview**| Alle in dieser Kategorie aufgelisteten Features können nur mit dem angegebenen Technical Preview-Release verwendet werden. Um diese Features zu testen, müssen Sie die in der Featurebeschreibung angegebene Technical Preview-Version installieren. Weitere Informationen finden Sie unter [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md).|
 |**Neuheiten in Configuration Manager (Current Branch)**| Alle in dieser Kategorie aufgelisteten Features können nur mit der angegebenen Version von Configuration Manager (Current Branch) verwendet werden, z.B. Version 1511 oder 1602. Wenn Sie eine ältere Version von Configuration Manager für die Hybridbereitstellung verwenden, müssen Sie ein Upgrade auf die in der Featurebeschreibung angegebene Configuration Manager-Version (Current Branch) ausführen. Weitere Informationen finden Sie unter [Upgrade auf System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|
+
+## <a name="new-hybrid-features-in-march-2017"></a>Neue Hybridfeatures im März 2017
+
+### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
+
+Die folgenden im März 2017 eingeführten Intune-Features werden in Hybridbereitstellungen unterstützt:
+
+- **Neue Benutzeroberfläche für die Unternehmensportal-App für Android**
+
+  Die Benutzeroberfläche der Unternehmensportal-App für Android hat nun ein moderneres Design. Die wichtigen Updates sind:
+
+  - Farben: Unternehmensportal-Registerkartenheader haben von der IT definierte Farben.
+  - Apps: Auf der Registerkarte **Apps** wurden die Schaltflächen **Ausgewählte Apps** und **Alle Apps** aktualisiert.
+  - Suche: Auf der Registerkarte **Apps** ist die Schaltfläche **Suche** eine schwebende interaktive Schaltfläche.
+  - App-Navigation: In der Ansicht **Alle Apps** werden zur leichteren Navigation Registerkarten für **Ausgewählt**, **Alle** und **Kategorien** angezeigt.
+  - Unterstützung: Die Registerkarten **Meine Geräte** und **An IT wenden** werden aktualisiert, um die Lesbarkeit zu verbessern.
+
+  Weitere Informationen zu diesen Änderungen finden Sie unter [UI updates for Intune end user apps (Aktualisierungen der Benutzeroberfläche der Intune-Apps für Endbenutzer)](/intune/enduser/whats-new-in-intune-app-ui).
+
+- **Signierungsskript für das Windows 10-Unternehmensportal**
+
+  Wenn Sie die Windows 10-Unternehmensportal-App herunterladen und querladen müssen, können Sie nun ein Skript verwenden, um den App-Signierungsprozess für Ihre Organisation zu vereinfachen und zu optimieren.  Unter [Microsoft Intune Signing Script for Windows 10 Company Portal (Microsoft Intune-Signierungsskript für das Windows 10-Unternehmensportal)](https://aka.ms/win10cpscript) in der TechNet Gallery können Sie das Skript sowie die Anweisungen zu dessen Verwendung herunterladen. Weitere Informationen zu dieser Ankündigung finden Sie unter [Updating your Windows 10 Company Portal app (Aktualisieren Ihrer Windows 10-Unternehmensportal-App)](https://blogs.technet.microsoft.com/intunesupport/2017/03/13/updating-your-windows-10-company-portal-app/) im Blog des Intune-Supportteams.
+
+- **Verbesserte Unterstützung für Android-Benutzer in China**
+
+  Da der Google Play Store in China nicht zur Verfügung steht, müssen Apps für Android-Geräte von chinesischen Marketplaces abgerufen werden. Das Unternehmensportal unterstützt diesen Workflow, indem Android-Benutzer in China umgeleitet werden, um die Unternehmensportal- und Outlook-Apps aus lokalen App Stores herunterzuladen. Dadurch wird die Benutzerfreundlichkeit verbessert, wenn Richtlinien für den bedingten Zugriff sowohl für die Verwaltung mobiler Geräte als auch für die Verwaltung mobiler Anwendungen aktiviert sind. Die Unternehmensportal- und Outlook-Apps für Android sind in den folgenden chinesischen App Stores verfügbar:
+
+  - [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
+  - [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
+  - [Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
+  - [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
+  - [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
+
+- **Sicherstellen, dass Ihre Unternehmensportal-Apps auf dem neuesten Stand sind**
+
+  Im Dezember 2016 haben wir ein Update veröffentlicht, das die Erzwingung für die mehrstufige Authentifizierung für eine Gruppe von Benutzern ermöglicht, wenn diese ein Gerät registrieren, auf dem iOS, Android oder Windows bzw. Windows Phone in einer höheren Version als 8.1 installiert ist. Dies funktioniert nicht ohne bestimmte Baselineversionen der Unternehmensportal-App für Android (v5.0.3419.0+) und iOS (v2.1.17+).
+
+  Die Verwaltungsfunktionen von Intune werden kontinuierlich verbessert, und viele Verbesserungen enthalten koordinierte Updates für die Unternehmensportal-Apps auf allen unterstützten Plattformen. Daher wird empfohlen, dass Sie immer die neuesten Versionen der Unternehmensportal-Apps auf Geräten installiert haben, um die Verbesserungen in Intune zu nutzen und die bestmögliche Benutzerfreundlichkeit zu gewährleisten.
+
+  >[!Tip]
+  > Verlangen Sie von Ihren Benutzern, dass sie auf ihren Geräten die automatische App-Aktualisierung über den entsprechenden App Store aktiviert ist. Wenn Sie die Android-Unternehmensportal-App auf einer Netzwerkfreigabe bereitgestellt haben, können Sie die neueste Version aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=49140) herunterladen.
+
+- **Microsoft Teams ist nun für MAM unter iOS und Android aktiviert**
+
+  Die Microsoft Teams-Apps für iOS und Android sind nun für die Funktionen der Verwaltung mobiler Apps (MAM) von Intune aktiviert, sodass Sie Ihren Teams ermöglichen können, frei über Geräte hinweg zu arbeiten, wobei sichergestellt wird, dass Konversationen und Unternehmensdaten jederzeit geschützt werden. Weitere Informationen finden Sie in der [Microsoft Teams-Ankündigung](https://blogs.technet.microsoft.com/enterprisemobility/2017/03/14/microsoft-teams-is-now-generally-available-and-mam-enabled-on-ios-and-android/) im Enterprise Mobility and Security-Blog.
+
 
 ## <a name="new-hybrid-features-in-february-2017"></a>Neue Hybridfeatures im Februar 2017
 

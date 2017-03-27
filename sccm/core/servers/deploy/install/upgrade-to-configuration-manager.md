@@ -2,7 +2,7 @@
 title: Upgrade auf System Center Configuration Manager | Microsoft-Dokumentation
 description: "Erfahren Sie die Schritte für die Ausführung eines direkten Upgrades an einem Standort und einer Hierarchie, wo System Center 2012 Configuration Manager ausgeführt wird."
 ms.custom: na
-ms.date: 2/23/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8f4ec982a54cf3cefef310268a54850e70e2e63a
-ms.openlocfilehash: 49e3a9d6f4b8e1afbb76fcba33a7fb58e5a6b13f
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 6424fb07802b62820b4dc78a58ab30d3b956abef
+ms.openlocfilehash: ca07b46db0967ca03cc5e858b835d2c2108f1210
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -34,6 +34,7 @@ Sie können ein direktes Upgrade zur Aktualisierung auf System Center Configurat
  > Beim Verwalten des System Center Configuration Manager-Standorts und der Hierarchieinfrastruktur werden die Begriffe *Upgrade*, *Update* und *Installation* verwendet, um drei verschiedene Konzepte zu beschreiben. Erfahren Sie mehr über die Verwendung der Begriffe unter [Informationen zu Upgrade, Update und Installation für einen Standort und eine Hierarchieinfrastruktur](/sccm/core/understand/upgrade-update-install).
 
 ##  <a name="bkmk_path"></a> Pfade für ein direktes Upgrade  
+
 **Upgrade auf Version 1606**  
 Am 15. Dezember 2016 wurde das Baselinemedium für Version 1606 erneut veröffentlicht, um Unterstützung für zusätzliche Upgradeszenarios hinzufügen. Die neue Version unterstützt Upgrades der folgenden Versionen und Installationen auf eine vollständig lizenzierte Version von System Center Configuration Manager Version 1606:  
 -   Eine Evaluierungsinstallation von System Center Configuration Manager Version 1606
@@ -78,8 +79,8 @@ Wenn Sie über das Baselinemedium für Version 1511 verfügen, können Sie die f
 
 Überprüfen Sie die zum Hosten der Standortsystemrollen verwendeten Serverbetriebssysteme:  
 
--   Einige von System Center 2012 Configuration Manager unterstützte ältere Betriebssysteme werden von System Center Configuration Manager nicht unterstützt, und die Standortsystemrollen auf diesen Betriebssystemen müssen vor dem Upgrade verschoben oder entfernt werden.  
--   Mit der Voraussetzungsprüfung für Configuration Manager werden die Voraussetzungen für Standortsystemrollen auf dem Standortserver oder auf Remotecomputern nicht geprüft.  
+-   Einige von System Center 2012 Configuration Manager unterstützte ältere Betriebssysteme werden von System Center Configuration Manager nicht unterstützt, und die Standortsystemrollen auf diesen Betriebssystemen müssen vor dem Upgrade verschoben oder entfernt werden. Lesen Sie die Dokumentation [Unterstützte Betriebssysteme für Standortsystemserver](../../../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md).   
+-   Mit der Voraussetzungsprüfung für Configuration Manager werden die Voraussetzungen für Standortsystemrollen auf dem Standortserver oder auf Remotestandortsystemen nicht geprüft.  
 
 Überprüfen Sie die Voraussetzungen für jeden Computer, auf dem eine Standortsystemrolle gehostet wird:  
 
