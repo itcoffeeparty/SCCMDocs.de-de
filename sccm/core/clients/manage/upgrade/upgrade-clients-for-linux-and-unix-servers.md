@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 7d2bb377-1005-4a55-bd1f-b80a6d0b22e1
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: eea9faaac579ecafd67eaac05dc7ee7ca7819db7
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -61,9 +62,4 @@ Sie können die Version des Clients für Linux und UNIX auf einem Computer auf e
      Verwenden Sie beispielsweise die folgende Befehlszeile, um das Skript auszuführen: **at -f /tmp/upgrade.sh -m now + 5 minutes**  
 
  Nachdem der Client das Ausführen des Skripts **upgrade.sh** erfolgreich geplant hat, sendet der Client eine Statusmeldung, in der mitgeteilt wird, dass die Softwarebereitstellung erfolgreich abgeschlossen wurde. Allerdings wird die tatsächlichen Clientinstallation dann nach der Verzögerung durch den Computer verwaltet. Überprüfen Sie nach Abschluss der Clientaktualisierung die Installation, indem Sie sich die Datei **/var/opt/microsoft/scxcm.log** auf dem Clientcomputer ansehen. Darüber hinaus können Sie überprüfen, ob der Client installiert wurde und mit dem Standort kommuniziert, indem Sie die Details für den betreffenden Client unter dem Knoten **Geräte** im Arbeitsbereich **Bestand und Kompatibilität** der Configuration Manager-Konsole anzeigen.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: c1b2057e-b74f-43fa-a293-763a8f866d3d
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: eafa0d85935c2009cc63d17b06ed83a4666d7fac
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -65,9 +66,4 @@ Die Remotesteuerung in System Center Configuration Manager hat externe Abhängig
 |Remotesteuerung muss für Clients aktiviert werden|Die Remotesteuerung ist in der Standardeinstellung nicht aktiviert, wenn Configuration Manager installiert wird. Informationen zum Aktivieren und Konfigurieren der Remotesteuerung finden Sie unter [Configuring remote control in System Center Configuration Manager (Konfigurieren der Remotesteuerung in System Center Configuration Manager)](../../../../core/clients/manage/remote-control/configuring-remote-control.md).|  
 |Reporting Services-Punkt|Die Standortsystemrolle des Reporting Services-Punkts muss installiert werden, bevor Berichte für die Remotesteuerung ausgeführt werden können. Weitere Informationen finden Sie unter [Berichterstellung in System Center Configuration Manager](../../../../core/servers/manage/reporting.md).|  
 |Sicherheitsberechtigungen zum Verwalten der Remotesteuerung|Für den Zugriff auf Sammlungsressourcen sowie zum Initiieren einer Remotesteuerungssitzung über die Configuration Manager-Konsole: Berechtigung **AMT steuern**, **Lesen**, **Ressource lesen** und **Remotesteuerung** für das Objekt **Sammlung**.<br /><br /> Die Sicherheitsrolle **Remotetoolsverantwortlicher** umfasst diese Berechtigungen, die zum Verwalten der Remotesteuerung in Configuration Manager erforderlich sind.<br /><br /> Weitere Informationen finden Sie unter [Configure role-based administration for System Center Configuration Manager (Konfigurieren der rollenbasierten Verwaltung)](../../../../core/servers/deploy/configure/configure-role-based-administration.md).<br /><br /> Außerdem müssen die Benutzer, denen Berechtigungen zum Verwenden der Remotesteuerung und Remoteunterstützung gewährt werden soll, zur Liste der zugelassenen Remotesteuerungsviewer hinzugefügt werden, indem die Option **Zugelassene Viewer für Remotesteuerung und Remoteunterstützung** in den **Remotetools** -Clienteinstellungen verwendet wird.|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

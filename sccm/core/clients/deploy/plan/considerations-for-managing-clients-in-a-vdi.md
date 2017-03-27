@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 58251f6a4eebac4cba9f3d51f8d0aaad068c3ab8
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -48,9 +49,4 @@ System Center Configuration Manager unterstützt die Installation des Configurat
 >  Diese zufällige Verzögerung wird auch von Configuration Manager-Clients verwendet, die nicht in virtualisierten Umgebungen ausgeführt werden, wobei Windows Embedded-Clients, die sich im Wartungsmodus befinden, die Ausnahme bilden. Wenn es viele bereitgestellte Clients gibt, lassen sich mit diesem Verhalten Spitzen bei der Netzwerkbandbreite vermeiden und die Prozessoranforderungen in den Configuration Manager-Standortsystemen verringern, beispielsweise auf dem Verwaltungspunkt und Standortserver. Das Verzögerungsintervall hängt von der Configuration Manager-Funktionalität ab.  
 >   
 >  Die zufällige Verzögerung wird für erforderliche Softwareupdates und Anwendungsbereitstellungen mithilfe der Clienteinstellung **Zufällige Stichtaganordnung deaktivieren**unter **Computer-Agent**standardmäßig deaktiviert.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

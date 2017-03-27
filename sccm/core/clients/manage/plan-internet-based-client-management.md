@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: 83a7c934-3b11-435d-ba22-cbc274951e83
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
 ms.openlocfilehash: 82867e77840e14e9b8170801ea3c4a9f399c9890
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -32,7 +33,7 @@ Mithilfe der internetbasierten Clientverwaltung (IBCM) können Sie System Center
 
  In den folgenden Abschnitten wird die Planung der internetbasierten Clientverwaltung eingehender erörtert.  
 
-##  <a name="a-namebkmkibcmfeaturesnotsupporteda-features-that-are-not-supported-on-the-internet"></a><a name="BKMK_IBCM_FeaturesNotSupported"></a> Features, die im Internet nicht unterstützt werden  
+##  <a name="BKMK_IBCM_FeaturesNotSupported"></a> Features, die im Internet nicht unterstützt werden  
  Einige Clientverwaltungsfunktionen eignen sich nicht für das Internet und werden daher bei der Clientverwaltung im Internet nicht unterstützt. Viele Features, die bei der internetbasierten Verwaltung nicht unterstützt werden, sind auf die Active Directory-Domänendienste angewiesen oder für ein öffentliches Netzwerk ungeeignet, wie z. B. Netzwerkermittlung und Wake-On-LAN (WOL).  
 
  Die folgenden Features werden bei Clientverwaltung im Internet nicht unterstützt:  
@@ -53,7 +54,7 @@ Mithilfe der internetbasierten Clientverwaltung (IBCM) können Sie System Center
 
  Softwareupdatepunkte, von denen Verbindungen aus dem Internet akzeptiert werden, werden jetzt immer von internetbasierten Configuration Manager-Clients geprüft. Auf diese Weise wird festgestellt, welche Softwareupdates erforderlich sind. Allerdings wird von internetbasierten Clients immer zuerst versucht, die Softwareupdates von Microsoft Update herunterzuladen, anstatt von einem internetbasierten Verteilungspunkt. Nur wenn dies nicht möglich ist, wird versucht, die erforderlichen Softwareupdates von einem internetbasierten Verteilungspunkt herunterzuladen. Softwareupdates werden von Clients, die nicht für die internetbasierte Clientverwaltung konfiguriert sind, immer über Configuration Manager-Verteilungspunkte und nie von Microsoft Update heruntergeladen.  
 
-##  <a name="a-namebkmkplanforinternetsitesystemsa-considerations-for-client-communications-from-the-internet-or-untrusted-forest"></a><a name="BKMK_PlanforInternetSiteSystems"></a> Überlegungen zur Clientkommunikation über das Internet oder eine nicht vertrauenswürdige Gesamtstruktur  
+##  <a name="BKMK_PlanforInternetSiteSystems"></a> Überlegungen zur Clientkommunikation über das Internet oder eine nicht vertrauenswürdige Gesamtstruktur  
  Die folgenden, an primären Standorten installierten Standortsystemrollen unterstützen Verbindungen von Clients, die sich an nicht vertrauenswürdigen Standorten wie dem Internet oder einer nicht vertrauenswürdigen Gesamtstruktur befinden (sekundäre Standorte unterstützen keine Clientverbindungen von nicht vertrauenswürdigen Standorten):  
 
 -   Anwendungskatalog-Websitepunkt  
@@ -94,7 +95,7 @@ Es gibt zwar keine Voraussetzung, eine Vertrauensstellung zwischen der Gesamtstr
 -   **Tunneling**:   
     Falls die Anforderungen für SSL-Bridging vom Proxywebserver nicht erfüllt werden können oder falls Sie die Internetunterstützung für mobile Geräte, die mithilfe von Configuration Manager registriert wurden, konfigurieren möchten, wird auch SSL-Tunneling unterstützt. Diese Option ist weniger sicher, da die SSL-Pakete aus dem Internet ohne SSL-Tunnelabschluss an die Standortsysteme weitergeleitet werden und daher nicht auf schädliche Inhalte überprüft werden können. Bei der Verwendung von SSL-Tunneling müssen vom Proxywebserver keine Zertifikatanforderungen erfüllt werden.  
 
-##  <a name="a-namebkmkplanforinternetclientsa-planning-for-internet-based-clients"></a><a name="BKMK_PlanforInternetClients"></a> Planen internetbasierter Clients  
+##  <a name="BKMK_PlanforInternetClients"></a> Planen internetbasierter Clients  
  Sie müssen entscheiden, ob die Clientcomputer, die über das Internet verwaltet werden sollen, für die Verwaltung im Intranet und im Internet oder lediglich für die internetbasierte Clientverwaltung konfiguriert werden. Die Konfiguration der Clientverwaltungsoption ist nur während der Installation eines Clientcomputers möglich. Sollten Sie Ihre Meinung später ändern, müssen Sie den Client neu installieren.  
 
 > [!NOTE]  
@@ -114,7 +115,7 @@ Es gibt zwar keine Voraussetzung, eine Vertrauensstellung zwischen der Gesamtstr
 
  Der automatische Wechsel zwischen internet- und intranetbasierter Clientverwaltung bietet folgende Vorteile: Bei einer Verbindung mit dem Intranet stehen den Clientcomputern automatisch alle Configuration Manager-Features zur Verfügung, und bei einer Verbindung mit dem Internet werden wichtige Verwaltungsfunktionen weiterhin verwendet. Außerdem kann ein im Internet begonnener Download nahtlos im Intranet fortgeführt werden und umgekehrt.  
 
-##  <a name="a-namebkmkprerequisitsforinternetclientmgmta-prerequisites-for-internet-based-client-management"></a><a name="BKMK_PrerequisitsForInternetClientMgmt"></a> Voraussetzungen für die internetbasierte Clientverwaltung  
+##  <a name="BKMK_PrerequisitsForInternetClientMgmt"></a> Voraussetzungen für die internetbasierte Clientverwaltung  
  Für die internetbasierte Clientverwaltung in Configuration Manager gelten die folgenden externen Abhängigkeiten:  
 
 -   Über das Internet verwaltete Clients müssen über eine Internetverbindung verfügen.  
@@ -196,9 +197,4 @@ Es gibt zwar keine Voraussetzung, eine Vertrauensstellung zwischen der Gesamtstr
      Informationen zu diesen Anforderungen finden Sie in der Dokumentation zur Firewall oder zum Proxyserver.  
 
      Informationen zu ähnlichen Kommunikationsanforderungen bei Verwendung des Softwareupdatepunkts für Clientverbindungen über das Internet finden Sie in der Dokumentation zu Windows Server Update Services (WSUS). Weitere Informationen zu WSUS unter Windows Server 2003 finden Sie in [Appendix D: Security Settings (Anhang D: Sicherheitseinstellungen)](http://go.microsoft.com/fwlink/p/?LinkId=143368).
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

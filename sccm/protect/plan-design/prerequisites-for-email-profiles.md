@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: dccf0b73-43bd-4545-8914-114168ebad36
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
 ms.openlocfilehash: bdb7f78480f73bc4559c4ff49ecb7b047581780a
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -40,9 +41,4 @@ E-Mail-Profile in System Center Configuration Manager weisen externe Abhängigke
 |Abhängigkeit|Weitere Informationen|  
 |----------------|----------------------|  
 |Mail-Attribut in Active Directory|Wenn Sie E-Mail-Adressen von Benutzern in einem E-Mail-Profil mithilfe der primären SMTP-Adresse des Benutzers generieren möchten, muss diese Adresse im **mail**-Attribut in Active Directory enthalten sein.<br /><br /> Weitere Informationen finden Sie in der Windows Server-Dokumentation.|
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

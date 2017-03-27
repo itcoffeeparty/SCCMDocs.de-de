@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 5c975e69-0cc0-4afd-b7fb-b7182162a933
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: e3082e1d608f60a539fc58b0129132e33c8af833
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -61,9 +62,4 @@ Sie können die System Center Configuration Manager-Berichte verwenden, um die �
 4.  Wählen Sie den Bericht **Remotesteuerung - Alle Remotesteuerungsinformationen**aus, und klicken Sie dann auf der Registerkarte **Startseite** in der Gruppe **Berichtsgruppe**auf **Ausführen** , um das Fenster **Remotesteuerung - Alle Remotesteuerungsinformationen** zu öffnen.  
 
 5.  Schließen Sie das Berichtsfenster, nachdem Sie die Informationen im Bericht gelesen haben.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

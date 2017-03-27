@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 54ef5fbb-521d-4ca5-a1c5-61e6f538d71e
 caps.latest.revision: 8
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: c1b3b3e7fe756ce3e0c82ffc15693999d8e817d2
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -36,7 +37,7 @@ Wenn ein Clientcomputer oder ein mobiles Clientgerät nicht mehr vertrauenswürd
 
  Wenn an Ihrem Standort HTTPS-Clientverbindungen zugelassen werden und eine Zertifikatsperrliste (Certificate Revocation List, CRL) von Ihrer Public Key-Infrastruktur (PKI) unterstützt wird, ziehen Sie zunächst eine Zertifikatsperre zur Verteidigung gegen gefährdete Zertifikate in Betracht. Das Blockieren von Clients in Configuration Manager bietet eine zweite Stufe der Verteidigung, mit der die Standorthierarchie geschützt wird.  
 
-##  <a name="a-namebkmkblockvscrla-considerations-for-blocking-clients"></a><a name="BKMK_Block_vs_CRL"></a> Überlegungen zum Blockieren von Clients  
+##  <a name="BKMK_Block_vs_CRL"></a> Überlegungen zum Blockieren von Clients  
 
 -   Diese Option ist für HTTP- und HTTPS-Clientverbindungen verfügbar, jedoch ist die Sicherheit bei Clientverbindungen mit Standortsystemen über HTTP eingeschränkt.  
 
@@ -71,9 +72,4 @@ Wenn ein Clientcomputer oder ein mobiles Clientgerät nicht mehr vertrauenswürd
 
     > [!NOTE]  
     >  Darüber hinaus können Sie Standortsysteme, auf denen IIS ausgeführt wird, durch Verwenden einer Zertifikatvertrauensliste (Certificate Trust List, CTL) in IIS vor unbekannten Clients schützen.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

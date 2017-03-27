@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 272ee86b-d3d9-4fd9-b5c4-73e490e1a1e4
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 342a58d2b7439f721381beb43188594b5278043d
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -28,7 +29,7 @@ ms.openlocfilehash: 342a58d2b7439f721381beb43188594b5278043d
 
 In diesem Thema finden Sie Informationen zu Sicherheit und Datenschutz für die Remotesteuerung in System Center 2012 Configuration Manager.  
 
-##  <a name="a-namebkmksecurityhardwareinventorya-security-best-practices-for-remote-control"></a><a name="BKMK_Security_HardwareInventory"></a> Bewährte Sicherheitsmethoden für die Remotesteuerung  
+##  <a name="BKMK_Security_HardwareInventory"></a> Bewährte Sicherheitsmethoden für die Remotesteuerung  
  Wenden Sie die folgenden bewährten Sicherheitsmethoden an, wenn Sie Clientcomputer mithilfe von Remotesteuerung verwalten:  
 
 |Bewährte Sicherheitsmethode|Weitere Informationen|  
@@ -54,7 +55,7 @@ In diesem Thema finden Sie Informationen zu Sicherheit und Datenschutz für die 
 
      Es werden keine Überwachungsmeldungen gesendet, wenn Sie die Binärdateien zur Remotesteuerung kopieren, anstatt die Configuration Manager-Konsole zu installieren, und dann die Remotesteuerung an der Eingabeaufforderung ausführen.  
 
-##  <a name="a-namebkmkprivacyhardwareinventorya-privacy-information-for-remote-control"></a><a name="BKMK_Privacy_HardwareInventory"></a> Datenschutzinformationen zur Remotesteuerung  
+##  <a name="BKMK_Privacy_HardwareInventory"></a> Datenschutzinformationen zur Remotesteuerung  
  Die Remotesteuerung ermöglicht das Anzeigen aktiver Sitzungen auf Configuration Manager-Clientcomputern, und möglicherweise aller auf diesen Computern gespeicherten Informationen. Die Remotesteuerung ist standardmäßig nicht aktiviert.  
 
  Sie können die Remotesteuerung so konfigurieren, dass Benutzer vor Beginn einer Remotesteuerungssitzung eine deutliche Ankündigung erhalten und zustimmen können. Es ist allerdings auch möglich, Benutzer ohne deren Erlaubnis oder Wissen zu überwachen. Sie können die Zugriffsstufe "Nur anzeigen" konfigurieren, sodass per Remotesteuerung nichts verändert werden kann, oder "Vollzugriff". Während der Remotesteuerungssitzung wird das Konto des Administrators angezeigt, der die Verbindung herstellt, damit die Benutzer erkennen können, wer eine Verbindung mit ihrem Computer herstellt.  
@@ -62,9 +63,4 @@ In diesem Thema finden Sie Informationen zu Sicherheit und Datenschutz für die 
  In der Standardeinstellung von Configuration Manager werden der lokalen Administratorgruppe Remotesteuerungsberechtigungen gewährt.  
 
  Berücksichtigen Sie beim Konfigurieren der Remotesteuerung Ihre Datenschutzanforderungen.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

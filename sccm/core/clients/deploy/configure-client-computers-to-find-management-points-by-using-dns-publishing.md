@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 03cec407-0f9f-454f-a360-b005af738d29
 caps.latest.revision: 6
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 9eadb91a575323b4c36af14962f370046ea513ce
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -57,9 +58,4 @@ Clients in System Center Configuration Manager müssen kontinuierlich einen Verw
 2.  Geben Sie auf der Registerkarte **Standort** das DNS-Suffix eines Verwaltungspunkts an, und klicken Sie dann auf **OK**.  
 
      Wenn der Standort über mehrere Verwaltungspunkte verfügt und diese sich in verschiedenen Domänen befinden, geben Sie nur eine Domäne an. Beim Herstellen einer Verbindung zwischen Clients und einem Verwaltungspunkt in dieser Domäne wird eine Liste der verfügbaren Verwaltungspunkte heruntergeladen. Darin sind auch die Verwaltungspunkte in den anderen Domänen enthalten.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

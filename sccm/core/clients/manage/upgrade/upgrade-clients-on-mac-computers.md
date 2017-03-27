@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 74c60941-5eae-4905-9e58-252bdb39df96
 caps.latest.revision: 10
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
 ms.openlocfilehash: 6bdc5cca01bf5a79a6177d7cf1de96b8ff2c2305
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -64,7 +65,7 @@ Befolgen Sie die oben beschriebenen allgemeinen Schritte, um den Client für Mac
 
  Wenn Sie die Configuration Manager-Registrierung nicht verwenden, sondern das Clientzertifikat unabhängig von Configuration Manager installieren, finden Sie weitere Informationen unter [Konfigurieren des aktualisierten Clients für die Verwendung eines vorhandenen Zertifikats](#BKMK_UpgradingClient_MachineEnrollment).  
 
-##  <a name="a-namebkmkupgradingclientmachineenrollmenta-configure-the-upgraded-client-to-use-an-existing-certificate"></a><a name="BKMK_UpgradingClient_MachineEnrollment"></a> Configure the upgraded client to use an existing certificate  
+##  <a name="BKMK_UpgradingClient_MachineEnrollment"></a> Configure the upgraded client to use an existing certificate  
  Führen Sie das folgende Verfahren aus, um zu verhindern, dass der Assistent für die Computeranmeldung ausgeführt wird, und den aktualisierten Client für die Verwendung eines vorhandenen Clientzertifikats zu konfigurieren.  
 
 -   Erstellen Sie in der Configuration Manager-Konsole ein Konfigurationselement mit dem Typ **Mac OS X**.  
@@ -102,9 +103,4 @@ Befolgen Sie die oben beschriebenen allgemeinen Schritte, um den Client für Mac
 -   Fügen Sie das Konfigurationselement einer Konfigurationsbaseline hinzu, und stellen Sie dann die Konfigurationsbaseline auf allen Macintosh-Computern bereit, auf denen ein Zertifikat unabhängig von Configuration Manager installiert wird.  
 
  Weitere Informationen zum Erstellen und Bereitstellen von Konfigurationselementen für Macintosh-Computer finden Sie unter [Erstellen von Konfigurationselementen für Mac OS X-Geräte, die mit dem System Center Configuration Manager-Client verwaltet werden](../../../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md) und [Bereitstellen von Konfigurationsbaselines in System Center Configuration Manager](../../../../compliance/deploy-use/deploy-configuration-baselines.md).  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
