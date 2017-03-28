@@ -16,9 +16,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
-ms.openlocfilehash: 4222ca27e19ade46d53f8cd4598643ddd4fd5c8f
-ms.lasthandoff: 01/24/2017
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 2ace86cc842d6a3a5b2114c4e4c33c2d65c2f256
+ms.lasthandoff: 03/21/2017
 
 ---
 # <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>Registrierung des iOS-Programms zur Geräteregistrierung (Device Enrollment Program, DEP) für Hybridbereitstellungen mit Configuration Manager
@@ -35,7 +35,7 @@ Unternehmen können iOS-Geräte mit dem Geräteregistrierungsprogramm von Apple 
 ###  <a name="enable-dep-enrollment-in-configuration-manager-with-intune"></a>Aktivieren der DEP-Registrierung in Configuration Manager mit Intune  
 
 1.  **Beginnen der Verwaltung von iOS-Geräten mit Configuration Manager**   
-    Bevor Sie Geräte des iOS-Programms zur Geräteregistrierung (DEP) registrieren können, müssen Sie die Schritte im Thema [Set up Hybrid mobile device management (Einrichten der hybriden Verwaltung mobiler Geräte)](../../mdm/deploy-use/setup-hybrid-mdm.md), einschließlich der [Schritte zur Unterstützung der iOS-Registrierung](../deploy-use/setup-hybrid-mdm.md#ios-and-mac-enrollment-setup) durchführen.
+    Bevor Sie Geräte des iOS-Programms zur Geräteregistrierung (DEP) registrieren können, müssen Sie die Schritte im Thema [Set up Hybrid mobile device management (Einrichten der hybriden Verwaltung mobiler Geräte)](../../mdm/deploy-use/setup-hybrid-mdm.md), einschließlich der [Schritte zur Unterstützung der iOS-Registrierung](../deploy-use/enroll-hybrid-ios-mac.md) durchführen.
 
 2.  **Erstellen einer DEP-Tokenanforderung**   
     Erweitern Sie in der Configuration Manager-Konsole im Arbeitsbereich **Verwaltung** die Option **Hierarchiekonfiguration**, erweitern Sie **Clouddienste**, und klicken Sie anschließend auf **Windows Intune-Abonnements**. Klicken Sie auf der Registerkarte **Startseite** auf die Option **DEP-Tokenanforderung erstellen** , klicken Sie auf **Durchsuchen** , um den Downloadpfad für die DEP-Tokenanforderung anzugeben, und klicken Sie anschließend auf **Herunterladen**. Speichern Sie die PEM-Datei der DEP-Tokenanforderung lokal. Mithilfe der PEM-Datei wird ein vertrauenswürdiges Token (P7M) beim Portal des Apple-Programms zur Geräteregistrierung angefordert.  

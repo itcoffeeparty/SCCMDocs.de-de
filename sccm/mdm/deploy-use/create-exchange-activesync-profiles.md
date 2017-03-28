@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 1cbe1d8f34b0a7482232488e907190a7a9cadf30
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 8c7bf901caa49c8585a9ed3913d4a5a2aac57013
+ms.openlocfilehash: 74083f65d906fde967081229b244df24e9e08e0a
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -47,7 +47,7 @@ E-Mail-Profile tragen zusammen mit Microsoft Intune dazu bei, dass Sie Geräte m
 
  Zusätzlich zum Konfigurieren eines E-Mail-Kontos auf dem Gerät können Sie auch die Synchronisierungseinstellungen für Kontakte, Kalender und Aufgaben konfigurieren.  
 
- Wenn Sie ein E-Mail-Profil erstellen, können Sie eine Vielzahl von Sicherheitseinstellungen aufnehmen, darunter auch Zertifikate für Identität, Verschlüsselung und Signatur, die mit System Center Configuration Manager-Zertifikatprofilen bereitgestellt wurden. Weitere Informationen zu Zertifikatprofilen finden Sie unter [Zertifikatprofile in System Center Configuration Manager](introduction-to-certificate-profiles.md).    
+ Wenn Sie ein E-Mail-Profil erstellen, können Sie eine Vielzahl von Sicherheitseinstellungen aufnehmen, darunter auch Zertifikate für Identität, Verschlüsselung und Signatur, die mit System Center Configuration Manager-Zertifikatprofilen bereitgestellt wurden. Weitere Informationen zu Zertifikatprofilen finden Sie unter [Zertifikatprofile in System Center Configuration Manager](create-pfx-certificate-profiles.md).    
 
 
 ## <a name="create-a-new-exchange-activesync-email-profile"></a>Erstellen eines neuen Exchange ActiveSync-E-Mail-Profils  
@@ -101,7 +101,7 @@ Starten des Assistenten zum Erstellen von Exchange ActiveSync-E-Mail-Profilen
     -   **Identitätszertifikat:** Klicken Sie auf **Auswählen** , und wählen Sie dann ein Zertifikat für die Identität aus.  
 
         > [!NOTE]  
-        >  Bevor Sie das Identitätszertifikat auswählen können, müssen Sie es zuerst als SCEP-Zertifikatprofil (Simple Certificate Enrollment Protocol) konfigurieren. Weitere Informationen zu Zertifikatprofilen finden Sie unter [Zertifikatprofile in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
+        >  Bevor Sie das Identitätszertifikat auswählen können, müssen Sie es zuerst als SCEP-Zertifikatprofil (Simple Certificate Enrollment Protocol) konfigurieren. Weitere Informationen zu Zertifikatprofilen finden Sie unter [Zertifikatprofile in System Center Configuration Manager](create-pfx-certificate-profiles.md).  
 
          Diese Option ist nur verfügbar, wenn Sie unter **Authentifizierungsmethode** **Zertifikate**ausgewählt haben.  
 
@@ -110,14 +110,14 @@ Starten des Assistenten zum Erstellen von Exchange ActiveSync-E-Mail-Profilen
     -   **Verschlüsselungszertifikate:** Klicken Sie auf **Auswählen** , und wählen Sie dann ein Zertifikat für die Verschlüsselung aus. Diese Option steht nur für iOS-Geräte zur Verfügung.  
 
         > [!NOTE]  
-        >  Bevor Sie das Verschlüsselungszertifikat auswählen können, müssen Sie es zuerst als SCEP-Zertifikatprofil (Simple Certificate Enrollment Protocol) konfigurieren. Weitere Informationen zu Zertifikatprofilen finden Sie unter [Zertifikatprofile in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
+        >  Bevor Sie das Verschlüsselungszertifikat auswählen können, müssen Sie es zuerst als SCEP-Zertifikatprofil (Simple Certificate Enrollment Protocol) konfigurieren. Weitere Informationen zu Zertifikatprofilen finden Sie unter [Zertifikatprofile in System Center Configuration Manager](create-pfx-certificate-profiles.md).  
 
          Diese Option ist nur verfügbar, wenn Sie **S/MIME verwenden**ausgewählt haben.  
 
     -   **Signaturzertifikate:** Klicken Sie auf **Auswählen** , und wählen Sie dann ein Zertifikat für das Signieren aus. Diese Option steht nur für iOS-Geräte zur Verfügung.  
 
         > [!NOTE]  
-        >  Bevor Sie das Signaturzertifikat auswählen können, müssen Sie es zuerst als SCEP-Zertifikatprofil (Simple Certificate Enrollment Protocol) konfigurieren. Weitere Informationen zu Zertifikatprofilen finden Sie unter [Zertifikatprofile in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
+        >  Bevor Sie das Signaturzertifikat auswählen können, müssen Sie es zuerst als SCEP-Zertifikatprofil (Simple Certificate Enrollment Protocol) konfigurieren. Weitere Informationen zu Zertifikatprofilen finden Sie unter [Zertifikatprofile in System Center Configuration Manager](create-pfx-certificate-profiles.md).  
 
          Diese Option ist nur verfügbar, wenn Sie **S/MIME verwenden**ausgewählt haben.  
 

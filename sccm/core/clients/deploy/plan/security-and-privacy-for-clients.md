@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 6e76c3ae104c0561a5c7b178823b7a48761518fe
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 192c3685092df6310b7129877c7fb5dfd9ef7ad5
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -28,7 +29,7 @@ ms.openlocfilehash: 6e76c3ae104c0561a5c7b178823b7a48761518fe
 
 Dieser Artikel enthält Informationen zur Sicherheit und zum Datenschutz von Clients in System Center Configuration Manager sowie von mobilen Geräten, die vom Exchange Server-Connector verwaltet werden:  
 
-##  <a name="a-namebkmksecuritycliientsa-security-best-practices-for-clients"></a><a name="BKMK_Security_Cliients"></a> Bewährte Sicherheitsmethoden für Clients  
+##  <a name="BKMK_Security_Cliients"></a> Bewährte Sicherheitsmethoden für Clients  
  Wenn Configuration Manager Daten zulässt, die von Geräten mit dem Configuration Manager-Client stammen, ist der Standort für potenzielle Angriffe durch Clients anfällig. Beispielsweise könnten falsch formatierte Inventurdaten gesendet werden, und auch eine Überlastung der Standortsysteme wäre möglich. Stellen Sie den Configuration Manager-Client nur auf vertrauenswürdigen Geräten bereit. Schützen Sie den Standort außerdem anhand der folgenden bewährten Sicherheitsmethoden vor nicht autorisierten oder gefährdeten Geräten:  
 
  **Verwenden Sie PKI-Zertifikate (Public Key-Infrastruktur) für die Clientkommunikation mit Standortsystemen, auf denen IIS ausgeführt werden.**  
@@ -146,7 +147,7 @@ Dieser Artikel enthält Informationen zur Sicherheit und zum Datenschutz von Cli
 
  Bei dieser Clienteinstellung können nicht signierte PowerShell-Skripts vom Configuration Manager-Client ausgeführt werden. Dabei könnte Malware auf Clientcomputern ausgeführt werden. Falls Sie diese Option auswählen müssen, verwenden Sie eine benutzerdefinierte Clienteinstellung, und weisen Sie diese nur den Clientcomputern zu, die nicht signierte PowerShell-Skripts ausführen müssen.  
 
-##  <a name="a-namebkmkmobilea-security-best-practices-for-mobile-devices"></a><a name="bkmk_mobile"></a> Bewährte Sicherheitsmethoden für mobile Geräte  
+##  <a name="bkmk_mobile"></a> Bewährte Sicherheitsmethoden für mobile Geräte  
  **Für mobile Geräte, die Sie mit Configuration Manager registrieren und die im Internet unterstützt werden: Installieren Sie den Anmeldungsproxypunkt in einem Umkreisnetzwerk und den Anmeldungspunkt im Intranet.**  
 
  Diese Rollentrennung trägt zum Schutz des Anmeldungspunkts vor Angriffen bei. Wenn der Anmeldungspunkt gefährdet ist, könnte ein Angreifer Authentifizierungszertifikate abrufen und die Anmeldeinformationen von Benutzern stehlen, die ihre mobilen Geräte anmelden.  
@@ -199,7 +200,7 @@ Dieser Artikel enthält Informationen zur Sicherheit und zum Datenschutz von Cli
 
  Eine Liste der mindestens erforderlichen Cmdlets für den Exchange Server-Connector finden Sie unter [Verwalten von mobilen Geräten mit System Center Configuration Manager und Exchange](../../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
 
-##  <a name="a-namebkmkmacsa-security-best-practices-for-macs"></a><a name="bkmk_macs"></a> Bewährte Sicherheitsmethoden für Macs  
+##  <a name="bkmk_macs"></a> Bewährte Sicherheitsmethoden für Macs  
  **Für Macintosh-Computer: Verwenden Sie zum Speichern und Zugreifen auf die Clientquelldateien einen sicheren Speicherort.**  
 
  Vor der Installation oder Registrierung des Clients auf einem Macintosh-Computer werden die Clientquelldateien von Configuration Manager nicht auf eine mögliche Manipulation hin überprüft. Laden Sie diese Dateien aus einer vertrauenswürdigen Quelle herunter, und verwenden Sie einen sicheren Ort zum Speichern und für den Zugriff darauf.  
@@ -208,7 +209,7 @@ Dieser Artikel enthält Informationen zur Sicherheit und zum Datenschutz von Cli
 
  Überwachen und verfolgen Sie den Gültigkeitszeitraum der Zertifikate, die Sie für Macintosh-Computer verwenden, um eine Geschäftskontinuität sicherzustellen. Configuration Manager unterstützt die automatische Erneuerung dieses Zertifikats nicht bzw. gibt keine Warnung aus, wenn das Zertifikat abzulaufen droht. Eine typische Gültigkeitsdauer beträgt 1 Jahr.  
 
- Weitere Informationen zur Erneuerung des Zertifikats finden Sie unter  [Renewing the Mac Client Certificate Manually](../../../../core/clients/deploy/deploy-clients-to-macs.md#BKMK_Man).  
+ Weitere Informationen zur Erneuerung des Zertifikats finden Sie unter  [Renewing the Mac Client Certificate Manually](../../../../core/clients/deploy/deploy-clients-to-macs.md#renewing-the-mac-client-certificate).  
 
  **Für Macintosh-Computer: Ziehen Sie zum Schutz vor einer Rechteerweiterung in Betracht, das Zertifikat einer vertrauenswürdigen Stammzertifizierungsstelle zu konfigurieren, das ausschließlich auf das SSL-Protokoll festgelegt ist.**  
 
@@ -237,7 +238,7 @@ Dieser Artikel enthält Informationen zur Sicherheit und zum Datenschutz von Cli
 
 6.  Schließen Sie das Dialogfeld, geben Sie bei entsprechender Aufforderung das Administratorkennwort ein, und klicken Sie dann auf **Einstellungen aktualisieren**.  
 
-##  <a name="a-namebkmksecurityissuesclientsa-security-issues-for-configuration-manager-clients"></a><a name="BKMK_SecurityIssues_Clients"></a> Sicherheitsprobleme bei Configuration Manager-Clients  
+##  <a name="BKMK_SecurityIssues_Clients"></a> Sicherheitsprobleme bei Configuration Manager-Clients  
  Für die folgenden Sicherheitsprobleme ist keine Risikominderung vorhanden:  
 
 -   Statusmeldungen werden nicht authentifiziert.  
@@ -282,7 +283,7 @@ Dieser Artikel enthält Informationen zur Sicherheit und zum Datenschutz von Cli
 
      Wenn auf dem Windows Embedded-Gerät ein Betriebssystem vor Windows 7 ausgeführt wird und ein Benutzer versucht, sich anzumelden, während die Schreibfilter deaktiviert sind, um von Configuration Manager vorgenommene Änderungen zu übertragen, dann wird die Anzahl der zulässigen fehlerhaften Anmeldeversuche vor Sperrung des Kontos halbiert. Wenn der **Kontosperrungsschwellenwert** beispielsweise als 6 konfiguriert ist und ein Benutzer das Kennwort dreimal falsch eingibt, wird das Konto gesperrt, was zu einer Dienstverweigerungssituation führt.  Wenn sich Benutzer in diesem Szenario an Embedded-Geräten anmelden müssen, informieren Sie sie über die Möglichkeit eines reduzierten Sperrschwellenwerts.  
 
-##  <a name="a-namebkmkprivacycliientsa-privacy-information-for-configuration-manager-clients"></a><a name="BKMK_Privacy_Cliients"></a> Informationen zum Datenschutz für Configuration Manager-Clients  
+##  <a name="BKMK_Privacy_Cliients"></a> Informationen zum Datenschutz für Configuration Manager-Clients  
  Wenn Sie den Configuration Manager-Client bereitstellen, aktivieren Sie Clienteinstellungen, um Configuration Manager-Verwaltungsfeatures verwenden zu können. Die für die Konfiguration der Features verwendeten Einstellungen können für alle Clients in der Configuration Manager-Hierarchie unabhängig davon gelten, ob sie direkt mit dem Unternehmensnetzwerk, über eine Remotesitzung oder mit dem Internet verbunden sind, aber von Configuration Manager unterstützt werden.  
 
  Clientinformationen werden in der Configuration Manager-Datenbank gespeichert und nicht an Microsoft gesendet. Die Informationen bleiben bis zum Löschen durch den Standortwartungstask **Veraltete Ermittlungsdaten löschen** in der Datenbank gespeichert. Der Löschvorgang wird alle 90 Tage ausgeführt. Sie können das Löschintervall konfigurieren.  
@@ -299,15 +300,10 @@ Dieser Artikel enthält Informationen zur Sicherheit und zum Datenschutz von Cli
 
  Berücksichtigen Sie beim Installieren des Configuration Manager-Clients mit Überprüfung des Clientstatus Ihre Datenschutzanforderungen.  
 
-##  <a name="a-namebkmkprivacyexchangeconnectora-privacy-information-for-mobile-devices-that-are-managed-with-the-exchange-server-connector"></a><a name="BKMK_Privacy_ExchangeConnector"></a> Informationen zum Datenschutz für vom Exchange Server-Connector verwaltete mobile Geräte  
+##  <a name="BKMK_Privacy_ExchangeConnector"></a> Informationen zum Datenschutz für vom Exchange Server-Connector verwaltete mobile Geräte  
  Geräte, die über das ActiveSync-Protokoll mit Exchange Server verbunden sind (lokal oder gehostet), werden vom Exchange Server-Connector ermittelt und verwaltet. Die vom Exchange Server-Connector ermittelten Datensätze werden in der Configuration Manager-Datenbank gespeichert. Die Informationen werden von Exchange Server gesammelt. Dabei werden über die von den mobilen Geräten an Exchange Server übermittelten Daten hinaus keine weiteren Informationen erfasst.  
 
  Die Informationen zu den mobilen Geräten werden nicht an Microsoft gesendet. Anschließend werden die Informationen zu den mobilen Geräten in der Configuration Manager-Datenbank gespeichert. Die Informationen bleiben bis zum Löschen durch den Standortwartungstask **Veraltete Ermittlungsdaten löschen** in der Datenbank gespeichert. Der Löschvorgang wird alle 90 Tage ausgeführt. Sie können das Löschintervall konfigurieren.  
 
  Berücksichtigen Sie beim Installieren und Konfigurieren des Exchange Server-Connectors Ihre Datenschutzanforderungen.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

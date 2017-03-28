@@ -17,9 +17,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 32190ec39af2cf1568b3d57c2c2f25d9ff2f9e20
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 8c7bf901caa49c8585a9ed3913d4a5a2aac57013
+ms.openlocfilehash: 82f7db908f83d69a86c82ed97b845ff84e78f8b3
+ms.lasthandoff: 03/21/2017
 
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>VPN-Profile für mobile Geräte in System Center Configuration Manager
@@ -32,8 +32,8 @@ Verwenden Sie VPN-Profile in System Center Configuration Manager, um Benutzern m
 
  Wenn Sie ein VPN-Profil erstellen, können Sie eine Vielzahl von Sicherheitseinstellungen aufnehmen, darunter auch Zertifikate für die Serverüberprüfung und Clientauthentifizierung, die mit System Center Configuration Manager-Zertifikatprofilen bereitgestellt wurden. Weitere Informationen zu Zertifikatprofilen finden Sie unter [Zertifikatprofile in System Center Configuration Manager](../../protect/deploy-use/introduction-to-certificate-profiles.md).  
 
- ## <a name="vpn-profiles-when-using-configuration-manager-together-with-intune"></a>VPN-Profile bei der Verwendung von Configuration Manager mit Intune 
- 
+ ## <a name="vpn-profiles-when-using-configuration-manager-together-with-intune"></a>VPN-Profile bei der Verwendung von Configuration Manager mit Intune
+
  Um Profile für Android-, iOS-, Windows Phone- und Windows 8.1-Geräte bereitzustellen, müssen diese Geräte bei Microsoft Intune registriert werden. Geräte auf anderen Plattformen können ebenfalls bei Intune registriert werden. Informationen zum Registrieren finden Sie unter [Verwalten von Geräten für die Verwaltung in Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx). Diese Tabelle zeigt, welcher Verbindungstyp für jede Geräteplattform unterstützt wird:  
 
  |Verbindungstyp|iOS und Mac OS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop und Mobile|  
@@ -91,7 +91,7 @@ Allgemeine Informationen zum Erstellen von VPN-Profilen finden Sie unter [Erstel
 
         -   **Remember the user credentials at each logon** (Benutzeranmeldeinformationen bei jeder Anmeldung speichern): Benutzeranmeldeinformationen werden gespeichert, sodass der Benutzer sie nicht bei jeder Verbindung eingeben muss.  
 
-        -   **Select a client certificate for client authentication** (Clientzertifikat für Clientauthentifizierung auswählen): Wählen Sie das [SCEP-Clientzertifikat aus](introduction-to-certificate-profiles.md), das Sie zuvor erstellt haben, und das zur Authentifizierung der VPN-Verbindung verwendet wird.   
+        -   **Select a client certificate for client authentication** (Clientzertifikat für Clientauthentifizierung auswählen): Wählen Sie das [SCEP-Clientzertifikat aus](create-pfx-certificate-profiles.md), das Sie zuvor erstellt haben, und das zur Authentifizierung der VPN-Verbindung verwendet wird.   
 
             > [!NOTE]  
             >  Bei iOS-Geräten wird das von Ihnen ausgewählte SCEP-Profil in das VPN-Profil eingebettet. Bei anderen Plattformen wird eine Anwendbarkeitsregel hinzugefügt, um sicherzustellen, dass das VPN-Profil nicht installiert wird, wenn das Zertifikat nicht vorhanden oder nicht kompatibel ist.  

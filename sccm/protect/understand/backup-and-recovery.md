@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3aa9f2e4d3f7210981b5b84942485de11fe15cb2
-ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 67441d0c19114f628e8b4308f58165ba67c738df
+ms.lasthandoff: 03/21/2017
 
 ---
 
@@ -66,7 +67,7 @@ Bereiten Sie Sicherungs- und Wiederherstellungs-Ansätze vor, um Datenverluste z
 > [!NOTE]  
 >  Wenn Sie eine SQL Server Always On-Verfügbarkeitsgruppe zum Hosten der Standortdatenbank verwenden, ändern Sie Ihre Sicherungs- und Wiederherstellungspläne wie im Abschnitt [Änderungen bei Sicherung und Wiederherstellung bei Verwendung einer SQL Server Always On-Verfügbarkeitsgruppe](../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#bkmk_BnR) des Themas [SQL Server Always On für eine hoch verfügbare Standortdatenbank für System Center Configuration Manager](../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md) beschrieben.  
 
-##  <a name="a-namebkmksitebackupa-back-up-a-configuration-manager-site"></a><a name="BKMK_SiteBackup"></a> Sichern eines Configuration Manager-Standorts  
+##  <a name="BKMK_SiteBackup"></a> Sichern eines Configuration Manager-Standorts  
  Configuration Manager hat einen Sicherungswartungstask:  
 
 -   Wird nach einem Zeitplan ausgeführt  
@@ -88,7 +89,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 > [!NOTE]  
 >  Configuration Manager kann die Standortdatenbank aus dem Configuration Manager-Sicherungswartungstask oder aus der Standortdatenbanksicherung wiederherstellen, die Sie mit einem anderen Prozess erstellt haben. Beispielsweise können Sie die Standortdatenbank anhand einer Sicherung wiederherstellen, die im Rahmen des Microsoft SQL Server-Wartungsplans erstellt wurde. Sie können die Standortdatenbank anhand einer Sicherung wiederherstellen, die mithilfe von System Center 2012 Data Protection Manager (DPM) erstellt wurde. Weitere Informationen finden Sie unter [Verwenden von Data Protection Manager zur Sicherung der Standortdatenbank](#BKMK_DPMBackup).  
 
-###  <a name="a-namebkmkbackupmaintenancetaska-backup-maintenance-task"></a><a name="BKMK_BackupMaintenanceTask"></a> Sicherungswartungstask  
+###  <a name="BKMK_BackupMaintenanceTask"></a> Sicherungswartungstask  
  Durch Planen des vordefinierten Wartungstasks „Standortserver sichern“ können Sie die Sicherung von Configuration Manager-Standorten automatisieren. Sie können einen Standort der zentralen Verwaltung und einen primären Standort sichern. Bei sekundären Standorten oder Standortsystemservern hingegen wird eine Sicherung nicht unterstützt. Wenn der Configuration Manager-Sicherungsdienst ausgeführt wird, läuft dieser Vorgang den in der Sicherungssteuerungsdatei (**&lt;Configuration Manager-Installationsordner\>\Inboxes\Smsbkup.box\Smsbkup.ctl**) definierten Anweisungen entsprechend ab. Sie können die Sicherungssteuerungsdatei ändern, um das Verhalten des Sicherungsdienstes zu ändern. Informationen zum Status der Standortsicherung werden in die Datei **Smsbkup.log** geschrieben. Diese Datei wird in dem Zielordner erstellt, den Sie in den Eigenschaften des Wartungstasks „Standortserver sichern“ angeben.  
 
 
@@ -144,7 +145,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
     > [!TIP]  
     >  Wenn beim Sicherungswartungstask ein Fehler auftritt, können Sie den Task durch Anhalten und Neustarten des Dienstes SMS_SITE_BACKUP neu starten.  
 
-###  <a name="a-namebkmkdpmbackupa-using-data-protection-manager-to-back-up-your-site-database"></a><a name="BKMK_DPMBackup"></a> Verwenden von Data Protection Manager zur Sicherung der Standortdatenbank  
+###  <a name="BKMK_DPMBackup"></a> Verwenden von Data Protection Manager zur Sicherung der Standortdatenbank  
  Sie können die Standortdatenbank mit System Center 2012 Data Protection Manager (DPM) sichern. Sie müssen in DPM eine neue Schutzgruppe für den Standortdatenbankcomputer erstellen. Auf der Seite **Gruppenmitglieder auswählen** des Assistenten zum Erstellen einer neuen Schutzgruppe wählen Sie den SMS-Writer-Dienst aus der Datenquellenliste und anschließend die Standortdatenbank als geeignetes Mitglied aus. Weitere Informationen zur Verwendung DPM zur Sicherung Ihrer Standortdatenbank finden Sie in der [Data Protection Manager-Dokumentationsbibliothek](http://go.microsoft.com/fwlink/?LinkId=272772) auf der TechNet-Webseite.  
 
 > [!IMPORTANT]  
@@ -152,7 +153,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
  Nachdem Sie die Standortdatenbank wiederhergestellt haben, befolgen Sie die Schritte im Setup, um den Standort wiederherzustellen. Wählen Sie die Wiederherstellungsoption **Manuell wiederhergestellte Standortdatenbank verwenden** aus, um die Standortdatenbank zu verwenden, die Sie mithilfe von Data Protection Manager wiederhergestellt haben.  
 
-###  <a name="a-namebkmkarchivingbackupsnapshota-archiving-the-backup-snapshot"></a><a name="BKMK_ArchivingBackupSnapshot"></a> Archivieren der Sicherungsmomentaufnahme  
+###  <a name="BKMK_ArchivingBackupSnapshot"></a> Archivieren der Sicherungsmomentaufnahme  
  Bei der ersten Ausführung des Wartungstasks „Standortserver sichern“ wird eine Sicherungsmomentaufnahme erstellt, mit der Sie Ihren Standortserver nach einem Fehler wiederherstellen können. Wenn der Sicherungstask im Verlauf späterer Zyklen erneut ausgeführt wird, erstellt er jeweils einen neuen Sicherungssnapshot, mit dem der vorherige Snapshot überschrieben wird. Für einen Standort gibt es daher immer nur eine Sicherungsmomentaufnahme, und es ist nicht möglich, eine frühere Sicherungsmomentaufnahme abzurufen.  
 
  Aus den folgenden Gründen wird empfohlen, mehrere Archive der Sicherungsmomentaufnahme aufzubewahren:  
@@ -163,7 +164,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
 -   Für den Standort gibt es möglicherweise keine Sicherungsmomentaufnahme, beispielsweise weil beim Wartungstask „Standortserver sichern“ ein Fehler aufgetreten ist. Da der Sicherungstask den vorherigen Sicherungssnapshot entfernt, bevor er mit dem Sichern der aktuellen Daten beginnt, gibt es zeitweise keinen gültigen Sicherungssnapshot.  
 
-###  <a name="a-namebkmkusingafterbackupa-using-the-afterbackupbat-file"></a><a name="BKMK_UsingAfterBackup"></a> Verwenden der Datei „AfterBackup.bat“  
+###  <a name="BKMK_UsingAfterBackup"></a> Verwenden der Datei „AfterBackup.bat“  
  Nach der erfolgreichen Sicherung des Standorts wird vom Task „Standortserver sichern“ automatisch versucht, eine Datei namens AfterBackup.bat auszuführen. Sie müssen die Datei „AfterBackup.bat“ manuell in „&lt;*Configuration Manager-Installationsordner*>\Inboxes\Smsbkup“ erstellen. Wenn eine Datei „AfterBackup.bat“ vorhanden ist und sich im richtigen Ordner befindet, wird sie nach Abschluss des Sicherungstasks automatisch ausgeführt. Mit der Datei AfterBackup.bat können Sie die Sicherungsmomentaufnahme am Ende jedes Sicherungsvorgangs archivieren und automatisch andere nach der Sicherung erforderliche Tasks ausführen, die nicht zum Wartungstask „Standortserver sichern“ gehören. Mit der Datei AfterBackup.bat werden die Archivierungs- und Sicherungsvorgänge integriert. Dadurch wird sichergestellt, dass jede neue Sicherungsmomentaufnahme archiviert wird. Wenn die Datei AfterBackup.bat nicht vorhanden ist, wird sie vom Sicherungstask übersprungen. Dies hat keine Auswirkungen auf den Sicherungsvorgang. Prüfen Sie im Arbeitsbereich **Überwachung** im Knoten **Komponentenstatus** die Statusmeldungen für SMS_SITE_BACKUP. Daran erkennen Sie, ob die Datei "AfterBackup.bat" vom Standortsicherungstask erfolgreich ausgeführt wurde. Wenn die Befehlsdatei „AfterBackup.bat“ erfolgreich gestartet wurde, wird die Meldungs-ID 5040 angezeigt.  
 
 > [!TIP]  
@@ -171,7 +172,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
  Die Datei AfterBackup.bat ist zwar zum Archivieren von Sicherungsmomentaufnahmen vorgesehen, Sie aber können auch eine Datei AfterBackup.bat erstellen, um am Ende jedes Sicherungsvorgangs zusätzliche Tasks auszuführen.  
 
-###  <a name="a-namebkmksupplementalbackupa-supplemental-backup-tasks"></a><a name="BKMK_SupplementalBackup"></a> Zusätzliche Sicherungstasks  
+###  <a name="BKMK_SupplementalBackup"></a> Zusätzliche Sicherungstasks  
  Mit dem Wartungstask „Standortserver sichern“ wird eine Sicherungsmomentaufnahme für die Standortserverdateien und die Standortdatenbank erstellt. Beim Erstellen einer Sicherungsstrategie müssen Sie aber noch andere Elemente berücksichtigen, die nicht gesichert werden. In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Sicherungsstrategie vervollständigen.  
 
 #### <a name="back-up-custom-reporting-services-reports"></a>Sichern benutzerdefinierter Reporting Services-Berichte  
@@ -241,12 +242,12 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 > [!NOTE]  
 >  Nachdem Sie eine Standortdatenbank wiederhergestellt haben, die für Datenbankreplikate konfiguriert war, müssen Sie vor der Verwendung der Datenbankreplikate jedes Replikat neu konfigurieren, indem Sie die Veröffentlichungen und die Abonnements neu erstellen.  
 
-###  <a name="a-namebkmkdeterminerecoveryoptionsa-determine-your-recovery-options"></a><a name="BKMK_DetermineRecoveryOptions"></a> Bestimmen der Wiederherstellungsoptionen  
+###  <a name="BKMK_DetermineRecoveryOptions"></a> Bestimmen der Wiederherstellungsoptionen  
  Bei der Wiederherstellung des primären Standortservers und des Standorts der zentralen Verwaltung von Configuration Manager müssen Sie zwei Hauptbereiche berücksichtigen: den Standortserver und die Standortdatenbank. In den folgenden Abschnitten wird erläutert, wie Sie die Optionen bestimmen, die Sie für Ihr Wiederherstellungsszenario auswählen müssen.  
 
 > [!NOTE]  
 
-####  <a name="a-namebkmksiteserverrecoveryoptionsa-site-server-recovery-options"></a><a name="BKMK_SiteServerRecoveryOptions"></a> Wiederherstellungsoptionen für den Standortserver  
+####  <a name="BKMK_SiteServerRecoveryOptions"></a> Wiederherstellungsoptionen für den Standortserver  
  Sie müssen das Setup aus einer Kopie des Ordners „CD.Latest“ starten, die Sie außerhalb des Configuration Manager-Installationsordners erstellen. Dann wählen Sie die Option **Standort wiederherstellen** aus. Beim Ausführen von Setup stehen für den ausgefallenen Standortserver die folgenden Wiederherstellungsoptionen zur Verfügung:  
 
 -   **Den Standortserver mit einem vorhandenen Sicherungssatz wiederherstellen**: Verwenden Sie diese Option, wenn Sie über eine Sicherung des Configuration Manager-Standortservers verfügen, die vor dem Standortausfall im Rahmen des Wartungstasks **Standortserver sichern** auf dem Standortserver erstellt wurde. Der Standort wird erneut installiert, und die Standardeinstellungen werden anhand des gesicherten Standorts konfiguriert.  
@@ -256,7 +257,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 > [!NOTE]  
 >  Wenn beim Setup ein vorhandener Configuration Manager-Standort auf dem Server erkannt wird, können Sie eine Standortwiederherstellung starten. Allerdings sind die Wiederherstellungsoptionen für den Standortserver beschränkt. Wenn Sie Setup beispielsweise auf einem vorhandenen Standortserver ausführen und die Wiederherstellung auswählen, können Sie zwar den Standortdatenbankserver wiederherstellen, aber die Option zum Wiederherstellen des Standortservers ist deaktiviert.  
 
-####  <a name="a-namebkmksitedatabaserecoveryoptiona-site-database-recovery-options"></a><a name="BKMK_SiteDatabaseRecoveryOption"></a> Wiederherstellungsoptionen für die Standortdatenbank  
+####  <a name="BKMK_SiteDatabaseRecoveryOption"></a> Wiederherstellungsoptionen für die Standortdatenbank  
  Beim Ausführen von Setup stehen für die Standortdatenbank die folgenden Wiederherstellungsoptionen zur Verfügung:  
 
 -   **Die Standortdatenbank mit dem Sicherungssatz wiederherstellen**: Verwenden Sie diese Option, wenn Sie über eine Sicherung der Configuration Manager-Standortdatenbank verfügen, die vor dem Standortdatenbankfehler bei der Ausführung des Wartungstasks **Standortserver sichern** auf dem Standort erstellt wurde. Wenn Sie über eine Hierarchie verfügen, werden die Änderungen, die Sie seit der letzten Sicherung der Standortdatenbank an der Standortdatenbank vorgenommen haben, für einen primären Standort vom Standort der zentralen Verwaltung abgerufen bzw. für einen Standort der zentralen Verwaltung von einem primären Referenzstandort. Wenn Sie die Standortdatenbank für einen eigenständigen primären Standort wiederherstellen, gehen die Standortänderungen seit der letzten Sicherung verloren.  
@@ -275,14 +276,14 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
 -   **Datenbankwiederherstellung überspringen**: Verwenden Sie diese Option, wenn es auf dem Configuration Manager-Standortdatenbankserver keine Datenverluste gab. Diese Option gilt nur, wenn die Standortdatenbank sich auf einem anderen Computer als der Standortserver, den Sie wiederherstellen, befindet.  
 
-####  <a name="a-namebkmksqlretentiona-sql-server-change-tracking-retention-period"></a><a name="bkmk_SQLretention"></a> Beibehaltungsdauer der Änderungsnachverfolgung für SQL Server  
+####  <a name="bkmk_SQLretention"></a> Beibehaltungsdauer der Änderungsnachverfolgung für SQL Server  
  Die Änderungsnachverfolgung ist für die Standortdatenbank in SQL Server aktiviert. Bei der Änderungsnachverfolgung können von Configuration Manager Informationen über die Änderungen abgefragt werden, die seit einem früheren Zeitpunkt an den Datenbanktabellen vorgenommen wurden. Mit der Beibehaltungsdauer wird angegeben, wie lange Informationen zur Änderungsnachverfolgung beibehalten werden. Für die Standortdatenbank ist standardmäßig eine Beibehaltungsdauer von 5 Tagen konfiguriert. Beim Wiederherstellen einer Standortdatenbank richtet sich der Wiederherstellungsprozess danach, ob die Sicherung innerhalb oder außerhalb der Beibehaltungsdauer liegt. Wenn beispielsweise ein Standortdatenbankserver ausfällt und die letzte Sicherung vor 7 Tagen erstellt wurde, liegt die Sicherung außerhalb der Beibehaltungsdauer.
 
  Weitere Informationen zur SQL Server-Änderungsnachverfolgung finden Sie in den folgenden Blogs des SQL Server-Teams: [Change Tracking Cleanup - part 1 (Cleanup für die Änderungsnachverfolgung - Teil 1)](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-1) und [Change Tracking Cleanup - part 2 (Cleanup für die Änderungsnachverfolgung - Teil 2)](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-2).
 
 
 
-####  <a name="a-namebkmkreinita-process-to-reinitialize-site-or-global-data"></a><a name="bkmk_reinit"></a> Prozess zum erneuten Initialisieren der Standortdaten oder der globalen Daten  
+####  <a name="bkmk_reinit"></a> Prozess zum erneuten Initialisieren der Standortdaten oder der globalen Daten  
  Beim erneuten Initialisieren der Standortdaten oder der globalen Daten werden in der Standortdatenbank vorhandene Daten durch Daten aus einer anderen Standortdatenbank ersetzt. Wenn beispielsweise an Standort ABC Daten von Standort XYZ erneut initialisiert werden, werden die folgenden Schritte ausgeführt:  
 
 -   Die Daten werden von Standort XYZ zu Standort ABC kopiert.  
@@ -297,7 +298,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 ##### <a name="example-scenario-2"></a>Beispielszenario 2  
  **Die Standortdaten von einem primären Standort werden am Standort der zentralen Verwaltung erneut initialisiert**: Bei der Wiederherstellung werden die vorhandenen Standortdaten für diesen primären Standort aus der Datenbank des Standorts der zentralen Verwaltung entfernt und durch die am primären Standort kopierten Standortdaten ersetzt. Die Standortdaten für andere primäre Standorte bleiben unverändert.  
 
-####  <a name="a-namebkmksitedbrecoveryscenariosa-site-database-recovery-scenarios"></a><a name="BKMK_SiteDBRecoveryScenarios"></a> Wiederherstellungsszenarien für die Standortdatenbank  
+####  <a name="BKMK_SiteDBRecoveryScenarios"></a> Wiederherstellungsszenarien für die Standortdatenbank  
  Nach der Wiederherstellung einer Standortdatenbank anhand einer Sicherung wird von Configuration Manager versucht, die seit der letzten Datenbanksicherung an den Standortdaten und globalen Daten vorgenommenen Änderungen wiederherzustellen. Im Folgenden sind die Aktionen aufgeführt, die nach der Wiederherstellung einer Standortdatenbank anhand einer Sicherung von Configuration Manager gestartet werden.  
 
  **Der wiederhergestellte Standort ist ein Standort der zentralen Verwaltung:**  
@@ -362,7 +363,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 >   
 >  **ALTER QUEUE [dbo].[ConfigMgrDRSSiteQueue] WITH STATUS = ON**  
 
-###  <a name="a-namebkmkunattendedsiterecoverykeysa-unattended-site-recovery-script-file-keys"></a><a name="BKMK_UnattendedSiteRecoveryKeys"></a> Skriptdateischlüssel für unbeaufsichtigte Standortwiederherstellung  
+###  <a name="BKMK_UnattendedSiteRecoveryKeys"></a> Skriptdateischlüssel für unbeaufsichtigte Standortwiederherstellung  
  Wenn Sie eine unbeaufsichtigte Wiederherstellung eines Standorts der zentralen Verwaltung oder eines primären Standorts für Configuration Manager ausführen möchten, können Sie ein Skript für eine unbeaufsichtigte Installation erstellen und das Setup mit der Befehlsoption „/script“ ausführen. Mit dem Skript werden die gleichen Informationen bereitgestellt, die andernfalls über den Setup-Assistenten eingegeben werden müssten. Das Skript enthält jedoch keine Standardeinstellungen. Alle Werte müssen für die Setup-Schlüssel angegeben werden, die für den jeweils verwendeten Wiederherstellungstyp gelten.  
 
  Sie können das Configuration Manager-Setup unbeaufsichtigt ausführen, indem Sie eine Initialisierungsdatei mit der Setup-Befehlszeilenoption „/script“ verwenden. Die unbeaufsichtigte Installation wird bei der Wiederherstellung eines Standorts der zentralen Verwaltung und eines primären Standorts für Configuration Manager unterstützt. Damit Sie die Setup-Befehlszeilenoption /script verwenden können, müssen Sie eine Initialisierungsdatei erstellen und den Namen der Initialisierungsdatei nach der Setup-Befehlszeilenoption /script angeben. Der Name der Datei ist unerheblich. Wichtig ist, dass er die Dateinamenerweiterung „.ini“ aufweist. Wenn Sie in der Befehlszeile auf die Setup-Initialisierungsdatei verweisen, müssen Sie den vollständigen Dateipfad angeben. Wenn sich beispielsweise die Initialisierungsdatei mit dem Namen setup.ini im Ordner C:\setup befindet, muss die Befehlszeile wie folgt lauten:  
@@ -814,7 +815,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Details:** Über diesen Schlüssel wird der maximale Timeoutwert (in Minuten) für die Verbindung eines primären Standorts mit dem Standort der zentralen Verwaltung angegeben. Wenn beispielsweise beim Herstellen der Verbindung mit dem Standort der zentralen Verwaltung ein Fehler auftritt, wird der Verbindungsversuch auf dem primären Standort basierend auf dem Wert für CASRetryInterval solange wiederholt, bis der für WaitForCASTimeout angegebene Zeitraum abgelaufen ist. Sie können einen Wert von 0 bis 100 angeben.  
 
-###  <a name="a-namebkmkpostrecoverya-post-recovery-tasks"></a><a name="BKMK_PostRecovery"></a> Aufgaben nach der Wiederherstellung  
+###  <a name="BKMK_PostRecovery"></a> Aufgaben nach der Wiederherstellung  
  Nach der Wiederherstellung Ihres Standorts müssen Sie ggf. einige zusätzliche Tasks ausführen, bevor die Standortwiederherstellung abgeschlossen ist. In den folgenden Abschnitten erfahren Sie, wie Sie Ihre Standortwiederherstellung abschließen.  
 
 #### <a name="re-enter-user-account-passwords"></a>Erneutes Eingeben der Kennwörter von Benutzerkonten  
@@ -844,7 +845,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
  Nach der Wiederherstellung eines Standortservers müssen Sie die Windows-Sideload-Schlüssel für den Standort erneut eingeben, weil diese im Rahmen der Standortwiederherstellung zurückgesetzt werden. Nach dem erneuten Eingeben der Sideload-Schlüssel wird der Zähler in der Spalte **Verwendete Aktivierungen** für Windows-Sideload-Schlüssel in der Configuration Manager-Konsole zurückgesetzt. Angenommen, vor dem Standortausfall hätte der Zähler **Aktivierungen insgesamt** den Wert **100** und **Verwendete Aktivierungen** den Wert **90** für die Anzahl der von Geräten verwendeten Schlüssel gehabt. Nach der Standortwiederherstellung zeigt die Spalte **Aktivierungen insgesamt** weiterhin **100**an, der Wert in **Verwendete Aktivierungen** wurde jedoch fälschlich auf **0**zurückgesetzt. Wenn nun jedoch Sideload-Schlüssel von zehn weiteren Geräten verwendet werden, sind nachfolgend keine Sideload-Schlüssel mehr übrig, und für das nächste Gerät wird kein Sideload-Schlüssel mehr zur Anwendung verfügbar sein.  
 
 #### <a name="recreate-the-microsoft-intune-subscription"></a>Neuerstellen des Microsoft Intune-Abonnements  
- Wenn Sie einen Configuration Manager-Standortserver wiederherstellen, nachdem ein neues Image auf den Standortservercomputer aufgespielt wurde, wird das Microsoft Intune-Abonnement nicht wiederhergestellt. Sie müssen Ihr Abonnement nach dem Wiederherstellen des Standorts erneut verbinden.  Erstellen Sie keine neue APN-Anforderung, sondern laden Sie stattdessen die aktuell gültige PEM-Datei hoch, die bei der letzten Konfiguration oder Erneuerung der iOS-Verwaltung hochgeladen wurde. Weitere Informationen finden Sie unter [Configuring the Microsoft Intune subscription](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription).  
+ Wenn Sie einen Configuration Manager-Standortserver wiederherstellen, nachdem ein neues Image auf den Standortservercomputer aufgespielt wurde, wird das Microsoft Intune-Abonnement nicht wiederhergestellt. Sie müssen Ihr Abonnement nach dem Wiederherstellen des Standorts erneut verbinden.  Erstellen Sie keine neue APN-Anforderung, sondern laden Sie stattdessen die aktuell gültige PEM-Datei hoch, die bei der letzten Konfiguration oder Erneuerung der iOS-Verwaltung hochgeladen wurde. Weitere Informationen finden Sie unter [Configuring the Microsoft Intune subscription](/sccm/mdm/deploy-use/configure-intune-subscription).  
 
 #### <a name="configure-ssl-for-site-system-roles-that-use-iis"></a>Konfigurieren von SSL für Standortsystemrollen, die IIS verwenden  
  Wenn Sie Standortserver wiederherstellen, auf denen IIS ausgeführt wird und die vor dem Auftreten des Fehlers für HTTPS konfiguriert wurden, müssen Sie IIS für die Verwendung des Webserverzertifikats umkonfigurieren.  
@@ -888,7 +889,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 #### <a name="update-certificates-used-for-cloud-based-distribution-points"></a>Aktualisieren von Zertifikaten für cloudbasierte Verteilungspunkte  
  Für Configuration Manager ist ein Verwaltungszertifikat erforderlich, das für die Kommunikation zwischen Standortserver und cloudbasiertem Verteilungspunkt verwendet wird. Nach einer Standortwiederherstellung müssen Sie die Zertifikate für cloudbasierte Verteilungspunkte aktualisieren.  
 
-####  <a name="a-namebkmkrecoversecondarysitea-recover-a-secondary-site"></a><a name="BKMK_RecoverSecondarySite"></a> Wiederherstellen eines sekundären Standorts  
+####  <a name="BKMK_RecoverSecondarySite"></a> Wiederherstellen eines sekundären Standorts  
  Die Sicherung der Datenbank an einem sekundären Standort wird von Configuration Manager nicht unterstützt, während die Wiederherstellung durch Neuinstallation des sekundären Standorts unterstützt wird. Bei einem Fehler auf einem sekundären Standort von Configuration Manager ist eine Wiederherstellung des sekundären Standorts erforderlich. Sie können einen sekundären Standort wiederherstellen, indem Sie in der Configuration Manager-Konsole unter dem Knoten **Standorte** die Aktion **Sekundären Standort wiederherstellen** verwenden. Im Gegensatz zur Wiederherstellung für einen Standort der zentralen Verwaltung oder einen primären Standort verwendet die Wiederherstellung für einen sekundären Standort keine Sicherungsdatei und installiert stattdessen die sekundären Standortdateien auf dem fehlerhaften Computer des sekundären Standorts neu. Anschließend werden die Daten des sekundären Standorts mit Daten vom übergeordneten primären Standort neu initialisiert. Während des Wiederherstellungsprozesses wird von Configuration Manager überprüft, ob die Inhaltsbibliothek auf dem Computer des sekundären Standorts vorhanden und der entsprechende Inhalt verfügbar ist. Der sekundäre Standort verwendet die vorhandene Inhaltsbibliothek, wenn sie den entsprechenden Inhalt enthält. Andernfalls muss zum Wiederherstellen der Inhaltsbibliothek eines wiederhergestellten sekundären Standorts der Inhalt für diesen wiederhergestellten Standort verteilt oder vorab bereitgestellt werden. Bei einem Verteilungspunkt, der sich nicht am sekundären Standort befindet, müssen Sie während der Wiederherstellung des sekundären Standorts den Verteilungspunkt nicht neu installieren. Nach der Wiederherstellung des sekundären Standorts wird der Standort automatisch mit dem Verteilungspunkt synchronisiert.  
 
  Sie können den Status der Wiederherstellung des sekundären Standorts überprüfen, indem Sie in der Configuration Manager-Konsole unter dem Knoten **Standorte** die Aktion **Installationsstatus anzeigen** verwenden.  
@@ -899,7 +900,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 > [!IMPORTANT]  
 >  Während der Wiederherstellung eines sekundären Standorts wird SQL Server Express nicht von Configuration Manager installiert, wenn dies nicht auf dem Computer installiert ist. Daher müssen Sie vor der Wiederherstellung des sekundären Standorts SQL Server Express oder SQL Server manuell installieren. Sie müssen dieselbe Version und Instanz von SQL Server verwenden, die Sie vor Auftreten des Fehlers für die sekundäre Standortdatenbank verwendet haben.  
 
-##  <a name="a-namebkmksmswriterservicea-sms-writer-service"></a><a name="BKMK_SMSWriterService"></a> SMS-Writer-Dienst  
+##  <a name="BKMK_SMSWriterService"></a> SMS-Writer-Dienst  
  Während des Sicherungsprozesses findet zwischen dem SMS-Writer-Dienst und dem Volumeschattenkopie-Dienst (Volume Shadow Copy Service, VSS) eine Interaktion statt. Der SMS-Writer-Dienst muss ausgeführt werden, damit die Configuration Manager-Standortsicherung erfolgreich abgeschlossen werden kann.  
 
 ### <a name="purpose"></a>Zweck  
@@ -915,9 +916,4 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
 ### <a name="volume-shadow-copy-service"></a>Volumeschattenkopie-Dienst  
  Der Volumeschattenkopie-Dienst (Volume Shadow Copy Service, VSS) ist ein Satz COM APIs, mit denen ein Framework implementiert wird. Dank dieses Frameworks können Volumesicherungen ausgeführt werden, während von Anwendungen auf einem System weiterhin auf die Volumes geschrieben wird. Mit dem VSS wird eine konsistente Schnittstelle bereitgestellt, mit der Benutzeranwendungen, die zum Ausführen eines Updates für Daten auf einem Datenträger dienen (SMS-Writer-Dienst), und Benutzeranwendungen, die zur Anwendungssicherung verwendet werden (Sicherungs-Manager-Dienst), koordiniert werden können. Weitere Informationen zum VSS finden Sie im Thema [Volume Shadow Copy Service (Volumeschattenkopie-Dienst)](http://go.microsoft.com/fwlink/p/?LinkId=241968) im Windows Server TechCenter.  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

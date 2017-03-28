@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 9e170271e1b690289085e80eeff453219bc24010
-ms.openlocfilehash: 9a61162cb992c1947a4ad52b51710740a1b6c4c6
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 83550fbf0ef1f9adb0bb2c51a4f3c26a7500d352
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -69,7 +69,7 @@ An jedem System Center Configuration Manager-Standort können Sie Standortkompon
     -   Zu den angegebenen vollständig qualifizierte Domänennamen (FQDNs) für die Verwaltungspunkte in Configuration Manager müssen Hosteinträge (A- oder AAA-Datensätze) in DNS vorhanden sein.  
 
     > [!WARNING]  
-    >  Damit von Clients in DNS veröffentlichte Verwaltungspunkte gefunden werden können, müssen Sie die Clients einem bestimmten Standort zuweisen, anstatt die automatische Standortzuweisung zu verwenden. Richten Sie diese Clients so aus, dass sie den Standortcode mit dem Domänensuffix ihres Verwaltungspunkts verwenden. Weitere Informationen finden Sie im Abschnitt [Suchen von Verwaltungspunkten](../../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_LocatingMPs) unter [Zuweisen von Clients zu einem Standort in System Center Configuration Manager](../../../../core/clients/deploy/assign-clients-to-a-site.md).  
+    >  Damit von Clients in DNS veröffentlichte Verwaltungspunkte gefunden werden können, müssen Sie die Clients einem bestimmten Standort zuweisen, anstatt die automatische Standortzuweisung zu verwenden. Richten Sie diese Clients so aus, dass sie den Standortcode mit dem Domänensuffix ihres Verwaltungspunkts verwenden. Weitere Informationen finden Sie im Abschnitt [Suchen von Verwaltungspunkten](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points) unter [Zuweisen von Clients zu einem Standort in System Center Configuration Manager](/sccm/core/clients/deploy/assign-clients-to-a-site).  
 
      Wenn es für Configuration Manager-Clients nicht möglich ist, Verwaltungspunkte mithilfe von Active Directory-Domänendiensten oder DNS im Intranet zu finden, wird [WINS](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#bkmk_wins) verwendet. Der erste für einen Standort installierte Verwaltungspunkt wird automatisch in WINS veröffentlicht, wenn er für das Zulassen von HTTP-Clientverbindungen im Intranet eingerichtet wird.  
 
