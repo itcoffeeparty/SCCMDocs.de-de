@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: a93ea730c39cce9dc46036f5aa6ece4a62679d0f
 ms.openlocfilehash: 0d16d362b798c194645f987088ba8a95a7be3f19
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -28,14 +29,14 @@ ms.openlocfilehash: 0d16d362b798c194645f987088ba8a95a7be3f19
 Jeder System Center Configuration Manager-Standort, den Sie installieren, umfasst einen Standortserver, bei dem es sich um einen **Standortsystemserver** handelt. Der Standort kann auch weitere Standortsystemserver auf Computern umfassen, die sich geografisch getrennt vom Standortserver befinden. Die Standortsystemserver (der Standortserver oder ein Remotestandortsystemserver) unterstützen **Standortsystemrollen**.
 
 
-##  <a name="a-namebkmksiteserversa-site-system-servers"></a><a name="bkmk_siteservers"></a> Standortsystemserver  
+##  <a name="bkmk_siteservers"></a> Standortsystemserver  
  Wenn Sie eine Standortsystemrolle auf einem Computer installieren, wird dieser Computer zu einem Standortsystemserver. Sie können an jedem Standortsystem mehrere zusätzliche Standortsystemserver installieren. Sie haben auch die Möglichkeit, keine weiteren Standortsystemserver zu installieren und alle Standortsystemrollen direkt auf dem Standortservercomputer auszuführen. Jeder Standortsystemserver unterstützt eine oder mehrere Standortsystemrollen. Zusätzliche Server können die Erweiterung der Funktionalität und Kapazität eines Standorts durch Aufteilen der CPU-Verarbeitungslast unterstützen, die durch Standortsystemrollen auf einem Server entsteht.  
 
  Wenn Sie in Erwägung ziehen, einen Standortsystemserver hinzuzufügen, stellen Sie sicher, dass der Server die Voraussetzungen für die beabsichtigte Verwendung erfüllt. Es wird zudem empfohlen, ihn an einer Netzwerkadresse hinzuzufügen, die über genügend Bandbreite zur Kommunikation mit den erwarteten Endpunkten verfügt. Zu diesen Endpunkten gehören der Standortserver, Domänenressourcen, cloudbasierte Speicherorte, Standortsystemserver sowie Clients.  
 
  Weitere Informationen zum Konfigurieren eines Standortsystemservers mit einem Proxy zur Verwendung durch die Standortsystemrollen finden Sie unter [Standortsystemrollen, die einen Proxyserver verwenden können](#bkmk_proxy).  
 
-##  <a name="a-namebkmkplanrolesa-site-system-roles"></a><a name="bkmk_planroles"></a> Standortsystemrolle  
+##  <a name="bkmk_planroles"></a> Standortsystemrolle  
  Standortsystemrollen werden auf einem Computer installiert, um zusätzliche Funktionen am Standort bereitzustellen. Beispiele:  
 
 -   Zusätzliche Verwaltungspunkte, damit ein Standort mehr Geräte verwalten kann (bis die unterstützte Kapazität des Standorts erreicht ist).  
@@ -102,7 +103,7 @@ Nach der Installation eines Standorts, können Sie die Adresse einiger Standorts
 
 -   **Reporting Services-Punkt** Diese in SQL Server Reporting Services integrierte Standortsystemrolle wird zum Erstellen und Verwalten von Berichten für Configuration Manager verwendet. Diese Rolle wird an primären Standorten und dem Standort der zentralen Verwaltung unterstützt, und Sie können mehrere Instanzen dieser Rolle an einem unterstützten Standort installieren. Weitere Informationen finden Sie unter [Planen der Berichterstellung in System Center Configuration Manager](../../../core/servers/manage/planning-for-reporting.md).  
 
--   **Dienstverbindungspunkt** Über diese Standortsystemrolle werden mobile Geräte mit Microsoft Intune und lokalem MDM verwaltet. Diese Rolle lädt auch Nutzungsdaten von Ihrem Standort hoch und ist erforderlich, um Updates für Configuration Manager durchzuführen, die in der Configuration Manager verfügbar sind. Eine Hierarchie unterstützt nur eine einzige Instanz dieser Rolle und diese muss sich am Standort der obersten Ebene Ihrer Hierarchie befinden (einem Standort der zentralen Verwaltung oder dem eigenständigen primären Standort). Wenn Sie einen eigenständigen primären Standort in eine größere Hierarchie erweitern, müssen Sie diese Rolle am primären Standort deinstallieren und können sie dann am Standort der zentralen Verwaltung installieren. Weitere Informationen finden Sie unter [About the service connection point in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md).  
+-   **Dienstverbindungspunkt** Über diese Standortsystemrolle werden mobile Geräte mit Microsoft Intune und lokalem MDM verwaltet. Diese Rolle lädt auch Nutzungsdaten von Ihrem Standort hoch und ist erforderlich, um Updates für Configuration Manager durchzuführen, die in der Configuration Manager verfügbar sind. Eine Hierarchie unterstützt nur eine einzige Instanz dieser Rolle und diese muss sich am Standort der obersten Ebene Ihrer Hierarchie befinden (einem Standort der zentralen Verwaltung oder dem eigenständigen primären Standort). Wenn Sie einen eigenständigen primären Standort in eine größere Hierarchie erweitern, müssen Sie diese Rolle am primären Standort deinstallieren und können sie dann am Standort der zentralen Verwaltung installieren. Weitere Informationen finden Sie unter [Informationen zum Dienstverbindungspunkt in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md).  
 
 -   **Softwareupdatepunkt** Diese Standortsystemrolle ist in Windows Server Update Services (WSUS) integriert, um Softwareupdates für Configuration Manager-Clients bereitzustellen. Diese Rolle wird an allen Standorten unterstützt:  
 
@@ -118,7 +119,7 @@ Nach der Installation eines Standorts, können Sie die Adresse einiger Standorts
 
 -   **Systemintegritätsprüfungspunkt** Obwohl diese Standortsystemrolle in der Configuration Manager-Konsole weiterhin angezeigt wird, wird sie nicht mehr verwendet.  
 
-###  <a name="a-namebkmkproxya-site-system-roles-that-can-use-a-proxy-server"></a><a name="bkmk_proxy"></a> Standortsystemrollen, die einen Proxyserver verwenden können  
+###  <a name="bkmk_proxy"></a> Standortsystemrollen, die einen Proxyserver verwenden können  
  Einige Configuration Manager-Standortsystemrollen erfordern eine Verbindung mit dem Internet und verwenden einen Proxyserver, wenn der Standortsystemserver, der die Rolle hostet, für einen Proxyserver konfiguriert ist. Normalerweise wird diese Verbindung im **Systemkontext** des Computers hergestellt, auf dem die Standortsystemrolle installiert ist. Für die Verbindung kann für die typischen Benutzerkonten keine Proxykonfiguration verwendet werden. Wenn für die Herstellung einer Internetverbindung ein Proxyserver erforderlich ist, müssen Sie den Computer für die Verwendung eines Proxyservers einrichten:  
 
 -   Sie können während der Installation einer Standortsystemrolle einen Proxyserver einrichten.  
@@ -152,9 +153,4 @@ Nachfolgend finden Sie die Standortsystemrollen, die einen Proxyserver verwenden
  Weitere Informationen zu Proxyservern für Softwareupdatepunkte finden Sie im Abschnitt zu Proxyservereinstellungen im Thema [Softwareupdatepunkt installieren](../../../sum/get-started/install-a-software-update-point.md).  
 
 -   **Dienstverbindungspunkt** Wenn diese Standortsystemrolle nicht für die Offline-, sondern für die Onlineverwendung eingerichtet ist, stellt sie eine Verbindung zu Microsoft Intune und dem Microsoft-Clouddienst her.  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
