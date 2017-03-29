@@ -73,7 +73,7 @@
 
 ##   [Diagnose- und Verwendungsdaten](plan-design/diagnostics/diagnostics-and-usage-data.md)
 ###  [Nutzung von Diagnose- und Verwendungsdaten](plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)
-###  [Diagnosedaten für 1702](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1702.md) 
+###  [Diagnosedaten für 1702](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1702.md)
 ###  [Diagnosedaten für 1610](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
 ###  [Diagnosedaten für 1606](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
 <!--
