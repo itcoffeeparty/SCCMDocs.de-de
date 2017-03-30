@@ -16,9 +16,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
-ms.openlocfilehash: 0988899047a0e3464e15055fceb5924ee20b0b88
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: b63367dbaacde60a364e9da6afca65383b635840
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -117,7 +117,8 @@ Jeder Client-Installationspaket enthält die erforderlichen Dateien zum Abschlie
 
      (Optional) Gibt an, über den FQDN der Fallbackstatuspunkt-Server, die der Client verwendet, um Status-Nachrichten zu senden.  
 
-     Weitere Informationen zum Fallbackstatuspunkt finden Sie unter [Bestimmen, ob ein Fallbackstatuspunkt erforderlich ist](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point).  
+     Weitere Informationen zum Fallbackstatuspunkt finden Sie unter [Determine Whether You Require a Fallback Status Point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point) .  
+
 
 -   **-dir &lt;Verzeichnis\>**  
 
@@ -143,7 +144,7 @@ Jeder Client-Installationspaket enthält die erforderlichen Dateien zum Abschlie
 
 -   **-UsePKICert &lt;Parameter\>**  
 
-     (Optional) Gibt den vollständigen Pfad und Namen mit einem x.&509;-PKI-Zertifikat im Format Public Key Certificate Standard (PKCS&#12;). Dieses Zertifikat wird zur Client-Authentifizierung verwendet. Wenn während der Installation kein Zertifikat angegeben wird und Sie ein Zertifikat hinzufügen oder ändern müssen, verwenden Sie das Hilfsprogramm **certutil** . Weitere Informationen zu „certutil“ finden Sie unter [How to manage certificates on the client for Linux and UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) .  
+     (Optional) Gibt den vollständigen Pfad und Namen mit einem x. 509-PKI-Zertifikat im Format Public Key Certificate Standard (PKCS #12). Dieses Zertifikat wird zur Client-Authentifizierung verwendet. Wenn während der Installation kein Zertifikat angegeben wird und Sie ein Zertifikat hinzufügen oder ändern müssen, verwenden Sie das Hilfsprogramm **certutil** . Weitere Informationen zu „certutil“ finden Sie unter [How to manage certificates on the client for Linux and UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) .  
 
      Bei Verwendung von **-UsePKICert**müssen Sie außerdem den Befehlszeilenparameter **-certpw** verwenden, um das der PKCS#12-Datei zugeordnete Kennwort anzugeben.  
 
@@ -158,7 +159,7 @@ Jeder Client-Installationspaket enthält die erforderlichen Dateien zum Abschlie
 
 -   **-certpw &lt;Parameter\>**  
 
-     (Optional) Gibt das Kennwort mit der angegebenen PKCS&#12;-Datei mithilfe der der **- UsePKICert** Eigenschaft.  
+     (Optional) Gibt das Kennwort mit der angegebenen PKCS #12-Datei mithilfe der der **- UsePKICert** Eigenschaft.  
 
      Beispiel: UsePKICert &lt;Vollständiger Pfad- und Dateiname\> -certpw &lt;Kennwort\>  
 

@@ -16,9 +16,9 @@ author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
-ms.openlocfilehash: c27d9129b261b166ad7b21aff468d47eba116d67
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: 3b1451edaed69a972551bd060293839aa11ec8b2
+ms.openlocfilehash: 20be68496099a67ad2d475067f073da2cef16c86
+ms.lasthandoff: 03/28/2017
 
 
 ---
@@ -72,7 +72,7 @@ Sie können die Geschäftsbedingungen von System Center Configuration Manager f�
 
 ## <a name="to-monitor-terms-and-conditions"></a>So überwachen Sie die Geschäftsbedingungen  
 
-1.  Ab Version 1602 können Sie Bereitstellungen von Geschäftsbedingungen in der Configuration Manager-Konsole überwachen. Wechseln Sie in der Configuration Manager-Konsole zu **Überwachung** > **Übersicht** > **Bereitstellungen**.  
+1.  Sie können Bereitstellungen von Geschäftsbedingungen in der Configuration Manager-Konsole überwachen. Wechseln Sie in der Configuration Manager-Konsole zu **Überwachung** > **Übersicht** > **Bereitstellungen**.  
 
 2.  Wählen Sie die Bereitstellung der Geschäftsbedingungen in der Liste der Bereitstellungen aus.  
 

@@ -1,7 +1,7 @@
 ---
 title: Planen des Cloudverwaltungsgateways | Microsoft-Dokumentation
 description: 
-ms.date: 12/19/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-client
@@ -10,9 +10,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1df2d8bcd73633ac1d37cc3ef31343be9c5bc95d
-ms.openlocfilehash: 6e2895565e868eb80a8f4f4b46b8a28eb4961e28
-ms.lasthandoff: 12/19/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: c61769cc97c320452c9ee27a924cb01480e6f33d
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -43,7 +43,7 @@ Client-Zertifikate und Zertifikate für Secure Socket Layer (SSL) sind erforderl
 - Der Cloudverwaltungsgateway unterstützt nur die Rollen „Verwaltungspunkt“ und „Softwareupdatepunkt“.
 -   Die folgenden Funktionen in Configuration Manager werden derzeit für den Cloudverwaltungsgateway nicht unterstützt:
 
-    -   Clientbereitstellung und -aktualisierung mit Clientpush
+    -   Clientbereitstellung
     -   Automatische Standortzuweisung
     -   Richtlinien für Benutzer
     -   Anwendungskatalog (einschließlich Softwaregenehmigungsanforderungen)

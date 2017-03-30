@@ -1,5 +1,5 @@
 ---
-title: "Verwalten des Zugriffs auf Office&365;-Dienste für verwaltete PCs | Microsoft-Dokumentation"
+title: "Verwalten des Zugriffs auf Office 365-Dienste für verwaltete PCs | Microsoft-Dokumentation"
 description: "Erfahren Sie, wie Sie den bedingten Zugriff für PCs konfigurieren, die von System Center Configuration Manager verwaltet werden."
 ms.custom: na
 ms.date: 03/05/2017
@@ -16,13 +16,13 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: b7c55ce5629565cb1e3aede6680ef1796f56cb20
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
+ms.openlocfilehash: e9028a54e538b4ec987dbaeb5ba1ee22ad091728
+ms.lasthandoff: 03/29/2017
 
 
 ---
-# <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Verwalten des Zugriffs auf Office&365;-Dienste für PCs, die von System Center Configuration Manager verwaltet werden
+# <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Verwalten des Zugriffs auf Office 365-Dienste für PCs, die von System Center Configuration Manager verwaltet werden
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -51,14 +51,14 @@ ms.lasthandoff: 03/06/2017
 
 -   Windows 8.1  
 
--   Windows 10 wird noch nicht vollständig unterstützt.  Wenn Sie versuchen, den bedingten Zugriff für Windows 10-PCs festzulegen, können Probleme auftreten.  Unter [Bekannte Probleme](#bkmk_KnownIssues) finden Sie weitere Details.  
+-   Windows 10 
 
 ## <a name="configure-conditional-access"></a>Konfigurieren des bedingten Zugriffs  
  Bevor Sie den bedingten Zugriff einrichten können, müssen Sie zunächst eine Kompatibilitätsrichtlinie erstellen und eine Richtlinie für bedingten Zugriff konfigurieren. Wenn Sie Richtlinien für bedingten Zugriff für PCs konfigurieren, können Sie verlangen, dass die PCs der Kompatibilitätsrichtlinie entsprechen müssen, damit sie auf Exchange Online- und SharePoint Online-Dienste zugreifen können.  
 
 ### <a name="prerequisites"></a>Voraussetzungen  
 
--   AD FS-Synchronisierung (Active Directory Federation Services, Active Directory-Verbunddienste) sowie ein Office&365;-Abonnement Das Office&365;-Abonnement wird zum Einrichten von Exchange Online und SharePoint Online benötigt.  
+-   AD FS-Synchronisierung (Active Directory Federation Services, Active Directory-Verbunddienste) sowie ein Office 365-Abonnement Das Office 365-Abonnement wird zum Einrichten von Exchange Online und SharePoint Online benötigt.  
 
 -   Microsoft Intune-Abonnement. Das Microsoft Intune-Abonnement muss in der Configuration Manager-Konsole konfiguriert werden. Dafür wird weiterhin eine hybride Bereitstellung benötigt.  
 
@@ -135,15 +135,16 @@ ms.lasthandoff: 03/06/2017
 
  Endbenutzer, die aufgrund von Nichtkompatibilität blockiert werden, erhalten im System Center Configuration Manager-Softwarecenter Informationen zur Kompatibilität. Für sie wird eine erneute Richtlinienauswertung ausgelöst, nachdem Kompatibilitätsprobleme behoben wurden.  
 
-##  <a name="bkmk_KnownIssues"></a> Bekannte Probleme  
- Beim Verwenden dieses Features können folgende Probleme auftreten:  
+<!---
+##  <a name="bkmk_KnownIssues"></a> Known issues  
+ You may see the following issues when using this feature:  
 
--   In diesem Update auf Version 1602 wird die 5-Tage-Kompatibilität nicht erzwungen. Auch wenn die Kompatibilitätsprüfung auf dem Gerät eines Endbenutzers vor mehr als 5 Tagen stattgefunden hat, kann dieser Endbenutzer noch auf Office 365 und SharePoint Online zugreifen.  
+-   In this 1602 update,  the 5 day compliance is not enforced. Even if compliance check on the end-user's device has happened more than 5 days ago, users still can access Office 365 and SharePoint online.  
 
--   Wenn ein Gerät nicht der Kompatibilitätsrichtlinie entspricht, wird der Grund nicht automatisch angezeigt. Der Endbenutzer muss das neue Softwarecenter aufsuchen, um den Grund für die nicht vorhandene Kompatibilität zu erfahren. Der Grund wird im Abschnitt für Gerätekompatibilität des Softwarecenters angezeigt.  
+-   When a device is not compliant with the compliance policy, the reason is not automatically displayed. The end- user must go to the new Software Center to find the reason for non-compliance. The reason is displayed in the Device compliance section of the Software Center.  
 
--   Bei Windows 10-Benutzern treten mitunter mehrere Zugriffsfehler auf, wenn sie versuchen, auf Office 365- und/oder SharePoint Online-Ressourcen zuzugreifen. Beachten Sie, dass der bedingte Zugriff für Windows 10 nicht vollständig unterstützt wird.  
-
+-   Windows 10 users may see multiple access failures when trying to reach O365 and/or SharePoint online resources. Note that conditional access is not fully supported for Windows 10.  
+--->
 ### <a name="see-also"></a>Weitere Informationen:  
  [Schützen der Daten und Standortinfrastruktur mit System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)
 
