@@ -128,7 +128,7 @@ Es folgen Verfahren zum Deinstallieren von Mac-Clients und Verlängern ihrer Zer
 
     -   **Ausgewählte Einstellung:** Klicken Sie auf **Durchsuchen**, und wählen Sie anschließend das Ermittlungsskript aus, das Sie zuvor angegeben haben.  
 
-    -   Geben Sie im Feld **die folgenden Werte** **The domain/default pair of (com.microsoft.ccmclient, SMSID) does not exist**ein.  
+    -   Geben Sie im Feld **die folgenden Werte** **Das Domänen-/Standardpaar (com.microsoft.ccmclient, SMS-ID) existiert nicht**ein.  
 
     -   Aktivieren Sie die Option **Das angegebene Wiederherstellungsskript ausführen, wenn diese Einstellung nicht kompatibel ist**.  
 
