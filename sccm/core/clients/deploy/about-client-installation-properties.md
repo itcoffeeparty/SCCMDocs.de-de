@@ -27,7 +27,7 @@ ms.lasthandoff: 01/05/2017
 
 Verwenden Sie den Befehl „CCMSetup.exe“ von System Center Configuration Manager, um den Configuration Manager-Client manuell zu installieren.  
 
-##  <a name="a-nameaboutccmsetupa-about-ccmsetupexe"></a><a name="aboutCCMSetup"></a> Informationen zu „CCMSetup.exe“  
+##  <a name="aboutCCMSetup"></a> Informationen zu „CCMSetup.exe“  
  Der Befehl „CCMSetup.exe“ lädt die Dateien herunter, die zum Installieren des Clients über einen Verwaltungspunkt oder einen Quellspeicherort erforderlich sind. Dazu zählen unter anderem folgende Dateien:  
 
 -   Windows Installer-Paket „Client.msi“ zur Installation der Clientsoftware  
@@ -217,7 +217,7 @@ Beispiel: `CCMSetup.exe /ExcludeFeatures:ClientUI` installiert das Softwarecente
 > [!NOTE]  
 >  In dieser Version ist **ClientUI** die einzige Option, die für die Eigenschaft **/ExcludeFeatures** unterstützt wird.  
 
-##  <a name="a-nameccmsetupreturncodesa-ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a> Rückgabecodes von „CCMSetup.exe“  
+##  <a name="ccmsetupReturnCodes"></a> Rückgabecodes von „CCMSetup.exe“  
  Der Befehl „CCMSetup.exe“ gibt die im Folgenden aufgeführten Rückgabecodes aus. Zur Problembehandlung informieren Sie sich in der Datei „ccmsetup.log“ auf dem Clientcomputer über den jeweiligen Kontext und weitere Details zu Rückgabecodes.  
 
 |Rückgabecode|Bedeutung|  
@@ -229,7 +229,7 @@ Beispiel: `CCMSetup.exe /ExcludeFeatures:ClientUI` installiert das Softwarecente
 |9|Fehler beim Auswerten der Voraussetzungen|  
 |10|Fehler beim Überprüfen des Hashs für das Setup-Manifest|  
 
-##  <a name="a-nameclientmsipropsa-clientmsi-properties"></a><a name="clientMsiProps"></a> Eigenschaften der Datei „Client.msi“  
+##  <a name="clientMsiProps"></a> Eigenschaften der Datei „Client.msi“  
  Mit den folgenden Eigenschaften können Sie das Installationsverhalten von „client.msi“ ändern. Wenn Sie die Clientpushinstallationsmethode verwenden, können Sie außerdem die Eigenschaften im Dialogfeld **Eigenschaften von Clientpushinstallation** auf der Registerkarte **Client** angeben.  
 
 ### <a name="ccmadmins"></a>CCMADMINS  
@@ -563,7 +563,7 @@ Beispiel: `CCMSetup.exe SMSMP=https://smsmp01.contoso.com`
 
  Beispiel: `CCMSetup.exe SMSSITECODE=XZY`  
 
-##  <a name="a-namebkmkattributevaluesa-supported-attribute-values-for-the-pki-certificate-selection-criteria"></a><a name="BKMK_attributevalues"></a> Unterstützte Attributwerte für die PKI-Zertifikatauswahlkriterien  
+##  <a name="BKMK_attributevalues"></a> Unterstützte Attributwerte für die PKI-Zertifikatauswahlkriterien  
  Configuration Manager unterstützt die folgenden Attributwerte für die PKI-Zertifikatauswahlkriterien:  
 
 |OID-Attribut|DN-Attribut (Distinguished Name)|Attributdefinition|  
