@@ -2,7 +2,7 @@
 title: Erstellen von SCEP-Zertifikatprofilen | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über die Verwendung von Zertifikatprofilen, um für verwaltete Geräten die Zertifikate bereitzustellen, die sie in System Center Configuration Manager benötigen."
 ms.custom: na
-ms.date: 11/22/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,11 +17,13 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
-ms.openlocfilehash: cb9351fc63e49af611c494ec82a6c8651afae30f
+ms.sourcegitcommit: aa8924a013ebdbee888cab33001fddbe7ad2d67e
+ms.openlocfilehash: 80a716f5a42a81e5550eb1b5c7f14534e14a4fb7
+ms.lasthandoff: 03/30/2017
 
 
 ---
+
 # <a name="create-certificate-profiles"></a>Erstellen von Zertifikatprofilen
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -183,10 +185,7 @@ Geben Sie auf der Seite **Allgemein** des Assistenten zum Erstellen von Zertifik
 ###  <a name="specify-supported-platforms-for-the-certificate-profile"></a>Angeben von unterstützten Plattformen für das Zertifikatprofil  
 
 1. Wählen Sie auf der Seite **Unterstützte Plattformen** des Assistenten zum Erstellen von Zertifikatprofilen die Betriebssysteme aus, unter denen das Zertifikatprofil installiert wird. Alternativ klicken Sie auf **Alle auswählen** , um das Zertifikatprofil unter allen verfügbaren Betriebssystemen zu installieren.
-2. Prüfen Sie die **Übersichtsseite** des Assistenten, und wählen Sie **Fertig stellen** aus. Das neue Zertifikatprofil wird im Knoten **Zertifikatprofile** im Arbeitsbereich **Bestand und Kompatibilität** angezeigt und steht zur Bereitstellung für Benutzer oder Geräte wie unter [How to deploy profiles in System Center Configuration Manager (Bereitstellen von Profilen in System Center Configuration Manager)](deploy-wifi-vpn-email-cert-profiles.md) beschrieben zur Verfügung.  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
-
+2. Prüfen Sie die **Übersichtsseite** des Assistenten, und wählen Sie **Fertig stellen** aus. 
+ 
+ 
+Das neue Zertifikatprofil wird im Knoten **Zertifikatprofile** im Arbeitsbereich **Bestand und Kompatibilität** angezeigt und steht zur Bereitstellung für Benutzer oder Geräte wie unter [How to deploy profiles in System Center Configuration Manager (Bereitstellen von Profilen in System Center Configuration Manager)](deploy-wifi-vpn-email-cert-profiles.md) beschrieben zur Verfügung.  
