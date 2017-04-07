@@ -15,9 +15,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4c2906c2a963e0ae92e3c0d223afb7a47377526a
-ms.openlocfilehash: 9c614a842fc9e3a01b0128db94fc12bc0be5b52f
-ms.lasthandoff: 03/20/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: aaaab003ddd22f18160d4be63cfeab3a7e7f6b03
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -44,6 +44,10 @@ Die folgenden Szenarios werden mit Verfügbarkeitsgruppen unterstützt:
 -   Sie können einer Verfügbarkeitsgruppe, die eine Standortdatenbank hostet, Replikationsmitglieder hinzufügen oder diese daraus entfernen.  
 
 -   Sie können Ihre Standortdatenbank aus einer Verfügbarkeitsgruppe in eine Standard- oder benannte Instanz einer eigenständigen SQL Server-Instanz verschieben.  
+
+> [!Important]  
+> Wenn Sie Microsoft Intune mit Configuration Manager in einer Hybridkonfiguration verwenden, löst das Verschieben der Standortdatenbank zu oder von einer Verfügbarkeitsgruppe eine erneute Synchronisierung von Daten mit der Cloud aus. Dies kann nicht vermieden werden. 
+
 
 
 > [!NOTE]  

@@ -17,9 +17,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: cb42b6f324dc0019c2109be4d91e0eab4dca4d70
-ms.openlocfilehash: 8c54bc455828712c7f9ea297f26c98c41848cf9c
-ms.lasthandoff: 03/08/2017
+ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
+ms.openlocfilehash: 0eaa1d13e9c273a6649f50d73fb357f04464d94c
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -81,6 +81,7 @@ Sie können die Aktion einer Bereitstellung nicht mehr ändern, nachdem sie erst
 
 - **Aktivierungspakete senden**: Wenn der Bereitstellungszweck auf **Erforderlich** festgelegt und diese Option ausgewählt wird, wird vor der Installation der Bereitstellung ein Aktivierungspaket an den Computer gesendet. Dieses Paket aktiviert den Computer zum Installationsstichtag. Sie können diese Option nur verwenden, wenn Computer und Netzwerke für Wake-On-LAN konfiguriert sind.
 - **Clients mit einer getakteten Internetverbindung dürfen den Inhalt nach dem Installationsstichtag herunterladen (Zusatzkosten können anfallen)**: Diese Option ist nur für Bereitstellungen mit dem Zweck **Erforderlich**verfügbar.
+- **Ausgeführte ausführbare Dateien automatisch schließen, die im Eigenschaftendialogfeld des Bereitstellungstyps auf der Registerkarte „Installationsverhalten“ angegeben wurden**: Weitere Informationen zum Konfigurieren einer Liste von ausführbaren Dateien, die die Installation einer Anwendung verhindert, finden Sie unter **So prüfen Sie auf ausgeführte ausführbare Dateien, bevor Sie eine Anwendung installieren** weiter unten in diesem Thema.
 - **Require administrator approval if users request this application**: (Genehmigung durch Administrator erforderlich, wenn Benutzer diese Anwendung anfordern) Wenn diese Option ausgewählt ist, muss der Administrator jede Benutzeranforderung für die Anwendung zunächst genehmigen, bevor sie installiert werden kann. Diese Option ist ausgegraut, wenn der Zweck der Bereitstellung **Erforderlich** lautet, oder wenn die Anwendung für eine Gerätesammlung bereitgestellt wird.
 
     > [!NOTE]
@@ -155,6 +156,27 @@ Die maximale Wartezeit basiert immer auf den Benachrichtigungswerten, die in den
 Darüber hinaus fällt bei Bereitstellungen mit hohem Risiko, z.B. einer Tasksequenz, die ein Betriebssystem bereitstellen, die Benachrichtigung des Benutzers deutlicher aus. Immer wenn Sie benachrichtigt werden, dass eine kritische Softwarewartung erforderlich ist, wird anstatt einer vorübergehenden Benachrichtigung in der Taskleiste ein Dialogfeld wie das folgende auf Ihrem Computer angezeigt:
 
 ![Erforderlicher Softwaredialog](media/client-toast-notification.png)
+
+## <a name="how-to-check-for-running-executable-files-before-installing-an-application"></a>So prüfen Sie auf ausgeführte ausführbare Dateien, bevor Sie eine Anwendung installieren
+
+>[!Tip]
+>Seit der Version 1702 ist das ein vorab veröffentlichtes Feature. Informationen zur Aktivierung finden Sie unter [Features der Vorabversion in System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/manage/pre-release-features).
+
+Sie können auf der Registerkarte **Installationsverhalten** im Dialogfeld **Eigenschaften** eines Bereitstellungstyps eine von mehreren ausführbaren Dateien festlegen, die die Installation des Bereitstellungstyps verhindert, wenn sie ausgeführt wird. Der Benutzer muss die ausgeführte ausführbare Datei schließen bevor der Bereitstellungstyp installiert werden kann – die Datei kann aber auch automatisch für Bereitstellungen mit dem Zweck „Erforderlich“ geschlossen werden. So konfigurieren Sie dies:
+
+1. Öffnen Sie das Dialogfeld **Eigenschaften** für jeden Bereitstellungstyp.
+2. Klicken Sie auf der Registerkarte **Installationsverhalten** des Dialogfelds *<deployment type name>* **Eigenschaften** auf **Hinzufügen**.
+3. Geben Sie im Dialogfeld **Ausführbare Datei hinzufügen oder bearbeiten** den Namen der ausführbaren Datei an, die bei der Ausführung die Installation der Anwendung blockiert. Optional können Sie auch einen Anzeigenamen für die Anwendung eingeben, damit Sie sie leichter identifizieren können.
+4. Klicken Sie auf **OK** und schließen Sie das Dialogfeld *<deployment type name>* **Eigenschaften**.
+5. Wenn Sie als Nächstes auf der Seite **Bereitstellungseinstellungen** des Assistenten zum Bereitstellen von Software eine Anwendung bereitstellen, wählen Sie **Ausgeführte ausführbare Dateien automatisch schließen, die im Eigenschaftendialogfeld des Bereitstellungstyps auf der Registerkarte „Installationsverhalten“ angegeben wurden** aus. Führen Sie anschließend die Bereitstellung der Anwendung fort.
+
+Nachdem die Anwendung Client-PCs erreicht, gilt Folgendes:
+
+- Wenn die Anwendung als **Verfügbar** bereitgestellt wurde und ein Endbenutzer versucht, sie zu installieren, wird er dazu aufgefordert, alle ausgeführten ausführbaren von Ihnen festgelegte Dateien zu schließen, bevor er mit der Installation fortfahren kann.
+
+- Wenn die Anwendung als **Erforderlich** bereitgestellt wurde, und die Option **Ausgeführte ausführbare Dateien automatisch schließen, die im Eigenschaftendialogfeld des Bereitstellungstyps auf der Registerkarte "Installationsverhalten" angegeben wurden** ausgewählt ist, wird dem Endbenutzer ein Dialogfeld angezeigt, das ihn darüber informiert, dass ausführbare, von Ihnen festgelegte Dateien automatisch geschlossen werden, wenn die Frist der Installation abgelaufen ist. Sie können diese Dialogfelder unter **Clienteinstellungen** > **Computer-Agent** zeitlich festlegen. Wenn Sie nicht möchten, dass der Endbenutzer diese Meldungen sieht, wählen Sie auf der Registerkarte **User Experience** (Benutzererfahrung) der Bereitstellungseigenschaften **In Softwarecenter und allen Benachrichtigungen ausblenden** aus.
+
+- Wenn die Anwendung als **Erforderlich** bereitgestellt wurde, und die Option **Ausgeführte ausführbare Dateien automatisch schließen, die im Eigenschaftendialogfeld des Bereitstellungstyps auf der Registerkarte "Installationsverhalten" angegeben wurden** nicht ausgewählt ist, schlägt die Installation der Anwendung fehl, wenn mindestens eine der angegebenen Anwendungen ausgeführt wird.
 
 ## <a name="for-more-information"></a>Weitere Informationen:
 - [Einstellungen zum Verwalten von Bereitstellungen mit hohem Risiko](../../protect/understand/settings-to-manage-high-risk-deployments.md)

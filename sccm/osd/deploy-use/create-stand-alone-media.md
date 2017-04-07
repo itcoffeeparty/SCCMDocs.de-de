@@ -2,7 +2,7 @@
 title: "Erstellen eigenständiger Medien mit System Center Configuration Manager | Microsoft Docs"
 description: "Verwenden Sie eigenständige Medien, um das Betriebssystem auf einem Computer ohne Verbindung mit einem Configuration Manager-Standort oder einem Netzwerk bereitzustellen."
 ms.custom: na
-ms.date: 12/21/2016
+ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: ee7f69bd65152deffb2456d9807e1e8fee8802ec
-ms.openlocfilehash: 708525604c3f40cf75b5408c3666193186b7cf50
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: d4689545ce2be5c16a65b24489f30028a0f90f94
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -59,7 +59,7 @@ WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDist
 ```
 
 ### <a name="distribute-all-content-associated-with-the-task-sequence"></a>Verteilen aller der Tasksequenz zugeordneten Inhalte
-Sie müssen alle für die Tasksequenz erforderlichen Inhalte auf mindestens einen Verteilungspunkt verteilen. Dies schließt das Startabbild, Betriebssystemabbild und andere zugehörige Dateien ein. Die Informationen werden vom Assistenten beim Erstellen des eigenständigen Mediums vom Verteilungspunkt abgerufen. Sie benötigen ** ** Lesezugriffsrechte für die Inhaltsbibliothek an diesem Verteilungspunkt.  Details finden Sie unter [Verteilen von Inhalt, auf den von einer Tasksequenz verwiesen wird](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS).
+Sie müssen alle für die Tasksequenz erforderlichen Inhalte auf mindestens einen Verteilungspunkt verteilen. Dies schließt das Startabbild, Betriebssystemabbild und andere zugehörige Dateien ein. Die Informationen werden vom Assistenten beim Erstellen des eigenständigen Mediums vom Verteilungspunkt abgerufen. Sie benötigen **** Lesezugriffsrechte für die Inhaltsbibliothek an diesem Verteilungspunkt.  Details finden Sie unter [Verteilen von Inhalt, auf den von einer Tasksequenz verwiesen wird](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS).
 
 ### <a name="prepare-the-removable-usb-drive"></a>Vorbereiten des USB-Wechseldatenträgers
 *Für einen USB-Wechseldatenträger:*
@@ -97,32 +97,37 @@ Sie müssen für die vom Assistenten zum Erstellen von Tasksequenzmedien erstell
 
     -   Wenn Sie **CD/DVD-Satz**auswählen, geben Sie die Kapazität der Medien und Namen sowie Pfad der Ausgabedateien an. Die Ausgabedateien werden vom Assistenten an diesen Speicherort geschrieben. Beispiel: **\\\Servername\Ordner\Ausgabedatei.iso**  
 
-         Wenn die Medienkapazität zu gering zum Speichern des gesamten Inhalts ist, werden mehrere Dateien erstellt, und Sie müssen den Inhalt auf mehreren CDs oder DVDs speichern. Falls mehrere Medien erforderlich sind, wird dem Namen jeder von Configuration Manager erstellten Ausgabedatei eine Sequenznummer hinzugefügt. Außerdem wird die Anwendung von Configuration Manager auf mehreren Medien gespeichert, wenn Sie eine Anwendung zusammen mit dem Betriebssystem bereitstellen und die Anwendung nicht auf ein einzelnes Medium passt. Wenn das eigenständige Medium ausgeführt wird, wird der Benutzer von Configuration Manager zum Angeben des nächsten Mediums aufgefordert, auf dem die Anwendung gespeichert ist.  
+         Wenn die Medienkapazität zu gering zum Speichern des gesamten Inhalts ist, werden mehrere Dateien erstellt, und Sie müssen den Inhalt auf mehreren CDs oder DVDs speichern. Falls mehrere Medien erforderlich sind, wird dem Namen jeder von Configuration Manager erstellten Ausgabedatei eine Sequenznummer hinzugefügt. Außerdem wird die Anwendung von Configuration Manager auf mehreren Medien gespeichert, wenn Sie eine Anwendung zusammen mit dem Betriebssystem bereitstellen und die Anwendung nicht auf ein einzelnes Medium passt. Wenn das eigenständige Medium ausgeführt wird, wird der Benutzer von Configuration Manager zum Angeben des nächsten Mediums aufgefordert, auf dem die Anwendung gespeichert ist.   
 
-        > [!IMPORTANT]  
-        >  Wenn Sie ein vorhandenes ISO-Abbild auswählen, wird dieses ISO-Abbild vom Assistenten zum Erstellen von Tasksequenzmedien auf dem Laufwerk oder der Freigabe gelöscht, sobald Sie mit der nächsten Seite des Assistenten fortfahren. Das vorhandene Abbild wird selbst dann gelöscht, wenn Sie den Assistenten anschließend abbrechen.  
+         > [!IMPORTANT]  
+         >  Wenn Sie ein vorhandenes ISO-Abbild auswählen, wird dieses ISO-Abbild vom Assistenten zum Erstellen von Tasksequenzmedien auf dem Laufwerk oder der Freigabe gelöscht, sobald Sie mit der nächsten Seite des Assistenten fortfahren. Das vorhandene Abbild wird selbst dann gelöscht, wenn Sie den Assistenten anschließend abbrechen.  
 
      Klicken Sie auf **Weiter**.  
 
-6.  Geben Sie auf der Seite **Sicherheit** ein sicheres Kennwort zum Schutz der Medien an, und klicken Sie dann auf **Weiter**. Wenn Sie ein Kennwort angeben, ist dieses zum Verwenden der Medien erforderlich.  
+6.  Wählen Sie auf der Seite **Sicherheit** die folgenden Einstellungen aus, und klicken Sie dann auf **Weiter**:
+    - **Medien durch Kennwort schützen**: Geben Sie ein sicheres Kennwort zum Schutz der Medien ein. Wenn Sie ein Kennwort angeben, ist dieses zum Verwenden der Medien erforderlich.  
 
-    > [!IMPORTANT]  
-    >  Auf eigenständigen Medien werden nur die Tasksequenzschritte und die dazugehörigen Variablen verschlüsselt. Der restliche Inhalt der Medien wird nicht verschlüsselt. Tasksequenzskripts dürfen daher keine vertraulichen Informationen enthalten. Speichern und implementieren Sie alle vertraulichen Informationen mithilfe von Tasksequenzvariablen.  
+        > [!IMPORTANT]  
+        >  Auf eigenständigen Medien werden nur die Tasksequenzschritte und die dazugehörigen Variablen verschlüsselt. Der restliche Inhalt der Medien wird nicht verschlüsselt. Tasksequenzskripts dürfen daher keine vertraulichen Informationen enthalten. Speichern und implementieren Sie alle vertraulichen Informationen mithilfe von Tasksequenzvariablen.  
 
+    - **Datumsbereich für dieses eigenständige Medium auswählen, damit es gültig ist** (ab Version 1702): Optionale Start- und Ablaufdaten auf den Medien festlegen. Standardmäßig sind diese Einstellungen deaktiviert. Vor der Ausführung des eigenständigen Mediums werden die Datums- und Zeitangaben für den Zeitraum mit der Systemzeit auf dem Computer verglichen. Wenn die Systemzeit vor der Startzeit oder hinter der Ablaufzeit liegt, wird das eigenständige Medium nicht gestartet. Diese Optionen sind auch über das PowerShell-Cmdlet „New-CMStandaloneMedia“ verfügbar.
 7.  Geben Sie auf der Seite **Eigenständige CD/DVD** die Tasksequenz an, mit der das Betriebssystem bereitgestellt wird, und klicken Sie dann auf **Weiter**. Wählen Sie **Zugeordnete Anwendungsabhängigkeiten erkennen und diesem Medium hinzufügen** aus, um eigenständigen Medien für Anwendungsabhängigkeiten Inhalt hinzuzufügen.
-> [!TIP]
-> Wenn Sie die erwarteten Anwendungsabhängigkeiten nicht angezeigt bekommen, dann heben Sie die Auswahl auf und wählen erneut die Einstellung **Zugeordnete Anwendungsabhängigkeiten erkennen und diesem Medium hinzufügen** aus, um die Liste zu aktualisieren.
+    > [!TIP]
+    > Wenn Sie die erwarteten Anwendungsabhängigkeiten nicht angezeigt bekommen, dann heben Sie die Auswahl auf und wählen erneut die Einstellung **Zugeordnete Anwendungsabhängigkeiten erkennen und diesem Medium hinzufügen** aus, um die Liste zu aktualisieren.
 
-Im Assistenten können Sie nur die Tasksequenzen auswählen, die einem Startabbild zugewiesen sind.  
+    Im Assistenten können Sie nur die Tasksequenzen auswählen, die einem Startabbild zugewiesen sind.  
 
-8.  Geben Sie auf der Seite **Verteilungspunkte** die Verteilungspunkte an, die den für die Tasksequenz erforderlichen Inhalt enthalten, und klicken Sie dann auf **Weiter**.  
+8. Wählen Sie auf der Seite **Anwendung auswählen** (verfügbar ab Version 1702) den als Teil der Mediendatei hinzuzufügenden Anwendungsinhalt aus, und klicken Sie anschließend auf **Weiter**.
+9. Wählen Sie auf der Seite **Paket auswählen** (verfügbar ab Version 1702) den als Teil der Mediendatei hinzuzufügenden Paketinhalt aus, und klicken Sie anschließend auf **Weiter**.
+10. Wählen Sie auf der Seite **Treiberpaket auswählen** (verfügbar ab Version 1702) den als Teil der Mediendatei hinzuzufügenden Treiberpaketinhalt aus, und klicken Sie anschließend auf **Weiter**.
+11.  Geben Sie auf der Seite **Verteilungspunkte** die Verteilungspunkte an, die den für die Tasksequenz erforderlichen Inhalt enthalten, und klicken Sie dann auf **Weiter**.  
 
      Configuration Manager zeigt nur Verteilungspunkte an, die Inhalt aufweisen. Sie müssen alle der Tasksequenz zugeordneten Inhalte (Startabbild, Betriebssystemabbild usw.) auf mindestens einen Verteilungspunkt aufteilen, bevor Sie fortfahren können. Nachdem Sie den Inhalt verteilt haben, können Sie entweder den Assistenten neu starten oder Verteilungspunkte entfernen, die Sie bereits auf dieser Seite ausgewählt haben, zur vorherigen Seite wechseln und dann zur Seite **Verteilungspunkte** zurückkehren, um die Liste der Verteilungspunkte zu aktualisieren. Weitere Informationen zur Inhaltsverteilung finden Sie unter [Verteilen von Inhalt, auf den von einer Tasksequenz verwiesen wird](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS). Weitere Informationen zu Verteilungspunkten sowie zum Content Management finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
     > [!NOTE]  
-    >  Sie benötigen ** ** Lesezugriffsrechte für die Inhaltsbibliothek an den Verteilungspunkten.  
+    >  Sie benötigen **** Lesezugriffsrechte für die Inhaltsbibliothek an den Verteilungspunkten.  
 
-9. Geben Sie auf der Seite **Anpassung** die folgenden Informationen an, und klicken Sie dann auf **Weiter**.  
+12. Geben Sie auf der Seite **Anpassung** die folgenden Informationen an, und klicken Sie dann auf **Weiter**.  
 
     -   Geben Sie die Variablen an, die von der Tasksequenz zur Bereitstellung des Betriebssystems verwendet werden.  
 
@@ -133,7 +138,7 @@ Im Assistenten können Sie nur die Tasksequenzen auswählen, die einem Startabbi
         > [!TIP]  
         >  Während der Erstellung der Tasksequenzmedien werden die Paket-ID und die Prestart-Befehlszeile einschließlich des Wertes vorhandener Tasksequenzvariablen von der Tasksequenz in die Protokolldatei „CreateTSMedia.log“ auf dem Computer geschrieben, auf dem die Configuration Manager-Konsole ausgeführt wird. Sie können diese Protokolldatei überprüfen, um den Wert für die Tasksequenzvariablen zu überprüfen.  
 
-10. Schließen Sie den Assistenten ab.  
+13. Schließen Sie den Assistenten ab.  
 
  Die Dateien der eigenständigen Medien (ISO) werden im Zielordner erstellt. Wenn Sie **Eigenständige CD/DVD**ausgewählt haben, können Sie nun die Ausgabedateien auf einen Satz von CDs oder DVDs kopieren.  
 

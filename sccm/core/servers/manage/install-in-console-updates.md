@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
-ms.openlocfilehash: eafa95922485066632a5da522e6c3de69b45050f
-ms.lasthandoff: 03/04/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 3b50ada9f63e41d1b6f01009c141b8f361f5180e
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -33,14 +33,14 @@ Nur Updates, die für Ihre Infrastruktur und Version relevant sind, werden herun
 
 -   Im **Onlinemodus**stellt der Dienstverbindungspunkt automatisch eine Verbindung mit dem Microsoft-Clouddienst her und lädt relevante Updates herunter.  
 
-     Configuration Manager sucht standardmäßig alle 24 Stunden nach neuen Updates. Sie können auch sofort nach Updates suchen, indem Sie in der Configuration Manager-Konsole im Knoten **Verwaltung** > **Clouddienste** > **Updates und Wartung** die Option **Auf Updates prüfen** auswählen.  
+     Configuration Manager sucht standardmäßig alle 24 Stunden nach neuen Updates. Sie können auch sofort nach Updates suchen, indem Sie in der Configuration Manager-Konsole im Knoten **Verwaltung** > **Updates und Wartung** die Option **Auf Updates prüfen** auswählen. (Vor Version 1702 befand sich dieser Knoten unter **Verwaltung** > **Clouddienste**.)
 
 -   Im **Offlinemodus** stellt der Dienstverbindungspunkt keine Verbindung mit dem Microsoft-Clouddienst her. Durch das manuelle [Verwenden des Dienstverbindungstools für System Center Configuration Manager](../../../core/servers/manage/use-the-service-connection-tool.md) können Sie verfügbare Updates herunterladen und importieren.  
 
 > [!NOTE]  
 >  Zusätzlich zu den Updates, die Sie bei der Synchronisierung mit dem Microsoft-Clouddienst erhalten, werden auch Out-of-band-Korrekturen in Ihre Konsole importiert, wo Sie sie für die Installation auswählen können. Diese werden über das [Update-Registrierungstool](http://technet.microsoft.com/library/mt691544.aspx) installiert.  
 
-Nach der Synchronisierung der Updates können Sie sie in der Configuration Manager-Konsole anzeigen, indem Sie zum Knoten **Verwaltung** > **Clouddienste** > **Updates und Wartung** navigieren:  
+Nach der Synchronisierung der Updates können Sie sie in der Configuration Manager-Konsole anzeigen, indem Sie zum Knoten **Verwaltung** > **Updates und Wartung** navigieren:  
 
 -   Nicht installierte Updates werden als **Verfügbar**angezeigt.
 
@@ -98,7 +98,8 @@ In der Standardeinstellung ist die Klasse **Updatepakete** (SMS_CM_Updatepackage
 - Update auf 1606: Informationen finden Sie unter [Checkliste für die Installation von Update 1606 für System Center Configuration Manager](../../../core/servers/manage/checklist-for-installing-update-1606.md).  
 
 - Aktualisierung von 1606 auf 1610: Weitere Informationen finden Sie unter [Checkliste für die Installation von Update 1610 für System Center Configuration Manager](../../../core/servers/manage/checklist-for-installing-update-1610.md).  
-<!--- Update to 1702 from either 1606 or 1610: See [Checklist for installing update 1702](../../../core/servers/manage/checklist-for-installing-update-1702.md). -->  
+
+- Aktualisierung von 1606 oder 1610 auf 1702: Weitere Informationen finden Sie unter [Checklist for installing update 1702 (Prüfliste für die Installation von Update 1702)](../../../core/servers/manage/checklist-for-installing-update-1702.md).
 
 ###  <a name="bkmk_step2"></a> Schritt 2: Testen des Datenbankupgrades vor der Installation eines Updates  
 Die in diesem Schritt gegebenen Informationen gelten nur, wenn Sie ein *Update* für einen Standort von System Center Configuration Manager installieren. Wenn Sie einen System Center 2012 Configuration Manager-Standort auf System Center Configuration Manager *upgraden*, finden Sie weitere Informationen dazu unter [Testen des Standortdatenbankupgrades](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#a-namebkmktesta-test-the-site-database-upgrade).
@@ -146,7 +147,7 @@ Wenn Sie später das Update installieren, können Sie das Update so konfiguriere
 
 #### <a name="to-run-the-prerequisite-checker-before-installing-an-update"></a>So führen Sie vor der Installation eines Updates die Voraussetzungsprüfung aus  
 
-1.  Navigieren Sie in der Configuration Manager-Konsole zu **Verwaltung** > **Clouddienste** > **Updates und Wartung**.  
+1.  Navigieren Sie in der Configuration Manager-Konsole zu **Verwaltung** > **Updates und Wartung**.   
 
 2.  Klicken Sie mit der rechten Maustaste auf das Updatepaket, für das die Voraussetzungsprüfung ausgeführt werden soll.  
 
@@ -203,7 +204,7 @@ Im Rahmen der Updateinstallation führt Configuration Manager folgende Aktionen 
 **3. Überwachen des Status von Updates während der Installation**  
 Gehen Sie folgendermaßen vor, um den Fortschritt zu überwachen:  
 
--   Navigieren Sie in der Configuration Manager-Konsole zu **Verwaltung** > **Clouddienste** > **Updates und Wartung**. Dieser Knoten zeigt den Installationsstatus aller Updatepakete an.
+-   In der Configuration Manager-Konsole: Der Knoten **Verwaltung** > **Updates und Wartung**. Dieser Knoten zeigt den Installationsstatus aller Updatepakete an.
 
 
 -   Navigieren Sie in der Configuration Manager-Konsole zum Knoten **Überwachung** > **Übersicht** > **Update- und Wartungsstatus**. Dieser Knoten zeigt nur den Installationsstatus des Updatepakets, das gerade installiert wird.  
@@ -241,7 +242,7 @@ Es wird empfohlen, das Update sofort und ohne Verzögerung zu installieren.
 Nach Abschluss des Konsolenupdates können Sie überprüfen, ob die Version von Konsole und Standort korrekt ist. Gehen Sie oben links in der Konsole zu **Info zu System Center Configuration Manager**.  
 
 ###  <a name="bkmk_toptier"></a> So starten Sie die Updateinstallation am Standort der obersten Ebene  
-Wechseln Sie am Standort der obersten Ebene Ihrer Hierarchie in der Configuration Manager-Konsole zu **Verwaltung** > **Clouddienste** > **Updates und Wartung**, wählen Sie ein Update mit dem Status **Verfügbar** aus, und klicken Sie anschließend auf **Updatepaket installieren**.  
+Wechseln Sie am Standort der obersten Ebene Ihrer Hierarchie in der Configuration Manager-Konsole zu **Verwaltung** > **Updates und Wartung**, wählen Sie ein Update mit dem Status **Verfügbar** aus, und klicken Sie anschließend auf **Updatepaket installieren**.  
 
 ###  <a name="bkmk_secondary"></a> So starten Sie die Updateinstallation an einem sekundären Standort  
 Nachdem der übergeordnete primäre Standort eines sekundären Standorts aktualisiert wurde, können Sie den sekundären Standort von der Configuration Manager-Konsole aus aktualisieren.  Verwenden Sie dafür den **Assistenten für das Update von sekundären Standorten**.  
@@ -268,7 +269,7 @@ Sie können die Installation eines Updates für die gesamte Hierarchie wiederhol
     -   Fehler bei der Installation.
     -   Fehler bei der Replikation des Inhalts auf den Standort.   
 
-    Wechseln Sie zu **Verwaltung** > **Clouddienste** > **Updates und Wartung**, wählen Sie das Update aus, und klicken Sie anschließend auf eine der folgenden Optionen:  
+    Wechseln Sie zu **Verwaltung** > **Updates und Wartung**, wählen Sie das Update aus, und klicken Sie anschließend auf eine der folgenden Optionen:  
 
     -   **Wiederholen**: Wenn Sie **Wiederholen** von diesem Knoten ausführen, startet die Installation des Updates erneut und ignoriert automatisch Voraussetzungswarnungen. Die Installation repliziert erneut den Inhalt für das Update, wenn die Replikation zuvor fehlgeschlagen ist.
     - **Warnungen zu erforderlichen Komponenten ignorieren:** Ab Version 1606 können Sie auf **Warnungen zu erforderlichen Komponenten ignorieren** klicken, wenn die Installation des Updates aufgrund einer Warnung anhält. Dadurch kann die Installation des Updates (nach wenigen Minuten) fortgesetzt werden, und die Option zum Ignorieren von Voraussetzungswarnungen wird angewendet.   
@@ -315,7 +316,7 @@ Weitere Informationen finden Sie unter [Überwachen der Hierarchie- und Replikat
 ##  <a name="bkmk_options"></a> Aktivieren optionaler Features von Updates  
 Wenn Sie ein Update installieren, das ein oder mehrere optionale Features enthält, haben Sie die Möglichkeit, diese Features in Ihrer Hierarchie zu aktivieren.  Dies können Sie zum Zeitpunkt der Updateinstallation durchführen, oder Sie können zu einem späteren Zeitpunkt zur Konsole zurückkehren und die optionalen Features aktivieren.
 
-Wechseln Sie in der Konsole zu **Verwaltung** > **Clouddienste** > **Updates und Wartung** > **Features**, um verfügbare Funktionen und deren Status anzuzeigen.
+Wechseln Sie in der Konsole zu **Verwaltung** > **Updates und Wartung** > **Features**, um verfügbare Funktionen und deren Status anzuzeigen.
 
 Wenn ein Feature nicht optional ist, wird es automatisch installiert und nicht im Knoten **Features** aufgeführt.  
 

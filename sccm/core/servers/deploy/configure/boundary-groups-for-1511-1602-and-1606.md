@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 139dcf9bc2a9bd253592b969b6f9d814ffcdfd8e
-ms.openlocfilehash: 6b24d775fe4ca78dfba9645b81096f9228864d99
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 640cdc67f301a81a45bf27f95eb03cbc8754a9aa
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -26,10 +27,10 @@ ms.openlocfilehash: 6b24d775fe4ca78dfba9645b81096f9228864d99
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 Die Informationen in diesem Thema betreffen die Verwendung von Begrenzungsgruppen mit den Versionen 1511, 1602 und 1606 von System Center Configuration Manager.
-Wenn Sie Version 1610 oder höher verwenden, finden Sie im Abschnitt [Begrenzungsgruppen](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#a-namebkmkboundarygroupsa-boundary-group/) des Themas *Definieren von Standortgrenzen und Begrenzungsgruppen für Configuration Manager* weitere Informationen über die Verwendung der neu gestalteten Begrenzungsgruppen.  
+Wenn Sie Version 1610 oder höher verwenden, finden Sie weitere Informationen zum Verwenden der überarbeiteten Begrenzungsgruppen unter [Configure boundary groups (Konfigurieren von Begrenzungsgruppen)](/sccm/core/servers/deploy/configure/boundary-groups).  
 
 
-##  <a name="a-namebkmkboundarygroupsa-boundary-groups"></a><a name="BKMK_BoundaryGroups"></a> Boundary groups  
+##  <a name="BKMK_BoundaryGroups"></a> Boundary groups  
  Sie erstellen Begrenzungsgruppen zum logischen Gruppieren zusammenhängender Netzwerkadressen (Grenzen), um die Verwaltung Ihrer Infrastruktur zu erleichtern. Sie müssen einer Begrenzungsgruppe zunächst Grenzen hinzufügen, damit Sie die Begrenzungsgruppe verwenden können. Clients verwenden die Konfiguration der Begrenzungsgruppe für folgende Zwecke:  
 
 -   Automatische Standortzuweisung  
@@ -122,7 +123,7 @@ Wenn Sie Begrenzungsgruppen einrichten, fügen Sie der Begrenzungsgruppe eine od
 
  In den folgenden Abschnitten finden Sie zusätzliche Informationen zu Konfigurationen von Begrenzungsgruppen.  
 
-###  <a name="a-namebkmkboundarysiteassignmenta-about-site-assignment"></a><a name="BKMK_BoundarySiteAssignment"></a> Informationen zur Standortzuweisung  
+###  <a name="BKMK_BoundarySiteAssignment"></a> Informationen zur Standortzuweisung  
  Sie können jede Begrenzungsgruppe mit einem zugewiesenen Standort für Clients einrichten.  
 
 -   Ein neu installierter Client, der die automatische Standortzuweisung verwendet, tritt dem zugewiesenen Standort einer Begrenzungsgruppe bei, die die aktuelle Netzwerkadresse des Clients enthält.  
@@ -137,7 +138,7 @@ Wenn Sie Begrenzungsgruppen einrichten, fügen Sie der Begrenzungsgruppe eine od
 
 Weitere Informationen zur automatischen Standortzuweisung finden Sie unter [Zuweisen von Clients zu einem Standort in System Center Configuration Manager](../../../../core/clients/deploy/assign-clients-to-a-site.md) im Abschnitt [Verwenden der automatischen Standortzuweisung für Computer](../../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_AutomaticAssignment).  
 
-###  <a name="a-namebkmkboundarycontentlocationa-about-content-location"></a><a name="BKMK_BoundaryContentLocation"></a> Informationen zu Inhaltsorten  
+###  <a name="BKMK_BoundaryContentLocation"></a> Informationen zu Inhaltsorten  
  Sie können jede Begrenzungsgruppe mit einem oder mehreren Verteilungspunkten und Zustandsmigrationspunkten einrichten. Ferner können Sie dieselben Verteilungspunkte und Zustandsmigrationspunkte mehreren Begrenzungsgruppen zuordnen.  
 
 -   **Während der Softwareverteilung**fordern Clients einen Speicherort für Bereitstellungsinhalte an. Configuration Manager sendet dem Client eine Liste der Verteilungspunkte, die den einzelnen Begrenzungsgruppen zugeordnet sind, die den aktuellen Netzwerkort des Clients einbeziehen.  
@@ -146,7 +147,7 @@ Weitere Informationen zur automatischen Standortzuweisung finden Sie unter [Zuwe
 
 So kann von den Clients der am nächsten liegende Server zur Übertragung der Inhalts- oder Zustandsmigrationsinformationen ausgewählt werden.  
 
-###  <a name="a-namebkmkpreferredmpa-about-preferred-management-points"></a><a name="BKMK_PreferredMP"></a> Informationen zu bevorzugten Verwaltungspunkten  
+###  <a name="BKMK_PreferredMP"></a> Informationen zu bevorzugten Verwaltungspunkten  
  Bevorzugte Verwaltungspunkte ermöglichen einem Client die Identifikation eines Verwaltungspunkts, der seiner aktuellen Netzwerkadresse (oder Begrenzung) zugeordnet ist.  
 
 -   Ein Client versucht zunächst, einen bevorzugten Verwaltungspunkt seines zugewiesenen Standorts zu verwenden, bevor er einen Verwaltungspunkt seines zugewiesenen Standorts verwendet, der nicht als bevorzugt eingerichtet wurde.  
@@ -158,7 +159,7 @@ So kann von den Clients der am nächsten liegende Server zur Übertragung der In
 > [!NOTE]  
 >  Wenn ein Client seinen Standort wechselt (wenn beispielsweise ein Laptop an einen Remotestandort wechselt und seine Netzwerkadresse ändert), kann er an seinem neuen Standort einen Verwaltungspunkt (bzw. Proxyverwaltungspunkt) des lokalen Standorts verwenden, bevor er versucht, einen Verwaltungspunkt seines zugewiesenen Standorts zu verwenden (was die bevorzugten Verwaltungspunkte einschließt).  Weitere Informationen finden Sie unter [Understand how clients find site resources and services for System Center Configuration Manager (Verstehen, wie Clients Standortressourcen und -dienste für System Center Configuration Manager suchen)](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).  
 
-###  <a name="a-namebkmkboundaryoverlapa-about-overlapping-boundaries"></a><a name="BKMK_BoundaryOverlap"></a> Informationen zu überlappenden Grenzen  
+###  <a name="BKMK_BoundaryOverlap"></a> Informationen zu überlappenden Grenzen  
  Bei der Abfrage von Inhaltsorten werden überlappende Grenzkonfigurationen von Configuration Manager unterstützt:  
 
 -   **Wenn ein Client Inhalt anfordert**und die Netzwerkadresse des Clients zu mehreren Begrenzungsgruppen gehört, erhält der Client von Configuration Manager eine Liste mit allen Verteilungspunkten, die über diesen Inhalt verfügen.  
@@ -167,15 +168,10 @@ So kann von den Clients der am nächsten liegende Server zur Übertragung der In
 
 So kann von den Clients der am nächsten liegende Server zur Übertragung der Inhalts- oder Zustandsmigrationsinformationen ausgewählt werden.  
 
-###  <a name="a-namebkmkboudnarynetworkspeeda-about-network-connection-speed"></a><a name="BKMK_BoudnaryNetworkSpeed"></a> Informationen zur Netzwerkverbindungsgeschwindigkeit  
+###  <a name="BKMK_BoudnaryNetworkSpeed"></a> Informationen zur Netzwerkverbindungsgeschwindigkeit  
  Sie können die Netzwerkverbindungsgeschwindigkeit für jeden Standortsystemserver in einer Begrenzungsgruppe festlegen. Diese Einstellung gilt für Clients, die sich basierend auf der Konfiguration dieser Begrenzungsgruppe mit einem Standortsystem verbinden. Der gleiche Standortsystemserver kann in verschiedenen Begrenzungsgruppen unterschiedliche Verbindungsgeschwindigkeiten aufweisen.  
 
  Standardmäßig wird die Netzwerkverbindungsgeschwindigkeit auf **Schnell** festgelegt, aber Sie können sie in **Langsam** ändern. Anhand der Netzwerkverbindungsgeschwindigkeit und der Bereitstellungskonfiguration wird geprüft, ob Inhalt von einem Verteilungspunkt heruntergeladen werden kann, wenn der Client in einer zugeordneten Begrenzungsgruppe enthalten ist.  
 
  Weitere Informationen zum Einfluss der Netzwerkverbindungsgeschwindigkeit auf den Inhaltsabruf durch Clients finden Sie unter [Quellspeicherortszenarios für Inhalte](../../../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

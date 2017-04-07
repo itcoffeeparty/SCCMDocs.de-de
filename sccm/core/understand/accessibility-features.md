@@ -2,7 +2,7 @@
 title: Barrierefreiheit | Microsoft-Dokumentation
 description: "Enthält Informationen zu den Funktionen, die System Center Configuration Manager für Menschen mit Behinderung zugänglich machen."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/27/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bf0ca29a68cb8fbbcacc2acd148c06abf08c5cab
-ms.openlocfilehash: ca1207b8d48ca66096d1bbe674541223c033d895
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 98599b3c188c9e9b508fea79ecf9a2b2348e9288
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="accessibility-features-in-system-center-configuration-manager"></a>Barrierefreiheitsfunktionen in System Center Configuration Manager
@@ -28,7 +29,7 @@ ms.openlocfilehash: ca1207b8d48ca66096d1bbe674541223c033d895
 System Center Configuration Manager enthält Funktionen, durch die es für Menschen mit Behinderungen zugänglich gemacht wird.
 
 
-## <a name="a-namebkmkaconsolea-accessibility-features-for-the-configuration-manager-console"></a><a name="bkmk_aconsole"></a> Barrierefreiheitsfunktionen für die Configuration Manager-Konsole  
+## <a name="bkmk_aconsole"></a> Barrierefreiheitsfunktionen für die Configuration Manager-Konsole  
 -   Verwenden Sie zum Zugriff auf einen Arbeitsbereich die folgenden Tastenkombinationen:  
 
 |Arbeitsbereich|Tastenkombination|  
@@ -46,14 +47,14 @@ System Center Configuration Manager enthält Funktionen, durch die es für Mensc
 
 -   Verwenden Sie dreimal UMSCHALT+TAB, um auf die Adressleiste zuzugreifen, wenn sich der Fokus auf dem Verzeichnisknoten befindet.  
 
--   Auf einer Assistenten- oder Eigenschaftenseite können Sie per Tastenkombination durch die Felder navigieren. Wählen Sie die ALT-TASTE plus das jeweils unterstrichene Zeichen (ALT+_), um ein bestimmtes Feld auszuwählen.  
+-   Auf einer Assistenten- oder Eigenschaftenseite können Sie per Tastenkombination durch die Felder navigieren. Wählen Sie die ALT-TASTE plus das jeweils unterstrichene Zeichen (ALT+_), um ein bestimmtes Feld auszuwählen.     
 
- -  Ab Version 1606 können Sie zum Navigieren zwischen den verschiedenen Knoten eines Arbeitsbereichs den ersten Buchstaben eines Knotennamens eingeben. Jeder Tastendruck verschiebt den Cursor auf den nächsten Knoten, der mit diesem Buchstaben beginnt. Wenn Sie eine Sprachausgabe verwenden, liest der Reader den Namen des Knotens.
+-  Geben Sie den ersten Buchstaben des Namens eines Knotens ein, um zu den verschiedenen Knoten eines Arbeitsbereichs zu navigieren. Jeder Tastendruck verschiebt den Cursor auf den nächsten Knoten, der mit diesem Buchstaben beginnt. Wenn Sie eine Sprachausgabe verwenden, liest der Reader den Namen des Knotens.
 
 > [!NOTE]  
 >  Die in diesem Abschnitt enthaltenen Informationen gelten ggf. nur für Benutzer, die Microsoft-Produkte in den USA lizenzieren lassen. Wenn Sie dieses Produkt außerhalb der USA erworben haben, enthält das Softwarepaket eine Karte mit zusätzlichen Informationen, der die Kontaktinformationen für den Microsoft-Support zu entnehmen sind. Diese Informationen finden Sie auch auf der [Microsoft-Website zur Barrierefreiheit](http://go.microsoft.com/fwlink/?LinkId=8431). Setzen Sie sich mit der Niederlassung in Ihrer Nähe in Verbindung, um herauszufinden, ob die in diesem Abschnitt aufgeführten Produkte und Dienste in Ihrem Land bzw. Ihrer Region verfügbar sind. Informationen zur Barrierefreiheit stehen auch in anderen Sprachen (einschl. Japanisch und Französisch) zur Verfügung.  
 
-##  <a name="a-namebkmkahelpa-accessibility-features-for-configuration-manager-help"></a><a name="bkmk_ahelp"></a> Barrierefreiheitsfunktionen für die Configuration Manager-Hilfe  
+##  <a name="bkmk_ahelp"></a> Barrierefreiheitsfunktionen für die Configuration Manager-Hilfe  
  Die Configuration Manager-Hilfe enthält Barrierefreiheitsfunktionen, die sie für eine größere Zahl an Benutzern zugänglich macht. Dazu gehören u.a. auch Benutzer mit eingeschränkter Beweglichkeit der Hände, Sehbehinderungen oder anderen Behinderungen.  
 
 |Zweck|Tastenkombination|  
@@ -108,9 +109,4 @@ System Center Configuration Manager enthält Funktionen, durch die es für Mensc
 
     > [!NOTE]  
     >  Wenn Sie die Farbe der Hilfethemen im Hilfefenster ändern, wirkt sich die Änderung auch auf die Farbe für Webseiten in Windows Internet Explorer aus.  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

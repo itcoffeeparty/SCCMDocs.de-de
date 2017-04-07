@@ -17,9 +17,9 @@ ms.author: andredm
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 58375a7f23109bbb2e304c17312f3438aa683cb2
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 6832bb6c6a26be76720938154942a5eb99022785
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 03/06/2017
 
 3. Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Kompatibilitätsrichtlinie erstellen**.
 
-4. Geben Sie auf der Seite **Allgemein** des Assistenten zum Erstellen von Kompatibilitätsrichtlinien ** **die folgenden Informationen an:
+4. Geben Sie auf der Seite **Allgemein** des Assistenten zum Erstellen von Kompatibilitätsrichtlinien ****die folgenden Informationen an:
 
   * **Name:** Geben Sie einen eindeutigen Namen für die Konformitätsrichtlinie ein. Sie können maximal 256 Zeichen verwenden.
   * **Beschreibung:** Geben Sie eine Beschreibung ein, die Ihnen einen Überblick über das VPN-Profil verschafft und dabei behilflich ist, das Profil in der Configuration Manager-Konsole zu ermitteln. Sie können maximal 256 Zeichen verwenden.
@@ -48,17 +48,12 @@ ms.lasthandoff: 03/06/2017
     * **Kritisch** – Von Geräten, bei denen bei dieser Kompatibilitätsregel ein Fehler auftritt, wird der Fehlerschweregrad **Kritisch** für Configuration Manager-Berichte gemeldet.
     * **Kritisch mit Ereignis** – Von Geräten, bei denen bei dieser Kompatibilitätsregel ein Fehler auftritt, wird der Fehlerschweregrad **Kritisch** für Configuration Manager-Berichte gemeldet. Dieser Schweregrad wird zudem im Anwendungsereignisprotokoll als Windows-Ereignis protokolliert.      
 
-5.  Wählen Sie auf der Seite **Unterstützte Plattformen** die Geräteplattformen, für die diese Kompatibilitätsrichtlinie ausgewertet wird, oder klicken Sie auf **Alle auswählen** , um alle Geräteplattformen auszuwählen.
+5.  Wählen Sie auf der Seite **Unterstützte Plattformen** die Geräteplattformen, für die diese Kompatibilitätsrichtlinie ausgewertet wird, oder klicken Sie auf **Alle auswählen** , um alle Geräteplattformen auszuwählen. Folgende Plattformen werden unterstützt: Windows 7, 8.1, 10, Windows Server 2008 R2, 2012, 2012 R2 und 2016.
 
 6.  Auf der Seite **Regeln** definieren Sie eine oder mehrere Regeln, die die Konfiguration bestimmen, die Geräte aufweisen müssen, um als kompatibel eingestuft zu werden. Wenn Sie eine Kompatibilitätsrichtlinie erstellen, sind einige Regeln standardmäßig aktiviert, die Sie aber bearbeiten oder löschen können. Eine vollständige Liste aller Regeln finden Sie unter **Regeln für Kompatibilitätsrichtlinien** weiter unten in diesem Thema.
 
 > [!NOTE]  
->  Auf Windows-PCs wird die Windows-Betriebssystemversion 8.1 als Version 6.3 gemeldet (anstelle von 8.1).    Wenn die Betriebssystem-Versionsregel für Windows auf die Version Windows 8.1 festgelegt ist, wird das betreffende Gerät als nicht kompatibel gemeldet, selbst wenn auf ihm Windows 8.1 installiert ist. Stellen Sie deshalb sicher, dass Sie in den Regeln für das minimal oder maximal zulässige Betriebssystem die richtige **gemeldete** Version von Windows festlegen. Die Versionsnummer muss derjenigen entsprechen, die durch den winver-Befehl zurückgegeben wird. Bei Windows Phones tritt dieses Problem nicht auf. Dort wird als Version wie erwartet 8.1 gemeldet.  
->   
->  Bei Windows-PCs mit dem Betriebssystem Windows 10 muss die Version auf „10.0“ plus OS-Buildnummer festgelegt werden, die vom Befehl „winver“ zurückgegeben wird. Beispiel: 10.0.10586.  
-> Bei Windows 10 Mobile gibt es dieses Problem nicht.  
->   
->  ![CA&#95;Win10OSversion](media/CA_Win10OSversion.png)  
+>  Auf Windows-PCs wird die Windows-Betriebssystemversion 8.1 als Version 6.3 gemeldet (anstelle von 8.1).    Wenn die Betriebssystem-Versionsregel für Windows auf die Version Windows 8.1 festgelegt ist, wird das betreffende Gerät als nicht kompatibel gemeldet, selbst wenn auf ihm Windows 8.1 installiert ist. Stellen Sie deshalb sicher, dass Sie in den Regeln für das minimal oder maximal zulässige Betriebssystem die richtige **gemeldete** Version von Windows festlegen. Die Versionsnummer muss derjenigen entsprechen, die durch den winver-Befehl zurückgegeben wird. Bei Windows Phones tritt dieses Problem nicht auf. Dort wird als Version wie erwartet 8.1 gemeldet. Bei Windows-PCs mit dem Betriebssystem Windows 10 muss die Version auf „10.0“ plus OS-Buildnummer festgelegt werden, die vom Befehl **winver** zurückgegeben wird.
 
 7.  Überprüfen Sie auf der Seite **Zusammenfassung** des Assistenten die von Ihnen festgelegten Einstellungen, und schließen Sie dann den Assistenten ab.
 
@@ -100,6 +95,36 @@ ms.lasthandoff: 03/06/2017
 
     -   **Unbekannt**: Zeigt eine Liste aller Benutzer und Geräte an, für die keine Kompatibilität mit der ausgewählten Richtlinienbereitstellung zusammen mit dem aktuellen Clientstatus von Geräten gemeldet wurde.
 
+### <a name="to-monitor-the-individual-compliance-status"></a>Überwachen des individuellen Konformitätsstatus
+
+Sie können sich auch den Status eines einzelnen Gerät anzeigen lassen:
+
+1.  Klicken Sie in der Configuration Manager-Konsole auf den Arbeitsbereich **Bestand und Konformität**.
+
+2.  Klicken Sie auf **Geräte**.
+3.  Klicken Sie mit der rechten Maustaste auf eine der Spalten, um mehr Spalten zu aktivieren.
+
+Sie können die folgenden Spalten hinzufügen:
+
+- **Azure Active Directory-Geräte-ID:** der eindeutige Bezeichner für das Gerät in AAD.
+
+- **Konformitätsfehlerdetails:** ausführliche Fehlermeldung, wenn der End-to-End-Prozess schief geht. Wenn diese Spalte leer ist, bedeutet dies, dass keine Fehler gefunden wurden und der Konformitätsstatus erfolgreich gemeldet wurde.
+
+- **Speicherort des Konformitätsfehlers:** bietet weitere Details dazu, wo die Konformität fehlschlug. Wenn diese Spalte leer ist, bedeutet dies, dass keine Fehler gefunden wurden und der Konformitätsstatus erfolgreich gemeldet wurde. Beispiele, in denen die Konformität nicht ausgeführt werden konnte: 
+    - ConfigMgr-Client
+    - Verwaltungspunkt
+    - Intune
+    - Azure Active Directory
+<br></br>
+- **Evaluierungszeitraum der Konformität:** letzte Überprüfung der Konformität.
+
+- **Festgelegter Zeitraum der Konformität:** letzte Aktualisierung der Konformität mit Azure Active Directory.
+
+- **Konformität mit bedingtem Zugriff:** Ist der Computer mit bedingten Zugriffsrichtlinien konform oder nicht?
+
+> [!IMPORTANT]
+> Diese Spalten werden standardmäßig nicht angezeigt.
+
 ### <a name="to-view-intune-compliance-policies-charts"></a>Anzeigen von Diagrammen zu Konformitätsrichtlinien von Intune
 1. Klicken Sie ab Version 1610 von Configuration Manager in der Configuration Manager-Konsole auf **Überwachung**.
 2. Wechseln Sie im Arbeitsbereich **Überwachung** zu **Übersicht** > **Konformitätseinstellungen** >  **Konformitätsrichtlinien**.
@@ -124,7 +149,7 @@ ms.lasthandoff: 03/06/2017
     * iOS 6+
     * Android 4.0+
     * Samsung KNOX Standard 4.0+
-* **Kennwort zum Entsperren eines inaktiven Geräts anfordern (Update&1602;):** Legen Sie fest, dass Benutzer für den Zugriff auf ein gesperrtes Gerät ein Kennwort benötigen.
+* **Kennwort zum Entsperren eines inaktiven Geräts anfordern (Update 1602):** Legen Sie fest, dass Benutzer für den Zugriff auf ein gesperrtes Gerät ein Kennwort benötigen.
 
   **Unterstützt auf:**
   * Windows Phone 8+
@@ -132,7 +157,7 @@ ms.lasthandoff: 03/06/2017
   * Android 4.0+
   * Samsung KNOX Standard 4.0+
 
-* **Minuten Inaktivität vor Anforderung des Kennworts (Update&1602;):** Gibt die Leerlaufzeit an, bevor der Benutzer sein Kennwort erneut eingeben muss. Legen Sie den Wert auf eine der verfügbaren Optionen fest: **1 Minute**, **5 Minuten**, **15 Minuten**, **30 Minuten**, **1 Stunde**.
+* **Minuten Inaktivität vor Anforderung des Kennworts (Update 1602):** Gibt die Leerlaufzeit an, bevor der Benutzer sein Kennwort erneut eingeben muss. Legen Sie den Wert auf eine der verfügbaren Optionen fest: **1 Minute**, **5 Minuten**, **15 Minuten**, **30 Minuten**, **1 Stunde**.
 
   Diese Regel muss mit der Option **Kennwort zum Entsperren eines inaktiven Geräts anfordern**verwendet werden. Der hier festgelegte Wert bestimmt, wann das Gerät als inaktiv betrachtet und gesperrt wird. Wenn  **Kennwort zum Entsperren eines inaktiven Geräts anfordern** auf **TRUE**festgelegt ist, muss der Benutzer ein Kennwort eingeben, um auf das gesperrte Geräte zuzugreifen.
 
@@ -222,4 +247,29 @@ ms.lasthandoff: 03/06/2017
   Informationen zur Funktionsweise des Integritätsnachweisdiensts finden Sie unter [HealthAttestation CSP](https://msdn.microsoft.com/library/dn934876.aspx)(HealthAttestation-Kryptografiedienstanbieter).
   **Unterstützt auf:**
   * Windows 10 und Windows 10 Mobile
+
+- **Apps, die auf dem Gerät nicht installiert werden können:** Wenn Benutzer Apps installieren, die sich auf der Administratorliste der nicht kompatiblen Apps befinden, werden diese blockiert, wenn versucht wird, auf Geschäftsmails oder auf andere Geschäftsressourcen, die den bedingten Zugriff unterstützen, zuzugreifen. Für diese Regel wird der Name der App benötigt; wenn Sie eine App auf diese Administratorliste der nicht kompatiblen Apps setzen möchten, benötigen Sie dafür zusätzlich die App-ID. Ebenso kann der App-Herausgeber hinzugefügt werden; dies ist jedoch nicht zwingend notwendig.
+    - **Unterstützt auf:**
+      * iOS 6+
+      * Android 4.0+
+      * Samsung KNOX Standard 4.0+
+
+#### <a name="whats-app-id"></a>Was ist App-ID?
+
+App-ID ist ein Bezeichner, der die App in den Anwendungsdiensten Apple und Google eindeutig identifiziert. Beispielsweise „com.contoso.myapp“.
+
+#### <a name="find-app-ids"></a>Suchen der App-IDs
+
+- **Android**
+    - Die App-ID finden Sie in der URL des Google Play Store, die für die Erstellung der App verwendet wird:
+        - Beispiel-App-ID: ***…?id=com.companyname.appname&hl=en***
+
+- **iOS**
+    - Suchen Sie in der URL des iTunes Store die **ID#**, Beispiel: ***/id875948587?mt=8***
+    - Navigieren Sie in einem Webbrowser zur folgenden URL, und ersetzen Sie dabei die Zahl mit der eben gefundenen ID#: 
+        - https://itunes.apple.com/lookup?id=875948587
+    - Laden Sie die Textdatei herunter und öffnen Sie sie.
+    - Suchen Sie nach dem Text „*bundleid*“.
+    - Beispiel einer App-ID: „*bundleId*“: „*com.companyname.appname*“ 
+
 

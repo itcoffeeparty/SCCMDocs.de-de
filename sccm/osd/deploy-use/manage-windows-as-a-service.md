@@ -2,7 +2,7 @@
 title: "Verwalten von Windows as a Service – Configuration Manager | Microsoft-Dokumentation"
 description: "Lassen Sie sich mit Configuration Manager den Status von Windows as a Service anzeigen, erstellen Sie Wartungspläne, um Bereitstellungsringe zu bilden, und lassen Sie sich Warnungen anzeigen, wenn Windows 10-Clients das Supportende erreichen."
 ms.custom: na
-ms.date: 01/23/2017
+ms.date: 03/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
-ms.openlocfilehash: 57478d9a9ee5f933000018b47e8a11a80e281252
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
+ms.openlocfilehash: 87c3a35f4688c505f9b659a1bfe62f7a04cc7f11
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -139,6 +139,8 @@ Wartungspläne verwenden nur die Softwareupdateklassifizierung **Upgrades** und 
 
         -   **Bereitstellung zum Testen (Current Branch for Business):** Der CBB Servicing Branch wird normalerweise für die umfassende Bereitstellung verwendet. Windows 10-Clients im CBB Servicing Branch erhalten denselben Build von Windows 10 wie Clients im CB Servicing Branch, allerdings zu einem späteren Zeitpunkt.
 
+        Weitere Informationen zu Servicing Branches und die für Sie am besten geeignete Option finden Sie unter [Servicing Branches](https://technet.microsoft.com/itpro/windows/manage/waas-overview#servicing-branches).
+
     -   **Anzahl der Tage nach der Veröffentlichung eines neuen Updates durch Microsoft, nach der Sie die Bereitstellung in Ihrer Umgebung vornehmen möchten:** In Configuration Manager wird ausgewertet, ob ein Upgrade in die Bereitstellung eingeschlossen werden soll, und zwar, wenn das aktuelle Datum nach dem Veröffentlichungsdatum plus der Anzahl der für diese Einstellung konfigurierten Tage liegt.
 
     -   Klicken Sie in Configuration Manager vor Version 1602 auf **Vorschau**, um die Windows 10-Updates anzuzeigen, die dem Bereitschaftsstatus zugeordnet sind.  
@@ -257,17 +259,17 @@ Wenden Sie das folgende Verfahren an, um die Eigenschaften eines Wartungsplans z
 
     -   **Detailstufe**: Geben Sie die Detailstufe für die von den Clientcomputern zurückgegebenen Zustandsmeldungen an.  
 
-   **Downloadeinstellungen**: Konfigurieren Sie auf der Registerkarte „Downloadeinstellungen“ die folgenden Einstellungen:  
+    **Downloadeinstellungen**: Konfigurieren Sie auf der Registerkarte „Downloadeinstellungen“ die folgenden Einstellungen:  
 
-    -   Geben Sie an, ob die Softwareupdates vom Client heruntergeladen und installiert werden, wenn ein Client mit einer langsamen Netzwerkverbindung oder einer Fallbackinhaltsquelle vorliegt.  
+    - Geben Sie an, ob die Softwareupdates vom Client heruntergeladen und installiert werden, wenn ein Client mit einer langsamen Netzwerkverbindung oder einer Fallbackinhaltsquelle vorliegt.  
 
-    -   Geben Sie an, ob die Softwareupdates vom Client von einem Fallbackverteilungspunkt heruntergeladen und installiert werden sollen, wenn der Inhalt für die Softwareupdates an einem bevorzugten Verteilungspunkt nicht verfügbar ist.  
+    - Geben Sie an, ob die Softwareupdates vom Client von einem Fallbackverteilungspunkt heruntergeladen und installiert werden sollen, wenn der Inhalt für die Softwareupdates an einem bevorzugten Verteilungspunkt nicht verfügbar ist.  
 
     -   **Freigeben von Inhalten für andere Clients im gleichen Subnetz zulassen**: Geben Sie an, ob BranchCache beim Herunterladen von Inhalten verwendet werden soll. Weitere Informationen zu BranchCache finden Sie unter [Grundlegende Konzepte für die Inhaltsverwaltung](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
 
     -   Geben Sie an, ob von Clients Softwareupdates von Microsoft Update heruntergeladen werden sollen, wenn keine Softwareupdates an Verteilungspunkten verfügbar sind.
-    > [!IMPORTANT]
-    > Verwenden Sie diese Einstellung nicht für Windows 10-Wartungsupdates. Configuration Manager kann (zumindest bis Version 1610) keine Windows 10-Wartungsupdates von Microsoft Update herunterladen.
+        > [!IMPORTANT]
+        > Verwenden Sie diese Einstellung nicht für Windows 10-Wartungsupdates. Configuration Manager kann (zumindest bis Version 1610) keine Windows 10-Wartungsupdates von Microsoft Update herunterladen.
 
     -   Geben Sie an, ob es Clients mit einer getakteten Internetverbindung möglich sein soll, Inhalt nach dem Installationsstichtag herunterzuladen. Bei getakteten Internetverbindungen berechnen einige Internetanbieter die anfallenden Gebühren anhand der Datenmenge, die Sie senden und empfangen.   
 

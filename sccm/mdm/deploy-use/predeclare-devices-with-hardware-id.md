@@ -2,7 +2,7 @@
 title: "Vorabdeklarieren von Geräten mit IMEI-Nummern oder iOS-Seriennummern | Microsoft-Dokumentation"
 description: "Vorabdeklarieren von unternehmenseigenen Geräten mit ihrer IMEI- oder iOS-Seriennummer."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/24/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -12,13 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ddb4c68e-e7f7-475a-89e2-7379a86e44c4
 caps.latest.revision: 3
-author: mtillman
-ms.author: mtillman
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fd410a6572acce685dc6cdb954c1c2d97d5ed8b
-ms.openlocfilehash: 2aa9c8c65904e573b6a81ac865e09d1cf2458509
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: 7573590763c68a4c97d388be1e64054c318da9cc
+ms.openlocfilehash: 4fe6741481c79ed4e4496846152902d6d8ca1f96
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>Vorabdeklarieren von Geräten mit IMEI- oder iOS-Seriennummern
@@ -26,6 +26,8 @@ ms.lasthandoff: 12/16/2016
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 Sie können unternehmenseigene Geräte identifizieren, indem Sie deren IMEI-Nummern (International Station Mobile Equipment Identity) oder iOS-Seriennummern importieren. Sie können eine CSV-Datei (comma-separated values, durch Trennzeichen getrennte Datei) hochladen, die die IMEI-Nummern der Geräte enthält, oder Geräteinformationen manuell eingeben.  Importierte Informationen legen den **Besitz** der registrierten Geräte in der Liste der Geräte auf **Unternehmen** fest. Dennoch wird für jeden Benutzer, der auf den Dienst zugreift, eine Intune-Lizenz benötigt.  
+
+Wenn Sie Seriennummern von firmeneigenen iOS-Geräten hochladen, müssen sie mit einem Unternehmensregistrierungsprofil gepaart werden. Geräte müssen entweder mithilfe des Apple-Programms zur Geräteregistrierung (DEP) oder mit Apple Configurator registriert werden, damit sie als unternehmenseigen angezeigt werden. 
 
 ## <a name="how-to-predeclare-corporate-owned-devices"></a>Vorgehensweise für das Vorabdeklarieren von unternehmenseigenen Geräten
 

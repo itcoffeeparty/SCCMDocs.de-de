@@ -2,7 +2,7 @@
 title: Configuration Manager in Azure | Microsoft-Dokumentation
 description: Informationen zur Verwendung von Configuration Manager in einer Azure-Umgebung.
 ms.custom: na
-ms.date: 01/30/2017
+ms.date: 03/27/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 264e009952db34a6f4929ecb70dc6857117ce4fe
-ms.openlocfilehash: e8798adc0e479417c682450d181611284c148e6d
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 5276ad999fc871496d79e6efff34d5edc6335380
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Configuration Manager in Azure – Häufig gestellte Fragen
@@ -39,11 +40,11 @@ Nein, es handelt sich um ein IaaS-Szenario (Infrastructure-as-a-Service), da Sie
 
 ### <a name="what-areas-should-i-pay-attention-to-when-considering-a-move-of-my-configuration-manager-infrastructure-to-azure"></a>Auf welche Bereiche sollte ich achten, wenn ich das Verschieben meiner Configuration Manager-Infrastruktur in Azure in Betracht ziehe?
 Das ist eine gute Frage. Die folgenden Bereiche sind bei dieser Entscheidung am wichtigsten, jeder dieser Bereiche wird in einem separaten Abschnitt dieses Themas behandelt:
-1.  Netzwerk
-2.  Verfügbarkeit
-3.  Leistung
-4.  Kosten
-5.  Benutzerfreundlichkeit
+1.    Netzwerk
+2.    Verfügbarkeit
+3.    Leistung
+4.    Kosten
+5.    Benutzerfreundlichkeit
 
 ## <a name="networking"></a>Netzwerk
 ### <a name="what-about-networking-requirements-should-i-use-expressroute-or-an-azure-vpn-gateway"></a>Wie sieht es mit Netzwerkanforderungen aus? Sollte ich ExpressRoute oder ein Azure-VPN Gateway verwenden?
@@ -145,8 +146,8 @@ Das **Cloudverwaltungsgateway** bietet eine einfache Möglichkeit zum Verwalten 
 
 Sie können damit beginnen, das Cloudverwaltungsgateway in Ihrer Umgebung zu testen und uns Feedback zu geben, um es zu verbessern. Weitere Informationen finden Sie unter [Use pre-release features from updates (Verwenden von Vorabfeatures aus Updates)](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkprereleasea-use-pre-release-features-from-updates).
 
-### <a name="i-also-heard-that-you-have-another-new-feature-called-peer-cache-in-the-technical-preview-version-1604-is-that-different-than-branchcache-which-one-should-i-choose"></a>Außerdem habe ich gehört, dass die Technical Preview Version 1604 eine weitere neue Funktion namens Peercache umfasst. Unterscheidet sich diese von BranchCache? Welche sollte ich auswählen?
-Ja, sie unterscheidet sich komplett. Bei [Peercache](/sccm/core/get-started/capabilities-in-technical-preview-1604#bkmk_peercache) handelt es sich um eine 100% native Configuration Manager-Technologie, wobei BranchCache eine Windows-Funktion ist. Beide können hilfreich sein. BranchCache verwendet eine Übertragung, um den erforderlichen Inhalt zu suchen, während Peercache den üblichen Verteilungsworkflow und die Begrenzungsgruppeneinstellungen von Configuration Manager verwendet.
+### <a name="i-also-heard-that-you-have-another-new-feature-called-peer-cache-introduced-as-a-pre-release-feature-in-version-1610-is-that-different-than-branchcache-which-one-should-i-choose"></a>Außerdem habe ich gehört, dass es eine weitere neue Funktion namens Peercache gibt, die vorab in der Version 1610 eingeführt wurde. Unterscheidet sich diese von BranchCache? Welche sollte ich auswählen?
+Ja, sie unterscheidet sich komplett. Bei [Peercache](/sccm/core/plan-design/hierarchy/client-peer-cache) handelt es sich um eine 100% native Configuration Manager-Technologie, wobei BranchCache eine Windows-Funktion ist. Beide können hilfreich sein. BranchCache verwendet eine Übertragung, um den erforderlichen Inhalt zu suchen, während Peercache den üblichen Verteilungsworkflow und die Begrenzungsgruppeneinstellungen von Configuration Manager verwendet.
 
 Sie können jeden Client so konfigurieren, dass er eine Peercache-Quelle darstellt. Wenn Verwaltungspunkte Clients anschließend Informationen zu Quellspeicherorten für Inhalt bereitstellen, bieten sie Details sowohl zu den Verteilungspunkten als auch zu allen Peercache-Quellen, die über den Inhalt verfügen, den der Client benötigt.
 
@@ -179,9 +180,4 @@ Das ist schwer zu sagen, da jede Umgebung anders ist. Am besten ermitteln Sie di
  - Weitere Informationen zu ExpressRoute: http://azure.microsoft.com/documentation/articles/expressroute-introduction/
 
  
-
-
-
-<!--HONumber=Jan17_HO5-->
-
 

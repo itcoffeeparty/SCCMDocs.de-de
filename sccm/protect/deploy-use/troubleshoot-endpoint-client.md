@@ -17,8 +17,9 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1432568286605d29683416885d7aa522c649016e
-ms.openlocfilehash: fde190f141fb55462755119b533519d05af3f3c3
+ms.sourcegitcommit: 6accec2d356861b273b25ba2b6338d9684a46ff6
+ms.openlocfilehash: 1b096e71f5131214fb4e235e84d0b7f63e566831
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -64,7 +65,7 @@ Wenn bei Windows Defender oder Endpoint Protection Probleme auftreten, wenden Si
     > [!NOTE]  
     >  Beim Zurücksetzen dieser Einstellungen in Internet Explorer werden die temporären Dateien, die Cookies, der Browserverlauf sowie die Onlinekennwörter gelöscht. Die Favoriten bleiben jedoch erhalten.  
 
-2.  Klicken Sie auf **Start** , suchen Sie nach **inetcpl.cpl**, und drücken Sie dann die ** **EINGABETASTE.  
+2.  Klicken Sie auf **Start** , suchen Sie nach **inetcpl.cpl**, und drücken Sie dann die ****EINGABETASTE.  
 
 3.  Klicken Sie im Dialogfeld **Internetoptionen** auf die Registerkarte **Erweitert** .  
 
@@ -82,7 +83,7 @@ Wenn bei Windows Defender oder Endpoint Protection Probleme auftreten, wenden Si
 
 1.  Beenden Sie alle geöffneten Programme, einschließlich Internet Explorer.  
 
-2.  Klicken Sie auf **Start** , suchen Sie nach **inetcpl.cpl**, und drücken Sie dann die ** **EINGABETASTE.  
+2.  Klicken Sie auf **Start** , suchen Sie nach **inetcpl.cpl**, und drücken Sie dann die ****EINGABETASTE.  
 
 3.  Klicken Sie im Dialogfeld **Internetoptionen** auf die Registerkarte **Programme** .  
 
@@ -116,11 +117,11 @@ Wenn bei Windows Defender oder Endpoint Protection Probleme auftreten, wenden Si
 
     1.  Klicken Sie auf **Start** , suchen Sie nach  **cmd**, und klicken Sie dann auf **OK**.  
 
-    2.  Geben Sie **cd %windir%**ein, und drücken Sie die ** **EINGABETASTE.  
+    2.  Geben Sie **cd %windir%**ein, und drücken Sie die ****EINGABETASTE.  
 
-    3.  Geben Sie **ren SoftwareDistribution SDTemp**ein, und drücken Sie die ** **EINGABETASTE.  
+    3.  Geben Sie **ren SoftwareDistribution SDTemp**ein, und drücken Sie die ****EINGABETASTE.  
 
-    4.  Geben Sie **exit**ein, und drücken Sie die ** **EINGABETASTE.  
+    4.  Geben Sie **exit**ein, und drücken Sie die ****EINGABETASTE.  
 
 3.  Starten Sie den Dienst „Automatische Updates“ folgendermaßen:  
 
@@ -134,7 +135,7 @@ Wenn bei Windows Defender oder Endpoint Protection Probleme auftreten, wenden Si
 
 1.  Klicken Sie auf **Start** , suchen Sie nach  **cmd**, und klicken Sie auf **OK**. Klicken Sie mit der rechten Maustaste auf **Eingabeaufforderung**, und wählen Sie dann **Als Administrator ausführen**aus.  
 
-2.  Geben Sie in das Fenster **Eingabeaufforderung** die folgenden Befehle ein, und drücken Sie nach jedem Befehl die ** ** EINGABETASTE.  
+2.  Geben Sie in das Fenster **Eingabeaufforderung** die folgenden Befehle ein, und drücken Sie nach jedem Befehl die **** EINGABETASTE.  
 
      **Cd\\**  
 
@@ -167,8 +168,7 @@ Wenn bei Windows Defender oder Endpoint Protection Probleme auftreten, wenden Si
 ##  <a name="starting-windows-defender-or-endpoint-protection-service"></a>Starten von Windows Defender oder des Endpoint Protection-Diensts  
  **Symptom**  
 
- Sie erhalten eine Meldung darüber, dass â€œ**Windows Defender oder**  
- **Endpoint Protection den Computer nicht überwacht, da der Dienst des Programms angehalten wurde. Sie sollten ihn jetzt neu starten.**â€  
+ Eine Meldung mit dem folgenden Hinweis wird angezeigt: **Windows Defender or Endpoint Protection isn't monitoring your computer because the program's service stopped (Der Computer wird nicht von Windows Defender oder Endpoint Protection überwacht, da der Dienst des Programms angehalten wurde). Sie sollten ihn jetzt neu starten.** 
 
  **Lösung**  
 
@@ -176,9 +176,9 @@ Wenn bei Windows Defender oder Endpoint Protection Probleme auftreten, wenden Si
 
 -   Schließen Sie alle Anwendungen, und starten Sie den Computer neu.  
 
-### <a name="step-2-make-sure-the-windows-defender-orbr-------endpoint-protection-service-is-set-to-automatic-and-is-started"></a>Schritt 2: Stellen Sie sicher, dass der Dienst „Windows Defender“ oder <br />      „Endpoint Protection“ auf „Automatisch“ festgelegt ist und gestartet wurde  
+### <a name="step-2-make-sure-the-windows-defender-or-endpoint-protection-service-is-set-to-automatic-and-is-started"></a>Schritt 2: Stellen Sie sicher, dass der Dienst „Windows Defender“ oder „Endpoint Protection“ auf „Automatisch“ festgelegt ist und gestartet wurde.  
 
-1.  Klicken Sie auf **Start** , suchen Sie nach **services.msc**, und drücken Sie dann die ** **EINGABETASTE.  
+1.  Klicken Sie auf **Start** , suchen Sie nach **services.msc**, und drücken Sie dann die ****EINGABETASTE.  
 
 2.  Suchen Sie nach **Microsoft-Antischadsoftwaredienst**. Klicken Sie mit der rechten Maustaste darauf, und klicken Sie dann auf **Eigenschaften** , oder doppelklicken Sie auf den Dienst, um ihn zu öffnen.  
 
@@ -190,7 +190,7 @@ Wenn bei Windows Defender oder Endpoint Protection Probleme auftreten, wenden Si
 
 ### <a name="step-3-remove-any-existing-internet-security-programs"></a>Schritt 3: Entfernen aller eventuell vorhandener Internetsicherheitsprogramme  
 
-1.  Klicken Sie auf **Start** , suchen Sie nach **appwiz.cpl**, und drücken Sie dann die ** **EINGABETASTE.  
+1.  Klicken Sie auf **Start** , suchen Sie nach **appwiz.cpl**, und drücken Sie dann die ****EINGABETASTE.  
 
 2.  Deinstallieren Sie in der Liste der installierten Programme sämtliche Drittanbieter-Internet-Sicherheitsprogramme.*  
 
@@ -207,7 +207,7 @@ Wenn bei Windows Defender oder Endpoint Protection Probleme auftreten, wenden Si
 
 ### <a name="step-4-uninstallreinstall-endpoint-protection"></a>Schritt 4: Deinstallieren und Neuinstallieren von Endpoint Protection  
 
-1.  Klicken Sie auf **Start** , suchen Sie nach **appwiz.cpl**, und drücken Sie dann die ** **EINGABETASTE.  
+1.  Klicken Sie auf **Start** , suchen Sie nach **appwiz.cpl**, und drücken Sie dann die ****EINGABETASTE.  
 
 2.  Klicken Sie in der Liste mit den installierten Programmen auf **Endpoint Protection**, und deinstallieren Sie es.  
 
@@ -218,7 +218,7 @@ Wenn bei Windows Defender oder Endpoint Protection Probleme auftreten, wenden Si
 
 ### <a name="step-1-verify-that-your-computer-is-connected-to-the-internet"></a>Schritt 1: Prüfen, ob der Computer mit dem Internet verbunden ist  
 
-1.  Klicken Sie auf **Start**, suchen Sie nach **ncpa.cpl**, und drücken Sie dann die ** **EINGABETASTE.  
+1.  Klicken Sie auf **Start**, suchen Sie nach **ncpa.cpl**, und drücken Sie dann die ****EINGABETASTE.  
 
 2.  Klicken Sie mit der rechten Maustaste auf den Verbindungsnamen, und klicken Sie anschließend auf **Status**.  
 
@@ -285,7 +285,7 @@ Wenn bei Windows Defender oder Endpoint Protection Probleme auftreten, wenden Si
 
 ### <a name="step-2-ensure-that-the-windows-installer-service-is-running"></a>Schritt 2: Sicherstellen, dass der Windows-Installationsdienst ausgeführt wird  
 
-1.  Klicken Sie auf **Start** , suchen Sie nach **services.msc**, und drücken Sie dann die ** **EINGABETASTE.  
+1.  Klicken Sie auf **Start** , suchen Sie nach **services.msc**, und drücken Sie dann die ****EINGABETASTE.  
 
 2.  Klicken Sie mit der rechten Maustaste auf **Windows Installer**, und klicken Sie dann auf **Starten**. Wenn die Option **Starten** nicht verfügbar ist, die Optionen **Anhalten** und **Neu starten** aber verfügbar sind, wurde der Dienst bereits gestartet.  
 
@@ -302,7 +302,7 @@ Wenn bei Windows Defender oder Endpoint Protection Probleme auftreten, wenden Si
 
 ### <a name="step-3-start-windows-in-selective-startup-mode"></a>Schritt 3: Starten von Windows im Modus „Benutzerdefinierter Systemstart“  
 
-1.  Klicken Sie auf **Start** , suchen Sie nach **msconfig**, und drücken Sie dann die ** **EINGABETASTE.  
+1.  Klicken Sie auf **Start** , suchen Sie nach **msconfig**, und drücken Sie dann die ****EINGABETASTE.  
 
 2.  Klicken Sie auf der Registerkarte **Allgemein** auf **Benutzerdefinierter Systemstart**und deaktivieren Sie dann das Kontrollkästchen **Systemstartelemente laden** .  
 
@@ -318,9 +318,4 @@ Wenn bei Windows Defender oder Endpoint Protection Probleme auftreten, wenden Si
  [Endpoint Protection client frequently asked questions (Endpoint Protection-Client – Häufig gestellte Fragen)](../../protect/deploy-use/endpoint-protection-client-faq.md)   
 
  [Hilfe zu Endpoint Protection-Client](../../protect/deploy-use/endpoint-protection-client-help.md)
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

@@ -2,7 +2,7 @@
 title: "Tasksequenzschritte – Configuration Manager | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr über die Tasksequenzschritte, die einer Configuration Manager-Tasksequenz hinzugefügt werden können."
 ms.custom: na
-ms.date: 01/23/2017
+ms.date: 03/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 79135bcea4b0ed21fe8017045226f393a1e09dac
-ms.openlocfilehash: dd1ccc6ac0e9f4add38f2431c13c6b5a5c8e1357
-ms.lasthandoff: 03/22/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 071d758f1015d16217a54fe26df5f8f948c818a3
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -660,7 +660,7 @@ Dieser Schritt wird entweder in einem Standardbetriebssystem oder in Windows PE 
 -   **Benutzerdefinierter Pfad**  
 
  **Pfad als Variable speichern**  
- Sie können den Pfad als Variable speichern, die in einem anderen Tasksequenzschritt verwendet werden kann. Wenn es mehrere Pakete gibt, fügt Configuration Manager dem Variablennamen ein numerisches Suffix hinzu. Wenn Sie beispielsweise eine Variable %*mycontent*% als eine benutzerdefinierte Variable angeben, ist dies das Stammverzeichnis, in dem alle referenzierten Inhalte gespeichert werden (dies können mehrere Pakete sein). Wenn Sie in einem Untersequenzschritt auf die Variable verweisen, z. B. „Betriebssystem aktualisieren“, wird sie mit einem numerischen Suffix verwendet. In diesem Beispiel %*mycontent01*% oder %*mycontent02*%, wobei die Nummer der Reihenfolge entspricht, in der das Paket in diesem Schritt aufgelistet ist.  
+ Sie können den Pfad als Variable speichern, die in einem anderen Tasksequenzschritt verwendet werden kann. Configuration Manager fügt dem Variablennamen ein numerisches Suffix hinzu. Wenn Sie beispielsweise eine Variable %*mycontent*% als eine benutzerdefinierte Variable angeben, ist dies das Stammverzeichnis, in dem alle referenzierten Inhalte gespeichert werden (dies können mehrere Pakete sein). Wenn Sie auf die Variable verweisen, fügen Sie der Variablen ein numerisches Suffix hinzu. Beispielsweise verweisen Sie für das erste Paket auf die Variable %*mycontent01*% Wenn Sie auf die Variable in einem Untersequenzschritt verweisen, z.B. „Betriebssystem aktualisieren“, verwenden Sie %*mycontent02*% oder %*mycontent03*%, wobei die Anzahl der Reihenfolge entspricht, in dem das Paket im Schritt aufgelistet wird.  
 
  **Wenn ein Fehler bei einem Paketdownload auftritt, mit anderen Paketen in der Liste fortfahren**  
  Gibt an, dass im Falle eines Fehlers beim Paketdownload zum nächsten Paket in der Liste gewechselt und der Download gestartet wird.  

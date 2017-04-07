@@ -17,9 +17,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 84f21f2e86212bc3fb6a505ff62c886e62b77d52
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
+ms.openlocfilehash: 50aea2afaf34974ca92ac58b6569bff56403a9ab
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="apply-settings-to-ios-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>Einstellungen anwenden für iOS-Apps mit Konfigurationsrichtlinien in System Center Configuration Manager
@@ -70,8 +70,9 @@ Weitere Informationen zu App-Installationstypen finden Sie unter [Einführung in
 
       Weitere Informationen zu XML-Eigenschaftenlisten finden Sie unter [Understanding XML Property Lists (XML-Eigenschaftslisten verstehen)](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) in der iOS Developer Library.
 
-            The format of the XML property list varies depending on the app you are configuring. Contact the app supplier for details about the format to use.
-            Intune supports the following data types in a property list:
+Das Format der XML-Eigenschaftenliste variiert je nach der App, die Sie konfigurieren. Wenden Sie sich an den Hersteller der App, um ausführliche Informationen über das zu verwendende Format zu erhalten.
+Intune unterstützt die folgenden Datentypen in einer Eigenschaftenliste:
+            
             ```
             <integer>
             <real>
@@ -80,8 +81,9 @@ Weitere Informationen zu App-Installationstypen finden Sie unter [Einführung in
             <dict>
             <true /> or <false />
             ```
-            For more information about data types, see [About Property Lists](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html) in the iOS Developer Library.
-            Intune also supports the following token types in the property list:
+Weitere Informationen zu Datentypen finden Sie unter [About Property Lists (Über Eigenschaftslisten)](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html) in der iOS Developer Library.
+Intune unterstützt auch die folgenden Tokentypen in der Eigenschaftsliste:
+            
             ```
             {{userprincipalname}} - (Example: John@contoso.com)
             {{mail}} - (Example: John@contoso.com)
@@ -92,11 +94,11 @@ Weitere Informationen zu App-Installationstypen finden Sie unter [Einführung in
             {{username}} - (Example: John Doe)
             {{serialnumber}} - (Example: F4KN99ZUG5V2) for iOS devices
             {{serialnumberlast4digits}} - (Example: G5V2) for iOS devices
-
-            The {{ and }} characters are used by token types only and must not be used for other purposes.
             ```
 
-      2.  Zum Importieren einer zuvor erstellten XML-Datei wählen Sie **Datei auswählen** aus.
+Die Zeichen {{ und }} werden nur von Tokentypen verwendet und dürfen nicht für andere Zwecke verwendet werden.
+            
+5. Zum Importieren einer zuvor erstellten XML-Datei wählen Sie **Datei auswählen** aus.
 6. Wählen Sie **Weiter** aus. Falls Sie Fehler im XML-Code feststellen, müssen Sie diese korrigieren, bevor Sie fortfahren.
 7. Schließen Sie die im Assistenten gezeigten Schritte ab.
 

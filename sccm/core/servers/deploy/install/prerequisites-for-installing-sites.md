@@ -2,7 +2,7 @@
 title: "Voraussetzungen für Standorte | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr zu den Voraussetzungen für die Installation der verschiedenen Arten von System Center Configuration Manager-Standorten."
 ms.custom: na
-ms.date: 3/1/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: b6c570d8addbe7df5aace461ee725a7df1d35a31
-ms.openlocfilehash: 76c8bb6d0922fad996e27c04a86cb9b4ad32a810
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: ff89d4aea6be871e64e0a788f054ba4cadb3e51d
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="prerequisites-for-installing-system-center-configuration-manager-sites"></a>Voraussetzungen für die Installation von System Center Configuration Manager-Standorten
@@ -60,14 +60,14 @@ Die folgenden Voraussetzungen gelten für die Installation eines Standorts der z
 - Der Standortserver- und Standortdatenbankcomputer müssen alle Konfigurationsvoraussetzungen erfüllen. Vor dem Start der Einrichtung können Sie zum Erkennen und Beheben von Problemen die [Voraussetzungsprüfung manuell ausführen](../../../../core/servers/deploy/install/prerequisite-checker.md).  
 
 
-### <a name="bkmk_expand"></a> Erweitern eines eigenständigen primären Standorts
+### <a name="bkmk_expand"></a> Voraussetzungen für die Erweiterung eines eigenständigen primären Standorts
 Die folgenden Voraussetzungen müssen erfüllt sein, damit ein eigenständiger primärer Standort in eine Hierarchie mit einem Standort der zentralen Verwaltung erweitert werden kann:
 
--   **Installieren Sie die Installationsmedien (die die Quelldateien enthalten) für den neuen Standort der zentralen Verwaltung, die der Version des eigenständigen primären Standorts entsprechen**
+-   **Installieren Sie die Installationsmedien für den neuen Standort der zentralen Verwaltung aus dem Ordner „CD.Latest“ (der die Quelldateien enthält), die der Version des eigenständigen primären Standorts entsprechen**
 
-     Um eine Versionsübereinstimmung sicherzustellen, installieren Sie den neuen Standort mit den Quelldateien aus dem [Ordner CD.latest](../../../../core/servers/manage/the-cd.latest-folder.md) auf dem eigenständigen primären Standort.
+ Um eine Versionsübereinstimmung sicherzustellen, verwenden die Quelldateien aus dem Ordner [CD.latest](/sccm/core/servers/manage/the-cd.latest-folder) am eigenständigen primären Standort.
 
-     Weitere Informationen zu den richtigen Quelldateien für die Installation der unterschiedlichen Standorte finden Sie unter [Options for installing different types of sites (Optionen für die Installation der unterschiedlichen Arten von Standorten)](../../../../core/servers/deploy/install/prepare-to-install-sites.md#bkmk_options) im Thema [Prepare to install sites (Vorbereitung zur Installation von Standorten)](../../../../core/servers/deploy/install/prepare-to-install-sites.md).
+ Weitere Informationen zu den richtigen Quelldateien für die Installation der unterschiedlichen Standorte finden Sie unter [Options for installing different types of sites (Optionen für die Installation der unterschiedlichen Arten von Standorten)](../../../../core/servers/deploy/install/prepare-to-install-sites.md#bkmk_options) im Thema [Prepare to install sites (Vorbereitung zur Installation von Standorten)](../../../../core/servers/deploy/install/prepare-to-install-sites.md).
 
 
 -   **Der eigenständige primäre Standort kann nicht dahingehend konfiguriert werden, dass Daten aus einer anderen Configuration Manager-Hierarchie migriert werden**  

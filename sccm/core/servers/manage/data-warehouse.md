@@ -2,7 +2,7 @@
 title: Data Warehouse | Microsoft-Dokumentation
 description: "Data Warehouse-Dienstpunkt und -Datenbank für System Center Configuration Manager"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 3/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
-ms.openlocfilehash: 176d1116c910306f70d9acf934ad90340bcc4fcd
-ms.lasthandoff: 03/04/2017
+ms.sourcegitcommit: 3c2a07f560e0aa3d2beb7cc50e71c98ac45c27e1
+ms.openlocfilehash: 9239f6e749c368835e8594ca2d07378d8555b99e
+ms.lasthandoff: 03/28/2017
 
 
 ---
@@ -54,6 +54,13 @@ Bei der Installation der Standortsystemrolle wird auch die Data Warehouse-Datenb
   - SQL Server Always On-Verfügbarkeitsgruppe: Diese Konfiguration wird nicht unterstützt.
   - SQL Server-Cluster: SQL Server Failover-Cluster werden nicht unterstützt. Dies liegt daran, dass die Data Warehouse-Datenbank noch nicht ausführlich auf SQL Server Failover-Clustern getestet wurde.
   - Wenn die Data Warehouse-Datenbank remote gegenüber der Standortserverdatenbank ist, müssen Sie eine eigene Lizenz für den SQL Server haben, der die Datenbank hostet.
+
+> [!IMPORTANT]  
+> Das Data Warehouse wird nicht unterstützt, wenn der Computer, der den Data Warehouse-Dienstpunkt ausführt oder die Data Warehouse-Datenbank hostet, eine der folgenden Sprachen ausführt:
+> - JPN – Japanisch
+> - KOR – Koreanisch
+> - CHS – Einfaches Chinesisch
+> - CHT – Traditionelles Chinesisch. Dieses Problem wird in einem zukünftigen Release behoben.
 
 
 ## <a name="install-the-data-warehouse"></a>So installieren Sie Data Warehouse

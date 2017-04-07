@@ -1,9 +1,8 @@
-
 ---
 title: Clientpeercache | System Center Configuration Manager
 description: "Verwenden Sie Peercache für Quellspeicherorte für Clientinhalte beim Bereitstellen von Inhalten mit System Center Configuration Manager."
 ms.custom: na
-ms.date: 2/13/2017
+ms.date: 3/27/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -17,11 +16,12 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
-ms.openlocfilehash: 895b8ae58a9fda3fd22f58d77129053df09c4ccb
-ms.lasthandoff: 03/04/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 5298f1c836c1a872862b0e972180ac0c99c59751
+ms.lasthandoff: 03/27/2017
 
 ---
+
 # <a name="peer-cache-for-configuration-manager-clients"></a>Peercache für Configuration Manager-Clients
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -31,11 +31,14 @@ Ab Version 1610 von System Center Configuration Manager können Sie **Peercache*
 > [!TIP]  
 > Peercache und das Dashboard „Clientdatenquellen“ sind vorab veröffentlichte Funktionen, die mit Version 1610 eingeführt wurden. Informationen zum Aktivieren dieser Funktionen finden Sie unter [Verwenden von vorab veröffentlichten Features von Updates](/sccm/core/servers/manage/pre-release-features).
 
+## <a name="overview"></a>Übersicht
  -     Sie verwenden Clienteinstellungen, um Clients für die Verwendung des Peercaches zu aktivieren.
  -     Zur Freigabe von Inhalten müssen Peercacheclients Mitglieder der aktuellen Begrenzungsgruppe des Clients sein, der nach den Inhalten sucht. Peercacheclients in benachbarten Begrenzungsgruppen sind im Pool der verfügbaren Quellspeicherorte für Inhalt nicht enthalten, wenn ein Client ein Fallback verwendet, um nach Inhalten aus einer benachbarten Begrenzungsgruppe zu suchen. Weitere Informationen zu aktuellen und benachbarten Begrenzungsgruppen finden Sie unter [Begrenzungsgruppen](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups).
  - Clients, die nicht für Peercache aktiviert sind, sich aber in der aktuellen Begrenzungsgruppe mit Clients befinden, die für Peercache aktiviert sind, können Inhalte vom Client abrufen, der für Peercache aktiviert ist.  
  - Jede Art von Inhalten, die im Cache eines Configuration Manager-Clients gespeichert sind, kann mithilfe von Peercache für andere Clients bereitgestellt werden.
  -    Peercache ersetzt nicht die Verwendung anderer Lösungen wie BranchCache, sondern wird parallel eingesetzt, um Ihnen weitere Optionen bereitzustellen und herkömmliche Lösungen für die Inhaltsbereitstellung (z.B. Verteilungspunkte) zu erweitern. Da diese benutzerdefinierte Lösung nicht von BranchCache abhängig ist, funktioniert sie auch, wenn Sie Windows BranchCache nicht aktivieren oder verwenden.
+
+### <a name="operations"></a>Vorgänge
 
 Nachdem Sie Clienteinstellungen bereitgestellt haben, die den Peercache für eine Sammlung aktivieren, können Mitglieder dieser Sammlung als Peerinhaltsquelle für andere Clients in der gleichen Begrenzungsgruppe fungieren:
  -    Ein Client, der als Peerinhaltsquelle fungiert, übermittelt eine Liste der verfügbaren zwischengespeicherten Inhalte an seinen Verwaltungspunkt.
@@ -45,9 +48,42 @@ Nachdem Sie Clienteinstellungen bereitgestellt haben, die den Peercache für ein
 > [!NOTE]
 > Wenn ein Fallback auf eine benachbarte Begrenzungsgruppe für Inhalte erfolgt, werden die Peercache-Quellspeicherorte für Inhalt aus den benachbarten Begrenzungsgruppen nicht dem Pool des Clients mit möglichen Quellspeicherorten für Inhalt hinzugefügt.  
 
-Auch wenn Sie die Teilnahme aller Clients am Peercache festlegen können, empfiehlt es sich, nur die Clients auszuwählen, die am besten als Peercachequellen geeignet sind.  Die Eignung von Clients kann anhand des Gehäusetyps, Speicherplatzes, der Netzwerkkonnektivität usw. eines Clients bewertet werden. Weitere Informationen zum Auswählen der am besten geeigneten Clients zur Verwendung für Peercache finden Sie in [diesem Blog eines Microsoft-Beraters](https://blogs.technet.microsoft.com/setprice/2016/06/29/pe-peer-cache-custom-reporting-examples/).
 
+Auch wenn Sie die Teilnahme aller Clients als Peercachequelle festlegen können, empfiehlt es sich, nur die Clients auszuwählen, die am besten als Peercachequellen geeignet sind.  Die Eignung von Clients kann anhand des Gehäusetyps, Speicherplatzes, der Netzwerkkonnektivität usw. eines Clients bewertet werden. Weitere Informationen zum Auswählen der am besten geeigneten Clients zur Verwendung für Peercache finden Sie in [diesem Blog eines Microsoft-Beraters](https://blogs.technet.microsoft.com/setprice/2016/06/29/pe-peer-cache-custom-reporting-examples/).
+
+**Eingeschränkter Zugriff auf eine Peercachequelle**  
+Ab Version 1702 lehnt ein Peercachequellcomputer eine Inhaltsanforderung ab, wenn der Peercachequellcomputer eine der folgenden Bedingungen erfüllt:  
+  -  Niedriger Akkustand.
+  -  Zum Zeitpunkt der Anforderungen des Inhalts liegt die CPU-Auslastung bei über 80 %.
+  -  *AvgDiskQueueLength* der Datenträger-E/A überschreitet 10.
+  -  Es gibt keine weiteren Verbindungen zum Computer.   
+
+Sie können diese Einstellungen mithilfe der WMI-Klasse des Client Configuration-Servers für die Peerquellfunktion (*SMS_WinPEPeerCacheConfig*) konfigurieren, wenn Sie das Configuration Manager-SDK für System Center verwenden.
+
+Wenn der Computer eine Anforderung von Inhalt ablehnt, sucht der anfordernde Computer bei alternativen Quellen seines Pools an verfügbaren Quellspeicherorten nach Inhalt.   
+
+
+
+### <a name="monitoring"></a>Überwachung   
 Um besser zu verstehen, wann der Peercache erfolgreich verwendet wird, sehen Sie sich das Dashboard „Clientdatenquellen“ an. Siehe dazu [Dashboard „Clientdatenquellen“](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard).
+
+Ab Version 1702 können Sie drei Berichte verwenden, um die Peercacheauslastung anzuzeigen. Navigieren Sie in der Konsole zu **Überwachung** > **Berichterstellung** > **Berichte**. Die Berichte haben alle den Typ **Softwareverteilung – Inhalt**:
+1.  **Ablehnen von Inhalt einer Peercachequelle**:  
+Erfahren Sie mithilfe dieses Berichts, wie häufig die Peercachequellen in einer Begrenzungsgruppe eine Inhaltsanforderung abgelehnt haben.
+ - **Bekanntes Problem:** Wenn Sie einen Drilldown für Ergebnisse wie *MaxCPULoad* und *MaxDiskIO* durchführen, erhalten Sie möglicherweise einen Fehler, der darauf hinweist, dass der Bericht oder Angaben nicht gefunden werden können. Verwenden Sie die folgenden beiden Berichte, die die Ergebnisse direkt anzeigen, um dies zum umgehen. 
+
+2. **Ablehnen von Inhalt einer Peercachequelle durch eine Bedingung**:  
+Erfahren Sie mithilfe dieses Berichts, wie Sie Angaben zur Ablehnung einer angegebenen Begrenzungsgruppe oder eines Ablehnungstyps interpretieren können. Sie können Folgendes bestimmen:
+
+  - **Bekannte Probleme:** Sie können nicht aus verfügbaren Parametern wählen, sondern müssen diese manuell eingeben. Geben Sie die Werte für *Name der Begrenzungsgruppe* und *Rejection Type* (Ablehnungstyp) ein, so wie im ersten Bericht dargestellt. Sie können z.B. für *Rejection Type* (Ablehnungstyp) *MaxCPULoad* oder *MaxDiskIO* eingeben.
+
+3. **Angaben zur Ablehnung von Inhalt einer Peercachequelle**:   
+  Erfahren Sie mithilfe dieses Berichts, welche Art von Inhalt angefordert und abgelehnt wurde.
+
+ - **Bekannte Probleme:** Sie können nicht aus verfügbaren Parametern wählen, sondern müssen diese manuell eingeben. Geben Sie den Wert des *Rejection Type* (Ablehnungstyp) wie im ersten Bericht („Ablehnen von Inhalt einer Peercachequelle“) dargestellt ein, und geben Sie anschließend die *Resource ID* der Quelle des Inhalts ein, über die Sie mehr Informationen erhalten möchten.  So finden Sie die Resource ID der Quelle des Inhalts heraus:  
+
+    1. Machen Sie den Namen des Computers ausfindig, der als *Peercachequelle* in den Ergebnissen des zweiten Berichts angezeigt wird („Ablehnen von Inhalt einer Peercachequelle durch eine Bedingung“).  
+    2. Navigieren Sie anschließend zu **Bestand und Kompatibilität** > **Geräte**, und suchen Sie nach dem Namen des Computers. Verwenden Sie den Wert aus der Spalte „Resource ID“.  
 
 
 ## <a name="requirements-and-considerations-for-peer-cache"></a>Anforderungen und Überlegungen für den Peercache

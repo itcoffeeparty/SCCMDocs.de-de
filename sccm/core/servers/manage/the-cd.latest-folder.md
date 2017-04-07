@@ -2,7 +2,7 @@
 title: "Der Ordner „CD.Latest“ | Microsoft-Dokumentation"
 description: "Enthält Informationen über den neuen Updatevorgang, in dem Updates des Produkts aus der Configuration Manager-Konsole heraus bereitstellt werden."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: dcf56f6b82f89e81d636ea920f36133e245cbb1e
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 9cbda4db3c8fcd0bc039e9bb0f490af519b7d04b
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -40,11 +41,13 @@ Baselinemedien beinhalten genau wie die Baselineversion 1606, die im Oktober 201
 
 -   Sie führen den integrierten Configuration Manager-Sicherungstask aus: Der Ordner wird im angegebenen Sicherungsordner erstellt oder aktualisiert.  
 
+-  Ab Version 1606 wird der CD.Latest-Ordner erstellt, wenn Sie mithilfe des Baselinemediums (z.B. Version 1606) einen neuen Standort erstellen.
+
 Die Quelldateien aus dem Ordner „CD.Latest“ werden für Folgendes unterstützt:  
 
-1.  **Sicherung und Wiederherstellung:** Der Ordner „CD.Latest“ enthält Quelldateien, die Sie verwenden, um Ihren Standort als Teil einer Standortwiederherstellung neu zu installieren. Zur Wiederherstellung eines Configuration Manager-Standorts muss Ihre Standortsicherung den Ordner „CD.Latest“ enthalten (der integrierte Standortsicherungstask enthält automatisch diesen Ordner als Teil der Standortsicherung).  
+1.  **Sicherung und Wiederherstellung:** Zum Wiederherstellen eines Standorts müssen Sie die Quelldateien aus einem CD.Latest-Ordner verwenden, die zu Ihrem Standort passen. Wenn Sie eine Standortsicherung mithilfe des integrierten Standortsicherungstask ausführen, wird der CD.Latest-Ordner als Teil der Sicherung eingeschlossen.
 
-    -   **Wenn Sie den Standort im Rahmen einer Standortwiederherstellung neu installieren,** wird der Standort aus dem Ordner „CD.Latest“ installiert, der in der Sicherung enthalten ist. Dadurch wird der Standort anhand der Dateiversionen installiert, die der Standortsicherung und der Standortdatenbank entsprechen.  
+    -   **Wenn Sie den Standort im Rahmen einer Standortwiederherstellung neu installieren,** wird der Standort aus dem Ordner „CD.Latest“ installiert, der in der Sicherung enthalten ist. Dadurch wird der Standort anhand der Dateiversionen installiert, die der Standortsicherung und der Standortdatenbank entsprechen.  Wenn Sie keinen Zugriff auf die richtige CD.Latest-Ordnerversion haben, können Sie einen CD.Latest-Ordner mit den richtigen Dateiversionen erhalten, indem Sie einen Standort in einer Testumgebung erstellen und diesen Standort dann aktualisieren, sodass er mit der Version, die Sie wiederherstellen möchten, übereinstimmt.
 
         > [!IMPORTANT]  
         >  Wenn Sie nicht über den richtigen Ordner „CD.Latest“ und dessen Inhalte verfügen, können Sie einen Standort nicht wiederherstellen, und er muss neu installiert werden.  
@@ -60,9 +63,4 @@ Die Quelldateien aus dem Ordner „CD.Latest“ werden für Folgendes unterstüt
 >   
 >  -   Installieren eines neuen Standorts für eine neue Hierarchie  
 >  -   Upgrade eines System Center 2012 Configuration Manager-Standorts auf System Center Configuration Manager
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

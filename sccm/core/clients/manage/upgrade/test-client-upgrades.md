@@ -2,7 +2,7 @@
 title: "Testen von Clientupgrades in einer Präproduktionssammlung | Microsoft-Dokumentation"
 description: "Testen Sie Clientupgrades in einer Präproduktionssammlung in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/12/2016
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
-ms.openlocfilehash: 250c9312b932670c408554f3968ae43ae4f3dbaa
-ms.lasthandoff: 01/03/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 533c8e8b30519d83b8fc7a9d204d51e76974c4b1
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -57,7 +57,7 @@ Sie können eine neue Configuration Manager-Clientversion in einer Präproduktio
 
 ##  <a name="to-install-a-configuration-manager-update-that-includes-a-new-version-of-the-client"></a>So installieren Sie ein Configuration Manager-Update, das eine neue Version des Clients enthält  
 
-1.  Öffnen Sie in der Configuration Manager-Konsole **Verwaltung** > **Clouddienste** > **Updates und Wartung**, wählen Sie ein Update mit dem Status **Verfügbar** aus, und wählen Sie dann **Updatepaket installieren** aus.  
+1.  Öffnen Sie in der Configuration Manager-Konsole **Verwaltung** > **Updates und Wartung**, wählen Sie ein Update mit dem Status **Verfügbar** aus, und wählen Sie dann **Updatepaket installieren** aus. (Vor Version 1702 befand sich „Updates und Wartung“ unter **Verwaltung** > **Clouddienste**.)
 
      Weitere Informationen zum Installieren von Updates finden Sie unter [Updates für System Center Configuration Manager](../../../../core/servers/manage/updates.md).  
 
@@ -72,7 +72,7 @@ Sie können eine neue Configuration Manager-Clientversion in einer Präproduktio
 
 ##  <a name="to-promote-the-new-client-to-production"></a>So stufen Sie den neuen Client auf die Produktionsphase höher  
 
-1.  Öffnen Sie in der Configuration Manager-Konsole **Verwaltung** > **Clouddienste** > **Updates und Wartung**, und wählen Sie **Präproduktionsclient höher stufen** aus.
+1.  Öffnen Sie in der Configuration Manager-Konsole **Verwaltung** > **Updates und Wartung**, und wählen Sie **Präproduktionsclient höher stufen** aus. (Vor Version 1702 befand sich „Updates und Wartung“ unter **Verwaltung** > **Clouddienste**.)
 
     > [!TIP]
     > Die Schaltfläche **Präproduktionsclient** ist ebenso bei der Überwachung von Clientbereitstellungen in der Konsole unter **Überwachung** > **Clientstatus** > **Präproduktionsclientbereitstellung**verfügbar.

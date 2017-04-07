@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 26a362b4e5f25414178cae6843869a54eb99028c
-ms.openlocfilehash: b190b6116fba8080ad4e144e4e349e0926d1340b
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: ef044af5f6b32e4161d54c0ab1fb2ef2d245264b
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -70,7 +70,7 @@ Weitere Informationen finden Sie unter [Support for Current Branch versions (Unt
 ##  <a name="long-term-servicing-branch-of-system-center-configuration"></a>Long-Term Servicing Branch von System Center Configuration
 Hierbei handelt es sich um einen lizenzierten Branch zur Verwendung in Produktionsumgebungen für Configuration Manager-Kunden, die Current Branch verwenden und bei denen die Configuration Manager Software Assurance-Lizenz oder entsprechende Abonnements nach dem 1. Oktober 2016 abgelaufen sind. Weitere Informationen zu Software Assurance und Lizenzierungsoptionen finden Sie unter [Licensing and branches for System Center Configuration Manager (Lizenzierung und Branches für System Center Configuration Manager)](learn-more-editions.md).
 
-Mit dem LTSB erhalten Sie keine konsoleninternen Updates, mit denen neue Features oder Updates für vorhandene Funktionen bereitgestellt werden. Wichtige Sicherheitsfixes werden jedoch bereitgestellt.
+LTSB basiert auf Version 1606. Mit diesem Branch erhalten Sie keine konsoleninternen Updates, mit denen neue Features oder Updates für vorhandene Funktionen bereitgestellt werden. Wichtige Sicherheitsfixes werden jedoch bereitgestellt. Für die Installation von LTSB müssen Sie die [Baselinemedien](/sccm/core/servers/manage/updates#baseline-and-update-versions) der Version 1606 verwenden, die Sie mit System Center 2016 oder System Center Configuration Manager auf DVD erhalten.
 
 Zur Installation des LTSB als neuen Standort oder als Upgrade von einem unterstützten Configuration Manager 2012-Standort verwenden Sie die [Baselinemedien](/sccm/core/servers/manage/updates#baseline-and-update-versions) von Version 1606, die Sie mit System Center 2016 oder System Center Configuration Manager (Current Branch und Long-Term Servicing Branch 1606) als DVD erhalten. Mit den Baselinemedien können Sie einen neuen Standort, an dem Version 1606 von Current Branch ausgeführt wird, oder einen neuen Standort, an dem Long-Term Servicing Branch ausgeführt wird, installieren.
 

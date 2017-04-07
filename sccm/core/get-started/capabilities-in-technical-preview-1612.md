@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3c8f968276cb6d412a4a06cb70f1c8e45e91c605
-ms.openlocfilehash: cd53f093056fbaa2ef6fd88d5451b7698f296569
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: bcb14a2be312d4d8a4a9c235652c7bf971a7a976
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1612 für System Center Configuration Manager
@@ -182,9 +183,15 @@ Wenn das Inhaltsbibliothek-Bereinigungstool in einem der beiden Modi ausgeführt
 
 
 ### <a name="run-the-tool"></a>Ausführen des Tools
-Öffnen Sie zum ausführen des Tools eine administrative Eingabeaufforderung zu einem Ordner, in dem sich **ContentLibraryCleanup.exe** befindet.  
+So führen Sie das Tool aus:
+1. Öffnen Sie eine administrative Eingabeaufforderung in einen Ordner, in dem sich **ContentLibraryCleanup.exe** befindet.  
+2. Geben Sie als nächstes eine Befehlszeile mit den erforderlichen Befehlszeilen-Switches ein sowie die optionalen Switches, die Sie verwenden möchten.
 
-Geben Sie als nächstes eine Befehlszeile mit den erforderlichen Befehlszeilen-Switches ein sowie die optionalen Switches, die Sie verwenden möchten.
+**Bekanntes Problem** Wenn das Tool ausgeführt wird, kann eine Fehlermeldung wie die folgende zurückgegeben werden, wenn ein Paket oder eine Bereitstellung fehlgeschlagen oder gerade in Bearbeitung ist:
+-  *System.InvalidOperationException: Diese Inhaltsbibliothek kann jetzt nicht bereinigt werden, da das Paket <packageID> nicht vollständig installiert ist.*
+
+**Problemumgehung:** Keiner Das Tool kann nicht zuverlässig verwaiste Dateien identifizieren, wenn der Inhalt in Bearbeitung ist oder nicht bereitgestellt werden konnte. Aus diesem Grund kann das Tool den Inhalt nicht bereinigen, bis das Problem gelöst wurde.
+
 
 
 ### <a name="command-line-switches"></a>Befehlszeilen-Switches  
@@ -314,9 +321,4 @@ Nachdem Sie diese Konfigurationsänderungen vollzogen haben, können Sie eine Be
 ## <a name="change-to-configuring-multi-factor-authentication-for-device-enrollment"></a>Ändern der Konfiguration der Multi-Factor Authentication zur Registrierung des Geräts
 
 Jetzt da Sie Multi-Factor Authentication (MFA) zur Geräteregistrierung im Azure-Portal einrichten können, wurde die MFA-Option aus der Configuration Manager-Konsole entfernt. Weitere Informationen zum Einrichten von MFA bei der Anmeldung finden Sie [in diesem Microsoft Intune-Thema](https://docs.microsoft.com/en-us/intune/deploy-use/multi-factor-authentication-azure-active-directory)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

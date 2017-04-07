@@ -1,7 +1,7 @@
 ---
 title: Setup-Assistent | Microsoft-Dokumentation
 ms.custom: na
-ms.date: 2/28/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,9 +15,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 37865f1f3dc959ee8acf8ab06df5cae6e07e4257
-ms.openlocfilehash: 97eb95c1c6ac31ce9bca22df13bcc4f248026298
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 2f1bc62a4695d60dc4679e479797ee84cd4ddee4
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="use-the-setup-wizard-to-install-system-center-configuration-manager-sites"></a>Verwenden des Setup-Assistenten zum Installieren von System Center Configuration Manager-Standorten
@@ -240,7 +240,7 @@ Um den Standort zu erweitern, verwenden Sie den Setup-Assistenten für System Ce
 
 -   Auf der Seite **Standortinstallation** wählen Sie die Option zum Erweitern des eigenständigen primären Standorts aus.  
 
-Um einen eigenständigen primären Standort zu erweitern, verwenden Sie das Verfahren *[So installieren Sie einen primären Standort oder einen Standort der zentralen Verwaltung](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_installpri)* weiter oben in diesem Artikel.
+Um einen eigenständigen primären Standort zu erweitern, sehen Sie sich zuerst die [Voraussetzungen zum erweitern eines Standorts](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand) an, und verwenden Sie dann das Verfahren *[So installieren Sie einen primären Standort oder einen Standort der zentralen Verwaltung](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_installpri)* weiter oben in diesem Artikel.
 
 
 ## <a name="bkmk_secondary"></a> Installieren eines sekundären Standorts

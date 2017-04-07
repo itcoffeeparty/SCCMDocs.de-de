@@ -2,7 +2,7 @@
 title: Tool zur Updateregistrierung | Microsoft-Dokumentation
 description: Erfahren Sie, wann und wie das Tool zur Updateregistrierung zum manuellen Importieren eines Updates in Configuration Manager verwendet wird.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: c729212d38168acfff3f11ea41f3d52b234c70c8
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 35a4c201f73469fdfaa5bb8629e91886f7ae8751
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -59,20 +60,15 @@ Wenn Sie ein Out-of-Band-Release installieren müssen, und der Update- oder Hotf
 
     -   **&lt;Produkt\>-&lt;Produktversion\>-&lt;KB-Artikel-ID\>-ConfigMgr.Update.exe**  
 
-    Nachdem das Hotfix registriert wurde, wird es innerhalb von 24 Stunden als neues Update in der Konsole angezeigt.  Sie können den Vorgang mit einer der folgenden Vorgehensweisen beschleunigen:  
+    Nachdem das Hotfix registriert wurde, wird es innerhalb von 24 Stunden als neues Update in der Konsole angezeigt.  Sie können den Vorgang beschleunigen:
 
-    -   Mit Version 1511: Wechseln Sie in der Configuration Manager-Konsole zu **Verwaltung > Clouddienste > Updates und Wartung**, und wählen Sie anschließend **Start update discovery process immediately** (Prozess zur Updateerkennung sofort starten) aus.  Dies startet den Import des Hotfixes sofort nach Abschluss der Registrierung, sodass es in der Konsole zur Verfügung steht.  
-
-    -   Mit Version 1602 und höher: Wechseln Sie in der Configuration Manager-Konsole zu **Verwaltung > Clouddienste > Updates und Wartung**, und klicken Sie anschließend auf **Auf Updates prüfen**  
+    - Öffnen Sie in der Configuration Manager-Konsole **Verwaltung** > **Updates und Wartung**, und klicken Sie anschließend auf **Auf Updates prüfen**. (Vor Version 1702 befand sich „Updates und Wartung“ unter **Verwaltung** > **Clouddienste**.) 
 
     Das Tool zur Updateregistrierung protokolliert seine Aktionen in einer LOG-Datei auf dem lokalen Computer. Die Protokolldatei trägt den gleichen Namen wie die Datei „hotfix.exe“ und wird im Ordner **%SystemRoot%Temp** abgelegt.  
 
      Nach Registrierung des Updates können Sie das Update-Registrierungstool schließen.  
 
-3.  Öffnen Sie die Configuration Manager-Konsole, und navigieren Sie zu **Verwaltung** > **Clouddienste** > **Updates und Wartung**aus. Die importierten Hotfixes stehen jetzt zur Installation bereit. Weitere Informationen zum Installieren von Updates finden Sie unter [Installieren konsoleninterner Updates für System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md)  
+3.  Öffnen Sie die Configuration Manager-Konsole, und navigieren Sie zu **Verwaltung** > **Updates und Wartung**. Die importierten Hotfixes stehen jetzt zur Installation bereit. (Vor Version 1702 befand sich „Updates und Wartung“ unter **Verwaltung** > **Clouddienste**.)
 
-
-
-<!--HONumber=Dec16_HO3-->
-
+ Weitere Informationen zum Installieren von Updates finden Sie unter [Installieren konsoleninterner Updates für System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md)  
 

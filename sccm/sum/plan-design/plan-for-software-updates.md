@@ -6,7 +6,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 03/01/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,9 +14,9 @@ ms.technology:
 - configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 translationtype: Human Translation
-ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
-ms.openlocfilehash: 505c60409d14a1c5617333ab57caa3cd44195dc6
-ms.lasthandoff: 03/04/2017
+ms.sourcegitcommit: 3c2a07f560e0aa3d2beb7cc50e71c98ac45c27e1
+ms.openlocfilehash: 2a4fa6dcf8691875f5b262d6dc7bf1522d91acfd
+ms.lasthandoff: 03/28/2017
 
 
 ---
@@ -43,7 +43,7 @@ Bevor Sie Softwareupdates in einer System Center Configuration Manager-Produktio
 
     Ausführliche Informationen zu den Hardwareanforderungen für den Softwareupdatepunkt finden Sie unter [Empfohlene Hardware für Standortsysteme](/sccm/core/plan-design/configs/recommended-hardware#a-namebkmkscalesiesystemsa-site-systems).
 
--   Die Konfiguration von Softwareupdatepunkten als NLB-Cluster wird nicht standardmäßig von Configuration Manager unterstützt. Vor der Configuration Manager-Version 1702 konnten Sie das Configuration Manager SDK verwenden, um bis zu vier Softwareupdatepunkte in einem NLB-Cluster zu konfigurieren. Allerdings werden ab Version 1702 des Configuration Manager Softwareupdatepunkte als NLB-Cluster nicht unterstützt, und Upgrades auf Configuration Manager Version 1702 werden blockiert, wenn diese Konfiguration erkannt wird.
+-   Die Konfiguration von Softwareupdatepunkten als NLB-Cluster wird nicht standardmäßig von Configuration Manager unterstützt. Vor Configuration Manager Version 1702 konnten Sie das Configuration Manager SDK verwenden, um bis zu vier Softwareupdatepunkte in einem NLB-Cluster zu konfigurieren. Allerdings werden ab Version 1702 des Configuration Manager Softwareupdatepunkte als NLB-Cluster nicht unterstützt, und Upgrades auf Configuration Manager Version 1702 werden blockiert, wenn diese Konfiguration erkannt wird.
 
 ### <a name="capacity-planning-for-software-updates-objects"></a>Kapazitätsplanung für Softwareupdateobjekte  
  Verwenden Sie die folgenden Kapazitätsinformationen zur Planung von Softwareupdateobjekten.  
@@ -79,13 +79,16 @@ Verwenden Sie die folgenden Abschnitte, um die Infrastruktur der Softwareupdatep
 -   **Internetbasierte Clients**: Diese Clients erhalten eine Liste mit Softwareupdatepunkten, die Sie so konfigurieren können, dass nur Verbindungen mit dem Internet zulässig sind, bzw. eine Liste mit Softwareupdatepunkten, bei denen Clientverbindungen mit dem Internet und dem Intranet möglich sind.  
 
 ###  <a name="BKMK_SUPSwitching"></a> Wechseln des Softwareupdatepunkts  
- Wenn es an einem Standort mehrere Softwareupdatepunkte gibt und einer davon fehlerhaft oder nicht mehr verfügbar ist, wird von Clients eine Verbindung mit einem anderen Softwareupdatepunkt hergestellt und die Überprüfung auf die jüngsten Softwareupdates dort fortgesetzt. Die ursprüngliche Zuweisung eines Clients zu einem Softwareupdatepunkt bleibt solange bestehen, bis bei der Überprüfung dieses Softwareupdatepunkts auf Softwareupdates ein Fehler auftritt.  
+> [!NOTE]
+> Ab Version 1702 verwenden Client Begrenzungsgruppen, um einen neuen Softwareupdatepunkt zu finden, und um ein Fallback durchzuführen und einen neuen Softwareupdatepunkt zu finden, wenn auf ihren aktuellen nicht mehr zugriffen werden kann. Sie können verschiedenen Begrenzungsgruppen einzelne Softwareupdatepunkte hinzufügen, um zu steuern, welchen Server ein Client finden kann. Weitere Informationen finden Sie im Thema [Configuring Boundary Groups (Konfigurieren von Begrenzungsgruppen)](/sccm/core/servers/deploy/configure/boundary-groups) unter [Software Update Points (Softwareupdatepunkte)](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points).
 
- Bei der Überprüfung auf Softwareupdates kann eine Reihe unterschiedlicher Wiederholungs- bzw. Nichtwiederholungsfehlercodes ausgegeben werden. Bei einem Überprüfungsfehler mit einem Wiederholungsfehlercode wird vom Client ein Wiederholungsprozess zur Überprüfung des Softwareupdatepunkts auf Softwareupdates gestartet. Ein Wiederholungsfehlercode ist in der Regel darauf zurückzuführen, dass der WSUS-Server nicht verfügbar oder vorübergehend überlastet ist. Wenn bei der Überprüfung auf Softwareupdates ein Fehler auftritt, werden folgende Vorgänge ausgeführt:  
+Wenn es an einem Standort mehrere Softwareupdatepunkte gibt und einer davon fehlerhaft oder nicht mehr verfügbar ist, wird von Clients eine Verbindung mit einem anderen Softwareupdatepunkt hergestellt und die Überprüfung auf die jüngsten Softwareupdates dort fortgesetzt. Die ursprüngliche Zuweisung eines Clients zu einem Softwareupdatepunkt bleibt solange bestehen, bis bei der Überprüfung dieses Softwareupdatepunkts auf Softwareupdates ein Fehler auftritt.  
+
+Bei der Überprüfung auf Softwareupdates kann eine Reihe unterschiedlicher Wiederholungs- bzw. Nichtwiederholungsfehlercodes ausgegeben werden. Bei einem Überprüfungsfehler mit einem Wiederholungsfehlercode wird vom Client ein Wiederholungsprozess zur Überprüfung des Softwareupdatepunkts auf Softwareupdates gestartet. Ein Wiederholungsfehlercode ist in der Regel darauf zurückzuführen, dass der WSUS-Server nicht verfügbar oder vorübergehend überlastet ist. Wenn bei der Überprüfung auf Softwareupdates ein Fehler auftritt, werden folgende Vorgänge ausgeführt:  
 
 1.  Die Überprüfung auf Softwareupdates wird vom Client zum geplanten Zeitpunkt ausgeführt. Sie kann auch über die Systemsteuerung auf dem Client oder mithilfe des SDK initiiert werden. Bei einem Überprüfungsfehler wird die Überprüfung des gleichen Softwareupdatepunkts nach einer 30-minütigen Wartezeit vom Client wiederholt.  
 
-2.  Vom Client werden mindestens vier Wiederholungsversuche in Abständen von 30 Minuten ausgeführt. Nach dem vierten Fehler und einer weiteren Wartezeit von&2; Minuten wird zum nächsten Softwareupdatepunkt in der Softwareupdatepunkt-Liste gewechselt.  
+2.  Vom Client werden mindestens vier Wiederholungsversuche in Abständen von 30 Minuten ausgeführt. Nach dem vierten Fehler und einer weiteren Wartezeit von 2 Minuten wird zum nächsten Softwareupdatepunkt in der Softwareupdatepunkt-Liste gewechselt.  
 
 3.  Der Client durchläuft auf dem neuen Softwareupdatepunkt denselben Prozess. Nach einer erfolgreichen Überprüfung wird vom Client fortan eine Verbindung mit dem neuen Softwareupdatepunkt hergestellt.
 
@@ -145,7 +148,8 @@ Aktivieren Sie diese Option auf einer Gerätesammlung oder auf einer Reihe von G
 -   Weitere Informationen zu den unterstützten Konfigurationen für Configuration Manager-Standortsysteme finden Sie unter [Anforderungen an Standorte und Standortsysteme](../../core/plan-design/configs/site-and-site-system-prerequisites.md).  
 
 ###  <a name="BKMK_PlanningForWSUS"></a> Planen der WSUS-Installation  
- Für Softwareupdates ist es erforderlich, dass eine unterstützte Version von WSUS auf allen Standortsystemservern installiert ist, die Sie für die Standortsystemrolle „Softwareupdatepunkt“ konfigurieren. Wenn Sie den Softwareupdatepunkt nicht auf dem Standortserver installieren, müssen Sie zudem die WSUS-Verwaltungskonsole auf dem Standortservercomputer installieren, sofern sie nicht bereits installiert ist. Hierdurch wird die Kommunikation des Standortservers mit WSUS auf dem Softwareupdatepunkt ermöglicht.  
+
+Für Softwareupdates ist es erforderlich, dass eine unterstützte Version von WSUS auf allen Standortsystemservern installiert ist, die Sie für die Standortsystemrolle „Softwareupdatepunkt“ konfigurieren. Wenn Sie den Softwareupdatepunkt nicht auf dem Standortserver installieren, müssen Sie zudem die WSUS-Verwaltungskonsole auf dem Standortservercomputer installieren, sofern sie nicht bereits installiert ist. Hierdurch wird die Kommunikation des Standortservers mit WSUS auf dem Softwareupdatepunkt ermöglicht.  
 
  Wenn Sie WSUS mit Windows Server 2012 verwenden, müssen Sie zusätzliche Berechtigungen konfigurieren. Hierdurch wird sichergestellt, dass eine Verbindung zwischen **WSUS Configuration Manager** in Configuration Manager und WSUS hergestellt werden kann, um regelmäßig Integritätsprüfungen auszuführen. Zum Konfigurieren der Berechtigungen stehen folgende Möglichkeiten zur Auswahl:  
 
@@ -161,9 +165,9 @@ Aktivieren Sie diese Option auf einer Gerätesammlung oder auf einer Reihe von G
  Beim Installieren von WSUS haben Sie die Möglichkeit, die vorhandene IIS-Standardwebsite zu verwenden oder eine benutzerdefinierte WSUS-Website zu erstellen. Erstellen Sie eine benutzerdefinierte Website für WSUS, sodass die WSUS-Dienste von IIS in einer dedizierten virtuellen Website gehostet werden, anstatt die gleiche Website zu verwenden wie die Configuration Manager-Standortsysteme oder andere Anwendungen. Dies trifft insbesondere auf die Installation der Standortsystemrolle „Softwareupdatepunkt“ auf dem Standortserver zu. Wenn Sie WSUS unter Windows Server 2012 ausführen, wird WSUS standardmäßig für die Verwendung von Port 8531 für HTTP und Port 8531 für HTTPS konfiguriert. Sie müssen diese Porteinstellungen beim Erstellen des Softwareupdatepunkts an einem Standort angeben.  
 
 ####  <a name="BKMK_WSUSInfrastructure"></a> Verwenden einer vorhandenen WSUS-Infrastruktur  
- Sie können einen WSUS-Server verwenden, der bereits vor der Installation von Configuration Manager in Ihrer Umgebung aktiv war. Beim Konfigurieren des Softwareupdatepunkts müssen Sie die Synchronisierungseinstellungen angeben. Configuration Manager stellt eine Verbindung mit WSUS auf dem Softwareupdatepunkt her, und konfiguriert den WSUS-Server mit den gleichen Einstellungen. Wurde der WSUS-Server zuvor mit Produkten oder Klassifizierungen synchronisiert, die Sie nicht als Teil der Synchronisierungseinstellungen für den Softwareupdatepunkt konfiguriert haben, werden die Metadaten der Softwareupdates für die Produkte und Klassifizierungen unabhängig von den Synchronisierungseinstellungen für den Softwareupdatepunkt für sämtliche Metadaten der Softwareupdates in der WSUS-Datenbank synchronisiert. Dies kann zu unerwarteten Metadaten für Softwareupdates in der Standortdatenbank führen. Dieses Verhalten kann auch beobachtet werden, wenn Sie Produkte oder Klassifizierungen direkt in der WSUS-Verwaltungskonsole hinzufügen und die Synchronisierung sofort initiieren. Im Rahmen einer von Configuration Manager standardmäßig stündlich hergestellten Verbindung mit WSUS auf dem Softwareupdatepunkt werden alle Einstellungen zurückgesetzt, die außerhalb von Configuration Manager geändert wurden.  
+ Sie können einen WSUS-Server, der bereits vor der Installation von Configuration Manager in Ihrer Umgebung aktiv war, als Softwareupdatepunkt wählen. Beim Konfigurieren des Softwareupdatepunkts müssen Sie die Synchronisierungseinstellungen angeben. Configuration Manager stellt eine Verbindung mit dem WSUS-Server auf dem Softwareupdatepunkt-Server her, und konfiguriert WSUS mit den gleichen Einstellungen. Wenn Sie den WSUS-Server zuvor als Softwareupdatepunkt mit Produkten oder Klassifizierungen konfiguriert haben, die Sie nicht als Teil der Synchronisierungseinstellungen für den Softwareupdatepunkt konfiguriert haben, werden die Metadaten der Softwareupdates für die Produkte und Klassifizierungen unabhängig von Ihren Synchronisierungseinstellungen für den Softwareupdatepunkt für sämtliche Metadaten der Softwareupdates in der WSUS-Datenbank synchronisiert. Dies kann zu unerwarteten Metadaten für Softwareupdates in der Standortdatenbank führen. Dieses Verhalten kann auch beobachtet werden, wenn Sie Produkte oder Klassifizierungen direkt in der WSUS-Verwaltungskonsole hinzufügen und die Synchronisierung sofort initiieren. Im Rahmen einer von Configuration Manager standardmäßig stündlich hergestellten Verbindung mit WSUS auf dem Softwareupdatepunkt werden alle Einstellungen zurückgesetzt, die außerhalb von Configuration Manager geändert wurden. Softwareupdates, die nicht den von Ihnen in den Synchronisierungseinstellungen angegebenen Produkten und Klassifizierungen entsprechen, werden als abgelaufen festgelegt und dann aus der Standortdatenbank entfernt
 
- Softwareupdates, die nicht den von Ihnen in den Synchronisierungseinstellungen angegebenen Produkten und Klassifizierungen entsprechen, werden als abgelaufen festgelegt und dann aus der Standortdatenbank entfernt  
+ Wenn ein WSUS-Server als Softwareupdatepunkt konfiguriert wurde, können Sie diesen nicht mehr als eigenständigen WSUS-Server verwenden. Wenn Sie einen einzelnen, eigenständigen WSUS-Server benötigen, der nicht von Configuration Manager verwaltet wird, müssen Sie diesen auf einem anderen Server konfigurieren. 
 
 ####  <a name="BKMK_WSUSAsReplica"></a> Konfigurieren von WSUS als Replikatserver  
  Beim Erstellen der Standortsystemrolle „Softwareupdatepunkt“ auf einem primären Standortserver kann kein WSUS-Server verwendet werden, der als Replikat konfiguriert ist. Ist der WSUS-Server als Replikat konfiguriert, kann er nicht von Configuration Manager konfiguriert werden, und bei der WSUS-Synchronisierung tritt ebenfalls ein Fehler auf. Wenn ein Softwareupdatepunkt an einem sekundären Standort erstellt wird, wird WSUS von Configuration Manager als Replikatserver für die WSUS-Instanz konfiguriert, die auf dem Softwareupdatepunkt am übergeordneten primären Standort ausgeführt wird. Der erste Softwareupdatepunkt, den Sie an einem primären Standort installieren, ist der Standard-Softwareupdatepunkt. Weitere Softwareupdatepunkte am Standort werden als Replikate des Standard-Softwareupdatepunkts konfiguriert.  

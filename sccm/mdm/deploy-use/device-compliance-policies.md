@@ -17,9 +17,9 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: ad9ea7b29e03bb514fe23fdf761b312c85c16714
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: bcaa2a9b5474e06bf344dc4fd47dbb160ea36297
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="device-compliance-policies-in-system-center-configuration-manager"></a>Kompatibilitätsrichtlinien für Geräte in System Center Configuration Manager
@@ -30,7 +30,7 @@ ms.lasthandoff: 03/06/2017
 
 
 > [!IMPORTANT]  
->  In diesem Artikel werden die Kompatibilitätsrichtlinien für Geräte beschrieben, die von Microsoft Intune verwaltet werden.    Die Kompatibilitätsrichtlinien für PCs, die von System Center Configuration Manager verwaltet werden, sind unter [Verwalten des Zugriffs auf Office&365;-Dienste für PCs, die von System Center Configuration Manager verwaltet werden](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md) beschrieben.  
+>  In diesem Artikel werden die Kompatibilitätsrichtlinien für Geräte beschrieben, die von Microsoft Intune verwaltet werden.    Die Kompatibilitätsrichtlinien für PCs, die von System Center Configuration Manager verwaltet werden, sind unter [Verwalten des Zugriffs auf Office 365-Dienste für PCs, die von System Center Configuration Manager verwaltet werden](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md) beschrieben.  
 
  Diese Richtlinien schließen Anforderungen wie die folgenden ein:  
 
@@ -40,22 +40,24 @@ ms.lasthandoff: 03/06/2017
 
 -   Ob das Gerät per Jailbreak oder Rooting manipuliert wurde  
 
--   Ob der E-Mail-Dienst auf dem Gerät über eine Intune-Richtlinie verwaltet wird, oder ob das Gerät vom Windows-Integritätsnachweisdienst als fehlerhaft gemeldet wird.  
+-   Ob der E-Mail-Dienst auf dem Gerät über eine Intune-Richtlinie verwaltet wird, oder ob das Gerät vom Windows-Integritätsnachweisdienst als fehlerhaft gemeldet wird.
+-   Apps, die auf dem Gerät nicht installiert werden können.
 
 
  Sie stellen Kompatibilitätsrichtlinien für Benutzer- und Gerätegruppen bereit. Wenn Sie eine Konformitätsrichtlinie für einen Benutzer bereitstellen, wird die Konformität aller Geräte des Benutzers überprüft.  
 
  Die folgende Tabelle enthält die von Konformitätsrichtlinien unterstützten Gerätetypen. Zudem ist darin angegeben, wie nicht konforme Einstellungen gehandhabt werden, wenn die Richtlinie mit einer bedingten Zugriffsrichtlinie verwendet wird.  
 
-|Regel|Windows 8.1 und höher|Windows Phone 8.1 und höher|iOS 6.0 und höher|Android 4.0 und höher, Samsung KNOX Standard 4.0 und höher|  
+|Regel|Windows 8.1 und höher|Windows Phone 8.1 und höher|iOS 6.0 und höher|Android 4.0 und höher, Samsung KNOX Standard 4.0 und höher, Android for Work|  
 |----------|---------------------------|---------------------------------|-----------------------|---------------------------|-----------------------------------------|  
 |**PIN- oder Kennwortkonfiguration**|Wiederhergestellt|Wiederhergestellt|Wiederhergestellt|Isoliert|  
-|**Geräteverschlüsselung**|N/V|Wiederhergestellt|Wiederhergestellt (durch Festlegen der PIN)|Isoliert|  
+|**Geräteverschlüsselung**|N/V|Wiederhergestellt|Wiederhergestellt (durch Festlegen der PIN)|Isoliert<br>(Android for Work, immer verschlüsselt)|  
 |**Gerät mit entfernten Nutzungsbeschränkungen**|N/V|N/V|Unter Quarantäne gestellt (keine Einstellung)|Unter Quarantäne gestellt (keine Einstellung)|  
 |**E-Mail-Profil**|N/V|N/V|Isoliert|N/V|  
 |**Minimales Release des Betriebssystems**|Isoliert|Isoliert|Isoliert|Isoliert|  
 |**Maximales Release des Betriebssystems**|Isoliert|Isoliert|Isoliert|Isoliert|  
-|**Integritätsnachweis des Geräts (Update&1602;)**|Einstellung gilt nicht für Windows 8.1.<br /><br /> Windows 10 und Windows 10 Mobile werden isoliert.|N/V|N/V|N/V|  
+|**Integritätsnachweis des Geräts (Update 1602)**|Einstellung gilt nicht für Windows 8.1.<br /><br /> Windows 10 und Windows 10 Mobile werden isoliert.|N/V|N/V|N/V|  
+|**Apps, die nicht installiert werden können**|N/V|N/V|Isoliert|Isoliert|
 
  **Wiederhergestellt** = Konformität wird vom Betriebssystem des Geräts erzwungen (z. B. wird der Benutzer gezwungen, eine PIN festzulegen).  Es gibt keinen Fall, in dem die Einstellung nicht konform ist.  
 

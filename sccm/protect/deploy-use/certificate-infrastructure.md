@@ -2,7 +2,7 @@
 title: Konfigurieren der Zertifikatinfrastruktur | Microsoft-Dokumentation
 description: Erfahren Sie mehr zum Konfigurieren der Zertifikatregistrierung in System Center Configuration Manager.
 ms.custom: na
-ms.date: 10/10/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,36 +17,28 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: 56e0a1923305c5134386623b1e306b8ebd013d53
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 859a8da10f55e314b205b7a4a415a1d2a60a920a
+ms.lasthandoff: 03/27/2017
 
 ---
+
 # <a name="certificate-infrastructure"></a>Zertifikatinfrastruktur
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
+Hier finden Sie die Schritte, Details und weitere Informationen zum Konfigurieren der Zertifikate in System Center Configuration Manager. Überprüfen Sie, bevor Sie beginnen, die in [Voraussetzungen für Zertifikatprofile in System Center Configuration Manager](../../protect/plan-design/prerequisites-for-certificate-profiles.md) aufgeführten Voraussetzungen.  
 
- Hier finden Sie die Schritte, Details und weitere Informationen zum Konfigurieren der Zertifikatregistrierung in System Center Configuration Manager. Überprüfen Sie, bevor Sie beginnen, die in [Voraussetzungen für Zertifikatprofile in System Center Configuration Manager](../../protect/plan-design/prerequisites-for-certificate-profiles.md) aufgeführten Voraussetzungen.  
+Folgen Sie diesen Schritten, um Ihre Infrastruktur für SCEP- oder PFX-Zertifikate zu konfigurieren.
 
- Nachdem Sie diese Schritte abgeschlossen und die Installation überprüft haben, können Sie Zertifikatprofile konfigurieren und bereitstellen. Weitere Informationen finden Sie unter [Erstellen von Zertifikatprofilen in System Center Configuration Manager](../../protect/deploy-use/create-certificate-profiles.md).  
+## <a name="step-1---install-and-configure-the-network-device-enrollment-service-and-dependencies-for-scep-certificates-only"></a>Schritt 1: Installieren und Konfigurieren des Registrierungsdiensts für Netzwerkgeräte und der Abhängigkeiten (nur für SCEP-Zertifikate)
 
-
-**Schritt 1:** Installieren und Konfigurieren des Registrierungsdiensts für Netzwerkgeräte und der Abhängigkeiten Der Rollendienst „Registrierungsdienst für Netzwerkgeräte“ für Active Directory-Zertifikatdienste (AD CS) muss unter dem Betriebssystem Windows Server 2012 R2 ausgeführt werden.
-     **Wichtig:** Sie müssen weitere Konfigurationsschritte ausführen, bevor Sie den Registrierungsdienst für Netzwerkgeräte mit System Center Configuration Manager verwenden können.
-**Schritt 2:** Installieren und Konfigurieren des Zertifikatregistrierungspunkts Sie müssen mindestens einen Zertifikatregistrierungspunkt installieren. Dieser Registrierungspunkt kann sich wahlweise an einem Standort der zentralen Verwaltung oder an einem primären Standort befinden.
-**Schritt 3:** Installieren des System Center Configuration Manager-Richtlinienmoduls Installieren Sie das Richtlinienmodul auf dem Server mit dem Registrierungsdienst für Netzwerkgeräte.
-
-## <a name="supplemental-procedures-to-configure-certificate-enrollment-in-configuration-manager"></a>Zusätzliche Verfahren zum Konfigurieren der Zertifikatregistrierung in Configuration Manager  
- Verwenden Sie die folgenden Informationen, wenn die Schritte in der vorstehenden Tabelle zusätzliche Verfahren erfordern.  
-
-###  <a name="step-1-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>Schritt 1: Installieren und Konfigurieren des Registrierungsdiensts für Netzwerkgeräte und der Abhängigkeiten  
  Sie müssen den Rollendienst „Registrierungsdienst für Netzwerkgeräte“ für Active Directory-Zertifikatdienste (AD CS) installieren und konfigurieren, die Sicherheitsberechtigungen für die Zertifikatvorlagen ändern, ein PKI-Zertifikat (Public Key Infrastructure) zur Clientauthentifizierung bereitstellen und die Registrierung bearbeiten, um das standardmäßige URL-Größenlimit für IIS anzuheben. Bei Bedarf müssen Sie zudem die ausstellende Zertifizierungsstelle so konfigurieren, dass ein benutzerdefinierter Gültigkeitszeitraum zulässig ist.  
 
 > [!IMPORTANT]  
 >  Überprüfen Sie die Installation und Konfiguration des Registrierungsdiensts für Netzwerkgeräte, bevor Sie System Center Configuration Manager für den Registrierungsdienst für Netzwerkgeräte konfigurieren. Wenn diese Abhängigkeiten nicht ordnungsgemäß funktionieren, wird die Problembehandlung der Zertifikatregistrierung mit System Center Configuration Manager erschwert.  
 
-##### <a name="to-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>So installieren und konfigurieren Sie den Registrierungsdienst für Netzwerkgeräte und die Abhängigkeiten  
+### <a name="to-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>So installieren und konfigurieren Sie den Registrierungsdienst für Netzwerkgeräte und die Abhängigkeiten  
 
 1.  Installieren und konfigurieren Sie auf einem Server unter Windows Server 2012 R2 den Rollendienst „Registrierungsdienst für Netzwerkgeräte“ für die Serverrolle „Active Directory-Zertifikatdienste“. Weitere Informationen finden Sie im [Leitfaden für den Registrierungsdienst für Netzwerkgeräte](http://go.microsoft.com/fwlink/p/?LinkId=309016) in der Bibliothek zu Active Directory-Zertifikatdiensten in TechNet.  
 
@@ -107,10 +99,12 @@ ms.lasthandoff: 12/16/2016
 
 8.  Verwenden Sie den folgenden Link als Beispiel, um zu überprüfen, ob der Registrierungsdienst für Netzwerkgeräte funktioniert: **https://server.contoso.com/certsrv/mscep/mscep.dll**. Es sollte die integrierte Webseite „Registrierungsdienst für Netzwerkgeräte“ angezeigt werden. Auf dieser Webseite wird der Dienst erläutert, und Sie erfahren, dass Netzwerkdienste die URL zum Übermitteln von Zertifikatanforderungen verwenden.  
 
- Nachdem Sie den Registrierungsdienst für Netzwerkgeräte und die Abhängigkeiten konfiguriert haben, können Sie den Zertifikatregistrierungspunkt installieren und konfigurieren.  
+ Nachdem Sie den Registrierungsdienst für Netzwerkgeräte und die Abhängigkeiten konfiguriert haben, können Sie den Zertifikatregistrierungspunkt installieren und konfigurieren.
 
-###  <a name="step-2-install-and-configure-the-certificate-registration-point"></a>Schritt 2: Installieren und Konfigurieren des Zertifikatregistrierungspunkts  
- Sie müssen mindestens einen Zertifikatregistrierungspunkt in der System Center Configuration Manager-Hierarchie installieren und konfigurieren. Dann können Sie diese Standortsystemrolle wahlweise am Standort der zentralen Verwaltung oder an einem primären Standort installieren.  
+
+## <a name="step-2---install-and-configure-the-certificate-registration-point"></a>Schritt 2: Installieren und Konfigurieren des Zertifikatregistrierungspunkts.
+
+Sie müssen mindestens einen Zertifikatregistrierungspunkt in der System Center Configuration Manager-Hierarchie installieren und konfigurieren. Dann können Sie diese Standortsystemrolle wahlweise am Standort der zentralen Verwaltung oder an einem primären Standort installieren.  
 
 > [!IMPORTANT]  
 >  Lesen Sie vor der Installation des Zertifikatregistrierungspunkts die Informationen zu Betriebssystemanforderungen und -abhängigkeiten für den Zertifikatregistrierungspunkt im Abschnitt **Anforderungen für Standortsysteme** im Thema [Supported configurations for System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md) .  
@@ -127,18 +121,23 @@ ms.lasthandoff: 12/16/2016
 
 5.  Klicken Sie auf der Seite **Proxy** auf **Weiter**. Für den Zertifikatregistrierungspunkt werden keine Internetproxyeinstellungen verwendet.  
 
-6.  Wählen Sie auf der Seite **Systemrollenauswahl** in der Liste der verfügbaren Rollen **Zertifikatregistrierungspunkt** aus, und klicken Sie dann auf **Weiter**.  
+6.  Wählen Sie auf der Seite **Systemrollenauswahl** in der Liste der verfügbaren Rollen **Zertifikatregistrierungspunkt** aus, und klicken Sie dann auf **Weiter**. 
 
-7.  Übernehmen oder ändern Sie auf der Seite **Zertifikatregistrierungspunkt** die Standardeinstellungen, und klicken Sie dann auf **Hinzufügen**.  
+8. Legen Sie auf der Seite **Zertifikatregistrierungsmodus** fest, ob der Zertifikatregistrierungspunkt **SCEP-Zertifikatanforderungen verarbeiten** oder **PFX-Zertifikatanforderungen verarbeiten** soll. Ein Zertifikatregistrierungspunkt kann nicht beide Arten von Anforderungen verarbeiten, aber Sie können mehrere Zertifikatregistrierungspunkte erstellen, wenn Sie mit beiden Zertifikattypen arbeiten.
 
+7.  Die Einstellungen, die Sie auf der Seite **Einstellungen für Zertifikatregistrierungspunkt** vornehmen, hängen davon ab, welche Art von Zertifikat der Zertifikatregistrierungspunkt verarbeitet:
+    -   Wenn Sie **SCEP-Zertifikatanforderungen verarbeiten** ausgewählt haben, nehmen Sie folgende Konfiguration vor:
+        -   **Websitename**, **HTTPS-Portnummer** und **Name der virtuellen Anwendung** für den Zertifikatregistrierungspunkt. Diese Felder werden automatisch mit Standardwerten ausgefüllt. 
+        -   **URL für Registrierungsdienst für Netzwerkgeräte und Zertifikat der Stammzertifizierungsstelle**: Klicken Sie auf **Hinzufügen**, und geben Sie anschließend im Dialogfeld **URL und Zertifikat der Stammzertifizierungsstelle hinzufügen** Folgendes an:
+            - **URL für den Registrierungsdienst für Netzwerkgeräte:** Geben Sie die URL im folgenden Format an: https://*<FQDN des Servers>*/certsrv/mscep/mscep.dll. Beispiel: Wenn der FQDN des Servers mit dem Registrierungsdienst für Netzwerkgeräte server1.contoso.com ist, geben Sie **https://server1.contoso.com/certsrv/mscep/mscep.dll**ein.
+            - **Zertifikat der Stammzertifizierungsstelle**: Navigieren Sie zur CER-Zertifikatdatei, die Sie in **Schritt 1: Installieren und Konfigurieren des Registrierungsdiensts für Netzwerkgeräte und der Abhängigkeiten**erstellt und gespeichert haben, und wählen Sie sie aus. Mit diesem Zertifikat der Stammzertifizierungsstelle kann das Clientauthentifizierungszertifikat, das vom System Center Configuration Manager-Richtlinienmodul verwendet wird, durch den Zertifikatregistrierungspunkt überprüft werden.  
+    - Wenn Sie **PFX-Zertifikatanforderungen verarbeiten** ausgewählt haben, nehmen Sie folgende Konfiguration vor:
+        - **Zertifizierungsstellen und Konto, das jeweils zum Herstellen einer Verbindung erforderlich ist**: Klicken Sie auf **Hinzufügen**, und geben Sie anschließend im Dialogfeld **Zertifizierungsstelle und Konto hinzufügen** Folgendes an:
+            - **Name des Zertifizierungsstellenservers**: Geben Sie den Namen Ihres Zertifizierungsstellenservers ein.
+            - **Konto der Zertifizierungsstelle**: Klicken Sie auf **Festlegen**, um das Konto auszuwählen oder zu erstellen, das Berechtigungen für die Registrierung in Vorlagen an der Zertifizierungsstelle hat.
+        - **Verbindungskonto für Zertifikatregistrierungspunkt**: Wählen Sie das Konto aus, das den Zertifikatregistrierungspunkt mit der Configuration Manager-Datenbank verbindet, oder erstellen Sie dieses. Alternativ können Sie auch das lokale Computerkonto des Computers verwenden, auf dem der Zertifikatregistrierungspunkt gehostet wird.
+        - **Konto für Active Directory-Zertifikatveröffentlichung**: Wählen Sie ein Konto aus, das zur Veröffentlichung von Zertifikaten für Benutzerobjekte in Active Directory verwendet werden soll, oder erstellen Sie ein neues Konto.
 8.  Geben Sie im Dialogfeld **URL und Zertifikat der Stammzertifizierungsstelle hinzufügen** Folgendes an, und klicken Sie dann auf **OK**:  
-
-    1.  **URL für den Registrierungsdienst für Netzwerkgeräte:** Geben Sie die URL im folgenden Format an: https://*<FQDN des Servers>*/certsrv/mscep/mscep.dll. Beispiel: Wenn der FQDN des Servers mit dem Registrierungsdienst für Netzwerkgeräte server1.contoso.com ist, geben Sie **https://server1.contoso.com/certsrv/mscep/mscep.dll**ein.  
-
-    2.  **Zertifikat der Stammzertifizierungsstelle**: Navigieren Sie zur CER-Zertifikatdatei, die Sie in **Schritt 1: Installieren und Konfigurieren des Registrierungsdiensts für Netzwerkgeräte und der Abhängigkeiten**erstellt und gespeichert haben, und wählen Sie sie aus. Mit diesem Zertifikat der Stammzertifizierungsstelle kann das Clientauthentifizierungszertifikat, das vom System Center Configuration Manager-Richtlinienmodul verwendet wird, durch den Zertifikatregistrierungspunkt überprüft werden.  
-
-    > [!NOTE]  
-    >  Wenn Sie mehrere Server mit dem Registrierungsdienst für Netzwerkgeräte verwenden, klicken Sie auf **Hinzufügen** , um die Details für die weiteren Server anzugeben.  
 
 9. Klicken Sie auf **Weiter** , und schließen Sie den Assistenten ab.  
 
@@ -155,10 +154,10 @@ ms.lasthandoff: 12/16/2016
     > [!TIP]  
     >  Dieses Zertifikat steht nicht sofort in diesem Ordner zur Verfügung. Möglicherweise müssen Sie eine Weile warten (beispielsweise eine halbe Stunde), bis System Center Configuration Manager die Datei in diesen Speicherort kopiert.  
 
- Nachdem Sie den Zertifikatregistrierungspunkt installiert und konfiguriert haben, können Sie das System Center Configuration Manager-Richtlinienmodul für den Registrierungsdienst für Netzwerkgeräte installieren.  
 
-###  <a name="step-3-install-the-configuration-manager-policy-module"></a>Schritt 3: Installieren des Configuration Manager-Richtlinienmoduls  
- Sie müssen das System Center Configuration Manager-Richtlinienmodul auf jedem Server installieren und konfigurieren, den Sie unter **Schritt 2: Installieren und Konfigurieren des Zertifikatregistrierungspunkts** in den Eigenschaften des Zertifikatregistrierungspunkts als **URL für den Registrierungsdienst für Netzwerkgeräte** angegeben haben.  
+## <a name="step-3----install-the-system-center-configuration-manager-policy-module-for-scep-certificates-only"></a>Schritt 3: Installieren des System Center Configuration Manager-Richtlinienmoduls (nur für SCEP-Zertifikate).
+
+Sie müssen das System Center Configuration Manager-Richtlinienmodul auf jedem Server installieren und konfigurieren, den Sie unter **Schritt 2: Installieren und Konfigurieren des Zertifikatregistrierungspunkts** in den Eigenschaften des Zertifikatregistrierungspunkts als **URL für den Registrierungsdienst für Netzwerkgeräte** angegeben haben.  
 
 ##### <a name="to-install-the-policy-module"></a>So installieren Sie das Richtlinienmodul  
 
@@ -168,7 +167,7 @@ ms.lasthandoff: 12/16/2016
 
     -   PolicyModuleSetup.exe  
 
-     Wenn das Installationsmedium den Ordner LanguagePack enthält, kopieren Sie auch diesen Ordner und seinen Inhalt.  
+    Wenn das Installationsmedium den Ordner LanguagePack enthält, kopieren Sie auch diesen Ordner und seinen Inhalt.  
 
 2.  Führen Sie über den temporären Ordner „PolicyModuleSetup.exe“ aus, um den Setup-Assistenten für das System Center Configuration Manager-Richtlinienmodul zu starten.  
 
@@ -189,7 +188,8 @@ ms.lasthandoff: 12/16/2016
 
 9. Klicken Sie auf **Weiter** , und schließen Sie den Assistenten ab.  
 
- Nachdem Sie die Konfigurationsschritte für die Installation des Registrierungsdiensts für Netzwerkgeräte und der Abhängigkeiten, des Zertifikatregistrierungspunkts und des System Center Configuration Manager-Richtlinienmoduls abgeschlossen haben, können Sie Zertifikate für Benutzer und Geräte bereitstellen, indem Sie Zertifikatprofile erstellen und bereitstellen. Weitere Informationen zum Erstellen von Zertifikatprofilen finden Sie unter [Erstellen von Zertifikatprofilen in System Center Configuration Manager](../../protect/deploy-use/create-certificate-profiles.md).  
+ Wenn Sie das System Center Configuration Manager-Richtlinienmodul deinstallieren möchten, verwenden Sie hierzu die Option **Programme und Features** in der Systemsteuerung. 
 
- Wenn Sie das System Center Configuration Manager-Richtlinienmodul deinstallieren möchten, verwenden Sie hierzu die Option **Programme und Features** in der Systemsteuerung.  
+ 
+Nachdem Sie die Konfigurationsschritte abgeschlossen haben, sind Sie für die Bereitstellung von Zertifikaten für Benutzer und Geräte mit dem Erstellen und Bereitstellen von Zertifikatprofilen bereit. Weitere Informationen zum Erstellen von Zertifikatprofilen finden Sie unter [Erstellen von Zertifikatprofilen in System Center Configuration Manager](../../protect/deploy-use/create-certificate-profiles.md).  
 

@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 766120f5ca79f279a513b62c35a2374c859b253a
-ms.openlocfilehash: 079be3c97e4239f8c5293bed5a2ce13abfbe7798
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 238e460885b6490b3744690640f9ff040902b35f
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -116,7 +116,8 @@ Weitere Informationen finden Sie unter [Windows PE-Peercache](../../../osd/get-s
 ## <a name="content-library"></a>Inhaltsbibliothek  
  Die Inhaltsbibliothek ist der Einzelinstanz-Inhaltsspeicher, der von Configuration Manager verwendet wird, um die Gesamtgröße des kombinierten Inhaltstexts, den Sie verteilen, zu reduzieren.  
 
-Weitere Informationen zur [Inhaltsbibliothek](../../../core/plan-design/hierarchy/the-content-library.md).
+- Weitere Informationen zur [Inhaltsbibliothek](../../../core/plan-design/hierarchy/the-content-library.md).
+- Verwenden Sie das [Inhaltsbibliothek-Bereinigungstool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool) für die Entfernung von Inhalt, der nicht mehr einer Anwendung zugeordnet ist.  
 
 
 ## <a name="distribution-points"></a>Verteilungspunkte  

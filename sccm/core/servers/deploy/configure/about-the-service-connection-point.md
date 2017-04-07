@@ -2,7 +2,7 @@
 title: Dienstverbindungspunkt | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über diese Standortsystemrolle von Configuration Manager, und verstehen und planen Sie den Verwendungsbereich."
 ms.custom: na
-ms.date: 2/7/2017
+ms.date: 3/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3a24fe53cc243294694b779fad4c3ab83ca2ecb7
-ms.openlocfilehash: ae2cc7030c1fc404dcc7392b8c3067fc0f8cafc0
+ms.sourcegitcommit: 6accec2d356861b273b25ba2b6338d9684a46ff6
+ms.openlocfilehash: ad6df047beff670411d203220576b87f7d56d50c
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -42,17 +43,18 @@ Der System Center Configuration Manager-Dienstverbindungspunkt ist eine Standort
 
   Informationen zu den auf den einzelnen Ebenen gesammelten Daten und zum Ändern der Sammlungsebene nach der Installation der Rolle finden Sie unter [Diagnose- und Nutzungsdaten](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data). Klicken Sie anschließend auf den Link der verwendeten Configuration Manager-Version.  
 
-    Weitere Informationen finden Sie unter [Ebenen und Einstellungen für Nutzungsdaten](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
+  Weitere Informationen finden Sie unter [Ebenen und Einstellungen für Nutzungsdaten](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
 
 -   **Herunterladen von Updates, die auf Ihre Configuration Manager-Infrastruktur zutreffen**: Auf Grundlage der von Ihnen hochgeladenen Nutzungsdaten werden nur Updates verfügbar gemacht, die für Ihre Infrastruktur relevant sind.  
 
- **Jede Hierarchie unterstützt eine einzelne Instanz dieser Rolle:**  
+- **Jede Hierarchie unterstützt eine einzelne Instanz dieser Rolle:**  
 
-    -   Die Standortsystemrolle kann nur am Standort der obersten Ebene Ihrer Hierarchie installiert werden. Dabei handelt es sich um einen Standort der zentralen Verwaltung oder einen eigenständigen primären Standort.  
+ -   Die Standortsystemrolle kann nur am Standort der obersten Ebene Ihrer Hierarchie installiert werden. Dabei handelt es sich um einen Standort der zentralen Verwaltung oder einen eigenständigen primären Standort.  
 
-    -   Wenn Sie einen eigenständigen primären Standort auf eine größere Hierarchie erweitern, müssen Sie diese Rolle am primären Standort deinstallieren und können sie dann am Standort der zentralen Verwaltung installieren.  
+  -   Wenn Sie einen eigenständigen primären Standort auf eine größere Hierarchie erweitern, müssen Sie diese Rolle am primären Standort deinstallieren und können sie dann am Standort der zentralen Verwaltung installieren.  
 
-##  <a name="a-namebkmkmodesa-modes-of-operation"></a><a name="bkmk_modes"></a> Betriebsmodi  
+
+##  <a name="bkmk_modes"></a> Betriebsmodi  
  Der Dienstverbindungspunkt unterstützt zwei Betriebsmodi:  
 
 -   Im **Onlinemodus** sucht der Dienstverbindungspunkt automatisch alle 24 Stunden nach Updates und lädt dann neue Updates herunter, die für Ihre aktuelle Infrastruktur und Produktversion verfügbar sind. Diese werden dann in der Configuration Manager-Konsole bereitgestellt.  
@@ -82,7 +84,7 @@ Wechseln Sie zum Verwenden des Dienst-Managers von Configuration Manager in der 
 
 -   Der Verteilungs-Manager auf dem Standortserver verwendet das Standortsystem-Installationskonto zum Übertragen von Updates vom Dienstverbindungspunkt.
 
-##  <a name="a-namebkmkurlsa-internet-access-requirements"></a><a name="bkmk_urls"></a> Erforderliche Berechtigungen für den Internetzugriff  
+##  <a name="bkmk_urls"></a> Erforderliche Berechtigungen für den Internetzugriff  
 Der Computer, der den Dienstverbindungspunkt und alle Firewalls zwischen dem Computer und dem Internet hostet, muss die Kommunikation über den **TCP-Port 443** und den **TCP-Port 443** an die folgenden Internet-URLs übergeben, um den Vorgang zu aktivieren. Der Dienstverbindungspunkt unterstützt auch Webproxys (mit oder ohne Authentifizierung) für die Verwendung dieser URLs.  Informationen zur Konfiguration eines Web Proxy Accounts finden Sie unter [Unterstützung von Proxyservern in System Center Configuration Manager](/sccm/core/plan-design/network/proxy-server-support).
 
 **Updates und Wartung**  
@@ -119,8 +121,10 @@ Beim Ausführen von **Setup** zum Installieren des Standorts der obersten Ebene 
 
 Nachdem Sie Setup ausgeführt haben oder wenn Sie die Standortsystemrolle neu installieren, verwenden Sie den **Assistenten zum Hinzufügen von Standortsystemrollen** oder den **Assistenten zum Erstellen von Standortsystemservern**, um das Standortsystem auf einem Server am Standort der obersten Ebene der Hierarchie (dem Standort der zentralen Verwaltung oder einem eigenständigen primären Standort) zu installieren. Beide Assistenten befinden sich auf der Registerkarte **Startseite** in der Konsole unter **Verwaltung** > **Standortkonfiguration** > **Server und Standortsystemrollen**.
 
+## <a name="log-files-used-by-the-service-connection-point"></a>Vom Dienstverbindungspunkt verwendete Protokolldateien
+Zeigen Sie **Dmpuploader.log** auf dem Computer an, auf dem der Dienstverbindungspunkt ausgeführt wird, um Informationen zu Uploads in Microsoft anzuzeigen.  Sehen Sie sich **Dmpdownloader.log** an für Informationen zu Downloads und dem Downloadfortschritt von Updates. Die vollständige Liste der mit dem Dienstverbindungspunkt verknüpften Protokolle finden Sie unter [Service Connection Point (Dienstverbindungspunkt)](/sccm/core/plan-design/hierarchy/log-files#BKMK_WITLog) im Thema „log files“ (Protokolldateien) von Configuration Manager.
 
-
-<!--HONumber=Feb17_HO3-->
-
+Die folgendes Flussdiagramme veranschaulichen den Prozessfluss und Protokolleinträge für die Downloads von Updates und die Replikation von Updates an anderen Standorten:
+ - [Flussdiagramm: Herunterladen von Updates](/sccm/core/servers/manage/download-updates-flowchart)
+ - [Flussdiagramm: Aktualisieren von Replikationen](/sccm/core/servers/manage/update-replication-flowchart)
 

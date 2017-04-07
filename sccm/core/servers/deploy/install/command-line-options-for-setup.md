@@ -2,7 +2,7 @@
 title: Setup-Befehlszeilenoptionen | Microsoft-Dokumentation
 description: "Verwenden Sie die Informationen in diesem Artikel, um Skripts zu konfigurieren oder System Center Configuration Manager über die Befehlszeile zu installieren."
 ms.custom: na
-ms.date: 13/2017
+ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 36b1ab794bb1dc80c673bd41dae11f46053f3be3
-ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 04fe7b3e674287c4255563ab4a308e54d0b6c3aa
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="command-line-options-for-setup-in-system-center-configuration-manager"></a>Befehlszeilenoptionen für das Setup in System Center Configuration Manager
@@ -27,7 +28,7 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
 
  Verwenden Sie die folgenden Informationen, um Skripts zu konfigurieren oder System Center Configuration Manager über die Befehlszeile zu installieren.  
 
-##  <a name="a-namebkmksetupa-command-line-options-for-setup"></a><a name="bkmk_setup"></a> Befehlszeilenoptionen für Setup  
+##  <a name="bkmk_setup"></a> Befehlszeilenoptionen für Setup  
  **/DEINSTALL**  
  Damit wird der Standort deinstalliert. Sie müssen Setup vom Standortservercomputer ausführen.  
 
@@ -68,7 +69,7 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
  **/MANAGELANGS <*Sprachskriptpfad*>**  
  Verwaltet die zuvor an einem installierten Standort installierten Sprachen. Zur Verwendung dieser Option müssen Sie das Setup über **<*Configuration Manager-Installationspfad*>\BIN\X64** auf dem Standortserver ausführen und den Speicherort der Sprachskriptdatei angeben, die die Spracheinstellungen enthält. Weitere Informationen zu den in der Skriptdatei für das Sprachsetup verfügbaren Sprachoptionen finden Sie unter [Befehlszeilenoptionen zum Verwalten von Sprachen](#bkmk_Lang) in diesem Thema.  
 
-##  <a name="a-namebkmklanga-command-line-options-to-manage-languages"></a><a name="bkmk_Lang"></a> Befehlszeilenoptionen zum Verwalten von Sprachen  
+##  <a name="bkmk_Lang"></a> Befehlszeilenoptionen zum Verwalten von Sprachen  
  **Identification**  
 
 -   **Schlüsselname:** Aktion  
@@ -145,7 +146,7 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
 
     -   **Details:** Über diesen Schlüssel wird der Pfad zu den für Setup erforderlichen Dateien angegeben. Je nach dem Wert unter **PrerequisiteComp** wird dieser Pfad von Setup zum Speichern heruntergeladener Dateien oder zum Suchen der zuvor heruntergeladenen Dateien verwendet.  
 
-##  <a name="a-namebkmkunattendeda-unattended-setup-script-file-keys"></a><a name="bkmk_Unattended"></a> Skriptdateischlüssel für unbeaufsichtigtes Setup  
+##  <a name="bkmk_Unattended"></a> Skriptdateischlüssel für unbeaufsichtigtes Setup  
  In den folgenden Abschnitten erfahren Sie, wie Sie ein Skript für die unbeaufsichtigte Installation erstellen. In der Liste werden die verfügbaren Setupskriptschlüssel und die entsprechenden Werte aufgeführt. Außerdem wird angegeben, ob die Schlüssel erforderlich sind und für welchen Installationstyp sie verwendet werden. In der letzten Spalte finden Sie zudem eine kurze Beschreibung der einzelnen Schlüssel.  
 
 ### <a name="unattended-install-for-a-central-administration-site"></a>Unbeaufsichtigtes Installieren eines Standorts der zentralen Verwaltung  
@@ -160,6 +161,14 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
     -   **Werte:** InstallCAS  
 
     -   **Details:** Hiermit wird ein Standort der zentralen Verwaltung installiert.  
+
+-   **Schlüsselname:** CDLatest  
+
+    -   **Erforderlich:** Ja; nur wenn Sie Medien aus dem Ordner „CD.Latest“ verwenden    
+
+    -   **Werte:** 1; bei jedem Wert außer 1 wird davon ausgegangen, dass er nicht „CD.Latest“ verwendet
+
+    -   **Details:** Ihr Skript muss diesen Schlüssel und diesen Wert enthalten, wenn Sie das Setup von einem Medium in dem Ordner „CD.Latest“ ausführen, um einen Standort der primären oder zentralen Verwaltung zu installieren oder diesen wiederherstellen möchten. Dieser Wert informiert das Setup darüber, das Medien aus „CD.Latest“ verwendet werden.
 
 **Optionen**  
 
@@ -398,6 +407,14 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
     -   **Werte:** InstallPrimarySite  
 
     -   **Details:** Hiermit wird ein primärer Standort installiert.  
+
+-   **Schlüsselname:** CDLatest  
+
+    -   **Erforderlich:** Ja; nur wenn Sie Medien aus dem Ordner „CD.Latest“ verwenden    
+
+    -   **Werte:** 1; bei jedem Wert außer 1 wird davon ausgegangen, dass er nicht „CD.Latest“ verwendet
+
+    -   **Details:** Ihr Skript muss diesen Schlüssel und diesen Wert enthalten, wenn Sie das Setup von einem Medium in dem Ordner „CD.Latest“ ausführen, um einen Standort der primären oder zentralen Verwaltung zu installieren oder diesen wiederherstellen möchten. Dieser Wert informiert das Setup darüber, das Medien aus „CD.Latest“ verwendet werden.
 
 **Optionen**  
 
@@ -717,6 +734,14 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
     -   **Details:** Hiermit wird ein Standort der zentralen Verwaltung wiederhergestellt.  
 
+-   **Schlüsselname:** CDLatest  
+
+    -   **Erforderlich:** Ja; nur wenn Sie Medien aus dem Ordner „CD.Latest“ verwenden    
+
+    -   **Werte:** 1; bei jedem Wert außer 1 wird davon ausgegangen, dass er nicht „CD.Latest“ verwendet
+
+    -   **Details:** Ihr Skript muss diesen Schlüssel und diesen Wert enthalten, wenn Sie das Setup von einem Medium in dem Ordner „CD.Latest“ ausführen, um einen Standort der primären oder zentralen Verwaltung zu installieren oder diesen wiederherstellen möchten. Dieser Wert informiert das Setup darüber, das Medien aus „CD.Latest“ verwendet werden.
+
 **RecoveryOptions**  
 
 -   **Schlüsselname:** ServerRecoveryOptions  
@@ -978,6 +1003,14 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
     -   **Werte:** <*RecoverPrimarySite*>  
 
     -   **Details:** Hiermit wird ein primärer Standort wiederhergestellt.  
+
+-   **Schlüsselname:** CDLatest  
+
+    -   **Erforderlich:** Ja; nur wenn Sie Medien aus dem Ordner „CD.Latest“ verwenden    
+
+    -   **Werte:** 1; bei jedem Wert außer 1 wird davon ausgegangen, dass er nicht „CD.Latest“ verwendet
+
+    -   **Details:** Ihr Skript muss diesen Schlüssel und diesen Wert enthalten, wenn Sie das Setup von einem Medium in dem Ordner „CD.Latest“ ausführen, um einen Standort der primären oder zentralen Verwaltung zu installieren oder diesen wiederherstellen möchten. Dieser Wert informiert das Setup darüber, das Medien aus „CD.Latest“ verwendet werden.    
 
 **RecoveryOptions**  
 
@@ -1243,9 +1276,4 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
     -   **Werte:** <*Portnummer*>  
 
     -   **Details:** Gibt die für den Proxyport zu verwendende Portnummer an.  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

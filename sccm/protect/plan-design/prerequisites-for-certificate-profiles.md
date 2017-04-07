@@ -2,7 +2,7 @@
 title: "Voraussetzungen für Zertifikatprofile | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr zu Zertifikatprofilen in System Center Configuration Manager sowie zu den entsprechenden externen Abhängigkeiten und Abhängigkeiten innerhalb des Produkts."
 ms.custom: na
-ms.date: 11/27/2016
+ms.date: 03/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
-ms.openlocfilehash: 08fb30da2060728142648f13846be737f98f2276
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
+ms.openlocfilehash: fba52ee305fe67418f2fe544bfe94d10467236d0
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -27,7 +27,7 @@ ms.lasthandoff: 12/16/2016
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 
-Zertifikatprofile in System Center Configuration Manager (auch bekannt als ConfigMgr oder SCCM) weisen externe Abhängigkeiten sowie Abhängigkeiten innerhalb des Produkts auf.  
+Zertifikatprofile in System Center Configuration Manager weisen externe Abhängigkeiten sowie Abhängigkeiten innerhalb des Produkts auf.  
 
 ## <a name="dependencies-external-to-configuration-manager"></a>Externe Abhängigkeiten von Configuration Manager  
 

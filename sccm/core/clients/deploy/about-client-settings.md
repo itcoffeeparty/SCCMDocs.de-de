@@ -2,7 +2,7 @@
 title: Clienteinstellungen | Microsoft Docs
 description: Auswahl von Clienteinstellungen mithilfe der Verwaltungskonsole in System Center Configuration Manager.
 ms.custom: na
-ms.date: 12/12/2016
+ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 289db441899359f3bf3abe5d38896c7acd2045b6
-ms.openlocfilehash: 5eaca19f2b21b1c62b956d2a44d492d3ddd6d10a
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: bd2cf7b0df4a1f50c006e8280bf59ea91f1b4477
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>Informationen zu Clienteinstellungen in System Center Configuration Manager
@@ -329,7 +329,7 @@ Viele der Clienteinstellungen sind selbsterklärend. Andere werden hier beschrie
     -   NOIDMIF-Dateien sollten sich im Ordner „Windows\System32\CCM\Inventory\Noidmif“ befinden.  
 
     > [!NOTE]  
-    >  Diese Einstellung ist nur in den Clientstandardeinstellungen verfügbar. 
+    >  Diese Einstellung ist nur in den Clientstandardeinstellungen verfügbar.
 
 -   **Maximale zufällige Verzögerung**
 
@@ -601,6 +601,12 @@ Viele der Clienteinstellungen sind selbsterklärend. Andere werden hier beschrie
 -   **Alle anstehenden Bereitstellungen mit Stichtag in diesem Zeitraum werden auch installiert**  
 
      Verwenden Sie diese Einstellung, um den Zeitrahmen für die vorherige Einstellung anzugeben. Sie können einen Wert von 1 bis 23 Stunden und von 1 bis 365 Tagen eingeben. Der Standardwert liegt bei 7 Tagen.  
+
+-   **Installation von Express-Installationsdateien auf Clients aktivieren**
+
+-   **Port zum Herunterladen von Inhalten für Express-Installationsdateien**
+
+-   **Erneutes Aktivieren des Office 365-Clients** Verwenden Sie diese Einstellung zum Aktivieren der Verwaltung des Office 365-Client-Agents. Wenn Sie den Wert auf **Ja** festlegen, können Sie Office 365-Installationseinstellungen konfigurieren, Dateien aus Office Content Delivery Networks (CDNs) herunterladen und die Dateien als Anwendung in Configuration Manager bereitstellen.
 
 ##  <a name="user-and-device-affinity"></a>Affinität zwischen Benutzer und Gerät  
 

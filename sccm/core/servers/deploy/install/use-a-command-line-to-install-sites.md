@@ -2,7 +2,7 @@
 title: Installieren mittels Befehlszeile | Microsoft-Dokumentation
 description: "Erfahren Sie, wie Sie das System Center Configuration Manager-Setup über eine Eingabeaufforderung für eine Vielzahl von Standortinstallationen ausführen."
 ms.custom: na
-ms.date: 3/1/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 34e24deb90a39bf655a2e24d16cdbe07528e6193
-ms.openlocfilehash: 0fb8ba4bb3d4abe66f71cc83312281cecbb92c41
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: fefa5f3aa12d82b66a251cf0525475496e1e35cf
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="use-a-command-line-to-install-system-center-configuration-manager-sites"></a>Verwenden einer Befehlszeile zum Installieren von System Center Configuration Manager-Standorten
@@ -33,7 +33,7 @@ ms.lasthandoff: 03/01/2017
 -   **Installieren Sie einen Standort der zentralen Verwaltung oder einen primären Standort über eine Eingabeaufforderung**  
   Anzeigen von [Befehlszeilenoptionen für Setup](../../../../core/servers/deploy/install/command-line-options-for-setup.md)
 
- -  **Ändern Sie die an einem Standort der zentralen Verwaltung oder einem primären Standort verwendeten Sprachen**  
+-  **Ändern Sie die an einem Standort der zentralen Verwaltung oder einem primären Standort verwendeten Sprachen**  
     Um die an einem Standort installierten Sprachen über die Eingabeaufforderung zu ändern (einschließlich Sprachen für Mobilgeräte), verfahren Sie wie folgt:  
 
      -   Führen Sie das Setup im Ordner **&lt;ConfigMgrInstallationPath\>\Bin\X64** auf dem Standortserver aus,
@@ -44,7 +44,7 @@ ms.lasthandoff: 03/01/2017
 
     Um die Sprachskriptdatei zu erstellen, verwenden Sie die Informationen unter [Befehlszeilenoptionen zum Verwalten von Sprachen](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Lang).  
 
- -  **Verwenden Sie eine Skriptdatei für die unbeaufsichtigte Installation oder Wiederherstellung von Standorten**  
+-  **Verwenden Sie eine Skriptdatei für die unbeaufsichtigte Installation oder Wiederherstellung von Standorten**  
     Sie können Setup über eine Eingabeaufforderung ausführen, indem Sie ein Installationsskript verwenden, und Sie können eine unbeaufsichtigte Standortinstallation ausführen. Sie können diese Option auch zur Wiederherstellung eines Standorts verwenden.    
 
     So verwenden Sie ein Skript mit Setup:  
@@ -58,7 +58,7 @@ ms.lasthandoff: 03/01/2017
     -   Identification    
     -   Optionen    
     -   SQLConfigOptions    
-    -   HierarchyOptions    
+      -   HierarchyOptions    
     -   CloudConnectorOptions   
 
     Zum Wiederherstellen eines Standorts müssen Sie auch die folgenden Abschnitte der Skriptdatei einbeziehen:  
@@ -66,12 +66,11 @@ ms.lasthandoff: 03/01/2017
     -   Identification  
     -   Wiederherstellung
 
-    Weitere Informationen zur Sicherung und Wiederherstellung finden Sie im Abschnitt [Skriptdateischlüssel für unbeaufsichtigte Standortwiederherstellung](../../../../protect/understand/backup-and-recovery.md#BKMK_UnattendedSiteRecoveryKeys) im Thema [Sicherung und Wiederherstellung in Configuration Manager](../../../../protect/understand/backup-and-recovery.md).  
+Weitere Informationen zur Sicherung und Wiederherstellung finden Sie im Abschnitt [Skriptdateischlüssel für unbeaufsichtigte Standortwiederherstellung](../../../../protect/understand/backup-and-recovery.md#BKMK_UnattendedSiteRecoveryKeys) im Thema [Sicherung und Wiederherstellung in Configuration Manager](../../../../protect/understand/backup-and-recovery.md).  
 
-    Eine Liste mit Schlüsseln und Werten, die in einer unbeaufsichtigten Installationsskriptdatei verwendet werden sollen, finden Sie unter [Skriptdateischlüssel für unbeaufsichtigtes Setup](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Unattended).  
+Eine Liste mit Schlüsseln und Werten, die in einer unbeaufsichtigten Installationsskriptdatei verwendet werden sollen, finden Sie unter [Skriptdateischlüssel für unbeaufsichtigtes Setup](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Unattended).  
 
 ## <a name="about-the-command-line-script-file"></a>Informationen zur Befehlszeilen-Skriptdatei  
-
  Für unbeaufsichtigte Installationen von Configuration Manager können Sie Setup mit der Befehlszeilenoption **/SCRIPT** ausführen und eine Skriptdatei angeben, die Installationsoptionen enthält. Die folgenden Aufgaben werden von dieser Methode unterstützt:  
 
 -   Installieren eines Standorts der zentralen Verwaltung  
@@ -81,6 +80,18 @@ ms.lasthandoff: 03/01/2017
 
 > [!NOTE]  
 >  Sie können die Skriptdatei für die unbeaufsichtigte Installation nicht verwenden, um ein Upgrade einer Evaluierungsversion auf eine lizenzierte Version von Configuration Manager auszuführen.  
+
+### <a name="the-cdlatest-key-name"></a>Der Schlüsselname „CDLatest“
+Wenn Sie Medien aus dem Ordner „CD.Latest“ verwenden, um eine Skriptinstallation der folgenden vier Installationsoptionen auszuführen, muss Ihr Skript den Schlüssel **CDLatest** mit einem Wert von **1** enthalten:
+- Installieren eines neuen Standorts der zentralen Verwaltung
+- Installieren eines neuen primären Standorts
+- Wiederherstellen eines Standorts der zentralen Verwaltung
+- Wiederherstellen eines primäre Standorts 
+
+Dieser Wert wird nicht für das Verwenden mit Installationsmedien unterstützt, die Sie vom Standort von Microsoft Volume License erhalten.
+Weitere Informationen zum Verwenden dieses Schlüsselnamens in der Skriptdatei finden Sie unter [Befehlszeilenoptionen](/sccm/core/servers/deploy/install/command-line-options-for-setup).
+
+
 
 ### <a name="create-the-script"></a>Erstellen des Skripts
 Das Installationsskript wird automatisch erstellt, wenn Sie das [Setup ausführen, um einen Standort über die Benutzeroberfläche](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md) zu installieren.  Wenn Sie die Einstellungen auf der Seite **Zusammenfassung** des Assistenten bestätigen, geschieht Folgendes:  

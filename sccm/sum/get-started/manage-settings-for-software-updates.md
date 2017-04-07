@@ -6,7 +6,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 03/26/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,19 +14,20 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
-ms.openlocfilehash: 7d37f3c5e398c914482c45ab837fe41d00fce8ea
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: fe4a8f56e0b554e206bcc4503a0268dc761ded81
+ms.lasthandoff: 03/27/2017
 
 
 ---
 
-#  <a name="a-namebkmkmanagesusettingsa-manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a> Verwalten von Einstellungen für Softwareupdates  
+#  <a name="BKMK_ManageSUSettings"></a> Verwalten von Einstellungen für Softwareupdates  
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 Nachdem Sie Softwareupdates in Configuration Manager synchronisiert haben, konfigurieren und überprüfen Sie die Einstellungen in den folgenden Bereichen.
 
-##  <a name="a-namebkmkclientsettingsa-client-settings-for-software-updates"></a><a name="BKMK_ClientSettings"></a> Clienteinstellungen für Softwareupdates  
+##  <a name="BKMK_ClientSettings"></a> Clienteinstellungen für Softwareupdates  
 Nach der Installation des Softwareupdatepunkts sind Softwareupdates auf Clients standardmäßig aktiviert, und für die Clienteinstellungen auf der Seite **Softwareupdates** werden Standardwerte angezeigt. Die Softwareupdateclients werden standordweit verwendet und beeinflussen, zu welchem Zeitpunkt Softwareupdates auf ihre Kompatibilität überprüft werden, sowie auf welche Weise und zu welchem Zeitpunkt Softwareupdates auf Clientcomputern installiert werden. Überprüfen Sie, ob die Clienteinstellungen für Softwareupdates an Ihrem Standort geeignet sind, bevor Sie Softwareupdates bereitstellen.  
 
 > [!IMPORTANT]  
@@ -36,7 +37,7 @@ Informationen zum Konfigurieren von Clienteinstellungen finden Sie unter [Konfig
 
 Weitere Informationen zu Clienteinstellungen finden Sie unter [About client settings (Informationen zu Clienteinstellungen)](../../core/clients/deploy/about-client-settings.md).  
 
-##  <a name="a-namebkmkgrouppolicya-group-policy-settings-for-software-updates"></a><a name="BKMK_GroupPolicy"></a> Gruppenrichtlinieneinstellungen für Softwareupdates  
+##  <a name="BKMK_GroupPolicy"></a> Gruppenrichtlinieneinstellungen für Softwareupdates  
 Von Windows Update Agent (WUA) werden auf Clientcomputern bestimmte Gruppenrichtlinieneinstellungen verwendet, um eine Verbindung mit WSUS auf dem Softwareupdatepunkt herzustellen. Diese Gruppenrichtlinieneinstellungen dienen auch dazu, die Kompatibilität von Softwareupdates zu prüfen und die Softwareupdates und WUA automatisch zu aktualisieren.
 
 ### <a name="specify-intranet-microsoft-update-service-location-local-policy"></a>Lokale Richtlinie „Internen Pfad für den Microsoft Updatedienst angeben“  
@@ -65,10 +66,10 @@ Gehen Sie wie folgt vor, um Softwareupdateeigenschaften zu öffnen.
    > [!NOTE]  
    >  Im Knoten **Alle Softwareupdates** werden von Configuration Manager nur die Softwareupdates angezeigt, die die Klassifizierungen **Kritisch** und **Sicherheit** aufweisen, und in den letzten 30 Tagen veröffentlicht wurden.  
 
-###  <a name="a-namebkmksoftwareupdatesinformationa-review-software-updates-information"></a><a name="BKMK_SoftwareUpdatesInformation"></a> Prüfen von Informationen zu Softwareupdates  
+###  <a name="BKMK_SoftwareUpdatesInformation"></a> Prüfen von Informationen zu Softwareupdates  
 In den Softwareupdateeigenschaften können Sie ausführliche Informationen über ein Softwareupdate prüfen. Diese ausführlichen Informationen werden nicht angezeigt, wenn Sie mehrere Softwareupdates auswählen. In den folgenden Abschnitten werden die für ein ausgewähltes Softwareupdate verfügbaren Informationen beschrieben.  
 
-####  <a name="a-namebkmksoftwareupdatedetailsa-software-update-details"></a><a name="BKMK_SoftwareUpdateDetails"></a> Details zu Softwareupdates  
+####  <a name="BKMK_SoftwareUpdateDetails"></a> Details zu Softwareupdates  
 Auf der Registerkarte **Updatedetails** können Sie die folgenden Informationen zum ausgewählten Softwareupdate anzeigen:  
 
 - **Bulletin-ID**: Gibt die ID des Bulletins an, auf das sich das betreffende Sicherheitssoftwareupdate bezieht. Details zu einem Sicherheitsbulletin finden Sie, wenn Sie auf der Webseite [Microsoft Security Bulletins](http://go.microsoft.com/fwlink/p/?LinkId=58313) im Suchbereich die Bulletin-ID eingeben.  
@@ -85,7 +86,7 @@ Auf der Registerkarte **Updatedetails** können Sie die folgenden Informationen 
 
 - **Betroffene Produkte**: Listet die Produkte auf, für die das Softwareupdate gilt.  
 
-####  <a name="a-namebkmkcontentinformationa-content-information"></a><a name="BKMK_ContentInformation"></a> Inhaltsinformationen  
+####  <a name="BKMK_ContentInformation"></a> Inhaltsinformationen  
 Prüfen Sie auf der Registerkarte **Inhaltsinformationen** die folgenden Informationen zu dem Inhalt, der dem ausgewählten Softwareupdate zugeordnet ist:  
 
 -   **Inhalts-ID**: Gibt die Inhalts-ID für das Softwareupdate an.  
@@ -98,32 +99,32 @@ Prüfen Sie auf der Registerkarte **Inhaltsinformationen** die folgenden Informa
 
 -   **Größe (MB)**: Gibt die Größe der Quelldateien des Softwareupdates an.  
 
-####  <a name="a-namebkmkcustombundleinformationa-custom-bundle-information"></a><a name="BKMK_CustomBundleInformation"></a> Informationen zum benutzerdefinierten Softwarepaket  
+####  <a name="BKMK_CustomBundleInformation"></a> Informationen zum benutzerdefinierten Softwarepaket  
 Prüfen Sie auf der Registerkarte **Informationen zum benutzerdefinierten Paket** die Angaben zum Softwareupdate. Wenn das ausgewählte Softwareupdate gebündelte Softwareupdates umfasst, die sich in der Softwareupdatedatei befinden, werden sie im Abschnitt **Paketinformationen** angezeigt. Auf dieser Registerkarte werden keine der gebündelten Softwareupdates angezeigt, die auf der Registerkarte **Inhaltsinformationen** angezeigt werden, wie Updatedateien für verschiedene Sprachen.  
 
-####  <a name="a-namebkmksupersedenceinformationa-supersedence-information"></a><a name="BKMK_SupersedenceInformation"></a> Ablösungsinformationen  
+####  <a name="BKMK_SupersedenceInformation"></a> Ablösungsinformationen  
 Auf der Registerkarte **Ablösungsinformationen** können Sie die folgenden Informationen zur Ablösung des Softwareupdates anzeigen:  
 
 - **Dieses Update wurde durch die folgenden Updates ersetzt**: Gibt die Softwareupdates an, durch die dieses Update abgelöst wird. Dies bedeutet, dass die aufgeführten Updates neuer sind. In der Regel stellen Sie eines der Softwareupdates bereit, durch die das Softwareupdate abgelöst wird. Die in der Liste aufgeführten Softwareupdates enthalten Hyperlinks zu Webseiten, auf denen weitere Informationen zu den Softwareupdates zu finden sind. Wenn dieses Update nicht abgelöst wurde, wird **Keine** angezeigt.  
 
 - **Dieses Update ersetzt die folgenden Updates**: Gibt die Softwareupdates an, die durch dieses Softwareupdate abgelöst werden. Dies bedeutet, dass dieses Softwareupdate neuer ist. In der Regel stellen Sie dieses Softwareupdate als Ersatz für die abgelösten Softwareupdates bereit. Die in der Liste aufgeführten Softwareupdates enthalten Hyperlinks zu Webseiten, auf denen weitere Informationen zu den Softwareupdates zu finden sind. Wenn durch dieses Update kein anderes Update abgelöst wird, wird **Keine** angezeigt.  
 
-###  <a name="a-namebkmksoftwareupdatessettingsa-configure-software-updates-settings"></a><a name="BKMK_SoftwareUpdatesSettings"></a> Konfigurieren von Softwareupdateeinstellungen  
+###  <a name="BKMK_SoftwareUpdatesSettings"></a> Konfigurieren von Softwareupdateeinstellungen  
 In den Eigenschaften können Sie Softwareupdateeinstellungen für mehrere Softwareupdates konfigurieren. Die meisten Softwareupdateeinstellungen können Sie nur am Standort der zentralen Verwaltung oder an einem eigenständigen primären Standort konfigurieren. In den folgenden Abschnitten wird erläutert, wie Sie Einstellungen für Softwareupdates konfigurieren.  
 
-####  <a name="a-namebkmksetmaxruntimea-set-maximum-run-time"></a><a name="BKMK_SetMaxRunTime"></a> Festlegen der maximalen Laufzeit  
+####  <a name="BKMK_SetMaxRunTime"></a> Festlegen der maximalen Laufzeit  
 Legen Sie auf der Registerkarte **Maximale Laufzeit** den Zeitraum fest, innerhalb dessen ein Softwareupdate auf Clientcomputern abgeschlossen sein muss. Wenn das Update länger als maximal vorgesehen dauert, wird von Configuration Manager eine Statusmeldung erstellt, und die Bereitstellung wird nicht mehr auf die Softwareupdateinstallation überwacht. Sie können diese Einstellung nur am Standort der zentralen Verwaltung oder an einem eigenständigen primären Standort konfigurieren.  
 
 Von Configuration Manager wird auch festgestellt, ob die Softwareupdateinstallation in einem konfigurierten Wartungsfenster gestartet werden muss. Ist der Wert der maximalen Laufzeit größer als die verfügbare verbleibende Zeit im Wartungsfenster, wird die Softwareupdateinstallation bis zum Beginn des nächsten Wartungsfensters aufgeschoben. Müssen mehrere Softwareupdates auf einem Clientcomputer mit einem konfigurierten Wartungsfenster (Zeitraum) installiert werden, wird das Softwareupdate mit der geringsten maximalen Laufzeit zuerst installiert. Dann folgt das Softwareupdate mit der zweitniedrigsten maximalen Laufzeit usw. Vor der Installation der einzelnen Softwareupdates wird vom Client überprüft, ob das verfügbare Wartungsfenster für die Softwareupdateinstallation lang genug ist. Nach Beginn einer Softwareupdateinstallation wird die Installation fortgesetzt, selbst wenn das Ende des Wartungsfensters überschritten wird. Weitere Informationen zu Wartungsfenstern finden Sie unter [Verwenden von Wartungsfenstern in System Center Configuration Manager](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
 Auf der Registerkarte **Maximale Laufzeit** können Sie die folgenden Einstellungen anzeigen und konfigurieren:  
 
-- **Maximale Laufzeit**: Damit wird die maximale Anzahl von Minuten festgelegt, die für eine Softwareupdateinstallation zur Verfügung stehen, bevor die Installation nicht mehr von Configuration Manager überwacht wird. Mit dieser Einstellung wird auch bestimmt, ob für die Updateinstallation genug Zeit zur Verfügung steht, bevor das Wartungsfenster endet. Die Standardeinstellung ist 60 Minuten für Service Packs und 5 Minuten für alle anderen Arten von Softwareupdates. Die zulässigen Werte reichen von 5 bis 9999 Minuten.  
+- **Maximale Laufzeit**: Damit wird die maximale Anzahl von Minuten festgelegt, die für eine Softwareupdateinstallation zur Verfügung stehen, bevor die Installation nicht mehr von Configuration Manager überwacht wird. Mit dieser Einstellung wird auch bestimmt, ob für die Updateinstallation genug Zeit zur Verfügung steht, bevor das Wartungsfenster endet. Die Standardeinstellung lautet 60 Minuten für Service Packs. Für andere Softwareupdatetypen lautet der Standardwert 10 Minuten, wenn Sie eine Neuinstallation der Configuration Manager-Version 1511 oder höher durchführen, und 5 Minuten, wenn Sie von einer früheren Version aktualisiert haben. Die zulässigen Werte reichen von 5 bis 9999 Minuten.  
 
 > [!IMPORTANT]  
 >  Achten Sie darauf, dass die maximale Laufzeit nicht länger als das konfigurierte Wartungsfenster ist. Andernfalls wird die Softwareupdateinstallation niemals initiiert.  
 
-####  <a name="a-namebkmksetcustomseveritya-set-custom-severity"></a><a name="BKMK_SetCustomSeverity"></a> Festlegen des benutzerdefinierten Schweregrads  
+####  <a name="BKMK_SetCustomSeverity"></a> Festlegen des benutzerdefinierten Schweregrads  
 In den Eigenschaften eines Softwareupdates können Sie über die Registerkarte **Benutzerdefinierter Schweregrad** benutzerdefinierte Schweregrade für die Softwareupdates konfigurieren. Dies kann sich als notwendig erweisen, wenn die vordefinierten Schweregrade Ihren Anforderungen nicht gerecht werden. Die benutzerdefinierten Werte werden in der Spalte **Benutzerdefinierter Schweregrad** in der Configuration Manager-Konsole aufgeführt. Sie können die Softwareupdates nach den angegebenen benutzerdefinierten Schweregraden sortieren und außerdem Abfragen und Berichte erstellen, in denen diese Werte als Filter verwendet werden. Sie können diese Einstellung nur am Standort der zentralen Verwaltung oder an einem eigenständigen primären Standort konfigurieren.  
 
 Auf der Registerkarte **Benutzerdefinierter Schweregrad** können Sie die folgenden Einstellungen konfigurieren.  
@@ -139,9 +140,4 @@ Wenn die Überprüfung der Zertifikatsperrlisten verwendet wird, muss sie in den
 Führen Sie auf dem Computer, der die CRL-Prüfung ausführt, von der Produkt-DVD den folgenden Befehl von einer Eingabeaufforderung aus: **\SMSSETUP\BIN\X64\\**<*Sprache*>**\UpdDwnldCfg.exe/checkrevocation aus**.  
 
 Führen Sie für Englisch (USA) den folgenden Befehl aus: **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe /checkrevocation**  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

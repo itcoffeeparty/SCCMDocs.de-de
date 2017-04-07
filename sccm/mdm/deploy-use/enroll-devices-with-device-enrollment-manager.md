@@ -2,7 +2,7 @@
 title: "Registrieren von Geräten mit dem Geräteregistrierungsmanager – Configuration Manager | Microsoft-Dokumentation"
 description: "Registrieren Sie unternehmenseigene Geräte mit dem Geräteregistrierungs-Managerkonto mit System Center Configuration Manager."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,13 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2905f26e-7859-497d-b995-5ff48261efa2
 caps.latest.revision: 8
-author: mtillman
-ms.author: mtillman
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
-ms.openlocfilehash: b356d2351b8a28bdca78176fdf0ff3c913a36bd3
-ms.lasthandoff: 01/24/2017
+ms.sourcegitcommit: 7573590763c68a4c97d388be1e64054c318da9cc
+ms.openlocfilehash: 8c491636925670732e6af67d8c1c741e4793ef96
+ms.lasthandoff: 03/24/2017
 
 
 ---
@@ -26,27 +26,23 @@ ms.lasthandoff: 01/24/2017
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Mit System Center Configuration Manager und Intune können Organisationen eine Vielzahl mobiler Geräte mit einem einzelnen Benutzerkonto verwalten. Das Konto *Geräteregistrierungs-Manager* ist ein spezielles Intune-Konto mit Berechtigung zum Registrieren von mehr als fünf Geräten.  
+Mit Intune können Organisationen eine Vielzahl mobiler Geräte mit einem einzelnen Benutzerkonto verwalten. Das Konto *Geräteregistrierungsmanager* (DEM) ist ein spezielles Benutzerkonto, das bis zu 1.000 Geräte registrieren kann. Fügen Sie dem DEM-Konto vorhandene Benutzer hinzu, damit diese bestimmte DEM-Funktionen erhalten. Jedes registrierte Gerät verwendet eine Einzellizenz. Wir empfehlen die Verwendung von Geräten über dieses Konto als gemeinsam genutzte Geräte mit keiner Benutzeraffinität anstelle von persönlichen, dedizierten Geräten.  
 
 ## <a name="enroll-corporate-owned-devices-with-the-device-enrollment-manager"></a>Registrieren von firmeneigenen Geräten mit dem Geräteregistrierungs-Manager  
  Sie können beispielsweise einem Speicher-Manager oder Supervisor ein Benutzerkonto für einen Geräteregistrierungs-Manager zuweisen, um ihm folgende Möglichkeiten zu geben:  
 
--   Registrieren von Geräten für die Verwaltung  
-
+-   Registrieren von bis zu 1.000 Geräten für die Verwaltung  
 -   Verwenden der Unternehmensportal-App, um Unternehmens-Apps zu installieren  
-
--   Installieren und Deinstallieren von Software  
-
 -   Konfigurieren des Zugriffs auf Unternehmensdaten  
-
 
 Die folgenden Einschränkungen gelten für Geräte, die über ein Konto des Geräteregistrierungs-Managers verwaltet werden:
 
 - Der Speicher-Manager kann das Gerät nicht über das Unternehmensportal zurücksetzen.  
--  Geräte können nicht mit dem Arbeitsbereich oder Azure Active Directory verknüpft sein. Dadurch wird verhindert, dass diese Geräte den bedingten Zugriff verwenden.
+- Geräte können nicht mit dem Arbeitsbereich oder Azure Active Directory verknüpft sein. Dadurch wird verhindert, dass diese Geräte den bedingten Zugriff verwenden.
 -  Stellen Sie die Unternehmensportal-App als eine **Erforderliche Installation** auf dem Benutzerkonto des Geräteregistrierungs-Manager bereit, um Unternehmens-Apps für Geräte bereitzustellen, die mit dem Geräteregistrierungs-Manager verwaltet. Der Geräteregistrierungs-Manager kann dann die Unternehmensportal-App starten, um zusätzliche Apps zu installieren.
 - Zur Verbesserung der Leistung zeigt die Unternehmensportal-App nur das lokale Gerät an. Die Remoteverwaltung anderer DEM-Geräte kann nur vom Administrator in der Configuration Manager-Konsole ausgeführt werden
 - Die Unternehmensportal-Website ist nicht für Konten des Geräteregistrierungs-Managers verfügbar. Verwenden Sie die Unternehmensportal-App.
+- (Nur iOS:) Wenn Sie DEM für die Registrierung von iOS-Geräten verwenden, können Sie für die Registrierung der Geräte nicht Apple Configurator oder das Apple-Programm zur Geräteregistrierung (DEP) verwenden.
 
  **Beispiele für ein Szenario des Geräteregistrierungs-Managers:**   
 Ein Restaurant möchte Point-of-Sale-Tablets für sein Bedienpersonal und Bestellmonitore für seine Küchenmitarbeiter. Die Mitarbeiter müssen niemals auf Unternehmensdaten zugreifen und sich nie als Benutzer anmelden. Der Intune-Administrator erstellt ein Konto für den Geräteregistrierungs-Manager und registriert die firmeneigenen Geräte mit diesem Konto. Alternativ kann der Administrator die Anmeldeinformationen des Geräteregistrierungs-Managers einem Restaurant-Manager geben, sodass dieser die Geräte registrieren und verwalten kann.  

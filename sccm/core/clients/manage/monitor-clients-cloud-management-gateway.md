@@ -1,17 +1,18 @@
 ---
 title: "Überwachen des Cloudverwaltungsgateways – Configuration Manager | Microsoft-Dokumentation"
 description: 
-ms.date: 11/18/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-client
 ms.assetid: 15f72f80-9850-40ce-9c3a-443ba04b6a03
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: ef12c9b966a1b83b61243311b30e1a925c20d2e3
-ms.openlocfilehash: 4475205c37c20631a189e0c315dc48e288c15ba6
+ms.sourcegitcommit: 199096db7a23fb14db98b95e75246ed254848ab7
+ms.openlocfilehash: df32a7d95799d8ae685fd66e2d9ddf25e32b37d0
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -49,16 +50,5 @@ Warnungen für ausgehenden Datenverkehr helfen Ihnen beim Verständnis, wann der
 
 ## <a name="monitor-logs"></a>Überwachungsprotokolle
 
-Der Cloudverwaltungsgateway-Dienst generiert Einträge in den folgenden Protokolldateien:
-
--   **Cloudmgr.log**: Enthält Einträge für die Bereitstellung des Cloudverwaltungsgateway-Dienstes, den laufenden Dienststatus, und Nutzungsdaten, die mit dem Dienst verknüpft sind, auf.
-
--   **SMS\_Cloud\_ProxyConnector.log**: Enthält Einträge zum Einrichten von Verbindungen zwischen dem Cloud-Management-Gateway-Dienst und dem Verbindungspunkt für das Cloudverwaltungsgateway auf.
-
-Weitere Informationen finden Sie unter [Protokolldateien in System Center Configuration Manager](/sccm/core/plan-design/hierarchy/log-files).
-
-
-
-<!--HONumber=Jan17_HO4-->
-
+Der Cloudverwaltungsgateway-Dienst generiert Einträge in einigen Protokolldateien. Weitere Informationen finden Sie unter [Protokolldateien in System Center Configuration Manager](/sccm/core/plan-design/hierarchy/log-files).
 

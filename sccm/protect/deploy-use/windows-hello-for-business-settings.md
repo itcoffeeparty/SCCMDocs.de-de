@@ -2,7 +2,7 @@
 title: Windows Hello for Business-Einstellungen | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie Windows Hello for Business in System Center Configuration Manager integrieren.
 ms.custom: na
-ms.date: 10/10/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
-ms.openlocfilehash: ec3d130674d606410e6da7babee126e017aff234
-ms.lasthandoff: 03/04/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: c9a6842958e6fa3f740caabbaf20aabb9df4e8a8
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -47,13 +47,13 @@ Sie können Windows Hello for Business-Einstellungen auf einer Domäne angehöre
 
 Beachten Sie, dass Sie zusätzlich zu dieser Konfiguration, wie unter [Configure a certificate profile (Konfigurieren eines Zertifikatprofils)](#configure-a-certificate-profile) beschrieben, ein Zertifikatprofil bereitstellen müssen.
 
-### <a name="recommended-approach----configure-a-windows-hello-for-business-profile"></a>Empfohlener Ansatz – Konfigurieren eines Windows Hello for Business-Profils  
+## <a name="recommended-approach----configure-a-windows-hello-for-business-profile"></a>Empfohlener Ansatz – Konfigurieren eines Windows Hello for Business-Profils  
 
-Klicken Sie in der Verwaltungskonsole mit der rechten Maustaste unter **Zugriff auf Unternehmensressourcen** auf **Profile für Windows Hello für Unternehmen**, und wählen Sie **Neu** aus, um den Profilassistenten zu starten. Stellen Sie die Einstellungen bereit, die der Assistent anfordert, überprüfen und bestätigen Sie die Einstellungen auf der letzten Seite, und klicken Sie auf **Schließen**. Beispiel von möglichen Einstellungen:  
+Klicken Sie in der Configuration Manager-Konsole mit der rechten Maustaste unter **Zugriff auf Unternehmensressourcen** auf **Profile für Windows Hello für Unternehmen**, und wählen Sie **Neu** aus, um den Profilassistenten zu starten. Stellen Sie die Einstellungen bereit, die der Assistent anfordert, überprüfen und bestätigen Sie die Einstellungen auf der letzten Seite, und klicken Sie auf **Schließen**. Beispiel von möglichen Einstellungen:  
 
 ![Windows Hello for Business-Einstellungen](../media/Hello-for-Business-settings.png)
 
-### <a name="configure-windows-hello-for-business-with-group-policy-in-active-directory"></a>Konfigurieren von Configure Windows Hello for Business mit Gruppenrichtlinie in Active Directory  
+## <a name="configure-windows-hello-for-business-with-group-policy-in-active-directory"></a>Konfigurieren von Configure Windows Hello for Business mit Gruppenrichtlinie in Active Directory  
 
 Sie können Ihre Windows 10-Geräte, die einer Domäne angehören, mit einer Active Directory-Gruppenrichtlinie konfigurieren, um beim Anmelden eines Benutzers bei Windows Hello for Business-Anmeldeinformationen bereitzustellen:
 
@@ -79,12 +79,10 @@ Sie können jetzt das soeben erstellte Gruppenrichtlinienobjekt mit einem Speich
 
    Eine bestimmte Sicherheitsgruppe, die Windows 10-Computer enthält, die einer Domäne angehören und automatisch mit Azure Active Directory registriert werden.    
 
-#### <a name="configure-windows-hello-for-business-by-deploying-a-powershell-script-with-configuration-manager"></a>Konfigurieren von Windows Hello for Business durch Bereitstellen eines PowerShell-Skripts mit Configuration Manager    
+## <a name="configure-windows-hello-for-business-by-deploying-a-powershell-script-with-configuration-manager"></a>Konfigurieren von Windows Hello for Business durch Bereitstellen eines PowerShell-Skripts mit Configuration Manager    
 Sie können das folgende PowerShell-Skript mithilfe der Configuration Manager-Anwendungsverwaltung erstellen und bereitstellen.    
 
-```    
-powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -Command "& {New-ItemProperty "HKLM:\Software\Policies\Microsoft\PassportForWork" -Name "Enabled" -Value 1 -PropertyType "DWord" -Force}"  
-```  
+**powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -Command "& {New-ItemProperty "HKLM:\Software\Policies\Microsoft\PassportForWork" -Name "Enabled" -Value 1 -PropertyType "DWord" -Force}"** 
 
 Weitere Informationen zur Configuration Manager-Anwendungsverwaltung finden Sie unter [Einführung in die Anwendungsverwaltung mit System Center Configuration Manager (Introduction to Application Management in Configuration Manager)](/sccm/apps/understand/introduction-to-application-management).  
 
@@ -95,9 +93,25 @@ Weitere Informationen zur Configuration Manager-Anwendungsverwaltung finden Sie 
 
 -   Wählen Sie im Zertifikatprofil eine Vorlage aus, die die Smartcard-Anmeldung für die erweiterte Schlüsselverwendung verwendet.  
 
+-    Wenn Sie Zertifikatprofile im Schlüsselcontainer von Windows Hello for Business speichern möchten, und das Zertifikatprofil **Smartcard-Anmeldung** für die erweiterte Schlüsselverwendung verwendet, müssen Sie die folgenden Berechtigungen für die Schlüsselregistrierung konfigurieren, um sicherzustellen, dass das Zertifikat ordnungsgemäß überprüft wurde.
+Vorher müssen Sie die Gruppe **Schlüsseladministratoren** erstellt und alle Verwaltungspunktcomputer von Configuration Manager als Member dieser Gruppe hinzugefügt haben.
+
+    1.    Melden Sie sich in einem Domänencontroller oder einer Verwaltungsarbeitsstation mit Anmeldeinformationen des Domänenadministrators oder äquivalenten Anmeldeinformationen an.
+    2.    Öffnen Sie **Active Directory-Benutzer und -Computer**.
+    3.    Klicken Sie im Navigationsbereich mit der rechten Maustaste auf Ihren Domänennamen, und klicken anschließend auf **Eigenschaften**.
+    4.    Klicken Sie auf der Registerkarte **Sicherheit** des Dialogfelds *<domain name>* **Eigenschaften** auf **Erweitert**. Wenn die Registerkarte **Sicherheit** nicht angezeigt wird, aktivieren Sie **Erweiterte Funktionen** im Menü **Ansicht** von **Active Directory-Benutzer und -Computer**.
+    5.    Klicken Sie auf **Hinzufügen**.
+    6.    Klicken Sie im Dialogfeld **Permission Entry for** (Berechtigungseintrag für) *<domain name>* auf **Prinzipal auswählen**.
+    7.    Geben Sie im Dialogfeld **Select User, Computer, Service Account, or Group (Benutzer, Computer, Dienstkonto oder Gruppe auswählen** **Schlüsseladministratoren** in das Textfeld **Enter the object name to select (Geben Sie den auszuwählenden Objektnamen ein)** ein.  Klicken Sie auf **OK**.
+    8.    Wählen Sie aus der Liste **Gilt für** **Descendant User objects (Nachfolgerbenutzerobjekte)** aus.
+    9.    Scrollen Sie bis ans Ende der Seite und klicken Sie auf **Auswahl aufheben**.
+    10.    Wählen Sie im Bereich **Eigenschaften** **Read msDS-KeyCredentialLink (msDS-KeyCredentialLink lesen)** aus.
+    11.    Klicken Sie dreimal auf **OK**, um die Aufgabe abzuschließen.
+
+
  Weitere Informationen finden Sie unter [Zertifikatprofile](introduction-to-certificate-profiles.md).  
 
-### <a name="see-also"></a>Weitere Informationen:  
+## <a name="see-also"></a>Weitere Informationen:  
  [Schützen der Daten und Standortinfrastruktur mit System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)
 
  [Verwalten der Überprüfung der Identität mit Windows Hello for Business](https://technet.microsoft.com/itpro/windows/keep-secure/manage-identity-verification-using-microsoft-passport).  

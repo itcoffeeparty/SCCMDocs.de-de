@@ -2,7 +2,7 @@
 title: "Versionshinweise – Configuration Manager | Microsoft-Dokumentation"
 description: In diesen Anmerkungen finden Sie Informationen zu dringenden Problemen, die im Produkt noch nicht behoben oder bisher in keinem Microsoft Knowledge Base-Artikel beschrieben wurden.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/27/27
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
-ms.openlocfilehash: 9e853c8fda236125717c3912f6f3cb02d6dd1058
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: aca3525fc143b281f41c3d9bd20bb93b1d91f6ce
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -35,7 +36,27 @@ Bei System Center Configuration Manager sind Anmerkungen zur Produktversion auf 
 
 ## <a name="setup-and-upgrade"></a>Setup und Upgrade  
 
+### <a name="after-you-update-a-configuration-manager-console-using-consolesetupexe-from-the-site-server-folder-recent-language-pack-changes-are-not-available"></a>Nachdem Sie eine Configuration Manager-Konsole mithilfe von „ConsoleSetup.exe“ aus dem Ordner des Standortservers aktualisiert haben, sind neuere Änderungen des Sprachpakets nicht verfügbar
+<!--  SMS 486420  Applicability should be 1610 and 1702.  -->
+Nachdem Sie ein direktes Update einer Konsole mithilfe von „ConsoleSetup.exe“ aus dem Installationsordner eines Standortservers durchgeführt haben, sind kürzlich installierte Sprachpakete möglicherweise nicht verfügbar. Dies hat folgende Gründe:
+- An Ihrem Standort wird Version 1610 oder 1702 ausgeführt.
+- Die Konsole wurde direkt mithilfe von „ConsoleSetup.exe“ aus dem Installationsordner des Standortservers aktualisiert.
+
+Wenn dieses Problem auftritt, verwendet die neu installierte Konsole nicht die aktuellsten Sprachpakete, die konfiguriert wurden. Es werden keine Fehler zurückgegeben, aber die für die Konsole verfügbaren Sprachpakete haben sich nicht geändert.  
+
+**Problembehebung:** Deinstallieren Sie die aktuelle Konsole, und installieren Sie anschließend die Konsole erneut als neue Installation. Sie können „ConsoleSetup.exe“ aus dem Installationsordner des Standortservers verwenden. Stellen Sie sicher, dass Sie während der Installation die Sprachpaketdateien auswählen, die Sie verwenden möchten.
+
+
+### <a name="with-version-1702-the-default-site-boundary-group-is-configured-for-use-for-site-assignment"></a>Ab Version 1702 ist die Standardbegrenzungsgruppe für die Standortzuweisung konfiguriert
+<!--  SMS 486380   Applicability should only be to 1702. -->
+Ab Version 1702 ist die Option **Diese Begrenzungsgruppe für die Standortzuweisung verwenden** auf der Registerkarte „Verweis“ der Begrenzungsgruppe aktiviert; außerdem ist dort der Standort als **Zugewiesener Standort** aufgelistet.Die Option ist ausgegraut, damit diese Konfiguration nicht bearbeitet oder entfernt werden kann.
+
+**Problemumgehung:** Keiner Sie können diese Einstellung ignorieren. Die Standard-Standortbegrenzungsgruppe wird nicht für die Standortzuweisung verwendet, obwohl die Standortzuweisung für diese aktiviert ist. Ab Version 1702 stellt diese Konfiguration sicher, dass die Standard-Standortbegrenzungsgruppe dem richtigen Standort zugeordnet ist.
+
+
+
 ### <a name="when-installing-a-long-term-service-branch-site-using-version-1606-a-current-branch-site-is-installed"></a>Wenn Sie einen Long-Term Servicing Branch-Standort (LTSB) mit Version 1606 installieren, wird ein aktueller Current Branch-Standort installiert
+<!-- Consider move to core content  -->
 Wenn Sie das Baselinemedium von Version 1606 aus der Version vom Oktober 2016 zum Installieren eines Long-Term Servicing Branch-Standorts (LTSB) verwenden, installiert Setup stattdessen einen Current Branch-Standort. Dies geschieht, weil die Option zum Installieren eines Dienstverbindungspunkts mit der Installation des Standorts nicht ausgewählt ist.
 
  - Obwohl ein Dienstverbindungspunkt nicht erforderlich ist, muss er während des Setups beim Installieren eines LTSB-Standorts zum Installieren ausgewählt werden.
@@ -50,21 +71,19 @@ Damit Sie sehen, welcher Standort installiert ist, wechseln Sie in der Konsole z
 
 
 
-
-
 ### <a name="the--sql-server-backup-model-in-use-by-configuration-manager-can-change-from-full-to-simple"></a>Das von Configuration Manager verwendete SQL Server-Sicherungsmodell kann von „Vollständig“ auf „Einfach“ geändert werden.  
+<!-- Confirm applicability for upgrade to later baselines. 1511 is out of support. 1606 is minmum supported baseline  -->
+
  Beim Upgrade auf System Center Configuration Manager, Version 1511, kann sich das von Configuration Manager verwendete SQL Server-Sicherungsmodell vom vollständigen in das einfache Modell ändern.  
 
 -   Wenn Sie einen benutzerdefinierten SQL Server-Sicherungstask mit dem vollständigen Sicherungsmodell (anstelle des integrierten Sicherungstasks für Configuration Manager) verwenden, kann das Sicherungsmodell durch das Upgrade vom vollständigen in das einfache Modell geändert werden.  
 
 **Problemumgehung**: Überprüfen Sie nach dem Upgrade auf Version 1511 die SQL Server-Konfiguration, und stellen Sie ggf. das vollständige Modell wieder her.  
 
-### <a name="when-you-add-a-service-window-to-a-new-site-server-service-windows-that-were---configured-for-another-site-server-are-deleted"></a>Wenn Sie einem neuen Standortserver ein Dienstfenster hinzufügen, werden die für einen anderen Standortserver konfigurierten Dienstfenster gelöscht.  
- Bei Verwendung von Dienstfenstern mit System Center Configuration Manager, Version 1511, können diese nur für einen einzelnen Standortserver in einer Hierarchie konfiguriert werden. Wenn Sie nach dem Konfigurieren von Dienstfenstern auf einem Server ein Dienstfenster auf einem zweiten Standortserver konfigurieren, werden die Dienstfenster auf dem ersten Standortserver im Hintergrund und ohne Warnung oder Fehler gelöscht.  
 
-**Problemumgehung**: Installieren Sie den Hotfix aus dem [Microsoft Knowledge Base-Artikel 3142341](http://support.microsoft.com/kb/3142341). Dieses Problem wird auch durch Installation von Update 1602 für System Center Configuration Manager behoben.  
 
 ### <a name="an-update-is-stuck-with-a-state-of-downloading-in-the-updates-and-servicing-node-of-the-configuration-manager-console"></a>Ein Update bleibt im Knoten „Updates und Wartung“ der Configuration Manager-Konsole im Status „Wird heruntergeladen“ hängen  
+<!-- Source bug pending. Consider move to core content.  -->
 Während des automatischen Downloads von Updates durch einen Online-Dienstverbindungspunkt kann ein Update im Status „Wird heruntergeladen“ hängen bleiben. In diesem Fall werden in den angegebenen Protokolldateien Einträge ähnlich den folgenden angezeigt:  
 
 DMPdownloader.log:  
@@ -83,50 +102,10 @@ ConfigMgrSetup.log:
 
 -   **Wert für Status:** Auf **146944** (dezimal) oder **0x00023e00** (hexadezimal) festlegen  
 
-### <a name="pre-release-features-introduced-in-system-center-configuration-manager-1602"></a>Vorab veröffentlichte Features in System Center Configuration Manager 1602  
-
-Vorab veröffentlichte Features werden in das Produkt aufgenommen, um sie in einem frühen Stadium in einer Produktionsumgebung zu testen. Sie sollten nicht als für den Produktivbetrieb geeignet betrachtet werden.  
-
-Ab Update 1606 müssen Sie vor der Nutzung von Vorabfeatures Ihr Einverständnis erklären. Weitere Informationen finden Sie unter [Use pre-release features from updates](../../../../core/servers/manage/install-in-console-updates.md) (Verwenden von Vorabfeatures aus Updates).
-
-Mit der System Center Configuration Manager Version 1602 werden zwei neue vorab veröffentlichte Features eingeführt:  
-
--   Bedingter Zugriff für PCs, die von System Center Configuration Manager verwaltet werden. Weitere Informationen finden Sie unter [Manage access to O365 services for PCs managed by System Center Configuration Manager (Verwalten des Zugriffs auf Office&365;-Dienste für PCs, die von System Center Configuration Manager verwaltet werden)](../../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).
-    - Nach der Installation von Update 1602 wird der Featuretyp als endgültige Version angezeigt, obwohl es sich um eine Vorabversion handelt.
-    - Wenn Sie anschließend von 1602 auf 1606 aktualisieren, wird der Featuretyp als endgültige Version angezeigt, obwohl es sich weiterhin um eine Vorabversion handelt.
-    - Wenn Sie von Version 1511 direkt auf 1606 aktualisieren, wird der Featuretyp als Vorabversion angezeigt.
-
-
--   Warten einer clusterfähigen Sammlung. Weitere Informationen finden Sie unter [Service a server group](../../../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_ServerGroups) (Warten einer Servergruppe) in [Capabilities in Technical Preview 1605 for System Center Configuration Manager](../../../../core/get-started/capabilities-in-technical-preview-1605.md) (Funktionen in Technical Preview 1605 für System Center Configuration Manager).  
-
-
-
-
-### <a name="recovery-options-for-a-secondary-site-are-not-available-in-the-console"></a>Wiederherstellungsoptionen für einen sekundären Standort sind in der Konsole nicht verfügbar  
-Wenn bei der Wiederherstellung eines sekundären Standorts ein Fehler auftritt, ist die Option **Sekundären Standort wiederherstellen** möglicherweise nicht mehr in der Configuration Manager-Konsole verfügbar.  
-
-Dieses Problem betrifft System Center Configuration Manager Version 1511 und 1602 und soll in einem zukünftigen Update behoben werden.  
-
-**Problemumgehung**: Verwenden Sie eine der folgenden Methoden, um den sekundären Standort wiederherzustellen (neu zu installieren):  
-
--   Verwenden Sie die Befehle **Preinst.exe** und **/delsite**, um den sekundären Standort zu entfernen, und installieren Sie den sekundären Standort erneut. Weitere Informationen finden Sie unter [Hierarchiewartungstool (Preinst.exe) für System Center Configuration Manager](../../../../core/servers/manage/hierarchy-maintenance-tool-preinst.exe.md).  
-
--   Führen Sie das folgende Skript aus, um die Wiederherstellung des sekundären Standorts zu starten. Dieses Skript wird in der Datenbank auf dem primären übergeordneten Standort des sekundären Standorts ausgeführt, den Sie wiederherstellen möchten:  
-
-    ```  
-    declare @SiteCode NVARCHAR(3)=N'<replace with secondary site code>'   
-
-    UPDATE Sites SET Status = 9  
-                    , DetailedStatus = 3  
-    FROM Sites WHERE SiteCode = @SiteCode  
-
-    UPDATE SCP SET SCP.Value1 = 9  
-                    , SCP.Value2 = N'3'  
-    FROM SC_SiteDefinition_Property SCP INNER JOIN SC_SiteDefinition SC ON SC.SiteNumber = SCP.SiteNumber  
-    WHERE SC.SiteCode = @SiteCode AND SCP.[Name] = N'Requested Status'  
-  ```  
 
 ###  <a name="setup-fails-when-using-redist-files-from-the-cdlatest-folder-with-a-manifest-verification-error"></a>Manifestüberprüfungsfehler beim Setup, wenn verteilbare Dateien aus dem Ordner „CD.latest“ verwendet werden.
+<!-- Source bug pending  -->
+
 Fehler beim Ausführen von Setup mit den folgenden Fehlermeldungen im Setup-Protokoll für Configuration Manager, wenn Setup über einen für Version 1606 erstellten „CD.latest“-Ordner ausgeführt wird und die verteilbaren Dateien in diesem „CD.latest“-Ordner verwendet werden:
 
   - FEHLER: File hash check failed for defaultcategories.dll (Fehler bei Dateihashüberprüfung für „defaultcategories.dll“).
@@ -138,77 +117,38 @@ Fehler beim Ausführen von Setup mit den folgenden Fehlermeldungen im Setup-Prot
 
 ### <a name="service-connection-tool-throws-an-exception-when-sql-server-is-remote-or-when-shared-memory-is-disabled"></a>Das Dienstverbindungstool löst eine Ausnahme aus, wenn SQL Server remote verfügbar ist oder Shared Memory deaktiviert ist
 Ab Version 1606 generiert das Dienstverbindungstool eine Ausnahme, wenn eine der folgenden Aussagen zutrifft:  
- -  Die Standortdatenbank befindet sich nicht auf dem Computer, der den Dienstverbindungspunkt hostet, und verwendet einen nicht standardmäßigen Port (nicht Port 1433)
- -  Die Standortdatenbank ist auf demselben Server wie der Dienstverbindungspunkt, aber das SQL-Protokoll **Shared Memory** ist deaktiviert
+ -    Die Standortdatenbank befindet sich nicht auf dem Computer, der den Dienstverbindungspunkt hostet, und verwendet einen nicht standardmäßigen Port (nicht Port 1433)
+ -     Die Standortdatenbank ist auf demselben Server wie der Dienstverbindungspunkt, aber das SQL-Protokoll **Shared Memory** ist deaktiviert
 
 Die Ausnahme ist ähnlich der folgenden:
  - *Nicht behandelte Ausnahme: System.Data.SqlClient.SqlException: Netzwerkbezogener oder instanzspezifischer Fehler beim Herstellen einer Verbindung mit SQL Server. Der Server wurde nicht gefunden oder war nicht zugänglich. Stellen Sie sicher, dass der Instanzname richtig ist und dass SQL Server für das Zulassen von Remoteverbindungen konfiguriert ist. (Anbieter: Named Pipes-Provider, Fehler: 40 – Verbindung mit SQL Server konnte nicht geöffnet werden) --*
 
 **Problemumgehung**: Bei Verwendung des Tools müssen Sie die Registrierung des Servers, der den Dienstverbindungspunkt hostet, mit Informationen zum SQL Server-Port ändern:
 
-   1.   Bearbeiten Sie vor der Verwendung des Tools den folgenden Registrierungsschlüssel, und fügen Sie die Nummer des verwendeten Ports dem Namen des SQL Servers hinzu:
+   1.    Bearbeiten Sie vor der Verwendung des Tools den folgenden Registrierungsschlüssel, und fügen Sie die Nummer des verwendeten Ports dem Namen des SQL Servers hinzu:
     - Schlüssel: HKLM\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\
       - Wert: &lt;SQL Server-Name>
     - Hinzufügen: **,&lt;PORT>**
 
     Z.B. bei Hinzufügen des Ports *15001* zu einem Server namens *testserver.test.net* wäre der resultierende Schlüssel: ***HKLM\Software\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\testserver.test.net,15001***
 
-   2.   Nachdem Sie den Port in der Registrierung hinzufügen, sollte das Tool normal funktionieren.  
+   2.    Nachdem Sie den Port in der Registrierung hinzufügen, sollte das Tool normal funktionieren.  
 
-   3.   Nachdem Sie das Tool verwendet haben, ändern Sie für die Schritte **Verbindung** und **Import** den Registrierungsschlüssel auf den ursprünglichen Wert zurück.  
-
-
+   3.    Nachdem Sie das Tool verwendet haben, ändern Sie für die Schritte **Verbindung** und **Import** den Registrierungsschlüssel auf den ursprünglichen Wert zurück.  
 
 
 
 
-## <a name="backup-and-recovery"></a>Sicherung und Wiederherstellung
-### <a name="pre-production-client-is-not-available-after-a-site-restore"></a>Der Präproduktionsclient ist nach einer Standortwiederherstellung nicht verfügbar
-Wenn Sie in Version 1602 Präproduktionsclients verwenden und den Standort der obersten Ebene in Ihrer Hierarchie aus einer Sicherung wiederherstellen, ist die Version des Präproduktionsclients nach der Wiederherstellung des Standorts nicht verfügbar.  
-
-**Problemumgehung:** Nach dem Wiederherstellen des Standorts der obersten Ebene in Ihrer Hierarchie müssen Sie die Dateien des Präproduktionsclients manuell kopieren, damit Configuration Manager sie für die Verwendung verarbeiten und wiederherstellen kann:
-1. Kopieren Sie auf dem Standortservercomputer der obersten Ebene den Inhalt des Ordners *&lt;CM_Install_Location\>\\Client* in den Ordner *&lt;CM_Install_Location\>\\StagingClient*.
-
-2. Erstellen Sie eine leere Datei namens **client.acu**, und kopieren Sie diese Datei in den Ordner *&lt;CM_Install_Location\>\\Inboxes\\hman.box* auf dem Standortserver. (Diese Datei kann eine umbenannte Textdatei sein, solange diese nicht mehr die Erweiterung TXT aufweist). Nachdem Sie diese Datei im Ordner „hman.box“ platziert wurde, startet der Hierarchie\-Manager auf dem Standortserver, verarbeitet die Clientdateien und stellt die zu verwendenden Dateien des Präproduktionsclients wieder her.
-
-Dieses Problem wurde in Version 1606 behoben.
+<!-- No current Backup and Recovery relenotes
+## Backup and recovery
+-->
 
 
-## <a name="client-deployment-and-upgrade"></a>Clientbereitstellung und -upgrade  
+<!-- No current  Client deployment and upgrade relenotes
+## Client deployment and upgrade  
+-->
 
-### <a name="expansion-to-central-administration-site-stops-automatic-client-upgrades"></a>Durch Erweiterung auf einen Standort der zentralen Verwaltung werden automatische Clientupgrades beendet  
-Gilt nur für Version 1511: Sie können keine automatischen Clientupgrades für einen Standort durchführen, der von einem primären Standort auf einen Standort der zentralen Verwaltung erweitert wurde. Wenn der Standort erweitert wird, wird der autorisierende Standort im Clientupgradepaket nicht ordnungsgemäß auf den neuen Standort der zentralen Verwaltung festgelegt, sodass automatische Clientupgrades nicht erfolgreich ausgeführt werden können. Dieses Problem besteht nur in Version 1511. In Version 1602 und höhere wurde das Problem behoben.  
 
-**Problemumgehung**: Führen Sie das folgende SQL-Skript in der Datenbank am Standort der zentralen Verwaltung aus. Nach Ausführung des Skripts sollten automatische Clientupgrades normal ausgeführt werden.  
-
-  ```  
-  DECLARE @RootSite AS NVARCHAR(3)  
-  DECLARE @SourceServer AS NVARCHAR(255)  
-  DECLARE @FullClientPkgSource AS NVARCHAR(255)  
-  DECLARE @UpgradePkgSource AS NVARCHAR(255)  
-
-  SELECT @RootSite = SiteCode, @SourceServer = SiteServer  
-  FROM sites  
-  WHERE ISNULL(ReportToSite, N'') = N''  
-
-  SELECT @FullClientPkgSource = N'\\' + @SourceServer + N'\SMS_' + @RootSite + N'\Client'  
-  SELECT @UpgradePkgSource = N'\\' + @SourceServer + N'\SMS_' + @RootSite + N'\ClientUpgrade'  
-
-  UPDATE SMSPackages_G  
-  SET Source = @FullClientPkgSource, SourceSite = @RootSite  
-  WHERE PkgID IN  
-      (SELECT FullPackageID FROM ClientDeploymentSettings)  
-
-  UPDATE SMSPackages_G  
-  SET Source = @UpgradePkgSource, SourceSite = @RootSite  
-  WHERE PkgID IN  
-      (SELECT UpgradePackageID FROM ClientDeploymentSettings)  
-
-  UPDATE ProgramOffers_G  
-  SET SourceSite = @RootSite  
-  WHERE OfferID IN  
-      (SELECT UpgradeAdvertisementID FROM ClientDeploymentSettings)  
-  ```  
 
 ## <a name="operating-system-deployment"></a>Betriebssystembereitstellung  
 
@@ -294,9 +234,4 @@ Dies geschieht nur, wenn Sie dieselbe **Benutzersammlung** zur Seite **Ausnahmen
 Dieses Problem betrifft den bedingten Zugriff von System Center Configuration Manager auf **Exchange lokal** mit Update 1602 und soll in einem zukünftigen Update behoben werden.  
 
 **Problemumgehung:** Fügen Sie die **Benutzersammlung** zur Seite **Zielsammlungen** hinzu, bevor Sie die **Benutzersammlung** auf der Seite **Ausnahmensammlungen** auswählen, oder stellen Sie sicher, dass Sie die gleiche **Benutzersammlung** nicht sowohl einer Zielsammlung als auch einer Ausnahmensammlung hinzufügen.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

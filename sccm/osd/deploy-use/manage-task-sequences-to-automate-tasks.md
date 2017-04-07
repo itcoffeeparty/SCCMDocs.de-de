@@ -2,7 +2,7 @@
 title: Verwalten von Tasksequenzen zum Automatisieren von Tasks | Microsoft-Dokumentation
 description: "Sie können Tasksequenzen erstellen, bearbeiten, bereitstellen, importieren und exportieren, um sie in Ihrer System Center Configuration Manager-Umgebung zu verwalten."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d04d28bbd5116a841c0872cf3f9ca18783dddc78
-ms.openlocfilehash: 417b31fa1feb6d0f674f14ef9e5c7cebd7013916
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 113fa73bf0bd1b3b8a4754eb1e96549c520d7995
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -29,7 +30,7 @@ Verwenden Sie Tasksequenzen, um Schritte in Ihrer System Center Configuration Ma
 
  Verwenden Sie die Informationen in den folgenden Abschnitten, um Tasksequenzen zu verwalten.
 
-##  <a name="a-namebkmkcreatetasksequencea-create-task-sequences"></a><a name="BKMK_CreateTaskSequence"></a> Erstellen von Tasksequenzen  
+##  <a name="BKMK_CreateTaskSequence"></a> Erstellen von Tasksequenzen  
  Erstellen Sie Tasksequenzen mithilfe des Tasksequenzerstellungs-Assistenten. Mit diesem Assistenten können Sie die folgenden Typen von Tasksequenzen erstellen:  
 
 |Tasksequenztyp|Weitere Informationen|  
@@ -41,7 +42,13 @@ Verwenden Sie Tasksequenzen, um Schritte in Ihrer System Center Configuration Ma
 |[Tasksequenz zum Verwalten virtueller Festplatten](use-a-task-sequence-to-manage-virtual-hard-disks.md)|Dieser Tasksequenztyp enthält die Schritte zum Erstellen einer virtuellen Festplatte, einschließlich der Schritte zum Installieren von Betriebssystem und Anwendungen, die Sie über die Configuration Manager-Konsole in System Center Virtual Machine Manager (VMM) veröffentlichen können.|  
 |[Benutzerdefinierte Tasksequenz](create-a-custom-task-sequence.md)|Dieser Tasksequenztyp fügt keine Schritte zur Tasksequenz hinzu. Nach der Erstellung der Tasksequenz müssen Sie sie bearbeiten und ihr Schritte hinzufügen.|  
 
-##  <a name="a-namebkmkmodifytasksequencea-edit-a-task-sequence"></a><a name="BKMK_ModifyTaskSequence"></a> Bearbeiten einer Tasksequenz  
+## <a name="return-to-previous-page-when-a-task-sequence-fails"></a>Rückkehr zur vorherigen Seite, wenn eine Tasksequenz fehlschlägt
+Ab Configuration Manager Version 1702 können Sie zu einer vorherigen Seite zurückkehren, wenn Sie eine Tasksequenz ausführen und ein Fehler auftritt. Bevor es diese Version gab, mussten Sie die Tasksequenz neu starten, wenn ein Fehler aufgetreten ist. In den folgenden Szenarios können Sie zum Beispiel die Schaltfläche **Zurück** verwenden:
+
+- Beim Starten eines Computers in Windows PE wird möglicherweise der Bootstrap-Dialog der Tasksequenz angezeigt, bevor die Tasksequenz verfügbar ist. Wenn Sie in diesem Szenario auf „Weiter“ klicken, wird auf der letzten Seite der Tasksequenz eine Nachricht angezeigt, die darüber informiert, dass es keine verfügbaren Tasksequenzen gibt. Klicken Sie jetzt auf **Zurück**, um erneut nach verfügbaren Tasksequenzen zu suchen. Sie können diesen Vorgang wiederholen, bis die Tasksequenz verfügbar ist.
+- Wenn die abhängigen Paketinhalte beim Ausführen einer Tasksequenz an den Verteilungspunkten noch nicht verfügbar sind, kann die Tasksequenz nicht ausgeführt werden. Sie können jetzt fehlenden Inhalt (wenn dieser noch nicht verteilt wurde) verteilen oder warten, bis der Inhalt an den Verteilungspunkten verfügbar ist. Klicken Sie dann auf **Zurück**, damit die Tasksequenz wieder nach dem Inhalt sucht.
+
+##  <a name="BKMK_ModifyTaskSequence"></a> Bearbeiten einer Tasksequenz  
  Sie können eine Tasksequenz ändern, indem Sie der Tasksequenz Schritte oder Tasksequenzgruppen hinzufügen, Schritte oder Tasksequenzgruppen aus ihr entfernen oder die Reihenfolge der Schritte ändern. Gehen Sie wie folgt vor, um eine vorhandene Tasksequenz zu ändern.  
 
 > [!IMPORTANT]  
@@ -71,7 +78,53 @@ Verwenden Sie Tasksequenzen, um Schritte in Ihrer System Center Configuration Ma
 
  Eine Liste verfügbarer Tasksequenzschritte finden Sie unter [Tasksequenzschritte](../understand/task-sequence-steps.md).  
 
-##  <a name="a-namebkmkdistributetsa-distribute-content-referenced-by-a-task-sequence"></a><a name="BKMK_DistributeTS"></a> Verteilen von Inhalt, auf den von einer Tasksequenz verwiesen wird  
+## <a name="configure-high-impact-task-sequence-settings"></a>Konfigurieren von Einstellungen für eine Tasksequenz mit schwerwiegenden Auswirkungen
+Ab Configuration Manager Version 1702 können Sie eine Tasksequenz als Tasksequenz mit schwerwiegenden Auswirkungen festlegen und die Meldungen anpassen, die Benutzer erhalten, wenn sie die Tasksequenz ausführen.
+
+### <a name="set-a-task-sequence-as-a-high-impact-task-sequence"></a>Festlegen einer Tasksequenz als Tasksequenz mit schwerwiegenden Auswirkungen
+Gehen Sie wie folgt vor, um eine Tasksequenz als Tasksequenz mit schwerwiegenden Auswirkungen festzulegen:
+> [!NOTE]
+> Jede Tasksequenz, die bestimmte Bedingungen erfüllt, wird automatisch als „high-impact“ (mit schwerwiegenden Auswirkungen) definiert. Weitere Informationen finden Sie unter [Verwalten risikoreicher Bereitstellungen](http://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
+
+1. Navigieren Sie in der Configuration Manager-Konsole zu **Softwarebibliothek** > **Betriebssysteme** > **Tasksequenzen**.
+2. Wählen Sie die zu bearbeitende Tasksequenz aus, und klicken Sie anschließend auf **Eigenschaften**.
+3. Wählen Sie in der Registerkarte **Benutzerbenachrichtigung** **Dies ist eine Tasksequenz mit schwerwiegenden Auswirkungen** aus.
+
+### <a name="create-a-custom-notification-for-high-risk-deployments"></a>Erstellen einer benutzerdefinierten Benachrichtigung für risikoreiche Bereitstellungen
+Verwenden Sie die folgende Prozedur, um eine benutzerdefinierte Benachrichtigung zu Bereitstellungen mit schwerwiegenden Auswirkungen zu erstellen.
+1. Navigieren Sie in der Configuration Manager-Konsole zu **Softwarebibliothek** > **Betriebssysteme** > **Tasksequenzen**.
+2. Wählen Sie die zu bearbeitende Tasksequenz aus, und klicken Sie anschließend auf **Eigenschaften**.
+3. Wählen Sie in der Registerkarte **Benutzerbenachrichtigung** **Benutzerdefinierten Text verwenden** aus.
+>  [!NOTE]
+>  Sie können den Text von Benutzerbenachrichtigungen nur festlegen, wenn **Dies ist eine Tasksequenz mit schwerwiegenden Auswirkungen** ausgewählt ist.
+
+4. Konfigurieren Sie folgende Einstellungen (maximal 255 Zeichen pro Text):
+
+  **Überschriftentext der Benutzerbenachrichtigung**: Gibt den blauen Text an, der in der Benutzerbenachrichtigung vom Softwarecenter angezeigt wird. In der Standardbenutzerbenachrichtigung enthält dieser Abschnitt beispielsweise folgenden Text: „Bestätigen Sie, dass Sie das Betriebssystem auf diesem Computer aktualisieren möchten“ o.Ä.
+
+  **Nachrichtenrest der Benutzerbenachrichtigung**: Es gibt drei Textfelder, die den Text der benutzerdefinierten Benachrichtigungen enthalten. Sie müssen in jedes Textfeld Text eingeben.
+  - Erstes Textfeld: Gibt den Hauptteil des Texts an, der üblicherweise Anweisungen an den Benutzer enthält. In der Standardbenutzerbenachrichtigung enthält dieser Abschnitt beispielsweise folgenden Text: „Das Upgrade des Betriebssystems kann einige Zeit dauern und mehrere Neustarts des Computers erfordern“ o.Ä.
+  - Zweites Textfeld: Gibt den fetten Text unterhalb des Hauptteils an. In der Standardbenutzerbenachrichtigung enthält dieser Abschnitt beispielsweise folgenden Text: „Dieses direkte Upgrade installiert das neue Betriebssystem und führt eine automatische Migration Ihrer Apps, Daten und Einstellungen durch“ o.Ä.
+  - Drittes Textfeld: Gibt die letzte Textzeile unterhalb des fetten Texts an. In der Standardbenutzerbenachrichtigung enthält dieser Abschnitt beispielsweise folgenden Text: „Klicken Sie auf Installieren, um den Vorgang zu starten. Klicken Sie andernfalls auf Abbrechen.“   
+
+  Angenommen, Sie konfigurieren folgende benutzerdefinierte Benachrichtigung in den Eigenschaften.
+
+    ![Benutzerdefinierte Benachrichtigung für eine Tasksequenz](..\media\user-notification.png)
+
+    Folgende Benachrichtigung wird angezeigt, wenn der Endbenutzer die Installation aus dem Softwarecenter öffnet.
+
+    ![Benutzerdefinierte Benachrichtigung für eine Tasksequenz](..\media\user-notification-enduser.png)
+
+### <a name="configure-software-center-properties"></a>Konfigurieren der Eigenschaften des Softwarecenters
+Gehen Sie wie folgt vor, um die Angaben für die Tasksequenz, die im Softwarecenter angezeigt werden, zu konfigurieren. Diese Angaben dienen nur zu Informationszwecken.  
+1. Navigieren Sie in der Configuration Manager-Konsole zu **Softwarebibliothek** > **Betriebssysteme** > **Tasksequenzen**.
+2. Wählen Sie die zu bearbeitende Tasksequenz aus, und klicken Sie anschließend auf **Eigenschaften**.
+3. Auf der Registerkarte **Allgemein** stehen folgende neuen Einstellungen für das Softwarecenter zur Verfügung:
+  - **Neustart erforderlich**: Informiert den Benutzer, ob während der Installation ein Neustart erforderlich ist.
+  - **Downloadgröße (in MB)**: Gibt an, wie viele Megabytes für die Tasksequenz im Softwarecenter angezeigt werden.  
+  - **Geschätzte Laufzeit (in Minuten)**: Gibt die geschätzte Laufzeit in Minuten für die Tasksequenz an; wird im Softwarecenter angezeigt.
+
+##  <a name="BKMK_DistributeTS"></a> Verteilen von Inhalt, auf den von einer Tasksequenz verwiesen wird  
  Sie müssen Inhalt, auf den von einer Tasksequenz verwiesen wird, an Verteilungspunkte verteilen, bevor diese Tasksequenz von Clients ausgeführt wird. Sie können die Tasksequenz jederzeit auswählen und ihren Inhalt verteilen, um eine neue Liste von Referenzpaketen für die Verteilung zu erstellen. Wenn Sie die Tasksequenz mit aktualisiertem Inhalt ändern, müssen Sie den Inhalt erneut verteilen, bevor er für Clients verfügbar ist. Gehen Sie wie folgt vor, um den Inhalt, auf den von einer Tasksequenz verwiesen wird, zu verteilen.  
 
 #### <a name="to-distribute-referenced-content-to-distribution-points"></a>So verteilen Sie referenzierten Inhalt an Verteilungspunkte  
@@ -97,7 +150,7 @@ Verwenden Sie Tasksequenzen, um Schritte in Ihrer System Center Configuration Ma
 
  Sie können den Inhalt, auf den in der Tasksequenz verwiesen wird, vorab bereitstellen. Configuration Manager erstellt eine komprimierte, vorab bereitgestellte Inhaltsdatei, die die Dateien, zugeordnete Abhängigkeiten und zugeordnete Metadaten für den von Ihnen ausgewählten Inhalt umfasst. Sie können den Inhalt dann manuell in einen Standortserver, sekundären Standort oder Verteilungspunkt importieren. Weitere Informationen zum Vorabbereitstellen von Inhaltsdateien finden Sie unter [Vorabbereitstellen von Inhalt](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content).  
 
-##  <a name="a-namebkmkdeploytsa-deploy-a-task-sequence"></a><a name="BKMK_DeployTS"></a> Bereitstellen einer Tasksequenz  
+##  <a name="BKMK_DeployTS"></a> Bereitstellen einer Tasksequenz  
  Mithilfe der folgenden Vorgehensweise können Sie eine Tasksequenz auf Computern in einer Sammlung bereitstellen.  
 
 > [!WARNING]  
@@ -230,7 +283,7 @@ Verwenden Sie Tasksequenzen, um Schritte in Ihrer System Center Configuration Ma
 
 11. Schließen Sie den Assistenten ab.  
 
-##  <a name="a-namebkmkexportimporta-export-and-import-task-sequences"></a><a name="BKMK_ExportImport"></a> Exportieren und Importieren von Tasksequenzen  
+##  <a name="BKMK_ExportImport"></a> Exportieren und Importieren von Tasksequenzen  
  Sie können Tasksequenzen exportieren und importieren und dabei nach Wunsch die zugehörigen Objekte einschließen, beispielsweise ein Betriebssystemabbild, ein Startabbild, ein Client-Agent-Paket, ein Treiberpaket sowie Anwendungen mit Abhängigkeiten.  
 
  Beachten Sie beim Exportieren und Importieren von Tasksequenzen die folgenden Punkte.  
@@ -297,7 +350,7 @@ Verwenden Sie Tasksequenzen, um Schritte in Ihrer System Center Configuration Ma
 
  Bearbeiten Sie die Tasksequenz nach dem Import, um Kennwörter anzugeben, die bei der ursprünglichen Tasksequenz verwendet wurden. Kennwörter werden aus Sicherheitsgründen nicht exportiert.  
 
-##  <a name="a-namebkmkcreatetsvariablesa-create-task-sequence-variables-for-computers-and-collections"></a><a name="BKMK_CreateTSVariables"></a> Erstellen von Tasksequenzvariablen für Computer und Sammlungen  
+##  <a name="BKMK_CreateTSVariables"></a> Erstellen von Tasksequenzvariablen für Computer und Sammlungen  
  Sie können benutzerdefinierte Tasksequenzvariablen für Computer und Sammlungen definieren. Für einen Computer definierte Variablen werden als computerspezifische Tasksequenzvariablen bezeichnet. Für eine Sammlung definierte Variablen werden als sammlungsspezifische Tasksequenzvariablen bezeichnet. Bei einem Konflikt haben computerspezifische Variablen Vorrang vor den sammlungsspezifischen Variablen. Die einem bestimmten Computer zugewiesenen Tasksequenzvariablen haben also automatisch eine höhere Priorität als Variablen, die der Sammlung zugewiesen wurden, in der der Computer sich befindet.  
 
  Angenommen, der Sammlung ABC und dem Computer XYZ, der Mitglied der Sammlung ABC ist, wurde jeweils eine gleichnamige Variable zugewiesen. In diesem Fall hat die Variable, die dem Computer XYZ zugewiesen wurde, eine höhere Priorität als die der Sammlung ABC zugewiesene Variable.  
@@ -342,7 +395,7 @@ Verwenden Sie Tasksequenzen, um Schritte in Ihrer System Center Configuration Ma
 
 6.  Klicken Sie auf **OK**, nachdem Sie der Sammlung alle Variablen hinzugefügt haben.  
 
-##  <a name="a-namebkmkadditionalactionstsa-additional-actions-to-manage-task-sequences"></a><a name="BKMK_AdditionalActionsTS"></a> Zusätzliche Aktionen zum Verwalten von Tasksequenzen  
+##  <a name="BKMK_AdditionalActionsTS"></a> Zusätzliche Aktionen zum Verwalten von Tasksequenzen  
  Für die Verwaltung von Tasksequenzen können Sie zusätzliche Aktionen verwenden, wenn Sie die Tasksequenz anhand des folgenden Verfahrens auswählen.  
 
 #### <a name="to-select-a-task-sequence-to-manage"></a>So wählen Sie eine Tasksequenz zur Verwaltung aus  
@@ -366,9 +419,4 @@ Verwenden Sie Tasksequenzen, um Schritte in Ihrer System Center Configuration Ma
 
 ## <a name="next-steps"></a>Nächste Schritte
 [Szenarien für die Bereitstellung von Unternehmensbetriebssystemen](scenarios-to-deploy-enterprise-operating-systems.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

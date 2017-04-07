@@ -2,7 +2,7 @@
 title: "Protokolldateien für Configuration Manager | Microsoft-Dokumentation"
 description: Verwenden Sie Protokolldateien bei der Problembehandlung in einer System Center Configuration Manager-Hierarchie.
 ms.custom: na
-ms.date: 1/12/2017
+ms.date: 3/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: be5fd67e37b6ac7b20903e2e0678c1880715ab07
-ms.openlocfilehash: 1e7706156c9226aacf70e6dedb26a0edc93720d1
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: b991b4ea27e66c233b04f8e65a412404521d89a6
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -114,12 +115,12 @@ Von Client- und Standortserverkomponenten in System Center Configuration Manager
 
     -   [WSUS-Server](#BKMK_WSUSLog)  
 
-##  <a name="a-namebkmkaboutlogsa-about-configuration-manager-log-files"></a><a name="BKMK_AboutLogs"></a> Informationen zu Configuration Manager-Protokolldateien  
+##  <a name="BKMK_AboutLogs"></a> Informationen zu Configuration Manager-Protokolldateien  
  Die meisten Prozesse in Configuration Manager schreiben Betriebsinformationen in eine spezielle Protokolldatei für den jeweiligen Prozess. Diese Protokolldateien werden durch die **.LOG** - oder **.LO_** -Erweiterung identifiziert. Configuration Manager schreibt in die LOG-Protokolldatei, bis das Protokoll die maximale Größe erreicht hat. Wenn dies eintritt, wird die LOG-Datei in eine Datei mit dem gleichen Namen, aber der Erweiterung „.LO_“ kopiert, und der Prozess oder die Komponente schreibt weiterhin in die LOG-Datei. Wenn die Größe der LOG-Datei erneut den zulässigen Maximalwert erreicht, wird die LO_-Datei überschrieben und der Prozess wiederholt. Bei einigen Komponenten wird ein Protokolldateiverlauf geführt, indem dem Namen der Protokolldatei ein Datum- und Zeitstempel hinzugefügt wird, wobei die Erweiterung „.LOG“ erhalten bleibt. Eine Ausnahme in Bezug auf die maximale Größe und Verwendung der .LO_-Datei stellt der Client für Linux und UNIX dar. Weitere Informationen darüber, wie Protokolldateien vom Client für Linux und UNIX verwendet werden, finden Sie unter [Verwalten von Protokolldateien beim Client für Linux und UNIX](#BKMK_ManageLinuxLogs) in diesem Thema.  
 
  Zum Anzeigen der Protokolle können Sie das Configuration Manager-Protokollanzeigetool „CMTrace“ verwenden, das sich im Ordner \\\SMSSETUP\TOOLS\\ der Configuration Manager-Quellmedien befindet. Das CMTrace-Tool wird ebenfalls allen Startimages hinzugefügt, die in die Softwarebibliothek aufgenommen werden.  
 
-###  <a name="a-namebkmklogoptionsa-configure-logging-options-by-using-configuration-manager-service-manager"></a><a name="BKMK_LogOptions"></a> Konfigurieren der Protokollierungsoptionen mithilfe des Dienst-Managers für Configuration Manager  
+###  <a name="BKMK_LogOptions"></a> Konfigurieren der Protokollierungsoptionen mithilfe des Dienst-Managers für Configuration Manager  
  Sie können den Speicherort und die Größe der Protokolldateien in Configuration Manager ändern.  
 
  Im folgenden Verfahren wird beschrieben, wie Sie die Größe, den Namen und den Speicherort von Protokolldateien ändern oder mehrere Komponenten für das Schreiben in die gleiche Protokolldatei konfigurieren können.  
@@ -135,13 +136,13 @@ Von Client- und Standortserverkomponenten in System Center Configuration Manager
 7.  Legen Sie im Dialogfeld **Configuration Manager-Komponentenprotokollierung** die verfügbaren Konfigurationsoptionen für Ihre Auswahl fest.  
 8.  Klicken Sie auf **OK**, um die Konfiguration zu speichern.  
 
-###  <a name="a-namebkmkloglocationa-find-configuration-manager-logs"></a><a name="BKMK_LogLocation"></a> Suchen von Configuration Manager-Protokollen  
+###  <a name="BKMK_LogLocation"></a> Suchen von Configuration Manager-Protokollen  
 Configuration Manager-Protokolldateien werden an verschiedenen Speicherorten gespeichert, die vom Prozess, von dem die Protokolldatei erstellt wurde sowie von der Konfiguration Ihrer Standortsysteme abhängig sind. Da der Speicherort der Protokolldatei auf einem Computern variieren kann, verwenden Sie die Suche, um die relevanten Protokolldateien auf Ihren Configuration Manager-Computern ausfindig zu machen, wenn Sie eine Problembehebung in einem bestimmten Szenario durchführen müssen.  
 
-##  <a name="a-namebkmkclientlogsa-configuration-manager-client-logs"></a><a name="BKMK_ClientLogs"></a> Configuration Manager-Clientprotokolle  
+##  <a name="BKMK_ClientLogs"></a> Configuration Manager-Clientprotokolle  
 In den folgenden Abschnitten werden die Protokolldateien für Clientvorgänge und die Clientinstallation aufgelistet.  
 
-###  <a name="a-namebkmkclientoplogsa-client-operations"></a><a name="BKMK_ClientOpLogs"></a> Clientvorgänge  
+###  <a name="BKMK_ClientOpLogs"></a> Clientvorgänge  
 In der folgenden Tabelle werden die Protokolldateien auf dem Configuration Manager-Client aufgelistet.  
 
 |Protokollname|Beschreibung|  
@@ -204,7 +205,7 @@ In der folgenden Tabelle werden die Protokolldateien auf dem Configuration Manag
 |wakeprxy-install.log|Zeichnet Installationsinformationen auf, wenn Clients die Clienteinstellungsoption zur Aktivierung des Aktivierungsproxy empfangen.|  
 |wakeprxy-uninstall.log|Zeichnet Informationen zur Deinstallation von Aktivierungsproxys auf, wenn von Clients die Clienteinstellungsoption „Aktivierungsproxys nicht zulassen“ empfangen wurde, wenn der Aktivierungsproxy bereits vorher zugelassen war.|  
 
-###  <a name="a-namebkmkclientinstallloga-client-installation-log-files"></a><a name="BKMK_ClientInstallLog"></a> Protokolldateien zur Clientinstallation  
+###  <a name="BKMK_ClientInstallLog"></a> Protokolldateien zur Clientinstallation  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen zur Installation des Configuration Manager-Clients enthalten.  
 
 |Protokollname|Beschreibung|  
@@ -214,7 +215,7 @@ In der folgenden Tabelle werden die Protokolldateien auf dem Configuration Manag
 |CcmRepair.log|Zeichnet Reparaturaktivitäten des Client-Agents auf.|  
 |client.msi.log|Zeichnet die von „client.msi“ ausgeführten Setuptasks auf. Ist für die Problembehandlung bei Problemen beim Installieren oder Entfernen von Clients hilfreich.|  
 
-###  <a name="a-namebkmklogfilesforlnua-client-for-linux-and-unix"></a><a name="BKMK_LogFilesforLnU"></a> Client für Linux und UNIX  
+###  <a name="BKMK_LogFilesforLnU"></a> Client für Linux und UNIX  
  Vom Configuration Manager-Client für Linux und UNIX werden Informationen in folgenden Protokolldateien aufgezeichnet.  
 
 > [!TIP]  
@@ -253,14 +254,14 @@ In der folgenden Tabelle werden die Protokolldateien auf dem Configuration Manag
 
 Unter normalen Betriebsbedingungen sollte der Protokollgrad FEHLER verwendet werden. Diese Protokollebene erstellt die kleinste Protokolldatei. Mit der Steigerung des Protokollgrads von FEHLER zu WARNUNG zu INFO zu ABLAUFVERFOLGUNG wird die Protokolldatei mit jedem Schritt größer, da mehr Daten hineingeschrieben werden.  
 
-####  <a name="a-namebkmkmanagelinuxlogsa-manage-log-files-for-the-linux-and-unix-client"></a><a name="BKMK_ManageLinuxLogs"></a> Verwalten von Protokolldateien für den Client für Linux und UNIX  
+####  <a name="BKMK_ManageLinuxLogs"></a> Verwalten von Protokolldateien für den Client für Linux und UNIX  
 Auf dem Client für Linux und UNIX wird weder eine maximale Größe der Clientprotokolldateien vorgegeben noch werden die Inhalte der .LOG-Dateien automatisch in eine andere Datei, z.B. eine .LO_-Datei kopiert: Wenn Sie die maximale Größe von Protokolldateien steuern möchten, müssen Sie unabhängig vom Configuration Manager-Client für Linux und UNIX einen Prozess zum Verwalten der Protokolldateien implementieren.  
 
 Beispielsweise können Sie den Linux- und UNIX-Standardbefehl **logrotate** verwenden, um die Größe und Rotation der Clientprotokolldateien zu verwalten. Auf dem Configuration Manager-Client für Linux und UNIX steht eine Schnittstelle zur Verfügung, mit deren Hilfe dem Client über **logrotate** signalisiert werden kann, wann die Protokollrotation abgeschlossen ist, sodass die Informationserfassung in der Protokolldatei wiederaufgenommen werden kann.  
 
 Weitere Informationen über **logrotate**finden Sie in der Dokumentation zu den Linux und UNIX-Verteilungen, die Sie verwenden.  
 
-###  <a name="a-namebkmklogfilesformaca-client-for-mac-computers"></a><a name="BKMK_LogfilesforMac"></a> Client für Macintosh-Computer  
+###  <a name="BKMK_LogfilesforMac"></a> Client für Macintosh-Computer  
 Vom Configuration Manager-Client für Macintosh-Computer werden Informationen in folgenden Protokolldateien aufgezeichnet.  
 
 |Protokollname|Details|  
@@ -272,10 +273,10 @@ Vom Configuration Manager-Client für Macintosh-Computer werden Informationen in
 
 Zusätzlich wird in der Protokolldatei SMS_DM.log auf dem Standortsystemserver die Kommunikation zwischen Macintosh-Computern und dem Verwaltungspunkt aufgezeichnet, der für mobile Geräte und Macintosh-Computer aktiviert ist.  
 
-##  <a name="a-namebkmkserverlogsa-configuration-manager-site-server-log-files"></a><a name="BKMK_ServerLogs"></a> Protokolldateien für Configuration Manager-Standortserver  
+##  <a name="BKMK_ServerLogs"></a> Protokolldateien für Configuration Manager-Standortserver  
  In den folgenden Abschnitten werden Protokolldateien aufgelistet, die sich auf dem Standortserver befinden oder im Zusammenhang mit bestimmten Standortsystemrollen stehen.  
 
-###  <a name="a-namebkmksitesiteserverloga-site-server-and-site-system-server-logs"></a><a name="BKMK_SiteSiteServerLog"></a> Protokolle für Standortserver und Standortsystemserver  
+###  <a name="BKMK_SiteSiteServerLog"></a> Protokolle für Standortserver und Standortsystemserver  
  In der folgenden Tabelle werden die Protokolldateien auf dem Configuration Manager-Standortserver und den entsprechenden Standortsystemservern aufgelistet.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -350,7 +351,7 @@ Zusätzlich wird in der Protokolldatei SMS_DM.log auf dem Standortsystemserver d
 |statmgr.log|Zeichnet Schreibvorgänge aller Statusmeldungen in die Datenbank auf.|Standortserver|  
 |swmproc.log|Zeichnet die Verarbeitung von Messungsdateien und -einstellungen auf.|Standortserver|  
 
-###  <a name="a-namebkmksiteinstallloga-site-server-installation-log-files"></a><a name="BKMK_SiteInstallLog"></a> Protokolldateien zur Standortserverinstallation  
+###  <a name="BKMK_SiteInstallLog"></a> Protokolldateien zur Standortserverinstallation  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit der Standortinstallation enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -361,7 +362,7 @@ Zusätzlich wird in der Protokolldatei SMS_DM.log auf dem Standortsystemserver d
 |SMS_BOOTSTRAP.log|Zeichnet Informationen zum Fortschritt beim Starten der Installation des sekundären Standorts auf. Informationen zum eigentlichen Installationsvorgang sind in ConfigMgrSetup.log enthalten.|Standortserver|  
 |smstsvc.log|Zeichnet Informationen zu Installation, Nutzung und Entfernung eines Windows-Dienstes auf, der zum Testen von Netzwerkverbindungen und Berechtigungen zwischen Servern mithilfe des Computerkontos des Servers, der die Verbindung initiiert, verwendet wird.|Standortserver und Standortsystemserver|  
 
-###  <a name="a-namebkmkfsploga-fallback-status-point-log-files"></a><a name="BKMK_FSPLog"></a> Protokolldateien für den Fallbackstatuspunkt  
+###  <a name="BKMK_FSPLog"></a> Protokolldateien für den Fallbackstatuspunkt  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit dem Fallbackstatuspunkt enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -370,7 +371,7 @@ Zusätzlich wird in der Protokolldatei SMS_DM.log auf dem Standortsystemserver d
 |fspMSI.log|Zeichnet Meldungen auf, die bei der Installation eines Fallbackstatuspunkts generiert werden.|Standortsystemserver|  
 |fspmgr.log|Zeichnet Aktivitäten der Fallbackstatuspunkt-Systemrolle auf.|Standortsystemserver|  
 
-###  <a name="a-namebkmkmploga-management-point-log-files"></a><a name="BKMK_MPLog"></a> Protokolldateien für den Verwaltungspunkt  
+###  <a name="BKMK_MPLog"></a> Protokolldateien für den Verwaltungspunkt  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit dem Verwaltungspunkt enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -395,7 +396,7 @@ Zusätzlich wird in der Protokolldatei SMS_DM.log auf dem Standortsystemserver d
 |mpMSI.log|Zeichnet die Details zur Installation des Verwaltungspunkts auf.|Standortserver|  
 |MPSetup.log|Zeichnet den Wrapperprozess der Verwaltungspunktinstallation auf.|Standortserver|  
 
-###  <a name="a-namebkmksuploga-software-update-point-log-files"></a><a name="BKMK_SUPLog"></a> Protokolldateien für den Softwareupdatepunkt  
+###  <a name="BKMK_SUPLog"></a> Protokolldateien für den Softwareupdatepunkt  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen zum Softwareupdatepunkt enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -409,10 +410,10 @@ Zusätzlich wird in der Protokolldatei SMS_DM.log auf dem Standortsystemserver d
 |wsyncmgr.log|Zeichnet Details zum Synchronisierungsprozess für Softwareupdates auf.|Standortsystemserver|  
 |WUSSyncXML.log|Zeichnet Details zum Synchronisierungsvorgang des Inventurprogramms für Microsoft Updates auf.|Der Clientcomputer, der als Synchronisierungshost für das Inventurprogramm für Microsoft Updates konfiguriert ist|  
 
-##  <a name="a-namebkmkfunctionlogsa-log-files-for-configuration-manager-functionality"></a><a name="BKMK_FunctionLogs"></a> Protokolldateien für Configuration Manager-Funktionen  
+##  <a name="BKMK_FunctionLogs"></a> Protokolldateien für Configuration Manager-Funktionen  
  In den folgenden Abschnitten werden Protokolldateien für die Funktionen in Configuration Manager aufgelistet.  
 
-###  <a name="a-namebkmkappmanageloga-application-management"></a><a name="BKMK_AppManageLog"></a> Anwendungsverwaltung  
+###  <a name="BKMK_AppManageLog"></a> Anwendungsverwaltung  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit der Anwendungsverwaltung enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -441,7 +442,7 @@ Zusätzlich wird in der Protokolldatei SMS_DM.log auf dem Standortsystemserver d
 |colleval.log|Zeichnet Details zum Erstellen, Ändern und Löschen von Sammlungen durch den Sammlungsauswerter auf.|Standortserver|  
 |execmgr.log|Zeichnet Details zu Paketen und ausgeführten Tasksequenzen auf.|Client|  
 
-###  <a name="a-namebkmkailoga-asset-intelligence"></a><a name="BKMK_AILog"></a> Asset Intelligence  
+###  <a name="BKMK_AILog"></a> Asset Intelligence  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit Asset Intelligence enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -454,7 +455,7 @@ Zusätzlich wird in der Protokolldatei SMS_DM.log auf dem Standortsystemserver d
 |ManagedProvider.log|Zeichnet Details zur Ermittlung von Software mit einem zugehörigen Software ID-Tag auf. Zeichnet zusätzlich Aktivitäten im Zusammenhang mit der Hardwareinventur auf.|Standortsystemserver|  
 |MVLSImport.log|Zeichnet Details zur Verarbeitung importierter Lizenzierungsdateien auf.|Standortsystemserver|  
 
-###  <a name="a-namebkmkbnrloga-backup-and-recovery"></a><a name="BKMK_BnRLog"></a> Sicherung und Wiederherstellung  
+###  <a name="BKMK_BnRLog"></a> Sicherung und Wiederherstellung  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit Sicherungs- und Wiederherstellungsaktionen enthalten, darunter das Zurücksetzen von Standorten und Änderungen am SMS-Provider.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -464,7 +465,7 @@ Zusätzlich wird in der Protokolldatei SMS_DM.log auf dem Standortsystemserver d
 |smssqlbkup.log|Zeichnet die Ausgabe der Standortdatenbanksicherung auf, wenn SQL Server auf einem Server als dem Standortserver installiert ist.|Standortdatenbankserver|  
 |Smswriter.log|Zeichnet Informationen zum Zustand von Configuration Manager VSS Writer auf, der im Sicherungsprozess verwendet wird.|Standortserver|  
 
-###  <a name="a-namebkmkcertificateenrollmenta-certificate-enrollment"></a><a name="BKMK_CertificateEnrollment"></a> Zertifikatregistrierung  
+###  <a name="BKMK_CertificateEnrollment"></a> Zertifikatregistrierung  
  In der folgenden Tabelle werden die Configuration Manager-Protokolldateien aufgelistet, die Informationen im Zusammenhang mit der Zertifikatregistrierung enthalten. Die Zertifikatregistrierung verwendet den Zertifikatregistrierungspunkt und das Configuration Manager-Richtlinienmodul auf dem Server, auf dem der Registrierungsdienst für Netzwerkgeräte ausgeführt wird.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -486,7 +487,7 @@ Zusätzlich wird in der Protokolldatei SMS_DM.log auf dem Standortsystemserver d
     > [!NOTE]  
     >  Diese Datei befindet sich im Ordner des Kontoprofils des Registrierungsdiensts für Netzwerkgeräte, z. B. C:\Benutzer\SCEPSvc. Weitere Informationen zum Aktivieren der Protokollierung für den Registrierungsdienst für Netzwerkgeräte finden Sie im Abschnitt [Enable Logging (Aktivieren der Protokollierung)](http://go.microsoft.com/fwlink/?LinkId=320576) im Artikel „Network Device Enrollment Service (NDES) in Active Directory Certificate Services (AD CS)“ (Registrierungsdienst für Netzwerkgeräte (NDES) im Zertifikatdienst von Active Directory (AD CS)) im TechNet-Wiki.  
 
-###  <a name="a-namebkmkbgba-client-notification"></a><a name="BKMK_BGB"></a> Clientbenachrichtigung  
+###  <a name="BKMK_BGB"></a> Clientbenachrichtigung  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit Clientbenachrichtigungen enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -502,12 +503,22 @@ Zusätzlich wird in der Protokolldatei SMS_DM.log auf dem Standortsystemserver d
 
 In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit Cloudverwaltungsgateways enthalten.
 
-|Protokollname|Beschreibung|Computer mit Protokolldatei|  
-|--------------|-----------------|----------------------------|  
-|CloudMgr.log|Zeichnet Details zur Bereitstellung des Cloudverwaltungsgateway-Dienstes, den laufenden Dienststatus und Nutzungsdaten, die mit dem Dienst verknüpft sind, auf.|Standortsystemserver|
+||||
+|-|-|-|
+|Protokollname|Beschreibung|Computer mit Protokolldatei|
+|CloudMgr.log|Zeichnet Details zur Bereitstellung des Cloudverwaltungsgateway-Dienstes, den laufenden Dienststatus und Nutzungsdaten, die mit dem Dienst verknüpft sind, auf.<br>Sie können die Protokollierungsstufe konfigurieren, indem Sie die Registrierung **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_CLOUD_SERVICES_MANAGER\Logging level** bearbeiten.|Der Ordner **SMS/Logs** auf dem Standortsystemserver|
+|CMGSetup.log oder CMG-*RoleInstanceID*-CMGSetup.log<sup>1</sup>|Zeichnet Details über die 2. Phase der Bereitstellung des Cloudverwaltungsgateways (lokale Bereitstellung in Azure) auf.<br>Sie können die Protokollierungsstufe mithilfe der Einstellung **Ablaufverfolgungsebene** (**Informationen** (Standard), **Ausführlich**, **Fehler**) auf der Registerkarte **Azure-Portal\Konfiguration der Clouddienste** konfigurieren.|Die **%approot%\logs** auf Ihrem Azure-Server oder der Ordner „SMS/Logs“ auf dem Standortsystemserver|
+|CMGHttpHandler.log oder CMG-*RoleInstanceID*- CMGHttpHandler.log<sup>1</sup>|Zeichnet Details zur HTTP-Handlerbindung des Cloudverwaltungsgateways mit Internetinformationsdiensten in Azure auf.<br>Sie können die Protokollierungsstufe mithilfe der Einstellung **Ablaufverfolgungsebene** (**Informationen** (Standard), **Ausführlich**, **Fehler**) auf der Registerkarte **Azure-Portal\Konfiguration der Clouddienste** konfigurieren.|Die **%approot%\logs** auf Ihrem Azure-Server oder der Ordner „SMS/Logs“ auf dem Standortsystemserver|
+|CMGService.log oder CMG-*RoleInstanceID*- CMGService.log<sup>1</sup>|Zeichnet Details über die Kernkomponente des Cloudverwaltungsgateway-Diensts in Azure auf.<br>Sie können die Protokollierungsstufe mithilfe der Einstellung **Ablaufverfolgungsebene** (**Informationen** (Standard), **Ausführlich**, **Fehler**) auf der Registerkarte **Azure-Portal\Konfiguration der Clouddienste** konfigurieren.|Die **%approot%\logs** auf Ihrem Azure-Server oder der Ordner „SMS/Logs“ auf dem Standortsystemserver|
 |SMS_Cloud_ProxyConnector.log|Zeichnet Details zum Einrichten von Verbindungen zwischen dem Cloud-Management-Gateway-Dienst und dem Verbindungspunkt für das Cloudverwaltungsgateway auf.|Standortsystemserver|
 
-###  <a name="a-namebkmkcompsettingsloga-compliance-settings-and-company-resource-access"></a><a name="BKMK_CompSettingsLog"></a> Konformitätseinstellungen und Zugriff auf Unternehmensressourcen  
+<sup>1</sup> Hierbei handelt es sich um lokale Configuration Manager-Protokolldateien, die der Clouddienst-Manager alle 5 Minuten aus dem Azure-Speicher synchronisiert. Das Cloudverwaltungsgateway wird alle 5 Minuten Protokolle zum Azure-Speicher übertragen. Daher wird die maximale Verzögerung 10 Minuten betragen. Ausführliche Switches wirken sich auf lokale und Remoteprotokolle aus.
+
+- Verwenden Sie für die Problembehandlung von Bereitstellungen **CloudMgr.log** und **CMGSetup.log**.
+- Verwenden Sie für die Problembehandlung der Dienstintegrität **CMGService.log** und **SMS_Cloud_ProxyConnector.log**.
+- Verwenden Sie für die Problembehandlung des Client-Datenverkehrs **CMGHttpHandler.log**, **CMGService.log** und **SMS_Cloud_ProxyConnector.log**.
+
+###  <a name="BKMK_CompSettingsLog"></a> Konformitätseinstellungen und Zugriff auf Unternehmensressourcen  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit Kompatibilitätseinstellungen und dem Zugriff auf Unternehmensressourcen enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -518,7 +529,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |DCMReporting.log|Zeichnet Informationen zur Berichterstattung von Richtlinienplattformergebnissen in Statusmeldungen für Konfigurationselemente auf.|Client|  
 |DcmWmiProvider.log|Zeichnet Informationen im Zusammenhang mit dem Einlesen von Konfigurationselement-Synclets aus WMI auf.|Client|  
 
-###  <a name="a-namebkmkconsoleloga-configuration-manager-console"></a><a name="BKMK_ConsoleLog"></a> Configuration Manager-Konsole  
+###  <a name="BKMK_ConsoleLog"></a> Configuration Manager-Konsole  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen zur Configuration Manager-Konsole enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -527,7 +538,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |SmsAdminUI.log|Zeichnet Informationen zum Betrieb der Configuration Manager-Konsole auf|Computer, auf dem die Configuration Manager-Konsole ausgeführt wird|  
 |SMSProv.log|Zeichnet die vom SMS-Anbieter ausgeführten Aktivitäten auf. Configuration Manager-Konsolenaktivitäten verwenden den SMS-Anbieter.|Standortserver oder Standortsystemserver|  
 
-###  <a name="a-namebkmkcontentloga-content-management"></a><a name="BKMK_ContentLog"></a> Content Management  
+###  <a name="BKMK_ContentLog"></a> Content Management  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit der Inhaltsverwaltung enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -541,7 +552,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |smsdpprov.log|Zeichnet Details zur Extrahierung komprimierter Dateien auf, die von einem primären Standort stammen. Dieses Protokoll wird vom WMI-Anbieter des Remoteverteilungspunkts generiert.|Ein Verteilungspunktcomputer an einem anderen Standort als der Standortserver|  
 
 
-###  <a name="a-namebkmkdiscoveryloga-discovery"></a><a name="BKMK_DiscoveryLog"></a> Ermittlung  
+###  <a name="BKMK_DiscoveryLog"></a> Ermittlung  
 In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen zur Ermittlung enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -554,7 +565,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |InventoryAgent.log|Zeichnet Aktivitäten im Zusammenhang mit Hardwareinventur, Softwareinventur und Frequenzermittlung auf dem Client auf.|Client|  
 |netdisc.log|Zeichnet Aktionen im Zusammenhang mit der Netzwerkermittlung auf.|Standortserver|  
 
-###  <a name="a-namebkmkeploga-endpoint-protection"></a><a name="BKMK_EPLog"></a> Endpoint Protection  
+###  <a name="BKMK_EPLog"></a> Endpoint Protection  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit Endpoint Protection enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -564,7 +575,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |EPMgr.log|Überwacht den Status der Endpoint Protection-Standortsystemrolle.|Standortsystemserver|  
 |EPSetup.log|Stellt Informationen zur Installation der Endpoint Protection-Standortsystemrolle bereit.|Standortsystemserver|  
 
-###  <a name="a-namebkmkextensionsa-extensions"></a><a name="BKMK_Extensions"></a> Erweiterungen  
+###  <a name="BKMK_Extensions"></a> Erweiterungen  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit Erweiterungen enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -573,7 +584,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |FeatureExtensionInstaller.log|Zeichnet Informationen zur Installation und Deinstallation von einzelnen Erweiterungen auf, wenn diese in der Configuration Manager-Konsole aktiviert oder deaktiviert werden|Computer, auf dem die Configuration Manager-Konsole ausgeführt wird|  
 |SmsAdminUI.log|Zeichnet die Aktivität der Configuration Manager-Konsole auf|Computer, auf dem die Configuration Manager-Konsole ausgeführt wird|  
 
-###  <a name="a-namebkmkinventoryloga-inventory"></a><a name="BKMK_InventoryLog"></a> Inventur  
+###  <a name="BKMK_InventoryLog"></a> Inventur  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit der Verarbeitung von Inventurdaten enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -582,24 +593,24 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |invproc.log|Zeichnet die Weiterleitung von MIF-Dateien von einem sekundären Standort an dessen übergeordneten Standort auf.|Sekundärer Standortserver|  
 |sinvproc.log|Zeichnet Informationen zur Verarbeitung der Softwareinventurdaten in die Standortdatenbank auf.|Standortserver|  
 
-###  <a name="a-namebkmkmeteringloga-metering"></a><a name="BKMK_MeteringLog"></a> Messung  
+###  <a name="BKMK_MeteringLog"></a> Messung  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit Messungen enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
 |--------------|-----------------|----------------------------|  
 |mtrmgr.log|Überwacht alle Softwaremessungen.|Standortserver|  
 
-###  <a name="a-namebkmkmigrationloga-migration"></a><a name="BKMK_MigrationLog"></a> Migration  
+###  <a name="BKMK_MigrationLog"></a> Migration  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit der Migration enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
 |--------------|-----------------|----------------------------|  
 |migmctrl.log|Zeichnet Informationen zu Migrationsaktionen auf, einschließlich Migrationsaufträge, freigegebener Verteilungspunkte und Upgrades von Verteilungspunkten.|Standort der obersten Ebene in der Configuration Manager-Hierarchie und jeder untergeordnete primäre Standort<br /><br /> Verwenden Sie in einer Hierarchie mit mehreren primären Standorten die Protokolldatei, die auf dem Standort der zentralen Verwaltung erstellt wurde.|  
 
-###  <a name="a-namebkmkmdmloga-mobile-devices"></a><a name="BKMK_MDMLog"></a> Mobile Geräte  
+###  <a name="BKMK_MDMLog"></a> Mobile Geräte  
  In den folgenden Abschnitten werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit der Verwaltung mobiler Geräte enthalten.  
 
-####  <a name="a-namebkmkenrollmentloga-enrollment"></a><a name="BKMK_EnrollmentLog"></a> Registrierung  
+####  <a name="BKMK_EnrollmentLog"></a> Registrierung  
  In der folgenden Tabelle werden Protokolle aufgelistet, die Informationen im Zusammenhang mit der Anmeldung mobiler Geräte enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -613,14 +624,14 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |enrollmentservice.log|Zeichnet die Kommunikation zwischen einem Anmeldungsproxypunkt und einem Anmeldungspunkt auf.|Standortsystemserver|  
 |SMS_DM.log|Zeichnet die Kommunikation zwischen mobilen Geräten, Macintosh-Computern und dem für mobile Geräte aktivierten Verwaltungspunkt auf.|Standortsystemserver|  
 
-####  <a name="a-namebkmkexchsrvloga-exchange-server-connector"></a><a name="BKMK_ExchSrvLog"></a> Exchange Server-Connector  
+####  <a name="BKMK_ExchSrvLog"></a> Exchange Server-Connector  
  Die folgenden Protokolle enthalten Informationen im Zusammenhang mit dem Exchange Server-Connector.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
 |--------------|-----------------|----------------------------|  
 |easdisc.log|Zeichnet die Aktivitäten und den Status des Exchange Server-Connectors auf.|Standortserver|  
 
-####  <a name="a-namebkmkmdlegloga-mobile-device-legacy"></a><a name="BKMK_MDLegLog"></a> Legacyclient für mobile Geräte  
+####  <a name="BKMK_MDLegLog"></a> Legacyclient für mobile Geräte  
  In der folgenden Tabelle werden Protokolle aufgelistet, die Informationen im Zusammenhang mit dem Legacyclient für mobile Geräte enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -644,7 +655,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |DmSvc.log|Zeichnet die Kommunikation zwischen dem Legacyclient für mobile Geräte und dem für mobile Geräte aktivierten Verwaltungspunkt auf.|Client|  
 |FspIsapi.log|Zeichnet Details zur Kommunikation von mobilen Legacyclient-Geräten und Clientcomputern mit dem Fallbackstatuspunkt auf.|Standortsystemserver|  
 
-###  <a name="a-namebkmkosdloga-operating-system-deployment"></a><a name="BKMK_OSDLog"></a> Betriebssystembereitstellung  
+###  <a name="BKMK_OSDLog"></a> Betriebssystembereitstellung  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit der Bereitstellung von Betriebssystemen enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -681,21 +692,21 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |loadstate.log|Zeichnet Details zum Migrationsprogramm für den Benutzerzustand (USMT) sowie zur Wiederherstellung von Benutzerzustandsdaten auf.|Client|  
 |scanstate.log|Zeichnet Details zum Migrationsprogramm für den Benutzerzustand (USMT) sowie zur Erfassung von Benutzerzustandsdaten auf.|Client|  
 
-###  <a name="a-namebkmkpowermgmtloga-power-management"></a><a name="BKMK_PowerMgmtLog"></a> Energieverwaltung  
+###  <a name="BKMK_PowerMgmtLog"></a> Energieverwaltung  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit der Energiewaltung enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
 |--------------|-----------------|----------------------------|  
 |Pwrmgmt.log|Zeichnet Details zu Energieverwaltungsaktivitäten auf dem Clientcomputer auf, einschließlich der Überwachung und Erzwingung von Einstellungen durch den Energieverwaltungsclient-Agent.|Client|  
 
-###  <a name="a-namebkmkrcloga-remote-control"></a><a name="BKMK_RCLog"></a> Remotesteuerung  
+###  <a name="BKMK_RCLog"></a> Remotesteuerung  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit der Remotesteuerung enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
 |--------------|-----------------|----------------------------|  
 |CMRcViewer.log|Zeichnet Details zur Aktivität des Remotesteuerungsviewers auf.|Im %temp%-Ordner auf dem Computer, auf dem der Remotesteuerungsviewer ausgeführt wird|  
 
-###  <a name="a-namebkmkreportloga-reporting"></a><a name="BKMK_ReportLog"></a> Berichterstellung  
+###  <a name="BKMK_ReportLog"></a> Berichterstellung  
  In der folgenden Tabelle werden die Configuration Manager-Protokolldateien aufgelistet, die Informationen im Zusammenhang mit der Berichterstattung enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -704,7 +715,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |srsrpMSI.log|Zeichnet detaillierte Ergebnisse der Installation des Reporting Services-Punkts aus der MSI-Ausgabe auf.|Standortsystemserver|  
 |srsrpsetup.log|Zeichnet Ergebnisse der Installation des Reporting Services-Punkts auf.|Standortsystemserver|  
 
-###  <a name="a-namebkmkrbaloga-role-based-administration"></a><a name="BKMK_RBALog"></a> Rollenbasierte Verwaltung  
+###  <a name="BKMK_RBALog"></a> Rollenbasierte Verwaltung  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit der rollenbasierten Verwaltung enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -712,7 +723,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |hman.log|Zeichnet Informationen zu Standortkonfigurationsänderungen und zur Veröffentlichung von Standortinformationen in Active Directory Domain Services auf.|Standortserver|  
 |SMSProv.log|Zeichnet den Zugriff des WMI-Anbieters auf die Standortdatenbank auf.|Computer mit dem SMS-Anbieter|  
 
-###  <a name="a-namebkmkwitloga-service-connection-point"></a><a name="BKMK_WITLog"></a> Dienstverbindungspunkt  
+###  <a name="BKMK_WITLog"></a> Dienstverbindungspunkt  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit dem Dienstverbindungspunkt enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -735,7 +746,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |SrvBoot.log|Zeichnet Details zum Dienstverbindungspunkt-Installationsdienst auf.|Computer mit dem Dienstverbindungspunkt|  
 |Statesys.log|Zeichnet die Verarbeitung von Verwaltungsmeldungen zu mobilen Geräten auf.|Primärer Standort und Standort der zentralen Verwaltung|  
 
-###  <a name="a-namebkmksunaploga-software-updates"></a><a name="BKMK_SU_NAPLog"></a> Softwareupdates  
+###  <a name="BKMK_SU_NAPLog"></a> Softwareupdates  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit Softwareupdates enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -758,7 +769,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |wsyncmgr.log|Zeichnet Details zum Synchronisierungsprozess von Softwareupdates auf.|Standortserver|  
 |WUAHandler.log|Zeichnet Details zum Windows Update-Agent auf dem Client bei der Suche nach Softwareupdates auf.|Client|  
 
-###  <a name="a-namebkmkwolloga-wake-on-lan"></a><a name="BKMK_WOLLog"></a> Wake-On-LAN  
+###  <a name="BKMK_WOLLog"></a> Wake-On-LAN  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit der Verwendung von Wake-On-LAN enthalten.  
 
 > [!NOTE]  
@@ -769,7 +780,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |wolcmgr.log|Zeichnet Details dazu auf, welche Clients Aktivierungspakete erhalten müssen, die Anzahl der gesendeten Aktivierungspakete und die Anzahl an wiederholten Aktivierungspaketen.|Standortserver|  
 |wolmgr.log|Zeichnet Details zu Aktivierungsverfahren auf, beispielsweise zum Zeitpunkt der Aktivierung von Bereitstellungen, die für Wake-On-LAN konfiguriert wurden.|Standortserver|  
 
-###  <a name="a-namebkmkwindowsservicinglogawindows-10-servicing"></a><a name="BKMK_WindowsServicingLog"></a> Windows 10-Wartung  
+###  <a name="BKMK_WindowsServicingLog"></a> Windows 10-Wartung  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit der Windows 10-Wartung enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
@@ -794,23 +805,18 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |wsyncmgr.log|Zeichnet Details zum Synchronisierungsprozess von Softwareupdates auf.|Standortserver|  
 |WUAHandler.log|Zeichnet Details zum Windows Update-Agent auf dem Client bei der Suche nach Softwareupdates auf.|Client|  
 
-###  <a name="a-namebkmkwuloga-windows-update-agent"></a><a name="BKMK_WULog"></a> Windows Update-Agent  
+###  <a name="BKMK_WULog"></a> Windows Update-Agent  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit dem Windows Update-Agent enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
 |--------------|-----------------|----------------------------|  
 |WindowsUpdate.log|Zeichnet Details dazu auf, wann der Windows Update-Agent eine Verbindung mit dem WSUS-Server herstellt und die Softwareupdates für die Konformitätsbewertung abruft und ob Updates für die Agent-Komponenten vorhanden sind.|Client|  
 
-###  <a name="a-namebkmkwsusloga-wsus-server"></a><a name="BKMK_WSUSLog"></a> WSUS-Server  
+###  <a name="BKMK_WSUSLog"></a> WSUS-Server  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit dem WSUS-Server enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
 |--------------|-----------------|----------------------------|  
 |Change.log|Zeichnet Details zu geänderten WSUS-Server-Datenbankinformationen auf.|WSUS-Server|  
 |SoftwareDistribution.log|Zeichnet Details zu Softwareupdates auf, die von der konfigurierten Updatequelle zur WSUS-Serverdatenbank synchronisiert werden.|WSUS-Server|  
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

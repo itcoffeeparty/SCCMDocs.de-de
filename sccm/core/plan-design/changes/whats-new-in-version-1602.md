@@ -15,9 +15,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: 221228890b12bd6875de51e17a1124303b318201
-ms.openlocfilehash: 0314513bed65457c63508bfe2212e3e52d8d03da
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 9a548f43625a907173e7b967d26356bd80f1c5d9
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>Neuerungen in Version 1602 von System Center Configuration Manager
@@ -38,7 +40,7 @@ Das Update 1602 für System Center Configuration Manager ist nur als konsolenint
 
 ## <a name="site-infrastructure"></a>Infrastruktur von Standorten  
 
-###  <a name="a-namebkmkupgradeosa-in-place-upgrade-the-operating-system-of-site-servers-that-run-windows-server-2008-r2"></a><a name="bkmk_UpgradeOS"></a> Direktes Upgrade des Betriebssystems von Standortservern, auf denen Windows Server 2008 R2 ausgeführt wird  
+###  <a name="bkmk_UpgradeOS"></a> Direktes Upgrade des Betriebssystems von Standortservern, auf denen Windows Server 2008 R2 ausgeführt wird  
  Configuration Manager-Standorte, die Version 1602 oder höher ausführen, unterstützen das direkte Upgrade des Betriebssystems von Standortservern von Windows Server 2008 R2 auf Windows Server 2012 R2.  
 
 > [!WARNING]  
@@ -48,7 +50,7 @@ Das Update 1602 für System Center Configuration Manager ist nur als konsolenint
 
  Um einen Server upzugraden, verwenden Sie die Windows Server 2012 R2-Upgradeverfahren. Sie müssen nach dem Upgrade keine Configuration Manager-Standortserverwiederherstellung ausführen. Informationen zu Upgradeverfahren finden Sie unter [Upgradeoptionen für Windows Server 2012 R2](https://technet.microsoft.com/library/dn303416.aspx) in der Windows Server-Dokumentation.  
 
-###  <a name="a-namebkmkaoaga-sql-server-alwayson-availability-groups"></a><a name="bkmk_AOAG"></a> SQL Server AlwaysOn-Verfügbarkeitsgruppen  
+###  <a name="bkmk_AOAG"></a> SQL Server AlwaysOn-Verfügbarkeitsgruppen  
  Verwenden Sie SQL Server Always On-Verfügbarkeitsgruppen zum Hosten der Standortdatenbank an primären Standorten und am Standort der zentralen Verwaltung als Lösung für hohe Verfügbarkeit und Notfallwiederherstellung.  
 
  Weitere Informationen finden Sie unter [SQL Server Always On für eine hoch verfügbare Standortdatenbank für System Center Configuration Manager](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).  
@@ -121,7 +123,7 @@ Diese Apps werden im Knoten **Anwendungen** der Configuration Manager-Konsole an
 ### <a name="conditional-access-for-pcs-managed-by-system-center-configuration-manager"></a>Bedingten Zugriffs für PCs, die von System Center Configuration Manager verwaltet werden  
  Vor diesem Release musste ein PC für die Einrichtung des bedingten Zugriffs entweder bei Intune registriert werden oder der Domäne beigetreten sein. Ab dem Update 1602 wird der bedingte Zugriff für PCs unterstützt, die von System Center Configuration Manager verwaltet werden. Für Ihre PCs, die von System Center Configuration Manager verwaltet werden, können Sie den Zugriff auf Exchange Online und SharePoint Online auf ausschließlich Geräte einschränken, die die von Ihnen festgelegten Konformitätsrichtlinien einhalten.  
 
- Weitere Informationen finden Sie unter [Manage access to O365 services for PCs managed by System Center Configuration Manager (Verwalten des Zugriffs auf Office&365;-Dienste für PCs, die von System Center Configuration Manager verwalteten)](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
+ Weitere Informationen finden Sie unter [Manage access to O365 services for PCs managed by System Center Configuration Manager (Verwalten des Zugriffs auf Office 365-Dienste für PCs, die von System Center Configuration Manager verwalteten)](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
 
 ### <a name="restricting-access-based-on-the-health-of-devices"></a>Einschränken des auf der Integrität von Geräten basierenden Zugriffs  
  Sie können jetzt den Zugriff auf E-Mail- und Office 365-Dienste basierend auf der Integrität von Geräten gemäß der Meldung des Health Attestation-Diensts einschränken. Darüber hinaus werden Geräte, die von Intune verwaltet werden, in die Geräte-Integritätsberichte einbezogen.  
@@ -173,7 +175,7 @@ Diese Apps werden im Knoten **Anwendungen** der Configuration Manager-Konsole an
 Einzelheiten finden Sie unter [Health attestation for System Center Configuration Manager (Integritätsnachweis für System Center Configuration Manager)](../../../core/servers/manage/health-attestation.md).  
 
 ### <a name="improvements-to-endpoint-protection-antimalware-settings"></a>Verbesserungen an den Antischadsoftware-Einstellungen für Endpoint Protection  
- In Version&1602; wurden die folgenden neuen Einstellungen zur Endpoint Protection-Richtlinie für Antischadsoftware für Windows Defender hinzugefügt:  
+ In Version 1602 wurden die folgenden neuen Einstellungen zur Endpoint Protection-Richtlinie für Antischadsoftware für Windows Defender hinzugefügt:  
 
 -   Echtzeitschutz: Potenziell unerwünschte Programme beim Herunterladen und vor der Installation blockieren.  
 
@@ -218,9 +220,4 @@ Configuration Manager kann den Status der Aktivierungssperre von überwachten un
 -   **Nicht konform**: Benutzer haben eine Version der Geschäftsbedingungen, aber nicht die neueste akzeptiert.  
 
 -   **Unbekannt**: Benutzer haben die Geschäftsbedingungen nie akzeptiert, einschließlich derjenigen ohne registriertes Gerät.  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1b458284961171f11acc3e84f82749addc1b6afb
-ms.openlocfilehash: 890cc72f7ca0619b48ceae7c3a8c731a62341ef7
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 28593d271603ff9775425327996d844d7ed358cd
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -41,7 +41,7 @@ Sie können mehrere unabhängiger Hierarchien von System Center Configuration Ma
 
  Da Sie einen Standort und eine Hierarchie von System Center Configuration Manager zusammen mit einem vorhandenen Standort oder einer vorhandenen Hierarchie von System Center 2012 Configuration Manager bereitstellen können, sollten Sie Vorkehrungen treffen, die verhindern, dass Clients einer Version versuchen, einem Standort der anderen Version beizutreten.
 
-Wenn beispielsweise mindestens zwei Configuration Manager-Hierarchien überlappende Grenzen aufweisen, die dieselben Netzwerkadressen beinhalten (Informationen hierzu finden Sie unter [About overlapping boundaries (Informationen zu überlappenden Grenzen)](../../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md#BKMK_BoundaryOverlap)), sollten Sie jeden neuen Client einem bestimmten Standort zuweisen, anstatt die automatische Standortzuweisung zu verwenden. Weitere Informationen zur automatischen Standortzuweisung in System Center 2012 Configuration Manager finden Sie unter [How to assign clients to a site in System Center Configuration Manager (Zuweisen von Clients zu einem Standort in System Center Configuration Manager)](../../../core/clients/deploy/assign-clients-to-a-site.md).  
+Wenn beispielsweise mindestens zwei Configuration Manager-Hierarchien überlappende Grenzen aufweisen, die dieselben Netzwerkadressen beinhalten (Informationen hierzu finden Sie unter [overlapping boundaries (überlappende Grenzen)](/sccm/core/servers/deploy/configure/boundary-groups#overlapping-boundaries)), sollten Sie jeden neuen Client einem bestimmten Standort zuweisen, anstatt die automatische Standortzuweisung zu verwenden. Weitere Informationen zur automatischen Standortzuweisung in System Center 2012 Configuration Manager finden Sie unter [How to assign clients to a site in System Center Configuration Manager (Zuweisen von Clients zu einem Standort in System Center Configuration Manager)](../../../core/clients/deploy/assign-clients-to-a-site.md).  
 
  Darüber hinaus können Sie weder die Installation eines Clients von System Center 2012 Configuration Manager auf einem Computer, auf dem eine Standortsystemrolle von System Center Configuration Manager gehostet wird, noch die Installation eines System Center Configuration Manager-Clients auf einem Computer vornehmen, auf dem eine Standortsystemrolle von System Center 2012 Configuration Manager gehostet wird.  
 

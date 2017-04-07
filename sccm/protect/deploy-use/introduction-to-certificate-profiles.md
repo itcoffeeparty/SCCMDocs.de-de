@@ -2,7 +2,7 @@
 title: "Einführung in Zertifikatprofile | Microsoft-Dokumentation"
 description: Erfahren Sie, wie Zertifikatprofile in System Center Configuration Manager mit den Active Directory-Zertifikatdiensten funktionieren.
 ms.custom: na
-ms.date: 12/28/2016
+ms.date: 03/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,13 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8a5dc7361da34f3e6b926acd35c72c0c0767ce70
-ms.openlocfilehash: d51670b47aab77cc4e630a6aeaa0744f916bf3b9
-ms.lasthandoff: 12/29/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: ba1d5b04cb0cb0284525e295a6086a3c0ac67e9f
+ms.lasthandoff: 03/27/2017
 
 
 ---
+
 # <a name="introduction-to-certificate-profiles-in-system-center-configuration-manager"></a>Einführung in Zertifikatprofile in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -46,10 +47,10 @@ Zertifikatprofile bieten die folgenden Verwaltungsfunktionen:
 ## <a name="types-of-certificate-profiles"></a>Arten von Zertifikatprofilen  
  Es gibt drei Arten von Zertifikatprofilen:  
 
--   **Vertrauenswürdiges Zertifikat der Zertifizierungsstelle** : Ermöglicht die Bereitstellung eines Zertifikats einer vertrauenswürdigen Stammzertifizierungsstelle oder einer Zwischenzertifizierungsstelle, um eine Vertrauenskette zu bilden, wenn das Gerät einen Server authentifizieren muss.  
+-   **Vertrauenswürdiges Zertifikat der Zertifizierungsstelle** : Ermöglicht Ihnen die Bereitstellung eines Zertifikats einer vertrauenswürdigen Stammzertifizierungsstelle oder einer Zwischenzertifizierungsstelle, um eine Zertifikatkette zu bilden, wenn das Gerät einen Server authentifizieren muss.  
 
--   **Simple Certificate Enrollment-Protokoll (SCEP)**: Ermöglicht das Anfordern eines Zertifikats für ein Gerät oder einen Benutzer mithilfe des Protokolls SCEP und des Registrierungsdiensts für Netzwerkgeräte auf einem Server mit Windows Server 2012 R2.
--   -   **Privater Informationsaustausch (PFX)**: Erlaubt es Ihnen, für ein Gerät oder einen Benutzer ein PFX-Zertifikat (auch als PKCS #12-Zertifikat bezeichnet) anzufordern.
+-   **Simple Certificate Enrollment-Protokoll (SCEP)**: Ermöglicht Ihnen das Anfordern eines Zertifikats für ein Gerät oder einen Benutzer mithilfe des Protokolls SCEP und des Registrierungsdiensts für Netzwerkgeräte auf einem Server mit Windows Server 2012 R2.
+-   **Privater Informationsaustausch (.pfx)**: Erlaubt es Ihnen, für ein Gerät oder einen Benutzer ein PFX-Zertifikat (auch als PKCS #12-Zertifikat bezeichnet) anzufordern.
 
     > [!NOTE]  
     >  Sie müssen ein Zertifikatprofil vom Typ **Vertrauenswürdiges Zertifizierungsstellenzertifikat** erstellen, bevor Sie ein Zertifikatprofil vom Typ **Simple Certificate Enrollment-Protokoll (SCEP)** erstellen können.  
@@ -100,4 +101,3 @@ Sie können Zertifikatprofilbereitstellungen überwachen, indem Sie Konformität
 -   Das Gerät wurde in der System Center Configuration Manager-Hierarchie gesperrt.  
 
  Zum Sperren der Zertifikate wird vom Standortserver ein Sperrbefehl an die ausstellende Zertifizierungsstelle gesendet. Der Grund für die Sperre ist **Vorgangsende**.  
-

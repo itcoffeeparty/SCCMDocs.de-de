@@ -2,7 +2,7 @@
 title: Erstellen von Konfigurationselementen | Microsoft-Dokumentation
 description: "Erstellen Sie Konfigurationen für Geräte, die sowohl von System Center Configuration Manager verwaltet als auch bei Microsoft Intune registriert sind, und stellen Sie sie für diese Geräte bereit."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
-ms.openlocfilehash: bfe0e8e68f51e60508f91c806a94a505577cb50a
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: cddf549f017792add1b17b722bf51769060520b7
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -26,16 +27,11 @@ ms.openlocfilehash: bfe0e8e68f51e60508f91c806a94a505577cb50a
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Mit den Kompatibilitätseinstellungen in System Center Configuration Manager können Sie Konfigurationen sowohl für Geräte, die von Configuration Manager verwaltet werden, als auch für Geräte, die bei Microsoft Intune registriert wurden, erstellen und bereitstellen.  
+Mit den Konformitätseinstellungen in System Center Configuration Manager können Sie Konfigurationen sowohl für Geräte, die von Configuration Manager verwaltet werden, als auch für Geräte, die bei Microsoft Intune registriert werden, erstellen und bereitstellen.  
 
 ## <a name="in-this-section"></a>Inhalt dieses Abschnitts  
 
 -   [Konfigurationselemente für Geräte, die mit dem System Center Configuration Manager-Client verwaltet werden](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md)  
 
--   [Konfigurationselemente für Geräte, die ohne den System Center Configuration Manager-Client verwaltet werden](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
+-   [Konfigurationselemente für Geräte, die mit Intune verwaltet werden](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)  
 

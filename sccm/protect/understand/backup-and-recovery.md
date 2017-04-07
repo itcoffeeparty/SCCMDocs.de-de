@@ -2,7 +2,7 @@
 title: Sicherung und Wiederherstellung | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie Standorte bei Ausfall oder Datenverlust in System Center Configuration Manager sichern und wiederherstellen.
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
-ms.openlocfilehash: 67441d0c19114f628e8b4308f58165ba67c738df
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: ea6668ee7ee6b209b659426a0dc2c0be605ceaf1
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -110,9 +110,9 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
     > [!IMPORTANT]  
     >  Speichern Sie die Dateien an einem sicheren Ort, um einer Manipulation der Sicherungsdateien vorzubeugen. Der sicherste Pfad für eine Sicherung verweist auf ein lokales Laufwerk, sodass Sie NTFS-Dateisystemberechtigungen für den Ordner einrichten können. Configuration Manager verschlüsselt nicht die Sicherungsdaten, die im den Sicherungspfad gespeichert sind.  
 
-    -   **Lokales Laufwerk auf Standortserver für Standortdaten und -datenbank**: Bei Auswahl dieser Option werden die Sicherungsdateien für den Standort und die Standortdatenbank im angegebenen Pfad auf dem lokalen Laufwerk des Standortservers gespeichert. Sie müssen den lokalen Ordner erstellen, bevor der Sicherungstask ausgeführt wird.   Das lokale Systemkonto auf dem Standortserver muss über die NTFS-Dateisystemberechtigung **Schreiben** für den lokalen Ordner verfügen, der für die Sicherung des Standorts vorgesehen ist. Das lokale Systemkonto auf dem Computer, auf dem SQL Server ausgeführt wird, muss über die NTFS-Berechtigung **Schreiben** für den Ordner verfügen, der für die Sicherung der Standortdatenbank vorgesehen ist.  
+    -   **Lokales Laufwerk auf Standortserver für Standortdaten und -datenbank**: Bei Auswahl dieser Option werden die Sicherungsdateien für den Standort und die Standortdatenbank im angegebenen Pfad auf dem lokalen Laufwerk des Standortservers gespeichert. Sie müssen den lokalen Ordner erstellen, bevor der Sicherungstask ausgeführt wird. Das lokale Systemkonto auf dem Standortserver muss über die NTFS-Dateisystemberechtigung **Schreiben** für den lokalen Ordner verfügen, der für die Sicherung des Standorts vorgesehen ist. Das lokale Systemkonto auf dem Computer, auf dem SQL Server ausgeführt wird, muss über die NTFS-Berechtigung **Schreiben** für den Ordner verfügen, der für die Sicherung der Standortdatenbank vorgesehen ist.  
 
-    -   **Netzwerkpfad (UNC-Name) für Standortdaten und -datenbank**: Bei Auswahl dieser Option werden die Sicherungsdateien für den Standort und die Standortdatenbank im angegebenen UNC-Pfad gespeichert. Sie müssen die Freigabe erstellen, bevor der Sicherungstask ausgeführt wird. Das Computerkonto des Standortservers sowie das Computerkonto von SQL Server müssen, so SQL Server auf einem anderen Computer installiert ist, die NTFS-Berechtigung **Schreiben** sowie Freigabeberechtigungen für den freigegebenen Netzwerkordner aufweisen.  
+    -   **Netzwerkpfad (UNC-Name) für Standortdaten und -datenbank**: Bei Auswahl dieser Option werden die Sicherungsdateien für den Standort und die Standortdatenbank im angegebenen UNC-Pfad gespeichert. Sie müssen die Freigabe erstellen, bevor der Sicherungstask ausgeführt wird. Das Computerkonto des Standortservers sowie das Computerkonto von SQL Server, so SQL Server auf einem anderen Computer installiert ist, müssen die NTFS-Berechtigung **Schreiben** sowie Freigabeberechtigungen für den freigegebenen Netzwerkordner aufweisen.  
 
     -   **Lokale Laufwerke auf dem Standortserver und SQL Server**: Bei Auswahl dieser Option werden die Sicherungsdateien für den Standort im angegebenen Pfad auf dem lokalen Laufwerk des Standortservers gespeichert, und die Sicherungsdateien für die Standortdatenbank werden im angegebenen Pfad auf dem lokalen Laufwerk des Standortdatenbankservers gespeichert. Sie müssen die lokalen Ordner erstellen, bevor der Sicherungstask ausgeführt wird. Für das Computerkonto des Standortservers müssen die NTFS-Berechtigungen **Schreiben** für den Ordner vorliegen, den Sie auf dem Standortserver erstellen. Für das Computerkonto des SQL Servers müssen die NTFS-Berechtigungen **Schreiben** für den Ordner vorliegen, den Sie auf dem Standortdatenbankserver erstellen. Diese Option ist nur verfügbar, wenn die Standortdatenbank nicht auf dem Standortserver installiert ist.  
 
@@ -390,6 +390,14 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
 
     -   **Details:** Mit diesem Schlüssel wird ein Standort der zentralen Verwaltung wiederhergestellt.  
 
+-   **Schlüsselname:** CDLatest  
+
+    -   **Erforderlich:** Ja; nur wenn Sie Medien aus dem Ordner „CD.Latest“ verwenden    
+
+    -   **Werte:** 1; bei jedem Wert außer 1 wird davon ausgegangen, dass er nicht „CD.Latest“ verwendet
+
+    -   **Details:** Ihr Skript muss diesen Schlüssel und diesen Wert enthalten, wenn Sie das Setup von einem Medium in dem Ordner „CD.Latest“ ausführen, um einen Standort der primären oder zentralen Verwaltung zu installieren oder diesen wiederherstellen möchten. Dieser Wert informiert das Setup darüber, das Medien aus „CD.Latest“ verwendet werden.  
+
 **RecoveryOptions**  
 
 -   **Schlüsselname:** ServerRecoveryOptions  
@@ -602,6 +610,14 @@ In den folgenden Abschnitten erfahren Sie, wie Sie eine Configuration Manager-Si
     -   **Werte:** RecoverPrimarySite  
 
     -   **Details:** Mit diesem Schlüssel wird ein primärer Standort wiederhergestellt.  
+
+-   **Schlüsselname:** CDLatest  
+
+    -   **Erforderlich:** Ja; nur wenn Sie Medien aus dem Ordner „CD.Latest“ verwenden    
+
+    -   **Werte:** 1; bei jedem Wert außer 1 wird davon ausgegangen, dass er nicht „CD.Latest“ verwendet
+
+    -   **Details:** Ihr Skript muss diesen Schlüssel und diesen Wert enthalten, wenn Sie das Setup von einem Medium in dem Ordner „CD.Latest“ ausführen, um einen Standort der primären oder zentralen Verwaltung zu installieren oder diesen wiederherstellen möchten. Dieser Wert informiert das Setup darüber, das Medien aus „CD.Latest“ verwendet werden.
 
 **RecoveryOptions**  
 

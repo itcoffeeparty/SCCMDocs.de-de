@@ -2,7 +2,7 @@
 title: Integrierte Tasksequenzvariablen | Microsoft-Dokumentation
 description: "Mithilfe integrierter Tasksequenzvariablen werden Informationen über die Umgebung bereitgestellt, in der die zugehörige Tasksequenz ausgeführt wird. Sie sind in der gesamten Tasksequenz verfügbar."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c9fb0fa46058c773eec6ac23999357d35d9f970f
-ms.openlocfilehash: a75adebfe2bbec8f6fe5206561530a720c0bfbf1
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: a3e6cca8d58055cc2d54aff3cb70a276fb40e829
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -51,7 +52,7 @@ ms.openlocfilehash: a75adebfe2bbec8f6fe5206561530a720c0bfbf1
 |_SMSTSMachineName|Legt den Computernamen fest und speichert diesen. Speichert den Namen des Computers, den die Tasksequenz zum Protokollieren aller Statusmeldungen verwendet. Um den Computernamen im neuen Betriebssystem zu ändern, verwenden Sie die Variable **OSDComputerName** .<br /><br /> Beispiel:<br /><br /> **ABC**|  
 |_SMSTSMDataPath|Gibt den Pfad an, der über die Variable SMSTSLocalDataDrive definiert wird. Wenn Sie die Variable „SMSTSLocalDataDrive“ vor dem Starten der Tasksequenz definieren (z.B. durch Festlegen einer Sammlungsvariablen), definiert Configuration Manager die Variable „_SMSTSMDataPath“, sobald die Tasksequenz gestartet wird.|  
 |_SMSTSMediaType|Gibt den Typ des Mediums an, mit dem die Installation initiiert wird. Beispiele für Medientypen sind Startmedien, vollständige Medien, PXE und vorab bereitgestellte Medien.|  
-|_SMSTSMP|Speichert den Namen oder die IP-Adresse eines Configuration Manager-Verwaltungspunkts|  
+|_SMSTSMP|Speichert die URL oder die IP-Adresse eines Configuration Manager-Verwaltungspunkts|  
 |_SMSTSMPPort|Speichert die Verwaltungspunkt-Portnummer eines Configuration Manager-Verwaltungspunkts<br /><br /> Beispiel:<br /><br /> **80**|  
 |_SMSTSOrgName|Speichert den Namen des Markentitels, der im Dialogfeld der Benutzeroberfläche für den Tasksequenzstatus angezeigt wird.<br /><br /> Beispiel:<br /><br /> **Unternehmen XYZ**|  
 |_SMSTSOSUpgradeActionReturnCode|Speichert den Exitcodewert, der von Setup zurückgegeben wird, um auf eine erfolgreiche oder fehlerhafte Ausführung hinzuweisen.  Diese Variable wird während des Tasksequenzschritts "Betriebssystemupgrade" festgelegt. Sie ist bei der Befehlszeilenoption "/Compat" von Windows 10 Setup hilfreich.<br /><br /> Beispiel:<br /><br /> Nach Abschluss von „/Compat“ können Sie je nach Fehler- oder Erfolgsexitcode Aktionen in späteren Schritten ausführen. Bei erfolgreicher Ausführung könnten Sie das Upgrade initiieren. Alternativ könnten Sie in der Umgebung eine Markierung festlegen (z. B. eine Datei hinzufügen oder einen Registrierungsschlüssel festlegen). Mithilfe der Markierung kann dann eine Sammlung von Computern erstellt werden, die für das Upgrade bereit sind oder die vor dem Upgrade eine Vorbereitung erfordern.|  
@@ -79,6 +80,7 @@ ms.openlocfilehash: a75adebfe2bbec8f6fe5206561530a720c0bfbf1
 |TSErrorOnWarning|Mit dieser Variablen können Sie angeben, ob das Tasksequenzmodul eine erkannte Warnung als Fehler während der Tasksequenz für die Anwendungsinstallation betrachtet. Die Tasksequenz legt die _TSAppInstallStatus-Variable auf **Warnung** fest, wenn mindestens eine Anwendung oder eine erforderliche Abhängigkeit aufgrund der Nichterfüllung einer Voraussetzung nicht installiert wurde. Wenn Sie die TSErrorOnWarning-Variable auf **True** festlegen und die _TSAppInstallStatus-Variable als Warnung festgelegt ist, wird dies als Fehler behandelt. Der Wert **False** entspricht dem Standardverhalten.|  
 |SMSTSLanguageFolder|Verwenden Sie diese Variable, um die Anzeigesprache eines sprachneutralen Startimage zu ändern.|  
 |SMSTSLocalDataDrive|Gibt an, wo temporäre Dateien während der Ausführung der Tasksequenz auf dem Zielcomputer gespeichert werden.<br /><br /> Diese Variable muss festgelegt werden, bevor die Tasksequenz gestartet wird, z. B. durch Festlegen einer Sammlungsvariablen. Sobald die Tasksequenz gestartet wird, definiert Configuration Manager die Variable „_SMSTSMDataPath“.|  
+|SMSTSMP|Verwenden Sie diese Variable zum Angeben der URL oder der IP-Adresse eines Configuration Manager-Verwaltungspunkts|  
 |SMSTSMPListRequestTimeout|Geben Sie mit dieser Variable an, wie viele Millisekunden eine Tasksequenz nach dem erfolglosen Abrufen der Verwaltungspunktliste von Standortdiensten warten soll, bevor sie erneut versucht, eine Anwendung oder einen Softwareupdate zu installieren. Standardmäßig wartet die Tasksequenz 60.000 Millisekunden (60 Sekunden), bevor sie diesen Schritt wiederholt, und führt die Wiederholung bis zu drei Mal durch. Diese Variable gilt nur für die Tasksequenzschritte „Anwendung installieren“ und „Softwareupdates installieren“.|  
 |SMSTSMPListRequestTimeoutEnabled|Verwenden Sie diese Variable, um wiederholte MPList-Anforderungen bei der Clientaktualisierung zu ermöglichen, wenn der Client sich nicht im Intranet befindet. <br />Dieser Wert ist standardmäßig auf „True“ festgelegt. Wenn Clients sich im Internet befinden, können Sie diese Variable auf „False“ festlegen, um unnötige Verzögerungen zu vermeiden. Diese Variable gilt nur für die Tasksequenzschritte „Anwendung installieren“ und „Softwareupdates installieren“.|  
 |SMSTSPeerDownload|Verwenden Sie diese Variable, um dem Client die Verwendung des Windows PE-Peercaches zu ermöglichen.<br /><br /> Beispiel:<br /><br /> SMSTSPeerDownload = **TRUE** ermöglicht diese Funktion.|  
@@ -94,9 +96,4 @@ ms.openlocfilehash: a75adebfe2bbec8f6fe5206561530a720c0bfbf1
 |SMSTSSoftwareUpdateScanTimeout| Bietet Ihnen die Möglichkeit, das Timeout für die Überprüfung auf Softwareupdates während des Tasksequenzschritts [Softwareupdates installieren](task-sequence-steps.md#BKMK_InstallSoftwareUpdates) zu steuern. Sie können beispielsweise den Standardwert erhöhen, wenn Sie viele Softwareupdates installieren möchten. Der Standardwert beträgt 30 Minuten. |
 |SMSTSUDAUsers|Gibt den primären Benutzer des Zielcomputers an. Geben Sie die Benutzer im folgenden Format an: Trennen Sie mehrere Benutzer durch ein Komma (,).<br /><br /> Beispiel:<br /><br /> **Domäne\Benutzer1, Domäne\Benutzer2, Domäne\Benutzer3**<br /><br /> Weitere Informationen zum Zuordnen von Benutzern und Zielcomputern finden Sie unter [Zuordnen von Benutzern zu einem Zielcomputer](../get-started/associate-users-with-a-destination-computer.md).|  
 |SMSTSWaitForSecondReboot|Ab Configuration Manager Version 1602 steht diese optionale Tasksequenzvariable zur Verfügung, um das Clientverhalten zu steuern, wenn die Installation eines Softwareupdates zwei Neustarts erfordert. Diese Variable muss vor dem Schritt [Softwareupdates installieren](task-sequence-steps.md#BKMK_InstallSoftwareUpdates) festgelegt werden, um zu verhindern, dass ein zweiter Neustart während der Installation des Softwareupdates einen Fehler bei der Tasksequenz verursacht.<br /><br /> Legen Sie den SMSTSWaitForSecondReboot-Wert in Sekunden fest, um anzugeben, wie lange die Tasksequenz angehalten werden soll, wenn der Computer während des Schritts „Softwareupdates installieren“ neu gestartet wird, um genügend Zeit für einen möglichen zweiten Neustart des Computers zu gewähren. <br />Wenn Sie SMSTSWaitForSecondReboot z. B. auf den Wert 600 festlegen, wird die Tasksequenz nach einem Neustart 10 Minuten angehalten, bevor weitere Tasksequenzschritte ausgeführt werden. Dies ist hilfreich, wenn in einem einzigen Tasksequenzschritt „Softwareupdates installieren“ Hunderte von Softwareupdates installiert werden.|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

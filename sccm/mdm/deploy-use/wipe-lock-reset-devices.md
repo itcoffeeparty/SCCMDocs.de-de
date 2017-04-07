@@ -2,7 +2,7 @@
 title: "Schützen von Daten mit Remotezurücksetzung, Remotesperre oder Zurücksetzen der Kennung mithilfe von System Center Configuration Manager | Microsoft-Dokumentation"
 description: "Schützen von Gerätedaten mit vollständigem Zurücksetzen, selektivem Zurücksetzen, Remotesperre oder Kennungsrücksetzung mithilfe von System Center Configuration Manager."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,13 +13,13 @@ ms.topic: article
 ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 3aa4c2ad3568cc6ced70a65141a2c103af8b740f
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: ef020a0409c1f1a68f76ecadc9885801e6c1ad4e
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-using-system-center-configuration-manager"></a>Schützen von Daten mit Remotezurücksetzung, Remotesperre oder Kennungsrücksetzung mithilfe von System Center Configuration Manager
@@ -77,19 +77,22 @@ In Configuration Manager sind Funktionen zum selektiven und vollständigen Zurü
 |Verwaltungs-Agent|Die Berechtigung „Geräteadministrator“ wird gesperrt.|Die Berechtigung „Geräteadministrator“ wird gesperrt.|  
 |E-Mail-Profile|Nicht zutreffend.|Für E-Mail-Profile, die von Intune bereitgestellt wurden, werden das E-Mail-Konto und die E-Mails entfernt.|  
 
+**Android for Work**
+
+Durch das selektive Zurücksetzen eines Android for Work-Geräts wird das Arbeitsprofil zusammen mit allen dazugehörigen Daten, Apps und Einstellungen von diesem Gerät entfernt. Dadurch wird das Gerät nicht mehr von Configuration Manager und Intune verwaltet. Das vollständige Zurücksetzen wird von Android for Work nicht unterstützt.
+
  **Windows 10, Windows 8.1, Windows RT 8.1 und Windows RT**  
 
-|Beim Abkoppeln eines Geräts entfernte Inhalte|Windows 10, Windows 8.1 und Windows RT 8.1|Windows RT|  
-|---------------------------------|-------------|-----------|
-|Unternehmens-Apps und die entsprechenden Daten, die mit Configuration Manager und Intune installiert wurden.|Anwendungen werden deinstalliert, und Sideload-Schlüssel werden entfernt. Bei Anwendungen, bei denen die selektive Zurücksetzung von Windows verwendet wird, wird der Verschlüsselungsschlüssel gesperrt und die Daten sind nicht mehr verfügbar.|Sideload-Schlüssel werden entfernt, Anwendungen bleiben jedoch installiert.|  
-|VPN- und WLAN-Profile|Entfernt.|Nicht zutreffend.|  
-|Zertifikate|Entfernt und gesperrt.|Nicht zutreffend.|  
-|Einstellung|Anforderungen entfernt.||  
-|Verwaltungs-Agent|Nicht zutreffend. Der Verwaltungs-Agent ist integriert.|Nicht zutreffend. Der Verwaltungs-Agent ist integriert.|  
-|E-Mail-Profile|Entfernt EFS-aktivierte E-Mails, darunter die E-Mail-App für Windows-E-Mails und -Anlagen.|Nicht zutreffend.|  
+|Beim Abkoppeln eines Geräts entfernte Inhalte|Windows 10, Windows 8.1 und Windows RT 8.1|  
+|---------------------------------|-------------|
+|Unternehmens-Apps und die entsprechenden Daten, die mit Configuration Manager und Intune installiert wurden.|Anwendungen werden deinstalliert, und Sideload-Schlüssel werden entfernt. Bei Anwendungen, bei denen die selektive Zurücksetzung von Windows verwendet wird, wird der Verschlüsselungsschlüssel gesperrt und die Daten sind nicht mehr verfügbar.|  
+|VPN- und WLAN-Profile|Entfernt.|  
+|Zertifikate|Entfernt und gesperrt.|  
+|Einstellungen|Anforderungen entfernt.|
+|Verwaltungs-Agent|Nicht zutreffend. Der Verwaltungs-Agent ist integriert.|  
+|E-Mail-Profile|Entfernt EFS-aktivierte E-Mails, darunter die E-Mail-App für Windows-E-Mails und -Anlagen.|  
 
- **Windows 10 Mobile, Windows Phone 8.0 und Windows Phone 8.1**  
-
+ **Windows 10 Mobile, Windows Phone 8.0 und Windows Phone 8.1**
 
  |Beim Abkoppeln eines Geräts entfernte Inhalte|Windows 10 Mobile, Windows Phone 8.0 und Windows Phone 8.1|  
 |-|-|
@@ -102,53 +105,29 @@ In Configuration Manager sind Funktionen zum selektiven und vollständigen Zurü
  Die folgenden Einstellungen werden ebenfalls aus Windows 10 Mobile- und Windows Phone 8.1-Geräten entfernt:  
 
 -   Anfordern eines Kennworts zum Entsperren mobiler Geräte  
-
 -   Einfache Kennwörter zulassen  
-
 -   Minimale Kennwortlänge  
-
 -   Erforderlicher Kennworttyp  
-
 -   Kennwortablauf (Tage)  
-
 -   Kennwortverlauf speichern  
-
 -   Anzahl zulässiger wiederholter Anmeldefehler, bevor das Gerät zurückgesetzt wird  
-
 -   Minuten der Inaktivität, bevor ein Kennwort erforderlich ist  
-
 -   Erforderlicher Kennworttyp – Mindestanzahl von Zeichensätzen  
-
 -   Kamera zulassen  
-
 -   Verschlüsselung auf mobilem Gerät anfordern  
-
 -   Wechselspeichermedien zulassen  
-
 -   Webbrowser zulassen  
-
 -   App Store zulassen  
-
 -   Bildschirmaufnahme zulassen  
-
 -   Geolocation zulassen  
-
 -   Microsoft-Konto zulassen  
-
 -   Kopieren und Einfügen zulassen  
-
 -   WLAN-Tethering zulassen  
-
 -   Automatische Verbindung mit unverschlüsselten WLAN-Hotspots zulassen  
-
 -   Berichterstellung für WLAN-Hotspots zulassen  
-
 -   Zurücksetzen auf Werkseinstellungen zulassen  
-
 -   Bluetooth zulassen  
-
 -   NFC zulassen  
-
 -   WLAN zulassen  
 
 ### <a name="to-initiate-a-remote-wipe-from-the-configuration-manager-console"></a>So leiten Sie eine Remotezurücksetzung über die Configuration Manager-Konsole ein  
@@ -192,10 +171,11 @@ In Configuration Manager sind Funktionen zum selektiven und vollständigen Zurü
 |Plattform|Zurücksetzen der Kennung|  
 |--------------|--------------------|  
 |iOS|Wird für das Löschen der Kennung von einem Gerät unterstützt. Es wird keine neue temporäre Kennung erstellt.|  
-|Android|Wird unterstützt. Zudem wird eine temporäre Kennung erstellt.|  
+|Android|Wird unterstützt. Zudem wird eine temporäre Kennung erstellt.|
+|Android for Work | Nicht unterstützt|
 |Windows 10|Derzeit nicht unterstützt.|  
 |Windows Phone 8 und Windows Phone 8.1|Unterstützt|  
-|Windows RT 8.1 und Windows RT|Nicht unterstützt|  
+|Windows RT 8.1 |Nicht unterstützt|  
 |Windows 8.1|Nicht unterstützt|  
 
 ### <a name="to-reset-the-passcode-on-a-mobile-device-remotely-in-configuration-manager"></a>So setzen Sie die Kennung auf einem mobilen Gerät remote in Configuration Manager zurück  
@@ -223,7 +203,7 @@ In Configuration Manager sind Funktionen zum selektiven und vollständigen Zurü
 |Android|Unterstützt|  
 |Windows 10|Derzeit nicht unterstützt.|  
 |Windows Phone 8 und Windows Phone 8.1|Unterstützt|  
-|Windows RT 8.1 und Windows RT|Unterstützt, wenn der aktuelle Benutzer des Geräts derjenige ist, der das Gerät registriert hat.|  
+|Windows RT 8.1 |Unterstützt, wenn der aktuelle Benutzer des Geräts derjenige ist, der das Gerät registriert hat.|  
 |Windows 8.1|Unterstützt, wenn der aktuelle Benutzer des Geräts derjenige ist, der das Gerät registriert hat.|  
 
 ### <a name="to-lock-a-mobile-device-remotely-through-the-configuration-manager-console"></a>So sperren Sie ein mobiles Gerät remote über die Configuration Manager-Konsole  

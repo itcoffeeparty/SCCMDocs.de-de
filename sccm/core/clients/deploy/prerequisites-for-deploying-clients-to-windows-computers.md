@@ -2,7 +2,7 @@
 title: "Voraussetzungen für die Bereitstellung des Windows-Clients | Microsoft-Dokumentation"
 description: "Hier erhalten Sie Informationen über die Voraussetzungen für die Bereitstellung von Clients auf Windows-Computern in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/5/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: cbcffea0fe2b4c8a05d3a835ff1193b528e55762
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 7ed1b9e6802cc20defcb92a8e536983fd757bd29
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -36,7 +36,7 @@ Bei der Bereitstellung von Configuration Manager-Clients in einer Umgebung sind 
 > [!NOTE]  
 >  Bei den in diesem Artikel aufgeführten Softwareversionsnummern handelt es sich um die erforderlichen Mindestversionsnummern.  
 
-##  <a name="a-namebkmkprereqscomputersa-prerequisites-for-computer-clients"></a><a name="BKMK_prereqs_computers"></a> Voraussetzungen für Computerclients  
+##  <a name="BKMK_prereqs_computers"></a> Voraussetzungen für Computerclients  
  Mithilfe der folgenden Informationen können Sie die Voraussetzungen für die Installation des Configuration Manager-Clients auf Computern bestimmen.  
 
 ### <a name="dependencies-external-to-configuration-manager"></a>Externe Abhängigkeiten von Configuration Manager  
@@ -65,9 +65,10 @@ Bei der Bereitstellung von Configuration Manager-Clients in einer Umgebung sind 
 |Microsoft Silverlight 5.1.41212.0 (beginnend in Configuration Manager-Version 1602)|Ist erforderlich, um die Benutzerfreundlichkeit der Anwendungskatalog-Website zu unterstützen.|  
 |Microsoft .NET Framework 4.5.2|Ist zur Unterstützung von Clientoperationen erforderlich. Wird automatisch auf auf dem Clientcomputer installiert, wenn Microsoft .NET Framework 4.5 oder höher nicht installiert ist. Weitere Informationen finden Sie im nächsten Abschnitt unter [Weitere Informationen über Microsoft .NET Framework, Version 4.5.2](#dotNet).|  
 |Microsoft SQL Server Compact 3.5 SP2-Komponenten|Ist erforderlich zum Speichern von Informationen zu Clientoperationen.|  
-|Microsoft Windows Imaging Components|Ist erforderlich für Microsoft .NET Framework 4.0 auf 64-Bit-Computern unter Windows Server 2003 oder Windows XP SP2.|  
+|Microsoft Windows Imaging Components|Ist erforderlich für Microsoft .NET Framework 4.0 auf 64-Bit-Computern unter Windows Server 2003 oder Windows XP SP2.|
+|Microsoft Intune PC-Softwareclient|Der Intune PC-Softwareclient und der Configuration Manager-Client können nicht auf dem gleichen PC ausgeführt werden. Stellen Sie sicher, dass der Intune-Client entfernt wurde, bevor Sie den Configuration Manager-Client installieren.|
 
-####  <a name="a-namedotneta-additional-details-about-microsoft-net-framework-version-452"></a><a name="dotNet"></a> Weitere Informationen über Microsoft .NET Framework, Version 4.5.2  
+####  <a name="dotNet"></a> Weitere Informationen über Microsoft .NET Framework, Version 4.5.2  
 
 > [!NOTE]  
 >  Die Unterstützung für .NET 4.0, 4.5 und 4.5.1 ist am 12. Januar 2016 abgelaufen. Weitere Informationen finden Sie in den [häufig gestellten Fragen zur Microsoft-Support-Lifecycle-Richtlinie für .NET Framework](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update) unter „support.microsoft.com“.  
@@ -162,7 +163,7 @@ Bei der Bereitstellung von Configuration Manager-Clients in einer Umgebung sind 
 ### <a name="firewall-requirements"></a>Firewallanforderungen  
  Wenn sich zwischen den Standortsystemservern und den Computern, auf denen der Configuration Manager-Client installiert werden soll, eine Firewall befindet, lesen Sie die Hinweise unter [Windows-Firewall- und -Porteinstellungen für Clients in System Center Configuration Manager](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md).  
 
-##  <a name="a-namebkmkprereqsmobiledevicesa-prerequisites-for-mobile-device-clients"></a><a name="BKMK_prereqs_mobiledevices"></a> Voraussetzungen für Clients für mobile Geräte  
+##  <a name="BKMK_prereqs_mobiledevices"></a> Voraussetzungen für Clients für mobile Geräte  
  Mithilfe der folgenden Informationen können Sie die Voraussetzungen für die Installation des Configuration Manager-Clients auf mobilen Geräten bestimmen und diese mithilfe von Configuration Manager registrieren.  
 
 ### <a name="dependencies-external-to-configuration-manager"></a>Externe Abhängigkeiten von Configuration Manager  
