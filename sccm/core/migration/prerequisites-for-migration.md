@@ -86,7 +86,7 @@ Folgende Konfigurationen sind für Migration und Migrationsvorgänge erforderlic
 
     -   **Konto des Quellstandorts:** Dieses Konto wird für den Zugriff auf den SMS-Anbieter des Quellstandorts verwendet.  
 
-        -   Für einen Configuration Manager&2007; SP2-Quellstandort benötigt dieses Konto die Berechtigung **Lesen** für alle Quellstandortsobjekte.  
+        -   Für einen Configuration Manager 2007 SP2-Quellstandort benötigt dieses Konto die Berechtigung **Lesen** für alle Quellstandortsobjekte.  
 
         -   Für einen System Center 2012 Configuration Manager- oder System Center Configuration Manager-Quellstandort muss dieses Konto über die Berechtigung **Lesen** für alle Quellstandortobjekte verfügen. Sie weisen dem Konto diese Berechtigung über die rollenbasierte Verwaltung zu. Informationen zur Verwendung der rollenbasierten Verwaltung finden Sie unter [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
 
@@ -122,7 +122,7 @@ Folgende Konfigurationen sind für Migration und Migrationsvorgänge erforderlic
 
      Das für das Sammeln von Daten beim SMS-Anbieter des Quellstandorts konfigurierte **Zugriffskonto des Quellstandorts** muss über folgende Berechtigungen verfügen:  
 
-    -   Für das Aktualisieren eines Verteilungspunkts von Configuration Manager&2007; müssen für das Konto die Berechtigungen **Lesen**, **Ausführen** und **Löschen** der **Standort**-Klasse auf dem Standortserver von Configuration Manager&2007; vorliegen, um den Verteilungspunkt erfolgreich vom Configuration Manager&2007;-Quellstandort entfernen zu können.  
+    -   Für das Aktualisieren eines Verteilungspunkts von Configuration Manager 2007 müssen für das Konto die Berechtigungen **Lesen**, **Ausführen** und **Löschen** der **Standort**-Klasse auf dem Standortserver von Configuration Manager 2007 vorliegen, um den Verteilungspunkt erfolgreich vom Configuration Manager 2007-Quellstandort entfernen zu können.  
 
     -   Damit ein System Center 2012 Configuration Manager- oder System Center Configuration Manager-Verteilungspunkt neu zugewiesen werden kann, muss das Konto über die Berechtigung **Ändern** für das **Website**-Objekt am Quellstandort verfügen. Sie erteilen dem Konto diese Berechtigung mithilfe der rollenbasierten Verwaltung. Informationen zur Verwendung der rollenbasierten Verwaltung finden Sie unter [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
 
