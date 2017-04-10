@@ -59,7 +59,7 @@ WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDist
 ```
 
 ### <a name="distribute-all-content-associated-with-the-task-sequence"></a>Verteilen aller der Tasksequenz zugeordneten Inhalte
-Sie müssen alle für die Tasksequenz erforderlichen Inhalte auf mindestens einen Verteilungspunkt verteilen. Dies schließt das Startabbild, Betriebssystemabbild und andere zugehörige Dateien ein. Die Informationen werden vom Assistenten beim Erstellen des eigenständigen Mediums vom Verteilungspunkt abgerufen. Sie benötigen **** Lesezugriffsrechte für die Inhaltsbibliothek an diesem Verteilungspunkt.  Details finden Sie unter [Verteilen von Inhalt, auf den von einer Tasksequenz verwiesen wird](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS).
+Sie müssen alle für die Tasksequenz erforderlichen Inhalte auf mindestens einen Verteilungspunkt verteilen. Dies schließt das Startabbild, Betriebssystemabbild und andere zugehörige Dateien ein. Die Informationen werden vom Assistenten beim Erstellen des eigenständigen Mediums vom Verteilungspunkt abgerufen. Sie benötigen **Lesezugriffsrechte**  für die Inhaltsbibliothek an diesem Verteilungspunkt.  Details finden Sie unter [Verteilen von Inhalt, auf den von einer Tasksequenz verwiesen wird](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS).
 
 ### <a name="prepare-the-removable-usb-drive"></a>Vorbereiten des USB-Wechseldatenträgers
 *Für einen USB-Wechseldatenträger:*
@@ -125,7 +125,7 @@ Sie müssen für die vom Assistenten zum Erstellen von Tasksequenzmedien erstell
      Configuration Manager zeigt nur Verteilungspunkte an, die Inhalt aufweisen. Sie müssen alle der Tasksequenz zugeordneten Inhalte (Startabbild, Betriebssystemabbild usw.) auf mindestens einen Verteilungspunkt aufteilen, bevor Sie fortfahren können. Nachdem Sie den Inhalt verteilt haben, können Sie entweder den Assistenten neu starten oder Verteilungspunkte entfernen, die Sie bereits auf dieser Seite ausgewählt haben, zur vorherigen Seite wechseln und dann zur Seite **Verteilungspunkte** zurückkehren, um die Liste der Verteilungspunkte zu aktualisieren. Weitere Informationen zur Inhaltsverteilung finden Sie unter [Verteilen von Inhalt, auf den von einer Tasksequenz verwiesen wird](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS). Weitere Informationen zu Verteilungspunkten sowie zum Content Management finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
     > [!NOTE]  
-    >  Sie benötigen **** Lesezugriffsrechte für die Inhaltsbibliothek an den Verteilungspunkten.  
+    >  Sie benötigen **Lesezugriffsrechte** für die Inhaltsbibliothek an den Verteilungspunkten.  
 
 12. Geben Sie auf der Seite **Anpassung** die folgenden Informationen an, und klicken Sie dann auf **Weiter**.  
 
