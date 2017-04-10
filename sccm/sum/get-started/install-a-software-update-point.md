@@ -41,7 +41,7 @@ ms.lasthandoff: 12/16/2016
  In den folgenden Abschnitten finden Sie Informationen über die Einstellungen für Softwareupdatepunkte an einem Standort.  
 
 ## <a name="proxy-server-settings"></a>Proxyservereinstellungen  
- Je nach verwendeter Configuration Manager-Version können Sie die Proxyservereinstellungen auf unterschiedlichen Seiten des **Assistenten zum Erstellen von Standortsystemservern** oder des ** Assistenten zum Hinzufügen von Standortsystemrollen** konfigurieren.  
+ Je nach verwendeter Configuration Manager-Version können Sie die Proxyservereinstellungen auf unterschiedlichen Seiten des **Assistenten zum Erstellen von Standortsystemservern** oder des **Assistenten zum Hinzufügen von Standortsystemrollen** konfigurieren.  
 
 -   Sie müssen den Proxyserver konfigurieren und dann angeben, wann er für Softwareupdates verwendet werden soll. Konfigurieren Sie die folgenden Einstellungen:  
 
