@@ -256,10 +256,10 @@ Die neue Anwendung wird im Knoten **Anwendungen** der Configuration Manager-Kons
 
 |Exitcode des Skripts|Details|
 |--------------------------------|-----------------|
-|0|**Data read from STDOUT (Aus „STDOUT“ gelesene Daten):** Leer<br /><br /> **Data read from STDERR (Aus „STDERR“ gelesene Daten):** Leer<br /><br /> **Script result (Skriptergebnis): ** Erfolg<br /><br /> **Application detection state (Erkennungszustand der Anwendung):** Nicht installiert|  
+|0|**Data read from STDOUT (Aus „STDOUT“ gelesene Daten):** Leer<br /><br /> **Data read from STDERR (Aus „STDERR“ gelesene Daten):** Leer<br /><br /> **Script result (Skriptergebnis):** Erfolg<br /><br /> **Application detection state (Erkennungszustand der Anwendung):** Nicht installiert|  
 |0|**Data read from STDOUT (Aus „STDOUT“ gelesene Daten):** Leer<br /><br /> **Data read from STDERR (Aus „STDERR“ gelesene Daten):** Nicht leer<br /><br /> **Script result (Skriptergebnis):** Fehler<br /><br /> **Application detection state (Erkennungszustand der Anwendung):** Unbekannt|  
-|0|**Data read from STDOUT (Aus „STDOUT“ gelesene Daten):** Nicht leer<br /><br /> **Data read from STDERR (Aus „STDERR“ gelesene Daten):** Leer<br /><br /> **Script result (Skriptergebnis): ** Erfolg<br /><br /> **Application detection state (Erkennungszustand der Anwendung)** Installiert|  
-|0|**Data read from STDOUT (Aus „STDOUT“ gelesene Daten):** Nicht leer<br /><br /> **Data read from STDERR (Aus „STDERR“ gelesene Daten):** Nicht leer<br /><br /> **Script result (Skriptergebnis): ** Erfolg<br /><br /> **Application detection state (Erkennungszustand der Anwendung)** Installiert|  
+|0|**Data read from STDOUT (Aus „STDOUT“ gelesene Daten):** Nicht leer<br /><br /> **Data read from STDERR (Aus „STDERR“ gelesene Daten):** Leer<br /><br /> **Script result (Skriptergebnis):** Erfolg<br /><br /> **Application detection state (Erkennungszustand der Anwendung)** Installiert|  
+|0|**Data read from STDOUT (Aus „STDOUT“ gelesene Daten):** Nicht leer<br /><br /> **Data read from STDERR (Aus „STDERR“ gelesene Daten):** Nicht leer<br /><br /> **Script result (Skriptergebnis):** Erfolg<br /><br /> **Application detection state (Erkennungszustand der Anwendung)** Installiert|  
 |Wert ungleich null|**Data read from STDOUT (Aus „STDOUT“ gelesene Daten):** Leer<br /><br /> **Data read from STDERR (Aus „STDERR“ gelesene Daten):** Leer<br /><br /> **Script result (Skriptergebnis):** Fehler<br /><br /> **Application detection state (Erkennungszustand der Anwendung):** Unbekannt|  
 |Wert ungleich null|**Data read from STDOUT (Aus „STDOUT“ gelesene Daten):** Leer<br /><br /> **Data read from STDERR (Aus „STDERR“ gelesene Daten):** Nicht leer<br /><br /> **Script result (Skriptergebnis):** Fehler<br /><br /> **Application detection state (Erkennungszustand der Anwendung):** Unbekannt|  
 |Wert ungleich null|**Data read from STDOUT (Aus „STDOUT“ gelesene Daten):** Nicht leer<br /><br /> **Data read from STDERR (Aus „STDERR“ gelesene Daten):** Leer<br /><br /> **Script result (Skriptergebnis):** Fehler<br /><br /> **Application detection state (Erkennungszustand der Anwendung):** Unbekannt|  
@@ -302,7 +302,7 @@ In der folgenden Tabelle sind Beispielskripte für Microsoft Visual Basic (VB) a
         -   **Nur wenn kein Benutzer angemeldet ist**  
 
         > [!NOTE]  
-        >  Für diese Option wird standardmäßig **Nur wenn ein Benutzer angemeldet ist**ausgewählt. Die Option kann nicht geändert werden, wenn Sie in der Dropdownliste **Installationsverhalten** die Option **Für Benutzer installieren** ausgewählt haben.  
+        >  Für diese Option wird standardmäßig **Nur wenn ein Benutzer angemeldet ist** ausgewählt. Die Option kann nicht geändert werden, wenn Sie in der Dropdownliste **Installationsverhalten** die Option **Für Benutzer installieren** ausgewählt haben.  
 
     -   **Sichtbarkeit des Installationsprogramms**: Gibt den Modus an, in dem der Bereitstellungstyp auf Clientgeräten ausgeführt wird. Die folgenden Optionen sind verfügbar:  
 
@@ -339,7 +339,7 @@ In der folgenden Tabelle sind Beispielskripte für Microsoft Visual Basic (VB) a
     > [!NOTE]  
     >  Sie können neue Anforderungen auch im Dialogfeld **Eigenschaften** von *<Name des Bereitstellungstyps\>* auf der Registerkarte **Anforderungen** hinzufügen.  
 
-2.  Wählen Sie in der Dropdownliste **Kategorie** aus, ob diese Anforderung für ein Gerät oder einen Benutzer bestimmt ist, oder wählen Sie **Benutzerdefiniert** aus, um eine zuvor erstellte globale Bedingung zu verwenden. Bei Auswahl von **Benutzerdefiniert**können Sie auch **Erstellen** auswählen, um eine neue globale Bedingung zu erstellen. Weitere Informationen über globale Bedingungen finden Sie unter [Erstellen von globalen Bedingungen](../../apps/deploy-use/create-global-conditions.md).  
+2.  Wählen Sie in der Dropdownliste **Kategorie** aus, ob diese Anforderung für ein Gerät oder einen Benutzer bestimmt ist, oder wählen Sie **Benutzerdefiniert** aus, um eine zuvor erstellte globale Bedingung zu verwenden. Bei Auswahl von **Benutzerdefiniert** können Sie auch **Erstellen** auswählen, um eine neue globale Bedingung zu erstellen. Weitere Informationen über globale Bedingungen finden Sie unter [Erstellen von globalen Bedingungen](../../apps/deploy-use/create-global-conditions.md).  
 
     > [!IMPORTANT]  
     >  Alle Anforderungen mit der Kategorie **Benutzer** und der Bedingung **Primäres Gerät** werden ignoriert, wenn Sie die Anwendung für eine Gerätesammlung bereitstellen.  
@@ -415,7 +415,7 @@ In der folgenden Tabelle sind Beispielskripte für Microsoft Visual Basic (VB) a
 
 5.  Wählen Sie **OK** aus, um das Dialogfeld *<Name des Bereitstellungstyps\>* **Eigenschaften** zu schließen.  
 
-6.  Wählen Sie **OK** aus, um das Dialogfeld **Eigenschaften von ***<Anwendungsname\>* zu schließen.  
+6.  Wählen Sie **OK** aus, um das Dialogfeld **Eigenschaften von***<Anwendungsname\>* zu schließen.  
 
 ### <a name="set-up-publishing-options-for-app-v-deployment-types"></a>Einrichten von Veröffentlichungsoptionen für App-V-Bereitstellungstypen  
 
@@ -429,7 +429,7 @@ In der folgenden Tabelle sind Beispielskripte für Microsoft Visual Basic (VB) a
 
 6.  Wählen Sie **OK** aus, um das Dialogfeld *<Name des Bereitstellungstyps\>* **Eigenschaften** zu schließen.  
 
-7.  Wählen Sie **OK** aus, um das Dialogfeld **Eigenschaften von ***<Anwendungsname\>* zu schließen.  
+7.  Wählen Sie **OK** aus, um das Dialogfeld **Eigenschaften von***<Anwendungsname\>* zu schließen.  
 
 ## <a name="import-an-application"></a>Importieren einer Anwendung  
  Gehen Sie wie folgt vor, um eine Anwendung in Configuration Manager zu importieren. Informationen zum Exportieren von Anwendungen finden Sie unter [Management tasks for System Center Configuration Manager applications (Verwaltungsaufgaben für System Center Configuration Manager-Anwendungen)](../../apps/deploy-use/management-tasks-applications.md).  
