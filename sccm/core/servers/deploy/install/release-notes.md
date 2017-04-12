@@ -2,7 +2,7 @@
 title: "Versionshinweise – Configuration Manager | Microsoft-Dokumentation"
 description: In diesen Anmerkungen finden Sie Informationen zu dringenden Problemen, die im Produkt noch nicht behoben oder bisher in keinem Microsoft Knowledge Base-Artikel beschrieben wurden.
 ms.custom: na
-ms.date: 3/27/27
+ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
