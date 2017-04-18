@@ -14,16 +14,16 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 70034213442f4c3d5a28ab65c2ceb51aa64320ad
-ms.openlocfilehash: 9332278e960051caf6875f45212af644e2ea7890
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: d7b13f3dea5a3ae413ca6b8150ec24e1632a4d4d
+ms.openlocfilehash: 3e97184dc923cd3972c23252c1bc001edb73fe3f
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>Neues in Version 1702 von System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Das Update 1702 für System Center Configuration Manager (Current Branch) ist als konsoleninternes Update für zuvor installierte Standorte verfügbar, die Version 1606 oder 1610 ausführen.
+Das Update 1702 für System Center Configuration Manager (Current Branch) ist als konsoleninternes Update für zuvor installierte Standorte verfügbar, die Version 1602, 1606 oder 1610 ausführen.
 
 > [!TIP]  
 > Sie müssen eine Baselineversion von Configuration Manager verwenden, um einen neuen Standort zu installieren.  

@@ -17,9 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 70034213442f4c3d5a28ab65c2ceb51aa64320ad
-ms.openlocfilehash: 207975538b63390fb5789b19c519db89db62e0a5
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: 0cf2ac6440588ccf4848baa7a195f78e8675447d
+ms.openlocfilehash: c6a1eb9ccaee45eb242fb320cb6b492d1a39d349
+ms.lasthandoff: 04/11/2017
 
 
 ---
@@ -29,18 +29,10 @@ ms.lasthandoff: 03/31/2017
 
 Ein Startimage in Configuration Manager ist ein [Windows PE-Image (WinPE)](https://msdn.microsoft.com/library/windows/hardware/dn938389%28v=vs.85%29.aspx), das während einer Betriebssystembereitstellung verwendet wird. Startimages dienen zum Starten eines Computers in Windows PE, einem minimalen Betriebssystem mit begrenzten Komponenten und Diensten zur Vorbereitung des Zielcomputers für die Windows-Installation.  Gehen Sie wie in den folgenden Abschnitten beschrieben vor, um Startimages zu verwalten:
 
-##  <a name="BKMK_BootImageDefault"></a> Standardstartimages  
-Wenn Sie ab Version 1702 ein Upgrade auf die Windows ADK-Version durchführen und anschließend ein Update auf die neueste Version von Configuration Manager durchführen, werden die Standardstartimages aktualisiert. Dies schließt die neue Windows PE-Version vom aktualisierten Windows ADK ein, die neue Version des Configuration Manager-Clients sowie alle Anpassungen bleiben unverändert. Benutzerdefinierte Startimages werden nicht aktualisiert. Vor Version 1702 müssen Sie das Startimage zum Verwenden der neuen Version des Windows ADK manuell aktualisieren.
-
-Beim Ausführen des Upgrades von Configuration Manager auf eine neue Hauptversion mithilfe des Installationsprozesses, aktualisiert Configuration Manager womöglich das Standardstartimage sowie angepasste Startimages auf Grundlage der Standardstartimages, die im Standardspeicherort gespeichert sind.
-
-Die Optionen, die Sie für die Standardstartimages am Standort konfigurieren (z. B. optionale Komponenten), werden einschließlich Treiber übernommen, wenn die Startimages aktualisiert werden. Die Quelltreiberobjekte müssen gültig sein, einschließlich der Treiberquelldateien, da die Treiber andernfalls nicht den aktualisierten Startimages im Speicherort hinzugefügt werden. Andere Startimages, die nicht auf den standardmäßigen Startstartimages basieren, werden auch dann nicht aktualisiert, wenn sie auf derselben Windows ADK-Version basieren. Nachdem Startimages aktualisiert wurden, müssen Sie sie erneut an die Verteilungspunkte verteilen. Alle Medien, die die Startimages verwenden, müssen neu erstellt werden. Wenn die benutzerdefinierten oder Standardstartimages nicht automatisch aktualisiert werden sollen, sollten Sie sie an einem anderen Ort speichern.  
-
-
 ## <a name="BKMK_BootImageDefault"></a> Standardstartimages
 Configuration Manager stellt zwei Standardstartimages bereit: ein Startimage zur Unterstützung von x86-Plattformen und eines zur Unterstützung von x64-Plattformen. Diese Images sind hier gespeichert: \\\\*Servername*>\SMS_<*Standortcode*>\osd\boot\\<*x64*> oder <*i386*>. Die Standardstartimages werden je nach der von Ihnen ausgeführten Aktion aktualisiert oder neu generiert.
 
-**Verwenden von Updates und Wartung zum Installieren der neuesten Version von Configuration Manager** Wenn Sie ab Version 1702 ein Upgrade auf die Windows ADK-Version ausführen und anschließend Updates und Wartung zum Installieren der neuesten Version von Configuration Manager verwenden, generiert Configuration Manager die Standardstartimages neu. Dies schließt die neue Windows PE-Version vom aktualisierten Windows ADK, die neue Version des Configuration Manager-Clients, Treiber, Anpassungen usw. ein. Benutzerdefinierte Startimages werden nicht geändert. 
+**Verwenden von Updates und Wartung zum Installieren der neuesten Version von Configuration Manager** Wenn Sie ab Version 1702 ein Upgrade auf die Windows ADK-Version ausführen und anschließend Updates und Wartung zum Installieren der neuesten Version von Configuration Manager verwenden, generiert Configuration Manager die Standardstartimages neu. Dies schließt die neue Windows PE-Version vom aktualisierten Windows ADK, die neue Version des Configuration Manager-Clients, Treiber, Anpassungen usw. ein. Benutzerdefinierte Startimages werden nicht geändert.
 
 Vor Version 1702 aktualisiert Configuration Manager das vorhandene Startimage (boot.wim) mit den Clientkomponenten, Treibern, Anpassungen usw. Es wird jedoch nicht die neueste Windows PE-Version vom Windows ADK verwendet. Sie müssen das Startimage manuell anpassen, um die neueste Version des Windows ADK zu verwenden.
 
