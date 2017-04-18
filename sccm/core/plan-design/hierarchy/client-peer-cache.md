@@ -2,7 +2,7 @@
 title: Clientpeercache | System Center Configuration Manager
 description: "Verwenden Sie Peercache für Quellspeicherorte für Clientinhalte beim Bereitstellen von Inhalten mit System Center Configuration Manager."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 4/4/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 5298f1c836c1a872862b0e972180ac0c99c59751
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 26feb0b166beb7e48cb800a5077d00dbc3eec51a
+ms.openlocfilehash: dcd05d7d120f8997562da7d92b38c8b52a512357
+ms.lasthandoff: 04/04/2017
 
 ---
 
@@ -70,7 +70,7 @@ Um besser zu verstehen, wann der Peercache erfolgreich verwendet wird, sehen Sie
 Ab Version 1702 können Sie drei Berichte verwenden, um die Peercacheauslastung anzuzeigen. Navigieren Sie in der Konsole zu **Überwachung** > **Berichterstellung** > **Berichte**. Die Berichte haben alle den Typ **Softwareverteilung – Inhalt**:
 1.  **Ablehnen von Inhalt einer Peercachequelle**:  
 Erfahren Sie mithilfe dieses Berichts, wie häufig die Peercachequellen in einer Begrenzungsgruppe eine Inhaltsanforderung abgelehnt haben.
- - **Bekanntes Problem:** Wenn Sie einen Drilldown für Ergebnisse wie *MaxCPULoad* und *MaxDiskIO* durchführen, erhalten Sie möglicherweise einen Fehler, der darauf hinweist, dass der Bericht oder Angaben nicht gefunden werden können. Verwenden Sie die folgenden beiden Berichte, die die Ergebnisse direkt anzeigen, um dies zum umgehen. 
+ - **Bekanntes Problem:** Wenn Sie einen Drilldown für Ergebnisse wie *MaxCPULoad* und *MaxDiskIO* durchführen, erhalten Sie möglicherweise einen Fehler, der darauf hinweist, dass der Bericht oder Angaben nicht gefunden werden können. Verwenden Sie die folgenden beiden Berichte, die die Ergebnisse direkt anzeigen, um dies zum umgehen.
 
 2. **Ablehnen von Inhalt einer Peercachequelle durch eine Bedingung**:  
 Erfahren Sie mithilfe dieses Berichts, wie Sie Angaben zur Ablehnung einer angegebenen Begrenzungsgruppe oder eines Ablehnungstyps interpretieren können. Sie können Folgendes bestimmen:
@@ -87,9 +87,11 @@ Erfahren Sie mithilfe dieses Berichts, wie Sie Angaben zur Ablehnung einer angeg
 
 
 ## <a name="requirements-and-considerations-for-peer-cache"></a>Anforderungen und Überlegungen für den Peercache
-- Der Peercache wird von jedem Windows-Betriebssystem unterstützt, das als Configuration Manager-Client unterstützt wird. Nicht-Windows-Betriebssysteme werden für den Peercache nicht unterstützt.
+-   Der Peercache wird von jedem Windows-Betriebssystem unterstützt, das als Configuration Manager-Client unterstützt wird. Nicht-Windows-Betriebssysteme werden für den Peercache nicht unterstützt.
 
-- Clients können nur Inhalte von Peercacheclients übertragen, die sich in ihrer aktuellen Begrenzungsgruppe befinden.
+-   Clients können nur Inhalte von Peercacheclients übertragen, die sich in ihrer aktuellen Begrenzungsgruppe befinden.
+
+-   Jeder Standort, an dem Clients Peer Cache verwenden, muss mit einem [Netzwerkzugriffskonto](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account) konfiguriert sein. Das Konto wird vom Peer Cache-Quellcomputer zum Authentifizieren von Downloadanforderungen von Peers verwendet und erfordert nur Domänenbenutzerberechtigungen für diesen Zweck.
 
 -     Da die aktuelle Begrenzung einer Inhaltsquelle des Peercaches durch die letzte Hardwareinventurübermittlung des Clients bestimmt wird, gilt ein Client, der zu einem Netzwerkort in einer anderen Begrenzungsgruppe wechselt, für den Peercache weiterhin als Mitglied seiner früheren Begrenzungsgruppe. Dadurch kann ein Client als Inhaltsquelle des Peercaches angeboten werden, der sich nicht an seinem unmittelbaren Netzwerkort befindet. Es wird empfohlen, Clients, die für diese Konfiguration anfällig sind, von der Teilnahme als Peercachequelle auszuschließen.
 

@@ -17,9 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4edf7d09d39fa22fb5812aecc88febd763001eba
-ms.openlocfilehash: 369aa062d0f38eedebc0a7c351a7ce67b53d199b
-ms.lasthandoff: 02/21/2017
+ms.sourcegitcommit: 70034213442f4c3d5a28ab65c2ceb51aa64320ad
+ms.openlocfilehash: 207975538b63390fb5789b19c519db89db62e0a5
+ms.lasthandoff: 03/31/2017
 
 
 ---
@@ -29,19 +29,41 @@ ms.lasthandoff: 02/21/2017
 
 Ein Startimage in Configuration Manager ist ein [Windows PE-Image (WinPE)](https://msdn.microsoft.com/library/windows/hardware/dn938389%28v=vs.85%29.aspx), das während einer Betriebssystembereitstellung verwendet wird. Startimages dienen zum Starten eines Computers in Windows PE, einem minimalen Betriebssystem mit begrenzten Komponenten und Diensten zur Vorbereitung des Zielcomputers für die Windows-Installation.  Gehen Sie wie in den folgenden Abschnitten beschrieben vor, um Startimages zu verwalten:
 
-##  <a name="a-namebkmkbootimagedefaulta-default-boot-images"></a><a name="BKMK_BootImageDefault"></a> Standardstartimages  
- Configuration Manager stellt zwei Standardstartimages bereit: ein Startimage zur Unterstützung von x86-Plattformen und eines zur Unterstützung von x64-Plattformen. Diese Images sind hier gespeichert: \\\\*Servername*>\SMS_<*Standortcode*>\osd\boot\\<*x64*> oder <*i386*>.  
+##  <a name="BKMK_BootImageDefault"></a> Standardstartimages  
+Wenn Sie ab Version 1702 ein Upgrade auf die Windows ADK-Version durchführen und anschließend ein Update auf die neueste Version von Configuration Manager durchführen, werden die Standardstartimages aktualisiert. Dies schließt die neue Windows PE-Version vom aktualisierten Windows ADK ein, die neue Version des Configuration Manager-Clients sowie alle Anpassungen bleiben unverändert. Benutzerdefinierte Startimages werden nicht aktualisiert. Vor Version 1702 müssen Sie das Startimage zum Verwenden der neuen Version des Windows ADK manuell aktualisieren.
 
- Wenn Sie ein Upgrade von Configuration Manager auf eine neue Version durchführen, ersetzt Configuration Manager die Standardstartimages und darauf basierende benutzerdefinierte Startimages an diesem Speicherort durch aktualisierte Dateien. Die Optionen, die Sie für die Standardstartimages am Standort konfigurieren (z. B. optionale Komponenten), werden einschließlich Treiber übernommen, wenn die Startimages aktualisiert werden. Die Quelltreiberobjekte müssen gültig sein, einschließlich der Treiberquelldateien, da die Treiber andernfalls nicht den aktualisierten Startimages im Speicherort hinzugefügt werden. Andere Startimages, die nicht auf den standardmäßigen Startstartimages basieren, werden auch dann nicht aktualisiert, wenn sie auf derselben Windows ADK-Version basieren. Nachdem Startimages aktualisiert wurden, müssen Sie sie erneut an die Verteilungspunkte verteilen. Alle Medien, die die Startimages verwenden, müssen neu erstellt werden. Wenn die benutzerdefinierten oder Standardstartimages nicht automatisch aktualisiert werden sollen, sollten Sie sie an einem anderen Ort speichern.  
+Beim Ausführen des Upgrades von Configuration Manager auf eine neue Hauptversion mithilfe des Installationsprozesses, aktualisiert Configuration Manager womöglich das Standardstartimage sowie angepasste Startimages auf Grundlage der Standardstartimages, die im Standardspeicherort gespeichert sind.
 
- Das Ablaufprotokolltool von Configuration Manager wird allen Startimages hinzugefügt, die Sie der **Softwarebibliothek** hinzufügen. In WinPE können Sie das Ablaufprotokolltool vom Configuration Manager starten, indem Sie **CMTrace** in einer Befehlszeile eingeben.  
+Die Optionen, die Sie für die Standardstartimages am Standort konfigurieren (z. B. optionale Komponenten), werden einschließlich Treiber übernommen, wenn die Startimages aktualisiert werden. Die Quelltreiberobjekte müssen gültig sein, einschließlich der Treiberquelldateien, da die Treiber andernfalls nicht den aktualisierten Startimages im Speicherort hinzugefügt werden. Andere Startimages, die nicht auf den standardmäßigen Startstartimages basieren, werden auch dann nicht aktualisiert, wenn sie auf derselben Windows ADK-Version basieren. Nachdem Startimages aktualisiert wurden, müssen Sie sie erneut an die Verteilungspunkte verteilen. Alle Medien, die die Startimages verwenden, müssen neu erstellt werden. Wenn die benutzerdefinierten oder Standardstartimages nicht automatisch aktualisiert werden sollen, sollten Sie sie an einem anderen Ort speichern.  
 
-##  <a name="a-namebkmkbootimagecustoma-customize-a-boot-image"></a><a name="BKMK_BootImageCustom"></a> Anpassen eines Startimages  
+
+## <a name="BKMK_BootImageDefault"></a> Standardstartimages
+Configuration Manager stellt zwei Standardstartimages bereit: ein Startimage zur Unterstützung von x86-Plattformen und eines zur Unterstützung von x64-Plattformen. Diese Images sind hier gespeichert: \\\\*Servername*>\SMS_<*Standortcode*>\osd\boot\\<*x64*> oder <*i386*>. Die Standardstartimages werden je nach der von Ihnen ausgeführten Aktion aktualisiert oder neu generiert.
+
+**Verwenden von Updates und Wartung zum Installieren der neuesten Version von Configuration Manager** Wenn Sie ab Version 1702 ein Upgrade auf die Windows ADK-Version ausführen und anschließend Updates und Wartung zum Installieren der neuesten Version von Configuration Manager verwenden, generiert Configuration Manager die Standardstartimages neu. Dies schließt die neue Windows PE-Version vom aktualisierten Windows ADK, die neue Version des Configuration Manager-Clients, Treiber, Anpassungen usw. ein. Benutzerdefinierte Startimages werden nicht geändert. 
+
+Vor Version 1702 aktualisiert Configuration Manager das vorhandene Startimage (boot.wim) mit den Clientkomponenten, Treibern, Anpassungen usw. Es wird jedoch nicht die neueste Windows PE-Version vom Windows ADK verwendet. Sie müssen das Startimage manuell anpassen, um die neueste Version des Windows ADK zu verwenden.
+
+**Upgrade von Configuration Manager 2012 auf Configuration Manager Current Branch (CB)** Wenn Sie Configuration Manager 2012 auf Configuration Manager CB mithilfe des Installationsprozesses upgraden, generiert Configuration Manager die Standartstartimages neu. Dies schließt die neue Windows PE-Version vom aktualisierten Windows ADK ein, die neue Version des Configuration Manager-Clients sowie alle Anpassungen bleiben unverändert. Benutzerdefinierte Startimages werden nicht geändert.
+
+**Aktualisieren der Verteilungspunkte mit dem Startimage** Wenn Sie die Aktion **Verteilungspunkte aktualisieren** aus dem Knoten **Boot Images** (Startimages) in der Configuration Manager-Konsole verwenden, aktualisiert Configuration Manager die Standardstartimages mit den Clientkomponenten, den Treibern, den Anpassungen usw. Es wird jedoch nicht die neueste Windows PE-Version aus dem Windows ADK verwendet. Benutzerdefinierte Startimages werden nicht geändert.
+
+Berücksichtigen Sie auch Folgendes für die oben aufgeführten Aktionen:
+- Die Quelltreiberobjekte müssen gültig sein, einschließlich der Treiberquelldateien, da die Treiber andernfalls nicht den Startimages im Speicherort hinzugefügt werden.
+- Startimages, die nicht auf den standardmäßigen Startimages basieren, selbst wenn sie dieselbe Version von Windows PE verwenden, werden nicht angepasst.
+- Sie müssen die angepassten Startimages neu auf Verteilungspunkten verteilen.
+- Sie müssen alle Medien neu erstellen, die die geänderten Startimages verwenden.
+- Wenn die benutzerdefinierten oder Standardstartimages nicht automatisch aktualisiert werden sollen, speichern Sie sie nicht am Standardspeicherort.
+
+> [!NOTE]
+> Das Ablaufprotokolltool von Configuration Manager wird allen Startimages hinzugefügt, die Sie der **Softwarebibliothek** hinzufügen. In Windows PE können Sie das Ablaufprotokolltool von Configuration Manager starten, indem Sie **CMTrace** in einer Befehlszeile eingeben.  
+
+##  <a name="BKMK_BootImageCustom"></a> Anpassen eines Startimages  
  Sie können ein Startimage über die Configuration Manager-Konsole anpassen oder [ein Startimage ändern](#BKMK_ModifyBootImages), wenn das Image auf einer Windows PE-Version aus der unterstützten Version von Windows ADK basiert. Wenn ein Standort mit einer neuen Version aktualisiert wird und eine neue Version von Windows ADK installiert wird, werden benutzerdefinierte Startimages (die sich nicht im Standardspeicherort für Startimages befinden) nicht mit der neuen Version von Windows ADK aktualisiert. In diesem Fall können Sie die Startimages in der Configuration Manager-Konsole nicht mehr anpassen. Diese funktionieren jedoch weiterhin wie vor dem Upgrade.  
 
  Wenn ein Startimage auf einer anderen Version des an einem Standort installierten Windows ADK basiert, müssen Sie die Startimages mithilfe eines anderen Verfahrens anpassen, beispielsweise mit dem DISM-Befehlszeilenprogramm (Deployment Image Servicing and Management), das Bestandteil von Windows AIK und Windows ADK ist. Weitere Informationen zu Startimages finden Sie unter [Anpassen von Startimages](customize-boot-images.md).  
 
-##  <a name="a-namebkmkaddbootimagesa-add-a-boot-image"></a><a name="BKMK_AddBootImages"></a> Hinzufügen eines Startimages  
+##  <a name="BKMK_AddBootImages"></a> Hinzufügen eines Startimages  
 
  Bei einer Standortinstallation fügt Configuration Manager automatisch Startimages hinzu, die auf einer WinPE-Version aus der unterstützten Version von Windows ADK basieren. Abhängig von der Configuration Manager-Version können Sie möglicherweise Startimages hinzufügen, die auf einer anderen WinPE-Version aus der unterstützten Version von Windows ADK basieren.  Es tritt ein Fehler auf, wenn Sie versuchen, ein Startabbild hinzuzufügen, das eine nicht unterstützte Version von WinPE enthält.  
 
@@ -96,7 +118,7 @@ Ein Startimage in Configuration Manager ist ein [Windows PE-Image (WinPE)](https
 > [!NOTE]  
 >  Wenn Sie den Knoten **Startimage** in der Configuration Manager-Konsole auswählen, wird in der Spalte **Größe (KB)** die dekomprimierte Größe des jeweiligen Startimages angezeigt. Wenn ein Startimage hingegen von Configuration Manager über das Netzwerk gesendet wird, wird eine komprimierte Kopie des Images gesendet, die normalerweise eine wesentlich geringere Größe hat als in der Spalte **Größe (KB)** angegeben.  
 
-##  <a name="a-namebkmkdistributebootimagesa-distribute-boot-images-to-a-distribution-point"></a><a name="BKMK_DistributeBootImages"></a> Verteilen von Startimages an einen Verteilungspunkt  
+##  <a name="BKMK_DistributeBootImages"></a> Verteilen von Startimages an einen Verteilungspunkt  
  Startabbilder werden genau wie anderer Inhalt an Verteilungspunkte verteilt. In den meisten Fällen müssen Sie das Startabbild an mindestens einen Verteilungspunkt verteilen, bevor Sie ein Betriebssystem bereitstellen und bevor Sie Medien erstellen.  
 
 > [!NOTE]  
@@ -110,7 +132,7 @@ Ein Startimage in Configuration Manager ist ein [Windows PE-Image (WinPE)](https
 
  Die Schritte zum Verteilen eines Startabbilds finden Sie unter [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).  
 
-##  <a name="a-namebkmkmodifybootimagesa-modify-a-boot-image"></a><a name="BKMK_ModifyBootImages"></a> Ändern eines Startimages  
+##  <a name="BKMK_ModifyBootImages"></a> Ändern eines Startimages  
  Sie können dem Abbild Gerätetreiber hinzufügen, Gerätetreiber aus dem Abbild entfernen oder die Eigenschaften des Startabbilds bearbeiten. Die Gerätetreiber, die Sie hinzufügen oder entfernen, können Treiber für Netzwerkkarten oder Massenspeichergeräte umfassen. Berücksichtigen Sie beim Ändern von Startabbildern die folgenden Faktoren:  
 
 -   Sie müssen die Gerätetreiber in den Gerätetreiberkatalog importieren und dort aktivieren, bevor Sie sie dem Startabbild hinzufügen können.  
@@ -212,7 +234,7 @@ Ein Startimage in Configuration Manager ist ein [Windows PE-Image (WinPE)](https
 
 6.  Nachdem Sie die Eigenschaften konfiguriert haben, klicken Sie auf **OK**.  
 
-##  <a name="a-namebkmkbootimagepxea-configure-a-boot-image-to-deploy-from-a-pxe-enabled-distribution-point"></a><a name="BKMK_BootImagePXE"></a> Konfigurieren eines Startimages, das über einen PXE-fähigen Verteilungspunkt bereitgestellt werden soll  
+##  <a name="BKMK_BootImagePXE"></a> Konfigurieren eines Startimages, das über einen PXE-fähigen Verteilungspunkt bereitgestellt werden soll  
  Bevor Sie ein Startimage für eine PXE-Betriebssystembereitstellung verwenden können, müssen Sie das Startimage für die Bereitstellung über einen PXE-fähigen Verteilungspunkt konfigurieren.  
 
 #### <a name="to-configure-a-boot-image-to-deploy-from-a-pxe-enabled-distribution-point"></a>So konfigurieren Sie ein Startimage, das über einen PXE-fähigen Verteilungspunkt bereitgestellt werden soll  
@@ -232,7 +254,7 @@ Ein Startimage in Configuration Manager ist ein [Windows PE-Image (WinPE)](https
 
 6.  Nachdem Sie die Eigenschaften konfiguriert haben, klicken Sie auf **OK**.  
 
-##  <a name="a-namebkmkbootimagelanguagea-configure-multiple-languages-for-boot-image-deployment"></a><a name="BKMK_BootImageLanguage"></a> Konfigurieren von mehreren Sprachen für die Startimagebereitstellung  
+##  <a name="BKMK_BootImageLanguage"></a> Konfigurieren von mehreren Sprachen für die Startimagebereitstellung  
  Startabbilder sind sprachneutral. Daher können Sie unter WinPE ein Startabbild verwenden, für das die Tasksequenz in mehreren Sprachen angezeigt wird. Binden Sie dafür die entsprechende Sprachunterstützung aus den optionalen Komponenten von Windows PE ein, und legen Sie die erforderliche Tasksequenzvariable fest, um anzugeben, welche Sprache angezeigt werden kann. Die Sprache des bereitgestellten Betriebssystems ist unabhängig von der Sprache, die unter WinPE angezeigt wird. Dies gilt unabhängig von der Configuration Manager-Version. Die Sprache, die dem Benutzer angezeigt wird, wird wie folgt bestimmt:  
 
 -   Wenn ein Benutzer die Tasksequenz unter einem vorhandenen Betriebssystem ausführt, wird von Configuration Manager automatisch die für den Benutzer konfigurierte Sprache verwendet. Wird die Tasksequenz automatisch als Folge eines obligatorischen Bereitstellungsstichtags ausgeführt, wird von Configuration Manager die Sprache des Betriebssystems verwendet.  

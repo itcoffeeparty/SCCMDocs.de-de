@@ -2,7 +2,7 @@
 title: Erstellen von PFX-Zertifikatprofilen | Microsoft-Dokumentation
 description: "Erfahren Sie, wie Sie PFX-Dateien in System Center Configuration Manager verwenden, um benutzerspezifische Zertifikate zu generieren, die den verschlüsselten Datenaustausch unterstützen."
 ms.custom: na
-ms.date: 03/30/2017
+ms.date: 04/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3b1451edaed69a972551bd060293839aa11ec8b2
-ms.openlocfilehash: 2495cef2442706b343bac6d510946c1226b64cfc
-ms.lasthandoff: 03/28/2017
+ms.sourcegitcommit: 26feb0b166beb7e48cb800a5077d00dbc3eec51a
+ms.openlocfilehash: 27435316c6e47531ff989bc8956ca0c874131a0e
+ms.lasthandoff: 04/04/2017
 
 
 ---
@@ -38,7 +38,7 @@ Unter [Zertifikatprofile](../../protect/deploy-use/introduction-to-certificate-p
 - Andere Voraussetzungen finden Sie unter [Voraussetzungen für Zertifikatprofile](../../protect/plan-design/prerequisites-for-certificate-profiles.md).
 
 ## <a name="pfx-certificate-profiles"></a>PFX-Zertifikatprofile
-System Center Configuration Manager ermöglicht Ihnen die Bereitstellung von PFX-Dateien (Personal Information Exchange) für Geräte des Benutzers. PFX-Dateien können zum Generieren benutzerspezifischer Zertifikate zur Unterstützung eines verschlüsselten Datenaustausches verwendet werden. PFX-Zertifikate können in Configuration Manager erstellt oder importiert werden.
+System Center Configuration Manager ermöglicht Ihnen den Import und anschließend die Bereitstellung von PFX-Dateien (Personal Information Exchange) für Geräte des Benutzers. PFX-Dateien können zum Generieren benutzerspezifischer Zertifikate zur Unterstützung eines verschlüsselten Datenaustausches verwendet werden.
 
 > [!TIP]  
 >  Unter [Erstellen und Bereitstellen von PFX-Zertifikatprofilen in Configuration Manager](http://blogs.technet.com/b/karanrustagi/archive/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager.aspx)finden Sie eine schrittweise exemplarische Vorgehensweise für diesen Vorgang.  
@@ -59,10 +59,10 @@ System Center Configuration Manager ermöglicht Ihnen die Bereitstellung von PFX
 
     -   **Beschreibung**: Geben Sie eine Beschreibung mit einem Überblick über das Zertifikatprofil sowie weitere relevante Informationen ein, die der Identifikation des Profils in der System Center Configuration Manager-Konsole dienen. Sie können maximal 256 Zeichen verwenden.  
 
-    -   **Geben Sie den Typ des Zertifikatprofils an, das Sie erstellen möchten**: Wählen Sie einen der folgenden Typen für das PFX-Zertifikatprofil aus:  
+    -   **Geben Sie den Typ des Zertifikatprofils an, das Sie erstellen möchten**: Wählen Sie Folgendes für das PFX-Zertifikatprofil aus:  
 
         -   **Privater Informationsaustausch – PKCS #12 (.PFX)-Einstellungen – Importieren**: Wählen Sie diese Option aus, um ein PFX-Zertifikat zu importieren.  
-        -   **Privater Informationsaustausch – PKCS #12-Einstellungen (PFX) – Erstellen**: Wählen Sie diese Option aus, um ein PFX-Zertifikat zu erstellen.
+       
 
 ### <a name="import-a-pfx-certificate"></a>Importieren eines PFX-Zertifikats
 
@@ -107,28 +107,7 @@ Die folgenden Skriptvariablen müssen für das Skript geändert werden:
    -   $ProfileName = Der Name des PFX-Profils  
    -   ComputerName = Der Name des Hostcomputers   
 
-### <a name="create-a-new-pfx-certificate"></a>Erstellen eines neuen PFX-Zertifikats
 
-Wenn Sie ein PFX-Zertifikat erstellen und bereitstellen, wird dasselbe Zertifikat auf allen Geräten installiert werden, die der Benutzer registriert.
-
-1. Wählen Sie auf der Seite **Unterstützte Plattformen** des Assistenten die Geräteplattformen aus, auf dem das Zertifikat installiert werden soll, und klicken Sie dann auf **Weiter**.
-2. Konfigurieren Sie Folgendes auf der Seite **Zertifizierungsstellen** des Assistenten:
-    - **Primärer Standort**: Wählen Sie den primären Standort von Configuration Manager, von dem Sie eine Zertifizierungsstelle auswählen möchten.
-    - **Zertifizierungsstellen**: Nachdem Sie einen primären Standort ausgewählt haben, wählen Sie die gewünschte Zertifizierungsstelle aus der Liste aus, und klicken Sie anschließend auf **Weiter**.
-3. Konfigurieren Sie auf der Seite **PFX-Zertifikat** des Assistenten die folgenden Informationen:
-    - **Erneuerungsschwellenwert (%)**: Geben Sie den Prozentsatz der Zertifikatgültigkeitsdauer an, die verbleibt, bevor das Gerät eine Erneuerung des Zertifikats anfordert.
-    - **Name der Zertifikatvorlage**: Klicken Sie auf **Durchsuchen**, um den Namen der Zertifikatvorlage auszuwählen, der einer ausstellenden Zertifizierungsstelle hinzugefügt wurde. Damit Sie Zertifikatvorlagen durchsuchen können, muss das Benutzerkonto, mit dem Sie die Configuration Manager-Konsole ausführen, über die **Lese**-Berechtigung für die Zertifikatvorlage verfügen. Geben Sie alternativ den Namen der Zertifikatvorlage ein. 
-    - **Format des Antragstellernamens**: Wählen Sie in der Liste aus, wie Configuration Manager den Antragstellernamen in der Zertifikatanforderung automatisch erstellt. Wenn das Zertifikat für einen Benutzer bestimmt ist, können Sie auch die E-Mail-Adresse des Benutzers im Antragstellernamen einschließen. Wählen Sie aus **Allgemeiner Name**, oder **Vollständiger definierter Name** aus.
-    - **Alternativer Antragstellername**: Geben Sie an, wie die Werte für den alternativen Antragstellernamen (Subject Alternative Name, SAN) in der Zertifikatanforderung von Configuration Manager automatisch erstellt werden sollen. Beispiel: Wenn Sie einen Benutzerzertifikattyp ausgewählt haben, könnten Sie in den alternativen Antragstellernamen den Benutzerprinzipalnamen (User Principal Name, UPN) aufnehmen. Wählen Sie aus:
-        - **E-Mail-Adresse** 
-        - **Benutzerprinzipalname (UPN)** 
-    - **Gültigkeitsdauer des Zertifikats** - 
-    - **Windows-Schlüsselspeicheranbieter** (wird nur angezeigt, wenn Sie Windows als unterstützte Plattform ausgewählt haben) - 
-        -     **In Trusted Platform Module (TPM) installieren (sofern vorhanden)**  
-        -   **In Trusted Platform Module (TPM) installieren (andernfalls Fehler)** 
-        -   **In Windows Hello for Business installieren (andernfalls Fehler)** 
-        -   **In Softwareschlüsselspeicher-Anbieter installieren** 
-4. Klicken Sie auf **Weiter**.
 
 ### <a name="finish-up"></a>Fertig stellen
 

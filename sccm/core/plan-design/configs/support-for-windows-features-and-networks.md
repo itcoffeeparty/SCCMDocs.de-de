@@ -2,7 +2,7 @@
 title: "Unterstützung für Windows-Features | Microsoft-Dokumentation"
 description: "Hier erfahren Sie, welche Windows-und Netzwerkfeatures in System Center Configuration Manager unterstützt werden."
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 3/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 086efdd180ba3de12f84cabfa6c2abca1fe57537
-ms.openlocfilehash: 3315098f271a5b365914772943094c33f63f25c4
+ms.sourcegitcommit: 3eb48942c1259d2aa1b3c200fad73b39b11c0b8c
+ms.openlocfilehash: 39361102d77441488bf61c9cbbfb0086774e0c09
+ms.lasthandoff: 03/30/2017
 
 
 ---
@@ -29,28 +30,30 @@ ms.openlocfilehash: 3315098f271a5b365914772943094c33f63f25c4
 In diesem Thema wird beschrieben, welche allgemeinen Windows- und Netzwerkfeatures von System Center Configuration Manager unterstützt werden.  
 
 
-##  <a name="a-namebkmkbranchcachea-branchcache"></a><a name="bkmk_branchcache"></a> BranchCache  
-Windows BranchCache ist in Configuration Manager integriert. Sie können die BranchCache-Einstellungen bei einem Bereitstellungstyp für Anwendungen, bei der Bereitstellung für ein Paket und für Tasksequenzen konfigurieren.  
+##  <a name="bkmk_branchcache"></a> BranchCache  
+Sie können Windows BranchCache mit Configuration Manager verwenden, wenn Sie BranchCache auf Verteilungspunkten aktivieren und Clients zum Verwenden von BranchCache im Modus „Verteilter Cache“ konfigurieren.
 
-Wenn alle Voraussetzungen für BranchCache erfüllt sind, können mithilfe dieser Funktion Inhalte von lokalen Clients abgerufen werden, auf denen die Inhalte zwischengespeichert sind.  
+Sie können die BranchCache-Einstellungen bei einem Bereitstellungstyp für Anwendungen, bei der Bereitstellung für ein Paket und für Tasksequenzen konfigurieren.  
+
+Wenn die Voraussetzungen für BranchCache erfüllt sind, können mithilfe dieser Funktion Inhalte von lokalen Clients abgerufen werden, auf denen die Inhalte zwischengespeichert sind.  
 
 Beispiel: Wenn der erste Clientcomputer mit aktivierter BranchCache-Funktion Inhalt von einem Verteilungspunkt anfordert, der als BranchCache-Server konfiguriert ist, lädt der Clientcomputer den Inhalt herunter und speichert ihn im Cache zwischen. Dieser Inhalt wird dann für Clients in dem Subnetz verfügbar, das den Inhalt auch angefordert hat.
 
 Diese Clients führen auch eine Zwischenspeicherung des Inhalts durch. Auf diese Weise muss der Inhalt von Clients im gleichen Subnetz später nicht erneut vom Verteilungspunkt heruntergeladen werden, und der Inhalt ist bei späteren Übertragungen über mehrere Clients verteilt.  
 
-**Gehen Sie wie folgt vor, um BranchCache mit Configuration Manager zu unterstützen:**  
+**Anforderungen, um BranchCache mit Configuration Manager zu unterstützen:**  
+-   **Konfigurieren von Verteilungspunkten:**  
+    Fügen Sie das Feature **Windows BranchCache** dem Standortsystemserver hinzu, der als Verteilungspunkt konfiguriert ist.    
 
--   Fügen Sie das Feature **Windows BranchCache** dem Standortsystemserver hinzu, der als Verteilungspunkt konfiguriert ist.  
-
-    -   Für Verteilungspunkte auf Servern, die für die Unterstützung von BranchCache konfiguriert sind, ist keine zusätzliche Konfiguration erforderlich.  
-
+    -   Für Verteilungspunkte auf Servern, die für die Unterstützung von BranchCache konfiguriert sind, ist keine zusätzliche Konfiguration erforderlich.   
     -   Sie können Windows BranchCache nicht einem cloudbasierten Verteilungspunkt hinzufügen, aber cloudbasierte Verteilungspunkte unterstützen das Herunterladen von Inhalten durch Clients, die für Windows BranchCache konfiguriert sind.  
 
-**So ermöglichen Sie Clients das Verwenden von BranchCache**  
+-   **Konfigurieren von Clients:**    
+    -   Die Clients, die BranchCache unterstützen können, müssen für den BranchCache-Modus „Verteilter Cache“ konfiguriert werden.  
+    -   Die Betriebssystemeinstellung für BITS-Clienteinstellungen muss zur Unterstützung von BranchCache aktiviert sein.   <br /> <br />
+        
+    Hinweise, wie Sie Clients zur Unterstützung von BranchCache konfigurieren können, finden Sie im Abschnitt [Configure clients (Konfigurieren von Clients)](https://technet.microsoft.com/itpro/windows/manage/waas-branchcache#configure-clients-for-branchcache) unter [Configure BranchCache for Windows 10 updates (Konfigurieren von BranchCache für Windows 10-Updates)](https://technet.microsoft.com/itpro/windows/manage/waas-branchcache).
 
--   Die Clients, die BranchCache unterstützen können, müssen für den verteilten BranchCache-Modus konfiguriert werden.  
-
--   Die Betriebssystemeinstellung für BITS-Clienteinstellungen muss zur Unterstützung von BranchCache aktiviert sein.  
 
 **Configuration Manager unterstützt die folgenden Clientbetriebssysteme mit Windows BranchCache:**  
 
@@ -67,7 +70,7 @@ Diese Clients führen auch eine Zwischenspeicherung des Inhalts durch. Auf diese
 
  Weitere Informationen zu BranchCache finden Sie unter [BranchCache für Windows](http://go.microsoft.com/fwlink/p/?LinkId=177945) in der Dokumentation zu Windows Server.  
 
-##  <a name="a-namebkmkworkgroupsa-computers-in-workgroups"></a><a name="bkmk_Workgroups"></a> Computer in Arbeitsgruppen  
+##  <a name="bkmk_Workgroups"></a> Computer in Arbeitsgruppen  
 Configuration Manager stellt Unterstützung für Clients in Arbeitsgruppen bereit.  
 
 -   Configuration Manager unterstützt das Verschieben eines Clients aus einer Arbeitsgruppe in eine Domäne bzw. aus einer Domäne in eine Arbeitsgruppe. Weitere Informationen finden Sie im Abschnitt [How to Install Configuration Manager Clients on Workgroup Computers (Installieren von Configuration Manager-Clients auf Arbeitsgruppencomputern)](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientWorkgroup) im Thema [How to deploy clients to Windows computers in System Center Configuration Manager (Bereitstellen von Clients für Windows-Computer in System Center Configuration Manager)](../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
@@ -76,7 +79,7 @@ Configuration Manager stellt Unterstützung für Clients in Arbeitsgruppen berei
 >  Obwohl Clients in Arbeitsgruppen unterstützt werden, müssen alle Standortsysteme Mitglieder einer unterstützten Active Directory-Domäne sein.  
 
 
-##  <a name="a-namebkmmkdatadedupa-data-deduplication"></a><a name="bkmmk_datadedup"></a> Datendeduplizierung  
+##  <a name="bkmmk_datadedup"></a> Datendeduplizierung  
 Configuration Manager unterstützt die Verwendung der Datendeduplizierung mit Verteilungspunkten unter den folgenden Betriebssystemen:  
 
 -   Windows Server 2012 R2  
@@ -88,7 +91,7 @@ Configuration Manager unterstützt die Verwendung der Datendeduplizierung mit Ve
 
 Weitere Informationen finden Sie unter [Configuration Manager-Verteilungspunkte und Windows Server 2012-Datendeduplizierung](http://blogs.technet.com/b/configmgrteam/archive/2014/02/18/configuration-manager-distribution-points-and-windows-server-2012-data-deduplication.aspx) im Configuration Manager-Teamblog und unter [Datendeduplizierung: Übersicht](http://technet.microsoft.com/library/hh831602.aspx) in der TechNet-Bibliothek für Windows Server.  
 
-##  <a name="a-namebkmkdaa-directaccess"></a><a name="bkmk_DA"></a> DirectAccess  
+##  <a name="bkmk_DA"></a> DirectAccess  
 Configuration Manager unterstützt das DirectAccess-Feature in Windows Server 2008 R2 für die Kommunikation zwischen Clients und Servern des Standortsystems.  
 
 -   Wenn alle Voraussetzungen für DirectAccess erfüllt sind, ermöglicht DirectAccess Configuration Manager-Clients, im Internet so mit ihrem zugewiesenen Standort zu kommunizieren, als befänden sie sich im Intranet.  
@@ -103,13 +106,13 @@ Configuration Manager bietet keine DirectAccess-Unterstützung für folgende Akt
 
 -   Kommunikation zwischen Configuration Manager-Standortsystemservern innerhalb eines Standorts  
 
-##  <a name="a-namebkmkdualboota-dual-boot-computers"></a><a name="bkmk_dualboot"></a> Dual-Boot-Computer  
+##  <a name="bkmk_dualboot"></a> Dual-Boot-Computer  
  Configuration Manager kann nur jeweils ein Betriebssystem pro Computer verwalten. Wenn auf einem zu verwaltenden Computer mehr als ein Betriebssystem installiert ist, müssen Sie die Ermittlungs- und Installationsmethoden so anpassen, dass der Configuration Manager-Client nur unter dem zu verwaltenden Betriebssystem installiert wird.  
 
-##  <a name="a-namebkmkipv6a-internet-protocol-version-6"></a><a name="bkmk_IPv6"></a> Internet Protocol, Version 6  
+##  <a name="bkmk_IPv6"></a> Internet Protocol, Version 6  
  Configuration Manager unterstützt sowohl Internetprotokoll Version 4 (IPv4) als auch Internetprotokoll Version 6 (IPv6). Dabei gelten folgende Ausnahmen:  
 
-|Funktion|Ausnahmen bei der IPv6-Unterstützung|  
+|Funktion| Ausnahmen bei der IPv6-Unterstützung|  
 |--------------|-------------------------------|  
 |Cloudbasierte Verteilungspunkte|IPv4 ist erforderlich, um Microsoft Azure- und cloudbasierte Verteilungspunkte zu unterstützen.|  
 |Mobilgeräte, die von Microsoft Intune und dem Microsoft-Dienstconnector registriert werden|IPv4 ist für die Unterstützung mobiler Geräte erforderlich, die von Microsoft Intune und dem Microsoft-Dienstconnector registriert werden.|  
@@ -118,10 +121,10 @@ Configuration Manager bietet keine DirectAccess-Unterstützung für folgende Akt
 |Aktivierungsproxykommunikation|IPv4 ist für die Unterstützung von Aktivierungsproxypaketen auf dem Client erforderlich.|  
 |Windows CE|IPv4 ist für die Unterstützung des Configuration Manager-Clients auf Windows CE-Geräten erforderlich.|  
 
-##  <a name="a-namebkmknata-network-address-translation"></a><a name="bkmk_NAT"></a> Netzwerkadressübersetzung (Netzwerkadressübersetzung (Network Address Translation, NAT), NAT)  
+##  <a name="bkmk_NAT"></a> Netzwerkadressübersetzung (Netzwerkadressübersetzung (Network Address Translation, NAT), NAT)  
  Die Netzwerkadressenübersetzung wird in Configuration Manager nicht unterstützt, es sei denn, der Standort unterstützt Clients aus dem Internet und der Client erkennt, dass er mit dem Internet verbunden ist. Weitere Informationen zur internetbasierten Clientverwaltung finden Sie unter [Planen der Verwaltung internetbasierter Clients in System Center Configuration Manager](../../../core/clients/deploy/plan/plan-for-managing-internet-based-clients.md).  
 
-##  <a name="a-namebkmkstoragea-specialized-storage-technology"></a><a name="bkmk_storage"></a> Spezielle Speichertechnologien  
+##  <a name="bkmk_storage"></a> Spezielle Speichertechnologien  
  Configuration Manager ist für die Hardware ausgelegt, die auf der Windows-Hardwarekompatibilitätsliste für die unterstützte Version des Betriebssystems zertifiziert ist, auf dem die Configuration Manager-Komponente installiert ist.
 
 Für Standortserverrollen ist das NTFS-Dateisystem erforderlich, damit Verzeichnis- und Dateiberechtigungen festgelegt werden können. Da der Besitz des logischen Laufwerks vollständig von Configuration Manager beansprucht wird, ist die gemeinsame Nutzung einer logischen Partition durch Standortsysteme auf separaten Computern mit beliebiger Speichertechnologie nicht möglich. Allerdings kann von jedem Computer eine separate logische Partition auf der gleichen physischen Partition eines gemeinsam genutzten Speichergeräts verwendet werden.  
@@ -135,9 +138,4 @@ Für Standortserverrollen ist das NTFS-Dateisystem erforderlich, damit Verzeichn
      Darüber hinaus wird der Configuration Manager-Clientcache auf einem SIS-fähigen Volume nicht unterstützt.  
 
 -   **Laufwerk mit Wechselmedien**: Die Installation von Configuration Manager-Standortsystemen oder -Clients auf einem Laufwerk mit Wechselmedien wird von Configuration Manager nicht unterstützt.  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

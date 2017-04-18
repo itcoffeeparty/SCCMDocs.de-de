@@ -2,7 +2,7 @@
 title: Empfohlene Hardware | Microsoft-Dokumentation
 description: "Hier finden Sie Informationen über empfohlene Hardware, mit deren Hilfe Sie Ihre System Center Configuration Manager-Umgebung über eine einfache Bereitstellung hinaus skalieren können."
 ms.custom: na
-ms.date: 2/28/2017
+ms.date: 3/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 63ee782a718cf4a66ffe25b022aa317f3e45784c
-ms.openlocfilehash: 6701d5f21e8511ec9cf4fe7bc5804b3e2fdc4c71
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: 8d3791bcf737e63308155787ed23c9cc84e7e99c
+ms.openlocfilehash: fd9f5b25a1e40b5f0df823dcbe9c13a77c534c59
+ms.lasthandoff: 03/31/2017
 
 
 ---
@@ -168,14 +168,12 @@ Verwenden Sie zur Leistungsoptimierung RAID 10-Konfigurationen für alle Datenla
 
  **Unterstützung für PowerShell:**  
 
- Wenn Sie PowerShell-Unterstützung auf einem Computer installieren, auf dem die Configuration Manager-Konsole ausgeführt wird, können Sie PowerShell-Cmdlets auf diesem Computer ausführen, um Configuration Manager zu verwalten. Die folgenden Mindestversionen werden unterstützt:  
+ Wenn Sie PowerShell-Unterstützung auf einem Computer installieren, auf dem die Configuration Manager-Konsole ausgeführt wird, können Sie PowerShell-Cmdlets auf diesem Computer ausführen, um Configuration Manager zu verwalten.
 
--   PowerShell 3.0  
+ - PowerShell 3.0 oder höher wird unterstützt.
 
--   PowerShell 4.0  
+Zusätzlich zu PowerShell wird die Windows Management Framework-Version (WMF) 3.0 unterstützt.   
 
-Zusätzlich zu PowerShell werden Windows Management Framework (WMF) 3.0 und 4.0 unterstützt.   
-Sie können PowerShell vor oder nach Installation der Configuration Manager-Konsole installieren.  
 
 ##  <a name="bkmk_ScaleLab"></a> Laborbereitstellungen  
  Verwenden Sie die folgenden Hardwaremindestempfehlungen für Labor- und Testbereitstellungen von Configuration Manager. Diese Empfehlungen gelten für alle Standorttypen mit bis zu 100 Clients:  
