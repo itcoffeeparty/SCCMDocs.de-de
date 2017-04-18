@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 caps.latest.revision: 15
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: a1fc9f2db7c9c2b40d986bb39a0b27d6cc699987
@@ -167,7 +167,7 @@ Beispiel: `ccmsetup.exe /downloadtimeout:100`
 
 ### <a name="usepkicert"></a>/UsePKICert
 
- Wenn diese Option angegeben ist, verwendet der Client ein PKI-Zertifikat mit Clientauthentifizierung, sofern vorhanden. Wenn kein gültiges Zertifikat gefunden werden kann, verwendet der Client eine HTTP-Verbindung und ein selbstsigniertes Zertifikat. Der Client zeigt dieses Verhalten auch, wenn Sie diese Eigenschaft nicht verwenden. 
+ Wenn diese Option angegeben ist, verwendet der Client ein PKI-Zertifikat mit Clientauthentifizierung, sofern vorhanden. Wenn kein gültiges Zertifikat gefunden werden kann, verwendet der Client eine HTTP-Verbindung und ein selbstsigniertes Zertifikat. Der Client zeigt dieses Verhalten auch, wenn Sie diese Eigenschaft nicht verwenden.
 
 > [!NOTE]  
 >  In einigen Szenarios müssen Sie diese Eigenschaft nicht angeben, wenn Sie einen Client installieren und dennoch ein Clientzertifikat verwenden. Dazu gehören die Installation eines Clients mithilfe von Clientpushinstallation sowie die Installation eines Clients mithilfe eines Softwareupdatepunkts. Sie müssen diese Eigenschaft jedoch immer angeben, wenn Sie einen Client manuell installieren und die Eigenschaft **/mp** verwenden, um einen Verwaltungspunkt anzugeben, der ausschließlich für Clientverbindungen über HTTPS konfiguriert ist. Dies gilt auch beim Installieren eines Clients mit dem Kommunikationsstatus Nur Internet mithilfe der Eigenschaft CCMALWAYSINF=1 (zusammen mit den Eigenschaften des internetbasierten Verwaltungspunkts sowie dem Standortcode). Weitere Informationen zur internetbasierten Clientverwaltung finden Sie unter [Überlegungen zur Clientkommunikation aus dem Internet oder aus einer nicht vertrauenswürdigen Gesamtstruktur](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in [Datenübertragungen zwischen Endpunkten in System Center Configuration Manager](../../plan-design/hierarchy/communications-between-endpoints.md).  
@@ -186,9 +186,9 @@ Beispiel: `ccmsetup.exe /downloadtimeout:100`
 
 ### <a name="configltconfiguration-file"></a>/config:&lt;Konfigurationsdatei\>
 
-Gibt den Namen der Textdatei mit den Clientinstallationseigenschaften an. 
+Gibt den Namen der Textdatei mit den Clientinstallationseigenschaften an.
 
-- Wenn Sie die CCMSetup-Eigenschaft **/noservice** nicht angeben, muss diese Datei im Ordner „CCMSetup“ abgelegt sein, d.h. bei 32-Bit- und 64-Bit-Betriebssystemen unter „%Windir%\\Ccmsetup“. 
+- Wenn Sie die CCMSetup-Eigenschaft **/noservice** nicht angeben, muss diese Datei im Ordner „CCMSetup“ abgelegt sein, d.h. bei 32-Bit- und 64-Bit-Betriebssystemen unter „%Windir%\\Ccmsetup“.
 - Wenn Sie die Eigenschaft **/noservice** angeben, muss sich diese Datei in dem Ordner befinden, von dem aus Sie "CCMSetup.exe" ausführen.  
 
 Beispiel: `CCMSetup.exe /config:&lt;Configuration File Name.txt\>`  
@@ -200,7 +200,7 @@ Beispiel für einen Abschnitteintrag [Client Install]: `Install=INSTALL=ALL SMSS
 ### <a name="skipprereqltfilename"></a>/skipprereq:&lt;Dateiname\>
 
  Hiermit wird angegeben, dass das angegebene erforderliche Programm von „CCMSetup.exe“ nicht installiert werden darf, wenn der Configuration Manager-Client installiert wird. Diese Eigenschaft unterstützt die Eingabe mehrerer Werte. Verwenden Sie zum Trennen der Werte jeweils ein Semikolon (;).  
- 
+
 
  Beispiele: `CCMSetup.exe /skipprereq:silverlight.exe` oder `CCMSetup.exe /skipprereq:dotnetfx40_client_x86_x64.exe;Silverlight.exe`  
 

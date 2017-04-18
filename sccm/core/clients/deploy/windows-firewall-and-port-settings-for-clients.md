@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: dce4b640-c92f-401a-9873-ce9aa9262014
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
@@ -31,7 +31,7 @@ Für Clientcomputer in System Center Configuration Manager, auf denen die Window
 
  In den folgenden Abschnitten werden diese Verwaltungsfunktionen und die Konfiguration der erforderlichen Ausnahmen in der Windows-Firewall beschrieben.  
 
-##  <a name="a-namebkmkmodifyingwindowsfirewalla-modifying-the-ports-and-programs-permitted-by-windows-firewall"></a><a name="BKMK_ModifyingWindowsFirewall"></a> Ändern der von der Windows-Firewall zugelassenen Ports und Programme  
+##  <a name="BKMK_ModifyingWindowsFirewall"></a> Ändern der von der Windows-Firewall zugelassenen Ports und Programme  
  Gehen Sie wie folgt vor, um die Ports und Programme in der Windows-Firewall für den Configuration Manager-Client zu ändern.  
 
 #### <a name="to-modify-the-ports-and-programs-permitted-by-windows-firewall"></a>So ändern Sie die von der Windows-Firewall zugelassenen Ports und Programme  
