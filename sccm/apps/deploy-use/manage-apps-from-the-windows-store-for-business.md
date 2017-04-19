@@ -41,7 +41,7 @@ Configuration Manager unterstützt die Verwaltung von Apps aus dem Windows Store
 > Um diese Funktion verwenden zu können, muss auf den Windows 10-Geräten das Release vom November 2015 (1511) oder höher ausgeführt werden.
 
 
-|Funktion|Offline-Apps|Offline-Apps|
+|Funktion|Offline-Apps|Online-Apps|
 |------------|------------|------------|
 |Synchronisieren von App-Daten mit Configuration Manager<br>(Synchronisierung erfolgt alle 24 Stunden)|Ja|Ja|
 |Erstellen von Configuration Manager-Anwendungen aus Store-Apps|Ja|Ja|
