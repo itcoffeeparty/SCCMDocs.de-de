@@ -16,9 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 88a72259bca79f2fa985e86cb57ec7a974bad24d
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: d7b13f3dea5a3ae413ca6b8150ec24e1632a4d4d
+ms.openlocfilehash: e63b639836bc38a030a051e80db4b057ab75a0b0
+ms.lasthandoff: 04/12/2017
 
 
 ---
@@ -74,7 +74,7 @@ Verwenden Sie die Tasksequenzen in System Center Configuration Manager, um für 
 
 
 ## <a name="configure-pre-cache-content"></a>Konfigurieren des zwischengespeicherten Inhalts
-Ab der Version 1702 können Sie für verfügbare Bereitstellungen und Tasksequenzen die Zwischenspeicherungsfunktion verwenden, damit Clients nur relevante Inhalte herunterladen, bevor ein Benutzer den Inhalt installiert.
+Ab Version 1702 können Sie für verfügbare Bereitstellungen von Tasksequenzen die Zwischenspeicherungsfunktion verwenden, damit Clients nur relevante Inhalte herunterladen, bevor ein Benutzer den Inhalt installiert.
 > [!TIP]  
 > Seit der Version 1702 ist das Zwischenspeichern eine vorab veröffentlichtes Funktion. Wie Sie es aktivieren, erfahren Sie unter [Use pre-release features from updates (Verwenden von vorab veröffentlichten Features von Updates)](/sccm/core/servers/manage/pre-release-features).
 

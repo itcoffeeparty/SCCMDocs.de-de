@@ -2,7 +2,7 @@
 title: Erstellen von vorab bereitgestellten Medien mit System Center Configuration Manager | Microsoft-Dokumentation
 description: Erstellen Sie zur Vereinfachung der Bereitstellung von Windows in verschiedenen Szenarios in System Center Configuration Manager vorab bereitgestellte Medien.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: 56cfc5837adf986e5d2bf4a73ef9de3b1f60b4f9
+ms.sourcegitcommit: ae9488a34c6b1e04397c4875de4b3bc607f7116c
+ms.openlocfilehash: 33abf3853d912d423e427db4d35fb4a16167164e
+ms.lasthandoff: 04/11/2017
 
 
 ---
@@ -36,18 +37,18 @@ Vorab bereitgestellte Medien enthalten das Startabbild, mit dem der Zielcomputer
 
  Wenn der Computer nach der Anwendung der vorab bereitgestellte Medien zum ersten Mal gestartet wird, wird er mit Windows PE gestartet und stellt eine Verbindung zu einem Verwaltungspunkt her. Dort wird nach der Tasksequenz gesucht, mit der Vorgang der Bereitstellung des Betriebssystems abgeschlossen wird. Sie können Anwendungen, Pakete und Treiberpakete als Teil der vorab bereitgestellten Medien angeben. Beim Bereitstellen einer Tasksequenz mit Verwendung von vorab bereitgestellten Medien wird der lokale Tasksequenzcache vom Assistenten zuerst auf gültige Inhalte geprüft. Falls keine Inhalte gefunden werden oder falls diese geändert wurden, werden die Inhalte vom Assistenten vom Verteilungspunkt heruntergeladen.  
 
-##  <a name="a-namebkmkcreateprestagedmediaa-how-to-create-prestaged-media"></a><a name="BKMK_CreatePrestagedMedia"></a> Erstellen vorab bereitgestellter Medien  
+##  <a name="BKMK_CreatePrestagedMedia"></a> Erstellen vorab bereitgestellter Medien  
  Bevor Sie vorab bereitgestellte Medien mithilfe des Assistenten zum Erstellen von Tasksequenzmedien erstellen, achten Sie darauf, dass alle folgenden  Bedingungen erfüllt sind:  
 
 |Aufgabe|Beschreibung|  
 |----------|-----------------|  
 |Startabbild|Beachten Sie die folgenden Informationen zum Startabbild, das Sie in der Tasksequenz zum Bereitstellen des Betriebssystems verwenden:<br /><br /> - Die Architektur des Startimages muss für die Architektur des Zielcomputers geeignet sein. Beispielsweise kann ein x86- oder x64-Startabbild von einem x64-Zielcomputer gestartet und ausgeführt werden. Bei einem x86-Zielcomputer sind jedoch nur der Start und die Ausführung eines x86-Startabbilds möglich.<br />- Achten Sie darauf, dass das Startimage die zur Bereitstellung des Zielcomputers erforderlichen Netzwerk- und Massenspeichertreiber enthält.|  
 |Erstellen einer Tasksequenz zum Bereitstellen eines Betriebssystems|Als Teil der vorab bereitgestellten Medien müssen Sie die Tasksequenz zum Bereitstellen des Betriebssystems angeben.<br /><br /> - Die Schritte zum Erstellen einer neuen Tasksequenz finden Sie unter [Erstellen einer Tasksequenz zum Installieren eines Betriebssystems in System Center Configuration Manager](../../osd/deploy-use/create-a-task-sequence-to-install-an-operating-system.md).<br />- Weitere Informationen zu Tasksequenzen finden Sie unter [Manage task sequences to automate tasks (Verwalten von Tasksequenzen)](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md).|  
-|Verteilen aller der Tasksequenz zugeordneten Inhalte|Sie müssen alle für die Tasksequenz erforderlichen Inhalte auf mindestens einen Verteilungspunkt verteilen. Dies schließt das Startabbild, Betriebssystemabbild und andere zugehörige Dateien ein. Die Informationen werden vom Assistenten beim Erstellen des eigenständigen Mediums vom Verteilungspunkt abgerufen. Sie benötigen ** ** Lesezugriffsrechte für die Inhaltsbibliothek an diesem Verteilungspunkt.  Weitere Informationen finden Sie unter [About the content library (Informationen zur Inhaltsbibliothek)](../../core/plan-design/hierarchy/the-content-library.md).|  
+|Verteilen aller der Tasksequenz zugeordneten Inhalte|Sie müssen alle für die Tasksequenz erforderlichen Inhalte auf mindestens einen Verteilungspunkt verteilen. Dies schließt das Startabbild, Betriebssystemabbild und andere zugehörige Dateien ein. Die Informationen werden vom Assistenten beim Erstellen des eigenständigen Mediums vom Verteilungspunkt abgerufen. Sie benötigen **** Lesezugriffsrechte für die Inhaltsbibliothek an diesem Verteilungspunkt.  Weitere Informationen finden Sie unter [About the content library (Informationen zur Inhaltsbibliothek)](../../core/plan-design/hierarchy/the-content-library.md).|  
 |Festplatte auf dem Zielcomputer|Die Festplatte des Zielcomputers muss formatiert werden, bevor das vorab bereitgestellte Medium auf der Festplatte des Computers bereitgestellt wird. Wenn die Festplatte bei der Anwendung des Mediums nicht formatiert ist und von der Tasksequenz zur Betriebssystembereitstellung versucht wird, den Zielcomputer zu starten, tritt in der Tasksequenz ein Fehler auf.|  
 
 > [!NOTE]  
->  Vom Assistenten zum Erstellen von Tasksequenzvariablen wird die folgende medienbezogene Bedingung für Tasksequenzvariablen festgelegt: **_SMSTSMedia = OEMMedia**. Sie können diese Bedingung in der Tasksequenz verwenden.  
+>  Der Assistent zum Erstellen von Tasksequenzvariablen legt die folgende medienbezogene Bedingung für Tasksequenzvariablen fest: **_SMSTSMediaType = OEMMedia**. Sie können diese Bedingung in der Tasksequenz verwenden.  
 
  Gehen Sie wie folgt vor, um vorab bereitgestellte Medien zu erstellen.  
 
@@ -143,9 +144,4 @@ Vorab bereitgestellte Medien enthalten das Startabbild, mit dem der Zielcomputer
 
 ## <a name="next-steps"></a>Nächste Schritte
 [Szenarien für die Bereitstellung von Unternehmensbetriebssystemen](scenarios-to-deploy-enterprise-operating-systems.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

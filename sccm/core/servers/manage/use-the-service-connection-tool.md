@@ -2,7 +2,7 @@
 title: Dienstverbindungstools | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über das Dienstverbindungstool, mit dem Sie eine Verbindung mit dem Configuration Manager-Clouddienst herstellen können, um manuell Nutzungsinformationen hochzuladen."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 4/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 7a9c5bb9890b00cf3485998aa46286c890429cc0
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
+ms.openlocfilehash: 0da80521bf223a765c3731f8ad59623d85a4c9fa
+ms.lasthandoff: 04/08/2017
 
 
 ---
@@ -26,9 +26,9 @@ ms.lasthandoff: 03/27/2017
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Verwenden Sie das **Dienstverbindungstool** , wenn Ihre Configuration Manager-Standortsystemserver nicht mit dem Internet verbunden sind, Sie aber weiterhin mit aktuellen Configuration Manager-Updates versorgt werden möchten.  
+Verwenden Sie das **Dienstverbindungstool**, wenn sich Ihr Dienstverbindungspunkt im Offline-Modus befindet, oder wenn Ihre Standortsystemserver von Configuration Manager nicht mit dem Internet verbunden sind. Mit diesem Tool ist Ihr Standort immer auf dem neuesten Stand was Configuration Manager-Updates angeht.  
 
- Mit dem Tool können Sie eine Verbindung mit dem Configuration Manager-Clouddienst herstellen, um manuell Nutzungsinformationen für Ihre Hierarchie hochzuladen und Updates herunterzuladen. Das Hochladen der Nutzungsdaten ist erforderlich, damit der Clouddienst die richtigen Updates für Ihre Bereitstellung liefern kann.  
+Wenn Sie dieses Tool ausführen, stellt es manuell eine Verbindung mit dem Configuration Manager-Clouddienst her, um Nutzungsinformationen für Ihre Hierarchie hochzuladen und Updates herunterzuladen. Das Hochladen der Nutzungsdaten ist erforderlich, damit der Clouddienst die richtigen Updates für Ihre Bereitstellung liefern kann.  
 
 ## <a name="prerequisites-for-using-the-service-connection-tool"></a>Voraussetzungen für die Verwendung des Dienstverbindungstools
 Im Folgenden finden Sie Voraussetzungen und bekannte Probleme.
@@ -85,11 +85,11 @@ Sie müssen auch den Ordner ServiceConnectionTool mit seinem gesamten Inhalt auf
 ### <a name="overview"></a>Übersicht
 **Zur Verwendung des Dienstverbindungstools müssen Sie drei Hauptschritte ausführen:**  
 
-1.  **Vorbereiten**: In diesem Schritt werden Ihre Nutzungsdaten in einer CAB-Datei abgelegt und auf einem USB-Laufwerk (bzw. auf einem anderen angegebenen Umlagerungsort) gespeichert.  
+1.  **Vorbereiten**: Dieser Schritt muss auf dem Computer ausgeführt werden, der den Dienstverbindungspunkt hostet. Wenn das Tool ausgeführt wird, werden Ihre Nutzungsdaten in einer CAB-Datei abgelegt und auf einem USB-Laufwerk (bzw. auf einem anderen angegebenen Umlagerungsort) gespeichert.  
 
 2.  **Verbinden**: In diesem Schritt führen Sie das Tool auf einem Remotecomputer aus, der eine Verbindung mit dem Internet herstellt, um Daten hochzuladen und Updates herunterzuladen.  
 
-3.  **Importieren**: In diesem Schritt importiert der Standort Updates für Configuration Manager, damit Sie diese über die Configuration Manager-Konsole anzeigen und installieren können.  
+3.  **Importieren**: Dieser Schritt muss auf dem Computer ausgeführt werden, der den Dienstverbindungspunkt hostet. Wenn das Tool ausgeführt wird, werden die von Ihnen heruntergeladenen Updates importiert und Ihrem Standort hinzugefügt; anschließend können Sie sich diese Updates anschauen und aus der Configuration Manager-Konsole installieren.  
 
 Ab Version 1606 können Sie mehrere CAB-Dateien gleichzeitig hochladen (jede aus einer anderen Hierarchie), wenn Sie eine Verbindung mit Microsoft herstellen und einen Proxyserver sowie einen Benutzer für den Proxyserver angeben.   
 

@@ -13,9 +13,9 @@ ms.technology:
 - configmgr-sum
 ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 459ad5a428102b5e040bec2eaf2a70fc89789dff
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: d7b13f3dea5a3ae413ca6b8150ec24e1632a4d4d
+ms.openlocfilehash: fcdcbcde61402b47871d51deba32d23867a78370
+ms.lasthandoff: 04/12/2017
 
 ---
 
@@ -23,7 +23,8 @@ ms.lasthandoff: 03/27/2017
 Configuration Manager unterstützt ab Version 1702 Express-Installationsdateien für Windows 10-Updates. Wenn Sie eine unterstützte Version von Windows 10 verwenden, können Sie die Configuration Manager-Einstellungen nutzen, um nur die Änderungen zwischen dem kumulativen Update von Windows 10 des laufenden Monats und dem Updates des Vormonats herunterzuladen. Ohne Express-Installationsdateien lädt Configuration Manager die kompletten kumulativen Updates für Windows 10 (einschließlich aller Updates aus den letzten Monaten) jeden Monat herunter. Mit Expressinstallationsdateien erhalten Sie kleinere Downloads und kürzere Installationszeiten.
 
 > [!IMPORTANT]
-> Während die Einstellungen zur Unterstützung der Verwendung von Express-Installationsdateien in der Version 1702 des Configuration Manager zur Verfügung stehen, ist die Clientunterstützung des Betriebssystems in Windows 10 Version 1607 mit einem Update des Windows Update-Agent verfügbar. Dieses Update ist in den Updates vom 11. April 2017 (Patch-Dienstag) enthalten. <!--For more information about these updates, see [support article 4015217](http://support.microsoft.com/kb/4015217).--> Zukünftige Updates werden Express für kleinere Downloads nutzen. Die Expressinstallationsdateien werden von älteren Versionen von Windows und von Windows 10 Version 1607 ohne Update nicht unterstützt.
+> Während die Einstellungen zur Unterstützung der Verwendung von Express-Installationsdateien in der Version 1702 des Configuration Manager zur Verfügung stehen, ist die Clientunterstützung des Betriebssystems in Windows 10 Version 1607 mit einem Update des Windows Update-Agent verfügbar. Dieses Update ist in den Updates vom 11. April 2017 (Patch-Dienstag) enthalten. Weitere Informationen zu diesen Updates finden Sie im [Supportartikel 4015217](http://support.microsoft.com/kb/4015217). Zukünftige Updates werden Express für kleinere Downloads nutzen. Die Expressinstallationsdateien werden von älteren Versionen von Windows und von Windows 10 Version 1607 ohne Update nicht unterstützt.
+
 
 ### <a name="to-enable-the-download-of-express-installation-files-for-windows-10-updates-on-the-server"></a>So aktivieren Sie den Download von Expressinstallationsdateien für Windows 10-Updates auf dem Server
 Um mit der Synchronisierung der Metadaten für Windows 10-Expressinstallationsdatein zu beginnen, müssen Sie dies in den Punkteigenschaften des Software Updates aktivieren.

@@ -2,7 +2,7 @@
 title: Konsoleninterne Updates | Microsoft-Dokumentation
 description: "System Center Configuration Manager wird mit dem Microsoft-Clouddienst synchronisiert, um Updates abzurufen, die in der Konsole installieren werden können."
 ms.custom: na
-ms.date: 3/7/2017
+ms.date: 4/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 3b50ada9f63e41d1b6f01009c141b8f361f5180e
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
+ms.openlocfilehash: 18c199e78750eadc06b9635fa6104d36c2ac018d
+ms.lasthandoff: 04/08/2017
 
 
 ---
@@ -319,6 +319,10 @@ Wenn Sie ein Update installieren, das ein oder mehrere optionale Features enthä
 Wechseln Sie in der Konsole zu **Verwaltung** > **Updates und Wartung** > **Features**, um verfügbare Funktionen und deren Status anzuzeigen.
 
 Wenn ein Feature nicht optional ist, wird es automatisch installiert und nicht im Knoten **Features** aufgeführt.  
+
+
+Wenn Sie ein neues Features oder ein Feature der Vorabversion aktivieren, muss der Hierarchie-Manager von Configuration Manager (HMAN) die Änderung verarbeiten, bevor Sie das Feature nutzen können. Das Verarbeiten der Änderung wird oftmals direkt abgeschlossen; es kann aber bis zu 30 Minuten in Anspruch nehmen, abhängig vom Verarbeitungszyklus des HMAN. Nachdem die Änderung verarbeitet wurde, müssen Sie Ihre Konsole neu starten, bevor die zu diesem Feature gehörige UI angezeigt wird.
+
 
 ##  <a name="bkmk_prerelease"></a> Verwenden von vorab veröffentlichten Features von Updates
 Features der Vorabversion sind Funktionen, die in Current Branch enthalten sind, um sie in einem frühen Stadium in einer Produktionsumgebung zu testen. Diese Funktionen sollten nicht als produktionsbereit angesehen werden, können aber in der Produktionsumgebung verwendet werden. Weitere Informationen zu Features der Vorabversionen, einschließlich ihrer Aktivierung in Ihrer Umgebung, finden Sie unter [Features der Vorabversion](/sccm/core/servers/manage/pre-release-features).                |

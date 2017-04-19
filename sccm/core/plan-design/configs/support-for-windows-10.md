@@ -16,9 +16,9 @@ author: brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6accec2d356861b273b25ba2b6338d9684a46ff6
-ms.openlocfilehash: 188c6b1d7ae7768bb4075688d7d47607ee83be17
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 2cdd25343cf68a79067a317b820572491a3633a2
+ms.openlocfilehash: 84d6fdcec2c539f0fd3043f01d18e165da8c52c9
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="support-for-windows-10-as-a-client-of-system-center-configuration-manager"></a>Unterstützung für Windows 10 als ein Client von System Center Configuration Manager
@@ -43,8 +43,9 @@ Eine Version von Configuration Manager, deren [Support für diese Version](/sccm
 |1507 <br />(*siehe Editionen*)            |![Unterstützt](media/green_check.png) |![Unterstützt](media/green_check.png) |![Unterstützt](media/green_check.png) |
 |1511 (CB), (CBB)<br />(*siehe Editionen*) |![Unterstützt](media/green_check.png) |![Unterstützt](media/green_check.png) |![Unterstützt](media/green_check.png) |
 |Enterprise 2016 LTSB                   |![Unterstützt](media/green_check.png) |![Unterstützt](media/green_check.png) |![Unterstützt](media/green_check.png) |
-|1607 (CB)    <br />(*siehe Editionen*)      |![Abwärtskompatibel](media/blue_compat.png) |![Unterstützt](media/green_check.png) |![Unterstützt](media/green_check.png) |
-|1607 (CBB)    <br />(*siehe Editionen*)      |![Nicht unterstützt](media/Red_X.png)   |![Unterstützt](media/green_check.png) |![Unterstützt](media/green_check.png) |
+|1607 (CB)    <br />Anniversary Update<br />(*siehe Editionen*)      |![Abwärtskompatibel](media/blue_compat.png) |![Unterstützt](media/green_check.png) |![Unterstützt](media/green_check.png) |
+|1607 (CBB)    <br />Anniversary Update<br />(*siehe Editionen*)      |![Nicht unterstützt](media/Red_X.png)   |![Unterstützt](media/green_check.png) |![Unterstützt](media/green_check.png) |
+|1703 (CBB)    <br />Creators Update<br />(*siehe Editionen*)      |![Nicht unterstützt](media/Red_X.png)   |![Nicht unterstützt](media/Red_X.png) |![Abwärtskompatibel](media/blue_compat.png) |
 
 
 

@@ -2,7 +2,7 @@
 title: Das Inhaltsbibliothek-Bereinigungstool | Microsoft-Dokumentation
 description: Verwenden Sie das Inhaltsbibliothek-Bereinigungstool zum Entfernen von verwaistem Inhalt, der nicht mehr einer Bereitstellung von System Center Configuration Manager zugeordnet ist.
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 4/7/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
-ms.openlocfilehash: 718e9b9eaa2dace2c72b031c244c72ef5f7e7b2f
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
+ms.openlocfilehash: 76e6772bdd5cbd32d525e728f6ebc988b045da78
+ms.lasthandoff: 04/08/2017
 
 ---
 # <a name="the-content-library-cleanup-tool-for-system-center-configuration-manager"></a>Das Inhaltsbibliothek-Bereinigungstool in System Center Configuration Manager
@@ -58,10 +58,10 @@ Standardmäßig wird die Protokolldatei in den temporären Ordner des Benutzerko
 
 ## <a name="run-the-tool"></a>Ausführen des Tools
 So führen Sie das Tool aus:
-1. Öffnen Sie eine administrative Eingabeaufforderung zu einem Ordner, in dem sich **ContentLibraryCleanup.exe** befindet.  
+1. Öffnen Sie eine administrative Eingabeaufforderung in einen Ordner, in dem sich **ContentLibraryCleanup.exe** befindet.  
 2. Geben Sie als nächstes eine Befehlszeile mit den erforderlichen Befehlszeilen-Switches ein sowie die optionalen Switches, die Sie verwenden möchten.
 
-**Bekanntes Problem**: Wenn das Tool ausgeführt wird, kann eine Fehlermeldung wie die folgende zurückgegeben werden, wenn ein Paket oder eine Bereitstellung fehlgeschlagen oder gerade in Bearbeitung ist:
+**Bekanntes Problem** Wenn das Tool ausgeführt wird, kann eine Fehlermeldung wie die folgende zurückgegeben werden, wenn ein Paket oder eine Bereitstellung fehlgeschlagen oder gerade in Bearbeitung ist:
 -  *System.InvalidOperationException: Diese Inhaltsbibliothek kann jetzt nicht bereinigt werden, da das Paket <packageID> nicht vollständig installiert ist.*
 
 **Problemumgehung:** Keiner Das Tool kann nicht zuverlässig verwaiste Dateien identifizieren, wenn der Inhalt in Bearbeitung ist oder nicht bereitgestellt werden konnte. Aus diesem Grund kann das Tool den Inhalt nicht bereinigen, bis das Problem gelöst wurde.
@@ -74,7 +74,7 @@ Die folgenden Befehlszeilen-Switches können in jeglicher Reihenfolge verwendet 
 |**/delete**  |**Optional** </br> Verwenden Sie diesen Schalter, wenn Sie Inhalte vom Verteilungspunkt löschen möchten. Sie erhalten eine Aufforderung bevor Inhalt gelöscht wird. </br></br> Wenn dieser Schalter nicht verwendet wird, protokolliert das Tool, welcher Inhalt gelöscht werden würde, löscht aber keine Inhalte vom Verteilungspunkt. </br></br> Beispiel: ***ContentLibraryCleanup.exe /dp server1.contoso.com /delete*** |
 | **/q**       |**Optional** </br> Dieser Schalter führt das Tool in einem stillen Modus aus, der alle Eingabeaufforderungen unterdrückt (z.B. Aufforderungen zum Löschen von Inhalt), und öffnet die Protokolldatei nicht automatisch. </br></br> Beispiel: ***ContentLibraryCleanup.exe /q /dp server1.contoso.com*** |
 | **/dp &lt;distribution point FQDN>**  | **Erforderlich** </br> Geben Sie den vollständig qualifizierten Domänennamen (FQDN) des Verteilungspunkts an, den Sie bereinigen möchten. </br></br> Beispiel:  ***ContentLibraryCleanup.exe /dp server1.contoso.com***|
-| **/ps &lt;primary site FQDN>**       | **Optional** wenn Inhalt von einem Verteilungspunkt an einem primären Standort bereinigt wird.</br>**Erforderlich** wenn Inhalt von einem Verteilungspunkt an einem sekundären Standort bereinigt wird. </br></br> Geben Sie den FQDN des primären Standorts an, zu dem der Verteilungspunkt gehört, oder geben Sie den übergeordneten primären Standort an, wenn sich der Verteilungspunkt an einem sekundären Standort befindet. </br></br> Beispiel: ***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
+| **/ps &lt;primary site FQDN>**       | **Optional** wenn Inhalt von einem Verteilungspunkt an einem primären Standort bereinigt wird.</br>**Erforderlich** wenn Inhalt von einem Verteilungspunkt an einem sekundären Standort bereinigt wird. </br></br>Das Tool stellt eine Verbindung mit dem übergeordneten primären Standort her, um Abfragen von SMS_Provider auszuführen. Mit diesen Abfragen kann das Tool bestimmen, welcher Inhalt sich auf dem Verteilungspunkt befinden sollte; so kann es den Inhalt identifizieren, der verwaist ist und entfernt werden kann. Die Verbindung zum übergeordneten primären Standort muss für Verteilungspunkte an einem sekundären Standort hergestellt werden, da die erforderlichen Angaben nicht direkt am sekundären Standort zur Verfügung stehen.</br></br> Geben Sie den FQDN des primären Standorts an, zu dem der Verteilungspunkt gehört, oder geben Sie den übergeordneten primären Standort an, wenn sich der Verteilungspunkt an einem sekundären Standort befindet. </br></br> Beispiel: ***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
 | **/sc &lt;primary site code>**  | **Optional** wenn Inhalt von einem Verteilungspunkt an einem primären Standort bereinigt wird.</br>**Erforderlich** wenn Inhalt von einem Verteilungspunkt an einem sekundären Standort bereinigt wird. </br></br> Geben Sie den Standordcode des primären Standorts an, zu dem der Verteilungspunkt gehört, oder geben Sie den übergeordneten primären Standort an, wenn sich der Verteilungspunkt an einem sekundären Standort befindet.</br></br> Beispiel: ***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
 | **/Protokoll <log file directory>**       |**Optional** </br> Geben Sie den Speicherort an, in den das Tool die Protokolldatei schreibt. Dies kann auf einem lokalen Laufwerk oder auf einer Netzwerkfreigabe sein.</br></br> Wenn dieser Schalter nicht verwendet wird, wird die Protokolldatei im temporären Ordner des Benutzers auf dem Computer gespeichert, in dem das Tool ausgeführt wird.</br></br> Beispiel für ein lokales Laufwerk: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>Beispiel für ein geteiltes Netzwerk: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;share>\&lt;folder>***|
 

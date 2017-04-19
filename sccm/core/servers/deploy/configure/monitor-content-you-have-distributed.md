@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3b387d78e03cc2d1c535e52016d2de4945328f72
-ms.openlocfilehash: c51cf3b3b7563a82db40405677c2edfb6de47cf1
+ms.sourcegitcommit: d7b13f3dea5a3ae413ca6b8150ec24e1632a4d4d
+ms.openlocfilehash: 7496c8bf11d058c94bc36fd28e9557b6470b61f1
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="monitor-content-you-have-distributed-with-system-center-configuration-manager"></a>Überwachen von mit System Center Configuration Manager verteilten Inhalten
@@ -35,7 +36,7 @@ Mit der System Center Configuration Manager-Konsole können Sie unter anderem di
 > [!NOTE]  
 >  Von Configuration Manager wird nur der Inhalt auf einem Verteilungspunkt überwacht, der sich in der Inhaltsbibliothek befindet. Inhalt, der auf dem Verteilungspunkt in Paketfreigaben oder benutzerdefinierten Freigaben gespeichert ist, wird nicht überwacht.  
 
-##  <a name="a-namebkmkcontentstatusa-content-status-monitoring"></a><a name="BKMK_ContentStatus"></a> Überwachung des Inhaltsstatus  
+##  <a name="BKMK_ContentStatus"></a> Überwachung des Inhaltsstatus  
  Im Arbeitsbereich **Überwachung** finden Sie im Knoten **Inhaltsstatus** Informationen zu Inhaltspaketen. In der Configuration Manager-Konsole können Sie z.B. folgende Informationen überprüfen:  
 
 -   Den Paketnamen.  
@@ -151,12 +152,12 @@ Gehen Sie wie folgt vor, um den Status einer Verteilungspunktkonfiguration anzuz
 4.  Klicken Sie im Ergebnisbereich auf die Registerkarte **Details** . Statusinformationen zum Verteilungspunkt werden angezeigt.  
 
 ## <a name="client-data-sources-dashboard"></a>Dashboard „Clientdatenquellen“
-Ab Version 1610 können Sie auch das Dashboard **Clientdatenquellen** verwenden, um mehr über die Verwendung des [Peercaches](/sccm/core/plan-design/hierarchy/client-peer-cache) in Ihrer Umgebung zu erfahren. Dieses Dashboard ist in der Konsole nicht sichtbar, bis die Clients Inhalt unter der Verwendung von Peercache heruntergeladen haben und diese Informationen zurück an den Standort melden. Dies kann bis zu 24 Stunden dauern.
+Ab Version 1610 können Sie auch das Dashboard **Clientdatenquellen** verwenden, um mehr über die Verwendung des [Peercaches](/sccm/core/plan-design/hierarchy/client-peer-cache) in Ihrer Umgebung zu erfahren. Das Dashboard zeigt Daten an, nachdem Clients Inhalt heruntergeladen haben und diese Informationen dem Standort gemeldet wurden. Dies kann bis zu 24 Stunden dauern.
 
 > [!TIP]  
-> Peercache und das Dashboard „Clientdatenquellen“ sind vorab veröffentliche Features in Version 1610. Informationen zum Aktivieren dieser Funktionen finden Sie unter [Verwenden von vorab veröffentlichten Features von Updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
+> Peercache und das Dashboard „Clientdatenquellen“ sind vorab veröffentliche Features in Version 1610. Informationen zum Aktivieren dieser Funktionen finden Sie unter [Verwenden von vorab veröffentlichten Features von Updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease). Das Dashboard **Client Data Sources** (Clientdatenquellen) wird nur dann angezeigt, wenn Sie es aktivieren. Es kann bis zu 24 Stunde nach der Aktivierung dauern, bis Daten angezeigt werden. 
 
-Wechseln Sie in der Konsole zu **Überwachung** > **Clientstatus** > **Clientdatenquellen**. Hier können Sie einen Zeitraum auswählen, der auf das Dashboard angewendet werden soll. Anschließend können Sie in der Anzeige die Begrenzungsgruppe oder das Paket auswählen, für die bzw. das Sie Informationen anzeigen möchten. Beim Anzeigen der Informationen können Sie Ihre Maus über der Oberfläche bewegen, um weitere Details zu den verschiedenen Inhalts- oder Richtlinienquellen zu erhalten.
+Wechseln Sie in der Konsole zu **Überwachung** > **Verteilungsstatus** > **Clientdatenquellen**. Hier können Sie einen Zeitraum auswählen, der auf das Dashboard angewendet werden soll. Anschließend können Sie in der Anzeige die Begrenzungsgruppe oder das Paket auswählen, für die bzw. das Sie Informationen anzeigen möchten. Beim Anzeigen der Informationen können Sie Ihre Maus über der Oberfläche bewegen, um weitere Details zu den verschiedenen Inhalts- oder Richtlinienquellen zu erhalten.
 
 Diese Details umfassen Folgendes:  
 - **Client Content Sources** (Clientinhaltsquelle): Zeigt die Quelle an, von der Clients Inhalte beziehen.
@@ -168,9 +169,4 @@ Diese Details umfassen Folgendes:
 
 
 Sie können auch einen neuen Bericht **Clientdatenquellen – Zusammenfassung** verwenden, um eine Zusammenfassung der Clientdatenquellen für die einzelnen Begrenzungsgruppen anzuzeigen.
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

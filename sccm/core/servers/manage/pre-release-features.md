@@ -2,7 +2,7 @@
 title: "Vorab veröffentlichte Funktionen | Microsoft-Dokumentation"
 description: Features der Vorabversion in System Center Configuration Manager
 ms.custom: na
-ms.date: 3/29/2017
+ms.date: 4/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6accec2d356861b273b25ba2b6338d9684a46ff6
-ms.openlocfilehash: c1c8cf505bbc5cab1b6dfb7637eda4a87941c722
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
+ms.openlocfilehash: a7ebfea849afcaf236d7e630aad2c7f3f1807a23
+ms.lasthandoff: 04/08/2017
 
 
 ---
@@ -43,6 +43,8 @@ Wenn Sie ein Update installieren, das Features der Vorabversion enthält, sind d
   -   **Wenn Sie nicht Ihre Zustimmung gegeben haben:** Beim Installieren eines Updates sind Features der Vorabversion im Assistenten für Updates und Wartung sichtbar; sie sind jedoch deaktiviert und können nicht aktiviert werden. Nach der Installation des Updates können Sie diese Features auf dem Knoten **Features** anzeigen, diese jedoch nicht aktivieren, bis sie Ihre Zustimmung in den **Hierarchieeinstellungen** gegeben haben.
 
 Wenn Sie an einem eigenständigen primären Standort Ihre Zustimmung erteilt haben und die Hierarchie durch die Installation eines neuen Standorts der zentralen Verwaltung erweitern, müssen Sie am Standort der zentralen Verwaltung erneut Ihre Zustimmung geben.
+
+ Wenn Sie ein Feature der Vorabversion aktivieren, muss der Hierarchie-Manager von Configuration Manager (HMAN) die Änderung verarbeiten, bevor Sie das Feature nutzen können. Das Verarbeiten der Änderung wird oftmals direkt abgeschlossen; es kann aber bis zu 30 Minuten in Anspruch nehmen, abhängig vom Verarbeitungszyklus des HMAN. Nachdem die Änderung verarbeitet wurde, müssen Sie Ihre Konsole neu starten, bevor die zu diesem Feature gehörige UI angezeigt wird.
 
 **Die folgenden vorab veröffentlichten Features sind verfügbar:**
 
