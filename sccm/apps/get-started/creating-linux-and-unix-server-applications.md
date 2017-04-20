@@ -2,7 +2,7 @@
 title: Erstellen von Linux- und UNIX-Serveranwendungen | Microsoft Docs
 description: "Hier erfahren Sie, was Sie beim Erstellen und Bereitstellen von Anwendungen für Linux- und Unix-Geräte berücksichtigen müssen."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: b599a58f25a868c638b7ee00cefff80b2f71244e
-ms.openlocfilehash: f4373c888434aa6cd22e5f9b871e172cc50a7d30
+ms.sourcegitcommit: 4b9261db93c9bf72c492e3c9be5b30f81835134a
+ms.openlocfilehash: 72ebd8bd29b5ecdd817631e447291c04f49d9808
+ms.lasthandoff: 04/13/2017
 
 
 ---
@@ -145,7 +146,7 @@ In der folgenden Tabelle sind die Eigenschaften für Pakete und Programme aufgef
 
     -   **Maximale Übertragungsrate während des Einschränkungszeitfensters (KBit/s)**  
 
-    -   **Maximale Übertragungsrate während des Einschränkungszeitfensters (KBit/s)**  
+    -   **Maximale Übertragungsrate außerhalb des Einschränkungszeitfensters (KBit/s)**  
 
 Die folgende Konfiguration der intelligente Hintergrundübertragung wird nicht unterstützt und wird vom Client für Linux und UNIX ignoriert:  
 
@@ -164,9 +165,4 @@ Die folgende Konfiguration der intelligente Hintergrundübertragung wird nicht u
 
 > [!TIP]  
 >  Wenn sich die bereitzustellende Software auf einer NFS-Freigabe (NFS) befindet, auf die der Linux- oder UNIX-Server Zugriff hat, müssen Sie keinen Verteilungspunkt verwenden, um das Paket herunterzuladen. Stattdessen müssen Sie beim Erstellen des Pakets nur darauf achten, dass das Kontrollkästchen **Dieses Paket enthält Quelldateien**nicht aktiviert ist. Geben Sie dann beim Konfigurieren des Programms die Befehlszeile an, die einen direkten Zugriff auf das Paket auf dem NFS-Bereitstellungspunkt erlaubt.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
