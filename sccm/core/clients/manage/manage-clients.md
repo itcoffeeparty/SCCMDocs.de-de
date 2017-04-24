@@ -2,7 +2,7 @@
 title: Verwalten von Clients | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie Clients in System Center Configuration Manager verwalten.
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 caps.latest.revision: 17
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 19e111e0cb174f11ad08f98d2516e52c4c183d86
@@ -35,7 +35,7 @@ Wenn ein System Center Configuration Manager-Client installiert und erfolgreich 
 >   
 >  Verwenden Sie die Spalte **Client** in der Configuration Manager-Konsole, um zu bestimmen, ob der Configuration Manager-Client installiert ist, und um ihn mithilfe der Configuration Manager-Konsole verwalten zu können.  
 
-##  <a name="a-namebkmkmanagingclientsdevicesnodea-manage-clients-from-the-devices-node"></a><a name="BKMK_ManagingClients_DevicesNode"></a> Verwalten von Clients mithilfe des Knotens „Geräte“  
+##  <a name="BKMK_ManagingClients_DevicesNode"></a> Verwalten von Clients mithilfe des Knotens „Geräte“  
 
 Beachten Sie, dass je nach Gerätetyp einige dieser Optionen möglicherweise nicht verfügbar sind.  
 
@@ -153,7 +153,7 @@ Beachten Sie, dass je nach Gerätetyp einige dieser Optionen möglicherweise nic
 
          Weitere Informationen finden Sie unter [Hybride Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md).  
 
-##  <a name="a-namebkmkmanagingclientsdevicecollectionsnodea-manage-clients-from-the-device-collections-node"></a><a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> Verwalten von Clients mithilfe des Knotens „Gerätesammlungen“  
+##  <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> Verwalten von Clients mithilfe des Knotens „Gerätesammlungen“  
   Viele der Tasks, die Sie im Knoten **Geräte** für ein einzelnes Gerät oder mehrere Geräte ausführen können, können für Sammlungen ausgeführt werden. Dadurch wird der Vorgang automatisch auf für alle entsprechenden Geräte in der Sammlung angewendet. Beachten Sie, dass dadurch viele Netzwerkpakete generiert werden und die CPU-Nutzung auf dem Standortserver steigt.  
 
   Bevor Sie Clientverwaltungstasks auf Sammlungsebene ausführen, berücksichtigen Sie, wie viele Geräte in der Sammlung enthalten sind, ob die Geräte nur über Netzwerkverbindungen mit niedriger Bandbreite verbunden sind, und wie lange es dauern wird, bis der Task für alle Geräte ausgeführt ist. Nach dem Start kann der Task nicht mehr in der Konsole beendet werden.  
@@ -186,7 +186,7 @@ Beachten Sie, dass je nach Gerätetyp einige dieser Optionen möglicherweise nic
 
          Die Clientbenachrichtigungstasks werden im Arbeitsbereich **Überwachung** unter dem Knoten **Clientvorgänge** angezeigt.  
 
-##  <a name="a-namebkmkclientcachea-configure-the-client-cache-for-configuration-manager-clients"></a><a name="BKMK_ClientCache"></a> Konfigurieren des Clientcaches für Configuration Manager-Clients  
+##  <a name="BKMK_ClientCache"></a> Konfigurieren des Clientcaches für Configuration Manager-Clients  
 Der Clientcache speichert temporäre Dateien, die beim Installieren von Anwendungen und Programmen durch Clients verwendet werden. Der Clientcache kann auch von Softwareupdates verwendet werden. Softwareupdates werden jedoch nicht von der konfigurierten Cache-Größe eingeschränkt, und es wird stets ein Herunterladen in den Cache versucht. Die Einstellungen des Clientcaches, wie z.B. Größe und Speicherort, können beim manuellen Installieren des Configuration Manager-Clients, bei Verwendung der Clientpushinstallation oder nach der Installation des Clients konfiguriert werden.
 
 Ab Configuration Manager Version 1606 können Sie die Größe des Cacheordners mithilfe von Clienteinstellungen in der Configuration Manager-Konsole angeben.   
@@ -275,7 +275,7 @@ Ab Version 1606 können Sie die Größe des Clientcacheordners anpassen, ohne de
 
      Der Configuration Manager-Client wird die Größe des Caches beim nächsten Download der Clientrichtlinie mit diesen Einstellungen konfigurieren.
 
-##  <a name="a-namebkmkuninstalclienta-uninstall-the-configuration-manager-client"></a><a name="BKMK_UninstalClient"></a> Deinstallieren des Configuration Manager-Clients  
+##  <a name="BKMK_UninstalClient"></a> Deinstallieren des Configuration Manager-Clients  
  Sie können die Windows-Configuration Manager-Clientsoftware mithilfe von **CCMSetup.exe** mit der Eigenschaft **/Uninstall** von einem Computer deinstallieren. Führen Sie CCMSetup.exe auf einem einzelnen Computer über die Eingabeaufforderung aus, oder stellen Sie ein Paket und ein Programm bereit, um den Client von einer Sammlung von Computern zu deinstallieren.  
 
 > [!WARNING]  
@@ -290,7 +290,7 @@ Ab Version 1606 können Sie die Größe des Clientcacheordners anpassen, ohne de
 > [!NOTE]  
 >  Bei der Deinstallation werden keine Ergebnisse auf dem Bildschirm angezeigt. Zur Sicherstellung, dass die Clientdeinstallation erfolgreich war, überprüfen Sie die Protokolldatei **CCMSetup.log** im Ordner *%windir%\ccmsetup* auf dem Clientcomputer.  
 
-##  <a name="a-namebkmkconflictingrecordsa-manage-conflicting-records-for-configuration-manager-clients"></a><a name="BKMK_ConflictingRecords"></a> Verwalten von in Konflikt stehenden Datensätzen bei Configuration Manager-Clients  
+##  <a name="BKMK_ConflictingRecords"></a> Verwalten von in Konflikt stehenden Datensätzen bei Configuration Manager-Clients  
  Configuration Manager identifiziert mithilfe der Hardware-ID Clients, bei denen es sich um Duplikate handeln könnte. Sie werden über in Konflikt stehende Datensätze informiert. Wenn Sie z.B. einen Computer erneut installieren, bleibt die Hardware-ID unverändert, während die von Configuration Manager verwendete GUID sich ändern kann.  
 
  Wenn ein Konflikt von Configuration Manager mithilfe der Windows-Authentifizierung des Computerkontos oder mithilfe eines PKI-Zertifikats aus einer vertrauenswürdigen Quelle aufgelöst werden kann, geschieht dies automatisch. Wenn Configuration Manager den Konflikt dagegen nicht auflösen kann, wird eine Hierarchieeinstellung verwendet, um entweder beim Erkennen doppelter Hardware-IDs automatisch neue Datensätze zu erstellen (dies ist die Standardeinstellung) oder die Entscheidung über eine Zusammenführung, Sperrung oder Erstellung neuer Clientdatensätze Ihnen zu überlassen. Wenn Sie sich für das manuelle Verwalten duplizierter Datensätze entscheiden, müssen Sie die in Konflikt stehenden Datensätze in der Configuration Manager-Konsole manuell bearbeiten, um den Konflikt aufzulösen.  
@@ -326,7 +326,7 @@ Ab Configuration Manager Version 1610 können Sie eine Liste der Hardware-IDs an
 2. Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Standorte** auf **Hierarchieeinstellungen**.
 3. Wählen Sie auf der Registerkarte **Clientgenehmigung und in Konflikt stehende Datensätze** im Abschnitt **Doppelte Hardware-IDs** die Option **Hinzufügen** aus, um neue Hardware-IDs hinzuzufügen.
 
-##  <a name="a-namebkmkpolicyretrievala-initiate-policy-retrieval-for-a-configuration-manager-client"></a><a name="BKMK_PolicyRetrieval"></a> Initiieren des Richtlinienabrufs für einen Configuration Manager-Client  
+##  <a name="BKMK_PolicyRetrieval"></a> Initiieren des Richtlinienabrufs für einen Configuration Manager-Client  
  Clientrichtlinien werden von Windows-Configuration Manager-Clients nach einem als Clienteinstellung konfigurierten Zeitplan heruntergeladen. Es kann jedoch vorkommen, dass Sie Richtlinien ad hoc vom Client abrufen möchten, z.B. zur Problembehandlung oder während eines Tests.  
 
 Sie können den Richtlinienabruf auslösen:

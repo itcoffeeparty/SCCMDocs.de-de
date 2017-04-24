@@ -2,7 +2,7 @@
 title: "Automatisches Kategorisieren von Geräten in Sammlungen | Microsoft-Dokumentation"
 description: "Geräte mit System Center Configuration Manager automatisch in Sammlungen kategorisieren."
 ms.custom: na
-ms.date: 01/07/2016
+ms.date: 04/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
 ms.openlocfilehash: b1bac05e9335dd757b8f499f97daea24e0f4acbd
+ms.lasthandoff: 01/03/2017
 
 ---
 # <a name="automatically-categorize-devices-into-collections-with-system-center-configuration-manager"></a>Geräte mit System Center Configuration Manager automatisch in Sammlungen kategorisieren
@@ -55,9 +56,4 @@ Unter **Bestand und Konformität** > **Übersicht** > **Geräte** wird in der Li
 Klicken Sie mit der rechten Maustaste auf die Überschrift einer der Spalten in der Liste **Geräte** (wie **Name**), und wählen Sie dann **Gerätekategorie** aus, wenn die Spalte **Gerätekategorie** nicht angezeigt wird.
 
 Wenn Sie ein Gerät zu einer Kategorie zuweisen, und die Kategorie anschließend löschen, zeigt der Bericht **Liste der pro Benutzer in Microsoft Intune registrierten Geräte** eine GUID in der Spalte **Gerätekategorie** statt eines Kategorienamens an.
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

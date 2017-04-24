@@ -2,7 +2,7 @@
 title: Zuweisen von Clients zu einem Standort | Microsoft-Dokumentation
 description: Zuweisen von Clients zu einem Standort in System Center Configuration Manager.
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: ba9b623f-6e86-4006-93f2-83d563de0cd0
 caps.latest.revision: 10
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 08afca8b422474639cbdb860e555fe0da27361a4
@@ -56,7 +56,7 @@ Tritt bei der Zuweisung des Clients ein Fehler auf, bleibt die Clientsoftware we
 > [!NOTE]  
 >  Wird ein Clientcomputer manuell einem nicht vorhandenen Configuration Manager-Standortcode zugewiesen, tritt bei der Standortzuweisung ein Fehler auf.   
 
-##  <a name="a-namebkmkautomaticassignmenta-using-automatic-site-assignment-for-computers"></a><a name="BKMK_AutomaticAssignment"></a> Verwenden der automatischen Standortzuweisung für Computer  
+##  <a name="BKMK_AutomaticAssignment"></a> Verwenden der automatischen Standortzuweisung für Computer  
  Die automatische Standortzuweisung kann im Rahmen der Clientbereitstellung stattfinden oder, indem Sie in der Systemsteuerung in **Configuration Manager-Eigenschaften** auf der Registerkarte **Erweitert** auf **Standortsuche** klicken. Der Netzwerkpfad des Configuration Manager-Clients wird mit den in der Configuration Manager-Hierarchie konfigurierten Grenzen verglichen. Fällt der Netzwerkpfad des Clients in eine Begrenzungsgruppe, die für die Standortzuweisung aktiviert ist, oder ist die Hierarchie für einen Fallbackstandort konfiguriert, dann wird der Client automatisch diesem Standort zugewiesen, ohne dass Sie einen Standortcode angeben müssen.  
 
  Sie können Grenzen über die folgenden Elemente konfigurieren:  

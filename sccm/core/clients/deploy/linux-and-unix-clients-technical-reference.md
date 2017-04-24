@@ -2,7 +2,7 @@
 title: UNIX- und Linux-Clientkomponentendienste und -befehle | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über Komponentendienste und -befehle auf Linux- und UNIX-Clients in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

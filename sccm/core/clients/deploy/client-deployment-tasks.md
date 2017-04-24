@@ -2,7 +2,7 @@
 title: "Clientbereitstellungstasks für System Center Configuration Manager | Microsoft-Dokumentation"
 description: Erfahren Sie, wie Sie Clients in System Center Configuration Manager bereitstellen und konfigurieren.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

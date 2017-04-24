@@ -2,7 +2,7 @@
 title: Planen der Clientbereitstellung auf Linux- und UNIX-Computern | Microsoft-Dokumentation
 description: Planen Sie die Clientbereitstellung auf Linux- und UNIX-Computern in System Center Configuration Manager.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: 44153689-70e8-42ad-9ae8-17ae35f6a2e3
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
@@ -47,10 +47,10 @@ Sie können den System Center Configuration Manager-Client auf Computern install
 
  Verwenden Sie die Informationen in diesem Artikel, die Ihnen beim Planen der Bereitstellung des Configuration Manager-Clients für Linux und UNIX helfen.  
 
-##  <a name="a-namebkmkclientdeployprereqforlnua-prerequisites-for-client-deployment-to-linux-and-unix-servers"></a><a name="BKMK_ClientDeployPrereqforLnU"></a> Erforderliche Komponenten für die Clientbereitstellung für Linux- und UNIX-Server  
+##  <a name="BKMK_ClientDeployPrereqforLnU"></a> Erforderliche Komponenten für die Clientbereitstellung für Linux- und UNIX-Server  
  Verwenden Sie die folgende Informationen bestimmen, ob die erforderlichen Komponenten, die direkt auf erfolgreich sein müssen, den Client für Linux und UNIX installieren.  
 
-###  <a name="a-namebkmkclientdeployexternalforlnua-dependencies-external-to-configuration-manager"></a><a name="BKMK_ClientDeployExternalforLnU"></a> Externe Abhängigkeiten von Configuration Manager  
+###  <a name="BKMK_ClientDeployExternalforLnU"></a> Externe Abhängigkeiten von Configuration Manager  
  In der folgenden Tabelle werden die erforderlichen UNIX- und Linux-Betriebssysteme und Paketabhängigkeiten beschrieben.  
 
  **Red Hat Enterprise Linux ES Release 4**  
@@ -249,15 +249,15 @@ Sie können den System Center Configuration Manager-Client auf Computern install
 
  Weitere Informationen zur Clientkommunikation und zu Anforderungsports finden Sie unter  [Configure the Client for Linux and UNIX to Locate Management Points](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md#BKMK_ConfigClientMP).  
 
-##  <a name="a-namebkmkplanningforcommunicationsforlnua-planning-for-communication-across-forest-trusts-for-linux-and-unix-servers"></a><a name="BKMK_PlanningforCommunicationsforLnU"></a> Planen der Kommunikation zwischen Gesamtstruktur-Vertrauensstellungen für Linux- und UNIX-Server  
+##  <a name="BKMK_PlanningforCommunicationsforLnU"></a> Planen der Kommunikation zwischen Gesamtstruktur-Vertrauensstellungen für Linux- und UNIX-Server  
  Linux- und UNIX-Server, die Sie mit Configuration Manager verwalten, stellen Clients in Arbeitsgruppen dar und erfordern ähnliche Konfigurationen wie Windows-basierte Clients, die sich in einer Arbeitsgruppe befinden. Informationen über die Kommunikation von Computern, die sich in Arbeitsgruppen befinden, finden Sie unter [Kommunikation zwischen Active Directory-Gesamtstrukturen](../../../../core/plan-design/hierarchy/communications-between-endpoints.md#Plan_Com_X-Forest) im Thema [Datenübertragungen zwischen Endpunkten in System Center Configuration Manager](../../../../core/plan-design/hierarchy/communications-between-endpoints.md).  
 
-###  <a name="a-namebkmkservicelocationforlnua-service-location-by-the-client-for-linux-and-unix"></a><a name="BKMK_ServiceLocationforLnU"></a> Dienstidentifizierung nach Client für Linux und UNIX  
+###  <a name="BKMK_ServiceLocationforLnU"></a> Dienstidentifizierung nach Client für Linux und UNIX  
  Der Task zum Auffinden von einem Standort befindet, der Dienst für Clients bereitstellt wird als Speicherort bezeichnet. Im Gegensatz zu einem Windows-basierter Client verwendet der Client für Linux und UNIX nicht Active Directory nach Diensten suchen. Darüber hinaus unterstützt der Configuration Manager-Client für Linux und UNIX keine Clienteigenschaft, die das Domänensuffix eines Verwaltungspunkts angibt. Der Client erfährt stattdessen zusätzliche standortsystemserver umfassen, die Dienste für Clients von einem bekannten Verwaltungspunkt, die Sie zuweisen bereitstellen, wenn Sie die Clientsoftware installieren.  
 
  Weitere Informationen zur Dienstidentifizierung finden Sie im Abschnitt [Dienstidentifizierung und wie Clients den ihnen zugewiesenen Verwaltungspunkt ermitteln](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#BKMK_Plan_Service_Location) im Thema [Verstehen, wie Clients Standortressourcen und -dienste für System Center Configuration Manager suchen](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).  
 
-##  <a name="a-namebkmksecurityforlnua-planning-for-security-and-certificates-for-linux-and-unix-servers"></a><a name="BKMK_SecurityforLnU"></a> Planen der Sicherheit und Zertifikate für Linux- und UNIX-Server  
+##  <a name="BKMK_SecurityforLnU"></a> Planen der Sicherheit und Zertifikate für Linux- und UNIX-Server  
  Für die sichere und authentifizierte Kommunikation mit Configuration Manager-Standorten verwendet der Configuration Manager-Client für Linux und UNIX das gleiche Modell für die Kommunikation wie der Configuration Manager-Client für Windows.  
 
  Wenn Sie den Linux- und UNIX-Client installieren, können Sie dem Client ein PKI-Zertifikat zuweisen, das ihm die HTTPS-Kommunikation mit Configuration Manager-Standorten ermöglicht. Wenn Sie keine PKI-Zertifikat zuweisen, wird der Client ein selbstsigniertes Zertifikat erstellt und nur von HTTP kommuniziert.  
@@ -270,21 +270,21 @@ Sie können den System Center Configuration Manager-Client auf Computern install
 
  Informationen zum Verwenden von Zertifikaten in Configuration Manager gehen Sie auf die Seite [PKI-Zertifikatanforderungen für System Center Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md).  
 
-###  <a name="a-namebkmkaboutcertsforlnua-about-certificates-for-use-by-linux-and-unix-servers"></a><a name="BKMK_AboutCertsforLnU"></a> Informationen zu Zertifikaten für die Verwendung durch Linux- und UNIX-Server  
+###  <a name="BKMK_AboutCertsforLnU"></a> Informationen zu Zertifikaten für die Verwendung durch Linux- und UNIX-Server  
  Der Configuration Manager-Client für Linux und UNIX verwendet genau wie Windows-basierte Clients ein selbstsigniertes Zertifikat oder ein X.509-PKI-Zertifikat. Bezüglich der PKI-Anforderungen an Configuration Manager-Standortsysteme bestehen bei der Verwaltung von Linux- und UNIX-Clients keine Unterschiede.  
 
  Die Zertifikate für Linux- und UNIX-Clients, die mit Configuration Server-Standortsystemen kommunizieren, müssen das PKCS#12-Format (Public Key Certificate Standard) aufweisen, und das Kennwort muss bekannt sein, damit Sie es für den Client angeben können, wenn Sie das PKI-Zertifikat festlegen.  
 
  Der Configuration Manager-Client für Linux und UNIX unterstützt ein einzelnes PKI-Zertifikat und nicht mehrere Zertifikate. Deshalb gelten die Zertifikatauswahlkriterien für einen Configuration Manager-Standort nicht.  
 
-###  <a name="a-namebkmkconfigcertsforlnua-configuring-certificates-for-linux-and-unix-servers"></a><a name="BKMK_ConfigCertsforLnU"></a> Konfigurieren von Zertifikaten für Linux- und UNIX-Server  
+###  <a name="BKMK_ConfigCertsforLnU"></a> Konfigurieren von Zertifikaten für Linux- und UNIX-Server  
  Um einen Configuration Manager-Client für Linux- und UNIX-Server für die HTTPS-Kommunikation zu konfigurieren, müssen Sie den Client bei der Installation für die Verwendung eines PKI-Zertifikats konfigurieren. Sie können nicht für ein Zertifikat vor der Installation der Clientsoftware bereitstellen.  
 
  Wenn Sie einen Client, die ein PKI-Zertifikat verwendet installieren, verwenden Sie den Befehlszeilenparameter **- UsePKICert** geben Sie den Speicherort und den Namen einer PKCS #12-Datei, die das PKI-Zertifikat enthält. Darüber hinaus müssen Sie den Befehlszeilenparameter verwenden **- Certpw** Sie das Kennwort für das Zertifikat an.  
 
  Wenn Sie keinen angeben **- UsePKICert**, der Client ein selbstsigniertes Zertifikat generiert und standortsystemservern ausschließlich über HTTP zu kommunizieren versucht.  
 
-##  <a name="a-namebkmknosha-256a-about-linux-and-unix-operating-systems-that-do-not-support-sha-256"></a><a name="BKMK_NoSHA-256"></a> Informationen zu Linux- und UNIX-Betriebssystemen, die SHA-256 nicht unterstützen  
+##  <a name="BKMK_NoSHA-256"></a> Informationen zu Linux- und UNIX-Betriebssystemen, die SHA-256 nicht unterstützen  
  Die folgenden Linux- und UNIX-Betriebssysteme, die als Clients für Configuration Manager unterstützt werden, wurden mit OpenSSL-Versionen ohne SHA-256-Unterstützung freigegeben:  
 
 -   Red Hat Enterprise Linux-Version 4 (X 86/X 64)  

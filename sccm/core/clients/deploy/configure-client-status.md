@@ -2,7 +2,7 @@
 title: Konfigurieren des Clientstatus | Microsoft-Dokumentation
 description: "Wählen Sie die Clientstatuseinstellungen in System Center Configuration Manager aus."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/16/2016
 
 Sie müssen zunächst für Ihren Standort die Parameter einrichten, anhand derer Clients als inaktiv gekennzeichnet werden, und Benachrichtigungsoptionen für den Fall konfigurieren, dass ein angegebener Schwellenwert von einer Clientaktivität unterschritten wird, damit Sie den System Center Configuration Manager-Clientstatus überwachen und aufgetretene Probleme beheben können. Sie können außerdem Computer daran hindern, Clientstatusprobleme automatisch zu beheben.  
 
-##  <a name="a-namebkmk1a-to-configure-client-status"></a><a name="BKMK_1"></a> So konfigurieren Sie den Clientstatus  
+##  <a name="BKMK_1"></a> So konfigurieren Sie den Clientstatus  
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Überwachung**.  
 
@@ -56,7 +56,7 @@ Sie müssen zunächst für Ihren Standort die Parameter einrichten, anhand derer
 
 5.  Klicken Sie auf **OK** , um die Eigenschaften zu speichern und das Dialogfeld **Eigenschaften der Clientstatuseinstellungen** zu schließen.  
 
-##  <a name="a-namebkmkschedulea-to-configure-the-schedule-for-client-status"></a><a name="BKMK_Schedule"></a> So konfigurieren Sie den Zeitplan für den Clientstatus  
+##  <a name="BKMK_Schedule"></a> So konfigurieren Sie den Zeitplan für den Clientstatus  
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Überwachung**.  
 
@@ -67,7 +67,7 @@ Sie müssen zunächst für Ihren Standort die Parameter einrichten, anhand derer
     > [!NOTE]  
     >  Wenn Sie den Zeitplan für Clientstatusaktualisierungen ändern, treten die Änderungen erst mit der nächsten geplanten Clientstatusaktualisierung (nach dem zuvor konfigurierten Zeitplan) in Kraft.  
 
-##  <a name="a-namebkmk2a-to-configure-alerts-for-client-status"></a><a name="BKMK_2"></a> So konfigurieren Sie Warnungen für den Clientstatus  
+##  <a name="BKMK_2"></a> So konfigurieren Sie Warnungen für den Clientstatus  
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Bestand und Kompatibilität**.  
 
@@ -95,7 +95,7 @@ Sie müssen zunächst für Ihren Standort die Parameter einrichten, anhand derer
 
 7.  Klicken Sie auf **OK**, um das Dialogfeld **Eigenschaften** von *&lt;Sammlungsname\>* zu schließen.  
 
-##  <a name="a-namebkmk3a-to-exclude-computers-from-automatic-remediation"></a><a name="BKMK_3"></a> So schließen Sie Computer von der automatischen Wiederherstellung aus  
+##  <a name="BKMK_3"></a> So schließen Sie Computer von der automatischen Wiederherstellung aus  
 
 1.  Öffnen Sie auf dem Clientcomputer, für den die automatische Wiederherstellung deaktiviert werden soll, den Registrierungs-Editor.  
 

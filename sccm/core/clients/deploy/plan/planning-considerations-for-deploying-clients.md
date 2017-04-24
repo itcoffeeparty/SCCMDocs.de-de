@@ -2,7 +2,7 @@
 title: Planung der Clientbereitstellung | Microsoft-Dokumentation
 description: Planen Sie die Bereitstellung von Clients, und bereiten Sie die Infrastruktur in System Center Configuration Manager vor.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 518f9882-ce71-48c3-9f47-cd968cfb658d
 caps.latest.revision: 3
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d

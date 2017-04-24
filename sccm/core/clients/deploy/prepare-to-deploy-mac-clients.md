@@ -2,7 +2,7 @@
 title: Vorbereiten der Bereitstellung von Clientsoftware auf Macs | Microsoft-Dokumentation
 description: Konfigurationsaufgaben vor dem Bereitstellen des Configuration Manager-Clients auf Mac-Computern.
 ms.custom: na
-ms.date: 01/02/2017
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: aaroncz
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2285a953-6a86-4ed5-97dd-cd57b02bc1ee
 caps.latest.revision: 12
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 0900e45115f02861c33fe2abdb046d11fdef3474
