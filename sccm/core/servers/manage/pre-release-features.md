@@ -2,7 +2,7 @@
 title: "Vorab veröffentlichte Funktionen | Microsoft-Dokumentation"
 description: Features der Vorabversion in System Center Configuration Manager
 ms.custom: na
-ms.date: 4/7/2017
+ms.date: 4/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
-ms.openlocfilehash: a7ebfea849afcaf236d7e630aad2c7f3f1807a23
-ms.lasthandoff: 04/08/2017
+ms.sourcegitcommit: 329de5ffb6eb1403c02cd1db634c32f045e82488
+ms.openlocfilehash: c9896d53061b11f249f32f118620524c6a270ec9
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -50,6 +50,7 @@ Wenn Sie an einem eigenständigen primären Standort Ihre Zustimmung erteilt hab
 
  |Komponente          |Als Vorabversion hinzugefügt | Als vollständiges Feature hinzugefügt|  
 |------------------|---------------------|---------------------|
+| Device Guard-Verwaltung mit Configuration Manager |  [Version 1702](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)|![Noch nicht](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Prüfen Sie auf ausgeführte ausführbare Dateien, bevor Sie eine Anwendung installieren  |   [Version 1702](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) |![Noch nicht](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Data Warehouse-Dienstpunkt  |  [Version 1702](/sccm/core/servers/manage/data-warehouse) |![Noch nicht](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Peercache zur Verteilung von Inhalten an Clients |  [Version 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) |![Noch nicht](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|

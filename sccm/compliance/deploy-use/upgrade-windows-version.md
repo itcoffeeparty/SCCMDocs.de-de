@@ -1,8 +1,8 @@
 ---
-title: "Aktualisieren von Windows-Geräten auf eine neue Version | Microsoft-Dokumentation"
-description: "Automatisches Upgrade von Geräten, die Windows 10 Desktop, Windows 10 Mobile, oder Windows 10 Holographic ausführen, auf eine neue Version."
+title: "Ausführen eines Upgrades von Windows-Geräten auf eine andere Version mit Configuration Manager | Microsoft-Dokumentation"
+description: "Automatisches Upgrade von Geräten, die Windows 10 Desktop, Windows 10 Mobile, oder Windows 10 Holographic ausführen, auf eine andere Edition mit Configuration Manager."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 04/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: f14dfb77be7b53e74d53e0c1fc7e7f1731952d40
+ms.sourcegitcommit: 4eee9731a4a27328c47c0d15931cab28cf520a18
+ms.openlocfilehash: cfde0a43947013bbd3a1093688cee19fe309fd03
+ms.lasthandoff: 04/18/2017
 
 
 ---
@@ -28,7 +29,7 @@ ms.openlocfilehash: f14dfb77be7b53e74d53e0c1fc7e7f1731952d40
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 
-Mit der **Upgraderichtlinie für die Edition** von System Center Configuration Manager können Sie für Geräte, auf denen eine der folgenden Windows 10-Versionen ausgeführt wird, automatisch ein Upgrade auf eine neuere Version durchführen:
+Mit der **Upgraderichtlinie für die Edition** von System Center Configuration Manager können Sie für Geräte, auf denen eine der folgenden Windows 10-Versionen ausgeführt wird, automatisch ein Upgrade auf eine andere Version durchführen:
 
 - Windows 10 Desktop
 - Windows 10 Mobile
@@ -92,9 +93,4 @@ Die neue Richtlinie wird im Arbeitsbereich **Bestand und Kompatibilität** im Kn
 Sie können die gerade erstellte Bereitstellung über den Knoten **Bereitstellungen** des Arbeitsbereichs **Überwachung** überwachen.  
 
  Sobald die Richtlinie einen entsprechenden Windows-PC erreicht und ausgewertet wird, wird dieser innerhalb von zwei Stunden zum Installieren der Aktualisierung neu gestartet. Stellen Sie sicher, dass Sie jeden Benutzer informieren, dem Sie die Richtlinie bereitstellen, oder planen Sie die Ausführung der Richtlinie außerhalb der Arbeitsstunden der Benutzer.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

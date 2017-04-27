@@ -2,7 +2,7 @@
 title: Erstellen von VPN-Profilen in System Center Configuration Manager | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie VPN-Profile in System Center Configuration Manager erstellen.
 ms.custom: 
-ms.date: 12/28/2016
+ms.date: 4/19/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f338e4db-73b5-45ff-92f4-1b89a8ded989
 caps.latest.revision: 15
-author: nbigman
+author: robstackmsft
 caps.handback.revision: 0
-ms.author: nbigman
+ms.author: robstack
 ms.manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
-ms.openlocfilehash: e3959dc46be225a0edaa94dda73bb4c4ceadf7fe
-ms.lasthandoff: 03/04/2017
+ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
+ms.openlocfilehash: faf8a8fc3f9a54ce3a5a45cc4b20fa5ca8bb4d95
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -40,7 +40,7 @@ Verteilen Sie die VPN-App für Drittanbieter-VPN-Verbindungen vor der Bereitstel
 
 1.  Schließen Sie die Seite **Allgemein** ab. Beachten Sie dabei Folgendes:  
 
-       - Verwenden Sie im Namen des VPN-Profils keines der Zeichen \\/:*?<>&#124;, und auch keine Leerzeichen. Diese Zeichen werden vom Windows Server-VPN-Profil nicht unterstützt.  
+       - Verwenden Sie im Namen des VPN-Profils keines der Zeichen \\/:*?&lt;>&#124; und auch keine Leerzeichen. Diese Zeichen werden vom Windows Server-VPN-Profil nicht unterstützt.  
 
        -   Wählen Sie **Import an existing VPN profile item from a file** (Vorhandenes VPN-Profilelement aus einer Datei importieren) aus, um Informationen eines VPN-Profils zu importieren, das in eine XML-Datei exportiert wurde (nur Windows 8.1 oder Windows RT).  
 
@@ -53,20 +53,20 @@ Verteilen Sie die VPN-App für Drittanbieter-VPN-Verbindungen vor der Bereitstel
         > [!NOTE]  
         >  Von iOS-Geräten wird die Verwendung mehrerer VPN-Server nicht unterstützt. Wenn Sie mehrere VPN-Server konfigurieren und dann das VPN-Profil auf einem iOS-Gerät bereitstellen, wird nur der Standardserver verwendet.  
 
-     Diese Tabelle bietet Optionen für die Verbindungstypen. Weitere Informationen finden Sie in der Dokumentation zum VPN-Server.  
+     Diese Tabelle bietet Optionen für die Verbindungstypen. Weitere Informationen finden Sie in der Dokumentation zum VPN-Server.
 
-    |Option|Weitere Informationen|Verbindungstyp|  
-    |------------|----------------------|---------------------|  
-    |**Bereich**|Der Authentifizierungsbereich, den Sie verwenden möchten. Ein Authentifizierungsbereich ist eine Gruppe von Authentifizierungsressourcen, die vom Verbindungstyp „Pulse Secure“ verwendet werden.|Pulse Secure|  
-    |**Rolle**|Die Benutzerrolle, die Zugriff auf diese Verbindung hat.|Pulse Secure|  
-    |**Anmeldegruppe oder Domäne**|Der Name der Anmeldegruppe oder Domäne, mit der Sie eine Verbindung herstellen möchten.|Dell SonicWALL Mobile Connect|  
-    |**Fingerabdruck**|Eine Zeichenfolge wie z.B. „Contoso-Fingerabdruckcode“, anhand der überprüft wird, ob der VPN-Server vertrauenswürdig ist.<br /><br /> Mit einem Fingerabdruck kann wie folgt verfahren werden:<br /><br /> – Er kann an den Client gesendet werden, damit dieser weiß, dass alle Server vertrauenswürdig sind, die beim Verbinden den betreffenden Fingerabdruck vorweisen.<br /><br /> – Wenn das Gerät nicht über den Fingerabdruck verfügt, wird der Benutzer aufgefordert, dem VPN-Server zu vertrauen, mit dem eine Verbindung hergestellt wird, während der Fingerabdruck angezeigt wird (der Benutzer überprüft den Fingerabdruck manuell und wählt **Vertrauen** aus, um die Verbindung herzustellen).|Prüfpunkt für mobiles VPN|  
-    |**Gesamten Netzwerkdatenverkehr über die VPN-Verbindung senden**|Wenn diese Option nicht ausgewählt ist, können Sie zusätzliche Routen für die Verbindung angeben (für die Verbindungstypen **Microsoft SSL (SSTP)**, **Microsoft Automatic**, **IKEv2**, **PPTP** und **L2TP** ). Dies wird auch als getrenntes Tunneln oder VPN-Tunneln bezeichnet.<br /><br /> Nur Verbindungen mit dem Unternehmensnetzwerk werden über einen VPN-Tunnel gesendet. Beim Verbinden mit Ressourcen im Internet wird VPN-Tunneln nicht verwendet.|Alle|  
-    |**Verbindungsspezifisches DNS-Suffix**|Das verbindungsspezifische DNS-Suffix (Domain Name System) für die Verbindung.|- <br />                            Microsoft SSL (SSTP)<br /><br /> – Microsoft Automatic<br /><br /> - <br />                            IKEv2<br /><br /> - <br />                            PPTP<br /><br /> - <br />                            L2TP|  
-    |**VPN beim Verbinden mit Unternehmens-WLAN-Netzwerk umgehen**|Die VPN-Verbindung wird nicht verwendet, wenn das Gerät mit dem Unternehmens-WLAN verbunden ist.|– Cisco AnyConnect<br /><br /> – Pulse Secure<br /><br /> – F5 Edge Client<br /><br /> – Dell SonicWALL Mobile Connect<br /><br /> – Prüfpunkt für mobiles VPN<br /><br /> – Microsoft SSL (SSTP)<br /><br /> – Microsoft Automatic<br /><br /> – IKEv2<br /><br /> – L2TP|  
-    |**VPN beim Verbinden mit WLAN-Heimnetzwerk umgehen**|Die VPN-Verbindung wird nicht verwendet, wenn das Gerät mit einem WLAN-Heimnetzwerk verbunden ist.|Alle|  
-    |**VPN pro App (iOS 7 und höher, Mac OS X 10.9 und höher)**|Ordnet diese VPN-Verbindung einer iOS-App zu, sodass die Verbindung geöffnet wird, wenn die Anwendung ausgeführt wird. Die Zuordnung des VPN-Profils zu einer App kann bei der Bereitstellung erfolgen.|- <br />                        Cisco AnyConnect<br /><br /> – Pulse Secure<br /><br /> – F5 Edge Client<br /><br /> – Dell SonicWALL Mobile Connect<br /><br /> – Prüfpunkt für mobiles VPN|  
-    |**Benutzerdefiniertes XML (optional)**|Gibt benutzerdefinierte XML-Befehle zum Konfigurieren der VPN-Verbindung an.<br /><br /> Beispiele:<br /><br /> Für **Pulse Secure**:<br /><br /> **<pulse-schema><isSingleSignOnCredential\>true</isSingleSignOnCredential\></pulse-schema>**<br /><br /> Für **CheckPoint Mobile VPN**:<br /><br /> **&lt;CheckPointVPN port="443" name="CheckPointSelfhost" sso="true" debug="3" /\>**<br /><br /> Für **Dell SonicWALL Mobile Connect**:<br /><br /> **<MobileConnect\><Compression\>false</Compression\><debugLogging\>True</debugLogging\><packetCapture\>False</packetCapture\></MobileConnect\>**<br /><br /> Für **F5 Edge Client**:<br /><br /> **<f5-vpn-conf><single-sign-on-credential /></f5-vpn-conf>**<br /><br /> Weitere Informationen über das Schreiben von benutzerdefinierten XML-Befehlen finden Sie in der VPN-Dokumentation der einzelnen Hersteller.|– Cisco AnyConnect<br /><br /> – Pulse Secure<br /><br /> – F5 Edge Client<br /><br /> – Dell SonicWALL Mobile Connect<br /><br /> – Prüfpunkt für mobiles VPN|  
+|Option          | Weitere Informationen| Verbindungstyp|  
+|----------------|----------------------|---------------------|  
+|**Bereich**     |Der Authentifizierungsbereich, den Sie verwenden möchten. Ein Authentifizierungsbereich ist eine Gruppe von Authentifizierungsressourcen, die vom Verbindungstyp „Pulse Secure“ verwendet werden.|Pulse Secure|    
+|**Rolle**        |Die Benutzerrolle, die Zugriff auf diese Verbindung hat. |Pulse Secure|  
+|**Anmeldegruppe oder Domäne** |Der Name der Anmeldegruppe oder Domäne, mit der Sie eine Verbindung herstellen möchten.|Dell SonicWALL Mobile Connect|  
+|**Fingerabdruck**  |Eine Zeichenfolge wie z.B. „Contoso-Fingerabdruckcode“, anhand der überprüft wird, ob der VPN-Server vertrauenswürdig ist.<br /><br /> Mit einem Fingerabdruck kann wie folgt verfahren werden:<br /><br /> – Er kann an den Client gesendet werden, damit dieser weiß, dass alle Server vertrauenswürdig sind, die beim Verbinden den betreffenden Fingerabdruck vorweisen.<br /><br /> – Wenn das Gerät nicht über den Fingerabdruck verfügt, wird der Benutzer aufgefordert, dem VPN-Server zu vertrauen, mit dem eine Verbindung hergestellt wird, während der Fingerabdruck angezeigt wird (der Benutzer überprüft den Fingerabdruck manuell und wählt **Vertrauen** aus, um die Verbindung herzustellen).|Prüfpunkt für mobiles VPN|  
+|**Gesamten Netzwerkdatenverkehr über die VPN-Verbindung senden** |Wenn diese Option nicht ausgewählt ist, können Sie zusätzliche Routen für die Verbindung angeben (für die Verbindungstypen **Microsoft SSL (SSTP)**, **Microsoft Automatic**, **IKEv2**, **PPTP** und **L2TP** ). Dies wird auch als getrenntes Tunneln oder VPN-Tunneln bezeichnet.<br /><br /> Nur Verbindungen mit dem Unternehmensnetzwerk werden über einen VPN-Tunnel gesendet. Beim Verbinden mit Ressourcen im Internet wird VPN-Tunneln nicht verwendet. |Alle|  
+|**Verbindungsspezifisches DNS-Suffix** |Das verbindungsspezifische DNS-Suffix (Domain Name System) für die Verbindung.|– Microsoft SSL (SSTP)<br /><br /> – Microsoft Automatic<br /><br /> – IKEv2<br /><br /> – PPTP<br /><br /> – L2TP|  
+|**VPN beim Verbinden mit Unternehmens-WLAN-Netzwerk umgehen**  |Die VPN-Verbindung wird nicht verwendet, wenn das Gerät mit dem Unternehmens-WLAN verbunden ist.|– Cisco AnyConnect<br /><br /> – Pulse Secure<br /><br /> – F5 Edge Client<br /><br /> – Dell SonicWALL Mobile Connect<br /><br /> – Prüfpunkt für mobiles VPN<br /><br /> – Microsoft SSL (SSTP)<br /><br /> – Microsoft Automatic<br /><br /> – IKEv2<br /><br /> – L2TP|  
+|**VPN beim Verbinden mit WLAN-Heimnetzwerk umgehen**  |Die VPN-Verbindung wird nicht verwendet, wenn das Gerät mit einem WLAN-Heimnetzwerk verbunden ist.|Alle|  
+|**VPN pro App (iOS 7 und höher, Mac OS X 10.9 und höher)** |Ordnet diese VPN-Verbindung einer iOS-App zu, sodass die Verbindung geöffnet wird, wenn die Anwendung ausgeführt wird. Die Zuordnung des VPN-Profils zu einer App kann bei der Bereitstellung erfolgen.|– Cisco AnyConnect<br /><br /> – Pulse Secure<br /><br /> – F5 Edge Client<br /><br /> – Dell SonicWALL Mobile Connect<br /><br /> – Prüfpunkt für mobiles VPN|  
+|**Benutzerdefiniertes XML (optional)** |Gibt benutzerdefinierte XML-Befehle zum Konfigurieren der VPN-Verbindung an.<br /><br /> Beispiele:<br /><br /> Für **Pulse Secure**:<br /><br /> **&lt;pulse-schema>&lt;isSingleSignOnCredential>true&lt;/isSingleSignOnCredential\>&lt;/pulse-schema>**<br /><br /> Für **CheckPoint Mobile VPN**:<br /><br /> **&lt;CheckPointVPN port="443" name="CheckPointSelfhost" sso="true" debug="3">**<br /><br /> Für **Dell SonicWALL Mobile Connect**:<br /><br /> **&lt;MobileConnect\>&lt;Compression\>False&lt;/Compression\>&lt;debugLogging\>True&lt;/debugLogging\>&lt;packetCapture\>False&lt;/packetCapture\>&lt;/MobileConnect\>**<br /><br /> Für **F5 Edge Client**:<br /><br /> **&lt;f5-vpn-conf>&lt;single-sign-on-credential>&lt;/f5-vpn-conf>**<br /><br /> Weitere Informationen über das Schreiben von benutzerdefinierten XML-Befehlen finden Sie in der VPN-Dokumentation der einzelnen Hersteller.|– Cisco AnyConnect<br /><br /> – Pulse Secure<br /><br /> – F5 Edge Client<br /><br /> – Dell SonicWALL Mobile Connect<br /><br /> – Prüfpunkt für mobiles VPN|  
 
 > [!NOTE]  
 >  Informationen zum Erstellen von VPN-Profilen für mobile Geräte finden Sie unter [Erstellen von VPN-Profilen](../../mdm/deploy-use/create-vpn-profiles.md)  

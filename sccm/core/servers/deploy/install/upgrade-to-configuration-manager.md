@@ -2,7 +2,7 @@
 title: Upgrade auf System Center Configuration Manager | Microsoft-Dokumentation
 description: "Erfahren Sie die Schritte für die Ausführung eines direkten Upgrades an einem Standort und einer Hierarchie, wo System Center 2012 Configuration Manager ausgeführt wird."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 4/19/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6424fb07802b62820b4dc78a58ab30d3b956abef
-ms.openlocfilehash: ca07b46db0967ca03cc5e858b835d2c2108f1210
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
+ms.openlocfilehash: e75413d0b03681bf7244bd3917cd6099394ee3c9
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -75,6 +75,9 @@ Wenn Sie über das Baselinemedium für Version 1511 verfügen, können Sie die f
  Die folgenden Checklisten helfen Ihnen bei der Planung einer erfolgreichen Aktualisierung auf System Center Configuration Manager.  
 
 ### <a name="before-you-upgrade"></a>Vor dem Upgrade  
+
+**Überprüfen Sie Ihre System Center 2012 Configuration Manager-Umgebung**, und beheben Sie die in KB4018655, [Configuration Manager-Clients werden alle fünf Stunden aufgrund eines periodischen Wiederholungstasks neu installiert und, was zu einem unbeabsichtigten Clientupgrade führen kann](https://support.microsoft.com/help/4018655), beschriebenen Probleme.
+
 **Stellen Sie sicher, dass Ihre Computerumgebung zu den unterstützten Konfigurationen** für ein Upgrade auf System Center Configuration Manager gehört:  
 
 Überprüfen Sie die zum Hosten der Standortsystemrollen verwendeten Serverbetriebssysteme:  

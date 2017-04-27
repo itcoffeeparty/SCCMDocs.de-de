@@ -13,13 +13,13 @@ ms.topic: article
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: bd2cf7b0df4a1f50c006e8280bf59ea91f1b4477
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 4eee9731a4a27328c47c0d15931cab28cf520a18
+ms.openlocfilehash: d1d2ec7c053d13ebaeb00d0dfeb126716b5f7ae5
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>Informationen zu Clienteinstellungen in System Center Configuration Manager
@@ -505,7 +505,7 @@ Viele der Clienteinstellungen sind selbsterklärend. Andere werden hier beschrie
 
     -   Wählen Sie das Symbol **Neu** aus, um einen neuen Dateityp zum Inventar hinzuzufügen. Geben Sie anschließend im Dialogfeld **Eigenschaften für inventarisierte Datei(en)** die folgenden Informationen an:  
 
-        -   **Name**: Geben Sie einen Namen für die Datei an, die Sie inventarisieren möchten. Sie können das Zeichen **\** stellvertretend für eine beliebige Textzeichenfolge und das Zeichen**?**stellvertretend für ein beliebiges einzelnes Zeichen angeben. Geben Sie als Dateinamen z.B.**\*.doc** an, um alle Dateien mit der Erweiterung .doc zu inventarisieren.  
+        -   **Name**: Geben Sie einen Namen für die Datei an, die Sie inventarisieren möchten. Sie können das Sternchen (*\**) stellvertretend für eine beliebige Textzeichenfolge und das Fragezeichen (**?** ) stellvertretend für ein beliebiges einzelnes Zeichen angeben. Geben Sie als Dateinamen z.B. **\*.doc** an, um alle Dateien mit der Erweiterung „.doc“ zu inventarisieren.  
 
         -   **Ort**: Wählen Sie **Festlegen** aus, um das Dialogfeld **Pfadeigenschaften** zu öffnen. Sie können die Softwareinventur so konfigurieren, dass alle Clientfestplatten nach der angegebenen Datei, nach einem angegebenen Pfad (z.B. **C:\Ordner**) oder nach einer angegebenen Variablen (z.B. *%windir%*) durchsucht werden. Sie können auch alle Unterordner unter dem angegebenen Pfad durchsuchen.  
 
@@ -528,7 +528,7 @@ Viele der Clienteinstellungen sind selbsterklärend. Andere werden hier beschrie
 
     -   Geben Sie im Dialogfeld **Eigenschaften für gesammelte Datei(en)** die folgenden Informationen an:  
 
-        -   **Name**: Geben Sie einen Namen für die Datei an, die Sie sammeln möchten. Sie können das Zeichen **\** stellvertretend für eine beliebige Textzeichenfolge und das Zeichen**?** stellvertretend für ein beliebiges einzelnes Zeichen angeben.  
+        -   **Name**: Geben Sie einen Namen für die Datei an, die Sie sammeln möchten. Sie können das Sternchen (*\**) stellvertretend für eine beliebige Textzeichenfolge und das Fragezeichen (**?** ) stellvertretend für ein beliebiges einzelnes Zeichen angeben.  
 
         -   **Ort**: Wählen Sie **Festlegen** aus, um das Dialogfeld **Pfadeigenschaften** zu öffnen. Sie können die Softwareinventur so konfigurieren, dass alle Clientfestplatten nach der zu sammelnden Datei, nach einem angegebenen Pfad (z.B. **C:\Ordner**) oder nach einer angegebenen Variable (z.B. *%windir%*) durchsucht werden. Sie können auch alle Unterordner unter dem angegebenen Pfad durchsuchen.  
 

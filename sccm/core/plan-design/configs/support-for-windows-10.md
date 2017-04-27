@@ -16,9 +16,9 @@ author: brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2cdd25343cf68a79067a317b820572491a3633a2
-ms.openlocfilehash: 84d6fdcec2c539f0fd3043f01d18e165da8c52c9
-ms.lasthandoff: 04/12/2017
+ms.sourcegitcommit: db258a09ce21627ffba37eb1f3d521c1ea0341ed
+ms.openlocfilehash: 7df4bde6970b63262eee9e785d983addbeac0908
+ms.lasthandoff: 04/13/2017
 
 ---
 # <a name="support-for-windows-10-as-a-client-of-system-center-configuration-manager"></a>Unterstützung für Windows 10 als ein Client von System Center Configuration Manager
@@ -45,7 +45,7 @@ Eine Version von Configuration Manager, deren [Support für diese Version](/sccm
 |Enterprise 2016 LTSB                   |![Unterstützt](media/green_check.png) |![Unterstützt](media/green_check.png) |![Unterstützt](media/green_check.png) |
 |1607 (CB)    <br />Anniversary Update<br />(*siehe Editionen*)      |![Abwärtskompatibel](media/blue_compat.png) |![Unterstützt](media/green_check.png) |![Unterstützt](media/green_check.png) |
 |1607 (CBB)    <br />Anniversary Update<br />(*siehe Editionen*)      |![Nicht unterstützt](media/Red_X.png)   |![Unterstützt](media/green_check.png) |![Unterstützt](media/green_check.png) |
-|1703 (CBB)    <br />Creators Update<br />(*siehe Editionen*)      |![Nicht unterstützt](media/Red_X.png)   |![Nicht unterstützt](media/Red_X.png) |![Abwärtskompatibel](media/blue_compat.png) |
+|1703 (CB)    <br />Creators Update<br />(*siehe Editionen*)      |![Nicht unterstützt](media/Red_X.png)   |![Nicht unterstützt](media/Red_X.png) |![Abwärtskompatibel](media/blue_compat.png) |
 
 
 

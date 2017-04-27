@@ -17,8 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: 1069a18eecbc5f53b74ad89e166e6f2c7b180693
+ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
+ms.openlocfilehash: 11c0f169afebdb071fefb5ce300fd1ae3481a94f
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -28,12 +29,12 @@ ms.openlocfilehash: 1069a18eecbc5f53b74ad89e166e6f2c7b180693
 
 Zum Bereitstellen von Betriebssystemen in System Center Configuration Manager müssen Sie zuerst die folgenden Standortsystemrollen vorbereiten, die besondere Konfigurationen und Überlegungen erfordern.
 
-##  <a name="a-namebkmkdistributionpointsa-distribution-points"></a><a name="BKMK_DistributionPoints"></a> Verteilungspunkte  
+##  <a name="BKMK_DistributionPoints"></a> Verteilungspunkte  
  Die Standortsystemrolle „Verteilungspunkt“ enthält Quelldateien, die von Clients heruntergeladen werden können, darunter Anwendungsinhalt, Softwareupdates, Betriebssystemabbilder und Startabbilder. Sie können die Inhaltsverteilung mithilfe der Optionen für Bandbreite, Einschränkung und Zeitplanung steuern.  
 
  Sie benötigen unbedingt genügend Verteilungspunkte, um die Bereitstellung von Betriebssystemen auf Computern zu unterstützen. Außerdem ist es wichtig, die Platzierung dieser Verteilungspunkte in Ihrer Hierarchie zu planen. Einen Großteil der Informationen zur Planung finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md). Es gibt jedoch einige zusätzliche Überlegungen zur Planung von Verteilungspunkten, die sich auf die Betriebssystembereitstellung beziehen.  
 
-###  <a name="a-namebkmkadditionalplanninga-additional-planning-considerations-for-distribution-points"></a><a name="BKMK_AdditionalPlanning"></a> Zusätzliche Überlegungen zur Planung von Verteilungspunkten  
+###  <a name="BKMK_AdditionalPlanning"></a> Zusätzliche Überlegungen zur Planung von Verteilungspunkten  
  Im Folgenden weitere Aspekte, die bei der Planung von Verteilungspunkten berücksichtigt werden sollten:  
 
 -   **Wie kann ich unerwünschte Betriebssystembereitstellungen verhindern?**  
@@ -54,7 +55,7 @@ Zum Bereitstellen von Betriebssystemen in System Center Configuration Manager m�
 
      Sie können ein Betriebssystem auf einem Verteilungspunkt bereitstellen, allerdings muss das Betriebssystemabbild von einem anderen Verteilungspunkt empfangen werden.  
 
-###  <a name="a-namebkmkpxedistributionpointa-configuring-distribution-points-to-accept-pxe-requests"></a><a name="BKMK_PXEDistributionPoint"></a> Konfigurieren von Verteilungspunkten zum Akzeptieren von PXE-Anforderungen  
+###  <a name="BKMK_PXEDistributionPoint"></a> Konfigurieren von Verteilungspunkten zum Akzeptieren von PXE-Anforderungen  
  Zum Bereitstellen von Betriebssystemen für Configuration Manager-Clients, die PXE-Startanforderungen ausführen, müssen Sie mindestens einen Verteilungspunkt so konfigurieren, dass er PXE-Anforderungen akzeptiert. Sobald der Verteilungspunkt konfiguriert ist, reagiert er auf PXE-Startanforderungen und ermittelt die geeigneten Bereitstellungsaktionen.
 
 > [!IMPORTANT]  
@@ -97,7 +98,7 @@ Zum Bereitstellen von Betriebssystemen in System Center Configuration Manager m�
 
 11. Klicken Sie auf **OK** , um die Eigenschaften des Verteilungspunkts zu aktualisieren.  
 
-###  <a name="a-namebkmkramdisktftpa-customize-the-ramdisk-tftp-block-size-and-window-size-on-pxe-enabled-distribution-points"></a><a name="BKMK_RamDiskTFTP"></a> Anpassen der RamDisk-TFTP-Blockgröße und der Fenstergröße auf PXE-fähigen Verteilungspunkten  
+###  <a name="BKMK_RamDiskTFTP"></a> Anpassen der RamDisk-TFTP-Blockgröße und der Fenstergröße auf PXE-fähigen Verteilungspunkten  
 Sie können die RamDisk-TFTP-Blockgröße und ab Configuration Manager Version 1606 die Fenstergröße für PXE-fähige Verteilungspunkte anpassen. Wenn Sie Ihr Netzwerk angepasst haben, kann dies wegen übermäßiger Block- oder Fenstergröße zu einem Timeout beim Herunterladen des Startimages führen. Durch Anpassen der RamDisk-TFTP-Blockgröße und der Fenstergröße können Sie den TFTP-Datenverkehr bei Verwendung von PXE für Ihre spezifischen Netzwerkanforderungen optimieren.   
 Sie müssen die benutzerdefinierten Einstellungen in Ihrer Umgebung testen, um die effizienteste Einstellung zu ermitteln.  
 
@@ -115,7 +116,7 @@ Sie müssen die benutzerdefinierten Einstellungen in Ihrer Umgebung testen, um d
 
      **Typ:**REG_DWORD  
 
-     **Wert:** <angepasste Fenstergröße\>  
+     **Wert**: &lt;angepasste Fenstergröße>  
 
  Der Standardwert ist 1 (1 Datenblock füllt das Fenster aus)  
 
@@ -128,12 +129,12 @@ Sie müssen die benutzerdefinierten Einstellungen in Ihrer Umgebung testen, um d
 
      **Typ:**REG_DWORD  
 
-     **Wert:** <angepasste Blockgröße\>  
+     **Wert**: &lt;angepasste Blockgröße>  
 
  Der Standardwert ist 4096 (4 KB).  
 
 
-###  <a name="a-namebkmkdpmulticasta-configure-distribution-points-to-support-multicast"></a><a name="BKMK_DPMulticast"></a> Konfigurieren von Verteilungspunkten für die Multicastunterstützung  
+###  <a name="BKMK_DPMulticast"></a> Konfigurieren von Verteilungspunkten für die Multicastunterstützung  
  Multicast ist eine Netzwerkoptimierungsmethode, die Sie für Verteilungspunkte verwenden können, wenn von mehreren Clients wahrscheinlich das gleiche Betriebssystemabbild gleichzeitig heruntergeladen wird. Bei Verwendung von Multicast wird das Betriebssystemabbild vom Verteilungspunkt mithilfe von Multicast übertragen und kann von mehreren Computern gleichzeitig heruntergeladen werden, anstatt dass vom Verteilungspunkt über jeweils eine separate Verbindung Kopien der Daten an jeden Client gesendet werden. Sie müssen mindestens einen Verteilungspunkt für die Multicastunterstützung konfigurieren. Weitere Informationen finden Sie unter [Verwenden von Multicast zum Bereitstellen von Windows über das Netzwerk](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md).  
 
  Sie müssen einen Verteilungspunkt für die Multicastunterstützung konfigurieren, bevor Sie das Betriebssystem bereitstellen. Ändern Sie einen vorhandenen Verteilungspunkt mithilfe des folgenden Verfahrens so, dass Multicast unterstützt wird. Informationen zum Installieren eines neuen Verteilungspunkts finden Sie unter [Installieren und Konfigurieren von Verteilungspunkten](../../core/servers/deploy/configure/install-and-configure-distribution-points.md).
@@ -176,7 +177,7 @@ Sie müssen die benutzerdefinierten Einstellungen in Ihrer Umgebung testen, um d
 
 6.  Klicken Sie auf **OK**.  
 
-##  <a name="a-namebkmkstatemigrationpointsa-state-migration-point"></a><a name="BKMK_StateMigrationPoints"></a> Zustandsmigrationspunkt  
+##  <a name="BKMK_StateMigrationPoints"></a> Zustandsmigrationspunkt  
  Vom Zustandsmigrationspunkt werden die auf einem Computer erfassten Benutzerdaten gespeichert und anschließend auf einem anderen Computer wiederhergestellt. Wenn Sie jedoch Benutzereinstellungen für eine Betriebssystembereitstellung auf dem gleichen Computer erfassen, z. B. zur Aktualisierung des Betriebssystems auf dem Zielcomputer, können Sie die Daten auf dem gleichen Computer unter Verwendung von festen Links oder auf dem Zustandsmigrationspunkt speichern. Wenn Sie den Statusspeicher erstellen, wird von Configuration Manager bei einigen Computerbereitstellungen automatisch eine Zuordnung zwischen Statusspeicher und Zielcomputer erstellt. Berücksichtigen Sie bei der Planung des Zustandsmigrationspunkts die folgenden Faktoren:  
 
 ### <a name="user-state-size"></a>Größe des Benutzerzustands  
@@ -202,9 +203,9 @@ Sie müssen die benutzerdefinierten Einstellungen in Ihrer Umgebung testen, um d
 ### <a name="configure-a-state-migration-point"></a>Konfigurieren eines Zustandsmigrationspunkts  
  Mithilfe der folgenden Methoden können Sie einen Zustandsmigrationspunkt zum Speichern der Benutzerzustandsdaten konfigurieren:  
 
--   Verwenden Sie den Assistenten zum Erstellen von ** ** Standortsystemservern, um einen neuen Standortsystemserver für den Zustandsmigrationspunkt zu erstellen.  
+-   Verwenden Sie den Assistenten zum Erstellen von ****  Standortsystemservern, um einen neuen Standortsystemserver für den Zustandsmigrationspunkt zu erstellen.  
 
--   Verwenden Sie den Assistenten zum Hinzufügen von ** ** Standortsystemrollen, um einem vorhandenen Server einen Zustandsmigrationspunkt hinzuzufügen.  
+-   Verwenden Sie den Assistenten zum Hinzufügen von ****  Standortsystemrollen, um einem vorhandenen Server einen Zustandsmigrationspunkt hinzuzufügen.  
 
  Wenn Sie diese Assistenten verwenden, werden Sie aufgefordert, die folgenden Angaben zum Zustandsmigrationspunkt zu machen:  
 
@@ -219,9 +220,4 @@ Sie müssen die benutzerdefinierten Einstellungen in Ihrer Umgebung testen, um d
 -   Ob vom Zustandsmigrationspunkt nur Anforderungen zum Wiederherstellen von Benutzerzustandsdaten beantwortet werden. Wenn Sie diese Option aktivieren, können Sie den Zustandsmigrationspunkt nicht zum Speichern von Benutzerzustandsdaten verwenden.  
 
  Die Schritte zum Installieren einer Standortsystemrolle finden Sie unter [Hinzufügen von Standortsystemrollen](../../core/servers/deploy/configure/add-site-system-roles.md).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

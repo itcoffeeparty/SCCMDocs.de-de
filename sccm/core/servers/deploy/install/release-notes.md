@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: aca3525fc143b281f41c3d9bd20bb93b1d91f6ce
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
+ms.openlocfilehash: 44338c705e308896c5203be239c160a8220369a8
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -234,4 +234,11 @@ Dies geschieht nur, wenn Sie dieselbe **Benutzersammlung** zur Seite **Ausnahmen
 Dieses Problem betrifft den bedingten Zugriff von System Center Configuration Manager auf **Exchange lokal** mit Update 1602 und soll in einem zukünftigen Update behoben werden.  
 
 **Problemumgehung:** Fügen Sie die **Benutzersammlung** zur Seite **Zielsammlungen** hinzu, bevor Sie die **Benutzersammlung** auf der Seite **Ausnahmensammlungen** auswählen, oder stellen Sie sicher, dass Sie die gleiche **Benutzersammlung** nicht sowohl einer Zielsammlung als auch einer Ausnahmensammlung hinzufügen.
+
+## <a name="endpoint-protection"></a>Endpoint Protection
+<!--  Product Studio bug 485370 added by Nathbarn 04 19 2017 -->
+### <a name="antimalware-policy-fails-to-apply-on-windows-server-2016-core"></a>Richtlinie für Antischadsoftware kann unter Windows Server 2016 Core nicht angewendet werden
+Die Richtlinie für Antischadsoftware kann unter Windows Server 2016 Core nicht angewendet werden.  Der Fehlercode lautet 0x80070002.  Fehlende Abhängigkeit für ConfigSecurityPolicy.exe.
+
+**Problemumgehung:**  Keine.  Als Administrator können Sie Gruppenrichtlinien zum Verwalten von Einstellungen für Windows Server 2016 Core verwenden.
 

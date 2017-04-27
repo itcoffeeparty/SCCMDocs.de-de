@@ -2,7 +2,7 @@
 title: "Voraussetzungsprüfung | Microsoft-Dokumentation"
 description: "Gehen Sie die verfügbaren Voraussetzungsprüfungen für System Center Configuration Manager durch. Enthält Voraussetzungsprüfungen für Sicherheitsrechte."
 ms.custom: na
-ms.date: 3/1/2017
+ms.date: 4/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,16 +16,16 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 496c1444822a4601fad67f421115a609e976386d
-ms.openlocfilehash: 5a8f4a84ef5b4ccb4434ca8eb260c1c7899207ab
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: dda2f4c01078fbbd174cbcb30357554c24f6abeb
+ms.openlocfilehash: 14834f62ffaa8fcba5ddb7536a0b76e18b557e53
+ms.lasthandoff: 04/17/2017
 
 ---
 # <a name="list-of-prerequisite-checks-for-system-center-configuration-manager"></a>Liste der Voraussetzungsprüfungen für System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-In den folgenden Abschnitten werden die verfügbaren Voraussetzungsprüfungen ausführlich erläutert. 
+In den folgenden Abschnitten werden die verfügbaren Voraussetzungsprüfungen ausführlich erläutert.
 
 Informationen zum Verwenden der Voraussetzungsprüfung finden Sie unter [Voraussetzungsprüfung](prerequisite-checker.md).  
 
@@ -117,7 +117,7 @@ Die folgende Tabelle listet die Prüfungen auf, die für die Systemanforderungen
 |**Domänenmitgliedschaft**|Stellt sicher, dass der Configuration Manager-Computer Mitglied einer Windows-Domäne ist.|Fehler|Standort der zentralen Verwaltung, <br>Primärer Standort, <br>Sekundärer Standort, <br>SMS-Anbieter, <br>SQL Server|
 |**Domänenmitgliedschaft**|Stellt sicher, dass der Configuration Manager-Computer Mitglied einer Windows-Domäne ist.|Warnung|Verwaltungspunkt, <br>Verteilungspunkt|
 |**FAT-Laufwerk auf dem Standortserver**|Überprüft, ob das Laufwerk mit dem FAT-Dateisystem formatiert ist. Installieren Sie für eine erhöhte Sicherheit die Standortserverkomponenten auf Laufwerken, die mit dem NTFS-Dateisystem für mehr Sicherheit formatiert sind.|Warnung|Primärer Standort|
-|**Freier Speicherplatz auf dem Standortserver**|Dem Standortservercomputer müssen mindestens 5 GB freier Speicherplatz für die Installation des Standortservers zur Verfügung stehen. Wenn Sie die Standortsystemrolle SMS-Anbieter auf demselben Computer installieren, benötigen Sie zusätzlich 1 GB freien Speicherplatz.|Fehler|Standort der zentralen Verwaltung, <br>Primärer Standort, <br>Sekundärer Standort|
+|**Freier Speicherplatz auf dem Standortserver**|Dem Standortservercomputer müssen mindestens 15 GB freier Speicherplatz für die Installation des Standortservers zur Verfügung stehen. Wenn Sie die Standortsystemrolle SMS-Anbieter auf demselben Computer installieren, benötigen Sie zusätzlich 1 GB freien Speicherplatz.|Fehler|Standort der zentralen Verwaltung, <br>Primärer Standort, <br>Sekundärer Standort|
 |**Ausstehender Systemneustart**|Überprüft, ob ein anderes Programm einen Serverneustart benötigt, bevor Sie Setup ausführen.|Fehler|Standort der zentralen Verwaltung, <br>Primärer Standort, <br>Sekundärer Standort, <br>Configuration Manager-Konsole, <br>SMS-Anbieter, <br>SQL Server, <br>Verwaltungspunkt, <br>Verteilungspunkt|
 |**Domänencontroller ohne Schreibzugriff**|Standortdatenbankserver und sekundäre Standortserver werden auf einem Domänencontroller ohne Schreibzugriff nicht unterstützt. Weitere Informationen finden Sie unter [Problems when installing SQL Server on a domain controller (Probleme, die beim Installieren eines SQL Servers auf einem Domänencontroller auftreten können)](http://go.microsoft.com/fwlink/p/?LinkId=264856) in der Microsoft Knowledge Base.|Fehler|Standort der zentralen Verwaltung, <br>Primärer Standort, <br>Sekundärer Standort|
 |**Schemaerweiterungen**|Stellt fest, ob das Active Directory-Domänendienste-Schema erweitert wurde, und ermittelt, wenn dies der Fall ist, die Version der verwendeten Schemaerweiterungen. Configuration Manager-Active Directory-Schemaerweiterungen sind nicht für die Standortserverinstallation erforderlich. Sie werden jedoch empfohlen, damit die Verwendung aller Configuration Manager-Features vollständig unterstützt wird. Weitere Informationen zu den Vorteilen einer Schemaerweiterung finden Sie unter [Vorbereiten von Active Directory für die Veröffentlichung eines Standorts](../../../../core/plan-design/network/extend-the-active-directory-schema.md).|Warnung|Standort der zentralen Verwaltung, <br>Primärer Standort|

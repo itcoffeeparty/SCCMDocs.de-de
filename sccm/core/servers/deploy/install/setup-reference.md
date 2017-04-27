@@ -2,7 +2,7 @@
 title: Einrichten der Referenz | Microsoft-Dokumentation
 description: "Überprüfen Sie diese Referenz zur Vorbereitung der Installation eines Configuration Manager-Standorts oder einer Configuration Manager-Hierarchie."
 ms.custom: na
-ms.date: 2/7/2017
+ms.date: 4/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: fc9c8c1e6d57e886e5208d8b8968cb936c269a01
-ms.openlocfilehash: beddcdb0349af4d232cd75ae742f02074abc350d
+ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
+ms.openlocfilehash: 739461a6cca0fd67431093524c1e8158afd80d0f
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -27,25 +28,21 @@ ms.openlocfilehash: beddcdb0349af4d232cd75ae742f02074abc350d
 
 Das System Center Configuration Manager-Setup stellt Links zu verschiedenen Themen bereit, die in den folgenden Abschnitten erläutert werden. Die hier aufgeführten Informationen helfen Ihnen beim Vorbereiten der Installation eines Configuration Manager-Standorts oder einer Hierarchie und bereiten Sie auf einige Entscheidungen vor, die Sie während der Installation treffen müssen.  
 
--   [Vorbereitung](#bkmk_start)  
--   [Bewerten der Serverbereitschaft](#bkmk_assess)  
--   [Clients für weitere Betriebssysteme](#bkmk_Addclients)  
--   [Diagnose- und Nutzungsdaten für System Center Configuration Manager](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)  
 
-##  <a name="a-namebkmkstarta-before-you-begin"></a><a name="bkmk_start"></a> Vorbereitung  
+##  <a name="bkmk_start"></a> Vorbereitung  
 Stellen Sie vor der Installation neuer Configuration Manager-Standorte sicher, dass Sie die folgenden Informationen gelesen haben, die als Grundlage für den Entwurf einer erfolgreichen Bereitstellung dienen können:  
 
 -   [Grundlagen von System Center Configuration Manager](../../../../core/understand/fundamentals.md)  
 -   [Planen Ihrer System Center Configuration Manager-Infrastruktur](../../../plan-design/network/configure-firewalls-ports-domains.md)  
 -   [Prepare to install System Center Configuration Manager sites (Vorbereiten der Installation von System Center Configuration Manager-Standorten)](prepare-to-install-sites.md)  
 
-##  <a name="a-namebkmkassessa-assess-server-readiness"></a><a name="bkmk_assess"></a> Bewerten der Serverbereitschaft  
+##  <a name="bkmk_assess"></a> Bewerten der Serverbereitschaft  
 Stellen Sie vor Beginn der Installation eines neuen Standorts sicher, dass der Standortserver und die Remote-Standortsystemserver, die Sie für den Standort verwenden möchten (wie z.B. der Server, der die Standortdatenbank hostet), alle Konfigurationsvoraussetzungen erfüllen. Diese Themen in der Dokumentationsbibliothek können dabei behilflich sein:  
 
 -   [Unterstützte Konfigurationen für System Center Configuration Manager](../../../../core/plan-design/configs/supported-configurations.md)  
 -   [Voraussetzungsprüfung](prerequisite-checker.md)  
 
-##  <a name="a-namebkmkaddclientsa-clients-for-additional-operating-systems"></a><a name="bkmk_Addclients"></a> Clients für weitere Betriebssysteme  
+##  <a name="bkmk_Addclients"></a> Clients für weitere Betriebssysteme  
 Sie können Clientsoftware für Configuration Manager für die folgenden Betriebssysteme aus dem Microsoft Download Center herunterladen:  
 
 -   Mac (Apple)  
@@ -54,12 +51,9 @@ Sie können Clientsoftware für Configuration Manager für die folgenden Betrieb
 
 Verwenden Sie die folgenden Links zum Herunterladen von Clients für Ihre verwendete Version von Configuration Manager:  
 
--   [System Center Configuration Manager (aktueller Branch)](http://www.microsoft.com/download/details.aspx?id=47719)  
--   [System Center 2012 R2 Configuration Manager SP1 und System Center 2012 Configuration Manager SP2](http://go.microsoft.com/fwlink/?LinkID=626550)  
--   [System Center 2012 R2 Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=316448)  
--   [System Center 2012 Configuration Manager SP1](http://www.microsoft.com/en-pk/download/details.aspx?id=36212)  
+-   Weitere Informationen finden Sie unter [Microsoft System Center Configuration Manager – Clients für weitere Betriebssysteme](http://www.microsoft.com/download/details.aspx?id=47719).  
 
-##  <a name="a-namebkmkusagea-usage-data-levels-and-settings"></a><a name="bkmk_usage"></a> Ebenen und Einstellungen für Nutzungsdaten  
+##  <a name="bkmk_usage"></a> Ebenen und Einstellungen für Nutzungsdaten  
 Bei der Installation des ersten System Center Configuration Manager-Standorts wird von Configuration Manager automatisch eine neue Standortsystemrolle, der **Dienstverbindungspunkt**, auf dem Standortserver installiert und konfiguriert. Der Dienstverbindungspunkt weist die folgenden Standardeinstellungen auf:  
 
 -   **Onlinemodus** (ein Offlinemodus ist ebenfalls verfügbar)  
@@ -82,10 +76,5 @@ Die drei Ebenen der Datensammlung:
 
 Weitere Informationen, z.B. bezüglich der Offenlegung der auf den einzelnen Ebenen erfassten Details, finden Sie unter [Diagnose- und Nutzungsdaten für System Center Configuration Manager](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).  
 
-[Datenschutzbestimmungen für System Center Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=626527)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
+Um die Datenschutzbestimmungen für System Center Configuration Manager online anzuzeigen, navigieren Sie zu [http://go.microsoft.com/fwlink/?LinkID=626527](http://go.microsoft.com/fwlink/?LinkID=626527).
 
