@@ -16,8 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6bb2bf0a029bc21e9420ac0ba782e8ea21291896
-ms.openlocfilehash: 692e8331f39f7c9ce78a6b710b8990760bf128c4
+ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
+ms.openlocfilehash: b4b04907f2cd48d81e864e46ca47c14a0b98a9f7
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -27,7 +28,7 @@ ms.openlocfilehash: 692e8331f39f7c9ce78a6b710b8990760bf128c4
 
 Tasksequenzen in System Center Configuration Manager dienen zum Automatisieren einer Vielzahl von Aufgaben in Ihrer Umgebung. Diese Tasks wurden in erster Linie für die Bereitstellung von Betriebssystemen konzipiert und getestet.  Configuration Manager bietet viele weitere Features für den Einsatz als primäre Technologie in Szenarios wie [Anwendungsinstallation](../../apps/understand/introduction-to-application-management.md), [Installation von Softwareupdates](../../sum/understand/software-updates-introduction.md), [Konfiguration von Einstellungen](../../compliance/understand/ensure-device-compliance.md) oder benutzerdefinierte Automatisierung. Es gibt noch weitere Microsoft System Center-Automatisierungstechnologien wie [Orchestrator](https://technet.microsoft.com/library/hh237242.aspx) und [Service Management Automation](https://technet.microsoft.com/library/dn469260.aspx) , die Sie auch in Erwägung ziehen sollten.  
 
-Tasksequenzen sind ein mächtiges Werkzeug, weil sie flexibel sind und Ihnen dabei helfen, Clienteinstellungen zu konfigurieren, Software zu verteilen, Treiber zu aktualisieren, den Status von Benutzern zu bearbeiten und andere Tasks auszuführen, die nicht mit der Betriebssystembereitstellung in Zusammenhang stehen. Sie können eine benutzerdefinierte Tasksequenz erstellen, der Sie beliebig viele Tasks hinzufügen können. Sie können eine benutzerdefinierte Tasksequenz erstellen, der Sie beliebig viele Tasks hinzufügen können. Für Bereitstellungen, bei denen kein Betriebssystem bereitgestellt wird, lassen sich in Configuration Manager benutzerdefinierte Tasksequenzen verwenden. Sollte eine Tasksequenz jedoch ungewollte oder inkonsistente Ergebnisse liefern, versuchen Sie den Vorgang zu vereinfachen. Dies erreichen Sie, indem Sie einfachere Schritte verwenden und die Aktionen auf mehrere Tasksequenzen aufteilen oder indem Sie das Erstellen und Testen der Tasksequenz in Phasen aufteilen.
+Tasksequenzen sind ein mächtiges Werkzeug, weil sie flexibel sind und Ihnen dabei helfen, Clienteinstellungen zu konfigurieren, Software zu verteilen, Treiber zu aktualisieren, den Status von Benutzern zu bearbeiten und andere Tasks auszuführen, die nicht mit der Betriebssystembereitstellung in Zusammenhang stehen. Sie können eine benutzerdefinierte Tasksequenz erstellen, der Sie beliebig viele Tasks hinzufügen können. Für Bereitstellungen, bei denen kein Betriebssystem bereitgestellt wird, lassen sich in Configuration Manager benutzerdefinierte Tasksequenzen verwenden. Sollte eine Tasksequenz jedoch ungewollte oder inkonsistente Ergebnisse liefern, versuchen Sie den Vorgang zu vereinfachen. Dies erreichen Sie, indem Sie einfachere Schritte verwenden und die Aktionen auf mehrere Tasksequenzen aufteilen oder indem Sie das Erstellen und Testen der Tasksequenz in Phasen aufteilen.
 
  Folgende Schritte können in einer benutzerdefinierten Tasksequenz verwendet werden, die nicht für die Bereitstellung eines Betriebssystems gedacht ist:  
 
@@ -55,9 +56,4 @@ Tasksequenzen sind ein mächtiges Werkzeug, weil sie flexibel sind und Ihnen dab
 
 ## <a name="next-steps"></a>Nächste Schritte
 [Deploy the task sequence (Bereitstellen der Tasksequenz)](manage-task-sequences-to-automate-tasks.md#a-namebkmkdeploytsa-deploy-a-task-sequence)
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 

@@ -15,9 +15,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 6820b6d4423ab0ac250effb4ec1160432de8eaba
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
+ms.openlocfilehash: 528ce515c86c4e778532290026a90a46476c4576
+ms.lasthandoff: 04/21/2017
 
 
 ---
@@ -36,21 +36,19 @@ Fügen Sie in einer vorhandenen Tasksequenz zum Installieren eines Betriebssyste
 1. Erstellen Sie eine neue Tasksequenzgruppe nach den Schritten zum Erfassen von Dateien und Einstellungen und vor den Schritten zum Installieren des Betriebssystems. Erstellen Sie z.B. eine Gruppe nach der Gruppe **Dateien und Einstellungen erfassen** namens **BIOS zu UEFI**.
 2. Fügen Sie auf der Registerkarte **Optionen** der neuen Gruppe eine neue Tasksequenzvariable als Bedingung hinzu, wobei **_SMSTSBootUEFI** **ungleich** **TRUE** ist. Dadurch wird verhindert, dass die Schritte in der Gruppe ausgeführt werden, wenn sich ein Computer bereits im UEFI-Modus befindet.
 
-   ![Gruppe „BIOS zu UEFI“](../../core/get-started/media/BIOS-to-UEFI-group.png)
+  ![Gruppe „BIOS zu UEFI“](../../core/get-started/media/BIOS-to-UEFI-group.png)
 3. Fügen Sie der neuen Gruppe den Tasksequenzschritt **Computer neu starten** hinzu. Wählen Sie unter **Geben Sie an, was nach dem Neustart ausgeführt werden soll** **The boot image assigned to this task sequence is selected** (Das dieser Tasksequenz zugewiesene Startimage wird ausgewählt) aus, um den Computer in Windows PE zu starten.  
 4. Fügen Sie auf der Registerkarte **Optionen** eine Tasksequenzvariable als Bedingung hinzu, wobei **_SMSTSInWinPE ist gleich FALSE**. Dadurch wird verhindert, dass dieser Schritt ausgeführt, wenn sich der Computer bereits in Windows PE befindet.
 
-    ![Schritt „Computer neu starten“](../../core/get-started/media/restart-in-windows-pe.png)
+  ![Schritt „Computer neu starten“](../../core/get-started/media/restart-in-windows-pe.png)
 5. Fügen Sie einen Schritt zum Starten des OEM-Tools hinzu, das die Firmware von BIOS in UEFI konvertiert. Dabei handelt es sich normalerweise um einen Tasksequenzschritt **Befehlszeile ausführen** mit einer Befehlszeile zum Starten des OEM-Tools.
-6.    Fügen Sie den Tasksequenzschritt „Datenträger formatieren und partitionieren“ hinzu, durch den die Festplatte formatiert und partitioniert wird. Führen Sie im Schritt Folgendes aus:
-    1.    Erstellen Sie die FAT32-Partition, die in UEFI konvertiert wird, bevor das Betriebssystem installiert wird. Wählen Sie **GPT** als **Datenträgertyp** aus.
-
-       ![Schritt „Datenträger formatieren und partitionieren“](../media/format-and-partition-disk.png)
-    2.    Wechseln Sie zu den Eigenschaften für die FAT32-Partition. Geben Sie **TSUEFIDrive** in das Feld **Variable** ein. Wenn diese Variable von der Tasksequenz erkannt wird, wird diese sich vor dem Neustart des Computers auf den Übergang zu UEFI vorbereiten.
-
-       ![Partitionseigenschaften](../../core/get-started/media/partition-properties.png)
-    3. Erstellen Sie eine NTFS-Partition, die vom Tasksequenzmodul verwendet wird, um dessen Zustand sowie Protokolldateien zu speichern.
-7.    Fügen Sie den Tasksequenzschritt **Computer neu starten** hinzu. Wählen Sie unter **Geben Sie an, was nach dem Neustart ausgeführt werden soll** **The boot image assigned to this task sequence is selected** (Das dieser Tasksequenz zugewiesene Startimage wird ausgewählt) aus, um den Computer in Windows PE zu starten.  
+6. Fügen Sie den Tasksequenzschritt „Datenträger formatieren und partitionieren“ hinzu, durch den die Festplatte formatiert und partitioniert wird. Führen Sie im Schritt Folgendes aus:
+  1. Erstellen Sie die FAT32-Partition, die in UEFI konvertiert wird, bevor das Betriebssystem installiert wird. Wählen Sie **GPT** als **Datenträgertyp** aus.
+    ![Schritt „Datenträger formatieren und partitionieren“](../media/format-and-partition-disk.png)
+  2. Wechseln Sie zu den Eigenschaften für die FAT32-Partition. Geben Sie **TSUEFIDrive** in das Feld **Variable** ein. Wenn diese Variable von der Tasksequenz erkannt wird, wird diese sich vor dem Neustart des Computers auf den Übergang zu UEFI vorbereiten.
+    ![Partitionseigenschaften](../../core/get-started/media/partition-properties.png)
+  3. Erstellen Sie eine NTFS-Partition, die vom Tasksequenzmodul verwendet wird, um dessen Zustand sowie Protokolldateien zu speichern.
+7. Fügen Sie den Tasksequenzschritt **Computer neu starten** hinzu. Wählen Sie unter **Geben Sie an, was nach dem Neustart ausgeführt werden soll** **The boot image assigned to this task sequence is selected** (Das dieser Tasksequenz zugewiesene Startimage wird ausgewählt) aus, um den Computer in Windows PE zu starten.  
 
 ## <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>Konvertieren von BIOS zu UEFI während eines direkten Upgrades
 Windows 10 Creators Update führt ein einfaches Konvertierungstool ein, womit der Prozess der Neupartitionierung der Festplatte für UEFI-aktivierte Hardware automatisiert werden kann und das Konvertierungstool in den direkten Upgradeprozess von Windows 7 zu Windows 10 integriert werden kann. Wenn Sie dieses Tool mit Ihrer Tasksequenz des Betriebssystemupgrades und dem OEM-Tool kombinieren, der die Firmware von BIOS zu UEFI konvertiert, können Sie Ihre Computer von BIOS zu UEFI während eines direkten Upgrades zu Windows 10 Creators Update konvertieren.
@@ -61,13 +59,10 @@ Windows 10 Creators Update führt ein einfaches Konvertierungstool ein, womit de
 - OEM-Tool, das die Firmware des Computers vom BIOS zu UEFI konvertiert
 
 ### <a name="to-convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>Konvertieren von BIOS zu UEFI während eines direkten Upgrades
-1.    Erstellen Sie eine Tasksequenz für ein Betriebssystemupgrade, die ein direktes Upgrade auf Windows 10 Creators Update durchführt.
-2.    Bearbeiten Sie die Tasksequenz. Fügen Sie diese zusätzlichen Tasksequenzschritte in der **Nachbearbeitungsgruppe** hinzu.
-    1.    Fügen Sie den Schritt **Befehlszeile ausführen** unter „Allgemein“ hinzu. Sie werden die Befehlszeile für das MBR2GPT-Tool hinzufügen, das einen Datenträger von MBR zu GPT konvertiert, ohne Daten zu ändern oder vom Datenträger zu löschen. Geben Sie in der Befehlszeile Folgendes ein: **MBR2GPT /convert /disk:0 /AllowFullOS**.
-        > [!NOTE]  
-           > Sie können auch das MBR2GPT.EXE-Tool ausführen, wenn Sie sich unter Windows PE statt in der Vollversion des Betriebssystems befinden. Sie können dazu einen Schritt vor dem Schritt zum Ausführen des MBR2GPT.EXE-Tools zum Neustart des Computers zu WinPE hinzufügen und die /AllowFullOS-Option aus der Befehlszeile entfernen. Weitere Informationen über das Tool und die verfügbaren Optionen finden Sie unter [MBR2GPT.EXE](https://technet.microsoft.com/itpro/windows/deploy/mbr-to-gpt).
-
-    2.    Fügen Sie einen Schritt zum Starten des OEM-Tools hinzu, das die Firmware von BIOS in UEFI konvertiert. Dabei handelt es sich normalerweise um einen Tasksequenzschritt „Befehlszeile ausführen“ mit einer Befehlszeile zum Starten des OEM-Tools.
-    3.    Fügen Sie den Schritt **Computer neu starten** unter „Allgemein“ hinzu. Für „Geben Sie an, was nach dem Neustart ausgeführt werden soll“, wählen Sie **Aktuell installiertes Standardbetriebssystem** aus.
-3.    Bereitstellen der Tasksequenz
+1. Erstellen Sie eine Tasksequenz für ein Betriebssystemupgrade, die ein direktes Upgrade auf Windows 10 Creators Update durchführt.
+2. Bearbeiten Sie die Tasksequenz. Fügen Sie diese zusätzlichen Tasksequenzschritte in der **Nachbearbeitungsgruppe** hinzu.
+   1. Fügen Sie den Schritt **Befehlszeile ausführen** unter „Allgemein“ hinzu. Sie werden die Befehlszeile für das MBR2GPT-Tool hinzufügen, das einen Datenträger von MBR zu GPT konvertiert, ohne Daten zu ändern oder vom Datenträger zu löschen. Geben Sie in der Befehlszeile Folgendes ein: **MBR2GPT /convert /disk:0 /AllowFullOS**. Sie können auch das MBR2GPT.EXE-Tool ausführen, wenn Sie sich unter Windows PE statt in der Vollversion des Betriebssystems befinden. Sie können dazu einen Schritt vor dem Schritt zum Ausführen des MBR2GPT.EXE-Tools zum Neustart des Computers zu WinPE hinzufügen und die /AllowFullOS-Option aus der Befehlszeile entfernen. Weitere Informationen über das Tool und die verfügbaren Optionen finden Sie unter [MBR2GPT.EXE](https://technet.microsoft.com/itpro/windows/deploy/mbr-to-gpt).
+   2. Fügen Sie einen Schritt zum Starten des OEM-Tools hinzu, das die Firmware von BIOS in UEFI konvertiert. Dabei handelt es sich normalerweise um einen Tasksequenzschritt „Befehlszeile ausführen“ mit einer Befehlszeile zum Starten des OEM-Tools.
+   3. Fügen Sie den Schritt **Computer neu starten** unter „Allgemein“ hinzu. Für „Geben Sie an, was nach dem Neustart ausgeführt werden soll“, wählen Sie **Aktuell installiertes Standardbetriebssystem** aus.
+3. Bereitstellen der Tasksequenz
 

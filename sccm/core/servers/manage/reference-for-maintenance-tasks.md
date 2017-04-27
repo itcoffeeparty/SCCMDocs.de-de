@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
-ms.openlocfilehash: c3ca3b895d54b6dc886068b92b39d0d95c466de2
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
+ms.openlocfilehash: a2d4420c2274a9b1ceb47ffd267849fdb5a55a61
+ms.lasthandoff: 04/26/2017
 
 
 ---
@@ -147,7 +147,7 @@ Dieser Task gilt für Geräte, die über Microsoft Intune (hybrid) oder über di
 -   **Primärer Standort**: Aktiviert    
 -   **Sekundärer Standort**: Aktiviert  
 
-**Veralteten Benachrichtigungstaskverlauf löschen**: Verwenden Sie diesen Task zum Löschen von Informationen über Clientbenachrichtigungstasks aus der Standortdatenbank, wenn die Daten innerhalb eines angegebenen Zeitraums nicht aktualisiert wurden. Weitere Informationen zur Clientbenachrichtigung finden Sie unter [Clientbereitstellungstasks für System Center Configuration Manager](../../../core/clients/deploy/client-deployment-tasks.md).  
+**Veralteten Benachrichtigungstaskverlauf löschen**: Verwenden Sie diesen Task zum Löschen von Informationen über Clientbenachrichtigungstasks aus der Standortdatenbank, wenn die Daten innerhalb eines angegebenen Zeitraums nicht aktualisiert wurden. Weitere Informationen zur Clientbenachrichtigung finden Sie unter [Clientbereitstellungstasks für System Center Configuration Manager](../../../core/clients/manage/monitor-clients.md).  
 
 -   Standortserver der zentralen Verwaltung: Nicht verfügbar    
 -   **Primärer Standort**: Aktiviert    
@@ -159,7 +159,7 @@ Dieser Task gilt für Geräte, die über Microsoft Intune (hybrid) oder über di
 -   **Primärer Standort**: Aktiviert    
 -   **Sekundärer Standort**: Aktiviert  
 
-**Veraltete Kennungsdatensätze löschen**: Verwenden Sie diesen Task am Standort auf oberster Ebene der Hierarchie, um veraltete Daten zu Kennungszurücksetzungen für Android- und Windows Phone-Geräte zu löschen. Daten zum Zurücksetzen der Kennung sind verschlüsselt, enthalten allerdings die PIN für Geräte. Standardmäßig ist dieser Task aktiviert und löscht Daten, die älter als&1; Tag sind.  
+**Veraltete Kennungsdatensätze löschen**: Verwenden Sie diesen Task am Standort auf oberster Ebene der Hierarchie, um veraltete Daten zu Kennungszurücksetzungen für Android- und Windows Phone-Geräte zu löschen. Daten zum Zurücksetzen der Kennung sind verschlüsselt, enthalten allerdings die PIN für Geräte. Standardmäßig ist dieser Task aktiviert und löscht Daten, die älter als 1 Tag sind.  
 
 -   **Standort der zentralen Verwaltung**: Aktiviert    
 -   **Primärer Standort**: Aktiviert    

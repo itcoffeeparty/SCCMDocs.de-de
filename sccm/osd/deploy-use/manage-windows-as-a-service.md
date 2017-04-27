@@ -16,9 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
-ms.openlocfilehash: 87c3a35f4688c505f9b659a1bfe62f7a04cc7f11
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
+ms.openlocfilehash: 2c2c0f81736c1b00ea487ae1261803a8105bb5e4
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -53,7 +53,6 @@ ms.lasthandoff: 03/29/2017
 -   Der Dienstverbindungspunkt muss installiert und für den Modus **Online, dauerhafte Verbindung** konfiguriert werden, um Daten im Windows 10-Wartungsdashboard anzuzeigen. Wenn Sie im Offlinemodus arbeiten, werden Datenaktualisierungen erst dann im Dashboard angezeigt, wenn Sie Configuration Manager-Wartungsupdates erhalten.   
      Weitere Informationen finden Sie unter [About the service connection point (Informationen zum Dienstverbindungspunkt)](../../core/servers/deploy/configure/about-the-service-connection-point.md).  
 
--   Legen Sie die Gruppenrichtlinieneinstellung **Upgrades und Updates aufschieben**fest, um zu bestimmen, ob ein Computer zu CB oder CBB zählt.  
 
 -   Auf dem Computer, auf dem die Configuration Manager-Konsole ausgeführt wird, muss Internet Explorer 9 installiert sein.  
 
@@ -122,14 +121,19 @@ Wartungspläne verwenden nur die Softwareupdateklassifizierung **Upgrades** und 
 
     -   **Zielsammlung**: Gibt den für die Bereitstellung zu verwendenden Wartungsplan an. Mitglieder dieser Sammlung erhalten die im Wartungsplan definierten Windows 10-Upgrades.  
 
-    > [!NOTE]  
-    >  Ab Version 1602 von Configuration Manager werden bei einer Bereitstellung mit hohem Risiko, wie z.B. einem Wartungsplan, im Fenster **Sammlung auswählen** nur die benutzerdefinierten Sammlungen angezeigt, die den in den Eigenschaften des Standorts konfigurierten Einstellungen zur Bereitstellungsüberprüfung entsprechen. Bereitstellungen mit hohem Risiko sind immer auf benutzerdefinierte Sammlungen, von Ihnen erstellte Sammlungen und die integrierte Sammlung **Unbekannte Computer** beschränkt. Beim Erstellen einer Bereitstellung mit hohem Risiko können Sie keine integrierte Sammlung auswählen, wie z. B. **Alle Systeme**. Deaktivieren Sie die Einstellung **Hide collections with a member count greater than the site's minimum size configuration** (Sammlungen mit einer Anzahl der Mitglieder ausblenden, die größer als die minimale Größenkonfiguration des Standorts ist), um alle benutzerdefinierten Sammlungen anzuzeigen, die weniger Clients als die konfigurierte maximale Größe enthalten. Weitere Informationen finden Sie unter [Einstellungen für die Verwaltung hochriskanter Bereitstellungen](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
-    > Die Einstellungen zur Bereitstellungsüberprüfung basieren auf der aktuellen Mitgliedschaft der Sammlung. Nach der Bereitstellung des Wartungsplans wird die Sammlungsmitgliedschaft für die Einstellungen für eine Bereitstellung mit hohem Risiko nicht erneut bewertet.  
-    > Angenommen, Sie legen **Standardgröße** auf 100 und **Maximale Größe** auf 1000 fest. Wenn Sie eine Bereitstellung mit hohem Risiko erstellen, werden im Fenster **Sammlung auswählen** nur die Sammlungen angezeigt, die weniger als 100 Clients enthalten. Wenn Sie die Einstellung **Hide collections with a member count greater than the site's minimum size configuration** (Sammlungen mit einer Anzahl der Mitglieder ausblenden, die größer als die minimale Größenkonfiguration des Standorts ist) deaktivieren, werden im Fenster Sammlungen angezeigt, die weniger als 1.000 Clients enthalten.  
-    > Wenn Sie eine Sammlung auswählen, die eine Standortrolle enthält, gilt Folgendes:  
-    >   
-    >  -   Wenn die Sammlung einen Standortsystemserver enthält und Sie die Einstellungen zur Bereitstellungsüberprüfung so konfigurieren, dass Sammlungen mit Standortsystemservern blockiert werden, tritt ein Fehler auf, und Sie können nicht fortfahren.  
-    > -   Wenn die Sammlung einen Standortsystemserver enthält und Sie die Einstellungen zur Bereitstellungsüberprüfung so konfigurieren, dass Sie im Fall von Sammlungen mit Standortsystemservern gewarnt werden, wird im Assistenten zum Bereitstellen von Software eine Warnung über ein hohes Risiko angezeigt, falls die Sammlung den Standardwert für die Größe überschreitet oder falls die Sammlung einen Server enthält. Sie müssen der Erstellung einer Bereitstellung mit hohem Risiko zustimmen, und eine Überwachungsstatusmeldung wird erstellt.  
+        > [!NOTE]  
+        >  Ab Version 1602 von Configuration Manager werden bei einer Bereitstellung mit hohem Risiko, wie z.B. einem Wartungsplan, im Fenster **Sammlung auswählen** nur die benutzerdefinierten Sammlungen angezeigt, die den in den Eigenschaften des Standorts konfigurierten Einstellungen zur Bereitstellungsüberprüfung entsprechen.
+        >    
+        > Bereitstellungen mit hohem Risiko sind immer auf benutzerdefinierte Sammlungen, von Ihnen erstellte Sammlungen und die integrierte Sammlung **Unbekannte Computer** beschränkt. Beim Erstellen einer Bereitstellung mit hohem Risiko können Sie keine integrierte Sammlung auswählen, wie z. B. **Alle Systeme**. Deaktivieren Sie die Einstellung **Hide collections with a member count greater than the site's minimum size configuration** (Sammlungen mit einer Anzahl der Mitglieder ausblenden, die größer als die minimale Größenkonfiguration des Standorts ist), um alle benutzerdefinierten Sammlungen anzuzeigen, die weniger Clients als die konfigurierte maximale Größe enthalten. Weitere Informationen finden Sie unter [Einstellungen für die Verwaltung hochriskanter Bereitstellungen](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
+        >  
+        > Die Einstellungen zur Bereitstellungsüberprüfung basieren auf der aktuellen Mitgliedschaft der Sammlung. Nach der Bereitstellung des Wartungsplans wird die Sammlungsmitgliedschaft für die Einstellungen für eine Bereitstellung mit hohem Risiko nicht erneut bewertet.  
+        >  
+        > Angenommen, Sie legen **Standardgröße** auf 100 und **Maximale Größe** auf 1000 fest. Wenn Sie eine Bereitstellung mit hohem Risiko erstellen, werden im Fenster **Sammlung auswählen** nur die Sammlungen angezeigt, die weniger als 100 Clients enthalten. Wenn Sie die Einstellung **Hide collections with a member count greater than the site's minimum size configuration** (Sammlungen mit einer Anzahl der Mitglieder ausblenden, die größer als die minimale Größenkonfiguration des Standorts ist) deaktivieren, werden im Fenster Sammlungen angezeigt, die weniger als 1.000 Clients enthalten.  
+        >
+        > Wenn Sie eine Sammlung auswählen, die eine Standortrolle enthält, gilt Folgendes:    
+        >   
+        >    - Wenn die Sammlung einen Standortsystemserver enthält und Sie die Einstellungen zur Bereitstellungsüberprüfung so konfigurieren, dass Sammlungen mit Standortsystemservern blockiert werden, tritt ein Fehler auf, und Sie können nicht fortfahren.    
+        >    - Wenn die Sammlung einen Standortsystemserver enthält und Sie die Einstellungen zur Bereitstellungsüberprüfung so konfigurieren, dass Sie im Fall von Sammlungen mit Standortsystemservern gewarnt werden, wird im Assistenten zum Bereitstellen von Software eine Warnung über ein hohes Risiko angezeigt, falls die Sammlung den Standardwert für die Größe überschreitet oder falls die Sammlung einen Server enthält. Sie müssen der Erstellung einer Bereitstellung mit hohem Risiko zustimmen, und eine Überwachungsstatusmeldung wird erstellt.  
 
 6.  Konfigurieren Sie auf der Seite „Bereitstellungsring“ die folgenden Einstellungen:  
 
@@ -169,10 +173,10 @@ Wartungspläne verwenden nur die Softwareupdateklassifizierung **Upgrades** und 
 
         -   **Bestimmte Zeit**: Wählen Sie diese Einstellung aus, damit die Softwareupdates in der Bereitstellung zu einem bestimmten Termin (Datum und Uhrzeit) automatisch installiert werden. Configuration Manager bestimmt den Stichtag zum Installieren von Softwareupdates durch Hinzufügen der konfigurierten Intervalle **Bestimmte Zeit** zu **Zeitpunkt der Verfügbarkeit der Software**.  
 
-        > [!NOTE]  
-        >  Der tatsächliche Installationsstichtag ergibt sich aus der Addition des angezeigten Stichtags und eines willkürlichen Zeitraums von bis zu 2 Stunden. Dadurch werden die potenziellen Auswirkungen reduziert, die mit der gleichzeitigen Installation der Updates in der Bereitstellung durch alle Clientcomputer in der Zielsammlung einhergehen.  
-        >   
-        >  Sie können die Clienteinstellung **Zufällige Stichtaganordnung deaktivieren** für **Computer-Agent** konfigurieren, um die zufällige Verzögerung der Installation für erforderliche Updates zu deaktivieren. Weitere Informationen finden Sie unter [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
+            > [!NOTE]  
+            >  Der tatsächliche Installationsstichtag ergibt sich aus der Addition des angezeigten Stichtags und eines willkürlichen Zeitraums von bis zu 2 Stunden. Dadurch werden die potenziellen Auswirkungen reduziert, die mit der gleichzeitigen Installation der Updates in der Bereitstellung durch alle Clientcomputer in der Zielsammlung einhergehen.  
+            >   
+            >  Sie können die Clienteinstellung **Zufällige Stichtaganordnung deaktivieren** für **Computer-Agent** konfigurieren, um die zufällige Verzögerung der Installation für erforderliche Updates zu deaktivieren. Weitere Informationen finden Sie unter [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
 9. Konfigurieren Sie auf der Seite Benutzerfreundlichkeit die folgenden Einstellungen:  
 
