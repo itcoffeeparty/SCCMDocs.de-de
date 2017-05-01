@@ -54,6 +54,7 @@
 ### [Endpoint Protection-Einstellungen](deploy-use/scenarios-endpoint-protection.md)
 ### [Hilfe zu Endpoint Protection-Client](deploy-use/endpoint-protection-client-help.md)
 ### [Behandlung von Clientproblemen](deploy-use/troubleshoot-endpoint-client.md)
+### [Windows Defender – häufig gestellte Fragen](deploy-use/endpoint-protection-client-faq.md)
 ### [Device Guard-Einstellungen](deploy-use/use-device-guard-with-configuration-manager.md)
 
 ## [Bereitstellen von WLAN-, VPN-, E-Mail- und Zertifikatprofilen](deploy-use/deploy-wifi-vpn-email-cert-profiles.md)

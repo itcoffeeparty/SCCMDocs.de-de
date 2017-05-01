@@ -58,14 +58,10 @@
 ### [Erstellen einer benutzerdefinierten Tasksequenz](deploy-use/create-a-custom-task-sequence.md)
 ### [Erstellen einer Tasksequenz für Nicht-Betriebssystembereitstellungen](deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md)
 ### [Tasksequenzschritte für das Verwalten einer Konvertierung von BIOS zu UEFI](deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md)
+### [Vorabbereitstellung von BitLocker in Windows PE](deploy-use/preprovision-bitlocker-in-windows-pe.md)
 
 ## [Erstellen von Tasksequenzmedien](deploy-use/create-task-sequence-media.md)
 ### [Erstellen eigenständiger Medien](deploy-use/create-stand-alone-media.md)
 ### [Erstellen von vorab bereitgestellten Medien](deploy-use/create-prestaged-media.md)
 ### [Erstellen von startbaren Medien](deploy-use/create-bootable-media.md)
 ### [Erstellen von Erfassungsmedien](deploy-use/create-capture-media.md)
-
-
-<!--HONumber=Dec16_HO3-->
-
-

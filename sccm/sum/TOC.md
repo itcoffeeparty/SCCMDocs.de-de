@@ -5,6 +5,7 @@
 # Planung und Entwurf
 ## [Planen von Softwareupdates](plan-design/plan-for-software-updates.md)
 ## [Voraussetzungen für Softwareupdates](plan-design/prerequisites-for-software-updates.md)
+## [Bewährte Methoden für Softwareupdates](plan-design/software-updates-best-practices.md)
 ## [Sicherheit und Datenschutz für die Softwareupdates](plan-design/security-and-privacy-for-software-updates.md)
 
 # Erste Schritte
@@ -28,10 +29,6 @@
 ## [Warten von Softwareupdates](deploy-use/software-updates-maintenance.md)
 ## [Bereitstellung einer Servergruppe](deploy-use/service-a-server-group.md)
 ## [Verwalten von Office 365 ProPlus-Updates](deploy-use/manage-office-365-proplus-updates.md)
+## [Verwalten von Express-Installationsdateien für Windows 10-Updates](deploy-use/manage-express-installation-files-for-windows-10-updates.md)
 ## [Integration mit Windows Update für Unternehmen in Windows 10](deploy-use/integrate-windows-update-for-business-windows-10.md)
 ## [Beispielszenario für die Bereitstellung von Sicherheitsupdates](deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md)
-
-
-<!--HONumber=Dec16_HO3-->
-
-
