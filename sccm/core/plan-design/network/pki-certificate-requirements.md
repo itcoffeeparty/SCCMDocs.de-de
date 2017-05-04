@@ -2,7 +2,7 @@
 title: PKI-Zertifikatanforderungen | Microsoft-Dokumentation
 description: "Suchen Sie Anforderungen für die PKI-Zertifikate, die Sie möglicherweise für System Center Configuration Manager benötigen."
 ms.custom: na
-ms.date: 02/23/2017
+ms.date: 04/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 405540b16b60c42430e884febb942bfbbcbeca32
-ms.openlocfilehash: 7021c079b12f03420565f5633102070e4e0ad7f8
-ms.lasthandoff: 04/19/2017
+ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
+ms.openlocfilehash: a99b58acef7448af2c9576bfa0ec2635f5a4f86f
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -36,6 +36,8 @@ Die für System Center Configuration Manager erforderlichen PKI-Zertifikate (Pub
 > System Center Configuration Manager unterstützt SHA-2-Zertifikate (Secure Hash Algorithm 2). SHA-2-Zertifikate bringen einen entscheidenden Sicherheitsvorteil. Daher wird Folgendes empfohlen:
 > - Stellen Sie neue Zertifikate für die Server- und Clientauthentifizierung aus, die mit SHA-2 signiert sind, welches unter anderem SHA-256 und SHA-512 umfasst.
 > - Verwenden Sie für alle Dienste mit Internetzugriff ein SHA-2-Zertifikat. Wenn Sie beispielsweise ein öffentliches Zertifikat für die Verwendung mit einem Cloudverwaltungsgateway erwerben, sollten Sie sicherstellen, dass es sich dabei um ein SHA-2-Zertifikat handelt.  
+>
+>Ab dem 14. Februar 2017 werden bestimmte SHA-1-signierte Zertifikate von Windows nicht mehr als vertrauenswürdig eingestuft. Es wird allgemein empfohlen, neue Zertifikate für die Server- und Clientauthentifizierung auszustellen, die mit SHA-2 signiert sind (welches unter anderem SHA-256 und SHA-512 umfasst). Zudem empfehlen wir für alle Dienste mit Internetzugriff die Verwendung eines SHA-2-Zertifikats. Wenn Sie beispielsweise ein öffentliches Zertifikat für die Verwendung mit einem Cloudverwaltungsgateway erwerben, sollten Sie sicherstellen, dass es sich dabei um ein SHA-2-Zertifikat handelt.
 >
 > In den meisten Fällen wirkt sich die Änderung auf SHA-2-Zertifikate nicht auf Vorgänge aus. Weitere Informationen hierzu finden Sie unter [Windows Enforcement of SHA1 certificates (Erzwingung von SHA-1-Zertifikaten unter Windows)](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx).
 

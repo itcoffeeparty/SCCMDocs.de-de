@@ -14,8 +14,9 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
 translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
-ms.openlocfilehash: ea365491dd334980693375fbb7730653af9cd8e4
+ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
+ms.openlocfilehash: 5df20f3703442de1be6220ca2770e182e330c036
+ms.lasthandoff: 04/26/2017
 
 
 
@@ -41,7 +42,7 @@ Dieses Thema enthält bewährte Methoden für Softwareupdates in System Center C
  Wenn SQL Server und eine SQL Server-Instanz von den Configuration Manager- und WSUS-Datenbanken gemeinsam verwendet werden, lässt sich die Ressourcennutzung zwischen den beiden Anwendungen nur schwer bestimmen. Sie können Ressourcennutzungsprobleme, die mit der jeweiligen Anwendung möglicherweise auftreten, einfacher diagnostizieren und behandeln, wenn Sie unterschiedliche SQL Server-Instanzen für Configuration Manager und WSUS verwenden.  
 
 ### <a name="specify-the-store-updates-locally-setting-for-the-wsus-installation"></a>Aktivieren der Einstellung „Updates lokal speichern“ für die WSUS-Installation  
- Wählen Sie beim Installieren von WSUS 3.0 die Einstellung **Updates lokal speichern** aus. Wenn diese Einstellung aktiviert ist, werden die Lizenzbedingungen für Softwareupdates während des Synchronisierungsprozesses heruntergeladen und auf der lokalen Festplatte des WSUS-Servers gespeichert. Wenn diese Einstellung nicht ausgewählt wird, kann die Kompatibilität bei Softwareupdates mit Lizenzbedingungen von den Clientcomputern möglicherweise nicht überprüft werden. Beim Installieren des Softwareupdatepunkts wird von WSUS Synchronization Manager standardmäßig alle 60 Minuten überprüft, ob diese Einstellung aktiviert ist.  
+ Wählen Sie beim Installieren von WSUS die Einstellung **Updates lokal speichern** aus. Wenn diese Einstellung aktiviert ist, werden die Lizenzbedingungen für Softwareupdates während des Synchronisierungsprozesses heruntergeladen und auf der lokalen Festplatte des WSUS-Servers gespeichert. Wenn diese Einstellung nicht ausgewählt wird, kann die Kompatibilität bei Softwareupdates mit Lizenzbedingungen von den Clientcomputern möglicherweise nicht überprüft werden. Beim Installieren des Softwareupdatepunkts wird von WSUS Synchronization Manager standardmäßig alle 60 Minuten überprüft, ob diese Einstellung aktiviert ist.  
 
 ## <a name="operational-best-practices"></a>Bewährte Betriebsmethoden  
  Wenden Sie die folgenden bewährten Methoden an, wenn Sie Softwareupdates verwenden:  
@@ -57,9 +58,4 @@ Dieses Thema enthält bewährte Methoden für Softwareupdates in System Center C
 
 ## <a name="see-also"></a>Siehe auch  
  [Plan for software updates in System Center Configuration Manager (Planen von Softwareupdates in System Center Configuration Manager)](../../sum/plan-design/plan-for-software-updates.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

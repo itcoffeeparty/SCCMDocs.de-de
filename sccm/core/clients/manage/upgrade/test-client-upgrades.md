@@ -2,7 +2,7 @@
 title: "Testen von Clientupgrades in einer Präproduktionssammlung | Microsoft-Dokumentation"
 description: "Testen Sie Clientupgrades in einer Präproduktionssammlung in System Center Configuration Manager."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,13 +13,13 @@ ms.topic: article
 ms.assetid: 49ef2ed2-2e15-4637-8b63-1d5b7f9c17e1
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 533c8e8b30519d83b8fc7a9d204d51e76974c4b1
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
+ms.openlocfilehash: 7edd3e46b4813dd50df7d01b367f8e73bb350a7d
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -54,6 +54,9 @@ Sie können eine neue Configuration Manager-Clientversion in einer Präproduktio
 
 ![Testen von Clientupgrades](media/test-client-upgrades.png)
 
+>[!NOTE]
+>Um diese Einstellungen zu ändern, muss Ihr Konto Mitglied der Sicherheitsrolle **Hauptadministrator** und des Sicherheitsbereichs **Alle** sein.
+
 
 ##  <a name="to-install-a-configuration-manager-update-that-includes-a-new-version-of-the-client"></a>So installieren Sie ein Configuration Manager-Update, das eine neue Version des Clients enthält  
 
@@ -80,4 +83,7 @@ Sie können eine neue Configuration Manager-Clientversion in einer Präproduktio
 2.  Überprüfen Sie die Clientversionen in Produktion und Präproduktion, und stellen Sie sicher, dass die richtige Präproduktionssammlung angegeben ist. Klicken Sie anschließend erst auf **Höher stufen** und dann auf **Ja**.  
 
 3.  Nach Schließen des Dialogfelds wird die Clientversion in Ihrer Hierarchie durch die aktualisierte Clientversion ersetzt. Anschließend können Sie die Clients für den gesamten Standort aktualisieren. Informationen finden Sie unter [Aktualisieren von Clients für Windows-Computer in System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
+
+>[!NOTE]
+>Um den Präproduktionsclient zu aktivieren oder einen Präproduktionsclient zum Produktionsclient heraufzustufen, muss Ihr Konto Mitglied einer Sicherheitsrolle mit den Berechtigungen **Lesen** und **Ändern** für das **Updatepakete**-Objekt sein.
 

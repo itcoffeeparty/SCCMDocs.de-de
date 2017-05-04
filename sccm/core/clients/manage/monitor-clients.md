@@ -2,7 +2,7 @@
 title: "Überwachen von Clients – Configuration Manager | Microsoft-Dokumentation"
 description: "Ausführliche Anleitungen zur Überwachung von Clients in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,13 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 caps.latest.revision: 23
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
-ms.openlocfilehash: 85afe010e734d20ae1f1479b3edd166c54cc8fd2
-ms.lasthandoff: 01/24/2017
+ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
+ms.openlocfilehash: 08a4d9b29871b49e3118aef949572cef64940f96
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/24/2017
 
  Nachdem die System Center Configuration Manager-Clientanwendung auf den Windows-Computern und -Geräten an Ihrem Standort installiert wurde, können Sie deren Status und Aktivität in der Configuration Manager-Konsole überwachen.  
 
-##  <a name="a-namebkmkabouta-about-client-status"></a><a name="bkmk_about"></a> Informationen zum Clientstatus  
+##  <a name="bkmk_about"></a> Informationen zum Clientstatus  
  Configuration Manager stellt die folgenden Informationstypen als Clientstatus bereit:  
 
 -   **Onlinestatus von Clients:** Ab Version 1602 gibt dieser Status an, ob der Computer online ist oder nicht. Ein Computer gilt als online, wenn er mit dem ihm zugewiesenen Verwaltungspunkt verbunden ist.  Um anzugeben, dass der Client online ist, sendet er Ping-ähnliche Nachrichten an den Verwaltungspunkt. Wenn der Verwaltungspunkt nach ca. fünf Minuten keine Nachricht erhält, gilt der Client als offline.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/24/2017
 
      Sie können die Wiederherstellung so konfigurieren, dass sie auf bestimmten Computern, beispielsweise geschäftskritischen Servern, nicht ausgeführt wird. Wenn es außerdem noch zusätzliche Objekte gibt, die Sie auswerten möchten, können Sie die Kompatibilitätseinstellungen in Configuration Manager verwenden, um eine umfassende Lösung zur Überwachung der allgemeinen Integrität, Aktivität und Kompatibilität von Computern in Ihrer Organisation zu erstellen. Weitere Informationen zu Kompatibilitätseinstellungen finden Sie unter [Planen und Konfigurieren von Kompatibilitätseinstellungen in System Center Configuration Manager](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md).  
 
-##  <a name="a-namebkmkindstatusa-monitor-the-status-of-individual-clients"></a><a name="bkmk_indStatus"></a> Überwachen des Status einzelner Clients  
+##  <a name="bkmk_indStatus"></a> Überwachen des Status einzelner Clients  
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Bestand und Kompatibilität** > **Geräte**, oder wählen Sie unter **Gerätesammlungen** eine Sammlung.  
 
@@ -65,7 +65,7 @@ ms.lasthandoff: 01/24/2017
 
 3.  Klicken Sie im Listenbereich auf einen einzelnen Client , um im Detailbereich weitere Statusinformationen anzuzeigen, z. B. zu Clientaktivität und Clientprüfungen.  
 
-##  <a name="a-namebkmkallstatusa-monitor-the-status-of-all-clients"></a><a name="bkmk_allStatus"></a> Überwachen des Status aller Clients  
+##  <a name="bkmk_allStatus"></a> Überwachen des Status aller Clients  
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Überwachung** > **Clientstatus**. Auf dieser Seite der Konsole können Sie die Gesamtstatistik für die Clientaktivität und Clientprüfungen am gesamten Standort überprüfen.  Sie können auch den Umfang der Informationen ändern, indem Sie eine andere Sammlung auswählen.  
 
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/24/2017
 
  Sie können Warnungen konfigurieren, um benachrichtigt zu werden, wenn die Ergebnisse der Clientprüfung oder die Aktivität der Clients unter einen angegebenen Prozentsatz der Clients in einer Sammlung sinken oder wenn die Wiederherstellung bei einem angegebenen Prozentsatz der Clients nicht ausgeführt werden kann. Informationen zum Konfigurieren des Clientstatus finden Sie unter [Konfigurieren des Clientstatus in System Center Configuration Manager](../../../core/clients/deploy/configure-client-status.md).  
 
-##  <a name="a-namebkmkclienthealtha-checks-and-remediations-made-by-client-check"></a><a name="BKMK_ClientHealth"></a> Prüfungen und Behebungsmaßnahmen durch Clientprüfung  
+##  <a name="BKMK_ClientHealth"></a> Prüfungen und Behebungsmaßnahmen durch Clientprüfung  
  Die folgenden Prüfungen und Wiederherstellungsmaßnahmen können mithilfe der Clientprüfung ausgeführt werden.  
 
 |Clientprüfung|Wiederherstellungsmaßnahme|Weitere Informationen|  
@@ -110,4 +110,7 @@ ms.lasthandoff: 01/24/2017
 |Überprüfen Sie die Integrität des Client-WMI-Anbieters|Starten Sie den Dienst Windows-Verwaltungsinstrumentation (WMI) neu|Eine Behebung dieser Clientprüfung wird nur auf Computern mit Windows Server 2003, Windows XP (64-Bit) oder früher durchgeführt.|  
 |Überprüfen Sie, ob der Aktivierungsproxydienst (ConfigMgr-Aktivierungsproxy) ausgeführt wird|Starten Sie den ConfigMgr-Aktivierungsproxydienst|Diese Clientprüfung wird nur vorgenommen, wenn die Clienteinstellung unter **Energieverwaltung**: **Aktivierungsproxy zulassen** auf unterstützten Clientbetriebssystemen auf **Ja** eingestellt ist.|  
 |Überprüfen Sie, ob der Starttyp für den Aktivierungsproxydienst (ConfigMgr-Aktivierungsproxy) auf Automatisch eingestellt ist|Setzen Sie den Dienststarttyp für den ConfigMgr-Aktivierungsproxy zurück auf Automatisch|Diese Clientprüfung wird nur vorgenommen, wenn die Clienteinstellung unter **Energieverwaltung**: **Aktivierungsproxy zulassen** auf unterstützten Clientbetriebssystemen auf **Ja** eingestellt ist.|  
+
+## <a name="client-deployment-log-files"></a>Clientbereitstellungs-Protokolldateien
+Informationen zu den Protokolldateien, die von Clientbereitstellungs- und Verwaltungsvorgängen verwendet werden, finden Sie unter [Protokolldateien in System Center Configuration Manager](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs).
 

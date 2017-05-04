@@ -13,13 +13,13 @@ ms.topic: article
 ms.assetid: 45388103-2410-4c7e-b4cf-73a1bda485fc
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8c7bf901caa49c8585a9ed3913d4a5a2aac57013
-ms.openlocfilehash: 82f7db908f83d69a86c82ed97b845ff84e78f8b3
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: 699b79b68440b61904a9053e5004318a2a248bfd
+ms.openlocfilehash: 8adc41a30bf12a91a272029db49e50ba003d3e9c
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>VPN-Profile für mobile Geräte in System Center Configuration Manager
@@ -75,10 +75,10 @@ Allgemeine Informationen zum Erstellen von VPN-Profilen finden Sie unter [Erstel
 
     -   **Authentifizierungsmethode:** Wählen Sie die Authentifizierungsmethode für die VPN-Verbindung aus. Verfügbare Methoden hängen vom Verbindungstyp ab, wie in dieser Tabelle gezeigt.  
 
-        |Authentifizierungsmethode|Unterstützte Verbindungstypen|  
+        |Authentifizierungsmethode|Unterstützte &nbsp;Verbindungstypen&nbsp;|  
         |---------------------------|--------------------------------|  
-        |**Zertifikate**<br /><br /> **Hinweis:** Wenn das Clientzertifikat für die Authentifizierung bei einem RADIUS-Server, z.B. ein Netzwerkrichtlinienserver, verwendet wird, muss der alternative Antragstellername im Zertifikat auf den Benutzerprinzipalnamen festgelegt werden.|- <br />                            Cisco AnyConnect<br /><br /> – Pulse Secure<br /><br /> – F5 Edge Client<br /><br /> – Dell SonicWALL Mobile Connect<br /><br /> – Prüfpunkt für mobiles VPN|  
-        |**Benutzername und Kennwort**|- <br />                            Pulse Secure<br /><br /> – F5 Edge Client<br /><br /> – Dell SonicWALL Mobile Connect<br /><br /> – Prüfpunkt für mobiles VPN|  
+        |**Zertifikate**<br /><br /> **Hinweise:**<br />– Wenn für die Authentifizierung bei einem RADIUS-Server wie einem Netzwerkrichtlinienserver ein Clientzertifikat verwendet wird, muss der alternative Antragstellername im Zertifikat auf den Benutzerprinzipalnamen festgelegt werden.<br/><br />– Wählen Sie für Android-Bereitstellungen den EKU-Bezeichner und den Fingerabdruck-Hashwert des Zertifikatausstellers aus.  Andernfalls müssen Benutzer das entsprechende Zertifikat manuell auswählen.  |– Cisco AnyConnect<br /><br /> – Pulse Secure<br /><br /> – F5 Edge Client<br /><br /> – Dell SonicWALL Mobile Connect<br /><br /> – Prüfpunkt für mobiles VPN|  
+        |**Benutzername und Kennwort**|– Pulse Secure<br /><br /> – F5 Edge Client<br /><br /> – Dell SonicWALL Mobile Connect<br /><br /> – Prüfpunkt für mobiles VPN|  
         |**Microsoft EAP-TTLS**|– Microsoft SSL (SSTP)<br /><br /> – Microsoft Automatic<br /><br /> – PPTP<br /><br /> – IKEv2<br /><br /> – L2TP|  
         |**Microsoft-gesichertes EAP (PEAP)**|– Microsoft SSL (SSTP)<br /><br /> – Microsoft Automatic<br /><br /> – IKEv2<br /><br /> – PPTP<br /><br /> – L2TP|  
         |**Microsoft-gesichertes Kennwort (EAP-MSCHAP v2)**|– Microsoft SSL (SSTP)<br /><br /> – Microsoft Automatic<br /><br /> – IKEv2<br /><br /> – PPTP<br /><br /> – L2TP|  
@@ -109,18 +109,15 @@ Allgemeine Informationen zum Erstellen von VPN-Profilen finden Sie unter [Erstel
 
          ![Konfigurieren des bedingten Zugriffs für VPN](media/vpn-conditional-access.png)
 
+         Wenn der Vorgang von der Windows-Version, die Configuration Manager ausführt, _und_ der ausgewählten Autorisierungsmethode unterstützt wird, können Sie auf **Konfigurieren** klicken, um das Dialogfeld mit den Windows-Eigenschaften zu öffnen und die Eigenschaften der Authentifizierungsmethode zu konfigurieren.  Wenn **Konfigurieren** deaktiviert ist, verwenden Sie alternative Möglichkeiten zum Konfigurieren der Eigenschaften der Authentifizierungsmethode.
 
-> [!NOTE]  
-> Bei manchen Authentifizierungsmethoden können Sie auf **Konfigurieren** klicken, um das Dialogfeld für Windows-Eigenschaften zu öffnen (falls die Windows-Version, unter der die Configuration Manager-Konsole ausgeführt wird, diese Authentifizierungsmethode unterstützt). Dort können Sie die Eigenschaften der Authentifizierungsmethode konfigurieren.  
-
-
-1.  Aktivieren Sie auf der Seite **Proxyeinstellungen** des **Assistenten zum Erstellen von VPN-Profilen**das Kontrollkästchen **Proxyeinstellungen für dieses VPN-Profil konfigurieren** , wenn für Ihre VPN-Verbindung ein Proxyserver verwendet wird. Geben Sie dann die Proxyserverinformationen an. Weitere Informationen finden Sie in der Windows Server-Dokumentation.  
+2.  Aktivieren Sie auf der Seite **Proxyeinstellungen** des **Assistenten zum Erstellen von VPN-Profilen**das Kontrollkästchen **Proxyeinstellungen für dieses VPN-Profil konfigurieren** , wenn für Ihre VPN-Verbindung ein Proxyserver verwendet wird. Geben Sie dann die Proxyserverinformationen an. Weitere Informationen finden Sie in der Windows Server-Dokumentation.  
 
     > [!NOTE]  
     >  Auf Windows 8.1-Computern zeigt das VPN-Profil die Proxyinformationen erst an, wenn Sie mit dem betreffenden Computer eine Verbindung zu dem VPN herstellen.  
 
 
-2. Konfigurieren weiterer DNS-Einstellungen (falls erforderlich)  
+3. Konfigurieren weiterer DNS-Einstellungen (falls erforderlich)  
  Auf der Seite **Configure Automatic VPN connection (Automatische VPN-Verbindung konfigurieren)** können Sie Folgendes konfigurieren:  
 
     -   **Enable VPN on-demand** (VPN bedarfsgesteuert aktivieren): Verwenden Sie diese Option, wenn Sie weitere DNS-Einstellungen für Windows Phone 8.1-Geräte konfigurieren möchten. Diese Einstellung gilt nur für Windows Phone 8.1-Geräte und sollte nur auf VPN-Profilen aktiviert werden, die für Windows Phone 8.1-Geräte bereitgestellt werden.
@@ -153,9 +150,9 @@ Allgemeine Informationen zum Erstellen von VPN-Profilen finden Sie unter [Erstel
     >  Wenn die Option **Gesamten Netzwerkdatenverkehr über die VPN-Verbindung senden** nicht ausgewählt ist und die VPN-Verbindung getrenntes Tunneln verwendet, kann eine VPN-Verbindung automatisch geöffnet werden, wenn Sie Routen oder ein verbindungsspezifisches DNS-Suffix konfigurieren.  
 
 
-1. Wählen Sie auf der Seite **Unterstützte Plattformen** des **Assistenten zum Erstellen von VPN-Profilen**die Betriebssysteme aus, unter denen das VPN-Profil installiert wird, oder klicken Sie auf **Alle auswählen** , um das VPN-Profil unter allen verfügbaren Betriebssystemen zu installieren.  
+4. Wählen Sie auf der Seite **Unterstützte Plattformen** des **Assistenten zum Erstellen von VPN-Profilen**die Betriebssysteme aus, unter denen das VPN-Profil installiert wird, oder klicken Sie auf **Alle auswählen** , um das VPN-Profil unter allen verfügbaren Betriebssystemen zu installieren.  
 
-2. Schließen Sie den Assistenten ab. Das neue VPN-Profil wird im Arbeitsbereich **Bestand und Kompatibilität** im Knoten **VPN-Profile** angezeigt.  
+5. Schließen Sie den Assistenten ab. Das neue VPN-Profil wird im Arbeitsbereich **Bestand und Kompatibilität** im Knoten **VPN-Profile** angezeigt.  
 
 
 **Bereitstellen:** Weitere Informationen zum Bereitstellen von VPN-Profilen finden Sie unter [Bereitstellen von WLAN-, VPN-, E-Mail- und Zertifikatprofilen](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md).

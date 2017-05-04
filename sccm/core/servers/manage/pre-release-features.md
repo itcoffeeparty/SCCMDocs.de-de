@@ -2,7 +2,7 @@
 title: "Vorab veröffentlichte Funktionen | Microsoft-Dokumentation"
 description: Features der Vorabversion in System Center Configuration Manager
 ms.custom: na
-ms.date: 4/13/2017
+ms.date: 4/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,16 +16,16 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 329de5ffb6eb1403c02cd1db634c32f045e82488
-ms.openlocfilehash: c9896d53061b11f249f32f118620524c6a270ec9
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
+ms.openlocfilehash: b12fcb3c372c34ee47306a9b536c3d0c4764b8be
+ms.lasthandoff: 04/24/2017
 
 
 ---
 # <a name="pre-release-features-in-system-center-configuration-manager"></a>Features der Vorabversion in System Center Configuration Manager
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
- Features der Vorabversion sind Funktionen, die in Current Branch enthalten sind, um sie in einem frühen Stadium in einer Produktionsumgebung zu testen. Diese Features sollten nicht als produktionsbereit angesehen werden, können aber in der Produktionsumgebung verwendet werden.
+Features der Vorabversion sind Funktionen, die in Current Branch enthalten sind, um sie in einem frühen Stadium in einer Produktionsumgebung zu testen. Sie werden vollständig unterstützt, unterliegen aber noch der Entwicklung und könnten möglicherweise geändert werden, bis sie die Vorabversionskategorie verlassen.
 
  Bevor Sie Features der Vorabversion verwenden können, müssen Sie der Verwendung von Features der Vorabversion von der Configuration Manager-Konsole aus zustimmen, bevor Sie deren Verwendung auswählen und aktivieren können.  
 

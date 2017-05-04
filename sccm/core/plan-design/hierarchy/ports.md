@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4c2906c2a963e0ae92e3c0d223afb7a47377526a
-ms.openlocfilehash: ffc2adb34427aa62f4a377e887c2ff54d47abeff
-ms.lasthandoff: 03/20/2017
+ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
+ms.openlocfilehash: 78caa69e10f5d386daab1e61e484d4d134469708
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -90,13 +90,13 @@ In den folgenden Abschnitten sind die Ports beschrieben, die für die Kommunikat
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2,**Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
 ###  <a name="BKMK_PortsAppCatalogService-SQL"></a> Anwendungskatalog-Webdienstpunkt -- > SQL Server  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2,**Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
 ###  <a name="BKMK_PortsAppCatalogWebSitePoint_AppCatalogWebServicePoint"></a> Anwendungskatalog-Websitepunkt -- > Anwendungskatalog-Webdienstpunkt  
 
@@ -260,7 +260,7 @@ Diese Kommunikation wird verwendet, um zu überprüfen, ob der andere Clientcomp
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2,**Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
 ###  <a name="BKMK_PortsEnrollmentProxyEnrollmentPoint"></a> Anmeldungsproxypunkt -- > Anmeldungspunkt  
 
@@ -272,7 +272,7 @@ Diese Kommunikation wird verwendet, um zu überprüfen, ob der andere Clientcomp
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2,**Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
 ###  <a name="BKMK_PortsExchangeConnectorHosted"></a> Exchange Server-Connector -- &gt; Exchange Online  
 
@@ -316,7 +316,7 @@ Diese Kommunikation wird verwendet, um zu überprüfen, ob der andere Clientcomp
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2,**Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
 ###  <a name="BKMK_PortsMobileDeviceClient-EnrollmentProxyPoint"></a> Mobiles Gerät -- > Anmeldungsproxypunkt  
 
@@ -334,7 +334,7 @@ Diese Kommunikation wird verwendet, um zu überprüfen, ob der andere Clientcomp
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2,**Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
 ###  <a name="BKMK_PortsIntuneConnector-WindowsIntune"></a>Dienstverbindungspunkt -- > Microsoft Intune  
 
@@ -473,7 +473,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2,**Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
  Während der Installation eines Standorts, der einen SQL Server-Remotehost für die Standortdatenbank verwendet, müssen Sie die folgenden Ports zwischen Standortserver und SQL-Server öffnen:  
 
@@ -512,7 +512,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2,**Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
 ###  <a name="BKMK_PortsSUP-Internet"></a> Softwareupdatepunkt -- > Internet  
 
@@ -532,7 +532,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL Server-Dienst|--|1433 (siehe Hinweis 2,**Alternativer Port verfügbar**)|  
+|SQL Server-Dienst|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 |SQL Server Service Broker|--|4022 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
 > [!TIP]  
@@ -542,7 +542,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2,**Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
 
 
@@ -552,13 +552,13 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 
 2.  **Alternativer Port verfügbar**: Ein alternativer Port kann für diesen Wert im Configuration Manager definiert werden. Wenn ein benutzerdefinierter Port definiert wurde, ersetzen Sie diesen benutzerdefinierten Port, wenn Sie die IP-Filterinformationen für die IPsec-Richtlinien oder zum Konfigurieren von Firewalls definieren.  
 
-3.  **Windows Server Update Services (WSUS)**: WSUS können entweder auf der Standardwebsite (Port 80) oder auf einer benutzerdefinierten Website (Port 8530) installiert werden.  
+3.  **Windows Server Update Services (WSUS)**: WSUS können installiert werden, um die Ports 80/443 oder 8530/8531 für die Clientkommunikation zu verwenden. Wenn Sie WSUS unter Windows Server 2012 oder Windows Server 2016 ausführen, wird WSUS standardmäßig für die Verwendung von Port 8530 für HTTP und Port 8531 für HTTPS konfiguriert.  
 
      Nach der Installation kann der Port geändert werden. Es ist nicht erforderlich, in der gesamten Standorthierarchie dieselbe Portnummer zu verwenden.  
 
     -   Wenn der HTTP-Port 80 verwendet wird, muss der HTTPS-Port 443 sein.  
 
-    -   Wenn ein anderer HTTP-Port verwendet wird, muss der HTTPS-Port 1 oder höher sein, z.B. 8530 oder 8531.  
+    -   Wenn ein anderer HTTP-Port verwendet wird, muss der HTTPS-Port 1 oder höher sein, z.B. 8530 oder 8531.   
 
     > [!NOTE]  
     >  Wenn Sie den Softwareupdatepunkt zur Verwendung von HTTPS konfigurieren, muss auch der HTTP-Port geöffnet sein. Der HTTP-Port wird für unverschlüsselte Daten, z. B. den EULA für bestimmte Updates, verwendet.  

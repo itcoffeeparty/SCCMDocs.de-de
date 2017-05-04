@@ -2,7 +2,7 @@
 title: Windows Hello for Business-Einstellungen | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie Windows Hello for Business in System Center Configuration Manager integrieren.
 ms.custom: na
-ms.date: 03/28/2017
+ms.date: 04/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: c9a6842958e6fa3f740caabbaf20aabb9df4e8a8
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 699b79b68440b61904a9053e5004318a2a248bfd
+ms.openlocfilehash: 75def95561feb35f2f060f0daa72291983324d4f
+ms.lasthandoff: 04/25/2017
 
 
 ---
@@ -28,7 +28,9 @@ ms.lasthandoff: 03/27/2017
 
 Mit System Center Configuration Manager können Sie die Integration in Windows Hello for Business (früher Microsoft Passport für Windows) durchführen, eine alternative Anmeldemethode für Windows 10-Geräte. Hello for Business verwendet Active Directory oder ein Azure Active Directory-Konto, um ein Kennwort, eine Smartcard oder eine virtuelle Smartcard zu ersetzen.  
 
-Mit Hello for Business können Sie anstelle eines Kennworts eine **Benutzeraktion** zur Anmeldung verwenden. Eine Benutzeraktion kann eine einfache PIN, eine biometrische Authentifizierung oder ein externes Gerät wie ein Fingerabdruckleser sein.  
+Mit Hello for Business können Sie anstelle eines Kennworts eine **Benutzeraktion** zur Anmeldung verwenden. Eine Benutzeraktion kann eine einfache PIN, eine biometrische Authentifizierung oder ein externes Gerät wie ein Fingerabdruckleser sein.
+
+[Erfahren Sie mehr über Windows Hello for Business](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification).
 
  Configuration Manager kann auf zwei Wegen in Windows Hello for Business integriert werden:  
 
@@ -47,7 +49,7 @@ Sie können Windows Hello for Business-Einstellungen auf einer Domäne angehöre
 
 Beachten Sie, dass Sie zusätzlich zu dieser Konfiguration, wie unter [Configure a certificate profile (Konfigurieren eines Zertifikatprofils)](#configure-a-certificate-profile) beschrieben, ein Zertifikatprofil bereitstellen müssen.
 
-## <a name="recommended-approach----configure-a-windows-hello-for-business-profile"></a>Empfohlener Ansatz – Konfigurieren eines Windows Hello for Business-Profils  
+## <a name="configure-a-windows-hello-for-business-profile"></a>Konfigurieren eines Windows Hello for Business-Profils  
 
 Klicken Sie in der Configuration Manager-Konsole mit der rechten Maustaste unter **Zugriff auf Unternehmensressourcen** auf **Profile für Windows Hello für Unternehmen**, und wählen Sie **Neu** aus, um den Profilassistenten zu starten. Stellen Sie die Einstellungen bereit, die der Assistent anfordert, überprüfen und bestätigen Sie die Einstellungen auf der letzten Seite, und klicken Sie auf **Schließen**. Beispiel von möglichen Einstellungen:  
 
@@ -82,7 +84,7 @@ Sie können jetzt das soeben erstellte Gruppenrichtlinienobjekt mit einem Speich
 ## <a name="configure-windows-hello-for-business-by-deploying-a-powershell-script-with-configuration-manager"></a>Konfigurieren von Windows Hello for Business durch Bereitstellen eines PowerShell-Skripts mit Configuration Manager    
 Sie können das folgende PowerShell-Skript mithilfe der Configuration Manager-Anwendungsverwaltung erstellen und bereitstellen.    
 
-**powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -Command "& {New-ItemProperty "HKLM:\Software\Policies\Microsoft\PassportForWork" -Name "Enabled" -Value 1 -PropertyType "DWord" -Force}"** 
+**powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -Command "& {New-ItemProperty "HKLM:\Software\Policies\Microsoft\PassportForWork" -Name "Enabled" -Value 1 -PropertyType "DWord" -Force}" ** 
 
 Weitere Informationen zur Configuration Manager-Anwendungsverwaltung finden Sie unter [Einführung in die Anwendungsverwaltung mit System Center Configuration Manager (Introduction to Application Management in Configuration Manager)](/sccm/apps/understand/introduction-to-application-management).  
 
@@ -111,8 +113,7 @@ Vorher müssen Sie die Gruppe **Schlüsseladministratoren** erstellt und alle Ve
 
  Weitere Informationen finden Sie unter [Zertifikatprofile](introduction-to-certificate-profiles.md).  
 
-## <a name="see-also"></a>Weitere Informationen:  
- [Schützen der Daten und Standortinfrastruktur mit System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)
 
- [Verwalten der Überprüfung der Identität mit Windows Hello for Business](https://technet.microsoft.com/itpro/windows/keep-secure/manage-identity-verification-using-microsoft-passport).  
+
+
 

@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
-ms.openlocfilehash: 18c199e78750eadc06b9635fa6104d36c2ac018d
-ms.lasthandoff: 04/08/2017
+ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
+ms.openlocfilehash: 29a55948a1897e1345ba14ec685b9288a844feaa
+ms.lasthandoff: 04/26/2017
 
 
 ---
@@ -325,7 +325,7 @@ Wenn Sie ein neues Features oder ein Feature der Vorabversion aktivieren, muss d
 
 
 ##  <a name="bkmk_prerelease"></a> Verwenden von vorab veröffentlichten Features von Updates
-Features der Vorabversion sind Funktionen, die in Current Branch enthalten sind, um sie in einem frühen Stadium in einer Produktionsumgebung zu testen. Diese Funktionen sollten nicht als produktionsbereit angesehen werden, können aber in der Produktionsumgebung verwendet werden. Weitere Informationen zu Features der Vorabversionen, einschließlich ihrer Aktivierung in Ihrer Umgebung, finden Sie unter [Features der Vorabversion](/sccm/core/servers/manage/pre-release-features).                |
+Features der Vorabversion sind Funktionen, die in Current Branch enthalten sind, um sie in einem frühen Stadium in einer Produktionsumgebung zu testen. Diese Features sollten nicht als produktionsbereit angesehen werden, können aber in der Produktionsumgebung verwendet werden. Weitere Informationen zu Features der Vorabversionen, einschließlich ihrer Aktivierung in Ihrer Umgebung, finden Sie unter [Features der Vorabversion](/sccm/core/servers/manage/pre-release-features).             
 
 
 ## <a name="known-issues"></a>Bekannte Probleme

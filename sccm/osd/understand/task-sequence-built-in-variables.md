@@ -17,9 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: a3e6cca8d58055cc2d54aff3cb70a276fb40e829
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
+ms.openlocfilehash: f5feccc4f810e1a94bb7dcdd5ad507d84b9c3b4a
+ms.lasthandoff: 04/21/2017
 
 
 ---
@@ -76,6 +76,11 @@ ms.lasthandoff: 03/27/2017
 |SMSTSDownloadProgram|Geben Sie mithilfe dieser Variablen einen alternativen Inhaltsanbieter für die Tasksequenz an. Der Inhalt wird dann statt mit dem Standard-Downloadprogramm von Configuration Manager mit diesem Downloadprogramm heruntergeladen. Beim Herunterladen von Inhalten überprüft die Tasksequenz die Variable auf ein angegebenes Downloadprogramm. Wenn ein Programm angegeben ist, wird es von der Tasksequenz ausgeführt, um die Daten herunterzuladen.|  
 |SMSTSDownloadRetryCount|Geben Sie mit dieser Variable an, wie häufig Configuration Manager versuchen soll, Inhalt von einem Verteilungspunkt herunterzuladen. Standardmäßig unternimmt der Client **2** neue Versuche.|  
 |SMSTSDownloadRetryDelay|Geben Sie mit dieser Variablen an, wie viele Sekunden Configuration Manager warten soll, bevor der Download von Inhalt von einem Verteilungspunkt erneut versucht wird. Standardmäßig wartet der Client **15** Sekunden, bevor er einen neuen Versuch startet.|  
+|SMSTSDriverReceiveTimeOut|Legen Sie mit dieser Variablen die Anzahl der Sekunden bis zum Ablauf des Timeouts der Verbindung mit dem Server fest.|
+|SMSTSDriverRequestConnectTimeOut|Legen Sie mit dieser Variablen die Anzahl der Sekunden für das Warten auf die HTTP-Server-Verbindung beim Anfordern des Treiberkatalogs während des Tasksequenzschritts „Treiber automatisch anwenden“ fest. Wenn die Verbindung mehr Zeit benötigt, als in der Timeouteinstellung festgelegt, wird die Anforderung abgebrochen. Standardmäßig ist das Timeout auf 60 Sekunden festgelegt.|  
+|SMSTSDriverRequestReceiveTimeOut|Legen Sie mit dieser Variablen die Anzahl der Sekunden für das Warten auf eine Antwort beim Anfordern eines Treiberkatalogs während des Tasksequenzschritts „Treiber automatisch anwenden“ fest. Wenn die Verbindung mehr Zeit benötigt, als in der Timeouteinstellung festgelegt, wird die Anforderung abgebrochen. Standardmäßig ist das Timeout auf 480 Sekunden festgelegt.|
+|SMSTSDriverRequestResolveTimeOut|Legen Sie mit dieser Variablen die Anzahl der Sekunden für das Warten auf eine HTTP-Namensauflösung beim Anfordern eines Treiberkatalogs während des Tasksequenzschritts „Treiber automatisch anwenden“ fest. Wenn die Verbindung mehr Zeit benötigt, als in der Timeouteinstellung festgelegt, wird die Anforderung abgebrochen. Standardmäßig ist das Timeout auf 60 Sekunden festgelegt.|
+|SMSTSDriverRequestSendTimeOut|Legen Sie mit dieser Variablen die Anzahl der Sekunden für das Senden der Anforderung eines Treiberkatalogs während des Tasksequenzschritts „Treiber automatisch anwenden“ fest. Wenn die Anforderung mehr Zeit benötigt, als in der Timeouteinstellung festgelegt, wird die Anforderung abgebrochen. Standardmäßig ist das Timeout auf 60 Sekunden festgelegt.|
 |SMSTSErrorDialogTimeout|Tritt ein Fehler in einer Tasksequenz auf, wird ein Dialogfeld angezeigt, das nach einer durch diese Variable angegebenen Anzahl von Sekunden automatisch geschlossen wird. Standardmäßig wird das Dialogfeld automatisch nach **900** Sekunden (15 Minuten) geschlossen.|  
 |TSErrorOnWarning|Mit dieser Variablen können Sie angeben, ob das Tasksequenzmodul eine erkannte Warnung als Fehler während der Tasksequenz für die Anwendungsinstallation betrachtet. Die Tasksequenz legt die _TSAppInstallStatus-Variable auf **Warnung** fest, wenn mindestens eine Anwendung oder eine erforderliche Abhängigkeit aufgrund der Nichterfüllung einer Voraussetzung nicht installiert wurde. Wenn Sie die TSErrorOnWarning-Variable auf **True** festlegen und die _TSAppInstallStatus-Variable als Warnung festgelegt ist, wird dies als Fehler behandelt. Der Wert **False** entspricht dem Standardverhalten.|  
 |SMSTSLanguageFolder|Verwenden Sie diese Variable, um die Anzeigesprache eines sprachneutralen Startimage zu ändern.|  
