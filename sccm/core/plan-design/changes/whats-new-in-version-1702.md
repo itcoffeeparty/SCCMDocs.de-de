@@ -2,7 +2,7 @@
 title: Neue Version 1702 | Microsoft-Dokumentation
 description: "Enthält Details zu Änderungen und neuen Funktionen, die in Version 1702 von System Center Configuration Manager eingeführt wurden."
 ms.custom: na
-ms.date: 3/31/2017
+ms.date: 05/02/2017
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -14,16 +14,16 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d7b13f3dea5a3ae413ca6b8150ec24e1632a4d4d
-ms.openlocfilehash: 3e97184dc923cd3972c23252c1bc001edb73fe3f
-ms.lasthandoff: 04/12/2017
+ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
+ms.openlocfilehash: 4616ebb84ae63acbe6af892918aa2dd1a0be4825
+ms.lasthandoff: 05/02/2017
 
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>Neues in Version 1702 von System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Das Update 1702 für System Center Configuration Manager (Current Branch) ist als konsoleninternes Update für zuvor installierte Standorte verfügbar, die Version 1602, 1606 oder 1610 ausführen.
+Das Update 1702 für System Center Configuration Manager (Current Branch) ist als konsoleninternes Update für zuvor installierte Standorte verfügbar, die Version 1602, 1606 oder 1610 ausführen. Es steht auch als eine Baselineversion zur Verfügung, die Sie beim Installieren einer neuen Bereitstellung verwenden können.
 
 > [!TIP]  
 > Sie müssen eine Baselineversion von Configuration Manager verwenden, um einen neuen Standort zu installieren.  
