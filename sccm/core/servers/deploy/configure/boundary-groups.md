@@ -2,7 +2,7 @@
 title: Definieren von Begrenzungsgruppen | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über Begrenzungsgruppen in System Center Configuration Manager, die Clients mit Standortsystemen verknüpfen."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 10
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 8da48e89e8376cc23109faa1c74b29a64699aa87
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
+ms.openlocfilehash: cb5c8f8f91857bf5f9377a9f871f0d9d9b0cc939
+ms.contentlocale: de-de
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -111,6 +112,8 @@ Wenn der Inhalt allerdings nach Bedarf verteilt wird und zum Zeitpunkt der Anfor
 Ab Version 1702 können Client Begrenzungsgruppen verwenden, um neue Softwareupdatepunkte zu finden. Sie können verschiedenen Begrenzungsgruppen einzelne Softwareupdatepunkte hinzufügen, um zu steuern, welchen Server ein Client finden kann.
 
 Wenn Sie ein Update von einer früheren Version als Version 1702 durchführen, werden alle vorhandenen Softwareupdatepunkte in die Standard-Standortbegrenzungsgruppe an jedem Standort eingefügt. So wird das Verhalten von vor dem Update beibehalten, bei dem Clients einen Softwareupdatepunkt aus dem Pool der verfügbaren Softwareupdatepunkte auswählen, den Sie für Ihre Hierarchie konfiguriert haben.  Dieses Verhalten wird so lange beibehalten, bis Sie einzelne Softwareupdatepunkte in unterschiedliche Begrenzungsgruppen mit gesteuertem Auswahl- und Fallbackverhalten einfügen.
+
+Wenn Sie einen neuen Standort installieren, der Version 1702 oder höher ausführt, müssen Sie einer Begrenzungsgruppe Softwareupdatepunkte zuweisen, damit Clients sie finden und verwenden können.
 
 
 Das Fallback für Softwareupdatepunkte wird genauso wie für andere Standortsystemrollen konfiguriert, hat aber folgende Probleme:

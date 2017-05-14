@@ -2,7 +2,7 @@
 title: Updates | Microsoft-Dokumentation
 description: "Hier finden Sie Informationen zu einer konsoleninternen Dienstmethode namens **Updates und Wartung**, mit der Sie empfohlene Updates leicht finden und installieren können."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: bd72d17e463cb65e79b78613b631b0267b2b26a0
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
+ms.openlocfilehash: a33960fb89b71c0f8128e21a5054f5b63cfc6b17
+ms.contentlocale: de-de
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -48,7 +49,7 @@ Wenn Sie die Verzweigung „Technical Preview“ verwenden, finden Sie unter [Te
 
 
 ##  <a name="bkmk_Baselines"></a> Baseline- und Updateversionen  
- Die erste Version von System Center Configuration Manager Current Branch war auch als Version 1511, eine Baselineversion, bekannt. Eine neuere Baselineversion ist 1606.
+ Die erste Version von System Center Configuration Manager Current Branch war auch als Version 1511, eine Baselineversion, bekannt. Zu den aktuelleren Baselineversionen zählen Version 1606 und 1702:
 
 -   Verwenden Sie die neueste Baselineversion, wenn Sie einen neuen Standort in einer neuen Hierarchie installieren.  
 
@@ -76,7 +77,7 @@ Die folgenden Versionen von Configuration Manager sind als Baseline- und/oder Up
 
 |Version |Verfügbarkeitsdatum|[Supportenddatum](/sccm/core/servers/manage/current-branch-versions-supported) |Baseline|konsoleninternes Update|  
 |-------------|-----------|------------|--------------|------------------------|  
-|[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)<br /><br /> 5.00.8498.1000|3/27/2017| 3/27/2018|Nein|Ja|
+|[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)<br /><br /> 5.00.8498.1000|3/27/2017| 3/27/2018|Ja|Ja|
 |[Version 1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)<br /><br /> 5.00.8458.1000|18.11.2016| 11/18/2017|Nein|Ja|
 |[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606)<br /><br /> 5.00.8412.1000|7/22/2016| 7/22/2017|Nein|Ja|
 |[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606) mit dem Hotfixrollup 1606 (KB3186654) </br></br>5.00.8412.1307 *(Hinweis 1)* |10/12/2016| 7/22/2017|Ja|Nein|

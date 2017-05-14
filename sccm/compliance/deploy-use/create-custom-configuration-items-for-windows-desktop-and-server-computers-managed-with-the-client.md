@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
-ms.openlocfilehash: e55883471fde63036c91b315ed6db6dceb315207
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
+ms.openlocfilehash: e040c6b3a951d1bdf5a46dd82f1bd92b45c2e71d
+ms.contentlocale: de-de
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -52,7 +54,7 @@ Verwenden Sie das System Center Configuration Manager-Konfigurationselement des 
 
  Eine Erkennungsmethode in Configuration Manager enthält Regeln zur Erkennung, ob eine Anwendung auf einem Computer installiert ist. Diese Erkennung erfolgt, bevor die Kompatibilität des Konfigurationselements bewertet wird. Um zu erkennen, ob eine Anwendung installiert ist, können Sie die Anwesenheit einer Windows Installer-Datei für die Anwendung prüfen, ein benutzerdefiniertes Skript verwenden oder **Immer annehmen, dass die Anwendung installiert ist** auswählen, um die Kompatibilität des Konfigurationselements unabhängig davon zu bewerten, ob die Anwendung installiert ist.  
 
- Verwenden Sie diese Verfahren zum Konfigurieren von Erkennungsmethoden in System Center 2012 Configuration Manager.  
+ Verwenden Sie diese Verfahren zum Konfigurieren von Erkennungsmethoden in System Center Configuration Manager.  
 
 ### <a name="to-detect-an-application-installation-by-using-the-windows-installer-file"></a>So erkennen Sie eine Anwendungsinstallation anhand der Windows Installer-Datei  
 
@@ -356,9 +358,4 @@ Wählen Sie aus der Liste auf der Seite **Unterstützte Plattformen** des **Assi
 
 ## <a name="complete-the-wizard"></a>Abschließen des Assistenten  
  Überprüfen Sie auf der Seite **Zusammenfassung** des Assistenten die auszuführenden Aktionen, und schließen Sie dann den Assistenten ab. Das neue Konfigurationselement wird angezeigt, der **Konfigurationselemente** Knoten in der **Bestand und Kompatibilität** Arbeitsbereich.  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

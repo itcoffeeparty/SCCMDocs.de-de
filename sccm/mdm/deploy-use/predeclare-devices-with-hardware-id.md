@@ -15,10 +15,11 @@ caps.latest.revision: 3
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 7573590763c68a4c97d388be1e64054c318da9cc
-ms.openlocfilehash: 4fe6741481c79ed4e4496846152902d6d8ca1f96
-ms.lasthandoff: 03/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: e6833951db27b227a3ca22925e9d9f4c3fc443fc
+ms.openlocfilehash: e8606b8a9268a0a0668b75070cf35894f4794123
+ms.contentlocale: de-de
+ms.lasthandoff: 05/04/2017
 
 ---
 # <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>Vorabdeklarieren von Geräten mit IMEI- oder iOS-Seriennummern
@@ -27,7 +28,7 @@ ms.lasthandoff: 03/24/2017
 
 Sie können unternehmenseigene Geräte identifizieren, indem Sie deren IMEI-Nummern (International Station Mobile Equipment Identity) oder iOS-Seriennummern importieren. Sie können eine CSV-Datei (comma-separated values, durch Trennzeichen getrennte Datei) hochladen, die die IMEI-Nummern der Geräte enthält, oder Geräteinformationen manuell eingeben.  Importierte Informationen legen den **Besitz** der registrierten Geräte in der Liste der Geräte auf **Unternehmen** fest. Dennoch wird für jeden Benutzer, der auf den Dienst zugreift, eine Intune-Lizenz benötigt.  
 
-Wenn Sie Seriennummern von firmeneigenen iOS-Geräten hochladen, müssen sie mit einem Unternehmensregistrierungsprofil gepaart werden. Geräte müssen entweder mithilfe des Apple-Programms zur Geräteregistrierung (DEP) oder mit Apple Configurator registriert werden, damit sie als unternehmenseigen angezeigt werden. 
+Wenn Sie Seriennummern von firmeneigenen iOS-Geräten hochladen, müssen sie mit einem Unternehmensregistrierungsprofil gepaart werden. Geräte müssen entweder mithilfe des Apple-Programms zur Geräteregistrierung (DEP) oder mit Apple Configurator registriert werden, damit sie als unternehmenseigen angezeigt werden.
 
 ## <a name="how-to-predeclare-corporate-owned-devices"></a>Vorgehensweise für das Vorabdeklarieren von unternehmenseigenen Geräten
 
@@ -61,7 +62,7 @@ Wenn Sie Seriennummern von firmeneigenen iOS-Geräten hochladen, müssen sie mit
 
 ## <a name="format-for-uploading-csv-files"></a>Format für das Hochladen von CSV-Dateien
 
-Die CSV-Datei, die Sie verwenden, um Geräte anhand der IMEI-Nummer oder der Seriennummer zu identifizieren, muss das folgende Format aufweisen (außer der obersten Zeile, die lediglich Informationszwecken dient). Jede Zeile muss entweder eine IMEI-Nummer oder eine iOS-Seriennummer enthalten. Nur die Seriennummern der iOS-Geräte können vorab deklariert werden. Verwenden Sie IMEI-Nummern für andere Geräteplattformen. Diese Tabelle enthält Beispieldaten:
+Die CSV-Datei, die Sie verwenden, um Geräte anhand der IMEI-Nummer oder der Seriennummer zu identifizieren, muss das folgende Format aufweisen (außer der obersten Zeile, die lediglich Informationszwecken dient). Jede Zeile muss eine ID-Nummer enthalten, entweder eine IMEI-Nummer oder eine iOS-Seriennummer. Sie können beide angeben. IMEI-Nummern können für Android-, iOS- und Windows-Geräte verwendet werden. iOS-Seriennummern werden ebenfalls unterstützt.  Diese Tabelle enthält Beispieldaten:
 
 | IMEI #  | iOS Serial #  | OS | Details |
 |------------ |---------------|-----|-----|

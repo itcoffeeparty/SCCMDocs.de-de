@@ -1,8 +1,8 @@
 ---
 title: Installieren eines Standorts mit dem 1606-Baselinemedium | Microsoft-Dokumentation
-description: "Erfahren Sie mehr über das 1606-Baselinemedium zum Installieren oder Upgraden von Standorten für System Center Configuration Manager."
+description: "Installieren von oder Durchführen eines Upgrades auf LTSB für System Center Configuration Manager"
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 05/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 1a3460143628ef297c99c364ded7ebea86d270dd
-ms.openlocfilehash: c266bb753ea69785b674508647c3857b2218cb77
-ms.lasthandoff: 02/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
+ms.openlocfilehash: 39653604ba5fd8e1fe9dd4d42889221d983f9bec
+ms.contentlocale: de-de
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -26,13 +27,18 @@ ms.lasthandoff: 02/18/2017
 
 *Gilt für: System Center Configuration Manager (Current Branch), (Long-Term Servicing Branch)*
 
-In diesem Thema erfahren Sie, wie Sie das Configuration Manager-Setup ausführen, wenn Sie das Baselinemedium des Releases 1606 des Microsoft System Center 2016- oder des System Center Configuration Manager-Release (Current Branch und Long-Term Servicing Branch 1606) verwenden. Sie können das Installationsmedium zur Installation eines neuen Standorts verwenden oder ein Upgrade von System Center 2012 Configuration Manager mit Service Pack 2 oder auf System Center 2012 R2 Configuration Manager mit Service Pack 1 ausführen. Während des Setups können Sie auswählen, ob Sie Current Branch oder Long-Term Servicing Branch (LTSB) installieren möchten.
+Wenn Sie ein Setup vom Baselinemedium Version 1606 für Configuration Manager ausführen, können Sie einen Long-Term Servicing Branch- oder Current Branch-Standort von System Center Configuration Manager installieren.
+
+Das Baselinemedium ist als Teil der Version Microsoft System Center 2016 oder der Version System Center Configuration Manager (Current Branch und Long-Term Servicing Branch 1606) auf DVD verfügbar. Weitere Informationen zum Baselinemedium finden Sie auf der Seite zu den [Baseline- und Updateversionen](/sccm/core/servers/manage/updates#baseline-and-udpate-versions).
+
 
 Wenn Sie das Baselinemedium von Version 1606 verwenden, ist der Standort, den Sie installieren oder auf den Sie aktualisieren:
 - Ein *Current Branch-Standort*, der einem Standort entspricht, der anfänglich mit dem 1511-Baselinemedium installiert wurde und später auf Version 1606 und das entsprechende 1606-Hotfixrollup „KB3186654“ aktualisiert wurde.
 -    Ein *LTSB-Standort*, der dem Current Branch-Standort entspricht, der die Version 1606 und das entsprechende 1606-Hotfixrollup „KB3186654“ ausführt. Das Baselinemedium enthält bereits das Hotfixrollup.  Wie im Artikel [Einführung in Long-Term Servicing Branch von System Center Configuration Manager](introduction-to-the-ltsb.md) beschrieben wird, unterstützt LTSB jedoch nicht alle Features oder Funktionen, die in Current Branch verfügbar sind.
 
 Wenn Sie nicht mit den verschiedenen Branches von System Center Configuration Manager vertraut sind, finden Sie weitere Informationen unter [Which branch of Configuration Manager should I use (Welchen Configuration Manager-Branch sollte ich verwenden?)](which-branch-should-i-use.md).
+
+
 
 
 ## <a name="changes-to-setup-with-the-1606-baseline-media"></a>Änderungen an dem Setup mit dem 1606-Baselinemedium
@@ -98,6 +104,7 @@ Weitere Informationen finden Sie unter [Install System Center Configuration Mana
 Wenn Sie das 1606-Baselinemedium verwenden, um einen neuen Standort für jeden Branch zu installieren, verwenden Sie die Standortplanung, die Vorbereitung und die Installationsprozedur, die im Thema [Installieren von System Center Configuration Manager-Standorten](/sccm/core/servers/deploy/install/installing-sites) dokumentiert sind, zusätzlich zu den folgenden Überlegungen zum Setup:
 
 - Während des Setups müssen Sie den Configuration Manager-Branch auswählen, den Sie installieren möchten, und Sie können Details zu Ihrem Software Assurance-Vertrag angeben.
+- Alle Standorte in derselben Hierarchie müssen denselben Branch ausführen. Eine Hierarchie mit einer Mischung aus LTSB und Current Branch an unterschiedlichen Standorten wird nicht unterstützt.
 -    Neue Skriptinstallation. Weitere Informationen finden Sie unter „Neue Skriptinstallationsoptionen“ weiter oben in diesem Artikel.
 
 ## <a name="expand-a-stand-alone-primary-site"></a>Erweitern eines eigenständigen primären Standorts

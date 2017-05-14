@@ -2,7 +2,7 @@
 title: "Checkliste für 1702 | System Center Configuration Manager"
 description: "Erfahren Sie mehr über die Vorbereitungen, die Sie treffen müssen, bevor Sie eine Aktualisierung auf System Center Configuration Manager Version 1702 ausführen."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 05/02/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,10 +15,11 @@ caps.latest.revision: 7
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: dd54a5668f8df73b0724f5c15a1a6a83f8fe8496
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
+ms.openlocfilehash: c4ace452d62d4fa08f4457cb1735718ca4bd016d
+ms.contentlocale: de-de
+ms.lasthandoff: 05/02/2017
 
 ---
 # <a name="checklist-for-installing-update-1702-for-system-center-configuration-manager"></a>Checkliste für die Installation von Update 1702 für System Center Configuration Manager
@@ -26,6 +27,9 @@ ms.lasthandoff: 03/27/2017
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 Wenn Sie Current Branch von System Center Configuration Manager verwenden, können Sie das konsoleninterne Update für Version 1702 installieren, um Ihre Hierarchie einer älteren Version zu aktualisieren.
+
+> [!TIP]  
+Version 1702 steht auch als [Baselinemedium](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions) zur Verfügung, das sie zum Installieren des ersten Standorts einer neuen Hierarchie verwenden können.
 
 Für das Update auf Version 1702 müssen Sie eine Dienstverbindungspunkt-Standortsystemrolle auf der obersten Ebene Ihrer Hierarchie verwenden. Dies kann im Online- oder Offlinemodus erfolgen. Nachdem Ihre Hierarchie das Updatepaket von Microsoft heruntergeladen hat, können Sie es in der Konsole unter **Verwaltung &gt; Übersicht &gt; Clouddienste &gt; Updates und Wartung** finden.
 

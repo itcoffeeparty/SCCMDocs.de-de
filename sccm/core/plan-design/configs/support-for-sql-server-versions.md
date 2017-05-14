@@ -2,7 +2,7 @@
 title: "Unterstützte Versionen von SQL Server | Microsoft-Dokumentation"
 description: Abrufen der SQL Server-Version und Konfigurationsanforderungen zum Hosten einer System Center Configuration Manager-Standortdatenbank.
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 05/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 21
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: ea9edf6392c41e31276900454cd78ce4bc32be7b
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d5a6fdc9a526c4fc3a9027dcedf1dd66a6fff5a7
+ms.openlocfilehash: fa7f232fd385f742bb11c6596c954d87c2da87a8
+ms.contentlocale: de-de
+ms.lasthandoff: 05/01/2017
 
 
 ---
@@ -54,10 +55,15 @@ Die folgenden Instanzen werden unterstützt:
  SQL Server muss auf dem Standortservercomputer installiert sein.  
 
 ##  <a name="bkmk_SQLVersions"></a> Unterstützte Versionen von SQL Server  
- In einer Hierarchie mit mehreren Standorten kann jeder Standort eine unterschiedliche SQL Server-Version zum Hosten der Standortdatenbank verwenden, solange Configuration Manager die von Ihnen verwendeten Versionen von SQL Server unterstützt.  
+ In einer Hierarchie mit mehreren Standorten kann jeder Standort eine andere SQL Server-Version zum Hosten der Standortdatenbank verwenden, solange Folgendes zutrifft:
+ -  Configuration Manager unterstützt die von Ihnen verwendeten SQL Server-Versionen.
+ -  Microsoft stellt weiterhin Support für die von Ihnen verwendeten SQL Server-Versionen bereit.
+ -  SQL Server unterstützt Replikationen zwischen beiden SQL Server-Versionen.  Beispielsweise [unterstützt SQL Server keine Replikation zwischen SQL Server 2008 R2 und SQL Server 2016](https://docs.microsoft.com/sql/relational-databases/replication/deprecated-features-in-sql-server-replication).
+
+
 
  Sofern nicht anders angegeben, werden die folgenden SQL Server-Versionen von allen aktiven Versionen von System Center Configuration Manager-Versionen unterstützt. Wenn der Support für eine neue Version von SQL Server oder ein Service Pack hinzugefügt wird, wird die Version von Configuration Manager, mit der der Support hinzugefügt wird, angegeben. Schauen Sie ebenso bei eingestelltem Support nach weiteren Angaben zu den betroffenen Versionen von Configuration Manager.   
- 
+
 Der Support für ein bestimmtes Service Pack von SQL Server beinhaltet kumulative Updates für dieses Service Pack, es sei denn, das kumulative Update verstößt gegen die Rückwärtskompatibilität dieser Basisversion des Service Packs. Wenn keine Version des Service Packs angegeben ist, gibt es den Support für die Version des SQL Servers ohne Service Pack. Wenn künftig ein Service Pack für diese Version veröffentlicht wird, wird ein separater Supporthinweis erstellt, bevor diese neue Version des Service Packs unterstützt wird.
 
 
@@ -245,7 +251,7 @@ Wenn auf dem Computer, auf dem SQL Server ausgeführt wird, eine Firewall aktivi
 Wie Sie SQL Server für die Verwendung eines bestimmten Ports konfigurieren, wird in der TechNet-Bibliothek unter [Konfigurieren eines Servers zur Überwachung eines bestimmten TCP-Ports (SQL Server-Konfigurations-Manager)](http://go.microsoft.com/fwlink/p/?LinkID=226349) anhand eines Beispiels erläutert.  
 
 ## <a name="upgrade-options-for-sql-server"></a>Upgradeoptionen für SQL Server
-Wenn Sie Ihre Version von SQL Server aktualisieren müssen, werden folgende Methoden in der Reihenfolge ihrer Komplexität empfohlen.
+Wenn Sie ein Upgrade für Ihre Version von SQL Server durchführen müssen, werden folgende Methoden in der Reihenfolge ihrer Komplexität empfohlen.
 1. [Direktes Upgrade von SQL Server](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (empfohlen).
 2. Installieren Sie eine neue Version von SQL Server auf einem neuen Computer, und [verwenden Sie die Option „Datenbankverschiebung“](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration) von Configuration Manager-Setup, um Ihren Standortserver auf den neuen SQL Server auszurichten.
 3. Verwenden Sie [Sicherung und Wiederherstellung](/sccm/protect/understand/backup-and-recovery).

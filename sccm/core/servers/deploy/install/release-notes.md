@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
-ms.openlocfilehash: 44338c705e308896c5203be239c160a8220369a8
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7a6c89254d01f4074e5c170b20338686178ebdd3
+ms.openlocfilehash: 59946d1328be1606ba7c4dab647e814c1b4e638a
+ms.contentlocale: de-de
+ms.lasthandoff: 04/28/2017
 
 
 ---
@@ -216,6 +217,12 @@ Eine vollständige Zurücksetzung von Windows 10 RTM-Geräten (frühere Versione
 Wenn ein Administrator mehreren Benutzersammlungen eine Reihe von Geschäftsbedingungen bereitstellt, und ein Benutzer Mitglied von mehreren dieser Sammlungen ist, werden diesem Benutzer beim Öffnen des Unternehmensportals mehrere Kopien identischer Geschäftsbedingungen angezeigt.  Beispiel: Wenn ein Benutzer mit dem Namen „SampleUser“ Mitglied von zwei verschiedenen Benutzersammlungen mit den Namen „CompanyEmployeesFTE“ und „CompanyEmployeesNA“ ist, und die Geschäftsbedingungen namens „CompanyTerms“ sowohl der Sammlung „CompanyEmployeesFTE“ als auch der Sammlung „CompanyEmployeesNA“ bereitgestellt wurde, werden dem Benutzer „SampleUser“ auf der Seite für die Annahme der Geschäftsbedingungen zwei identische Kopien von „CompanyTerms“ angezeigt. Da die Benutzer jeweils nur alle Geschäftsbedingungen annehmen oder ablehnen können, besteht keine Gefahr, dass sich ein mehrdeutiger Zustand ergibt, in dem der Benutzer Geschäftsbedingungen sowohl angenommen als auch abgelehnt hat. Der Akzeptanzbericht für die Geschäftsbedingungen umfasst nur eine Zeile für jeden Satz von Geschäftsbedingungen für den jeweiligen Benutzer, damit in dem Bericht kein Fehler auftritt. Der einzige Effekt ist, dass dem Benutzer auf der Seite zur Annahme der Geschäftsbedingungen zwei Kopien der Geschäftsbedingungen angezeigt werden.  
 
 **Problemumgehung**: Stellen Sie sicher, dass jeder Benutzer nur in einer Auflistung enthalten ist, für die die Geschäftsbedingungen bereitgestellt werden.  
+
+### <a name="android-for-work-email-profiles-that-use-certificate-authentication-are-not-applied-to-devices"></a>Android for Work-E-Mail-Profile mit Zertifikatauthentifizierung werden nicht auf Geräte angewendet.
+<!--  487657 -->
+Bei der Erstellung eines Android for Work-E-Mail-Profils stehen zwei Authentifizierungsoptionen zur Verfügung: Einerseits mittels Benutzername und Kennwort und andererseits mittels Zertifikaten. Zu diesem Zeitpunkt funktioniert die Zertifikatoption nicht. Wenn das Profil mit der Authentifizierungsmethode **Zertifikate** erstellt wird, wird das Profil nicht auf das Gerät angewendet, und der Benutzer wird aufgefordert, Details zum E-Mail-Konto manuell einzugeben.
+
+**PROBLEMUMGEHUNG**: Keine. Administratoren müssen entweder die Option **Benutzername und Kennwort** verwenden, oder warten, bis dieses Problem behoben wurde.
 
 ## <a name="reports-and-monitoring"></a>Berichte und Überwachung  
 

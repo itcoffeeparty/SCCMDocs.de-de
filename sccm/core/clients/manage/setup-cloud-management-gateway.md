@@ -4,17 +4,18 @@ description:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/23/2017
+ms.date: 05/01/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
 ms.technology:
 - configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-translationtype: Human Translation
-ms.sourcegitcommit: 2bcc5d9dde1f1a2d9c33575d6c463e281ac818e8
-ms.openlocfilehash: 61b8cd8458718b9a54edb129739c619f947ac380
-ms.lasthandoff: 12/16/2016
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d5a6fdc9a526c4fc3a9027dcedf1dd66a6fff5a7
+ms.openlocfilehash: 97e1bc6585cee0ff433da0ec0b60b9604cb7348f
+ms.contentlocale: de-de
+ms.lasthandoff: 05/01/2017
 
 ---
 
@@ -24,13 +25,27 @@ ms.lasthandoff: 12/16/2016
 
 Ab Version 1610 umfasst der Prozess zum Einrichten des Cloudverwaltungsgateways in Configuration Manager die folgenden Schritte:
 
-## <a name="step-1-create-a-custom-ssl-certificate"></a>Schritt 1: Erstellen eines benutzerdefinierten SSL-Zertifikats
+## <a name="step-1-configure-required-certificates"></a>Schritt 1: Konfigurieren der erforderlichen Zertifikate
 
-Sie können ein benutzerdefiniertes SSL-Zertifikat für das Cloudverwaltungsgateway auf die gleiche Weise erstellen, wie Sie bei einem cloudbasierten Verteilungspunkt vorgehen würden. Führen Sie die Anweisungen zum [Bereitstellen des Dienstzertifikats für cloudbasierte Verteilungspunkte](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012) durch, tun Sie jedoch folgende Dinge anders:
+## <a name="option-1-preferred---use-the-server-authentication-certificate-from-a-public-and-globally-trusted-certificate-provider-like-verisign"></a>Option 1 (bevorzugt) – Verwenden Sie das Serverauthentifizierungszertifikat von einem öffentlichen und global vertrauenswürdigen Zertifikatanbieter (z.B. VeriSign).
 
--   Geben Sie beim Einrichten der Zertifikatvorlage die Berechtigungen **Lesen** und **Registrieren** für die Sicherheitsgruppe an, die Sie für Configuration Manager-Server einrichten.
+Wenn Sie diese Methode verwenden, vertrauen Clients automatisch dem Zertifikat, und Sie müssen benutzerdefinierte SSL-Zertifikate nicht selbst erstellen.
 
--  Geben Sie beim Anfordern des benutzerdefinierten Webserverzertifikats für den allgemeinen Namen des Zertifikats einen FQDN an, der auf **cloudapp.net** endet, wenn Sie das Cloudverwaltungsgateway in der öffentlichen Azure-Cloud verwenden möchten, bzw. der auf **usgovcloudapp.net** endet, wenn Sie Azure Government Cloud verwenden möchten.
+1. Erstellen Sie einen kanonischen Namenseintrag (CNAME) im öffentlichen Domain Name Service (DNS) Ihrer Organisation, um einen Alias für den Cloud Management Gateway-Dienst als Anzeigenamen zu erstellen, der im öffentlichen Zertifikat verwendet wird.
+Contoso nennt seinen Cloud Management Gateway-Dienst beispielsweise **GraniteFalls**, der in Azure als **GraniteFalls.CloudApp.Net** angezeigt wird. Im öffentlichen DNS-Namespace von Contoso, „contoso.com“, erstellt der DNS-Administrator einen neuen CNAME-Eintrag für **GraniteFalls.Contoso.com** für den echten Hostnamen **GraniteFalls.CloudApp.net**.
+2. Fordern Sie als Nächstes mithilfe des allgemeinen Namens (Common Name, CN) des CNAME-Alias ein Serverauthentifizierungszertifikat von einem öffentlichen Anbieter an.
+Contoso verwendet als allgemeinen Namen des Zertifikats z.B. **GraniteFalls.Contoso.com**.
+3. Erstellen Sie mithilfe dieses Zertifikats den Cloud Management Gateway-Dienst in der Configuration Manager-Konsole.
+    - Wenn Sie auf der Seite **Einstellungen** des Assistenten zum Erstellen von Cloudverwaltungsgateways das Serverzertifikat für diesen Clouddienst (aus der **Zertifikatdatei**) hinzufügen, extrahiert der Assistent als Dienstnamen den Hostnamen aus dem allgemeinen Namen des Zertifikats. Dieser wird dann zur Erstellung des Diensts in Azure als Dienst-FQDN an **cloudapp.net** (oder **usgovcloudapp.net** für die Azure US Government Cloud) angefügt.
+Wenn das Cloudverwaltungsgateway z.B. bei Contoso erstellt wird, wird der Hostname **GraniteFalls** aus dem allgemeinen Namen des Zertifikats extrahiert, sodass der eigentliche Dienst in Azure als **GraniteFalls.CloudApp.net** erstellt wird.
+
+### <a name="option-2---create-a-custom-ssl-certificate-for-cloud-management-gateway-in-the-same-way-as-for-a-cloud-based-distribution-point"></a>Option 2 – Erstellen Sie ein benutzerdefiniertes SSL-Zertifikat für das Cloudverwaltungsgateway auf dieselbe Weise wie bei einem cloudbasierten Verteilungspunkt.
+
+Sie können ein benutzerdefiniertes SSL-Zertifikat für das Cloudverwaltungsgateway auf die gleiche Weise erstellen, wie Sie bei einem cloudbasierten Verteilungspunkt vorgehen würden. Führen Sie die Anweisungen zum [Bereitstellen des Dienstzertifikats für cloudbasierte Verteilungspunkte](/sccm/core/plan-design/network/example-deployment-of-pki-certificates) durch, tun Sie jedoch folgende Dinge anders:
+
+- Erteilen Sie beim Einrichten der neuen Zertifikatvorlage die Berechtigungen „Lesen“ und **Registrieren** für die Sicherheitsgruppe, die Sie für Configuration Manager-Server einrichten.
+- Geben Sie beim Anfordern des benutzerdefinierten Webserverzertifikats für den allgemeinen Namen des Zertifikats einen FQDN an, der auf **cloudapp.net** endet, wenn Sie das Cloudverwaltungsgateway in der öffentlichen Azure-Cloud verwenden möchten, bzw. der auf **usgovcloudapp.net** endet, wenn Sie Azure Government Cloud verwenden möchten.
+
 
 ## <a name="step-2-export-the-client-certificates-root"></a>Schritt 2: Exportieren des Clientstammzertifikats
 

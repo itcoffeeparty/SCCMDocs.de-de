@@ -2,7 +2,7 @@
 title: Welcher Branch von Configuration Manager sollte verwendet werden? | Microsoft-Dokumentation
 description: "Hier finden Sie Informationen zu den Unterschieden zwischen den verfügbaren Branches von System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: ef044af5f6b32e4161d54c0ab1fb2ef2d245264b
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
+ms.openlocfilehash: f791278b0aa8efc734a894da7dab1704bb567ed0
+ms.contentlocale: de-de
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -29,6 +30,9 @@ ms.lasthandoff: 03/27/2017
 
 Seit Oktober 2016 ist System Center Configuration Manager in drei Branches verfügbar. Mithilfe dieses Themas können Sie den für Sie geeigneten Branch wählen.
 
+> [!TIP]  
+> Alle Standorte in einer Hierarchie müssen den gleichen Branch ausführen. Eine Hierarchie mit verschiedenen Branches an unterschiedlichen Standorten wird nicht unterstützt.
+
 ## <a name="current-branch-of-system-center-configuration-manager"></a>Current Branch von System Center Configuration Manager
 Hierbei handelt es sich um einen lizenzierten Branch zur Verwendung in einer Produktionsumgebung mit der Möglichkeit, die neuesten Features und Funktionen zu erhalten. Diesen Branch sollten Sie verwenden, wenn Sie über eines der folgenden Abonnements verfügen: System Center Datacenter, System Center Standard, System Center Configuration Manager oder entsprechende Abonnementrechte. Weitere Informationen zu Software Assurance und Lizenzierungsoptionen finden Sie unter [Licensing and branches for System Center Configuration Manager (Lizenzierung und Branches für System Center Configuration Manager)](learn-more-editions.md).
 
@@ -38,7 +42,7 @@ Hierbei handelt es sich um einen lizenzierten Branch zur Verwendung in einer Pro
 
 Current Branch wird mehrmals pro Jahr mit neuen Features aktualisiert. Jede Updateversion wird nach der Veröffentlichung ein Jahr lang unterstützt. Bis zum Ablauf dieses einen Jahres müssen Sie Current Branch auf eine neuere Version aktualisieren. Die Updates auf neuere Versionen sind als konsoleninterne Updates verfügbar.
 
-Um Current Branch als neuen Standort oder als Upgrade von System Center 2012 Configuration Manager mit Service Pack 2 oder System Center 2012 R2 Configuration Manager mit Service Pack 1 zu installieren, verwenden Sie die [Baselinemedien](/sccm/core/servers/manage/updates#baseline-and-update-versions) für System Center Configuration Manager, die mit System Center 2016 auf einer DVD geliefert werden oder als Teil eines eigenständigen Releases von System Center Configuration Manager verfügbar sind. Der Zugriff auf diese Medien hängt von Ihrer Lizenzierung von System Center Configuration Manager ab.
+Um Current Branch als neuen Standort oder als Upgrade von System Center 2012 Configuration Manager mit Service Pack 2 oder System Center 2012 R2 Configuration Manager mit Service Pack 1 zu installieren, verwenden Sie die [Baselinemedien](/sccm/core/servers/manage/updates#baseline-and-update-versions) für System Center Configuration Manager, die mit System Center 2016 auf einer DVD geliefert werden oder als Teil eines eigenständigen Releases von System Center Configuration Manager verfügbar sind. Der Zugriff auf diese Medien hängt von Ihrer Lizenzierung von System Center Configuration Manager ab. Höhere Baselineversionen wie 1702 unterstützen nicht die Installation von LTSB.
 
 Mithilfe der Baselinemedien können Sie auch einen neuen Standort als Evaluierungsversion von Current Branch installieren. Wenn Sie nur eine Evaluierungsversion installieren möchten, erhalten Sie die Software auf der [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection)-Website.
 
@@ -139,4 +143,15 @@ Weitere Informationen finden Sie unter [Technical Preview für System Center Con
 **Update-Optionen**
 -    Für eine neue Technical Preview-Version kann jedes konsoleninterne Update installiert werden.
 -    Es gibt keine Option zum Konvertieren von einer Technical Preview-Version zur Current Branch- oder LTSB-Version.
+
+
+## <a name="identify-your-branch-and-version"></a>Identifizieren des Branch und der Version
+In den Versionsinformationen für einen Configuration Manager-Standort können Sie auch den Branch ermitteln.
+
+**Version**   
+Um die Version Ihres Standorts zu überprüfen, wechseln Sie oben links in der Konsole, wo die **Standortversion** angezeigt wird, zu **Info zu System Center Configuration Manager**. Eine Liste der Standortversionen finden Sie unter []().
+
+**Branch**  
+Um den Branch Ihres Standorts (als LTSB oder Current Branch) zu bestätigen, gehen Sie in der Konsole zu **Verwaltung** > **Standortkonfiguration** > **Standorte**, und öffnen Sie **Hierarchieeinstellungen**. Wenn die Möglichkeit besteht, in Current Branch zu konvertieren, und diese Option aktiviert ist, führt der Standort die LTSB-Version aus. Wenn der Standort Current Branch ausführt, ist diese Option ausgegraut.
+Informationen zu den verschiedenen Versionen von Configuration Manager finden Sie unter „Baseline- und Updateversionen“ im Thema [Updates für Configuration Manager](/sccm/core/servers/manage/updates).
 
