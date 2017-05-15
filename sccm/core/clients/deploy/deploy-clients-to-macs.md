@@ -2,7 +2,7 @@
 title: Mac-Clients bereitstellen | Microsoft-Dokumentation
 description: "Erfahren Sie, wie Sie Clients auf Macintosh-Computern in System Center Configuration Manager bereitstellen können."
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: aaroncz
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 12
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
-ms.openlocfilehash: 9cab5b91a94e8bf2ad96a8a706f46c58e2a3d712
-ms.lasthandoff: 03/21/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c6a6137fa978e1ea28aefea2aea4e29ba661efd6
+ms.openlocfilehash: 6ce212c6745b70a47553891e5dbc124b4c4e50fa
+ms.contentlocale: de-de
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -34,7 +35,10 @@ In diesen Verfahren haben Sie zwei Optionen zum Installieren von Clientzertifika
 
 -   Verwenden der Configuration Manager-Registrierung mithilfe des Tools [CMEnroll](#install-the-client-and-then-enroll-the-client-certificate-on-the-mac). Die automatische Zertifikatserneuerung wird bei der Anmeldung nicht unterstützt, sodass Sie Macintosh-Computer vor dem Ablaufdatum des installierten Zertifikats erneut anmelden müssen.    
 
--   [Verwenden einer von Configuration Manager unabhängigen Zertifikatanforderungs- und -installationsmethode](#use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager).  
+-   [Verwenden einer von Configuration Manager unabhängigen Zertifikatanforderungs- und -installationsmethode](#use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager). 
+
+>[!IMPORTANT]
+>  Zum Bereitstellen des Clients auf Geräten mit macOS Sierra muss der Antragstellername des Verwaltungspunktzertifikats ordnungsgemäß konfiguriert werden, z. B. mithilfe des FQDN des Verwaltungspunktservers.
 
 
 ## <a name="configure-client-settings-for-enrollment"></a>Konfigurieren Sie die Clienteinstellungen für die Anmeldung  
@@ -219,7 +223,7 @@ Führen Sie anschließend diese Aufgaben aus:
 
 3.  Geben Sie die folgende Befehlszeile ein: **sudo ./ccmsetup -MP <Verwaltungspunkt_Internet-FQDN\> -SubjectName <Wert für Zertifikatantragsteller\>**.  Beim Wert für den Zertifikatantragsteller muss die Groß-/Kleinschreibung beachtet werden, daher muss dieser genauso eingegeben werden, wie er in den Zertifikatdetails angezeigt wird.  
 
-     Beispiel: Wenn der Internet-FQDN in den Standortsystemeigenschaften **server03.contoso.com** lautet und das Macintosh-Client-Zertifikat den FQDN von **mac12.contoso.com**als allgemeinen Namen für den Zertifikatantragsteller verwendet, geben Sie Folgendes ein: **sudo ./ccmsetup -MP server03.contoso.com -SubjectName mac12.contoso.com**  
+     Beispiel: Wenn der Internet-FQDN in den Standortsystemeigenschaften **server03.contoso.com** lautet und das Macintosh-Client-Zertifikat den FQDN von **mac12.contoso.com** als allgemeinen Namen für den Zertifikatantragsteller verwendet, geben Sie Folgendes ein: **sudo ./ccmsetup -MP server03.contoso.com -SubjectName mac12.contoso.com**  
 
 4.  Warten Sie, bis die Meldung **Installation abgeschlossen** angezeigt wird, und starten Sie anschließend den Macintosh-Computer neu.  
 
@@ -299,7 +303,7 @@ Führen Sie anschließend diese Aufgaben aus:
 
     -   **Ausgewählte Einstellung:** Wählen Sie **Durchsuchen** aus, und wählen Sie anschließend das Ermittlungsskript aus, das Sie zuvor angegeben haben.  
 
-    -   Geben Sie im Feld **die folgenden Werte** **The domain/default pair of (com.microsoft.ccmclient, SMSID) does not exist**ein.  
+    -   Geben Sie im Feld **die folgenden Werte** **Das Domänen-/Standardpaar (com.microsoft.ccmclient, SMS-ID) existiert nicht**ein.  
 
     -   Aktivieren Sie die Option **Das angegebene Wiederherstellungsskript ausführen, wenn diese Einstellung nicht kompatibel ist**.  
 
@@ -322,7 +326,7 @@ Führen Sie anschließend diese Aufgaben aus:
 17. Neu starten.  
 
 
-### <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen:
 
 [Warten von Macintosh-Clients](/sccm/core/clients/manage/maintain-mac-clients)
 

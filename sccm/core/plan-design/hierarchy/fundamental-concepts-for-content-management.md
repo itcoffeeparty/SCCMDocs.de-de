@@ -2,7 +2,7 @@
 title: Grundlagen der Inhaltsverwaltung | Microsoft-Dokumentation
 description: Verwenden Sie Tools und Optionen in System Center Configuration Manager, um den Inhalt zu verwalten, den Sie bereitstellen.
 ms.custom: na
-ms.date: 3/15/2017
+ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 238e460885b6490b3744690640f9ff040902b35f
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 212628639300e9c361f7cee61b3df6b1cb6874ce
+ms.openlocfilehash: f73dde64e0e8a0fc49f45b3afb3b8f00c926a820
+ms.contentlocale: de-de
+ms.lasthandoff: 05/05/2017
 
 
 ---
@@ -29,9 +30,12 @@ ms.lasthandoff: 03/27/2017
 
 System Center Configuration Manager unterstützt ein robustes System von Tools und Optionen zum Verwalten der Inhalte, die Sie als Anwendungen, Pakete, Softwareupdates und Betriebssysteme bereitstellen.  
 
- Die bereitgestellten Inhalte werden auf Standortservern und Verteilungspunkt-Standortsystemservern gespeichert. Diese Inhalte können bei der Übertragung zwischen den Standorten einen großen Anteil der Netzwerkbandbreite erfordern. Zur effektiven Planung und Verwendung von Content Management-Infrastruktur empfehlen wir, dass Sie die verfügbaren Optionen und Konfigurationen verstehen und anschließend überlegen, wie Sie diese anwenden, um die Anforderungen Ihrer Netzwerkumgebung und der Bereitstellung von Inhalten am besten zu erfüllen.  
+Die bereitgestellten Inhalte werden auf Standortservern und Verteilungspunkt-Standortsystemservern gespeichert. Diese Inhalte können bei der Übertragung zwischen den Standorten einen großen Anteil der Netzwerkbandbreite erfordern. Zur effektiven Planung und Verwendung von Content Management-Infrastruktur empfehlen wir, dass Sie die verfügbaren Optionen und Konfigurationen verstehen und anschließend überlegen, wie Sie diese anwenden, um die Anforderungen Ihrer Netzwerkumgebung und der Bereitstellung von Inhalten am besten zu erfüllen.  
 
-Nachstehend finden Sie die Schlüsselkonzepte für die Inhaltsverwaltung. Wenn für ein Konzept zusätzliche oder komplexe Informationen erforderlich sind, werden Links bereitgestellt, die Sie zu diesen Details leiten.  
+> [!TIP]    
+> Sie können mehr zum Inhaltsverteilungsprozess erfahren und Hilfe zur Untersuchung und Behebung allgemeiner Inhaltsverteilungsprobleme erhalten. Siehe den Artikel mit Informationen zum [Verstehen und Beheben von Problemen in Microsoft Configuration Manager](https://support.microsoft.com/help/4000401/content-distribution-in-mcm) auf support.microsoft.com.
+
+Nachstehend finden Sie Schlüsselkonzepte für die Inhaltsverwaltung. Wenn für ein Konzept zusätzliche oder komplexe Informationen erforderlich sind, werden Links bereitgestellt, die Sie zu diesen Details leiten.
 
 ## <a name="accounts-used-for-content-management"></a>Für das Content Management verwendete Konten  
  Die folgenden Konten können mit dem Content Management verwendet werden:  

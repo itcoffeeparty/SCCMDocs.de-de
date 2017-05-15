@@ -15,10 +15,11 @@ caps.latest.revision: 24
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
-ms.openlocfilehash: 562e81df12e46a2332aa5e4de8b7c9e5819bde80
-ms.lasthandoff: 03/21/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 065b1fcb25d7c7845b6f26e757b36e7fb97ce013
+ms.openlocfilehash: ef4536578456c13de5afaa5cd1977d2e6b4b6bd1
+ms.contentlocale: de-de
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -52,6 +53,9 @@ Die Betriebssystembereitstellung in System Center 2012 Configuration Manager wei
 -   [Windows ADK für Windows 10-Szenarien für IT-Experten](https://technet.microsoft.com/library/mt280162\(v=vs.85\).aspx)  
 
 -   [Windows ADK für Windows 10 herunterladen](https://msdn.microsoft.com/windows/hardware/dn913721.aspx#adkwin10)  
+
+-   [Unterstützung für Windows 10](/sccm/core/plan-design/configs/support-for-windows-10)  
+
 
 ### <a name="user-state-migration-tool-usmt"></a>Migrationsprogramm für den Benutzerzustand (USMT)  
  Configuration Manager verwendet ein USMT-Paket, das die USMT 10-Quelldateien enthält, zum Erfassen und Wiederherstellen des Benutzerzustands als Teil Ihrer Betriebssystembereitstellung. Configuration Manager am Standort der obersten Ebene erstellt das USMT-Paket automatisch. USMT 10 kann den Benutzerzustand von Windows 7, Windows 8, Windows 8.1 und Windows 10 erfassen. USMT 10 wird im Windows ADK (Windows Assessment and Deployment Kit) für Windows 10 verteilt.  

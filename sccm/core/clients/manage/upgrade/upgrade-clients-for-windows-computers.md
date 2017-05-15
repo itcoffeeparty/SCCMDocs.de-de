@@ -2,7 +2,7 @@
 title: Aktualisieren von Clients | Microsoft-Dokumentation
 description: "Upgraden von Clients für Windows-Computer in System Center Configuration Manager."
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: a5b59a1d31d897473262edcd0912ef0fcbedd100
-ms.lasthandoff: 03/06/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 212628639300e9c361f7cee61b3df6b1cb6874ce
+ms.openlocfilehash: 98b8c92e4dad3cef1ed3701b9c0f9111eb9941ea
+ms.contentlocale: de-de
+ms.lasthandoff: 05/05/2017
 
 
 ---
@@ -98,5 +99,8 @@ Sie können den Client auf Windows-Computern mithilfe von Clientinstallationsmet
 
 8.  Klicken Sie auf **Installationspakete des Clients automatisch an Verteilungspunkte verteilen, die für vorab bereitgestellten Inhalt aktiviert wurden**, wenn das Clientinstallationspaket auf Verteilungspunkte kopiert werden soll, die für vorab bereitgestellten Inhalt aktiviert wurden.  
 
-9. Klicken Sie auf **OK** , um die Einstellungen zu speichern und das Dialogfeld **Eigenschaften von Hierarchieeinstellungen** zu schließen. Diese Einstellungen werden beim nächsten Herunterladen einer Richtlinie auf Clients übertragen.  
+9. Klicken Sie auf **OK** , um die Einstellungen zu speichern und das Dialogfeld **Eigenschaften von Hierarchieeinstellungen** zu schließen. Diese Einstellungen werden beim nächsten Herunterladen einer Richtlinie auf Clients übertragen.
+
+>[!NOTE]
+>Bei Clientupgrades werden Configuration Manager-Wartungsfenster berücksichtigt, die Sie konfiguriert haben.
 

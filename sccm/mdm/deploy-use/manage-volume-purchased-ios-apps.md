@@ -2,7 +2,7 @@
 title: Verwalten von per Volumenlizenz erworbenen iOS-Apps | Microsoft-Dokumentation
 description: "Sie können Lizenzen für Apps, die Sie über den iOS App Store erworben haben, bereitstellen, verwalten und nachverfolgen."
 ms.custom: na
-ms.date: 03/28/2017
+ms.date: 05/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 3c2a07f560e0aa3d2beb7cc50e71c98ac45c27e1
-ms.openlocfilehash: a63acf0d80edba1e965ba8ea99fe90edb8aa2faf
-ms.lasthandoff: 03/28/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c6a6137fa978e1ea28aefea2aea4e29ba661efd6
+ms.openlocfilehash: 55f1204b088a7b636a90561f20aa41c7de72bc05
+ms.contentlocale: de-de
+ms.lasthandoff: 05/04/2017
 
 ---
 # <a name="manage-volume-purchased-ios-apps-with-system-center-configuration-manager"></a>Verwalten von iOS-Apps, die über ein Volumenprogramm erworben wurden, mit System Center Configuration Manager
@@ -112,7 +113,7 @@ Die Configuration Manager-Anwendung, die erstellt wird, enthält die App „Wind
 
  Wenn Sie eine App im Knoten **Lizenzinformationen für Store-Apps** erstellen, wird die App den Lizenzen des Tokens der von Ihnen ausgewählten App zugeordnet.  Es besteht z.B die Möglichkeit, dass Sie im Knoten zwei Versionen der gleichen App sehen. Dies liegt daran, dass jede Version der App einem anderen Apple VPP-Token zugeordnet ist.  Anschließend könnten Sie Apps von jedem Token erstellen und diese einzeln bereitstellen.
 
- Zum Freigeben einer Lizenz müssen Sie die Bereitstellungsaktion in **Deinstallieren**ändern. Die Lizenz wird freigegeben, sobald die App deinstalliert ist.  
+ Um eine Lizenz freizugeben, müssen Sie eine neue Bereitstellung für die App mit der Bereitstellungsaktion **Deinstallieren** erstellen. Sie können die Bereitstellungsaktion nicht in der ursprünglichen Bereitstellung ändern. Die Lizenz wird freigegeben, sobald die App deinstalliert ist.  
 
 ## <a name="step-3---monitor-ios-vpp-apps"></a>Schritt 3: Überwachen von iOS VPP-Apps  
  Auf dem Knoten **License Information for Store Apps** (Lizenzinformationen für Store-Apps) im Arbeitsbereich **Softwarebibliothek** werden Informationen über per Volumenlizenz erworbene iOS-Apps angezeigt. Diese Informationen enthalten auch die Gesamtzahl der Lizenzen, die Sie für jede App besitzen, sowie die Anzahl, die bereitgestellt wurde. Zusätzlich wird angezeigt, welchem VPP-Token die App zugeordnet ist und welchen Typ sie aufweist.

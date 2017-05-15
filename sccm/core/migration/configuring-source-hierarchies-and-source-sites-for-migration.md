@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 96bfa443cd2894bb1c46322cd5f984071916d9a6
-ms.openlocfilehash: 6942f4d74303d8ade8add6cc81da872648f208be
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c5a58d79f81ccdf19ad88dc932e3a52eac2c18ab
+ms.openlocfilehash: 80c43ab93ee5a2de6bf8d7993dfd46f0005d2df8
+ms.contentlocale: de-de
+ms.lasthandoff: 05/09/2017
 
 
 ---
@@ -37,7 +39,7 @@ Zur Migration von Daten zu Ihrer System Center Configuration Manager-Umgebung m�
 
 -   [Identifizieren von zusätzlichen Quellstandorten der Quellhierarchie](#BKBM_ConfigSrcSites)  
 
-##  <a name="a-namebkbmconfigsrchierarchya-specify-a-source-hierarchy-for-migration"></a><a name="BKBM_ConfigSrcHierarchy"></a> Angeben einer Quellhierarchie für die Migration  
+##  <a name="BKBM_ConfigSrcHierarchy"></a> Angeben einer Quellhierarchie für die Migration  
  Zur Migration von Daten zur Zielhierarchie müssen Sie eine unterstützte Quellhierarchie angeben, die die zu migrierenden Daten enthält. Standardmäßig wird der Standort der obersten Ebene dieser Hierarchie zu einem Quellstandort der Quellhierarchie. Bei der Migration einer Configuration Manager 2007-Hierarchie können Sie nach Abschluss der Datensammlung vom ersten Quellstandort weitere Quellstandorte für die Migration konfigurieren. Bei der Migration einer System Center 2012 Configuration Manager- oder System Center Configuration Manager-Hierarchie müssen Sie keine weiteren Quellstandorte einrichten, um die Daten aus der Quellhierarchie zu überführen. Dies liegt daran, dass in diesen Versionen von Configuration Manager eine freigegebene Datenbank verwendet wird, die am Standort der obersten Ebene der Quellhierarchie verfügbar ist. Die freigegebene Datenbank enthält alle Informationen, die Sie migrieren können.  
 
  Verwenden Sie folgende Verfahren zum Angeben einer Quellhierarchie zur Migration und zum Identifizieren zusätzlicher Quellstandorte in einer Configuration Manager 2007-Hierarchie.  
@@ -58,7 +60,7 @@ Zur Migration von Daten zu Ihrer System Center Configuration Manager-Umgebung m�
 
 6.  Geben Sie Zugriffskonten des Quellstandorts an, die über die folgenden Berechtigungen verfügen:  
 
-    -   Konto des Quellstandorts: Berechtigung **Lesen** für den SMS-Anbieter für den angegebenen Standort auf oberster Ebene in der Quellhierarchie.  
+    -   Konto des Quellstandorts: Berechtigung **Lesen** für den SMS-Anbieter für den angegebenen Standort auf oberster Ebene in der Quellhierarchie. Für die Freigabe und Upgrades von Verteilungspunkten sind in der Quellhierarchie die Berechtigungen **Ändern** und **Löschen** für den Standort erforderlich.
 
     -   Konto der Datenbank des Quellstandorts: Berechtigungen **Lesen** und **Ausführen** für die SQL Server-Datenbank für den angegebenen Standort auf oberster Ebene in der Quellhierarchie.  
 
@@ -70,7 +72,7 @@ Zur Migration von Daten zu Ihrer System Center Configuration Manager-Umgebung m�
 
 9. Klicken Sie nach Abschluss der Datensammlung auf **Schließen** , um das Dialogfeld **Status des Sammelns von Daten** zu schließen und die Konfiguration abzuschließen.  
 
-##  <a name="a-namebkbmconfigsrcsitesa-identify-additional-source-sites-of-the-source-hierarchy"></a><a name="BKBM_ConfigSrcSites"></a> Identifizieren von zusätzlichen Quellstandorten der Quellhierarchie  
+##  <a name="BKBM_ConfigSrcSites"></a> Identifizieren von zusätzlichen Quellstandorten der Quellhierarchie  
  Beim Konfigurieren einer unterstützten Quellhierarchie wird der Standort der obersten Ebene dieser Hierarchie automatisch als Quellstandort konfiguriert, und die Daten werden automatisch von diesem Standort gesammelt. Welche Aktion Sie als nächstes durchführen, hängt von der Configuration Manager-Version ab, die von der Quellhierarchie ausgeführt wird:  
 
 -   Für eine Configuration Manager 2007-Quellhierarchie können Sie nach Abschluss der Datensammlung für den ersten Quellstandort die Migration nur von diesem ersten Quellstandort aus starten, oder Sie können weitere Quellstandorte aus der Quellhierarchie konfigurieren. Richten Sie zum Migrieren von Daten, die nur an einem untergeordneten Standort verfügbar sind, zusätzliche Quellstandorte für eine Configuration Manager 2007-Hierarchie ein. Beispielsweise können Sie zusätzliche Quellstandorte zum Sammeln von Daten über Inhalte verwenden, die Sie migrieren möchten, wenn die betreffenden Inhalte an einem untergeordneten Standort in der Quellhierarchie erstellt wurden und am Standort der obersten Ebene der Quellhierarchie nicht zur Verfügung stehen.  
@@ -93,7 +95,7 @@ Verwenden Sie das folgende Verfahren für die Konfiguration zusätzlicher Quells
 
 5.  Geben Sie im Dialogfeld **Anmeldeinformationen des Quellstandorts** für die Zugriffskonten des Quellstandorts Konten mit folgenden Berechtigungen ein:  
 
-    -   Konto des Quellstandorts: Berechtigung **Lesen** für den SMS-Anbieter für den angegebenen Standort auf oberster Ebene in der Quellhierarchie.  
+    -   Konto des Quellstandorts: Berechtigung **Lesen** für den SMS-Anbieter für den angegebenen Standort auf oberster Ebene in der Quellhierarchie. Für die Freigabe und Upgrades von Verteilungspunkten sind in der Quellhierarchie die Berechtigungen **Ändern** und **Löschen** für den Standort erforderlich.  
 
     -   Konto der Datenbank des Quellstandorts: Berechtigungen **Lesen** und **Ausführen** für die SQL Server-Datenbank für den angegebenen Standort auf oberster Ebene in der Quellhierarchie.  
 
@@ -104,9 +106,4 @@ Verwenden Sie das folgende Verfahren für die Konfiguration zusätzlicher Quells
 7. Klicken Sie auf **OK** , um die Konfiguration zu speichern. So wird das Dialogfeld **Status des Sammelns von Daten** geöffnet, und das Sammeln von Daten wird automatisch gestartet.  
 
 8.  Klicken Sie nach Abschluss der Datensammlung auf **Schließen** , um die Konfiguration abzuschließen.  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

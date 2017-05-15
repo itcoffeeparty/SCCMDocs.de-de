@@ -2,7 +2,7 @@
 title: Vorbereiten der Bereitstellung von Clientsoftware auf Macs | Microsoft-Dokumentation
 description: Konfigurationsaufgaben vor dem Bereitstellen des Configuration Manager-Clients auf Mac-Computern.
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: aaroncz
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 12
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 0900e45115f02861c33fe2abdb046d11fdef3474
-ms.openlocfilehash: 9f51c15adaa850eb8343601ddcd13046480fc9c0
-ms.lasthandoff: 01/03/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c6a6137fa978e1ea28aefea2aea4e29ba661efd6
+ms.openlocfilehash: b3bb72f81812705b4654e268025074402e89a7cb
+ms.contentlocale: de-de
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -101,6 +102,9 @@ Eine Beispielbereitstellung, bei der dieses Webserverzertifikat erstellt und ins
 
  Eine Beispielbereitstellung, bei der das Clientzertifikat für Verteilungspunkte erstellt und installiert wird, finden Sie unter [Bereitstellen des Clientzertifikats für Verteilungspunkte](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_clientdistributionpoint2008_cm2012).  
 
+>[!IMPORTANT]
+>  Zum Bereitstellen des Clients auf Geräten mit macOS Sierra muss der Antragstellername des Verwaltungspunktzertifikats ordnungsgemäß konfiguriert werden, z. B. mithilfe des FQDN des Verwaltungspunktservers.
+
 ## <a name="prepare-the-client-certificate-template-for-macs"></a>Vorbereiten der Clientzertifikatvorlage für Mac-Computer  
 
  Die Zertifikatvorlage muss über die Berechtigungen **Lesen** und **Anmelden** für das Benutzerkonto verfügen, mit dem das Zertifikat auf dem Macintosh-Computer angemeldet wird.  
@@ -157,7 +161,7 @@ Die Standortsystemrollen müssen sich an einem primären Standort befinden.
 
 -   [Bestehender Standortsystemserver](#existing-site-system-server)  
 
-###  <a name="new-site-system-server"></a>Neuer Standortsystemserver  
+###  <a name="new-site-system-server"></a>neuer Standortsystemserver  
 
 1.  Wählen Sie in der Configuration Manager-Konsole die Optionen **Verwaltung** >  **Standortkonfiguration** > **Server und Standortsystemrollen** aus.  
 
@@ -171,7 +175,7 @@ Die Standortsystemrollen müssen sich an einem primären Standort befinden.
 
 7.  Überprüfen Sie auf der Seite **Anmeldungsproxyeinstellungen** die Einstellungen, und nehmen Sie ggf. Änderungen vor. Schließen Sie anschließend den Assistenten ab.  
 
-### <a name="existing-site-system-server"></a>Bestehender Standortsystemserver  
+### <a name="existing-site-system-server"></a>bestehender Standortsystemserver  
 
 1.  Wählen Sie in der Configuration Manager-Konsole die Optionen **Verwaltung** >  **Standortkonfiguration** > **Server und Standortsystemrollen** und anschließend den Server aus, den Sie zum Unterstützen von Mac-Computern verwenden möchten.  
 

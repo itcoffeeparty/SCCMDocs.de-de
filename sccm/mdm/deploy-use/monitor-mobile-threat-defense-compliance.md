@@ -15,10 +15,11 @@ caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: fa5919b72114d71e1fbad74418c662d199827690
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 212628639300e9c361f7cee61b3df6b1cb6874ce
+ms.openlocfilehash: 8edf83a0f761dfc16274ce49c3aa2b878c7fe6cd
+ms.contentlocale: de-de
+ms.lasthandoff: 05/05/2017
 
 
 ---
@@ -68,10 +69,11 @@ Sie können darüber hinaus auf dem Bildschirm **Geräte** bestimmte Geräte aus
 |**Bedrohungsstatus**| Ja | Der aktuelle Status der Bedrohung auf dem Gerät. Mögliche Zustände: **Aktiv**, **Gelöst** oder **Ignoriert:** Gibt an, dass der Benutzer die Bedrohung auf dem Gerät ignoriert hat, aber die Bedrohung noch vorhanden ist. |
 |**Bedrohungstyp**| Ja | Typ der Bedrohung des Mobile Threat Defense-Partners Mögliche Werte: **App**, **Datei** oder **OS** |
 |**AAD-Konto-ID**| Nein | Der eindeutige Bezeichner von Azure Active Directory. |
-|**Klassifizierung**| Ja | Eine vom Mobile Threat Defense-Partner bereitgestellte Klassifizierung der Bedrohung. Mögliche Werte: **Root-Enabler, Riskware, Adware, Chargeware, DataLeak, Trojaner, Wurm, Virus, Exploit, Backdoor, Bot, AppDropper, ClickFraud, Spam, Spyware, SurveillanceWare, Sicherheitsrisiko, Unbekannt, RootJailbrake, Connectivity, TollFraud, SideloadedApp** |
+|**Klassifizierung**| Ja | Eine vom Mobile Threat Defense-Partner bereitgestellte Klassifizierung der Bedrohung. Mögliche Werte: **Root-Enabler, Riskware, Adware, Chargeware, DataLeak, Trojaner, Wurm, Virus, Exploit, Backdoor, Bot, AppDropper, ClickFraud, Spam, Spyware, SurveillanceWare, Sicherheitsrisiko, Unbekannt, Root Jailbrake, Connectivity, TollFraud, SideloadedApp** |
 |**Geräte-ID**| Nein | Die Azure Active Directory-Objekt-ID, die das mit dem Arbeitsbereich verknüpfte Gerät mit Bedrohungsinformationen darstellt. |
 |**Bedrohungs-ID**| Nein | Vom Mobile Threat Defense-Partner generierte eindeutige Bezeichner für die Bedrohung. Die Bedrohungs-ID wird zum Nachverfolgen von Lösungen verwendet. |
-|**Bedrohungs-URL**| Nein | Wenn vorhanden, führt die Bedrohungs-URL zurück zur Verwaltungskonsolesnansicht dieser bestimmten Drohung des Mobile Threat Defense-Partners. |
+|**Bedrohungs-URL**| Nein | Wenn vorhanden, führt die Bedrohungs-URL zurück zur Verwaltungskonsolenansicht dieser bestimmten Drohung des Mobile Threat Defense-Partners. |
 
 > [!TIP] 
 > Stellen Sie sicher, dass die Spalten aktiviert sind, die nicht **standardmäßig sichtbar** sind, um weitere Details zum Kompatibilitätsstatus von Mobile Threat Defense für Ihre Geräte anzuzeigen.
+
