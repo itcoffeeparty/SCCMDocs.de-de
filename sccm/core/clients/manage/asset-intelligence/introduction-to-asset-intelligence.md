@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 6a851ddfeee78574fbb0b1eff0c7cc518a7bb598
+ms.contentlocale: de-de
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -28,7 +30,7 @@ ms.openlocfilehash: 6a851ddfeee78574fbb0b1eff0c7cc518a7bb598
 
 Mit Asset Intelligence in System Center Configuration Manager können Sie die Softwarelizenzverwendung im gesamten Unternehmen mithilfe des Asset Intelligence-Katalogs verwalten und inventarisieren. Mit vielen Hardwareinventur-WMI-Klassen (Windows-Verwaltungsinstrumentation) wird der Umfang der Informationen, die zu verwendeten Hardware- und Softwaretiteln gesammelt werden, verbessert. Diese Informationen werden durch mehr als 60 Berichte in einem einfach zu verwendenden Format dargestellt. Viele dieser Berichte sind mit detaillierteren Berichten verknüpft, sodass Sie allgemeine Informationen abfragen und dann per Drilldown ausführlichere Informationen anzeigen können. Sie können benutzerdefinierte Informationen wie Softwarekategorien, Softwarefamilien, Softwarebezeichnungen und Hardwareanforderungen zum Asset Intelligence-Katalog hinzufügen. Darüber hinaus können Sie eine Verbindung zu System Center Online herstellen, um den Asset Intelligence-Katalog mit den neuesten verfügbaren Informationen zu aktualisieren. Microsoft-Kunden können die Verwendung von Unternehmenssoftwarelizenzen mit erworbenen Softwarelizenzen abstimmen, die verwendet werden, indem Softwarelizenzinformationen in die Configuration Manager-Standortdatenbank importiert werden.  
 
-##  <a name="a-namebkmkassetintelligencecataloga-asset-intelligence-catalog"></a><a name="BKMK_AssetIntelligenceCatalog"></a> Asset Intelligence-Katalog  
+##  <a name="BKMK_AssetIntelligenceCatalog"></a> Asset Intelligence-Katalog  
 
  Der Asset Intelligence-Katalog in Configuration Manager besteht aus in der Standortdatenbank gespeicherten Datenbanktabellen, in denen Kategorisierungs- und Identifikationsinformationen von über 300.000 Softwaretiteln und -versionen enthalten sind. Diese Datenbanktabellen werden auch verwendet, um die Hardwareanforderungen bestimmter Softwaretitel zu verwalten.  
 
@@ -36,22 +38,22 @@ Mit Asset Intelligence in System Center Configuration Manager können Sie die So
 
  Asset Intelligence-Katalogupdates, die neu veröffentlichten Software umfassen, können in regelmäßigen Abständen heruntergeladen werden, um Massenkatalogupdates auszuführen. Der Katalog kann mit der Standortsystemrolle "Asset Intelligence-Synchronisierungspunkt" auch dynamisch aktualisiert werden.  
 
-###  <a name="a-namebkmksoftwarecategoriesa-software-categories"></a><a name="BKMK_SoftwareCategories"></a> Softwarekategorien  
+###  <a name="BKMK_SoftwareCategories"></a> Softwarekategorien  
  Asset Intelligence-Softwarekategorien werden zur groben Kategorisierung inventarisierter Softwaretitel verwendet sowie zum allgemeinen Gruppieren von spezifischeren Softwarefamilien. Eine Softwarekategorie könnte beispielsweise ein Energieversorgungsunternehmen sein und eine Softwarefamilie innerhalb dieser Softwarekategorie beispielsweise Öl und Gas oder Wasserenergie. Viele Softwarekategorien sind im Asset Intelligence-Katalog vordefiniert. Es können außerdem benutzerdefinierte Kategorien hinzugefügt werden, um die inventarisierte Software zusätzlich zu definieren. Der Überprüfungszustand aller vordefinierten Softwarekategorien lautet immer **Überprüft**, während dem Asset Intelligence-Katalog hinzugefügte benutzerdefinierte Softwarekategorieinformationen als **Benutzerdefiniert**angegeben werden. Weitere Informationen zum Verwalten von Softwarekategorien finden Sie unter [Konfigurieren von Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md).  
 
 > [!NOTE]  
 >  Vordefinierte Softwarekategorieinformationen, die im Asset Intelligence-Katalog gespeichert sind, sind schreibgeschützt und können nicht geändert oder gelöscht werden. Administratoren können benutzerdefinierte Softwarekategorien hinzufügen, ändern und löschen.  
 
-###  <a name="a-namebkmksoftwarefamiliesa-software-families"></a><a name="BKMK_SoftwareFamilies"></a> Softwarefamilien  
+###  <a name="BKMK_SoftwareFamilies"></a> Softwarefamilien  
  Mithilfe von Asset Intelligence-Softwarefamilien werden inventarisierte Softwaretitel innerhalb von Softwarekategorien definiert. Viele Softwarefamilien sind im Asset Intelligence-Katalog vordefiniert. Es können außerdem benutzerdefinierte Kategorien hinzugefügt werden, um die inventarisierte Software zusätzlich zu definieren. Der Überprüfungszustand aller vordefinierten Softwarefamilien lautet immer **Überprüft**, während dem Asset Intelligence-Katalog hinzugefügte benutzerdefinierte Softwarefamilien als **Benutzerdefiniert**angegeben werden. Weitere Informationen zum Verwalten von Softwarefamilien finden Sie unter [Konfigurieren von Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md).  
 
 > [!NOTE]  
 >  Vordefinierte Softwarefamilieninformationen sind schreibgeschützt und können nicht geändert werden. Administratoren können benutzerdefinierte Softwarefamilien hinzufügen, ändern und löschen.  
 
-###  <a name="a-namebkmkcustomlabelsa-software-labels"></a><a name="BKMK_CustomLabels"></a> Softwarebezeichnungen  
+###  <a name="BKMK_CustomLabels"></a> Softwarebezeichnungen  
  Mit benutzerdefinierten Softwarebezeichnungen können Sie in Asset Intelligence Filter zum Gruppieren von Softwaretiteln und zum Anzeigen der Softwaretitel in Asset Intelligence-Berichten erstellen. Sie können Softwarebezeichnungen zum Erstellen benutzerdefinierter Gruppen von Softwaretiteln mit einem gemeinsamen Attribut verwenden. Beispielsweise können Sie die Softwarebezeichnung "Shareware" erstellen und mit den inventarisierten Sharewaretiteln verknüpfen und anschließend einen Bericht ausführen, in dem alle der Softwarebezeichnung "Shareware" zugeordneten Softwaretitel aufgeführt werden. Softwarebezeichnungen sind nicht vordefiniert. Der Überprüfungszustand für Softwarebezeichnungen ist immer **Benutzerdefiniert**. Weitere Informationen zum Verwalten von Softwarebezeichnungen finden Sie unter [Konfigurieren von Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md).  
 
-###  <a name="a-namebkmkhardwarerequirementsa-hardware-requirements"></a><a name="BKMK_HardwareRequirements"></a> Hardwareanforderungen  
+###  <a name="BKMK_HardwareRequirements"></a> Hardwareanforderungen  
  Mithilfe von Hardwareanforderungen kann überprüft werden, ob Computer die Hardwareanforderungen für Softwaretitel erfüllen, bevor auf ihnen Softwarebereitstellungen vorgenommen werden. Die Hardwareanforderungen für Softwaretitel können im Arbeitsbereich **Bestand und Kompatibilität** im Knoten **Hardwareanforderungen** unter dem Knoten **Asset Intelligence** verwaltet werden. Viele Hardwareanforderungen sind im Asset Intelligence-Katalog vordefiniert, und es können neue benutzerdefinierte Hardwareanforderungsinformationen erstellt werden, um benutzerdefinierten Anforderungen zu entsprechen. Der Überprüfungszustand aller vordefinierten Hardwareanforderungen lautet immer **Überprüft**, während dem Asset Intelligence-Katalog hinzugefügte benutzerdefinierte Hardwareanforderungen als **Benutzerdefiniert**angegeben werden. Weitere Informationen zum Verwalten von Hardwareanforderungen finden Sie unter [Konfigurieren von Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md).  
 
 > [!NOTE]  
@@ -73,7 +75,7 @@ Mit Asset Intelligence in System Center Configuration Manager können Sie die So
 
  Im Asset Intelligence-Katalog gespeicherte vordefinierte Hardwareanforderungen sind schreibgeschützt und können nicht gelöscht werden.  Administratoren können benutzerdefinierte Hardwareanforderungen für Softwaretitel hinzufügen, ändern und löschen, welche nicht im Asset Intelligence-Katalog gespeichert sind.  
 
-##  <a name="a-namebkmkinventoriedsoftwaretitlesa-inventoried-software-titles"></a><a name="BKMK_InventoriedSoftwareTitles"></a> Inventarisierte Softwaretitel  
+##  <a name="BKMK_InventoriedSoftwareTitles"></a> Inventarisierte Softwaretitel  
  Die inventarisierten Softwaretitelinformationen können im Arbeitsbereich **Bestand und Kompatibilität** im Knoten **Inventarisierte Software** unter dem Knoten **Asset Intelligence** angezeigt werden. Die inventarisierten Softwareinformationen werden vom Hardwareinventurclient-Agent von Configuration Manager-Clients auf Basis der Softwaretitel gesammelt, welche im Asset Intelligence-Katalog gespeichert sind.  
 
 > [!WARNING]  
@@ -100,7 +102,7 @@ Mit Asset Intelligence in System Center Configuration Manager können Sie die So
 > [!NOTE]  
 >  Die Kategorisierungsinformationen (Produktname, Hersteller, Softwarekategorie und Softwarefamilie) können bei inventarisierter Software nur am Standort der obersten Ebene der Hierarchie geändert werden. Wenn Kategorisierungsinformationen für vordefinierte Software geändert werden, wird der Überprüfungszustand für die Software von **Überprüft** auf **Benutzerdefiniert**geändert.  
 
-##  <a name="a-nameassetintelligencesycnronizationpointa-asset-intelligence-synchronization-point"></a><a name="AssetIntelligenceSycnronizationPoint"></a> Asset Intelligence-Synchronisierungspunkt  
+##  <a name="AssetIntelligenceSycnronizationPoint"></a> Asset Intelligence-Synchronisierungspunkt  
  Beim Asset Intelligence-Synchronisierungspunkt handelt es sich um eine Configuration Manager-Standortsystemrolle, die verwendet wird, um über TCP-Port 443 eine Verbindung mit System Center Online herzustellen und dynamische Updates von Asset Intelligence-Kataloginformationen zu verwalten. Diese Standortrolle kann nur am Standort der obersten Ebene der Hierarchie installiert werden. Sie müssen alle Asset Intelligence-Kataloganpassungen unter Verwendung einer mit dem Standort der obersten Ebene verbundenen Configuration Manager-Konsole konfigurieren. Alle Updates müssen zwar am Standort der obersten Ebene konfiguriert werden, Asset Intelligence-Kataloginformationen werden jedoch auf andere Standorte in der Hierarchie repliziert. Unter Verwendung der Standortrolle des Asset Intelligence-Synchronisierungspunkts können außerplanmäßige Katalogsynchronisierungen mit System Center Online angefordert oder eine automatische Katalogsynchronisierung geplant werden. Zusätzlich zum Herunterladen neuer Asset Intelligence-Kataloginformationen können vom Asset Intelligence-Synchronisierungspunkt Informationen zu benutzerdefinierten Softwaretiteln zur Kategorisierung in System Center Online hochgeladen werden. Microsoft behandelt alle Softwaretitel, die zur Kategorisierung in System Center Online hochgeladen wurden, als öffentliche Informationen. Achten Sie daher darauf, dass Ihre benutzerdefinierten Softwaretitel keine vertraulichen oder proprietären Informationen enthalten.  
 
 > [!NOTE]  
@@ -109,7 +111,7 @@ Mit Asset Intelligence in System Center Configuration Manager können Sie die So
 > [!NOTE]  
 >  Damit eine Verbindung mit System Center Online hergestellt werden kann, muss dem Asset Intelligence-Synchronisierungspunkt eine Standortsystemrolle zugewiesen sein. Weitere Informationen zum Installieren eines Asset Intelligence-Synchronisierungspunkts finden Sie im Abschnitt [Konfigurieren von Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md).  
 
-##  <a name="a-namebkmkassetintelligencehomepagea-asset-intelligence-home-page"></a><a name="BKMK_AssetIntelligenceHomePage"></a> Asset Intelligence-Startseite  
+##  <a name="BKMK_AssetIntelligenceHomePage"></a> Asset Intelligence-Startseite  
  Der Knoten **Asset Intelligence** im Arbeitsbereich **Bestand und Kompatibilität** dient als Startseite für Asset Intelligence in Configuration Manager. Auf der **Asset Intelligence** -Startseite wird eine Zusammenfassung von Asset Intelligence-Kataloginformationen angezeigt.  
 
 > [!NOTE]  
@@ -124,28 +126,28 @@ Mit Asset Intelligence in System Center Configuration Manager können Sie die So
 
 -   **Status für inventarisierte Software**: Enthält die Anzahl und den Prozentsatz inventarisierter Software, Softwarekategorien und Softwarefamilien, die von Microsoft oder einem Administrator identifiziert wurden, deren Onlineidentifikation aussteht oder die nicht identifiziert sind und deren Onlineidentifikation nicht ausstehend ist. Die Informationen im Tabellenformat repräsentieren die jeweilige Anzahl, die Informationen im Diagramm den jeweiligen Prozentsatz.  
 
-##  <a name="a-namebkmkassetintelligencereportsa-asset-intelligence-reports"></a><a name="BKMK_AssetIntelligenceReports"></a> Asset Intelligence-Berichte  
+##  <a name="BKMK_AssetIntelligenceReports"></a> Asset Intelligence-Berichte  
  Sie finden die Asset Intelligence-Berichte in der Configuration Manager-Konsole im Arbeitsbereich **Überwachung** im Ordner „Asset Intelligence“ im Knoten **Berichterstattung**. Die Berichte enthalten Informationen zu Hardware, Lizenzverwaltung und Software. Weitere Informationen zu Berichten in Configuration Manager finden Sie unter [Berichterstellung in System Center Configuration Manager](../../../../core/servers/manage/reporting.md).  
 
 > [!NOTE]  
 >  Mit welcher Genauigkeit die Anzahl installierter Softwaretitel und Lizenzinformationen in den Asset Intelligence-Berichten angegeben werden, kann zwischen der tatsächlichen Anzahl installierter Softwaretitel oder den in der Umgebung verwendeten Lizenzen variieren. Diese Variation ist auf die komplexen Abhängigkeiten und Einschränkungen bei der Inventarisierung von Softwarelizenzinformationen für Softwaretitel zurückzuführen, die in Unternehmensumgebungen installiert sind. Die Asset Intelligence-Berichte dürfen bei der Prüfung der erworbenen Softwarelizenzen nicht als alleinige Quelle herangezogen werden.  
 
-###  <a name="a-namebkmkhardwarereportsa-asset-intelligence-hardware-reports"></a><a name="BKMK_HardwareReports"></a> Asset Intelligence-Hardwareberichte  
+###  <a name="BKMK_HardwareReports"></a> Asset Intelligence-Hardwareberichte  
  Asset Intelligence-Hardwareberichte enthalten Informationen zum Hardwarebestand in der Organisation. Auf der Basis von Informationen zum Hardwareinventar (Prozessorgeschwindigkeit, Speicher, Peripheriegeräte usw.) können in Asset Intelligence-Hardwareberichten Informationen zu USB-Geräten, zu upgradebedürftiger Hardware und sogar zu Computern, die für ein bestimmtes Softwareupgrade nicht bereit sind, angezeigt werden.  
 
 > [!NOTE]  
 >  Einige Benutzerdaten in den Asset Intelligence-Hardwareberichten werden dem Sicherheitsereignisprotokoll des Systems entnommen. Für eine erhöhte Genauigkeit der Berichte wird empfohlen, das Protokoll zu löschen, wenn ein Computer einem neuen Benutzer zugewiesen wird.  
 
-###  <a name="a-namebkmklicensemanagementreportsa-asset-intelligence-license-management-reports"></a><a name="BKMK_LicenseManagementReports"></a> Asset Intelligence-Lizenzverwaltungsberichte  
+###  <a name="BKMK_LicenseManagementReports"></a> Asset Intelligence-Lizenzverwaltungsberichte  
  Asset Intelligence-Lizenzverwaltungsberichte enthalten Daten über die verwendeten Lizenzen. Der Lizenzregisterbericht enthält installierte Microsoft-Anwendungen in einem der Microsoft-Lizenzübersicht (MLS) vergleichbaren Format. Dies bietet eine praktische Methode zur Abstimmung neuer und bereits vorhandener Lizenzen. Andere Lizenzverwaltungsberichte enthalten Informationen zu Computern, die als Server zum Ausführen des Schlüsselverwaltungsdiensts (Key Management Service, KMS) für Aktivierungsstatistiken des Betriebssystems fungieren.  
 
 > [!IMPORTANT]  
 >  Einige der Asset Intelligence-Berichte enthalten Informationen zur Funktion des KMS, einer Methode zum Verwalten der Volumenlizenzierung. Wenn kein KMS-Server implementiert wurde, werden von einigen Berichten möglicherweise keine Daten zurückgegeben. Weitere Informationen zum KMS finden Sie im [Microsoft TechNet](http://go.microsoft.com/fwlink/?linkid=3225), indem Sie nach "KMS" suchen.  
 
-###  <a name="a-namebkmksoftwarereportsa-asset-intelligence-software-reports"></a><a name="BKMK_SoftwareReports"></a> Asset Intelligence-Softwareberichte  
+###  <a name="BKMK_SoftwareReports"></a> Asset Intelligence-Softwareberichte  
  Asset Intelligence-Softwareberichte enthalten Informationen zu Softwarefamilien, Softwarekategorien und bestimmten Softwaretiteln, die auf Computern in der Organisation installiert sind. Die Softwareberichte enthalten Informationen zu Browserhilfsobjekten, automatisch startender Software und mehr. Diese Berichte können zum Identifizieren von Adware, Spyware und anderer Schadsoftware sowie zum Identifizieren von Softwareredundanz verwendet werden, um den Softwarekauf und die Softwareunterstützung zu vereinfachen.  
 
-###  <a name="a-namebkmksoftwareidtagreportsa-asset-intelligence-software-identification-tag-reports"></a><a name="BKMK_SoftwareIdTagReports"></a> Berichte zu Asset Intelligence-Softwarerkennungstags  
+###  <a name="BKMK_SoftwareIdTagReports"></a> Berichte zu Asset Intelligence-Softwarerkennungstags  
  Berichte zu Asset Intelligence-Softwarerkennungstags liefern Informationen zu Software, die ein mit ISO/IEC 19770-2 kompatibles Softwarekennungstag enthält. Softwarekennungstags stellen autoritative Informationen bereit, mit deren Hilfe die installierte Software identifiziert wird. Wenn Sie die Hardwareinventur-Berichterstellungsklasse „SMS_SoftwareTag“ aktivieren, sammelt Configuration Manager mithilfe von Softwareerkennungstags Informationen zur Software. Die folgenden Berichte stellen Informationen zur Software bereit:  
 
 -   **Software 14A – Suche nach softwareerkennungstagfähiger Software**: Dieser Bericht gibt an, wie viel Software mit aktiviertem Softwareerkennungstag installiert ist.  
@@ -154,10 +156,10 @@ Mit Asset Intelligence in System Center Configuration Manager können Sie die So
 
 -   **Software 14C - Installierte softwareerkennungstagfähige Software auf einem bestimmten Computer**: Dieser Bericht listet die gesamte installierte Software mit einem bestimmten, aktivierten Softwarerkennungstag auf einem bestimmten Computer auf.  
 
-###  <a name="a-namebkmkreportinglimitationsa-asset-intelligence-reporting-limitations"></a><a name="BKMK_ReportingLImitations"></a> Einschränkungen bei der Asset Intelligence-Berichterstattung  
+###  <a name="BKMK_ReportingLImitations"></a> Einschränkungen bei der Asset Intelligence-Berichterstattung  
  In Asset Intelligence-Berichten können große Mengen an Informationen zu installierten Softwaretiteln sowie erworbenen und verwendeten Softwarelizenzen zusammengestellt werden. Diese Berichte sollten jedoch bei der Prüfung der erworbenen Softwarelizenzen nicht als alleinige Quelle herangezogen werden.  
 
-####  <a name="a-namebkmkexampledependenciesa-example-dependencies"></a><a name="BKMK_ExampleDependencies"></a> Beispielabhängigkeiten  
+####  <a name="BKMK_ExampleDependencies"></a> Beispielabhängigkeiten  
  Die Genauigkeit, mit der die Anzahl installierter Softwaretitel und die Lizenzinformationen in den Asset Intelligence-Berichten angegeben ist, kann von den aktuellen, tatsächlich verwendeten Mengen abweichen. Diese Variation ist auf die komplexen Abhängigkeiten bei der Inventarisierung von Softwarelizenzinformationen für Softwaretitel zurückzuführen, die in Unternehmensumgebungen verwendet werden. Im Folgenden finden Sie Beispiele für Abhängigkeiten, die bei der Inventur installierter Software in Unternehmen unter Verwendung von Asset Intelligence auftreten und die Genauigkeit von Asset Intelligence-Berichten beeinflussen können:  
 
  **Abhängigkeiten bezüglich der Clienthardwareinventur**  
@@ -166,7 +168,7 @@ Mit Asset Intelligence in System Center Configuration Manager können Sie die So
  **Abhängigkeiten bezüglich der Softwarepakete**  
  Da Asset Intelligence-Berichte auf Daten zu installierten Softwaretiteln basieren, die mit standardmäßigen Hardwareinventurprozessen des Configuration Manager-Clients gesammelt werden, kann es vorkommen, dass einige Daten zu Softwaretiteln nicht richtig erfasst werden. Beispielsweise können Asset Intelligence-Berichte aufgrund von Softwareinstallationen, die nicht den Standardinstallationsprozessen entsprechen oder die vor der Installation geändert wurden, Ungenauigkeiten enthalten.  
 
-####  <a name="a-namebkmklegallimitationsa-legal-limitations"></a><a name="BKMK_LegalLimitations"></a> Rechtliche Einschränkungen  
+####  <a name="BKMK_LegalLimitations"></a> Rechtliche Einschränkungen  
  Die in Asset Intelligence-Berichten angezeigten Informationen unterliegen vielen Einschränkungen und dürfen nicht als rechtlicher, buchhaltungstechnischer oder professioneller Rat angesehen werden. Die mithilfe von Asset Intelligence-Berichten bereitgestellten Informationen dienen lediglich Informationszwecken und sollten bei der Prüfung der Softwarelizenzverwendung nicht als alleinige Quelle herangezogen werden.  
 
  Im Folgenden finden Sie Beispiele für Einschränkungen, die bei der Inventur der Verwendung installierter Software und Lizenzen in Unternehmen unter Verwendung von Asset Intelligence auftreten und die Genauigkeit von Asset Intelligence-Berichten beeinflussen könnten.  
@@ -188,7 +190,7 @@ Mit Asset Intelligence in System Center Configuration Manager können Sie die So
  **Einschränkungen bezüglich der Lizenzabgleiche**  
  Der Abgleich der Anzahl installierter Softwaretitel mit der Anzahl erworbener Softwaretitel wird durch einen Vergleich der vom Administrator angegebenen Anzahl an Lizenzen und der Anzahl installierter Softwaretitel erstellt, die durch Hardwareinventuren der Configuration Manager-Clients auf Grundlage des vom Administrator festgelegten Zeitplans gesammelt wurden. Dieser Vergleich stellt keine endgültige Entscheidung zu Lizenzpositionen von Microsoft dar. Die tatsächliche Lizenzposition ist von der bestimmten Softwaretitellizenz sowie den durch die Lizenzbedingungen gewährten Verwendungsrechten abhängig.  
 
-##  <a name="a-namebkmkvalidationstatesa-asset-intelligence-validation-states"></a><a name="BKMK_ValidationStates"></a> Asset Intelligence-Überprüfungszustände  
+##  <a name="BKMK_ValidationStates"></a> Asset Intelligence-Überprüfungszustände  
  Die Asset Intelligence-Überprüfungszustände geben den Quell- und den aktuellen Überprüfungszustand von Asset Intelligence-Kataloginformationen an. In der folgenden Tabelle werden mögliche Asset Intelligence-Überprüfungszustände und Administratoraktionen, durch die sie verursacht werden können, angezeigt.  
 
 |**Status**|**Definition**|**Administratoraktion**|**Kommentar**|  
@@ -206,9 +208,4 @@ Mit Asset Intelligence in System Center Configuration Manager können Sie die So
 >  Nach der Auflösung eines Kategorisierungskonflikts wird das Element nicht mehr als in Konflikt stehend überprüft, es sei denn, durch nachfolgende Kategorisierungsaktualisierungen werden neue Informationen über das Element hinzugefügt.  
 
  Beispiele für das Szenario eines möglichen Übergangs von einem Überprüfungszustand in einen anderen finden Sie unter [Beispiel-Überprüfungszustandsübergänge für Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

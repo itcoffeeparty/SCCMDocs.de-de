@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: 9032698fa12bf453041ea06bf330d3b4687c2a97
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -32,7 +34,7 @@ Startbare Medien in Configuration Manager enthalten das Startimage, optionale Pr
 
 -   [Ersetzen eines vorhandenen Computers und Übertragen von Einstellungen](replace-an-existing-computer-and-transfer-settings.md)  
 
-##  <a name="a-namebkmkcreatebootablemediaa-create-bootable-media"></a><a name="BKMK_CreateBootableMedia"></a> Erstellen startbarer Medien  
+##  <a name="BKMK_CreateBootableMedia"></a> Erstellen startbarer Medien  
  Beim Starten von startbaren Medien geschieht Folgendes: Der Zielcomputer wird gestartet, eine Verbindung mit dem Netzwerk wird hergestellt und die angegebene Tasksequenz sowie das Betriebssystemabbild und sämtlicher anderer erforderlicher Inhalt aus dem Netzwerk werden abgerufen. Da sich die Tasksequenz nicht auf den Medien befindet, brauchen Sie die Medien nicht neu zu erstellen, wenn Sie die Tasksequenz oder den Inhalt ändern. Die Pakete auf startbaren Medien sind nicht verschlüsselt. Sie müssen den Paketinhalt mithilfe geeigneter Sicherheitsmaßnahmen vor dem Zugriff Unbefugter schützen, z. B. durch Hinzufügen eines Kennworts für die Medien.  
 
  Bevor Sie startbaren Medien mithilfe des Assistenten zum Erstellen von Tasksequenzmedien erstellen, achten Sie darauf, dass alle folgenden  Bedingungen erfüllt sind:  
@@ -155,9 +157,4 @@ Die Informationen in diesem Abschnitt unterstützen Sie beim Erstellen startbare
 
 ## <a name="next-steps"></a>Nächste Schritte  
 [Verwenden startbarer Medien zum Bereitstellen von Windows über das Netzwerk](use-bootable-media-to-deploy-windows-over-the-network.md)  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

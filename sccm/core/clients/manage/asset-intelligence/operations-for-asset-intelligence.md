@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
+ms.contentlocale: de-de
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -28,10 +30,10 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
 
 Dieses Thema enthält Informationen zum Verwalten typischer Asset Intelligence-Tasks in der Hierarchie von System Center Configuration Manager:  
 
-##  <a name="a-namebkmkviewinformationa-view-asset-intelligence-information"></a><a name="BKMK_ViewInformation"></a> Anzeigen von Asset Intelligence-Informationen  
+##  <a name="BKMK_ViewInformation"></a> Anzeigen von Asset Intelligence-Informationen  
  Asset Intelligence-Informationen können auf der **Asset Intelligence** -Startseite und in Asset Intelligence-Berichten angezeigt werden.  
 
-###  <a name="a-namebkmkassetintelligencehomepagea-asset-intelligence-home-page"></a><a name="BKMK_AssetIntelligenceHomePage"></a> Asset Intelligence-Startseite  
+###  <a name="BKMK_AssetIntelligenceHomePage"></a> Asset Intelligence-Startseite  
  Auf der **Asset Intelligence** -Startseite wird eine Zusammenfassung von Asset Intelligence-Kataloginformationen angezeigt. Auf der Startseite können Sie Informationen zur Katalogsynchronisierung und zum Status für inventarisierte Software anzeigen. Die **Asset Intelligence** -Startseite ist in folgende Abschnitte untergliedert:  
 
 -   **Katalogsynchronisierung**: Enthält Informationen darüber, ob Asset Intelligence aktiviert ist, über den aktuellen Status des Asset Intelligence-Synchronisierungspunkts, den Synchronisierungszeitplan, ferner darüber, ob die Kundenlizenzzusammenfassung importiert wird und wann der Status zuletzt aktualisiert wurde. Außerdem enthält der Bereich Informationen über den Zeitpunkt des nächsten geplanten Updates und über die Anzahl der vorgenommenen Änderungen seit der Installation des Asset Intelligence-Synchronisierungspunkt-Standortsystems.  
@@ -49,7 +51,7 @@ Dieses Thema enthält Informationen zum Verwalten typischer Asset Intelligence-T
 
 2.  Klicken Sie im Arbeitsbereich **Bestand und Kompatibilität** auf **Asset Intelligence**. Die Asset Intelligence-Berichte werden angezeigt.  
 
-###  <a name="a-namebkmkassetintelligencereportsa-asset-intelligence-reports"></a><a name="BKMK_AssetIntelligenceReports"></a> Asset Intelligence-Berichte  
+###  <a name="BKMK_AssetIntelligenceReports"></a> Asset Intelligence-Berichte  
  Es sind über 60 Asset Intelligence-Berichte verfügbar, die die von Asset Intelligence gesammelten Informationen anzeigen. Viele dieser Berichte sind mit detaillierteren Berichten verknüpft, sodass Sie allgemeine Informationen abfragen und dann per Drilldown ausführlichere Informationen anzeigen können. Sie finden die Asset Intelligence-Berichte in der Configuration Manager-Konsole im Arbeitsbereich **Überwachung** unter dem Knoten **Berichterstellung**. Die Berichte enthalten Informationen zu Hardware, Lizenzverwaltung und Software. Weitere Informationen zu Berichten in Configuration Manager finden Sie unter [Berichterstellung in System Center Configuration Manager](../../../../core/servers/manage/reporting.md).  
 
 > [!NOTE]  
@@ -68,7 +70,7 @@ Dieses Thema enthält Informationen zum Verwalten typischer Asset Intelligence-T
 
 3.  Wählen Sie den Asset Intelligence-Bericht aus, der ausgeführt werden soll, und klicken Sie dann auf der Registerkarte **Startseite** in der Gruppe **Berichtsgruppe** auf **Ausführen**.  
 
-##  <a name="a-namebkmksynchronizethecataloga-synchronize-the-asset-intelligence-catalog"></a><a name="BKMK_SynchronizeTheCatalog"></a> Synchronisieren des Asset Intelligence-Katalogs  
+##  <a name="BKMK_SynchronizeTheCatalog"></a> Synchronisieren des Asset Intelligence-Katalogs  
  Sie können den lokalen Asset Intelligence-Katalog mit System Center Online synchronisieren, um die aktuellste Softwaretitelkategorisierung abzurufen. Wenn Sie die Katalogsynchronisierung mit System Center Online manuell anfordern, kann es mindestens 15 Minuten dauern, bis der Synchronisierungsprozess mit System Center Online abgeschlossen ist. Configuration Manager aktualisiert die Einstellung **Letztes erfolgreiches Update** auf der **Asset Intelligence**-Startseite mit der aktuellen Zeit, zu der die Synchronisierung erfolgreich abgeschlossen wurde.  
 
 > [!NOTE]  
@@ -96,7 +98,7 @@ Dieses Thema enthält Informationen zum Verwalten typischer Asset Intelligence-T
 > [!WARNING]  
 >  Von System Center Online wird innerhalb eines Zeitraums von 12 Stunden nur eine Synchronisierungsanforderung zugelassen.  
 
-###  <a name="a-namebkmkmanuallysynchronizecataloga-to-manually-synchronize-the-asset-intelligence-catalog"></a><a name="BKMK_ManuallySynchronizeCatalog"></a> So führen Sie eine manuelle Synchronisierung des Asset Intelligence-Katalogs durch  
+###  <a name="BKMK_ManuallySynchronizeCatalog"></a> So führen Sie eine manuelle Synchronisierung des Asset Intelligence-Katalogs durch  
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Bestand und Kompatibilität**.  
 
@@ -104,10 +106,10 @@ Dieses Thema enthält Informationen zum Verwalten typischer Asset Intelligence-T
 
 3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Synchronisieren**, dann auf **Asset Intelligence-Katalog synchronisieren**und dann auf **OK**.  
 
-##  <a name="a-namebkmkcustomizecataloga-customize-the-asset-intelligence-catalog"></a><a name="BKMK_CustomizeCatalog"></a> Anpassen des Asset Intelligence-Katalogs  
+##  <a name="BKMK_CustomizeCatalog"></a> Anpassen des Asset Intelligence-Katalogs  
  Kategorisierungsinformationen zum Asset Intelligence-Katalog, die von System Center Online heruntergeladen wurden, werden schreibgeschützt in der Standortdatenbank gespeichert und können weder geändert noch gelöscht werden. Es können jedoch benutzerdefinierte Softwarekategorien, Softwarefamilien, Softwarebezeichnungen und Hardwareanforderungs-Kataloginformationen erstellt, geändert und gelöscht werden. Dann können benutzerdefinierte Kategorisierungsdaten anstatt der von System Center Online bereitgestellten Daten für vorhandene benutzerdefinierte Softwaretitelinformationen verwendet werden. Wenn Kategorisierungsinformationen geändert oder hinzugefügt werden, gelten die Kataloginformationen als benutzerdefiniert. Benutzerdefinierte Kategorisierungsinformationen werden in anderen Datenbanktabellen gespeichert als geprüfte Kataloginformationen.  
 
-###  <a name="a-namebkmksoftwarecategoriesa-software-categories"></a><a name="BKMK_SoftwareCategories"></a> Softwarekategorien  
+###  <a name="BKMK_SoftwareCategories"></a> Softwarekategorien  
  Asset Intelligence-Softwarekategorien werden zur groben Kategorisierung inventarisierter Softwaretitel verwendet sowie zum allgemeinen Gruppieren spezifischerer Softwarefamilien. Eine Softwarekategorie könnte beispielsweise ein Energieversorgungsunternehmen sein und eine Softwarefamilie innerhalb dieser Softwarekategorie beispielsweise Öl und Gas oder Wasserenergie. Viele Softwarekategorien sind im Asset Intelligence-Katalog vordefiniert. Zusätzliche benutzerdefinierte Kategorien können hinzugefügt werden, um die inventarisierte Software näher zu definieren. Der Überprüfungszustand aller vordefinierten Softwarekategorien lautet immer **Überprüft**, während dem Asset Intelligence-Katalog hinzugefügte benutzerdefinierte Softwarekategorieinformationen als **Benutzerdefiniert**angegeben werden.  
 
  Gehen Sie wie folgt vor, um eine benutzerdefinierte Softwarekategorie zu erstellen.  
@@ -131,7 +133,7 @@ Dieses Thema enthält Informationen zum Verwalten typischer Asset Intelligence-T
 
 6.  Klicken Sie auf der Seite **Abschluss des Vorgangs** zum Beenden des Assistenten auf **Schließen** .  
 
-###  <a name="a-namebkmksoftwarefamiliesa-software-families"></a><a name="BKMK_SoftwareFamilies"></a> Softwarefamilien  
+###  <a name="BKMK_SoftwareFamilies"></a> Softwarefamilien  
  Mithilfe von Asset Intelligence-Softwarefamilien können inventarisierte Softwaretitel innerhalb von Softwarekategorien genauer definiert werden. Eine Softwarekategorie könnte beispielsweise ein Energieversorgungsunternehmen sein und eine Softwarefamilie innerhalb dieser Softwarekategorie beispielsweise Öl und Gas oder Wasserenergie. Viele Softwarefamilien sind im Asset Intelligence-Katalog vordefiniert. Zur Definition der inventarisierten Software können zusätzliche benutzerdefinierte Familien erstellt werden. Der Überprüfungszustand aller vordefinierten Softwarefamilien lautet immer **Überprüft**, während dem Asset Intelligence-Katalog hinzugefügte benutzerdefinierte Softwarefamilien als **Benutzerdefiniert**angegeben werden.  
 
  Gehen Sie wie folgt vor, um eine benutzerdefinierte Softwarefamilie zu erstellen.  
@@ -153,7 +155,7 @@ Dieses Thema enthält Informationen zum Verwalten typischer Asset Intelligence-T
 
 6.  Klicken Sie auf der Seite **Abschluss des Vorgangs** zum Beenden des Assistenten auf **Schließen** .  
 
-###  <a name="a-namebkmksoftwarelabelsa-software-labels"></a><a name="BKMK_SoftwareLabels"></a> Softwarebezeichnungen  
+###  <a name="BKMK_SoftwareLabels"></a> Softwarebezeichnungen  
  Mit benutzerdefinierten Softwarebezeichnungen können Sie in Asset Intelligence Filter zum Gruppieren von Softwaretiteln und zum Anzeigen der Softwaretitel in Asset Intelligence-Berichten erstellen. Sie können beispielsweise eine Softwarebezeichnung namens "Shareware" erstellen, diese einer Reihe von Anwendungen zuweisen und dann einen Bericht ausführen, in dem alle Titel mit der Bezeichnung "Shareware" aufgeführt werden. Der Überprüfungszustand ist für alle benutzerdefinierten Softwarebezeichnungen, die dem Asset Intelligence-Katalog hinzugefügt werden, auf **Benutzerdefiniert** eingestellt.  
 
  Gehen Sie wie folgt vor, um eine benutzerdefinierte Softwarebezeichnung zu erstellen.  
@@ -175,7 +177,7 @@ Dieses Thema enthält Informationen zum Verwalten typischer Asset Intelligence-T
 
 6.  Klicken Sie auf der Seite **Abschluss des Vorgangs** zum Beenden des Assistenten auf **Schließen** .  
 
-###  <a name="a-namebkmkhardwarerequirementsa-hardware-requirements"></a><a name="BKMK_HardwareRequirements"></a> Hardwareanforderungen  
+###  <a name="BKMK_HardwareRequirements"></a> Hardwareanforderungen  
  Mithilfe von Informationen zu Hardwareanforderungen kann überprüft werden, ob Computer die Hardwareanforderungen für Softwaretitel erfüllen, bevor auf ihnen Softwarebereitstellungen vorgenommen werden. Viele Hardwareanforderungen sind im Asset Intelligence-Katalog vordefiniert, und es können neue benutzerdefinierte Hardwareanforderungsinformationen erstellt werden, um benutzerdefinierten Anforderungen zu entsprechen. Der Überprüfungszustand aller vordefinierten Hardwareanforderungen lautet immer **Überprüft**, während dem Asset Intelligence-Katalog hinzugefügte benutzerdefinierte Hardwareanforderungen als **Benutzerdefiniert**angegeben werden.  
 
 > [!IMPORTANT]  
@@ -211,7 +213,7 @@ Dieses Thema enthält Informationen zum Verwalten typischer Asset Intelligence-T
 
 6.  Klicken Sie auf der Seite **Abschluss des Vorgangs** zum Beenden des Assistenten auf **Schließen** .  
 
-###  <a name="a-namebkmkmodifycategorizationa-modify-categorization-information-for-inventoried-software"></a><a name="BKMK_ModifyCategorization"></a> Ändern von Kategorisierungsinformationen für inventarisierte Software  
+###  <a name="BKMK_ModifyCategorization"></a> Ändern von Kategorisierungsinformationen für inventarisierte Software  
  Im Asset Intelligence-Katalog vordefinierte Software ist mit bestimmten Kategorisierungsinformationen beispielsweise zu Produktnamen, Hersteller, Softwarekategorie und Softwarefamilie konfiguriert. Wenn die vordefinierten Kategorisierungsinformationen Ihren Anforderungen nicht entsprechen, können Sie die Informationen in den Eigenschaften für den Softwaretitel ändern. Wenn Kategorisierungsinformationen für vordefinierte Software geändert werden, wird der Überprüfungszustand für die Software von **Überprüft** auf **Benutzerdefiniert**geändert.  
 
 > [!IMPORTANT]  
@@ -265,7 +267,7 @@ Dieses Thema enthält Informationen zum Verwalten typischer Asset Intelligence-T
 
 6.  Wenn Sie Kategorisierungsinformationen für Software wiederherstellen, die sich im Asset Intelligence-Katalog befindet, ändert sich der Überprüfungszustand von **Benutzerdefiniert** in **Überprüft**. Wenn Sie Software wiederherstellen, die sich nicht im Katalog befindet, ändert sich der Überprüfungszustand von **Benutzerdefiniert** in **Nicht kategorisiert**.  
 
-##  <a name="a-namebkmkrequestcatalogupdatea-request-a-catalog-update-for-uncategorized-software-titles"></a><a name="BKMK_RequestCatalogUpdate"></a> Anfordern eines Katalogupdates für nicht kategorisierte Softwaretitel  
+##  <a name="BKMK_RequestCatalogUpdate"></a> Anfordern eines Katalogupdates für nicht kategorisierte Softwaretitel  
  Informationen zu nicht kategorisierten Softwaretiteln können zu Recherche- und Kategorisierungszwecken an System Center Online übermittelt werden. Nach der Übermittlung eines nicht kategorisierten Softwaretitels identifizieren und kategorisieren Entwicklungsmitarbeiter den Softwaretitel und stellen die Informationen zur Softwaretitelkategorisierung dann über System Center Online für alle Kunden zur Verfügung. Voraussetzung ist allerdings, dass mindestens vier Kategorisierungsanforderungen von Kunden für diesen Softwaretitel vorliegen. Microsoft verleiht den Softwaretiteln die höchste Priorität, deren Kategorisierung am häufigsten angefordert wurde. Benutzerdefinierte Software und Branchenanwendungen erhalten i. d. R. keine Kategorie. Es empfiehlt sich daher, diese Softwaretitel nicht zur Kategorisierung an Microsoft zu senden.  
 
  Wenn Informationen zu nicht kategorisierten Softwaretiteln an System Center Online übermittelt werden, gelten die folgenden Bedingungen.  
@@ -308,7 +310,7 @@ Dieses Thema enthält Informationen zum Verwalten typischer Asset Intelligence-T
     > [!NOTE]  
     >  Software, die an System Center Online zur Kategorisierung übermittelt wurde, hat zwar den Überprüfungszustand **Ausstehend** am zentralen Verwaltungsstandort, wird jedoch an untergeordneten primären Standorten mit dem Überprüfungszustand **Nicht kategorisiert** angezeigt.  
 
-##  <a name="a-namebkmkresolvesoftwaredetailsa-resolve-software-details-conflicts"></a><a name="BKMK_ResolveSoftwareDetails"></a> Auflösen von Konflikten zwischen Softwaredetails  
+##  <a name="BKMK_ResolveSoftwareDetails"></a> Auflösen von Konflikten zwischen Softwaredetails  
  Wenn neu aktualisierte Softwarekategorisierungsdetails von System Center Online empfangen wurden, die in Konflikt mit vorhandenen Softwaredetailinformationen stehen, haben Sie die Möglichkeit auszuwählen, wie Sie den Konflikt auflösen möchten. Software, bei der ein aktueller Konflikt vorliegt, hat den Überprüfungszustand **Aktualisierbar**. Nach der Lösung des Konflikts zwischen Softwaredetails verbleiben die Softwarekategorisierungsinformationen entsprechend der festgelegten Einstellungen im Asset Intelligence-Katalog. Für denselben Softwarekategorisierungswert tritt kein erneuter Konflikt zwischen Softwaredetails auf, es sei denn, der System Center Online-Wert wird nach Lösung des Konflikts geändert.  
 
  Gehen Sie wie folgt vor, um einen Konflikt zwischen Softwaredetails aufzulösen.  
@@ -336,9 +338,4 @@ Dieses Thema enthält Informationen zum Verwalten typischer Asset Intelligence-T
     -   **Lokal bearbeiteten Kataloginformationswert mit dem heruntergeladenen System Center Online-Wert überschreiben**: Löst den Konflikt zwischen Softwaredetails durch Überschreiben der vorhandenen Softwarekategorisierungsinformationen im Asset Intelligence-Katalog mit den neuen Informationen von System Center Online. Wenn Sie diese Einstellung auswählen, ändert sich der Softwaretitelzustand von **Aktualisierbar** in **Überprüft**.  
 
      Klicken Sie auf **OK** , um die Konfliktauflösung zu speichern.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

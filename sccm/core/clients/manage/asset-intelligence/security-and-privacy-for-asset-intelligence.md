@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: d577a16725c2b167d1ff9f77096018433a2fa580
+ms.contentlocale: de-de
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -28,7 +30,7 @@ ms.openlocfilehash: d577a16725c2b167d1ff9f77096018433a2fa580
 
 Dieses Thema enthält Sicherheits- und Datenschutzinformationen für Asset Intelligence in System Center Configuration Manager.  
 
-##  <a name="a-namebkmksecurityaia-security-best-practices-for-asset-intelligence"></a><a name="BKMK_Security_AI"></a> Bewährte Sicherheitsmethoden für Asset Intelligence  
+##  <a name="BKMK_Security_AI"></a> Bewährte Sicherheitsmethoden für Asset Intelligence  
  Wenden Sie die folgenden bewährten Sicherheitsmethoden beim Verwenden von Asset Intelligence an.  
 
 |Bewährte Sicherheitsmethode|Weitere Informationen|  
@@ -36,7 +38,7 @@ Dieses Thema enthält Sicherheits- und Datenschutzinformationen für Asset Intel
 |Sichern Sie beim Importieren einer Lizenzdatei die Datei und den Kommunikationskanal (Microsoft-Volumenlizenzierungsdatei oder allgemeine Lizenzübersichtsdatei).|Verwenden Sie NTFS-Dateisystemberechtigungen, um sicherzustellen, dass nur berechtigte Benutzer auf die Lizenzdateien zugreifen können. Verwenden Sie außerdem SMB-Signaturen (Server Message Block), um die Integrität der Daten bei der Übertragung an den Standortserver während des Importvorgangs sicherzustellen.|  
 |Wenden Sie beim Importieren der Lizenzdateien das Prinzip der geringsten Berechtigungen an.|Wählen Sie eine rollenbasierte Verwaltung, um die Berechtigung "Asset Intelligence verwalten" dem Administrator zu gewähren, der die Lizenzdateien importiert. Die integrierte Rolle "Asset-Manager" umfasst diese Berechtigung.|  
 
-##  <a name="a-namebkmkprivacyhardwareinventorya-privacy-information-for-asset-intelligence"></a><a name="BKMK_Privacy_HardwareInventory"></a> Datenschutzinformationen für Asset Intelligence  
+##  <a name="BKMK_Privacy_HardwareInventory"></a> Datenschutzinformationen für Asset Intelligence  
  Asset Intelligence erweitert die Inventurfähigkeiten von Configuration Manager und ermöglicht eine höhere Sichtbarkeit der Anlagewerte im Unternehmen. Die Sammlung von Asset Intelligence-Informationen ist nicht automatisch aktiviert. Sie können die Art der gesammelten Informationen ändern, indem Sie Hardwareinventur-Berichtsklassen aktivieren. Weitere Informationen finden Sie unter [Konfigurieren von Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md).  
 
  Die Asset Intelligence-Informationen werden in der Configuration Manager-Datenbank auf die gleiche Weise gespeichert wie Inventurinformationen. Wenn von Clients per HTTPS eine Verbindung zu Verwaltungspunkten hergestellt wird, sind die Daten während des Transfers zum Verwaltungspunkt jederzeit verschlüsselt. Wenn von Clients per HTTP eine Verbindung hergestellt wird, können Sie die Inventurdatenübertragung so konfigurieren, dass sie signiert und verschlüsselt wird. Die Inventurdaten werden in der Datenbank nicht in einem verschlüsselten Format gespeichert. Die Informationen werden in der Datenbank gespeichert, bis sie vom Standortwartungstask **Veralteten Inventurverlauf löschen** in Intervallen von 90 Tagen gelöscht werden. Sie können das Löschintervall konfigurieren.  
@@ -58,9 +60,4 @@ Dieses Thema enthält Sicherheits- und Datenschutzinformationen für Asset Intel
 -   Hochgeladene Daten können nicht zurückgerufen werden.  
 
  Berücksichtigen Sie die Datenschutzanforderungen Ihrer Organisation, bevor Sie die Asset Intelligence-Datensammlung konfigurieren und entscheiden, ob Sie Informationen an System Center Online übermitteln möchten.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

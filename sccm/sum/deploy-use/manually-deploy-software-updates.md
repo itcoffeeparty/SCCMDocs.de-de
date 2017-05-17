@@ -13,14 +13,16 @@ ms.service:
 ms.technology:
 - configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 78524abd4c45f0b7402d6f1e85afc60bb72ab0ee
 ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 
 ---
 
-#  <a name="a-namebkmkmanualdeploya-manually-deploy-software-updates"></a><a name="BKMK_ManualDeploy"></a> Manuelles Bereitstellen von Softwareupdates  
+#  <a name="BKMK_ManualDeploy"></a> Manuelles Bereitstellen von Softwareupdates  
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -28,7 +30,7 @@ ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
 
  Die folgenden Abschnitte enthalten die Schritte für die manuelle Bereitstellung von Softwareupdates.  
 
-##  <a name="a-namebkmk1searchcriteriaa-step-1-specify-search-criteria-for-software-updates"></a><a name="BKMK_1SearchCriteria"></a> Schritt 1: Angeben von Suchkriterien für Softwareupdates  
+##  <a name="BKMK_1SearchCriteria"></a> Schritt 1: Angeben von Suchkriterien für Softwareupdates  
  In der Configuration Manager-Konsole werden potenziell Tausende Softwareupdates angezeigt. Der erste Schritt des Workflows für die manuelle Bereitstellung von Softwareupdates besteht daher darin, die Softwareupdates zu suchen, die Sie bereitstellen möchten. Beispielsweise könnten Sie anhand geeigneter Kriterien angeben, dass alle Softwareupdates abgerufen werden sollen, die auf mehr als 50 Clientgeräten benötigt werden und deren Softwareupdateklassifizierung **Sicherheit** oder **Kritisch** lautet.  
 
 > [!IMPORTANT]  
@@ -54,7 +56,7 @@ ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
     > [!TIP]  
     >  Sie haben auf der Registerkarte **Suchen** und in der Gruppe **Speichern** die Möglichkeit, die Filterkriterien zu speichern.  
 
-##  <a name="a-namebkmk2updategroupa-step-2-create-a-software-update-group-that-contains-the-software-updates"></a><a name="BKMK_2UpdateGroup"></a> Schritt 2: Erstellen einer Softwareupdategruppe, die die Softwareupdates enthält  
+##  <a name="BKMK_2UpdateGroup"></a> Schritt 2: Erstellen einer Softwareupdategruppe, die die Softwareupdates enthält  
  Mithilfe von Softwareupdategruppen können Sie Softwareupdates auf wirksame Weise für die Bereitstellung vorbereiten. Sie können Softwareupdates einer Softwareupdategruppe manuell hinzufügen. Mit einer automatischen Bereitstellungsregel können Softwareupdates einer neuen oder vorhandenen Softwareupdategruppe von Configuration Manager auch automatisch hinzugefügt werden. Gehen Sie wie folgt vor, um Softwareupdates einer neuen Softwareupdategruppe manuell hinzuzufügen.  
 
 #### <a name="to-manually-add-software-updates-to-a-new-software-update-group"></a>So fügen Sie Softwareupdates einer neuen Softwareupdategruppe manuell hinzu  
@@ -73,7 +75,7 @@ ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
 
 7.  Wählen Sie die Softwareupdategruppe aus. Klicken Sie dann auf der Registerkarte **Startseite** in der Gruppe **Update** auf **Mitglieder anzeigen** , um eine Liste der Softwareupdates in der Gruppe anzuzeigen.  
 
-##  <a name="a-namebkmk3downloadcontenta-step-3-download-the-content-for-the-software-update-group"></a><a name="BKMK_3DownloadContent"></a> Schritt 3: Herunterladen des Inhalts für die Softwareupdategruppe  
+##  <a name="BKMK_3DownloadContent"></a> Schritt 3: Herunterladen des Inhalts für die Softwareupdategruppe  
  Optional können Sie den Inhalt für die Softwareupdates in der Softwareupdategruppe herunterladen, bevor Sie die Softwareupdates bereitstellen. Dies bietet sich möglicherweise an, wenn Sie vor der Bereitstellung der Softwareupdates überprüfen möchten, ob der Inhalt auf den Verteilungspunkten verfügbar ist. Auf diese Weise können Sie unerwartete Probleme mit der Inhaltsübermittlung vermeiden. Sie können diesen Schritt überspringen. Der Inhalt wird dann im Rahmen des Bereitstellungsprozesses heruntergeladen und auf die Verteilungspunkte kopiert. Gehen Sie wie folgt vor, um den Inhalt für Softwareupdates in die Softwareupdategruppe herunterzuladen.  
 
 
@@ -160,7 +162,7 @@ ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
 
 4. Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Inhalt** auf **Status anzeigen**.  
 
-##  <a name="a-namebkmk4deployupdategroupa-step-4-deploy-the-software-update-group"></a><a name="BKMK_4DeployUpdateGroup"></a> Schritt 4: Bereitstellen der Softwareupdategruppe  
+##  <a name="BKMK_4DeployUpdateGroup"></a> Schritt 4: Bereitstellen der Softwareupdategruppe  
  Nachdem Sie entschieden haben, welche Softwareupdates Sie bereitstellen möchten, und diese Softwareupdates einer Softwareupdategruppe hinzugefügt haben, können Sie die Softwareupdates in der Softwareupdategruppe manuell bereitstellen. Gehen Sie wie folgt vor, um die Softwareupdates in einer Softwareupdategruppe manuell bereitzustellen.  
 
 #### <a name="to-manually-deploy-the-software-updates-in-a-software-update-group"></a>So stellen Sie die Softwareupdates in einer Softwareupdategruppe manuell bereit  
@@ -315,9 +317,4 @@ ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
 
 ## <a name="next-steps"></a>Nächste Schritte
 [Überwachen von Softwareupdates](monitor-software-updates.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

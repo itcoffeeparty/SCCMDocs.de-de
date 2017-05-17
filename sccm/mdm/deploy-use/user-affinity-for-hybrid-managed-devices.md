@@ -15,9 +15,10 @@ caps.latest.revision: 6
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 74dcc0f4e680893db804956615248b7e1230d2b5
+ms.contentlocale: de-de
 ms.lasthandoff: 12/16/2016
 
 ---
@@ -27,7 +28,7 @@ ms.lasthandoff: 12/16/2016
 
 Beim Konfigurieren von Profilen für firmeneigene Geräte kann der Administrator angeben, ob die verwalteten Geräte *Benutzeraffinität* haben können, die einen bestimmten Benutzer mit dem Gerät identifiziert.  
 
-##  <a name="a-namebkmkioscpa-managed-devices-with-user-affinity"></a><a name="BKMK_iOSCP"></a> Verwaltete Geräte mit Benutzeraffinität  
+##  <a name="BKMK_iOSCP"></a> Verwaltete Geräte mit Benutzeraffinität  
  Auf mit **user affinity** konfigurierten Geräten kann die Unternehmensportal-App installiert und ausgeführt werden, um Apps herunterzuladen und Geräte zu verwalten. Sobald Benutzer ihre Geräte erhalten haben, müssen Sie verschiedene zusätzliche Schritte ausführen, um den Setup-Assistenten abzuschließen und die Unternehmensportal-App zu installieren.  
 
 #### <a name="how-to-enroll-ios-devices-with-user-affinity"></a>Registrieren von iOS-Geräten mit Benutzeraffinität  
@@ -52,6 +53,6 @@ Beim Konfigurieren von Profilen für firmeneigene Geräte kann der Administrator
 
 8.  Die Registrierung ist damit abgeschlossen. Sie können nun die Funktionen des Geräts in vollem Umfang nutzen.  
 
-##  <a name="a-namebkmknouaa-managed-devices-without-user-affinity"></a><a name="BKMK_noUA"></a> Verwaltete Geräte ohne Benutzeraffinität  
+##  <a name="BKMK_noUA"></a> Verwaltete Geräte ohne Benutzeraffinität  
  Auf mit **no user affinity** konfiguriert wurden, unterstützen sie auch das Unternehmensportal nicht. Die App sollte auf solchen Geräten nicht installiert werden. Das Unternehmensportal ist für Benutzer gedacht, die über Anmeldeinformationen ihres Unternehmens verfügen und Zugriff auf personalisierte Unternehmensressourcen (z. B. E-Mail) benötigen. Geräte, die **ohne Benutzeraffinität** registriert wurden, bieten keine Anmeldung für dedizierte Benutzer. Kiosk-, Verkaufsstellen- (POS-) oder gemeinsam genutzte Geräte sind typisch Anwendungsfälle für Geräte, die ohne Benutzeraffinität registriert werden. Wenn Benutzeraffinität erforderlich ist, muss vor der Registrierung des Geräts in dessen Registrierungsprofil **Benutzeraffinität** ausgewählt worden sein. Zum Ändern des Affinitätsstatus eines Geräts müssen Sie das Gerät abkoppeln und erneut registrieren.
 

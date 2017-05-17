@@ -15,9 +15,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 099345d59891841a336cbada896ec349751fecd3
 ms.openlocfilehash: 54e54409a1792c7e28620a5e3cea3e8d8695c7d4
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="package-transfer-manager-in-system-center-configuration-manager"></a>Paketübertragungs-Manager in System Center Configuration Manager
@@ -87,9 +89,4 @@ Im Folgenden wird beschrieben, wie die Übertragung von Inhalten an Standardvert
     -   **Standardverteilungspunkt:** Nachdem der Paketübertragungs-Manager die Übertragung von Dateien an die angegebenen Remoteverteilungspunkte abgeschlossen hat, überprüft er den Hash des Inhalts auf dem Verteilungspunkt. Anschließend wird der Verteilungs-Manager darüber informiert, dass die Verteilung abgeschlossen ist.  
 
     -   **Pullverteilungspunkt:** Sobald das Herunterladen des Inhalts auf den Pullverteilungspunkt abgeschlossen ist, wird der Hash des Inhalts überprüft. Anschließend wird eine Statusmeldung an den Standortverwaltungspunkt übermittelt, um den Erfolg mitzuteilen. Ist dieser Status nach 60 Minuten noch nicht eingegangen, wird der Paketübertragungs-Manager wieder aktiviert. Er überprüft den Pullverteilungspunkt, um zu bestätigen, dass der Inhalt auf den Pullverteilungspunkt heruntergeladen wurde. Ist das Herunterladen des Inhalts noch nicht abgeschlossen, wird der Paketübertragungs-Manager für weitere 60 Minuten in den Ruhemodus versetzt, bis der Pullverteilungspunkt erneut überprüft wird. Dieser Zyklus wird bis zum Abschluss der Inhaltsübertragung an den Pullverteilungspunkt fortgesetzt.  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

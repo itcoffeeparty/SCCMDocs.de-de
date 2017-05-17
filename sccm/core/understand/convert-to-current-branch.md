@@ -15,9 +15,11 @@ caps.latest.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 60631bc0346bd78d704e7129bb755af504c59b1b
 ms.openlocfilehash: 6e7edc85630d22c5bbba1ff66bd1199903db76db
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 ---
 
@@ -54,9 +56,4 @@ Wenn Ihr Standort LTSB ausführt, können Sie die folgende Option in der Configu
  2. Wählen Sie die Option zum Konvertieren von Current Branch aus, und klicken Sie auf **Anwenden**.  
 
 Sobald Ihr Standort in Current Branch konvertiert wurde, stehen Ihnen Features und Funktionen zur Verfügung, die bisher nicht verfügbar waren.
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

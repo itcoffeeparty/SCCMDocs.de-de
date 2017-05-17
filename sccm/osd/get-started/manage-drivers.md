@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: 87ab9925717a307cbda3cea1f2e470ae012fa067
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -28,10 +30,10 @@ ms.openlocfilehash: 87ab9925717a307cbda3cea1f2e470ae012fa067
 
 System Center Configuration Manager stellt einen Treiberkatalog bereit, den Sie zum Verwalten der Windows-Gerätetreiber in Ihrer Configuration Manager-Umgebung verwenden können. Sie können den Treiberkatalog verwenden, um Gerätetreiber in Configuration Manager zu importieren, sie in Pakete zu gruppieren und um diese Pakete an Verteilungspunkte zu verteilen, wo Sie auf sie zugreifen können, wenn Sie ein Betriebssystem bereitstellen. Sie können Gerätetreiber verwenden, wenn Sie das vollständige Betriebssystem auf dem Zielcomputer installieren und wenn Sie Windows PE mithilfe eines Startabbilds installieren. Windows-Gerätetreiber bestehen aus einer INF-Datei (Setup Information File) sowie ggf. zusätzlichen Dateien, die für die Geräteunterstützung erforderlich sind. Wenn ein Betriebssystem bereitgestellt wird, werden die Hardware- und Plattforminformationen durch Configuration Manager aus der INF-Datei des Geräts abgerufen. Gehen Sie wie folgt vor, um Treiber in Ihrer Configuration Manager-Umgebung zu verwalten.
 
-##  <a name="a-namebkmkdrivercategoriesa-device-driver-categories"></a><a name="BKMK_DriverCategories"></a> Gerätetreiberkategorien  
+##  <a name="BKMK_DriverCategories"></a> Gerätetreiberkategorien  
  Wenn Sie Gerätetreiber importieren, können Sie sie einer Kategorie zuweisen. Mithilfe von Gerätetreiberkategorien können Sie ähnlich verwendete Gerätetreiber im Treiberkatalog gruppieren. Sie können z. B. alle Netzwerkkarten-Gerätetreiber einer bestimmten Kategorie zuweisen. Wenn Sie dann eine Tasksequenz erstellen, die den Schritt [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers) enthält, können Sie eine bestimmte Kategorie von Gerätetreibern angeben. Configuration Manager überprüft anschließend die Hardware und wählt die anwendbaren Treiber aus dieser Kategorie aus, um sie zur Verwendung durch Windows Setup verfügbar zu machen.  
 
-##  <a name="a-namebkmkmanagingdriverpackagesa-driver-packages"></a><a name="BKMK_ManagingDriverPackages"></a> Treiberpakete  
+##  <a name="BKMK_ManagingDriverPackages"></a> Treiberpakete  
  Sie können zur Vereinfachung der Bereitstellung eines Betriebssystems ähnliche Gerätetreiber in Paketen zusammenfassen. Sie können z. B. ein Treiberpaket für jeden Computerhersteller in Ihrem Netzwerk erstellen. Sie können ein Treiberpaket erstellen, wenn Sie Treiber direkt über den Knoten **Treiberpakete** in den Treiberkatalog importieren. Wenn Sie das Treiberpaket erstellt haben, müssen Sie es an Verteilungspunkte verteilen, von denen aus die Treiber von Configuration Manager-Clientcomputern nach Bedarf installiert werden können. Beachten Sie Folgendes:  
 
 -   Wenn Sie ein Treiberpaket erstellen, muss der Quellspeicherort des Pakets einen Verweis auf eine leere Netzwerkfreigabe enthalten, die nicht von einem anderen Treiberpaket verwendet wird, und für den SMS-Anbieter sind die Berechtigungen Lesen und Schreiben für diesen Speicherort erforderlich.  
@@ -42,7 +44,7 @@ System Center Configuration Manager stellt einen Treiberkatalog bereit, den Sie 
 
  Verwenden Sie zum Erstellen und Verwalten von Treiberpaketen die folgenden Abschnitte.  
 
-###  <a name="a-namecreatingdriverpackagesa-create-a-driver-package"></a><a name="CreatingDriverPackages"></a> Erstellen eines Treiberpakets  
+###  <a name="CreatingDriverPackages"></a> Erstellen eines Treiberpakets  
  Gehen Sie wie folgt vor, um ein neues Treiberpaket zu erstellen.  
 
 > [!IMPORTANT]  
@@ -74,7 +76,7 @@ System Center Configuration Manager stellt einen Treiberkatalog bereit, den Sie 
 
  Wenn der Knoten **Treiberpakete** mehrere Pakete enthält, können Sie dem Knoten Ordner hinzufügen, um die Pakete in logische Gruppen zu unterteilen.  
 
-###  <a name="a-namebkmkpackageactionsa-additional-actions-for-driver-packages"></a><a name="BKMK_PackageActions"></a> Zusätzliche Aktionen für Treiberpakete  
+###  <a name="BKMK_PackageActions"></a> Zusätzliche Aktionen für Treiberpakete  
  Sie können zusätzliche Aktionen zur Verwaltung von Treiberpaketen ausführen, wenn Sie im Knoten **Treiberpakete** mindestens ein Treiberpaket auswählen. Diese Aktionen umfassen Folgendes:  
 
 |Aktion|Beschreibung|  
@@ -87,10 +89,10 @@ System Center Configuration Manager stellt einen Treiberkatalog bereit, den Sie 
 |**Verteilungspunkte aktualisieren**|Hiermit wird an allen Verteilungspunkten, auf denen das Gerätetreiberpaket gespeichert wird, ein Update des Pakets ausgeführt. Bei dieser Aktion wird nur der Inhalt kopiert, der sich seit seiner letzten Verteilung geändert hat.|  
 |**Eigenschaften**|Hiermit wird das Dialogfeld **Eigenschaften** geöffnet, in dem Sie den Inhalt und die Eigenschaften des Gerätetreibers prüfen und ändern können. Beispielsweise können Sie den Namen und die Beschreibung des Gerätetreibers ändern, den Gerätetreiber aktivieren sowie angeben, auf welchen Plattformen der Gerätetreiber ausgeführt werden kann.|  
 
-##  <a name="a-namebkmkdevicedriversa-device-drivers"></a><a name="BKMK_DeviceDrivers"></a> Gerätetreiber  
+##  <a name="BKMK_DeviceDrivers"></a> Gerätetreiber  
  Sie können Gerätetreiber auf Zielcomputern installieren, ohne sie in das Betriebssystemabbild einzuschließen, das bereitgestellt wird. In Configuration Manager ist ein Treiberkatalog enthalten, der Verweise zu allen Gerätetreibern enthält, die Sie in Configuration Manager importieren. Der Treiberkatalog befindet sich im Arbeitsbereich **Softwarebibliothek** . Er besteht aus zwei Knoten: **Treiber** und **Treiberpakete**. Im Knoten **Treiber** sind alle Treiber aufgelistet, die Sie in den Treiberkatalog importiert haben. Verwenden Sie diesen Knoten, um Details zu jedem importierten Treiber zu ermitteln, die Treiber im Treiberpaket oder Startabbild zu ändern, einen Treiber zu aktivieren oder deaktivieren usw.  
 
-###  <a name="a-namebkmkimportdriversa-import-device-drivers-into-the-driver-catalog"></a><a name="BKMK_ImportDrivers"></a> Importieren von Gerätetreibern in den Gerätekatalog  
+###  <a name="BKMK_ImportDrivers"></a> Importieren von Gerätetreibern in den Gerätekatalog  
  Bei der Bereitstellung eines Betriebssystems müssen Sie Gerätetreiber in den Treiberkatalog importieren, bevor Sie sie verwenden können. Sie können die Verwaltung Ihrer Gerätetreiber vereinfachen, indem Sie nur die Gerätetreiber importieren, die Sie im Rahmen der Betriebssystembereitstellung installieren möchten. Sie können aber auch mehrere Versionen der Gerätetreiber im Treiberkatalog speichern, um auf einfache Art Upgrades bei vorhandenen Gerätetreibern auszuführen, wenn sich die Hardwaregeräteanforderungen in Ihrem Netzwerk ändern.  
 
  Im Rahmen des Importvorgangs für den Gerätetreiber werden von Configuration Manager Informationen gelesen, die dem Gerät zugeordnet sind, darunter Anbieter, Klasse, Version, Signatur sowie unterstützte Hardware und Plattformen. Der Treiber wird standardmäßig nach dem ersten Hardwaregerät benannt, das von ihm unterstützt wird. Sie können den Gerätetreiber aber zu einem späteren Zeitpunkt umbenennen. Die Liste der unterstützten Plattformen beruht auf den Informationen in der INF-Datei des Treibers. Diese Informationen sind jedoch nicht immer vollständig. Überprüfen Sie daher nach dem Import eines Treibers in den Treiberkatalog manuell, ob der Gerätetreiber unterstützt wird.  
@@ -166,7 +168,7 @@ System Center Configuration Manager stellt einen Treiberkatalog bereit, den Sie 
 
 8.  Schließen Sie den Assistenten ab.  
 
-###  <a name="a-namebkmkmodifydriverpackagea-manage-device-drivers-in-a-driver-package"></a><a name="BKMK_ModifyDriverPackage"></a> Verwalten von Gerätetreibern in einem Treiberpaket  
+###  <a name="BKMK_ModifyDriverPackage"></a> Verwalten von Gerätetreibern in einem Treiberpaket  
  Gehen Sie wie folgt vor, um Treiberpakete und Startabbilder zu ändern. Zum Hinzufügen oder Entfernen von Gerätetreibern suchen Sie die Treiber im Knoten **Treiber** , und bearbeiten Sie dann die Pakete oder Startabbilder, denen die ausgewählten Treiber zugeordnet sind.  
 
 #### <a name="to-modify-the-device-drivers-in-a-driver-package"></a>So ändern Sie die Gerätetreiber in einem Treiberpaket  
@@ -187,7 +189,7 @@ System Center Configuration Manager stellt einen Treiberkatalog bereit, den Sie 
 
      Klicken Sie auf **OK**.  
 
-###  <a name="a-namebkmkmanagedriversbootimagea-manage-device-drivers-in-a-boot-image"></a><a name="BKMK_ManageDriversBootImage"></a> Verwalten von Gerätetreibern in einem Startabbild  
+###  <a name="BKMK_ManageDriversBootImage"></a> Verwalten von Gerätetreibern in einem Startabbild  
  Sie können Startabbildern Windows-Gerätetreiber hinzufügen, die in den Treiberkatalog importiert wurden. Verwenden Sie die folgenden Richtlinien, wenn Sie einem Startabbild Gerätetreiber hinzufügen:  
 
 -   Fügen Sie Startabbildern nur Gerätetreiber für Massenspeichergeräte und Netzwerkadapter hinzu, da andere Treibertypen nicht grundsätzlich erforderlich sind. Durch Treiber, die nicht erforderlich sind, wird die Größe des Startabbilds unnötig erhöht.  
@@ -228,7 +230,7 @@ System Center Configuration Manager stellt einen Treiberkatalog bereit, den Sie 
 
 7.  Klicken Sie auf **OK**.  
 
-###  <a name="a-namebkmkdriveractionsa-additional-actions-for-device-drivers"></a><a name="BKMK_DriverActions"></a> Zusätzliche Aktionen für Gerätetreiber  
+###  <a name="BKMK_DriverActions"></a> Zusätzliche Aktionen für Gerätetreiber  
  Sie können zusätzliche Aktionen zur Verwaltung von Gerätetreibern ausführen, wenn Sie im Knoten **Treiber** mindestens einen Gerätetreiber auswählen. Diese Aktionen umfassen Folgendes:  
 
 |Aktion|Beschreibung|  
@@ -240,7 +242,7 @@ System Center Configuration Manager stellt einen Treiberkatalog bereit, den Sie 
 |**Verschieben**|Hiermit wird der Gerätetreiber im Knoten **Treiber** in einen anderen Ordner verschoben.|  
 |**Eigenschaften**|Hiermit wird das Dialogfeld **Eigenschaften** geöffnet, in dem Sie die Eigenschaften des Gerätetreibers prüfen und ändern können. Beispielsweise können Sie den Namen und die Beschreibung des Gerätetreibers ändern, den Gerätetreiber aktivieren sowie angeben, auf welchen Plattformen der Gerätetreiber ausgeführt werden kann.|  
 
-##  <a name="a-namebkmktsdriversa-use-task-sequences-to-install-device-drivers"></a><a name="BKMK_TSDrivers"></a> Verwenden von Tasksequenzen zum Installieren von Gerätetreibern  
+##  <a name="BKMK_TSDrivers"></a> Verwenden von Tasksequenzen zum Installieren von Gerätetreibern  
  Verwenden Sie Tasksequenzen, um die Art der Bereitstellung des Betriebssystems zu automatisieren. Von jedem Schritt in der Tasksequenz kann eine bestimmte Aktion ausgeführt werden, beispielsweise die Installation eines Gerätetreibers. Sie können die folgenden beiden Tasksequenzschritte verwenden, um Gerätetreiber zu installieren, während Sie Betriebssysteme bereitstellen:  
 
 -   [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers): Mit diesem Schritt werden Gerätetreiber automatisch als Teil einer Betriebssystembereitstellung ausgewählt und installiert. Sie können den Tasksequenzschritt so konfigurieren, dass nur der am besten passende Treiber für jedes ermittelte Hardwaregerät installiert wird. Sie können auch angeben, dass alle kompatiblen Treiber für jedes ermittelte Hardwaregerät installiert werden und der am besten passenden Treiber von Windows Setup ausgewählt werden soll. Zusätzlich können Sie eine Kategorie von Gerätetreibern angeben, um die für diesen Schritt verfügbaren Treiber zu begrenzen.  
@@ -249,7 +251,7 @@ System Center Configuration Manager stellt einen Treiberkatalog bereit, den Sie 
 
  Wenn Sie diese Tasksequenzschritte verwenden, können Sie auch angeben, wie die Gerätetreiber auf dem Computer, auf dem Sie das Betriebssystem bereitstellen, installiert werden sollen. Weitere Informationen finden Sie unter [Verwalten von Tasksequenzen zum Automatisieren von Aufgaben](../deploy-use/manage-task-sequences-to-automate-tasks.md).  
 
-##  <a name="a-namebkmkinstallingdevicediriverstsa-use-task-sequences-to-install-device-drivers-on-computers"></a><a name="BKMK_InstallingDeviceDiriversTS"></a> Verwenden von Tasksequenzen zum Installieren von Gerätetreibern auf Computern  
+##  <a name="BKMK_InstallingDeviceDiriversTS"></a> Verwenden von Tasksequenzen zum Installieren von Gerätetreibern auf Computern  
  Gehen Sie wie folgt vor, um Gerätetreiber als Teil der Betriebssystembereitstellung zu installieren.  
 
 #### <a name="use-a-task-sequence-to-install-device-drivers"></a>Verwenden einer Tasksequenz zum Installieren von Gerätetreibern  
@@ -273,11 +275,6 @@ System Center Configuration Manager stellt einen Treiberkatalog bereit, den Sie 
 
  Weitere Informationen zum Erstellen einer Tasksequenz zum Installieren eines Betriebssystems finden Sie unter [Erstellen einer Tasksequenz zum Installieren eines Betriebssystems](../deploy-use/create-a-task-sequence-to-install-an-operating-system.md).  
 
-##  <a name="a-namebkmkdriverreportsa-driver-management-reports"></a><a name="BKMK_DriverReports"></a> Berichte zur Treiberverwaltung  
+##  <a name="BKMK_DriverReports"></a> Berichte zur Treiberverwaltung  
  Sie können mehrere Berichte in der Berichtkategorie **Treiberverwaltung** verwenden, um allgemeine Informationen zu den Gerätetreibern im Treiberkatalog zu erhalten. Weitere Informationen zu Berichten finden Sie unter [Berichterstellung](../../core/servers/manage/reporting.md).
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

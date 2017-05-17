@@ -15,9 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fff93794afdfa9f890b1f06d6c330d8cffc5796c
 ms.openlocfilehash: b4db5d86cc0ed020ed176feb2e8f1f9dc51a2280
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="configuration-options-for-site-system-roles-for-system-center-configuration-manager"></a>Konfigurationsoptionen für Standortsystemrollen für System Center Configuration Manager
@@ -26,7 +28,7 @@ ms.openlocfilehash: b4db5d86cc0ed020ed176feb2e8f1f9dc51a2280
 
 Die meisten Konfigurationsoptionen für System Center Configuration Manager-Standortsystemrollen sind selbsterklärend oder werden im Assistenten oder den Dialogfeldern erklärt, wenn Sie sie konfigurieren. In den folgenden Abschnitten werden Standortsystemrollen erläutert, für deren Einstellungen möglicherweise zusätzliche Informationen erforderlich sind.  
 
-##  <a name="a-namebkmkapplicationcatalogwebsitea-application-catalog-website-point"></a><a name="BKMK_ApplicationCatalog_Website"></a> Anwendungskatalog-Websitepunkt  
+##  <a name="BKMK_ApplicationCatalog_Website"></a> Anwendungskatalog-Websitepunkt  
  Informationen zum Einrichten des Anwendungskatalog-Websitepunkts für den Anwendungskatalog finden Sie unter [Planen und Konfigurieren der Anwendungsverwaltung in System Center Configuration Manager](../../../../apps/plan-design/plan-for-and-configure-application-management.md).  
 
  **Clientverbindungen**  
@@ -45,7 +47,7 @@ Die meisten Konfigurationsoptionen für System Center Configuration Manager-Stan
 
  Geben Sie den Namen ein, der den Benutzern im Anwendungskatalog angezeigt wird. Diese Brandinginformationen helfen den Benutzern, diese Website als vertrauenswürdige Quelle zu identifizieren.  
 
-##  <a name="a-namebkmkapplicationcatalogwebservicea-application-catalog-web-service-point"></a><a name="BKMK_ApplicationCatalog_WebService"></a> Anwendungskatalog-Webdienstpunkt  
+##  <a name="BKMK_ApplicationCatalog_WebService"></a> Anwendungskatalog-Webdienstpunkt  
  Informationen zum Einrichten des Anwendungskatalog-Webdienstpunkts für den Anwendungskatalog finden Sie unter [Planen und Konfigurieren der Anwendungsverwaltung in System Center Configuration Manager](../../../../apps/plan-design/plan-for-and-configure-application-management.md).  
 
  **HTTPS**  
@@ -54,10 +56,10 @@ Die meisten Konfigurationsoptionen für System Center Configuration Manager-Stan
 
  Eine Beispielbereitstellung des Serverzertifikats sowie Informationen zum Konfigurieren des Zertifikats in IIS finden Sie im Abschnitt *Bereitstellen des Webserverzertifikats für Standortsysteme, von denen IIS ausgeführt werden* des Themas [Beispiel für die schrittweise Bereitstellung der PKI-Zertifikate für System Center Configuration Manager: Windows Server 2008-Zertifizierungsstelle](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
-##  <a name="a-namebkmkcertificateregistrationpointa-certificate-registration-point"></a><a name="BKMK_CertificateRegistrationPoint"></a> Zertifikatregistrierungspunkt  
+##  <a name="BKMK_CertificateRegistrationPoint"></a> Zertifikatregistrierungspunkt  
  Weitere Informationen zum Einrichten des Zertifikatregistrierungspunkts finden Sie unter [Einführung in Zertifikatprofile in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
 
-##  <a name="a-namebkmkdistributionpointa-distribution-point"></a><a name="BKMK_Distribution_Point"></a> Verteilungspunkt  
+##  <a name="BKMK_Distribution_Point"></a> Verteilungspunkt  
  Weitere Informationen zum Einrichten des Verteilungspunkts und zur Inhaltsbereitstellung finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
  Weitere Informationen zum Einrichten des Verteilungspunkts für PXE-Bereitstellungen finden Sie unter [Verwenden von PXE zum Bereitstellen von Windows über das Netzwerk mit System Center Configuration Manager](../../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
@@ -97,7 +99,7 @@ Aktivieren Sie dieses Kontrollkästchen, um den Verteilungspunkt für vorab bere
  - **Vor Version 1610** können Sie das Kontrollkästchen **Fallbackquellpfad für Inhalt zulassen** aktivieren, um für Clients außerhalb solcher Begrenzungsgruppen ein Ausweichen auf den Verteilungspunkt als Quellort für Inhalt zu ermöglichen, wenn keine anderen Verteilungspunkte verfügbar sind.
  - **Ab Version 1610** können Sie **Fallbackquellpfad für Inhalt zulassen** nicht mehr konfigurieren.  Stattdessen können Sie Beziehungen zwischen Begrenzungsgruppen einrichten, die überprüfen, ab wann ein Client mit der Suche nach zusätzlichen Begrenzungsgruppen für einen gültigen Quellspeicherort für den Inhalt suchen kann.
 
-##  <a name="a-namebkmkenrollmentpointa-enrollment-point"></a><a name="BKMK_Enrollment_Point"></a> Anmeldungspunkt  
+##  <a name="BKMK_Enrollment_Point"></a> Anmeldungspunkt  
 Anmeldungspunkte werden zur Installation von Macintosh-Computern und zur Registrierung mobiler Geräte verwendet, die Sie mithilfe der lokalen Geräteverwaltung verwalten. Weitere Informationen finden Sie unter:  
 
 -   [Bereitstellen von Clients auf Macintosh-Computern in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-macs.md)  
@@ -109,7 +111,7 @@ Anmeldungspunkte werden zur Installation von Macintosh-Computern und zur Registr
 
  Eine Beispielbereitstellung des Serverzertifikats sowie Informationen zum Konfigurieren des Zertifikats in IIS finden Sie im Abschnitt *Bereitstellen des Webserverzertifikats für Standortsysteme, von denen IIS ausgeführt werden* des Themas [Beispiel für die schrittweise Bereitstellung der PKI-Zertifikate für System Center Configuration Manager: Windows Server 2008-Zertifizierungsstelle](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
-##  <a name="a-namebkmkenrollmentproxypointa-enrollment-proxy-point"></a><a name="BKMK_Enrollment_Proxy_Point"></a> Anmeldungsproxypunkt  
+##  <a name="BKMK_Enrollment_Proxy_Point"></a> Anmeldungsproxypunkt  
 Weitere Informationen zum Einrichten eines Anmeldungsproxypunkts für mobile Geräte finden Sie unter [Informationen zur Registrierung von Geräten mit der lokalen Verwaltung mobiler Geräte in System Center Configuration Manager](../../../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md).  
 
 **Clientverbindungen**  
@@ -117,7 +119,7 @@ Weitere Informationen zum Einrichten eines Anmeldungsproxypunkts für mobile Ger
 
  Eine Beispielbereitstellung des Serverzertifikats sowie Informationen zum Konfigurieren des Zertifikats in IIS finden Sie im Abschnitt *Bereitstellen des Webserverzertifikats für Standortsysteme, von denen IIS ausgeführt werden* des Themas [Beispiel für die schrittweise Bereitstellung der PKI-Zertifikate für System Center Configuration Manager: Windows Server 2008-Zertifizierungsstelle](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
-##  <a name="a-namebkmkfallbackstatuspointa-fallback-status-point"></a><a name="BKMK_Fallback_Status_Point"></a> Fallbackstatuspunkt  
+##  <a name="BKMK_Fallback_Status_Point"></a> Fallbackstatuspunkt  
 **Anzahl der Zustandsmeldungen** und **Einschränkungsintervall (in Sekunden)**  
 Die Standardeinstellungen dieser beiden Optionen (10.000 Zustandsmeldungen und 3.600 Sekunden beim Einschränkungsintervall) sind unter den meisten Umständen ausreichend. Dennoch kann es erforderlich sein, dass Sie diese Einstellungen ändern, wenn die beiden folgenden Bedingungen erfüllt sind:  
 
@@ -152,9 +154,4 @@ Setzen Sie die Einschränkungswerte für den Fallbackstatuspunkt zurück, wenn e
 -   Mit den aktuellen Einschränkungswerten stellen Sie eine hohe Prozessorauslastung des Standortservers fest.  
 
 Ändern Sie die Einschränkungseinstellungen für den Fallbackstatuspunkt nur dann, wenn Sie sich über die Konsequenzen im Klaren sind. Wenn Sie beispielsweise die Einschränkungseinstellungen zu stark erhöhen, kann dadurch die Prozessorauslastung des Standortservers so erhöht werden, dass dadurch alle Standortvorgänge verlangsamt werden.  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

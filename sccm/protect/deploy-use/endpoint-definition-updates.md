@@ -16,9 +16,11 @@ caps.latest.revision: 21
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: 9085a4daed409eeff4c95e5c467f123d0a38147a
+ms.contentlocale: de-de
+ms.lasthandoff: 12/16/2016
 
 
 
@@ -73,9 +75,4 @@ ms.openlocfilehash: 9085a4daed409eeff4c95e5c467f123d0a38147a
 -   Von Microsoft Malware Protection Center verteilte Updates ‒ Bei dieser Methode werden Definitionsupdates vom Microsoft Malware Protection Center heruntergeladen.
 
 -   [Updates von UNC-Dateifreigaben](endpoint-definitions-network.md) ‒ Mit dieser Methode können Sie die neuesten Definitions- und Modulupdates in einer Freigabe auf dem Netzwerk speichern. Clients können dann zum Installieren der Updates auf das Netzwerk zugreifen.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

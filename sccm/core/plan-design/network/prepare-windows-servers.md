@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dd102603356864add4084c6881c39bebcbd635f2
 ms.openlocfilehash: 9b97dedb5d2be0bd2e47260033e6e4361467dc4e
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -34,7 +36,7 @@ Ehe Sie einen Windows-Computer als Standortsystemserver für System Center Confi
 
 Die Informationen in diesem Artikel bieten einen Überblick über die verschiedenen Windows-Konfigurationstypen, die zur Unterstützung von Configuration Manager-Standortsystemen erforderlich sind. Konfigurationsdetails für bestimmte Standortsystemrollen finden Sie unter [Voraussetzungen für Standorte und Standortsysteme](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).
 
-##  <a name="a-namebkmkwinfeaturesa-windows-features-and-roles"></a><a name="BKMK_WinFeatures"></a> Windows-Features und -Rollen  
+##  <a name="BKMK_WinFeatures"></a> Windows-Features und -Rollen  
  Wenn Sie Windows-Features und -Rollen auf einem Computer einrichten, müssen Sie möglicherweise den Computer neu starten, um die Konfiguration abzuschließen. Daher ist es eine gute Idee, die Computer zu identifizieren, die bestimmte Standortsystemrollen hosten, bevor Sie einen Configuration Manager-Standort oder Standortsystemserver installieren.
 ### <a name="features"></a>Features  
  Die folgenden Windows-Features sind auf bestimmten Standortsystemservern erforderlich und müssen eingerichtet werden, bevor Sie eine Standortsystemrolle auf dem jeweiligen Computer installieren.  
@@ -98,7 +100,7 @@ Die Informationen in diesem Artikel bieten einen Überblick über die verschiede
 -   **Windows-Bereitstellungsdienste:** Diese Rolle wird mit der Betriebssystembereitstellung verwendet.  
 -   **Windows Server Update Services:** Diese Rolle ist erforderlich, wenn Sie Softwareupdates bereitstellen.  
 
-##  <a name="a-namebkmkiisfilteringa-iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a> IIS-Anforderungsfilterung für Verteilungspunkte  
+##  <a name="BKMK_IISFiltering"></a> IIS-Anforderungsfilterung für Verteilungspunkte  
  IIS verwendet standardmäßig die Filterung von Benutzeranforderungen, um Dateierweiterungen und Ordnerpfade für den Zugriff über HTTP- oder HTTPS-Verbindungen zu blockieren. Auf einem Verteilungspunkt verhindert dies, dass Clients Pakete mit blockierten Erweiterungen oder Ordnerpfaden herunterladen.  
 
  Wenn Ihre Paketquelldateien Erweiterungen aufweisen, die in IIS durch Ihre Konfiguration der Anforderungsfilterung blockiert werden, müssen Sie die Anforderungsfilterung so einrichten, dass sie diese zulässt. Dies erfolgt durch [Bearbeiten des Anforderungsfilterfeatures](https://technet.microsoft.com/library/hh831621.aspx) im IIS-Manager auf Ihren Verteilungspunktcomputern.  
@@ -140,9 +142,4 @@ Beispiel: Sie verfügen über Quelldateien für eine Softwarebereitstellung, die
  - PROPFIND
 
 Informationen zum Konfigurieren der Anforderungsfilterung finden Sie unter [Konfigurieren der Anforderungsfilterung in IIS](https://technet.microsoft.com/library/hh831621.aspx#Verbs) auf TechNet oder in einer ähnlichen Dokumentation, die sich auf die Version von Windows Server bezieht, die den Verwaltungspunkt hostet.
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

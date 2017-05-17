@@ -15,9 +15,11 @@ caps.latest.revision: 31
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: a84d3ab55066d26c3199ea374d8beb472d66f43f
+ms.contentlocale: de-de
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1606-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1606 für System Center Configuration Manager
@@ -36,7 +38,7 @@ In diesem Artikel werden die Features erläutert, die in Technical Preview für 
 
 **Im Folgenden werden neue Features aufgelistet, die Sie mit dieser Version ausprobieren können.**  
 
-## <a name="a-namedmpcategorya-automatically-categorize-devices-into-collections"></a><a name="dmp_category"></a> Automatisches Kategorisieren von Geräten in Sammlungen
+## <a name="dmp_category"></a> Automatisches Kategorisieren von Geräten in Sammlungen
 Sie können Gerätekategorien erstellen, mit denen Geräte automatisch in Gerätesammlungen platziert werden, wenn Sie Configuration Manager mit Microsoft Intune verwenden. Benutzer müssen eine Gerätekategorie auswählen, wenn sie ein Gerät in Intune registrieren. Sie können außerdem die Kategorie eines Geräts in der Configuration Manager-Konsole ändern.
 
 **Wichtig:** Diese Funktion arbeitet mit der **Juni 2016**-Release von Microsoft Intune. Stellen Sie sicher, dass Sie über dieses Release verfügen, bevor Sie dieses Verfahren ausprobieren.
@@ -59,7 +61,7 @@ Wenn Sie eine Sammlung zu einer Gerätekategorie zuordnen, werden alle Geräte i
 2.  Wählen Sie ein Gerät in der Liste **Geräte** aus, und klicken Sie dann auf der Registerkarte **Startseite** in der Gruppe **Gerät** auf **Kategorie ändern**.
 3.  Wählen Sie im Dialogfeld **Gerätekategorie bearbeiten** die Kategorie aus, die auf dieses Gerät angewendet werden soll, und klicken Sie dann auf **OK**.
 
-## <a name="a-namedmpgracea-enforcement-grace-period-for-required-application-and-software-update-deployments"></a><a name="dmp_grace"></a> Erzwingung der Karenzzeit für erforderliche Anwendungen und Bereitstellungen von Softwareupdates
+## <a name="dmp_grace"></a> Erzwingung der Karenzzeit für erforderliche Anwendungen und Bereitstellungen von Softwareupdates
 
 In einigen Fällen empfiehlt es sich, Benutzern mehr Zeit zum Installieren von erforderlichen Anwendungsbereitstellungen oder Softwareupdates, über die von Ihnen konfigurierten Fristen hinaus, zu geben. Dies kann erforderlich sein, wenn ein Computer für einen längeren Zeitraum ausgeschaltet war und eine große Anzahl von Anwendungs- oder Updatebereitstellungen installieren muss.
 Wenn z.B. ein Benutzer gerade aus dem Urlaub zurückgekehrt ist, muss er möglicherweise sehr lange warten, bis überfällige Anwendungsbereitstellungen installiert sind.
@@ -76,7 +78,7 @@ Alle Bereitstellungen, für die dieses Kontrollkästchen ausgewählt ist, und di
 Wenn Sie eine Toleranzperiode konfigurieren und das Kontrollkästchen aktivieren, wird die Anwendung im ersten, nicht geschäftlichen Fenster installiert werden, das der Benutzer nach Ablauf der Frist konfiguriert. Der Benutzer kann jedoch weiterhin das Software Center öffnen und die Anwendung zu einem beliebigen Zeitpunkt installieren. Nach Ablauf der Toleranzperiode wird die Erzwingung auf normales Verhalten für überfällige Bereitstellungen zurückgesetzt.
 Ähnliche Optionen wurden zum Bereitstellungsassistenten für Softwareupdates, zum Assistenten für automatische Bereitstellungsregeln und den Eigenschaftenseiten hinzugefügt.
 
-##  <a name="a-namedmpdevgausing-configuration-manager-as-a-managed-installer-with-device-guard"></a><a name="dmp_devg"></a>Verwendung von Configuration Manager als verwalteter Installer mit Device Guard
+##  <a name="dmp_devg"></a>Verwendung von Configuration Manager als verwalteter Installer mit Device Guard
 
 Device Guard ist ein Windows 10-Feature, das Hardware- und Software-Features verwendet, um genau zu kontrollieren, was zur Ausführung auf dem Gerät zulässig ist.
 
@@ -101,7 +103,7 @@ Weitere Informationen:
 - [Device Guard-Zertifizierung und -Kompatibilität](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-certification-and-compliance)
 - [Device Guard-Bereitstellungshandbuch](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)
 
- ##  <a name="a-namedmponprema-multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a> Verschiedene Geräteverwaltungspunkte für die lokale Verwaltung mobiler Geräte  
+ ##  <a name="dmp_onprem"></a> Verschiedene Geräteverwaltungspunkte für die lokale Verwaltung mobiler Geräte  
  Mit Technical Preview 1606 unterstützt die lokale Verwaltung mobiler Geräte (MDM) jetzt eine neue Funktion im Windows 10 Anniversary Update, die ein registriertes Gerät automatisch konfiguriert, um mehr als einen Geräteverwaltungspunkt zur Verwendung zur Verfügung zu haben. Diese Funktion lässt Fallbacks des Geräts auf einen anderen Geräteverwaltungspunkt zu, wenn der normalerweise verwendete Punkt nicht verfügbar ist. Diese Funktion ist nur auf PCs verfügbar, auf denen das Windows 10 Anniversary Update installiert ist.  
 
 ### <a name="try-it-out"></a>Probieren Sie es aus!  
@@ -112,7 +114,7 @@ Weitere Informationen:
 
 Informationen zum Vorbereiten Ihres Standorts und zur Registrierung von Geräten für die lokale Verwaltung mobiler Geräte, finden Sie unter [Verwalten mobiler Geräte mithilfe lokaler Infrastruktur in System Center Configuration Manager](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
 
-## <a name="a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet"></a><a name="cloud_proxy"></a>Cloudproxydienst für die Verwaltung von Clients im Internet
+## <a name="cloud_proxy"></a>Cloudproxydienst für die Verwaltung von Clients im Internet
 
 Der Cloudproxydienst bietet eine einfache Möglichkeit zum Verwalten von Configuration Manager-Clients im Internet. Der Dienst, der in Microsoft Azure bereitgestellt wird und ein Azure-Abonnement erfordert, stellt mithilfe einer neuen Rolle namens Cloudproxy-Connectorpunkt eine Verbindung mit Ihrer lokalen Configuration Manager-Infrastruktur her. Nachdem er bereitgestellt und konfiguriert wurde, können Clients auf lokale Configuration Manager-Standortsystemrollen zugreifen, unabhängig davon, ob sie mit dem internen, privaten Netzwerk oder über das Internet verbunden sind.
 
@@ -217,7 +219,7 @@ Nachdem der Dienst und die Rollen vollständig konfiguriert sind, erhalten inter
 
 Nachdem Clients die neue Speicherortinformationen für Cloudproxydienst haben, überprüfen Sie den Status der Clients, die nicht mehr auf dem internen privaten Netzwerk sind, aber Zugriff auf das Internet haben. Sie können Datenverkehr auf dem Cloudproxydienst auch überwachen, indem Sie auf **Verwaltung > Clouddienste > Cloudproxydienst** den Dienst im Listenbereich auswählen und die Informationen zum Datenverkehr im Detailbereich anzeigen.   
 
-## <a name="a-namemanageo365amanage-the-office-365-client-agent-in-configuration-manager"></a><a name="manage_o365"></a>Verwaltung des Office 365-Client-Agents in Configuration Manager  
+## <a name="manage_o365"></a>Verwaltung des Office 365-Client-Agents in Configuration Manager  
 
 Ab Technical Preview 1606 können Sie eine Configuration Manager-Client-Agenteinstellung anstatt der Gruppenrichtlinie verwenden, um Office 365-Clients zum Empfangen von Updates von Configuration Manager zu aktivieren. Nachdem Sie diese Einstellung konfiguriert und Updates für Office 365 bereitgestellt haben, kommuniziert der Configuration Manager-Client-Agent mit dem Office 365-Client-Agent, um Office 365-Updates von einem Verteilungspunkt herunterzuladen und zu installieren. Configuration Manager macht auch eine Bestandsaufnahme der Client-Agenteinstellungen.
 
@@ -229,13 +231,13 @@ Weitere Informationen finden Sie unter [Verwalten von Office 365 ProPlus-Updates
 3. Klicken Sie auf **Softwareupdates** und wählen Sie **Ja** für die Einstellung **Verwaltung des Office 365-Client-Agents aktivieren** aus.  
 
 
-## <a name="a-nameosdpreservedriveletterathe-osdpreservedriveletter-task-sequence-variable-has-been-deprecated"></a><a name="osdpreservedriveletter"></a>Die Tasksequenzvariable „OSDPreserveDriveLetter“ wurde als veraltet markiert.
+## <a name="osdpreservedriveletter"></a>Die Tasksequenzvariable „OSDPreserveDriveLetter“ wurde als veraltet markiert.
 Die Tasksequenzvariable „OSDPreverveDriveLetter“ bestimmt, ob die Tasksequenz bei der Anwendung des Images auf einen Zielcomputer den in der WIM-Datei des Betriebssystemimages erfassten Laufwerkbuchstaben verwendet.
 - Die Tasksequenzvariable wurde in Technical Preview 1606 als veraltet markiert.
 
 Während einer standardmäßigen Betriebssystembereitstellung bestimmt Windows Setup den Laufwerkbuchstaben, der am besten zur Verwendung geeignet ist (in der Regel C:). Wenn Sie ein anderes Laufwerk zur Verwendung angeben möchten, können Sie den Speicherort im Tasksequenzschritt „Betriebssystem anwenden“ ändern. Wechseln Sie zur Einstellung **Wählen Sie den Standort aus, an dem Sie dieses Betriebssystem anwenden möchten. **, wählen Sie **Bestimmter Buchstabe für logisches Laufwerk ** aus und wählen Sie das Laufwerk aus, das Sie verwenden möchten. Sie müssen dem gewählten Buchstaben auf dem Zielcomputer ein Laufwerk zuordnen. 
 
-## <a name="a-nameupdatesandservicingachanges-for-the-updates-and-servicing-node"></a><a name="updatesandservicing"></a>Änderungen am Knoten „Updates und Wartung“
+## <a name="updatesandservicing"></a>Änderungen am Knoten „Updates und Wartung“
 Mit Technical Preview 1606 wurden mehrere Änderungen eingeführt, die für Updates und Wartung in der Configuration Manager-Konsole gelten:
 - **Änderung des Knotennamen:**
 
@@ -264,9 +266,4 @@ Mit Technical Preview 1606 wurden mehrere Änderungen eingeführt, die für Upda
 -   **Umbenannte Option für die Präproduktion:**
 
     Auf dem Knoten „Updates und Wartung“ wurde die Schaltfläche **Clientoptionen** in **Präproduktionsclient höher stufen** umbenannt.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

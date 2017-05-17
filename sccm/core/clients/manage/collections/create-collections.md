@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9555a16d97224a1cf49a426ab225468b07403f60
 ms.openlocfilehash: e28fdeae809cadf78017dd2920e3f1a9484ec8a3
+ms.contentlocale: de-de
+ms.lasthandoff: 12/29/2016
 
 
 ---
@@ -44,7 +46,7 @@ Bei Sammlungen handelt es sich um Gruppierungen von Benutzern und Geräten. Mith
 
  Informationen zum Erstellen von Sammlungen für Computer unter Linux und UNIX finden Sie unter [Verwalten von Clients für Linux- und UNIX-Server in System Center Configuration Manager](../../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md).  
 
-##  <a name="a-namebkmk1a-to-create-a-device-collection"></a><a name="BKMK_1"></a> So erstellen Sie eine Gerätesammlung  
+##  <a name="BKMK_1"></a> So erstellen Sie eine Gerätesammlung  
 
 1.  Wählen Sie in der Configuration Manager-Konsole **Bestand und Konformität** > **Gerätesammlungen** aus.  
 
@@ -120,7 +122,7 @@ Bei Sammlungen handelt es sich um Gruppierungen von Benutzern und Geräten. Mith
 > [!NOTE]  
 >  Sie müssen die Configuration Manager-Konsole aktualisieren oder erneut laden, um die Sammlungsmitglieder anzuzeigen. Allerdings werden die Mitglieder erst nach dem ersten geplanten Update in der Sammlung angezeigt, oder nachdem Sie manuell **Mitgliedschaft aktualisieren** für die Sammlung ausgewählt haben. Es dauert möglicherweise ein paar Minuten, bis die Aktualisierung einer Sammlung abgeschlossen ist.  
 
-##  <a name="a-namebkmk2a-to-create-a-user-collection"></a><a name="BKMK_2"></a> So erstellen Sie eine Benutzersammlung  
+##  <a name="BKMK_2"></a> So erstellen Sie eine Benutzersammlung  
 
 1.  Wählen Sie in der Configuration Manager-Konsole **Bestand und Konformität** > **Benutzersammlungen** aus.  
 
@@ -192,7 +194,7 @@ Bei Sammlungen handelt es sich um Gruppierungen von Benutzern und Geräten. Mith
 > [!NOTE]  
 >  Sie müssen die Configuration Manager-Konsole aktualisieren oder erneut laden, um die Sammlungsmitglieder anzuzeigen. Allerdings werden die Mitglieder erst nach dem ersten geplanten Update oder nachdem Sie manuell **Mitgliedschaft aktualisieren** für die Sammlung ausgewählt haben in der Sammlung angezeigt. Es dauert möglicherweise ein paar Minuten, bis die Aktualisierung einer Sammlung abgeschlossen ist.  
 
-##  <a name="a-namebkmk3a-to-import-a-collection"></a><a name="BKMK_3"></a> So importieren Sie eine Sammlung  
+##  <a name="BKMK_3"></a> So importieren Sie eine Sammlung  
 
 1.  Wählen Sie in der Configuration Manager-Konsole **Bestand und Konformität** > **Benutzersammlungen** oder **Gerätesammlungen** aus.  
 
@@ -206,9 +208,4 @@ Bei Sammlungen handelt es sich um Gruppierungen von Benutzern und Geräten. Mith
     >  Die zu importierende Datei muss von einem Standort exportiert worden sein, an dem dieselbe Configuration Manager-Version wie am Zielstandort ausgeführt wird. Weitere Informationen zum Exportieren von Sammlungen finden Sie unter [Verwalten von Sammlungen in Configuration Manager](../../../../core/clients/manage/collections/manage-collections.md).  
 
 6.  Schließen Sie den Assistenten ab, um die Sammlung zu importieren. Die neue Sammlung wird im Arbeitsbereich **Bestand und Kompatibilität** im Knoten **Benutzersammlungen** oder **Gerätesammlungen** angezeigt. Aktualisieren Sie die Configuration Manager-Konsole, oder laden Sie sie erneut, um die Sammlungsmitglieder für die neu importierte Sammlung anzuzeigen.  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

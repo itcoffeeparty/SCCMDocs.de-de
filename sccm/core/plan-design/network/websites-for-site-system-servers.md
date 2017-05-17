@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 26bbec1e8d6c53ce297689ba4390b9347229eb15
 ms.openlocfilehash: 886ff3b8e867fc340c79648a57feae81653b0ccd
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -34,7 +36,7 @@ Mehrere Configuration Manager-Standortsystemrollen erfordern die Verwendung von 
 
 
 
-##  <a name="a-namebkmkwhat2knowa-what-to-know-before-choosing-to-use-custom-websites"></a><a name="BKMK_What2Know"></a> Wissenswertes vor der Entscheidung für den Einsatz benutzerdefinierter Websites  
+##  <a name="BKMK_What2Know"></a> Wissenswertes vor der Entscheidung für den Einsatz benutzerdefinierter Websites  
  Standortsystemrollen verwenden standardmäßig die **Standardwebsite** in IIS. Diese wird automatisch bei der Installation der Standortsystemrolle eingerichtet. An primären Standorten können Sie jedoch stattdessen benutzerdefinierte Websites verwenden. Wenn Sie benutzerdefinierte Websites verwenden:  
 
 -   Benutzerdefinierte Websites sind für den gesamten Standort, nicht für einzelne Standortsystemserver oder -rollen aktiviert.  
@@ -132,9 +134,4 @@ Da die Schritte zum Erstellen einer benutzerdefinierten Website bei verschiedene
     2.  Starten Sie die Website **SMSWEB**.  
 
     3.  Starten Sie den Dienst **SMS_SITE_COMPONENT_MANAGER** auf dem Standortserver des Standorts neu.  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

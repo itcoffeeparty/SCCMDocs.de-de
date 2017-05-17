@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 7b6674f331c82cc7899b8661cf38b9d3022cf21b
 ms.openlocfilehash: 647826e9d340d3ef97abab0dba51041a3727dedc
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -64,7 +66,7 @@ Zum Bestimmen von Geräte- und Benutzerressourcen, die Sie verwalten können, ve
 
 -   Bereitstellen von Clienteinstellungen und zugehörigen Konfigurationen.
 
-##  <a name="a-namebkmkddrsa-about-discovery-data-records"></a><a name="BKMK_DDRs"></a> Informationen zu Discovery Data Records  
+##  <a name="BKMK_DDRs"></a> Informationen zu Discovery Data Records  
  DDRs sind Dateien, die durch eine Ermittlungsmethode erstellt werden. Sie enthalten Informationen zu einer Ressource, die Sie im Konfigurations-Manager verwalten können, wie z.B. Computer, Benutzer und in einigen Fällen die Netzwerkinfrastruktur. Sie werden auf primären Standorten oder auf Standorten der zentralen Verwaltung verarbeitet. Nachdem die im DDR enthaltenen Ressourceninformationen in die Datenbank eingetragen wurden, wird der DDR gelöscht, und die Informationen werden als globale Daten an alle Standorte in der Hierarchie repliziert.  
 
  Auf welchem Standort ein DDR verarbeitet wird, ist abhängig von den enthaltenen Informationen:  
@@ -87,9 +89,4 @@ Die folgenden Themen bieten grundlegende Informationen zur erfolgreichen Nutzung
 -   [Select discovery methods to use for System Center Configuration Manager (Auswählen von Ermittlungsmethoden zur Verwendung in System Center Configuration Manager)](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md)  
 
 Wenn Sie die Methoden kennen, die Sie verwenden möchten, finden Sie einen Leitfaden zum Einrichten der einzelnen Methoden unter [Konfigurieren von Ermittlungsmethoden für System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

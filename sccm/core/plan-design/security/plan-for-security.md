@@ -16,9 +16,10 @@ caps.handback.revision: 0
 author: arob98
 ms.author: angrobe
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: af06fb10d905e3fe447c6cd6ed35dac10488161f
 ms.openlocfilehash: 1bf519ad4593f6a08d7dc393f9fab91c70b51b25
+ms.contentlocale: de-de
 ms.lasthandoff: 01/05/2017
 
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 01/05/2017
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-##  <a name="a-namebkmkplanningforcertificatesa-plan-for-certificates-self-signed-and-pki"></a><a name="BKMK_PlanningForCertificates"></a> Planen von Zertifikaten (selbstsigniert und PKI)  
+##  <a name="BKMK_PlanningForCertificates"></a> Planen von Zertifikaten (selbstsigniert und PKI)  
  Von Configuration Manager wird eine Kombination von selbstsignierten Zertifikaten und PKI-Zertifikaten (Public Key-Infrastruktur) verwendet.  
 
  Verwenden Sie als bewährte Sicherheitsmethode nach Möglichkeit PKI-Zertifikate. Weitere Informationen zu den PKI-Zertifikatanforderungen finden Sie unter [PKI-Zertifikatanforderungen für System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md). Wenn die PKI-Zertifikate von Configuration Manager angefordert werden, beispielsweise bei der Registrierung mobiler Geräte und bei der AMT-Bereitstellung (Intel Active Management Technology), müssen Sie Active Directory Domain Services verwenden und eine Unternehmenszertifizierungsstelle in Anspruch nehmen. Alle anderen PKI-Zertifikate müssen Sie unabhängig von Configuration Manager bereitstellen und verwalten.  
@@ -61,7 +62,7 @@ ms.lasthandoff: 01/05/2017
 
 3.  Installieren Sie den Client, indem Sie die „Client.msi“-Eigenschaft **SMSSIGNCERT=***&lt;Vollständiger Pfad und Dateiname\>* mit der Datei „CCMSetup.exe“ verwenden.  
 
-###  <a name="a-namebkmkplanningforcrlsa-plan-for-pki-certificate-revocation"></a><a name="BKMK_PlanningForCRLs"></a> Planen der PKI-Zertifikatsperrung  
+###  <a name="BKMK_PlanningForCRLs"></a> Planen der PKI-Zertifikatsperrung  
 Wenn Sie PKI-Zertifikate mit Configuration Manager verwenden, planen Sie, ob und wie von Clients und Servern zur Überprüfung des Zertifikats des Computers, der die Verbindung herstellt, eine Zertifikatssperrliste verwendet werden soll. Bei der Zertifikatssperrliste handelt es sich um eine Datei, die von einer Zertifizierungsstelle erstellt und signiert wird und die eine Liste mit Zertifikaten enthält, die von der Zertifizierungsstelle zwar ausgestellt, aber gesperrt wurden. Ein Zertifizierungsstellenadministrator kann Zertifikate sperren, wenn beispielsweise bekannt ist oder vermutet wird, dass ein ausgestelltes Zertifikat gefährdet ist.  
 
 > [!IMPORTANT]  
@@ -79,7 +80,7 @@ Wenden Sie sich an Ihre PKI-Administratoren, bevor Sie entscheiden, ob stets ein
 
 -   Die Anforderung, die Zertifikatssperrliste für jede Verbindung mit einem Standortsystem, das für die Verwendung eines PKI-Zertifikats konfiguriert ist, zu überprüfen, wird schwerer gewichtet als die Anforderung an schnelle Verbindungen und eine effiziente Verarbeitung auf dem Client. Sie wird auch schwerer gewichtet als das Risiko, dass ein Zugriff von Clients auf Server nicht möglich ist, weil die Zertifikatssperrliste nicht verfügbar ist.  
 
-###  <a name="a-namebkmkplanningforrootcasa-plan-for-the-pki-trusted-root-certificates-and-the-certificate-issuers-list"></a><a name="BKMK_PlanningForRootCAs"></a> Planen von vertrauenswürdigen PKI-Stammzertifikaten und der Liste der Zertifikataussteller  
+###  <a name="BKMK_PlanningForRootCAs"></a> Planen von vertrauenswürdigen PKI-Stammzertifikaten und der Liste der Zertifikataussteller  
 Wenn von Ihren IIS-Standortsystemen PKI-Clientzertifikate zur Clientauthentifizierung über HTTP oder zur Clientauthentifizierung und Verschlüsselung über HTTPS verwendet werden, müssen Sie möglicherweise Stamm-Zertifizierungsstellenzertifikate als Standorteigenschaft importieren. Die folgenden beiden Szenarios sind möglich:  
 
 -   Sie stellen Betriebssysteme mithilfe von Configuration Manager bereit, und von den Verwaltungspunkten werden nur HTTPS-Clientverbindungen akzeptiert.  
@@ -101,7 +102,7 @@ Aus diesen importierten Stamm-Zertifizierungsstellenzertifikaten sowie aus den S
 
 Unabhängig von der Standortkonfiguration kann der Import eines Stamm-Zertifizierungsstellenzertifikats auch bei der Anmeldung von mobilen Geräten oder Macintosh-Computern und beim Einrichten von Intel AMT-basierten Computern für Funknetzwerke erforderlich sein.  
 
-###  <a name="a-namebkmkplanningforclientcertificateselectiona-plan-for-pki-client-certificate-selection"></a><a name="BKMK_PlanningForClientCertificateSelection"></a> Planen der Auswahl des PKI-Clientzertifikats  
+###  <a name="BKMK_PlanningForClientCertificateSelection"></a> Planen der Auswahl des PKI-Clientzertifikats  
  Wenn von Ihren IIS-Standortsystemen PKI-Clientzertifikate zur Clientauthentifizierung über HTTP oder zur Clientauthentifizierung und Verschlüsselung über HTTPS verwendet werden sollen, planen Sie, auf welche Art das Zertifikat zur Verwendung in Configuration Manager von den Windows-Clients ausgewählt werden soll.  
 
 > [!NOTE]  
@@ -175,7 +176,7 @@ Sie können die Identifizierung eines eindeutigen PKI-Clientzertifikats erleicht
 
 Weitere Informationen zum Konfigurieren der Einstellungen für Clientzertifikate finden Sie im Abschnitt [Konfigurieren von Einstellungen für Client-PKI-Zertifikate](../../../core/plan-design/security/configure-security.md#BKMK_ConfigureClientPKI) im Artikel [Konfigurieren der Sicherheit in System Center Configuration Manager](../../../core/plan-design/security/configure-security.md).  
 
-###  <a name="a-namebkmkplanningforpkitransitiona-plan-a-transition-strategy-for-pki-certificates-and-internet-based-client-management"></a><a name="BKMK_PlanningForPKITransition"></a> Planen einer Übergangsstrategie für PKI-Zertifikate und internetbasierte Clientverwaltung  
+###  <a name="BKMK_PlanningForPKITransition"></a> Planen einer Übergangsstrategie für PKI-Zertifikate und internetbasierte Clientverwaltung  
 Mithilfe der flexiblen Konfigurationsoptionen in Configuration Manager können Sie Clients und den Standort allmählich auf PKI-Zertifikate umstellen und so für sichere Clientendpunkte sorgen. PKI-Zertifikate bieten nicht nur eine größere Sicherheit, sondern ermöglichen auch die Verwaltung von Clients im Internet.  
 
 Dank der zahlreichen Konfigurationsoptionen und -möglichkeiten in Configuration Manager gibt es mehrere Methoden, sämtliche Clients eines Standorts auf HTTPS-Verbindungen umzustellen. Unabhängig von der ausgewählten Methode können Sie die folgenden Schritte als Richtlinie verwenden:  
@@ -223,7 +224,7 @@ Dank der zahlreichen Konfigurationsoptionen und -möglichkeiten in Configuration
 
  Wenn Sie PKI-Zertifikate anhand dieses Plans nach und nach einführen – zunächst nur Authentifizierung über HTTP, dann Authentifizierung und Verschlüsselung über HTTPS –, verringern Sie das Risiko, dass Clients nicht mehr verwaltet werden. Darüber hinaus profitieren Sie von der höchsten Sicherheit, die Configuration Manager unterstützt.  
 
-##  <a name="a-namebkmkplanningforrtka-plan-for-the-trusted-root-key"></a><a name="BKMK_PlanningForRTK"></a> Planen des vertrauenswürdigen Stammschlüssels  
+##  <a name="BKMK_PlanningForRTK"></a> Planen des vertrauenswürdigen Stammschlüssels  
 Mit dem vertrauenswürdigen Stammschlüssel von Configuration Manager kann von Configuration Manager-Clients überprüft werden, ob Standortsysteme ihrer Hierarchie angehören. Von jedem Standortserver wird ein Standortaustauschschlüssel für die Kommunikation mit anderen Standorten generiert. Der Standortaustauschschlüssel des Standorts auf der obersten Ebene einer Hierarchie wird als vertrauenswürdiger Stammschlüssel bezeichnet.  
 
 Die Funktion des vertrauenswürdigen Stammschlüssels in Configuration Manager ähnelt der eines Stammzertifikats in einer Public Key-Infrastruktur, in der alle vom privaten Schlüssel des vertrauenswürdigen Stammschlüssels signierten Elemente weiter unten in der Hierarchie als vertrauenswürdig angesehen werden. Wenn beispielsweise das Verwaltungspunktzertifikat mit dem privaten Schlüssel des vertrauenswürdigen Stammschlüsselpaars signiert und eine Kopie des öffentlichen Schlüssels des vertrauenswürdigen Stammschlüsselpaars den Clients zur Verfügung gestellt wird, können Verwaltungspunkte, die sich innerhalb oder außerhalb ihrer Hierarchie befinden, leichter von Clients unterschieden werden. Von Clients wird Windows Management Instrumentation (WMI) zum Speichern einer Kopie des vertrauenswürdigen Stammschlüssels im Namespace **root\ccm\locationservices** verwendet.  
@@ -295,7 +296,7 @@ Sie können den vertrauenswürdigen Hauptschlüssel aus einem Client entfernen, 
 
 9. Führen Sie im Dialogfeld **Objekt-Editor für TrustedRootKey=@** im Bereich **Eigenschaften** einen Bildlauf aus zu **TrustedRootKey CIM_STRING**. Die Zeichenfolge in der rechten Spalte ist der vertrauenswürdige Stammschlüssel. Sie sollte mit dem Wert von **SMSPublicRootKey** in der Datei *&lt;Configuration Manager-Verzeichnis\>***\bin\mobileclient.tcf** übereinstimmen.  
 
-##  <a name="a-namebkmkplanningforsigningencryptiona-plan-for-signing-and-encryption"></a><a name="BKMK_PlanningForSigningEncryption"></a> Planen von Signierung und Verschlüsselung  
+##  <a name="BKMK_PlanningForSigningEncryption"></a> Planen von Signierung und Verschlüsselung  
  Wenn für die gesamte Clientkommunikation PKI-Zertifikate verwendet werden, ist es nicht notwendig, zum Schutz der übermittelten Daten deren Signierung und Verschlüsselung zu planen. Wenn Sie aber festgelegt haben, dass bei Standortsystemen, von denen IIS ausgeführt werden, HTTP-Clientverbindungen zulässig sind, müssen Sie zum Schutz der Clientkommunikation an diesem Standort entsprechende Maßnahmen ergreifen.  
 
  Beispielsweise können Sie verlangen, dass die Daten, die von Clients an Verwaltungspunkte gesendet werden, signiert sein müssen. Zusätzlich können Sie verlangen, dass Daten von Clients, von denen HTTP verwendet wird, mit dem SHA-256-Algorithmus signiert werden müssen. Diese Einstellung bietet zwar ein höheres Maß an Sicherheit, aber Sie sollten sie dennoch nur aktivieren, wenn SHA-256 von allen Clients unterstützt wird. Viele Betriebssysteme bieten zwar eine systemeigene Unterstützung für SHA-256, aber für ältere Betriebssysteme ist möglicherweise ein Update oder Hotfix erforderlich. Beispielsweise muss auf Computern mit Windows Server 2003 SP2 das im [KB-Artikel 938397](http://go.microsoft.com/fwlink/p/?LinkId=226666)genannte Hotfix installiert werden.  
@@ -304,7 +305,7 @@ Sie können den vertrauenswürdigen Hauptschlüssel aus einem Client entfernen, 
 
  Weitere Informationen zum Konfigurieren der Einstellungen für die Signierung und Verschlüsselung finden Sie im Abschnitt [Konfigurieren von Signierung und Verschlüsselung](../../../core/plan-design/security/configure-security.md#BKMK_ConfigureSigningEncryption) im Artikel [Konfigurieren der Sicherheit in System Center Configuration Manager](../../../core/plan-design/security/configure-security.md).  
 
-##  <a name="a-namebkmkplanningforrbaa-plan-for-role-based-administration"></a><a name="BKMK_PlanningForRBA"></a> Planen der rollenbasierten Verwaltung  
+##  <a name="BKMK_PlanningForRBA"></a> Planen der rollenbasierten Verwaltung  
  Weitere Informationen finden Sie unter [Grundlagen der rollenbasierten Verwaltung für System Center Configuration Manager](../../../core/understand/fundamentals-of-role-based-administration.md).  
 
 ### <a name="see-also"></a>Weitere Informationen:

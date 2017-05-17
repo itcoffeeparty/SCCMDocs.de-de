@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: d1e320c6498e034307557e8a182c36cef2de640b
+ms.contentlocale: de-de
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -28,14 +30,14 @@ ms.openlocfilehash: d1e320c6498e034307557e8a182c36cef2de640b
 
 Überprüfungszustände für Asset Intelligence in System Center Configuration Manager sind nicht statisch und können sich durch Verwaltungsaktionen, die die im Asset Intelligence-Katalog gespeicherten Daten beeinflussen, ändern. Dieses Thema enthält Beispiele für mögliche Überprüfungsstatusübergänge.
 
-##  <a name="a-namebkmkuncategorizediscategorizeda-uncategorized-catalog-item-is-categorized-by-the-administrative-user"></a><a name="BKMK_UncategorizedIsCategorized"></a> Nicht kategorisiertes Katalogelement wird vom Administrator kategorisiert  
+##  <a name="BKMK_UncategorizedIsCategorized"></a> Nicht kategorisiertes Katalogelement wird vom Administrator kategorisiert  
 
 |**Zustandsübergang**|**Beschreibung des Zustandsübergangs**|  
 |--------------------------|--------------------------------------|  
 |**Nicht kategorisiert**|Ein inventarisierter Softwaretitel, der noch nicht von System Center Online kategorisiert wurde oder vom Administrator in den Asset Intelligence-Katalog eingetragen wurde.|  
 |**Nicht kategorisierte** auf **Benutzerdefinierten**|Das nicht kategorisierte Element wird vom Administrator kategorisiert.|  
 
-##  <a name="a-namebkmkcategorizedisrecategorizeda-categorized-catalog-item-is-recategorized-by-the-administrative-user"></a><a name="BKMK_CategorizedIsReCategorized"></a> Kategorisiertes Katalogelement wird vom Administrator neu kategorisiert  
+##  <a name="BKMK_CategorizedIsReCategorized"></a> Kategorisiertes Katalogelement wird vom Administrator neu kategorisiert  
 
 |**Zustandsübergang**|**Beschreibung des Zustandsübergangs**|  
 |--------------------------|--------------------------------------|  
@@ -45,7 +47,7 @@ ms.openlocfilehash: d1e320c6498e034307557e8a182c36cef2de640b
 > [!NOTE]  
 >  Da die von System Center Online erhaltenen Kategorisierungsinformationen in der Datenbank gespeichert werden und nicht gelöscht werden können, kann der Administrator zu einem späteren Zeitpunkt wieder auf die System Center Online-Kategorisierung zurückgreifen.  
 
-##  <a name="a-namebkmkuserdefinedisrecategorizeda-user-defined-catalog-item-is-recategorized-by-system-center-online"></a><a name="BKMK_UserDefinedIsRecategorized"></a> Benutzerdefiniertes Katalogelement wird von System Center Online neu kategorisiert  
+##  <a name="BKMK_UserDefinedIsRecategorized"></a> Benutzerdefiniertes Katalogelement wird von System Center Online neu kategorisiert  
 
 |**Zustandsübergang**|**Beschreibung des Zustandsübergangs**|  
 |--------------------------|--------------------------------------|  
@@ -59,7 +61,7 @@ ms.openlocfilehash: d1e320c6498e034307557e8a182c36cef2de640b
 > [!NOTE]  
 >  Da die von System Center Online erhaltenen Kategorisierungsinformationen in der Datenbank gespeichert werden und nicht gelöscht werden können, kann der Administrator zu einem späteren Zeitpunkt wieder auf die System Center Online-Kategorisierung zurückgreifen.  
 
-##  <a name="a-namebkmkuncategorizedissubmitteda-uncategorized-catalog-item-is-submitted-to-system-center-online-for-categorization"></a><a name="BKMK_UncategorizedIsSubmitted"></a> Nicht kategorisiertes Katalogelement wird zur Kategorisierung an System Center Online übermittelt  
+##  <a name="BKMK_UncategorizedIsSubmitted"></a> Nicht kategorisiertes Katalogelement wird zur Kategorisierung an System Center Online übermittelt  
 
 |**Zustandsübergang**|**Beschreibung des Zustandsübergangs**|  
 |--------------------------|--------------------------------------|  
@@ -67,7 +69,7 @@ ms.openlocfilehash: d1e320c6498e034307557e8a182c36cef2de640b
 |**Nicht kategorisiert** zu **Ausstehend**|Das nicht kategorisierte Element wird zur Kategorisierung vom Administrator an System Center Online übermittelt.|  
 |**Ausstehend** zu **Überprüft**|Das Element wird von System Center Online kategorisiert. Vom Administrator wird das Element mithilfe einer Massenkatalogaktualisierung oder einer Asset Intelligence-Katalogsynchronisierung in den Asset Intelligence-Katalog importiert. Beide sind durch Verwendung der Standortsystemrolle für den Asset Intelligence-Synchronisierungspunkt verfügbar.|  
 
-##  <a name="a-namebkmkuserdefinedissubmitteda-user-defined-catalog-item-is-submitted-to-system-center-online-for-categorization"></a><a name="BKMK_UserDefinedIsSubmitted"></a> Benutzerdefiniertes Katalogelement wird zur Kategorisierung an System Center Online übermittelt  
+##  <a name="BKMK_UserDefinedIsSubmitted"></a> Benutzerdefiniertes Katalogelement wird zur Kategorisierung an System Center Online übermittelt  
 
 |**Zustandsübergang**|**Beschreibung des Zustandsübergangs**|  
 |--------------------------|--------------------------------------|  
@@ -81,9 +83,4 @@ ms.openlocfilehash: d1e320c6498e034307557e8a182c36cef2de640b
 
 > [!NOTE]  
 >  Da die von System Center Online erhaltenen Kategorisierungsinformationen in der Datenbank gespeichert werden und nicht gelöscht werden können, können Sie zu einem späteren Zeitpunkt wieder auf die System Center Online-Kategorisierung zurückgreifen.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

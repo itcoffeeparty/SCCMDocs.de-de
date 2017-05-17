@@ -15,9 +15,11 @@ caps.latest.revision: 13
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 1c43c4968f93985515249ddb117269f8ed61302a
 ms.openlocfilehash: 46cc3fcfd9516cf1c124e24b50d0aac0cb0025dc
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -225,9 +227,4 @@ Benutzerdefiniertes Branding für das Softwarecenter wird gemäß den folgenden 
 
 > [!WARNING]  
 >  Nach der Installation der Standortsystemrollen für den Anwendungskatalog wird beim Auswählen des Links **Zusätzliche Anwendungen im Anwendungskatalog suchen** im Softwarecenter nicht sofort der Anwendungskatalog angezeigt. Der Anwendungskatalog steht erst nach dem nächsten Herunterladen der Clientrichtlinie durch den Client oder bis zu 25 Stunden nach der Installation der Standortsystemrollen für den Anwendungskatalog zur Verfügung.  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

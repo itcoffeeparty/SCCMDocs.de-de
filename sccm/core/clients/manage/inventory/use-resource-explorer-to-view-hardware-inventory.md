@@ -15,9 +15,11 @@ caps.latest.revision: 7
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
 ms.openlocfilehash: 6265ee70b70a715862b1651d2f3760bef096ee8a
+ms.contentlocale: de-de
+ms.lasthandoff: 01/03/2017
 
 
 ---
@@ -49,10 +51,5 @@ Zeigen Sie mithilfe des Ressourcen-Explorers in System Center Configuration Mana
 3.  Wählen Sie den Computer aus, der die anzuzeigende Inventur enthält. Wählen Sie danach auf der Registerkarte **Start** > Gruppe **Geräte** **Start** >  **Ressourcen-Explorer** aus.   
 
 4.  Klicken Sie mit der rechten Maustaste auf ein beliebiges Element im rechten Bereich des Fensters **Ressourcen-Explorer**, und wählen Sie anschließend **Eigenschaften** aus, um das Dialogfeld *<Elementname\>***Eigenschaften** zu öffnen. Dort werden die gesammelten Inventurinformationen in einem besser lesbaren Format angezeigt.  
-
-
-
-
-<!--HONumber=Jan17_HO1-->
 
 

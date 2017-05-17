@@ -14,9 +14,11 @@ caps.latest.revision: 8
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 81d7516b814d2db74d4d857871071c8911755754
 ms.openlocfilehash: 6e53f501281e31f2b7df54b9740eac970f108257
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="about-discovery-methods-for-system-center-configuration-manager"></a>About discovery methods for System Center Configuration Manager (Informationen zu Ermittlungsmethoden in System Center Configuration Manager)
@@ -25,7 +27,7 @@ ms.openlocfilehash: 6e53f501281e31f2b7df54b9740eac970f108257
 
 Mit System Center Configuration Manager-Ermittlungsmethoden können Sie andere Geräte im Netzwerk oder Geräte und Benutzer aus Active Directory suchen. Um effizient eine Ermittlungsmethode zu verwenden, sollten Sie die verfügbaren Konfigurationen und Einschränkungen kennen.  
 
-##  <a name="a-namebkmkaboutforesta-active-directory-forest-discovery"></a><a name="bkmk_aboutForest"></a> Active Directory-Gesamtstrukturermittlung  
+##  <a name="bkmk_aboutForest"></a> Active Directory-Gesamtstrukturermittlung  
  **Konfigurierbar:** Ja  
 
  **Standardmäßig aktiviert:** Nein  
@@ -78,7 +80,7 @@ Aktionen im Rahmen der Active Directory-Gesamtstrukturermittlung werden in den f
 
 Weitere Informationen zum Konfigurieren dieser Ermittlungsmethode finden Sie unter [Configure discovery methods for System Center Configuration Manager (Konfigurieren der Active Directory-Ermittlung in Configuration Manager)](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
 
-##  <a name="a-namebkmkaboutgroupa-active-directory-group-discovery"></a><a name="bkmk_aboutGroup"></a> Active Directory-Gruppenermittlung  
+##  <a name="bkmk_aboutGroup"></a> Active Directory-Gruppenermittlung  
 **Konfigurierbar:** Ja  
 
 **Standardmäßig aktiviert:** Nein  
@@ -120,7 +122,7 @@ Die Aktionen der Active Directory-Gruppenermittlung werden in der Datei **adsgdi
 
 Weitere Informationen zum Konfigurieren dieser Ermittlungsmethode finden Sie unter [Configure discovery methods for System Center Configuration Manager (Konfigurieren der Active Directory-Ermittlung in Configuration Manager)](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
 
-##  <a name="a-namebkmkaboutsystema-active-directory-system-discovery"></a><a name="bkmk_aboutSystem"></a> Active Directory-Systemermittlung  
+##  <a name="bkmk_aboutSystem"></a> Active Directory-Systemermittlung  
 **Konfigurierbar:** Ja  
 
 **Standardmäßig aktiviert:** Nein  
@@ -158,7 +160,7 @@ Die Aktionen der Active Directory-Systemermittlung werden in der Datei **adsysdi
 
 Weitere Informationen zum Konfigurieren dieser Ermittlungsmethode finden Sie unter [Configure discovery methods for System Center Configuration Manager (Konfigurieren der Active Directory-Ermittlung in Configuration Manager)](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
 
-##  <a name="a-namebkmkaboutusera-active-directory-user-discovery"></a><a name="bkmk_aboutUser"></a> Active Directory-Benutzerermittlung  
+##  <a name="bkmk_aboutUser"></a> Active Directory-Benutzerermittlung  
 **Konfigurierbar:** Ja  
 
 **Standardmäßig aktiviert:** Nein  
@@ -188,7 +190,7 @@ Die Aktionen der Active Directory-Benutzerermittlung werden in der Datei **adusr
 
 Weitere Informationen zum Konfigurieren dieser Ermittlungsmethode finden Sie unter [Configure discovery methods for System Center Configuration Manager (Konfigurieren der Active Directory-Ermittlung in Configuration Manager)](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
 
-##  <a name="a-namebkmkaboutheartbeata-heartbeat-discovery"></a><a name="bkmk_aboutHeartbeat"></a> Frequenzermittlung  
+##  <a name="bkmk_aboutHeartbeat"></a> Frequenzermittlung  
 **Konfigurierbar:** Ja  
 
 **Standardmäßig aktiviert:** Ja  
@@ -224,7 +226,7 @@ Frequenzermittlungsaktionen werden an den folgenden Speicherorten protokolliert:
 
 Weitere Informationen zum Konfigurieren dieser Ermittlungsmethode finden Sie unter [Configure discovery methods for System Center Configuration Manager (Konfigurieren der Active Directory-Ermittlung in Configuration Manager)](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
 
-##  <a name="a-namebkmkaboutnetworka-network-discovery"></a><a name="bkmk_aboutNetwork"></a> Netzwerkermittlung  
+##  <a name="bkmk_aboutNetwork"></a> Netzwerkermittlung  
 **Konfigurierbar:** Ja  
 
 **Standardmäßig aktiviert:** Nein  
@@ -268,7 +270,7 @@ Die Netzwerkermittlungsaktivität wird in der Datei **Netdisc.log** im Ordner *&
 > [!NOTE]  
 >  Durch komplexe Netzwerke und Verbindungen mit geringer Bandbreite kann die Ausführung der Netzwerkermittlung beeinträchtigt werden und ein starker Netzwerkdatenverkehr entstehen. Es wird empfohlen, die Netzwerkermittlung nur auszuführen, wenn die zu ermittelnden Ressourcen von den anderen Ermittlungsmethoden nicht gefunden werden. Die Netzwerkermittlung bietet sich beispielsweise an, wenn Sie Arbeitsgruppencomputer ermitteln müssen. Arbeitsgruppencomputer werden von anderen Ermittlungsmethoden nicht erkannt.  
 
-###  <a name="a-namebkmknetdisclevelsa-levels-of-network-discovery"></a><a name="BKMK_NetDiscLevels"></a> Ebenen der Netzwerkermittlung  
+###  <a name="BKMK_NetDiscLevels"></a> Ebenen der Netzwerkermittlung  
 Beim Konfigurieren der Netzwerkermittlung stehen drei Ermittlungsebenen zur Auswahl:  
 
 |Ermittlungsebene|Details|  
@@ -281,7 +283,7 @@ Beim Konfigurieren der Netzwerkermittlung stehen drei Ermittlungsebenen zur Ausw
 
  Beispielsweise wäre es sinnvoll, sich beim ersten Einsatz der Netzwerkermittlung mit der Topologieebene zu begnügen und nur die Netzwerkinfrastruktur zu ermitteln. Anschließend können Sie die Netzwerkermittlung neu konfigurieren, damit auch Objekte und deren Gerätebetriebssysteme ermittelt werden. Sie können auch Einstellungen konfigurieren, durch die die Netzwerkermittlung auf einen bestimmten Bereich von Netzwerksegmenten beschränkt wird. Auf diese Weise können Sie Objekte an benötigten Netzwerkadressen ermitteln und unnötigen Netzwerkdatenverkehr vermeiden. Zudem können Sie Objekte von Edgeroutern oder von Standorten außerhalb Ihres Netzwerks aus ermitteln.  
 
-###  <a name="a-namebkmknetdiscoptionsa-network-discovery-options"></a><a name="BKMK_NetDiscOptions"></a> Optionen für die Netzwerkermittlung  
+###  <a name="BKMK_NetDiscOptions"></a> Optionen für die Netzwerkermittlung  
 Damit bei der Netzwerkermittlung IP-fähige Geräte gesucht werden können, müssen Sie durch Konfigurieren mindestens einer der folgenden Optionen angeben, wie Geräte abgefragt werden sollen.  
 
 > [!NOTE]  
@@ -329,7 +331,7 @@ Geben Sie alle SNMP-Geräte an, die bei der Netzwerkermittlung abgefragt werden 
 
 -   Sie müssen die Netzwerkermittlung für die Verwendung des Communitynamens des Geräts konfigurieren. Andernfalls wird die SNMP-basierte Abfrage vom Gerät abgelehnt.  
 
-###  <a name="a-namebkmklimitnetdisca-limiting-network-discovery"></a><a name="BKMK_LimitNetDisc"></a> Beschränken der Netzwerkermittlung  
+###  <a name="BKMK_LimitNetDisc"></a> Beschränken der Netzwerkermittlung  
 Beim Abfragen eines SNMP-Geräts am Rand des Netzwerks können von der Netzwerkermittlung Informationen über Subnetze und SNMP-Geräte identifiziert werden, die sich außerhalb des unmittelbaren Netzwerks befinden. Sie können mithilfe der folgenden Informationen die Netzwerkermittlung beschränken. Dazu konfigurieren Sie die SNMP-Geräte, bei denen die Kommunikation mit der Ermittlung möglich ist, und geben die abzufragenden Netzwerksegmente an.  
 
 **Subnetze:**  
@@ -374,12 +376,12 @@ Im folgenden Diagramm ist dargestellt, was bei einer auf die Topologie beschrän
 > [!WARNING]  
 >  Durch jede Erhöhung der Anzahl von Routerhops kann die Anzahl der ermittelten Ressourcen deutlich erhöht und die von der Netzwerkermittlung verwendete Netzwerkbandbreite gesteigert werden.  
 
-##  <a name="a-namebkmkaboutservera-server-discovery"></a><a name="bkmk_aboutServer"></a> Serverermittlung  
+##  <a name="bkmk_aboutServer"></a> Serverermittlung  
 **Konfigurierbar:** Nein  
 
 Zusätzlich zu den benutzerkonfigurierbaren Ermittlungsmethoden wird von Configuration Manager ein als **Serverermittlung** (SMS_WINNT_SERVER_DISCOVERY_AGENT) bezeichneter Prozess verwendet. Bei dieser Ermittlungsmethode werden Ressourceneinträge für Computer erstellt, bei denen es sich um Standortsysteme handelt. Dazu gehören beispielsweise Computer, die als Verwaltungspunkte konfiguriert sind.  
 
-##  <a name="a-namebkmkshareda-common-features-of-active-directory-group-discovery-system-discovery-and-user-discovery"></a><a name="bkmk_shared"></a> Allgemeine Funktionen der Active Directory-Gruppenermittlung, Systemermittlung und Benutzerermittlung  
+##  <a name="bkmk_shared"></a> Allgemeine Funktionen der Active Directory-Gruppenermittlung, Systemermittlung und Benutzerermittlung  
 Dieser Abschnitt enthält Informationen zu den Funktionen, die folgende Ermittlungsmethoden gemeinsam haben:  
 
 -   Active Directory-Gruppenermittlung  
@@ -421,7 +423,7 @@ Die folgenden Optionen stehen für die Verwendung mit mehreren Active Directory-
 
 -   [Suchen nach benutzerdefinierten Attributen von Active Directory](#bkmk_customAD)  
 
-###  <a name="a-namebkmkdeltaa-delta-discovery"></a><a name="bkmk_delta"></a> Deltaermittlung  
+###  <a name="bkmk_delta"></a> Deltaermittlung  
 Verfügbar für:  
 
 -   Active Directory-Gruppenermittlung  
@@ -450,7 +452,7 @@ Bei der Deltaermittlung können zwar neue Ressourcen und Änderungen an der Grup
 
 Die Deltaermittlung wird in den Eigenschaften einer Ermittlungsmethode auf der Registerkarte **Abfragezeitplan** konfiguriert.  
 
-###  <a name="a-namebkmkstalelogona-filter-stale-computer-records-by-domain-logon"></a><a name="bkmk_stalelogon"></a> Filtern veralteter Computerdatensätze bei der Domänenanmeldung  
+###  <a name="bkmk_stalelogon"></a> Filtern veralteter Computerdatensätze bei der Domänenanmeldung  
 Verfügbar für:  
 
 -   Active Directory-Gruppenermittlung  
@@ -472,7 +474,7 @@ Sie konfigurieren die Filterung auf der Registerkarte **Option** in den Dialogfe
 > [!WARNING]  
 >  Wenn Sie diesen Filter konfigurieren und **Filtern veralteter Datensätze nach Computerkennwort** verwenden, werden Computer, die die Kriterien mindestens eines Filters erfüllen, von der Ermittlung ausgeschlossen.  
 
-###  <a name="a-namebkmkstalepassworda-filter-stale-records-by-computer-password"></a><a name="bkmk_stalepassword"></a> Filtern veralteter Datensätze nach Computerkennwort  
+###  <a name="bkmk_stalepassword"></a> Filtern veralteter Datensätze nach Computerkennwort  
 Verfügbar für:  
 
 -   Active Directory-Gruppenermittlung  
@@ -492,7 +494,7 @@ Sie konfigurieren die Filterung auf der Registerkarte **Option** in den Dialogfe
 > [!WARNING]  
 >  Wenn Sie diesen Filter konfigurieren und **Filtern veralteter Datensätze nach Anmeldung an der Domäne** verwenden, werden Computer, die die Kriterien mindestens eines Filters erfüllen, von der Ermittlung ausgeschlossen.  
 
-###  <a name="a-namebkmkcustomada-search-customized-active-directory-attributes"></a><a name="bkmk_customAD"></a> Suchen nach benutzerdefinierten Attributen von Active Directory  
+###  <a name="bkmk_customAD"></a> Suchen nach benutzerdefinierten Attributen von Active Directory  
  Verfügbar für:  
 
 -   Active Directory-Systemermittlung  
@@ -502,9 +504,4 @@ Sie konfigurieren die Filterung auf der Registerkarte **Option** in den Dialogfe
 Von jeder Ermittlungsmethode wird eine eindeutige Liste von Active Directory Attributen, die ermittelt werden können, unterstützt.  
 
 Prüfen und konfigurieren Sie die Liste benutzerdefinierter Attribute auf der Registerkarte **Active Directory-Attribute** im Dialogfeld **Eigenschaften der Active Directory-Systemermittlung** und im Dialogfeld **Eigenschaften der Active Directory-Benutzerermittlung**.  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

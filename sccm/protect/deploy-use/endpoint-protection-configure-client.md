@@ -15,9 +15,11 @@ caps.latest.revision: 21
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: 2d7ec9cc626f3ccfded990cf8ba392c4979adfee
+ms.contentlocale: de-de
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -173,9 +175,4 @@ Weitere Informationen zur Betriebssystembereitstellung in Configuration Manager 
 Nachdem Sie diese Schritte ausgeführt haben, können Sie den Referenzcomputer für die Imageerstellung vorbereiten. Weitere Informationen zur Betriebssystembereitstellung in Configuration Manager finden Sie unter [Verwalten von Betriebssystemimages mit System Center Configuration Manager](/sccm/osd/get-started/manage-operating-system-images).
 
 Wenn ein Image bereitgestellt wird, das die Endpoint Protection-Clientsoftware enthält, werden vom Endpoint Protection-Client automatisch Informationen an den dem Computer zugewiesenen Configuration Manager-Standort gesendet, und die für den Clientcomputer relevante Richtlinie wird heruntergeladen und angewendet.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

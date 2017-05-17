@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: 5acf800ff5aebd849e294393337755145a60cca5
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -30,7 +32,7 @@ Mithilfe von Erfassungsmedien in Configuration Manager können Sie ein Betriebss
 
 -   [Erstellen einer Tasksequenz zum Erfassen eines Betriebssystems](create-a-task-sequence-to-capture-an-operating-system.md)  
 
-##  <a name="a-namebkmkcreatecapturemediaa-how-to-create-capture-media"></a><a name="BKMK_CreateCaptureMedia"></a> Erstellen von Erfassungsmedien  
+##  <a name="BKMK_CreateCaptureMedia"></a> Erstellen von Erfassungsmedien  
  Verwenden Sie Erfassungsmedien, um ein Betriebssystemabbild auf einem Referenzcomputer zu erfassen. Die Erfassungsmedien enthalten das Startabbild zum Starten des Referenzcomputers und die Tasksequenz zum Erfassen des Betriebssystemabbilds.
 
 Sie erstellen vorab Erfassungsmedien mit dem Assistenten zum Erstellen von Tasksequenzmedien. Achten Sie vor der Ausführung des Assistenten darauf, dass die folgenden Bedingungen erfüllt sind:  
@@ -80,9 +82,4 @@ Sie erstellen vorab Erfassungsmedien mit dem Assistenten zum Erstellen von Tasks
         >  Sie benötigen Lesezugriffsrechte für die Inhaltsbibliothek am Verteilungspunkt.  
 
 7.  Schließen Sie den Assistenten ab.  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

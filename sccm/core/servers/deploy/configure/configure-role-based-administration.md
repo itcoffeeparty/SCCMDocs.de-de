@@ -15,9 +15,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 1defe96163f1bb70f586619ad89098c6f0e6c665
 ms.openlocfilehash: 3eea3a6e5f23808570ded4be3bd7412954518b96
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -44,7 +46,7 @@ Bei der rollenbasierten Verwaltung in System Center Configuration Manager werden
 
 -   [Ändern des Verwaltungsbereichs eines Administrators](#BKMK_ModAdminUser)  
 
-##  <a name="a-namebkmkcreatesecrolea-create-custom-security-roles"></a><a name="BKMK_CreateSecRole"></a> Erstellen benutzerdefinierter Sicherheitsrollen  
+##  <a name="BKMK_CreateSecRole"></a> Erstellen benutzerdefinierter Sicherheitsrollen  
  In Configuration Manager sind mehrere integrierte Sicherheitsrollen verfügbar. Wenn Sie zusätzliche Sicherheitsrollen benötigen, können Sie eine benutzerdefinierte Sicherheitsrolle erstellen, indem Sie von einer vorhandenen Sicherheitsrolle eine Kopie erstellen und diese dann ändern. Sie könnten eine benutzerdefinierte Sicherheitsrolle erstellen, um Administratoren zusätzliche Sicherheitsberechtigungen zu erteilen, welche für die Administratoren erforderlich, in der aktuell zugewiesenen Sicherheitsrolle jedoch nicht enthalten sind. Wenn Sie eine benutzerdefinierte Sicherheitsrolle verwenden, können Sie ihnen nur die erforderlichen Berechtigungen erteilen und vermeiden, eine Sicherheitsrolle zuzuweisen, mit der Sie mehr Berechtigungen erteilen, als erforderlich sind.  
 
  Wenden Sie das folgende Verfahren an, um eine neue Sicherheitsrolle mithilfe einer vorhandenen Sicherheitsrolle als Vorlage zu erstellen.  
@@ -83,7 +85,7 @@ Bei der rollenbasierten Verwaltung in System Center Configuration Manager werden
             > [!NOTE]  
             >  Wenn Sie eine Sicherheitsrolle importiert haben, können Sie die Eigenschaften der Sicherheitsrolle bearbeiten, um die entsprechenden Objektberechtigungen zu ändern.  
 
-##  <a name="a-namebkmkconfigsecrolea-configure-security-roles"></a><a name="BKMK_ConfigSecRole"></a> Konfigurieren von Sicherheitsrollen  
+##  <a name="BKMK_ConfigSecRole"></a> Konfigurieren von Sicherheitsrollen  
  Die Gruppen von Sicherheitsberechtigungen, die für eine Sicherheitsrolle definiert sind, werden als Zuweisungen von Sicherheitsvorgängen bezeichnet. Von Zuweisungen von Sicherheitsvorgängen wird eine Kombination von Objekttypen und Aktionen repräsentiert, die für jeden Objekttyp verfügbar ist. Sie können ändern, welche Sicherheitsvorgänge für jede benutzerdefinierte Sicherheitsrolle verfügbar sind. Sie können jedoch nicht die in Configuration Manager integrierten Sicherheitsrollen ändern.  
 
  Wenden Sie das folgende Verfahren an, um die Sicherheitsvorgänge für eine Sicherheitsrolle zu ändern.  
@@ -109,7 +111,7 @@ Bei der rollenbasierten Verwaltung in System Center Configuration Manager werden
 
 8.  Wenn Sie mit dem Konfigurieren der Zuweisungen von Sicherheitsvorgängen fertig sind, wählen Sie **OK** aus, um die neue Sicherheitsrolle zu speichern.  
 
-##  <a name="a-namebkmkconfigsecscopea-configure-security-scopes-for-an-object"></a><a name="BKMK_ConfigSecScope"></a> Konfigurieren von Sicherheitsbereichen für ein Objekt  
+##  <a name="BKMK_ConfigSecScope"></a> Konfigurieren von Sicherheitsbereichen für ein Objekt  
  Sie verwalten die Zuweisung eines Sicherheitsbereichs für ein Objekt vom Objekt und nicht vom Sicherheitsbereich aus. Die einzigen direkten Konfigurationen, die von Sicherheitsbereichen unterstützt werden, sind Änderungen an Namen und Beschreibung der Sicherheitsbereiche. Wenn Sie den Namen oder die Beschreibung eines Sicherheitsbereichs beim Anzeigen der Eigenschaften des Sicherheitsbereichs ändern möchten, benötigen Sie die Berechtigung **Ändern** für das sicherungsfähige Objekt **Sicherheitsbereiche** .  
 
  Wenn Sie ein neues Objekt in Configuration Manager erstellen, wird das Objekt allen Sicherheitsbereichen zugeordnet, die ihrerseits den Sicherheitsrollen des Kontos zugeordnet sind, das für die Erstellung des Objekts verwendet wurde, sofern mit diesen Sicherheitsrollen die Berechtigungen **Erstellen** oder **Sicherheitsbereiche festlegen** erteilt werden. Sie können erst nach dem Erstellen eines Objekts die Sicherheitsbereiche, denen es zugewiesen ist, ändern.  
@@ -131,14 +133,14 @@ Bei der rollenbasierten Verwaltung in System Center Configuration Manager werden
     > [!NOTE]  
     >  Wenn Sie ein neues Objekt erstellen, können Sie es mehreren Sicherheitsbereichen zuweisen. Wenn Sie die Anzahl der Sicherheitsbereiche, denen das Objekt zugewiesen ist, ändern möchten, müssen Sie diese Zuweisung nach der Erstellung des Objekts ändern.  
 
-##  <a name="a-namebkmkconfigcolla-configure-collections-to-manage-security"></a><a name="BKMK_ConfigColl"></a> Konfigurieren von Sammlungen zum Verwalten der Sicherheit  
+##  <a name="BKMK_ConfigColl"></a> Konfigurieren von Sammlungen zum Verwalten der Sicherheit  
  Es gibt keine Verfahren zum Konfigurieren von Sammlungen für die rollenbasierte Verwaltung. Bei Sammlungen ist keine Konfiguration für die rollenbasierte Verwaltung verfügbar. Stattdessen weisen Sie Sammlungen einem Administrator zu, wenn Sie den Administrator konfigurieren. Von den Sicherheitsvorgängen der Sammlung, die in den zugewiesenen Sicherheitsrollen der Benutzer aktiviert werden, wird bestimmt, welche Berechtigungen ein Administrator für Sammlungen und Sammlungsressourcen (Sammlungsmitglieder) hat.  
 
  Wenn Administratoren über Berechtigungen für eine Sammlung verfügen, verfügen sie auch über Berechtigungen für Sammlungen, die auf diese Sammlung begrenzt sind. Beispielsweise wird in Ihrer Organisation eine Sammlung namens „Alle Desktopcomputer“ verwendet, und eine Sammlung namens „Alle Desktopcomputer in Europa“ wurde auf die Sammlung „Alle Desktopcomputer“ beschränkt. Administratoren, die Berechtigungen für die Sammlung „Alle Desktopcomputer“ haben, verfügen über die gleichen Berechtigungen für die Sammlung „Alle Desktopcomputer in Europa“.
 
  Darüber hinaus kann ein Administrator die Berechtigung **Löschen** oder **Ändern** nicht auf eine Sammlung anwenden, die ihm direkt zugewiesen ist. Allerdings können Sie diese Berechtigungen für die Sammlungen verwenden, die auf diese Sammlung beschränkt sind. Im vorigen Beispiel können Administratoren die Sammlung „Alle Desktopcomputer in Europa“ ändern und löschen. Sie können jedoch nicht die Sammlung „Alle Desktopcomputer“ ändern oder löschen.  
 
-##  <a name="a-namebkmkcreateadminusera-create-a-new-administrative-user"></a><a name="BKMK_Create_AdminUser"></a> Erstellen eines neuen Administrators  
+##  <a name="BKMK_Create_AdminUser"></a> Erstellen eines neuen Administrators  
  Erstellen Sie in Configuration Manager Administratoren, und geben Sie das Windows-Konto des Benutzers bzw. der Benutzergruppe an, um Individuen oder Mitgliedern von Sicherheitsgruppen einen Verwaltungszugriff auf Configuration Manager zu gewähren. Jedem Administrator in Configuration Manager müssen mindestens eine Sicherheitsrolle und ein Sicherheitsbereich zugewiesen werden. Sie können auch Sammlungen zuweisen, um den Verwaltungsbereich des Administrators zu begrenzen.  
 
  Wenden Sie die folgenden Verfahren an, um neue Administratoren zu erstellen.  
@@ -173,7 +175,7 @@ Bei der rollenbasierten Verwaltung in System Center Configuration Manager werden
 
     -   Wenn Sie **Nur sicherungsfähige Objekte in angegebenen Sicherheitsbereichen oder Sammlungen** ausgewählt haben, können Sie **Hinzufügen** auswählen, um weitere Sammlungen und Sicherheitsbereiche zu wählen. Oder Sie können ein oder mehrere Objekte in der Liste und dann **Entfernen** auswählen, um sie zu entfernen. Wählen Sie **OK** aus, um dieses Verfahren abzuschließen.  
 
-##  <a name="a-namebkmkmodadminusera-modify-the-administrative-scope-of-an-administrative-user"></a><a name="BKMK_ModAdminUser"></a> Ändern des Verwaltungsbereichs eines Administrators  
+##  <a name="BKMK_ModAdminUser"></a> Ändern des Verwaltungsbereichs eines Administrators  
  Sie können den Verwaltungsbereich eines Administrators ändern, indem Sie Sicherheitsrollen, Sicherheitsbereiche und dem Benutzer zugeordnete Sammlungen hinzufügen oder entfernen. Jedem Administrator müssen mindestens eine Sicherheitsrolle und ein Sicherheitsbereich zugeordnet sein. Möglicherweise müssen Sie dem Verwaltungsbereich des Benutzers zunächst eine oder mehrere Sammlungen zuweisen. Für die meisten Sicherheitsrollen ist eine Interaktion mit Sammlungen erforderlich, sodass sie ohne eine zugewiesene Sammlung nicht funktionsfähig sind.  
 
  Wenn Sie einen Administrator bearbeiten, können Sie das Verhalten beim Zuordnen von sicherungsfähigen Objekten zu den zugewiesenen Sicherheitsrollen ändern. Die folgenden drei Verhaltensweisen stehen zur Auswahl:  
@@ -300,9 +302,4 @@ Gehen Sie wie folgt vor, um einen Administrator zu ändern, für den als Verhalt
 
     > [!CAUTION]  
     >  Wenn Administratoren durch eine Sicherheitsrolle die Berechtigung zum Bereitstellen von Sammlungen gewährt wird, können diese Administratoren Objekte von jedem Sicherheitsbereich aus verteilen, in dem Sie über die Berechtigung **Lesen** für das Objekt verfügen. Dies gilt auch dann, wenn dieser Sicherheitsbereich einer anderen Sicherheitsrolle zugewiesen ist.  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

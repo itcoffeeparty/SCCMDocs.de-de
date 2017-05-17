@@ -15,9 +15,11 @@ caps.latest.revision: 4
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: e592a732259147ee71d404a68982c28e5138e243
 ms.openlocfilehash: 0e982d08d54af39b13f553fc531a200f921e94a6
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="manage-accounts-to-access-content-in-system-center-configuration-manager"></a>Verwalten von Konten für den Zugriff auf Inhalt in System Center Configuration Manager
@@ -34,7 +36,7 @@ ms.openlocfilehash: 0e982d08d54af39b13f553fc531a200f921e94a6
 
 -   **Multicastverbindungskonto**. Wird für Betriebssystembereitstellungen verwendet.  
 
-##  <a name="a-namebkmknaaa-network-access-account"></a><a name="bkmk_NAA"></a> Netzwerkzugriffskonto  
+##  <a name="bkmk_NAA"></a> Netzwerkzugriffskonto  
  Clientcomputer verwenden das Netzwerkzugriffskonto, wenn über ihr lokales Computerkonto kein Zugriff auf Inhalte auf Verteilungspunkten möglich ist. Beispielsweise gilt dies für Arbeitsgruppenclients und Computer aus nicht vertrauenswürdigen Domänen. Dieses Konto wird möglicherweise auch bei der Betriebssystembereitstellung verwendet, falls der Computer, von dem das Betriebssystem installiert wird, noch kein Computerkonto in der Domäne hat.  
 
 -   Von Clients wird für den Zugriff auf Ressourcen im Netzwerk nur das Netzwerkzugriffskonto verwendet.  
@@ -66,7 +68,7 @@ Weisen Sie diesem Konto die minimal erforderlichen Berechtigungen für den Inhal
 
 3.  Wählen Sie die Registerkarte **Netzwerkzugriffskonto**. Konfigurieren Sie mindestens ein Konto, und wählen Sie dann **OK**.  
 
-##  <a name="a-namebkmkpaaa-package-access-accounts"></a><a name="bkmk_Paa"></a> Paketzugriffskonten  
+##  <a name="bkmk_Paa"></a> Paketzugriffskonten  
  Mit Paketzugriffskonten können Sie durch Festlegen von NTFS-Dateisystemberechtigungen angeben, welche Benutzer und Benutzergruppen auf Paketinhalt an Verteilungspunkten zugreifen können. Standardmäßig wird in Configuration Manager Zugriff nur auf die allgemeinen Zugriffskonten **Benutzer** und **Administratoren** gewährt. Sie können den Zugriff für Clientcomputer jedoch über zusätzliche Windows-Konten oder -Gruppen steuern. Mobile Geräte verwenden die Paketzugriffskonten nicht, weil diese Geräte Paketinhalte immer anonym abrufen.  
 
  Wenn die Inhaltsdateien in einem Paket von Configuration Manager auf einen Verteilungspunkt kopiert werden, werden standardmäßig die folgenden Berechtigungen erteilt: **Lesen** für die lokale Gruppe **Benutzer** und **Vollzugriff** für die lokale Gruppe **Administratoren**. Die tatsächlich erforderlichen Berechtigungen sind vom jeweiligen Paket abhängig. Von Clients in Arbeitsgruppen oder nicht vertrauenswürdigen Gesamtstrukturen wird das Netzwerkzugriffskonto zum Zugriff auf den Paketinhalt verwendet. Stellen Sie anhand der definierten Paketzugriffskonten sicher, dass das Netzwerkzugriffskonto über Berechtigungen für das Paket verfügt.  
@@ -102,7 +104,7 @@ Weisen Sie diesem Konto die minimal erforderlichen Berechtigungen für den Inhal
     > [!NOTE]  
     >  Wenn Sie einen Benutzernamen für das Konto hinzufügen und Configuration Manager sowohl ein lokales Benutzerkonto als auch ein Domänenbenutzerkonto mit diesem Namen findet, legt Configuration Manager Zugriffsrechte für das Domänenbenutzerkonto fest.  
 
-##  <a name="a-namebkmkmultia-multicast-connection-account"></a><a name="bkmk_multi"></a> Multicastverbindungskonto  
+##  <a name="bkmk_multi"></a> Multicastverbindungskonto  
  Über das Multicastverbindungskonto können von den Verteilungspunkten, die für Multicast eingerichtet sind, Informationen aus der Standortdatenbank gelesen werden.  
 
 -   Sie geben ein Konto an, das verwendet werden soll, wenn Sie Configuration Manager-Datenbankverbindungen für Multicast einrichten.  
@@ -119,9 +121,4 @@ Erstellen Sie dieses Konto ggf. als lokales Konto mit geringen Rechten auf dem C
 
 > [!IMPORTANT]  
 >  Erteilen Sie diesem Konto keine Rechte zur interaktiven Anmeldung.  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

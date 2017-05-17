@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 7fa191ce37a68f604673fe9b9724f76c3ff10032
 ms.openlocfilehash: 1ad4abf1f06ed24bd1d505648280b5e5d80220c7
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -50,9 +52,4 @@ Von Configuration Manager werden keine Standortsystemrollen für mehrere Standor
 -   [Konfigurationsoptionen für Standortsystemrollen für System Center Configuration Manager](../../../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md)  
 
      Einige Standortsystemrollen unterstützen Konfigurationen, für die mehr Details erforderlich sind als innerhalb der Benutzeroberfläche erklärt werden können. Diese Einzelheiten werden in diesem Thema ausgeführt.  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

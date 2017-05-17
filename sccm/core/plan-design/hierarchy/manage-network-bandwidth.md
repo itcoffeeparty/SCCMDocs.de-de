@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 37e4f27fcea0bbdd39c9fd3ab38aa46e3059f73a
 ms.openlocfilehash: d9dff97126c34a726677de60dd7647370c553b6e
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -26,7 +28,7 @@ ms.openlocfilehash: d9dff97126c34a726677de60dd7647370c553b6e
 # <a name="manage-network-bandwidth-for-content"></a>Verwalten von Netzwerkbandbreite für Inhalte
 Um Ihnen die Verwaltung der Netzwerkbandbreite zu erleichtern, die für den Inhaltsverwaltungsvorgang von System Center Configuration Manager verwendet wird, können Sie die integrierten Steuerelemente für Zeitplanung und Drosselung verwenden. Sie können auch vorab bereitgestellte Inhalte nutzen. In den folgenden Abschnitten werden diese Optionen detaillierter beschrieben.
 
-##  <a name="a-namebkmkplanningforthrottlingascheduling-and-throttling"></a><a name="BKMK_PlanningForThrottling"></a>Zeitplanung und Bandbreiteneinschränkung  
+##  <a name="BKMK_PlanningForThrottling"></a>Zeitplanung und Bandbreiteneinschränkung  
 
  Wenn Sie ein Paket erstellen, den Quellpfad für den Inhalt ändern oder ein Update bei Inhalt am Verteilungspunkt ausführen, werden die Dateien aus dem Quellpfad auf die Inhaltsbibliothek auf dem Standortserver kopiert. Dann wird der Inhalt aus der Inhaltsbibliothek auf dem Standortserver in die Inhaltsbibliothek an den Verteilungspunkten kopiert. Wenn ein Update bei Inhaltsquelldateien ausgeführt wird und die Quelldateien bereits verteilt wurden, werden von Configuration Manager nur die Dateien abgerufen und an den Verteilungspunkt gesendet, die neu sind oder bei denen das Update ausgeführt wurde.
 
@@ -41,7 +43,7 @@ Um Ihnen die Verwaltung der Netzwerkbandbreite zu erleichtern, die für den Inha
 
 Weitere Informationen finden Sie unter [Installieren und Konfigurieren von Verteilungspunkten für System Center Configuration Manager](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points).  
 
-##  <a name="a-namebkmkprestagingcontentaprestaged-content"></a><a name="BKMK_PrestagingContent"></a>Vorab bereitgestellter Inhalt  
+##  <a name="BKMK_PrestagingContent"></a>Vorab bereitgestellter Inhalt  
  Sie können Inhalt vorab bereitstellen, um der Inhaltsbibliothek auf einem Standortserver oder Verteilungspunkt vor der Verteilung des Inhalts Inhaltsdateien hinzuzufügen. Da die Inhaltsdateien sich bereits in der Inhaltsbibliothek befinden, werden sie bei der Verteilung des Inhalts nicht über das Netzwerk übertragen. Sie können Inhaltsdateien für Anwendungen und Pakete vorab bereitstellen.  
 
 Wählen Sie in der Configuration Manager-Konsole den Inhalt, den Sie vorab bereitstellen möchten, und verwenden Sie dann den **Assistenten zum Erstellen von vorab bereitgestellten Inhaltsdateien**. Durch diesen wird eine komprimierte, vorab bereitgestellte Inhaltsdatei erstellt, die die Dateien und zugeordneten Metadaten für den ausgewählten Inhalt umfasst. Anschließend können Sie den Inhalt zur Bereitstellung auf einem Standortserver oder Verteilungspunkt manuell importieren. Beachten Sie dabei folgende Punkte:  
@@ -58,7 +60,7 @@ Optional können Sie den Verteilungspunkt als **vorab bereitgestellt** konfiguri
 
 -   Für Inhalt des Pakets wird stets der reguläre Inhaltsverteilungsvorgang verwendet.  
 
-###  <a name="a-namebkmkdeterminetoprestagecontentadetermine-whether-to-prestage-content"></a><a name="BKMK_DetermineToPrestageContent"></a>Bestimmen, ob Inhalt vorab bereitgestellt werden soll  
+###  <a name="BKMK_DetermineToPrestageContent"></a>Bestimmen, ob Inhalt vorab bereitgestellt werden soll  
  Erwägen Sie, in den folgenden Szenarien Inhalte für Anwendungen und Pakete vorab bereitzustellen:  
 
 -   **Beheben des Problems der begrenzten Netzwerkbandbreite zwischen Standortserver und Verteilungspunkt.** Wenn Planung und Drosselung zum Beheben Ihrer Bandbreitenprobleme nicht ausreichen, ziehen Sie die Vorabbereitstellung des Inhalts auf dem Verteilungspunkt in Betracht. Bei jedem Verteilungspunkt können Sie in den Verteilungspunkteigenschaften die Einstellung **Diesen Verteilungspunkt für vorab bereitgestellten Inhalt aktivieren** wählen. Wenn Sie diese Option aktivieren, wird der Verteilungspunkt als vorab bereitgestellter Verteilungspunkt identifiziert, und Sie können auswählen, wie der Inhalt pro Paket verwaltet werden soll.  
@@ -75,9 +77,4 @@ Optional können Sie den Verteilungspunkt als **vorab bereitgestellt** konfiguri
     >  Die genannten Optionen sind pro Paket anwendbar und können nur dann verwendet werden, wenn ein Verteilungspunkt als vorab bereitgestellt identifiziert wurde. Von Verteilungspunkten, die nicht als vorab bereitgestellt identifiziert wurden, werden diese Einstellungen ignoriert. In diesem Fall wird Inhalt vom Standortserver stets über das Netzwerk an diese Verteilungspunkte verteilt.  
 
 -   **Wiederherstellen der Inhaltsbibliothek auf einem Standortserver.** Beim Ausfall eines Standortservers werden Informationen zu Paketen und Anwendungen, die in der Inhaltsbibliothek enthalten sind, im Rahmen des Wiederherstellungsvorgangs auf der Standortdatenbank wiederhergestellt. Die Dateien der Inhaltsbibliothek werden bei diesem Vorgang jedoch nicht wiederhergestellt. Wenn Sie nicht über eine Sicherung des Dateisystems verfügen, um die Inhaltsbibliothek wiederherzustellen, können Sie eine vorab bereitgestellte Inhaltsdatei mit den erforderlichen Paketen und Anwendungen von einem anderen Standort erstellen. Anschließend können Sie die vorab bereitgestellte Inhaltsdatei auf dem wiederhergestellten Standortserver extrahieren. Weitere Informationen zur Standortserversicherung und -wiederherstellung finden Sie unter [Sicherung und Wiederherstellung für System Center Configuration Manager](/sccm/protect/understand/backup-and-recovery).  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

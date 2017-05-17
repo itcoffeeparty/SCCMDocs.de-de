@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
 ms.openlocfilehash: 5682cacb43af5bf9248446f1c35b08f137bdae9d
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -90,9 +92,4 @@ Im folgenden Verfahren erfahren Sie, wie dieses Konfigurationselement einer Konf
  Um einen kurzen Blick auf die Kompatibilitätsstatistik für diese Bereitstellung zu werfen, klicken Sie im Arbeitsbereich **Überwachung** auf **Bereitstellungen**. Am unteren Bildschirmrand wird ein Diagramm **Kompatibilitätsstatistik** angezeigt.  
 
  Ausführlichere Informationen zum Überwachen von Konfigurationsbaselines finden Sie unter [Monitor compliance settings in System Center Configuration Manager (Verwalten von Kompatibilitätseinstellungen in System Center Configuration Manager)](../../compliance/deploy-use/monitor-compliance-settings.md).  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

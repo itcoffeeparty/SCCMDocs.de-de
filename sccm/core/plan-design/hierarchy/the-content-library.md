@@ -15,9 +15,11 @@ caps.latest.revision: 4
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: d31fecdb71b498864df2bce7403a4290ea9700ae
 ms.openlocfilehash: 0fa9f431c00476d71b2b08f92f914d76636d1a27
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="the-content-library-in-system-center-configuration-manager"></a>Die Inhaltsbibliothek in System Center Configuration Manager
@@ -64,9 +66,4 @@ Weitere Informationen zum Konfigurieren der Laufwerkseigenschaften für den Vert
 -   Wenn die Inhaltsbibliothek nicht auf einem bestimmten Laufwerk installiert werden soll, erstellen Sie eine leere Datei mit dem Namen **no_sms_on_drive.sms**, und kopieren Sie die Datei vor dem Erstellen der Inhaltsbibliothek in den Stammordner des Laufwerks.  
 
 -   Verwenden Sie nach dem Erstellen der Inhaltsbibliothek das im System Center 2012 R2 Configuration Manager-Toolkit enthaltene Tool zum Übertragen der Inhaltsbibliothek (**Content Library Transfer Tool**), um den Speicherort der Inhaltsbibliothek zu verwalten. Das Toolkit steht im [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=279566)als Download zur Verfügung.  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

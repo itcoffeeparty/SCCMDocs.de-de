@@ -15,9 +15,11 @@ caps.latest.revision: 8
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 11ac851696ce52642412ca29e4873679d50cf398
 ms.openlocfilehash: 547dc39d5659c7c2e6f1ca670caddc127dbf22c4
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -28,7 +30,7 @@ ms.openlocfilehash: 547dc39d5659c7c2e6f1ca670caddc127dbf22c4
 Verwenden Sie zum Verwalten von System Center Configuration Manager eine Configuration Manager-Konsole, die eine Verbindung mit einer Instanz des **SMS-Anbieters** herstellt. Standardmäßig wird ein SMS-Anbieter auf dem Standortserver installiert, wenn Sie einen Standort der zentralen Verwaltung oder einen primären Standort installieren. 
 
 
-##  <a name="a-namebkmkplansmsprova-about-the-sms-provider"></a><a name="BKMK_PlanSMSProv"></a> Informationen zum SMS-Anbieter  
+##  <a name="BKMK_PlanSMSProv"></a> Informationen zum SMS-Anbieter  
  Der SMS-Anbieter ist ein Anbieter der Windows-Verwaltungsinstrumentation (Windows Management Instrumentation; WMI), über den der Configuration Manager-Datenbank an einem Standort **Lese-** und **Schreibzugriff** erteilt wird:  
 
 -   Für jeden Standort der zentralen Verwaltung und für jeden primären Standort ist mindestens ein SMS-Anbieter erforderlich. Sie können bei Bedarf zusätzliche Anbieter installieren.  
@@ -60,7 +62,7 @@ Configuration Manager-Administratoren verwenden einen SMS-Anbieter für den Zugr
 
 -   Auf dem Computer muss zur Unterstützung der mit dem SMS-Anbieter installierten Windows ADK-Komponenten (Windows Automated Deployment Kit) mindestens 650 MB freier Festplattenspeicher verfügbar sein. Weitere Informationen zum Windows-ADK und SMS-Anbieter finden Sie unter [Anforderungen der Betriebssystembereitstellung für den SMS-Anbieter](#BKMK_WAIKforSMSProv) in diesem Thema.  
 
-##  <a name="a-namebkmklocationa-sms-provider-locations"></a><a name="bkmk_location"></a> Standorte des SMS-Anbieters  
+##  <a name="bkmk_location"></a> Standorte des SMS-Anbieters  
  Bei der Installation eines Standorts wird der erste SMS-Anbieter für diesen Standort automatisch installiert. Sie können für den SMS-Anbieter einen der folgenden unterstützten Speicherorte angeben:  
 
 -   Den Standortservercomputer  
@@ -122,7 +124,7 @@ Um die Speicherorte der einzelnen SMS-Anbieter anzuzeigen, die an einem Standort
 
     -   Von diesem Speicherort werden möglicherweise Systemressourcen beansprucht, die andernfalls anderen Diensten zugewiesen würden.  
 
-##  <a name="a-namebkmksmsprovlanguagesa-about-sms-provider-languages"></a><a name="BKMK_SMSProvLanguages"></a> Informationen zu den Sprachen des SMS-Anbieters  
+##  <a name="BKMK_SMSProvLanguages"></a> Informationen zu den Sprachen des SMS-Anbieters  
  Die vom SMS-Anbieter verwendeten Sprachen sind nicht von der Anzeigesprache des Computers, auf dem er installiert ist, abhängig.  
 
  Wenn ein Administrator oder Configuration Manager-Prozess Daten über den SMS-Anbieter anfordert, versucht der SMS-Anbieter, die Daten in einem Format zurückzugeben, das der Betriebssystemsprache des anfordernden Computers entspricht.
@@ -135,7 +137,7 @@ Zum Abgleich der Sprache wird eine etwas indirekte Methode verwendet. Informatio
 
 -   Objekte, die von einem Administrator erstellt werden, werden in der Datenbank in der Sprache gespeichert, in der das Objekt erstellt wurde. Diese Objekte werden in der Configuration Manager-Konsole in der gleichen Sprache angezeigt. Sie können nicht vom SMS-Anbieter übersetzt werden, und es sind keine weiteren Sprachoptionen für sie verfügbar.  
 
-##  <a name="a-namebkmkmultismsprova-use-multiple-sms-providers"></a><a name="BKMK_MultiSMSProv"></a> Verwenden mehrerer SMS-Anbieter  
+##  <a name="BKMK_MultiSMSProv"></a> Verwenden mehrerer SMS-Anbieter  
  Wenn Sie eine Standortinstallation abgeschlossen haben, können Sie zusätzliche SMS-Anbieter für den Standort installieren. Führen Sie zu diesem Zweck Configuration Manager-Setup auf dem Standortserver aus. Erwägen Sie, zusätzliche SMS-Anbieter zu installieren, wenn eine der folgenden Bedingungen erfüllt ist:  
 
 -   Es ist geplant, dass viele Administratoren gleichzeitig eine Configuration Manager-Konsole ausführen und Verbindungen mit einem Standort herstellen.  
@@ -152,7 +154,7 @@ Wenn an einem Standort mehrere SMS-Anbieter installiert sind, erfolgt die Zuweis
 
 Wenn Sie z.B. zum ersten Mal eine Configuration Manager-Konsole mit einem Standort verbinden, fragt die Verbindung die WMI auf dem Standortserver ab, um eine von der Konsole verwendete Instanz des SMS-Anbieters zu ermitteln. Diese spezifische Instanz des SMS-Anbieters wird bis zum Ende der Configuration Manager-Konsolensitzung von der Configuration Manager-Konsole verwendet. Wenn das Ende der Sitzung auf die Nichtverfügbarkeit eines SMS-Anbietercomputers im Netzwerk zurückzuführen ist, wiederholt der Standort beim erneuten Herstellen einer Verbindung mit der Configuration Manager-Konsole einfach den Task zum Identifizieren einer Instanz des SMS-Anbieters. Es ist möglich, dass eine Zuweisung zum gleichen nicht verfügbaren SMS-Anbietercomputer erfolgt. Wenn dies der Fall ist, können Sie versuchen, die Configuration Manager-Konsole neu zu verbinden, bis ein verfügbarer SMS-Anbietercomputer zugewiesen wird.  
 
-##  <a name="a-namebkmkaboutsmsadminsa-about-the-sms-admins-group"></a><a name="BKMK_AboutSMSAdmins"></a> Informationen zur Gruppe „SMS-Administratoren“  
+##  <a name="BKMK_AboutSMSAdmins"></a> Informationen zur Gruppe „SMS-Administratoren“  
  Sie verwenden die Gruppe SMS-Administratoren, um Administratoren Zugriff auf den SMS-Anbieter zu gewähren. Diese Gruppe wird bei der Standortinstallation automatisch auf dem Standortserver sowie auf jedem Computer mit installiertem SMS-Anbieter erstellt. Hier finden Sie zusätzliche Informationen zur Gruppe „SMS-Administratoren“:  
 
 -   Wenn der Computer ein Mitgliedsserver ist, wird die Gruppe SMS-Administratoren als lokale Gruppe erstellt.  
@@ -172,7 +174,7 @@ Sie können die Rechte und Berechtigungen der Gruppe SMS-Administratoren mithilf
 >  Administratoren, die eine Configuration Manager-Remotekonsole verwenden, benötigen DCOM-Berechtigungen für eine Remoteaktivierung auf dem Standortservercomputer und dem SMS-Anbietercomputer. Diese Rechte können zwar jedem Benutzer und jeder Gruppe erteilt werden, es wird jedoch empfohlen, dass Sie sie der Gruppe „SMS-Administratoren“ erteilen, um die Verwaltung zu vereinfachen. Weitere Informationen finden Sie im Abschnitt [Configure DCOM permissions for remote Configuration Manager consoles](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole) des Themas [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md) .  
 
 
-##  <a name="a-namebkmksmsprovnamespacea-about-the-sms-provider-namespace"></a><a name="BKMK_SMSProvNamespace"></a> Informationen zum Namespace des SMS-Anbieters  
+##  <a name="BKMK_SMSProvNamespace"></a> Informationen zum Namespace des SMS-Anbieters  
 Die Struktur des SMS-Anbieters wird vom WMI-Schema definiert. Schemanamespaces beschreiben den Speicherort von Configuration Manager-Daten innerhalb des SMS-Anbieterschemas. In der folgenden Tabelle sind einige der üblichen Namespaces, die vom SMS-Anbieter verwendet werden, aufgelistet:  
 
 |Namespace|Beschreibung|  
@@ -183,7 +185,7 @@ Die Struktur des SMS-Anbieters wird vom WMI-Schema definiert. Schemanamespaces b
 |Root\CCM|Konfigurationsrichtlinien und Clientdaten von Configuration Manager|  
 |root\CIMv2\SMS|Der Speicherort für Inventurberichterstattungsklassen, die vom Inventurclient-Agent gesammelt werden. Diese Einstellungen werden während der Computerrichtlinienbewertung von Clients kompiliert. Als Basis wird die Konfiguration der Clienteinstellungen für den Computer verwendet.|  
 
-##  <a name="a-namebkmkwaikforsmsprova-operating-system-deployment-requirements-for-the-sms-provider"></a><a name="BKMK_WAIKforSMSProv"></a> Anforderungen der Betriebssystembereitstellung für den SMS-Anbieter  
+##  <a name="BKMK_WAIKforSMSProv"></a> Anforderungen der Betriebssystembereitstellung für den SMS-Anbieter  
 Auf dem Computer, auf dem Sie eine SMS-Anbieterinstanz installieren, muss die Windows ADK-Version installiert sein, die für die von Ihnen verwendete Version von Configuration Manager erforderlich ist.  
 
  -   Version 1511 von Configuration Manager erfordert beispielsweise die Windows 10 RTM-Version (10.0.10240) von Windows ADK.  
@@ -200,9 +202,4 @@ Beim Verwalten von Betriebssystembereitstellungen kann der SMS-Anbieter mithilfe
 
 
 Von der Windows ADK-Installation können auf jedem Computer, auf dem der SMS-Anbieter installiert wird, bis zu 650 MB Speicherplatz beansprucht werden. Der hohe Speicherplatzbedarf von Configuration Manager ist erforderlich, um Startimages von Windows PE zu installieren.  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

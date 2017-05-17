@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
 ms.openlocfilehash: e346e83b0ae0dc7a612cef7a7b9fb1fdb42236bc
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -32,7 +34,7 @@ Nachdem Sie die Content Management-Optionen abgewogen haben, die die Anzahl der 
 > [!NOTE]
 > Achten Sie bei der Planung einer neuen Configuration Manager-Installation auf die [Versionsanmerkungen]( /sccm/core/servers/deploy/install/release-notes), die aktuelle Probleme in den aktiven Versionen behandeln. Die Versionsanmerkungen gelten für alle Branches von Configuration Manager.  Wenn Sie allerdings [Technical Preview]( /sccm/core/get-started/technical-preview) verwenden, finden Sie in der Dokumentation für jede Version von Technical Preview Probleme, die nur für diesen Branch spezifisch sind.  
 
-##  <a name="a-namebkmktopologya-hierarchy-topology"></a><a name="bkmk_topology"></a> Hierarchietopologie  
+##  <a name="bkmk_topology"></a> Hierarchietopologie  
  Hierarchietopologien reichen von einzelnen eigenständigen primären Standorten bis zu einer Gruppe von verbundenen primären und sekundären Standorten mit einem zentralen Verwaltungsstandort am obersten Standort (obere Leiste) der Hierarchie.   Der Schlüsseltreiber für den Typ und die Anzahl der Standorte, die Sie in einer Hierarchie verwenden, entspricht normalerweise der Anzahl und der Art von Geräten, die Sie unterstützen müssen wie folgt:   
 
  **Ein eigenständiger primärer Standort:** Verwenden Sie einen eigenständigen primären Standort, wenn ein einziger primärer Standort die Verwaltung all Ihrer Geräte und Benutzer unterstützen kann (siehe [Sizing and scale numbers (Anpassen der Größe und Skalierung von Zahlen))](/sccm/core/plan-design/configs/size-and-scale-numbers). Diese Topologie ist auch erfolgreich, wenn für die unterschiedlichen geografischen Standorte Ihres Unternehmens ein einzelner primärer Standort ausreicht.  Sie können zur Verwaltung des Netzwerkverkehrs bevorzugte Verwaltungspunkte und eine sorgfältig geplante Inhaltsinfrastruktur verwenden (Informationen finden Sie unter [Grundlegende Konzepte für die Inhaltsverwaltung in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)).  
@@ -57,7 +59,7 @@ Nachdem Sie die Content Management-Optionen abgewogen haben, die die Anzahl der 
 
  Die folgenden Abschnitte können Ihnen dabei helfen zu verstehen, wann eine bestimmte Standort- oder Content Management-Option anstelle eines zusätzlichen Standorts verwendet werden sollte.  
 
-##  <a name="a-namebkmkchoosecasa-determine-when-to-use-a-central-administration-site"></a><a name="BKMK_ChooseCAS"></a> Ermitteln des Zeitpunkts für die Verwendung eines Standorts der zentralen Verwaltung  
+##  <a name="BKMK_ChooseCAS"></a> Ermitteln des Zeitpunkts für die Verwendung eines Standorts der zentralen Verwaltung  
  Mithilfe eines Standorts der zentralen Verwaltung können Sie hierarchieweite Einstellungen konfigurieren und alle Standorte sowie Objekte in der Hierarchie überwachen. Von diesem Standorttyp werden Clients nicht direkt verwaltet, jedoch wird die Datenreplikation zwischen Standorten koordiniert. Auch die hierarchieweite Konfiguration von Standorten und Clients ist darin eingeschlossen.  
 
 **Die folgenden Informationen können Sie bei der Entscheidung unterstützen, wann ein Standort der zentralen Verwaltung installiert werden sollte:**  
@@ -82,7 +84,7 @@ Nachdem Sie die Content Management-Optionen abgewogen haben, die die Anzahl der 
 
 -   Sie können eine Datei- und Datenbankreplikation konfigurieren, um die Kommunikation zwischen Standorten in der Hierarchie zu steuern. Dies umfasst die Planung der Datenbankreplikation für Standortdaten und die Verwaltung der Bandbreite für die Übertragung dateibasierter Daten zwischen Standorten.  
 
-##  <a name="a-namebkmkchoosepriimarya-determine-when-to-use-a-primary-site"></a><a name="BKMK_ChoosePriimary"></a> Ermitteln des Zeitpunkts für die Verwendung eines primären Standorts  
+##  <a name="BKMK_ChoosePriimary"></a> Ermitteln des Zeitpunkts für die Verwendung eines primären Standorts  
  Verwenden Sie primäre Standorte, um Clients zu verwalten. Sie können einen primären Standort als untergeordneten primären Standort unter einem Standort der zentralen Verwaltung oder als ersten Standort einer neuen Hierarchie installieren. Wird ein primärer Standort als erster Standort einer Hierarchie installiert, dann bildet dieser einen eigenständigen primären Standort. Sekundäre Standorte als untergeordnete Standorte des primären Standorts werden sowohl von untergeordneten primären Standorten als auch von eigenständigen primären Standorten unterstützt.  
 
  Erwägen Sie die Verwendung eines primären Standorts aus einem der folgenden Gründe:  
@@ -108,7 +110,7 @@ Nachdem Sie die Content Management-Optionen abgewogen haben, die die Anzahl der 
 
 -   Mithilfe der Datenbankreplikation erfolgt eine direkte Kommunikation der primären Standorte mit dem Standort der zentralen Verwaltung (dies wird beim Installieren eines neuen Standorts automatisch konfiguriert).  
 
-##  <a name="a-namebkmkchoosesecondarya-determine-when-to-use-a-secondary-site"></a><a name="BKMK_ChooseSecondary"></a> Ermitteln des Zeitpunkts für die Verwendung eines sekundären Standorts  
+##  <a name="BKMK_ChooseSecondary"></a> Ermitteln des Zeitpunkts für die Verwendung eines sekundären Standorts  
  Verwenden Sie sekundäre Standorte, um die Übertragung von Bereitstellungsinhalten und Clientdaten über Netzwerke mit geringer Bandbreite zu verwalten.  
 
  Ein sekundärer Standort wird mithilfe seines direkt übergeordneten primären Standorts oder mithilfe eines Standorts der zentralen Verwaltung verwaltet. Sekundäre Standorte müssen mit einem primären Standort verbunden sein. Sie können nicht zu einem anderen übergeordneten Standort verschoben werden, sondern müssen stattdessen deinstalliert und als untergeordneter Standort unter dem neuen primären Standort installiert werden.
@@ -138,7 +140,7 @@ Sie können jedoch Inhalt zwischen zwei sekundären Peer-Standorten weiterleiten
 
 -   Bei der Installation eines sekundären Standorts werden auf dem sekundären Standortserver automatisch ein Verwaltungspunkt und ein Verteilungspunkt bereitgestellt.  
 
-##  <a name="a-namebkmkchoosesecondaryordpa-determine-when-to-use-content-management-options"></a><a name="BKMK_ChooseSecondaryorDP"></a> Ermitteln des Zeitpunkts für die Verwendung der Optionen für die Inhaltsverwaltung  
+##  <a name="BKMK_ChooseSecondaryorDP"></a> Ermitteln des Zeitpunkts für die Verwendung der Optionen für die Inhaltsverwaltung  
  Falls es Clients an Remotenetzwerkorten gibt, sollten Sie erwägen, anstatt eines primären oder sekundären Standorts einige Inhaltsverwaltungsoptionen zu verwenden. Die Anforderung zur Installation eines Standorts kann häufig beseitigt werden, wenn Sie Windows BranchCache verwenden, Verteilungspunkte zur Steuerung der Bandbreite konfigurieren oder Inhalte manuell auf Verteilungspunkte kopieren (Inhalte vorab bereitstellen).  
 
 
@@ -150,7 +152,7 @@ Sie können jedoch Inhalt zwischen zwei sekundären Peer-Standorten weiterleiten
 
  Weitere Informationen zu Content Management-Optionen in Configuration Manager finden Sie unter [Grundlegende Konzepte für die Inhaltsverwaltung in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
 
-##  <a name="a-namebkmkbeyonda-beyond-hierarchy-topology"></a><a name="bkmk_beyond"></a> Jenseits der Hierarchietopologie  
+##  <a name="bkmk_beyond"></a> Jenseits der Hierarchietopologie  
  Bedenken Sie, welche Dienste oder Funktionen zusätzlich zu einer anfänglichen Hierarchietopologie von verschiedenen Standorten in der Hierarchie (Standortsystemrollen) zur Verfügung gestellt werden, und wie hierarchieweite Konfigurationen und Funktionen in Ihrer Infrastruktur verwaltet werden. Die folgenden allgemeinen Überlegungen werden in separaten Themen behandelt. Diese sind wichtig, da sie Ihren Hierarchieentwurf beeinflussen, oder von diesem beeinflusst werden können:  
 
 -   Wenn Sie die [Verwaltung von Computern und Geräten mit System Center Configuration Manager](/sccm/core/clients/manage/manage-clients) vorbereiten, sollten Sie berücksichtigen, ob die von Ihnen verwalteten Geräte sich an Ihrem Standort oder in der Cloud befinden, oder ob eigene Geräte der Benutzer darunter sind (BYOD).  Berücksichtigen Sie darüber hinaus Ihre Vorgehensweise beim Verwalten von Geräten, die von verschiedenen Verwaltungsoptionen unterstützt werden, z.B. Windows 10-Computer, die direkt von Configuration Manager oder über die Integration mit Microsoft Intune verwaltet werden können.  
@@ -186,9 +188,4 @@ Sie können jedoch Inhalt zwischen zwei sekundären Peer-Standorten weiterleiten
 -   [Datenübertragungen zwischen Standorten in System Center Configuration Manager](../../../core/servers/manage/data-transfers-between-sites.md)  
 
 -   [Grundlagen der rollenbasierten Verwaltung für System Center Configuration Manager](../../../core/understand/fundamentals-of-role-based-administration.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -15,9 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 860815010068422f2d8854ed2d574c24cc386891
 ms.openlocfilehash: 63a3c2ef66c80d1da9b50e67166a2196cf1b081b
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="configure-discovery-methods-for-system-center-configuration-manager"></a>Konfigurieren von Ermittlungsmethoden für System Center Configuration Manager
@@ -44,7 +46,7 @@ Sie konfigurieren Ermittlungsmethoden zur Ausführung auf einem System Center Co
 4.  Wählen Sie **OK** aus, um die Konfiguration zu speichern.  
 
 
-##  <a name="a-namebkmkconfigadforestdisca-configure-active-directory-forest-discovery"></a><a name="BKMK_ConfigADForestDisc"></a> Konfigurieren der Active Directory-Gesamtstrukturermittlung  
+##  <a name="BKMK_ConfigADForestDisc"></a> Konfigurieren der Active Directory-Gesamtstrukturermittlung  
 Sie müssen an zwei Orten Einstellungen konfigurieren, um die Konfiguration der Active Directory-Gesamtstrukturermittlung abzuschließen:  
 
 -   Über den Knoten **Ermittlungsmethoden** haben Sie die folgenden Möglichkeiten:
@@ -98,7 +100,7 @@ Wenden Sie die folgenden Verfahren an, um die Active Directory-Gesamtstrukturerm
 
 4.  Wenn Sie die Konfiguration dieser Gesamtstruktur zur Verwendung mit der Active Directory-Gesamtstrukturermittlung abgeschlossen haben, wählen Sie **OK** aus, um die Konfiguration zu speichern.  
 
-##  <a name="a-namebkmkconfigaddiscgenerala-configure-active-directory-discovery-for-computers-users-or-groups"></a><a name="BKMK_ConfigADDiscGeneral"></a> Konfigurieren der Active Directory-Ermittlung für Computer, Benutzer oder Gruppen  
+##  <a name="BKMK_ConfigADDiscGeneral"></a> Konfigurieren der Active Directory-Ermittlung für Computer, Benutzer oder Gruppen  
  Verwenden Sie die Informationen in den folgenden Abschnitten, um für Computer, Benutzer oder Gruppen zu konfigurieren. Sie verwenden diese Ermittlungsmethoden:  
 
 -   Active Directory-Gruppenermittlung  
@@ -210,7 +212,7 @@ Wenden Sie die folgenden Verfahren an, um die Active Directory-Gesamtstrukturerm
 
 8.  Wenn Sie mit dem Konfigurieren der Active Directory-Benutzerermittlung fertig sind, wählen Sie **OK** aus, um die Konfiguration zu speichern.  
 
-##  <a name="a-namebkmkconfighbdisca-configure-heartbeat-discovery"></a><a name="BKMK_ConfigHBDisc"></a> Konfigurieren einer Frequenzermittlung  
+##  <a name="BKMK_ConfigHBDisc"></a> Konfigurieren einer Frequenzermittlung  
  Die Frequenzermittlung ist standardmäßig aktiviert, wenn Sie einen primären Configuration Manager-Standort installieren. Daher müssen Sie nur mithilfe eines Zeitplans festlegen, wie oft die Discovery Data Records der Frequenzermittlung von den Clients an einen Verwaltungspunkt gesendet werden sollen, wenn Sie nicht die Standardeinstellung „alle&7; Tage“ verwenden möchten.  
 
 > [!NOTE]  
@@ -226,10 +228,10 @@ Wenden Sie die folgenden Verfahren an, um die Active Directory-Gesamtstrukturerm
 
 4.  Konfigurieren Sie die Häufigkeit, mit der Discovery Data Records der Frequenzermittlung von den Clients übermittelt werden sollen, und wählen Sie **OK** aus, um die Konfiguration zu speichern.  
 
-##  <a name="a-namebkmkconfignetworkdisca-configure-network-discovery"></a><a name="BKMK_ConfigNetworkDisc"></a> Konfigurieren einer Netzwerkermittlung  
+##  <a name="BKMK_ConfigNetworkDisc"></a> Konfigurieren einer Netzwerkermittlung  
  Verwenden Sie die Informationen in den folgenden Abschnitten zum Konfigurieren der Netzwerkermittlung.  
 
-###  <a name="a-namebkmkaboutconfignetworkdisca-about-configuring-network-discovery"></a><a name="BKMK_AboutConfigNetworkDisc"></a> Informationen zum Konfigurieren der Netzwerkermittlung  
+###  <a name="BKMK_AboutConfigNetworkDisc"></a> Informationen zum Konfigurieren der Netzwerkermittlung  
  Zum Konfigurieren der Netzwerkermittlung benötigen Sie die folgenden Informationen:  
 
 -   Verfügbare Ebenen der Netzwerkermittlung  
@@ -244,14 +246,14 @@ Weitere Informationen finden Sie in [Informationen zur Netzwerkermittlung](../..
 
  Beispielsweise möchten Sie möglicherweise alle SNMP-Geräte (Simple Network Management Protocol) mit einem bestimmten öffentlichen SNMP-Namen ermitteln. Zusätzlich möchten Sie für diese Ermittlungsausführung möglicherweise die Ermittlung in einem bestimmten Subnetz deaktivieren. Wenn die Ermittlung ausgeführt wird, werden die SNMP-Geräte mit dem angegebenen öffentlichen Namen im deaktivierten Subnetz nicht ermittelt.  
 
-####  <a name="a-namebkmkdeterminenettopologya-determine-your-network-topology"></a><a name="BKMK_DetermineNetTopology"></a> Bestimmen der Netzwerktopologie  
+####  <a name="BKMK_DetermineNetTopology"></a> Bestimmen der Netzwerktopologie  
  Sie können eine topologiebezogene Ermittlung verwenden, um Ihr Netzwerk zuzuordnen. Von dieser Art der Ermittlung werden keine potenziellen Clients erkannt. Die topologiebezogene Netzwerkermittlung beruht auf SNMP.  
 
  Wenn Sie Ihre Netzwerktopologie zuordnen, müssen Sie im Dialogfeld **Netzwerkermittlung Eigenschaften** auf der Registerkarte **SNMP** die **Maximale Hopanzahl** konfigurieren. Bei einer geringen Hopanzahl ist es einfacher, die Netzwerkauslastung beim Ausführen der Ermittlung zu kontrollieren. Mit zunehmender Ermittlung des Netzwerks können Sie die Hopanzahl steigern, um sich ein besseres Bild von Ihrer Netzwerktopologie zu verschaffen.  
 
  Wenn Ihnen die Netzwerktopologie bekannt ist, können Sie zusätzliche Eigenschaften für die Netzwerkerkennung konfigurieren, um potenzielle Clients sowie deren Betriebssysteme zu ermitteln, während Sie verfügbare Konfigurationen zur Begrenzung der durchsuchbaren Netzwerksegmente verwenden.  
 
-####  <a name="a-namebkmklimitbysubneta-limit-searches-by-using-subnets"></a><a name="BKMK_LimitBySubnet"></a> Begrenzen von Suchvorgängen mithilfe von Subnetzen  
+####  <a name="BKMK_LimitBySubnet"></a> Begrenzen von Suchvorgängen mithilfe von Subnetzen  
  Sie können die Netzwerkermittlung so konfigurieren, dass bestimmte Subnetze durchsucht werden, wenn eine Ermittlung ausgeführt wird. Standardmäßig wird von der Netzwerkermittlung das Subnetz des Servers, auf dem die Ermittlung ausgeführt wird, durchsucht. Für alle zusätzlichen Subnetze, die Sie konfigurieren und aktivieren, gelten nur die Suchoptionen von SNMP und DHCP (Dynamic Host Configuration Protocol). Wenn von der Netzwerkermittlung Domänen durchsucht werden, gilt dabei keine konfigurierte Begrenzung auf Subnetze.  
 
  Wenn Sie im Dialogfeld **Netzwerkermittlung Eigenschaften** auf der Registerkarte **Subnetze** ein oder mehrere Subnetze angeben, werden nur die Subnetze durchsucht, die als **Aktiviert** gekennzeichnet sind.  
@@ -264,7 +266,7 @@ Weitere Informationen finden Sie in [Informationen zur Netzwerkermittlung](../..
 
 -   Von domänenbasierten Abfragen können Ressourcen im Subnetz ermittelt werden.  
 
-####  <a name="a-namebkmksearchbydomaina-search-a-specific-domain"></a><a name="BKMK_SearchByDomain"></a> Durchsuchen einer bestimmten Domäne  
+####  <a name="BKMK_SearchByDomain"></a> Durchsuchen einer bestimmten Domäne  
  Sie können die Netzwerkermittlung so konfigurieren, dass bei einer Ermittlungsausführung eine bestimmte Domäne oder ein bestimmter Domänensatz durchsucht wird. Standardmäßig wird von der Netzwerkermittlung die lokale Domäne des Servers, auf dem die Ermittlung ausgeführt wird, durchsucht.  
 
  Wenn Sie im Dialogfeld **Netzwerkermittlung Eigenschaften** auf der Registerkarte **Domänen** eine oder mehrere Domänen angeben, werden nur die Domänen durchsucht, die als **Aktiviert** gekennzeichnet sind.  
@@ -277,7 +279,7 @@ Weitere Informationen finden Sie in [Informationen zur Netzwerkermittlung](../..
 
 -   Von DHCP-Servern werden weiterhin Listen mit Ressourcen in der Domäne zurückgegeben.  
 
-####  <a name="a-namebkmklimitbysnmpnamea-limit-searches-by-using-snmp-community-names"></a><a name="BKMK_LimitBySNMPname"></a> Begrenzen von Suchvorgängen mithilfe von SNMP-Communitynamen  
+####  <a name="BKMK_LimitBySNMPname"></a> Begrenzen von Suchvorgängen mithilfe von SNMP-Communitynamen  
  Sie können die Netzwerkermittlung so konfigurieren, dass eine bestimmte SNMP-Community oder ein bestimmter Communitysatz durchsucht wird, wenn eine Ermittlung ausgeführt wird. Standardmäßig ist der Communityname **Öffentlich** für die Verwendung konfiguriert.  
 
  Die Netzwerkermittlung verwendet Communitynamen für den Zugriff auf Router, bei denen es sich um SNMP-Geräte handelt. Von einem Router können Informationen zu verknüpften Routern und Subnetzen für die Netzwerkermittlung bereitgestellt werden.  
@@ -290,7 +292,7 @@ Weitere Informationen finden Sie in [Informationen zur Netzwerkermittlung](../..
 > [!NOTE]  
 >  Zusätzlich zum SNMP-Communitynamen können Sie auch die IP-Adresse oder den auflösbaren Namen eines bestimmten SNMP-Geräts verwenden. Dies erfolgt im Dialogfeld **Eigenschaften der Netzwerkermittlung** auf der Registerkarte **SNMP-Geräte**.  
 
-####  <a name="a-namebkmksearchbydhcpa-search-a-specific-dhcp-server"></a><a name="BKMK_SearchByDHCP"></a> Durchsuchen eines bestimmten DHCP-Servers  
+####  <a name="BKMK_SearchByDHCP"></a> Durchsuchen eines bestimmten DHCP-Servers  
  Sie können die Netzwerkermittlung zur Verwendung eines oder mehrerer bestimmter DHCP-Server zum Ermitteln der DHCP-Clients konfigurieren.  
 
  Jeder DHCP-Server, den Sie im Dialogfeld **Netzwerkermittlung Eigenschaften** auf der Registerkarte **DHCP** angeben, wird von der Netzwerkermittlung durchsucht. Wenn die IP-Adresse durch den Server, von dem die Ermittlung ausgeführt wird, von einem DHCP-Server geleast wird, können Sie die Ermittlung für das Durchsuchen dieses DHCP-Servers konfigurieren, indem Sie das Kontrollkästchen **Den vom Standortserver verwendeten DHCP-Server einschließen** aktivieren.  
@@ -298,7 +300,7 @@ Weitere Informationen finden Sie in [Informationen zur Netzwerkermittlung](../..
 > [!NOTE]  
 >  Zum erfolgreichen Konfigurieren eines DHCP-Servers für die Netzwerkermittlung ist es erforderlich, dass IPv4 von der Umgebung unterstützt wird. Sie können die Netzwerkermittlung nicht für die Verwendung eines DHCP-Servers in einer nativen IPv6-Umgebung konfigurieren.  
 
-###  <a name="a-namebkmkhowtoconfignetdisca-how-to-configure-network-discovery"></a><a name="BKMK_HowToConfigNetDisc"></a> Konfigurieren der Netzwerkermittlung  
+###  <a name="BKMK_HowToConfigNetDisc"></a> Konfigurieren der Netzwerkermittlung  
  Wenden Sie die folgenden Verfahren an, um zunächst nur Ihre Netzwerktopologie zu ermitteln und die Netzwerkermittlung danach für das Ermitteln potenzieller Clients mithilfe einer oder mehrerer verfügbarer Netzwerkermittlungsoptionen zu konfigurieren.  
 
 ##### <a name="to-determine-your-network-topology"></a>So bestimmen Sie die Netzwerktopologie  
@@ -407,7 +409,7 @@ Weitere Informationen finden Sie in [Informationen zur Netzwerkermittlung](../..
 
 12. Wählen Sie **OK** aus, um die Konfigurationen zu speichern.  
 
-###  <a name="a-namebkmkhowtoverifynetdisca-how-to-verify-that-network-discovery-has-finished"></a><a name="BKMK_HowToVerifyNetDisc"></a> Überprüfen, ob die Netzwerkermittlung abgeschlossen ist  
+###  <a name="BKMK_HowToVerifyNetDisc"></a> Überprüfen, ob die Netzwerkermittlung abgeschlossen ist  
  Die Zeit, die für die Netzwerkermittlung erforderlich ist, wird von zahlreichen Faktoren beeinflusst. Folgende Faktoren können die Dauer beeinflussen:  
 
 -   Die Größe des Netzwerks  
@@ -454,9 +456,4 @@ Von der Netzwerkermittlung werden keine Meldungen über den Abschluss der Ermitt
     -   Beschreibung: **Diese Komponente wurde gestartet.**  
 
     Dadurch wird bestätigt, dass die Netzwerkermittlung gestartet wurde. Wenn diese Informationen fehlen, planen Sie die Netzwerkermittlung neu.  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

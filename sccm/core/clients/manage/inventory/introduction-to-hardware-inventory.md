@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
 ms.openlocfilehash: a543b945c4727540faa064c068b175ef63cb5a4b
+ms.contentlocale: de-de
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -55,9 +57,4 @@ Sammeln Sie mit der Hardwareinventur in System Center Configuration Manager Info
 - Verwenden Sie IDMIF-Dateien zum Sammeln von Informationen zu Assets, die keinem Configuration Manager-Client zugeordnet sind, z.B. Projektoren, Fotokopierer und Netzwerkdrucker.  
 
  Weitere Informationen zur Verwendung dieser Methoden zum Erweitern der Hardwareinventur für Configuration Manager finden Sie unter [Konfigurieren der Hardwareinventur in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md).  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

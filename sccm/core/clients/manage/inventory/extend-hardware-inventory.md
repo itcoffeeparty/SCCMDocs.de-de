@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
 ms.openlocfilehash: 80d5a13ea5d40150ddd537251e837083e649ac52
+ms.contentlocale: de-de
+ms.lasthandoff: 01/03/2017
 
 
 ---
@@ -52,7 +54,7 @@ Die Datei „Configuration.mof“ wird zur Definition der Datenklassen verwendet
 ## <a name="procedures-to-extend-hardware-inventory"></a>Verfahren zum Erweitern der Hardwareinventur  
 Diese Vorgehensweisen können Sie die Standard-Clienteinstellungen für die Hardwareinventur konfigurieren, und sie gelten für alle Clients in Ihrer Hierarchie. Wenn diese Einstellungen nur auf manche Clients angewendet werden sollen, erstellen Sie eine benutzerdefinierte Clientgeräteeinstellung, und weisen Sie diese einer Sammlung von bestimmten Clients zu. Weitere Informationen finden Sie unter [Konfigurieren von Clienteinstellungen in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md).  
 
-###  <a name="a-namebkmkenablea-to-enable-or-disable-existing-inventory-classes"></a><a name="BKMK_Enable"></a> So aktivieren oder deaktivieren Sie vorhandene Inventurklassen  
+###  <a name="BKMK_Enable"></a> So aktivieren oder deaktivieren Sie vorhandene Inventurklassen  
 
 1.  Wählen Sie in der Configuration Manager-Konsole die Optionen **Verwaltung** > **Clienteinstellungen** > **Clientstandardeinstellungen** aus.  
 
@@ -68,7 +70,7 @@ Diese Vorgehensweisen können Sie die Standard-Clienteinstellungen für die Hard
     >  Wenn Sie neue Klassen zur Configuration Manager-Hardwareinventur hinzufügen, vergrößert sich die Inventurdatei, die gesammelt und an den Standortserver gesendet wird. Dies kann sich negativ auf die Leistung des Netzwerks und des Configuration Manager-Standorts auswirken. Aktivieren Sie nur die Inventurklassen, die Sie sammeln möchten.  
 
 
-###  <a name="a-namebkmkadda-to-add-a-new-inventory-class"></a><a name="BKMK_Add"></a> So fügen Sie eine neue Inventurklasse hinzu  
+###  <a name="BKMK_Add"></a> So fügen Sie eine neue Inventurklasse hinzu  
 
 Sie können inventurklassen nur auf dem Server auf oberster Ebene in der Hierarchie und durch Ändern der Standardeinstellungen für den Client hinzufügen. Diese Option ist nicht verfügbar, wenn Sie benutzerdefinierte Geräteeinstellungen erstellen.
 
@@ -101,7 +103,7 @@ Sie können inventurklassen nur auf dem Server auf oberster Ebene in der Hierarc
      Klicken Sie nach Abschluss der Konfiguration der Eigenschaften auf **OK**, um das Dialogfeld **Klassenkennzeichner** zu schließen, und die anderen Dialogfelder zu öffnen. 
 
 
-###  <a name="a-namebkmkimporta-to-import-hardware-inventory-classes"></a><a name="BKMK_Import"></a> So importieren Sie Hardwareinventurklassen  
+###  <a name="BKMK_Import"></a> So importieren Sie Hardwareinventurklassen  
 
 Sie können Inventurklassen nur importieren, wenn Sie die Clientstandardeinstellungen ändern. Sie können jedoch benutzerdefinierte Clienteinstellungen zum Importieren von Informationen, die nicht mit eine Änderung des Schemas, z. B. das Ändern der Eigenschaft aus einer vorhandenen Klasse enthält **True** auf **False**.  
 
@@ -117,7 +119,7 @@ Sie können Inventurklassen nur importieren, wenn Sie die Clientstandardeinstell
 
 8.  Wählen Sie im Dialogfeld **Importieren** die MOF-Datei (Managed Object Format) aus, die Sie importieren möchten, und wählen Sie dann **OK** aus. Überprüfen Sie die Elemente, die importiert werden, und wählen Sie dann **Importieren** aus.  
 
-###  <a name="a-namebkmkexporta-to-export-hardware-inventory-classes"></a><a name="BKMK_Export"></a> So exportieren Sie Hardwareinventurklassen  
+###  <a name="BKMK_Export"></a> So exportieren Sie Hardwareinventurklassen  
 
 1.  Wählen Sie in der Configuration Manager-Konsole die Optionen **Verwaltung** > **Clienteinstellungen** > **Clientstandardeinstellungen** aus.  
 
@@ -140,7 +142,7 @@ Sie können Inventurklassen nur importieren, wenn Sie die Clientstandardeinstell
 > [!IMPORTANT]  
 >  Vor dem Hinzufügen von Informationen aus MIF-Dateien an die Configuration Manager-Datenbank müssen Sie Klasseninformationen für sie erstellen oder importieren. Weitere Informationen finden Sie in den Abschnitten [So fügen Sie eine neue Inventurklasse hinzu](#BKMK_Add) und [So importieren Sie Hardwareinventurklassen](#BKMK_Import) dieses Themas.  
 
-###  <a name="a-namebkmknoidmifa-to-create-noidmif-files"></a><a name="BKMK_NOIDMIF"></a> So erstellen Sie NOIDMIF-Dateien  
+###  <a name="BKMK_NOIDMIF"></a> So erstellen Sie NOIDMIF-Dateien  
  NOIDMIF-Dateien können verwendet werden, um einer Client-Hardwareinventur Informationen hinzuzufügen, die normalerweise nicht durch Configuration Manager gesammelt werden können und einem bestimmten Client-Gerät zugeordnet sind. Beispielsweise vergeben viele Unternehmen für alle Computer in der Organisation eine Gerätenummer, und katalogisieren diese dann manuell. Wenn Sie eine NOIDMIF-Datei erstellen, können diese Informationen der Configuration Manager-Datenbank hinzugefügt und für Abfragen und Berichte verwendet werden. Weitere Informationen zum Erstellen von NOIDMIF-Dateien finden Sie in der Configuration Manager SDK-Dokumentation.  
 
 > [!IMPORTANT]  
@@ -148,16 +150,11 @@ Sie können Inventurklassen nur importieren, wenn Sie die Clientstandardeinstell
 
  Nachdem Sie eine NOIDMIF-Datei erstellt haben, speichern Sie diese im Ordner *%windir%***\System32\CCM\Inventar\Noidmifs** auf jedem Client. Während des nächsten geplanten Hardwareinventurzyklus sammelt Configuration Manager Informationen aus NOIDMIF-Dateien in diesem Ordner.  
 
-###  <a name="a-namebkmkidmifa-to-create-idmif-files"></a><a name="BKMK_IDMIF"></a> So erstellen Sie IDMIF-Dateien  
+###  <a name="BKMK_IDMIF"></a> So erstellen Sie IDMIF-Dateien  
  Mithilfe von IDMIF-Dateien können Sie der Configuration Manager-Datenbank Informationen zu Beständen hinzufügen, die normalerweise nicht von Configuration Manager inventarisiert werden können, und keinem bestimmten Clientgerät zugeordnet sind. In den IDMIF-Dateien können Sie z.B. Informationen zu Projektoren, DVD-Playern, Fotokopierern oder anderen Geräten sammeln, auf denen kein Configuration Manager-Client vorhanden ist. Weitere Informationen zum Erstellen von IDMIF-Dateien finden Sie in der Configuration Manager SDK-Dokumentation.  
 
  Nachdem Sie eine IDMIF-Datei erstellt haben, speichern Sie diese im Ordner *%windir%***\System32\CCM\Inventar\Idmifs** auf den Clientcomputern. Während des nächsten geplanten Hardwareinventurzyklus wird Configuration Manager Informationen aus dieser Datei sammeln. Sie müssen für die in der Datei enthaltenen Informationen neue Klassen deklarieren, indem Sie sie hinzufügen oder importieren.  
 
 > [!NOTE]
 > MIF-Dateien können große Datenmengen enthalten. Das Sammeln dieser Daten kann sich negativ auf die Leistung Ihres Standorts auswirken. Aktivieren Sie die MIF-Sammlung nur im Bedarfsfall, und konfigurieren Sie die Option **Maximale benutzerdefinierte MIF-Dateigröße (KB)** in den Einstellungen der Hardwareinventur. Weitere Informationen finden Sie unter [Einführung in die Hardwareinventur in System Center Configuration Manager](introduction-to-hardware-inventory.md).
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

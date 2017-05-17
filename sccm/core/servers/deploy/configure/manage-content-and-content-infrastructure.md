@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: e30538ed925af66e8b7459eb4add9dd992c1ae19
 ms.openlocfilehash: b0f297fddca4252f106dee9d3d5d8911a347825b
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -33,9 +35,4 @@ Wenn Sie zur Einrichtung und anschließenden Verwaltung Ihrer Inhaltsverwaltungs
 -   [Bereitstellen und Verwalten von Inhalt für System Center Configuration Manager](../../../../core/servers/deploy/configure/deploy-and-manage-content.md). Beim Bereitstellen von Inhalt werden Dateien und Software an die Verteilungspunktserver überall in Ihrem Netzwerk übertragen. Zusätzlich zur einfachen Übertragung können Sie Inhalt auch vorab bereitstellen. Durch diese Vorabbereitstellung vermeiden Sie eine übermäßige Beanspruchung der Netzwerkbandbreite. Die Informationen in diesem Thema helfen Ihnen bei den grundlegenden Aufgaben zum Senden von Inhalt und zum effektiven Verwenden vorab bereitgestellten Inhalts.  
 
 -   [Überwachen von mit System Center Configuration Manager verteilten Inhalten](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md). Während der Inhaltsbereitstellung können Sie deren Status in der gesamten Infrastruktur überwachen. Sie können auch Inhalt neu verteilen, wenn er Verteilungspunkte nicht erreicht, oder Verteilungen abbrechen, wenn sie für einen zu langen Zeitraum in Bearbeitung bleiben. Die Informationen in diesem Thema helfen Ihnen zu verstehen, wie Sie Ihre Inhalte überwachen können. Außerdem wird beschrieben, wie Sie einige mögliche Probleme und Fehler beim Übertragen von Inhalten beheben.  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

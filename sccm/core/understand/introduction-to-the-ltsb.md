@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
-ms.openlocfilehash: 90ba9937cf4ea708a3b5fa69c5975fdf906feeaa
+ms.sourcegitcommit: d940fd1bbf96767d44f8c55315e814be55a83897
+ms.openlocfilehash: 91c1ca860069c6ebe0d20230c4620bf3f68735a2
 ms.contentlocale: de-de
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 05/08/2017
 
 
 ---
@@ -32,6 +32,8 @@ Long-Term Servicing Branch (LTSB) von System Center Configuration Manager ist ei
 
 Basierend auf der Configuration Manager-Version 1606 weist LTSB im Vergleich zu Current Branch von Configuration Manager eine eingeschränkte Funktionalität auf.
 
+ > [!TIP]   
+ > Informationen zu den Branches von **Windows Server** finden Sie unter [Windows Server 2016 new Current Branch for Business servicing option]( https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/) (Neue Windows Server 2016-Wartungsoption „Current Branch for Business“).
 
 ## <a name="features-that-are-not-available-in-the-ltsb-of-configuration-manager"></a>Funktionen, die nicht in LTSB von Configuration Manager verfügbar sind
 Current Branch von Configuration Manager unterstützt folgende Funktionen, die nicht bei der Verwendung von LTSB verfügbar sind:
@@ -67,7 +69,7 @@ Kunden mit aktiver Software Assurance (SA) für System Center Configuration Mana
 
 Kunden, die über unbefristete Rechte für System Center Configuration Manager verfügen, oder die die Software Assurance oder das Abonnement nach dem 1. Oktober auslaufen lassen, können die LTSB-Version von System Center Configuration Manager installieren, die zu dem Zeitpunkt vorhanden ist, an dem die Software Assurance oder das Abonnement ausläuft.
 
-[Vollständige Geschäftsbedingungen für die Produkte, die Sie über Microsoft Volumenlizenz-Programme erwerben, finden Sie hier](http://go.microsoft.com/fwlink/?LinkId=800052).
+[Vollständige Geschäftsbedingungen für die Produkte, die Sie über Microsoft-Volumenlizenzierungsprogramme erwerben, finden Sie hier](http://go.microsoft.com/fwlink/?LinkId=800052).
 
 Weitere Informationen zur Lizenzierung für Configuration Manager-Branches finden Sie unter [Lizenzierung und Branches für System Center Configuration Manager](learn-more-editions.md).
 

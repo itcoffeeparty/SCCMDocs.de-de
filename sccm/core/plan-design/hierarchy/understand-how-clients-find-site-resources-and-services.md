@@ -15,9 +15,11 @@ caps.latest.revision: 10
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a181171cc1a92ec4519f4e4b34ca3274a0aa0440
 ms.openlocfilehash: 1c9e7ada6a8aa228b30e58865baae0f6e529e6af
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -35,7 +37,7 @@ System Center Configuration Manager-Clients verwenden einen als *Dienstidentifiz
 
 
 
-##  <a name="a-namebkmkfunda-fundamentals-of-service-location"></a><a name="bkmk_fund"></a> Fundamentals of service location  
+##  <a name="bkmk_fund"></a> Fundamentals of service location  
  Ein Client bewertet seine aktuelle Netzwerkadresse, Kommunikationsprotokolleinstellung und seinen zugewiesenen Standort, wenn die Dienstidentifizierung zum Auffinden eines Verwaltungspunkts genutzt wird, mit dem kommuniziert werden kann.  
 
  **Ein Client kommuniziert zu folgenden Zwecken mit einem Verwaltungspunkt:**  
@@ -56,7 +58,7 @@ System Center Configuration Manager-Clients verwenden einen als *Dienstidentifiz
 
 -   Wenn Sie eine Standortsystemrolle bereitstellen, die Internetinformationsdienst (IIS) verwendet und die Kommunikation von Clients unterstützt, müssen Sie angeben, ob Clients eine Verbindung mit dem Standortsystem über HTTP oder HTTPS herstellen. Falls Sie sich für HTTP entscheiden, müssen Sie auch Signierungs- und Verschlüsselungsoptionen erwägen. Weitere Informationen finden Sie unter [Planen von Signierung und Verschlüsselung](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption) im Abschnitt [Planen der Sicherheit in System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md).  
 
-##  <a name="a-namebkmkplanservicelocationa-service-location-and-how-clients-determine-their-assigned-management-point"></a><a name="BKMK_Plan_Service_Location"></a> Dienstidentifizierung und wie Clients den ihnen zugewiesenen Verwaltungspunkt ermitteln  
+##  <a name="BKMK_Plan_Service_Location"></a> Dienstidentifizierung und wie Clients den ihnen zugewiesenen Verwaltungspunkt ermitteln  
 Wenn ein Client erstmals einem primären Standort zugewiesen wird, wählt er einen Standardverwaltungspunkt für diesen Standort aus. Primäre Standorte unterstützen mehrere Verwaltungspunkte, und jeder Client identifiziert unabhängig einen Verwaltungspunkt als Standardverwaltungspunkt. Der Standardverwaltungspunkt wird dann der diesem Client zugewiesene Verwaltungspunkt. (Sie können auch bei der Installation eines Clients Befehle zum Festlegen des zugewiesenen Verwaltungspunkts für einen Client festlegen.)  
 
 Ein Client wählt einen Verwaltungspunkt für die Kommunikation basierend auf seiner aktuellen Konfiguration der Netzwerkadresse und Begrenzungsgruppe aus. Auch wenn ein Client einen zugewiesenen Verwaltungspunkt hat, ist dies ggf. nicht der Verwaltungspunkt, den der Client verwendet.  
@@ -83,7 +85,7 @@ Wenn beispielsweise ein Configuration Manager-Client, der sich im Internet befin
 
 Einem Client, der nicht für das Internet konfiguriert ist, werden keine Verwaltungspunkte bereitgestellt, die nur auf das Internet ausgerichtet sind. Arbeitsgruppenclients, die für das Internet konfiguriert sind, kommunizieren nur mit Verwaltungspunkten mit Internetzugriff.  
 
-##  <a name="a-namebkmkmplista-the-mp-list"></a><a name="BKMK_MPList"></a> MP-Liste  
+##  <a name="BKMK_MPList"></a> MP-Liste  
 Die Verwaltungspunktliste eines Clients ist die bevorzugte Quelle für die Dienstidentifizierung, da sie eine priorisierte Liste von Verwaltungspunkten ist, die der Client zuvor identifiziert hat. Diese Liste wird nach einzelnen Clients basierend auf dem Netzwerkstandort sortiert, wenn der Client die Liste aktualisiert, und dann lokal auf dem Client in WMI gespeichert.  
 
 ### <a name="building-the-initial-mp-list"></a>Erstellen der anfänglichen MP-Liste  
@@ -134,7 +136,7 @@ Nach dem Einrichten der Kommunikation mit einem Verwaltungspunkt verwendet der C
 
 Der Client wählt nach dem Zufallsprinzip einen neuen Verwaltungspunkt aus.  
 
-##  <a name="a-namebkmkada-active-directory"></a><a name="bkmk_ad"></a> Active Directory  
+##  <a name="bkmk_ad"></a> Active Directory  
 Clients, die der Domäne beigetreten sind, können AD DS für die Dienstidentifizierung verwenden. Dafür müssen Standorte [Daten in Active Directory veröffentlichen](http://technet.microsoft.com/library/hh696543.aspx).  
 
 Ein Client kann AD DS für die Dienstidentifizierung verwenden, wenn alle folgenden Bedingungen erfüllt sind:  
@@ -145,7 +147,7 @@ Ein Client kann AD DS für die Dienstidentifizierung verwenden, wenn alle folgen
 
 Wenn ein Client keinen Verwaltungspunkt für die Dienstidentifizierung von AD DS finden kann, versucht er, DNS zu verwenden.  
 
-##  <a name="a-namebkmkdnsa-dns"></a><a name="bkmk_dns"></a> DNS  
+##  <a name="bkmk_dns"></a> DNS  
 Clients im Intranet können DNS für die Dienstidentifizierung verwenden. Dafür ist mindestens einen Standort in einer Hierarchie erforderlich, um Informationen zu Verwaltungspunkten in DNS zu veröffentlichen.  
 
 Ziehen Sie die Verwendung von DNS für die Dienstidentifizierung in Betracht, wenn eine der folgenden Bedingungen erfüllt ist:
@@ -243,15 +245,10 @@ Wenn Sie Windows Server DNS verwenden, können Sie diesen DNS-Eintrag anhand des
 
 Wiederholen Sie diese Schritte für jeden Verwaltungspunkt im Intranet, der in DNS veröffentlicht werden soll.  
 
-##  <a name="a-namebkmkwinsa-wins"></a><a name="bkmk_wins"></a> WINS  
+##  <a name="bkmk_wins"></a> WINS  
 Falls andere Dienstidentifizierungsmechanismen erfolglos bleiben, kann durch Überprüfen von WINS ein erster Verwaltungspunkt gefunden werden.  
 
 Standardmäßig veröffentlicht ein primärer Standort in WINS den ersten Verwaltungspunkt am Standort, der für HTTP konfiguriert ist, und den ersten Verwaltungspunkt, der für HTTPS konfiguriert ist.  
 
 Wenn Sie nicht wünschen, dass ein HTTP-Verwaltungspunkt in WINS gefunden wird, konfigurieren Sie für Clients die Client.msi-Eigenschaft **SMSDIRECTORYLOOKUP=NOWINS**mit CCMSetup.exe.  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

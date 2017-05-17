@@ -15,9 +15,11 @@ caps.latest.revision: 6
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: cb1ac4f33b9ef291050a3406291b8cc1f112b586
+ms.contentlocale: de-de
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -44,7 +46,7 @@ Der System Center Configuration Manager-Client für Linux und UNIX unterstützt 
 > [!TIP]  
 >  Mit dem **Beschriftung** -Wert für die **Betriebssystem** -Klasse können Sie verschiedene Linux- und UNIX-Betriebssysteme in Abfragen und Sammlungen identifizieren.  
 
-##  <a name="a-namebkmkconfighardwareforlnua-configuring-hardware-inventory-for-linux-and-unix-servers"></a><a name="BKMK_ConfigHardwareforLnU"></a> Konfigurieren der Hardwareinventur für Linux- und UNIX-Server  
+##  <a name="BKMK_ConfigHardwareforLnU"></a> Konfigurieren der Hardwareinventur für Linux- und UNIX-Server  
  Sie können die standardmäßigen Clienteinstellungen verwenden oder benutzerdefinierte Clienteinstellungen erstellen, um die Hardwareinventur zu konfigurieren. Wenn Sie benutzerdefinierte Clientgeräteeinstellungen verwenden, können Sie die Klassen und Eigenschaften konfigurieren, die Sie nur von Ihren Linux- und UNIX-Servern erfassen möchten. Sie können auch benutzerdefinierte Zeitpläne für die Erfassung von vollständigen und Deltainventuren von Ihren Linux- und UNIX-Servern verwenden.  
 
  Der Client für Linux und UNIX unterstützt die folgenden Hardwareinventurklassen, die auf Linux- und UNIX-Servern verfügbar sind:  
@@ -75,7 +77,7 @@ Der System Center Configuration Manager-Client für Linux und UNIX unterstützt 
 
  Nicht alle Eigenschaften für diese Inventurklassen sind für Linux- und UNIX-Computer in Configuration Manager aktiviert.  
 
-##  <a name="a-namebkmkoperationsforhardwareforlnua-operations-for-hardware-inventory"></a><a name="BKMK_OperationsforHardwareforLnU"></a> Vorgänge für die Hardwareinventur  
+##  <a name="BKMK_OperationsforHardwareforLnU"></a> Vorgänge für die Hardwareinventur  
  Nachdem Sie die Hardwareinventur von den Linux- und UNIX-Servern erfasst haben, können Sie diese Informationen auf dieselbe Weise wie den Bestand anzeigen, den Sie von anderen Computern erfassen:  
 
 -   Verwenden des Ressourcen-Explorers zum Anzeigen von detaillierten Hardwareinventurinformationen von Linux- und UNIX-Servern  
@@ -92,7 +94,7 @@ Der System Center Configuration Manager-Client für Linux und UNIX unterstützt 
 
  Aktionen für die Hardwareinventur werden in die Clientprotokolldatei **scxcm.log**eingegebenen.  
 
-##  <a name="a-namebkmkcustomhinvforlinuxa-how-to-use-open-management-infrastructure-to-create-custom-hardware-inventory"></a><a name="BKMK_CustomHINVforLinux"></a> Gewusst wie: Verwenden der Open Management Infrastructure zum Erstellen einer benutzerdefinierten Hardwareinventur  
+##  <a name="BKMK_CustomHINVforLinux"></a> Gewusst wie: Verwenden der Open Management Infrastructure zum Erstellen einer benutzerdefinierten Hardwareinventur  
  Der Client für Linux und UNIX unterstützt die benutzerdefinierte Hardwareinventur, die Sie mithilfe der Open Management Infrastructure (OMI) erstellen können. Führen Sie dazu die folgenden Schritte aus:  
 
 1.  Erstellen eines benutzerdefinierten Inventuranbieters mithilfe der OMI-Quelle  
@@ -101,12 +103,12 @@ Der System Center Configuration Manager-Client für Linux und UNIX unterstützt 
 
 3.  Aktivieren von Configuration Manager zur Unterstützung des neuen Anbieters  
 
-###  <a name="a-namebkmklinuxprovidera-create-a-custom-hardware-inventory-provider-for-linux-and-unix-computers"></a><a name="BKMK_LinuxProvider"></a> Erstellen Sie einen benutzerdefinierten Hardwareinventuranbieter für Linux- und UNIX-Computer:  
+###  <a name="BKMK_LinuxProvider"></a> Erstellen Sie einen benutzerdefinierten Hardwareinventuranbieter für Linux- und UNIX-Computer:  
  Verwenden Sie **OMI Source – v.1.0.6**, und befolgen Sie die Anweisungen im Handbuch für die ersten Schritte mit OMI, um einen benutzerdefinierten Hardwareinventuranbieter für den Configuration Manager-Client für Linux und UNIX zu erstellen. Dieser Prozess umfasst das Erstellen einer MOF-Datei (Managed Object Format), die das Schema für den neuen Anbieter definiert. Später importieren Sie die MOF-Datei in Configuration Manager, um die Unterstützung der neuen benutzerdefinierten Inventurklasse zu aktivieren.  
 
  Sowohl „OMI Source – v.1.0.6“ als auch das Handbuch für die ersten Schritte mit OMI können auf der [The Open Group](http://go.microsoft.com/fwlink/p/?LinkId=262317) -Website heruntergeladen werden. Sie finden diese Downloads auf der Registerkarte für **Dokumente** der folgenden Webseite der Website „OpenGroup.org“: [Open Management Infrastructure (OMI)](http://go.microsoft.com/fwlink/p/?LinkId=286805).  
 
-###  <a name="a-namebkmkaddprovidertolinuxa-configure-each-computer-that-runs-linux-or-unix-with-the-custom-hardware-inventory-provider"></a><a name="BKMK_AddProvidertoLinux"></a> Konfigurieren Sie jeden Computer, der Linux oder UNIX ausführt, mit dem benutzerdefinierten Hardwareinventuranbieter:  
+###  <a name="BKMK_AddProvidertoLinux"></a> Konfigurieren Sie jeden Computer, der Linux oder UNIX ausführt, mit dem benutzerdefinierten Hardwareinventuranbieter:  
  Nachdem Sie einen benutzerdefinierten Inventuranbieter erstellt haben, müssen Sie die Anbieterbibliotheksdatei auf jeden Computer kopieren und dann registrieren, der über zu erfassendes Inventar verfügt.  
 
 1.  Kopieren Sie die Anbieterbibliothek auf jeden Linux- und UNIX-Computer, von dem Sie Inventar erfassen möchten. Der Name des der Anbieterbibliothek ähnelt dem Folgenden: **XYZ_MyProvider.so**  
@@ -120,13 +122,8 @@ Der System Center Configuration Manager-Client für Linux und UNIX unterstützt 
 > [!TIP]  
 >  Verwenden Sie die Softwareverteilung, um benutzerdefinierte Anbieter bereitzustellen und auf jedem Linux- und UNIX-Clientcomputer zu registrieren.  
 
-###  <a name="a-namebkmkaddlinuxprovidertocma-enable-the-new-inventory-class-in-configuration-manager"></a><a name="BKMK_AddLinuxProvidertoCM"></a> Aktivieren Sie die neue Inventurklasse in Configuration Manager:  
+###  <a name="BKMK_AddLinuxProvidertoCM"></a> Aktivieren Sie die neue Inventurklasse in Configuration Manager:  
  Bevor Configuration Manager den Bestand melden kann, der vom neuen Anbieter auf Linux- und UNIX-Computern gemeldet wird, müssen Sie die MOF-Datei (Managed Object Format) importieren, die das Schema des benutzerdefinierten Anbieters definiert.  
 
  Informationen zum Import einer benutzerdefinierte MOF-Datei in Configuration Manager finden Sie unter [Konfigurieren der Hardwareinventur in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -15,9 +15,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: d1bf0fdc3e735eb31492476fd46f008620150c0b
 ms.openlocfilehash: 8f951805c2fc25059965c15c94934c0f8546735c
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="upgrade-an-evaluation-installation-of-system-center-configuration-manager-to-a-full-installation"></a>Aktualisieren einer Evaluierungsinstallation auf eine vollständige Installation von System Center Configuration Manager
@@ -52,9 +54,4 @@ Voraussetzungen für ein Upgrade einer Evaluierungsversion auf eine lizenzierte 
 
     > [!NOTE]  
     >  Die Titelleiste einer Configuration Manager-Konsole, die mit dem aktualisierten Standort verbunden bleibt, gibt ggf. an, dass es sich bei dem Standort noch immer um eine Evaluierungsversion handelt, bis Sie eine neue Verbindung zwischen Konsole und Standort herstellen.  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

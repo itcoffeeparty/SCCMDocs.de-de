@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
 ms.openlocfilehash: 6189726bbcade8229e0b2e929ebedeefdbf266a4
+ms.contentlocale: de-de
+ms.lasthandoff: 12/29/2016
 
 
 ---
@@ -53,9 +55,4 @@ Zeigen Sie mithilfe des Ressourcen-Explorers in System Center Configuration Mana
 
 4.  Sie können mit der rechten Maustaste auf ein beliebiges Element im Fenster „Ressourcen-Explorer“ klicken und **Eigenschaften** auswählen, um die gesammelten Inventurinformationen in einem besser lesbaren Format anzuzeigen.  
  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

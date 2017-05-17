@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: a0bd86587669c32377b1eafa6a890d37e10ac3f6
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -37,7 +39,7 @@ Mit System Center Configuration Manager-Tasksequenzen können Sie bei der Betrie
  Mithilfe der folgenden Abschnitte können Sie Benutzerdaten erfassen und wiederherstellen.
 
 
-##  <a name="a-namebkmkstoringuserdataa-store-user-state-data"></a><a name="BKMK_StoringUserData"></a> Speichern von Benutzerzustandsdaten  
+##  <a name="BKMK_StoringUserData"></a> Speichern von Benutzerzustandsdaten  
  Wenn Sie den Benutzerzustand erfassen, können Sie die Benutzerzustandsdaten auf dem Zielcomputer oder auf einem Zustandsmigrationspunkt speichern. Sie müssen einen Configuration Manager-Standortsystemserver verwenden, auf dem die Standortsystemrolle „Statusmigrationspunkt“ gehostet wird, um den Benutzerstatus auf einem Migrationspunkt für den Benutzerstatus zu speichern. Wenn Sie den Benutzerzustand auf dem Zielcomputer speichern möchten, müssen Sie die Tasksequenz so konfigurieren, dass die Daten lokal mithilfe von Links gespeichert werden.  
 
 > [!NOTE]  
@@ -54,7 +56,7 @@ Mit System Center Configuration Manager-Tasksequenzen können Sie bei der Betrie
 
 -   Sie können Hardlinks angeben, die verwendet werden können, um die Benutzerdaten am ursprünglichen Speicherort wiederherzustellen. In diesem Szenario verbleiben die Benutzerdaten auf dem Laufwerk, wenn das alte Betriebssystem entfernt wird. Nach der Bereitstellung des neuen Betriebssystems werden die Benutzerzustandsdaten von der Tasksequenz **Wiederherstellen** mithilfe der festen Links am ursprünglichen Speicherort wiederhergestellt.  
 
-###  <a name="a-namebkmkuserdatasmpa-store-user-data-on-a-state-migration-point"></a><a name="BKMK_UserDataSMP"></a> Speichern von Benutzerdaten auf einem Zustandsmigrationspunkt  
+###  <a name="BKMK_UserDataSMP"></a> Speichern von Benutzerdaten auf einem Zustandsmigrationspunkt  
  Sie müssen die folgenden Schritte ausführen, um die Benutzerzustandsdaten auf einem Zustandsmigrationspunkt zu speichern:  
 
 1.  [Configure a state migration point](#BKMK_StateMigrationPoint) , um die die Benutzerzustandsdaten zu speichern.  
@@ -71,7 +73,7 @@ Mit System Center Configuration Manager-Tasksequenzen können Sie bei der Betrie
 
     -   [Statusspeicher freigeben](../understand/task-sequence-steps.md#BKMK_ReleaseStateStore), um den Statusmigrationspunkt darüber zu benachrichtigen, dass die Erfassungs- oder Wiederherstellungsaktion abgeschlossen ist.  
 
-###  <a name="a-namebkmkuserdatadestinationa-store-user-data-locally"></a><a name="BKMK_UserDataDestination"></a> Speichern von Benutzerdaten auf einem lokalen Computer  
+###  <a name="BKMK_UserDataDestination"></a> Speichern von Benutzerdaten auf einem lokalen Computer  
  Um die Benutzerdaten lokal zu speichern, gehen Sie folgendermaßen vor:  
 
 -   [Tasksequenz erstellen](../deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md), um den Benutzerstatus zu erfassen und wiederherzustellen. Insbesondere müssen Sie die folgenden Schritte der Tasksequenz ausführen, um Benutzerdaten von einem Computer zu erfassen und anschließend auf einem Computer unter Verwendung von festen Links wiederherzustellen:  
@@ -83,7 +85,7 @@ Mit System Center Configuration Manager-Tasksequenzen können Sie bei der Betrie
         > [!NOTE]  
         >  Die Benutzerzustandsdaten, auf die von den festen Links verwiesen wird, verbleiben auf dem Computer, nachdem das alte Betriebssystem von der Tasksequenz entfernt wurde. Dies sind die Daten, mit deren Hilfe die Benutzerdaten wiederhergestellt werden, wenn das neue Betriebssystem bereitgestellt wird.  
 
-##  <a name="a-namebkmkstatemigrationpointa-configure-a-state-migration-point"></a><a name="BKMK_StateMigrationPoint"></a> Configure a state migration point  
+##  <a name="BKMK_StateMigrationPoint"></a> Configure a state migration point  
  Vom Zustandsmigrationspunkt werden die auf einem Computer erfassten Benutzerdaten gespeichert und anschließend auf einem anderen Computer wiederhergestellt. Wenn Sie jedoch Benutzereinstellungen für eine Betriebssystembereitstellung auf dem gleichen Computer erfassen, z. B. zur Aktualisierung des Betriebssystems auf dem Zielcomputer, können Sie die Daten auf dem gleichen Computer unter Verwendung von festen Links oder auf dem Zustandsmigrationspunkt speichern. Wenn Sie den Statusspeicher erstellen, wird von Configuration Manager bei einigen Computerbereitstellungen automatisch eine Zuordnung zwischen Statusspeicher und Zielcomputer erstellt. Mithilfe der folgenden Methoden können Sie einen Zustandsmigrationspunkt zum Speichern der Benutzerzustandsdaten konfigurieren:  
 
 -   Verwenden Sie den Assistenten zum Erstellen von ** ** Standortsystemservern, um einen neuen Standortsystemserver für den Zustandsmigrationspunkt zu erstellen.  
@@ -104,7 +106,7 @@ Mit System Center Configuration Manager-Tasksequenzen können Sie bei der Betrie
 
  Weitere Informationen zum Statusmigrationspunkt und den entsprechenden Konfigurationsschritten finden Sie unter [Statusmigrationspunkt](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
 
-##  <a name="a-namebkmkcomputerassociationa-create-a-computer-association"></a><a name="BKMK_ComputerAssociation"></a> Create a computer association  
+##  <a name="BKMK_ComputerAssociation"></a> Create a computer association  
  Erstellen Sie eine Computerzuordnung, um eine Beziehung zwischen einem Quellcomputer und einem Zielcomputer zu definieren, wenn Sie ein Betriebssystem auf neuer Hardware installieren und Benutzereinstellungen erfassen und wiederherstellen möchten. Der Quellcomputer ist ein vorhandener Computer, der von Configuration Manager verwaltet wird. Wenn Sie das neue Betriebssystem auf dem Zielcomputer bereitstellen, enthält der Quellcomputer den Benutzerzustand, der zum Zielcomputer migriert wird.  
 
 > [!NOTE]  
@@ -128,11 +130,6 @@ Mit System Center Configuration Manager-Tasksequenzen können Sie bei der Betrie
 
     -   **Bestimmte Benutzerkonten erfassen und wiederherstellen**: Bei dieser Einstellung werden nur die von Ihnen angegebenen Konten erfasst und wiederhergestellt. Wenn diese Einstellung ausgewählt ist, ist es nicht möglich, mehrere Zuordnungen zum gleichen Quellcomputer zu erstellen.  
 
-##  <a name="a-namebkmkmigrationfailsa-restore-user-state-data-when-an-operating-system-deployment-fails"></a><a name="BKMK_MigrationFails"></a> Wiederherstellen von Benutzerzustandsdaten, wenn bei einer Betriebssystembereitstellung ein Fehler auftritt  
+##  <a name="BKMK_MigrationFails"></a> Wiederherstellen von Benutzerzustandsdaten, wenn bei einer Betriebssystembereitstellung ein Fehler auftritt  
  Wenn bei der Bereitstellung des Betriebssystems ein Fehler auftritt, können Sie die LoadState-Funktion von USMT 10.0 verwenden, um die während des Bereitstellungsvorgangs erfassten Benutzerzustandsdaten abzurufen. Dazu gehören auch Daten, die auf einem Zustandsmigrationspunkt oder lokal auf dem Zielcomputer gespeichert sind. Weitere Informationen zu dieser USMT-Funktion finden Sie unter [LoadState-Syntax](https://technet.microsoft.com/library/mt299188\(v=vs.85\).aspx).  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

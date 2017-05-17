@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 2144dfa87f40fcb2195f7278a21b47e05d6d6f38
+ms.contentlocale: de-de
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -28,7 +30,7 @@ ms.openlocfilehash: 2144dfa87f40fcb2195f7278a21b47e05d6d6f38
 
 Dieses Thema enthält Sicherheits- und Datenschutzinformationen für die Softwareinventur in System Center Configuration Manager.  
 
-##  <a name="a-namebkmksecurityhardwareinventorya-security-best-practices-for-software-inventory"></a><a name="BKMK_Security_HardwareInventory"></a> Bewährte Sicherheitsmethoden für die Softwareinventur  
+##  <a name="BKMK_Security_HardwareInventory"></a> Bewährte Sicherheitsmethoden für die Softwareinventur  
  Wenden Sie die folgenden bewährten Sicherheitsmethoden beim Sammeln von Softwareinventurdaten der Clients an:  
 
 |Bewährte Sicherheitsmethode|Weitere Informationen|  
@@ -52,7 +54,7 @@ Dieses Thema enthält Sicherheits- und Datenschutzinformationen für die Softwar
 
  Die Softwareinventur ist standardmäßig als Clienteinstellung aktiviert.  
 
-##  <a name="a-namebkmkprivacyhardwareinventorya-privacy-information-for-software-inventory"></a><a name="BKMK_Privacy_HardwareInventory"></a> Informationen zum Datenschutz für die Softwareinventur  
+##  <a name="BKMK_Privacy_HardwareInventory"></a> Informationen zum Datenschutz für die Softwareinventur  
  Die Hardwareinventur ermöglicht das Abrufen von Informationen, die auf Configuration Manager-Clients in der Registrierung und in WMI gespeichert sind. Die Softwareinventur ermöglicht die Ermittlung aller Dateien eines bestimmten Typs oder die Sammlung bestimmter Dateien von Clients. Asset Intelligence erweitert die Inventurfunktionen, indem die Hardware- und Softwareinventur erweitert und neue Lizenzverwaltungsfunktionen hinzugefügt werden.  
 
  Die Hardwareinventur ist standardmäßig als Clienteinstellung aktiviert, und die gesammelten WMI-Informationen werden durch die von Ihnen ausgewählten Optionen festgelegt. Die Softwareinventur ist zwar standardmäßig aktiviert, aber Dateien werden standardmäßig nicht gesammelt. Die Asset Intelligence-Datensammlung ist zwar automatisch aktiviert, aber Sie können die zu aktivierenden Hardwareinventur-Berichtsklassen selbst auswählen.  
@@ -60,9 +62,4 @@ Dieses Thema enthält Sicherheits- und Datenschutzinformationen für die Softwar
  Die Inventurinformationen werden nicht an Microsoft gesendet. Inventurinformationen werden in der Configuration Manager-Datenbank gespeichert. Wenn auf den Clients HTTPS für die Herstellung der Verbindung zu den Verwaltungspunkten verwendet wird, werden die vom Verwaltungspunkt an den Standort gesendeten Inventurdaten während der Übertragung verschlüsselt. Wenn auf den Clients HTTP für die Herstellung der Verbindung zu den Verwaltungspunkten verwendet wird, haben Sie die Möglichkeit, die Inventurverschlüsselung zu aktivieren. In der Datenbank werden die Inventurdaten unverschlüsselt gespeichert. Informationen werden so lange in der Datenbank gespeichert, bis sie durch die alle 90 Tage durchgeführten Standortwartungstasks **Veralteten Inventurverlauf löschen** oder **Veraltete gesammelte Dateien löschen** gelöscht werden. Sie können das Löschintervall konfigurieren.  
 
  Berücksichtigen Sie bei der Konfiguration der Hardware- und Softwareinventur, der Dateisammlung oder der Asset Intelligence-Datensammlung Ihre Datenschutzanforderungen.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

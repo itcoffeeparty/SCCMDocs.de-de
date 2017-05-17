@@ -15,9 +15,11 @@ caps.latest.revision: 4
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 8370e3b102afed518e8154d4944ab420188faccf
 ms.openlocfilehash: 76b070f8e203cc0c751f35e5a4b4904504786c04
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="install-site-system-roles-for-system-center-configuration-manager"></a>Installieren von Standortsystemrollen für System Center Configuration Manager
@@ -38,7 +40,7 @@ Unmittelbar vor der Installation der Standortsystemrolle überprüft Configurati
 
 -   Configuration Manager verwendet das **Standortsystem-Installationskonto** zum Installieren der Standortsystemrollen. Sie geben dieses Konto beim Ausführen des Assistenten zum Erstellen eines neuen Standortsystemservers oder zum Hinzufügen neuer Standortsystemrollen zu einem vorhandenen Standortsystemserver an. Standardmäßig handelt es sich bei diesem Konto um das lokale Systemkonto des Standortservercomputers, doch können Sie auch ein Domänenbenutzerkonto zur Verwendung als Standortsystem-Installationskonto angeben. Weitere Informationen finden Sie unter [In System Center Configuration Manager verwendete Konten](../../../../core/plan-design/hierarchy/accounts.md).  
 
-##  <a name="a-namebkmkinstalla-to-install-site-system-roles-on-an-existing-site-system-server"></a><a name="bkmk_Install"></a> So installieren Sie Standortsystemrollen auf einem vorhandenen Standortsystemserver  
+##  <a name="bkmk_Install"></a> So installieren Sie Standortsystemrollen auf einem vorhandenen Standortsystemserver  
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung**.  
 
@@ -81,9 +83,4 @@ Unmittelbar vor der Installation der Standortsystemrolle überprüft Configurati
 
 > [!TIP]  
 >  Mit dem Windows PowerShell-Cmdlet New-CMSiteSystemServer wird die gleiche Funktion wie mit diesem Verfahren ausgeführt. Weitere Informationen finden Sie unter [New-CMSiteSystemServer](http://go.microsoft.com/fwlink/p/?LinkID=271414) in der Cmdlet-Referenzdokumentation von System Center 2012 Configuration Manager SP1.  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

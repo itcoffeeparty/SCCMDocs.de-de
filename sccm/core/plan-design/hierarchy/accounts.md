@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 72263ec5e7104924a1ca46dc2000be9f8568599f
 ms.openlocfilehash: a776667cc9f24bd4a468afea76e466c34ce66864
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -344,9 +346,4 @@ Dieses Konto muss ein lokaler Administrator auf dem Computer sein, auf dem WSUS 
 >  Beschränken Sie den Kontoumfang. Erstellen Sie beispielsweise für jede Tasksequenz ein unterschiedliches Tasksequenzkonto für „Ausführen als“, sodass bei Gefährdung eines Kontos nur der Clientcomputer betroffen ist, auf den dieses Konto Zugriff hat.  
 >   
 >  Wenn für die Befehlszeile Administratorrechte auf dem Computer erforderlich sind, erwägen Sie die Erstellung eines lokalen Administratorkontos lediglich für das Tasksequenzkonto „Ausführen als“ auf allen Computern, um die Tasksequenz auszuführen. Wenn das Konto nicht mehr benötigt wird, kann es gelöscht werden.  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

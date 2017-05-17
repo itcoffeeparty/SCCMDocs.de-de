@@ -15,9 +15,11 @@ caps.latest.revision: 13
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 288a4c649f371d9701fe7249449356aa222bf372
 ms.openlocfilehash: 35f04e237efffbdb12893f658950a99dc0b98b85
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -37,7 +39,7 @@ Dieses Thema enthält die Schritte in System Center Configuration Manager zum Du
 
  Nutzen Sie die folgenden Abschnitte, um mithilfe einer Tasksequenz Betriebssysteme über das Netzwerk bereitzustellen.  
 
-##  <a name="a-namebkmkplana-plan"></a><a name="BKMK_Plan"></a> Plan  
+##  <a name="BKMK_Plan"></a> Plan  
 
 -   **Überprüfen Sie die für die Tasksequenz zum Durchführen eines Betriebssystemupgrades geltenden Einschränkungen.**  
 
@@ -59,7 +61,7 @@ Dieses Thema enthält die Schritte in System Center Configuration Manager zum Du
 
      Die einzige Voraussetzung für das Upgradeszenario ist, dass ein Verteilungspunkt für das Betriebssystem-Upgradepaket und alle anderen in der Tasksequenz enthaltenen Pakete verfügbar ist. Weitere Informationen finden Sie unter [Install or modify a distribution point (Installieren oder Modifizieren eines Verwaltungspunkts)](../../core/servers/deploy/configure/install-and-configure-distribution-points.md).
 
-##  <a name="a-namebkmkconfigurea-configure"></a><a name="BKMK_Configure"></a> Konfigurieren  
+##  <a name="BKMK_Configure"></a> Konfigurieren  
 
 1.  **Vorbereiten des Betriebssystem-Upgradepakets**  
 
@@ -75,7 +77,7 @@ Dieses Thema enthält die Schritte in System Center Configuration Manager zum Du
     > [!NOTE]  
     >  In der Regel verwenden Sie die Schritte unter [Create a task sequence to upgrade an operating system (Erstellen einer Tasksequenz zum Aktualisieren eines Betriebssystems)](create-a-task-sequence-to-upgrade-an-operating-system.md), um eine Tasksequenz zu erstellen, um ein Upgrade eines Betriebssystems auf Windows 10 durchzuführen. Die Tasksequenz enthält den Schritt „Betriebssystem aktualisieren“ sowie weitere empfohlene Schritte und Gruppen für den End-to-End-Aktualisierungsprozess. Sie können jedoch eine benutzerdefinierte Tasksequenz erstellen und den Tasksequenzschritt [Betriebssystem aktualisieren](../understand/task-sequence-steps.md#BKMK_UpgradeOS) zum Aktualisieren des Betriebssystems hinzufügen. Dies ist der einzige Schritt, der zum Aktualisieren des Betriebssystems auf Windows 10 erforderlich ist. Wenn Sie diese Methode auswählen, fügen Sie nach dem Schritt „Betriebssystem aktualisieren“ außerdem den Schritt [Computer neu starten](../understand/task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer) hinzu, um das Upgrade abzuschließen. Stellen Sie sicher, dass die Einstellung **Aktuell installiertes Standardbetriebssystem** aktiviert ist, um den Computer mit dem installierten Betriebssystem und nicht mit Windows PE neu zu starten.  
 
-##  <a name="a-namebkmkdeploya-deploy"></a><a name="BKMK_Deploy"></a> Bereitstellen  
+##  <a name="BKMK_Deploy"></a> Bereitstellen  
 
 -   Verwenden Sie eine der folgenden Bereitstellungsmethoden, um das Betriebssystem bereitzustellen:  
 
@@ -88,9 +90,4 @@ Dieses Thema enthält die Schritte in System Center Configuration Manager zum Du
 -   **Überwachen der Tasksequenzbereitstellung**  
 
      Weitere Informationen zum Überwachen der Tasksequenzbereitstellung zum Durchführen eines Upgrade des Betriebssystems finden Sie unter [Monitor operating system deployments (Überwachen von Betriebssystembereitstellungen)](monitor-operating-system-deployments.md).  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 
