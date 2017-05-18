@@ -21,7 +21,7 @@ ms.openlocfilehash: f7ecfe550d2e28579ea873442b2a68dc1c7c5483
 
 
 ---
-# <a name="ensure-device-compliance-with-system-center-configuration-manager"></a>Sicherstellen der Gerätekompatibilität mit System Center Configuration Manager
+# <a name="ensure-device-compliance-with-system-center-configuration-manager"></a>Sicherstellen der Gerätekompatibilität mit System Center Configuration Manager 
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
