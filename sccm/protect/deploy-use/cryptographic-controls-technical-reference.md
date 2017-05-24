@@ -144,7 +144,7 @@ System Center Configuration Manager verwendet die Signierung und Verschlüsselun
 
  Wenn Sie PXE-Start verwenden, importieren Sie das Clientauthentifizierungszertifikat in den PXE-fähigen Verteilungspunkt. Für jeden Client, der von diesem PXE-fähigen Verteilungspunkt gestartet wird, wird das gleiche Zertifikat verwendet. Aus Sicherheitsgründen wird empfohlen, Benutzer, die ihren Computer mit einem PXE-Dienst verbinden, zur Eingabe eines Kennworts aufzufordern. Dadurch schützen Sie den privaten Schlüssel und andere sensible Daten in den Tasksequenzen.  
 
- Sollte eines dieser Clientauthentifizierungszertifikate gefährdet sein, sperren Sie die Zertifikate im Arbeitsbereich **Verwaltung** über die Knoten **Zertifikate** und **Sicherheit** . Sie benötigen das Recht zur Verwaltung des Zertifikats zur Betriebssystembereitstellung, um diese Zertifikate verwalten zu ** ** können.  
+ Sollte eines dieser Clientauthentifizierungszertifikate gefährdet sein, sperren Sie die Zertifikate im Arbeitsbereich **Verwaltung** über die Knoten **Zertifikate** und **Sicherheit** . Sie benötigen das Recht zur **Verwaltung des Zertifikats zur Betriebssystembereitstellung**, um diese Zertifikate verwalten zu können.  
 
  Nach der Bereitstellung des Betriebssystems und der Installation von Configuration Manager fordert der Client sein eigenes PKI-Clientauthentifizierungszertifikat für die HTTPS-Clientkommunikation.  
 
