@@ -61,7 +61,7 @@ Bei der Bereitstellung von Configuration Manager-Clients in einer Umgebung sind 
 |Microsoft Remote Differential Compression (RDC)|Ist erforderlich, um die Datenübertragung über das Netzwerk zu optimieren.|  
 |Microsoft Visual C++ 2013 Redistributable Version 12.0.21005.1|Ist zur Unterstützung von Clientoperationen erforderlich. Wenn dieses Update auf den Clientcomputern installiert wird, ist möglicherweise ein Neustart erforderlich, um die Installation abzuschließen.|  
 |Microsoft Visual C++ 2005 Redistributable Version 8.0.50727.42|Für die Version 1606 und ältere Versionen ist erforderlich, das Microsoft SQL Server Compact-Operationen unterstützt werden.|  
-|Windows Imaging APIs 6.0.6001.18000|Ist erforderlich für die Verwaltung von Windows-Imagedateien (*.wim) mit Configuration Manager.|  
+|Windows Imaging APIs 6.0.6001.18000|Ist erforderlich für die Verwaltung von Windows-Imagedateien (.wim) mit Configuration Manager.|  
 |Microsoft-Richtlinienplattform 1.2.3514.0|Ist erforderlich, damit Kompatibilitätseinstellungen von Clients ausgewertet werden können.|  
 |Microsoft Silverlight 5.1.41212.0 (beginnend in Configuration Manager-Version 1602)|Ist erforderlich, um die Benutzerfreundlichkeit der Anwendungskatalog-Website zu unterstützen.|  
 |Microsoft .NET Framework 4.5.2|Ist zur Unterstützung von Clientoperationen erforderlich. Wird automatisch auf auf dem Clientcomputer installiert, wenn Microsoft .NET Framework 4.5 oder höher nicht installiert ist. Weitere Informationen finden Sie im nächsten Abschnitt unter [Weitere Informationen über Microsoft .NET Framework, Version 4.5.2](#dotNet).|  

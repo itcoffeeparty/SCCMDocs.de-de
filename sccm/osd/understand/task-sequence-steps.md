@@ -445,7 +445,7 @@ Dieser Tasksequenzschritt wird nur in Windows PE ausgeführt. Er wird nicht in e
 
  Wenn Sie diese Option auswählen, nicht jedoch die Option zum Wiederherstellen der lokalen Benutzerprofile im Tasksequenzschritt „Benutzerzustand wiederherstellen“, tritt ein Fehler in der Tasksequenz auf, da die neuen Konten nicht von Configuration Manager migriert werden können, ohne dass ihnen Kennwörter zugewiesen werden. Zusätzlich gilt: Wenn Sie im Tasksequenzerstellungs-Assistenten eine Tasksequenz erstellen, um ein bestehendes Abbildpaket zu installieren, wird für die Tasksequenz standardmäßig die Option **Alle Benutzerprofile mit Standardoptionen erfassen** ausgewählt, nicht jedoch die Option **Lokale Computerbenutzerprofile wiederherstellen**(d. h. Nicht-Domänenkontos).  
 
- Wählen Sie **Lokale Computerbenutzerprofile wiederherstellen** aus, und geben Sie für das zu migrierende Konto ein Kennwort ein. In einer manuell erstellten Tasksequenz finden Sie diese Einstellung im Schritt „Benutzerzustand wiederherstellen“. Wird die Tasksequenz vom Tasksequenzerstellungs-Assistenten **** erstellt, befindet sich diese Einstellung auf der Seite **Benutzerdateien und -einstellungen wiederherstellen** des Assistenten.  
+ Wählen Sie **Lokale Computerbenutzerprofile wiederherstellen** aus, und geben Sie für das zu migrierende Konto ein Kennwort ein. In einer manuell erstellten Tasksequenz finden Sie diese Einstellung im Schritt „Benutzerzustand wiederherstellen“. Wird die Tasksequenz vom **Tasksequenzerstellungs-Assistenten** erstellt, befindet sich diese Einstellung auf der Seite **Benutzerdateien und -einstellungen wiederherstellen** des Assistenten.  
 
  Wenn Sie über keine lokalen Benutzerkonten verfügen, ist dies nicht relevant.  
 
@@ -1508,7 +1508,7 @@ Vor der Configuration Manager-Version 1610 werden bei diesem Schritt folgende Au
 
 -   **Hersteller und Modell**: Verwenden Sie diese Regelkategorie, um Werte für den Hersteller und das Modell eines Computers auszuwerten. Sowohl Hersteller als auch Modell müssen als „Wahr“ ausgewertet werden, damit die Regel als „Wahr“ ausgewertet wird.   
 
-    Ab Version 1610 von Configuration Manager können Sie ein Sternchen (*) und ein Fragezeichen (**?**) als Platzhalter an der Stelle angeben, an der ***** mehreren Zeichen und **?** entspricht. entspricht einem einzelnen Zeichen. Zum Beispiel die Zeichenfolge „DELL*900?“ wird „DELL-ABC-9001“ und „DELL9009“ entsprechen.
+    Ab Version 1610 von Configuration Manager können Sie ein Sternchen (*****) und ein Fragezeichen (**?**) als Platzhalter an der Stelle angeben, an der ***** mehreren Zeichen und **?** entspricht. entspricht einem einzelnen Zeichen. Zum Beispiel die Zeichenfolge „DELL*900?“ wird „DELL-ABC-9001“ und „DELL9009“ entsprechen.
 
 -   **Tasksequenzvariable**: Verwenden Sie diese Regelkategorie, um eine Tasksequenzvariable, eine Bedingung und einen Wert zum Auswerten anzugeben. Die Regel wird als „Wahr“ ausgewertet, wenn der für die Variable festgelegte Wert die angegebene Bedingung erfüllt.  
 
