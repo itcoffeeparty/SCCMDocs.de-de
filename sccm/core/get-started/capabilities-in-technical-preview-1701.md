@@ -15,10 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: b330c97a0853d1673f1cf7e0691891b72407fa51
-ms.lasthandoff: 03/27/2017
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1701-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1701 für System Center Configuration Manager
@@ -100,7 +101,7 @@ Ab dieser Preview-Version können Sie Verwaltungspunkte so konfigurieren, dass d
 ### <a name="try-it-out"></a>Probieren Sie es aus
 
 - **Aktivieren des lokalen Integritätsnachweises für Geräte auf einem Verwaltungspunkt**<br>  Navigieren Sie in der Configuration Manager-Konsole zum Verwaltungspunkt, öffnen Sie **Eigenschaften für Verwaltungspunktkomponenten**, und klicken Sie anschließend auf die Registerkarte **Erweiterte Optionen**. Klicken Sie auf **Hinzufügen**, und geben Sie unter **On-premises device health attestation service URLs** (URLs des lokalen Dienst zum Integritätsnachweis) die lokale URL ein (z.B. https://10.10.10.10).
-- **Aktivieren der Berichterstattung über Integritätsnachweise an den lokalen Verwaltungspunkt für den Client-Agent**<br>Wählen Sie in der Configuration Manager-Konsole **Verwaltung** > **Clienteinstellungen** aus, und klicken Sie doppelt auf **benutzerdefinierte Geräteeinstellungen**, oder legen Sie sie ggf. erst fest. Wählen Sie **Computer-Agent** aus, und legen Sie die Einstellung **Use on-premises Health Attestation Service** (Lokalen Dienst zum Integritätsnachweis verwenden) auf **Ja** fest. Wenn die Einstellung **Enable communication with Device Health Attestation Service** (Kommunikation mit dem Dienst zum Nachweis der Geräteintegrität zulassen) auf **Ja** und die Einstellung **Use on-premises Health Attestation Service** (Lokalen Dienst zum Integritätsnachweis verwenden) auf **Nein** festgelegt ist, wird der Verwaltungspunkt den cloudbasierten Dienst zum Nachweis der Geräteintegrität verwenden.
+- **Aktivieren der Berichterstattung über Integritätsnachweise an den lokalen Verwaltungspunkt für den Client-Agent** <br>Wählen Sie in der Configuration Manager-Konsole **Verwaltung** > **Clienteinstellungen** aus, und klicken Sie doppelt auf **benutzerdefinierte Geräteeinstellungen**, oder legen Sie sie ggf. erst fest. Wählen Sie **Computer-Agent** aus, und legen Sie die Einstellung **Use on-premises Health Attestation Service** (Lokalen Dienst zum Integritätsnachweis verwenden) auf **Ja** fest. Wenn die Einstellung **Enable communication with Device Health Attestation Service** (Kommunikation mit dem Dienst zum Nachweis der Geräteintegrität zulassen) auf **Ja** und die Einstellung **Use on-premises Health Attestation Service** (Lokalen Dienst zum Integritätsnachweis verwenden) auf **Nein** festgelegt ist, wird der Verwaltungspunkt den cloudbasierten Dienst zum Nachweis der Geräteintegrität verwenden.
 
 ## <a name="use-the-oms-connector-for-microsoft-azure-government-cloud"></a>Verwenden des OMS-Connectors für die Microsoft Azure Government-Cloud
 Ab dieser Technical Preview können Sie den OMS-Connector (Microsoft Operations Management) verwenden, um eine Verbindung mit einem OMS-Arbeitsbereich herzustellen, der sich in der Microsoft Azure Government-Cloud befindet.  
@@ -125,12 +126,10 @@ Hierzu bearbeiten Sie eine Konfigurationsdatei, damit sie auf die Government-Clo
 
   Ändern Sie den Wert für die Einstellung *FairFaxAuthorityResource* in „https://login.microsoftonline.com/“.
 
-  - **Original:**
-    &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+  - **Original:** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
     &lt;value>&lt;/value>
 
-    - **Bearbeitet:**
-    &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+    - **Bearbeitet:** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
     &lt;value>https://login.microsoftonline.com/&lt;/value>
 
 2.    Nachdem Sie die Datei mit den zwei Änderungen gespeichert haben, starten Sie die Configuration Manager-Konsole auf demselben Computer neu, und installieren Sie anschließend den OMS-Connector über die Konsole. Verwenden Sie für die Installation des Connectors die Informationen in [Synchronisieren von Daten von System Center Configuration Manager mit der Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite), und wählen Sie den **Operations Management Suite-Arbeitsbereich** aus, der sich in der Microsoft Azure Government-Cloud befindet.

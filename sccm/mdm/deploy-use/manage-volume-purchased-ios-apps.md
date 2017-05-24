@@ -2,7 +2,7 @@
 title: Verwalten von per Volumenlizenz erworbenen iOS-Apps | Microsoft-Dokumentation
 description: "Sie können Lizenzen für Apps, die Sie über den iOS App Store erworben haben, bereitstellen, verwalten und nachverfolgen."
 ms.custom: na
-ms.date: 05/03/2017
+ms.date: 05/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: c6a6137fa978e1ea28aefea2aea4e29ba661efd6
-ms.openlocfilehash: 55f1204b088a7b636a90561f20aa41c7de72bc05
+ms.sourcegitcommit: f4cb711f369698fe8e045f8c83dd96ec6fb29d70
+ms.openlocfilehash: ce706e938f558406044f7890c80bb7156c3b262b
 ms.contentlocale: de-de
-ms.lasthandoff: 05/04/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="manage-volume-purchased-ios-apps-with-system-center-configuration-manager"></a>Verwalten von iOS-Apps, die über ein Volumenprogramm erworben wurden, mit System Center Configuration Manager
@@ -58,6 +58,7 @@ ms.lasthandoff: 05/04/2017
       Wenn Sie bei **Synchronisierung** auswählen, dass eine manuelle Synchronisierung ausgeführt werden soll, wird immer eine vollständige Synchronisierung ausgeführt.  
 -   Wenn Sie eine Configuration Manager-Datenbank wiederherstellen müssen, sollten Sie im Anschluss daran eine manuelle Synchronisierung ausführen, um sicherzustellen, dass die synchronisierten Lizenzdaten auf dem aktuellen Stand sind.  
 -   Darüber hinaus müssen Sie ein gültiges APNs-Zertifikat (Apple Push Notification Service) von Apple importieren, damit Sie iOS-Geräte verwalten und Apps bereitstellen können. Weitere Informationen finden Sie unter [Set up iOS hybrid device management (Einrichten der hybriden Verwaltung von iOS-Geräten)](enroll-hybrid-ios-mac.md).  
+-   Configuration Manager unterstützt bis zu 3.000 VPP-Token.
 
 Ab System Center Configuration Manager 1702 können Sie lizenzierte Apps für Geräte und Benutzer bereitstellen. Je nachdem, inwieweit die App Gerätelizenzierungen unterstützt, wird eine entsprechende Lizenz wie folgt beansprucht:
 

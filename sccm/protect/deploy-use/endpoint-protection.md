@@ -15,9 +15,11 @@ caps.latest.revision: 11
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 4688b4b12a7afa5fcfdc0e42f984271d98f10316
-ms.openlocfilehash: 90e6d82e7fd1ff0ad4f1d616cc23201769fe26e2
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ae60eb25383f4bd07faaa1265185a471ee79b1e9
+ms.openlocfilehash: 3c31271f3e3ae7aa45da03b3d75fd78242330646
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -33,21 +35,15 @@ Mithilfe von Endpoint Protection in System Center Configuration Manager können 
  Bei der Verwendung von Endpoint Protection mit Configuration Manager ergeben sich für Sie die folgenden Vorteile:  
 
 -   Sie können Antischadsoftware-Richtlinien und Windows-Firewall-Einstellungen erstellen und Windows Defender Advanced Threat Protection für ausgewählte Computergruppen verwalten.  
-
 -   Sie können mit Configuration Manager-Softwareupdates die neuesten Definitionsdateien für Antischadsoftware herunterladen, um Clientcomputer auf dem neuesten Stand zu halten.  
-
 -   Sie können E-Mail-Benachrichtigungen senden, die Überwachung in der Konsole nutzen und Berichte anzeigen, damit Administratoren über erkannte Schadsoftware auf Clientcomputern informiert werden.  
 
-Ab Windows 10 und Windows Server 2016 benötigen Computer keinen zusätzlichen Client für die Verwaltung von Endpoint Protection. Auf Windows 8.1 und älteren Computern installiert Endpoint Protection zusätzlich zum Configuration Manager-Client einen eigenen Client. Der Endpoint Protection-Client verfügt über folgende Funktionen:  
+Ab Windows 10 und Windows Server 2016 ist Windows Defender bereits auf den Computern installiert. Bei diesen Betriebssystemen wird bei der Installation des Configuration Manager-Clients ein Verwaltungsclient für Windows Defender installiert. Auf Computern unter Windows 8.1 und früher wird mit dem Configuration Manager-Client auch der Endpoint Protection-Client installiert. Windows Defender und der Endpoint Protection-Client verfügt über folgende Funktionen:  
 
 -   Erkennung von Schadsoftware und Spyware sowie Wiederherstellung  
-
 -   Erkennung von Rootkits und Wiederherstellung  
-
 -   Bewertung kritischer Sicherheitsrisikos und automatische Definitions- und Modulupdates  
-
 -   Erkennung von Sicherheitslücken im Netzwerk über das Netzwerkinspektionssystem  
-
 -   Integration mit Cloud Protection Service, um Microsoft Schadsoftware zu melden. Wenn Sie diesem Dienst beitreten, können vom Endpoint Protection-Client oder Windows Defender die neuesten Definitionen aus dem Microsoft Center zum Schutz vor Malware heruntergeladen werden, sobald nicht identifizierte Schadsoftware auf einem Computer erkannt wird.  
 
 > [!NOTE]  
@@ -115,13 +111,8 @@ Gehen Sie folgendermaßen vor, um die Imagedatei mit der Endpoint Protection-Cli
 2. Wählen Sie die Registerkarte **Downloads and Keys** (Downloads und Schlüssel) oben auf der Website aus.
 3. Filtern Sie nach dem Produkt **System Center Endpoint Protection (Current Branch)**.
 4. Klicken Sie auf den Link **Herunterladen**.
-5. Klicken Sie auf **Continue**(Weiter). Es sollten mehrere Dateien angezeigt werden, einschließlich eine namens **System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage   32/64 bit   1507 MB ISO** (System Center Endpoint Protection (Current Branch –Version 1606) für das Linux- und Macintosh-Betriebssystem Mehrsprachig 32/64 bit 1507 MB ISO).
+5. Klicken Sie auf **Continue**(Weiter). Es sollten mehrere Dateien angezeigt werden, einschließlich einer Datei namens **System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage    32/64 bit    1507 MB    ISO**.
 6. Klicken Sie auf das Pfeilsymbol, um die Datei herunterzuladen. Der Dateiname lautet **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_EptProt_Lin_Mac_MLF_X21-30777.ISO**.
 
  Weitere Informationen zum Installieren und Verwalten von Endpoint Protection-Clients für Linux und Macintosh-Computer finden Sie in der Dokumentation des jeweiligen Produkts im Ordner **Documentation** .
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

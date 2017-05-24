@@ -15,9 +15,11 @@ caps.latest.revision: 2
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 5e77ebbfd3f3d573d903fe58024a22feb9884e4a
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1611-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1611 für System Center Configuration Manager
@@ -37,7 +39,7 @@ In diesem Artikel werden die Funktionen beschrieben, die in der Technical Previe
 
 - ***PowerShell***: Wenn Sie über die Configuration Manager-Konsole eine Verbindung zu Windows PowerShell herstellen, wird möglicherweise folgende Fehlermeldung angezeigt: **Microsoft.ConfigurationManagement.PowerShell.Types.ps1xml ist nicht digital signiert**.  
 
-   Sie können dieses Problem beheben, indem Sie bestimmte Dateien durch signierte Versionen aus Version 1610 ersetzen. Kopieren Sie alle Dateien mit den folgenden Erweiterungen in Ihrem Ordner **&lt;Installationsverzeichnis>\AdminConsole\bin\** Ihrer Installation von Version 1610: **.psd1**, **.ps1xml** und **.psm1**. Fügen Sie diese Dateien im Ordner **&lt;Installationsverzeichnis>\AdminConsole\bin\** Ihrer Installation der Technical Preview 1611 ein, und überschreiben Sie so die Version 1611 der betreffenden Dateien.
+   Sie können dieses Problem beheben, indem Sie bestimmte Dateien durch signierte Versionen aus Version 1610 ersetzen. Kopieren Sie alle Dateien mit den folgenden Erweiterungen in Ihrem Ordner **&lt;Installationsverzeichnis>\AdminConsole\bin\** Ihrer Installation von Version 1610: **.psd1**, **.ps1xml** und **.psm1**. Fügen Sie diese Dateien im Ordner *&lt;Installationsverzeichnis>\AdminConsole\bin\** Ihrer Installation der Technical Preview 1611 ein, und überschreiben Sie so die Version 1611 der betreffenden Dateien.
 
 
 **Im Folgenden werden neue Features aufgelistet, die Sie mit dieser Version ausprobieren können.**  
@@ -75,9 +77,4 @@ Mit der Funktion zum Zwischenspeichern von Inhalten können Sie den Client dahin
 
 ## <a name="see-also"></a>Siehe auch
 [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

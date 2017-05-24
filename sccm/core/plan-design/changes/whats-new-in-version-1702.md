@@ -13,10 +13,11 @@ ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
-ms.openlocfilehash: 4616ebb84ae63acbe6af892918aa2dd1a0be4825
-ms.lasthandoff: 05/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f4cb711f369698fe8e045f8c83dd96ec6fb29d70
+ms.openlocfilehash: a2954b3c6f9a09b7246347e780c4cfc49ba39ca1
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>Neues in Version 1702 von System Center Configuration Manager
@@ -172,8 +173,8 @@ Zusätzlicher Inhalt wird nun in eigenständigen Medien unterstützt. Wählen Si
 ### <a name="hardware-inventory-collects-uefi-information"></a>Die Hardwareinventur sammelt UEFI-Informationen
 Ihnen stehen eine neue Hardwareinventurklasse (**SMS_Firmware**) und eine neue Eigenschaft (**UEFI**) zur Verfügung, mit der Sie bestimmen können, ob ein Computer im UEFI-Modus startet. Wenn ein Computer im UEFI-Modus gestartet wird, ist die Eigenschaft **UEFI** auf **TRUE** festgelegt. Dies ist bei der Hardwareinventur standardmäßig aktiviert. Weitere Informationen zur Hardwareinventur finden Sie unter [How to configure hardware inventory (Konfigurieren der Hardwareinventur)](/sccm/core/clients/manage/inventory/configure-hardware-inventory).
 
-### <a name="improvements-to-software-center-settings-and-notification-messages-for-high-impact-task-sequences"></a>Verbesserungen bei den Einstellungen und Benachrichtigungen für Tasksequenzen mit schwerwiegenden Auswirkungen im Softwarecenter
-Diese Version beinhaltet folgende Verbesserungen der Einstellungen und Benachrichtigungen für Tasksequenzen mit schwerwiegenden Auswirkungen im Softwarecenter:
+### <a name="improvements-to-software-center-warning-messages-for-high-impact-task-sequences"></a>Verbesserungen bei den Benachrichtigungen für Tasksequenzen mit schwerwiegenden Auswirkungen in Software Center
+Dieses Release beinhaltet folgende Verbesserungen für die Benachrichtigungen für Tasksequenzen mit schwerwiegenden Auswirkungen im Softwarecenter:
 
 - In den Eigenschaften der Tasksequenz können Sie jede beliebige Tasksequenz konfigurieren, einschließlich Tasksequenzen, die nicht zum Betriebssystem gehören, wie etwa risikoreiche Bereitstellungen. Jede Tasksequenz, die bestimmte Bedingungen erfüllt, wird automatisch als „high-impact“ (mit schwerwiegenden Auswirkungen) definiert. Weitere Informationen finden Sie unter [Verwalten risikoreicher Bereitstellungen](/sccm/protect/understand/settings-to-manage-high-risk-deployments).
 - In den Eigenschaften der Tasksequenz können Sie die Standardbenachrichtigung festlegen oder Ihre eigene benutzerdefinierte Benachrichtigung für Bereitstellungen mit schwerwiegenden Auswirkungen erstellen.

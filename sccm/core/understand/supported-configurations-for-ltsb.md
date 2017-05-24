@@ -2,7 +2,7 @@
 title: "Unterstützte Konfiguration für LTSB | Microsoft-Dokumentation"
 description: "Hier finden Sie Informationen dazu, welche Betriebssysteme und abhängigen Produkte mit LTSB (Long-Term Servicing Branch) von System Center Configuration Manager verwendet werden."
 ms.custom: na
-ms.date: 3/9/2017
+ms.date: 5/10/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 477ffa5d61d2dfaedf8a3a1f5687e2d72698ad28
-ms.openlocfilehash: 78dcbf76f21a286506b9c605e2c176714736935b
-ms.lasthandoff: 03/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
+ms.openlocfilehash: ec33d5febcbf7b57e220f7fe27db9671080fecff
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -30,7 +31,7 @@ Dieses Thema enthält Informationen dazu, welche Betriebssysteme und Produktabh�
 Wenn in diesem oder in anderen Themen zum LTSB nicht anders angegeben, gelten die Konfigurationen und Einschränkungen für die Current Branch-Version 1606 auch für den LTSB.  Wenn Konflikte auftreten, verwenden Sie die Informationen zur jeweils verwendeten Edition. In der Regel gelten für den LTSB dieselben Einschränkungen wie für Current Branch.
 
 ## <a name="general-statement-of-support"></a>Allgemeine Unterstützungserklärung
-Die in den folgenden Abschnitten beschriebenen Produkte und Technologien werden von Configuration Manager unterstützt. Die Tatsache, dass diese Produkte und Technologien hier beschrieben werden, bedeutet jedoch nicht, dass damit der Support über den Support Lifecycle der jeweiligen Produkte hinaus erweitert wurde. Produkte, deren Support Lifecycle überschritten ist, werden nicht für die Verwendung mit Configuration Manager unterstützt. Weitere Informationen finden Sie auf der Website [Microsoft Lifecycle-Richtlinie](http://go.microsoft.com/fwlink/p/?LinkId=208270) und unter [Support Lifecycle-Richtlinie – FAQ](http://go.microsoft.com/fwlink/p/?LinkId=31976).
+Die folgenden Produkte und Technologien werden von diesem Branch von Configuration Manager unterstützt. Die Tatsache, dass diese Produkte und Technologien hier beschrieben werden, bedeutet jedoch nicht, dass damit der Support über den Support Lifecycle der jeweiligen Produkte oder Versionen hinaus erweitert wurde. Produkte, deren Support Lifecycle überschritten ist, werden nicht für die Verwendung mit Configuration Manager unterstützt. Weitere Informationen finden Sie auf der Website [Microsoft Lifecycle-Richtlinie](http://go.microsoft.com/fwlink/p/?LinkId=208270) und unter [Support Lifecycle-Richtlinie – FAQ](http://go.microsoft.com/fwlink/p/?LinkId=31976).
 
 Darüber hinaus werden auch Produkte und Produktversionen, die in den folgenden Themen nicht aufgeführt sind, nur dann unterstützt, wenn sie im [Enterprise Mobility + Security-Blog](https://blogs.technet.microsoft.com/enterprisemobility/) angekündigt wurden.
 
@@ -310,13 +311,11 @@ Vom LTSB wird das Hosten der Standortdatenbank und des Berichterstattungspunkts 
 - SQL Server 2014 SP2: Standard, Enterprise
 - SQL Server 2014 SP1: Standard, Enterprise
 - SQL Server 2012 SP3: Standard, Enterprise
-- SQL Server 2012 SP2: Standard, Enterprise
 - SQL Server 2008 R2 SP3: Standard, Enterprise, Datacenter
 - SQL Server 2016 Express
 - SQL Server 2014 Express SP2
 - SQL Server 2014 Express SP1
 - SQL Server 2012 Express SP3
-- SQL Server 2012 Express SP2
 
 ## <a name="support-for-active-directory-domains"></a>Unterstützung für Active Directory-Domänen
 Alle LTSB-Standortsysteme müssen Mitglieder einer unterstützten Windows Active Directory-Domäne sein. Für die Unterstützung von Active Directory-Domänen gelten die Anforderungen und Einschränkungen, die unter [Unterstützung für Active Directory-Domänen](/sccm/core/plan-design/configs/support-for-active-directory-domains) aufgeführt sind. Die Unterstützung ist jedoch auf die folgenden Domänenfunktionsebenen beschränkt:

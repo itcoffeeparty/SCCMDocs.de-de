@@ -15,10 +15,11 @@ caps.latest.revision: 157
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
-ms.openlocfilehash: 8ffaee12bd826e2f19653b215ee19423ea672433
-ms.lasthandoff: 04/21/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
+ms.openlocfilehash: 3a7370fedee417588d219dc7bff46205faf42929
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -45,23 +46,7 @@ ms.lasthandoff: 04/21/2017
 
 -   Jede Installation wird nach 90 Tagen deaktiviert.  
 
--   Englisch ist die einzige unterstützte Sprache.  
-
--   Es wird nur ein eigenständiger primärer Standort unterstützt. In zentraler Verwaltungsstandort, mehrere primäre Standorte oder sekundäre Standorte werden nicht unterstützt.  
-
--   Es werden nur die folgenden Versionen von SQL Server unterstützt:  
-
-    -   SQL Server 2016 (ohne Service Pack, und höher)
-    -   SQL Server 2014 (ohne Service Pack, und höher)
-    -   SQL Server 2012 (mit Service Pack 2, und höher)
-
-
--   Der Standort unterstützt bis zu 10 Clients mit einem der folgenden Betriebssysteme:  
-
-      -   Windows 10  
-      -   Windows 8.1  
-      -   Windows 8  
-      -   Windows 7  
+-   Englisch ist die einzige unterstützte Sprache.
 
 
 -   Nur die folgenden Installationsflags (Switches) werden unterstützt:  
@@ -79,6 +64,23 @@ ms.lasthandoff: 04/21/2017
 -   Es gibt keine Unterstützung für ein Upgrade auf diese Vorabversion.  
 
 -   Es gibt keine Unterstützung für ein Upgrade auf einen Erstellungs-Build (Current Branch) dieser Vorabversion. Wenn Updates für eine Vorschauversion verfügbar sind, finden Sie diese im Knoten **Updates und Wartung** der Configuration Manager-Konsole, von wo aus Sie sie installieren können. Ein Video zum Upgradeprozess über die Konsole finden Sie unter [Installieren von ConfigMgr-Updatepaketen](https://www.youtube.com/embed/KBd_EGFbUT8) auf „youtube.com“.  
+-   Es wird nur ein eigenständiger primärer Standort unterstützt. In zentraler Verwaltungsstandort, mehrere primäre Standorte oder sekundäre Standorte werden nicht unterstützt.  
+
+Die folgenden Produkte und Technologien werden von diesem Branch von Configuration Manager unterstützt. Die Tatsache, dass diese Produkte und Technologien hier beschrieben werden, bedeutet jedoch nicht, dass damit der Support über den Support Lifecycle der jeweiligen Produkte oder Versionen hinaus erweitert wurde. Produkte, deren Support Lifecycle überschritten ist, werden nicht für die Verwendung mit Configuration Manager unterstützt. Weitere Informationen zum Microsoft Support Lifecycle finden Sie auf der Website [Microsoft Support Lifecycle](http://go.microsoft.com/fwlink/p/?LinkId=208270).  
+
+-   Es werden nur die folgenden Versionen von SQL Server unterstützt:  
+
+    -   SQL Server 2016 (ohne Service Pack, und höher)
+    -   SQL Server 2014 (mit Service Pack 1, und höher)
+    -   SQL Server 2012 (mit Service Pack 3, oder höher)
+
+
+-   Der Standort unterstützt bis zu 10 Clients mit einem der folgenden Betriebssysteme:  
+
+      -   Windows 10  
+      -   Windows 8.1  
+      -   Windows 8  
+      -   Windows 7  
 
 ##  <a name="bkmk_install"></a> Installieren und Aktualisieren der Technical Preview-Version  
  System Center Configuration Manager Technical Preview unterscheidet sich von dem aktuellen Release von System Center Configuration Manager.  

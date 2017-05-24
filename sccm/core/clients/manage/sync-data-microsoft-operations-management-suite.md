@@ -15,10 +15,11 @@ caps.latest.revision: 9
 author: arob98
 ms.author: angrobe
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: 3acfaa2cf8c64ece5cef65b80372067336d6a815
-ms.lasthandoff: 03/27/2017
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 ---
 
@@ -68,7 +69,7 @@ Ab Version 1702 können Sie den OMS-Connector für die Verbindung mit einem OMS-
 Nachdem Sie Configuration Manager mit OMS verbunden haben, können Sie Sammlungen hinzufügen oder entfernen und die Eigenschaften der OMS-Verbindung anzeigen.
 
 ## <a name="verify-the-oms-connector-properties"></a>Überprüfen der Eigenschaften des OMS-Connectors
-1.    Navigieren Sie in der Configuration Manager-Konsole zu **Verwaltung** > **Clouddienste**, wählen Sie dann **OMS-Connector** aus, um die Seite **OMS-Verbindung**** zu öffnen.
+1.    Navigieren Sie in der Configuration Manager-Konsole zu **Verwaltung** > **Clouddienste**, und wählen Sie dann **OMS-Connector** aus, um die Seite **OMS-Verbindung**** zu öffnen.
 2.    Auf dieser Seite befinden sich zwei Registerkarten:
   - **Azure Active Directory:**   
     Diese Registerkarte zeigt **Mandant**, **Client-ID**, **Client secret key expiration** (Ablauf des geheimen Clientschlüssels) an und ermöglicht Ihnen zu Überprüfen, ob Ihr geheimer Clientschlüssel abgelaufen ist.
@@ -96,12 +97,10 @@ Nachdem Sie Configuration Manager mit OMS verbunden haben, können Sie Sammlunge
 
   Ändern Sie den Wert für die Einstellung *FairFaxAuthorityResource* in „https://login.microsoftonline.com/“.
 
-  - **Original:**
-    &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+  - **Original:** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
     &lt;value>&lt;/value>
 
-    - **Bearbeitet:**
-    &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+    - **Bearbeitet:** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
     &lt;value>https://login.microsoftonline.com/&lt;/value>
 
 2.    Nachdem Sie die Datei mit den zwei Änderungen gespeichert haben, starten Sie die Configuration Manager-Konsole auf demselben Computer neu, und installieren Sie anschließend den OMS-Connector über die Konsole. Verwenden Sie für die Installation des Connectors die Informationen in [Synchronisieren von Daten von System Center Configuration Manager mit der Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite), und wählen Sie den **Operations Management Suite-Arbeitsbereich** aus, der sich in der Microsoft Azure Government-Cloud befindet.

@@ -14,10 +14,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 2f1bc62a4695d60dc4679e479797ee84cd4ddee4
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
+ms.openlocfilehash: 14b4172ad713a3981b8a5abe182405e271d78c26
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="use-the-setup-wizard-to-install-system-center-configuration-manager-sites"></a>Verwenden des Setup-Assistenten zum Installieren von System Center Configuration Manager-Standorten
@@ -310,7 +311,7 @@ Um einen eigenständigen primären Standort zu erweitern, sehen Sie sich zuerst 
     > [!IMPORTANT]  
     > Wenn SQL Server Express von Configuration Manager installiert wird, erfolgt die Installation von SQL Server Express 2012 ohne Service Pack:  
 
-    > -   Damit der sekundäre Standort unterstützt wird, müssen Sie SQL Server Express 2012 nach der Installation durch Installieren von Service Pack 2 (oder höher) einem Upgrade unterziehen.
+    > -   Damit der sekundäre Standort unterstützt wird, müssen Sie nach der Installation für SQL Server Express 2012 ein Upgrade auf eine [unterstützte Version](/sccm/core/plan-design/configs/support-for-sql-server-versions#bkmk_SQLVersions) durchführen.
     > -   Wenn außerdem die Installation des neuen sekundären Standorts nicht abgeschlossen wird, sondern erst die Installation von SQL Server Express 2012 beendet wird, müssen Sie die SQL Server Express-Instanz aktualisieren, bevor die Installation des sekundären Standorts von Configuration Manager erfolgreich wiederholt werden kann.  
 
      **Vorhandene SQL Server-Instanz verwenden**  

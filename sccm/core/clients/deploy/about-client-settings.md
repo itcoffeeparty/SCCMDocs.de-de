@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4eee9731a4a27328c47c0d15931cab28cf520a18
-ms.openlocfilehash: d1d2ec7c053d13ebaeb00d0dfeb126716b5f7ae5
+ms.sourcegitcommit: ae60eb25383f4bd07faaa1265185a471ee79b1e9
+ms.openlocfilehash: 3d90f16eac59b7069ff2f33170eba85d2cde65ef
 ms.contentlocale: de-de
 ms.lasthandoff: 05/17/2017
 
@@ -215,9 +215,9 @@ Viele der Clienteinstellungen sind selbsterklärend. Andere werden hier beschrie
 
      Wenn die BitLocker-PIN-Eingabe auf Computern konfiguriert ist, kann die obligatorische Eingabe einer PIN bei einem Computerneustart nach einer Softwareinstallation umgangen werden.  
 
-    -   **Immer**: Die BitLocker-Anforderung zur Eingabe einer PIN beim nächsten Computerstart wird von Configuration Manager nach der Installation von Software, für die ein Neustart erforderlich ist, und der Initiierung eines Computerneustarts vorübergehend ausgesetzt. Diese Einstellung gilt nur für Computerneustarts, die von Configuration Manager initiiert werden. Wenn der Benutzer den Computer neu startet, ist die Eingabe einer BitLocker-PIN weiterhin erforderlich. Die BitLocker-Anforderung zur Eingabe einer PIN wird nach dem Start von Windows wieder eingesetzt.  
+    -   **Immer**: BitLocker wird von Configuration Manager nach der Installation von Software, für die ein Neustart erforderlich ist, und der Initiierung eines Computerneustarts vorübergehend ausgesetzt. Diese Einstellung gilt nur für einen Computerneustart, der von Configuration Manager initiiert wird. Wenn der Benutzer den Computer neu startet, ist die Eingabe einer BitLocker-PIN weiterhin erforderlich. Die BitLocker-Anforderung zur Eingabe einer PIN wird nach dem Start von Windows wieder eingesetzt.
 
-    -   **Nie**: Die BitLocker-Anforderung zur Eingabe einer PIN beim nächsten Computerstart wird von Configuration Manager nach der Installation von Software, für die ein Neustart erforderlich ist, nicht ausgesetzt. In diesem Fall kann die Softwareinstallation erst abgeschlossen werden, wenn der Benutzer die PIN eingibt, um den Standardstartprozess abzuschließen und Windows zu laden.  
+    -   **Nie**: BitLocker wird von Configuration Manager nach der Installation von Software, für die ein Neustart erforderlich ist, nicht ausgesetzt. In diesem Fall kann die Softwareinstallation erst abgeschlossen werden, wenn der Benutzer die PIN eingibt, um den Standardstartprozess abzuschließen und Windows zu laden.
 
 -   **Bereitstellung von Anwendungen und Softwareupdates wird von zusätzlicher Software verwaltet**  
 

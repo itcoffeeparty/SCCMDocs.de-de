@@ -2,7 +2,7 @@
 title: "Unterstützte Versionen von SQL Server | Microsoft-Dokumentation"
 description: Abrufen der SQL Server-Version und Konfigurationsanforderungen zum Hosten einer System Center Configuration Manager-Standortdatenbank.
 ms.custom: na
-ms.date: 05/01/2017
+ms.date: 05/10/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d5a6fdc9a526c4fc3a9027dcedf1dd66a6fff5a7
-ms.openlocfilehash: fa7f232fd385f742bb11c6596c954d87c2da87a8
+ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
+ms.openlocfilehash: 4166560602edf6eb299511c8b59dc3903e3bfffc
 ms.contentlocale: de-de
-ms.lasthandoff: 05/01/2017
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -45,14 +45,19 @@ Die folgenden Instanzen werden unterstützt:
 -   SQL Server-Cluster Weitere Informationen finden Sie unter [Hosten der Standortdatenbank mit einem SQL Server-Cluster](../../../core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md).
 -   SQL Server Always On-Verfügbarkeitsgruppe. Diese Option setzt Configuration Manager Version 1602 oder höher voraus. Einzelheiten finden Sie unter [SQL Server Always On für eine hoch verfügbare Standortdatenbank für System Center Configuration Manager](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
-> [!NOTE]  
->  Ein SQL Server-Cluster in einer NLB-Clusterkonfiguration (Network Load Balancing, Netzwerklastenausgleich) wird nicht unterstützt. Auch Technologien zur SQL Server-Datenbankspiegelung und Peer-to-Peer-Replikation werden nicht unterstützt. Die standardmäßige SQL Server-Transaktionsreplikation wird nur für das Replizieren von Objekten an Verwaltungspunkte unterstützt, die für die Verwendung von [Datenbankreplikaten](https://technet.microsoft.com/library/mt608546.aspx)konfiguriert sind.  
-
 
  **Sekundäre Standorte:**  
  Die Standortdatenbank kann die Standardinstanz einer vollständigen Installation von SQL Server oder SQL Server Express verwenden.  
 
  SQL Server muss auf dem Standortservercomputer installiert sein.  
+
+ **Einschränkungen der Unterstützung**   
+ Die folgenden Konfigurationen werden nicht unterstützt:
+ -   Ein SQL Server-Cluster in einer Clusterkonfiguration mit Netzwerklastenausgleich (Network Load Balancing, NLB)
+ -   Ein SQL Server-Cluster in einem freigegebenen Clustervolume (Cluster Shared Volume, CSV)
+ -   Technologien zur SQL Server-Datenbankspiegelung sowie Peer-to-Peer-Replikation
+
+Die SQL Server-Transaktionsreplikation wird nur für das Replizieren von Objekten an Verwaltungspunkte unterstützt, die für die Verwendung von [Datenbankreplikaten](https://technet.microsoft.com/library/mt608546.aspx) konfiguriert sind.  
 
 ##  <a name="bkmk_SQLVersions"></a> Unterstützte Versionen von SQL Server  
  In einer Hierarchie mit mehreren Standorten kann jeder Standort eine andere SQL Server-Version zum Hosten der Standortdatenbank verwenden, solange Folgendes zutrifft:
@@ -109,14 +114,14 @@ Sie können diese Version von SQL Server ohne minimale kumulative Updateversion 
 -   Primären Standort  
 -   Sekundären Standort  
 
+<!-- Support for this service pack version has been dropped by Microsoft    
+### SQL Server 2012 SP2: Standard, Enterprise   
+ You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
-### <a name="sql-server-2012-sp2-standard-enterprise"></a>SQL Server 2012 SP2: Standard, Enterprise   
- Sie können diese Version von SQL Server ohne minimale kumulative Updateversion für Folgendes verwenden:  
-
--   Ein Standort der zentralen Verwaltung  
--   Primären Standort  
--   Sekundären Standort  
-
+-   A central administration site  
+-   A primary site  
+-   A secondary site  
+-->
 
 ### <a name="sql-server-2008-r2-sp3-standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3: Standard, Enterprise, Datacenter     
   [Ab Version 1702](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-support-for-sql-server-versions-as-a-site-database) wird diese Version von SQL Server nicht mehr unterstützt.  
@@ -155,10 +160,13 @@ Sie können diese Version von SQL Server ohne minimale kumulative Updateversion 
 
 -   Sekundären Standort  
 
-### <a name="sql-server-2012-express-sp2"></a>SQL Server 2012 Express SP2   
- Sie können diese Version von SQL Server ohne minimale kumulative Updateversion für Folgendes verwenden:  
+<!-- Support for this service pack version has been dropped by Microsoft   
+### SQL Server 2012 Express SP2   
+ You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
--   Sekundären Standort  
+-   A secondary site  
+-->
+
 
 ##  <a name="bkmk_SQLConfig"></a> Erforderliche Konfigurationen für SQL Server  
  Folgendes ist für alle Installationen von SQL Server erforderlich, die Sie für eine Standortdatenbank verwenden (einschließlich SQL Server Express). Wenn SQL Server Express von Configuration Manager als Teil einer Installation eines sekundären Standorts installiert wird, werden diese Konfigurationen für Sie automatisch erstellt.  

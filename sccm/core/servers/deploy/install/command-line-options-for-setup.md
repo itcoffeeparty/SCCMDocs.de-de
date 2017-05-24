@@ -15,10 +15,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: 04fe7b3e674287c4255563ab4a308e54d0b6c3aa
-ms.lasthandoff: 03/27/2017
+ms.contentlocale: de-de
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="command-line-options-for-setup-in-system-center-configuration-manager"></a>Befehlszeilenoptionen für das Setup in System Center Configuration Manager
@@ -57,8 +58,8 @@ ms.lasthandoff: 03/27/2017
 
  Weitere Informationen zu den für das Setup erforderlichen Dateien finden Sie unter  [Setup-Downloadprogramm](setup-downloader.md).  
 
- **/SCRIPT <*Setupskriptpfad*>**  
- Führt unbeaufsichtigte Installationen aus. Bei Verwendung der Option **/SCRIPT** ist eine Initialisierungsdatei für das Setup erforderlich. Weitere Informationen zur unbeaufsichtigten Ausführung des Setups finden Sie unter [Install sites using a command line (Installieren von Standorten unter Verwendung einer Befehlszeile)](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md).  
+ **/SCRIPT <*Pfad zum Setupskript*>**  
+ Damit werden unbeaufsichtigte Installationen ausgeführt. Bei Verwendung der Option **/SCRIPT** ist eine Initialisierungsdatei für Setup erforderlich. Weitere Informationen zur unbeaufsichtigten Ausführung des Setups finden Sie unter [Install sites using a command line (Installieren von Standorten unter Verwendung einer Befehlszeile)](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md).  
 
  **/SDKINST <*FQDN des SMS-Anbieters*>**  
  Damit wird der SMS-Anbieter auf dem angegebenen Computer installiert. Sie müssen den vollqualifizierten Domänennamen (FQDN) für den SMS-Anbietercomputer bereitstellen. Weitere Informationen zum SMS-Anbieter finden Sie im Abschnitt [Planen des SMS-Anbieters für System Center Configuration Manager](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
@@ -66,8 +67,8 @@ ms.lasthandoff: 03/27/2017
  **/SDKDEINST <*FQDN des SMS-Anbieters*>**  
  Damit wird der SMS-Anbieter auf dem angegebenen Computer deinstalliert. Sie müssen den FQDN für den SMS-Anbietercomputer bereitstellen.  
 
- **/MANAGELANGS <*Sprachskriptpfad*>**  
- Verwaltet die zuvor an einem installierten Standort installierten Sprachen. Zur Verwendung dieser Option müssen Sie das Setup über **<*Configuration Manager-Installationspfad*>\BIN\X64** auf dem Standortserver ausführen und den Speicherort der Sprachskriptdatei angeben, die die Spracheinstellungen enthält. Weitere Informationen zu den in der Skriptdatei für das Sprachsetup verfügbaren Sprachoptionen finden Sie unter [Befehlszeilenoptionen zum Verwalten von Sprachen](#bkmk_Lang) in diesem Thema.  
+ **/MANAGELANGS <*Pfad zum Sprachskript*>**  
+ Damit werden die Sprachen verwaltet, die an einem zuvor installierten Standort installiert wurden. Zur Verwendung dieser Option müssen Sie das Setup über **<*Configuration Manager-Installationspfad*>\BIN\X64** auf dem Standortserver ausführen und den Speicherort der Sprachskriptdatei angeben, die die Spracheinstellungen enthält. Weitere Informationen zu den in der Skriptdatei für das Sprachsetup verfügbaren Sprachoptionen finden Sie unter [Befehlszeilenoptionen zum Verwalten von Sprachen](#bkmk_Lang) in diesem Thema.  
 
 ##  <a name="bkmk_Lang"></a> Befehlszeilenoptionen zum Verwalten von Sprachen  
  **Identification**  

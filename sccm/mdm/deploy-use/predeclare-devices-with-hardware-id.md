@@ -64,7 +64,7 @@ Wenn Sie Seriennummern von firmeneigenen iOS-Geräten hochladen, müssen sie mit
 
 Die CSV-Datei, die Sie verwenden, um Geräte anhand der IMEI-Nummer oder der Seriennummer zu identifizieren, muss das folgende Format aufweisen (außer der obersten Zeile, die lediglich Informationszwecken dient). Jede Zeile muss eine ID-Nummer enthalten, entweder eine IMEI-Nummer oder eine iOS-Seriennummer. Sie können beide angeben. IMEI-Nummern können für Android-, iOS- und Windows-Geräte verwendet werden. iOS-Seriennummern werden ebenfalls unterstützt.  Diese Tabelle enthält Beispieldaten:
 
-| IMEI #  | iOS Serial #  | OS | Details |
+| IMEI-Nummer  | iOS-Seriennummer  | OS | Details |
 |------------ |---------------|-----|-----|
 | 123456789012345    |   | WINDOWS | Unternehmenseigenes Windows-Gerät|
 |   | A1B2C3D4E5C6 | IOS |     Unternehmenseigenes iOS-Gerät|
