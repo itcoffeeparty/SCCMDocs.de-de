@@ -15,9 +15,10 @@ caps.latest.revision: 8
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a85a5cece803e5c16da71f897d5780049fbb82cd
 ms.openlocfilehash: eddf20bebd80028336503957dfc4c3d1dbbb23f2
+ms.contentlocale: de-de
 ms.lasthandoff: 12/16/2016
 
 
@@ -89,7 +90,7 @@ Für die Softwaremessung liegen keine externen Abhängigkeiten, sondern nur Abh�
         >
         >  Dieses Feld ist optional, wenn ein Wert für **Dateiname** angegeben ist.
 
-    -   **Version** : Version der zu messenden ausführbaren Datei. Sie können das Platzhalterzeichens * stellvertretend für eine beliebige Zeichenfolge und das Platzhalterzeichen ? stellvertretend für ein beliebiges einzelnes Zeichen angeben. Wenn Sie alle Versionen einer ausführbaren Datei messen möchten, verwenden Sie den Standardwert (\*).
+    -   **Version** : Version der zu messenden ausführbaren Datei. Sie können das Platzhalterzeichens (*) stellvertretend für eine beliebige Zeichenfolge und das Platzhalterzeichen (?) stellvertretend für ein beliebiges einzelnes Zeichen angeben. Wenn Sie alle Versionen einer ausführbaren Datei messen möchten, verwenden Sie den Standardwert (\*).
 
     -   **Sprache** – die Sprache der zu messenden ausführbaren Datei. Der Standardwert ist das aktuelle Gebietsschema des von Ihnen verwendeten Betriebssystems. Wenn Sie eine zu messende ausführbare Datei durch Klicken auf die Schaltfläche **Durchsuchen** auswählen, wird dieses Feld automatisch aufgefüllt, wenn Sprachinformationen im Dateiheader vorhanden sind. Wenn Sie alle Sprachversionen einer Datei messen möchten, wählen Sie in der Dropdownliste den Eintrag **Beliebig** aus.
 
