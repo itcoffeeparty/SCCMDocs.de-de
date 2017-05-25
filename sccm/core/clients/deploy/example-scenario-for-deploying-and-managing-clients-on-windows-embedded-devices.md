@@ -88,7 +88,7 @@ Coho Vineyard & Winery eröffnet demnächst ein Besucherzentrum und benötigt Ki
 
      Weitere Informationen finden Sie unter [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md).  
 
-8.  Andrea führt den Assistenten zum Bereitstellen von Software **** aus und konfiguriert eine erforderliche Anwendung, um die Software für interaktive Präsentationen zu installieren. Auf der Seite **Benutzerfreundlichkeit** des Assistenten akzeptiert sie im Bereich **Schreibfilterverarbeitung für Windows Embedded-Geräte** die Standardoption **Änderungen zum Stichtag oder während eines Wartungsfensters ausführen (erfordert Neustart)**.  
+8.  Andrea führt den **Assistenten zum Bereitstellen von Software** aus und konfiguriert eine erforderliche Anwendung, um die Software für interaktive Präsentationen zu installieren. Auf der Seite **Benutzerfreundlichkeit** des Assistenten akzeptiert sie im Bereich **Schreibfilterverarbeitung für Windows Embedded-Geräte** die Standardoption **Änderungen zum Stichtag oder während eines Wartungsfensters ausführen (erfordert Neustart)**.  
 
      Andrea behält diese Standardoption für Schreibfilter bei, um sicherzustellen, dass die Anwendung nach einem Neustart beibehalten wird und somit den Besuchern, die die Kioske benutzen, stets zur Verfügung steht. Mit dem täglichen Wartungsfenster wird ein sicherer Zeitraum bereitgestellt, in dem die bei Installationen und Updates erforderlichen Neustarts stattfinden können.  
 
