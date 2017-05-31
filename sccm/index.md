@@ -3,10 +3,11 @@ layout: HubPage
 hide_bc: true
 title: System Center Configuration Manager-Dokumentation
 description: Erfahren Sie, wie Sie System Center Configuration Manager verwenden.
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f37eb16960545fd1b1ae31acb8c2f830d4028dc5
 ms.openlocfilehash: 6a4079f2c89130ce4bbd24b0015f0b873021f9b6
-ms.lasthandoff: 04/24/2017
+ms.contentlocale: de-de
+ms.lasthandoff: 05/31/2017
 
 ---
 <div id="main" class="v2">
