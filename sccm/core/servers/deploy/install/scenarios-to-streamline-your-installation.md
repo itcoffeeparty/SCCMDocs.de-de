@@ -27,7 +27,7 @@ ms.lasthandoff: 05/17/2017
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Mit dem Release von Updateversionen für System Center Configuration Manager (Current Branch) gibt es neue Szenarios für die Optimierung der Installation einer neuen Hierarchie mit einer Updateversion (wie Update 1610) und für ein Upgrade von Microsoft System Center 2012 Configuration Manager. 
+Mit dem Release von Updateversionen für System Center Configuration Manager (Current Branch) gibt es neue Szenarios für die Optimierung der Installation einer neuen Hierarchie mit einer Updateversion (wie Update 1610) und für ein Upgrade von Microsoft System Center 2012 Configuration Manager.
 
 Unterstützte Szenarien:  
 
@@ -113,9 +113,7 @@ Gehen Sie wie folgt vor:
     -   Ein untergeordneter primärer Standort installiert automatisch dieselben Updates, die Sie an einem Standort der zentralen Verwaltung installieren.  
     -   An sekundären Standorten werden neue Versionen nicht automatisch installiert. Sie müssen diese manuell aus der Konsole upgraden.  
 
-   
-
-    Wenn Sie nach diesem Schritt Updates am Standort der zentralen Verwaltung installieren, installieren untergeordnete primäre Standorte dieses Update, sobald ihr Wartungsfenster es zulässt.  
+  Wenn Sie nach diesem Schritt Updates am Standort der zentralen Verwaltung installieren, installieren untergeordnete primäre Standorte dieses Update, sobald ihr Wartungsfenster es zulässt.  
 
 4.  **Installieren Sie die Updateversion am Standort auf oberster Ebene.** Dadurch wird der Standort auf oberster Ebene aktualisiert. Nachdem die Updateversion am Standort der zentralen Verwaltung installiert wurde, wird an allen untergeordneten primären Standorten das Update automatisch installiert, es sei denn die Installation wird durch ein Wartungsfenster verhindert.  
 
