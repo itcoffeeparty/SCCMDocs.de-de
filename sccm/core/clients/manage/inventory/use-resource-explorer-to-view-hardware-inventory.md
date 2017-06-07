@@ -42,7 +42,7 @@ Zeigen Sie mithilfe des Ressourcen-Explorers in System Center Configuration Mana
     >  Der Hardwareinventurverlauf wird von Configuration Manager für die Anzahl von Tagen beibehalten, die Sie im Standortwartungstask **Veralteten Inventurverlauf löschen** festlegen.  
 
 > [!NOTE]  
->  Informationen zum Anzeigen der Hardwareinventur von Clients, auf denen Linux und UNIX ausgeführt werden, finden Sie unter [How to monitor clients for Linux and UNIX servers in System Center Configuration Manager](../../../../core/clients/manage/monitor-clients-for-linux-and-unix-servers.md).  
+>  Informationen zum Anzeigen der Hardwareinventur von Clients, auf denen Linux und UNIX ausgeführt werden, finden Sie unter [Überwachen von Clients für Linux- und UNIX-Server in System Center Configuration Manager](../../../../core/clients/manage/monitor-clients-for-linux-and-unix-servers.md).  
 
 ### <a name="how-to-run-resource-explorer-from-the-configuration-manager-console"></a>Ausführen des Ressourcen-Explorers über die Configuration Manager-Konsole  
 
