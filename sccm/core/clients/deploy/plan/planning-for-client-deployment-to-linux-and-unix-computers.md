@@ -248,7 +248,7 @@ Sie können den System Center Configuration Manager-Client auf Computern install
 
  **Firewall-Anforderungen**: Stellen Sie sicher, dass Firewalls nicht Kommunikation über die Ports blockieren, die Sie als clientanforderungsports angeben. Der Client für Linux und UNIX kommuniziert direkt mit Verwaltungspunkten, Verteilungspunkten und Fallbackstatuspunkten.  
 
- Weitere Informationen zur Clientkommunikation und zu Anforderungsports finden Sie unter  [Configure the Client for Linux and UNIX to Locate Management Points](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md#BKMK_ConfigClientMP).  
+ Weitere Informationen zur Clientkommunikation und zu Anforderungsports finden Sie unter  [Konfigurieren des Clients für Linux und UNIX für die Suche nach Verwaltungspunkten](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md#BKMK_ConfigClientMP).  
 
 ##  <a name="BKMK_PlanningforCommunicationsforLnU"></a> Planen der Kommunikation zwischen Gesamtstruktur-Vertrauensstellungen für Linux- und UNIX-Server  
  Linux- und UNIX-Server, die Sie mit Configuration Manager verwalten, stellen Clients in Arbeitsgruppen dar und erfordern ähnliche Konfigurationen wie Windows-basierte Clients, die sich in einer Arbeitsgruppe befinden. Informationen über die Kommunikation von Computern, die sich in Arbeitsgruppen befinden, finden Sie unter [Kommunikation zwischen Active Directory-Gesamtstrukturen](../../../../core/plan-design/hierarchy/communications-between-endpoints.md#Plan_Com_X-Forest) im Thema [Datenübertragungen zwischen Endpunkten in System Center Configuration Manager](../../../../core/plan-design/hierarchy/communications-between-endpoints.md).  
