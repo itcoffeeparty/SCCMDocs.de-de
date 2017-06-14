@@ -16,9 +16,10 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: 132803a1aa9aad5c5462686bd656688418e47d07
+ms.contentlocale: de-de
 ms.lasthandoff: 12/16/2016
 
 
@@ -62,7 +63,7 @@ Wenn Überwachungstasks Anzeichen für Probleme finden, sollten Sie die Ursache 
  Verwenden Sie die folgenden Informationen, um allgemeine Configuration Manager-Tasks zu überwachen:  
 
  **Warnungen**  
-   Siehe [Monitor alerts](../../../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorAlerts) in [Use alerts and the status system for System Center Configuration Manager](../../../core/servers/manage/use-alerts-and-the-status-system.md).  
+   Siehe [Überwachen von Warnungen](../../../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorAlerts) unter [Verwenden von Benachrichtigungen und des Statussystems für System Center Configuration Manager](../../../core/servers/manage/use-alerts-and-the-status-system.md).  
 
  **Kompatibilitätseinstellungen**  
    Informationen finden Sie unter [Überwachen von Kompatibilitätseinstellungen in System Center Configuration Manager](../../../compliance/deploy-use/monitor-compliance-settings.md)  
