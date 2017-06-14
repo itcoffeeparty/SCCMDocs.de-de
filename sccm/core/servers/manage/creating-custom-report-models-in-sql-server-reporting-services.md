@@ -16,9 +16,10 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: 9951dd9333ebef00c7acd5d72b20a02382e3206c
+ms.contentlocale: de-de
 ms.lasthandoff: 12/16/2016
 
 
@@ -39,7 +40,7 @@ In System Center Configuration Manager sind Beispielberichtsmodelle enthalten. S
 |Definieren einer Datenquelle für ein Berichtsmodell|Nach dem Erstellen eines Berichtsmodellprojekts müssen Sie eine Datenquelle festlegen, aus der Sie die Unternehmensdaten extrahieren. Das ist normalerweise die Configuration Manager-Standortdatenbank.|Weitere Informationen finden Sie im Abschnitt [To define the data source for the report model](#BKMK_DefineReportModelDataSource) in diesem Thema.|  
 |Definieren einer Datenquellensicht für ein Berichtsmodell|Nach der Definition der Datenquellen, die Sie in Ihrem Berichtsmodellprojekt verwenden werden, definieren Sie im nächsten Schritt eine Datenquellensicht für das Projekt. Eine Datenquellensicht ist ein logisches Datenmodell, das auf mindestens einer Datenquelle basiert. Datenquellensichten schließen den Zugriff auf physische Objekte wie Tabellen und Ansichten ein, die in den zugrundeliegenden Datenquellen enthalten sind. SQL Server Reporting Services generiert das Berichtsmodell aus der Datenquellensicht.<br /><br /> Datenquellensichten vereinfachen den Modellentwurfsvorgang, weil sie Ihnen eine nützliche Darstellung der Daten bereitstellen, die Sie angegeben haben. Sie können in einer Datenquellensicht Tabellen und Felder umbenennen sowie aggregierte Felder und abgeleitete Tabellen hinzufügen, ohne die zugrundeliegende Datenquelle ändern zu müssen. Fügen Sie der Datenquellensicht für ein effizientes Modell nur die Tabellen hinzu, die Sie verwenden möchten.|Weitere Informationen finden Sie im Abschnitt [To define the data source view for the report model](#BKMK_DefineReportModelDataSourceView) in diesem Thema.|  
 |Erstellen eines Berichtsmodells|Ein Berichtsmodell ist eine Schicht über einer Datenbank, die Geschäftseinheiten, Felder und Rollen identifiziert. Nach dem Veröffentlichen können Benutzer von Report Builder mithilfe dieser Modelle Berichte entwickeln, ohne mit den Datenbankstrukturen vertraut zu sein oder Abfragen verstehen und schreiben zu müssen. Modelle bestehen aus Sätzen verwandter Berichtselemente, die einschließlich vordefinierter Beziehungen zwischen diesen Geschäftselementen und einschließlich vordefinierter Kalkulationen unter einem Anzeigenamen gruppiert werden. Modelle werden mithilfe der XML-Sprache SMDL (Semantic Model Definition Language) definiert. Die Dateinamenerweiterung für Berichtsmodelldateien ist „smdl“.|Weitere Informationen finden Sie im Abschnitt [To create the report model](#BKMK_CreateReportModel) in diesem Thema.|  
-|Veröffentlichen eines Berichtsmodells|Zum Aufbauen eines Berichts mithilfe des soeben erstellten Modells müssen Sie das Modell auf einem Berichtsserver veröffentlichen. Die Datenquelle und die Datenquellensicht werden in das Modell eingeschlossen, wenn es veröffentlicht wird.|Weitere Informationen finden Sie im Abschnitt [To publish the report model for use in SQL Server Reporting Services](#BKMK_PublishReportModel) in diesem Thema.|  
+|Veröffentlichen eines Berichtsmodells|Zum Aufbauen eines Berichts mithilfe des soeben erstellten Modells müssen Sie das Modell auf einem Berichtsserver veröffentlichen. Die Datenquelle und die Datenquellensicht werden in das Modell eingeschlossen, wenn es veröffentlicht wird.|Weitere Informationen finden Sie im Abschnitt [So veröffentlichen Sie das Berichtsmodell (zur Verwendung in SQL Server Reporting Services)](#BKMK_PublishReportModel) in diesem Thema.|  
 |Bereitstellen des Berichtsmodells in Configuration Manager|Bevor Sie mithilfe des **Assistenten zum Erstellen von Berichten** einen modellbasierten Bericht auf der Basis eines benutzerdefinierten Berichtsmodells erstellen können, müssen Sie das Berichtsmodell in Configuration Manager bereitstellen.|Weitere Informationen finden Sie im Abschnitt [To deploy the custom report model to Configuration Manager](#BKMK_DeployReportModel) in diesem Thema.|  
 
 ## <a name="steps-for-creating-a-basic-report-model-in-sql-server-reporting-services"></a>Schritte zum Erstellen eines grundlegenden Berichtsmodells in SQL Server Reporting Services  
@@ -64,7 +65,7 @@ In System Center Configuration Manager sind Beispielberichtsmodelle enthalten. S
     > [!NOTE]  
     >  Wenn der Bereich **Projektmappen-Explorer** nicht angezeigt wird, klicken Sie auf **Anzeigen**und anschließend auf **Projektmappen-Explorer**.  
 
-###  <a name="BKMK_DefineReportModelDataSource"></a> To define the data source for the report model  
+###  <a name="BKMK_DefineReportModelDataSource"></a> So legen Sie die Datenquelle für das Berichtsmodell fest  
 
 1.  Klicken Sie im Bereich **Projektmappen-Explorer** von **SQL Server Business Intelligence Development Studio**mit der rechten Maustaste auf **Datenquellen** , um **Neue Datenquelle hinzufügen**auszuwählen.  
 
@@ -93,7 +94,7 @@ In System Center Configuration Manager sind Beispielberichtsmodelle enthalten. S
     > [!NOTE]  
     >  Zum Bearbeiten der Eigenschaften einer vorhandenen Datenquelle doppelklicken Sie auf die Datenquelle im Ordner **Datenquellen** im Bereich **Projektmappen-Explorer** , um die Datenquelleneigenschaften im Datenquellen-Designer anzuzeigen.  
 
-###  <a name="BKMK_DefineReportModelDataSourceView"></a> To define the data source view for the report model  
+###  <a name="BKMK_DefineReportModelDataSourceView"></a> So legen Sie die Datenquellensicht für das Berichtsmodell fest  
 
 1.  Klicken Sie im Bereich **Projektmappen-Explorer**mit der rechten Maustaste auf **Datenquellensichten** , um **Neue Datenquellensicht hinzufügen**auszuwählen.  
 
@@ -132,7 +133,7 @@ In System Center Configuration Manager sind Beispielberichtsmodelle enthalten. S
 
 8.  Zum Beenden des Assistenten klicken Sie auf **Fertig stellen**. Das Berichtsmodell wird im Entwurfsfenster angezeigt.  
 
-###  <a name="BKMK_PublishReportModel"></a> To publish the report model for use in SQL Server Reporting Services  
+###  <a name="BKMK_PublishReportModel"></a> So veröffentlichen Sie das Berichtsmodell (zur Verwendung in SQL Server Reporting Services)  
 
 1.  Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf das Berichtsmodell, um **Bereitstellen**auszuwählen. In diesem Beispiel wird das Berichtsmodell **Einfaches_Modell.smdl**verwendet.  
 
@@ -181,7 +182,7 @@ In System Center Configuration Manager sind Beispielberichtsmodelle enthalten. S
     > [!IMPORTANT]  
     >  Nach dem Kopieren der Berichtsmodelldatei auf den Configuration Manager-Standortserver müssen Sie die Configuration Manager-Konsole beenden und neu starten, um das Berichtsmodell im **Assistenten zum Erstellen von Berichten** verwenden zu können.  
 
-##  <a name="AdvancedReportModel"></a> Steps for Creating an Advanced Report Model in SQL Server Reporting Services  
+##  <a name="AdvancedReportModel"></a> Schritte zum Erstellen eines erweiterten Berichtsmodells in SQL Server Reporting Services  
  Mithilfe der folgenden Verfahren können Sie ein erweitertes Berichtsmodell erstellen, das Benutzern an Ihrem Standort die Ausführung bestimmter modellbasierter Berichte auf der Basis von Daten in mehreren Ansichten der Configuration Manager-Datenbank erlaubt. Das von Ihnen erstellte Berichtsmodell gibt dem Berichtsautor Aufschluss über die Clientcomputer und die auf diesen installierten Betriebssysteme. Die entsprechenden Informationen werden den folgenden Ansichten der Configuration Manager-Datenbank entnommen:  
 
 -   **V_R_System**: Diese Ansicht enthält Informationen zu den ermittelten Computern und zum Configuration Manager-Client.  
@@ -209,7 +210,7 @@ In System Center Configuration Manager sind Beispielberichtsmodelle enthalten. S
     > [!NOTE]  
     >  Wenn der Bereich **Projektmappen-Explorer** nicht angezeigt wird, klicken Sie auf **Anzeigen**und anschließend auf **Projektmappen-Explorer**.  
 
-#### <a name="to-define-the-data-source-for-the-report-model"></a>To define the data source for the report model  
+#### <a name="to-define-the-data-source-for-the-report-model"></a>So legen Sie die Datenquelle für das Berichtsmodell fest  
 
 1.  Klicken Sie im Bereich **Projektmappen-Explorer** von **SQL Server Business Intelligence Development Studio**mit der rechten Maustaste auf **Datenquellen** , um **Neue Datenquelle hinzufügen**auszuwählen.  
 
@@ -238,7 +239,7 @@ In System Center Configuration Manager sind Beispielberichtsmodelle enthalten. S
     > [!NOTE]  
     >  Zum Bearbeiten der Eigenschaften einer vorhandenen Datenquelle doppelklicken Sie auf die Datenquelle im Ordner **Datenquellen** im Bereich **Projektmappen-Explorer** , um die Datenquelleneigenschaften im Datenquellen-Designer anzuzeigen.  
 
-#### <a name="to-define-the-data-source-view-for-the-report-model"></a>To define the data source view for the report model  
+#### <a name="to-define-the-data-source-view-for-the-report-model"></a>So legen Sie die Datenquellensicht für das Berichtsmodell fest  
 
 1.  Klicken Sie im Bereich **Projektmappen-Explorer**mit der rechten Maustaste auf **Datenquellensichten** , um **Neue Datenquellensicht hinzufügen**auszuwählen.  
 
@@ -375,7 +376,7 @@ In System Center Configuration Manager sind Beispielberichtsmodelle enthalten. S
 
 4.  Nachdem Sie alle gewünschten Objekte umbenannt haben, klicken Sie auf **Datei**und dann auf **Alle speichern**.  
 
-#### <a name="to-publish-the-report-model-for-use-in-sql-server-reporting-services"></a>To publish the report model for use in SQL Server Reporting Services  
+#### <a name="to-publish-the-report-model-for-use-in-sql-server-reporting-services"></a>So veröffentlichen Sie das Berichtsmodell (zur Verwendung in SQL Server Reporting Services)  
 
 1.  Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf **Erweitertes_Modell.smdl** , um **Bereitstellen**auszuwählen.  
 
