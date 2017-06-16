@@ -110,7 +110,7 @@ System Center Configuration Manager stellt einen Treiberkatalog bereit, den Sie 
 
 2.  Erweitern Sie im Arbeitsbereich **Softwarebibliothek** den Bereich **Betriebssysteme**, und klicken Sie dann auf **Treiber**.  
 
-3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Treiber importieren** , um den ** **Treiberimport-Assistenten zu starten.  
+3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Treiber importieren** , um den **** Treiberimport-Assistenten zu starten.  
 
 4.  Geben Sie auf der Seite **Treiber suchen** die folgenden Optionen an, und klicken Sie dann auf **Weiter**:  
 
@@ -124,7 +124,7 @@ System Center Configuration Manager stellt einen Treiberkatalog bereit, den Sie 
     -   **Option für doppelte Treiber angeben**: Geben Sie an, wie in Configuration Manager Treiberkategorien verwaltet werden sollen, wenn ein doppelter Gerätetreiber importiert wird.  
 
     > [!IMPORTANT]  
-    >  Wenn Sie Treiber importieren, muss der Standortserver über die ** ** Leseberechtigung für diesen Ordner verfügen. Andernfalls tritt beim Import ein Fehler auf.  
+    >  Wenn Sie Treiber importieren, muss der Standortserver über die ****  Leseberechtigung für diesen Ordner verfügen. Andernfalls tritt beim Import ein Fehler auf.  
 
 5.  Geben Sie auf der Seite **Treiberdetails** die folgenden Optionen an, und klicken Sie dann auf **Weiter**:  
 
@@ -262,7 +262,7 @@ System Center Configuration Manager stellt einen Treiberkatalog bereit, den Sie 
 
 3.  Wählen Sie im Knoten **Tasksequenzen** die Tasksequenz aus, die Sie ändern möchten, um den Gerätetreiber zu installieren, und klicken Sie dann auf **Bearbeiten**.  
 
-4.  Wechseln Sie zu dem Speicherort, an dem Sie die ** ** Treiberschritte hinzufügen möchten, klicken Sie auf **Hinzufügen**, und wählen Sie dann **Treiber**aus.  
+4.  Wechseln Sie zu dem Speicherort, an dem Sie die ****  Treiberschritte hinzufügen möchten, klicken Sie auf **Hinzufügen**, und wählen Sie dann **Treiber**aus.  
 
 5.  Fügen Sie den Schritt **Treiber automatisch anwenden** hinzu, wenn von der Tasksequenz alle Gerätetreiber oder bestimmte angegebene Kategorien installiert werden sollen. Geben Sie auf der Registerkarte **Eigenschaften** die Optionen für den Schritt und ggf. auf der Registerkarte **Optionen** die Bedingungen für den Schritt an.  
 
