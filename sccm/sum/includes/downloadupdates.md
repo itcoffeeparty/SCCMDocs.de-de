@@ -12,7 +12,7 @@
         > [!TIP]  
         >  Klicken Sie auf **Kriterien hinzufügen** , um die im Knoten **Alle Softwareupdates** angezeigten Softwareupdates zu filtern. Speichern Sie Suchkriterien, die Sie häufig verwenden, und verwalten Sie die gespeicherten Suchvorgänge auf der Registerkarte **Suchen** .  
 
-         Der Assistent zum Herunterladen von Softwareupdates ** ** wird geöffnet.  
+         Der Assistent zum Herunterladen von Softwareupdates ****  wird geöffnet.  
 
 3.  Konfigurieren Sie auf der Seite **Bereitstellungspaket** die folgenden Einstellungen:  
 
@@ -79,8 +79,3 @@
 8. Überprüfen Sie auf der Seite **Zusammenfassung** die im Assistenten ausgewählten Einstellungen. Klicken Sie dann auf **Weiter**, um die Softwareupdates herunterzuladen.  
 
 9. Überprüfen Sie auf der Seite **Abschluss**, ob die Softwareupdates erfolgreich heruntergeladen wurden. Klicken Sie dann auf **Schließen**.  
-
-
-<!--HONumber=Jan17_HO4-->
-
-

@@ -173,7 +173,7 @@ ms.lasthandoff: 05/17/2017
 
 3.  Wählen Sie die Softwareupdategruppe aus, die Sie bereitstellen möchten.  
 
-4.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Bereitstellung** auf **Bereitstellen**. Der Assistent zum Bereitstellen von Softwareupdates ** ** wird geöffnet.  
+4.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Bereitstellung** auf **Bereitstellen**. Der Assistent zum Bereitstellen von Softwareupdates ****  wird geöffnet.  
 
 5.  Konfigurieren Sie auf der Seite Allgemein die folgenden Einstellungen:  
 
@@ -236,10 +236,10 @@ ms.lasthandoff: 05/17/2017
 
     -   **Benutzerbenachrichtigungen**: Geben Sie an, ob zum vorgegebenen **Zeitpunkt der Verfügbarkeit der Software** auf dem Clientcomputer eine Benachrichtigung zu den Softwareupdates im Softwarecenter angezeigt werden soll. Geben Sie auch an, ob auf den Clientcomputern Benutzerbenachrichtigungen angezeigt werden sollen. Wenn auf der Seite „Bereitstellungseinstellungen“ unter **Bereitstellungstyp** die Einstellung **Verfügbar** ausgewählt ist, können Sie **In Softwarecenter und allen Benachrichtigungen ausblenden**nicht auswählen.  
 
-    -   **Verhalten am Stichtag:** *Diese Option ist nur verfügbar, wenn auf der Seite *Bereitstellungseinstellungen* unter **Bereitstellungstyp** die Option **Erforderlich** ausgewählt wurde.*   
+    -   **Verhalten am Stichtag:** *Diese Option ist nur verfügbar, wenn auf der Seite* Bereitstellungseinstellungen *unter* *Bereitstellungstyp* *die Option **Erforderlich** ausgewählt wurde.*   
     Geben Sie das Verhalten am Stichtag der Softwareupdatebereitstellung an. Geben Sie an, ob die Softwareupdates in der Bereitstellung installiert werden sollen. Geben Sie auch, ob nach einer Softwareupdateinstallation unabhängig von einem konfigurierten Wartungsfenster ein Systemneustart ausgeführt werden soll. Weitere Informationen zu Wartungsfenstern finden Sie unter [Verwenden von Wartungsfenstern](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
-    -   **Verhalten beim Geräteneustart:** *Diese Option ist nur verfügbar, wenn auf der Seite *Bereitstellungseinstellungen* unter **Bereitstellungstyp** die Option **Erforderlich** ausgewählt wurde.*    
+    -   **Verhalten beim Geräteneustart:** *Diese Option ist nur verfügbar, wenn auf der Seite* Bereitstellungseinstellungen *unter* *Bereitstellungstyp* *die Option **Erforderlich** ausgewählt wurde.*    
     Geben Sie an, ob nach der Installation der Softwareupdates ein Systemneustart auf den Servern und Arbeitsstationen unterdrückt werden soll, wenn der Systemneustart zum Abschließen der Installation erforderlich ist.  
 
         > [!IMPORTANT]  
