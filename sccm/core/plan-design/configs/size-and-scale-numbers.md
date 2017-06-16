@@ -15,9 +15,11 @@ caps.latest.revision: 4
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f9c43e26758d5171a6ef56e827b4b054ebc8a5e5
 ms.openlocfilehash: c7ad33339e65e6e00e88f98d6e13baceb98dae77
+ms.contentlocale: de-de
+ms.lasthandoff: 12/30/2016
 
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>Größe und Skalierung von Zahlen für System Center Configuration Manager
@@ -37,7 +39,7 @@ Verwenden Sie die Informationen in diesem Thema zusammen mit den Informationen i
 
 Die Zahlen zur Unterstützung in diesem Artikel basieren auf der Verwendung der empfohlenen Hardware für Configuration Manager sowie auf den Standardeinstellungen für alle verfügbaren Configuration Manager-Funktionen. Wird die empfohlene Hardware nicht verwendet oder werden aggressivere benutzerdefinierte Einstellungen verwendet (wenn beispielsweise eine Hardware- oder Softwareinventur entgegen der Standardeinstellung häufiger als alle sieben Tage ausgeführt wird), wird die Leistung von Standortsystemen möglicherweise beeinträchtigt und die Leistung entspricht unter Umständen nicht dem angegebenen Unterstützungsgrad.
 
-##  <a name="a-namebkmksitesystemscalea-site-types"></a><a name="bkmk_SiteSystemScale"></a> Standorttypen  
+##  <a name="bkmk_SiteSystemScale"></a> Standorttypen  
  **Standort der zentralen Verwaltung:**  
 
 -   Ein Standort der zentralen Verwaltung unterstützt bis zu 25 untergeordnete primäre Standorte.  
@@ -67,7 +69,7 @@ Die Zahlen zur Unterstützung in diesem Artikel basieren auf der Verwendung der 
 
     -   Jede Instanz dieser Standortsystemrolle unterstützt die maximale Anzahl von Clients, die von der Hierarchie unterstützt werden.  
 
-## <a name="a-namebkmkrolesa-site-system-roles"></a><a name="bkmk_roles"></a> Standortsystemrolle    
+## <a name="bkmk_roles"></a> Standortsystemrolle    
 
 **Anwendungskatalog-Webdienstpunkt:**  
 
@@ -125,10 +127,10 @@ Die Zahlen zur Unterstützung in diesem Artikel basieren auf der Verwendung der 
 
 -   Die Konfiguration von Softwareupdatepunkten als NLB-Cluster (Network Load Balancing, Netzwerklastenausgleich) wird nicht standardmäßig von Configuration Manager unterstützt. Sie können jedoch das Configuration Manager SDK verwenden, um bis zu vier Softwareupdatepunkte in einem NLB-Cluster zu konfigurieren.  
 
-##  <a name="a-namebkmkclientnumbersa-client-numbers-for-sites-and-hierarchies"></a><a name="bkmk_clientnumbers"></a> Anzahl der Clients für Standorte und Hierarchien  
+##  <a name="bkmk_clientnumbers"></a> Anzahl der Clients für Standorte und Hierarchien  
  Ermitteln Sie anhand der folgenden Informationen, wie viele Clients – und welchen Typs – Sie an einem Standort oder in einer Hierarchie unterstützen können.  
 
-###  <a name="a-namebkmkcasa-hierarchy-with-a-central-administration-site"></a><a name="bkmk_cas"></a> Hierarchie mit Standort der zentralen Verwaltung  
+###  <a name="bkmk_cas"></a> Hierarchie mit Standort der zentralen Verwaltung  
 Ein Standort der zentralen Verwaltung unterstützt eine Gesamtanzahl an Geräten, die maximal der Anzahl an Geräten entspricht, die für die folgenden drei Gruppen aufgelistet ist:  
 
 -   700.000 Desktops (Computer, auf denen Windows, Linux und UNIX ausgeführt wird)  
@@ -147,14 +149,14 @@ Ein Standort der zentralen Verwaltung unterstützt eine Gesamtanzahl an Geräten
 >  In einer Hierarchie, in der für den Standort der zentralen Verwaltung eine Standardedition von SQL Server verwendet wird, werden in der Hierarchie bis zu 50.000 Desktops und Geräte unterstützt. Die an einem eigenständigen primären Standort eingesetzte Edition von SQL Server beschränkt nicht die Kapazität dieses Standorts zur Unterstützung der angegebenen maximalen Anzahl von Clients.  
 
 
-###  <a name="a-namebkmkchipria-child-primary-site"></a><a name="bkmk_chipri"></a> Untergeordneter primärer Standort  
+###  <a name="bkmk_chipri"></a> Untergeordneter primärer Standort  
 Jeder untergeordnete primäre Standort in einer Hierarchie mit einem zentralen Verwaltungsstandort unterstützt Folgendes:  
 
--   Insgesamt&150;.000 Clients und Geräte, nicht beschränkt auf bestimmte Gruppen oder Typen, solange die unterstützte Gesamtanzahl in der Hierarchie nicht überschritten wird.  
+-   Insgesamt 150.000 Clients und Geräte, nicht beschränkt auf bestimmte Gruppen oder Typen, solange die unterstützte Gesamtanzahl in der Hierarchie nicht überschritten wird.  
 
 An einem primären Standort, an dem 25.000 Computer unterstützt werden, auf denen Macintosh und Windows CE 7.0 ausgeführt wird (da dies der Grenzwert für eine Hierarchie ist), können weitere 125.000 Desktopcomputer unterstützt werden. Somit erhöht sich die Anzahl der insgesamt unterstützten Geräten auf die für einen untergeordneten primären Standort geltende maximale Anzahl von 150.000 Geräten.
 
-###  <a name="a-namebkmkpria-stand-alone-primary-site"></a><a name="bkmk_pri"></a> Eigenständiger primärer Standort  
+###  <a name="bkmk_pri"></a> Eigenständiger primärer Standort  
 Ein eigenständiger primärer Standort unterstützt die folgende Anzahl von Geräten:  
 
 -   175.000 Clients und Geräte insgesamt, nicht überschreiten:  
@@ -171,12 +173,12 @@ Ein eigenständiger primärer Standort unterstützt die folgende Anzahl von Ger�
 
 Beispielsweise können an einem eigenständigen primären Standort, an dem 150.000 Desktops und 10.000 Macintosh- oder Windows CE 7.0-Geräte unterstützt werden, nur zusätzliche 15.000 Geräte unterstützt werden. Diese Geräte können cloudbasiert oder mit der lokalen Verwaltung mobiler Geräte verwaltet werden.  
 
-###  <a name="a-namebkmkseca-secondary-sites"></a><a name="bkmk_sec"></a> Sekundäre Standorte  
+###  <a name="bkmk_sec"></a> Sekundäre Standorte  
 Sekundäre Standorte unterstützen Folgendes:  
 
 -   15.000 Desktops (Computer, auf denen Windows, Linux und UNIX ausgeführt wird)  
 
-###  <a name="a-namebkmkmpa-management-points"></a><a name="bkmk_mp"></a> Verwaltungspunkte  
+###  <a name="bkmk_mp"></a> Verwaltungspunkte  
 Von jedem Verwaltungspunkt kann die folgende Anzahl von Geräten unterstützt werden:  
 
 -   25.000 Clients und Geräte insgesamt, nicht überschreiten:  
@@ -188,9 +190,4 @@ Von jedem Verwaltungspunkt kann die folgende Anzahl von Geräten unterstützt we
         -   10.000 Geräte, die mithilfe der lokalen Verwaltung mobiler Geräte verwaltet werden  
 
         -   10.000 Macintosh- und Windows CE 7.0-Clients
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 
