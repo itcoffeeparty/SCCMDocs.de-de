@@ -131,7 +131,7 @@ Wenn ein Client keinen Kontakt mit dem ersten Verwaltungspunkt herstellen kann, 
 
 Nach dem Einrichten der Kommunikation mit einem Verwaltungspunkt verwendet der Client weiterhin denselben Verwaltungspunkt bis zum folgenden Punkt:  
 
--   Es sind&25; Stunden vergangen.  
+-   Es sind 25 Stunden vergangen.  
 -   Der Client kann bei fünf Versuchen über einen Zeitraum von 10 Minuten keine Kommunikation mit dem Verwaltungspunkt einrichten.
 
 Der Client wählt nach dem Zufallsprinzip einen neuen Verwaltungspunkt aus.  

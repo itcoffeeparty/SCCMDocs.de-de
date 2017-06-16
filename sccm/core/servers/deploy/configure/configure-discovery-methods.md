@@ -129,7 +129,7 @@ Wenden Sie die folgenden Verfahren an, um die Active Directory-Gesamtstrukturerm
 
 5.  Wählen Sie **Hinzufügen** aus, um einen Ermittlungsbereich zu konfigurieren. Wählen Sie entweder **Gruppen** oder **Ort** aus, und führen Sie im Dialogfeld **Gruppen hinzufügen** bzw. im Dialogfeld **Active Directory-Ort hinzufügen** die folgenden Konfigurationen aus:  
 
-    1.  Geben Sie einen Namen ** ** für diesen Ermittlungsbereich an.  
+    1.  Geben Sie einen Namen ****  für diesen Ermittlungsbereich an.  
 
     2.  Geben Sie eine **Active Directory-Domäne** oder einen **Ort** zum Durchsuchen an:  
 
@@ -213,7 +213,7 @@ Wenden Sie die folgenden Verfahren an, um die Active Directory-Gesamtstrukturerm
 8.  Wenn Sie mit dem Konfigurieren der Active Directory-Benutzerermittlung fertig sind, wählen Sie **OK** aus, um die Konfiguration zu speichern.  
 
 ##  <a name="BKMK_ConfigHBDisc"></a> Konfigurieren einer Frequenzermittlung  
- Die Frequenzermittlung ist standardmäßig aktiviert, wenn Sie einen primären Configuration Manager-Standort installieren. Daher müssen Sie nur mithilfe eines Zeitplans festlegen, wie oft die Discovery Data Records der Frequenzermittlung von den Clients an einen Verwaltungspunkt gesendet werden sollen, wenn Sie nicht die Standardeinstellung „alle&7; Tage“ verwenden möchten.  
+ Die Frequenzermittlung ist standardmäßig aktiviert, wenn Sie einen primären Configuration Manager-Standort installieren. Daher müssen Sie nur mithilfe eines Zeitplans festlegen, wie oft die Discovery Data Records der Frequenzermittlung von den Clients an einen Verwaltungspunkt gesendet werden sollen, wenn Sie nicht die Standardeinstellung „alle 7 Tage“ verwenden möchten.  
 
 > [!NOTE]  
 >  Wenn an einem Standort die Clientpushinstallation und der Standortwartungstask **Installationsflag löschen** zugleich aktiviert sind, legen Sie den Zeitplan für die Frequenzermittlung mit einem kürzeren Zeitraum als dem **Clientneuermittlungs-Zeitraum** des Standortwartungstasks **Installationsflag löschen** fest. Weitere Informationen zu Standortwartungstasks finden Sie unter [Wartungstasks für System Center Configuration Manager](../../../../core/servers/manage/maintenance-tasks.md).  
