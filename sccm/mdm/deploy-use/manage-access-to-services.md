@@ -32,7 +32,7 @@ ms.lasthandoff: 03/06/2017
 ## <a name="conditional-access-in-system-center-configuration-manager"></a>Bedingter Zugriff in System Center Configuration Manager
 Verwenden Sie den **bedingten Zugriff**, um E-Mails und andere Dienste auf den Geräten, die mit Microsoft Intune registriert sind, basierend auf den von Ihnen festgelegten Bedingungen zu schützen.  
 
- Informationen zum **bedingten Zugriff auf PCs, die mit System Center Configuration Manager** verwaltet und auf Kompatibilität bewertet werden, finden Sie unter [Verwalten des Zugriffs auf Office&365;-Dienste für PCs, die von System Center Configuration Manager verwaltet werden](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
+ Informationen zum **bedingten Zugriff auf PCs, die mit System Center Configuration Manager** verwaltet und auf Kompatibilität bewertet werden, finden Sie unter [Verwalten des Zugriffs auf Office 365-Dienste für PCs, die von System Center Configuration Manager verwaltet werden](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
 
 
  Ein typischer Ablauf für bedingten Zugriff könnte wie folgt aussehen:  
