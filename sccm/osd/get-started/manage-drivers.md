@@ -114,7 +114,7 @@ System Center Configuration Manager stellt einen Treiberkatalog bereit, den Sie 
 
 4.  Geben Sie auf der Seite **Treiber suchen** die folgenden Optionen an, und klicken Sie dann auf **Weiter**:  
 
-    -   **Alle Treiber im folgenden Netzwerkpfad (UNC) importieren**: Geben Sie den Netzwerkpfad zu einem Gerätetreiberordner an, um alle Gerätetreiber zu importieren, die sich in einem bestimmten Ordner befinden. Beispiel:  **\\\&lt;Servername&gt;\&lt;Ordner&gt;**.  
+    -   **Alle Treiber im folgenden Netzwerkpfad (UNC) importieren**: Geben Sie den Netzwerkpfad zu einem Gerätetreiberordner an, um alle Gerätetreiber zu importieren, die sich in einem bestimmten Ordner befinden. Beispiel:  **\\\Servername\Ordner**.  
 
         > [!NOTE]  
         >  Der Prozess zum Importieren aller Treiber kann eine Weile dauern, wenn viele Ordner und viele Treiberdateien (.inf) vorhanden sind.  
