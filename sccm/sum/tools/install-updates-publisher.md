@@ -2,7 +2,7 @@
 title: Installieren von Updates Publisher | Microsoft-Dokumentation
 description: Installieren von System Center Updates Publisher in der Umgebung
 ms.custom: na
-ms.date: 4/29/2017
+ms.date: 07/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ ms.author: brenduns
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
-ms.openlocfilehash: 996766d0bd9ab2a3acb1970414f0ae511d97fbff
+ms.sourcegitcommit: 70772ba7d08560aa66abcce29dc6cc6334aa2032
+ms.openlocfilehash: 63ea0383497a3f06870c0907c732010259d1a809
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 # <a name="install-updates-publisher"></a>Installieren von Updates Publisher
@@ -119,7 +119,7 @@ Da dieser Ordner alle Dateien enthält, die zur Verwendung von Updates Publisher
 Um Updates Publisher zu starten, führen Sie nach der Installation **UpdatesPublisher.exe** im *UpdatesPublisher*-Ordner aus.
 
 ## <a name="next-steps"></a>Nächste Schritte
- Es wird empfohlen, nach der Installation von Updates Publisher die [Optionen für Updates Publisher zu konfigurieren](/tools/updates-publisher-options). Bevor Sie bestimmte Funktionen von Updates Publisher verwenden können, müssen Sie einige Optionen konfigurieren.
+ Es wird empfohlen, nach der Installation von Updates Publisher die [Optionen für Updates Publisher zu konfigurieren](updates-publisher-options.md). Bevor Sie bestimmte Funktionen von Updates Publisher verwenden können, müssen Sie einige Optionen konfigurieren.
 
- Wenn Sie jedoch die Standardwerte verwenden möchten und nicht die Bereitstellung von Updates auf einem Updateserver oder auf verwalteten Geräten planen, können Sie direkt mit [Verwalten von Softwareupdatekatalogen](/tools/updates-publisher-catalogs) oder [Erstellen von Softwareupdates](/tools/create-updates-with-updates-publisher) fortfahren und eigenständig Updatekataloge erstellen.
+ Wenn Sie jedoch die Standardwerte verwenden möchten und nicht die Bereitstellung von Updates auf einem Updateserver oder auf verwalteten Geräten planen, können Sie direkt mit [Verwalten von Softwareupdatekatalogen](updates-publisher-catalogs.md) oder [Erstellen von Softwareupdates](create-updates-with-updates-publisher.md) fortfahren und eigenständig Updatekataloge erstellen.
 
