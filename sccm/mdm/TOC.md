@@ -55,6 +55,8 @@
 
 ## [Verwalten eines Intune-Abonnements](deploy-use/manage-intune-subscriptions.md)
 
+## [Change your MDM authority (Ändern Ihrer MDM-Autorität)](deploy-use/change-mdm-authority.md)
+
 ## Verwalten des Zugriffs auf Ressourcen
 ### [Erstellen von WLAN-Profilen](deploy-use/create-wifi-profiles.md)
 ### [Erstellen von PFX-Zertifikatprofilen](deploy-use/create-pfx-certificate-profiles.md)

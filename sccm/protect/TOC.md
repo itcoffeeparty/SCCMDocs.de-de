@@ -1,7 +1,9 @@
 # Verstehen und Kennenlernen
 ## [Übersicht](understand\protect-data-and-site-infrastructure.md)
-## [Sicherung und Wiederherstellung:](understand/backup-and-recovery.md)
-## [Optionen für hohe Verfügbarkeit](understand/high-availability-options.md)
+## [Back up sites (Sichern von Sites)](understand/backup-and-recovery.md)
+## [Recover sites (Wiederherstellen von Sites)](understand/recover-sites.md)
+## [Unattended site recovery (Unbeaufsichtigte Sitewiederherstellung)](understand/unattended-recovery.md)
+## [High availability options (Optionen für hohe Verfügbarkeit)](understand/high-availability-options.md)
 ## [Verwalten risikoreicher Bereitstellungen](understand/settings-to-manage-high-risk-deployments.md)
 
 # Planung und Entwurf
