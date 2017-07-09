@@ -16,10 +16,10 @@ ms.author: brenduns
 manager: angrobe
 ROBOTS: NOINDEX, NOFOLLOW
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 831d8a66c827d246069c7415cdce7a7c4bb95b33
-ms.openlocfilehash: 19e3099773f887129374413482702de3f4b0a36f
+ms.sourcegitcommit: db673277d1cc2d24e8dba2439b2b1891c883ebd0
+ms.openlocfilehash: 8b80f4d14eafa4cbbfb083178a118bc0e71f4019
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/16/2017
 
 ---
 # <a name="what39s-new-in-version-1610-of-system-center-configuration-manager"></a>Neuerungen in Version 1610 von System Center Configuration Manager
@@ -143,7 +143,7 @@ Wenn Sie eine Toleranzperiode konfigurieren und das Kontrollkästchen aktivieren
 
 
 ## <a name="improved-functionality-in-dialog-boxes-about-required-software"></a>Verbesserte Funktionalität in Dialogfeldern zur erforderlichen Software
-Wenn ein Benutzer erforderliche Software erhält, kann er über die Einstellung **Warten und erinnern:** eine Auswahl aus der folgenden Dropdownliste von Werten treffen: 
+Wenn ein Benutzer erforderliche Software von der Einstellung **Warten und erinnern:** erhält, kann er sie aus der folgenden Dropdownliste von Werten auswählen: 
 - **Später**. Gibt an, dass Benachrichtigungen basierend auf den in den Client-Agent-Einstellungen konfigurierten Benachrichtigungseinstellungen geplant sind.
 - **Feste Zeit**. Gibt an, dass die Benachrichtigung nach der ausgewählten Zeit erneut angezeigt wird (beispielsweise in 30 Minuten).
 

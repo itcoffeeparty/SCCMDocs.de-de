@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
-ms.openlocfilehash: ec33d5febcbf7b57e220f7fe27db9671080fecff
+ms.sourcegitcommit: b0ba955aa7f854c3fa2c06ccf9ccd8ed354758b0
+ms.openlocfilehash: 31bddee83b2365cfa903077ffaa1d7116b194378
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/12/2017
 
 
 ---
@@ -40,7 +40,7 @@ Darüber hinaus werden auch Produkte und Produktversionen, die in den folgenden 
 **Windows:**
 - Es werden nur Qualitäts- und Sicherheitsupdates für Windows unterstützt.
 - Current Branches (CB), Current Branches for Business (CBB) oder LTSB von Windows 10 werden nicht unterstützt.
--    Neue Hauptversionen von Windows Server werden nicht unterstützt.
+-   Neue Hauptversionen von Windows Server werden nicht unterstützt.
 
 **SQL Server:**
 - Es werden nur Qualitäts- und Sicherheitsupdates bzw. kleinere Updates für SQL Server wie Service Packs unterstützt.
@@ -51,6 +51,7 @@ LTSB bietet Unterstützung unter Verwendung der folgenden Windows-Computerbetrie
 
 **Unterstützte Betriebssysteme:**
 - Windows Server 2016
+- Windows Server 2012 R2 (x64) – Standard, Datacenter
 - Windows Server 2012 (x64) – Standard, Datacenter
 - Windows Server 2008 R2 mit SP1 (x64) – Standard, Enterprise, Datacenter
 - Windows Server 2008 mit SP2 (x86, x64): Standard, Enterprise, Datacenter *(siehe Hinweis 1)*
