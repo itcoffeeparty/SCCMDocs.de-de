@@ -15,14 +15,15 @@ caps.latest.revision: 6
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 27a92dc1c3710ff55f0b145386319dda371533d9
-ms.openlocfilehash: d3b20a59a9147e09e58f04f83f97fd72ebfef5a1
+ms.translationtype: HT
+ms.sourcegitcommit: 344b55aecd72479b759b40e8252e64a06c5eaba0
+ms.openlocfilehash: 3bfb7364c3de5264a5fa8a684965d9aebeb84719
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-# <a name="create-android-applications-with-system-center-configuration-manager"></a>Erstellen von Android-Apps mit System Center Configuration Manager
+# Erstellen von Android-Apps mit System Center Configuration Manager
+<a id="create-android-applications-with-system-center-configuration-manager" class="xliff"></a>
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -36,7 +37,8 @@ In einer System Center Configuration Manager-Anwendung ist mindestens ein Bereit
 
 Unter [Starten des Assistenten zum Erstellen von Anwendungen](../../apps/deploy-use/create-applications.md#start-the-create-application-wizard) finden Sie weitere Informationen zu erforderlichen Schritten zum Erstellen von Configuration Manager-Anwendungen und Bereitstellungstypen. Berücksichtigen Sie beim Erstellen und Bereitstellen von Apps für Android-Geräte auch Folgendes.  
 
-## <a name="general-considerations-for-android-apps"></a>Allgemeine Aspekte für Android-Apps
+## Allgemeine Aspekte für Android-Apps
+<a id="general-considerations-for-android-apps" class="xliff"></a>
 
 Configuration Manager unterstützt die Bereitstellung folgender App-Typen für Android:
 
@@ -48,9 +50,11 @@ Die folgenden Bereitstellungsaktionen werden unterstützt:
 
 |Gerätetyp|Unterstützte Aktionen|
 |-|-|
-|Android|**Verfügbar**, **Erforderlich** Der Benutzer muss der Installation und Deinstallation zustimmen.
+|Android|**Verfügbar**, **Erforderlich**: Der Benutzer muss der Installation und Deinstallation zustimmen.|
+|Android for Work | **Erforderlich** |
 
-## <a name="approve-and-deploy-android-for-work-apps"></a>Genehmigen und Bereitstellen von Android for Work Apps
+## Genehmigen und Bereitstellen von Android for Work Apps
+<a id="approve-and-deploy-android-for-work-apps" class="xliff"></a>
 Als ein Configuration Manager-Administrator können Sie Apps auch auf der [Play for Work-Website](https://play.google.com/work) genehmigen und bereitstellen und diese Apps auf verwalteten Android for Work-Geräten bereitstellen.
 
 Gehen Sie wie folgt vor, um Apps im Play for Work-Store zu genehmigen, diese mit der Configuration Manager-Konsole zu synchronisieren und sie anschließend in verwalteten Android for Work-Geräten bereitzustellen. Um Apps in die Arbeitsprofile von Benutzern bereitzustellen, müssen Sie die Apps zunächst in Play for Work genehmigen und anschließend mit der Configuration Manager-Konsole synchronisieren.
