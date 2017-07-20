@@ -15,11 +15,11 @@ caps.latest.revision: 18
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-experimental: true
-experiment_id: rob-table-161101
-translationtype: Human Translation
-ms.sourcegitcommit: 5aef08865b232ff2dacec6906098bebf4e42e6b1
-ms.openlocfilehash: 699adb5fac0c625c321db011af6989cc4c0778ec
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
+ms.openlocfilehash: 959a36413d06bb225f260bd44c1d3d59efd44e69
+ms.contentlocale: de-de
+ms.lasthandoff: 06/28/2017
 
 
 ---
@@ -37,11 +37,11 @@ Dieses Thema enthält die Grundlagen, die Sie vor der Arbeit mit System Center C
 
  Bei der Bereitstellung der Anwendung für Geräte entscheiden **Anforderungen** , welcher Bereitstellungstyp auf dem Gerät installiert wird.  
 
- Eine Anwendung hat natürlich noch weitere Funktionen, die Sie im Verlauf dieses Leitfadens kennenlernen werden. In der folgenden Tabelle werden Konzepte vorgestellt, mit denen Sie sich vertraut machen sollten, bevor Sie sich eingehender mit dem Thema beschäftigen. Nicht alle Konzepte sind jeder erstellten Anwendung erforderlich:  
+ Eine Anwendung bietet viele weitere Möglichkeiten. Mehr zu diesen erfahren Sie bei der Lektüre dieses Leitfadens. In der folgenden Tabelle werden Konzepte vorgestellt, mit denen Sie sich vertraut machen sollten, bevor Sie sich eingehender mit dem Thema beschäftigen:  
 
 |Konzept|Beschreibung|    
 |-|-|  
-|**Requirements**|In früheren Versionen von Configuration Manager wurde häufig eine Sammlung mit den Geräten erstellt, für die Sie eine Anwendung bereitstellen wollten. Obwohl Sie weiterhin so verfahren können, ist es aufgrund von Anforderungen nicht mehr unbedingt erforderlich, da Sie sehr viel genauere Kriterien angeben können, nach denen eine Anwendung installiert wird.<br /><br /> Beispiel: Sie können angeben, dass eine Anwendung nur auf Geräten unter Windows 10 installiert werden darf. Dann können Sie die Anwendung für alle Geräte bereitstellen, allerdings wird sie nur auf Geräten mit Windows 10 installiert.<br /><br /> Durch Auswerten von Anforderungen wird von Configuration Manager bestimmt, ob eine Anwendung und deren Bereitstellungstypen installiert werden. Anschließend wird der für die Installation einer Anwendung richtige Bereitstellungstyp ermittelt. Die Anforderungsregeln werden entsprechend der Clienteinstellung **Erneute Auswertung für Bereitstellungen planen**standardmäßig alle sieben Tage erneut ausgewertet, um die Kompatibilität zu gewährleisten.<br /><br /> Weitere Informationen finden Sie unter [Erstellen und Bereitstellen einer Anwendung](../../apps/get-started/create-and-deploy-an-application.md).|  
+|**Requirements**|In früheren Versionen von Configuration Manager wurde häufig eine Sammlung mit den Geräten erstellt, für die Sie eine Anwendung bereitstellen wollten. Obwohl Sie weiterhin eine Sammlung erstellen können, lassen sich mit Anforderungen detailliertere Kriterien für eine Anwendungsbereitstellung angeben.<br /><br /> Beispiel: Sie können angeben, dass eine Anwendung nur auf Geräten unter Windows 10 installiert werden darf. Dann können Sie die Anwendung auf Ihren Geräten bereitstellen. Allerdings wird sie nur auf Geräten mit Windows 10 installiert.<br /><br /> Durch Auswerten von Anforderungen wird von Configuration Manager bestimmt, ob eine Anwendung und deren Bereitstellungstypen installiert werden. Anschließend wird der für die Installation einer Anwendung richtige Bereitstellungstyp ermittelt. Die Anforderungsregeln werden entsprechend der Clienteinstellung **Erneute Auswertung für Bereitstellungen planen**standardmäßig alle sieben Tage erneut ausgewertet, um die Kompatibilität zu gewährleisten.<br /><br /> Weitere Informationen finden Sie unter [Erstellen und Bereitstellen einer Anwendung](../../apps/get-started/create-and-deploy-an-application.md).|  
 |**Globale Bedingungen**|Obwohl Anforderungen mit einem bestimmten Bereitstellungstyp in einer einzelnen Anwendung verwendet werden, können Sie auch globale Bedingungen erstellen. Hierbei handelt es sich um eine Bibliothek mit vordefinierten Anforderungen, die Sie mit jeder Anwendung und jedem Anwendungstyp verwenden können.<br /><br /> Configuration Manager enthält eine Reihe integrierter globaler Bedingungen, und Sie können auch eigene erstellen.<br /><br /> Weitere Informationen finden Sie unter [Erstellen von globalen Bedingungen](../../apps/deploy-use/create-global-conditions.md).|  
 |**Simulierte Bereitstellung**|Wertet die Anforderungen, die Erkennungsmethode und die Abhängigkeiten für eine Anwendung aus. Die Ergebnisse werden ausgegeben, ohne dass die Anwendung installiert wird.<br /><br /> Weitere Informationen finden Sie unter [Simulieren von Anwendungsbereitstellungen](../../apps/deploy-use/simulate-application-deployments.md).|  
 |**Bereitstellungsaktion**|Gibt an, ob Sie die bereitgestellte Anwendung installieren oder deinstallieren möchten (falls unterstützt).<br /><br /> Weitere Informationen finden Sie unter [Bereitstellen von Anwendungen](../../apps/deploy-use/deploy-applications.md).|  
@@ -110,9 +110,4 @@ Beim Verwalten von Geräten mit Microsoft Intune oder der lokalen Geräteverwalt
 -   Skripts, die mit regelmäßiger Wiederholung ausgeführt werden und keine globale Auswertung verwenden können
 
  Weitere Informationen finden Sie unter [Pakete und Programme](../../apps/deploy-use/packages-and-programs.md).  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

@@ -17,10 +17,10 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 071d758f1015d16217a54fe26df5f8f948c818a3
+ms.sourcegitcommit: 6f9e6e93fce95666503907010a5c253158c5de7c
+ms.openlocfilehash: f648d7626af50d95fbaa5a7a2abd821a9c47f5d1
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/07/2017
 
 
 ---
@@ -629,6 +629,9 @@ Dieser Tasksequenzschritt wird nur in Windows PE ausgeführt. Er wird nicht in e
 
 -   Um dynamisch ein passendes Treiberpaket herunterzuladen, verwenden Sie zwei **Paketinhalt herunterladen** -Schritte mit Bedingungen zum Ermitteln des geeigneten Hardwaretyps für jedes Treiberpaket. Konfigurieren Sie jeden **Paketinhalt herunterladen** -Schritt zur Verwendung derselben Variablen, und verwenden Sie die Variable für den **Bereitgestellter Inhalt** -Wert im Bereich „Treiber“ im Schritt **Betriebssystem aktualisieren** .  
 
+> [!NOTE]    
+> Wenn Sie eine Tasksequenz bereitstellen, die den Schritt „Paketinhalt herunterladen“ enthält, aktivieren Sie im Assistenten zum Bereitstellen von Software auf der Seite **Verteilungspunkte** für **Bereitstellungsoptionen** nicht **Alle Inhalte vor dem Start der Tasksequenz lokal herunterladen**.  
+
 Dieser Schritt wird entweder in einem Standardbetriebssystem oder in Windows PE ausgeführt. WinPE unterstützt die Option, die Pakete im Clientcache des Configuration Manager zu speichern, jedoch nicht.
 
 ### <a name="details"></a>Details  
@@ -654,11 +657,11 @@ Dieser Schritt wird entweder in einem Standardbetriebssystem oder in Windows PE 
  **In folgendem Verzeichnis speichern**  
  Sie können das Paket in einem der folgenden Verzeichnisse speichern:  
 
--   **Tasksequenz-Arbeitsverzeichnis**  
+ -   **Tasksequenz-Arbeitsverzeichnis**  
 
--   **Configuration Manager-Clientcache**: Sie verwenden diese Option, um den Inhalt im Clientcache zu speichern. Dadurch kann der Client als Peercachequelle für andere Peercacheclients fungieren. Weitere Informationen finden Sie unter [Vorbereiten des Windows PE-Peercache zum Reduzieren des WAN-Datenverkehrs](../get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md).  
+ -   **Configuration Manager-Clientcache**: Sie verwenden diese Option, um den Inhalt im Clientcache zu speichern. Dadurch kann der Client als Peercachequelle für andere Peercacheclients fungieren. Weitere Informationen finden Sie unter [Vorbereiten des Windows PE-Peercache zum Reduzieren des WAN-Datenverkehrs](../get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md).  
 
--   **Benutzerdefinierter Pfad**  
+ -   **Benutzerdefinierter Pfad**  
 
  **Pfad als Variable speichern**  
  Sie können den Pfad als Variable speichern, die in einem anderen Tasksequenzschritt verwendet werden kann. Configuration Manager fügt dem Variablennamen ein numerisches Suffix hinzu. Wenn Sie beispielsweise eine Variable %*mycontent*% als eine benutzerdefinierte Variable angeben, ist dies das Stammverzeichnis, in dem alle referenzierten Inhalte gespeichert werden (dies können mehrere Pakete sein). Wenn Sie auf die Variable verweisen, fügen Sie der Variablen ein numerisches Suffix hinzu. Beispielsweise verweisen Sie für das erste Paket auf die Variable %*mycontent01*% Wenn Sie auf die Variable in einem Untersequenzschritt verweisen, z.B. „Betriebssystem aktualisieren“, verwenden Sie %*mycontent02*% oder %*mycontent03*%, wobei die Anzahl der Reihenfolge entspricht, in dem das Paket im Schritt aufgelistet wird.  

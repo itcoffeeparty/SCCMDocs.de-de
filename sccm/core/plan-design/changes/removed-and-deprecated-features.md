@@ -2,7 +2,7 @@
 title: Veraltete Features | Microsoft Docs
 description: "Hier finden Sie Informationen zu den Features, Produkten und Betriebssystemen, die von System Center Configuration Manager nicht mehr unterstützt werden."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 06/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 57b9ab13bda0bb5fa5139e52a4c55ef9524e4097
+ms.sourcegitcommit: 0ec241d07f51b80b84d65676ef1207b31a9a9983
+ms.openlocfilehash: e23acf743d8f73afd213c44c3728d1b66d7e558f
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/28/2017
 
 
 ---
@@ -59,7 +59,7 @@ Weitere Informationen finden Sie in folgenden Quellen:
 
 -   Hinweis 1: Dieses Betriebssystem wird für Standortserver oder Standortsystemrollen mit Ausnahme des Verteilungspunkts und des Pullverteilungspunkts nicht unterstützt. Sie können dieses Betriebssystem weiterhin als Verteilungspunkt verwenden, bis die Einstellung dieses Supports angekündigt wird oder der erweiterte Support für dieses Betriebssystem abläuft. Weitere Informationen finden Sie unter [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008 (Bei der Installation von System Center Configuration Manager CB und LTSB auf Windows Server 2008 tritt ein Fehler auf)](https://support.microsoft.com/help/4015095).
 
--   Hinweis 2: Ab Version 1702 wird dieses Betriebssystem für Standortserver und die meisten Standortsystemrollen nicht unterstützt. Alle Versionen vor 1702 unterstützen das Betriebssystem auch weiterhin. Dieses Betriebssystem wird jedoch weiterhin für die Verwendung der Standortsystemrollen „Zustandsmigrationspunkt“ und „Verteilungspunkt“ unterstützt (einschließlich „Pullverteilungspunkt“, PXE und Multicast), bis der Support eingestellt wird oder der erweiterte Supportzeitraum für dieses Betriebssystem abläuft. Ab Version 1602 können Sie ein direktes Upgrade des Betriebssystems eines Standortservers von Windows Server 2008 R2 auf Windows Server 2012 R2 durchführen.  
+-   Hinweis 2: Ab Version 1702 wird dieses Betriebssystem für Standortserver und die meisten Standortsystemrollen nicht unterstützt. Alle Versionen vor 1702 unterstützen das Betriebssystem auch weiterhin. Dieses Betriebssystem wird jedoch weiterhin für die Verwendung der Standortsystemrolle „Verteilungspunkt“ unterstützt (einschließlich „Pullverteilungspunkt“, PXE und Multicast), bis der Support eingestellt wird oder der erweiterte Supportzeitraum für dieses Betriebssystem abläuft. Ab Version 1602 können Sie ein direktes Upgrade des Betriebssystems eines Standortservers von Windows Server 2008 R2 auf Windows Server 2012 R2 durchführen.  
 
      Weitere Informationen zum direkten Upgrade des Betriebssystems eines Standortservers finden Sie im Abschnitt [In-place upgrade the operating system of site servers that run Windows Server 2008 R2 (Direktes Upgraden des Betriebssystems von Standortservern unter Windows Server 2008 R2)](../../../core/plan-design/changes/whats-new-in-version-1602.md#bkmk_UpgradeOS) des Themas [What's changed in System Center Configuration Manager (Neues in System Center Configuration Manager)](../../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md).
 
@@ -103,7 +103,7 @@ Wenn Sie Ihre Version von SQL Server aktualisieren müssen, werden folgende Meth
 |Out-of-Band-Verwaltung wie in System Center 2012 Configuration Manager|16. Oktober 2015|Version 1511|
 |Tasksequenzen: <br /> – OSDPreserveDriveLetter  <br /><br /> Während einer standardmäßigen Betriebssystembereitstellung bestimmt Windows Setup den Laufwerkbuchstaben, der am besten zur Verwendung geeignet ist (in der Regel C:). Wenn Sie ein anderes Laufwerk zur Verwendung angeben möchten, können Sie den Speicherort im Tasksequenzschritt „Betriebssystem anwenden“ ändern. Wechseln Sie zur Einstellung **Wählen Sie den Standort aus, an dem Sie dieses Betriebssystem anwenden möchten.**, wählen Sie **Bestimmter Buchstabe für logisches Laufwerk** aus und wählen Sie das Laufwerk aus, das Sie verwenden möchten. |20. Juni 2016 |Version 1606 |
 |Tasksequenzen: <br /> - In dynamischen Datenträger konvertieren <br /> - Bereitstellungstools installieren |18. November 2016|Der Support für diese Tasksequenzen endet mit dem ersten Update, das nach dem 1. Juni 2017 veröffentlicht wird.|
-|Das Softwarecenter erhält ein neues, modernes Aussehen. Apps, die bisher nur im von Silverlight abhängigen Anwendungskatalog angezeigt wurden (für Benutzer verfügbare Apps), werden jetzt im Softwarecenter auf der Registerkarte **Anwendungen** angezeigt. Auf den Anwendungskatalog kann weiterhin über den Link auf der Registerkarte **Installationsstatus** im Softwarecenter zugegriffen werden.<br><br>In den kommenden Monaten wird die vorherige Version des Softwarecenters nicht länger zur Verfügung stehen.<br><br>Sie können Clients für die Verwendung des neuen Softwarecenters konfigurieren, indem Sie die Clienteinstellung **Computer-Agent** > **Neues Softwarecenter verwenden** aktivieren.<br><br>Weitere Informationen zum Softwarecenter finden Sie unter [Planen und Konfigurieren der Anwendungsverwaltung in System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management).|13. Dezember 2016|Wird bekanntgegeben|
+|Das Softwarecenter erhält ein neues, modernes Aussehen. Apps, die bisher nur im von Silverlight abhängigen Anwendungskatalog angezeigt wurden (für Benutzer verfügbare Apps), werden jetzt im Softwarecenter auf der Registerkarte **Anwendungen** angezeigt. Auf den Anwendungskatalog kann weiterhin über den Link auf der Registerkarte **Installationsstatus** im Softwarecenter zugegriffen werden.<br><br>In den kommenden Monaten wird die vorherige Version des Softwarecenters nicht länger zur Verfügung stehen.<br><br>Sie können Clients für die Verwendung des neuen Softwarecenters konfigurieren, indem Sie die Clienteinstellung **Computer-Agent** > **Neues Softwarecenter verwenden** aktivieren.<br><br>Weitere Informationen zum Softwarecenter finden Sie unter [Planen und Konfigurieren der Anwendungsverwaltung in System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management).|13. Dezember 2016|Die Unterstützung der vorherigen Version des Softwarecenters endet mit dem ersten Update, das nach dem 1. Januar 2018 veröffentlicht wird.|
 |Verwaltung von virtuellen Festplatten (VHDs) mit Configuration Manager. </br></br>Dies schließt das Entfernen von Optionen zum Erstellen einer neuen virtuellen Festplatte oder Verwalten einer virtuellen Festplatte mithilfe einer Tasksequenz und das Entfernen des Knotens „Virtuelle Festplatten“ über die Configuration Manager-Konsole ein. </br></br>Wenn dieser Support eingestellt wird, werden vorhandene virtuelle Festplatten nicht gelöscht, es kann aber nicht mehr in der Configuration Manager-Konsole darauf zugegriffen werden.  |6. Januar 2017 |Der Support für virtuelle Festplatten endet mit dem ersten Update, das nach dem 1. Juni 2017 veröffentlicht wird.|
 |System Center Configuration Manager-Upgradebewertungstool </br></br>Das Upgradebewertungstool ist sowohl von System Center Configuration Manager als auch vom Anwendungskompatibilitäts-Toolkit (Application Compatibility Toolkit, ACT) 6.x abhängig. Die letzte Version von ACT war im Windows 10 v1511 ADK enthalten. Da es keine weiteren Updates für ACT geben wird, wird auch der entsprechende Support für das Upgradebewertungstool eingestellt. </br></br>Das Upgradebewertungstool wird durch das Feature [Upgradebereitschaft](/sccm/core/clients/manage/upgrade/upgrade-analytics) ersetzt. Hinweise zu veralteten Funktionen wurden am 9. Dezember 2016 auf der [Downloadseite des Upgradebewertungstools](https://www.microsoft.com/download/details.aspx?id=37145) hinzugefügt. |9. Dezember 2016  | 11. Juli 2017 |  
 

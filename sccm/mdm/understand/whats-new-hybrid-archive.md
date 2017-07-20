@@ -2,7 +2,7 @@
 title: 'Archiv: Neuheiten bei hybrider MDM | Microsoft-Dokumentation'
 description: "Archiv der früheren Features der Verwaltung mobiler Geräte, die für Hybridbereitstellungen mit System Center Configuration Manager und Intune verfügbar sind"
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 06/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ ms.author: mtillman
 manager: angrobe
 ROBOTS: NOINDEX, NOFOLLOW
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 623a30eddebcae196ff345ef5debc8183ecd6ae6
+ms.sourcegitcommit: ed6b65a1a5aabc0970cd0333cb033405cf6d2aea
+ms.openlocfilehash: 0abd1cdcf44e778c91bacb8011efd711818ce2e9
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>Frühere Hybridfeatures mit System Center Configuration Manager und Microsoft Intune
@@ -36,7 +36,87 @@ Dieser Artikel bietet Details zu früheren Features für die Verwaltung mobiler 
 |-|  
 |**Neuheiten in Microsoft Intune** – Im Allgemeinen sollten alle in dieser Kategorie aufgelisteten Features mit allen Configuration Manager-Releases, einschließlich Configuration Manager-Releases von System Center 2012 R2, zusammenarbeiten, da für diese Features nur der Intune-Dienst erforderlich ist, aber keine zusätzliche Funktionalität in Configuration Manager.<br /><br /> **Neuheiten in Configuration Manager Technical Preview** – Alle in dieser Kategorie aufgelisteten Features arbeiten nur mit dem angegebenen Technical Preview-Release zusammen. Um diese Features zu testen, müssen Sie die in der Featurebeschreibung angegebene Technical Preview-Version installieren. Weitere Informationen finden Sie unter [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md).<br /><br /> **Neuheiten in Configuration Manager (Current Branch)** – Alle in dieser Kategorie aufgelisteten Features arbeiten nur mit der angegebenen Version von Configuration Manager (Current Branch) zusammen, z.B. Version 1511 oder 1602. Wenn Sie eine ältere Version von Configuration Manager für die Hybridbereitstellung verwenden, müssen Sie ein Upgrade auf die in der Featurebeschreibung angegebene Configuration Manager-Version (Current Branch) ausführen. Weitere Informationen finden Sie unter [Upgrade auf System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|  
 
-## <a name="new-hybrid-features-in-october-2016"></a>Neue Hybridfeatures im Oktober 2016
+## <a name="december-2016"></a>Dezember 2016
+
+### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
+
+- **Multi-Factor Authentication (MFA) für die Registrierung in das Azure-Portal verschoben**
+
+  Bisher haben Sie MFA für Intune-Registrierungen entweder in der Intune-Konsole oder der Configuration Manager-Konsole festgelegt. Mit diesem aktualisierten Feature melden Sie sich nun beim [Microsoft Azure-Portal] (https://manage.windowsazure.com) mit Ihren Intune-Anmeldeinformationen an und konfigurieren die MFA-Einstellungen über Azure AD. Weitere Informationen finden Sie unter [Multi-factor authentication for Microsoft Intune] (https://aka.ms/mfa_ad) (Mehrstufige Authentifizierung für Microsoft Intune).
+
+- **Unternehmensportal-App für Android jetzt in China verfügbar**
+
+  Die Unternehmensportal-App für Android ist jetzt in China verfügbar. Da der Google Play Store in China nicht zur Verfügung steht, müssen Apps für Android-Geräte von chinesischen App-Marktplätzen abgerufen werden. Die Unternehmensportal-App für Android steht in den folgenden Stores zum Download zur Verfügung:
+
+  - [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
+  - [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
+  - [Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
+  - [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
+  - [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
+
+  In der Unternehmensportal-App für Android erfolgt die Kommunikation mit dem Microsoft Intune-Dienst über Google Play-Dienste. Da Google Play-Dienste in China noch nicht verfügbar sind, kann die Ausführung der folgenden Aufgaben bis zu 8 Stunden dauern.
+
+  | Configuration Manager-Administratorkonsole | Intune-Unternehmensportal-App für Android | Intune-Unternehmensportalwebsite |
+  |----|----|----|      
+  | Abkoppeln/Zurücksetzen (Entfernen aller Daten)   | Entfernen eines Remotegeräts | Entfernen eines Geräts (lokal und remote) |
+  | Abkoppeln/Zurücksetzen (Entfernen von Unternehmensdaten)   | Zurücksetzen eines Geräts | Zurücksetzen eines Geräts|
+  | Neue oder aktualisierte App-Bereitstellungen | Installieren verfügbarer branchenspezifischer Apps | Zurücksetzen der Gerätekennung|
+  | Remotesperre | | |
+  | Zurücksetzen der Kennung | | |        
+
+
+## <a name="november-2016"></a>November 2016
+
+### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
+
+- **Neues Microsoft Intune-Unternehmensportal für Windows 10-Geräte verfügbar**
+
+  Microsoft hat eine neue [Unternehmensportal-App für Windows 10-Geräte](https://www.microsoft.com/store/apps/9wzdncrfj3pz) veröffentlicht. Diese App, die das neue universelle Windows 10-Format nutzt, bietet neben allen bereits in früheren Unternehmensportal-Apps bereitgestellten Funktionen eine aktualisierte Benutzeroberfläche, die auf allen Windows 10-Geräten (PCs und mobile Geräte) identisch ist.
+
+  Die neue App nutzt Features der Plattform, z.B. einmaliges Anmelden (SSO) und die zertifikatbasierte Authentifizierung, auf Windows 10-Geräten. Die App ist als Upgrade für die vorhandenen Installationen des Unternehmensportals für Windows 8.1 und Windows Phone 8.1 im Windows Store verfügbar. Weitere Informationen finden Sie im [Blog des Intune-Supportteams](http://aka.ms/intunecp_universalapp).
+
+  In der neuen Unternehmensportal-App werden auch alle Windows Store für Unternehmen-Anwendungen angezeigt, die in der Configuration Manager-Konsole als **Verfügbar** markiert sind.
+
+
+### <a name="new-in-configuration-manager-current-branch"></a>Neuheiten in Configuration Manager (Current Branch)
+
+Die folgenden Features, die zuvor in Configuration Manager Technical Preview-Releases verfügbar waren, stehen nun in Hybridbereitstellungen mit Intune und Configuration Manager (Current Branch) Version 1610 zur Verfügung.
+
+* [Zusätzliche Einstellungen und benutzerfreundlichere Konfigurationselemente](/sccm/core/plan-design/changes/whats-new-in-version-1610#new-compliance-settings-for-configuration-items)
+* [Zusätzliche Einstellungen für DEP-Profile](whats-new-hybrid-archive.md#new-in-configuration-manager-technical-preview-1609)
+* [Kostenpflichtige Apps im Windows Store für Unternehmen](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
+* [Native connection types for Windows 10 VPN profiles (Native Verbindungstypen für Windows 10-VPN-Profile)](whats-new-hybrid-archive.md#new-in-configuration-manager-technical-preview-1609)
+* [Intune-Kompatibilitätsdiagramme](/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy)
+* [Anforderung zur Richtliniensynchronisierung über die Konsole](/sccm/mdm/deploy-use/sync-intune-device)
+* [Windows Defender-Konfigurationseinstellungen](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client#windows-defender)
+
+Die folgenden zusätzlichen Hybridfeatures sind auch in Version 1610 von Configuration Manager (Current Branch) enthalten:
+
+- **Erhöhte Anzahl registrierter Geräte**
+
+  Sie können jetzt für Benutzer die Registrierung von bis zu 15 Geräten festlegen. Die Beschränkung lag zuvor bei 5 Geräten pro Benutzer.
+
+
+- **Zusätzliche Sicherheitsunterstützung**
+
+  Zusätzlich zu „Hauptadministrator“ haben nun die folgenden integrierten Sicherheitsrollen vollen Zugriff auf Elemente im Knoten „Alle unternehmenseigenen Geräte“, einschließlich vorab deklarierter Geräte, iOS-Registrierungsprofilen und Windows-Registrierungsprofilen:
+
+    - Asset-Manager
+    - Zugriffs-Manager für Unternehmensressourcen
+
+  Der Rolle „Analyst mit Leseberechtigung“ wird weiterhin der schreibgeschützte Zugriff auf diese Bereiche der Configuration Manager-Konsole gewährt.
+
+- **Automatisch ausgelöster VPN-Zugriff über Windows Information Protection-Apps**
+
+  Sie können Windows 10-VPN-Profilen eine primäre Windows Information Protection-Domäne hinzufügen, die bewirkt, dass alle zugeordneten Apps automatisch eine VPN-Verbindung auslösen, wenn sie auf dem Gerät ausgeführt werden. Diese Option ist nur verfügbar, wenn ein nativer Verbindungstyp ausgewählt wird.
+
+- **Bedingter Zugriff für Windows 10-VPN-Profile**
+
+    Sie können jetzt festlegen, dass in Azure Active Directory registrierte Windows 10-Geräte kompatibel sein müssen, damit sie VPN-Zugriff über in der Configuration Manager-Konsole erstellte Windows 10-VPN-Profile haben. Dies ist möglich über das neue Kontrollkästchen **Bedingten Zugriff für diese VPN-Verbindung aktivieren** auf der Seite „Authentifizierungsmethode“ im Assistenten zum Erstellen von VPN-Profilen und den VPN-Profileigenschaften für Windows 10-VPN-Profile. Diese Option ist nur verfügbar, wenn ein nativer Verbindungstyp ausgewählt wird.
+
+    Wenn Sie den bedingten Zugriff für das Profil aktivieren, können Sie auch ein separates Zertifikat für die Einmalanmeldungsauthentifizierung angeben.
+
+## <a name="october-2016"></a>Oktober 2016
 
 ### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
 
@@ -46,7 +126,7 @@ Die folgenden im Oktober 2016 eingeführten Intune-Features werden in Hybridbere
 
   Sie können den Zugriff auf Exchange Online einschränken, sodass nur Apps, die Verwaltungsrichtlinien für mobile Anwendungen von Intune unterstützen, z.B. Outlook, Zugriff haben. [Die neuen Features](/intune/deploy-use/allow-policy-managed-apps-access-to-o365) passen perfekt zu den Verwaltungsrichtlinien für mobile Apps (Mobile App Management, MAM) von Intune, da Sie den Zugriff auf integrierte Mailclients oder andere Apps, die nicht mit den MAM-Richtlinien von Intune konfiguriert wurden, blockieren können. Dadurch wird sichergestellt, dass Ihre Benutzer auf die Daten Ihrer Organisation mit Apps zugreifen, die mit Intune MAM geschützt werden können. Sie können Ihre ersten Schritte mit den Verwaltungsrichtlinien für mobile Apps von Intune über das Azure-Portal unternehmen. Suchen Sie den neuen Abschnitt „Bedingter Zugriff“ auf dem Blatt „Einstellungen“.
 
--    **Intune App Wrapping Tool für Android**
+-   **Intune App Wrapping Tool für Android**
 
   Sie können mithilfe des Intune App Wrapping Tools Ihre Apps so einstellen, dass sie die MAM-Richtlinien von Intune verwenden.
 
@@ -57,10 +137,10 @@ Die folgenden im Oktober 2016 eingeführten Intune-Features werden in Hybridbere
   Folgende Modellnummern sind betroffen:
 
   - SM-G313HU
-  -    SM-G313HY
-  -    SM-G313M
-  -    SM-G313MY
-  -    SM-G313U
+  - SM-G313HY
+  - SM-G313M
+  - SM-G313MY
+  - SM-G313U
 
   Sie und Ihre Endbenutzer müssen keine weiteren Maßnahmen ergreifen. Weitere Informationen finden Sie auf der Samsung KNOX-Website.
 
@@ -81,7 +161,7 @@ Die folgenden neuen Hybridfeatures wurden im Oktober 2016 Configuration Manager 
 
 Im August 2016 wurden keine neuen Hybridfeatures für Configuration Manager (Current Branch) eingeführt.
 
-## <a name="new-hybrid-features-in-september-2016"></a>Neue Hybridfeatures im September 2016
+## <a name="september-2016"></a>September 2016
 
 ### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
 
@@ -131,7 +211,7 @@ Die folgenden neuen Features vom September 2016 sind in Hybridbereitstellungen m
 
   Wenn Sie Profile oder Konfigurationselemente für alle iOS-Plattformen vorgesehen haben, werden diese auch auf iOS 10 übertragen. Wir haben auch ein Update für Configuration Manager Release 1606 veröffentlicht, das Ihnen ermöglicht, Profile und Konfigurationselemente für einzelne iOS-Plattformen, einschließlich iOS 10, zu planen. Sie können das Update mit der Configuration Manager-Administratorkonsole über **Verwaltung > Übersicht > Cloud-Dienste > Updates und Wartung** installieren. Weitere Informationen über das Update finden Sie unter [http://support.microsoft.com/kb/3192616](http://support.microsoft.com/kb/3192616).
 
-## <a name="new-hybrid-features-in-august-2016"></a>Neue Hybridfeatures im April 2016
+## <a name="august-2016"></a>August 2016
 
 ### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
 
@@ -170,7 +250,7 @@ Im August 2016 wurden keine neuen Hybridfeatures für Configuration Manager Tech
 
 Im August 2016 wurden keine neuen Hybridfeatures für Configuration Manager (Current Branch) eingeführt.
 
-## <a name="new-hybrid-features-in-july-2016"></a>Neue Hybridfeatures im Juli 2016
+## <a name="july-2016"></a>Juli 2016
 
 ### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
 
@@ -214,18 +294,18 @@ Im Juli 2016 wurden keine neuen Hybridfeatures für Configuration Manager Techni
 Die folgenden Features, die zuvor in Configuration Manager Technical Preview-Releases verfügbar waren, stehen nun in Hybridbereitstellungen mit Intune und Configuration Manager (Current Branch) Release 1606 zur Verfügung.
 
 * Suchen, Verwalten und Verteilen von Windows Store für Unternehmen-Apps für Windows 10-Geräte über die Configuration Manager-Konsole ([1604](#new-in-1604-technical-preview))
-*     SmartLock-Einstellung für Android-Geräte ([1604](#new-in-1604-technical-preview))
-*    Per App ausgelöstes VPN für Windows 10-Geräte ([1605](#new-in-1605-technical-preview))
-*    Benutzerfreundlichere Remotegeräteaktionen ([1605](#new-in-1605-technical-preview))
-*    Windows Store für Unternehmen-Apps ([1605](#new-in-1605-technical-preview))
-*    Allgemeine Verbesserungen für per Volumenlizenz erworbene Apps ([1605](#new-in-1605-technical-preview))
-*    Windows Information Protection (WIP) ([1605](#new-in-1605-technical-preview))
-*    Vorabdeklarieren von firmeneigenen Geräten mit IMEI- oder iOS-Seriennummer ([1605](#new-in-1605-technical-preview))
-*    Automatisches Kategorisieren von Geräten in Sammlungen ([1606](#new-in-1606-technical-preview))
+*   SmartLock-Einstellung für Android-Geräte ([1604](#new-in-1604-technical-preview))
+*   Per App ausgelöstes VPN für Windows 10-Geräte ([1605](#new-in-1605-technical-preview))
+*   Benutzerfreundlichere Remotegeräteaktionen ([1605](#new-in-1605-technical-preview))
+*   Windows Store für Unternehmen-Apps ([1605](#new-in-1605-technical-preview))
+*   Allgemeine Verbesserungen für per Volumenlizenz erworbene Apps ([1605](#new-in-1605-technical-preview))
+*   Windows Information Protection (WIP) ([1605](#new-in-1605-technical-preview))
+*   Vorabdeklarieren von firmeneigenen Geräten mit IMEI- oder iOS-Seriennummer ([1605](#new-in-1605-technical-preview))
+*   Automatisches Kategorisieren von Geräten in Sammlungen ([1606](#new-in-1606-technical-preview))
 
 Informationen zu den neuen Funktionen finden Sie in der Dokumentation für das angegebene Technical Preview-Release.
 
-## <a name="new-hybrid-features-in-june-2016"></a>Neue Hybridfeatures im Juni 2016
+## <a name="june-2016"></a>Juni 2016
 
 ### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
 Die folgenden im Juni 2016 eingeführten Intune-Features werden in Hybridbereitstellungen unterstützt.
@@ -286,7 +366,7 @@ Die folgenden neuen Features vom Juni 2016 sind in Hybridbereitstellungen mit In
 ### <a name="new-in-configuration-manager-current-branch"></a>Neuheiten in Configuration Manager (Current Branch)
 Im Juni 2016 wurden keine neuen Hybridfeatures für Configuration Manager (Current Branch) eingeführt.
 
-##  <a name="new-hybrid-features-in-may-2016"></a>Neue Hybridfeatures im Mai 2016  
+##  <a name="may-2016"></a>Mai 2016  
 
 ### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune  
  Die folgenden im Mai 2016 eingeführten Intune-Features werden in Hybridbereitstellungen unterstützt.
@@ -350,7 +430,7 @@ Im Juni 2016 wurden keine neuen Hybridfeatures für Configuration Manager (Curre
 ### <a name="new-in-configuration-manager-current-branch"></a>Neuheiten in Configuration Manager (Current Branch)  
  Im Mai 2016 wurden keine neuen Hybridfeatures für Configuration Manager (Current Branch) eingeführt.  
 
-##  <a name="new-hybrid-features-in-april-2016"></a>Neue Hybridfeatures im April 2016  
+##  <a name="april-2016"></a>April 2016  
 
 ### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune  
  Die folgenden im April 2016 eingeführten Intune-Features werden in Hybridbereitstellungen unterstützt.  
@@ -398,7 +478,7 @@ Im Juni 2016 wurden keine neuen Hybridfeatures für Configuration Manager (Curre
 ### <a name="new-in-configuration-manager-current-branch"></a>Neuheiten in Configuration Manager (Current Branch)  
  Im April 2016 wurden keine neuen Hybridfeatures für Configuration Manager (Current Branch) eingeführt.  
 
-##  <a name="new-hybrid-features-in-march-2016"></a>Neue Hybridfeatures im März 2016  
+##  <a name="march-2016"></a>März 2016  
 
 ### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune  
  Die folgenden im März 2016 eingeführten Intune-Features werden in Hybridbereitstellungen unterstützt.  

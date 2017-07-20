@@ -2,7 +2,7 @@
 title: Clientpeercache | System Center Configuration Manager
 description: "Verwenden Sie Peercache für Quellspeicherorte für Clientinhalte beim Bereitstellen von Inhalten mit System Center Configuration Manager."
 ms.custom: na
-ms.date: 4/4/2017
+ms.date: 7/3/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 26feb0b166beb7e48cb800a5077d00dbc3eec51a
-ms.openlocfilehash: dcd05d7d120f8997562da7d92b38c8b52a512357
+ms.sourcegitcommit: ed6b65a1a5aabc0970cd0333cb033405cf6d2aea
+ms.openlocfilehash: 94802680747a3d371716c1b345b2cba098150716
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 
@@ -33,18 +33,20 @@ Ab Version 1610 von System Center Configuration Manager können Sie **Peercache*
 > Peercache und das Dashboard „Clientdatenquellen“ sind vorab veröffentlichte Funktionen, die mit Version 1610 eingeführt wurden. Informationen zum Aktivieren dieser Funktionen finden Sie unter [Verwenden von vorab veröffentlichten Features von Updates](/sccm/core/servers/manage/pre-release-features).
 
 ## <a name="overview"></a>Übersicht
- -     Sie verwenden Clienteinstellungen, um Clients für die Verwendung des Peercaches zu aktivieren.
- -     Zur Freigabe von Inhalten müssen Peercacheclients Mitglieder der aktuellen Begrenzungsgruppe des Clients sein, der nach den Inhalten sucht. Peercacheclients in benachbarten Begrenzungsgruppen sind im Pool der verfügbaren Quellspeicherorte für Inhalt nicht enthalten, wenn ein Client ein Fallback verwendet, um nach Inhalten aus einer benachbarten Begrenzungsgruppe zu suchen. Weitere Informationen zu aktuellen und benachbarten Begrenzungsgruppen finden Sie unter [Begrenzungsgruppen](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups).
- - Clients, die nicht für Peercache aktiviert sind, sich aber in der aktuellen Begrenzungsgruppe mit Clients befinden, die für Peercache aktiviert sind, können Inhalte vom Client abrufen, der für Peercache aktiviert ist.  
+Ein Peercacheclient ist ein Configuration Manager-Client, der für die Verwendung von Peercache aktiviert ist. Ein Peercacheclient, der über Inhalte verfügt, die für weitere Clients freigegeben werden können, ist eine Peercachequelle.
+ -  Sie verwenden Clienteinstellungen, um Clients für die Verwendung des Peercaches zu aktivieren.
+ -  Zum Freigeben von Inhalten als Peercachequelle muss ein Peercacheclient folgende Voraussetzungen erfüllen:
+    -  Muss in eine Domäne eingebunden sein. Ein Client, der nicht in eine Domäne eingebunden ist, kann jedoch Inhalte von einer in eine Domäne eingebundenen Peercachequelle abrufen.
+    -  Muss Mitglied der aktuellen Begrenzungsgruppe des Clients sein, der die Inhalte sucht. Ein Peercacheclient in einer benachbarten Begrenzungsgruppe ist im Pool der verfügbaren Quellspeicherorte für Inhalt nicht enthalten, wenn ein Client eine Ausweichaktion verwendet, um nach Inhalten in einer benachbarten Begrenzungsgruppe zu suchen. Weitere Informationen zu aktuellen und benachbarten Begrenzungsgruppen finden Sie unter [Begrenzungsgruppen](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups).
  - Jede Art von Inhalten, die im Cache eines Configuration Manager-Clients gespeichert sind, kann mithilfe von Peercache für andere Clients bereitgestellt werden.
- -    Peercache ersetzt nicht die Verwendung anderer Lösungen wie BranchCache, sondern wird parallel eingesetzt, um Ihnen weitere Optionen bereitzustellen und herkömmliche Lösungen für die Inhaltsbereitstellung (z.B. Verteilungspunkte) zu erweitern. Da diese benutzerdefinierte Lösung nicht von BranchCache abhängig ist, funktioniert sie auch, wenn Sie Windows BranchCache nicht aktivieren oder verwenden.
+ -  Peercache ersetzt nicht die Verwendung anderer Lösungen wie BranchCache, sondern wird parallel eingesetzt, um Ihnen weitere Optionen bereitzustellen und herkömmliche Lösungen für die Inhaltsbereitstellung (z.B. Verteilungspunkte) zu erweitern. Da diese benutzerdefinierte Lösung nicht von BranchCache abhängig ist, funktioniert sie auch, wenn Sie Windows BranchCache nicht aktivieren oder verwenden.
 
 ### <a name="operations"></a>Vorgänge
 
 Nachdem Sie Clienteinstellungen bereitgestellt haben, die den Peercache für eine Sammlung aktivieren, können Mitglieder dieser Sammlung als Peerinhaltsquelle für andere Clients in der gleichen Begrenzungsgruppe fungieren:
- -    Ein Client, der als Peerinhaltsquelle fungiert, übermittelt eine Liste der verfügbaren zwischengespeicherten Inhalte an seinen Verwaltungspunkt.
- -    Wenn der nächste Client in dieser Begrenzungsgruppe diese Inhalte anfordert, wird jede Peercachequelle, die die Inhalte enthält, als mögliche Inhaltsquelle zusammen mit den Verteilungspunkten und anderen Quellspeicherorten für Inhalt in dieser Begrenzungsgruppe zurückgegeben.
- -    Entsprechend dem normalen Verarbeitungsprozess wählt der nach den Inhalten suchende Client eine Inhaltsquelle aus dem Pool der bereitgestellten Quellen aus und versucht dann, die Inhalte abzurufen.
+ -  Ein Client, der als Peerinhaltsquelle fungiert, übermittelt eine Liste der verfügbaren zwischengespeicherten Inhalte an seinen Verwaltungspunkt.
+ -  Wenn der nächste Client in dieser Begrenzungsgruppe diese Inhalte anfordert, wird jede Peercachequelle, die die Inhalte enthält, als mögliche Inhaltsquelle zusammen mit den Verteilungspunkten und anderen Quellspeicherorten für Inhalt in dieser Begrenzungsgruppe zurückgegeben.
+ -  Entsprechend dem normalen Verarbeitungsprozess wählt der nach den Inhalten suchende Client eine Inhaltsquelle aus dem Pool der bereitgestellten Quellen aus und versucht dann, die Inhalte abzurufen.
 
 > [!NOTE]
 > Wenn ein Fallback auf eine benachbarte Begrenzungsgruppe für Inhalte erfolgt, werden die Peercache-Quellspeicherorte für Inhalt aus den benachbarten Begrenzungsgruppen nicht dem Pool des Clients mit möglichen Quellspeicherorten für Inhalt hinzugefügt.  
@@ -94,13 +96,13 @@ Erfahren Sie mithilfe dieses Berichts, wie Sie Angaben zur Ablehnung einer angeg
 
 -   Jeder Standort, an dem Clients Peer Cache verwenden, muss mit einem [Netzwerkzugriffskonto](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account) konfiguriert sein. Das Konto wird vom Peer Cache-Quellcomputer zum Authentifizieren von Downloadanforderungen von Peers verwendet und erfordert nur Domänenbenutzerberechtigungen für diesen Zweck.
 
--     Da die aktuelle Begrenzung einer Inhaltsquelle des Peercaches durch die letzte Hardwareinventurübermittlung des Clients bestimmt wird, gilt ein Client, der zu einem Netzwerkort in einer anderen Begrenzungsgruppe wechselt, für den Peercache weiterhin als Mitglied seiner früheren Begrenzungsgruppe. Dadurch kann ein Client als Inhaltsquelle des Peercaches angeboten werden, der sich nicht an seinem unmittelbaren Netzwerkort befindet. Es wird empfohlen, Clients, die für diese Konfiguration anfällig sind, von der Teilnahme als Peercachequelle auszuschließen.
+-   Da die aktuelle Begrenzung einer Inhaltsquelle des Peercaches durch die letzte Hardwareinventurübermittlung des Clients bestimmt wird, gilt ein Client, der zu einem Netzwerkort in einer anderen Begrenzungsgruppe wechselt, für den Peercache weiterhin als Mitglied seiner früheren Begrenzungsgruppe. Dadurch kann ein Client als Inhaltsquelle des Peercaches angeboten werden, der sich nicht an seinem unmittelbaren Netzwerkort befindet. Es wird empfohlen, Clients, die für diese Konfiguration anfällig sind, von der Teilnahme als Peercachequelle auszuschließen.
 
 ## <a name="to-configure-client-peer-cache-client-settings"></a>So konfigurieren Sie Clienteinstellungen für Clientpeercache
-1.    Navigieren Sie in der Configuration Manager-Konsole zu **Verwaltung** > **Clienteinstellungen**, und öffnen Sie dann das Objekt mit Geräteclienteinstellungen, das Sie verwenden möchten. Außerdem können Sie das Objekt „Clientstandardeinstellungen“ ändern.
-2.    Wählen Sie in der Liste der verfügbaren Einstellungen **Clientcacheeinstellungen** aus.
-3.    Legen Sie **Configuration Manager-Client in vollständigem Betriebssystem zur Freigabe von Inhalten aktivieren** auf **Ja** fest.
-4.    Konfigurieren Sie die folgenden Einstellungen, um die Ports zu definieren, die für den Peercache verwendet werden sollen:  
+1.  Navigieren Sie in der Configuration Manager-Konsole zu **Verwaltung** > **Clienteinstellungen**, und öffnen Sie dann das Objekt mit Geräteclienteinstellungen, das Sie verwenden möchten. Außerdem können Sie das Objekt „Clientstandardeinstellungen“ ändern.
+2.  Wählen Sie in der Liste der verfügbaren Einstellungen **Clientcacheeinstellungen** aus.
+3.  Legen Sie **Configuration Manager-Client in vollständigem Betriebssystem zur Freigabe von Inhalten aktivieren** auf **Ja** fest.
+4.  Konfigurieren Sie die folgenden Einstellungen, um die Ports zu definieren, die für den Peercache verwendet werden sollen:  
   -  **Port für erste Netzwerkübertragung**
   -  **HTTPS für Client-Peer-Kommunikation aktivieren**
   -  **Port für Download der Inhalte vom Peer (HTTP/HTTPS)**

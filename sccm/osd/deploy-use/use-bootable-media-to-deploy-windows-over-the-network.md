@@ -2,7 +2,7 @@
 title: "Verwenden startbarer Medien zum Bereitstellen von Windows über das Netzwerk | Microsoft-Dokumentation"
 description: Verwenden Sie Bereitstellungen mit startbaren Medien in System Center Configuration Manager zum Bereitstellen des Betriebssystem beim Starten des Zielcomputers.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 6/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,13 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 999b5409-7e72-48d2-8554-4d44427ce383
 caps.latest.revision: 5
-author: Dougeby
-ms.author: dougeby
+author: mattbriggs
+ms.author: mattbriggs
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: beb730efbe4d9bae7c4c97f4e587c8919bd79049
-ms.lasthandoff: 12/16/2016
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
+ms.openlocfilehash: 9b20e5e2a66d92038033e816e6fc701581c48a7f
+ms.contentlocale: de-de
+ms.lasthandoff: 06/28/2017
 
 
 ---
@@ -26,30 +27,30 @@ ms.lasthandoff: 12/16/2016
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Bei Bereitstellungen mit startbaren Medien in System Center Configuration Manager können Sie das Betriebssystem beim Starten des Zielcomputers bereitstellen. Beim Starten des Zielcomputers werden die Tasksequenz, das Betriebssystemabbild sowie sämtlicher anderer erforderlicher Inhalt aus dem Netzwerk abgerufen. Da dieser Inhalt nicht auf den Medien enthalten ist, können Sie den Inhalt aktualisieren, ohne die Medien neu erstellen zu müssen.  
+Sie können das Betriebssystem bereitstellen, wenn der Zielcomputer mithilfe einer Bereitstellung mit startbaren Medien gestartet wird. Die Medien enthalten einen Zeiger auf die Tasksequenz, das Betriebssystemabbild und andere erforderliche Inhalte aus dem Netzwerk. Beim Starten des Zielcomputers ruft der Computer die Elemente ab, auf die im Zeiger verwiesen wird. Wenn die startbaren Medien ohne Inhalt sind, können Sie das Ziel aktualisieren, ohne es auf den Medien ersetzen zu müssen.
 
- Sie können in den folgenden Betriebssystembereitstellungsszenarien die Betriebssysteme mithilfe von Multicasting über das Netzwerk bereitstellen:  
+Sie können in den folgenden Szenarien für die Betriebssystembereitstellung die Betriebssysteme mithilfe von Multicast über das Netzwerk bereitstellen:
 
--   [Aktualisieren eines vorhandenen Computers mit einer neuen Version von Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
+-   [Aktualisieren eines vorhandenen Computers mit einer neuen Version von Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)
 
 -   [Installieren einer neuen Version von Windows auf einem neuen Computer (Bare-Metal)](install-new-windows-version-new-computer-bare-metal.md)  
 
 -   [Ersetzen eines vorhandenen Computers und Übertragen von Einstellungen](replace-an-existing-computer-and-transfer-settings.md)  
 
- Führen Sie die Schritte in einem der Betriebssystembereitstellungsszenarien aus, und verwenden Sie dann die folgenden Abschnitte, um startbare Medien zum Bereitstellen des Betriebssystems zu verwenden.  
+Führen Sie die Schritte in einem der Betriebssystembereitstellungsszenarien aus, und verwenden Sie dann die folgenden Abschnitte, um startbare Medien zum Bereitstellen des Betriebssystems zu verwenden.  
 
 ## <a name="configure-deployment-settings"></a>Konfigurieren von Bereitstellungseinstellungen  
- Wenn Sie startbare Medien verwenden, um den Bereitstellungsprozess für das Betriebssystem zu starten, müssen Sie die Bereitstellung konfigurieren, um das Betriebssystem für die Medien zur Verfügung zu stellen. Sie können dies auf der Seite der **Bereitstellungseinstellungen** des Assistenten oder der Registerkarte für die **Bereitstellungseinstellungen** in den Eigenschaften für die Bereitstellung konfigurieren.  Konfigurieren Sie eine der folgenden Optionen für die Einstellung **Verfügbar machen für** :  
+Wenn Sie startbare Medien verwenden, um den Bereitstellungsprozess für das Betriebssystem zu starten, konfigurieren Sie die Bereitstellung so, dass das Betriebssystem für die Medien zur Verfügung gestellt wird. Sie können diese Option auf der Seite **Bereitstellungseinstellungen** im Assistenten zum Bereitstellen von Software oder auf der Registerkarte **Bereitstellungseinstellungen** in den Eigenschaften der Bereitstellung konfigurieren. Konfigurieren Sie eine der folgenden Optionen für die Einstellung **Verfügbar machen für** :
 
--   **Configuration Manager-Clients, Medien und PXE**  
+-   Configuration Manager-Clients, Medien und PXE
 
--   **Nur Medien und PXE**  
+-   Nur Medien und PXE
 
--   **Nur Medien und PXE (ausgeblendet)**  
+-   Nur Medien und PXE (ausgeblendet)
 
-## <a name="create-the-bootable-media"></a>Erstellen der startbaren Medien  
- Sie können angeben, ob das startbare Medium ein USB-Flashlaufwerk oder ein CD/DVD-Satz ist. Der Computer, der die Medien startet, muss die Option unterstützen, die Sie als startbares Laufwerk auswählen. Weitere Informationen finden Sie unter [Erstellen startbarer Medien](create-bootable-media.md).  
+## <a name="create-the-bootable-media"></a>Erstellen der startbaren Medien
+Sie können angeben, ob das startbare Medium ein USB-Flashlaufwerk oder ein CD/DVD-Satz ist. Der Computer, der die Medien startet, muss die Option unterstützen, die Sie als startbares Laufwerk auswählen. Weitere Informationen finden Sie unter [Erstellen startbarer Medien](create-bootable-media.md).  
 
 ##  <a name="BKMK_Deploy"></a> Installieren des Betriebssystems von startbaren Medien  
- Legen Sie die startbaren Medien in ein startfähiges Laufwerk des Computer ein. Schalten Sie dann den Computer ein, um das Betriebssystem zu installieren.  
+Legen Sie die startbaren Medien in ein startfähiges Laufwerk des Computer ein. Schalten Sie dann den Computer ein, um das Betriebssystem zu installieren.
 

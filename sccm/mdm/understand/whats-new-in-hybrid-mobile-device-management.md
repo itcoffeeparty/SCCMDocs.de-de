@@ -2,7 +2,7 @@
 title: "Neuigkeiten bei der hybriden Verwaltung mobiler Geräte mit Configuration Manager | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr über die neuen Funktionen der Verwaltung mobiler Geräte, die für Hybridbereitstellungen mit Configuration Manager und Intune verfügbar sind."
 ms.custom: na
-ms.date: 04/21/2017
+ms.date: 06/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
-ms.openlocfilehash: 0af5ae68353fcf1db846e2e27f3391fe87dcfc42
+ms.sourcegitcommit: 6f9e6e93fce95666503907010a5c253158c5de7c
+ms.openlocfilehash: b9777e8cfa63eda77512e4837de17b99c792a036
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/07/2017
 
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Neuheiten bei der hybriden Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune
@@ -37,6 +37,81 @@ Dieser Artikel bietet Details zu den neuen Features für die Verwaltung mobiler 
 |**Neuheiten in Microsoft Intune** | Im Allgemeinen sollten alle in dieser Kategorie aufgelisteten Features in allen Configuration Manager-Releases, einschließlich Configuration Manager-Releases von System Center 2012 R2, verwendet werden können, da für diese Features nur der Intune-Dienst, aber keine zusätzlichen Funktionen in Configuration Manager erforderlich sind.|
 |**Neuheiten in Configuration Manager Technical Preview**| Alle in dieser Kategorie aufgelisteten Features können nur mit dem angegebenen Technical Preview-Release verwendet werden. Um diese Features zu testen, müssen Sie die in der Featurebeschreibung angegebene Technical Preview-Version installieren. Weitere Informationen finden Sie unter [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md).|
 |**Neuheiten in Configuration Manager (Current Branch)**| Alle in dieser Kategorie aufgelisteten Features können nur mit der angegebenen Version von Configuration Manager (Current Branch) verwendet werden, z.B. Version 1511 oder 1602. Wenn Sie eine ältere Version von Configuration Manager für die Hybridbereitstellung verwenden, müssen Sie ein Upgrade auf die in der Featurebeschreibung angegebene Configuration Manager-Version (Current Branch) ausführen. Weitere Informationen finden Sie unter [Upgrade auf System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|
+
+## <a name="june-2017"></a>Juni 2017
+
+### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
+
+- **Umstellen der MDM-Autorität**
+
+  Ab Configuration Manager, Version 1610, und Microsoft Intune, Version 1705, können Sie Ihre MDM-Autorität ohne Unterstützung durch den Microsoft-Support und ohne Aufheben der Registrierung und erneutes Registrieren Ihrer vorhandenen verwalteten Geräte umstellen. Einzelheiten finden Sie unter [Umstellen der MDM-Autorität]( /sccm/mdm/deploy-use/change-mdm-authority).
+
+- **Managed Browser- und App-Proxyintegration**
+
+  Der Intune Managed Browser lässt sich jetzt in den Azure AD-Anwendungsproxydienst integrieren, damit Benutzer auf interne Websites zugreifen können, selbst wenn sie remote arbeiten. Benutzer des Browsers geben einfach die Website-URL wie üblich ein, woraufhin der Managed Browser die Anforderung durch das Webgateway des Anwendungsproxys leitet. Weitere Informationen finden Sie unter [Verwalten des Internetzugriffs mittels Richtlinien für Managed Browser](/intune/app-configuration-managed-browser).
+
+- **Die Unternehmensportal-App für Android bietet nun eine neue Benutzeroberfläche für App-Schutzrichtlinien**
+
+  Als Reaktion auf das Feedback von Kunden haben wir die Unternehmensportal-App für Android durch Hinzufügen der Schaltfläche **Auf Unternehmensinhalte zugreifen** geändert. Zweck ist das Verhindern, dass Endbenutzer unnötigerweise den Registrierungsprozess durchlaufen, wenn sie lediglich auf Apps zugreifen müssen, die App-Schutzrichtlinien unterstützen, eine Funktion zur Verwaltung mobiler Anwendungen durch Intune. Diese Änderungen werden auf der Seite mit den [Neuerungen auf der App-Benutzeroberfläche](/intune/whats-new-app-ui) beschrieben.
+
+- **Neue Menüaktion zum einfachen Entfernen des Unternehmensportals**
+
+  Als Reaktion auf Benutzerfeedback wurde der Unternehmensportal-App für Android eine neue Menüaktion hinzugefügt, über die das Entfernen des Unternehmensportals von Ihrem Gerät eingeleitet wird. Über diese Aktion wird das Gerät aus der Intune-Verwaltung entfernt, damit die App vom Benutzer vom Gerät entfernt werden kann. Diese Änderungen werden auf der Seite mit den [Neuerungen auf der App-Benutzeroberfläche](/intune/whats-new-app-ui) und in der [Android-Endbenutzerdokumentation](/intune-user-help/unenroll-your-device-from-intune-android) beschrieben.
+
+- **Verbesserungen bei der App-Synchronisierung mit Windows 10 Creators Update**
+
+  Die Unternehmensportal-App für Windows 10 löst jetzt automatisch eine Synchronisierung für App-Installationsanforderungen für Geräte mit Windows 10 Creators Update (Version 1703) aus. Dadurch wird das Problem reduziert, dass Installationen im Status „Synchronisierung ausstehend“ stecken bleiben. Darüber hinaus können Benutzer in der App manuell eine Synchronisierung auslösen. Diese Änderungen werden auf der Seite mit den [Neuerungen auf der App-Benutzeroberfläche](/intune/whats-new-app-ui) beschrieben.
+
+- **Neues benutzerfreundlicheres Windows 10-Unternehmensportal**
+
+  Die Unternehmensportal-App für Windows 10 bietet eine exemplarische Vorgehensweise für Intune für Geräte, die nicht identifiziert oder registriert wurden. Die neue Benutzeroberfläche bietet detaillierte Benutzeranweisungen für die Registrierung bei Azure Active Directory (für Funktionen mit bedingtem Zugriff erforderlich) und die MDM-Registrierung (für Geräteverwaltungsfunktionen erforderlich). Auf die exemplarische Vorgehensweise kann auf der Startseite des Unternehmensportals zugegriffen werden. Benutzer können die App weiter verwenden, auch wenn sie die Registrierung nicht abgeschlossen haben, erhalten aber eingeschränkte Funktionalität.
+
+  Dieses Update ist nur auf Geräten mit dem Windows 10 Anniversary-Update (Build 1607) oder höher sichtbar. Diese Änderungen werden auf der Seite mit den [Neuerungen auf der App-Benutzeroberfläche](/intune/whats-new-app-ui) beschrieben.
+
+- **Verbesserungen an den App-Kacheln in der Unternehmensportal-App für iOS**
+
+  Wir haben das Design der App-Kacheln auf der Startseite entsprechend der Brandingfarbe geändert, die Sie für das Unternehmensportal festlegen. Weitere Informationen finden Sie auf der Seite mit den [Neuerungen auf der App-Benutzeroberfläche](/intune/whats-new-app-ui).
+
+- **Kontoauswahl nun in der Unternehmensportal-App für iOS verfügbar**
+
+  Benutzer von iOS-Geräten wird bei der Anmeldung am Unternehmensportal möglicherweise unsere neue Kontoauswahl angezeigt, wenn sie sich bei anderen Microsoft-Apps mit ihrem Geschäfts-, Schul- oder Unikonto anmelden. Weitere Informationen finden Sie auf der Seite mit den [Neuerungen auf der App-Benutzeroberfläche](/intune/whats-new-app-ui).
+
+### <a name="new-in-configuration-manager-technical-preview-1706"></a>Neuerungen in Configuration Manager Technical Preview 1706
+
+- **Neue Richtlinieneinstellungen für die Verwaltung mobiler Anwendungen**    
+
+  Die folgenden Richtlinieneinstellungen für die Verwaltung mobiler Anwendungen (Mobile Application Management, MAM) sind jetzt verfügbar:
+
+  - **Bildschirmaufnahme blockieren (Nur Android-Geräte):** Gibt an, dass die Bildschirmaufnahmefunktionen des Geräts blockiert werden, wenn Sie diese App verwenden.
+  - **Kontaktsynchronisierung deaktivieren:** Verhindert, dass die App Daten in der nativen App „Kontakte“ auf dem Gerät speichert.
+  - **Drucken deaktivieren:** Verhindert, dass die App Geschäfts-, Schul- oder Unidaten druckt.
+
+  Unter [Schützen von Apps mithilfe von App-Schutzrichtlinien in Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies) finden Sie Informationen zu den neuen Richtlinieneinstellungen zum Schutz von Apps.
+
+- **Neue Einstellungen für Windows-Konfigurationselemente**  <!-- 1354715 -->    
+
+  Neue Windows-Konfigurationselemente sind verfügbar für die Einstellungskategorien Kennwort, Gerät, Speicher und Microsoft Edge. Weitere Informationen finden Sie unter [Neue Einstellungen für Windows-Konfigurationselemente](/sccm/core/get-started/capabilities-in-technical-preview-1706#new-windows-configuration-item-settings).
+
+- **Neue Konformitätsrichtlinienregeln für Geräte**    
+
+  Sie können jetzt neue Optionen für Konformitätsrichtlinien konfigurieren, die zuvor nur in der eigenständigen Intune-Version verfügbar waren. Einzelheiten finden Sie unter [Verbesserungen bei Gerätekonformitätsrichtlinien](/sccm/core/get-started/capabilities-in-technical-preview-1706#new-device-compliance-policy-rules).
+
+- **Registrierungseinschränkungen bei Android und iOS** <!-- 1290826 -->      
+
+  Administratoren können nun angeben, dass Benutzer private Android- oder iOS-Geräte nicht in ihrer Hybridumgebung registrieren können. Dies ermöglicht das Begrenzen registrierter Geräte auf vorab festgelegte unternehmenseigene Geräte bzw. auf iOS-Geräte, die ausschließlich mit dem Programm zur Geräteregistrierung registriert werden. Einzelheiten finden Sie unter [Registrierungseinschränkungen bei Android und iOS](/sccm/core/get-started/capabilities-in-technical-preview-1706#android-and-ios-enrollment-restrictions).
+
+- **Unterstützung für Entrust-Zertifizierungsstellen** <!-- 1350740 -->     
+
+  Configuration Manager unterstützt jetzt Entrust-Zertifizierungsstellen. Dadurch können PFX-Zertifikate an Geräte übermittelt werden, die bei Microsoft Intune registriert sind.    
+
+  Sie können Entrust als Zertifizierungsstelle konfigurieren, wenn Sie in Configuration Manager die Rolle „Zertifikatregistrierungspunkt“ hinzufügen. Beim Hinzufügen eines neuen Zertifikatprofils, das PFX-Zertifikate ausstellt, können Sie entweder eine Microsoft- oder Entrust-Zertifizierungsstelle auswählen.
+
+  **Bekanntes Problem**: In der Technical Preview 1706 werden für Microsoft-Zertifizierungsstellen keine PFX-Zertifikate ausgestellt. Dies wirkt sich nicht auf importierte PFX-Zertifikate oder SCEP-Profile aus.
+
+- **Cisco (IPsec)-Unterstützung für macOS-VPN-Profile**  <!-- 1321367 -->    
+
+  Sie können ein macOS-VPN-Profil mit Cisco (IPsec) als Verbindungstyp erstellen. Weitere Informationen finden Sie unter [Erstellen von VPN-Profilen](/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles).
+
 
 ## <a name="april-2017"></a>April 2017
 
@@ -210,87 +285,6 @@ Die folgenden zusätzlichen Hybridfeatures sind auch in Version 1702 von Configu
   Ab Technical Preview 1701 für die hybride mobile Geräteverwaltung (MDM) müssen Sie nicht mehr bestimmte Android- und iOS-Versionen auswählen, wenn Sie neue Richtlinien und Profile für mit Intune verwaltete Geräte erstellen wollen. Durch diese Änderung können Hybridbereitstellungen schneller neue Android und iOS-Versionen unterstützen, ohne eine neue Configuration Manager-Version oder -Erweiterung zu benötigen. Weitere Informationen finden Sie unter [Android and iOS versions are no longer targetable in creation wizards (Android- und iOS-Versionen werden nicht mehr über den Erstellungsassistenten für hybrides MDM erreicht)](/sccm/core/get-started/capabilities-in-technical-preview-1701#android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm).
 
 
-## <a name="december-2016"></a>Dezember 2016
-
-### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
-
-- **Multi-Factor Authentication (MFA) für die Registrierung in das Azure-Portal verschoben**
-
-  Bisher haben Sie MFA für Intune-Registrierungen entweder in der Intune-Konsole oder der Configuration Manager-Konsole festgelegt. Mit diesem aktualisierten Feature melden Sie sich nun beim [Microsoft Azure-Portal] (https://manage.windowsazure.com) mit Ihren Intune-Anmeldeinformationen an und konfigurieren die MFA-Einstellungen über Azure AD. Weitere Informationen finden Sie unter [Multi-factor authentication for Microsoft Intune] (https://aka.ms/mfa_ad) (Mehrstufige Authentifizierung für Microsoft Intune).
-
-- **Unternehmensportal-App für Android jetzt in China verfügbar**
-
-  Die Unternehmensportal-App für Android ist jetzt in China verfügbar. Da der Google Play Store in China nicht zur Verfügung steht, müssen Apps für Android-Geräte von chinesischen App-Marktplätzen abgerufen werden. Die Unternehmensportal-App für Android steht in den folgenden Stores zum Download zur Verfügung:
-
-  -    [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
-  -    [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
-  -    [Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
-  -    [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
-  -    [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
-
-  In der Unternehmensportal-App für Android erfolgt die Kommunikation mit dem Microsoft Intune-Dienst über Google Play-Dienste. Da Google Play-Dienste in China noch nicht verfügbar sind, kann die Ausführung der folgenden Aufgaben bis zu 8 Stunden dauern.
-
-  | Configuration Manager-Administratorkonsole | Intune-Unternehmensportal-App für Android | Intune-Unternehmensportalwebsite |
-  |----|----|----|        
-  | Abkoppeln/Zurücksetzen (Entfernen aller Daten)    | Entfernen eines Remotegeräts | Entfernen eines Geräts (lokal und remote) |
-  | Abkoppeln/Zurücksetzen (Entfernen von Unternehmensdaten)    | Zurücksetzen eines Geräts | Zurücksetzen eines Geräts|
-  | Neue oder aktualisierte App-Bereitstellungen | Installieren verfügbarer branchenspezifischer Apps | Zurücksetzen der Gerätekennung|
-  | Remotesperre    | | |
-  | Zurücksetzen der Kennung | | |        
-
-
-## <a name="november-2016"></a>November 2016
-
-### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
-
-- **Neues Microsoft Intune-Unternehmensportal für Windows 10-Geräte verfügbar**
-
-  Microsoft hat eine neue [Unternehmensportal-App für Windows 10-Geräte](https://www.microsoft.com/store/apps/9wzdncrfj3pz) veröffentlicht. Diese App, die das neue universelle Windows 10-Format nutzt, bietet neben allen bereits in früheren Unternehmensportal-Apps bereitgestellten Funktionen eine aktualisierte Benutzeroberfläche, die auf allen Windows 10-Geräten (PCs und mobile Geräte) identisch ist.
-
-  Die neue App nutzt Features der Plattform, z.B. einmaliges Anmelden (SSO) und die zertifikatbasierte Authentifizierung, auf Windows 10-Geräten. Die App ist als Upgrade für die vorhandenen Installationen des Unternehmensportals für Windows 8.1 und Windows Phone 8.1 im Windows Store verfügbar. Weitere Informationen finden Sie im [Blog des Intune-Supportteams](http://aka.ms/intunecp_universalapp).
-
-  In der neuen Unternehmensportal-App werden auch alle Windows Store für Unternehmen-Anwendungen angezeigt, die in der Configuration Manager-Konsole als **Verfügbar** markiert sind.
-
-
-### <a name="new-in-configuration-manager-current-branch"></a>Neuheiten in Configuration Manager (Current Branch)
-
-Die folgenden Features, die zuvor in Configuration Manager Technical Preview-Releases verfügbar waren, stehen nun in Hybridbereitstellungen mit Intune und Configuration Manager (Current Branch) Version 1610 zur Verfügung.
-
-* [Zusätzliche Einstellungen und benutzerfreundlichere Konfigurationselemente](/sccm/core/plan-design/changes/whats-new-in-version-1610#new-compliance-settings-for-configuration-items)
-* [Zusätzliche Einstellungen für DEP-Profile](whats-new-hybrid-archive.md#new-in-configuration-manager-technical-preview-1609)
-* [Kostenpflichtige Apps im Windows Store für Unternehmen](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
-* [Native connection types for Windows 10 VPN profiles (Native Verbindungstypen für Windows 10-VPN-Profile)](whats-new-hybrid-archive.md#new-in-configuration-manager-technical-preview-1609)
-* [Intune-Kompatibilitätsdiagramme](/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy)
-* [Anforderung zur Richtliniensynchronisierung über die Konsole](/sccm/mdm/deploy-use/sync-intune-device)
-* [Windows Defender-Konfigurationseinstellungen](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client#windows-defender)
-
-Die folgenden zusätzlichen Hybridfeatures sind auch in Version 1610 von Configuration Manager (Current Branch) enthalten:
-
-- **Erhöhte Anzahl registrierter Geräte**
-
-  Sie können jetzt für Benutzer die Registrierung von bis zu 15 Geräten festlegen. Die Beschränkung lag zuvor bei 5 Geräten pro Benutzer.
-
-
-- **Zusätzliche Sicherheitsunterstützung**
-
-  Zusätzlich zu „Hauptadministrator“ haben nun die folgenden integrierten Sicherheitsrollen vollen Zugriff auf Elemente im Knoten „Alle unternehmenseigenen Geräte“, einschließlich vorab deklarierter Geräte, iOS-Registrierungsprofilen und Windows-Registrierungsprofilen:
-
-    - Asset-Manager
-    - Zugriffs-Manager für Unternehmensressourcen
-
-  Der Rolle „Analyst mit Leseberechtigung“ wird weiterhin der schreibgeschützte Zugriff auf diese Bereiche der Configuration Manager-Konsole gewährt.
-
-- **Automatisch ausgelöster VPN-Zugriff über Windows Information Protection-Apps**
-
-  Sie können Windows 10-VPN-Profilen eine primäre Windows Information Protection-Domäne hinzufügen, die bewirkt, dass alle zugeordneten Apps automatisch eine VPN-Verbindung auslösen, wenn sie auf dem Gerät ausgeführt werden. Diese Option ist nur verfügbar, wenn ein nativer Verbindungstyp ausgewählt wird.
-
-- **Bedingter Zugriff für Windows 10-VPN-Profile**
-
-    Sie können jetzt festlegen, dass in Azure Active Directory registrierte Windows 10-Geräte kompatibel sein müssen, damit sie VPN-Zugriff über in der Configuration Manager-Konsole erstellte Windows 10-VPN-Profile haben. Dies ist möglich über das neue Kontrollkästchen **Bedingten Zugriff für diese VPN-Verbindung aktivieren** auf der Seite „Authentifizierungsmethode“ im Assistenten zum Erstellen von VPN-Profilen und den VPN-Profileigenschaften für Windows 10-VPN-Profile. Diese Option ist nur verfügbar, wenn ein nativer Verbindungstyp ausgewählt wird.
-
-    Wenn Sie den bedingten Zugriff für das Profil aktivieren, können Sie auch ein separates Zertifikat für die Einmalanmeldungsauthentifizierung angeben.
-
-
 ## <a name="notices"></a>Benachrichtigungen
 
 ### <a name="system-center-2012-configuration-sp1-and-system-center-2012-r2-configuration-manager-rtm-support-for-hybrid-mobile-device-management-ending-on-april-10-2017"></a>System Center 2012 Configuration SP1 und System Center 2012 R2 Configuration Manager (RTM): Die Unterstützung für die Verwaltung von hybriden Mobilgeräten endet am 10. April 2017.
@@ -302,9 +296,9 @@ Die Unterstützung für System Center 2012 Configuration Manager SP1 und Sys
 Wenn Sie eine hybride Bereitstellung mit Configuration Manager 2012 SP1 oder R2 RTM ausführen, wird die Durchführung eines Upgrades auf Configuration Manager (Current Branch) oder das letzte unterstütze Service Pack für Configuration Manager 2012 (R2 SP1 oder SP2) noch vor dem 10. April 2017 empfohlen, um eine Dienstunterbrechung zu vermeiden.
 
 Zusätzliche Ressourcen:
--    [Upgrade auf System Center Configuration Manager (Current Branch)](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)
--    [Planen von Upgrades auf System Center 2012 R2 Configuration Manager SP1](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningR2SP1Upgrade)
--    [Planen von Upgrades auf System Center 2012 Configuration Manager SP2](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningSP2Upgrade)
+-   [Upgrade auf System Center Configuration Manager (Current Branch)](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)
+-   [Planen von Upgrades auf System Center 2012 R2 Configuration Manager SP1](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningR2SP1Upgrade)
+-   [Planen von Upgrades auf System Center 2012 Configuration Manager SP2](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningSP2Upgrade)
 
 ### <a name="windows-phone-8-company-portal-upload-deprecated"></a>Upload in Unternehmensportal für Windows Phone 8 eingestellt
 *25. Oktober 2016*

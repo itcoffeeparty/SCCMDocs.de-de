@@ -2,7 +2,7 @@
 title: "Protokolldateien für Configuration Manager | Microsoft-Dokumentation"
 description: Verwenden Sie Protokolldateien bei der Problembehandlung in einer System Center Configuration Manager-Hierarchie.
 ms.custom: na
-ms.date: 3/28/2017
+ms.date: 7/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: b991b4ea27e66c233b04f8e65a412404521d89a6
+ms.sourcegitcommit: 5e1bc0063ab3d34410f7dbc773a5eacdd5eb6d2f
+ms.openlocfilehash: 28597cf1cb269fff0872c7f79ef961496aea32ab
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/05/2017
 
 
 ---
@@ -272,7 +272,7 @@ Vom Configuration Manager-Client für Macintosh-Computer werden Informationen in
 |CCMNotifications-&lt;*Datum_Zeit>*.log|Zeichnet Aktivitäten auf, die mit Configuration Manager-Benachrichtigungen verknüpft sind, die auf dem Macintosh-Computer angezeigt werden.<br /><br /> Diese Protokolldatei befindet sich im Ordner ~/Library/Logs auf dem Macintosh-Computer.|  
 |CCMPrefPane-&lt;*Datum_Zeit>*.log|Zeichnet Aktivitäten auf, die mit dem Configuration Manager-Dialogfeld für Einstellungen auf dem Macintosh-Computer verknüpft sind. Dazu gehören der allgemeine Status und die Fehlerprotokollierung.<br /><br /> Diese Protokolldatei befindet sich im Ordner ~/Library/Logs auf dem Macintosh-Computer.|  
 
-Zusätzlich wird in der Protokolldatei SMS_DM.log auf dem Standortsystemserver die Kommunikation zwischen Macintosh-Computern und dem Verwaltungspunkt aufgezeichnet, der für mobile Geräte und Macintosh-Computer aktiviert ist.  
+Zusätzlich wird in der Protokolldatei „SMS_DM.log“ auf dem Standortsystemserver die Kommunikation zwischen Macintosh-Computern und dem Verwaltungspunkt aufgezeichnet, der für mobile Geräte und Mac-Computer aktiviert ist.  
 
 ##  <a name="BKMK_ServerLogs"></a> Protokolldateien für Configuration Manager-Standortserver  
  In den folgenden Abschnitten werden Protokolldateien aufgelistet, die sich auf dem Standortserver befinden oder im Zusammenhang mit bestimmten Standortsystemrollen stehen.  
@@ -507,7 +507,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 ||||
 |-|-|-|
 |Protokollname|Beschreibung|Computer mit Protokolldatei|
-|CloudMgr.log|Zeichnet Details zur Bereitstellung des Cloudverwaltungsgateway-Dienstes, den laufenden Dienststatus und Nutzungsdaten, die mit dem Dienst verknüpft sind, auf.<br>Sie können die Protokollierungsstufe konfigurieren, indem Sie die Registrierung **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_CLOUD_SERVICES_MANAGER\Logging level** bearbeiten.|Der Ordner **SMS/Logs** auf dem Standortsystemserver|
+|CloudMgr.log|Zeichnet Details zur Bereitstellung des Cloudverwaltungsgateway-Dienstes, den laufenden Dienststatus und Nutzungsdaten, die mit dem Dienst verknüpft sind, auf.<br>Sie können die Protokollierungsstufe konfigurieren, indem Sie die Registrierung **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_CLOUD_SERVICES_MANAGER\Logging level** bearbeiten.|Der Ordner *installdir* auf dem primären Standortserver oder Clientzugriffsserver.|
 |CMGSetup.log oder CMG-*RoleInstanceID*-CMGSetup.log<sup>1</sup>|Zeichnet Details über die 2. Phase der Bereitstellung des Cloudverwaltungsgateways (lokale Bereitstellung in Azure) auf.<br>Sie können die Protokollierungsstufe mithilfe der Einstellung **Ablaufverfolgungsebene** (**Informationen** (Standard), **Ausführlich**, **Fehler**) auf der Registerkarte **Azure-Portal\Konfiguration der Clouddienste** konfigurieren.|Die **%approot%\logs** auf Ihrem Azure-Server oder der Ordner „SMS/Logs“ auf dem Standortsystemserver|
 |CMGHttpHandler.log oder CMG-*RoleInstanceID*- CMGHttpHandler.log<sup>1</sup>|Zeichnet Details zur HTTP-Handlerbindung des Cloudverwaltungsgateways mit Internetinformationsdiensten in Azure auf.<br>Sie können die Protokollierungsstufe mithilfe der Einstellung **Ablaufverfolgungsebene** (**Informationen** (Standard), **Ausführlich**, **Fehler**) auf der Registerkarte **Azure-Portal\Konfiguration der Clouddienste** konfigurieren.|Die **%approot%\logs** auf Ihrem Azure-Server oder der Ordner „SMS/Logs“ auf dem Standortsystemserver|
 |CMGService.log oder CMG-*RoleInstanceID*- CMGService.log<sup>1</sup>|Zeichnet Details über die Kernkomponente des Cloudverwaltungsgateway-Diensts in Azure auf.<br>Sie können die Protokollierungsstufe mithilfe der Einstellung **Ablaufverfolgungsebene** (**Informationen** (Standard), **Ausführlich**, **Fehler**) auf der Registerkarte **Azure-Portal\Konfiguration der Clouddienste** konfigurieren.|Die **%approot%\logs** auf Ihrem Azure-Server oder der Ordner „SMS/Logs“ auf dem Standortsystemserver|

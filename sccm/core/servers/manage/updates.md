@@ -1,6 +1,6 @@
 ---
 title: Updates | Microsoft-Dokumentation
-description: "Hier finden Sie Informationen zu einer konsoleninternen Dienstmethode namens **Updates und Wartung**, mit der Sie empfohlene Updates leicht finden und installieren können."
+description: "Hier finden Sie Informationen zu einer Dienstmethode in der Konsole namens **Updates und Wartung**, mit der Sie empfohlene Updates leicht finden und installieren können."
 ms.custom: na
 ms.date: 05/02/2017
 ms.prod: configuration-manager
@@ -17,10 +17,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
-ms.openlocfilehash: a33960fb89b71c0f8128e21a5054f5b63cfc6b17
+ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
+ms.openlocfilehash: 4bc076bba4672d0be0032ec785da20e60b11a6c4
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/28/2017
 
 
 ---
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/17/2017
 
 System Center Configuration Manager verwendet eine konsoleninterne Wartungsmethode namens **Updates und Wartung**, mit der Sie empfohlene Updates für Ihre Configuration Manager-Infrastruktur leicht finden und installieren können. Diese konsoleninterne Wartungsmethode wird durch Out-of-Band-Updates ergänzt, z. B. Hotfixes, die für Kunden bestimmt sind, die möglicherweise für die jeweilige Umgebung spezifische Probleme beheben müssen.  
 
-> [!TIP]
+> [!TIP]  
 > Beim Verwalten des System Center Configuration Manager-Standorts und der Hierarchieinfrastruktur werden die Begriffe *Upgrade*, *Update* und *Installation* verwendet, um drei verschiedene Konzepte zu beschreiben. Erfahren Sie mehr über die Verwendung der Begriffe unter [Informationen zu Upgrade, Update und Installation für einen Standort und eine Hierarchieinfrastruktur](/sccm/core/understand/upgrade-update-install).
 
 
@@ -85,7 +85,7 @@ Die folgenden Versionen von Configuration Manager sind als Baseline- und/oder Up
 | 1511 <br /><br /> 5.00.8325.1000|12/8/2015| 12/8/2016|Ja|Nein|  
 
 
-*(Hinweis 1)* Dieses 1606-Baselinemedium ist als Teil des Microsoft System Center 2016- oder des System Center Configuration Manager-Release (Current Branch und Long-Term Servicing Branch 1606) verfügbar.
+*(Hinweis 1)* Die Baselinemedien für 1606 und 1702 sind als Teil des Microsoft System Center 2016- oder des System Center Configuration Manager-Release (Current Branch und Long-Term Servicing Branch) im [Volume License Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC) verfügbar. Sie können z.B. im VLSC nach *System Center Config Mgr (current branch and LTSB)* suchen, woraufhin die Baselinemedien der Versionen 1606 und 1702 zurückgegeben werden, die zum Download zur Verfügung stehen.
 
 Um die Version Ihres Configuration Manager-Standorts zu überprüfen, wechseln Sie oben links in der Konsole, wo die neue Version des Standorts und der Konsole angezeigt wird, zu **Info zu System Center Configuration Manager** .  
 

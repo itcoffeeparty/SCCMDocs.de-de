@@ -2,7 +2,7 @@
 title: Aktualisieren der lokalen Infrastruktur | Microsoft-Dokumentation
 description: "Hier erfahren Sie, wie für eine Infrastruktur wie etwa SQL Server und das Standortbetriebssystem von Standortsystemen ein Upgrade durchgeführt wird."
 ms.custom: na
-ms.date: 2/14/2017
+ms.date: 06/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2e711cce2435957f3e85dad08f17260e1a224fc2
-ms.openlocfilehash: c6448932e91a02984ca57cef0b75c10ea3f43fa1
+ms.sourcegitcommit: 0564cb678200d17d97c0f1d111c0b4b41d8ba40e
+ms.openlocfilehash: 188b7f2537dd0e569a5c00995620124512cf311b
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/30/2017
 
 
 ---
@@ -39,9 +39,10 @@ Verwenden Sie die Informationen in diesem Thema, um die Serverinfrastruktur zu a
 
 -   Direktes Upgrade auf ein höheres Windows Server Service Pack, sofern die gewählte Windows Service Pack-Stufe von Configuration Manager unterstützt wird.  
 -   Direktes Upgrade von:
-    - Windows Server 2012 R2 auf Windows Server 2016 ([weitere Informationen](#upgrade-windows-server-2012-r2-to-2016)).
-    - Windows Server 2012 auf Windows Server 2012 R2 ([weitere Informationen](#upgrade-windows-server-2012-to-windows-server-2012-r2)).
-    - Wenn Sie Configuration Manager Version 1602 oder höher verwenden, wird darüber hinaus auch ein Upgrade von Windows Server 2008 R2 auf Windows Server 2012 R2 unterstützt ([weitere Informationen](#upgrade-windows-server-2008-r2-to-windows-server-2012-r2)).
+    - Windows Server 2012 R2 auf Windows Server 2016 ([weitere Informationen](#bkmk_2016)).
+    - Windows Server 2012 auf Windows Server 2016 ([weitere Informationen](#bkmk_2016)).
+    - Windows Server 2012 auf Windows Server 2012 R2 ([weitere Informationen](#bkmk_2012r2)).
+    - Wenn Sie Configuration Manager Version 1602 oder höher verwenden, wird darüber hinaus auch ein Upgrade von Windows Server 2008 R2 auf Windows Server 2012 R2 unterstützt ([weitere Informationen](#bkmk_from2008r2)).
 
     > [!WARNING]  
     >  Vor dem Upgrade auf Windows Server 2012 R2 *müssen Sie WSUS 3.2 vom Server deinstallieren* .  
@@ -52,29 +53,29 @@ Verwenden Sie für das Upgrade eines Servers die Upgradeverfahren, die von dem B
   -  [Upgradeoptionen für Windows Server 2012 R2](https://technet.microsoft.com/library/dn303416.aspx) in der Windows Server-Dokumentation.  
   - [Upgrade- und Konvertierungsoptionen für Windows Server 2016](https://technet.microsoft.com/windows-server-docs/get-started/supported-upgrade-paths) in der Windows Server-Dokumentation.
 
-### <a name="upgrade-windows-server-2012-r2-to-2016"></a>Upgrade von Windows Server 2012 R2 auf Windows Server 2016  
-Für dieses Szenario für ein Betriebssystemupgrade gelten folgende Bedingungen:
+### <a name="bkmk_2016"></a> Upgrade von Windows Server 2012 oder Windows Server 2012 R2 auf Windows Server 2016
+Wenn Sie Windows Server 2012 oder Windows Server 2012 R2 auf Windows Server 2016 aktualisieren, gilt Folgendes:
+
 
 **Vor dem Upgrade:**  
--     Entfernen Sie den SCEP-Client (System Center Endpoint Protection). In Windows Server 2016 ist Windows Defender integriert, sodass der SCEP-Client nicht mehr erforderlich ist. Durch das Vorhandensein des SCEP-Clients wird ein Upgrade auf Windows Server 2016 möglicherweise verhindert.
+-   Entfernen Sie den SCEP-Client (System Center Endpoint Protection). In Windows Server 2016 ist Windows Defender integriert, sodass der SCEP-Client nicht mehr erforderlich ist. Durch das Vorhandensein des SCEP-Clients wird ein Upgrade auf Windows Server 2016 möglicherweise verhindert.
 
 **Nach dem Upgrade:**
--     Stellen Sie sicher, dass Windows Defender aktiviert ist, automatisch gestartet und ausgeführt wird.
--     Stellen Sie sicher, dass die folgenden Configuration Manager-Dienste ausgeführt werden:
+-   Stellen Sie sicher, dass Windows Defender aktiviert ist, automatisch gestartet und ausgeführt wird.
+-   Stellen Sie sicher, dass die folgenden Configuration Manager-Dienste ausgeführt werden:
   -     SMS_EXECUTIVE
   -     SMS_SITE_COMPONENT_MANAGER
 
 
--     Stellen Sie sicher, dass der **Windows-Prozessaktivierungsdienst** und der Dienst **WWW/W3svc** aktiviert sind, automatisch gestartet und für die folgenden Standortsystemrollen ausgeführt werden (diese Dienste werden beim Upgrade deaktiviert):
+-   Stellen Sie sicher, dass der **Windows-Prozessaktivierungsdienst** und der Dienst **WWW/W3svc** aktiviert sind, automatisch gestartet und für die folgenden Standortsystemrollen ausgeführt werden (diese Dienste werden beim Upgrade deaktiviert):
   -     Standortserver
   -     Verwaltungspunkt
   -     Anwendungskatalog-Webdienstpunkt
   -     Anwendungskatalog-Websitepunkt
 
+-   Stellen Sie sicher, dass alle Server, auf denen eine Standortsystemrolle gehostet wird, weiterhin alle [Voraussetzungen für Standortsystemrollen](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) erfüllen, die auf diesem Server ausgeführt werden. Möglicherweise müssen Sie BITS oder WSUS neu installieren oder bestimmte Einstellungen für IIS konfigurieren.
 
--     Stellen Sie sicher, dass alle Server, auf denen eine Standortsystemrolle gehostet wird, weiterhin alle [Voraussetzungen für Standortsystemrollen](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) erfüllen, die auf diesem Server ausgeführt werden. Möglicherweise müssen Sie BITS oder WSUS neu installieren oder bestimmte Einstellungen für IIS konfigurieren.
-
-  Nachdem Sie alle erforderlichen Komponenten wiederhergestellt haben, starten Sie den Server erneut, um sicherzustellen, dass alle Dienste gestartet wurden und funktionsfähig sind.
+-   Nachdem Sie alle erforderlichen Komponenten wiederhergestellt haben, starten Sie den Server erneut, um sicherzustellen, dass alle Dienste gestartet wurden und funktionsfähig sind.
 
 **Bekanntes Problem für die Configuration Manager-Remotekonsole:**  
 Nach dem Upgrade des Standortservers oder eines Servers, auf dem eine Instanz des SMS-Anbieters gehostet wird, auf Windows Server 2016 können Administratoren möglicherweise keine Verbindung mit einer Configuration Manager-Konsole am Standort herstellen. Um dieses Problem zu umgehen, müssen Sie Berechtigungen für die SMS-Administratorengruppe in WMI manuell wiederherstellen. Berechtigungen müssen auf dem Standortserver sowie auf allen Remoteservern, auf denen eine Instanz des SMS-Anbieters gehostet wird, festgelegt werden:
@@ -84,46 +85,45 @@ Nach dem Upgrade des Standortservers oder eines Servers, auf dem eine Instanz de
 3. Erweitern Sie die Struktur unter dem Stamm, wählen Sie den Knoten **SMS** aus, und wählen Sie dann **Sicherheit**.  Stellen Sie sicher, dass die Gruppe **SMS-Administratoren** über folgende Berechtigungen verfügt:
   -     Konto aktivieren
   -     Remoteaktivierung
-4. Wählen Sie auf der Registerkarte **Sicherheit** unter dem Knoten **SMS** den Knoten **Standort_**&lt;*Standortcode*> aus. Wählen Sie anschließend **Sicherheit**. Stellen Sie sicher, dass die Gruppe **SMS-Administratoren** über folgende Berechtigungen verfügt:
+4. Wählen Sie auf der Registerkarte **Sicherheit** unter dem Knoten **SMS** den Knoten **Standort_&lt;Standortcode**> und anschließend **Sicherheit** aus. Stellen Sie sicher, dass die Gruppe **SMS-Administratoren** über folgende Berechtigungen verfügt:
   -   Methoden ausführen
   -   Anbieterschreibzugriff
   -   Konto aktivieren
   -   Remoteaktivierung
 5. Speichern Sie die Berechtigungen, um den Zugriff für die Configuration Manager-Konsole wiederherzustellen.
 
-### <a name="windows-server-2012-to-windows-server-2012-r2"></a>Windows Server 2012 auf Windows Server 2012 R2
+### <a name="bkmk_2012r2"></a> Windows Server 2012 auf Windows Server 2012 R2
 
 **Vor dem Upgrade:**
 -  Im Gegensatz zu den anderen unterstützten Szenarios müssen bei diesem Szenario vor dem Upgrade keine weiteren Aspekte berücksichtigt werden.
 
 **Nach dem Upgrade:**
-  -    Stellen Sie sicher, dass der Windows-Bereitstellungsdienst gestartet wurde und für die folgenden Standortsystemrollen ausgeführt wird (dieser Dienst wird beim Upgrade beendet):
+  - Stellen Sie sicher, dass der Windows-Bereitstellungsdienst gestartet wurde und für die folgenden Standortsystemrollen ausgeführt wird (dieser Dienst wird beim Upgrade beendet):
     - Standortserver
     - Verwaltungspunkt
     - Anwendungskatalog-Webdienstpunkt
     - Anwendungskatalog-Websitepunkt
 
-
   -     Stellen Sie sicher, dass der **Windows-Prozessaktivierungsdienst** und der Dienst **WWW/W3svc** aktiviert sind, automatisch gestartet und für die folgenden Standortsystemrollen ausgeführt werden (diese Dienste werden beim Upgrade deaktiviert):
-    -     Standortserver
-    -     Verwaltungspunkt
-    -     Anwendungskatalog-Webdienstpunkt
-    -     Anwendungskatalog-Websitepunkt
+    -   Standortserver
+    -   Verwaltungspunkt
+    -   Anwendungskatalog-Webdienstpunkt
+    -   Anwendungskatalog-Websitepunkt
 
 
   -     Stellen Sie sicher, dass alle Server, auf denen eine Standortsystemrolle gehostet wird, weiterhin alle [Voraussetzungen für Standortsystemrollen](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) erfüllen, die auf diesem Server ausgeführt werden. Möglicherweise müssen Sie BITS oder WSUS neu installieren oder bestimmte Einstellungen für IIS konfigurieren.
 
   Nachdem Sie alle erforderlichen Komponenten wiederhergestellt haben, starten Sie den Server erneut, um sicherzustellen, dass alle Dienste gestartet wurden und funktionsfähig sind.
 
-### <a name="upgrade-windows-server-2008-r2-to-windows-server-2012-r2"></a>Upgrade von Windows Server 2008 R2 auf Windows Server 2012 R2
+### <a name="bkmk_from2008r2"></a>  Upgrade von Windows Server 2008 R2 auf Windows Server 2012 R2
 Für dieses Szenario für ein Betriebssystemupgrade gelten folgende Bedingungen:  
 
 **Vor dem Upgrade:**
--     Deinstallieren Sie WSUS 3.2.  
+-   Deinstallieren Sie WSUS 3.2.  
     Vor dem Upgrade eines Serverbetriebssystems auf Windows Server 2012 R2 müssen Sie WSUS 3.2 auf dem Server deinstallieren. Informationen zu diesem wichtigen Schritt finden Sie im Abschnitt „Neue und geänderte Funktionalität“ in der „Übersicht über Windows Server Update Services“ in der Windows Server-Dokumentation.
 
 **Nach dem Upgrade:**
-  -    Stellen Sie sicher, dass der Windows-Bereitstellungsdienst gestartet wurde und für die folgenden Standortsystemrollen ausgeführt wird (dieser Dienst wird beim Upgrade beendet):
+  - Stellen Sie sicher, dass der Windows-Bereitstellungsdienst gestartet wurde und für die folgenden Standortsystemrollen ausgeführt wird (dieser Dienst wird beim Upgrade beendet):
     - Standortserver
     - Verwaltungspunkt
     - Anwendungskatalog-Webdienstpunkt
@@ -131,10 +131,10 @@ Für dieses Szenario für ein Betriebssystemupgrade gelten folgende Bedingungen:
 
 
   -     Stellen Sie sicher, dass der **Windows-Prozessaktivierungsdienst** und der Dienst **WWW/W3svc** aktiviert sind, automatisch gestartet und für die folgenden Standortsystemrollen ausgeführt werden (diese Dienste werden beim Upgrade deaktiviert):
-    -     Standortserver
-    -     Verwaltungspunkt
-    -     Anwendungskatalog-Webdienstpunkt
-    -     Anwendungskatalog-Websitepunkt
+    -   Standortserver
+    -   Verwaltungspunkt
+    -   Anwendungskatalog-Webdienstpunkt
+    -   Anwendungskatalog-Websitepunkt
 
 
   -     Stellen Sie sicher, dass alle Server, auf denen eine Standortsystemrolle gehostet wird, weiterhin alle [Voraussetzungen für Standortsystemrollen](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) erfüllen, die auf diesem Server ausgeführt werden. Möglicherweise müssen Sie BITS oder WSUS neu installieren oder bestimmte Einstellungen für IIS konfigurieren.

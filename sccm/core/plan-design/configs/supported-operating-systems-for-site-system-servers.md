@@ -2,7 +2,7 @@
 title: "Unterstützte Standortsystemserver | Microsoft-Dokumentation"
 description: "Erfahren Sie, welche Windows-Versionen Sie verwenden können, um einen System Center Configuration Manager-Standort oder eine entsprechende Standortsystemrolle zu hosten."
 ms.custom: na
-ms.date: 3/9/2017
+ms.date: 06/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 86109f7186422c2b29ee933e827a7d14123e5792
+ms.sourcegitcommit: 0ec241d07f51b80b84d65676ef1207b31a9a9983
+ms.openlocfilehash: be635e4df79b57b6f650287fa3774d2c10613cee
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/28/2017
 
 
 ---
@@ -184,8 +184,8 @@ Ab Version 1606 mit dem Hotfixrollup von KB3186654 (oder Baselineversion 1606, d
 ## <a name="windows-server-2008-r2-with-sp1-x64-standard-enterprise-and-datacenter"></a>Windows Server 2008 R2 mit SP1 (x64): Standard, Enterprise und Datacenter  
  Windows Server 2008 R2 unterliegt nun dem erweiterten Support und nicht mehr dem grundlegenden Support, wie im [Microsoft-Support-Lifecycle](https://support.microsoft.com/lifecycle) ausführlich erläutert. Weitere Informationen zum künftigen Support für diese Betriebssysteme als Standortsystemserver mit Configuration Manager finden Sie unter [Entfernte und veraltete Features für System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
 
- Ab Configuration Manager-Version 1702, wird dieses Betriebssystem nicht für Standortserver oder die meisten Standortsystemrollen unterstützt. Es wird jedoch weiterhin für die Standortsystemrollen „Zustandsmigrationspunkt“ und „Verteilungspunkt“ unterstützt (einschließlich „Pullverteilungspunkt“, PXE und Multicast).
- 
+ Ab der Configuration Manager-Version 1702 wird dieses Betriebssystem nicht für Standortserver oder die meisten Standortsystemrollen unterstützt. Es wird jedoch weiterhin für die Standortsystemrolle „Verteilungspunkt“ unterstützt (einschließlich „Pullverteilungspunkt“, PXE und Multicast).
+
  Versionen vor 1702 unterstützen weiterhin dessen Verwendung für Folgendes:
 
 

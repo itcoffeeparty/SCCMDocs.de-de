@@ -17,10 +17,10 @@ author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 2288be606d7d586de5dc18d640f295e823daf266
+ms.sourcegitcommit: ed6b65a1a5aabc0970cd0333cb033405cf6d2aea
+ms.openlocfilehash: 52596b211acb1182cb38259cba267bdd0846de80
 ms.contentlocale: de-de
-ms.lasthandoff: 03/06/2017
+ms.lasthandoff: 07/03/2017
 
 
 ---
@@ -28,7 +28,7 @@ ms.lasthandoff: 03/06/2017
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Mit Configuration Manager und Intune können Sie die BYOD-Geräteregistrierung („Bring Your Own Device“) für iOS- und Mac OS X-Geräte aktivieren, um iPhone-, iPad- und Mac-Benutzern Zugriff auf Unternehmens-E-Mails und -ressourcen zu gewähren. Nachdem Benutzer die Intune-Unternehmensportal-App installiert haben, können ihre Geräte unter Anwendung von Richtlinien angesprochen werden. Bevor Sie iOS- und Mac-Geräte verwalten können, müssen Sie ein APNS-Zertifikat (Apple Push Notification Service) von Apple importieren. Dieses Zertifikat ermöglicht Intune das Verwalten von iOS- und Mac-Geräten und das Einrichten einer akkreditierten und verschlüsselten IP-Verbindung mit den Diensten für die Verwaltungsautorität für mobile Geräte.  
+Mit Configuration Manager und Intune können Sie die iOS- und macOS-Geräteregistrierung aktivieren, um iPhone-, iPad- und Mac-Benutzern Zugriff auf Unternehmens-E-Mails und -ressourcen zu gewähren. Nachdem Benutzer die Intune-Unternehmensportal-App installiert haben, können ihre Geräte unter Anwendung von Richtlinien angesprochen werden. Bevor Sie iOS- und Mac-Geräte verwalten können, müssen Sie ein APNS-Zertifikat (Apple Push Notification Service) von Apple importieren. Dieses Zertifikat ermöglicht Intune das Verwalten von iOS-und Mac-Geräten durch Herstellen einer Verbindung mit dem Geräteverwaltungsdienst von Apple.  
 
  Sie können außerdem firmeneigene iOS-Geräte registrieren.  Mehr unter [Registrieren von unternehmenseigenen Geräten](enroll-company-owned-devices.md).  
 
@@ -39,13 +39,13 @@ Mit Configuration Manager und Intune können Sie die BYOD-Geräteregistrierung (
 
 1.  **Voraussetzungen** ‒ Bevor Sie die Registrierung einer Plattform einrichten können, müssen Sie die Voraussetzungen und Schritte in [Einrichten der hybriden Verwaltung mobiler Geräte](setup-hybrid-mdm.md) erfüllen und ausführen.    
 
-2.  **Herunterladen einer Zertifikatsignieranforderung** : Eine CSR-Datei (Zertifikatsignieranforderung) ist erforderlich, um ein APNs-Zertifikat von Apple anzufordern.  
+2.  **Herunterladen einer Zertifikatsignieranforderung**: Eine CSR-Datei (Zertifikatsignieranforderung) ist erforderlich, um ein APNS-Zertifikat von Apple anzufordern.  
 
     1.  Wechseln Sie in der Configuration Manager-Konsole im Arbeitsbereich **Verwaltung** zu **Clouddienste**> **Microsoft Intune-Abonnements**.  
 
     2.  Klicken Sie auf der Registerkarte **Startseite** auf **APNs-Zertifikatanforderung erstellen**. Das Dialogfeld **APNs-Zertifikatsignieranforderung anfordern** wird geöffnet.  
 
-    3.  **Navigieren** Sie zu dem Pfad, um die neue CSR-Datei (Zertifikatsignieranforderung) zu speichern. Speichern Sie die Zertifikatsignierungsanforderung (CSR-Datei) lokal.  
+    3.  **Navigieren** Sie zum Pfad, um die neue CSR-Datei (Zertifikatsignieranforderung) zu speichern. Speichern Sie die Zertifikatsignierungsanforderung (CSR-Datei) lokal.  
 
     4.  Klicken Sie auf **Herunterladen**. Die neue CSR-Datei von Microsoft Intune wird heruntergeladen und von Configuration Manager gespeichert. Die CSR-Datei wird verwendet, um ein Vertrauensstellungszertifikat vom Apple Push Certificates-Portal anzufordern.  
 
@@ -53,7 +53,7 @@ Mit Configuration Manager und Intune können Sie die BYOD-Geräteregistrierung (
 
     1.  Navigieren Sie in einem Browser zum [Apple Push Certificates Portal](http://go.microsoft.com/fwlink/?LinkId=269844) , und melden Sie sich mit der Apple-ID Ihres Unternehmens an. Diese Apple-ID muss später verwendet werden, um das APNs-Zertifikat zu erneuern.  
 
-    2.  Schließen Sie den Assistenten mithilfe der Datei mit der Zertifikatsignierungsanforderung (CSR) ab. Laden Sie das APNs-Zertifikat herunter, und speichern Sie die PEM-Datei lokal. Diese APNs-Zertifikatdatei (.pem) wird verwendet, um eine Vertrauensstellung zwischen dem Apple Push Notification-Server und der Verwaltungsautorität für mobile Geräte von Intune herzustellen.  
+    2.  Schließen Sie den Assistenten mithilfe der Datei mit der Zertifikatsignierungsanforderung (CSR) ab. Laden Sie das APNS-Zertifikat herunter, und speichern Sie die PEM-Datei lokal. Diese APNs-Zertifikatdatei (.pem) wird verwendet, um eine Vertrauensstellung zwischen dem Apple Push Notification-Server und der Verwaltungsautorität für mobile Geräte von Intune herzustellen.  
 
 4.  **Aktivieren der Registrierung und Hochladen des APNs-Zertifikats** : Zum Aktivieren der iOS-Registrierung laden Sie das APNs-Zertifikat hoch.  
 
@@ -68,7 +68,7 @@ Mit Configuration Manager und Intune können Sie die BYOD-Geräteregistrierung (
 
     4.  Klicken Sie auf **Durchsuchen**, und wechseln Sie zu der von Apple heruntergeladenen APNs-Zertifikatdatei (CER-Datei). Configuration Manager zeigt die APNs-Zertifikatinformationen an. Klicken Sie auf **OK** , um das APNs-Zertifikat in Intune zu speichern.  
 
- Nachdem Sie die Einrichtung abgeschlossen haben, müssen Sie Ihre Benutzer informieren, wie sie ihre Geräte registrieren sollen. Informationen hierzu finden Sie unter [Informieren der Benutzer über den Einsatz von Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune). Diese Informationen gelten für mobile Geräte, die mit Microsoft Intune und Configuration Manager verwaltet werden.
+ Nachdem Sie die Einrichtung abgeschlossen haben, müssen Sie Ihre Benutzer darüber informieren, wie diese ihre Geräte registrieren sollen. Informationen hierzu finden Sie unter [Informieren der Benutzer über den Einsatz von Microsoft Intune](https://docs.microsoft.com/intune/end-user-educate). Diese Informationen gelten für mobile Geräte, die mit Microsoft Intune und Configuration Manager verwaltet werden.
 
 > [!div class="button"]
 [< Vorheriger Schritt](create-service-connection-point.md) [Nächster Schritt >](set-up-additional-management.md)

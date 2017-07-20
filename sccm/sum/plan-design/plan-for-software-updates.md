@@ -6,7 +6,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 03/28/2017
+ms.date: 06/27/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,10 +14,10 @@ ms.technology:
 - configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
-ms.openlocfilehash: 703adc87b9498e39a1db71b94f1bc1a05a4889ec
+ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
+ms.openlocfilehash: b5a2fd9f15992c9e5ef8aede64af5446b6852b1a
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/28/2017
 
 
 ---
@@ -294,6 +294,9 @@ Für Softwareupdates ist es erforderlich, dass eine unterstützte Version von WS
 
 -   Die Bereitstellung eines ablösenden Softwareupdates wurde in Ihrer Produktionsumgebung nicht genehmigt.  
 
+    > [!NOTE]  
+    >  Wenn Configuration Manager ein abgelöstes Softwareupdate auf **Abgelaufen** festlegt, wird das Update in WSUS nicht auf **Abgelaufen** festgelegt. Wenn die WSUS-Bereinigungsaufgabe ausgeführt wird, werden jedoch die Updates, die in Configuration Manager auf **Abgelaufen** festgelegt sind, auf dem WSUS-Server auf **Abgelehnt** festgelegt. Dies führt dazu, dass der Windows Update-Agent auf Computern nicht mehr nach diesen Updates sucht. Dies bedeutet, dass Clients so lange nach einem abgelaufenen Update suchen, bis die Bereinigungsaufgabe ausgeführt wurde. Informationen zur WSUS-Bereinigungsaufgabe finden Sie unter [Wartung für Softwareupdates](/sccm/sum/deploy-use/software-updates-maintenance).
+    
 ###  <a name="BKMK_UpdateLanguages"></a> Sprachen  
  Über die Spracheinstellungen für den Softwareupdatepunkt können Sie die Sprachen konfigurieren, für die die Übersichtsdetails (Softwareupdate-Metadaten) für Softwareupdates synchronisiert werden sollen, und die Sprachen, in denen die Softwareupdatedateien heruntergeladen werden sollen.  
 
