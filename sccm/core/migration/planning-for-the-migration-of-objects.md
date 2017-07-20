@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 45931f60273f3130cca36320770126a36dcc3d1e
-ms.openlocfilehash: 9870ffa6ae5f80db823bfc74a7cc2e67fc8cf21d
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
+ms.openlocfilehash: 17f3955aa7c63a13bab03b46002f7de0b0ec38fe
+ms.contentlocale: de-de
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -48,7 +50,7 @@ Bei System Center Configuration Manager können Sie viele der unterschiedlichen 
 
 -   [Planen der Migration von Anpassungen von Softwaremessungsregeln](#Plan_Migrate_SWM_Rules)  
 
-##  <a name="a-nameplanmigratesoftwareupdatesa-plan-to-migrate-software-updates"></a><a name="Plan_migrate_Software_updates"></a> Planen der Migration von Softwareupdates  
+##  <a name="Plan_migrate_Software_updates"></a> Planen der Migration von Softwareupdates  
  Softwareupdateobjekte wie Softwareupdatepakete und Softwareupdatebereitstellungen können migriert werden.  
 
  Damit Softwareupdateobjekte erfolgreich migriert werden können, müssen Sie die Zielhierarchie zunächst so mit Konfigurationen einrichten, dass sie zu Ihrer Quellhierarchieumgebung passt. Dies erfordert die folgenden Aktionen:  
@@ -79,7 +81,7 @@ Bei der Migration von einer Configuration Manager 2007-Quellhierarchie werden w�
 
 Die Softwareupdateobjekte werden nicht geändert, wenn Sie Objekte aus einer System Center 2012 Configuration Manager- oder der System Center Configuration Manager-Quellhierarchie migrieren.  
 
-##  <a name="a-nameplanmigratecontenta-plan-to-migrate-content"></a><a name="Plan_Migrate_content"></a> Planen der Migration von Inhalten  
+##  <a name="Plan_Migrate_content"></a> Planen der Migration von Inhalten  
  Sie können Inhalte aus einer unterstützten Quellhierarchie zu einer Zielhierarchie migrieren. Bei einer Configuration Manager 2007-Quellhierarchie umfasst dieser Inhalt Softwareverteilungspakete und Programme sowie virtuelle Anwendungen, wie z.B. Microsoft Application Virtualization (App-V). Bei Quellhierarchien von System Center 2012 Configuration Manager und System Center Configuration Manager umfasst dieser Inhalt Anwendungen und virtuelle App-V-Anwendungen. Beim Migrieren von Inhalten zwischen Hierarchien werden die komprimierten Quelldateien zur Zielhierarchie migriert.  
 
 ### <a name="packages-and-programs"></a>Pakete und Programme  
@@ -121,12 +123,12 @@ Ankündigungen können mit sammlungsbasierter Migration von einem unterstützten
 ### <a name="applications"></a>Applications  
  Sie können Anwendungen aus einer unterstützten Quellhierarchie für System Center 2012 Configuration Manager oder System Center Configuration Manager zu einer Zielhierarchie migrieren. Wenn Sie einer Zielhierarchie erneut einen Client aus der Quellhierarchie zuweisen, behält der Client den Verlauf zuvor installierter Anwendungen bei, damit eine migrierte Anwendung vom Client nicht erneut ausgeführt wird.  
 
-##  <a name="a-namebkmkmigratecollectionsa-plan-to-migrate-collections"></a><a name="BKMK_MigrateCollections"></a> Planen der Migration von Sammlungen  
+##  <a name="BKMK_MigrateCollections"></a> Planen der Migration von Sammlungen  
  Sie können Kriterien für Sammlungen aus einer unterstützten Quellhierarchie für System Center 2012 Configuration Manager oder System Center Configuration Manager migrieren. Hierzu verwenden Sie einen objektbasierten Migrationsauftrag. Bei der Migration einer Sammlung werden die Regeln für die Sammlung migriert, nicht die Informationen zu den Mitgliedern der Sammlung oder auf Mitglieder der Sammlung bezogene Informationen bzw. Objekte.  
 
  Eine Migration des Sammlungsobjekts wird nicht unterstützt, wenn von einer Configuration Manager 2007-Quellhierarchie migriert wird.  
 
-##  <a name="a-nameplanmigrateosda-plan-to-migrate-operating-system-deployments"></a><a name="Plan_migrate_OSD"></a> Planen der Migration von Betriebssystembereitstellungen  
+##  <a name="Plan_migrate_OSD"></a> Planen der Migration von Betriebssystembereitstellungen  
 Die folgenden Betriebssystem-Bereitstellungsobjekte können von einer unterstützten Quellhierarchie migriert werden:  
 
 -   Betriebssystemabbilder und -pakete. Der Quellpfad der Startimages wird auf den Standardspeicherort für Images des Windows Administrative Installation Kit (Windows AIK) am Zielstandort aktualisiert. Es folgen Anforderungen und Einschränkungen für die Migration von Betriebssystem-Abbildern und -Paketen:  
@@ -142,9 +144,9 @@ Die folgenden Betriebssystem-Bereitstellungsobjekte können von einer unterstüt
     > [!NOTE]  
     >  Bei der Migration einer Tasksequenz werden von Configuration Manager möglicherweise Objekte migriert, die in der Zielhierarchie nicht erforderlich sind. Zu diesen Objekten gehören Startimages und Installationspakete des Configuration Manager 2007-Clients.  
 
--   Treiber und Treiberpakete.  
+-   Treiber und Treiberpakete. Bei der Migration von Treiberpaketen muss das Computerkonto des SMS-Anbieters in der Zielhierarchie über Vollzugriff auf die Paketquelle verfügen.
 
-##  <a name="a-nameplanmigratecompliancesettingsa-plan-to-migrate-desired-configuration-management"></a><a name="Plan_Migrate_Compliance_settings"></a> Planen der Migration der Verwaltung gewünschter Konfigurationen  
+##  <a name="Plan_Migrate_Compliance_settings"></a> Planen der Migration der Verwaltung gewünschter Konfigurationen  
 Es können Konfigurationselemente und Konfigurationsbasislinien migriert werden.  
 
 > [!NOTE]  
@@ -152,14 +154,14 @@ Es können Konfigurationselemente und Konfigurationsbasislinien migriert werden.
 
 Sie können Configuration Manager 2007-Konfigurationspakete importieren. Beim Importvorgang wird das Konfigurationspaket automatisch so konvertiert, dass es mit System Center Configuration Manager kompatibel ist.  
 
-##  <a name="a-nameplanmigrateboundariesa-plan-to-migrate-boundaries"></a><a name="Plan_migrate_Boundaries"></a> Planen der Migration von Grenzen  
+##  <a name="Plan_migrate_Boundaries"></a> Planen der Migration von Grenzen  
  Grenzen können zwischen Hierarchien migriert werden. Bei der Migration von Grenzen von Configuration Manager 2007 wird jede Grenze des Quellstandorts zur selben Zeit migriert und einer neuen Grenzgruppe hinzugefügt, die in der Zielhierarchie erstellt wird. Bei der Migration von Grenzen aus einer System Center 2012 Configuration Manager- oder System Center Configuration Manager-Hierarchie wird jede ausgewählte Grenze einer neuen Grenzgruppe in der Zielhierarchie hinzugefügt.  
 
  Jede automatisch erstellte Grenzgruppe ist für den Inhaltsort aktiviert, jedoch nicht für die Standortzuweisung. Dies verhindert die Überlappung von Grenzen bei der Standortzuweisung zwischen den Quell- und Zielhierarchien. Dadurch wird bei der Migration von einem Configuration Manager 2007-Quellstandort verhindert, dass neu installierte Configuration Manager 2007-Clients der Zielhierarchie falsch zugewiesen werden. In der Standardeinstellung werden System Center Configuration Manager-Clients nicht automatisch Configuration Manager 2007-Standorten zugewiesen.  
 
  Während der Migration werden alle dieser Verteilung zugeordneten Grenzen automatisch zur Zielhierarchie migriert, wenn bei der Zielhierarchie ein Verteilungspunkt freigegeben wird. In der Zielhierarchie wird bei der Migration eine neue schreibgeschützte Grenzgruppe für jeden freigegebenen Verteilungspunkt erstellt. Werden die Grenzen für den Verteilungspunkt in der Quellhierarchie geändert, wird die Grenzgruppe in der Zielhierarchie während des nächsten Datensammlungszyklus mit diesen Änderungen aktualisiert.  
 
-##  <a name="a-nameplanmigratereportsa-plan-to-migrate-reports"></a><a name="Plan_Migrate_reports"></a> Planen der Migration von Berichten  
+##  <a name="Plan_Migrate_reports"></a> Planen der Migration von Berichten  
 Die Migration von Berichten wird von Configuration Manager nicht unterstützt. Verwenden Sie stattdessen den Berichts-Generator von SQL Server Reporting Services, um Berichte von der Quellhierarchie zu exportieren und dann in die Zielhierarchie zu importieren.  
 
 > [!NOTE]  
@@ -167,7 +169,7 @@ Die Migration von Berichten wird von Configuration Manager nicht unterstützt. V
 
 Weitere Informationen über die Berichterstellung finden Sie unter [Berichterstellung in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
 
-##  <a name="a-nameplanmigrateorgfoldersa-plan-to-migrate-organizational-and-search-folders"></a><a name="Plan_Migrate_Org_Folders"></a> Planen der Migration von Organisations- und Suchordnern  
+##  <a name="Plan_Migrate_Org_Folders"></a> Planen der Migration von Organisations- und Suchordnern  
  Sie können Organisations- und Suchordner von einer unterstützten Quellhierarchie zu einer Zielhierarchie migrieren. Sie können darüber hinaus Kriterien für gespeicherte Suchvorgänge aus einer unterstützten Quellhierarchie für System Center 2012 Configuration Manager oder System Center Configuration Manager zu einer Zielhierarchie migrieren.  
 
  Bei der Migration werden standardmäßig Ihre Such- und Administrator-Ordnerstrukturen für Objekte und Sammlungen beibehalten. Im Assistenten zum Erstellen von Migrationsaufträgen können Sie auf der Seite **Einstellungen** Migrationsaufträge jedoch auch so einrichten, dass die Organisationsstruktur für Objekte nicht migriert wird. Hierzu deaktivieren Sie das Kontrollkästchen für diese Option. Die Organisationsstrukturen von Sammlungen werden stets beibehalten.  
@@ -176,19 +178,14 @@ Weitere Informationen über die Berichterstellung finden Sie unter [Berichterste
 
  Bei der Migration einer gespeicherten Suche von einer System Center 2012 Configuration Manager- oder System Center Configuration Manager-Quellhierarchie werden die Kriterien für die Suche und nicht die Informationen zu den Suchresultaten migriert. Die Migration einer gespeicherten Suche gilt nicht für einen Configuration Manager 2007-Quellstandort.  
 
-##  <a name="a-nameplanmigrateaia-plan-to-migrate-asset-intelligence-customizations"></a><a name="Plan_Migrate_AI"></a> Planen der Migration von Asset Intelligence-Anpassungen  
+##  <a name="Plan_Migrate_AI"></a> Planen der Migration von Asset Intelligence-Anpassungen  
  Sie können Asset Intelligence-Anpassungen von einer unterstützten Quellhierarchie zu einer Zielhierarchie migrieren. Die Struktur der Asset Intelligence-Anpassungen wurde zwischen Configuration Manager 2007 und System Center Configuration Manager nicht wesentlich verändert.  
 
 > [!NOTE]  
 >  System Center Configuration Manager unterstützt keine Migration von Asset Intelligence-Objekten von einem Configuration Manager 2007-Standort, an dem Asset Intelligence Service 2.0 (AIS 2.0) verwendet wird.  
 
-##  <a name="a-nameplanmigrateswmrulesa-plan-to-migrate-software-metering-rules-customizations"></a><a name="Plan_Migrate_SWM_Rules"></a> Planen der Migration von Anpassungen von Softwaremessungsregeln  
+##  <a name="Plan_Migrate_SWM_Rules"></a> Planen der Migration von Anpassungen von Softwaremessungsregeln  
  Softwaremessungsregeln wurden zwischen Configuration Manager 2007 und System Center Configuration Manager nicht wesentlich verändert. Sie können Softwaremessungsregeln von einer unterstützten Quellhierarchie zu einer Zielhierarchie migrieren.  
 
  Standardmäßig werden zu einer Zielhierarchie migrierte Softwaremessungsregeln keinem bestimmten Standort in der Zielhierarchie zugewiesen, sondern auf alle Clients in der Hierarchie angewendet. Zum Anwenden einer Softwaremessungsregel auf Clients an einem bestimmten Standort muss die Messungsregel nach der Migration bearbeitet werden.  
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

@@ -2,7 +2,7 @@
 title: Data Warehouse | Microsoft-Dokumentation
 description: "Data Warehouse-Dienstpunkt und -Datenbank für System Center Configuration Manager"
 ms.custom: na
-ms.date: 3/28/2017
+ms.date: 5/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 3c2a07f560e0aa3d2beb7cc50e71c98ac45c27e1
-ms.openlocfilehash: 9239f6e749c368835e8594ca2d07378d8555b99e
+ms.sourcegitcommit: dc221ddf547c43ab1f25ff83c3c9bb603297ece6
+ms.openlocfilehash: f11a53bbc85b40077b3909568db5ae5552b0456c
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/01/2017
 
 
 ---
@@ -51,6 +51,7 @@ Bei der Installation der Standortsystemrolle wird auch die Data Warehouse-Datenb
 - Das Computerkonto des Computers, auf dem Sie die Standortsystemrolle installieren, wird verwendet, um Daten mit der Data Warehouse-Datenbank zu synchronisieren. Für dieses Konto sind folgende Berechtigungen erforderlich:  
   - Ein lokaler **Administrator** auf dem Computer, auf dem die Data Warehouse-Datenbank gehostet werden soll – wenn es sich um einen Remotecomputer handelt.
   - Die Berechtigung **DB-owner** in der Data Warehouse-Datenbank.
+  - Die Berechtigungen **DB_reader** und **Ausführen** für die Standortdatenbank der obersten Ebene der Standorte.
 -    Die Data Warehouse-Datenbank muss auf einer Standard- oder angegebenen Instant des SQL Server 2012 oder höher unterstützt werden. Die Edition muss entweder Enterprise oder Datacenter sein.
   - SQL Server Always On-Verfügbarkeitsgruppe: Diese Konfiguration wird nicht unterstützt.
   - SQL Server-Cluster: SQL Server Failover-Cluster werden nicht unterstützt. Dies liegt daran, dass die Data Warehouse-Datenbank noch nicht ausführlich auf SQL Server Failover-Clustern getestet wurde.

@@ -16,10 +16,10 @@ author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: e6833951db27b227a3ca22925e9d9f4c3fc443fc
-ms.openlocfilehash: e8606b8a9268a0a0668b75070cf35894f4794123
+ms.sourcegitcommit: 5eed004bd38a567dfdd4e392300be656a7abe3f7
+ms.openlocfilehash: c692fad43807e54cecbd7ab60284ea740d60617d
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 05/25/2017
 
 ---
 # <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>Vorabdeklarieren von Geräten mit IMEI- oder iOS-Seriennummern
@@ -62,7 +62,7 @@ Wenn Sie Seriennummern von firmeneigenen iOS-Geräten hochladen, müssen sie mit
 
 ## <a name="format-for-uploading-csv-files"></a>Format für das Hochladen von CSV-Dateien
 
-Die CSV-Datei, die Sie verwenden, um Geräte anhand der IMEI-Nummer oder der Seriennummer zu identifizieren, muss das folgende Format aufweisen (außer der obersten Zeile, die lediglich Informationszwecken dient). Jede Zeile muss eine ID-Nummer enthalten, entweder eine IMEI-Nummer oder eine iOS-Seriennummer. Sie können beide angeben. IMEI-Nummern können für Android-, iOS- und Windows-Geräte verwendet werden. iOS-Seriennummern werden ebenfalls unterstützt.  Diese Tabelle enthält Beispieldaten:
+Die CSV-Datei, die Sie verwenden, um Geräte anhand der IMEI-Nummer oder der iOS-Seriennummer zu identifizieren, muss das folgende Format aufweisen (außer der obersten Zeile, die lediglich Informationszwecken dient). Jede Zeile muss eine ID-Nummer enthalten, entweder eine IMEI-Nummer oder eine iOS-Seriennummer. Bei iOS-Geräten können Sie beide Nummern aufnehmen. IMEI-Nummern können für Android-, iOS- und Windows-Geräte verwendet werden. Diese Tabelle enthält Beispieldaten:
 
 | IMEI-Nummer  | iOS-Seriennummer  | OS | Details |
 |------------ |---------------|-----|-----|

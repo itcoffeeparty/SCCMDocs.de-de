@@ -16,10 +16,10 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 113fa73bf0bd1b3b8a4754eb1e96549c520d7995
+ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
+ms.openlocfilehash: 2f3d66362c49d28a52d7f9c535eb0b3b4cc4eaf7
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -79,12 +79,70 @@ Ab Configuration Manager Version 1702 können Sie zu einer vorherigen Seite zur�
 
  Eine Liste verfügbarer Tasksequenzschritte finden Sie unter [Tasksequenzschritte](../understand/task-sequence-steps.md).  
 
+## <a name="configure-software-center-properties"></a>Konfigurieren der Eigenschaften des Softwarecenters
+Gehen Sie wie folgt vor, um die Angaben für die Tasksequenz, die im Softwarecenter angezeigt werden, zu konfigurieren. Diese Angaben dienen nur zu Informationszwecken.  
+1. Navigieren Sie in der Configuration Manager-Konsole zu **Softwarebibliothek** > **Betriebssysteme** > **Tasksequenzen**.
+2. Wählen Sie die zu bearbeitende Tasksequenz aus, und klicken Sie anschließend auf **Eigenschaften**.
+3. Auf der Registerkarte **Allgemein** stehen folgende neuen Einstellungen für das Softwarecenter zur Verfügung:
+  - **Neustart erforderlich**: Informiert den Benutzer, ob während der Installation ein Neustart erforderlich ist.
+  - **Downloadgröße (in MB)**: Gibt an, wie viele Megabytes für die Tasksequenz im Softwarecenter angezeigt werden.  
+  - **Geschätzte Laufzeit (in Minuten)**: Gibt die geschätzte Laufzeit in Minuten für die Tasksequenz an; wird im Softwarecenter angezeigt.
+
+## <a name="configure-advanced-task-sequence-settings"></a>Konfigurieren von erweiterten Einstellungen für eine Tasksequenz
+Gehen Sie wie folgt vor, um die Angaben für die Tasksequenz, die im Softwarecenter angezeigt werden, zu konfigurieren. Diese Angaben dienen nur zu Informationszwecken.  
+1. Navigieren Sie in der Configuration Manager-Konsole zu **Softwarebibliothek** > **Betriebssysteme** > **Tasksequenzen**.
+2. Wählen Sie die zu bearbeitende Tasksequenz aus, und klicken Sie anschließend auf **Eigenschaften**.
+3. Auf der Registerkarte **Erweitert** sind die folgenden Einstellungen verfügbar:
+
+    - **Ein anderes Programm zuerst ausführen**    
+    Aktivieren Sie dieses Kontrollkästchen, um ein anderes Programm (in einem anderen Paket) auszuführen, bevor die Tasksequenz ausgeführt wird. Standardmäßig ist dieses Kontrollkästchen deaktiviert. Das zuerst auszuführende Programm muss nicht gesondert angekündigt werden.
+
+        > [!IMPORTANT]     
+        Diese Einstellung gilt nur für Tasksequenzen, die in der Vollversion des Betriebssystems ausgeführt werden. Diese Einstellung wird von Configuration Manager ignoriert, wenn die Tasksequenz mithilfe von PXE- oder Startmedien gestartet wird.
+
+    - **Paket**     
+        Wenn Sie **Ein anderes Programm zuerst ausführen** auswählen, geben Sie das Paket mit dem vor dieser Tasksequenz auszuführenden Programm ein, oder suchen Sie danach.
+
+    - **Programm**     
+    Wenn Sie **Ein anderes Programm zuerst ausführen** auswählen, wählen Sie in der Dropdownliste **Programm** das vor dieser Tasksequenz auszuführende Programm aus.
+
+        > [!NOTE]    
+        > Kann das ausgewählte Programm nicht auf einem Client ausgeführt werden, wird die Tasksequenz nicht ausgeführt. Bei erfolgreicher Ausführung des ausgewählten Programms wird dieses auch bei erneuter Ausführung der Tasksequenz auf dem gleichen Client nicht erneut ausgeführt.
+ 
+    - **Diese Tasksequenz auf Computern, auf denen sie bereitgestellt ist, deaktivieren**    
+    Wenn Sie diese Option auswählen, werden alle Bereitstellungen, die diese Tasksequenz enthalten, vorübergehend deaktiviert. Die Tasksequenz wird aus der Liste der zum Ausführen verfügbaren Ankündigungen entfernt und erst wieder ausgeführt, nachdem sie erneut aktiviert wurde. Die Option ist standardmäßig deaktiviert.
+
+    - **Maximal zulässige Laufzeit**    
+    Gibt die maximale Zeit (in Minuten) an, die für die Ausführung der Tasksequenz auf dem Zielcomputer erwartet wird. Sie müssen eine ganze Zahl verwenden, die gleich oder größer als null ist. Standardmäßig ist dieser Wert auf 120 Minuten festgelegt.
+
+        > [!IMPORTANT]    
+        > Wenn Sie bei der Sammlung, für die diese Tasksequenz ausgeführt wird, Wartungsfenster verwenden, kann ein Konflikt auftreten, wenn die **Maximal zulässige Laufzeit** länger ist als das geplante Wartungsfenster. Wenn für die maximal zulässige Laufzeit der Wert **0** festgelegt ist, wird die Tasksequenz während des Wartungsfensters gestartet, und die Ausführung wird am Ende des Wartungsfensters nicht unterbrochen, sondern solange fortgesetzt, bis das Programm abgeschlossen ist oder ein Fehler auftritt. Entsprechend werden Tasksequenzen, bei denen für die maximal zulässige Laufzeit der Wert **0** festgelegt ist, möglicherweise über das Ende ihrer Wartungsfenster hinaus ausgeführt. Wenn Sie für die maximal zulässige Laufzeit einen bestimmten Zeitraum (also nicht **0**) festlegen, der die Dauer aller verfügbaren Wartungsfenster überschreitet, wird diese Tasksequenz nicht ausgeführt. Weitere Informationen finden Sie unter [Verwenden von Wartungsfenstern](/sccm/core/clients/manage/collections/use-maintenance-windows).
+ 
+        Wenn der Wert **0** festgelegt ist, verwendet Configuration Manager für die maximal zulässige Laufzeit **12** Stunden (720 Minuten) für die Überwachung des Fortschritts. Allerdings wird die Tasksequenz gestartet, solange die Dauer des Countdowns den Wert für das Wartungsfenster nicht überschreitet.
+
+    > [!NOTE]    
+    > Wenn die maximal zulässige Laufzeit erreicht wird, beendet Configuration Manager die Tasksequenz, sofern für die Tasksequenz die Einstellung „Mit Administratorrechten ausführen“ festgelegt und die Einstellung „Benutzerinteraktion mit dem Programm zulassen“ deaktiviert ist. Wenn die Tasksequenz selbst nicht beendet wird, beendet Configuration Manager die Überwachung der Tasksequenz, sobald die maximal zulässige Laufzeit erreicht wurde. 
+
+    - **Ein Startimage verwenden**   
+        Aktivieren Sie diese Option, um bei der Ausführung der Tasksequenz das ausgewählte Startimage zu verwenden. 
+
+        Klicken Sie auf **Durchsuchen**, um ein anderes Startimage auszuwählen. Deaktivieren Sie diese Option, um bei der Ausführung der Tasksequenz die Verwendung des ausgewählten Startimages zu deaktivieren.
+
+    - **Diese Tasksequenz kann auf jeder Plattform ausgeführt werden**     
+        Wenn Sie diese Option auswählen, überprüft Configuration Manager den Plattformtyp des Zielcomputers nicht, wenn die Tasksequenz bereitgestellt wird. Diese Option ist standardmäßig ausgewählt.
+
+    - **Diese Tasksequenz kann nur auf den angegebenen Clientplattformen ausgeführt werden**    
+        Mit dieser Option werden die Prozessoren, Betriebssysteme und Service Packs angegeben, unter denen diese Tasksequenz ausgeführt werden kann. Wenn Sie diese Option auswählen, muss auch mindestens eine Plattform aus der Liste ausgewählt werden. Standardmäßig ist keine Plattform ausgewählt. Configuration Manager bewertet mithilfe dieser Informationen, welche Zielcomputer in einer Sammlung die bereitgestellte Tasksequenz erhalten sollen.
+
+        > [!NOTE]    
+        > Wenn eine Tasksequenz von Startmedien oder mittels PXE-Start ausgeführt wird, wird diese Option ignoriert. Die Tasksequenz wird dann so ausgeführt, als ob **Dieses Programm kann auf jeder Plattform ausgeführt werden** aktiviert ist.
+
 ## <a name="configure-high-impact-task-sequence-settings"></a>Konfigurieren von Einstellungen für eine Tasksequenz mit schwerwiegenden Auswirkungen
 Ab Configuration Manager Version 1702 können Sie eine Tasksequenz als Tasksequenz mit schwerwiegenden Auswirkungen festlegen und die Meldungen anpassen, die Benutzer erhalten, wenn sie die Tasksequenz ausführen.
 
 ### <a name="set-a-task-sequence-as-a-high-impact-task-sequence"></a>Festlegen einer Tasksequenz als Tasksequenz mit schwerwiegenden Auswirkungen
 Gehen Sie wie folgt vor, um eine Tasksequenz als Tasksequenz mit schwerwiegenden Auswirkungen festzulegen:
-> [!NOTE]
+> [!NOTE]    
 > Jede Tasksequenz, die bestimmte Bedingungen erfüllt, wird automatisch als „high-impact“ (mit schwerwiegenden Auswirkungen) definiert. Weitere Informationen finden Sie unter [Verwalten risikoreicher Bereitstellungen](http://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
 
 1. Navigieren Sie in der Configuration Manager-Konsole zu **Softwarebibliothek** > **Betriebssysteme** > **Tasksequenzen**.
@@ -96,7 +154,7 @@ Verwenden Sie die folgende Prozedur, um eine benutzerdefinierte Benachrichtigung
 1. Navigieren Sie in der Configuration Manager-Konsole zu **Softwarebibliothek** > **Betriebssysteme** > **Tasksequenzen**.
 2. Wählen Sie die zu bearbeitende Tasksequenz aus, und klicken Sie anschließend auf **Eigenschaften**.
 3. Wählen Sie in der Registerkarte **Benutzerbenachrichtigung** **Benutzerdefinierten Text verwenden** aus.
->  [!NOTE]
+>  [!NOTE]    
 >  Sie können den Text von Benutzerbenachrichtigungen nur festlegen, wenn **Dies ist eine Tasksequenz mit schwerwiegenden Auswirkungen** ausgewählt ist.
 
 4. Konfigurieren Sie folgende Einstellungen (maximal 255 Zeichen pro Text):
@@ -107,23 +165,15 @@ Verwenden Sie die folgende Prozedur, um eine benutzerdefinierte Benachrichtigung
   - Erstes Textfeld: Gibt den Hauptteil des Texts an, der üblicherweise Anweisungen an den Benutzer enthält. In der Standardbenutzerbenachrichtigung enthält dieser Abschnitt beispielsweise folgenden Text: „Das Upgrade des Betriebssystems kann einige Zeit dauern und mehrere Neustarts des Computers erfordern“ o.Ä.
   - Zweites Textfeld: Gibt den fetten Text unterhalb des Hauptteils an. In der Standardbenutzerbenachrichtigung enthält dieser Abschnitt beispielsweise folgenden Text: „Dieses direkte Upgrade installiert das neue Betriebssystem und führt eine automatische Migration Ihrer Apps, Daten und Einstellungen durch“ o.Ä.
   - Drittes Textfeld: Gibt die letzte Textzeile unterhalb des fetten Texts an. In der Standardbenutzerbenachrichtigung enthält dieser Abschnitt beispielsweise folgenden Text: „Klicken Sie auf Installieren, um den Vorgang zu starten. Klicken Sie andernfalls auf Abbrechen.“   
+    
+Angenommen, Sie konfigurieren folgende benutzerdefinierte Benachrichtigung in den Eigenschaften.
 
-  Angenommen, Sie konfigurieren folgende benutzerdefinierte Benachrichtigung in den Eigenschaften.
+![Benutzerdefinierte Benachrichtigung für eine Tasksequenz](..\media\user-notification.png)
 
-    ![Benutzerdefinierte Benachrichtigung für eine Tasksequenz](..\media\user-notification.png)
+Folgende Benachrichtigung wird angezeigt, wenn der Endbenutzer die Installation aus dem Softwarecenter öffnet.
 
-    Folgende Benachrichtigung wird angezeigt, wenn der Endbenutzer die Installation aus dem Softwarecenter öffnet.
+![Benutzerdefinierte Benachrichtigung für eine Tasksequenz](..\media\user-notification-enduser.png)
 
-    ![Benutzerdefinierte Benachrichtigung für eine Tasksequenz](..\media\user-notification-enduser.png)
-
-### <a name="configure-software-center-properties"></a>Konfigurieren der Eigenschaften des Softwarecenters
-Gehen Sie wie folgt vor, um die Angaben für die Tasksequenz, die im Softwarecenter angezeigt werden, zu konfigurieren. Diese Angaben dienen nur zu Informationszwecken.  
-1. Navigieren Sie in der Configuration Manager-Konsole zu **Softwarebibliothek** > **Betriebssysteme** > **Tasksequenzen**.
-2. Wählen Sie die zu bearbeitende Tasksequenz aus, und klicken Sie anschließend auf **Eigenschaften**.
-3. Auf der Registerkarte **Allgemein** stehen folgende neuen Einstellungen für das Softwarecenter zur Verfügung:
-  - **Neustart erforderlich**: Informiert den Benutzer, ob während der Installation ein Neustart erforderlich ist.
-  - **Downloadgröße (in MB)**: Gibt an, wie viele Megabytes für die Tasksequenz im Softwarecenter angezeigt werden.  
-  - **Geschätzte Laufzeit (in Minuten)**: Gibt die geschätzte Laufzeit in Minuten für die Tasksequenz an; wird im Softwarecenter angezeigt.
 
 ##  <a name="BKMK_DistributeTS"></a> Verteilen von Inhalt, auf den von einer Tasksequenz verwiesen wird  
  Sie müssen Inhalt, auf den von einer Tasksequenz verwiesen wird, an Verteilungspunkte verteilen, bevor diese Tasksequenz von Clients ausgeführt wird. Sie können die Tasksequenz jederzeit auswählen und ihren Inhalt verteilen, um eine neue Liste von Referenzpaketen für die Verteilung zu erstellen. Wenn Sie die Tasksequenz mit aktualisiertem Inhalt ändern, müssen Sie den Inhalt erneut verteilen, bevor er für Clients verfügbar ist. Gehen Sie wie folgt vor, um den Inhalt, auf den von einer Tasksequenz verwiesen wird, zu verteilen.  
@@ -352,19 +402,22 @@ Gehen Sie wie folgt vor, um die Angaben für die Tasksequenz, die im Softwarecen
  Bearbeiten Sie die Tasksequenz nach dem Import, um Kennwörter anzugeben, die bei der ursprünglichen Tasksequenz verwendet wurden. Kennwörter werden aus Sicherheitsgründen nicht exportiert.  
 
 ##  <a name="BKMK_CreateTSVariables"></a> Erstellen von Tasksequenzvariablen für Computer und Sammlungen  
- Sie können benutzerdefinierte Tasksequenzvariablen für Computer und Sammlungen definieren. Für einen Computer definierte Variablen werden als computerspezifische Tasksequenzvariablen bezeichnet. Für eine Sammlung definierte Variablen werden als sammlungsspezifische Tasksequenzvariablen bezeichnet. Bei einem Konflikt haben computerspezifische Variablen Vorrang vor den sammlungsspezifischen Variablen. Die einem bestimmten Computer zugewiesenen Tasksequenzvariablen haben also automatisch eine höhere Priorität als Variablen, die der Sammlung zugewiesen wurden, in der der Computer sich befindet.  
+Sie können benutzerdefinierte Tasksequenzvariablen für Computer und Sammlungen definieren. Für einen Computer definierte Variablen werden als computerspezifische Tasksequenzvariablen bezeichnet. Für eine Sammlung definierte Variablen werden als sammlungsspezifische Tasksequenzvariablen bezeichnet. Bei einem Konflikt haben computerspezifische Variablen Vorrang vor den sammlungsspezifischen Variablen. Die einem bestimmten Computer zugewiesenen Tasksequenzvariablen haben also automatisch eine höhere Priorität als Variablen, die der Sammlung zugewiesen wurden, in der der Computer sich befindet.  
 
- Angenommen, der Sammlung ABC und dem Computer XYZ, der Mitglied der Sammlung ABC ist, wurde jeweils eine gleichnamige Variable zugewiesen. In diesem Fall hat die Variable, die dem Computer XYZ zugewiesen wurde, eine höhere Priorität als die der Sammlung ABC zugewiesene Variable.  
+Angenommen, der Sammlung ABC und dem Computer XYZ, der Mitglied der Sammlung ABC ist, wurde jeweils eine gleichnamige Variable zugewiesen. In diesem Fall hat die Variable, die dem Computer XYZ zugewiesen wurde, eine höhere Priorität als die der Sammlung ABC zugewiesene Variable.  
 
- Sie können computerspezifische und sammlungsspezifische Variablen ausblenden, damit sie in der Configuration Manager-Konsole nicht sichtbar sind. Wenn Sie wünschen, dass diese Variablen nicht mehr ausgeblendet werden, müssen Sie sie löschen und anschließend erneut definieren, ohne die Option zum Ausblenden der Variablen auszuwählen. Bei Verwendung der Option **Diesen Wert nicht in der Configuration Manager-Konsole anzeigen**wird der Wert der Variable nicht angezeigt, kann aber immer noch von der Tasksequenz verwendet werden, wenn diese ausgeführt wird.  
+Sie können computerspezifische und sammlungsspezifische Variablen ausblenden, damit sie in der Configuration Manager-Konsole nicht sichtbar sind. Wenn Sie wünschen, dass diese Variablen nicht mehr ausgeblendet werden, müssen Sie sie löschen und anschließend erneut definieren, ohne die Option zum Ausblenden der Variablen auszuwählen. Bei Verwendung der Option **Diesen Wert nicht in der Configuration Manager-Konsole anzeigen** wird der Wert der Variablen in der Konsole nicht angezeigt, kann aber immer noch von der Tasksequenz verwendet werden, wenn diese ausgeführt wird.  
 
- Sie können computerspezifische Variablen an einem primären Standort oder an einem Standort der zentralen Verwaltung verwalten. Configuration Manager unterstützt je Computer maximal 1000 zugewiesene Variablen.  
+> [!WARNING]    
+> Die Einstellung **Diesen Wert nicht in der Configuration Manager-Konsole anzeigen** gilt für die Configuration Manager-Konsole, aber die Werte für die Variablen werden weiterhin in der Protokolldatei der Tasksequenz (SMSTS.LOG) angezeigt. 
 
-> [!WARNING]  
+Sie können computerspezifische Variablen an einem primären Standort oder an einem Standort der zentralen Verwaltung verwalten. Configuration Manager unterstützt je Computer maximal 1000 zugewiesene Variablen.  
+
+> [!IMPORTANT]  
 >  Bei der Verwendung sammlungsspezifischer Variablen für Tasksequenzen ist Folgendes zu beachten:  
 >   
->  -   Änderungen an Sammlungen werden immer in der gesamten Hierarchie repliziert. Daher gelten alle Änderungen, die Sie an Sammlungsvariablen vornehmen, nicht nur für die Mitglieder des aktuellen Standorts, sondern für alle Mitglieder der Sammlung in der gesamten Hierarchie.  
-> -   Wenn Sie eine Sammlung löschen, werden auch die Tasksequenzvariablen gelöscht, die für die Sammlung konfiguriert sind.  
+> - Änderungen an Sammlungen werden immer in der gesamten Hierarchie repliziert. Daher gelten alle Änderungen, die Sie an Sammlungsvariablen vornehmen, nicht nur für die Mitglieder des aktuellen Standorts, sondern für alle Mitglieder der Sammlung in der gesamten Hierarchie.  
+> - Wenn Sie eine Sammlung löschen, werden auch die Tasksequenzvariablen gelöscht, die für die Sammlung konfiguriert sind.  
 
  Gehen Sie wie folgt vor, um Tasksequenzvariablen für einen Computer oder eine Sammlung zu erstellen.  
 
@@ -397,7 +450,7 @@ Gehen Sie wie folgt vor, um die Angaben für die Tasksequenz, die im Softwarecen
 6.  Klicken Sie auf **OK**, nachdem Sie der Sammlung alle Variablen hinzugefügt haben.  
 
 ##  <a name="BKMK_AdditionalActionsTS"></a> Zusätzliche Aktionen zum Verwalten von Tasksequenzen  
- Für die Verwaltung von Tasksequenzen können Sie zusätzliche Aktionen verwenden, wenn Sie die Tasksequenz anhand des folgenden Verfahrens auswählen.  
+ Für die Verwaltung von Tasksequenzen können Sie zusätzliche Aktionen verwenden, wenn Sie die Tasksequenz auswählen.  
 
 #### <a name="to-select-a-task-sequence-to-manage"></a>So wählen Sie eine Tasksequenz zur Verwaltung aus  
 
@@ -416,7 +469,6 @@ Gehen Sie wie folgt vor, um die Angaben für die Tasksequenz, die im Softwarecen
 |**Aktivieren**|Hiermit wird die Tasksequenz aktiviert, damit sie ausgeführt werden kann. Es ist nicht notwendig, eine bereitgestellte Tasksequenz nach der Aktivierung erneut bereitzustellen.|  
 |**Datei für vorab bereitgestellten Inhalt erstellen**|Hiermit wird der Assistenten zum Erstellen von vorab bereitgestellten Inhaltsdateien gestartet, mit dem der Inhalt der Tasksequenz vorab bereitgestellt wird. Informationen zum Erstellen einer vorab bereitgestellten Inhaltsdatei finden Sie unter [Vorabbereitstellen von Inhalt](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content).|  
 |**Verschieben**|Hiermit wird die ausgewählte Tasksequenz in einen anderen Ordner verschoben.|  
-|**Datenzugriff**|Hiermit wird das Dialogfeld **Eigenschaften** für die ausgewählte Tasksequenz geöffnet. In diesem Dialogfeld können Sie das Verhalten des Tasksequenzobjekts ändern. Es ist allerdings nicht möglich, die Schritte der Tasksequenz über dieses Dialogfeld zu ändern.|  
 
 ## <a name="next-steps"></a>Nächste Schritte
 [Szenarien für die Bereitstellung von Unternehmensbetriebssystemen](scenarios-to-deploy-enterprise-operating-systems.md)

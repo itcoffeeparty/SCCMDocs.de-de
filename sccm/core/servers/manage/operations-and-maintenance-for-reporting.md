@@ -15,9 +15,11 @@ caps.latest.revision: 5
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: f5a58ba9ecd9b0998c2859b6d3f45e493d7ef3cb
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f62d969dd49fb00b688602128df74b28ff551135
+ms.openlocfilehash: df572cd0c64c82e25164430a53e1b893b3ba3cf5
+ms.contentlocale: de-de
+ms.lasthandoff: 06/07/2017
 
 
 ---
@@ -27,10 +29,10 @@ ms.openlocfilehash: f5a58ba9ecd9b0998c2859b6d3f45e493d7ef3cb
 
 Es gibt mehrere Operationen, die Sie normalerweise ausführen, um Berichte und Berichtsabonnements zu verwalten, wenn die Infrastruktur vorhanden ist, die für die Berichterstellung in System Center Configuration Manager erforderlich ist.  
 
-##  <a name="a-namebkmkmanagereportsa-manage-configuration-manager-reports"></a><a name="BKMK_ManageReports"></a> Verwalten von Configuration Manager-Berichten  
+##  <a name="BKMK_ManageReports"></a> Verwalten von Configuration Manager-Berichten  
  In Configuration Manager sind über 400 vordefinierte Berichte verfügbar. Diese können Sie nutzen, um Informationen zu Benutzern, Hardware- und Softwareinventar, Softwareupdates, Anwendungen, Standortstatus und anderen Configuration Manager-Operationen in Ihrer Organisation zu erfassen, zu organisieren und darzustellen. Sie können die vordefinierten Berichte so verwenden, wie sie sind, oder sie nach Ihren Anforderungen ändern. Sie können auch benutzerdefinierte modell\- und SQL\-basierte Berichte nach Ihren Anforderungen erstellen. In den folgenden Abschnitten finden Sie Informationen zum Verwalten von Configuration Manager-Berichten.  
 
-###  <a name="a-namebkmkrunreporta-run-a-configuration-manager-report"></a><a name="BKMK_RunReport"></a> Ausführen eines Configuration Manager-Berichts  
+###  <a name="BKMK_RunReport"></a> Ausführen eines Configuration Manager-Berichts  
  Berichte in Configuration Manager in SQL Server Reporting Services gespeichert sind, und die Daten im Bericht gerendert werden aus der Configuration Manager-Datenbank abgerufen. Sie können Berichte in Configuration Manager-Konsole oder mithilfe des Berichts-Manager, die Sie in einem Webbrowser zugreifen zugreifen. Sie können Berichte auf jedem Computer öffnen, von dem aus Sie auf den Computer zugreifen können, auf dem SQL Server Reporting Services ausgeführt werden. Sie benötigen allerdings entsprechende Rechte, um die Berichte anzuzeigen. Wenn Sie einen Bericht ausführen, werden Titel, Beschreibung und Kategorie des Berichts in der Sprache des lokalen Betriebssystems angezeigt.  
 
 > [!NOTE]  
@@ -38,6 +40,9 @@ Es gibt mehrere Operationen, die Sie normalerweise ausführen, um Berichte und B
 
 > [!WARNING]  
 >  Zum Ausführen von Berichten benötigen Sie das Recht **Lesen** für die Berechtigung **Standort** sowie die Berechtigung **Bericht ausführen** , die für bestimmte Objekte konfiguriert ist.  
+
+> [!IMPORTANT]    
+> Es muss eine bidirektionale Vertrauensstellung für Benutzer eingerichtet werden, die zu einer anderen Domäne als das Konto des Reporting Services-Punkts gehören, um erfolgreich Berichte auszuführen.
 
 > [!NOTE]  
 >  Der Berichts-Manager ist ein webbasiertes Zugriffs- und Verwaltungstool für Berichte. Sie können ihn zum Verwalten einer einzelnen Berichtsserverinstanz an einem Remotestandort mithilfe einer HTTP-Verbindung verwenden. Sie können den Berichts-Manager für Betriebstasks einsetzen, beispielsweise um Berichte anzuzeigen, Berichtseigenschaften zu ändern und zugeordnete Berichtsabonnements zu verwalten. In diesem Thema finden Sie die Schritte zum Anzeigen eines Berichts und zum Ändern der Berichtseigenschaften im Berichts-Manager. Weitere Informationen zu den anderen Optionen vom Berichts-Manager finden Sie unter [Berichts-Manager](http://go.microsoft.com/fwlink/p/?LinkId=224916) in der SQL Server 2008-Onlinedokumentation.  
@@ -73,7 +78,7 @@ Es gibt mehrere Operationen, die Sie normalerweise ausführen, um Berichte und B
 
 4.  Wenn Parameter erforderlich sind, geben Sie die Parameter an, und klicken Sie dann auf **Bericht anzeigen**.  
 
-###  <a name="a-namebkmkmodifyreportpropertiesa-modify-the-properties-for-a-configuration-manager-report"></a><a name="BKMK_ModifyReportProperties"></a> Ändern der Eigenschaften eines Configuration Manager-Berichts  
+###  <a name="BKMK_ModifyReportProperties"></a> Ändern der Eigenschaften eines Configuration Manager-Berichts  
  In der Configuration Manager-Konsole können Sie die Eigenschaften eines Berichts anzeigen, beispielsweise Namen und Beschreibung des Berichts. Zum Ändern der Eigenschaften verwenden Sie jedoch den Berichts-Manager. Wenden Sie das folgende Verfahren an, um die Eigenschaften eines Configuration Manager-Berichts zu ändern.  
 
 #### <a name="to-modify-report-properties-in-report-manager"></a>So ändern Sie Berichtseigenschaften im Berichts-Manager  
@@ -91,7 +96,7 @@ Es gibt mehrere Operationen, die Sie normalerweise ausführen, um Berichte und B
 
 5.  Wenn Sie fertig sind, klicken Sie auf **Übernehmen**. Die Berichtseigenschaften werden auf dem Berichtsserver gespeichert, und die aktualisierten Eigenschaften des Berichts werden von der Configuration Manager-Konsole abgerufen.  
 
-###  <a name="a-namebkmkeditreporta-edit-a-configuration-manager-report"></a><a name="BKMK_EditReport"></a> Bearbeiten eines Configuration Manager-Berichts  
+###  <a name="BKMK_EditReport"></a> Bearbeiten eines Configuration Manager-Berichts  
  Sie können einen vorhandenen Configuration Manager-Bericht in Berichts-Generator ändern, wenn nicht die gewünschten Informationen enthalten sind oder Sie ein anderes Layout bzw. einen anderen Entwurf wünschen.  
 
 > [!NOTE]  
@@ -115,7 +120,7 @@ Es gibt mehrere Operationen, die Sie normalerweise ausführen, um Berichte und B
 
 4.  Ändern Sie in Report Builder die entsprechenden Berichtseinstellungen, und klicken Sie dann auf **Speichern** , um den Bericht auf dem Berichtsserver zu speichern.  
 
-###  <a name="a-namebkmkcreatemodelbasedreporta-create-a-model-based-report"></a><a name="BKMK_CreateModelBasedReport"></a> Erstellen eines modellbasierten Berichts  
+###  <a name="BKMK_CreateModelBasedReport"></a> Erstellen eines modellbasierten Berichts  
  Mit einem modellbasierten Bericht können Sie die Objekte, die Sie in den Bericht einschließen möchten, interaktiv auswählen. Weitere Informationen zum Erstellen von Berichtsmodellen finden Sie unter [Erstellen benutzerdefinierter Berichtsmodelle für System Center Configuration Manager in SQL Server Reporting Services](creating-custom-report-models-in-sql-server-reporting-services.md).  
 
 > [!IMPORTANT]  
@@ -129,7 +134,7 @@ Es gibt mehrere Operationen, die Sie normalerweise ausführen, um Berichte und B
 
 2.  Erweitern Sie im Arbeitsbereich **Überwachung** die Option **Berichterstattung** , und klicken Sie auf **Berichte**.  
 
-3.  Klicken Sie auf der Registerkarte **Startseite** im Bereich **Erstellen** auf **Bericht erstellen** , um den ** **Assistenten zum Erstellen von Berichten zu öffnen.  
+3.  Klicken Sie auf der Registerkarte **Startseite** im Bereich **Erstellen** auf **Bericht erstellen** , um den **** Assistenten zum Erstellen von Berichten zu öffnen.  
 
 4.  Konfigurieren Sie auf der Seite **Informationen** die folgenden Einstellungen:  
 
@@ -157,7 +162,7 @@ Es gibt mehrere Operationen, die Sie normalerweise ausführen, um Berichte und B
 
 10. Klicken Sie auf **Speichern** , um den Bericht auf dem Berichtsserver zu speichern. Sie können den neuen Bericht im Arbeitsbereich **Überwachung** im Knoten **Berichte** ausführen und ändern.  
 
-###  <a name="a-namebkmkcreatesqlbasedreporta-create-a-sql-based-report"></a><a name="BKMK_CreateSQLBasedReport"></a> Erstellen eines SQL\-basierten Berichts  
+###  <a name="BKMK_CreateSQLBasedReport"></a> Erstellen eines SQL\-basierten Berichts  
  Mit einem SQL\-basierten Bericht können Sie Daten auf Basis einer SQL-Anweisung für Berichte abrufen.  
 
 > [!IMPORTANT]  
@@ -174,7 +179,7 @@ Es gibt mehrere Operationen, die Sie normalerweise ausführen, um Berichte und B
 
 2.  Erweitern Sie im Arbeitsbereich **Überwachung** die Option **Berichterstattung**, und klicken Sie dann auf **Berichte**.  
 
-3.  Klicken Sie auf der Registerkarte **Startseite** im Bereich **Erstellen** auf **Bericht erstellen** , um den ** **Assistenten zum Erstellen von Berichten zu öffnen.  
+3.  Klicken Sie auf der Registerkarte **Startseite** im Bereich **Erstellen** auf **Bericht erstellen** , um den **** Assistenten zum Erstellen von Berichten zu öffnen.  
 
 4.  Konfigurieren Sie auf der Seite **Informationen** die folgenden Einstellungen:  
 
@@ -200,10 +205,10 @@ Es gibt mehrere Operationen, die Sie normalerweise ausführen, um Berichte und B
 
 9. Klicken Sie auf **Speichern** , um den Bericht auf dem Berichtsserver zu speichern. Sie können den neuen Bericht im Arbeitsbereich **Überwachung** im Knoten **Berichte** ausführen.  
 
-##  <a name="a-namebkmkmanagereportsubscriptionsa-manage-report-subscriptions"></a><a name="BKMK_ManageReportSubscriptions"></a> Verwalten von Berichtsabonnements  
+##  <a name="BKMK_ManageReportSubscriptions"></a> Verwalten von Berichtsabonnements  
  Mithilfe von Berichtsabonnements in SQL Server Reporting Services können Sie die automatische Übermittlung von angegebenen Berichten per E-Mail oder an eine Dateifreigabe in geplanten Zeitintervallen konfigurieren. Verwenden Sie den **Assistenten zum Erstellen von Abonnements** in System Center 2012 Configuration Manager, um Berichtsabonnements zu konfigurieren.  
 
-###  <a name="a-namebkmkreportsubscriptionfilesharea-create-a-report-subscription-to-deliver-a-report-to-a-file-share"></a><a name="BKMK_ReportSubscriptionFileShare"></a> Erstellen eines Berichtsabonnements zum Übermitteln eines Berichts an eine Dateifreigabe  
+###  <a name="BKMK_ReportSubscriptionFileShare"></a> Erstellen eines Berichtsabonnements zum Übermitteln eines Berichts an eine Dateifreigabe  
  Wenn Sie ein Berichtsabonnement zum Übermitteln eines Berichts an eine Dateifreigabe erstellen, wird der Bericht im angegebenen Format auf die angegebene Dateifreigabe kopiert. Sie können die Übermittlung von nur einem Bericht auf einmal abonnieren bzw. anfordern.  
 
  Im Gegensatz zu Berichten, die von einem Berichtsserver gehostet und verwaltet werden, handelt es sich bei Berichten, die an eine Dateifreigabe übermittelt werden, um statische Dateien. Bei Berichten, die als Dateien im Dateisystem gespeichert werden, können interaktive Funktionen, die für den Bericht definiert wurden, nicht verwendet werden. Interaktive Funktionen werden als statische Elemente dargestellt. Wenn im Bericht Diagramme enthalten sind, wird die Standardpräsentation verwendet. Wenn im Bericht auf einen anderen Bericht verwiesen wird, wird der Link als statischer Text gerendert. Wenn interaktive Funktionen in einem übermittelten Bericht erhalten bleiben sollen, übermitteln Sie den Bericht stattdessen per E-Mail. Weitere Informationen zum Übermitteln per E-Mail finden Sie im Abschnitt [Erstellen eines Berichtsabonnements zum Übermitteln eines Berichts per E-Mail](#BKMK_ReportSubscriptionEmail) weiter unten im Thema.  
@@ -220,7 +225,7 @@ Es gibt mehrere Operationen, die Sie normalerweise ausführen, um Berichte und B
 
 2.  Erweitern Sie im Arbeitsbereich **Überwachung** den Knoten **Berichterstattung** , und klicken Sie dann auf **Berichte** , um die verfügbaren Berichte aufzulisten. Sie können einen Berichtsordner auswählen, um nur die Berichte aufzulisten, die dem Ordner zugeordnet sind.  
 
-3.  Wählen Sie den Bericht aus, der dem Abonnement hinzugefügt werden soll, und klicken Sie dann auf der Registerkarte **Startseite** im Bereich **Berichtsgruppe** auf **Abonnement erstellen** , um den ** **Assistenten zum Erstellen von Abonnements zu öffnen.  
+3.  Wählen Sie den Bericht aus, der dem Abonnement hinzugefügt werden soll, und klicken Sie dann auf der Registerkarte **Startseite** im Bereich **Berichtsgruppe** auf **Abonnement erstellen** , um den **** Assistenten zum Erstellen von Abonnements zu öffnen.  
 
 4.  Konfigurieren Sie auf der Seite **Abonnementübermittlung** die folgenden Einstellungen:  
 
@@ -284,7 +289,7 @@ Es gibt mehrere Operationen, die Sie normalerweise ausführen, um Berichte und B
 
 8.  Klicken Sie auf der Seite **Abschluss des Vorgangs** zum Beenden des Assistenten auf **Schließen** . Überprüfen Sie, ob das Berichtsabonnement erfolgreich erstellt wurde. Sie können Berichtsabonnements im Arbeitsbereich **Überwachung** unter **Berichterstattung** im Knoten **Berichte** anzeigen und ändern.  
 
-###  <a name="a-namebkmkreportsubscriptionemaila-create-a-report-subscription-to-deliver-a-report-by-email"></a><a name="BKMK_ReportSubscriptionEmail"></a> Erstellen eines Berichtsabonnements zum Übermitteln eines Berichts per E-Mail  
+###  <a name="BKMK_ReportSubscriptionEmail"></a> Erstellen eines Berichtsabonnements zum Übermitteln eines Berichts per E-Mail  
  Wenn Sie ein Berichtsabonnement für die Übermittlung eines Berichts per E-Mail erstellen, wird eine E-Mail mit dem Bericht als Anlage an die konfigurierten Empfänger gesendet. Dabei werden die E-Mail-Adressen nicht überprüft, und es werden auch keine E-Mail-Adressen von einem E-Mail-Server abgerufen. Sie müssen im Voraus wissen, welche E-Mail-Adressen Sie verwenden möchten. Standardmäßig können Sie Berichte an beliebige E-Mail-Konten innerhalb oder außerhalb Ihres Unternehmens senden. Sie können eine oder beide der folgenden E-Mail-Übermittlungsoptionen auswählen:  
 
 -   Senden Sie eine Benachrichtigung und einen Hyperlink zum generierten Bericht.  
@@ -302,7 +307,7 @@ Es gibt mehrere Operationen, die Sie normalerweise ausführen, um Berichte und B
 
 -   Erweitern Sie im Arbeitsbereich **Überwachung** den Knoten **Berichterstattung** , und klicken Sie dann auf **Berichte** , um die verfügbaren Berichte aufzulisten. Sie können einen Berichtsordner auswählen, um nur die Berichte aufzulisten, die dem Ordner zugeordnet sind.  
 
--   Wählen Sie den Bericht aus, der dem Abonnement hinzugefügt werden soll, und klicken Sie dann auf der Registerkarte **Startseite** im Bereich **Berichtsgruppe** auf **Abonnement erstellen** , um den ** **Assistenten zum Erstellen von Abonnements zu öffnen.  
+-   Wählen Sie den Bericht aus, der dem Abonnement hinzugefügt werden soll, und klicken Sie dann auf der Registerkarte **Startseite** im Bereich **Berichtsgruppe** auf **Abonnement erstellen** , um den **** Assistenten zum Erstellen von Abonnements zu öffnen.  
 
 -   Konfigurieren Sie auf der Seite **Abonnementübermittlung** die folgenden Einstellungen:  
 
@@ -358,9 +363,4 @@ Es gibt mehrere Operationen, die Sie normalerweise ausführen, um Berichte und B
 -   Überprüfen Sie auf der Seite **Zusammenfassung** die Einstellungen für das Berichtsabonnement. Klicken Sie auf **Zurück** , um die Einstellungen zu ändern, oder auf **Weiter** , um das Berichtsabonnement zu erstellen.  
 
 -   Klicken Sie auf der Seite **Abschluss des Vorgangs** zum Beenden des Assistenten auf **Schließen** . Überprüfen Sie, ob das Berichtsabonnement erfolgreich erstellt wurde. Sie können Berichtsabonnements im Arbeitsbereich **Überwachung** unter **Berichterstattung** im Knoten **Berichte** anzeigen und ändern.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -17,10 +17,10 @@ ms.author: brenduns
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
-ms.openlocfilehash: 33b188f4a9c14091429d1f49e07f1f17fbf98516
+ms.sourcegitcommit: c8717925dba42451b1e241a7c2f59e43896d7d99
+ms.openlocfilehash: 98e490d7f5ca17dcf2a0aaa848f14e789f214123
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/19/2017
 
 ---
 # <a name="create--software-updates-and-update-bundles-with-updates-publisher"></a>Erstellen von Softwareupdates und Updatepaketen mit Updates Publisher
@@ -36,11 +36,11 @@ Diese zwei Assistenten haben ähnliche Workflows, deshalb wird im Verfahren zum 
 
 2.  Verwenden Sie die folgenden Informationen auf der Seite **Paket**, um das Update zu konfigurieren:
 
-    -   Wählen Sie **Durchsuchen** aus, um nach dem Softwareupdatepaket zu suchen, das Sie als Paketquelle verwenden. Gültige Quellen sind MSI-, MSP- oder EXE-Dateien. Updates Publisher erstellt einen Hash der Datei. Der Hash und die Datei werden anschließend in den Updatemetadaten für das Update verwendet, das Sie erstellen.
+    -   Wählen Sie **Durchsuchen** aus, um nach dem Softwareupdatepaket zu suchen, das Sie als Paketquelle verwenden. Gültige Quellen sind MSI-, MSP- oder EXE-Dateien. Updates Publisher erfordert Zugriff auf die Datei, um einen Dateihash zu erstellen. Der Hash und die Datei werden anschließend in den Updatemetadaten für das Update verwendet, das Sie erstellen.
 
-    -   Geben Sie den Quellspeicherort des Inhalts für dieses Update an. Wenn Sie über eine lokale Kopie des Inhalts verfügen, können Sie das Kontrollkästchen **Lokale Quelle zum Veröffentlichen von Softwareupdateinhalt verwenden** aktivieren, um [Veröffentlichungspfad für lokale Quelle](/sccm/sum/tools/updates-publisher-options#advanced) zu verwenden (sowie die Option „Erweitert“). Wenn diese Option nicht aktiviert ist, müssen Sie eine URL zum Standort des Updates im Web angeben. Dieser Pfad oder diese URL wird den Updatemetadaten hinzugefügt.
+    -   Geben Sie den Quellspeicherort des Inhalts für dieses Update an. Normalerweise ist dies der Speicherort, in den die Updatebinärdatei während der Veröffentlichung auf einem WSUS-Server heruntergeladen wird.  Wenn die Option **Lokale Quelle zum Veröffentlichen von Softwareupdateinhalt verwenden** ausgewählt ist, ist der Pfad nicht erforderlich.
 
-        Später, wenn das Update auf einem WSUS-Server veröffentlicht wird, ruft Updates Publisher die Binärdateien für das Update vom angegebenen Quellspeicherort ab.
+        Später, wenn das Update auf einem WSUS-Server veröffentlicht wird, lädt Updates Publisher die Binärdateien für das Update vom angegebenen Quellspeicherort herunter.  Wenn kein Pfad angegeben ist, durchsucht Updates Publisher den [Veröffentlichungspfad für lokale Quellen](/sccm/sum/tools/updates-publisher-options#advanced) nach der Updatebinärdatei.
 
     -   Geben Sie die **Binärsprache** des Softwareupdates an.
 
@@ -58,7 +58,7 @@ Diese zwei Assistenten haben ähnliche Workflows, deshalb wird im Verfahren zum 
 
 3.  Geben Sie auf der Seite **Informationen** Details zum Update an, die beim Veröffentlichen oder Exportieren des Updates eingeschlossen werden. Zu den Details gehören lokalisierte Eigenschaften wie beispielsweise der Updatename (Titel) und eine Beschreibung. Anschließend geben Sie allgemeinere Details an, z.B. Klassifizierung, Anbieter, Produkt und einen Hinweis darauf, wo weitere Informationen zum Update bereitgestellt werden.
 
-    **Lokalisierte Eigenschaften: **
+     __Lokalisierte Eigenschaften:__
 
     -   **Sprache**: Wählen Sie eine Sprache aus, und geben Sie dann einen Titel und eine Beschreibung an. Sie können anschließend (nacheinander) zusätzliche Sprachen auswählen, wobei für jede Sprache ein eigener Titel und eine eigene Beschreibung unterstützt wird.
 
@@ -66,48 +66,48 @@ Diese zwei Assistenten haben ähnliche Workflows, deshalb wird im Verfahren zum 
 
     -   **Beschreibung**: Eine Beschreibung des Updates. Sie können beispielsweise angeben, welche Komponenten mit dem Update installiert werden, und warum oder wann das Update verwendet werden sollte.
 
-  **Klassifizierung:** Nachfolgend finden Sie gängige Beschreibungen für die verschiedenen Klassifizierungen.
+     **Klassifizierung:** Nachfolgend finden Sie gängige Beschreibungen für die verschiedenen Klassifizierungen.
 
-  -   **Update**: Ein Update für eine aktuell installierte Anwendung oder Datei.
+    -   **Update**: Ein Update für eine aktuell installierte Anwendung oder Datei.
 
-  -   **Kritisch**: Ein in großem Umfang freigegebenes Update für ein bestimmtes Problem, mit dem ein kritischer, nicht sicherheitsrelevanter Fehler behoben wird.
+    -   **Kritisch**: Ein in großem Umfang freigegebenes Update für ein bestimmtes Problem, mit dem ein kritischer, nicht sicherheitsrelevanter Fehler behoben wird.
 
-  -   **Feature Pack**: Neue Produktfunktionen, die außerhalb einer Produktversion verteilt werden und in der Regel in der nächsten vollständigen Produktversion enthalten sind.
+    -   **Feature Pack**: Neue Produktfunktionen, die außerhalb einer Produktversion verteilt werden und in der Regel in der nächsten vollständigen Produktversion enthalten sind.
 
-  -   **Sicherheit**: Ein in großem Umfang freigegebenes Update für ein produktspezifisches, sicherheitsrelevantes Problem.
+    -   **Sicherheit**: Ein in großem Umfang freigegebenes Update für ein produktspezifisches, sicherheitsrelevantes Problem.
 
-  -   **Updaterollup**: Ein kumulativer Satz an Hotfixes, die für eine einfachere Bereitstellung gebündelt sind. Diese Hotfixes können Sicherheitsupdates, wichtige Updates, Updates usw. umfassen. Ein Aktualisierungsrollup betrifft in der Regel einen bestimmten Bereich, z.B. die Sicherheit oder ein Produktfeature.
+    -   **Updaterollup**: Ein kumulativer Satz an Hotfixes, die für eine einfachere Bereitstellung gebündelt sind. Diese Hotfixes können Sicherheitsupdates, wichtige Updates, Updates usw. umfassen. Ein Aktualisierungsrollup betrifft in der Regel einen bestimmten Bereich, z.B. die Sicherheit oder ein Produktfeature.
 
-  -   **Service Pack**: Ein kumulativer Satz an Hotfixes, die auf eine Anwendung angewendet werden. Diese Hotfixes können Sicherheitsupdates, wichtige Updates, Softwareupdates usw. umfassen.
+    -   **Service Pack**: Ein kumulativer Satz an Hotfixes, die auf eine Anwendung angewendet werden. Diese Hotfixes können Sicherheitsupdates, wichtige Updates, Softwareupdates usw. umfassen.
 
-  -   **Tool**: Gibt ein Dienstprogramm oder Feature an, das bei der Durchführung einer oder mehrerer Aufgaben hilft.
+    -   **Tool**: Gibt ein Dienstprogramm oder Feature an, das bei der Durchführung einer oder mehrerer Aufgaben hilft.
 
-  -   **Treiber**: Ein Update für die Treibersoftware.
+     -   **Treiber**: Ein Update für die Treibersoftware.
 
- **Anbieter**: Geben Sie einen Anbieter für das Update an. Sie können mithilfe der Dropdownliste Werte aus Updates verwenden, die sich im Repository befinden. Wenn Sie einen Anbieter angeben, erstellt der Assistent einen Ordner mit dem Anbieternamen unter **Alle Softwareupdates** im **Arbeitsbereich „Updates“**, sofern dieser Ordner noch nicht vorhanden ist. Die nachfolgenden Namen sind reservierte WSUS-Namen (Windows Server Updates Services), die nicht für von Ihnen erstellte Updates verwendet werden können:
- -   Microsoft Corporation
- -   Microsoft
- -   Update
- -   Softwareupdate
- -   Tools
- -   Tool
- -   Kritisch
- -   Wichtige Updates
- -   Sicherheit
- -   Sicherheitsupdates
- -   Feature Pack
- -   Updaterollup
- -   Service Pack
- -   Treiber
- -   Treiberupdate
- -   Paket
- -   Paketupdate  <br /><br />
+    **Anbieter**: Geben Sie einen Anbieter für das Update an. Sie können mithilfe der Dropdownliste Werte aus Updates verwenden, die sich im Repository befinden. Wenn Sie einen Anbieter angeben, erstellt der Assistent einen Ordner mit dem Anbieternamen unter **Alle Softwareupdates** im **Arbeitsbereich „Updates“**, sofern dieser Ordner noch nicht vorhanden ist. Die nachfolgenden Namen sind reservierte WSUS-Namen (Windows Server Updates Services), die nicht für von Ihnen erstellte Updates verwendet werden können:
+ >*   Microsoft Corporation
+ >*   Microsoft
+ >*   Update
+ >*   Softwareupdate
+ >*   Tools
+ >*   Tool
+ >*   Kritisch
+ >*   Wichtige Updates
+ >*   Sicherheit
+ >*   Sicherheitsupdates
+ >*   Feature Pack
+ >*   Updaterollup
+ >*   Service Pack
+ >*   Treiber
+ >*   Treiberupdate
+ >*   Paket
+ >*   Paketupdate
 
- **Produkt**: Geben Sie die Art des Produkts an, für das das Update vorgesehen ist. Sie können mithilfe der Dropdownliste Werte aus Updates verwenden, die sich im Repository befinden. Die Liste der für WSUS reservierten Namen, die nicht für **Anbieter** verwendet werden können, gilt auch für **Produkt**.
+**Produkt**: Geben Sie die Art des Produkts an, für das das Update vorgesehen ist. Sie können mithilfe der Dropdownliste Werte aus Updates verwenden, die sich im Repository befinden. Die Liste der für WSUS reservierten Namen, die nicht für **Anbieter** verwendet werden können, gilt auch für **Produkt**.
 
  **URL mit weiteren Informationen**: Geben Sie die URL an, über die weitere Informationen zu diesem Update bereitgestellt werden. Sie müssen Kleinbuchstaben für **https** oder **http** verwenden, wenn Sie diese URL eingeben.
 
-1.  Auf der Seite **Optionale Informationen** können Sie Details mit zusätzlichen Informationen zum Update konfigurieren.
+4.  Auf der Seite **Optionale Informationen** können Sie Details mit zusätzlichen Informationen zum Update konfigurieren.
 
     -   **Bulletin-ID**: Bulletin-IDs werden üblicherweise, aber nicht immer, durch die Updateanbieter bereitgestellt.
 
@@ -130,21 +130,21 @@ Diese zwei Assistenten haben ähnliche Workflows, deshalb wird im Verfahren zum 
         -   **Neustart immer erforderlich**: Der Computer führt nach dem Installieren des Softwareupdates immer einen Systemneustart durch.
         -   **Neustart kann angefordert werden**: Nach dem Installieren des Softwareupdates fordert der Computer nur dann einen Neustart an, wenn dieser erforderlich ist. Der Benutzer hat die Möglichkeit, den Neustart zu verschieben. Dies ist der Standardwert. <br /><br />
 
-2.  Geben Sie auf der Seite **Voraussetzung** die erforderlichen Komponenten an, die auf dem Computer installiert werden müssen, bevor dieses Update installiert werden kann. Die Regeln werden **Detectoids** genannt. Detectoids sind Regeln hoher Ebene, z.B. die Anforderung, dass es sich bei der Computer-CPU um einen 64-Bit-Prozessor handeln muss. Detectoids können auch angeben, dass bestimmte Updates installiert sein müssen, bevor dieses Update installiert werden kann.
+5.  Geben Sie auf der Seite **Voraussetzung** die erforderlichen Komponenten an, die auf dem Computer installiert werden müssen, bevor dieses Update installiert werden kann. Erforderliche Komponenten können **Detectoids** oder andere Updates sein. Detectoids sind Regeln hoher Ebene, z.B. die Anforderung, dass es sich bei der Computer-CPU um einen 64-Bit-Prozessor handeln muss. Detectoids können auch angeben, dass bestimmte Updates installiert sein müssen, bevor dieses Update installiert werden kann.
 
     -   Verwenden Sie für eine bessere Leistung Detectoids, statt Regeln für *installierbare* und *installierte Elemente* zu erstellen, die dieselbe Überprüfung oder Aktion ausführen.
 
- Verwenden Sie die Suchoption für **Verfügbare Softwareupdates und Detectoids**, um bestimmte Detectoids zu finden. Suchen Sie beispielsweise nach **CPU**, um die Detectoids zu finden, mit der Sie die Installation basierend auf einer bestimmten CPU-Architektur einschränken können.
+    Verwenden Sie die Suchoption für **verfügbare Softwareupdates und Detectoids**, um bestimmte Updates oder Detectoids zu finden. Suchen Sie beispielsweise nach **CPU**, um die Detectoids zu finden, mit der Sie die Installation basierend auf einer bestimmten CPU-Architektur einschränken können.
 
- Sie können in einem Arbeitsschritt mehrere Detectoids als Voraussetzung hinzufügen. Beim Hinzufügen von Voraussetzungen werden die ausgewählten Detectoids als eine oder mehrere Gruppen hinzugefügt. Zur Qualifizierung für eine Installation muss ein Computer die Anforderung mindestens eines Mitglieds jeder konfigurierten Gruppe erfüllen:
+    Sie können in einem Arbeitsschritt mehrere Elemente als Voraussetzung hinzufügen. Beim Hinzufügen von Voraussetzungen werden die ausgewählten Detectoids als eine oder mehrere Gruppen hinzugefügt. Zur Qualifizierung für eine Installation muss ein Computer die Anforderung mindestens eines Mitglieds jeder konfigurierten Gruppe erfüllen:
 
- -   Wenn Sie auf **Voraussetzung hinzufügen** klicken, werden alle ausgewählten Detectoids in getrennten Gruppen hinzugefügt. Um sich für dieses Update zu qualifizieren, muss ein Computer die Voraussetzung in dieser Gruppe erfüllen und den Anforderungen für alle weiteren konfigurierten Gruppen entsprechen.
+ -   Wenn Sie auf **Voraussetzung hinzufügen** klicken, werden alle ausgewählten Elemente in einzelnen getrennten Gruppen hinzugefügt. Um sich für dieses Update zu qualifizieren, muss ein Computer die Voraussetzung in dieser Gruppe erfüllen und den Anforderungen für alle weiteren konfigurierten Gruppen entsprechen.
 
- -   Wenn Sie auf **Gruppe hinzufügen** klicken, werden alle ausgewählten Detectoids einer einzelnen Gruppe hinzugefügt. Um sich für dieses Update zu qualifizieren, muss ein Computer mindestens eine der Voraussetzungen in dieser Gruppe erfüllen und den Anforderungen für alle weiteren konfigurierten Gruppen entsprechen.
+ -   Wenn Sie auf **Gruppe hinzufügen** klicken, werden alle ausgewählten Elemente einer einzelnen Gruppe hinzugefügt. Um sich für dieses Update zu qualifizieren, muss ein Computer mindestens eine der Voraussetzungen in dieser Gruppe erfüllen und den Anforderungen für alle weiteren konfigurierten Gruppen entsprechen.
 
-1.  Geben Sie auf der Seite **Ablösung** die Updates an, die durch dieses Update ersetzt (abgelöst) werden. Wenn dieses Update veröffentlicht wird, markiert Configuration Manager jedes abgelöste Update als **Abgelaufen**. Clients installieren dann dieses Update anstelle des abgelösten Updates.
+6.  Geben Sie auf der Seite **Ablösung** die Updates an, die durch dieses Update ersetzt (abgelöst) werden. Wenn dieses Update veröffentlicht wird, markiert Configuration Manager jedes abgelöste Update als **Abgelaufen**. Clients installieren dann dieses Update anstelle des abgelösten Updates.
 
-2.  Verwenden Sie den **Regel-Editor** auf der Seite **Anwendbarkeit**, um einen Satz an Regeln zu definieren, die bestimmen, ob ein Gerät das Update benötigt. (Diese Seite ähnelt der Seite **Installiert**, die auf die Seite folgt.)
+7.  Verwenden Sie den **Regel-Editor** auf der Seite **Anwendbarkeit**, um einen Satz an Regeln zu definieren, die bestimmen, ob ein Gerät das Update benötigt. (Diese Seite ähnelt der Seite **Installiert**, die auf die Seite folgt.)
 
     Um eine neue Regel hinzuzufügen, klicken Sie auf ![„Neue Regel“](media/newrule.png). Daraufhin wird die Seite „Anwendbarkeitsregel“ geöffnet, auf der Sie Regeln konfigurieren können.
 
@@ -165,15 +165,15 @@ Diese zwei Assistenten haben ähnliche Workflows, deshalb wird im Verfahren zum 
 
         Nachdem Sie eine Regel erstellt haben, können Sie die weiteren Symbole zum Ändern der Regel verwenden. Wenn mehrere Regeln vorliegen, können Sie hierüber außerdem die Beziehungen zwischen diesen Regeln definieren.
 
- Wenn Sie alle gewünschten Regeln erstellt und hinzugefügt haben, klicken Sie im Dialogfeld **Regelsatz erstellen** auf **OK**, um diesen Satz zu speichern. Sie können anschließend eine ****neue Regel erstellen und diese ebenfalls zum Satz hinzufügen.
+    Wenn Sie alle gewünschten Regeln erstellt und hinzugefügt haben, klicken Sie im Dialogfeld **Regelsatz erstellen** auf **OK**, um diesen Satz zu speichern. Sie können anschließend eine ****neue Regel erstellen und diese ebenfalls zum Satz hinzufügen.
 
- Wenn Sie über mehrere Regeln oder Regelsätze verfügen, die einem Update hinzugefügt werden sollen, können Sie die logischen Operatoren im **Regel-Editor** verwenden, um Bedingungen zwischen den Regeln sowie die Reihenfolge der Verarbeitung festzulegen.
+    Wenn Sie über mehrere Regeln oder Regelsätze verfügen, die einem Update hinzugefügt werden sollen, können Sie die logischen Operatoren im **Regel-Editor** verwenden, um Bedingungen zwischen den Regeln sowie die Reihenfolge der Verarbeitung festzulegen.
 
-1.  Verwenden Sie den **Regel-Editor** auf der Seite **Installiert**, um einen Satz an Regeln zu definieren, mit dem bestimmt wird, ob ein Gerät das von Ihnen konfigurierte Update bereits installiert hat. (Diese Seite ähnelt der Seite **Anwendbarkeit**, die dieser Seite vorangeht.)
+8.  Verwenden Sie den **Regel-Editor** auf der Seite **Installiert**, um einen Satz an Regeln zu definieren, mit dem bestimmt wird, ob ein Gerät das von Ihnen konfigurierte Update bereits installiert hat. (Diese Seite ähnelt der Seite **Anwendbarkeit**, die dieser Seite vorangeht.)
 
     Auf dieser Seite des Assistenten können Regeln mit denselben Optionen und Kriterien wie auf der Seite **Anwendbarkeit** konfiguriert werden.
 
-Wenn der Assistent abgeschlossen wird, wird das neue Update zu einem Knoten im **Arbeitsbereich „Updates“** hinzugefügt, der durch den Wert des Namens **Anbieter** identifiziert wird, den Sie für dieses Update verwendet haben.
+    Wenn der Assistent abgeschlossen wird, wird das neue Update zu einem Knoten im **Arbeitsbereich „Updates“** hinzugefügt, der durch die Namen für **Anbieter** und **Produkt** identifiziert wird, die Sie für dieses Update verwendet haben.
 
 ## <a name="use-the-create-bundle-wizard"></a>Verwenden des Assistenten zum Erstellen von Paketen
 Dieser Assistent verwendet denselben Workflow wie der [Assistent zum Erstellen von Updates](#use-the-create-update-wizard). Verwenden Sie deshalb diesen Workflow, aber berücksichtigen Sie die folgenden Unterschiede für Pakete:

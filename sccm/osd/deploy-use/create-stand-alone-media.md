@@ -2,7 +2,7 @@
 title: "Erstellen eigenständiger Medien mit System Center Configuration Manager | Microsoft Docs"
 description: "Verwenden Sie eigenständige Medien, um das Betriebssystem auf einem Computer ohne Verbindung mit einem Configuration Manager-Standort oder einem Netzwerk bereitzustellen."
 ms.custom: na
-ms.date: 03/24/2017
+ms.date: 06/07/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: d4689545ce2be5c16a65b24489f30028a0f90f94
+ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
+ms.openlocfilehash: 98f902429ad1b9965a0dc4cc2e1bd071ad5c0779
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -36,10 +36,10 @@ Eigenständige Medien in Configuration Manager enthalten alles, was zur Bereitst
 
 -   [Upgrade von Windows auf die neueste Version](upgrade-windows-to-the-latest-version.md)  
 
- Eigenständige Medien enthalten die Tasksequenz, mit der die Schritte zum Installieren des Betriebssystems und aller anderen erforderlichen Inhalte, einschließlich Startabbild, Betriebssystemabbild und Gerätetreiber, automatisiert werden. Da alle Komponenten für die Bereitstellung des Betriebssystems auf den eigenständigen Medien gespeichert sind, ist der Speicherplatzbedarf für eigenständige Medien wesentlich größer als für andere Medientypen. Wenn Sie an einem Standort der zentralen Verwaltung eigenständige Medien erstellen, ruft der Client seinen zugewiesenen Standortcode aus Active Directory ab. An einem untergeordneten Standort erstellte eigenständige Medien werden automatisch dem Client und dem Standortcode für diesen Standort zugewiesen.  
+Eigenständige Medien enthalten die Tasksequenz, mit der die Schritte zum Installieren des Betriebssystems und aller anderen erforderlichen Inhalte, einschließlich Startimage, Betriebssystemimage und Gerätetreiber, automatisiert werden. Da alle Komponenten für die Bereitstellung des Betriebssystems auf den eigenständigen Medien gespeichert sind, ist der Speicherplatzbedarf für eigenständige Medien wesentlich größer als für andere Medientypen. Wenn Sie an einem Standort der zentralen Verwaltung eigenständige Medien erstellen, ruft der Client seinen zugewiesenen Standortcode aus Active Directory ab. An einem untergeordneten Standort erstellte eigenständige Medien werden automatisch dem Client und dem Standortcode für diesen Standort zugewiesen.  
 
 ##  <a name="BKMK_CreateStandAloneMedia"></a> Erstellen eigenständiger Medien  
- Bevor Sie eigenständige Medien mithilfe des Assistenten zum Erstellen von Tasksequenzmedien erstellen, achten Sie darauf, dass die folgenden Bedingungen erfüllt sind:  
+Bevor Sie eigenständige Medien mithilfe des Assistenten zum Erstellen von Tasksequenzmedien erstellen, achten Sie darauf, dass die folgenden Bedingungen erfüllt sind:  
 
 ### <a name="create-a-task-sequence-to-deploy-an-operating-system"></a>Erstellen einer Tasksequenz zum Bereitstellen eines Betriebssystems
 Als Teil der eigenständigen Medien müssen Sie die Tasksequenz zum Bereitstellen eines Betriebssystems angeben. Die Schritte zum Erstellen einer neuen Tasksequenz finden Sie unter [Erstellen einer Tasksequenz zum Installieren eines Betriebssystems in System Center Configuration Manager](create-a-task-sequence-to-install-an-operating-system.md).
@@ -54,10 +54,19 @@ Die folgenden Aktionen werden für eigenständige Medien nicht unterstützt:
 - Dynamische Paketinstallationen über den Task „Pakete installieren“.
 - Dynamische Anwendungsinstallationen über den Task „Anwendung installieren“.
 
-Wenn die Tasksequenz zum Bereitstellen eines Betriebssystems den Schritt [Paket installieren](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage) enthält und Sie die eigenständigen Medien an einem Standort der zentralen Verwaltung erstellen, kann ein Fehler auftreten. Der Standort der zentralen Verwaltung verfügt nicht über die erforderlichen Clientkonfigurationsrichtlinien, die während der Ausführung der Tasksequenz zum Aktivieren des Softwareverteilungs-Agents benötigt werden. In der Datei „CreateTsMedia.log“ wird möglicherweise der folgenden Fehler angezeigt:<br /><br /> „WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)“<br /><br /> Sie müssen eigenständige Medien, die den Schritt **Paket installieren** aufweisen, an einem primären Standort erstellen, für den der Softwareverteilungs-Agent aktiviert ist. Alternativ dazu können Sie den Schritt [Befehlszeile ausführen](../understand/task-sequence-steps.md#BKMK_RunCommandLine) nach dem Schritt [Windows und ConfigMgr einrichten](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) und vor dem ersten Schritt **Paket installieren** hinzufügen. Im Schritt **Befehlszeile ausführen** wird ein WMIC-Befehl ausgeführt, um den Softwareverteilungs-Agent vor der Ausführung des ersten Schritts "Paket installieren" zu aktivieren. Sie können im Tasksequenzschritt **Befehlszeile ausführen** Folgendes verwenden:<br /><br />
-```
-WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE
-```
+> [!NOTE]    
+> Wenn die Tasksequenz zum Bereitstellen eines Betriebssystems den Schritt [Paket installieren](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage) enthält und Sie die eigenständigen Medien an einem Standort der zentralen Verwaltung erstellen, kann ein Fehler auftreten. Der Standort der zentralen Verwaltung verfügt nicht über die erforderlichen Clientkonfigurationsrichtlinien, die während der Ausführung der Tasksequenz zum Aktivieren des Softwareverteilungs-Agents benötigt werden. In der Datei „CreateTsMedia.log“ wird möglicherweise der folgenden Fehler angezeigt:    
+>     
+> „WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)“    
+> 
+> Sie müssen eigenständige Medien, die den Schritt **Paket installieren** aufweisen, an einem primären Standort erstellen, für den der Softwareverteilungs-Agent aktiviert ist. Alternativ dazu können Sie den Schritt [Befehlszeile ausführen](../understand/task-sequence-steps.md#BKMK_RunCommandLine) nach dem Schritt [Windows und ConfigMgr einrichten](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) und vor dem ersten Schritt **Paket installieren** hinzufügen. Im Schritt **Befehlszeile ausführen** wird ein WMIC-Befehl ausgeführt, um den Softwareverteilungs-Agent vor der Ausführung des ersten Schritts "Paket installieren" zu aktivieren. Sie können im Tasksequenzschritt **Befehlszeile ausführen** Folgendes verwenden:    
+>    
+> *WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE*
+
+
+> [!IMPORTANT]    
+> Bei Verwendung des Tasksequenzschritts **Windows und ConfigMgr einrichten** in der Tasksequenz „Betriebssystem“ aktivieren Sie die Einstellung **Clientpaket vor der Produktion verwenden, wenn verfügbar** nicht für eigenständige Medien. Wenn diese Einstellung aktiviert ist, und das Clientpaket vor der Produktion verfügbar ist, wird es in den eigenständigen Medien verwendet. Dies wird nicht unterstützt. Einzelheiten zu dieser Einstellung finden Sie unter [Windows und ConfigMgr einrichten](/sccm/osd/understand/task-sequence-steps#BKMK_SetupWindowsandConfigMgr).
+
 
 ### <a name="distribute-all-content-associated-with-the-task-sequence"></a>Verteilen aller der Tasksequenz zugeordneten Inhalte
 Sie müssen alle für die Tasksequenz erforderlichen Inhalte auf mindestens einen Verteilungspunkt verteilen. Dies schließt das Startabbild, Betriebssystemabbild und andere zugehörige Dateien ein. Die Informationen werden vom Assistenten beim Erstellen des eigenständigen Mediums vom Verteilungspunkt abgerufen. Sie benötigen **Lesezugriffsrechte**  für die Inhaltsbibliothek an diesem Verteilungspunkt.  Details finden Sie unter [Verteilen von Inhalt, auf den von einer Tasksequenz verwiesen wird](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS).

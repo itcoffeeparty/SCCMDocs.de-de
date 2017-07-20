@@ -2,7 +2,7 @@
 title: "Versionshinweise – Configuration Manager | Microsoft-Dokumentation"
 description: In diesen Anmerkungen finden Sie Informationen zu dringenden Problemen, die im Produkt noch nicht behoben oder bisher in keinem Microsoft Knowledge Base-Artikel beschrieben wurden.
 ms.custom: na
-ms.date: 05/11/2017
+ms.date: 05/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d5166b16ffbe46af561b1ce98c0494cc4aaa72a8
-ms.openlocfilehash: 9da6f9678a7fb5c76f365a3522f5e5e0fdfec037
+ms.sourcegitcommit: dc221ddf547c43ab1f25ff83c3c9bb603297ece6
+ms.openlocfilehash: 6113576ca38da27e9e8732b3930deee96db4ae2c
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/01/2017
 
 
 ---
@@ -153,7 +153,7 @@ Die Ausnahme ist ähnlich der folgenden:
 
 Wenn Sie den Client auf Windows-Computern bereitstellen, tritt bei der Installation ein Fehler auf. Die Datei „ccmsetup.log“ enthält den Eintrag: „File 'C:\WINDOWS\ccmsetup\Silverlight.exe' returned failure exit code 1612. Fail the installation“, gefolgt von „InstallFromManifest failed 0x8007064c“.
 
-**Problemumgehung**: Dieser Fehler wird durch eine zuvor installierte, beschädigte Version von Silverlight verursacht. Versuchen Sie, auf dem betroffenen Computer das folgende Tool auszuführen: [https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed](https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed) 
+**Problemumgehung**: Dieser Fehler wird durch eine zuvor installierte, beschädigte Version von Silverlight verursacht. Versuchen Sie, auf dem betroffenen Computer das folgende Tool auszuführen: [https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed](https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed)
 
 
 
@@ -200,6 +200,14 @@ Nachdem Sie eine risikoreiche Taskbereitstellung für Benutzer erstellt und bere
 
 **Problemumgehung**:  
 Der Benutzer muss das Dialogfeld für die erste risikoreiche Bereitstellung schließen, damit das Dialogfeld für die nächste risikoreiche Bereitstellung angezeigt wird.
+
+## <a name="software-updates"></a>Softwareupdates
+
+### <a name="importing-an-office-365-client-settings-from-a-configuration-file-fails-when-it-contains-unsupported-languages"></a>Das Importieren von Office 365-Clienteinstellungen aus einer Konfigurationsdatei schlägt fehl, wenn sie nicht unterstützte Sprachen enthält
+Wenn Sie die Office 365-Clienteinstellungen aus einer vorhandenen XML-Konfigurationsdatei importieren und die Datei Sprachen enthält, die vom Office 365 ProPlus-Client nicht unterstützt werden, tritt ein Fehler auf. Details finden Sie unter [Bereitstellen von Office 365-Apps für Clients aus dem Office 365-Clientverwaltungsdashboard](/sccm/sum/deploy-use/manage-office-365-proplus-updates#to-deploy-office-365-apps-to-clients-from-the-office-365-client-management-dashboard).
+
+**Problemumgehung**:    
+Verwenden Sie in der XML-Konfigurationsdatei nur [vom Office 365 ProPlus-Client unterstützte Sprachen](https://technet.microsoft.com/library/cc179219&#40;v=office.16&#41;.aspx).  
 
 ## <a name="mobile-device-management"></a>Verwaltung mobiler Geräte  
 
@@ -250,9 +258,16 @@ Dieses Problem betrifft den bedingten Zugriff von System Center Configuration Ma
 **Problemumgehung:** Fügen Sie die **Benutzersammlung** zur Seite **Zielsammlungen** hinzu, bevor Sie die **Benutzersammlung** auf der Seite **Ausnahmensammlungen** auswählen, oder stellen Sie sicher, dass Sie die gleiche **Benutzersammlung** nicht sowohl einer Zielsammlung als auch einer Ausnahmensammlung hinzufügen.
 
 ## <a name="endpoint-protection"></a>Endpoint Protection
-<!--  Product Studio bug 485370 added by Nathbarn 04 19 2017 -->
+<!--  Product Studio bug 485370 added 04 19 2017 -->
 ### <a name="antimalware-policy-fails-to-apply-on-windows-server-2016-core"></a>Richtlinie für Antischadsoftware kann unter Windows Server 2016 Core nicht angewendet werden
 Die Richtlinie für Antischadsoftware kann unter Windows Server 2016 Core nicht angewendet werden.  Der Fehlercode lautet 0x80070002.  Fehlende Abhängigkeit für ConfigSecurityPolicy.exe.
 
-**Problemumgehung**: Dieses Problem wird mit dem Update im [Knowledge Base-Artikel 4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) behoben, der am 9. Mai 2017 veröffentlicht wurde. 
+**Problemumgehung**: Dieses Problem wird mit dem Update im [Knowledge Base-Artikel 4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) behoben, der am 9. Mai 2017 veröffentlicht wurde.
+
+<!-- Product Studio bug 462286 added  05 25 2017 and valid until July 2017 GA release -->
+### <a name="windows-defender-advanced-threat-protection-policies-fail-on-older-client-agents"></a>Windows Defender Advanced Threat Protection-Richtlinien schlagen auf älteren Client-Agents fehl
+
+Windows Defender Advanced Threat Protection-Richtlinien, die über einen Standortserver mit Configuration Manager, Version 1610 oder höher, erstellt wurden, können auf Clients mit Configuration Manager, Version 1606 und früher, nicht angewendet werden.  Die Clients wurden nicht integriert, und bei der Richtlinienauswertung wird ein Fehler gemeldet. Der **Bereitstellungszustand** in der Windows Defender Advanced Threat Protection-Konfiguration zeigt **Fehler** an.
+
+**PROBLEMUMGEHUNG**: Aktualisieren Sie den Configuration Manager-Client auf Version 1610 oder höher.
 

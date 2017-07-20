@@ -6,17 +6,18 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
 ms.technology:
 - configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
-ms.openlocfilehash: 1d9911274fd76942131054231cdcc2bcebbd3fcb
-ms.lasthandoff: 12/16/2016
+ms.translationtype: Human Translation
+ms.sourcegitcommit: dc221ddf547c43ab1f25ff83c3c9bb603297ece6
+ms.openlocfilehash: 7d369384d133c90a15e01df50ac53992d61f3873
+ms.contentlocale: de-de
+ms.lasthandoff: 06/01/2017
 
 
 
@@ -35,6 +36,9 @@ ms.lasthandoff: 12/16/2016
 
 > [!IMPORTANT]  
 >  Sie können an einem Standort mehrere Softwareupdatepunkte installieren. Der zuerst installierte Softwareupdatepunkt wird als Synchronisierungsquelle konfiguriert. Er dient zur Synchronisierung der Updates von Microsoft Update oder von der Upstreamsynchronisierungsquelle. Die übrigen Softwareupdatepunkte am Standort werden als Replikate des ersten Softwareupdatepunkts konfiguriert. Daher sind einige Einstellungen nach der Installation und Konfiguration des ersten Softwareupdatepunkts nicht verfügbar.  
+
+> [!IMPORTANT]  
+>  Die Installation der Standortsystemrolle „Softwareupdatepunkt“ auf einem Server, der als eigenständiger WSUS-Server konfiguriert und verwendet wird, oder die Verwendung eines Softwareupdatepunkts für die direkte Verwaltung von WSUS-Clients wird nicht unterstützt. Vorhandene WSUS-Server werden nur als Upstreamsynchronisierungsquellen für den aktiven Softwareupdatepunkt unterstützt. Siehe [Über eine Upstreamdatenquelle synchronisieren](#BKMK_wsussync).
 
  Sie können die Standortsystemrolle „Softwareupdatepunkt“ einem vorhandenen Standortsystemserver hinzufügen oder einen neuen erstellen. Je nachdem, ob Sie die Standortsystemrolle einem neuen oder einem vorhandenen Standortserver hinzufügen, wählen Sie im **Assistenten zum Erstellen von Standortsystemservern** oder im **Assistenten zum Hinzufügen von Standortsystemrollen** auf der Seite **Systemrollenauswahl** die Option **Softwareupdatepunkt**. Konfigurieren Sie dann die Einstellungen für den Softwareupdatepunkt im Assistenten. Die Einstellungen sind je nach der von Ihnen verwendeten Version von Configuration Manager unterschiedlich. Weitere Informationen zum Installieren einer Standortsystemrolle finden Sie unter [Installieren von Standortsystemrollen](../../core/servers/deploy/configure/install-site-system-roles.md).  
 
@@ -96,7 +100,7 @@ ms.lasthandoff: 12/16/2016
     > [!NOTE]  
     >  Wenn es zwischen dem Softwareupdatepunkt und dem Internet eine Firewall gibt, muss die Firewall möglicherweise zum Akzeptieren der für die WSUS-Website verwendeten HTTP- und HTTPS-Ports konfiguriert werden. Nach Wunsch können Sie den Zugriff auf der Firewall auf bestimmte Domänen einschränken. Weitere Informationen zum Planen einer Firewall, von der Softwareupdates unterstützt werden, finden Sie unter [Configure firewalls](../plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls).  
 
--   **Über eine Upstreamdatenquelle synchronisieren**: Verwenden Sie diese Einstellung, um Metadaten für Softwareupdates über die Upstreamsynchronisierungsquelle zu synchronisieren. Die untergeordneten primären und sekundären Standorte werden automatisch zur Verwendung der übergeordneten Standort-URL für diese Einstellung konfiguriert. Sie haben die Möglichkeit, Softwareupdates über einen vorhandenen WSUS-Server zu synchronisieren. Geben Sie eine URL wie https://WSUSServer:8531 an, wobei 8531 der Port ist, über den die Verbindung mit dem WSUS-Server hergestellt wird.  
+-   **<a name="BKMK_wsussync"></a>Über eine Upstreamdatenquelle synchronisieren**: Verwenden Sie diese Einstellung, um Metadaten für Softwareupdates über die Upstreamsynchronisierungsquelle zu synchronisieren. Die untergeordneten primären und sekundären Standorte werden automatisch zur Verwendung der übergeordneten Standort-URL für diese Einstellung konfiguriert. Sie haben die Möglichkeit, Softwareupdates über einen vorhandenen WSUS-Server zu synchronisieren. Geben Sie eine URL wie https://WSUSServer:8531 an, wobei 8531 der Port ist, über den die Verbindung mit dem WSUS-Server hergestellt wird.  
 
 -   **Nicht über Microsoft Update oder eine Upstreamdatenquelle synchronisieren**: Verwenden Sie diese Einstellung, um Softwareupdates manuell zu synchronisieren, wenn der Softwareupdatepunkt am Standort der obersten Ebene nicht mit dem Internet verbunden ist. Weitere Informationen finden Sie unter [Synchronisieren von Softwareupdates bei einem getrennten Softwareupdatepunkt](synchronize-software-updates-disconnected.md).  
 

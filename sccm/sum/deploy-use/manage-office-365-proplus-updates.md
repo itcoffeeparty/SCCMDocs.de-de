@@ -5,7 +5,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 03/24/2017
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -13,10 +13,10 @@ ms.technology:
 - configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 016580dc6ee3c5268833db941d42416a976d201c
+ms.sourcegitcommit: dc221ddf547c43ab1f25ff83c3c9bb603297ece6
+ms.openlocfilehash: 744bcb603a02bc7d237ffb3a7f925037b94a23ba
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 
@@ -142,6 +142,9 @@ Dies ist besonders hilfreich, da Office 365-Updates für Clients ohne installier
 4. Wählen Sie auf der Seite **Import Client Settings** (Clienteinstellungen importieren) aus, ob Sie die Office 365-Clienteinstellungen von einer vorhandenen XML-Konfigurationsdatei importieren oder die Einstellungen manuell angeben möchten, und klicken Sie anschließend auf **Weiter**.  
 
     Wenn Sie über eine vorhandene Konfigurationsdatei verfügen, geben Sie den Speicherort für die Datei an, und fahren Sie mit Schritt 7 fort. Beachten Sie, dass der Speicherort im folgenden Format angegeben werden muss: &#92;&#92;*Server*&#92;*Freigabe*&#92;*Dateiname*.XML.
+    > [!IMPORTANT]    
+    > Die XML-Konfigurationsdatei darf nur [vom Office 365 ProPlus-Client unterstützte Sprachen](https://technet.microsoft.com/library/cc179219&#40;v=office.16&#41;.aspx) enthalten.
+
 5. Wählen Sie auf der Seite **Client Products** (Clientprodukte) die Office 365-Suite aus, die Sie verwenden, wählen Sie die Anwendungen aus, die Sie einschließen möchten, wählen Sie etwaige zusätzliche Office-Produkte aus, die enthalten sein sollen, und klicken Sie anschließend auf **Weiter**.
 6. Wählen Sie auf der Seite **Clienteinstellungen** die einzuschließenden Einstellungen aus, und klicken Sie anschließend auf **Weiter**.
 7. Wählen Sie auf der Seite **Bereitstellung** aus, ob die Anwendung bereitgestellt werden soll, und klicken Sie anschließend auf **Weiter**.  
@@ -151,7 +154,7 @@ Wenn Sie auswählen, das Paket nicht im Assistenten bereitzustellen, fahren Sie 
 10. Sie können die Anwendung über **Softwarebibliothek** > **Übersicht** > **Anwendungsverwaltung** > **Anwendungen** genauso bereitstellen und ändern, wie Sie dies bei jeder anderen Anwendung in Configuration Manager tun würden.   
 
 > [!IMPORTANT]
-> Die Office 365-App, die Sie mithilfe des Assistenten für Office 365-Anwendungen in Configuration Manager erstellen und bereitstellen, wird nicht automatisch von Configuration Manager verwaltet. Dies geschieht erst nach Aktivierung der Client-Agent-Einstellungen der Softwareupdates **Verwaltung des Office 365-Client-Agents aktivieren**. Weitere Informationen finden Sie unter [Informationen zu Clienteinstellungen](/sccm/core/clients/deploy/about-client-settings).
+> Die Office 365-App, die Sie mithilfe des Assistenten für Office 365-Anwendungen in Configuration Manager erstellen und bereitstellen, wird nicht automatisch von Configuration Manager verwaltet. Dies geschieht erst nach Aktivierung der Client-Agent-Einstellung für Softwareupdates **Verwaltung des Office 365-Client-Agents aktivieren**. Weitere Informationen finden Sie unter [Informationen zu Clienteinstellungen](/sccm/core/clients/deploy/about-client-settings).
 
 >[!NOTE]
 >Nach der Bereitstellung von Office 365-Apps können Sie Regeln zur automatischen Bereitstellung erstellen, um die Apps zu verwalten. Um eine Regel zur automatischen Bereitstellung für Office 365-Apps zu erstellen, klicken Sie auf **ADR erstellen** im Office 365-Clientverwaltungsdashboard, und wählen Sie **Office 365-Client** bei der Auswahl des Produkts aus. Weitere Informationen finden Sie unter [Automatically deploy software updates (Automatisches Bereitstellen von Softwareupdates)](/sccm/sum/deploy-use/automatically-deploy-software-updates).

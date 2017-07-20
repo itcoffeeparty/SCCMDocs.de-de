@@ -2,7 +2,7 @@
 title: Erstellen einer Tasksequenz zum Erfassen und Wiederherstellen eines Benutzerzustands | Microsoft-Dokumentation
 description: "Verwenden Sie die Tasksequenzen von System Center Configuration Manager zum Erfassen und Wiederherstellen von Benutzerzustandsdaten in Bereitstellungsszenarios für Betriebssysteme."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 06/07/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: fdfbdd1acb1190ca7de9cff2b4b7f916d8dc1272
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
+ms.openlocfilehash: 4b3668094d576b1b8710f08b384aa2f7c5eb0cca
+ms.contentlocale: de-de
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -28,7 +30,7 @@ ms.openlocfilehash: fdfbdd1acb1190ca7de9cff2b4b7f916d8dc1272
 
 Mit Tasksequenzen von System Center Configuration Manager können Sie bei der Betriebssystembereitstellung die Benutzerzustandsdaten erfassen und wiederherstellen, wenn Sie den Benutzerzustand des aktuellen Betriebssystems beibehalten möchten. Je nach Art der erstellten Tasksequenz werden die Schritte zum Erfassen und Wiederherstellen möglicherweise automatisch zur Tasksequenz hinzugefügt. In anderen Szenarien müssen Sie die Schritte zum Erfassen und Wiederherstellen möglicherweise manuell zur Tasksequenz hinzufügen. Dieses Thema enthält die Schritte, die Sie zu einer vorhandenen Tasksequenz hinzufügen müssen, um Benutzerzustandsdaten zu erfassen und wiederherzustellen.  
 
-##  <a name="a-namebkmkcapturerestoreuserstatea-how-to-capture-and-restore-user-state-data"></a><a name="BKMK_CaptureRestoreUserState"></a> Erfassen und Wiederherstellen von Benutzerzustandsdaten  
+##  <a name="BKMK_CaptureRestoreUserState"></a> Erfassen und Wiederherstellen von Benutzerzustandsdaten  
  Zum Erfassen und Wiederherstellen des Benutzerzustands müssen Sie die folgenden Schritte zur Tasksequenz hinzufügen:  
 
 -   **Zustandsspeicher anfordern**: Dieser Schritt ist nur erforderlich, wenn Sie den Benutzerzustand auf dem Zustandsmigrationspunkt speichern.  
@@ -80,7 +82,7 @@ Mit Tasksequenzen von System Center Configuration Manager können Sie bei der Be
 
         -   Klicken Sie auf **Alle Benutzerprofile mithilfe von Standardoptionen erfassen** , um alle Benutzerprofile zu erfassen.  
 
-        -   Klicken Sie auf **Erfassung der Benutzerprofile anpassen** , um einzelne Benutzerprofile anzugeben, die erfasst werden sollen.  
+        -   Klicken Sie auf **Erfassung der Benutzerprofile anpassen** , um einzelne Benutzerprofile anzugeben, die erfasst werden sollen. Wählen Sie die Konfigurationsdatei („miguser.xml“, „migsys.xml“ oder „migapp.xml“) aus, die die Benutzerprofilinformationen enthält. Sie können die Konfigurationsdatei „config.xml“ hier nicht verwenden. Allerdings können Sie diese manuell mit den Variablen „OSDMigrageAdditionalCaptureOptions“ und „OSDMigrateAdditionalRestoreOptions“ der USMT-Befehlszeile hinzufügen.
 
     -   Aktivieren Sie das Kontrollkästchen **Ausführliche Protokollierung aktivieren** , um den Umfang der Informationen anzugeben, die bei einem Fehler in Protokolldateien geschrieben werden.  
 
@@ -133,7 +135,7 @@ Mit Tasksequenzen von System Center Configuration Manager können Sie bei der Be
 
         -   Klicken Sie auf **Alle erfassten Benutzerprofile mit Standardoptionen wiederherstellen** , um alle Benutzerprofile wiederherzustellen.  
 
-        -   Klicken Sie auf **Erfassung der Benutzerprofile anpassen** , um einzelne Benutzerprofile wiederherzustellen.  
+        -   Klicken Sie auf **Wiederherstellung von Benutzerprofilen anpassen**, um einzelne Benutzerprofile wiederherzustellen. Wählen Sie die Konfigurationsdatei („miguser.xml“, „migsys.xml“ oder „migapp.xml“) aus, die die Benutzerprofilinformationen enthält. Sie können die Konfigurationsdatei „config.xml“ hier nicht verwenden. Allerdings können Sie diese manuell mit den Variablen „OSDMigrageAdditionalCaptureOptions“ und „OSDMigrateAdditionalRestoreOptions“ der USMT-Befehlszeile hinzufügen.
 
     -   Wählen Sie **Lokale Computerbenutzerprofile wiederherstellen** aus, um ein neues Kennwort für die wiederhergestellten Profile bereitzustellen. Sie können keine Kennwörter für lokale Profile migrieren.  
 
@@ -169,9 +171,4 @@ Mit Tasksequenzen von System Center Configuration Manager können Sie bei der Be
 
 ## <a name="next-steps"></a>Nächste Schritte
 [Überwachen der Tasksequenzbereitstellung](monitor-operating-system-deployments.md#BKMK_TSDeployStatus)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

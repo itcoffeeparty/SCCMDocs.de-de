@@ -2,7 +2,7 @@
 title: Upgrade auf System Center Configuration Manager | Microsoft-Dokumentation
 description: "Erfahren Sie die Schritte für die Ausführung eines direkten Upgrades an einem Standort und einer Hierarchie, wo System Center 2012 Configuration Manager ausgeführt wird."
 ms.custom: na
-ms.date: 05/02/2017
+ms.date: 6/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d940fd1bbf96767d44f8c55315e814be55a83897
-ms.openlocfilehash: 9e58ab8dd892adf25429564adfd6f86849ddcbdf
+ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
+ms.openlocfilehash: 1166b739e1e8d667172d97883f484fdbc3a142c1
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/13/2017
 
 
 ---
@@ -38,11 +38,11 @@ Sie können ein direktes Upgrade zur Aktualisierung auf System Center Configurat
 
 **Upgrade auf Version 1702**   
 Wenn Sie über das Baselinemedium für Version 1702 verfügen, können Sie die folgenden Versionen und Installationen auf eine vollständig lizenzierte Version von System Center Configuration Manager Version 1702 aktualisieren:   
--      Eine Evaluierungsinstallation von System Center Configuration Manager Version 1702
--      System Center 2012 Configuration Manager mit Service Pack 1
--      System Center 2012 Configuration Manager mit Service Pack 2
--      System Center 2012 R2 – Configuration Manager
--      System Center 2012 R2 Configuration Manager mit Service Pack 1
+-     Eine Evaluierungsinstallation von System Center Configuration Manager Version 1702
+-     System Center 2012 Configuration Manager mit Service Pack 1
+-     System Center 2012 Configuration Manager mit Service Pack 2
+-     System Center 2012 R2 – Configuration Manager
+-     System Center 2012 R2 Configuration Manager mit Service Pack 1
 
 **Upgrade auf Version 1606**  
 Am 15. Dezember 2016 wurde das Baselinemedium für Version 1606 erneut veröffentlicht, um Unterstützung für zusätzliche Upgradeszenarios hinzufügen. Die neue Version unterstützt Upgrades der folgenden Versionen und Installationen auf eine vollständig lizenzierte Version von System Center Configuration Manager Version 1606:  
@@ -115,7 +115,7 @@ Weitere Informationen erhalten Sie unter [Windows Update](http://go.microsoft.co
 Die folgenden Standortsystemrollen werden in System Center Configuration Manager nicht mehr verwendet und müssen deinstalliert werden, bevor Sie von System Center 2012 Configuration Manager upgraden:  
 
 -   Out-of-Band-Verwaltungspunkt  
--   Dienstintegritätsprüfungspunkt  
+-   Systemintegritätsprüfungspunkt  
 
 **Deaktivieren von Datenbankreplikaten für Verwaltungspunkte an primären Standorten:**  
 Configuration Manager kann kein Upgrade eines primären Standorts durchführen, wenn dort Datenbankreplikate für Verwaltungspunkte aktiviert sind. Deaktivieren Sie die Datenbankreplikation, bevor Sie folgende Schritte ausführen:  
@@ -151,7 +151,7 @@ Weitere Informationen zu Standortwartungstasks finden Sie unter:
 **Führen Sie die Setup-Voraussetzungsprüfung aus.**:  
 Bevor Sie das Upgrade für einen Standort durchführen, können Sie die **Voraussetzungsprüfung** unabhängig von Setup ausführen, um zu prüfen, ob Ihr Standort die Voraussetzungen erfüllt. Beim späteren Durchführen des Upgrades wird die Voraussetzungsprüfung erneut ausgeführt.  
 
-Wenn Sie das Baselinemedium für Version 1606 aus der Oktober 2016-Version verwenden, durchsucht die unabhängige Voraussetzungsprüfung die Website nach Upgrades für die Current Branch-Version und die Long-Term Servicing Branch-Version (LTSB) von System Center Configuration Manager. Da einige Funktionen nicht von der LTSB-Version unterstützt werden, werden möglicherweise im Protokoll *ConfigMgrPrereq.log* Einträge wie die folgenden angezeigt:
+Wenn Sie das Baselinemedium für Version 1606 aus der Oktober 2016-Version verwenden, durchsucht die unabhängige Voraussetzungsprüfung die Website nach Upgrades für die Current Branch-Version und die Long-Term Servicing Branch-Version (LTSB) von System Center Configuration Manager. Da einige Funktionen nicht von der LTSB-Version unterstützt werden, werden möglicherweise im Protokoll *ConfigMgrPrereq.log*-Einträge wie die folgenden angezeigt:
  - INFO: The site is a LTSB edition. (Info: Die Website ist eine LTSB-Edition.)
  - Unsupported site system role 'Asset Intelligence synchronization point' for the LTSB edition;    Error;    Configuration Manager has detected that the 'Asset Intelligence synchronization point' is installed. (Nicht unterstützte Standortsystemrolle „Asset Intelligence-Synchronisierungspunkt“ für die LTSB-Edition;...Fehler;...Configuration Manager hat eine Installation von „Asset Intelligence-Synchronisierungspunkt“ erkannt.) Asset Intelligence is not supported on the LTSB edition. (Asset Intelligence wird auf der LTSB-Edition nicht unterstützt.) You must uninstall the Asset Intelligence synchronization point site system role before you can continue. (Sie müssen die Synchronisierungspunkt-Standortsystemrolle von Asset Intelligence deinstallieren, bevor Sie fortfahren können.)
 
@@ -271,7 +271,7 @@ Wenn für einen Standort ein Upgrade auf System Center Configuration Manager dur
      Benutzerdefinierte Zusammenfassungszeitpläne für Softwareupdates oder Softwareupdategruppen werden auf den Standardwert von einer Stunde zurückgesetzt. Setzen Sie benutzerdefinierte Zusammenfassungswerte nach Abschluss des Upgrades auf die erforderliche Häufigkeit zurück.  
 
 ##  <a name="bkmk_test"></a> Testen des Standortdatenbankupgrades  
-Die folgenden Informationen gelten nur, wenn Sie eine vorherige Version wie System Center 2012 Configuration Manager auf System Center Configuration Manager aktualisieren. Wenn Ihre Website bereits System Center Configuration Manager ausführt, und Sie ein neues Update installieren, siehe [Step 2: Test the database upgrade before installing an update (Schritt 2: Testen Sie das Upgrade der Datenbank vor der Installation eines Updates)](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2) von **Before you install an in-console update (Vor der Installation eines konsoleninternen Updates)**.
+Die folgenden Informationen gelten nur, wenn Sie eine vorherige Version wie System Center 2012 Configuration Manager auf System Center Configuration Manager aktualisieren.
 
 Bevor Sie das Upgrade eines Standorts durchführen, sollten Sie es anhand einer Kopie der Datenbank dieses Standorts testen.  
 

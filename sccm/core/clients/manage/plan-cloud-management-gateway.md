@@ -1,7 +1,7 @@
 ---
 title: Planen von Cloud Management Gateway | Microsoft-Dokumentation
 description: 
-ms.date: 05/16/2017
+ms.date: 06/07/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-client
@@ -10,10 +10,10 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ae60eb25383f4bd07faaa1265185a471ee79b1e9
-ms.openlocfilehash: b1295891a5567e64b901c79100c2971e526dc874
+ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
+ms.openlocfilehash: a7380ae781447880ffcba0778694ea62e10c4889
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 
@@ -22,6 +22,9 @@ ms.lasthandoff: 05/17/2017
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 Ab Version 1610 stellt das Cloudverwaltungsgateway eine einfache Methode für die Verwaltung von Configuration Manager-Clients im Internet dar. Der Cloudverwaltungsgateway-Dienst wird für Microsoft Azure bereitgestellt und erfordert ein Azure-Abonnement. Er stellt mithilfe einer neuen Rolle, die als Cloudverwaltungsgateway-Connectorpunkt bezeichnet wird, eine Verbindung mit der lokalen Configuration Manager-Infrastruktur her. Nachdem er bereitgestellt und konfiguriert wurde, können Clients auf lokale Configuration Manager-Standortsystemrollen zugreifen, unabhängig davon, ob sie sich im internen, privaten Netzwerk oder im Internet befinden.
+
+> [!TIP]  
+> In Version 1610 wird das Cloudverwaltungsgateway als vorab veröffentlichtes Feature vorgestellt. Wie Sie es aktivieren, erfahren Sie unter [Use pre-release features from updates (Verwenden von vorab veröffentlichten Features von Updates)](/sccm/core/servers/manage/pre-release-features).
 
 Verwenden Sie die Configuration Manager-Konsole zum Bereitstellen des Diensts in Azure, zum Hinzufügen der Cloudverwaltungsgateway-Connectorpunktrolle sowie zum Konfigurieren von Standortsystemrollen, um den Cloudverwaltungsgateway-Datenverkehr zuzulassen. Der Cloudverwaltungsgateway unterstützt derzeit nur die Rollen „Verwaltungspunkt“ und „Softwareupdatepunkt“.
 
@@ -93,11 +96,6 @@ Das Cloudverwaltungsgateway verwendet die folgende Funktionen von Microsoft Azur
 
     - Im Artikel über die [cloudbasierte Verteilung](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#cost-of-using-cloud-based-distribution) finden Sie weitere Informationen zu den Kosten.
 
-## <a name="next-steps"></a>Nächste Schritte
-
-[Einrichten des Cloudverwaltungsgateways](setup-cloud-management-gateway.md)
-
-
 ## <a name="frequently-asked-questions-about-the-cloud-management-gateway-cmg"></a>Häufig gestellte Fragen zu Cloud Management Gateway (CMG)
 
 ### <a name="why-use-the-cloud-management-gateway"></a>Was spricht für die Verwendung von Cloud Management Gateway?
@@ -122,7 +120,7 @@ Die Clouddienst-Manager-Komponente im Dienstverbindungspunkt verarbeitet alle Be
 
 Sie benötigen die folgenden Zertifikate, um Cloud Management Gateway zu sichern:
 
-- **Verwaltungszertifikat**: Hierbei kann es sich um ein beliebiges Zertifikat handeln – einschließlich selbstsignierten Zertifikaten. Sie können ein öffentliches, in Azure AD hochgeladenes Zertifikat oder eine in Configuration Manager importierte [PFX-Datei mit privatem Schlüssel](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) für die Authentifizierung bei Azure AD verwenden. 
+- **Verwaltungszertifikat**: Hierbei kann es sich um ein beliebiges Zertifikat handeln – einschließlich selbstsignierten Zertifikaten. Sie können ein öffentliches, in Azure AD hochgeladenes Zertifikat oder eine in Configuration Manager importierte [PFX-Datei mit privatem Schlüssel](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) für die Authentifizierung bei Azure AD verwenden.
 - **Webdienstzertifikat**: Es wird empfohlen, ein Zertifikat einer öffentlichen Zertifizierungsstelle zu verwenden, um eine native Vertrauensstellung bei Clients zu erzielen. Der CName-Eintrag muss in der öffentlichen DNS-Registrierungsstelle erstellt werden. Platzhalterzertifikate werden nicht unterstützt.
 - **In Cloud Management Gateway hochgeladene Zertifikate von Stammzertifizierungsstellen bzw. untergeordneten Zertifizierungsstellen**: Cloud Management Gateway muss PKI-Clientzertifikate in der gesamten Zertifikatkette überprüfen. Wenn Sie eine Unternehmenszertifizierungsstelle zum Ausstellen von PKI-Clientzertifikaten verwenden und das Stammzertifikat oder die untergeordnete Zertifizierungsstelle im Internet nicht verfügbar ist, müssen Sie das Zertifikat in Cloud Management Gateway hochladen.
 
@@ -159,15 +157,17 @@ Cloud Management Gateway trägt auf folgende Weise zur Sicherheit bei:
 
 - Clientseitige Configuration Manager-Rollen auf dem veröffentlichenden Endpunkt, z.B. der Verwaltungspunkt, werden gesichert, ebenso wie die Hostendpunkte für Softwareupdatepunkte in IIS, die der Verarbeitung von Clientanforderungen dienen. Jeder in Cloud Management Gateway veröffentlichte Endpunkt verfügt über eine URL-Zuordnung.
 Die externe URL ist die URL, über die der Client mit Cloud Management Gateway kommuniziert.
-Die interne URL ist der CMG-Verbindungspunkt, der zum Weiterleiten von Anforderungen an den internen Server verwendet wird. 
+Die interne URL ist der CMG-Verbindungspunkt, der zum Weiterleiten von Anforderungen an den internen Server verwendet wird.
 
 #### <a name="example"></a>Beispiel:
 Wenn Sie CMG-Datenverkehr auf einem Verwaltungspunkt aktivieren, erstellt Configuration Manager intern einen Satz URL-Zuordnungen für jeden Verwaltungspunktserver, z.B. „ccm_system“, „ccm_incoming“ und „sms_mp“.
-Die externe URL für den ccm_system-Endpunkt des Verwaltungspunkts könnte beispielsweise folgendermaßen aussehen: **https://<CMG service name>/CCM_Proxy_MutualAuth/<MP Role ID>/CCM_System**. Die URL ist eindeutig für jede Verwaltungspunkt. Der Configuration Manager-Client setzt den für CMG aktivierten Verwaltungspunkt – z.B. **<CMG service name>/CCM_Proxy_MutualAuth/<MP Role ID>** – auf die Liste der Internetverwaltungspunkte. Alle veröffentlichten externen URLs werden automatisch in Cloud Management Gateway hochgeladen, sodass CMG die URL-Filterung durchführen kann. Alle URL-Zuordnungen werden auf den CMG-Verbindungspunkt repliziert, sodass dieser Datenverkehr gemäß der externen URL des anfordernden Clients an interne Server weiterleiten kann.
+Die externe URL für den ccm_system-Endpunkt des Verwaltungspunkts könnte beispielsweise folgendermaßen aussehen: **https://<CMG service name>/CCM_Proxy_MutualAuth/<MP Role ID>/CCM_System**.
+Die URL ist eindeutig für jede Verwaltungspunkt. Der Configuration Manager-Client setzt den für CMG aktivierten Verwaltungspunkt – z.B. **<CMG service name>/CCM_Proxy_MutualAuth/<MP Role ID>** – auf die Liste der Internetverwaltungspunkte.
+Alle veröffentlichten externen URLs werden automatisch in Cloud Management Gateway hochgeladen, sodass CMG die URL-Filterung durchführen kann. Alle URL-Zuordnungen werden auf den CMG-Verbindungspunkt repliziert, sodass dieser Datenverkehr gemäß der externen URL des anfordernden Clients an interne Server weiterleiten kann.
 
-### <a name="what-ports-are-used-by-the-cloud-management-gateway"></a>Welche Ports werden von Cloud Management Gateway verwendet? 
+### <a name="what-ports-are-used-by-the-cloud-management-gateway"></a>Welche Ports werden von Cloud Management Gateway verwendet?
 
-- Im lokalen Netzwerk sind keine eingehenden Ports erforderlich. Bei der Bereitstellung von Cloud Management Gateway wird automatisch eine Reihe von Ports in Cloud Management Gateway erstellt. 
+- Im lokalen Netzwerk sind keine eingehenden Ports erforderlich. Bei der Bereitstellung von Cloud Management Gateway wird automatisch eine Reihe von Ports in Cloud Management Gateway erstellt.
 - Der CMG-Verbindungspunkt erfordert zusätzlich zu Port 443 einige ausgehende Ports.
 
 |||||
@@ -182,7 +182,7 @@ Die externe URL für den ccm_system-Endpunkt des Verwaltungspunkts könnte beisp
 
 - Konfigurieren Sie Cloud Management Gateway, den CMG-Verbindungspunkt und den Configuration Manager-Standortserver nach Möglichkeit in der gleichen Netzwerkregion, um die Latenz zu verringern.
 - Zurzeit wird bei der Verbindung zwischen dem Configuration Manager-Client und Cloud Management Gateway nicht zwischen Regionen unterschieden.
-- Um eine hohe Verfügbarkeit zu erzielen, empfiehlt es sich, mindestens zwei virtuelle Instanzen von Cloud Management Gateway und zwei CMG-Verbindungspunkte pro Standort einzurichten. 
+- Um eine hohe Verfügbarkeit zu erzielen, empfiehlt es sich, mindestens zwei virtuelle Instanzen von Cloud Management Gateway und zwei CMG-Verbindungspunkte pro Standort einzurichten.
 - Sie können Cloud Management Gateway skalieren, um durch Hinzufügen weiterer VM-Instanzen mehr Clients zu unterstützen. Der Lastenausgleich erfolgt über den Azure AD Load Balancer.
 - Erstellen Sie weitere CMG-Verbindungspunkte, um die Last auf diese aufzuteilen. Cloud Management Gateway leitet den Datenverkehr per Roundrobin an die verbundenen CMG-Verbindungspunkte weiter.
 - In Release 1702 werden pro CMG-VM-Instanz 6.000 Clients unterstützt. Wenn der CMG-Kanal stark ausgelastet ist, werden Anforderungen weiterhin verarbeitet, die Ausführung dauert aber möglicherweise länger als normal.
@@ -195,4 +195,7 @@ Verwenden Sie zur Problembehandlung des Clientdatenverkehrs **CMGHttpHandler.log
 
 Eine Liste aller auf Cloud Management Gateway bezogenen Protokolldateien finden Sie unter [Protokolldateien in Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway).
 
+## <a name="next-steps"></a>Nächste Schritte
+
+[Einrichten des Cloudverwaltungsgateways](setup-cloud-management-gateway.md)
 

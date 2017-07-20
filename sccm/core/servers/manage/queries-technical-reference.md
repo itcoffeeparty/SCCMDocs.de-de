@@ -15,9 +15,11 @@ caps.latest.revision: 4
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 479a7e902ff19b8ec501ff01c8e56565fd69f51b
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2087badc9dd1d216352dce232b145a786783ac89
+ms.openlocfilehash: 44f454d2f7c9d317d1ad99ba724931b4631bd11e
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
 
 ---                     
@@ -27,17 +29,12 @@ ms.openlocfilehash: 479a7e902ff19b8ec501ff01c8e56565fd69f51b
 
 In System Center Configuration Manager werden in Abfragen Informationen von der Standortdatenbank auf Basis der von Ihnen angegebenen Kriterien zurückgegeben. Mithilfe von Abfragen können Sie Informationen zu Ressourcen an Ihrem Standort oder zu Inventurdaten und Statusmeldungen abrufen.  
 
-## <a name="queries-topics"></a>Themen zu Abfragen  
- Die folgenden Themen helfen Ihnen bei der Verwendung von Abfragen in Configuration Manager.  
+## <a name="topics-about-using-queries-in-configuration-manager"></a>Themen zur Verwendung von Abfragen in Configuration Manager  
+ Die folgenden Themen helfen Ihnen bei der Verwendung von Abfragen in Configuration Manager:  
 
 -   [Introduction to queries in System Center Configuration Manager (Einführung in Abfragen in System Center Configuration Manager)](../../../core/servers/manage/introduction-to-queries.md)  
 
 -   [Operations and maintenance for queries in System Center Configuration Manager (Vorgänge und Wartungstasks für Abfragen in System Center Configuration Manager)](../../../core/servers/manage/operations-and-maintenance-for-queries.md)  
 
 -   [Security and privacy for queries in System Center Configuration Manager (Sicherheit und Datenschutz für Abfragen in System Center Configuration Manager)](../../../core/servers/manage/security-and-privacy-for-queries.md)  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

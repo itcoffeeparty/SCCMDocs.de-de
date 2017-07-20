@@ -2,7 +2,7 @@
 title: "Entwurf einer Standorthierarchie – Configuration Manager | Microsoft-Dokumentation"
 description: "Grundlegendes zu den verfügbaren Topologien und Verwaltungsoptionen für System Center Configuration Manager, damit Sie Ihre Standorthierarchie planen können."
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 6/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
-ms.openlocfilehash: e346e83b0ae0dc7a612cef7a7b9fb1fdb42236bc
+ms.sourcegitcommit: db673277d1cc2d24e8dba2439b2b1891c883ebd0
+ms.openlocfilehash: 4710b1b89eb50cb7bcf4c4ee50c12a96b6561bc9
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/16/2017
 
 
 ---
@@ -66,7 +66,7 @@ Nachdem Sie die Content Management-Optionen abgewogen haben, die die Anzahl der 
 
 -   Der Standort der zentralen Verwaltung ist der Standort der obersten Ebene einer Hierarchie.  
 
--   Wenn Sie eine Hierarchie mit mehr als einem primären Standort konfigurieren, müssen Sie einen Standort der zentralen Verwaltung installieren, und dieser Standort muss der erste Standort sein, den Sie installieren.  
+-   Wenn Sie eine Hierarchie mit mehr als einem primären Standort konfigurieren, müssen Sie einen Standort der zentralen Verwaltung installieren. Wenn Sie sofort zwei oder mehr primäre Standorte benötigen, installieren Sie zuerst den Standort der zentralen Verwaltung. Wenn Sie bereits über einen primären Standort verfügen und dann einen Standort der zentralen Verwaltung installieren möchten, müssen Sie [den eigenständigen primären Standort erweitern](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand), um den Standort der zentralen Verwaltung zu installieren. 
 
 -   Es werden nur primäre Standorte als untergeordnete Standorte vom Standort der zentralen Verwaltung unterstützt.  
 

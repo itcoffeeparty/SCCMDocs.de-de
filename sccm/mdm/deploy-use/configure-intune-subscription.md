@@ -2,7 +2,7 @@
 title: Konfigurieren Ihres Intune-Abonnements unter Verwendung von System Center Configuration Manager | Microsoft-Dokumentation
 description: Konfigurieren Ihres Intune-Abonnements unter Verwendung von System Center Configuration Manager.
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 06/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 10cc64ae7e4d91f53201c2896b359e77ef04d32d
+ms.sourcegitcommit: 662901e850566756759fcfc61c58f3c0e56bc5aa
+ms.openlocfilehash: 22d890c972d3166f9c7b583d8d3fa917c1897880
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="configure-your-intune-subscription-with-system-center-configuration-manager-and-microsoft-intune"></a>Konfigurieren Ihres Intune-Abonnements mit System Center Configuration Manager und Microsoft Intune
@@ -53,7 +53,7 @@ Die Intune-Abonnement dient zu folgenden Zwecken:
 5.  Klicken Sie auf der Seite **Abonnement** auf **Anmelden** , und melden Sie sich mit Ihrem Geschäfts- oder Schulkonto an. Aktivieren Sie im Dialogfeld **Autorität für die Verwaltung mobiler Geräte festlegen** das Kontrollkästchen für die alleinige Verwaltung mobiler Geräte mit Configuration Manager über die Configuration Manager-Konsole. Sie müssen diese Option auswählen, um den Vorgang zum Erstellen Ihres Abonnements fortsetzen zu können.
 
     > [!IMPORTANT]
-    >  Wenn Sie Configuration Manager als Autorität für die Verwaltung ausgewählt haben, können Sie die Autorität für die Verwaltung nachfolgend nicht mehr in Microsoft Intune ändern.
+    >  Nachdem Sie Configuration Manager als Autorität für die Verwaltung ausgewählt haben, können Sie die Autorität für die Verwaltung erst ab Configuration Manager, Version 1610 oder höher, und Microsoft Intune, Version 1705, auf Microsoft Intune umstellen, ohne den Microsoft Support um Hilfe zu bitten und ohne die Registrierung Ihrer vorhandenen verwalteten Geräten aufzuheben und sie anschließend erneut zu registrieren. Einzelheiten finden Sie unter [Umstellen der MDM-Autorität](/sccm/mdm/deploy-use/change-mdm-authority).
 
 6.  Klicken Sie auf die Datenschutzlinks, um die entsprechenden Informationen zu lesen, und klicken Sie dann auf **Weiter**.
 

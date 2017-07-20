@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a93ea730c39cce9dc46036f5aa6ece4a62679d0f
-ms.openlocfilehash: 0d16d362b798c194645f987088ba8a95a7be3f19
+ms.sourcegitcommit: 0ebda27c0f3848615346c2ecf1ab8b9bb9ab6f0d
+ms.openlocfilehash: 0a3704a2d3b75ed7e0a7f718b681448ab6fc078d
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 05/26/2017
 
 
 ---
@@ -81,7 +81,7 @@ Nach der Installation eines Standorts, können Sie die Adresse einiger Standorts
 
 -   **Verteilungspunkt** Dies ist eine Standortsystemrolle mit Quelldateien, die von Clients heruntergeladen werden können, darunter Anwendungsinhalt, Softwarepakete, Softwareupdates, Betriebssystemabbilder und Startabbilder. Diese Rolle wird bei der Installation neuer primärer und sekundärer Standorte standardmäßig auf dem Standortservercomputer dieser Standorte installiert. Diese Rolle wird am zentralen Verwaltungsstandort nicht unterstützt. Sie können mehrere Instanzen dieser Rolle an einem unterstützten Standort oder an mehreren Standorten in der gleichen Hierarchie installieren. Weitere Informationen finden Sie unter [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md) (Grundlegende Konzepte von Content Management in System Center Configuration Manager) und [Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
--   **Fallbackstatuspunkt** Über diese Standortsystemrolle können Sie die Clientinstallation überwachen und Clients ermitteln, die nicht verwaltet werden, weil die Kommunikation mit dem zugehörigen Verwaltungspunkt nicht möglich ist. Diese Rolle wird zwar nur an primären Standorten unterstützt, Sie können jedoch mehrere Instanzen dieser Rolle an einem Standort oder an mehreren Standorten in der gleichen Hierarchie installieren. Weitere Informationen finden Sie unter [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md).
+-   **Fallbackstatuspunkt** Über diese Standortsystemrolle können Sie die Clientinstallation überwachen und Clients ermitteln, die nicht verwaltet werden, weil die Kommunikation mit dem zugehörigen Verwaltungspunkt nicht möglich ist. Diese Rolle wird zwar nur an primären Standorten unterstützt, Sie können jedoch mehrere Instanzen dieser Rolle an einem Standort und an mehreren Standorten in der gleichen Hierarchie installieren.     
 
 
 -   **Endpoint Protection-Punkt** Mithilfe dieser Standortsystemrolle werden die Endpunkt Protection-Lizenzbedingungen in Configuration Manager akzeptiert und die Standardmitgliedschaft für Cloud Protection Service konfiguriert. Eine Hierarchie unterstützt nur eine einzige Instanz dieser Rolle und diese muss sich am Standort der obersten Ebene Ihrer Hierarchie befinden (einem Standort der zentralen Verwaltung oder dem eigenständigen primären Standort). Wenn Sie einen eigenständigen primären Standort in eine größere Hierarchie erweitern, müssen Sie diese Rolle am primären Standort deinstallieren und können sie dann am Standort der zentralen Verwaltung installieren. Weitere Informationen finden Sie unter [Endpoint Protection in System Center Configuration Manager](../../../protect/deploy-use/endpoint-protection.md).  

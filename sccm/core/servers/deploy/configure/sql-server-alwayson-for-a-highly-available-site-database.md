@@ -1,7 +1,8 @@
 ---
-title: SQL Server Always On | Microsoft-Dokumentation
+title: SQL Server AlwaysOn | Microsoft-Dokumentation
+description: "Planen Sie die Verwendung einer SQL Server-AlwaysOn-Verfügbarkeitsgruppe mit SCCM."
 ms.custom: na
-ms.date: 1/4/2017
+ms.date: 5/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,262 +16,242 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: aaaab003ddd22f18160d4be63cfeab3a7e7f6b03
+ms.sourcegitcommit: dc221ddf547c43ab1f25ff83c3c9bb603297ece6
+ms.openlocfilehash: 188ae877368a6cb2ec9998bff74259b4e5b5e7ce
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/01/2017
 
 
 ---
-# <a name="sql-server-alwayson-for-a-highly-available-site-database-for-system-center-configuration-manager"></a>SQL Server AlwaysOn für eine hoch verfügbare Standortdatenbank für System Center Configuration Manager
+# <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Vorbereiten der Verwendung von SQL Server AlwaysOn-Verfügbarkeitsgruppen mit Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
+Bereiten Sie System Center Configuration Manager auf die Verwendung von SQL Server AlwaysOn-Verfügbarkeitsgruppen als Lösung für hohe Verfügbarkeit und Notfallwiederherstellung für die Standortdatenbank vor.  
+Configuration Manager unterstützt die Verwendung von Verfügbarkeitsgruppen:
+-     An primären Standorten und am Standort der zentralen Verwaltung.
+-     Lokal oder in Microsoft Azure.
 
- Beginnend mit der System Center Configuration Manager-Version 1602 können Sie SQL Server-[Always On-Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/hh510230\(v=sql.120\).aspx) zum Hosten der Standortdatenbank an primären Standorten und am Standort der zentralen Verwaltung als Lösung für hohe Verfügbarkeit und Notfallwiederherstellung nutzen. Die Verfügbarkeitsgruppe kann lokal oder in Microsoft Azure gehostet werden.  
+Wenn Sie Verfügbarkeitsgruppen in Microsoft Azure verwenden, können Sie die Verfügbarkeit Ihrer Standortdatenbank weiter steigern, indem Sie *Azure-Verfügbarkeitsgruppen* einsetzen. Weitere Informationen zu Azure-Verfügbarkeitsgruppen finden Sie unter [Verwalten der Verfügbarkeit von virtuellen Computern](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-manage-availability/).
 
- Wenn Sie Microsoft Azure zum Hosten der Verfügbarkeitsgruppe verwenden, können Sie die Verfügbarkeit Ihrer Standortdatenbank weiter steigern, indem Sie SQL Server AlwaysOn-Verfügbarkeitsgruppen mit Azure-Verfügbarkeitsgruppen einsetzen. Weitere Informationen zu Azure-Verfügbarkeitsgruppen finden Sie unter [Verwalten der Verfügbarkeit von virtuellen Computern](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-manage-availability/).  
+>  [!Important]   
+>  Machen Sie sich mit der Konfiguration von SQL Server und SQL Server-Verfügbarkeitsgruppen vertraut, bevor Sie fortfahren. In den folgenden Informationen wird auf die SQL Server-Dokumentationsbibliothek und entsprechende Verfahren verwiesen.
 
- Configuration Manager unterstützt das Hosten der Standortdatenbank auf einer SQL-Verfügbarkeitsgruppe, die sich hinter einem internen oder externen Lastenausgleich befindet. Zusätzlich zum Konfigurieren von Firewallausnahmen für jedes Replikat müssen Sie Lastenausgleichsregeln für die folgenden Ports hinzufügen:
-  - SQL über TCP: TCP 1433
-  - SQL Server Service Broker: TCP 4022
-  - Server Message Block (SMB): TCP 445
-  - RPC-Endpunktzuordnung: TCP 135
+## <a name="supported-scenarios"></a>Unterstützte Szenarien
+Die folgenden Szenarien werden für die Verwendung von Verfügbarkeitsgruppen mit Configuration Manager unterstützt. Ausführliche Informationen und Vorgehensweisen für die einzelnen Szenarien finden Sie unter [Konfigurieren von Verfügbarkeitsgruppen für Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag).
 
 
-Die folgenden Szenarios werden mit Verfügbarkeitsgruppen unterstützt:  
+-      [Erstellen einer Verfügbarkeitsgruppe für die Verwendung mit Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group).
+-     [Konfigurieren eines Standorts zur Verwendung einer Verfügbarkeitsgruppe](/sccm/core/servers/deploy/configure/configure-aoag#configure-a-site-to-use-the-database-in-the-availability-group).
+-     [Hinzufügen von Replikationsmitgliedern zu einer Verfügbarkeitsgruppe, die eine Standortdatenbank hostet, oder Entfernen von Replikationsmitgliedern](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-replica-members).
+-     [Verschieben einer Standortdatenbank aus einer Verfügbarkeitsgruppe in eine Standardinstanz oder eine benannte Instanz einer eigenständigen SQL Server-Instanz](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group).
 
--   Sie können Ihre Standortdatenbank in die Standardinstanz einer Verfügbarkeitsgruppe verschieben.  
 
--   Sie können einer Verfügbarkeitsgruppe, die eine Standortdatenbank hostet, Replikationsmitglieder hinzufügen oder diese daraus entfernen.  
+## <a name="prerequisites"></a>Voraussetzungen
+Die folgenden Voraussetzungen gelten für alle Szenarien. Wenn zusätzliche Voraussetzungen für ein bestimmtes Szenario gelten, werden sie für das Szenario angegeben.   
 
--   Sie können Ihre Standortdatenbank aus einer Verfügbarkeitsgruppe in eine Standard- oder benannte Instanz einer eigenständigen SQL Server-Instanz verschieben.  
+### <a name="configuration-manager-accounts-and-permissions"></a>Konten und Berechtigungen in Configuration Manager
+**Zugriff auf Standortserver und Replikationsmitglieder:**   
+Das Computerkonto des Standortservers muss Mitglied der Gruppe **Lokale Administratoren** auf allen Computern sein, die zur Verfügbarkeitsgruppe gehören.
 
-> [!Important]  
-> Wenn Sie Microsoft Intune mit Configuration Manager in einer Hybridkonfiguration verwenden, löst das Verschieben der Standortdatenbank zu oder von einer Verfügbarkeitsgruppe eine erneute Synchronisierung von Daten mit der Cloud aus. Dies kann nicht vermieden werden. 
+### <a name="sql-server"></a>SQL Server
+**Version:**  
+Jedes Replikat in der Verfügbarkeitsgruppe muss eine Version von SQL Server ausführen, die von Ihrer Configuration Manager-Version unterstützt wird. Wenn von SQL Server unterstützt, können die verschiedenen Knoten einer Verfügbarkeitsgruppe unterschiedliche Versionen von SQL Server ausführen.
 
+**Edition:**  
+Sie müssen eine *Enterprise* Edition von SQL Server verwenden.
 
+**Konto:**  
+Jede Instanz von SQL Server kann mit einem Domänenbenutzerkonto (**Dienstkonto**) oder mit **Lokales System** ausgeführt werden. Jedes Replikat in einer Gruppe kann eine andere Konfiguration aufweisen. Die [bewährten Methoden für SQL Server](/sql/sql-server/install/security-considerations-for-a-sql-server-installation#before-installing-includessnoversionincludesssnoversion-mdmd) raten dazu, ein Konto mit möglichst geringen Berechtigungen zu verwenden.
 
-> [!NOTE]  
->  Die erfolgreiche Konfiguration und Verwendung von Verfügbarkeitsgruppen erfordert, dass Sie mit dem Konfigurieren von SQL Server und SQL Server-Verfügbarkeitsgruppen vertraut sind. Für die Verfahren für System Center Configuration Manager in diesem Thema gibt es in der SQL Server-Dokumentationsbibliothek zusätzliche Dokumentation und Verfahren.  
+Informationen zum Konfigurieren von Dienstkonten und Berechtigungen für SQL Server 2016 finden Sie beispielsweise unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions) auf MSDN.
 
- **Bekannte Probleme, wenn Sie AlwaysOn-Verfügbarkeitsgruppen mit Configuration Manager verwenden:**  
+  Wenn Sie **Lokales System** verwenden, um ein Replikat auszuführen, müssen Sie die Endpunktauthentifizierung konfigurieren. Dies umfasst die Delegierung von Rechten, um eine Verbindung mit dem Replikatserverendpunkt zu aktivieren.
+  -     Delegieren Sie Rechte für SQL Server, indem Sie das Computerkonto der einzelnen SQL Server-Instanzen als Anmeldung den anderen SQL Server-Instanzen im Knoten hinzufügen und diesem Konto SA-Rechte erteilen.  
+  -     Delegieren Sie Endpunktrechte an jeden Remoteserver auf dem lokalen Endpunkt, indem Sie das folgende Skript für jedes Replikat ausführen:    
 
--   **Alle Replikatserver erfordern einen identischen Dateipfad zum Zeitpunkt, an dem Sie Configuration Manager für die Verwendung einer Verfügbarkeitsgruppe einrichten:**  
+              GRANT CONNECT ON endpoint::[endpoint_name]  
+              TO [domain\servername$]
 
-    -   Zum Zeitpunkt, an dem Sie das Setup von Configuration Manager so ausführen, dass der Standort für die Verwendung der Datenbank in einer Verfügbarkeitsgruppe umgeleitet wird, muss jeder sekundäre Replikatserver in der Gruppe einen Dateipfad aufweisen, der identisch mit dem Dateipfad ist, der zum Hosten der Standortdatenbank-Dateien für das aktuelle primäre Replikat verwendet wird. Wenn für sekundäre Replikate kein identischer Pfad vorhanden ist, kann das Setup nicht die Verfügbarkeitsgruppeninstanz als neuen Speicherort der Standortdatenbank hinzufügen.  
+Weitere Informationen finden Sie unter [Erstellen eines Endpunkts für die Datenbankspiegelung für AlwaysOn-Verfügbarkeitsgruppen](/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).
 
-         Darüber hinaus muss das lokale SQL Server-Dienstkonto für jeden sekundären Replikatserver über die Berechtigung **Vollzugriff** für diesen Ordner verfügen.  
+### <a name="availability-group-configurations"></a>Konfigurationen von Verfügbarkeitsgruppen
+**Replikationsmitglieder:**  
+Die Verfügbarkeitsgruppe muss über ein primäres Replikat verfügen und kann bis zu zwei synchrone sekundäre Replikate enthalten.  Jedes Replikationsmitglied muss:
+-   die **Standardinstanz**verwenden.  
+    *Ab Version 1702 können Sie eine* ***benannte Instanz*** verwenden.
 
-         Die sekundären Replikatserver benötigen diesen Dateipfad nur, während Sie Setup verwenden, um die Datenbankinstanz der Verfügbarkeitsgruppe anzugeben.  Nachdem vom Setup die Änderung zum Verwenden der Standortdatenbank in der Verfügbarkeitsgruppe durchgeführt wurde, können Sie den nicht verwendeten Pfad von sekundären Replikatservern löschen.  
+-      **Ja** für **Verbindungen in primärer Rolle** aufweisen.
+-      **Ja** für **Lesbare sekundäre Rolle** aufweisen.  
+-      auf **Manuelles Failover**festgelegt sein.       
 
-         Betrachten Sie beispielsweise das folgende Szenario:  
+    >  [!TIP]
+    >  Configuration Manager unterstützt bei Festlegung auf **Automatisches Failover** die Verwendung der Verfügbarkeitsgruppenreplikate. Ein **manuelles Failover** muss jedoch in folgenden Fällen festgelegt werden:
+    >  -  Sie führen das Setup aus, um die Verwendung der Standortdatenbank in der Verfügbarkeitsgruppe anzugeben.
+    >  -  Wenn Sie ein Update für Configuration Manager installieren (nicht nur Updates für die Standortdatenbank).  
 
-        -   Sie erstellen eine Verfügbarkeitsgruppe, die drei SQL Server-Instanzen verwendet.  
+**Speicherort der Replikationsmitglieder:**  
+Alle Replikate in einer Verfügbarkeitsgruppe müssen lokal oder in Microsoft Azure gehostet werden. Eine Gruppe, die ein lokales Mitglied und ein Mitglied in Azure enthält, wird nicht unterstützt.     
 
-        -   Ihr primärer Replikatserver ist eine Neuinstallation von SQL Server 2014.  Standardmäßig werden die Datenbankdateien der Typen MDF und LDF in „C:\Programme\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA“ gespeichert.  
+Wenn Sie eine Verfügbarkeitsgruppe in Azure einrichten und die Gruppe sich hinter einem internen oder externen Lastenausgleich befindet, müssen Sie die folgenden Standardports öffnen, damit das Setup auf jedes Replikat zugreifen kann:   
 
-        -   Ihre beiden sekundären Replikatserver wurden von früheren Versionen auf SQL Server 2014 aktualisiert, und Sie behalten den ursprünglichen Dateipfad zum Speichern von Datenbankdateien bei, nämlich: C:\Programme\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA  
+-      RCP-Endpunktzuordnung: **TCP 135**   
+-      Server Message Block: **TCP 445**  
+    *Wenn das Verschieben der Datenbank abgeschlossen ist, können Sie diesen Port entfernen. Ab Version 1702 ist dieser Port nicht mehr erforderlich.*
+-      SQL Server Service Broker: **TCP 4022**
+-      SQL über TCP: **TCP 1433**   
 
-        -   Bevor Sie versuchen, die Standortdatenbank in diese Verfügbarkeitsgruppe zu verschieben, müssen Sie auf allen sekundären Replikatservern den folgenden Dateipfad anlegen, auch wenn die sekundären Replikate diesen Dateispeicherort nicht nutzen: C:\Programme\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA (ein Duplikat des Pfads, der für das primäre Replikat verwendet wird)  
+Nach Abschluss des Setups müssen die folgenden Ports zugänglich bleiben:
+-      SQL Server Service Broker: **TCP 4022**
+-      SQL über TCP: **TCP 1433**
 
-        -   Anschließend gewähren Sie dem SQL Server-Dienstkonto für jedes sekundäre Replikat Vollzugriff auf den neu erstellten Speicherort auf dem Server.  
+Ab Version 1702 können Sie benutzerdefinierte Ports für diese Konfigurationen verwenden. Die gleichen Ports müssen vom Endpunkt und auf allen Replikaten in der Verfügbarkeitsgruppe verwendet werden.
 
-        -   Sie können nun das Setup von Configuration Manager erfolgreich so ausführen, dass die Standortdatenbank in der Verfügbarkeitsgruppe verwendet wird.  
 
--   **Wenn das Setup so ausgeführt wird, dass die Standortdatenbank für die Verwendung der Verfügbarkeitsgruppe konfiguriert wird, kann in der Datei „ConfigMgrSetup.log“ Folgendes protokolliert werden:**  
+**Listener:**   
+Die Verfügbarkeitsgruppe muss mindestens einen **Verfügbarkeitsgruppenlistener**besitzen. Der virtuelle Name dieses Listeners wird verwendet, wenn Sie Configuration Manager für die Verwendung der Standortdatenbank in der Verfügbarkeitsgruppe konfigurieren. Eine Verfügbarkeitsgruppe kann zwar mehrere Listener enthalten, Configuration Manager kann aber nur einen nutzen. Weitere Informationen finden Sie unter [Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners (SQL Server)](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server).
 
-    -   Fehler: SQL Server-Fehler: [25000] [3906] [Microsoft] [SQL Server Native Client 11.0] [SQL Server]-Fehler beim Aktualisieren der Datenbank „CM_AAA“, weil die Datenbank schreibgeschützt ist.   Configuration Manager-Setup 1/21/2016 4:54:59 PM  7344 (0x1CB0)  
+**Dateipfade:**   
+Wenn Sie das Setup von Configuration Manager so ausführen, dass ein Standort für die Verwendung der Datenbank in einer Verfügbarkeitsgruppe konfiguriert wird, muss jeder sekundäre Replikatserver einen SQL Server-Dateipfad aufweisen, der identisch mit dem Dateipfad der Standortdatenbank-Dateien für das aktuelle primäre Replikat ist.
+-   Wenn kein identischer Pfad vorhanden ist, kann das Setup die Instanz für die Verfügbarkeitsgruppe nicht als neuen Speicherort der Standortdatenbank hinzufügen.
+-   Darüber hinaus muss das lokale SQL Server-Dienstkonto über die Berechtigung **Vollzugriff** für diesen Ordner verfügen.
 
-     Diese Fehler werden protokolliert, wenn Setup versucht, Datenbankrollen für sekundäre Replikate der Verfügbarkeitsgruppe zu verarbeiten. Diese Fehler können problemlos ignoriert werden.
-- **SQL-Server, die zusätzliche Verfügbarkeitsgruppen hosten:**
+Die sekundären Replikatserver benötigen diesen Dateipfad nur, während Sie Setup verwenden, um die Datenbankinstanz der Verfügbarkeitsgruppe anzugeben. Nachdem vom Setup die Konfiguration der Standortdatenbank in der Verfügbarkeitsgruppe durchgeführt wurde, können Sie den nicht verwendeten Pfad von sekundären Replikatservern löschen.
 
-  Wenn Sie eine Verfügbarkeitsgruppe verwenden und dann das Configuration Manager-Setup ausführen oder ein Update für Configuration Manager installieren, muss jedes Replikat in jeder zusätzlichen Verfügbarkeitsgruppe auf dem SQL-Server, der die Configuration Manager-Verfügbarkeitsgruppe hostet, vor der Installation von Version 1610 die folgenden Konfigurationen aufweisen:
-    - **Manuelles Failover**
-    - **Alle schreibgeschützten Verbindungen zulassen**
+Betrachten Sie beispielsweise das folgende Szenario:
+-    Sie erstellen eine Verfügbarkeitsgruppe, die drei SQL Server-Instanzen verwendet.
 
+-    Ihr primärer Replikatserver ist eine Neuinstallation von SQL Server 2014. Standardmäßig werden die Datenbankdateien der Typen MDF und LDF in „C:\Programme\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA“ gespeichert.
 
-##  <a name="bkmk_BnR"></a> Änderungen bei Sicherung und Wiederherstellung bei Verwendung einer SQL Server AlwaysOn-Verfügbarkeitsgruppe  
- **Sicherung:**  
+-    Ihre beiden sekundären Replikatserver wurden von früheren Versionen auf SQL Server 2014 aktualisiert, und Sie behalten den ursprünglichen Dateipfad zum Speichern von Datenbankdateien bei, nämlich: C:\Programme\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA.
 
- Wenn eine Datenbank in einer Verfügbarkeitsgruppe ausgeführt wird, muss der integrierte Serverwartungstask **Standort sichern** weiter ausgeführt werden, um allgemeine Configuration Manager-Einstellungen und -Dateien zu sichern. Planen Sie jedoch nicht das Verwenden der von dieser Sicherung erstellten MDF- und LDF-Dateien. Planen Sie stattdessen das direkte Erstellen von Sicherungskopien der Standortdatenbank mithilfe von SQL Server.  
+-    Bevor Sie versuchen, die Standortdatenbank in diese Verfügbarkeitsgruppe zu verschieben, müssen Sie auf allen sekundären Replikatservern den folgenden Dateipfad erstellen, auch wenn die sekundären Replikate diesen Dateispeicherort nicht nutzen: C:\Programme\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA (ein Duplikat des Pfads, der für das primäre Replikat verwendet wird).
 
- Da darüber hinaus das Wiederherstellungsmodell der Datenbank auf „Vollständig“ festgelegt ist, müssen Sie die Überwachung und Verwaltung der Größe des Transaktionsprotokolls der Standortdatenbank planen.  Beim Wiederherstellungsmodell „Vollständig“ werden Transaktionen erst festgeschrieben, nachdem eine vollständige Sicherung der Datenbank oder des Transaktionsprotokolls erfolgt ist. Das Wiederherstellungsmodell „Vollständig“ ist eine Voraussetzung für das Verwenden der Standortdatenbank in einer Verfügbarkeitsgruppe und wird festgelegt, wenn Sie die Gruppe für die Verwendung mit Configuration Manager konfigurieren. Weitere Informationen zur SQL Server-Sicherung und -Wiederherstellung finden Sie unter [Sichern und Wiederherstellen von SQL Server-Datenbanken](https://msdn.microsoft.com/library/ms187048\(v=sql.120\).aspx) in der SQL Server-Dokumentation.  
+-    Anschließend gewähren Sie dem SQL Server-Dienstkonto für jedes sekundäre Replikat Vollzugriff auf den neu erstellten Speicherort auf dem Server.
 
- **Wiederherstellung:**  
+-    Sie können nun das Setup von Configuration Manager erfolgreich so ausführen, dass die Standortdatenbank in der Verfügbarkeitsgruppe verwendet wird.
 
- Wenn während der Wiederherstellung eines Standorts ein Knoten der Verfügbarkeitsgruppe funktionsfähig ist, können Sie die Wiederherstellungsoption **Datenbankwiederherstellung überspringen (diese Option verwenden, wenn die Standortdatenbank nicht betroffen war)**wählen.  
+**Konfigurieren der Datenbank für ein neues Replikat:**   
+ Die Datenbank der einzelnen Replikate muss mit folgenden Einstellungen festgelegt werden:
+-     **CLR-Integration** muss *aktiviert* werden.
+-      **Max text repl size** muss *2147483647* sein.
+-      Der Datenbankbesitzer muss das *SA-Konto* sein.
+-      **TRUSTWORTY** muss **ON** sein.
+-      **Service Broker** muss *aktiviert* werden.
 
- Wenn jedoch alle Knoten einer Verfügbarkeitsgruppe verloren gegangen sind, bevor Sie den Standort wiederherstellen können, müssen Sie die Verfügbarkeitsgruppe neu erstellen (System Center Configuration Manager kann den Verfügbarkeitsknoten nicht erneut erstellen oder wiederherstellen).  Nachdem die Gruppe mithilfe einer Sicherung wiederhergestellt und neu konfiguriert wurde, können Sie die Wiederherstellungsoption für den Standort **Datenbankwiederherstellung überspringen (diese Option verwenden, wenn die Standortdatenbank nicht betroffen war)** wählen.  
+Sie können diese Konfigurationen nur für ein primäres Replikat festlegen. Um ein sekundäres Replikat zu konfigurieren, müssen Sie zuerst ein Failover des primären Replikats auf das sekundäre Replikat vornehmen, wodurch das sekundäre Replikat das neue primäre Replikat wird.   
 
- Weitere Informationen zur Standortserversicherung und -wiederherstellung finden Sie unter [Sicherung und Wiederherstellung für System Center Configuration Manager](../../../../protect/understand/backup-and-recovery.md).  
+Verwenden Sie bei Bedarf die SQL Server-Dokumentation, um die Einstellungen zu konfigurieren. Lesen Sie beispielsweise die Abschnitte [TRUSTWORTHY](/sql/relational-databases/security/trustworthy-database-property) oder [CLR-Integration](/sql/relational-databases/clr-integration/clr-integration-enabling) in der SQL Server-Dokumentation.
 
-##  <a name="bkmk_create"></a> Konfigurieren einer Verfügbarkeitsgruppe für die Verwendung mit Configuration Manager  
- Bevor Sie das folgende Verfahren starten, sollten Sie mit den SQL Server-Prozeduren, die für diese Konfiguration erforderlich sind, und mit den folgenden Details vertraut sein, die für Verfügbarkeitsgruppen gelten, die Sie für die Verwendung mit Configuration Manager konfigurieren.  
+### <a name="verification-script"></a>Überprüfungsskript
+Sie können das folgende Skript ausführen, um die Datenbankkonfigurationen für primäre und sekundäre Replikate zu überprüfen. Bevor Sie für ein sekundäres Replikat ein Problem beheben können, müssen Sie dieses sekundäre Replikat zum primären Replikat machen.
 
- **Anforderungen an die AlwaysOn-Verfügbarkeitsgruppen, die Sie mit System Center Configuration Manager verwenden:**  
+    SET NOCOUNT ON
 
--  *Version*: Jeder Knoten (oder jedes Replikat) in der Verfügbarkeitsgruppe muss eine Version von SQL Server ausführen, die von System Center Configuration Manager unterstützt wird. Wenn von SQL Server unterstützt, können die verschiedenen Knoten der Verfügbarkeitsgruppe unterschiedliche Versionen von SQL Server ausführen.   
+    DECLARE @dbname NVARCHAR(128)
 
-- *Edition*: Sie müssen eine Enterprise Edition von SQL Server verwenden.  SQL Server 2016 Standard Edition bietet Basis-Verfügbarkeitsgruppen, die nicht von Configuration Manager unterstützt werden.
+    SELECT @dbname = sd.name FROM sys.sysdatabases sd WHERE sd.dbid = DB_ID()
 
+    IF (@dbname = N'master' OR @dbname = N'model' OR @dbname = N'msdb' OR @dbname = N'tempdb' OR @dbname = N'distribution' ) BEGIN
+    RAISERROR(N'ERROR: Script is targetting a system database.  It should be targeting the DB you created instead.', 0, 1)
+    GOTO Branch_Exit;
+    END ELSE
+    PRINT N'INFO: Targetted database is ' + @dbname + N'.'
 
--   Die Verfügbarkeitsgruppe muss über ein primäres Replikat verfügen und kann bis zu zwei synchrone sekundäre Replikate enthalten.  
+    PRINT N'INFO: Running verifications....'
 
--  Nach dem Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe müssen Sie ein Failover für das primäre Replikat in ein sekundäres Replikat ausführen (wodurch dies das neue primäre Replikat wird) und anschließend die Datenbank mit Folgendem konfigurieren:
-    - Aktivieren von „Vertrauenswürdig“: auf TRUE setzen
-    - Aktivieren von Service Broker: auf TRUE setzen
-    - Festlegen des Besitzers: SA eingeben
+    IF NOT EXISTS (SELECT * FROM sys.configurations c WHERE c.name = 'clr enabled' AND c.value_in_use = 1)
+    PRINT N'ERROR: CLR is not enabled!'
+    ELSE
+    PRINT N'PASS: CLR is enabled.'
 
-    Sie können das folgende Skript ausführen, um diese Einstellungen zu konfigurieren, wobei „cm_ABC“ der Name der Standortdatenbank ist:  
+    DECLARE @repltable TABLE (
+    name nvarchar(max),
+    minimum int,
+    maximum int,
+    config_value int,
+    run_value int )
 
-    >     USE master  
-    >     ALTER DATABASE cm_ABC SET NEW_BROKER   
-    >     ALTER DATABASE cm_ABC SET ENABLE_BROKER  
-    >     ALTER DATABASE cm_ABC SET TRUSTWORTHY ON;  
-    >     USE cm_ABC  
-    >     EXEC sp_changedbowner 'sa'  
-    >     Exec sp_configure 'max text repl size (B)', 2147483647 reconfigure
+    INSERT INTO @repltable
+    EXEC sp_configure 'max text repl size (B)'
 
+    IF NOT EXISTS(SELECT * from @repltable where config_value = 2147483647 and run_value = 2147483647 )
+    PRINT N'ERROR: Max text repl size is not correct!'
+    ELSE
+    PRINT N'PASS: Max text repl size is correct.'
 
+    IF NOT EXISTS (SELECT db.owner_sid FROM sys.databases db WHERE db.database_id = DB_ID() AND db.owner_sid = 0x01)
+    PRINT N'ERROR: Database owner is not sa account!'
+    ELSE
+    PRINT N'PASS: Database owner is sa account.'
 
--   Die Verfügbarkeitsgruppe muss mindestens einen **Verfügbarkeitsgruppenlistener**besitzen.  Der virtuelle Name dieses Listeners wird verwendet, wenn Sie Configuration Manager für die Verwendung der Standortdatenbank in der Verfügbarkeitsgruppe konfigurieren. Eine Verfügbarkeitsgruppe kann zwar mehrere Listener enthalten, Configuration Manager kann aber nur einen Endpunkt nutzen.  
+    IF NOT EXISTS( SELECT * FROM sys.databases db WHERE db.database_id = DB_ID() AND db.is_trustworthy_on = 1 )
+    PRINT N'ERROR: Trustworthy bit is not on!'
+    ELSE
+    PRINT N'PASS: Trustworthy bit is on.'
 
--   Jedes primäre und sekundäre Replikat muss:  
-    - auf **Alle schreibgeschützten Verbindungen zulassen**festgelegt sein.
-    - die **Standardinstanz**verwenden.
-    - auf **Manuelles Failover**festgelegt sein.  
+    IF NOT EXISTS( SELECT * FROM sys.databases db WHERE db.database_id = DB_ID() AND db.is_broker_enabled = 1 )
+    PRINT N'ERROR: Service broker is not enabled!'
+    ELSE
+    PRINT N'PASS: Service broker is enabled.'
 
-        > [!TIP]  
-        >  System Center Configuration Manager unterstützt bei Festlegung auf „Automatisches Failover“ die Verwendung der Verfügbarkeitsgruppenreplikate. „Manuelles Failover“ muss allerdings festgelegt werden, wenn Sie das Setup ausführen, um die Verwendung der Standortdatenbank in der Verfügbarkeitsgruppe anzugeben, und wenn Sie Updates für Configuration Manager installieren (nicht nur Updates, die Sie auf die Standortdatenbank anwenden).  
+    IF NOT EXISTS( SELECT * FROM sys.databases db WHERE db.database_id = DB_ID() AND db.is_honor_broker_priority_on = 1 )
+    PRINT N'ERROR: Service broker priority is not set!'
+    ELSE
+    PRINT N'PASS: Service broker priority is set.'
 
-  **Einschränkungen für Verfügbarkeitsgruppen**
-   - Basis-Verfügbarkeitsgruppen (mit SQL Server 2016 Standard Edition eingeführt) werden nicht unterstützt. Dies ist darauf zurückzuführen, dass Basis-Verfügbarkeitsgruppen den Lesezugriff auf sekundäre Replikate – und somit eine Voraussetzung für die Verwendung mit Configuration Manager – nicht unterstützen. Weitere Informationen finden Sie unter [Basis-Verfügbarkeitsgruppen (Always On-Verfügbarkeitsgruppen)](https://msdn.microsoft.com/en-us/library/mt614935.aspx).
+    PRINT N'Done!'
 
-   - Verfügbarkeitsgruppen werden nur für die Standortdatenbank, aber nicht für die Softwareupdatedatenbank oder Berichtsdatenbank unterstützt.   
-   - Wenn Sie eine verfügbarkeitsgruppe verwenden, müssen Sie Ihren Berichterstattungspunkt manuell so konfigurieren, damit dieser das aktuelle primäre Replikat und nicht den Verfügbarkeitsgruppenlistener verwendet. Wenn ein Failover des primären Replikats auf ein anderes Replikat durchgeführt wird, müssen Sie den Berichterstattungspunkt für das neue primäre Replikat umkonfigurieren.  
-   - Vor der Installation von Updates, z.B. Version 1606, stellen Sie sicher, dass die Verfügbarkeitsgruppe auf manuelles Failover festgelegt ist. Nachdem der Standort aktualisiert wurde, können Sie wieder auf automatisches Failover umstellen.
+    Branch_Exit:
 
+## <a name="limitations-and-known-issues"></a>Einschränkungen und bekannte Probleme
+Die folgenden Einschränkungen gelten für alle Szenarien.   
 
+**Basis-Verfügbarkeitsgruppen werden nicht unterstützt:**  
+[Basis-Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/mt614935.aspx) wurden mit SQL Server 2016 Standard Edition eingeführt und unterstützen den Lesezugriff auf sekundäre Replikate – und somit eine Voraussetzung für die Verwendung mit Configuration Manager – nicht.
 
- **Erforderliche Berechtigungen zum Konfigurieren und Verwenden von Verfügbarkeitsgruppen:**  
+**SQL-Server, die zusätzliche Verfügbarkeitsgruppen hosten:**   
+Vor Configuration Manager, Version 1610, galt: Wenn eine Verfügbarkeitsgruppe auf einer SQL Server-Instanz neben der Gruppe für Configuration Manager eine oder mehrere Verfügbarkeitsgruppen hostet, muss jedes Replikat in jeder zusätzlichen Verfügbarkeitsgruppe zum Zeitpunkt der Ausführung des Configuration Manager-Setups oder der Installation eines Updates für Configuration Manager die folgenden Konfigurationen aufweisen:
+-   **Manuelles Failover**
+-     **Alle schreibgeschützten Verbindungen zulassen**
 
--   Das Computerkonto des Standortservers muss Mitglied der Gruppe **Lokale Administratoren** auf allen Computern sein, die zur Verfügbarkeitsgruppe gehören.  
+**Verwendung nicht unterstützter Datenbanken:**
+-   **Configuration Manager unterstützt nur die Standortdatenbank in einer Verfügbarkeitsgruppe:** Folgende Datenbanken werden nicht unterstützt:
+    -   Reporting-Datenbank
+    -   WSUS-Datenbank
+-   **Bereits vorhandene Datenbank:** Sie können keine neue Datenbank verwenden, die auf dem Replikat erstellt wurde. Stattdessen müssen Sie eine Kopie einer vorhandenen Configuration Manager-Datenbank auf dem primären Replikat wiederherstellen, wenn Sie eine Verfügbarkeitsgruppe konfigurieren.
 
-#### <a name="to-configure-an-availability-group-to-host-a-site-database"></a>So konfigurieren Sie eine Verfügbarkeitsgruppe zum Hosten einer Standortdatenbank  
+**Setupfehler in „ConfigMgrSetup.log“:**  
+Beim Ausführen des Setups zum Verschieben einer Standortdatenbank in eine Verfügbarkeitsgruppe versucht das Setup, Datenbankrollen in den sekundären Replikaten der Verfügbarkeitsgruppe zu verarbeiten, und protokolliert z.B. den folgenden Fehler:
+-   Fehler: SQL Server-Fehler: [25000] [3906] [Microsoft] [SQL Server Native Client 11.0] [SQL Server]-Fehler beim Aktualisieren der Datenbank „CM_AAA“, weil die Datenbank schreibgeschützt ist. Configuration Manager-Setup 1/21/2016 4:54:59 PM 7344 (0x1CB0)  
 
-1.  Verwenden Sie den folgenden Befehl, um den Configuration Manager-Standort zu beenden:  
-     **Preinst.exe /stopsite**  
+Solche Fehler können ignoriert werden.
 
-     Weitere Informationen zur Verwendung von Preinst.exe finden Sie unter [Hierarchiewartungstool (Preinst.exe) für System Center Configuration Manager](../../../../core/servers/manage/hierarchy-maintenance-tool-preinst.exe.md).  
+## <a name="changes-for-site-backup"></a>Änderungen für die Standortsicherung
+**Sichern von Datenbankdateien**  
+Wenn eine Datenbank in einer Verfügbarkeitsgruppe ausgeführt wird, muss der integrierte Wartungstask **Standortserver sichern** ausgeführt werden, um allgemeine Configuration Manager-Einstellungen und -Dateien zu sichern. Verwenden Sie jedoch nicht die MDF-oder LDF-Dateien, die von dieser Sicherung erstellt werden. Erstellen Sie stattdessen mithilfe von SQL Server direkte Sicherungskopien dieser Datenbankdateien.
 
-2.  Ändern Sie das Sicherungsmodell der Standortdatenbank von **EINFACH** in **VOLLSTÄNDIG**.  
+**Transaktionsprotokoll:**  
+Das Wiederherstellungsmodell der Standortdatenbank muss auf **Vollständig** festgelegt werden (eine Voraussetzung für die Verwendung in einer Verfügbarkeitsgruppe). Planen Sie mit dieser Konfiguration das Überwachen und Verwalten der Größe des Transaktionsprotokolls für die Standortdatenbank. Beim Wiederherstellungsmodell „Vollständig“ werden Transaktionen erst festgeschrieben, nachdem eine vollständige Sicherung der Datenbank oder des Transaktionsprotokolls erfolgt ist. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von SQL Server-Datenbanken](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases) in der SQL Server-Dokumentation.
 
-     Siehe [Anzeigen oder Ändern des Wiederherstellungsmodells einer Datenbank](https://msdn.microsoft.com/library/ms189272\(v=sql.120\).aspx) in der SQL Server-Dokumentation. (Verfügbarkeitsgruppen unterstützen nur VOLLSTÄNDIG).  
+## <a name="changes-for-site-recovery"></a>Änderungen für die Standortwiederherstellung
+Sie können die Wiederherstellungsoption **Datenbankwiederherstellung überspringen (diese Option verwenden, wenn die Standortdatenbank nicht betroffen war)** verwenden, wenn zumindest ein Knoten der Verfügbarkeitsgruppe funktionsfähig bleibt.
 
-3.  Verwenden Sie auf dem Server, auf dem das primäre Replikat der Gruppe gehostet wird, den **Assistenten für neue Verfügbarkeitsgruppen** zum Erstellen der Verfügbarkeitsgruppe. Gehen Sie im Assistenten so vor:  
+ Bevor Sie den Standort wiederherstellen können, wenn alle Knoten einer Verfügbarkeitsgruppe verloren gegangen sind, müssen Sie die Verfügbarkeitsgruppe neu erstellen. Configuration Manager kann den Verfügbarkeitsknoten nicht neu erstellen oder wiederherstellen. Nachdem die Gruppe neu erstellt und eine Sicherung wiederhergestellt und neu konfiguriert wurde, können Sie die Wiederherstellungsoption für den Standort **Datenbankwiederherstellung überspringen (diese Option verwenden, wenn die Standortdatenbank nicht betroffen war)** verwenden.
 
-    -   Wählen Sie auf der Seite **Datenbank auswählen** die Datenbank für Ihren Configuration Manager-Standort aus.  
+Weitere Informationen finden Sie unter [Sicherung und Wiederherstellung für System Center Configuration Manager](/sccm/protect/understand/backup-and-recovery).
 
-    -   Konfigurieren Sie auf der Seite **Replikate angeben** Folgendes:  
+## <a name="changes-for-reporting"></a>Änderungen für die Berichterstattung
+**Installieren des Reporting Services-Punkts:**  
+Der Reporting Services-Punkt unterstützt die Verwendung des virtuellen Listenernamens der Verfügbarkeitsgruppe oder das Hosting der Reporting Services-Datenbank in einer SQL Server AlwaysOn-Verfügbarkeitsgruppe nicht:
+-   Standardmäßig wird durch die Installation des Reporting Services-Punkts der **Name des Standortdatenbankservers** auf den virtuellen Namen festgelegt, der als Listener angegeben ist. Ändern Sie diese Option, um einen Computernamen und die Instanz eines Replikats in der Verfügbarkeitsgruppe anzugeben.
+-   Um die Last durch die Berichterstattung zu verlagern und die Verfügbarkeit zu erhöhen, wenn ein Replikatknoten offline ist, könnten Sie zusätzliche Reporting Services-Punkte auf jedem Replikatknoten installieren und jeden Reporting Services-Punkt so konfigurieren, dass er auf seinen eigenen Computernamen verweist.
 
-        -   **Replikate**: Geben Sie die Server an, die die sekundären Replikate hosten sollen.  
+Bei der Installation eines Reporting Services-Punkts in jedem Replikat der Verfügbarkeitsgruppe kann zur Berichterstattung immer eine Verbindung mit einem aktiven Server mit einem Berichterstattungspunkt hergestellt werden.
 
-        -   **Listener**: Geben Sie den **DNS-Listenernamen** als vollständigen DNS-Namen wie **&lt;Listener_Server>.fabrikam.com** ein. Dieser Vorgang wird verwendet, wenn Sie Configuration Manager für die Verwendung der Datenbank in der Verfügbarkeitsgruppe konfigurieren.
+**Wechseln des Reporting Services-Punkts, der von der Konsole verwendet wird:**  
+Wechseln Sie zum Ausführen von Berichten in der Konsole zu **Überwachung** > **Übersicht** > **Berichterstellung** > **Berichte**, und wählen Sie dann **Berichtsoptionen** aus. Wählen Sie im Dialogfeld „Berichtoptionen“ den gewünschten Reporting Services-Punkt aus.
 
-    -   Wählen Sie auf der Seite **Anfängliche Datensynchronisierung auswählen** die Einstellung **Vollständig**aus. Nachdem der Assistent die Verfügbarkeitsgruppe erstellt hat, sichert er die primäre Datenbank und das Transaktionsprotokoll und stellt beide auf jedem Server wieder her, auf denen ein sekundäres Replikat gehostet wird. Wenn Sie diesen Schritt nicht verwenden, müssen Sie eine Kopie der Standortdatenbank auf allen Servern wiederherstellen, auf denen ein sekundäres Replikat gehostet wird, und die Datenbank manuell mit der Gruppe verknüpfen.  
-
-    Weitere Informationen finden Sie unter [Verwenden des Assistenten für Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/hh403415\(v=sql.120\).aspx) in der SQL Server-Dokumentation.  
-
-4.  Nach der Konfiguration der Verfügbarkeitsgruppe konfigurieren Sie die Standortdatenbank für das primäre Replikat mit der **TRUSTWORTHY** -Eigenschaft, und **aktivieren Sie dann die CLR-Integration**. Informationen zur entsprechenden Konfiguration finden Sie unter [TRUSTWORTHY-Datenbankeigenschaft](https://msdn.microsoft.com/library/ms187861\(v=sql.120\).aspx) und  [Aktivieren der CLR-Integration](https://msdn.microsoft.com/library/ms131048\(v=sql.120\).aspx) in der SQL Server-Dokumentation.  
-
-5.  Führen Sie die folgenden Schritte aus, um alle sekundären Replikate in der Verfügbarkeitsgruppe zu konfigurieren:  
-
-    1.  Führen Sie für das aktuelle primäre Replikat ein manuelles Failover in ein sekundäres Replikat aus. Siehe [Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe](https://msdn.microsoft.com/library/hh231018\(v=sql.120\).aspx) in der SQL Server-Dokumentation.  
-
-    2.  Konfigurieren Sie die Datenbank für das neue primäre Replikat mit der **TRUSTWORTHY** -Eigenschaft, und **aktivieren Sie dann die CLR-Integration**.  
-
-6.  Nachdem alle Replikate zu primären Replikaten höher gestuft und die Datenbanken konfiguriert wurden, ist die Verfügbarkeitsgruppe für die Verwendung mit Configuration Manager bereit.  
-
-
-
-
-
-##  <a name="bkmk_direct"></a> Verschieben einer Standortdatenbank zu einer Verfügbarkeitsgruppe  
- Sie können eine Standortdatenbank für einen zuvor installierten Standort in eine Verfügbarkeitsgruppe verschieben. Sie müssen zuerst die Verfügbarkeitsgruppe erstellen und anschließend die Datenbank für den Vorgang in der Verfügbarkeitsgruppe konfigurieren.  
-
- Zum Ausführen dieses Verfahrens muss das Computerkonto für die Ausführung des Setups von Configuration Manager Mitglied der Gruppe **Lokale Administratoren** auf allen Computern sein, die zur Verfügbarkeitsgruppe gehören.  
-
-#### <a name="to-move-a-site-database-to-an-availability-group"></a>So verschieben Sie eine Standortdatenbank zu einer Verfügbarkeitsgruppe  
-
-1.  Führen Sie das **Configuration Manager-Setup** unter **&lt;Installationsordner des Configuration Manager-Standorts\>\BIN\X64\setup.exe** aus.  
-
-2.  Wählen Sie auf der Seite **Erste Schritte** die Option **Standortwartung durchführen oder diesen Standort zurücksetzen**aus, und klicken Sie dann auf **Weiter**.  
-
-3.  Wählen Sie die Option **SQL Server-Konfiguration ändern** aus, und klicken Sie auf **Weiter**.  
-
-4.  Konfigurieren Sie Folgendes für die Standortdatenbank neu:  
-
-    -   **SQL Server-Name** : Geben Sie den virtuellen Namen für den Verfügbarkeitsgruppenlistener ein, den Sie beim Erstellen der Verfügbarkeitsgruppe konfiguriert haben. Der virtuelle Name sollte ein vollständiger DNS-Name sein, wie z.B. **&lt;Endpunktserver\>.fabrikam.com**.  
-
-    -   **Instanz:** Dieser Wert muss leer sein, um die Standardinstanz für den verfügbaren Verfügbarkeitsgruppenlistener der Verfügbarkeitsgruppe anzugeben.  Wenn die aktuellen Datenbank auf einer benannten Instanz installiert ist, ist die benannte Instanz aufgeführt und muss gelöscht werden.  
-
-    -   **Datenbank:** Belassen Sie den angezeigten Namen unverändert. Dies ist der Name der aktuellen Standortdatenbank.  
-
-5.  Nachdem Sie die Informationen zum neuen Speicherort der Datenbank bereitgestellt haben, schließen Sie das Setup mit der üblichen Vorgehensweise und den normalen Konfigurationen ab.  
-
-##  <a name="bkmk_change"></a> Hinzufügen oder Entfernen von Mitgliedern einer aktiven Verfügbarkeitsgruppe  
- Sobald Configuration Manager eine in einer Verfügbarkeitsgruppe gehostete Standortdatenbank verwendet, können Sie ein Replikatsmitglied entfernen oder ein weiteres hinzufügen (ohne dabei einen primären und zwei sekundäre Knoten zu überschreiten).  
-
-#### <a name="to-add-a-new-replica-member"></a>So fügen Sie ein neue Replikatsmitglied hinzu  
-
-1.  Fügen Sie den neuen Server als sekundäres Replikat der Verfügbarkeitsgruppe hinzu. Siehe  [Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe (SQL Server)](https://msdn.microsoft.com/library/hh213247\(v=sql.120\).aspx)in der SQL Server-Dokumentationsbibliothek.  
-
-2.  Beenden Sie den Configuration Manager-Standort, indem Sie **Preinst.exe /stopsite** ausführen. Informationen hierfür finden Sie unter [Hierarchiewartungstool (Preinst.exe) für System Center Configuration Manager](../../../../core/servers/manage/hierarchy-maintenance-tool-preinst.exe.md).  
-
-3.  Konfigurieren Sie alle sekundären Replikate. Führen Sie die folgenden Schritte für alle sekundären Replikate in der Verfügbarkeitsgruppe aus:  
-
-    1.  Führen Sie für das primäre Replikat ein manuelles Failover in ein neues sekundäres Replikat aus. Siehe [Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe](https://msdn.microsoft.com/library/hh231018\(v=sql.120\).aspx) in der SQL Server-Dokumentation.  
-
-    2.  Konfigurieren Sie die Datenbank auf dem neuen Server mit der „Trustworthy“-Eigenschaft, und aktivieren Sie die CLR-Integration. Siehe [TRUSTWORTHY-Datenbankeigenschaft](https://msdn.microsoft.com/library/ms187861\(v=sql.120\).aspx) und  [Aktivieren der CLR-Integration](https://msdn.microsoft.com/library/ms131048\(v=sql.120\).aspx)in der SQL Server-Dokumentation.  
-
-4.  Starten Sie den Standort neu, indem Sie die Dienste Standortkomponenten-Manager (**sitecomp**) und **SMS_Executive** starten.  
-
-#### <a name="to-remove-a-replica-member-from-the-availability-group"></a>So entfernen ein Replikatsmitglied aus der Verfügbarkeitsgruppe  
-
--   Befolgen Sie die Anweisungen unter [Entfernen eines sekundären Replikats aus einer Verfügbarkeitsgruppe](https://msdn.microsoft.com/library/hh213149\(v=sql.120\).aspx) in der SQL Server-Dokumentation.  
-
-##  <a name="bkmk_remove"></a> Verschieben der Standortdatenbank aus einer Verfügbarkeitsgruppe zurück in eine einzelne Instanz von SQL Server  
- Führen Sie das folgende Verfahren aus, wenn Sie Ihre Standortdatenbank nicht mehr in einer Verfügbarkeitsgruppe hosten möchten.  
-
-#### <a name="to-move-the-site-database-from-an-availability-group-back-to-a-single-instance-sql-server"></a>So verschieben Sie die Standortdatenbank aus einer Verfügbarkeitsgruppe zurück in eine einzelne Instanz von SQL Server  
-
-1.  Beenden Sie den Configuration Manager-Standort mithilfe des folgenden Befehls:  
-     **Preinst.exe /stopsite**.  Weitere Informationen finden Sie unter [Hierarchiewartungstool (Preinst.exe) für System Center Configuration Manager](../../../../core/servers/manage/hierarchy-maintenance-tool-preinst.exe.md).  
-
-2.  Verwenden Sie SQL Server, um eine vollständige Sicherung Ihrer Standortdatenbank anhand des primären Replikats zu erstellen. Informationen zum Ausführen dieses Schritts finden Sie unter [Erstellen einer vollständigen Datenbanksicherung](https://msdn.microsoft.com/library/ms187510\(v=sql.120\).aspx) in der SQL Server-Dokumentation.  
-
-3.  Wenn der Server, der das primäre Replikat für die Verfügbarkeitsgruppe hostet, jetzt die einzelne Instanz der Standortdatenbank hostet, können Sie diesen Schritt überspringen:  
-
-    -   Verwenden Sie SQL Server, um die Sicherung der Standortdatenbank auf dem Server wiederherzustellen, der die Standortdatenbank hostet.  Siehe [Wiederherstellen einer Datenbanksicherung (SQL Server Management Studio)](https://msdn.microsoft.com/library/ms177429\(v=sql.120\).aspx) in der SQL Server-Dokumentation.  
-
-4.  Ändern Sie für die wiederhergestellte Datenbank das Sicherungsmodell für die Standortdatenbank von **VOLLSTÄNDIG** in **EINFACH**.  Siehe [Anzeigen oder Ändern des Wiederherstellungsmodells einer Datenbank](https://msdn.microsoft.com/library/ms189272\(v=sql.120\).aspx) in der SQL Server-Dokumentation.  
-
-5.  Führen Sie das **Configuration Manager-Setup** unter **&lt;Installationsordner des Configuration Manager-Standorts\>\BIN\X64\setup.exe** aus.  
-
-6.  Wählen Sie auf der Seite **Erste Schritte** die Option **Standortwartung durchführen oder diesen Standort zurücksetzen**aus, und klicken Sie dann auf **Weiter**.  
-
-7.  Wählen Sie die Option **SQL Server-Konfiguration ändern** aus, und klicken Sie auf **Weiter**.  
-
-8.  Konfigurieren Sie Folgendes für die Standortdatenbank neu:  
-
-    -   **Name des SQL-Servers** : Geben Sie den Namen des Servers ein, auf dem nun die Standortdatenbank gehostet wird.  
-
-    -   **Instanz:** Geben Sie die benannte Instanz an, die die Standortdatenbank hostet. Lassen Sie dieses Feld leer, wenn sich die Datenbank in der Standardinstanz befindet.  
-
-    -   **Datenbank:** Belassen Sie den angezeigten Namen unverändert. Dies ist der Name der aktuellen Standortdatenbank.  
-
-9. Nachdem Sie die Informationen zum neuen Speicherort der Datenbank bereitgestellt haben, schließen Sie das Setup mit der üblichen Vorgehensweise und den normalen Konfigurationen ab. Nach Abschluss des Setups wird der Standort neu gestartet und beginnt mit der Nutzung des neuen Speicherorts der Datenbank.  
-
-10. Zur Bereinigung der Server, die Mitglied der Verfügbarkeitsgruppe waren, befolgen Sie die Anleitung unter [Entfernen einer Verfügbarkeitsgruppe](https://msdn.microsoft.com/library/ff878113\(v=sql.120\).aspx) in der SQL Server-Dokumentation.
+## <a name="next-steps"></a>Nächste Schritte
+Wenn Sie die Voraussetzungen, Einschränkungen und Änderungen an allgemeinen Aufgaben verstehen, die für die Verwendung von Verfügbarkeitsgruppen erforderlich sind, finden Sie unter [Konfigurieren von Verfügbarkeitsgruppen für Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag) Verfahren zum Einrichten und Konfigurieren Ihres Standorts zur Nutzung von Verfügbarkeitsgruppen.
 

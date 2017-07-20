@@ -12,19 +12,21 @@ ms.service:
 ms.technology:
 - configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-translationtype: Human Translation
-ms.sourcegitcommit: 78524abd4c45f0b7402d6f1e85afc60bb72ab0ee
-ms.openlocfilehash: 34b0819957ffcc3711ee354a5b821d78fa7445cb
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
+ms.openlocfilehash: 804a9d7a32cfbdb498c6748c5d99a1874261c231
+ms.contentlocale: de-de
+ms.lasthandoff: 06/08/2017
 
 ---
 
-#  <a name="a-namebkmkautodeploya-automatically-deploy-software-updates"></a><a name="BKMK_AutoDeploy"></a> Automatisches Bereitstellen von Softwareupdates  
+#  <a name="BKMK_AutoDeploy"></a> Automatisches Bereitstellen von Softwareupdates  
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
  Softwareupdates können automatisch bereitgestellt werden. Zu diesem Zweck fügen Sie entweder einer Updategruppe mit einer aktiven Bereitstellung neue Softwareupdates hinzu, oder Sie verwenden automatische Bereitstellungsregeln (ADR). Die Bereitstellung per ADR eignet sich insbesondere für monatliche Softwareupdates („Patch-Dienstag“) und für die Verwaltung von Definitionsupdates. Wenn Sie Hilfe bei der Ermittlung der für Sie richtigen Bereitstellungsmethode benötigen, lesen Sie [Bereitstellen von Softwareupdates](deploy-software-updates.md).
 
-##  <a name="a-namebkmkaddupdatestoexistinggroupa-add-software-updates-to-a-deployed-update-group"></a><a name="BKMK_AddUpdatesToExistingGroup"></a> Hinzufügen von Softwareupdates zu einer bereitgestellten Updategruppe  
+##  <a name="BKMK_AddUpdatesToExistingGroup"></a> Hinzufügen von Softwareupdates zu einer bereitgestellten Updategruppe  
 Nachdem Sie eine Softwareupdategruppe erstellt und bereitgestellt haben, können Sie ihr Softwareupdates hinzufügen. Diese Updates werden dann ebenfalls automatisch bereitgestellt.  
 
 > [!IMPORTANT]  
@@ -46,7 +48,7 @@ Gehen Sie wie folgt vor, um einer vorhandenen Updategruppe Softwareupdates hinzu
 
 6.  Klicken Sie auf die Softwareupdategruppe. Klicken Sie dann auf der Registerkarte **Startseite** in der Gruppe **Update** auf **Mitglieder anzeigen** , um eine Liste der Softwareupdates in der Gruppe anzuzeigen.  
 
-##  <a name="a-namebkmkcreateautomaticdeploymentrulea-create-an-automatic-deployment-rule-adr"></a><a name="BKMK_CreateAutomaticDeploymentRule"></a> Erstellen einer automatischen Bereitstellungsregel  
+##  <a name="BKMK_CreateAutomaticDeploymentRule"></a> Erstellen einer automatischen Bereitstellungsregel  
 Sie können Softwareupdates mithilfe einer automatischen Bereitstellungsregel automatisch genehmigen und bereitstellen. Sie können festlegen, dass die Regel bei jeder Ausführung Softwareupdates zu einer neuen Softwareupdategruppe hinzufügt oder Softwareupdates zu einer vorhandenen Gruppe hinzufügt. Wenn eine Regel ausgeführt wird und Softwareupdates zu einer vorhandenen Gruppe hinzufügt, entfernt die Regel alle Softwareupdates aus der Gruppe und fügt dann die Softwareupdates, die die definierten Kriterien erfüllen, zur Gruppe hinzu. Um z. B. eine automatische Bereitstellungsregel auszuführen, die jeden Tag nach neu veröffentlichten Softwareupdates sucht und diese für Clients bereitstellt, müssen Sie die Option zum Erstellen einer neuen Softwareupdategruppe anstatt zum Hinzufügen von Softwareupdates zu einer vorhandenen Gruppe auswählen.  
 
 > [!WARNING]  
@@ -167,15 +169,15 @@ Sie können Softwareupdates mithilfe einer automatischen Bereitstellungsregel au
 
 10. Konfigurieren Sie auf der Seite Downloadeinstellungen die folgenden Einstellungen:  
 
-    -   Geben Sie an, ob die Softwareupdates vom Client heruntergeladen und installiert werden, wenn ein Client mit einer langsamen Netzwerkverbindung oder einer Fallbackinhaltsquelle vorliegt.  
+    - Geben Sie an, ob die Softwareupdates vom Client heruntergeladen und installiert werden, wenn ein Client mit einer langsamen Netzwerkverbindung oder einer Fallbackinhaltsquelle vorliegt.  
 
-    -   Geben Sie an, ob die Softwareupdates vom Client von einem Fallbackverteilungspunkt heruntergeladen und installiert werden sollen, wenn der Inhalt für die Softwareupdates an einem bevorzugten Verteilungspunkt nicht verfügbar ist.  
+    - Geben Sie an, ob die Softwareupdates vom Client von einem Fallbackverteilungspunkt heruntergeladen und installiert werden sollen, wenn der Inhalt für die Softwareupdates an einem bevorzugten Verteilungspunkt nicht verfügbar ist.  
 
-    -   **Freigeben von Inhalten für andere Clients im gleichen Subnetz zulassen**: Geben Sie an, ob BranchCache beim Herunterladen von Inhalten verwendet werden soll. Weitere Informationen zu BranchCache finden Sie unter [Concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
+    - **Freigeben von Inhalten für andere Clients im gleichen Subnetz zulassen**: Geben Sie an, ob BranchCache beim Herunterladen von Inhalten verwendet werden soll. Weitere Informationen zu BranchCache finden Sie unter [Concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
 
-    -   Geben Sie an, ob von Clients, die mit dem Intranet verbunden sind, Softwareupdates von Microsoft Update heruntergeladen werden sollen, wenn keine Softwareupdates an Verteilungspunkten verfügbar sind.  
+    - **Inhalt von Microsoft Updates herunterladen, falls Softwareupdates in aktuellen oder benachbarten Begrenzungsgruppen oder in Standortbegrenzungsgruppen am Verteilungspunkt nicht verfügbar sind**: Wählen Sie diese Einstellung aus, damit Clients, die mit dem Intranet verbunden sind, Softwareupdates von Microsoft Update herunterladen, wenn keine Softwareupdates auf Verteilungspunkten verfügbar sind. Internetbasierte Clients können Softwareupdates immer von Microsoft Update herunterladen.
 
-    -   Geben Sie an, ob es Clients mit einer getakteten Internetverbindung möglich sein soll, Inhalt nach dem Installationsstichtag herunterzuladen. Bei getakteten Internetverbindungen berechnen einige Internetanbieter die anfallenden Gebühren anhand der Datenmenge, die Sie senden und empfangen.  
+    - Geben Sie an, ob es Clients mit einer getakteten Internetverbindung möglich sein soll, Inhalt nach dem Installationsstichtag herunterzuladen. Bei getakteten Internetverbindungen berechnen einige Internetanbieter die anfallenden Gebühren anhand der Datenmenge, die Sie senden und empfangen.  
 
     > [!NOTE]  
     >  Der Inhaltsort für die Softwareupdates in einer Bereitstellung wird von den Clients von einem Verwaltungspunkt angefordert. Das Downloadverhalten richtet sich danach, wie Sie den Verteilungspunkt, das Bereitstellungspaket und die Einstellungen auf dieser Seite konfiguriert haben. Weitere Informationen finden Sie unter [Content source location scenarios](../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
@@ -186,7 +188,7 @@ Sie können Softwareupdates mithilfe einer automatischen Bereitstellungsregel au
 
     2.  **Beschreibung**: Geben Sie eine Beschreibung mit Informationen zum Bereitstellungspaket an. Die Beschreibung ist auf 127 Zeichen begrenzt.  
 
-    3.  **Paketquelle**: Gibt den Speicherort der Quelldateien der Softwareupdates an.  Geben Sie für den Quellspeicherort einen Netzwerkpfad wie **\\\&lt;Server&gt;\&lt;Freigabename&gt;\&lt;Pfad&gt;**ein. Alternativ können Sie auf **Durchsuchen** klicken, um den Netzwerkpfad zu suchen. Sie müssen den freigegebenen Ordner für die Quelldateien des Bereitstellungspakets erstellen, bevor Sie mit der nächsten Seite fortfahren.  
+    3.  **Paketquelle**: Gibt den Speicherort der Quelldateien der Softwareupdates an.  Geben Sie für den Quellspeicherort einen Netzwerkpfad wie **\\\Server\Freigabename\Pfad**ein. Alternativ können Sie auf **Durchsuchen** klicken, um den Netzwerkpfad zu suchen. Sie müssen den freigegebenen Ordner für die Quelldateien des Bereitstellungspakets erstellen, bevor Sie mit der nächsten Seite fortfahren.  
 
         > [!NOTE]  
         >  Der von Ihnen angegebene Quellspeicherort des Bereitstellungspakets kann von keinem anderen Softwarebereitstellungspaket verwendet werden.  
@@ -221,7 +223,7 @@ Sie können Softwareupdates mithilfe einer automatischen Bereitstellungsregel au
 
  Nachdem Sie den Assistenten abgeschlossen haben, wird die automatische Bereitstellungsregel ausgeführt. Dabei werden die Softwareupdates, die die angegebenen Kriterien erfüllen, einer Softwareupdategruppe hinzugefügt. Dann werden die Softwareupdates in die Inhaltsbibliothek auf dem Standortserver heruntergeladen und an die konfigurierten Verteilungspunkte verteilt. Die Softwareupdategruppe wird schließlich den Clients in der Zielsammlung bereitgestellt.  
 
-##  <a name="a-namebkmkadddeploymenttoadra-add-a-new-deployment-to-an-existing-adr"></a><a name="BKMK_AddDeploymentToADR"></a> Hinzufügen einer neuen Bereitstellung zu einer vorhandenen automatischen Bereitstellungsregel  
+##  <a name="BKMK_AddDeploymentToADR"></a> Hinzufügen einer neuen Bereitstellung zu einer vorhandenen automatischen Bereitstellungsregel  
  Nach der Erstellung einer automatischen Bereitstellungsregel können Sie zusätzliche Bereitstellungen zur Regel hinzufügen. Dies hilft Ihnen dabei, die Komplexität der Bereitstellung verschiedener Updates für verschiedene Sammlungen zu verwalten. Jede neue Bereitstellung verfügt über sämtliche Funktionen und die Bereitstellungsüberwachungsumgebung.  
 
 #### <a name="to-add-a-new-deployment-to-an-existing-adr"></a>So fügen Sie einer vorhandenen automatischen Bereitstellungsregel eine neue Bereitstellung hinzu  
@@ -299,26 +301,21 @@ Sie können Softwareupdates mithilfe einer automatischen Bereitstellungsregel au
 
 8. Konfigurieren Sie auf der Seite Downloadeinstellungen die folgenden Einstellungen:  
 
-    -   Geben Sie an, ob die Softwareupdates vom Client heruntergeladen und installiert werden, wenn ein Client mit einer langsamen Netzwerkverbindung oder einer Fallbackinhaltsquelle vorliegt.  
+    - Geben Sie an, ob die Softwareupdates vom Client heruntergeladen und installiert werden, wenn ein Client mit einer langsamen Netzwerkverbindung oder einer Fallbackinhaltsquelle vorliegt.  
 
-    -   Geben Sie an, ob die Softwareupdates vom Client von einem Fallbackverteilungspunkt heruntergeladen und installiert werden sollen, wenn der Inhalt für die Softwareupdates an einem bevorzugten Verteilungspunkt nicht verfügbar ist.  
+    - Geben Sie an, ob die Softwareupdates vom Client von einem Fallbackverteilungspunkt heruntergeladen und installiert werden sollen, wenn der Inhalt für die Softwareupdates an einem bevorzugten Verteilungspunkt nicht verfügbar ist.  
 
-    -   **Freigeben von Inhalten für andere Clients im gleichen Subnetz zulassen**: Geben Sie an, ob BranchCache beim Herunterladen von Inhalten verwendet werden soll. Weitere Informationen zu BranchCache finden Sie unter [Concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
+    - **Freigeben von Inhalten für andere Clients im gleichen Subnetz zulassen**: Geben Sie an, ob BranchCache beim Herunterladen von Inhalten verwendet werden soll. Weitere Informationen zu BranchCache finden Sie unter [Concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
 
-    -   Geben Sie an, ob von Clients, die mit dem Intranet verbunden sind, Softwareupdates von Microsoft Update heruntergeladen werden sollen, wenn keine Softwareupdates an Verteilungspunkten verfügbar sind.  
+    - **Inhalt von Microsoft Updates herunterladen, falls Softwareupdates in aktuellen oder benachbarten Begrenzungsgruppen oder in Standortbegrenzungsgruppen am Verteilungspunkt nicht verfügbar sind**: Wählen Sie diese Einstellung aus, damit Clients, die mit dem Intranet verbunden sind, Softwareupdates von Microsoft Update herunterladen, wenn keine Softwareupdates auf Verteilungspunkten verfügbar sind. Internetbasierte Clients können Softwareupdates immer von Microsoft Update herunterladen.
 
-    -   Geben Sie an, ob es Clients mit einer getakteten Internetverbindung möglich sein soll, Inhalt nach dem Installationsstichtag herunterzuladen. Bei getakteten Internetverbindungen berechnen einige Internetanbieter die anfallenden Gebühren anhand der Datenmenge, die Sie senden und empfangen.  
+    - Geben Sie an, ob es Clients mit einer getakteten Internetverbindung möglich sein soll, Inhalt nach dem Installationsstichtag herunterzuladen. Bei getakteten Internetverbindungen berechnen einige Internetanbieter die anfallenden Gebühren anhand der Datenmenge, die Sie senden und empfangen.  
 
     > [!NOTE]  
-    >  Der Inhaltsort für die Softwareupdates in einer Bereitstellung wird von den Clients von einem Verwaltungspunkt angefordert. Das Downloadverhalten richtet sich danach, wie Sie den Verteilungspunkt, das Bereitstellungspaket und die Einstellungen auf dieser Seite konfiguriert haben. Weitere Informationen finden Sie unter [Content source location scenarios](../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
+    > Der Inhaltsort für die Softwareupdates in einer Bereitstellung wird von den Clients von einem Verwaltungspunkt angefordert. Das Downloadverhalten richtet sich danach, wie Sie den Verteilungspunkt, das Bereitstellungspaket und die Einstellungen auf dieser Seite konfiguriert haben. Weitere Informationen finden Sie unter [Content source location scenarios](../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
 
 Weitere Informationen zum Bereitstellungsprozess finden Sie unter [Software update deployment process](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).
 
 ## <a name="next-steps"></a>Nächste Schritte
 [Überwachen von Softwareupdates](monitor-software-updates.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

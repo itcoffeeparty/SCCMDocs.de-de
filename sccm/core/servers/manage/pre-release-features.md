@@ -2,7 +2,7 @@
 title: "Vorab veröffentlichte Funktionen | Microsoft-Dokumentation"
 description: Features der Vorabversion in System Center Configuration Manager
 ms.custom: na
-ms.date: 4/24/2017
+ms.date: 6/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,32 +16,32 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
-ms.openlocfilehash: b12fcb3c372c34ee47306a9b536c3d0c4764b8be
+ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
+ms.openlocfilehash: 988f8da0b221f8c0b470e7a0a8ed995356193f98
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/13/2017
 
 
 ---
 # <a name="pre-release-features-in-system-center-configuration-manager"></a>Features der Vorabversion in System Center Configuration Manager
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Features der Vorabversion sind Funktionen, die in Current Branch enthalten sind, um sie in einem frühen Stadium in einer Produktionsumgebung zu testen. Sie werden vollständig unterstützt, unterliegen aber noch der Entwicklung und könnten möglicherweise geändert werden, bis sie die Vorabversionskategorie verlassen.
+Features der Vorabversion sind Features, die in Current Branch enthalten sind, um sie in einem frühen Stadium in einer Produktionsumgebung zu testen. Diese Features werden vollständig unterstützt, unterliegen aber noch der Entwicklung und könnten möglicherweise geändert werden, bis sie die Vorabversionskategorie verlassen.
 
  Bevor Sie Features der Vorabversion verwenden können, müssen Sie der Verwendung von Features der Vorabversion von der Configuration Manager-Konsole aus zustimmen, bevor Sie deren Verwendung auswählen und aktivieren können.  
 
-Die Zustimmung ist eine einmalige Aktion pro Hierarchie, die nicht rückgängig gemacht werden kann. Sie können bis zu Ihrer Zustimmung keine neuen Features der Vorabversion aktivieren, die in Updates enthalten sind.
+Die Zustimmung ist eine einmalige Aktion pro Hierarchie, die nicht rückgängig gemacht werden kann. Sie können bis zu Ihrer Zustimmung keine neuen Features der Vorabversion aktivieren, die in Updates enthalten sind. Nachdem Sie ein Feature der Vorabversion aktiviert haben, können Sie es nicht wieder deaktivieren.
 
 Sie geben Ihre Zustimmung, indem Sie in der Konsole zu **Verwaltung** > **Standortkonfiguration** > **Standorte**navigieren, und anschließend **Hierarchieeinstellungen**auswählen. Wählen Sie auf der Registerkarte **Allgemein** **Verwendung von Featurevorabversionen zustimmen** aus.
 
  > [!NOTE]
- > Wenn Sie zuvor die Features der Vorabversion von Update 1602 aktiviert haben, bleiben diese Features bis zur Installation einer höheren Updateversion für die Verwendung aktiviert, auch wenn Sie keine Zustimmung zur Verwendung von Features der Vorabversion gegeben haben.
+ > Wenn Sie die Features der Vorabversion von Update 1602 aktiviert haben, bevor Sie eine höhere Updateversion installiert haben, sind diese Features zur Verwendung aktiviert, auch wenn Sie keine Zustimmung zur Verwendung von Features der Vorabversion gegeben haben.
 
 Wenn Sie ein Update installieren, das Features der Vorabversion enthält, sind diese Features im Assistenten für Updates und Wartung zusammen mit den regulären Funktionen sichtbar, die im Update enthalten sind:
   - **Wenn Sie Ihre Zustimmung gegeben haben:** Sie können Featurevorabversionen innerhalb des Assistenten für Updates und Wartung aktivieren, wenn Sie das Update installieren. Wählen Sie dazu die Featurevorabversionen aus, so wie Sie jede andere Funktion auswählen würden.     
 
     Optional können Sie die Features der Vorabversionen auch später über den Knoten **Verwaltung** > **Updates und Wartung** > **Features** der Konsole aktivieren. Wählen Sie unter dem Knoten **Features** das Feature aus, und wählen Sie anschließend **Aktivieren** aus. Diese Option ist bis zu Ihrer Zustimmung deaktiviert. (Vor Version 1702 befand sich „Updates und Wartung“ unter **Verwaltung** > **Clouddienste**.)
-  -   **Wenn Sie nicht Ihre Zustimmung gegeben haben:** Beim Installieren eines Updates sind Features der Vorabversion im Assistenten für Updates und Wartung sichtbar; sie sind jedoch deaktiviert und können nicht aktiviert werden. Nach der Installation des Updates können Sie diese Features auf dem Knoten **Features** anzeigen, diese jedoch nicht aktivieren, bis sie Ihre Zustimmung in den **Hierarchieeinstellungen** gegeben haben.
+  -   **Wenn Sie nicht Ihre Zustimmung gegeben haben:** Beim Installieren eines Updates sind Features der Vorabversion im Assistenten für Updates und Wartung sichtbar; sie sind jedoch deaktiviert und können nicht aktiviert werden. Nachdem das Update installiert wurde, können Sie diese Features im Knoten **Features** anzeigen. Allerdings können Sie sie erst aktivieren, nachdem Sie die Zustimmung in den **Hierarchieeinstellungen** erteilt haben.
 
 Wenn Sie an einem eigenständigen primären Standort Ihre Zustimmung erteilt haben und die Hierarchie durch die Installation eines neuen Standorts der zentralen Verwaltung erweitern, müssen Sie am Standort der zentralen Verwaltung erneut Ihre Zustimmung geben.
 

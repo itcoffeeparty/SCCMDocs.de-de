@@ -14,10 +14,10 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 78524abd4c45f0b7402d6f1e85afc60bb72ab0ee
-ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
+ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
+ms.openlocfilehash: 2a0d5f12b99689749833c109d4fa399f99451d8a
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -236,10 +236,10 @@ ms.lasthandoff: 05/17/2017
 
     -   **Benutzerbenachrichtigungen**: Geben Sie an, ob zum vorgegebenen **Zeitpunkt der Verfügbarkeit der Software** auf dem Clientcomputer eine Benachrichtigung zu den Softwareupdates im Softwarecenter angezeigt werden soll. Geben Sie auch an, ob auf den Clientcomputern Benutzerbenachrichtigungen angezeigt werden sollen. Wenn auf der Seite „Bereitstellungseinstellungen“ unter **Bereitstellungstyp** die Einstellung **Verfügbar** ausgewählt ist, können Sie **In Softwarecenter und allen Benachrichtigungen ausblenden**nicht auswählen.  
 
-    -   **Verhalten am Stichtag:** *Diese Option ist nur verfügbar, wenn auf der Seite* Bereitstellungseinstellungen *unter* *Bereitstellungstyp* *die Option **Erforderlich** ausgewählt wurde.*   
+    -   **Verhalten am Stichtag**: *Diese Option ist nur verfügbar, wenn auf der Seite „Bereitstellungseinstellungen“ unter **Bereitstellungstyp** *die Option **Erforderlich** *ausgewählt wurde.*   
     Geben Sie das Verhalten am Stichtag der Softwareupdatebereitstellung an. Geben Sie an, ob die Softwareupdates in der Bereitstellung installiert werden sollen. Geben Sie auch, ob nach einer Softwareupdateinstallation unabhängig von einem konfigurierten Wartungsfenster ein Systemneustart ausgeführt werden soll. Weitere Informationen zu Wartungsfenstern finden Sie unter [Verwenden von Wartungsfenstern](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
-    -   **Verhalten beim Geräteneustart:** *Diese Option ist nur verfügbar, wenn auf der Seite* Bereitstellungseinstellungen *unter* *Bereitstellungstyp* *die Option **Erforderlich** ausgewählt wurde.*    
+    -   **Verhalten beim Geräteneustart**: *Diese Option ist nur verfügbar, wenn auf der Seite „Bereitstellungseinstellungen“ unter **Bereitstellungstyp** *die Option **Erforderlich** *ausgewählt wurde.*    
     Geben Sie an, ob nach der Installation der Softwareupdates ein Systemneustart auf den Servern und Arbeitsstationen unterdrückt werden soll, wenn der Systemneustart zum Abschließen der Installation erforderlich ist.  
 
         > [!IMPORTANT]  
@@ -259,15 +259,15 @@ ms.lasthandoff: 05/17/2017
 
 10. Konfigurieren Sie auf der Seite Downloadeinstellungen die folgenden Einstellungen:  
 
-    -   Geben Sie an, ob die Softwareupdates vom Client heruntergeladen und installiert werden, wenn ein Client mit einer langsamen Netzwerkverbindung oder einer Fallbackinhaltsquelle vorliegt.  
+    - Geben Sie an, ob die Softwareupdates vom Client heruntergeladen und installiert werden, wenn ein Client mit einer langsamen Netzwerkverbindung oder einer Fallbackinhaltsquelle vorliegt.  
 
-    -   Geben Sie an, ob die Softwareupdates vom Client von einem Fallbackverteilungspunkt heruntergeladen und installiert werden sollen, wenn der Inhalt für die Softwareupdates an einem bevorzugten Verteilungspunkt nicht verfügbar ist.  
+    - Geben Sie an, ob die Softwareupdates vom Client von einem Fallbackverteilungspunkt heruntergeladen und installiert werden sollen, wenn der Inhalt für die Softwareupdates an einem bevorzugten Verteilungspunkt nicht verfügbar ist.  
 
-    -   **Freigeben von Inhalten für andere Clients im gleichen Subnetz zulassen**: Geben Sie an, ob BranchCache beim Herunterladen von Inhalten verwendet werden soll. Weitere Informationen zu BranchCache finden Sie unter [Grundlegende Konzepte für die Inhaltsverwaltung](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
+    - **Freigeben von Inhalten für andere Clients im gleichen Subnetz zulassen**: Geben Sie an, ob BranchCache beim Herunterladen von Inhalten verwendet werden soll. Weitere Informationen zu BranchCache finden Sie unter [Grundlegende Konzepte für die Inhaltsverwaltung](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
 
-    -   Geben Sie an, ob von Clients, die mit dem Intranet verbunden sind, Softwareupdates von Microsoft Update heruntergeladen werden sollen, wenn keine Softwareupdates an Verteilungspunkten verfügbar sind.  
+    - **Inhalt von Microsoft Updates herunterladen, falls Softwareupdates in aktuellen oder benachbarten Begrenzungsgruppen oder in Standortbegrenzungsgruppen am Verteilungspunkt nicht verfügbar sind**: Wählen Sie diese Einstellung aus, damit Clients, die mit dem Intranet verbunden sind, Softwareupdates von Microsoft Update herunterladen, wenn keine Softwareupdates auf Verteilungspunkten verfügbar sind. Internetbasierte Clients können Softwareupdates immer von Microsoft Update herunterladen.
 
-    -   Geben Sie an, ob es Clients mit einer getakteten Internetverbindung möglich sein soll, Inhalt nach dem Installationsstichtag herunterzuladen. Bei getakteten Internetverbindungen berechnen einige Internetanbieter die anfallenden Gebühren anhand der Datenmenge, die Sie senden und empfangen.  
+    - Geben Sie an, ob es Clients mit einer getakteten Internetverbindung möglich sein soll, Inhalt nach dem Installationsstichtag herunterzuladen. Bei getakteten Internetverbindungen berechnen einige Internetanbieter die anfallenden Gebühren anhand der Datenmenge, die Sie senden und empfangen.  
 
     > [!NOTE]  
     >  Der Inhaltsort für die Softwareupdates in einer Bereitstellung wird von den Clients von einem Verwaltungspunkt angefordert. Das Downloadverhalten richtet sich danach, wie Sie den Verteilungspunkt, das Bereitstellungspaket und die Einstellungen auf dieser Seite konfiguriert haben. Weitere Informationen finden Sie unter [Content source location scenarios](../../core/plan-design/hierarchy/content-source-location-scenarios.md).  

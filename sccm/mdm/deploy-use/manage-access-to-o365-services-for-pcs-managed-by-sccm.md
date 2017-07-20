@@ -16,10 +16,10 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
-ms.openlocfilehash: e9028a54e538b4ec987dbaeb5ba1ee22ad091728
+ms.sourcegitcommit: c8717925dba42451b1e241a7c2f59e43896d7d99
+ms.openlocfilehash: e78fe989b7ff445717c8320c4eae3900eb46baea
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/19/2017
 
 
 ---
@@ -27,31 +27,25 @@ ms.lasthandoff: 05/17/2017
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-
-
- Ab Version 1602 von Configuration Manager können Sie einen bedingten Zugriff für PCs konfigurieren, die von System Center Configuration Manager verwaltet werden.  
+Ab Version 1602 von Configuration Manager können Sie einen bedingten Zugriff für PCs konfigurieren, die von System Center Configuration Manager verwaltet werden.  
 
 > [!IMPORTANT]  
->  Dieses Vorabfeature ist in Update 1602, Update 1606 und Update 1610 verfügbar. Vorab veröffentlichte Features werden in das Produkt aufgenommen, um sie in einem frühen Stadium in einer Produktionsumgebung zu testen. Sie sollten nicht als für den Produktivbetrieb geeignet betrachtet werden. Weitere Informationen finden Sie unter [Use pre-release features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease) (Verwenden von Vorabfeatures aus Updates).
+> Dieses Vorabfeature ist in Update 1602, Update 1606 und Update 1610 verfügbar. Vorab veröffentlichte Features werden in das Produkt aufgenommen, um sie in einem frühen Stadium in einer Produktionsumgebung zu testen. Sie sollten nicht als für den Produktivbetrieb geeignet betrachtet werden. Weitere Informationen finden Sie unter [Use pre-release features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease) (Verwenden von Vorabfeatures aus Updates).
 > - Nach der Installation von Update 1602 wird der Featuretyp als endgültige Version angezeigt, obwohl es sich um eine Vorabversion handelt.
 > - Wenn Sie anschließend von 1602 auf 1606 aktualisieren, wird der Featuretyp als endgültige Version angezeigt, obwohl es sich weiterhin um eine Vorabversion handelt.
 > - Wenn Sie von Version 1511 direkt auf 1606 aktualisieren, wird der Featuretyp als Vorabversion angezeigt.
 
- Informationen zum Konfigurieren des bedingten Zugriffs für bei Intune registrierte und mit Intune verwaltete Geräte oder zum Konfigurieren von PCs, die in die Domäne eingebunden sind und nicht auf Kompatibilität überprüft werden, finden Sie unter [Verwalten des Zugriffs auf Dienste in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md).  
-
+Informationen zum Konfigurieren des bedingten Zugriffs für bei Intune registrierte und mit Intune verwaltete Geräte oder zum Konfigurieren von PCs, die in die Domäne eingebunden sind und nicht auf Kompatibilität überprüft werden, finden Sie unter [Verwalten des Zugriffs auf Dienste in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md).
 
 ## <a name="supported-services"></a>Unterstützte Dienste  
 
--   Exchange Online  
-
--   SharePoint Online  
+-   Exchange Online
+-   SharePoint Online
 
 ## <a name="supported-pcs"></a>Unterstützte PCs  
 
--   Windows 7  
-
--   Windows 8.1  
-
+-   Windows 7
+-   Windows 8.1
 -   Windows 10 
 
 ## <a name="configure-conditional-access"></a>Konfigurieren des bedingten Zugriffs  
@@ -61,7 +55,7 @@ ms.lasthandoff: 05/17/2017
 
 -   AD FS-Synchronisierung (Active Directory Federation Services, Active Directory-Verbunddienste) sowie ein Office 365-Abonnement Das Office 365-Abonnement wird zum Einrichten von Exchange Online und SharePoint Online benötigt.  
 
--   Microsoft Intune-Abonnement. Das Microsoft Intune-Abonnement muss in der Configuration Manager-Konsole konfiguriert werden. Dafür wird weiterhin eine hybride Bereitstellung benötigt.  
+-   Microsoft Intune-Abonnement. Das Microsoft Intune-Abonnement muss in der Configuration Manager-Konsole konfiguriert werden. Das Intune-Abonnement wird zur Weiterleitung des Konformitätszustands des Geräts an Azure Active Directory und zur Benutzerlizenzierung verwendet.  
 
  Die PCs müssen folgende Anforderungen erfüllen:  
 
@@ -146,6 +140,8 @@ ms.lasthandoff: 05/17/2017
 
 -   Windows 10 users may see multiple access failures when trying to reach O365 and/or SharePoint online resources. Note that conditional access is not fully supported for Windows 10.  
 --->
-### <a name="see-also"></a>Weitere Informationen:  
- [Schützen der Daten und Standortinfrastruktur mit System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)
+## <a name="see-also"></a>Weitere Informationen:
+
+- [Schützen der Daten und Standortinfrastruktur mit System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)
+- [Flussdiagramm der Problembehandlung beim bedingten Zugriff für Configuration Manager](https://gallery.technet.microsoft.com/Conditional-access-fd747c1a?redir=0)
 

@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: fefa5f3aa12d82b66a251cf0525475496e1e35cf
+ms.sourcegitcommit: f7cd9c71287d62c9f5d36e2f032bc2a6065572ae
+ms.openlocfilehash: 8ff48b08d1abb7481592c0ea076d4efa15c3d8ee
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/06/2017
 
 ---
 # <a name="use-a-command-line-to-install-system-center-configuration-manager-sites"></a>Verwenden einer Befehlszeile zum Installieren von System Center Configuration Manager-Standorten
@@ -67,7 +67,7 @@ ms.lasthandoff: 05/17/2017
     -   Identification  
     -   Wiederherstellung
 
-Weitere Informationen zur Sicherung und Wiederherstellung finden Sie im Abschnitt [Skriptdateischlüssel für unbeaufsichtigte Standortwiederherstellung](../../../../protect/understand/backup-and-recovery.md#BKMK_UnattendedSiteRecoveryKeys) im Thema [Sicherung und Wiederherstellung in Configuration Manager](../../../../protect/understand/backup-and-recovery.md).  
+Weitere Informationen finden Sie unter [Unbeaufsichtigte Standortwiederherstellung für Configuration Manager](/sccm/protect/understand/unattended-recovery).  
 
 Eine Liste mit Schlüsseln und Werten, die in einer unbeaufsichtigten Installationsskriptdatei verwendet werden sollen, finden Sie unter [Skriptdateischlüssel für unbeaufsichtigtes Setup](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Unattended).  
 
@@ -87,7 +87,7 @@ Wenn Sie Medien aus dem Ordner „CD.Latest“ verwenden, um eine Skriptinstalla
 - Installieren eines neuen Standorts der zentralen Verwaltung
 - Installieren eines neuen primären Standorts
 - Wiederherstellen eines Standorts der zentralen Verwaltung
-- Wiederherstellen eines primäre Standorts 
+- Wiederherstellen eines primäre Standorts
 
 Dieser Wert wird nicht für das Verwenden mit Installationsmedien unterstützt, die Sie vom Standort von Microsoft Volume License erhalten.
 Weitere Informationen zum Verwenden dieses Schlüsselnamens in der Skriptdatei finden Sie unter [Befehlszeilenoptionen](/sccm/core/servers/deploy/install/command-line-options-for-setup).

@@ -17,10 +17,10 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ae60eb25383f4bd07faaa1265185a471ee79b1e9
-ms.openlocfilehash: 3d90f16eac59b7069ff2f33170eba85d2cde65ef
+ms.sourcegitcommit: c8717925dba42451b1e241a7c2f59e43896d7d99
+ms.openlocfilehash: 4a169098f30e4a9d708e41ee25c6a400d5ff0e85
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/19/2017
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>Informationen zu Clienteinstellungen in System Center Configuration Manager
@@ -65,7 +65,7 @@ Viele der Clienteinstellungen sind selbsterklärend. Andere werden hier beschrie
 
 - **Konfigurieren der Cachegröße des Clients**
 
-  Der Clientcache auf Windows-Computern speichert temporäre Dateien, die zum Installieren von Anwendungen und Programmen verwendet werden. Wählen Sie **Ja** aus, um die **maximale Cachegröße** (in Megabytes oder als Prozentsatz des Datenträgers) festzulegen. Wenn die Option **Nein** festgelegt ist, beträgt die Standardgröße 5.120 MB.
+  Der Clientcache auf Windows-Computern speichert temporäre Dateien, die zum Installieren von Anwendungen und Programmen verwendet werden. Wählen Sie **Ja** aus, um die **maximale Cachegröße** (in Megabytes oder als Prozentsatz des Datenträgers) festzulegen. Die Cachegröße kann auf die maximale Größe in MB oder den Prozentsatz des Datenträgers erweitern werden, je nach dem, **welcher Wert kleiner ist**. Wenn die Option **Nein** festgelegt ist, beträgt die Standardgröße 5.120 MB.
 
 ## <a name="client-policy"></a>Clientrichtlinie  
 
@@ -248,6 +248,10 @@ Viele der Clienteinstellungen sind selbsterklärend. Andere werden hier beschrie
     > -   Die Fehler-ID **0X87D00327** und die Beschreibung **Das Skript wurde nicht signiert** werden in der Configuration Manager-Konsole im Arbeitsbereich **Überwachung** als Bereitstellungsstatusfehler angezeigt.  
     > -   Der Fehlercode **0X87D00327** mit der Beschreibung **Script is not signed** (Das Skript wurde nicht signiert) bzw. **0X87D00320** mit der Beschreibung **The script host has not been installed yet** (Der Skripthost wurde noch nicht installiert) und dem Fehlertyp **Ermittlungsfehler** wird in Berichten angezeigt. Ein Beispiel ist **Details zu Fehlern von Konfigurationselementen in einer Konfigurationsbaseline für einen Bestand**.  
     > -   Die Meldung **Script is not signed (Error: 87D00327; Source: CCM)** wird in der Datei **DcmWmiProvider.log** angezeigt.  
+
+-   **Benachrichtigung für neue Bereitstellungen anzeigen**  
+
+     Wählen Sie **Ja** aus, wenn eine Benachrichtigung für Bereitstellungen angezeigt werden soll, die erst seit weniger als einer Woche verfügbar sind.  Diese Nachricht wird jedes Mal angezeigt, wenn der Client-Agent startet wird.
 
 -   **Zufällige Stichtaganordnung deaktivieren**  
 

@@ -16,10 +16,10 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ae60eb25383f4bd07faaa1265185a471ee79b1e9
-ms.openlocfilehash: 5b5eadd7b4026eae59acceaef43cdacd7a33d3ac
+ms.sourcegitcommit: 255249332350843ba0b78128423482e260974521
+ms.openlocfilehash: 1ea0360b5b182b92e11ea9dfe78b5a3552ae4845
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>Registrierung des iOS-Programms zur Geräteregistrierung (Device Enrollment Program, DEP) für Hybridbereitstellungen mit Configuration Manager
@@ -123,6 +123,9 @@ Unternehmen können iOS-Geräte mit dem Geräteregistrierungsprogramm von Apple 
 
 3.  **Synchronisieren von DEP-verwalteten Geräten**   
     Navigieren Sie im Arbeitsbereich **Bestand und Kompatibilität** zu **Alle unternehmenseigenen Geräte** > **Vorab deklarierte Geräte**. Klicken Sie auf der Registerkarte **Startseite** auf **DEP-Synchronisierung**. Eine Synchronisierungsanforderung wird an Apple gesendet. Nach Abschluss der Synchronisierung werden die DEP-verwalteten Geräte angezeigt.
+
+> [!NOTE]
+> In der Hybridkonfiguration wird der DEP-Synchronisierungsvorgang manuell durch Klicken auf **DEP-Synchronisierung** in der Configuration Manager-Konsole ausgelöst.
 
 4.  **Zuweisen des DEP-Profils**<br>Navigieren Sie im Arbeitsbereich **Bestand und Kompatibilität** zu **Alle unternehmenseigenen Geräte** > **iOS** > **Registrierungsprofile**. Wählen Sie das DEP-Registrierungsprofil aus, und klicken Sie dann auf der Registerkarte **Startseite** auf **Geräten zuweisen**. Wählen Sie die Geräte aus, die dieses Registrierungsprofil verwenden sollen, klicken Sie auf **Hinzufügen**, und klicken Sie dann auf **OK**.   
      ![Screenshot der Zuweisung des DEP-Profils für iOS-Geräte](../media/dep-assign-profile.png)

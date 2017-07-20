@@ -2,7 +2,7 @@
 title: "Checkliste für 1606 | Microsoft-Dokumentation"
 description: "Erhalten Sie mehr über Aktionen, die Sie durchführen müssen, bevor Sie eine Aktualisierung von System Center Configuration Manager Version 1511 oder 1602 auf Version 1606 ausführen."
 ms.custom: na
-ms.date: 2/7/2017
+ms.date: 6/6/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 30af3326578d39c6d995672071705bcaeb877e4d
-ms.openlocfilehash: b0def6eb962d243a7ea5910b8d56bbb448b3a2e4
+ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
+ms.openlocfilehash: a6bda116499845fedff0126e2890755931de85bb
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="checklist-for-installing-update-1606-for-system-center-configuration-manager"></a>Checkliste für die Installation von Update 1606 für System Center Configuration Manager
@@ -78,11 +78,7 @@ Für die Datenbankreplikation können Sie die Replikationslinkanalyse verwenden,
 
  **Installieren Sie alle anwendbaren wichtigen Updates für Betriebssysteme auf Computern, auf denen der Standort gehostet wird, auf dem Standortdatenbankserver und auf Remote-Standortsystemrollen:** Installieren Sie vor der Installation eines Updates für Configuration Manager alle wichtigen Updates für jedes relevante Standortsystem. Wenn für ein von Ihnen installiertes Update ein Neustart erforderlich ist, starten Sie die jeweiligen Computer neu, bevor Sie mit dem Upgrade beginnen.  
 
- **Deaktivieren Sie Datenbankreplikate für Verwaltungspunkte an primären Standorten:** Configuration Manager kann einen primären Standort, an dem ein Datenbankreplikat für Verwaltungspunkte aktiviert ist, nicht erfolgreich aktualisieren. Deaktivieren Sie die Datenbankreplikation, bevor Sie folgende Schritte ausführen:  
-
--   Erstellen einer Sicherung der Standortdatenbank zum Testen des Datenbankupgrades.  
-
--   Installieren eines Updates für Configuration Manager.  
+ **Deaktivieren Sie Datenbankreplikate für Verwaltungspunkte an primären Standorten:** Configuration Manager kann einen primären Standort, an dem ein Datenbankreplikat für Verwaltungspunkte aktiviert ist, nicht erfolgreich aktualisieren. Deaktivieren Sie die Datenbankreplikation, bevor Sie ein Update für Configuration Manager installieren.  
 
 Weitere Informationen finden Sie unter [Datenbankreplikate für Verwaltungspunkte für System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md).  
 
@@ -111,22 +107,23 @@ Weitere Informationen finden Sie unter [Wartungstasks für System Center Configu
 
 Weitere Informationen finden Sie unter [Sicherung und Wiederherstellung für System Center Configuration Manager](../../../protect/understand/backup-and-recovery.md).  
 
+<!-- Removed from update guidance 6/6/2017
+ **Test the database upgrade on a copy of the most recent site database backup:** Before you update a System Center Configuration Manager central administration site or primary site, test the site database upgrade process on a copy of the site database.  
 
- **Testen Sie das Datenbankupgrade mit einer Kopie der letzten Sicherung der Standortdatenbank:** Bevor Sie ein Update für einen Standort der zentralen Verwaltung oder einen primären Standort von System Center Configuration Manager durchführen, sollten Sie den Datenbankupgradeprozess mit einer Kopie der letzten Sicherung der Standortdatenbank testen.  
+-   You should test the site database upgrade process because when you upgrade a site, the site database might be modified.  
 
--   Sie sollten den Standortdatenbank-Upgradeprozess testen, da die Standortdatenbank während der Aktualisierung eines Standorts geändert werden kann.  
+-   Although a test database upgrade is not required, it can identify problems for the upgrade before your production database is affected.  
 
--   Ein Testdatenbankupgrade ist zwar nicht erforderlich, doch können dadurch Probleme beim Upgrade ermittelt werden, bevor die Produktionsdatenbank betroffen ist.  
+-   A failed site database upgrade can render your site database inoperable and might require a site recovery to restore functionality.  
 
--   Wenn beim Upgrade einer Standortdatenbank Fehler auftreten, ist die Datenbank möglicherweise nicht mehr betriebsfähig, und es müsste eine Standortwiederherstellung erfolgen.  
+-   Although the site database is shared between sites in a hierarchy, plan to test the database at each applicable site before you upgrade that site.  
 
--   Obwohl die Standortdatenbank von allen Standorten in einer Hierarchie gemeinsam genutzt wird, sollten Sie die Datenbank an jedem relevanten Standort testen, bevor Sie das Upgrade für diesen Standort durchführen.  
+-   If you use database replicas for management points at a primary site, disable replication before you create the backup of the site database.  
 
--   Wenn Sie an einem primären Standort Datenbankreplikate für Verwaltungspunkte verwenden, deaktivieren Sie die Replikation, bevor Sie die Sicherung der Standortdatenbank erstellen.  
+Configuration Manager does not support the backup of secondary sites nor does it support the test upgrade of a secondary site database.   
 
-Configuration Manager unterstützt weder die Sicherung sekundärer Standorte noch das Testupgrade einer sekundären Standortdatenbank.   
-
-Führen Sie kein Testdatenbankupgrade für die Datenbank des Produktionsstandorts aus. Dadurch würde ein Update der Standortdatenbank durchgeführt, und Ihr Standort wäre möglicherweise nicht mehr betriebsfähig. Weitere Informationen finden Sie unter **Vor der Installation eines konsoleninternen Updates** und dann im [Schritt 2: Testen des Datenbankupgrades vor der Installation eines Updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2).
+Do not run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, For more information, see [Step 2: Test the database upgrade before installing an update](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2) from **Before you install an in-console update**.
+-->
 
  **Planen Sie Pilottests für Clients:** Wenn Sie ein Update zum Aktualisieren des Clients installieren, können Sie dieses neue Clientupdate in der Präproduktionsphase testen, bevor es bereitgestellt und das Upgrade für all Ihre aktiven Clients durchgeführt wird.   
 
