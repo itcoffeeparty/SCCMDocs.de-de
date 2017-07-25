@@ -16,10 +16,10 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 ms.translationtype: HT
-ms.sourcegitcommit: 1035dbbf944a3a467d637a4a948a75b0946eb711
-ms.openlocfilehash: a9e03d4c5b290886bda87fae41e4df362eca1b71
+ms.sourcegitcommit: 94dc0335dab74bec7989753343418fae49b3ebe9
+ms.openlocfilehash: ab011cb06b43b06fc6e2a89e2f413d35a541a111
 ms.contentlocale: de-de
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Neuheiten bei der hybriden Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune
@@ -42,9 +42,9 @@ Dieser Artikel bietet Details zu den neuen Features für die Verwaltung mobiler 
 
 ### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
 
-- **Hinweis für unterstützte Versionen von Android wurde hinzugefügt**
+- **Hinweise zum Ende des Supports für Android und Windows Phone hinzugefügt**
 
-    Ein neuer Hinweis wurde für unterstützte Versionen von Android hinzugefügt. Weitere Informationen finden Sie unter [Ende des Supports für Android 4.3 und niedriger](#notices).
+    Es wurden neue Hinweise zum Ende des Supports für Android- und Windows Phone-Versionen hinzugefügt. Details finden Sie unter [Hinweise](#notices).
 
 ## <a name="june-2017"></a>Juni 2017
 
@@ -56,7 +56,7 @@ Dieser Artikel bietet Details zu den neuen Features für die Verwaltung mobiler 
 
 - **Managed Browser- und App-Proxyintegration**
 
-  Der Intune Managed Browser lässt sich jetzt in den Azure AD-Anwendungsproxydienst integrieren, damit Benutzer auf interne Websites zugreifen können, selbst wenn sie remote arbeiten. Benutzer des Browsers geben einfach die Website-URL wie üblich ein, woraufhin der Managed Browser die Anforderung durch das Webgateway des Anwendungsproxys leitet. Weitere Informationen finden Sie unter [Verwalten des Internetzugriffs mittels Richtlinien für Managed Browser](/intune/app-configuration-managed-browser).
+  Der Intune Managed Browser lässt sich jetzt in den Azure AD-Anwendungsproxydienst integrieren, damit Benutzer auf interne Websites zugreifen können, selbst wenn sie remote arbeiten. Benutzer des Browsers geben einfach wie gewohnt die Website-URL ein, und der Managed Browser leitet die Anfrage über das Anwendungsproxy-Webgateway weiter. Weitere Informationen finden Sie unter [Verwalten des Internetzugriffs mittels Richtlinien für Managed Browser](/intune/app-configuration-managed-browser).
 
 - **Die Unternehmensportal-App für Android bietet nun eine neue Benutzeroberfläche für App-Schutzrichtlinien**
 
@@ -72,9 +72,9 @@ Dieser Artikel bietet Details zu den neuen Features für die Verwaltung mobiler 
 
 - **Neues benutzerfreundlicheres Windows 10-Unternehmensportal**
 
-  Die Unternehmensportal-App für Windows 10 bietet eine exemplarische Vorgehensweise für Intune für Geräte, die nicht identifiziert oder registriert wurden. Die neue Benutzeroberfläche bietet detaillierte Benutzeranweisungen für die Registrierung bei Azure Active Directory (für Funktionen mit bedingtem Zugriff erforderlich) und die MDM-Registrierung (für Geräteverwaltungsfunktionen erforderlich). Auf die exemplarische Vorgehensweise kann auf der Startseite des Unternehmensportals zugegriffen werden. Benutzer können die App weiter verwenden, auch wenn sie die Registrierung nicht abgeschlossen haben, erhalten aber eingeschränkte Funktionalität.
+  Die Unternehmensportal-App für Windows 10 bietet eine exemplarische Vorgehensweise für Intune für Geräte, die nicht identifiziert oder registriert wurden. Die neue Anleitung umfasst Schritt-für-Schritt-Anweisungen, mit denen die Registrierung bei Azure Active Directory (erforderlich für Funktionen zum bedingten Zugriff) und die MDM-Registrierung (erforderlich für Funktionen zur Geräteverwaltung) durch den Benutzer erläutert werden. Auf die geführte Anleitung kann über die Hauptseite des Unternehmensportals zugegriffen werden. Benutzer können die App weiterhin verwenden, wenn die Registrierung und Anmeldung nicht abgeschlossen werden, haben jedoch lediglich Zugriff auf einen eingeschränkten Funktionsumfang.
 
-  Dieses Update ist nur auf Geräten mit dem Windows 10 Anniversary-Update (Build 1607) oder höher sichtbar. Diese Änderungen werden auf der Seite mit den [Neuerungen auf der App-Benutzeroberfläche](/intune/whats-new-app-ui) beschrieben.
+  Dieses Update ist nur auf Geräten unter Windows 10 Anniversary Update (Build 1607) oder höher sichtbar. Diese Änderungen werden auf der Seite mit den [Neuerungen auf der App-Benutzeroberfläche](/intune/whats-new-app-ui) beschrieben.
 
 - **Verbesserungen an den App-Kacheln in der Unternehmensportal-App für iOS**
 
@@ -131,9 +131,9 @@ Dieser Artikel bietet Details zu den neuen Features für die Verwaltung mobiler 
 
 - **Neue Symbole für Managed Browser und das Unternehmensportal**
 
-  Die Managed Browser-Symbole für die Android- und iOS-Versionen der App werden aktualisiert. Das neue Symbol enthält das aktualisierte Intune-Badge für mehr Konsistenz mit anderen Apps unter Enterprise Mobility + Sicherheit (EM+S). Das neue Symbol für Managed Browser finden Sie auf der Seite [Neuigkeiten in der Benutzeroberfläche der Intune-App](/intune/whats-new/whats-new-in-intune-app-ui.md).
+  Die Managed Browser-Symbole für die Android- und iOS-Versionen der App werden aktualisiert. Das neue Symbol enthält den aktualisierten Intune-Badge, damit es konsistenter mit anderen Apps in Enterprise Mobility + Security (EM+S) wird. Sie können das neue Symbol für Managed Browser auf der Seite [Aktualisierungen für die Benutzeroberfläche für Endbenutzer-Apps in Intune](/intune/whats-new/whats-new-in-intune-app-ui.md) finden.
 
-  Die Symbole für die Android-, iOS- und Windows-Versionen der App werden im Unternehmensportal ebenfalls aktualisiert, um die Konsistenz mit anderen Apps im EM+S zu verbessern. Diese Symbole werden schrittweise von April bis Ende Mai auf den einzelnen Plattformen veröffentlicht.
+  Das Unternehmensportal erhält auch aktualisierte Symbole für die Android-, iOS- und Windows-Versionen der App, um die Konsistenz mit anderen Apps in EM+S zu verbessern. Diese Symbole werden schrittweise von April bis Ende Mai auf den einzelnen Plattformen veröffentlicht.
 
 - **Anmeldungsstatusanzeige im Android-Unternehmensportal**
 
@@ -157,10 +157,10 @@ Dieser Artikel bietet Details zu den neuen Features für die Verwaltung mobiler 
 
   Die Benutzeroberfläche der Unternehmensportal-App für Android hat nun ein moderneres Design. Die wichtigen Updates sind:
 
-  - Farben: Unternehmensportal-Registerkartenheader haben von der IT definierte Farben.
-  - Apps: Auf der Registerkarte **Apps** wurden die Schaltflächen **Ausgewählte Apps** und **Alle Apps** aktualisiert.
-  - Suche: Auf der Registerkarte **Apps** ist die Schaltfläche **Suche** eine schwebende interaktive Schaltfläche.
-  - App-Navigation: In der Ansicht **Alle Apps** werden zur leichteren Navigation Registerkarten für **Ausgewählt**, **Alle** und **Kategorien** angezeigt.
+  - Farben: Die IT-Abteilung kann die Färbung der Kopfzeilen der Registerkarte „Unternehmensportal“ dem Branding gemäß festlegen.
+  - Apps: Auf der Registerkarte **Apps** wurden die Schaltflächen **Empfohlene Apps** und **Alle Apps** aktualisiert.
+  - Suche: Auf der Registerkarte **Apps** ist die Schaltfläche **Suche** nun eine unverankerte interaktive Schaltfläche.
+  - Navigation in Apps: Die Ansicht **Alle Apps** enthält die Registerkartenansicht **Featured** (Highlights), **Alle** und **Kategorien**, um die Navigation zu vereinfachen.
   - Unterstützung: Die Registerkarten **Meine Geräte** und **An IT wenden** werden aktualisiert, um die Lesbarkeit zu verbessern.
 
   Weitere Informationen zu diesen Änderungen finden Sie unter [UI updates for Intune end user apps](/intune/whats-new/whats-new-in-intune-app-ui) (Aktualisierungen der Benutzeroberfläche der Intune-Apps für Endbenutzer).
@@ -295,11 +295,21 @@ Die folgenden zusätzlichen Hybridfeatures sind auch in Version 1702 von Configu
 
 ## <a name="notices"></a>Benachrichtigungen
 
+### <a name="platform-support-reminder-windows-phone-81-mainstream-support-ended-july-11-2017"></a>Erinnerung zur Plattformunterstützung: Der Mainstream-Support für Windows Phone 8.1 endete am 11. Juli 2017.
+<!-- 1327781 -->
+*11. Juli 2017*
+
+Die Windows Phone 8.1-Plattform hat das Ende des Mainstream-Supports erreicht. Der Support für den Windows 8.1-PC ist davon nicht betroffen.
+
+Dies hat keine sofortigen Auswirkungen auf Windows Phone 8.1-Geräte, die über den Intune-Dienst verwaltet werden, auch nicht auf die Geräte, die in einer Hybrid-MDM-Lösung registriert sind. Registrierte Geräte funktionieren weiterhin, und alle Richtlinien, Konfigurationen und Apps werden weiterhin wie erwartet funktionieren. Beachten Sie, dass für die Windows Phone 8.1-Plattform im Intune-Dienst und für die Windows Phone 8.1-Unternehmensportal-App keine Verbesserungen mehr geplant sind.
+
+Daher wird empfohlen, zum schnellstmöglichen Zeitpunkt ein Upgrade für berechtigte Windows Phone 8.1-Geräte auf Windows 10 Mobile durchzuführen.  
+
 ### <a name="end-of-support-for-android-43-and-lower"></a>Ende des Supports für Android 4.3 und niedriger
 <!---1171127--->
 *6. Juli 2017*
 
-Verwaltete Apps und die Unternehmensportal-App für Android erfordern Android 4.4 oder höher für den Zugriff auf Unternehmensressourcen. Geräte, die vor Anfang Oktober nicht aktualisiert werden, können dann nicht mehr auf das Unternehmensportal oder diese Apps zugreifen. Im Dezember werden alle registrierten Geräte zwangsweise außer Kraft gesetzt, sodass kein Zugriff auf Unternehmensressourcen mehr möglich ist. Wenn Sie App-Schutzrichtlinien ohne MDM verwenden, erhalten Apps erhält keine Updates, und ihre Nutzungsqualität wird im Laufe der Zeit immer stärker abnehmen.
+Verwaltete Apps und die Unternehmensportal-App für Android erfordern Android 4.4 oder höher für den Zugriff auf Unternehmensressourcen. Geräte, die nicht bis Anfang Oktober aktualisiert werden, können nicht mehr auf das Unternehmensportal oder diese Apps zugreifen. Ab Dezember werden alle registrierten Geräte deaktiviert und können dann nicht mehr auf Unternehmensressourcen zugreifen. Wenn Sie App-Schutzrichtlinien ohne MDM verwenden, erhalten Apps erhält keine Updates, und ihre Nutzungsqualität wird im Laufe der Zeit immer stärker abnehmen.
 
 
 ### <a name="system-center-2012-configuration-sp1-and-system-center-2012-r2-configuration-manager-rtm-support-for-hybrid-mobile-device-management-ending-on-april-10-2017"></a>System Center 2012 Configuration SP1 und System Center 2012 R2 Configuration Manager (RTM): Die Unterstützung für die Verwaltung von hybriden Mobilgeräten endet am 10. April 2017.

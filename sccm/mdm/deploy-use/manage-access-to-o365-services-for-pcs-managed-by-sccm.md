@@ -15,12 +15,11 @@ caps.latest.revision: 15
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c8717925dba42451b1e241a7c2f59e43896d7d99
-ms.openlocfilehash: e78fe989b7ff445717c8320c4eae3900eb46baea
+ms.translationtype: HT
+ms.sourcegitcommit: 5ebdd12672fecc633321a66738a0978f94ba0aa4
+ms.openlocfilehash: aede531a0406c3d30c9cca957896e002ed22ae51
 ms.contentlocale: de-de
-ms.lasthandoff: 06/19/2017
-
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Verwalten des Zugriffs auf Office 365-Dienste für PCs, die von System Center Configuration Manager verwaltet werden
@@ -46,7 +45,17 @@ Informationen zum Konfigurieren des bedingten Zugriffs für bei Intune registrie
 
 -   Windows 7
 -   Windows 8.1
--   Windows 10 
+-   Windows 10
+
+## <a name="supported-windows-servers"></a>Unterstützte Windows Server-Versionen
+
+-   2008 R2
+-   2012
+-   2012 R2
+-   2016
+
+    > [!IMPORTANT]
+    > Bei Windows Server-Versionen, bei denen mehrere Benutzer gleichzeitig angemeldet sein können, müssen für alle angemeldeten Benutzer die gleichen Richtlinien für den bedingten Zugriff bereitgestellt werden.
 
 ## <a name="configure-conditional-access"></a>Konfigurieren des bedingten Zugriffs  
  Bevor Sie den bedingten Zugriff einrichten können, müssen Sie zunächst eine Kompatibilitätsrichtlinie erstellen und eine Richtlinie für bedingten Zugriff konfigurieren. Wenn Sie Richtlinien für bedingten Zugriff für PCs konfigurieren, können Sie verlangen, dass die PCs der Kompatibilitätsrichtlinie entsprechen müssen, damit sie auf Exchange Online- und SharePoint Online-Dienste zugreifen können.  
