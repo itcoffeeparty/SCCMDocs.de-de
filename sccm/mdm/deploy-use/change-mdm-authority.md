@@ -16,7 +16,6 @@ ms.openlocfilehash: b80fec937b50dca3ab995be281c44c3145300f9f
 ms.contentlocale: de-de
 ms.lasthandoff: 06/03/2017
 
-
 ---
 # <a name="change-your-mdm-authority"></a>Umstellen der MDM-Autorität
 Ab Configuration Manager, Version 1610, und Microsoft Intune, Version 1705, können Sie Ihre MDM-Autorität ohne Unterstützung durch den Microsoft-Support und ohne Aufheben der Registrierung und erneutes Registrieren Ihrer vorhandenen verwalteten Geräte umstellen.
@@ -39,7 +38,8 @@ Nachdem Sie auf die neue MDM-Autorität umgestellt haben, gibt es wahrscheinlich
 - Entfernen Sie in der Configuration Manager-Konsole alle Geräteregistrierungs-Manager-Rollen. Wechseln Sie zu **Verwaltung** > **Clouddienste** > **Microsoft Intune-Abonnements**, wählen Sie das Microsoft Intune-Abonnement aus, klicken Sie auf **Eigenschaften**, klicken Sie auf die Registerkarte **Geräteregistrierungs-Manager**, und entfernen Sie alle Geräteregistrierungs-Manager-Rollen.
 - Entfernen Sie in der Configuration Manager-Konsole vorhandene Gerätekategorien. Wechseln Sie zu **Bestand und Kompatibilität** > **Übersicht** > **Gerätesammlungen**, wählen Sie **Gerätekategorien verwalten** aus, und entfernen Sie vorhandene Gerätekategorien.
 - Während der Umstellung der MDM-Autorität sollte es keine wahrnehmbaren Auswirkungen auf die Endbenutzer geben. Möglicherweise sollten Sie jedoch die Benutzer über die Umstellung informieren, um sicherzustellen, dass ihre Geräte eingeschaltet sind und dass sie kurz nach der Umstellung eine Verbindung mit dem Dienst herstellen. Dadurch wird sichergestellt, dass so viele Geräte wie möglich eine Verbindung herstellen und so bald wie möglich über die neue Autorität beim Dienst registriert werden.
-- Wenn Sie vor der Umstellung der MDM-Autorität Configuration Manager (hybrider Mandant) zum Verwalten von iOS-Geräten verwenden, müssen Sie sicherstellen, dass das gleiche Apple Push Notification Service-Zertifikat (APNs), das zuvor in Configuration Manager verwendet wurde, erneuert und wieder zum Einrichten des Mandanten in Intune standalone verwendet wird.    
+- Wenn Sie vor der Umstellung der MDM-Autorität Configuration Manager (hybrider Mandant) zum Verwalten von iOS-Geräten verwenden, müssen Sie sicherstellen, dass das gleiche Apple Push Notification Service-Zertifikat (APNs), das zuvor in Configuration Manager verwendet wurde, erneuert und wieder zum Einrichten des Mandanten in Intune standalone verwendet wird.
+
     > [!IMPORTANT]  
     > Wenn ein anderes APNs-Zertifikat für Intune standalone verwendet wird, wird die Registrierung ALLER zuvor registrierten iOS-Geräte aufgehoben, und Sie müssen sie erneut registrieren. Stellen Sie vor der Umstellung der MDM-Autorität sicher, dass Sie genau wissen, welches APNs-Zertifikat zum Verwalten von iOS-Geräten in Configuration Manager verwendet wurde. Suchen Sie nach dem Zertifikat im Apple Push Certificates-Portal (https://identity.apple.com), und stellen Sie sicher, dass der Benutzer, mit dessen Apple-ID das ursprüngliche APNs-Zertifikat erstellt wurde, identifiziert wird und verfügbar ist, um das gleiche APNs-Zertifikat als Teil der Umstellung auf die neue MDM-Autorität zu erneuern.  
 
@@ -52,15 +52,15 @@ Die Umstellung der MDM-Autorität auf Intune standalone umfasst die folgenden al
 - Wenn Geräte das nächste Mal eine Verbindung mit dem Dienst herstellen, werden sie synchronisiert und erhalten die neuen Einstellungen von der neuen MDM-Autorität.
 
 #### <a name="to-change-the-mdm-authority-to-intune-standalone"></a>So stellen Sie die MDM-Autorität auf Intune standalone um
-1.    Wechseln Sie in der Configuration Manager-Konsole zu **Verwaltung** &gt; **Übersicht** &gt; **Clouddienste** &gt; **Microsoft Intune-Abonnement**, und löschen Sie Ihr vorhandenes Intune-Abonnement.
-2.    Wählen Sie **MDM-Autorität auf Microsoft Intune umstellen** aus, und klicken Sie dann auf **Weiter**.
+1.  Wechseln Sie in der Configuration Manager-Konsole zu **Verwaltung** &gt; **Übersicht** &gt; **Clouddienste** &gt; **Microsoft Intune-Abonnement**, und löschen Sie Ihr vorhandenes Intune-Abonnement.
+2.  Wählen Sie **MDM-Autorität auf Microsoft Intune umstellen** aus, und klicken Sie dann auf **Weiter**.
 
     ![Herunterladen der APNs-Zertifikatanforderung](/sccm/mdm/deploy-use/media/mdm-change-delete-subscription.png)
-3.    Melden Sie sich an dem Intune-Mandanten an, den Sie ursprünglich beim Festlegen der MDM-Autorität in Configuration Manager verwendet haben.
-4.    Klicken Sie auf **Weiter** , und schließen Sie den Assistenten ab.
-5.    Die MDM-Autorität wurde jetzt zurückgesetzt. Das Intune-Abonnement sollte nicht mehr im Knoten „Microsoft Intune-Abonnements“ der Configuration Manager-Konsole angezeigt werden.
-6.    Melden Sie sich an der [Microsoft Intune-Verwaltungskonsole](http://manage.microsoft.com) an. Verwenden Sie dazu den gleichen Intune-Mandanten wie zuvor.
-7.    Vergewissern Sie sich, dass die MDM-Autorität zurückgesetzt wurde, und legen Sie dann die MDM-Autorität auf **Microsoft Intune** fest. Wenn Sie die MDM-Autorität geändert haben, sollte dies in der Konsole angezeigt werden. Weitere Informationen finden Sie unter [Festlegen der MDM-Autorität](https://docs.microsoft.com/en-us/intune/deploy-use/prerequisites-for-enrollment#step-2-set-mdm-authority).
+3.  Melden Sie sich an dem Intune-Mandanten an, den Sie ursprünglich beim Festlegen der MDM-Autorität in Configuration Manager verwendet haben.
+4.  Klicken Sie auf **Weiter** , und schließen Sie den Assistenten ab.
+5.  Die MDM-Autorität wurde jetzt zurückgesetzt. Das Intune-Abonnement sollte nicht mehr im Knoten „Microsoft Intune-Abonnements“ der Configuration Manager-Konsole angezeigt werden.
+6.  Melden Sie sich an der [Microsoft Intune-Verwaltungskonsole](http://manage.microsoft.com) an. Verwenden Sie dazu den gleichen Intune-Mandanten wie zuvor.
+7.  Vergewissern Sie sich, dass die MDM-Autorität zurückgesetzt wurde, und legen Sie dann die MDM-Autorität auf **Microsoft Intune** fest. Wenn Sie die MDM-Autorität geändert haben, sollte dies in der Konsole angezeigt werden. Weitere Informationen finden Sie unter [Festlegen der MDM-Autorität](https://docs.microsoft.com/en-us/intune/deploy-use/prerequisites-for-enrollment#step-2-set-mdm-authority).
 <!-- [Azure portal](https://docs.microsoft.com/en-us/intune-azure/enroll-devices/set-mdm-authority) -->
 
 
@@ -68,7 +68,7 @@ Die Umstellung der MDM-Autorität auf Intune standalone umfasst die folgenden al
 Wenn Sie iOS-Geräte verwenden, müssen Sie das APNs-Zertifikat in Intune konfigurieren.
 
 #### <a name="to-configure-the-apns-certificate"></a>So konfigurieren Sie das APNs-Zertifikat
-1.    Laden Sie die APNs-Zertifikatanforderung herunter.
+1.  Laden Sie die APNs-Zertifikatanforderung herunter.
     <!--The process is different depending on how you connect to Intune:
     **Azure portal**   
     In the [Azure portal](https://azure.portal.com), choose **More Services** &gt; **Monitoring + Management** &gt; **Intune**. On the **Intune** blade, choose **Device enrollment** &gt; **Apple Enrollment** &gt; **Apple MDM Push Certificate**, and then select **Download your CSR** to download and save the .csr file locally.   
@@ -80,22 +80,22 @@ Wenn Sie iOS-Geräte verwenden, müssen Sie das APNs-Zertifikat in Intune konfig
 
     ![Herunterladen der APNs-Zertifikatanforderung](/sccm/mdm/deploy-use/media/mdm-change-download-apns-certificate.png)
 
-2.    Wechseln Sie zum [Apple Push Certificates-Portal](http://go.microsoft.com/fwlink/?LinkId=269844), und melden Sie sich mit der **gleichen** Apple-ID an, die verwendet wurde, um zuvor das APNs-Zertifikat zu erstellen und zu erneuern, das Sie in Configuration Manager (hybrid) verwendet haben.
+2.  Wechseln Sie zum [Apple Push Certificates-Portal](http://go.microsoft.com/fwlink/?LinkId=269844), und melden Sie sich mit der **gleichen** Apple-ID an, die verwendet wurde, um zuvor das APNs-Zertifikat zu erstellen und zu erneuern, das Sie in Configuration Manager (hybrid) verwendet haben.
 
     ![Anmeldeseite des Apple Push Certificates-Portals](/sccm/mdm/deploy-use/media/mdm-change-apns-portal.png)
 
-3.    Wählen Sie das APNs-Zertifikat aus, das Sie in Configuration Manager (hybrid) verwendet haben, und klicken Sie dann auf **Erneuern**.   
+3.  Wählen Sie das APNs-Zertifikat aus, das Sie in Configuration Manager (hybrid) verwendet haben, und klicken Sie dann auf **Erneuern**.   
 
     ![Dialogfeld zur APNs-Erneuerung](/sccm/mdm/deploy-use/media/mdm-change-renew-apns.png)
 
-4.    Wählen Sie die APNs-Zertifikatsignieranforderung (CSR-Datei) aus, die Sie lokal heruntergeladen haben, und klicken Sie dann auf **Hochladen**.
+4.  Wählen Sie die APNs-Zertifikatsignieranforderung (CSR-Datei) aus, die Sie lokal heruntergeladen haben, und klicken Sie dann auf **Hochladen**.
 
     ![Anmeldeseite des Apple Push Certificates-Portals](/sccm/mdm/deploy-use/media/mdm-change-renew-apns-upload.png)  
-5.    Wählen Sie das gleiche APNs-Zertifikat aus, und klicken Sie dann auf **Herunterladen**. Laden Sie das APNs-Zertifikat (PEM) herunter, und speichern Sie die Datei lokal.  
+5.  Wählen Sie das gleiche APNs-Zertifikat aus, und klicken Sie dann auf **Herunterladen**. Laden Sie das APNs-Zertifikat (PEM) herunter, und speichern Sie die Datei lokal.  
 
     ![Anmeldeseite des Apple Push Certificates-Portals](/sccm/mdm/deploy-use/media/mdm-change-renew-apns-download.png)
 
-6.    Laden Sie das erneuerte APNs-Zertifikat mit der gleichen Apple-ID wie zuvor auf den Intune-Mandanten hoch.
+6.  Laden Sie das erneuerte APNs-Zertifikat mit der gleichen Apple-ID wie zuvor auf den Intune-Mandanten hoch.
 <!--The process is different depending on how to connect to Intune:  
     **Azure portal**   
     In the [Azure portal](https://azure.portal.com), choose **More Services** &gt; **Monitoring + Management** &gt; **Intune**. On the **Intune** blade, choose **Device enrollment** &gt; **Apple Enrollment**  &gt; **Apple MDM Push Certificate**, enter your Apple ID in step 3, select the certificate (.pem) file in step 4, and then click **Upload**.     
@@ -171,13 +171,13 @@ Die Umstellung der MDM-Autorität auf Configuration Manager (hybrid) umfasst die
 - Wenn Geräte das nächste Mal eine Verbindung mit dem Dienst herstellen, werden sie synchronisiert und erhalten die neuen Einstellungen von der neuen MDM-Autorität.
 
 #### <a name="to-change-the-mdm-authority-to-configuration-manager"></a>So stellen Sie die MDM-Autorität auf Configuration Manager um
-1.    Wechseln Sie in der Configuration Manager-Konsole zu **Verwaltung** &gt; **Übersicht** &gt; **Clouddienste** &gt; **Microsoft Intune-Abonnement**, und wählen Sie aus, dass Sie ein Intune-Abonnement hinzufügen möchten.
-2.    Melden Sie sich an dem Intune-Mandanten an, den Sie ursprünglich beim Festlegen der MDM-Autorität in Intune verwendet haben, und klicken Sie auf **Weiter**.
-3.    Wählen Sie **MDM-Autorität auf Configuration Manager umstellen** aus, und klicken Sie auf **Weiter**.
+1.  Wechseln Sie in der Configuration Manager-Konsole zu **Verwaltung** &gt; **Übersicht** &gt; **Clouddienste** &gt; **Microsoft Intune-Abonnement**, und wählen Sie aus, dass Sie ein Intune-Abonnement hinzufügen möchten.
+2.  Melden Sie sich an dem Intune-Mandanten an, den Sie ursprünglich beim Festlegen der MDM-Autorität in Intune verwendet haben, und klicken Sie auf **Weiter**.
+3.  Wählen Sie **MDM-Autorität auf Configuration Manager umstellen** aus, und klicken Sie auf **Weiter**.
 4.  Wählen Sie die Benutzersammlung aus, die alle Benutzer enthält, die von der neuen hybriden MDM-Autorität verwaltet werden sollen.
 5.  Klicken Sie auf **Weiter** , und schließen Sie den Assistenten ab.  
-5.    Die MDM-Autorität wurde jetzt auf **Configuration Manager** umgestellt.
-6.    Melden Sie sich an der [Microsoft Intune-Verwaltungskonsole](http://manage.microsoft.com) mit dem gleichen Intune-Mandanten an, und überprüfen Sie, ob die MDM-Autorität in **Auf Configuration Manager setzen** geändert wurde.
+5.  Die MDM-Autorität wurde jetzt auf **Configuration Manager** umgestellt.
+6.  Melden Sie sich an der [Microsoft Intune-Verwaltungskonsole](http://manage.microsoft.com) mit dem gleichen Intune-Mandanten an, und überprüfen Sie, ob die MDM-Autorität in **Auf Configuration Manager setzen** geändert wurde.
 
 
 ### <a name="enable-ios-enrollment"></a>Aktivieren der iOS-Registrierung
@@ -194,22 +194,22 @@ Wenn Sie iOS-Geräte verwenden, müssen Sie das APNs-Zertifikat in Configuration
     > [!IMPORTANT]
     > Sie müssen eine neue Zertifikatsignieranforderung herunterladen. Verwenden Sie keine vorhandene Datei, da dies zu einem Fehler führt.  
 
-2.    Wechseln Sie zum [Apple Push Certificates-Portal](http://go.microsoft.com/fwlink/?LinkId=269844), und melden Sie sich mit der **gleichen** Apple-ID an, die verwendet wurde, um zuvor das APNs-Zertifikat zu erstellen und zu erneuern, das Sie in Intune standalone verwendet haben.
+2.  Wechseln Sie zum [Apple Push Certificates-Portal](http://go.microsoft.com/fwlink/?LinkId=269844), und melden Sie sich mit der **gleichen** Apple-ID an, die verwendet wurde, um zuvor das APNs-Zertifikat zu erstellen und zu erneuern, das Sie in Intune standalone verwendet haben.
 
     ![Anmeldeseite des Apple Push Certificates-Portals](/sccm/mdm/deploy-use/media/mdm-change-apns-portal.png)
 
-3.    Wählen Sie das APNs-Zertifikat aus, das Sie in Intune standalone verwendet haben, und klicken Sie dann auf **Erneuern**.   
+3.  Wählen Sie das APNs-Zertifikat aus, das Sie in Intune standalone verwendet haben, und klicken Sie dann auf **Erneuern**.   
 
     ![Dialogfeld zur APNs-Erneuerung](/sccm/mdm/deploy-use/media/mdm-change-renew-apns.png)
 
-4.    Wählen Sie die APNs-Zertifikatsignieranforderung (CSR-Datei) aus, die Sie lokal heruntergeladen haben, und klicken Sie dann auf **Hochladen**.
+4.  Wählen Sie die APNs-Zertifikatsignieranforderung (CSR-Datei) aus, die Sie lokal heruntergeladen haben, und klicken Sie dann auf **Hochladen**.
 
     ![Anmeldeseite des Apple Push Certificates-Portals](/sccm/mdm/deploy-use/media/mdm-change-renew-apns-upload.png)  
-5.    Wählen Sie das gleiche APNs-Zertifikat aus, und klicken Sie dann auf **Herunterladen**. Laden Sie das APNs-Zertifikat (PEM) herunter, und speichern Sie die Datei lokal.  
+5.  Wählen Sie das gleiche APNs-Zertifikat aus, und klicken Sie dann auf **Herunterladen**. Laden Sie das APNs-Zertifikat (PEM) herunter, und speichern Sie die Datei lokal.  
 
     ![Anmeldeseite des Apple Push Certificates-Portals](/sccm/mdm/deploy-use/media/mdm-change-renew-apns-download.png)
 
-6.    Laden Sie das erneuerte APNs-Zertifikat mit der gleichen Apple-ID wie zuvor auf den hybriden Mandanten hoch.
+6.  Laden Sie das erneuerte APNs-Zertifikat mit der gleichen Apple-ID wie zuvor auf den hybriden Mandanten hoch.
 
     1.  Wechseln Sie in der Configuration Manager-Konsole zu **Verwaltung** &gt; **Clouddienste** &gt; **Microsoft Intune-Abonnement**, und wählen Sie **Plattformen konfigurieren** &gt; **iOS** aus.  
     2.  Wählen Sie im Dialogfeld **Eigenschaften von Microsoft Intune-Abonnement** die Registerkarte **APNs-Zertifikat** aus, und aktivieren Sie das Kontrollkästchen **Registrierung bei iOS und Mac OS X (MDM) aktivieren**.  
