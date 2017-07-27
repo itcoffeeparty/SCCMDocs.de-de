@@ -22,8 +22,7 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/11/2017
 
 ---
-# Aktualisieren von Windows auf die neueste Version mit System Center Configuration Manager
-<a id="upgrade-windows-to-the-latest-version-with-system-center-configuration-manager" class="xliff"></a>
+# <a name="upgrade-windows-to-the-latest-version-with-system-center-configuration-manager"></a>Aktualisieren von Windows auf die neueste Version mit System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -87,8 +86,7 @@ Dieses Thema enthält die Schritte in System Center Configuration Manager, um au
 
     -   [Verwenden eigenständiger Medien zum Bereitstellen von Windows ohne Verwendung des Netzwerks](use-stand-alone-media-to-deploy-windows-without-using-the-network.md)  
 
-## Monitor
-<a id="monitor" class="xliff"></a>  
+## <a name="monitor"></a>Monitor  
 
 -   **Überwachen der Tasksequenzbereitstellung**  
 

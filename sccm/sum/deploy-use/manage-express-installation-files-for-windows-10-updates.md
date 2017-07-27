@@ -20,23 +20,20 @@ ms.lasthandoff: 07/11/2017
 
 ---
 
-# Verwalten von Express-Installationsdateien für Windows 10-Updates
-<a id="manage-express-installation-files-for-windows-10-updates" class="xliff"></a>
+# <a name="manage-express-installation-files-for-windows-10-updates"></a>Verwalten von Express-Installationsdateien für Windows 10-Updates
 Configuration Manager unterstützt ab Version 1702 Express-Installationsdateien für Windows 10-Updates. Wenn Sie eine unterstützte Version von Windows 10 verwenden, können Sie die Configuration Manager-Einstellungen nutzen, um nur die Änderungen zwischen dem kumulativen Update von Windows 10 des laufenden Monats und dem Updates des Vormonats herunterzuladen. Ohne Express-Installationsdateien lädt Configuration Manager die kompletten kumulativen Updates für Windows 10 (einschließlich aller Updates aus den letzten Monaten) jeden Monat herunter. Mit Expressinstallationsdateien erhalten Sie kleinere Downloads und kürzere Installationszeiten.
 
 > [!IMPORTANT]
 > Während die Einstellungen zur Unterstützung der Verwendung von Express-Installationsdateien in der Version 1702 des Configuration Manager zur Verfügung stehen, ist die Clientunterstützung des Betriebssystems in Windows 10 Version 1607 mit einem Update des Windows Update-Agent verfügbar. Dieses Update ist in den Updates vom 11. April 2017 (Patch-Dienstag) enthalten. Weitere Informationen zu diesen Updates finden Sie im [Supportartikel 4015217](http://support.microsoft.com/kb/4015217). Zukünftige Updates werden Express für kleinere Downloads nutzen. Die Expressinstallationsdateien werden von älteren Versionen von Windows und von Windows 10 Version 1607 ohne Update nicht unterstützt.
 
 
-### So aktivieren Sie den Download von Expressinstallationsdateien für Windows 10-Updates
-<a id="to-enable-the-download-of-express-installation-files-for-windows-10-updates" class="xliff"></a>
+### <a name="to-enable-the-download-of-express-installation-files-for-windows-10-updates"></a>So aktivieren Sie den Download von Expressinstallationsdateien für Windows 10-Updates
 Um mit der Synchronisierung der Metadaten für Windows 10-Expressinstallationsdatein zu beginnen, müssen Sie dies in den Punkteigenschaften des Software Updates aktivieren.
 1.  Wechseln Sie in der Configuration Manager-Konsole zu **Verwaltung** > **Standortkonfiguration** > **Standorte**.
 2.  Wählen Sie entweder den Standort der zentralen Verwaltung oder den eigenständigen primären Standort aus.
 3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Einstellungen** auf **Standortkomponenten konfigurieren**, und klicken Sie dann auf **Softwareupdatepunkt**. Wählen Sie auf der Registerkarte **Updatedateien** die Option  **Vollständige Dateien für alle genehmigten Windows 10-Expressinstallationsdateien herunterladen** aus.
 
-### So aktivieren Sie die Clientunterstützung für das Herunterladen und Installieren von Expressinstallationsdateien
-<a id="to-enable-support-for-clients-to-download-and-install-express-installation-files" class="xliff"></a>
+### <a name="to-enable-support-for-clients-to-download-and-install-express-installation-files"></a>So aktivieren Sie die Clientunterstützung für das Herunterladen und Installieren von Expressinstallationsdateien
 Um die Unterstützung der Expressinstallationsdateien auf Clients zu aktivieren, müssen Sie die Expressinstallationsdateien im Abschnitt „Softwareupdates“ der Clienteinstellungen aktivieren. Dadurch wird ein neuer HTTP-Listener erstellt, der Anfragen zum Herunterladen von Expressinstallationsdateien auf den Port, den Sie angeben, abruft.
 
 > [!NOTE]    
