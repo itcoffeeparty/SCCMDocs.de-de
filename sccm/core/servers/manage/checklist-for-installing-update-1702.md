@@ -2,7 +2,7 @@
 title: "Checkliste für 1702 | System Center Configuration Manager"
 description: "Erfahren Sie mehr über die Vorbereitungen, die Sie treffen müssen, bevor Sie eine Aktualisierung auf System Center Configuration Manager Version 1702 ausführen."
 ms.custom: na
-ms.date: 6/6/2017
+ms.date: 06/06/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
