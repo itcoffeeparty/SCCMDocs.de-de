@@ -15,12 +15,11 @@ caps.latest.revision: 157
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6f9e6e93fce95666503907010a5c253158c5de7c
-ms.openlocfilehash: 736e5a04d3d5f2a3825ed4e801308fd5699ea86e
+ms.translationtype: HT
+ms.sourcegitcommit: 1f57c63ceeb13c7f7d760d7ecfb48df749da6770
+ms.openlocfilehash: 4644928acbb1ae3d7d72f877565589fae435a96b
 ms.contentlocale: de-de
-ms.lasthandoff: 07/07/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>Technical Preview für System Center Configuration Manager
@@ -116,6 +115,17 @@ Sie können eine Basisversion für bis zu 1 Jahr nach der Veröffentlichung inst
 
  |Funktion |Technical Preview-Version |Current Branch-Version|  
  |----------------|---------------------|--------------------|
+ |Unterstützung für Client-Peer-Cache für Express-Installationsdateien für Windows 10 und Office 365|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365)|![Nicht hinzugefügt](media/Red_X.gif)|
+ |Gerätedashboard Surface|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#surface-device-dashboard)|![Nicht hinzugefügt](media/Red_X.gif)|
+ |Konfigurieren und Bereitstellen von Windows Defender Application Guard-Richtlinien|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#configure-and-deploy-windows-defender-application-guard-policies)|![Nicht hinzugefügt](media/Red_X.gif)|
+ |Hinzufügen von Parametern während der Bereitstellung von PowerShell-Skripts aus Configuration Manager|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|![Nicht hinzugefügt](media/Red_X.gif)|
+
+
+## <a name="capabilities-delivered-in-previous-technical-previews"></a>Von vorherigen Technical Preview-Versionen gebotene Funktionen
+ Wenn alle Features einer Technical Preview-Version in der unterstützten Mindestversion von Current Branch verfügbar sind, werden die Details für die Preview-Version aus der folgenden Tabelle entfernt.  
+
+ |Funktion |Technical Preview-Version |Current Branch-Version|  
+ |----------------|---------------------|--------------------|
  |Neue Richtlinieneinstellungen für die Verwaltung mobiler Anwendungen|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-mobile-application-management-policy-settings)|![Nicht hinzugefügt](media/Red_X.gif)|
  |Verbesserte Begrenzungsgruppen für Softwareupdatepunkte|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#improved-boundary-groups-for-software-update-points)|![Nicht hinzugefügt](media/Red_X.gif)|
  |Hohe Verfügbarkeit der Standortserverrolle|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |![Nicht hinzugefügt](media/Red_X.gif)|
@@ -136,13 +146,7 @@ Sie können eine Basisversion für bis zu 1 Jahr nach der Veröffentlichung inst
  |Bewertung für den Integritätsnachweis für Geräte für Konformitätsrichtlinien für bedingten Zugriff|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#device-health-attestation-assessment-for-compliance-policies-for-conditional-access)|![Nicht hinzugefügt](media/Red_X.gif)|
  |Unterstützung für Entrust-Zertifizierungsstellen|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#support-for-entrust-certification-authorities)|![Nicht hinzugefügt](media/Red_X.gif)|
  |Cisco (IPsec)-Unterstützung für macOS-VPN-Profile|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#cisco-ipsec-support-for-macos-vpn-profiles)|![Nicht hinzugefügt](media/Red_X.gif)|
-
-## <a name="capabilities-delivered-in-previous-technical-previews"></a>Von vorherigen Technical Preview-Versionen gebotene Funktionen
- Wenn alle Features einer Technical Preview-Version in der unterstützten Mindestversion von Current Branch verfügbar sind, werden die Details für die Preview-Version aus der folgenden Tabelle entfernt.  
-
- |Funktion |Technical Preview-Version |Current Branch-Version|  
- |----------------|---------------------|--------------------|
-  |Neue Funktionen für Azure AD und Cloudverwaltung|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#new-capabilities-for-azure-ad-and-cloud-management)|![Nicht hinzugefügt](media/Red_X.gif)|
+ |Neue Funktionen für Azure AD und Cloudverwaltung|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#new-capabilities-for-azure-ad-and-cloud-management)|![Nicht hinzugefügt](media/Red_X.gif)|
  |Konfigurieren und Bereitstellen von Windows Defender Application Guard-Richtlinien|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#configure-and-deploy-windows-defender-application-guard-policies)|![Nicht hinzugefügt](media/Red_X.gif)|
  |Tool zum Zurücksetzen von Updates  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#update-reset-tool)|![Nicht hinzugefügt](media/Red_X.gif)|
  |Unterstützung einer hohen DPI-Einstellung in der Konsole  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#high-dpi-console-support)|![Nicht hinzugefügt](media/Red_X.gif)|

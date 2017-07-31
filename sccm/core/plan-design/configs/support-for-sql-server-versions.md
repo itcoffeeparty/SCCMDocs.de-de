@@ -15,12 +15,11 @@ caps.latest.revision: 21
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
-ms.openlocfilehash: 4166560602edf6eb299511c8b59dc3903e3bfffc
+ms.translationtype: HT
+ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
+ms.openlocfilehash: b35e45b9514297e2f9ce405a3244462ed735f39f
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 07/26/2017
 
 ---
 # <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>Unterstützte SQL Server-Versionen für System Center Configuration Manager
@@ -261,6 +260,6 @@ Wie Sie SQL Server für die Verwendung eines bestimmten Ports konfigurieren, wir
 ## <a name="upgrade-options-for-sql-server"></a>Upgradeoptionen für SQL Server
 Wenn Sie ein Upgrade für Ihre Version von SQL Server durchführen müssen, werden folgende Methoden in der Reihenfolge ihrer Komplexität empfohlen.
 1. [Direktes Upgrade von SQL Server](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (empfohlen).
-2. Installieren Sie eine neue Version von SQL Server auf einem neuen Computer, und [verwenden Sie die Option „Datenbankverschiebung“](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration) von Configuration Manager-Setup, um Ihren Standortserver auf den neuen SQL Server auszurichten.
+2. Installieren Sie eine neue Version von SQL Server auf einem neuen Computer, und [verwenden Sie die Option Datenbankverschiebung](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration) vom Configuration Manager-Setup, um Ihren Standortserver auf den neuen SQL Server auszurichten.
 3. Verwenden Sie [Sicherung und Wiederherstellung](/sccm/protect/understand/backup-and-recovery).
 

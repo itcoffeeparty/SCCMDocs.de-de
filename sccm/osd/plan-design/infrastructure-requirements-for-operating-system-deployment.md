@@ -12,15 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 caps.latest.revision: 24
-author: Dougeby
-ms.author: dougeby
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 065b1fcb25d7c7845b6f26e757b36e7fb97ce013
-ms.openlocfilehash: ef4536578456c13de5afaa5cd1977d2e6b4b6bd1
+ms.translationtype: HT
+ms.sourcegitcommit: 1f57c63ceeb13c7f7d760d7ecfb48df749da6770
+ms.openlocfilehash: 167e639cdb9995fd743787cc9fbf364ec70f6ed9
 ms.contentlocale: de-de
-ms.lasthandoff: 05/10/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="infrastructure-requirements-for-operating-system-deployment-in-system-center-configuration-manager"></a>Anforderungen an die Infrastruktur für die Betriebssystembereitstellung in System Center Configuration Manager
@@ -35,13 +34,15 @@ Die Betriebssystembereitstellung in System Center 2012 Configuration Manager wei
 ### <a name="windows-adk-for-windows-10"></a>Windows ADK für Windows 10  
  Windows ADK umfasst Tools und Dokumentation zur Unterstützung der Konfiguration und Bereitstellung von Windows-Betriebssystemen. Configuration Manager verwendet Windows ADK zum Automatisieren von Windows-Installationen, Erfassen von Windows-Images, Migrieren von Benutzerprofilen und -daten usw.  
 
- Die folgenden Funktionen von Windows ADK müssen auf dem Standortserver des obersten Standorts der Hierarchie, auf dem Standortserver jedes primären Standorts der Hierarchie und auf dem Standortsystemserver mit der Rolle „SMS-Anbieter“ installiert sein:  
+ Die folgenden Funktionen von Windows ADK müssen auf dem Standortserver des obersten Standorts der Hierarchie, auf dem Standortserver jedes primären Standorts der Hierarchie und auf dem Standortsystemserver mit der Rolle SMS-Anbieter installiert sein:  
 
 -   Migrationsprogramm für den Benutzerzustand (USMT) <sup>1</sup>  
 
 -   Windows-Bereitstellungstools  
 
--   Windows-Vorinstallationsumgebung (Windows Preinstallation Environment, Windows PE)  
+-   Windows-Vorinstallationsumgebung (Windows Preinstallation Environment, Windows PE)
+
+Eine Liste der Versionen des Windows 10 ADK, die Sie mit verschiedenen Versionen von Configuration Manager verwenden können, finden Sie unter [Support For Windows 10 as a client (Unterstützung für Windows 10 als ein Client)](https://docs.microsoft.com/en-us/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk).
 
  <sup>1</sup> USMT ist auf dem Standortsystemserver mit der Rolle „SMS-Anbieter“ nicht erforderlich.  
 
@@ -171,7 +172,7 @@ Sie müssen die folgenden WSUS 4.0-Hotfixes installieren:
  Die Windows-Bereitstellungsdienste (Windows Deployment Services, WDS) müssen auf dem gleichen Server installiert sein wie die Verteilungspunkte, die Sie für die Unterstützung von PXE oder Multicast konfigurieren. Der Windows-Bereitstellungsdienst ist im Betriebssystem des Servers enthalten. Bei PXE-Bereitstellungen wird der PXE-Start von den Windows-Bereitstellungsdiensten ausgeführt. Wenn der Verteilungspunkt installiert und PXE-fähig ist, erstellt Configuration Manager einen Anbieter in WDS, von dem die PXE-Startfunktionen der Windows-Bereitstellungsdienste verwendet werden.  
 
 > [!NOTE]  
->  Bei der Installation der Windows-Bereitstellungsdienste kann ein Fehler auftreten, wenn für den Server ein Neustart erforderlich ist.  
+>  Wenn der Server einen Neustart fordert, kann die Installation der WDS fehlschlagen. 
 
  Ferner sind die folgenden anderen WDS-Konfigurationen zu berücksichtigen:  
 

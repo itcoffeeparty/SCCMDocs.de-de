@@ -2,7 +2,7 @@
 title: "Größe und Skalierung von Zahlen | Microsoft-Dokumentation"
 description: "Ermitteln Sie die Anzahl der Standortsystemrollen und Standorte, die für die Unterstützung von Geräten in Ihrer System Center Configuration Manager-Umgebung notwendig sind."
 ms.custom: na
-ms.date: 12/30/2016
+ms.date: 07/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: 4
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f9c43e26758d5171a6ef56e827b4b054ebc8a5e5
-ms.openlocfilehash: c7ad33339e65e6e00e88f98d6e13baceb98dae77
+ms.translationtype: HT
+ms.sourcegitcommit: 5945abb49fe06c59355805aa94b04d0d445ecbc3
+ms.openlocfilehash: f539e2d282b56e56a9c58c773788325b27ea6b37
 ms.contentlocale: de-de
-ms.lasthandoff: 12/30/2016
+ms.lasthandoff: 07/24/2017
 
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>Größe und Skalierung von Zahlen für System Center Configuration Manager
@@ -133,7 +133,7 @@ Die Zahlen zur Unterstützung in diesem Artikel basieren auf der Verwendung der 
 ###  <a name="bkmk_cas"></a> Hierarchie mit Standort der zentralen Verwaltung  
 Ein Standort der zentralen Verwaltung unterstützt eine Gesamtanzahl an Geräten, die maximal der Anzahl an Geräten entspricht, die für die folgenden drei Gruppen aufgelistet ist:  
 
--   700.000 Desktops (Computer, auf denen Windows, Linux und UNIX ausgeführt wird)  
+-   700.000 Desktops (Computer, auf denen Windows, Linux und UNIX ausgeführt wird). Weitere Informationen finden Sie auch in der Unterstützung für [Embedded-Geräte](#embedded).
 
 -   25.000 Macintosh- und Windows CE 7.0-Geräte  
 
@@ -152,7 +152,7 @@ Ein Standort der zentralen Verwaltung unterstützt eine Gesamtanzahl an Geräten
 ###  <a name="bkmk_chipri"></a> Untergeordneter primärer Standort  
 Jeder untergeordnete primäre Standort in einer Hierarchie mit einem zentralen Verwaltungsstandort unterstützt Folgendes:  
 
--   Insgesamt 150.000 Clients und Geräte, nicht beschränkt auf bestimmte Gruppen oder Typen, solange die unterstützte Gesamtanzahl in der Hierarchie nicht überschritten wird.  
+-   Insgesamt 150.000 Clients und Geräte, nicht beschränkt auf bestimmte Gruppen oder Typen, solange die unterstützte Gesamtanzahl in der Hierarchie nicht überschritten wird. Weitere Informationen finden Sie auch in der Unterstützung für [Embedded-Geräte](#embedded).
 
 An einem primären Standort, an dem 25.000 Computer unterstützt werden, auf denen Macintosh und Windows CE 7.0 ausgeführt wird (da dies der Grenzwert für eine Hierarchie ist), können weitere 125.000 Desktopcomputer unterstützt werden. Somit erhöht sich die Anzahl der insgesamt unterstützten Geräten auf die für einen untergeordneten primären Standort geltende maximale Anzahl von 150.000 Geräten.
 
@@ -161,7 +161,7 @@ Ein eigenständiger primärer Standort unterstützt die folgende Anzahl von Ger�
 
 -   175.000 Clients und Geräte insgesamt, nicht überschreiten:  
 
-    -   150.000 Desktops (Computer, auf denen Windows, Linux und UNIX ausgeführt wird)  
+    -   150.000 Desktops (Computer, auf denen Windows, Linux und UNIX ausgeführt wird). Weitere Informationen finden Sie auch in der Unterstützung für [Embedded-Geräte](#embedded).
 
     -   25.000 Macintosh- und Windows CE 7.0-Geräte
 
@@ -171,7 +171,11 @@ Ein eigenständiger primärer Standort unterstützt die folgende Anzahl von Ger�
 
         -   150.000 cloudbasierte Geräte  
 
+
 Beispielsweise können an einem eigenständigen primären Standort, an dem 150.000 Desktops und 10.000 Macintosh- oder Windows CE 7.0-Geräte unterstützt werden, nur zusätzliche 15.000 Geräte unterstützt werden. Diese Geräte können cloudbasiert oder mit der lokalen Verwaltung mobiler Geräte verwaltet werden.  
+
+### <a name="embedded"></a> Primäre Standorte und Windows Embedded-Geräte
+Primäre Standorte unterstützen Windows Embedded-Geräte, für die dateibasierte Schreibfilter (File Based Write Filter, FBWF) aktiviert sind. Wenn für eingebettete Geräte keine Schreibfilter aktiviert sind, kann ein primärer Standort eingebettete Geräte bis zur zulässigen Anzahl von Geräten für diesen Standort unterstützen. Von der Gesamtanzahl der Geräte, die ein primärer Standort unterstützt, können maximal 10.000 Geräte Windows Embedded-Geräte sein, wenn diese Geräte für die unter dem wichtigen Hinweis aufgeführten Ausnahmen konfiguriert sind, die unter [Planen der Clientbereitstellung für Windows Embedded-Geräte](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices) gefunden wurden. Ein primärer Standort unterstützt nur 3.000 Windows Embedded-Geräte, für die EWF aktiviert ist. Für diese Geräte dürfen keine Ausnahmen konfiguriert werden.
 
 ###  <a name="bkmk_sec"></a> Sekundäre Standorte  
 Sekundäre Standorte unterstützen Folgendes:  

@@ -2,7 +2,7 @@
 title: "Voraussetzungen für Standorte | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr zu den Voraussetzungen für die Installation der verschiedenen Arten von System Center Configuration Manager-Standorten."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: ff89d4aea6be871e64e0a788f054ba4cadb3e51d
+ms.translationtype: HT
+ms.sourcegitcommit: 5945abb49fe06c59355805aa94b04d0d445ecbc3
+ms.openlocfilehash: d46a8b66ace45d25da9d86f2e91b19ae1d6875ab
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/24/2017
 
 ---
 # <a name="prerequisites-for-installing-system-center-configuration-manager-sites"></a>Voraussetzungen für die Installation von System Center Configuration Manager-Standorten
@@ -100,6 +100,19 @@ Die folgenden Voraussetzungen müssen erfüllt sein, damit ein eigenständiger p
 -   **Der Port für den SQL Server Service Broker (SSB) zwischen dem eigenständigen primären Standort und dem Computer, auf dem der Standort der zentralen Verwaltung installiert wird, muss offen sein**  
 
      Für die erfolgreiche Replikation von Daten zwischen einem Standort der zentralen Verwaltung und einem primären Standort muss in Configuration Manager ein Port zwischen den beiden Standorten für die Nutzung durch SSB offen sein. Beim Installieren eines Standorts der zentralen Verwaltung und beim Erweitern eines eigenständigen primären Standorts wird durch die Voraussetzungsprüfung nicht überprüft, ob der von Ihnen für den SSB angegebene Port am primären Standort offen ist.  
+
+**Bekannte Probleme, wenn Sie Azure-Dienste konfiguriert haben:**  
+Wenn Sie einen der folgenden Azure-Dienste mit Configuration Manager verwenden, und planen, einen Standort zu erweitern, müssen Sie nach der Erweiterung des Standorts die Verbindung zum Dienst entfernen und anschließend neu erstellen.
+
+Dienste:  
+-       [Operations Manager-Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) (OMS)
+-       [Upgradebereitschaft](/sccm/core/clients/manage/upgrade/upgrade-analytics)
+-       [Windows Store für Unternehmen](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
+
+Führen Sie die folgenden Schritte aus, um das Problem zu lösen:
+ 1.    Löschen Sie in der Configuration Manager-Konsole den Azure-Diensts aus dem Knoten der Azure-Dienste.
+ 2.    Löschen Sie im Azure-Portal den Mandanten, der dem Dienst aus dem Knoten des Azure Active Directory-Mandanten zugeordnet ist.  Dadurch wird auch die Azure AD-Web-App gelöscht, die dem Dienst zugeordnet ist.  
+ 3.   Konfigurieren Sie die Verbindung mit dem Azure-Dienst für die Verwendung mit Configuration Manager neu.
 
 
 ## <a name="bkmk_secondary"></a> Sekundäre Standorte

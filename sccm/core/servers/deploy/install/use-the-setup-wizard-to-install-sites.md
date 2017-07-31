@@ -1,7 +1,7 @@
 ---
 title: Setup-Assistent | Microsoft-Dokumentation
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 7/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
-ms.openlocfilehash: 14b4172ad713a3981b8a5abe182405e271d78c26
+ms.translationtype: HT
+ms.sourcegitcommit: 5945abb49fe06c59355805aa94b04d0d445ecbc3
+ms.openlocfilehash: 678f1b35fe6f7649dacb766f7c671f4ec8ea1435
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/24/2017
 
 ---
 # <a name="use-the-setup-wizard-to-install-system-center-configuration-manager-sites"></a>Verwenden des Setup-Assistenten zum Installieren von System Center Configuration Manager-Standorten
@@ -140,7 +140,9 @@ Wenn Sie einen Standort der zentralen Verwaltung als Teil eines Standorterweiter
 
 12. Geben Sie auf der Seite **Datenbankinformationen** die folgenden Informationen an:  
 
-    -   **SQL Server-Name (FQDN):** Dieser Wert wird standardmäßig auf den Standortservercomputer festgelegt.  
+    -   **SQL Server-Name (FQDN):** Dieser Wert wird standardmäßig auf den Standortservercomputer festgelegt.
+
+     Wenn Sie einen benutzerdefinierten Port verwenden, fügen Sie diesen Port zum FQDN des SQL Servers hinzu. Stellen Sie hierzu dem FQDN des Sequel Servers ein Komma nach gefolgt von der Portnummer.   Beispiel: Verwenden Sie für den Server *SQLServer1.fabrikam.com* Folgendes, um den Port *1551* anzugeben: **SQLServer1.fabrikam.com,1551**
 
     -   **Instanzname:** Ist standardmäßig leer. Verwendet die Standardinstanz von SQL auf dem Standortservercomputer.  
 

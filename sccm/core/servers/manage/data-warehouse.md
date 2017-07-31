@@ -15,12 +15,11 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dc221ddf547c43ab1f25ff83c3c9bb603297ece6
-ms.openlocfilehash: f11a53bbc85b40077b3909568db5ae5552b0456c
+ms.translationtype: HT
+ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
+ms.openlocfilehash: c421c3495f56503d5cbda7b1a5ab5350a168912d
 ms.contentlocale: de-de
-ms.lasthandoff: 06/01/2017
-
+ms.lasthandoff: 07/26/2017
 
 ---
 #  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>Der Data Warehouse-Dienstpunkt für System Center Configuration Manager
@@ -52,7 +51,7 @@ Bei der Installation der Standortsystemrolle wird auch die Data Warehouse-Datenb
   - Ein lokaler **Administrator** auf dem Computer, auf dem die Data Warehouse-Datenbank gehostet werden soll – wenn es sich um einen Remotecomputer handelt.
   - Die Berechtigung **DB-owner** in der Data Warehouse-Datenbank.
   - Die Berechtigungen **DB_reader** und **Ausführen** für die Standortdatenbank der obersten Ebene der Standorte.
--    Die Data Warehouse-Datenbank muss auf einer Standard- oder angegebenen Instant des SQL Server 2012 oder höher unterstützt werden. Die Edition muss entweder Enterprise oder Datacenter sein.
+-   Die Data Warehouse-Datenbank muss auf einer Standard- oder angegebenen Instant des SQL Server 2012 oder höher unterstützt werden. Die Edition muss entweder Enterprise oder Datacenter sein.
   - SQL Server Always On-Verfügbarkeitsgruppe: Diese Konfiguration wird nicht unterstützt.
   - SQL Server-Cluster: SQL Server Failover-Cluster werden nicht unterstützt. Dies liegt daran, dass die Data Warehouse-Datenbank noch nicht ausführlich auf SQL Server Failover-Clustern getestet wurde.
   - Wenn die Data Warehouse-Datenbank remote gegenüber der Standortserverdatenbank ist, müssen Sie eine eigene Lizenz für den SQL Server haben, der die Datenbank hostet.
@@ -78,7 +77,7 @@ Bei der Installation einer Rolle erstellt Configuration Manager die Data Warehou
 Seite **Auswahl der Systemrolle**:  
 
 Seite **Allgemein**:
--     **Datenbankverbindungseinstellungen für das Configuration Manager-Data Warehouse**:
+-   **Datenbankverbindungseinstellungen für das Configuration Manager-Data Warehouse**:
  - **Vollqualifizierter SQL Server-Domänenname**:  
  Geben Sie den FQDN des Servers an, der den Data Warehouse-Dienstpunkt hostet.
  - **SQL Server-Instanzname (falls zutreffend)**:   
@@ -86,7 +85,7 @@ Seite **Allgemein**:
  - **Datenbankname**:   
  Legen Sie einen Namen für die Data Warehouse-Datenbank fest.  Configuration Manager erstellt die Data Warehouse-Datenbank mit diesem Namen. Wenn ein Datenbankname angegeben wird, der bereits in der Instanz von SQL Server existiert, verwendet Configuration Manager diese Datenbank.
  - **Verwendeter SQL Server-Port für die Verbindung**:   
- Geben Sie die Nummer des TCP-IP-Ports an, der für den SQL Server konfiguriert ist, der die Data Warehouse-Datenbank hostet. Dieser Port wird vom Data Warehouse-Synchronisierungsdienst verwendet, um eine Verbindung mit der Data Warehouse-Datenbank herzustellen.  
+ Geben Sie die Portnummer des TCP/IP an, die für den SQL Server konfiguriert ist, der die Data Warehouse-Datenbank hostet. Dieser Port wird vom Data Warehouse-Synchronisierungsdienst verwendet, um eine Verbindung mit der Data Warehouse-Datenbank herzustellen.  
 
 Seite **Synchronisierungszeitplan**:   
 - **Synchronisierungszeitplan**:
@@ -103,15 +102,15 @@ Die Data Warehouse-Standortsystemrolle beinhaltet folgende Berichte in der Kateg
  - **Anwendungsbereitstellungsbericht – Verlauf**:   
  Anzeigen von Details zur Anwendungsbereitstellung für eine bestimmte Anwendung und einen bestimmten Computer
  - **Endpoint Protection und Software Update-Kompatibilitätsbericht – Verlauf**: Anzeigen von Computern mit fehlenden Softwareupdates.  
- - **Bestandsbericht zur gesamten Hardware – Verlauf**:      
+ - **Bestandsbericht zur gesamten Hardware – Verlauf**:   
  Anzeigen des gesamten Hardwarebestands für einen bestimmten Computer.
- - **Bestandsbericht zur gesamten Software – Verlauf**:      
+ - **Bestandsbericht zur gesamten Software – Verlauf**:   
  Anzeigen des gesamten Softwarebestands für einen bestimmten Computer.
- - **Übersicht der Infrastrukturintegrität – Verlauf**:     
+ - **Übersicht der Infrastrukturintegrität – Verlauf**:  
  Zeigt eine Übersicht der Integrität der Configuration Manager-Infrastruktur an
- - **Liste der erkannten Malware – Verlauf**:     
+ - **Liste der erkannten Malware – Verlauf**:    
  Zeigt Malware an, die in der Organisation gefunden wurde.
- - **Zusammenfassungsbericht der Softwareverteilung – Verlauf**:     
+ - **Zusammenfassungsbericht der Softwareverteilung – Verlauf**:   
  Eine Zusammenfassung der Softwareverteilung für eine bestimmte Ankündigung und einen bestimmten Computer.
 
 
@@ -126,13 +125,13 @@ Im Gegensatz zum Bewegen der Data Warehouse-Datenbank führt diese Änderung zum
 ## <a name="move-the-data-warehouse-database"></a>Verschieben der Data Warehouse-Datenbank
 Führen Sie zum Verschieben der Data Warehouse-Datenbank auf einen neuen Server von SQL Server die folgenden Schritte aus:
 
-1.    Verwenden Sie SQL Server Management Studio zum Sichern der Data Warehouse-Datenbank, und stellen Sie anschließend dieser Datenbank auf einem SQL-Server auf dem neuen Computer wieder her, der das Data Warehouse hostet.   
+1.  Verwenden Sie SQL Server Management Studio zum Sichern der Data Warehouse-Datenbank, und stellen Sie anschließend dieser Datenbank auf einem SQL-Server auf dem neuen Computer wieder her, der das Data Warehouse hostet.   
 > [!NOTE]     
 > Nachdem Sie die Datenbank auf dem neuen Server wiederhergestellt haben, stellen Sie sicher, dass die Zugriffsberechtigungen der neuen Data Warehouse-Datenbank identisch zu den ursprüngliche Data Warehouse-Datenbank sind.  
 
-2.    Verwenden Sie die Configuration Manager-Konsole, um die Standortsystemrolle des Data Warehouse-Dienstpunktes vom aktuellen Server zu entfernen.
-3.    Installieren Sie den Data Warehouse-Dienstpunkt neu, und geben Sie den Namen des neuen Servers von SQL Server und der Instanz an, die die von Ihnen wiederhergestellte Data Warehouse-Datenbank hosten.
-4.    Nach der Installation der Standortsystemrolle ist der Verschiebevorgang abgeschlossen.
+2.  Verwenden Sie die Configuration Manager-Konsole, um die Standortsystemrolle des Data Warehouse-Dienstpunktes vom aktuellen Server zu entfernen.
+3.  Installieren Sie den Data Warehouse-Dienstpunkt neu, und geben Sie den Namen des neuen Servers von SQL Server und der Instanz an, die die von Ihnen wiederhergestellte Data Warehouse-Datenbank hosten.
+4.  Nach der Installation der Standortsystemrolle ist der Verschiebevorgang abgeschlossen.
 
 ## <a name="troubleshooting-data-warehouse-issues"></a>Problembehandlung von Data Warehouse-Problemen
 **Protokolldateien**:  
@@ -167,7 +166,7 @@ Beim Öffnen eines Data Warehouse-Berichts wird folgender Fehler zurückgegeben:
     1. Öffnen Sie IIS, klicken Sie auf **Serverzertifikate**, klicken Sie mit der rechten Maustaste auf **Selbstsigniertes Zertifikat erstellen**, und geben Sie dann den „geeigneten Namen“ des Zertifikatnamens als **Data Warehouse SQL Server Identification Certificate** (Data Warehouse SQL Server-Idenfikationszertifikat) an. Wählen Sie für Zertifikatspeicher **Persönlich** aus.
     2. Öffnen Sie unter **SQL Server-Netzwerkkonfiguration** **SQL Server Configuration Manager**, und klicken Sie unter **Protocols for MSSQLSERVER** (Protokolle für MMSSQLSERVER) mit der rechten Maustaste auf **Eigenschaften**. Wählen Sie dann auf der Registerkarte **Zertifikate** **Data Warehouse SQL Server Identification Certificate** (Data Warehouse SQL Server-Idenfikationszertifikat) als Zertifikat aus, und speichern Sie dann die Änderungen.  
     3. Öffnen Sie unter **SQL Server-Dienste** **SQL Server Configuration Manager**, und starten Sie den **SQL Server-Dienst** und den **Berichtsdienst** neu.
-    4.    Öffnen Sie die Microsoft Management Console (MMC), und fügen Sie das Snap-In für **Zertifikate** hinzu; wählen Sie dann aus, dass Sie die **Computerkonten** des lokalen Computer verwalten möchten. Erweitern Sie dann in der MMC den Ordner **Persönlich** > **Zertifikate**, und exportieren Sie das **Data Warehouse SQL Server Identification Certificate** (Data Warehouse SQL Server-Idenfikationszertifikat) als **DER-codierte binäre X.509 (.CER)**.Datei.    
+    4.  Öffnen Sie die Microsoft Management Console (MMC), und fügen Sie das Snap-In für **Zertifikate** hinzu; wählen Sie dann aus, dass Sie die **Computerkonten** des lokalen Computer verwalten möchten. Erweitern Sie dann in der MMC den Ordner **Persönlich** > **Zertifikate**, und exportieren Sie das **Data Warehouse SQL Server Identification Certificate** (Data Warehouse SQL Server-Idenfikationszertifikat) als **DER-codierte binäre X.509 (.CER)**.Datei.    
   2.    Öffnen Sie auf dem Computer, der SQL Server-Berichtsdienste hostet, die MMC, und fügen Sie das Snap-In für **Zertifikate** hinzu; wählen Sie anschließend aus, dass Sie das Zertifikat für **Computerkonten** verwalten möchten. Importieren Sie im Ordner **Als vertrauenswürdig eingestufte Stammzertifizierungsstelle** das **Data Warehouse SQL Server Identification Certificate** (Data Warehouse SQL Server-Idenfikationszertifikat).
 
 
@@ -178,7 +177,7 @@ Beim Öffnen eines Data Warehouse-Berichts wird folgender Fehler zurückgegeben:
 
 | Schritt   | Details  |
 |:------:|-----------|  
-| **1**  |     Der Standortserver überträgt und speichert Daten in der Standortdatenbank.  |  
+| **1**  |  Der Standortserver überträgt und speichert Daten in der Standortdatenbank.  |  
 | **2**  |      Basierend auf Zeitplan und Konfiguration, ruft der Data Warehouse-Dienstpunkt Daten aus der Standortdatenbank ab.  |  
 | **3**  |  Der Data Warehouse-Dienstpunkt überträgt und speichert eine Kopie der synchronisierten Daten in der Data Warehouse-Datenbank. |  
 **Berichterstellung**

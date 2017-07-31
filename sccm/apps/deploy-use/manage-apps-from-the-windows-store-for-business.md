@@ -2,7 +2,7 @@
 title: "Verwalten von Apps aus dem Windows Store für Unternehmen | Microsoft-Dokumentation"
 description: "Verwalten Sie Apps aus dem Windows Store für Unternehmen, und stellen Sie sie mithilfe von System Center Configuration Manager bereit."
 ms.custom: na
-ms.date: 3/29/2017
+ms.date: 7/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,16 +15,16 @@ caps.latest.revision: 11
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6accec2d356861b273b25ba2b6338d9684a46ff6
-ms.openlocfilehash: f2d9da1c584f78e27e84b7f55e7ffe4dd052a27c
+ms.translationtype: HT
+ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
+ms.openlocfilehash: 93e767c9a115b30d68871baece670977165f55f4
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/26/2017
 
 ---
 
 # <a name="manage-apps-from-the-windows-store-for-business-with-system-center-configuration-manager"></a>Verwalten von Apps aus dem Windows Store für Unternehmen mit System Center Configuration Manager
-Im [Windows Store für Unternehmen](https://www.microsoft.com/business-store) können Sie Windows-Apps für Ihre Organisation finden, und entweder einzeln oder per Volumenlizenz erwerben. Durch Herstellen einer Verbindung des Store mit Configuration Manager können Sie die Liste der Apps, die Sie erworben haben, mit Configuration Manager synchronisieren, sie in der Configuration Manager-Konsole anzeigen und wie jede andere App auch bereitstellen.
+Im [Windows Store für Unternehmen](https://www.microsoft.com/business-store) können Sie Windows-Apps für Ihre Organisation finden, und entweder einzeln oder per Volumenlizenz erwerben. Indem Sie den Store mit Configuration Manager verbinden, können Sie die Liste der erworbenen Apps mit Configuration Manager synchronisieren. Sie können anschließend diese Apps in der Configuration Manager-Konsole anzeigen und sie bereitstellen, wie Sie jede andere App bereitstellen würden.
 
 
 ## <a name="online-and-offline-apps"></a>Online- und Offline-Apps
@@ -32,7 +32,7 @@ Im [Windows Store für Unternehmen](https://www.microsoft.com/business-store) k�
 Der Windows Store für Unternehmen unterstützt zwei Typen von Apps:
 
 - **Online** – Dieser Lizenztyp setzt voraus, dass Benutzer und Geräte mit dem Store verbunden sind, um eine App und ihre Lizenz zu erhalten. Windows 10-Geräte müssen in die Azure Active Directory-Domäne eingebunden sein.
-- **Offline** – Organisationen können Apps und Lizenzen zwischenspeichern und sie direkt in ihren lokalen Netzwerken bereitstellen, ohne eine Verbindung zum Store herzustellen bzw. ohne Internetverbindung.
+- **Offline** – Sie können Apps und Lizenzen zwischenspeichern und sie direkt in ihren lokalen Netzwerken bereitstellen, ohne eine Verbindung zum Store herzustellen oder ohne eine Internetverbindung.
 
 [Erfahren Sie mehr](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview?f=255&MSPPError=-2147217396) über den Windows Store für Unternehmen.
 
@@ -66,26 +66,26 @@ Vor der Bereitstellung von Windows Store für Unternehmen-Apps auf PCs, die den 
 Auf PCs mit einer früheren Version von Windows 10 als Creators Update (mit dem Configuration Manager-Client) gelten die folgenden Funktionen:
 
 
-- Wenn die Installation erzwungen wird, entweder vom Benutzer, der die Anwendung installiert, oder von der Anwendung, die ihren Stichtag für die Installation erreicht, oder durch eine erneute Bewertung nach der Installation für erforderliche Bereitstellungen:
+- Wenn die Installation erzwungen wird, entweder vom Benutzer, der die Anwendung installiert, von der Anwendung, die ihren Stichtag für die Installation erreicht, oder durch eine erneute Bewertung nach der Installation für erforderliche Bereitstellungen:
     - Die Anwendung wird durch den Start der Windows Store für Unternehmen-App „erzwungen“. 
-    - Endbenutzer müssen dann die Installation aus dem Store abschließen, bevor sie tatsächlich installiert wird.
-    - Der Status der Anwendung in der Configuration Manager-Konsole wird mit dem Fehler „Die Windows Store-App wurde auf dem Client-PC geöffnet und wartet auf den Abschluss der Installation durch den Benutzer.“ als fehlgeschlagen gemeldet.
+    - Endbenutzer müssen dann die Installation aus dem Store abschließen, bevor die App installiert wird.
+    - Der Status der Anwendung in der Configuration Manager-Konsole meldet den Fehler „Die Windows Store-App wurde auf dem Client-PC geöffnet und wartet auf den Abschluss der Installation durch den Benutzer“.
 - Im nächsten Evaluierungszyklus für die Anwendung:
-    - Wenn die Anwendung vom Endbenutzer aus dem Store installiert wurde, wird die Anwendung den Status **Erfolg** melden. 
+    - Wenn die Anwendung vom Endbenutzer aus dem Store installiert wurde, meldet die Anwendung den Status **Erfolg**. 
     - Wenn der Endbenutzer nicht versucht hat, die Anwendung aus dem Store zu installieren:
-        - Erforderliche Bereitstellungen werden versuchen, den Store zu starten und die Installation der Anwendung erneut zu erzwingen.
+        - Erforderliche Bereitstellungen versuchen, den Store zu starten und die Installation der Anwendung erneut zu erzwingen.
         - Verfügbare Bereitstellungen werden nicht erneut erzwungen.
 
 #### <a name="further-notes-for-pcs-running-earlier-versions-of-windows-10"></a>Weitere Hinweise für PCs mit früheren Versionen von Windows 10:
 
 - Sie können keine branchenspezifischen Apps aus dem Windows Store für Unternehmen bereitstellen.
-- Wenn Sie kostenpflichtige Apps aus dem Store bereitstellen, werden Endbenutzer aufgefordert werden, sich im Store anzumelden und die App selbst zu erwerben.
-- Wenn Sie eine Gruppenrichtlinie bereitgestellt haben, die den Zugriff auf die Benutzerversion von Windows Store deaktiviert, werden Bereitstellungen aus dem Windows Store für Unternehmen nicht funktionieren, auch wenn der Windows Store für Unternehmen aktiviert ist.
+- Wenn Sie kostenpflichtige Apps aus dem Store bereitstellen, müssen Endbenutzer sich im Store anmelden und die App selbst erwerben.
+- Wenn Sie eine Gruppenrichtlinie bereitgestellt haben, die den Zugriff auf die Benutzerversion von Windows Store deaktiviert, funktionieren Bereitstellungen aus dem Windows Store für Unternehmen nicht, auch wenn der Windows Store für Unternehmen aktiviert ist.
 
 
 ## <a name="set-up-windows-store-for-business-synchronization"></a>Einrichten der Synchronisierung mit Windows Store für Unternehmen
 
-**Registrieren Sie Configuration Manager über „Webanwendung und/oder Web-API“ als Verwaltungstool in Azure Active Directory. Sie erhalten eine Client-ID, die Sie später benötigen.**
+**Registrieren Sie Configuration Manager über „Webanwendung und/oder Web-API“ als Verwaltungstool in Azure Active Directory. Durch diese Aktion erhalten Sie eine Client-ID, die Sie später benötigen.**
 1. Wählen Sie im Active Directory-Knoten, [https://manage.windowsazure.com](https://manage.windowsazure.com), Ihr Azure Active Directory aus, und klicken Sie anschließend auf **Anwendungen** > **Hinzufügen**.
 2.  Klicken Sie auf **Eine von meinem Unternehmen entwickelte Anwendung hinzufügen**.
 3.  Geben Sie einen Namen für die Anwendung ein, wählen Sie **Webanwendung** und/oder **Web-API** aus, und klicken Sie anschließend auf den Pfeil **Weiter**.
@@ -93,15 +93,15 @@ Auf PCs mit einer früheren Version von Windows 10 als Creators Update (mit dem 
 5.  Schließen Sie den Assistenten ab.
 
 **Erstellen eines Clientschlüssels für das registrierte Verwaltungstool in Azure Active Directory**
-1.  Markieren Sie die Anwendung, die Sie soeben erstellt haben, und klicken Sie auf **Konfigurieren**.
-2.  Wählen Sie unter **Schlüssel** eine Dauer aus der Liste aus, und klicken Sie anschließend auf **Speichern**. Dadurch wird ein neuer Clientschlüssel erstellt. Verlassen Sie diese Seite nicht, bevor Sie Windows Store für Unternehmen erfolgreich in Configuration Manager eingebunden haben.
+1.  Markieren Sie die Anwendung, die Sie erstellt haben, und klicken Sie auf **Konfigurieren**.
+2.  Wählen Sie unter **Schlüssel** eine Dauer aus der Liste aus, und klicken Sie anschließend auf **Speichern**. Diese Aktion erstellt einen neuen Clientschlüssel. Verlassen Sie diese Seite nicht, bevor Sie Windows Store für Unternehmen erfolgreich in Configuration Manager eingebunden haben.
 
 **Konfigurieren von Configuration Manager als Speicherverwaltungstool im Windows Store für Unternehmen**
 1.  Öffnen Sie [https://businessstore.microsoft.com/en-us/managementtools](https://businessstore.microsoft.com/en-us/managementtools), und melden Sie sich nach entsprechender Aufforderung an.
 2.  Akzeptieren Sie gegebenenfalls die Nutzungsbedingungen.
 3.  Klicken Sie unter **Verwaltungstools** auf **Verwaltungstool hinzufügen**.
 4.  Geben Sie unter **Tool nach Namen suchen** den Namen der App ein, die Sie zuvor in AAD erstellt haben, und klicken Sie anschließend auf **Hinzufügen**.
-5.  Klicken Sie neben der Anwendung, die Sie gerade importiert haben, auf **Aktivieren**.
+5.  Klicken Sie neben der Anwendung, die Sie importiert haben, auf **Aktivieren**.
 6.  Wählen Sie auf der Seite **Verwalten > Kontoinformationen** die Option **Offline lizenzierte Apps anzeigen** aus, wenn Sie den Einkauf offline lizenzierter Anwendungen zulassen möchten.
 
 **Hinzufügen des Store-Kontos zu Configuration Manager**
@@ -116,10 +116,11 @@ Auf PCs mit einer früheren Version von Windows 10 als Creators Update (mit dem 
 1.  Erweitern Sie im Arbeitsbereich **Softwarebibliothek** der Configuration Manager-Konsole **Anwendungsmanagement**, und klicken Sie anschließend auf **Lizenzinformationen für Store-Apps**.
 2.  Wählen Sie zunächst die App aus, die Sie bereitstellen möchten. Klicken Sie anschließend auf der Registerkarte **Start** in der Gruppe **Erstellen** auf **Anwendung erstellen**.
 Eine Configuration Manager-App wird erstellt, die eine App aus dem Windows Store für Unternehmen enthält. Sie können diese Anwendung wie jede andere Configuration Manager-Anwendung bereitstellen und überwachen.
+
 > [!IMPORTANT]
 > Für Geräte, die bei Intune registriert sind, stehen bereitgestellte Apps nur für diejenigen Benutzer zur Verfügung, die sie ursprünglich registriert haben. Andere Benutzer können nicht auf die App zugreifen.
 
-## <a name="monitor-windows-store-for-business-apps"></a>Überwachen von Apps aus dem Windows Store für Unternehmen
+## <a name="next-steps"></a>Nächste Schritte
 
 Erweitern Sie im Arbeitsbereich **Softwarebibliothek** die Option **Anwendungsmanagement**, und klicken Sie anschließend auf **Lizenzinformationen für Store-Apps**.
 
