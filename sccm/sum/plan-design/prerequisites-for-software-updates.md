@@ -12,9 +12,11 @@ ms.service:
 ms.technology:
 - configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
 ms.openlocfilehash: 179f076f228daa5adf612275a822cd379b0ce1e3
+ms.contentlocale: de-de
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -83,7 +85,7 @@ In diesem Thema werden die Voraussetzungen für Softwareupdates in System Center
 ### <a name="reporting-services-point"></a>Reporting Services-Punkt  
  Mithilfe der Standortsystemrolle Reporting Services-Punkt können Berichte für Softwareupdates angezeigt werden. Diese Rolle ist optional. Ihre Verwendung wird jedoch empfohlen. Weitere Informationen zum Erstellen eines Reporting Services-Punkts finden Sie unter [Configuring reporting (Konfigurieren der Berichterstellung)](../../core/servers/manage/configuring-reporting.md).  
 
-##  <a name="a-namebkmkrecoverupgradesa-recover-from-synchronizing-the-upgrades-category-before-you-install-kb-3095113"></a><a name="BKMK_RecoverUpgrades"></a> Wiederherstellen nach Synchronisieren der Kategorie „Upgrades“ vor der Installation von KB 3095113  
+##  <a name="BKMK_RecoverUpgrades"></a> Wiederherstellen nach Synchronisieren der Kategorie „Upgrades“ vor der Installation von KB 3095113  
  Sie müssen [Hotfix 3095113](https://support.microsoft.com/kb/3095113) für WSUS auf Ihren Softwareupdatepunkten und Standortservern installieren, bevor Sie die Klassifikation **Upgrades** synchronisieren. Wenn der Hotfix zum Zeitpunkt der Aktivierung der Klassifizierung **Upgrades** nicht installiert ist, wird das Funktionsupgrade Windows 10 Build 1511 für WSUS angezeigt, WSUS kann die zugehörigen Pakete allerdings nicht ordnungsgemäß herunterladen und bereitstellen. Wenn Sie Upgrades synchronisieren, ohne zuerst den [Hotfix 3095113](https://support.microsoft.com/kb/3095113)installiert zu haben, füllen Sie die WSUS-Datenbank (SUSDB) mit unbrauchbaren Daten auf. Diese Daten müssen gelöscht werden, bevor Upgrades ordnungsgemäß bereitgestellt werden können.  Verwenden Sie das folgende Verfahren, um dieses Problem zu beheben.  
 
 #### <a name="to-recover-from-synchronizing-the-upgrades-classification-before-you-install-kb-3095113"></a>Wiederherstellen nach Synchronisieren der Klassifizierung „Upgrades“ vor der Installation von KB 3095113  
@@ -111,9 +113,4 @@ In diesem Thema werden die Voraussetzungen für Softwareupdates in System Center
 
 ## <a name="next-steps"></a>Nächste Schritte
 [Vorbereiten der Softwareupdateverwaltung](../get-started/prepare-for-software-updates-management.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
