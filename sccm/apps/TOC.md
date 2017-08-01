@@ -20,6 +20,7 @@
 
 ## Bereitstellen von Anwendungen
 ### [Bereitstellen von Anwendungen](deploy-use/deploy-applications.md)
+### [Freigeben einer Anwendung](deploy-use/share-applications.md)
 ### [Simulieren von Anwendungsbereitstellungen](deploy-use/simulate-application-deployments.md)
 ### [Bereitstellen von virtuellen App-V-Anwendungen](get-started/deploying-app-v-virtual-applications.md)
 
@@ -37,3 +38,5 @@
 ### [Aktualisieren und Außerkraftsetzen von Anwendungen](deploy-use/update-and-retire-applications.md)
 ### [Überarbeiten und Ablösen von Anwendungen](deploy-use/revise-and-supersede-applications.md)
 ### [Deinstallieren von Anwendungen](deploy-use/uninstall-applications.md)
+
+## [Ausführen und Verwalten von Skripts](deploy-use/create-deploy-scripts.md)
