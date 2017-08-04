@@ -16,11 +16,11 @@ caps.handback.revision: 0
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 74f4dd44089d4a13526c981589e1f497f0e10290
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 50c137f159b0ef631f7173b8eec190182ce41cee
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>Schützen von Apps mithilfe von Verwaltungsrichtlinien für mobile Anwendungen in System Center Configuration Manager
@@ -43,12 +43,12 @@ Um diese neue Funktion zu verwenden, müssen Sie das Azure-Vorschauportal verwen
 
 Zum Anwenden von Einschränkungen auf eine App muss die App das Microsoft Intune App Software Development Kit (SDK) enthalten. Es gibt zwei Möglichkeiten, um diesen App-Typ zu beziehen:  
 
--   **Verwenden einer richtlinienverwalteten App** (Android und iOS): Diese Apps verfügen über das integrierte App SDK. Um diesen App-Typ hinzuzufügen, geben Sie in einem App Store wie iTunes Store oder Google Play einen Link zur App an. Es ist keine weitere Bearbeitung für diesen App-Typ erforderlich. Eine Liste der richtlinienverwalteten Apps, die für IOS- und Android-Geräte verfügbar sind, finden Sie unter [Verwaltete Apps für Microsoft Intune-Verwaltungsrichtlinien für mobile Anwendungen](https://technet.microsoft.com/en-us/library/dn708489.aspx).  
+-   **Verwenden einer richtlinienverwalteten App** (Android und iOS): Diese Apps verfügen über das integrierte App SDK. Um diesen App-Typ hinzuzufügen, geben Sie in einem App Store wie iTunes Store oder Google Play einen Link zur App an. Es ist keine weitere Bearbeitung für diesen App-Typ erforderlich. Eine Liste der richtlinienverwalteten Apps, die für IOS- und Android-Geräte verfügbar sind, finden Sie unter [Verwaltete Apps für Microsoft Intune-Verwaltungsrichtlinien für mobile Anwendungen](https://technet.microsoft.com/library/dn708489.aspx).  
 
 -   **Verwenden einer „umschlossenen“ App** (Android und iOS): Diese Apps werden mit dem **Microsoft Intune App Wrapping Tool**neu gepackt, sodass sie das App SDK enthalten. Dieses Tool wird normalerweise verwendet, um Unternehmensanwendungen zu verarbeiten, die intern erstellt wurden. Es kann nicht verwendet werden, um Apps zu verarbeiten, die aus dem App Store heruntergeladen wurden. Weitere Informationen finden Sie in den folgenden Artikeln:
-    - [Vorbereiten von iOS-Apps für die Verwaltung mobiler Anwendungen mit dem Intune App Wrapping Tool](https://technet.microsoft.com/en-us/library/dn878028.aspx)
+    - [Vorbereiten von iOS-Apps für die Verwaltung mobiler Anwendungen mit dem Intune App Wrapping Tool](https://technet.microsoft.com/library/dn878028.aspx)
 
-    - [Vorbereiten von Android-Apps für die Verwaltung von mobilen Anwendungen mit dem Intune App Wrapping Tool](https://technet.microsoft.com/en-us/library/mt147413.aspx)  
+    - [Vorbereiten von Android-Apps für die Verwaltung von mobilen Anwendungen mit dem Intune App Wrapping Tool](https://technet.microsoft.com/library/mt147413.aspx)  
 
 ## <a name="create-and-deploy-an-app-with-a-mobile-application-management-policy"></a>Erstellen und Bereitstellen einer App mit einer Verwaltungsrichtlinie für mobile Anwendungen  
 
@@ -58,7 +58,7 @@ Zum Anwenden von Einschränkungen auf eine App muss die App das Microsoft Intune
 
      Die URL der Microsoft Word für iPad-App ist beispielsweise **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.  
 
--   **So erstellen Sie eine umschlossene App**: Verwenden Sie die Informationen in den Themen [Vorbereiten von iOS-Apps für die Verwaltung mobiler Anwendungen mit dem Intune App Wrapping Tool](https://technet.microsoft.com/en-us/library/dn878028.aspx) und [Vorbereiten von Android-Apps für die Verwaltung von mobilen Anwendungen mit dem Intune App Wrapping Tool](https://technet.microsoft.com/en-us/library/mt147413.aspx), um eine umschlossene App zu erstellen.  
+-   **So erstellen Sie eine umschlossene App**: Verwenden Sie die Informationen in den Themen [Vorbereiten von iOS-Apps für die Verwaltung mobiler Anwendungen mit dem Intune App Wrapping Tool](https://technet.microsoft.com/library/dn878028.aspx) und [Vorbereiten von Android-Apps für die Verwaltung von mobilen Anwendungen mit dem Intune App Wrapping Tool](https://technet.microsoft.com/library/mt147413.aspx), um eine umschlossene App zu erstellen.  
 
      Das Tool erstellt eine verarbeitete App und eine zugehörige Manifestdatei. Sie verwenden diese Dateien beim Erstellen einer Configuration Manager-Anwendung, in der die App enthalten ist.  
 
@@ -178,5 +178,5 @@ Weitere Informationen finden Sie unter [Manage Internet access using managed bro
 -   Wenn keine Richtlinie für das Gerät bereitgestellt wurde und zwei widersprüchliche Einstellungen bereitgestellt werden, wird die in das Gerät integrierte Standardeinstellung verwendet.  
 
 ##  <a name="see-a-list-of-available-policy-managed-apps"></a>Liste verfügbarer richtlinienverwalteter Apps  
- Eine Liste der richtlinienverwalteten Apps, die für IOS- und Android-Geräte verfügbar sind, finden Sie unter [Microsoft Intune-Anwendungspartner](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-partners).  
+ Eine Liste der richtlinienverwalteten Apps, die für IOS- und Android-Geräte verfügbar sind, finden Sie unter [Microsoft Intune-Anwendungspartner](https://www.microsoft.com/cloud-platform/microsoft-intune-partners).  
 

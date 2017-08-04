@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9555a16d97224a1cf49a426ab225468b07403f60
-ms.openlocfilehash: e28fdeae809cadf78017dd2920e3f1a9484ec8a3
+ms.translationtype: HT
+ms.sourcegitcommit: 5f1412fb132e3a074742e11f1142b2594146cbe1
+ms.openlocfilehash: 44b4707b1a40624c51decf548d23ddd2164c5833
 ms.contentlocale: de-de
-ms.lasthandoff: 12/29/2016
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-collections-in-system-center-configuration-manager"></a>Erstellen von Sammlungen in System Center Configuration Manager
@@ -57,65 +56,65 @@ Bei Sammlungen handelt es sich um Gruppierungen von Benutzern und Geräten. Mith
 5.  Wählen Sie auf der Seite **Mitgliedschaftsregeln** des **Assistenten zum Erstellen von Gerätesammlungen** in der Liste **Regel hinzufügen** den Typ der Mitgliedschaftsregel aus, den Sie für diese Sammlung verwenden möchten. Sie können für jede Sammlung mehrere Regeln konfigurieren.  
 
         
-        ##### To configure a direct rule  
+##### <a name="to-configure-a-direct-rule"></a>So konfigurieren Sie eine Direktregel  
 
-        1.  Geben Sie im **Assistenten für die Erstellung von Regeln der direkten Mitgliedschaft** auf der Seite **Ressourcen suchen**die folgenden Informationen an:  
+1.  Geben Sie im **Assistenten für die Erstellung von Regeln der direkten Mitgliedschaft** auf der Seite **Ressourcen suchen**die folgenden Informationen an:  
 
-            -   **Ressourcenklasse**: Wählen Sie den Ressourcentyp aus, den Sie suchen und der Sammlung hinzufügen möchten. Wählen Sie aus den Werten unter **Systemressource** Werte zur Suche nach Inventurdaten aus, die von Clientcomputern zurückgegeben wurden, oder wählen Sie **Unbekannter Computer** aus, um Werte auszuwählen, die von unbekannten Computern zurückgegeben wurden.  
+-   **Ressourcenklasse**: Wählen Sie den Ressourcentyp aus, den Sie suchen und der Sammlung hinzufügen möchten. Wählen Sie aus den Werten unter **Systemressource** Werte zur Suche nach Inventurdaten aus, die von Clientcomputern zurückgegeben wurden, oder wählen Sie **Unbekannter Computer** aus, um Werte auszuwählen, die von unbekannten Computern zurückgegeben wurden.  
 
-            -   **Attributname**: Wählen Sie das Attribut aus, das der ausgewählten Ressourcenklasse zugeordnet ist, nach der Sie suchen möchten. Wenn Sie Computer beispielsweise nach NetBIOS-Namen auswählen möchten, wählen Sie in der Liste **Ressourcenklasse** die Option **Systemressource** und in der Liste **Attributname** die Option **NetBIOS-Name** aus.  
+-   **Attributname**: Wählen Sie das Attribut aus, das der ausgewählten Ressourcenklasse zugeordnet ist, nach der Sie suchen möchten. Wenn Sie Computer beispielsweise nach NetBIOS-Namen auswählen möchten, wählen Sie in der Liste **Ressourcenklasse** die Option **Systemressource** und in der Liste **Attributname** die Option **NetBIOS-Name** aus.  
 
-            -   **Als veraltet markierte Ressourcen ausschließen:** Wenn ein Clientcomputer als veraltet markiert wird, schließen Sie diesen Wert nicht in die Suchergebnisse ein.  
+-   **Als veraltet markierte Ressourcen ausschließen:** Wenn ein Clientcomputer als veraltet markiert wird, schließen Sie diesen Wert nicht in die Suchergebnisse ein.  
 
-            -   **Ressourcen ausschließen, für die der Configuration Manager-Client nicht installiert wurde**: Diese Ressourcen werden nicht in den Suchergebnissen angezeigt.  
+-   **Ressourcen ausschließen, für die der Configuration Manager-Client nicht installiert wurde**: Diese Ressourcen werden nicht in den Suchergebnissen angezeigt.  
 
-            -   **Wert** : Geben Sie einen Wert ein, für den Sie den ausgewählten Attributnamen suchen möchten. Sie können das Prozentzeichen **%** als Platzhalter verwenden. Um beispielsweise nach Computern zu suchen, deren NetBIOS-Name mit einem „M“ beginnt, geben Sie in dieses Feld **M%** ein.  
+-   **Wert** : Geben Sie einen Wert ein, für den Sie den ausgewählten Attributnamen suchen möchten. Sie können das Prozentzeichen **%** als Platzhalter verwenden. Um beispielsweise nach Computern zu suchen, deren NetBIOS-Name mit einem „M“ beginnt, geben Sie in dieses Feld **M%** ein.  
 
-        2.  Wählen Sie auf der Seite **Ressourcen auswählen** die Ressourcen aus, die Sie der Sammlung in der Liste **Ressourcen** hinzufügen möchten, und wählen Sie dann **Weiter** aus.  
+2.  Wählen Sie auf der Seite **Ressourcen auswählen** die Ressourcen aus, die Sie der Sammlung in der Liste **Ressourcen** hinzufügen möchten, und wählen Sie dann **Weiter** aus.  
 
 
-        ##### To configure a query rule  
+##### <a name="to-configure-a-query-rule"></a>So konfigurieren Sie eine Abfrageregel  
 
-        1.  Geben Sie im Dialogfeld **Eigenschaften für Abfrageregel** die folgenden Informationen an:  
+1.  Geben Sie im Dialogfeld **Eigenschaften für Abfrageregel** die folgenden Informationen an:  
 
-            -   **Name**: Geben Sie einen eindeutigen Namen an.  
+-   **Name**: Geben Sie einen eindeutigen Namen an.  
 
-            -   **Abfrageanweisung importieren**: Öffnet das Dialogfeld **Abfrage durchsuchen**, in dem Sie eine [Configuration Manager-Abfrage](../../../../core/servers/manage/create-queries.md) auswählen können, die als Abfrageregel für die Sammlung verwendet werden soll.   
+-   **Abfrageanweisung importieren**: Öffnet das Dialogfeld **Abfrage durchsuchen**, in dem Sie eine [Configuration Manager-Abfrage](../../../../core/servers/manage/create-queries.md) auswählen können, die als Abfrageregel für die Sammlung verwendet werden soll.   
 
-            -   **Ressourcenklasse**: Wählen Sie in der Liste den Ressourcentyp aus, den Sie suchen und der Sammlung hinzufügen möchten. Wählen Sie aus den Werten unter **Systemressource** einen Wert zur Suche von Inventurdaten aus, die von Clientcomputern zurückgegeben wurden, oder wählen Sie **Unbekannter Computer** aus, um Werte auszuwählen, die von unbekannten Computern zurückgegeben wurden.  
+-   **Ressourcenklasse**: Wählen Sie in der Liste den Ressourcentyp aus, den Sie suchen und der Sammlung hinzufügen möchten. Wählen Sie aus den Werten unter **Systemressource** einen Wert zur Suche von Inventurdaten aus, die von Clientcomputern zurückgegeben wurden, oder wählen Sie **Unbekannter Computer** aus, um Werte auszuwählen, die von unbekannten Computern zurückgegeben wurden.  
 
-            -   **Abfrageanweisung bearbeiten:** Öffnet das Dialogfeld **Eigenschaften der Abfrageanweisung**, in dem Sie eine Abfrage erstellen können, die als Regel für die Sammlung verwendet werden soll. Weitere Informationen zu Abfragen finden Sie unter [Abfragen – Technische Referenz für System Center Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md).  
+-   **Abfrageanweisung bearbeiten:** Öffnet das Dialogfeld **Eigenschaften der Abfrageanweisung**, in dem Sie eine Abfrage erstellen können, die als Regel für die Sammlung verwendet werden soll. Weitere Informationen zu Abfragen finden Sie unter [Abfragen – Technische Referenz für System Center Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md).  
 
     
-        ##### To configure an include collection rule  
+##### <a name="to-configure-an-include-collection-rule"></a>So konfigurieren Sie eine Regel "Sammlungen einschließen"  
 
-        In the **Select Collections** dialog box, select the collections you want to include in the new collection, then choose **OK**.  
+Wählen Sie im Dialogfeld **Sammlungen auswählen** die Sammlungen aus, die Sie in die neue Sammlung einschließen möchten, und wählen Sie dann **Weiter** aus.  
 
-        ##### To configure an exclude collection rule  
+##### <a name="to-configure-an-exclude-collection-rule"></a>So konfigurieren Sie eine Regel "Sammlungen ausschließen"  
 
-        In the **Select Collections** dialog box, select the collections you want to exclude from the new collection, then choose **OK**.  
+Wählen Sie im Dialogfeld **Sammlungen auswählen** die Sammlungen aus, die Sie aus der neuen Sammlung ausschließen möchten, und wählen Sie dann **OK** aus.  
 
-    -   **Inkrementelle Updates für diese Sammlung verwenden**: Wählen Sie diese Option aus, um regelmäßig eine Überprüfung auf nur neue oder geänderte Ressourcen aus der vorherigen Sammlungsauswertung auszuführen und sie zu aktualisieren, unabhängig von einer vollständigen Sammlungsauswertung. Inkrementelle Updates erfolgen in Abständen von 10 Minuten.  
+-   **Inkrementelle Updates für diese Sammlung verwenden**: Wählen Sie diese Option aus, um regelmäßig eine Überprüfung auf nur neue oder geänderte Ressourcen aus der vorherigen Sammlungsauswertung auszuführen und sie zu aktualisieren, unabhängig von einer vollständigen Sammlungsauswertung. Inkrementelle Updates erfolgen in Abständen von 10 Minuten.  
 
-        > [!IMPORTANT]  
-        >  Von Sammlungen, die mit Abfrageregeln erstellt wurden, in denen folgende Klassen verwendet werden, werden inkrementelle Updates nicht unterstützt:  
-        >   
-        >  -   SMS_G_System_CollectedFile  
-        > -   SMS_G_System_LastSoftwareScan  
-        > -   SMS_G_System_AppClientState  
-        > -   SMS_G_System_DCMDeploymentState  
-        > -   SMS_G_System_DCMDeploymentErrorAssetDetails  
-        > -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
-        > -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
-        > -   SMS_G_User_DCMDeploymentCompliantAssetDetails (nur für Benutzersammlungen)  
-        > -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails (nur für Benutzersammlungen)  
-        > -   SMS_G_System_SoftwareUsageData  
-        > -   SMS_G_System_CI_ComplianceState  
-        > -   SMS_G_System_EndpointProtectionStatus  
-        > -   SMS_GH_System_*  
-        > -   SMS_GEH_System_*  
+> [!IMPORTANT]  
+>  Von Sammlungen, die mit Abfrageregeln erstellt wurden, in denen folgende Klassen verwendet werden, werden inkrementelle Updates nicht unterstützt:  
+>   
+> -   SMS_G_System_CollectedFile  
+> -   SMS_G_System_LastSoftwareScan  
+> -   SMS_G_System_AppClientState  
+> -   SMS_G_System_DCMDeploymentState  
+> -   SMS_G_System_DCMDeploymentErrorAssetDetails  
+> -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
+> -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
+> -   SMS_G_User_DCMDeploymentCompliantAssetDetails (nur für Benutzersammlungen)  
+> -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails (nur für Benutzersammlungen)  
+> -   SMS_G_System_SoftwareUsageData  
+> -   SMS_G_System_CI_ComplianceState  
+> -   SMS_G_System_EndpointProtectionStatus  
+> -   SMS_GH_System_*  
+> -   SMS_GEH_System_*  
 
-    -   **Vollständiges Update für diese Sammlung planen**: Planen Sie eine reguläre, vollständige Auswertung der Sammlungsmitgliedschaft.  
+-   **Vollständiges Update für diese Sammlung planen**: Planen Sie eine reguläre, vollständige Auswertung der Sammlungsmitgliedschaft.  
 
 6.  Schließen Sie den Assistenten ab, um die neue Sammlung zu erstellen. Die neue Sammlung wird im Arbeitsbereich **Bestand und Kompatibilität** im Knoten **Gerätesammlungen** angezeigt.  
 
@@ -134,60 +133,60 @@ Bei Sammlungen handelt es sich um Gruppierungen von Benutzern und Geräten. Mith
 
     -   Wählen Sie in der Liste **Regel hinzufügen** den Typ der Mitgliedschaftsregel aus, den Sie für diese Sammlung verwenden möchten. Sie können für jede Sammlung mehrere Regeln konfigurieren.  
 
-         ##### <a name="to-configure-a-direct-rule"></a>So konfigurieren Sie eine Direktregel  
+##### <a name="to-configure-a-direct-rule"></a>So konfigurieren Sie eine Direktregel  
 
-        1.  Geben Sie im **Assistenten für die Erstellung von Regeln der direkten Mitgliedschaft** auf der Seite **Ressourcen suchen** Folgendes an:  
+1.  Geben Sie im **Assistenten für die Erstellung von Regeln der direkten Mitgliedschaft** auf der Seite **Ressourcen suchen** Folgendes an:  
 
-            -   **Ressourcenklasse**: Wählen Sie den Ressourcentyp aus, den Sie suchen und der Sammlung hinzufügen möchten. Wählen Sie Werte unter **Benutzerressource** aus, um Benutzerinformationen zu suchen, die von Configuration Manager gesammelt wurden, oder unter **Benutzergruppenressource**, um Benutzergruppeninformationen zu suchen, die von Configuration Manager gesammelt wurden.  
+-   **Ressourcenklasse**: Wählen Sie den Ressourcentyp aus, den Sie suchen und der Sammlung hinzufügen möchten. Wählen Sie Werte unter **Benutzerressource** aus, um Benutzerinformationen zu suchen, die von Configuration Manager gesammelt wurden, oder unter **Benutzergruppenressource**, um Benutzergruppeninformationen zu suchen, die von Configuration Manager gesammelt wurden.  
 
-            -   **Attributname**: Wählen Sie das Attribut aus, das der Ressourcenklasse zugeordnet ist, nach der Sie suchen möchten. Wenn Sie Benutzer beispielsweise nach dem Namen der Organisationseinheit auswählen möchten, wählen Sie in der Liste **Ressourcenklasse** die Option **Benutzerressource** und in der Liste **Attributname** die Option **Benutzer-Organisationseinheitsname** aus.  
+-   **Attributname**: Wählen Sie das Attribut aus, das der Ressourcenklasse zugeordnet ist, nach der Sie suchen möchten. Wenn Sie Benutzer beispielsweise nach dem Namen der Organisationseinheit auswählen möchten, wählen Sie in der Liste **Ressourcenklasse** die Option **Benutzerressource** und in der Liste **Attributname** die Option **Benutzer-Organisationseinheitsname** aus.  
 
-            -   **Wert:** Geben Sie einen Wert ein, nach dem Sie suchen möchten. Sie können das Prozentzeichen **%** als Platzhalter verwenden. Wenn Sie beispielsweise nach Benutzern in der Organisationseinheit „Contoso“ suchen, geben Sie **Contoso** in dieses Feld ein.  
+-   **Wert:** Geben Sie einen Wert ein, nach dem Sie suchen möchten. Sie können das Prozentzeichen **%** als Platzhalter verwenden. Wenn Sie beispielsweise nach Benutzern in der Organisationseinheit „Contoso“ suchen, geben Sie **Contoso** in dieses Feld ein.  
 
-        2.  Wählen Sie auf der Seite **Ressourcen auswählen** die Ressourcen aus, die Sie der Sammlung in der Liste **Ressourcen** hinzufügen möchten.  
+2.  Wählen Sie auf der Seite **Ressourcen auswählen** die Ressourcen aus, die Sie der Sammlung in der Liste **Ressourcen** hinzufügen möchten.  
 
-        ##### <a name="to-configure-a-query-rule"></a>So konfigurieren Sie eine Abfrageregel  
+##### <a name="to-configure-a-query-rule"></a>So konfigurieren Sie eine Abfrageregel  
 
-        1.  Geben Sie im Dialogfeld **Eigenschaften für Abfrageregel** Folgendes an:  
+1.  Geben Sie im Dialogfeld **Eigenschaften für Abfrageregel** Folgendes an:  
 
-            -   **Name**: Einen eindeutigen Namen.  
+-   **Name**: Einen eindeutigen Namen.  
 
-            -   **Abfrageanweisung importieren**: Öffnet das Dialogfeld **Abfrage durchsuchen**, in dem Sie eine [Configuration Manager-Abfrage](../../../../core/servers/manage/queries-technical-reference.md) auswählen können, die als Abfrageregel für die Sammlung verwendet werden soll.  
+-   **Abfrageanweisung importieren**: Öffnet das Dialogfeld **Abfrage durchsuchen**, in dem Sie eine [Configuration Manager-Abfrage](../../../../core/servers/manage/queries-technical-reference.md) auswählen können, die als Abfrageregel für die Sammlung verwendet werden soll.  
 
-            -   **Ressourcenklasse**: Wählen Sie den Ressourcentyp aus, den Sie suchen und der Sammlung hinzufügen möchten. Wählen Sie Werte unter **Benutzerressource** aus, um Benutzerinformationen zu suchen, die von Configuration Manager gesammelt wurden, oder unter **Benutzergruppenressource**, um Benutzergruppeninformationen zu suchen, die von Configuration Manager gesammelt wurden.  
+-   **Ressourcenklasse**: Wählen Sie den Ressourcentyp aus, den Sie suchen und der Sammlung hinzufügen möchten. Wählen Sie Werte unter **Benutzerressource** aus, um Benutzerinformationen zu suchen, die von Configuration Manager gesammelt wurden, oder unter **Benutzergruppenressource**, um Benutzergruppeninformationen zu suchen, die von Configuration Manager gesammelt wurden.  
 
-            -   **Abfrageanweisung bearbeiten**: Öffnet das Dialogfeld **Eigenschaften der Abfrageanweisung**, in dem Sie eine [Abfrage erstellen](../../../../core/servers/manage/queries-technical-reference.md) können, die als Regel für die Sammlung verwendet werden soll.  
+-   **Abfrageanweisung bearbeiten**: Öffnet das Dialogfeld **Eigenschaften der Abfrageanweisung**, in dem Sie eine [Abfrage erstellen](../../../../core/servers/manage/queries-technical-reference.md) können, die als Regel für die Sammlung verwendet werden soll.  
 
-        ##### <a name="to-configure-an-include-collection-rule"></a>So konfigurieren Sie eine Regel "Sammlungen einschließen"  
+##### <a name="to-configure-an-include-collection-rule"></a>So konfigurieren Sie eine Regel "Sammlungen einschließen"  
 
-        Wählen Sie im Dialogfeld **Sammlungen auswählen** die Sammlungen aus, die Sie in die neue Sammlung einschließen möchten, und wählen Sie dann **Weiter** aus.  
+Wählen Sie im Dialogfeld **Sammlungen auswählen** die Sammlungen aus, die Sie in die neue Sammlung einschließen möchten, und wählen Sie dann **Weiter** aus.  
 
-        ##### <a name="to-configure-an-exclude-collection-rule"></a>So konfigurieren Sie eine Regel "Sammlungen ausschließen"  
+##### <a name="to-configure-an-exclude-collection-rule"></a>So konfigurieren Sie eine Regel "Sammlungen ausschließen"  
 
-        Wählen Sie im Dialogfeld **Sammlungen auswählen** die Sammlungen aus, die Sie aus der neuen Sammlung ausschließen möchten, und wählen Sie dann **OK** aus.  
+Wählen Sie im Dialogfeld **Sammlungen auswählen** die Sammlungen aus, die Sie aus der neuen Sammlung ausschließen möchten, und wählen Sie dann **OK** aus.  
 
 
-    -   **Inkrementelle Updates für diese Sammlung verwenden**: Wählen Sie diese Option aus, um regelmäßig eine Überprüfung auf nur neue oder geänderte Ressourcen aus der vorherigen Sammlungsauswertung auszuführen und sie zu aktualisieren, unabhängig von einer vollständigen Sammlungsauswertung. Inkrementelle Updates erfolgen in Abständen von 10 Minuten.  
+-   **Inkrementelle Updates für diese Sammlung verwenden**: Wählen Sie diese Option aus, um regelmäßig eine Überprüfung auf nur neue oder geänderte Ressourcen aus der vorherigen Sammlungsauswertung auszuführen und sie zu aktualisieren, unabhängig von einer vollständigen Sammlungsauswertung. Inkrementelle Updates erfolgen in Abständen von 10 Minuten.  
 
-        > [!IMPORTANT]  
-        >  Von Sammlungen, die mit Abfrageregeln erstellt wurden, in denen folgende Klassen verwendet werden, werden inkrementelle Updates nicht unterstützt:  
-        >   
-        >  -   SMS_G_System_CollectedFile  
-        > -   SMS_G_System_LastSoftwareScan  
-        > -   SMS_G_System_AppClientState  
-        > -   SMS_G_System_DCMDeploymentState  
-        > -   SMS_G_System_DCMDeploymentErrorAssetDetails  
-        > -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
-        > -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
-        > -   SMS_G_User_DCMDeploymentCompliantAssetDetails (nur für Benutzersammlungen)  
-        > -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails (nur für Benutzersammlungen)  
-        > -   SMS_G_System_SoftwareUsageData  
-        > -   SMS_G_System_CI_ComplianceState  
-        > -   SMS_G_System_EndpointProtectionStatus  
-        > -   SMS_GH_System_*  
-        > -   SMS_GEH_System_*  
+> [!IMPORTANT]  
+>  Von Sammlungen, die mit Abfrageregeln erstellt wurden, in denen folgende Klassen verwendet werden, werden inkrementelle Updates nicht unterstützt:  
+>   
+> -   SMS_G_System_CollectedFile  
+> -   SMS_G_System_LastSoftwareScan  
+> -   SMS_G_System_AppClientState  
+> -   SMS_G_System_DCMDeploymentState  
+> -   SMS_G_System_DCMDeploymentErrorAssetDetails  
+> -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
+> -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
+> -   SMS_G_User_DCMDeploymentCompliantAssetDetails (nur für Benutzersammlungen)  
+> -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails (nur für Benutzersammlungen)  
+> -   SMS_G_System_SoftwareUsageData  
+> -   SMS_G_System_CI_ComplianceState  
+> -   SMS_G_System_EndpointProtectionStatus  
+> -   SMS_GH_System_*  
+> -   SMS_GEH_System_*  
 
-    -   **Vollständiges Update für diese Sammlung planen**: Wählen Sie diese Option aus, um eine reguläre, vollständige Auswertung der Sammlungsmitgliedschaft zu planen.  
+-   **Vollständiges Update für diese Sammlung planen**: Wählen Sie diese Option aus, um eine reguläre, vollständige Auswertung der Sammlungsmitgliedschaft zu planen.  
 
 6.  Schließen Sie den Assistenten ab. Die neue Sammlung wird im Arbeitsbereich **Bestand und Kompatibilität** im Knoten **Benutzersammlungen** angezeigt.  
 
