@@ -51,7 +51,7 @@ Verwenden Sie den Befehl „CCMSetup.exe“ von System Center Configuration Mana
 
  Bei der Eingabeaufforderung wird vom Befehl CCMSetup.exe das folgende Format verwendet:  
 
- `CCMSetup.exe [&lt;Ccmsetup properties\>] [&lt;client.msi setup properties>]`  
+ `CCMSetup.exe [<Ccmsetup properties>] [<client.msi setup properties>]`  
 
  Beispiel:  
 
