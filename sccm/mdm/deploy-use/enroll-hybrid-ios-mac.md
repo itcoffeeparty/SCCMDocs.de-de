@@ -2,7 +2,7 @@
 title: "Einrichten einer hybriden Geräteverwaltung für iOS und Mac mit System Center Configuration Manager und Microsoft Intune | Microsoft-Dokumentation"
 description: "Einrichten einer iOS-Geräteverwaltung mit System Center Configuration Manager und Microsoft Intune."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ed6b65a1a5aabc0970cd0333cb033405cf6d2aea
-ms.openlocfilehash: 52596b211acb1182cb38259cba267bdd0846de80
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 1a93a542f55d02df20865fa4ae8d7590dd9be753
 ms.contentlocale: de-de
-ms.lasthandoff: 07/03/2017
-
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="set-up-ios-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Einrichten von iOS Hybrid-Geräte mit System Center Configuration Manager und Microsoft Intune einrichten
@@ -32,43 +31,44 @@ Mit Configuration Manager und Intune können Sie die iOS- und macOS-Geräteregis
 
  Sie können außerdem firmeneigene iOS-Geräte registrieren.  Mehr unter [Registrieren von unternehmenseigenen Geräten](enroll-company-owned-devices.md).  
 
-## <a name="enable-ios-device-enrollment"></a>Aktivieren der Registrierung von iOS-Geräten  
- Zum Registrieren von iOS-Geräten müssen Sie die folgenden Schritte ausführen:  
+**Voraussetzungen**<br>
+Bevor Sie die Registrierung einer Plattform einrichten können, müssen Sie die Voraussetzungen und Schritte in [Einrichten der hybriden Verwaltung mobiler Geräte](setup-hybrid-mdm.md) erfüllen und ausführen.
 
-#### <a name="set-up-ios-device-enrollment-in-configuration-manager"></a>Einrichten der Registrierung von iOS-Geräten in Configuration Manager  
+Zum Registrieren von iOS-Geräten müssen Sie die folgenden Schritte ausführen:  
 
-1.  **Voraussetzungen** ‒ Bevor Sie die Registrierung einer Plattform einrichten können, müssen Sie die Voraussetzungen und Schritte in [Einrichten der hybriden Verwaltung mobiler Geräte](setup-hybrid-mdm.md) erfüllen und ausführen.    
+## <a name="download-a-certificate-signing-request"></a>Laden Sie eine Zertifikatsignieranforderung herunter
+Eine CSR-Datei (Zertifikatsignieranforderung) ist erforderlich, um ein APNS-Zertifikat von Apple anzufordern.  
 
-2.  **Herunterladen einer Zertifikatsignieranforderung**: Eine CSR-Datei (Zertifikatsignieranforderung) ist erforderlich, um ein APNS-Zertifikat von Apple anzufordern.  
+1.  Wechseln Sie in der Configuration Manager-Konsole im Arbeitsbereich **Verwaltung** zu **Clouddienste**> **Microsoft Intune-Abonnements**.  
 
-    1.  Wechseln Sie in der Configuration Manager-Konsole im Arbeitsbereich **Verwaltung** zu **Clouddienste**> **Microsoft Intune-Abonnements**.  
+2.  Klicken Sie auf der Registerkarte **Startseite** auf **APNs-Zertifikatanforderung erstellen**. Das Dialogfeld **APNs-Zertifikatsignieranforderung anfordern** wird geöffnet.  
 
-    2.  Klicken Sie auf der Registerkarte **Startseite** auf **APNs-Zertifikatanforderung erstellen**. Das Dialogfeld **APNs-Zertifikatsignieranforderung anfordern** wird geöffnet.  
+3.  **Navigieren** Sie zum Pfad, um die neue CSR-Datei (Zertifikatsignieranforderung) zu speichern. Speichern Sie die Zertifikatsignierungsanforderung (CSR-Datei) lokal.  
 
-    3.  **Navigieren** Sie zum Pfad, um die neue CSR-Datei (Zertifikatsignieranforderung) zu speichern. Speichern Sie die Zertifikatsignierungsanforderung (CSR-Datei) lokal.  
+4.  Klicken Sie auf **Herunterladen**. Die neue CSR-Datei von Microsoft Intune wird heruntergeladen und von Configuration Manager gespeichert. Die CSR-Datei wird verwendet, um ein Vertrauensstellungszertifikat vom Apple Push Certificates-Portal anzufordern.  
 
-    4.  Klicken Sie auf **Herunterladen**. Die neue CSR-Datei von Microsoft Intune wird heruntergeladen und von Configuration Manager gespeichert. Die CSR-Datei wird verwendet, um ein Vertrauensstellungszertifikat vom Apple Push Certificates-Portal anzufordern.  
+## <a name="request-an-mdm-push-certificate-from-apple"></a>Anfordern eines MDM-Push-Zertifikats von Apple
+Das MDM-Push-Zertifikat dient zum Einrichten einer Vertrauensstellung zwischen dem Verwaltungsdienst, Intune und registrierten iOS-Mobilgeräten.  
 
-3.  **Anfordern eines APNs-Zertifikats von Apple** : Das APNs-Zertifikat (Apple Push Notification Service) dient zum Einrichten einer Vertrauensstellung zwischen dem Verwaltungsdienst, Intune und registrierten iOS-Mobilgeräten.  
+1.  Navigieren Sie in einem Browser zum [Apple Push Certificates Portal](http://go.microsoft.com/fwlink/?LinkId=269844) , und melden Sie sich mit der Apple-ID Ihres Unternehmens an. Diese Apple-ID muss später verwendet werden, um das APNs-Zertifikat zu erneuern.  
 
-    1.  Navigieren Sie in einem Browser zum [Apple Push Certificates Portal](http://go.microsoft.com/fwlink/?LinkId=269844) , und melden Sie sich mit der Apple-ID Ihres Unternehmens an. Diese Apple-ID muss später verwendet werden, um das APNs-Zertifikat zu erneuern.  
+2.  Schließen Sie den Assistenten mithilfe der Datei mit der Zertifikatsignierungsanforderung (CSR) ab. Laden Sie das MDM-Push-Zertifikat herunter, und speichern Sie die PEM-Datei lokal. Diese Zertifikatdatei (.pem) wird verwendet, um eine Vertrauensstellung zwischen dem Apple Push Notification-Server und der Verwaltungsautorität für mobile Geräte von Intune herzustellen.  
 
-    2.  Schließen Sie den Assistenten mithilfe der Datei mit der Zertifikatsignierungsanforderung (CSR) ab. Laden Sie das APNS-Zertifikat herunter, und speichern Sie die PEM-Datei lokal. Diese APNs-Zertifikatdatei (.pem) wird verwendet, um eine Vertrauensstellung zwischen dem Apple Push Notification-Server und der Verwaltungsautorität für mobile Geräte von Intune herzustellen.  
+> [!NOTE]  
+>  Laden Sie das Zertifikat des Apple Push Notification Service (APNs) erst auf Intune hoch, wenn Sie die iOS-Registrierung in der Configuration Manager-Konsole aktiviert haben.  
 
-4.  **Aktivieren der Registrierung und Hochladen des APNs-Zertifikats** : Zum Aktivieren der iOS-Registrierung laden Sie das APNs-Zertifikat hoch.  
+## <a name="enable-enrollment-and-upload-the-mdm-push-certificate"></a>Aktivieren Sie die Registrierung und laden Sie das MDM-Push-Zertifikat hoch.
+Laden Sie das APNs-Zertifikat hoch, um die iOS-Registrierung zu aktivieren.  
 
-    1.  Wechseln Sie in der Configuration Manager-Konsole im Arbeitsbereich **Verwaltung** zu **Clouddienste** > **Microsoft Intune-Abonnement**.  
+1.  Wechseln Sie in der Configuration Manager-Konsole im Arbeitsbereich **Verwaltung** zu **Clouddienste** > **Microsoft Intune-Abonnement**.  
 
-    2.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Abonnement** auf **Plattformen konfigurieren** > **iOS**.  
+2.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Abonnement** auf **Plattformen konfigurieren** > **iOS**.  
 
-        > [!NOTE]  
-        >  Laden Sie das Zertifikat des Apple Push Notification Service (APNs) erst hoch, wenn Sie die iOS-Registrierung in der Configuration Manager-Konsole aktiviert haben.  
+3.  Wählen Sie im Dialogfeld **Eigenschaften von Microsoft Intune-Abonnement** die Registerkarte **iOS** aus, und aktivieren Sie das Kontrollkästchen **iOS-Anmeldung aktivieren** .  
+4.  Klicken Sie auf **Durchsuchen**, und wechseln Sie zu der von Apple heruntergeladenen APNs-Zertifikatdatei (CER-Datei). Configuration Manager zeigt die APNs-Zertifikatinformationen an. Klicken Sie auf **OK** , um das APNs-Zertifikat in Intune zu speichern.  
 
-    3.  Wählen Sie im Dialogfeld **Eigenschaften von Microsoft Intune-Abonnement** die Registerkarte **iOS** aus, und aktivieren Sie das Kontrollkästchen **iOS-Anmeldung aktivieren** .  
-
-    4.  Klicken Sie auf **Durchsuchen**, und wechseln Sie zu der von Apple heruntergeladenen APNs-Zertifikatdatei (CER-Datei). Configuration Manager zeigt die APNs-Zertifikatinformationen an. Klicken Sie auf **OK** , um das APNs-Zertifikat in Intune zu speichern.  
-
- Nachdem Sie die Einrichtung abgeschlossen haben, müssen Sie Ihre Benutzer darüber informieren, wie diese ihre Geräte registrieren sollen. Informationen hierzu finden Sie unter [Informieren der Benutzer über den Einsatz von Microsoft Intune](https://docs.microsoft.com/intune/end-user-educate). Diese Informationen gelten für mobile Geräte, die mit Microsoft Intune und Configuration Manager verwaltet werden.
+> [!NOTE]
+> Die Funktion **Enrollment restrictions** (Registrierungsbeschränkungen) ist derzeit nicht verfügbar. 
 
 > [!div class="button"]
 [< Vorheriger Schritt](create-service-connection-point.md) [Nächster Schritt >](set-up-additional-management.md)

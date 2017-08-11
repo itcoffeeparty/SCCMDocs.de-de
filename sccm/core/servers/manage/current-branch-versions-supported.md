@@ -2,7 +2,7 @@
 title: Current Branch-Versionen | Microsoft-Dokumentation
 description: "Überprüfen Sie den Versionsverlauf von System Center Configuration Manager, und erfahren Sie mehr über die Phasen des angebotenen Diensts."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 0286416807656fcf623260c7e95a703e39f6a275
+ms.translationtype: HT
+ms.sourcegitcommit: 5d696e3da187d47e0d41c02864d9b5267827e701
+ms.openlocfilehash: 1c02d2c51964fed960ffab42175762c1b04e6445
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="support-for-system-center-configuration-manager-current-branch-versions"></a>Support für die Current Branch-Versionen von System Center Configuration Manager
@@ -33,8 +33,8 @@ Microsoft plant mehrmals jährlich die Veröffentlichung von Updates für die Cu
 
 -   Wartungsphase nur mit Sicherheitsupdates: Nach der Veröffentlichung der neuesten Current Branch-Version beschränkt sich der Support für ältere Versionen über den verbleibenden Zeitraum des 12-monatigen Produktlebenszyklus (siehe Abb. 1) auf Sicherheitsupdates.  
 
- ![CM&#95;Wartung&#95;Support&#95;Zeitachse](../../../core/servers/manage/media/CM_Servicing_support_timeline.png "CM_Servicing_support_timeline")  
-Abbildung 1: Beispiel für Current Branch-Wartungsunterstützung
+ ![CM_Servicing_support_timeline](../../../core/servers/manage/media/CM_Servicing_support_timeline.png "CM_Servicing_support_timeline")  
+Abbildung 1: Beispiel für die Überschneidung von Versionszyklen für die Current Branch-Wartungsunterstützung.
 
 > [!NOTE]  
 >  Die neueste Current Branch-Version befindet sich immer in der Wartungsphase für Sicherheitsupdates und wichtige Updates. Das bedeutet, dass im Fall eines Codefehlers, der ein kritisches Update erfordert, die neueste Current Branch-Version installiert sein muss, damit Sie eine Problembehebung erhalten. Bei allen anderen unterstützten Current Branch-Versionen haben Sie lediglich Anspruch auf Sicherheitsupdates. Nach Ablauf des 12-monatigen Lebenszyklus der aktuellen Current Branch-Version endet jeglicher Support. Dann müssen Kunden auf eine unterstützte Current Branch-Version aktualisieren.  
@@ -43,11 +43,12 @@ Abbildung 1: Beispiel für Current Branch-Wartungsunterstützung
 
 |Version|Verfügbarkeitsdatum|Supportenddatum|  
 |-------------|-----------------------|----------------------|  
-|1702|3/27/2017|3/27/2018|
-|1610|18.11.2016|11/18/2017|
-|1606|7/22/2016|7/22/2017|
-|1602|3/11/2016|3/11/2017|
-|1511|12/8/2015|12/8/2016|  
+|1706|31. Juli 2017|31. Juli 2018|
+|1702|27. März 2017|27. März 2018|
+|1610|18. November 2016|18. November 2017|
+|1606|22. Juli 2016| 22. Juli 2017|
+|1602|11. März 2016|11. März 2017|
+|1511|8. Dezember 2015|8. Dezember 2016|  
 
 
 

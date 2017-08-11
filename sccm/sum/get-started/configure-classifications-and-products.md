@@ -1,5 +1,4 @@
 ---
-
 title: Konfigurieren der zu synchronisierenden Klassifizierungen und Produkte | Microsoft-Dokumentation
 description: "Führen Sie diese Schritte zum Konfigurieren von Klassifizierungen und Produkten in der Configuration Manager-Konsole durch."
 keywords: 
@@ -13,11 +12,11 @@ ms.service:
 ms.technology:
 - configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
-ms.openlocfilehash: 6add66e625c790b65edf64216c2262a5d082f820
-
-
+ms.translationtype: HT
+ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
+ms.openlocfilehash: 2da61e6e06850b36543b9fd41bd9a7d2368006fb
+ms.contentlocale: de-de
+ms.lasthandoff: 08/04/2017
 
 ---
 #  <a name="configure-classifications-and-products-to-synchronize"></a>Konfigurieren der zu synchronisierenden Klassifizierungen und Produkte  
@@ -51,9 +50,13 @@ ms.openlocfilehash: 6add66e625c790b65edf64216c2262a5d082f820
     > - **Tools**: Hierbei handelt es sich um ein Dienstprogramm oder Feature, mit dem mindestens ein Task einfacher ausgeführt werden kann.  
     > - **Updaterollups**: Hierbei handelt es sich um einen kumulativen Satz von Hotfixes, die für eine einfache Bereitstellung gebündelt sind. Diese Hotfixes können Sicherheitsupdates, wichtige Updates, Updates usw. umfassen. Ein Aktualisierungsrollup betrifft in der Regel einen bestimmten Bereich, z. B. Sicherheit oder eine Produktkomponente.  
     > - **Updates**: Hierbei handelt es sich um ein Update für eine gegenwärtig installierte Anwendung oder Datei.  
-    > - **Upgrade**: Hierbei handelt es sich um ein Upgrade für Windows 10-Features und -Funktionalität.  
-    >   
-    >      Ihre Softwareupdatepunkte und Standorte müssen mindestens WSUS 4.0 mit dem [Hotfix 3095113](https://support.microsoft.com/kb/3095113) ausführen, um die Klassifizierung **Upgrade** zu erhalten.  
+    > - **Upgrade**: Hierbei handelt es sich um ein Upgrade für Windows 10-Features und -Funktionalität. Ihre Softwareupdatepunkte und Standorte müssen mindestens WSUS 4.0 mit dem [Hotfix 3095113](https://support.microsoft.com/kb/3095113) ausführen, um die Klassifizierung **Upgrade** zu erhalten.    
+    >       
+
+    > [!NOTE]    
+    > Ab Version 1706 von Configuration Manager steht Ihnen auch die Option **Microsoft Surface-Treiber und Firmwareupdates einbeziehen** für die Synchronisierung von Microsoft-Surface-Treibern zur Verfügung. Voraussetzung hierfür ist die Installation von Windows Server 2016 auf allen Softwareupdatepunkten.     
+    >    
+    > Hierbei handelt es sich um ein vorab veröffentlichtes Feature. Vorab veröffentlichte Features werden in das Produkt aufgenommen, um sie in einem frühen Stadium in einer Produktionsumgebung zu testen. Sie sollten nicht als für den Produktivbetrieb geeignet betrachtet werden. Aktivieren Sie dieses Feature, um es verfügbar zu machen. Weitere Informationen finden Sie unter [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease) (Verwenden von Vorabfeatures aus Updates).
 
 5.  Geben Sie auf der Seite **Produkte** die Produkte an, für die Sie Softwareupdates synchronisieren möchten. Klicken Sie dann auf **Schließen**.  
 
@@ -63,14 +66,8 @@ ms.openlocfilehash: 6add66e625c790b65edf64216c2262a5d082f820
     >  Wenn Softwareupdates auf mehrere Produkte anwendbar sind und mindestens eines der Produkte für die Synchronisierung ausgewählt wurde, werden sämtliche Produkte in der Configuration Manager-Konsole angezeigt, auch wenn einige Produkte nicht ausgewählt wurden. Wenn z.B. Windows Server 2012 das einzige Betriebssystem ist, das Sie ausgewählt haben, und ein Softwareupdate auf Windows 8 und auf Windows Server 2012 anwendbar ist, werden beide Produkte in der Configuration Manager-Konsole angezeigt.  
 
     > [!IMPORTANT]  
-    >  Configuration Manager speichert eine Liste der Produkte und Produktfamilien, aus denen Sie bei der Erstinstallation des Softwareupdatepunkts eine Auswahl treffen können. Produkte und Produktfamilien, die nach der Veröffentlichung von Configuration Manager freigegeben werden, können möglicherweise erst ausgewählt werden, nachdem Sie die Softwareupdatesynchronisierung abgeschlossen haben. Dabei wird die Liste der verfügbaren Produkte und Produktfamilien aktualisiert, aus denen Sie auswählen können.  
-
+    >  Configuration Manager speichert eine Liste der Produkte und Produktfamilien, aus denen Sie bei der Erstinstallation des Softwareupdatepunkts auswählen können. Produkte und Produktfamilien, die nach der Veröffentlichung von Configuration Manager freigegeben werden, können möglicherweise erst ausgewählt werden, nachdem Sie die Softwareupdatesynchronisierung abgeschlossen haben. Dabei wird die Liste der verfügbaren Produkte und Produktfamilien, aus denen Sie auswählen können, aktualisiert.  
 
 ## <a name="next-steps"></a>Nächste Schritte
 Starten Sie die Synchronisierung von Softwareupdates, um Softwareupdates auf der Grundlage der neuen Kriterien abzurufen. Mehr Informationen finden Sie unter [Synchronisieren von Softwareupdates](synchronize-software-updates.md).
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

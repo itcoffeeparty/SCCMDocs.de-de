@@ -2,7 +2,7 @@
 title: Barrierefreiheit | Microsoft-Dokumentation
 description: "Enthält Informationen zu den Funktionen, die System Center Configuration Manager für Menschen mit Behinderung zugänglich machen."
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 7/31/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,11 +15,11 @@ caps.latest.revision: 6
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 98599b3c188c9e9b508fea79ecf9a2b2348e9288
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: ca518796477dda149a9f4c0ebd65f0a082eab806
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="accessibility-features-in-system-center-configuration-manager"></a>Barrierefreiheitsfunktionen in System Center Configuration Manager
@@ -31,14 +31,38 @@ System Center Configuration Manager enthält Funktionen, durch die es für Mensc
 
 
 ## <a name="bkmk_aconsole"></a> Barrierefreiheitsfunktionen für die Configuration Manager-Konsole  
--   Verwenden Sie zum Zugriff auf einen Arbeitsbereich die folgenden Tastenkombinationen:  
 
-|Arbeitsbereich|Tastenkombination|  
-|------|--------|  
-|Bestand und Kompatibilität|STRG+1|  
-|Softwarebibliothek|STRG+2|  
-|monitoring|STRG+3|  
-|Verwaltung|STRG+4|  
+**Tastenkombinationen und Verbesserungen ab Version 1706**
+
+|Tastenkombination|  Zweck|
+|--------|--------|  
+|STRG+M|legt den Fokus auf den Hauptbereich in der Mitte fest|
+|STRG+T|legt den Fokus auf den obersten Knoten im Navigationsbereich fest Wenn sich der Fokus bereits in diesem Bereich befand, wird er auf den letzten besuchten Knoten festgelegt.|
+|STRG+I|legt den Fokus auf die Breadcrumb-Leiste unter dem Menüband fest|
+|STRG+L|legt den Fokus auf das Feld **Suchen** fest, sofern verfügbar|
+|STRG+D|legt den Fokus auf den Detailbereich fest, sofern verfügbar|
+|ALT     |schaltet den Fokus auf das Menüband ein und aus|
+
+
+- Verbesserte Navigation im Navigationsbereich, wenn Sie die Buchstaben eines Knotennamens eingeben.
+- Die Tastaturnavigation durch die Hauptansicht und das Menüband erfolgt jetzt kreisförmig.
+- Die Tastaturnavigation im Detailbereich erfolgt jetzt kreisförmig. Um zum vorherigen Objekt oder Bereich zurückzukehren, drücken Sie STRG+D und dann UMSCHALT+TAB.
+- Nach der Aktualisierung einer Arbeitsbereichsansicht wird der Fokus auf den Hauptbereich des jeweiligen Arbeitsbereichs festgelegt.
+- Ein Problem beim Aktivieren von Sprachausgaben zum Mitteilen der Namen von Listenelementen wurde behoben.
+- Es wurden barrierefreie Namen für mehrere Steuerelemente auf der Seite hinzugefügt, die es Sprachausgaben ermöglichen, wichtige Informationen mitzuteilen.
+
+
+**Die folgenden Tastenkombinationen sind für alle Versionen verfügbar**
+
+- Verwenden Sie zum Zugriff auf einen Arbeitsbereich die folgenden Tastenkombinationen:  
+
+|Tastenkombination| Arbeitsbereich|
+|--------|--------|  
+|STRG+1| Bestand und Kompatibilität|
+|STRG+2|  Softwarebibliothek|
+|STRG+3|  Überwachung|
+|STRG+4|  Verwaltung|
+
 
 -   Wählen Sie zum Zugriff auf ein Arbeitsbereichsmenü die TAB-TASTE, bis der Fokus auf dem Symbol „Erweitern/Reduzieren“ liegt. Wählen Sie die NACH-UNTEN-TASTE, um auf das Arbeitsbereichsmenü zuzugreifen.  
 
@@ -56,7 +80,7 @@ System Center Configuration Manager enthält Funktionen, durch die es für Mensc
 >  Die in diesem Abschnitt enthaltenen Informationen gelten ggf. nur für Benutzer, die Microsoft-Produkte in den USA lizenzieren lassen. Wenn Sie dieses Produkt außerhalb der USA erworben haben, enthält das Softwarepaket eine Karte mit zusätzlichen Informationen, der die Kontaktinformationen für den Microsoft-Support zu entnehmen sind. Diese Informationen finden Sie auch auf der [Microsoft-Website zur Barrierefreiheit](http://go.microsoft.com/fwlink/?LinkId=8431). Setzen Sie sich mit der Niederlassung in Ihrer Nähe in Verbindung, um herauszufinden, ob die in diesem Abschnitt aufgeführten Produkte und Dienste in Ihrem Land bzw. Ihrer Region verfügbar sind. Informationen zur Barrierefreiheit stehen auch in anderen Sprachen (einschl. Japanisch und Französisch) zur Verfügung.  
 
 ##  <a name="bkmk_ahelp"></a> Barrierefreiheitsfunktionen für die Configuration Manager-Hilfe  
- Die Configuration Manager-Hilfe enthält Barrierefreiheitsfunktionen, die sie für eine größere Zahl an Benutzern zugänglich macht. Dazu gehören u.a. auch Benutzer mit eingeschränkter Beweglichkeit der Hände, Sehbehinderungen oder anderen Behinderungen.  
+ Die Configuration Manager-Hilfe ist dank Barrierefreiheitsfunktionen einer größeren Zahl von Benutzern zugänglich. Dazu zählen u.a. Benutzer mit eingeschränkter Beweglichkeit der Hände, Sehbehinderungen oder anderen Behinderungen.  
 
 |Zweck|Tastenkombination|  
 |----------------|--------------------------------|  

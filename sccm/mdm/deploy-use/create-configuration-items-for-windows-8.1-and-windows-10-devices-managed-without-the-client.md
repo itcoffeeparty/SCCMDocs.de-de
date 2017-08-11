@@ -2,7 +2,7 @@
 title: "Erstellen von Konfigurationselementen für Windows 8.1 und Windows 10-Geräte, die mit Intune verwaltet werden | Microsoft-Dokumentation"
 description: "Verwenden Sie das Windows 10-Konfigurationselement von System Center Configuration Manager, um die Einstellungen für Windows 10-Computer zu verwalten."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,18 +16,15 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: f75bac7887772119f30654fe15c16a8f993cad75
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: cbfc5f178e72b40526a4cb540f962a3b82203699
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="how-to-create-configuration-items-for-windows-81-and-windows-10-devices-managed-without-the-system-center-configuration-manager-client"></a>Erstellen von Konfigurationselementen für Windows 8.1- und Windows 10-Geräte, die ohne den System Center Configuration Manager-Client verwaltet werden
-||  
-|-|  
-|Dieser Artikel enthält Informationen über [neue Funktionen, eingeführt in Version 1602](https://technet.microsoft.com/library/mt622084.aspx) von \(Current Branch\) von System Center Configuration Manager. Sie müssen das [Update 1602 installieren](https://technet.microsoft.com/library/mt607046.aspx), um die neuen Funktionen zu verwenden. Wenn Sie Ihr System nicht auf die neueste Version von Configuration Manager aktualisiert haben, können Sie [die Dokumentation für die von Ihnen verwendete Version](https://gallery.technet.microsoft.com/Documentation-for-System-ea90eaf1) aus der TechNet Gallery herunterladen.|  
+
   
  Verwenden Sie das Konfigurationselement **Windows 8.1- und Windows 10** von System Center Configuration Manager, um Einstellungen für Windows 8.1- und Windows 10-Geräte zu verwalten, die bei Microsoft Intune registriert sind oder lokal von Configuration Manager verwaltet werden.  
   
@@ -90,7 +87,8 @@ ms.lasthandoff: 05/17/2017
 |**Leerlaufzeit vor dem Sperren des Geräts**|Geben Sie die Zeitdauer an, die ein Gerät im Leerlauf sein darf (ohne Benutzereingabe), bevor es gesperrt ist.|  
 |**Kennwortkomplexität**|Wählen Sie aus, ob Sie eine PIN wie „1234“ angeben können oder, ob ein sicheres Kennwort erforderlich ist.|  
 |**Kennwortqualität**|Wählen Sie den erforderlichen Grad der Kennwortkomplexität aus. Wählen Sie zudem aus, ob biometrische Geräte zulässig sind.|  
-|**Kennwortwiederherstellungs-PIN an Exchange Server senden**||  
+|**Kennwortwiederherstellungs-PIN an Exchange Server senden**|-|
+|**Geräteverschlüsselung**|aktiviert die Verschlüsselung auf Geräten, für die diese Einstellung gilt|  
   
 ###  <a name="device"></a>Gerät  
   
@@ -108,6 +106,11 @@ ms.lasthandoff: 05/17/2017
 |**Sprachaufzeichnung**|Ermöglicht die Verwendung von Sprachaufzeichnungsfeatures auf dem Gerät.<br /><br /> (ausschließlich Windows 10)|
 |**Cortana**|Ermöglicht die Verwendung des Sprach-Assistenten Cortana.<br /><br /> (ausschließlich Windows 10)|
 |**Info-Center-Benachrichtigungen**|Aktivieren oder Deaktivieren des Bereichs „Benachrichtigung“ in Windows 10. <br /><br /> (ausschließlich Windows 10)|
+|**Änderung der Regionseinstellungen (nur Desktop)**|hindert Benutzer daran, die Regionseinstellungen auf dem Gerät zu ändern.|
+|**Änderung der Energie- und Energiesparmoduseinstellungen (nur für Desktopcomputer)**|hindert Benutzer daran, die Einstellungen für die Stromversorgung und den Standbymodus zu ändern|
+|**Änderung der Spracheinstellungen (nur Desktop)**|hindert Benutzer daran, die Spracheinstellungen auf dem Gerät zu ändern|
+|**Änderung der Systemzeit**|hindert Benutzer daran, die Systemzeit auf dem Gerät zu ändern.|
+|**Änderung des Gerätenamens**|hindert Benutzer daran, den Gerätenamen zu ändern|
   
 ### <a name="email-management"></a>E-Mail-Verwaltung  
  Diese Einstellungen gelten nur für Geräte unter Windows 8.1 und Windows 10.  
@@ -119,7 +122,7 @@ ms.lasthandoff: 05/17/2017
 |**Zulässige Nachrichtenformate**|Geben Sie an, ob E-Mails HTML oder Nur-Text verwenden können.|  
 |**Maximale Größe für E-Mails im Nur-Text-Format (automatisch heruntergeladen)**|Steuert die maximale Größe für E-Mails im Nur-Text-Format beim automatischen Herunterladen.|  
 |**Maximale Größe für E-Mails im HTML-Format (automatisch heruntergeladen)**|Steuert die maximale Größe für E-Mails im HTML-Format beim automatischen Herunterladen.|  
-|**Maximale Größe eines Anhangs (automatisch heruntergeladen)**|Konfiguriert die maximale Größe für E-Mails, die automatisch heruntergeladen werden.|  
+|**Maximale Größe eines Anhangs (automatisch heruntergeladen)**|legt fest, bis zu welcher Größe E-Mails automatisch heruntergeladen werden.|  
 |**Kalendersynchronisierung**|Ermöglicht die Synchronisierung von Kalendern mit dem Gerät.|  
 |**Benutzerdefiniertes E-Mail-Konto**|Ermöglicht die Verwendung eines Nicht-Microsoft-Kontos auf dem Gerät.|  
 |**Microsoft-Konto in Windows Mail-App optional machen**|Konfigurieren Sie diese Option, wenn ein Microsoft-Konto in Windows Mail nicht zwingend erforderlich sein soll.|  
@@ -131,7 +134,10 @@ ms.lasthandoff: 05/17/2017
 |-------------|-------------|  
 |**Anwendungsstore**|Ermöglicht den Zugriff auf den App Store auf dem Gerät.|  
 |**Geben Sie ein Kennwort für den Zugriff auf den Anwendungsstore ein.**|Benutzer müssen ein Kennwort für den Zugriff auf den App Store eingeben.|  
-|**In-App-Käufe**|Bietet Benutzern die Möglichkeit zu In-App-Käufen.|  
+|**In-App-Käufe**|Bietet Benutzern die Möglichkeit zu In-App-Käufen.|
+|**Apps aus Store automatisch aktualisieren**|Apps aus dem Windows Store können automatisch aktualisiert werden|
+|**Nur privaten Store verwenden**|Aktivieren Sie diese Option, um Benutzern das Herunterladen von Apps aus Ihrem privaten Store zu erlauben.|
+|**Store-App starten**|Mit dieser Option deaktivieren Sie auf Geräten alle Apps, die vorinstalliert waren oder aus dem Windows Store heruntergeladen wurden.|
   
 ### <a name="browser"></a>Browser  
  Diese Einstellungen gelten nur für Geräte unter Windows 8.1 und Windows 10.  
@@ -228,8 +234,8 @@ ms.lasthandoff: 05/17/2017
 |**Drahtlosnetzwerkverbindung**|Aktivieren oder deaktivieren der WLAN-Funktion der Geräte.|  
 |**WLAN-Tethering**|Ermöglicht Benutzern die Verwendung ihres Geräts als mobilen Hotspot.|  
 |**Auslagern von Daten an Wi-Fi, wenn möglich**|Konfigurieren Sie diese Option, um wenn möglich die WLAN-Verbindung auf dem Gerät zu verwenden.|  
-|**Berichterstellung für WLAN-Hotspots**||  
-|**Manuelle WLAN-Konfiguration**||  
+|**Berichterstellung für WLAN-Hotspots**|-|  
+|**Manuelle WLAN-Konfiguration**|-|  
   
 #### <a name="to-configure-a-wireless-network-connection"></a>So konfigurieren Sie eine Drahtlosnetzwerkverbindung  
   
@@ -258,7 +264,7 @@ ms.lasthandoff: 05/17/2017
   
 -   **Zertifikatsdatei** : Klicken Sie auf "Durchsuchen", und wählen Sie dann die Zertifikatsdatei mit der Erweiterung **.cer** aus, die Sie importieren möchten.  
   
--   **Zielspeicher** : Wählen Sie mindestens einen Zielspeicher, dem das importierte Zertifikat auf dem mobilen Gerät hinzugefügt wird, unter den folgenden Optionen aus:  
+-   **Zielspeicher** : Wählen Sie mindestens einen Zielspeicher, dem das importierte Zertifikat auf dem mobilen Gerät hinzugefügt wird, aus den folgenden Optionen aus:  
   
     -   **Stamm**  
   
@@ -272,7 +278,7 @@ ms.lasthandoff: 05/17/2017
   
     -   **Peer**  
   
--   **Rolle** : Wenn **SPC** (Software Publisher Certificate) als Zielspeicher ausgewählt ist, wählen Sie die Rolle, die dem Zertifikat zugeordnet wird, unter den folgenden Optionen aus:  
+-   **Rolle** : Wenn **SPC** (Software Publisher Certificate) als Zielspeicher ausgewählt ist, wählen Sie die Rolle, die dem Zertifikat zugeordnet ist, aus den folgenden Optionen aus:  
   
     -   **Mobilfunkanbieter**  
   
@@ -293,10 +299,10 @@ ms.lasthandoff: 05/17/2017
 |**Benutzerkontensteuerung**|Aktiviert oder deaktiviert die Windows-Benutzerkontensteuerung auf dem Gerät.|  
 |**Netzwerkfirewall**|Aktiviert oder deaktiviert die Windows-Firewall.<br /><br /> (ausschließlich Windows 8.1)|  
 |**Updates (Windows 8.1 und früher)**|Wählen Sie aus, wie Windows-Softwareupdates auf Computer heruntergeladen werden. Sie können z. B. Updates automatisch herunterladen, aber den Zeitpunkt der Installation vom Benutzer auswählen lassen.|  
-|**Minimale Klassifizierung von Updates**|Wählen Sie die minimale Klassifizierung von Updates, die auf Windows-Computer heruntergeladen werden: **Keine**, **Wichtig**oder **Empfohlen**.|  
+|**Minimale Klassifizierung von Updates**|Wählen Sie aus, welche Klassifikation Updates mindestens aufweisen müssen, um auf Windows-Computer heruntergeladen zu werden: **Keine**, **Wichtig**oder **Empfohlen**.|  
 |**Updates (Windows 10)**|Wählen Sie aus, wie Windows-Softwareupdates auf Computer heruntergeladen werden. Sie können z. B. Updates automatisch herunterladen, aber den Zeitpunkt der Installation vom Benutzer auswählen lassen.<br /><br /> (ausschließlich Windows 10)|  
-|**Installationstag**|Wählen Sie den Tag aus, an dem Updates installiert werden.<br /><br /> (ausschließlich Windows 10)|  
-|**Installationszeit**|Wählen Sie die Uhrzeit aus, zu der Updates installiert werden.<br /><br /> (ausschließlich Windows 10)|  
+|**Installationstag**|Wählen Sie den Tag aus, an dem Updates installiert werde sollen.<br /><br /> (ausschließlich Windows 10)|  
+|**Installationszeit**|Wählen Sie die Uhrzeit aus, zu der Updates installiert werden sollen.<br /><br /> (ausschließlich Windows 10)|  
 |**SmartScreen**|Aktivieren oder deaktivieren von Windows SmartScreen.|  
 |**Virenschutz**|Stellt sicher, dass Antivirensoftware auf dem Gerät installiert ist.|  
 |**Virenschutzsignaturen sind aktuell**|Stellt sicher, dass die Antivirensignaturdateien auf dem neuesten Stand sind.|  
@@ -316,15 +322,15 @@ ms.lasthandoff: 05/17/2017
   
  Es ist nicht möglich, kompatible und nicht kompatible Apps im selben Konfigurationselement anzugeben.  
   
-#### <a name="to-specify-apps-that-will-be-allowed-or-blocked"></a>So geben Sie Apps an, die zugelassen oder blockiert werden  
+#### <a name="to-specify-apps-that-are-allowed-or-blocked"></a>Apps angeben, die zugelassen oder blockiert werden  
   
-1.  Geben Sie auf der Seite **Liste zulässiger oder blockierter Apps** die folgenden Informationen an:  
+Geben Sie auf der Seite **Liste zulässiger oder blockierter Apps** die folgenden Informationen an:  
   
-    |Einstellung|Weitere Informationen|  
+|Einstellung|Weitere Informationen|  
     |-------------|----------------------|  
     |**Liste der blockierten Apps**|Wählen Sie diese Option aus, wenn Sie eine Liste von Apps angeben möchten, die Benutzer nicht installieren dürfen.|  
     |**Liste der zulässigen Apps**|Wählen Sie diese Option aus, wenn Sie eine Liste von Apps angeben möchten, die Benutzer installieren dürfen. Die Installation aller anderen Apps wird blockiert.|  
-    |**Hinzufügen**|Fügt eine App zur ausgewählten Liste hinzu. Geben Sie einen Namen Ihrer Wahl sowie die URL zur App im App-Store und optional den Herausgeber der App an.<br /><br /> Zum Angeben der URL suchen Sie im Windows Store die App, die Sie verwenden möchten.<br /><br /> Öffnen Sie die Seite der App, und kopieren Sie die URL in die Zwischenablage. Sie können diese URL nun in der Liste kompatibler oder nicht kompatibler Apps verwenden.<br /><br /> **Beispiel:** Durchsuchen Sie den Store nach der App **Skype** . Die URL, die Sie verwenden, ist **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.|  
+    |**Hinzufügen**|Fügt eine App zur ausgewählten Liste hinzu. Geben Sie einen Namen Ihrer Wahl sowie die URL zur App im App-Store und optional den Herausgeber der App an.<br /><br /> Zum Angeben der URL suchen Sie im Windows Store die App, die Sie verwenden möchten.<br /><br /> Öffnen Sie die Seite der App, und kopieren Sie die URL in die Zwischenablage. Sie können diese URL nun in der Liste kompatibler oder nicht kompatibler Apps verwenden.<br /><br /> **Beispiel:** Durchsuchen Sie den Store nach der App **Skype** . Die von Ihnen verwendete URL lautet **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.|  
     |**Bearbeiten**|Ermöglicht Ihnen das Bearbeiten von Name, Herausgeber und URL der ausgewählten App.|  
     |**Entfernen**|Löscht die ausgewählte App aus der Liste.|  
     |**Importierenieren**|Importiert eine Liste von Apps, die Sie in einer CSV-Datei angegeben haben. Verwenden Sie in der Datei das Format Anwendungsname, Herausgeber und App-URL.|  
@@ -357,7 +363,8 @@ Weitere Informationen zum Konfigurieren des Unternehmensdatenschutzes mit Config
 Diese Einstellungen gelten für Geräte unter Windows 10 und höher.  
   
 |Name der Einstellung|Details|  
-|------------------|-------------|  
+|------------------|-------------| 
+|Microsoft Edge|Verwendung des Webbrowsers Microsoft Edge auf dem Gerät zulassen| 
 |**Suchvorschläge in Adressleiste zulassen**|Ermöglicht der Suchmaschine, schon während der Eingabe von Suchausdrücken Websites vorzuschlagen.|  
 |**Übertragung des Intranetdatenverkehrs an Internet Explorer zulassen**||  
 |**Nicht verfolgen (Do not track) zulassen**|„Do Not Track“ teilt Websites mit, dass sie Ihren Besuch nicht verfolgen sollen.|  
@@ -366,7 +373,14 @@ Diese Einstellungen gelten für Geräte unter Windows 10 und höher.
 |**Cookies zulassen**|Mit dieser Option werden Cookies zugelassen oder deaktiviert.|  
 |**AutoAusfüllen zulassen**|Mit dieser Option wird das AutoAusfüllen-Feature des Edge-Browsers zugelassen.|  
 |**Kennwort-Manager zulassen**|Mit dieser Option wird die Kennwort-Manager-Feature des Edge-Browsers zugelassen.|  
-|**Speicherort der Standortliste für Enterprise-Modus**|Gibt an, wo Sie die Liste der Websites finden, die im Unternehmensmodus geöffnet werden. Benutzer können diese Liste nicht bearbeiten.|  
+|**Speicherort der Standortliste für Enterprise-Modus**|Gibt an, wo Sie die Liste der Websites finden, die im Unternehmensmodus geöffnet werden. Benutzer können diese Liste nicht bearbeiten.|
+|**Zugriff auf about:flags-Seite blockieren**|Verhindern, dass Benutzer in Edge Zugriff auf die Seite about:flags erhalten, die Entwicklereinstellungen und experimentellen Einstellungen enthält.|
+|**Außerkraftsetzen von SmartScreen-Aufforderung verhindern**|Zulassen dass Benutzer Warnungen des SmartScreen-Filters umgehen, mit denen sie vor potenziell schädlichen Websites gewarnt werden.|
+|**Außerkraftsetzen von SmartScreen-Aufforderung für Dateien verhindern**|Zulassen dass Benutzer Warnungen des SmartScreen-Filters umgehen, mit denen sie vor dem Download potenziell schädlicher Dateien gewarnt werden.|
+|**WebRTC-LocalHost-IP-Adresse**|Blockieren Sie die Anzeige der localhost-IP-Adresse der Benutzer beim Telefonieren über das Protokoll WebRTC.|
+|**Standardsuchmodul**|Geben Sie die standardmäßige Suchmaschine an. Die Benutzer können dies jedoch jederzeit ändern.|
+|**OpenSearch-XML-URL**|Sie können eine OpenSearch XML-Datei verwenden, um einen Suchdienst für Microsoft Edge zu erstellen.<br>Weitere Informationen finden Sie im Artikel [OpenSearch](https://msdn.microsoft.com/library/windows/desktop/dd940337)|
+|**Homepages (nur Desktop)**|Fügen Sie eine Liste der Seiten hinzu, die in Edge als Startseiten verwendet werden sollen (nur für Desktopcomputer).|  
 
 
 ### <a name="windows-defender"></a>Windows Defender
@@ -392,7 +406,7 @@ Diese Einstellungen gelten für Geräte unter Windows 10 und höher.
 |**In freigegebenen Netzwerkordnern geöffnete Dateien überprüfen**|Ermöglicht Defender das Überprüfen von Dateien auf freigegebenen Netzlaufwerken (z.B. Dateien, auf die über einen UNC-Pfad zugegriffen wird.<br>Wenn die Dateien auf dem Laufwerk schreibgeschützt sind, kann Defender eventuell gefundene Schadsoftware nicht entfernen.|
 |**Intervall zum Aktualisieren von Signaturen**|Gibt an, in welchem Intervall Defender nach neuen Signaturdateien suchen soll.
 |**Cloudschutz zulassen**|Zulassen oder Blockieren, dass Microsoft Active Protection Service Informationen über Schadsoftwareaktivität von verwalteten Geräten empfängt. Diese Daten werden zur Verbesserung des Diensts für die Zukunft verwendet.|
-|**Beim Senden von Beispielen beim Benutzer nachfragen**|Steuert, ob Dateien, die möglicherweise eine weitere Analyse durch Microsoft erfordern, um festzustellen, ob sie schädlich sind, automatisch an Microsoft gesendet werden.|
+|**Beim Senden von Beispielen beim Benutzer nachfragen**|Steuert, ob Dateien automatisch an Microsoft gesendet werden, wenn möglicherweise erst durch eine weitere Analyse festgestellt werden kann, ob sie schädlich sind.|
 |**Erkennung potenziell unerwünschter Anwendungen**|Schützt registrierte Windows-Desktopgeräte vor dem Ausführen von Software, die von Windows Defender als potenziell unerwünscht eingestuft wird. Sie können sich vor dem Ausführen dieser Anwendungen schützen, oder den Überwachungsmodus verwenden, um bei der Installation einer potenziell unerwünschten Anwendung informiert zu werden.|
 |**Datei- und Ordnerausschlüsse**|Fügt der Ausschlussliste eine oder mehrere Dateien und Ordner hinzu, z.B. „C:\Pfad“ oder „%ProgramFiles%\Pfad\Dateiname.exe“. Diese Dateien und Ordner werden in Echtzeitüberprüfungen oder geplanten Überprüfungen nicht berücksichtigt.|
 |**Dateierweiterungsausschlüsse**|Fügen Sie der Ausschlussliste eine oder mehrere Dateierweiterungen hinzu, z.B. JPG oder TXT. Dateien mit diesen Erweiterungen werden in Echtzeitüberprüfungen oder geplanten Überprüfungen nicht berücksichtigt.|

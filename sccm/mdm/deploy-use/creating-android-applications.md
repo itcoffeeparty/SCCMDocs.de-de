@@ -2,7 +2,7 @@
 title: Erstellen von Android-Anwendungen | Microsoft Docs
 description: "Was Sie beim Erstellen und Bereitstellen von Apps für Android-Geräte berücksichtigen müssen."
 ms.custom: na
-ms.date: 03/27/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,18 +16,17 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 ms.translationtype: HT
-ms.sourcegitcommit: 344b55aecd72479b759b40e8252e64a06c5eaba0
-ms.openlocfilehash: 3bfb7364c3de5264a5fa8a684965d9aebeb84719
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 3a89abc81cd70f4e499bf4e3087fd53915377c44
 ms.contentlocale: de-de
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/29/2017
 
 ---
-# Erstellen von Android-Apps mit System Center Configuration Manager
-<a id="create-android-applications-with-system-center-configuration-manager" class="xliff"></a>
+# <a name="create-android-applications-with-system-center-configuration-manager"></a>Erstellen von Android-Apps mit System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-In einer System Center Configuration Manager-Anwendung ist mindestens ein Bereitstellungstyp enthalten, der die Installationsdateien und Informationen enthält, die zur Bereitstellung der Software für ein Gerät erforderlich sind. Bereitstellungstypen verfügen auch über Regeln, aus denen hervorgeht, wann und wie die Software bereitgestellt wird.  
+In einer System Center Configuration Manager-Anwendung ist mindestens ein Bereitstellungstyp enthalten. Diese umfassen die Installationsdateien und Informationen, die zum Bereitstellen von Software auf einem Gerät erforderlich sind. Bereitstellungstypen verfügen auch über Regeln, aus denen hervorgeht, wann und wie die Software bereitgestellt wird.  
 
  Es gibt die folgenden Möglichkeiten zum Erstellen von Anwendungen:  
 
@@ -37,8 +36,7 @@ In einer System Center Configuration Manager-Anwendung ist mindestens ein Bereit
 
 Unter [Starten des Assistenten zum Erstellen von Anwendungen](../../apps/deploy-use/create-applications.md#start-the-create-application-wizard) finden Sie weitere Informationen zu erforderlichen Schritten zum Erstellen von Configuration Manager-Anwendungen und Bereitstellungstypen. Berücksichtigen Sie beim Erstellen und Bereitstellen von Apps für Android-Geräte auch Folgendes.  
 
-## Allgemeine Aspekte für Android-Apps
-<a id="general-considerations-for-android-apps" class="xliff"></a>
+## <a name="general-considerations-for-android-apps"></a>Allgemeine Aspekte für Android-Apps
 
 Configuration Manager unterstützt die Bereitstellung folgender App-Typen für Android:
 
@@ -53,11 +51,10 @@ Die folgenden Bereitstellungsaktionen werden unterstützt:
 |Android|**Verfügbar**, **Erforderlich**: Der Benutzer muss der Installation und Deinstallation zustimmen.|
 |Android for Work | **Erforderlich** |
 
-## Genehmigen und Bereitstellen von Android for Work Apps
-<a id="approve-and-deploy-android-for-work-apps" class="xliff"></a>
-Als ein Configuration Manager-Administrator können Sie Apps auch auf der [Play for Work-Website](https://play.google.com/work) genehmigen und bereitstellen und diese Apps auf verwalteten Android for Work-Geräten bereitstellen.
+## <a name="approve-and-deploy-android-for-work-apps"></a>Genehmigen und Bereitstellen von Android for Work Apps
+Als ein Configuration Manager-Administrator können Sie Apps auch auf der [Play for Work-Website](https://play.google.com/work) genehmigen und auf verwalteten Android for Work-Geräten bereitstellen.
 
-Gehen Sie wie folgt vor, um Apps im Play for Work-Store zu genehmigen, diese mit der Configuration Manager-Konsole zu synchronisieren und sie anschließend in verwalteten Android for Work-Geräten bereitzustellen. Um Apps in die Arbeitsprofile von Benutzern bereitzustellen, müssen Sie die Apps zunächst in Play for Work genehmigen und anschließend mit der Configuration Manager-Konsole synchronisieren.
+Gehen Sie wie folgt vor, um Apps im Play for Work-Store zu genehmigen, diese mit der Configuration Manager-Konsole zu synchronisieren und sie anschließend in verwalteten Android for Work-Geräten bereitzustellen. Um Apps in den Arbeitsprofilen von Benutzern bereitzustellen, müssen Sie die Apps zunächst in Play for Work genehmigen und anschließend mit der Configuration Manager-Konsole synchronisieren.
 
 1. Öffnen Sie einen Browser und navigieren Sie zu https://play.google.com/work.
 2. Melden Sie sich mit dem Google-Administratorkonto an, das Sie an Ihren Intune-Mandanten gebunden haben.

@@ -2,7 +2,7 @@
 title: Clientpeercache | System Center Configuration Manager
 description: "Verwenden Sie Peercache für Quellspeicherorte für Clientinhalte beim Bereitstellen von Inhalten mit System Center Configuration Manager."
 ms.custom: na
-ms.date: 7/3/2017
+ms.date: 7/31/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,11 +15,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ed6b65a1a5aabc0970cd0333cb033405cf6d2aea
-ms.openlocfilehash: 94802680747a3d371716c1b345b2cba098150716
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 89fcd16887ae77299f9d18472ee6a1ba56794eca
 ms.contentlocale: de-de
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 
@@ -94,7 +94,9 @@ Erfahren Sie mithilfe dieses Berichts, wie Sie Angaben zur Ablehnung einer angeg
 
 -   Clients können nur Inhalte von Peercacheclients übertragen, die sich in ihrer aktuellen Begrenzungsgruppe befinden.
 
--   Jeder Standort, an dem Clients Peer Cache verwenden, muss mit einem [Netzwerkzugriffskonto](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account) konfiguriert sein. Das Konto wird vom Peer Cache-Quellcomputer zum Authentifizieren von Downloadanforderungen von Peers verwendet und erfordert nur Domänenbenutzerberechtigungen für diesen Zweck.
+-   Vor Version 1706 muss jeder Standort, an dem Clients Peer Cache verwenden, mit einem [Netzwerkzugriffskonto](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account) konfiguriert sein. Mit einer Ausnahme ist der Account ab Version 1706 nicht mehr erforderlich.  Die Ausnahme tritt ein, wenn Peercache von einem Client verwendet wird, um eine Tasksequenz aus dem Softwarecenter abzurufen und auszuführen, und diese Tasksequenz den Client über WinPE startet.  In diesem Szenario benötigt der Client in WinPE weiterhin das Netzwerkzugriffskonto, damit er zum Abrufen von Inhalten auf die Peercachequelle zugreifen kann.
+
+    Bei Bedarf wird das Netzwerkzugriffskonto vom Peer Cache-Quellcomputer zum Authentifizieren von Downloadanforderungen von Peers verwendet und erfordert nur Domänenbenutzerberechtigungen für diesen Zweck.
 
 -   Da die aktuelle Begrenzung einer Inhaltsquelle des Peercaches durch die letzte Hardwareinventurübermittlung des Clients bestimmt wird, gilt ein Client, der zu einem Netzwerkort in einer anderen Begrenzungsgruppe wechselt, für den Peercache weiterhin als Mitglied seiner früheren Begrenzungsgruppe. Dadurch kann ein Client als Inhaltsquelle des Peercaches angeboten werden, der sich nicht an seinem unmittelbaren Netzwerkort befindet. Es wird empfohlen, Clients, die für diese Konfiguration anfällig sind, von der Teilnahme als Peercachequelle auszuschließen.
 

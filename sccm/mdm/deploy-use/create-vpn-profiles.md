@@ -2,7 +2,7 @@
 title: VPN-Profile in System Center Configuration Manager | Microsoft-Dokumentation
 description: "VPN-Profile für mobile Geräte in System Center Configuration Manager."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 07/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: 0
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d5166b16ffbe46af561b1ce98c0494cc4aaa72a8
-ms.openlocfilehash: aacd11708f9f9bd5b0a2d1b1cd6db3c60a7c0c28
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: e4a53caab7d76b604a3fee7dcfc4dc48f22b0fb0
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>VPN-Profile für mobile Geräte in System Center Configuration Manager
@@ -39,7 +39,8 @@ Verwenden Sie VPN-Profile in System Center Configuration Manager, um Benutzern m
 
  |Verbindungstyp|iOS und macOS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop und Mobile|  
  |---------------------|----------------------|-------------|-----------------|----------------|--------------------|-----------------------|-----------------------------------|  
- |Cisco AnyConnect|Ja|Ja|Nein|Nein|Nein|Nein|Ja (OMA-URI)|  
+ |Cisco AnyConnect|Ja|Ja|Nein|Nein|Nein|Nein|Ja (OMA-URI)|
+ |Cisco (IPSec)|nur iOS|Nein|Nein|Nein|Nein|Nein|Nein|  
  |Pulse Secure|Ja|Ja|Ja|Nein|Ja|Ja|Ja|  
  |F5 Edge Client|Ja|Ja|Ja|Nein|Ja|Ja|Ja|  
  |Dell SonicWALL Mobile Connect|Ja|Ja|Ja|Nein|Ja|Ja|Ja|  
@@ -106,7 +107,7 @@ Allgemeine Informationen zum Erstellen von VPN-Profilen finden Sie unter [Erstel
             - Wählen Sie **Einmaliges Anmelden (SSO) mit alternativem Zertifikat aktivieren** aus, um ein anderes Zertifikat als das Zertifikat für die VPN-Authentifizierung für die Gerätekompatibilität auszuwählen. Wenn Sie diese Option auswählen, geben Sie die **EKU** (durch Trennzeichen getrennte Liste) und den **Ausstellerhash** an, um das richtige Zertifikat auszuwählen, das der VPN-Client suchen soll.
 
          - Geben Sie unter **Windows Information Protection** die vom Unternehmen verwaltete Unternehmensidentität an. Dies ist normalerweise die primäre Domäne Ihres Unternehmens, z.B. *contoso.com*. Sie können mehrere Domänen angeben, die Ihrer Organisation gehören, indem Sie sie durch das Zeichen „|“ trennen. Beispiel: *contoso.com|newcontoso.com*.   
-              Weitere Informationen zu Windows Information Protection finden Sie unter [Erstellen einer Windows Information Protection-Richtlinie (WIP) mit Microsoft Intune](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/create-wip-policy-using-intune).   
+            Weitere Informationen zu Windows Information Protection finden Sie unter [Erstellen einer Windows Information Protection-Richtlinie (WIP) mit Microsoft Intune](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/create-wip-policy-using-intune).   
 
          ![Konfigurieren des bedingten Zugriffs für VPN](media/vpn-conditional-access.png)
 

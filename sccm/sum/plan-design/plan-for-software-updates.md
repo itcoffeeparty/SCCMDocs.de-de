@@ -1,5 +1,4 @@
 ---
-
 title: Planen von Softwareupdates | Microsoft Docs
 description: "Ein Plan für die Softwareupdatepunkt-Infrastruktur ist wichtig, bevor Sie Softwareupdates in einer System Center Configuration Manager-Produktionsumgebung verwenden."
 keywords: 
@@ -13,12 +12,11 @@ ms.service:
 ms.technology:
 - configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
-ms.openlocfilehash: b5a2fd9f15992c9e5ef8aede64af5446b6852b1a
+ms.translationtype: HT
+ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
+ms.openlocfilehash: 8b739a01a6bb5cacf0f7109e2e6fa3b31dd666d3
 ms.contentlocale: de-de
-ms.lasthandoff: 06/28/2017
-
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -109,11 +107,15 @@ Um die Bedeutung eines Fehlercodes nachzuschlagen, müssen Sie den dezimalen Feh
 
 
 ###  <a name="BKMK_ManuallySwitchSUPs"></a> Manuelles Wechseln von Clients auf einen neuen Softwareupdatepunkt
-Ab Version 1606 von Configuration Manager können Sie für Configuration Manager-Clients die Option zum Wechsel zu einem neuen Softwareupdatepunkt aktivieren, wenn beim aktiven Softwareupdatepunkt Probleme auftreten. Diese Option hat nur Änderungen zur Folge, wenn ein Client mehrere Softwareupdatepunkte von einem Verwaltungspunkt erhält.  
+Ab Version 1606 von Configuration Manager können Sie für Configuration Manager-Clients die Option zum Wechsel zu einem neuen Softwareupdatepunkt aktivieren, wenn beim aktiven Softwareupdatepunkt Probleme auftreten. Diese Option hat nur Änderungen zur Folge, wenn ein Client mehrere Softwareupdatepunkte von einem Verwaltungspunkt erhält.
 
-Aktivieren Sie diese Option auf einer Gerätesammlung oder auf einer Reihe von Geräten. Nach der Aktivierung suchen die Clients nach anderen Softwareupdatepunkten bei der nächsten Überprüfung. Je nach Ihrer WSUS-Konfigurationseinstellung (Updateklassifizierungen, Produkte, ob die Softwareupdatepunkte eine WSUS-Datenbank freigeben, usw.), führt der Wechsel auf einen neuen Softwareupdatepunkt zu zusätzlichem Netzwerkdatenverkehr. Aus diesem Grund sollten Sie diese Option nur bei Bedarf verwenden.  
+> [!IMPORTANT]    
+> Wenn Sie die Geräte wechseln, um einen neuen Server zu verwenden, verwenden die Geräte einen Fallback, um den neuen Server zu finden. Deshalb sollten Sie vor diesem Wechsel die Konfigurationen Ihrer Begrenzungsgruppen überprüfen und sicherstellen, dass sich Ihre Softwareupdatepunkte in den korrekten Begrenzungsgruppen befinden. Weitere Informationen finden Sie unter [Software update points (Softwareupdatepunkte)](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points).
+>
+> Der Wechsel zu einem neuen Softwareupdatepunkt wird zusätzlichen Netzwerkdatenverkehr generieren. Die Größe des Datenverkehrs hängt von Ihren WSUS-Konfigurationseinstellungen ab (Updateklassifizierungen, Produkte, ob die Softwareupdatepunkte eine gemeinsame WSUS-Datenbank verwenden usw.). Wenn Sie mehrere Geräte wechseln möchten, sollten Sie dies während der Wartung von Windows tun, um die Auswirkungen auf Ihr Netzwerk während der Synchronisation mit dem neuen Softwareupdatepunkt-Server zu reduzieren.
 
 #### <a name="to-enable-the-option-to-switch-software-update-points"></a>So aktivieren Sie die Option zum Wechseln von Softwareupdatepunkten  
+Aktivieren Sie diese Option auf einer Gerätesammlung oder auf einer Reihe von Geräten. Nach der Aktivierung suchen die Clients nach anderen Softwareupdatepunkten bei der nächsten Überprüfung.
 
 1.  Gehen Sie in der Configuration Manager-Konsole zu **Bestand und Kompatibilität > Übersicht > Gerätesammlungen**.  
 
@@ -295,8 +297,8 @@ Für Softwareupdates ist es erforderlich, dass eine unterstützte Version von WS
 -   Die Bereitstellung eines ablösenden Softwareupdates wurde in Ihrer Produktionsumgebung nicht genehmigt.  
 
     > [!NOTE]  
-    >  Wenn Configuration Manager ein abgelöstes Softwareupdate auf **Abgelaufen** festlegt, wird das Update in WSUS nicht auf **Abgelaufen** festgelegt. Wenn die WSUS-Bereinigungsaufgabe ausgeführt wird, werden jedoch die Updates, die in Configuration Manager auf **Abgelaufen** festgelegt sind, auf dem WSUS-Server auf **Abgelehnt** festgelegt. Dies führt dazu, dass der Windows Update-Agent auf Computern nicht mehr nach diesen Updates sucht. Dies bedeutet, dass Clients so lange nach einem abgelaufenen Update suchen, bis die Bereinigungsaufgabe ausgeführt wurde. Informationen zur WSUS-Bereinigungsaufgabe finden Sie unter [Wartung für Softwareupdates](/sccm/sum/deploy-use/software-updates-maintenance).
-    
+    > Wenn Configuration Manager ein abgelöstes Softwareupdate auf **Expired** (Abgelaufen) festlegt, wird das Update in WSUS nicht auf **Declined** (Abgelehnt) festgelegt. Wenn die WSUS-Bereinigungsaufgabe ausgeführt wird, werden jedoch die Updates, die in Configuration Manager auf **Expired** (Abgelaufen) festgelegt sind, auf dem WSUS-Server auf **Declined** (Abgelehnt) festgelegt. Dies führt dazu, dass der Windows Update-Agent auf Computern nicht mehr nach diesen Updates sucht. Dies bedeutet, dass Clients so lange nach einem abgelaufenen Update suchen, bis die Bereinigungsaufgabe ausgeführt wurde. Informationen zur WSUS-Bereinigungsaufgabe finden Sie unter [Wartung für Softwareupdates](/sccm/sum/deploy-use/software-updates-maintenance).
+
 ###  <a name="BKMK_UpdateLanguages"></a> Sprachen  
  Über die Spracheinstellungen für den Softwareupdatepunkt können Sie die Sprachen konfigurieren, für die die Übersichtsdetails (Softwareupdate-Metadaten) für Softwareupdates synchronisiert werden sollen, und die Sprachen, in denen die Softwareupdatedateien heruntergeladen werden sollen.  
 

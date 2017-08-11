@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: Nbigman
 ms.author: nbigman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: aa8924a013ebdbee888cab33001fddbe7ad2d67e
-ms.openlocfilehash: 80a716f5a42a81e5550eb1b5c7f14534e14a4fb7
+ms.translationtype: HT
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: 1e00804d27ecef2aadd8bfa395db1919c46243ee
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 08/02/2017
 
 ---
 
@@ -34,10 +33,16 @@ Verwenden Sie Zertifikatprofile in Configuration Manager (SCCM), um für verwalt
 
 Dieses Thema beschreibt, wie Sie vertrauenswürdige Stamm- und SCEP-Zertifikatprofile erstellen. Wenn Sie die PFX-Zertifikatprofile erstellen möchten, sollten Sie den Artikel [Erstellen von PFX-Zertifikatprofilen](../../protect/deploy-use/create-pfx-certificate-profiles.md) lesen.
 
+Erstellen eines Zertifikatprofils:
 
-## <a name="create-a-new-certificate-profile"></a>Erstellen einer neuen Zertifikatvorlage  
+1.  Starten Sie den Assistenten zum Erstellen von Zertifikatprofilen.
+1.  Stellen Sie allgemeine Informationen zum Zertifikat bereit.
+1.  Konfigurieren Sie ein Zertifikat über eine vertrauenswürdige Zertifizierungsstelle (CA).  
+1.  Konfigurieren Sie die SCEP-Zertifikatinformationen (nur für SCEP-Zertifikate).  
+1.  Geben Sie die unterstützten Plattformen für das Zertifikatprofil an.
 
-### <a name="start-the-create-certificate-profile-wizard"></a>Starten des Assistenten zum Erstellen von Zertifikatprofilen  
+
+## <a name="start-the-create-certificate-profile-wizard"></a>Starten Sie den Assistenten zum Erstellen von Zertifikatprofilen.  
 
 1.  Klicken Sie in der System Center Configuration Manager-Konsole auf **Bestand und Kompatibilität**.  
 
@@ -45,7 +50,7 @@ Dieses Thema beschreibt, wie Sie vertrauenswürdige Stamm- und SCEP-Zertifikatpr
 
 3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Zertifikatprofil erstellen**.  
 
-### <a name="provide-general-information-about-the-certificate-profile"></a>Bereitstellen von allgemeinen Informationen zum Zertifikatprofil  
+## <a name="provide-general-information-about-the-certificate-profile"></a>Bereitstellen von allgemeinen Informationen zum Zertifikatprofil  
 
 Geben Sie auf der Seite **Allgemein** des Assistenten zum Erstellen von Zertifikatprofilen die folgenden Informationen an:  
 
@@ -59,11 +64,12 @@ Geben Sie auf der Seite **Allgemein** des Assistenten zum Erstellen von Zertifik
 
 -   **Einstellungen für Simple Certificate Enrollment-Protokoll (SCEP)**: Wählen Sie diesen Typ für das Zertifikatprofil aus, wenn Sie mit dem Simple Certificate Enrollment-Protokoll und dem Rollendienst „Registrierungsdienst für Netzwerkgeräte“ ein Zertifikat für einen Benutzer oder ein Gerät anfordern möchten.
 
--   **Privater Informationsaustausch – PKCS #12 (.PFX)-Einstellungen – Importieren**: Wählen Sie diese Option aus, um ein PFX-Zertifikat zu importieren. Weitere Informationen zum Erstellen von PFX-Zertifikaten finden Sie unter [Erstellen von PFX-Zertifikatprofilen](../../protect/deploy-use/create-pfx-certificate-profiles.md).
+-   **Privater Informationsaustausch – PKCS #12 (.PFX)-Einstellungen – Importieren**: Wählen Sie diese Option aus, um ein PFX-Zertifikat zu importieren. Weitere Informationen zum Erstellen eines PFX-Zertifikats finden Sie unter [Import PFX certificate profiles (Importieren von PFX-Zertifikatprofilen)](/sccm/mdm/deploy-use/import-pfx-certificate-profiles.md).
+
+-   **Personal Information Exchange PKCS #12 (PFX) settings - Create** (Privater Informationsaustausch PKCS #12 (PFX): Einstellungen: Erstellen): Wählen Sie diese Option aus, um PFX-Zertifikate zu verarbeiten, die eine Zertifizierungsstelle verwenden. Weitere Informationen zum Erstellen von PFX-Zertifikaten finden Sie unter [Erstellen von PFX-Zertifikatprofilen](/sccm/mdm/deploy-use/create-pfx-certificate-profiles.md).
 
 
-
-### <a name="configure-a-trusted-ca-certificate"></a>Konfigurieren eines vertrauenswürdigen Zertifikats der Zertifizierungsstelle  
+## <a name="configure-a-trusted-ca-certificate"></a>Konfigurieren eines vertrauenswürdigen Zertifikats der Zertifizierungsstelle  
 
 > [!IMPORTANT]  
 >  Sie müssen mindestens ein Profil mit einem vertrauenswürdigen Zertifikat der Zertifizierungsstelle konfigurieren, bevor Sie ein SCEP-Zertifikatprofil erstellen können.    
@@ -89,7 +95,7 @@ Geben Sie auf der Seite **Allgemein** des Assistenten zum Erstellen von Zertifik
 2.  Stellen Sie mit dem Wert **Zertifikatfingerabdruck** sicher, dass Sie das richtige Zertifikat importiert haben.  
 
 
-### <a name="configure-scep-certificate-information-only-for-scep-certificates"></a>Konfigurieren von SCEP-Zertifikatinformationen (nur für SCEP-Zertifikate)  
+## <a name="configure-scep-certificate-information-only-for-scep-certificates"></a>Konfigurieren von SCEP-Zertifikatinformationen (nur für SCEP-Zertifikate)  
 
 1.  Geben Sie auf der Seite **SCEP-Server** des Assistenten zum Erstellen von Zertifikatprofilen die URLs für die NDES-Server ein, die über SCEP Zertifikate ausstellen. Sie können auswählen, dass eine NDES-URL auf Basis der Konfiguration des Zertifikatregistrierungspunkt-Standortsystemservers automatisch zugewiesen wird, oder Sie können die URLs manuell hinzufügen.  
 
@@ -183,7 +189,7 @@ Geben Sie auf der Seite **Allgemein** des Assistenten zum Erstellen von Zertifik
    >  Wenn Sie ein Zertifikat der Stammzertifizierungsstelle angeben, das dem Benutzer oder Gerät nicht bereitgestellt wurde, wird die Anforderung des Zertifikats, das Sie in diesem Zertifikatprofil konfigurieren, von System Center Configuration Manager nicht eingeleitet.  
 
 
-###  <a name="specify-supported-platforms-for-the-certificate-profile"></a>Angeben von unterstützten Plattformen für das Zertifikatprofil  
+##  <a name="specify-supported-platforms-for-the-certificate-profile"></a>Angeben von unterstützten Plattformen für das Zertifikatprofil  
 
 1. Wählen Sie auf der Seite **Unterstützte Plattformen** des Assistenten zum Erstellen von Zertifikatprofilen die Betriebssysteme aus, unter denen das Zertifikatprofil installiert wird. Alternativ klicken Sie auf **Alle auswählen** , um das Zertifikatprofil unter allen verfügbaren Betriebssystemen zu installieren.
 2. Prüfen Sie die **Übersichtsseite** des Assistenten, und wählen Sie **Fertig stellen** aus. 

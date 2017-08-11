@@ -2,7 +2,7 @@
 title: Data Warehouse | Microsoft-Dokumentation
 description: "Data Warehouse-Dienstpunkt und -Datenbank für System Center Configuration Manager"
 ms.custom: na
-ms.date: 5/31/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: HT
-ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
-ms.openlocfilehash: c421c3495f56503d5cbda7b1a5ab5350a168912d
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: eedbf12d3bf628666efc90c85a8dfab37e4dc9ab
 ms.contentlocale: de-de
-ms.lasthandoff: 07/26/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 #  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>Der Data Warehouse-Dienstpunkt für System Center Configuration Manager
@@ -27,11 +27,12 @@ ms.lasthandoff: 07/26/2017
 
 Ab Version 1702 können Sie den Data Warehouse-Dienstpunkt verwenden, um langfristige Verlaufsdaten zur Bereitstellung für Configuration Manager zu speichern und hierfür Berichte zu erstellen.
 
-> [!TIP]  
+> [!TIP]
 > Der Data Warehouse Dienstpunkt, der mit Version 1702 eingeführt wurde, ist ein vorab veröffentlichtes Feature. Wie Sie es aktivieren, erfahren Sie unter [Use pre-release features (Verwenden vorab veröffentlichter Features)](/sccm/core/servers/manage/pre-release-features).
 
-Das Data Warehouse unterstützt ein Datenvolumen von bis zu 2 TB, inklusive der Zeitstempel für Änderungsnachverfolgung. Die Speicherung der Daten wird durch die automatisierte Synchronisierung der Configuration Manager-Standortdatenbank mit der Data Warehouse-Datenbank erreicht. Auf diese Information kann dann vom Reporting Services-Punkt aus zugegriffen werden.
+> Ab Version 1706 können ist diese Funktion kein vorab veröffentlichtes Feature mehr.
 
+Das Data Warehouse unterstützt ein Datenvolumen von bis zu 2 TB, inklusive der Zeitstempel für Änderungsnachverfolgung. Die Speicherung der Daten wird durch die automatisierte Synchronisierung der Configuration Manager-Standortdatenbank mit der Data Warehouse-Datenbank erreicht. Auf diese Information kann dann vom Reporting Services-Punkt aus zugegriffen werden. Mit der Data Warehouse-Datenbank synchronisierte Daten werden drei Jahre lang aufbewahrt. Daten, die älter als drei Jahre sind, werden in regelmäßigen Abständen mithilfe einer eingebauten Aufgabe entfernt.
 
 Zu synchronisierten Daten zählen folgende Gruppen von globalen und Standortdaten:
 - Infrastrukturintegrität
@@ -46,15 +47,22 @@ Bei der Installation der Standortsystemrolle wird auch die Data Warehouse-Datenb
 
 
 ## <a name="prerequisites-for-the-data-warehouse-service-point"></a>Voraussetzungen für den Data Warehouse-Dienstpunkt
+- Die Data Warehouse-Standortsystemrolle wird nur am Standort auf der obersten Ebene der Hierarchie unterstützt. Dabei handelt es sich um einen zentralen Verwaltungsstandort oder einen eigenständigen primären Standort.
 - Der Computer, auf dem die Standortsystemrolle installiert ist, erfordert .NET Framework 4.5.2 oder höher.
 - Das Computerkonto des Computers, auf dem Sie die Standortsystemrolle installieren, wird verwendet, um Daten mit der Data Warehouse-Datenbank zu synchronisieren. Für dieses Konto sind folgende Berechtigungen erforderlich:  
   - Ein lokaler **Administrator** auf dem Computer, auf dem die Data Warehouse-Datenbank gehostet werden soll – wenn es sich um einen Remotecomputer handelt.
   - Die Berechtigung **DB-owner** in der Data Warehouse-Datenbank.
   - Die Berechtigungen **DB_reader** und **Ausführen** für die Standortdatenbank der obersten Ebene der Standorte.
--   Die Data Warehouse-Datenbank muss auf einer Standard- oder angegebenen Instant des SQL Server 2012 oder höher unterstützt werden. Die Edition muss entweder Enterprise oder Datacenter sein.
-  - SQL Server Always On-Verfügbarkeitsgruppe: Diese Konfiguration wird nicht unterstützt.
-  - SQL Server-Cluster: SQL Server Failover-Cluster werden nicht unterstützt. Dies liegt daran, dass die Data Warehouse-Datenbank noch nicht ausführlich auf SQL Server Failover-Clustern getestet wurde.
-  - Wenn die Data Warehouse-Datenbank remote gegenüber der Standortserverdatenbank ist, müssen Sie eine eigene Lizenz für den SQL Server haben, der die Datenbank hostet.
+- Für die Data Warehouse-Datenbank wird SQL Server 2012 oder neuer benötigt. Sie können die Editionen Standard, Enterprise oder Datacenter verwenden.
+- Die folgenden SQL Server-Konfigurationen können zum Hosten der Warehouse-Datenbank verwendet werden:  
+  - Standardinstanz
+  - Benannte Instanz
+  - SQL Server Always On-Verfügbarkeitsgruppe
+  - SQL Server-Failovercluster
+-   Wenn die Data Warehouse-Datenbank sich nicht am selben Ort wie die Standortserverdatenbank befindet, benötigen eine separate Lizenz für jeden SQL-Server, der die Datenbank hostet.
+- Bei Verwendung von [verteilten Ansichten](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_distviews) muss die Standortsystemrolle des Data Warehouse-Dienstpunkts auf dem Server installiert sein, auf dem die Standortdatenbank des zentralen Administrationsstandorts gehostet wird.
+
+
 
 > [!IMPORTANT]  
 > Das Data Warehouse wird nicht unterstützt, wenn der Computer, der den Data Warehouse-Dienstpunkt ausführt oder die Data Warehouse-Datenbank hostet, eine der folgenden Sprachen ausführt:
@@ -65,9 +73,7 @@ Bei der Installation der Standortsystemrolle wird auch die Data Warehouse-Datenb
 
 
 ## <a name="install-the-data-warehouse"></a>So installieren Sie Data Warehouse
-Sie können Die Data Warehouse-Standortsystemrolle nur am Standort der obersten Ebene Ihrer Hierarchie (einem Standort der zentralen Verwaltung oder dem eigenständigen primären Standort) installieren.
-
-Jede Hierarchie unterstützt eine einzelne Instanz dieser Rolle, und diese kann auf jedem Standortsystem dieses Standorts der obersten Ebene ermittelt werden. Der SQL Server, der die Datenbank für Warehouse hostet, kann für die Standortsystemrolle sowohl lokal als auch remote sein. Obwohl Data Warehouse mit dem Reporting Services-Punkt funktioniert, der am gleichen Standort installiert ist, müssen die beiden Standortsystemrollen nicht auf dem gleichen Server installiert werden.   
+Jede Hierarchie unterstützt auf jedem Standortsystem des obersten Standorts eine einzelne Instanz dieser Rolle. Der SQL Server, der die Datenbank für Warehouse hostet, kann für die Standortsystemrolle sowohl lokal als auch remote sein. Obwohl Data Warehouse mit dem Reporting Services-Punkt funktioniert, der am gleichen Standort installiert ist, müssen die beiden Standortsystemrollen nicht auf dem gleichen Server installiert werden.   
 
 Um die Rolle zu installieren, verwenden Sie den **Assistent zum Hinzufügen von Standortsystemrollen** oder den **Assistent zum Erstellen von Standortsystemservern**. Weitere Informationen finden Sie unter [Installieren von Standortsystemrollen](/sccm/core/servers/deploy/configure/install-site-system-roles).  
 
@@ -83,7 +89,8 @@ Seite **Allgemein**:
  - **SQL Server-Instanzname (falls zutreffend)**:   
  Wenn Sie keine Standardinstanz des SQL Servers verwenden, müssen Sie die Instanz festlegen.
  - **Datenbankname**:   
- Legen Sie einen Namen für die Data Warehouse-Datenbank fest.  Configuration Manager erstellt die Data Warehouse-Datenbank mit diesem Namen. Wenn ein Datenbankname angegeben wird, der bereits in der Instanz von SQL Server existiert, verwendet Configuration Manager diese Datenbank.
+ Legen Sie einen Namen für die Data Warehouse-Datenbank fest. Der Name der Datenbank darf nicht länger als 10 Zeichen sein. (Die unterstützte Länge wird in einer zukünftigen Version erhöht werden).
+ Configuration Manager erstellt die Data Warehouse-Datenbank mit diesem Namen. Wenn ein Datenbankname angegeben wird, der bereits in der Instanz von SQL Server existiert, verwendet Configuration Manager diese Datenbank.
  - **Verwendeter SQL Server-Port für die Verbindung**:   
  Geben Sie die Portnummer des TCP/IP an, die für den SQL Server konfiguriert ist, der die Data Warehouse-Datenbank hostet. Dieser Port wird vom Data Warehouse-Synchronisierungsdienst verwendet, um eine Verbindung mit der Data Warehouse-Datenbank herzustellen.  
 
@@ -125,7 +132,7 @@ Im Gegensatz zum Bewegen der Data Warehouse-Datenbank führt diese Änderung zum
 ## <a name="move-the-data-warehouse-database"></a>Verschieben der Data Warehouse-Datenbank
 Führen Sie zum Verschieben der Data Warehouse-Datenbank auf einen neuen Server von SQL Server die folgenden Schritte aus:
 
-1.  Verwenden Sie SQL Server Management Studio zum Sichern der Data Warehouse-Datenbank, und stellen Sie anschließend dieser Datenbank auf einem SQL-Server auf dem neuen Computer wieder her, der das Data Warehouse hostet.   
+1.  Verwenden Sie SQL Server Management Studio, um die Datawarehouse-Datenbank zu sichern. Stellen Sie dann die Datenbank in einem SQL Server auf einem Computer wieder her, auf dem das Data Warehouse gehostet wird.   
 > [!NOTE]     
 > Nachdem Sie die Datenbank auf dem neuen Server wiederhergestellt haben, stellen Sie sicher, dass die Zugriffsberechtigungen der neuen Data Warehouse-Datenbank identisch zu den ursprüngliche Data Warehouse-Datenbank sind.  
 
@@ -167,7 +174,7 @@ Beim Öffnen eines Data Warehouse-Berichts wird folgender Fehler zurückgegeben:
     2. Öffnen Sie unter **SQL Server-Netzwerkkonfiguration** **SQL Server Configuration Manager**, und klicken Sie unter **Protocols for MSSQLSERVER** (Protokolle für MMSSQLSERVER) mit der rechten Maustaste auf **Eigenschaften**. Wählen Sie dann auf der Registerkarte **Zertifikate** **Data Warehouse SQL Server Identification Certificate** (Data Warehouse SQL Server-Idenfikationszertifikat) als Zertifikat aus, und speichern Sie dann die Änderungen.  
     3. Öffnen Sie unter **SQL Server-Dienste** **SQL Server Configuration Manager**, und starten Sie den **SQL Server-Dienst** und den **Berichtsdienst** neu.
     4.  Öffnen Sie die Microsoft Management Console (MMC), und fügen Sie das Snap-In für **Zertifikate** hinzu; wählen Sie dann aus, dass Sie die **Computerkonten** des lokalen Computer verwalten möchten. Erweitern Sie dann in der MMC den Ordner **Persönlich** > **Zertifikate**, und exportieren Sie das **Data Warehouse SQL Server Identification Certificate** (Data Warehouse SQL Server-Idenfikationszertifikat) als **DER-codierte binäre X.509 (.CER)**.Datei.    
-  2.    Öffnen Sie auf dem Computer, der SQL Server-Berichtsdienste hostet, die MMC, und fügen Sie das Snap-In für **Zertifikate** hinzu; wählen Sie anschließend aus, dass Sie das Zertifikat für **Computerkonten** verwalten möchten. Importieren Sie im Ordner **Als vertrauenswürdig eingestufte Stammzertifizierungsstelle** das **Data Warehouse SQL Server Identification Certificate** (Data Warehouse SQL Server-Idenfikationszertifikat).
+  2.    Öffnen Sie auf dem Computer, der SQL Server-Reporting Services hostet, die MMC, und fügen Sie das Snap-In für **Zertifikate** hinzu. Wählen Sie dann aus, dass Sie Zertifikate für das **Computerkonto** verwalten möchten. Importieren Sie im Ordner **Als vertrauenswürdig eingestufte Stammzertifizierungsstelle** das **Data Warehouse SQL Server Identification Certificate** (Data Warehouse SQL Server-Idenfikationszertifikat).
 
 
 ## <a name="data-warehouse-dataflow"></a>Data Warehouse-Datenfluss   
@@ -186,5 +193,5 @@ Beim Öffnen eines Data Warehouse-Berichts wird folgender Fehler zurückgegeben:
 |:------:|-----------|  
 | **A**  |  Mithilfe integrierter Berichte fordert ein Benutzer Daten an. Diese Anforderung wird mittels SQL Server Reporting Services an den Reporting Services-Punkt übertragen. |  
 | **B**  |      Die meisten Berichte gelten für aktuelle Informationen. Diese Anfragen werden in der Standortdatenbank ausgeführt. |  
-| **C**  | Wenn ein Bericht Verlaufsdaten mit einem der Berichte mit einer *Kategorie* des **Data Warehouse** anfragt, wird diese Anfrage in der Data Warehouse-Datenbank ausgeführt.   |  
+| **C**  | Wenn ein Bericht über einen der Berichte mit der *Kategorie* **Data Warehouse** alte Daten anfordert, ist die Data Warehouse-Datenbank das Ziel der Anfrage.   |  
 

@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0cf2ac6440588ccf4848baa7a195f78e8675447d
-ms.openlocfilehash: c6a1eb9ccaee45eb242fb320cb6b492d1a39d349
+ms.translationtype: HT
+ms.sourcegitcommit: 0663ba84762c44a5c303562548499f195bae9e1c
+ms.openlocfilehash: cc678c1133b1944f55bcad309cf9ede9f0660b57
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="manage-boot-images-with-system-center-configuration-manager"></a>Verwalten von Startimages mit System Center Configuration Manager
@@ -33,15 +32,7 @@ Ein Startimage in Configuration Manager ist ein [Windows PE-Image (WinPE)](https
 ## <a name="BKMK_BootImageDefault"></a> Standardstartimages
 Configuration Manager stellt zwei Standardstartimages bereit: ein Startimage zur Unterstützung von x86-Plattformen und eines zur Unterstützung von x64-Plattformen. Diese Images sind hier gespeichert: \\\\*Servername*>\SMS_<*Standortcode*>\osd\boot\\<*x64*> oder <*i386*>. Die Standardstartimages werden je nach der von Ihnen ausgeführten Aktion aktualisiert oder neu generiert.
 
-**Verwenden von Updates und Wartung zum Installieren der neuesten Version von Configuration Manager** Wenn Sie ab Version 1702 ein Upgrade auf die Windows ADK-Version ausführen und anschließend Updates und Wartung zum Installieren der neuesten Version von Configuration Manager verwenden, generiert Configuration Manager die Standardstartimages neu. Dies schließt die neue Windows PE-Version vom aktualisierten Windows ADK, die neue Version des Configuration Manager-Clients, Treiber, Anpassungen usw. ein. Benutzerdefinierte Startimages werden nicht geändert.
-
-Vor Version 1702 aktualisiert Configuration Manager das vorhandene Startimage (boot.wim) mit den Clientkomponenten, Treibern, Anpassungen usw. Es wird jedoch nicht die neueste Windows PE-Version vom Windows ADK verwendet. Sie müssen das Startimage manuell anpassen, um die neueste Version des Windows ADK zu verwenden.
-
-**Upgrade von Configuration Manager 2012 auf Configuration Manager Current Branch (CB)** Wenn Sie Configuration Manager 2012 auf Configuration Manager CB mithilfe des Installationsprozesses upgraden, generiert Configuration Manager die Standartstartimages neu. Dies schließt die neue Windows PE-Version vom aktualisierten Windows ADK ein, die neue Version des Configuration Manager-Clients sowie alle Anpassungen bleiben unverändert. Benutzerdefinierte Startimages werden nicht geändert.
-
-**Aktualisieren der Verteilungspunkte mit dem Startimage** Wenn Sie die Aktion **Verteilungspunkte aktualisieren** aus dem Knoten **Boot Images** (Startimages) in der Configuration Manager-Konsole verwenden, aktualisiert Configuration Manager die Standardstartimages mit den Clientkomponenten, den Treibern, den Anpassungen usw. Es wird jedoch nicht die neueste Windows PE-Version aus dem Windows ADK verwendet. Benutzerdefinierte Startimages werden nicht geändert.
-
-Berücksichtigen Sie auch Folgendes für die oben aufgeführten Aktionen:
+Beachten Sie Folgendes für sämtliche Aktionen, die in den folgenden Abschnitten beschrieben werden:
 - Die Quelltreiberobjekte müssen gültig sein, einschließlich der Treiberquelldateien, da die Treiber andernfalls nicht den Startimages im Speicherort hinzugefügt werden.
 - Startimages, die nicht auf den standardmäßigen Startimages basieren, selbst wenn sie dieselbe Version von Windows PE verwenden, werden nicht angepasst.
 - Sie müssen die angepassten Startimages neu auf Verteilungspunkten verteilen.
@@ -50,6 +41,21 @@ Berücksichtigen Sie auch Folgendes für die oben aufgeführten Aktionen:
 
 > [!NOTE]
 > Das Ablaufprotokolltool von Configuration Manager wird allen Startimages hinzugefügt, die Sie der **Softwarebibliothek** hinzufügen. In Windows PE können Sie das Ablaufprotokolltool von Configuration Manager starten, indem Sie **CMTrace** in einer Befehlszeile eingeben.  
+
+### <a name="use-updates-and-servicing-to-install-the-latest-version-of-configuration-manager"></a>Verwenden Sie Updates und Wartungen, um die neueste Version des Configuration Manager zu installieren.
+Wenn Sie die Windows ADK-Version ab Version 1702 upgraden und dann Updates und Wartung zum Installieren der neuesten Version von Configuration Manager verwenden, generiert Configuration Manager ab dieser Version die Standardstartimages neu. Dies schließt die neue Windows PE-Version vom aktualisierten Windows ADK ein, die neue Version des Configuration Manager-Clients, Treiber, Anpassungen und so weiter. Benutzerdefinierte Startimages werden nicht geändert.
+
+Vor Version 1702 aktualisiert Configuration Manager das vorhandene Startimage (boot.wim) mit den Clientkomponenten, Treibern, Anpassungen usw. Es wird jedoch nicht die neueste Windows PE-Version vom Windows ADK verwendet. Sie müssen das Startimage manuell anpassen, um die neueste Version des Windows ADK zu verwenden.
+
+### <a name="upgrade-from-configuration-manager-2012-to-configuration-manager-current-branch-cb"></a>Aktualisieren von Configuration Manager 2012 auf Configuration Manager Current Branch (CB)
+Wenn Sie Configuration Manager 2012 auf Configuration Manager CB mithilfe des Installationsprozesses upgraden, generiert Configuration Manager die Standardstartimages neu. Dies schließt die neue Windows PE-Version vom aktualisierten Windows ADK ein, die neue Version des Configuration Manager-Clients sowie alle Anpassungen bleiben unverändert. Benutzerdefinierte Startimages werden nicht geändert.
+
+### <a name="update-distribution-points-with-the-boot-image"></a>Aktualisieren von Verteilungspunkten mithilfe des Startabbilds
+Wenn Sie die Aktion **Update Distribution Points** (Verteilungspunkte aktualisieren) aus dem Knoten **Boot Images** (Startimages) in der Configuration Manager-Konsole verwenden, aktualisiert Configuration Manager die Standardstartimages mit den Clientkomponenten, den Treibern, den Anpassungen usw.    
+
+Ab Version 1706 des Configuration Manager können Sie wahlweise die neueste Version von Windows PE in das Startimage laden (aus dem Installationsverzeichnis von Windows ADK). Die Seite **Allgemein** des Assistenten für die Aktualisierung von Verteilungspunkten enthält Informationen über die auf dem Standortserver installierte Windows ADK-Version, die Windows ADK-Version, von der aus Windows PE im Startimage verwendet wurde, und die Version des Configuration Manager-Clients. Anhand dieser Informationen können Sie entscheiden, ob Sie das Startimage erneut laden möchten. Darüber hinaus wurde eine neue Spalte hinzugefügt (**Clientversion**), die angezeigt wird, wenn Sie Startimages im Knoten **Startimages** anzeigen, damit Sie wissen, welche Version des Configuration Manager-Clients jedes Startimage verwendet.    
+
+Benutzerdefinierte Startimages werden nicht geändert.
 
 ##  <a name="BKMK_BootImageCustom"></a> Anpassen eines Startimages  
  Sie können ein Startimage über die Configuration Manager-Konsole anpassen oder [ein Startimage ändern](#BKMK_ModifyBootImages), wenn das Image auf einer Windows PE-Version aus der unterstützten Version von Windows ADK basiert. Wenn ein Standort mit einer neuen Version aktualisiert wird und eine neue Version von Windows ADK installiert wird, werden benutzerdefinierte Startimages (die sich nicht im Standardspeicherort für Startimages befinden) nicht mit der neuen Version von Windows ADK aktualisiert. In diesem Fall können Sie die Startimages in der Configuration Manager-Konsole nicht mehr anpassen. Diese funktionieren jedoch weiterhin wie vor dem Upgrade.  
@@ -123,7 +129,7 @@ Berücksichtigen Sie auch Folgendes für die oben aufgeführten Aktionen:
 >   
 >  Weitere Informationen zur Verwendung von PXE zum Bereitstellen von Betriebssystemen finden Sie unter [Verwenden von PXE zum Bereitstellen von Windows über das Netzwerk](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
- Die Schritte zum Verteilen eines Startabbilds finden Sie unter [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).  
+ Die Schritte zum Verteilen eines Startabbilds finden Sie unter [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).  
 
 ##  <a name="BKMK_ModifyBootImages"></a> Ändern eines Startimages  
  Sie können dem Abbild Gerätetreiber hinzufügen, Gerätetreiber aus dem Abbild entfernen oder die Eigenschaften des Startabbilds bearbeiten. Die Gerätetreiber, die Sie hinzufügen oder entfernen, können Treiber für Netzwerkkarten oder Massenspeichergeräte umfassen. Berücksichtigen Sie beim Ändern von Startabbildern die folgenden Faktoren:  
@@ -132,7 +138,7 @@ Berücksichtigen Sie auch Folgendes für die oben aufgeführten Aktionen:
 
 -   Wenn Sie ein Startabbild ändern, wird keines der zugewiesenen Pakete geändert, auf die das Startabbild verweist.  
 
--   Nachdem Sie Änderungen an einem Startabbild vorgenommen haben, müssen Sie das Startabbild auf den Verteilungspunkten **aktualisieren** , auf denen das Startabbild bereits vorhanden ist, sodass die neueste Version des Startabbilds verfügbar ist. Weitere Informationen finden Sie unter [Manage content you have distributed](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkmanagea-manage-the-content-you-have-distributed).  
+-   Nachdem Sie Änderungen an einem Startabbild vorgenommen haben, müssen Sie das Startabbild auf den Verteilungspunkten **aktualisieren** , auf denen das Startabbild bereits vorhanden ist, sodass die neueste Version des Startabbilds verfügbar ist. Weitere Informationen finden Sie unter [Manage content you have distributed](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_manage).  
 
  Gehen Sie wie folgt vor, um ein Startabbild zu ändern.  
 
@@ -213,7 +219,7 @@ Berücksichtigen Sie auch Folgendes für die oben aufgeführten Aktionen:
         -   Geben Sie unter **Einstellungen für vorab bereitgestellten Verteilungspunkt** an, wie das Startabbild an Verteilungspunkte verteilt werden soll, die für vorab bereitgestellten Inhalt aktiviert sind.  
 
             > [!NOTE]  
-            >  Weitere Informationen zu vorab bereitgestelltem Inhalt finden Sie unter [Prestage content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content).  
+            >  Weitere Informationen zu vorab bereitgestelltem Inhalt finden Sie unter [Prestage content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_prestage).  
 
     -   Wählen Sie auf der Registerkarte **Inhaltsorte** den Verteilungspunkt bzw. die Verteilungspunktgruppe aus, und führen Sie die folgenden Aktionen aus:  
 

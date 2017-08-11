@@ -2,7 +2,7 @@
 title: SQL Server AlwaysOn | Microsoft-Dokumentation
 description: "Planen Sie die Verwendung einer SQL Server-AlwaysOn-Verfügbarkeitsgruppe mit SCCM."
 ms.custom: na
-ms.date: 5/26/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,12 +15,11 @@ caps.latest.revision: 16
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dc221ddf547c43ab1f25ff83c3c9bb603297ece6
-ms.openlocfilehash: 188ae877368a6cb2ec9998bff74259b4e5b5e7ce
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: c746365238e1255d73387a9496521bb03a56b21b
 ms.contentlocale: de-de
-ms.lasthandoff: 06/01/2017
-
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Vorbereiten der Verwendung von SQL Server AlwaysOn-Verfügbarkeitsgruppen mit Configuration Manager
@@ -38,12 +37,14 @@ Wenn Sie Verfügbarkeitsgruppen in Microsoft Azure verwenden, können Sie die Ve
 >  Machen Sie sich mit der Konfiguration von SQL Server und SQL Server-Verfügbarkeitsgruppen vertraut, bevor Sie fortfahren. In den folgenden Informationen wird auf die SQL Server-Dokumentationsbibliothek und entsprechende Verfahren verwiesen.
 
 ## <a name="supported-scenarios"></a>Unterstützte Szenarien
-Die folgenden Szenarien werden für die Verwendung von Verfügbarkeitsgruppen mit Configuration Manager unterstützt. Ausführliche Informationen und Vorgehensweisen für die einzelnen Szenarien finden Sie unter [Konfigurieren von Verfügbarkeitsgruppen für Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag).
+Die folgenden Szenarios werden für die Verwendung von Verfügbarkeitsgruppen mit Configuration Manager unterstützt. Ausführliche Informationen und Vorgehensweisen für die einzelnen Szenarien finden Sie unter [Konfigurieren von Verfügbarkeitsgruppen für Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag).
 
 
 -      [Erstellen einer Verfügbarkeitsgruppe für die Verwendung mit Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group).
 -     [Konfigurieren eines Standorts zur Verwendung einer Verfügbarkeitsgruppe](/sccm/core/servers/deploy/configure/configure-aoag#configure-a-site-to-use-the-database-in-the-availability-group).
--     [Hinzufügen von Replikationsmitgliedern zu einer Verfügbarkeitsgruppe, die eine Standortdatenbank hostet, oder Entfernen von Replikationsmitgliedern](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-replica-members).
+-     [Add or remove synchronous replica members from an availability group that hosts a site database (Hinzufügen oder Entfernen von synchronen Replikationsmitgliedern zu einer Verfügbarkeitsgruppe, die eine Standortdatenbank hostet)](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-synchronous-replica-members)
+-     [Configure asynchronous commit replicas (Konfigurieren von Replikaten mit asynchronem Commit)](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-repilca) (Erfordert Configuration Manager Version 1706 oder höher.)
+-     [Recover a site from an asynchronous commit replica (Wiederherstellen eines Standorts aus einem Replikat mit asynchronem Commit)](/sccm/core/servers/deploy/configure/configure-aoag#use-the-asynchronous-replica-to-recover-your-site) (Erfordert Configuration Manager Version 1706 oder höher.)
 -     [Verschieben einer Standortdatenbank aus einer Verfügbarkeitsgruppe in eine Standardinstanz oder eine benannte Instanz einer eigenständigen SQL Server-Instanz](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group).
 
 
@@ -62,31 +63,35 @@ Jedes Replikat in der Verfügbarkeitsgruppe muss eine Version von SQL Server aus
 Sie müssen eine *Enterprise* Edition von SQL Server verwenden.
 
 **Konto:**  
-Jede Instanz von SQL Server kann mit einem Domänenbenutzerkonto (**Dienstkonto**) oder mit **Lokales System** ausgeführt werden. Jedes Replikat in einer Gruppe kann eine andere Konfiguration aufweisen. Die [bewährten Methoden für SQL Server](/sql/sql-server/install/security-considerations-for-a-sql-server-installation#before-installing-includessnoversionincludesssnoversion-mdmd) raten dazu, ein Konto mit möglichst geringen Berechtigungen zu verwenden.
+Jede Instanz von SQL Server kann mit einem Domänenbenutzerkonto (**Dienstkonto**) oder mit einem Nicht-Domänenkonto ausgeführt werden. Jedes Replikat in einer Gruppe kann eine andere Konfiguration aufweisen. Die [bewährten Methoden für SQL Server](/sql/sql-server/install/security-considerations-for-a-sql-server-installation#before-installing-includessnoversionincludesssnoversion-mdmd) raten dazu, ein Konto mit möglichst geringen Berechtigungen zu verwenden.
 
-Informationen zum Konfigurieren von Dienstkonten und Berechtigungen für SQL Server 2016 finden Sie beispielsweise unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions) auf MSDN.
+-   Informationen zum Konfigurieren von Dienstkonten und Berechtigungen für SQL Server 2016 finden Sie unter [Configure Windows Service Accounts and Permissions (Konfigurieren von Windows-Dienstkonten und -Berechtigungen)](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions) auf MSDN.
+-   Sie müssen Zertifikate verwenden, um ein Nicht-Domänenkonto zu verwenden. Weitere Informationen finden Sie unter [Use Certificates for a Database Mirroring Endpoint (Transact-SQL) (Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt (Transact-SQL))](https://docs.microsoft.com/sql/database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql).
 
-  Wenn Sie **Lokales System** verwenden, um ein Replikat auszuführen, müssen Sie die Endpunktauthentifizierung konfigurieren. Dies umfasst die Delegierung von Rechten, um eine Verbindung mit dem Replikatserverendpunkt zu aktivieren.
-  -     Delegieren Sie Rechte für SQL Server, indem Sie das Computerkonto der einzelnen SQL Server-Instanzen als Anmeldung den anderen SQL Server-Instanzen im Knoten hinzufügen und diesem Konto SA-Rechte erteilen.  
-  -     Delegieren Sie Endpunktrechte an jeden Remoteserver auf dem lokalen Endpunkt, indem Sie das folgende Skript für jedes Replikat ausführen:    
-
-              GRANT CONNECT ON endpoint::[endpoint_name]  
-              TO [domain\servername$]
 
 Weitere Informationen finden Sie unter [Erstellen eines Endpunkts für die Datenbankspiegelung für AlwaysOn-Verfügbarkeitsgruppen](/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).
 
 ### <a name="availability-group-configurations"></a>Konfigurationen von Verfügbarkeitsgruppen
 **Replikationsmitglieder:**  
-Die Verfügbarkeitsgruppe muss über ein primäres Replikat verfügen und kann bis zu zwei synchrone sekundäre Replikate enthalten.  Jedes Replikationsmitglied muss:
+-   Die Verfügbarkeitsgruppe muss ein primäres Replikat besitzen.
+-   Vor Version 1706 können Sie bis zu zwei synchrone sekundäre Replikate verwenden.
+-   Ab Version 1706 können Sie die gleiche Anzahl und Art von Replikaten in einer Verfügbarkeitsgruppe nutzen, die von der von Ihnen verwendeten Version von SQL Server unterstützt wird.
+
+    Sie können ein Replikat mit asynchronem Commit zum Wiederherstellen Ihres synchronen Replikats verwenden. Unter [Wiederherstellungsoptionen für die Standortdatenbank]( /sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) finden Sie im Thema zu Sicherung und Wiederherstellung weiterführende Informationen dazu.
+    > [!CAUTION]  
+    > Configuration Manager unterstützt kein Failover, um das Replikat mit asynchronem Commit als Standortdatenbank zu verwenden.
+Da Configuration Manager nicht den Status des Replikats mit asynchronem Commit dahingehend überprüft, ob es aktuell ist, und [ein solches Replikat asynchron sein kann]( https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes), kann das Verwenden eines Replikats mit asynchronem Commit als Standortdatenbank die Integrität Ihres Standorts und Ihrer Daten gefährden.
+
+Jedes Replikationsmitglied muss:
 -   die **Standardinstanz**verwenden.  
     *Ab Version 1702 können Sie eine* ***benannte Instanz*** verwenden.
 
--      **Ja** für **Verbindungen in primärer Rolle** aufweisen.
--      **Ja** für **Lesbare sekundäre Rolle** aufweisen.  
--      auf **Manuelles Failover**festgelegt sein.       
+-     **Ja** für **Verbindungen in primärer Rolle** aufweisen.
+-     **Ja** für **Lesbare sekundäre Rolle** aufweisen.  
+-     auf **Manuelles Failover**festgelegt sein.      
 
     >  [!TIP]
-    >  Configuration Manager unterstützt bei Festlegung auf **Automatisches Failover** die Verwendung der Verfügbarkeitsgruppenreplikate. Ein **manuelles Failover** muss jedoch in folgenden Fällen festgelegt werden:
+    >  Configuration Manager unterstützt bei Festlegung auf **Automatisches Failover** die Verwendung der synchronen Verfügbarkeitsgruppenreplikate. Ein **manuelles Failover** muss jedoch in folgenden Fällen festgelegt werden:
     >  -  Sie führen das Setup aus, um die Verwendung der Standortdatenbank in der Verfügbarkeitsgruppe anzugeben.
     >  -  Wenn Sie ein Update für Configuration Manager installieren (nicht nur Updates für die Standortdatenbank).  
 
@@ -95,15 +100,15 @@ Alle Replikate in einer Verfügbarkeitsgruppe müssen lokal oder in Microsoft Az
 
 Wenn Sie eine Verfügbarkeitsgruppe in Azure einrichten und die Gruppe sich hinter einem internen oder externen Lastenausgleich befindet, müssen Sie die folgenden Standardports öffnen, damit das Setup auf jedes Replikat zugreifen kann:   
 
--      RCP-Endpunktzuordnung: **TCP 135**   
--      Server Message Block: **TCP 445**  
+-     RCP-Endpunktzuordnung: **TCP 135**   
+-     Server Message Block: **TCP 445**  
     *Wenn das Verschieben der Datenbank abgeschlossen ist, können Sie diesen Port entfernen. Ab Version 1702 ist dieser Port nicht mehr erforderlich.*
--      SQL Server Service Broker: **TCP 4022**
--      SQL über TCP: **TCP 1433**   
+-     SQL Server Service Broker: **TCP 4022**
+-     SQL über TCP: **TCP 1433**   
 
 Nach Abschluss des Setups müssen die folgenden Ports zugänglich bleiben:
--      SQL Server Service Broker: **TCP 4022**
--      SQL über TCP: **TCP 1433**
+-     SQL Server Service Broker: **TCP 4022**
+-     SQL über TCP: **TCP 1433**
 
 Ab Version 1702 können Sie benutzerdefinierte Ports für diese Konfigurationen verwenden. Die gleichen Ports müssen vom Endpunkt und auf allen Replikaten in der Verfügbarkeitsgruppe verwendet werden.
 
@@ -119,25 +124,25 @@ Wenn Sie das Setup von Configuration Manager so ausführen, dass ein Standort f�
 Die sekundären Replikatserver benötigen diesen Dateipfad nur, während Sie Setup verwenden, um die Datenbankinstanz der Verfügbarkeitsgruppe anzugeben. Nachdem vom Setup die Konfiguration der Standortdatenbank in der Verfügbarkeitsgruppe durchgeführt wurde, können Sie den nicht verwendeten Pfad von sekundären Replikatservern löschen.
 
 Betrachten Sie beispielsweise das folgende Szenario:
--    Sie erstellen eine Verfügbarkeitsgruppe, die drei SQL Server-Instanzen verwendet.
+-   Sie erstellen eine Verfügbarkeitsgruppe, die drei SQL Server-Instanzen verwendet.
 
--    Ihr primärer Replikatserver ist eine Neuinstallation von SQL Server 2014. Standardmäßig werden die Datenbankdateien der Typen MDF und LDF in „C:\Programme\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA“ gespeichert.
+-   Ihr primärer Replikatserver ist eine Neuinstallation von SQL Server 2014. Standardmäßig werden die Datenbankdateien der Typen MDF und LDF in „C:\Programme\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA“ gespeichert.
 
--    Ihre beiden sekundären Replikatserver wurden von früheren Versionen auf SQL Server 2014 aktualisiert, und Sie behalten den ursprünglichen Dateipfad zum Speichern von Datenbankdateien bei, nämlich: C:\Programme\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA.
+-   Ihre beiden sekundären Replikatserver wurden von früheren Versionen auf SQL Server 2014 aktualisiert, und Sie behalten den ursprünglichen Dateipfad zum Speichern von Datenbankdateien bei, nämlich: C:\Programme\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA.
 
--    Bevor Sie versuchen, die Standortdatenbank in diese Verfügbarkeitsgruppe zu verschieben, müssen Sie auf allen sekundären Replikatservern den folgenden Dateipfad erstellen, auch wenn die sekundären Replikate diesen Dateispeicherort nicht nutzen: C:\Programme\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA (ein Duplikat des Pfads, der für das primäre Replikat verwendet wird).
+-   Bevor Sie versuchen, die Standortdatenbank in diese Verfügbarkeitsgruppe zu verschieben, müssen Sie auf allen sekundären Replikatservern den folgenden Dateipfad erstellen, auch wenn die sekundären Replikate diesen Dateispeicherort nicht nutzen: C:\Programme\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA (ein Duplikat des Pfads, der für das primäre Replikat verwendet wird).
 
--    Anschließend gewähren Sie dem SQL Server-Dienstkonto für jedes sekundäre Replikat Vollzugriff auf den neu erstellten Speicherort auf dem Server.
+-   Anschließend gewähren Sie dem SQL Server-Dienstkonto für jedes sekundäre Replikat Vollzugriff auf den neu erstellten Speicherort auf dem Server.
 
--    Sie können nun das Setup von Configuration Manager erfolgreich so ausführen, dass die Standortdatenbank in der Verfügbarkeitsgruppe verwendet wird.
+-   Sie können nun das Setup von Configuration Manager erfolgreich so ausführen, dass die Standortdatenbank in der Verfügbarkeitsgruppe verwendet wird.
 
 **Konfigurieren der Datenbank für ein neues Replikat:**   
  Die Datenbank der einzelnen Replikate muss mit folgenden Einstellungen festgelegt werden:
--     **CLR-Integration** muss *aktiviert* werden.
--      **Max text repl size** muss *2147483647* sein.
--      Der Datenbankbesitzer muss das *SA-Konto* sein.
--      **TRUSTWORTY** muss **ON** sein.
--      **Service Broker** muss *aktiviert* werden.
+-   **CLR-Integration** muss *aktiviert* werden.
+-     **Max text repl size** muss *2147483647* sein.
+-     Der Datenbankbesitzer muss das *SA-Konto* sein.
+-     **TRUSTWORTY** muss **ON** sein.
+-     **Service Broker** muss *aktiviert* werden.
 
 Sie können diese Konfigurationen nur für ein primäres Replikat festlegen. Um ein sekundäres Replikat zu konfigurieren, müssen Sie zuerst ein Failover des primären Replikats auf das sekundäre Replikat vornehmen, wodurch das sekundäre Replikat das neue primäre Replikat wird.   
 
@@ -213,7 +218,7 @@ Die folgenden Einschränkungen gelten für alle Szenarien.
 **SQL-Server, die zusätzliche Verfügbarkeitsgruppen hosten:**   
 Vor Configuration Manager, Version 1610, galt: Wenn eine Verfügbarkeitsgruppe auf einer SQL Server-Instanz neben der Gruppe für Configuration Manager eine oder mehrere Verfügbarkeitsgruppen hostet, muss jedes Replikat in jeder zusätzlichen Verfügbarkeitsgruppe zum Zeitpunkt der Ausführung des Configuration Manager-Setups oder der Installation eines Updates für Configuration Manager die folgenden Konfigurationen aufweisen:
 -   **Manuelles Failover**
--     **Alle schreibgeschützten Verbindungen zulassen**
+-   **Alle schreibgeschützten Verbindungen zulassen**
 
 **Verwendung nicht unterstützter Datenbanken:**
 -   **Configuration Manager unterstützt nur die Standortdatenbank in einer Verfügbarkeitsgruppe:** Folgende Datenbanken werden nicht unterstützt:

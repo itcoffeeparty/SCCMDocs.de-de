@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
-ms.openlocfilehash: 80d5a13ea5d40150ddd537251e837083e649ac52
+ms.translationtype: HT
+ms.sourcegitcommit: 5f1412fb132e3a074742e11f1142b2594146cbe1
+ms.openlocfilehash: 3e5517e1710d0d12e51fba58efda5dc5edd08544
 ms.contentlocale: de-de
-ms.lasthandoff: 01/03/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-extend-hardware-inventory-in-system-center-configuration-manager"></a>Erweitern der Hardwareinventur in System Center Configuration Manager
@@ -94,7 +93,7 @@ Sie können inventurklassen nur auf dem Server auf oberster Ebene in der Hierarc
 
 12. Wenn Sie Informationen zur ausgewählten WMI-Klasse bearbeiten möchten, wählen Sie **Bearbeiten** aus, und geben Sie im Dialogfeld **Klassenkennzeichner** die folgenden Informationen an:  
 
-    -   **Anzeigename **: Wird im Ressourcen-Explorer angezeigt.  
+    -   **Anzeigename** : Wird im Ressourcen-Explorer angezeigt.  
 
     -   **Eigenschaften** – Legen Sie die Einheiten fest, in denen jede Eigenschaft der WMI-Klasse angezeigt wird.  
 
@@ -148,12 +147,12 @@ Sie können Inventurklassen nur importieren, wenn Sie die Clientstandardeinstell
 > [!IMPORTANT]  
 >  Wenn Sie eine NOIDMIF-Datei erstellen, müssen Sie diese in einem ANSI-codierten Format speichern. In UTF-8-codiertem Format gespeicherte NOIDMIF-Dateien können nicht von Configuration Manager gelesen werden.  
 
- Nachdem Sie eine NOIDMIF-Datei erstellt haben, speichern Sie diese im Ordner *%windir%***\System32\CCM\Inventar\Noidmifs** auf jedem Client. Während des nächsten geplanten Hardwareinventurzyklus sammelt Configuration Manager Informationen aus NOIDMIF-Dateien in diesem Ordner.  
+ Nachdem Sie eine NOIDMIF-Datei erstellt haben, speichern Sie diese im Ordner *%Windir%***\CCM\Inventar\Noidmifs** auf jedem Client. Während des nächsten geplanten Hardwareinventurzyklus sammelt Configuration Manager Informationen aus NOIDMIF-Dateien in diesem Ordner.  
 
 ###  <a name="BKMK_IDMIF"></a> So erstellen Sie IDMIF-Dateien  
  Mithilfe von IDMIF-Dateien können Sie der Configuration Manager-Datenbank Informationen zu Beständen hinzufügen, die normalerweise nicht von Configuration Manager inventarisiert werden können, und keinem bestimmten Clientgerät zugeordnet sind. In den IDMIF-Dateien können Sie z.B. Informationen zu Projektoren, DVD-Playern, Fotokopierern oder anderen Geräten sammeln, auf denen kein Configuration Manager-Client vorhanden ist. Weitere Informationen zum Erstellen von IDMIF-Dateien finden Sie in der Configuration Manager SDK-Dokumentation.  
 
- Nachdem Sie eine IDMIF-Datei erstellt haben, speichern Sie diese im Ordner *%windir%***\System32\CCM\Inventar\Idmifs** auf den Clientcomputern. Während des nächsten geplanten Hardwareinventurzyklus wird Configuration Manager Informationen aus dieser Datei sammeln. Sie müssen für die in der Datei enthaltenen Informationen neue Klassen deklarieren, indem Sie sie hinzufügen oder importieren.  
+ Nachdem Sie eine IDMIF-Datei erstellt haben, speichern Sie diese im Ordner *%Windir%***\CCM\Inventar\Idmifs** auf den Clientcomputern. Während des nächsten geplanten Hardwareinventurzyklus wird Configuration Manager Informationen aus dieser Datei sammeln. Sie müssen für die in der Datei enthaltenen Informationen neue Klassen deklarieren, indem Sie sie hinzufügen oder importieren.  
 
 > [!NOTE]
 > MIF-Dateien können große Datenmengen enthalten. Das Sammeln dieser Daten kann sich negativ auf die Leistung Ihres Standorts auswirken. Aktivieren Sie die MIF-Sammlung nur im Bedarfsfall, und konfigurieren Sie die Option **Maximale benutzerdefinierte MIF-Dateigröße (KB)** in den Einstellungen der Hardwareinventur. Weitere Informationen finden Sie unter [Einführung in die Hardwareinventur in System Center Configuration Manager](introduction-to-hardware-inventory.md).

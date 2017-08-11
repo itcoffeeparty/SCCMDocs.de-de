@@ -16,11 +16,11 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 robots: noindex
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 216d288aa7b7f2b98df86f59355d879366dcd44d
-ms.openlocfilehash: 4baa6e0fe009f5f7dc33f5ab4adb1ec5e5c5271b
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 6630d0170df22f46f14df241ffd8d48266c69263
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 
@@ -277,6 +277,31 @@ ms.lasthandoff: 05/17/2017
       * iOS 6+
       * Android 4.0+
       * Samsung KNOX Standard 4.0+
+<br></br>
+* **Erforderlicher Kennworttyp**. Legen Sie fest, ob Benutzer ein alphanumerisches oder numerisches Kennwort erstellen müssen. Bei alphanumerischen Kennwörtern legen Sie außerdem die erforderliche Mindestzahl an Zeichen fest. Die vier Zeichengruppen sind Kleinbuchstaben, Großbuchstaben, Symbole und Zahlen.
+
+    **Unterstützt auf:**
+    * Windows Phone 8+
+    * Windows 8.1+
+    * iOS 6+
+<br></br>
+* **USB-Debugging auf Gerät blockieren**. Sie müssen diese Einstellungen nicht konfigurieren, da USB-Debuggen bereits auf Android for Work-Geräten deaktiviert ist.
+
+    **Unterstützt auf:**
+    * Android 4.0+
+    * Samsung KNOX Standard 4.0+
+<br></br>
+* **Apps von unbekannten Quellen blockieren**. Fordert an, dass Geräte die Installation von Apps aus unbekannten Quellen verhindern. Sie müssen diese Einstellung nicht konfigurieren, da Android for Work-Geräte die Installation aus unbekannten Quellen stets einschränken.
+
+    **Unterstützt auf:**
+    * Android 4.0+
+    * Samsung KNOX Standard 4.0+
+<br></br>
+* **Bedrohungsüberprüfung für Apps erzwingen**. Diese Einstellung gibt an, dass die Funktion „Apps überprüfen“ auf dem Gerät aktiviert ist. 
+
+    **Unterstützt auf:**
+    * Android 4.2 bis 4.4
+    * Samsung KNOX Standard 4.0+
 
 ### <a name="find-an-app-id"></a>Finden einer App-ID
 

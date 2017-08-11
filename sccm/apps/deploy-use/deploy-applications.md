@@ -2,7 +2,7 @@
 title: Bereitstellen von Anwendungen | Microsoft-Dokumentation
 description: "Erstellen Sie einen Bereitstellungstyp, oder simulieren Sie die Bereitstellung für eine Anwendung mithilfe von System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,21 +16,20 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
-ms.openlocfilehash: 0eaa1d13e9c273a6649f50d73fb357f04464d94c
+ms.translationtype: HT
+ms.sourcegitcommit: b7461f89f483314bd07248bbc9d5dde85ca6b6c2
+ms.openlocfilehash: f704d1b0ec48e3a7bbea784a7c18de77b21cd0ee
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="deploy-applications-with-system-center-configuration-manager"></a>Bereitstellen von Anwendungen mit System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
- Bevor Sie eine System Center Configuration Manager-Anwendung bereitstellen können, müssen Sie mindestens einen Bereitstellungstyp für die Anwendung erstellen. Weitere Informationen zum Erstellen von Anwendungen und Bereitstellungstypen finden Sie unter [Create applications (Erstellen von Anwendungen)](../../apps/deploy-use/create-applications.md).
+Bevor Sie eine System Center Configuration Manager-Anwendung bereitstellen können, müssen Sie mindestens einen Bereitstellungstyp für die Anwendung erstellen. Weitere Informationen zum Erstellen von Anwendungen und Bereitstellungstypen finden Sie unter [Create applications (Erstellen von Anwendungen)](/sccm/apps/deploy-use/create-applications).
 
- Sie können eine Anwendungsbereitstellung auch simulieren. Bei dieser Art der Bereitstellung wird die Anwendbarkeit einer Anwendungsbereitstellung auf Computern getestet, ohne die Anwendung zu installieren oder zu deinstallieren. Bei einer simulierten Bereitstellung werden die Erkennungsmethode, Anforderungen und Abhängigkeiten für einen Bereitstellungstyp ausgewertet. Anschließend wird ein Bericht mit den Ergebnissen im Arbeitsbereich **Überwachung** unter dem Knoten **Bereitstellungen** ausgegeben. Weitere Informationen finden Sie unter [Simulieren von Anwendungsbereitstellungen](../../apps/deploy-use/simulate-application-deployments.md).
+ Sie können eine Anwendungsbereitstellung auch simulieren. Bei dieser Art der Bereitstellung wird die Anwendbarkeit einer Anwendungsbereitstellung auf Computern getestet, ohne die Anwendung zu installieren oder zu deinstallieren. Bei einer simulierten Bereitstellung werden die Erkennungsmethode, Anforderungen und Abhängigkeiten für einen Bereitstellungstyp ausgewertet. Anschließend wird ein Bericht mit den Ergebnissen im Arbeitsbereich **Überwachung** unter dem Knoten **Bereitstellungen** ausgegeben. Weitere Informationen finden Sie unter [Simulate application deployments (Simulieren von Anwendungsbereitstellungen)](/sccm/apps/deploy-use/simulate-application-deployments).
 
 > [!IMPORTANT]
 >  Sie können erforderliche Anwendungen bereitstellen (installieren oder deinstallieren), jedoch keine Pakete oder Softwareupdates. MDM-registrierte Geräte unterstützen ebenfalls keine simulierten Bereitstellungen, Einstellungen für Benutzerfreundlichkeit oder Zeitplanung.
@@ -45,15 +44,20 @@ ms.lasthandoff: 05/17/2017
 
 Geben Sie im Assistenten zum Bereitstellen von Software auf der Seite **Allgemein** die folgenden Informationen an:
 
-- **Software**: Hier wird die Anwendung angezeigt, die bereitgestellt werden soll. Sie können auf **Durchsuchen** klicken, um eine andere Anwendung auszuwählen.
-- **Sammlung**: Klicken Sie auf **Durchsuchen**, um die Sammlung auszuwählen, in der Sie die Anwendung bereitstellen möchten.
-- **Standard-Verteilungspunktgruppen verwenden, die dieser Sammlung zugeordnet sind**: Wählen Sie diese Option aus, wenn der Anwendungsinhalt in der Standard-Verteilungspunktgruppe der Sammlung gespeichert werden soll. Wenn die ausgewählte Sammlung keiner Verteilungspunktgruppe zugeordnet ist, ist diese Option ausgegraut.
-- **Inhalt automatisch für Abhängigkeiten bereitstellen**: Wenn diese Option aktiviert ist, und Bereitstellungstypen in der Anwendung Abhängigkeiten enthalten, wird der Inhalt der abhängigen Anwendung ebenfalls an Verteilungspunkte gesendet.
+- **Software**  
+Hier wird die Anwendung angezeigt, die bereitgestellt werden soll. Sie können auf **Durchsuchen** klicken, um eine andere Anwendung auszuwählen.
+- **Sammlung**  
+Klicken Sie auf **Durchsuchen**, um die Sammlung auszuwählen, in der Sie die Anwendung bereitstellen möchten.
+- **Standard-Verteilungspunktgruppen verwenden, die dieser Sammlung zugeordnet sind**  
+Wählen Sie diese Option aus, wenn Sie den Anwendungsinhalt in der Standard-Verteilungspunktgruppe der Sammlung speichern möchten. Wenn die ausgewählte Sammlung keiner Verteilungspunktgruppe zugeordnet ist, ist diese Option ausgegraut.
+- **Automatically distribute content for dependencies (Inhalt automatisch für Abhängigkeiten bereitstellen)**  
+Wenn diese Option aktiviert ist, und Bereitstellungstypen in der Anwendung Abhängigkeiten enthalten, wird der Inhalt der abhängigen Anwendung ebenfalls an Verteilungspunkte gesendet.
 
     >[!IMPORTANT]
     > Wenn Sie ein Update der abhängigen Anwendung ausführen, nachdem die primäre Anwendung bereitgestellt wurde, wird neuer Inhalt für die Abhängigkeit nicht automatisch verteilt.
 
-- **Kommentare (optional)** : Geben Sie bei Bedarf eine Beschreibung der Bereitstellung ein.
+- **Kommentare (optional)**  
+Geben Sie bei Bedarf eine Beschreibung für diese Bereitstellung ein.
 
 ### <a name="specify-content-options-for-the-deployment"></a>Angeben von Inhaltsoptionen für die Bereitstellung
 
@@ -63,43 +67,50 @@ Klicken Sie auf der Seite **Inhalt** auf **Hinzufügen**, um den dieser Bereitst
 
 Geben Sie im Assistenten zum Bereitstellen von Software auf der Seite **Bereitstellungseinstellungen** die folgenden Informationen an:
 
-- **Aktion**: Wählen Sie in der Dropdownliste aus, ob diese Bereitstellung zum **Installieren** oder **Deinstallieren** der Anwendung dienen soll.
+- **Aktion**  
+Wählen Sie in der Dropdownliste aus, ob diese Bereitstellung zum **Installieren** oder **Deinstallieren** der Anwendung dienen soll.
 
     > [!NOTE]
     >  Wenn eine Anwendung zweimal auf einem Gerät bereitgestellt wird, einmal mit der Aktion **Installieren** und einmal mit der Aktion **Deinstallieren**, hat die Anwendungsbereitstellung mit der Aktion **Installieren** höhere Priorität.
 
 Sie können die Aktion einer Bereitstellung nicht mehr ändern, nachdem sie erstellt wurde.
 
-- **Zweck**: Wählen Sie in der Dropdownliste eine der folgenden Optionen aus:
-    - **Verfügbar**: Wenn die Anwendung für einen Benutzer bereitgestellt wird, ist sie für den Benutzer im Softwarecenter als veröffentlichte Anwendung sichtbar, und er kann sie bei Bedarf installieren.
-    - **Erforderlich**: Die Anwendung wird gemäß dem konfigurierten Zeitplan automatisch bereitgestellt. Wenn der Bereitstellungsstatus nicht ausgeblendet ist, kann jede Person, die die Anwendung verwendet, den Bereitstellungsstatus nachverfolgen, und die Anwendung vor Ablauf der Frist über das Softwarecenter installieren.
+- **Zweck**  
+Wählen Sie in der Dropdownliste eine der folgenden Optionen aus:
+    - **Verfügbar**  
+    Wenn die Anwendung für einen Benutzer bereitgestellt wird, ist sie für den Benutzer im Softwarecenter als veröffentlichte Anwendung sichtbar, und er kann sie bei Bedarf installieren.
+    - **Erforderlich**  
+    Die Anwendung wird gemäß dem konfigurierten Zeitplan automatisch bereitgestellt. Wenn der Bereitstellungsstatus nicht ausgeblendet ist, kann jede Person, die die Anwendung verwendet, den Bereitstellungsstatus nachverfolgen, und die Anwendung vor Ablauf der Frist über das Softwarecenter installieren.
 
     > [!NOTE]   
     >  Wenn als Bereitstellungsaktion **Deinstallieren**ausgewählt wurde, wird als Bereitstellungszweck automatisch **Erforderlich** festgelegt, und die Einstellung kann nicht geändert werden.  
 
-- **Deploy automatically according to schedule whether or not a user is logged on**: (Automatisch mit oder ohne Benutzeranmeldung bereitstellen) Aktivieren Sie diese Option, wenn die Bereitstellung für einen Benutzer bestimmt ist, um die Anwendung auf den primären Geräten des Benutzers bereitzustellen. Bei dieser Einstellung ist es nicht erforderlich, dass sich der Benutzer vor der Ausführung der Bereitstellung anmeldet. Wählen Sie diese Option nicht, wenn Benutzereingaben erforderlich sind, um die Installation abzuschließen. Diese Option ist nur verfügbar, wenn der Bereitstellungszweck auf **Erforderlich**festgelegt ist.
+- **Automatische Bereitstellung nach Zeitplan unabhängig von Benutzeranmeldung**  
+Wählen Sie diese Option bei der Bereitstellung für einen Benutzer aus, um die Anwendung für die primären Geräte des Benutzers bereitzustellen. Bei dieser Einstellung ist es nicht erforderlich, dass sich der Benutzer vor der Ausführung der Bereitstellung anmeldet. Wählen Sie diese Option nicht, wenn Benutzereingaben erforderlich sind, um die Installation abzuschließen. Diese Option ist nur verfügbar, wenn der Bereitstellungszweck auf **Erforderlich**festgelegt ist.
 
-
-- **Aktivierungspakete senden**: Wenn der Bereitstellungszweck auf **Erforderlich** festgelegt und diese Option ausgewählt wird, wird vor der Installation der Bereitstellung ein Aktivierungspaket an den Computer gesendet. Dieses Paket aktiviert den Computer zum Installationsstichtag. Sie können diese Option nur verwenden, wenn Computer und Netzwerke für Wake-On-LAN konfiguriert sind.
-- **Clients mit einer getakteten Internetverbindung dürfen den Inhalt nach dem Installationsstichtag herunterladen (Zusatzkosten können anfallen)**: Diese Option ist nur für Bereitstellungen mit dem Zweck **Erforderlich**verfügbar.
-- **Ausgeführte ausführbare Dateien automatisch schließen, die im Eigenschaftendialogfeld des Bereitstellungstyps auf der Registerkarte „Installationsverhalten“ angegeben wurden**: Weitere Informationen zum Konfigurieren einer Liste von ausführbaren Dateien, die die Installation einer Anwendung verhindert, finden Sie unter **So prüfen Sie auf ausgeführte ausführbare Dateien, bevor Sie eine Anwendung installieren** weiter unten in diesem Thema.
-- **Require administrator approval if users request this application**: (Genehmigung durch Administrator erforderlich, wenn Benutzer diese Anwendung anfordern) Wenn diese Option ausgewählt ist, muss der Administrator jede Benutzeranforderung für die Anwendung zunächst genehmigen, bevor sie installiert werden kann. Diese Option ist ausgegraut, wenn der Zweck der Bereitstellung **Erforderlich** lautet, oder wenn die Anwendung für eine Gerätesammlung bereitgestellt wird.
+- **Aktivierungspakete senden**  
+Wenn der Bereitstellungszweck auf **Erforderlich** festgelegt und diese Option ausgewählt wird, wird vor der Installation der Bereitstellung ein Aktivierungspaket an den Computer gesendet. Dieses Paket aktiviert den Computer zum Installationsstichtag. Sie können diese Option nur verwenden, wenn Computer und Netzwerke für Wake-On-LAN konfiguriert sind.
+- **Clients mit einer getakteten Internetverbindung dürfen den Inhalt nach dem Installationsstichtag herunterladen (Zusatzkosten können anfallen)**  
+Diese Option ist nur für Bereitstellungen mit dem Zweck **Erforderlich** verfügbar.
+- **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box** (Alle ausgeführten Dateien, die Sie in der Registerkarte „Installationsverhalten“ im Dialogfeld zu den Bereitstellungstyp-Eigenschaften spezifiziert haben, werden automatisch beendet)  
+Weitere Informationen darüber, wie Sie eine Liste der ausführbaren Dateien konfigurieren, die die Installation einer Anwendung verhindern können, finden Sie weiter unten in diesem Thema unter **How to check for running executable files before installing an application** (Vorgehensweise: Vor der Installation einer Anwendung nach ausgeführten Dateien suchen).
+- **Genehmigung durch Administrator erforderlich, wenn Benutzer diese Anwendung anfordern**  
+Wenn diese Option ausgewählt ist, muss der Administrator jede Benutzeranforderung für die Anwendung genehmigen, bevor sie installiert werden kann. Diese Option ist ausgegraut, wenn der Zweck der Bereitstellung **Erforderlich** lautet, oder wenn die Anwendung für eine Gerätesammlung bereitgestellt wird.
 
     > [!NOTE]
     >  Genehmigungsanforderungen für Anwendungen werden im Arbeitsbereich **Softwarebibliothek** unter **Anwendungsverwaltung** im Knoten **Genehmigungsanforderungen** angezeigt. Wenn eine Anforderung nicht innerhalb von 45 Tagen genehmigt wird, wird sie entfernt. Außerdem können ausstehende Genehmigungsanforderungen durch eine Neuinstallation des Configuration Manager-Client abgebrochen werden.
     >  Nachdem Sie eine Anwendung für die Installation genehmigt haben, können Sie anschließend auswählen, die Anforderung zu verweigern, indem Sie in der Configuration Manager-Konsole auf **Verweigern** klicken (bisher war diese Schaltfläche nach der Genehmigung ausgegraut).
     >  Diese Aktion führt nicht dazu, dass die Anwendung auf allen Geräten deinstalliert wird, sondern hindert Benutzer daran, neue Kopien der Anwendung aus dem Softwarecenter herunterzuladen.
 
-
-
-- **Automatically upgrade any superseded version of this application**: (Automatisch ein Upgrade aller abgelösten Versionen dieser Anwendung ausführen) Wenn diese Option ausgewählt ist, wird für alle abgelösten Versionen der Anwendung ein Upgrade auf die neuere Version ausgeführt.
+- **Automatically upgrade any superseded version of this application**  (Jede abgelöste Version dieser Anwendung automatisch aktualisieren)  
+Wenn diese Option ausgewählt ist, wird jede abgelöste Version der Anwendung auf die neuere Anwendung aktualisiert.
 
 ### <a name="specify-scheduling-settings-for-the-deployment"></a>Angeben von Einstellungen zur Zeitplanung der Bereitstellung
 
 Stellen Sie im Assistenten zum Bereitstellen von Software auf der Seite **Zeitplanung** die Zeit ein, wann diese Anwendung für Clientgeräte bereitgestellt oder verfügbar gemacht wird.
 Welche Optionen auf dieser Seite verfügbar sind, ist davon abhängig, ob die Bereitstellungsaktion auf **Verfügbar** oder **Erforderlich**gesetzt ist.
 
-In einigen Fällen empfiehlt es sich, Benutzern über die von Ihnen angegebenen Fristen hinaus mehr Zeit zum Installieren von erforderlichen Anwendungsbereitstellungen oder Softwareupdates zu geben. Dies ist normalerweise erforderlich, wenn ein Computer für einen längeren Zeitraum ausgeschaltet war, und eine große Anzahl von Anwendungen oder Updatebereitstellungen installieren muss. Wenn z.B. ein Benutzer gerade aus dem Urlaub zurückgekehrt ist, muss er möglicherweise sehr lange warten, bis überfällige Anwendungsbereitstellungen installiert werden. Sie können jetzt eine zwingende Toleranzperiode definieren, um dieses Problem zu lösen. Dafür müssen Sie die Configuration Manager-Clienteinstellungen für eine Sammlung bereitstellen.
+In einigen Fällen empfiehlt es sich, Benutzern über die von Ihnen angegebenen Fristen hinaus mehr Zeit zum Installieren von erforderlichen Anwendungsbereitstellungen oder Softwareupdates zu geben. Dies ist normalerweise erforderlich, wenn ein Computer für einen längeren Zeitraum ausgeschaltet war, und eine große Anzahl von Anwendungen oder Updatebereitstellungen installieren muss. Wenn z.B. ein Benutzer aus dem Urlaub zurückgekehrt ist, muss er möglicherweise sehr lange warten, bis überfällige Anwendungsbereitstellungen installiert werden. Sie können jetzt eine zwingende Toleranzperiode definieren, um dieses Problem zu lösen. Dafür müssen Sie die Configuration Manager-Clienteinstellungen für eine Sammlung bereitstellen.
 
 Führen Sie folgende Aktionen aus, um die Karenzzeit zu konfigurieren:
 
@@ -138,17 +149,17 @@ Die neue Bereitstellung wird anschließend im Arbeitsbereich **Überwachung** im
 ## <a name="delete-an-application-deployment"></a>Löschen einer Anwendungsbereitstellung
 
 1.  Wechseln Sie in der Configuration Manager-Konsole zu **Softwarebibliothek** > **Anwendungsverwaltung** > **Anwendungen**.
-
 3.  Wählen Sie in der Liste **Anwendungen** die Anwendung aus, die die Bereitstellung enthält, die Sie löschen möchten.
-
 4.  Wählen Sie auf der Registerkarte **Bereitstellungen** in der Liste *<Anwendungsname\>* die zu löschende Anwendungsbereitstellung aus. Klicken Sie auf der Registerkarte **Bereitstellung** in der Gruppe **Bereitstellung** dann auf **Löschen**.
 
- Wenn Sie eine Anwendungsbereitstellung löschen, werden bereits installierte Instanzen der Anwendung nicht entfernt. Sie müssen diese Anwendungen mit **Deinstallieren** auf Computern bereitstellen, um sie zu entfernen. Wenn Sie eine Anwendungsbereitstellung löschen oder eine Ressource aus der Sammlung entfernen, in der Sie die Bereitstellung vornehmen, wird diese im Softwarecenter nicht mehr angezeigt.
+Wenn Sie eine Anwendungsbereitstellung löschen, werden bereits installierte Instanzen der Anwendung nicht entfernt. Sie müssen diese Anwendungen mit **Deinstallieren** auf Computern bereitstellen, um sie zu entfernen. Wenn Sie eine Anwendungsbereitstellung löschen oder eine Ressource aus der Sammlung entfernen, in der Sie die Bereitstellung vornehmen, wird diese im Softwarecenter nicht mehr angezeigt.
 
 ## <a name="user-notifications-for-required-deployments"></a>Benutzerbenachrichtigungen für erforderliche Bereitstellungen
 Wenn Sie erforderliche Software von der Einstellung **Warten und erinnern** erhalten, Können Sie aus der folgenden Dropdownliste von Werten auswählen:
-- **Später**: Gibt an, dass Benachrichtigungen basierend auf den in den Client-Agenteinstellungen konfigurierten Benachrichtigungseinstellungen geplant sind.
-- **Fixed time**: (Feste Zeit) Gibt an, dass die Benachrichtigung nach der ausgewählten Zeit erneut angezeigt wird. Wenn Sie z.B. 30 Minuten auswählen, wird die Benachrichtigung in 30 Minuten erneut angezeigt.
+- **Später**  
+Gibt an, dass Benachrichtigungen basierend auf den in den Client-Agent-Einstellungen konfigurierten Benachrichtigungseinstellungen geplant sind.
+- **Feste Zeit**  
+Gibt an, dass die Benachrichtigung nach der ausgewählten Zeit erneut angezeigt wird. Wenn Sie z.B. 30 Minuten auswählen, wird die Benachrichtigung in 30 Minuten erneut angezeigt.
 
 ![Computer-Agentseite in den Client-Agenteinstellungen](media/ComputerAgentSettings.png)
 
@@ -179,7 +190,8 @@ Nachdem die Anwendung Client-PCs erreicht, gilt Folgendes:
 
 - Wenn die Anwendung als **Erforderlich** bereitgestellt wurde, und die Option **Ausgeführte ausführbare Dateien automatisch schließen, die im Eigenschaftendialogfeld des Bereitstellungstyps auf der Registerkarte "Installationsverhalten" angegeben wurden** nicht ausgewählt ist, schlägt die Installation der Anwendung fehl, wenn mindestens eine der angegebenen Anwendungen ausgeführt wird.
 
-## <a name="for-more-information"></a>Weitere Informationen:
-- [Einstellungen zum Verwalten von Bereitstellungen mit hohem Risiko](../../protect/understand/settings-to-manage-high-risk-deployments.md)
-- [Konfigurieren von Clienteinstellungen](../../core/clients/deploy/configure-client-settings.md)
+## <a name="for-more-information"></a>Weitere Informationen
+
+   -  [Einstellungen zum Verwalten von Bereitstellungen mit hohem Risiko](../../protect/understand/settings-to-manage-high-risk-deployments.md)  
+   -  [Konfigurieren von Clienteinstellungen](../../core/clients/deploy/configure-client-settings.md)
 

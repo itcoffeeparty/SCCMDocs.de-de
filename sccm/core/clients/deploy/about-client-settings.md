@@ -2,7 +2,7 @@
 title: Clienteinstellungen | Microsoft Docs
 description: Auswahl von Clienteinstellungen mithilfe der Verwaltungskonsole in System Center Configuration Manager.
 ms.custom: na
-ms.date: 03/24/2017
+ms.date: 08/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c8717925dba42451b1e241a7c2f59e43896d7d99
-ms.openlocfilehash: 4a169098f30e4a9d708e41ee25c6a400d5ff0e85
+ms.translationtype: HT
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: a8233c361e1a78b14a02f328da445814624e38d8
 ms.contentlocale: de-de
-ms.lasthandoff: 06/19/2017
+ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>Informationen zu Clienteinstellungen in System Center Configuration Manager
@@ -63,9 +63,25 @@ Viele der Clienteinstellungen sind selbsterklärend. Andere werden hier beschrie
 
   Ab Version 1606 wird diese Einstellung verwendet, um den Clientcomputer für [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache) einzurichten. Um die BranchCache-Zwischenspeicherung auf dem Client zuzulassen, legen Sie **BranchCache aktivieren** auf **Ja** fest.
 
+- **BranchCache aktivieren**
+
+aktiviert BranchCache auf Clientcomputern.
+
+- **Maximale BranchCache-Cachegröße (Prozentsatz des Datenträgers)**
+
 - **Konfigurieren der Cachegröße des Clients**
 
-  Der Clientcache auf Windows-Computern speichert temporäre Dateien, die zum Installieren von Anwendungen und Programmen verwendet werden. Wählen Sie **Ja** aus, um die **maximale Cachegröße** (in Megabytes oder als Prozentsatz des Datenträgers) festzulegen. Die Cachegröße kann auf die maximale Größe in MB oder den Prozentsatz des Datenträgers erweitern werden, je nach dem, **welcher Wert kleiner ist**. Wenn die Option **Nein** festgelegt ist, beträgt die Standardgröße 5.120 MB.
+  Der Clientcache auf Windows-Computern speichert temporäre Dateien, die zum Installieren von Anwendungen und Programmen verwendet werden. Klicken Sie auf **Ja** und geben Sie Folgendes an:
+    - **Maximale Cachegröße** (MB) 
+    - **Maximale Cachegröße** (Prozentsatz des Datenträgers)
+Die Cachegröße kann auf die maximale Größe in MB oder den Prozentsatz des Datenträgers erweitern werden, je nach dem, **welcher Wert kleiner ist**. Wenn die Option **Nein** festgelegt ist, beträgt die Standardgröße 5.120 MB.
+
+- **Configuration Manager-Client in vollständigem Betriebssystem zur Freigabe von Inhalten aktivieren**
+
+Aktiviert den Peercache für Configuration Manager-Clients. Geben Sie dann die Portinformationen ein, über die der Client mit dem Peercomputer kommuniziert. Configuration Manager wird Windows-Firewall-Regeln automatisch so konfigurieren, dass dieser Datenverkehr zugelassen wird. Bei Verwendung einer anderen Firewall müssen Sie die Regeln manuell konfigurieren, um diesen Datenverkehr zuzulassen.
+
+
+
 
 ## <a name="client-policy"></a>Clientrichtlinie  
 
@@ -107,7 +123,7 @@ Viele der Clienteinstellungen sind selbsterklärend. Andere werden hier beschrie
 
   -   Der Benutzer wird vom internetbasierten Verwaltungspunkt erfolgreich mithilfe der Windows-Authentifizierung (Kerberos oder NTLM) authentifiziert.  
 
-   Wenn Sie für diese Option die Einstellung **Falsch** oder **Nein**einrichten oder eine der Bedingungen nicht zutrifft, werden an einen Computer im Internet nur Computerrichtlinien übertragen. In diesem Fall können Benutzer weiterhin Anwendungen über einen internetbasierten Anwendungskatalog anzeigen, anfordern und installieren. Wenn diese Einstellung auf **Falsch** oder **Nein** gesetzt wurde, aber die Option **Enable user policy polling on clients** (Benutzerrichtlinienabruf auf Clients aktivieren) auf **Wahr** oder die Option **Benutzerrichtlinie auf Clients aktivieren** auf **Ja**gesetzt ist, erhalten Benutzer erst nach Trennen der Internetverbindung Benutzerrichtlinien.  
+   Wenn Sie für diese Einstellungen **Falsch** oder **Nein**verwenden oder eine der Bedingungen nicht zutrifft, werden an einen Computer im Internet nur Computerrichtlinien übertragen. In diesem Fall können Benutzer weiterhin Anwendungen über einen internetbasierten Anwendungskatalog anzeigen, anfordern und installieren. Wenn diese Einstellung auf **Falsch** oder **Nein** gesetzt wurde, aber die Option **Enable user policy polling on clients** (Benutzerrichtlinienabruf auf Clients aktivieren) auf **Wahr** oder die Option **Benutzerrichtlinie auf Clients aktivieren** auf **Ja**gesetzt ist, erhalten Benutzer erst nach Trennen der Internetverbindung Benutzerrichtlinien.  
 
    Weitere Informationen zur Clientverwaltung im Internet finden Sie unter [Considerations for client communications from the Internet or an untrusted forest (Überlegungen zur Clientkommunikation aus dem Internet oder aus einer nicht vertrauenswürdigen Gesamtstruktur)](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in [Communications between endpoints in System Center Configuration Manager(Datenübertragungen zwischen Endpunkten in System Center Configuration Manager)](../../../core/plan-design/hierarchy/communications-between-endpoints.md).  
 
@@ -118,7 +134,7 @@ Viele der Clienteinstellungen sind selbsterklärend. Andere werden hier beschrie
 
 -   **Kompatibilitätsauswertung planen**  
 
-     Wählen Sie **Zeitplan** aus, um den Standardzeitplan zu erstellen, der für Benutzer angezeigt wird, wenn diese eine Konfigurationsbaseline bereitstellen. Dieser Wert kann im Dialogfeld **Konfigurationsbasislinie bereitstellen** für jede Basislinie konfiguriert werden.  
+     Wählen Sie **Zeitplan** aus, um den Standardzeitplan zu erstellen, der Benutzern angezeigt, wenn diese eine Konfigurationsbaseline bereitstellen. Dieser Wert kann im Dialogfeld **Konfigurationsbasislinie bereitstellen** für jede Basislinie konfiguriert werden.  
 
 -   **Benutzerdaten und Profile aktivieren**  
 

@@ -2,7 +2,7 @@
 title: Erstellen von Exchange ActiveSync-E-Mail-Profilen | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie E-Mail-Profile in System Center Configuration Manager erstellen und konfigurieren, die mit Microsoft Intune verwendet werden.
 ms.custom: na
-ms.date: 03/28/2017
+ms.date: 07/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
-ms.openlocfilehash: bcf337d2abbcd5aad0f99098f6afd4a73ada3a0b
+ms.translationtype: HT
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: 7434c98f2217cf63fdcd250b91e772de72daaea9
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 08/02/2017
 
 ---
 
@@ -48,7 +47,7 @@ Um E-Mail-Profile für Geräte bereitzustellen, müssen Sie die Geräte in Intun
 
  Zusätzlich zum Konfigurieren eines E-Mail-Kontos auf dem Gerät können Sie die Synchronisierungseinstellungen für Kontakte, Kalender und Aufgaben konfigurieren.  
 
- Wenn Sie ein E-Mail-Profil erstellen, können Sie eine Vielzahl von Sicherheitseinstellungen einfügen. Dazu gehören Zertifikate für Identität, Verschlüsselung und Signatur, die mithilfe von System Center Configuration Manager-Zertifikatprofilen eingerichtet wurden. Weitere Informationen zu Zertifikatprofilen finden Sie unter [Zertifikatprofile in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).    
+ Wenn Sie ein E-Mail-Profil erstellen, können Sie eine Vielzahl von Sicherheitseinstellungen einfügen. Dazu gehören Zertifikate für Identität, Verschlüsselung und Signatur, die mithilfe von System Center Configuration Manager-Zertifikatprofilen eingerichtet wurden. Weitere Informationen zu Zertifikatprofilen finden Sie unter [Zertifikatprofile in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles.md).    
 
 ## <a name="create-an-exchange-activesync-email-profile"></a>Erstellen eines Exchange ActiveSync-E-Mail-Profils  
 
@@ -104,19 +103,21 @@ Zum Erstellen eines Profils verwenden Sie den Assistenten zum Erstellen von Exch
 
     -   **Identitätszertifikat**. Wählen Sie **Auswählen** und dann ein Zertifikat für die Identität aus.  
 
-        > [!NOTE]  
-        > Bevor Sie das Identitätszertifikat auswählen können, müssen Sie es zuerst als SCEP-Zertifikatprofil (Simple Certificate Enrollment Protocol) konfigurieren. Weitere Informationen zu Zertifikatprofilen finden Sie unter [Zertifikatprofile in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
+         Als Identitätszertifikate lassen sich nur SCEP-Zertifikate und nicht PFX-Zertifikate verwenden.  Weitere Informationen erhalten Sie unter [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles) (Zertifikatprofile in System Center Configuration Manager).  
 
          Diese Option ist nur verfügbar, wenn Sie unter **Authentifizierungsmethode** die Option **Zertifikate** ausgewählt haben.  
 
     -   **S/MIME verwenden**. Ausgehende E-Mails werden mithilfe von S/MIME-Verschlüsselung gesendet. Diese Option steht nur für iOS-Geräte zur Verfügung. Wählen Sie aus den folgenden Optionen:
 
+        -   **Signaturzertifikate**.  Klicken Sie auf **Auswählen** und wählen Sie dann ein Zertifikat für die Verschlüsselung aus.  
+
+            Für das Profil kann entweder ein SCEP oder ein PFX-Zertifikat verwendet werden.  Wenn Sie jedoch sowohl die Signierung als auch die Verschlüsselung nutzen, müssen Sie für sowohl für die Signierung als auch für die Verschlüsselung PFX-Zertifikatprofile auswählen.**
+
         -   **Verschlüsselungszertifikate**. Wählen Sie **Auswählen** und dann ein Zertifikat für die Verschlüsselung aus. Sie können nur ein PFX-Zertifikat für die Verwendung als Verschlüsselungszertifikat auswählen.
 
-        Wenn Sie sowohl ein Verschlüsselungszertifikat als auch ein Signaturzertifikat auswählen, müssen beide Zertifikate im PFX-Format vorliegen.
+        -   Um alle E-Mail auf iOS-Geräten zu verschlüsseln, aktivieren Sie das Kontrollkästchen **Verschlüsselung erforderlich**.    
 
-        > [!NOTE]  
-        > Bevor Sie Zertifikate auswählen können, müssen Sie diese zuerst als SCEP- oder PFX-Zertifikatprofil konfigurieren. Weitere Informationen zu Zertifikatprofilen finden Sie unter [Zertifikatprofile in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
+         Sie müssen Zertifikatprofile erstellen, bevor Sie sie hier auswählen können.  Weitere Informationen erhalten Sie unter [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles) (Zertifikatprofile in System Center Configuration Manager).  
 
 ## <a name="configure-synchronization-settings-for-the-exchange-activesync-email-profile"></a>Konfigurieren der Synchronisierungseinstellungen für das Exchange ActiveSync-E-Mail-Profil  
 

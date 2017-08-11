@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
-ms.openlocfilehash: da86fc2f61ce8229fb0d3f58a4f8a24d1514b30e
+ms.translationtype: HT
+ms.sourcegitcommit: b7461f89f483314bd07248bbc9d5dde85ca6b6c2
+ms.openlocfilehash: 4d048d4f9ab01b28e6c21a38cca4d82c85030618
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="create-applications-with-system-center-configuration-manager"></a>Erstellen von Anwendungen mit System Center Configuration Manager
@@ -39,7 +38,7 @@ Eine System Center Configuration Manager-Anwendung verfügt über die Dateien un
 -   Importieren Sie eine Anwendung aus einer Datei.  
 
 > [!NOTE]  
->  [Create applications for mobile devices (Erstellen von Anwendungen für mobile Geräte)](../../mdm/deploy-use/create-applications.md) enthält ausführliche Informationen zum Erstellen von iOS-, Windows Phone und Android-Anwendungen.  
+>  Unter [Create applications for mobile devices (Erstellen von Anwendungen für mobile Geräte)](../../mdm/deploy-use/create-applications.md) erhalten Sie ausführliche Informationen zum Erstellen von Anwendungen für iOS, Windows Phone und Android.  
 
 Führen Sie die folgenden Schritte aus, um mithilfe von Configuration Manager Anwendungen und Bereitstellungstypen zu erstellen.  
 
@@ -198,6 +197,14 @@ Die neue Anwendung wird im Knoten **Anwendungen** der Configuration Manager-Kons
 
         > [!IMPORTANT]  
         >  Das Systemkonto des Standortservercomputers muss zum Zugriff auf den angegebenen Inhaltsort berechtigt sein.  
+
+    -   **Einstellungen für zu deinstallierenden Inhalt** – wählen Sie eine der folgenden Optionen aus:
+        - **Übereinstimmend mit zu installierendem Inhalt**– wählen Sie diese Option aus, wenn die Inhalte für die Installation und die Deinstallation identisch sind. Dies ist das Standardverhalten.
+        - **Nicht zu deinstallierender Inhalt** – wählen Sie diese Option aus, wenn Ihre Anwendung für die Deinstallation keine Inhalte benötigt.
+        - **Abweichend von zu installierendem Inhalt** – wählen Sie diese Option aus, wenn die für die Deinstallation benötigten Inhalten von den Inhalten für die Installation abweichen.
+
+4. Wenn Sie **Abweichend von zu installierendem Inhalt** ausgewählt haben, können Sie den Speicherort der Anwendungsinhalte aufrufen eingeben, die zum Deinstallieren der Anwendung verwendet werden.
+5. Klicken Sie auf **OK**, um das Dialogfeld zu Bereitstellungstyp-Eigenschaften zu schließen.
 
     -   **Inhalt dauerhaft in Clientcache speichern**: Mit dieser Option geben Sie an, ob der Inhalt im Cache des Clientcomputers selbst dann dauerhaft beibehalten werden soll, wenn er bereits ausgeführt wurde. Diese Option kann sich bei einigen Bereitstellungen als nützlich erweisen, beispielsweise bei Windows Installer-basierter Software, bei der für die Anwendung von Updates eine lokale Quellkopie erforderlich ist. Allerdings wird der verfügbare Cachespeicher hierdurch verringert. Wenn Sie diese Option auswählen, kann es bei einer umfangreichen Bereitstellung im späteren Verlauf zu einem Fehler kommen, falls der Cache nicht über ausreichend Speicherplatz verfügt.  
 
@@ -416,7 +423,7 @@ In der folgenden Tabelle sind Beispielskripte für Microsoft Visual Basic (VB) a
 
 5.  Wählen Sie **OK** aus, um das Dialogfeld *<Name des Bereitstellungstyps\>* **Eigenschaften** zu schließen.  
 
-6.  Wählen Sie **OK** aus, um das Dialogfeld **Eigenschaften von***<Anwendungsname\>* zu schließen.  
+6.  Wählen Sie **OK** aus, um das Dialogfeld **Eigenschaften von** *<Anwendungsname\>* zu schließen.  
 
 ### <a name="set-up-publishing-options-for-app-v-deployment-types"></a>Einrichten von Veröffentlichungsoptionen für App-V-Bereitstellungstypen  
 
@@ -430,7 +437,7 @@ In der folgenden Tabelle sind Beispielskripte für Microsoft Visual Basic (VB) a
 
 6.  Wählen Sie **OK** aus, um das Dialogfeld *<Name des Bereitstellungstyps\>* **Eigenschaften** zu schließen.  
 
-7.  Wählen Sie **OK** aus, um das Dialogfeld **Eigenschaften von***<Anwendungsname\>* zu schließen.  
+7.  Wählen Sie **OK** aus, um das Dialogfeld **Eigenschaften von** *<Anwendungsname\>* zu schließen.  
 
 ## <a name="import-an-application"></a>Importieren einer Anwendung  
  Gehen Sie wie folgt vor, um eine Anwendung in Configuration Manager zu importieren. Informationen zum Exportieren von Anwendungen finden Sie unter [Management tasks for System Center Configuration Manager applications (Verwaltungsaufgaben für System Center Configuration Manager-Anwendungen)](../../apps/deploy-use/management-tasks-applications.md).  

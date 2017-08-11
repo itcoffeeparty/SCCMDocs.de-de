@@ -1,7 +1,7 @@
 ---
 title: Ermittlungsmethoden | Microsoft-Dokumentation
 ms.custom: na
-ms.date: 2/3/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: 8
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 81d7516b814d2db74d4d857871071c8911755754
-ms.openlocfilehash: 6e53f501281e31f2b7df54b9740eac970f108257
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 442e5e1fbddd00248819a8de79adc78929474fc0
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="about-discovery-methods-for-system-center-configuration-manager"></a>About discovery methods for System Center Configuration Manager (Informationen zu Ermittlungsmethoden in System Center Configuration Manager)
@@ -110,7 +110,7 @@ Sie können die folgenden Ermittlungsbereiche konfigurieren; von diesen wird ges
 
 -   **Speicherort**: Verwenden Sie einen Speicherort, wenn Sie einen oder mehrere Active Directory-Container durchsuchen möchten. Von dieser Bereichsoption wird ein rekursives Durchsuchen der angegebenen Active Directory-Container unterstützt, wobei auch die untergeordneten Container des angegebenen Containers durchsucht werden. Dieser Prozess wird fortgesetzt, bis keine untergeordneten Container mehr gefunden werden.  
 
--   **Gruppen**: Verwenden Sie Gruppen, wenn Sie eine oder mehrere bestimmte Active Directory-Gruppen durchsuchen möchten. Sie können die **Active Directory-Domäne** zum Verwenden von Standarddomäne und Standardgesamtstruktur konfigurieren, oder Sie können die Suche auf einen einzelnen Domänencontroller beschränken. Zusätzlich können Sie eine oder mehrere zu durchsuchende Gruppen angeben. Wenn Sie nicht mindestens eine Gruppe angeben, werden alle Gruppen, die am angegebenen ** ** Active Directory-Domänenspeicherort gefunden werden, durchsucht.  
+-   **Gruppen**: Verwenden Sie Gruppen, wenn Sie eine oder mehrere bestimmte Active Directory-Gruppen durchsuchen möchten. Sie können die **Active Directory-Domäne** zum Verwenden von Standarddomäne und Standardgesamtstruktur konfigurieren, oder Sie können die Suche auf einen einzelnen Domänencontroller beschränken. Zusätzlich können Sie eine oder mehrere zu durchsuchende Gruppen angeben. Wenn Sie nicht mindestens eine Gruppe angeben, werden alle Gruppen, die am angegebenen ****  Active Directory-Domänenspeicherort gefunden werden, durchsucht.  
 
 > [!CAUTION]  
 >  Wenn Sie einen Ermittlungsbereich konfigurieren, wählen Sie nur die Gruppen aus, die ermittelt werden müssen. Dies ist notwendig, weil die Active Directory-Gruppenermittlung versucht, jedes Mitglied in allen Gruppen innerhalb des Ermittlungsbereichs zu ermitteln. Bei der Ermittlung großer Gruppen kann es zu einer übermäßigen Beanspruchung von Bandbreite und Active Directory-Ressourcen kommen.  
@@ -189,6 +189,27 @@ Im Dialogfeld **Eigenschaften von Active Directory-Benutzerermittlung** können 
 Die Aktionen der Active Directory-Benutzerermittlung werden in der Datei **adusrdis.log** im Ordner **&lt;InstallationPath\>\LOGS** auf dem Standortserver aufgezeichnet.  
 
 Weitere Informationen zum Konfigurieren dieser Ermittlungsmethode finden Sie unter [Configure discovery methods for System Center Configuration Manager (Konfigurieren der Active Directory-Ermittlung in Configuration Manager)](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
+
+## <a name="azureaddisc"></a>Azure Active Directory-Benutzerermittlung
+Ab Version 1706 können Sie beim Konfigurieren Ihrer Umgebung für Azure-Dienste die Azure Active Directory-Benutzerermittlung (Azure AD) verwenden.
+Verwenden Sie diese Ermittlungsmethode, um in Azure AD nach Benutzern zu suchen, die sich gegenüber Ihrer Azure AD-Instanz authentifizieren müssen, und die folgenden Attribute zu finden:  
+-   ObjectId
+-   displayName
+-   mail
+-   mailNickname
+-   onPremisesSecurityIdentifier
+-   userPrincipalName
+-   AAD tenantID
+
+Diese Methode unterstützt sowohl die vollständige Synchronisierung als auch die Deltasynchronisierung von Benutzerdaten aus Azure AD. Die gewonnenen Informationen lassen sich gemeinsam mit Ermittlungsdaten aus anderen Ermittlungsmethoden verwenden.
+
+Aktionen der Azure AD-Benutzerermittlung werden in der Datei SMS_AZUREAD_DISCOVERY_AGENT.log auf dem obersten Standortserver der Hierarchie gespeichert.
+
+Für die Konfiguration der Azure AD-Benutzerermittlung verwenden Sie den Assistenten für Azure-Dienste.  Weitere Informationen zum Konfigurieren dieser Ermittlungsmethode finden Sie unter [Konfigurieren der Azure AD-Benutzerermittlung](/sccm/core/servers/deploy/configure/configure-discovery-methods).
+
+
+
+
 
 ##  <a name="bkmk_aboutHeartbeat"></a> Frequenzermittlung  
 **Konfigurierbar:** Ja  
@@ -357,15 +378,15 @@ Beispielsweise wird bei einer auf die Topologie beschränkten Ermittlung mit **0
 
 Im folgenden Diagramm ist dargestellt, was bei einer auf die Topologie beschränkten Abfrage der Netzwerkermittlung gefunden wird, wenn sie auf Server 1 ausgeführt wird und 0 Routerhops angegeben sind: Subnetz D und Router 1.  
 
- ![Bild der Ermittlung mit&0; (null) Routerjumps](media/Disc-0.gif)  
+ ![Bild der Ermittlung mit 0 (null) Routerjumps](media/Disc-0.gif)  
 
  Im folgenden Diagramm ist dargestellt, was bei einer Abfrage der Topologie- und Clientnetzwerkermittlung gefunden wird, wenn sie auf Server 1 ausgeführt wird und 0 Routerhops angegeben sind: Subnetz D, Router 1 und alle potenziellen Clients in Subnetz D.  
 
- ![Bild der Ermittlung mit&1; (einem) Routerjump](media/Disc-1.gif)  
+ ![Bild der Ermittlung mit 1 (einem) Routerjump](media/Disc-1.gif)  
 
  Damit Sie besser verstehen, wie Routerhops die Anzahl der ermittelten Netzwerkressourcen erhöhen können, stellen Sie sich folgendes Netzwerk vor:  
 
- ![Bild der Ermittlung mit&2; (zwei) Routerjumps](media/Disc-2.gif)  
+ ![Bild der Ermittlung mit 2 (zwei) Routerjumps](media/Disc-2.gif)  
 
  Beim Ausführen einer nur auf die Topologie bezogenen Netzwerkermittlung auf Server 1 mit einem einzigen Routerhop wird Folgendes ermittelt:  
 
@@ -407,7 +428,7 @@ Bei der Ausführung dieser drei Ermittlungsmethoden an einem bestimmten Standort
 
 Bei der Ermittlung werden zunächst die angegebenen Orte nach Objekten durchsucht. Anschließend wird versucht, Informationen über diese Objekte zu sammeln. Falls genügend Informationen zu einer Ressource identifiziert werden können, wird ein DDR erstellt. Welche Informationen erforderlich sind, hängt jeweils von der verwendeten Ermittlungsmethode ab.  
 
-Sie können die gleiche Ermittlungsmethode für die Ausführung an mehreren Configuration Manager-Standorten konfigurieren, um den Vorteil von Abfragen an die lokalen Active Directory-Server zu nutzen. In diesem Fall können Sie jeden Standort mit einem eindeutigen Satz von Ermittlungsoptionen konfigurieren. Da die Ermittlungsdaten für alle Standorte in der Hierarchie freigegeben werden, sollten Sie ein Überlappen zwischen diesen Konfigurationen vermeiden, um jede Ressource effektiv ein Mal ermitteln zu können. 
+Sie können die gleiche Ermittlungsmethode für die Ausführung an mehreren Configuration Manager-Standorten konfigurieren, um den Vorteil von Abfragen an die lokalen Active Directory-Server zu nutzen. In diesem Fall können Sie jeden Standort mit einem eindeutigen Satz von Ermittlungsoptionen konfigurieren. Da die Ermittlungsdaten für alle Standorte in der Hierarchie freigegeben werden, sollten Sie ein Überlappen zwischen diesen Konfigurationen vermeiden, um jede Ressource effektiv ein Mal ermitteln zu können.
 
 In kleineren Umgebungen können Sie erwägen, jede Ermittlungsmethode nur an einem einzigen Standort in der Hierarchie auszuführen. So können Sie den Verwaltungsaufwand gering halten und die Wahrscheinlichkeit senken, dass die gleichen Ressourcen von mehreren Ermittlungsaktionen ermittelt werden. Wenn Sie die Anzahl der Standorte, in denen die Ermittlung ausgeführt wird, auf ein Mindestmaß beschränken, können Sie die von der Ermittlung verwendete Netzwerkbandbreite insgesamt verringern. Sie können auch die Anzahl der DDRs reduzieren, die erstellt und von Ihren Standortservern verarbeitet werden müssen.  
 

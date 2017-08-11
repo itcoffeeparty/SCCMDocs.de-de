@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
-ms.openlocfilehash: 7a5ff0e75b8cdac68e3854c4f5aba01a7d423e9b
+ms.translationtype: HT
+ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
+ms.openlocfilehash: 506df4f7c7baa5f0586a1ddf0cb02b3de9f4d076
 ms.contentlocale: de-de
-ms.lasthandoff: 12/29/2016
-
+ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="how-to-manage-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>Verwalten von Clients für Linux- und UNIX-Server in System Center Configuration Manager
@@ -31,7 +30,7 @@ ms.lasthandoff: 12/29/2016
 Bei der Verwaltung von Linux- und UNIX-Servern mit System Center Configuration Manager können Sie Sammlungen, Wartungsfenster und Clienteinstellungen zum Verwalten der Server konfigurieren. Darüber hinaus können Sie erzwingen, dass der Client manuell die Clientrichtlinie abruft, obwohl der Configuration Manager-Client für Linux und UNIX über keine Benutzeroberfläche verfügt.
 
 ##  <a name="BKMK_CollectionsforLnU"></a> Collections of Linux and UNIX servers  
- Sie verwenden Sammlungen, um Gruppen von Linux- und UNIX-Servern in der gleichen Weise wie andere Clienttypen zu verwalten. Sammlungen können Sammlungen mit direkter Mitgliedschaft oder abfragebasierte Sammlungen sein, die Clientbetriebssysteme, Hardwarekonfigurationen oder andere in der Standortdatenbank gespeicherte Details zum Client identifizieren. Mit Sammlungen, die Linux- und UNIX-Server enthalten, können Sie z. B. die folgenden Informationen verwalten:  
+ Sie verwenden Sammlungen, um Gruppen von Linux- und UNIX-Servern in der gleichen Weise wie andere Clienttypen zu verwalten. Sammlungen können Sammlungen mit direkter Mitgliedschaft oder abfragebasierte Sammlungen sein. Abfragebasierte Sammlungen identifizieren Clientbetriebssysteme, Hardwarekonfigurationen oder andere in der Standortdatenbank gespeicherte Details zum Client. Mit Sammlungen, die Linux- und UNIX-Server enthalten, können Sie z. B. die folgenden Einstellungen verwalten:  
 
 -   Clienteinstellungen  
 
@@ -43,14 +42,14 @@ Bei der Verwaltung von Linux- und UNIX-Servern mit System Center Configuration M
 
  Die standardmäßigen Clienteinstellungen für die Hardwareinventur umfassen Informationen zum Betriebssystem eines Clientcomputers. Können Sie die Eigenschaft **Caption** der Klasse **Operating System** verwenden, um das Betriebssystem eines Linux- oder UNIX-Servers zu identifizieren.  
 
- Details zu Computern, auf denen der Configuration Manager-Client für Linux und UNIX ausgeführt wird, können Sie unter dem Knoten „Geräte“ im Arbeitsbereich „Bestand und Kompatibilität“ der Configuration Manager-Konsole anzeigen. Im Arbeitsbereich „Bestand und Kompatibilität“ der Configuration Manager-Konsole wird Name des Betriebssystems jedes Computers in der Spalte **Betriebssystem** angezeigt.  
+ Details zu Computern, auf denen der Configuration Manager-Client für Linux und UNIX ausgeführt wird, können Sie unter dem Knoten **Geräte** im Arbeitsbereich **Bestand und Kompatibilität** der Configuration Manager-Konsole anzeigen. Im Arbeitsbereich **Bestand und Kompatibilität** der Configuration Manager-Konsole wird der Name des **Betriebssystems** jedes Computers in der Spalte Betriebssystem angezeigt.  
 
- Linux- und UNIX-Server sind standardmäßig Mitglieder der Sammlung **Alle Systeme** . Es wird empfohlen, benutzerdefinierte Sammlungen zu erstellen, die nur Linux- und UNIX-Server oder einen Teil davon enthalten. Dadurch können Sie Vorgänge wie das Bereitstellen von Software oder das Zuweisen von Clienteinstellungen auf Gruppen entsprechender Computer verwalten, sodass Sie den Erfolg einer Bereitstellung exakt messen können.   
+ Linux- und UNIX-Server sind standardmäßig Mitglieder der Sammlung **Alle Systeme** . Es wird empfohlen, benutzerdefinierte Sammlungen zu erstellen, die nur Linux- und UNIX-Server oder einen Teil davon enthalten. Durch benutzerdefinierte Sammlungen können Sie Vorgänge wie das Bereitstellen von Software oder das Zuweisen von Clienteinstellungen auf Gruppen entsprechender Computer verwalten, sodass Sie den Erfolg einer Bereitstellung exakt messen können.   
 
  Fügen Sie beim Erstellen einer benutzerdefinierten Sammlung für Linux- und UNIX-Server Mitgliedsregelabfragen hinzu, die für das Attribut „Operating System“ das Attribut „Caption“ enthalten. Informationen zum Erstellen von Sammlungen finden Sie unter [Erstellen von Sammlungen in System Center Configuration Manager](../../../core/clients/manage/collections/create-collections.md).  
 
 ##  <a name="BKMK_MaintenanceWindowsforLnU"></a> Maintenance windows for Linux and UNIX servers  
- Der Configuration Manager-Client für Linux- und UNIX-Server unterstützt die Verwendung von [Wartungsfenstern](../../../core/clients/manage/collections/use-maintenance-windows.md). Diese Unterstützung unterscheidet sich nicht von der für Windows-basierte Clients.  
+ Der Configuration Manager-Client für Linux- und UNIX-Server unterstützt die Verwendung von [Wartungsfenstern](../../../core/clients/manage/collections/use-maintenance-windows.md). Diese Unterstützung unterscheidet sich nicht von Windows-basierten Clients.  
 
 ##  <a name="BKMK_ClientSettingsforLnU"></a> Client settings for Linux and UNIX servers  
  Sie können [Clienteinstellungen](../../../core/clients/deploy/configure-client-settings.md) für Linux- und UNIX-Server auf die gleiche Weise wie Einstellungen für andere Clients konfigurieren.  

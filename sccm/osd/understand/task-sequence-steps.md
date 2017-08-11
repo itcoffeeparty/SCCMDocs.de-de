@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6f9e6e93fce95666503907010a5c253158c5de7c
-ms.openlocfilehash: f648d7626af50d95fbaa5a7a2abd821a9c47f5d1
+ms.translationtype: HT
+ms.sourcegitcommit: b7461f89f483314bd07248bbc9d5dde85ca6b6c2
+ms.openlocfilehash: e0726febc4c36a26c5e067914734838bf2681e6c
 ms.contentlocale: de-de
-ms.lasthandoff: 07/07/2017
-
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>Tasksequenzschritte in System Center Configuration Manager
@@ -1527,9 +1526,9 @@ Nachdem Sie die Variablen für eine Regel ausgewählt haben, müssen Sie einen W
 >  Wenn Sie eine Tasksequenz mit dem Schritt „Dynamische Variablen festlegen“ importieren und **Geheimer Wert** für den Wert der Variablen ausgewählt ist, wird der Wert beim Importieren der Tasksequenz entfernt. Daher müssen Sie den Wert für die dynamische Variable nach dem Import der Tasksequenz erneut eingeben.  
 
 ##  <a name="BKMK_SetTaskSequenceVariable"></a> Tasksequenzvariable festlegen  
- Mithilfe des Tasksequenzschritts **Tasksequenzvariable festlegen** können Sie den Wert einer Variablen festlegen, die für die Tasksequenz verwendet wird.  
+Mithilfe des Tasksequenzschritts **Tasksequenzvariable festlegen** können Sie den Wert einer Variablen festlegen, die für die Tasksequenz verwendet wird.  
 
- Dieser Schritt kann entweder in einem Standardbetriebssystem oder in Windows PE ausgeführt werden. Tasksequenzvariablen werden von Tasksequenzaktionen gelesen und definieren das Verhalten dieser Aktionen. Weitere Informationen zu bestimmten Tasksequenzvariablen finden Sie unter [Tasksequenz-Aktionsvariablen](task-sequence-action-variables.md).  
+Dieser Schritt kann entweder in einem Standardbetriebssystem oder in Windows PE ausgeführt werden. Tasksequenzvariablen werden von Tasksequenzaktionen gelesen und definieren das Verhalten dieser Aktionen. Weitere Informationen zu bestimmten Tasksequenzvariablen finden Sie unter [Tasksequenz-Aktionsvariablen](task-sequence-action-variables.md).  
 
 ### <a name="details"></a>Details  
  Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
@@ -1553,6 +1552,16 @@ Nachdem Sie die Variablen für eine Regel ausgewählt haben, müssen Sie einen W
 
  **Wert**  
  Der Wert, der der Tasksequenzvariable zugeordnet wird. Der Wert kann eine andere Tasksequenzvariable mit der Syntax %<varname\>% sein.  
+
+## <a name="hide-task-sequence-progress"></a>Ausblenden des Tasksequenzstatus
+<!-- 1354291 -->
+Mit dem Release 1706 können Sie mithilfe einer neuen Variablen steuern, wann Endbenutzern der Tasksequenzstatus angezeigt wird. Verwenden Sie in der Tasksequenz den Schritt **Tasksequenzvariable festlegen** zum Festlegen des Werts der Variablen **TSDisableProgressUI**, um den Tasksequenzstatus ein- oder auszublenden. Den Schritt „Tasksequenzvariable festlegen“ können Sie in einer Tasksequenz mehrmals verwenden, um den Wert der Variablen zu ändern. Dadurch können Sie den Tasksequenzstatus in unterschiedlichen Abschnitten der Tasksequenz anzeigen oder ausblenden.
+
+ - **So blenden Sie den Tasksequenzstatus aus**  
+Verwenden Sie im Tasksequenz-Editor den Schritt [Tasksequenzvariable festlegen](#BKMK_SetTaskSequenceVariable) zum Festlegen des Werts der Variablen **TSDisableProgressUI** auf **TRUE**, um den Tasksequenzstatus auszublenden.
+
+ - **So zeigen Sie den Tasksequenzstatus an**  
+Verwenden Sie im Tasksequenz-Editor den Schritt [Tasksequenzvariable festlegen](#BKMK_SetTaskSequenceVariable) zum Festlegen des Werts der Variablen **TSDisableProgressUI** auf **FALSE**, um den Tasksequenzstatus anzuzeigen.
 
 ##  <a name="BKMK_SetupWindowsandConfigMgr"></a> Windows und ConfigMgr einrichten  
  Mithilfe des Tasksequenzschritts **Windows und ConfigMgr einrichten** können Sie den Übergang von Windows PE zum neuen Betriebssystem vollziehen. Dieser Tasksequenzschritt muss bei jeder Betriebssystembereitstellung ausgeführt werden. Mit diesem Schritt wird der Configuration Manager-Client im neuen Betriebssystem installiert und die weitere Ausführung der Tasksequenz im neuen Betriebssystem ermöglicht.  

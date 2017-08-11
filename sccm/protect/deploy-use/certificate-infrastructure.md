@@ -2,7 +2,7 @@
 title: Konfigurieren der Zertifikatinfrastruktur | Microsoft-Dokumentation
 description: Erfahren Sie mehr zum Konfigurieren der Zertifikatregistrierung in System Center Configuration Manager.
 ms.custom: na
-ms.date: 03/28/2017
+ms.date: 07/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,22 +13,22 @@ ms.topic: get-started-article
 ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 859a8da10f55e314b205b7a4a415a1d2a60a920a
+ms.translationtype: HT
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: 640eb1df9d53fc83d93c39a7ecbaf2668e176805
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 08/02/2017
 
 ---
 
-# <a name="certificate-infrastructure"></a>Zertifikatinfrastruktur
+# <a name="configure-certificate-infrastructure"></a>Konfigurieren der Zertifikatinfrastruktur
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Hier finden Sie die Schritte, Details und weitere Informationen zum Konfigurieren der Zertifikate in System Center Configuration Manager. Überprüfen Sie, bevor Sie beginnen, die in [Voraussetzungen für Zertifikatprofile in System Center Configuration Manager](../../protect/plan-design/prerequisites-for-certificate-profiles.md) aufgeführten Voraussetzungen.  
+Erfahren Sie, wie Sie die Zertifikatinfrastruktur in System Center Configuration Manager konfigurieren. Überprüfen Sie, bevor Sie beginnen, die in [Voraussetzungen für Zertifikatprofile in System Center Configuration Manager](../../protect/plan-design/prerequisites-for-certificate-profiles.md) aufgeführten Voraussetzungen.  
 
 Folgen Sie diesen Schritten, um Ihre Infrastruktur für SCEP- oder PFX-Zertifikate zu konfigurieren.
 
@@ -124,21 +124,37 @@ Sie müssen mindestens einen Zertifikatregistrierungspunkt in der System Center 
 
 6.  Wählen Sie auf der Seite **Systemrollenauswahl** in der Liste der verfügbaren Rollen **Zertifikatregistrierungspunkt** aus, und klicken Sie dann auf **Weiter**. 
 
-8. Legen Sie auf der Seite **Zertifikatregistrierungsmodus** fest, ob der Zertifikatregistrierungspunkt **SCEP-Zertifikatanforderungen verarbeiten** oder **PFX-Zertifikatanforderungen verarbeiten** soll. Ein Zertifikatregistrierungspunkt kann nicht beide Arten von Anforderungen verarbeiten, aber Sie können mehrere Zertifikatregistrierungspunkte erstellen, wenn Sie mit beiden Zertifikattypen arbeiten.
+7. Legen Sie auf der Seite **Zertifikatregistrierungsmodus** fest, ob der Zertifikatregistrierungspunkt **SCEP-Zertifikatanforderungen verarbeiten** oder **PFX-Zertifikatanforderungen verarbeiten** soll. Ein Zertifikatregistrierungspunkt kann nicht beide Arten von Anforderungen verarbeiten, aber Sie können mehrere Zertifikatregistrierungspunkte erstellen, wenn Sie mit beiden Zertifikattypen arbeiten.
 
-7.  Die Einstellungen, die Sie auf der Seite **Einstellungen für Zertifikatregistrierungspunkt** vornehmen, hängen davon ab, welche Art von Zertifikat der Zertifikatregistrierungspunkt verarbeitet:
+   Wenn Sie PFX-Zertifikate verarbeiten, müssen Sie als Zertifizierungsstelle entweder Microsoft oder Entrust auswählen.
+
+8.  Die Seite **Einstellungen für den Zertifikatregistrierungspunkt** ist je nach Zertifikatstyp unterschiedlich aufgebaut:
     -   Wenn Sie **SCEP-Zertifikatanforderungen verarbeiten** ausgewählt haben, nehmen Sie folgende Konfiguration vor:
         -   **Websitename**, **HTTPS-Portnummer** und **Name der virtuellen Anwendung** für den Zertifikatregistrierungspunkt. Diese Felder werden automatisch mit Standardwerten ausgefüllt. 
         -   **URL für Registrierungsdienst für Netzwerkgeräte und Zertifikat der Stammzertifizierungsstelle**: Klicken Sie auf **Hinzufügen**, und geben Sie anschließend im Dialogfeld **URL und Zertifikat der Stammzertifizierungsstelle hinzufügen** Folgendes an:
             - **URL für den Registrierungsdienst für Netzwerkgeräte:** Geben Sie die URL im folgenden Format an: https://*<FQDN des Servers>*/certsrv/mscep/mscep.dll. Beispiel: Wenn der FQDN des Servers mit dem Registrierungsdienst für Netzwerkgeräte server1.contoso.com ist, geben Sie **https://server1.contoso.com/certsrv/mscep/mscep.dll**ein.
             - **Zertifikat der Stammzertifizierungsstelle**: Navigieren Sie zur CER-Zertifikatdatei, die Sie in **Schritt 1: Installieren und Konfigurieren des Registrierungsdiensts für Netzwerkgeräte und der Abhängigkeiten**erstellt und gespeichert haben, und wählen Sie sie aus. Mit diesem Zertifikat der Stammzertifizierungsstelle kann das Clientauthentifizierungszertifikat, das vom System Center Configuration Manager-Richtlinienmodul verwendet wird, durch den Zertifikatregistrierungspunkt überprüft werden.  
-    - Wenn Sie **PFX-Zertifikatanforderungen verarbeiten** ausgewählt haben, nehmen Sie folgende Konfiguration vor:
-        - **Zertifizierungsstellen und Konto, das jeweils zum Herstellen einer Verbindung erforderlich ist**: Klicken Sie auf **Hinzufügen**, und geben Sie anschließend im Dialogfeld **Zertifizierungsstelle und Konto hinzufügen** Folgendes an:
+
+    - Wenn Sie **PFX-Zertifikatanforderungen verarbeiten** ausgewählt haben, konfigurieren Sie die Verbindungsdetails und die Anmeldeinformationen für die ausgewählte Zertifizierungsstelle.
+
+        - Um Microsoft als Zertifizierungsstelle zu verwenden, klicken Sie auf **Hinzufügen**, und geben Sie anschließend im Dialogfeld **Zertifizierungsstelle und Konto hinzufügen** Folgendes an:
             - **Name des Zertifizierungsstellenservers**: Geben Sie den Namen Ihres Zertifizierungsstellenservers ein.
             - **Konto der Zertifizierungsstelle**: Klicken Sie auf **Festlegen**, um das Konto auszuwählen oder zu erstellen, das Berechtigungen für die Registrierung in Vorlagen an der Zertifizierungsstelle hat.
-        - **Verbindungskonto für Zertifikatregistrierungspunkt**: Wählen Sie das Konto aus, das den Zertifikatregistrierungspunkt mit der Configuration Manager-Datenbank verbindet, oder erstellen Sie dieses. Alternativ können Sie auch das lokale Computerkonto des Computers verwenden, auf dem der Zertifikatregistrierungspunkt gehostet wird.
-        - **Konto für Active Directory-Zertifikatveröffentlichung**: Wählen Sie ein Konto aus, das zur Veröffentlichung von Zertifikaten für Benutzerobjekte in Active Directory verwendet werden soll, oder erstellen Sie ein neues Konto.
-8.  Geben Sie im Dialogfeld **URL und Zertifikat der Stammzertifizierungsstelle hinzufügen** Folgendes an, und klicken Sie dann auf **OK**:  
+            - **Verbindungskonto für Zertifikatregistrierungspunkt**: Wählen Sie das Konto aus, das den Zertifikatregistrierungspunkt mit der Configuration Manager-Datenbank verbindet, oder erstellen Sie dieses. Alternativ können Sie auch das lokale Computerkonto des Computers verwenden, auf dem der Zertifikatregistrierungspunkt gehostet wird.
+            - **Konto für Active Directory-Zertifikatveröffentlichung**: Wählen Sie ein Konto aus, das zur Veröffentlichung von Zertifikaten für Benutzerobjekte in Active Directory verwendet werden soll, oder erstellen Sie ein neues Konto.
+
+            - Geben Sie im Dialogfeld **URL for the Network Device Enrollment and root CA certificate (URL für Registrierung für Netzwerkdienste und Zertifikat der Stammzertifizierungsstelle)** Folgendes an, und klicken Sie anschließend auf **OK**:  
+
+        - Um Entrust als Zertifizierungsstelle zu verwenden, geben Sie Folgendes an:
+
+           - die **MDM-Webdienst-URL**
+           - den Benutzernamen und das Kennwort für die URL.
+
+           Wenn Sie bei der Angabe der Entrust-Webdienst-URL die MDM-API benutzen, müssen Sie mindestens Version 9 der API verwenden, wie im folgenden Beispiel gezeigt wird:
+
+           `https://entrust.contoso.com:19443/mdmws/services/AdminServiceV9`
+
+           Entrust wird nicht von früheren Versionen der API unterstützt.
 
 9. Klicken Sie auf **Weiter** , und schließen Sie den Assistenten ab.  
 

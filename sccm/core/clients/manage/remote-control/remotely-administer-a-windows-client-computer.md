@@ -2,7 +2,7 @@
 title: Remoteverwaltung von Windows-Computern | Microsoft-Dokumentation
 description: "Mit System Center Configuration Manager können Windows-Remoteclientcomputer verwaltet werden."
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 07/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 08afca8b422474639cbdb860e555fe0da27361a4
-ms.openlocfilehash: dd794de867e1d0db47be9dc21a6d494087f76bc1
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: aecc4ccfec98932f3988f1ca1fcdc898cd417933
 ms.contentlocale: de-de
-ms.lasthandoff: 12/16/2016
-
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="how-to-remotely-administer-a-windows-client-computer-by-using-system-center-configuration-manager"></a>Remoteverwaltung eines Windows-Clientcomputers mithilfe von System Center Configuration Manager
@@ -91,12 +90,11 @@ Im Folgenden finden Sie drei Möglichkeiten, den Remotesteuerungsviewer zu start
 
 -   Geben Sie an der Windows-Eingabeaufforderung *<Configuration Manager-Installationsordner\>***\AdminConsole\Bin\x64\CmRcViewer.exe** ein.  
 
-    > [!NOTE]  
-    >  Folgende Befehlszeilenoptionen werden von CmRcViewer.exe unterstützt:  
-    >   
-    >  -   *<Adresse\>*: Gibt den NetBIOS-Namen, den vollqualifizierten Domänennamen (FQDN) oder die IP-Adresse des Clientcomputers an, mit dem eine Verbindung hergestellt werden soll.  
-    > -   *<Standortservername\>*: Gibt den Namen des System Center Configuration Manager-Standortservers an, an den Statusmeldungen im Zusammenhang mit der Remotesteuerungssitzung gesendet werden sollen.  
-    > -   **/?** : Zeigt die Befehlszeilenoptionen für den Remotesteuerungsviewer an.  
-    >   
-    >  **Beispiel: CmRcViewer.exe** *<Adresse\>* *<\\\Name des Standortservers>*  
+Folgende Befehlszeilenoptionen werden von CmRcViewer.exe unterstützt:  
+
+- *Adresse*: Geben Sie den NetBIOS-Namen, den vollqualifizierten Domänennamen (FQDN) oder die IP-Adresse des Clientcomputers an, mit dem eine Verbindung hergestellt werden soll.
+- *Standortservername*: Geben Sie den Namen des System Center Configuration Manager-Standortservers an, an den Statusmeldungen im Zusammenhang mit der Remotesteuerungssitzung gesendet werden sollen.
+- **/?** : Zeigt die Befehlszeilenoptionen für den Remotesteuerungsviewer an.  
+     
+**Beispiel: CmRcViewer.exe** *<Adresse\>* *<\\\Name des Standortservers>*  
 

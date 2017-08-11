@@ -2,7 +2,7 @@
 title: Konfigurieren von Ermittlungsmethoden | Microsoft-Dokumentation
 description: "Konfigurieren Sie Ermittlungsmethoden zur Ausführung auf einem Configuration Manager-Standort, um Ressourcen zu suchen, die Sie von der Netzwerkinfrastruktur und Active Directory verwalten können."
 ms.custom: na
-ms.date: 2/17/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 860815010068422f2d8854ed2d574c24cc386891
-ms.openlocfilehash: 63a3c2ef66c80d1da9b50e67166a2196cf1b081b
+ms.translationtype: HT
+ms.sourcegitcommit: 0663ba84762c44a5c303562548499f195bae9e1c
+ms.openlocfilehash: 34a539ceaea6b070f81a28d2c0a9ce388e26cfeb
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="configure-discovery-methods-for-system-center-configuration-manager"></a>Konfigurieren von Ermittlungsmethoden für System Center Configuration Manager
@@ -33,7 +33,9 @@ Sie konfigurieren Ermittlungsmethoden zur Ausführung auf einem System Center Co
 
 -   Die Serverermittlung ist eine automatische Erkennungsmethode, die Computer findet, die Sie als Standortsystem verwenden. Sie können sie nicht konfigurieren oder deaktivieren.  
 
-**So aktivieren Sie jede konfigurierbare Ermittlungsmethode:**  
+**So aktivieren Sie eine konfigurierbare Ermittlungsmethode:**  
+ > [!NOTE]  
+ > Die folgenden Informationen treffen nicht auf die Azure Active Directory-Benutzerermittlung zu. Informationen hierzu finden Sie unter [Konfigurieren der Azure AD-Benutzerermittlung](#azureaadisc) weiter unten in diesem Thema.
 
 1.  Wählen Sie in der Configuration Manager-Konsole **Verwaltung** > **Hierarchiekonfiguration** und anschließend **Ermittlungsmethoden** aus.  
 
@@ -211,6 +213,14 @@ Wenden Sie die folgenden Verfahren an, um die Active Directory-Gesamtstrukturerm
 7.  Optional können Sie auf der Registerkarte **Active Directory-Attribute** zusätzliche Active Directory-Attribute für Computer, die ermittelt werden sollen, konfigurieren. Es werden auch die Standardobjektattribute aufgelistet.  
 
 8.  Wenn Sie mit dem Konfigurieren der Active Directory-Benutzerermittlung fertig sind, wählen Sie **OK** aus, um die Konfiguration zu speichern.  
+
+## <a name="azureaadisc"></a> Konfigurieren der Azure AD-Benutzerermittlung
+Ab Version 1706 können Sie die Azure Active Directory-Benutzerermittlung konfigurieren, wenn Sie Configuration Manager mit Ihrem [Azure-Abonnement und Azure Active Directory](/sccm/core/servers/deploy/configure/azure-services-wizard) verbinden.
+
+Die Azure AD-Benutzerermittlung wird als Teil der *Cloudverwaltung* konfiguriert. Das entsprechende Verfahren hierfür finden Sie unter [Erstellen der Azure-Web-App für die Verwendung mit Configuration Manager](/sccm/core/servers/deploy/configure/Azure-services-wizard#webapp) im Thema *Konfigurieren von Azure-Diensten für die Verwendung mit Configuration Manager*.
+
+
+
 
 ##  <a name="BKMK_ConfigHBDisc"></a> Konfigurieren einer Frequenzermittlung  
  Die Frequenzermittlung ist standardmäßig aktiviert, wenn Sie einen primären Configuration Manager-Standort installieren. Daher müssen Sie nur mithilfe eines Zeitplans festlegen, wie oft die Discovery Data Records der Frequenzermittlung von den Clients an einen Verwaltungspunkt gesendet werden sollen, wenn Sie nicht die Standardeinstellung „alle 7 Tage“ verwenden möchten.  

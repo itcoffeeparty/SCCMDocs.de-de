@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
-ms.openlocfilehash: f5feccc4f810e1a94bb7dcdd5ad507d84b9c3b4a
+ms.translationtype: HT
+ms.sourcegitcommit: b7461f89f483314bd07248bbc9d5dde85ca6b6c2
+ms.openlocfilehash: 32b24b3637dfafe401ea1d9f51b3769aa749f544
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="task-sequence-built-in-variables-in-system-center-configuration-manager"></a>Integrierte Tasksequenzvariablen in System Center Configuration Manager
@@ -83,7 +82,8 @@ ms.lasthandoff: 05/17/2017
 |SMSTSDriverRequestResolveTimeOut|Legen Sie mit dieser Variablen die Anzahl der Sekunden für das Warten auf eine HTTP-Namensauflösung beim Anfordern eines Treiberkatalogs während des Tasksequenzschritts „Treiber automatisch anwenden“ fest. Wenn die Verbindung mehr Zeit benötigt, als in der Timeouteinstellung festgelegt, wird die Anforderung abgebrochen. Standardmäßig ist das Timeout auf 60 Sekunden festgelegt.|
 |SMSTSDriverRequestSendTimeOut|Legen Sie mit dieser Variablen die Anzahl der Sekunden für das Senden der Anforderung eines Treiberkatalogs während des Tasksequenzschritts „Treiber automatisch anwenden“ fest. Wenn die Anforderung mehr Zeit benötigt, als in der Timeouteinstellung festgelegt, wird die Anforderung abgebrochen. Standardmäßig ist das Timeout auf 60 Sekunden festgelegt.|
 |SMSTSErrorDialogTimeout|Tritt ein Fehler in einer Tasksequenz auf, wird ein Dialogfeld angezeigt, das nach einer durch diese Variable angegebenen Anzahl von Sekunden automatisch geschlossen wird. Standardmäßig wird das Dialogfeld automatisch nach **900** Sekunden (15 Minuten) geschlossen.|  
-|TSErrorOnWarning|Mit dieser Variablen können Sie angeben, ob das Tasksequenzmodul eine erkannte Warnung als Fehler während der Tasksequenz für die Anwendungsinstallation betrachtet. Die Tasksequenz legt die _TSAppInstallStatus-Variable auf **Warnung** fest, wenn mindestens eine Anwendung oder eine erforderliche Abhängigkeit aufgrund der Nichterfüllung einer Voraussetzung nicht installiert wurde. Wenn Sie die TSErrorOnWarning-Variable auf **True** festlegen und die _TSAppInstallStatus-Variable als Warnung festgelegt ist, wird dies als Fehler behandelt. Der Wert **False** entspricht dem Standardverhalten.|  
+| TSDisableProgressUI | Verwenden Sie diese Variable, um den Tasksequenzstatus in unterschiedlichen Abschnitten der Tasksequenz anzeigen oder ausblenden. | 
+|TSErrorOnWarning|Mit dieser Variablen können Sie angeben, ob das Tasksequenzmodul eine erkannte Warnung als Fehler während der Tasksequenz für die Anwendungsinstallation betrachtet. Die Tasksequenz legt die _TSAppInstallStatus-Variable auf **Warnung** fest, wenn mindestens eine Anwendung oder eine erforderliche Abhängigkeit aufgrund der Nichterfüllung einer Voraussetzung nicht installiert wurde. Wenn Sie die TSErrorOnWarning-Variable auf **True** festlegen und die _TSAppInstallStatus-Variable als Warnung festgelegt ist, wird dies als Fehler behandelt. Der Wert **False** entspricht dem Standardverhalten.| 
 |SMSTSLanguageFolder|Verwenden Sie diese Variable, um die Anzeigesprache eines sprachneutralen Startimage zu ändern.|  
 |SMSTSLocalDataDrive|Gibt an, wo temporäre Dateien während der Ausführung der Tasksequenz auf dem Zielcomputer gespeichert werden.<br /><br /> Diese Variable muss festgelegt werden, bevor die Tasksequenz gestartet wird, z. B. durch Festlegen einer Sammlungsvariablen. Sobald die Tasksequenz gestartet wird, definiert Configuration Manager die Variable „_SMSTSMDataPath“.|  
 |SMSTSMP|Verwenden Sie diese Variable zum Angeben der URL oder der IP-Adresse eines Configuration Manager-Verwaltungspunkts|  

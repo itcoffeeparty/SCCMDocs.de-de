@@ -2,7 +2,7 @@
 title: "Ausführen eines Upgrades von Windows-Geräten auf eine andere Version mit Configuration Manager | Microsoft-Dokumentation"
 description: "Automatisches Upgrade von Geräten, die Windows 10 Desktop, Windows 10 Mobile, oder Windows 10 Holographic ausführen, auf eine andere Edition mit Configuration Manager."
 ms.custom: na
-ms.date: 04/18/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4eee9731a4a27328c47c0d15931cab28cf520a18
-ms.openlocfilehash: cfde0a43947013bbd3a1093688cee19fe309fd03
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: cd8c644d07dab0010dc211df8ce4f2dc6e1fa7ae
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 07/29/2017
 
 ---
 
@@ -34,14 +33,14 @@ Mit der **Upgraderichtlinie für die Edition** von System Center Configuration M
 
 - Windows 10 Desktop
 - Windows 10 Mobile
-- Windows 10 Holographic
+<!-- - Windows 10 Holographic -->
 
 Die folgenden Upgradepfade werden unterstützt:
 
 - Von Windows 10 Pro auf Windows 10 Enterprise
 - Von Windows 10 Home auf Windows 10 Education
 - Von Windows 10 Mobile auf Windows 10 Mobile Enterprise
-- Von Windows 10 Holographic Pro auf Windows 10 Holographic Enterprise
+<!-- - From Windows 10 Holographic Pro to Windows 10 Holographic Enterprise -->
 
 Die Geräte müssen bei Microsoft Intune registriert sein oder die Configuration Manager-Clientsoftware ausführen. Diese Richtlinie ist derzeit nicht mit PCs konform, die von einer lokalen MDM verwaltet werden.
 
@@ -50,7 +49,7 @@ Die Geräte müssen bei Microsoft Intune registriert sein oder die Configuration
 
 -   Einen gültigen Product Key für die Installation der neuen Version von Windows auf allen Geräten, die das Ziel dieser Richtlinie sind (für Desktopbetriebssysteme)  
 
--   Eine Lizenzdatei von Microsoft, die die Lizenzierungsinformationen zum Installieren der neuen Version von Windows auf allen Geräten enthält, die das Ziel dieser Richtlinie sind (für Windows 10 Mobile und Windows 10 Holographic).
+-   Eine Lizenzdatei von Microsoft, die die Lizenzierungsinformationen zum Installieren der neuen Version von Windows auf allen Geräten enthält, die das Ziel dieser Richtlinie sind (für Windows 10 Mobile<!-- and Windows 10 Holographic-->).
 
 - Zum Erstellen und Bereitstellen dieses Richtlinientyps muss Ihnen die Configuration Manager-Sicherheitsrolle **Hauptadministrator** zugewiesen sein.
 
@@ -68,7 +67,7 @@ Die Geräte müssen bei Microsoft Intune registriert sein oder die Configuration
 
     -   **Beschreibung** (optional): Geben Sie optional eine Beschreibung für die Richtlinie ein, damit Sie sie in der Intune-Konsole besser identifizieren können.  
 
-    -   **SKU, auf die das Gerät aktualisiert werden soll** : Wählen Sie aus der Dropdownliste die Version von Windows 10 Desktop, Windows 10 Holographic oder Windows 10 Mobile aus, auf die die als Ziel angegebenen Geräte aktualisiert werden sollen.  
+    -   **SKU, auf die das Gerät aktualisiert werden soll**: Wählen Sie aus der Dropdownliste die Version von Windows 10 Desktop<!-- Windows 10 Holographic,--> oder Windows 10 Mobile aus, auf die die als Ziel angegebenen Geräte aktualisiert werden sollen.  
 
     -   **Lizenzinformationen** : Wählen Sie eine Option aus:  
 
@@ -77,7 +76,7 @@ Die Geräte müssen bei Microsoft Intune registriert sein oder die Configuration
             > [!NOTE]  
             >  Nach der Erstellung einer Richtlinie mit einem Product Key können Sie den Product Key später nicht mehr bearbeiten. Grund hierfür ist, dass der Schlüssel aus Sicherheitsgründen verborgen wird. Um den Product Key zu ändern, müssen Sie den gesamten Schlüssel erneut eingeben.  
 
-        -   **Lizenzdatei** : Klicken Sie auf **Durchsuchen** , um eine gültige Lizenzdatei im XML-Format auszuwählen, mit der die als Ziel angegebenen Geräte mit Windows 10 Holographic- oder Windows 10 Mobile-Betriebssystemen aktualisiert werden sollen.  
+        -   **Lizenzdatei**: Klicken Sie auf **Durchsuchen**, um eine gültige Lizenzdatei im XML-Format auszuwählen, mit der die als Ziel angegebenen Geräte mit <!--Windows 10 Holographic and -->Windows 10 Mobile-Betriebssystemen aktualisiert werden sollen.  
 
 6.  Schließen Sie den Assistenten ab.  
 
@@ -91,7 +90,15 @@ Die neue Richtlinie wird im Arbeitsbereich **Bestand und Kompatibilität** im Kn
 
 4.  Wählen Sie im Dialogfeld **Deploy Windows 10 Edition Upgrade** (Windows 10-Editionsaktualisierung bereitstellen) die Sammlung aus, für die Sie die Richtlinie bereitstellen möchten. Wählen Sie ferner den Zeitplan aus, nach dem die Richtlinie ausgewertet werden soll. Klicken Sie anschließend auf **OK**. Für PCs, die mit dem Configuration Manager-Client verwaltet werden, müssen Sie die Richtlinie auf einer Gerätesammlung bereitstellen. Für PCs, die bei Intune registriert sind, können Sie die Richtlinie für eine Benutzer- oder Gerätesammlung bereitstellen. 
 
-Sie können die gerade erstellte Bereitstellung über den Knoten **Bereitstellungen** des Arbeitsbereichs **Überwachung** überwachen.  
 
- Sobald die Richtlinie einen entsprechenden Windows-PC erreicht und ausgewertet wird, wird dieser innerhalb von zwei Stunden zum Installieren der Aktualisierung neu gestartet. Stellen Sie sicher, dass Sie jeden Benutzer informieren, dem Sie die Richtlinie bereitstellen, oder planen Sie die Ausführung der Richtlinie außerhalb der Arbeitsstunden der Benutzer.
+
+## <a name="next-steps"></a>Nächste Schritte
+
+Wenn Sie die Bereitstellung überwachen, die Sie im Arbeitsbereich **Überwachung** über den Knoten **Bereitstellungen** erstellt haben, werden Ihnen unter Umständen folgende Fehler angezeigt, die darauf hindeuten, dass die Bereitstellung nicht erfolgreich war:
+- **Für dieses Gerät nicht anwendbar**
+- **Fehler bei der Konvertierung des Datentyps**
+
+Diese Fehler bedeuten allerdings nicht, dass die Bereitstellung gescheitert ist. Vergewissern Sie sich am Ziel-PC, dass das Upgrade erfolgreich durchgeführt wurde.
+
+Sobald die Richtlinie einen entsprechenden Windows-PC erreicht und ausgewertet wird, wird dieser innerhalb von zwei Stunden zum Installieren der Aktualisierung neu gestartet. Stellen Sie sicher, dass Sie jeden Benutzer informieren, dem Sie die Richtlinie bereitstellen, oder planen Sie die Ausführung der Richtlinie außerhalb der Arbeitsstunden der Benutzer.
 

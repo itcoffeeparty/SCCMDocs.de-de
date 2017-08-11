@@ -2,7 +2,7 @@
 title: "Einführung in Zertifikatprofile | Microsoft-Dokumentation"
 description: Erfahren Sie, wie Zertifikatprofile in System Center Configuration Manager mit den Active Directory-Zertifikatdiensten funktionieren.
 ms.custom: na
-ms.date: 03/30/2017
+ms.date: 07/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,15 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 caps.latest.revision: 7
-author: arob98
-ms.author: angrobe
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: ba1d5b04cb0cb0284525e295a6086a3c0ac67e9f
+ms.translationtype: HT
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: 7b1c0e449f3d1ef42e279e8707df6bf1df163b3f
 ms.contentlocale: de-de
-ms.lasthandoff: 03/27/2017
-
+ms.lasthandoff: 08/02/2017
 
 ---
 
@@ -51,17 +50,24 @@ Zertifikatprofile bieten die folgenden Verwaltungsfunktionen:
 -   **Vertrauenswürdiges Zertifikat der Zertifizierungsstelle** : Ermöglicht Ihnen die Bereitstellung eines Zertifikats einer vertrauenswürdigen Stammzertifizierungsstelle oder einer Zwischenzertifizierungsstelle, um eine Zertifikatkette zu bilden, wenn das Gerät einen Server authentifizieren muss.  
 
 -   **Simple Certificate Enrollment-Protokoll (SCEP)**: Ermöglicht Ihnen das Anfordern eines Zertifikats für ein Gerät oder einen Benutzer mithilfe des Protokolls SCEP und des Registrierungsdiensts für Netzwerkgeräte auf einem Server mit Windows Server 2012 R2.
+
+    Sie müssen ein **Zertifikatprofil für ein vertrauenswürdiges Zertifikat der Zertifizierungsstelle** erstellen, um ein Zertifikatprofil des Typs **Simple Certificate Enrollment Protocol (SCEP)** erstellen zu können.
+
 -   **Privater Informationsaustausch (.pfx)**: Erlaubt es Ihnen, für ein Gerät oder einen Benutzer ein PFX-Zertifikat (auch als PKCS #12-Zertifikat bezeichnet) anzufordern.
 
-    > [!NOTE]  
-    >  Sie müssen ein Zertifikatprofil vom Typ **Vertrauenswürdiges Zertifizierungsstellenzertifikat** erstellen, bevor Sie ein Zertifikatprofil vom Typ **Simple Certificate Enrollment-Protokoll (SCEP)** erstellen können.  
+    Sie können PFX-Zertifikatprofile erstellen, indem Sie n entweder aus bestehenden Zertifikaten [Anmeldeinformationen importieren](/sccm/mdm/deploy-use/import-pfx-certificate-profiles.md) oder für die Bearbeitung von Anfragen [eine Zertifizierungsstelle definieren](/sccm/mdm/deploy-use/create-pfx-certificate-profiles.md).
+
+    Ab Version 1706 können Sie Microsoft oder Entrust als Zertifizierungsstelle für **PFX-Zertifikate (Personal information exchange)** nutzen.
+
 
 ## <a name="requirements-and-supported-platforms"></a>Anforderungen und unterstützte Plattformen  
- Zum Bereitstellen von Zertifikatprofilen, die SCEP verwenden, müssen Sie den Zertifikatregistrierungspunkt auf einem Standortsystemserver am Standort der zentralen Verwaltung oder an einem primären Standort installieren. Zudem müssen Sie ein Richtlinienmodul für NDES – das Configuration Manager-Richtlinienmodul – auf einem Server unter Windows Server 2012 R2 mit der Rolle „Active Directory-Zertifikatdienste“ und einem funktionsfähigen NDES installieren, der für die Geräte verfügbar ist, welche die Zertifikate benötigen. Bei Geräten, die von Microsoft Intune registriert werden, muss der NDES über das Internet verfügbar sein, z.B. in einem Umkreisnetzwerk (auch als DMZ bezeichnet).  
+Zum Bereitstellen von Zertifikatprofilen, die SCEP verwenden, müssen Sie den Zertifikatregistrierungspunkt auf einem Standortsystemserver am Standort der zentralen Verwaltung oder an einem primären Standort installieren. Zudem müssen Sie ein Richtlinienmodul für NDES – das Configuration Manager-Richtlinienmodul – auf einem Server unter Windows Server 2012 R2 mit der Rolle „Active Directory-Zertifikatdienste“ und einem funktionsfähigen NDES installieren, der für die Geräte verfügbar ist, welche die Zertifikate benötigen. Bei Geräten, die von Microsoft Intune registriert werden, muss der NDES über das Internet verfügbar sein, z.B. in einem Umkreisnetzwerk (auch als DMZ bezeichnet).  
 
- Weitere Informationen zur Unterstützung eines Richtlinienmoduls durch den Registrierungsdienst für Netzwerkgeräte, damit Configuration Manager Zertifikate bereitstellen kann, finden Sie unter [Verwenden eines Richtlinienmoduls mit dem Registrierungsdienst für Netzwerkgeräte](http://go.microsoft.com/fwlink/p/?LinkId=328657).  
+Für PFX-Zertifikate benötigen Sie zusätzlich einen Zertifikatregistrierungspunkt auf einem Standortsystemserver am zentralen Verwaltungsstandort oder einem primären Standort.  Sie müssen auch die Zertifizierungsstelle (Certificate Authority – CA) für das Zertifikat und die notwendigen Anmeldeinformationen angeben.  Ab Version 1706 können Sie entweder Microsoft oder Entrust als Zertifizierungsstelle angeben.  
 
- Configuration Manager unterstützt die anforderungs-, gerätetyp- und betriebssystemabhängige Bereitstellung von Zertifikaten an unterschiedliche Zertifikatspeicher. Folgende Geräte und Betriebssysteme werden unterstützt:  
+Weitere Informationen zur Unterstützung eines Richtlinienmoduls durch den Registrierungsdienst für Netzwerkgeräte, damit Configuration Manager Zertifikate bereitstellen kann, finden Sie unter [Verwenden eines Richtlinienmoduls mit dem Registrierungsdienst für Netzwerkgeräte](http://go.microsoft.com/fwlink/p/?LinkId=328657).  
+
+Configuration Manager unterstützt die anforderungs-, gerätetyp- und betriebssystemabhängige Bereitstellung von Zertifikaten für unterschiedliche Zertifikatspeicher. Folgende Geräte und Betriebssysteme werden unterstützt:  
 
 -   Windows RT 8.1  
 
