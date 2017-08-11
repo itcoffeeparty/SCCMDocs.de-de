@@ -123,3 +123,4 @@ Um Updates Publisher zu starten, führen Sie nach der Installation **UpdatesPubl
 
  Wenn Sie jedoch die Standardwerte verwenden möchten und nicht die Bereitstellung von Updates auf einem Updateserver oder auf verwalteten Geräten planen, können Sie direkt mit [Verwalten von Softwareupdatekatalogen](updates-publisher-catalogs.md) oder [Erstellen von Softwareupdates](create-updates-with-updates-publisher.md) fortfahren und eigenständig Updatekataloge erstellen.
 
+
