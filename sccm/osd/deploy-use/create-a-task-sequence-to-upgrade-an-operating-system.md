@@ -6,21 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 1035dbbf944a3a467d637a4a948a75b0946eb711
 ms.openlocfilehash: 4a3c69edc85a4ea7501510b6b3f12c72ad3a24ff
-ms.contentlocale: de-de
-ms.lasthandoff: 07/11/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-operating-system-in-system-center-configuration-manager"></a>Erstellen einer Tasksequenz zum Durchführen eines Upgrades für ein Betriebssystem in System Center Configuration Manager
 
@@ -131,4 +129,3 @@ Mit der Funktion zum Zwischenspeichern von Inhalten können Sie den Client dahin
 
 ## <a name="folder-and-files-removed-after-computer-restart"></a>Nach Computerneustart entfernte Ordner und Dateien  
  Wenn die Tasksequenz zum Durchführen eines Upgrades für ein Betriebssystem auf Windows 10 und alle anderen Schritte in der Tasksequenz durchgeführt wurden, werden die Nachbearbeitungs- und Rollback-Skripts erst nach dem Neustart des Computers entfernt.  Diese Skriptdateien enthalten keine vertraulichen Informationen.  
-

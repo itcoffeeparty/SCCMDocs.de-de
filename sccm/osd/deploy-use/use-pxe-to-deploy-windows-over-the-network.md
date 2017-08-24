@@ -6,23 +6,20 @@ ms.date: 06/15/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
-caps.latest.revision: 19
-caps.handback.revision: 0
+caps.latest.revision: "19"
+caps.handback.revision: "0"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
 ms.openlocfilehash: b88ab3799027c78a8c605e934b247097b31e1d21
-ms.contentlocale: de-de
-ms.lasthandoff: 06/28/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>Verwenden von PXE zum Bereitstellen von Windows über das Netzwerk mit System Center Configuration Manager
 
@@ -107,4 +104,3 @@ Wenn ein Client mit PXE gestartet wird, stellt Configuration Manager ein Startim
 3. In der Liste mit Tasksequenzen in Schritt 2 sucht Configuration Manager nach einem Startimage mit einer Architektur, die mit der des Clients übereinstimmt, der gestartet werden soll. Wenn ein Startimage mit derselben Architektur gefunden wird, wird dieses Startimage verwendet.
 
 4. Wenn kein Startabbild mit derselben Architektur gefunden wird, sucht Configuration Manager nach einem Startabbild, das mit der Architektur des Clients kompatibel ist. Hierfür wird die Liste der Tasksequenzen in Schritt 2 verwendet. Ein 64-Bit-Client ist beispielsweise mit 32-Bit- und 64-Bit-Startimages kompatibel. Ein 32-Bit-Client ist nur mit 32-Bit-Startimages kompatibel. Ein UEFI-Client ist nur mit 64-Bit-Startabbildern kompatibel.
-

@@ -6,21 +6,19 @@ ms.date: 08/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d827cf91-b18f-4ee7-b538-24ba6f003ab9
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
 ms.openlocfilehash: 62843bd544217734c4566d656a7c3a35bd5613cb
-ms.contentlocale: de-de
-ms.lasthandoff: 08/04/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-monitor-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>Überwachen von Clients für Linux- und UNIX-Server in System Center Configuration Manager
 
@@ -54,4 +52,3 @@ Sie können in der System Center Configuration Manager-Konsole Informationen von
  Es können auch benutzerdefinierte Berichte erstellt werden, die für Linux- und UNIX-Serverdaten spezifisch sind. Die Eigenschaft **Caption** der Hardwareinventurklasse **Operating System** ist ein nützliches Attribut, mit dem Sie bestimmte Betriebssysteme in der Berichtsabfrage ermitteln können.  
 
  Informationen zu Berichten in Configuration Manager finden Sie unter [Reporting in System Center Configuration Manager (Berichterstellung in System Center Configuration Manager)](../../../core/servers/manage/reporting.md).  
-

@@ -6,23 +6,20 @@ ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7a2abb79-9ae5-4a25-9e18-5dcf528de3bf
-caps.latest.revision: 4
-caps.handback.revision: 0
+caps.latest.revision: "4"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 8f3086adac2c6886316a2fd65b3d471acac9077c
-ms.contentlocale: de-de
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: fd62af3910c0745e0f1105417701b894e10cbbac
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="best-practices-for-collections-in-system-center-configuration-manager"></a>Bewährte Methoden für Sammlungen in System Center Configuration Manager
 
@@ -43,4 +40,3 @@ Verwenden Sie die folgenden bewährten Methoden für Sammlungen in System Center
 
 ## <a name="make-sure-that-maintenance-windows-are-large-enough-to-deploy-critical-software-updates"></a>Achten Sie darauf, dass die Wartungsfenster für die Bereitstellung wichtiger Softwareupdates groß genug sind.  
  Durch Wartungsfenster für Gerätesammlungen können Sie festlegen, dass Software nur zu bestimmten Zeiten von Configuration Manager auf diesen Geräten installiert werden kann. Wenn das Wartungsfenster zu klein ist, können wichtige Softwareupdates möglicherweise nicht vom Client installiert werden. Dies erhöht das Risiko eines Angriffs, der von diesem Softwareupdate verhindert würde.  
-

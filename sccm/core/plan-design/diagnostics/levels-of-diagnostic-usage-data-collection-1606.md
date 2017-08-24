@@ -6,12 +6,11 @@ ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7350d03-f440-4744-82d4-75f8c6c25028
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
@@ -33,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 688e05aae0e0b15b54835f8d64a98487f4d7b64d
 ms.openlocfilehash: 27eb4225b7e907772fa5ed8b209fc04fa9f3a677
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1606-of-system-center-configuration-manager"></a>Ebenen der Sammlung von Nutzungsdaten zu Diagnosezwecken für System Center Configuration Manager Version 1606
 
@@ -48,14 +48,14 @@ System Center Configuration Manager Version 1606 sammelt drei Ebenen von Diagnos
 
 
 > [!IMPORTANT]
->  Configuration Manager sammelt auf den Ebenen „Basis“ und „Erweitert“ keine Standortcodes, Standortnamen, IP-Adressen, Benutzer- oder Computernamen, physischen Adressen oder E-Mail-Adressen. Die auf der Ebene „Vollständig“ erfassten Daten (möglicherweise in erweiterten Diagnoseinformationen wie Protokolldateien oder Arbeitsspeicher-Momentaufnahmen enthaltene Daten) werden nicht zielgerichtet gesammelt. Sie werden von Microsoft auch nicht zu Werbezwecken oder dazu verwendet, Sie zu identifizieren bzw. Kontakt mit Ihnen aufzunehmen.
+>  Configuration Manager sammelt auf den Ebenen „Basis“ und „Erweitert“ keine Standortcodes, Standortnamen, IP-Adressen, Benutzer- oder Computernamen, physischen Adressen oder E-Mail-Adressen. Die auf der Ebene „Vollständig“ erfassten Daten (möglicherweise in erweiterten Diagnoseinformationen wie Protokolldateien oder Arbeitsspeicher-Momentaufnahmen enthaltene Daten) werden nicht zielgerichtet gesammelt. Sie werden von Microsoft auch nicht zu Werbezwecken oder dazu verwendet, Sie zu identifizieren oder sich mit Ihnen in Verbindung zu setzen.
 
-##  <a name="a-namebkmkchangea-how-to-change-the-level"></a><a name="bkmk_change"></a> Ändern der Ebene
+##  <a name="bkmk_change"></a> Ändern der Ebene
  Administratoren mit einem rollenbasierten Verwaltungsbereich, der **Ändern**-Berechtigungen für die **Standort**-Objektklasse umfasst, können in den Einstellungen der Configuration Manager-Konsole unter „Diagnose- und Nutzungsdaten“ die Ebene der erfassten Daten ändern.
 
-   Wechseln Sie dazu in der Konsole zur Registerkarte „Backstage“ (die obere linke Registerkarte mit Dropdownpfeil), und wählen Sie **Nutzungsdaten** und anschließend die Datenebene aus, die Sie benutzen möchten.  
+   Wechseln Sie dazu in der Konsole zur Registerkarte „Backstage“ (die obere linke Registerkarte mit Dropdownpfeil), und wählen Sie **Nutzungsdaten** und anschließend die Datenebene aus, die Sie verwenden möchten.  
 
-##  <a name="a-namebkmklevel1a-level-1---basic"></a><a name="bkmk_level1"></a> Ebene 1: Basis
+##  <a name="bkmk_level1"></a> Ebene 1: Basis
  Die Ebene „Basis“ umfasst Daten über Ihre Hierarchie, Daten, die für die Verbesserung Ihrer Installations- oder Upgradeerfahrung nötig sind, sowie Daten, die zur Ermittlung der für Ihre Hierarchie infrage kommenden Configuration Manager-Updates benötigt werden.
 
  Ab System Center Configuration Manager-Version 1606 enthält diese Ebene Folgendes:
@@ -80,11 +80,11 @@ System Center Configuration Manager Version 1606 sammelt drei Ebenen von Diagnos
 
 -   Anzahl der Betriebssysteme für verwaltete Geräte und der von Exchange Connector festgelegten Richtlinien
 
--   Anzahl der Clientsprachen und -gebietsschemas
+-   Anzahl der Sprachen und Gebietsschemas der Clients
 
 -   Anzahl von Windows 10-Geräten nach Branch und Build
 
--   Grundlegende Daten zur Configuration Manager-Standorthierarchie (Standortliste, Typ, Version, Status, Anzahl der Clients und Zeitzone)
+-   Grundlegende Daten zur Configuration Manager-Standorthierarchie (Standortliste, Typ, Version, Status, Anzahl von Clients und Zeitzone)
 
 -   Grundlegende Informationen zum Standortsystemserver (verwendete Standortsystemrollen, Internet- und SSL-Status, Betriebssystem, Prozessoren sowie physischer oder virtueller Computer)
 
@@ -111,7 +111,7 @@ System Center Configuration Manager Version 1606 sammelt drei Ebenen von Diagnos
 - ***[Neu]*** SQL-Version, Service Pack-Ebene, Edition, Sortierungs-ID und Zeichensatz
 
 
-##  <a name="a-namebkmklevel2a-level-2---enhanced"></a><a name="bkmk_level2"></a> Ebene 2: Erweitert
+##  <a name="bkmk_level2"></a> Ebene 2: Erweitert
 Die Ebene „Erweitert“ ist die Standardeinstellung nach dem Setup. Diese Ebene enthält die auf der Ebene „Basis“ erfassten Daten und featurespezifische Daten (Häufigkeit und Dauer der Verwendung), Configuration Manager-Clienteinstellungen (Name der Komponente, Status und bestimmte Einstellungen wie Abrufintervalle) sowie grundlegende Informationen zu Softwareupdates.
 
 Diese Ebene wird empfohlen, weil sie Microsoft die Daten bereitstellt, die mindestens erforderlich sind, um in künftigen Versionen der Produkte und Dienste nützliche Verbesserungen vorzunehmen. Diese Ebene erfasst keine Objektnamen (Websites, Benutzer, Computer oder Objekte) und keine Details zu sicherheitsrelevanten Objekten oder Sicherheitsrisiken, wie etwa die Anzahl der Systeme, die Softwareupdates erfordern.
@@ -326,7 +326,7 @@ Ab System Center Configuration Manager-Version 1606 enthält diese Ebene Folgend
 
     -   Anzahl der Updategruppen und minimale/maximale/durchschnittliche Anzahl der Updates pro Gruppe  
 
-    -   Anzahl von Updates und Prozentsatz der bereitgestellten, abgelaufenen, ersetzten und heruntergeladenen Updates sowie von Updates mit EULAs  
+    -   Anzahl von Updates und Prozentsatz der bereitgestellten, abgelaufenen, ersetzten und heruntergeladenen Updates sowie der Updates mit EULAs  
 
     -   Updateüberprüfungs-Fehlercodes und Anzahl der Computer  
 
@@ -374,7 +374,7 @@ Ab System Center Configuration Manager-Version 1606 enthält diese Ebene Folgend
 
 
 
-##  <a name="a-namebkmklevel3a-level-3---full"></a><a name="bkmk_level3"></a> Ebene 3: Vollständig
+##  <a name="bkmk_level3"></a> Ebene 3: Vollständig
 Die Ebene „Vollständig“ umfasst alle Daten der Ebenen „Basis“ und „Erweitert“. Darüber hinaus werden zusätzliche Informationen zu Endpoint Protection, die Prozentsätze zur Updatekompatibilität sowie Informationen zu Softwareupdates erfasst. Diese Ebene kann auch erweiterte Diagnoseinformationen wie Systemdateien und Momentaufnahmen des Arbeitsspeichers einschließen. Darin können wiederum personenbezogene Informationen enthalten sein, die zum Zeitpunkt der Erfassung im Arbeitsspeicher oder in Protokolldateien vorhanden waren.
 
 Ab System Center Configuration Manager-Version 1606 enthält diese Ebene Folgendes:
@@ -419,9 +419,3 @@ Ab System Center Configuration Manager-Version 1606 enthält diese Ebene Folgend
 -   ***[Neu]*** Zusammenfassung zur ATP-Integrität
 
 -   ***[Neu]*** Detaillierte Installationsfehler bei der Client-Bereitstellung
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

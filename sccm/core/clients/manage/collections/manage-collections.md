@@ -6,23 +6,20 @@ ms.date: 4/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
-caps.latest.revision: 8
-caps.handback.revision: 0
+caps.latest.revision: "8"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
 ms.openlocfilehash: 4d44f98eb0755619cdd2101203a13725186b835b
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-manage-collections-in-system-center-configuration-manager"></a>Verwalten von Sammlungen in System Center Configuration Manager
 
@@ -87,4 +84,3 @@ Mithilfe der Übersichtsinformationen in diesem Thema können Sie Verwaltungstas
 |**Verteilungspunktgruppen**|Auf dieser Registerkarte können Sie eine oder mehrere Verteilungspunktgruppen zu Mitgliedern der ausgewählten Sammlung zuordnen. Weitere Informationen finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).|  
 |**Sicherheit**|Auf dieser Registerkarte können Sie die Administratoren anzeigen, die dank zugeordneter Rollen und Sicherheitsbereiche über Berechtigungen für die ausgewählte Sammlung verfügen|  
 |**Monitor**|Auf dieser Registerkarte können Sie konfigurieren, wann Warnungen zu Clientstatus und Endpoint Protection generiert werden. Weitere Informationen finden Sie unter [How to configure client status in System Center Configuration Manager (Konfigurieren des Clientstatus in System Center Configuration Manager)](../../../../core/clients/deploy/configure-client-status.md) und unter [How to monitor Endpoint Protection in System Center Configuration Manager (Überwachen von Endpoint Protection in System Center Configuration Manager)](../../../../protect/deploy-use/monitor-endpoint-protection.md).|  
-

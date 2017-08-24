@@ -9,16 +9,15 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
 ms.openlocfilehash: 70a0ad1da03a7ca88df206fec683ab1df2b531e1
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
-#  <a name="a-namebkmksumdeploya-deploy-software-updates"></a><a name="BKMK_SUMDeploy"></a> Bereitstellen von Softwareupdates  
+#  <a name="BKMK_SUMDeploy"></a> Bereitstellen von Softwareupdates  
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -34,7 +33,7 @@ Wenn Sie eine erforderliche Softwareupdatebereitstellung konfigurieren, werden d
 
 Die Bereitstellung von Softwareupdates in einer Umgebung erfolgt entweder manuell oder automatisch. In der Regel beginnen Sie damit, dass Sie Softwareupdates manuell bereitstellen, um eine Baseline für die Clientcomputer zu erstellen. Die Verwaltung der Softwareupdates auf Clients erfolgt dann durch die automatische Bereitstellung.  
 
-## <a name="a-namebkmkmanualdeploymenta-manually-deploy-software-updates"></a><a name="BKMK_ManualDeployment"></a> Manuelles Bereitstellen von Softwareupdates
+## <a name="BKMK_ManualDeployment"></a> Manuelles Bereitstellen von Softwareupdates
 Sie können Softwareupdates in der Configuration Manager-Konsole auswählen und den Bereitstellungsprozess manuell starten. Mit dieser Bereitstellungsmethode sorgen Sie in der Regel dafür, dass die aktuell erforderlichen Softwareupdates auf den Clientcomputern vorhanden sind, bevor Sie automatische Bereitstellungsregeln zur Verwaltung der laufenden monatlichen Softwareupdatebereitstellungen erstellen. Diese Methode dient auch dazu, Out-of-Band-Anforderungen für Softwareupdates bereitzustellen. Der allgemeine Workflow für die manuelle Bereitstellung von Softwareupdates umfasst die folgenden Schritte:  
 
 1. Filtern Sie Softwareupdates mit bestimmten Anforderungen heraus. Beispielsweise könnten Sie anhand geeigneter Kriterien angeben, dass alle Softwareupdates abgerufen werden sollen, die auf mehr als 50 Clientcomputern benötigt werden und deren Klassifizierung Sicherheit oder Kritisch lautet.  
@@ -74,9 +73,3 @@ The Configuration Manager client downloads the content for required software upd
 
 
  <!-- For more information about the deployment process, see [Software update deployment process](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).  -->
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

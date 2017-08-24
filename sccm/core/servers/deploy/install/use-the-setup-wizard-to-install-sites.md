@@ -5,21 +5,19 @@ ms.date: 7/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 5945abb49fe06c59355805aa94b04d0d445ecbc3
 ms.openlocfilehash: 678f1b35fe6f7649dacb766f7c671f4ec8ea1435
-ms.contentlocale: de-de
-ms.lasthandoff: 07/24/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="use-the-setup-wizard-to-install-system-center-configuration-manager-sites"></a>Verwenden des Setup-Assistenten zum Installieren von System Center Configuration Manager-Standorten
 
@@ -391,4 +389,3 @@ Um einen eigenständigen primären Standort zu erweitern, sehen Sie sich zuerst 
 
     > [!TIP]  
     > Wenn Sie mehrere sekundäre Standorte gleichzeitig installieren, wird die Voraussetzungsprüfung immer nur für einen Standort ausgeführt. Erst wenn diese abgeschlossen ist, wird der nächste Standort geprüft.  
-

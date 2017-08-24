@@ -6,22 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35586a85-4af9-4c8b-925a-0e32dc8b7346
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9dac6b3fa92c193e3c1a75dd804e0b72fb5394b9
-ms.openlocfilehash: dbc303ea9df5a429cb2ef8bd89f372639a4ae2b2
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.openlocfilehash: 938b2970e4d8534fdd5f3daf0c9a5ddb1f576e60
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="scenarios-to-streamline-your-installation-of-system-center-configuration-manager"></a>Szenarien für die Optimierung Ihrer Installation von System Center Configuration Manager
 
@@ -131,4 +128,3 @@ Gehen Sie wie folgt vor:
     -   Dabei werden Clients direkt von Microsoft System Center 2012 Configuration Manager auf die Updateversion upgegradet, die Sie am primären Standort installiert haben.  
 
     Nach diesem Schritt werden die Clients auf Version 1610 upgegradet, ohne dass zuvor ein Upgrade auf Version 1606 erfolgt.
-

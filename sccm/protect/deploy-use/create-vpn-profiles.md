@@ -6,23 +6,20 @@ ms.date: 4/19/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f338e4db-73b5-45ff-92f4-1b89a8ded989
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: lleonard-msft
-caps.handback.revision: 0
+caps.handback.revision: "0"
 ms.author: alleonar
 ms.manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7a6c89254d01f4074e5c170b20338686178ebdd3
 ms.openlocfilehash: 359fcfd9754fb5c81763bc44cac45376ea3ab0b8
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-create-vpn-profiles-in-system-center-configuration-manager"></a>Erstellen von VPN-Profilen in System Center Configuration Manager
 
@@ -41,9 +38,9 @@ Verteilen Sie die VPN-App für Drittanbieter-VPN-Verbindungen vor der Bereitstel
 
 1.  Schließen Sie die Seite **Allgemein** ab. Beachten Sie dabei Folgendes:  
 
-       - Verwenden Sie im Namen des VPN-Profils keines der Zeichen \\/:*?&lt;>&#124; und auch keine Leerzeichen. Diese Zeichen werden vom Windows Server-VPN-Profil nicht unterstützt.  
+    - Verwenden Sie im Namen des VPN-Profils keines der Zeichen \\/:*?&lt;>&#124; und auch keine Leerzeichen. Diese Zeichen werden vom Windows Server-VPN-Profil nicht unterstützt.  
 
-       -   Wählen Sie **Import an existing VPN profile item from a file** (Vorhandenes VPN-Profilelement aus einer Datei importieren) aus, um Informationen eines VPN-Profils zu importieren, das in eine XML-Datei exportiert wurde (nur Windows 8.1 oder Windows RT).  
+     -   Wählen Sie **Import an existing VPN profile item from a file** (Vorhandenes VPN-Profilelement aus einer Datei importieren) aus, um Informationen eines VPN-Profils zu importieren, das in eine XML-Datei exportiert wurde (nur Windows 8.1 oder Windows RT).  
 
 1.  Geben Sie auf der Seite **Verbindung** Folgendes an:  
 
@@ -79,4 +76,3 @@ Schließen Sie den Assistenten ab. Das neue VPN-Profil wird im Arbeitsbereich **
 - Verteilen Sie die VPN-App für Drittanbieter-VPN-Verbindungen vor der Bereitstellung des VPN-Profils. Wenn Sie die App nicht bereitstellen, werden die Benutzer dazu aufgefordert, sobald sie versuchen, sich mit dem VPN zu verbinden. Weitere Informationen zum Bereitstellen von Apps finden Sie unter [Bereitstellen von Anwendungen mit System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md).
 
 - Stellen Sie die VPN-Profile wie in [Erstellen von VPN-Profilen in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md) beschrieben bereit.  
-

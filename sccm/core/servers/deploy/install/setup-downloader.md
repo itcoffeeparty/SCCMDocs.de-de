@@ -6,21 +6,19 @@ ms.date: 3/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bda87fc5-2e4c-4992-98a4-01770365038c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 34e24deb90a39bf655a2e24d16cdbe07528e6193
 ms.openlocfilehash: b72148ecc16141843178cbd220fe021fab8be992
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="setup-downloader-for-system-center-configuration-manager"></a>Setup-Downloadprogramm für System Center Configuration Manager
 
@@ -95,4 +93,3 @@ Sie haben zwei Optionen zum Ausführen des Setup-Downloadprogramms:
         -   Das Setup-Downloadprogramm wird gestartet. Anschließend müssen Sie den Pfad für den Downloadordner angeben. Nachdem Sie auf **Überprüfen** geklickt haben, werden die Dateien im Downloadordner vom Setup-Downloadprogramm überprüft.  
 
 3.  Überprüfen Sie die Downloadergebnisse anhand der Datei **ConfigMgrSetup.log** im Stammverzeichnis von Laufwerk C.
-

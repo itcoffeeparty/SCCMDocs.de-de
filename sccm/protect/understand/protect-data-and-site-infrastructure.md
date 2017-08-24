@@ -6,22 +6,19 @@ ms.date: 11/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2117f786-d521-4790-9e8d-ec096c63c9d7
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Robstack
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8679df3f8a3b692391537bacd6144a4f2fae357b
 ms.openlocfilehash: d527cb4bfb55ca50c8d2a0fed7c427af5747fe99
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="protect-data-and-site-infrastructure-with-system-center-configuration-manager"></a>Schützen der Daten und Standortinfrastruktur mit System Center Configuration Manager
 
@@ -43,4 +40,3 @@ Sie möchten, dass Ihre Benutzer sicher auf die Ressourcen Ihrer Organisation zu
 -   E-Mail-Profile stellen eine Reihe von Tools und Ressourcen zum Erstellen, Bereitstellen und Überwachen von E-Mail-Einstellungen auf Geräten bereit. Dies gibt Benutzern die Möglichkeit, von ihren persönlichen Geräten aus auf Unternehmens-E-Mails zuzugreifen, ohne dass eine Konfiguration ihrerseits erforderlich ist. Weitere Informationen finden Sie unter [Email profiles in System Center Configuration Manager (E-Mail-Profile in System Center Configuration Manager)](../deploy-use/introduction-to-email-profiles.md).  
 
 -   Configuration Manager ermöglicht die Integration in Windows Hello for Business (ehemals Microsoft Passport for Work), eine alternative Anmeldemethode, die Active Directory oder ein Azure Active Directory-Konto verwendet, um ein Kennwort, eine Smartcard oder eine virtuelle Smartcard zu ersetzen. Weitere Informationen finden Sie unter [Windows Hello for Business settings in System Center Configuration Manager (Windows Hello for Business-Einstellungen in System Center Configuration Manager)](../deploy-use/windows-hello-for-business-settings.md).  
-

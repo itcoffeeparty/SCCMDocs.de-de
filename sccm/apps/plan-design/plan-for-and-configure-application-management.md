@@ -6,22 +6,19 @@ ms.date: 02/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 2be84a1d-ebb9-47ae-8982-c66d5b92a52a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1c43c4968f93985515249ddb117269f8ed61302a
 ms.openlocfilehash: 46cc3fcfd9516cf1c124e24b50d0aac0cb0025dc
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-for-and-configure-application-management-in-system-center-configuration-manager"></a>Planen und Konfigurieren der Anwendungsverwaltung in System Center Configuration Manager
 
@@ -227,4 +224,3 @@ Benutzerdefiniertes Branding für das Softwarecenter wird gemäß den folgenden 
 
 > [!WARNING]  
 >  Nach der Installation der Standortsystemrollen für den Anwendungskatalog wird beim Auswählen des Links **Zusätzliche Anwendungen im Anwendungskatalog suchen** im Softwarecenter nicht sofort der Anwendungskatalog angezeigt. Der Anwendungskatalog steht erst nach dem nächsten Herunterladen der Clientrichtlinie durch den Client oder bis zu 25 Stunden nach der Installation der Standortsystemrollen für den Anwendungskatalog zur Verfügung.  
-

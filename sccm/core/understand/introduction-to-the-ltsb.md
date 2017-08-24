@@ -6,22 +6,19 @@ ms.date: 05/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d940fd1bbf96767d44f8c55315e814be55a83897
 ms.openlocfilehash: 91c1ca860069c6ebe0d20230c4620bf3f68735a2
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="introduction-to-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Einführung in Long-Term Servicing Branch von System Center Configuration Manager
 
@@ -55,10 +52,10 @@ Obwohl die Unterstützung für diese Funktionen nicht in LTSB verfügbar ist, bl
 ## <a name="find-documentation-for-the-ltsb"></a>Suche nach Dokumentation für LTSB
 LTSB basiert auf der Current Branch-Version 1606. Verwenden Sie als Produktdokumentation die [Dokumentation zu Current Branch](https://docs.microsoft.com/sccm/), die Warnungen und Einschränkungen speziell zu LTSB enthält. Diese Warnungen und Einschränkungen werden in folgenden Onlinethemen behandelt:
 
--      [Einführung in Long-Term Servicing Branch](introduction-to-the-ltsb.md) (dieses Thema)
--      [Installieren von Long-Term Servicing Branch](install-the-ltsb.md)
--      [Upgrade von Long-Term Servicing Branch auf Current Branch](convert-to-current-branch.md)
--      [Unterstützte Konfigurationen für Long-Term Servicing Branch](supported-configurations-for-ltsb.md)
+-     [Einführung in Long-Term Servicing Branch](introduction-to-the-ltsb.md) (dieses Thema)
+-     [Installieren von Long-Term Servicing Branch](install-the-ltsb.md)
+-     [Upgrade von Long-Term Servicing Branch auf Current Branch](convert-to-current-branch.md)
+-     [Unterstützte Konfigurationen für Long-Term Servicing Branch](supported-configurations-for-ltsb.md)
 -   [Verwalten von Long-Term Servicing Branch von System Center Configuration Manager](manage-the-ltsb.md)
 
 Wenn Sie sich auf die Current Branch-Dokumentation für LTSB beziehen, gelten die Informationen für Version 1606 auch für LTSB. Funktionen oder Informationen, die bei Version 1610 oder höher eingeführt bzw. angegeben werden, werden nicht von LTSB unterstützt.
@@ -78,4 +75,3 @@ Weitere Informationen zur Lizenzierung für Configuration Manager-Branches finde
 Wenn Sie zu dem Schluss kommen sollten, dass Configuration Manager-LTSB der richtige Branch für Ihre Umgebung ist, [installieren Sie einen neuen LTSB-Standort](/sccm/core/understand/install-the-ltsb#install-a-new-site) als Teil einer neuen Hierarchie, oder [aktualisieren Sie einen System Center 2012 Configuration Manager-Standort](/sccm/core/understand/install-the-ltsb#upgrade-from-system-center-2012-configuration-manager) und die jeweilige Hierarchie.
 
 Wenn Sie keine Installationsmedien besitzen, finden Sie in der [Dokumentation zu System Center 2016](https://technet.microsoft.com/system-center-docs/system-center) Informationen zum Beziehen von System Center 2016, das Medien zur Installation von System Center Configuration Manager-LTSB enthält.  
-

@@ -6,23 +6,20 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 22cc286baa72d3e356a07b91ee0a1be646fa8a9e
-ms.contentlocale: de-de
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 060d63ab8bce9c3bb39d2db404580b9f59416d33
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-configure-client-status-in-system-center-configuration-manager"></a>Konfigurieren des Clientstatus in System Center Configuration Manager
 
@@ -114,4 +111,3 @@ Sie müssen zunächst für Ihren Standort die Parameter einrichten, anhand derer
 4.  Schließen Sie den Registrierungs-Editor.  
 
  Sie können Clients auch mithilfe der CCMSetup-Installationseigenschaft **NotifyOnly** installieren, um sie von der automatischen Wiederherstellung auszuschließen. Weitere Informationen zu den Clientinstallationseigenschaften finden Sie unter [Informationen zu Clientinstallationseigenschaften in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
-

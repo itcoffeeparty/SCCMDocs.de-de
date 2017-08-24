@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 25e4ac68-0e78-4bbe-b8fc-3898b372c4e8
-caps.latest.revision: 19
-caps.handback.revision: 0
+caps.latest.revision: "19"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: e9320e40b8e5031ffa3da5e5149c7da718cc87d5
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-a-task-sequence-to-capture-an-operating-system-in-system-center-configuration-manager"></a>Erstellen einer Tasksequenz zum Erfassen eines Betriebssystems in System Center Configuration Manager
 
@@ -28,10 +27,10 @@ ms.openlocfilehash: e9320e40b8e5031ffa3da5e5149c7da718cc87d5
 
 Wenn Sie zum Bereitstellen eines Betriebssystems auf einem Computer in System Center Configuration Manager eine Tasksequenz verwenden, installiert der Computer das Betriebssystemimage, das Sie in der Tasksequenz angeben. Um das Betriebssystemimage anzupassen, damit es bestimmte Treiber, Anwendungen, Softwareupdates usw. einbezieht, verwenden Sie eine Tasksequenz zum Erstellen und Erfassen, um einen Referenzcomputer zu erstellen und dann das Betriebssystemimage von diesem Referenzcomputer zu erfassen. Wenn Sie bereits über einen Referenzcomputer für die Erfassung verfügen, können Sie eine benutzerdefinierte Tasksequenz erstellen, um das Betriebssystem zu erfassen. Verwenden Sie die folgenden Abschnitte, um ein benutzerdefiniertes Betriebssystem zu erfassen.  
 
-##  <a name="a-namebkmkbuildcapturetsa-use-a-task-sequence-to-build-and-capture-a-reference-computer"></a><a name="BKMK_BuildCaptureTS"></a> Verwenden einer Tasksequenz zum Erstellen und Erfassen eines Referenzcomputers  
+##  <a name="BKMK_BuildCaptureTS"></a> Verwenden einer Tasksequenz zum Erstellen und Erfassen eines Referenzcomputers  
  Die Tasksequenz für die Erstellung und Erfassung partitioniert und formatiert den Referenzcomputer, installiert das Betriebssystem sowie den Configuration Manager-Client, Anwendungen und Softwareupdates. Anschließend erfasst er das Betriebssystem vom Referenzcomputer. Die Pakete, die der Tasksequenz zugeordnet sind, z. B. Anwendungen, müssen auf Verteilungspunkten verfügbar sein, bevor Sie die Tasksequenz für die Erstellung und Erfassung erstellen.  
 
-###  <a name="a-namebkmkcreatepackagesa-prepare-for-operating-system-deployments"></a><a name="BKMK_CreatePackages"></a> Vorbereiten auf Betriebssystembereitstellungen  
+###  <a name="BKMK_CreatePackages"></a> Vorbereiten auf Betriebssystembereitstellungen  
  Es gibt eine Vielzahl von Szenarien zum Bereitstellen eines Betriebssystems auf Computern in Ihrer Umgebung. In den meisten Fällen erstellen Sie eine Tasksequenz und wählen **Bestehendes Abbildpaket installieren** im Tasksequenzerstellungs-Assistenten aus, um das Betriebssystem zu installieren, die Benutzereinstellungen zu migrieren, Softwareupdates anzuwenden und Anwendungen zu installieren. Bevor Sie eine Tasksequenz zum Installieren eines Betriebssystems erstellen, muss Folgendes vorhanden sein:  
 
 -   **Erforderlich**  
@@ -48,7 +47,7 @@ Wenn Sie zum Bereitstellen eines Betriebssystems auf einem Computer in System Ce
 
     -   [Anwendungen](../../apps/deploy-use/create-applications.md) müssen zur Configuration Manager-Konsole hinzugefügt werden.  
 
-###  <a name="a-namebkmkcreatebuildcapturetsa-create-a-build-and-capture-task-sequence"></a><a name="BKMK_CreateBuildCaptureTS"></a> Erstellen einer Tasksequenz zum Erstellen und Erfassen  
+###  <a name="BKMK_CreateBuildCaptureTS"></a> Erstellen einer Tasksequenz zum Erstellen und Erfassen  
  Gehen Sie wie folgt vor, um eine Tasksequenz zum Erstellen eines Referenzcomputers und zum Erfassen eines Betriebssystems zu verwenden.  
 
 #### <a name="to-create-a-task-sequence-that-builds-and-captures-an-operating-system-image"></a>So erstellen Sie eine Tasksequenz zum Erstellen und Erfassen eines Betriebssystemabbilds  
@@ -145,7 +144,7 @@ Wenn Sie zum Bereitstellen eines Betriebssystems auf einem Computer in System Ce
 
 -   Wenn es sich beim Referenzcomputer nicht um einen Configuration Manager-Client handelt oder Sie die Tasksequenz auf dem Referenzcomputer manuell ausführen möchten, führen Sie den **Assistenten zum Erstellen von Tasksequenzmedien** aus, um startbare Medien zu erstellen. Informationen zum Erstellen von startbaren Medien finden Sie unter [Erstellen startbarer Medien](create-bootable-media.md).  
 
-##  <a name="a-namebkmkcaptureexistingrefcomputera-capture-an-operating-system-image-from-an-existing-reference-computer"></a><a name="BKMK_CaptureExistingRefComputer"></a> Erfassen eines Betriebssystemabbilds von einem vorhandenen Referenzcomputer  
+##  <a name="BKMK_CaptureExistingRefComputer"></a> Erfassen eines Betriebssystemabbilds von einem vorhandenen Referenzcomputer  
  Wenn Sie bereits über einen Referenzcomputer für die Erfassung verfügen, können Sie eine Tasksequenz erstellen, die das Betriebssystem vom Referenzcomputer erfasst. Sie verwenden den Tasksequenzschritt **Betriebssystemabbild erfassen** , um mindestens ein Abbild von einem Referenzcomputer zu erfassen und in einer Abbilddatei (WIM) auf der angegebenen Netzwerkfreigabe zu speichern. Der Referenzcomputer wird mithilfe eines Startabbilds in Windows PE gestartet. Jede Festplatte des Referenzcomputers wird in der WIM-Datei als separates Abbild erfasst. Wenn der Referenzcomputer über mehrere Laufwerke verfügt, enthält die erstellte WIM-Datei für jedes Volume ein separates Abbild. Es werden nur als NTFS oder FAT32 formatierte Volumes erfasst. Volumes in anderen Formaten sowie USB-Volumes werden nicht berücksichtigt.  
 
  Mit dem folgenden Verfahren können Sie ein Betriebssystemabbild von einem vorhandenen Referenzcomputer erfassen.  
@@ -192,7 +191,7 @@ Wenn Sie zum Bereitstellen eines Betriebssystems auf einem Computer in System Ce
 
 -   Wenn es sich beim Referenzcomputer nicht um einen Configuration Manager-Client handelt oder Sie die Tasksequenz auf dem Referenzcomputer manuell ausführen möchten, führen Sie den **Assistenten zum Erstellen von Tasksequenzmedien** aus, um startbare Medien zu erstellen. Informationen zum Erstellen von startbaren Medien finden Sie unter [Erstellen startbarer Medien](create-bootable-media.md).  
 
-##  <a name="a-namebkmkbuildandcapturetsexamplea-task-sequence-example-to-build-and-capture-an-operating-system-image"></a><a name="BKMK_BuildandCaptureTSExample"></a> Tasksequenzbeispiel zum Erstellen und Erfassen eines Betriebssystemabbilds  
+##  <a name="BKMK_BuildandCaptureTSExample"></a> Tasksequenzbeispiel zum Erstellen und Erfassen eines Betriebssystemabbilds  
  Orientieren Sie sich an der folgenden Tabelle, während Sie eine Tasksequenz zum Erstellen und Erfassen eines Betriebssystemabbilds erstellen. Mithilfe dieser Tabelle können Sie die allgemeine Sequenz für Ihre Tasksequenzschritte festlegen und diese Tasksequenzschritte in logischen Gruppen organisieren. Die von Ihnen erstellte Tasksequenz kann von diesem Beispiel abweichen und eine andere Anzahl von Tasksequenzschritten und Tasksequenzgruppen enthalten.  
 
 > [!IMPORTANT]  
@@ -232,9 +231,3 @@ Wenn Sie zum Bereitstellen eines Betriebssystems auf einem Computer in System Ce
 
 ## <a name="next-steps"></a>Nächste Schritte  
 [Methoden zum Bereitstellen von Unternehmensbetriebssystemen](methods-to-deploy-enterprise-operating-systems.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

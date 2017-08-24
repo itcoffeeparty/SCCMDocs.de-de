@@ -9,14 +9,13 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
-translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
 ms.openlocfilehash: 04c5ccc53263b2672096b564695a636bfb28d952
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="icons-used-for-software-updates-in-system-center-configuration-manager"></a>Für Softwareupdates verwendete Symbole in System Center Configuration Manager
 
@@ -124,9 +123,3 @@ Synchronisierte Softwareupdates werden in der Configuration Manager-Konsole ange
  **Einsatzbedenken:**  
 
  Wenn der Inhalt für ein Softwareupdate fehlt, können Clients das Softwareupdate solange nicht installieren, bis der Inhalt auf einem Verteilungspunkt verfügbar geworden ist. Sie können den Inhalt erneut an Verteilungspunkte verteilen, indem Sie die **Neu verteilen** -Aktion verwenden. Wenn Inhalt für ein Softwareupdate in einer Bereitstellung fehlt, die in einem übergeordneten Standort erstellt wurde, muss das Softwareupdate erneut an den untergeordneten Standort repliziert oder verteilt werden. Weitere Informationen zur erneuten Verteilung von Inhalt finden Sie unter [Verwalten der Inhalte, die Sie verteilt haben](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

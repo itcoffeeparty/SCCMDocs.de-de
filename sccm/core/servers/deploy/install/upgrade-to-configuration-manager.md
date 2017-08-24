@@ -6,22 +6,19 @@ ms.date: 6/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
 ms.openlocfilehash: 1166b739e1e8d667172d97883f484fdbc3a142c1
-ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="upgrade-to-system-center-configuration-manager"></a>Upgrade auf System Center Configuration Manager
 
@@ -402,4 +399,3 @@ Nachdem Sie für einen Standort ein Upgrade auf ein neues Service Pack durchgef�
 - **Bei einem Upgrade auf Version 1511:** Um sicherzustellen, dass Clients auf sekundären Standorten den Verwaltungspunkt vom sekundären Standort (Proxyverwaltungspunkt) finden, fügen Sie den Verwaltungspunkt manuell zu Begrenzungsgruppen hinzu, die auch die Verteilungspunkte am sekundären Standort enthalten.  
 
 - **Bei einem Upgrade auf Version 1606 oder höher:** Proxyverwaltungspunkte werden automatisch zu Begrenzungsgruppen hinzugefügt, die Verteilungspunkte am sekundären Standort enthalten.
-

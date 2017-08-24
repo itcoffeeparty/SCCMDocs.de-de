@@ -6,24 +6,20 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: aaroncz
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cf6337a2-700c-47f3-b6f8-5814f9b81e59
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c74b553ab76a2b77b0d893151351132da05a640d
-ms.openlocfilehash: 5b75f3296dc20a6766a894f463e958455ca1d65f
-ms.contentlocale: de-de
-ms.lasthandoff: 01/03/2017
-
-
+ms.openlocfilehash: 3bf6651f58dc0c2aa4773f77115c3fbcd4a33221
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="maintain-mac-clients"></a>Warten von Macintosh-Clients
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -55,7 +51,7 @@ Es folgen Verfahren zum Deinstallieren von Mac-Clients und Verlängern ihrer Zer
 
  -   **RenewalPeriod1** – Hiermit wird der erste Erneuerungszeitraum (in Sekunden) angegeben, in dem Benutzer das Zertifikat erneuern können. Der Standardwert beträgt 3.888.000 Sekunden (45 Tage). Legen Sie keinen Wert kleiner als 300 fest, da der Zeitraum auf den Standardwert zurückgesetzt wird. 
 
- -   **RenewalPeriod2** – Hiermit wird der zweite Verlängerungszeitraum (in Sekunden) angegeben, in dem Benutzer das Zertifikat verlängern können. Der Standardwert beträgt 259.200 Sekunden (3 Tage). Wenn dieser Wert konfiguriert ist und größer gleich 300 Sekunden und kleiner gleich **RenewalPeriod1** ist, wird der Wert verwendet. Wenn **RenewalPeriod1** größer als 3 Tage ist, wird ein Wert von 3 Tagen für **RenewalPeriod2**verwendet.  Wenn **RenewalPeriod1** kleiner als 3 Tage ist, dann wird **RenewalPeriod2** auf denselben Wert wie **RenewalPeriod1**festgelegt.  
+ -   **RenewalPeriod2** – Hiermit wird der zweite Erneuerungszeitraum (in Sekunden) angegeben, in dem Benutzer das Zertifikat erneuern können. Der Standardwert beträgt 259.200 Sekunden (3 Tage). Wenn dieser Wert konfiguriert ist und größer gleich 300 Sekunden und kleiner gleich **RenewalPeriod1** ist, wird der Wert verwendet. Wenn **RenewalPeriod1** größer als 3 Tage ist, wird ein Wert von 3 Tagen für **RenewalPeriod2**verwendet.  Wenn **RenewalPeriod1** kleiner als 3 Tage ist, dann wird **RenewalPeriod2** auf denselben Wert wie **RenewalPeriod1**festgelegt.  
 
  -   **RenewalReminderInterval1** – Gibt das Intervall an (in Sekunden), in dem Benutzern während des ersten Erneuerungszeitraums der Assistent zum Erneuern von Zertifikaten angezeigt wird. Der Standardwert beträgt 86.400 Sekunden (1 Tag). Wenn **RenewalReminderInterval1** größer als 300 Sekunden, aber kleiner als der für **RenewalPeriod1**konfigurierte Wert ist, wird der konfigurierte Wert verwendet. Andernfalls wird der Standardwert 1 Tag verwendet.  
 
@@ -103,7 +99,7 @@ Es folgen Verfahren zum Deinstallieren von Mac-Clients und Verlängern ihrer Zer
 
     -   **Datentyp:Zeichenfolge**  
 
-6.  Klicken Sie im Dialogfeld **Einstellung erstellen** für **Ermittlungsskript**auf **Skript hinzufügen**, um ein Skript anzugeben, mit dem Mac-Computer ermittelt werden können, die über eine konfigurierte SMSID verfügen.  
+6.  Wählen Sie im Dialogfeld **Einstellung erstellen** für **Ermittlungsskript** **Skript hinzufügen** aus, um ein Skript anzugeben, mit dem Mac-Computer ermittelt werden können, die über eine konfigurierte SMSID verfügen.  
 
 7.  Geben Sie im Dialogfeld **Ermittlungsskript bearbeiten** das folgende Shellskript ein:  
 
@@ -111,9 +107,9 @@ Es folgen Verfahren zum Deinstallieren von Mac-Clients und Verlängern ihrer Zer
     defaults read com.microsoft.ccmclient SMSID  
     ```  
 
-8.  Klicken Sie auf **OK**, um das Dialogfeld **Ermittlungsskript bearbeiten** zu schließen.  
+8.  Wählen Sie **OK** aus, um das Dialogfeld **Ermittlungsskript bearbeiten** zu schließen.  
 
-9. Klicken Sie im Dialogfeld **Einstellung erstellen** für **Wiederherstellungsskript (optional)**auf **Skript hinzufügen**, um ein Skript anzugeben, mit dem die SMSID von Mac-Computern entfernt wird, wenn sie gefunden wird.  
+9. Wählen Sie im Dialogfeld **Einstellung erstellen** für **Wiederherstellungsskript (optional)** **Skript hinzufügen** aus, um ein Skript anzugeben, mit dem die SMSID von Mac-Computern entfernt wird, wenn sie gefunden wird.  
 
 10. Geben Sie im Dialogfeld **Wiederherstellungsskript erstellen** das folgende Shellskript ein:  
 
@@ -121,13 +117,13 @@ Es folgen Verfahren zum Deinstallieren von Mac-Clients und Verlängern ihrer Zer
     defaults delete com.microsoft.ccmclient SMSID  
     ```  
 
-11. Klicken Sie auf **OK**, um das Dialogfeld **Wiederherstellungsskript erstellen** zu schließen.  
+11. Wählen Sie **OK** aus, um das Dialogfeld **Wiederherstellungsskript erstellen** zu schließen.  
 
 12. Klicken Sie auf der Seite **Kompatibilitätsregeln** des Assistenten auf **Neu**, und geben Sie anschließend im Dialogfeld **Regel erstellen** die folgenden Informationen an:  
 
     -   **Name:SMS-ID für Mac entfernen**  
 
-    -   **Ausgewählte Einstellung:** Klicken Sie auf **Durchsuchen**, und wählen Sie anschließend das Ermittlungsskript aus, das Sie zuvor angegeben haben.  
+    -   **Ausgewählte Einstellung:** Wählen Sie **Durchsuchen** aus, und wählen Sie anschließend das Ermittlungsskript aus, das Sie zuvor angegeben haben.  
 
     -   Geben Sie im Feld **die folgenden Werte** **Das Domänen-/Standardpaar (com.microsoft.ccmclient, SMS-ID) existiert nicht**ein.  
 
@@ -135,7 +131,7 @@ Es folgen Verfahren zum Deinstallieren von Mac-Clients und Verlängern ihrer Zer
 
 13. Beenden Sie den Assistenten zum Erstellen von Konfigurationselementen.  
 
-14. Erstellen Sie eine Konfigurationsbasislinie mit dem Konfigurationselement, das Sie gerade erstellt haben, und stellen Sie es für die Gerätesammlung bereit, die Sie in Schritt 1 erstellt haben.  
+14. Erstellen Sie eine Konfigurationsbaseline mit dem Konfigurationselement, das Sie gerade erstellt haben, und stellen Sie es für die Gerätesammlung bereit, die Sie in Schritt 1 erstellt haben.  
 
      Weitere Informationen zum Erstellen und Bereitstellen von Konfigurationsbaselines finden Sie unter [Erstellen von Konfigurationsbaselines in System Center Configuration Manager](../../../compliance/deploy-use/create-configuration-baselines.md) und [Bereitstellen von Konfigurationsbaselines in System Center Configuration Manager](../../../compliance/deploy-use/deploy-configuration-baselines.md).  
 
@@ -151,16 +147,15 @@ Es folgen Verfahren zum Deinstallieren von Mac-Clients und Verlängern ihrer Zer
 
     a.  Geben Sie den Befehl **sudo /Applications/Utilities/Keychain\ Access.app/Contents/MacOS/Keychain\ Access**ein.  
 
-    b.  Klicken Sie im Dialogfeld **Schlüsselbundverwaltung** im Abschnitt **Schlüsselbunde** auf **System**und im Abschnitt **Kategorie** anschließend auf **Schlüssel**.  
+    b.  Wählen Sie im Dialogfeld **Schlüsselbundverwaltung** im Abschnitt **Schlüsselbunde** **System** aus, und im Abschnitt **Kategorie** anschließend **Schlüssel**.  
 
     c.  Erweitern Sie die Schlüssel, um die Clientzertifikate anzuzeigen. Wenn Sie das Zertifikat mit einem gerade installierten privaten Schlüssel identifiziert haben, doppelklicken Sie auf dem Schlüssel.  
 
-    d.  Wählen Sie auf der Registerkarte **Zugriffssteuerung** die Option **Bestätigen, bevor Zugriff zugelassen wird** aus.  
+    d.  Wählen Sie auf der Registerkarte **Zugriffssteuerung** die Option **Confirm before allowing access** (Bestätigen, bevor Zugriff zugelassen wird) aus.  
 
-    e.  Navigieren Sie zum Ordner **/Library/Application Support/Microsoft/CCM**, wählen Sie **CCMClient**aus, und klicken Sie dann auf **Hinzufügen**.  
+    e.  Navigieren Sie zum Ordner **/Library/Application Support/Microsoft/CCM**, wählen Sie **CCMClient** aus, und wählen Sie dann **Hinzufügen** aus.  
 
-    f.  Klicken Sie auf **Änderungen sichern**, und schließen Sie das Dialogfeld **Schlüsselbundverwaltung**.  
+    f.  Wählen Sie **Änderungen sichern** aus, und schließen Sie das Dialogfeld **Schlüsselbundverwaltung**.  
 
 17. Starten Sie den Macintosh-Computer neu.  
-
 

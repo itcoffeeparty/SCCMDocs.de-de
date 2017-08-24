@@ -6,8 +6,7 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e36b98c7-d0f4-4dd6-bac3-6a6c4b4bf841
@@ -15,13 +14,11 @@ caps.latest.revision:
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 399e8b9e2e2dd4621abb6ffca765ce2a69d86b9e
-ms.contentlocale: de-de
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: 4fd2d3b8aae6a2f42e7c6a87723d16368be30984
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="troubleshoot-lookout-integration-with-intune"></a>Behandeln von Problemen bei der Lookout-Integration mit Intune
 
@@ -87,4 +84,3 @@ Solange sich der neue Benutzer in einer der Registrierungsgruppen befindet, die 
 [Sie werden zur Installation von Lookout for Work auf Ihrem Android-Gerät aufgefordert]( http://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-android)
 
 [Sie müssen eine Bedrohung beheben, die Lookout for Work auf Ihrem Android-Gerät gefunden hat](http://docs.microsoft.com/intune/enduser/you-need-to-resolve-a-threat-found-by-lookout-for-work-android)
-

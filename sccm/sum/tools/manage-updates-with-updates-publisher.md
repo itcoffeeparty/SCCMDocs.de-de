@@ -6,22 +6,20 @@ ms.date: 4/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cd64994c-b426-4465-96cd-54b0edc2778d
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
 ms.openlocfilehash: 1d6c3b1db14867bdbc5cae8ded099d9024a79549
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-software-updates-in-updates-publisher"></a>Verwalten von Softwareupdates in Updates Publisher
 
@@ -138,4 +136,3 @@ Sie können Updates zwischen Anbieter- und Produktordnern verschieben, einschlie
 
 ## <a name="view-the-xml-of-an-update-or-bundle"></a>Anzeigen des XML-Codes eines Updates oder Pakets
 Im **Arbeitsbereich „Updates“** können Sie ein einzelnes Update oder Paket auswählen, und dann auf **XML anzeigen** klicken, um die XML-Struktur dieses Updates anzuzeigen. Es sind keine Optionen zum direkten Bearbeiten der XML-Struktur vorhanden.
-

@@ -6,24 +6,20 @@ ms.date: 2/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ec5b54cf-62b7-4ed1-9bb3-e8c63b9641c8
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 60631bc0346bd78d704e7129bb755af504c59b1b
 ms.openlocfilehash: 6e7edc85630d22c5bbba1ff66bd1199903db76db
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
-
 # <a name="upgrade-the-long-term-servicing-branch-to-the-current-branch"></a>Upgrade von Long-Term Servicing Branch auf Current Branch
 
 *Gilt für: System Center Configuration Manager (Long-Term Servicing Branch)*
@@ -34,7 +30,7 @@ Wenn Sie über einen aktuellen Software Assurance-Vertrag (oder ähnliche Lizenz
 
 Wenn Sie über mehrere Standorte verfügen, müssen Sie nur den Standort der obersten Ebene Ihrer Hierarchie konvertieren. Nachdem der Standort der obersten Ebene konvertiert ist:
 - Konvertieren untergeordnete primäre Standorte automatisch.
--    Müssen Sie sekundäre Standorte in der Configuration Manager-Konsole manuell aktualisieren.
+-   Müssen Sie sekundäre Standorte in der Configuration Manager-Konsole manuell aktualisieren.
 
 ## <a name="run-setup-to-convert-the-long-term-servicing-branch"></a>Ausführen von Setup zum Konvertieren von Long-Term Servicing Branch
 Sie können auf dem Standort der obersten Ebene Ihrer Hierarchie das Configuration Manager-Setup mit einem berechtigtem Baselinemedium ausführen, und **Standortwartung** auswählen.  Wählen Sie dann auf der Lizenzierungsseite die Option für Current Branch aus, und schließen Sie den Assistenten ab.
@@ -56,4 +52,3 @@ Wenn Ihr Standort LTSB ausführt, können Sie die folgende Option in der Configu
  2. Wählen Sie die Option zum Konvertieren von Current Branch aus, und klicken Sie auf **Anwenden**.  
 
 Sobald Ihr Standort in Current Branch konvertiert wurde, stehen Ihnen Features und Funktionen zur Verfügung, die bisher nicht verfügbar waren.
-

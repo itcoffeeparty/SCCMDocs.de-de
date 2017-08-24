@@ -1,5 +1,4 @@
 ---
-
 title: Konfigurieren von Endpoint Protection | Microsoft-Dokumentation
 description: "Erfahren Sie, wie Sie Methoden mit Endpoint Protection in System Center Configuration Manager auswählen und konfigurieren, um Antischadsoftwaredefinitionen auf den Clientcomputern auf dem neuesten Stand zu halten."
 ms.custom: na
@@ -7,25 +6,20 @@ ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 537dd2a7-4e44-4877-b8dd-5e1499407f8d
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: 9085a4daed409eeff4c95e5c467f123d0a38147a
-ms.contentlocale: de-de
-ms.lasthandoff: 12/16/2016
-
-
-
+ms.openlocfilehash: b5da7900a4f8e2f330c4dcb2cac00b45099bd909
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 #  <a name="configure-definition-updates-for-endpoint-protection"></a>Konfigurieren von Definitionsupdates für Endpoint Protection  
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -75,4 +69,3 @@ ms.lasthandoff: 12/16/2016
 -   Von Microsoft Malware Protection Center verteilte Updates ‒ Bei dieser Methode werden Definitionsupdates vom Microsoft Malware Protection Center heruntergeladen.
 
 -   [Updates von UNC-Dateifreigaben](endpoint-definitions-network.md) ‒ Mit dieser Methode können Sie die neuesten Definitions- und Modulupdates in einer Freigabe auf dem Netzwerk speichern. Clients können dann zum Installieren der Updates auf das Netzwerk zugreifen.
-

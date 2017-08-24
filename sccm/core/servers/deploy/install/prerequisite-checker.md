@@ -6,21 +6,19 @@ ms.date: 3/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aaf13bb8-4ba2-4bd7-9fac-d36a9d88a1b6
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d5cc318eaf097cb3cfbfde730f7573d27af25648
 ms.openlocfilehash: f0d44f82a0b6068f8cecc5808774677eccb0f8d9
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prerequisite-checker-for-system-center-configuration-manager"></a>Voraussetzungsprüfung für System Center Configuration Manager
 
@@ -198,4 +196,3 @@ Weitere Informationen zu Voraussetzungsprüfungen finden Sie unter [Liste der Vo
     -   Klicken Sie in der Liste auf einen Eintrag, um Details zur Behebung des Problems anzuzeigen.  
     -   Sie können mit der Installation des Standortservers, des Standortsystems oder der Configuration Manager-Konsole erst dann fortfahren, wenn alle in der Liste mit dem Status **Fehler** aufgeführten Elemente korrigiert wurden.  
     -   Sie können die Ergebnisse der Voraussetzungsprüfung auch überprüfen, indem Sie die Datei **ConfigMgrPrereq.log** im Stamm des Systemlaufwerks öffnen. Die Protokolldatei enthält möglicherweise weitere Informationen, die nicht auf der Benutzeroberfläche der Voraussetzungsprüfung angezeigt werden.  
-

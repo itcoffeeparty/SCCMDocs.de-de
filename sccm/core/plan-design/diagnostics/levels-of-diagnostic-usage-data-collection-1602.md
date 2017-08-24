@@ -6,12 +6,11 @@ ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1210a1ca-78c7-4d17-81cf-ac1bc5c5cf3e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
@@ -34,12 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ebbc2b250d651aa8befd7f2458d67bf0f4a8ff10
-ms.openlocfilehash: e54ed320ce95876d29e6dd889dcba2f1f964164c
-ms.contentlocale: de-de
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 3e50327678d29fa2c1fed4ac0fd63738e65776cb
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1602-of-system-center-configuration-manager"></a>Ebenen der Sammlung von Nutzungsdaten zu Diagnosezwecken für System Center Configuration Manager-Version 1602
 
@@ -65,13 +63,13 @@ System Center Configuration Manager-Version 1602 sammelt drei Ebenen von Diagnos
 
 
  -   Setupinformationen:
-     - Build, Installationstyp, Sprachpakete, Funktionen, die Sie aktiviert haben  
+    - Build, Installationstyp, Sprachpakete, Funktionen, die Sie aktiviert haben  
 
-     - ***[Aktualisiert]*** Aktualisieren des Paketbereitstellungsstatus und der Fehler, des Downloadstatus und der Voraussetzungsfehler     
+    - ***[Aktualisiert]*** Aktualisieren des Paketbereitstellungsstatus und der Fehler, des Downloadstatus und der Voraussetzungsfehler     
 
-     - ***[Neu]*** Version des Skripts nach dem Upgrade
+    - ***[Neu]*** Version des Skripts nach dem Upgrade
 
-     - ***[Neu]*** Verwenden des Fast Ring für Updates
+    - ***[Neu]*** Verwenden des Fast Ring für Updates
 
 -   Metriken zur Datenbankleistung (Informationen zur Replikationsverarbeitung, die wichtigsten gespeicherten SQL Server-Prozeduren nach Prozessor und Datenträgerverwendung)
 
@@ -275,7 +273,7 @@ Ab System Center Configuration Manager-Version 1602 enthält diese Ebene Folgend
 
     -   ***[Aktualisiert]*** Statistiken zur Sammlungsauswertung (Abfragezeit, zugewiesene/nicht zugewiesene Anzahl, Anzahl nach Typ, ID-Rollover und Verwendung von Regeln)
 
-    - ***[Neu]***    Geänderte Beibehaltungsdauer bei der Änderungsnachverfolgung in SQL Server
+    - ***[Neu]*** Geänderte Beibehaltungsdauer bei der Änderungsnachverfolgung in SQL Server
 
 -   ***[Neu] Standortupdates:***
 
@@ -316,4 +314,3 @@ Ab System Center Configuration Manager-Version 1602 enthält diese Ebene Folgend
 -   ***[Neu]*** Konformitätseinstellungen: Konfigurationsdetails zu SCEP-, VPN-, WLAN- und Konformitätsrichtlinienvorlagen
 
 -   ***[Neu]*** Typ der EAS-Richtlinien für bedingten Zugriff (blockiert oder in Quarantäne) für mit Intune verwaltete Geräte
-

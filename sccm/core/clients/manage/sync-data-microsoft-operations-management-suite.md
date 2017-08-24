@@ -6,23 +6,20 @@ ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 33bcf8b3-a6b6-4fc9-bb59-70a9621b2b0d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
 ms.openlocfilehash: 608a9893011c6500d5d4cd2f756a124db66b1858
-ms.contentlocale: de-de
-ms.lasthandoff: 07/29/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 #  <a name="sync-data-from-configuration-manager-to-the-microsoft-operations-management-suite"></a>Synchronisieren von Daten von System Center Configuration Manager mit der Microsoft Operations Management Suite
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -147,4 +144,3 @@ Nachdem Sie Configuration Manager mit OMS verbunden haben, können Sie Sammlunge
 2.  Nachdem Sie die Datei mit den zwei Änderungen gespeichert haben, starten Sie die Configuration Manager-Konsole auf demselben Computer neu, und installieren Sie anschließend den OMS-Connector über die Konsole. Verwenden Sie für die Installation des Connectors die Informationen in [Synchronisieren von Daten von System Center Configuration Manager mit der Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite), und wählen Sie den **Operations Management Suite-Arbeitsbereich** aus, der sich in der Microsoft Azure Government-Cloud befindet.
 
 3.  Nach der erfolgreichen Installation des OMS-Connectors steht Ihnen die Verbindung zur Government-Cloud von jeder Konsole aus zur Verfügung, die sich mit dem Standort verbindet.
-

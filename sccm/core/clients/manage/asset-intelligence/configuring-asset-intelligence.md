@@ -6,23 +6,20 @@ ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8a5dc7361da34f3e6b926acd35c72c0c0767ce70
-ms.openlocfilehash: 27566be49a673bebca6ac3621e692fad65523ca4
-ms.contentlocale: de-de
-ms.lasthandoff: 12/29/2016
-
-
+ms.openlocfilehash: d2704e0f93ad9748f7eb06d714b3754463cb3bdb
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="configure-asset-intelligence-in-system-center-configuration-manager"></a>Konfigurieren von Asset Intelligence in System Center Configuration Manager
 
@@ -226,7 +223,7 @@ Von Asset Intelligence werden die Produkte, die Sie in der allgemeinen Lizenzerk
 
 4.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Einstellungen** **Standortwartung** aus. Wählen Sie einen Task und anschließend **Bearbeiten** aus, um die Einstellungen zu ändern. 
 
-      Es wird empfohlen, den Zeitpunkt außerhalb der Spitzenzeiten des Standorts zu legen. Der Zeitraum ist das Zeitintervall, in dem der Task ausgeführt werden kann. Er wird über die Optionen **Start nach** und **Spätester Startzeitpunkt** im Dialogfeld **Taskeigenschaften** definiert.  
+    Es wird empfohlen, den Zeitpunkt außerhalb der Spitzenzeiten des Standorts zu legen. Der Zeitraum ist das Zeitintervall, in dem der Task ausgeführt werden kann. Er wird über die Optionen **Start nach** und **Spätester Startzeitpunkt** im Dialogfeld **Taskeigenschaften** definiert.  
 
     Sie können den Task direkt initiieren, indem Sie den aktuellen Tag auswählen und für die Option **Start nach** eine Zeit wenige Minuten nach der aktuellen Zeit festlegen.  
 
@@ -234,4 +231,3 @@ Von Asset Intelligence werden die Produkte, die Sie in der allgemeinen Lizenzerk
 
     > [!NOTE]  
     >  Wenn beim ersten Versuch, den Task auszuführen, ein Fehler auftritt, wird von Configuration Manager versucht, den Task solange erneut auszuführen, bis der Task entweder erfolgreich ausgeführt wird oder der Zeitraum, in dem der Task ausgeführt werden kann, verstrichen ist.  
-

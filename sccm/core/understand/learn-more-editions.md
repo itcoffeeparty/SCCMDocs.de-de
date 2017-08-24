@@ -6,24 +6,21 @@ ms.date: 10/12/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
-caps.latest.revision: 0
-caps.handback.revision: 0
+caps.latest.revision: "0"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a0d4eb601948aa3abb12409f3475d69cacf4a6aa
 ms.openlocfilehash: 90e16b316872cb370c9c2e645f46ac12afab7107
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="licensing-and-branches-for-system-center-configuration-manager"></a>Lizenzierung und Branches für System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch), (Long-Term Servicing Branch)*
@@ -53,8 +50,8 @@ Zusätzlich zu Current Branch, LTSB und der Evaluierungsinstallation von Current
 
 ## <a name="licensed-branches"></a>Lizenzierte Branches
 Kunden mit aktiver Software Assurance für System Center Configuration Manager-Lizenzen oder mit entsprechenden Abonnementrechten ab 1. Oktober 2016, verfügen über Benutzungsrechte des System Center Configuration Manager-Release 1606 vom Oktober 2016. Kunden, die ab dem 1. Oktober 2016 oder danach über Rechte für System Center Configuration Manager-Version 1606 verfügen, erhalten während der Installation zwei lizenzierte Optionen:
--    **Current Branch**
--    **Long-Term Servicing Branch (LTSB)**
+-   **Current Branch**
+-   **Long-Term Servicing Branch (LTSB)**
 
 
 Weitere Informationen finden Sie in der Tabelle im vorhergehenden Abschnitt.
@@ -115,4 +112,3 @@ Verwenden Sie die folgenden Links, um mehr über die Produktlizenzierungsdetails
 - In folgendem Trainingsvideo erfahren Sie, wo Sie Ihre aktiven Software Assurance-Verträge nachschauen können (etwa ab Sekunde 43): [https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0).
 
 - Hier erfahren Sie, wie Sie Berechtigungen für das VLSC abrufen: [https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4).  Sie können anderen Personen in Ihrer Organisation Lese- und Schreibberechtigungen im VLSC erteilen.
-

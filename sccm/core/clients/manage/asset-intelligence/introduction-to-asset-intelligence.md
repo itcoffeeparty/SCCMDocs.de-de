@@ -6,23 +6,20 @@ ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 0bdfdef5-390f-4099-8bde-de51d9a89175
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 6a851ddfeee78574fbb0b1eff0c7cc518a7bb598
-ms.contentlocale: de-de
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 879dc3f04f361af955afbc4db180d097073e8d41
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="introduction-to-asset-intelligence-in-system-center-configuration-manager"></a>Einführung in Asset Intelligence in System Center Configuration Manager
 
@@ -208,4 +205,3 @@ Mit Asset Intelligence in System Center Configuration Manager können Sie die So
 >  Nach der Auflösung eines Kategorisierungskonflikts wird das Element nicht mehr als in Konflikt stehend überprüft, es sei denn, durch nachfolgende Kategorisierungsaktualisierungen werden neue Informationen über das Element hinzugefügt.  
 
  Beispiele für das Szenario eines möglichen Übergangs von einem Überprüfungszustand in einen anderen finden Sie unter [Beispiel-Überprüfungszustandsübergänge für Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md).  
-

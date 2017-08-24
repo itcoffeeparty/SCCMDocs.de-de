@@ -6,22 +6,19 @@ ms.date: 06/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: abb696f3-a816-4f12-a9f1-0503a81e1976
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
 ms.openlocfilehash: 6b76c97cd205bb02683a7bfa1eb378471a75551d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="test-the-database-upgrade-when-installing-an-update"></a>Testen des Datenbankupgrades bei der Installation eines Updates
 
@@ -71,4 +68,3 @@ Wenn bei der Installation eines Updates ein Fehler auftritt, sollten Sie den Sta
 
 ## <a name="next-steps"></a>Nächste Schritte
 Nach erfolgreichem Abschluss des Tests des Datenbankupdates verwerfen Sie die aktualisierte Datenbank. Sie kann nicht von einem Configuration Manager-Standort verwendet werden. Sie können dann zu Ihrem aktiven Standort zurückkehren und [mit der Installation des Updates beginnen](/sccm/core/servers/manage/install-in-console-updates).
-

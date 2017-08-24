@@ -6,22 +6,21 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a70bfbd4-757a-4468-9312-1c3b373ef9fc
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex
-translationtype: Human Translation
-ms.sourcegitcommit: cc0c1075af370b6190cbb269665d4a09e756ab4e
 ms.openlocfilehash: 4c83540db763bea039a92633a1d1a808e60e27ad
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-a-migration-job-strategy-in-system-center-configuration-manager"></a>Planen einer Strategie für Migrationsaufträge in System Center Configuration Manager
 
@@ -47,7 +46,7 @@ Verwenden Sie Migrationsaufträge zur Konfiguration von bestimmten Daten, die zu
 
 -   [Planen zuvor migrierter Objektmigrationsaufträge](#About_Object_Migrations)  
 
-##  <a name="a-nametypesofmigrationa-types-of-migration-jobs"></a><a name="Types_of_Migration"></a> Typen von Migrationsaufträgen  
+##  <a name="Types_of_Migration"></a> Typen von Migrationsaufträgen  
  Configuration Manager unterstützt die folgenden Typen von Migrationsaufträgen. Jeder Auftragstyp dient als Hilfestellung zum Definieren der Objekte, die in diesem Auftrag eingeschlossen werden können.  
 
  **Sammlungsmigration** (nur unterstützt bei der Migration von Configuration Manager 2007 SP2): Objekte, die sich auf die ausgewählten Sammlungen beziehen, werden migriert. Standardmäßig umfasst die Sammlungsmigration alle Objekte, die Mitgliedern der Sammlung zugeordnet sind. Sie können bestimmte Objektinstanzen ausschließen, wenn Sie einen Sammlungsmigrationsauftrag verwenden.  
@@ -56,7 +55,7 @@ Verwenden Sie Migrationsaufträge zur Konfiguration von bestimmten Daten, die zu
 
  **Migration zuvor migrierter Objekte**: Zuvor migrierte Objekte, die nach der Migration in der Quellhierarchie aktualisiert wurden, werden migriert.  
 
-###  <a name="a-nameobjectsthatcanmigratea-objects-that-you-can-migrate"></a><a name="Objects_that_can_migrate"></a> Objekte, die migriert werden können  
+###  <a name="Objects_that_can_migrate"></a> Objekte, die migriert werden können  
  Nicht jedes Objekt kann anhand eines bestimmten Migrationsauftragstyps migriert werden. In der folgenden Liste sind die migrierbaren Objekttypen nach Migrationsauftragstyp aufgeführt.  
 
 > [!NOTE]  
@@ -212,7 +211,7 @@ Verwenden Sie Migrationsaufträge zur Konfiguration von bestimmten Daten, die zu
     > [!IMPORTANT]  
     >  Ein virtuelles Anwendungspaket kann zwar mithilfe der Objektmigration migriert werden, jedoch nicht mithilfe des Migrationsauftragstyps **Migration zuvor migrierter Objekte**. Vielmehr muss das migrierte virtuelle Anwendungspaket am Zielstandort gelöscht werden. Dann muss ein neuer Migrationsauftrag erstellt werden, um die virtuelle Anwendung zu migrieren.  
 
-##  <a name="a-nameaboutmigrationjobsa-general-planning-for-all-migration-jobs"></a><a name="About_Migration_Jobs"></a> Allgemeine Planung für alle Migrationsaufträge  
+##  <a name="About_Migration_Jobs"></a> Allgemeine Planung für alle Migrationsaufträge  
  Erstellen Sie mithilfe des Assistenten zum Erstellen von Migrationsaufträgen einen Migrationsauftrag für die Migration von Objekten zur Zielhierarchie. Mit dem erstellten Migrationsauftragstyp werden die für eine Migration verfügbaren Objekte bestimmt. Sie können mehrere Migrationsaufträge zur Migration von Daten vom selben Quellstandort oder von mehreren Quellstandorten erstellen und verwenden. Die Verwendung eines Migrationsauftragstyps blockiert die Verwendung eines anderen Migrationsauftragstyps nicht.  
 
  Wenn ein Migrationsauftrag erfolgreich ausgeführt wurde, wird sein Status als **Abgeschlossen** aufgeführt, und er kann nicht erneut ausgeführt werden. Es kann jedoch ein neuer Migrationsauftrag zur Migration von Objekten erstellt werden, die bereits beim ursprünglichen Auftrag migriert wurden. Außerdem kann der neue Migrationsauftrag zusätzliche Objekte enthalten. Bei der Erstellung zusätzlicher Migrationsaufträge wird für die Objekte, die zuvor migriert wurden, der Status **Migriert** angezeigt. Diese Objekte können für eine erneute Migration ausgewählt werden. Solange das Objekt jedoch in der Quellhierarchie nicht aktualisiert wird, ist eine erneute Migration dieser Objekte nicht erforderlich. Wenn ein Objekt nach seiner Migration in der Quellhierarchie aktualisiert wurde, können Sie es identifizieren, wenn Sie den Migrationsauftragstyp **Nach der Migration geänderte Objekte**verwenden.  
@@ -258,7 +257,7 @@ Verwenden Sie Migrationsaufträge zur Konfiguration von bestimmten Daten, die zu
 ### <a name="specify-conflict-resolution-for-migrated-data"></a>Angeben von Konfliktlösungen für migrierte Daten  
  Standardmäßig werden von Migrationsaufträgen keine Daten in der Zieldatenbank überschrieben, es sei denn, Sie konfigurieren den Migrationsauftrag derart, dass zuvor zur Zieldatenbank migrierte Daten übersprungen oder überschrieben werden.  
 
-##  <a name="a-nameaboutcollectionmigration-a-plan-for-collection-migration-jobs"></a><a name="About_Collection_Migration "></a> Planen von Sammlungsmigrationsaufträgen  
+##  <a name="About_Collection_Migration "></a> Planen von Sammlungsmigrationsaufträgen  
  Sammlungsmigrationsaufträge sind nur verfügbar, wenn Sie Daten von einer Quellhierarchie migrieren, auf der eine unterstützte Version von Configuration Manager 2007 ausgeführt wird. Sie müssen mindestens eine Sammlung zum Migrieren angeben, wenn Sie sammlungsweise migrieren. Bei jeder angegebenen Sammlung werden vom Migrationsauftrag automatisch alle betreffenden Objekte zur Migration ausgewählt. Wenn Sie beispielsweise eine bestimmte Benutzersammlung auswählen, werden deren Mitglieder identifiziert, und Sie können die Bereitstellungen migrieren, die dieser Sammlung zugeordnet sind. Optional können Sie auch andere den Mitgliedern zugeordnete Bereitstellungsobjekte für die Migration auswählen. Alle ausgewählten Elemente werden der Liste von Objekten hinzugefügt, die migriert werden können.  
 
  Wenn Sie eine Sammlung migrieren, werden von System Center Configuration Manager auch Sammlungseinstellungen wie Wartungsfenster und Sammlungsvariablen migriert. Sammlungseinstellungen für die AMT-Clientbereitstellung können hingegen nicht migriert werden.  
@@ -308,12 +307,12 @@ Verwenden Sie Migrationsaufträge zur Konfiguration von bestimmten Daten, die zu
 
  Deaktivieren Sie in den Programmeigenschaften auf der Registerkarte **Erweitert** die Option **Dieses Programm auf Computern deaktivieren, auf denen es angekündigt wird**, um ein Programm nach der Migration zu aktivieren.  
 
-##  <a name="a-nameaboutobjectmigrationa-plan-for-object-migration-jobs"></a><a name="About_Object_Migration"></a> Planen von Objektmigrationsaufträgen  
+##  <a name="About_Object_Migration"></a> Planen von Objektmigrationsaufträgen  
  Anders als bei der Sammlungsmigration müssen Sie jedes Objekt und jede Objektinstanz, die Sie migrieren möchten, auswählen. Sie können die einzelnen Objekte auswählen (z.B. Ankündigungen aus einer Configuration Manager 2007-Hierarchie oder eine Veröffentlichung aus einer System Center 2012 Configuration Manager- oder System Center Configuration Manager-Hierarchie), um sie zur Migration für einen bestimmten Migrationsauftrag zur Objektliste hinzuzufügen. Nur Objekte, die Sie der Migrationsliste hinzufügen, werden über den Objektmigrationsauftrag zum Zielstandort migriert.  
 
  Für objektbasierte Migrationsaufträge müssen zusätzlich zu den Konfigurationen, die für alle Migrationsaufträge gelten, keine weiteren Konfigurationen geplant werden.  
 
-##  <a name="a-nameaboutobjectmigrationsa-plan-for-previously-migrated-object-migration-jobs"></a><a name="About_Object_Migrations"></a> Planen von Migrationsaufträgen für zuvor migrierte Objekte  
+##  <a name="About_Object_Migrations"></a> Planen von Migrationsaufträgen für zuvor migrierte Objekte  
  Wenn ein bereits zur Zielhierarchie migriertes Objekt in der Quellhierarchie aktualisiert wird, können Sie dieses Objekt über den Auftragstyp **Nach der Migration geänderte Objekte** erneut migrieren. Wenn beispielsweise die Quelldateien eines Pakets in der Quellhierarchie umbenannt oder aktualisiert werden, wird die Paketversion in der Quellhierarchie schrittweise erhöht. Anhand der Erhöhungen der Paketversion kann das Paket von diesem Auftragstyp für die Migration identifiziert werden.  
 
  Dieser Auftragstyp ähnelt dem Objektmigrationstyp, mit der Ausnahme, dass für eine Migration nur aus den Objekten ausgewählt werden kann, die erst nach der Migration eines vorherigen Migrationsauftrags aktualisiert wurden.   
@@ -322,9 +321,3 @@ Verwenden Sie Migrationsaufträge zur Konfiguration von bestimmten Daten, die zu
 
 > [!NOTE]  
 >  Mit diesem Migrationsauftrag können Objekte, die automatisch von der Quellhierarchie und Objekte, die von einem Administrator aktualisiert werden, identifiziert werden.  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

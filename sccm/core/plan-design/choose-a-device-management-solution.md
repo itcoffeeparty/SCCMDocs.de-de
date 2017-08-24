@@ -6,23 +6,20 @@ ms.date: 12/08/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 24633725-791a-4df7-8dce-2c24c1a19a03
-caps.latest.revision: 14
-caps.handback.revision: 0
+caps.latest.revision: "14"
+caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3eb48942c1259d2aa1b3c200fad73b39b11c0b8c
 ms.openlocfilehash: 9989ea1bf4cb74a6286ebae9de7614ed622de5b6
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="choose-a-device-management-solution-for-system-center-configuration-manager"></a>Wählen einer Geräteverwaltungslösung für System Center Configuration Manager
 
@@ -95,4 +92,3 @@ Sie können diese Geräteverwaltungslösungen eigenständig oder in Kombination 
 |Blockieren von Configuration Manager aus|Ja|Ja|Ja||  
 |Unter Quarantäne Stellen und Blockieren von Exchange Server (und Configuration Manager) aus||||Ja|  
 |Remotezurücksetzung| |Ja|Ja|Ja|  
-

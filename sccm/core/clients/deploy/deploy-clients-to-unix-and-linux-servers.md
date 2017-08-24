@@ -6,22 +6,19 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: b63367dbaacde60a364e9da6afca65383b635840
-ms.contentlocale: de-de
-ms.lasthandoff: 03/27/2017
-
-
+ms.openlocfilehash: d61d53daa5ef3d9c986cba8791d4471fea94d29d
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-deploy-clients-to-unix-and-linux-servers-in-system-center-configuration-manager"></a>Bereitstellen von Clients auf UNIX- und Linux-Servern in System Center Configuration Manager
 
@@ -240,4 +237,3 @@ Jeder Client-Installationspaket enthält die erforderlichen Dateien zum Abschlie
  Der Configuration Manager-Client für Linux und UNIX stellt bei der Clientinstallation eine Verbindung mit diesem Verwaltungspunkt her. Wenn der Client keine Verbindung mit dem Verwaltungspunkt herstellen kann, wiederholt die Clientsoftware den Vorgang so lange, bis die Verbindung erfolgreich hergestellt wird.  
 
  Weitere Informationen dazu, wie Clients Verwaltungspunkte suchen, finden Sie unter [Locating Management Points](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points).
-

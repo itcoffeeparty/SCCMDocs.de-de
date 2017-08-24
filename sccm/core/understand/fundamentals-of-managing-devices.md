@@ -6,22 +6,19 @@ ms.date: 12/04/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2bca3db9-115a-451d-8c93-f073ceefe0c7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a71e37060937f40bcb1bdb1c6165b7799fc72675
-ms.openlocfilehash: a9847e67ab1935fb66824945637ff683c006bdbe
-ms.contentlocale: de-de
-ms.lasthandoff: 12/29/2016
-
-
+ms.openlocfilehash: 45d84122a86da880268c93ecd994250df6b76c8a
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="fundamentals-of-managing-devices-with-system-center-configuration-manager"></a>Grundlagen der Verwaltung von Geräten mit System Center Configuration Manager
 
@@ -101,4 +98,3 @@ Die folgende Abbildung zeigt ein Beispiel der Erstellung und Anwendung benutzerd
  Über einen Link im **Softwarecenter** können Benutzer den **Anwendungskatalog** aufrufen und dort Software durchsuchen, installieren und anfordern. Der **Anwendungskatalog** dient außerdem zum Konfigurieren von Voreinstellungen und Zurücksetzen mobiler Geräte. Sofern eingerichtet, geben Sie ein primäres Gerät für die Affinität zwischen Benutzer und Gerät an.   
 
  Benutzer können auch in einer Intranet- oder Internetsitzung in einem Browser auf den **Anwendungskatalog** zugreifen.  
-

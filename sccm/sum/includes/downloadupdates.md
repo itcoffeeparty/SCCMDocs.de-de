@@ -27,7 +27,7 @@
 
         -   **Beschreibung**: Gibt die Beschreibung des Bereitstellungspakets an. Die Paketbeschreibung enthält Informationen zum Paketinhalt und ist auf 127 Zeichen begrenzt.  
 
-        -   **Paketquelle**: Gibt den Speicherort der Quelldateien der Softwareupdates an. Geben Sie für den Quellspeicherort einen Netzwerkpfad wie **\\\Server\Freigabename\Pfad** ein. Alternativ können Sie auf **Durchsuchen** klicken, um den Netzwerkpfad zu suchen. Sie müssen den freigegebenen Ordner für die Quelldateien des Bereitstellungspakets erstellen, bevor Sie mit der nächsten Seite fortfahren.  
+        -   **Paketquelle**: Gibt den Speicherort der Quelldateien der Softwareupdates an. Geben Sie für den Quellspeicherort einen Netzwerkpfad wie **\\\Server\Freigabename\Pfad**ein. Alternativ können Sie auf **Durchsuchen** klicken, um den Netzwerkpfad zu suchen. Sie müssen den freigegebenen Ordner für die Quelldateien des Bereitstellungspakets erstellen, bevor Sie mit der nächsten Seite fortfahren.  
 
             > [!NOTE]  
             >  Der von Ihnen angegebene Quellspeicherort des Bereitstellungspakets kann von keinem anderen Softwarebereitstellungspaket verwendet werden.  

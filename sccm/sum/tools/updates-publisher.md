@@ -6,22 +6,20 @@ ms.date: 4/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2200b02b-e76b-4aa7-a77a-6dc5e70f1333
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
 ms.openlocfilehash: f4951c204b32da58174b94a539b380c278fa9756
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="system-center-updates-publisher"></a>System Center Updates Publisher
 
@@ -66,4 +64,3 @@ Das Verwalten von Veröffentlichungen umfasst das Veröffentlichen von Updates a
 **Arbeitsbereich „Kataloge“**: Nutzen Sie diesen Arbeitsbereich zum Hinzufügen und [Verwalten von Softwareupdatekatalogen](/sccm/sum/tools/updates-publisher-catalogs). Dies schließt den Import von Softwareupdates aus diesen Katalogen in das Updates Publisher-Repository ein.
 ## <a name="first-steps"></a>Erste Schritte
 [Installieren](/sccm/sum/tools/install-updates-publisher) Sie zuerst Updates Publisher, und [konfigurieren](/sccm/sum/tools/updates-publisher-options) Sie dann die Optionen.
-

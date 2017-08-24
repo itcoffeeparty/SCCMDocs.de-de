@@ -6,23 +6,20 @@ ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 613a48ac-c55d-4c4a-94ea-d3747a1b10cb
-caps.latest.revision: 15
-caps.handback.revision: 0
+caps.latest.revision: "15"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: 6e2cb628217598480973d4f728a9e0a7cd5873e7
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-create-configuration-items-for-ios-and-mac-os-x-devices-managed-with-intune"></a>Erstellen von Konfigurationselementen für iOS und Mac OS X-Geräte, die mit Intune verwaltet werden
 Verwenden Sie das Konfigurationselement **iOS und Mac OS X** von System Center Configuration Manager, um Einstellungen für iOS- und Mac OS X-Geräte zu verwalten, die bei Microsoft Intune registriert sind oder lokal von Configuration Manager verwaltet werden.  
@@ -312,7 +309,7 @@ Verwenden Sie das Konfigurationselement **iOS und Mac OS X** von System Center C
   
 #### <a name="to-create-an-ios-and-mac-os-x-custom-profile"></a>So erstellen Sie ein benutzerdefiniertes iOS- und Mac OS X-Profil  
   
-1.  Geben Sie auf der Seite **Einstellungen für benutzerdefiniertes iOS- und Mac OS X-Profil konfigurieren** des ****Assistenten zum Erstellen von Konfigurationselementen die folgenden Informationen an:  
+1.  Geben Sie auf der Seite **Einstellungen für benutzerdefiniertes iOS- und Mac OS X-Profil konfigurieren** des **** Assistenten zum Erstellen von Konfigurationselementen die folgenden Informationen an:  
   
     -   **Name des benutzerdefinierten Konfigurationsprofils (wird Benutzern angezeigt)** – Geben Sie einen Namen für die Richtlinie an, der auf dem Gerät und in Configuration Manager-Berichten angezeigt wird.  
   
@@ -415,4 +412,3 @@ Verwenden Sie das Konfigurationselement **iOS und Mac OS X** von System Center C
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurationselemente für Geräte, die ohne den System Center Configuration Manager-Client verwaltet werden](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)
-

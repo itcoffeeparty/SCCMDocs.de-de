@@ -6,22 +6,19 @@ ms.date: 03/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f4a1335c-bb3d-493e-a124-83a32a107dc8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
-ms.openlocfilehash: 99e266e44f718d97c2a6e61e8e6816752751ed7b
-ms.contentlocale: de-de
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: b5771f4faebc06076bdbf84727848c881fc1dfb4
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-monitor-endpoint-protection-status"></a>So überwachen Sie den Endpoint Protection-Status
 
@@ -83,4 +80,3 @@ Sie können Endpoint Protection in der Microsoft System Center Configuration Man
 |**Zulässig**|Ein Administrator ausgewählt, um die Software zu ermöglichen, die die Malware ausgeführt wird.|  
 |**Keine Aktion**|Endpoint Protection hat keine Aktion auf der Schadsoftware ausgeführt. Dies kann vorkommen, wenn der Computer neu gestartet wird, nach Malware erkannt wird, und die Malware wird nicht mehr erkannt; z. B. wenn ein zugeordnetes Netzlaufwerk auf ist denen Malware entdeckt wurde keine Verbindung beim Neustart des Computers.|  
 |**Gesperrt**|Endpoint Protection hat das Ausführen der Schadsoftware blockiert. Dies kann auftreten, wenn ein Prozess auf dem Computer gefunden wird, um Malware enthalten.|
-

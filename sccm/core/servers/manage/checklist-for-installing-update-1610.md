@@ -6,21 +6,19 @@ ms.date: 6/6/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b411cb0-4fd1-41f2-a2f6-33738a5bde96
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
 ms.openlocfilehash: 54b243fd33ed13b8ccde48fa5e2525204455d96c
-ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="checklist-for-installing-update-1610-for-system-center-configuration-manager"></a>Checkliste für die Installation von Update 1610 für System Center Configuration Manager
 
@@ -169,4 +167,3 @@ Sie können nun die Updateinstallation für Ihre Hierarchie starten. Weitere Inf
 Es wird empfohlen, die Installation des Updates für jeden Standort außerhalb der normalen Geschäftszeiten zu planen, wenn die Installation des Updates und die zugehörigen Aktionen zum Neuinstallieren von Standortkomponenten und Standortsystemrollen die geringsten Auswirkungen auf die Geschäftsvorgänge haben.
 
 Weitere Informationen finden Sie unter [Updates für System Center Configuration Manager](/sccm/core/servers/manage/updates).
-

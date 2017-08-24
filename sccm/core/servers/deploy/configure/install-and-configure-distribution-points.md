@@ -6,21 +6,19 @@ ms.date: 2/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8728d9f2ae63282a8f58b20105e488fb1a5ef55b
 ms.openlocfilehash: 4c94e4de5bbfe621492e8682c9424a48eb38196d
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="install-and-configure-distribution-points-for-system-center-configuration-manager"></a>Installieren und Konfigurieren von Verteilungspunkten für System Center Configuration Manager
 
@@ -390,4 +388,3 @@ Geben Sie an, ob eine Begrenzung der Datenübertragungsrate konfiguriert werden 
 -   **Pulsmodus**: Gibt die Größe der Datenblöcke beim Senden an den Verteilungspunkt an. Sie können auch eine zeitliche Verzögerung zwischen dem Senden der einzelnen Datenblöcke angeben. Verwenden Sie diese Option, wenn Sie Daten über Netzwerke mit sehr niedriger Bandbreite an den Verteilungspunkt senden müssen. Dies kann beispielsweise der Fall sein, wenn eine Beschränkung vorliegt, dass unabhängig von der Geschwindigkeit der Verknüpfung oder deren Auslastung zu einem bestimmten Zeitpunkt nur alle fünf Sekunden 1 KB Daten gesendet werden dürfen.  
 
 -   **Begrenzt auf angegebene maximale Übertragungsraten pro Stunde**: Geben Sie diese Einstellung an, damit die Datenübertragung auf einen Verteilungspunkt nur im konfigurierten Zeitanteil erfolgt. Wenn Sie diese Option verwenden, ermittelt Configuration Manager nicht die verfügbare Netzwerkbandbreite. Stattdessen wird die Zeit, innerhalb derer Daten gesendet werden können, aufgeteilt. Die Daten werden dann innerhalb eines kurzen Zeitblocks gesendet. In den darauffolgenden Zeitblöcken werden keine Daten gesendet. Wenn die Höchstrate beispielsweise auf **50 %**festgelegt ist, überträgt Configuration Manager die Daten für eine bestimmte Dauer, und für eine ebenso lange Dauer werden anschließend keine Daten übertragen. Die tatsächliche Datenmenge bzw. die Größe der Datenblöcke wird nicht verwaltet. Stattdessen wird nur die Dauer der Datenübertragung verwaltet.  
-

@@ -6,23 +6,20 @@ ms.date: 1/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
 ms.openlocfilehash: 17f3955aa7c63a13bab03b46002f7de0b0ec38fe
-ms.contentlocale: de-de
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-for-the-migration-of-configuration-manager-objects-to-system-center-configuration-manager"></a>Planen der Migration von Configuration Manager-Objekten zu System Center Configuration Manager
 
@@ -188,4 +185,3 @@ Weitere Informationen über die Berichterstellung finden Sie unter [Berichterste
  Softwaremessungsregeln wurden zwischen Configuration Manager 2007 und System Center Configuration Manager nicht wesentlich verändert. Sie können Softwaremessungsregeln von einer unterstützten Quellhierarchie zu einer Zielhierarchie migrieren.  
 
  Standardmäßig werden zu einer Zielhierarchie migrierte Softwaremessungsregeln keinem bestimmten Standort in der Zielhierarchie zugewiesen, sondern auf alle Clients in der Hierarchie angewendet. Zum Anwenden einer Softwaremessungsregel auf Clients an einem bestimmten Standort muss die Messungsregel nach der Migration bearbeitet werden.  
-

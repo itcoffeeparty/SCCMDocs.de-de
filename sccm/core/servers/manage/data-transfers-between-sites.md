@@ -6,22 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dc526e8d-fac3-4bb5-b206-03ad29b0ae11
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfe77a45b5f781611c343e06d1289add7abd2dfb
 ms.openlocfilehash: bf0fdc8d4b4a72760b2cfb91231378a17df01594
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="data-transfers-between-sites-in-system-center-configuration-manager"></a>Datenübertragungen zwischen Standorten in System Center Configuration Manager
 
@@ -207,4 +204,3 @@ Zum Ändern der Einstellungen der Replikationssteuerelemente für eine Standortd
 
 > [!TIP]  
 > In beiden Arbeitsbereichen können Sie Steuerelemente für die Datenbankreplikation über den Knoten **Datenbankreplikation** konfigurieren. Wenn Sie aber den Knoten **Datenbankreplikation** im Arbeitsbereich **Überwachung** verwenden, können Sie auch den Status der Datenbankreplikation für einen Replikationslink anzeigen. Außerdem haben Sie Zugriff auf die Replikationslinkanalyse, mit der Sie Probleme bei der Replikation untersuchen können.  
-

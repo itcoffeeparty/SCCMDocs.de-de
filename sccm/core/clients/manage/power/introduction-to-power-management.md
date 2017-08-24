@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3ddff2a7-99eb-4ef8-b969-f3f7f24053db
-caps.latest.revision: 4
-caps.handback.revision: 0
+caps.latest.revision: "4"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: f46c9479021c814b1102d72c7d493f21a7243bf1
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="introduction-to-power-management-in-system-center-configuration-manager"></a>Einführung in die Energieverwaltung in System Center Configuration Manager
 
@@ -49,9 +48,3 @@ Die Energieverwaltung in System Center Configuration Manager entspricht dem Beda
 
 ### <a name="compliance-phase"></a>Kompatibilitätsphase  
  In der Kompatibilitätsphase können Sie Berichte ausführen, die Ihnen bei der Beurteilung des Energieverbrauchs und der Energiekosteneinsparungen in Ihrem Unternehmen helfen. Zudem können Sie Berichte ausführen, die Optimierungen beim CO2-Ausstoß von Computern dokumentieren. Anhand weiterer Berichte können Sie überprüfen, ob die Energieeinstellungen korrekt auf die Computer angewendet wurden. Sie können die Berichte auch zur Problembehandlung bei der Energieverwaltungsfunktion nutzen.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -6,21 +6,19 @@ ms.date: 3/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9089e1b5-cba4-42bd-a2de-126ef882a3af
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 73c34d40d70fb3ae5f8702f3d5f1e5b51a1b28a7
 ms.openlocfilehash: 829f2d44a9b8d203a5b753ebb6d8f759b1a05111
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prepare-to-install-system-center-configuration-manager-sites"></a>Vorbereiten auf die Installation von System Center Configuration Manager-Standorten
 
@@ -139,4 +137,3 @@ Sie können optionale Ports bestimmen, die von Standortsystemen und Clients verw
  -  Während der Installation können Sie alternative Ports konfigurieren.
 
  Weitere Informationen finden Sie unter [In System Center Configuration Manager verwendete Ports](../../../../core/plan-design/hierarchy/ports.md).
-

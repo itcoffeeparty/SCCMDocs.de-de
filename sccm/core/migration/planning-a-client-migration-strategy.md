@@ -6,20 +6,19 @@ ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2e27b0b7-7bd3-45cd-bc99-9c991606c637
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: ac4576035fda943e38d960dd425d44b7a6ef6a01
 ms.openlocfilehash: b52ca4059dfeed08cabf1f75319da40d6499622f
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-a-client-migration-strategy-in-system-center-configuration-manager"></a>Planen einer Strategie für die Clientmigration in System Center Configuration Manager
 
@@ -35,7 +34,7 @@ Sie müssen zwei Tasks ausführen, um Clients aus einer Quellhierarchie zu einer
 
 -   [Planen der Inventur- und Kompatibilitätsdaten während der Migration](#Planning_for_Inventory_data_migration)  
 
-##  <a name="a-nameplanningforclientagentmigrationa-plan-to-migrate-clients-to-the-destination-hierarchy"></a><a name="Planning_for_Client_Agent_Migration"></a> Planen der Migration von Clients in die Zielhierarchie  
+##  <a name="Planning_for_Client_Agent_Migration"></a> Planen der Migration von Clients in die Zielhierarchie  
  Wenn Sie Clients von einer Quellhierarchie migrieren, wird für die Clientsoftware auf dem Clientcomputer ein Upgrade durchgeführt, sodass sie mit der Produktversion der Zielhierarchie übereinstimmt.  
 
 -   **Eine Configuration Manager 2007-Quellhierarchie:** Wenn Sie Clients aus einer Quellhierarchie migrieren, in der eine unterstützte Version von Configuration Manager ausgeführt wird, führt die Clientsoftware für die Zielhierarchie ein Upgrade auf die Clientversion durchgeführt.  
@@ -69,7 +68,7 @@ Sie können den Clientmigrationsprozess im Knoten **Migration** des Arbeitsberei
 
 Nachdem Sie den Client zur Zielhierarchie migriert haben, können Sie das Gerät nicht mehr über die Quellhierarchie verwalten, und Sie sollten den Client aus der Quellhierarchie entfernen. Dieser Vorgang ist keine Anforderung des Migrationsprozesses für Hierarchien, kann aber die Identifizierung eines migrierten Clients in einem Quellhierarchiebericht oder eine unkorrekte Anzahl von Ressourcen zwischen den beiden Hierarchien während des Migrationsvorgangs verhindern. Wenn ein migrierter Client beispielsweise in der Datenbank des Quellstandorts verbleibt, kann es passieren, dass ein Softwareupdatebericht ausgeführt wird, von dem der Computer fälschlicherweise als nicht verwaltete Ressource identifiziert wird, da der Client nun von der Zielhierarchie verwaltet wird.  
 
-##  <a name="a-nameplanningforclientdatamigrationa-plan-to-handle-data-maintained-on-clients-during-migration"></a><a name="Planning_for_Client_Data_Migration"></a> Planen der Behandlung von auf Clients hinterlegten Daten während der Migration  
+##  <a name="Planning_for_Client_Data_Migration"></a> Planen der Behandlung von auf Clients hinterlegten Daten während der Migration  
 Wenn Sie einen Client aus seiner Quellhierarchie zu einer Zielhierarchie migrieren, bleiben einige Informationen auf dem Gerät zurück, während andere nach der Migration nicht mehr verfügbar sind.  
 
 Folgende Informationen werden auf dem Clientgerät beibehalten:  
@@ -98,13 +97,7 @@ Wenn ein Client migriert wird, werden die in der Configuration Manager-Clientreg
 
 Darüber hinaus müssen Sie einige Anwendungen eventuell erneut installieren.  
 
-##  <a name="a-nameplanningforinventorydatamigrationa-plan-for--inventory-and-compliance-data-during-migration"></a><a name="Planning_for_Inventory_data_migration"></a> Planen der Inventur- und Kompatibilitätsdaten während der Migration  
+##  <a name="Planning_for_Inventory_data_migration"></a> Planen der Inventur- und Kompatibilitätsdaten während der Migration  
 Die Inventur- und Kompatibilitätsdaten des Clients werden nicht gespeichert, wenn Sie einen Client zu einer Zielhierarchie migrieren. Stattdessen werden diese Informationen erneut in der Zielhierarchie erstellt, wenn von Clients das erste Mal Informationen an den zugewiesenen Standort gesendet werden. Damit die Anforderungen an Netzwerkbandbreite und Serververarbeitung verringert werden, wird empfohlen, eine begrenzte Anzahl von Clients in mehreren Phasen zu migrieren, anstelle einer großen Anzahl von Clients auf einmal.  
 
  Außerdem können Sie keine Anpassungen der Hardwareinventur aus einer Quellhierarchie migrieren. Diese müssen Sie unabhängig von der Migration in der Zielhierarchie einfügen. Informationen zum Erweitern der Hardwareinventur finden Sie unter [Konfigurieren der Hardwareinventur in System Center Configuration Manager](../../core/clients/manage/inventory/configure-hardware-inventory.md).  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

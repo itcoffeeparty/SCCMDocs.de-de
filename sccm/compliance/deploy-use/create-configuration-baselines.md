@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: 649942d3d468ec35c7246e08f741cdebd22fb3ac
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-configuration-baselines-in-system-center-configuration-manager"></a>Erstellen von Konfigurationsbaselines in System Center Configuration Manager
 
@@ -70,9 +69,3 @@ Konfigurationsbaselines in System Center Configuration Manager enthalten vordefi
 8.  Wählen Sie zum Entfernen eines Konfigurationselements aus der Konfigurationsbaseline ein Konfigurationselement aus, und klicken Sie auf **Entfernen**.  
 
 9. Klicken Sie auf **OK** , um das Dialogfeld **Konfigurationsbasislinie erstellen** zu schließen und die Konfigurationsbasislinie zu erstellen.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

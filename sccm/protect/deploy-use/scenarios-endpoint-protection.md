@@ -10,19 +10,16 @@ ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 539c7a89-3c03-4571-9cb4-02d455064eeb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: af0aafb4b7209d840676d16723509f399c662aad
 ms.openlocfilehash: b98684d44874ff246e4d675039c6e443aee82a62
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="example-scenario-using-system-center-endpoint-protection-to-protect-computers-from-malware-in-system-center-configuration-manager"></a>Beispielszenario: Verwenden von Endpoint Protection zum Schutz von Computern vor Schadsoftware in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -77,4 +74,3 @@ Diese Thema enthält ein Beispielszenario zur Implementierung der Endpoint Prote
 |John verwendet die folgenden Methoden zum Überwachen des Status von Endpoint Protection und der von Endpoint Protection durchzuführenden Aktionen:<br /><br /> 1) Mithilfe des Knotens **Endpoint Protection-Status** unter **Sicherheit** im Arbeitsbereich **Überwachung**<br /><br /> 2) Mithilfe des Knotens **Endpoint Protection** im Arbeitsbereich **Bestand und Kompatibilität**<br /><br /> 3) Mithilfe der integrierten Configuration Manager-Berichte|Informationen finden Sie unter [Überwachen von Endpoint Protection in System Center Configuration Manager](monitor-endpoint-protection.md).|  
 
  John meldet seinem Vorgesetzten eine erfolgreiche Implementierung von Endpoint Protection und bestätigt, dass die Computer der Woodgrove Bank jetzt gemäß den angegebenen Unternehmensanforderungen vor Antischadsoftware geschützt sind.
-

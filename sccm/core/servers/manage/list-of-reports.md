@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
-caps.latest.revision: 10
-caps.handback.revision: 0
+caps.latest.revision: "10"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: 1480c38a6a3afef76b2e8759eaafd47d28f978f4
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="list-of-reports-in-system-center-configuration-manager"></a>Liste der System Center Configuration Manager-Berichte
 
@@ -790,9 +789,3 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Verlauf der Remoteaktivierungs-Aktivität über LAN**|Zeigt einen Verlauf der innerhalb eines bestimmten Zeitraums aufgetretenen Reaktivierungsaktivität an.|  
 |**Details zum Aktivierungsproxy-Bereitstellungszustand**|Zeigt Informationen zum Bereitstellungsstatus des Aktivierungsproxys für jedes Gerät in einer angegebenen Sammlung an.|  
 |**Zusammenfassung des Aktivierungsproxy-Bereitstellungszustands**|Zeigt eine Zusammenfassung zum Bereitstellungsstatus des Reaktivierungsproxys in einer angegebenen Sammlung an.|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

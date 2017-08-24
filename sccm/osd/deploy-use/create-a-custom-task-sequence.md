@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b9800a66-7541-47ca-8276-da8ef6cb6d1b
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 03c844084c72fc52806123d9f4c11a410a3ec775
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-a-custom-task-sequence-with-system-center-configuration-manager"></a>Erstellen einer benutzerdefinierten Tasksequenz mit System Center Configuration Manager
 
@@ -28,7 +27,7 @@ ms.openlocfilehash: 03c844084c72fc52806123d9f4c11a410a3ec775
 
 Wenn Sie eine benutzerdefinierte Tasksequenz in System Center Configuration Manager erstellen, enthält diese keine Tasksequenzschritte. Nach der Erstellung der Tasksequenz müssen Sie diese bearbeiten und die benötigten Tasksequenzschritte hinzufügen.  
 
-##  <a name="a-namebkmkcustomtsa-create-a-custom-task-sequence"></a><a name="BKMK_CustomTS"></a> Erstellen einer benutzerdefinierten Tasksequenz  
+##  <a name="BKMK_CustomTS"></a> Erstellen einer benutzerdefinierten Tasksequenz  
  Gehen Sie folgendermaßen vor, um eine benutzerdefinierte Tasksequenz zu erstellen.  
 
 #### <a name="to-create-a-custom-task-sequence"></a>So erstellen Sie eine benutzerdefinierte Tasksequenz  
@@ -53,9 +52,3 @@ Wenn Sie eine benutzerdefinierte Tasksequenz in System Center Configuration Mana
 
  ## <a name="next-steps"></a>Nächste Schritte
  [Deploy the task sequence (Bereitstellen der Tasksequenz)](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5ee5928f-3d72-4b00-8156-1e0d1030a96c
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 5632a753fc565312a80b2ed69ce438335b3fad50
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="security-and-privacy-for-operating-system-deployment-in-system-center-configuration-manager"></a>Sicherheit und Datenschutz bei der Betriebssystembereitstellung in System Center Configuration Manager
 
@@ -28,7 +27,7 @@ ms.openlocfilehash: 5632a753fc565312a80b2ed69ce438335b3fad50
 
 Dieses Thema enthält Informationen zur Sicherheit und zum Datenschutz für die Betriebssystembereitstellung in System Center Configuration Manager.  
 
-##  <a name="a-namebkmksecurityhardwareinventorya-security-best-practices-for-operating-system-deployment"></a><a name="BKMK_Security_HardwareInventory"></a> Bewährte Sicherheitsmethoden für die Betriebssystembereitstellung  
+##  <a name="BKMK_Security_HardwareInventory"></a> Bewährte Sicherheitsmethoden für die Betriebssystembereitstellung  
  Wenden Sie die folgenden bewährten Sicherheitsmethoden für die Bereitstellung von Betriebssystemen mit Configuration Manager an:  
 
 -   **Implementieren Sie Zugriffssteuerungen zum Schutz startbarer Medien.**  
@@ -193,7 +192,7 @@ Dieses Thema enthält Informationen zur Sicherheit und zum Datenschutz für die 
 
      Obwohl Sammlungsvariablen ein flexibles Verfahren zum Bereitstellen von Betriebssystemen darstellen, kann dies zur Offenlegung von Informationen führen.  
 
-##  <a name="a-namebkmkprivacyhardwareinventorya-privacy-information-for-operating-system-deployment"></a><a name="BKMK_Privacy_HardwareInventory"></a> Informationen zum Datenschutz für die Betriebssystembereitstellung  
+##  <a name="BKMK_Privacy_HardwareInventory"></a> Informationen zum Datenschutz für die Betriebssystembereitstellung  
  Neben dem Bereitstellen von Betriebssystemen für Computer ohne Betriebssystem können mit Configuration Manager Benutzerdateien und -einstellungen von einem Computer zu einem anderen migriert werden. Der Administrator konfiguriert, welche Informationen übertragen werden. Dies umfasst persönliche Datendateien, Konfigurationseinstellungen und Browsercookies.  
 
  Die Informationen werden auf einem Zustandsmigrationspunkt gespeichert und bei der Übertragung und Speicherung verschlüsselt. Die Informationen können vom neuen, den Zustandsinformationen zugeordneten Computer abgerufen werden. Verliert der neue Computer den Schlüssel zum Abruf der Informationen, kann ein Configuration Manager-Administrator mit dem Recht „Wiederherstellungsinformationen anzeigen“ für Computerzuordnungsinstanzobjekte auf die Informationen zugreifen und sie einem neuen Computer zuordnen. Nachdem der neue Computer die Zustandsinformationen wiederhergestellt hat, werden die Daten standardmäßig nach einem Tag gelöscht. Sie können konfigurieren, wann der Zustandsmigrationspunkt zum Löschen markierte Daten entfernt. Die Zustandsmigrationsinformationen werden nicht in der Standortdatenbank gespeichert und nicht an Microsoft gesendet.  
@@ -207,9 +206,3 @@ Dieses Thema enthält Informationen zur Sicherheit und zum Datenschutz für die 
  Die Betriebssystembereitstellung wird von Configuration Manager nicht standardmäßig implementiert. Es müssen mehrere Konfigurationsschritte ausgeführt werden, bevor Sie Benutzerstatusdaten sammeln oder Tasksequenzen bzw. Startimages erstellen können.  
 
  Denken Sie über Ihre Datenschutzanforderungen nach, bevor Sie die Betriebssystembereitstellung konfigurieren.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -6,21 +6,19 @@ ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8370e3b102afed518e8154d4944ab420188faccf
 ms.openlocfilehash: 76b070f8e203cc0c751f35e5a4b4904504786c04
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="install-site-system-roles-for-system-center-configuration-manager"></a>Installieren von Standortsystemrollen für System Center Configuration Manager
 
@@ -83,4 +81,3 @@ Unmittelbar vor der Installation der Standortsystemrolle überprüft Configurati
 
 > [!TIP]  
 >  Mit dem Windows PowerShell-Cmdlet New-CMSiteSystemServer wird die gleiche Funktion wie mit diesem Verfahren ausgeführt. Weitere Informationen finden Sie unter [New-CMSiteSystemServer](http://go.microsoft.com/fwlink/p/?LinkID=271414) in der Cmdlet-Referenzdokumentation von System Center 2012 Configuration Manager SP1.  
-

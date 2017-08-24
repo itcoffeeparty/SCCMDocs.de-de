@@ -6,23 +6,20 @@ ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e68e1fb-a8ec-4543-bb8a-cbbaf184a418
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 2144dfa87f40fcb2195f7278a21b47e05d6d6f38
-ms.contentlocale: de-de
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 7652e46d2168e2de623fa8e6d5b8663701764244
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="security-and-privacy-for-software-inventory-in-system-center-configuration-manager"></a>Sicherheit und Datenschutz für die Softwareinventur in System Center Configuration Manager
 
@@ -62,4 +59,3 @@ Dieses Thema enthält Sicherheits- und Datenschutzinformationen für die Softwar
  Die Inventurinformationen werden nicht an Microsoft gesendet. Inventurinformationen werden in der Configuration Manager-Datenbank gespeichert. Wenn auf den Clients HTTPS für die Herstellung der Verbindung zu den Verwaltungspunkten verwendet wird, werden die vom Verwaltungspunkt an den Standort gesendeten Inventurdaten während der Übertragung verschlüsselt. Wenn auf den Clients HTTP für die Herstellung der Verbindung zu den Verwaltungspunkten verwendet wird, haben Sie die Möglichkeit, die Inventurverschlüsselung zu aktivieren. In der Datenbank werden die Inventurdaten unverschlüsselt gespeichert. Informationen werden so lange in der Datenbank gespeichert, bis sie durch die alle 90 Tage durchgeführten Standortwartungstasks **Veralteten Inventurverlauf löschen** oder **Veraltete gesammelte Dateien löschen** gelöscht werden. Sie können das Löschintervall konfigurieren.  
 
  Berücksichtigen Sie bei der Konfiguration der Hardware- und Softwareinventur, der Dateisammlung oder der Asset Intelligence-Datensammlung Ihre Datenschutzanforderungen.  
-

@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fc731d3f-edd7-4049-b17b-653d6693a564
-caps.latest.revision: 4
-caps.handback.revision: 0
+caps.latest.revision: "4"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
 ms.openlocfilehash: 896807ec2c4be2835094a27add59d4cc09e93add
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="planning-to-monitor-migration-activity-in-system-center-configuration-manager"></a>Planen der Überwachung der Migrationsaktivitäten in System Center Configuration Manager
 
@@ -39,9 +38,3 @@ Mit System Center Configuration Manager können Sie die Migration in der Configu
     >  Kann ein Migrationsauftrag nicht ausgeführt werden, überprüfen Sie umgehend die Informationen in der Datei "migmctrl.log". Es werden kontinuierlich Protokolleinträge zur Datei hinzugefügt. Alte Daten werden überschrieben. Wenn Daten überschrieben werden, können Sie möglicherweise nicht mehr herausfinden, ob Probleme mit migrierten Objekten in Zusammenhang mit Migrationsproblemen stehen. Unabhängig davon, mit welchem Standort eine Verbindung Ihrer Configuration Manager-Konsole beim Konfigurieren der Migration hergestellt wird, werden Migrationsaktivitäten auf dem Standort der obersten Ebene der Hierarchie protokolliert.  
 
 -   Verwenden Sie die Berichterstellung in Configuration Manager. In Configuration Manager stehen mehrere integrierte Berichte für Migrationsaufträge zur Verfügung, die Sie bei Bedarf auch an Ihre Anforderungen anpassen können. Weitere Informationen zu Berichten in Configuration Manager finden Sie unter [Berichterstellung in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

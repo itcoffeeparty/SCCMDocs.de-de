@@ -6,22 +6,19 @@ ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0a2d6c3f-a4e4-4c19-b087-3caada480de9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
 ms.openlocfilehash: ddf2ad1cae51c1e36df5a6d86822e2b9abe604e2
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="fundamentals-of-role-based-administration-for-system-center-configuration-manager"></a>Grundlagen der rollenbasierten Verwaltung für System Center Configuration Manager
 
@@ -214,4 +211,3 @@ Erstellen Sie Sicherheitsbereiche, wenn Sie den Zugriff auf separate Instanzen v
 -   Verschiedene Administratoren benötigen unterschiedliche Zugriffsberechtigungen für einige Instanzen eines Objekttyps. Zum Beispiel benötigt eine Administratorengruppe die Berechtigung „Lesen“ für bestimmte Softwareupdategruppen, und eine andere Administratorengruppe benötigt die Berechtigungen „Ändern“ und „Löschen“ für andere Softwareupdategruppen. Erstellen Sie unterschiedliche Sicherheitsbereiche für diese Softwareupdategruppen.  
 
 Informationen zum Konfigurieren von Sicherheitsbereichen für die rollenbasierte Verwaltung finden Sie unter [Konfigurieren von Sicherheitsbereichen für ein Objekt](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecScope) im Thema [Konfigurieren der rollenbasierten Verwaltung für System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).  
-

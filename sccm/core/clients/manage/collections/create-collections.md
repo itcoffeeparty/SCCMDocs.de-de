@@ -6,22 +6,20 @@ ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 5f1412fb132e3a074742e11f1142b2594146cbe1
 ms.openlocfilehash: 44b4707b1a40624c51decf548d23ddd2164c5833
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-create-collections-in-system-center-configuration-manager"></a>Erstellen von Sammlungen in System Center Configuration Manager
 
@@ -207,4 +205,3 @@ Wählen Sie im Dialogfeld **Sammlungen auswählen** die Sammlungen aus, die Sie 
     >  Die zu importierende Datei muss von einem Standort exportiert worden sein, an dem dieselbe Configuration Manager-Version wie am Zielstandort ausgeführt wird. Weitere Informationen zum Exportieren von Sammlungen finden Sie unter [Verwalten von Sammlungen in Configuration Manager](../../../../core/clients/manage/collections/manage-collections.md).  
 
 6.  Schließen Sie den Assistenten ab, um die Sammlung zu importieren. Die neue Sammlung wird im Arbeitsbereich **Bestand und Kompatibilität** im Knoten **Benutzersammlungen** oder **Gerätesammlungen** angezeigt. Aktualisieren Sie die Configuration Manager-Konsole, oder laden Sie sie erneut, um die Sammlungsmitglieder für die neu importierte Sammlung anzuzeigen.  
-

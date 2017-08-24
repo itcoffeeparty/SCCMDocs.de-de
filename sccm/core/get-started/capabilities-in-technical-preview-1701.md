@@ -4,23 +4,21 @@ description: "Erfahren Sie mehr zu Funktionen, die in Technical Preview 1701 fü
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 18598eaa-1131-44ff-8f8b-6093e87ac7a1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: b330c97a0853d1673f1cf7e0691891b72407fa51
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1701-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1701 für System Center Configuration Manager
 
@@ -48,17 +46,17 @@ In dieser Preview sind die Begrenzungsgruppen für Softwareupdatepunkte jedoch n
 
 Nachfolgend wird das Verhalten von Softwareupdatepunkten in dieser Technical Preview beschrieben:  
 
--    **Neue Clients verwenden Begrenzungsgruppen, um Softwareupdatepunkte auszuwählen.** Ein Client, den Sie nach der Installation von Version 1701 installieren, wählt einen Softwareupdatepunkt aus denjenigen aus, die der Begrenzungsgruppe des Clients zugeordnet sind.
+-   **Neue Clients verwenden Begrenzungsgruppen, um Softwareupdatepunkte auszuwählen.** Ein Client, den Sie nach der Installation von Version 1701 installieren, wählt einen Softwareupdatepunkt aus denjenigen aus, die der Begrenzungsgruppe des Clients zugeordnet sind.
 
   Dies ersetzt das vorherige Verhalten, bei dem die Clients zufällig einen Softwareupdatepunkt aus der Liste derer auswählten, die sich die Gesamtstruktur der Clients teilen.   
 
--    **Bereits installierte Clients verwenden so lange ihren aktuellen Softwareupdatepunkt, bis sie einen Fallback ausführen, um einen neuen zu finden.**
+-   **Bereits installierte Clients verwenden so lange ihren aktuellen Softwareupdatepunkt, bis sie einen Fallback ausführen, um einen neuen zu finden.**
 Bestehende Clients, die bereits über einen Softwareupdatepunkt verfügen, werden diesen weiterhin verwenden, bis sie einen Fallback ausführen. Dies betrifft auch Softwareupdatepunkte, die nicht der aktuellen Begrenzungsgruppe des Clients zugeordnet sind. Sie versuchen nicht sofort, in ihrer aktuellen Begrenzungsgruppe einen Softwareupdatepunkt zu suchen und diesen zu verwenden.
 
   Ein Client, der bereits über einen Softwareupdatepunkt verfügt, zeigt dieses neue Begrenzungsgruppenverhalten erst, nachdem er erfolglos versucht hat, seinen aktuellen Softwareupdatepunkt zu erreichen, und einen Fallback gestartet hat.
 Der verzögerte Wechsel zu diesem neuen Verhalten ist Absicht. Dies liegt daran, dass der Wechsel eines Softwareupdatepunkts einen großen Teil der Netzwerkbandbreite in Anspruch nimmt, da der Client Daten mit dem neuen Softwareupdatepunkt synchronisiert. Die Verzögerung beim Übergang vermeidet eine Komplettauslastung Ihres Netzwerk, da nicht alle Ihre Clients gleichzeitig auf den neuen Softwareupdatepunkt wechseln.
 
--    **Konfigurationen der Fallbackzeit:** In dieser Technical Preview können Sie nicht konfigurieren, wann ein Client einen Fallback ausführen soll, um nach einem neuen Softwareupdatepunkt zu suchen. Dazu zählen auch die Konfigurationen für **Fallback times (in minutes)** (Fallbackzeit (in Minuten)) und **Never fallback** (Niemals einen Fallback ausführen), die Sie möglicherweise für andere Begrenzungsgruppenbeziehungen konfigurieren möchten.
+-   **Konfigurationen der Fallbackzeit:** In dieser Technical Preview können Sie nicht konfigurieren, wann ein Client einen Fallback ausführen soll, um nach einem neuen Softwareupdatepunkt zu suchen. Dazu zählen auch die Konfigurationen für **Fallback times (in minutes)** (Fallbackzeit (in Minuten)) und **Never fallback** (Niemals einen Fallback ausführen), die Sie möglicherweise für andere Begrenzungsgruppenbeziehungen konfigurieren möchten.
 
   Die Clients behalten stattdessen ihr aktuelles Verhalten bei, d.h. sie versuchen zwei Stunden lang, sich mit ihrem aktuellen Softwareupdatepunkt zu verbinden, bevor Sie einen Fallback ausführen, um einen anderen verfügbaren Softwareupdatepunkt zu finden.
 
@@ -115,8 +113,7 @@ Hierzu bearbeiten Sie eine Konfigurationsdatei, damit sie auf die Government-Clo
 
     Ändern Sie den Wert für die Einstellung *FairFaxArmResourceID* in „https://management.usgovcloudapi.net/“.
 
-   - **Original:**
-      &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
+   - **Original:**&lt; setting name="FairFaxArmResourceId" serializeAs="String">   
       &lt;value>&lt;/value>   
       &lt;/setting>
 
@@ -132,9 +129,9 @@ Hierzu bearbeiten Sie eine Konfigurationsdatei, damit sie auf die Government-Clo
     - **Bearbeitet:** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
     &lt;value>https://login.microsoftonline.com/&lt;/value>
 
-2.    Nachdem Sie die Datei mit den zwei Änderungen gespeichert haben, starten Sie die Configuration Manager-Konsole auf demselben Computer neu, und installieren Sie anschließend den OMS-Connector über die Konsole. Verwenden Sie für die Installation des Connectors die Informationen in [Synchronisieren von Daten von System Center Configuration Manager mit der Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite), und wählen Sie den **Operations Management Suite-Arbeitsbereich** aus, der sich in der Microsoft Azure Government-Cloud befindet.
+2.  Nachdem Sie die Datei mit den zwei Änderungen gespeichert haben, starten Sie die Configuration Manager-Konsole auf demselben Computer neu, und installieren Sie anschließend den OMS-Connector über die Konsole. Verwenden Sie für die Installation des Connectors die Informationen in [Synchronisieren von Daten von System Center Configuration Manager mit der Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite), und wählen Sie den **Operations Management Suite-Arbeitsbereich** aus, der sich in der Microsoft Azure Government-Cloud befindet.
 
-3.    Nach der erfolgreichen Installation des OMS-Connectors steht Ihnen die Verbindung zur Government-Cloud von jeder Konsole aus zur Verfügung, die sich mit dem Standort verbindet.
+3.  Nach der erfolgreichen Installation des OMS-Connectors steht Ihnen die Verbindung zur Government-Cloud von jeder Konsole aus zur Verfügung, die sich mit dem Standort verbindet.
 
 ## <a name="android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm"></a>Android- und iOS-Versionen werden nicht mehr über den Erstellungsassistenten für hybrides MDM erreicht
 
@@ -157,4 +154,3 @@ Diese Änderung wirkt sich auf den Assistenten beim Erstellen der folgenden Elem
 Durch diese Änderung können Hybridbereitstellungen schneller neue Android und iOS-Versionen unterstützen, ohne eine neue Configuration Manager-Version oder -Erweiterung zu benötigen. Sobald eine neue Version in Intune standalone unterstützt wird, können Benutzer ihre mobilen Geräte auf diese Version upgraden.
 
 Um Probleme beim Upgrade von vorherigen Configuration Manager-Versionen zu vermeiden, kann auf andere Versionen des mobilen Betriebssystems den Eigenschaftsseiten für diese Elemente zugegriffen werden. Sollten Sie nur auf eine bestimmte Version abzielen, können Sie das neue Element erstellen und diesem dann auf dessen Eigenschaftsseite eine bestimmte Version zuweisen.
-

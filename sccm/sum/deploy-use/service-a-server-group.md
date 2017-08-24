@@ -9,14 +9,13 @@ ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
-translationtype: Human Translation
-ms.sourcegitcommit: af5f58dd5fe1f19d7a70cb9516af159c6682d194
 ms.openlocfilehash: ae09a02dd5d67113b9a7e2ce146c844efa4caf55
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 >[!IMPORTANT]
 >Dies ist ein Vorabfeature, das in den Configuration Manager-Versionen 1606 und 1610 verfügbar ist. Vorab veröffentlichte Features werden in das Produkt aufgenommen, um sie in einem frühen Stadium in einer Produktionsumgebung zu testen. Sie sollten nicht als für den Produktivbetrieb geeignet betrachtet werden. Aktivieren Sie dieses Feature, um es verfügbar zu machen. Weitere Informationen finden Sie unter [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease) (Verwenden von Vorabfeatures aus Updates).
@@ -89,9 +88,3 @@ Wenn auf einem Computer die Bereitstellungssperre nicht freigegeben werden kann,
 1.  Klicken Sie zum Löschen von Bereitstellungssperren im Arbeitsbereich **Bestand und Kompatibilität** auf **Gerätesammlungen** und anschließend auf die entsprechende Sammlung.  
 
 2.  Klicken Sie auf der Registerkarte **Start** in der Gruppe **Bereitstellung** auf **Bereitstellungssperren für Servergruppe löschen**. Wenn die Softwareupdates auf einem Client nicht installiert werden konnten und dadurch die Installation der Softwareupdates auf anderen Clients verhindert wird, können die Bereitstellungssperren manuell gelöscht werden.  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

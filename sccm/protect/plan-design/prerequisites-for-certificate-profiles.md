@@ -6,22 +6,19 @@ ms.date: 03/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 0317fd02-3721-4634-b18b-7c976a4e92bf
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
 ms.openlocfilehash: fba52ee305fe67418f2fe544bfe94d10467236d0
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prerequisites-for-certificate-profiles-in-system-center-configuration-manager"></a>Voraussetzungen für Zertifikatprofile in System Center Configuration Manager
 
@@ -48,4 +45,3 @@ Zertifikatprofile in System Center Configuration Manager weisen externe Abhängi
 |System Center Configuration Manager-Richtlinienmodul, das auf dem Server installiert ist, auf dem der Rollendienst „Registrierungsdienst für Netzwerkgeräte“ für Active Directory-Zertifikatdienste ausgeführt wird|Zum Bereitstellen von Zertifikatprofilen muss das System Center Configuration Manager-Richtlinienmodul installiert werden. Sie finden dieses Richtlinienmodul auf dem System Center Configuration Manager-Installationsmedium.|  
 |Ermittlungsdaten|Die Werte für den Zertifikatantragsteller und den alternativen Antragstellernamen werden von System Center Configuration Manager bereitgestellt und aus den von der Ermittlung gesammelten Informationen abgerufen:<br /><br /> Für Benutzerzertifikate: Active Directory-Benutzerermittlung<br /><br /> Für Computerzertifikate: Active Directory-Systemermittlung und Netzwerkermittlung|  
 |Spezielle Sicherheitsberechtigungen für die Verwaltung von Zertifikatprofilen|Sie müssen über die folgenden Sicherheitsberechtigungen verfügen, um Einstellungen für den Zugriff auf Unternehmensressourcen wie Zertifikatprofile, WLAN-Profile und VPN-Profile zu verwalten:<br /><br /> So zeigen Sie Warnungen und Berichte für Zertifikatprofile an und verwalten sie: **Erstellen**, **Löschen**, **Ändern**, **Bericht ändern**, **Lesen**und **Bericht ausführen** für das Objekt **Warnungen** .<br /><br /> So erstellen und verwalten Sie Zertifikatprofile: **Richtlinie erstellen**, **Bericht ändern**, **Lesen** und **Bericht ausführen** für das Objekt **Zertifikatprofil** .<br /><br /> So verwalten Sie Bereitstellungen von WLAN-, Zertifikat- und VPN-Profilen: **Konfigurationsrichtlinien bereitstellen**, **Warnung zu Clientstatus ändern**, **Lesen**und **Ressource lesen** für das Objekt **Sammlung** .<br /><br /> So verwalten Sie alle Konfigurationsrichtlinien: **Erstellen**, **Löschen**, **Ändern**, **Lesen** und **Sicherheitsbereich festlegen** für das Objekt **Konfigurationsrichtlinie** .<br /><br /> So führen Sie mit Zertifikatprofilen verknüpfte Abfragen aus: Berechtigung **Lesen** für das Objekt **Abfrage** .<br /><br /> So zeigen Sie Zertifikatprofilinformationen in der System Center Configuration Manager-Konsole an: Berechtigung **Lesen** für das Objekt **Standort**.<br /><br /> So zeigen Sie Statusmeldungen für Zertifikatprofile an: Berechtigung **Lesen** für das Objekt **Statusmeldungen** .<br /><br /> So erstellen und verwalten Sie das Zertifikatprofil der vertrauenswürdigen Zertifizierungsstelle: **Richtlinie erstellen**, **Bericht ändern**, **Lesen** und **Bericht ausführen** für das Objekt **Zertifikatprofil der vertrauenswürdigen Zertifizierungsstelle** .<br /><br /> So erstellen und verwalten Sie VPN-Profile: **Richtlinie erstellen**, **Bericht ändern**, **Lesen** und **Bericht ausführen** für das Objekt **VPN-Profil** .<br /><br /> So erstellen und verwalten Sie WLAN-Profile: **Richtlinie erstellen**, **Bericht ändern**, **Lesen** und **Bericht ausführen** für das Objekt **WLAN-Profil** .<br /><br /> In der Sicherheitsrolle **Zugriffs-Manager für Unternehmensressourcen** sind diese Berechtigungen zum Verwalten der Zertifikatprofile in System Center Configuration Manager enthalten. Weitere Informationen finden Sie im Abschnitt **Configure role-based administration** des Themas [Configure security in System Center Configuration Manager](../../core/plan-design/security/configure-security.md) .|  
-

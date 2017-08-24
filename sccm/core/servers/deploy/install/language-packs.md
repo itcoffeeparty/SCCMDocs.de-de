@@ -6,20 +6,19 @@ ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: e7075eb675353be130fdcc867d9e4dd1009dab35
 ms.openlocfilehash: 47da3c531289ddf13d357bde8bbda85d79ed2803
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="language-packs-in-system-center-configuration-manager"></a>Sprachpakete in System Center Configuration Manager
 
@@ -27,7 +26,7 @@ ms.openlocfilehash: 47da3c531289ddf13d357bde8bbda85d79ed2803
 
 Dieses Thema enthält technische Details zur Sprachunterstützung in System Center Configuration Manager.  
 
-## <a name="a-namebkmksuplanguagepacksa-supported-operating-system-languages"></a><a name="BKMK_SupLanguagePacks"></a> Unterstützte Betriebssystemsprachen  
+## <a name="BKMK_SupLanguagePacks"></a> Unterstützte Betriebssystemsprachen  
  Sie können Unterstützung für die in den folgenden Tabellen aufgeführten Anzeigesprachen installieren, indem Sie **Serversprachpakete** oder **Clientsprachpakete** an einem Standort der zentralen Verwaltung und an primären Standorten installieren. Während der Standortinstallation wählen Sie die an diesem Standort zu unterstützenden Server- und Clientsprachen aus den verfügbaren Sprachpaketdateien aus.
 
  Sprachpaketdateien werden beim Ausführen von Setup im Rahmen des Downloads der erforderlichen Komponenten und verteilbaren Datei heruntergeladen. Sie können auch das [Setup-Downloadprogramm](setup-downloader.md) verwenden, um diese Dateien herunterzuladen, bevor Sie das Setup ausführen.   
@@ -95,9 +94,3 @@ Um die Sprachpakete zu ermitteln, die auf einem Computer installiert sind, auf d
  **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCMSetup\InstalledLangs**  
 
 Sie können diese Informationen mithilfe der Hardwareinventur sammeln und dann einen benutzerdefinierten Bericht erstellen, um die Sprachdetails anzuzeigen. Informationen zum Sammeln einer benutzerdefinierten Hardwareinventur finden Sie unter [Konfigurieren der Hardwareinventur in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md). Informationen zum Erstellen von Berichten finden Sie im Abschnitt [Verwalten von Configuration Manager-Berichten](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md#BKMK_ManageReports) des Themas [Vorgänge und Wartungstasks für die Berichterstellung in System Center Configuration Manager](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

@@ -1,5 +1,4 @@
 ---
-
 title: Wartung von Softwareupdates | Microsoft-Dokumentation
 description: "Um die Softwareupdates in Configuration Manager zu gewährleisten, können Sie den WSUS-Bereinigungstask planen oder manuell ausführen."
 keywords: 
@@ -10,15 +9,13 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
-translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
 ms.openlocfilehash: 1590c623f7bc2f42a8617f110de5321212732a03
-
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="software-updates-maintenance"></a>Wartung für Softwareupdates
 
@@ -33,9 +30,3 @@ Sie können den WSUS-Bereinigungstask von der Configuration Manager-Konsole aus 
 2.  Klicken Sie in der Gruppe **Einstellungen** auf **Standortkomponenten konfigurieren** , und klicken Sie dann auf **Softwareupdatepunkt** , um die Eigenschaften der Softwareupdatepunkt-Komponente zu öffnen.  
 
 3.  Klicken Sie auf die Registerkarte **Ablösungsregeln** , wählen Sie **Assistent für die WSUS-Serverbereinigung ausführen**, und klicken Sie dann auf **OK**.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -6,21 +6,19 @@ ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e7cdb1a9-140a-436e-ac71-72d083110223
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f7cd9c71287d62c9f5d36e2f032bc2a6065572ae
 ms.openlocfilehash: 8ff48b08d1abb7481592c0ea076d4efa15c3d8ee
-ms.contentlocale: de-de
-ms.lasthandoff: 06/06/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="use-a-command-line-to-install-system-center-configuration-manager-sites"></a>Verwenden einer Befehlszeile zum Installieren von System Center Configuration Manager-Standorten
 
@@ -126,4 +124,3 @@ Das Skript enthält Abschnittsnamen, Schlüsselnamen und Werte. Beachten Sie die
     -   Wenn Sie an der Eingabeaufforderung auf die Setupskriptdatei verweisen, muss der vollständige Dateipfad angegeben werden. Wenn die Setup-Initialisierungsdatei beispielsweise „Setup.ini“ heißt und sich im Ordner „C:\Setup“ befindet, geben Sie an der Eingabeaufforderung Folgendes ein:  **setup /script c:\setup\setup.ini**.  
 
 -   Das Konto für die Ausführung von Setup benötigt **Administrator**rechte auf dem Computer. Wenn Sie Setup mit dem Skript für die unbeaufsichtigte Installation ausführen, öffnen Sie das Eingabeaufforderungsfenster mit der Option **Als Administrator ausführen**.   
-

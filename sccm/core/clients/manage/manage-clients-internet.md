@@ -3,20 +3,17 @@ title: "Verwalten von Clients im Internet – Configuration Manager | Microsoft-
 description: "In diesem Artikel erhalten Sie Informationen über das Verwalten von Clients mithilfe des Cloudverwaltungsgateways und über die internetbasierte Clientverwaltung in Configuration Manager."
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.assetid: c667d6af-80c4-485f-910c-896c0171fd00
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
-ms.openlocfilehash: 6104107429184f31df12db84089f41df1ef81539
-ms.contentlocale: de-de
-ms.lasthandoff: 01/24/2017
-
+ms.openlocfilehash: 1b6752be448e1062c97a3225db4fa8af9f4832a6
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="manage-clients-on-the-internet-with-configuration-manager"></a>Verwalten von Clients im Internet mit Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -72,4 +69,3 @@ Nachteile:
 -   Infrastruktur muss mit dem Internet verbunden sein.
 
 Weitere Informationen finden Sie unter [Planen der internetbasierten Clientverwaltung](plan-internet-based-client-management.md).
-

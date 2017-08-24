@@ -6,23 +6,20 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e25e00c-c9a8-473f-bcb7-ea989f6ca3c5
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 7c8d38ad6bdfece5432d4886f60ff98b8d3bd342
-ms.contentlocale: de-de
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: d2dd2c25a2714851ba1e71414cabcef38d3ce014
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-system-center-configuration-manager"></a>Verwalten des Internetzugriffs mittels Richtlinien für verwaltete Browser mit System Center Configuration Manager
 
@@ -153,4 +150,3 @@ Nachfolgend wird erläutert, welche Formate und Platzhalter Sie zum Festlegen vo
 -   Wenn ein Gerät erstmals Richtlinien für verwaltete Browser empfängt und zwei Richtlinien in Konflikt stehen, werden die URLs auf dem Gerät nicht erzwungen. Sie können die Konflikte über den Knoten **Richtlinienkonflikte** des Arbeitsbereichs **Richtlinie** anzeigen.  
 
 -   Wenn ein Gerät bereits ein Richtlinie für verwaltete Browser erhalten hat und eine zweite Richtlinie mit in Konflikt stehenden Einstellungen bereitgestellt wird, bleiben die ursprünglichen Einstellungen auf dem Gerät bestehen. Sie können die Konflikte über den Knoten **Richtlinienkonflikte** des Arbeitsbereichs **Richtlinie** anzeigen.  
-

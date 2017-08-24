@@ -6,23 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dce4b640-c92f-401a-9873-ce9aa9262014
-caps.latest.revision: 8
-caps.handback.revision: 0
+caps.latest.revision: "8"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 140bbc676fe0e3df1037c6bead2211b84486494b
-ms.contentlocale: de-de
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 79686514efcba344c4babc3d3be03b48adca7132
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="windows-firewall-and-port-settings-for-clients-in-system-center-configuration-manager"></a>Windows-Firewall- und -Porteinstellungen für Clients in System Center Configuration Manager
 
@@ -175,4 +172,3 @@ Für Clientcomputer in System Center Configuration Manager, auf denen die Window
  Wenn der HTTP-Port 80 verwendet wird, muss der HTTPS-Port 443 sein.  
 
  Wenn ein anderer HTTP-Port verwendet wird, muss der HTTPS-Port eine Nummer höher sein. Bei Port 8530 wäre dies z.B. Port 8531.
-

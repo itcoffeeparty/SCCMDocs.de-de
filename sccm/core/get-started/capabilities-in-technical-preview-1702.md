@@ -4,23 +4,21 @@ description: "Erfahren Sie mehr über die Funktionen, die in Technical Preview f
 ms.custom: na
 ms.date: 02/24/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aedd608d-6db3-4ea5-851d-70f2dcda6bb5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8f4ec982a54cf3cefef310268a54850e70e2e63a
 ms.openlocfilehash: 3bdbcd1a3c64a1d50f2f6219b2a5e17d60979864
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1702 für System Center Configuration Manager
 
@@ -57,7 +55,7 @@ Es wurde eine automatische Bereinigungsfunktion hinzugefügt, die nicht mehr ben
 
 ## <a name="peer-cache-improvements"></a>Verbesserungen des Peercaches
 Ab dieser Version lehnt ein Peercachequellcomputer eine Inhaltsanforderung ab, wenn der Peercachequellcomputer eine der folgenden Bedingungen erfüllt:  
- -     Niedriger Akkustand.
+ -  Niedriger Akkustand.
  -  Zum Zeitpunkt der Anforderungen des Inhalts liegt die CPU-Auslastung bei über 80 %.
  -  *AvgDiskQueueLength* der Datenträger-E/A überschreitet 10.
  -  Es gibt keine weiteren Verbindungen zum Computer.   
@@ -75,10 +73,10 @@ Die Infrastruktur, Clients und Domäne von Azure AD-Domänendiensten des Standor
 
 ### <a name="set-up-configuration-manager-to-use-azure-ad"></a>Einrichten von Configuration Manager für den Einsatz von Azure AD
 Folgendes ist für den Gebrauch von Azure AD mit Configuration Manager notwendig:
--    Ein Azure-Abonnement.
--    Azure AD mit Domänendiensten (Domain Services, DS).
--    Ein Standort von Configuration Manager, der auf einer Azure-VM ausgeführt wird und der mit Ihrem Azure AD verknüpft ist.
--    Configuration Manager-Clients, die in der gleichen Azure AD-Umgebung ausgeführt werden.
+-   Ein Azure-Abonnement.
+-   Azure AD mit Domänendiensten (Domain Services, DS).
+-   Ein Standort von Configuration Manager, der auf einer Azure-VM ausgeführt wird und der mit Ihrem Azure AD verknüpft ist.
+-   Configuration Manager-Clients, die in der gleichen Azure AD-Umgebung ausgeführt werden.
 
 Informationen zur Konfiguration von Azure AD DS finden Sie unter [Get started with Azure AD Domain Services (Erste Schritte mit Azure AD-Domänendiensten)](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
 
@@ -93,7 +91,7 @@ Bearbeiten Sie die LDAP-Abfrage für jede verwendete Methode, um die Azure AD OE
 In folgenden Beispielen wird ein Azure AD von *contoso.onmicrosoft.com* verwenden:
  - **Systemermittlung**   
 Azure AD speichert Geräte unter der Organisationseinheit **AADDC-Computer**.  Konfigurieren Sie Folgendes:  
-  -    *LDAP://OU=AADDC Computers,DC=contoso,DC=onmicrosoft,DC=com*  
+  - *LDAP://OU=AADDC Computers,DC=contoso,DC=onmicrosoft,DC=com*  
 
 
 - **Benutzerermittlung** AAD speichert Benutzer unter der Organisationseinheit **AADDC-Benutzer**.  Konfigurieren Sie Folgendes:
@@ -215,9 +213,9 @@ Sie können jetzt auf der Registerkarte „Installationsverhalten“ im Dialogfe
 
 ### <a name="try-it-out"></a>Probieren Sie es aus.
 
-1.    Wählen Sie in den Eigenschaften eines Bereitstellungstyps von Configuration Manager die Registerkarte **Installationsverhalten** aus.
-2.    Wählen Sie **Hinzufügen** aus, um eine oder mehrere ausführbare Dateinamen hinzuzufügen, auf die Sie prüfen möchten. Außerdem können Sie einen Anzeigenamen hinzufügen, um es Benutzern zu erleichtern, Anwendungen in der Liste zu identifizieren.
-3.    Wenn die Bereitstellungen den Zweck „Erforderlich“ im Assistenten zum Bereitstellen von Software aufweist, können Sie die Option **Ausgeführte ausführbare Dateien automatisch schließen, die im Eigenschaftendialogfeld des Bereitstellungstyps auf der Registerkarte "Installationsverhalten" angegeben wurden** wählen.
+1.  Wählen Sie in den Eigenschaften eines Bereitstellungstyps von Configuration Manager die Registerkarte **Installationsverhalten** aus.
+2.  Wählen Sie **Hinzufügen** aus, um eine oder mehrere ausführbare Dateinamen hinzuzufügen, auf die Sie prüfen möchten. Außerdem können Sie einen Anzeigenamen hinzufügen, um es Benutzern zu erleichtern, Anwendungen in der Liste zu identifizieren.
+3.  Wenn die Bereitstellungen den Zweck „Erforderlich“ im Assistenten zum Bereitstellen von Software aufweist, können Sie die Option **Ausgeführte ausführbare Dateien automatisch schließen, die im Eigenschaftendialogfeld des Bereitstellungstyps auf der Registerkarte "Installationsverhalten" angegeben wurden** wählen.
 
 Wenn die Anwendung als **Verfügbar** bereitgestellt wurde, und ein Endbenutzer versucht, eine Anwendung zu installieren, wird er dazu aufgefordert, alle ausgeführten ausführbaren, von Ihnen festgelegten Dateien zu schließen, bevor er mit der Installation fortfahren kann.
 
@@ -273,7 +271,7 @@ Es wurden neue Einstellungen hinzugefügt, die Sie in Ihren Konfigurationselemen
 <!--- - **Enterprise app trust settings modification** --->
 - **Apps nur mit Apple Configurator und iTunes installieren** (nur im überwachten Modus)
 - **Automatische App-Downloads** (nur im überwachten Modus)
-- **Änderungen an den Einstellungen der App " Meine Freunde suchen"** (nur im überwachten Modus)
+- **Änderungen an den Einstellungen der App " Meine Freunde suchen"**  (nur im überwachten Modus)
 - **Zugriff auf den iBooks Store** (nur im überwachten Modus)
 - **Nachrichten-App** (nur im überwachten Modus)
 - **Podcasts** (nur im überwachten Modus)
@@ -358,4 +356,3 @@ Um ein Android for Work-Gerät selektiv zurückzusetzen, verwenden Sie den gewoh
 
 #### <a name="known-issues-for-android-for-work"></a>Bekannte Probleme bei Android for Work
 **Das Konfigurieren des Synchronisierungszeitplans in E-Mail-Profilen von Android for Work schlägt bei der Bereitstellung fehl** Eine Option in der ConfigMgr-Benutzeroberfläche für E-Mail-Profile von Android for Work ist „Schedule“ (Zeitplan). Auf anderen Plattformen kann der Administrator dadurch einen Zeitplan für die Synchronisierung von E-Mails und anderen E-Mail-Kontendaten bis hin zu den mobilen Geräten konfigurieren, auf denen er bereitgestellt wird. Dies funktioniert allerdings nicht für Android for Work-E-Mail-Profile. Die Auswahl einer anderen Option als „Nicht konfiguriert“ führt dazu, dass das Profil auf keinem Gerät bereitgestellt wird.
-

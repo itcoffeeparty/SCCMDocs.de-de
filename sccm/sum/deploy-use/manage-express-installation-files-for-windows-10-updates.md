@@ -9,17 +9,14 @@ ms.date: 03/24/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
-ms.translationtype: HT
-ms.sourcegitcommit: 1035dbbf944a3a467d637a4a948a75b0946eb711
 ms.openlocfilehash: baffb5f026bd63c50f878214e71d2c9e9b8b51c2
-ms.contentlocale: de-de
-ms.lasthandoff: 07/11/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="manage-express-installation-files-for-windows-10-updates"></a>Verwalten von Express-Installationsdateien für Windows 10-Updates
 Configuration Manager unterstützt ab Version 1702 Express-Installationsdateien für Windows 10-Updates. Wenn Sie eine unterstützte Version von Windows 10 verwenden, können Sie die Configuration Manager-Einstellungen nutzen, um nur die Änderungen zwischen dem kumulativen Update von Windows 10 des laufenden Monats und dem Updates des Vormonats herunterzuladen. Ohne Express-Installationsdateien lädt Configuration Manager die kompletten kumulativen Updates für Windows 10 (einschließlich aller Updates aus den letzten Monaten) jeden Monat herunter. Mit Expressinstallationsdateien erhalten Sie kleinere Downloads und kürzere Installationszeiten.
 
@@ -44,4 +41,3 @@ Sobald Sie die Clienteinstellungen zur Aktivierung dieser Funktionalität auf de
 2.  Navigieren Sie in der Configuration Manager-Konsole zu **Verwaltung** > **Clienteinstellungen**.
 3.  Wählen Sie die entsprechenden Clienteinstellungen aus, und klicken Sie dann in der Registerkarte **Home** auf **Eigenschaften**.
 4.  Wählen Sie die Seite **Softwareupdates** aus, konfigurieren Sie **Ja** für die Einstellung **Installation von Express-Updates auf Clients aktivieren**, und konfigurieren Sie den Port, der für den HTTP-Listener auf dem Client für die Einstellung **Zum Herunterladen von Inhalt für Express-Updates verwendeter Port** verwendet wird.
-

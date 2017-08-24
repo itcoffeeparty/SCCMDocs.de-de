@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: f16c87dfd0c4f80d96aedf7f5f7497f2bbd4752a
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="get-started-with-compliance-settings-in-system-center-configuration-manager"></a>Erste Schritte mit Kompatibilitätseinstellungen in System Center Configuration Manager
 
@@ -83,9 +82,3 @@ Ausführlichere Informationen finden Sie unter [Erstellen von Remoteverbindungsp
 Die Upgraderichtlinie für die Edition ermöglicht das automatische Upgrade von Geräten, die bestimmte Versionen von Windows 10 ausführen, auf eine neuere Version durch Bereitstellung eines neuen Produktschlüssels oder einer Lizenzdatei.
 
 Ausführlichere Informationen finden Sie unter [Upgrade Windows devices with the edition upgrade policy (Einstellungen der Upgraderichtlinie für die Windows-Edition in Microsoft Intune)](/sccm/compliance/deploy-use/upgrade-windows-version)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

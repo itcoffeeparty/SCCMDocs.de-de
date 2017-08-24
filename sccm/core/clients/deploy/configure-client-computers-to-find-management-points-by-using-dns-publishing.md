@@ -6,22 +6,19 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 03cec407-0f9f-454f-a360-b005af738d29
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 9eadb91a575323b4c36af14962f370046ea513ce
-ms.contentlocale: de-de
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: d016ec3fe106b2d90b3c14b4f9296aed4d198644
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-configure-client-computers-to-find-management-points-by-using-dns-publishing-in-system-center-configuration-manager"></a>Konfigurieren von Clientcomputern für die Suche nach Verwaltungspunkten mithilfe der DNS-Veröffentlichung in System Center Configuration Manager
 
@@ -59,4 +56,3 @@ Clients in System Center Configuration Manager müssen kontinuierlich einen Verw
 2.  Geben Sie auf der Registerkarte **Standort** das DNS-Suffix eines Verwaltungspunkts an, und klicken Sie dann auf **OK**.  
 
      Wenn der Standort über mehrere Verwaltungspunkte verfügt und diese sich in verschiedenen Domänen befinden, geben Sie nur eine Domäne an. Beim Herstellen einer Verbindung zwischen Clients und einem Verwaltungspunkt in dieser Domäne wird eine Liste der verfügbaren Verwaltungspunkte heruntergeladen. Darin sind auch die Verwaltungspunkte in den anderen Domänen enthalten.
-

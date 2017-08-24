@@ -6,22 +6,19 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 518f9882-ce71-48c3-9f47-cd968cfb658d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 6fce443843fcf542a852937217e3a73c7ee0a98b
-ms.contentlocale: de-de
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 3da19c15ef5c002313493558580175b98a90bb59
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="planning-considerations-for-deploying-clients-in-system-center-configuration-manager"></a>Planungsüberlegungen zur Bereitstellung von Clients in System Center Configuration Manager
 
@@ -44,4 +41,3 @@ Vor der Installation von Clients auf PCs, Servern und anderen Geräten in System
 -   [Planen der Clientbereitstellung auf Macintosh-Computern in System Center Configuration Manager](../../../../core/clients/deploy/plan/planning-for-client-deployment-to-mac-computers.md)  
 
 -   [Planen der Clientbereitstellung für Windows Embedded-Geräte in System Center Configuration Manager](../../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)  
-

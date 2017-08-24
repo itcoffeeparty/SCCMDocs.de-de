@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 521b90b9d497818a4c1e546fca38cd15d4cab487
 ms.openlocfilehash: 6ee99fa0c07676f004e41a50bf16d0d17604e790
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="security-and-privacy-for-application-management-in-system-center-configuration-manager"></a>Sicherheit und Datenschutz für die Anwendungsverwaltung in System Center Configuration Manager
 
@@ -68,7 +67,7 @@ ms.openlocfilehash: 6ee99fa0c07676f004e41a50bf16d0d17604e790
 
      Sie können zwar Clienteinstellungen konfigurieren, um Installationsberechtigungen einzuschränken, z.B. auf die primären Benutzer von Geräten oder auf lokale Administratoren, aber diese Einstellung ist im Unternehmensportal nicht wirksam. Dadurch könnte es zu einer Rechteerweiterung kommen, da Benutzer eine App installieren könnten, ohne dazu berechtigt zu sein.  
 
-##  <a name="a-namebkmkcertificatessilverlight5a-certificates-for-microsoft-silverlight-5-and-elevated-trust-mode-required-for-the-application-catalog"></a><a name="BKMK_CertificatesSilverlight5"></a> Zertifikate für Microsoft Silverlight 5 und für den Anwendungskatalog erforderlicher Modus mit höherer Vertrauensstellung  
+##  <a name="BKMK_CertificatesSilverlight5"></a> Zertifikate für Microsoft Silverlight 5 und für den Anwendungskatalog erforderlicher Modus mit höherer Vertrauensstellung  
  Für Configuration Manager-Clients ist Microsoft Silverlight 5 erforderlich, das im Modus mit höherer Vertrauensstellung ausgeführt werden muss, damit Benutzer Software aus dem Anwendungskatalog installieren können. Standardmäßig werden Silverlight-Anwendungen im Modus mit teilweiser Vertrauensstellung ausgeführt, um den Zugriff von Anwendungen auf Benutzerdaten zu verhindern. Microsoft Silverlight 5 wird von Configuration Manager automatisch auf Clients installiert, wenn es noch nicht installiert ist. Standardmäßig wird die Computer-Agent-Clienteinstellung **Ausführen von Silverlight-Anwendungen im Modus mit höherer Vertrauensstellung zulassen** von Configuration Manager auf **Ja** festgelegt. Mit dieser Einstellung können signierte und vertrauenswürdige Silverlight-Anwendungen den Modus mit höherer Vertrauensstellung anfordern.  
 
  Wenn Sie die Standortsystemrolle des Anwendungskatalog-Websitepunkts installieren, wird im Computer-Zertifikatspeicher für vertrauenswürdige Herausgeber auf jedem Configuration Manager-Clientcomputer ein Microsoft-Signaturzertifikat installiert. Mit diesem Zertifikat können Silverlight-Anwendungen, die mit diesem Zertifikat signiert sind, im Modus mit höherer Vertrauensstellung ausgeführt werden, der für Computer erforderlich ist, um Software aus dem Anwendungskatalog zu installieren. Configuration Manager verwaltet das Signaturzertifikat automatisch. Entfernen oder verschieben Sie dieses Microsoft-Signaturzertifikat zur Sicherung der Dienstkontinuität nicht.  
@@ -113,9 +112,3 @@ ms.openlocfilehash: 6ee99fa0c07676f004e41a50bf16d0d17604e790
 -  Die Informationen zu Genehmigungsanforderungen für Anwendungen werden in der Configuration Manager-Datenbank gespeichert. Abgebrochene oder abgelehnte Anforderungen und die zugehörigen Einträge zum Anforderungsverlauf werden standardmäßig nach 30 Tagen gelöscht. Sie können das Löschverhalten konfigurieren, indem Sie den Standortwartungstask **Veraltete Anwendungsanforderungsdaten löschen** einstellen. Zugelassene und ausstehende Genehmigungsanforderungen für Anwendungen werden nie gelöscht.  
 -  Informationen, die an den Anwendungskatalog gesendet und von ihm empfangen werden, werden nicht an Microsoft gesendet.  
 -  Der Anwendungskatalog wird nicht standardmäßig installiert. Für diese Installation sind mehrere Konfigurationsschritte erforderlich.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

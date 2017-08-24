@@ -4,24 +4,22 @@ description: "Erfahren Sie mehr zu den Features, die in Technical Preview für S
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aae1cf2f-2c04-4f68-a03a-f4a925433c09
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
-ms.openlocfilehash: 4da12425382c5d64602b2728e0e661c8cb89a5e4
-ms.contentlocale: de-de
-ms.lasthandoff: 01/24/2017
-
+ms.openlocfilehash: ef0db5b11ae2be5edcb4db87400c5c273c89972e
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1601 für System Center Configuration Manager
 
@@ -220,4 +218,3 @@ Ein Client ist online, wenn er aktuell mit einer Standortsystemrolle des Typs �
  Um die neuen Einstellungen anzuzeigen, wählen Sie auf der Seite für die **Geräteeinstellungen** des Konfigurationselements im Assistenten zum **Erstellen von Konfigurationselementen** die Option **Kioskmodus – Samsung KNOX** aus.  
 
  Weitere Informationen finden Sie unter [Erstellen von Konfigurationselementen für Windows 8.1- und Windows 10-Geräte, die ohne den System Center Configuration Manager-Client verwaltet werden](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
-

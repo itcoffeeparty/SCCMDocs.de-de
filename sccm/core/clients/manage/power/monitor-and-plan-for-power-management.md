@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 507bf676-2679-4e4d-8831-3ffc9cf8557e
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-monitor-and-plan-for-power-management-in-system-center-configuration-manager"></a>Überwachen und Planen der Energieverwaltung in System Center Configuration Manager
 
@@ -28,7 +27,7 @@ ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
 
 Überwachen und planen Sie die Energieverwaltung in System Center Configuration Manager anhand der folgenden Informationen.  
 
-##  <a name="a-namebkmkhowtousereportsa-how-to-use-reports-for-power-management"></a><a name="BKMK_How_to_use_reports"></a> Verwenden von Berichten für die Energieverwaltung  
+##  <a name="BKMK_How_to_use_reports"></a> Verwenden von Berichten für die Energieverwaltung  
  In der Energieverwaltung in Configuration Manager sind verschiedene Berichte enthalten, um die Analyse von Energieverbrauch und Energieeinstellungen der Computer Ihrer Organisation zu vereinfachen. Die Berichte können auch zur Problembehandlung verwendet werden.  
 
  Bevor Sie Energieverwaltungsberichte verwenden können, müssen Sie die Berichterstattung für Ihre Hierarchie konfigurieren. Weitere Informationen zu Berichten in Configuration Manager finden Sie unter [Berichterstellung in System Center Configuration Manager](../../../../core/servers/manage/reporting.md).  
@@ -45,7 +44,7 @@ ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
 > [!NOTE]  
 >  In Energieverwaltungsberichten wird die Anzahl physischer sowie virtueller Computer in einer ausgewählten Sammlung angezeigt. Es werden allerdings nur für physische Computer Energieverwaltungsinformationen angezeigt.  
 
-###  <a name="a-namebkmkactivitya-computer-activity-report"></a><a name="BKMK_Activity"></a> Bericht "Computeraktivität"  
+###  <a name="BKMK_Activity"></a> Bericht "Computeraktivität"  
  Im Bericht **Computeraktivität** wird ein Diagramm mit der folgenden Aktivität für eine angegebene Sammlung über einen bestimmten Zeitraum angezeigt:  
 
 -   **Computer Ein** : Der Computer war eingeschaltet.  
@@ -80,7 +79,7 @@ ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
 |-----------------|-------------|  
 |**Computeraktivitätsdetails**|Klicken Sie auf den Link **Klicken Sie hier, um detaillierte Informationen anzuzeigen** , um eine Liste aktiver, inaktiver und nicht meldender Computer für das angegebene Datum anzuzeigen.<br /><br /> Weitere Informationen finden Sie unter [Computer Activity Details Report](#BKMK_Activity_Details) in diesem Thema.|  
 
-###  <a name="a-namebkmkcompactivitybycomputera-computer-activity-by-computer-report"></a><a name="BKMK_Comp_Activity_by_computer"></a> Bericht "Computeraktivität nach Computer"  
+###  <a name="BKMK_Comp_Activity_by_computer"></a> Bericht "Computeraktivität nach Computer"  
  Im Bericht **Computeraktivität nach Computer** wird ein Diagramm mit der folgenden Aktivität für einen angegebenen Computer an einem bestimmten Datum angezeigt:  
 
 -   **Computer Ein** : Der Computer war eingeschaltet.  
@@ -114,7 +113,7 @@ ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
 |-----------------|-------------|  
 |**Computerdetails**|Klicken Sie auf den Link **Klicken Sie hier, um detaillierte Informationen anzuzeigen** , um die Energiefunktionen, Energieeinstellungen und angewendeten Energiesparpläne für den ausgewählten Computer anzuzeigen.|  
 
-###  <a name="a-namebkmkactivitydetailsa-computer-activity-details-report"></a><a name="BKMK_Activity_Details"></a> Computer Activity Details report  
+###  <a name="BKMK_Activity_Details"></a> Computer Activity Details report  
  Im Bericht **Computeraktivitätsdetails** wird eine Liste aktiver bzw. inaktiver Computer mit ihren Standby- und Aktivierungsfunktionen angezeigt. Dieser Bericht wird durch den [Computer Activity Report](#BKMK_Activity) aufgerufen und sollte nicht direkt vom Standortadministrator ausgeführt werden.  
 
  Verwenden Sie die folgenden Parameter, um diesen Bericht zu konfigurieren.  
@@ -144,7 +143,7 @@ ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
 |-----------------|-------------|  
 |**Computeraktivität nach Computer**|Klicken Sie auf einen Computernamen, um bestimmte Aktivitäten für diesen Computer über einer angegebenen Berichtszeitraum anzuzeigen. Hierzu zählen **Computer ein** (wurde der Computer eingeschaltet?), **Monitor ein** (wurde der Monitor eingeschaltet?) und **Benutzer aktiv** (Aktivität von der Computermaus, der Computertastatur oder einer Remotedesktopverbindung wurde erkannt).<br /><br /> Weitere Informationen finden Sie unter [Computer Activity by Computer Report](#BKMK_Comp_Activity_by_computer) in diesem Thema.|  
 
-###  <a name="a-namebkmkcomputerdetailsa-computer-details-report"></a><a name="BKMK_Computer_Details"></a> Bericht "Computerdetails"  
+###  <a name="BKMK_Computer_Details"></a> Bericht "Computerdetails"  
  Im Bericht **Computerdetails** werden detaillierte Informationen über Energiefunktionen, Energieeinstellungen und aktive Energiesparpläne eines bestimmten Computers angezeigt. Dieser Bericht wird von den Berichten **Computeraktivität nach Computer** , **Computer mit mehreren Energiesparplänen** , **Energiefunktionen** und **Energieeinstellungsdetails** aus aufgerufen. Es wird nicht direkt vom Standortadministrator ausgeführt.  
 
 #### <a name="required-report-parameters"></a>Erforderliche Berichtsparameter  
@@ -161,7 +160,7 @@ ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
 #### <a name="report-links"></a>Berichtslinks  
  Dieser Bericht enthält keine Links zu anderen Energieverwaltungsberichten.  
 
-###  <a name="a-namebkmknotreportinga-computer-not-reporting-details-report"></a><a name="BKMK_Not_Reporting"></a> Bericht "Computer meldet keine Details"  
+###  <a name="BKMK_Not_Reporting"></a> Bericht "Computer meldet keine Details"  
  Im Bericht **Computer meldet keine Details** wird eine Liste von Computern in einer bestimmten Sammlung angezeigt, von denen an einem bestimmten Datum zu einer bestimmten Uhrzeit keine Energieaktivitäten gemeldet wurden. Dieser Bericht wird durch den **Computer Activity Report** aufgerufen und sollte nicht direkt vom Standortadministrator ausgeführt werden.  
 
 > [!NOTE]  
@@ -185,7 +184,7 @@ ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
 #### <a name="report-links"></a>Berichtslinks  
  Dieser Bericht enthält keine Links zu anderen Energieverwaltungsberichten.  
 
-###  <a name="a-namebkmkexcludeda-computers-excluded"></a><a name="BKMK_Excluded"></a> Ausgeschlossene Computer  
+###  <a name="BKMK_Excluded"></a> Ausgeschlossene Computer  
  Im Bericht **Ausgeschlossene Computer** wird eine Liste von Computern einer bestimmten Sammlung angezeigt, die aus der Configuration Manager-Energieverwaltung ausgeschlossen wurden.  
 
  Verwenden Sie die folgenden Parameter, um diesen Bericht zu konfigurieren.  
@@ -208,7 +207,7 @@ ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
 |-----------------|-------------|  
 |**Energie Computerdetails**|Klicken Sie auf einen Computernamen, um die Energiefunktionen, Energieeinstellungen und angewendeten Energiesparpläne des ausgewählten Computers anzuzeigen.<br /><br /> Weitere Informationen finden Sie unter [Computer Details Report](#BKMK_Computer_Details) in diesem Thema.|  
 
-###  <a name="a-namebkmkmultiplea-computers-with-multiple-power-plans"></a><a name="BKMK_Multiple"></a> Computer mit mehreren Energiesparplänen  
+###  <a name="BKMK_Multiple"></a> Computer mit mehreren Energiesparplänen  
  Im Bericht **Computer mit mehreren Energiesparplänen** wird eine Liste von Computern angezeigt, die Mitglieder mehrerer Sammlungen mit jeweils verschiedenen Energiesparplänen sind. Es werden für jeden Computer mit möglicherweise in Konflikt stehenden Energieeinstellungen der Computername und die Energiesparpläne angezeigt, die für jede Sammlung angewendet werden, in der der Computer Mitglied ist.  
 
 > [!IMPORTANT]  
@@ -235,7 +234,7 @@ ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
 |-----------------|-------------|  
 |**Energie Computerdetails**|Klicken Sie auf einen Computernamen, um die Energiefunktionen, Energieeinstellungen und angewendeten Energiesparpläne des ausgewählten Computers anzuzeigen.<br /><br /> Weitere Informationen finden Sie unter [Computer Details Report](#BKMK_Computer_Details) in diesem Thema.|  
 
-###  <a name="a-namebkmkconsumptiona-energy-consumption-report"></a><a name="BKMK_Consumption"></a> Bericht "Stromverbrauch"  
+###  <a name="BKMK_Consumption"></a> Bericht "Stromverbrauch"  
  Im Bericht **Stromverbrauch** werden die folgenden Informationen angezeigt:  
 
 -   In einem Diagramm wird für die angegebene Sammlung und den angegebenen Zeitraum der gesamte monatliche Stromverbrauch der Computer in Kilowattstunden (kWh) angezeigt.  
@@ -278,7 +277,7 @@ ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
 #### <a name="report-links"></a>Berichtslinks  
  Dieser Bericht enthält keine Links zu anderen Energieverwaltungsberichten.  
 
-###  <a name="a-namebkmkconsumptionbydaya-energy-consumption-by-day-report"></a><a name="BKMK_Consumption_by_Day"></a> Bericht "Stromverbrauch nach Tag"  
+###  <a name="BKMK_Consumption_by_Day"></a> Bericht "Stromverbrauch nach Tag"  
  Im Bericht **Stromverbrauch nach Tag** werden die folgenden Informationen angezeigt:  
 
 -   In einem Diagramm wird für die angegebene Sammlung der gesamte tägliche Stromverbrauch der Computer in Kilowattstunden (kWh) in den letzten 31 Tagen angezeigt.  
@@ -319,7 +318,7 @@ ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
 #### <a name="report-links"></a>Berichtslinks  
  Dieser Bericht enthält keine Links zu anderen Energieverwaltungsberichten.  
 
-###  <a name="a-namebkmkcosta-energy-cost-report"></a><a name="BKMK_Cost"></a> Bericht "Stromkosten"  
+###  <a name="BKMK_Cost"></a> Bericht "Stromkosten"  
  Im Bericht **Stromkosten** werden die folgenden Informationen angezeigt:  
 
 -   Ein Diagramm mit den monatlichen Gesamtwerten für die Stromkosten der Computer in der angegebenen Sammlung über einen bestimmten Zeitraum  
@@ -361,7 +360,7 @@ ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
 #### <a name="report-links"></a>Berichtslinks  
  Dieser Bericht enthält keine Links zu anderen Energieverwaltungsberichten.  
 
-###  <a name="a-namebkmkcostbydaya-energy-cost-by-day-report"></a><a name="BKMK_Cost_by_Day"></a> Bericht "Stromkosten nach Tag"  
+###  <a name="BKMK_Cost_by_Day"></a> Bericht "Stromkosten nach Tag"  
  Im Bericht **Stromkosten nach Tag** werden die folgenden Informationen angezeigt:  
 
 -   Ein Diagramm mit den täglichen Gesamtwerten für die Stromkosten der Computer in der angegebenen Sammlung während der letzten 31 Tage  
@@ -401,7 +400,7 @@ ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
 #### <a name="report-links"></a>Berichtslinks  
  Dieser Bericht enthält keine Links zu anderen Energieverwaltungsberichten.  
 
-###  <a name="a-namebkmkenvironmentalimpacta-environmental-impact-report"></a><a name="BKMK_Environmental_Impact"></a> Bericht "Umweltbelastung"  
+###  <a name="BKMK_Environmental_Impact"></a> Bericht "Umweltbelastung"  
  Im Bericht **Umweltbelastung** werden die folgenden Informationen angezeigt:  
 
 -   In einem Diagramm wird der gesamte monatliche CO2-Ausstoß (in Tonnen) der Computer in der angegebenen Sammlung im angegebenen Zeitraum angezeigt.  
@@ -442,7 +441,7 @@ ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
 #### <a name="report-links"></a>Berichtslinks  
  Dieser Bericht enthält keine Links zu anderen Energieverwaltungsberichten.  
 
-###  <a name="a-namebkmkenvironmentalimpactbydaya-environmental-impact-by-day-report"></a><a name="BKMK_Environmental_Impact_by_Day"></a> Bericht "Umweltbelastung nach Tag"  
+###  <a name="BKMK_Environmental_Impact_by_Day"></a> Bericht "Umweltbelastung nach Tag"  
  Im Bericht **Umweltbelastung nach Tag** werden die folgenden Informationen angezeigt:  
 
 -   Ein Diagramm mit dem täglichen CO2-Gesamtausstoß (in Tonnen) für die Computer in der angegebenen Sammlung während der letzten 31 Tage.  
@@ -479,7 +478,7 @@ ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
 #### <a name="report-links"></a>Berichtslinks  
  Dieser Bericht enthält keine Links zu anderen Energieverwaltungsberichten.  
 
-###  <a name="a-namebkmkinsomniacomputerdetailsa-insomnia-computer-details-report"></a><a name="BKMK_Insomnia_Computer_Details"></a> Bericht "Störungsdetails für Computer"  
+###  <a name="BKMK_Insomnia_Computer_Details"></a> Bericht "Störungsdetails für Computer"  
  Im Bericht **Störungsdetails für Computer** wird eine Liste von Computern angezeigt, die sich aus einem bestimmten Grund innerhalb eines angegebenen Zeitraums nicht im Standby- oder Ruhezustand befunden haben. Dieser Bericht wird vom **Störungsbericht** aus aufgerufen und nicht direkt vom Administrator ausgeführt.  
 
  Im Bericht **Störungsbericht** werden Computer als **Nicht energiesparmodusfähig** angezeigt, wenn sie nicht energiesparmodusfähig sind und innerhalb des gesamten angegebenen Berichtsintervalls eingeschaltet waren. Im Bericht werden Computer als **Nicht ruhezustandsfähig** angezeigt, wenn sie nicht ruhezustandsfähig sind und innerhalb des gesamten angegebenen Berichtsintervalls eingeschaltet waren.  
@@ -508,7 +507,7 @@ ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
 |-----------------|-------------|  
 |**Computerdetails**|Klicken Sie auf den Link **Klicken Sie hier, um detaillierte Informationen anzuzeigen** , um die Energiefunktionen, Energieeinstellungen und angewendeten Energiesparpläne für den ausgewählten Computer anzuzeigen.<br /><br /> Weitere Informationen finden Sie unter [Computer Details Report](#BKMK_Computer_Details) in diesem Thema.|  
 
-###  <a name="a-namebkmkinsomniaa-insomnia-report"></a><a name="BKMK_Insomnia"></a> Insomnia report  
+###  <a name="BKMK_Insomnia"></a> Insomnia report  
  Im **Störungsbericht** wird eine Liste der häufigsten Ursachen angezeigt, deretwegen für Computer weder der Standbymodus noch der Ruhezustand aktiviert werden konnte, sowie die Anzahl von Computern, die für einen bestimmten Zeitraum von jeder Ursache betroffen waren. Es gibt viele Ursachen, deretwegen für Computer weder der Standbymodus noch der Ruhezustand aktiviert werden kann: z. B. ein Prozess, der auf einem Computer ausgeführt wird, eine offene Remotedesktopsitzung oder die fehlende Funktion für den Standbymodus oder Ruhezustand. Aus diesem Bericht können Sie den Bericht **Störungsdetails für Computer** öffnen, in dem eine Liste der betroffenen Computer sowie der jeweiligen Ursache angezeigt wird, deretwegen sich die Computer nicht im Standbymodus oder Ruhezustand befinden.  
 
  Im Bericht "Energiestörung" werden Computer als **Nicht energiesparmodusfähig** angezeigt, wenn sie nicht energiesparmodusfähig sind und innerhalb des gesamten angegebenen Berichtsintervalls eingeschaltet waren. Im Bericht werden Computer als **Nicht ruhezustandsfähig** angezeigt, wenn sie nicht ruhezustandsfähig sind und innerhalb des gesamten angegebenen Berichtsintervalls eingeschaltet waren.  
@@ -536,7 +535,7 @@ ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
 |-----------------|-------------|  
 |**Störungsdetails für Computer**|Klicken Sie in der Spalte **Betroffene Computer** auf eine Nummer, um eine Liste der Computer anzuzeigen, für die der Standbymodus oder Ruhezustand aufgrund der ausgewählten Ursache nicht aktiviert werden kann.<br /><br /> Weitere Informationen finden Sie unter [Insomnia Computer Details Report](#BKMK_Insomnia_Computer_Details) in diesem Thema.|  
 
-###  <a name="a-namebkmkcapabilitesa-power-capabilities-report"></a><a name="BKMK_Capabilites"></a> Bericht "Energiefunktionen"  
+###  <a name="BKMK_Capabilites"></a> Bericht "Energiefunktionen"  
  Im Bericht **Energiefunktionen** werden die Hardwareenergieverwaltungsfunktionen von Computern in der angegebenen Sammlung angezeigt. Dieser Bericht wird typischerweise in der Überwachungsphase der Energieverwaltung verwendet, um die Energieverwaltungsfunktionen von Computern in Ihrer Organisation zu bestimmen. Die im Bericht angezeigten Informationen können dann zur Erstellung von Computersammlungen verwendet werden, auf die Energiesparpläne angewendet werden sollen oder die aus der Energieverwaltung ausgeschlossen werden sollen. Die in diesem Bericht angezeigten Energieverwaltungsfunktionen umfassen:  
 
 -   **Standbyfähig** : gibt an, ob der Computer in der Lage ist, bei entsprechender Konfiguration in den Standbymodus zu schalten.  
@@ -569,7 +568,7 @@ ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
 |-----------------|-------------|  
 |**Computerdetails**|Klicken Sie auf einen Computernamen, um die Energiefunktionen, Energieeinstellungen und angewendeten Energiesparpläne des ausgewählten Computers anzuzeigen.<br /><br /> Weitere Informationen finden Sie unter [Computer Details Report](#BKMK_Computer_Details) in diesem Thema.|  
 
-###  <a name="a-namebkmksettingsa-power-settings-report"></a><a name="BKMK_Settings"></a> Bericht "Energieeinstellungen"  
+###  <a name="BKMK_Settings"></a> Bericht "Energieeinstellungen"  
  Im Bericht **Energieeinstellungen** wird eine aggregierte Liste der aktuellen Energieeinstellungen angezeigt, die von Computern in der angegebenen Sammlung verwendet werden. Für jede Energieeinstellung werden die möglichen Energiestatus, Werte und Einheiten angezeigt, ebenso wie die Anzahl der Computer, von denen diese Werte verwendet werden. Mithilfe dieses Berichts kann der Administrator während der Überwachungsphase der Energieverwaltung die Energieeinstellungen der Computer am Standort ermitteln und optimale Energieeinstellungen planen, die anschließend mittels eines Energieverwaltungsplans angewendet werden. Auch bei der Fehlerbehebung ist dieser Bericht nützlich, wenn überprüft werden muss, ob die Energieeinstellungen ordnungsgemäß angewendet wurden.  
 
 > [!NOTE]  
@@ -598,7 +597,7 @@ ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
 |-----------------|-------------|  
 |**Energieeinstellungsdetails**|Klicken Sie in der Spalte **Computer** auf die Anzahl der Computer, um eine Liste aller Computer anzuzeigen, auf denen die in dieser Zeile angezeigten Energieeinstellungen verwendet werden.<br /><br /> Weitere Informationen finden Sie unter [Power Settings Details Report](#BKMK_Settings_Details) in diesem Thema.|  
 
-###  <a name="a-namebkmksettingsdetailsa-power-settings-details-report"></a><a name="BKMK_Settings_Details"></a> Power Settings Details report  
+###  <a name="BKMK_Settings_Details"></a> Power Settings Details report  
  Im Bericht **Energieeinstellungsdetails** werden weitere Informationen zu Computern angezeigt, die im Bericht **Energieeinstellungen** ausgewählt wurden. Dieser Bericht wird vom Bericht **Energieeinstellungen** aufgerufen und nicht direkt vom Standortadministrator ausgeführt.  
 
 #### <a name="required-report-parameters"></a>Erforderliche Berichtsparameter  
@@ -624,9 +623,3 @@ ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
 |Berichtsname|Details|  
 |-----------------|-------------|  
 |**Computerdetails**|Klicken Sie auf einen Computernamen, um die Energiefunktionen, Energieeinstellungen und angewendeten Energiesparpläne des ausgewählten Computers anzuzeigen.<br /><br /> Weitere Informationen finden Sie unter [Computer Details Report](#BKMK_Computer_Details) in diesem Thema.|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

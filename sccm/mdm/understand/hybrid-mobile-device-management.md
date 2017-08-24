@@ -6,22 +6,20 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
-caps.latest.revision: 34
-caps.handback.revision: 0
+caps.latest.revision: "34"
+caps.handback.revision: "0"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
 ms.openlocfilehash: e54478a03807c939ffa64ff39a21ef6f9ea4ae2d
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="hybrid-mobile-device-management-mdm-with-system-center-configuration-manager-and-microsoft-intune"></a>Hybride Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune
 
@@ -48,4 +46,3 @@ Um Geräte hybrid zu verwalten, müssen diese Geräte zuerst mit dem Dienst regi
 - Bei der BYOD-Registrierung (Bring Your Own Device, private Geräte der Mitarbeiter) können die Benutzer ihre privaten Smartphones, Tablets oder PCs selbst registrieren.
 - Die COD-Registrierung (Corporate-Owned Device, Firmeneigene Geräte) ermöglicht Verwaltungsszenarios wie das Remotezurücksetzen, gemeinsam verwendete Geräte oder Benutzeraffinität für ein Gerät.
 - Wenn Sie [Exchange ActiveSync](../plan-design/device-enrollment-methods.md#mobile-device-management-with-exchange-activesync-and-configuration-manager) entweder lokal oder in der Cloud gehostet verwenden, können Sie eine einfache Intune-Verwaltung ohne Registrierung aktivieren. Auch Windows-PCs können mit [Intune-Clientsoftware](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune) verwaltet werden.
-

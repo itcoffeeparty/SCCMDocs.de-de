@@ -6,22 +6,19 @@ ms.date: 4/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cdb9fb0c-0912-41e4-b427-f40620971763
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
 ms.openlocfilehash: 739461a6cca0fd67431093524c1e8158afd80d0f
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="reference-for-system-center-configuration-manager-setup"></a>Referenz für System Center Configuration Manager-Setup
 
@@ -78,4 +75,3 @@ Die drei Ebenen der Datensammlung:
 Weitere Informationen, z.B. bezüglich der Offenlegung der auf den einzelnen Ebenen erfassten Details, finden Sie unter [Diagnose- und Nutzungsdaten für System Center Configuration Manager](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).  
 
 Um die Datenschutzbestimmungen für System Center Configuration Manager online anzuzeigen, navigieren Sie zu [http://go.microsoft.com/fwlink/?LinkID=626527](http://go.microsoft.com/fwlink/?LinkID=626527).
-

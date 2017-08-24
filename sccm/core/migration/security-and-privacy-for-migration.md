@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6893fce1-7ad5-4151-9ba9-3096871e8e4a
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
 ms.openlocfilehash: 8aa6971d75924ab5bcacd70c330913097ecf8717
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="security-and-privacy-for-migration-to-system-center-configuration-manager"></a>Sicherheit und Datenschutz für die Migration zu System Center Configuration Manager
 
@@ -64,9 +63,3 @@ Sie können einige oder alle unterstützten Daten von einem Quellstandort zu ein
 Die Migration ist in der Standardeinstellung nicht aktiviert und erfordert mehrere Konfigurationsschritte. Es werden keine Migrationsinformationen an Microsoft gesendet.  
 
 Berücksichtigen Sie Ihre Datenschutzanforderungen, bevor Sie Daten aus einer Quellhierarchie migrieren.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

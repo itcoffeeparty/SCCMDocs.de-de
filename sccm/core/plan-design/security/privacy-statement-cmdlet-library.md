@@ -6,21 +6,20 @@ ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bec00fb4-1ac0-4e49-b330-0871b3722459
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 3d6799ad46e0fe69333aba0662f18c9153c17bda
 ms.openlocfilehash: 3936075555cc0bb370ea6e42c7e720b864d565f7
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="system-center-configuration-manager-privacy-statement---configuration-manager-cmdlet-library"></a>System Center Configuration Manager-Datenschutzbestimmungen – Configuration Manager-Cmdlet-Bibliothek
 
@@ -50,9 +49,3 @@ Das Feature zur Erfassung von Nutzungsdaten ist standardmäßig aktiviert. Die S
  Die Einstellungen für Nutzungsdaten gelten nur für den betreffenden Computer, auf dem sie festgelegt wurden.  
 
  Weitere Informationen zum Konfigurieren von Nutzungsdaten (Sammlung) finden Sie in der [Dokumentation zur System Center Configuration Manager-Cmdlets-Bibliothek](https://technet.microsoft.com/en-us/library/dn958404.aspx).   
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

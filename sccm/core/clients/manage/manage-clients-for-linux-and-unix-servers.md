@@ -6,22 +6,20 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 948664f2-239d-47a8-92fc-f8efeebd5796
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
 ms.openlocfilehash: 506df4f7c7baa5f0586a1ddf0cb02b3de9f4d076
-ms.contentlocale: de-de
-ms.lasthandoff: 08/04/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-manage-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>Verwalten von Clients für Linux- und UNIX-Server in System Center Configuration Manager
 
@@ -80,4 +78,3 @@ Bei der Verwaltung von Linux- und UNIX-Servern mit System Center Configuration M
 |importPFX|Verwenden Sie diese Option, um ein Zertifikat anzugeben, mit dem das derzeit von einem Client verwendete Zertifikat ersetzt werden soll.<br /><br /> Bei Verwendung von **-importPFX** müssen Sie außerdem den **–password**-Befehlszeilenparameter verwenden, um das der PKCS#12-Datei zugeordnete Kennwort anzugeben.<br /><br /> Verwenden Sie **-rootcerts** , um mögliche weitere Anforderungen an das Stammzertifikat anzugeben.<br /><br /> Beispiel: **certutil -importPFX &lt; Pfad zum PKCS#12-Zertifikat > -password &lt;Zertifikatkennwort\> [-rootcerts &lt;durch Komma getrennte Liste der Zertifikate>]**|  
 |-importsitecert|Verwenden Sie diese Option, um das Standortserver-Signaturzertifikat auf dem Verwaltungsserver zu aktualisieren.<br /><br /> Beispiel: **certutil -importsitecert &lt;Pfad zum DER-Zertifikat\>**|  
 |-importcrl|Verwenden Sie diese Option, um die Zertifikatsperrliste (CRL) auf dem Client mit einem oder mehreren CRL-Dateipfaden zu aktualisieren.<br /><br /> Beispiel: **certutil -importcrl &lt;durch Kommas getrennte CRL-Dateipfade\>**|  
-

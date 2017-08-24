@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 68ac8a07-8e54-4a3c-91e3-e50dc1cabf5d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: c9fb0fa46058c773eec6ac23999357d35d9f970f
 ms.openlocfilehash: 805e04c447747b4d12350b692880dbc005bd7168
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="update-and-retire-applications-with-system-center-configuration-manager"></a>Aktualisieren und Deinstallieren von Anwendungen mit System Center Configuration Manager
 
@@ -39,9 +38,3 @@ Nach einiger Zeit möchten Sie wahrscheinlich Änderungen an einer Anwendung vor
 -   **Deinstallieren von Anwendungen**. Dank Configuration Manager ist das Deinstallieren von Anwendungen einfach. Dies kann im Hintergrund ausgeführt werden, ohne dass der Anwendungs- oder Gerätebenutzer eingreifen muss.  
 
   Weitere Informationen finden Sie unter [Deinstallieren von Anwendungen](uninstall-applications.md).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

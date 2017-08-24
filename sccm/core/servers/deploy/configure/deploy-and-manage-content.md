@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
 ms.openlocfilehash: 36b08285ef78d0acb9ba9c44abe2d57e311d44b3
-ms.lasthandoff: 12/16/2016
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="deploy-and-manage-content-for-system-center-configuration-manager"></a>Bereitstellen und Verwalten von Inhalt mit System Center Configuration Manager
 
@@ -514,4 +513,3 @@ Bei der Inhaltsprüfung wird die Integrität der Inhaltsdateien auf Verteilungsp
 4.  Wählen Sie auf der Registerkarte **Inhaltsorte** den Verteilungspunkt bzw. die Verteilungspunktgruppe mit dem zu überprüfenden Inhalt aus, klicken Sie auf **Überprüfen**und dann auf **OK**. Klicken Sie anschließend erneut auf **OK**. Die Inhaltsprüfung für den ausgewählten Verteilungspunkt bzw. die ausgewählte Verteilungspunktgruppe wird initiiert.  
 
 5.  Zum Anzeigen der Ergebnisse der Inhaltsprüfung erweitern Sie im Arbeitsbereich **Überwachung** den Knoten **Verteilungsstatus**, und klicken Sie dann auf den Knoten **Inhaltsstatus** . Der Inhalt jedes Pakettyps (z. B. Anwendung, Softwareupdatepaket und Startabbild) wird angezeigt. Weitere Informationen zum Überwachen des Status von Inhalten finden Sie unter [Monitor content you have distributed with System Center Configuration Manager (Überwachen von mit System Center Configuration Manager verteilten Inhalten)](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md).  
-

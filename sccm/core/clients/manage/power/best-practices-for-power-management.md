@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9f7142e1-c972-4384-853b-2da1568cb3e3
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: d3cc24c7923141f039dcda26ac27489cb0143e89
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="best-practices-for-power-management-in-system-center-configuration-manager"></a>Bewährte Methoden für die Energieverwaltung in System Center Configuration Manager
 
@@ -82,9 +81,3 @@ Verwenden Sie folgende bewährte Methoden für die Energieverwaltung in System C
  Energieverwaltungsinformationen, die für Monatsberichte verwendet werden, bleiben 13 Monate lang in der Configuration Manager-Standortdatenbank gespeichert.  
 
  Wenn Sie während der Überwachungs- und Planungsphase bzw. während der Kompatibilitätsphase der Energieverwaltung Berichte ausführen, dann speichern oder exportieren Sie die Ergebnisse aller Berichte, deren Daten Sie zum späteren Vergleich behalten möchten, für den Fall, dass sie später von Configuration Manager entfernt werden.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

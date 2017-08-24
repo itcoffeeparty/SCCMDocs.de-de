@@ -6,21 +6,19 @@ ms.date: 4/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dda2f4c01078fbbd174cbcb30357554c24f6abeb
 ms.openlocfilehash: 14834f62ffaa8fcba5ddb7536a0b76e18b557e53
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="list-of-prerequisite-checks-for-system-center-configuration-manager"></a>Liste der Voraussetzungsprüfungen für System Center Configuration Manager
 
@@ -126,4 +124,3 @@ Die folgende Tabelle listet die Prüfungen auf, die für die Systemanforderungen
 |**Von der Configuration Manager-Konsole nicht unterstütztes Betriebssystem**|Überprüft, dass die Configuration Manager-Konsole auf Computern installiert werden können, auf denen eine unterstützte Betriebssystemversion ausgeführt wird. Weitere Informationen finden Sie unter [Supported operating systems for sites and clients for System Center Configuration Manager (Unterstützte Betriebssysteme für Standorte und Clients für System Center Configuration Manager)](/sccm/core/plan-design/configs/supported-operating-systems-consoles).|Fehler|Configuration Manager-Konsole|
 |**Von Setup nicht unterstützte Betriebssystemversion des Standortservers**|Stellt sicher, dass ein unterstütztes Betriebssystem auf dem Server ausgeführt wird. Weitere Informationen finden Sie unter [Unterstützte Betriebssysteme für Clients und Geräte für System Center Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers.md).|Fehler|Standort der zentralen Verwaltung, <br>Primärer Standort, <br>Sekundärer Standort, <br>Configuration Manager-Konsole, <br>Verwaltungspunkt, <br>Verteilungspunkt|
 |**Überprüfen der Datenbankkonsistenz**|Hiermit wird ab Version 1602 die Konsistenz der Datenbank geprüft.|Fehler|Standort der zentralen Verwaltung, <br>Primärer Standort|  
-

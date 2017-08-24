@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: 60d0642618a3074fc50a848f1189f4d6559ca916
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="import-configuration-data-with-system-center-configuration-manager"></a>Importieren von Konfigurationsdaten mit System Center Configuration Manager
 
@@ -59,9 +58,3 @@ In den folgenden Szenarien kann der Import ebenfalls nicht ausgeführt werden:
 5.  Überprüfen Sie auf der Seite **Zusammenfassung** des Assistenten die auszuführenden Aktionen, und schließen Sie anschließend den Assistenten ab.  
 
 Die importierten Konfigurationsdaten werden im Arbeitsbereich **Bestand und Kompatibilität** im Knoten **Kompatibilitätseinstellungen** angezeigt.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

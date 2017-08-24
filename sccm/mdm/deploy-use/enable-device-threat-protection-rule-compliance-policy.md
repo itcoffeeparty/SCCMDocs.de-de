@@ -6,8 +6,7 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 99a5b715-f172-46e1-ac27-ad55bde66d0d
@@ -15,13 +14,11 @@ caps.latest.revision:
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: b6e7fe0416870ebb6258f89808affe77997c879d
-ms.contentlocale: de-de
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: faa92e150686e615164ce3f5435b77a65305aab3
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="enable-device-threat-protection-rule-in-the-compliance-policy"></a>Aktivieren einer Regel zum Schutz vor Gerätebedrohungen in der Konformitätsrichtlinie
 
@@ -55,4 +52,3 @@ Wenn Sie Richtlinien für bedingten Zugriff für Office 365 und andere Dienste e
 Der Gerätebedrohungsschutz-Status wird auf dem Knoten **Sicherheit** im Arbeitsbereich **Überwachung** angezeigt.
 In einem visuellen Diagramm wird eine Zusammenfassung des Status mit verschiedenen Bedrohungsstufen angezeigt. Klicken Sie auf die einzelnen Abschnitte des Diagramms, um weitere Informationen anzuzeigen, z.B. die Anzahl der als nicht kompatibel eingestuften Geräte nach Plattform und alle gemeldeten Fehler.
 Den Status einzelner Geräte können Sie auch im Arbeitsbereich **Bestand und Kompatibilität** unter **Geräte** anzeigen.  Sie können die Spalten **Gerätebedrohung – Kompatibilität** und **Gerätebedrohungsebene** hinzufügen, um den Status anzuzeigen.  Diese Spalten werden standardmäßig nicht angezeigt.
-

@@ -6,8 +6,7 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3f62b763-4347-453d-b0a7-1f4a0d1d4105
@@ -15,13 +14,11 @@ caps.latest.revision:
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 1d9cac06b266fb9ff991e3714240c2ea1bbb3f17
-ms.contentlocale: de-de
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: 59f43c922d1d3bc64625733014b0def1e42c4d2d
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="configure-and-deploy-lookout-for-work-apps"></a>Konfigurieren und Bereitstellen von Lookout for Work-Apps
 
@@ -61,7 +58,7 @@ Dieser Artikel beschreibt das Konfigurieren und Bereitstellen der Lookout for Wo
   ![Screenshot des Dialogfelds Apps hinzufügen mit der Option native Clientanwendung](media/aad-add-app.png)
 
   3. Ersetzen Sie **com.lookout.enterprise.yourcompanyname** mit der Kundenbundle-ID, die Sie beim Unterzeichnen der IPA ausgewählt haben.
-  4.  Hinzufügen von zusätzlichen Umleitungs-URI: ** &lt;companyportal://code/>** gefolgt von einer URL-codierten Version Ihrer ursprünglichen URI-Umleitung.
+  4.  Hinzufügen von zusätzlichen Umleitungs-URI:  **&lt;companyportal://code/>** gefolgt von einer URL-codierten Version Ihrer ursprünglichen URI-Umleitung.
   5.  Fügen Sie **Delegierte Berechtigungen** zu Ihrer App hinzu.
 
   Weitere Informationen finden Sie unter [Konfigurieren einer nativen Clientanwendung](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-how-to-configure-active-directory-authentication/#optional-configure-a-native-client-application).
@@ -91,4 +88,3 @@ Wenn der Benutzer Lookout for Work auf dem Gerät öffnet, wird er aufgefordert,
 
 ## <a name="next-steps"></a>Nächste Schritte
 * [Aktivieren einer Regel zum Schutz vor Gerätebedrohungen in der Konformitätsrichtlinie](enable-device-threat-protection-rule-compliance-policy.md)
-

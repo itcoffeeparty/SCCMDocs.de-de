@@ -6,21 +6,20 @@ ms.date: 12/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
-caps.latest.revision: 17
-caps.handback.revision: 0
+caps.latest.revision: "17"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 03722ff4f480cd26842e395fe1f7ec8359e2b33e
 ms.openlocfilehash: 6953c3834ca303b949f22436010a87b3da9688dc
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-operating-system-images-with-system-center-configuration-manager"></a>Verwalten von Betriebssystemimages mit System Center Configuration Manager
 
@@ -56,7 +55,7 @@ Die Schritte zum Erstellen eines benutzerdefinierten Betriebssystemimages finden
     -   Die Installation des Betriebssystems kann länger dauern, da die App-Installation und andere Konfigurationen nach Abschluss der Betriebssysteminstallation erfolgen.  
 
 
-##  <a name="a-namebkmkaddosimagesa-add-operating-system-images-to-configuration-manager"></a><a name="BKMK_AddOSImages"></a> Hinzufügen von Betriebssystemimages zu Configuration Manager  
+##  <a name="BKMK_AddOSImages"></a> Hinzufügen von Betriebssystemimages zu Configuration Manager  
  Bevor Sie ein Betriebssystemimage verwenden können, müssen Sie das Image zu einem Configuration Manager-Standort hinzufügen. Gehen Sie wie folgt vor, um ein Betriebssystemabbild zu einem Standort hinzuzufügen.  
 
 #### <a name="to-add-an-operating-system-image-to-a-site"></a>So fügen Sie ein Betriebssystemabbild zu einem Standort hinzu  
@@ -81,10 +80,10 @@ Die Schritte zum Erstellen eines benutzerdefinierten Betriebssystemimages finden
 
  Sie können nun das Betriebssystemabbild an Verteilungspunkte verteilen.  
 
-##  <a name="a-namebkmkdistributebootimagesa-distribute-operating-system-images-to-distribution-points"></a><a name="BKMK_DistributeBootImages"></a> Verteilen von Betriebssystemimages an Verteilungspunkte  
+##  <a name="BKMK_DistributeBootImages"></a> Verteilen von Betriebssystemimages an Verteilungspunkte  
  Betriebssystemabbilder werden genau wie anderer Inhalt an Verteilungspunkte verteilt. In den meisten Fällen müssen Sie das Betriebssystemabbild an mindestens einen Verteilungspunkt verteilen, bevor Sie das Betriebssystem bereitstellen. Die Schritte zum Verteilen von Betriebssystemabbildern finden Sie unter [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).  
 
-##  <a name="a-namebkmkosimagesapplyupdatesa-apply-software-updates-to-an-operating-system-image"></a><a name="BKMK_OSImagesApplyUpdates"></a>Anwenden von Softwareupdates auf ein Betriebssystemimage  
+##  <a name="BKMK_OSImagesApplyUpdates"></a>Anwenden von Softwareupdates auf ein Betriebssystemimage  
  Es werden regelmäßig neue Softwareupdates veröffentlicht, die für das Betriebssystem in Ihrem Betriebssystemabbild gelten. Vor dem Anwenden von Softwareupdates auf ein Image müssen die Softwareupdateinfrastruktur vorhanden, Softwareupdates erfolgreich synchronisiert und die Softwareupdates aus der Inhaltsbibliothek auf den Standortserver heruntergeladen worden sein. Weitere Informationen finden Sie unter [Bereitstellen von Softwareupdates](../../sum/deploy-use/deploy-software-updates.md).  
 
  Sie können relevante Softwareupdates nach einem festgelegten Zeitplan auf ein Abbild anwenden. Basierend auf dem von Ihnen festgelegten Zeitplan wendet Configuration Manager die ausgewählten Softwareupdates auf das Betriebssystemimage an und verteilt das aktualisierte Image dann optional an Verteilungspunkte. Die Informationen zum Betriebssystemabbild werden in der Standortdatenbank gespeichert. Dazu gehören beispielsweise die Softwareupdates, die während des Imports angewendet wurden. Softwareupdates, die nach dem ursprünglichen Hinzufügen auf das Abbild angewendet wurden, werden ebenfalls in der Standortdatenbank gespeichert. Wenn Sie den Assistenten starten, um Softwareupdates auf das Betriebssystemabbild anzuwenden, ruft der Assistent eine Liste mit den verfügbaren Softwareupdates ab, die noch nicht auf das Abbild angewendet wurden und ausgewählt werden können. Configuration Manager kopiert die Softwareupdates aus der Inhaltsbibliothek auf dem Standortserver und wendet die Softwareupdates auf das Betriebssystemimage an.  
@@ -115,7 +114,7 @@ Die Schritte zum Erstellen eines benutzerdefinierten Betriebssystemimages finden
 
 8.  Überprüfen Sie auf der Seite **Abschluss des Vorgangs** , ob die Softwareupdates erfolgreich auf das Betriebssystemabbild angewendet wurden.  
 
-##  <a name="a-namebkmkosimagemulticasta-prepare-the-operating-system-image-for-multicast-deployments"></a><a name="BKMK_OSImageMulticast"></a> Vorbereiten des Betriebssystemimages für Multicastbereitstellungen  
+##  <a name="BKMK_OSImageMulticast"></a> Vorbereiten des Betriebssystemimages für Multicastbereitstellungen  
  Bei Verwendung von Multicastbereitstellungen können mehrere Computer gleichzeitig ein Betriebssystemabbild herunterladen. Das Abbild wird vom Verteilungspunkt per Multicast an Clients übertragen, anstatt dass der Verteilungspunkt eine Kopie des Abbilds über eine separate Verbindung an jeden Client sendet. Wenn Sie die Methode [Verwenden von Multicast zum Bereitstellen von Windows über das Netzwerk mit System Center Configuration Manager](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md) für die Betriebssystembereitstellung verwenden, müssen Sie das Imagepaket des Betriebssystems für die Multicastunterstützung konfigurieren, bevor Sie das Betriebssystemimage an einen multicastfähigen Verteilungspunkt verteilen. Gehen Sie wie folgt vor, um die Multicastoptionen für ein vorhandenes Abbildpaket des Betriebssystems festzulegen.  
 
 #### <a name="to-modify-an-operating-system-image-package-to-use-multicast"></a>So ändern Sie das Abbildpaket des Betriebssystems für die Verwendung von Multicast  
@@ -136,12 +135,6 @@ Die Schritte zum Erstellen eines benutzerdefinierten Betriebssystemimages finden
 
     -   **Dieses Paket nur per Multicast übertragen**: Geben Sie an, ob das Abbild vom Verteilungspunkt nur während einer Multicastsitzung bereitgestellt werden soll.  
 
-         Bei Auswahl dieser Option ** **müssen Sie auch **Inhalt lokal herunterladen, wenn dies für die Ausführung der Tasksequenz erforderlich ist** als Bereitstellungsoption für das Betriebssystemabbild angeben. Sie können die Bereitstellungsoptionen für das Abbild während der Bereitstellung des Betriebssystemabbilds oder zu einem späteren Zeitpunkt durch Bearbeitung der Bereitstellungseigenschaften angeben. Die Bereitstellungsoptionen finden Sie auf der Seite **Eigenschaften** des Bereitstellungsobjekts auf der Registerkarte **Verteilungspunkte** .  
+         Bei Auswahl dieser Option **** müssen Sie auch **Inhalt lokal herunterladen, wenn dies für die Ausführung der Tasksequenz erforderlich ist** als Bereitstellungsoption für das Betriebssystemabbild angeben. Sie können die Bereitstellungsoptionen für das Abbild während der Bereitstellung des Betriebssystemabbilds oder zu einem späteren Zeitpunkt durch Bearbeitung der Bereitstellungseigenschaften angeben. Die Bereitstellungsoptionen finden Sie auf der Seite **Eigenschaften** des Bereitstellungsobjekts auf der Registerkarte **Verteilungspunkte** .  
 
 6.  Klicken Sie auf **OK**.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

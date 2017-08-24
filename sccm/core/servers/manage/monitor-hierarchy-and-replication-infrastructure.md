@@ -6,23 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3fab4d67-8d2a-45ce-8b06-471280102cf6
-caps.latest.revision: 11
-caps.handback.revision: 0
+caps.latest.revision: "11"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: 132803a1aa9aad5c5462686bd656688418e47d07
-ms.contentlocale: de-de
-ms.lasthandoff: 12/16/2016
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="monitor-hierarchy-and-replication-infrastructure-in-system-center-configuration-manager"></a>Überwachen der Hierarchie- und Replikationsinfrastruktur in System Center Configuration Manager
 
@@ -244,4 +241,3 @@ Es werden erfolgreiche sowie nicht erfolgreiche Aktionen zur Problembehebung pro
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Überwachung**.  
 
 2.  Klicken Sie im Arbeitsbereich **Überwachung** auf **Datenbankreplikation**, und wählen Sie dann den Replikationslink aus, der überwacht werden soll. Wählen Sie anschließend im Arbeitsbereich die entsprechende Registerkarte aus, um sich die verschiedenen Details zum Replikationsstatus für diesen Link anzeigen zu lassen.  
-

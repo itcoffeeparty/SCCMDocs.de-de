@@ -6,23 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 98feaa06-64b1-4e86-a122-93017c97cd4f
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8a5dc7361da34f3e6b926acd35c72c0c0767ce70
-ms.openlocfilehash: 74a0a4274965891869caf838550cd9465b46fd51
-ms.contentlocale: de-de
-ms.lasthandoff: 12/29/2016
-
-
+ms.openlocfilehash: 84e275fa5b17bc703da22fb686ef9050d17e557f
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-monitor-certificate-profiles-in-system-center-configuration-manager"></a>Überwachen von Zertifikatprofilen in System Center Configuration Manager
 
@@ -82,4 +79,3 @@ Verwenden Sie zum Überwachen der SCEP-Zertifikatkonformität die folgenden Zert
 
 
  Weitere Informationen zum Konfigurieren der Berichterstellung in System Center Configuration Manager finden Sie unter [Berichterstellung in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
-

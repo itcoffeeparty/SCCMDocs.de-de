@@ -6,22 +6,19 @@ ms.date: 4/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
 ms.openlocfilehash: 0da80521bf223a765c3731f8ad59623d85a4c9fa
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>Verwenden des Dienstverbindungstools für System Center Configuration Manager
 
@@ -163,4 +160,3 @@ Sie können die folgenden optionalen Parameter zum Angeben eines Proxyservers ve
 |**-connect -usagedatasrc [Laufwerk:][Pfad] -updatepackdest [Laufwerk:][Pfad] -proxyserveruri [FQDN von Proxyserver] -proxyusername [Benutzername]** <br /> <br /> Wenn Sie eine Version von Configuration Manager vor 1606 verwenden, müssen Sie den Namen der CAB-Datei angeben, und Sie können nicht die Optionen für einen Proxyserver verwenden.  Die unterstützten Befehlsparameter sind: <br /> **-connect -usagedatasrc [Laufwerk:][Pfad][Dateiname] -updatepackdest [Laufwerk:][Pfad]** |Dieser Befehl stellt eine Verbindung zum Configuration Manager-Clouddienst her, um die CAB-Dateien mit Nutzungsdaten aus dem angegebenen Speicherort hoch- und die verfügbaren Updatepakete und Konsoleninhalt herunterzuladen. Die Optionen für die Proxyserver sind optional.<br /><br /> Führen Sie diesen Befehl als **lokaler Administrator** auf einem Computer aus, der eine Verbindung mit dem Internet herstellen kann.<br /><br /> Beispiel für das Herstellen einer Verbindung ohne Proxyserver: **-connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks** <br /><br /> Beispiel für das Herstellen einer Verbindung unter Verwendung eines Proxyservers: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itgproxy.redmond.corp.microsoft.com -proxyusername Meg** <br /><br /> Wenn Sie eine frühere Version als 1606 verwenden, müssen Sie den Dateinamen der CAB-Datei angeben und können keinen Proxyserver angeben. Verwenden Sie die folgende Beispielbefehlszeile: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks**|      
 |**-import -updatepacksrc [Laufwerk:][Pfad]**|Dieser Befehl importiert die Updatepakete und den Konsoleninhalt, die zuvor auf die Configuration Manager-Konsole heruntergeladen wurden.<br /><br /> Führen Sie diesen Befehl als **Lokaler Administrator** auf dem Server aus, von dem der Dienstverbindungspunkt gehostet wird.<br /><br /> Beispiel:  **-import -updatepacksrc D:\USB\UpdatePacks**|  
 |**-export -dest [Laufwerk:][Pfad][Dateiname.csv]**|Dieser Befehl exportiert die Nutzungsdaten in eine CSV-Datei, die Sie anzeigen können.<br /><br /> Führen Sie diesen Befehl als **Lokaler Administrator** auf dem Server aus, von dem der Dienstverbindungspunkt gehostet wird.<br /><br /> Beispiel: **-export -dest D:\USB\usagedata.csv**|  
-

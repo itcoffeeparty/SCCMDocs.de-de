@@ -6,24 +6,21 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
-caps.latest.revision: 34
-caps.handback.revision: 0
+caps.latest.revision: "34"
+caps.handback.revision: "0"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
 ms.openlocfilehash: c494fcc38955571c06507278a1ae88e5777b5708
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="setup-hybrid-mobile-device-management-mdm-with-system-center-configuration-manager-and-microsoft-intune"></a>Einrichten der hybriden Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -51,4 +48,3 @@ Möchten Sie Intune ohne Configuration Manager?
 Nachdem das Hybrid-Setup abgeschlossen ist, können die Geräte im Configuration Manager auf verschiedene Arten registriert werden:
 - **Unternehmenseigene Geräte (company-owned devices, COD):** [Registrieren von unternehmenseigenen Geräten](enroll-company-owned-devices.md) enthält Anleitungen für bestimmte Arten der Registrierung von unternehmenseigenen Geräten.
 - **Benutzergeräte (bring your own device, BYOD):** [Enroll user-owned (BYOD) devices (Registrieren von Benutzergeräten (BYOD))](enroll-hybrid-ios-mac.md) enthält Anleitungen für verschiedene Registrierungsarten von benutzereigenen Geräten.
-

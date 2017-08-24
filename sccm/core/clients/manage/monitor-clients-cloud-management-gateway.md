@@ -3,20 +3,17 @@ title: "Überwachen des Cloudverwaltungsgateways – Configuration Manager | Mic
 description: 
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.assetid: 15f72f80-9850-40ce-9c3a-443ba04b6a03
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 199096db7a23fb14db98b95e75246ed254848ab7
-ms.openlocfilehash: df32a7d95799d8ae685fd66e2d9ddf25e32b37d0
-ms.contentlocale: de-de
-ms.lasthandoff: 03/27/2017
-
+ms.openlocfilehash: daa0790995dc13ec2c78ae2d98a9eb38c0bcf8ae
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="monitor-cloud-management-gateway-in-configuration-manager"></a>Überwachen des Cloudverwaltungsgateways in Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -52,4 +49,3 @@ Warnungen für ausgehenden Datenverkehr helfen Ihnen beim Verständnis, wann der
 ## <a name="monitor-logs"></a>Überwachungsprotokolle
 
 Der Cloudverwaltungsgateway-Dienst generiert Einträge in einigen Protokolldateien. Weitere Informationen finden Sie unter [Protokolldateien in System Center Configuration Manager](/sccm/core/plan-design/hierarchy/log-files).
-

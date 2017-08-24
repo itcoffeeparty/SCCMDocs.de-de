@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 113984fa-6150-41a1-89ed-d2a83b979732
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: 33d4a2d5a09af74e1d76ac9b34a42b749f5bf7ef
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-create-child-configuration-items-in-system-center-configuration-manager"></a>Erstellen untergeordneter Konfigurationselemente in System Center Configuration Manager
 
@@ -43,9 +42,3 @@ Das Erstellen und Bearbeiten eines untergeordneten Konfigurationselements dient 
 4.  Auf der Seite **Allgemein** des **Assistenten zum Erstellen untergeordneter Konfigurationselemente**können Sie eine spezifische Revision des übergeordneten Konfigurationselements auswählen, aus der das untergeordnete Konfigurationselement erstellt werden soll. Andere Schritte des Assistenten sind identisch mit denen zum Erstellen eines Standardkonfigurationselements. Weitere Informationen finden Sie unter [Erstellen benutzerdefinierter Konfigurationselemente für Windows-Desktop- und -Servercomputer](../../compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md).  
 
 5.  Schließen Sie den Assistenten ab. Das neue untergeordnete Konfigurationselement wird in der Liste **Konfigurationselemente** angezeigt.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

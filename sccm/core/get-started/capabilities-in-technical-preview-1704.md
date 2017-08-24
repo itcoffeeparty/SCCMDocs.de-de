@@ -4,8 +4,7 @@ description: "Erfahren Sie mehr über Funktionen, die in System Center Configura
 ms.custom: na
 ms.date: 4/21/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -14,12 +13,11 @@ ms.assetid: e318e705-20f2-417d-8cde-7dfe661b2fa7
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
 ms.openlocfilehash: d7caee47ca74064630e09c1bdb94187af256d4b4
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1704-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1704 für System Center Configuration Manager
 
@@ -73,4 +71,3 @@ Basierend auf dem Feedback von Benutzern haben wir die folgenden Verbesserungen 
 - [Neue Spalte **Betriebssystemversion** für Betriebssystemimages](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17558407-add-a-column-to-the-operating-system-images-node-f): Wir haben eine neue Spalte namens **Betriebssystemversion** hinzugefügt, um die Version des Betriebssystems für das Image anzuzeigen, wenn Sie Informationen in den Knoten **Betriebssystemabbilder** und **Betriebssystemaktualisierungspakete** anzeigen. Nur die Version des ersten Indexes in der WIM-Datei wird angezeigt. Wechseln Sie zur Registerkarte **Details** für das Image, um Betriebssystemversionen für andere Indizes zu überprüfen.
 
 - [Effizientere Anmeldung bei „Smsts.log“](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/16791919-stop-filling-smsts-log-with-useless): Ab dieser Version schreiben wir keine Einträge mehr in die Datei „smsts.log“ für CCM_CIVersionInfo.PolicyID-Informationen. Vor dieser Version konnte es viele Einträge mit diesen Informationen geben, wodurch es schwierig war, relevantere Informationen in der Protokolldatei zu finden.
-

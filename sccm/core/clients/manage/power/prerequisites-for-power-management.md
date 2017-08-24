@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9c062f13-3c1f-4621-9cae-de0e322aa03f
-caps.latest.revision: 4
-caps.handback.revision: 0
+caps.latest.revision: "4"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 711ef491899846b86bfed0355ac7fd0f9d509c4f
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prerequisites-for-power-management-in-system-center-configuration-manager"></a>Voraussetzungen für die Energieverwaltung in System Center Configuration Manager
 
@@ -42,9 +41,3 @@ Die Energieverwaltung in System Center Configuration Manager weist externe Abhä
 |----------------|----------------------|  
 |Die Energieverwaltung muss aktiviert sein, damit Energiesparpläne erstellt und überwacht werden können.|Informationen zum Aktivieren und Konfigurieren der Energieverwaltung finden Sie unter [Configuring power management in System Center Configuration Manager (Konfigurieren der Energieverwaltung in System Center Configuration Manager)](../../../../core/clients/manage/power/configuring-power-management.md).|  
 |Reporting Services-Punkt|Es muss ein Reporting Services-Punkt erstellt werden, bevor Energieverwaltungsberichte angezeigt werden können. Weitere Informationen finden Sie unter [Berichterstellung in System Center Configuration Manager](../../../../core/servers/manage/reporting.md).|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -6,21 +6,20 @@ ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4800a800-66c8-4c35-aebe-e413a23790c1
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: cb5f7bf52a53935ca61b0e1b66822919b17d33e2
 ms.openlocfilehash: 0619de32f859f512ee1c9f5a9c83ef8d04a256ca
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-a-source-hierarchy-strategy-in-system-center-configuration-manager"></a>Planen einer Strategie für Quellhierarchien in System Center Configuration Manager
 
@@ -28,7 +27,7 @@ ms.openlocfilehash: 0619de32f859f512ee1c9f5a9c83ef8d04a256ca
 
 Bevor Sie einen Migrationsauftrag in der System Center Configuration Manager-Umgebung einrichten können, müssen Sie eine Quellhierarchie konfigurieren und Daten aus mindestens einem Quellstandort in dieser Hierarchie sammeln. Verwenden Sie die folgenden Abschnitte, um Quellhierarchien zu planen, Quellstandorte zu konfigurieren und zu bestimmen, wie Configuration Manager Daten von Quellstandorten in der Quellhierarchie sammeln soll. 
 
-##  <a name="a-namebkmksourcehierarchiesa-source-hierarchies"></a><a name="BKMK_Source_Hierarchies"></a> Quellhierarchien  
+##  <a name="BKMK_Source_Hierarchies"></a> Quellhierarchien  
 Eine Quellhierarchie ist eine Configuration Manager-Hierarchie, die zu migrierende Daten beinhaltet. Beim Einrichten einer Migration und Festlegen der dazugehörigen Quellhierarchie muss zuerst der Standort der obersten Ebene der Quellhierarchie angegeben werden. Dieser Standort wird auch als Quellstandort bezeichnet. Zusätzliche Standorte, aus denen Sie Daten in der Quellhierarchie migrieren können, werden ebenfalls als Quellstandorte bezeichnet.  
 
 -   Wenn Sie einen Migrationsauftrag zum Migrieren von Daten von einer Configuration Manager 2007-Quellhierarchie einrichten, legen Sie fest, dass Daten aus einem oder mehreren bestimmten, der Quellhierarchie angehörenden Quellstandorten überführt werden.  
@@ -62,7 +61,7 @@ Wenn Sie eine inaktive Quellhierarchie wiederherstellen, ohne vorher die Aktion 
 
 Weitere Informationen zum Konfigurieren einer Quellhierarchie finden Sie unter [Konfigurieren von Quellhierarchien und Quellstandorten für die Migration zu System Center Configuration Manager](../../core/migration/configuring-source-hierarchies-and-source-sites-for-migration.md).  
 
-##  <a name="a-namebkmksourcesitesa-source-sites"></a><a name="BKMK_Source_Sites"></a> Quellstandorte  
+##  <a name="BKMK_Source_Sites"></a> Quellstandorte  
  Quellstandorte sind Standorte in der Quellhierarchie, die zu migrierende Daten enthalten. Der Standort auf oberster Ebene der Quellhierarchie ist immer der erste Quellstandort. Wenn bei der Migration Daten vom ersten Quellstandort einer neuen Quellhierarchie gesammelt werden, dann werden Informationen zu zusätzlichen Standorten in dieser Hierarchie entdeckt.  
 
  Nach Abschluss der Datensammlung für den ersten Quellstandort hängt die nachfolgende Aktion von der Produktversion der Quellhierarchie ab.  
@@ -82,7 +81,7 @@ Weitere Informationen zum Konfigurieren einer Quellhierarchie finden Sie unter [
 
  Wenn Sie die Zugriffskonten für die Datensammlung einrichten, müssen Sie dem **Konto, das für den SMS-Anbieter des Quellstandorts** verwendet wird, möglicherweise Zugriff auf mehrere Computer in der Quellhierarchie gewähren. Dies ist ggf. erforderlich, wenn der Quellstandort mehrere Instanzen des SMS-Anbieters auf jeweils einem anderen Computer unterstützt. Zu Beginn der Datensammlung wird ein Kontakt zwischen dem Standort auf oberster Ebene der Zielhierarchie und dem Standort auf oberster Ebene der Quellhierarchie hergestellt, um die Orte des SMS-Anbieters für diesen Standort zu ermitteln. Es wird nur die erste Instanz des SMS-Anbieters identifiziert. Wenn über den Datensammlungsprozess nicht auf den SMS-Anbieter am angegebenen Ort zugegriffen werden kann, tritt während des Vorgangs ein Fehler auf, und es wird kein Versuch unternommen, eine Verbindung mit zusätzlichen Computern herzustellen, die eine Instanz des SMS-Anbieters für diesen Standort ausführen.  
 
-##  <a name="a-namebkmkdatagatheringa-data-gathering"></a><a name="BKMK_Data_Gathering"></a> Datensammlung  
+##  <a name="BKMK_Data_Gathering"></a> Datensammlung  
  Direkt nach der Angabe einer Quellhierarchie, nach dem Einrichten von Anmeldeinformationen für einen zusätzlichen Quellstandort in einer Quellhierarchie oder nach der Freigabe der Verteilungspunkte für einen Quellstandort wird die Datensammlung am Quellstandort von Configuration Manager gestartet.  
 
  Der Datensammlungsvorgang wird dann nach einem einfachen Zeitplan wiederholt, um die Synchronisierung mit allen Änderungen der Daten am Quellstandort aufrechtzuerhalten. In der Standardeinstellung wird der Prozess alle vier Stunden wiederholt. Sie können den Zeitplan für diesen Zyklus verändern, indem Sie die **Eigenschaften** des Quellstandorts bearbeiten. Der erste Datensammlungsvorgang beinhaltet eine Prüfung sämtlicher Objekte in der Configuration Manager-Datenbank und kann einige Zeit in Anspruch nehmen. Bei den nachfolgenden Datensammlungsvorgängen werden nur noch Änderungen an den Daten identifiziert. Diese Vorgänge werden rascher abgeschlossen.  
@@ -107,9 +106,3 @@ Weitere Informationen zum Konfigurieren einer Quellhierarchie finden Sie unter [
  Sollen keine Daten mehr von einem Quellstandort gesammelt werden, führen Sie die Aktion **Sammeln von Daten beenden** bei den Quellstandorten der untersten Ebene aus und wiederholen den Vorgang dann bei jedem übergeordneten Standort. Der Standort der obersten Ebene der Quellhierarchie muss der letzte Standort sein, an dem Sie die Datensammlung beenden. Beenden Sie die Datensammlung bei jedem untergeordneten Standort, ehe Sie sie bei einem übergeordneten Standort beenden. Üblicherweise wird die Datensammlung erst dann beendet, wenn der Migrationsprozess abgeschlossen werden kann.  
 
  Wenn Sie die Datensammlung bei einem Quellstandort beendet haben, bleiben zuvor gesammelte Informationen über Objekte und Sammlungen dieses Standorts verfügbar, wenn Sie neue Migrationsaufträge einrichten. Allerdings werden weder neue Objekte und Sammlungen angezeigt noch Änderungen, die an bestehenden Objekten vorgenommen wurden. Wenn Sie den Quellstandort neu konfigurieren und wieder mit der Datensammlung beginnen, sehen Sie Informationen und Statusangaben zu bereits migrierten Objekten.  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

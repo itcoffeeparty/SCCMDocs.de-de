@@ -1,5 +1,4 @@
 ---
-
 title: "Überwachen von Softwareupdates | Microsoft-Dokumentation"
 description: "Die System Center Configuration Manager-Konsole stellt Warnungen und Status zum Überwachen von Updates und Kompatibilität bereit."
 keywords: 
@@ -10,14 +9,13 @@ ms.date: 11/10/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
-translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
 ms.openlocfilehash: 956ef263a1c178b5ab5926705859f4b2d0ae5bc7
-ms.lasthandoff: 12/16/2016
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="monitor-software-updates-in-system-center-configuration-manager"></a>Überwachen von Softwareupdates in System Center Configuration Manager
 
@@ -99,4 +97,3 @@ Nachdem Sie die Warnungseinstellungen konfiguriert haben, wird von Configuration
 2.  Wählen Sie den Verteilungspunkt aus, für den Statusinformationen angezeigt werden sollen.  
 
 3.  Klicken Sie im Ergebnisbereich auf die Registerkarte **Details** . Statusinformationen zum Verteilungspunkt werden angezeigt.  
-

@@ -6,23 +6,20 @@ ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ead79e64-1b63-4d0d-8bd5-addff8919820
-caps.latest.revision: 11
-caps.handback.revision: 0
+caps.latest.revision: "11"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: 9032698fa12bf453041ea06bf330d3b4687c2a97
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-bootable-media-with-system-center-configuration-manager"></a>Erstellen startbarer Medien mit System Center Configuration Manager
 
@@ -129,7 +126,7 @@ Startbare Medien in Configuration Manager enthalten das Startimage, optionale Pr
     -   Geben Sie im Feld **Verteilungspunkt** den Verteilungspunkt an, auf dem das Startabbild sich befindet. Das Startabbild wird von dem Assistenten vom Verteilungspunkt abgerufen und auf das Medium geschrieben.  
 
         > [!NOTE]  
-        >  Sie benötigen ** ** Lesezugriffsrechte für die Inhaltsbibliothek am Verteilungspunkt.  
+        >  Sie benötigen ****  Lesezugriffsrechte für die Inhaltsbibliothek am Verteilungspunkt.  
 
     -   Wenn Sie auf der Seite **Medienverwaltung** des Assistenten standortbasierte startbare Medien erstellen, geben Sie im Feld **Verwaltungspunkt** einen Verwaltungspunkt eines primären Standorts an.  
 
@@ -157,4 +154,3 @@ Die Informationen in diesem Abschnitt unterstützen Sie beim Erstellen startbare
 
 ## <a name="next-steps"></a>Nächste Schritte  
 [Verwenden startbarer Medien zum Bereitstellen von Windows über das Netzwerk](use-bootable-media-to-deploy-windows-over-the-network.md)  
-

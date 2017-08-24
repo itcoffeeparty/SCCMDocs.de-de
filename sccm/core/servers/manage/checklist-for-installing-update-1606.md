@@ -6,21 +6,19 @@ ms.date: 6/6/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 75652cd2-a95a-46c5-91c1-6d43fc8e787e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
 ms.openlocfilehash: a6bda116499845fedff0126e2890755931de85bb
-ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="checklist-for-installing-update-1606-for-system-center-configuration-manager"></a>Checkliste für die Installation von Update 1606 für System Center Configuration Manager
 
@@ -146,4 +144,3 @@ Weitere Informationen finden Sie unter **Schritt 3: Ausführen der Voraussetzung
   Es wird empfohlen, die Installation des Updates für jeden Standort außerhalb der normalen Geschäftszeiten zu planen, wenn die Installation des Updates und die zugehörigen Aktionen zum Neuinstallieren von Standortkomponenten und Standortsystemrollen die geringsten Auswirkungen auf die Geschäftsvorgänge haben.
 
 Weitere Informationen finden Sie unter [Updates für System Center Configuration Manager](../../../core/servers/manage/updates.md).  
-

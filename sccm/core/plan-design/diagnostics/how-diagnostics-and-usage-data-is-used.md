@@ -6,20 +6,19 @@ ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a8021bc8-2799-41f4-83c2-e27d1242028c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 24a233516058e645df2a43623855665b97b041b0
 ms.openlocfilehash: 9864f6ba7b9a2211c99b1a5d9ebd582e01ccfeb6
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-diagnostics-and-usage-data-is-used-for-system-center-configuration-manager"></a>Nutzung von Diagnose- und Verwendungsdaten für System Center Configuration Manager
 
@@ -43,7 +42,7 @@ Ebenso wichtig ist, wofür die Diagnose- und Nutzungsdaten nicht eingesetzt werd
 
 -   Werbung basierend auf verfügbaren Daten wie z.B. Featureverwendung oder geografischem Standort (Zeitzone)  
 
-##  <a name="a-namebkmkimprovea-examples-of-how-diagnostics-and-usage-data-improves-the-product"></a><a name="bkmk_improve"></a> Beispiele für die Verbesserung des Produkts anhand von Diagnose- und Nutzungsdaten  
+##  <a name="bkmk_improve"></a> Beispiele für die Verbesserung des Produkts anhand von Diagnose- und Nutzungsdaten  
 Microsoft verwendet die verfügbaren Daten zur Verbesserung des Produkts. Im Folgenden sind einige Beispiele aufgeführt:  
 
 -   **Überarbeitete Unterstützung für ältere Serverbetriebssysteme:**  
@@ -53,9 +52,3 @@ Microsoft verwendet die verfügbaren Daten zur Verbesserung des Produkts. Im Fol
 -   **Verbesserte Voraussetzungsprüfungen:**  
 
      Anhand der Nutzungsdaten haben wir die Voraussetzungsprüfungen für die Installation eines Updates verbessert und veraltete Regeln entfernt sowie zusätzliche Fälle berücksichtigt. In einigen Fällen werden Probleme automatisch behoben.  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

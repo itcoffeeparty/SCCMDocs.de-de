@@ -6,21 +6,19 @@ ms.date: 07/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 73ff9bb9-e605-4b68-92a1-487684fed42d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
+ms.openlocfilehash: 26c36df77c21254c7ad2b8a45906bd3706f9ec65
+ms.sourcegitcommit: 06aef618f72c700f8a716a43fb8eedf97c62a72b
 ms.translationtype: HT
-ms.sourcegitcommit: 648bc6b96aa5ccc834442a962e6d5b5125f88bb5
-ms.openlocfilehash: ddb6d47e5dba4fddd6fa811d83b1bf0c91ad26f9
-ms.contentlocale: de-de
-ms.lasthandoff: 07/19/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/21/2017
 ---
 # <a name="choose-between-microsoft-intune-standalone-and-hybrid-mobile-device-management-with-system-center-configuration-manager"></a>Wählen zwischen Microsoft Intune Standalone und der hybriden Verwaltung mobiler Geräte mit System Center Configuration Manager
 
@@ -51,8 +49,7 @@ Hybrid-MDM ist eine Lösung, die die Intune-Funktionen für die Verwaltung mobil
 
 
 ## <a name="changing-the-mdm-authority-setting"></a>Ändern der MDM-Autoritätseinstellung
-Sie können die MDM-Autorität ohne Unterstützung durch den Microsoft-Support und ohne Aufheben der Registrierung und erneutes Registrieren Ihrer vorhandenen verwalteten Geräte selbst ändern. Einzelheiten finden Sie unter [Umstellen der MDM-Autorität](/sccm/mdm/deploy-use/change-mdm-authority.md).
+Sie können die MDM-Autorität ohne Unterstützung durch den Microsoft-Support und ohne Aufheben der Registrierung und erneutes Registrieren Ihrer vorhandenen verwalteten Geräte selbst ändern. Einzelheiten finden Sie unter [Umstellen der MDM-Autorität](../deploy-use/change-mdm-authority.md).
 
 > [!NOTE]    
 > Um die MDM-Autorität zu Intune Standalone zu ändern, müssen Sie über Configuration Manager Version 1610 oder höher verfügen. Wenn Sie eine frühere Version von Configuration Manager verwenden, können Sie die MDM-Autorität ändern, benötigen dafür aber Unterstützung vom Microsoft-Support und dem Betriebsteam. In diesem Fall müssen Sie nach der Änderung der MDM-Autorität auch die Registrierung aller Geräte aufheben und alle Geräte erneut registrieren.  
-

@@ -6,22 +6,19 @@ ms.date: 04/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 79cd131a-1a24-4751-87c8-7f275e45d847
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4b9261db93c9bf72c492e3c9be5b30f81835134a
 ms.openlocfilehash: 72ebd8bd29b5ecdd817631e447291c04f49d9808
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-linux-and-unix-server-applications-with-system-center-configuration-manager"></a>Erstellen von Linux- und UNIX-Serveranwendungen mit System Center Configuration Manager
 
@@ -166,4 +163,3 @@ Die folgende Konfiguration der intelligente Hintergrundübertragung wird nicht u
 
 > [!TIP]  
 >  Wenn sich die bereitzustellende Software auf einer NFS-Freigabe (NFS) befindet, auf die der Linux- oder UNIX-Server Zugriff hat, müssen Sie keinen Verteilungspunkt verwenden, um das Paket herunterzuladen. Stattdessen müssen Sie beim Erstellen des Pakets nur darauf achten, dass das Kontrollkästchen **Dieses Paket enthält Quelldateien**nicht aktiviert ist. Geben Sie dann beim Konfigurieren des Programms die Befehlszeile an, die einen direkten Zugriff auf das Paket auf dem NFS-Bereitstellungspunkt erlaubt.  
-

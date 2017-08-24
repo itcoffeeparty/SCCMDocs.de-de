@@ -6,22 +6,19 @@ ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 594eb284-0d93-4c5d-9ae6-f0f71203682a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 199096db7a23fb14db98b95e75246ed254848ab7
 ms.openlocfilehash: 0932e2b2a4f3e13c35d6b7b0446083f1c233ce03
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-view-diagnostics-and-usage-data-for-system-center-configuration-manager"></a>Informationen zum Anzeigen von Diagnose- und Verwendungsdaten für System Center Configuration Manager
 
@@ -68,4 +65,3 @@ Beim Anzeigen der Rohdaten enthält jede Datenzeile einen allgemeinen Hashwert. 
     $result = [Convert]::ToBase64String($hashedBytes)    
     return $result   
     ```  
-

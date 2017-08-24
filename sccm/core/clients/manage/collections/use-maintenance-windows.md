@@ -6,23 +6,20 @@ ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4564ebcb-41a8-4eb0-afdb-2e1f0795cfa2
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
-ms.openlocfilehash: c0b4fcda6599ed91fe2393b97bdcec6cdfba9b7c
-ms.contentlocale: de-de
-ms.lasthandoff: 01/03/2017
-
-
+ms.openlocfilehash: fa67cf597c73bab47209c9b98539f97e174ae70b
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-use-maintenance-windows-in-system-center-configuration-manager"></a>Verwenden von Wartungsfenstern in System Center Configuration Manager
 
@@ -72,4 +69,3 @@ Mithilfe von Wartungsfenstern können Sie einen Zeitpunkt definieren, an dem Con
 7.  Wählen Sie einen Wert in der Dropdownliste **Diesen Zeitplan anwenden auf** aus.  
 
 8.  Wählen Sie **OK** aus, und schließen Sie dann das Dialogfeld **&lt;Sammlungsname\> Eigenschaften**.  
-

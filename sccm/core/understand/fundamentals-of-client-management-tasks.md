@@ -6,20 +6,19 @@ ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8d4e5641-354e-4439-8b4f-620a760e233d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 86b90b8e591e1ae4f58cb361a5e544db6b09cce1
 ms.openlocfilehash: 0fee4f4ba462e59859ac93c4218b67cb26bdd6f6
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="fundamentals-of-client-management-tasks-for-system-center-configuration-manager"></a>Grundlagen der Clientverwaltungsaufgaben für System Center Configuration Manager
 
@@ -63,9 +62,3 @@ Die Configuration Manager-Konsole überwacht die vorherigen Tasks nahezu in Echt
 -   Konfigurieren von Einstellungen für die internetbasierte Clientverwaltung  
 
 -   Anzeigen von Konfigurationsbasislinien, die auf dem Client bereitgestellt wurden, Initiieren der Kompatibilitätsauswertung und Anzeigen von Kompatibilitätsberichten  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

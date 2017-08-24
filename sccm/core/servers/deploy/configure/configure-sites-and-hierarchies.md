@@ -6,22 +6,19 @@ ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9efb4061-f642-48bd-8332-3357ff5b3118
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5f1efaa776079b21d52b9936273380e9bb8963e9
 ms.openlocfilehash: 862f420c063cb44c419d4904fbb4696efb739758
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="configure-sites-and-hierarchies-for-system-center-configuration-manager"></a>Konfigurieren von Standorten und Hierarchien für System Center Configuration Manager
 
@@ -54,4 +51,3 @@ Beachten Sie die folgenden Hinweise zur Konfiguration, die für die meisten Bere
 |Konfigurieren von Datenbankreplikaten für Verwaltungspunkte|Konfigurieren Sie ein Datenbankreplikat zum Verringern der CPU-Last des Standortdatenbankservers mithilfe von Verwaltungspunkten, die Anforderungen von Clients erfüllen. Weitere Informationen finden Sie unter [Datenbankreplikate für Verwaltungspunkte für System Center Configuration Manager](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md).|  
 |Konfigurieren einer SQL Server-AlwaysOn-Verfügbarkeitsgruppe zum Hosten der Standortdatenbank|Ab Version 1602 konfigurieren Sie Verfügbarkeitsgruppen als Lösung für hohe Verfügbarkeit und Notfallwiederherstellung zum Hosten der Standortdatenbank an primären Standorten und am Standort der zentralen Verwaltung. Weitere Informationen finden Sie unter [SQL Server Always On für eine hoch verfügbare Standortdatenbank für System Center Configuration Manager](../../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).|  
 |Ändern der Replikation zwischen Standorten|Lesen Sie den Artikel [Datenübertragungen zwischen Standorten in System Center Configuration Manager](../../../../core/servers/manage/data-transfers-between-sites.md), um mehr über die folgenden Themen zu erfahren:<br /><br /> Konfigurieren der [dateibasierten Replikation](../../../../core/servers/manage/data-transfers-between-sites.md#bkmk_fileroute) zwischen sekundären Standorten<br /><br /> Konfigurieren von [Datenbankreplikationslinks](../../../../core/servers/manage/data-transfers-between-sites.md#bkmk_Dblinks)<br /><br /> Konfigurieren von [verteilten Ansichten](../../../../core/servers/manage/data-transfers-between-sites.md#bkmk_distviews)|  
-

@@ -6,8 +6,7 @@ ms.date: 03/21/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 408190da-bea6-4122-9dd6-f90155040e88
@@ -15,15 +14,12 @@ caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 212628639300e9c361f7cee61b3df6b1cb6874ce
 ms.openlocfilehash: 8edf83a0f761dfc16274ce49c3aa2b878c7fe6cd
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="monitor-mobile-threat-defense-compliance"></a>**Überwachen der Mobile Threat Defense-Kompatibilität**
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -76,4 +72,3 @@ Sie können darüber hinaus auf dem Bildschirm **Geräte** bestimmte Geräte aus
 
 > [!TIP] 
 > Stellen Sie sicher, dass die Spalten aktiviert sind, die nicht **standardmäßig sichtbar** sind, um weitere Details zum Kompatibilitätsstatus von Mobile Threat Defense für Ihre Geräte anzuzeigen.
-

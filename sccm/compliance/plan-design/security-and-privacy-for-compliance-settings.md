@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1c409244-6778-4970-a99c-d2508c9cf62b
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: e7dc554ffcd23978eed44819b525f6cc239b2135
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="security-and-privacy-for-compliance-settings-in-system-center-configuration-manager"></a>Sicherheit und Datenschutz bei Kompatibilitätseinstellungen in System Center Configuration Manager
 
@@ -42,9 +41,3 @@ ms.openlocfilehash: e7dc554ffcd23978eed44819b525f6cc239b2135
  Sie können Kompatibilitätseinstellungen verwenden, um herauszufinden, ob Ihre Clientcomputer kompatibel mit Konfigurationselementen sind, die Sie in Konfigurationsbasislinien bereitstellen. Einige Einstellungen können automatisch korrigiert werden, wenn sie nicht kompatibel sind. Die Kompatibilitätsinformationen werden vom Verwaltungspunkt an den Standortserver gesendet und in der Standortdatenbank gespeichert. Die Informationen werden verschlüsselt, wenn sie von Geräten an den Verwaltungspunkt gesendet werden, sie werden aber nicht in einem verschlüsselten Format in der Standortdatenbank gespeichert. Die Informationen verbleiben in der Datenbank, bis sie mit dem Standortwartungstask **Veraltete Konfigurationsverwaltungsdaten löschen** jeweils nach 90 Tagen gelöscht werden. Sie können das Löschintervall konfigurieren. Die Kompatibilitätsinformationen werden nicht an Microsoft gesendet.  
 
  Von Geräten werden standardmäßig keine Kompatibilitätseinstellungen ausgewertet. Außerdem müssen die Konfigurationselemente und Konfigurationsbasislinien konfiguriert und dann auf Geräten bereitgestellt werden.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

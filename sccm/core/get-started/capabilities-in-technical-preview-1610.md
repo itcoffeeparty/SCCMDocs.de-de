@@ -7,20 +7,18 @@ ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.topic: article
 ms.assetid: 8b31fd3e-875a-4a31-9498-5b050aadce32
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 59633ce68e2bb2d722900215751f345d6d098721
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1610-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1610 für System Center Configuration Manager
 
@@ -65,19 +63,19 @@ Als Administrator können Sie jetzt eine zuvor genehmigte Anwendungsanforderung 
 #### <a name="try-it-out"></a>Probieren Sie es aus
 So verweigern Sie eine genehmigte Anwendungsanforderung:
 
-1.    [Erstellen Sie eine Anwendung](https://docs.microsoft.com/en-us/sccm/apps/deploy-use/create-applications) in der Configuration Manager-Konsole, die eine Genehmigung benötigt, und stellen Sie sie bereit.
-2.    Öffnen Sie das Softwarecenter auf einem Clientcomputer, und reichen Sie eine Anwendungsanforderung ein.
-3.    Genehmigen Sie die Anwendungsanforderung in der Configuration Manager-Konsole.
-4.    Genehmigte Anwendungsanforderung verweigern: Navigieren Sie In der Configuration Manager-Konsole zu **Softwarebibliothek** > **Übersicht** > **Anwendungsverwaltung** > **Genehmigungsanforderungen**, und wählen Sie die Anwendungsanforderung aus, die Sie verweigern möchten.  Klicken Sie im Menüband auf **Verweigern**.
+1.  [Erstellen Sie eine Anwendung](https://docs.microsoft.com/en-us/sccm/apps/deploy-use/create-applications) in der Configuration Manager-Konsole, die eine Genehmigung benötigt, und stellen Sie sie bereit.
+2.  Öffnen Sie das Softwarecenter auf einem Clientcomputer, und reichen Sie eine Anwendungsanforderung ein.
+3.  Genehmigen Sie die Anwendungsanforderung in der Configuration Manager-Konsole.
+4.  Genehmigte Anwendungsanforderung verweigern: Navigieren Sie In der Configuration Manager-Konsole zu **Softwarebibliothek** > **Übersicht** > **Anwendungsverwaltung** > **Genehmigungsanforderungen**, und wählen Sie die Anwendungsanforderung aus, die Sie verweigern möchten.  Klicken Sie im Menüband auf **Verweigern**.
 
 ## <a name="exclude-clients-from-automatic-upgrade"></a>Ausschließen von Clients von automatischen Upgrades
 Technical Preview 1610 führt eine neue Einstellung ein, die Sie verwenden können, um eine Clientsammlung von der automatischen Installation aktualisierter Clientversionen auszuschließen.  Dies gilt sowohl für automatische Upgrades und als auch für andere Methoden, wie Upgrades auf der Basis von Softwareupdates, Registrierungsskripts und Gruppenrichtlinien. Dies kann für eine Computersammlung genutzt werden, die bei einem Upgrade des Clients größere Sorgfalt benötigt. Ein Client, der sich in einer ausgeschlossenen Sammlung befindet, ignoriert Anforderungen zur Installation von aktualisierter Clientsoftware.
 
 ### <a name="configure-exclusion-from-automatic-upgrade"></a>Ausschluss vom automatischen Upgrade konfigurieren
 So konfigurieren Sie Ausschlüsse aus automatischen Upgrades:
-1.    Öffnen Sie in der Configuration Manager-Konsole die **Hierarchieeinstellungen** unter **Verwaltung > Standortkonfiguration > Standorte**, und wählen Sie dann die Registerkarte **Clientupgrade** aus.
-2.    Aktivieren Sie die Kontrollkästchen **Exclude specified clients from upgrade** (Angegebene Clients aus Upgrades ausschließen) und **Exclusion collection** (Ausschlusssammlung), und wählen Sie die Sammlung aus, die Sie ausschließen möchten. Sie können nur eine einzelne Sammlung für den Ausschluss auswählen.
-3.    Klicken Sie auf **OK**, um die Konfiguration zu schließen und zu speichern. Nachdem die Clients Richtlinien aktualisiert haben, können Clients in der ausgeschlossenen Sammlung nicht mehr automatisch Updates der Clientsoftware installieren.
+1.  Öffnen Sie in der Configuration Manager-Konsole die **Hierarchieeinstellungen** unter **Verwaltung > Standortkonfiguration > Standorte**, und wählen Sie dann die Registerkarte **Clientupgrade** aus.
+2.  Aktivieren Sie die Kontrollkästchen **Exclude specified clients from upgrade** (Angegebene Clients aus Upgrades ausschließen) und **Exclusion collection** (Ausschlusssammlung), und wählen Sie die Sammlung aus, die Sie ausschließen möchten. Sie können nur eine einzelne Sammlung für den Ausschluss auswählen.
+3.  Klicken Sie auf **OK**, um die Konfiguration zu schließen und zu speichern. Nachdem die Clients Richtlinien aktualisiert haben, können Clients in der ausgeschlossenen Sammlung nicht mehr automatisch Updates der Clientsoftware installieren.
 
   ![Einstellungen für automatische Ausschlüsse aus Upgrades](media/automatic_upgrade_exclusion.png)
 
@@ -130,13 +128,13 @@ Dabei können Sie insbesondere die folgenden Windows Defender-Einstellungen konf
 
 ### <a name="try-it-out"></a>Probieren Sie es aus!
 
-1.    Navigieren Sie in der Configuration Manager-Konsole zu **Bestand und Konformität** > **Überblick** > **Konformitätseinstellungen** > **Konfigurationselemente**, und erstellen Sie ein neues **Konfigurationselement**.
-2.    Geben Sie einen Namen ein, und wählen Sie dann unter **Settings for devices managed without the Configuration Manager client** (Einstellungen für Geräte, die ohne Configuration Manager-Client verwaltet werden) die Option **Windows 8.1 und Windows 10** aus. Klicken Sie dann auf **Weiter**.
-3.    Stellen Sie sicher, dass auf der Seite **Unterstützte Plattformen** die Optionen **All Windows 10 (64-bit)** (Alle Windows 10 (64-Bit)) und **All Windows 10 (32-bit)** (Alle Windows 10 (32-Bit)) ausgewählt wurden. Klicken Sie dann auf **Weiter**.
-4.    Wählen Sie die Einstellungsgruppe **Windows Defender** aus, und klicken Sie dann auf **Weiter**.
-5.    Konfigurieren Sie die gewünschten Einstellungen auf dieser Seite, und klicken Sie dann auf **Weiter**.
-6.    Schließen Sie den Assistenten ab.
-7.    Fügen Sie dieses Konfigurationselement zu einer Konfigurationsbaseline hinzu, und stellen Sie diese Baseline auf Computern bereit, auf denen das Update von November für Windows 10 (1511) oder höher ausgeführt wird.
+1.  Navigieren Sie in der Configuration Manager-Konsole zu **Bestand und Konformität** > **Überblick** > **Konformitätseinstellungen** > **Konfigurationselemente**, und erstellen Sie ein neues **Konfigurationselement**.
+2.  Geben Sie einen Namen ein, und wählen Sie dann unter **Settings for devices managed without the Configuration Manager client** (Einstellungen für Geräte, die ohne Configuration Manager-Client verwaltet werden) die Option **Windows 8.1 und Windows 10** aus. Klicken Sie dann auf **Weiter**.
+3.  Stellen Sie sicher, dass auf der Seite **Unterstützte Plattformen** die Optionen **All Windows 10 (64-bit)** (Alle Windows 10 (64-Bit)) und **All Windows 10 (32-bit)** (Alle Windows 10 (32-Bit)) ausgewählt wurden. Klicken Sie dann auf **Weiter**.
+4.  Wählen Sie die Einstellungsgruppe **Windows Defender** aus, und klicken Sie dann auf **Weiter**.
+5.  Konfigurieren Sie die gewünschten Einstellungen auf dieser Seite, und klicken Sie dann auf **Weiter**.
+6.  Schließen Sie den Assistenten ab.
+7.  Fügen Sie dieses Konfigurationselement zu einer Konfigurationsbaseline hinzu, und stellen Sie diese Baseline auf Computern bereit, auf denen das Update von November für Windows 10 (1511) oder höher ausgeführt wird.
 
 > [!NOTE]
 > Vergessen Sie nicht, das Kontrollkästchen **Nicht konforme Einstellungen wiederherstellen** zu aktivieren, wenn Sie die Konfigurationsbaseline bereitstellen.
@@ -147,14 +145,14 @@ Sie können nun eine Richtliniensynchronisierung für ein mobiles Gerät auf der
 
 ### <a name="try-it-out"></a>Probieren Sie es aus!
 
-1.    Navigieren Sie in der Configuration Manager-Konsole zu **Bestand und Konformität** > **Übersicht** > „Geräte“.
-2.    Wählen Sie im Menü **Remote Device Actions** (Remotegeräteaktionen) die Option **Send Sync Request** (Synchronisationsanforderung senden) aus.
+1.  Navigieren Sie in der Configuration Manager-Konsole zu **Bestand und Konformität** > **Übersicht** > „Geräte“.
+2.  Wählen Sie im Menü **Remote Device Actions** (Remotegeräteaktionen) die Option **Send Sync Request** (Synchronisationsanforderung senden) aus.
 
 Die Synchronisierung kann fünf bis zehn Minuten dauern. Alle Änderungen an der Richtlinie werden mit dem Gerät synchronisiert. Sie können den Status der Synchronisierungsanforderung in der Spalte **Remote Sync State (Remotesynchronisierungsstatus)** der Ansicht **Geräte** oder im Dialogfeld **Eigenschaften** des Geräts verfolgen.
 
 ## <a name="additional-security-role-support"></a>Unterstützung zusätzlicher Sicherheitsrollen
 
-Zusätzlich zum Hauptadministrator haben nun die folgenden integrierten Sicherheitsrollen Vollzugriff auf Elemente im Knoten **Alle unternehmenseigenen Geräte**, einschließlich **Vorab deklarierte Geräte**, **iOS-Registrierungsprofile** und **Windows-Registrierungsprofile**: •   **Asset-Manager** •   **Zugriffs-Manager für Unternehmensressourcen**.
+Zusätzlich zum Hauptadministrator haben nun die folgenden integrierten Sicherheitsrollen vollen Zugriff auf Elemente des Knotens **Alle unternehmenseigenen Geräte**, einschließlich **Predeclared Devices** (Vorab deklarierte Geräte), **iOS Enrollment Profiles** (iOS-Anmeldungsprofile)a und **Windows Enrollment Profiles** (Windows-Anmeldungsprofile): •   **Asset-Manager** •   **Company Resource Access Manager** (Manager für Zugriff auf Unternehmensressourcen)
 
 Der Rolle **Analyst mit Leseberechtigung** wird weiterhin der schreibgeschützte Zugriff auf diese Bereiche der Configuration Manager-Konsole gewährt.
 
@@ -164,4 +162,3 @@ Sie können jetzt festlegen, dass in Azure Active Directory registrierte Windows
 
 ## <a name="see-also"></a>Siehe auch
 [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md)
-

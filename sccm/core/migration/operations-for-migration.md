@@ -6,20 +6,19 @@ ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c28e3492-851a-40fc-ba13-67ebc2d8b41a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 5df6478362499d87038fa4ed2cb444aa8d5b4b7c
 ms.openlocfilehash: fb8a292c4fecbe5744e2cd09bc1442fab11046bc
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="operations-for-migrating-to-system-center-configuration-manager"></a>Vorgänge der Migration zu System Center Configuration Manager
 
@@ -39,7 +38,7 @@ Bei der Migration in System Center Configuration Manager können Sie nach der er
 
 -   [Fertigstellen der Migration](#Complete_Migration)  
 
-##  <a name="a-namecreateeditmigrationjobsa-create-and-edit-migration-jobs"></a><a name="Create_Edit_migration_Jobs"></a> Erstellen und Bearbeiten von Migrationsaufträgen  
+##  <a name="Create_Edit_migration_Jobs"></a> Erstellen und Bearbeiten von Migrationsaufträgen  
  Gehen Sie wie folgt vor, um Datenmigrationsaufträge zu erstellen, die Ausschlussliste für sammlungsbasierte Migrationsaufträge zu bearbeiten, freigegebene Verteilungspunkte einzurichten und Zeitpläne für Migrationsaufträge zu bearbeiten.  
 
 > [!NOTE]  
@@ -133,7 +132,7 @@ Bei der Migration in System Center Configuration Manager können Sie nach der er
 
 10. Bestätigen Sie die Einstellungen, und beenden Sie den Assistenten.  
 
-###  <a name="a-namebkmkmodifyexclusionlista-modify-the-exclusion-list-for-migration"></a><a name="BKMK_Modify_Exclusion_List"></a> Ändern der Ausschlussliste für die Migration  
+###  <a name="BKMK_Modify_Exclusion_List"></a> Ändern der Ausschlussliste für die Migration  
 
 1.  Wählen Sie in der Configuration Manager-Konsole **Verwaltung** aus.  
 
@@ -167,7 +166,7 @@ Bei der Migration in System Center Configuration Manager können Sie nach der er
 
 4.  Wählen Sie in den Eigenschaften des Migrationsauftrags die Registerkarte **Einstellungen** aus, ändern Sie die Laufzeit des Migrationsauftrags, und wählen Sie **OK** aus.  
 
-##  <a name="a-namerunmigrationjobsa-run-migration-jobs"></a><a name="Run_Migration_Jobs"></a> Ausführen von Migrationsaufträgen  
+##  <a name="Run_Migration_Jobs"></a> Ausführen von Migrationsaufträgen  
  Verwenden Sie das folgende Verfahren, um einen Migrationsauftrag auszuführen, der noch nicht gestartet wurde.  
 
 
@@ -179,7 +178,7 @@ Bei der Migration in System Center Configuration Manager können Sie nach der er
 
 4.  Wählen Sie **Ja** aus, um den Migrationsauftrag zu starten.  
 
-##  <a name="a-namebkmkprocupgrdssa-upgrade-or-reassign-a-shared-distribution-point"></a><a name="BKMK_ProcUpgrdSS"></a> Aktualisieren oder erneutes Zuweisen eines freigegebenen Verteilungspunkts  
+##  <a name="BKMK_ProcUpgrdSS"></a> Aktualisieren oder erneutes Zuweisen eines freigegebenen Verteilungspunkts  
  Sie können einen unterstützten Verteilungspunkt, der von einem Configuration Manager 2007-Quellstandort freigegeben wird, als Verteilungspunkt in der Zielhierarchie upgraden. (Alternativ können Sie einen unterstützten Verteilungspunkt, der von einem System Center Configuration Manager-Quellstandort freigegeben wird, als Verteilungspunkt in der Zielhierarchie neu zuweisen.)  
 
 > [!IMPORTANT]  
@@ -204,7 +203,7 @@ Bei der Migration in System Center Configuration Manager können Sie nach der er
 
 6.  Bestätigen Sie die Einstellungen, und beenden Sie den Assistenten.  
 
-##  <a name="a-namemonitormigrationa-monitor-migration-activity-in-the-migration-workspace"></a><a name="Monitor_MIgration"></a> Überwachen der Migrationsaktivität im Arbeitsbereich „Migration“  
+##  <a name="Monitor_MIgration"></a> Überwachen der Migrationsaktivität im Arbeitsbereich „Migration“  
  Verwenden Sie die Configuration Manager-Konsole zum Überwachen der Migration.  
 
 1.  Wählen Sie in der Configuration Manager-Konsole **Verwaltung** aus.  
@@ -215,10 +214,10 @@ Bei der Migration in System Center Configuration Manager können Sie nach der er
 
 4.  Auf den Registerkarten **Zusammenfassung** und **Objekte in Auftrag**können Sie Details und Status von ausgewählten Migrationsaufträgen anzeigen.  
 
-##  <a name="a-namebkmkmigrateclientsa-migrate-clients"></a><a name="BKMK_MigrateClients"></a> Migrieren von Clients  
+##  <a name="BKMK_MigrateClients"></a> Migrieren von Clients  
  Planen Sie die Migration der Clients zur Zielhierarchie, nachdem das Migrieren von Clientdaten zwischen Hierarchien fertig gestellt wurde, die Migration aber noch nicht abgeschlossen ist. Im Rahmen der Clientmigration zwischen Hierarchien muss die Configuration Manager-Clientsoftware von Computern deinstalliert werden, die der Quellhierarchie zugewiesen sind. Anschließend muss die Configuration Manager-Clientsoftware aus der Zielhierarchie installiert werden. Bei der Clientinstallation aus der Zielhierarchie weisen Sie den Client auch einem primären Standort dieser Hierarchie zu. Weitere Informationen zur Clientmigration finden Sie unter [Planen einer Strategie für die Clientmigration in System Center Configuration Manager](../../core/migration/planning-a-client-migration-strategy.md).  
 
-##  <a name="a-namecompletemigrationa-finish-migration"></a><a name="Complete_Migration"></a> Fertigstellen der Migration  
+##  <a name="Complete_Migration"></a> Fertigstellen der Migration  
  Gehen Sie wie folgt vor, um die Migration von der Quellhierarchie fertigzustellen.  
 
 1.  Wählen Sie in der Configuration Manager-Konsole **Verwaltung** aus.  
@@ -238,9 +237,3 @@ Bei der Migration in System Center Configuration Manager können Sie nach der er
 8.  Wählen Sie im Dialogfeld **Migrationsdaten bereinigen** in der Dropdownliste **Quellhierarchie** den Standortcode und den Standortserver des Standorts der obersten Ebene der Quellhierarchie und anschließend **OK** aus.  
 
 9. Wählen Sie **Ja** aus, um den Migrationsprozess für die Quellhierarchie fertigzustellen.  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

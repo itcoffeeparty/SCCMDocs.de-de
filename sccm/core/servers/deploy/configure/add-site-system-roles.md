@@ -6,23 +6,20 @@ ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: b90de2d9-494e-43ad-b269-c8ed589f37d3
-caps.latest.revision: 12
-caps.handback.revision: 0
+caps.latest.revision: "12"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7fa191ce37a68f604673fe9b9724f76c3ff10032
 ms.openlocfilehash: 1ad4abf1f06ed24bd1d505648280b5e5d80220c7
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="add-site-system-roles-for-system-center-configuration-manager"></a>Hinzufügen von Standortsystemrollen für System Center Configuration Manager
 
@@ -52,4 +49,3 @@ Von Configuration Manager werden keine Standortsystemrollen für mehrere Standor
 -   [Konfigurationsoptionen für Standortsystemrollen für System Center Configuration Manager](../../../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md)  
 
      Einige Standortsystemrollen unterstützen Konfigurationen, für die mehr Details erforderlich sind als innerhalb der Benutzeroberfläche erklärt werden können. Diese Einzelheiten werden in diesem Thema ausgeführt.  
-

@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 94e42cbe-9df8-4228-a04e-0ad7626180ca
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: e6a7a0b853be930b558cdd739b90285ebb8538e7
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="administrator-checklist-for-power-management-in-system-center-configuration-manager"></a>Administratorcheckliste für die Energieverwaltung in System Center Configuration Manager
 
@@ -79,10 +78,4 @@ Diese Administratorcheckliste enthält die empfohlenen Schritte für die Verwend
 |Aufgabe|Details|  
 |----------|-------------|  
 |Wenn es Computer in der Hierarchie gibt, für die weder der Standby- noch der Ruhezustand aktiviert wurde, führen Sie den Bericht mit dem Namen **Störungsbericht** aus, um mögliche Ursachen anzuzeigen.|Im **Störungsbericht** wird eine Liste der häufigsten Ursachen angezeigt, deretwegen für Computer weder der Standbymodus noch der Ruhezustand aktiviert werden konnte, sowie die Anzahl von Computern, die für einen bestimmten Zeitraum von jeder Ursache betroffen waren. Weitere Informationen finden Sie unter [How to monitor and plan for power management (Überwachen und Planen der Energieverwaltung in Configuration Manager)](monitor-and-plan-for-power-management.md).|  
-|Werden mehrere Energiesparpläne auf einen Computer angewendet, so hat der am wenigsten einschränkende Energiesparplan Priorität. Führen Sie den Bericht **Computer mit mehreren Energiesparplänen** aus, um Computer anzuzeigen, auf die mehrere Energiesparpläne angewendet werden.|Siehe **Computers with Multiple Power Plans (Computer mit mehreren Energiesparplänen) ** im Thema [How to Monitor and Plan for Power Management (Überwachen und Planen der Energieverwaltung)](monitor-and-plan-for-power-management.md).|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+|Werden mehrere Energiesparpläne auf einen Computer angewendet, so hat der am wenigsten einschränkende Energiesparplan Priorität. Führen Sie den Bericht **Computer mit mehreren Energiesparplänen** aus, um Computer anzuzeigen, auf die mehrere Energiesparpläne angewendet werden.|Siehe **Computers with Multiple Power Plans (Computer mit mehreren Energiesparplänen)**  im Thema [How to Monitor and Plan for Power Management (Überwachen und Planen der Energieverwaltung)](monitor-and-plan-for-power-management.md).|  

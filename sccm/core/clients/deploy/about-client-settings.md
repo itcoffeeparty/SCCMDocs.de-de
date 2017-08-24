@@ -6,22 +6,20 @@ ms.date: 08/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
-caps.latest.revision: 15
-caps.handback.revision: 0
+caps.latest.revision: "15"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
 ms.openlocfilehash: a8233c361e1a78b14a02f328da445814624e38d8
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>Informationen zu Clienteinstellungen in System Center Configuration Manager
 
@@ -669,4 +667,3 @@ Aktiviert den Peercache für Configuration Manager-Clients. Geben Sie dann die P
 -   **Benutzer das Festlegen primärer Geräte gestatten**  
 
      Geben Sie an, ob es Benutzern gestattet werden soll, im Anwendungskatalog auf der Registerkarte **Eigene Geräte** ihre eigenen primären Geräte zu identifizieren.  
-

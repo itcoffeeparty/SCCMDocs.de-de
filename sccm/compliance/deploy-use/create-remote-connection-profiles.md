@@ -6,23 +6,21 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8c6eabc4-5dda-4682-b03e-3a450e6ef65a
-caps.latest.revision: 8
-caps.handback.revision: 0
+caps.latest.revision: "8"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: 72fc94c6449649656a7e8b81659c2b5cc2551107
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="remote-connection-profiles-in-system-center-configuration-manager"></a>Remoteverbindungsprofile in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -183,9 +181,3 @@ Bereitstellen eines Remoteverbindungsprofils
 >  Sie müssen ein Platzhalterzeichen (%) verwenden, wenn Sie in Berichten zu Kompatibilitätseinstellungen die Parameter **Gerätefilter** und **Benutzerfilter** eingestellt haben.  
 
  Weitere Informationen zum Konfigurieren der Berichterstellung in Configuration Manager finden Sie unter [Berichterstellung in System Center Configuration Manager](/sccm/core/servers/manage/reporting).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

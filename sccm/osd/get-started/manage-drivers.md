@@ -6,23 +6,20 @@ ms.date: 01/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 84802d55-112e-4f7f-9a48-74a80d91a0f4
-caps.latest.revision: 10
-caps.handback.revision: 0
+caps.latest.revision: "10"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: 87ab9925717a307cbda3cea1f2e470ae012fa067
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-drivers-in-system-center-configuration-manager"></a>Verwalten von Treibern in System Center Configuration Manager
 
@@ -277,4 +274,3 @@ System Center Configuration Manager stellt einen Treiberkatalog bereit, den Sie 
 
 ##  <a name="BKMK_DriverReports"></a> Berichte zur Treiberverwaltung  
  Sie können mehrere Berichte in der Berichtkategorie **Treiberverwaltung** verwenden, um allgemeine Informationen zu den Gerätetreibern im Treiberkatalog zu erhalten. Weitere Informationen zu Berichten finden Sie unter [Berichterstellung](../../core/servers/manage/reporting.md).
-

@@ -6,23 +6,20 @@ ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b66f3c4-e3bb-4f6a-abd5-55be649ff90d
-caps.latest.revision: 17
-caps.handback.revision: 0
+caps.latest.revision: "17"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4b9261db93c9bf72c492e3c9be5b30f81835134a
 ms.openlocfilehash: c9961c2e9866199571a1b39a7b185cb6bb96f998
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-system-center-configuration-manager-client"></a>Erstellen von Konfigurationselementen für Android- und Samsung KNOX-Geräte, die ohne den System Center Configuration Manager-Client verwaltet werden
 
@@ -185,9 +182,9 @@ Android for Work hat zwei Einstellungsgruppen für Konfigurationselemente:
 - **Kennwort**. Identisch mit den Einstellungen für „klassisches“ Android.
 
 - **Work-Profil**. Ermöglicht die folgenden Android for Work-Einstellungen:
-  -    **Ermöglicht die Datenfreigabe zwischen Arbeits- und persönlichen Profilen**
+  - **Ermöglicht die Datenfreigabe zwischen Arbeits- und persönlichen Profilen**
   - **Arbeitsprofilbenachrichtigungen bei gesperrtem Gerät ausblenden** (Android 6.0 und höher)
-  -    **Standard-App-Berechtigungsrichtlinie einrichten** (Android 6.0 und höher)
+  - **Standard-App-Berechtigungsrichtlinie einrichten** (Android 6.0 und höher)
 
 Um ein Konfigurationselement im Android-Arbeitsprofil zu erstellen, wählen Sie **Android for Work** auf der Seite **Allgemein** aus, und konfigurieren Sie die Einstellungen für jede der Einstellungsgruppen, indem Sie das Konfigurationselement in die Baseline einfügen und wie gewohnt bereitstellen. Diese Einstellungen gelten nur für Geräte, die als „Android for Work“ registriert sind, und nicht für die Geräte, die nur als „Android“ registriert wurden.
 
@@ -217,4 +214,3 @@ Weitere Informationen zur Verwendung von Berichten finden Sie unter [Berichterst
 
 ## <a name="see-also"></a>Weitere Informationen:  
 [Konfigurationselemente für Geräte, die ohne den System Center Configuration Manager-Client verwaltet werden](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)
-

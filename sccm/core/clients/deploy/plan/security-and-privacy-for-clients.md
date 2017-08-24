@@ -6,23 +6,20 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
-caps.latest.revision: 10
-caps.handback.revision: 0
+caps.latest.revision: "10"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
-ms.openlocfilehash: 192c3685092df6310b7129877c7fb5dfd9ef7ad5
-ms.contentlocale: de-de
-ms.lasthandoff: 03/21/2017
-
-
+ms.openlocfilehash: 1d871b0e1a2897c236d17211a23c9c7d93e42313
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="security-and-privacy-for-clients-in-system-center-configuration-manager"></a>Sicherheit und Datenschutz für Clients in System Center Configuration Manager
 
@@ -307,4 +304,3 @@ Dieser Artikel enthält Informationen zur Sicherheit und zum Datenschutz von Cli
  Die Informationen zu den mobilen Geräten werden nicht an Microsoft gesendet. Anschließend werden die Informationen zu den mobilen Geräten in der Configuration Manager-Datenbank gespeichert. Die Informationen bleiben bis zum Löschen durch den Standortwartungstask **Veraltete Ermittlungsdaten löschen** in der Datenbank gespeichert. Der Löschvorgang wird alle 90 Tage ausgeführt. Sie können das Löschintervall konfigurieren.  
 
  Berücksichtigen Sie beim Installieren und Konfigurieren des Exchange Server-Connectors Ihre Datenschutzanforderungen.  
-

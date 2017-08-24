@@ -6,23 +6,20 @@ ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e8159bd9-5c2b-4d25-82f9-78fcfd732ba9
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
-ms.contentlocale: de-de
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 17168e26f13340847928f6e3623115cd4b55997b
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-use-asset-intelligence-in-system-center-configuration-manager"></a>So verwenden Sie Asset Intelligence in System Center Configuration Manager
 
@@ -338,4 +335,3 @@ Dieses Thema enthält Informationen zum Verwalten typischer Asset Intelligence-T
     -   **Lokal bearbeiteten Kataloginformationswert mit dem heruntergeladenen System Center Online-Wert überschreiben**: Löst den Konflikt zwischen Softwaredetails durch Überschreiben der vorhandenen Softwarekategorisierungsinformationen im Asset Intelligence-Katalog mit den neuen Informationen von System Center Online. Wenn Sie diese Einstellung auswählen, ändert sich der Softwaretitelzustand von **Aktualisierbar** in **Überprüft**.  
 
      Klicken Sie auf **OK** , um die Konfliktauflösung zu speichern.  
-

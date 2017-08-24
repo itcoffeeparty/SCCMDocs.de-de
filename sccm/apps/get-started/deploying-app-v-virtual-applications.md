@@ -6,23 +6,20 @@ ms.date: 02/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
-caps.latest.revision: 11
-caps.handback.revision: 0
+caps.latest.revision: "11"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c73373e6f2f28f8ddc197695e4b4e3488c9c1f5b
 ms.openlocfilehash: 0808edbb9a0433dd658d37e8d005c89a4778735c
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="deploy-app-v-virtual-applications-with-system-center-configuration-manager"></a>Bereitstellen virtueller App-V-Anwendungen mit System Center Configuration Manager
 
@@ -214,4 +211,3 @@ Mithilfe der folgenden Berichte können Sie App-V in der Configuration Manager-U
 Von Configuration Manager werden Informationen zu Bereitstellungen virtueller Anwendungen in Protokolldateien aufgezeichnet. Informationen über die Protokolldateien, die von virtuellen Anwendungen und von der Configuration Manager-Anwendungsverwaltung verwendet werden, finden Sie unter [Protokolldateien in System Center Configuration Manager](../../core/plan-design/hierarchy/log-files.md).  
 
 Unter Windows Vista, Windows 7 und Windows 8 befinden sich die Protokolle für den App-V-Client unter C:\ProgramData\Microsoft\Application Virtualization Client.  
-

@@ -6,21 +6,19 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 52ee82b2-0b91-4829-89df-80a6abc0e63a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 12ee719a6a8b072fab27d083aeb2b8439484058d
-ms.contentlocale: de-de
-ms.lasthandoff: 12/16/2016
-
+ms.openlocfilehash: 20f595a5b0634a627dff9ba6feeb848754615f2c
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-how-to-wake-up-clients-in-system-center-configuration-manager"></a>Planen des Aufweckens von Clients in System Center Configuration Manager
 
@@ -98,4 +96,3 @@ Sie müssen außerdem entschieden, welche subnetzgesteuerten Broadcastpakete ode
 
 > [!WARNING]  
 >  Subnetzgesteuerte Broadcasts sind mit Sicherheitsrisiken verbunden: Von einem Angreifer könnten kontinuierlich ICMP-Echoanforderungen (Internet Control Message Protocol) von einer gefälschten Quelladresse an die gesteuerte Broadcastadresse gesendet werden. Dies würde dazu führen, dass von allen Hosts Antworten an diese Quelladresse gesendet werden. Diese Art von DoS-Angriff wird allgemein als „Smurf Attack“ bezeichnet und üblicherweise dadurch verhindert, dass keine subnetzgesteuerten Broadcasts zugelassen werden.
-

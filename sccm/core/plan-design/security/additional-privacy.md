@@ -6,13 +6,12 @@ ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
@@ -35,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 47d473b3884c3cd2ff7516629a7c32d4e52ac39b
 ms.openlocfilehash: ef7b3656f9b4a31e07227aa4e864448d0dd1fcdc
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="additional-information-about-privacy-for-system-center-configuration-manager"></a>Weitere Informationen zum Datenschutz für System Center Configuration Manager
 
@@ -112,9 +112,3 @@ Für die gesamte Microsoft Intune-Kommunikation wird HTTPS verwendet. Zum Konfig
 Zur Verwaltung von Geräten, die mit Microsoft Intune verbunden sind, werden bestimmte Informationen mit Microsoft Intune ausgetauscht. Zu diesen Informationen gehören der Benutzerprinzipalname (UPN) aller Benutzer, die dem Dienst zugewiesen wurden, sowie Inventarinformationen der Geräte, die von Microsoft Intune verwaltet werden. Metadaten (z.B. Anwendungsname, Herausgeber und Version) für Inhalte, die Manage.Microsoft.com-Verteilungspunkten zugewiesen wurden, werden an Microsoft Intune gesendet. Die einem Manage.Microsoft.com-Verteilungspunkt zugewiesenen eigentlichen Binärinhalte werden vor dem Hochladen an Microsoft Intune verschlüsselt.
 
 Diese Option wird standardmäßig nicht konfiguriert. Administratoren steuern, welche Inhalte an Manage.microsoft.com-Verteilungspunkte übertragen und welche Benutzer dem Dienst zugewiesen werden. Das Feature kann jederzeit entfernt werden.
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

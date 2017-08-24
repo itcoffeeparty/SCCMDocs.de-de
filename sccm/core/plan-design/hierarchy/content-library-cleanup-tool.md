@@ -6,21 +6,19 @@ ms.date: 4/7/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 226cbbb2-9afa-4e2e-a472-be989c0f0e11
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
 ms.openlocfilehash: 76e6772bdd5cbd32d525e728f6ebc988b045da78
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="the-content-library-cleanup-tool-for-system-center-configuration-manager"></a>Das Inhaltsbibliothek-Bereinigungstool in System Center Configuration Manager
 
@@ -49,7 +47,7 @@ Das Tool kann in den folgenden zwei Modi ausgeführt werden. Wir empfehlen Ihnen
     Wenn Sie das Tool mit dem **/delete**-Schalter ausführen, wird das Tool im Löschmodus ausgeführt.
 
      - Wenn es in diesem Modus ausgeführt wird, können verwaiste Inhalte, die auf dem angegebenen Verteilungspunkt gefunden werden, aus der Inhaltsbibliothek des Verteilungspunktes gelöscht werden.
-     -     Vor dem Löschen jeder Datei müssen Sie bestätigen, dass die Datei gelöscht werden soll.  Sie können **Y** für „Ja“, **N** für „Nein“, oder **Ja, alle** auswählen, um weitere Aufforderungen zu überspringen und alle verwaisten Inhalte zu löschen.  
+     -  Vor dem Löschen jeder Datei müssen Sie bestätigen, dass die Datei gelöscht werden soll.  Sie können **Y** für „Ja“, **N** für „Nein“, oder **Ja, alle** auswählen, um weitere Aufforderungen zu überspringen und alle verwaisten Inhalte zu löschen.  
      </br>
 
 Wenn das Tool in einem der beiden Modi ausgeführt wird, erstellt es automatisch ein Protokoll mit einem Namen, in dem der vom Tool ausgeführte Modus, der Name des Verteilungspunktes sowie Datum und Uhrzeit des Vorgangs enthalten sind. Die Protokolldatei wird automatisch geöffnet, wenn das Tool fertig ist.
@@ -78,4 +76,3 @@ Die folgenden Befehlszeilen-Switches können in jeglicher Reihenfolge verwendet 
 | **/ps &lt;primary site FQDN>**       | **Optional** wenn Inhalt von einem Verteilungspunkt an einem primären Standort bereinigt wird.</br>**Erforderlich** wenn Inhalt von einem Verteilungspunkt an einem sekundären Standort bereinigt wird. </br></br>Das Tool stellt eine Verbindung mit dem übergeordneten primären Standort her, um Abfragen von SMS_Provider auszuführen. Mit diesen Abfragen kann das Tool bestimmen, welcher Inhalt sich auf dem Verteilungspunkt befinden sollte; so kann es den Inhalt identifizieren, der verwaist ist und entfernt werden kann. Die Verbindung zum übergeordneten primären Standort muss für Verteilungspunkte an einem sekundären Standort hergestellt werden, da die erforderlichen Angaben nicht direkt am sekundären Standort zur Verfügung stehen.</br></br> Geben Sie den FQDN des primären Standorts an, zu dem der Verteilungspunkt gehört, oder geben Sie den übergeordneten primären Standort an, wenn sich der Verteilungspunkt an einem sekundären Standort befindet. </br></br> Beispiel: ***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
 | **/sc &lt;primary site code>**  | **Optional** wenn Inhalt von einem Verteilungspunkt an einem primären Standort bereinigt wird.</br>**Erforderlich** wenn Inhalt von einem Verteilungspunkt an einem sekundären Standort bereinigt wird. </br></br> Geben Sie den Standordcode des primären Standorts an, zu dem der Verteilungspunkt gehört, oder geben Sie den übergeordneten primären Standort an, wenn sich der Verteilungspunkt an einem sekundären Standort befindet.</br></br> Beispiel: ***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
 | **/Protokoll <log file directory>**       |**Optional** </br> Geben Sie den Speicherort an, in den das Tool die Protokolldatei schreibt. Dies kann auf einem lokalen Laufwerk oder auf einer Netzwerkfreigabe sein.</br></br> Wenn dieser Schalter nicht verwendet wird, wird die Protokolldatei im temporären Ordner des Benutzers auf dem Computer gespeichert, in dem das Tool ausgeführt wird.</br></br> Beispiel für ein lokales Laufwerk: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>Beispiel für ein geteiltes Netzwerk: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;share>\&lt;folder>***|
-

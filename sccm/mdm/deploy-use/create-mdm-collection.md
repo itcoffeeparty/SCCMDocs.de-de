@@ -6,22 +6,20 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d1b4337f-85e8-45e6-8bbe-9f18b49041c7
-caps.latest.revision: 18
-caps.handback.revision: 0
+caps.latest.revision: "18"
+caps.handback.revision: "0"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
 ms.openlocfilehash: fabbcfd2d5656d4fa8cb87feffe87e17998df145
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-an-mdm-collection-with-system-center-configuration-manager-and-microsoft-intune"></a>Erstellen einer MDM-Sammlung mit System Center Configuration Manager und Microsoft Intune
 
@@ -38,4 +36,3 @@ Sie können zu Testzwecken eine **Direktregel** einrichten und bestimmte Benutze
 
 > [!div class="button"]
 [Nächster Schritt >](confirm-dns.md)
-

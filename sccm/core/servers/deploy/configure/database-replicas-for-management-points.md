@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: 130c053c9f2a1817dd85b1f3c01285aab19d59cb
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="database-replicas-for-management-points-for-system-center-configuration-manager"></a>Datenbankreplikate für Verwaltungspunkte für System Center Configuration Manager
 
@@ -32,7 +31,7 @@ System Center Configuration Manager-Standorte können ein Datenbankreplikat zum 
 -   Dies hilft dabei, die CPU-Verarbeitungsanforderungen des Standortdatenbankservers zu reduzieren, indem häufige clientbezogene Verarbeitungsaufgaben ausgelagert werden.  Ein Beispiel einer häufigen Verarbeitungsaufgabe für Clients sind Standorte, an denen sehr viele Clients eine Clientrichtlinie häufig anfordern.  
 
 
-##  <a name="a-namebkmkpreparea-prepare-to-use-database-replicas"></a><a name="bkmk_Prepare"></a> Vorbereiten der Verwendung von Datenbankreplikaten  
+##  <a name="bkmk_Prepare"></a> Vorbereiten der Verwendung von Datenbankreplikaten  
 **Informationen zu Datenbankreplikaten für Verwaltungspunkte:**  
 
 -   Replikate sind eine Teilkopie der Standortdatenbank, die in eine separate SQL Server-Instanz repliziert wird:  
@@ -87,7 +86,7 @@ System Center Configuration Manager-Standorte können ein Datenbankreplikat zum 
 
 -   **Mehrere Replikate auf einem einzelnen Computer mit SQL Server:** Wenn Sie einen Datenbankreplikatserver zum Hosten mehrerer Datenbankreplikate für Verwaltungspunkte konfigurieren (wobei sich jedes Replikat in einer eigenen Instanz befinden muss), müssen Sie (in Schritt 4 des folgenden Abschnitts) ein geändertes Konfigurationsskript verwenden. Dessen Zweck ist das Verhindern des Überschreibens des von zuvor konfigurierten Datenbankreplikaten auf diesem Server verwendeten selbstsignierten Zertifikats.  
 
-##  <a name="a-namebkmkdbreplicaconfiga-configure-database-replicas"></a><a name="BKMK_DBReplica_Config"></a> Konfigurieren von Datenbankreplikaten  
+##  <a name="BKMK_DBReplica_Config"></a> Konfigurieren von Datenbankreplikaten  
 Zum Konfigurieren eines Datenbankreplikats müssen die folgenden Schritte ausgeführt werden:  
 
 -   [Schritt 1: Konfigurieren des Standortdatenbankservers für die Veröffentlichung des Datenbankreplikats](#BKMK_DBReplica_ConfigSiteDB)  
@@ -100,7 +99,7 @@ Zum Konfigurieren eines Datenbankreplikats müssen die folgenden Schritte ausgef
 
 -   [Schritt 5: Konfigurieren des SQL Server Service Broker für den Datenbankreplikatserver](#BKMK_DBreplica_SSB)  
 
-###  <a name="a-namebkmkdbreplicaconfigsitedba-step-1---configure-the-site-database-server-to-publish-the-database-replica"></a><a name="BKMK_DBReplica_ConfigSiteDB"></a> Schritt 1: Konfigurieren des Standortdatenbankservers für die Veröffentlichung des Datenbankreplikats  
+###  <a name="BKMK_DBReplica_ConfigSiteDB"></a> Schritt 1: Konfigurieren des Standortdatenbankservers für die Veröffentlichung des Datenbankreplikats  
  Verwenden Sie das folgende Verfahren als Beispiel für die Konfiguration des Standortdatenbankservers auf einem Windows Server 2008 R2-Computer für die Veröffentlichung des Datenbankreplikats. Wenn Sie eine andere Betriebssystemversion haben, lesen Sie deren Dokumentation und passen die Schritte in diesem Verfahren entsprechend an.  
 
 ##### <a name="to-configure-the-site-database-server"></a>So konfigurieren Sie den Standortdatenbankserver  
@@ -132,7 +131,7 @@ Zum Konfigurieren eines Datenbankreplikats müssen die folgenden Schritte ausgef
 
 Nach Abschluss der gespeicherten Prozedur ist der Standortdatenbankserver für die Veröffentlichung des Datenbankreplikats konfiguriert.  
 
-###  <a name="a-namebkmkdbreplicaconfigsrva-step-2---configuring-the-database-replica-server"></a><a name="BKMK_DBReplica_ConfigSrv"></a> Schritt 2: Konfigurieren des Datenbankreplikatservers  
+###  <a name="BKMK_DBReplica_ConfigSrv"></a> Schritt 2: Konfigurieren des Datenbankreplikatservers  
 Der Datenbankreplikatserver ist ein Computer, auf dem SQL Server ausgeführt und ein Replikat der Standortdatenbank zur Verwendung durch die Verwaltungspunkte gehostet wird. Die Datenbankkopie des Datenbankreplikatservers wird nach einem festen Zeitplan mit dem Datenbankreplikat, das auf dem Datenbankserver veröffentlicht ist, synchronisiert.  
 
 Vom Datenbankreplikatserver müssen die gleichen Anforderungen erfüllt werden wie vom Standortdatenbankserver. Allerdings kann vom Datenbankreplikatserver eine Edition oder Version von SQL Server ausgeführt werden, die von der des Standortdatenbankservers abweicht. Weitere Informationen über die unterstützten SQL Server-Versionen finden Sie unter [Unterstützung für SQL Server-Versionen für System Center Configuration Manager](../../../../core/plan-design/configs/support-for-sql-server-versions.md).  
@@ -213,7 +212,7 @@ Verwenden Sie das folgende Verfahren als Beispiel für die Konfiguration eines D
 
  Das Datenbankreplikat kann nun von einem Verwaltungspunkt verwendet werden.  
 
-###  <a name="a-namebkmkdbreplicaconfigmpa-step-3---configure-management-points-to-use-the-database-replica"></a><a name="BKMK_DBReplica_ConfigMP"></a> Schritt 3: Konfigurieren von Verwaltungspunkten für die Verwendung des Datenbankreplikats  
+###  <a name="BKMK_DBReplica_ConfigMP"></a> Schritt 3: Konfigurieren von Verwaltungspunkten für die Verwendung des Datenbankreplikats  
  Beim Installieren der Verwaltungspunktrolle können Sie einen Verwaltungspunkt an einem primären Standort für die Verwendung eines Datenbankreplikats konfigurieren. Sie können auch einen vorhandenen Verwaltungspunkt für die Verwendung eines Datenbankreplikats neu konfigurieren.  
 
  Verwenden Sie die folgenden Informationen, um einen Verwaltungspunkt für die Verwendung eines Datenbankreplikats zu konfigurieren:  
@@ -232,7 +231,7 @@ Zusätzlich zum Konfigurieren des Verwaltungspunkts für die Verwendung des Date
 
 3.  Legen Sie für die **Windows-Authentifizierung** die Einstellung **Aktiviert**fest, und schließen Sie dann den **Internetinformationsdienste-Manager**.  
 
-###  <a name="a-namebkmkdbreplicacerta-step-4--configure-a-self-signed-certificate-for-the-database-replica-server"></a><a name="BKMK_DBReplica_Cert"></a> Schritt 4: Konfigurieren eines selbstsignierten Zertifikats für den Datenbankreplikatserver  
+###  <a name="BKMK_DBReplica_Cert"></a> Schritt 4: Konfigurieren eines selbstsignierten Zertifikats für den Datenbankreplikatserver  
  Sie müssen auf dem Datenbankreplikatserver ein selbstsigniertes Zertifikat erstellen und für jeden Verwaltungspunkt, von dem dieser Datenbankreplikatserver verwendet werden soll, verfügbar machen.  
 
  Das Zertifikat ist für einen Verwaltungspunkt, der auf dem Datenbankreplikatserver installiert ist, automatisch verfügbar. Sie müssen das Zertifikat jedoch exportieren und dann dem Zertifikatsspeicher Vertrauenswürdige Personen des betreffenden Remoteverwaltungspunkts hinzufügen, um es auch für Remoteverwaltungspunkte verfügbar zu machen.  
@@ -399,13 +398,13 @@ Zusätzlich zum Konfigurieren des Verwaltungspunkts für die Verwendung des Date
 
     7.  Klicken Sie mit der rechten Maustaste auf das Zertifikat mit dem Anzeigenamen **ConfigMgr SQL Server Identification Certificate**, klicken Sie auf **Alle Tasks**, und wählen Sie dann **Export**aus.  
 
-    8.  Schließen Sie den ** ** Assistenten zum Exportieren von Zertifikaten mit den Standardoptionen ab, und speichern Sie das Zertifikat mit der Dateinamenerweiterung **.cer** .  
+    8.  Schließen Sie den ****  Assistenten zum Exportieren von Zertifikaten mit den Standardoptionen ab, und speichern Sie das Zertifikat mit der Dateinamenerweiterung **.cer** .  
 
 2.  Führen Sie auf dem Verwaltungspunktcomputer die folgenden Schritte aus, um das selbstsignierte Zertifikat für den Datenbankreplikatserver zum Zertifikatsspeicher Vertrauenswürdige Personen des Verwaltungspunkts hinzuzufügen:  
 
     1.  Wiederholen Sie die Schritte 1.a bis 1.e um das MMC-Snap-In **Zertifikat** auf dem Verwaltungspunktcomputer zu konfigurieren.  
 
-    2.  Erweitern Sie in der Konsole den Bereich **Zertifikate (Lokaler Computer)**, dann den Bereich **Vertrauenswürdige Personen**, klicken Sie mit der rechten Maustaste auf **Zertifikate**, wählen Sie **Alle Tasks**aus, und wählen Sie dann **Importieren** aus, um den ** **Zertifikatimport-Assistenten zu starten.  
+    2.  Erweitern Sie in der Konsole den Bereich **Zertifikate (Lokaler Computer)**, dann den Bereich **Vertrauenswürdige Personen**, klicken Sie mit der rechten Maustaste auf **Zertifikate**, wählen Sie **Alle Tasks**aus, und wählen Sie dann **Importieren** aus, um den **** Zertifikatimport-Assistenten zu starten.  
 
     3.  Wählen Sie auf der Seite **Importdatei** das in Schritt 1.h gespeicherte Zertifikat aus, und klicken Sie dann auf **Weiter**.  
 
@@ -413,7 +412,7 @@ Zusätzlich zum Konfigurieren des Verwaltungspunkts für die Verwendung des Date
 
     5.  Klicken Sie auf **Fertig stellen** , um den Assistenten zu schließen und die Zertifikatkonfiguration für den Verwaltungspunkt abzuschließen.  
 
-###  <a name="a-namebkmkdbreplicassba-step-5---configure-the-sql-server-service-broker-for-the-database-replica-server"></a><a name="BKMK_DBreplica_SSB"></a> Schritt 5: Konfigurieren des SQL Server Service Broker für den Datenbankreplikatserver  
+###  <a name="BKMK_DBreplica_SSB"></a> Schritt 5: Konfigurieren des SQL Server Service Broker für den Datenbankreplikatserver  
 Sie müssen die Kommunikation zwischen dem Standortdatenbankserver und dem Datenbankreplikatserver für SQL Server Service Broker konfigurieren, um die Clientbenachrichtigung mit einem Datenbankreplikat für einen Verwaltungspunkt zu unterstützen. Dafür müssen Sie beide Datenbanken mit Informationen zur jeweils anderen Datenbank konfigurieren und für eine sichere Kommunikation zwischen den beiden Datenbanken Zertifikate austauschen.  
 
 > [!NOTE]  
@@ -453,20 +452,20 @@ Sie müssen die Kommunikation zwischen dem Standortdatenbankserver und dem Daten
 
  Einige Minuten nachdem Sie die Konfiguration der Standortdatenbank und der Datenbank der Datenbankreplikation abgeschlossen haben, wird vom Warnungs-Manager am primären Standort die Service Broker-Konversation zur Clientbenachrichtigung von der primären Standortdatenbank an das Datenbankreplikat eingerichtet.  
 
-###  <a name="a-namebkmksupscripta-supplemental-script-for-additional-database-replicas-on-a-single-sql-server"></a><a name="bkmk_supscript"></a> Zusätzliches Skript für zusätzliche Datenbankreplikate auf einem einzelnen Computer mit SQL Server  
+###  <a name="bkmk_supscript"></a> Zusätzliches Skript für zusätzliche Datenbankreplikate auf einem einzelnen Computer mit SQL Server  
  Wenn Sie das Skript in Schritt 4 zum Konfigurieren eines selbstsignierten Zertifikats für den Datenbankreplikatserver auf einem Computer mit SQL Server konfigurieren, der bereits über ein Datenbankreplikat verfügt, das Sie weiterhin nutzen möchten, müssen Sie eine geänderte Version des Originalskripts verwenden. Die folgenden Änderungen bewirken, dass das Skript ein vorhandenes Zertifikat nicht vom Server löscht und nachfolgende Zertifikate mit eindeutigen Anzeigenamen erstellt werden.  Bearbeiten Sie das Originalskript wie folgt:  
 
 -   Es muss jede Zeile zwischen den Skripteinträgen **# Delete existing cert if one exists** und **# Create the new cert**auskommentiert werden (um die Ausführung zu verhindern). Fügen Sie hierzu jeder betreffenden Zeile  **#**  als erstes Zeichen hinzu.  
 
 -   Für jedes nachfolgende Datenbankreplikat, das Sie mithilfe dieses Skripts konfigurieren, müssen Sie den Anzeigenamen des Zertifikats aktualisieren.  Bearbeiten Sie hierzu die Zeile **$enrollment.CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"** , indem Sie **ConfigMgr SQL Server Identification Certificate** durch einen Namen wie  **ConfigMgr SQL Server Identification Certificate1**ersetzen.  
 
-##  <a name="a-namebkmkdbreplicaopsa-manage-database-replica-configurations"></a><a name="BKMK_DBReplicaOps"></a> Verwalten von Konfigurationen von Datenbankreplikaten  
+##  <a name="BKMK_DBReplicaOps"></a> Verwalten von Konfigurationen von Datenbankreplikaten  
  Wenn Sie an einem Standort ein Datenbankreplikat verwenden, finden Sie in den folgenden Abschnitten Informationen zum Deinstallieren eines Datenbankreplikats sowie eines Standorts, der ein Datenbankreplikat verwendet. Außerdem erhalten Sie Informationen zum Verschieben der Standortdatenbank auf eine neue Installation von SQL Server. Wenn Sie anhand der Informationen in den folgenden Abschnitten Veröffentlichungen löschen, richten Sie sich nach dem Leitfaden zum Löschen der transaktionalen Replikation für die Version von SQL Server, die Sie für das Datenbankreplikat verwenden. Wenn Sie z. B. SQL Server 2008 R2 verwenden, finden Sie weitere Informationen unter [Vorgehensweise: Löschen einer Veröffentlichung (Replikationsprogrammierung mit Transact-SQL)](http://go.microsoft.com/fwlink/p/?LinkId=273934).  
 
 > [!NOTE]  
 >  Nachdem Sie eine Standortdatenbank wiederhergestellt haben, die für Datenbankreplikate konfiguriert war, müssen Sie vor der Verwendung der Datenbankreplikate jedes Replikat neu konfigurieren, indem Sie die Veröffentlichungen und die Abonnements neu erstellen.  
 
-###  <a name="a-namebkmkuninstalldbreplicaa-uninstall-a-database-replica"></a><a name="BKMK_UninstallDbReplica"></a> Deinstallieren eines Datenbankreplikats  
+###  <a name="BKMK_UninstallDbReplica"></a> Deinstallieren eines Datenbankreplikats  
  Wenn Sie für einen Verwaltungspunkt ein Datenbankreplikat verwenden, müssen Sie das Datenbankreplikat möglicherweise für einen gewissen Zeitraum deinstallieren und es dann zur weiteren Verwendung erneut konfigurieren. Beispiel: Sie müssen Datenbankreplikate entfernen, bevor Sie ein Upgrade eines Configuration Manager-Standorts auf ein neues Service Pack vornehmen. Nachdem Sie das Standortupgrade abgeschlossen haben, können Sie das Datenbankreplikat für die Verwendung wiederherstellen.  
 
  Gehen Sie folgendermaßen vor, um ein Datenbankreplikat zu deinstallieren.  
@@ -489,7 +488,7 @@ Sie müssen die Kommunikation zwischen dem Standortdatenbankserver und dem Daten
 
 5.  Nachdem Sie Veröffentlichung, Abonnement und Replikatdatenbank gelöscht und das Veröffentlichen auf dem Standortdatenbankserver deaktiviert haben, wird das Datenbankreplikat deinstalliert.  
 
-###  <a name="a-namebkmkdbreplicaopsuninstalla-uninstall-a-site-server-that-publishes-a-database-replica"></a><a name="BKMK_DBReplicaOps_Uninstall"></a> Deinstallieren eines Standortservers, der ein Datenbankreplikat veröffentlicht  
+###  <a name="BKMK_DBReplicaOps_Uninstall"></a> Deinstallieren eines Standortservers, der ein Datenbankreplikat veröffentlicht  
  Bevor Sie einen Standort deinstallieren, von dem ein Datenbankreplikat verwendet wird, führen Sie die folgenden Schritte aus, um die Veröffentlichung und vorhandene Abonnements zu bereinigen.  
 
 1.  Verwenden Sie **SQL Server Management Studio** , um die Veröffentlichung des Datenbankreplikats aus der Datenbank des Standortservers zu löschen.  
@@ -498,7 +497,7 @@ Sie müssen die Kommunikation zwischen dem Standortdatenbankserver und dem Daten
 
 3.  Deinstallieren Sie den Standort.  
 
-###  <a name="a-namebkmkdbreplicaopsmovea-move-a-site-server-database-that-publishes-a-database-replica"></a><a name="BKMK_DBReplicaOps_Move"></a> Verschieben eines Standortservers, der ein Datenbankreplikat veröffentlicht  
+###  <a name="BKMK_DBReplicaOps_Move"></a> Verschieben eines Standortservers, der ein Datenbankreplikat veröffentlicht  
  Gehen Sie wie folgt vor, um die Standortdatenbank auf einen neuen Computer zu verschieben:  
 
 1.  Verwenden Sie **SQL Server Management Studio** , um die Veröffentlichung des Datenbankreplikats aus der Datenbank des Standortservers zu löschen.  
@@ -510,9 +509,3 @@ Sie müssen die Kommunikation zwischen dem Standortdatenbankserver und dem Daten
 4.  Erstellen Sie die Veröffentlichung des Datenbankreplikats auf dem Standortdatenbankserver erneut. Weitere Informationen finden Sie unter [Schritt 1: Konfigurieren des Standortdatenbankservers für die Veröffentlichung des Datenbankreplikats](#BKMK_DBReplica_ConfigSiteDB) in diesem Thema.  
 
 5.  Erstellen Sie die Abonnements des Datenbankreplikats auf jedem Datenbankreplikatserver erneut. Weitere Informationen finden Sie unter [Schritt 2: Konfigurieren des Datenbankreplikatservers](#BKMK_DBReplica_ConfigSrv) in diesem Thema.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

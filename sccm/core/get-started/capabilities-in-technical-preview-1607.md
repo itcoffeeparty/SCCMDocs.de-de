@@ -4,23 +4,21 @@ description: "Erfahren Sie mehr zu den Features, die in System Center Configurat
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2bb69547-3370-4860-96b0-7fb600c56482
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
 ms.openlocfilehash: 4717e0f8eef01501fb5b5790e855c476c1ca4590
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1607-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1607 für System Center Configuration Manager
 
@@ -78,4 +76,3 @@ Weitere Informationen zu diesem Problem finden Sie auf dem englischsprachigen [B
 2. Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Standorte** auf **Hierarchieeinstellungen**.
 3. Klicken Sie auf die Registerkarte **Clientgenehmigung und in Konflikt stehende Datensätze**.
 4. Klicken Sie im Abschnitt **Doppelte Hardware-IDs** auf **Hinzufügen**, um neue Hardware-IDs hinzuzufügen.
-

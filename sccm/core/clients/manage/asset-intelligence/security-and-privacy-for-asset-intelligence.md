@@ -6,23 +6,20 @@ ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d0c6f7a0-dcae-4e6d-aa28-35d464d97ff7
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: d577a16725c2b167d1ff9f77096018433a2fa580
-ms.contentlocale: de-de
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: b12054cce52e2b83715a083d78a62e06b5127a2f
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="security-and-privacy-for-asset-intelligence-in-system-center-configuration-manager"></a>Sicherheit und Datenschutz für Asset Intelligence in System Center Configuration Manager
 
@@ -60,4 +57,3 @@ Dieses Thema enthält Sicherheits- und Datenschutzinformationen für Asset Intel
 -   Hochgeladene Daten können nicht zurückgerufen werden.  
 
  Berücksichtigen Sie die Datenschutzanforderungen Ihrer Organisation, bevor Sie die Asset Intelligence-Datensammlung konfigurieren und entscheiden, ob Sie Informationen an System Center Online übermitteln möchten.  
-

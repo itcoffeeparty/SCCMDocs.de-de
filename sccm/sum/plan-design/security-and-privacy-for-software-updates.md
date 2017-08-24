@@ -1,5 +1,4 @@
 ---
-
 title: "Sicherheit und Datenschutz für Softwareupdates | Microsoft-Dokumentation"
 description: "Befolgen Sie diese bewährten Methoden für die Sicherheit von Softwareupdates, und erfahren Sie mehr über die Behandlung von Informationen zum Datenschutz in Configuration Manager."
 keywords: 
@@ -10,15 +9,13 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 41d6d5d8-ba84-4efb-b105-4d1eed239824
-translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
 ms.openlocfilehash: 4b4f045138abc14b6e93b3b990c5f3a8b4f2f952
-
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="security-and-privacy-for-software-updates-in-system-center-configuration-manager"></a>Sicherheit und Datenschutz für die Softwareupdates in System Center Configuration Manager
 
@@ -26,7 +23,7 @@ ms.openlocfilehash: 4b4f045138abc14b6e93b3b990c5f3a8b4f2f952
 
 Dieses Thema enthält Sicherheits- und Datenschutzinformationen für Softwareupdates in System Center Configuration Manager.  
 
-##  <a name="a-namebkmksecurityhardwareinventorya-security-best-practices-for-software-updates"></a><a name="BKMK_Security_HardwareInventory"></a> Bewährte Sicherheitsmethoden für Softwareupdates  
+##  <a name="BKMK_Security_HardwareInventory"></a> Bewährte Sicherheitsmethoden für Softwareupdates  
  Wenden Sie die folgenden bewährten Sicherheitsmethoden beim Bereitstellen von Softwareupdates auf Clients an:  
 
 -   Behalten Sie die Standardberechtigungen von Softwareupdatepaketen bei.  
@@ -62,7 +59,7 @@ Dieses Thema enthält Sicherheits- und Datenschutzinformationen für Softwareupd
 
      Weitere Informationen finden Sie unter [Konfigurieren von WSUS für die Verwendung einer benutzerdefinierten Website](plan-for-software-updates.md#BKMK_CustomWebSite).  
 
-##  <a name="a-namebkmkprivacyhardwareinventorya-privacy-information-for-software-updates"></a><a name="BKMK_Privacy_HardwareInventory"></a> Informationen zum Datenschutz für Softwareupdates  
+##  <a name="BKMK_Privacy_HardwareInventory"></a> Informationen zum Datenschutz für Softwareupdates  
  Die Softwareupdatefunktion überprüft Ihre Clientcomputer, um zu bestimmen, welche Softwareupdates Sie benötigen. Diese Informationen werden dann zur Standortdatenbank zurückgesendet. Beim Softwareupdateprozess überträgt Configuration Manager möglicherweise Informationen zwischen Clients und Servern, die die Computer- und Anmeldekonten identifizieren.  
 
  In Configuration Manager werden Zustandsinformationen zum Softwarebereitstellungsprozess verwaltet. Zustandsinformationen werden während der Übertragung oder Speicherung nicht verschlüsselt. Zustandsinformationen werden in der Configuration Manager-Datenbank gespeichert und von den Datenbankwartungstasks gelöscht. Die Zustandsinformationen werden nicht an Microsoft gesendet.  
@@ -72,9 +69,3 @@ Dieses Thema enthält Sicherheits- und Datenschutzinformationen für Softwareupd
  Configuration Manager implementiert die Softwareupdatefunktion nicht standardmäßig, und es sind mehrere Konfigurationsschritte erforderlich, bevor Informationen gesammelt werden.  
 
  Berücksichtigen Sie beim Konfigurieren der Softwareupdates Ihre Datenschutzanforderungen.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

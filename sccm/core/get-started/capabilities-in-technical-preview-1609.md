@@ -7,20 +7,18 @@ ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.topic: article
 ms.assetid: e2a59116-b2e5-4dd2-90eb-0b8a5eb50b56
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 89a41c8a3137d0e54011ddf9a1d9b4894ecb7df8
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1609-for-system-center-configuration-manager"></a>Funktionen in System Center Configuration Manager Technical Preview 1609
 
@@ -242,15 +240,15 @@ Die folgenden Abschnitte enthalten eine Beschreibung der Änderungen, die diese 
 
 ### <a name="changes-in-ui-and-behavior-for-boundary-groups-and-content-locations"></a>Änderungen an der Benutzeroberfläche und dem Verhalten für Begrenzungsgruppen und Speicherorte für Inhalt
 Beim Folgenden handelt es sich um wichtige Änderungen an Begrenzungsgruppen und daran, wie Clients Inhalt suchen. Viele dieser Änderungen und Konzepte arbeiten zusammen.
--    **Konfigurationen für „schnell“ oder „langsam“ werden entfernt:** Sie konfigurieren einzelne Verteilungspunkte nicht mehr so, dass diese schnell oder langsam sind.  Stattdessen wird jedes Standortsystem, das einer Begrenzungsgruppe zugeordnet ist, auf die gleiche Weise behandelt. Aufgrund dieser Änderung unterstützt die Registerkarte **Referenz** der Begrenzungsgruppeneigenschaften die Konfiguration von „schnell“ und „langsam“ nicht mehr.
--     **Neue Standardbegrenzungsgruppen an jedem Standort:** Jeder primäre Standort verfügt über eine neue Standardbegrenzungsgruppe mit dem Namen ***Default-Site-Boundary-Group\<sitecode>***.  Wenn sich ein Client nicht an einem Netzwerkstandort befindet, der einer Begrenzungsgruppe zugewiesen ist, verwendet dieser Client die Standortsysteme, die der Standardgruppe seines zugewiesenen Standorts zugeordnet sind. Planen Sie, diese Begrenzungsgruppe als Ersatz für das Konzept der Fallbackinhaltsquelle zu verwenden.      
- -    **Allow fallback source locations for content** (Fallbackquellspeicherorte für Inhalt zulassen) wird entfernt: Sie konfigurieren nicht mehr explizit einen Verteilungspunkt, der für das Fallback verwendet wird, und die Optionen, um dies festzulegen, werden von der Benutzeroberfläche entfernt.
+-   **Konfigurationen für „schnell“ oder „langsam“ werden entfernt:** Sie konfigurieren einzelne Verteilungspunkte nicht mehr so, dass diese schnell oder langsam sind.  Stattdessen wird jedes Standortsystem, das einer Begrenzungsgruppe zugeordnet ist, auf die gleiche Weise behandelt. Aufgrund dieser Änderung unterstützt die Registerkarte **Referenz** der Begrenzungsgruppeneigenschaften die Konfiguration von „schnell“ und „langsam“ nicht mehr.
+-   **Neue Standardbegrenzungsgruppen an jedem Standort:** Jeder primäre Standort verfügt über eine neue Standardbegrenzungsgruppe mit dem Namen ***Default-Site-Boundary-Group\<sitecode>***.  Wenn sich ein Client nicht an einem Netzwerkstandort befindet, der einer Begrenzungsgruppe zugewiesen ist, verwendet dieser Client die Standortsysteme, die der Standardgruppe seines zugewiesenen Standorts zugeordnet sind. Planen Sie, diese Begrenzungsgruppe als Ersatz für das Konzept der Fallbackinhaltsquelle zu verwenden.    
+ -  **Allow fallback source locations for content** (Fallbackquellspeicherorte für Inhalt zulassen) wird entfernt: Sie konfigurieren nicht mehr explizit einen Verteilungspunkt, der für das Fallback verwendet wird, und die Optionen, um dies festzulegen, werden von der Benutzeroberfläche entfernt.
 
     Darüber hinaus hat sich das Ergebnis geändert, das auftritt, wenn die Einstellung **Die Verwendung eines Fallbackquellpfads für den Inhalt durch Clients zulassen** auf einem Bereitstellungstyp für Anwendungen festgelegt wird. Diese Einstellung auf einem Bereitstellungstyp ermöglicht es einem Client nun, die Standard-Standortbegrenzungsgruppe als Quellspeicherort für Inhalt zu verwenden.
 
- -    **Begrenzungsgruppenbeziehungen:** Jede Begrenzungsgruppe kann mit einer oder mehreren zusätzlichen Begrenzungsgruppen verknüpft werden. Diese Links bilden Beziehungen, die auf der neuen Registerkarte der Begrenzungsgruppeneigenschaften mit dem Namen **Beziehungen** konfiguriert sind:
-     -    Jede Begrenzungsgruppe, der ein Client direkt zugewiesen ist, wird **aktuelle** Begrenzungsgruppe genannt.  
-    -     Jede Begrenzungsgruppe, die ein Client aufgrund einer Zuweisung zwischen der *aktuellen* Begrenzungsgruppe des Clients und einer anderen Gruppe verwenden kann, wird **Nachbarbegrenzungsgruppe** genannt.
+ -  **Begrenzungsgruppenbeziehungen:** Jede Begrenzungsgruppe kann mit einer oder mehreren zusätzlichen Begrenzungsgruppen verknüpft werden. Diese Links bilden Beziehungen, die auf der neuen Registerkarte der Begrenzungsgruppeneigenschaften mit dem Namen **Beziehungen** konfiguriert sind:
+    -   Jede Begrenzungsgruppe, der ein Client direkt zugewiesen ist, wird **aktuelle** Begrenzungsgruppe genannt.  
+    -   Jede Begrenzungsgruppe, die ein Client aufgrund einer Zuweisung zwischen der *aktuellen* Begrenzungsgruppe des Clients und einer anderen Gruppe verwenden kann, wird **Nachbarbegrenzungsgruppe** genannt.
     -  Auf der Registerkarte **Beziehungen** können Sie Begrenzungsgruppen hinzufügen, die als *Nachbarbegrenzungsgruppe* verwendet werden können. Sie können auch eine Zeit in Minuten konfigurieren, die bestimmt, wann ein Client, der keinen Inhalt von einem Verteilungspunkt in der *aktuellen* Gruppe findet, beginnt, Speicherorte für Inhalt von diesen *Nachbarbegrenzungsgruppen* zu suchen.
 
         Beim Hinzufügen oder Ändern einer Begrenzungsgruppenkonfiguration verfügen Sie über die Option, das Fallback auf diese bestimmte Begrenzungsgruppe von der aktuellen Gruppe zu blockieren, die Sie konfigurieren.
@@ -262,7 +260,7 @@ Beim Folgenden handelt es sich um wichtige Änderungen an Begrenzungsgruppen und
     Dieses Verhalten ersetzt, was zuvor als Fallback für den Inhalt bezeichnet wurde.  Sie können dieses Standardverhalten von 120 Minuten außer Kraft setzen, indem Sie die Standardbegrenzungsgruppe einer *aktuellen* Gruppe zuordnen und eine bestimmte Zeit in Minuten festlegen oder das Fallback vollständig blockieren, um dessen Verwendung zu verhindern.
 
 
--     **Clients versuchen bis zu 2 Minuten lang, Inhalt aus jedem Verteilungspunkt zu erhalten:** Wenn ein Client nach einem Quellspeicherort für Inhalt sucht, versucht er 2 Minuten lang auf jeden Verteilungspunkt zuzugreifen, bevor er anschließend einen anderen Verteilungspunkt versucht. Dabei handelt es sich um eine Änderung gegenüber früheren Versionen, bei denen Clients bis zu 2 Stunden lang versucht haben, eine Verbindung zu einem Verteilungspunkt herzustellen.
+-   **Clients versuchen bis zu 2 Minuten lang, Inhalt aus jedem Verteilungspunkt zu erhalten:** Wenn ein Client nach einem Quellspeicherort für Inhalt sucht, versucht er 2 Minuten lang auf jeden Verteilungspunkt zuzugreifen, bevor er anschließend einen anderen Verteilungspunkt versucht. Dabei handelt es sich um eine Änderung gegenüber früheren Versionen, bei denen Clients bis zu 2 Stunden lang versucht haben, eine Verbindung zu einem Verteilungspunkt herzustellen.
 
     - Der erste Verteilungspunkt, den ein Client versucht zu verwenden, wird zufällig aus dem Pool verfügbarer Punkte in der *aktuellen* Begrenzungsgruppe (bzw. den aktuellen Begrenzungsgruppen) ausgewählt.
 
@@ -278,9 +276,9 @@ Beim Folgenden handelt es sich um wichtige Änderungen an Begrenzungsgruppen und
 
 ### <a name="how-the-new-model-works"></a>So funktioniert das neue Modell
 Wenn Sie Begrenzungsgruppen konfigurieren, ordnen Sie der Begrenzungsgruppe Grenzen (Netzwerkspeicherorte) und Standortsystemrollen wie Verteilungspunkte zu. Dadurch können Clients mit Standortsystemservern wie Verteilungspunkten verknüpft werden, die sich in der Nähe der Clients auf dem Netzwerk befinden.   
--    Sie können die gleiche Grenze mehreren Begrenzungsgruppen zuweisen.
--    Standortsystemserver wie Verteilungspunkte können mehreren Begrenzungsgruppen zugeordnet und damit für eine größere Anzahl von Netzwerkspeicherorten verfügbar gemacht werden.
--    Wenn ein Verteilungspunkt keiner Begrenzungsgruppe zugeordnet ist, können Clients diesen Verteilungspunkt nicht als Quellspeicherort für Inhalt verwenden.
+-   Sie können die gleiche Grenze mehreren Begrenzungsgruppen zuweisen.
+-   Standortsystemserver wie Verteilungspunkte können mehreren Begrenzungsgruppen zugeordnet und damit für eine größere Anzahl von Netzwerkspeicherorten verfügbar gemacht werden.
+-   Wenn ein Verteilungspunkt keiner Begrenzungsgruppe zugeordnet ist, können Clients diesen Verteilungspunkt nicht als Quellspeicherort für Inhalt verwenden.
 
 Ab dieser Technical Preview definieren Sie die Begrenzungsgruppenbeziehungen, um das Fallbackverhalten für die Quellspeicherorte für Inhalt zu konfigurieren. Dieses neue Verhalten wird auf der neuen Registerkarte **Beziehungen** der Begrenzungsgruppeneigenschaften konfiguriert und ersetzt das Konfigurieren von Standortsystemen, damit diese schnell oder langsam sind, sowie das Konfigurieren einer Begrenzungsgruppe, um das Fallback für den Quellspeicherort für Inhalt zuzulassen.
 
@@ -288,24 +286,24 @@ Fügen Sie auf der Registerkarte „Beziehungen“ andere Begrenzungsgruppen hin
 
 Wenn ein Client keinen Inhalt finden kann und beginnt, Speicherorte in Nachbarbegrenzungsgruppen zu durchsuchen, wird der Pool verfügbarer Verteilungspunkte für diesen Client kontrolliert vergrößert.  
 
--    Eine Begrenzungsgruppe kann mehr als eine Beziehung haben. Dadurch können Sie Fallbacks auf verschiedene Nachbarn konfigurieren, die nach Ablauf verschiedener Zeiten eintreten.
--    Der Fallback der Clients erfolgt nur auf eine Begrenzungsgruppe, die ein direkter Nachbar ihrer aktuellen Begrenzungsgruppe ist.
--    Wenn ein Client Mitglied mehrerer Begrenzungsgruppen ist, wird die aktuelle Begrenzungsgruppe als die Gesamtheit aller Begrenzungsgruppen dieses Clients definiert.  Anschließend kann ein Fallback dieses Clients auf einen Nachbar einer beliebigen dieser ursprünglichen Begrenzungsgruppen erfolgen.
+-   Eine Begrenzungsgruppe kann mehr als eine Beziehung haben. Dadurch können Sie Fallbacks auf verschiedene Nachbarn konfigurieren, die nach Ablauf verschiedener Zeiten eintreten.
+-   Der Fallback der Clients erfolgt nur auf eine Begrenzungsgruppe, die ein direkter Nachbar ihrer aktuellen Begrenzungsgruppe ist.
+-   Wenn ein Client Mitglied mehrerer Begrenzungsgruppen ist, wird die aktuelle Begrenzungsgruppe als die Gesamtheit aller Begrenzungsgruppen dieses Clients definiert.  Anschließend kann ein Fallback dieses Clients auf einen Nachbar einer beliebigen dieser ursprünglichen Begrenzungsgruppen erfolgen.
 
 Zusätzlich zu den Links, die Sie definieren, wird zwischen den Begrenzungsgruppen, die Sie erstellen, und der Standardbegrenzungsgruppe, die automatisch für jeden Standort erstellt wird, automatisch ein implizierter Link erstellt. Dieser automatische Link:
--    Wird von Clients verwendet, die sich nicht in einer Begrenzungsgruppe befinden, die einer anderen Begrenzungsgruppe in Ihrer Hierarchie zugeordnet ist, und die automatisch die Standardbegrenzungsgruppe des zugewiesenen Standorts verwenden, um gültige Quellspeicherorte für Inhalt zu ermitteln.   
--     Ist eine Standardoption für ein Fallback von der aktuellen Begrenzungsgruppe auf die Standardbegrenzungsgruppe der Standorte, die nach 120 Minuten verwendet wird.
+-   Wird von Clients verwendet, die sich nicht in einer Begrenzungsgruppe befinden, die einer anderen Begrenzungsgruppe in Ihrer Hierarchie zugeordnet ist, und die automatisch die Standardbegrenzungsgruppe des zugewiesenen Standorts verwenden, um gültige Quellspeicherorte für Inhalt zu ermitteln.   
+-   Ist eine Standardoption für ein Fallback von der aktuellen Begrenzungsgruppe auf die Standardbegrenzungsgruppe der Standorte, die nach 120 Minuten verwendet wird.
 
 **Beispiel für die Verwendung des neuen Modells:**     
 Sie erstellen drei Begrenzungsgruppen, die keine Grenzen oder Standortsystemserver teilen:
--    Gruppe BG_A mit den Verteilungspunkten DP_A1 und DP_A2, die der Gruppe zugeordnet sind
--    Gruppe BG_B mit den Verteilungspunkten DP_B1 und DP_B2, die der Gruppe zugeordnet sind
--    Gruppe BG_C mit den Verteilungspunkten DP_C1 und DP_C2, die der Gruppe zugeordnet sind
+-   Gruppe BG_A mit den Verteilungspunkten DP_A1 und DP_A2, die der Gruppe zugeordnet sind
+-   Gruppe BG_B mit den Verteilungspunkten DP_B1 und DP_B2, die der Gruppe zugeordnet sind
+-   Gruppe BG_C mit den Verteilungspunkten DP_C1 und DP_C2, die der Gruppe zugeordnet sind
 
 Fügen Sie die Netzwerkspeicherorte Ihres Clients nur der Begrenzungsgruppe BG_A als Grenze hinzu, und konfigurieren Sie anschließend Beziehungen von dieser Begrenzungsgruppe zu den anderen beiden Begrenzungsgruppen:
--    Konfigurieren Sie Verteilungspunkte für die erste *Nachbargruppe* (BG_B), die nach 10 Minuten verwendet wird. Diese Gruppe enthält die Verteilungspunkte DP_B1 und DP_B2. Beide verfügen über eine gute Verbindung mit den Grenzspeicherorten der ersten Gruppe.
--    Konfigurieren Sie die zweite *Nachbargruppe* (BG_C), die nach 20 Minuten verwendet wird. Diese Gruppe enthält die Verteilungspunkte DP_C1 und DP_C2. Beide sind über ein WAN von den anderen Begrenzungsgruppen aus zugänglich.
--    Fügen Sie auch einen zusätzlichen Verteilungspunkt hinzu, der sich auf dem Standortserver der Standard-Standortbegrenzungsgruppe der Standorte befindet. Dies ist der am wenigsten bevorzugte Quellspeicherort für Inhalt, der sich jedoch zu all Ihren Begrenzungsgruppen zentral befindet.
+-   Konfigurieren Sie Verteilungspunkte für die erste *Nachbargruppe* (BG_B), die nach 10 Minuten verwendet wird. Diese Gruppe enthält die Verteilungspunkte DP_B1 und DP_B2. Beide verfügen über eine gute Verbindung mit den Grenzspeicherorten der ersten Gruppe.
+-   Konfigurieren Sie die zweite *Nachbargruppe* (BG_C), die nach 20 Minuten verwendet wird. Diese Gruppe enthält die Verteilungspunkte DP_C1 und DP_C2. Beide sind über ein WAN von den anderen Begrenzungsgruppen aus zugänglich.
+-   Fügen Sie auch einen zusätzlichen Verteilungspunkt hinzu, der sich auf dem Standortserver der Standard-Standortbegrenzungsgruppe der Standorte befindet. Dies ist der am wenigsten bevorzugte Quellspeicherort für Inhalt, der sich jedoch zu all Ihren Begrenzungsgruppen zentral befindet.
 
     Beispiel für Begrenzungsgruppen und Fallbackzeiten:
 
@@ -313,21 +311,21 @@ Fügen Sie die Netzwerkspeicherorte Ihres Clients nur der Begrenzungsgruppe BG_A
 
 
 Mit dieser Konfiguration:
--    Beginnt der Client die Suche nach Inhalt aus Verteilungspunkten in seiner *aktuellen* Begrenzungsgruppe (BG_A), wobei er jeden Verteilungspunkt 2 Minuten lang durchsucht, bevor er zum nächsten Verteilungspunkt in der Begrenzungsgruppe wechselt. Der Pool des Clients mit gültigen Quellspeicherorten für Inhalt umfasst DP_A1 und DP_A2.
--    Wenn der Client 10 Minuten lang keinen Inhalt aus der *aktuellen* Begrenzungsgruppe findet, fügt er die Verteilungspunkte aus der Begrenzungsgruppe BG_B zur Suche hinzu. Anschließend setzt er die Suche nach Inhalt von einem Verteilungspunkt in seinem kombinierten Pool von Verteilungspunkten fort, der nun die Verteilungspunkte der Begrenzungsgruppen BG_A und BG_B enthält. Der Client kontaktiert weiterhin jeden Verteilungspunkt zwei Minuten lang, bevor er zum nächsten Verteilungspunkt seines Pools wechselt. Der Pool des Clients mit gültigen Quellspeicherorten für Inhalt umfasst DP_A1, DP_A2, DP_B1 und DP_B2.
--    Nach weiteren 10 Minuten (insgesamt 20 Minuten), in denen der Client immer noch keinen Verteilungspunkt mit Inhalt gefunden hat, erweitert er seinen Pool mit verfügbaren Verteilungspunkten um die Verteilungspunkte der zweiten *Nachbargruppe*, also der Begrenzungsgruppe BG_C. Der Client verfügt nun über 6 Verteilungspunkte, die er durchsuchen kann (DP_A1, DP_A2, DP_B2, DP_B2, DP_C1 und DP_C2), und wechselt weiterhin alle zwei Minuten zu einem neuen Verteilungspunkt, bis er Inhalt gefunden hat.
--    Wenn der Client nach maximal 120 Minuten keinen Inhalt gefunden hat, greift er darauf zurück, die *Standard-Standortbegrenzungsgruppe* als Teil der kontinuierlichen Suche einzuschließen. In den Pool mit Verteilungspunkten werden nun alle Verteilungspunkte aus den drei konfigurierten Begrenzungsgruppen sowie der letzte Verteilungspunkt eingeschlossen, der sich auf dem Standortservercomputer befindet.  Der Client setzt die Suche nach Inhalt anschließend fort und wechselt alle zwei Minuten den Verteilungspunkt, bis er Inhalt gefunden hat.
+-   Beginnt der Client die Suche nach Inhalt aus Verteilungspunkten in seiner *aktuellen* Begrenzungsgruppe (BG_A), wobei er jeden Verteilungspunkt 2 Minuten lang durchsucht, bevor er zum nächsten Verteilungspunkt in der Begrenzungsgruppe wechselt. Der Pool des Clients mit gültigen Quellspeicherorten für Inhalt umfasst DP_A1 und DP_A2.
+-   Wenn der Client 10 Minuten lang keinen Inhalt aus der *aktuellen* Begrenzungsgruppe findet, fügt er die Verteilungspunkte aus der Begrenzungsgruppe BG_B zur Suche hinzu. Anschließend setzt er die Suche nach Inhalt von einem Verteilungspunkt in seinem kombinierten Pool von Verteilungspunkten fort, der nun die Verteilungspunkte der Begrenzungsgruppen BG_A und BG_B enthält. Der Client kontaktiert weiterhin jeden Verteilungspunkt zwei Minuten lang, bevor er zum nächsten Verteilungspunkt seines Pools wechselt. Der Pool des Clients mit gültigen Quellspeicherorten für Inhalt umfasst DP_A1, DP_A2, DP_B1 und DP_B2.
+-   Nach weiteren 10 Minuten (insgesamt 20 Minuten), in denen der Client immer noch keinen Verteilungspunkt mit Inhalt gefunden hat, erweitert er seinen Pool mit verfügbaren Verteilungspunkten um die Verteilungspunkte der zweiten *Nachbargruppe*, also der Begrenzungsgruppe BG_C. Der Client verfügt nun über 6 Verteilungspunkte, die er durchsuchen kann (DP_A1, DP_A2, DP_B2, DP_B2, DP_C1 und DP_C2), und wechselt weiterhin alle zwei Minuten zu einem neuen Verteilungspunkt, bis er Inhalt gefunden hat.
+-   Wenn der Client nach maximal 120 Minuten keinen Inhalt gefunden hat, greift er darauf zurück, die *Standard-Standortbegrenzungsgruppe* als Teil der kontinuierlichen Suche einzuschließen. In den Pool mit Verteilungspunkten werden nun alle Verteilungspunkte aus den drei konfigurierten Begrenzungsgruppen sowie der letzte Verteilungspunkt eingeschlossen, der sich auf dem Standortservercomputer befindet.  Der Client setzt die Suche nach Inhalt anschließend fort und wechselt alle zwei Minuten den Verteilungspunkt, bis er Inhalt gefunden hat.
 
 Indem Sie die verschiedenen Nachbargruppen so konfigurieren, dass diese zu verschiedenen Zeiten verfügbar sind, steuern Sie, wann bestimmte Verteilungspunkte als Quellspeicherort für Inhalt hinzugefügt werden, sowie wann bzw. ob der Client ein Fallback auf die Standard-Standortbegrenzungsgruppe als Sicherheitsnetz für Inhalt verwendet, der von einem anderen Speicherort nicht verfügbar ist.
 
 
 ### <a name="bkmk_update"></a>Aktualisieren vorhandener Begrenzungsgruppen auf das neue Modell
 Wenn Sie die Version 1609 installieren und Ihren Standort aktualisieren, werden die folgenden Konfigurationen automatisch vorgenommen. Diese sollen sicherstellen, dass Ihr aktuelles Fallbackverhalten verfügbar bleibt, bis Sie neue Begrenzungsgruppen und Beziehungen konfigurieren.  
--    Ungeschützte Verteilungspunkte an einem Standort werden zur Begrenzungsgruppe *Default-Site-Boundary-Group\<Standortcode>* dieses Standorts hinzugefügt.
--    Von jeder vorhandenen Begrenzungsgruppe, die einen Standortserver umfasst, der mit einer langsamen Verbindung konfiguriert wurde, wird eine Kopie erstellt. Der Name der neuen Gruppe lautet ***\<ursprünglicher Name der Begrenzungsgruppe>-Slow-Tmp***:  
-    -    Standortsysteme, die über eine schnelle Verbindung verfügen, bleiben in der ursprünglichen Begrenzungsgruppe.
-    -    Eine Kopie der Standortsysteme, die über eine langsame Verbindung verfügen, wird der Kopie der Begrenzungsgruppe hinzugefügt. Die ursprünglichen Standortsysteme, die als langsam konfiguriert wurden, bleiben zur Abwärtskompatibilität in der ursprünglichen Begrenzungsgruppe, werden von dieser Begrenzungsgruppe jedoch nicht verwendet.
-    -     Dieser Begrenzungsgruppenkopie sind keine Grenzen zugeordnet. Jedoch wird ein Fallbacklink zwischen der ursprünglichen Gruppe und der neuen Begrenzungsgruppe erstellt, deren Fallbackzeit auf 0 festgelegt ist.
+-   Ungeschützte Verteilungspunkte an einem Standort werden zur Begrenzungsgruppe *Default-Site-Boundary-Group\<Standortcode>* dieses Standorts hinzugefügt.
+-   Von jeder vorhandenen Begrenzungsgruppe, die einen Standortserver umfasst, der mit einer langsamen Verbindung konfiguriert wurde, wird eine Kopie erstellt. Der Name der neuen Gruppe lautet ***\<ursprünglicher Name der Begrenzungsgruppe>-Slow-Tmp***:  
+    -   Standortsysteme, die über eine schnelle Verbindung verfügen, bleiben in der ursprünglichen Begrenzungsgruppe.
+    -   Eine Kopie der Standortsysteme, die über eine langsame Verbindung verfügen, wird der Kopie der Begrenzungsgruppe hinzugefügt. Die ursprünglichen Standortsysteme, die als langsam konfiguriert wurden, bleiben zur Abwärtskompatibilität in der ursprünglichen Begrenzungsgruppe, werden von dieser Begrenzungsgruppe jedoch nicht verwendet.
+    -   Dieser Begrenzungsgruppenkopie sind keine Grenzen zugeordnet. Jedoch wird ein Fallbacklink zwischen der ursprünglichen Gruppe und der neuen Begrenzungsgruppe erstellt, deren Fallbackzeit auf 0 festgelegt ist.
 
  Die folgende Tabelle ermittelt das neue Fallbackverhalten, das Sie von der Kombination aus den ursprünglichen Bereitstellungseinstellungen und den Verteilungspunktkonfigurationen erwarten können:
 
@@ -336,7 +334,7 @@ Ursprüngliche Bereitstellungskonfiguration für „Programm nicht ausführen“
 Ausgewählt     |  Ausgewählt    |  **Kein Fallback** – Verwenden Sie nur die Verteilungspunkte in der aktuellen Begrenzungsgruppe.       
 Ausgewählt     |  Nicht ausgewählt|  **Kein Fallback** – Verwenden Sie nur die Verteilungspunkte in der aktuellen Begrenzungsgruppe.       
 Nicht ausgewählt |  Nicht ausgewählt|  **Fallback auf Nachbar** – Verwenden Sie die Verteilungspunkte in der aktuellen Begrenzungsgruppe, und fügen Sie anschließend die Verteilungspunkte aus der Nachbarbegrenzungsgruppe hinzu. Sofern kein expliziter Link zur Standard-Standortbegrenzungsgruppe konfiguriert wurde, erfolgt kein Fallback der Clients auf diese Gruppe.    
-Nicht ausgewählt | Ausgewählt        |   **Normales Fallback** – Verwenden Sie die Verteilungspunkte in der aktuellen Begrenzungsgruppe und anschließend die der Nachbar- und der Standard-Standortbegrenzungsgruppen.
+Nicht ausgewählt | Ausgewählt     |   **Normales Fallback** – Verwenden Sie die Verteilungspunkte in der aktuellen Begrenzungsgruppe und anschließend die der Nachbar- und der Standard-Standortbegrenzungsgruppen.
 
  Alle anderen Bereitstellungskonfigurationen führen zum **Normalen Fallback**.  
 
@@ -407,13 +405,13 @@ Fügen Sie in einer vorhandenen Tasksequenz zum Installieren eines Betriebssyste
 
     ![Schritt „Computer neu starten“](media/Restart-in-Windows-PE.png)
 5. Fügen Sie einen Schritt zum Starten des OEM-Tools hinzu, das die Firmware von BIOS in UEFI konvertiert. Dabei handelt es sich normalerweise um einen Tasksequenzschritt **Befehlszeile ausführen** mit einer Befehlszeile zum Starten des OEM-Tools.
-5.    Fügen Sie den Tasksequenzschritt „Datenträger formatieren und partitionieren“ hinzu, durch den die Festplatte formatiert und partitioniert wird. Führen Sie im Schritt Folgendes aus:
-    1.    Erstellen Sie die FAT32-Partition, die in UEFI konvertiert wird, bevor das Betriebssystem installiert wird. Wählen Sie **GPT** als **Datenträgertyp** aus.
+5.  Fügen Sie den Tasksequenzschritt „Datenträger formatieren und partitionieren“ hinzu, durch den die Festplatte formatiert und partitioniert wird. Führen Sie im Schritt Folgendes aus:
+    1.  Erstellen Sie die FAT32-Partition, die in UEFI konvertiert wird, bevor das Betriebssystem installiert wird. Wählen Sie **GPT** als **Datenträgertyp** aus.
     ![Schritt „Datenträger formatieren und partitionieren“](media/Format-and-partition-disk.png)
-    2.    Wechseln Sie zu den Eigenschaften für die FAT32-Partition. Geben Sie **TSUEFIDrive** in das Feld **Variable** ein. Wenn diese Variable von der Tasksequenz erkannt wird, wird diese sich vor dem Neustart des Computers auf den Übergang zu UEFI vorbereiten.
+    2.  Wechseln Sie zu den Eigenschaften für die FAT32-Partition. Geben Sie **TSUEFIDrive** in das Feld **Variable** ein. Wenn diese Variable von der Tasksequenz erkannt wird, wird diese sich vor dem Neustart des Computers auf den Übergang zu UEFI vorbereiten.
     ![Partitionseigenschaften](media/Partition-properties.png)
     3. Erstellen Sie eine NTFS-Partition, die vom Tasksequenzmodul verwendet wird, um dessen Zustand sowie Protokolldateien zu speichern.
-6.    Fügen Sie den Tasksequenzschritt **Computer neu starten** hinzu. Wählen Sie unter **Geben Sie an, was nach dem Neustart ausgeführt werden soll** **The boot image assigned to this task sequence is selected** (Das dieser Tasksequenz zugewiesene Startimage wird ausgewählt) aus, um den Computer in Windows PE zu starten.  
+6.  Fügen Sie den Tasksequenzschritt **Computer neu starten** hinzu. Wählen Sie unter **Geben Sie an, was nach dem Neustart ausgeführt werden soll** **The boot image assigned to this task sequence is selected** (Das dieser Tasksequenz zugewiesene Startimage wird ausgewählt) aus, um den Computer in Windows PE zu starten.  
 
 
 
@@ -456,4 +454,3 @@ Schließen Sie die folgenden Abschnitte der Reihe nach ab:
 
 ## <a name="see-also"></a>Siehe auch
 [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md)
-

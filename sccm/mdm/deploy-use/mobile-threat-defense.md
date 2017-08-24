@@ -6,8 +6,7 @@ ms.date: 04/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9083c571-f4fc-4a78-adc5-8aec84dabcbd
@@ -15,15 +14,12 @@ caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c6a6137fa978e1ea28aefea2aea4e29ba661efd6
 ms.openlocfilehash: 250671660c1c6da0ca9b593b06b8f344dfe17ad6
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="manage-access-to-company-resource-based-on-device-network-and-application-risk"></a>Verwalten des Zugriffs auf Unternehmensressourcen basierend auf Gerät, Netzwerk und Anwendungsrisiko
 
 *Gilt für: System Center Configuration Manager (Current Branch)*

@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d28f4363-9e8a-4c54-9cb7-0594fabfff26
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 243433980e1720fd468d52a4a61f2c3a8e3659b5
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="replace-an-existing-computer-and-transfer-settings-with-system-center-configuration-manager"></a>Ersetzen eines vorhandenen Computers und Übertragen von Einstellungen mit System Center Configuration Manager
 
@@ -29,7 +28,7 @@ Dieses Thema enthält die allgemeinen Schritte, mit denen Sie in System Center C
 
  Verwenden Sie die folgenden Abschnitte, um einen vorhandenen Computer mit einer neuen Version von Windows zu aktualisieren.  
 
-##  <a name="a-namebkmkplana-plan"></a><a name="BKMK_Plan"></a> Plan  
+##  <a name="BKMK_Plan"></a> Plan  
 
 -   **Planen und Implementieren von Anforderungen an die Infrastruktur**  
 
@@ -39,7 +38,7 @@ Dieses Thema enthält die allgemeinen Schritte, mit denen Sie in System Center C
 
      Wenn Sie Einstellungen eines vorhandenen Computers erfassen und dann im neuen Betriebssystem wiederherstellen möchten, müssen Sie einen Zustandsmigrationspunkt installieren. Weitere Informationen finden Sie unter [Statusmigrationspunkt](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
 
-##  <a name="a-namebkmkconfigurea-configure"></a><a name="BKMK_Configure"></a> Konfigurieren  
+##  <a name="BKMK_Configure"></a> Konfigurieren  
 
 1.  **Vorbereiten eines Startabbilds**  
 
@@ -66,7 +65,7 @@ Dieses Thema enthält die allgemeinen Schritte, mit denen Sie in System Center C
     > [!NOTE]  
     >  Wenn Sie in diesem Szenario Benutzereinstellungen und Dateien erfassen und wiederherstellen, können Sie entweder einen Zustandsmigrationspunkt verwenden oder die Dateien lokal speichern. Weitere Informationen finden Sie unter [Verwalten des Benutzerstatus](../get-started/manage-user-state.md).  
 
-##  <a name="a-namebkmkdeploya-deploy"></a><a name="BKMK_Deploy"></a> Bereitstellen  
+##  <a name="BKMK_Deploy"></a> Bereitstellen  
 
 -   Verwenden Sie eine der folgenden Bereitstellungsmethoden, um das Betriebssystem bereitzustellen:  
 
@@ -83,9 +82,3 @@ Dieses Thema enthält die allgemeinen Schritte, mit denen Sie in System Center C
 -   **Überwachen der Tasksequenzbereitstellung**  
 
      Weitere Informationen zum Überwachen der Tasksequenzbereitstellung zum Installieren des Betriebssystems finden Sie unter [Monitor operating system deployments (Überwachen von Betriebssystembereitstellungen)](monitor-operating-system-deployments.md).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -6,20 +6,19 @@ ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 035b7f73-8b78-4ed1-835e-a31f9a5c4a02
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: d56c8a76e4770336d4a2ab519e776e48fec8ebcd
 ms.openlocfilehash: df3198885259b1db4a1aadee0db6512a1a2d4911
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="fundamentals-of-security-for-system-center-configuration-manager"></a>Grundlagen der Sicherheit für System Center Configuration Manager
 
@@ -70,9 +69,3 @@ Die letzte Sicherheitsebene basiert auf Berechtigungen für Objekte in der Stand
  Zwar bieten Verwaltungsprodukte für Unternehmen zahlreiche Vorteile, da sie viele Clients effektiv verwalten können. Sie müssen sich jedoch der möglichen Auswirkungen dieser Software auf den Datenschutz der Benutzer in Ihrer Organisation bewusst sein. System Center Configuration Manager enthält zahlreiche Tools zum Sammeln von Daten und zum Überwachen von Geräten. Einige dieser Tools können Bedenken bezüglich des Datenschutzes auslösen.  
 
  Beim Installieren des Configuration Manager-Clients werden z.B. viele Verwaltungseinstellungen standardmäßig aktiviert. Dies führt dazu, dass von der Clientsoftware Informationen an den Configuration Manager-Standort gesendet werden. Clientinformationen werden in der Configuration Manager-Datenbank gespeichert und nicht an Microsoft gesendet. Berücksichtigen Sie beim Konfigurieren des System Center Configuration Manager Ihre Datenschutzanforderungen.  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

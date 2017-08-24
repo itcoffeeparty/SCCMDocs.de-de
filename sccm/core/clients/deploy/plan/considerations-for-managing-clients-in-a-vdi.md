@@ -6,23 +6,20 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 58251f6a4eebac4cba9f3d51f8d0aaad068c3ab8
-ms.contentlocale: de-de
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: d73daf6427b8c58d21d579f3b41df513cc3e3b0b
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="considerations-for-managing-system-center-configuration-manager-clients--in-a-virtual-desktop-infrastructure-vdi"></a>Überlegungen zum Verwalten von System Center Configuration Manager-Clients in einer virtuellen Desktopinfrastruktur (VDI)
 
@@ -50,4 +47,3 @@ System Center Configuration Manager unterstützt die Installation des Configurat
 >  Diese zufällige Verzögerung wird auch von Configuration Manager-Clients verwendet, die nicht in virtualisierten Umgebungen ausgeführt werden, wobei Windows Embedded-Clients, die sich im Wartungsmodus befinden, die Ausnahme bilden. Wenn es viele bereitgestellte Clients gibt, lassen sich mit diesem Verhalten Spitzen bei der Netzwerkbandbreite vermeiden und die Prozessoranforderungen in den Configuration Manager-Standortsystemen verringern, beispielsweise auf dem Verwaltungspunkt und Standortserver. Das Verzögerungsintervall hängt von der Configuration Manager-Funktionalität ab.  
 >   
 >  Die zufällige Verzögerung wird für erforderliche Softwareupdates und Anwendungsbereitstellungen mithilfe der Clienteinstellung **Zufällige Stichtaganordnung deaktivieren**unter **Computer-Agent**standardmäßig deaktiviert.
-

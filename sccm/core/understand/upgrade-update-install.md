@@ -6,22 +6,21 @@ ms.date: 1/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 17fab17f-304d-4f6a-87c7-30ab4f5521ed
-caps.latest.revision: 0
-caps.handback.revision: 0
+caps.latest.revision: "0"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
 ms.openlocfilehash: 6bd6cd7ea3c41fa1d70e17a1290c9f1f74cc9e37
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="about-upgrade-update-and-install-for-site-and-hierarchy-infrastructure"></a>Informationen zu Upgrade, Update und Installation für einen Standort und eine Hierarchieinfrastruktur
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -56,9 +55,3 @@ Der Begriff *Installation* wird verwendet, wenn eine neue Configuration Manager-
 Bei der Installation eines neuen primären Standorts oder eines Standorts der zentralen Verwaltung ist der Speicherort der Datei „Setup.exe“ und die damit verbundenen und von Ihnen verwendeten Quelldateien von Ihrem Installationsszenario abhängig.
 
 Weitere Informationen finden Sie unter [Vorbereitung zur Installation von Standorten ](/sccm/core/servers/deploy/install/prepare-to-install-sites).
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-

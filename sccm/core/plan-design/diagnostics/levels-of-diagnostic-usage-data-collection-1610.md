@@ -6,12 +6,11 @@ ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eb20eb90-bcc0-41de-bfea-638ea470c0dd
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
@@ -33,12 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 688e05aae0e0b15b54835f8d64a98487f4d7b64d
-ms.openlocfilehash: 82bcd1a9fe22bf7ecc2dc5765f64f5198494152e
-ms.contentlocale: de-de
-ms.lasthandoff: 12/29/2016
-
+ms.openlocfilehash: ba1e53fdc895690bb958c12d59f82a26067ecad3
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1610-of-system-center-configuration-manager"></a>Ebenen der Sammlung von Nutzungsdaten zu Diagnosezwecken für System Center Configuration Manager-Version 1610
 
@@ -50,7 +48,7 @@ Die Version 1610 von System Center Configuration Manager sammelt drei Ebenen von
 
 
 > [!IMPORTANT]
->  Configuration Manager sammelt auf den Ebenen „Basis“ und „Erweitert“ keine Standortcodes, Standortnamen, IP-Adressen, Benutzer- oder Computernamen, physischen Adressen oder E-Mail-Adressen. Die auf der Ebene „Vollständig“ erfassten Daten (möglicherweise in erweiterten Diagnoseinformationen wie Protokolldateien oder Arbeitsspeicher-Momentaufnahmen enthaltene Daten) werden nicht zielgerichtet gesammelt. Sie werden von Microsoft auch nicht zu Werbezwecken oder dazu verwendet, Sie zu identifizieren bzw. Kontakt mit Ihnen aufzunehmen.
+>  Configuration Manager sammelt auf den Ebenen „Basis“ und „Erweitert“ keine Standortcodes, Standortnamen, IP-Adressen, Benutzer- oder Computernamen, physischen Adressen oder E-Mail-Adressen. Die auf der Ebene „Vollständig“ erfassten Daten (möglicherweise in erweiterten Diagnoseinformationen wie Protokolldateien oder Arbeitsspeicher-Momentaufnahmen enthaltene Daten) werden nicht zielgerichtet gesammelt. Sie werden von Microsoft auch nicht zu Werbezwecken oder dazu verwendet, Sie zu identifizieren oder sich mit Ihnen in Verbindung zu setzen.
 
 ##  <a name="bkmk_change"></a> Ändern der Ebene
  Administratoren mit einem rollenbasierten Verwaltungsbereich, der **Ändern**-Berechtigungen für die **Standort**-Objektklasse umfasst, können in den Einstellungen der Configuration Manager-Konsole unter „Diagnose- und Nutzungsdaten“ die Ebene der erfassten Daten ändern.
@@ -64,13 +62,13 @@ Ab Version 1610 können Sie die Datensammlungsebene innerhalb der Konsole änder
 
 
 -   Setupinformationen:
-       - Build, Installationstyp, Sprachpakete, Funktionen, die Sie aktiviert haben  
+      - Build, Installationstyp, Sprachpakete, Funktionen, die Sie aktiviert haben  
 
-       - Aktualisieren des Paketbereitstellungsstatus und der Fehler, des Downloadstatus und der Voraussetzungsfehler     
+      - Aktualisieren des Paketbereitstellungsstatus und der Fehler, des Downloadstatus und der Voraussetzungsfehler    
 
-       - Skriptversion nach dem Upgrade
+      - Skriptversion nach dem Upgrade
 
-       - Updateverwendung (Fast Ring)
+      - Updateverwendung (Fast Ring)
 
     - ***[Neu]*** Verwendung der Vorabversion, Setup Medientyp, Verzweigungstyp
 
@@ -86,11 +84,11 @@ Ab Version 1610 können Sie die Datensammlungsebene innerhalb der Konsole änder
 
 - Anzahl der Betriebssysteme für verwaltete Geräte und der von Exchange Connector festgelegten Richtlinien
 
-- Anzahl der Clientsprachen und -gebietsschemas
+- Anzahl der Sprachen und Gebietsschemas der Clients
 
 - Anzahl von Windows 10-Geräten nach Branch und Build
 
-- Grundlegende Daten zur Configuration Manager-Standorthierarchie (Standortliste, Typ, Version, Status, Anzahl der Clients und Zeitzone)
+- Grundlegende Daten zur Configuration Manager-Standorthierarchie (Standortliste, Typ, Version, Status, Anzahl von Clients und Zeitzone)
 
 - Grundlegende Informationen zum Standortsystemserver (verwendete Standortsystemrollen, Internet- und SSL-Status, Betriebssystem, Prozessoren sowie physischer oder virtueller Computer)
 
@@ -265,7 +263,7 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
     -   Anzahl der Warnungen, die für das Endpoint Protection-Feature konfiguriert sind  
 
-    -     Advanced Threat Protection-Richtlinien (ATP) (Anzahl der Richtlinien und Angabe, ob Richtlinien bereitgestellt werden)
+    -   Advanced Threat Protection-Richtlinien (ATP) (Anzahl der Richtlinien und Angabe, ob Richtlinien bereitgestellt werden)
 
 
 - **Migration:**
@@ -438,4 +436,3 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 -   Detaillierte Installationsfehler der Client-Bereitstellung
 
 - ***[Neu]*** Anwendungsdetails zu Windows Store für Unternehmen (nicht-aggregierte Liste synchronisierter Anwendungen, darunter App-ID, Status – Online oder Offline, und die Gesamtzahl erworbener Lizenzen)
-

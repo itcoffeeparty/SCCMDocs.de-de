@@ -6,21 +6,19 @@ ms.date: 06/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
 ms.openlocfilehash: 2bbc8935bee306ed0bc312cc43b8f5374a8df7ff
-ms.contentlocale: de-de
-ms.lasthandoff: 07/29/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="install-in-console-updates-for-system-center-configuration-manager"></a>Installieren konsoleninterner Updates für System Center Configuration Manager
 
@@ -386,4 +384,3 @@ Wenn beide Updates in der Konsole verfügbar sind, empfehlen wir die Installatio
 -   Wenn Sie zuvor das ältere Update installiert haben, müssen Sie nicht unbedingt das Update mit dem neueren Datum installieren. Wenn Sie das neuere Update nach der Installation des ersten Updates installieren, werden jedoch die fraglichen Binärdateien aktualisiert. Es fallen keine zusätzlichen Kosten an, und Sie müssen keine weiteren Maßnahmen ergreifen.
 
 -   Wenn Sie zuvor das neueste Update installiert haben und dann das Update mit dem älteren Datum installieren, ist keine weitere Aktion erforderlich, da die bereits installierten neueren Binärdateien nicht durch die gleichen Binärdateien aus dem ursprünglichen Update überschrieben werden.
-

@@ -6,25 +6,22 @@ ms.date: 07/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4bb6afeb-d267-4f9b-ade2-26e5400c223b
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 344b55aecd72479b759b40e8252e64a06c5eaba0
 ms.openlocfilehash: 5bf4457af6bedf7bc9cd73c879f1857209c0725d
-ms.contentlocale: de-de
-ms.lasthandoff: 07/13/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-# Allgemeine Aufgaben zum Erstellen und Bereitstellen von Konfigurationsbaselines mit System Center Configuration Manager
-<a id="common-tasks-for-creating-and-deploying-configuration-baselines-with-system-center-configuration-manager" class="xliff"></a>
+# <a name="common-tasks-for-creating-and-deploying-configuration-baselines-with-system-center-configuration-manager"></a>Allgemeine Aufgaben zum Erstellen und Bereitstellen von Konfigurationsbaselines mit System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -34,8 +31,7 @@ Dieses Thema enthält häufige Szenarios, mit deren Hilfe Sie mehr über das Ers
 
  Bevor Sie beginnen, lesen Sie [Erste Schritte mit Konformitätseinstellungen](../../compliance/get-started/get-started-with-compliance-settings.md), um einige Grundlagen zu Konformitätseinstellungen zu erhalten. Lesen Sie zudem [Planen und Konfigurieren von Konformitätseinstellungen](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md), um erforderliche Voraussetzungen zu implementieren.  
 
-## Erstellen einer Konfigurationsbaseline
-<a id="create-a-configuration-baseline" class="xliff"></a>  
+## <a name="create-a-configuration-baseline"></a>Erstellen einer Konfigurationsbaseline  
  In diesem Beispiel haben Sie ein Konfigurationselement ausschließlich für Windows 10-PCs erstellt, auf denen der Configuration Manager-Client ausgeführt wird.  
 
  Dieses Konfigurationselement erzwingt ein erforderliches Kennwort mit mindestens 6 Zeichen auf Windows 10-PCs. Das Konfigurationselement hat den Namen **Windows 10 Password Enforcement**.  
@@ -60,8 +56,7 @@ Mit dem folgenden Verfahren fügen Sie dieses Konfigurationselement zu einer Kon
 
  Sie sehen die Konfigurationsbaseline jetzt im Knoten **Konfigurationsbaselines** der Configuration Manager-Konsole.  
 
-## Bereitstellen der Konfigurationsbaseline
-<a id="deploy-the-configuration-baseline" class="xliff"></a>  
+## <a name="deploy-the-configuration-baseline"></a>Bereitstellen der Konfigurationsbaseline  
  In diesem Beispiel stellen Sie die im vorherigen Verfahren erstellte Konfigurationsbaseline für eine Sammlung von Computern bereit.  
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Assets und Konformität** > **Konformitätseinstellungen** > **Konfigurationsbaselines**.  
@@ -87,8 +82,6 @@ Mit dem folgenden Verfahren fügen Sie dieses Konfigurationselement zu einer Kon
 
  Um einen kurzen Blick auf die Konformitätsstatistik für diese Bereitstellung zu werfen, klicken Sie im Arbeitsbereich **Überwachung** auf **Bereitstellungen**. Am unteren Bildschirmrand wird ein Diagramm zur **Konformitätsstatistik** angezeigt.  
 
-## Nächste Schritte
-<a id="next-steps" class="xliff"></a> 
+## <a name="next-steps"></a>Nächste Schritte 
 
 Ausführlichere Informationen zum Überwachen von Konfigurationsbaselines finden Sie unter [Überwachen von Konformitätseinstellungen](../../compliance/deploy-use/monitor-compliance-settings.md).  
-

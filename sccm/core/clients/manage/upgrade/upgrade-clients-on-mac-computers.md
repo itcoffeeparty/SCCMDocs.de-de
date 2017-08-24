@@ -6,22 +6,19 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 74c60941-5eae-4905-9e58-252bdb39df96
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
-ms.openlocfilehash: 6bdc5cca01bf5a79a6177d7cf1de96b8ff2c2305
-ms.contentlocale: de-de
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 502116b66fc14914ca0606ae416e82202824de7a
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-upgrade-clients-on-mac-computers-in-system-center-configuration-manager"></a>Aktualisieren von Clients auf Macintosh-Computern in System Center Configuration Manager
 
@@ -104,4 +101,3 @@ Befolgen Sie die oben beschriebenen allgemeinen Schritte, um den Client für Mac
 -   Fügen Sie das Konfigurationselement einer Konfigurationsbaseline hinzu, und stellen Sie dann die Konfigurationsbaseline auf allen Macintosh-Computern bereit, auf denen ein Zertifikat unabhängig von Configuration Manager installiert wird.  
 
  Weitere Informationen zum Erstellen und Bereitstellen von Konfigurationselementen für Macintosh-Computer finden Sie unter [Erstellen von Konfigurationselementen für Mac OS X-Geräte, die mit dem System Center Configuration Manager-Client verwaltet werden](../../../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md) und [Bereitstellen von Konfigurationsbaselines in System Center Configuration Manager](../../../../compliance/deploy-use/deploy-configuration-baselines.md).  
-

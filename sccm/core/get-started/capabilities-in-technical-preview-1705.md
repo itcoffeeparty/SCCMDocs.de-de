@@ -4,8 +4,7 @@ description: "Erfahren Sie mehr über die Funktionen, die mit der Technical Prev
 ms.custom: na
 ms.date: 06/02/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -14,12 +13,11 @@ ms.assetid: 00684289-d21a-45f8-b1e3-c5c787d73096
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
 ms.openlocfilehash: b977a79baec73999caa21648adcb6fcfec4a4935
-ms.contentlocale: de-de
-ms.lasthandoff: 07/26/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1705-for-system-center-configuration-manager"></a>Funktionen in der Technical Preview-Version 1705 von System Center Configuration Manager
 
@@ -301,4 +299,3 @@ Die Voraussetzungen zum Konfigurieren einer Verbindung mit OMS unterscheiden sic
 7.  Überprüfen Sie die Verbindungseinstellungen auf dem Bildschirm **Zusammenfassung**, und wählen Sie dann **Weiter** aus. Auf dem Bildschirm **Status** wird der Verbindungsstatus angezeigt. Anschließend sollte **Abgeschlossen** angezeigt werden.
 
 8.  Nach Abschluss des Assistenten zeigt die Configuration Manager-Konsole, dass Sie **Operation Management Suite** als **Clouddiensttyp** konfiguriert haben.
-

@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7341cc6e-9e08-41e4-bcc6-6c1ff12e85ca
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: ed692bdea055775890535d2666f09ba5f5c7c4e1
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="use-alerts-and-the-status-system-for-system-center-configuration-manager"></a>Verwenden von Benachrichtigungen und des Statussystems für System Center Configuration Manager
 
@@ -28,7 +27,7 @@ ms.openlocfilehash: ed692bdea055775890535d2666f09ba5f5c7c4e1
 Konfigurieren Sie Warnungen, und verwenden Sie das integrierte Statussystem, damit Sie ständig über den Status Ihrer Configuration Manager-Bereitstellung informiert werden.  
 
 
-##  <a name="a-namebkmkstatusa-status-system"></a><a name="bkmk_Status"></a> Statussystem  
+##  <a name="bkmk_Status"></a> Statussystem  
  Alle wichtigen Standortkomponenten generieren Meldungen, die Feedback zu Standort- und Hierarchievorgängen bereitstellen.    Mit diesen Informationen bleiben Sie auf dem Laufenden hinsichtlich der Integrität unterschiedlicher Standortprozesse. Sie können das Warnungssystem optimieren, sodass bekannte Probleme weitgehend ignoriert werden, während für andere Probleme, die möglicherweise Ihrer Aufmerksamkeit bedürfen, eine frühe Sichtbarkeit erreicht wird.  
 
  Das Configuration Manager-Statussystem wird standardmäßig ohne Konfiguration ausgeführt, da Einstellungen verwendet werden, die für die meisten Umgebungen geeignet sind. Folgende Elemente können aber konfiguriert werden:  
@@ -55,7 +54,7 @@ Konfigurieren Sie Warnungen, und verwenden Sie das integrierte Statussystem, dam
 
 Da im Statussystem getrennte Konfigurationen für jeden Standort verwaltet werden, müssen Sie jeden Standort einzeln bearbeiten.  
 
-###  <a name="a-namebkmkconfigstatusa-procedures-for-configuring-the-status-system"></a><a name="bkmk_configstatus"></a> Vorgehensweisen zum Konfigurieren des Statussystems  
+###  <a name="bkmk_configstatus"></a> Vorgehensweisen zum Konfigurieren des Statussystems  
 
 ##### <a name="to-configure-status-summarizers"></a>So konfigurieren Sie Statuszusammenfassungen  
 
@@ -154,7 +153,7 @@ Da im Statussystem getrennte Konfigurationen für jeden Standort verwaltet werde
 
 4.  Klicken Sie auf **OK**.  
 
-###  <a name="a-namebkmkmonitorsystemstatusa-monitor-the-status-system-of-configuration-manager"></a><a name="BKMK_MonitorSystemStatus"></a> Überwachen des Statussystems für Configuration Manager  
+###  <a name="BKMK_MonitorSystemStatus"></a> Überwachen des Statussystems für Configuration Manager  
  **Systemstatus** bietet eine Übersicht über allgemeine Standortvorgänge sowie Standortservervorgänge in Ihrer Hierarchie. Hier können Sie Funktionsprobleme bei Standortsystemservern oder Komponenten erkennen, und Sie können den Systemstatus verwenden, um bestimmte Details zu verschiedenen Configuration Manager-Vorgängen zu überprüfen. Sie können den Systemstatus in der Configuration Manager-Konsole im Arbeitsbereich **Überwachung** im Knoten **Systemstatus** überwachen.  
 
  Von den meisten Configuration Manager-Standortsystemrollen und -Komponenten werden Statusmeldungen generiert. Details zu Statusmeldungen werden in den Betriebsprotokollen der jeweiligen Komponenten protokolliert und zusätzlich an die Standortdatenbank übermittelt. Dort werden sie zusammengefasst und in einem allgemeinen Rollup zu den Komponenten oder zur Standortsystemintegrität angezeigt. In diesen Rollups der Statusmeldungen sind Informationen und Details zu normalen Vorgängen sowie zu Warnungen und Fehlern enthalten. Sie können die Schwellenwerte konfigurieren, bei denen Warnungen und Fehlermeldungen ausgelöst werden, und eine Feinabstimmung des Systems ausführen. So können Sie gewährleisten, dass bekannte und nicht relevante Probleme nicht in den Rollupinformationen berücksichtigt werden, während Sie auf aktuelle Probleme bei Servern oder Komponentenvorgängen, die Sie möglicherweise untersuchen möchten, hingewiesen werden.  
@@ -170,19 +169,19 @@ Da im Statussystem getrennte Konfigurationen für jeden Standort verwaltet werde
 |In Konflikt stehende Datensätze|Verwenden Sie diesen Knoten, um Statusmeldungen für Clients mit Datensatzkonflikten anzuzeigen.<br /><br /> Configuration Manager identifiziert mithilfe der Hardware-ID Clients, bei denen es sich um Duplikate handeln könnte. Sie werden über in Konflikt stehende Datensätze informiert. Wenn Sie z.B. einen Computer erneut installieren müssen, bleibt die Hardware-ID unverändert, während sich die von Configuration Manager verwendete GUID ändern kann.|  
 |Statusmeldungsabfragen|Verwenden Sie diesen Knoten, um Statusmeldungen für bestimmte Ereignisse und entsprechende Details abzufragen. Mithilfe von Statusmeldungsabfragen können Sie die Statusmeldungen zu bestimmten Ereignissen finden.<br /><br /> Statusmeldungsabfragen bieten sich an, um zu ermitteln, wann eine bestimmte Komponente, ein Vorgang oder ein Configuration Manager-Objekt geändert wurde und von welchem Konto die Änderung ausgeführt wurde. Zum Beispiel können Sie die integrierte Abfrage **Erstellte, geänderte oder gelöschte Sammlungen** ausführen, um herauszufinden, wann eine bestimmte Sammlung von welchem Benutzerkonto erstellt wurde.|  
 
-####  <a name="a-namebkmkmanagestatusa-manage-site-status-and-component-status"></a><a name="bkmk_managestatus"></a> Verwalten von Standortstatus und Komponentenstatus  
+####  <a name="bkmk_managestatus"></a> Verwalten von Standortstatus und Komponentenstatus  
  Verwenden Sie die folgenden Informationen zum Verwalten von Standortstatus und Komponentenstatus:  
 
 -   Hinweise zum Konfigurieren von Schwellenwerten für das Statussystem finden Sie unter [Vorgehensweisen zum Konfigurieren des Statussystems](#bkmk_configstatus).  
 
 -   Verwenden Sie den **Service Manager für Configuration Manager**, um einzelne Komponenten zu verwalten.  
 
-####  <a name="a-namebkmkviewa-view-status-messages"></a><a name="bkmk_view"></a> Anzeigen von Statusmeldungen  
+####  <a name="bkmk_view"></a> Anzeigen von Statusmeldungen  
  Sie können die Statusmeldungen für einzelne Standortsystemserver und Komponenten anzeigen.  
 
  Zum Anzeigen von Statusmeldungen in der Configuration Manager-Konsole wählen Sie einen bestimmten Standortsystemserver oder eine Komponente aus, und klicken Sie dann auf **Meldungen anzeigen**. Sie können die Anzeige der Meldungen nach bestimmten Meldungstypen, nach einem bestimmten Meldungszeitraum und nach den Details der Statusmeldungen filtern.  
 
-##  <a name="a-namebkmkalertsa-alerts"></a><a name="bkmk_Alerts"></a> Warnungen  
+##  <a name="bkmk_Alerts"></a> Warnungen  
  Configuration Manager-Warnungen werden bei einigen Vorgängen generiert, wenn eine bestimmte Bedingung eintritt.  
 
 -   In der Regel werden Warnungen generiert, wenn ein Fehler auftritt, der behoben werden muss.  
@@ -204,7 +203,7 @@ Da im Statussystem getrennte Konfigurationen für jeden Standort verwaltet werde
 |Konfigurieren von E-Mail-Abonnements für Warnungen|Weitere Informationen finden Sie in diesem Thema im Abschnitt [Management tasks for alerts](#BKMK_Manage) .|  
 |Überwachen von Warnungen|Weitere Informationen finden Sie in diesem Thema im Abschnitt [Überwachen von Warnungen](#BKMK_MonitorAlerts)|  
 
-###  <a name="a-namebkmkmanagea-management-tasks-for-alerts"></a><a name="BKMK_Manage"></a> Management tasks for alerts  
+###  <a name="BKMK_Manage"></a> Management tasks for alerts  
 
 ##### <a name="to-manage-general-alerts"></a>So verwalten Sie allgemeine Warnungen  
 
@@ -288,7 +287,7 @@ Da im Statussystem getrennte Konfigurationen für jeden Standort verwaltet werde
     > [!NOTE]  
     >  Im Arbeitsbereich **Überwachung** können Sie Abonnements bearbeiten und löschen. Erweitern Sie den Knoten **Warnungen** , und klicken Sie auf den Knoten **Abonnements** .  
 
-###  <a name="a-namebkmkmonitoralertsa-monitor-alerts"></a><a name="BKMK_MonitorAlerts"></a> Überwachen von Warnungen  
+###  <a name="BKMK_MonitorAlerts"></a> Überwachen von Warnungen  
  Sie können die Warnungen im Arbeitsbereich **Überwachung** über den Knoten **Warnungen** anzeigen. Warnungen haben einen der folgenden Warnungszustände:  
 
 -   **Niemals ausgelöst**: Die Bedingung der Warnung wurde nicht erfüllt.  
@@ -310,9 +309,3 @@ Da im Statussystem getrennte Konfigurationen für jeden Standort verwaltet werde
      Sie können nur aktive Warnungen verschieben.  
 
 -   Sie können den **Kommentar** einer Warnung bearbeiten, um anderen Administratoren mitzuteilen, dass Sie die Warnung zur Kenntnis genommen haben. Im Kommentar können Sie beispielsweise bestimmen, wie eine Bedingung behoben werden kann, Informationen zum aktuellen Zustand einer Bedingung bereitstellen oder erklären, warum Sie die Warnung verschoben haben.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

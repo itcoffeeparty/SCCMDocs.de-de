@@ -6,22 +6,19 @@ ms.date: 05/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8da2887a-fd8e-438c-b926-849c121f7fdf
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
 ms.openlocfilehash: 9c6f349ead906532a7a58df74609de976769e251
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-the-long-term-servicing-branch-of-configuration-manager"></a>Verwalten von Long-Term Servicing Branch von Configuration Manager
 
@@ -57,4 +54,3 @@ Weitere Informationen zur Standorterweiterung finden Sie unter [Erweitern eines 
 
 ## <a name="recovery"></a>Wiederherstellung
 Bei der Wiederherstellung eines Standorts müssen Sie den Standort oder die Standortdatenbank auf den ursprünglichen Branch wiederherstellen. Sie können keine Current Branch-Standortdatenbank auf einer LTSB-Installation wiederherstellen oder umgekehrt.
-

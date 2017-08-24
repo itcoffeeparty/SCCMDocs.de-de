@@ -4,24 +4,21 @@ description: "Erfahren Sie mehr zu Features, die in Technical Preview für Syste
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2bafd028-1923-4463-9e3e-ee41bc0c437b
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
-ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
-ms.contentlocale: de-de
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 8b3d472c586e704ee48e9825138c72f655d89492
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1605 für System Center Configuration Manager
 
@@ -471,4 +468,3 @@ Wenn das Unternehmensportal in dieser Technical Preview länger als 15 Minuten g
      Klicken Sie auf **Weiter**.  
 
 4.  Überprüfen der Ergebnisse des Dateiimports. Die Details zuvor importierter IMEI- oder Seriennummern werden mit neuen Details aktualisiert.  Klicken Sie auf **Weiter**, um fortzufahren oder auf **Zurück**, um aktualisierte Details beizubehalten, und schließen Sie dann den Assistenten ab.  
-

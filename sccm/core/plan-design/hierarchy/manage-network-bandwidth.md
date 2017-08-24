@@ -6,25 +6,21 @@ ms.date: 2/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e80d1151-91db-4a27-8411-a957297b67d0
-caps.latest.revision: 15
-caps.handback.revision: 0
+caps.latest.revision: "15"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 37e4f27fcea0bbdd39c9fd3ab38aa46e3059f73a
 ms.openlocfilehash: d9dff97126c34a726677de60dd7647370c553b6e
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="manage-network-bandwidth-for-content"></a>Verwalten von Netzwerkbandbreite für Inhalte
 Um Ihnen die Verwaltung der Netzwerkbandbreite zu erleichtern, die für den Inhaltsverwaltungsvorgang von System Center Configuration Manager verwendet wird, können Sie die integrierten Steuerelemente für Zeitplanung und Drosselung verwenden. Sie können auch vorab bereitgestellte Inhalte nutzen. In den folgenden Abschnitten werden diese Optionen detaillierter beschrieben.
 
@@ -77,4 +73,3 @@ Optional können Sie den Verteilungspunkt als **vorab bereitgestellt** konfiguri
     >  Die genannten Optionen sind pro Paket anwendbar und können nur dann verwendet werden, wenn ein Verteilungspunkt als vorab bereitgestellt identifiziert wurde. Von Verteilungspunkten, die nicht als vorab bereitgestellt identifiziert wurden, werden diese Einstellungen ignoriert. In diesem Fall wird Inhalt vom Standortserver stets über das Netzwerk an diese Verteilungspunkte verteilt.  
 
 -   **Wiederherstellen der Inhaltsbibliothek auf einem Standortserver.** Beim Ausfall eines Standortservers werden Informationen zu Paketen und Anwendungen, die in der Inhaltsbibliothek enthalten sind, im Rahmen des Wiederherstellungsvorgangs auf der Standortdatenbank wiederhergestellt. Die Dateien der Inhaltsbibliothek werden bei diesem Vorgang jedoch nicht wiederhergestellt. Wenn Sie nicht über eine Sicherung des Dateisystems verfügen, um die Inhaltsbibliothek wiederherzustellen, können Sie eine vorab bereitgestellte Inhaltsdatei mit den erforderlichen Paketen und Anwendungen von einem anderen Standort erstellen. Anschließend können Sie die vorab bereitgestellte Inhaltsdatei auf dem wiederhergestellten Standortserver extrahieren. Weitere Informationen zur Standortserversicherung und -wiederherstellung finden Sie unter [Sicherung und Wiederherstellung für System Center Configuration Manager](/sccm/protect/understand/backup-and-recovery).  
-

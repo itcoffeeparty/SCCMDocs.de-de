@@ -6,8 +6,7 @@ ms.date: 07/31/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7def067e-845c-4db3-9d56-fa1dcf2fd7c7
@@ -15,12 +14,11 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
 ms.openlocfilehash: dab99748902df0fad32a1e2adad0c05e0dd8bdc9
-ms.contentlocale: de-de
-ms.lasthandoff: 07/29/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="checklist-for-installing-update-1706-for-system-center-configuration-manager"></a>Checkliste für die Installation des Updates 1706 für System Center Configuration Manager
 
@@ -177,4 +175,3 @@ Nach der Aktualisierung auf Version 1706 wird bei jedem Start von SMS_Executive 
 -    Microsoft SQL Server reported SQL message 515, severity 16: [23000][515][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot insert the value NULL into column 'RowVersion', table 'CM_GF1.dbo.AAD_SecretChange_Notify'; column does not allow nulls. INSERT fails. (Microsoft SQL Server meldete SQL 515, Schweregrad 16: [23000][515][Microsoft][SQL Server Native Client 11.0] [SQL Server] Der Wert NULL kann nicht in die Spalte 'RowVersion' der Tabelle 'CM_GF1.dbo.AAD_SecretChange_Notify;' eingefügt werden, da in der Spalte keine Nullen zulässig sind. INSERT ist fehlgeschlagen.)
 
 Diese Meldung können Sie Ignorieren.  Sie tritt auf, wenn vor dem Update auf Version 1706 keine Clouddienste für die Nutzung konfiguriert wurden. Dieses Problem wird in einer zukünftigen Version behoben.
-

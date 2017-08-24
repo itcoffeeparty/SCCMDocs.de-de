@@ -4,23 +4,21 @@ description: "Erfahren Sie mehr über Features, die in Technical Preview für Sy
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 134a2f60-811e-4dc9-a8f5-1ce0018c5c12
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
-ms.openlocfilehash: a84d3ab55066d26c3199ea374d8beb472d66f43f
-ms.contentlocale: de-de
-ms.lasthandoff: 01/24/2017
-
+ms.openlocfilehash: 08747ca981f6697e2bd621afe5df0e3bd06b332d
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1606-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1606 für System Center Configuration Manager
 
@@ -182,7 +180,7 @@ Stellen Sie sicher, dass Sie die Abonnement-ID kopieren, die dem Verwaltungszert
 #### <a name="set-up-cloud-proxy-service"></a>Einrichten des Cloudproxydiensts
 
 1. Navigieren Sie in der Configuration Manager-Konsole zu **Verwaltung > Clouddienste > Cloudproxydienst**.
-2. Klicken Sie auf **Cloudproxydienst erstellen **.
+2. Klicken Sie auf **Cloudproxydienst erstellen** .
 3. Geben Sie im Assistenten zur Erstellung von Cloudproxydiensten Ihre Azure-Abonnement-ID (aus dem Azure-Verwaltungsportal kopiert) ein, klicken Sie auf „Durchsuchen“, und wählen Sie die Zertifikatdatei aus, die Sie als Azure-Verwaltungszertifikat hochgeladen haben. Klicken Sie auf **Weiter**. Warten Sie einige Augenblicke, bis sich die Konsole mit Azure verbindet.
 4. Füllen Sie die zusätzlichen Details im Assistenten aus:
     - Geben Sie den privaten Schlüssel (PFX-Datei) an, den Sie aus dem benutzerdefinierten SSL-Zertifikat exportiert haben.
@@ -196,8 +194,8 @@ Stellen Sie sicher, dass Sie die Abonnement-ID kopieren, die dem Verwaltungszert
 
 1. Wechseln Sie in der Configuration Manager-Konsole zu **Verwaltung > Standortkonfiguration > Standorte**.
 2. Wählen Sie den primären Standort für die Clients aus, die Sie über den Cloudproxydienst verwalten möchten, und klicken Sie auf **Eigenschaften**.
-3. Aktivieren Sie das Kontrollkästchen neben **Use PKI client certificate (client authentication) when available ** (PKI-Clientzertifikat (Clientauthentifizierung) verwenden, sofern verfügbar) auf der Registerkarte Clientcomputerkommunikation im Eigenschaftenblatt für den primären Standort.
-4. Stellen Sie sicher, dass Sie das Kontrollkästchen neben **Die Zertifikatsperrliste für Standortsysteme wird von Clients überprüft ** deaktivieren. Diese Option wäre nur erforderlich, wenn Sie Ihre CRL veröffentlichen würden.
+3. Aktivieren Sie das Kontrollkästchen neben **Use PKI client certificate (client authentication) when available**  (PKI-Clientzertifikat (Clientauthentifizierung) verwenden, sofern verfügbar) auf der Registerkarte Clientcomputerkommunikation im Eigenschaftenblatt für den primären Standort.
+4. Stellen Sie sicher, dass Sie das Kontrollkästchen neben **Die Zertifikatsperrliste für Standortsysteme wird von Clients überprüft**  deaktivieren. Diese Option wäre nur erforderlich, wenn Sie Ihre CRL veröffentlichen würden.
 5. Klicken Sie auf **OK**.
 
 #### <a name="add-the-cloud-proxy-connector-point"></a>Hinzufügen des Cloudproxy-Connectorpunkts
@@ -235,7 +233,7 @@ Weitere Informationen finden Sie unter [Verwalten von Office 365 ProPlus-Updates
 Die Tasksequenzvariable „OSDPreverveDriveLetter“ bestimmt, ob die Tasksequenz bei der Anwendung des Images auf einen Zielcomputer den in der WIM-Datei des Betriebssystemimages erfassten Laufwerkbuchstaben verwendet.
 - Die Tasksequenzvariable wurde in Technical Preview 1606 als veraltet markiert.
 
-Während einer standardmäßigen Betriebssystembereitstellung bestimmt Windows Setup den Laufwerkbuchstaben, der am besten zur Verwendung geeignet ist (in der Regel C:). Wenn Sie ein anderes Laufwerk zur Verwendung angeben möchten, können Sie den Speicherort im Tasksequenzschritt „Betriebssystem anwenden“ ändern. Wechseln Sie zur Einstellung **Wählen Sie den Standort aus, an dem Sie dieses Betriebssystem anwenden möchten. **, wählen Sie **Bestimmter Buchstabe für logisches Laufwerk ** aus und wählen Sie das Laufwerk aus, das Sie verwenden möchten. Sie müssen dem gewählten Buchstaben auf dem Zielcomputer ein Laufwerk zuordnen. 
+Während einer standardmäßigen Betriebssystembereitstellung bestimmt Windows Setup den Laufwerkbuchstaben, der am besten zur Verwendung geeignet ist (in der Regel C:). Wenn Sie ein anderes Laufwerk zur Verwendung angeben möchten, können Sie den Speicherort im Tasksequenzschritt „Betriebssystem anwenden“ ändern. Wechseln Sie zur Einstellung **Wählen Sie den Standort aus, an dem Sie dieses Betriebssystem anwenden möchten.** , wählen Sie **Bestimmter Buchstabe für logisches Laufwerk**  aus und wählen Sie das Laufwerk aus, das Sie verwenden möchten. Sie müssen dem gewählten Buchstaben auf dem Zielcomputer ein Laufwerk zuordnen. 
 
 ## <a name="updatesandservicing"></a>Änderungen am Knoten „Updates und Wartung“
 Mit Technical Preview 1606 wurden mehrere Änderungen eingeführt, die für Updates und Wartung in der Configuration Manager-Konsole gelten:
@@ -266,4 +264,3 @@ Mit Technical Preview 1606 wurden mehrere Änderungen eingeführt, die für Upda
 -   **Umbenannte Option für die Präproduktion:**
 
     Auf dem Knoten „Updates und Wartung“ wurde die Schaltfläche **Clientoptionen** in **Präproduktionsclient höher stufen** umbenannt.
-

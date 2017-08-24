@@ -6,21 +6,20 @@ ms.date: 1/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ca4886d4-7173-46be-8dcd-1657d5b0deb9
-caps.latest.revision: 4
-caps.handback.revision: 0
+caps.latest.revision: "4"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
 ms.openlocfilehash: d06a2a955ff59fa84bb844033fe31874fc735087
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 #  <a name="service-windows-for-site-servers"></a>Dienstfenster für Standortserver
 
@@ -43,9 +42,3 @@ Wenn ein Dienstfenster konfiguriert ist:
 1.  Öffnen Sie in der Configuration Manager-Konsole **Verwaltung** > **Standortkonfiguration** > **Standorte**, und wählen Sie anschließend den Standort aus, für den Sie ein Dienstfenster konfigurieren möchten.  
 
 2.  Als Nächstes bearbeiten Sie die **Eigenschaften** der Standortserver und wählen die Registerkarte **Dienstfenster** aus, auf der Sie mindestens ein Dienstfenster für den jeweiligen Standortserver festlegen können.  
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-

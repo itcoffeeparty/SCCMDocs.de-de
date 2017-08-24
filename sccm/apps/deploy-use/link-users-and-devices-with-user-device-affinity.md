@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 6b1393b2a329bcd017dc961366afb09fa7a77899
 ms.openlocfilehash: 4e8e677851ad9ae7d027ab685e842a8ff5e35573
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="link-users-and-devices-with-user-device-affinity-in-system-center-configuration-manager"></a>Verknüpfen von Benutzern und Geräten mit Affinität zwischen Benutzer und Gerät in System Center Configuration Manager
 
@@ -138,9 +137,3 @@ Nachdem eine Affinität zwischen Benutzer und Gerät automatisch erstellt wurde,
 3.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Sammlung** **Affinitätsanforderungen verwalten** aus.  
 
 4.  Wählen Sie im Dialogfeld **Affinitätsanforderungen zwischen Benutzer und Gerät verwalten** eine Affinitätsanforderungen und anschließend **Genehmigen** oder **Ablehnen** aus.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

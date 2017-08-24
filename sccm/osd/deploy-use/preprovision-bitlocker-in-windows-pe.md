@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c7c94ba0-d709-4129-8077-075a8abaea1c
-caps.latest.revision: 4
-caps.handback.revision: 0
+caps.latest.revision: "4"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: baca498dbc5b8e168852aa3c18ee23a9c483e69c
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="preprovision-bitlocker-in-windows-pe-with-system-center-configuration-manager"></a>Vorabbereitstellung von BitLocker in Windows PE mit System Center Configuration Manager
 
@@ -60,9 +59,3 @@ Mithilfe des Tasksequenzschritts **BitLocker vorab bereitstellen** in System Cen
 |Gerätetreiber anwenden|In diesem Schritt werden die geeigneten Treiber identifiziert und als Teil der Betriebssystembereitstellung installiert. Weitere Informationen finden Sie unter [Treiber automatisch anwenden](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers).|  
 |Windows und ConfigMgr einrichten|In diesem Schritt wird der Übergang von Windows PE zum neuen Betriebssystem ausgeführt. Dieser Tasksequenzschritt muss bei jeder Betriebssystembereitstellung ausgeführt werden. Mit diesem Schritt wird der Configuration Manager-Client im neuen Betriebssystem installiert und die weitere Ausführung der Tasksequenz im neuen Betriebssystem ermöglicht. Weitere Informationen finden Sie unter [Windows und ConfigMgr einrichten](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr).|  
 |BitLocker aktivieren|Bei diesem Schritt wird die BitLocker-Verschlüsselung auf der Festplatte aktiviert, und die Schlüsselschutzkomponenten werden festgelegt. Da die Festplatte zuvor mit BitLocker vorab bereitgestellt wurde, ist dieser Schritt sehr schnell abgeschlossen. Windows 7 erfordert das Hinzufügen einer Schlüsselschutzkomponente. Wenn Sie diesen Schritt nicht verwenden, können Sie das Befehlszeilenprogramm „manage-bde.exe“ ausführen, um eine Schlüsselschutzkomponente festzulegen. Weitere Informationen finden Sie unter [BitLocker aktivieren](../understand/task-sequence-steps.md#BKMK_EnableBitLocker).|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

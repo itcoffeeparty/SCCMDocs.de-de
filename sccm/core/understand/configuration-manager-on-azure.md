@@ -7,20 +7,18 @@ ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.topic: article
 ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: 5276ad999fc871496d79e6efff34d5edc6335380
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Configuration Manager in Azure – Häufig gestellte Fragen
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -41,11 +39,11 @@ Nein, es handelt sich um ein IaaS-Szenario (Infrastructure-as-a-Service), da Sie
 
 ### <a name="what-areas-should-i-pay-attention-to-when-considering-a-move-of-my-configuration-manager-infrastructure-to-azure"></a>Auf welche Bereiche sollte ich achten, wenn ich das Verschieben meiner Configuration Manager-Infrastruktur in Azure in Betracht ziehe?
 Das ist eine gute Frage. Die folgenden Bereiche sind bei dieser Entscheidung am wichtigsten, jeder dieser Bereiche wird in einem separaten Abschnitt dieses Themas behandelt:
-1.    Netzwerk
-2.    Verfügbarkeit
-3.    Leistung
-4.    Kosten
-5.    Benutzerfreundlichkeit
+1.  Netzwerk
+2.  Verfügbarkeit
+3.  Leistung
+4.  Kosten
+5.  Benutzerfreundlichkeit
 
 ## <a name="networking"></a>Netzwerk
 ### <a name="what-about-networking-requirements-should-i-use-expressroute-or-an-azure-vpn-gateway"></a>Wie sieht es mit Netzwerkanforderungen aus? Sollte ich ExpressRoute oder ein Azure-VPN Gateway verwenden?
@@ -117,7 +115,7 @@ Die folgenden Tabellen enthalten die anfänglich vorgeschlagene Anzahl von Daten
 |**25.000-50.000**      | Standortserver: F4S </br>Datenbankserver: DS13_V2 | Standortserver: 1xP30 </br>Datenbankserver: 2xP30 (Stripeset)   |
 |**50.000-100.000**     | Standortserver: F8S </br>Datenbankserver: DS14_V2 | Standortserverserver: 2xP30 (Stripeset)   </br>Datenbankserver: 3xP30 (Stripeset)   |
 
-Die folgende Abbildung zeigt eine Beispielkonfiguration für 50.000-100.000-Clients auf DS14_V2 mit 3xP30-Datenträgern in einem Stripesetvolume mit separaten logischen Volumes für die Installations- und Datenbankdateien von Configuration Manager:  ![VM-Datenträger](media/vm_disks.png)  
+Die folgende Abbildung zeigt eine Beispielkonfiguration für 50.000-100.000-Clients auf DS14_V2 mit 3xP30-Datenträgern in einem Stripesetvolume mit separaten logischen Volumes für die Installations- und Datenbankdateien von Configuration Manager: ![VM-Datenträger](media/vm_disks.png)  
 
 
 
@@ -181,4 +179,3 @@ Das ist schwer zu sagen, da jede Umgebung anders ist. Am besten ermitteln Sie di
  - Weitere Informationen zu ExpressRoute: http://azure.microsoft.com/documentation/articles/expressroute-introduction/
 
  
-

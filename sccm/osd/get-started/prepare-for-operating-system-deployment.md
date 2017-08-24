@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8d27e5ac-4f19-4b3d-85c7-fa34eb5d5e7e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: dcc35f39b6ece8b466fc3770c6b9f304180eb42a
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prepare-for-operating-system-deployment-in-system-center-configuration-manager"></a>Vorbereiten auf die Betriebssystembereitstellung in System Center Configuration Manager
 
@@ -40,9 +39,3 @@ Es gibt mehrere Dinge, die Sie in Configuration Manager ausführen müssen, bevo
 -   [Vorbereiten auf Bereitstellungen für unbekannte Computer](prepare-for-unknown-computer-deployments.md)  
 
 -   [Zuordnen von Benutzern zu einem Zielcomputer](associate-users-with-a-destination-computer.md)  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

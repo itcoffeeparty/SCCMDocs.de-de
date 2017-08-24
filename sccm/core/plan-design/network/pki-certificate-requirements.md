@@ -6,22 +6,19 @@ ms.date: 04/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
 ms.openlocfilehash: a99b58acef7448af2c9576bfa0ec2635f5a4f86f
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="pki-certificate-requirements-for-system-center-configuration-manager"></a>PKI-Zertifikatanforderungen für System Center Configuration Manager
 
@@ -89,4 +86,3 @@ Die für System Center Configuration Manager erforderlichen PKI-Zertifikate (Pub
 |Intel AMT-basierte Computer|Serverauthentifizierung|**Webserver** (geändert)<br /><br /> Sie müssen den Antragstellernamen für **Aus diesen Informationen in Active Directory erstellen**konfigurieren und dann für **Format des Antragstellernamens** die Option **Allgemeiner Name**auswählen.<br /><br /> Sie müssen der universellen Sicherheitsgruppe, die Sie in den Eigenschaften der Out-of-Band-Verwaltungskomponente angeben, die Berechtigungen **Lesen** und **Anmelden** gewähren.|**Der Wert „Erweiterte Schlüsselverwendung“** muss **Serverauthentifizierung (136155731)**<br /><br /> Der Antragstellername muss den FQDN für den AMT-basierten Computer enthalten, der automatisch von den Active Directory-Domänendiensten bereitgestellt wird.|Dieses Zertifikat befindet sich im permanenten Arbeitsspeicher des Verwaltungscontrollers des Computers und kann unter Windows nicht angezeigt werden.<br /><br /> Jeder Intel AMT-basierte Computer fordert dieses Zertifikat während der AMT-Bereitstellung und für nachfolgende Updates an. Wenn Sie die AMT-Bereitstellungsinformationen von diesen Computern entfernen, wird dieses Zertifikat gesperrt.<br /><br /> Bei der Installation dieses Zertifikats auf Intel AMT-basierten Computern wird auch die Zertifikatkette zur Stammzertifizierungsstelle installiert. Von AMT-basierten Computern werden keine Zertifizierungsstellenzertifikate unterstützt, deren Schlüssellänge 2.048 Bits überschreitet.<br /><br /> Wenn das Zertifikat auf Intel AMT-basierten Computern installiert ist, werden dadurch die AMT-basierten Computer für den Standortsystemserver des Out-of-Band-Dienstpunkts und für Computer authentifiziert, auf denen die Out-of-Band-Verwaltungskonsole ausgeführt wird, und alle Datenübertragungen zwischen den Computern werden durch Transport Layer Security (TLS) geschützt.|  
 |Intel AMT 802.1X-Clientzertifikat|Clientauthentifizierung|**Arbeitsstationsauthentifizierung**<br /><br /> Sie müssen den Antragstellernamen für **Aus diesen Informationen in Active Directory erstellen** konfigurieren, für **Format des Antragstellernamens** die Option **Allgemeiner Name** auswählen, den DNS-Namen löschen, und dann den Benutzerprinzipalnamen (UPN) für den alternativen Antragstellernamen auswählen.<br /><br /> Sie müssen der universellen Sicherheitsgruppe, die Sie in den Eigenschaften der Out-of-Band-Verwaltungskomponente angeben, die Berechtigungen **Lesen** und **Anmelden** für diese Zertifikatvorlage gewähren.|**Der Wert „Erweiterte Schlüsselverwendung“** muss **Clientauthentifizierung (136155732)**<br /><br /> Der Antragstellername muss den FQDN für den AMT-basierten Computer enthalten und der alternative Antragstellername den UPN.<br /><br /> Maximal unterstützte Schlüssellänge: 2.048 Bits.|Dieses Zertifikat befindet sich im permanenten Arbeitsspeicher des Verwaltungscontrollers des Computers und kann unter Windows nicht angezeigt werden.<br /><br /> Jeder Intel AMT-basierte Computer kann dieses Zertifikat während der AMT-Bereitstellung anfordern, jedoch wird dieses Zertifikat durch die Entfernung der AMT-Bereitstellungsinformationen nicht gesperrt.<br /><br /> Nach der Installation des Zertifikats auf AMT-basierten Computern authentifiziert dieses Zertifikat die AMT-basierten Computer gegenüber dem RADIUS-Server, damit sie für den Netzwerkzugriff autorisiert werden können.|  
 |Durch Microsoft Intune registrierte mobile Geräte|Clientauthentifizierung|Nicht zutreffend: Dieses Zertifikat wird von Intune automatisch erstellt.|Der Wert **Erweiterte Schlüsselverwendung** enthält **Clientauthentifizierung (1.3.6.1.5.5.7.3.2)**.<br /><br /> Mithilfe von drei benutzerdefinierten Erweiterungen wird das Intune-Abonnement des Kunden eindeutig identifiziert.<br /><br /> Benutzer können den Wert Antragsteller des Zertifikats während der Anmeldung angeben. Dieser Wert wird von Intune jedoch nicht verwendet, um das Gerät zu identifizieren.<br /><br /> Die Schlüsselgröße beträgt 2.048 Bit, und es wird der SHA-1-Hashalgorithmus verwendet.<br /><br /> **Hinweis:** Sie können diese Einstellungen nicht ändern. Diese Informationen werden nur zu Informationszwecken bereitgestellt.|Dieses Zertifikat wird automatisch angefordert und installiert, wenn authentifizierte Benutzer ihre mobilen Geräte bei Microsoft Intune registrieren. Das resultierende Zertifikat auf dem Gerät befindet sich im Computerspeicher und dient zum Authentifizieren des angemeldeten mobilen Geräts bei Intune, damit es danach verwaltet werden kann.<br /><br /> Aufgrund der benutzerdefinierten Erweiterungen im Zertifikat ist die Authentifizierung auf das Intune-Abonnement beschränkt, das für die Organisation eingerichtet wurde.|
-

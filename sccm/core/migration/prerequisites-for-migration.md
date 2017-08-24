@@ -6,23 +6,20 @@ ms.date: 3/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ec976930-7467-4d3c-b33c-991bf408a74a
-caps.latest.revision: 10
-caps.handback.revision: 0
+caps.latest.revision: "10"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ee7f69bd65152deffb2456d9807e1e8fee8802ec
 ms.openlocfilehash: cd90f5462ac4bb4c0a2021e6d5dde65161b9c5f6
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prerequisites-for-migration-in-system-center-configuration-manager"></a>Voraussetzungen für die Migration in System Center Configuration Manager
 
@@ -128,4 +125,3 @@ Folgende Konfigurationen sind für Migration und Migrationsvorgänge erforderlic
     -   Damit ein System Center 2012 Configuration Manager- oder System Center Configuration Manager-Verteilungspunkt neu zugewiesen werden kann, muss das Konto über die Berechtigung **Ändern** für das **Website**-Objekt am Quellstandort verfügen. Sie erteilen dem Konto diese Berechtigung mithilfe der rollenbasierten Verwaltung. Informationen zur Verwendung der rollenbasierten Verwaltung finden Sie unter [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
 
      Soll ein Verteilungspunkt erfolgreich aktualisiert oder einer neuen Hierarchie zugewiesen werden, müssen die für Clientanforderungen konfigurierten Ports am Standort, an dem der Verteilungspunkt in der Quellhierarchie verwaltet wird, den für Clientanforderungen konfigurierten Ports am Zielstandort entsprechen, an dem der Verteilungspunkt verwaltet wird. Weitere Informationen zu Clientanforderungsports finden Sie unter [Konfigurieren von Clientkommunikationsports in System Center Configuration Manager](../../core/clients/deploy/configure-client-communication-ports.md).  
-

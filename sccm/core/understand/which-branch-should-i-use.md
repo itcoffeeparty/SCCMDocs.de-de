@@ -6,22 +6,19 @@ ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 662901e850566756759fcfc61c58f3c0e56bc5aa
 ms.openlocfilehash: 26356a80bd8c78d4517253bae73e53d8d8f3a73a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/03/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>Welcher Branch von Configuration Manager soll verwendet werden?
 
@@ -86,7 +83,7 @@ Zur Installation des LTSB als neuen Standort oder als Upgrade von einem unterst�
 > Sie können auch eine Evaluierungsversion von System Center 2016 erhalten, die Sie im [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview) herunterladen können.
 
 **Features des LTSB**
--    Empfängt konsoleninterne Updates, mit denen wichtige Sicherheitsfixes bereitgestellt werden
+-   Empfängt konsoleninterne Updates, mit denen wichtige Sicherheitsfixes bereitgestellt werden
 - Stellt eine Installationsoption bereit, wenn der Software Assurance-Vertrag oder entsprechende Rechte für Configuration Manager abgelaufen sind
 - Unterstützt ein Upgrade (Konvertierung) auf Current Branch, wenn Sie über einen aktuellen Software Assurance-Vertrag oder entsprechende Rechte für Configuration Manager verfügen
 
@@ -96,14 +93,14 @@ Der LTSB basiert auf der Current Branch-Version 1606 und weist die folgenden Ein
 - Unterstützt eine eingeschränkte feste Liste mit Server- und Clientbetriebssystemen und entsprechenden Technologien wie SQL Server-Versionen. Weitere Informationen dazu, was von diesem Branch unterstützt wird, finden Sie unter [Supported Configurations for the Long-Term Servicing Branch (Unterstützte Konfigurationen für Long-Term Servicing Branch)](supported-configurations-for-ltsb.md).
 - Erhält keine Updates für neue Features.
 - Unterstützt nicht das Hinzufügen eines Microsoft Intune-Abonnements, das den Gebrauch von Folgendem verhindert:
-  -    Intune in einer Konfiguration mit hybrider Verwaltung mobiler Geräte
+  - Intune in einer Konfiguration mit hybrider Verwaltung mobiler Geräte
  - Lokale Verwaltung mobiler Geräte
--    Verwendung des Windows 10-Wartungsdashboards, Wartungspläne, Current Branch (CB) von Windows 10 und Current Branch for Business (CBB) werden nicht unterstützt.
+-   Verwendung des Windows 10-Wartungsdashboards, Wartungspläne, Current Branch (CB) von Windows 10 und Current Branch for Business (CBB) werden nicht unterstützt.
 - Zukünftige Releases von LTSB für Windows 10 und Windows Server werden nicht unterstützt.
--    Keine Unterstützung für Asset Intelligence.
--    Keine Unterstützung für cloudbasierte Verteilungspunkte.
--    Keine Unterstützung für den Support für Exchange Online als Exchange Connector.
--    Unterstützt keine Features der Vorabversion.
+-   Keine Unterstützung für Asset Intelligence.
+-   Keine Unterstützung für cloudbasierte Verteilungspunkte.
+-   Keine Unterstützung für den Support für Exchange Online als Exchange Connector.
+-   Unterstützt keine Features der Vorabversion.
 
 
 
@@ -115,7 +112,7 @@ Der LTSB basiert auf der Current Branch-Version 1606 und weist die folgenden Ein
   - [Lizenzierung und Branches für System Center Configuration Manager](learn-more-editions.md)
   - [Baseline and update versions (Baseline- und Updateversionen)](/sccm/core/servers/manage/updates#baseline-and-update-versions) in [Updates for Configuration Manager (Updates für Configuration Manager)](/sccm/core/servers/manage/updates)
 - Es gibt keine Option zum Konvertieren von der LTSB- zu einer Technical Preview-Version. Technical Previews sind separate Installationen, für die keine Lizenz erforderlich ist.
--    Für eine Evaluierungsversion von Current Branch kann kein Upgrade auf eine LTSB-Installation durchgeführt werden.
+-   Für eine Evaluierungsversion von Current Branch kann kein Upgrade auf eine LTSB-Installation durchgeführt werden.
 
 
 ## <a name="technical-preview-for-system-center-configuration-manager"></a>Technical Preview für System Center Configuration Manager
@@ -141,8 +138,8 @@ Features, die mit einer Technical Preview eingeführt werden, werden später hä
 Weitere Informationen finden Sie unter [Technical Preview für System Center Configuration Manager](/sccm/core/get-started/technical-preview).
 
 **Update-Optionen**
--    Für eine neue Technical Preview-Version kann jedes konsoleninterne Update installiert werden.
--    Es gibt keine Option zum Konvertieren von einer Technical Preview-Version zur Current Branch- oder LTSB-Version.
+-   Für eine neue Technical Preview-Version kann jedes konsoleninterne Update installiert werden.
+-   Es gibt keine Option zum Konvertieren von einer Technical Preview-Version zur Current Branch- oder LTSB-Version.
 
 
 ## <a name="identify-your-branch-and-version"></a>Identifizieren des Branch und der Version
@@ -154,4 +151,3 @@ Um die Version Ihres Standorts zu überprüfen, wechseln Sie oben links in der K
 **Branch**  
 Um den Branch Ihres Standorts (als LTSB oder Current Branch) zu bestätigen, gehen Sie in der Konsole zu **Verwaltung** > **Standortkonfiguration** > **Standorte**, und öffnen Sie **Hierarchieeinstellungen**. Wenn die Möglichkeit besteht, in Current Branch zu konvertieren, und diese Option aktiviert ist, führt der Standort die LTSB-Version aus. Wenn der Standort Current Branch ausführt, ist diese Option ausgegraut.
 Informationen zu den verschiedenen Versionen von Configuration Manager finden Sie unter „Baseline- und Updateversionen“ im Thema [Updates für Configuration Manager](/sccm/core/servers/manage/updates).
-

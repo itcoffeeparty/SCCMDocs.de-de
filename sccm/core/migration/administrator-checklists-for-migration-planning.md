@@ -6,22 +6,20 @@ ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 295fdf07-93cc-490c-acdd-ce3ee88cb36f
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 5e6e8a18a8fc705c993177b3c5b4113a351a45a4
 ms.openlocfilehash: 36f7c37e4da3f2bce64a25d266dae57d9fe98c36
-ms.lasthandoff: 12/29/2016
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="administrator-checklists-for-migration-planning-in-system-center-configuration-manager"></a>Administratorchecklisten zur Migrationsplanung in System Center Configuration Manager
 
@@ -165,4 +163,3 @@ Verwenden Sie die folgende Checkliste für die Datenmigration von der Quellhiera
 -   **Fertigstellen der Migration:**  
 
     Nachdem Sie die Daten und Clients aller Standorte der Quellhierarchie migriert und ein Upgrade der relevanten Verteilungspunkte durchgeführt haben, können Sie die Migration fertig stellen. Beenden Sie das Sammeln von Daten für jeden Quellstandort in der Quellhierarchie, um die Migration fertigzustellen. Dann können nicht benötigte Migrationsinformationen entfernt werden, und die Infrastruktur der Quellhierarchie kann außer Betrieb genommen werden. Weitere Informationen finden Sie unter [Planen des Abschließens der Migration in System Center Configuration Manager](../../core/migration/planning-to-complete-migration.md).  
-

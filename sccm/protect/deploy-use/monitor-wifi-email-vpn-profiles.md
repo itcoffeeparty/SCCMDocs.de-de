@@ -6,22 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e2315b8b-98bc-40e1-8ef9-bfb5e69ab109
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Nbigman
 ms.author: nbigman
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: 73d941633d270cf9628f8be14e1e56f3c78624b6
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="monitor-email-wi-fi-and-vpn-profiles-in-system-center-configuration-manager"></a>Überwachen von E-Mail-, WLAN- und VPN-Profilen in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -32,7 +30,7 @@ Nachdem Sie System Center Configuration Manager E-Mail-, WLAN- oder VPN-Profile 
 
 -   [Anzeigen von Kompatibilitätsergebnissen mithilfe von Berichten](#BKMK_Reports)  
 
-##  <a name="a-namebkmkconsolea-how-to-view-compliance-results-in-the-configuration-manager-console"></a><a name="BKMK_console"></a> Anzeigen von Kompatibilitätsergebnissen in der Configuration Manager-Konsole  
+##  <a name="BKMK_console"></a> Anzeigen von Kompatibilitätsergebnissen in der Configuration Manager-Konsole  
  Mit diesem Verfahren können Sie Details zur Kompatibilität der bereitgestellten Profile in der System Center Configuration Manager-Konsole anzeigen.  
 
 #### <a name="to-view-compliance-results-in-the-configuration-manager-console"></a>So zeigen Sie Kompatibilitätsergebnisse in der Configuration Manager-Konsole an  
@@ -60,16 +58,10 @@ Nachdem Sie System Center Configuration Manager E-Mail-, WLAN- oder VPN-Profile 
 
 5.  Auf der Seite **Bereitstellungsstatus** finden Sie ausführliche Informationen zur Kompatibilität des bereitgestellten Profils. Unter dem Knoten **Bereitstellungen** wird ein temporärer Knoten erstellt, mit dessen Hilfe Sie die Informationen schnell wiederfinden können.  
 
-##  <a name="a-namebkmkreportsa-how-to-view-compliance-results-by-using-reports"></a><a name="BKMK_Reports"></a> Anzeigen von Kompatibilitätsergebnissen mithilfe von Berichten  
+##  <a name="BKMK_Reports"></a> Anzeigen von Kompatibilitätsergebnissen mithilfe von Berichten  
  Zu den Kompatibilitätseinstellungen, in die auch die Profile in System Center Configuration Manager eingeschlossen sind, gehören verschiedene integrierte Berichte, mit denen Sie Informationen zu Profilen überwachen können. Diese Berichte verfügen über die Berichtskategorie **Kompatibilitäts- und Einstellungsverwaltung**.  
 
 > [!IMPORTANT]  
 >  Sie müssen ein Platzhalterzeichen (%) verwenden, wenn Sie in Berichten zu Kompatibilitätseinstellungen die Parameter **Gerätefilter** und **Benutzerfilter** eingestellt haben.  
 
  Weitere Informationen zum Konfigurieren der Berichterstellung in System Center Configuration Manager finden Sie unter [Berichterstellung in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

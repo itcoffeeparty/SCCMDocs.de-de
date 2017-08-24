@@ -6,23 +6,20 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 8d15ae3f-de42-461f-a907-c43873da22d2
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: d8ccfee895f5fd3649fb4bef4a62fd790cce7ea8
-ms.contentlocale: de-de
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 75bddb41d4d1cf209fa7595c52b5a6aa831ba3dd
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="planning-for-client-deployment-to-mac-computers-in-system-center-configuration-manager"></a>Planen der Clientbereitstellung auf Macintosh-Computern in System Center Configuration Manager
 
@@ -111,4 +108,3 @@ Sie können den Configuration Manager-Client auf Macintosh-Computern installiere
 -   Clientprüfung des Clientstatus und Wiederherstellung  
 
  Weitere Informationen zum Installieren und Konfigurieren des Configuration Manager-Macintosh-Clients finden Sie unter [How to deploy clients to Macs in System Center Configuration Manager (Bereitstellen von Clients auf Macintosh-Computern in System Center Configuration Manager)](../../../../core/clients/deploy/deploy-clients-to-macs.md).
-

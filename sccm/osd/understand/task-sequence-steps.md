@@ -6,22 +6,20 @@ ms.date: 03/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
-caps.latest.revision: 26
-caps.handback.revision: 0
+caps.latest.revision: "26"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: b7461f89f483314bd07248bbc9d5dde85ca6b6c2
 ms.openlocfilehash: e0726febc4c36a26c5e067914734838bf2681e6c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>Tasksequenzschritte in System Center Configuration Manager
 
@@ -1707,4 +1705,3 @@ Verwenden Sie im Tasksequenz-Editor den Schritt [Tasksequenzvariable festlegen](
  Gibt an, ob Setup dynamische Updatevorgänge durchführt, z. B. Suchen, Herunterladen und Installieren von Updates (entspricht der Befehlszeilenoption „/DynamicUpdate“). Diese Einstellung ist nicht kompatibel mit Configuration Manager-Softwareupdates, kann aber aktiviert werden, wenn Sie Updates mit WSUS (eigenständig) oder Windows Update verarbeiten.  
 
  **Richtlinie überschreiben und standardmäßiges Microsoft Update verwenden**: Wenn Sie diese Einstellung auswählen, wird die lokale Richtlinie vorübergehend in Echtzeit außer Kraft gesetzt, um dynamische Updatevorgänge auszuführen und den Computer Updates von Windows Update abrufen zu lassen.  
-

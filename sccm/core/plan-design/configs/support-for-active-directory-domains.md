@@ -6,23 +6,20 @@ ms.date: 3/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8c5a13f8-42d5-4898-b7b6-e594dae8b335
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f397efe458fd85124d2a83d4a869642015fd4a5
 ms.openlocfilehash: 2654ab4eaaaf6a4bf3bd7dca9908e7033647dc2c
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="supported-active-directory-domains-for-system-center-configuration-manager"></a>Unterstützte Active Directory-Domänen für System Center Configuration Manager
 
@@ -88,4 +85,3 @@ In der folgenden Tabelle werden die bei zusammenhanglosen Namespaces unterstütz
      **Beispiel:** Die einteilige Domäne „Contoso“ ist so konfiguriert, dass sie im DNS von „contoso.com“ einen zusammenhanglosen Namespace aufweist. Wenn Sie das DNS-Suffix in Configuration Manager also für einen Computer in der Domäne „Contoso“ festlegen, geben Sie „Contoso.com“ und nicht „Contoso“ an.  
 
 -   Distributed Component Object Model-Verbindungen (DCOM) zwischen Standortservern im Systemkontext müssen erfolgreich sein, was durch die Kerberos-Authentifizierung sichergestellt wird.  
-

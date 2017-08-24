@@ -6,22 +6,19 @@ ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8cc13635-85d6-4b07-a3ec-c42188bc5c74
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: 35a4c201f73469fdfaa5bb8629e91886f7ae8751
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="use-the-update-registration-tool-to-import-hotfixes-to-system-center-configuration-manager"></a>Verwenden des Tools zur Updateregistrierung, um Hotfixes in System Center Configuration Manager zu importieren
 
@@ -72,4 +69,3 @@ Wenn Sie ein Out-of-Band-Release installieren müssen, und der Update- oder Hotf
 3.  Öffnen Sie die Configuration Manager-Konsole, und navigieren Sie zu **Verwaltung** > **Updates und Wartung**. Die importierten Hotfixes stehen jetzt zur Installation bereit. (Vor Version 1702 befand sich „Updates und Wartung“ unter **Verwaltung** > **Clouddienste**.)
 
  Weitere Informationen zum Installieren von Updates finden Sie unter [Installieren konsoleninterner Updates für System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md)  
-

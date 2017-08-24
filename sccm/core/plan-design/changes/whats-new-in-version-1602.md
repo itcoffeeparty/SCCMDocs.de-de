@@ -6,22 +6,20 @@ ms.date: 12/30/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4021eca1-adfb-4e5a-adee-159263c29637
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: 9a548f43625a907173e7b967d26356bd80f1c5d9
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>Neuerungen in Version 1602 von System Center Configuration Manager
 
@@ -221,4 +219,3 @@ Configuration Manager kann den Status der Aktivierungssperre von überwachten un
 -   **Nicht konform**: Benutzer haben eine Version der Geschäftsbedingungen, aber nicht die neueste akzeptiert.  
 
 -   **Unbekannt**: Benutzer haben die Geschäftsbedingungen nie akzeptiert, einschließlich derjenigen ohne registriertes Gerät.  
-

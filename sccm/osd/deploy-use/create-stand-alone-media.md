@@ -6,23 +6,20 @@ ms.date: 06/07/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
-caps.latest.revision: 21
-caps.handback.revision: 0
+caps.latest.revision: "21"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
 ms.openlocfilehash: 98f902429ad1b9965a0dc4cc2e1bd071ad5c0779
-ms.contentlocale: de-de
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-stand-alone-media-with-system-center-configuration-manager"></a>Erstellen eigenständiger Medien mit System Center Configuration Manager
 
@@ -176,4 +173,3 @@ Sie müssen für die vom Assistenten zum Erstellen von Tasksequenzmedien erstell
 |Windows und ConfigMgr einrichten|Mit diesem Tasksequenzschritt können Sie die Configuration Manager-Clientsoftware installieren. Mit dem Configuration Manager wird die GUID des Configuration Manager-Clients installiert und registriert. Sie können die erforderlichen Installationsparameter im Fenster **Installationseinstellungen** zuweisen.|  
 |Benutzerdateien und Einstellungen wiederherstellen – **(Neue Tasksequenz-Untergruppe)**|Erstellen Sie eine weitere Untergruppe der Tasksequenz. Diese Untergruppe enthält die zum Wiederherstellen des Benutzerzustands erforderlichen Schritte.|  
 |Benutzerzustand wiederherstellen|Mithilfe dieses Tasksequenzschritts können Sie Windows-EasyTransfer bzw. USMT initiieren, um den Benutzerzustand und die Benutzereinstellungen, die mit der Aktion Benutzerzustand erfassen erfasst wurden, auf einem Zielcomputer wiederzuherstellen.|  
-

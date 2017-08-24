@@ -6,22 +6,20 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8adbe2e2-de26-4a80-8bbd-a5f34b8bac79
-caps.latest.revision: 18
-caps.handback.revision: 0
+caps.latest.revision: "18"
+caps.handback.revision: "0"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
 ms.openlocfilehash: bc7bb99bc526ed0bbaaad15fc9af39fa8b7c3893
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-applications-in-system-center-configuration-manager"></a>Verwalten von Anwendungen in System Center Configuration Manager
 
@@ -51,9 +49,8 @@ Hier sind einige Punkte, die bei der Bereitstellung und Überwachung von Anwendu
 
 - MDM-registrierte Geräte unterstützen keine simulierten Bereitstellungen, Einstellungen für Benutzerfreundlichkeit oder Zeitplanung.
 
-- Wenn Sie bereits eine iOS-App-Konfigurationsrichtlinie konfiguriert haben, können Sie die Bereitstellung dieser zuordnen. Siehe [Einstellungen anwenden für iOS-Apps mit Konfigurationsrichtlinien](configure-ios-apps-with-app-configuration-policies.md).
+- Wenn Sie bereits eine iOS-App-Konfigurationsrichtlinie konfiguriert haben, können Sie die Bereitstellung dieser zuordnen. Weitere Informationen finden Sie unter [Einstellungen anwenden für iOS-Apps mit Konfigurationsrichtlinien](configure-ios-apps-with-app-configuration-policies.md).
 
 ### <a name="next-steps"></a>Nächste Schritte
 
 Nach einiger Zeit möchten Sie möglicherweise Änderungen an einer Anwendung vornehmen, eine Anwendung deinstallieren oder eine bereits bereitgestellte Anwendung durch eine neue Anwendung ersetzen. Weitere Informationen zu diesen Funktionen finden Sie unter [Aktualisieren und Deinstallieren von Anwendungen mit System Center Configuration Manager](../../apps/deploy-use/update-and-retire-applications.md).
-

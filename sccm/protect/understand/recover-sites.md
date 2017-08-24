@@ -6,8 +6,7 @@ ms.date: 6/5/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
@@ -15,14 +14,12 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f7cd9c71287d62c9f5d36e2f032bc2a6065572ae
 ms.openlocfilehash: 49eea15ea2888f8f93c33eb771c09147ba21529e
-ms.contentlocale: de-de
-ms.lasthandoff: 06/06/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 #  <a name="recover-a-configuration-manager-site"></a>Wiederherstellen eines Configuration Manager-Standorts
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -244,4 +241,3 @@ Während des Wiederherstellungsprozesses wird von Configuration Manager überpr�
 Bei einem Verteilungspunkt, der sich nicht am sekundären Standort befindet, müssen Sie während der Wiederherstellung des sekundären Standorts den Verteilungspunkt nicht neu installieren. Nach der Wiederherstellung des sekundären Standorts wird der Standort automatisch mit dem Verteilungspunkt synchronisiert.
 
 Sie können den Status der Wiederherstellung des sekundären Standorts überprüfen, indem Sie in der Configuration Manager-Konsole unter dem Knoten **Standorte** die Aktion **Installationsstatus anzeigen** verwenden.
-

@@ -4,23 +4,21 @@ description: "Erfahren Sie mehr über die Funktionen, die mit Technical Preview 
 ms.custom: na
 ms.date: 03/24/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2e801f8c-d331-41ee-8f27-908448fc0951
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f4cb711f369698fe8e045f8c83dd96ec6fb29d70
 ms.openlocfilehash: bb1b96a56db68dcea22270855b899ba3a90afd0d
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1703 für System Center Configuration Manager
 
@@ -61,12 +59,12 @@ Verwenden Sie das folgende URL-Format, um das Softwarecenter für eine bestimmte
 
 ### <a name="how-to-get-the-application-identifier-of-an-application"></a>So rufen Sie den Anwendungsbezeichner einer Anwendung ab
 
-1.    Klicken Sie in der Configuration Manager-Konsole auf **Softwarebibliothek**.
-2.    Erweitern Sie im Arbeitsbereich „Softwarebibliothek“ den Knoten **Anwendungsverwaltung**, und klicken Sie dann auf **Anwendungen**.
-3.    Klicken Sie mit der rechten Maustaste in der Ansicht **Anwendungen** auf eine der Spaltenüberschriften, und wählen Sie anschließend **Eindeutige CI-ID** aus der Liste aus. Sie sehen, dass die eindeutige ID jeder Anwendung jetzt in der Liste angezeigt wird.
-4.    Beachten Sie die **Eindeutige CI-ID** der Anwendung, für die Sie einen Link bereitstellen möchten, z.B.: **ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**.
-5.    Entfernen Sie dann den Text, der auf die Anwendungs-GUID folgt. In diesem Fall ist es **/2**. Dadurch bleibt der Anwendungsbezeichner übrig.
-6.    Um die Erstellung des Links abzuschließen, stellen Sie ihr **Softwarecenter:SoftwareID=** voran. Mit dem obigen Beispiel sieht der schlussendliche Link folgendermaßen aus: **Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**.
+1.  Klicken Sie in der Configuration Manager-Konsole auf **Softwarebibliothek**.
+2.  Erweitern Sie im Arbeitsbereich „Softwarebibliothek“ den Knoten **Anwendungsverwaltung**, und klicken Sie dann auf **Anwendungen**.
+3.  Klicken Sie mit der rechten Maustaste in der Ansicht **Anwendungen** auf eine der Spaltenüberschriften, und wählen Sie anschließend **Eindeutige CI-ID** aus der Liste aus. Sie sehen, dass die eindeutige ID jeder Anwendung jetzt in der Liste angezeigt wird.
+4.  Beachten Sie die **Eindeutige CI-ID** der Anwendung, für die Sie einen Link bereitstellen möchten, z.B.: **ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**.
+5.  Entfernen Sie dann den Text, der auf die Anwendungs-GUID folgt. In diesem Fall ist es **/2**. Dadurch bleibt der Anwendungsbezeichner übrig.
+6.  Um die Erstellung des Links abzuschließen, stellen Sie ihr **Softwarecenter:SoftwareID=** voran. Mit dem obigen Beispiel sieht der schlussendliche Link folgendermaßen aus: **Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**.
 
 Mithilfe dieses Links können Endbenutzer Softwarecenter direkt für die von Ihnen angegebene Anwendung öffnen.
 
@@ -86,17 +84,17 @@ Technical Preview 1703 führt den Assistenten **zum Konfigurieren von Azure-Dien
 
 Mit Technical Preview 1703 wird nur Windows Store for Business (WSfB) mit diesem Assistenten konfiguriert.  Andere Clouddienste werden mithilfe ihrer eigenen Workflows konfiguriert.
 
--    Verwenden Sie die Informationen in diesem Preview-Thema, um die Konfigurationsschritte im Abschnitt [Einrichten der Synchronisierung mit Windows Store für Unternehmen](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#set-up-windows-store-for-business-synchronization) des Current Branch-Themas [Verwalten von Apps aus dem Windows Store für Unternehmen mit System Center Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business) zu ersetzen.
+-   Verwenden Sie die Informationen in diesem Preview-Thema, um die Konfigurationsschritte im Abschnitt [Einrichten der Synchronisierung mit Windows Store für Unternehmen](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#set-up-windows-store-for-business-synchronization) des Current Branch-Themas [Verwalten von Apps aus dem Windows Store für Unternehmen mit System Center Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business) zu ersetzen.
 
--    Weitere Informationen zu Web-Apps, finden Sie unter [Authentifizierung und Autorisierung in Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview), und [Web-Apps – Übersicht](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview).
+-   Weitere Informationen zu Web-Apps, finden Sie unter [Authentifizierung und Autorisierung in Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview), und [Web-Apps – Übersicht](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview).
 
 ### <a name="prerequisites-and-planning"></a>Erforderliche Komponenten und Planung
 Wenn Sie eine Verbindung zwischen Configuration Manager und dem Windows Store für Unternehmen herstellen, müssen Sie einen Ordner angeben, in dem App-Inhalte, die aus dem Store synchronisiert werden, gespeichert werden. Um sicherzustellen, dass es sich um einen sicheren Ordner handelt, und dass der Inhalt auf Geräten bereitgestellt werden kann, müssen Sie sichergehen, dass die folgenden Berechtigungen vorhanden sind:
--    Der Computer, auf dem Sie die Standortsystemrolle „Dienstverbindungspunkt“ installieren (der Standort der obersten Ebene in der Hierarchie), muss über Lese- und Schreibberechtigungen für den Ordner verfügen, den Sie bei der Verwendung des Kontos **Computer$** angegeben haben.  
+-   Der Computer, auf dem Sie die Standortsystemrolle „Dienstverbindungspunkt“ installieren (der Standort der obersten Ebene in der Hierarchie), muss über Lese- und Schreibberechtigungen für den Ordner verfügen, den Sie bei der Verwendung des Kontos **Computer$** angegeben haben.  
 
--    Der Autor der App muss über Leseberechtigungen für den angegebenen Ordner verfügen.  
+-   Der Autor der App muss über Leseberechtigungen für den angegebenen Ordner verfügen.  
 
--    Das Konto **Computer$** jedes Computers, der eine Instanz des SMS-Anbieters hostet, muss den angegebenen Ordner verwenden können.
+-   Das Konto **Computer$** jedes Computers, der eine Instanz des SMS-Anbieters hostet, muss den angegebenen Ordner verwenden können.
 
 Registrieren Sie Configuration Manager über Webanwendung oder Web-API als Verwaltungstool in Azure Active Directory. Dadurch kann die Client-ID erstellt werden, die Sie später benötigen werden.
 
@@ -111,9 +109,9 @@ Registrieren Sie Configuration Manager über Webanwendung oder Web-API als Verwa
 4. Auf der **App** Seite geben Sie Ihre Azure-Umgebung an und klicken dann auf **Durchsuchen**, um das Fenster „Server-App“ zu öffnen.
 
 5. Wählen Sie im Fenster **Server App** (Server-App) die Server-App aus, die Sie verwenden möchten, und klicken Sie dann auf **OK**.
-Server-Apps sind Azure-Web-Apps, die Konfigurationen für Ihr Azure-Konto enthalten, einschließlich Ihre Mandanten-ID, Client-ID und einen geheimen Schlüssel für Clients. Wenn Sie nicht über eine verfügbare Server-App verfügen, verwenden Sie eine der folgenden:
-  -    **Erstellen**: Um eine neue Server-App zu erstellen, klicken Sie auf **Erstellen**. Geben Sie einen Anzeigenamen für die App und den Mandanten an. Nachdem Sie sich bei Azure angemeldet haben, erstellt Configuration Manager daraufhin die Web-App in Azure für Sie, einschließlich der Client-ID und des geheimen Schlüssels für den Gebrauch mit der Web-App. Später können Sie diese im Azure-Portal anzeigen.
-  -    **Importieren**: Um eine Web-App zu verwenden, die in Ihrem Azure-Abonnement bereits vorhanden ist, klicken Sie auf **Importieren**. Stellen Sie einen Anzeigenamen für die App und den Mandanten bereit, und geben Sie dann die Mandanten-ID, Client-ID und den geheimen Schlüssel für die Web-App an, die Configuration Manager verwenden soll. Nachdem Sie die Informationen **überprüft** haben, klicken Sie auf **OK**, um fortzufahren.  </br></br>
+Server-Apps sind Azure-Web-Apps, die Konfigurationen für Ihr Azure-Konto enthalten, einschließlich Ihrer Mandanten-ID, Client-ID und eines geheimen Schlüssels für Clients. Wenn Sie nicht über eine verfügbare Server-App verfügen, verwenden Sie eine der folgenden:
+  - **Erstellen**: Um eine neue Server-App zu erstellen, klicken Sie auf **Erstellen**. Geben Sie einen Anzeigenamen für die App und den Mandanten an. Nachdem Sie sich bei Azure angemeldet haben, erstellt Configuration Manager daraufhin die Web-App in Azure für Sie, einschließlich der Client-ID und des geheimen Schlüssels für den Gebrauch mit der Web-App. Später können Sie diese im Azure-Portal anzeigen.
+  - **Importieren**: Um eine Web-App zu verwenden, die in Ihrem Azure-Abonnement bereits vorhanden ist, klicken Sie auf **Importieren**. Stellen Sie einen Anzeigenamen für die App und den Mandanten bereit, und geben Sie dann die Mandanten-ID, Client-ID und den geheimen Schlüssel für die Web-App an, die Configuration Manager verwenden soll. Nachdem Sie die Informationen **überprüft** haben, klicken Sie auf **OK**, um fortzufahren.  </br></br>
 
 6. Überprüfen Sie die Seite **Informationen**, und schließen Sie alle zusätzlichen Schritte und Konfigurationen so wie angegeben ab. Diese Konfigurationen sind erforderlich, um den Dienst mit Configuration Manager zu verwenden.
 So konfigurieren Sie z.B. WSfB:

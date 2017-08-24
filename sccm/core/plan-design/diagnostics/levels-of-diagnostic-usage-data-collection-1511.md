@@ -6,12 +6,11 @@ ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9e614ae1-47d2-4a93-ba0a-89dc50d1e266
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
@@ -34,12 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 34a4c3d0d641c4ab03e068c6dad78300057861bd
-ms.openlocfilehash: 4c7717e4f5a20c5c8d20fef21d0c67172b3198bd
-ms.contentlocale: de-de
-ms.lasthandoff: 03/16/2017
-
+ms.openlocfilehash: 215ca2a10c50da08d2265ec0926c0310883588ba
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1511-of-system-center-configuration-manager"></a>Die Ebenen der Sammlung von Nutzungsdaten zu Diagnosezwecken für Version 1511 von System Center Configuration Manager
 
@@ -284,4 +282,3 @@ Ab Version 1511 von System Center Configuration Manager enthält diese Ebene Fol
 -   Prozentsätze der erfolgreichen Überprüfungen auf Softwareupdates  
 
 -   Minimale/maximale/durchschnittliche Anzahl von Stunden seit der letzten Überprüfung auf Softwareupdates  
-

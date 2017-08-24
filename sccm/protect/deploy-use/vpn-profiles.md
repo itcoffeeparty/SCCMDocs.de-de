@@ -6,23 +6,20 @@ ms.date: 11/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c0f094f1-852e-4606-91db-97846d8f0772
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
-ms.openlocfilehash: c11440556abc11d2c19ee0ff3c2bc9e518951e49
-ms.contentlocale: de-de
-ms.lasthandoff: 03/04/2017
-
-
+ms.openlocfilehash: e07a80c1a59043b74cda7219f78c5fef66989ba8
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="vpn-profiles-in-system-center-configuration-manager"></a>VPN-Profile in System Center Configuration Manager
 
@@ -61,4 +58,3 @@ Verwenden Sie VPN-Profile in System Center Configuration Manager (auch als Confi
 -   [Prerequisites for VPN profiles in System Center Configuration Manager (Voraussetzungen für VPN-Profile in System Center Configuration Manager)](../plan-design/prerequisites-for-wifi-vpn-profiles.md)  
 
 -   [Security and privacy for VPN profiles in System Center Configuration Manager (Sicherheit und Datenschutz für VPN-Profile in System Center Configuration Manager)](../plan-design/security-and-privacy-for-wifi-vpn-profiles.md)
-

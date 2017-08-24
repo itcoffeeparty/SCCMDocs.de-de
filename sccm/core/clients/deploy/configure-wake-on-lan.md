@@ -6,21 +6,19 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 09f8bc7ee04ff64934030f825a791bc043341963
-ms.contentlocale: de-de
-ms.lasthandoff: 12/16/2016
-
+ms.openlocfilehash: 9c920651ba1dc6e0a28df458d28956126ddbaff0
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-configure-wake-on-lan-in-system-center-configuration-manager"></a>Konfigurieren von Wake-On-LAN in System Center Configuration Manager
 
@@ -59,4 +57,3 @@ Sie können die folgenden Wake-On-LAN-Berichte zum Überwachen der Installation 
 
 > [!TIP]
 > Mit einer Verbindung zu einem Computer im Standbymodus können Sie testen, ob der Aktivierungsproxy funktioniert. Stellen Sie beispielsweise eine Verbindung mit einem freigegebenen Ordner auf diesem Computer her, oder versuchen Sie, per Remotedesktop eine Verbindung zu dem Computer herzustellen. Stellen Sie bei Verwendung von DirectAccess sicher, dass die IPv6-Präfixe funktionieren, indem Sie die gleichen Tests für einen Computer im Standbymodus durchführen, der sich momentan im Internet befindet.
-

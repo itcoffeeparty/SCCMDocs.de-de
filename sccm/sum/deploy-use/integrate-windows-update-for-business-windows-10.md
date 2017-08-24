@@ -9,15 +9,13 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
 ms.openlocfilehash: 26e73a69d5e6ca69e766fcf3cedd992353c92cd6
-ms.contentlocale: de-de
-ms.lasthandoff: 07/29/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="integration-with-windows-update-for-business-in-windows-10"></a>Integration mit Windows Update für Unternehmen in Windows 10
 
@@ -103,4 +101,3 @@ Windows 10-Geräte, die von Windows Update for Business verwaltet werden, benöt
     - **Zufällige Verzögerung (Stunden)**: Gibt ein Verzögerungsfenster an, um eine übermäßige Verarbeitung im Registrierungsdienst für Netzwerkgeräte zu vermeiden. Der Standardwert ist 64 Stunden.
     - **Zeitplan**: Geben Sie den Zeitplan für die Auswertung der Konformität an, gemäß dem das bereitgestellte Profil auf Clientcomputern ausgewertet wird. Dabei kann es sich um einen einfachen oder benutzerdefinierten Zeitplan handeln. Das Profil wird von Clientcomputern ausgewertet, wenn sich der Benutzer anmeldet.
 4.  Schließen Sie den Assistenten ab, um das Profil bereitzustellen.
-

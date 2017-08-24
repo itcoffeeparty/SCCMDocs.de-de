@@ -1,5 +1,4 @@
 ---
-
 title: Installieren und Konfigurieren eines Softwareupdatepunkts | Microsoft-Dokumentation
 description: "Primäre Standorte setzen einen Softwareupdatepunkt am Standort der zentralen Verwaltung voraus, da damit die Bewertung der Kompatibilität von Softwareupdates und die Bereitstellung von Softwareupdates an Clients durchgeführt werden können."
 keywords: 
@@ -10,20 +9,14 @@ ms.date: 05/30/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dc221ddf547c43ab1f25ff83c3c9bb603297ece6
 ms.openlocfilehash: 7d369384d133c90a15e01df50ac53992d61f3873
-ms.contentlocale: de-de
-ms.lasthandoff: 06/01/2017
-
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
-
 # <a name="install-and-configure-a-software-update-point"></a>Installieren und Konfigurieren eines Softwareupdatepunkts  
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -156,4 +149,3 @@ ms.lasthandoff: 06/01/2017
 Sie haben den Softwareupdatepunkt ausgehend vom obersten Standort in der Configuration Manager-Hierarchie installiert. Wiederholen Sie die Verfahren in diesem Thema zum Installieren des Softwareupdatepunkts an untergeordneten Standorten.
 
 Nachdem Sie die Softwareupdatepunkte installiert haben, wechseln Sie zu [Synchronisieren von Softwareupdates](synchronize-software-updates.md).
-

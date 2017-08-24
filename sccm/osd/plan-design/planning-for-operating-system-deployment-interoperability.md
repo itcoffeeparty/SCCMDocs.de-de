@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e327ce38-6c07-4a27-b6eb-7e5bf74ed04b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 50a4b75b8c8c1cb6f7a8e696abad285f99080fcd
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="planning-for-operating-system-deployment-interoperability-in-system-center-configuration-manager"></a>Planen der Interoperabilität der Betriebssystembereitstellung in System Center Configuration Manager
 
@@ -71,9 +70,3 @@ Wenn verschiedene System Center Configuration Manager-Standorte in einer einzeln
  Wenn Sie für Ihren Standort der zentralen Verwaltung ein Upgrade auf die neueste Version von Configuration Manager durchgeführt haben, müssen Sie den folgenden Schritt ausführen, um sicherzustellen, dass die Tasksequenzen der Betriebssystembereitstellung, die Sie für Clients bereitstellen, die einem älteren (noch nicht auf die neueste Version von Configuration Manager aktualisierten) Configuration Manager-Standort zugeordnet sind, diese Clients nicht in einem unverwalteten Zustand zurücklassen.  
 
 -   Erstellen Sie eine Tasksequenz, die Sie nur für die Bereitstellung auf Clients an einem Configuration Manager-Standort verwenden. Dafür erstellen Sie in der Regel eine Kopie einer Tasksequenz, die Sie zur Bereitstellung auf Clients an der neuesten Version des Configuration Manager-Standorts verwenden, und ändern die Tasksequenz anschließend so, dass sie auf Clients an einem älteren Configuration Manager-Standort bereitgestellt werden kann. Konfigurieren Sie die Tasksequenz anschließend so, dass sie auf ein benutzerdefiniertes Clientinstallationspaket verweist, das die ältere Configuration Manager-Clientinstallationsquelle verwendet. Wenn Sie nicht bereits über ein benutzerdefiniertes Clientinstallationspaket verfügen, das auf die ältere Configuration Manager-Clientinstallationsquelle verweist, müssen Sie manuell eines erstellen.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

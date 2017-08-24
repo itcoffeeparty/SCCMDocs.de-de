@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cead6825-6113-4ba5-a381-ac3598dfee86
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: f3ddeaadfb1418aeeaacdca47768600c86b59083
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="hierarchy-maintenance-tool-preinstexe-for-system-center-configuration-manager"></a>Hierarchiewartungstool (Preinst.exe) für System Center Configuration Manager
 
@@ -93,7 +92,7 @@ Mithilfe der Option /PARENTKEYS wird der Schlüssel des Standorts, auf dem der B
 
 Nach dem Ausführen von „preinst.exe“ mit dieser Option müssen Sie die Datei „&lt;*Standortcode*>.CT7“ manuell in den Ordner „\Inboxes\hman.box“ (nicht „hman.box\pubkey“) des wiederherzustellenden Standorts kopieren.  
 
-##  <a name="a-namebkmkmanuallyexchangekeysa-manually-exchange-public-keys-between-sites"></a><a name="BKMK_ManuallyExchangeKeys"></a> Manuelles Austauschen von öffentlichen Schlüsseln zwischen Standorten  
+##  <a name="BKMK_ManuallyExchangeKeys"></a> Manuelles Austauschen von öffentlichen Schlüsseln zwischen Standorten  
 Die Option **Sicherer Schlüsselaustausch erforderlich** ist für Configuration Manager-Standorte standardmäßig aktiviert. Ist ein sicherer Schlüsselaustausch erforderlich, gibt es zwei Situationen, in denen Sie den ersten Schlüsselaustausch zwischen Standorten manuell ausführen müssen:  
 
 -   Wenn das Active Directory-Schema für Configuration Manager nicht erweitert wurde  
@@ -124,9 +123,3 @@ Mit dem Hierarchieverwaltungstool können Sie die öffentlichen Schlüssel für 
 3.  Mithilfe der Option „/keyforchild“ wird der öffentliche Schlüssel des übergeordneten Standorts in der Datei **&lt;Standortcode\>.CT5** im Stammverzeichnis des Systemlaufwerks gespeichert.  
 
 4.  Verschieben Sie die Datei **&lt;Standortcode\>.CT5** in das Verzeichnis **&lt;Installationsverzeichnis\>\inboxes\hman.box** des untergeordneten Standorts.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

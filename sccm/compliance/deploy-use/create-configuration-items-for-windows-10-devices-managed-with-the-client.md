@@ -6,23 +6,20 @@ ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
-caps.latest.revision: 17
-caps.handback.revision: 0
+caps.latest.revision: "17"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: e0a42a1d4706ab29617f3b6f8960ece27672908b
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-create-configuration-items-for-windows-10-devices-managed-with-the-system-center-configuration-manager-client"></a>Erstellen von Konfigurationselementen für Windows 10-Geräte, die mit dem System Center Configuration Manager-Client verwaltet werden
 Verwenden Sie das System Center Configuration Manager-Konfigurationselement für **Windows 10**, um Einstellungen für Windows 10-Geräte zu verwalten, die mit dem Configuration Manager-Client verwaltet werden.  
@@ -63,7 +60,7 @@ Verwenden Sie das System Center Configuration Manager-Konfigurationselement für
   
     -   **Warnung**: Von Geräten, bei denen bei dieser Konformitätsregel ein Fehler auftritt, wird der Fehlerschweregrad **Warnung** für Configuration Manager-Berichte gemeldet.  
   
-    -   **Kritisch**; Von Geräten, bei denen bei dieser Konformitätsregel ein Fehler auftritt, wird der Fehlerschweregrad **Kritisch** für Configuration Manager-Berichte gemeldet.  
+    -   **Kritisch**: Von Geräten, bei denen bei dieser Konformitätsregel ein Fehler auftritt, wird der Fehlerschweregrad **Kritisch** für Configuration Manager-Berichte gemeldet.  
   
     -   **Kritisch mit Ereignis**: Von Geräten, bei denen bei dieser Konformitätsregel ein Fehler auftritt, wird der Fehlerschweregrad **Kritisch** für Configuration Manager-Berichte gemeldet. Dieser Schweregrad wird zudem im Anwendungsereignisprotokoll als Windows-Ereignis protokolliert.  
   
@@ -140,4 +137,3 @@ Weitere Informationen zum Konfigurieren von WIP mit Configuration Manager finden
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurationselemente für Geräte, die mit dem System Center Configuration Manager-Client verwaltet werden](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md)
-

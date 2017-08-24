@@ -6,23 +6,20 @@ ms.date: 05/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 83a7c934-3b11-435d-ba22-cbc274951e83
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ae60eb25383f4bd07faaa1265185a471ee79b1e9
 ms.openlocfilehash: 90c30bfb22735f73422f1547301552bf42022bb9
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-for-internet-based-client-management-in-system-center-configuration-manager"></a>Planen der internetbasierten Clientverwaltung in System Center Configuration Manager
 
@@ -198,4 +195,3 @@ Es gibt zwar keine Voraussetzung, eine Vertrauensstellung zwischen der Gesamtstr
      Informationen zu diesen Anforderungen finden Sie in der Dokumentation zur Firewall oder zum Proxyserver.  
 
      Informationen zu ähnlichen Kommunikationsanforderungen bei Verwendung des Softwareupdatepunkts für Clientverbindungen über das Internet finden Sie in der Dokumentation zu Windows Server Update Services (WSUS). Weitere Informationen zu WSUS unter Windows Server 2003 finden Sie in [Appendix D: Security Settings (Anhang D: Sicherheitseinstellungen)](http://go.microsoft.com/fwlink/p/?LinkId=143368).
-

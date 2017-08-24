@@ -6,23 +6,20 @@ ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
 ms.openlocfilehash: 369b6a82a20a90ca534f9484c0be71096dd35a30
-ms.contentlocale: de-de
-ms.lasthandoff: 07/29/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="manage-apps-from-the-windows-store-for-business-with-system-center-configuration-manager"></a>Verwalten von Apps aus dem Windows Store für Unternehmen mit System Center Configuration Manager
 Im [Windows Store für Unternehmen](https://www.microsoft.com/business-store) können Sie Windows-Apps für Ihre Organisation finden, und entweder einzeln oder per Volumenlizenz erwerben. Indem Sie den Store mit Configuration Manager verbinden, können Sie die Liste der erworbenen Apps mit Configuration Manager synchronisieren. Sie können anschließend diese Apps in der Configuration Manager-Konsole anzeigen und sie bereitstellen, wie Sie jede andere App bereitstellen würden.
 
@@ -145,4 +142,3 @@ Eine Configuration Manager-App wird erstellt, die eine App aus dem Windows Store
 Erweitern Sie im Arbeitsbereich **Softwarebibliothek** die Option **Anwendungsmanagement**, und klicken Sie anschließend auf **Lizenzinformationen für Store-Apps**.
 
 Sie können für jede von Ihnen verwaltete Store-App Informationen anzeigen, wie den Namen, die Plattform, die Anzahl der Lizenzen, die Sie für diese App besitzen, sowie die Anzahl der Lizenzen, die Ihnen zur Verfügung stehen.
-

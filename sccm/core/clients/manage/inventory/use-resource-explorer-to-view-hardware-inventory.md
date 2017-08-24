@@ -6,22 +6,19 @@ ms.date: 01/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 375912f5-436d-4315-bdbe-d77afee6c9f3
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9c5d1e48b76392beaf54b5377c69b648537e86f8
 ms.openlocfilehash: e39fa60a5d215fa1b0a98d4463058497e63a4d4f
-ms.contentlocale: de-de
-ms.lasthandoff: 05/29/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-use-resource-explorer-to-view-hardware-inventory-in-system-center-configuration-manager"></a>Anzeigen des Hardwareinventars mit dem Ressourcen-Explorer in System Center Configuration Manager
 
@@ -51,5 +48,4 @@ Zeigen Sie mithilfe des Ressourcen-Explorers in System Center Configuration Mana
 3.  Wählen Sie den Computer aus, der die anzuzeigende Inventur enthält. Wählen Sie danach auf der Registerkarte **Start** > Gruppe **Geräte** **Start** >  **Ressourcen-Explorer** aus.   
 
 4.  Klicken Sie mit der rechten Maustaste auf ein beliebiges Element im rechten Bereich des Fensters **Ressourcen-Explorer**, und wählen Sie anschließend **Eigenschaften** aus, um das Dialogfeld *<Elementname\>***Eigenschaften** zu öffnen. Dort werden die gesammelten Inventurinformationen in einem besser lesbaren Format angezeigt.  
-
 

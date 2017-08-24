@@ -6,24 +6,20 @@ ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a8218e23743dafaf8ff1166142cf2dcca1212133
 ms.openlocfilehash: 6917644d6719a1ca636713aa5aebf277927123c8
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="configure-endpoint-protection"></a>Konfigurieren von Endpoint Protection
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -46,4 +42,3 @@ Bevor Sie Endpoint Protection zum Verwalten von Sicherheit und Schadsoftware auf
 |**Schritt 3:** [Konfigurieren Sie Definitionsupdatequellen für Endpoint Protection-Clients](endpoint-definition-updates.md)|Endpoint Protection kann so konfiguriert werden, dass verschiedene Quellen zum Herunterladen von Definitionsupdates verwendet werden. |  
 |**Schritt 4:** [Konfigurieren Sie die Standardrichtlinie für Antischadsoftware, und erstellen Sie benutzerdefinierte Richtlinien für Antischadsoftware](endpoint-antimalware-policies.md)|Bei der Installation des Endpoint Protection-Clients wird die Standardrichtlinie für Antischadsoftware angewendet. Alle benutzerdefinierten Richtlinien für Antischadsoftware, die Sie bereitgestellt haben, werden innerhalb von 60 Minuten nach der Bereitstellung des Clients in der Standardeinstellung angewendet. Vergewissern Sie sich, dass Richtlinien für Antischadsoftware konfiguriert sind, bevor Sie den Endpoint Protection-Client bereitstellen. |  
 |**Schritt 5:** [Konfigurieren Sie benutzerdefinierte Clienteinstellungen für Endpoint Protection](endpoint-protection-configure-client.md)|Verwenden Sie benutzerdefinierte Clienteinstellungen, um Endpoint Protection-Einstellungen für Computersammlungen in Ihrer Hierarchie zu konfigurieren.<br /><br /> Hinweis: Konfigurieren Sie nicht die Standard-Endpoint Protection-Clienteinstellungen, es sei denn, Sie sind sicher, dass diese Einstellungen auf alle Computer in Ihrer Hierarchie angewendet werden sollen. |  
-

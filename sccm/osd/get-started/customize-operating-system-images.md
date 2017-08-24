@@ -6,23 +6,20 @@ ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
-caps.latest.revision: 12
-caps.handback.revision: 0
+caps.latest.revision: "12"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: 485cb3ca4988f983c1ec71b6c8daf136571bf0ea
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="customize-operating-system-images-with-system-center-configuration-manager"></a>Anpassen von Betriebssystemabbildern mit System Center Configuration Manager
 
@@ -139,4 +136,3 @@ Betriebssystemimages in System Center Configuration Manager sind WIM-Dateien und
  Sie können den Prozess zum Erstellen eines Referenzcomputers automatisieren, indem Sie mithilfe einer Tasksequenz das Betriebssystem, Treiber, Anwendungen usw. bereitstellen.  Führen Sie die folgenden Schritte aus, um den Referenzcomputer zu erstellen, von dem Sie anschließend das Betriebssystemabbild erfassen.  
 
 -   Nutzen Sie eine Tasksequenz zum Erstellen und Erfassen des Betriebssystemabbilds vom Referenzcomputer.  Eine Schritt-für-Schritt-Anleitung finden Sie unter [Verwenden einer Tasksequenz zum Erstellen und Erfassen eines Referenzcomputers](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS).  
-

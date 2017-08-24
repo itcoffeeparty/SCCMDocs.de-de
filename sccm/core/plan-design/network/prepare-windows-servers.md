@@ -6,23 +6,20 @@ ms.date: 2/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
-caps.latest.revision: 10
-caps.handback.revision: 0
+caps.latest.revision: "10"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dd102603356864add4084c6881c39bebcbd635f2
 ms.openlocfilehash: 9b97dedb5d2be0bd2e47260033e6e4361467dc4e
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prepare-windows-servers-to-support-system-center-configuration-manager"></a>Vorbereiten von Computern mit Windows Server zur Unterstützung von System Center Configuration Manager
 
@@ -142,4 +139,3 @@ Beispiel: Sie verfügen über Quelldateien für eine Softwarebereitstellung, die
  - PROPFIND
 
 Informationen zum Konfigurieren der Anforderungsfilterung finden Sie unter [Konfigurieren der Anforderungsfilterung in IIS](https://technet.microsoft.com/library/hh831621.aspx#Verbs) auf TechNet oder in einer ähnlichen Dokumentation, die sich auf die Version von Windows Server bezieht, die den Verwaltungspunkt hostet.
-

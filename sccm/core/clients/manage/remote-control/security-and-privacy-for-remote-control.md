@@ -6,23 +6,20 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 272ee86b-d3d9-4fd9-b5c4-73e490e1a1e4
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 342a58d2b7439f721381beb43188594b5278043d
-ms.contentlocale: de-de
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 03b8ede7fa4f4c02ffb551bb28fe2db234d39b12
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="security-and-privacy-for-remote-control-in-system-center-configuration-manager"></a>Sicherheit und Datenschutz für die Remotesteuerung in System Center Configuration Manager
 
@@ -64,4 +61,3 @@ In diesem Thema finden Sie Informationen zu Sicherheit und Datenschutz für die 
  In der Standardeinstellung von Configuration Manager werden der lokalen Administratorgruppe Remotesteuerungsberechtigungen gewährt.  
 
  Berücksichtigen Sie beim Konfigurieren der Remotesteuerung Ihre Datenschutzanforderungen.  
-

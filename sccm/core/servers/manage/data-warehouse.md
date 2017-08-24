@@ -6,8 +6,7 @@ ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
@@ -15,12 +14,11 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
 ms.openlocfilehash: eedbf12d3bf628666efc90c85a8dfab37e4dc9ab
-ms.contentlocale: de-de
-ms.lasthandoff: 07/29/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 #  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>Der Data Warehouse-Dienstpunkt für System Center Configuration Manager
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -194,4 +192,3 @@ Beim Öffnen eines Data Warehouse-Berichts wird folgender Fehler zurückgegeben:
 | **A**  |  Mithilfe integrierter Berichte fordert ein Benutzer Daten an. Diese Anforderung wird mittels SQL Server Reporting Services an den Reporting Services-Punkt übertragen. |  
 | **B**  |      Die meisten Berichte gelten für aktuelle Informationen. Diese Anfragen werden in der Standortdatenbank ausgeführt. |  
 | **C**  | Wenn ein Bericht über einen der Berichte mit der *Kategorie* **Data Warehouse** alte Daten anfordert, ist die Data Warehouse-Datenbank das Ziel der Anfrage.   |  
-

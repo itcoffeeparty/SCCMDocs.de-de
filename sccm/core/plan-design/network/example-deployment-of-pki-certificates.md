@@ -6,22 +6,19 @@ ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2a62ef64bf4e08d7027d10827d35d648bdbbeefe
-ms.openlocfilehash: 21fe718835bbbaa6382e0f0a87784e01e4c35283
-ms.contentlocale: de-de
-ms.lasthandoff: 02/14/2017
-
-
+ms.openlocfilehash: b15f85b4483bbae2444d4e73d2e2aa0b3979d9ab
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="step-by-step-example-deployment-of-the-pki-certificates-for-system-center-configuration-manager-windows-server-2008-certification-authority"></a>Beispiel für die schrittweise Bereitstellung der PKI-Zertifikate für System Center Configuration Manager: Windows Server 2008-Zertifizierungsstelle
 
@@ -778,4 +775,3 @@ Diese Zertifikatbereitstellung besteht aus einer einzigen Prozedur zum Erstellen
 13. Wenn Sie mit dem Erstellen und Ausstellen von Zertifikaten fertig sind, schließen Sie die Konsole **Zertifizierungsstelle**.  
 
  Die Clientzertifikatvorlage für Macintosh kann jetzt ausgewählt werden, wenn Sie Clienteinstellungen für die Registrierung einrichten.
-

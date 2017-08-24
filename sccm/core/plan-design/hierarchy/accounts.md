@@ -6,23 +6,20 @@ ms.date: 2/9/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 72263ec5e7104924a1ca46dc2000be9f8568599f
 ms.openlocfilehash: a776667cc9f24bd4a468afea76e466c34ce66864
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="accounts-used-in-system-center-configuration-manager"></a>In System Center Configuration Manager verwendete Konten
 
@@ -346,4 +343,3 @@ Dieses Konto muss ein lokaler Administrator auf dem Computer sein, auf dem WSUS 
 >  Beschränken Sie den Kontoumfang. Erstellen Sie beispielsweise für jede Tasksequenz ein unterschiedliches Tasksequenzkonto für „Ausführen als“, sodass bei Gefährdung eines Kontos nur der Clientcomputer betroffen ist, auf den dieses Konto Zugriff hat.  
 >   
 >  Wenn für die Befehlszeile Administratorrechte auf dem Computer erforderlich sind, erwägen Sie die Erstellung eines lokalen Administratorkontos lediglich für das Tasksequenzkonto „Ausführen als“ auf allen Computern, um die Tasksequenz auszuführen. Wenn das Konto nicht mehr benötigt wird, kann es gelöscht werden.  
-

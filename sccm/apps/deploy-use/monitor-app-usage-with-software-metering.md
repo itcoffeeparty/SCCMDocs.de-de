@@ -6,24 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b1fdaee2-2816-4447-94cd-609f6948f215
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a85a5cece803e5c16da71f897d5780049fbb82cd
 ms.openlocfilehash: eddf20bebd80028336503957dfc4c3d1dbbb23f2
-ms.contentlocale: de-de
-ms.lasthandoff: 12/16/2016
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="software-metering-in-system-center-configuration-manager"></a>Softwaremessung in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -180,4 +176,3 @@ Für die Softwaremessung liegen keine externen Abhängigkeiten, sondern nur Abh�
 - Peter prüft weiterhin wöchentlich die Softwaremessungsberichte und führt bei Bedarf Abhilfemaßnahmen durch.
 
  Als Resultat dieser Vorgehensweise werden durch das Entfernen der nicht mehr benötigten Anwendungen die Kosten für IT-Support und Lizenzen gesenkt. Darüber hinaus verfügt das Helpdesk jetzt über die gewünschte Liste der Benutzer, die die ältere Anwendung ausführen.
-

@@ -6,21 +6,18 @@ ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
 ms.openlocfilehash: 528ce515c86c4e778532290026a90a46476c4576
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>Tasksequenzschritte für das Verwalten einer Konvertierung von BIOS zu UEFI
 Windows 10 bietet viele neue Sicherheitsfunktionen, die UEFI-fähige Geräte erfordern. Möglicherweise verfügen Sie über moderne Windows-PCs, die UEFI unterstützen, aber das Legacy-BIOS verwenden. Wenn Sie ein Geräte zu UEFI konvertieren wollten, mussten Sie auf jedem PC die Festplatte neu formatieren und die Firmware neu konfigurieren. Mithilfe von Tasksequenzen in Configuration Manager können Sie eine Festplatte für die BIOS UEFI-Konvertierung vorbereiten, von BIOS in UEFI als Teil des direkten Upgrades konvertieren und UEFI-Informationen als Teil der Hardwareinventur sammeln.
@@ -66,4 +63,3 @@ Windows 10 Creators Update führt ein einfaches Konvertierungstool ein, womit de
    2. Fügen Sie einen Schritt zum Starten des OEM-Tools hinzu, das die Firmware von BIOS in UEFI konvertiert. Dabei handelt es sich normalerweise um einen Tasksequenzschritt „Befehlszeile ausführen“ mit einer Befehlszeile zum Starten des OEM-Tools.
    3. Fügen Sie den Schritt **Computer neu starten** unter „Allgemein“ hinzu. Für „Geben Sie an, was nach dem Neustart ausgeführt werden soll“, wählen Sie **Aktuell installiertes Standardbetriebssystem** aus.
 3. Bereitstellen der Tasksequenz
-

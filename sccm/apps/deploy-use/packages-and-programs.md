@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
-caps.latest.revision: 8
-caps.handback.revision: 0
+caps.latest.revision: "8"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 6c5b23270501c11ed5aba9a6045734c73095d1bf
 ms.openlocfilehash: 6146bcf4e5aa9df6fe0b8cf71898e488ecf217cc
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="packages-and-programs-in-system-center-configuration-manager"></a>Pakete und Programme in System Center Configuration Manager
 
@@ -412,9 +411,3 @@ In Paketen können einige neue Features von Configuration Manager verwendet werd
 -   **Assignment**: Geben Sie hier an, wie das Programm Benutzern zugewiesen wird. Folgende Werte sind möglich: **FirstUser** (das Programm wird nur für den ersten Benutzer ausgeführt, der sich am Client anmeldet) oder **EveryUser** (das Programm wird für alle Benutzer ausgeführt, sie sich am Client anmelden). Dieser Eintrag ist auf **FirstUser** festgelegt, wenn **CanRunWhen**nicht auf **UserLoggedOn**festgelegt ist.  
 
 -   **Deaktiviert**: Geben Sie hier an, ob das Programm für Clients angekündigt werden kann. Es stehen die Werte **True** oder **False**zur Verfügung. Der Standardwert ist **False**.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

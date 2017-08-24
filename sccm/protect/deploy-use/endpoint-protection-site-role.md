@@ -8,22 +8,19 @@ ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 0a9dc0fe-a942-40a2-bab1-7eeee4d95380
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
-ms.openlocfilehash: 884b5f2ec3f1aa273128dfeaaf88d969c9d8669d
-ms.contentlocale: de-de
-ms.lasthandoff: 02/15/2017
-
-
+ms.openlocfilehash: 6e717bcbe5ef8c3f2efa717d0cebb9e675e7c127
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-an-endpoint-protection-point-site-system-role"></a>Erstellen einer Standortsystemrolle für einen Endpoint Protection-Punkt
 
@@ -86,4 +83,3 @@ ms.lasthandoff: 02/15/2017
     >  Mit dieser Option werden die Einstellungen des Cloud Protection Service (ehem. Microsoft Active Protection Service oder MAPS) konfiguriert, die als Standard verwendet werden. Anschließend können Sie benutzerdefinierte Einstellungen für jede Richtlinie für Antischadsoftware konfigurieren, die Sie erstellen. Weitere Informationen finden Sie unter [Erstellen und Bereitstellen von Richtlinien für Antischadsoftware für Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
 
 8.  Schließen Sie den Assistenten ab.
-

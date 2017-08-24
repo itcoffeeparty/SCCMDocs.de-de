@@ -9,18 +9,14 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
 ms.openlocfilehash: 179f076f228daa5adf612275a822cd379b0ce1e3
-ms.contentlocale: de-de
-ms.lasthandoff: 12/16/2016
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="prerequisites-for-software-updates-in-system-center-configuration-manager"></a>Voraussetzungen für Softwareupdates in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -113,4 +109,3 @@ In diesem Thema werden die Voraussetzungen für Softwareupdates in System Center
 
 ## <a name="next-steps"></a>Nächste Schritte
 [Vorbereiten der Softwareupdateverwaltung](../get-started/prepare-for-software-updates-management.md)
-

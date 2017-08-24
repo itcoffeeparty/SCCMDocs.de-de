@@ -6,22 +6,20 @@ ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
-caps.latest.revision: 51
-caps.handback.revision: 0
+caps.latest.revision: "51"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
 ms.openlocfilehash: d46aca88111d4ee0e96b75ca5a3ec57aa4274d6d
-ms.contentlocale: de-de
-ms.lasthandoff: 07/29/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="updates-for-system-center-configuration-manager"></a>Updates für System Center Configuration Manager
 
@@ -150,4 +148,3 @@ Sie installieren diese Hotfixes manuell unter Verwendung einer der beiden folgen
 -   **Hotfix-Installer:** Dieses Tool wird verwendet, um einen Hotfix, der nicht mit der konsoleninternen Methode installiert werden kann, manuell zu installieren . Diese Methode wird für Hotfixes mit der folgenden Dateinamenstruktur verwendet: **&lt;Produkt\>-&lt;Produktversion\>-&lt;KB-Artikel-ID\>-&lt;Plattform\>-&lt;Sprache\>.exe**.
 
      Weitere Informationen finden Sie unter [Verwenden des Hotfixinstallationsprogramms zum Installieren von Updates für System Center Configuration Manager](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md).
-

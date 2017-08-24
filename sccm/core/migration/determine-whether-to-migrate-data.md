@@ -6,21 +6,20 @@ ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 99222dc8-0e1e-4513-8302-7a1acf671e9b
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: d37261c03fddc3d576fcef73fabd7189e4c46d38
 ms.openlocfilehash: 9dc5f6c9f58e1fc33b2dc9dd76737ae23af81993
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="determine-whether-to-migrate-data-to-system-center-configuration-manager"></a>Bestimmen, ob Daten zu System Center Configuration Manager migriert werden sollen
 
@@ -50,7 +49,7 @@ Sobald ein Client nach seiner Installation in der neuen Hierarchie seine Daten �
 
 -   [Daten, die nicht zu System Center Configuration Manager migriert werden können](#Cannot_migrate)  
 
-##  <a name="a-namecanmigratea-data-that-you-can-migrate-to-system-center-configuration-manager"></a><a name="Can_Migrate"></a> Daten, die zu System Center Configuration Manager migriert werden können  
+##  <a name="Can_Migrate"></a> Daten, die zu System Center Configuration Manager migriert werden können  
  Die meisten Objekte können zwischen unterstützten Configuration Manager-Hierarchien migriert werden. Die migrierten Instanzen einiger Objekte einer unterstützten Version von Configuration Manager2007 müssen geändert werden, um dem Schema- und Objektformat von System Center 2012 Configuration Manager zu entsprechen.
 
 Diese Änderungen haben keine Auswirkungen auf die Daten in der Datenbank des Quellstandorts. Objekte, die aus einer unterstützten Version von System Center 2012 Configuration Manager oder System Center Configuration Manager migriert wurden, erfordern keine Änderungen.  
@@ -161,7 +160,7 @@ Diese Änderungen haben keine Auswirkungen auf die Daten in der Datenbank des Qu
 
 -   Virtuelle Anwendungspakete  
 
-##  <a name="a-namecannotmigratea-data-that-you-cannot-migrate-to-system-center-configuration-manager"></a><a name="Cannot_migrate"></a> Daten, die nicht zu System Center Configuration Manager migriert werden können  
+##  <a name="Cannot_migrate"></a> Daten, die nicht zu System Center Configuration Manager migriert werden können  
  Folgende Objekttypen können nicht migriert werden:  
 
 -   AMT-Client-Bereitstellungsinformationen  
@@ -187,9 +186,3 @@ Diese Änderungen haben keine Auswirkungen auf die Daten in der Datenbank des Qu
     -   Sicherheitsrollen  
 
     -   Sicherheitsbereiche  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

@@ -2,28 +2,25 @@
 title: "Erstellen und Ausführen von Skripts mit Configuration Manager | Microsoft-Dokumentation"
 description: "Erstellen und Ausführen von Skripts auf Clientgeräten mit Configuration Manager."
 ms.custom: na
-ms.date: 08/01/2017
+ms.date: 08/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
-caps.latest.revision: 14
-caps.handback.revision: 0
+caps.latest.revision: "14"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
+ms.openlocfilehash: ed84f7900eee5c04728d0e4d1b46027c36327bec
+ms.sourcegitcommit: b41d3e5c7f0c87f9af29e02de3e6cc9301eeafc4
 ms.translationtype: HT
-ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
-ms.openlocfilehash: 4dcda88d4e91347f6da97e8da04c38f9e65e07bc
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/11/2017
 ---
-
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Erstellen und Ausführen von PowerShell-Skripts über die Configuration Manager-Konsole
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -61,7 +58,6 @@ Standardmäßig können Benutzer kein Skript genehmigen, das sie erstellt haben.
 2. Erweitern Sie im Arbeitsbereich **Verwaltung** den Bereich **Standortkonfiguration**, und klicken Sie dann auf **Standorte**.
 3. Wählen Sie in der Liste der Standorte Ihren Standort aus, und klicken Sie dann auf der Registerkarte **Start** in der Gruppe **Standorte** auf **Hierarchieeinstellungen**.
 4. Deaktivieren Sie im Dialogfeld **Eigenschaften von Hierarchieeinstellungen** auf der Registerkarte **Allgemein** das Kontrollkästchen **Skriptautoren nicht das Genehmigen ihrer eigenen Skripts erlauben**.
-Standorte
 
 ## <a name="import-and-edit-a-script"></a>Importieren und Bearbeiten eines Skripts
 
@@ -120,4 +116,3 @@ Nachdem Sie ein Skript auf Clientgeräten ausgeführt haben, gehen Sie wie folgt
 1. Klicken Sie in der Configuration Manager-Konsole auf **Überwachung**.
 2. Klicken Sie im Arbeitsbereich **Überwachung** auf **Skriptstatus**.
 3. In der Liste **Skriptstatus** sehen Sie die Ergebnisse für jedes Skript, das Sie auf Clientgeräten ausgeführt haben. Der Exitcode **0** eines Skripts bedeutet im Allgemeinen, dass das Skript erfolgreich ausgeführt wurde.
-

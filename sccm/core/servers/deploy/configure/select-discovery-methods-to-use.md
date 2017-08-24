@@ -6,21 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 127ce713-d085-430f-ac7b-2701637fe126
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f72317cefab5ce8cad13b3120c3c93c856fa40b7
 ms.openlocfilehash: 4b6be888be2ad6c1f5e7c0be33d9830bb870114e
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="select-discovery-methods-to-use-for-system-center-configuration-manager"></a>Select discovery methods to use for System Center Configuration Manager (Auswählen von Ermittlungsmethoden zur Verwendung in System Center Configuration Manager)
 
@@ -128,4 +126,3 @@ Für optimale Ergebnisse bei der Ermittlung wird Folgendes empfohlen:
 - **Ausführen der Active Directory-Gesamtstrukturermittlung an nur einem Standort, wenn Sie die automatische Erstellung von Grenzen aus den Ermittlungsdaten planen.**  
 
  Wenn Sie die Active Directory-Gesamtstrukturermittlung in einer Hierarchie an mehr als einem Standort ausführen, wird empfohlen, Optionen zum automatischen Erstellen von Grenzen an nur einem einzelnen Standort zu aktivieren. Der Grund ist, dass Grenzen von Configuration Manager nicht zu einem einzelnen Grenzobjekt zusammengeführt werden können, wenn die Active Directory-Gesamtstrukturermittlung an jedem Standort ausgeführt wird und Grenzen erstellt werden. Wenn Sie die Active Directory-Gesamtstrukturermittlung so konfigurieren, dass Grenzen an mehreren Standorten automatisch erstellt werden, können sich in der Configuration Manager-Konsole doppelte Grenzobjekte ergeben.  
-

@@ -8,18 +8,17 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
 ms.openlocfilehash: 73bb5d4236469746102fd4893c53f20aaee122d5
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="online-documentation-for-system-center-configuration-manager"></a>Onlinedokumentation für System Center Configuration Manager
 
@@ -102,9 +101,3 @@ Sie finden die Onlinedokumentation in den folgenden Handbüchern auf TechNet:
 **Barrierefreiheit:** Im Onlinethema [Barrierefreiheitsfunktionen von Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=258586)finden Sie Informationen über die Features, Produkte und Dienste, die die Barrierefreiheit in Configuration Manager gewährleisten.  
 
 **Herunterladbare Dokumentation:** Sie können eine [Kopie dieser technischen Dokumentation aus dem Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=253643)unverändert. Die aktuellsten Informationen finden Sie in der TechNet-Onlinebliothek.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

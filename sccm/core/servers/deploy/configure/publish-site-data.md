@@ -6,22 +6,19 @@ ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 17cf034f-eaff-43ce-bc8e-917213c1db74
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e7629fdf7fdf615fa27894158c3d101432c95a04
 ms.openlocfilehash: bcfb002c503485f03ba27d7346acb61d0d3c6087
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="publish-site-data-for-system-center-configuration-manager"></a>Veröffentlichen von Standortdaten für System Center Configuration Manager
 
@@ -73,4 +70,3 @@ Weitere Informationen dazu, wie Clients nach einem Verwaltungspunkt suchen, find
     >  Wenn Sie Standorte für die Veröffentlichung in einer Gesamtstruktur aktivieren, müssen Sie das Active Directory-Schema dieser Gesamtstruktur für Configuration Manager erweitern. Das Konto für die Active Directory-Gesamtstruktur muss Vollzugriff auf den Systemcontainer in dieser Gesamtstruktur besitzen.  
 
 5.  Wenn Sie die Konfiguration dieser Gesamtstruktur zur Verwendung mit der Active Directory-Gesamtstrukturermittlung abgeschlossen haben, klicken Sie auf **OK** , um die Konfiguration zu speichern.  
-

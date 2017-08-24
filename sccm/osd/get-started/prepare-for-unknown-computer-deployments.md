@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9e447e34-0943-49ed-b6ba-3efebf3566c1
-caps.latest.revision: 10
-caps.handback.revision: 0
+caps.latest.revision: "10"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 445e76950f0605da917f3d0e7e71557d969e3c2d
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prepare-for-unknown-computer-deployments-in-system-center-configuration-manager"></a>Vorbereiten auf Bereitstellungen für unbekannte Computer in System Center Configuration Manager
 
@@ -70,7 +69,7 @@ Verwenden Sie die Informationen in diesem Thema, um Betriebssysteme für unbekan
 > [!NOTE]  
 >  Beim Installieren des Betriebssystemabbilds können Variablen der Sammlung, nicht jedoch Computervariablen von diesem Computer durch die Tasksequenz abgerufen werden.  
 
-##  <a name="a-namebkmkenablingunknowna-enabling-unknown-computer-support"></a><a name="BKMK_EnablingUnknown"></a> Aktivieren der Unterstützung für unbekannte Computer  
+##  <a name="BKMK_EnablingUnknown"></a> Aktivieren der Unterstützung für unbekannte Computer  
  Verwenden Sie die folgenden Angaben, um die Unterstützung für unbekannte Computer zu aktivieren, wenn Sie ein Betriebssystem unter Verwendung von PXE, startbaren Medien und vorab bereitgestellten Medien bereitstellen:  
 
 -   **PXE**  
@@ -84,9 +83,3 @@ Verwenden Sie die Informationen in diesem Thema, um Betriebssysteme für unbekan
 -   **Vorab bereitgestellte Medien**  
 
      Wählen Sie im Assistenten zum Erstellen von Tasksequenzmedien auf der Seite **Sicherheit** das Kontrollkästchen **Unterstützung für unbekannte Computer aktivieren** . Weitere Informationen finden Sie unter [Create prestaged media with System Center Configuration Manager](../deploy-use/create-prestaged-media.md).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -6,23 +6,20 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1e42b1c1-3d58-481f-8647-5c7ae640c5f5
-caps.latest.revision: 8
-caps.handback.revision: 0
+caps.latest.revision: "8"
+caps.handback.revision: "0"
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6424fb07802b62820b4dc78a58ab30d3b956abef
 ms.openlocfilehash: 5a81ec06e16992ae1c41b0fc98ebcd07386c5381
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="set-up-a-microsoft-intune-subscription-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Einrichten eines Microsoft Intune-Abonnements in System Center Configuration Manager
 
@@ -69,4 +66,3 @@ Die lokale Verwaltung mobiler Geräte in System Center Configuration Manager set
 5.  Wenn Sie beabsichtigen, Desktopcomputer mit Windows 10 zu verwalten, klicken Sie mit der rechten Maustaste auf **Microsoft Intune-Abonnement**, klicken Sie dann auf **Plattformen konfigurieren**, und klicken Sie anschließend auf **Windows-Registrierung aktivieren**.  
 
 6.  Aktivieren Sie das Kontrollkästchen neben **Windows-Registrierung aktivieren**, und klicken Sie dann auf **OK**.  
-

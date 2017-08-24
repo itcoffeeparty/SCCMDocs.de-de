@@ -7,15 +7,13 @@ manager: angrobe
 ms.date: 06/02/2017
 ms.topic: article
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.assetid: cc397ab5-125f-4f17-905b-fab980194f49
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 662901e850566756759fcfc61c58f3c0e56bc5aa
-ms.openlocfilehash: b80fec937b50dca3ab995be281c44c3145300f9f
-ms.contentlocale: de-de
-ms.lasthandoff: 06/03/2017
-
+ms.openlocfilehash: 74b9dbb1ed0172d99956e726fca3aec2b658ce77
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="change-your-mdm-authority"></a>Umstellen der MDM-Autorität
 Ab Configuration Manager, Version 1610, und Microsoft Intune, Version 1705, können Sie Ihre MDM-Autorität ohne Unterstützung durch den Microsoft-Support und ohne Aufheben der Registrierung und erneutes Registrieren Ihrer vorhandenen verwalteten Geräte umstellen.
@@ -255,4 +253,3 @@ Sobald die Umstellung der MDM-Autorität abgeschlossen ist, überprüfen Sie die
     - Stellen Sie sicher, dass das neu registrierte Gerät in der Configuration Manager-Konsole angezeigt wird.
     - Führen Sie über die Verwaltungskonsole auf dem Gerät eine Aktion aus, z.B. Remotesperre. Wenn sie erfolgreich ist, wird das Gerät durch die neue MDM-Autorität verwaltet.
 - Wenn Sie Probleme mit bestimmten Geräten haben, können Sie die Registrierung der Geräte aufheben und sie erneut registrieren, damit sie so schnell wie möglich mit der neuen Autorität verbunden und von ihr verwaltet werden.
-

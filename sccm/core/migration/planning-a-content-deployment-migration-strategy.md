@@ -6,21 +6,20 @@ ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 66f7759c-6272-4116-aad7-0d05db1d46cd
-caps.latest.revision: 8
-caps.handback.revision: 0
+caps.latest.revision: "8"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 468673581e0464fab21397c472b76708b8a5438b
 ms.openlocfilehash: 25619d91522193178e0415f649ca4b34c94ecc89
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-a-content-deployment-migration-strategy-in-system-center-configuration-manager"></a>Planen einer Migrationsstrategie für die Inhaltsbereitstellung in System Center Configuration Manager
 
@@ -52,7 +51,7 @@ Die folgenden Abschnitte helfen Ihnen beim Planen der Bereitstellung von Inhalte
 
 -   [Inhaltsbesitz beim Migrieren von Inhalten](#About_Migrating_Content)  
 
-##  <a name="a-nameaboutshareddpsinmigrationa-share-distribution-points-between-source-and-destination-hierarchies"></a><a name="About_Shared_DPs_in_Migration"></a> Freigeben von Verteilungspunkten zwischen Quell- und Zielhierarchien  
+##  <a name="About_Shared_DPs_in_Migration"></a> Freigeben von Verteilungspunkten zwischen Quell- und Zielhierarchien  
 Während der Migration können Sie Verteilungspunkte aus der Quellhierarchie für die Zielhierarchie freigeben. Sie können freigegebene Verteilungspunkte nutzen, um aus einer Quellhierarchie migrierte Inhalte unmittelbar für Clients in der Zielhierarchie verfügbar zu machen, ohne die Inhalte neu erstellen und an neue Verteilungspunkte in der Zielhierarchie verteilen zu müssen. Wenn in der Zielhierarchie Inhalte von Clients angefordert werden, die an von Ihnen freigegebenen Verteilungspunkten bereitgestellt werden, dann können die freigegebenen Verteilungspunkte den Clients als gültige Inhaltsorte angeboten werden.  
 
  Abgesehen davon, dass ein Verteilungspunkt ein gültiger Inhaltsort für Clients in der Zielhierarchie ist, solange die Migration von der Quellhierarchie aktiv ist, können Sie ein Upgrade für ihn durchführen oder ihn der Zielhierarchie zuweisen. Sie können für freigegebene Configuration Manager 2007-Verteilungspunkte ein Upgrade durchführen und freigegebene Verteilungspunkte für System Center 2012 Configuration Manager erneut zuweisen. Wenn Sie einen freigegebenen Verteilungspunkt aktualisieren oder erneut zuweisen, wird der Verteilungspunkt aus der Quellhierarchie entfernt und wird zu einem Verteilungspunkt in der Zielhierarchie. Nachdem Sie einen freigegebenen Verteilungspunkt aktualisiert oder erneut zugewiesen haben, können Sie den Verteilungspunkt weiterhin in der Zielhierarchie verwenden, nachdem die Migration aus der Quellhierarchie abgeschlossen ist. Weitere Informationen zum Upgrade freigegebener Verteilungspunkte finden Sie unter [Planen von Upgrades freigegebener Configuration Manager 2007-Verteilungspunkte](#Planning_to_Upgrade_DPs). Informationen zur erneuten Zuweisung eines freigegebenen Verteilungspunktes finden Sie unter [Planen der Neuzuweisung von System Center Configuration Manager-Verteilungspunkten](#BKMK_ReassignDistPoint).  
@@ -91,7 +90,7 @@ Die verfügbaren Verteilungspunkte sind erst in der Configuration Manager-Konsol
 
 Nach der Freigabe der Verteilungspunkte können Sie die Konfiguration jedes freigegebenen Verteilungspunkts in der Quellhierarchie ändern. Änderungen an der Konfiguration eines Verteilungspunkts werden nach dem nächsten Datensammlungszyklus in der Zielhierarchie dargestellt. Verteilungspunkte, die Sie aktualisiert haben, um sie für die Freigabe zu qualifizieren, werden automatisch freigegeben, während von den nicht mehr qualifizierten Verteilungspunkten, keine Verteilungspunkte mehr freigegeben werden. Sie könnten beispielsweise über einen Verteilungspunkt verfügen, der nicht mit einem Intranet-FQDN eingerichtet ist und zunächst nicht für die Zielhierarchie freigegeben war. Nach dem Einrichten des FQDN für diesen Verteilungspunkt wird diese Änderung durch den nächsten Datensammlungszyklus erkannt, und der Verteilungspunkt wird für die Zielhierarchie freigegeben.  
 
-##  <a name="a-nameplanningtoupgradedpsa-plan-to-upgrade-configuration-manager-2007-shared-distribution-points"></a><a name="Planning_to_Upgrade_DPs"></a> Planen von Upgrades freigegebener Configuration Manager 2007-Verteilungspunkte  
+##  <a name="Planning_to_Upgrade_DPs"></a> Planen von Upgrades freigegebener Configuration Manager 2007-Verteilungspunkte  
 Wenn Sie eine Migration aus einer Configuration Manager 2007-Quellhierarchie ausführen, können Sie einen freigegebenen Verteilungspunkt auf einen System Center Configuration Manager-Verteilungspunkt upgraden. Sie können Verteilungspunkte an primären und an sekundären Standorten upgraden. Beim Upgradeprozess wird der Verteilungspunkt aus der Configuration Manager 2007-Hierarchie entfernt und zu einem Standortsystemserver in der Zielhierarchie befördert. Bei diesem Prozess wird außerdem der vorhandene Inhalt auf dem Verteilungspunkt auf einen neuen Speicherort auf dem Verteilungspunktcomputer kopiert. Anschließend wird vom Upgradeprozess die Kopie der Inhalts geändert, um den SIS (Single Instance Store) zur Verwendung mit der Inhaltsbereitstellung in der Zielhierarchie zu erstellen. Wenn Sie ein Upgrade eines Verteilungspunkts durchführen, müssen Sie daher keine migrierten Inhalte neu verteilen, die auf dem Configuration Manager 2007-Verteilungspunkt gehostet waren.  
 
 Nachdem Configuration Manager den Inhalt in einen Single Instance Store (SIS) umgewandelt hat, löscht Configuration Manager den ursprünglichen Quellinhalt auf dem Verteilungspunktcomputer, um Speicherplatz freizugeben. Dabei wird der Speicherort des ursprünglichen Quellinhalts nicht verwendet.  
@@ -118,7 +117,7 @@ Zur Identifizierung von Verteilungspunkten, die für ein Upgrade berechtigt sind
 
 Wenn Sie für einen Verteilungspunkt, der auf einem sekundären Standortserver von Configuration Manager 2007 installiert ist, ein Upgrade durchführen, wird der sekundäre Standort in der Quellhierarchie deinstalliert. Obwohl dieses Szenario als Upgrade eines sekundären Standorts bezeichnet wird, trifft es nur auf die Standortsystemrolle „Verteilungspunkt“ zu. Das führt dazu, dass der sekundäre Standort nicht aktualisiert, sondern deinstalliert wird. So verbleibt ein Verteilungspunkt aus der Zielhierarchie auf dem Computer, welcher der sekundäre Standortserver war. Informationen zum Upgraden eines Verteilungspunkts an einem sekundären Standort finden Sie unter [Planen von Upgrades sekundärer Configuration Manager 2007-Standorte](#BKMK_UpgradeSS) in diesem Thema.  
 
-###  <a name="a-namebkimkupgradeprocessa-distribution-point-upgrade-process"></a><a name="BKIMK_UpgradeProcess"></a> Upgradeprozess für Verteilungspunkte  
+###  <a name="BKIMK_UpgradeProcess"></a> Upgradeprozess für Verteilungspunkte  
 Sie können die Configuration Manager-Konsole zum Durchführen von Upgrades von Configuration Manager 2007-Verteilungspunkten verwenden, die Sie für die Zielhierarchie freigegeben haben. Wenn Sie einen freigegebenen Verteilungspunkt upgraden, wird der Verteilungspunkt am Configuration Manager 2007-Standort deinstalliert. Er wird anschließend als Verteilungspunkt installiert, der mit einem primären oder sekundären Standort verbunden ist, den Sie in der Zielhierarchie angeben. Beim Upgradeprozess werden die migrierten Inhalte kopiert, die auf dem Verteilungspunkt gespeichert sind. Diese Kopie wird dann in den Single Instance Content Store konvertiert. Wenn Configuration Manager ein Paket in den Single Instance Content Store konvertiert, wird dieses Paket aus der SMSPKG-Freigabe auf dem Verteilungspunktcomputer gelöscht, es sei denn, das Paket enthält eine oder mehrere Ankündigungen, für welche die Option **Programm vom Verteilungspunkt ausführen** festgelegt ist.  
 
 Zum Durchführen des Verteilungspunktupgrades verwendet Configuration Manager das **Zugriffskonto des Quellstandorts**, das für die Datensammlung vom SMS-Anbieter des Quellstandorts eingerichtet ist. Zur Datensammlung vom Quellstandort benötigen die Standortobjekte für dieses Konto zwar nur die Berechtigung **Lesen**, doch die Berechtigungen **Löschen** und **Ändern** für die Klasse **Standort** sind ebenfalls erforderlich, um den Verteilungspunkt beim Upgrade erfolgreich vom Configuration Manager 2007-Standort entfernen zu können.  
@@ -152,7 +151,7 @@ Sie können den Fortschritt eines Verteilungspunktupgrades in der Configuration 
 
 Auch wenn Sie für einen freigegebenen Verteilungspunkt kein Upgrade durchführen möchten, können Sie immer noch einen Verteilungspunkt aus der Zielhierarchie auf einem ehemaligen Configuration Manager 2007-Verteilungspunkt installieren. Vor der Installation des neuen Verteilungspunkts müssen Sie alle Configuration Manager 2007-Standortsystemrollen vom Verteilungspunktcomputer deinstallieren. Dazu gehört auch der Configuration Manager 2007-Standort, wenn es sich um den Standortservercomputer handelt. Wenn Sie einen Configuration Manager 2007-Verteilungspunkt deinstallieren, wird der auf dem Verteilungspunkt bereitgestellte Inhalt nicht vom Computer gelöscht.  
 
-###  <a name="a-namebkmkupgradessa-plan-to-upgrade-configuration-manager-2007-secondary-sites"></a><a name="BKMK_UpgradeSS"></a> Planen von Upgrades sekundärer Configuration Manager 2007-Standorte  
+###  <a name="BKMK_UpgradeSS"></a> Planen von Upgrades sekundärer Configuration Manager 2007-Standorte  
  Wenn Sie ein Upgrade eines freigegebenen Verteilungspunkts, der auf einem sekundären Configuration Manager 2007-Standortserver gehostet wird, über eine Migration durchführen, wird die Standortsystemrolle „Verteilungspunkt“ auf einen Verteilungspunkt in der Zielhierarchie upgegradet. Zudem wird auch der sekundäre Standort in der Quellhierarchie deinstalliert. Das Ergebnis ist ein System Center Configuration Manager-Verteilungspunkt, jedoch kein sekundärer Standort.  
 
  Damit ein Verteilungspunkt auf dem Standortservercomputer zum Upgrade berechtigt ist, müssen der sekundäre Standort und alle Standortsystemrollen auf diesem Computer deinstalliert werden können. Typischerweise ist ein freigegebener Verteilungspunkt auf einer Configuration Manager 2007-Serverfreigabe zum Upgrade berechtigt. Wenn jedoch eine Serverfreigabe auf dem sekundären Standortserver besteht, sind der sekundäre Standort und freigegebene Verteilungspunkte auf diesem Computer nicht zum Upgrade berechtigt. Die Ursache ist der Versuch des Prozesses, den sekundären Standort zu deinstallieren, wobei die Serverfreigabe jedoch als zusätzliches Standortsystemobjekt behandelt wird, wodurch dieses Objekt nicht vom Prozess deinstalliert werden kann. In diesem Szenario können Sie einen Standard-Verteilungspunkt auf dem sekundären Standortserver aktivieren und den Inhalt anschließend erneut auf einem Standard-Verteilungspunkt verteilen. Für diesen Vorgang wird keine Netzwerkbandbreite verbraucht und nach Abschluss können Sie den Verteilungspunkt auf der Serverfreigabe deinstallieren, die Serverfreigabe entfernen und anschließend das Upgrade des Verteilungspunkts und des sekundären Standorts durchführen.  
@@ -170,7 +169,7 @@ Auch wenn Sie für einen freigegebenen Verteilungspunkt kein Upgrade durchführe
 
  Weitere Informationen zum Upgrade freigegebener Verteilungspunkte finden Sie unter [Planen von Upgrades freigegebener Configuration Manager 2007-Verteilungspunkte](#Planning_to_Upgrade_DPs).  
 
-##  <a name="a-namebkmkreassigndistpointa-plan-to-reassign-system-center-configuration-manager-distribution-points"></a><a name="BKMK_ReassignDistPoint"></a> Planen der Neuzuweisung von System Center Configuration Manager-Verteilungspunkten  
+##  <a name="BKMK_ReassignDistPoint"></a> Planen der Neuzuweisung von System Center Configuration Manager-Verteilungspunkten  
  Bei der Migration von einer unterstützten Version von System Center 2012 Configuration Manager zu einer Hierarchie mit der gleichen Version, können Sie einen freigegebenen Verteilungspunkt aus der Quellhierarchie erneut einem Standort in der Zielhierarchie zuweisen. Dieser Vorgang ähnelt dem Konzept eines Upgrades eines Configuration Manager 2007-Verteilungspunkts auf einen Verteilungspunkt in der Zielhierarchie. Sie können Verteilungspunkte an primären und an sekundären Standorten neu zuweisen. Mit der Aktion zum Neuzuweisen eines Verteilungspunkts wird der Verteilungspunkt aus der Quellhierarchie entfernt, und der Computer sowie sein Verteilungspunkt werden zum Standortsystemserver für den Standort, den Sie in der Zielhierarchie auswählen können.  
 
  Wenn Sie einen Verteilungspunkt neu zuweisen, müssen Sie keine migrierten Inhalte neu verteilen, die auf dem Verteilungspunkt des Quellstandorts gehostet waren. Zudem ist anders als beim Upgrade eines Configuration Manager 2007-Verteilungspunkts bei der Neuzuweisung eines Verteilungspunkts kein zusätzlicher Speicherplatz auf dem Verteilungspunktcomputer erforderlich. Dies ist darauf zurückzuführen, dass ab System Center 2012 Configuration Manager von Verteilungspunkten das SIS-Format (Single Instance Store) für Inhalt verwendet wird. Der Inhalt auf dem Verteilungspunktcomputer muss nicht konvertiert werden, wenn der Verteilungspunkt zwischen Hierarchien neu zugewiesen wird.  
@@ -183,7 +182,7 @@ Auch wenn Sie für einen freigegebenen Verteilungspunkt kein Upgrade durchführe
 
 Zur Identifizierung von Verteilungspunkten, die für eine Neuzuweisung berechtigt sind, wählen Sie in der Configuration Manager-Konsole im Knoten **Quellhierarchie** einen Quellstandort aus, und rufen Sie dann die Registerkarte **Freigegebene Verteilungspunkte** auf. Bei den berechtigten Verteilungspunkten wird in der Spalte **Eligible for Reassignment** (Zur Neuzuweisung berechtigt) **Ja** angezeigt. (Vor System Center 2012 R2 Configuration Manager enthielt diese Spalte den Namen **Zum Upgrade berechtigt**.)  
 
-###  <a name="a-namebkmkreassignprocessa-distribution-point-reassignment-process"></a><a name="BKMK_ReassignProcess"></a> Neuzuweisungsprozess für Verteilungspunkte  
+###  <a name="BKMK_ReassignProcess"></a> Neuzuweisungsprozess für Verteilungspunkte  
  Sie können die Configuration Manager-Konsole zur Neuzuweisung von Verteilungspunkten verwenden, die Sie in einer aktiven Quellhierarchie freigegeben haben. Wird ein freigegebener Verteilungspunkt erneut zugewiesen, wird dieser am Quellstandort deinstalliert und als Verteilungspunkt installiert, der mit einem in der Zielhierarchie angegebenen primären oder sekundären Standort verbunden ist.  
 
  Zum Neuzuweisen des Verteilungspunkts wird von der Zielhierarchie das Zugriffskonto des Quellstandorts verwendet, das für die Sammlung von Daten des SMS-Anbieters des Quellstandorts eingerichtet ist. Informationen zu erforderlichen Berechtigungen und zusätzlichen Voraussetzungen finden Sie unter [Voraussetzungen für die Migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md).  
@@ -203,15 +202,9 @@ Vor Version 1610 konnte Configuration Manager jeweils nur einen Verteilungspunkt
 - Wenn Sie das Configuration Manager-SDK verwenden, können Sie die Eigenschaft **SharedDPImportThreadLimit** ändern, um die Anzahl der neu zugewiesenen Verteilungspunkte anzupassen, die Configuration Manager parallel verarbeiten kann.
 
 
-##  <a name="a-nameaboutmigratingcontenta-assign-content-ownership-when-migrating-content"></a><a name="About_Migrating_Content"></a> Zuweisen von Inhaltsbesitz beim Migrieren von Inhalten  
+##  <a name="About_Migrating_Content"></a> Zuweisen von Inhaltsbesitz beim Migrieren von Inhalten  
  Wenn Sie Inhalte für Bereitstellungen migrieren, müssen Sie das Inhaltsobjekt einem Standort in der Zielhierarchie zuweisen. Dieser Standort wird dann zum Besitzer dieses Inhalts in der Zielhierarchie. Vom Standort der obersten Ebene der Zielhierarchie werden die Metadaten der Inhalte zwar migriert, doch es ist der zugewiesene Standort, durch den über das Netzwerk auf die Originalquelle der Inhalte zugegriffen wird.  
 
  Zum Minimieren der beim Migrieren von Inhalten verwendeten Netzwerkbandbreite übertragen Sie den Besitz des Inhalts auf einen Standort in der Zielhierarchie, der sich im Netzwerk in der Nähe des Inhaltsorts in der Quellhierarchie befindet. Die Inhaltsinformationen sind in der Zielhierarchie global freigegeben und daher an jedem Standort verfügbar.  
 
  Inhaltsinformationen werden zwar mithilfe der Datenbankreplikation für alle Standorte freigegeben, doch alle Inhalte, die einem primären Standort zugewiesen und dann für Verteilungspunkte an anderen primären Standorten bereitgestellt werden, werden mithilfe der dateibasierten Replikation übertragen. Diese Übertragung wird über den zentralen Verwaltungsstandort zum zusätzlichen primären Standort weitergeleitet. Bei geringer Netzwerkbandbreite können Sie Datentransfers reduzieren, indem Sie Pakete zentralisieren, die Sie vor oder während der Migration an mehrere primäre Standorte verteilen möchten, wenn Sie einen Standort als Besitzer des Inhalts zuweisen.
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

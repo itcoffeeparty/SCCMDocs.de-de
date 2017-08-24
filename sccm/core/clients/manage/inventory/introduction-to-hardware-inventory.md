@@ -6,23 +6,20 @@ ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 3969952e-9d05-49c9-82a2-e7e90ccef511
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
-ms.openlocfilehash: a543b945c4727540faa064c068b175ef63cb5a4b
-ms.contentlocale: de-de
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: c64f0b42bff25e8e91cf9101d6fbb538634eab15
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="introduction-to-hardware-inventory-in-system-center-configuration-manager"></a>Einführung in die Hardwareinventur in System Center Configuration Manager
 
@@ -57,4 +54,3 @@ Sammeln Sie mit der Hardwareinventur in System Center Configuration Manager Info
 - Verwenden Sie IDMIF-Dateien zum Sammeln von Informationen zu Assets, die keinem Configuration Manager-Client zugeordnet sind, z.B. Projektoren, Fotokopierer und Netzwerkdrucker.  
 
  Weitere Informationen zur Verwendung dieser Methoden zum Erweitern der Hardwareinventur für Configuration Manager finden Sie unter [Konfigurieren der Hardwareinventur in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md).  
-

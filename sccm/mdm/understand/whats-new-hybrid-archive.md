@@ -6,8 +6,7 @@ ms.date: 06/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4c27b161-9eb7-4cdd-b469-d8eb27e71aea
@@ -15,12 +14,11 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 ROBOTS: NOINDEX, NOFOLLOW
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ed6b65a1a5aabc0970cd0333cb033405cf6d2aea
 ms.openlocfilehash: 0abd1cdcf44e778c91bacb8011efd711818ce2e9
-ms.contentlocale: de-de
-ms.lasthandoff: 07/03/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>Frühere Hybridfeatures mit System Center Configuration Manager und Microsoft Intune
 
@@ -561,4 +559,3 @@ Im Juni 2016 wurden keine neuen Hybridfeatures für Configuration Manager (Curre
 - **iOS-Aktivierungssperre**
 
   Ab Version 1602 von Configuration Manager (Current Branch) können Sie die iOS-Aktivierungssperre verwalten, ein Feature der App „Mein iPhone suchen“ für iOS 7.1 und höher. Die Aktivierungssperre wird automatisch aktiviert, wenn die iPhone-App „Mein iPhone suchen“ auf einem Gerät verwendet wird.  Einzelheiten finden Sie unter [Manage iOS Activation Lock Bypass with System Center Configuration Manager (Verwalten der iOS-Aktivierungssperre-Umgehung mit System Center Configuration Manager)](/sccm/mdm/deploy-use/manage-ios-activation-lock#bypass-activation-lock).  
-

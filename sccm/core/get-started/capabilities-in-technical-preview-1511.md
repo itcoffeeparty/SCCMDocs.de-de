@@ -4,24 +4,22 @@ description: "Erfahren Sie mehr über Funktionen, die in System Center Configura
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 69473706-21b3-498b-a67e-670fdc988f0d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
-ms.openlocfilehash: 2e0338267ea9fdc639d57f93adda1e46aea80eec
-ms.contentlocale: de-de
-ms.lasthandoff: 01/24/2017
-
+ms.openlocfilehash: d0bde2c085cc9b330bc772e68081d629ca9e2f11
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>Funktionen in System Center Configuration Manager Technical Preview 1511
 
@@ -208,4 +206,3 @@ Versuchen Sie, die folgende Aufgabe auszuführen, und verwenden Sie dann die Fee
 1.  [Stellen Sie Softwareupdates](https://technet.microsoft.com/library/gg712304.aspx) für die Serverclustersammlung bereit.  
 
 2.  [Überwachen Sie die Softwareupdatebereitstellung](https://technet.microsoft.com/library/gg712304.aspx).  
-

@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 6c64f276-b88c-4b1e-8073-331876a03038
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 814c6133a30b1116d05aaeafddb0dfb7fe2a390e
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prepare-windows-pe-peer-cache-to-reduce-wan-traffic-in-system-center-configuration-manager"></a>Vorbereiten des Windows PE-Peercache zum Reduzieren des WAN-Datenverkehrs in System Center Configuration Manager
 
@@ -35,7 +34,7 @@ Beim Bereitstellen eines neuen Betriebssystems in System Center Configuration Ma
 
 In den folgenden Abschnitten erfahren Sie, wie Sie Peercache verwalten.
 
-##  <a name="a-namebkmkpeercacheobjectsa-objects-stored-on-a-peer-cache-source"></a><a name="BKMK_PeerCacheObjects"></a> In einer Peercachequelle gespeicherte Objekte  
+##  <a name="BKMK_PeerCacheObjects"></a> In einer Peercachequelle gespeicherte Objekte  
  Eine für die Verwendung von Windows PE-Peercache konfigurierte Tasksequenz kann die folgenden Inhaltsobjekte bei der Ausführung in Windows PE abrufen:  
 
 -   Betriebssystemabbild  
@@ -52,17 +51,17 @@ In den folgenden Abschnitten erfahren Sie, wie Sie Peercache verwalten.
 
 -   Softwareupdates  
 
-##  <a name="a-namebkmkpeercacheworka-how-does--windows-pe-peer-cache-work"></a><a name="BKMK_PeerCacheWork"></a> Funktionsweise von Windows PE-Peercache  
+##  <a name="BKMK_PeerCacheWork"></a> Funktionsweise von Windows PE-Peercache  
  Stellen sie sich ein Szenario mit einer Zweigstelle vor, die über keinen Verteilungspunkt, aber über mehrere Clients verfügt, die für die Verwendung von Windows PE-Peercache aktiviert sind. Sie stellen die Tasksequenz, die für die Verwendung von Peerchache konfiguriert ist, auf mehreren Clients bereit, die als Teil der Peercachequelle konfiguriert sind. Der erste Client, der die Tasksequenz ausführt, sendet eine Anforderung nach einem Peer mit dem Inhalt. Er findet keinen, daher erhält er den Inhalt von einem Verteilungspunkt über das WAN. Der Client installiert das neue Image und speichert den Inhalt dann in seinem Configuration Manager-Clientcache, sodass er anschließend als Peercachequelle für andere Clients fungieren kann. Wenn der nächste Client die Tasksequenz ausführt, sendet er eine Anforderung zur Suche nach einer Peercachequelle im Subnetz, und der erste Client antwortet und stellt den zwischengespeicherten Inhalt zur Verfügung.  
 
-##  <a name="a-namebkmkpeercachedeterminea-determine-what--clients-will-be-part-of-the-windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheDetermine"></a> Ermitteln der Clients, die Teil der Windows PE-Peercachequelle sein werden  
+##  <a name="BKMK_PeerCacheDetermine"></a> Ermitteln der Clients, die Teil der Windows PE-Peercachequelle sein werden  
  Es müssen verschiedene Dinge berücksichtigt werden, um Sie bei der Ermittlung der Computer zu unterstützen, die als Windows PE-Peercachequelle ausgewählt werden:  
 
 -   Die Windows PE-Peercachequelle sollte ein Desktopcomputer sein, der immer eingeschaltet und für Peercacheclients verfügbar ist.  
 
 -   Der Windows PE-Peercache verfügt über einen ausreichend großen Clientcache, um die Images zu speichern.  
 
-##  <a name="a-namebkmkpeercacherequirementsa-requirements-for-a-client-to-use-a--windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheRequirements"></a> Anforderungen für einen Client zur Verwendung einer Windows PE-Peercachequelle  
+##  <a name="BKMK_PeerCacheRequirements"></a> Anforderungen für einen Client zur Verwendung einer Windows PE-Peercachequelle  
  Damit Clients eine Windows PE-Peercachequelle verwenden können, müssen die folgenden Anforderungen erfüllt werden:  
 
 -   Der Configuration Manager-Client muss in der Lage sein, über die folgenden Ports in Ihrem Netzwerk zu kommunizieren:  
@@ -78,7 +77,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie Peercache verwalten.
 
 -   Die Bereitstellungsoptionen für die Bereitstellung der Tasksequenz müssen als „Inhalt lokal herunterladen, wenn er von der Tasksequenz benötigt wird“ konfiguriert werden.  
 
-##  <a name="a-namebkmkpeercacheconfigurea-configure-windows-pe-peer-cache"></a><a name="BKMK_PeerCacheConfigure"></a> Konfigurieren des Windows PE-Peercaches  
+##  <a name="BKMK_PeerCacheConfigure"></a> Konfigurieren des Windows PE-Peercaches  
  Sie können die folgenden Methoden verwenden, um einem Client Peercacheinhalt bereitzustellen, damit dieser als Peercachequelle dienen kann:  
 
 -   Ein Peercacheclient, der keine Peercachequelle mit dem Inhalt finden kann, lädt den Inhalt von einem Verteilungspunkt herunter.  Wenn der Client Clienteinstellungen empfängt, die Peercache aktivieren, und die Tasksequenz so konfiguriert ist, dass zwischengespeicherter Inhalt erhalten bleibt, wird der Client zu einer Peercachequelle.  
@@ -112,7 +111,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie Peercache verwalten.
 
  Nachdem ein Gerät mit diesem Einstellungsobjekt konfiguriert wurde, kann es als Peercachequelle fungieren. Diese Einstellungen sollten auf potenziellen Peercacheclients bereitgestellt werden, um die erforderlichen Ports und Protokolle zu konfigurieren.  
 
-###  <a name="a-namebkmkpeercacheconfiguretsa-configure-a-task-sequence-for-windows-pe-peer-cache"></a><a name="BKMK_PeerCacheConfigureTS"></a> Konfigurieren einer Tasksequenz für Windows PE-Peercache  
+###  <a name="BKMK_PeerCacheConfigureTS"></a> Konfigurieren einer Tasksequenz für Windows PE-Peercache  
  Verwenden Sie beim Konfigurieren der Tasksequenz die folgenden Tasksequenzvariablen als Sammlungsvariablen in der Sammlung, der die Tasksequenz bereitgestellt wird:  
 
 -   **SMSTSPeerDownload**  
@@ -135,15 +134,9 @@ In den folgenden Abschnitten erfahren Sie, wie Sie Peercache verwalten.
 
  Weitere Informationen finden Sie unter [Task sequence built-in variables (Integrierte Tasksequenzvariablen)](../understand/task-sequence-built-in-variables.md).  
 
-###  <a name="a-namebkmkpeercachevalidatea-validate-the-success-of-using-windows-pe-peer-cache"></a><a name="BKMK_PeerCacheValidate"></a> Überprüfen, ob Windows PE-Peercache erfolgreich verwendet werden kann  
+###  <a name="BKMK_PeerCacheValidate"></a> Überprüfen, ob Windows PE-Peercache erfolgreich verwendet werden kann  
  Nach der Verwendung von Windows PE-Peercache zum Bereitstellen und Installieren einer Tasksequenz können Sie überprüfen, ob der Peercache im Prozess erfolgreich verwendet wurde, indem Sie **smsts.log** auf dem Client anzeigen, auf dem die Tasksequenz ausgeführt wurde.  
 
  Suchen Sie im Protokoll einen Eintrag ähnlich dem folgenden, in dem <*Quellservername*> den Computer identifiziert, von dem der Client den Inhalt erhalten hat. Dieser Computer sollte eine Peercachequelle und kein Verteilungspunktserver sein. Die weiteren Details variieren basierend auf Ihrer lokalen Umgebung und den Konfigurationen.  
 
 -   *<![LOG[Datei heruntergeladen von http:// <Quellservername\>:8003/SCCM_BranchCache$/SS10000C/sccm?/install.wim auf C:\\_SMSTaskSequence\Packages\SS10000C\install.wim ]LOG]!><time="14:24:33.329+420" date="06-26-2015" component="ApplyOperatingSystem" context="" type="1" thread="1256" file="downloadcontent.cpp:1626">*  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

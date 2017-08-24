@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0212b023-804a-4f84-b880-7a59cdb49c67
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: f77af4b8fcb193ed44511c0e5eea7290f55dbbf8
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="use-a-task-sequence-to-manage-virtual-hard-disks-in-system-center-configuration-manager"></a>Verwenden einer Tasksequenz zum Verwalten virtueller Festplatten in System Center Configuration Manager
 
@@ -60,10 +59,10 @@ In System Center Configuration Manager können Sie virtuelle Festplatten (Virtua
     > [!NOTE]  
     >  Wenn Sie die VMM-Konsole installieren, während die Configuration Manager-Konsole geöffnet ist, müssen Sie nach Abschluss der VMM-Konsoleninstallation die Configuration Manager-Konsole neu starten. Andernfalls kann von Configuration Manager keine Verbindung mit dem VMM-Verwaltungsserver hergestellt werden, um eine virtuelle Festplatte hochzuladen.  
 
-##  <a name="a-namebkmkcreatevhdstepsa-steps-to-create-a-vhd"></a><a name="BKMK_CreateVHDSteps"></a> Schritte zum Erstellen einer virtuellen Festplatte  
+##  <a name="BKMK_CreateVHDSteps"></a> Schritte zum Erstellen einer virtuellen Festplatte  
  Zum Erstellen einer virtuellen Festplatte müssen Sie eine Tasksequenz erstellen, die die Schritte zum Erstellen der virtuellen Festplatte enthält, und diese Tasksequenz dann im Assistenten zum Erstellen virtueller Festplatten verwenden, um die virtuelle Festplatte zu erstellen. In den folgenden Abschnitten sind die Schritte zum Erstellen der virtuellen Festplatte angegeben.  
 
-###  <a name="a-namebkmkcreatetsa-create-a-task-sequence-for-the-vhd"></a><a name="BKMK_CreateTS"></a> Erstellen einer Tasksequenz für die virtuelle Festplatte  
+###  <a name="BKMK_CreateTS"></a> Erstellen einer Tasksequenz für die virtuelle Festplatte  
  Sie müssen eine Tasksequenz erstellen, die die Schritte zum Erstellen der virtuellen Festplatte enthält. Der Tasksequenzerstellungs-Assistent weist die Option **Bestehendes Abbildpaket auf einer virtuellen Festplatte installieren** auf, mit der die Schritte zur Erstellen der virtuellen Festplatte erstellt werden. Der Assistent fügt z. B. die folgenden erforderlichen Schritte hinzu: Neustarten in Windows PE, Formatieren und Partitionieren des Datenträgers, Anwenden des Betriebssystems und Herunterfahren des Computers. Die virtuelle Festplatte kann unter einem vollständigen Betriebssystems nicht erstellt werden. Zudem muss in Configuration Manager gewartet werden, bis der virtuelle Computer heruntergefahren wurde, bevor das Paket abgeschlossen werden kann. Standardmäßig wird der virtuelle Computer vom Assistenten nach 5 Minuten heruntergefahren. Nach dem Erstellen der Tasksequenz können Sie bei Bedarf zusätzliche Schritte hinzufügen.  
 
 > [!IMPORTANT]  
@@ -124,7 +123,7 @@ In System Center Configuration Manager können Sie virtuelle Festplatten (Virtua
 
 10. Schließen Sie den Assistenten ab.  
 
-###  <a name="a-namebkmkcreatevhda-create-a-vhd"></a><a name="BKMK_CreateVHD"></a> Erstellen einer virtuellen Festplatte  
+###  <a name="BKMK_CreateVHD"></a> Erstellen einer virtuellen Festplatte  
  Nachdem Sie eine Tasksequenz für die virtuelle Festplatte erstellt haben, erstellen Sie die virtuelle Festplatte mithilfe des Assistenten zum Erstellen virtueller Festplatten.  
 
 > [!IMPORTANT]  
@@ -182,10 +181,10 @@ In System Center Configuration Manager können Sie virtuelle Festplatten (Virtua
 > [!NOTE]  
 >  Die Größe der virtuellen Festplatte wird von Configuration Manager abgerufen, indem eine Verbindung mit dem Quellspeicherort der virtuellen Festplatte hergestellt wird. Wenn ein Zugriff auf die VHD-Datei durch Configuration Manager nicht möglich ist, wird in der Spalte **Größe (KB)** für die virtuelle Festplatte **0** angezeigt.  
 
-##  <a name="a-namebkmkmodifyvhdstepsa-steps-to-modify-an-existing-vhd"></a><a name="BKMK_ModifyVHDSteps"></a> Schritte zum Ändern einer vorhandenen virtuellen Festplatte  
+##  <a name="BKMK_ModifyVHDSteps"></a> Schritte zum Ändern einer vorhandenen virtuellen Festplatte  
  Zum Ändern einer virtuellen Festplatte müssen Sie eine Tasksequenz mit den Schritten erstellen, die zum Ändern der virtuellen Festplatte erforderlich sind. Danach wählen Sie die Tasksequenz im Assistenten zum Ändern virtueller Festplatten aus. Die virtuelle Festplatte wird mit der virtuellen Maschine verbunden, die Tasksequenz wird in der virtuellen Festplatte ausgeführt, und die VHD-Datei wird nachfolgend aktualisiert. In den folgenden Abschnitten sind die Schritte zum Ändern der virtuellen Festplatte angegeben.  
 
-###  <a name="a-namebkmkmodifytsa-create-a-task-sequence-to-modify-the-vhd"></a><a name="BKMK_ModifyTS"></a> Erstellen einer Tasksequenz zum Ändern der virtuellen Festplatte  
+###  <a name="BKMK_ModifyTS"></a> Erstellen einer Tasksequenz zum Ändern der virtuellen Festplatte  
  Zum Ändern einer vorhandenen virtuellen Festplatte müssen Sie diese zunächst als Tasksequenz erstellen. Wählen Sie nur die Schritte aus, die zum Ändern der Tasksequenz erforderlich sind. Wenn Sie der virtuellen Festplatte beispielsweise eine Anwendung hinzufügen möchten, erstellen Sie eine benutzerdefinierte Tasksequenz, und fügen Sie dann nur den Schritt zum Installieren der Anwendung hinzu.  
 
  Verwenden Sie das folgende Verfahren, um die Tasksequenz zum Ändern der virtuellen Festplatte zu erstellen:  
@@ -224,7 +223,7 @@ In System Center Configuration Manager können Sie virtuelle Festplatten (Virtua
 
 5.  Klicken Sie auf **OK** , um den Tasksequenz-Editor zu beenden.  
 
-###  <a name="a-namebkmkmodifyvhda-modify-a-vhd"></a><a name="BKMK_ModifyVHD"></a> Ändern einer virtuellen Festplatte  
+###  <a name="BKMK_ModifyVHD"></a> Ändern einer virtuellen Festplatte  
  Nachdem Sie eine Tasksequenz für die virtuelle Festplatte erstellt haben, ändern Sie die virtuelle Festplatte mithilfe des Assistenten zum Ändern virtueller Festplatten.  
 
  Verwenden Sie das folgende Verfahren, um eine virtuelle Festplatte zu ändern.  
@@ -269,7 +268,7 @@ In System Center Configuration Manager können Sie virtuelle Festplatten (Virtua
     >   
     >  Darüber hinaus können Sie den Hyper-V-Manager öffnen (sofern Sie die Hyper-V-Verwaltungstools auf dem Computer installiert haben) und eine Verbindung mit dem vom Assistenten erstellten temporären virtuellen Computer herstellen, um die Ausführung der Tasksequenz anzuzeigen. Über den virtuellen Computer können Sie in der Datei smsts.log den Fortschritt der Tasksequenz überwachen. Bei Problemen mit dem Abschluss eines Tasksequenzschritts können Sie diese Protokolldatei zur Problembehandlung verwenden. Vor der Formatierung der Festplatte befindet sich die Datei smsts.log unter X:\windows\temp\smstslog\smsts.log, nach der Formatierung befindet sie sich unter C:\\_SMSTaskSequence\Logs\Smstslog\. Nach Abschluss der Tasksequenzschritte wird der virtuelle Computer (standardmäßig) nach 5 Minuten heruntergefahren und gelöscht.  
 
-##  <a name="a-namebkmkapplyupdatesa-apply-software-updates-to-a-vhd"></a><a name="BKMK_ApplyUpdates"></a> Anwenden von Softwareupdates auf eine virtuelle Festplatte  
+##  <a name="BKMK_ApplyUpdates"></a> Anwenden von Softwareupdates auf eine virtuelle Festplatte  
  Es werden regelmäßig neue Softwareupdates veröffentlicht, die für das Betriebssystem Ihrer virtuellen Festplatte gelten. Sie können relevante Softwareupdates nach einem festgelegten Zeitplan auf eine virtuelle Festplatte anwenden. Nach dem festgelegten Zeitplan werden von Configuration Manager die ausgewählten Softwareupdates auf die virtuelle Festplatte angewendet.  
 
  Die Informationen zur virtuellen Festplatte werden in der Standortdatenbank gespeichert. Dazu gehören beispielsweise die Softwareupdates, die während der Erstellung der virtuellen Festplatte angewendet wurden. Softwareupdates, die nach dem ursprünglichen Erstellen auf die virtuelle Festplatte angewendet wurden, werden ebenfalls in der Standortdatenbank gespeichert. Wenn Sie den Assistenten starten, um Softwareupdates auf die virtuelle Festplatte anzuwenden, wird vom Assistenten eine Liste mit den verfügbaren Softwareupdates abgerufen, die noch nicht auf die virtuelle Festplatte angewendet wurden und ausgewählt werden können.  
@@ -303,7 +302,7 @@ In System Center Configuration Manager können Sie virtuelle Festplatten (Virtua
 
 8.  Überprüfen Sie auf der Seite **Abschluss des Vorgangs** , ob die Softwareupdates erfolgreich auf das Betriebssystemabbild angewendet wurden.  
 
-##  <a name="a-namebkmkimporttovmma-import-the-vhd-to-system-center-virtual-machine-manager"></a><a name="BKMK_ImportToVMM"></a> Importieren der virtuellen Festplatte in System Center Virtual Machine Manager  
+##  <a name="BKMK_ImportToVMM"></a> Importieren der virtuellen Festplatte in System Center Virtual Machine Manager  
  System Center VMM ist eine Verwaltungslösung für virtualisierte Rechenzentren, mit der Sie Virtualisierungshosts, Netzwerk- und Speicherressourcen konfigurieren und verwalten können, um in von Ihnen erstellten privaten Clouds virtuelle Computer und Dienste zu erstellen und bereitzustellen. Nach der Erstellung einer virtuellen Festplatte in Configuration Manager können Sie die virtuelle Festplatte mit VMM importieren und verwalten.  
 
 > [!TIP]  
@@ -328,9 +327,3 @@ In System Center Configuration Manager können Sie virtuelle Festplatten (Virtua
     -   **Nicht verschlüsselte Übertragung verwenden**: Wählen Sie diese Einstellung aus, um die VHD-Datei unverschlüsselt an den VMM-Verwaltungsserver zu übertragen.  
 
 5.  Überprüfen Sie auf der Seite Zusammenfassung die Einstellungen, und schließen Sie dann den Assistenten ab. Abhängig von der Größe der VHD-Datei und der Netzwerkbandbreite für die Verbindung mit dem VMM-Verwaltungsserver kann die Dauer für das Hochladen der virtuellen Festplatte variieren.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

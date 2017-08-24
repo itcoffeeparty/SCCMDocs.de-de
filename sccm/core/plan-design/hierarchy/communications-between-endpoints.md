@@ -6,27 +6,26 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 68fe0e7e-351e-4222-853a-877475adb589
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 2ac9f98dc7b455d3b72d794d4311863186ed53ef
 ms.openlocfilehash: cd94f9ccc7e196b30e5dc7ae9368d073b7cff5d2
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="communications-between-endpoints-in-system-center-configuration-manager"></a>Datenübertragungen zwischen Endpunkten in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 
-##  <a name="a-nameplanningintra-sitecoma-communications-between-site-systems-in-a-site"></a><a name="Planning_Intra-site_Com"></a> Kommunikation zwischen Standortsystemen in einem Standort  
+##  <a name="Planning_Intra-site_Com"></a> Kommunikation zwischen Standortsystemen in einem Standort  
  Wenn Configuration Manager-Standortsysteme oder -Komponenten über das Netzwerk mit anderen Standortsystemen oder Configuration Manager-Komponenten kommunizieren, wird in Abhängigkeit davon, wie Sie den Standort konfiguriert haben, eines der folgenden Protokolle verwendet:  
 
 -   Server Message Block (SMB)  
@@ -46,7 +45,7 @@ Für die Verwaltung der Inhaltsübertragung vom Standortserver zu Verteilungspun
 Weitere Informationen finden Sie unter [Verwalten von Netzwerk-Bandbreite für das Content Management in System Center Configuration Manager](manage-network-bandwidth.md).
 
 
-##  <a name="a-nameplanningclienttositesystema-communications-from-clients-to-site-systems-and-services"></a><a name="Planning_Client_to_Site_System"></a> Kommunikation von Clients mit Standortsystemen und Diensten  
+##  <a name="Planning_Client_to_Site_System"></a> Kommunikation von Clients mit Standortsystemen und Diensten  
 Clients initiieren die Kommunikation mit Standortsystemrollen, Active Directory-Domänendiensten und Onlinediensten. Damit diese Kommunikation möglich ist, müssen die Firewalls den Netzwerkdatenverkehr zwischen Clients und dem Endpunkt der Kommunikation zulassen. Endpunkte können Folgendes sein:  
 
 -   **Anwendungskatalog-Websitepunkt**: Unterstützt HTTP- und HTTPS-Kommunikation
@@ -79,7 +78,7 @@ Weitere Informationen zur Dienstidentifizierung durch Clients finden Sie unter [
 
 Details zu Ports und Protokollen, die von Clients verwendet werden, wenn diese mit den Endpunkten kommunizieren, finden Sie unter [In System Center Configuration Manager verwendete Ports](../../../core/plan-design/hierarchy/ports.md).  
 
-###  <a name="a-namebkmkclientspana-considerations-for-client-communications-from-the-internet-or-an-untrusted-forest"></a><a name="BKMK_clientspan"></a> Überlegungen zur Clientkommunikation aus dem Internet oder einer nicht vertrauenswürdigen Gesamtstruktur  
+###  <a name="BKMK_clientspan"></a> Überlegungen zur Clientkommunikation aus dem Internet oder einer nicht vertrauenswürdigen Gesamtstruktur  
 Die folgenden, an primären Standorten installierten Standortsystemrollen unterstützen Verbindungen von Clients, die sich an nicht vertrauenswürdigen Standorten wie dem Internet oder einer nicht vertrauenswürdigen Gesamtstruktur befinden. (Sekundäre Standorte unterstützen Clientverbindungen von nicht vertrauenswürdigen Standorten nicht):  
 
 -   Anwendungskatalog-Websitepunkt  
@@ -120,7 +119,7 @@ Wie aus dem vorstehenden Beispiel hervorgeht, können Sie internetbasierte Stand
 -   **Tunneling**:   
     Falls die Anforderungen für SSL-Bridging vom Proxywebserver nicht erfüllt werden können oder falls Sie die Internetunterstützung für mobile Geräte, die mithilfe von Configuration Manager registriert wurden, konfigurieren möchten, wird auch SSL-Tunneling unterstützt. Diese Option ist weniger sicher, da die SSL-Pakete aus dem Internet ohne SSL-Tunnelabschluss an die Standortsysteme weitergeleitet werden und daher nicht auf schädliche Inhalte überprüft werden können. Bei der Verwendung von SSL-Tunneling müssen vom Proxywebserver keine Zertifikatanforderungen erfüllt werden.  
 
-##  <a name="a-nameplancomx-foresta-communications-across-active-directory-forests"></a><a name="Plan_Com_X-Forest"></a> Kommunikation zwischen Active Directory-Gesamtstrukturen  
+##  <a name="Plan_Com_X-Forest"></a> Kommunikation zwischen Active Directory-Gesamtstrukturen  
 System Center Configuration Manager unterstützt Standorte und Hierarchien, die mehrere Active Directory-Gesamtstrukturen umfassen.  
 
 Configuration Manager unterstützt auch Domänencomputer, die sich nicht in der gleichen Active Directory-Gesamtstruktur wie der Standortserver befinden, sowie Computer in Arbeitsgruppen:  
@@ -152,7 +151,7 @@ Configuration Manager unterstützt auch Domänencomputer, die sich nicht in der 
 
     -   [Installieren von Configuration Manager-Clients auf Arbeitsgruppencomputern](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientWorkgroup)  
 
-###  <a name="a-namebkmkspana-scenarios-to-support-a-site-or-hierarchy-that-spans-multiple-domains-and-forests"></a><a name="bkmk_span"></a> Szenarien zum Unterstützen eines Standorts oder einer Hierarchie, der oder die sich über mehrere Domänen und Gesamtstrukturen erstreckt  
+###  <a name="bkmk_span"></a> Szenarien zum Unterstützen eines Standorts oder einer Hierarchie, der oder die sich über mehrere Domänen und Gesamtstrukturen erstreckt  
 
 #### <a name="communication-between-sites-in-a-hierarchy-that-spans-forests"></a>Kommunikation zwischen Standorten in einer Hierarchie, die mehrere Gesamtstrukturen umfasst:  
 Dieses Szenario erfordert eine bidirektionale Vertrauensstellung, die die Kerberos-Authentifizierung unterstützt.  Falls keine bidirektionale Gesamtstrukturvertrauensstellung vorhanden ist, die die Kerberos-Authentifizierung unterstützt, wird von Configuration Manager kein untergeordneter Standort in der Remotegesamtstruktur unterstützt.  
@@ -256,11 +255,5 @@ Um Standortinformationen in einer anderen Active Directory-Gesamtstruktur zu ver
 
 -   Konfigurieren jedes Standorts, sodass er seine Daten in Active Directory-Domänendiensten veröffentlicht. Von den Clients in dieser Gesamtstruktur können dann Standortinformationen abgerufen und Verwaltungspunkte gefunden werden. Für Clients, von denen Active Directory Domain Services nicht zur Dienstidentifizierung verwendet werden kann, besteht die Möglichkeit, DNS, WINS oder den Verwaltungspunkt zu verwenden, der dem Client zugewiesen wurde.  
 
-###  <a name="a-namebkmkxchangea-put-the-exchange-server-connector-in-a-remote-forest"></a><a name="bkmk_xchange"></a> Anordnen des Exchange Server-Connectors in einer Remotegesamtstruktur  
+###  <a name="bkmk_xchange"></a> Anordnen des Exchange Server-Connectors in einer Remotegesamtstruktur  
 Damit dieser Fall unterstützt wird, müssen Sie darauf achten, dass die Namensauflösung zwischen Gesamtstrukturen funktioniert (konfigurieren Sie beispielsweise DNS-Weiterleitung), und geben Sie beim Konfigurieren des Exchange Server-Connectors die Intranet-FQDN von Exchange Server an. Weitere Informationen finden Sie unter [Verwalten von mobilen Geräten mit System Center Configuration Manager und Microsoft Intune](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

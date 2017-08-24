@@ -6,23 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: eab0e09d-b09e-4c14-ab14-c5f87472522e
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: 832be8c9fda727804f57e83768cd8799db722c67
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="planning-for-certificate-template-permissions-for-certificate-profiles-in-system-center-configuration-manager"></a>Planen der Berechtigungen von Zertifikatvorlagen für Zertifikatprofile in System Center Configuration Manager
 
@@ -64,4 +61,3 @@ Die folgenden Informationen können Ihnen beim Planen der Konfiguration von Bere
     -   Erstellen Sie auf dem Standortsystemserver, auf dem der Zertifikatregistrierungspunkt gehostet wird, den DWORD-Registrierungsschlüssel mit dem Wert „1“: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SCCM\CRP\SkipTemplateCheckOnlyIfAccountAccessDenied  
 
 3.  Fügen Sie bei der ausstellenden Zertifizierungsstelle auf der Registerkarte **Sicherheit** in den Eigenschaften für die Zertifikatsvorlage mindestens eine Sicherheitsgruppe hinzu, um den Benutzer- oder Gerätekonten die Berechnungen „Lesen“ oder „Anmelden“ zu gewähren.  
-

@@ -6,22 +6,19 @@ ms.date: 05/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f4f9a5fd-f573-4b99-ad93-b2c76812e922
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
 ms.openlocfilehash: 39653604ba5fd8e1fe9dd4d42889221d983f9bec
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>Installieren und Upgraden mit dem Baselinemedium von Version 1606 für System Center Configuration Manager
 
@@ -34,7 +31,7 @@ Das Baselinemedium ist als Teil der Version Microsoft System Center 2016 oder de
 
 Wenn Sie das Baselinemedium von Version 1606 verwenden, ist der Standort, den Sie installieren oder auf den Sie aktualisieren:
 - Ein *Current Branch-Standort*, der einem Standort entspricht, der anfänglich mit dem 1511-Baselinemedium installiert wurde und später auf Version 1606 und das entsprechende 1606-Hotfixrollup „KB3186654“ aktualisiert wurde.
--    Ein *LTSB-Standort*, der dem Current Branch-Standort entspricht, der die Version 1606 und das entsprechende 1606-Hotfixrollup „KB3186654“ ausführt. Das Baselinemedium enthält bereits das Hotfixrollup.  Wie im Artikel [Einführung in Long-Term Servicing Branch von System Center Configuration Manager](introduction-to-the-ltsb.md) beschrieben wird, unterstützt LTSB jedoch nicht alle Features oder Funktionen, die in Current Branch verfügbar sind.
+-   Ein *LTSB-Standort*, der dem Current Branch-Standort entspricht, der die Version 1606 und das entsprechende 1606-Hotfixrollup „KB3186654“ ausführt. Das Baselinemedium enthält bereits das Hotfixrollup.  Wie im Artikel [Einführung in Long-Term Servicing Branch von System Center Configuration Manager](introduction-to-the-ltsb.md) beschrieben wird, unterstützt LTSB jedoch nicht alle Features oder Funktionen, die in Current Branch verfügbar sind.
 
 Wenn Sie nicht mit den verschiedenen Branches von System Center Configuration Manager vertraut sind, finden Sie weitere Informationen unter [Which branch of Configuration Manager should I use (Welchen Configuration Manager-Branch sollte ich verwenden?)](which-branch-should-i-use.md).
 
@@ -77,7 +74,7 @@ Das Baselinemedium von Version 1606 unterstützt einen neuen, unbeaufsichtigten 
 Wenn Sie ein unbeaufsichtigtes Skript verwenden, um einen lizenzierten Branch zu installieren, müssen Sie den folgenden Abschnitt, Schlüsselnamen und Werte im Abschnitt „Optionen“ Ihres Skripts hinzufügen. Sie müssen diese Werte nicht verwenden, um ein Skript für die Installation einer Evaluierungsversion von Current Branch zu erstellen:  
 
  **SABranchOptions**
--     **Schlüsselname: SAActive**
+-   **Schlüsselname: SAActive**
   - Werte: 0 oder 1  
   - Details: 0 installiert eine nicht lizenzierte Evaluierungsversion von Current Branch, und 1 installiert die lizenzierte Version.   
 
@@ -105,7 +102,7 @@ Wenn Sie das 1606-Baselinemedium verwenden, um einen neuen Standort für jeden B
 
 - Während des Setups müssen Sie den Configuration Manager-Branch auswählen, den Sie installieren möchten, und Sie können Details zu Ihrem Software Assurance-Vertrag angeben.
 - Alle Standorte in derselben Hierarchie müssen denselben Branch ausführen. Eine Hierarchie mit einer Mischung aus LTSB und Current Branch an unterschiedlichen Standorten wird nicht unterstützt.
--    Neue Skriptinstallation. Weitere Informationen finden Sie unter „Neue Skriptinstallationsoptionen“ weiter oben in diesem Artikel.
+-   Neue Skriptinstallation. Weitere Informationen finden Sie unter „Neue Skriptinstallationsoptionen“ weiter oben in diesem Artikel.
 
 ## <a name="expand-a-stand-alone-primary-site"></a>Erweitern eines eigenständigen primären Standorts
 Sie können einen eigenständigen primären Standort erweitern, auf dem LTSB ausgeführt wird.  Der Prozess unterscheidet sich nicht von dem, der für einen Current Branch-Standort verwendet wird, jedoch mit einer Einschränkung:
@@ -119,7 +116,7 @@ Bei einem Upgrade von System Center 2012 Configuration Manager sollten Sie die i
 
 **Upgrade auf Current Branch:**
 - Während des Setups müssen Sie Current Branch auswählen, und Sie können Details zu Ihrem Software Assurance-Vertrag angeben.
--     Neue Skriptinstallation. Weitere Informationen finden Sie unter „Neue Skriptinstallationsoptionen“ weiter oben in diesem Artikel.
+-   Neue Skriptinstallation. Weitere Informationen finden Sie unter „Neue Skriptinstallationsoptionen“ weiter oben in diesem Artikel.
 
 **Upgrade auf LTSB:**  
 - Zusätzliche Schritte zu der vor dem Upgrade durchzugehenden Prüfliste
@@ -155,4 +152,3 @@ Weitere Informationen finden Sie unter [Der Ordner „CD.Latest“ für System C
 Verwenden Sie zum Sichern, Wiederherstellen oder Ausführen der Wartung eines Standorts, der LTSB ausführt, den Leitfaden und die Prozeduren, die im Artikel [Sicherung und Wiederherstellung in System Center Configuration Manager](/sccm/protect/understand/backup-and-recovery) beschrieben werden.  
 
 Verwenden Sie das Configuration Manager-Setup im Ordner „CD.Latest“ der Sicherung Ihres LTSB-Standorts.
-

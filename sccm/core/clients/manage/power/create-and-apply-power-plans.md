@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 738eddaa-52e2-467f-b453-821ef2884d47
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: de81da31b524cebe8e820766a64ecc5fdb7e4771
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-create-and-apply-power-plans-in-system-center-configuration-manager"></a>Erstellen und Anwenden von Energiesparplänen in System Center Configuration Manager
 
@@ -89,7 +88,7 @@ Mithilfe der Energieverwaltung in System Center Configuration Manager können Si
 
 10. Klicken Sie auf **OK**, um das Dialogfeld *<Sammlungsname\>***Einstellungen** zu schließen.  
 
-##  <a name="a-namebkmkplansa-available-power-management-plan-settings"></a><a name="BKMK_Plans"></a> Available power management plan settings  
+##  <a name="BKMK_Plans"></a> Available power management plan settings  
  In der folgenden Tabelle sind die in Configuration Manager verfügbaren Energieverwaltungseinstellungen aufgelistet. Sie können separate Einstellungen für folgende Vorkommnisse konfigurieren: wenn ein Computer nicht an die Stromversorgung angeschlossen ist oder sich im Akkubetrieb befindet. Je nachdem welche Windows-Version Sie verwenden, können Sie einige Einstellungen möglicherweise nicht konfigurieren.  
 
 > [!NOTE]  
@@ -112,9 +111,3 @@ Mithilfe der Energieverwaltung in System Center Configuration Manager können Si
 |**Wechsel in den Standbymodus auf Benutzeranforderung zulassen**|Mit **Ein** oder **Aus** kann der Computer in den Standbymodus versetzt werden. Dabei verbraucht er immer noch Energie, kann jedoch schneller reaktiviert werden. Wenn für diese Einstellung **Deaktiviert**festgelegt wird, kann der Computer nur in den Ruhezustand versetzt oder ausgeschaltet werden.|  
 |**Erforderlicher Leerlauf für Standbymodus (%)**|Gibt den prozentualen Anteil der Leerlaufzeit an der Computerprozessorzeit an, die erforderlich ist, damit der Computer in den Standbymodus versetzt wird. Auf Computern, auf denen Windows 7 ausgeführt wird, ist dieser Wert immer auf **0**gesetzt.|  
 |**Windows-Aktivierungszeitgeber für Desktopcomputer aktivieren**|Auswählen von **aktivieren** oder **deaktivieren** für den integrierten Windows-Zeitgeber, wodurch die Energieverwaltung zum Reaktivieren eines Desktopcomputers verwendet werden kann. Wird ein Desktopcomputer vom Windows-Aktivierungszeitgeber erneut aktiviert, verbleibt er standardmäßig 10 Minuten im Normalzustand, damit auf dem Computer Updates installiert oder Richtlinien empfangen werden können.<br /><br /> Aktivierungszeitgeber werden auf tragbaren Computern nicht unterstützt, um zu verhindern, dass die Computer aktiviert werden, solange sie sich nicht im Netzbetrieb befinden.|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

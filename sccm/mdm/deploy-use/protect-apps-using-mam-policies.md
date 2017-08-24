@@ -6,22 +6,20 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 28115475-e563-4e16-bf30-f4c9fe704754
-caps.latest.revision: 18
-caps.handback.revision: 0
+caps.latest.revision: "18"
+caps.handback.revision: "0"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
 ms.openlocfilehash: 50c137f159b0ef631f7173b8eec190182ce41cee
-ms.contentlocale: de-de
-ms.lasthandoff: 07/29/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>Schützen von Apps mithilfe von Verwaltungsrichtlinien für mobile Anwendungen in System Center Configuration Manager
 
@@ -179,4 +177,3 @@ Weitere Informationen finden Sie unter [Manage Internet access using managed bro
 
 ##  <a name="see-a-list-of-available-policy-managed-apps"></a>Liste verfügbarer richtlinienverwalteter Apps  
  Eine Liste der richtlinienverwalteten Apps, die für IOS- und Android-Geräte verfügbar sind, finden Sie unter [Microsoft Intune-Anwendungspartner](https://www.microsoft.com/cloud-platform/microsoft-intune-partners).  
-

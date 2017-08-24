@@ -6,20 +6,19 @@ ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 552e7e3d-e584-4a7c-9155-0f796a14b678
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: cf29123923436ed4cefc17c69630fc39989caeb4
 ms.openlocfilehash: 0034381a7a388ddc3eda5e774f3c63d741336301
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="configure-security-in-system-center-configuration-manager"></a>Konfigurieren der Sicherheit in System Center Configuration Manager
 
@@ -27,7 +26,7 @@ ms.openlocfilehash: 0034381a7a388ddc3eda5e774f3c63d741336301
 
 Anhand der Informationen in diesem Artikel können Sie die folgenden sicherheitsbezogenen Optionen für System Center Configuration Manager einrichten.  
 
-##  <a name="a-namebkmkconfigureclientpkia-configure-settings-for-client-pki-certificates"></a><a name="BKMK_ConfigureClientPKI"></a> Konfigurieren von Einstellungen für Client-PKI-Zertifikate  
+##  <a name="BKMK_ConfigureClientPKI"></a> Konfigurieren von Einstellungen für Client-PKI-Zertifikate  
 Wenn Sie Public Key-Infrastrukturzertifikate (PKI) für Clientverbindungen mit Standortsystemen verwenden möchten, von denen Internet Information Services (IIS) verwendet werden, konfigurieren Sie die Einstellungen für diese Zertifikate mithilfe des folgenden Verfahrens.  
 
 #### <a name="to-configure-client-pki-certificate-settings"></a>So konfigurieren Sie Einstellungen von Client-PKI-Zertifikaten  
@@ -62,7 +61,7 @@ Wenn Sie Public Key-Infrastrukturzertifikate (PKI) für Clientverbindungen mit S
 
 Wiederholen Sie diesen Vorgang für alle primären Standorte in der Hierarchie.  
 
-##  <a name="a-namebkmkconfiguresigningencryptiona-configure-signing-and-encryption"></a><a name="BKMK_ConfigureSigningEncryption"></a> Konfigurieren von Signierung und Verschlüsselung  
+##  <a name="BKMK_ConfigureSigningEncryption"></a> Konfigurieren von Signierung und Verschlüsselung  
 Konfigurieren Sie für Standortsysteme die sichersten Einstellungen für Signierung und Verschlüsselung, die von allen Clients des Standorts unterstützt werden können. Diese Einstellungen sind vor allem dann wichtig, wenn Sie Kommunikation zwischen Clients und Standortsystemen mithilfe selbstsignierter Zertifikate und über HTTP zulassen.  
 
 #### <a name="to-configure-signing-and-encryption-for-a-site"></a>So konfigurieren Sie die Signierung und Verschlüsselung für einen Standort  
@@ -86,7 +85,7 @@ Konfigurieren Sie für Standortsysteme die sichersten Einstellungen für Signier
 
 Wiederholen Sie diesen Vorgang für alle primären Standorte in der Hierarchie.  
 
-##  <a name="a-namebkmkconfigurerbaa-configure-role-based-administration"></a><a name="BKMK_ConfigureRBA"></a> Konfigurieren der rollenbasierten Verwaltung  
+##  <a name="BKMK_ConfigureRBA"></a> Konfigurieren der rollenbasierten Verwaltung  
 Bei der rollenbasierten Verwaltung werden Sicherheitsrollen, Sicherheitsbereiche und zugewiesene Sammlungen kombiniert, um den Verwaltungsbereich für jeden Administrator zu definieren. Zu einem Verwaltungsbereich gehören die Objekte, die ein Administrator in der Configuration Manager-Konsole anzeigen kann, sowie die Tasks im Zusammenhang mit diesen Objekten, die der Administrator ausführen darf. Die Konfigurationen der rollenbasierten Verwaltung werden auf jeden Standort in einer Hierarchie angewendet.  
 
 Die folgenden Links führen zu den relevanten Abschnitten des Artikels [Konfigurieren der rollenbasierten Verwaltung für System Center Configuration Manager](../../../core/servers/deploy/configure/configure-role-based-administration.md):  
@@ -106,7 +105,7 @@ Die folgenden Links führen zu den relevanten Abschnitten des Artikels [Konfigur
 > [!IMPORTANT]  
 >  Von Ihrem eigenen Verwaltungsbereich wird definiert, welche Objekte und Einstellungen Sie zuweisen können, wenn Sie die rollenbasierte Verwaltung für einen anderen Administrator konfigurieren. Informationen zum Planen für rollenbasierte Verwaltung finden Sie unter [Fundamentals of role-based administration for System Center Configuration Manager (Grundlagen der rollenbasierten Verwaltung für System Center Configuration Manager)](../../../core/understand/fundamentals-of-role-based-administration.md).  
 
-##  <a name="a-namebkmkmanageaccountsa-manage-accounts-that-are-used-by-configuration-manager"></a><a name="BKMK_ManageAccounts"></a> Verwalten von Konten, die von Configuration Manager verwendet werden  
+##  <a name="BKMK_ManageAccounts"></a> Verwalten von Konten, die von Configuration Manager verwendet werden  
 In Configuration Manager werden Windows-Konten für zahlreiche verschiedene Tasks und Verwendungen unterstützt.  
 
 Gehen Sie wie folgt vor, um anzuzeigen, welche Konten für verschiedene Tasks konfiguriert sind, und um die Kennwörter zu verwalten, die in Configuration Manager für die einzelnen Konten verwendet werden.  
@@ -127,9 +126,3 @@ Gehen Sie wie folgt vor, um anzuzeigen, welche Konten für verschiedene Tasks ko
     >  Das angegebene Kennwort muss mit dem Kennwort übereinstimmen, das in Active Directory-Benutzer und -Computer für das Konto angegeben wurde.  
 
 6.  Wählen Sie **OK** aus, um den Vorgang abzuschließen.  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

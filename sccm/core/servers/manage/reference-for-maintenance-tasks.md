@@ -6,23 +6,20 @@ ms.date: 3/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
-caps.latest.revision: 16
-caps.handback.revision: 0
+caps.latest.revision: "16"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
 ms.openlocfilehash: a2d4420c2274a9b1ceb47ffd267849fdb5a55a61
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="reference-for-maintenance-tasks-for-system-center-configuration-manager"></a>Referenz für Wartungstasks für System Center Configuration Manager
 
@@ -56,7 +53,7 @@ Dieses Thema enthält eine Liste der Details zu jedem Wartungstask für System C
 
 **Veralteten Client-Downloadverlauf löschen**: Verwenden Sie diesen Task, um Verlaufsdaten über die von Clients verwendete Downloadquelle zu löschen. Das Herunterladen von Quellinformationen wird zum Auffüllen des [Dashboards „Clientdatenquellen“](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard) verwendet.  
 -  Standortserver der zentralen Verwaltung: Nicht verfügbar
--     **Primärer Standort** – Aktiviert
+-    **Primärer Standort** – Aktiviert
 -  Sekundärer Standort: Nicht verfügbar
 
 **Veraltete Clientvorgänge löschen**: Verwenden Sie diesen Task, um alle veralteten Daten für Clientvorgänge aus der Standortdatenbank zu löschen. Dies umfasst beispielsweise Daten für veraltete oder abgelaufene Clientbenachrichtigungen (z.B. Downloadanforderungen für Computer- oder Benutzerrichtlinien) und für Endpoint Protection (z.B. Anforderungen eines administrativen Benutzers, dass auf den Clients eine Überprüfung ausgeführt werden soll oder aktualisierte Definitionen heruntergeladen werden sollen).
@@ -311,4 +308,3 @@ Diese Zuordnungen werden zur schnellen Bezugnahme in einer Tabelle gespeichert. 
 -   Standortserver der zentralen Verwaltung: Nicht verfügbar    
 -   **Primärer Standort**: Aktiviert    
 -   Sekundärer Standort: Nicht verfügbar  
-

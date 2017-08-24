@@ -6,22 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 08085d94-295c-432f-b5e3-9736bce0193b
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 154c0a286e6b9ccedc7545eb010967ac00d35407
-ms.lasthandoff: 12/16/2016
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="monitor-operating-system-deployments-in-system-center-configuration-manager"></a>Überwachen von Betriebssystembereitstellungen in System Center Configuration Manager
 
@@ -96,4 +94,3 @@ Die Configuration Manager-Konsole bietet die folgenden Möglichkeiten zum Überw
 3.  Wählen Sie den Verteilungspunkt aus, für den Statusinformationen angezeigt werden sollen.  
 
 4.  Klicken Sie im Ergebnisbereich auf die Registerkarte **Details** . Statusinformationen zum Verteilungspunkt werden angezeigt.  
-

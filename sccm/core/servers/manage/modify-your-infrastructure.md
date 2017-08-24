@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a7975dc8-46ab-4dae-86b6-dc3e3cf3b2f0
-caps.latest.revision: 19
-caps.handback.revision: 0
+caps.latest.revision: "19"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
 ms.openlocfilehash: a5228c4984347be4b115bfa5563791fa2fb7319c
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="modify-your-system-center-configuration-manager-infrastructure"></a>Ändern Ihrer System Center Configuration Manager-Infrastruktur
 
@@ -29,7 +28,7 @@ ms.openlocfilehash: a5228c4984347be4b115bfa5563791fa2fb7319c
 Nachdem Sie einen oder mehrere Standorte installiert haben, müssen Sie möglicherweise Konfigurationen ändern oder Aktionen ausführen, die sich auf die von Ihnen bereitgestellte Infrastruktur auswirken.  
 
 
-##  <a name="a-namebkmkmanagesmsprovidera-manage-the-sms-provider"></a><a name="BKMK_ManageSMSprovider"></a> Verwalten des SMS-Anbieters  
+##  <a name="BKMK_ManageSMSprovider"></a> Verwalten des SMS-Anbieters  
  Der SMS-Anbieter (eine Dynamic-Link Library-Datei: smsprov.dll) stellt den administrativen Kontaktpunkt für eine oder mehrere Configuration Manager-Konsolen bereit. Wenn Sie mehrere SMS-Anbieter installieren, können Sie Redundanz für Kontaktpunkte zur Verwaltung des Standorts und der Hierarchie bereitstellen.  
 
  An jedem Configuration Manager-Standort können Sie das Setup mit folgenden Zielen erneut ausführen:  
@@ -65,7 +64,7 @@ Nachdem Sie einen oder mehrere Standorte installiert haben, müssen Sie möglich
 
  Mit dem Beenden des Setup-Assistenten ist die SMS-Anbieterkonfiguration abgeschlossen. Sie können auf der Registerkarte **Allgemein** im Dialogfeld **Standorteigenschaften** können Sie die Computer überprüfen, bei denen ein SMS-Anbieter für einen Standort installiert ist.  
 
-##  <a name="a-namebkmkconsolea-manage-the-configuration-manager-console"></a><a name="bkmk_Console"></a> Verwalten der Configuration Manager-Konsole  
+##  <a name="bkmk_Console"></a> Verwalten der Configuration Manager-Konsole  
  Nachfolgend sind Aufgaben aufgeführt, mit denen Sie die Configuration Manager-Konsole verwalten können:  
 
 -   **Ändern der Sprache, in der die Configuration Manager-Konsole angezeigt wird** – Informationen zum Ändern der installierten Sprachen finden Sie unter [Verwalten der Sprache der Configuration Manager-Konsole](#BKMK_ManageConsoleLanguages) in diesem Thema.  
@@ -76,7 +75,7 @@ Nachdem Sie einen oder mehrere Standorte installiert haben, müssen Sie möglich
 
 -   **Ändern von Berechtigungen, um die Anzeige in der Konsole für Administratoren zu begrenzen** – Informationen zum Ändern von Administratorberechtigungen, sodass die Anzeige und der Bereich möglicher Aktionen in der Konsole für Benutzer begrenzt werden, finden Sie unter [Ändern des Verwaltungsbereichs eines Administrators](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_ModAdminUser).     
 
-###  <a name="a-namebkmkmanageconsolelanguagesa-manage-configuration-manager-console-language"></a><a name="BKMK_ManageConsoleLanguages"></a> Verwalten der Sprache der Configuration Manager-Konsole  
+###  <a name="BKMK_ManageConsoleLanguages"></a> Verwalten der Sprache der Configuration Manager-Konsole  
  Während der Installation des Standortservers werden die Configuration Manager-Konsoleninstallationsdateien und unterstützten Sprachpakete für den Standort in den Unterordner **&lt;ConfigMgrInstallationPath\>\Tools\ConsoleSetup** auf dem Standortserver kopiert.  
 
 -   Wenn Sie die Installation der Configuration Manager-Konsole von diesem Ordner auf dem Standortserver aus starten, werden die Configuration Manager-Konsole und die unterstützten Sprachpaketdateien auf den Computer kopiert  
@@ -112,7 +111,7 @@ Stellen Sie sich beispielsweise ein Szenario vor, in dem Sie die Configuration M
 
 4.  Wenn Sie die Configuration Manager-Konsole wieder in der Sprache öffnen möchten, die für den Computer konfiguriert ist, benennen Sie den Ordner in den ursprünglichen Namen um. Benennen Sie beispielsweise **de.deaktiviert** wieder in **de**um.  
 
-##  <a name="a-namebkmkconfigdcomforremoteconsolea-configure-dcom-permissions-for-remote-configuration-manager-consoles"></a><a name="BKMK_ConfigDCOMforRemoteConsole"></a> Konfigurieren von DCOM-Berechtigungen für Configuration Manager-Remotekonsolen  
+##  <a name="BKMK_ConfigDCOMforRemoteConsole"></a> Konfigurieren von DCOM-Berechtigungen für Configuration Manager-Remotekonsolen  
  Für das Benutzerkonto, unter dem die Configuration Manager-Konsole ausgeführt wird, sind Berechtigungen für den Zugriff auf die Standortdatenbank über den SMS-Anbieter erforderlich. Administratoren, die eine Configuration Manager-Remotekonsole verwenden, benötigen zudem DCOM-Berechtigungen für eine **Remoteaktivierung** auf folgenden Computern:  
 
 -   Den Standortservercomputer  
@@ -147,7 +146,7 @@ Stellen Sie sich beispielsweise ein Szenario vor, in dem Sie die Configuration M
 
  Wiederholen Sie dieses Verfahren auf jedem SMS-Anbietercomputer, durch den Configuration Manager-Remotekonsolen möglicherweise unterstützt werden.  
 
-##  <a name="a-namebkmkdbconfiga-modify-the-site-database-configuration"></a><a name="bkmk_dbconfig"></a> Ändern der Konfiguration für die Standortdatenbank  
+##  <a name="bkmk_dbconfig"></a> Ändern der Konfiguration für die Standortdatenbank  
  Nach der Installation eines Standorts können Sie die Konfiguration der Standortdatenbank und des Standortdatenbankserver ändern, indem Sie Setup auf dem Standortserver der zentralen Verwaltung oder einem primären Standortserver ausführen. Sie können die Standortdatenbank auf eine neue SQL Server-Instanz auf dem gleichen Computer oder auf einen anderen Computer verschieben, auf dem eine unterstützte Version von SQL Server ausgeführt wird. Diese und verwandte Änderungen werden für die Datenbankkonfiguration an sekundären Standorten nicht unterstützt.  
 
  Weitere Informationen zu den Grenzen der Unterstützung finden Sie unter [Supportrichtlinie für manuelle Datenbankänderungen in einer Configuration Manager-Umgebung](https://support.microsoft.com/kb/3106512).  
@@ -178,7 +177,7 @@ Stellen Sie sich beispielsweise ein Szenario vor, in dem Sie die Configuration M
 > [!IMPORTANT]  
 >  Vor dem Verschieben einer Datenbank, die über mindestens ein Datenbankreplikat für Verwaltungspunkte verfügt, müssen Sie zuerst die Datenbankreplikate entfernen. Nachdem das Verschieben der Datenbank abgeschlossen ist, können Sie die Datenbankreplikate neu konfigurieren. Weitere Informationen finden Sie unter [Database replicas for management points for System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md).  
 
-##  <a name="a-namebkmkspna-manage-the-spn-for-the-site-database-server"></a><a name="bkmk_SPN"></a> Verwalten des SPN für den Standortdatenbankserver  
+##  <a name="bkmk_SPN"></a> Verwalten des SPN für den Standortdatenbankserver  
 Sie können das Konto auswählen, mit dem SQL-Dienste für die Standortdatenbank ausgeführt werden:  
 
 -   Wenn die Dienste mit dem Systemkonto des Computers ausgeführt werden, wird der SPN automatisch für Sie registriert.  
@@ -248,7 +247,7 @@ Sie können einen SPN für das SQL Server-Dienstkonto des Standortdatenbankserve
 
 6.  Klicken Sie auf **OK** , nachdem das Dienstkonto erfolgreich geändert wurde.  
 
-##  <a name="a-namebkmkreseta-run-a-site-reset"></a><a name="bkmk_reset"></a> Ausführen einer Standortrücksetzung  
+##  <a name="bkmk_reset"></a> Ausführen einer Standortrücksetzung  
  Wenn eine Standortrücksetzung an einem Standort der zentralen Verwaltung oder primären Standort ausgeführt wird, geschieht Folgendes:  
 
 -   Die Configuration Manager-Standarddatei und die standardmäßigen Registrierungsberechtigungen werden erneut angewendet  
@@ -306,7 +305,7 @@ Das Konto, mit dem Sie das Zurücksetzen eines Standorts ausführen, muss über 
 
 Wenn das Zurücksetzen des Standorts beendet ist, klicken Sie auf **Schließen** , um dieses Verfahren abzuschließen.  
 
-##  <a name="a-namebkmksitelanga-manage-language-packs-at-a-site"></a><a name="bkmk_sitelang"></a> Verwalten von Sprachpaketen an einem Standort  
+##  <a name="bkmk_sitelang"></a> Verwalten von Sprachpaketen an einem Standort  
 Nach der Installation eines Standorts können Sie die verwendeten Sprachpakete für Server und Client ändern:  
 
 **Serversprachpakete:**  
@@ -356,7 +355,7 @@ Informationen zu den von Configuration Manager unterstützten Client- und Server
 
 8.  Klicken Sie auf **Schließen** , um dieses Verfahren abzuschließen.  
 
-##  <a name="a-namebkmkmoddbalerta-modify-the-database-server-alert-threshold"></a><a name="BKMK_ModDBAlert"></a> Ändern des Warnungsschwellenwerts für Datenbankserver  
+##  <a name="BKMK_ModDBAlert"></a> Ändern des Warnungsschwellenwerts für Datenbankserver  
  Configuration Manager gibt standardmäßig Warnungen aus, wenn auf einem Standortdatenbankserver wenig Speicherplatz verfügbar ist. Normalerweise wird eine Warnung ausgegeben, wenn der freie Festplattenspeicher 10 GB oder weniger beträgt. Bei 5 GB oder weniger wird eine kritische Warnung ausgegeben. Sie können diese Werte ändern oder die Warnungen für die einzelnen Standorte deaktivieren.  
 
  So ändern Sie diese Einstellungen  
@@ -368,9 +367,3 @@ Informationen zu den von Configuration Manager unterstützten Client- und Server
 3.  Klicken Sie im Dialogfeld **Standorteigenschaften** auf die Registerkarte **Warnung**, und bearbeiten Sie dann die Einstellungen.  
 
 4.  Klicken Sie zum Schließen des Dialogfelds „Standorteigenschaften“ auf **OK** .  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

@@ -6,23 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: cec63ed7781e236dbf5e8baa0a468193ea794339
 ms.openlocfilehash: d4efe1f013dbb74efca79cd27f7248fc085c7424
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-for-the-site-database-for-system-center-configuration-manager"></a>Planen der Standortdatenbank für System Center Configuration Manager
 
@@ -63,4 +60,3 @@ Wenn Sie einen Computer als Remotedatenbankserver verwenden, müssen Sie darauf 
 
 
 In der Regel unterstützt ein Standortsystemserver nur die Standortsystemrollen von einem einzigen Configuration Manager-Standort. Sie können jedoch verschiedene Instanzen von SQL Server auf gruppierten oder nicht gruppierten Servern mit SQL Server verwenden, um eine Datenbank von verschiedenen Configuration Manager-Standorten zu hosten. Die Unterstützung von Datenbanken von unterschiedlichen Standorten setzt voraus, dass Sie jede SQL Server-Instanz für die Verwendung eindeutiger Kommunikationsports konfigurieren.  
-

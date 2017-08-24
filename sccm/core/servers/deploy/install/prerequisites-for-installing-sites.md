@@ -6,21 +6,19 @@ ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 5945abb49fe06c59355805aa94b04d0d445ecbc3
 ms.openlocfilehash: d46a8b66ace45d25da9d86f2e91b19ae1d6875ab
-ms.contentlocale: de-de
-ms.lasthandoff: 07/24/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prerequisites-for-installing-system-center-configuration-manager-sites"></a>Voraussetzungen für die Installation von System Center Configuration Manager-Standorten
 
@@ -129,4 +127,3 @@ Im Folgenden werden die Voraussetzungen für die Installation von sekundären St
         >  Nach Abschluss des Setups müssen beide Konten Sysadmin-Rechte für SQL Server beibehalten. Entfernen Sie nicht die Sysadmin-Rechte aus diesen Konten.  
 
 -   Der sekundäre Standortservercomputer muss alle vorausgesetzten Konfigurationen erfüllen. Dazu zählen SQL Server und die standardmäßigen Standortsystemrollen des Verwaltungspunkts und Verteilungspunkts.  
-

@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b48c693c-d2b0-4707-a5dd-fe92172c49fe
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: 1a6084834384e695b49a71fe23833049c86f8dbc
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-configuration-data-in-system-center-configuration-manager"></a>Verwalten von Konfigurationsdaten in System Center Configuration Manager
 
@@ -58,9 +57,3 @@ Nachdem Sie Konfigurationselemente und Konfigurationsbaselines in Configuration 
 |**Kopieren**|Erstellt eine Kopie der ausgewählten Konfigurationsbasislinie mit einem von Ihnen angegebenen Namen. Von der neuen Konfigurationsbasislinie wird keine Beziehung zur ursprünglichen Konfigurationsbasislinie beibehalten.|  
 |**Löschen**|Öffnet das Dialogfeld **Konfigurationsbasislinie löschen** , in dem Sie Verweise auf diese Konfigurationsbasislinie überprüfen können.<br /><br /> Sie müssen erst alle Verweise auf eine Konfigurationsbasislinie entfernen, bevor Sie die Konfigurationsbasislinie löschen können.|  
 |**Bereitstellen**|Öffnet das Dialogfeld **Konfigurationsbasislinien bereitstellen** , in dem Sie eine oder mehrere Konfigurationsbasislinien für Geräte in der Hierarchie bereitstellen können.<br /><br /> Details finden Sie unter [Bereitstellen von Konfigurationsbaselines](../../compliance/deploy-use/deploy-configuration-baselines.md).|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

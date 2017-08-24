@@ -6,22 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4e345791-74db-41ad-b472-024ce6521daf
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
 ms.openlocfilehash: 2012ab5e55da8d707fd668e0163b42fe7d56c72f
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="common-tasks-for-managing-compliance-on-devices-with-the-system-center-configuration-manager-client"></a>Allgemeine Aufgaben zur Verwaltung der Kompatibilität auf Geräten mit dem System Center Configuration Manager-Client
 
@@ -112,4 +109,3 @@ Die Szenarios in diesem Thema dienen zur Einführung in das Verwenden der System
 6.  Schließen Sie den Assistenten ab, um das neue Konfigurationselement zu erstellen.  
 
  Sie können nun die Informationen im Thema [Allgemeine Aufgaben zum Erstellen und Bereitstellen von Konfigurationsbaselines](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) verwenden, die Ihnen beim Bereitstellen der von Ihnen erstellten Konfiguration auf Geräten helfen.  
-

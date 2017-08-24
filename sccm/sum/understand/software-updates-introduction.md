@@ -1,5 +1,4 @@
 ---
-
 title: "Einführung in Softwareupdates | Microsoft Docs"
 description: Hier erhalten Sie grundlegende Informationen zu Softwareupdates in System Center Configuration Manager.
 keywords: 
@@ -10,15 +9,13 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-translationtype: Human Translation
-ms.sourcegitcommit: d8cace9edd58e8fa438dbb43e54e57cd0dc55d2b
 ms.openlocfilehash: 2904b904bbaf155f016f55fbd36af80308a42d76
-
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="introduction-to-software-updates-in-system-center-configuration-manager"></a>Einführung zu Softwareupdates in System Center Configuration Manager
 
@@ -28,7 +25,7 @@ Mit der Softwareupdatefunktion wird in System Center Configuration Manager eine 
 
 Ein Beispielszenario für die Bereitstellung von Softwareupdates in Ihrer Umgebung finden Sie unter [Example scenario for using System Center Configuration Manager to deploy and monitor the security software updates released monthly by Microsoft (Beispielszenario für die Verwendung von Configuration Manager zum Bereitstellen und Überwachen der monatlichen Sicherheitsupdates von Microsoft)](../deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md).  
 
-##  <a name="a-namebkmksynchronizationa-software-updates-synchronization"></a><a name="BKMK_Synchronization"></a> Softwareupdatesynchronisierung  
+##  <a name="BKMK_Synchronization"></a> Softwareupdatesynchronisierung  
  Bei der Softwareupdatesynchronisierung in Configuration Manager werden Metadaten für Softwareupdates über eine Verbindung zu Microsoft Update abgerufen. Der Standort der obersten Ebene (Standort der zentralen Verwaltung oder eigenständiger primärer Standort) wird nach einem Zeitplan mit Microsoft Update synchronisiert. Über die Configuration Manager-Konsole können Sie die Synchronisierung auch manuell starten. Nachdem die Softwareupdatesynchronisierung am Standort der obersten Ebene abgeschlossen ist, wird sie von Configuration Manager ggf. an untergeordneten Standorten gestartet. Wenn die Synchronisierung an allen primären bzw. sekundären Standorten abgeschlossen ist, wird eine standortweite Richtlinie erstellt. Mit dieser Richtlinie werden Clientcomputer darüber informiert, wo die Softwareupdatepunkte sich befinden.  
 
 > [!NOTE]  
@@ -82,7 +79,7 @@ Ein Beispielszenario für die Bereitstellung von Softwareupdates in Ihrer Umgebu
 
 7.  Vom WSUS-Synchronisierungs-Manager werden einzelne Anforderungen an WSUS auf anderen Softwareupdatepunkten des Standorts gesendet. Die WSUS-Server auf den übrigen Softwareupdatepunkten werden als Replikate von WSUS auf dem Standard-Softwareupdatepunkt am Standort konfiguriert.  
 
-##  <a name="a-namebkmksumcompliancea-software-updates-compliance-assessment"></a><a name="BKMK_SUMCompliance"></a> Software updates compliance assessment  
+##  <a name="BKMK_SUMCompliance"></a> Software updates compliance assessment  
  Prüfen Sie vor der Bereitstellung von Softwareupdates auf Clientcomputern in Configuration Manager die Kompatibilität der Clientcomputer mit den Softwareupdates. Für jedes Softwareupdate wird eine Zustandsmeldung mit dem Kompatibilitätszustand für das Update erstellt. Die Zustandsmeldungen werden zusammen an den Verwaltungspunkt gesendet und anschließend an den Standortserver weitergeleitet, wo der Kompatibilitätszustand in die Standortdatenbank aufgenommen wird. Der Kompatibilitätszustand für Softwareupdates wird in der Configuration Manager-Konsole angezeigt. Sie können Softwareupdates auf Computern, auf denen die Updates erforderlich sind, bereitstellen und installieren. Die folgenden Abschnitte enthalten Informationen zu Kompatibilitätszuständen und eine Beschreibung des Überprüfungsprozesses der Softwareupdatekompatibilität.  
 
 ### <a name="software-updates-compliance-states"></a>Kompatibilitätszustände von Softwareupdates  
@@ -180,7 +177,7 @@ Ein Beispielszenario für die Bereitstellung von Softwareupdates in Ihrer Umgebu
 
      Nach der Installation eines Softwareupdates und nach dem Neustart des Computers wird vom Softwareupdateclient-Agent anhand der lokalen Metadaten eine Überprüfung gestartet. Vom Client wird keine Verbindung mit WSUS auf dem Softwareupdatepunkt hergestellt, um Metadaten für Softwareupdates abzurufen.  
 
-##  <a name="a-namebkmkdeploymentpackagesa-software-update-deployment-packages"></a><a name="BKMK_DeploymentPackages"></a> Softwareupdate-Bereitstellungspakete  
+##  <a name="BKMK_DeploymentPackages"></a> Softwareupdate-Bereitstellungspakete  
  Mithilfe von Bereitstellungspaketen für Softwareupdates werden Softwareupdates in freigegebene Netzwerkordner heruntergeladen. Die Quelldateien des Softwareupdates werden dann in die Inhaltsbibliothek auf Standortservern und an Verteilungspunkten kopiert, die in der Bereitstellung definiert sind. Mit dem Assistenten zum Herunterladen von Updates können Sie Softwareupdates herunterladen und Bereitstellungspaketen hinzufügen, bevor diese bereitgestellt werden. Sie können mit dem Assistenten Softwareupdates an Verteilungspunkten bereitstellen und sich vom Erfolg dieses Teils des Bereitstellungsprozesses überzeugen, bevor Sie die Softwareupdates Clients bereitstellen.  
 
  Wenn Sie heruntergeladene Softwareupdates mit dem Assistenten zum Bereitstellen von Softwareupdates bereitstellen, wird bei der Bereitstellung automatisch das Bereitstellungspaket verwendet, das die Softwareupdates enthält. Werden Softwareupdates bereitgestellt, die nicht heruntergeladen wurden, müssen Sie im Assistenten zum Bereitstellen von Softwareupdates ein neues oder vorhandenes Bereitstellungspaket angeben. Die Softwareupdates werden dann heruntergeladen, wenn der Assistent abgeschlossen ist.  
@@ -195,10 +192,10 @@ Ein Beispielszenario für die Bereitstellung von Softwareupdates in Ihrer Umgebu
 
  Clients installieren die in einer Bereitstellung enthaltenen Softwareupdates mithilfe eines beliebigen Verteilungspunkts, auf dem die Softwareupdates verfügbar ist. Dies geschieht unabhängig vom Bereitstellungspaket. Wenn ein Bereitstellungspaket für eine aktive Bereitstellung gelöscht wird, können die Softwareupdates in der Bereitstellung dennoch weiterhin von Clients installiert werden. Dies setzt voraus, dass jedes Update in mindestens ein weiteres Bereitstellungspaket heruntergeladen wurde und auf einem Verteilungspunkt verfügbar ist, auf den der Client Zugriff hat. Wenn das letzte Bereitstellungspaket mit einem Softwareupdate gelöscht wird, kann das Softwareupdate erst wieder von Clientcomputern abgerufen werden, nachdem es erneut in ein Bereitstellungspaket heruntergeladen wurde. In der Configuration Manager-Konsole werden Softwareupdates mit einem roten Pfeil markiert, wenn sich die Updatedateien nicht in Bereitstellungspaketen befinden. Bereitstellungen werden mit einem roten Doppelpfeil angezeigt, wenn sie Updates in diesem Zustand enthalten.  
 
-##  <a name="a-namebkmkdeploymentworkflowsa-software-update-deployment-workflows"></a><a name="BKMK_DeploymentWorkflows"></a> Workflows für die Softwareupdatebereitstellung  
+##  <a name="BKMK_DeploymentWorkflows"></a> Workflows für die Softwareupdatebereitstellung  
  Die Bereitstellung von Softwareupdates in einer Umgebung erfolgt entweder manuell oder automatisch. In der Regel werden Softwareupdates manuell bereitgestellt, um eine Basislinie für die Clientcomputer zu erstellen. Die Verwaltung der Softwareupdates auf Clients erfolgt dann durch die automatische Bereitstellung. Die folgenden Abschnitte enthalten einen Überblick über die Workflows bei der manuellen und automatischen Bereitstellung von Softwareupdates  
 
-###  <a name="a-namebkmkmanualdeploymenta-manual-deployment-of-software-updates"></a><a name="BKMK_ManualDeployment"></a> Manuelle Bereitstellung von Softwareupdates  
+###  <a name="BKMK_ManualDeployment"></a> Manuelle Bereitstellung von Softwareupdates  
  Bei der manuellen Bereitstellung von Softwareupdates werden Softwareupdates in der Configuration Manager-Konsole ausgewählt, und der Bereitstellungsprozess wird manuell gestartet. Mit dieser Bereitstellungsmethode sorgen Sie in der Regel dafür, dass die aktuell erforderlichen Softwareupdates auf den Clientcomputern vorhanden sind, bevor Sie automatische Bereitstellungsregeln zur Verwaltung der laufenden monatlichen Softwareupdatebereitstellungen erstellen. Diese Methode dient auch dazu, Out-of-Band-Anforderungen für Softwareupdates bereitzustellen. Der allgemeine Workflow für die manuelle Bereitstellung von Softwareupdates umfasst die folgenden Schritte:  
 
 1.  Filtern Sie Softwareupdates mit bestimmten Anforderungen heraus. Beispielsweise könnten Sie anhand geeigneter Kriterien angeben, dass alle Softwareupdates abgerufen werden sollen, die auf mehr als 50 Clientcomputern benötigt werden und deren Klassifizierung Sicherheit oder Kritisch lautet.  
@@ -209,7 +206,7 @@ Ein Beispielszenario für die Bereitstellung von Softwareupdates in Ihrer Umgebu
 
 4.  Stellen Sie die Softwareupdategruppe manuell bereit.  
 
-###  <a name="a-namebkmkautomaticdeploymenta-automatic-deployment-of-software-updates"></a><a name="BKMK_AutomaticDeployment"></a> Automatische Bereitstellung von Softwareupdates  
+###  <a name="BKMK_AutomaticDeployment"></a> Automatische Bereitstellung von Softwareupdates  
  Die automatische Bereitstellung von Softwareupdates wird mithilfe einer automatischen Bereitstellungsregel (ADR) konfiguriert. Diese Bereitstellungsmethode eignet sich insbesondere für monatliche Softwareupdates („Patch-Dienstag“) und für die Verwaltung von Definitionsupdates. Bei der Ausführung der Regel werden Softwareupdates aus der Softwareupdategruppe entfernt (bei Verwendung einer vorhandenen Gruppe), Softwareupdates, die einem angegebenen Kriterium (z. B. alle in der letzten Woche veröffentlichten Sicherheitsupdates der letzten Woche) entsprechen, zu einer Softwareupdategruppe hinzugefügt, die Inhaltsdateien für die Softwareupdates heruntergeladen und auf Verteilungspunkte kopiert und die Softwareupdates auf Clientcomputern in der Zielsammlung bereitgestellt. Der allgemeine Workflow für die automatische Bereitstellung von Softwareupdates umfasst die folgenden Schritte:  
 
 1.  Erstellen Sie eine automatische Bereitstellungsregel, von der unter anderem die folgenden Bereitstellungseinstellungen angegeben werden:  
@@ -254,7 +251,7 @@ Ein Beispielszenario für die Bereitstellung von Softwareupdates in Ihrer Umgebu
 
     -   Warnungen für diese Bereitstellung trennen  
 
-##  <a name="a-namebkmkdeploymentprocessa-software-update-deployment-process"></a><a name="BKMK_DeploymentProcess"></a> Vorgang der Softwareupdatebereitstellung  
+##  <a name="BKMK_DeploymentProcess"></a> Vorgang der Softwareupdatebereitstellung  
  Nachdem Sie Softwareupdates bereitgestellt haben oder wenn bei der Ausführung einer automatischen Bereitstellungsregel Softwareupdates bereitgestellt werden, wird der Computerrichtlinie des Standorts eine Bereitstellungszuweisungsrichtlinie hinzugefügt. Die Softwareupdates werden vom Downloadort, aus dem Internet oder aus einem freigegebenen Netzwerkordner in die Paketquelle heruntergeladen. Dann werden die Softwareupdates aus der Paketquelle in die Inhaltsbibliothek auf dem Standortserver und anschließend in die Inhaltsbibliothek am Verteilungspunkt kopiert.  
 
  Wenn die Computerrichtlinie bei einem Clientcomputer in der Zielsammlung der Bereitstellung eingeht, wird vom Softwareupdateclient-Agent eine Bewertungsüberprüfung gestartet. Der Inhalt für erforderliche Softwareupdates wird vom Client-Agent von einem Verteilungspunkt in den lokalen Clientcache heruntergeladen. Dieser Vorgang wird kurz nach dem Empfang der Bereitstellung ausgeführt, aber erst nach dem unter **Zeitpunkt der Verfügbarkeit der Software** für die Bereitstellung angegebenen Zeitpunkt, zu dem die Softwareupdates für die Installation verfügbar sind. Die Softwareupdates in optionalen Bereitstellungen (d. h. Bereitstellungen ohne Installationsstichtag) werden erst heruntergeladen, wenn ein Benutzer die Installation manuell startet.  
@@ -267,7 +264,7 @@ Ein Beispielszenario für die Bereitstellung von Softwareupdates in Ihrer Umgebu
 ### <a name="deployment-reevaluation-cycle"></a>Zyklus der erneuten Bereitstellungsbewertung  
  Von Clientcomputern wird standardmäßig alle 7 Tage ein Zyklus zur erneuten Auswertung der Bereitstellung gestartet. Während dieses Auswertungszyklus wird vom Clientcomputer nach bereits bereitgestellten und installierten Softwareupdates gesucht. Falls Softwareupdates fehlen, werden diese vom lokalen Cache aus neu installiert. Ist ein Softwareupdate nicht mehr im lokalen Cache verfügbar, wird es von einem Verteilungspunkt heruntergeladen und dann installiert. Sie können den Zeitplan für die erneute Auswertung in den Clienteinstellungen des Standorts auf der Seite **Softwareupdates** konfigurieren.  
 
-##  <a name="a-namebkmkembeddeddevicesa-support-for-windows-embedded-devices-that-use-write-filters"></a><a name="BKMK_EmbeddedDevices"></a> Unterstützung für Windows Embedded-Geräte mit Schreibfiltern  
+##  <a name="BKMK_EmbeddedDevices"></a> Unterstützung für Windows Embedded-Geräte mit Schreibfiltern  
  Beim Bereitstellen von Softwareupdates für Windows Embedded-Geräte mit aktivierten Schreibfiltern können Sie angeben, ob der Schreibfilter auf dem Gerät während der Bereitstellung deaktiviert und das Gerät nach der Bereitstellung neu gestartet werden soll. Wenn der Schreibfilter nicht deaktiviert wird, wird die Software auf einem temporären Overlay bereitgestellt und bei einem Neustart des Geräts nicht mehr installiert, es sei denn, die Beibehaltung der Änderungen wird durch eine andere Bereitstellung erzwungen.  
 
 > [!NOTE]  
@@ -277,14 +274,8 @@ Ein Beispielszenario für die Bereitstellung von Softwareupdates in Ihrer Umgebu
 
  Weitere Informationen dazu, wie Configuration Manager Embedded-Geräte verwaltet, die Schreibfilter verwenden, finden Sie unter [Planning for client deployment to Windows Embedded devices (Planen der Clientbereitstellung auf Windows Embedded-Geräten)](../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
 
-##  <a name="a-namebkmkextendsoftwareupdatesa-extend-software-updates-in-configuration-manager"></a><a name="BKMK_ExtendSoftwareUpdates"></a> Erweitern von Softwareupdates in Configuration Manager  
+##  <a name="BKMK_ExtendSoftwareUpdates"></a> Erweitern von Softwareupdates in Configuration Manager  
  Mit System Center Updates Publisher können Sie Softwareupdates verwalten, die nicht über Microsoft Update verfügbar sind. Nachdem Sie die Softwareupdates auf dem Updateserver veröffentlicht und in Configuration Manager synchronisiert haben, können Sie sie für Configuration Manager-Clients bereitstellen. Weitere Informationen zu Updates Publisher finden Sie unter [Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkId=252947).  
 
 ## <a name="next-steps"></a>Nächste Schritte
 [Planen von Softwareupdates](../plan-design/plan-for-software-updates.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

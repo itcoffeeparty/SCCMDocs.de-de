@@ -6,21 +6,19 @@ ms.date: 2/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: dec1e0d7-5864-43a8-9f56-413923b3914e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 640cdc67f301a81a45bf27f95eb03cbc8754a9aa
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.openlocfilehash: 311606b8d52645d3ca89642be4cc341b8a64ec56
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="boundary-groups-for-system-center-configuration-manager-version-1511-1602-and-1606"></a>Begrenzungsgruppen für die System Center Configuration Manager-Versionen 1511, 1602 und 1606
 
@@ -175,4 +173,3 @@ So kann von den Clients der am nächsten liegende Server zur Übertragung der In
  Standardmäßig wird die Netzwerkverbindungsgeschwindigkeit auf **Schnell** festgelegt, aber Sie können sie in **Langsam** ändern. Anhand der Netzwerkverbindungsgeschwindigkeit und der Bereitstellungskonfiguration wird geprüft, ob Inhalt von einem Verteilungspunkt heruntergeladen werden kann, wenn der Client in einer zugeordneten Begrenzungsgruppe enthalten ist.  
 
  Weitere Informationen zum Einfluss der Netzwerkverbindungsgeschwindigkeit auf den Inhaltsabruf durch Clients finden Sie unter [Quellspeicherortszenarios für Inhalte](../../../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
-

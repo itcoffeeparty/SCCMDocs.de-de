@@ -6,22 +6,19 @@ ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 4a9dc4d9-e114-42ec-ae2b-73bee14ab04f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: bed70809008fde5e2b0215f4dce049402edf83ba
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="define-network-locations-as-boundaries-for-system-center-configuration-manager"></a>Definieren von Netzwerkpfaden als Begrenzungsgruppen für System Center Configuration Manager
 
@@ -87,4 +84,3 @@ Jede Grenze kann von jedem Standort in Ihrer Hierarchie verwendet werden. Sie k�
     -   Wenn Sie diese Grenze aus einer Begrenzungsgruppe entfernen möchten, wählen Sie die Begrenzungsgruppe aus, und klicken Sie auf **Entfernen**.  
 
 7.  Klicken Sie auf **OK** , um die Eigenschaften der Grenze zu schließen und die Konfiguration zu speichern.  
-

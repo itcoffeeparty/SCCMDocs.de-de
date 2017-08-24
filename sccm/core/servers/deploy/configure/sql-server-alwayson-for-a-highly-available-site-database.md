@@ -6,21 +6,19 @@ ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
 ms.openlocfilehash: c746365238e1255d73387a9496521bb03a56b21b
-ms.contentlocale: de-de
-ms.lasthandoff: 07/29/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Vorbereiten der Verwendung von SQL Server AlwaysOn-Verfügbarkeitsgruppen mit Configuration Manager
 
@@ -259,4 +257,3 @@ Wechseln Sie zum Ausführen von Berichten in der Konsole zu **Überwachung** > *
 
 ## <a name="next-steps"></a>Nächste Schritte
 Wenn Sie die Voraussetzungen, Einschränkungen und Änderungen an allgemeinen Aufgaben verstehen, die für die Verwendung von Verfügbarkeitsgruppen erforderlich sind, finden Sie unter [Konfigurieren von Verfügbarkeitsgruppen für Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag) Verfahren zum Einrichten und Konfigurieren Ihres Standorts zur Nutzung von Verfügbarkeitsgruppen.
-

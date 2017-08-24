@@ -6,22 +6,19 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 446c83b5-c292-4e74-ba19-0792ac6b3472
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
 ms.openlocfilehash: 4b80e0e688dd6482bc9a7fe111607e258071f45a
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="upgrade-clients-in-system-center-configuration-manager"></a>Aktualisieren von Clients in System Center Configuration Manager
 
@@ -151,4 +148,3 @@ Es gibt verschiedene Methoden zum Upgrade der Clientsoftware von System Center C
 -   Kann nur für ein Upgrade der Clientsoftware verwendet werden, nicht für die Installation eines neuen Clients.  
 
  [Testen von Clientupgrades in einer Präproduktionssammlung in System Center Configuration Manager](../../../../core/clients/manage/upgrade/test-client-upgrades.md)  
-

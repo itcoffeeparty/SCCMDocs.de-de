@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 217c8a0e-5112-420e-a325-2a6d75326290
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 41aa6cf69a746f0ab67d804f1ee0c70db05d65ee
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-a-task-sequence-to-install-an-operating-system-in-system-center-configuration-manager"></a>Erstellen einer Tasksequenz zum Installieren eines Betriebssystems in System Center Configuration Manager
 
@@ -27,7 +26,7 @@ ms.openlocfilehash: 41aa6cf69a746f0ab67d804f1ee0c70db05d65ee
 
 Verwenden Sie Tasksequenzen in System Center Configuration Manager, um automatisch ein Betriebssystemimage auf einem Zielcomputer zu installieren. Sie erstellen eine Tasksequenz , in der auf Folgendes verwiesen wird: das zum Starten des Zielcomputers verwendete Startabbild, das auf dem Zielcomputer zu installierende Betriebssystemabbild und sämtlichen zusätzlich zu installierenden Inhalt, beispielsweise andere Anwendungen oder Softwareupdates. Stellen Sie dann die Tasksequenz für die Sammlung bereit, die den Zielcomputer enthält.  
 
-##  <a name="a-namebkmkinstallosa-create-a-task-sequence-to-install-an-operating-system"></a><a name="BKMK_InstallOS"></a> Erstellen einer Tasksequenz zum Installieren eines Betriebssystems  
+##  <a name="BKMK_InstallOS"></a> Erstellen einer Tasksequenz zum Installieren eines Betriebssystems  
  Es gibt eine Vielzahl von Szenarien zum Bereitstellen eines Betriebssystems auf Computern in Ihrer Umgebung. In den meisten Fällen erstellen Sie eine Tasksequenz und wählen **Bestehendes Abbildpaket installieren** im Tasksequenzerstellungs-Assistenten aus, um das Betriebssystem zu installieren, die Benutzereinstellungen zu migrieren, Softwareupdates anzuwenden und Anwendungen zu installieren. Bevor Sie eine Tasksequenz zum Installieren eines Betriebssystems erstellen, muss Folgendes vorhanden sein:   
 
 -   **Erforderlich**  
@@ -115,7 +114,7 @@ Verwenden Sie Tasksequenzen in System Center Configuration Manager, um automatis
 
  Sie können jetzt die Tasksequenz für eine Sammlung von Computern bereitstellen.  Weitere Informationen finden Sie unter [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
 
-##  <a name="a-namebkmkinstallexistingosimagetsexamplea-example-task-sequence-to-install-an-existing-operating-system-image"></a><a name="BKMK_InstallExistingOSImageTSExample"></a> Beispiel einer Tasksequenz zum Installieren eines vorhandenen Betriebssystemabbilds  
+##  <a name="BKMK_InstallExistingOSImageTSExample"></a> Beispiel einer Tasksequenz zum Installieren eines vorhandenen Betriebssystemabbilds  
  Orientieren Sie sich an der folgenden Tabelle, während Sie eine Tasksequenz zur Bereitstellung eines Betriebssystems mithilfe eines vorhandenen Betriebssystemabbilds erstellen. Mithilfe dieser Tabelle können Sie die allgemeine Sequenz für Ihre Tasksequenzschritte festlegen und diese Tasksequenzschritte in logischen Gruppen organisieren. Die von Ihnen erstellte Tasksequenz kann von diesem Beispiel abweichen und eine andere Anzahl von Tasksequenzschritten und Tasksequenzgruppen enthalten.  
 
 > [!IMPORTANT]  
@@ -156,9 +155,3 @@ Verwenden Sie Tasksequenzen in System Center Configuration Manager, um automatis
 |Benutzerzustandsspeicher anfordern|Mithilfe dieses Tasksequenzschritts können Sie Zugriff auf einen Zustandsmigrationspunkt anfordern, auf dem die Benutzerzustandsdaten gespeichert sind.|  
 |Benuterzdateien und -einstellungen wiederherstellen|Mithilfe dieses Tasksequenzschritts können Sie Windows-EasyTransfer bzw. USMT initiieren, um Benutzerzustand und -einstellungen auf einem Zielcomputer wiederzuherstellen.|  
 |Benutzerzustandsspeicher freigeben|Mithilfe dieses Tasksequenzschritts können Sie den Zustandsmigrationspunkt darüber benachrichtigen, dass die Benutzerzustandsdaten nicht mehr benötigt werden.|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

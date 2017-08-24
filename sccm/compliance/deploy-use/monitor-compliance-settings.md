@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 92c1ccca-a748-44cd-a52e-e41d34bf981d
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: 75cd7e811262633d81d978265f21ec7ed3b61a58
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="monitor-compliance-settings-in-system-center-configuration-manager"></a>Überwachen von Kompatibilitätseinstellungen in System Center Configuration Manager
 
@@ -110,9 +109,3 @@ Nach dem Bereitstellen von Configuration Manager-Konfigurationsbaselines auf Com
 5.  Der **Assistent zum Erstellen von Benutzersammlungen** oder der **Assistent zum Erstellen von Gerätesammlungen** wird geöffnet, je nachdem, ob das Konfigurationselement für Benutzer oder für Geräte bereitgestellt wird. Der Assistent wird automatisch mit den korrekten Werten zum Erstellen der Sammlung aufgefüllt. Sie können diese Werte jedoch auch bearbeiten.  
 
 6.  Wenn Sie den Assistenten abgeschlossen haben, wird die Sammlung im Arbeitsbereich **Bestand und Kompatibilität** entweder im Knoten **Benutzersammlungen** oder im Knoten **Gerätesammlungen** angezeigt.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

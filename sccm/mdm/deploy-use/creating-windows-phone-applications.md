@@ -6,22 +6,19 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 68fe11fa-5fb2-4b81-b0f5-b6f2392fb4ad
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 6d5d5eb9e4bf0297e2d86bf591dab5b3f42c95fa
-ms.contentlocale: de-de
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: 6cbf2389a72c0c384ef8e84a1755ac77b64bfc6d
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-windows-phone-applications-with-system-center-configuration-manager"></a>Erstellen von Windows Phone-Anwendungen mit System Center Configuration Manager
 
@@ -66,4 +63,3 @@ Unter [Starten des Assistenten zum Erstellen von Anwendungen](../../apps/deploy-
 |**Schritt 5:** Löschen Sie die beim Hinzufügen der Unternehmensportal-App zum Assistenten für Microsoft Intune-Abonnements automatisch erstellte Bereitstellung.|Eine automatische Bereitstellung dieser App wurde durch das Microsoft Intune-Abonnement erstellt, da eine Ablösung von dieser Bereitstellung nicht unterstützt wird.|  
 |**Schritt 6:** Erstellen Sie eine neue Bereitstellung der Anwendung. Aktivieren Sie im **Assistenten zum Bereitstellen von Software** auf der Seite **Bereitstellungseinstellungen** die Option **Automatically upgrade any superceded versions of this application** (Abgelöste Versionen dieser Anwendung automatisch upgraden).|Erstellen Sie mithilfe der Anwendung, die Sie mit der Ablösungsbeziehung erstellt haben, eine neue Bereitstellung mit Ablösung.|  
 |**Schritt 7 (optional):** Die ablösenden Apps würden standardmäßig nach 7 Tagen auf den Geräten installiert werden. Wenn Sie die Unternehmensportal-App auf zuvor bereits angemeldeten Geräten schneller bereitstellen möchten, können Sie für die Einstellung **Erneute Auswertung für Bereitstellungen planen** einen niedrigeren Wert festlegen.<br /><br /> Wenn Sie einen Wert festlegen, der niedriger als die Standardeinstellung ist, kann dies jedoch die Leistung von Netzwerk und Clientcomputern beeinträchtigen.|keine zusätzlichen Informationen|  
-

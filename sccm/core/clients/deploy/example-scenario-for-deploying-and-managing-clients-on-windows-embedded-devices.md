@@ -6,22 +6,19 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 10049c89-b37c-472b-b317-ce4f56cd4be7
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a650ad8e7b1f9468dd04165a3e43a89387b5d696
-ms.openlocfilehash: b07af49e2fecf6cc41258c87794ca7952206bb8a
-ms.contentlocale: de-de
-ms.lasthandoff: 01/17/2017
-
-
+ms.openlocfilehash: c535bc62497b5ff0b60ca266c28630d890af3604
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="example-scenario-for-deploying-and-managing-system-center-configuration-manager-clients-on-windows-embedded-devices"></a>Beispielszenario für die Bereitstellung und Verwaltung von System Center Configuration Manager-Clients auf Windows Embedded-Geräten
 
@@ -181,4 +178,3 @@ Coho Vineyard & Winery eröffnet demnächst ein Besucherzentrum und benötigt Ki
     -   Die Software für interaktive Präsentationen wurde installiert, wird automatisch ausgeführt und ist für Besucher bereit.  
 
 14. Nach diesem ersten Setup werden Neustarts, die für Updates ggf. erforderlich sind, nur bei geschlossenem Besucherzentrum ausgeführt.  
-

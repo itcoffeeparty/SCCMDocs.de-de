@@ -1,5 +1,4 @@
 ---
-
 title: "Synchronisieren von Updates ohne Internetverbindung – Configuration Manager | Microsoft-Dokumentation"
 description: "Führen Sie die Synchronisierung von Softwareupdates auf dem obersten Softwareupdatepunkt aus, der nicht mit dem Internet verbunden ist."
 keywords: 
@@ -10,19 +9,14 @@ ms.date: 01/23/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: fd9c1e9418ff1956c6ef98753e23a293440179be
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="synchronize-software-updates-from-a-disconnected-software-update-point"></a>Synchronisieren von Softwareupdates bei einem getrennten Softwareupdatepunkt  
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -110,4 +104,3 @@ ms.lasthandoff: 05/17/2017
 Nachdem Softwareupdates zum ersten Mal synchronisiert wurden oder wenn neue Klassifizierungen oder Produkte verfügbar sind, müssen Sie [die neuen Klassifizierungen und Produkte so konfigurieren](configure-classifications-and-products.md), dass Softwareupdates mit den neuen Kriterien synchronisiert werden.
 
 Nachdem Sie Softwareupdates mit den erforderlichen Kriterien synchronisiert haben, [verwalten Sie Einstellungen für Softwareupdates](manage-settings-for-software-updates.md).  
-

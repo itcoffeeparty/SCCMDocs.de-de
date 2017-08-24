@@ -6,21 +6,19 @@ ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0da167f1-52cf-4dfd-8f73-833ca3eb8478
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: 04fe7b3e674287c4255563ab4a308e54d0b6c3aa
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="command-line-options-for-setup-in-system-center-configuration-manager"></a>Befehlszeilenoptionen für das Setup in System Center Configuration Manager
 
@@ -741,7 +739,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
     -   **Werte:** 1; bei jedem Wert außer 1 wird davon ausgegangen, dass er nicht „CD.Latest“ verwendet
 
-    -   **Details:** Ihr Skript muss diesen Schlüssel und diesen Wert enthalten, wenn Sie das Setup von einem Medium in dem Ordner „CD.Latest“ ausführen, um einen Standort der primären oder zentralen Verwaltung zu installieren oder diesen wiederherstellen möchten. Dieser Wert informiert das Setup darüber, das Medien aus „CD.Latest“ verwendet werden.
+    -   **Details:** Ihr Skript muss diesen Schlüssel und diesen Wert enthalten, wenn Sie das Setup von einem Medium in dem Ordner „CD.Latest“ ausführen, um einen Standort der primären oder zentralen Verwaltung zu installieren oder diesen wiederherstellen möchten. Dieser Wert informiert das Setup darüber, dass Medien aus „CD.Latest“ verwendet werden.
 
 **RecoveryOptions**  
 
@@ -1011,7 +1009,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
     -   **Werte:** 1; bei jedem Wert außer 1 wird davon ausgegangen, dass er nicht „CD.Latest“ verwendet
 
-    -   **Details:** Ihr Skript muss diesen Schlüssel und diesen Wert enthalten, wenn Sie das Setup von einem Medium in dem Ordner „CD.Latest“ ausführen, um einen Standort der primären oder zentralen Verwaltung zu installieren oder diesen wiederherstellen möchten. Dieser Wert informiert das Setup darüber, das Medien aus „CD.Latest“ verwendet werden.    
+    -   **Details:** Ihr Skript muss diesen Schlüssel und diesen Wert enthalten, wenn Sie das Setup von einem Medium in dem Ordner „CD.Latest“ ausführen, um einen Standort der primären oder zentralen Verwaltung zu installieren oder diesen wiederherstellen möchten. Dieser Wert informiert das Setup darüber, dass Medien aus „CD.Latest“ verwendet werden.    
 
 **RecoveryOptions**  
 
@@ -1277,4 +1275,3 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
     -   **Werte:** <*Portnummer*>  
 
     -   **Details:** Gibt die für den Proxyport zu verwendende Portnummer an.  
-

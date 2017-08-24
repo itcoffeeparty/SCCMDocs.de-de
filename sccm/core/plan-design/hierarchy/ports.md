@@ -6,23 +6,20 @@ ms.date: 3/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
-caps.latest.revision: 8
-caps.handback.revision: 0
+caps.latest.revision: "8"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
 ms.openlocfilehash: 78caa69e10f5d386daab1e61e484d4d134469708
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="ports-used-in-system-center-configuration-manager"></a>In System Center Configuration Manager verwendete Ports
 
@@ -720,4 +717,3 @@ Der Standortserver, der die Migration ausführt, verwendet verschiedene Ports, u
 |NetBIOS-Namensauflösung|137|--|  
 |NetBIOS-Datagrammdienst|138|--|  
 |NetBIOS-Sitzungsdienst|--|139|  
-

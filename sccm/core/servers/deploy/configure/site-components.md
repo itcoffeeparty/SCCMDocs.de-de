@@ -6,22 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 5fccbbeb-0faa-4943-83c2-e67db62d392d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
 ms.openlocfilehash: 83550fbf0ef1f9adb0bb2c51a4f3c26a7500d352
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="site-components-for-system-center-configuration-manager"></a>Standortkomponenten für System Center Configuration Manager
 
@@ -123,4 +120,3 @@ Ein Configuration Manager-Dienst wird bei von ihm angeforderten Aktionen ausgef�
 6.  Nachdem der Status der Komponente aktualisiert wurde, verwenden Sie eine der vier aktionsbasierten Optionen im Menü **Komponente**, um das Verhalten der Komponente zu ändern. Nachdem eine Aktion angefordert wurde, müssen Sie die Komponente abfragen, um den neuen Status der Komponente anzuzeigen.  
 
 7.  Schließen Sie den Dienst-Manager für Configuration Manager, wenn Sie das Bearbeiten des Betriebsstatus der Komponenten abgeschlossen haben.  
-

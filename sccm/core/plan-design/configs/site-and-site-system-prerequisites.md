@@ -6,19 +6,19 @@ ms.date: 1/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 42549b98dd7f418cc3f4543198aaeb90ea8a3efd
 ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="site-and-site-system-prerequisites-for-system-center-configuration-manager"></a>Voraussetzungen für Standorte und Standortsysteme für System Center Configuration Manager
 
@@ -33,7 +33,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 > [!NOTE]  
 >  Im Januar 2016 ist die Unterstützung für .NET Framework 4.0, 4.5 und 4.5.1 abgelaufen. Weitere Informationen finden Sie in den [häufig gestellten Fragen zur Microsoft-Support-Lifecycle-Richtlinie für .NET Framework](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update) unter „support.microsoft.com“.  
 
-## <a name="a-namebkmkgeneralprerewqa-general-site-server-requirements-and-limitations"></a><a name="bkmk_generalprerewq"></a> Allgemeine Anforderungen und Einschränkungen für Standortserver
+## <a name="bkmk_generalprerewq"></a> Allgemeine Anforderungen und Einschränkungen für Standortserver
 **Folgendes gilt für alle Standortsystemserver:**
 
 -   Jeder Standortsystemserver muss ein 64-Bit-Betriebssystem verwenden. Die einzige Ausnahme gilt für die Standortsystemrolle „Verteilungspunkt“, die unter manchen 32-Bit-Betriebssystemen installiert werden kann.  
@@ -54,8 +54,8 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   Die Änderung der Einstellungen für Starttyp und „Anmelden als“ für beliebige Configuration Manager-Dienste wird nicht unterstützt. Wenn Sie die Einstellungen trotzdem ändern, werden wichtige Dienste möglicherweise nicht ordnungsgemäß ausgeführt.  
 
-##  <a name="a-namebkmk2012prereqa-prerequisites-for-windows-server-2012-and-later-operating-systems"></a><a name="bkmk_2012Prereq"></a> Voraussetzungen für Windows Server 2012 und höhere Betriebssysteme  
-###  <a name="a-namebkmk2012sspreqa-site-server-central-administration-site-and-primary-site"></a><a name="bkmk_2012sspreq"></a> Standortserver: Standort der zentralen Verwaltung und primärer Standort  
+##  <a name="bkmk_2012Prereq"></a> Voraussetzungen für Windows Server 2012 und höhere Betriebssysteme  
+###  <a name="bkmk_2012sspreq"></a> Standortserver: Standort der zentralen Verwaltung und primärer Standort  
   **Windows Server-Rollen und -Features:**  
 
 -   .NET Framework 3.5 SP1 (oder höher)  
@@ -78,7 +78,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   Standorte der zentralen Verwaltung und primäre Standorte erfordern sowohl die x86- als auch die x64-Version der betreffenden Redistributable-Datei.  
 
-###  <a name="a-namebkmk2012secpreqa-site-server-secondary-site"></a><a name="bkmk_2012secpreq"></a> Standortserver: sekundärer Standort  
+###  <a name="bkmk_2012secpreq"></a> Standortserver: sekundärer Standort  
 **Windows Server-Rollen und -Features:**  
 
 -   .NET Framework 3.5 SP1 (oder höher)  
@@ -99,7 +99,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   Stellen Sie sicher, dass der sekundäre Standortserver die Voraussetzungen für diese Standortsystemrollen erfüllt.  
 
-###  <a name="a-namebkmk2012dbpreqa-database-server"></a><a name="bkmk_2012dbpreq"></a> Datenbankserver  
+###  <a name="bkmk_2012dbpreq"></a> Datenbankserver  
 **Remoteregistrierungsdienst:**  
 
 -   Während der Installation des Configuration Manager-Standorts müssen Sie den Remoteregistrierungsdienst auf dem Computer aktivieren, auf dem die Standortdatenbank gehostet wird.  
@@ -112,7 +112,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   Wenn Sie entscheiden, dass Configuration Manager im Rahmen der Installation des sekundären Standorts SQL Server Express installieren soll, stellen Sie sicher, dass der Computer die Voraussetzungen zur Ausführung von SQL Server Express erfüllt.  
 
-###  <a name="a-namebkmk2012smsprovpreqa-sms-provider-server"></a><a name="bkmk_2012smsprovpreq"></a> SMS-Anbieterserver  
+###  <a name="bkmk_2012smsprovpreq"></a> SMS-Anbieterserver  
 **Windows ADK:**  
 
 -   Auf dem Computer, auf dem Sie eine SMS-Anbieterinstanz installieren, muss die Windows ADK-Version installiert sein, die für die von Ihnen installierte bzw. aktualisierte Version von Configuration Manager erforderlich ist.  
@@ -121,7 +121,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   Weitere Informationen zu dieser Anforderung finden Sie unter [Anforderungen an die Infrastruktur für die Betriebssystembereitstellung](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
-###  <a name="a-namebkmk2012acwspreqa-application-catalog-website-point"></a><a name="bkmk_2012acwspreq"></a> Anwendungskatalog-Websitepunkt  
+###  <a name="bkmk_2012acwspreq"></a> Anwendungskatalog-Websitepunkt  
 **Windows Server-Rollen und -Features:**  
 
 -   .NET Framework 3.5 SP1 (oder höher)  
@@ -156,7 +156,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
     -   IIS 6-Metabasiskompatibilität  
 
-###  <a name="a-namebkmk2012acwsitepreqa-application-catalog-web-service-point"></a><a name="bkmk_2012ACwsitepreq"></a> Anwendungskatalog-Webdienstpunkt  
+###  <a name="bkmk_2012ACwsitepreq"></a> Anwendungskatalog-Webdienstpunkt  
 **Windows Server-Rollen und -Features:**  
 
 -   .NET Framework 3.5 SP1 (oder höher)  
@@ -193,12 +193,12 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   Wenn diese Standortsystemrolle zusammen mit einer anderen Standortsystemrolle installiert wird, für die dieselbe Anforderung gilt, wird die Speicheranforderung für den Computer nicht erhöht, die Mindestanforderung von 5 % besteht jedoch weiter.  
 
-###  <a name="a-namebkmk2012aipreqa-asset-intelligence-synchronization-point"></a><a name="bkmk_2012AIpreq"></a> Asset Intelligence-Synchronisierungspunkt  
+###  <a name="bkmk_2012AIpreq"></a> Asset Intelligence-Synchronisierungspunkt  
 **Windows Server-Rollen und -Features:**  
 
 -   .NET Framework 4.5.2  
 
-###  <a name="a-namebkmk2012crppreqa-certificate-registration-point"></a><a name="bkmk_2012crppreq"></a> Zertifikatregistrierungspunkt  
+###  <a name="bkmk_2012crppreq"></a> Zertifikatregistrierungspunkt  
 **Windows Server-Rollen und -Features:**  
 
 -   .NET Framework 4.5.2:  
@@ -219,7 +219,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
     -   IIS 6-WMI-Kompatibilität  
 
-###  <a name="a-namebkmk2012dppreqa-distribution-point"></a><a name="bkmk_2012dppreq"></a> Verteilungspunkt  
+###  <a name="bkmk_2012dppreq"></a> Verteilungspunkt  
 **Windows Server-Rollen und -Features:**  
 
 -   Remotedifferenzialkomprimierung  
@@ -264,12 +264,12 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 > [!NOTE]  
 > Die Standortsystemrolle „Verteilungspunkt“ erfordert keinen intelligenten Hintergrundübertragungsdienst (Background Intelligent Transfer Service, BITS). Wenn BITS auf dem Verteilungspunktcomputer konfiguriert ist, wird BITS auf diesem Computer nicht verwendet, um BITS-Clients den Download von Inhalten zu erleichtern.  
 
-###  <a name="a-namebkmk2012epppreqa-endpoint-protection-point"></a><a name="bkmk_2012EPPpreq"></a> Endpoint Protection-Punkt  
+###  <a name="bkmk_2012EPPpreq"></a> Endpoint Protection-Punkt  
 **Windows Server-Rollen und -Features:**  
 
 -   .NET Framework 3.5 SP1 (oder höher)  
 
-###  <a name="a-namebkmk2012enrollpreqa-enrollment-point"></a><a name="bkmk_2012Enrollpreq"></a> Anmeldungspunkt  
+###  <a name="bkmk_2012Enrollpreq"></a> Anmeldungspunkt  
 **Windows Server-Rollen und -Features:**  
 
 -   Mindestens .NET Framework 3.5  
@@ -309,7 +309,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   Wenn diese Standortsystemrolle zusammen mit einer anderen Standortsystemrolle installiert wird, für die dieselbe Anforderung gilt, wird die Speicheranforderung für den Computer nicht erhöht, die Mindestanforderung von 5 % besteht jedoch weiter.  
 
-###  <a name="a-namebkmk2012enrollproxpreqa-enrollment-proxy-point"></a><a name="bkmk_2012EnrollProxpreq"></a> Anmeldungsproxypunkt  
+###  <a name="bkmk_2012EnrollProxpreq"></a> Anmeldungsproxypunkt  
 **Windows Server-Rollen und -Features:**  
 
 -   Mindestens .NET Framework 3.5  
@@ -350,14 +350,14 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   Wenn diese Standortsystemrolle zusammen mit einer anderen Standortsystemrolle installiert wird, für die dieselbe Anforderung gilt, wird die Speicheranforderung für den Computer nicht erhöht, die Mindestanforderung von 5 % besteht jedoch weiter.  
 
-###  <a name="a-namebkmk2012fsppreqa-fallback-status-point"></a><a name="bkmk_2012FSPpreq"></a> Fallbackstatuspunkt  
+###  <a name="bkmk_2012FSPpreq"></a> Fallbackstatuspunkt  
 Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:  
 
 -   IIS 6-Verwaltungskompatibilität:  
 
     -   IIS 6-Metabasiskompatibilität  
 
-###  <a name="a-namebkmk2012mppreqa-management-point"></a><a name="bkmk_2012MPpreq"></a> Verwaltungspunkt  
+###  <a name="bkmk_2012MPpreq"></a> Verwaltungspunkt  
 **Windows Server-Rollen und -Features:**  
 
 -   .NET Framework 4.5.2  
@@ -380,7 +380,7 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 
     -   IIS 6-WMI-Kompatibilität  
 
-###  <a name="a-namebkmk2012rspointa-reporting-services-point"></a><a name="bkmk_2012RSpoint"></a> Reporting Services-Punkt  
+###  <a name="bkmk_2012RSpoint"></a> Reporting Services-Punkt  
 **Windows Server-Rollen und -Features:**  
 
 -   .NET Framework 4.5.2  
@@ -393,7 +393,7 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 
 -   Darüber hinaus kann die verwendete Instanz für andere System Center-Produkte freigegeben werden, solange die anderen System Center-Produkte keiner Einschränkung für die Freigabe von SQL Server-Instanzen unterliegen.  
 
-###  <a name="a-namebkmkscppreqa-service-connection-point"></a><a name="bkmk_SCPpreq"></a> Dienstverbindungspunkt  
+###  <a name="bkmk_SCPpreq"></a> Dienstverbindungspunkt  
 **Windows Server-Rollen und -Features:**  
 
 -   .NET Framework 4.5.2  
@@ -406,7 +406,7 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 
 -   Die Standortsystemrolle erfordert die x64-Version.  
 
-###  <a name="a-namebkmk2012suppreqa-software-update-point"></a><a name="bkmk_2012SUPpreq"></a> Softwareupdatepunkt  
+###  <a name="bkmk_2012SUPpreq"></a> Softwareupdatepunkt  
 **Windows Server-Rollen und -Features:**  
 
 -   .NET Framework 3.5 SP1 (oder höher)  
@@ -424,7 +424,7 @@ Die IIS-Standardkonfiguration ist erforderlich.
 ### <a name="state-migration-point"></a>Zustandsmigrationspunkt  
 Die IIS-Standardkonfiguration ist erforderlich.  
 
-##  <a name="a-namebkmk2008a-prerequisites-for-windows-server-2008-r2-and-windows-server-2008"></a><a name="bkmk_2008"></a> Voraussetzungen für Windows Server 2008 R2 und Windows Server 2008  
+##  <a name="bkmk_2008"></a> Voraussetzungen für Windows Server 2008 R2 und Windows Server 2008  
 Windows Server 2008 und Windows Server 2008 R2 unterliegen nun dem erweiterten Support und nicht mehr dem grundlegenden Support, wie in [Microsoft Lifecycle-Richtlinie](https://support.microsoft.com/lifecycle) ausführlich erläutert. Weitere Informationen zum künftigen Support für diese Betriebssysteme als Standortsystemserver mit Configuration Manager finden Sie unter [Entfernte und veraltete Features für System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
 
 **Folgendes gilt für alle .NET Framework-Anforderungen:**  
@@ -435,7 +435,7 @@ Windows Server 2008 und Windows Server 2008 R2 unterliegen nun dem erweiterten S
 
 -   Sie können die WCF-Aktivierung als Bestandteil des Windows-Features .NET Framework auf dem Standortsystemserver konfigurieren. Führen Sie beispielsweise unter Windows Server 2008 R2 den **Assistenten zum Hinzufügen von Features** aus, um weitere Features auf dem Server zu installieren. Erweitern Sie auf der Seite **Features auswählen** den Knoten **.NET Framework 3.5.1-Features** und dann den Knoten **WCF-Aktivierung**. Aktivieren Sie anschließend die Kontrollkästchen für **HTTP-Aktivierung** und **Nicht-HTTP-Aktivierung**, um diese Optionen zu aktivieren.  
 
-###  <a name="a-namebkmk2008sspreqa-site-server-central-administration-site-and-primary-site"></a><a name="bkmk_2008sspreq"></a> Standortserver: Standort der zentralen Verwaltung und primärer Standort  
+###  <a name="bkmk_2008sspreq"></a> Standortserver: Standort der zentralen Verwaltung und primärer Standort  
 **.NET Framework:**  
 
 -   .NET Framework 3.5 SP1 (oder höher)  
@@ -460,7 +460,7 @@ Windows Server 2008 und Windows Server 2008 R2 unterliegen nun dem erweiterten S
 
 -   Standorte der zentralen Verwaltung und primäre Standorte erfordern sowohl die x86- als auch die x64-Version der betreffenden Redistributable-Datei.  
 
-###  <a name="a-namebkmk2008secpreqa-site-server-secondary-site"></a><a name="bkmk_2008secpreq"></a> Standortserver: sekundärer Standort  
+###  <a name="bkmk_2008secpreq"></a> Standortserver: sekundärer Standort  
 **.NET Framework:**  
 
 -   .NET Framework 3.5 SP1 (oder höher)  
@@ -479,7 +479,7 @@ Windows Server 2008 und Windows Server 2008 R2 unterliegen nun dem erweiterten S
 
 -   Stellen Sie sicher, dass der sekundäre Standortserver die Voraussetzungen für diese Standortsystemrollen erfüllt.  
 
-###  <a name="a-namebkmk2008dbpreqa-database-server"></a><a name="bkmk_2008dbpreq"></a> Datenbankserver  
+###  <a name="bkmk_2008dbpreq"></a> Datenbankserver  
 **Remoteregistrierungsdienst:**  
 
 -   Während der Installation des Configuration Manager-Standorts müssen Sie den Remoteregistrierungsdienst auf dem Computer aktivieren, auf dem die Standortdatenbank gehostet wird.  
@@ -492,7 +492,7 @@ Windows Server 2008 und Windows Server 2008 R2 unterliegen nun dem erweiterten S
 
 -   Wenn Sie entscheiden, dass Configuration Manager im Rahmen der Installation des sekundären Standorts SQL Server Express installieren soll, stellen Sie sicher, dass der Computer die Voraussetzungen zur Ausführung von SQL Server Express erfüllt.  
 
-###  <a name="a-namebkmk2008smsprovpreqa-sms-provider-server"></a><a name="bkmk_2008smsprovpreq"></a> SMS-Anbieterserver  
+###  <a name="bkmk_2008smsprovpreq"></a> SMS-Anbieterserver  
 **Windows ADK:**  
 
 -   Auf dem Computer, auf dem Sie eine SMS-Anbieterinstanz installieren, muss die Windows ADK-Version installiert sein, die für die von Ihnen installierte bzw. aktualisierte Version von Configuration Manager erforderlich ist.  
@@ -501,7 +501,7 @@ Windows Server 2008 und Windows Server 2008 R2 unterliegen nun dem erweiterten S
 
 -   Weitere Informationen zu dieser Anforderung finden Sie unter [Anforderungen an die Infrastruktur für die Betriebssystembereitstellung](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
-###  <a name="a-namebkmk2008acwspreqa-application-catalog-website-point"></a><a name="bkmk_2008acwspreq"></a> Anwendungskatalog-Websitepunkt  
+###  <a name="bkmk_2008acwspreq"></a> Anwendungskatalog-Websitepunkt  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
@@ -530,7 +530,7 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 
     -   IIS 6-Metabasiskompatibilität  
 
-###  <a name="a-namebkmk2008acwsitepreqa-application-catalog-web-service-point"></a><a name="bkmk_2008ACwsitepreq"></a> Anwendungskatalog-Webdienstpunkt  
+###  <a name="bkmk_2008ACwsitepreq"></a> Anwendungskatalog-Webdienstpunkt  
 **.NET Framework:**  
 
 -   .NET Framework 3.5 SP1 (oder höher)  
@@ -563,12 +563,12 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 
 -   Wenn diese Standortsystemrolle zusammen mit einer anderen Standortsystemrolle installiert wird, für die dieselbe Anforderung gilt, wird die Speicheranforderung für den Computer nicht erhöht, die Mindestanforderung von 5 % besteht jedoch weiter.  
 
-###  <a name="a-namebkmk2008aipreqa-asset-intelligence-synchronization-point"></a><a name="bkmk_2008AIpreq"></a> Asset Intelligence-Synchronisierungspunkt  
+###  <a name="bkmk_2008AIpreq"></a> Asset Intelligence-Synchronisierungspunkt  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
 
-###  <a name="a-namebkmk2008crppreqa-certificate-registration-point"></a><a name="bkmk_2008crppreq"></a> Zertifikatregistrierungspunkt  
+###  <a name="bkmk_2008crppreq"></a> Zertifikatregistrierungspunkt  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
@@ -585,7 +585,7 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 
     -   IIS 6-WMI-Kompatibilität  
 
-###  <a name="a-namebkmk2008dppreqa-distribution-point"></a><a name="bkmk_2008dppreq"></a> Verteilungspunkt  
+###  <a name="bkmk_2008dppreq"></a> Verteilungspunkt  
 **IIS-Konfiguration:**
 
 Sie können die IIS-Standardkonfiguration oder eine benutzerdefinierte Konfiguration verwenden. Sie müssen die folgenden Optionen für IIS aktivieren, um eine benutzerdefinierte IIS-Konfiguration verwenden zu können:  
@@ -637,12 +637,12 @@ Wenn Sie eine benutzerdefinierte IIS-Konfiguration verwenden, können Sie nicht 
 > Die Standortsystemrolle „Verteilungspunkt“ erfordert keinen intelligenten Hintergrundübertragungsdienst (Background Intelligent Transfer Service, BITS). Wenn BITS auf dem Verteilungspunktcomputer konfiguriert ist, wird BITS auf diesem Computer nicht verwendet, um BITS-Clients den Download von Inhalten zu erleichtern.  
 
 
-###  <a name="a-namebkmk2008epppreqa-endpoint-protection-point"></a><a name="bkmk_2008EPPpreq"></a> Endpoint Protection-Punkt  
+###  <a name="bkmk_2008EPPpreq"></a> Endpoint Protection-Punkt  
 **.NET Framework:**  
 
 -   .NET Framework 3.5 SP1 (oder höher)  
 
-###  <a name="a-namebkmk2008enrollpreqa-enrollment-point"></a><a name="bkmk_2008Enrollpreq"></a> Anmeldungspunkt  
+###  <a name="bkmk_2008Enrollpreq"></a> Anmeldungspunkt  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
@@ -671,7 +671,7 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 
 -   Wenn diese Standortsystemrolle zusammen mit einer anderen Standortsystemrolle installiert wird, für die dieselbe Anforderung gilt, wird die Speicheranforderung für den Computer nicht erhöht, die Mindestanforderung von 5 % besteht jedoch weiter.  
 
-###  <a name="a-namebkmk2008enrollproxpreqa-enrollment-proxy-point"></a><a name="bkmk_2008EnrollProxpreq"></a> Anmeldungsproxypunkt  
+###  <a name="bkmk_2008EnrollProxpreq"></a> Anmeldungsproxypunkt  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
@@ -700,7 +700,7 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 
 -   Wenn diese Standortsystemrolle zusammen mit einer anderen Standortsystemrolle installiert wird, für die dieselbe Anforderung gilt, wird die Speicheranforderung für den Computer nicht erhöht, die Mindestanforderung von 5 % besteht jedoch weiter.  
 
-###  <a name="a-namebkmk2008fsppreqa-fallback-status-point"></a><a name="bkmk_2008FSPpreq"></a> Fallbackstatuspunkt  
+###  <a name="bkmk_2008FSPpreq"></a> Fallbackstatuspunkt  
 **IIS-Konfiguration:**
 
 Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:  
@@ -709,7 +709,7 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 
     -   IIS 6-Metabasiskompatibilität  
 
-###  <a name="a-namebkmk2008mppreqa-management-point"></a><a name="bkmk_2008MPpreq"></a> Verwaltungspunkt  
+###  <a name="bkmk_2008MPpreq"></a> Verwaltungspunkt  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
@@ -750,7 +750,7 @@ Wenn Sie eine benutzerdefinierte IIS-Konfiguration verwenden, können Sie nicht 
 
 -   BITS-Servererweiterungen (und automatisch ausgewählte Optionen) oder intelligenter Hintergrundübertragungsdienst (Background Intelligent Transfer Service, BITS) (und automatisch ausgewählte Optionen)  
 
-###  <a name="a-namebkmk2008rspointa-reporting-services-point"></a><a name="bkmk_2008RSpoint"></a> Reporting Services-Punkt  
+###  <a name="bkmk_2008RSpoint"></a> Reporting Services-Punkt  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
@@ -763,7 +763,7 @@ Wenn Sie eine benutzerdefinierte IIS-Konfiguration verwenden, können Sie nicht 
 
 -   Darüber hinaus kann die verwendete Instanz für andere System Center-Produkte freigegeben werden, solange die anderen System Center-Produkte keiner Einschränkung für die Freigabe von SQL Server-Instanzen unterliegen.  
 
-###  <a name="a-namebkmk2008scppreqa-service-connection-point"></a><a name="bkmk_2008SCPpreq"></a> Dienstverbindungspunkt  
+###  <a name="bkmk_2008SCPpreq"></a> Dienstverbindungspunkt  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
@@ -776,7 +776,7 @@ Wenn Sie eine benutzerdefinierte IIS-Konfiguration verwenden, können Sie nicht 
 
 -   Die Standortsystemrolle erfordert die x64-Version.  
 
-###  <a name="a-namebkmk2008suppreqa-software-update-point"></a><a name="bkmk_2008SUPpreq"></a> Softwareupdatepunkt  
+###  <a name="bkmk_2008SUPpreq"></a> Softwareupdatepunkt  
 **.NET Framework:**  
 
 -   .NET Framework 3.5 SP1 (oder höher)  
@@ -793,13 +793,7 @@ Die IIS-Standardkonfiguration ist erforderlich.
 
 -   Weitere Informationen finden Sie unter [Planen von Softwareupdates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md).
 
-###  <a name="a-namebkmk2008smppreqa-state-migration-point"></a><a name="bkmk_2008SMPpreq"></a> Zustandsmigrationspunkt  
+###  <a name="bkmk_2008SMPpreq"></a> Zustandsmigrationspunkt  
 **IIS-Konfiguration:**
 
 Die IIS-Standardkonfiguration ist erforderlich.  
-
-
-
-<!--HONumber=Jan17_HO3-->
-
-

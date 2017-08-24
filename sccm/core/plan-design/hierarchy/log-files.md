@@ -6,23 +6,20 @@ ms.date: 7/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
-caps.latest.revision: 9
-caps.handback.revision: 0
+caps.latest.revision: "9"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5e1bc0063ab3d34410f7dbc773a5eacdd5eb6d2f
 ms.openlocfilehash: 28597cf1cb269fff0872c7f79ef961496aea32ab
-ms.contentlocale: de-de
-ms.lasthandoff: 07/05/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="log-files-in-system-center-configuration-manager"></a>Protokolldateien in System Center Configuration Manager
 
@@ -820,4 +817,3 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |--------------|-----------------|----------------------------|  
 |Change.log|Zeichnet Details zu geänderten WSUS-Server-Datenbankinformationen auf.|WSUS-Server|  
 |SoftwareDistribution.log|Zeichnet Details zu Softwareupdates auf, die von der konfigurierten Updatequelle zur WSUS-Serverdatenbank synchronisiert werden.|WSUS-Server|  
-

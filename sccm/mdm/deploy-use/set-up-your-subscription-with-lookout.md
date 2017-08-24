@@ -6,8 +6,7 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6087b279-ba05-4824-b5e3-3af14f3d3cfe
@@ -15,13 +14,11 @@ caps.latest.revision:
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 2d01b6d327e98a433030faebbff8f80fa6a8f48e
-ms.contentlocale: de-de
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: b777140c753e709f4048a30e63d8ae730d3e8723
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="set-up-your-subscription-for--lookout-device-threat-protection"></a>Einrichten Ihres Lookout-Abonnements zum Schutz vor Gerätebedrohungen
 
@@ -50,7 +47,7 @@ Die Lookout-Konsole unterstützt zwei Zugriffsebenen:
 
 Weitere Einzelheiten zu den Berechtigungen finden Sie in [ diesem Artikel](https://personal.support.lookout.com/hc/en-us/articles/114094105653) auf der Lookout-Website.
 
-Die **Gruppenobjekt-ID ** befindet sich auf der Seite **Eigenschaften** der Gruppe in der **Azure AD-Verwaltungskonsole**.
+Die **Gruppenobjekt-ID**  befindet sich auf der Seite **Eigenschaften** der Gruppe in der **Azure AD-Verwaltungskonsole**.
 
 ![Screenshot der Eigenschaftenseite mit hervorgehobenem GroupID-Feld](media/aad_group_object_id.png)
 
@@ -131,4 +128,3 @@ Der Lookout-Schutz vor Gerätebedrohungen sieht unterschiedliche Klassifizierung
 Nach Abschluss des Setups beginnt der Lookout-Schutz vor Gerätebedrohung mit der Suche nach Geräten in Azure AD, die den angegebenen Registrierungsgruppen entsprechen.  Informationen zu den registrierten Geräten finden Sie im Gerätemodul.  Der anfängliche Status für Geräte wird als „ausstehend“ angezeigt.  Dieser Status ändert sich, sobald die Lookout for Work-App installiert, geöffnet und auf dem Gerät aktiviert wird.  Weitere Informationen zum Installieren der Lookout for Work-App auf dem Gerät finden Sie unter dem Thema [Configure and deploy Lookout for work apps (Konfigurieren und Bereitstellen von Lookout for Work-Apps)](configure-and-deploy-lookout-for-work-apps.md).
 ## <a name="next-steps"></a>Nächste Schritte
 [Enable Lookout MTP connection in Intune (Aktivieren einer Lookout MTP-Verbindung in Intune)](enable-lookout-connection-in-intune.md)
-

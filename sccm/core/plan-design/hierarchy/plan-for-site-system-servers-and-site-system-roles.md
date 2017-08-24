@@ -6,22 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 0a7415ba-2c53-4433-983e-780e92aa662f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0ebda27c0f3848615346c2ecf1ab8b9bb9ab6f0d
 ms.openlocfilehash: 0a3704a2d3b75ed7e0a7f718b681448ab6fc078d
-ms.contentlocale: de-de
-ms.lasthandoff: 05/26/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-for-site-system-servers-and-site-system-roles-for-system-center-configuration-manager"></a>Planen für Standortsystemserver und Standortsystemrollen für System Center Configuration Manager
 
@@ -154,4 +151,3 @@ Nachfolgend finden Sie die Standortsystemrollen, die einen Proxyserver verwenden
  Weitere Informationen zu Proxyservern für Softwareupdatepunkte finden Sie im Abschnitt zu Proxyservereinstellungen im Thema [Softwareupdatepunkt installieren](../../../sum/get-started/install-a-software-update-point.md).  
 
 -   **Dienstverbindungspunkt** Wenn diese Standortsystemrolle nicht für die Offline-, sondern für die Onlineverwendung eingerichtet ist, stellt sie eine Verbindung zu Microsoft Intune und dem Microsoft-Clouddienst her.  
-

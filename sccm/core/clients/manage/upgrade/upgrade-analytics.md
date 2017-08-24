@@ -9,17 +9,14 @@ ms.date: 7/31/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
-ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
 ms.openlocfilehash: b1f4cd4a6f19a02d2b2dc3f9a841aeeb2a1403dd
-ms.contentlocale: de-de
-ms.lasthandoff: 07/29/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="integrate-upgrade-readiness-with-system-center-configuration-manager"></a>Integrieren von Upgrade Readiness mit System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -143,4 +140,3 @@ Vor der Branch-Version 1706 von Configuration Manager waren folgende Schritte er
 
     > [!NOTE]
     > Sie müssen Upgrade Readiness mit dem Standort der obersten Ebene in der Hierarchie verbinden. Wenn Sie Upgrade Readiness mit einem eigenständigen primären Standort verbinden und dann Ihrer Umgebung einen Standort der zentralen Verwaltung hinzufügen, müssen Sie die OMS-Verbindung in der neuen Hierarchie löschen und neu erstellen.
-

@@ -7,20 +7,18 @@ ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.topic: article
 ms.assetid: d2ad00e8-9f10-41b6-816a-d8542c23a22e
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 5e77ebbfd3f3d573d903fe58024a22feb9884e4a
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1611-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1611 für System Center Configuration Manager
 
@@ -63,7 +61,7 @@ Mit der Funktion zum Zwischenspeichern von Inhalten können Sie den Client dahin
     ![Zwischenspeicherungsoptionen](media/precacheoptions2.png)  
 
 3. Bereitstellen der Tasksequenz Konfigurieren Sie für die Zwischenspeicherungsfunktion Folgendes:
-    - Wählen Sie auf der Registerkarte **Allgemein** die Option **Pre-download content for this task sequence** (Inhalt für diese Tasksequenz vorab herunterladen) aus.
+    - Wählen Sie auf der Registerkarte **Allgemein** die Option **Inhalt für diese Tasksequenz vorab herunterladen** aus.
     - Konfigurieren Sie auf der Registerkarte **Bereitstellungseinstellungen** die Tasksequenz mit der Einstellung **Verfügbar** für **Zweck**. Bei der Erstellung einer Bereitstellung des Typs **Erforderlich** ist die Zwischenspeicherfunktion nicht verfügbar.
     - Wählen Sie auf der Registerkarte **Planung** für die Einstellung **Verfügbarkeitsdatum der Bereitstellung festlegen** einen in der Zukunft liegenden Zeitpunkt aus, der Clients genügend Zeit bietet, um den Inhalt zwischenzuspeichern, bevor die Bereitstellung für Benutzer verfügbar gemacht wird. Sie können den Verfügbarkeitszeitpunkt beispielsweise auf drei Stunden später setzen, um ausreichend Zeit für das Zwischenspeichern des Inhalts vorzusehen.  
     - Konfigurieren Sie auf der Registerkarte **Verteilungspunkte** die Einstellungen der **Bereitstellungsoptionen**. Wenn der Inhalt noch nicht auf einem Client zwischengespeichert ist, wenn ein Benutzer die Installation startet, werden diese Einstellungen verwendet.
@@ -77,4 +75,3 @@ Mit der Funktion zum Zwischenspeichern von Inhalten können Sie den Client dahin
 
 ## <a name="see-also"></a>Siehe auch
 [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md)
-

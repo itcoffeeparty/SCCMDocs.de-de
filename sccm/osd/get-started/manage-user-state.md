@@ -6,23 +6,20 @@ ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d8d5c345-1e91-410b-b8a9-0170dcfa846e
-caps.latest.revision: 12
-caps.handback.revision: 0
+caps.latest.revision: "12"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: a0bd86587669c32377b1eafa6a890d37e10ac3f6
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-user-state-in-system-center-configuration-manager"></a>Verwalten des Benutzerzustands in System Center Configuration Manager
 
@@ -88,9 +85,9 @@ Mit System Center Configuration Manager-Tasksequenzen können Sie bei der Betrie
 ##  <a name="BKMK_StateMigrationPoint"></a> Configure a state migration point  
  Vom Zustandsmigrationspunkt werden die auf einem Computer erfassten Benutzerdaten gespeichert und anschließend auf einem anderen Computer wiederhergestellt. Wenn Sie jedoch Benutzereinstellungen für eine Betriebssystembereitstellung auf dem gleichen Computer erfassen, z. B. zur Aktualisierung des Betriebssystems auf dem Zielcomputer, können Sie die Daten auf dem gleichen Computer unter Verwendung von festen Links oder auf dem Zustandsmigrationspunkt speichern. Wenn Sie den Statusspeicher erstellen, wird von Configuration Manager bei einigen Computerbereitstellungen automatisch eine Zuordnung zwischen Statusspeicher und Zielcomputer erstellt. Mithilfe der folgenden Methoden können Sie einen Zustandsmigrationspunkt zum Speichern der Benutzerzustandsdaten konfigurieren:  
 
--   Verwenden Sie den Assistenten zum Erstellen von ** ** Standortsystemservern, um einen neuen Standortsystemserver für den Zustandsmigrationspunkt zu erstellen.  
+-   Verwenden Sie den Assistenten zum Erstellen von ****  Standortsystemservern, um einen neuen Standortsystemserver für den Zustandsmigrationspunkt zu erstellen.  
 
--   Verwenden Sie den Assistenten zum Hinzufügen von ** ** Standortsystemrollen, um einem vorhandenen Server einen Zustandsmigrationspunkt hinzuzufügen.  
+-   Verwenden Sie den Assistenten zum Hinzufügen von ****  Standortsystemrollen, um einem vorhandenen Server einen Zustandsmigrationspunkt hinzuzufügen.  
 
  Wenn Sie diese Assistenten verwenden, werden Sie aufgefordert, die folgenden Angaben zum Zustandsmigrationspunkt zu machen:  
 
@@ -132,4 +129,3 @@ Mit System Center Configuration Manager-Tasksequenzen können Sie bei der Betrie
 
 ##  <a name="BKMK_MigrationFails"></a> Wiederherstellen von Benutzerzustandsdaten, wenn bei einer Betriebssystembereitstellung ein Fehler auftritt  
  Wenn bei der Bereitstellung des Betriebssystems ein Fehler auftritt, können Sie die LoadState-Funktion von USMT 10.0 verwenden, um die während des Bereitstellungsvorgangs erfassten Benutzerzustandsdaten abzurufen. Dazu gehören auch Daten, die auf einem Zustandsmigrationspunkt oder lokal auf dem Zielcomputer gespeichert sind. Weitere Informationen zu dieser USMT-Funktion finden Sie unter [LoadState-Syntax](https://technet.microsoft.com/library/mt299188\(v=vs.85\).aspx).  
-

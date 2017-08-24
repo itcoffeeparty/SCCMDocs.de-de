@@ -1,5 +1,4 @@
 ---
-
 title: Vorbereiten der Softwareupdateverwaltung | Microsoft-Dokumentation
 description: "Um die Updateverwaltung vorzubereiten, müssen Sie diese Tasks durchführen, um Daten zur Bewertung der Kompatibilität in der System Center Configuration Manager-Konsole anzuzeigen."
 keywords: 
@@ -10,16 +9,14 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 01907900-e28b-4cd7-9479-42906416707b
-translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
 ms.openlocfilehash: 5c34bd1ea108dffda10c30281fb9c97ba38ae1ae
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="prepare-for-software-updates-management"></a>Vorbereiten der Softwareupdateverwaltung
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -37,9 +34,3 @@ Führen Sie diese Konfiguration am Standort der zentralen Verwaltung oder an ein
 
 ## <a name="step-4-manage-settings-for-software-updates"></a>Schritt 4: Verwalten von Einstellungen für Softwareupdates
 Nach der Synchronisierung von Softwareupdates überprüfen Sie Configuration Manager-Clienteinstellungen, Konfigurationen für Gruppenrichtlinien und Softwareupdateeinstellungen, bevor Sie Softwareupdates bereitstellen. Weitere Informationen finden Sie unter [Verwalten von Einstellungen für Softwareupdates](manage-settings-for-software-updates.md).
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

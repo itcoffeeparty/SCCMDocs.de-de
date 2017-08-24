@@ -6,22 +6,19 @@ ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 3ae68fa6-8b30-45dd-9d12-50bb67cb4a9d
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
 ms.openlocfilehash: 0a3eb93a99533a1569d8f72ca01d6dfcdc75da20
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="what39s-changed-in-system-center-configuration-manager-from-system-center-2012-configuration-manager"></a>Änderungen in System Center Configuration Manager im Vergleich zu System Center 2012 Configuration Manager
 
@@ -169,4 +166,3 @@ Weitere Informationen zu Funktionen zur Verwaltung mobiler Geräte mit Configura
  Sie können nun mobile Geräte mithilfe der lokalen Configuration Manager-Infrastruktur verwalten. Alle Geräteverwaltungs- und sonstigen Verwaltungsdaten werden lokal verarbeitet und sind nicht Teil von Microsoft Intune oder anderer Clouddienste. Diese Art von Gerätemanagement erfordert keine Clientsoftware. Configuration Manager verwaltet Geräte mit Funktionen, die in die Gerätebetriebssysteme integriert sind.  
 
  Weitere Informationen finden Sie unter [Verwalten mobiler Geräte mithilfe lokaler Infrastruktur in System Center Configuration Manager](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).
-

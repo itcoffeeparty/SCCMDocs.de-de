@@ -1,5 +1,4 @@
 ---
-
 title: Verwalten der Softwareupdatesynchronisierung | Microsoft-Dokumentation
 description: "So planen Sie die Softwareupdatesynchronisierung, starten die Softwareupdatesynchronisierung manuell, und überwachen die Softwareupdatesynchronisierung."
 keywords: 
@@ -10,18 +9,15 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
-translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
 ms.openlocfilehash: e68170a16a6a908e035247ed9c0f3cc6cdbe1983
-
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
-#  <a name="a-namebkmksumsynca-synchronize-software-updates"></a><a name="BKMK_SUMSync"></a> Synchronisieren von Softwareupdates
+#  <a name="BKMK_SUMSync"></a> Synchronisieren von Softwareupdates
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -80,9 +76,3 @@ Nach dem Start der Synchronisierung können Sie den Prozess in der Configuration
 Nachdem Softwareupdates zum ersten Mal synchronisiert wurden, oder wenn neue Klassifizierungen oder Produkte verfügbar sind, müssen Sie [die neuen Klassifizierungen und Produkte so konfigurieren](configure-classifications-and-products.md), dass Softwareupdates mit den neuen Kriterien synchronisiert werden.
 
 Nachdem Sie Softwareupdates mit den erforderlichen Kriterien synchronisiert haben, [verwalten Sie Einstellungen für Softwareupdates](manage-settings-for-software-updates.md).  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

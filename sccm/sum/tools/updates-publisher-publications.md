@@ -6,22 +6,20 @@ ms.date: 4/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e6c1df1d-7728-4980-9199-bc32cde5439e
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
 ms.openlocfilehash: ddea7af935d5be880b96e383401061f8aa11e6da
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-publications-in-updates-publisher"></a>Verwalten von Veröffentlichungen in Updates Publisher
 
@@ -105,4 +103,3 @@ Sie können im **Arbeitsbereich „Updates“** Updates und Pakete auswählen un
     Bevor Sie ein benutzerdefiniertes Update oder Paket aus dem Configuration Manager entfernen (löschen) können, müssen Sie es ablaufen lassen und dann den abgelaufenen Status im Configuration Manager veröffentlichen. Nachdem Updates oder Pakete im Configuration Manager abgelaufen sind, können Sie sie nicht mehr bereitstellen oder erneut aktivieren.
 
 -   **Um Updates oder Pakete erneut zu aktivieren**, wählen Sie im „Arbeitsbereich „Updates““ ein oder mehrere Updates oder Pakete aus, die abgelaufen sind, und wählen Sie dann **Erneut aktivieren** auf der Registerkarte **Start**. Wenn das abgelaufene Update zuvor als abgelaufen im Configuration Manager veröffentlicht wurde, kann es nicht erneut aktiviert werden.
-

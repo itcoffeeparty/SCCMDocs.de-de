@@ -6,22 +6,19 @@ ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a181171cc1a92ec4519f4e4b34ca3274a0aa0440
 ms.openlocfilehash: 1c9e7ada6a8aa228b30e58865baae0f6e529e6af
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-system-center-configuration-manager"></a>Erfahren Sie, wie Clients Standortressourcen und -dienste für System Center Configuration Manager suchen.
 
@@ -251,4 +248,3 @@ Falls andere Dienstidentifizierungsmechanismen erfolglos bleiben, kann durch Üb
 Standardmäßig veröffentlicht ein primärer Standort in WINS den ersten Verwaltungspunkt am Standort, der für HTTP konfiguriert ist, und den ersten Verwaltungspunkt, der für HTTPS konfiguriert ist.  
 
 Wenn Sie nicht wünschen, dass ein HTTP-Verwaltungspunkt in WINS gefunden wird, konfigurieren Sie für Clients die Client.msi-Eigenschaft **SMSDIRECTORYLOOKUP=NOWINS**mit CCMSetup.exe.  
-

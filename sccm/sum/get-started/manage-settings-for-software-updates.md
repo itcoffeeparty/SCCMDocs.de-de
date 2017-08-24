@@ -1,5 +1,4 @@
 ---
-
 title: "Verwalten von Einstellungen für Softwareupdates | Microsoft-Dokumentation"
 description: "Enthält Informationen zu Clienteinstellungen, die für Softwareupdates an Ihrem Standort geeignet sind, nachdem Sie den Softwareupdatepunkt installiert haben."
 keywords: 
@@ -10,18 +9,14 @@ ms.date: 03/26/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: fe4a8f56e0b554e206bcc4503a0268dc761ded81
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 #  <a name="BKMK_ManageSUSettings"></a> Verwalten von Einstellungen für Softwareupdates  
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -141,4 +136,3 @@ Wenn die Überprüfung der Zertifikatsperrlisten verwendet wird, muss sie in den
 Führen Sie auf dem Computer, der die CRL-Prüfung ausführt, von der Produkt-DVD den folgenden Befehl von einer Eingabeaufforderung aus: **\SMSSETUP\BIN\X64\\**<*Sprache*>**\UpdDwnldCfg.exe/checkrevocation aus**.  
 
 Führen Sie für Englisch (USA) den folgenden Befehl aus: **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe /checkrevocation**  
-

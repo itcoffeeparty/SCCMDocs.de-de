@@ -6,22 +6,19 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c3cf9f64-c2b9-4ace-9527-2aba6d4eef04
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
-ms.openlocfilehash: 916b971f851f968f6534ac834bd3182cc61614aa
-ms.contentlocale: de-de
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 4913606e2f8a36e0004f711b24ecd836d0485124
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="install-site-system-roles-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Installieren von Standortsystemrollen für die lokale Verwaltung mobiler Geräte in System Center Configuration Manager
 
@@ -73,4 +70,3 @@ Die lokale Verwaltung mobiler Geräte für System Center Configuration Manager e
      Dadurch wird der Verwaltungspunkt faktisch zu einem Geräteverwaltungspunkt.  
 
  Nachdem die Standortsystemrollen hinzugefügt und für die Verwaltung von modernen Geräte konfiguriert wurden, müssen Sie die Server konfigurieren, die die Rollen als vertrauenswürdige Endpunkte für die Registrierung und die Kommunikation mit verwalteten Geräten hosten. Weitere Informationen finden Sie unter [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager (Einrichten von Zertifikaten für vertrauenswürdige Verbindungen für die lokale Verwaltung von mobilen Geräten in System Center Configuration Manager)](../../mdm/get-started/set-up-certificates-on-premises-mdm.md).  
-

@@ -6,22 +6,19 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 71c44250-626e-482c-8794-434c6aeb2fb1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: c39303c2e1a30ff4d7f27bd617a85516dd4cd15d
-ms.contentlocale: de-de
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: cacb22a85e74a7d9cae75ad907d0206487cd4dc7
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-skype-for-business-online-access"></a>Verwalten des Zugriffs auf Skype for Business Online
 
@@ -113,4 +110,3 @@ Wenn eine Bedingung nicht erfüllt wird, erhält der Benutzer bei der Anmeldung 
 ### <a name="see-also"></a>Weitere Informationen:  
 
  [Manage device compliance policies in System Center Configuration Manager (Verwalten von Kompatibilitätsrichtlinien für Geräte in System Center Configuration Manager)](../../protect/deploy-use/device-compliance-policies.md)
-

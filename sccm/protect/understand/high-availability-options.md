@@ -6,19 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1a38421d-24c1-4fef-bf6c-42fce53109ac
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
 ms.openlocfilehash: d3e9afb90cdc85bc7299626b642c52be659e3bdf
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="high-availability-options-for-system-center-configuration-manager"></a>Hochverfügbarkeitsoptionen für System Center Configuration Manager
 
@@ -61,7 +61,7 @@ Optionen, die hohe Verfügbarkeit unterstützen:
 -   [Voraussetzungen für Standorte und Standortsysteme](../../core/plan-design/configs/site-and-site-system-prerequisites.md)
 
 
-##  <a name="a-namebkmksnha-high-availability-for-sites-and-hierarchies"></a><a name="bkmk_snh"></a> Hohe Verfügbarkeit für Standorte und Hierarchien  
+##  <a name="bkmk_snh"></a> Hohe Verfügbarkeit für Standorte und Hierarchien  
  **Hosten der Standortdatenbank mit einem SQL Server-Cluster:**  
 
  Wenn Sie für die Datenbank an einem Standort der zentralen Verwaltung oder einem primären Standort einen SQL Server-Cluster verwenden, profitieren Sie von der in SQL Server integrierten Failoverunterstützung.  
@@ -86,7 +86,7 @@ Optionen, die hohe Verfügbarkeit unterstützen:
 
  **Installieren Sie mehrere Instanzen des SMS-Anbieters an einem Standort:** Der SMS-Anbieter stellt den administrativen Kontaktpunkt für eine oder mehrere Configuration Manager-Konsolen bereit. Wenn Sie mehrere SMS-Anbieter installieren, können Sie Redundanz für Kontaktpunkte zur Verwaltung des Standorts und der Hierarchie bereitstellen.  
 
-##  <a name="a-namebkmkssra-high-availability-for-site-system-roles"></a><a name="bkmk_ssr"></a> Hohe Verfügbarkeit für Standortsystemrollen  
+##  <a name="bkmk_ssr"></a> Hohe Verfügbarkeit für Standortsystemrollen  
  Sie stellen an jedem Standort Standortsystemrollen bereit, um die Dienste verfügbar zu machen, die an diesem Standort von Clients verwendet werden sollen. Die Standortdatenbank enthält die Konfigurationsinformationen für den Standort und sämtliche Clients. Verwenden Sie mindestens eine der verfügbaren Optionen, um eine hohe Verfügbarkeit der Standortdatenbank sowie bei Bedarf die Wiederherstellung des Standorts und der Standortdatenbank zu ermöglichen.  
 
  **Redundanz für wichtige Standortsystemrollen:**  
@@ -155,7 +155,7 @@ Optionen, die hohe Verfügbarkeit unterstützen:
 
  Weitere Informationen zu dieser Clienteinstellung und zur automatischen Ermittlung finden Sie im Abschnitt zur [Computer-Agent](../../core/clients/deploy/about-client-settings.md#computer-agent) des Themas [Informationen zu Clienteinstellungen in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md).  
 
-##  <a name="a-namebkmkclienta-high-availability-for-clients"></a><a name="bkmk_client"></a> Hohe Verfügbarkeit für Clients  
+##  <a name="bkmk_client"></a> Hohe Verfügbarkeit für Clients  
  **Autonomie von Clientvorgängen:**  
 
  In den folgenden Bereichen werden Configuration Manager-Clientvorgänge autonom ausgeführt:  
@@ -200,7 +200,7 @@ Optionen, die hohe Verfügbarkeit unterstützen:
 
 -   Fehler auf einem Clientcomputer wirken sich nicht auf die Integrität der in der Datenbank gespeicherten Informationen aus. Diese Informationen können für die Berichterstellung verfügbar bleiben.  
 
-##  <a name="a-namebkmknonhaoptionsa-options-for-sites-and-site-system-roles-that-are-not-highly-available"></a><a name="bkmk_nonHAoptions"></a> Optionen für Standorte und Standortsystemrollen ohne hohe Verfügbarkeit  
+##  <a name="bkmk_nonHAoptions"></a> Optionen für Standorte und Standortsystemrollen ohne hohe Verfügbarkeit  
  Von einigen Standortsystemen wird nur eine Instanz an einem Standort oder in der Hierarchie unterstützt. Die Informationen können Ihnen bei der Vorbereitung auf das Offlineschalten dieser Standortsysteme helfen.  
 
  **Standortserver (Standort):**  
@@ -261,9 +261,3 @@ Optionen, die hohe Verfügbarkeit unterstützen:
 
 ### <a name="see-also"></a>Weitere Informationen:  
  [Unterstützte Konfigurationen für System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

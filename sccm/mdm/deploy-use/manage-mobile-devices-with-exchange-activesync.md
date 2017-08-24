@@ -6,22 +6,19 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: aba688d9-fd5b-4c42-8cb4-f7e1b161ef50
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: 4a2b60d893e8d430b107a5bc43ec0748177c27c3
-ms.contentlocale: de-de
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 44958bc35586f5e57ab3fb59681bfb018d2bd5da
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-mobile-devices-with-system-center-configuration-manager-and-exchange"></a>Verwalten von mobilen Geräten mit System Center Configuration Manager und Exchange
 
@@ -137,4 +134,3 @@ Verwenden Sie den Exchange Server-Connector in System Center Configuration Manag
     -   Bestätigen Sie, dass der Exchange Server-Connector vom Standortkomponenten-Manager erfolgreich installiert wurde, indem Sie nach der Status-ID **1015** für die Komponente **SMS_EXCHANGE_CONNECTOR** suchen. Falls der Connector von Configuration Manager nicht ordnungsgemäß installiert werden kann, weil beispielsweise der Computer des angegebenen Clientzugriffsservers offline ist, wird von Configuration Manager alle 60 Minuten ein erneuter Installationsversuch gestartet, bis entweder der Vorgang erfolgreich abgeschlossen werden konnte oder Sie den Exchange Server-Connector entfernen.  
 
     -   Suchen Sie auf dem Standortservercomputer die Protokolldatei „Sitecomp.log“ und darin die Angabe `Component SMS_EXCHANGE_CONNECTOR flagged for installation`. Eine erfolgreiche Installation wird dann mit dem folgenden Text erfasst: `STATMSG: ID=1015`.  
-

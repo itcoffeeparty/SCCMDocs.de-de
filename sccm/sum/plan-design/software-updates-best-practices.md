@@ -1,5 +1,4 @@
 ---
-
 title: "Bewährte Methoden für Softwareupdates | Microsoft-Dokumentation"
 description: "Verwenden Sie diese bewährten Methoden für Softwareupdates in System Center Configuration Manager."
 keywords: 
@@ -10,17 +9,13 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
 ms.openlocfilehash: 5df20f3703442de1be6220ca2770e182e330c036
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="best-practices-for-software-updates-in-system-center-configuration-manager"></a>Bewährte Methoden für Softwareupdates in System Center Configuration Manager
 
@@ -59,4 +54,3 @@ Dieses Thema enthält bewährte Methoden für Softwareupdates in System Center C
 
 ## <a name="see-also"></a>Siehe auch  
  [Plan for software updates in System Center Configuration Manager (Planen von Softwareupdates in System Center Configuration Manager)](../../sum/plan-design/plan-for-software-updates.md)
-

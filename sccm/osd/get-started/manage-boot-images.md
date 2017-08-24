@@ -6,22 +6,20 @@ ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
-caps.latest.revision: 23
-caps.handback.revision: 0
+caps.latest.revision: "23"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 0663ba84762c44a5c303562548499f195bae9e1c
 ms.openlocfilehash: cc678c1133b1944f55bcad309cf9ede9f0660b57
-ms.contentlocale: de-de
-ms.lasthandoff: 08/01/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-boot-images-with-system-center-configuration-manager"></a>Verwalten von Startimages mit System Center Configuration Manager
 
@@ -270,4 +268,3 @@ Benutzerdefinierte Startimages werden nicht geändert.
 1.  Vergewissern Sie sich vor dem Aktualisieren des Startabbilds, dass sich die richtige Tasksequenz-Ressourcendatei (tsres.dll) im entsprechenden Sprachordner auf dem Standortserver befindet. Die Ressourcendatei für Englisch befindet sich z.B. am folgenden Speicherort: <*ConfigMgr-Installationsordner*>\OSD\bin\x64\00000409\tsres.dll.  
 
 2.  Legen Sie als Teil des Prestart-Befehls die Umgebungsvariable SMSTSLanguageFolder auf die gewünschte Sprach-ID fest. Die Sprach-ID muss im Dezimalformat angegeben werden (nicht hexadezimal). Wenn Sie die Sprach-ID auf Englisch festlegen möchten, geben Sie z. B. den Dezimalwert 1033 an, und nicht den Hexadezimalwert 00000409, der für den Ordnernamen verwendet wird.  
-

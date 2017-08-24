@@ -6,24 +6,20 @@ ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: 2d7ec9cc626f3ccfded990cf8ba392c4979adfee
-ms.contentlocale: de-de
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 1488aaa465fb9810bc1b641d41dad95189d37418
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="configure-custom-client-settings-for-endpoint-protection"></a>Konfigurieren von benutzerdefinierten Clienteinstellungen für Endpoint Protection
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -175,4 +171,3 @@ Weitere Informationen zur Betriebssystembereitstellung in Configuration Manager 
 Nachdem Sie diese Schritte ausgeführt haben, können Sie den Referenzcomputer für die Imageerstellung vorbereiten. Weitere Informationen zur Betriebssystembereitstellung in Configuration Manager finden Sie unter [Verwalten von Betriebssystemimages mit System Center Configuration Manager](/sccm/osd/get-started/manage-operating-system-images).
 
 Wenn ein Image bereitgestellt wird, das die Endpoint Protection-Clientsoftware enthält, werden vom Endpoint Protection-Client automatisch Informationen an den dem Computer zugewiesenen Configuration Manager-Standort gesendet, und die für den Clientcomputer relevante Richtlinie wird heruntergeladen und angewendet.
-

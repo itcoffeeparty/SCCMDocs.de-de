@@ -6,22 +6,19 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1ef60106-8f31-46d6-95a6-25a6495f22c7
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 2ba11c8e2d8214ce9aca7c887fcb539b38da4e84
-ms.contentlocale: de-de
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: 85bdadaaaeed9a42cfa5165d2b9f0f3ef434dc03
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="preparation-steps-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Vorbereitungsschritte für die lokale Verwaltung mobiler Geräte in System Center Configuration Manager
 
@@ -46,4 +43,3 @@ Für die lokale Verwaltung mobiler Geräte mit System Center Configuration Manag
 -   [Einrichten der Geräteregistrierung für die lokale Verwaltung mobiler Geräte in System Center Configuration Manager](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)  
 
      In diesem Task erteilen Sie den Benutzern die Berechtigung zum Registrieren von Computern und Geräten. Zudem installieren Sie das vertrauenswürdige Stammzertifikat auf Geräten (in der Regel Geräte, die keiner Domäne angehören), um HTTPS-Verbindungen mit den Standortsystemservern zuzulassen.  
-

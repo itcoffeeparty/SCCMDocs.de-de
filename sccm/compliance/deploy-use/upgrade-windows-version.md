@@ -6,24 +6,21 @@ ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
-caps.latest.revision: 8
-caps.handback.revision: 0
+caps.latest.revision: "8"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
 ms.openlocfilehash: cd8c644d07dab0010dc211df8ce4f2dc6e1fa7ae
-ms.contentlocale: de-de
-ms.lasthandoff: 07/29/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="upgrade-windows-devices-with-the-edition-upgrade-policy-in-system-center-configuration-manager"></a>Aktualisieren von Windows-Geräten mit der Editionsaktualisierungsrichtlinie in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -101,4 +98,3 @@ Wenn Sie die Bereitstellung überwachen, die Sie im Arbeitsbereich **Überwachun
 Diese Fehler bedeuten allerdings nicht, dass die Bereitstellung gescheitert ist. Vergewissern Sie sich am Ziel-PC, dass das Upgrade erfolgreich durchgeführt wurde.
 
 Sobald die Richtlinie einen entsprechenden Windows-PC erreicht und ausgewertet wird, wird dieser innerhalb von zwei Stunden zum Installieren der Aktualisierung neu gestartet. Stellen Sie sicher, dass Sie jeden Benutzer informieren, dem Sie die Richtlinie bereitstellen, oder planen Sie die Ausführung der Richtlinie außerhalb der Arbeitsstunden der Benutzer.
-

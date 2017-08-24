@@ -6,22 +6,20 @@ ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 25fa89d6-7e47-45a6-8f4e-70b77560fba6
-caps.latest.revision: 0
-caps.handback.revision: 0
+caps.latest.revision: "0"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
 ms.openlocfilehash: 1960f86e98a957559f379b9eeb6d293f7e4182e5
-ms.contentlocale: de-de
-ms.lasthandoff: 07/29/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="update-reset-tool"></a>Tool zum Zurücksetzen von Updates
 
@@ -79,4 +77,3 @@ Nach Ausführung des Tools:
  In einem typischen Szenario möchten Sie ein Update zurücksetzen, wenn beim Herunterladen Probleme aufgetreten sind. Der vollqualifizierte Domänenname Ihrer SQL Server-Instanz lautet *server1.fabrikam.com*, die Standortdatenbank heißt *CM_XYZ*, und die Paket-GUID lautet *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Führen Sie Folgendes aus: ***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
  In einem extremeren Szenario möchten Sie das Löschen eines problematischen Updatepakets erzwingen. Der vollqualifizierte Domänenname Ihrer SQL Server-Instanz lautet *server1.fabrikam.com*, die Standortdatenbank heißt *CM_XYZ*, und die Paket-GUID lautet *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Führen Sie Folgendes aus: ***CMUpdateReset.exe -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
-

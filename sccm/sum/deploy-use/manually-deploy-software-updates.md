@@ -1,5 +1,4 @@
 ---
-
 title: Manuelles Bereitstellen von Softwareupdates | Microsoft Docs
 description: "Zum manuellen Bereitstellen von Updates wählen Sie Updates über die Configuration Manager-Konsole aus, und stellen Sie sie manuell bereit, oder fügen Sie Updates einer Updategruppe hinzu, und stellen Sie die Gruppe bereit."
 keywords: 
@@ -10,18 +9,14 @@ ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
 ms.openlocfilehash: 2a0d5f12b99689749833c109d4fa399f99451d8a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 #  <a name="BKMK_ManualDeploy"></a> Manuelles Bereitstellen von Softwareupdates  
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -317,4 +312,3 @@ ms.lasthandoff: 06/08/2017
 
 ## <a name="next-steps"></a>Nächste Schritte
 [Überwachen von Softwareupdates](monitor-software-updates.md)
-

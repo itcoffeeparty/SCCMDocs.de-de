@@ -6,24 +6,21 @@ ms.date: 4/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3cf0c2cd-397a-4622-b11c-961f334fb7d7
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
 ms.openlocfilehash: 2925abda07abaa46ad56b9b433ce003c22aede5e
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="manage-applicability-rules-in-updates-publisher"></a>Verwalten von Anwendbarkeitsregeln in Updates Publisher
 
 *Gilt für: System Center Updates Publisher*
@@ -66,7 +63,7 @@ Die folgenden Informationen entsprechen denen zum Erstellen von Regeln im [Creat
 
     -   **Registrierung**: Verwenden Sie diesen Typ, um Registrierungsinformationen anzugeben, die vorliegen müssen, bevor ein Gerät dieses Update installieren kann.
 
-    -   **System**: Diese Regel bestimmt die Anwendbarkeit mit Systemdetails. Sie können wählen zwischen der Definition einer Windows-Version, einer Windows-Sprache und einer Prozessorarchitektur sowie dem Angeben einer WMI-Abfrage, um das Betriebssystem des Geräts zu identifizieren.
+    -   **System**: Diese Regel bestimmt die Anwendbarkeit mithilfe von Systemdetails. Sie können wählen zwischen der Definition einer Windows-Version, einer Windows-Sprache und einer Prozessorarchitektur sowie dem Angeben einer WMI-Abfrage, um das Betriebssystem des Geräts zu identifizieren.
 
     -   **Windows Installer**: Verwenden Sie diesen Regeltyp, um die Anwendbarkeit basierend auf einem installierten MSI- oder Windows Installer-Patch (MSP) zu bestimmen. Sie können auch bestimmen, ob bestimmte Komponenten oder Funktionen als Teil der Anforderung installiert sind.
 
@@ -94,4 +91,3 @@ Weitere Informationen zum Verwenden des Regel-Assistenten finden Sie unter **Sch
 Um eine gespeicherte Anwendbarkeitsregel zu löschen, wählen Sie im **Arbeitsbereich „Regeln“** die Regel bzw. den Regelsatz in der Liste **My saved rules** (Eigene gespeicherte Regeln) aus, und wählen Sie dann im Menüband **Löschen**. Dies entfernt die gespeicherte Regel bzw. den Regelsatz aus Updates Publisher.
 
 Um eine Regel aus einem bestimmten Update zu löschen, müssen Sie [das Update bearbeiten](/sccm/sum/tools/manage-updates-with-updates-publisher#edit-updates-and-bundles).
-

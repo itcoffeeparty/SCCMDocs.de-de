@@ -6,21 +6,18 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4cd6031f-8844-4d0b-8166-b24d6528a94e
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 6451ce59e01254d96ca4aa9bbe07cde829fae9ce
-ms.contentlocale: de-de
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: de5602179f3ac55b51133b8280a0143f1b0ff30e
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-exclude-upgrading-clients-for-windows-computers-in-system-center-configuration-manager"></a>Ausschließen von Clientupgrades für Windows-Computer in System Center Configuration Manager
 
@@ -55,4 +52,3 @@ Solange eine Sammlung für den Ausschluss konfiguriert ist, können Mitglieder d
   Wenn Sie versuchen, einen Client, der Mitglied der ausgeschlossenen Sammlung ist, manuell upzugraden, und diesen Schalter nicht verwenden, wird der Client die neue Clientsoftware nicht installieren. Weitere Informationen finden Sie unter [Manuelles Installieren von Configuration Manager-Clients](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual).
 
 Weitere Informationen zu Clientinstallationsmethoden finden Sie unter [Bereitstellen von Clients auf Windows-Computern in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
-

@@ -6,22 +6,19 @@ ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
 ms.openlocfilehash: 54b3433a002b8ef29059bab04458138348f95d66
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="health-attestation-for-system-center-configuration-manager"></a>Integritätsnachweis für System Center Configuration Manager
 
@@ -83,4 +80,3 @@ Der Configuration Manager-Geräteintegritätsnachweis zeigt Folgendes an:
 -   **Wichtigste fehlende Integritätsnachweiseinstellungen** – Zeigt nach Einstellungen gelistet die Anzahl von Geräte an, für die die Health Attestation-Einstellung fehlt
 
 Der Status des Nachweises der Clientgeräteintegrität kann verwendet werden, um in den Konformitätsrichtlinien für Geräte, die von Configuration Manager mit Microsoft Intune verwaltet werden, Regeln für den bedingten Zugriff zu definieren. Weitere Informationen finden Sie unter [Verwalten von Kompatibilitätsrichtlinien für Geräte in System Center Configuration Manager](/sccm/protect/deploy-use/device-compliance-policies).  
-

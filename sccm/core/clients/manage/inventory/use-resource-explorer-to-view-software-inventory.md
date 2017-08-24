@@ -6,23 +6,20 @@ ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4b7aa5f6-5ebd-49be-b7f3-4206caadc187
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
-ms.openlocfilehash: 6189726bbcade8229e0b2e929ebedeefdbf266a4
-ms.contentlocale: de-de
-ms.lasthandoff: 12/29/2016
-
-
+ms.openlocfilehash: b76bcf65c61b0a2690a468d375ac95b1334d5298
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-use-resource-explorer-to-view-software-inventory-in-system-center-configuration-manager"></a>Anzeigen des Softwareinventars mit dem Ressourcen-Explorer in System Center Configuration Manager
 
@@ -55,4 +52,3 @@ Zeigen Sie mithilfe des Ressourcen-Explorers in System Center Configuration Mana
 
 4.  Sie können mit der rechten Maustaste auf ein beliebiges Element im Fenster „Ressourcen-Explorer“ klicken und **Eigenschaften** auswählen, um die gesammelten Inventurinformationen in einem besser lesbaren Format anzuzeigen.  
  
-

@@ -6,23 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: dccf0b73-43bd-4545-8914-114168ebad36
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
-ms.openlocfilehash: bdb7f78480f73bc4559c4ff49ecb7b047581780a
-ms.contentlocale: de-de
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 451317db1d7aab888c03d1a099b9ce25311e06d0
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="email-profile-prerequisites"></a>Voraussetzungen für E-Mail-Profile
 
@@ -42,4 +39,3 @@ E-Mail-Profile in System Center Configuration Manager weisen externe Abhängigke
 |Abhängigkeit|Weitere Informationen|  
 |----------------|----------------------|  
 |Mail-Attribut in Active Directory|Wenn Sie E-Mail-Adressen von Benutzern in einem E-Mail-Profil mithilfe der primären SMTP-Adresse des Benutzers generieren möchten, muss diese Adresse im **mail**-Attribut in Active Directory enthalten sein.<br /><br /> Weitere Informationen finden Sie in der Windows Server-Dokumentation.|
-

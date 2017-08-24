@@ -6,23 +6,20 @@ ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1eb2fcaf-acac-4388-9b31-6cccafacaabe
-caps.latest.revision: 9
-caps.handback.revision: 0
+caps.latest.revision: "9"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
 ms.openlocfilehash: e040c6b3a951d1bdf5a46dd82f1bd92b45c2e71d
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-system-center-configuration-manager-client"></a>Erstellen benutzerdefinierter Konfigurationselemente für Windows-Desktop- und -Servercomputer, die mit dem System Center Configuration Manager-Client verwaltet werden
 
@@ -358,4 +355,3 @@ Wählen Sie aus der Liste auf der Seite **Unterstützte Plattformen** des **Assi
 
 ## <a name="complete-the-wizard"></a>Abschließen des Assistenten  
  Überprüfen Sie auf der Seite **Zusammenfassung** des Assistenten die auszuführenden Aktionen, und schließen Sie dann den Assistenten ab. Das neue Konfigurationselement wird angezeigt, der **Konfigurationselemente** Knoten in der **Bestand und Kompatibilität** Arbeitsbereich.  
-

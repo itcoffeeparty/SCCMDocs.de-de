@@ -6,23 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d466edd2-97f0-44c1-a73e-d71abbdbf4a8
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b4c4fc305adbb4acd5bb4941b856a6a4aa648d0f
 ms.openlocfilehash: 6ad06753dc0e1d0958f7131afbf3ecb75eecb2e3
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="uninstall-sites-and-hierarchies-in-system-center-configuration-manager"></a>Deinstallieren von Standorten und Hierarchien für System Center Configuration Manager
 
@@ -140,4 +137,3 @@ Gehen Sie wie folgt vor, um einen primären Standort zu deinstallieren.
     >  Wenn dem Standort der zentralen Verwaltung ein primärer Standort zugeordnet ist, müssen Sie den primären Standort entfernen, bevor Sie den Standort der zentralen Verwaltung deinstallieren können.  
 
 6.  Klicken Sie auf **Ja**, um zu bestätigen, dass der Configuration Manager-Standort der zentralen Verwaltung deinstalliert werden soll.  
-

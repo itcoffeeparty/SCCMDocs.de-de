@@ -6,21 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a7d3df90-062d-4d57-9e9d-e137d3e7cd7f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 07aba04fb1b845e389a5f75b115d536136c1569c
-ms.lasthandoff: 12/16/2016
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-an-image-for-an-oem-in-factory-or-a-local-depot-with-system-center-configuration-manager"></a>Erstellen eines Images für ein OEM-Vorinstallations- oder lokales Depot mit System Center Configuration Manager
 
@@ -56,4 +54,3 @@ Durch diese Bereitstellungsmethode wird der Netzwerkdatenverkehr reduziert, da d
 
 ## <a name="start-the-computer-to-install-the-operating-system"></a>Starten des Computers, um das Betriebssystem zu installieren  
  Die vorab bereitgestellte Mediendatei wird auf Computern installiert. Beim erstmaligen Starten des Computers wird die Betriebssysteminstallation gestartet.  
-

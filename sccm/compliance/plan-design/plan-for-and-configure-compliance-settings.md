@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9ea20b01-676a-4cc2-b328-0098a41b202e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: d26ac3de58d2f0ef447725e63fc2d8adda6ea06c
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-for-and-configure-compliance-settings-in-system-center-configuration-manager"></a>Planen und Konfigurieren von Kompatibilitätseinstellungen in System Center Configuration Manager
 
@@ -52,9 +51,3 @@ In dieser Vorgehensweise werden die Standardclienteinstellungen für Kompatibili
 5. Klicken Sie auf **OK** , um das Dialogfeld **Standardeinstellungen** zu schließen.  
 
 Die Clientcomputer werden beim nächsten Download der Clientrichtlinien mit diesen Einstellungen konfiguriert.  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

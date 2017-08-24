@@ -6,21 +6,19 @@ ms.date: 2/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0e9f0fbd-e442-4509-a021-bfdedf2d04dd
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fff93794afdfa9f890b1f06d6c330d8cffc5796c
 ms.openlocfilehash: b4db5d86cc0ed020ed176feb2e8f1f9dc51a2280
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="configuration-options-for-site-system-roles-for-system-center-configuration-manager"></a>Konfigurationsoptionen für Standortsystemrollen für System Center Configuration Manager
 
@@ -154,4 +152,3 @@ Setzen Sie die Einschränkungswerte für den Fallbackstatuspunkt zurück, wenn e
 -   Mit den aktuellen Einschränkungswerten stellen Sie eine hohe Prozessorauslastung des Standortservers fest.  
 
 Ändern Sie die Einschränkungseinstellungen für den Fallbackstatuspunkt nur dann, wenn Sie sich über die Konsequenzen im Klaren sind. Wenn Sie beispielsweise die Einschränkungseinstellungen zu stark erhöhen, kann dadurch die Prozessorauslastung des Standortservers so erhöht werden, dass dadurch alle Standortvorgänge verlangsamt werden.  
-

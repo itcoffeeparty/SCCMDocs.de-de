@@ -6,23 +6,20 @@ ms.date: 3/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2bdec799-905f-48bc-aed5-2d92134739e8
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b35e747c8c297d61bb549b9767c4318f51e5fdb4
 ms.openlocfilehash: 18f1c64c1f27001a0fdfbab4236d09a5bc279272
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="unicode-and-ascii-support-in-system-center-configuration-manager"></a>Unicode- und ASCII-Unterstützung in System Center Configuration Manager
 
@@ -146,4 +143,3 @@ System Center Configuration Manager erstellt die meisten Objekte mithilfe von Un
  Bei den meisten in der Configuration Manager-Datenbank gespeicherten Objekten wird Unicode unterstützt. Sofern möglich, werden diese Informationen in der Betriebssystemsprache angezeigt, die dem Gebietsschema eines Computers entspricht. Damit Informationen von der Clientschnittstelle oder der Configuration Manager-Konsole in der Betriebssystemsprache des Computers angezeigt werden, muss das Gebietsschema des Computers mit einer am Standort installierten Client- oder Serversprache übereinstimmen.  
 
  Allerdings wird Unicode nicht von allen Configuration Manager-Objekten unterstützt. Diese Objekte werden in der Datenbank in ASCII gespeichert. Es gibt auch Objekte mit zusätzlichen Einschränkungen hinsichtlich der Sprache. Diese Informationen werden immer im ASCII-Zeichensatz oder in der Sprache, in der das betreffende Objekt ursprünglich erstellt wurde, angezeigt.  
-

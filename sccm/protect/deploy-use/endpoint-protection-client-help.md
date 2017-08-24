@@ -6,22 +6,19 @@ ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fdcee455-22e3-451d-bcf3-e7b62792f04a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
 ms.openlocfilehash: 212c73fcb947c3b56da6055bf47fe078301ad90d
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="endpoint-protection-client-help"></a>Hilfe zu Endpoint Protection-Client
 
@@ -61,4 +58,3 @@ Wenn Sie die Windows Defender-Einstellungen anzeigen möchten, suchen Sie nach `
 ### <a name="see-also"></a>Weitere Informationen:  
  [Häufig gestellte Fragen zum Endpoint Protection-Client](endpoint-protection-client-faq.md)   
  [Problembehandlung für Windows Defender oder den Endpoint Protection-Client](troubleshoot-endpoint-client.md)
-

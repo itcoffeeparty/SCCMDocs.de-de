@@ -6,21 +6,19 @@ ms.date: 1/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 10192da2633555ab3bae60dbb1156d1926f9a4a0
 ms.openlocfilehash: b49bd179da850cee35b2487a353bb1788df03d58
-ms.lasthandoff: 01/12/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="support-for-virtualization-environments-for-system-center-configuration-manager"></a>Unterstützung für Virtualisierungsumgebungen für System Center Configuration Manager
 
@@ -68,4 +66,3 @@ Weitere Informationen finden Sie unter [Configuration Manager in Azure – Häuf
 
 > [!IMPORTANT]  
 >  Für Configuration Manager-Standorte und -Clients, die auf virtuellen Azure-Computern ausgeführt werden, gelten die gleichen Lizenzanforderungen wie für lokale Installationen.  
-

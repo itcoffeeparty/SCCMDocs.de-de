@@ -6,24 +6,21 @@ ms.date: 07/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
 ms.openlocfilehash: 640eb1df9d53fc83d93c39a7ecbaf2668e176805
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="configure-certificate-infrastructure"></a>Konfigurieren der Zertifikatinfrastruktur
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -209,4 +206,3 @@ Sie müssen das System Center Configuration Manager-Richtlinienmodul auf jedem S
 
  
 Nachdem Sie die Konfigurationsschritte abgeschlossen haben, sind Sie für die Bereitstellung von Zertifikaten für Benutzer und Geräte mit dem Erstellen und Bereitstellen von Zertifikatprofilen bereit. Weitere Informationen zum Erstellen von Zertifikatprofilen finden Sie unter [Erstellen von Zertifikatprofilen in System Center Configuration Manager](../../protect/deploy-use/create-certificate-profiles.md).  
-

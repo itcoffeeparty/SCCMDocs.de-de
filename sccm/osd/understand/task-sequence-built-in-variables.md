@@ -6,22 +6,20 @@ ms.date: 03/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 02bc6bd4-ca53-4e22-8b80-d8ee5fe72567
-caps.latest.revision: 15
-caps.handback.revision: 0
+caps.latest.revision: "15"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: b7461f89f483314bd07248bbc9d5dde85ca6b6c2
 ms.openlocfilehash: 32b24b3637dfafe401ea1d9f51b3769aa749f544
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="task-sequence-built-in-variables-in-system-center-configuration-manager"></a>Integrierte Tasksequenzvariablen in System Center Configuration Manager
 
@@ -102,4 +100,3 @@ ms.lasthandoff: 08/03/2017
 |SMSTSSoftwareUpdateScanTimeout| Bietet Ihnen die Möglichkeit, das Timeout für die Überprüfung auf Softwareupdates während des Tasksequenzschritts [Softwareupdates installieren](task-sequence-steps.md#BKMK_InstallSoftwareUpdates) zu steuern. Sie können beispielsweise den Standardwert erhöhen, wenn Sie viele Softwareupdates installieren möchten. Der Standardwert beträgt 30 Minuten. |
 |SMSTSUDAUsers|Gibt den primären Benutzer des Zielcomputers an. Geben Sie die Benutzer im folgenden Format an: Trennen Sie mehrere Benutzer durch ein Komma (,).<br /><br /> Beispiel:<br /><br /> **Domäne\Benutzer1, Domäne\Benutzer2, Domäne\Benutzer3**<br /><br /> Weitere Informationen zum Zuordnen von Benutzern und Zielcomputern finden Sie unter [Zuordnen von Benutzern zu einem Zielcomputer](../get-started/associate-users-with-a-destination-computer.md).|  
 |SMSTSWaitForSecondReboot|Ab Configuration Manager Version 1602 steht diese optionale Tasksequenzvariable zur Verfügung, um das Clientverhalten zu steuern, wenn die Installation eines Softwareupdates zwei Neustarts erfordert. Diese Variable muss vor dem Schritt [Softwareupdates installieren](task-sequence-steps.md#BKMK_InstallSoftwareUpdates) festgelegt werden, um zu verhindern, dass ein zweiter Neustart während der Installation des Softwareupdates einen Fehler bei der Tasksequenz verursacht.<br /><br /> Legen Sie den SMSTSWaitForSecondReboot-Wert in Sekunden fest, um anzugeben, wie lange die Tasksequenz angehalten werden soll, wenn der Computer während des Schritts „Softwareupdates installieren“ neu gestartet wird, um genügend Zeit für einen möglichen zweiten Neustart des Computers zu gewähren. <br />Wenn Sie SMSTSWaitForSecondReboot z. B. auf den Wert 600 festlegen, wird die Tasksequenz nach einem Neustart 10 Minuten angehalten, bevor weitere Tasksequenzschritte ausgeführt werden. Dies ist hilfreich, wenn in einem einzigen Tasksequenzschritt „Softwareupdates installieren“ Hunderte von Softwareupdates installiert werden.|  
-
