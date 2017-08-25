@@ -6,20 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 916aac9a8f724e37044884cd73de5fea1f1a8f97
 ms.openlocfilehash: 76f907b17df0dd2f102e34ca3cfb3ffc813c0004
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="introduction-to-system-center-configuration-manager"></a>Einführung in System Center Configuration Manager
 
@@ -74,7 +73,7 @@ Anhand der folgenden Themen und zusätzlichen Abschnitte in diesem Thema erfahre
 -   [Suchen nach Hilfe für die Verwendung von System Center Configuration Manager](../../core/understand/find-help.md)  
 -   [Entfernte und veraltete Features für System Center Configuration Manager](../../core/plan-design/changes/removed-and-deprecated-features.md)  
 
-##  <a name="a-namebkmkconsolea-the-configuration-manager-console"></a><a name="BKMK_Console"></a> Die Configuration Manager-Konsole  
+##  <a name="BKMK_Console"></a> Die Configuration Manager-Konsole  
  Nach der Installation von Configuration Manager, verwenden Sie die Configuration Manager-Konsole, um Standorte und Clients zu konfigurieren und Verwaltungstasks auszuführen und zu überwachen. Diese Konsole ist die zentrale Verwaltungsschnittstelle, über die Sie mehrere Standorte verwalten können.  
 
  Über die Konsole können Sie sekundäre Konsolen ausführen, die bestimmte Tasks zur Clientverwaltung zu unterstützen wie:  
@@ -86,7 +85,7 @@ Sie können die Configuration Manager-Konsole auf zusätzlichen Computern instal
 
 Weitere Informationen finden Sie unter [Install System Center Configuration Manager consoles](../../core/servers/deploy/install/install-consoles.md) (Installieren von System Center Configuration Manager-Konsolen).
 
-##  <a name="a-namebkmkapplicationcataloga-the-application-catalog-software-center-and-the-company-portal"></a><a name="BKMK_ApplicationCatalog"></a> Der Anwendungskatalog, Softwarecenter und das Unternehmensportal  
+##  <a name="BKMK_ApplicationCatalog"></a> Der Anwendungskatalog, Softwarecenter und das Unternehmensportal  
  Der **Anwendungskatalog** ist eine Website, über die Benutzer nach Software für ihre Windows-basierten PCs suchen und diese anfordern können. Sie müssen den Anwendungskatalog-Webdienstpunkt und den Anwendungskatalog-Websitepunkt installieren, um den Anwendungskatalog verwenden zu können.  
 
  Das **Softwarecenter** ist eine Anwendung, die bei der Installation des Configuration Manager-Clients auf Windows-basierten Computern installiert wird. Benutzer führen diese Anwendung aus, um Software anzufordern und die Software zu verwalten, die ihnen von Configuration Manager bereitgestellt wird. Mithilfe von Softwarecenter können Benutzer folgende Aktionen ausführen:  
@@ -100,12 +99,12 @@ Das **Unternehmensportal** ist eine App oder Website, die ähnliche Funktionen e
 
 Weitere Informationen finden Sie unter [Einführung in die Anwendungsverwaltung in System Center Configuration Manager](../../apps/understand/introduction-to-application-management.md).  
 
-###  <a name="a-namebkmkclienta-configuration-manager-properties-on-windows-pcs"></a><a name="BKMK_Client"></a> Configuration Manager-Eigenschaften (auf Windows-PCs)  
+###  <a name="BKMK_Client"></a> Configuration Manager-Eigenschaften (auf Windows-PCs)  
  Wenn der Configuration Manager-Client auf Windows-Computern installiert ist, wird Configuration Manager in der Systemsteuerung installiert. In der Regel müssen Sie diese Anwendung nicht konfigurieren, da die Clientkonfiguration in der Configuration Manager-Konsole ausgeführt wird. Mithilfe dieser Anwendung können Administratoren und Helpdeskmitarbeiter Probleme mit einzelnen Clients beheben.  
 
  Weitere Informationen zur Clientbereitstellung finden Sie unter [Clientinstallationsmethoden in System Center Configuration Manager](../../core/clients/deploy/plan/client-installation-methods.md).  
 
-##  <a name="a-namebkmkexamplescenariosa-example-scenarios-for-configuration-manager"></a><a name="BKMK_ExampleScenarios"></a> Beispielszenarien für Configuration Manager  
+##  <a name="BKMK_ExampleScenarios"></a> Beispielszenarien für Configuration Manager  
  In den folgenden Beispielszenarios wird veranschaulicht, wie ein Unternehmen namens Trey Research seinen Benutzern durch System Center Configuration Manager folgende Vorteile verschafft:  
 
 -   Höhere Produktivität  
@@ -114,14 +113,14 @@ Weitere Informationen finden Sie unter [Einführung in die Anwendungsverwaltung 
 
 In allen Szenarios ist Adam der Hauptadministrator für Configuration Manager.  
 
-###  <a name="a-namebkmkscenarioempowera-example-scenario-empower-users-by-ensuring-access-to-applications-from-any-device"></a><a name="BKMK_ScenarioEmpower"></a> Beispielszenario: Steigern der Benutzerproduktivität durch Sicherstellen des Zugriffs auf Anwendungen über jedes Gerät  
+###  <a name="BKMK_ScenarioEmpower"></a> Beispielszenario: Steigern der Benutzerproduktivität durch Sicherstellen des Zugriffs auf Anwendungen über jedes Gerät  
  Bei Trey Research soll sichergestellt werden, dass die Mitarbeiter möglichst effizient auf die von ihnen benötigten Anwendungen zugreifen können. Adam weist diese Unternehmensanforderungen den folgenden Szenarien zu:  
 
 |Anforderungen|Aktueller Zustand der Clientverwaltung|Zukünftiger Zustand der Clientverwaltung|  
 |-----------------|-------------------------------------|------------------------------------|  
 |Neue Mitarbeiter können vom ersten Tag an effizient arbeiten.|Nach dem Eintritt in das Unternehmen müssen Mitarbeiter nach der ersten Anmeldung darauf warten, dass Anwendungen installiert werden.|Nach dem Eintritt in das Unternehmen melden sich die Mitarbeiter an, und die Anwendungen sind installiert und können sofort verwendet werden.|  
 |Mitarbeiter können schnell und einfach zusätzliche Software anfordern, die sie benötigen.|Wenn Mitarbeiter zusätzliche Anwendungen benötigen, reichen sie beim Helpdesk ein Ticket ein. Sie müssen dann in der Regel zwei Tage warten, bis das Ticket bearbeitet wird und die Anwendungen installiert werden.|Wenn Mitarbeiter zusätzliche Anwendungen benötigen, können sie diese auf einer Website anfordern. Die Anwendungen werden unverzüglich installiert, sofern keine Lizenzeinschränkungen vorliegen. Liegen Lizenzeinschränkungen vor, müssen die Benutzer erst eine entsprechende Genehmigung einholen, bevor sie die Anwendung installieren können.<br /><br /> Auf der Website werden den Benutzern nur die Anwendungen angezeigt, die sie installieren dürfen.|  
-|Mitarbeiter dürfen ihre eigenen mobilen Geräte bei der Arbeit verwenden, sofern die Geräte den überwachten und erzwungenen Sicherheitsrichtlinien entsprechen.<br /><br /> Diese Richtlinien umfassen das Erzwingen eines sicheren Kennworts, das Sperren eines Geräts nach einem Zeitraum der Inaktivität und die Remotezurücksetzung verlorener oder gestohlener Geräte.|Mitarbeiter verbinden ihre mobilen Geräten mit Exchange Server, um den E-Mail-Dienst nutzen zu können, aber die Berichterstattungsfunktionen, mit denen überprüft werden kann, ob die Sicherheitsrichtlinien im Rahmen der Standardrichtlinien für Exchange ActiveSync-Postfächer eingehalten werden, sind begrenzt. Die private Nutzung von mobilen Geräten kann untersagt werden, wenn der zuständige IT-Mitarbeiter die Einhaltung der Richtlinien nicht bestätigen kann.|In der IT-Organisation kann mit den erforderlichen Einstellungen gemeldet werden, ob die Sicherheit von mobilen Geräten eingehalten wird. Durch diese Bestätigung können Benutzer ihre mobilen Geräte weiterhin bei der Arbeit verwenden. Bei Verlust oder Diebstahl können Benutzer ihre mobilen Geräte remote zurücksetzen, und Helpdeskmitarbeiter können ein vom Benutzer als verloren gegangen oder gestohlen gemeldetes mobiles Gerät zurücksetzen.<br /><br /> Ermöglichen Sie die Anmeldung mobiler Geräte in einer PKI-Umgebung, um zusätzliche Sicherheit und Kontrolle zu erlangen.|  
+|Mitarbeiter dürfen ihre eigenen mobilen Geräte bei der Arbeit verwenden, sofern die Geräte den überwachten und erzwungenen Sicherheitsrichtlinien entsprechen.<br /><br /> Diese Richtlinien umfassen das Erzwingen eines sicheren Kennworts, das Sperren eines Geräts nach einem Zeitraum der Inaktivität und die Remotezurücksetzung verlorener oder gestohlener Geräte.|Mitarbeiter stellen für E-Mail-Dienste eine Verbindung ihrer mobilen Geräte mit Exchange-Server her. Aber die Berichterstattungsfunktionen, mit denen überprüft werden kann, ob die Sicherheitsrichtlinien im Rahmen der Standardrichtlinien für Exchange ActiveSync-Postfächer eingehalten werden, sind begrenzt. Die private Nutzung von mobilen Geräten kann untersagt werden, wenn der zuständige IT-Mitarbeiter die Einhaltung der Richtlinien nicht bestätigen kann.|In der IT-Organisation kann mit den erforderlichen Einstellungen gemeldet werden, ob die Sicherheit von mobilen Geräten eingehalten wird. Durch diese Bestätigung können Benutzer ihre mobilen Geräte weiterhin bei der Arbeit verwenden. Bei Verlust oder Diebstahl können Benutzer ihre mobilen Geräte remote zurücksetzen, und Helpdeskmitarbeiter können ein vom Benutzer als verloren gegangen oder gestohlen gemeldetes mobiles Gerät zurücksetzen.<br /><br /> Ermöglichen Sie die Anmeldung mobiler Geräte in einer PKI-Umgebung, um zusätzliche Sicherheit und Kontrolle zu erlangen.|  
 |Mitarbeiter können produktiv sein, auch wenn sie nicht an ihrem Platz sind.|Wenn Mitarbeiter nicht an ihrem Platz sind und keine tragbaren Computer besitzen, können sie nicht über die im Unternehmen verfügbaren Kioskcomputer auf ihre Anwendungen zugreifen.|Mitarbeiter können Kioskcomputer zum Zugreifen auf ihre Anwendungen und Daten verwenden.|  
 |In der Regel hat Geschäftskontinuität Vorrang vor dem Installieren erforderlicher Anwendungen und Softwareupdates.|Erforderliche Anwendungen und Softwareupdates werden tagsüber installiert, sodass die Benutzer häufig ihre Arbeit unterbrechen müssen, weil bei der Installation die Computerleistung beeinträchtigt wird oder die Computer neu gestartet werden müssen.|Benutzer können ihre Arbeitszeit festlegen, um zu verhindern, dass erforderliche Software installiert wird, während sie den Computer verwenden.|  
 
@@ -142,7 +141,7 @@ Er implementiert diese über die Konfigurationsschritte in der folgenden Tabelle
 
  Durch diese Konfigurationsschritte und -ergebnisse kann bei Trey Research die Produktivität der Mitarbeiter durch Sicherstellen des Zugriffs auf Anwendungen über jedes Gerät gesteigert werden.  
 
-###  <a name="a-namebkmkscenariounifya-example-scenario-unify-compliance-management-for-devices"></a><a name="BKMK_ScenarioUnify"></a> Beispielszenario: Vereinheitlichen der Kompatibilitätsverwaltung für Geräte  
+###  <a name="BKMK_ScenarioUnify"></a> Beispielszenario: Vereinheitlichen der Kompatibilitätsverwaltung für Geräte  
  Bei Trey Research soll eine einheitliche Clientverwaltungslösung eingesetzt werden, mit der sichergestellt wird, dass auf allen Computern eine automatisch aktualisierte Antivirensoftware ausgeführt wird. Das heißt:  
 
 -   Die Windows-Firewall ist aktiviert.  
@@ -156,7 +155,7 @@ Adam weist diese Unternehmensanforderungen den folgenden Szenarien zu:
 
 |Anforderungen|Aktueller Zustand der Clientverwaltung|Zukünftiger Zustand der Clientverwaltung|  
 |-----------------|-------------------------------------|------------------------------------|  
-|Auf allen Computern wird Antischadsoftware ausgeführt, die über die aktuellsten Definitionsdateien verfügt und die Windows Firewall aktiviert.|Für verschiedene Computer werden unterschiedliche Antischadsoftwarelösungen ausgeführt, die nicht immer auf dem aktuellsten Stand sind, und obwohl die Windows-Firewall standardmäßig aktiviert ist, wird sie manchmal von Benutzern deaktiviert.<br /><br /> Die Benutzer sind aufgefordert, den Helpdesk zu kontaktieren, wenn sie Schadsoftware auf ihrem Computer entdecken.|Alle Computer führen dieselbe Antischadsoftwarelösung aus, für die automatisch die aktuellsten Definitionsupdatedateien heruntergeladen werden und von der die Windows Firewall automatisch wieder aktiviert wird, wenn sie durch Benutzer deaktiviert wurde.<br /><br /> Der Helpdesk wird automatisch per E-Mail benachrichtigt, wenn Malware erkannt wird.|  
+|Auf allen Computern wird Antischadsoftware ausgeführt, die über die aktuellsten Definitionsdateien verfügt und die Windows Firewall aktiviert.|Verschiedene Computer führen unterschiedliche Antischadsoftwarelösungen aus, die nicht immer auf dem neuesten Stand gehalten werden. Die Windows-Firewall ist zwar standardmäßig aktiviert, aber die Benutzer deaktivieren sie manchmal.<br /><br /> Die Benutzer sind aufgefordert, den Helpdesk zu kontaktieren, wenn sie Schadsoftware auf ihrem Computer entdecken.|Alle Computer führen dieselbe Antischadsoftwarelösung aus, für die automatisch die aktuellsten Definitionsupdatedateien heruntergeladen werden und von der die Windows Firewall automatisch wieder aktiviert wird, wenn sie durch Benutzer deaktiviert wurde.<br /><br /> Der Helpdesk wird automatisch per E-Mail benachrichtigt, wenn Malware erkannt wird.|  
 |Für alle Computer werden kritische Softwareupdates im ersten Monat der Veröffentlichung installiert.|Obwohl auf den Computern Softwareupdates installiert sind, werden für viele Computer kritische Softwareupdates nicht automatisch, sondern erst zwei oder drei Monate nach der Veröffentlichung installiert. Dadurch sind die Computer in diesem Zeitraum nicht optimal gegen Angriffe geschützt.<br /><br /> Für Computer, auf denen die kritischen Softwareupdates nicht installiert werden, versendet der Helpdesk zunächst E-Mails mit der Aufforderung an die Benutzer, die Updates zu installieren. Für Computer mit Benutzern, die der Aufforderung weiterhin nicht nachgekommen sind, stellen Techniker eine Remoteverbindung mit diesen Computern her und installieren die fehlenden Softwareupdates manuell.|Die aktuelle Konformitätsrate im angegebenen Monat wird auf über 95 % verbessert, ohne dass E-Mails versendet werden müssen oder der Helpdesk darum bittet, die Updates manuell zu installieren.|  
 |Die Sicherheitseinstellungen für bestimmte Anwendungen werden regelmäßig geprüft und ggf. korrigiert.|Für die Computer werden komplexe Startskripts ausgeführt, die für das Zurücksetzen von Registrierungswerten für bestimmte Anwendungen auf der Computergruppenmitgliedschaft basieren.<br /><br /> Da diese Skripts nur beim Start ausgeführt werden und einige Computer tagelang nicht heruntergefahren werden, kann der Helpdesk keine rechtzeitige Überprüfung hinsichtlich einer Konfigurationsverschiebung vornehmen.|Die Registrierungswerte werden überprüft und automatisch korrigiert, ohne Neustart des Computers oder Bezug zur Computergruppenmitgliedschaft.|  
 |Auf mobilen Geräten können keine unsicheren Anwendungen installiert oder ausgeführt werden.|Benutzer werden gebeten, keine möglicherweise unsicheren Anwendungen aus dem Internet herunterzuladen und auszuführen. Es gibt aber keine Kontrollen, die dies überwachen bzw. erzwingen.|Auf mobilen Geräten, die mit Microsoft Intune oder Configuration Manager verwaltet werden, wird das Installieren oder Ausführen von nicht signierten Anwendungen automatisch verhindert.|  
@@ -182,7 +181,7 @@ Er implementiert diese über die Konfigurationsschritte in der folgenden Tabelle
 
  Diese Konfigurationsschritte und -ergebnisse führen zur erfolgreichen Vereinheitlichung der Kompatibilitätsverwaltung für Geräte von Trey Research.  
 
-###  <a name="a-namebkmkscenariosimplifya-example-scenario-simplify-client-management-for-devices"></a><a name="BKMK_ScenarioSimplify"></a> Beispielszenario: Vereinfachen der Clientverwaltung für Geräte  
+###  <a name="BKMK_ScenarioSimplify"></a> Beispielszenario: Vereinfachen der Clientverwaltung für Geräte  
  Bei Trey Research sollen alle neuen Computer das Basiscomputerimage ihres Unternehmens automatisch installieren, das Windows 7 ausführt. Nachdem das Betriebssystemabbild auf diesen Computern installiert wurde, müssen sie hinsichtlich der von Benutzern zusätzlich installierten Software verwaltet und überwacht werden. Für Computer, auf denen streng vertrauliche Informationen gespeichert werden, sind strengere Verwaltungsrichtlinien als für andere Computer erforderlich. Helpdeskmitarbeiter dürfen beispielsweise keine Remoteverbindung zu diesen Computern herstellen, für einen Neustart muss eine BitLocker PIN eingegeben werden, und nur lokale Administratoren können Software installieren.  
 
  Adam weist diese Unternehmensanforderungen den folgenden Szenarien zu:  
@@ -212,16 +211,10 @@ Er implementiert diese über die Konfigurationsschritte in der folgenden Tabelle
 
  Diese Konfigurationsschritte und -ergebnisse führen dazu, dass Trey Research die Clientverwaltung für Geräte erfolgreich vereinfacht.  
 
-##  <a name="a-namebkmknextstepsa-next-steps"></a><a name="BKMK_NextSteps"></a> Nächste Schritte  
+##  <a name="BKMK_NextSteps"></a> Nächste Schritte  
  Machen Sie sich vor der Installation von Configuration Manager mit einigen grundlegenden Konzepten und Begriffen vertraut, die bei Configuration Manager verwendet werden.  
 
 -   Wenn Sie mit System Center 2012 Configuration Manager vertraut sind, können Sie unter [Änderungen in System Center Configuration Manager im Vergleich zu System Center 2012 Configuration Manager](../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md) die neuen Funktionen kennenlernen.  
 -   Eine allgemeine technische Übersicht von System Center Configuration Manager finden Sie unter [Grundlagen von System Center Configuration Manager](../../core/understand/fundamentals.md).  
 
 Wenn Sie mit den grundlegenden Konzepten vertraut sind, finden Sie in der Dokumentation zu System Center Configuration Manager hilfreiche Informationen zur erfolgreichen Bereitstellung und Verwendung von Configuration Manager.  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

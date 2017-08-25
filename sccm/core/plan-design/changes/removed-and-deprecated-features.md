@@ -2,26 +2,24 @@
 title: Veraltete Features | Microsoft Docs
 description: "Hier finden Sie Informationen zu den Features, Produkten und Betriebssystemen, die von System Center Configuration Manager nicht mehr unterstützt werden."
 ms.custom: na
-ms.date: 06/27/2017
+ms.date: 08/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: d8c8b44c-1e8a-42b6-bab4-23c72a0a6169
-caps.latest.revision: 15
-caps.handback.revision: 0
+caps.latest.revision: "15"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+ms.openlocfilehash: 8ac7009014a4652a36acf69ebfe9ccab3ba8ecbd
+ms.sourcegitcommit: 3ce56c7350411d8cc3d3cb9b4054f9ada9b0ed54
 ms.translationtype: HT
-ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
-ms.openlocfilehash: 98fa323cb94013d875e2cea41b80fff8cc75b6b2
-ms.contentlocale: de-de
-ms.lasthandoff: 07/26/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/17/2017
 ---
 # <a name="removed-and-deprecated-features-for-system-center-configuration-manager"></a>Entfernte und veraltete Features für System Center Configuration Manager
 
@@ -71,7 +69,7 @@ Weitere Informationen finden Sie in folgenden Quellen:
 |**Betriebssysteme**|**Erste Ankündigung als veraltetes Feature**|**Support eingestellt**|  
 |-|-|-|  
 |Windows XP|10. Juli 2015|Version 1511|  
-|Windows XP Embedded|10. Juli 2015|Version 1702|  
+|Windows XP Embedded <br><br> Dies umfasst alle [XP-basierten eingebetteten Betriebssysteme](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#windows-embedded-computers).|10. Juli 2015|Version 1702|  
 |Windows Server 2003|10. Juli 2015|Version 1511|  
 |Windows Server 2003 R2|10. Juli 2015|Version 1511|  
 |Windows Vista|10. Juli 2015|Version 1511|  
@@ -102,9 +100,10 @@ Wenn Sie Ihre Version von SQL Server aktualisieren müssen, werden folgende Meth
 |Out-of-Band-Verwaltung wie in System Center 2012 Configuration Manager|16. Oktober 2015|Version 1511|
 |Tasksequenzen: <br /> – OSDPreserveDriveLetter  <br /><br /> Während einer standardmäßigen Betriebssystembereitstellung bestimmt Windows Setup den Laufwerkbuchstaben, der am besten zur Verwendung geeignet ist (in der Regel C:). Wenn Sie ein anderes Laufwerk zur Verwendung angeben möchten, können Sie den Speicherort im Tasksequenzschritt „Betriebssystem anwenden“ ändern. Wechseln Sie zur Einstellung **Wählen Sie den Standort aus, an dem Sie dieses Betriebssystem anwenden möchten.**, wählen Sie **Bestimmter Buchstabe für logisches Laufwerk** aus und wählen Sie das Laufwerk aus, das Sie verwenden möchten. |20. Juni 2016 |Version 1606 |
 |Tasksequenzen: <br /> - In dynamischen Datenträger konvertieren <br /> - Bereitstellungstools installieren |18. November 2016|Der Support für diese Tasksequenzen endet mit dem ersten Update, das nach dem 1. Juni 2017 veröffentlicht wird.|
-|Das Softwarecenter erhält ein neues, modernes Aussehen. Apps, die bisher nur im von Silverlight abhängigen Anwendungskatalog angezeigt wurden (für Benutzer verfügbare Apps), werden jetzt im Softwarecenter auf der Registerkarte **Anwendungen** angezeigt. Auf den Anwendungskatalog kann weiterhin über den Link auf der Registerkarte **Installationsstatus** im Softwarecenter zugegriffen werden.<br><br>In den kommenden Monaten wird die vorherige Version des Softwarecenters nicht länger zur Verfügung stehen.<br><br>Sie können Clients für die Verwendung des neuen Softwarecenters konfigurieren, indem Sie die Clienteinstellung **Computer-Agent** > **Neues Softwarecenter verwenden** aktivieren.<br><br>Weitere Informationen zum Softwarecenter finden Sie unter [Planen und Konfigurieren der Anwendungsverwaltung in System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management).|13. Dezember 2016|Die Unterstützung der vorherigen Version des Softwarecenters endet mit dem ersten Update, das nach dem 1. Januar 2018 veröffentlicht wird.|
+|Das Softwarecenter weist einen neuen, modernen Look auf. In den kommenden Monaten wird die vorherige Version des Softwarecenters nicht länger zur Verfügung stehen.<br><br>Sie können Clients für die Verwendung des neuen Softwarecenters konfigurieren, indem Sie die Clienteinstellung **Computer-Agent** > **Neues Softwarecenter verwenden** aktivieren.<br><br>Weitere Informationen zum Softwarecenter finden Sie unter [Planen und Konfigurieren der Anwendungsverwaltung in System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management).|13. Dezember 2016|Die Unterstützung der vorherigen Version des Softwarecenters endet mit dem ersten Update, das nach dem 1. Januar 2018 veröffentlicht wird.|
+|Mit der Einführung der neuen Softwarecenter-Benutzeroberfläche in Version 1511 werden Apps, die bisher nur im Anwendungskatalog angezeigt wurden (für Benutzer verfügbare Apps), jetzt im Softwarecenter angezeigt. </br></br>Da diese primäre Funktionalität des Anwendungskatalogs jetzt im Softwarecenter enthalten ist, wird die internetbasierte Anwendungskatalog-Benutzeroberfläche in den nächsten Monaten nicht mehr verfügbar sein.|11. August 2017| Unterstützung für die Anwendungskatalog-Website-Benutzeroberfläche endet mit dem ersten Update, das nach dem 1. Juni 2018 veröffentlicht wird.|
 |Verwaltung von virtuellen Festplatten (VHDs) mit Configuration Manager. </br></br>Dies schließt das Entfernen von Optionen zum Erstellen einer neuen virtuellen Festplatte oder Verwalten einer virtuellen Festplatte mithilfe einer Tasksequenz und das Entfernen des Knotens „Virtuelle Festplatten“ über die Configuration Manager-Konsole ein. </br></br>Wenn dieser Support eingestellt wird, werden vorhandene virtuelle Festplatten nicht gelöscht, es kann aber nicht mehr in der Configuration Manager-Konsole darauf zugegriffen werden.  |6. Januar 2017 |Der Support für virtuelle Festplatten endet mit dem ersten Update, das nach dem 1. Juni 2017 veröffentlicht wird.|
-|System Center Configuration Manager-Upgradebewertungstool </br></br>Das Upgradebewertungstool ist sowohl von System Center Configuration Manager als auch vom Anwendungskompatibilitäts-Toolkit (Application Compatibility Toolkit, ACT) 6.x abhängig. Die letzte Version von ACT war im Windows 10 v1511 ADK enthalten. Da es keine weiteren Updates für ACT geben wird, wird auch der entsprechende Support für das Upgradebewertungstool eingestellt. </br></br>Das Upgradebewertungstool wird durch das Feature [Upgradebereitschaft](/sccm/core/clients/manage/upgrade/upgrade-analytics) ersetzt. Hinweise zu veralteten Funktionen wurden am 9. Dezember 2016 auf der [Downloadseite des Upgradebewertungstools](https://www.microsoft.com/download/details.aspx?id=37145) hinzugefügt. |9. Dezember 2016  | 11. Juli 2017 |  
+|System Center Configuration Manager-Upgradebewertungstool </br></br>Das Upgradebewertungstool ist sowohl von System Center Configuration Manager als auch vom Anwendungskompatibilitäts-Toolkit (Application Compatibility Toolkit, ACT) 6.x abhängig. Die letzte Version von ACT war im Windows 10 v1511 ADK enthalten. Da es keine weiteren Updates für ACT geben wird, wird auch der entsprechende Support für das Upgradebewertungstool eingestellt. </br></br>Das Upgradebewertungstool wird durch das Feature [Upgradebereitschaft](/sccm/core/clients/manage/upgrade/upgrade-analytics) ersetzt. Hinweise zu veralteten Funktionen wurden am 9. Dezember 2016 auf der [Downloadseite des Upgradebewertungstools](https://www.microsoft.com/download/details.aspx?id=37145) hinzugefügt. |9. Dezember 2016  | 11. Juli 2017 |
 
 
 <br></br>
@@ -121,4 +120,3 @@ Zusätzliche Informationen zu Features, die mit Version 1511 der System Center C
  System Center Configuration Manager hat den Support für den Netzwerkzugriffsschutz eingestellt. Das Feature wurde in Windows Server 2012 R2 als veraltet markiert und aus Windows 10 entfernt.  
 
  Alternativen für den Netzwerkzugriffsschutz finden Sie im Abschnitt *Veraltete Funktionalität* unter [Netzwerkrichtlinien- und Zugriffsdienste: Übersicht](https://technet.microsoft.com/library/hh831683.aspx).
-

@@ -6,20 +6,19 @@ ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4db1e15f-e832-4cf9-be33-d3971e635a55
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 68527c0e82861106b7ec28b34bffa8fd74b2dd4a
 ms.openlocfilehash: f13f38be2a19ab8a1ead246e5272515dd0570984
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="fundamentals-of-sites-and-hierarchies-for-system-center-configuration-manager"></a>Grundlagen von Standorten und Hierarchien für System Center Configuration Manager
 
@@ -39,7 +38,7 @@ Wenn Sie System Center Configuration Manager zum ersten Mal installieren, bestim
 
  Nach der Installation Ihres ersten Standorts können Sie weitere Standorte installieren. Wenn Ihr erster Standort ein Standort der zentralen Verwaltung war, können Sie einen oder mehrere untergeordnete primäre Standorten installieren. Nach der Installation eines primären Standorts (eigenständig oder untergeordnet primär) können Sie einen oder mehrere sekundäre Standorte installieren.  
 
- Ein *sekundärer Standort* kann nur als untergeordneter Standort unter einem primären Standort installiert werden. Mit diesem Standorttyp können Sie die Reichweite eines primären Standorts zur Verwaltung von Geräten an Orten erweitern, die eine langsame Netzwerkverbindung mit dem primären Standort haben. Obwohl ein sekundärer Standort den primären Standort erweitert, werden alle Clients weiterhin vom primären Standort verwaltet. Der sekundäre Standort unterstützt Geräte am Remotestandort, indem Informationen, die Sie (für Bereitstellungen) an Clients senden und die diese Clients zurück an den Standort senden, komprimiert werden und ihre Übertragung durch Ihr Netzwerk verwaltet wird.  
+ Ein *sekundärer Standort* kann nur als untergeordneter Standort unter einem primären Standort installiert werden. Mit diesem Standorttyp können Sie die Reichweite eines primären Standorts zur Verwaltung von Geräten an Orten erweitern, die eine langsame Netzwerkverbindung mit dem primären Standort haben. Obwohl ein sekundärer Standort den primären Standort erweitert, werden alle Clients weiterhin vom primären Standort verwaltet. Der sekundäre Standort bietet Unterstützung für Geräte am Remotestandort. Er bietet Unterstützung, indem er Daten, die Sie an Clients senden (bereitstellen), und die Clients zurück an den Standort senden, komprimiert und ihre Übertragung über Ihr Netzwerk verwaltet.  
 
  Die folgenden Diagramme enthalten einige Beispiele für Standortentwürfe.  
 
@@ -72,9 +71,3 @@ Andere Standortsystemrollen sind optional und werden nur verwendet, wenn Sie die
  Die *Erweiterung des Active Directory-Schemas* erfolgt nur einmal pro Gesamtstruktur und kann vor oder nach der Installation von Configuration Manager stattfinden.   Wenn Sie das Schema erweitern, müssen Sie in jeder Domäne einen neuen Active Directory-Container namens Systemverwaltung erstellen. Der Container enthält einen Configuration Manager-Standort, der Daten veröffentlicht, die die Clients finden können. Weitere Informationen finden Sie unter [Vorbereiten von Active Directory für die Veröffentlichung eines Standorts](../../core/plan-design/network/extend-the-active-directory-schema.md).  
 
  Die *Veröffentlichung von Standortdaten* erhöht die Sicherheit Ihrer Configuration Manager-Hierarchie und reduziert den Verwaltungsaufwand, ist aber für eine grundlegende Configuration Manager-Funktionalität nicht erforderlich.  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

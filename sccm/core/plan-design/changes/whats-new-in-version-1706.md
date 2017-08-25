@@ -2,23 +2,21 @@
 title: Neue Version 1706 | Microsoft-Dokumentation
 description: "Enthält Details zu Änderungen und neuen Funktionen, die in Version 1706 von System Center Configuration Manager eingeführt wurden."
 ms.custom: na
-ms.date: 07/31/2017
+ms.date: 08/11/2017
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac034143-003e-4629-aac2-99eaffef4db1
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+ms.openlocfilehash: 30bd5f1244534511e5cde8ee0e1a8c74819b1634
+ms.sourcegitcommit: 9a6f8e028fb5eb2e752da70f42a5b548339bd8f4
 ms.translationtype: HT
-ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
-ms.openlocfilehash: c686b1674f4ead702fa2b4329df6356a558726f6
-ms.contentlocale: de-de
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>Neuerungen in Version 1706 von System Center Configuration Manager
 
@@ -207,7 +205,7 @@ Die Hardwareinventur sammelt jetzt Informationen darüber, ob Sicherer Start auf
 Diese Version bietet die Möglichkeit zum Erweitern und Reduzieren von Tasksequenzgruppen. Sie können einzelne Gruppen erweitern oder reduzieren oder alle Gruppen auf einmal erweitern oder reduzieren.
 
 ### <a name="reload-boot-images-with-current-windows-pe-version"></a>Neuladen von Startimages mit der aktuellen Version von Windows PE
-Beim Ausführen von **Verteilungspunkte aktualisieren** auf einem ausgewählten Startimage können Sie jetzt wahlweise die neueste Version von Windows PE neu in das Startimage laden (aus dem Installationsverzeichnis von Windows ADK). Weitere Informationen finden Sie unter [Aktualisieren von Verteilungspunkten mithilfe des Startimages](/sccm/osd/get-started/manage-boot-images.md#update-distribution-points-with-the-boot-image).
+Beim Ausführen von **Verteilungspunkte aktualisieren** auf einem ausgewählten Startimage können Sie jetzt wahlweise die neueste Version von Windows PE neu in das Startimage laden (aus dem Installationsverzeichnis von Windows ADK). Weitere Informationen finden Sie unter [Aktualisieren von Verteilungspunkten mithilfe des Startimages](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
 
 ## <a name="software-updates"></a>Softwareupdates
 
@@ -226,7 +224,7 @@ Sie können Configuration Manager jetzt zum Verwalten von Microsoft Surface-Trei
 #### <a name="to-manage-surface-driver-updates"></a>So verwalten Sie Surface-Treiberupdates
 
 1. Aktivieren Sie „Synchronisierung für Microsoft Surface-Treiber“. Folgen Sie den Schritten unter [Konfigurieren von Klassifizierung und Produkten](/sccm/sum/get-started/configure-classifications-and-products), und aktivieren Sie auf der Registerkarte **Klassifizierungen** das Kontrollkästchen **Microsoft Surface-Treiber und Firmwareupdates einbeziehen**, um Surface-Treiber zu aktivieren.
-2. [Synchronisieren Sie die Microsoft Surface-Treiber](/sccm/sum/get-started/synchronize-software-updates.md).
+2. [Synchronisieren Sie die Microsoft Surface-Treiber](/sccm/sum/get-started/synchronize-software-updates).
 3. [Stellen Sie die synchronisierten Microsoft Surface-Treiber bereit](/sccm/sum/deploy-use/deploy-software-updates).
 
 ### <a name="configure-windows-update-for-business-deferral-policies"></a>Konfigurieren von Windows Update for Business-Zurückstellungsrichtlinien
@@ -257,6 +255,12 @@ Mit diesem Release wurden in der Einstellungsgruppe **Arbeitsprofil** die Werte 
 
 Weitere Informationen finden Sie unter [Konfigurationselemente für Android for Work-Geräte](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client).
 
+### <a name="android-and-ios-enrollment-restrictions"></a>Registrierungseinschränkungen bei Android und iOS
+<!-- 1290826 -->
+Mit diesem Release können Sie nun angeben, dass Benutzer private Android- oder iOS-Geräte nicht registrieren können. Mit neuen Einstellungen für Geräteeinschränkungen können Sie die Registrierung von Android-Geräten auf vorab deklarierte Geräte beschränken. Für iOS-Geräte können Sie die Registrierung aller Geräte mit Ausnahme derjenigen blockieren, die mit dem Apple-Programm zur Geräteregistrierung, Apple Configurator oder dem Intune-Geräteregistrierungsmanager-Konto registriert werden.
+- Weitere Informationen zu Einschränkungen bei der Android-Registrierung finden Sie unter [Set up Android hybrid device management with System Center Configuration Manager and Microsoft Intune](/sccm/mdm/deploy-use/enroll-hybrid-android) (Einrichten der Android-Hybridgeräteverwaltung mit System Center Configuration Manager und Microsoft Intune).
+- Weitere Informationen zu Einschränkungen bei der iOS-Registrierung finden Sie unter [Configure enrollment restrictions](/sccm/mdm/deploy-use/enroll-hybrid-ios-mac#configure-enrollment-restrictions) (Konfigurieren von Registrierungseinschränkungen).
+
 ## <a name="protect-devices"></a>Schützen von Geräten
 
 ### <a name="include-trust-for-specific-files-and-folders-in-a-device-guard-policy"></a>Einbeziehen einer Vertrauensstellung für bestimmte Dateien und Ordner in eine Device Guard-Richtlinie
@@ -270,4 +274,3 @@ Sie können jetzt einer Device Guard-Richtlinie optional eine Vertrauensstellung
 - Vertrauen von Apps, die in einem Betriebssystemimage für ein Betriebssystem enthalten sind
 
 Weitere Informationen finden Sie unter [Device Guard-Verwaltung mit Configuration Manager](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager).
-

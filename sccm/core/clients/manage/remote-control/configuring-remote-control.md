@@ -6,23 +6,20 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: dudeso
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
-caps.latest.revision: 4
-caps.handback.revision: 0
+caps.latest.revision: "4"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
-ms.openlocfilehash: 20c28a625adb69f239b9c0e7673e57dd39e8d561
-ms.contentlocale: de-de
-ms.lasthandoff: 01/22/2017
-
-
+ms.openlocfilehash: 3a386c23c81f413d7d161780bdc0ab3a5b9eccae
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="configuring-remote-control-in-system-center-configuration-manager"></a>Konfigurieren der Remotesteuerung in System Center Configuration Manager
 
@@ -54,7 +51,7 @@ Wählen Sie zum Aktivieren der Tastaturübersetzung in **Configuration Manager-R
 
 > [!NOTE]
 >
-> Spezielle Schlüssel wie z.B. ~!#@$%, werden nicht richtig übersetzt.
+> Spezielle Schlüssel wie z.B. ~!#@$% werden nicht richtig übersetzt.
 
 
 ## <a name="keyboard-shortcuts-for-the-remote-control-viewer"></a>Tastenkombinationen für den Remotesteuerungsviewer
@@ -69,4 +66,3 @@ Wählen Sie zum Aktivieren der Tastaturübersetzung in **Configuration Manager-R
 |ALT+ENTF|Zeigt das Windows-Menü an.|  
 |STRG+ALT+Minuszeichen (auf der Zehnertastatur)|Kopiert das aktive Fenster des lokalen Computers in die Zwischenablage des Remotecomputers.|  
 |STRG+ALT+Pluszeichen (auf der Zehnertastatur)|Kopiert den gesamten Fensterbereich des lokalen Computers in die Zwischenablage des Remotecomputers.|  
-

@@ -2,27 +2,24 @@
 title: Bereitstellen von Windows-Clients | Microsoft Docs
 description: Erfahren Sie, wie Sie Clients auf Windows-Computern in System Center Configuration Manager bereitstellen.
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 08/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
-caps.latest.revision: 13
-caps.handback.revision: 0
+caps.latest.revision: "13"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9555a16d97224a1cf49a426ab225468b07403f60
-ms.openlocfilehash: 0e5e624fdfc2b5ee5b497d1063bd4e2d15df578b
-ms.contentlocale: de-de
-ms.lasthandoff: 12/29/2016
-
-
+ms.openlocfilehash: 9ac54136b93ee366c16cafe89036a79e808980dc
+ms.sourcegitcommit: 06aef618f72c700f8a716a43fb8eedf97c62a72b
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/21/2017
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-system-center-configuration-manager"></a>Bereitstellen von Clients auf Windows-Computern in System Center Configuration Manager
 
@@ -58,13 +55,10 @@ Clientprotokolldateien bieten ausführlichere Informationen zur Problembehebung 
 6.  Wählen Sie aus, ob der Client auf Domänencontrollern installiert werden soll.  
 
 7.  Geben Sie auf der Registerkarte **Konten** mindestens ein Konto an, das von Configuration Manager verwendet werden soll, um eine Verbindung mit dem Computer zur Installation der Clientsoftware herzustellen. Klicken Sie auf das Symbol **Erstellen**, geben Sie den **Benutzernamen** und das **Kennwort** ein (maximal 38 Zeichen), bestätigen Sie das Kennwort, und klicken Sie dann auf **OK**. Sie müssen mindestens ein Konto für die Clientpushinstallation angeben, das über lokale Administratorrechte auf jedem Computer verfügen muss, auf dem der Client installiert werden soll. Wenn Sie kein Konto für die Clientpushinstallation angeben, versucht Configuration Manager, das Konto des Standortsystemcomputers zu verwenden, was zu einem Fehler bei der domänenübergreifenden Clientpushinstallation führt.  
-
-    
     > [!NOTE]  
     >  Wenn Sie die Clientpushinstallation von einem sekundären Standort aus verwenden möchten, muss das Konto an dem sekundären Standort, an dem Clientpush initiiert werden soll, angegeben werden.  
     >   
     >  Weitere Informationen zum Clientpushinstallationskonto finden Sie im nächsten Abschnitt „So verwenden Sie den Clientpushinstallations-Assistenten“.  
-
 8.  Vervollständigen Sie die Registerkarte **Installationseigenschaften**.
 
      Die auf dieser Registerkarte angegebenen [Clientinstallationseigenschaften](../../../core/clients/deploy/about-client-installation-properties.md) werden in Active Directory Domain Services veröffentlicht, wenn das Schema für Configuration Manager erweitert wird, und sie werden von Clientinstallationen gelesen, bei denen CCMSetup ohne Installationseigenschaften ausgeführt wird.  
@@ -296,8 +290,8 @@ Sie können die Configuration Manager-Clientsoftware auf einem Computer mit dem 
     > [!IMPORTANT]  
     >  Geben Sie keinen Configuration Manager-Standortcode für den Client in den Befehlszeileneigenschaften der Datei „CCMSetup.exe“ an.  
 
-2.  Geben Sie über eine Eingabeaufforderung **net stop ccmexec** ein, um sicherzustellen, dass der Dienst **SMS-Agent-Host** (Ccmexec.exe) auf dem Computer mit dem Masterabbild nicht ausgeführt wird.  
-
+2.  Geben Sie über eine Eingabeaufforderung **net stop ccmexec** ein, um sicherzustellen, dass der Dienst **SMS-Agent-Host** (Ccmexec.exe) auf dem Computer mit dem Masterabbild nicht ausgeführt wird.
+3.  Löschen Sie die Datei **SMSCFG.INI** aus dem **Windows**-Ordner auf dem Referenzcomputer.  
 3.  Entfernen Sie alle im lokalen Computerspeicher auf dem Computer mit dem Masterabbild gespeicherten Zertifikate.  Wenn Sie beispielsweise PKI-Zertifikate (Public Key-Infrastruktur) verwenden, müssen Sie vor dem Erstellen des Computers aus dem Abbild die Zertifikate im **privaten** Speicher für **Computer** und **Benutzer** entfernen.
 
 4.  Wenn die Clients in anderen Configuration Manager-Hierarchien als der Computer mit dem Masterimage installiert werden, entfernen Sie den vertrauenswürdigen Stammschlüssel vom Computer mit dem Masterimage.  
@@ -470,7 +464,7 @@ Prüfen Sie die Voraussetzungen, und befolgen Sie dann die Anweisungen im Abschn
 
 5.  Weisen Sie den Computern das Gruppenrichtlinienobjekt zu, auf denen Sie die Configuration Manager-Clientinstallationseigenschaften bereitstellen möchten.  
 
- Informationen zur Windows-Gruppenrichtlinie finden Sie in Ihrer Windows Server-Dokumentation.  
+Informationen zur Windows-Gruppenrichtlinie finden Sie in Ihrer Windows Server-Dokumentation.  
 
-### <a name="see-also"></a>Weitere Informationen:
-[Clientinstallationsmethoden in System Center Configuration Manager](../../../core/clients/deploy/plan/client-installation-methods.md)
+## <a name="next-steps"></a>Nächste Schritte
+Weitere Hilfe zur Installation des Configuration Manager-Clients finden Sie unter [Clientinstallationsmethoden in System Center Configuration Manager](../../../core/clients/deploy/plan/client-installation-methods.md).

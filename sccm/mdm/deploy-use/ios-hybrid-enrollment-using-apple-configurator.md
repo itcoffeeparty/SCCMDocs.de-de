@@ -2,26 +2,23 @@
 title: "Registrieren von iOS-Geräten mithilfe von Apple Configurator – Configuration Manager | Microsoft-Dokumentation"
 descriptions: Pre-enroll iOS devices by using Apple Configurator with Configuration Manager.
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 08/15/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 61a19d95-83ff-4ad8-9a67-f304d2ba54f2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
-ms.openlocfilehash: 6c6e9edbc7b2fca3d1be4feabb238efab80465fa
-ms.contentlocale: de-de
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 403f3b730e24c0f76314b04bcdd1d2f817bcd908
+ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="ios-hybrid-enrollment-using-apple-configurator-with-configuration-manager"></a>iOS-Hybridregistrierung mithilfe von Apple Configurator mit Configuration Manager
 
@@ -41,7 +38,7 @@ Das folgende Verfahren empfiehlt sich für dedizierte iOS-Geräte, die einen ein
 
 -   USB-Kabel für die Verbindung von Geräten mit dem Macintosh-Computer  
 
-## <a name="step-1-add-a-corporate-owned-device-enrollment-profile"></a>Schritt 1: Hinzufügen eines Anmeldungsprofils für die Unternehmensgeräteregistrierung
+## <a name="add-a-corporate-owned-device-enrollment-profile"></a>Hinzufügen eines Anmeldungsprofils für Unternehmensgeräte
 
 1.  Gehen Sie in der Configuration Manager-Konsole zu **Bestand und Konformität** > **Übersicht** > **All Corporate-owned Devices** (Alle firmeneigenen Geräte)  > **iOS** > **Enrollment Profiles** (Anmeldungsprofile). Klicken Sie auf **Profil erstellen**, um den Assistenten zum Erstellen von Profilen zu öffnen. Konfigurieren Sie die Einstellungen auf den folgenden Seiten:  
 
@@ -63,13 +60,13 @@ Das folgende Verfahren empfiehlt sich für dedizierte iOS-Geräte, die einen ein
 
 4.  Überprüfen Sie die Zusammenfassung, und klicken Sie dann auf **Weiter**, um das Anmeldungsprofil zu erstellen. Klicken Sie zum Beenden des Assistenten auf **Schließen**. Sie sind jetzt bereit, die IMEI-Nummern oder Seriennummern für die Geräte hinzuzufügen, die Sie registrieren wollen.  
 
-## <a name="step-2-predeclare-devices-to-enroll-with-setup-assistant"></a>Schritt 2: Vorabdeklarieren von iOS-Geräten für die Registrierung mit dem Setup-Assistenten
+## <a name="predeclare-devices-to-enroll-with-setup-assistant"></a>Vorabdeklarieren von Geräten für die Registrierung mit dem Setup-Assistenten
 
 In diesem Schritt deklarieren Sie Geräte vorab als unternehmenseigen, indem Sie eine Liste von Hardware-IDs angeben (IMEI- oder Seriennummern).
 
 Einzelheiten finden Sie unter [Vorabdeklarieren von Geräten mit IMEI- oder iOS-Seriennummern](predeclare-devices-with-hardware-id.md). Wenn Sie diese Aufgabe abgeschlossen haben, kehren Sie zu dieser Seite zurück, um mit dem nächsten Schritt fortzufahren.
 
-## <a name="step-3-export-the-profile-to-deploy-to-ios-devices"></a>Schritt 3: Exportieren des Profils für die Bereitstellung auf iOS-Geräten
+## <a name="export-the-profile-to-deploy-to-ios-devices"></a>Exportieren des Profils für die Bereitstellung auf iOS-Geräten
 
 1.  Gehen Sie in der Configuration Manager-Konsole zu **Bestand und Konformität** > **Übersicht** > **All Corporate-owned Devices** (Alle firmeneigenen Geräte)  > **iOS** > **Enrollment Profiles** (Anmeldungsprofile).
 
@@ -96,7 +93,7 @@ Einzelheiten finden Sie unter [Vorabdeklarieren von Geräten mit IMEI- oder iOS-
 > [!NOTE]
 > Die Registrierungsprofil-URL ist ab dem Zeitpunkt des Exports zwei Wochen gültig. Nach zwei Wochen müssen Sie eine neue URL exportieren, um iOS-Geräte zu registrieren.
 
-## <a name="step-4-prepare-the-device-with-apple-configurator"></a>Schritt 4: Vorbereiten des Geräts mit Apple Configurator
+## <a name="prepare-the-device-with-apple-configurator"></a>Vorbereiten des Geräts mit Apple Configurator
 
 Verbinden Sie jedes Gerät mit einem Macintosh-Computer, und laden Sie das Anmeldungsprofil hoch, um iOS-Geräte für die Registrierung vorzubereiten.  
 
@@ -135,7 +132,6 @@ Verbinden Sie jedes Gerät mit einem Macintosh-Computer, und laden Sie das Anmel
 
 Wiederholen Sie diese Schritte für alle Geräte, die Sie für die Registrierung vorbereiten möchten.
 
-## <a name="step-5-distribute-devices"></a>Schritt 5: Verteilen von Geräten
+## <a name="distribute-devices"></a>Verteilen von Geräten
 
 Die Geräte sind nun bereit zur Unternehmensregistrierung. Schalten Sie die Geräte aus, und verteilen Sie sie an Benutzer. Wenn das Gerät eingeschaltet wird, wird der Setup-Assistent gestartet, und fragt die Benutzer nach ihrem Geschäfts- oder Schulkonto, um mit der Registrierung zu beginnen.
-

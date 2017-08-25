@@ -8,17 +8,14 @@ ms.date: 05/01/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
+ms.openlocfilehash: 84b617b3e83636ab4578174ef40e786dcf1178cd
+ms.sourcegitcommit: 06aef618f72c700f8a716a43fb8eedf97c62a72b
 ms.translationtype: HT
-ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
-ms.openlocfilehash: df6e809aadd3d69275c137c92629ab8426bbdcb7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/21/2017
 ---
-
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Einrichten des Cloudverwaltungsgateways für Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -26,6 +23,9 @@ ms.lasthandoff: 08/04/2017
 Ab Version 1610 umfasst der Prozess zum Einrichten des Cloudverwaltungsgateways in Configuration Manager die folgenden Schritte:
 
 ## <a name="step-1-configure-required-certificates"></a>Schritt 1: Konfigurieren der erforderlichen Zertifikate
+
+> [!TIP]  
+> Bevor Sie ein Zertifikat anfordern, bestätigen Sie, dass der gewünschte Azure-Domänenname (z.B. GraniteFalls.CloudApp.Net) eindeutig ist. Melden Sie sich hierzu beim [Microsoft Azure-Portal](https://manage.windowsazure.com) an, klicken Sie auf **Neu**, wählen Sie **Clouddienst** und dann **Benutzerdefiniert erstellen**. Geben Sie im Feld **URL** den gewünschten Domänennamen ein (klicken Sie nicht auf das Häkchen, um den Dienst zu erstellen). Das Portal spiegelt wider, ob der Domänenname verfügbar ist oder bereits durch einen anderen Dienst verwendet wird.
 
 ## <a name="option-1-preferred---use-the-server-authentication-certificate-from-a-public-and-globally-trusted-certificate-provider-like-verisign"></a>Option 1 (bevorzugt) – Verwenden Sie das Serverauthentifizierungszertifikat von einem öffentlichen und global vertrauenswürdigen Zertifikatanbieter (z.B. VeriSign).
 
@@ -43,7 +43,6 @@ Wenn das Cloudverwaltungsgateway z.B. bei Contoso erstellt wird, wird der Hostna
 
 Sie können ein benutzerdefiniertes SSL-Zertifikat für das Cloudverwaltungsgateway auf die gleiche Weise erstellen, wie Sie bei einem cloudbasierten Verteilungspunkt vorgehen würden. Führen Sie die Anweisungen zum [Bereitstellen des Dienstzertifikats für cloudbasierte Verteilungspunkte](/sccm/core/plan-design/network/example-deployment-of-pki-certificates) durch, tun Sie jedoch folgende Dinge anders:
 
-- Geben Sie beim Einrichten der Zertifikatvorlage die Berechtigungen **Lesen** und **Registrieren** für die Sicherheitsgruppe an, die Sie für Configuration Manager-Server einrichten.
 - Geben Sie beim Anfordern des benutzerdefinierten Webserverzertifikats für den allgemeinen Namen des Zertifikats einen FQDN an, der auf **cloudapp.net** endet, wenn Sie das Cloudverwaltungsgateway in der öffentlichen Azure-Cloud verwenden möchten, bzw. der auf **usgovcloudapp.net** endet, wenn Sie Azure Government Cloud verwenden möchten.
 
 
@@ -69,6 +68,9 @@ Die einfachste Möglichkeit zum Export der Clientstammzertifikate im Netzwerk is
 
 7.  Schließen Sie den Zertifikatexportassistenten ab, indem Sie das Standardzertifikatformat verwenden. Notieren Sie sich den Namen und den Speicherort des Stammzertifikats, das Sie erstellen. Sie benötigen es in einem [späteren Schritt](#step-4-set-up-cloud-management-gateway) zum Konfigurieren des Cloudverwaltungsgateways.
 
+>[!NOTE]
+>Wenn das Clientzertifikat von einer untergeordneten Zertifizierungsstelle ausgestellt wurde, müssen Sie diesen Schritt für jedes Zertifikat in der Kette wiederholen.
+
 ## <a name="step-3-upload-the-management-certificate-to-azure"></a>Schritt 3: Hochladen des Verwaltungszertifikats in Azure
 
 Ein Azure-Verwaltungszertifikat ist für Configuration Manager erforderlich, um auf die Azure-API zuzugreifen und das Cloudverwaltungsgateway zu konfigurieren. Weitere Informationen und Anweisungen zum Hochladen eines Verwaltungszertifikats finden Sie unter den folgenden Artikeln in der Azure-Dokumentation:
@@ -80,74 +82,6 @@ Ein Azure-Verwaltungszertifikat ist für Configuration Manager erforderlich, um 
 >[!IMPORTANT]
 >Stellen Sie sicher, dass Sie die Abonnement-ID kopieren, die dem Verwaltungszertifikat zugeordnet ist. Sie benötigen sie im [nächsten Schritt](#step-4-set-up-cloud-management-gateway) zum Konfigurieren des Cloudverwaltungsgateways in der Configuration Manager-Konsole.
 
-### <a name="subordinate-ca-certificates-and-azure"></a>Zertifikate untergeordneter Zertifizierungsstellen und Azure
-
-Wenn das Zertifikat von einer untergeordneten Zertifizierungsstelle (subCA) ausgestellt wird und die PKI-Infrastruktur Ihres Unternehmens sich nicht im Internet befindet, verwenden Sie dieses Verfahren, um das Zertifikat in Azure hochzuladen. 
-
-1. Suchen Sie nach dem Einrichten eines Cloudverwaltungsgateways in Ihrem Azure-Portal nach dem Cloudverwaltungsgateway-Dienst, und wechseln Sie zur Registerkarte **Zertifikat**. Laden Sie Ihr(e) subCA-Zertifikat(e) dort hoch. Wenn Sie über mehrere subCA-Zertifikate verfügen, müssen Sie sie alle hochladen. 
-2. Sobald das Zertifikat hochgeladen wurde, notieren Sie seinen Fingerabdruck. 
-3. Fügen Sie den Fingerabdruck mithilfe dieses Skripts zur Standortdatenbank hinzu:
-    
-```
-
-    DIM serviceCName
-    DIM subCAThumbprints
-
-    ' Verify arguments
-    IF WScript.Arguments.Count <> 2 THEN
-    WScript.StdOut.WriteLine "Usage: CScript UpdateSubCAThumbprints.vbs <ServiceCName> <SubCA cert thumbprints, separated by ;>"
-    WScript.Quit 1
-    END IF
-
-    'Get arguments
-    serviceCName = WScript.Arguments.Item(0)
-    subCAThumbprints = WScript.Arguments.Item(1)
-
-    'Find SMS Provider
-    WScript.StdOut.WriteLine "Searching for SMS Provider for local site..."
-    SET objSMSNamespace = GetObject("winmgmts:{impersonationLevel=impersonate}!\\.\root\sms")
-    SET results = objSMSNamespace.ExecQuery("SELECT * From SMS_ProviderLocation WHERE ProviderForLocalSite = true")
-
-    'Process the results
-    FOR EACH var in results
-    siteCode = var.SiteCode
-    NEXT
-
-    IF siteCode = "" THEN
-    WScript.StdOut.WriteLine "Failed to locate SMS provider."
-    WScript.Quit 1
-    END IF
-
-    WScript.StdOut.WriteLine "SiteCode = " & siteCode 
-
-    ' Connect to the SMS namespace
-    SET objWMIService = GetObject("winmgmts:{impersonationLevel=impersonate}!\\.\root\sms\site_" & siteCode)
-
-    'Get instance of SMS_AzureService
-    DIM query
-    query = "SELECT * From SMS_AzureService WHERE ServiceType = 'CloudProxyService' AND ServiceCName = '" & serviceCName & "'"
-    WScript.StdOut.WriteLine "Run WQL query: " &  query
-    SET objInstances = objWMIService.ExecQuery(query)
-
-    IF IsNull(objInstances) OR (objInstances.Count = 0) THEN
-    WScript.StdOut.WriteLine "Failed to get Azure_Service instance."
-    WScript.Quit 1
-    END IF
-
-    FOR EACH var IN objInstances
-    SET azService = var
-    NEXT
-
-    WScript.StdOut.WriteLine "Update [SubCACertThumbprint] to " & subCAThumbprints
-
-    'Update SubCA cert thumbprints
-    azService.Properties_.item("SubCACertThumbprint") = subCAThumbprints
-
-    'Save data back to provider
-    azService.Put_
-
-    WScript.StdOut.WriteLine "[SubCACertThumbprint] is updated successfully."
-```
 
 
 ## <a name="step-4-set-up-cloud-management-gateway"></a>Schritt 4: Einrichten des Cloudverwaltungsgateways
@@ -173,7 +107,7 @@ Wenn das Zertifikat von einer untergeordneten Zertifizierungsstelle (subCA) ausg
 
     - Geben Sie den privaten Schlüssel (PFX-Datei) an, den Sie aus dem benutzerdefinierten SSL-Zertifikat exportiert haben.
 
-    - Geben Sie das aus dem Clientzertifikat exportierte Stammzertifikat an.
+    - Geben Sie das aus dem Clientzertifikat exportierte Stammzertifikat (und jedes untergeordnete Zertifikat) an. Der Assistent akzeptiert bis zu zwei Stammzertifikate und vier untergeordnete Zertifikate.
 
     -   Geben Sie den gleichen FQDN-Dienstnamen an, den Sie bei der Erstellung der neuen Zertifikatvorlage verwendet haben. Basierend auf der verwendeten Azure-Cloud müssen Sie eines der folgenden Suffixe für den FQDN-Dienstnamen angeben:
 
@@ -207,7 +141,7 @@ Der Cloudverwaltungsgateway-Connectorpunkt ist eine neue Standortsystemrolle fü
 
 ## <a name="step-7-configure-roles-for-cloud-management-gateway-traffic"></a>Schritt 7: Konfigurieren von Rollen für Cloudverwaltungsgateway-Datenverkehr
 
-Der letzte Schritt bei der Einrichtung des Cloudverwaltungsgateways ist das Konfigurieren der Standortsystemrollen zum Akzeptieren des Cloudverwaltungsgateway-Datenverkehrs. Für Tech Preview 1606 werden nur die Rollen „Verwaltungspunkt“, „Verteilungspunkt“ und „Softwareupdatepunkt“ für das Cloudverwaltungsgateway unterstützt. Sie müssen jede Rolle einzeln konfigurieren.
+Der letzte Schritt bei der Einrichtung des Cloudverwaltungsgateways ist das Konfigurieren der Standortsystemrollen zum Akzeptieren des Cloudverwaltungsgateway-Datenverkehrs. Nur die Rollen „Verwaltungspunkt“ und „Softwareupdatepunkt“ werden für das Cloudverwaltungsgateway unterstützt. Sie müssen jede Rolle einzeln konfigurieren.
 
 1. Wechseln Sie in der Configuration Manager-Konsole zu **Verwaltung** > **Standortkonfiguration** > **Server und Standortsystemrollen**.
 
@@ -215,7 +149,7 @@ Der letzte Schritt bei der Einrichtung des Cloudverwaltungsgateways ist das Konf
 
 3. Wählen Sie die Rolle aus, und klicken Sie danach auf **Eigenschaften**.
 
-4. Wählen Sie auf dem Eigenschaftenblatt der Rolle unter „Clientverbindungen“ die Option **HTTPS** aus, aktivieren Sie das Kontrollkästchen neben **Datenverkehr über Configuration Manager-Cloudverwaltungsgateway zulassen**, und klicken Sie dann auf **OK**. Wiederholen Sie diese Schritte für die übrigen Rollen.
+4. Aktivieren Sie auf dem Eigenschaftenblatt der Rolle unter „Clientverbindungen“ das Kontrollkästchen neben **Datenverkehr über Configuration Manager-Cloudverwaltungsgateway zulassen**, und klicken Sie dann auf **OK**. Wiederholen Sie diese Schritte für die übrigen Rollen. Aktivieren der **HTTPS**-Option wird auch als bewährte Sicherheitsmethode empfohlen, ist jedoch nicht erforderlich.
 
 ## <a name="step-8-configure-clients-for-cloud-management-gateway"></a>Schritt 8: Konfigurieren von Clients für das Cloudverwaltungsgateway
 
@@ -237,4 +171,3 @@ Dieser Befehl zeigt die Verwaltungspunkte an, die der Client kontaktieren kann, 
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Überwachen von Clients für das Cloudverwaltungsgateway](monitor-clients-cloud-management-gateway.md)
-

@@ -6,23 +6,20 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 49cec466-1676-4fe2-a2fe-5004f01d735e
-caps.latest.revision: 11
-caps.handback.revision: 0
+caps.latest.revision: "11"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 58a82b29743cb37a5d358f020cf11b91d6f6f42e
-ms.contentlocale: de-de
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: c564c1fc25c5156a2d9ddfa1b4123024c658bf61
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-sharepoint-online-access-in-system-center-configuration-manager"></a>Verwalten des SharePoint Online-Zugriffs in System Center Configuration Manager
 
@@ -166,7 +163,7 @@ Office-Desktopanwendungen können auf PCs, auf denen Folgendes ausgeführt wird,
 
 4.  Unter „**Browser access** to SharePoint Online and OneDrive for Business“ (Browseraccess auf SharePoint Online und OneDrive for Business) können Sie festlegen, ob der Zugriff auf Exchange Online nur über die unterstützten Browser gewährt werden soll: Safari (iOS) und Chrome (Android). Der Zugriff über andere Browser wird blockiert.  Die gleichen Plattformbeschränkungen, die Sie für „Application access for OneDrive“ (Anwendungszugriff für OneDrive) ausgewählt haben, gelten auch hier.
 
-    Benutzer müssen auf **Android** -Geräten den Browserzugriff aktivieren.  Der Endbenutzer muss hierzu die Option â€œBrowserzugriff aktivierenâ€ wie folgt auf dem registrierten Gerät aktivieren:
+    Benutzer müssen auf **Android** -Geräten den Browserzugriff aktivieren.  Der Endbenutzer muss hierzu die Option „Browserzugriff aktivieren“ wie folgt auf dem registrierten Gerät aktivieren:
     1.  Starten Sie die **Unternehmensportal-App**.
     2.  Rufen Sie die Seite **Einstellungen** über die Schaltfläche mit den drei Punkten (…) oder über die physische Menütaste auf.
     3.  Drücken Sie die Schaltfläche **Browserzugriff aktivieren** .
@@ -203,4 +200,3 @@ Office-Desktopanwendungen können auf PCs, auf denen Folgendes ausgeführt wird,
 ### <a name="see-also"></a>Weitere Informationen:  
 
  [Verwalten des Zugriffs auf Dienste in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md)
-

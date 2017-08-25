@@ -2,32 +2,29 @@
 title: "Registrieren von Geräten mit dem Geräteregistrierungsmanager – Configuration Manager | Microsoft-Dokumentation"
 description: "Registrieren Sie unternehmenseigene Geräte mit dem Geräteregistrierungs-Managerkonto mit System Center Configuration Manager."
 ms.custom: na
-ms.date: 03/24/2017
+ms.date: 08/15/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2905f26e-7859-497d-b995-5ff48261efa2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7573590763c68a4c97d388be1e64054c318da9cc
-ms.openlocfilehash: 8c491636925670732e6af67d8c1c741e4793ef96
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.openlocfilehash: c90ecca1ee46523d16fc1cf11495e40707631e03
+ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="enroll-devices-with-device-enrollment-manager-with-configuration-manager"></a>Registrieren von Geräten mit dem Geräteregistrierungs-Manager mit Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Mit Intune können Organisationen eine Vielzahl mobiler Geräte mit einem einzelnen Benutzerkonto verwalten. Das Konto *Geräteregistrierungsmanager* (DEM) ist ein spezielles Benutzerkonto, das bis zu 1.000 Geräte registrieren kann. Fügen Sie dem DEM-Konto vorhandene Benutzer hinzu, damit diese bestimmte DEM-Funktionen erhalten. Jedes registrierte Gerät verwendet eine Einzellizenz. Wir empfehlen die Verwendung von Geräten über dieses Konto als gemeinsam genutzte Geräte mit keiner Benutzeraffinität anstelle von persönlichen, dedizierten Geräten.  
+Mit Intune können Organisationen eine Vielzahl mobiler Geräte mit einem einzelnen Benutzerkonto verwalten. Das Konto *Geräteregistrierungsmanager* (DEM) ist ein spezielles Benutzerkonto zum Registrieren von Geräten. Fügen Sie dem DEM-Konto vorhandene Benutzer hinzu, damit diese bestimmte DEM-Funktionen erhalten. Jedes registrierte Gerät verwendet eine Einzellizenz. Wir empfehlen die Verwendung von Geräten über dieses Konto als gemeinsam genutzte Geräte mit keiner Benutzeraffinität anstelle von persönlichen, dedizierten Geräten.  
 
 ## <a name="enroll-corporate-owned-devices-with-the-device-enrollment-manager"></a>Registrieren von firmeneigenen Geräten mit dem Geräteregistrierungs-Manager  
  Sie können beispielsweise einem Speicher-Manager oder Supervisor ein Benutzerkonto für einen Geräteregistrierungs-Manager zuweisen, um ihm folgende Möglichkeiten zu geben:  
@@ -67,24 +64,14 @@ Ein Restaurant möchte Point-of-Sale-Tablets für sein Bedienpersonal und Bestel
 7.  Der Geräteregistrierungs-Manager kann nun Mobilgeräte über das Verfahren registrieren, das ein Endbenutzer für ein BYOD-Szenario (Bring Your Own Device) im Unternehmensportal verwendet.  
 
 #### <a name="delete-a-device-enrollment-manager-from-intune"></a>Löschen eines Geräteregistrierungs-Managers aus Intune  
+Wenn Sie einen Geräteregistrierungs-Manager löschen, wirkt sich dies nicht auf registrierte Geräte aus. Wenn ein Geräteregistrierungs-Manager gelöscht wird:  
+- Wird keine Registrierung eines registrierten Geräts aufgehoben  
+- werden registrierte Geräte weiterhin vollständig verwaltet  
+- bleiben die gelöschten Kontoanmeldedaten für den Geräteregistrierungs-Manager für die Anmeldung beim Unternehmensportal zum Zugriff auf Apps gültig  
+- können über die Kontoanmeldedaten für den Geräteregistrierungs-Manager weiterhin keine Geräte zurückgesetzt oder deaktiviert werden  
+- bleibt die Beziehung des gelöschten Geräteregistrierungs-Manager-Kontos zu registrierten Geräten bestehen, es können jedoch keine zusätzlichen Geräte registriert werden.
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung**.  
-
 2.  Erweitern Sie im Arbeitsbereich **Verwaltung** den Bereich **Clouddienste**, und klicken Sie auf **Microsoft Intune-Abonnements**. Wählen Sie das Microsoft Intune-Abonnement aus, dem Sie einen Geräteregistrierungs-Manager hinzufügen möchten, und klicken Sie dann auf **Eigenschaften**.  
-
 3.  Klicken Sie im Dialogfeld „Microsoft Intune-Abonnementeigenschaften“ auf die Registerkarte **Geräteregistrierungs-Manager**.  
-
 4.  **Suchen** Sie nach dem Geräteregistrierungs-Manager, den Sie löschen möchten, klicken Sie auf **Entfernen** und dann auf **OK**.  
-
- Wenn Sie einen Geräteregistrierungs-Manager löschen, wirkt sich dies nicht auf registrierte Geräte aus. Wenn ein Geräteregistrierungs-Manager gelöscht wird:  
-
--   sind keine registrierten Geräte betroffen  
-
--   werden registrierte Geräte weiterhin vollständig verwaltet  
-
--   bleiben die gelöschten Kontoanmeldedaten für den Geräteregistrierungs-Manager für die Anmeldung beim Unternehmensportal zum Zugriff auf Apps gültig  
-
--   können über die Kontoanmeldedaten für den Geräteregistrierungs-Manager weiterhin keine Geräte zurückgesetzt oder deaktiviert werden  
-
--   bleibt die Beziehung des gelöschten Geräteregistrierungs-Manager-Kontos zu registrierten Geräten bestehen, es können jedoch keine zusätzlichen Geräte registriert werden.
-

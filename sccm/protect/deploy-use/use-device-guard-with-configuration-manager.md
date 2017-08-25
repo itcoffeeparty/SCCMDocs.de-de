@@ -6,25 +6,21 @@ ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: dudeso
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5e5d854c-9cc1-4dd8-b33f-0fcac675b395
-caps.latest.revision: 13
-caps.handback.revision: 0
+caps.latest.revision: "13"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
+ms.openlocfilehash: 3921748d3c99c2a35b670f3ca121dc7ab92d43bc
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
-ms.openlocfilehash: 4bb1f4a068563a5fe6f384708e10269dcd3229da
-ms.contentlocale: de-de
-ms.lasthandoff: 07/29/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
-
 # <a name="device-guard-management-with-configuration-manager"></a>Device Guard-Verwaltung mit Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -97,6 +93,9 @@ Wenn Sie einer Device Guard-Richtlinie optional eine Vertrauensstellung für bes
     - Vertrauen von Apps, die in einem Betriebssystemabbild für ein Betriebssystem enthalten sind 
 7.  Klicken Sie auf **Weiter**, und schließen Sie den Assistenten ab.
 
+>[!IMPORTANT]
+>Die Einbeziehung vertrauenswürdiger Dateien oder Ordner wird nur auf Client-PCs mit Version 1706 oder höher des Configuration Manager-Clients unterstützt. Wenn Einschlussregeln in einer Device Guard-Richtlinie enthalten sind, und die Richtlinie dann für einen Client-PC bereitgestellt wird, auf dem eine frühere Version des Configuration Manager-Clients ausgeführt wird, kann die Richtlinie nicht angewendet werden. Das Aktualisieren dieser älteren Clients behebt dieses Problem. Richtlinien, die keine Einschlussregeln enthalten, können möglicherweise weiterhin auf ältere Versionen des Configuration Manager-Clients angewendet werden.
+
 ## <a name="how-to-deploy-a-device-guard-policy"></a>Bereitstellen einer Device Guard-Richtlinie
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Bestand und Kompatibilität**.
 2.  Erweitern Sie im Arbeitsbereich **Bestand und Kompatibilität** den Knoten **Endpoint Protection**, und klicken Sie dann auf **Device Guard-Richtlinien**.
@@ -130,7 +129,6 @@ In diesem Fall kann die Software möglicherweise weiterhin ausgeführt werden, a
 - Wenn Sie Configuration Manager verwenden, um konfigurierbare Codeintegrität auf Client-PCs mit Device Guard-Richtlinien zu aktivieren, werden Benutzer mit lokalen Administratorrechten nicht durch die Richtlinie daran gehindert, die Device Guard-Richtlinie zu umgehen oder nicht vertrauenswürdige Software auf anderem Wege auszuführen. 
 - Die einzige Möglichkeit, zu verhindern, dass Benutzer mit lokalen Administratorrechten die konfigurierbare Codeintegrität deaktivieren, besteht darin, eine signierte binäre Richtlinie bereitzustellen. Diese Bereitstellung kann prinzipiell über eine Gruppenrichtlinie erfolgen, wird aber aktuell in Configuration Manager nicht unterstützt.
 - Beim Einrichten von Configuration Manager als verwaltetes Installationsprogramm auf Client-PCs wird die AppLocker-Richtlinie verwendet. AppLocker wird nur zum Identifizieren verwalteter Installationsprogramme verwendet. Die gesamte Erzwingung erfolgt über konfigurierbare Codeintegrität. 
-
 
 
 

@@ -6,22 +6,19 @@ ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
 ms.openlocfilehash: b88bc5f734b85527b81e5848deb0617db4c8dfbc
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection – von Kunden häufig gestellte Fragen
 
@@ -174,7 +171,7 @@ Verwenden Sie die Option **Computer bereinigen** , wenn Sie auf schnelle und ein
 
 ### <a name="to-automatically-check-for-new-definitions-before-scheduled-scans-recommended"></a>So führen Sie automatisch eine Überprüfung auf neue Definitionen aus, bevor Sie geplante Scans ausführen (empfohlen)  
 
-1.  Öffnen Sie Windows Defender oder den Endpoint Protection-Client durch Klicken auf das Symbol im Infobereich der Taskleiste, oder starten Sie ihn im ** ** Startmenü.  
+1.  Öffnen Sie Windows Defender oder den Endpoint Protection-Client durch Klicken auf das Symbol im Infobereich der Taskleiste, oder starten Sie ihn im ****  Startmenü.  
 
 2.  Klicken Sie auf **Einstellungen**und dann auf **Geplanter Scan**.  
 
@@ -184,7 +181,7 @@ Verwenden Sie die Option **Computer bereinigen** , wenn Sie auf schnelle und ein
 
  Die Viren- und Spywareschutzdefinitionen werden von Windows Defender oder Endpoint Protection automatisch auf Ihrem Computer aktualisiert. Wenn die Definitionen länger als sieben Tage nicht aktualisiert wurden (wenn Sie beispielsweise Ihren Computer eine Woche lang nicht angeschaltet haben), werden Sie von Windows Defender oder Endpoint Protection benachrichtigt, dass die Definitionen nicht auf dem aktuellen Stand sind.  
 
-1.  Öffnen Sie Windows Defender oder den Endpoint Protection-Client durch Klicken auf das Symbol im Infobereich der Taskleiste, oder starten Sie ihn im ** ** Startmenü.  
+1.  Öffnen Sie Windows Defender oder den Endpoint Protection-Client durch Klicken auf das Symbol im Infobereich der Taskleiste, oder starten Sie ihn im ****  Startmenü.  
 
 2.  Klicken Sie auf die Registerkarte **Aktualisieren** und dann auf **Aktualisieren**, um manuell eine Überprüfung auf neue Definitionen auszuführen.  
 
@@ -265,4 +262,3 @@ Verwenden Sie die Option **Computer bereinigen** , wenn Sie auf schnelle und ein
  [Problembehandlung für Windows Defender oder den Endpoint Protection-Client](troubleshoot-endpoint-client.md)   
 
  [Hilfe zu Endpoint Protection-Client](endpoint-protection-client-help.md)
-

@@ -6,21 +6,19 @@ ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 7e4ec207-bb49-401f-af1b-dd705ecb465d
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+ms.openlocfilehash: e0b887169f0c8ae6901d1c6fd6a498df9596c2b4
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
-ms.openlocfilehash: 0d6527abba24b685151ae63feaae29b30d1e2cc9
-ms.contentlocale: de-de
-ms.lasthandoff: 07/29/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="configure-sql-server-always-on-availability-groups-for-configuration-manager"></a>Konfigurieren von SQL Server AlwaysOn-Verfügbarkeitsgruppen für Configuration Manager
 
@@ -106,7 +104,7 @@ Um dieses Verfahren auszuführen, muss für das Konto, mit dem das Configuration
 
 
 
-## <a name="add-and-remove-synchronous-replica-members"></a>Hinzufügen und Entfernen von synchronen Replikationsmitgliedern  
+## <a name="add-or-remove-synchronous-replica-members"></a>Hinzufügen oder Entfernen von synchronen Replikationsmitgliedern  
 Wenn die Standortdatenbank in einer Verfügbarkeitsgruppe gehostet wird, verwenden Sie die folgenden Verfahren, um synchrone Replikationsmitglieder hinzuzufügen oder zu entfernen. Informationen zu Typ und Anzahl der Replikate, die unterstützt werden, finden Sie unter **Availability group configurations** (Konfigurationen für Verfügbarkeitsgruppen). Klicken Sie dort im Thema „Vorbereiten der Verwendung von Verfügbarkeitsgruppen“ auf [Prerequisites](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#prerequisites) (Voraussetzungen).
 
 Um die folgenden Verfahren ausführen zu können, muss für das verwendete Konto Folgendes gelten:
@@ -114,25 +112,13 @@ Um die folgenden Verfahren ausführen zu können, muss für das verwendete Konto
 -   Es muss ein **Systemadministrator** für jede SQL Server-Instanz sein, die die Standortdatenbank hostet.
 
 
-### <a name="to-add-a-new-synchronous-replica-member"></a>Hinzufügen eines neuen synchronen Replikationsmitglieds
-1.  Fügen Sie den neuen Server als sekundäres Replikat der Verfügbarkeitsgruppe hinzu. Siehe [Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe (SQL Server)](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server) in der SQL Server-Dokumentationsbibliothek.
-
-2.  Beenden Sie durch Ausführen von **Preinst.exe /stopsite** den Configuration Manager-Standort. Siehe [Hierarchiewartungstool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe).
-
-3.  Verwenden Sie SQL Server, um eine Sicherung der Standortdatenbank aus dem primären Replikat zu erstellen, und stellen Sie dann diese Sicherung auf dem neuen sekundären Replikatserver wieder her. Siehe [Erstellen einer vollständigen Datenbanksicherung](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server) und [Wiederherstellen einer Datenbanksicherung mit SSMS](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms) in der SQL Server-Dokumentation.
-
-4.  Konfigurieren Sie alle sekundären Replikate. Führen Sie die folgenden Schritte für alle sekundären Replikate in der Verfügbarkeitsgruppe aus:
-
-    1.  Stellen Sie sicher, dass das Computerkonto des Standortservers Mitglied der Gruppe **Lokale Administratoren** auf allen Computern ist, die zur Verfügbarkeitsgruppe gehören.
-
-    2.  Führen Sie die [Überprüfungsskript](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#prerequisites) aus den Voraussetzungen aus, um sicherzustellen, dass die Standortdatenbank auf jedem Replikat ordnungsgemäß konfiguriert ist.
-
-    3.  Wenn ein neues Replikat konfiguriert werden muss, führen Sie ein manuelles Failover des primären Replikats auf das neue sekundäre Replikat aus, und legen Sie dann die erforderlichen Einstellungen fest. Siehe [Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe](/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server) in der SQL Server-Dokumentation.
-
-5.  Starten Sie den Standort neu, indem Sie die Dienste Standortkomponenten-Manager (**sitecomp**) und **SMS_Executive** starten.
+### <a name="to-add-a-new-synchronous-replica-member"></a>Hinzufügen eines neuen synchronen Replikationsmitglieds  
+Der Prozess zum Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe, die Sie mit Configuration Manager verwenden, kann komplex und dynamisch sein sowie Schritte und Verfahren erfordern, die sich je nach der individuellen Umgebung ändern. Wir arbeiten an Verbesserungen von Configuration Manager, um diesen Prozess zu vereinfachen. Wenn Sie zwischenzeitlich sekundäre Replikate hinzufügen müssen, nutzen Sie die Anweisungen im folgenden TechNet-Blog.
+-   [ConfigMgr 1702: Adding a new node (Secondary Replica) to an existing SQL AO AG](https://blogs.technet.microsoft.com/umairkhan/2017/07/17/configmgr-1702-adding-a-new-node-secondary-replica-to-an-existing-sql-ao-ag/) (ConfigMgr 1702: Hinzufügen eines neuen Knotens [sekundäres Replikat] zu einer vorhandenen SQL AO AG)
 
 ### <a name="to-remove-a-replica-member"></a>So entfernen Sie ein Replikationsmitglied
-Verwenden Sie für dieses Verfahren die Informationen unter [Entfernen eines sekundären Replikats aus einer Verfügbarkeitsgruppe](/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server) in der SQL Server-Dokumentation.
+Verwenden Sie für dieses Verfahren die Informationen unter [Entfernen eines sekundären Replikats aus einer Verfügbarkeitsgruppe](/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server) in der SQL Server-Dokumentation.  
+
 
 ## <a name="configure-an-asynchronous-commit-replica"></a>Konfigurieren eines Replikats mit asynchronem Commit
 Ab Version 1706 des Configuration Manager können Sie ein asynchrones Replikat zu einer Verwendungsgruppe hinzufügen, die Sie mit Configuration Manager verwenden. Hierfür müssen Sie nicht die Konfigurationsskripte ausführen, die für die Konfiguration eines synchronen Replikats erforderlich sind. (Der Grund ist, dass das Verwenden eines asynchronen Replikats als Standortdatenbank nicht unterstützt wird.) In der [SQL Server-Dokumentation](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot)) finden Sie Informationen zum Hinzufügen sekundärer Replikate zu Verfügbarkeitsgruppen.
@@ -186,4 +172,3 @@ Um dieses Verfahren ausführen zu können, muss für das verwendete Konto Folgen
 9.  Nachdem Sie die Informationen zum neuen Speicherort der Datenbank bereitgestellt haben, schließen Sie das Setup mit der üblichen Vorgehensweise und den normalen Konfigurationen ab. Nach Abschluss des Setups wird der Standort neu gestartet und beginnt mit der Nutzung des neuen Speicherorts der Datenbank.    
 
 10. Zur Bereinigung der Server, die Mitglied der Verfügbarkeitsgruppe waren, befolgen Sie die Anleitung unter [Entfernen einer Verfügbarkeitsgruppe](/sql/database-engine/availability-groups/windows/remove-an-availability-group-sql-server) in der SQL Server-Dokumentation.
-

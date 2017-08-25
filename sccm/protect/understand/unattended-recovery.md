@@ -6,8 +6,7 @@ ms.date: 6/5/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 828c31d1-3d70-4412-b1a8-c92e7e504d39
@@ -15,18 +14,15 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f7cd9c71287d62c9f5d36e2f032bc2a6065572ae
 ms.openlocfilehash: b5a1a1d165a6888bc26e809666d2331ff3c24d68
-ms.contentlocale: de-de
-ms.lasthandoff: 06/06/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
-
 # <a name="unattended-site-recovery-for-configuration-manager"></a>Unbeaufsichtigte Standortwiederherstellung für Configuration Manager   
 
-*Gilt für: System Center Configuration Manager (Current Branch)*
- Wenn Sie eine [unbeaufsichtigte Wiederherstellung](/sccm/protect/understand/recover-sites#site-recovery-procedures) eines Standorts der zentralen Verwaltung oder eines primären Standorts für Configuration Manager ausführen möchten, können Sie ein Skript für eine unbeaufsichtigte Installation erstellen und das Setup mit der Befehlsoption **/script** ausführen. Mit dem Skript werden die gleichen Informationen bereitgestellt, die andernfalls über den Setup-Assistenten eingegeben werden müssten. Das Skript enthält jedoch keine Standardeinstellungen. Alle Werte müssen für die Setup-Schlüssel angegeben werden, die für den jeweils verwendeten Wiederherstellungstyp gelten.
+*Gilt für: System Center Configuration Manager (Current Branch)* Wenn Sie eine [unbeaufsichtigte Wiederherstellung](/sccm/protect/understand/recover-sites#site-recovery-procedures) eines Standorts der zentralen Verwaltung oder eines primären Standorts für Configuration Manager ausführen möchten, können Sie ein Skript für eine unbeaufsichtigte Installation erstellen und das Setup mit der Befehlsoption **/script** ausführen. Mit dem Skript werden die gleichen Informationen bereitgestellt, die andernfalls über den Setup-Assistenten eingegeben werden müssten. Das Skript enthält jedoch keine Standardeinstellungen. Alle Werte müssen für die Setup-Schlüssel angegeben werden, die für den jeweils verwendeten Wiederherstellungstyp gelten.
 
  Damit Sie die Setup-Befehlszeilenoption /script verwenden können, müssen Sie eine Initialisierungsdatei erstellen und den Namen der Initialisierungsdatei nach der Setup-Befehlszeilenoption /script angeben. Der Name der Datei ist unerheblich. Wichtig ist, dass er die Dateinamenerweiterung **.ini** aufweist. Wenn Sie in der Befehlszeile auf die Setup-Initialisierungsdatei verweisen, müssen Sie den vollständigen Dateipfad angeben. Wenn sich beispielsweise die Initialisierungsdatei mit dem Namen *setup.ini* im Ordner *C:\setup* befindet, muss die Befehlszeile wie folgt lauten:
 
@@ -386,4 +382,3 @@ ms.lasthandoff: 06/06/2017
     -   **Erforderlich:** Nein
     -   **Werte:** &lt;*Timeout*>
     -   **Details:** Über diesen Schlüssel wird der maximale Timeoutwert (in Minuten) für die Verbindung eines primären Standorts mit dem Standort der zentralen Verwaltung angegeben. Wenn beispielsweise beim Herstellen der Verbindung mit dem Standort der zentralen Verwaltung ein Fehler auftritt, wird der Verbindungsversuch auf dem primären Standort basierend auf dem Wert für CASRetryInterval solange wiederholt, bis der für WaitForCASTimeout angegebene Zeitraum abgelaufen ist. Sie können einen Wert von 0 bis 100 angeben.
-

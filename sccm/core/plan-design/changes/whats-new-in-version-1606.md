@@ -6,19 +6,19 @@ ms.date: 12/30/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 34809ddf7819eab5deb3995cd8138c7b38cd2f9a
 ms.openlocfilehash: 9fdff6049d6e5cde1032864e5d7aa8df71e53686
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>Neues in Version 1606 von System Center Configuration Manager
 
@@ -35,7 +35,7 @@ Das Update 1606 für System Center Configuration Manager ist als konsoleninterne
 
 
 
-## <a name="a-nameupdatesandservicingaupdates-and-servicing"></a><a name="updatesandservicing"></a>Updates und Wartung
+## <a name="updatesandservicing"></a>Updates und Wartung
 
 ### <a name="changes-for-the-updates-and-servicing-node"></a>Änderungen am Knoten „Updates und Wartung“
 Folgenden Änderungen an Updates und Wartung in der Configuration Manager-Konsole wurden vorgenommen:
@@ -81,10 +81,10 @@ Wenn Sie nach der Installation von Update 1606 ein Update auf dem Standort durch
 
 
 
-## <a name="a-nameaccessibilitya-accessibility"></a><a name="accessibility"></a> Barrierefreiheit
+## <a name="accessibility"></a> Barrierefreiheit
 Zum Navigieren zwischen den verschiedenen Knoten eines Arbeitsbereichs können Sie nun den ersten Buchstaben des Namen eines Knotens eingeben. Jeder Tastendruck verschiebt den Cursor auf den nächsten Knoten, der mit diesem Buchstaben beginnt. Für Benutzer, die eine Sprachausgabe haben, liest der Reader den Namen des Knotens. Weitere Informationen zu Optionen für Barrierefreiheit finden Sie unter [Accessibility features in System Center Configuration Manager (Barrierefreiheitsfunktionen in System Center Configuration Manager)](../../../core/understand/accessibility-features.md).
 
-## <a name="a-nameadministrationaadministration"></a><a name="administration"></a>Verwaltung
+## <a name="administration"></a>Verwaltung
 Im folgenden finden Sie Änderungen an der Verwaltung in der Configuration Manager-Konsole:
 ### <a name="oms-connector"></a>OMS-Connector
 
@@ -225,9 +225,3 @@ Einzelheiten finden Sie unter [Health attestation for System Center Configuratio
 
 ## <a name="remote-control"></a>Remotesteuerung
 Geben Sie Benutzern die Möglichkeit, Datenübertragungen zu akzeptieren oder zu verweigern, bevor Inhalt aus der freigegebenen Zwischenablage in einer Remotesteuerungssitzung übertragen wird. Benutzer müssen nur einmal pro Sitzung die Berechtigung erteilen, und die anzeigenden Benutzer können sich nicht selbst die Erlaubnis erteilen, mit der Datenübertragung fortzufahren. Sie finden diese neue Einstellung im Arbeitsbereich **Verwaltung**. Wechseln Sie zu **Clienteinstellungen**, und öffnen Sie dann in **Standardeinstellungen** den Bereich **Remotetools**.
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

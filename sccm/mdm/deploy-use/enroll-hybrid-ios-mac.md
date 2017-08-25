@@ -2,26 +2,24 @@
 title: "Einrichten einer hybriden Geräteverwaltung für iOS und Mac mit System Center Configuration Manager und Microsoft Intune | Microsoft-Dokumentation"
 description: "Einrichten einer iOS-Geräteverwaltung mit System Center Configuration Manager und Microsoft Intune."
 ms.custom: na
-ms.date: 07/31/2017
+ms.date: 08/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 5eae4400-58ca-4c71-804c-6a585cd3df5d
-caps.latest.revision: 10
-caps.handback.revision: 0
+caps.latest.revision: "10"
+caps.handback.revision: "0"
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
+ms.openlocfilehash: d84d6f3dba65f1d8114ef2eef9f19a2bb5389027
+ms.sourcegitcommit: 9a6f8e028fb5eb2e752da70f42a5b548339bd8f4
 ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
-ms.openlocfilehash: 1a93a542f55d02df20865fa4ae8d7590dd9be753
-ms.contentlocale: de-de
-ms.lasthandoff: 07/29/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="set-up-ios-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Einrichten von iOS Hybrid-Geräte mit System Center Configuration Manager und Microsoft Intune einrichten
 
@@ -67,9 +65,20 @@ Laden Sie das APNs-Zertifikat hoch, um die iOS-Registrierung zu aktivieren.
 3.  Wählen Sie im Dialogfeld **Eigenschaften von Microsoft Intune-Abonnement** die Registerkarte **iOS** aus, und aktivieren Sie das Kontrollkästchen **iOS-Anmeldung aktivieren** .  
 4.  Klicken Sie auf **Durchsuchen**, und wechseln Sie zu der von Apple heruntergeladenen APNs-Zertifikatdatei (CER-Datei). Configuration Manager zeigt die APNs-Zertifikatinformationen an. Klicken Sie auf **OK** , um das APNs-Zertifikat in Intune zu speichern.  
 
-> [!NOTE]
-> Die Funktion **Enrollment restrictions** (Registrierungsbeschränkungen) ist derzeit nicht verfügbar. 
+Nachdem Sie die Einrichtung abgeschlossen haben, müssen Sie Ihre Benutzer darüber informieren, wie diese ihre Geräte registrieren sollen. Informationen hierzu finden Sie unter [Informieren der Benutzer über den Einsatz von Microsoft Intune](https://docs.microsoft.com/intune/end-user-educate). Diese Informationen gelten für mobile Geräte, die mit Microsoft Intune und Configuration Manager verwaltet werden.
+
+## <a name="configure-enrollment-restrictions"></a>Konfigurieren der Registrierungseinschränkungen
+
+Sie können die Geräte begrenzen, die sich registrieren können, indem Sie Geräte in Privatbesitz blockieren. Dies verhindert, dass Benutzer ihre Geräte über das Unternehmensportal registrieren. Wenn Sie Geräte in Privatbesitz blockieren, können sich nur die folgenden Geräte registrieren:
+- [Vorab deklarierte Geräte](predeclare-devices-with-hardware-id.md)
+- [Durch Apple Configurator verwaltete Geräte](ios-hybrid-enrollment-using-apple-configurator.md)
+- [Durch das Programm zur Geräteregistrierung (Device Enrollment Program, DEP) verwaltete Geräte](ios-device-enrollment-program-for-hybrid.md)
+- Mit einem [Geräteregistrierungs-Manager-Konto](enroll-devices-with-device-enrollment-manager.md) registrierte Geräte
+
+### <a name="to-enable-enrollment-restrictions"></a>So aktivieren Sie Registrierungseinschränkungen
+1.  Wechseln Sie in der Configuration Manager-Konsole im Arbeitsbereich **Verwaltung** zu **Clouddienste** > **Microsoft Intune-Abonnement**.
+2.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Abonnement** auf **Plattformen konfigurieren** > **iOS**.
+3.  Wählen Sie **Geräte in Privatbesitz blockieren**, um die Registrierung auf unternehmenseigene Geräte zu begrenzen.
 
 > [!div class="button"]
 [< Vorheriger Schritt](create-service-connection-point.md) [Nächster Schritt >](set-up-additional-management.md)
-

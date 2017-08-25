@@ -6,23 +6,20 @@ ms.date: 01/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: af06fb10d905e3fe447c6cd6ed35dac10488161f
-ms.openlocfilehash: 1bf519ad4593f6a08d7dc393f9fab91c70b51b25
-ms.contentlocale: de-de
-ms.lasthandoff: 01/05/2017
-
-
+ms.openlocfilehash: 6145cb69c69dba1eb1b9842079ee1a33686bb18a
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-for-security-in-system-center-configuration-manager"></a>Planen der Sicherheit in System Center Configuration Manager
 
@@ -292,7 +289,7 @@ Sie können den vertrauenswürdigen Hauptschlüssel aus einem Client entfernen, 
 
 7.  Wählen Sie im Dialogfeld **Objekt-Editor für TrustedRootKey** die Option **Instanzen** aus.  
 
-8.  Doppelklicken Sie im neuen Fenster **Abfrageergebnis**, in dem die Instanzen von **TrustedRootKey** aufgeführt werden, auf **TrustedRootKey=@**.  
+8.  Doppelklicken Sie im neuen Fenster **Abfrageergebnis**, in dem die Instanzen von **TrustedRootKey** angezeigt werden, auf **TrustedRootKey=@**.  
 
 9. Führen Sie im Dialogfeld **Objekt-Editor für TrustedRootKey=@** im Bereich **Eigenschaften** einen Bildlauf aus zu **TrustedRootKey CIM_STRING**. Die Zeichenfolge in der rechten Spalte ist der vertrauenswürdige Stammschlüssel. Sie sollte mit dem Wert von **SMSPublicRootKey** in der Datei *&lt;Configuration Manager-Verzeichnis\>***\bin\mobileclient.tcf** übereinstimmen.  
 
@@ -310,4 +307,3 @@ Sie können den vertrauenswürdigen Hauptschlüssel aus einem Client entfernen, 
 
 ### <a name="see-also"></a>Weitere Informationen:
 [Technische Referenz für kryptografische Steuerelemente](../../../protect/deploy-use/cryptographic-controls-technical-reference.md)  
-

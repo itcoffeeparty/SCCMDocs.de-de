@@ -4,23 +4,21 @@ description: "Erfahren Sie mehr über Funktionen, die in System Center Configura
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 63e1df5e-637c-4b07-b7ec-95340f43a805
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: c22e29da8036d69db917205f28a19a69281a64db
-ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1608-for-system-center-configuration-manager"></a>Funktionen in System Center Configuration Manager Technical Preview 1608
 
@@ -51,7 +49,7 @@ Wir haben bei den Eigenschaften für inventarisierte Software ein Feld hinzugef�
 
 ### <a name="filter-the-software-display"></a>Filtern der Softwareanzeige
 Nachdem Sie eine Über-/Untergeordnet-Beziehung definiert haben, können Sie Ihre Anzeige so filtern, dass sie nur Software anzeigt, die übergeordnet ist oder für die keine Beziehung definiert wurde. Dadurch wird die Software ausgeblendet, die als untergeordnetes Element einer anderen inventarisierten Software festgelegt wurde. Gehen Sie hierzu folgendermaßen vor:
-   1.    Wählen Sie für die Suchleiste **Kriterien hinzufügen** aus.
+   1.   Wählen Sie für die Suchleiste **Kriterien hinzufügen** aus.
    2. Wählen Sie **Übergeordnete Software** aus, ändern Sie anschließend den Kriterienwert in **Ist leer**, und klicken Sie dann auf **Suchen**.
 
 Die Anzeige zeigt jetzt nur die übergeordneten Softwareelemente oder Software an, für die keine Beziehung definiert wurde. Software, die nur einem anderen Titel untergeordnet ist, wird nicht angezeigt.
@@ -63,5 +61,4 @@ Dieses Verhalten kann durch den anzeigenden Benutzer deaktiviert werden, wenn di
 
 > [!NOTE]
 >
-> Spezielle Schlüssel wie z.B. ~!#@$%, werden nicht richtig übersetzt.
-
+> Spezielle Schlüssel wie z.B. ~!#@$% werden nicht richtig übersetzt.

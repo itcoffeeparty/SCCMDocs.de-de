@@ -2,10 +2,9 @@
 title: Technical Preview 1707 | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über die Funktionen, die mit der Technical Preview-Version 1707 für System Center Configuration Manager zur Verfügung stehen."
 ms.custom: na
-ms.date: 07/28/2017
+ms.date: 08/14/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -14,12 +13,11 @@ ms.assetid: cb405ba0-8792-4ab7-988b-2f835f3a9550
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+ms.openlocfilehash: 7ee2fd78c6c502394016ba077d42714041ad01c6
+ms.sourcegitcommit: 10f17229c5a359f040cb7f8f5e7bd868a34ac086
 ms.translationtype: HT
-ms.sourcegitcommit: 6e890862fd02786b675e2b7abaca7ede7c0e977a
-ms.openlocfilehash: 91fd850f055a7e892a54487307109a291e336696
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/15/2017
 ---
 # <a name="capabilities-in-technical-preview-1707-for-system-center-configuration-manager"></a>Funktionen in der Technical Preview-Version 1707 für System Center Configuration Manager
 
@@ -33,6 +31,17 @@ In diesem Artikel werden die Funktionen erläutert, die in der Technical Preview
 -   **Issue Name**. Details
     Workaround details.
 -->
+
+**Bekannte Probleme in dieser Technical Preview:**
+-   **Beim Update auf Vorschauversion 1707 tritt ein Fehler auf, wenn Sie einen Standortserver im passiven Modus haben**. Wenn Sie die Vorschauversion 1706 ausführen und einen [primären Standortserver im passiven Modus](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability) haben, müssen Sie den Standortserver im passiven Modus deinstallieren, bevor Sie Ihren Vorschaustandort erfolgreich auf Version 1707 aktualisieren können. Sie können den Standortserver im passiven Modus erneut installieren, wenn an Ihrem Standort Version 1707 ausgeführt wird.
+
+  So deinstallieren Sie den Standortserver im passiven Modus:
+  1. Navigieren Sie in der Konsole zu **Administration** > **Übersicht** > **Standortkonfiguration** > **Server und Standortsystemrollen**, und wählen Sie den Standortserver im passiven Modus aus.
+  2. Klicken Sie im Bereich **Standortsystemrollen** mit der rechten Maustaste auf die Rolle **Standortserver**, und wählen Sie dann **Rolle entfernen**.
+  3. Klicken Sie mit der rechten Maustaste auf den Standortserver im passiven Modus, und wählen Sie dann **Löschen**.
+  4. Starten Sie nach dem Deinstallieren des Standortservers auf dem aktiven primären Standortserver den Dienst **CONFIGURATION_MANAGER_UPDATE** neu.
+
+
 
 **Im Folgenden werden neue Funktionen aufgelistet, die Sie mit dieser Version ausprobieren können.**  
 
@@ -89,13 +98,13 @@ Weitere Informationen zu Windows Defender Application Guard finden Sie in [diese
 
 In der letzten Technical Preview haben wir eine neue Funktion eingeführt, mit der Sie folgende Aktionen durchführen können: [Erstellen und Ausführen von PowerShell-Skripts über die Configuration Manager-Konsole](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console).
 In dieser Technical Preview haben wir diese Funktion erweitert. Configuration Manager liest nun das PowerShell-Skript, und zeigt alle Parameter im Assistenten zum Erstellen von Skripts an. Sie können einen Wert für den Parameter im Assistenten angeben, der bei der Ausführung des Skripts verwendet wird. Alternativ können Sie den Parameter leer lassen. Wenn Sie so vorgehen, müssen Sie einen Wert für den Parameter angeben, wenn Sie das Skript ausführen.
+In dieser technischen Vorschau müssen Sie alle Parameter angeben, die ein Skript benötigt. In einem zukünftigen Release soll die Angabe von Skriptparametern optional sein.
 
 ### <a name="try-it-out"></a>Probieren Sie es aus!
 
-1. Folgen Sie zum [Erstellen und Ausführen von PowerShell-Skripts über die Configuration Manager-Konsole](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console) diesen Anweisungen. 
+1. Folgen Sie zum [Erstellen und Ausführen von PowerShell-Skripts über die Configuration Manager-Konsole](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console) diesen Anweisungen.
 2. Wählen Sie auf der neuen Seite **Skriptparameter** des **Create Script Wizard** (Assistenten zum Erstellen von Skripts) einen Parameter aus, und klicken Sie anschließend auf **Bearbeiten**.
 3. Geben Sie einen Parameterwert für den ausgewählten Parameter an, und klicken Sie anschließend auf **OK**.
 4. Schließen Sie den Assistenten ab.
 
 Wenn das Skript ausgeführt wird, werden alle Parameterwerte verwendet, die Sie konfiguriert haben.
-
