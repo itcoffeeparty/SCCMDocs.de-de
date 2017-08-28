@@ -107,26 +107,26 @@ Wenn eine URL in einer Markdowndatei angezeigt wird, wird sie in einen klickbare
     1. Miss Scarlett
     1. Professor Plum
 1. ordered
-1. Liste
+1. list
 
 
 ### <a name="unordered-lists"></a>Unsortierte Listen
 
 - This
-- auf
+- is
 - a
 - bulleted
-- Liste
+- list
 
 
 ##### <a name="unordered-list-with-an-embedded-lists"></a>Unsortierte Liste mit einer eingebetteten Liste
 
 - This
 - bulleted
-- Liste
+- list
     - Mrs. Peacock
     - Mr. Green
-- Enthält  
+- contains  
 - other
     1. Colonel Mustard
     1. Mrs. White
