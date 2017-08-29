@@ -2,7 +2,7 @@
 title: "Unterstützung für Windows-Features | Microsoft-Dokumentation"
 description: "Hier erfahren Sie, welche Windows-und Netzwerkfeatures in System Center Configuration Manager unterstützt werden."
 ms.custom: na
-ms.date: 3/30/2017
+ms.date: 8/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: e040552dab21ba9a71e06a78f6acc2ffe1b0eb61
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: be9b7e84fecfa7a07c411c3d46168e5485e0dfab
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="support-for-windows-features-and-networks-in-system-center-configuration-manager"></a>Unterstützung für Windows-Features und -Netzwerke in System Center Configuration Manager
 
@@ -49,7 +49,7 @@ Diese Clients führen auch eine Zwischenspeicherung des Inhalts durch. Auf diese
 -   **Konfigurieren von Clients:**    
     -   Die Clients, die BranchCache unterstützen können, müssen für den BranchCache-Modus „Verteilter Cache“ konfiguriert werden.  
     -   Die Betriebssystemeinstellung für BITS-Clienteinstellungen muss zur Unterstützung von BranchCache aktiviert sein.   <br /> <br />
-        
+
     Hinweise, wie Sie Clients zur Unterstützung von BranchCache konfigurieren können, finden Sie im Abschnitt [Configure clients (Konfigurieren von Clients)](https://technet.microsoft.com/itpro/windows/manage/waas-branchcache#configure-clients-for-branchcache) unter [Configure BranchCache for Windows 10 updates (Konfigurieren von BranchCache für Windows 10-Updates)](https://technet.microsoft.com/itpro/windows/manage/waas-branchcache).
 
 
@@ -80,9 +80,11 @@ Configuration Manager stellt Unterstützung für Clients in Arbeitsgruppen berei
 ##  <a name="bkmmk_datadedup"></a> Datendeduplizierung  
 Configuration Manager unterstützt die Verwendung der Datendeduplizierung mit Verteilungspunkten unter den folgenden Betriebssystemen:  
 
+-   Windows Server 2016
 -   Windows Server 2012 R2  
+-   Windows Server 2012  
 
--   Windows Server 2012 R2  
+
 
 > [!IMPORTANT]  
 >  Das Volume, das Paketquelldateien hostet, kann nicht für die Datendeduplizierung gekennzeichnet werden. Dies liegt daran, dass die Datendeduplizierung Analysepunkte verwendet und Configuration Manager die Verwendung eines Inhaltsquellspeicherorts mit Dateien, die auf Analysepunkten gespeichert sind, nicht unterstützt.  

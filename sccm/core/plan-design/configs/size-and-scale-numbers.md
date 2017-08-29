@@ -14,11 +14,11 @@ caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: f539e2d282b56e56a9c58c773788325b27ea6b37
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 9c50f6633a5ca04b62f4c3b06119fb1fbcab2643
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>Größe und Skalierung von Zahlen für System Center Configuration Manager
 
@@ -56,18 +56,9 @@ Die Zahlen zur Unterstützung in diesem Artikel basieren auf der Verwendung der 
 
 -   Ein Standort der zentralen Verwaltung unterstützt bis zu 25 untergeordnete primäre Standorte.  
 
-**Anwendungskatalog-Websitepunkt:**  
-
--   An primären Standorten können Sie mehrere Instanzen des Anwendungskatalog-Websitepunkts installieren.  
-
-    > [!TIP]  
-    >  Es wird empfohlen, den Anwendungskatalog-Websitepunkt und den Anwendungskatalog-Webservicepunkt gemeinsam auf dem gleichen Standortsystem zu installieren, wenn die Dienste für Clients im Intranet bereitgestellt werden.  
-
-    -   Planen Sie aus Leistungsgründen, bis zu 50.000 Clients pro Instanz zu unterstützen.  
-
-    -   Jede Instanz dieser Standortsystemrolle unterstützt die maximale Anzahl von Clients, die von der Hierarchie unterstützt werden.  
 
 ## <a name="bkmk_roles"></a> Standortsystemrolle    
+
 
 **Anwendungskatalog-Webdienstpunkt:**  
 
@@ -79,6 +70,18 @@ Die Zahlen zur Unterstützung in diesem Artikel basieren auf der Verwendung der 
     -   Planen Sie aus Leistungsgründen, bis zu 50.000 Clients pro Instanz zu unterstützen.  
 
     -   Jede Instanz dieser Standortsystemrolle unterstützt die maximale Anzahl von Clients, die von der Hierarchie unterstützt werden.  
+
+**Anwendungskatalog-Websitepunkt:**  
+
+-   An primären Standorten können Sie mehrere Instanzen des Anwendungskatalog-Websitepunkts installieren.  
+
+    > [!TIP]  
+    >  Es wird empfohlen, den Anwendungskatalog-Websitepunkt und den Anwendungskatalog-Webservicepunkt gemeinsam auf dem gleichen Standortsystem zu installieren, wenn die Dienste für Clients im Intranet bereitgestellt werden.  
+
+    -   Planen Sie aus Leistungsgründen, bis zu 50.000 Clients pro Instanz zu unterstützen.  
+
+    -   Jede Instanz dieser Standortsystemrolle unterstützt die maximale Anzahl von Clients, die von der Hierarchie unterstützt werden.  
+
 
 **Verteilungspunkt:**  
 
