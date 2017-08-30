@@ -2,7 +2,7 @@
 title: Installieren eines Standorts mit dem 1606-Baselinemedium | Microsoft-Dokumentation
 description: "Installieren von oder Durchführen eines Upgrades auf LTSB für System Center Configuration Manager"
 ms.custom: na
-ms.date: 05/01/2017
+ms.date: 08/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 39653604ba5fd8e1fe9dd4d42889221d983f9bec
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 7e7b2fa4114b3bc7c63653ba036a3f5345ce017d
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>Installieren und Upgraden mit dem Baselinemedium von Version 1606 für System Center Configuration Manager
 
@@ -125,8 +125,11 @@ Bei einem Upgrade von System Center 2012 Configuration Manager sollten Sie die i
 
 ### <a name="in-place-upgrade-paths-for-the-1606-baseline-media"></a>Pfade für direkte Upgrades für das 1606-Baselinemedium
 Sie können das 1606-Baselinemedium verwenden, um folgende Versionen auf eine lizenzierte Version von System Center Configuration Manager upzugraden:
-- System Center 2012 Configuration Manager mit Service Pack 2
 - System Center 2012 R2 Configuration Manager mit Service Pack 1
+- System Center 2012 R2 Configuration Manager mit Service Pack
+- System Center 2012 Configuration Manager mit Service Pack 2
+- System Center 2012 Configuration Manager mit Service Pack 1
+
 
 Sie können diese Medien auch dazu verwenden, um eine nicht lizenzierte Evaluierungsversion von Current Branch auf eine vollständig lizenzierte Version von Current Branch upzugraden.
 

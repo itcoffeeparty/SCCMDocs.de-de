@@ -2,7 +2,7 @@
 title: "Voraussetzungen für Standorte | Microsoft-Dokumentation"
 description: Erfahren Sie, wie ein Windows-Computer als System Center Configuration Manager-Standortsystemserver konfiguriert wird.
 ms.custom: na
-ms.date: 1/17/2017
+ms.date: 8/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 09749a3045ca6eebf1363b6e53cd8607b5f32578
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="site-and-site-system-prerequisites-for-system-center-configuration-manager"></a>Voraussetzungen für Standorte und Standortsysteme für System Center Configuration Manager
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/07/2017
 
  Windows-basierte Computer erfordern bestimmte Konfigurationen zur Unterstützung ihrer Verwendung als System Center Configuration Manager-Standortsystemserver.  
 
-
+ 
  Bei einigen Produkten wie Windows Server Update Services (WSUS) für den Softwareupdatepunkt finden Sie Informationen zu weiteren Voraussetzungen und Einschränkungen zur Nutzung des Produkts in der Dokumentation zum jeweiligen Produkt. Hier werden nur Konfigurationen beschrieben, die sich direkt auf die Verwendung mit Configuration Manager beziehen.   
 
 > [!NOTE]  
@@ -66,9 +66,7 @@ ms.lasthandoff: 08/07/2017
 
 **Windows ADK:**  
 
--   Bevor Sie einen Standort der zentralen Verwaltung oder einen primären Standort installieren oder aktualisieren, müssen Sie die Version von Windows ADK (Assessment and Deployment Kit) installieren, die die Version von Configuration Manager erfordert, die Sie installieren oder aktualisieren.  
-
-    -   Die 1511-Version von Configuration Manager erfordert die Windows 10 RTM-Version (10.0.10240) von Windows ADK.  
+-   Bevor Sie einen Standort der zentralen Verwaltung oder einen primären Standort installieren oder aktualisieren, müssen Sie die Version von Windows ADK (Assessment and Deployment Kit) installieren, die die Version von Configuration Manager erfordert, die Sie installieren oder aktualisieren. Informationen finden Sie im Clientthema zum [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) im Support für Windows 10.  
 
 -   Weitere Informationen zu dieser Anforderung finden Sie unter [Anforderungen an die Infrastruktur für die Betriebssystembereitstellung](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
@@ -115,9 +113,7 @@ ms.lasthandoff: 08/07/2017
 ###  <a name="bkmk_2012smsprovpreq"></a> SMS-Anbieterserver  
 **Windows ADK:**  
 
--   Auf dem Computer, auf dem Sie eine SMS-Anbieterinstanz installieren, muss die Windows ADK-Version installiert sein, die für die von Ihnen installierte bzw. aktualisierte Version von Configuration Manager erforderlich ist.  
-
-    -   Die 1511-Version von Configuration Manager erfordert die Windows 10 RTM-Version (10.0.10240) von Windows ADK.  
+-   Auf dem Computer, auf dem Sie eine SMS-Anbieterinstanz installieren, muss die Windows ADK-Version installiert sein, die für die von Ihnen installierte bzw. aktualisierte Version von Configuration Manager erforderlich ist. Informationen finden Sie im Clientthema zum [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) im Support für Windows 10.
 
 -   Weitere Informationen zu dieser Anforderung finden Sie unter [Anforderungen an die Infrastruktur für die Betriebssystembereitstellung](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
@@ -448,9 +444,7 @@ Windows Server 2008 und Windows Server 2008 R2 unterliegen nun dem erweiterten S
 
 **Windows ADK:**  
 
--   Bevor Sie einen Standort der zentralen Verwaltung oder einen primären Standort installieren oder aktualisieren, müssen Sie die Version von Windows ADK installieren, die die Version von Configuration Manager erfordert, die Sie installieren oder aktualisieren.  
-
-    -   Die 1511-Version von Configuration Manager erfordert die Windows 10 RTM-Version (10.0.10240) von Windows ADK.  
+-   Bevor Sie einen Standort der zentralen Verwaltung oder einen primären Standort installieren oder aktualisieren, müssen Sie die Version von Windows ADK installieren, die die Version von Configuration Manager erfordert, die Sie installieren oder aktualisieren.  Informationen finden Sie im Clientthema zum [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) im Support für Windows 10.  
 
 -   Weitere Informationen zu dieser Anforderung finden Sie unter [Anforderungen an die Infrastruktur für die Betriebssystembereitstellung](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
@@ -495,9 +489,7 @@ Windows Server 2008 und Windows Server 2008 R2 unterliegen nun dem erweiterten S
 ###  <a name="bkmk_2008smsprovpreq"></a> SMS-Anbieterserver  
 **Windows ADK:**  
 
--   Auf dem Computer, auf dem Sie eine SMS-Anbieterinstanz installieren, muss die Windows ADK-Version installiert sein, die für die von Ihnen installierte bzw. aktualisierte Version von Configuration Manager erforderlich ist.  
-
-    -   Die 1511-Version von Configuration Manager erfordert die Windows 10 RTM-Version (10.0.10240) von Windows ADK.  
+-   Auf dem Computer, auf dem Sie eine SMS-Anbieterinstanz installieren, muss die Windows ADK-Version installiert sein, die für die von Ihnen installierte bzw. aktualisierte Version von Configuration Manager erforderlich ist. Informationen finden Sie im Clientthema zum [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) im Support für Windows 10.  
 
 -   Weitere Informationen zu dieser Anforderung finden Sie unter [Anforderungen an die Infrastruktur für die Betriebssystembereitstellung](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 

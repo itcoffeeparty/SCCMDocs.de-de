@@ -2,7 +2,7 @@
 title: "Versionshinweise – Configuration Manager | Microsoft-Dokumentation"
 description: In diesen Anmerkungen finden Sie Informationen zu dringenden Problemen, die im Produkt noch nicht behoben oder bisher in keinem Microsoft Knowledge Base-Artikel beschrieben wurden.
 ms.custom: na
-ms.date: 08/21/2017
+ms.date: 08/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 24f30bddb345e3a08d4b655d89693c226005cb0e
-ms.sourcegitcommit: 06aef618f72c700f8a716a43fb8eedf97c62a72b
+ms.openlocfilehash: e54c2cd1c3e83609bff6a8cb64fb3c23b26a4eaa
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="release-notes-for-system-center-configuration-manager"></a>Anmerkungen zu dieser Version von System Center Configuration Manager
 
@@ -27,15 +27,23 @@ ms.lasthandoff: 08/21/2017
 
 Bei System Center Configuration Manager sind Anmerkungen zur Produktversion auf dringende Probleme beschränkt, die noch nicht im Produkt behoben wurden (in einem konsoleninternen Update verfügbar sind) oder in einem Microsoft Knowledge Base-Artikel beschrieben sind.  
 
- Informationen zu bekannten Problemen, die wichtige Szenarien betreffen, sind in der Onlineproduktdokumentation in der System Center Configuration Manager-Dokumentationsbibliothek beschrieben.  
+Informationen zu bekannten Problemen, die wichtige Szenarien betreffen, sind in der Onlineproduktdokumentation in der System Center Configuration Manager-Dokumentationsbibliothek beschrieben.  
 
 > [!TIP]  
 >  Dieses Thema enthält Anmerkungen System Center Configuration Manager Current Branch. Wenn Sie eine Technical Preview-Version von System Center Configuration Manager verwenden, finden Sie unter [Technical Preview for System Center Configuration Manager (Technical Preview für System Center Configuration Manager)](../../../../core/get-started/technical-preview.md) weitere Informationen.  
+
+Informationen zu den neuen, in den verschiedenen Versionen eingeführten Features finden Sie hier:
+- [Neues in Version 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)  
+- [Neuigkeiten in Version 1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)
+- [Neuigkeiten in Version 1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)
+   
+
 
 ## <a name="setup-and-upgrade"></a>Setup und Upgrade  
 
 ### <a name="after-you-update-a-configuration-manager-console-using-consolesetupexe-from-the-site-server-folder-recent-language-pack-changes-are-not-available"></a>Nachdem Sie eine Configuration Manager-Konsole mithilfe von „ConsoleSetup.exe“ aus dem Ordner des Standortservers aktualisiert haben, sind neuere Änderungen des Sprachpakets nicht verfügbar
 <!--  SMS 486420  Applicability should be 1610 and 1702.  -->
+*Folgendes gilt für die Versionen 1610 und 1702.*   
 Nachdem Sie ein direktes Update einer Konsole mithilfe von „ConsoleSetup.exe“ aus dem Installationsordner eines Standortservers durchgeführt haben, sind kürzlich installierte Sprachpakete möglicherweise nicht verfügbar. Dies hat folgende Gründe:
 - An Ihrem Standort wird Version 1610 oder 1702 ausgeführt.
 - Die Konsole wurde direkt mithilfe von „ConsoleSetup.exe“ aus dem Installationsordner des Standortservers aktualisiert.
@@ -47,7 +55,8 @@ Wenn dieses Problem auftritt, verwendet die neu installierte Konsole nicht die a
 
 ### <a name="with-version-1702-the-default-site-boundary-group-is-configured-for-use-for-site-assignment"></a>Ab Version 1702 ist die Standardbegrenzungsgruppe für die Standortzuweisung konfiguriert
 <!--  SMS 486380   Applicability should only be to 1702. -->
-Ab Version 1702 ist die Option **Diese Begrenzungsgruppe für die Standortzuweisung verwenden** auf der Registerkarte „Verweis“ der Begrenzungsgruppe aktiviert; außerdem ist dort der Standort als **Zugewiesener Standort** aufgelistet.Die Option ist ausgegraut, damit diese Konfiguration nicht bearbeitet oder entfernt werden kann.
+*Folgendes gilt für Version 1702.*  
+Die Option **Diese Begrenzungsgruppe für die Standortzuweisung verwenden** ist auf der Registerkarte „Referenz“ der Begrenzungsgruppe aktiviert; außerdem ist dort der Standort als **Zugewiesener Standort** aufgelistet. Die Option ist ausgeblendet, damit die Konfiguration nicht bearbeitet oder entfernt werden kann.
 
 **Problemumgehung:** Keiner Sie können diese Einstellung ignorieren. Die Standard-Standortbegrenzungsgruppe wird nicht für die Standortzuweisung verwendet, obwohl die Standortzuweisung für diese aktiviert ist. Ab Version 1702 stellt diese Konfiguration sicher, dass die Standard-Standortbegrenzungsgruppe dem richtigen Standort zugeordnet ist.
 
@@ -104,7 +113,8 @@ Fehler beim Ausführen von Setup mit den folgenden Fehlermeldungen im Setup-Prot
 
 ### <a name="service-connection-tool-throws-an-exception-when-sql-server-is-remote-or-when-shared-memory-is-disabled"></a>Das Dienstverbindungstool löst eine Ausnahme aus, wenn SQL Server remote verfügbar ist oder Shared Memory deaktiviert ist
 <!-- 479223   Fixed in 1702 and later   -->
-Ab Version 1606 generiert das Dienstverbindungstool eine Ausnahme, wenn eine der folgenden Aussagen zutrifft:  
+*Folgendes gilt für Version 1610 und früher.*  
+Das Dienstverbindungstool generiert eine Ausnahme, wenn eine der folgenden Bedingungen zutrifft:  
  -  Die Standortdatenbank befindet sich nicht auf dem Computer, der den Dienstverbindungspunkt hostet, und verwendet einen nicht standardmäßigen Port (nicht Port 1433)
  -  Die Standortdatenbank ist auf demselben Server wie der Dienstverbindungspunkt, aber das SQL-Protokoll **Shared Memory** ist deaktiviert
 
@@ -131,7 +141,8 @@ Die Ausnahme ist ähnlich der folgenden:
 ## <a name="client-deployment-and-upgrade"></a>Clientbereitstellung und -upgrade  
 
 ### <a name="client-installation-fails-with-error-code-0x8007064c"></a>Bei der Clientinstallation tritt ein Fehler mit Fehlercode 0x8007064c auf
-<!--- SMS 486973 -->
+<!--- SMS 486973  applies 1606 to 1706. Not yet fixed. -->
+*Folgendes gilt für alle aktiven Versionen von Configuration Manager.*   
 Wenn Sie den Client auf Windows-Computern bereitstellen, tritt bei der Installation ein Fehler auf. Die Datei „ccmsetup.log“ enthält den Eintrag: „File 'C:\WINDOWS\ccmsetup\Silverlight.exe' returned failure exit code 1612. Fail the installation“, gefolgt von „InstallFromManifest failed 0x8007064c“.
 
 **Problemumgehung**: Dieser Fehler wird durch eine zuvor installierte, beschädigte Version von Silverlight verursacht. Versuchen Sie, auf dem betroffenen Computer das folgende Tool auszuführen: [https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed](https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed)
@@ -158,6 +169,7 @@ Nachdem Sie einen Wartungsplan erstellt haben, öffnen Sie die Eigenschaften des
 
 ### <a name="when-a-high-risk-deployment-dialog-is-visible-to-a-user-subsequent-high-risk-dialogs-with-a-sooner-deadline-are-not-displayed"></a>Wenn einem Benutzer ein Dialogfeld über eine risikoreiche Bereitstellung angezeigt wird, werden keine nachfolgenden Dialogfelder über risikoreiche Bereitstellungen mit einem früheren Stichtag angezeigt.
 <!-- Fixed in 1702 and later -->
+*Folgendes gilt für Version 1610 und früher.*   
 Nachdem Sie eine risikoreiche Taskbereitstellung für Benutzer erstellt und bereitgestellt haben, wird dem Benutzer ein Dialogfeld über eine risikoreiche Bereitstellung angezeigt. Wenn der Benutzer das Dialogfeld nicht schließt und Sie eine weitere risikoreiche Bereitstellung mit einem früheren Stichtag erstellen, wird dem Benutzer das aktualisierte Dialogfeld nicht angezeigt, weil er das erste Dialogfeld nicht geschlossen hat. Die Bereitstellungen werden dennoch am konfigurierten Stichtag ausgeführt.
 
 **Problemumgehung**:  
@@ -169,6 +181,7 @@ Der Benutzer muss das Dialogfeld für die erste risikoreiche Bereitstellung schl
 
 ### <a name="importing-an-office-365-client-settings-from-a-configuration-file-fails-when-it-contains-unsupported-languages"></a>Das Importieren von Office 365-Clienteinstellungen aus einer Konfigurationsdatei schlägt fehl, wenn sie nicht unterstützte Sprachen enthält
 <!-- 489258  Fixed in 1706  -->
+*Folgendes gilt für Version 1702 und früher.*   
 Wenn Sie die Office 365-Clienteinstellungen aus einer vorhandenen XML-Konfigurationsdatei importieren und die Datei Sprachen enthält, die vom Office 365 ProPlus-Client nicht unterstützt werden, tritt ein Fehler auf. Details finden Sie unter [Bereitstellen von Office 365-Apps für Clients aus dem Office 365-Clientverwaltungsdashboard](/sccm/sum/deploy-use/manage-office-365-proplus-updates#to-deploy-office-365-apps-to-clients-from-the-office-365-client-management-dashboard).
 
 **Problemumgehung**:    
@@ -207,6 +220,7 @@ Bei der Erstellung eines Android for Work-E-Mail-Profils stehen zwei Authentifiz
 
 ### <a name="antimalware-policy-fails-to-apply-on-windows-server-2016-core"></a>Richtlinie für Antischadsoftware kann unter Windows Server 2016 Core nicht angewendet werden
 <!--  Product Studio bug 485370 added 04 19 2017   Fixed in 1702 -->
+*Folgendes gilt für Version 1610 und früher.*  
 Die Richtlinie für Antischadsoftware kann unter Windows Server 2016 Core nicht angewendet werden.  Der Fehlercode lautet 0x80070002.  Fehlende Abhängigkeit für ConfigSecurityPolicy.exe.
 
 **Problemumgehung**: Dieses Problem wird mit dem Update im [Knowledge Base-Artikel 4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) behoben, der am 9. Mai 2017 veröffentlicht wurde.

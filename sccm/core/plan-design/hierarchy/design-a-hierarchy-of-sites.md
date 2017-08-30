@@ -2,7 +2,7 @@
 title: "Entwurf einer Standorthierarchie – Configuration Manager | Microsoft-Dokumentation"
 description: "Grundlegendes zu den verfügbaren Topologien und Verwaltungsoptionen für System Center Configuration Manager, damit Sie Ihre Standorthierarchie planen können."
 ms.custom: na
-ms.date: 6/16/2017
+ms.date: 8/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 4710b1b89eb50cb7bcf4c4ee50c12a96b6561bc9
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 2c587c0ad894dc567a6f1804626db611ff9a1013
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="design-a-hierarchy-of-sites-for-system-center-configuration-manager"></a>Entwerfen einer Hierarchie von Standorten für System Center Configuration Manager
 
@@ -27,6 +27,13 @@ ms.lasthandoff: 08/07/2017
 
 Vor der Installation des ersten Standorts einer neuen System Center Configuration Manager-Hierarchie sollten Sie sich mit den verfügbaren Topologien für Configuration Manager, den Typen der verfügbaren Standorte, ihren Beziehungen untereinander und dem Verwaltungsbereich vertraut machen, den jeder Standorttyp bereitstellt.
 Nachdem Sie die Content Management-Optionen abgewogen haben, die die Anzahl der zu installierenden Standorte reduzieren können, können Sie eine Topologie planen, die effizient an Ihren aktuellen geschäftlichen Bedarf angepasst ist, und diese später erweitern, um zukünftiges Wachstum zu verwalten.  
+
+Berücksichtigen Sie bei der Planung die Einschränkungen in Bezug auf das Hinzufügen zusätzlicher Standorte zu einer Hierarchie oder einem eigenständigen Standort:
+-   Sie können einen neuen primären Standort unterhalb eines Standorts der zentralen Verwaltung installieren. Beachten Sie die maximale [unterstützte Anzahl primärer Standorte](/sccm/core/plan-design/configs/size-and-scale-numbers) für die Hierarchie.
+-   Sie können [einen eigenständigen primären Standort erweitern, um einen neuen Standort der zentralen Verwaltung zu installieren](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand), sodass Sie danach weitere primäre Standorte installieren können.
+-   Sie können unterhalb eines primären Standorts neue sekundäre Standorte installieren. Beachten Sie die [unterstützten Grenzwerte für den primären Standort](/sccm/core/plan-design/configs/size-and-scale-numbers) und die Gesamthierarchie.
+-   Sie können keinen zuvor installierten Standort zu einer vorhandenen Hierarchie hinzufügen, um zwei eigenständige Standorte zusammenzuführen. Es wird nur die Installation neuer Standorte in einer Standorthierarchie unterstützt.
+
 
 > [!NOTE]
 > Achten Sie bei der Planung einer neuen Configuration Manager-Installation auf die [Versionsanmerkungen]( /sccm/core/servers/deploy/install/release-notes), die aktuelle Probleme in den aktiven Versionen behandeln. Die Versionsanmerkungen gelten für alle Branches von Configuration Manager.  Wenn Sie allerdings [Technical Preview]( /sccm/core/get-started/technical-preview) verwenden, finden Sie in der Dokumentation für jede Version von Technical Preview Probleme, die nur für diesen Branch spezifisch sind.  
@@ -63,7 +70,7 @@ Nachdem Sie die Content Management-Optionen abgewogen haben, die die Anzahl der 
 
 -   Der Standort der zentralen Verwaltung ist der Standort der obersten Ebene einer Hierarchie.  
 
--   Wenn Sie eine Hierarchie mit mehr als einem primären Standort konfigurieren, müssen Sie einen Standort der zentralen Verwaltung installieren. Wenn Sie sofort zwei oder mehr primäre Standorte benötigen, installieren Sie zuerst den Standort der zentralen Verwaltung. Wenn Sie bereits über einen primären Standort verfügen und dann einen Standort der zentralen Verwaltung installieren möchten, müssen Sie [den eigenständigen primären Standort erweitern](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand), um den Standort der zentralen Verwaltung zu installieren. 
+-   Wenn Sie eine Hierarchie mit mehr als einem primären Standort konfigurieren, müssen Sie einen Standort der zentralen Verwaltung installieren. Wenn Sie sofort zwei oder mehr primäre Standorte benötigen, installieren Sie zuerst den Standort der zentralen Verwaltung. Wenn Sie bereits über einen primären Standort verfügen und dann einen Standort der zentralen Verwaltung installieren möchten, müssen Sie [den eigenständigen primären Standort erweitern](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand), um den Standort der zentralen Verwaltung zu installieren.
 
 -   Es werden nur primäre Standorte als untergeordnete Standorte vom Standort der zentralen Verwaltung unterstützt.  
 

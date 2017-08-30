@@ -2,7 +2,7 @@
 title: "Technical Preview für Configuration Manager | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr über das Technical Preview-Release, mit der Sie neue Funktionen und Fähigkeiten in System Center Configuration Manager testen können."
 ms.custom: na
-ms.date: 08/11/2017
+ms.date: 08/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "157"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 6d7bac392cf5a4ba01b25758fd91f1003b153589
-ms.sourcegitcommit: 398e30ec703218c4b3680bbb055d686807ca7f1d
+ms.openlocfilehash: 0cdbccc0147cb1f4d5130863b9610d0b190d6658
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>Technical Preview für System Center Configuration Manager
 
@@ -84,7 +84,7 @@ Die folgenden Produkte und Technologien werden von diesem Branch von Configurati
 
  Sie müssen zum Verwenden der Technical Preview zunächst eine **Basisversion** des Technical Preview-Builds installieren. Nach der Installation einer Basisversion können Sie Ihre Installation mithilfe **konsoleninterner Updates** auf den neuesten Stand der aktuellen Preview-Version bringen.     In der Regel werden neue Technical Preview-Versionen jeden Monat zur Verfügung gestellt.
 
-Jede Preview-Version wird unterstützt bis drei nachfolgende Versionen verfügbar sind. Dies bedeutet, wenn die Version 1702 freigegeben wird, wird die Version 1610 nicht länger unterstützt, aber die Versionen 1611, 1612 und 1701 werden weiterhin unterstützt. Wenn die letzte Baseline nicht mehr unterstützt wird (z.B. Version 1610), wird sie jedoch weiterhin für die Installation eines neuen Technical Preview-Standorts unterstützt (bis eine neue Baselineversion verfügbar ist), solange Sie diese Installation auf eine unterstützte Version aktualisieren. Wenn die aktuelle Version bei der Installierung in Ihrer Konsole verfügbar ist, führen Sie ein Update auf die neueste angebotene Version durch, und wiederholen Sie anschließend den Prozess, bis Sie die aktuellste Version von Technical Preview installieren können.
+Jede Preview-Version wird unterstützt bis drei nachfolgende Versionen verfügbar sind. Dies bedeutet Folgendes: Bei Freigabe von Version 1708 wird die Version 1704 nicht mehr unterstützt, die Unterstützung für die Versionen 1705, 1706 und 1707 bleibt aber bestehen. Wenn die Unterstützung für eine Baseline endet (in diesem Fall Version 1703), wird die Baseline jedoch weiterhin für die Installation eines neuen Technical Preview-Standorts unterstützt, bis eine neue Baselineversion verfügbar ist, solange Sie diese Installation auf eine unterstützte Version aktualisieren. Wenn die aktuelle Version bei der Installierung in Ihrer Konsole verfügbar ist, führen Sie ein Update auf die neueste angebotene Version durch, und wiederholen Sie anschließend den Prozess, bis Sie die aktuellste Version von Technical Preview installieren können.
 
 > [!TIP]  
 >  Bei der Installation eines Updates für die Technical Preview-Version wird Ihre Installation auf die jeweils neueste Technical Preview-Version aktualisiert.    Eine Technical Preview-Installation bietet nie die Möglichkeit eines Upgrades auf eine aktuelle Branch-Installation und erhält keine Updates von der aktuellen Branch-Version.  
@@ -93,8 +93,9 @@ Jede Preview-Version wird unterstützt bis drei nachfolgende Versionen verfügba
 Sie können eine Basisversion für bis zu 1 Jahr nach der Veröffentlichung installieren. Wenn Sie einen neuen Technical Preview-Standort erstellen, empfiehlt es sich, die neueste verfügbare Baselineversion zu verwenden.
 -  **Technical Preview 1703**: Technical Preview 1703 steht sowohl als konsoleninternes Update für Configuration Manager Technical Preview als auch als neue Basisversion [auf der TechNet Evaluation Center-Website zur Verfügung](http://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
--  **Technical Preview 1610**: Technical Preview 1610 steht sowohl als konsoleninternes Update für Configuration Manager Technical Preview als auch als Basisversion auf der TechNet Evaluation Center-Website zur Verfügung. Wenn Sie Medien für die Installation von 1610 haben, empfehlen wir, die Version 1703 herunterladen und stattdessen diese Version zu installieren.
-
+<!-- out of support. Use baseline 1703
+-  **Technical Preview 1610** - The Configuration Manager Technical Preview 1610 was available as both an in-console update for the Configuration Manager Technical Preview, and as a baseline version. If you have media for installing 1610, we recommend you download version 1703 and install that version instead.
+-->
 
 
 
@@ -113,10 +114,10 @@ Sie können eine Basisversion für bis zu 1 Jahr nach der Veröffentlichung inst
 
  |Funktion |Technical Preview-Version |Current Branch-Version|  
  |----------------|---------------------|--------------------|
- |Unterstützung für Client-Peer-Cache für Express-Installationsdateien für Windows 10 und Office 365|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365)|![Nicht hinzugefügt](media/Red_X.gif)|
- |Gerätedashboard Surface|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#surface-device-dashboard)|![Nicht hinzugefügt](media/Red_X.gif)|
- |Konfigurieren und Bereitstellen von Windows Defender Application Guard-Richtlinien|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#configure-and-deploy-windows-defender-application-guard-policies)|![Nicht hinzugefügt](media/Red_X.gif)|
- |Hinzufügen von Parametern während der Bereitstellung von PowerShell-Skripts aus Configuration Manager|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|![Nicht hinzugefügt](media/Red_X.gif)|
+ |Verbesserungen beim Angeben von Skriptparametern während der Bereitstellung von PowerShell-Skripts aus Configuration Manager <!-- 1236459 -->|[Tech Preview 1708](capabilities-in-technical-preview-1708.md#improvements-for-specifying-script-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|![Nicht hinzugefügt](media/Red_X.gif)|
+ |Einblicke für die Verwaltung <!-- 1353967 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#management-insights)|![Nicht hinzugefügt](media/Red_X.gif)|
+ |Neustarten von Computern über die Configuration Manager-Konsole <!-- 1356283 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#restart-computers-from-the-configuration-manager-console)|![Nicht hinzugefügt](media/Red_X.gif)|
+ |Anpassen des Softwarecenters <!-- 1351224 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#software-center-customization)|![Nicht hinzugefügt](media/Red_X.gif)|
 
 
 ## <a name="capabilities-delivered-in-previous-technical-previews"></a>Von vorherigen Technical Preview-Versionen gebotene Funktionen
@@ -124,6 +125,10 @@ Sie können eine Basisversion für bis zu 1 Jahr nach der Veröffentlichung inst
 
  |Funktion |Technical Preview-Version |Current Branch-Version|  
  |----------------|---------------------|--------------------|
+ |Unterstützung für Client-Peer-Cache für Express-Installationsdateien für Windows 10 und Office 365|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365)|![Nicht hinzugefügt](media/Red_X.gif)|
+ |Gerätedashboard Surface|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#surface-device-dashboard)|![Nicht hinzugefügt](media/Red_X.gif)|
+ |Konfigurieren und Bereitstellen von Windows Defender Application Guard-Richtlinien|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#configure-and-deploy-windows-defender-application-guard-policies)|![Nicht hinzugefügt](media/Red_X.gif)|
+ |Hinzufügen von Parametern während der Bereitstellung von PowerShell-Skripts aus Configuration Manager|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|![Nicht hinzugefügt](media/Red_X.gif)|
  |Neue Richtlinieneinstellungen für die Verwaltung mobiler Anwendungen|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-mobile-application-management-policy-settings)|![Nicht hinzugefügt](media/Red_X.gif)|
  |Verbesserte Begrenzungsgruppen für Softwareupdatepunkte|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#improved-boundary-groups-for-software-update-points)|[Version 1706](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points)|
  |Hohe Verfügbarkeit der Standortserverrolle|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |![Nicht hinzugefügt](media/Red_X.gif)|

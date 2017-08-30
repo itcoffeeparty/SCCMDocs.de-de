@@ -2,7 +2,7 @@
 title: Data Warehouse | Microsoft-Dokumentation
 description: "Data Warehouse-Dienstpunkt und -Datenbank für System Center Configuration Manager"
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 8/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: eedbf12d3bf628666efc90c85a8dfab37e4dc9ab
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 744614d7e1ec97a4d4b4646c45cb41d734c6be34
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/28/2017
 ---
 #  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>Der Data Warehouse-Dienstpunkt für System Center Configuration Manager
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -49,8 +49,8 @@ Bei der Installation der Standortsystemrolle wird auch die Data Warehouse-Datenb
 - Der Computer, auf dem die Standortsystemrolle installiert ist, erfordert .NET Framework 4.5.2 oder höher.
 - Das Computerkonto des Computers, auf dem Sie die Standortsystemrolle installieren, wird verwendet, um Daten mit der Data Warehouse-Datenbank zu synchronisieren. Für dieses Konto sind folgende Berechtigungen erforderlich:  
   - Ein lokaler **Administrator** auf dem Computer, auf dem die Data Warehouse-Datenbank gehostet werden soll – wenn es sich um einen Remotecomputer handelt.
-  - Die Berechtigung **DB-owner** in der Data Warehouse-Datenbank.
-  - Die Berechtigungen **DB_reader** und **Ausführen** für die Standortdatenbank der obersten Ebene der Standorte.
+  - Die Berechtigung **DB_Creator** in der Data Warehouse-Datenbank.
+  - **DB_owner** oder **DB_reader** mit der Berechtigung **Ausführen** für die Standortdatenbank der Standorte auf oberster Ebene.
 - Für die Data Warehouse-Datenbank wird SQL Server 2012 oder neuer benötigt. Sie können die Editionen Standard, Enterprise oder Datacenter verwenden.
 - Die folgenden SQL Server-Konfigurationen können zum Hosten der Warehouse-Datenbank verwendet werden:  
   - Standardinstanz
