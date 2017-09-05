@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 6049ec2369e0a97b21ce6523ba8448335385ab9a
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 675ebf053de98c6ad93a53ae218696012aef96f7
+ms.sourcegitcommit: 5b4fd2d36f06be5bcc7f8ebbfb92c48b7240085d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="task-sequence-action-variables-in-system-center-configuration-manager"></a>Tasksequenz-Aktionsvariablen in System Center Configuration Manager
 
@@ -187,15 +187,6 @@ Mit den Tasksequenzaktionsvariablen werden Konfigurationseinstellungen angegeben
 |SMSConnectNetworkFolderPassword<br /><br /> (Eingabe)|Hiermit wird das Netzwerkkonto angegeben, über das eine Verbindung mit der Netzwerkfreigabe hergestellt wird.|  
 |SMSConnectNetworkFolderPath<br /><br /> (Eingabe)|Gibt den Netzwerkpfad für die Verbindung an.<br /><br /> Beispiel:<br /><br /> **"\\Servername\Freigabename"**|  
 
-###  <a name="BKMK_ConvertDisk"></a> Variablen der Tasksequenzaktion „In dynamischen Datenträger konvertieren“  
- Mit der Variablen für diese Aktion wird die Nummer des physischen Datenträgers angegeben, der von einem einfachen in einen dynamischen Datenträger konvertiert werden soll. Weitere Informationen zu dem Tasksequenzschritt, der diesen Variablen zugeordnet ist, finden Sie unter [Convert Disk to Dynamic (In dynamischen Datenträger konvertieren)](task-sequence-steps.md#BKMK_ConvertDisktoDynamic).  
-
-#### <a name="details"></a>Details  
-
-|Name der Aktionsvariablen|Beschreibung|  
-|--------------------------|-----------------|  
-|OSDConvertDiskIndex<br /><br /> (Eingabe)|Hiermit wird die Nummer des physischen Datenträgers angegeben, der konvertiert wird.|  
-
 ###  <a name="BKMK_EnableBitLocker"></a> Variablen der Tasksequenzaktion „BitLocker aktivieren“  
  Mit den Variablen für diese Aktion werden das Wiederherstellungskennwort und der Systemstartschlüssel angegeben, mit denen BitLocker auf dem Zielcomputer aktiviert wird. Weitere Informationen zu dem Tasksequenzschritt, der diesen Variablen zugeordnet ist, finden Sie unter [Enable BitLocker (Aktivieren von BitLocker)](task-sequence-steps.md#BKMK_EnableBitLocker).  
 
@@ -276,7 +267,7 @@ Mit den Tasksequenzaktionsvariablen werden Konfigurationseinstellungen angegeben
 |OSDStateStorePath<br /><br /> (Ausgabe)|Dies ist der UNC-Pfad des Ordners auf dem Zustandsmigrationspunkt, in dem der Benutzerzustand gespeichert ist.|  
 
 ###  <a name="BKMK_RestartComputer"></a> Variablen der Tasksequenzaktion „Computer neu starten“  
- Mit den Variablen für diese Aktion werden Informationen für den Neustart des Zielcomputers angegeben. Weitere Informationen zu dem Tasksequenzschritt, der diesen Variablen zugeordnet ist, finden Sie unter [Restart Computer (Computer neu starten)](task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer).  
+ Mit den Variablen für diese Aktion werden Informationen für den Neustart des Zielcomputers angegeben. Weitere Informationen zu dem Tasksequenzschritt, der diesen Variablen zugeordnet ist, finden Sie unter [Restart Computer (Computer neu starten)](task-sequence-steps.md#BKMK_RestartComputer).  
 
 #### <a name="details"></a>Details  
 
