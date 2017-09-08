@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: e0726febc4c36a26c5e067914734838bf2681e6c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 18a987141e212158424924402859799ba42f8eae
+ms.sourcegitcommit: 5b4fd2d36f06be5bcc7f8ebbfb92c48b7240085d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>Tasksequenzschritte in System Center Configuration Manager
 
@@ -139,7 +139,7 @@ Die folgenden Tasksequenzschritte können einer Configuration Manager-Tasksequen
  Wählen Sie diese Option aus, um den Zielcomputer einer angegebenen Arbeitsgruppe hinzuzufügen. Geben Sie den Namen der Arbeitsgruppen in die Zeile **Arbeitsgruppe** ein. Dieser Wert kann durch den Wert überschrieben werden, der mit dem Tasksequenzschritt **Netzwerkeinstellungen erfassen** erfasst wird.  
 
  **Einer Domäne beitreten**  
- Wählen Sie diese Option aus, um den Zielcomputer einer angegebenen Domäne hinzuzufügen. Geben Sie die Domäne an, oder klicken Sie auf "Durchsuchen", um die Domäne auszuwählen, z. B. *fabricam.com*. Geben Sie einen LDAP-Pfad (Lightweight Directory Access Protocol) für eine Organisationseinheit an, oder suchen Sie nach dem LDAP-Pfad (z.B. LDAP//OU=computers, DC=Fabricam.com, C=com).  
+ Wählen Sie diese Option aus, um den Zielcomputer einer angegebenen Domäne hinzuzufügen. Geben Sie die Domäne an, oder klicken Sie auf "Durchsuchen", um die Domäne auszuwählen, z. B. *fabricam.com*. Geben Sie einen LDAP-Pfad (Lightweight Directory Access Protocol) für eine Organisationseinheit an, oder suchen Sie nach dem LDAP-Pfad (LDAP//OU=computers, DC=Fabricam.com, C=com).  
 
  **Konto**  
  Klicken Sie auf **Festlegen** , um ein Konto anzugeben, das die für den Beitritt zur Domäne erforderlichen Berechtigungen aufweist. Im Dialogfeld **Windows-Benutzerkonto** können Sie den Benutzernamen in folgendem Format eingeben: **Domäne\Benutzer** .  
@@ -551,31 +551,6 @@ Dieser Tasksequenzschritt wird nur in Windows PE ausgeführt. Er wird nicht in e
 
 -   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
 
-##  <a name="BKMK_ConvertDisktoDynamic"></a> In dynamischen Datenträger konvertieren  
- Mit der Tasksequenz **In dynamischen Datenträger konvertieren** können Sie einen physischen Datenträger von einem Basisdatenträgertyp in einen dynamischen Datenträgertyp konvertieren.  
-
- Dieser Schritt wird entweder in einem Standardbetriebssystem oder in Windows PE ausgeführt. Weitere Informationen zu Tasksequenzvariablen für diese Aktion finden Sie unter [Convert Disk to Dynamic Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ConvertDisk).  
-
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
-
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
-
- **Datenträgernummer**  
- Die Nummer des physischen Datenträgers, der konvertiert werden soll.  
-
 ##  <a name="BKMK_DisableBitLocker"></a> BitLocker deaktivieren  
  Mit dem Tasksequenzschritt **BitLocker deaktivieren** können Sie die BitLocker-Verschlüsselung auf dem aktuellen Betriebssystemlaufwerk oder einem bestimmten Laufwerk deaktivieren. Nach dieser Aktion sind die Schlüsselschutzkomponenten im Klartext auf der Festplatte sichtbar, die Inhalte des Laufwerks werden jedoch nicht entschlüsselt. Dieser Vorgang ist daher praktisch sofort beendet.  
 
@@ -874,35 +849,6 @@ Dieser Schritt wird entweder in einem Standardbetriebssystem oder in Windows PE 
  **Wenn ein Fehler bei einer Anwendungsinstallation auftritt, mit anderen Anwendungen in der Liste fortfahren**  
  Mit dieser Einstellung geben Sie an, dass der Schritt fortgesetzt werden soll, wenn bei einer einzelnen Anwendungsinstallation ein Fehler auftritt. Wenn diese Einstellung angegeben ist, wird die Tasksequenz unabhängig davon, ob Installationsfehler zurückgegeben werden, fortgesetzt. Wenn diese Einstellung nicht angegeben ist und bei einer Installation ein Fehler auftritt, wird der Tasksequenzschritt sofort beendet.  
 
-##  <a name="BKMK_InstallDeploymentTools"></a> Bereitstellungstools installieren  
- Verwenden Sie den Tasksequenzschritt **Bereitstellungstools installieren**, um das Configuration Manager-Paket zu installieren, das die Sysprep-Bereitstellungstools enthält.  
-
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
-
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
-
- **Systemvorbereitungspaket**  
- Mit dieser Einstellung geben Sie das Configuration Manager-Paket an, das die Sysprep-Bereitstellungstools für die folgenden Betriebssysteme enthält:  
-
--   Windows XP SP3  
-
--   Windows XP X64 SP2  
-
--   Windows Server 2003 SP2  
-
 ##  <a name="BKMK_InstallPackage"></a> Paket installieren
 
  Mit dem Tasksequenzschritt **Paket installieren** können Sie Software als Teil der Tasksequenz installieren. Wenn dieser Schritt ausgeführt wird, beginnt die Installation sofort; das nächste Richtlinienabfrageintervall wird nicht abgewartet.  
@@ -1068,6 +1014,9 @@ Es wurde eine neue Tasksequenzvariable, SMSTSSoftwareUpdateScanTimeout, in Confi
 Mithilfe des Tasksequenzschritts **ConfigMgr-Client für Erfassung vorbereiten** können Sie den Configuration Manager-Client vom Referenzcomputer entfernen oder konfigurieren, um ihn im Rahmen des Imageerstellungsprozesses für die Erfassung vorzubereiten.
 
 Ab Version 1610 von Configuration Manager wird der Configuration Manager-Client im Schritt „Configuration Manager-Client vorbereiten“ vollständig entfernt, und es werden nicht nur die wichtigen Informationen entfernt. Wenn die Tasksequenz das erfasste Betriebssystemimage bereitstellt, wird jedes Mal ein neuer Configuration Manager-Client installiert.  
+
+> [!Note]  
+>  Der Client wird nur während der Tasksequenz **Referenz-Betriebssystemabbild erstellen und erfassen** entfernt. Andere Erfassungsmethoden, zum Beispiel Erfassungsmedien oder eine benutzerdefinierte Tasksequenz, entfernen den Client nicht.
 
 Vor der Configuration Manager-Version 1610 werden bei diesem Schritt folgende Aufgaben ausgeführt:  
 
