@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: e54c2cd1c3e83609bff6a8cb64fb3c23b26a4eaa
-ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
+ms.openlocfilehash: 4e818ffd943208eab323b1558f825bd87f3ddc4c
+ms.sourcegitcommit: 13599667ea77c16db1aebe64f8a6748c268f0b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/11/2017
 ---
 # <a name="release-notes-for-system-center-configuration-manager"></a>Anmerkungen zu dieser Version von System Center Configuration Manager
 
@@ -148,17 +148,6 @@ Wenn Sie den Client auf Windows-Computern bereitstellen, tritt bei der Installat
 **Problemumgehung**: Dieser Fehler wird durch eine zuvor installierte, beschädigte Version von Silverlight verursacht. Versuchen Sie, auf dem betroffenen Computer das folgende Tool auszuführen: [https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed](https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed)
 
 ## <a name="operating-system-deployment"></a>Betriebssystembereitstellung  
-
-### <a name="if-the-boot-image-contains-drivers-the-image-fails-to-reload-the-current-windows-pe-version-from-the-windows-assessment-and-deployment-kit-adk"></a>Wenn das Startimage Treiber enthält, kann das Image die aktuelle Windows PE-Version nicht erneut aus dem Windows Assessment and Deployment Kit (ADK) laden.
-<!-- 495087 -->
-Mit dem Updateverteilungspunkt-Assistenten können Sie Updateverteilungspunkte mit einem Startimage, das in der neuesten Version von Windows PE gespeichert ist, aus dem Installationsverzeichnis des Windows Assessment and Deployment Kit (ADK) aktualisieren. Öffnen Sie zum Aktualisieren den Updateverteilungspunkt-Assistenten, und wählen Sie **Neuladen dieses Startimages mit der aktuellen PE-Version von Windows ADK**.
-
-Wenn allerdings Ihr Startimage Treiber enthält, tritt beim Update ein Fehler auf. Stattdessen lädt der Assistent das Image neu aus dem ADK, zeigt ein Ausnahmedialogfeld an, das der Benutzer schließen kann, und dann einen Erfolgsbildschirm. Allerdings werden die aktuellen Configuration Manager-Clientkomponenten dem Startimage nicht hinzugefügt. Das Startimage wird auf dem Verteilungspunkt nicht aktualisiert.
-
-**Problemumgehung**: Führen Sie den Updateverteilungspunkt-Assistenten zweimal aus.
-
-1. Führen Sie den Assistenten mit Auswahl von **Dieses Startimage mit der aktuellen Windows PE-Version aus dem Windows ADK neu laden** aus. Dadurch wird die neueste Version von Windows PE abgerufen.
-2. Führen Sie den Assistenten erneut ohne Auswahl von **Dieses Startimage mit der aktuellen Windows PE-Version aus dem Windows ADK neu laden** aus. Hiermit werden die aktuellen Clientbinärdateien abgerufen und das Startimage auf dem Verteilungspunkt aktualisiert.
 
 ### <a name="servicing-plans-create-a-lot-of-duplicate-software-update-groups-and-deployments-by-default"></a>Wartungspläne erstellen standardmäßig eine Vielzahl von doppelten Softwareupdategruppen und -bereitstellungen  
 Der Assistent zum Erstellen eines Wartungsplans wird zurzeit standardmäßig nach jedem Synchronisierungsvorgang für Softwareupdates ausgeführt. Bei jeder Ausführung erstellt der Assistent eine neue Softwareupdategruppe und -bereitstellung. Wenn Sie z. B. über einen Synchronisierungszeitplan für Softwareupdates verfügen, der mehrmals täglich ausgeführt wird, erstellt der Assistent zum Erstellen eines Wartungsplans jeden Tag mehrere, wahrscheinlich identische, Softwareupdategruppen und -bereitstellungen.  

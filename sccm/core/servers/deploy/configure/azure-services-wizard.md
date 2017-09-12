@@ -14,11 +14,11 @@ caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 22203b358830903cf2e531c0532ae3111b8265fc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3046003f000c8abde28a5b6e3bcb88b159be5357
+ms.sourcegitcommit: 2a1328da3facb20b0c78f3b12adbb5fdbe0dcc11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Konfigurieren von Azure-Diensten zur Verwendung mit dem Configuration Manager
 
@@ -30,7 +30,7 @@ Dieser Assistent bietet eine allgemeine Konfigurationserfahrung mithilfe einer *
 
 Die folgenden Azure-Dienste werden mithilfe des Assistenten zum Konfigurieren von Azure-Diensten konfiguriert:
 -   **Cloud Management**  (Cloudverwaltung)  
-    [Enable clients to authenticate by using Azure Active Directory (Authentifizieren von Clients mithilfe von Azure Active Directory ermöglichen)]() (Azure AD). Sie können ebenfalls die [Azure AD-Benutzerermittlung konfigurieren](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc).
+    [Enable clients to authenticate by using Azure Active Directory (Authentifizieren von Clients mithilfe von Azure Active Directory ermöglichen)](/sccm/core/clients/deploy/deploy-clients-cmg-azure) (Azure AD). Sie können ebenfalls die [Azure AD-Benutzerermittlung konfigurieren](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc).
 -   **OMSConnector**
      (OMS-Connector):[ Connect to Operations Manager Suite (Stellen Sie eine Verbindung mit der Operations Manager-Suite)](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) (OMS) her und synchronisieren Sie die Daten wie Sammlungen mit der OMS-Protokollanalyse.
 -   **Upgrade Readiness (Upgradebereitschaft)**
@@ -85,7 +85,7 @@ Die Web-App für Azure-Dienste verbindet Ihren Configuration Manager-Standort mi
 
 6.  Klicken Sie auf der Seite **Discovery** (Ermittlung) des Assistenten auf **Enable Azure Active Directory User Discovery** (Azure Active Directory-Benutzerermittlung aktivieren), und klicken Sie dann auf **Settings** (Einstellungen).
 Konfigurieren Sie im Dialogfeld **Einstellungen der Azure AD-Benutzerermittlung** einen Zeitplan für die Ermittlung. Sie können auch die Deltaermittlung aktivieren, bei der nur eine Überprüfung auf neue oder geänderte Konten in Azure AD erfolgt. Erfahren Sie mir über die [Azure AD User Discovery (Azure AD-Benutzerermittlung](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
- 
+
  7. Schließen Sie den Assistenten ab.
 
 An diesem Punkt haben Sie Ihren Configuration Manager-Standort mit Azure AD verbunden.
