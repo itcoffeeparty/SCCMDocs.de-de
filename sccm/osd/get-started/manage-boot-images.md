@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: cc678c1133b1944f55bcad309cf9ede9f0660b57
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5668ba3ead3b7415508f9ecf02f2e119c3cd9cc6
+ms.sourcegitcommit: 2a1328da3facb20b0c78f3b12adbb5fdbe0dcc11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="manage-boot-images-with-system-center-configuration-manager"></a>Verwalten von Startimages mit System Center Configuration Manager
 
@@ -49,11 +49,10 @@ Vor Version 1702 aktualisiert Configuration Manager das vorhandene Startimage (b
 Wenn Sie Configuration Manager 2012 auf Configuration Manager CB mithilfe des Installationsprozesses upgraden, generiert Configuration Manager die Standardstartimages neu. Dies schließt die neue Windows PE-Version vom aktualisierten Windows ADK ein, die neue Version des Configuration Manager-Clients sowie alle Anpassungen bleiben unverändert. Benutzerdefinierte Startimages werden nicht geändert.
 
 ### <a name="update-distribution-points-with-the-boot-image"></a>Aktualisieren von Verteilungspunkten mithilfe des Startabbilds
-Wenn Sie die Aktion **Update Distribution Points** (Verteilungspunkte aktualisieren) aus dem Knoten **Boot Images** (Startimages) in der Configuration Manager-Konsole verwenden, aktualisiert Configuration Manager die Standardstartimages mit den Clientkomponenten, den Treibern, den Anpassungen usw.    
+Wenn Sie die Aktion **Verteilungspunkte aktualisieren** aus dem Knoten **Startimages** in der Configuration Manager-Konsole verwenden, aktualisiert Configuration Manager das Startimage des Ziels mit den Clientkomponenten, den Treibern, den Anpassungen usw.    
 
 Ab Version 1706 des Configuration Manager können Sie wahlweise die neueste Version von Windows PE in das Startimage laden (aus dem Installationsverzeichnis von Windows ADK). Die Seite **Allgemein** des Assistenten für die Aktualisierung von Verteilungspunkten enthält Informationen über die auf dem Standortserver installierte Windows ADK-Version, die Windows ADK-Version, von der aus Windows PE im Startimage verwendet wurde, und die Version des Configuration Manager-Clients. Anhand dieser Informationen können Sie entscheiden, ob Sie das Startimage erneut laden möchten. Darüber hinaus wurde eine neue Spalte hinzugefügt (**Clientversion**), die angezeigt wird, wenn Sie Startimages im Knoten **Startimages** anzeigen, damit Sie wissen, welche Version des Configuration Manager-Clients jedes Startimage verwendet.    
 
-Benutzerdefinierte Startimages werden nicht geändert.
 
 ##  <a name="BKMK_BootImageCustom"></a> Anpassen eines Startimages  
  Sie können ein Startimage über die Configuration Manager-Konsole anpassen oder [ein Startimage ändern](#BKMK_ModifyBootImages), wenn das Image auf einer Windows PE-Version aus der unterstützten Version von Windows ADK basiert. Wenn ein Standort mit einer neuen Version aktualisiert wird und eine neue Version von Windows ADK installiert wird, werden benutzerdefinierte Startimages (die sich nicht im Standardspeicherort für Startimages befinden) nicht mit der neuen Version von Windows ADK aktualisiert. In diesem Fall können Sie die Startimages in der Configuration Manager-Konsole nicht mehr anpassen. Diese funktionieren jedoch weiterhin wie vor dem Upgrade.  

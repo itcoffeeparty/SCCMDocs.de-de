@@ -2,7 +2,7 @@
 title: "Einführung in Zertifikatprofile | Microsoft-Dokumentation"
 description: Erfahren Sie, wie Zertifikatprofile in System Center Configuration Manager mit den Active Directory-Zertifikatdiensten funktionieren.
 ms.custom: na
-ms.date: 07/25/2017
+ms.date: 09/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,18 +14,18 @@ caps.latest.revision: "7"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 7b1c0e449f3d1ef42e279e8707df6bf1df163b3f
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e269b5836648d0d227e91a017512c16217e42646
+ms.sourcegitcommit: 13599667ea77c16db1aebe64f8a6748c268f0b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/11/2017
 ---
 # <a name="introduction-to-certificate-profiles-in-system-center-configuration-manager"></a>Einführung in Zertifikatprofile in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 
-Zertifikatprofile arbeiten mit Active Directory-Zertifikatdiensten und der Rolle „Registrierungsdienst für Netzwerkgeräte“, um Authentifizierungszertifikate für verwaltete Geräte bereitzustellen, damit Benutzer nahtlos auf Unternehmensressourcen zugreifen können. Sie können z. B. Zertifikatprofile erstellen und bereitstellen, um Benutzern die erforderlichen Zertifikate zum Initiieren von VPN- und Drahtlosverbindungen bereitzustellen. 
+Zertifikatprofile arbeiten mit Active Directory-Zertifikatdiensten und der Rolle „Registrierungsdienst für Netzwerkgeräte“, um Authentifizierungszertifikate für verwaltete Geräte bereitzustellen, damit Benutzer nahtlos auf Unternehmensressourcen zugreifen können. Sie können z. B. Zertifikatprofile erstellen und bereitstellen, um Benutzern die erforderlichen Zertifikate zum Initiieren von VPN- und Drahtlosverbindungen bereitzustellen.
 
 Mit Zertifikatprofilen können Benutzergeräte automatisch so konfiguriert werden, dass auf Unternehmensressourcen wie WLAN-Netzwerke und VPN-Server ohne manuelle Installation von Zertifikaten bzw. ohne Verwendung eines Out-of-Band-Prozesses zugegriffen werden kann. Mit Zertifikatprofilen können auch Unternehmensressourcen geschützt werden, da Sie sicherere Einstellungen verwenden können, die von der Public Key-Infrastruktur (PKI) Ihres Unternehmens unterstützt werden. Sie können z. B. eine Serverauthentifizierung für alle WLAN- und VPN-Verbindungen erforderlich machen, da Sie die erforderlichen Zertifikate auf den verwalteten Geräten bereitgestellt haben.   
 
@@ -52,7 +52,7 @@ Zertifikatprofile bieten die folgenden Verwaltungsfunktionen:
 
 -   **Privater Informationsaustausch (.pfx)**: Erlaubt es Ihnen, für ein Gerät oder einen Benutzer ein PFX-Zertifikat (auch als PKCS #12-Zertifikat bezeichnet) anzufordern.
 
-    Sie können PFX-Zertifikatprofile erstellen, indem Sie n entweder aus bestehenden Zertifikaten [Anmeldeinformationen importieren](/sccm/mdm/deploy-use/import-pfx-certificate-profiles.md) oder für die Bearbeitung von Anfragen [eine Zertifizierungsstelle definieren](/sccm/mdm/deploy-use/create-pfx-certificate-profiles.md).
+    Sie können PFX-Zertifikatprofile erstellen, indem Sie entweder aus bestehenden Zertifikaten [Anmeldeinformationen importieren](/sccm/mdm/deploy-use/import-pfx-certificate-profiles) oder für die Bearbeitung von Anfragen [eine Zertifizierungsstelle definieren](/sccm/mdm/deploy-use/create-pfx-certificate-profiles).
 
     Ab Version 1706 können Sie Microsoft oder Entrust als Zertifizierungsstelle für **PFX-Zertifikate (Personal information exchange)** nutzen.
 

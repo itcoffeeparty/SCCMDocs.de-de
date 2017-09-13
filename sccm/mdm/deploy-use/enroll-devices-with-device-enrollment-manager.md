@@ -2,7 +2,7 @@
 title: "Registrieren von Geräten mit dem Geräteregistrierungsmanager – Configuration Manager | Microsoft-Dokumentation"
 description: "Registrieren Sie unternehmenseigene Geräte mit dem Geräteregistrierungs-Managerkonto mit System Center Configuration Manager."
 ms.custom: na
-ms.date: 08/15/2017
+ms.date: 09/08/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "8"
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: c90ecca1ee46523d16fc1cf11495e40707631e03
-ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
+ms.openlocfilehash: dcc35fb6ebe385d07a3b60e8968e06dec8ad60af
+ms.sourcegitcommit: 40f2a4e3cc546e6bfd10f195a8e87af2b0780928
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="enroll-devices-with-device-enrollment-manager-with-configuration-manager"></a>Registrieren von Geräten mit dem Geräteregistrierungs-Manager mit Configuration Manager
 
@@ -40,7 +40,7 @@ Die folgenden Einschränkungen gelten für Geräte, die über ein Konto des Ger�
 -  Stellen Sie die Unternehmensportal-App als eine **Erforderliche Installation** auf dem Benutzerkonto des Geräteregistrierungs-Manager bereit, um Unternehmens-Apps für Geräte bereitzustellen, die mit dem Geräteregistrierungs-Manager verwaltet. Der Geräteregistrierungs-Manager kann dann die Unternehmensportal-App starten, um zusätzliche Apps zu installieren.
 - Zur Verbesserung der Leistung zeigt die Unternehmensportal-App nur das lokale Gerät an. Die Remoteverwaltung anderer DEM-Geräte kann nur vom Administrator in der Configuration Manager-Konsole ausgeführt werden
 - Die Unternehmensportal-Website ist nicht für Konten des Geräteregistrierungs-Managers verfügbar. Verwenden Sie die Unternehmensportal-App.
-- (Nur iOS:) Wenn Sie DEM für die Registrierung von iOS-Geräten verwenden, können Sie für die Registrierung der Geräte nicht Apple Configurator oder das Apple-Programm zur Geräteregistrierung (DEP) verwenden.
+- Wenn Sie DEM für die Registrierung von iOS-Geräten verwenden, können Sie für die Registrierung der Geräte nicht Apple Configurator oder das Apple-Programm zur Geräteregistrierung (DEP) verwenden. (nur iOS) 
 
  **Beispiele für ein Szenario des Geräteregistrierungs-Managers:**   
 Ein Restaurant möchte Point-of-Sale-Tablets für sein Bedienpersonal und Bestellmonitore für seine Küchenmitarbeiter. Die Mitarbeiter müssen niemals auf Unternehmensdaten zugreifen und sich nie als Benutzer anmelden. Der Intune-Administrator erstellt ein Konto für den Geräteregistrierungs-Manager und registriert die firmeneigenen Geräte mit diesem Konto. Alternativ kann der Administrator die Anmeldeinformationen des Geräteregistrierungs-Managers einem Restaurant-Manager geben, sodass dieser die Geräte registrieren und verwalten kann.  

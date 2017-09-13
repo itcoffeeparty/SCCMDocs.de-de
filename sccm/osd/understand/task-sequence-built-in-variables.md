@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 32b24b3637dfafe401ea1d9f51b3769aa749f544
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 09e1105521f5e72830c2816d04e16690064f4f64
+ms.sourcegitcommit: 40f2a4e3cc546e6bfd10f195a8e87af2b0780928
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="task-sequence-built-in-variables-in-system-center-configuration-manager"></a>Integrierte Tasksequenzvariablen in System Center Configuration Manager
 
@@ -97,6 +97,6 @@ ms.lasthandoff: 08/07/2017
 |SMSTSRebootMessage|Gibt die Meldung an, die bei einem angeforderten Neustart im Dialogfeld zum Herunterfahren angezeigt wird. Wenn diese Variable nicht festgelegt ist, wird eine Standardmeldung angezeigt.<br /><br /> Beispiel:<br /><br /> **Dieser Computer wird vom Tasksequenz-Manager neu gestartet.**|  
 |SMSTSRebootRequested|Gibt an, dass nach Abschluss des aktuellen Tasksequenzschritts ein Neustart erforderlich ist. Falls ein Neustart erforderlich ist, legen Sie für diese Variable einfach den Wert **true**fest. Der Computer wird dann nach diesem Tasksequenzschritt vom Tasksequenz-Manager neu gestartet. Diese Tasksequenzvariable muss vom Tasksequenzschritt festgelegt werden, wenn zum Abschluss des Schritts ein Neustart erforderlich ist. Nach dem Neustart des Computers wird die Tasksequenz mit dem nächsten Tasksequenzschritt fortgesetzt.|  
 |SMSTSRetryRequested|Fordert eine Wiederholung an, nachdem der aktuelle Tasksequenzschritt abgeschlossen ist. Wenn diese Tasksequenzvariable festgelegt wird, muss für die Variable **SMSTSRebootRequested** ebenfalls der Wert **true**festgelegt werden. Nach dem Neustart des Computers wird der gleiche Tasksequenzschritt vom Tasksequenz-Manager erneut ausgeführt.|  
-|SMSTSSoftwareUpdateScanTimeout| Bietet Ihnen die Möglichkeit, das Timeout für die Überprüfung auf Softwareupdates während des Tasksequenzschritts [Softwareupdates installieren](task-sequence-steps.md#BKMK_InstallSoftwareUpdates) zu steuern. Sie können beispielsweise den Standardwert erhöhen, wenn Sie viele Softwareupdates installieren möchten. Der Standardwert beträgt 30 Minuten. |
+|SMSTSSoftwareUpdateScanTimeout| Bietet Ihnen die Möglichkeit, das Timeout für die Überprüfung auf Softwareupdates während des Tasksequenzschritts [Softwareupdates installieren](task-sequence-steps.md#BKMK_InstallSoftwareUpdates) zu steuern. Sie können beispielsweise den Standardwert erhöhen, wenn Sie viele Softwareupdates installieren möchten. Der Standardwert beträgt 1.800 Sekunden (30 Minuten). Beachten Sie, dass der Wert der Variable in Sekunden festgelegt ist. |
 |SMSTSUDAUsers|Gibt den primären Benutzer des Zielcomputers an. Geben Sie die Benutzer im folgenden Format an: Trennen Sie mehrere Benutzer durch ein Komma (,).<br /><br /> Beispiel:<br /><br /> **Domäne\Benutzer1, Domäne\Benutzer2, Domäne\Benutzer3**<br /><br /> Weitere Informationen zum Zuordnen von Benutzern und Zielcomputern finden Sie unter [Zuordnen von Benutzern zu einem Zielcomputer](../get-started/associate-users-with-a-destination-computer.md).|  
 |SMSTSWaitForSecondReboot|Ab Configuration Manager Version 1602 steht diese optionale Tasksequenzvariable zur Verfügung, um das Clientverhalten zu steuern, wenn die Installation eines Softwareupdates zwei Neustarts erfordert. Diese Variable muss vor dem Schritt [Softwareupdates installieren](task-sequence-steps.md#BKMK_InstallSoftwareUpdates) festgelegt werden, um zu verhindern, dass ein zweiter Neustart während der Installation des Softwareupdates einen Fehler bei der Tasksequenz verursacht.<br /><br /> Legen Sie den SMSTSWaitForSecondReboot-Wert in Sekunden fest, um anzugeben, wie lange die Tasksequenz angehalten werden soll, wenn der Computer während des Schritts „Softwareupdates installieren“ neu gestartet wird, um genügend Zeit für einen möglichen zweiten Neustart des Computers zu gewähren. <br />Wenn Sie SMSTSWaitForSecondReboot z. B. auf den Wert 600 festlegen, wird die Tasksequenz nach einem Neustart 10 Minuten angehalten, bevor weitere Tasksequenzschritte ausgeführt werden. Dies ist hilfreich, wenn in einem einzigen Tasksequenzschritt „Softwareupdates installieren“ Hunderte von Softwareupdates installiert werden.|  

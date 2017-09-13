@@ -14,11 +14,11 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: dab99748902df0fad32a1e2adad0c05e0dd8bdc9
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c8110d9f5fec9027d34570623c32a7474e01b9af
+ms.sourcegitcommit: 2a1328da3facb20b0c78f3b12adbb5fdbe0dcc11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="checklist-for-installing-update-1706-for-system-center-configuration-manager"></a>Checkliste für die Installation des Updates 1706 für System Center Configuration Manager
 
@@ -62,7 +62,6 @@ Bei der ersten Verwendung einer Configuration Manager-Konsole nach Abschluss des
 > - **Replikationslinks** zwischen dem Standort der zentralen Verwaltung und untergeordneten primären Standorten werden als nicht aktualisiert angezeigt. Dies wird im Installationsstatus des Updatepakets als „Completed“ („Abgeschlossen“) mit der Warnung „Replikationsinitialisierung wird überwacht“ angezeigt. Im Knoten „Überwachung“ der Konsole wird dies als *Link wird konfiguriert* angezeigt.
 
 
-
 ## <a name="checklist"></a>Prüfliste
 
 **Stellen Sie sicher, dass an allen Standorten eine Version von System Center Configuration Manager ausgeführt wird, die ein Update auf Version 1706 unterstützt:**   
@@ -86,9 +85,9 @@ Diese Installation kann den Standortsystemserver in den Zustand „Ausstehender 
 
 Weitere Informationen finden Sie unter [Site and site system prerequisites for System Center Configuration Manager](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) (Standort- und Standortsystemanforderungen für System Center Configuration Manager).
 
-**Überprüfen Sie die Version des Windows Assessment and Deployment Kit (ADK) für Windows 10** Das ADK für Windows 10 sollte Version 1607 oder höher haben. Wenn Sie das ADK aktualisieren müssen, sollten Sie dies vor dem Update von Configuration Manager machen. So wird sichergestellt, dass die Standardstartabbilder automatisch auf die neueste Version der Windows PE aktualisiert werden. (Benutzerdefinierte Startabbilder müssen manuell aktualisiert werden.)
+**Überprüfen Sie die Version des Windows Assessment and Deployment Kit (ADK) für Windows 10**. Das ADK für Windows 10 sollte über die Version 1703 oder höher verfügen. (Weitere Informationen zu unterstützten Windows ADK-Versionen finden Sie unter [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk).) Wenn Sie das Windows ADK aktualisieren müssen, sollten Sie dies vor dem Update von Configuration Manager tun. So wird sichergestellt, dass die Standardstartabbilder automatisch auf die neueste Version der Windows PE aktualisiert werden. (Benutzerdefinierte Startabbilder müssen manuell aktualisiert werden.)
 
-Wenn Sie den Standort vor dem Update des ADKs aktualisieren, finden Sie unter [Configuration Manager and the Windows ADK for Windows 10, version 1607 (Configuration Manager und das Windows ADK für Windows 10, Version 1607)](https://blogs.technet.microsoft.com/enterprisemobility/2016/09/09/configuration-manager-and-the-windows-adk-for-windows-10-version-1607/) ein Skript zum erneuten Generieren der Startabbilder.
+Wenn Sie den Standort vor dem Windows ADK aktualisieren, finden Sie unter [Update distribution points with the boot image (Aktualisieren von Verteilungspunkten mithilfe des Startabbilds)](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image) weitere Informationen zu Verbesserungen dieses Prozesses in Configuration Manager Version 1706.
 
 **Prüfen Sie den Standort- und Hierarchiestatus, und stellen Sie sicher, dass keine ungelösten Probleme vorliegen:** Bevor Sie das Update für einen Standort durchführen, sollten Sie alle Betriebsprobleme beheben, die den Standortserver, den Standortdatenbankserver und die auf Remotecomputern installierten Standortsystemrollen betreffen. Betriebsprobleme können die Ursache für Fehler beim Update von Standorten sein.
 

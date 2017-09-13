@@ -2,7 +2,7 @@
 title: Dienstverbindungstools | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über das Dienstverbindungstool, mit dem Sie eine Verbindung mit dem Configuration Manager-Clouddienst herstellen können, um manuell Nutzungsinformationen hochzuladen."
 ms.custom: na
-ms.date: 4/7/2017
+ms.date: 09/06/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "11"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0da80521bf223a765c3731f8ad59623d85a4c9fa
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 8039ee0c704bbe570ec3e45ba648f779923087c6
+ms.sourcegitcommit: 2a1328da3facb20b0c78f3b12adbb5fdbe0dcc11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>Verwenden des Dienstverbindungstools für System Center Configuration Manager
 
@@ -81,7 +81,7 @@ Wenn Sie den folgenden Befehl ausführen, bereitet das Tool eine CAB-Datei vor, 
 Sie müssen auch den Ordner ServiceConnectionTool mit seinem gesamten Inhalt auf das USB-Laufwerk kopieren, oder andernfalls auf dem Computer zur Verfügung stellen, den Sie für die Schritte 3 und 4 verwenden.  
 
 ### <a name="overview"></a>Übersicht
-**Zur Verwendung des Dienstverbindungstools müssen Sie drei Hauptschritte ausführen:**  
+#### <a name="there-are-three-primary-steps-to-using-the-service-connection-tool"></a>Zur Verwendung des Dienstverbindungstools müssen Sie drei Hauptschritte ausführen.  
 
 1.  **Vorbereiten**: Dieser Schritt muss auf dem Computer ausgeführt werden, der den Dienstverbindungspunkt hostet. Wenn das Tool ausgeführt wird, werden Ihre Nutzungsdaten in einer CAB-Datei abgelegt und auf einem USB-Laufwerk (bzw. auf einem anderen angegebenen Umlagerungsort) gespeichert.  
 
@@ -91,15 +91,28 @@ Sie müssen auch den Ordner ServiceConnectionTool mit seinem gesamten Inhalt auf
 
 Ab Version 1606 können Sie mehrere CAB-Dateien gleichzeitig hochladen (jede aus einer anderen Hierarchie), wenn Sie eine Verbindung mit Microsoft herstellen und einen Proxyserver sowie einen Benutzer für den Proxyserver angeben.   
 
-**Hochladen mehrerer CAB-Dateien:**
+#### <a name="to-upload-multiple-cab-files"></a>Hochladen mehrerer CAB-Dateien
  -  Speichern Sie jede CAB-Datei, die Sie aus separaten Hierarchien exportieren, im gleichen Ordner. Der Name jeder Datei muss eindeutig sein. Falls nötig, können Sie sie manuell umbenennen.
  -  Wenn Sie anschließend den Befehl zum Hochladen der Daten zu Microsoft ausführen, geben Sie den Ordner an, der die CAB-Dateien enthält. (Vor dem Update 1606 war nur ein Hochladen von Daten aus einer einzelnen Hierarchie gleichzeitig möglich, und das Tool forderte die Angabe des Namens der CAB-Datei im Ordner.)
  -  Wenn Sie später die Importaufgabe auf einem Dienstverbindungspunkt einer Hierarchie ausführen, importiert das Tool automatisch nur die Daten dieser Hierarchie.  
 
-**So geben Sie einen Proxyserver an:**  
+#### <a name="to-specify-a-proxy-server"></a>Angeben eines Proxyservers
 Sie können die folgenden optionalen Parameter zum Angeben eines Proxyservers verwenden (Weitere Informationen zur Verwendung dieser Parameter sind im Abschnitt „Befehlszeilenparameter“ dieses Themas aufgeführt):
   - **-proxyserveruri [FQDN_of_proxy_server]**  Mit diesem Parameter können Sie den Proxyserver angeben, der für diese Verbindung genutzt werden soll.
   -  **proxyusername [Benutzername]**  Verwenden Sie diesen Parameter, wenn Sie einen Benutzer für den Proxyserver angeben müssen.
+
+#### <a name="specify-the-type-of-updates-to-download"></a>Angeben des Typs der herunterzuladenden Updates
+Ab Version 1706 ändert sich das Standardverhalten des Tools für Downloads, und das Tool unterstützt nun Optionen, mit denen Sie steuern können, welche Dateien Sie herunterladen.
+-   Standardmäßig lädt das Tool nur das letzte verfügbare Update herunter, das für die Version Ihres Standorts gilt. Es lädt keine Hotfixes herunter.
+
+Verwenden Sie zum Anpassen dieses Verhaltens einen der folgenden Parameter, um zu ändern, welche Dateien heruntergeladen werden. Die Version Ihres Standorts wird von den Daten in der CAB-Datei bestimmt, die beim Ausführen des Tools hochgeladen wird.
+-   **-downloadall** Diese Option lädt unabhängig von der Version Ihres Standorts alles herunter, einschließlich Updates und Hotfixes.
+-   **-downloadhotfix** Diese Option lädt unabhängig von der Version Ihres Standorts alle Hotfixes herunter.
+-   **-downloadsiteversion** Diese Option lädt Updates und Hotfixes herunter, deren Version höher ist als die Ihres Standorts.
+
+Beispielbefehlszeile, die *-downloadsiteversion* verwendet:
+- **serviceconnectiontool.exe -connect *-downloadsiteversion* -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
+
 
 
 
