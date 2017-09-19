@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 4b3668094d576b1b8710f08b384aa2f7c5eb0cca
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3a8e2759812dae2a328cd09efdc13f8534d14379
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="create-a-task-sequence-to-capture-and-restore-user-state-in-system-center-configuration-manager"></a>Erstellen einer Tasksequenz zum Erfassen und Wiederherstellen eines Benutzerzustands in System Center Configuration Manager
 
@@ -56,7 +56,7 @@ Mit Tasksequenzen von System Center Configuration Manager können Sie bei der Be
 
     -   Geben Sie im Feld **Wiederholungsverzögerung (in Sekunden)** an, wie viele Sekunden von der Tasksequenz bis zum nächsten Datenerfassungsversuch gewartet werden soll.  
 
-    -   Aktivieren Sie das Kontrollkästchen **Das Netzwerkzugriffskonto verwenden, wenn vom Computerkonto keine Verbindung mit dem Zustandsspeicher hergestellt werden kann**, um anzugeben, ob das [Netzwerkzugriffskonto](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#a-namebkmknaaa-network-access-account) von Configuration Manager zum Verbinden mit dem Zustandsspeicher verwendet werden soll.  
+    -   Aktivieren Sie das Kontrollkästchen **Das Netzwerkzugriffskonto verwenden, wenn vom Computerkonto keine Verbindung mit dem Zustandsspeicher hergestellt werden kann**, um anzugeben, ob das [Netzwerkzugriffskonto](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#bkmk_NAA) von Configuration Manager zum Verbinden mit dem Zustandsspeicher verwendet werden soll.  
 
      Geben Sie auf der Registerkarte **Optionen** die folgenden Optionen an:  
 
@@ -141,7 +141,7 @@ Mit Tasksequenzen von System Center Configuration Manager können Sie bei der Be
 
     -   Wählen Sie **Fortsetzen, wenn einige Dateien nicht wiederhergestellt werden können** aus, wenn der Schritt **Benutzerzustand wiederherstellen** auch fortgesetzt werden soll, falls eine Datei nicht wiederhergestellt werden kann.  
 
-         Wenn Sie den Benutzerzustand mithilfe von lokalen Links speichern und die Wiederherstellung nicht erfolgreich ist, kann der Administrator die zum Speichern der Daten erstellen festen Links manuell löschen. Alternativ kann das Tool USMTUtils von der Tasksequenz ausgeführt werden. Wenn Sie die festen Links mithilfe von USMTUtils löschen, fügen Sie nach dem Ausführen von USMTUtils den Schritt [Computer neu starten](../understand/task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer) hinzu.  
+         Wenn Sie den Benutzerzustand mithilfe von lokalen Links speichern und die Wiederherstellung nicht erfolgreich ist, kann der Administrator die zum Speichern der Daten erstellen festen Links manuell löschen. Alternativ kann das Tool USMTUtils von der Tasksequenz ausgeführt werden. Wenn Sie die festen Links mithilfe von USMTUtils löschen, fügen Sie nach dem Ausführen von USMTUtils den Schritt [Computer neu starten](../understand/task-sequence-steps.md#BKMK_RestartComputer) hinzu.  
 
     -   Aktivieren Sie das Kontrollkästchen **Ausführliche Protokollierung aktivieren** , um den Umfang der Informationen anzugeben, die bei einem Fehler in Protokolldateien geschrieben werden.  
 

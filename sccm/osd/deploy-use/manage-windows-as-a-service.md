@@ -14,11 +14,11 @@ caps.latest.revision: "26"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 2c2c0f81736c1b00ea487ae1261803a8105bb5e4
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: fe02981433482ebf6880feec3e1822e6e8f4550f
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>Verwalten von Windows als Dienst mit System Center Configuration Manager
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 08/07/2017
 
 -   WSUS 4.0 mit dem [Hotfix 3159706](https://support.microsoft.com/kb/3159706) muss auf Ihren Softwareupdatepunkten und Standortservern installiert sein, um ein Upgrade von Computern auf Windows 10 Anniversary Update sowie Unterversionen durchzuführen. Im Support-Artikel werden manuelle Schritte beschrieben, die Sie ausführen müssen, um diesen Hotfix zu installieren. Weitere Informationen finden Sie im Blog [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/05/update-your-configmgr-1606-sup-servers-to-deploy-the-windows-10-anniversary-update/).
 
--   Aktivieren Sie die Frequenzermittlung. Die im Windows 10-Wartungsdashboard angezeigten Daten werden mithilfe der Ermittlung gesammelt. Weitere Informationen finden Sie unter [Configure Heartbeat Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#a-namebkmkconfighbdisca-configure-heartbeat-discovery).  
+-   Aktivieren Sie die Frequenzermittlung. Die im Windows 10-Wartungsdashboard angezeigten Daten werden mithilfe der Ermittlung gesammelt. Weitere Informationen finden Sie unter [Configure Heartbeat Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#BKMK_ConfigHBDisc).  
 
      Die folgenden Branch- und Buildinformationen zu Windows 10 werden ermittelt und in den folgenden Attributen gespeichert:  
 

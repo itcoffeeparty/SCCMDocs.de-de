@@ -14,11 +14,11 @@ caps.latest.revision: "10"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 2f3d66362c49d28a52d7f9c535eb0b3b4cc4eaf7
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c9d94ffb61ed7a7fa40a01eedc763a16a8df30cb
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>Verwalten von Tasksequenzen zum Automatisieren von Aufgaben in System Center Configuration Manager
 
@@ -196,7 +196,7 @@ Folgende Benachrichtigung wird angezeigt, wenn der Endbenutzer die Installation 
 
 8.  Schließen Sie den Assistenten ab.  
 
- Sie können den Inhalt, auf den in der Tasksequenz verwiesen wird, vorab bereitstellen. Configuration Manager erstellt eine komprimierte, vorab bereitgestellte Inhaltsdatei, die die Dateien, zugeordnete Abhängigkeiten und zugeordnete Metadaten für den von Ihnen ausgewählten Inhalt umfasst. Sie können den Inhalt dann manuell in einen Standortserver, sekundären Standort oder Verteilungspunkt importieren. Weitere Informationen zum Vorabbereitstellen von Inhaltsdateien finden Sie unter [Vorabbereitstellen von Inhalt](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content).  
+ Sie können den Inhalt, auf den in der Tasksequenz verwiesen wird, vorab bereitstellen. Configuration Manager erstellt eine komprimierte, vorab bereitgestellte Inhaltsdatei, die die Dateien, zugeordnete Abhängigkeiten und zugeordnete Metadaten für den von Ihnen ausgewählten Inhalt umfasst. Sie können den Inhalt dann manuell in einen Standortserver, sekundären Standort oder Verteilungspunkt importieren. Weitere Informationen zum Vorabbereitstellen von Inhaltsdateien finden Sie unter [Vorabbereitstellen von Inhalt](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_prestage).  
 
 ##  <a name="BKMK_DeployTS"></a> Bereitstellen einer Tasksequenz  
  Mithilfe der folgenden Vorgehensweise können Sie eine Tasksequenz auf Computern in einer Sammlung bereitstellen.  
@@ -464,7 +464,7 @@ Sie können computerspezifische Variablen an einem primären Standort oder an ei
 |**Kopieren**|Hiermit wird eine Kopie der ausgewählten Tasksequenz erstellt. Diese Aktion kann sich als nützlich erweisen, wenn Sie eine neue Tasksequenz erstellen möchten, die auf einer vorhandenen Tasksequenz basiert.<br /><br /> Wenn Sie in einem Ordner eine Kopie einer Tasksequenz erstellen, wird die Kopie in diesem Ordner aufgeführt, bis Sie den Tasksequenzknoten aktualisieren.  Nach der Aktualisierung wird die Kopie im Stammordner angezeigt.|  
 |**Deaktivieren**|Hiermit wird die Tasksequenz deaktiviert, damit sie nicht auf Computern ausgeführt werden kann. Deaktivierte Tasksequenzen können zwar an Computer bereitgestellt werden, aber sie werden von den Computern erst ausgeführt, nachdem sie aktiviert wurden.|  
 |**Aktivieren**|Hiermit wird die Tasksequenz aktiviert, damit sie ausgeführt werden kann. Es ist nicht notwendig, eine bereitgestellte Tasksequenz nach der Aktivierung erneut bereitzustellen.|  
-|**Datei für vorab bereitgestellten Inhalt erstellen**|Hiermit wird der Assistenten zum Erstellen von vorab bereitgestellten Inhaltsdateien gestartet, mit dem der Inhalt der Tasksequenz vorab bereitgestellt wird. Informationen zum Erstellen einer vorab bereitgestellten Inhaltsdatei finden Sie unter [Vorabbereitstellen von Inhalt](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content).|  
+|**Datei für vorab bereitgestellten Inhalt erstellen**|Hiermit wird der Assistenten zum Erstellen von vorab bereitgestellten Inhaltsdateien gestartet, mit dem der Inhalt der Tasksequenz vorab bereitgestellt wird. Informationen zum Erstellen einer vorab bereitgestellten Inhaltsdatei finden Sie unter [Vorabbereitstellen von Inhalt](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_prestage).|  
 |**Verschieben**|Hiermit wird die ausgewählte Tasksequenz in einen anderen Ordner verschoben.|  
 
 ## <a name="next-steps"></a>Nächste Schritte

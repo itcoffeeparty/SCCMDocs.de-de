@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 caps.latest.revision: "7"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 28bea9210c9c58dabbb00a995e78cfedd1738291
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c0a43ac7b529444b33edf8afbf52911127226f88
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="revise-and-supersede-applications-in-system-center-configuration-manager"></a>Überarbeiten und Ablösen von Anwendungen in System Center Configuration Manager
 
@@ -51,13 +51,13 @@ In diesem Thema erfahren Sie, wie Sie mit System Center Configuration Manager-An
 
 1.  Wählen Sie im Dialogfeld **Anwendungsrevisionsverlauf** eine Anwendungsrevision aus, und wählen Sie dann **Wiederherstellen** aus.  
 
-2.  Wählen Sie im Dialogfeld zum**** Bestätigen der Wiederherstellung der Revision **Ja** aus, um die ausgewählte Anwendungsrevision wiederherzustellen.  
+2.  Wählen Sie im Dialogfeld zum** **Bestätigen der Wiederherstellung der Revision **Ja** aus, um die ausgewählte Anwendungsrevision wiederherzustellen.  
 
 ### <a name="to-delete-an-application-revision"></a>So löschen Sie eine Anwendungsrevision  
 
 1.  Wählen Sie im Dialogfeld **Anwendungsrevisionsverlauf** eine Anwendungsrevision aus, und wählen Sie dann **Löschen** aus.  
 
-2.  Wählen Sie im Dialogfeld zum**** Bestätigen des Löschens der Anwendungsrevision **Ja** aus.  
+2.  Wählen Sie im Dialogfeld zum** **Bestätigen des Löschens der Anwendungsrevision **Ja** aus.  
 
 > [!IMPORTANT]  
 >  Sie können die aktuelle Anwendungsrevision nur löschen, wenn die Anwendung zuvor außer Kraft gesetzt wurde und keine Verweise enthält.  
@@ -102,7 +102,7 @@ In diesem Thema erfahren Sie, wie Sie mit System Center Configuration Manager-An
 
 3.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Eigenschaften** die Option **Eigenschaften** aus, um das Dialogfeld **Eigenschaften** für die Anwendung zu öffnen.  
 
-4.  Wählen Sie auf der Registerkarte **Ablösung** im Dialogfeld **Eigenschaften von** *<Anwendungsname\>* die Option **Hinzufügen** aus.  
+4.  Wählen Sie auf der Registerkarte **Ablösung** im Dialogfeld **Eigenschaften von ***<Anwendungsname\>* die Option **Hinzufügen** aus.  
 
 5.  Klicken Sie im Dialogfeld **Ablösungsbeziehung angeben** auf **Durchsuchen**.  
 
@@ -115,7 +115,7 @@ In diesem Thema erfahren Sie, wie Sie mit System Center Configuration Manager-An
 
 8.  Wählen Sie **OK** aus, um das Dialogfeld **Ablösungsbeziehung angeben** zu schließen.  
 
-9. Wählen Sie **OK** aus, um das Dialogfeld **Eigenschaften von** *<Anwendungsname\>* zu schließen.  
+9. Wählen Sie **OK** aus, um das Dialogfeld **Eigenschaften von ***<Anwendungsname\>* zu schließen.  
 
 ### <a name="to-display-applications-that-supersede-the-current-application"></a>So zeigen Sie Anwendungen an, von der die aktuelle Anwendung abgelöst wird  
 
@@ -123,8 +123,8 @@ In diesem Thema erfahren Sie, wie Sie mit System Center Configuration Manager-An
 
 2.  Erweitern Sie im Arbeitsbereich **Softwarebibliothek** den Bereich **Anwendungsverwaltung**, und wählen Sie **Anwendungen** und dann die gewünschte Anwendung aus.  
 
-3.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Eigenschaften** die Option **Eigenschaften** aus, um das Dialogfeld **Eigenschaften von** *<Anwendungsname\>* zu öffnen.  
+3.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Eigenschaften** die Option **Eigenschaften** aus, um das Dialogfeld **Eigenschaften von ***<Anwendungsname\>* zu öffnen.  
 
-4.  Wählen Sie auf der Registerkarte **Referenzen** im Dialogfeld **Eigenschaften von** *<Anwendungsname\>* in der Dropdownliste **Beziehungstyp** die Option **Anwendungen, die diese Anwendung ablösen** aus.  
+4.  Wählen Sie auf der Registerkarte **Referenzen** im Dialogfeld **Eigenschaften von ***<Anwendungsname\>* in der Dropdownliste **Beziehungstyp** die Option **Anwendungen, die diese Anwendung ablösen** aus.  
 
-5.  Prüfen Sie die Liste der Anwendungen, von denen die ausgewählte Anwendung abgelöst wird, und klicken Sie dann auf **OK**, um das Dialogfeld **Eigenschaften von** *<Anwendungsname\>* zu schließen.  
+5.  Prüfen Sie die Liste der Anwendungen, von denen die ausgewählte Anwendung abgelöst wird, und klicken Sie dann auf **OK**, um das Dialogfeld **Eigenschaften von ***<Anwendungsname\>* zu schließen.  

@@ -11,14 +11,14 @@ ms.topic: article
 ms.assetid: df10dc4d-c9ff-4574-bb33-8d30eb14cfe3
 caps.latest.revision: "13"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: bcb2d14ef097afc2915932fe09f6d83c968aecf9
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 092bb15e6c1d5cdfb5b8670ad46028a6daa49b8b
+ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="how-to-create-configuration-items-for-windows-phone-devices-managed-without-the-system-center-configuration-manager-client"></a>Erstellen von Konfigurationselementen für Windows Phone-Geräte, die ohne den System Center Configuration Manager-Client verwaltet werden
 Verwenden Sie das **Windows Phone**-Konfigurationselement von System Center Configuration Manager, um Einstellungen für Windows Phone-Geräte zu verwalten, die bei Microsoft Intune registriert sind oder lokal von Configuration Manager verwaltet werden.  
@@ -286,7 +286,7 @@ Verwenden Sie das **Windows Phone**-Konfigurationselement von System Center Conf
  Es ist nicht möglich, zulässige und blockierte Apps im selben Konfigurationselement anzugeben.  
   
 > [!IMPORTANT]  
->  Wenn Sie eine Liste zulässiger Apps angeben, müssen Sie sicherstellen, dass die Unternehmensportal-App und andere Apps, die Sie für Windows Phone 8.1-Geräte bereitgestellt haben, in der Liste zulässiger Apps ****  enthalten sind.  
+>  Wenn Sie eine Liste zulässiger Apps angeben, müssen Sie sicherstellen, dass die Unternehmensportal-App und andere Apps, die Sie für Windows Phone 8.1-Geräte bereitgestellt haben, in der Liste zulässiger Apps ** ** enthalten sind.  
   
 ##### <a name="to-specify-an-allowed-or-blocked-apps-list"></a>So geben Sie eine Liste zulässiger oder blockierter Apps an  
   

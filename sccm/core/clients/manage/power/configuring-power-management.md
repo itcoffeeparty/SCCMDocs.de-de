@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 435c923c-ea30-4dce-8afd-48962ed85502
 caps.latest.revision: "5"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: e111ac2545dd9e0b96a50c10246bb75d286a737a
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 7d2125464103cf0c040592c9f7ddbc25ae022758
+ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="configuring-power-management-in-system-center-configuration-manager"></a>Konfigurieren der Energieverwaltung in System Center Configuration Manager
 
@@ -81,6 +81,6 @@ Bevor Sie die Energieverwaltung in System Center Configuration Manager verwenden
 
 3.  Wählen Sie in der Liste **Gerätesammlungen** die Sammlung aus, die Sie aus der Energieverwaltung ausschließen möchten. Klicken Sie dann auf der Registerkarte **Startseite** in der Gruppe **Eigenschaften** auf **Eigenschaften**.  
 
-4.  Wählen Sie im Dialogfeld **Eigenschaften** von *Sammlungsname\>* auf der Registerkarte  **Energieverwaltung** die Option **Energieverwaltungseinstellungen nie auf Computer in dieser Sammlung anwenden**.  
+4.  Wählen Sie im Dialogfeld **Eigenschaften** von *Sammlungsname\>* auf der Registerkarte ** Energieverwaltung** die Option **Energieverwaltungseinstellungen nie auf Computer in dieser Sammlung anwenden**.  
 
 5.  Klicken Sie auf **OK**, um das **Dialogfeld** Eigenschaften von *Sammlungsname\>* zu schließen und die Einstellungen zu speichern.  
