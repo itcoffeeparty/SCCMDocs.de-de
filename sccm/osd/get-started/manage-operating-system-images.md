@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 6953c3834ca303b949f22436010a87b3da9688dc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 9edefdbe77085d157b524904a514a2b5c472b1be
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="manage-operating-system-images-with-system-center-configuration-manager"></a>Verwalten von Betriebssystemimages mit System Center Configuration Manager
 
@@ -81,7 +81,7 @@ Die Schritte zum Erstellen eines benutzerdefinierten Betriebssystemimages finden
  Sie können nun das Betriebssystemabbild an Verteilungspunkte verteilen.  
 
 ##  <a name="BKMK_DistributeBootImages"></a> Verteilen von Betriebssystemimages an Verteilungspunkte  
- Betriebssystemabbilder werden genau wie anderer Inhalt an Verteilungspunkte verteilt. In den meisten Fällen müssen Sie das Betriebssystemabbild an mindestens einen Verteilungspunkt verteilen, bevor Sie das Betriebssystem bereitstellen. Die Schritte zum Verteilen von Betriebssystemabbildern finden Sie unter [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).  
+ Betriebssystemabbilder werden genau wie anderer Inhalt an Verteilungspunkte verteilt. In den meisten Fällen müssen Sie das Betriebssystemabbild an mindestens einen Verteilungspunkt verteilen, bevor Sie das Betriebssystem bereitstellen. Die Schritte zum Verteilen von Betriebssystemabbildern finden Sie unter [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
 
 ##  <a name="BKMK_OSImagesApplyUpdates"></a>Anwenden von Softwareupdates auf ein Betriebssystemimage  
  Es werden regelmäßig neue Softwareupdates veröffentlicht, die für das Betriebssystem in Ihrem Betriebssystemabbild gelten. Vor dem Anwenden von Softwareupdates auf ein Image müssen die Softwareupdateinfrastruktur vorhanden, Softwareupdates erfolgreich synchronisiert und die Softwareupdates aus der Inhaltsbibliothek auf den Standortserver heruntergeladen worden sein. Weitere Informationen finden Sie unter [Bereitstellen von Softwareupdates](../../sum/deploy-use/deploy-software-updates.md).  
@@ -135,6 +135,6 @@ Die Schritte zum Erstellen eines benutzerdefinierten Betriebssystemimages finden
 
     -   **Dieses Paket nur per Multicast übertragen**: Geben Sie an, ob das Abbild vom Verteilungspunkt nur während einer Multicastsitzung bereitgestellt werden soll.  
 
-         Bei Auswahl dieser Option **** müssen Sie auch **Inhalt lokal herunterladen, wenn dies für die Ausführung der Tasksequenz erforderlich ist** als Bereitstellungsoption für das Betriebssystemabbild angeben. Sie können die Bereitstellungsoptionen für das Abbild während der Bereitstellung des Betriebssystemabbilds oder zu einem späteren Zeitpunkt durch Bearbeitung der Bereitstellungseigenschaften angeben. Die Bereitstellungsoptionen finden Sie auf der Seite **Eigenschaften** des Bereitstellungsobjekts auf der Registerkarte **Verteilungspunkte** .  
+         Bei Auswahl dieser Option ** **müssen Sie auch **Inhalt lokal herunterladen, wenn dies für die Ausführung der Tasksequenz erforderlich ist** als Bereitstellungsoption für das Betriebssystemabbild angeben. Sie können die Bereitstellungsoptionen für das Abbild während der Bereitstellung des Betriebssystemabbilds oder zu einem späteren Zeitpunkt durch Bearbeitung der Bereitstellungseigenschaften angeben. Die Bereitstellungsoptionen finden Sie auf der Seite **Eigenschaften** des Bereitstellungsobjekts auf der Registerkarte **Verteilungspunkte** .  
 
 6.  Klicken Sie auf **OK**.  

@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 caps.latest.revision: "10"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: f704d1b0ec48e3a7bbea784a7c18de77b21cd0ee
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 801c21e0015d63f736fb2207e85f484dc50d56dc
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="deploy-applications-with-system-center-configuration-manager"></a>Bereitstellen von Anwendungen mit System Center Configuration Manager
 
@@ -100,7 +100,7 @@ Wenn diese Option ausgewählt ist, muss der Administrator jede Benutzeranforderu
     >  Nachdem Sie eine Anwendung für die Installation genehmigt haben, können Sie anschließend auswählen, die Anforderung zu verweigern, indem Sie in der Configuration Manager-Konsole auf **Verweigern** klicken (bisher war diese Schaltfläche nach der Genehmigung ausgegraut).
     >  Diese Aktion führt nicht dazu, dass die Anwendung auf allen Geräten deinstalliert wird, sondern hindert Benutzer daran, neue Kopien der Anwendung aus dem Softwarecenter herunterzuladen.
 
-- **Automatically upgrade any superseded version of this application**  (Jede abgelöste Version dieser Anwendung automatisch aktualisieren)  
+- **Automatically upgrade any superseded version of this application ** (Jede abgelöste Version dieser Anwendung automatisch aktualisieren)  
 Wenn diese Option ausgewählt ist, wird jede abgelöste Version der Anwendung auf die neuere Anwendung aktualisiert.
 
 ### <a name="specify-scheduling-settings-for-the-deployment"></a>Angeben von Einstellungen zur Zeitplanung der Bereitstellung

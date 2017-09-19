@@ -11,14 +11,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e46ad501-5d73-44ac-92de-0de14ef72b83
 caps.latest.revision: "12"
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 6ce212c6745b70a47553891e5dbc124b4c4e50fa
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: af6faf4cd317452f635ec30e74a3aa2e14f1662a
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="how-to-deploy-clients-to-macs"></a>How to deploy clients to Macs
 
@@ -220,7 +220,7 @@ Führen Sie anschließend diese Aufgaben aus:
 
 3.  Geben Sie die folgende Befehlszeile ein: **sudo ./ccmsetup -MP <Verwaltungspunkt_Internet-FQDN\> -SubjectName <Wert für Zertifikatantragsteller\>**.  Beim Wert für den Zertifikatantragsteller muss die Groß-/Kleinschreibung beachtet werden, daher muss dieser genauso eingegeben werden, wie er in den Zertifikatdetails angezeigt wird.  
 
-     Beispiel: Wenn der Internet-FQDN in den Standortsystemeigenschaften **server03.contoso.com** lautet und das Macintosh-Client-Zertifikat den FQDN von **mac12.contoso.com** als allgemeinen Namen für den Zertifikatantragsteller verwendet, geben Sie Folgendes ein: **sudo ./ccmsetup -MP server03.contoso.com -SubjectName mac12.contoso.com**  
+     Beispiel: Wenn der Internet-FQDN in den Standortsystemeigenschaften **server03.contoso.com** lautet und das Macintosh-Client-Zertifikat den FQDN von **mac12.contoso.com **als allgemeinen Namen für den Zertifikatantragsteller verwendet, geben Sie Folgendes ein: **sudo ./ccmsetup -MP server03.contoso.com -SubjectName mac12.contoso.com**  
 
 4.  Warten Sie, bis die Meldung **Installation abgeschlossen** angezeigt wird, und starten Sie anschließend den Macintosh-Computer neu.  
 

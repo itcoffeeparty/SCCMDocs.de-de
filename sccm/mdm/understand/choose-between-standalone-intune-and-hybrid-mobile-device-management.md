@@ -14,18 +14,18 @@ caps.latest.revision: "10"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 26c36df77c21254c7ad2b8a45906bd3706f9ec65
-ms.sourcegitcommit: 06aef618f72c700f8a716a43fb8eedf97c62a72b
+ms.openlocfilehash: 5c9e80fc5bc3f0629e1c27a4928b8a51cfe1ee7e
+ms.sourcegitcommit: 948644072bd158b156f782a4376bcd50fac7c73a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="choose-between-microsoft-intune-standalone-and-hybrid-mobile-device-management-with-system-center-configuration-manager"></a>Wählen zwischen Microsoft Intune Standalone und der hybriden Verwaltung mobiler Geräte mit System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 Eine der am häufigsten gestellten Fragen bezüglich der Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit Microsoft Intune ist folgende: „Sollte ich die hybride Verwaltung mobiler Geräte mit Intune und Configuration Manager bereitstellen oder Intune Standalone in der Konfiguration nur für die Cloud ausführen?“ Um diese Frage zu beantworten, sollten Sie die beiden Optionen sorgfältig gegeneinander abwägen.
-
+ 
 ## <a name="intune-standalone"></a>Intune Standalone
 Intune Standalone ist die empfohlene Bereitstellungstopologie von Microsoft. Intune Standalone ist eine rein cloudbasierte MDM-Lösung, die mithilfe einer Webkonsole verwaltet wird, auf die von überall in der Welt aus zugegriffen werden kann. Intune Rechenzentren werden in Nordamerika, Europa und Asien gehostet. Da Intune ein Clouddienst ist, können Sie die Intune-Verwaltung auf Ihren Geräten in einem relativ kleinen Zeitrahmen bereitstellen.
 

@@ -11,14 +11,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ab1aecdd-d943-44f5-b0a9-e8fe7439e5d6
 caps.latest.revision: "9"
-author: robstackmsft
-ms.author: robstack
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: ffd66a4047ec253704e9772e2c3e3a4d9db7c46f
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 703f2d4d73334ef66a7c217c04e66658a7b56157
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="create-mac-computer-applications-with-system-center-configuration-manager"></a>Erstellen von Anwendungen für Macintosh-Computer mit System Center Configuration Manager
 
@@ -157,9 +157,9 @@ Gehen Sie wie folgt vor, um eine Anwendung für Macintosh-Computer, die von Conf
 
 6.  Wählen Sie **Weiter** aus.  
 
-7.  Überprüfen Sie auf der Seite **Informationen importieren** des **** Assistenten zum Erstellen neuer Bereitstellungstypen die importierten Informationen. Bei Bedarf können Sie **Zurück** auswählen, um Fehler zu korrigieren. Wählen Sie zum Fortfahren **Weiter** aus.  
+7.  Überprüfen Sie auf der Seite **Informationen importieren** des ** **Assistenten zum Erstellen neuer Bereitstellungstypen die importierten Informationen. Bei Bedarf können Sie **Zurück** auswählen, um Fehler zu korrigieren. Wählen Sie zum Fortfahren **Weiter** aus.  
 
-8.  Geben Sie auf der Seite **Allgemeine Informationen** des **** Assistenten zum Erstellen neuer Bereitstellungstypen Informationen zur Anwendung an, beispielsweise Anwendungsname, Kommentare und die Sprachen, in denen dieser Bereitstellungstyp verfügbar sein soll.  
+8.  Geben Sie auf der Seite **Allgemeine Informationen** des ** **Assistenten zum Erstellen neuer Bereitstellungstypen Informationen zur Anwendung an, beispielsweise Anwendungsname, Kommentare und die Sprachen, in denen dieser Bereitstellungstyp verfügbar sein soll.  
 
     > [!NOTE]  
     >  Einige Informationen zum Bereitstellungstyp sind auf dieser Seite möglicherweise schon vorhanden, wenn sie bereits aus den Anwendungsinstallationsdateien abgerufen wurden.  
@@ -185,7 +185,7 @@ Gehen Sie wie folgt vor, um eine Anwendung für Macintosh-Computer, die von Conf
 
 17. Wählen Sie im **Assistenten zum Erstellen neuer Bereitstellungstypen** auf der Seite **Anforderungen** **Weiter** aus.  
 
-18. Überprüfen Sie im Assistenten zum Erstellen neuer Bereitstellungstypen auf der Seite **Zusammenfassung** die Aktionen, die von diesem Assistenten **** ausgeführt werden sollen.  Bei Bedarf können Sie **Zurück** auswählen, um die Einstellungen für den Bereitstellungstyp zu ändern. Wählen Sie **Weiter** aus, um den Bereitstellungstyp zu erstellen.  
+18. Überprüfen Sie im Assistenten zum Erstellen neuer Bereitstellungstypen auf der Seite **Zusammenfassung** die Aktionen, die von diesem Assistenten ** **ausgeführt werden sollen.  Bei Bedarf können Sie **Zurück** auswählen, um die Einstellungen für den Bereitstellungstyp zu ändern. Wählen Sie **Weiter** aus, um den Bereitstellungstyp zu erstellen.  
 
 19. Nachdem die Seite **Status** abgeschlossen ist, überprüfen Sie die ausgeführten Aktionen, und wählen Sie dann **Schließen** aus, um den **Assistenten zum Erstellen von Bereitstellungstypen** abzuschließen.  
 

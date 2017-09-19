@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 caps.latest.revision: "14"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 4d048d4f9ab01b28e6c21a38cca4d82c85030618
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 41563624700510e92332b6939d38d902e7dffb94
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="create-applications-with-system-center-configuration-manager"></a>Erstellen von Anwendungen mit System Center Configuration Manager
 
@@ -421,7 +421,7 @@ In der folgenden Tabelle sind Beispielskripte für Microsoft Visual Basic (VB) a
 
 5.  Wählen Sie **OK** aus, um das Dialogfeld *<Name des Bereitstellungstyps\>* **Eigenschaften** zu schließen.  
 
-6.  Wählen Sie **OK** aus, um das Dialogfeld **Eigenschaften von** *<Anwendungsname\>* zu schließen.  
+6.  Wählen Sie **OK** aus, um das Dialogfeld **Eigenschaften von ***<Anwendungsname\>* zu schließen.  
 
 ### <a name="set-up-publishing-options-for-app-v-deployment-types"></a>Einrichten von Veröffentlichungsoptionen für App-V-Bereitstellungstypen  
 
@@ -435,7 +435,7 @@ In der folgenden Tabelle sind Beispielskripte für Microsoft Visual Basic (VB) a
 
 6.  Wählen Sie **OK** aus, um das Dialogfeld *<Name des Bereitstellungstyps\>* **Eigenschaften** zu schließen.  
 
-7.  Wählen Sie **OK** aus, um das Dialogfeld **Eigenschaften von** *<Anwendungsname\>* zu schließen.  
+7.  Wählen Sie **OK** aus, um das Dialogfeld **Eigenschaften von ***<Anwendungsname\>* zu schließen.  
 
 ## <a name="import-an-application"></a>Importieren einer Anwendung  
  Gehen Sie wie folgt vor, um eine Anwendung in Configuration Manager zu importieren. Informationen zum Exportieren von Anwendungen finden Sie unter [Management tasks for System Center Configuration Manager applications (Verwaltungsaufgaben für System Center Configuration Manager-Anwendungen)](../../apps/deploy-use/management-tasks-applications.md).  
