@@ -2,7 +2,7 @@
 title: Konsoleninterne Updates | Microsoft-Dokumentation
 description: "System Center Configuration Manager wird mit dem Microsoft-Clouddienst synchronisiert, um Updates abzurufen, die in der Konsole installieren werden können."
 ms.custom: na
-ms.date: 06/13/2017
+ms.date: 09/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "36"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 2bbc8935bee306ed0bc312cc43b8f5374a8df7ff
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 10ddbcc19da8c5fc6451f62500f17790a0349389
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="install-in-console-updates-for-system-center-configuration-manager"></a>Installieren konsoleninterner Updates für System Center Configuration Manager
 
@@ -105,6 +105,9 @@ Bevor Sie ein Update installieren, sollten Sie die Voraussetzungsprüfung für d
 -   Die Updatedateien werden an andere Standorte repliziert, bevor das Update installiert wird.  
 
 -   Die Voraussetzungsprüfung wird automatisch erneut ausgeführt, wenn Sie sich für die Installation des Updates entscheiden.  
+
+> [!NOTE]
+> Wenn Sie eine Voraussetzungsprüfung starten und dann den Status anzeigen, wird die Phase **Installation** als aktiv angezeigt. Das Update wird jedoch tatsächlich nicht installiert. Die Installationsphase wird angezeigt, weil einige Tasks, wie z.B. das Extrahieren der für die Ausführung der Überprüfung erforderlichen Binärdateien, ebenfalls zur Installationsphase gehören.  
 
 Wenn Sie später das Update installieren, können Sie das Update so konfigurieren, das Warnungen der Voraussetzungsprüfung ignoriert werden.  
 
@@ -288,7 +291,7 @@ Tasks nach der Installation:
 Wenn ein Update nicht installiert werden kann, überprüfen Sie das Feedback in der Konsole, um Lösungen für Warnungen und Fehler zu finden. Sie können auch die Datei „ConfigMgrPrereq.log“ auf dem Standortserver anzeigen, um weitere Details zu erhalten. Bevor Sie die Installation eines Updates wiederholen, müssen Sie die Fehler und sollten Sie die Warnungen beheben.  
 
 > [!TIP]  
-> Wenn beim Herunterladen oder Replizieren eines Updates Probleme auftreten, können Sie das [Tool für das Zurücksetzen von Updates](/sccm/core/servers/manage/update-reset-tool) verwenden. Auf diesen Tool können Sie von Standorten zugreifen, auf denen Configuration Manager 1706 oder neuer installiert ist. 
+> Wenn beim Herunterladen oder Replizieren eines Updates Probleme auftreten, können Sie das [Tool für das Zurücksetzen von Updates](/sccm/core/servers/manage/update-reset-tool) verwenden. Auf diesen Tool können Sie von Standorten zugreifen, auf denen Configuration Manager 1706 oder neuer installiert ist.
 
 Wenn Sie die Installation eines Updates wiederholen möchten, wählen Sie das fehlerhafte Update aus, und wählen Sie anschließend eine zutreffende Option aus. Das Verhalten der Wiederholung der Updateinstallation hängt vom Knoten ab, von dem aus Sie die Wiederholung starten und von der Wiederholungsoption, die Sie verwenden.  
 

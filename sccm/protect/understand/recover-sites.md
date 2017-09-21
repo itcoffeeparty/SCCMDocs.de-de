@@ -14,11 +14,11 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 49eea15ea2888f8f93c33eb771c09147ba21529e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: f5aff56e9948536944140fbadb0539c7a4e20f26
+ms.sourcegitcommit: 5ca89204716750eaaceb01bba40b35b85c7122ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/18/2017
 ---
 #  <a name="recover-a-configuration-manager-site"></a>Wiederherstellen eines Configuration Manager-Standorts
 
@@ -29,7 +29,7 @@ Führen Sie nach einem Standortausfall oder bei einem Datenverlust in der Stando
 Die Abschnitte in diesem Thema helfen Ihnen bei der Wiederherstellung eines Configuration Manager-Standorts. Informationen zum Erstellen einer Sicherung finden Sie unter [Sichern eines Configuration Manager-Standorts](/sccm/protect/understand/backup-and-recovery).
 
 ## <a name="considerations-before-recovering-a-site"></a>Überlegungen vor dem Wiederherstellen eines Standorts
-**Sie müssen die gleiche Version und Edition von SQL Server verwenden:** Das Wiederherstellen einer Datenbank, die mit SQL Server 2014 ausgeführt wurde, mit SQL Server 2016 wird beispielsweise nicht unterstützt. Gleichermaßen kann eine Standortdatenbank, die mit einer Standard Edition von SQL Server 2016 ausgeführt wurde, nicht mit einer Enterprise Edition von SQL Server 2016 wiederhergestellt werden.
+**Sie müssen die gleiche Version und Edition von SQL Server verwenden:** Das Wiederherstellen einer in SQL Server 2014 ausgeführten Datenbank in SQL Server 2016 wird beispielsweise nicht unterstützt. Gleichermaßen kann eine Standortdatenbank, die mit einer Standard Edition von SQL Server 2016 ausgeführt wurde, nicht mit einer Enterprise Edition von SQL Server 2016 wiederhergestellt werden.
 -   SQL Server darf nicht auf den **Einzelbenutzermodus**festgelegt werden.
 -   Stellen Sie sicher, dass die MDF- und. LDF-Dateien gültig sind. Wenn Sie einen Standort wiederherstellen, wird der Status der Dateien, die Sie wiederherstellen möchten, nicht überprüft.
 
