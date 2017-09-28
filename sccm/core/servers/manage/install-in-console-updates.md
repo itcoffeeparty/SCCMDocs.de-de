@@ -14,11 +14,11 @@ caps.latest.revision: "36"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 10ddbcc19da8c5fc6451f62500f17790a0349389
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 5302b5712e33c753d0193a32498bc02a2241428c
+ms.sourcegitcommit: 474e6ddbaaeac4ba17d8172321e08deeb0140d0a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="install-in-console-updates-for-system-center-configuration-manager"></a>Installieren konsoleninterner Updates für System Center Configuration Manager
 
@@ -106,8 +106,8 @@ Bevor Sie ein Update installieren, sollten Sie die Voraussetzungsprüfung für d
 
 -   Die Voraussetzungsprüfung wird automatisch erneut ausgeführt, wenn Sie sich für die Installation des Updates entscheiden.  
 
-> [!NOTE]
-> Wenn Sie eine Voraussetzungsprüfung starten und dann den Status anzeigen, wird die Phase **Installation** als aktiv angezeigt. Das Update wird jedoch tatsächlich nicht installiert. Die Installationsphase wird angezeigt, weil einige Tasks, wie z.B. das Extrahieren der für die Ausführung der Überprüfung erforderlichen Binärdateien, ebenfalls zur Installationsphase gehören.  
+> [!NOTE]   
+> Wenn Sie eine Voraussetzungsprüfung starten und dann den Status anzeigen, wird die Phase **Installation** als aktiv angezeigt. Das Update wird jedoch tatsächlich nicht installiert. Um die Voraussetzungsprüfung auszuführen, extrahiert der Updatevorgang das Paket aus der Inhaltsbibliothek und schreibt es in einen Stagingordner, in dem auf die aktuellen Voraussetzungsprüfungen zugegriffen werden kann.  Der gleiche Vorgang wird ausgeführt, wenn Sie ein Update installieren. Aus diesem Grund wird für die Installation der Status „In Bearbeitung“ angezeigt. Nur der Schritt *Updatepaket extrahieren* wird in der Kategorie „Installation“ angezeigt.  
 
 Wenn Sie später das Update installieren, können Sie das Update so konfigurieren, das Warnungen der Voraussetzungsprüfung ignoriert werden.  
 

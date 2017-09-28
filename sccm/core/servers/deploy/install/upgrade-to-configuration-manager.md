@@ -14,11 +14,11 @@ caps.latest.revision: "21"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 1166b739e1e8d667172d97883f484fdbc3a142c1
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e65c22240555563cdb011849562069baf5d5887f
+ms.sourcegitcommit: 4c3906cf9614420cb8527da9e48978eb0b8f0e7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/22/2017
 ---
 # <a name="upgrade-to-system-center-configuration-manager"></a>Upgrade auf System Center Configuration Manager
 
@@ -47,7 +47,7 @@ Am 15. Dezember 2016 wurde das Baselinemedium für Version 1606 erneut veröffen
 -   Eine Release Candidate-Install von System Center Configuration Manager  
 -   System Center 2012 Configuration Manager mit Service Pack 1  
 -   System Center 2012 Configuration Manager mit Service Pack 2  
--   System Center 2012 R2 – Configuration Manager  
+-   System Center 2012 R2 Configuration Manager ohne Service Pack
 -   System Center 2012 R2 Configuration Manager mit Service Pack 1  
 
 Wenn Sie ein vor dem 15. Dezember 2016 heruntergeladenes Baselinemedium für Version 1606 verwenden, können Sie nur die folgenden Versionen und Installationen auf eine vollständig lizenzierte Version von System Center Configuration Manager Version 1606 aktualisieren:

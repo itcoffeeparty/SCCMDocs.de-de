@@ -2,7 +2,7 @@
 title: Einrichten Ihrer System Center Configuration Manager-Laborumgebung | Microsoft-Dokumentation
 description: "Richten Sie eine Laborumgebung ein, um Configuration Manager mit simulierten realen Aktivitäten zu evaluieren."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 09/21/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 11f5d0c3c61d675a8182e985f82e6af363b34592
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: a8bacdbde00973cfd45963b355c8f810ab06a83d
+ms.sourcegitcommit: 4c3906cf9614420cb8527da9e48978eb0b8f0e7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/22/2017
 ---
 # <a name="set-up-your-system-center-configuration-manager-lab"></a>Einrichten Ihrer System Center Configuration Manager-Laborumgebung
 
@@ -52,7 +52,7 @@ Gemäß der Anleitung in diesem Thema können Sie eine Laborumgebung einrichten,
 
     -   Beschränken Sie nicht den **adressierbaren Systemspeicher** für SQL Server.  
 
-    -   Konfigurieren Sie das **SQL Server-Dienstkonto** so, dass es mit dem Konto **Lokaler Domänenbenutzer** ausgeführt wird.  
+    -   Konfigurieren Sie das **SQL Server-Dienstkonto** so, dass es mit einem Domänenbenutzerkonto mit geringen Rechten ausgeführt wird.  
 
     -   Sie müssen **SQL Server Reporting Services** installieren.  
 
@@ -80,7 +80,7 @@ Unter [Unterstützte Konfigurationen für System Center Configuration Manager](.
 
 Nachdem Sie alle Komponenten installiert haben, müssen Sie weitere Schritte durchführen, um Ihre Windows-Umgebung für Configuration Manager zu konfigurieren:  
 
-###  <a name="BKMK_LabADPrep"></a> Vorbereiten von Active Directory-Inhalten für die Laborumgebung  
+##  <a name="BKMK_LabADPrep"></a> Vorbereiten von Active Directory-Inhalten für die Laborumgebung  
  Für diese Laborumgebung erstellen Sie eine Sicherheitsgruppe, der Sie anschließend einen Domänenbenutzer hinzufügen.  
 
 -   Sicherheitsgruppe: **Evaluation**  
@@ -95,16 +95,16 @@ Nachdem Sie alle Komponenten installiert haben, müssen Sie weitere Schritte dur
 
 Die nächsten Schritte, die erforderlich sind, um Configuration Manager-Clients die Abfrage von Standortressourcen von Active Directory Domain Services zu ermöglichen, werden in den nachfolgenden Verfahren behandelt.  
 
-###  <a name="BKMK_CreateSysMgmtLab"></a> Erstellen des System Management-Containers  
+##  <a name="BKMK_CreateSysMgmtLab"></a> Erstellen des System Management-Containers  
  Der in Active Directory Domain Services erforderliche System Management-Container wird von Configuration Manager nicht automatisch erstellt, wenn das Schema erweitert wird. Daher müssen Sie ihn für diese Laborumgebung erstellen. Dieser Schritt erfordert die [Installation von ADSI Edit](https://technet.microsoft.com/en-us/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit).  
 
  Stellen Sie sicher, dass Sie mit einem Konto angemeldet sind, das im Container **System** in den Active Directory-Domänendiensten über die Rechte **Alle untergeordneten Objekte erstellen** verfügt.  
 
-##### <a name="to-create-the-system-management-container"></a>So erstellen Sie den System Management-Container  
+#### <a name="to-create-the-system-management-container"></a>So erstellen Sie den System Management-Container  
 
 1.  Führen Sie **ADSI Edit**aus, und stellen Sie eine Verbindung mit der Domäne her, in der sich der Standortserver befindet.  
 
-2.  Erweitern Sie **Domäne&lt;Vollqualifizierter Domänenname\>** und dann **<Definierter Name\>**, klicken Sie mit der rechten Maustaste auf **CN=System**, und klicken Sie auf **Neu** und dann auf **Objekt**.  
+2.  Erweitern Sie **Domäne&lt;Vollqualifizierter Domänenname\>** und dann **<Definierter Name\>**, klicken Sie mit der rechten Maustaste auf **CN=System**, und klicken Sie auf** Neu** und dann auf **Objekt**.  
 
 3.  Wählen Sie im Dialogfeld **Objekt erstellen** die Option **Container**aus, und klicken Sie auf **Weiter**.  
 
@@ -112,13 +112,13 @@ Die nächsten Schritte, die erforderlich sind, um Configuration Manager-Clients 
 
 5.  Klicken Sie auf **Fertig stellen** , um den Vorgang abzuschließen.  
 
-###  <a name="BKMK_SetSecPermLab"></a> Festlegen der Sicherheitsberechtigungen für den System Management-Container  
+##  <a name="BKMK_SetSecPermLab"></a> Festlegen der Sicherheitsberechtigungen für den System Management-Container  
  Gewähren Sie dem Computerkonto des Standortservers die Berechtigungen, die zum Veröffentlichen von Standortinformationen im Container erforderlich sind. Für diese Aufgabe verwenden Sie ebenfalls ADSI Edit.  
 
 > [!IMPORTANT]  
 >  Vergewissern Sie sich, dass Sie mit der Domäne des Standortservers verbunden sind, bevor Sie mit dem folgenden Verfahren beginnen.  
 
-##### <a name="to-set-security-permissions-for-the-system-management-container"></a>So legen Sie Sicherheitsberechtigungen für den System Management-Container fest  
+#### <a name="to-set-security-permissions-for-the-system-management-container"></a>So legen Sie Sicherheitsberechtigungen für den System Management-Container fest  
 
 1.  Erweitern Sie im Konsolenfenster die **Domäne des Standortservers**, erweitern Sie **DC=&lt;definierter Name des Servers\>** und anschließend **CN=System**. Klicken Sie mit der rechten Maustaste auf **CN=System Management**, und klicken Sie dann auf **Eigenschaften**.  
 
@@ -132,13 +132,13 @@ Die nächsten Schritte, die erforderlich sind, um Configuration Manager-Clients 
 
      Zusätzliche Einblicke in dieses Verfahren finden Sie unter [Erweitern des Active Directory-Schemas für System Center Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md)  
 
-###  <a name="BKMK_ExtADSchLab"></a> Erweitern des Active Directory-Schemas mithilfe von "extadsch.exe"  
+##  <a name="BKMK_ExtADSchLab"></a> Erweitern des Active Directory-Schemas mithilfe von "extadsch.exe"  
  Für diese Laborumgebung erweitern Sie das Active Directory-Schema, da Sie dadurch alle Configuration Manager-Features und -Funktionen mit geringstem Verwaltungsaufwand verwenden können. Die Erweiterung des Active Directory-Schemas ist eine gesamtstrukturübergreifende Konfiguration, die pro Gesamtstruktur nur einmal ausgeführt werden kann. Durch die Erweiterung des Schemas wird die Gruppe von Klassen und Attributen in der Active Directory-Basiskonfiguration dauerhaft geändert. Diese Aktion kann nicht rückgängig gemacht werden. Durch die Erweiterung des Schemas erhält Configuration Manager Zugriff auf Komponenten, die seine möglichst effiziente Ausführung in der Laborumgebung ermöglichen.  
 
 > [!IMPORTANT]  
 >  Stellen Sie sicher, dass Sie auf dem Schemamaster-Domänencontroller über ein Konto angemeldet sind, das Mitglied der Sicherheitsgruppe **Schema-Admins** ist. Die Verwendung alternativer Anmeldeinformationen ist nicht erfolgreich.  
 
-##### <a name="to-extend-the-active-directory-schema-using-extadschexe"></a>So erweitern Sie das Active Directory-Schema mithilfe von "extadsch.exe"  
+#### <a name="to-extend-the-active-directory-schema-using-extadschexe"></a>So erweitern Sie das Active Directory-Schema mithilfe von "extadsch.exe"  
 
 1.  Erstellen Sie eine Sicherung des Systemzustands für den Schemamaster-Domänencontroller. Weitere Informationen zum Sichern der Masterdomänencontroller finden Sie unter [Windows Server-Sicherung](https://technet.microsoft.com/en-us/library/cc770757.aspx).  
 
@@ -150,7 +150,7 @@ Die nächsten Schritte, die erforderlich sind, um Configuration Manager-Clients 
 
      Zusätzliche Einblicke in dieses Verfahren erhalten Sie unter [Erweitern des Active Directory-Schemas für System Center Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md).  
 
-###  <a name="BKMK_OtherTasksLab"></a> Weitere erforderliche Aufgaben  
+##  <a name="BKMK_OtherTasksLab"></a> Weitere erforderliche Aufgaben  
  Vor der Installation müssen Sie folgende Aufgaben abschließen.  
 
  **Erstellen Sie einen Ordner zum Speichern aller Downloads.**  
@@ -161,7 +161,7 @@ Die nächsten Schritte, die erforderlich sind, um Configuration Manager-Clients 
 
  Sie müssen zwei .NET Framework-Versionen installieren: zuerst .NET 3.5.1 und anschließend .NET 4.5.2+. Außerdem müssen Sie Windows Communication Foundation (WCF) aktivieren. WCF bietet einfachen Zugang zu verteilter Datenverarbeitung, umfassender Interoperabilität und direkte Unterstützung für die dienstorientierte Entwicklung. Zudem vereinfacht sie die Entwicklung vernetzter Anwendungen über ein dienstorientiertes Programmiermodell. Weitere Einblicke in WCF erhalten Sie unter [Was ist die Windows Communication Foundation?](https://technet.microsoft.com/en-us/subscriptions/ms731082\(v=vs.90\).aspx)  
 
-##### <a name="to-install-net-and-activate-windows-communication-foundation"></a>So installieren Sie .NET und aktivieren Windows Communication Foundation (WCF)  
+#### <a name="to-install-net-and-activate-windows-communication-foundation"></a>So installieren Sie .NET und aktivieren Windows Communication Foundation (WCF)  
 
 1.  Öffnen Sie **Server Manager**, und navigieren Sie zu **Verwalten**. Klicken Sie auf **Rollen und Features hinzufügen** , um den **Rollen und Features hinzufügen Wizard.**zu öffnen.  
 
@@ -221,7 +221,7 @@ Internetinformationsdienste (Internet Information Services, IIS) ist ein flexibl
 
 [Remotedifferenzialkomprimierung (Remote Differential Compression, (RDC)](https://technet.microsoft.com/en-us/library/cc754372.aspx) ist eine Sammlung von APIs, über die Clientanwendungen feststellen können, ob ein Satz von Dateien geändert wurde. RDC ermöglicht der Anwendung, nur die geänderten Dateibereiche zu replizieren, und beschränkt den Netzwerkdatenverkehr dadurch auf ein Minimum.  
 
-##### <a name="to-enable-bits-iis-and-rdc-site-server-roles"></a>So aktivieren Sie BITS-, IIS- und RDC-Standortserverrollen  
+#### <a name="to-enable-bits-iis-and-rdc-site-server-roles"></a>So aktivieren Sie BITS-, IIS- und RDC-Standortserverrollen  
 
 1.  Öffnen Sie auf dem Standortserver **Server Manager**. Navigieren Sie zu **Verwalten**. Klicken Sie auf **Rollen und Features hinzufügen** , um den **Assistenten zum Hinzufügen von Rollen und Features**zu öffnen.  
 
@@ -319,21 +319,21 @@ Internetinformationsdienste (Internet Information Services, IIS) ist ein flexibl
 
 6.  Fügen Sie die folgenden **Features** hinzu, indem Sie sie aus der Liste auswählen:  
 
-    -   -   **Background Intelligent Transfer Service (BITS)**  
+    -   **Background Intelligent Transfer Service (BITS)**  
 
-            -   **IIS-Servererweiterung**  
+          -   **IIS-Servererweiterung**  
 
-        -   **Remoteserver-Verwaltungstools**  
+    -   **Remoteserver-Verwaltungstools**  
 
-            -   **Featureverwaltungstools**  
+          -   **Featureverwaltungstools**  
 
-                -   **Tools für BITS-Servererweiterungen**  
+          -   **Tools für BITS-Servererweiterungen**  
 
 7.  Klicken Sie auf **Installieren** , und stellen Sie anhand des Bereichs **Benachrichtigungen** im **Server-Manager**sicher, dass die Installation ordnungsgemäß abgeschlossen wurde.  
 
 IIS sperrt standardmäßig mehrere Dateierweiterungen und Speicherorte für den Zugriff durch die HTTP- oder HTTPS-Kommunikation. Um die Verteilung dieser Dateien an Clientsysteme zu ermöglichen, müssen Sie die Anforderungsfilterung für IIS auf dem Verteilungspunkt konfigurieren. Weitere Informationen finden Sie unter [IIS-Anforderungsfilterung für Verteilungspunkte](../../core/plan-design/network/prepare-windows-servers.md#BKMK_IISFiltering).  
 
-##### <a name="to-configure-iis-filtering-on-distribution-points"></a>So konfigurieren Sie die IIS-Filterung für Verteilungspunkte  
+#### <a name="to-configure-iis-filtering-on-distribution-points"></a>So konfigurieren Sie die IIS-Filterung für Verteilungspunkte  
 
 1.  Öffnen Sie **IIS Manager** , und wählen Sie den Namen des Servers in der Randleiste aus. Dadurch gelangen Sie zur **Startseite** .  
 
@@ -343,13 +343,13 @@ IIS sperrt standardmäßig mehrere Dateierweiterungen und Speicherorte für den 
 
 4.  Geben Sie **.msi** in das Dialogfeld ein, und klicken Sie auf **OK**.  
 
-###  <a name="BKMK_InstallCMLab"></a> Installieren von Configuration Manager  
+##  <a name="BKMK_InstallCMLab"></a> Installieren von Configuration Manager  
 Sie erstellen [Ermitteln des Zeitpunkts für die Verwendung eines primären Standorts](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md#BKMK_ChoosePriimary), um Clients direkt zu verwalten. Dadurch unterstützt Ihre Laborumgebung die Verwaltung für die [Standortsystemskalierung](/sccm/core/plan-design/configs/size-and-scale-numbers) potenzieller Geräte.  
 Während dieses Vorgangs installieren Sie außerdem die Configuration Manager-Konsole, die ab diesem Zeitpunkt zur Verwaltung von Evaluierungsgeräten verwendet wird.  
 
 Bevor Sie mit der Installation beginnen, starten Sie die [Voraussetzungsprüfung](/sccm/core/servers/deploy/install/prerequisite-checker) auf dem unter Windows Server 2012 ausgeführten Server, um zu bestätigen, dass alle Einstellungen ordnungsgemäß aktiviert wurden.  
 
-##### <a name="to-download-and-install-configuration-manager"></a>So laden Sie Configuration Manager herunter und installieren die Anwendung  
+#### <a name="to-download-and-install-configuration-manager"></a>So laden Sie Configuration Manager herunter und installieren die Anwendung  
 
 1.  Navigieren Sie zur Seite für [System Center-Evaluierungsversionen](https://www.microsoft.com/evalcenter/evaluate-system-center-2012-configuration-manager-and-endpoint-protection), um die neueste Evaluierungsversion von System Center Configuration Manager herunterzuladen.  
 
@@ -369,10 +369,10 @@ Bevor Sie mit der Installation beginnen, starten Sie die [Voraussetzungsprüfung
     |Schritt 15: **Clientkommunikationseinstellungen**|Überprüfen Sie, ob **Alle Standortsystemrollen lassen ausschließlich die HTTPS-Kommunikation mit Clients zu** deaktiviert ist.|  
     |Schritt 16: **Standortsystemrollen**|Geben Sie Ihren FQDN ein, und stellen Sie sicher, dass **Alle Standortsystemrollen lassen ausschließlich die HTTPS-Kommunikation mit Clients zu** weiterhin deaktiviert ist.|  
 
-###  <a name="BKMK_EnablePubLab"></a> Aktivieren der Veröffentlichung am Configuration Manager-Standort  
+##  <a name="BKMK_EnablePubLab"></a> Aktivieren der Veröffentlichung am Configuration Manager-Standort  
 Jeder Configuration Manager-Standort veröffentlicht standortspezifische Informationen im Systemverwaltungscontainer innerhalb seiner Domänenpartition im Active Directory-Schema. Bidirektionale Kanäle für die Kommunikation zwischen Active Directory und Configuration Manager müssen geöffnet sein, um den Datenverkehr zu verarbeiten. Aktivieren Sie zudem die Gesamtstrukturermittlung, um bestimmte Komponenten Ihrer Active Directory- und Netzwerkinfrastruktur zu ermitteln.  
 
-##### <a name="to-configure-active-directory-forests-for-publishing"></a>So konfigurieren Sie Active Directory-Gesamtstrukturen für die Veröffentlichung  
+#### <a name="to-configure-active-directory-forests-for-publishing"></a>So konfigurieren Sie Active Directory-Gesamtstrukturen für die Veröffentlichung  
 
 1.  Klicken Sie in der unteren linken Ecke der Configuration Manager-Konsole auf **Verwaltung**.  
 
@@ -388,7 +388,7 @@ Jeder Configuration Manager-Standort veröffentlicht standortspezifische Informa
 
 7.  Erweitern Sie im Arbeitsbereich **Verwaltung** den Bereich **Hierarchiekonfiguration**, und klicken Sie dann auf **Active Directory-Gesamtstrukturen**.  
 
-##### <a name="to-enable-a-configuration-manager-site-to-publish-site-information-to-your-active-directory-forest"></a>So aktivieren Sie einen Configuration Manager-Standort für das Veröffentlichen von Standortinformationen in Active Directory-Gesamtstrukturen:  
+#### <a name="to-enable-a-configuration-manager-site-to-publish-site-information-to-your-active-directory-forest"></a>So aktivieren Sie einen Configuration Manager-Standort für das Veröffentlichen von Standortinformationen in Active Directory-Gesamtstrukturen:  
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung**.  
 

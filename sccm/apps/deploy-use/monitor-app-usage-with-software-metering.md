@@ -2,7 +2,7 @@
 title: "Überwachen der App-Nutzung mittels Softwaremessung | Microsoft-Dokumentation"
 description: 
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 09/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "8"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: d7bc0bebeb0355156553376a3535ed76d5e44835
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 87bafd8ce28d58993666057b6c5bfd8bdc0c4ed9
+ms.sourcegitcommit: 51654bf8b5615eb99084d0a20d18ca3fccfa83a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 09/20/2017
 ---
 # <a name="software-metering-in-system-center-configuration-manager"></a>Softwaremessung in System Center Configuration Manager
 
@@ -86,7 +86,7 @@ Für die Softwaremessung liegen keine externen Abhängigkeiten, sondern nur Abh�
         >
         >  Dieses Feld ist optional, wenn ein Wert für **Dateiname** angegeben ist.
 
-    -   **Version** : Version der zu messenden ausführbaren Datei. Sie können das Platzhalterzeichens (*) stellvertretend für eine beliebige Zeichenfolge und das Platzhalterzeichen (?) stellvertretend für ein beliebiges einzelnes Zeichen angeben. Wenn Sie alle Versionen einer ausführbaren Datei messen möchten, verwenden Sie den Standardwert (\*).
+    -   **Version** : Version der zu messenden ausführbaren Datei. Sie können das Platzhalterzeichen (&#42;) stellvertretend für eine beliebige Zeichenfolge und das Platzhalterzeichen (? ) stellvertretend für ein beliebiges einzelnes Zeichen angeben. Wenn Sie alle Versionen einer ausführbaren Datei messen möchten, verwenden Sie den Standardwert (&#42;).
 
     -   **Sprache** – die Sprache der zu messenden ausführbaren Datei. Der Standardwert ist das aktuelle Gebietsschema des von Ihnen verwendeten Betriebssystems. Wenn Sie eine zu messende ausführbare Datei durch Klicken auf die Schaltfläche **Durchsuchen** auswählen, wird dieses Feld automatisch aufgefüllt, wenn Sprachinformationen im Dateiheader vorhanden sind. Wenn Sie alle Sprachversionen einer Datei messen möchten, wählen Sie in der Dropdownliste den Eintrag **Beliebig** aus.
 

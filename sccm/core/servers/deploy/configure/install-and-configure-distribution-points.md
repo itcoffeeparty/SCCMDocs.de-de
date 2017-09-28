@@ -2,7 +2,7 @@
 title: Verwalten von Verteilungspunkten | Microsoft-Dokumentation
 description: "Hosten Sie den Inhalt (Dateien und Software), den Sie für Geräte und Benutzer bereitstellen, mithilfe von Verteilungspunkten. In diesem Artikel erhalten Sie eine Installations- und Konfigurationsanleitung."
 ms.custom: na
-ms.date: 2/14/2017
+ms.date: 09/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,16 +14,16 @@ caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 4c94e4de5bbfe621492e8682c9424a48eb38196d
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 0213b48c24461cbab5a9acab720064e0e26fa568
+ms.sourcegitcommit: 474e6ddbaaeac4ba17d8172321e08deeb0140d0a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="install-and-configure-distribution-points-for-system-center-configuration-manager"></a>Installieren und Konfigurieren von Verteilungspunkten für System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
- 
+
 Verteilungspunkte in System Center Configuration Manager werden installiert, um den Inhalt (Dateien und Software) zu hosten, den Sie für Geräte und Benutzer bereitstellen. Sie können auch Verteilungspunktgruppen erstellen, die die Verwaltung von Verteilungspunkten und die Verteilung von Inhalt an die Verteilungspunkte erleichtern.  
 
  Wenn Sie *einen neuen Verteilungspunkt installieren* (mithilfe des Installations-Assistenten) oder *die Eigenschaften eines vorhandenen Verteilungspunkts verwalten* (durch Bearbeiten der Verteilungspunkteigenschaften), können Sie einen Großteil der Einstellungen des Verteilungspunkts konfigurieren. Es gibt jedoch einige Einstellungen, die entweder bei der Installation oder bei der Bearbeitung, aber nicht gleichzeitig verfügbar sind:  
@@ -45,7 +45,8 @@ Verteilungspunkte in System Center Configuration Manager werden installiert, um 
     -   **Konfigurieren der Zeitpläne für Datenübertragungen an Verteilungspunkte**  
 
 ##  <a name="bkmk_install"></a> Installieren eines Verteilungspunkts  
- Sie müssen einen Standortsystemserver als Verteilungspunkt festlegen, bevor Inhalt für Clientcomputer verfügbar gemacht werden kann. Sie können die Standortrolle „Verteilungspunkt“ einem neuen oder einem vorhandenen Standortsystemserver hinzufügen.  
+Sie müssen einen Standortsystemserver als Verteilungspunkt festlegen, bevor Inhalt für Clientcomputer verfügbar gemacht werden kann. Sie müssen auch mindestens einer [Begrenzungsgruppe](/sccm/core/servers/deploy/configure/boundary-groups#distribution-points) einen Verteilungspunkt zuweisen, bevor lokale Clientcomputer diesen Verteilungspunkt als Quellspeicherort für Inhalt verwenden können. Sie können die Standortrolle „Verteilungspunkt“ einem neuen oder einem vorhandenen Standortsystemserver hinzufügen.
+
 
  Wenn Sie einen neuen Verteilungspunkt installieren, verwenden Sie einen Installations-Assistenten, der mit Ihnen die verfügbaren Einstellungen durchgeht. Bevor Sie beginnen, beachten Sie Folgendes:  
 
@@ -339,7 +340,7 @@ Zum Anzeigen der Ergebnisse der Inhaltsprüfung erweitern Sie im Arbeitsbereich 
 >  Sie geben den Zeitplan für die Inhaltsprüfung zwar anhand der lokalen Zeit des Computers an, der Zeitplan wird in der Configuration Manager-Konsole jedoch anhand der UTC (Coordinated Universal Time, koordinierte Weltzeit) angezeigt.  
 
 ### <a name="boundary-group"></a>Begrenzungsgruppe  
-Verwalten Sie die Begrenzungsgruppen, denen dieser Verteilungspunkt zugeordnet ist. Sie können einem Verteilungspunkt Begrenzungsgruppen zuordnen. Bei der Inhaltsbereitstellung müssen sich die Clients in einer dem Verteilungspunkt zugeordneten Begrenzungsgruppe befinden, damit der Verteilungspunkt als Quellort für Inhalt verwendet werden kann.
+Verwalten Sie die Begrenzungsgruppen, denen dieser Verteilungspunkt zugeordnet ist. Planen Sie, den Verteilungspunkt mindestens einer Begrenzungsgruppe hinzuzufügen. Bei der Inhaltsbereitstellung müssen sich die Clients in einer Begrenzungsgruppe befinden, die einem Verteilungspunkt zugeordnet ist, damit dieser Verteilungspunkt als Quellspeicherort für Inhalt verwendet werden kann.
 
 Darüber hinaus gilt:
 

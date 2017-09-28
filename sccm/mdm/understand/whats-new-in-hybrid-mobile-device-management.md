@@ -14,11 +14,11 @@ caps.latest.revision: "40"
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
-ms.openlocfilehash: c93ba688ba33c309e4d12e924061718e5a33759e
-ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
+ms.openlocfilehash: 2ef4964a74e000feac029b158f6fe0c52e3de370
+ms.sourcegitcommit: 51654bf8b5615eb99084d0a20d18ca3fccfa83a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/20/2017
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Neuheiten bei der hybriden Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune
 
@@ -36,9 +36,30 @@ Dieser Artikel bietet Details zu den neuen Features für die Verwaltung mobiler 
 |**Neuheiten in Configuration Manager Technical Preview**| Alle in dieser Kategorie aufgelisteten Features können nur mit dem angegebenen Technical Preview-Release verwendet werden. Um diese Features zu testen, müssen Sie die in der Featurebeschreibung angegebene Technical Preview-Version installieren. Weitere Informationen finden Sie unter [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md).|
 |**Neuheiten in Configuration Manager (Current Branch)**| Alle in dieser Kategorie aufgelisteten Features können nur mit der angegebenen Version von Configuration Manager (Current Branch) verwendet werden, z.B. Version 1511 oder 1602. Wenn Sie eine ältere Version von Configuration Manager für die Hybridbereitstellung verwenden, müssen Sie ein Upgrade auf die in der Featurebeschreibung angegebene Configuration Manager-Version (Current Branch) ausführen. Weitere Informationen finden Sie unter [Upgrade auf System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|
 
+## <a name="september-2017"></a>September 2017
+
+### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune     
+
+- **Zusätzliche Pushbenachrichtigungen für Endbenutzer zur Unternehmensportal-App für Android Oreo** <!--1475932-->    
+    Endbenutzern werden zusätzliche Benachrichtigungen angezeigt, um Ihnen mitzuteilen, wann die Unternehmensportal-App für Android Oreo Hintergrundaufgaben wie das Abrufen von Richtlinien aus dem Intune-Dienst ausführt. So sind Endbenutzer besser darüber informiert, wann die Unternehmensportal-App administrative Aufgaben auf ihren Geräten ausführt. Dies ist ein Teil der gesamten [Optimierung der Benutzeroberfläche des Unternehmensportals](https://blogs.technet.microsoft.com/intunesupport/2017/08/21/android-8-0-o-behaviour-changes-and-microsoft-intune) für die Unternehmensportal-App für Android Oreo. 
+
+- **Informieren von Endbenutzern darüber, welche Geräteinformationen für iOS angezeigt werden** <!--739894-->    
+    Auf dem Bildschirm „Gerätedetails“ der Unternehmensportal-App für iOS wurde **Besitztyp** hinzugefügt. So können Benutzer weitere Informationen zum Datenschutz direkt von dieser Seite aus der Intune-Endbenutzerdokumentation erhalten. Sie finden diese Informationen auch auf dem Bildschirm „Info“. 
+
+- **Verständlichere Formulierung für die Unternehmensportal-App für Android** <!---1396349-->       
+    Die Registrierung für das Unternehmensportal-App für Android wurde mit neuem Text vereinfacht, um Endbenutzern die Registrierung zu erleichtern. Wenn Sie eine benutzerdefinierte Registrierungsdokumentation verwenden, aktualisieren Sie sie gemäß der neuen Bildschirme. Beispielbilder finden Sie auf unserer Seite [Aktualisierungen für die Benutzeroberfläche für Endbenutzer-Apps in Intune](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-september-11-2017).
+
+- **Der Zulassungsrichtlinie von Windows Information Protection wurde die Windows 10-Unternehmensportal-App hinzugefügt** <!-- 677129 -->    
+    Die Windows 10-Unternehmensportal-App wurde aktualisiert, um Windows Informationen Protection (WIP) zu unterstützen. Die App kann der WIP-Zulassungsrichtlinie hinzugefügt werden. Dank dieser Änderung muss die App nicht mehr der Liste **Ausnahme** hinzugefügt werden. 
+
+- **Mitteilung zum Ablauf des Supports wurde für iOS 8.0 hinzugefügt**    
+    Eine Mitteilung zum Ablauf des Supports für iOS 8.0 wurde hinzugefügt. Details finden Sie unter [Benachrichtigungen](#notices).
+
 ## <a name="august-2017"></a>August 2017
 
-### <a name="new-signed-in-experience-for-android-company-portal-users-and-app-protection-policy-users----621669---"></a>Keine Registrierung mehr erforderlich für Benutzer des Android-Unternehmensportals und Benutzer von Apps mit App-Schutzrichtlinie <!-- 621669 -->
+### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune     
+
+- **Keine Registrierung mehr erforderlich für Benutzer des Android-Unternehmensportals und Benutzer von Apps mit App-Schutzrichtlinie** <!-- 621669 -->    
 Endbenutzer können jetzt in der Android-Unternehmensportal-App nach Apps suchen, Geräte verwalten und IT-Kontaktinformationen anzeigen, ohne ihre Android-Geräte registrieren zu müssen. Neu ist auch, dass ein Endbenutzer, der bereits eine durch Intune-App-Schutzrichtlinien geschützte App verwendet und das Android-Unternehmensportal öffnet, keine Aufforderung mehr erhält, das Gerät zu registrieren.
 
 
@@ -311,6 +332,10 @@ Die folgenden zusätzlichen Hybridfeatures sind auch in Version 1702 von Configu
 
 
 ## <a name="notices"></a>Benachrichtigungen
+
+### <a name="end-of-support-for-ios-80"></a>Ende der Unterstützung für iOS 8.0 
+<!---1164477--->
+Verwaltete Apps und die Unternehmensportal-App für iOS erfordern iOS 9.0 oder höher für den Zugriff auf Unternehmensressourcen. Geräte, die vor September nicht aktualisiert werden, können dann nicht mehr auf das Unternehmensportal oder diese Apps zugreifen. 
 
 ### <a name="platform-support-reminder-windows-phone-81-mainstream-support-ended-july-11-2017"></a>Erinnerung zu Plattform-Unterstützung: Grundlegende Unterstützung von Windows Phone 8.1 am 11. Juli 2017 beendet
 <!-- 1327781 -->

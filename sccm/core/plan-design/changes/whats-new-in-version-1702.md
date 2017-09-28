@@ -12,11 +12,11 @@ ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: a2954b3c6f9a09b7246347e780c4cfc49ba39ca1
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: ff7f6c3b9f183502c95a2c551b1131c5abf1dd90
+ms.sourcegitcommit: 474e6ddbaaeac4ba17d8172321e08deeb0140d0a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>Neues in Version 1702 von System Center Configuration Manager
 
@@ -256,7 +256,13 @@ Diese Änderung wirkt sich auf den Assistenten beim Erstellen der folgenden Elem
 
 Durch diese Änderung können Hybridbereitstellungen schneller neue Android und iOS-Versionen unterstützen, ohne eine neue Configuration Manager-Version oder -Erweiterung zu benötigen. Sobald eine neue Version in Intune standalone unterstützt wird, können Benutzer ihre mobilen Geräte auf diese Version upgraden.
 
-Um Probleme beim Upgrade von vorherigen Configuration Manager-Versionen zu vermeiden, kann auf andere Versionen des mobilen Betriebssystems den Eigenschaftsseiten für diese Elemente zugegriffen werden. Sollten Sie nur auf eine bestimmte Version abzielen, können Sie das neue Element erstellen und diesem dann auf dessen Eigenschaftsseite eine bestimmte Version zuweisen.
+Um Probleme beim Upgrade von vorherigen Configuration Manager-Versionen zu vermeiden, kann auf andere Versionen des mobilen Betriebssystems den Eigenschaftsseiten für diese Elemente zugegriffen werden. Sollten Sie nur auf eine bestimmte Version abzielen, können Sie das neue Element erstellen und diesem dann auf dessen Eigenschaftsseite eine bestimmte Version zuweisen. 
+
+> [!NOTE]
+> Die letzte in den Eigenschaftenseiten verfügbare mobile Betriebssystemversion gilt für diese Version und alle nachfolgenden Versionen. Die Eigenschaftenseiten bieten folgende Optionen für höhere Betriebssystemversionen als Android 7 und iOS 10: 
+> - **Android 7 und höher**
+> - **Alle iPhone- oder iPod-Fingereingabegeräte mit iOS 10 und höher**
+> - **Alle iPad-Geräte mit iOS 10 und höher**
 
 ### <a name="android-for-work-support"></a>Unterstützung für Android for Work
 Ab 1702 unterstützt die hybride Verwaltung mobiler Geräte mit Microsoft Intune jetzt Android for Work für die Registrierung und Verwaltung von Geräten. Hilfestellung für das verwaltete Android for Work-Gerät

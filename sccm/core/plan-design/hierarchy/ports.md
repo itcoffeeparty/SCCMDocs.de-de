@@ -2,7 +2,7 @@
 title: Von Configuration Manager verwendete Ports | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über die erforderlichen und anpassbaren Ports, die System Center Configuration Manager für Verbindungen verwendet."
 ms.custom: na
-ms.date: 3/20/2017
+ms.date: 09/19/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,18 +15,18 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 78caa69e10f5d386daab1e61e484d4d134469708
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: ac443971a725a7eeecaeea877b8e9636ebb4990b
+ms.sourcegitcommit: 51654bf8b5615eb99084d0a20d18ca3fccfa83a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/20/2017
 ---
 # <a name="ports-used-in-system-center-configuration-manager"></a>In System Center Configuration Manager verwendete Ports
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager ist ein verteiltes Client-/Server-System. Aufgrund der verteilten Struktur von Configuration Manager können Verbindungen zwischen Standortservern, Standortsystemen und Clients hergestellt werden. Bei einigen Verbindungen werden nicht konfigurierbare Ports verwendet, bei anderen werden benutzerdefinierte Ports unterstützt. Bei Verwendung einer Portfilterungstechnologie, z.B. Firewalls, Router, Proxyserver oder IPsec, müssen Sie überprüfen, ob die erforderlichen Ports verfügbar sind.  
-
+    
 > [!NOTE]  
 >  Wenn Sie internetbasierte Clients über SSL-Bridging unterstützen, müssen Sie möglicherweise zusätzlich zu den Portanforderungen bestimmten HTTP-Verben und -Headern ermöglichen, ihre Firewall zu passieren.   
 
@@ -88,13 +88,13 @@ In den folgenden Abschnitten sind die Ports beschrieben, die für die Kommunikat
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2,** Alternativer Port verfügbar**)|  
 
 ###  <a name="BKMK_PortsAppCatalogService-SQL"></a> Anwendungskatalog-Webdienstpunkt -- > SQL Server  
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2,** Alternativer Port verfügbar**)|  
 
 ###  <a name="BKMK_PortsAppCatalogWebSitePoint_AppCatalogWebServicePoint"></a> Anwendungskatalog-Websitepunkt -- > Anwendungskatalog-Webdienstpunkt  
 
@@ -167,7 +167,7 @@ Diese Kommunikation wird verwendet, um zu überprüfen, ob der andere Clientcomp
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Globales Katalog-LDAP|--|3268|  
-|Globales Katalog-LDAP-SSL|--|3269|  
+
 
 ###  <a name="BKMK_PortsClient-MP"></a> Client -- > Verwaltungspunkt  
 
@@ -258,7 +258,7 @@ Diese Kommunikation wird verwendet, um zu überprüfen, ob der andere Clientcomp
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2,** Alternativer Port verfügbar**)|  
 
 ###  <a name="BKMK_PortsEnrollmentProxyEnrollmentPoint"></a> Anmeldungsproxypunkt -- > Anmeldungspunkt  
 
@@ -270,7 +270,7 @@ Diese Kommunikation wird verwendet, um zu überprüfen, ob der andere Clientcomp
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2,** Alternativer Port verfügbar**)|  
 
 ###  <a name="BKMK_PortsExchangeConnectorHosted"></a> Exchange Server-Connector -- &gt; Exchange Online  
 
@@ -295,9 +295,7 @@ Diese Kommunikation wird verwendet, um zu überprüfen, ob der andere Clientcomp
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Lightweight Directory Access-Protokoll (LDAP)|--|389|  
-|LDAP (SSL-Verbindung [Secure Sockets Layer])|636|636|  
 |Globales Katalog-LDAP|--|3268|  
-|Globales Katalog-LDAP-SSL|--|3269|  
 |RPC-Endpunktzuordnung|135|135|  
 |RPC|--|DYNAMISCH (siehe Hinweis 6, **Dynamische Ports**)|  
 
@@ -314,7 +312,7 @@ Diese Kommunikation wird verwendet, um zu überprüfen, ob der andere Clientcomp
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2,** Alternativer Port verfügbar**)|  
 
 ###  <a name="BKMK_PortsMobileDeviceClient-EnrollmentProxyPoint"></a> Mobiles Gerät -- > Anmeldungsproxypunkt  
 
@@ -332,7 +330,7 @@ Diese Kommunikation wird verwendet, um zu überprüfen, ob der andere Clientcomp
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2,** Alternativer Port verfügbar**)|  
 
 ###  <a name="BKMK_PortsIntuneConnector-WindowsIntune"></a>Dienstverbindungspunkt -- > Microsoft Intune  
 
@@ -391,9 +389,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Lightweight Directory Access-Protokoll (LDAP)|--|389|  
-|LDAP (SSL-Verbindung [Secure Sockets Layer])|636|636|  
 |Globales Katalog-LDAP|--|3268|  
-|Globales Katalog-LDAP-SSL|--|3269|  
 |RPC-Endpunktzuordnung|135|135|  
 |RPC|--|DYNAMISCH (siehe Hinweis 6, **Dynamische Ports**)|  
 
@@ -471,7 +467,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2,** Alternativer Port verfügbar**)|  
 
  Während der Installation eines Standorts, der einen SQL Server-Remotehost für die Standortdatenbank verwendet, müssen Sie die folgenden Ports zwischen Standortserver und SQL-Server öffnen:  
 
@@ -510,7 +506,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2,** Alternativer Port verfügbar**)|  
 
 ###  <a name="BKMK_PortsSUP-Internet"></a> Softwareupdatepunkt -- > Internet  
 
@@ -530,7 +526,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL Server-Dienst|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
+|SQL Server-Dienst|--|1433 (siehe Hinweis 2,** Alternativer Port verfügbar**)|  
 |SQL Server Service Broker|--|4022 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
 
 > [!TIP]  
@@ -540,7 +536,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL über TCP|--|1433 (siehe Hinweis 2, **Alternativer Port verfügbar**)|  
+|SQL über TCP|--|1433 (siehe Hinweis 2,** Alternativer Port verfügbar**)|  
 
 
 
@@ -641,17 +637,9 @@ Wie Sie SQL Server für die Verwendung eines bestimmten Ports konfigurieren, wir
 ### <a name="bkmk_discovery"> </a> Ermittlung und Veröffentlichung
 Die folgenden Ports werden für die Ermittlung und Veröffentlichung von Standortinformationen verwendet:
  - Lightweight Directory Access-Protokoll (LDAP): 389
- - LDAP (Secure Sockets Layer [SSL]-Verbindung): 636
-
-
  - Globales Katalog-LDAP: 3268
- - Globales Katalog-LDAP-SSL: 3269
-
-
  - RPC-Endpunktzuordnung: 135
  - RPC: Dynamisch zugewiesene, hohe TCP-Ports
-
-
  - TCP 1024: 5000
  - TCP 49152: 65535
 
