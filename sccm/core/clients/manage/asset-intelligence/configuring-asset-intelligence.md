@@ -140,7 +140,7 @@ Zusätzlich zum Herunterladen neuer Asset Intelligence-Kataloginformationen kön
 
 2.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Asset Intelligence** **Softwarelizenzen importieren** aus.   
 
-4.  Geben Sie auf der Seite **Importieren** an, ob eine Microsoft-Volumenlizenzierungsdatei (MVLS) (.xml oder .csv) oder eine allgemeine Lizenzzusammenfassung (.csv) importiert werden soll. Weitere Informationen zum Erstellen einer allgemeinen Lizenzübersichtsdatei finden Sie unter [Create a general license statement information file for import](#BKMK_CreateGeneralLicenseStatement) weiter unten in diesem Thema.  
+4.  Geben Sie auf der Seite **Importieren** an, ob eine Microsoft-Volumenlizenzierungsdatei (MVLS) (.xml oder .csv) oder eine allgemeine Lizenzzusammenfassung (.csv) importiert werden soll. Weitere Informationen zum Erstellen einer allgemeinen Lizenzübersichtsdatei finden Sie unter [Erstellen einer allgemeinen Lizenzzusammenfassungsdatei zum Import](#BKMK_CreateGeneralLicenseStatement) weiter unten in diesem Thema.  
 
     > [!WARNING]  
     >  Informationen zum Herunterladen einer MVLS-Datei im CSV-Format, die in den Asset Intelligence-Katalog importiert werden kann, finden Sie im [Microsoft Volume Licensing Service Center](http://go.microsoft.com/fwlink/p/?LinkId=226547). Für den Zugriff auf diese Informationen benötigen Sie ein registriertes Konto auf der Website. Wenden Sie sich an Ihren Microsoft-Kontobeauftragten, um sich zu informieren, wie Sie Ihre MVLS-Datei im XML-Format erhalten.  
@@ -152,7 +152,7 @@ Zusätzlich zum Herunterladen neuer Asset Intelligence-Kataloginformationen kön
 
 6. Schließen Sie den Assistenten ab.  
 
-###  <a name="BKMK_CreateGeneralLicenseStatement"></a> Create a general license statement information file for import  
+###  <a name="BKMK_CreateGeneralLicenseStatement"></a> Erstellen einer allgemeinen Lizenzzusammenfassungsdatei zum Import  
  Eine allgemeine Lizenzübersicht kann auch mithilfe einer manuell im kommagetrennten CSV-Dateiformat erstellten Lizenzimportdatei in den Asset Intelligence-Katalog importiert werden.  
 
 > [!NOTE]  
