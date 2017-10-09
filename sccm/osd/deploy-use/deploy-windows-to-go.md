@@ -222,7 +222,7 @@ In diesem Thema finden Sie die Schritte zum Bereitstellen von Windows To Go in S
     > [!NOTE]  
     >  Dem Computerkonto des Standortservers muss das Zugriffsrecht **Lesen** für den Quellordner zugewiesen sein.  
 
-2.  Kopieren Sie die im Abschnitt [Create prestaged media](#BKMK_CreatePrestagedMedia) erstellte vorab bereitgestellte Mediendatei in den Paketquellordner.  
+2.  Kopieren Sie die im Abschnitt [Erstellen von vorab bereitgestellten Medien](#BKMK_CreatePrestagedMedia) erstellte vorab bereitgestellte Mediendatei in den Paketquellordner.  
 
 3.  Kopieren Sie das Windows To Go Creator-Tool (WTGCreator.exe) in den Paketquellordner. Dieses Creator-Tool steht auf jedem primären Standortserver im Verzeichnis „<*Configuration Manager-Installationsverzeichnis*>\OSD\Tools\WTG\Creator“ zur Verfügung.  
 
@@ -281,7 +281,7 @@ In diesem Thema finden Sie die Schritte zum Bereitstellen von Windows To Go in S
  Von Windows To Go wird BitLocker auf einem externen Startlaufwerk ohne TPM aktiviert. Deshalb müssen Sie zum Konfigurieren von BitLocker auf dem Windows To Go-Laufwerk ein anderes Tool verwenden. Zum Aktivieren von BitLocker müssen Sie der Tasksequenz nach dem Schritt **Windows und ConfigMgr einrichten** eine Aktion hinzufügen.  
 
 > [!NOTE]  
->  BitLocker für Windows To Go erfordert eine Passphrase. Im Schritt [Create prestaged media](#BKMK_CreatePrestagedMedia) legen Sie die Passphrase als Teil eines Prestart-Befehls mit der Variablen OSDBitLockerPIN fest.  
+>  BitLocker für Windows To Go erfordert eine Passphrase. Im Schritt [Erstellen von vorab bereitgestellten Medien](#BKMK_CreatePrestagedMedia) legen Sie die Passphrase als Teil eines Prestart-Befehls mit der Variablen OSDBitLockerPIN fest.  
 
  Gehen Sie folgendermaßen vor, um die Windows 8-Tasksequenz zum Aktivieren von BitLocker für Windows To Go zu aktualisieren.  
 
@@ -410,7 +410,7 @@ In diesem Thema finden Sie die Schritte zum Bereitstellen von Windows To Go in S
     2.  **Sammlung**: Klicken Sie auf **Durchsuchen** , um die Sammlung mit allen Geräten auszuwählen, für die möglicherweise eine Bereitstellung von Windows To Go erforderlich ist.  
 
         > [!IMPORTANT]  
-        >  Wenn vom vorab bereitgestellten Medium, das Sie im Schritt [Create prestaged media](#BKMK_CreatePrestagedMedia) erstellt haben, die Variable **SMSTSPreferredAdvertID** verwendet wird, können Sie die Tasksequenz für die Sammlung **Alle Systeme** bereitstellen und auf der Seite **Inhalt** die Einstellung Nur Windows PE (ausgeblendet) angeben. Da die Tasksequenz ausgeblendet ist, steht sie nur Medien zur Verfügung.  
+        >  Wenn vom vorab bereitgestellten Medium, das Sie im Schritt [Erstellen von vorab bereitgestellten Medien](#BKMK_CreatePrestagedMedia) erstellt haben, die Variable **SMSTSPreferredAdvertID** verwendet wird, können Sie die Tasksequenz für die Sammlung **Alle Systeme** bereitstellen und auf der Seite **Inhalt** die Einstellung Nur Windows PE (ausgeblendet) angeben. Da die Tasksequenz ausgeblendet ist, steht sie nur Medien zur Verfügung.  
 
     3.  **Standard-Verteilungspunktgruppen verwenden, die dieser Sammlung zugeordnet sind**: Wählen Sie diese Option aus, wenn der Paketinhalt in der Standardverteilungspunktgruppe der Sammlung gespeichert werden soll. Wenn die ausgewählte Sammlung keiner Verteilungspunktgruppe zugeordnet ist, ist diese Option nicht verfügbar.  
 
@@ -421,7 +421,7 @@ In diesem Thema finden Sie die Schritte zum Bereitstellen von Windows To Go in S
     -   **Verfügbar machen für**: Geben Sie an, ob die Tasksequenz für Configuration Manager-Clients, Medien oder die PXE verfügbar sein soll.  
 
         > [!IMPORTANT]  
-        >  Verwenden Sie die Einstellung **Nur Medien und PXE (ausgeblendet)** für automatisierte Bereitstellungen von Tasksequenzen. Aktivieren Sie die Option **Unbeaufsichtigte Betriebssystembereitstellung zulassen** , und legen Sie die Variable SMSTSPreferredAdvertID als Teil des vorab bereitgestellten Mediums fest, damit der Computer ohne Benutzerinteraktion bei der Bereitstellung von Windows To Go automatisch gestartet wird, sobald ein Windows To Go-Laufwerk erkannt wird. Weitere Informationen zu den Einstellungen dieser vorab bereitgestellten Medien finden Sie im Abschnitt [Create prestaged media](#BKMK_CreatePrestagedMedia) .  
+        >  Verwenden Sie die Einstellung **Nur Medien und PXE (ausgeblendet)** für automatisierte Bereitstellungen von Tasksequenzen. Aktivieren Sie die Option **Unbeaufsichtigte Betriebssystembereitstellung zulassen** , und legen Sie die Variable SMSTSPreferredAdvertID als Teil des vorab bereitgestellten Mediums fest, damit der Computer ohne Benutzerinteraktion bei der Bereitstellung von Windows To Go automatisch gestartet wird, sobald ein Windows To Go-Laufwerk erkannt wird. Weitere Informationen zu den Einstellungen dieser vorab bereitgestellten Medien finden Sie im Abschnitt [Erstellen von vorab bereitgestellten Medien](#BKMK_CreatePrestagedMedia) .  
 
 7.  Konfigurieren Sie auf der Seite **Zeitplanung** die folgenden Einstellungen, und klicken Sie dann auf **Weiter**.  
 
@@ -459,7 +459,7 @@ In diesem Thema finden Sie die Schritte zum Bereitstellen von Windows To Go in S
  Nach der Bereitstellung des Windows To Go-Pakets und der Windows 8-Tasksequenz steht dem Benutzer der Windows To Go Creator zur Verfügung. Der Benutzer kann den Softwarekatalog bzw. das Softwarecenter (bei Bereitstellung von Windows To Go auf Geräten) aufrufen und das Programm „Windows To Go Creator“ ausführen. Sobald das Creator-Paket heruntergeladen wurde, wird auf der Taskleiste ein blinkendes Symbol angezeigt. Wenn der Benutzer auf das Symbol klickt, wird ein Dialogfeld angezeigt, in dem das Laufwerk für die Bereitstellung von Windows To Go ausgewählt werden kann (es sei denn, es wird die Befehlszeilenoption /drive verwendet). Wenn die Anforderungen von Windows To Go vom Laufwerk nicht erfüllt werden können oder auf dem Laufwerk nicht genügend freier Speicherplatz vorhanden ist, wird von Creator eine Fehlermeldung angezeigt. Der Benutzer kann Laufwerk und Abbild, die über die Bestätigungsseite angewendet werden, überprüfen. Während der Konfiguration und Vorabbereitstellung von Inhalten auf dem Windows To Go-Laufwerk von Creator wird ein Fortschrittsdialogfeld angezeigt. Nach Abschluss der Vorabbereitstellung wird von Creator eine Aufforderung zum Neustarten des Computers vom Windows To Go-Laufwerk angezeigt.  
 
 > [!NOTE]  
->  Wenn Sie im Abschnitt [Create a Windows To Go Creator package](#BKMK_CreatePackage) als Teil der Befehlszeile von Creator nicht die Startumleitung aktiviert haben, muss der Benutzer möglicherweise bei jedem Systemneustart manuell vom Windows To Go-Laufwerk starten.  
+>  Wenn Sie im Abschnitt [Erstellen eines Windows To Go Creator-Pakets](#BKMK_CreatePackage) als Teil der Befehlszeile von Creator nicht die Startumleitung aktiviert haben, muss der Benutzer möglicherweise bei jedem Systemneustart manuell vom Windows To Go-Laufwerk starten.  
 
 ###  <a name="BKMK_ConfigureStageDrive"></a> Configuration Manager konfiguriert das Windows To Go-Laufwerk und stellt es vorab bereit  
  Nach dem Neustart des Computers vom Windows To Go-Laufwerk wird vom Laufwerk Windows PE gestartet und eine Verbindung zum Verwaltungspunkt hergestellt, um die Richtlinie zum Abschließen der Bereitstellung des Betriebssystems abzurufen. Configuration Manager konfiguriert das Laufwerk und stellt es vorab bereit. Nach der Bereitstellung des Laufwerks durch Configuration Manager kann der Benutzer den Computer neu starten, um den Bereitstellungsvorgang abzuschließen (z.B. einer Domäne beitreten oder Apps installieren). Dieser Vorgang ist bei allen vorab bereitgestellten Medien identisch.  
