@@ -14,11 +14,11 @@ caps.latest.revision: "2"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 59633ce68e2bb2d722900215751f345d6d098721
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b164b6a177b8b4d1eebd0bbd54e67e90376929be
+ms.sourcegitcommit: c145e515843a0f37c2e5ca5dbd22072a219d06b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/03/2017
 ---
 # <a name="capabilities-in-technical-preview-1610-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1610 für System Center Configuration Manager
 
@@ -63,7 +63,7 @@ Als Administrator können Sie jetzt eine zuvor genehmigte Anwendungsanforderung 
 #### <a name="try-it-out"></a>Probieren Sie es aus
 So verweigern Sie eine genehmigte Anwendungsanforderung:
 
-1.  [Erstellen Sie eine Anwendung](https://docs.microsoft.com/en-us/sccm/apps/deploy-use/create-applications) in der Configuration Manager-Konsole, die eine Genehmigung benötigt, und stellen Sie sie bereit.
+1.  [Erstellen Sie eine Anwendung](https://docs.microsoft.com/sccm/apps/deploy-use/create-applications) in der Configuration Manager-Konsole, die eine Genehmigung benötigt, und stellen Sie sie bereit.
 2.  Öffnen Sie das Softwarecenter auf einem Clientcomputer, und reichen Sie eine Anwendungsanforderung ein.
 3.  Genehmigen Sie die Anwendungsanforderung in der Configuration Manager-Konsole.
 4.  Genehmigte Anwendungsanforderung verweigern: Navigieren Sie In der Configuration Manager-Konsole zu **Softwarebibliothek** > **Übersicht** > **Anwendungsverwaltung** > **Genehmigungsanforderungen**, und wählen Sie die Anwendungsanforderung aus, die Sie verweigern möchten.  Klicken Sie im Menüband auf **Verweigern**.

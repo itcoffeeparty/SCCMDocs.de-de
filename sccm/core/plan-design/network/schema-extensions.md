@@ -16,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex
-ms.openlocfilehash: 5b5540c35c02df6e3d06e4aa9269b8da3238233e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5ec1e9368e836382b143d7b2bf9d1a6a7bc2fa22
+ms.sourcegitcommit: 96b79fa091f44e8e6ac5652f6cbbb4b873a8bad9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="schema-extensions-for-system-center-configuration-manager"></a>Schemaerweiterungen für System Center Configuration Manager
 
@@ -30,7 +30,7 @@ Sie können das Active Directory-Schema so erweitern, dass es Configuration Mana
 
 -   Es ist ratsam, das Active Directory-Schema zu erweitern, aber es ist nicht erforderlich.  
 
-Bevor Sie [das Active Directory-Schema erweitern](https://msdnstage.redmond.corp.microsoft.com/en-US/library/mt345589\(TechNet.10\).aspx), sollten Sie mit Active Directory-Domänendienste vertraut sein und wissen, wie ein [Ändern des Active Directory-Schemas](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx)vorgenommen wird.  
+Bevor Sie [das Active Directory-Schema erweitern](https://docs.microsoft.com/en-us/sccm/core/plan-design/network/extend-the-active-directory-schema), sollten Sie mit Active Directory-Domänendienste vertraut sein und wissen, wie ein [Ändern des Active Directory-Schemas](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx)vorgenommen wird.  
 
 ## <a name="considerations-for-extending-the-active-directory-schema-for-configuration-manager"></a>Überlegungen zum Erweitern des Active Directory-Schemas für Configuration Manager  
 

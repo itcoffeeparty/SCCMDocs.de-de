@@ -14,11 +14,11 @@ caps.latest.revision: "13"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: c8034497299a9b5646674031a40fdee49d55ff7c
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 1519ec79eb6b1da6b9666b2ce12a46553116b364
+ms.sourcegitcommit: c145e515843a0f37c2e5ca5dbd22072a219d06b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/03/2017
 ---
 # <a name="plan-for-and-configure-application-management-in-system-center-configuration-manager"></a>Planen und Konfigurieren der Anwendungsverwaltung in System Center Configuration Manager
 
@@ -181,9 +181,9 @@ Implementieren Sie anhand der Informationen in diesem Artikel die erforderlichen
 
 Benutzerdefiniertes Branding für das Softwarecenter wird gemäß den folgenden Regeln angewendet:
 
-1. Wenn die Standortserverrolle „Anwendungskatalog-Websitepunkt“ nicht installiert ist, wird im Softwarecenter der Organisationsname angezeigt, der in der **Computer-Agent**-Clienteinstellung **Im Softwarecenter angezeigter Organisationsname** angegeben ist. Eine Anleitung hierzu finden Sie unter [Konfigurieren von Clienteinstellungen](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/configure-client-settings).
-2. Wenn die Standortserverrolle „Anwendungskatalog-Websitepunkt“ installiert ist, zeigt Software Center den Organisationsnamen und die Farbe an, der bzw. die in den Eigenschaften der Standortserverrolle „Anwendungskatalog-Websitepunkt“ angegeben sind. Weitere Informationen finden Sie unter [Konfigurationsoptionen für den Anwendungskatalog-Websitepunkt](https://docs.microsoft.com/en-us/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website).
-3. Wenn ein Microsoft Intune-Abonnement konfiguriert und mit Configuration Manager verbunden wurde, werden im Softwarecenter der Organisationsname, die Farbe und das Unternehmenslogo entsprechend den Angaben in den Eigenschaften des Intune-Abonnements angezeigt. Weitere Informationen finden Sie unter [Configuring the Microsoft Intune subscription](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription).
+1. Wenn die Standortserverrolle „Anwendungskatalog-Websitepunkt“ nicht installiert ist, wird im Softwarecenter der Organisationsname angezeigt, der in der **Computer-Agent**-Clienteinstellung **Im Softwarecenter angezeigter Organisationsname** angegeben ist. Eine Anleitung hierzu finden Sie unter [Konfigurieren von Clienteinstellungen](https://docs.microsoft.com/sccm/core/clients/deploy/configure-client-settings).
+2. Wenn die Standortserverrolle „Anwendungskatalog-Websitepunkt“ installiert ist, zeigt Software Center den Organisationsnamen und die Farbe an, der bzw. die in den Eigenschaften der Standortserverrolle „Anwendungskatalog-Websitepunkt“ angegeben sind. Weitere Informationen finden Sie unter [Konfigurationsoptionen für den Anwendungskatalog-Websitepunkt](https://docs.microsoft.com/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website).
+3. Wenn ein Microsoft Intune-Abonnement konfiguriert und mit Configuration Manager verbunden wurde, werden im Softwarecenter der Organisationsname, die Farbe und das Unternehmenslogo entsprechend den Angaben in den Eigenschaften des Intune-Abonnements angezeigt. Weitere Informationen finden Sie unter [Configuring the Microsoft Intune subscription](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription).
 
 > [!IMPORTANT]  
 >  Das Branding des Softwarecenters wird alle 14 Tage mit dem Intune-Dienst synchronisiert. Änderungen, die Sie in Intune vornehmen, können daher verzögert in Configuration Manager angezeigt werden.

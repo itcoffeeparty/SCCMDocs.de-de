@@ -14,17 +14,17 @@ caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 298d879638a2d20d421b19752cb5f20f6725df14
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 25d68e7b16afe8e24939897f01f173d3daa7fa09
+ms.sourcegitcommit: 621b9f8fedf7f1d53ea7abd804af4b63c85dbeb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/02/2017
 ---
 # <a name="intune-mobile-threat-defense-connectors-in-configuration-manager"></a>Intune Mobile Threat Defense-Connectors in Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Die [Bereitstellung der hybriden Verwaltung mobiler Geräte (System Center Configuration Manager mit Intune)](https://docs.microsoft.com/en-us/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management) und die Integration zwischen Partnern von Intune und Mobile Threat Defense bietet Ihnen die Möglichkeit, den Zugriff auf Unternehmensressourcen und -daten zu steuern. Dies basiert auf der Risikobewertung.
+Die [Bereitstellung der hybriden Verwaltung mobiler Geräte (System Center Configuration Manager mit Intune)](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management) und die Integration zwischen Partnern von Intune und Mobile Threat Defense bietet Ihnen die Möglichkeit, den Zugriff auf Unternehmensressourcen und -daten zu steuern. Dies basiert auf der Risikobewertung.
 
 Intune Mobile Threat Defense-Connectors geben Ihnen die Möglichkeit, einen Mobile Threat Defense-Hersteller Ihrer Wahl als Informationsquelle für Ihre Kompatibilitätsrichtlinien und bedingte Zugriffsregeln zu nutzen. So haben IT-Administratoren die Möglichkeit, eine Schutzschicht um ihre Unternehmensressourcen zu schaffen, wie etwa Exchange oder Sharepoint, besonders für gefährdete mobile Geräte.
 
