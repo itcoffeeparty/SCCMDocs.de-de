@@ -31,7 +31,7 @@ Sie können Gerätekategorien erstellen, mit denen Geräte automatisch in Gerät
 
 ## <a name="create-device-categories"></a>Gerätekategorien erstellen
 
-1.  Wechseln Sie zu **Bestand und Konformität** > **Übersicht** > ** Gerätesammlungen**.
+1.  Wechseln Sie zu **Bestand und Konformität** > **Übersicht** >  **Gerätesammlungen**.
 2.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Gerätesammlungen** die Option **Gerätekategorien verwalten** aus.
 3.  Erstellen, bearbeiten oder entfernen Sie Kategorien.
 

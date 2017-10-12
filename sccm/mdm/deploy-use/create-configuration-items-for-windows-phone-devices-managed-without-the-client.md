@@ -286,7 +286,7 @@ Verwenden Sie das **Windows Phone**-Konfigurationselement von System Center Conf
  Es ist nicht möglich, zulässige und blockierte Apps im selben Konfigurationselement anzugeben.  
   
 > [!IMPORTANT]  
->  Wenn Sie eine Liste zulässiger Apps angeben, müssen Sie sicherstellen, dass die Unternehmensportal-App und andere Apps, die Sie für Windows Phone 8.1-Geräte bereitgestellt haben, in der Liste zulässiger Apps ** ** enthalten sind.  
+>  Wenn Sie eine Liste zulässiger Apps angeben, müssen Sie sicherstellen, dass die Unternehmensportal-App und andere Apps, die Sie für Windows Phone 8.1-Geräte bereitgestellt haben, in der Liste zulässiger Apps ****  enthalten sind.  
   
 ##### <a name="to-specify-an-allowed-or-blocked-apps-list"></a>So geben Sie eine Liste zulässiger oder blockierter Apps an  
   

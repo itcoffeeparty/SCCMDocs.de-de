@@ -157,9 +157,9 @@ Gehen Sie wie folgt vor, um eine Anwendung für Macintosh-Computer, die von Conf
 
 6.  Wählen Sie **Weiter** aus.  
 
-7.  Überprüfen Sie auf der Seite **Informationen importieren** des ** **Assistenten zum Erstellen neuer Bereitstellungstypen die importierten Informationen. Bei Bedarf können Sie **Zurück** auswählen, um Fehler zu korrigieren. Wählen Sie zum Fortfahren **Weiter** aus.  
+7.  Überprüfen Sie auf der Seite **Informationen importieren** des **** Assistenten zum Erstellen neuer Bereitstellungstypen die importierten Informationen. Bei Bedarf können Sie **Zurück** auswählen, um Fehler zu korrigieren. Wählen Sie zum Fortfahren **Weiter** aus.  
 
-8.  Geben Sie auf der Seite **Allgemeine Informationen** des ** **Assistenten zum Erstellen neuer Bereitstellungstypen Informationen zur Anwendung an, beispielsweise Anwendungsname, Kommentare und die Sprachen, in denen dieser Bereitstellungstyp verfügbar sein soll.  
+8.  Geben Sie auf der Seite **Allgemeine Informationen** des **** Assistenten zum Erstellen neuer Bereitstellungstypen Informationen zur Anwendung an, beispielsweise Anwendungsname, Kommentare und die Sprachen, in denen dieser Bereitstellungstyp verfügbar sein soll.  
 
     > [!NOTE]  
     >  Einige Informationen zum Bereitstellungstyp sind auf dieser Seite möglicherweise schon vorhanden, wenn sie bereits aus den Anwendungsinstallationsdateien abgerufen wurden.  
@@ -185,7 +185,7 @@ Gehen Sie wie folgt vor, um eine Anwendung für Macintosh-Computer, die von Conf
 
 17. Wählen Sie im **Assistenten zum Erstellen neuer Bereitstellungstypen** auf der Seite **Anforderungen** **Weiter** aus.  
 
-18. Überprüfen Sie im Assistenten zum Erstellen neuer Bereitstellungstypen auf der Seite **Zusammenfassung** die Aktionen, die von diesem Assistenten ** **ausgeführt werden sollen.  Bei Bedarf können Sie **Zurück** auswählen, um die Einstellungen für den Bereitstellungstyp zu ändern. Wählen Sie **Weiter** aus, um den Bereitstellungstyp zu erstellen.  
+18. Überprüfen Sie im Assistenten zum Erstellen neuer Bereitstellungstypen auf der Seite **Zusammenfassung** die Aktionen, die von diesem Assistenten **** ausgeführt werden sollen.  Bei Bedarf können Sie **Zurück** auswählen, um die Einstellungen für den Bereitstellungstyp zu ändern. Wählen Sie **Weiter** aus, um den Bereitstellungstyp zu erstellen.  
 
 19. Nachdem die Seite **Status** abgeschlossen ist, überprüfen Sie die ausgeführten Aktionen, und wählen Sie dann **Schließen** aus, um den **Assistenten zum Erstellen von Bereitstellungstypen** abzuschließen.  
 
