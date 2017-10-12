@@ -2,7 +2,7 @@
 title: "Registrieren von iOS-Geräten mit dem Programm zur Geräteregistrierung (DEP) – Configuration Manager | Microsoft-Dokumentation"
 description: "Aktivieren der Registrierung des iOS-Programms zur Geräteregistrierung (Device Enrollment Program, DEP) für Hybridbereitstellungen in Configuration Manager mit Intune."
 ms.custom: na
-ms.date: 08/15/2017
+ms.date: 09/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "9"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.openlocfilehash: e76e46ce0d6ee0582d5161709ff114b936ac5660
-ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
+ms.openlocfilehash: f34f7527c14e1be6229212bfb2d8fd022ee6defe
+ms.sourcegitcommit: 8faf42135a8dc9c384407e64f3f8ba204fb15847
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>Registrierung des iOS-Programms zur Geräteregistrierung (Device Enrollment Program, DEP) für Hybridbereitstellungen mit Configuration Manager
 
@@ -40,6 +40,7 @@ Unternehmen können iOS-Geräte mit dem Geräteregistrierungsprogramm von Apple 
 3.  **Abrufen eines Device Enrollment Program-Tokens**   
     Rufen Sie das [Portal des Programms zur Geräteregistrierung](https://deploy.apple.com) (https://deploy.apple.com) auf, und melden Sie sich mit Ihrer geschäftlichen Apple-ID an. Diese Apple-ID muss später verwendet werden, um das DEP-Token zu erneuern.  
     1.  Erweitern Sie in der [Portal des Programms zur Geräteregistrierung](https://deploy.apple.com)zu **Programm zur Geräteregistrierung** > **Server verwalten**, und klicken Sie anschließend auf **MDM-Server hinzufügen**verwaltet werden können.  
+    ![Screenshot des Hinzufügens des MDM-Servers im Portal des Programms zur Geräteregistrierung](../media/enrollment-program-token-add-server.png)
     2.  Geben Sie den **Namen des MDM-Servers**, und klicken Sie anschließend auf **Weiter**verwaltet werden können. Der Servername dient als Referenz zum Identifizieren des MDM-Servers. Dies ist nicht der Name oder die URL des Intune- oder Configuration Manager-Servers.  
     3.  Das Dialogfeld **<Servername\> hinzufügen** wird geöffnet. Klicken Sie auf **Datei auswählen…** um die im vorherigen Schritt erstellte PEM-Datei hochzuladen, und klicken Sie dann auf **Weiter**verwaltet werden können.  
     4.  Im Dialogfeld **<Servername\> hinzufügen** wird der Link **Ihr Servertoken** angezeigt. Laden Sie die Servertokendatei (verwaltet werden können.p7m) auf Ihren Computer herunter, und klicken Sie anschließend auf **Fertig**verwaltet werden können.  
@@ -97,6 +98,7 @@ Unternehmen können iOS-Geräte mit dem Geräteregistrierungsprogramm von Apple 
 
 1. Rufen Sie das [Portal des Programms zur Geräteregistrierung](https://deploy.apple.com) (https://deploy.apple.com) auf, und melden Sie sich mit Ihrer geschäftlichen Apple-ID an.
 2. Wechseln Sie zu **Bereitstellungsprogramm** > **Programm zur Geräteregistrierung** > **Geräte verwalten**verwaltet werden können. Geben Sie alle erforderlichen Informationen bei **Choose Devices**(Geräte wählen) an, fügen Sie Geräteinformationen hinzu, und geben Sie die Gerätedetails wie die **Seriennummer**und **Bestellnummer**an, oder laden Sie über **Upload CSV File**eine CSV-Datei hoch. Wählen Sie als Nächstes **Zu Server zuweisen** aus. Wählen Sie den in Schritt 3 angegebenen <*Servernamen*> aus, und klicken Sie dann auf **OK**.  
+![Screenshot des Portals des Apple-Programms zur Geräteregistrierung, das Geräte hinzufügt](../media/enrollment-program-token-specify-serial.png)
 
 3.  **Synchronisieren von DEP-verwalteten Geräten**   
     Navigieren Sie im Arbeitsbereich **Bestand und Kompatibilität** zu **Alle unternehmenseigenen Geräte** > **Vorab deklarierte Geräte**. Klicken Sie auf der Registerkarte **Startseite** auf **DEP-Synchronisierung**. Eine Synchronisierungsanforderung wird an Apple gesendet. Nach Abschluss der Synchronisierung werden die DEP-verwalteten Geräte angezeigt.

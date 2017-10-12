@@ -2,7 +2,7 @@
 title: "Integritätsnachweis | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr zum Integritätsnachweis, der in der Configuration Manager-Konsole angezeigt werden kann."
 ms.custom: na
-ms.date: 03/27/2017
+ms.date: 10/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "17"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 54b3433a002b8ef29059bab04458138348f95d66
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 11d58237ea1e88785f6991450b3e898562b23918
+ms.sourcegitcommit: a17f5dece340a70cedbec03d19938dab90ae60b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/06/2017
 ---
 # <a name="health-attestation-for-system-center-configuration-manager"></a>Integritätsnachweis für System Center Configuration Manager
 
@@ -38,8 +38,8 @@ Diese Funktion ist für PCs und lokale Ressourcen verfügbar, die von Configurat
  **Anforderungen:**  
 
 -   Clientgeräte unter Windows 10 Version 1607 oder Windows Server 2016 Version 1607 mit [Nachweis der Geräteintegrität aktiviert](https://technet.microsoft.com/windows-server-docs/security/device-health-attestation)
--    TPM 1.2 oder TPM 2-fähige Geräte
--   Kommunikation zwischen dem Configuration Manager-Client-Agent und dem „has.spserv.microsoft.com“ (Port 443) Integritätsnachweisdienst (Cloud-Verwaltung) oder mit dem aktivierten Verwaltungspunkt des Nachweises der Geräteintegrität (lokal)
+-   TPM 1.2- oder TPM 2-fähige Geräte
+-   Bei der Verwendung der Cloudverwaltung erfolgt die Kommunikation zwischen dem Configuration Manager-Client-Agent und dem Verwaltungspunkt mit *has.spserv.microsoft.com* (Port 443) Integritätsnachweisdienst (Cloud-Verwaltung). Wenn sich der Client lokal befindet, muss er fähig sein, mit dem Verwaltungspunkt mit aktiviertem Nachweis der Geräteintegrität zu kommunizieren.
 
 ### <a name="how-to-enable-health-attestation-service-communication-on-configuration-manager-client-computers"></a>Aktivieren der Kommunikation mit dem Integritätsnachweisdienst auf Configuration Manager-Clientcomputern
 

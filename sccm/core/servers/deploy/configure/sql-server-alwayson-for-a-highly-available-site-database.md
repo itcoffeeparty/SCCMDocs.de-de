@@ -2,7 +2,7 @@
 title: SQL Server AlwaysOn | Microsoft-Dokumentation
 description: "Planen Sie die Verwendung einer SQL Server-AlwaysOn-Verfügbarkeitsgruppe mit SCCM."
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 09/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "16"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: c746365238e1255d73387a9496521bb03a56b21b
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3e275f6203a9e0b9210bfbadbf9addf64f6533d8
+ms.sourcegitcommit: 8faf42135a8dc9c384407e64f3f8ba204fb15847
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Vorbereiten der Verwendung von SQL Server AlwaysOn-Verfügbarkeitsgruppen mit Configuration Manager
 
@@ -210,8 +210,11 @@ Sie können das folgende Skript ausführen, um die Datenbankkonfigurationen für
 ## <a name="limitations-and-known-issues"></a>Einschränkungen und bekannte Probleme
 Die folgenden Einschränkungen gelten für alle Szenarien.   
 
-**Basis-Verfügbarkeitsgruppen werden nicht unterstützt:**  
-[Basis-Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/mt614935.aspx) wurden mit SQL Server 2016 Standard Edition eingeführt und unterstützen den Lesezugriff auf sekundäre Replikate – und somit eine Voraussetzung für die Verwendung mit Configuration Manager – nicht.
+**SQL Server-Optionen und -Konfigurationen, die nicht unterstützt werden:**
+- **Basis-Verfügbarkeitsgruppen**  
+  [Basis-Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/mt614935.aspx) wurden mit SQL Server 2016 Standard Edition eingeführt und unterstützen den Lesezugriff auf sekundäre Replikate – und somit eine Voraussetzung für die Verwendung mit Configuration Manager – nicht.
+- **Failoverclusterinstanz**  
+  [Failoverclusterinstanzen](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server) werden für ein Replikat, das Sie mit Configuration Manager verwenden, nicht unterstützt.
 
 **SQL-Server, die zusätzliche Verfügbarkeitsgruppen hosten:**   
 Vor Configuration Manager, Version 1610, galt: Wenn eine Verfügbarkeitsgruppe auf einer SQL Server-Instanz neben der Gruppe für Configuration Manager eine oder mehrere Verfügbarkeitsgruppen hostet, muss jedes Replikat in jeder zusätzlichen Verfügbarkeitsgruppe zum Zeitpunkt der Ausführung des Configuration Manager-Setups oder der Installation eines Updates für Configuration Manager die folgenden Konfigurationen aufweisen:

@@ -2,7 +2,7 @@
 title: "Neuigkeiten bei der hybriden Verwaltung mobiler Geräte mit Configuration Manager | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr über die neuen Funktionen der Verwaltung mobiler Geräte, die für Hybridbereitstellungen mit Configuration Manager und Intune verfügbar sind."
 ms.custom: na
-ms.date: 06/30/2017
+ms.date: 10/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -10,25 +10,29 @@ ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
-caps.latest.revision: "40"
-author: Mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 2ef4964a74e000feac029b158f6fe0c52e3de370
-ms.sourcegitcommit: 51654bf8b5615eb99084d0a20d18ca3fccfa83a1
+ms.openlocfilehash: 6c2c6ffee3b2084ede61e5602a78bf5ca82446f6
+ms.sourcegitcommit: 6c70e0af8d9af208009641786a3b555db4482e97
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2017
+ms.lasthandoff: 10/05/2017
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Neuheiten bei der hybriden Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Dieser Artikel bietet Details zu den neuen Features für die Verwaltung mobiler Geräte (MDM), die für Hybridbereitstellungen mit System Center Configuration Manager und Intune verfügbar sind.  
+Dieser Artikel bietet Details zu den neuen Features für die Verwaltung mobiler Geräte (MDM), die für Hybridbereitstellungen mit System Center Configuration Manager und Intune verfügbar sind.     
+
+> [!Note]    
+> Intune in Azure ist die von Microsoft empfohlene MDM-Lösung.     
+> - Ausführliche Informationen zu neuen Funktionen und Updates in Intune Standalone finden Sie unter [Neuerungen in Microsoft Intune](https://docs.microsoft.com/intune/whats-new).    
+> - Informationen zu einer Migration zu Intune Standalone finden Sie unter [Migrate hybrid MDM users and devices to Intune standalone (Migrieren von hybriden MDM-Benutzern und -Geräten zu Intune Standalone)](https://docs.microsoft.com/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
+> - Details zu UI-Updates für Intune und hybrid verwaltete MDM-Geräte finden Sie unter [Aktualisierungen für die Benutzeroberfläche für Endbenutzer-Apps in Intune](https://docs.microsoft.com/intune/whats-new-app-ui). 
 
 ##  <a name="compatibility-with-configuration-manager-versions"></a>Kompatibilität mit Configuration Manager-Versionen  
-
- Jeder Abschnitt dieses Artikels listet Hybridfeatures in drei verschiedenen Kategorien auf. Verwenden Sie die folgenden Anleitungen, um die Kompatibilität der Features in jeder Kategorie mit verschiedenen Versionen von Configuration Manager zu ermitteln:  
+Jeder Abschnitt dieses Artikels listet Hybridfeatures in drei verschiedenen Kategorien auf. Verwenden Sie die folgenden Anleitungen, um die Kompatibilität der Features in jeder Kategorie mit verschiedenen Versionen von Configuration Manager zu ermitteln:  
 
 |Featurekategorien|Beschreibung|
 |-|-|
@@ -40,8 +44,8 @@ Dieser Artikel bietet Details zu den neuen Features für die Verwaltung mobiler 
 
 ### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune     
 
-- **Zusätzliche Pushbenachrichtigungen für Endbenutzer zur Unternehmensportal-App für Android Oreo** <!--1475932-->    
-    Endbenutzern werden zusätzliche Benachrichtigungen angezeigt, um Ihnen mitzuteilen, wann die Unternehmensportal-App für Android Oreo Hintergrundaufgaben wie das Abrufen von Richtlinien aus dem Intune-Dienst ausführt. So sind Endbenutzer besser darüber informiert, wann die Unternehmensportal-App administrative Aufgaben auf ihren Geräten ausführt. Dies ist ein Teil der gesamten [Optimierung der Benutzeroberfläche des Unternehmensportals](https://blogs.technet.microsoft.com/intunesupport/2017/08/21/android-8-0-o-behaviour-changes-and-microsoft-intune) für die Unternehmensportal-App für Android Oreo. 
+- **Aktion „Aktualisieren“ zur Unternehmensportal-App für Windows 10 hinzugefügt** <!-- 1132468 -->    
+    In der Unternehmensportal-App für Windows 10 können Benutzer die Daten nun aktualisieren, indem Sie sie auf „Aktualisieren“ ziehen oder indem Sie auf dem Desktop auf F5 drücken.
 
 - **Informieren von Endbenutzern darüber, welche Geräteinformationen für iOS angezeigt werden** <!--739894-->    
     Auf dem Bildschirm „Gerätedetails“ der Unternehmensportal-App für iOS wurde **Besitztyp** hinzugefügt. So können Benutzer weitere Informationen zum Datenschutz direkt von dieser Seite aus der Intune-Endbenutzerdokumentation erhalten. Sie finden diese Informationen auch auf dem Bildschirm „Info“. 

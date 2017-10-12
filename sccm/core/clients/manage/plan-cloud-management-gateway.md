@@ -1,18 +1,18 @@
 ---
 title: Planen von Cloud Management Gateway | Microsoft-Dokumentation
 description: 
-ms.date: 06/07/2017
+ms.date: 10/06/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: d3e658714c30a1eba64f94e248d5e11095ca1dcb
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: c3d036eb91d16ed95c26bbf2bcce1e37851f90a2
+ms.sourcegitcommit: 8ac9c2c9ba1fdcbb7cc8d5be898586865fcf67c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/07/2017
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planen von Cloud Management Gateway in Configuration Manager
 
@@ -46,9 +46,9 @@ Client-Zertifikate und Zertifikate für Secure Socket Layer (SSL) sind erforderl
 
     -   Clientbereitstellung
     -   Automatische Standortzuweisung
-    -   Richtlinien für Benutzer
     -   Anwendungskatalog (einschließlich Softwaregenehmigungsanforderungen)
     -   Vollständige Betriebssystembereitstellung (OSD)
+    -   Tasksequenzen (alle)
     -   Configuration Manager-Konsole
     -   Remotetools
     -   Berichterstellungswebsite
@@ -78,7 +78,7 @@ Das Cloudverwaltungsgateway verwendet die folgende Funktionen von Microsoft Azur
 
 -   Ausgehende Datenübertragungen
 
-    -   Für die von dem Dienst übertragenen Daten fallen Gebühren an. Beachten Sie die [Preisübersicht „Bandbreite“ für Azure](https://azure.microsoft.com/en-us/pricing/details/bandwidth/), um die potenziellen Kosten zu ermitteln.
+    -   Für die von dem Dienst übertragenen Daten fallen Gebühren an. Beachten Sie die [Preisübersicht „Bandbreite“ für Azure](https://azure.microsoft.com/pricing/details/bandwidth/), um die potenziellen Kosten zu ermitteln.
 
     -   Rechnen Sie als Schätzwert mit ca. 100 MB pro Client und Monat für internetbasierte Clients, mit denen stündlich Richtlinien aktualisiert werden.
 
@@ -111,14 +111,14 @@ Verwenden Sie diese Rolle, um die Verwaltung internetbasierter Clients zu verein
 
 ### <a name="how-is-the-cloud-management-gateway-deployed"></a>Wie wird Cloud Management Gateway bereitgestellt?
 
-Die Clouddienst-Manager-Komponente im Dienstverbindungspunkt verarbeitet alle Bereitstellungstasks für Cloud Management Gateway. Darüber hinaus überwacht die Komponente alle Informationen von Azure AD zu Dienstintegrität und -protokollierung und erstellt entsprechende Berichte.
+Die Clouddienst-Manager-Komponente im Dienstverbindungspunkt verarbeitet alle Bereitstellungstasks für Cloud Management Gateway. Darüber hinaus überwacht die Komponente alle Informationen von Azure AD zu Dienstintegrität und -protokollierung und erstellt entsprechende Berichte. Stellen Sie sicher, dass sich Ihr Dienstverbindungspunkt im [Onlinemodus](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes) befindet.
 
 #### <a name="certificate-requirements"></a>Zertifikatanforderungen
 
 Sie benötigen die folgenden Zertifikate, um Cloud Management Gateway zu sichern:
 
 - **Verwaltungszertifikat**: Hierbei kann es sich um ein beliebiges Zertifikat handeln – einschließlich selbstsignierten Zertifikaten. Sie können ein öffentliches, in Azure AD hochgeladenes Zertifikat oder eine in Configuration Manager importierte [PFX-Datei mit privatem Schlüssel](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) für die Authentifizierung bei Azure AD verwenden.
-- **Webdienstzertifikat**: Es wird empfohlen, ein Zertifikat einer öffentlichen Zertifizierungsstelle zu verwenden, um eine native Vertrauensstellung bei Clients zu erzielen. Der CName-Eintrag muss in der öffentlichen DNS-Registrierungsstelle erstellt werden. Platzhalterzertifikate werden nicht unterstützt.
+- **Webdienstzertifikat**: Es wird empfohlen, ein Zertifikat einer öffentlichen Zertifizierungsstelle zu verwenden, um eine native Vertrauensstellung bei Clients zu erzielen. Erstellen Sie den CNAME-Eintrag in der öffentlichen DNS-Registrierungsstelle. Platzhalterzertifikate werden nicht unterstützt.
 - **In Cloud Management Gateway hochgeladene Zertifikate von Stammzertifizierungsstellen bzw. untergeordneten Zertifizierungsstellen**: Cloud Management Gateway muss PKI-Clientzertifikate in der gesamten Zertifikatkette überprüfen. Wenn Sie eine Unternehmenszertifizierungsstelle zum Ausstellen von PKI-Clientzertifikaten verwenden und das Stammzertifikat oder die untergeordnete Zertifizierungsstelle im Internet nicht verfügbar ist, müssen Sie das Zertifikat in Cloud Management Gateway hochladen.
 
 #### <a name="deployment-process"></a>Bereitstellungsprozess
@@ -131,6 +131,9 @@ Die Bereitstellung besteht aus zwei Phasen:
 - Einrichten der CMG-Komponente auf dem Azure AD-Server und Konfigurieren von Endpunkten, HTTP-Handlern und Diensten in den Internetinformationsdiensten (Internet Information Services, IIS)
 
 Wenn Sie die Konfiguration von Cloud Management Gateway ändern, wird in Cloud Management Gateway eine Konfigurationsbereitstellung initiiert.
+
+### <a name="where-do-i-set-up-the-cloud-management-gateway"></a>Wo richte ich das Cloud Management Gateway ein?
+Sie können das Cloud Management Gateway am Standort der obersten Ebene Ihrer Hierarchie erstellen. Wenn es sich dabei um einen Standort der zentralen Verwaltung handelt, können Sie CMG-Verbindungspunkte an untergeordneten primären Standorten erstellen.
 
 ### <a name="how-does-the-cloud-management-gateway-help-ensure-security"></a>Wie sorgt Cloud Management Gateway für mehr Sicherheit?
 
@@ -150,7 +153,7 @@ Cloud Management Gateway trägt auf folgende Weise zur Sicherheit bei:
     - Mithilfe interner Zertifikate wird eine gegenseitige SSL-Authentifizierung mit Cloud Management Gateway durchgeführt.
     - HTTP-Anforderungen werden basierend auf URL-Zuordnungen weitergeleitet.
     - Der Verbindungsstatus wird gemeldet, um den Dienstintegritätsstatus anzuzeigen.
-    - Der Datenverkehr auf Endpunkten wird alle 5 Minuten gemeldet.
+    - Der Datenverkehr auf Endpunkten wird alle fünf Minuten gemeldet.
 
 - Clientseitige Configuration Manager-Rollen auf dem veröffentlichenden Endpunkt, z.B. der Verwaltungspunkt, werden gesichert, ebenso wie die Hostendpunkte für Softwareupdatepunkte in IIS, die der Verarbeitung von Clientanforderungen dienen. Jeder in Cloud Management Gateway veröffentlichte Endpunkt verfügt über eine URL-Zuordnung.
 Die externe URL ist die URL, über die der Client mit Cloud Management Gateway kommuniziert.
@@ -164,7 +167,7 @@ Alle veröffentlichten externen URLs werden automatisch in Cloud Management Gate
 
 ### <a name="what-ports-are-used-by-the-cloud-management-gateway"></a>Welche Ports werden von Cloud Management Gateway verwendet?
 
-- Im lokalen Netzwerk sind keine eingehenden Ports erforderlich. Bei der Bereitstellung von Cloud Management Gateway wird automatisch eine Reihe von Ports in Cloud Management Gateway erstellt.
+- Es sind keine eingehenden Ports für das lokale Netzwerk erforderlich. Bei der Bereitstellung von Cloud Management Gateway wird automatisch eine Reihe von Ports in Cloud Management Gateway erstellt.
 - Der CMG-Verbindungspunkt erfordert zusätzlich zu Port 443 einige ausgehende Ports.
 
 |||||

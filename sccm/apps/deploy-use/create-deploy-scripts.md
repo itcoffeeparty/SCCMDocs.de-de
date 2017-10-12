@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: e6b29cd85504742e8638a55db2f6c4ecc8ab3e55
-ms.sourcegitcommit: 5ca89204716750eaaceb01bba40b35b85c7122ba
+ms.openlocfilehash: 4c90617890ba3751a7215e9ac54042d64cc1a227
+ms.sourcegitcommit: 96b79fa091f44e8e6ac5652f6cbbb4b873a8bad9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Erstellen und Ausführen von PowerShell-Skripts über die Configuration Manager-Konsole
 
@@ -58,6 +58,9 @@ Standardmäßig können Benutzer kein Skript genehmigen, das sie erstellt haben.
 2. Erweitern Sie im Arbeitsbereich **Verwaltung** den Bereich **Standortkonfiguration**, und klicken Sie dann auf **Standorte**.
 3. Wählen Sie in der Liste der Standorte Ihren Standort aus, und klicken Sie dann auf der Registerkarte **Start** in der Gruppe **Standorte** auf **Hierarchieeinstellungen**.
 4. Deaktivieren Sie im Dialogfeld **Eigenschaften von Hierarchieeinstellungen** auf der Registerkarte **Allgemein** das Kontrollkästchen **Skriptautoren nicht das Genehmigen ihrer eigenen Skripts erlauben**.
+
+>[!IMPORTANT]
+>Als bewährte Methode sollten Sie nicht zulassen, dass Skriptautoren ihre eigenen Skripts genehmigen können. Dies sollte nur in einer Testumgebung gestattet sein. Bitte bedenken Sie die möglichen Auswirkungen, die eine Änderung dieser Einstellung in einer Produktionsumgebung mit sich bringt.
 
 ## <a name="import-and-edit-a-script"></a>Importieren und Bearbeiten eines Skripts
 
@@ -108,6 +111,9 @@ Nachdem ein Skript genehmigt wurde, kann es für die von Ihnen gewählte Sammlun
 
 >[!IMPORTANT]
 >Dem Skript wird für die Ausführung ein einstündiger Zeitraum zugewiesen. Wenn es in diesem Zeitraum nicht ausgeführt wird (z.B. weil der Computer ausgeschaltet ist), müssen Sie die Ausführung erneut anstoßen.
+
+>[!IMPORTANT]
+>Das Skript wird als das System- oder Computerkonto auf den entsprechenden Zielclients ausgeführt. Dieses Konto hat einen sehr begrenzten Netzwerkzugriff. Wenn Sie einen Zugriff auf Remotesysteme und Speicherorte mithilfe dieses Skripts bereitstellen, sollten Sie das im Hinterkopf haben.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

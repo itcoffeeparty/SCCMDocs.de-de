@@ -1,6 +1,6 @@
 ---
 title: "Umstellen der MDM-Autorität | Microsoft-Dokumentation"
-description: "Erfahren Sie, wie die MDM-Autorität von Configuration Manager (hybrid) auf Intune standalone oder umgekehrt umgestellt wird."
+description: "Erfahren Sie, wie Sie die MDM-Autorität von Configuration Manager (hybrid) auf Intune Standalone umstellen."
 keywords: 
 author: dougeby
 manager: angrobe
@@ -9,14 +9,17 @@ ms.topic: article
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: cc397ab5-125f-4f17-905b-fab980194f49
-ms.openlocfilehash: d24e6e736397a4612db7b47e997d8cb1f97c4de9
-ms.sourcegitcommit: 948644072bd158b156f782a4376bcd50fac7c73a
+ms.openlocfilehash: 489c01f92d42ed12ac5464307a16713ca898d251
+ms.sourcegitcommit: 8ac9c2c9ba1fdcbb7cc8d5be898586865fcf67c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/07/2017
 ---
 # <a name="change-your-mdm-authority"></a>Umstellen der MDM-Autorität
 Ab Configuration Manager Version 1610 können Sie Ihre MDM-Autorität ohne Unterstützung durch den Microsoft-Support und ohne Aufheben der Registrierung und erneutes Registrieren Ihrer vorhandenen verwalteten Geräte umstellen. Dieses Thema erläutert die Schritte, die ausgeführt werden müssen, um einen vorhandenen Microsoft Intune-Mandanten, der über die Configuration Manager-Konsole (hybrid) konfiguriert wurde, auf Intune standalone umzustellen.
+
+> [!Note]    
+> Wenn Sie einen vorhandenen Microsoft Intune-Mandanten, dessen MDM-Autorität Intune ist, auf Configuration Manager (hybrid) ändern möchten, finden Sie weitere Informationen unter [Umstellen der MDM-Autorität](https://docs.microsoft.com/intune-classic/deploy-use/change-mdm-authority).
 
 > [!Important]    
 > Dieses Thema behandelt die Umstellung Ihrer MDM-Autorität, wenn bisher noch keine Benutzer migriert wurden. Informationen zum Umstellen Ihrer MDM-Autorität, nachdem Sie [eine Teilmenge von Benutzern migriert](migrate-hybridmdm-to-intunesa.md) haben, finden Sie unter [Umstellen der MDM-Autorität](migrate-change-mdm-authority.md).
@@ -72,7 +75,7 @@ Wenn Sie iOS-Geräte verwenden, müssen Sie das APNs-Zertifikat in Intune konfig
     In the [Azure portal](https://azure.portal.com), choose **More Services** &gt; **Monitoring + Management** &gt; **Intune**. On the **Intune** blade, choose **Device enrollment** &gt; **Apple Enrollment** &gt; **Apple MDM Push Certificate**, and then select **Download your CSR** to download and save the .csr file locally.   
     <br/>
     **Microsoft Intune administration console**   -->
-   Wechseln Sie in der [Microsoft Intune-Verwaltungskonsole](http://manage.microsoft.com) zu **Verwaltung** &gt; **Verwaltung mobiler Geräte** &gt; ** iOS und Mac OS X** &gt; **APNs-Zertifikat hochladen**, und wählen Sie dann **APNS-Zertifikatanforderung herunterladen** aus. Speichern Sie die Zertifikatsignierungsanforderung (CSR-Datei) lokal.
+   Wechseln Sie in der [Microsoft Intune-Verwaltungskonsole](http://manage.microsoft.com) zu **Verwaltung** &gt; **Verwaltung mobiler Geräte** &gt;  **iOS und Mac OS X** &gt; **APNs-Zertifikat hochladen**, und wählen Sie dann **APNS-Zertifikatanforderung herunterladen** aus. Speichern Sie die Zertifikatsignierungsanforderung (CSR-Datei) lokal.
    > [!IMPORTANT]    
    > Laden Sie eine neue Zertifikatsignieranforderung herunter. Verwenden Sie keine vorhandene Datei, da dies zu einem Fehler führt.
 

@@ -14,11 +14,11 @@ caps.latest.revision: "15"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 5148fe852e4d63e1cfd2d5b9c62369155dbecb89
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: ef515da67a7293de60a7678dee69e9785d339352
+ms.sourcegitcommit: 96b79fa091f44e8e6ac5652f6cbbb4b873a8bad9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="about-client-installation-properties-in-system-center-configuration-manager"></a>Informationen zu Clientinstallationseigenschaften in System Center Configuration Manager
 
@@ -179,7 +179,7 @@ Beispiel: `ccmsetup.exe /downloadtimeout:100`
 
  Wenn diese Option nicht angegeben ist, überprüft der Client die Zertifikatssperrliste, bevor er eine Verbindung über HTTPS herstellt.  
 
- Weitere Informationen zur Überprüfung der Zertifikatsperrlisten finden Sie unter [Planning for PKI certificate revocation](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs) in[Plan for security in System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
+ Weitere Informationen zur Überprüfung der Client-Zertifikatsperrlisten finden Sie unter [Planen der PKI-Zertifikatsperrung](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs) in [Planen der Sicherheit in System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
 
  Beispiel: `CCMSetup.exe /UsePKICert /NoCRLCheck`  
 
@@ -332,7 +332,7 @@ Beispiel: **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 
  Geben Sie diese Option nicht mit der Installationseigenschaft „SMSSITECODE=AUTO“ an. Internetbasierte Clients müssen direkt ihrem internetbasierten Standort zugewiesen werden.  
 
- Beispiel: `CCMSetup.exe  /UsePKICert/ CCMHOSTNAME="SMSMP01.corp.contoso.com"`  
+ Beispiel: `CCMSetup.exe  /UsePKICert CCMHOSTNAME="SMSMP01.corp.contoso.com"`  
 
 ### <a name="ccmhttpport"></a>CCMHTTPPORT
 
@@ -402,7 +402,7 @@ Beispiel: `CCMSetup.exe DISABLECACHEOPT=TRUE`
 
 Gibt den Fallbackstatuspunkt an, von dem die von Configuration Manager-Clientcomputern gesendeten Zustandsmeldungen empfangen und verarbeitet werden.  
 
-Weitere Informationen zum Fallbackstatuspunkt finden Sie unter [Bestimmen, ob ein Fallbackstatuspunkt erforderlich ist](/sccm/core/clients/deploy/plan#determine-if-you-need-a-fallback-status-point).  
+Weitere Informationen zum Fallbackstatuspunkt finden Sie unter [Bestimmen, ob ein Fallbackstatuspunkt erforderlich ist](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point).  
 
 Beispiel: `CCMSetup.exe FSP=SMSFP01`  
 

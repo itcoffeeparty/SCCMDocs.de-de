@@ -14,11 +14,11 @@ caps.latest.revision:
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.openlocfilehash: 4fd2d3b8aae6a2f42e7c6a87723d16368be30984
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d353f47671a0c1e67c34bb9641fa9dd007b9f8be
+ms.sourcegitcommit: c145e515843a0f37c2e5ca5dbd22072a219d06b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/03/2017
 ---
 # <a name="troubleshoot-lookout-integration-with-intune"></a>Behandeln von Problemen bei der Lookout-Integration mit Intune
 
@@ -34,7 +34,7 @@ Sie können den Lookout Support über die folgenden Methoden kontaktieren:
 
 * E-Mail: enterprisesupport@lookout.com
 * Melden Sie sich bei der [MTP-Konsole](http://aad.lookout.com) an, und navigieren Sie zum Modul **Support**.
-* Wechseln Sie zu: https://enterprise.support.lookout.com/hc/en-us/requests, und stellen Sie eine Supportanfrage.
+* Wechseln Sie zu: https://enterprise.support.lookout.com/hc/requests, und stellen Sie eine Supportanfrage.
 
 ### <a name="unable-to-sign-in"></a>Anmelden nicht möglich
 Möglicherweise wird der folgende Fehler angezeigt, wenn der globale Administrator von Azure AD das ursprüngliche Lookout-Setup nicht akzeptiert hat.
@@ -73,7 +73,7 @@ Getrennt bedeutet, dass Lookout MTP über ein vorkonfiguriertes Zeitintervall ni
 Über das Modul **Geräte** der Lookout MTP-Konsole kann der Administrator das Gerät auswählen und löschen.   Das nächste Mal, wenn der Geräteeigentümer die Lookout for Work-App öffnet und auf **Aktivieren** tippt, führt der Gerätezustand eine vollständige Resynchronisierung durch.
 
 ### <a name="the-owner-of-the-device-is-no-longer-using-this-device"></a>Der Geräteeigentümer verwendet das Gerät nicht mehr
-Sie müssen das Gerät zurücksetzen und den neuen Benutzer auffordern, sich neu zu registrieren, wie in [diesem Thema](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/wipe-lock-reset-devices#full-wipe) beschrieben.
+Sie müssen das Gerät zurücksetzen und den neuen Benutzer auffordern, sich neu zu registrieren, wie in [diesem Thema](https://docs.microsoft.com/sccm/mdm/deploy-use/wipe-lock-reset-devices#full-wipe) beschrieben.
 
 
 Sie können auch das Modul **Geräte** der Lookout MTP-Konsole aufrufen und **Löschen** auswählen.
