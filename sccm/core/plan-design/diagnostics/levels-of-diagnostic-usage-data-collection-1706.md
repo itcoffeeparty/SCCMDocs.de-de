@@ -361,7 +361,7 @@ In der Version 1706 von System Center Configuration Manager enthält diese Ebene
 
     - ***[Neu]*** Anzahl der von PXE ausgeschlossenen Hardwarebezeichner
 
-    - ***[Neu] *** Anzahl der Tasksequenzbereitstellungen bei denen Inhalte vorab heruntergeladen wurden
+    - ***[Neu]***  Anzahl der Tasksequenzbereitstellungen bei denen Inhalte vorab heruntergeladen wurden
 
     - Anzahl der Tasksequenzschrittnutzung
 
@@ -392,7 +392,7 @@ In der Version 1706 von System Center Configuration Manager enthält diese Ebene
 
     - Anzahl der bereitgestellten Office 365-Updates  
 
-    - ***[Neu] *** Anzahl der synchronisierten Microsoft Surface-Treiber
+    - ***[Neu]***  Anzahl der synchronisierten Microsoft Surface-Treiber
 
     - Anzahl der Updategruppen und -zuweisungen  
 
@@ -468,7 +468,7 @@ In der Version 1706 von System Center Configuration Manager enthält diese Ebene
 
 - Statistiken zur Sammlungsauswertung und -aktualisierung
 
-- ***[Neu] *** Kompatibilitätsrichtlinienstatistiken zur Kompatibilität und zu Fehlern
+- ***[Neu]***  Kompatibilitätsrichtlinienstatistiken zur Kompatibilität und zu Fehlern
 
 - Konformitätseinstellungen: Konfigurationsdetails zu SCEP-, VPN-, WLAN- und Konformitätsrichtlinienvorlagen; Anzahl von Gruppen, deren Softwareupdates abgelaufen sind
 
