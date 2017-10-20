@@ -125,7 +125,7 @@ Verwenden Sie das [Tool „CMEnroll“](#client-and-certificate-automation-with-
 
         -   'Domäne\Name'. Beispiel: 'contoso\mrankenburg'  
 
-        -   'user@domain'. Beispiel: 'mnorth@contoso.com'  
+        -   'user@domain'.  Beispiel: 'mnorth@contoso.com'  
 
             > [!IMPORTANT]  
             >  Wenn Sie in das Feld **Benutzername** eine E-Mail-Adresse eingeben, wird von Configuration Manager automatisch der Domänenname der E-Mail-Adresse und der Standardname des Registrierungsproxypunkt-Servers für das Feld **Servername** verwendet. Wenn der Domänenname und der Servername nicht mit dem Namen des Anmeldungsproxypunkt-Servers übereinstimmen, müssen Sie die Benutzer über den richtigen Namen informieren, damit sie diesen bei der Registrierung ihrer Macintosh-Computer eingeben können.  
@@ -157,7 +157,7 @@ Verwenden Sie dieses Verfahren für die Automatisierung der Installation des Cli
 
     -   'Domäne\Name'. Beispiel: 'contoso\mrankenburg'  
 
-    -   'user@domain'. Beispiel: 'mnorth@contoso.com'  
+    -   'user@domain'.  Beispiel: 'mnorth@contoso.com'  
 
      Der Benutzername und das zugehörige Kennwort müssen mit den entsprechenden Angaben eines Active Directory-Benutzerkontos übereinstimmen, für das in der Mac-Clientzertifikatvorlage die Berechtigungen Lesen und Anmelden zugewiesen wurden.  
 
@@ -220,7 +220,7 @@ Führen Sie anschließend diese Aufgaben aus:
 
 3.  Geben Sie die folgende Befehlszeile ein: **sudo ./ccmsetup -MP <Verwaltungspunkt_Internet-FQDN\> -SubjectName <Wert für Zertifikatantragsteller\>**.  Beim Wert für den Zertifikatantragsteller muss die Groß-/Kleinschreibung beachtet werden, daher muss dieser genauso eingegeben werden, wie er in den Zertifikatdetails angezeigt wird.  
 
-     Beispiel: Wenn der Internet-FQDN in den Standortsystemeigenschaften **server03.contoso.com** lautet und das Macintosh-Client-Zertifikat den FQDN von **mac12.contoso.com **als allgemeinen Namen für den Zertifikatantragsteller verwendet, geben Sie Folgendes ein: **sudo ./ccmsetup -MP server03.contoso.com -SubjectName mac12.contoso.com**  
+     Beispiel: Wenn der Internet-FQDN in den Standortsystemeigenschaften **server03.contoso.com** lautet und das Macintosh-Client-Zertifikat den FQDN von **mac12.contoso.com** als allgemeinen Namen für den Zertifikatantragsteller verwendet, geben Sie Folgendes ein: **sudo ./ccmsetup -MP server03.contoso.com -SubjectName mac12.contoso.com**  
 
 4.  Warten Sie, bis die Meldung **Installation abgeschlossen** angezeigt wird, und starten Sie anschließend den Macintosh-Computer neu.  
 
