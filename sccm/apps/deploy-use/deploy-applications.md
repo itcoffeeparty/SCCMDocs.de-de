@@ -100,7 +100,7 @@ Wenn diese Option ausgewählt ist, muss der Administrator jede Benutzeranforderu
     >  Nachdem Sie eine Anwendung für die Installation genehmigt haben, können Sie anschließend auswählen, die Anforderung zu verweigern, indem Sie in der Configuration Manager-Konsole auf **Verweigern** klicken (bisher war diese Schaltfläche nach der Genehmigung ausgegraut).
     >  Diese Aktion führt nicht dazu, dass die Anwendung auf allen Geräten deinstalliert wird, sondern hindert Benutzer daran, neue Kopien der Anwendung aus dem Softwarecenter herunterzuladen.
 
-- **Automatically upgrade any superseded version of this application ** (Jede abgelöste Version dieser Anwendung automatisch aktualisieren)  
+- **Automatically upgrade any superseded version of this application**  (Jede abgelöste Version dieser Anwendung automatisch aktualisieren)  
 Wenn diese Option ausgewählt ist, wird jede abgelöste Version der Anwendung auf die neuere Anwendung aktualisiert.
 
 ### <a name="specify-scheduling-settings-for-the-deployment"></a>Angeben von Einstellungen zur Zeitplanung der Bereitstellung

@@ -152,7 +152,7 @@ Ab System Center Configuration Manager-Version 1606 enthält diese Ebene Folgend
 
     - ***[Neu]*** App-Ablösung, maximale Kettentiefe
 
-    - ***[Neu] *** Nutzung des Universal Data Access (UDA) und Art der Erstellung
+    - ***[Neu]***  Nutzung des Universal Data Access (UDA) und Art der Erstellung
 
 
 
@@ -170,7 +170,7 @@ Ab System Center Configuration Manager-Version 1606 enthält diese Ebene Folgend
 
     - ***[Neu]*** BIOS-Alter in Jahren
 
-    - ***[Neu] *** Alter des Betriebssystems in Monaten
+    - ***[Neu]***  Alter des Betriebssystems in Monaten
 
     - ***[Neu]*** Anzahl der Softwarecenteraktionen
 
@@ -188,9 +188,9 @@ Ab System Center Configuration Manager-Version 1606 enthält diese Ebene Folgend
 
 - ***[Neu]*** **Clouddienste:**
 
-  - ***[Neu] *** Anzahl der Sammlungen, die mit Operations Management Suite synchronisiert werden
+  - ***[Neu]***  Anzahl der Sammlungen, die mit Operations Management Suite synchronisiert werden
 
-  - ***[Neu] *** Angabe, ob der Operations Management Suite-Cloud-Connector aktiviert ist
+  - ***[Neu]***  Angabe, ob der Operations Management Suite-Cloud-Connector aktiviert ist
 
 
 
@@ -244,7 +244,7 @@ Ab System Center Configuration Manager-Version 1606 enthält diese Ebene Folgend
 
     -   Anzahl der Warnungen, die für das Endpoint Protection-Feature konfiguriert sind  
 
-    - ***[Neu] *** Advanced Threat Protection-Richtlinien (ATP) (Anzahl der Richtlinien und Angabe, ob Richtlinien bereitgestellt werden)
+    - ***[Neu]***  Advanced Threat Protection-Richtlinien (ATP) (Anzahl der Richtlinien und Angabe, ob Richtlinien bereitgestellt werden)
 
 
 -   ***[Entfernt]*** **Verwaltung mobiler Anwendungen (MAM):**  

@@ -163,7 +163,7 @@ Bei der Version 1702 von System Center Configuration Manager enthält diese Eben
 
    - Minimale/maximale/durchschnittliche Anzahl von Anwendungsbereitstellungen pro Benutzer/Gerät in einem bestimmten Zeitraum
 
-   - ***[Neu] *** Am häufigsten vorkommende Fehlercodes der Anwendungsinstallation von der Bereitstellungstechnologie
+   - ***[Neu]***  Am häufigsten vorkommende Fehlercodes der Anwendungsinstallation von der Bereitstellungstechnologie
 
    - Konfigurationsoptionen für und Anzahl von MSI
 

@@ -157,7 +157,7 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
     - Nutzung des Universal Data Access (UDA), Art der Erstellung
 
-    - ***[Neu] *** Statistiken über Genehmigungen für Anwendungen und Häufigkeit der Nutzung
+    - ***[Neu]***  Statistiken über Genehmigungen für Anwendungen und Häufigkeit der Nutzung
 
 
 
@@ -189,7 +189,7 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
     - Konfigurieren der Cachegrößen des Clients
 
-    - ***[Neu] *** Anzahl der Hardwareinventurklassen, Softwareinventurregeln und Dateisammlungsregeln
+    - ***[Neu]***  Anzahl der Hardwareinventurklassen, Softwareinventurregeln und Dateisammlungsregeln
 
 
 
@@ -200,9 +200,9 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
   -  Angabe, ob der Operations Management Suite-Cloud-Connector aktiviert ist
 
-  - ***[Neu] *** Statistiken zur Konfigurierung und Verwendung des Cloudverwaltungsgateways
+  - ***[Neu]***  Statistiken zur Konfigurierung und Verwendung des Cloudverwaltungsgateways
 
-  - ***[Neu] *** Anzahl von Upgrade Analytics-Connectors
+  - ***[Neu]***  Anzahl von Upgrade Analytics-Connectors
 
 
 
@@ -240,7 +240,7 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
     -   Informationen zur Begrenzungsgruppe (Anzahl der jeder Begrenzungsgruppe zugewiesenen Grenzen und Standortsysteme)  
 
-    - ***[Neu] *** Begrenzungsgruppenbeziehungen und Fallbackkonfiguration
+    - ***[Neu]***  Begrenzungsgruppenbeziehungen und Fallbackkonfiguration
 
     -   Informationen zur Verteilungspunktgruppe (Anzahl der jeder Verteilungspunktgruppe zugewiesenen Pakete und Verteilungspunkte)  
 
@@ -248,9 +248,9 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
     -   Informationen zur Verteilungs-Manager-Konfiguration (Threads, Wiederholungsverzögerung, Anzahl der Wiederholungsversuche und Einstellungen für Pullverteilungspunkte)  
 
-    - ***[Neu] *** Anzahl von Peercacheclients und Nutzungsstatistiken
+    - ***[Neu]***  Anzahl von Peercacheclients und Nutzungsstatistiken
 
-    - ***[Neu] *** Statistiken über Downloads von Clients
+    - ***[Neu]***  Statistiken über Downloads von Clients
 
 
 -   **Endpoint Protection:**  
@@ -307,7 +307,7 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
     -   Anzahl der Tasksequenzschrittnutzung
 
-    - ***[Neu] *** Anzahl der Editionsaktualisierungsrichtlinien
+    - ***[Neu]***  Anzahl der Editionsaktualisierungsrichtlinien
 
 
 
@@ -362,7 +362,7 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
     -   Statistiken für den Lastenausgleich des Softwareupdatepunkts
 
-    -  ***[Neu] *** Konfiguration von Windows 10-Express-Updates
+    -  ***[Neu]***  Konfiguration von Windows 10-Express-Updates
 
 
 
@@ -371,7 +371,7 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
     -   Anzahl der größten Datenbanktabellen  
 
-    -   ***[Aktualisiert] *** Informationen zu SQL Always On-Replikat, Nutzung und Integrationsstatus
+    -   ***[Aktualisiert]***  Informationen zu SQL Always On-Replikat, Nutzung und Integrationsstatus
 
     -  Beibehaltungsdauer der verfolgten SQL-Änderungen
 
@@ -387,7 +387,7 @@ Bei System Center Configuration Manager-Version 1610 enthält diese Ebene Folgen
 
     - Anzahl der Wake-On-LAN-Standorte (WOL)
 
-    - ***[Neu] *** Berichte von Nutzungs- und Leistungsstatistiken  
+    - ***[Neu]***  Berichte von Nutzungs- und Leistungsstatistiken  
 
 
 
