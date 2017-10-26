@@ -398,13 +398,13 @@ Zusätzlich zum Konfigurieren des Verwaltungspunkts für die Verwendung des Date
 
     7.  Klicken Sie mit der rechten Maustaste auf das Zertifikat mit dem Anzeigenamen **ConfigMgr SQL Server Identification Certificate**, klicken Sie auf **Alle Tasks**, und wählen Sie dann **Export**aus.  
 
-    8.  Schließen Sie den ****  Assistenten zum Exportieren von Zertifikaten mit den Standardoptionen ab, und speichern Sie das Zertifikat mit der Dateinamenerweiterung **.cer** .  
+    8.  Schließen Sie den **Assistenten zum Exportieren** von Zertifikaten mit den Standardoptionen ab, und speichern Sie das Zertifikat mit der Dateinamenerweiterung **.cer** .  
 
 2.  Führen Sie auf dem Verwaltungspunktcomputer die folgenden Schritte aus, um das selbstsignierte Zertifikat für den Datenbankreplikatserver zum Zertifikatsspeicher Vertrauenswürdige Personen des Verwaltungspunkts hinzuzufügen:  
 
     1.  Wiederholen Sie die Schritte 1.a bis 1.e um das MMC-Snap-In **Zertifikat** auf dem Verwaltungspunktcomputer zu konfigurieren.  
 
-    2.  Erweitern Sie in der Konsole den Bereich **Zertifikate (Lokaler Computer)**, dann den Bereich **Vertrauenswürdige Personen**, klicken Sie mit der rechten Maustaste auf **Zertifikate**, wählen Sie **Alle Tasks**aus, und wählen Sie dann **Importieren** aus, um den **** Zertifikatimport-Assistenten zu starten.  
+    2.  Erweitern Sie in der Konsole den Bereich **Zertifikate (Lokaler Computer)**, dann den Bereich **Vertrauenswürdige Personen**, klicken Sie mit der rechten Maustaste auf **Zertifikate**, wählen Sie **Alle Tasks**aus, und wählen Sie dann **Importieren** aus, um den **Zertifikatimport-Assistenten** zu starten.  
 
     3.  Wählen Sie auf der Seite **Importdatei** das in Schritt 1.h gespeicherte Zertifikat aus, und klicken Sie dann auf **Weiter**.  
 

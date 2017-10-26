@@ -171,7 +171,7 @@ Verwenden Sie die Option **Computer bereinigen** , wenn Sie auf schnelle und ein
 
 ### <a name="to-automatically-check-for-new-definitions-before-scheduled-scans-recommended"></a>So führen Sie automatisch eine Überprüfung auf neue Definitionen aus, bevor Sie geplante Scans ausführen (empfohlen)  
 
-1.  Öffnen Sie Windows Defender oder den Endpoint Protection-Client durch Klicken auf das Symbol im Infobereich der Taskleiste, oder starten Sie ihn im ****  Startmenü.  
+1.  Öffnen Sie Windows Defender oder den Endpoint Protection-Client durch Klicken auf das Symbol im Infobereich der Taskleiste, oder starten Sie ihn im **Startmenü**.  
 
 2.  Klicken Sie auf **Einstellungen**und dann auf **Geplanter Scan**.  
 
@@ -181,7 +181,7 @@ Verwenden Sie die Option **Computer bereinigen** , wenn Sie auf schnelle und ein
 
  Die Viren- und Spywareschutzdefinitionen werden von Windows Defender oder Endpoint Protection automatisch auf Ihrem Computer aktualisiert. Wenn die Definitionen länger als sieben Tage nicht aktualisiert wurden (wenn Sie beispielsweise Ihren Computer eine Woche lang nicht angeschaltet haben), werden Sie von Windows Defender oder Endpoint Protection benachrichtigt, dass die Definitionen nicht auf dem aktuellen Stand sind.  
 
-1.  Öffnen Sie Windows Defender oder den Endpoint Protection-Client durch Klicken auf das Symbol im Infobereich der Taskleiste, oder starten Sie ihn im ****  Startmenü.  
+1.  Öffnen Sie Windows Defender oder den Endpoint Protection-Client durch Klicken auf das Symbol im Infobereich der Taskleiste, oder starten Sie ihn im **Startmenü**.  
 
 2.  Klicken Sie auf die Registerkarte **Aktualisieren** und dann auf **Aktualisieren**, um manuell eine Überprüfung auf neue Definitionen auszuführen.  
 

@@ -61,7 +61,7 @@ Bei der rollenbasierten Verwaltung in System Center Configuration Manager werden
 
         2.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Sicherheitsrolle** die Option **Kopieren** aus. Damit erstellen Sie eine Kopie der Quellsicherheitsrolle.  
 
-        3.  Geben Sie im Assistenten zum Kopieren von Sicherheitsrollen einen Namen ****  für die neue benutzerdefinierte Sicherheitsrolle an.  
+        3.  Geben Sie im Assistenten zum Kopieren von Sicherheitsrollen einen **Namen** für die neue benutzerdefinierte Sicherheitsrolle an.  
 
         4.  Erweitern Sie in **Zuweisungen von Sicherheitsvorgängen**alle Knoten unter **Sicherheitsvorgänge** , um die verfügbaren Aktionen anzuzeigen.  
 

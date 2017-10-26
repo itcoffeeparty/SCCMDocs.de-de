@@ -309,7 +309,7 @@ Verwenden Sie das Konfigurationselement **iOS und Mac OS X** von System Center C
   
 #### <a name="to-create-an-ios-and-mac-os-x-custom-profile"></a>So erstellen Sie ein benutzerdefiniertes iOS- und Mac OS X-Profil  
   
-1.  Geben Sie auf der Seite **Einstellungen für benutzerdefiniertes iOS- und Mac OS X-Profil konfigurieren** des ** **Assistenten zum Erstellen von Konfigurationselementen die folgenden Informationen an:  
+1.  Geben Sie auf der Seite **Einstellungen für benutzerdefiniertes iOS- und Mac OS X-Profil konfigurieren** des **Assistenten zum Erstellen von Konfigurationselementen** die folgenden Informationen an:  
   
     -   **Name des benutzerdefinierten Konfigurationsprofils (wird Benutzern angezeigt)** – Geben Sie einen Namen für die Richtlinie an, der auf dem Gerät und in Configuration Manager-Berichten angezeigt wird.  
   

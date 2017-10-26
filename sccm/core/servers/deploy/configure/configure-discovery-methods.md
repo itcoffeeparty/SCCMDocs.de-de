@@ -129,7 +129,7 @@ Wenden Sie die folgenden Verfahren an, um die Active Directory-Gesamtstrukturerm
 
 5.  Wählen Sie **Hinzufügen** aus, um einen Ermittlungsbereich zu konfigurieren. Wählen Sie entweder **Gruppen** oder **Ort** aus, und führen Sie im Dialogfeld **Gruppen hinzufügen** bzw. im Dialogfeld **Active Directory-Ort hinzufügen** die folgenden Konfigurationen aus:  
 
-    1.  Geben Sie einen Namen ****  für diesen Ermittlungsbereich an.  
+    1.  Geben Sie einen **Namen** für diesen Ermittlungsbereich an.  
 
     2.  Geben Sie eine **Active Directory-Domäne** oder einen **Ort** zum Durchsuchen an:  
 

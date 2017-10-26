@@ -51,13 +51,13 @@ In diesem Thema erfahren Sie, wie Sie mit System Center Configuration Manager-An
 
 1.  Wählen Sie im Dialogfeld **Anwendungsrevisionsverlauf** eine Anwendungsrevision aus, und wählen Sie dann **Wiederherstellen** aus.  
 
-2.  Wählen Sie im Dialogfeld zum**** Bestätigen der Wiederherstellung der Revision **Ja** aus, um die ausgewählte Anwendungsrevision wiederherzustellen.  
+2.  Wählen Sie im Dialogfeld zum **Bestätigen der Wiederherstellung der Revision** **Ja** aus, um die ausgewählte Anwendungsrevision wiederherzustellen.  
 
 ### <a name="to-delete-an-application-revision"></a>So löschen Sie eine Anwendungsrevision  
 
 1.  Wählen Sie im Dialogfeld **Anwendungsrevisionsverlauf** eine Anwendungsrevision aus, und wählen Sie dann **Löschen** aus.  
 
-2.  Wählen Sie im Dialogfeld zum**** Bestätigen des Löschens der Anwendungsrevision **Ja** aus.  
+2.  Wählen Sie im Dialogfeld zum **Bestätigen des Löschens der Anwendungsrevision** **Ja** aus.  
 
 > [!IMPORTANT]  
 >  Sie können die aktuelle Anwendungsrevision nur löschen, wenn die Anwendung zuvor außer Kraft gesetzt wurde und keine Verweise enthält.  

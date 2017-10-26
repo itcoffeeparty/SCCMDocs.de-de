@@ -135,6 +135,6 @@ Die Schritte zum Erstellen eines benutzerdefinierten Betriebssystemimages finden
 
     -   **Dieses Paket nur per Multicast übertragen**: Geben Sie an, ob das Abbild vom Verteilungspunkt nur während einer Multicastsitzung bereitgestellt werden soll.  
 
-         Bei Auswahl dieser Option ** **müssen Sie auch **Inhalt lokal herunterladen, wenn dies für die Ausführung der Tasksequenz erforderlich ist** als Bereitstellungsoption für das Betriebssystemabbild angeben. Sie können die Bereitstellungsoptionen für das Abbild während der Bereitstellung des Betriebssystemabbilds oder zu einem späteren Zeitpunkt durch Bearbeitung der Bereitstellungseigenschaften angeben. Die Bereitstellungsoptionen finden Sie auf der Seite **Eigenschaften** des Bereitstellungsobjekts auf der Registerkarte **Verteilungspunkte** .  
+         Bei Auswahl **dieser Option** müssen Sie auch **Inhalt lokal herunterladen, wenn dies für die Ausführung der Tasksequenz erforderlich ist** als Bereitstellungsoption für das Betriebssystemabbild angeben. Sie können die Bereitstellungsoptionen für das Abbild während der Bereitstellung des Betriebssystemabbilds oder zu einem späteren Zeitpunkt durch Bearbeitung der Bereitstellungseigenschaften angeben. Die Bereitstellungsoptionen finden Sie auf der Seite **Eigenschaften** des Bereitstellungsobjekts auf der Registerkarte **Verteilungspunkte** .  
 
 6.  Klicken Sie auf **OK**.  

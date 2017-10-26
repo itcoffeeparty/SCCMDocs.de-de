@@ -163,7 +163,7 @@ Diese zwei Assistenten haben ähnliche Workflows, deshalb wird im Verfahren zum 
 
         Nachdem Sie eine Regel erstellt haben, können Sie die weiteren Symbole zum Ändern der Regel verwenden. Wenn mehrere Regeln vorliegen, können Sie hierüber außerdem die Beziehungen zwischen diesen Regeln definieren.
 
-    Wenn Sie alle gewünschten Regeln erstellt und hinzugefügt haben, klicken Sie im Dialogfeld **Regelsatz erstellen** auf **OK**, um diesen Satz zu speichern. Sie können anschließend eine ****neue Regel erstellen und diese ebenfalls zum Satz hinzufügen.
+    Wenn Sie alle gewünschten Regeln erstellt und hinzugefügt haben, klicken Sie im Dialogfeld **Regelsatz erstellen** auf **OK**, um diesen Satz zu speichern. Sie können anschließend eine **neue** Regel erstellen und diese ebenfalls zum Satz hinzufügen.
 
     Wenn Sie über mehrere Regeln oder Regelsätze verfügen, die einem Update hinzugefügt werden sollen, können Sie die logischen Operatoren im **Regel-Editor** verwenden, um Bedingungen zwischen den Regeln sowie die Reihenfolge der Verarbeitung festzulegen.
 

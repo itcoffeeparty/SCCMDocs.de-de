@@ -85,9 +85,9 @@ Mit System Center Configuration Manager-Tasksequenzen können Sie bei der Betrie
 ##  <a name="BKMK_StateMigrationPoint"></a> Configure a state migration point  
  Vom Zustandsmigrationspunkt werden die auf einem Computer erfassten Benutzerdaten gespeichert und anschließend auf einem anderen Computer wiederhergestellt. Wenn Sie jedoch Benutzereinstellungen für eine Betriebssystembereitstellung auf dem gleichen Computer erfassen, z. B. zur Aktualisierung des Betriebssystems auf dem Zielcomputer, können Sie die Daten auf dem gleichen Computer unter Verwendung von festen Links oder auf dem Zustandsmigrationspunkt speichern. Wenn Sie den Statusspeicher erstellen, wird von Configuration Manager bei einigen Computerbereitstellungen automatisch eine Zuordnung zwischen Statusspeicher und Zielcomputer erstellt. Mithilfe der folgenden Methoden können Sie einen Zustandsmigrationspunkt zum Speichern der Benutzerzustandsdaten konfigurieren:  
 
--   Verwenden Sie den Assistenten zum Erstellen von ****  Standortsystemservern, um einen neuen Standortsystemserver für den Zustandsmigrationspunkt zu erstellen.  
+-   Verwenden Sie den **Assistenten zum Erstellen von Standortsystemservern**, um einen neuen Standortsystemserver für den Zustandsmigrationspunkt zu erstellen.  
 
--   Verwenden Sie den Assistenten zum Hinzufügen von ****  Standortsystemrollen, um einem vorhandenen Server einen Zustandsmigrationspunkt hinzuzufügen.  
+-   Verwenden Sie den **Assistenten zum Hinzufügen von Standortsystemrollen**, um einem vorhandenen Server einen Zustandsmigrationspunkt hinzuzufügen.  
 
  Wenn Sie diese Assistenten verwenden, werden Sie aufgefordert, die folgenden Angaben zum Zustandsmigrationspunkt zu machen:  
 

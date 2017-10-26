@@ -107,7 +107,7 @@ Zum Erstellen eines Profils verwenden Sie den Assistenten zum Erstellen von Exch
 
         -   **Signaturzertifikate**.  Klicken Sie auf **Auswählen** und wählen Sie dann ein Zertifikat für die Verschlüsselung aus.  
 
-            Für das Profil kann entweder ein SCEP oder ein PFX-Zertifikat verwendet werden.  Wenn Sie jedoch sowohl die Signierung als auch die Verschlüsselung nutzen, müssen Sie für sowohl für die Signierung als auch für die Verschlüsselung PFX-Zertifikatprofile auswählen.**
+            Für das Profil kann entweder ein SCEP oder ein PFX-Zertifikat verwendet werden.  Wenn Sie jedoch *sowohl* die Signierung als auch die Verschlüsselung nutzen, müssen Sie für sowohl für die Signierung als auch für die Verschlüsselung PFX-Zertifikatprofile auswählen.
 
         -   **Verschlüsselungszertifikate**. Wählen Sie **Auswählen** und dann ein Zertifikat für die Verschlüsselung aus. Sie können nur ein PFX-Zertifikat für die Verwendung als Verschlüsselungszertifikat auswählen.
 

@@ -131,7 +131,7 @@ Es gibt mehrere Operationen, die Sie normalerweise ausführen, um Berichte und B
 
 2.  Erweitern Sie im Arbeitsbereich **Überwachung** die Option **Berichterstattung** , und klicken Sie auf **Berichte**.  
 
-3.  Klicken Sie auf der Registerkarte **Startseite** im Bereich **Erstellen** auf **Bericht erstellen** , um den **** Assistenten zum Erstellen von Berichten zu öffnen.  
+3.  Klicken Sie auf der Registerkarte **Startseite** im Bereich **Erstellen** auf **Bericht erstellen** , um den **Assistenten zum Erstellen von Berichten** zu öffnen.  
 
 4.  Konfigurieren Sie auf der Seite **Informationen** die folgenden Einstellungen:  
 
@@ -176,7 +176,7 @@ Es gibt mehrere Operationen, die Sie normalerweise ausführen, um Berichte und B
 
 2.  Erweitern Sie im Arbeitsbereich **Überwachung** die Option **Berichterstattung**, und klicken Sie dann auf **Berichte**.  
 
-3.  Klicken Sie auf der Registerkarte **Startseite** im Bereich **Erstellen** auf **Bericht erstellen** , um den **** Assistenten zum Erstellen von Berichten zu öffnen.  
+3.  Klicken Sie auf der Registerkarte **Startseite** im Bereich **Erstellen** auf **Bericht erstellen** , um den **Assistenten zum Erstellen von Berichten** zu öffnen.  
 
 4.  Konfigurieren Sie auf der Seite **Informationen** die folgenden Einstellungen:  
 
@@ -222,7 +222,7 @@ Es gibt mehrere Operationen, die Sie normalerweise ausführen, um Berichte und B
 
 2.  Erweitern Sie im Arbeitsbereich **Überwachung** den Knoten **Berichterstattung** , und klicken Sie dann auf **Berichte** , um die verfügbaren Berichte aufzulisten. Sie können einen Berichtsordner auswählen, um nur die Berichte aufzulisten, die dem Ordner zugeordnet sind.  
 
-3.  Wählen Sie den Bericht aus, der dem Abonnement hinzugefügt werden soll, und klicken Sie dann auf der Registerkarte **Startseite** im Bereich **Berichtsgruppe** auf **Abonnement erstellen** , um den **** Assistenten zum Erstellen von Abonnements zu öffnen.  
+3.  Wählen Sie den Bericht aus, der dem Abonnement hinzugefügt werden soll, und klicken Sie dann auf der Registerkarte **Startseite** im Bereich **Berichtsgruppe** auf **Abonnement erstellen** , um den **Assistenten zum Erstellen von Abonnements** zu öffnen.  
 
 4.  Konfigurieren Sie auf der Seite **Abonnementübermittlung** die folgenden Einstellungen:  
 
@@ -304,7 +304,7 @@ Es gibt mehrere Operationen, die Sie normalerweise ausführen, um Berichte und B
 
 -   Erweitern Sie im Arbeitsbereich **Überwachung** den Knoten **Berichterstattung** , und klicken Sie dann auf **Berichte** , um die verfügbaren Berichte aufzulisten. Sie können einen Berichtsordner auswählen, um nur die Berichte aufzulisten, die dem Ordner zugeordnet sind.  
 
--   Wählen Sie den Bericht aus, der dem Abonnement hinzugefügt werden soll, und klicken Sie dann auf der Registerkarte **Startseite** im Bereich **Berichtsgruppe** auf **Abonnement erstellen** , um den **** Assistenten zum Erstellen von Abonnements zu öffnen.  
+-   Wählen Sie den Bericht aus, der dem Abonnement hinzugefügt werden soll, und klicken Sie dann auf der Registerkarte **Startseite** im Bereich **Berichtsgruppe** auf **Abonnement erstellen** , um den **Assistenten zum Erstellen von Abonnements** zu öffnen.  
 
 -   Konfigurieren Sie auf der Seite **Abonnementübermittlung** die folgenden Einstellungen:  
 

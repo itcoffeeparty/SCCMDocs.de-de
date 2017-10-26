@@ -28,11 +28,11 @@ Dieses Thema enthält Sicherheits- und Datenschutzinformationen für Softwareupd
 
 -   Behalten Sie die Standardberechtigungen von Softwareupdatepaketen bei.  
 
-     Administratoren verfügen standardmäßig über Vollzugriff **** und Benutzer über Lesezugriff **** auf die Softwareupdatepakete. Wenn Sie diese Berechtigungen ändern, könnte dies einem Angreifer ermöglichen, Softwareupdates hinzuzufügen, zu entfernen oder zu löschen.  
+     Administratoren verfügen standardmäßig über **Vollzugriff** und Benutzer über **Lesezugriff** auf die Softwareupdatepakete. Wenn Sie diese Berechtigungen ändern, könnte dies einem Angreifer ermöglichen, Softwareupdates hinzuzufügen, zu entfernen oder zu löschen.  
 
 -   Beschränken Sie den Zugriff auf den Downloadspeicherort für Softwareupdates.  
 
-     Das SMS-Anbietercomputerkonto, der Standortserver und der Administrator, der die Softwareupdates in den Downloadspeicherort herunterlädt, benötigen Schreibzugriff **** auf den Downloadpfad. Beschränken Sie den Zugriff auf den Downloadpfad, um das Risiko zu verringern, dass Angreifer die Quelldatei der Softwareupdates am Downloadspeicherort manipulieren.  
+     Das SMS-Anbietercomputerkonto, der Standortserver und der Administrator, der die Softwareupdates in den Downloadspeicherort herunterlädt, benötigen **Schreibzugriff** auf den Downloadpfad. Beschränken Sie den Zugriff auf den Downloadpfad, um das Risiko zu verringern, dass Angreifer die Quelldatei der Softwareupdates am Downloadspeicherort manipulieren.  
 
      Wenn Sie darüber hinaus einen UNC-Freigabepfad als Downloadspeicherort verwenden, schützen Sie den Netzwerkkanal mithilfe von IPsec oder SMB-Signaturen, um die Manipulation der Softwareupdatequelldateien beim Übermitteln über das Netzwerk zu verhindern.  
 

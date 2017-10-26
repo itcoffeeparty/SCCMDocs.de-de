@@ -168,7 +168,7 @@ ms.lasthandoff: 08/07/2017
 
 3.  Wählen Sie die Softwareupdategruppe aus, die Sie bereitstellen möchten.  
 
-4.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Bereitstellung** auf **Bereitstellen**. Der Assistent zum Bereitstellen von Softwareupdates ****  wird geöffnet.  
+4.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Bereitstellung** auf **Bereitstellen**. Der **Assistent zum Bereitstellen von Softwareupdates** wird geöffnet.  
 
 5.  Konfigurieren Sie auf der Seite Allgemein die folgenden Einstellungen:  
 

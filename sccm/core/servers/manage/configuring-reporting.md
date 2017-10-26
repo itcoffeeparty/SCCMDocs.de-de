@@ -100,11 +100,11 @@ Sie können in der System Center Configuration Manager-Konsole nur dann Berichte
     > [!NOTE]  
     >  Weitere Informationen zum Konfigurieren von Standortsystemen finden Sie unter [Hinzufügen von Standortsystemrollen für System Center Configuration Manager](../deploy/configure/add-site-system-roles.md).  
 
-    -   **Neues Standortsystem**: Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Standortsystemserver erstellen**. Der ****  Assistent zum Erstellen von Standortsystemservern wird geöffnet.  
+    -   **Neues Standortsystem**: Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Standortsystemserver erstellen**. Der **Assistent zum Erstellen von Standortsystemservern** wird geöffnet.  
 
     -   **Vorhandenes Standortsystem**: Klicken Sie auf den Server, auf dem die Standortsystemrolle „Reporting Services-Punkt“ installiert werden soll. Wenn Sie auf einen Server klicken, wird im Ergebnisbereich eine Liste der Standortsystemrollen angezeigt, die bereits auf dem Server installiert sind.  
 
-         Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Server** auf **Standortsystemrollen hinzufügen**. Der ****  Assistent zum Hinzufügen von Standortsystemrollen wird geöffnet.  
+         Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Server** auf **Standortsystemrollen hinzufügen**. Der **Assistent zum Hinzufügen von Standortsystemrollen** wird geöffnet.  
 
 4.  Geben Sie auf der Seite **Allgemein** die allgemeinen Einstellungen für den Standortsystemserver an. Soll die Standortsystemrolle „Reporting Services-Punkt“ einem vorhandenen Standortsystemserver hinzugefügt werden, überprüfen Sie die Werte, die Sie zuvor konfiguriert haben.  
 
@@ -231,13 +231,13 @@ Sie können in der System Center Configuration Manager-Konsole nur dann Berichte
 
     7.  Klicken Sie mit der rechten Maustaste auf das Zertifikat mit dem Anzeigenamen &lt;*FQDN des Standortservers*>, klicken Sie auf **Alle Tasks**, und wählen Sie anschließend **Exportieren** aus.  
 
-    8.  Schließen Sie den ****  Assistenten zum Exportieren von Zertifikaten mit den Standardoptionen ab, und speichern Sie das Zertifikat mit der Dateinamenerweiterung **.cer** .  
+    8.  Schließen Sie den **Assistenten zum Exportieren** von Zertifikaten mit den Standardoptionen ab, und speichern Sie das Zertifikat mit der Dateinamenerweiterung **.cer** .  
 
 2.  Führen Sie die folgenden Schritte auf dem Computer aus, auf dem die Configuration Manager-Konsole ausgeführt wird, um das selbstsignierte Zertifikat dem Zertifikatspeicher „Vertrauenswürdige Personen“ hinzuzufügen:  
 
     1.  Wiederholen Sie die Schritte 1.a bis 1.e um das MMC-Snap-In **Zertifikat** auf dem Verwaltungspunktcomputer zu konfigurieren.  
 
-    2.  Erweitern Sie in der Konsole den Bereich **Zertifikate (Lokaler Computer)**, dann den Bereich **Vertrauenswürdige Personen**, klicken Sie mit der rechten Maustaste auf **Zertifikate**, wählen Sie **Alle Tasks**aus, und wählen Sie dann **Importieren** aus, um den **** Zertifikatimport-Assistenten zu starten.  
+    2.  Erweitern Sie in der Konsole den Bereich **Zertifikate (Lokaler Computer)**, dann den Bereich **Vertrauenswürdige Personen**, klicken Sie mit der rechten Maustaste auf **Zertifikate**, wählen Sie **Alle Tasks**aus, und wählen Sie dann **Importieren** aus, um den **Zertifikatimport-Assistenten** zu starten.  
 
     3.  Wählen Sie auf der Seite **Importdatei** das in Schritt 1.h gespeicherte Zertifikat aus, und klicken Sie dann auf **Weiter**.  
 
@@ -275,7 +275,7 @@ Sie können in der System Center Configuration Manager-Konsole nur dann Berichte
          Das angegebene Windows-Benutzerkonto und das zugehörige Kennwort werden verschlüsselt und in der Reporting Services-Datenbank gespeichert. Die Daten werden von Reporting Services über dieses Konto und Kennwort aus der Standortdatenbank abgerufen und für Berichte verwendet.  
 
         > [!IMPORTANT]  
-        >  Befindet sich die Standortdatenbank auf einem Remotestandortsystem, muss das angegebene Konto auf dem Computer zur lokalen Anmeldung ****  berechtigt sein.  
+        >  Befindet sich die Standortdatenbank auf einem Remotestandortsystem, muss das angegebene Konto **auf dem Computer zur lokalen Anmeldung** berechtigt sein.  
 
 6.  Klicken Sie auf **OK** , um die Änderungen zu speichern und das Dialogfeld zu schließen.  
 

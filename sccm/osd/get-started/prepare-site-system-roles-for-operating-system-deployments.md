@@ -201,9 +201,9 @@ Sie müssen die benutzerdefinierten Einstellungen in Ihrer Umgebung testen, um d
 ### <a name="configure-a-state-migration-point"></a>Konfigurieren eines Zustandsmigrationspunkts  
  Mithilfe der folgenden Methoden können Sie einen Zustandsmigrationspunkt zum Speichern der Benutzerzustandsdaten konfigurieren:  
 
--   Verwenden Sie den Assistenten zum Erstellen von ****  Standortsystemservern, um einen neuen Standortsystemserver für den Zustandsmigrationspunkt zu erstellen.  
+-   Verwenden Sie den **Assistenten zum Erstellen von Standortsystemservern**, um einen neuen Standortsystemserver für den Zustandsmigrationspunkt zu erstellen.  
 
--   Verwenden Sie den Assistenten zum Hinzufügen von ****  Standortsystemrollen, um einem vorhandenen Server einen Zustandsmigrationspunkt hinzuzufügen.  
+-   Verwenden Sie den **Assistenten zum Hinzufügen von Standortsystemrollen**, um einem vorhandenen Server einen Zustandsmigrationspunkt hinzuzufügen.  
 
  Wenn Sie diese Assistenten verwenden, werden Sie aufgefordert, die folgenden Angaben zum Zustandsmigrationspunkt zu machen:  
 

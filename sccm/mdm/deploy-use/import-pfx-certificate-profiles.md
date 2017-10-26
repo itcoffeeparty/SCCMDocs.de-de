@@ -53,7 +53,7 @@ System Center Configuration Manager ermöglicht Ihnen den Import und die anschli
 
 3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Zertifikatprofil erstellen**.
 
-4.  Geben Sie auf der Seite **Allgemein** des ****  Assistenten zum Erstellen von Zertifikatprofilen die folgenden Informationen an:  
+4.  Geben Sie auf der Seite **Allgemein** des **Assistenten zum Erstellen von Zertifikatprofilen** die folgenden Informationen an:  
 
     -   **Name**: Geben Sie einen eindeutigen Namen für das Zertifikatprofil ein. Sie können maximal 256 Zeichen verwenden.  
 

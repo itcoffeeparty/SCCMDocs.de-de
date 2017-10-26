@@ -126,7 +126,7 @@ Startbare Medien in Configuration Manager enthalten das Startimage, optionale Pr
     -   Geben Sie im Feld **Verteilungspunkt** den Verteilungspunkt an, auf dem das Startabbild sich befindet. Das Startabbild wird von dem Assistenten vom Verteilungspunkt abgerufen und auf das Medium geschrieben.  
 
         > [!NOTE]  
-        >  Sie benötigen ****  Lesezugriffsrechte für die Inhaltsbibliothek am Verteilungspunkt.  
+        >  Sie benötigen **Lesezugriffsrechte** für die Inhaltsbibliothek am Verteilungspunkt.  
 
     -   Wenn Sie auf der Seite **Medienverwaltung** des Assistenten standortbasierte startbare Medien erstellen, geben Sie im Feld **Verwaltungspunkt** einen Verwaltungspunkt eines primären Standorts an.  
 

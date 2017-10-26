@@ -39,11 +39,11 @@ Informationen zum Import von Zertifikat-Anmeldeinformationen aus vorhandenen Zer
 ### <a name="get-started"></a>Erste Schritte
 
 1.  Wählen Sie in der System Center Configuration Manager-Konsole **Bestand und Kompatibilität** aus.  
-2.  Wählen Sie im Arbeitsbereich **Bestand und Kompatibilität** **Kompatibilitätseinstellungen**, &gt;Zugriff auf Unternehmensressourcen****  &gt; **Zertifikatprofile** aus.  
+2.  Wählen Sie im Arbeitsbereich **Bestand und Kompatibilität** **Kompatibilitätseinstellungen**, &gt;Zugriff auf **Unternehmensressourcen** &gt; **Zertifikatprofile** aus.  
 
 3.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** **Zertifikatprofil erstellen** aus.
 
-4.  Geben Sie auf der Seite **Allgemein** des ****  Assistenten zum Erstellen von Zertifikatprofilen die folgenden Informationen an:  
+4.  Geben Sie auf der Seite **Allgemein** des **Assistenten zum Erstellen von Zertifikatprofilen** die folgenden Informationen an:  
 
     -   **Name**: Geben Sie einen eindeutigen Namen für das Zertifikatprofil ein. Sie können maximal 256 Zeichen verwenden.  
 
