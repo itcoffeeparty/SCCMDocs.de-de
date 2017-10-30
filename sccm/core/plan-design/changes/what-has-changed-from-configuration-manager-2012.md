@@ -64,7 +64,7 @@ Weitere Informationen zu Baselines finden Sie in den Abschnitten zu [Basis- und 
 
 -   Macht Updates, die für Ihre Bereitstellung gelten, innerhalb der Configuration Manager-Konsole verfügbar.  
 
-Diese Standortsystemrolle unterstützt sowohl Online- als auch Offline-Betriebsmodi. Weitere Informationen finden Sie unter [About the service connection point in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md).  
+Diese Standortsystemrolle unterstützt sowohl Online- als auch Offline-Betriebsmodi. Weitere Informationen finden Sie unter [Informationen zum Dienstverbindungspunkt in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md).  
 
 ##  <a name="bkmk_usage"></a> Sammeln von Verwendungsdaten  
  System Center Configuration Manager sammelt Nutzungsdaten zu Ihren Standorten und Ihrer Infrastruktur. Der Dienstverbindungspunkt sammelt diese Informationen und übermittelt sie an den Microsoft-Clouddienst. Configuration Manager muss aktiviert werden, damit Updates für Ihre Bereitstellung heruntergeladen werden, die für die von Ihnen verwendete Version von Configuration Manager gelten. Wenn Sie den Dienstverbindungspunkt einrichten, können Sie Folgendes angeben: Die Ebene der Daten, die gesammelt werden, und ob diese Daten automatisch (Onlinemodus) oder manuell (Offlinemodus) übermittelt werden.  
