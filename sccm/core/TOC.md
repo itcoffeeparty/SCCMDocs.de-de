@@ -103,6 +103,7 @@
 ###  [Einrichten der Laborumgebung](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Funktionen in 1710](get-started/capabilities-in-technical-preview-1710.md)
 ###  [Funktionen in 1709](get-started/capabilities-in-technical-preview-1709.md)
 ###  [Funktionen in 1708](get-started/capabilities-in-technical-preview-1708.md)
 ###  [Funktionen in 1707](get-started/capabilities-in-technical-preview-1707.md)
