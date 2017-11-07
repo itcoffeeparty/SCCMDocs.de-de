@@ -1,5 +1,6 @@
 ---
-title: "Vorgänge und Wartungstasks für die Berichterstellung | Microsoft-Dokumentation"
+title: "Vorgänge und Wartungstasks für die Berichterstellung "
+titleSuffix: Configuration Manager
 description: "Erfahren Sie mehr über das Verwalten von Berichten und Berichtsabonnements in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: df572cd0c64c82e25164430a53e1b893b3ba3cf5
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 05a81cdfd46ba2bf0bea17b06bd72f79296b3930
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="operations-and-maintenance-for-reporting-in-system-center-configuration-manager"></a>Vorgänge und Wartungstasks für die Berichterstellung in System Center Configuration Manager
 
@@ -131,7 +132,7 @@ Es gibt mehrere Operationen, die Sie normalerweise ausführen, um Berichte und B
 
 2.  Erweitern Sie im Arbeitsbereich **Überwachung** die Option **Berichterstattung** , und klicken Sie auf **Berichte**.  
 
-3.  Klicken Sie auf der Registerkarte **Startseite** im Bereich **Erstellen** auf **Bericht erstellen** , um den **Assistenten zum Erstellen von Berichten** zu öffnen.  
+3.  Klicken Sie auf der Registerkarte **Startseite** im Bereich **Erstellen** auf **Bericht erstellen**, um den **Assistenten zum Erstellen von Berichten** zu öffnen.  
 
 4.  Konfigurieren Sie auf der Seite **Informationen** die folgenden Einstellungen:  
 
@@ -176,7 +177,7 @@ Es gibt mehrere Operationen, die Sie normalerweise ausführen, um Berichte und B
 
 2.  Erweitern Sie im Arbeitsbereich **Überwachung** die Option **Berichterstattung**, und klicken Sie dann auf **Berichte**.  
 
-3.  Klicken Sie auf der Registerkarte **Startseite** im Bereich **Erstellen** auf **Bericht erstellen** , um den **Assistenten zum Erstellen von Berichten** zu öffnen.  
+3.  Klicken Sie auf der Registerkarte **Startseite** im Bereich **Erstellen** auf **Bericht erstellen**, um den **Assistenten zum Erstellen von Berichten** zu öffnen.  
 
 4.  Konfigurieren Sie auf der Seite **Informationen** die folgenden Einstellungen:  
 
@@ -222,7 +223,7 @@ Es gibt mehrere Operationen, die Sie normalerweise ausführen, um Berichte und B
 
 2.  Erweitern Sie im Arbeitsbereich **Überwachung** den Knoten **Berichterstattung** , und klicken Sie dann auf **Berichte** , um die verfügbaren Berichte aufzulisten. Sie können einen Berichtsordner auswählen, um nur die Berichte aufzulisten, die dem Ordner zugeordnet sind.  
 
-3.  Wählen Sie den Bericht aus, der dem Abonnement hinzugefügt werden soll, und klicken Sie dann auf der Registerkarte **Startseite** im Bereich **Berichtsgruppe** auf **Abonnement erstellen** , um den **Assistenten zum Erstellen von Abonnements** zu öffnen.  
+3.  Wählen Sie den Bericht aus, der dem Abonnement hinzugefügt werden soll, und klicken Sie dann auf der Registerkarte **Startseite** im Bereich **Berichtsgruppe** auf **Abonnement erstellen**, um den **Assistenten zum Erstellen von Abonnements** zu öffnen.  
 
 4.  Konfigurieren Sie auf der Seite **Abonnementübermittlung** die folgenden Einstellungen:  
 
@@ -304,7 +305,7 @@ Es gibt mehrere Operationen, die Sie normalerweise ausführen, um Berichte und B
 
 -   Erweitern Sie im Arbeitsbereich **Überwachung** den Knoten **Berichterstattung** , und klicken Sie dann auf **Berichte** , um die verfügbaren Berichte aufzulisten. Sie können einen Berichtsordner auswählen, um nur die Berichte aufzulisten, die dem Ordner zugeordnet sind.  
 
--   Wählen Sie den Bericht aus, der dem Abonnement hinzugefügt werden soll, und klicken Sie dann auf der Registerkarte **Startseite** im Bereich **Berichtsgruppe** auf **Abonnement erstellen** , um den **Assistenten zum Erstellen von Abonnements** zu öffnen.  
+-   Wählen Sie den Bericht aus, der dem Abonnement hinzugefügt werden soll, und klicken Sie dann auf der Registerkarte **Startseite** im Bereich **Berichtsgruppe** auf **Abonnement erstellen**, um den **Assistenten zum Erstellen von Abonnements** zu öffnen.  
 
 -   Konfigurieren Sie auf der Seite **Abonnementübermittlung** die folgenden Einstellungen:  
 

@@ -1,5 +1,6 @@
 ---
-title: "Erstellen von startbaren Medien – Configuration Manager | Microsoft-Dokumentation"
+title: 'Erstellen startbarer Medien '
+titleSuffix: Configuration Manager
 description: "Startbare Medien in Configuration Manager erleichtern die Installation einer neuen Version von Windows oder ersetzen einen Computer und Übertragungseinstellungen."
 ms.custom: na
 ms.date: 01/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 9032698fa12bf453041ea06bf330d3b4687c2a97
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: f75a29ff27a1f806d4329bd2dfc5e30a8991fac9
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-bootable-media-with-system-center-configuration-manager"></a>Erstellen startbarer Medien mit System Center Configuration Manager
 

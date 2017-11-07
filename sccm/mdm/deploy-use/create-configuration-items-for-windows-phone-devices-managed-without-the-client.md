@@ -1,5 +1,6 @@
 ---
-title: "Erstellen von Konfigurationselementen für Windows Phone-Geräte, die mit Intune verwaltet werden | Microsoft-Dokumentation"
+title: "Erstellen von Konfigurationselementen für Windows Phone-Geräte, die mit Intune verwaltet werden"
+titleSuffix: Configuration Manager
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -14,11 +15,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 092bb15e6c1d5cdfb5b8670ad46028a6daa49b8b
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: f0a032bfa1d8d6383caf3065678d9b0a4dd3dde0
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-configuration-items-for-windows-phone-devices-managed-without-the-system-center-configuration-manager-client"></a>Erstellen von Konfigurationselementen für Windows Phone-Geräte, die ohne den System Center Configuration Manager-Client verwaltet werden
 Verwenden Sie das **Windows Phone**-Konfigurationselement von System Center Configuration Manager, um Einstellungen für Windows Phone-Geräte zu verwalten, die bei Microsoft Intune registriert sind oder lokal von Configuration Manager verwaltet werden.  

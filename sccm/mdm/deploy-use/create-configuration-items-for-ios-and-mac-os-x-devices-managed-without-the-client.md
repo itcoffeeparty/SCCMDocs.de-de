@@ -1,5 +1,6 @@
 ---
-title: "Erstellen von Konfigurationselementen für iOS und Mac OS X-Geräte, die mit Intune verwaltet werden | Microsoft-Dokumentation"
+title: "Erstellen von Konfigurationselementen für iOS und Mac OS X-Geräte, die mit Intune verwaltet werden"
+titleSuffix: Configuration Manager
 description: "Verwenden Sie das Konfigurationselement für iOS und Mac OS X von System Center Configuration Manager, um Einstellungen für iOS und Mac OS X-Geräte zu verwalten."
 ms.custom: na
 ms.date: 03/28/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 039173c9411a530348bf550e4be7b771756d57dc
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: d101ffc649928c1136386bc7979d4a37ad404af1
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-configuration-items-for-ios-and-mac-os-x-devices-managed-with-intune"></a>Erstellen von Konfigurationselementen für iOS und Mac OS X-Geräte, die mit Intune verwaltet werden
 Verwenden Sie das Konfigurationselement **iOS und Mac OS X** von System Center Configuration Manager, um Einstellungen für iOS- und Mac OS X-Geräte zu verwalten, die bei Microsoft Intune registriert sind oder lokal von Configuration Manager verwaltet werden.  

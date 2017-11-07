@@ -1,5 +1,6 @@
 ---
-title: "Verwalten von Treibern – Configuration Manager | Microsoft-Dokumentation"
+title: 'Verwalten von Treibern '
+titleSuffix: Configuration Manager
 description: "Verwenden Sie den Configuration Manager-Treiberkatalog zum Importieren von Gerätetreibern und Gruppentreibern in Paketen und zum Verteilen dieser Pakete an Verteilungspunkte."
 ms.custom: na
 ms.date: 01/27/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 87ab9925717a307cbda3cea1f2e470ae012fa067
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 43b9f954d6cca162606136c9b64a72daebee7f3d
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-drivers-in-system-center-configuration-manager"></a>Verwalten von Treibern in System Center Configuration Manager
 
@@ -107,7 +108,7 @@ System Center Configuration Manager stellt einen Treiberkatalog bereit, den Sie 
 
 2.  Erweitern Sie im Arbeitsbereich **Softwarebibliothek** den Bereich **Betriebssysteme**, und klicken Sie dann auf **Treiber**.  
 
-3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Treiber importieren** , um den **Treiberimport-Assistenten** zu starten.  
+3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Treiber importieren**, um den **Treiberimport-Assistenten** zu starten.  
 
 4.  Geben Sie auf der Seite **Treiber suchen** die folgenden Optionen an, und klicken Sie dann auf **Weiter**:  
 
