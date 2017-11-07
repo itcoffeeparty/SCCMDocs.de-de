@@ -1,5 +1,6 @@
 ---
-title: Vorbereiten des Windows PE-Peercache zum Reduzieren des WAN-Datenverkehrs | Microsoft-Dokumentation
+title: Vorbereiten des Windows PE-Peercache zum Reduzieren des WAN-Datenverkehrs
+titleSuffix: Configuration Manager
 description: Der Windows PE-Peercache funktioniert in der Windows PE, von wo Inhalt von einem lokalen Peer abgerufen und WAN-Datenverkehr minimiert wird, wenn kein lokaler Verteilungspunkt vorhanden ist.
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "11"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 814c6133a30b1116d05aaeafddb0dfb7fe2a390e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: bb0ed6809d1350c4ce28e20d1a83082a51c2e687
+ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/01/2017
 ---
 # <a name="prepare-windows-pe-peer-cache-to-reduce-wan-traffic-in-system-center-configuration-manager"></a>Vorbereiten des Windows PE-Peercache zum Reduzieren des WAN-Datenverkehrs in System Center Configuration Manager
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 08/07/2017
 
 Beim Bereitstellen eines neuen Betriebssystems in System Center Configuration Manager können Computer, auf denen die Tasksequenz ausgeführt wird, Windows PE-Peercache verwenden, um Inhalte von einem lokalen Peer (einer Peercachequelle) abzurufen, anstatt sie von einem Verteilungspunkt herunterzuladen. Auf diese Weise können Sie WAN-Datenverkehr in Zweigstellenszenarios minimieren, wenn kein lokaler Verteilungspunkt vorhanden ist.  
 
- Windows PE-Peercache gleicht [Windows BranchCache](http://technet.microsoft.com/library/mt617255\(TechNet.10\).aspx#bkmk_branchcache), funktioniert jedoch in Windows Preinstallation Environment (Windows PE). Wenn Sie die Tasksequenz aus dem Kontext des Betriebssystems starten, z. B. aus dem Software Center auf dem Client, wird Windows PE-Peercache nicht verwendet. Die folgenden Begriffe werden verwendet, um die Clients zu beschreiben, auf denen Windows PE-Peercache verwendet wird:  
+ Windows PE-Peercache gleicht [Windows BranchCache](http://technet.microsoft.com/library/mt617255\(TechNet.10\).aspx#bkmk_branchcache), funktioniert jedoch in Windows Preinstallation Environment (Windows PE). Die folgenden Begriffe werden verwendet, um die Clients zu beschreiben, auf denen Windows PE-Peercache verwendet wird:  
 
 -   Ein **Peercacheclient** ist ein Computer, der für die Verwendung von Windows PE-Peercache konfiguriert ist.  
 

@@ -1,5 +1,6 @@
 ---
-title: Erstellen einer Tasksequenz zum Erfassen und Wiederherstellen eines Benutzerzustands | Microsoft-Dokumentation
+title: Erstellen einer Tasksequenz zum Erfassen und Wiederherstellen des Benutzerzustands
+titleSuffix: Configuration Manager
 description: "Verwenden Sie die Tasksequenzen von System Center Configuration Manager zum Erfassen und Wiederherstellen von Benutzerzustandsdaten in Bereitstellungsszenarios für Betriebssysteme."
 ms.custom: na
 ms.date: 06/07/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 3a8e2759812dae2a328cd09efdc13f8534d14379
-ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
+ms.openlocfilehash: 5bb55816481db8b93baada07d36c72dd39b62478
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-a-task-sequence-to-capture-and-restore-user-state-in-system-center-configuration-manager"></a>Erstellen einer Tasksequenz zum Erfassen und Wiederherstellen eines Benutzerzustands in System Center Configuration Manager
 

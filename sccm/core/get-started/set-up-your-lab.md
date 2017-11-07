@@ -1,5 +1,6 @@
 ---
-title: Einrichten Ihrer System Center Configuration Manager-Laborumgebung | Microsoft-Dokumentation
+title: Einrichten der Laborumgebung
+titleSuffix: Configuration Manager
 description: "Richten Sie eine Laborumgebung ein, um Configuration Manager mit simulierten realen Aktivitäten zu evaluieren."
 ms.custom: na
 ms.date: 09/21/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: a8bacdbde00973cfd45963b355c8f810ab06a83d
-ms.sourcegitcommit: 4c3906cf9614420cb8527da9e48978eb0b8f0e7a
+ms.openlocfilehash: df0997f921bfe31bd5bac0d530d4c4fac7331a6e
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="set-up-your-system-center-configuration-manager-lab"></a>Einrichten Ihrer System Center Configuration Manager-Laborumgebung
 
@@ -104,7 +105,7 @@ Die nächsten Schritte, die erforderlich sind, um Configuration Manager-Clients 
 
 1.  Führen Sie **ADSI Edit**aus, und stellen Sie eine Verbindung mit der Domäne her, in der sich der Standortserver befindet.  
 
-2.  Erweitern Sie **Domäne&lt;Vollqualifizierter Domänenname\>** und dann **<Definierter Name\>**, klicken Sie mit der rechten Maustaste auf **CN=System**, und klicken Sie auf** Neu** und dann auf **Objekt**.  
+2.  Erweitern Sie **Domäne&lt;Vollqualifizierter Domänenname\>** und dann **<Definierter Name\>**, klicken Sie mit der rechten Maustaste auf **CN=System**, und klicken Sie auf **Neu** und dann auf **Objekt**.  
 
 3.  Wählen Sie im Dialogfeld **Objekt erstellen** die Option **Container**aus, und klicken Sie auf **Weiter**.  
 

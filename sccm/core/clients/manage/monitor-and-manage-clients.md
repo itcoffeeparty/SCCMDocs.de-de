@@ -1,5 +1,6 @@
 ---
-title: "Überwachen von Clients | Microsoft-Dokumentation"
+title: "Überwachen von Clients"
+titleSuffix: Configuration Manager
 description: "Erfahren Sie, wie Sie Clients in System Center Configuration Manager überwachen und verwalten."
 ms.custom: na
 ms.date: 04/23/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 3979b07dcd4a8f131f9fc64e9fe3edf39dd9a017
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: bbccacd1e0c54bec6f49dc53f60f6da5a89a4202
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="monitor-and-manage-clients-in-system-center-configuration-manager"></a>Überwachen und Verwalten von Clients in System Center Configuration Manager
 

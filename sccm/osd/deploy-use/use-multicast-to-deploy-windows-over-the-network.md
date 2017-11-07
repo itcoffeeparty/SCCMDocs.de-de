@@ -1,5 +1,6 @@
 ---
-title: "Verwenden von Multicast zum Bereitstellen von Windows über das Netzwerk | Microsoft-Dokumentation"
+title: "Verwenden von Multicast zum Bereitstellen von Windows über das Netzwerk"
+titleSuffix: Configuration Manager
 description: "Verwenden Sie Multicast in Ihrer System Center Configuration Manager-Umgebung, damit mehrere Computer gleichzeitig das Betriebssystemimage herunterladen können."
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "13"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 55266696aa7340fddda3a57ff90e20222ff665a5
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 00f42e9b29d3140577d27c1f311600fcfa409a81
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="use-multicast-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>Verwenden von Multicast zum Bereitstellen von Windows über das Netzwerk mit System Center Configuration Manager
 

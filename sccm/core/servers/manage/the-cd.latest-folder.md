@@ -1,5 +1,6 @@
 ---
-title: "Der Ordner „CD.Latest“ | Microsoft-Dokumentation"
+title: "Ordner „CD.Latest“"
+titleSuffix: Configuration Manager
 description: "Enthält Informationen über den neuen Updatevorgang, in dem Updates des Produkts aus der Configuration Manager-Konsole heraus bereitstellt werden."
 ms.custom: na
 ms.date: 05/02/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 5c39e09b44500fa2f356f83579bb2fb2c1d0e937
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 51120ecb681da4ac82fd98ef68405db8d462c5ec
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="the-cdlatest-folder-for-system-center-configuration-manager"></a>Der Ordner „CD.Latest“ für System Center Configuration Manager
 

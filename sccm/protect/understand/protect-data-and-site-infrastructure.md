@@ -1,5 +1,6 @@
 ---
-title: "Schützen der Daten und Standortinfrastruktur | Microsoft-Dokumentation"
+title: "Schützen der Daten und Standortinfrastruktur"
+titleSuffix: Configuration Manager
 description: "Erfahren Sie mehr darüber, wie Sie die Ressourcen Ihrer Organisation mit System Center Configuration Manager vor Risiken oder böswilligen Angriffen schützen."
 ms.custom: na
 ms.date: 11/27/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 0270a9039a42a4ed070a3a3a577a8848e662f577
-ms.sourcegitcommit: 474e6ddbaaeac4ba17d8172321e08deeb0140d0a
+ms.openlocfilehash: 925842a19f79e3674e988ea03661dfec36ba7145
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="protect-data-and-site-infrastructure-with-system-center-configuration-manager"></a>Schützen der Daten und Standortinfrastruktur mit System Center Configuration Manager
 

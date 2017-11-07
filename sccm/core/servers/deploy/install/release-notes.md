@@ -1,5 +1,6 @@
 ---
-title: "Versionshinweise – Configuration Manager | Microsoft-Dokumentation"
+title: 'Anmerkungen zu dieser Version '
+titleSuffix: Configuration Manager
 description: In diesen Anmerkungen finden Sie Informationen zu dringenden Problemen, die im Produkt noch nicht behoben oder bisher in keinem Microsoft Knowledge Base-Artikel beschrieben wurden.
 ms.custom: na
 ms.date: 08/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 4e818ffd943208eab323b1558f825bd87f3ddc4c
-ms.sourcegitcommit: 13599667ea77c16db1aebe64f8a6748c268f0b45
+ms.openlocfilehash: 2571cfbff1373db05279918af776d8be81a5c322
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="release-notes-for-system-center-configuration-manager"></a>Anmerkungen zu dieser Version von System Center Configuration Manager
 

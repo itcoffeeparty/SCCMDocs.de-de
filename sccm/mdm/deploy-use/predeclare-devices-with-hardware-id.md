@@ -1,5 +1,6 @@
 ---
-title: "Vorabdeklarieren von Geräten mit IMEI-Nummern oder iOS-Seriennummern | Microsoft-Dokumentation"
+title: "Vorabdeklarieren von Geräten mit IMEI- oder iOS-Seriennummern"
+titleSuffix: Configuration Manager
 description: "Vorabdeklarieren von unternehmenseigenen Geräten mit ihrer IMEI- oder iOS-Seriennummer."
 ms.custom: na
 ms.date: 09/01/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "3"
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 424f04b2b3ad4c7ef91f884bbf5bae3580ea6b85
-ms.sourcegitcommit: cd1f9c58e55f1c9a19acd743ec6a8824c39fd3a1
+ms.openlocfilehash: a58c765833fe1ef65c2497fd1e2d079caa3f2ff3
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>Vorabdeklarieren von Geräten mit IMEI- oder iOS-Seriennummern
 

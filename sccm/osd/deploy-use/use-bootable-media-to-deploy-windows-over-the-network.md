@@ -1,5 +1,6 @@
 ---
-title: "Verwenden startbarer Medien zum Bereitstellen von Windows über das Netzwerk | Microsoft-Dokumentation"
+title: "Verwenden startbarer Medien zum Bereitstellen von Windows über das Netzwerk"
+titleSuffix: Configuration Manager
 description: Verwenden Sie Bereitstellungen mit startbaren Medien in System Center Configuration Manager zum Bereitstellen des Betriebssystem beim Starten des Zielcomputers.
 ms.custom: na
 ms.date: 6/16/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: mattbriggs
 ms.author: mattbriggs
 manager: angrobe
-ms.openlocfilehash: 9b20e5e2a66d92038033e816e6fc701581c48a7f
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: ca5cabc18659ed52cd4e0b9130f0179faf2c9d28
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="use-bootable-media-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>Verwenden startbarer Medien zum Bereitstellen von Windows über das Netzwerk mit System Center Configuration Manager
 

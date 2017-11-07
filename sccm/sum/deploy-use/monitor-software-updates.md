@@ -1,5 +1,6 @@
 ---
-title: "Überwachen von Softwareupdates | Microsoft-Dokumentation"
+title: "Überwachen von Softwareupdates"
+titleSuffix: Configuration Manager
 description: "Die System Center Configuration Manager-Konsole stellt Warnungen und Status zum Überwachen von Updates und Kompatibilität bereit."
 keywords: 
 author: dougeby
@@ -11,11 +12,11 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
-ms.openlocfilehash: 956ef263a1c178b5ab5926705859f4b2d0ae5bc7
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5b468da098c23f5bf52e57544b2c8804c70f00b4
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="monitor-software-updates-in-system-center-configuration-manager"></a>Überwachen von Softwareupdates in System Center Configuration Manager
 
