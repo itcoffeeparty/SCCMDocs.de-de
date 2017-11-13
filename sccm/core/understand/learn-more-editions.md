@@ -1,5 +1,6 @@
 ---
-title: Weitere Informationen zu Lizenzierung und Branches | Microsoft-Dokumentation
+title: Weitere Informationen zu Lizenzierung und Branches
+titleSuffix: Configuration Manager
 description: "In diesem Thema erfahren Sie mehr zu den Lizenzanforderungen für die Installationsoptionen, die mit dem System Center Configuration Manager-Release vom Oktober 2016 zur Verfügung stehen. Dieses Release beinhaltet die Current Branch-Version 1606, Long-Term Servicing Branch (LTSB) und die Evaluierungsinstallation von Current Branch."
 ms.custom: na
 ms.date: 10/12/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 90e16b316872cb370c9c2e645f46ac12afab7107
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 88cc85a98b9281ec07ead766c415bebe46c5a82c
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="licensing-and-branches-for-system-center-configuration-manager"></a>Lizenzierung und Branches für System Center Configuration Manager
 

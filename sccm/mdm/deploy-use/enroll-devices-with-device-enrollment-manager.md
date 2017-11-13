@@ -1,5 +1,6 @@
 ---
-title: "Registrieren von Geräten mit dem Geräteregistrierungsmanager – Configuration Manager | Microsoft-Dokumentation"
+title: "Registrieren von Geräten mit dem Geräteregistrierungs-Manager "
+titleSuffix: Configuration Manager
 description: "Registrieren Sie unternehmenseigene Geräte mit dem Geräteregistrierungs-Managerkonto mit System Center Configuration Manager."
 ms.custom: na
 ms.date: 09/08/2017
@@ -11,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2905f26e-7859-497d-b995-5ff48261efa2
 caps.latest.revision: "8"
-author: nathbarn
-ms.author: nathbarn
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: dcc35fb6ebe385d07a3b60e8968e06dec8ad60af
-ms.sourcegitcommit: 40f2a4e3cc546e6bfd10f195a8e87af2b0780928
+ms.openlocfilehash: edfda4c65ac42c228b80015653678af0dbad8da3
+ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 11/01/2017
 ---
 # <a name="enroll-devices-with-device-enrollment-manager-with-configuration-manager"></a>Registrieren von Geräten mit dem Geräteregistrierungs-Manager mit Configuration Manager
 

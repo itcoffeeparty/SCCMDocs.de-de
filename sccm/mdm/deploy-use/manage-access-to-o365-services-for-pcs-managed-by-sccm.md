@@ -1,5 +1,6 @@
 ---
-title: "Verwalten des Zugriffs auf Office 365-Dienste für verwaltete PCs | Microsoft-Dokumentation"
+title: "Verwalten des Zugriffs auf Office 365-Dienste für verwaltete PCs"
+titleSuffix: Configuration Manager
 description: "Erfahren Sie, wie Sie den bedingten Zugriff für PCs konfigurieren, die von System Center Configuration Manager verwaltet werden."
 ms.custom: na
 ms.date: 03/05/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "15"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: aede531a0406c3d30c9cca957896e002ed22ae51
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: a49e53ca81d8bd01747c41ab9c25de7fd6396f32
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Verwalten des Zugriffs auf Office 365-Dienste für PCs, die von System Center Configuration Manager verwaltet werden
 

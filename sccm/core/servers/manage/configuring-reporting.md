@@ -1,5 +1,6 @@
 ---
-title: Konfigurieren der Berichterstellung | Microsoft-Dokumentation
+title: Konfigurieren der Berichterstellung
+titleSuffix: Configuration Manager
 description: "Erfahren Sie mehr über das Einrichten der Berichterstellung in der Configuration Manager-Hierarchie, einschließlich Informationen zu SQL Server Reporting Services."
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 7ae6bac23e585d6f61aff0f3155d050f1b537620
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: be8c36c73478e232254185681546f5f52c7d701f
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="configuring-reporting-in-system-center-configuration-manager"></a>Konfigurieren der Berichterstellung in System Center Configuration Manager
 
@@ -231,7 +232,7 @@ Sie können in der System Center Configuration Manager-Konsole nur dann Berichte
 
     7.  Klicken Sie mit der rechten Maustaste auf das Zertifikat mit dem Anzeigenamen &lt;*FQDN des Standortservers*>, klicken Sie auf **Alle Tasks**, und wählen Sie anschließend **Exportieren** aus.  
 
-    8.  Schließen Sie den **Assistenten zum Exportieren** von Zertifikaten mit den Standardoptionen ab, und speichern Sie das Zertifikat mit der Dateinamenerweiterung **.cer** .  
+    8.  Schließen Sie den **Assistenten zum Exportieren** von Zertifikaten mit den Standardoptionen ab, und speichern Sie das Zertifikat mit der Dateinamenerweiterung **.cer**.  
 
 2.  Führen Sie die folgenden Schritte auf dem Computer aus, auf dem die Configuration Manager-Konsole ausgeführt wird, um das selbstsignierte Zertifikat dem Zertifikatspeicher „Vertrauenswürdige Personen“ hinzuzufügen:  
 

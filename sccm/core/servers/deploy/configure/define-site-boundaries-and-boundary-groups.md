@@ -1,5 +1,6 @@
 ---
-title: Verwenden von Standortgrenzen und Begrenzungsgruppen | Microsoft-Dokumentation
+title: Verwenden von Grenzen und Begrenzungsgruppen
+titleSuffix: Configuration Manager
 description: "Verwenden Sie die Standortgrenzen und Begrenzungsgruppen zum Definieren von Netzwerkadressen und zugänglichen Standortsystemen für Geräte, die Sie verwalten."
 ms.custom: na
 ms.date: 3/27/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0fea1dece0768a2b7bcd3fcedc2288ea2d52e73d
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5980b33cef6e7711e09c3199150bf60008d1a73b
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="define-site-boundaries-and-boundary-groups-for-system-center-configuration-manager"></a>Definieren von Standortgrenzen und Begrenzungsgruppen für Configuration Manager
 

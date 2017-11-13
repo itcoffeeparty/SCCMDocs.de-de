@@ -1,5 +1,6 @@
 ---
-title: Konfigurieren von Asset Intelligence | Microsoft-Dokumentation
+title: Konfigurieren von Asset Intelligence
+titleSuffix: Configuration Manager
 description: Richten Sie Asset Intelligence in System Center Configuration Manager ein.
 ms.custom: na
 ms.date: 2/22/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: d2704e0f93ad9748f7eb06d714b3754463cb3bdb
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d6137426c4960d0e9a9117fc78d3f26803b4f001
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="configure-asset-intelligence-in-system-center-configuration-manager"></a>Konfigurieren von Asset Intelligence in System Center Configuration Manager
 
@@ -140,7 +141,7 @@ Zusätzlich zum Herunterladen neuer Asset Intelligence-Kataloginformationen kön
 
 2.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Asset Intelligence** **Softwarelizenzen importieren** aus.   
 
-4.  Geben Sie auf der Seite **Importieren** an, ob eine Microsoft-Volumenlizenzierungsdatei (MVLS) (.xml oder .csv) oder eine allgemeine Lizenzzusammenfassung (.csv) importiert werden soll. Weitere Informationen zum Erstellen einer allgemeinen Lizenzübersichtsdatei finden Sie unter [Erstellen einer allgemeinen Lizenzzusammenfassungsdatei zum Import](#BKMK_CreateGeneralLicenseStatement) weiter unten in diesem Thema.  
+4.  Geben Sie auf der Seite **Importieren** an, ob eine Microsoft-Volumenlizenzierungsdatei (MVLS) (.xml oder .csv) oder eine allgemeine Lizenzzusammenfassung (.csv) importiert werden soll. Weitere Informationen zum Erstellen einer allgemeinen Lizenzübersichtsdatei finden Sie unter [Create a general license statement information file for import](#BKMK_CreateGeneralLicenseStatement) weiter unten in diesem Thema.  
 
     > [!WARNING]  
     >  Informationen zum Herunterladen einer MVLS-Datei im CSV-Format, die in den Asset Intelligence-Katalog importiert werden kann, finden Sie im [Microsoft Volume Licensing Service Center](http://go.microsoft.com/fwlink/p/?LinkId=226547). Für den Zugriff auf diese Informationen benötigen Sie ein registriertes Konto auf der Website. Wenden Sie sich an Ihren Microsoft-Kontobeauftragten, um sich zu informieren, wie Sie Ihre MVLS-Datei im XML-Format erhalten.  
@@ -152,7 +153,7 @@ Zusätzlich zum Herunterladen neuer Asset Intelligence-Kataloginformationen kön
 
 6. Schließen Sie den Assistenten ab.  
 
-###  <a name="BKMK_CreateGeneralLicenseStatement"></a> Erstellen einer allgemeinen Lizenzzusammenfassungsdatei zum Import  
+###  <a name="BKMK_CreateGeneralLicenseStatement"></a> Create a general license statement information file for import  
  Eine allgemeine Lizenzübersicht kann auch mithilfe einer manuell im kommagetrennten CSV-Dateiformat erstellten Lizenzimportdatei in den Asset Intelligence-Katalog importiert werden.  
 
 > [!NOTE]  

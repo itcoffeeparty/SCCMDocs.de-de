@@ -1,5 +1,6 @@
 ---
-title: SQL Server AlwaysOn | Microsoft-Dokumentation
+title: SQL Server Always On
+titleSuffix: Configuration Manager
 description: "Planen Sie die Verwendung einer SQL Server-AlwaysOn-Verfügbarkeitsgruppe mit SCCM."
 ms.custom: na
 ms.date: 09/22/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "16"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 3e275f6203a9e0b9210bfbadbf9addf64f6533d8
-ms.sourcegitcommit: 8faf42135a8dc9c384407e64f3f8ba204fb15847
+ms.openlocfilehash: 24eaa33f1f9b333894817f089149e2cbed35df75
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Vorbereiten der Verwendung von SQL Server AlwaysOn-Verfügbarkeitsgruppen mit Configuration Manager
 
@@ -75,7 +76,7 @@ Weitere Informationen finden Sie unter [Erstellen eines Endpunkts für die Daten
 -   Vor Version 1706 können Sie bis zu zwei synchrone sekundäre Replikate verwenden.
 -   Ab Version 1706 können Sie die gleiche Anzahl und Art von Replikaten in einer Verfügbarkeitsgruppe nutzen, die von der von Ihnen verwendeten Version von SQL Server unterstützt wird.
 
-    Sie können ein Replikat mit asynchronem Commit zum Wiederherstellen Ihres synchronen Replikats verwenden. Unter [Wiederherstellungsoptionen für die Standortdatenbank]( /sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) finden Sie im Thema zu Sicherung und Wiederherstellung weiterführende Informationen dazu.
+-   Seit Version 1706 können Sie ein Replikat mit asynchronem Commit zum Wiederherstellen Ihres synchronen Replikats verwenden. Unter [Wiederherstellungsoptionen für die Standortdatenbank]( /sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) finden Sie im Thema zu Sicherung und Wiederherstellung weiterführende Informationen dazu.
     > [!CAUTION]  
     > Configuration Manager unterstützt kein Failover, um das Replikat mit asynchronem Commit als Standortdatenbank zu verwenden.
 Da Configuration Manager nicht den Status des Replikats mit asynchronem Commit dahingehend überprüft, ob es aktuell ist, und [ein solches Replikat asynchron sein kann]( https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes), kann das Verwenden eines Replikats mit asynchronem Commit als Standortdatenbank die Integrität Ihres Standorts und Ihrer Daten gefährden.

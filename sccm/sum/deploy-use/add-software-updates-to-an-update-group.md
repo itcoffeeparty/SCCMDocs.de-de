@@ -1,5 +1,6 @@
 ---
-title: "Hinzufügen von Updates zu einer Updategruppe – Configuration Manager | Microsoft-Dokumentation"
+title: "Hinzufügen von Updates zu einer Updategruppe "
+titleSuffix: Configuration Manager
 description: "Manuelles oder Automatisches hinzufügen von Softwareupdates zu einer Softwareupdategruppe in Ihrer Umgebung."
 keywords: 
 author: dougeby
@@ -11,11 +12,11 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: a0767664-fd60-46a8-9da5-86cc431ce53c
-ms.openlocfilehash: 02e30ba48f3564fa8a31f21793c145054e02e002
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: da01e07749d1e185861941515cf1a4addbd45093
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="add-software-updates-to-an-update-group"></a>Hinzufügen von Softwareupdates zu einer Updategruppe  
 

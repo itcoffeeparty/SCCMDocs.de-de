@@ -1,5 +1,6 @@
 ---
-title: Bereitstellen von virtuellen App-V-Anwendungen | Microsoft Docs
+title: Bereitstellen von virtuellen App-V-Anwendungen
+titleSuffix: Configuration Manager
 description: "Hier erfahren Sie, was Sie beim Erstellen und Bereitstellen von virtuellen Anwendungen beachten müssen."
 ms.custom: na
 ms.date: 02/16/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: d2cc5e62a894c4e3ae9adb185f5f0433b0365722
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: bf324f458c37fa137e24179eb4455fcbe75c855d
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="deploy-app-v-virtual-applications-with-system-center-configuration-manager"></a>Bereitstellen virtueller App-V-Anwendungen mit System Center Configuration Manager
 

@@ -1,5 +1,6 @@
 ---
-title: "Beispielszenario für die Bereitstellung und Überwachung von Sicherheitssoftwareupdates | Microsoft-Dokumentation"
+title: "Beispielszenario für die Bereitstellung und Überwachung von Sicherheitssoftwareupdates"
+titleSuffix: Configuration Manager
 description: "Verwenden Sie dieses Beispielszenario zum Verwenden von Softwareupdates in Configuration Manager, um die von Microsoft monatlich veröffentlichten Sicherheitssoftwareupdates bereitzustellen und zu überwachen."
 keywords: 
 author: dougeby
@@ -11,11 +12,11 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.service: 
 ms.assetid: c32f757a-02da-43f2-b055-5cfd097d8c43
-ms.openlocfilehash: 0e6e2b3a9455bb6eda437eb1325aaaadb3d83420
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: bec19340e9f349849d8dbc041799cece13e2f0fb
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="example-scenario-for-using-system-center-configuration-manager-to-deploy-and-monitor-the-security-software-updates-released-monthly-by-microsoft"></a>Beispielszenario für die Verwendung von System Center Configuration Manager zum Bereitstellen und Überwachen der monatlichen Sicherheitsupdates von Microsoft
 

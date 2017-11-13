@@ -1,5 +1,6 @@
 ---
-title: Verwalten von Bereitstellungen mit hohem Risiko | Microsoft-Dokumentation
+title: Verwalten risikoreicher Bereitstellungen
+titleSuffix: Configuration Manager
 description: "Erfahren Sie mehr über das Konfigurieren der Standorteinstellungen in System Center Configuration Manager, um Administratoren zu warnen, wenn sie eine risikoreiche Bereitstellung erstellen."
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 8b5564f39f07a67a3c9278379ed59ca415603d21
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 6c0ae39c674202bc999c3fccc9547a60ff8c6627
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="settings-to-manage-high-risk-deployments-for-system-center-configuration-manager"></a>Einstellungen zum Verwalten risikoreicher Bereitstellungen für System Center Configuration Manager
 

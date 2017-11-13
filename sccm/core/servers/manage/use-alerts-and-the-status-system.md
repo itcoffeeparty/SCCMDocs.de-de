@@ -1,5 +1,6 @@
 ---
-title: Benachrichtigungen und Statussystem | Microsoft-Dokumentation
+title: Benachrichtigungen und Statussystem
+titleSuffix: Configuration Manager
 description: "Konfigurieren Sie Warnungen, und verwenden Sie das Statussystem, damit Sie ständig über den Status Ihrer Configuration Manager-Bereitstellung informiert werden."
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: ed692bdea055775890535d2666f09ba5f5c7c4e1
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 690709c0067099a022f4a29de4e7d935952e4260
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="use-alerts-and-the-status-system-for-system-center-configuration-manager"></a>Verwenden von Benachrichtigungen und des Statussystems für System Center Configuration Manager
 

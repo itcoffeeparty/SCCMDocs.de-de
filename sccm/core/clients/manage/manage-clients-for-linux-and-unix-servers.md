@@ -1,5 +1,6 @@
 ---
-title: Verwalten von Linux- und UNIX-Clients | Microsoft-Dokumentation
+title: Verwalten von Linux- und UNIX-Clients
+titleSuffix: Configuration Manager
 description: Verwalten Sie Clients auf Linux- und UNIX-Servern in System Center Configuration Manager.
 ms.custom: na
 ms.date: 04/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 198d0cf322dfc8491ed4cfd5229e829c2279f32b
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: c061573727d93e7599164b759259754db97f5b24
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-manage-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>Verwalten von Clients für Linux- und UNIX-Server in System Center Configuration Manager
 
@@ -68,7 +69,7 @@ Bei der Verwaltung von Linux- und UNIX-Servern mit System Center Configuration M
 > [!NOTE]  
 >  Der Configuration Manager-Client für Linux und UNIX fordert nie Benutzerrichtlinien an und verarbeitet diese nie.  
 
-##  <a name="BKMK_ManageLinuxCerts"></a> Verwalten von Zertifikaten auf dem Client für Linux und UNIX  
+##  <a name="BKMK_ManageLinuxCerts"></a> How to manage certificates on the client for Linux and UNIX  
  Nach der Installation des Clients für Linux und UNIX können Sie das **certutil** -Tool zum Aktualisieren des Clients mit einem neuen PKI-Zertifikat und zum Importieren einer neuen Zertifikatsperrliste (CRL) verwenden. Bei der Installation des Clients für Linux und UNIX befindet sich dieses Tool im Verzeichnis **/opt/microsoft/configmgr/bin/certutil**. 
 
  Führen Sie zum Verwalten von Zertifikaten auf jedem Client das certutil-Tool mit einer der folgenden Optionen aus:  

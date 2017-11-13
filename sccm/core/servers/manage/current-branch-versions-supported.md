@@ -1,5 +1,6 @@
 ---
-title: Current Branch-Versionen | Microsoft-Dokumentation
+title: Current Branch-Versionen
+titleSuffix: Configuration Manager
 description: "Überprüfen Sie den Versionsverlauf von System Center Configuration Manager, und erfahren Sie mehr über die Phasen des angebotenen Diensts."
 ms.custom: na
 ms.date: 7/31/2017
@@ -15,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: 1c02d2c51964fed960ffab42175762c1b04e6445
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3907a8f764ddd4dcea992875d0181b93d4760b42
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="support-for-system-center-configuration-manager-current-branch-versions"></a>Support für die Current Branch-Versionen von System Center Configuration Manager
 

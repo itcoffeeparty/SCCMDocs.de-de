@@ -1,5 +1,6 @@
 ---
-title: "Ausführen eines Upgrades von Windows-Geräten auf eine andere Version mit Configuration Manager | Microsoft-Dokumentation"
+title: "Aktualisieren von Windows-Geräten auf eine neuere Version"
+titleSuffix: Configuration Manager
 description: "Automatisches Upgrade von Geräten, die Windows 10 Desktop, Windows 10 Mobile, oder Windows 10 Holographic ausführen, auf eine andere Edition mit Configuration Manager."
 ms.custom: na
 ms.date: 07/31/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 89b0b89ae6acfb6e9d82dfb6d233fe131969924c
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 4a715f7bf5d5f5f3b6fbd0015882328924181eac
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="upgrade-windows-devices-with-the-edition-upgrade-policy-in-system-center-configuration-manager"></a>Aktualisieren von Windows-Geräten mit der Editionsaktualisierungsrichtlinie in System Center Configuration Manager
 

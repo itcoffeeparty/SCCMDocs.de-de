@@ -1,5 +1,6 @@
 ---
-title: Verwaltungspunkt-Datenbankreplikate | Microsoft-Dokumentation
+title: Verwaltungspunkt-Datenbankreplikate
+titleSuffix: Configuration Manager
 description: Verwenden Sie ein Datenbankreplikat zum Verringern der CPU-Last des Standortdatenbankservers mithilfe von Verwaltungspunkten.
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "9"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 130c053c9f2a1817dd85b1f3c01285aab19d59cb
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c33bed2244e259edc0c5a7bb547be8bf69213920
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="database-replicas-for-management-points-for-system-center-configuration-manager"></a>Datenbankreplikate für Verwaltungspunkte für System Center Configuration Manager
 
@@ -398,7 +399,7 @@ Zusätzlich zum Konfigurieren des Verwaltungspunkts für die Verwendung des Date
 
     7.  Klicken Sie mit der rechten Maustaste auf das Zertifikat mit dem Anzeigenamen **ConfigMgr SQL Server Identification Certificate**, klicken Sie auf **Alle Tasks**, und wählen Sie dann **Export**aus.  
 
-    8.  Schließen Sie den **Assistenten zum Exportieren** von Zertifikaten mit den Standardoptionen ab, und speichern Sie das Zertifikat mit der Dateinamenerweiterung **.cer** .  
+    8.  Schließen Sie den **Assistenten zum Exportieren** von Zertifikaten mit den Standardoptionen ab, und speichern Sie das Zertifikat mit der Dateinamenerweiterung **.cer**.  
 
 2.  Führen Sie auf dem Verwaltungspunktcomputer die folgenden Schritte aus, um das selbstsignierte Zertifikat für den Datenbankreplikatserver zum Zertifikatsspeicher Vertrauenswürdige Personen des Verwaltungspunkts hinzuzufügen:  
 

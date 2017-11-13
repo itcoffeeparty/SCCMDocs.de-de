@@ -1,5 +1,6 @@
 ---
-title: "Endpoint Protection – von Kunden häufig gestellte Fragen | Microsoft-Dokumentation"
+title: "Endpoint Protection – von Kunden häufig gestellte Fragen"
+titleSuffix: Configuration Manager
 description: "Erhalten Sie Antworten auf häufig gestellte Fragen zu Windows Defender und Endpoint Protection."
 ms.custom: na
 ms.date: 02/14/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "15"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: b88bc5f734b85527b81e5848deb0617db4c8dfbc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: de813a38d6278a60189667165bf4911bd314f14a
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection – von Kunden häufig gestellte Fragen
 
@@ -62,7 +63,7 @@ Diese häufig gestellten Fragen sind für Computerbenutzer vorgesehen, deren IT-
     |Datei- und Programmaktivität auf Ihrem Computer überwachen| Mit dieser Option wird überwacht, wenn Dateien und Programme auf Ihrem Computer ausgeführt werden. Sie werden dann über alle von ihnen ausgeführten bzw. an ihnen vorgenommenen Aktionen benachrichtigt. Dies ist wichtig, da Schadsoftware Schwachstellen in Programmen ausnutzen kann, die Sie installiert haben, um ohne Ihr Wissen Schadsoftware oder unerwünschte Software auszuführen. So kann beispielsweise Spyware von selbst im Hintergrund ausgeführt werden, wenn Sie ein Programm starten, das Sie häufig verwenden. Windows Defender überwacht Ihre Programme und benachrichtigt Sie, sobald eine verdächtige Aktivität erfolgt.|  
     |Verhaltensüberwachung aktivieren| Diese Option dient zum Überwachen von Verhaltenssammlungen für verdächtige Muster, die von herkömmlichen Antiviren-Schutzmethoden unter Umständen nicht erkannt werden.|  
 
-    |Netzwerkinspektionssystem aktivieren| Mithilfe dieser Option wird der Computer gegen sog. „Zero Day“-Exploits bekannter Schwachstellen geschützt. Hierzu wird das Zeitfenster zwischen dem Zeitpunkt, zu dem eine Schwachstelle entdeckt wird, und der Anwendung eines Updates verringert.|  
+    |Netzwerkinspektionssystem aktivieren| Mithilfe dieser Option wird der Computer gegen sog. „Zero Day“-Exploits bekannter Schwachstellen geschützt. Hierzu wird das Zeitfenster zwischen dem Zeitpunkt, an dem eine Schwachstelle entdeckt wird, und einem Update verringert.|  
 
 -   **Überprüfungsoptionen** – Sie können Windows Defender verwenden, um Ihren Computer auf potenzielle Bedrohungen wie Viren, Spyware und andere Schadsoftware zu überprüfen, die möglicherweise ein Risiko für Ihren Computer darstellen. Sie können außerdem regelmäßige Scans planen und automatisch schädliche Software, die während eines Scanvorgangs ermittelt wurde, löschen.  
 
@@ -218,7 +219,7 @@ Verwenden Sie die Option **Computer bereinigen** , wenn Sie auf schnelle und ein
 |Alle heruntergeladene Dateien überprüfen|Mit dieser Option werden heruntergeladene Dateien und Programme überwacht. Hierzu zählen auch Dateien und Programme, die automatisch mittels Windows Internet Explorer und Microsoft Outlook® Express heruntergeladen werden (beispielsweise ActiveX®-Steuerelemente und Softwareinstallationsprogramme). Diese Dateien können vom Browser selbst heruntergeladen, installiert oder ausgeführt werden. Schadsoftware wie Viren, Spyware oder andere potenziell unerwünschte Software kann in diesen Dateien enthalten sein und ohne Ihr Wissen installiert werden.<br /><br /> Bei Verwendung der Echtzeitschutzoption wird Ihr Computer ständig von Windows Defender überwacht, und es erfolgt eine Überprüfung auf bösartige Dateien oder Programme, die Sie möglicherweise heruntergeladen haben. Bei dieser Überwachungsoption muss die Browser- oder E-Mail-Nutzung durch Windows Defender nicht verlangsamt werden, um eine Überprüfung sämtlicher Dateien oder Programme vorzunehmen, die Sie möglicherweise herunterladen möchten.|  
 |Datei- und Programmaktivität auf Ihrem Computer überwachen|Mit dieser Option wird überwacht, wenn Dateien und Programme auf dem Computer ausgeführt werden. Sie werden dann über alle von ihnen ausgeführten bzw. daran vorgenommenen Aktionen benachrichtigt. Dies ist wichtig, da Schadsoftware Schwachstellen in Programmen ausnutzen kann, die Sie installiert haben, um ohne Ihr Wissen Schadsoftware oder unerwünschte Software auszuführen. So kann beispielsweise Spyware von selbst im Hintergrund ausgeführt werden, wenn Sie ein Programm starten, das Sie häufig verwenden. Mit Windows Defender werden Ihre Programme überwacht, und Sie werden benachrichtigt, sobald eine verdächtige Aktivität erfolgt.|  
 |Verhaltensüberwachung aktivieren|Diese Option dient zum Überwachen von Verhaltenssammlungen auf verdächtige Muster, die bei herkömmlichen Schutzmethoden zum Erkennen von Viren unter Umständen nicht erkannt werden.|  
-|Netzwerkinspektionssystem aktivieren|Mithilfe dieser Option wird Ihr Computer gegen sog. „Zero Day“-Exploits bekannter Schwachstellen geschützt. Hierzu wird das Zeitfenster zwischen dem Zeitpunkt, zu dem eine Schwachstelle entdeckt wird, und der Anwendung eines Updates verringert.|  
+|Netzwerkinspektionssystem aktivieren|Mithilfe dieser Option wird Ihr Computer gegen sog. „Zero Day“-Exploits bekannter Schwachstellen geschützt. Hierzu wird das Zeitfenster zwischen dem Zeitpunkt, an dem eine Schwachstelle entdeckt wird, und einem Update verringert.|  
 
 ### <a name="to-turn-off-real-time-protection"></a>So deaktivieren Sie den Echtzeitschutz  
 

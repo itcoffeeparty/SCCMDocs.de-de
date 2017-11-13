@@ -1,5 +1,6 @@
 ---
-title: "Erstellen von Konfigurationselementen für clientverwaltete Windows 10-Computer – Configuration Manager | Microsoft-Dokumentation"
+title: "Erstellen von Konfigurationselementen für von Clients verwaltete Windows 10-Geräte "
+titleSuffix: Configuration Manager
 description: "Verwenden Sie das System Center Configuration Manager-Konfigurationselement für Windows 10, um Einstellungen für Windows 10-Geräte zu verwalten, die mit dem Configuration Manager-Client verwaltet werden"
 ms.custom: na
 ms.date: 03/28/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: be1a88341b08c454537279b27a27ce4fb90998de
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 4f22ab22ec666c55962231bf92a42b25c4a7c127
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-configuration-items-for-windows-10-devices-managed-with-the-system-center-configuration-manager-client"></a>Erstellen von Konfigurationselementen für Windows 10-Geräte, die mit dem System Center Configuration Manager-Client verwaltet werden
 Verwenden Sie das System Center Configuration Manager-Konfigurationselement für **Windows 10**, um Einstellungen für Windows 10-Geräte zu verwalten, die mit dem Configuration Manager-Client verwaltet werden.  

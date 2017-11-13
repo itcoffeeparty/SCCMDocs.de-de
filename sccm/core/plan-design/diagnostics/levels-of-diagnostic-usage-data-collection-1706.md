@@ -1,5 +1,6 @@
 ---
-title: "Diagnosedaten für 1706 | System Center Configuration Manager"
+title: "Diagnosedaten für Version 1706"
+titleSuffix: Configuration Manager
 description: "Erfahren Sie mehr über die Ebenen der Diagnose- und Nutzungsdaten, die in Version 1706 von System Center Configuration Manager gesammelt werden."
 ms.custom: na
 ms.date: 07/31/2017
@@ -32,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 12f1e810c1eb194ec322a916e4e0c1a4c19be414
-ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
+ms.openlocfilehash: 759579ea3a76b05460a3e2dbad595844bd182cb6
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1706-of-system-center-configuration-manager"></a>Ebenen der Sammlung von Nutzungsdaten zu Diagnosezwecken für System Center Configuration Manager-Version 1706
 

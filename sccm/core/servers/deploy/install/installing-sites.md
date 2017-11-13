@@ -1,5 +1,6 @@
 ---
-title: "Ressourcen für die Standortinstallation | Microsoft-Dokumentation"
+title: "Ressourcen für die Standortinstallation"
+titleSuffix: Configuration Manager
 description: "Gehen Sie die Liste der Themen durch, die Ihnen dabei helfen, System Center Configuration Manager zu installieren oder Standorte zu Ihrer Hierarchie hinzuzufügen."
 ms.custom: na
 ms.date: 1/3/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 75511c744d7d2bae960273c845ce68f06a82b697
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 02e3f342c56d420d52528d882b5c7150a94aaffc
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="resources-for-installing-system-center-configuration-manager-sites"></a>Ressourcen für die Installation von System Center Configuration Manager-Standorten
 

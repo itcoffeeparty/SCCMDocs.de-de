@@ -1,5 +1,6 @@
 ---
-title: "Testen von Clientupgrades in einer Präproduktionssammlung | Microsoft-Dokumentation"
+title: "Testen von Clientupgrades in einer Präproduktionssammlung"
+titleSuffix: Configuration Manager
 description: "Testen Sie Clientupgrades in einer Präproduktionssammlung in System Center Configuration Manager."
 ms.custom: na
 ms.date: 05/04/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 5b6e60e7c6225e37dd345e99c703505e346cd0a4
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: e301c3df57d3f625157015692374e512e00dfc60
+ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 11/01/2017
 ---
 # <a name="how-to-test-client-upgrades-in-a-pre-production-collection-in-system-center-configuration-manager"></a>Testen von Clientupgrades in einer Präproduktionssammlung in System Center Configuration Manager
 
@@ -39,8 +40,10 @@ Sie können eine neue Configuration Manager-Clientversion in einer Präproduktio
 3.  Stufen Sie den neuen Client auf die Produktionsphase höher.  
 
 ##  <a name="to-configure-automatic-client-upgrades-to-use-a-pre-production-collection"></a>So konfigurieren Sie automatische Clientupgrades für die Verwendung einer Präproduktionssammlung  
+> [!IMPORTANT]
+> Die Clientbereitstellung in der Präproduktion wird für Arbeitsgruppencomputer nicht unterstützt. Arbeitsgruppencomputer können die für den Verteilungspunkt zum Zugreifen auf das Präproduktionsclientpaket erforderliche Authentifizierung nicht verwenden.  Sie erhalten den aktuellen Client, sobald er der Produktionsclient ist.
 
-1. [Richten Sie eine Sammlung mit den Computern ein](..\collections\create-collections.md), für die der Präproduktionsclient bereitgestellt werden soll. Schließen Sie Arbeitsgruppencomputer nicht in Präproduktionssammlungen ein. Arbeitsgruppencomputer können die für den Verteilungspunkt zum Zugreifen auf das Präproduktionsclientpaket erforderliche Authentifizierung nicht verwenden.   
+1. [Richten Sie eine Sammlung mit den Computern ein](..\collections\create-collections.md), für die der Präproduktionsclient bereitgestellt werden soll.   
 
 1.  Öffnen Sie in der Configuration Manager-Konsole **Verwaltung** > **Standortkonfiguration** > **Standorte**, und wählen Sie **Hierarchieeinstellungen** aus.  
 

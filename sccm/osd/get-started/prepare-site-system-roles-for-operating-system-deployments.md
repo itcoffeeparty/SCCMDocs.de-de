@@ -1,5 +1,6 @@
 ---
-title: "Vorbereiten von Standortsystemrollen für Betriebssystembereitstellungen | Microsoft-Dokumentation"
+title: "Vorbereiten von Standortsystemrollen für Betriebssystembereitstellungen"
+titleSuffix: Configuration Manager
 description: Konfigurieren Sie die Standortsystemrollen vor der Bereitstellung von Betriebssystemen in System Center Configuration Manager.
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 11c0f169afebdb071fefb5ce300fd1ae3481a94f
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c07172bec1032b021c2d7b7ccaabe33c96b930d2
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prepare-site-system-roles-for-operating-system-deployments-with-system-center-configuration-manager"></a>Vorbereiten von Standortsystemrollen für Betriebssystembereitstellungen mit System Center Configuration Manager
 
@@ -67,7 +68,7 @@ Zum Bereitstellen von Betriebssystemen in System Center Configuration Manager m�
 
 2.  Wählen Sie den zu konfigurierenden Verteilungspunkt aus, und klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Eigenschaften** auf **Eigenschaften**.  
 
-3.  Klicken Sie auf der Seite "Eigenschaften" für den Verteilungspunkt auf die Registerkarte **PXE** . Wählen Sie **PXE-Unterstützung für Clients aktivieren** aus, um PXE auf diesem Verteilungspunkt zu aktivieren.  
+3.  Klicken Sie auf der Eigenschaftenseite für den Verteilungspunkt auf die Registerkarte **PXE** und anschließend auf **PXE-Unterstützung für Clients aktivieren**, um PXE auf diesem Verteilungspunkt zu aktivieren.  
 
 4.  Aktivieren Sie das Kontrollkästchen **Für PXE erforderliche Ports überprüfen** auf **Ja** , um zu bestätigen, dass Sie PXE aktivieren möchten. Configuration Manager konfiguriert die Standardports einer Windows-Firewall automatisch. Sie müssen die Ports manuell konfigurieren, wenn Sie eine andere Firewall verwenden.  
 

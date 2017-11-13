@@ -1,5 +1,6 @@
 ---
-title: "Erstellen eines Images für ein OEM-Vorinstallations- oder lokales Depot | Microsoft-Dokumentation"
+title: "Erstellen eines Images für ein OEM-Vorinstallations- oder lokales Depot"
+titleSuffix: Configuration Manager
 description: "Verwenden Sie vorab bereitgestellte Medienbereitstellungen zum Reduzieren des Netzwerkverkehrs, während Sie ein Betriebssystem für Computer bereitstellen, die nicht vollständig bereitgestellt sind."
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 07aba04fb1b845e389a5f75b115d536136c1569c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: ec1d8012a899d09c46489578f396e7b298f6ec2c
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-an-image-for-an-oem-in-factory-or-a-local-depot-with-system-center-configuration-manager"></a>Erstellen eines Images für ein OEM-Vorinstallations- oder lokales Depot mit System Center Configuration Manager
 

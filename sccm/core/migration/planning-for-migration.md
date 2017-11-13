@@ -1,5 +1,6 @@
 ---
-title: Planen der Migration | Microsoft-Dokumentation
+title: Planen der Migration
+titleSuffix: Configuration Manager
 description: "Erfahren Sie mehr über Standorte und Hierarchien, bevor Sie Daten in eine Zielhierarchie in System Center Configuration Manager migrieren."
 ms.custom: na
 ms.date: 1/12/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: fffef1e95e1dfa03971f140a6e5a7fff9bfe5e27
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b5162cfb8154ec23593533900a91da42239e3516
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="plan-for-migration-to-system-center-configuration-manager"></a>Planen der Migration zu System Center Configuration Manager
 

@@ -1,5 +1,6 @@
 ---
-title: "Strategie für Quellhierarchien | Microsoft-Dokumentation"
+title: "Strategie für Quellhierarchien"
+titleSuffix: Configuration Manager
 description: Konfigurieren Sie eine Quellhierarchie und sammeln Sie Daten von einem Quellstandort, bevor Sie einen System Center Configuration Manager-Migrationsauftrag konfigurieren.
 ms.custom: na
 ms.date: 1/3/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0619de32f859f512ee1c9f5a9c83ef8d04a256ca
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: deebf706c885dfb1f0838c64df0d201274eee3d8
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="plan-a-source-hierarchy-strategy-in-system-center-configuration-manager"></a>Planen einer Strategie für Quellhierarchien in System Center Configuration Manager
 

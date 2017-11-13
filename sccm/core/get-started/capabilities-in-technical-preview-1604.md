@@ -1,5 +1,6 @@
 ---
-title: "Funktionen in Technical Preview 1604 für Configuration Manager"
+title: Funktionen in Technical Preview 1604
+titleSuffix: Configuration Manager
 description: "Erfahren Sie mehr zu Features, die in Technical Preview für System Center Configuration Manager 1604 zur Verfügung stehen."
 ms.custom: na
 ms.date: 01/23/2017
@@ -15,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: 26b0d8ea7b3e841c48945df55f8860394a98a29f
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e632a3f4819cb2cbdaa4517b8dd0ae34fe868b3c
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="capabilities-in-technical-preview-1604-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1604 für System Center Configuration Manager
 

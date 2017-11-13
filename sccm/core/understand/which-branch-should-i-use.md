@@ -1,5 +1,6 @@
 ---
-title: Welcher Branch von Configuration Manager sollte verwendet werden? | Microsoft-Dokumentation
+title: Welcher Branch sollte verwendet werden?
+titleSuffix: Configuration Manager
 description: "Hier finden Sie Informationen zu den Unterschieden zwischen den verfügbaren Branches von System Center Configuration Manager."
 ms.custom: na
 ms.date: 05/02/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 26356a80bd8c78d4517253bae73e53d8d8f3a73a
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 047ffc0953db4a4cc5d543d880136ce61fa99fa7
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>Welcher Branch von Configuration Manager soll verwendet werden?
 
@@ -108,9 +109,9 @@ Der LTSB basiert auf der Current Branch-Version 1606 und weist die folgenden Ein
 - Es ist möglich, die LTSB-Installation in eine Current Branch-Installation zu konvertieren. Die Konvertierung zu Current Branch wird vor oder nach Ablauf der Unterstützung für LTSB unterstützt.
 
   Für die Konvertierung ist ein aktiver Software Assurance-Vertrag mit Microsoft erforderlich. Weitere Informationen finden Sie unter den folgenden Links:
-  - [Upgrade von Long-Term Servicing Branch auf Current Branch](convert-to-current-branch.md)
+  - [Upgrade the Long-Term Servicing Branch to the Current Branch (Upgrade von Long-Term Servicing Branch auf Current Branch)](convert-to-current-branch.md)
   - [Lizenzierung und Branches für System Center Configuration Manager](learn-more-editions.md)
-  - [Baseline- und Updateversionen](/sccm/core/servers/manage/updates#baseline-and-update-versions) in [Updates für Configuration Manager](/sccm/core/servers/manage/updates)
+  - [Baseline and update versions (Baseline- und Updateversionen)](/sccm/core/servers/manage/updates#baseline-and-update-versions) in [Updates for Configuration Manager (Updates für Configuration Manager)](/sccm/core/servers/manage/updates)
 - Es gibt keine Option zum Konvertieren von der LTSB- zu einer Technical Preview-Version. Technical Previews sind separate Installationen, für die keine Lizenz erforderlich ist.
 -   Für eine Evaluierungsversion von Current Branch kann kein Upgrade auf eine LTSB-Installation durchgeführt werden.
 
@@ -149,5 +150,4 @@ In den Versionsinformationen für einen Configuration Manager-Standort können S
 Um die Version Ihres Standorts zu überprüfen, wechseln Sie oben links in der Konsole, wo die **Standortversion** angezeigt wird, zu **Info zu System Center Configuration Manager**. Eine Liste der Standortversionen finden Sie unter []().
 
 **Branch**  
-Um den Branch Ihres Standorts (als LTSB oder Current Branch) zu bestätigen, gehen Sie in der Konsole zu **Verwaltung** > **Standortkonfiguration** > **Standorte**, und öffnen Sie **Hierarchieeinstellungen**. Wenn die Möglichkeit besteht, in Current Branch zu konvertieren, und diese Option aktiviert ist, führt der Standort die LTSB-Version aus. Wenn der Standort Current Branch ausführt, ist diese Option ausgegraut.
-Informationen zu den verschiedenen Versionen von Configuration Manager finden Sie unter „Baseline- und Updateversionen“ im Thema [Updates für Configuration Manager](/sccm/core/servers/manage/updates).
+Um den Branch Ihres Standorts (als LTSB oder Current Branch) zu bestätigen, gehen Sie in der Konsole zu **Verwaltung** > **Standortkonfiguration** > **Standorte**, und öffnen Sie **Hierarchieeinstellungen**. Wenn die Möglichkeit besteht, in Current Branch zu konvertieren, und diese Option aktiviert ist, führt der Standort die LTSB-Version aus. Wenn der Standort Current Branch ausführt, ist diese Option ausgegraut. Informationen zu den verschiedenen Versionen von Configuration Manager finden Sie unter „Baseline- und Updateversionen“ im Thema [Updates für Configuration Manager](/sccm/core/servers/manage/updates).

@@ -1,5 +1,5 @@
 ---
-title: "Änderungen gegenüber Configuration Manager 2012 | Microsoft-Dokumentation "
+title: "Änderungen gegenüber Configuration Manager 2012 "
 description: "Identifizieren Sie die Änderungen und neuen Funktionen in System Center Configuration Manager im Vergleich zu System Center 2012 Configuration Manager."
 ms.custom: na
 ms.date: 05/02/2017
@@ -14,11 +14,11 @@ caps.latest.revision: "51"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0a3eb93a99533a1569d8f72ca01d6dfcdc75da20
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 97882e89076b994c60760621dbab3fa8e75126fc
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="what39s-changed-in-system-center-configuration-manager-from-system-center-2012-configuration-manager"></a>Änderungen in System Center Configuration Manager im Vergleich zu System Center 2012 Configuration Manager
 
@@ -64,7 +64,7 @@ Weitere Informationen zu Baselines finden Sie in den Abschnitten zu [Basis- und 
 
 -   Macht Updates, die für Ihre Bereitstellung gelten, innerhalb der Configuration Manager-Konsole verfügbar.  
 
-Diese Standortsystemrolle unterstützt sowohl Online- als auch Offline-Betriebsmodi. Weitere Informationen finden Sie unter [Informationen zum Dienstverbindungspunkt in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md).  
+Diese Standortsystemrolle unterstützt sowohl Online- als auch Offline-Betriebsmodi. Weitere Informationen finden Sie unter [About the service connection point in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md).  
 
 ##  <a name="bkmk_usage"></a> Sammeln von Verwendungsdaten  
  System Center Configuration Manager sammelt Nutzungsdaten zu Ihren Standorten und Ihrer Infrastruktur. Der Dienstverbindungspunkt sammelt diese Informationen und übermittelt sie an den Microsoft-Clouddienst. Configuration Manager muss aktiviert werden, damit Updates für Ihre Bereitstellung heruntergeladen werden, die für die von Ihnen verwendete Version von Configuration Manager gelten. Wenn Sie den Dienstverbindungspunkt einrichten, können Sie Folgendes angeben: Die Ebene der Daten, die gesammelt werden, und ob diese Daten automatisch (Onlinemodus) oder manuell (Offlinemodus) übermittelt werden.  

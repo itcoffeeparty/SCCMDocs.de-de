@@ -1,5 +1,6 @@
 ---
-title: Verwenden von Clouddiensten mit Configuration Manager | Microsoft-Dokumentation
+title: "Verwenden von Clouddiensten zum Ergänzen der lokalen Infrastruktur"
+titleSuffix: Configuration Manager
 description: "Bereitstellen von Cloudressourcen für System Center Configuration Manager zur Ergänzung Ihrer lokalen Infrastruktur."
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 52f7c63d155d5c34f0f12e13020767dec1867dab
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: f3a167433f90dc111d8f7e5e912db7360df5bfcf
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="use-cloud-services-with-system-center-configuration-manager"></a>Verwenden von Clouddiensten mit System Center Configuration Manager
 

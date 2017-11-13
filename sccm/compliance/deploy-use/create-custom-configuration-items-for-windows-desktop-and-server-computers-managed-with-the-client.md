@@ -1,5 +1,6 @@
 ---
-title: "Erstellen von Konfigurationselementen für clientverwaltete Windows-Computer – Configuration Manager | Microsoft-Dokumentation"
+title: "Erstellen von Konfigurationselementen für von Clients verwaltete Windows-Computer "
+titleSuffix: Configuration Manager
 description: "Verwalten Sie Windows-Computer und -Server mithilfe benutzerdefinierter Konfigurationselemente für Windows-Desktop- und -Servercomputer."
 ms.custom: na
 ms.date: 11/18/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 9fe28782744a419acad9c1acec49ff8db6c0eaa6
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: ed3aa1ce9e21c7c486cc40deb804a8687a1cd4f2
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-system-center-configuration-manager-client"></a>Erstellen benutzerdefinierter Konfigurationselemente für Windows-Desktop- und -Servercomputer, die mit dem System Center Configuration Manager-Client verwaltet werden
 

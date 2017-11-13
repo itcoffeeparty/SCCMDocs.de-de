@@ -1,5 +1,6 @@
 ---
-title: Mac-Clients bereitstellen | Microsoft-Dokumentation
+title: Bereitstellen von Mac-Clients
+titleSuffix: Configuration Manager
 description: "Erfahren Sie, wie Sie Clients auf Macintosh-Computern in System Center Configuration Manager bereitstellen können."
 ms.custom: na
 ms.date: 05/04/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "12"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: af6faf4cd317452f635ec30e74a3aa2e14f1662a
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 1b7f20a48e0e7219d933c367fb9f0315fc287dfd
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-deploy-clients-to-macs"></a>How to deploy clients to Macs
 
@@ -125,7 +126,7 @@ Verwenden Sie das [Tool „CMEnroll“](#client-and-certificate-automation-with-
 
         -   'Domäne\Name'. Beispiel: 'contoso\mrankenburg'  
 
-        -   'user@domain'.  Beispiel: 'mnorth@contoso.com'  
+        -   'user@domain'. Beispiel: 'mnorth@contoso.com'  
 
             > [!IMPORTANT]  
             >  Wenn Sie in das Feld **Benutzername** eine E-Mail-Adresse eingeben, wird von Configuration Manager automatisch der Domänenname der E-Mail-Adresse und der Standardname des Registrierungsproxypunkt-Servers für das Feld **Servername** verwendet. Wenn der Domänenname und der Servername nicht mit dem Namen des Anmeldungsproxypunkt-Servers übereinstimmen, müssen Sie die Benutzer über den richtigen Namen informieren, damit sie diesen bei der Registrierung ihrer Macintosh-Computer eingeben können.  
@@ -157,7 +158,7 @@ Verwenden Sie dieses Verfahren für die Automatisierung der Installation des Cli
 
     -   'Domäne\Name'. Beispiel: 'contoso\mrankenburg'  
 
-    -   'user@domain'.  Beispiel: 'mnorth@contoso.com'  
+    -   'user@domain'. Beispiel: 'mnorth@contoso.com'  
 
      Der Benutzername und das zugehörige Kennwort müssen mit den entsprechenden Angaben eines Active Directory-Benutzerkontos übereinstimmen, für das in der Mac-Clientzertifikatvorlage die Berechtigungen Lesen und Anmelden zugewiesen wurden.  
 

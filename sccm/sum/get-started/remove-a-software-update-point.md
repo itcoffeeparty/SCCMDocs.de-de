@@ -1,5 +1,6 @@
 ---
-title: Entfernen eines Softwareupdatepunkts | Microsoft-Dokumentation
+title: Entfernen eines Softwareupdatepunkts
+titleSuffix: Configuration Manager
 description: Gehen Sie wie folgt vor, um die Softwareupdatepunkt-Standortsystemrolle an einem Standort in der Configuration Manager-Konsole zu entfernen.
 keywords: 
 author: dougeby
@@ -11,11 +12,11 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 2486375c-d4a2-4cf2-9124-9bee02bbf173
-ms.openlocfilehash: 22de02c51be3a0cd66b1be0f04b2fbdeb897858c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b5493f2572ecca50aba87b8944eeab706c3942fd
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 #  <a name="BKMK_RemoveSUP"></a> Entfernen der Standortsystemrolle „Softwareupdatepunkt“  
 

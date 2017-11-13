@@ -1,5 +1,6 @@
 ---
-title: "Verwalten von Windows as a Service – Configuration Manager | Microsoft-Dokumentation"
+title: 'Verwalten von Windows as a Service '
+titleSuffix: Configuration Manager
 description: "Lassen Sie sich mit Configuration Manager den Status von Windows as a Service anzeigen, erstellen Sie Wartungspläne, um Bereitstellungsringe zu bilden, und lassen Sie sich Warnungen anzeigen, wenn Windows 10-Clients das Supportende erreichen."
 ms.custom: na
 ms.date: 03/26/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "26"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: fe02981433482ebf6880feec3e1822e6e8f4550f
-ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
+ms.openlocfilehash: e4ebbcec6df0bd5fdf5f94788d00f590d5e38d4d
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>Verwalten von Windows als Dienst mit System Center Configuration Manager
 

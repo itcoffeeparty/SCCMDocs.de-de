@@ -1,5 +1,6 @@
 ---
-title: "Datenübertragungen | Microsoft-Dokumentation"
+title: "Datenübertragungen"
+titleSuffix: Configuration Manager
 description: "Erfahren Sie, wie Configuration Manager Daten zwischen Standorten verschiebt, und wie Sie die Übertragung von Daten in Ihrem Netzwerk verwalten können."
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "12"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: bf0fdc8d4b4a72760b2cfb91231378a17df01594
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 29e15b9ebe01e9e266df24267bf402e3d07de095
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="data-transfers-between-sites-in-system-center-configuration-manager"></a>Datenübertragungen zwischen Standorten in System Center Configuration Manager
 
@@ -150,7 +151,7 @@ Verteilte Ansichten sind für Administratoren, die Daten in der Configuration Ma
 Solange bei einem Replikationslink ein Datentyp für verteilte Ansichten aktiviert ist, werden diese Daten nicht vom untergeordneten primären Standort auf den Standort der zentralen Verwaltung repliziert. Sobald verteilte Ansichten für einen Datentyp deaktiviert werden, wird die Replikation dieser Daten vom untergeordneten primären Standort auf den Standort der zentralen Verwaltung im Rahmen der normalen Datenreplikation wiederaufgenommen. Allerdings müssen die Replikationsgruppen, die diese Daten enthalten, zwischen dem primären Standort und dem Standort der zentralen Verwaltung neu initialisiert werden, damit diese Daten am Standort der zentralen Verwaltung verfügbar sind. Nach der Deinstallation eines primären Standorts mit aktivierten verteilten Ansichten müssen die Daten des Standorts der zentralen Verwaltung neu initialisiert werden, damit Sie auf Daten zugreifen können, die am Standort der zentralen Verwaltung für verteilte Ansichten aktiviert waren.  
 
 > [!IMPORTANT]  
-> Wenn Sie verteilte Ansichten auf einem Replikationslink in der Hierarchie verwenden, müssen Sie die verteilten Ansichten aller Replikationslinks deaktivieren, bevor Sie einen primären Standort deinstallieren. Weitere Informationen finden Sie unter [Deinstallieren eines primären Standorts, der mit verteilten Ansichten konfiguriert ist](../../../core/servers/deploy/install/uninstall-sites-and-hierarchies.md#BKMK_UninstallPrimaryDistViews).  
+> Wenn Sie verteilte Ansichten auf einem Replikationslink in der Hierarchie verwenden, müssen Sie die verteilten Ansichten aller Replikationslinks deaktivieren, bevor Sie einen primären Standort deinstallieren. Weitere Informationen finden Sie unter [Uninstall a primary site that is configured with distributed views](../../../core/servers/deploy/install/uninstall-sites-and-hierarchies.md#BKMK_UninstallPrimaryDistViews).  
 
 #### <a name="prerequisites-and-limitations-for-distributed-views"></a>Voraussetzungen und Einschränkungen für verteilte Ansichten  
 

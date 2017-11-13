@@ -1,5 +1,6 @@
 ---
-title: "Entwurf einer Standorthierarchie – Configuration Manager | Microsoft-Dokumentation"
+title: 'Entwerfen einer Standorthierarchie '
+titleSuffix: Configuration Manager
 description: "Grundlegendes zu den verfügbaren Topologien und Verwaltungsoptionen für System Center Configuration Manager, damit Sie Ihre Standorthierarchie planen können."
 ms.custom: na
 ms.date: 8/24/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 2c587c0ad894dc567a6f1804626db611ff9a1013
-ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
+ms.openlocfilehash: 2d8c2c7f75ff0f288167c697fbcc1f3202dc95d6
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="design-a-hierarchy-of-sites-for-system-center-configuration-manager"></a>Entwerfen einer Hierarchie von Standorten für System Center Configuration Manager
 

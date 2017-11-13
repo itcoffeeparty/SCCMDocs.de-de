@@ -1,5 +1,6 @@
 ---
-title: "Verwenden des Configuration Manager-Clients für erweiterte Interoperabilität mit Current Branch | Microsoft-Dokumentation"
+title: "Verwenden des erweiterten Interoperabilitätsclients mit Current Branch "
+titleSuffix: Configuration Manager
 description: Hier erfahren Sie, wie Sie den Client aus Long-Term Servicing Branch von Configuration Manager mit einem Current Branch-Standort verwenden.
 ms.custom: na
 ms.date: 08/09/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 9772224be78eee2777137225a59b53b1fd77a627
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: ba79f2b9cf0cdfc4525645a647dddb624a0a5e5b
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="use-the-configuration-manager-client-software-for-extended-interoperability-with-future-versions-of-a-current-branch-site"></a>Verwenden der Configuration Manager-Clientsoftware für erweiterte Interoperabilität mit den zukünftigen Versionen eines Current Branch-Standorts
 

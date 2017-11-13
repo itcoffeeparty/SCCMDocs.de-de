@@ -1,5 +1,6 @@
 ---
-title: Technical Preview 1709 | Microsoft-Dokumentation
+title: Technical Preview1709
+titleSuffix: Configuration Manager
 description: "Erfahren Sie mehr über die Funktionen, die mit der Technical Preview-Version 1709 für System Center Configuration Manager zur Verfügung stehen."
 ms.custom: na
 ms.date: 09/28/2017
@@ -13,11 +14,11 @@ ms.assetid: a3ef6bdc-a204-4c4c-a02f-2bd03f35183e
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 3348bc91e6810c873d50cb4efd3efb9fbd024bd3
-ms.sourcegitcommit: 96b79fa091f44e8e6ac5652f6cbbb4b873a8bad9
+ms.openlocfilehash: 90e31c26204323e33560270044ebac7dfe135684
+ms.sourcegitcommit: 1573a1bd0bd58fefb1ea651b3ea8d6fd53eff546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="capabilities-in-technical-preview-1709-for-system-center-configuration-manager"></a>Funktionen in der Technical Preview 1709 für System Center Configuration Manager
 
@@ -43,8 +44,8 @@ In diesem Artikel werden die Features erläutert, die in der Technical Preview-V
 
 **Im Folgenden werden neue Funktionen aufgelistet, die Sie mit dieser Version ausprobieren können.**  
 
-## <a name="improved-vpn-profile-experience-in-configuration-manager-console----1313282---"></a>Verbesserte Benutzeroberfläche für VPN-Profile in der Configuration Manager-Konsole <!-- 1313282 -->
-
+## <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>Verbesserte Benutzeroberfläche für VPN-Profile in der Configuration Manager-Konsole
+<!-- 1313282 -->
 Mit diesem Release haben wir den Assistenten zum Erstellen von VPN-Profilen und die VPN-Eigenschaftenseiten aktualisiert, sodass die Einstellungen der ausgewählten Plattform entsprechend angezeigt werden. Genauer gesagt:
 
 - Jede Plattform hat einen eigenen Workflow. Das bedeutet, dass neue VPN-Profile nur die von der jeweiligen Plattform unterstützte Einstellung enthalten.
@@ -80,8 +81,7 @@ Wenn Sie unterschiedliche Plattformen auswählen, werden nur die für die ausgew
 
 ## <a name="co-management-for-windows-10-devices"></a>Co-Verwaltung für Windows 10-Geräte    
 <!-- 1350871 -->
-Viele Kunden möchten Windows 10-Geräte genauso verwalten wie mobile Geräte: mit einer einfachen, kostengünstigen und cloudbasierten Lösung. Der Übergang von einer herkömmlichen zu einer modernen Verwaltungslösung kann jedoch eine Herausforderung sein. Bei der Co-Verwaltung können Windows 10-Geräte gleichzeitig mit Configuration Manager und Intune verwaltet werden. Außerdem können sie in Active Directory (AD) und Azure Active Directory (Azure AD) eingebunden werden, um Ihre Infrastruktur nach und nach zu modernisieren. Diese Lösung schlägt eine Brücke von der herkömmlichen zur modernen Verwaltung und bietet Ihnen die Möglichkeit, die Umstellung Schritt für Schritt durchzuführen.  
-
+Viele Kunden möchten Windows 10-Geräte genauso verwalten wie mobile Geräte: mit einer einfachen, kostengünstigen und cloudbasierten Lösung. Der Übergang von einer herkömmlichen zu einer modernen Verwaltungslösung kann jedoch eine Herausforderung sein. Ab Windows 10-Version 1607 (auch Anniversary Update genannt) können Sie ein Windows 10-Gerät gleichzeitig in eine lokale Active Directory-Installation (AD) und eine cloudbasierte Azure AD-Infrastruktur einbinden (Hybrid Azure AD). Co-Verwaltung nutzt diese Verbesserung und ermöglicht es Ihnen, Windows 10-Geräte gleichzeitig mit Configuration Manager und Intune zu verwalten. Diese Lösung schlägt eine Brücke von der herkömmlichen zur modernen Verwaltung und bietet Ihnen die Möglichkeit, die Umstellung Schritt für Schritt durchzuführen. 
 
 ### <a name="prerequisites"></a>Voraussetzungen
 Bevor Sie mit der Co-Verwaltung beginnen können, müssen folgende Anforderungen erfüllt sein. Es gibt allgemeine Anforderungen und spezifische für vorhandene Configuration Manager-Clients und Geräte, die keine Clients sind.
@@ -210,7 +210,6 @@ Im vorherigen Abschnitt haben Sie Windows 10-Geräte für die Co-Verwaltung vorb
     - **Produktion**: Wenn Sie diese Einstellung auswählen, werden alle unterstützten Windows 10-Geräte für die Co-Verwaltung aktiviert. Konfigurieren Sie die **Ausschlussgruppe** mit mindestens einer Sammlung. Geräte, die einer der Sammlungen in dieser Gruppe angehören, werden von der Co-Verwaltung ausgeschlossen. 
 5. Wählen Sie je nach den Einstellungen, die Sie auf der Seite „Staging“ (Bereitstellung) konfiguriert haben, auf der Seite „Enablement“ (Aktivierung) **Pilot** oder **All** (Alle), um die automatische Registrierung bei Intune zu aktivieren, und klicken Sie dann auf **Next** (Weiter). Wenn Sie **Pilot** auswählen, werden nur die Configuration Manager-Clients aus der Gruppe „Pilotprojekt“ automatisch bei Intune registriert. So können Sie die Co-Verwaltung für einen Teil der Clients aktivieren, um sie zu testen und phasenweise auszurollen. 
 6. Wählen Sie auf der Seite „Workloads“ aus, ob Configuration Manager-Workloads von Intune verwaltet werden sollen, und klicken Sie dann auf **Next** (Weiter). Verwenden Sie die Schieberegler, um auszuwählen, ob die Workload in die Pilotgruppe oder, je nach den Einstellungen, die Sie auf der Seite „Staging“ (Bereitstellung) konfiguriert haben, für alle Windows 10-Clients verschoben werden soll. 
-
 7. Schließen Sie den Assistenten, um die Co-Verwaltung zu aktivieren.  
 
 <!--### Modify your co-management settings

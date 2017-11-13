@@ -1,5 +1,6 @@
 ---
-title: "Abfragen – Technische Referenz | Microsoft-Dokumentation"
+title: "Abfragen – Technische Referenz"
+titleSuffix: Configuration Manager
 description: "Hier finden Sie eine Liste mit Themen, mit deren Hilfe Sie Abfragen zum Abrufen von Informationen zu Ressourcen an Ihrem Standort verwenden können."
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "4"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 3bd3b4527ce43e9a87105cb3ff6379afde84e531
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 745148bb84b5090b2c8d46100fc374cc6c341557
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="queries-technical-reference-for-system-center-configuration-manager"></a>Abfragen – Technische Referenz für System Center Configuration Manager
 

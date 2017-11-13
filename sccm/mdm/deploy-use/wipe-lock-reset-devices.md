@@ -1,8 +1,9 @@
 ---
-title: "Schützen von Daten mit Remotezurücksetzung, Remotesperre oder Zurücksetzen der Kennung mithilfe von System Center Configuration Manager | Microsoft-Dokumentation"
+title: "Schützen von Daten durch Remotezurücksetzen, Sperren oder Zurücksetzen der Kennung"
+titleSuffix: Configuration Manager
 description: "Schützen von Gerätedaten mit vollständigem Zurücksetzen, selektivem Zurücksetzen, Remotesperre oder Zurücksetzen der Kennung mithilfe von System Center Configuration Manager."
 ms.custom: na
-ms.date: 09/28/2017
+ms.date: 10/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: ea92d7b4656a04f312f04c19cac6b17df931c9c5
-ms.sourcegitcommit: db079cd7322e7d4926b2df0ccb37e752c570d902
+ms.openlocfilehash: 55d49c388b4ea60627f72ffe61796c70de6f9416
+ms.sourcegitcommit: a5f8b5cfdabf0298e4302e24210e725a06a9de82
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/30/2017
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-system-center-configuration-manager"></a>Schützen von Daten mit Remotezurücksetzung, Remotesperre oder Zurücksetzen der Kennung mithilfe von System Center Configuration Manager
 
@@ -39,6 +40,9 @@ In System Center Configuration Manager sind Funktionen zum selektiven und vollst
 Sie können das Zurücksetzen eines Geräts veranlassen, wenn Sie ein verlorengegangenes Gerät sichern oder ein Gerät von der aktiven Verwendung abkoppeln möchten.  
 
 Veranlassen Sie ein **vollständiges Zurücksetzen** , um bei einem Gerät die Werkseinstellungen wiederherzustellen. Hierdurch werden alle Firmen- und Benutzerdaten sowie -einstellungen entfernt. Sie können auf Geräten mit Windows Phone, iOS, Android und Windows 10 eine vollständige Zurücksetzung ausführen.  
+
+> [!NOTE]
+> Sie können nur unternehmenseigene Geräte vollständig zurücksetzen.
 
 > [!NOTE]
 > Beim Zurücksetzen von Windows 10-Geräten in Versionen vor Version 1511 mit weniger als 4 GB RAM reagiert das Gerät möglicherweise nicht mehr. [Weitere Informationen](https://technet.microsoft.com/library/mt592024.aspx#full-wipe-disables-windows-10-devices-with-less-than-4-gb-ram)

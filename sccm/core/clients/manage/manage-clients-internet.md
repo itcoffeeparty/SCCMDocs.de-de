@@ -1,5 +1,6 @@
 ---
-title: "Verwalten von Clients im Internet – Configuration Manager | Microsoft-Dokumentation"
+title: 'Verwalten von Clients im Internet '
+titleSuffix: Configuration Manager
 description: "In diesem Artikel erhalten Sie Informationen über das Verwalten von Clients mithilfe des Cloudverwaltungsgateways und über die internetbasierte Clientverwaltung in Configuration Manager."
 ms.date: 04/23/2017
 ms.prod: configuration-manager
@@ -8,11 +9,11 @@ ms.assetid: c667d6af-80c4-485f-910c-896c0171fd00
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: d9dbe4e7242e2506d25b47a31982c815209c68a1
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: c2650a2cdf7b1e6362688f48643d5ff37954d49b
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-clients-on-the-internet-with-configuration-manager"></a>Verwalten von Clients im Internet mit Configuration Manager
 
