@@ -15,11 +15,11 @@ caps.latest.revision: "24"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 8ab177067d0308b863274a7ae05574374b0af4ba
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: a83c2030de8a146dad7bf2258e8a983c8ab6c45e
+ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/13/2017
 ---
 # <a name="manage-email-access-in-system-center-configuration-manager"></a>Verwalten des E-Mail-Zugriffs in System Center Configuration Manager
 
@@ -39,7 +39,7 @@ Sie können den Zugriff auf Exchange Online und Exchange On-Premises über den i
 
 -   Android 4.0 und höher, Samsung KNOX Standard 4.0 und höher  
 
--   iOS 7.1 und höher  
+-   iOS 9.0 und höher  
 
 -   Windows Phone 8.1 und höher  
 
@@ -93,7 +93,7 @@ Nicht unterstützte Browser werden blockiert. Die OWA-Apps für iOS und Android 
 
 -   Android 4.0 und höher, Samsung KNOX Standard 4.0 und höher  
 
--   iOS 7.1 und höher  
+-   iOS 9.0 und höher  
 
 -   Windows Phone 8.1 und höher  
 

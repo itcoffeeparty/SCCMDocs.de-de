@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 12633eced1850b718bf7cad019cd943305a7d9fb
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 4eedd96fd399cf9577da8069bd0c8d5702f50d7b
+ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/13/2017
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>Schützen von Apps mithilfe von Verwaltungsrichtlinien für mobile Anwendungen in System Center Configuration Manager
 
@@ -30,7 +30,7 @@ Mit den Richtlinien für die Anwendungsverwaltung können Sie in System Center C
 
 -   Geräte unter Android 4 und höher  
 
--   Geräte unter iOS 7 und höher  
+-   Geräte unter iOS 9 und höher  
 
 Ferner können Sie Verwaltungsrichtlinien für mobile Apps auch zum Schutz von Apps auf Geräten verwenden, die nicht von Intune verwaltet werden. Mit dieser neuen Funktion können Sie Verwaltungsrichtlinien für mobile Apps auf Apps anwenden, die eine Verbindung zu Office 365-Diensten herstellen. Diese Funktion wird nicht für Apps unterstützt, die die Verbindung zu lokalen Exchange- oder SharePoint-Diensten herstellen.  
 

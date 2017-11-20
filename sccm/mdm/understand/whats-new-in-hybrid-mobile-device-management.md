@@ -3,7 +3,7 @@ title: "Neues bei der hybride Verwaltung mobiler Geräte"
 titleSuffix: Configuration Manager
 description: "Erfahren Sie mehr über die neuen Funktionen der Verwaltung mobiler Geräte, die für Hybridbereitstellungen mit Configuration Manager und Intune verfügbar sind."
 ms.custom: na
-ms.date: 10/04/2017
+ms.date: 11/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 515aa4ae71a4e8b8bdfa3bbe693386c5ddf44223
-ms.sourcegitcommit: e858bacecf0f964ed619b3c2f83663c4dab92998
+ms.openlocfilehash: 29dd4bff6d35712c23d66751db16a00aa761b8b4
+ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 11/13/2017
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Neuheiten bei der hybriden Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune
 
@@ -40,6 +40,15 @@ Jeder Abschnitt dieses Artikels listet Hybridfeatures in drei verschiedenen Kate
 |**Neuheiten in Microsoft Intune** | Im Allgemeinen sollten alle in dieser Kategorie aufgeführten Features in allen Configuration Manager-Releases funktionieren. Dies umfasst auch Configuration Manager-Releases von System Center 2012 R2, da für diese Features nur der Intune-Dienst erforderlich ist und keine zusätzlichen Funktionen in Configuration Manager benötigt werden.|
 |**Neuheiten in Configuration Manager Technical Preview**| Alle in dieser Kategorie aufgelisteten Features können nur mit dem angegebenen Technical Preview-Release verwendet werden. Um diese Features zu testen, müssen Sie die in der Featurebeschreibung angegebene Technical Preview-Version installieren. Weitere Informationen finden Sie unter [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md).|
 |**Neuheiten in Configuration Manager (Current Branch)**| Alle in dieser Kategorie aufgelisteten Features können nur mit der angegebenen Version von Configuration Manager (Current Branch) verwendet werden, z.B. Version 1511 oder 1602. Wenn Sie eine ältere Version von Configuration Manager für die Hybridbereitstellung verwenden, müssen Sie ein Upgrade auf die in der Featurebeschreibung angegebene Configuration Manager-Version (Current Branch) ausführen. Weitere Informationen finden Sie unter [Upgrade auf System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|
+
+
+## <a name="november-2017"></a>November 2017
+
+### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
+
+- **Zugriff auf Protokolle von verwalteten Apps für iOS** <!-- 1469920 --> Endbenutzer, auf deren Geräten der Managed Browser installiert ist, können jetzt auf den Verwaltungsstatus aller von Microsoft veröffentlichten Apps zugreifen und Protokolle für die Problembehandlung ihrer verwalteten iOS-Apps senden.
+  
+  Wie Sie den Problembehandlungsmodus im Managed Browser auf einem iOS-Gerät aktivieren, erfahren Sie unter [Zugreifen auf Protokolle von verwalteten Apps mithilfe des Managed Browsers unter iOS](https://docs.microsoft.com/intune/app-configuration-managed-browser#how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios).
 
 
 ## <a name="october-2017"></a>Oktober 2017
@@ -101,6 +110,8 @@ Jeder Abschnitt dieses Artikels listet Hybridfeatures in drei verschiedenen Kate
 
 - **Der Zulassungsrichtlinie von Windows Information Protection wurde die Windows 10-Unternehmensportal-App hinzugefügt** <!-- 677129 -->    
     Die Windows 10-Unternehmensportal-App wurde aktualisiert, um Windows Informationen Protection (WIP) zu unterstützen. Die App kann der WIP-Zulassungsrichtlinie hinzugefügt werden. Dank dieser Änderung muss die App nicht mehr der Liste **Ausnahme** hinzugefügt werden. 
+
+     Nur ein einzelnes WIP Konfigurationselement kann an ein Gerät übermittelt werden.  Wenn für zwei WIP-Konfigurationselemente das gleiche Gerät als Ziel gilt, wird keine WIP-Richtlinie angewendet.
 
 - **Mitteilung zum Ablauf des Supports wurde für iOS 8.0 hinzugefügt**    
     Eine Mitteilung zum Ablauf des Supports für iOS 8.0 wurde hinzugefügt. Details finden Sie unter [Benachrichtigungen](#notices).
