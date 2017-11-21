@@ -1,5 +1,6 @@
 ---
-title: Planen von Softwareupdates | Microsoft Docs
+title: Planen von Softwareupdates
+titleSuffix: Configuration Manager
 description: "Ein Plan für die Softwareupdatepunkt-Infrastruktur ist wichtig, bevor Sie Softwareupdates in einer System Center Configuration Manager-Produktionsumgebung verwenden."
 keywords: 
 author: dougeby
@@ -11,11 +12,11 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: 8b739a01a6bb5cacf0f7109e2e6fa3b31dd666d3
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e111d5abf263a90ac020aca863d495cb717154db
+ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="plan-for-software-updates-in-system-center-configuration-manager"></a>Planen von Softwareupdates in System Center Configuration Manager
 

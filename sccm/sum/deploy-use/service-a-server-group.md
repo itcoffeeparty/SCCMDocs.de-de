@@ -1,5 +1,6 @@
 ---
-title: Verwalten einer Servergruppe | Microsoft-Dokumentation
+title: Bereitstellung einer Servergruppe
+titleSuffix: Configuration Manager
 description: "Die System Center Configuration Manager-Konsole stellt Warnungen und Status zum Überwachen von Updates und Kompatibilität bereit."
 keywords: 
 author: dougeby
@@ -11,19 +12,18 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
-ms.openlocfilehash: ae09a02dd5d67113b9a7e2ce146c844efa4caf55
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 12382015f2b673103c3c0d8fc9c0cbf29511a434
+ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/17/2017
 ---
->[!IMPORTANT]
->Dies ist ein Vorabfeature, das in den Configuration Manager-Versionen 1606 und 1610 verfügbar ist. Vorab veröffentlichte Features werden in das Produkt aufgenommen, um sie in einem frühen Stadium in einer Produktionsumgebung zu testen. Sie sollten nicht als für den Produktivbetrieb geeignet betrachtet werden. Aktivieren Sie dieses Feature, um es verfügbar zu machen. Weitere Informationen finden Sie unter [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease) (Verwenden von Vorabfeatures aus Updates).
-
-
 # <a name="service-a-server-group"></a>Bereitstellung einer Servergruppe
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
+
+>[!IMPORTANT]
+>Features der Vorabversion sind Features, die in Current Branch enthalten sind, um sie in einem frühen Stadium in einer Produktionsumgebung zu testen. Diese Features werden vollständig unterstützt, unterliegen aber noch der Entwicklung und könnten möglicherweise geändert werden, bis sie die Vorabversionskategorie verlassen. Aktivieren Sie dieses Feature, um es verfügbar zu machen. Weitere Informationen finden Sie unter [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease) (Verwenden von Vorabfeatures aus Updates).
 
 In System Center Configuration Manager können Sie ab Version 1606 Servergruppeneinstellungen für eine Sammlung konfigurieren und so festlegen, auf wie vielen Computern, auf wie viel Prozent der Computer oder in welcher Reihenfolge auf Computern in der Sammlung Softwareupdates installiert werden. Zudem können Sie auch PowerShell-Skripts zum Ausführen von benutzerdefinierten Aktionen vor und nach der Bereitstellung konfigurieren.
 

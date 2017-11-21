@@ -1,5 +1,6 @@
 ---
-title: Automatisches Bereitstellen von Softwareupdates | Microsoft Docs
+title: Automatisches Bereitstellen von Softwareupdates
+titleSuffix: Configuration Manager
 description: "Stellen Sie automatisch Softwareupdates durch Hinzufügen neuer Updates zu einer Updategruppe bereit, die mit einer aktiven Bereitstellung verknüpft ist, oder mithilfe von ADRs."
 keywords: 
 author: dougeby
@@ -11,11 +12,11 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: 804a9d7a32cfbdb498c6748c5d99a1874261c231
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 1910284b4d48442710ba5aea413cb7b65aa4e117
+ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/17/2017
 ---
 #  <a name="BKMK_AutoDeploy"></a> Automatisches Bereitstellen von Softwareupdates  
 

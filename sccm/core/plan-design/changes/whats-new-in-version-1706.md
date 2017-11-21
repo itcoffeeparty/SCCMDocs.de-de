@@ -13,11 +13,11 @@ ms.assetid: ac034143-003e-4629-aac2-99eaffef4db1
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 9b3248f30470ee8250efcbf171642ea476627d68
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 2889de0709096aa481ca6203c5ab2bac1f064d5e
+ms.sourcegitcommit: c4a1bafcd004638d264a93d307c70d8b6f7fe023
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>Neuerungen in Version 1706 von System Center Configuration Manager
 
@@ -189,10 +189,6 @@ Weitere Informationen finden Sie unter [Erstellen und Ausführen von PowerShell-
 Ab dieser Version können Sie drei neue Richtlinieneinstellungen für die Verwaltung mobiler Anwendungen verwenden:
 
 - **Bildschirmaufnahme blockieren (Nur Android-Geräte):** Gibt an, dass die Bildschirmaufnahmefunktionen des Geräts blockiert werden, wenn Sie diese App verwenden.
-
-- **Kontaktsynchronisierung deaktivieren:** Verhindert, dass die App Daten in der nativen App „Kontakte“ auf dem Gerät speichert.
-
-- **Drucken deaktivieren:** Verhindert, dass die App Geschäfts-, Schul- oder Unidaten druckt.
 
 Unter [Schützen von Apps mithilfe von App-Schutzrichtlinien in Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies) finden Sie Informationen zu den neuen Richtlinieneinstellungen zum Schutz von Apps.
 

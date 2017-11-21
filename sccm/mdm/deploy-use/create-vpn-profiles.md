@@ -3,7 +3,7 @@ title: VPN-Profile
 titleSuffix: Configuration Manager
 description: "VPN-Profile für mobile Geräte in System Center Configuration Manager."
 ms.custom: na
-ms.date: 07/26/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 40446ce656bd446f890b9b1349ab0b95742cadb8
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: b60a1b9e85b00cbaba54db4ea4cd92a1038c3fcf
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>VPN-Profile für mobile Geräte in System Center Configuration Manager
 
@@ -71,8 +71,8 @@ Allgemeine Informationen zum Erstellen von VPN-Profilen finden Sie unter [Erstel
 > [!IMPORTANT]
 > Es wird empfohlen, alle Listen der zugeordneten Apps zu sichern, die Sie für die Konfiguration des Pro-App-VPN kompilieren. Wenn ein nicht autorisierter Benutzer die Liste ändert und Sie die Liste in die Pro-App-VPN-Liste importieren, gewähren Sie möglicherweise VPN-Zugriff für Apps, die keinen Zugriff erhalten sollten. Eine Möglichkeit, die App-Listen zu sichern, besteht in der Verwendung einer Zugriffssteuerungsliste (access control list; ACL).
 
-
-1.  Geben Sie auf der Seite **Authentifizierungsmethode** des Assistenten Folgendes an:  
+1. Wählen Sie auf der Seite **Unterstützte Plattformen** des **Assistenten zum Erstellen von VPN-Profilen** die Betriebssysteme aus, unter denen das VPN-Profil installiert wird, oder klicken Sie auf **Alle auswählen**, um das VPN-Profil unter allen verfügbaren Betriebssystemen zu installieren.  
+2.  Geben Sie auf der Seite **Authentifizierungsmethode** des Assistenten Folgendes an:  
 
     -   **Authentifizierungsmethode**: Wählen Sie die Authentifizierungsmethode für die VPN-Verbindung aus. Verfügbare Methoden hängen vom Verbindungstyp ab, wie in dieser Tabelle gezeigt.  
 
@@ -112,46 +112,13 @@ Allgemeine Informationen zum Erstellen von VPN-Profilen finden Sie unter [Erstel
 
          Wenn der Vorgang von der Windows-Version, die Configuration Manager ausführt, _und_ der ausgewählten Autorisierungsmethode unterstützt wird, können Sie auf **Konfigurieren** klicken, um das Dialogfeld mit den Windows-Eigenschaften zu öffnen und die Eigenschaften der Authentifizierungsmethode zu konfigurieren.  Wenn **Konfigurieren** deaktiviert ist, verwenden Sie andere Möglichkeiten zum Konfigurieren der Eigenschaften der Authentifizierungsmethode.
 
-2.  Aktivieren Sie auf der Seite **Proxyeinstellungen** des **Assistenten zum Erstellen von VPN-Profilen**das Kontrollkästchen **Proxyeinstellungen für dieses VPN-Profil konfigurieren**, wenn Ihre VPN-Verbindung einen Proxyserver verwendet. Geben Sie dann die Proxyserverinformationen an. Weitere Informationen finden Sie in der Windows Server-Dokumentation.  
+3.  Aktivieren Sie auf der Seite **Proxyeinstellungen** des **Assistenten zum Erstellen von VPN-Profilen**das Kontrollkästchen **Proxyeinstellungen für dieses VPN-Profil konfigurieren**, wenn Ihre VPN-Verbindung einen Proxyserver verwendet. Geben Sie dann die Proxyserverinformationen an. Weitere Informationen finden Sie in der Windows Server-Dokumentation.  
 
     > [!NOTE]  
     >  Auf Windows 8.1-Computern zeigt das VPN-Profil die Proxyinformationen erst an, wenn Sie mit dem betreffenden Computer eine Verbindung zu dem VPN herstellen.  
 
 
-3. Konfigurieren Sie weitere DNS-Einstellungen (falls erforderlich).  
- Auf der Seite **Automatische VPN-Verbindung konfigurieren** können Sie Folgendes konfigurieren:  
-
-    -   **VPN bedarfsgesteuert aktivieren**: Verwenden Sie diese Option, wenn Sie weitere DNS-Einstellungen für Windows Phone 8.1-Geräte konfigurieren möchten. Diese Einstellung gilt nur für Windows Phone 8.1-Geräte und sollte nur auf VPN-Profilen aktiviert werden, die für Windows Phone 8.1-Geräte bereitgestellt werden.
-
-    -   **DNS-Suffixliste** (nur Windows Phone 8.1-Geräte): Konfiguriert Domänen, die eine VPN-Verbindung herstellen. Fügen Sie für jede Domäne, die Sie angeben, das DNS-Suffix, die DNS-Serveradresse und eine der folgenden bedarfsgesteuerten Aktionen hinzu:  
-
-        -   **Nie herstellen**: Es wird niemals eine VPN-Verbindung geöffnet.  
-
-        -   **Bei Bedarf herstellen**: Es wird nur dann eine VPN-Verbindung geöffnet, wenn das Gerät eine Verbindung zu Ressourcen herstellen muss.  
-
-        -   **Immer herstellen**: Die VPN-Verbindung wird immer geöffnet.  
-
-    -   **Zusammenführen**: Kopiert alle von Ihnen konfigurierten DNS-Suffixe in die **Liste vertrauenswürdiger Netzwerke**.  
-
-    -   **Liste vertrauenswürdiger Netzwerke** (nur Windows Phone 8.1-Geräte): Geben Sie in jeder Zeile ein DNS-Suffix an. Wenn sich das Gerät in einem vertrauenswürdigen Netzwerk befindet, wird die VPN-Verbindung nicht geöffnet.  
-
-    -   **Suffixsuchliste** (nur Windows Phone 8.1-Geräte): Geben Sie in jeder Zeile ein DNS-Suffix an. Jedes DNS-Suffix wird beim Verbinden mit einer Website unter Verwendung eines Kurznamens gesucht.  
-
-     Beispiel: Sie geben die DNS-Suffixe **domain1.contoso.com** und **domain2.contoso.com** an und besuchen dann die URL **http://mywebsite**. Die folgenden Adressen werden gesucht.  
-
-    -   **http://mywebsite.domain1.contoso.com**  
-
-    -   **http://mywebsite.domain2.contoso.com**  
-
-    > [!NOTE]  
-    >  Nur für Windows Phone 8.1-Geräte  
-    >   
-    >  Wenn die Option *Gesamten Netzwerkdatenverkehr über die VPN-Verbindung senden* ausgewählt ist *und* die VPN-Verbindung vollständiges Tunneln verwendet, wird die VPN-Verbindung automatisch mit dem ersten Geräteprofil geöffnet. Um eine Verbindung mit einem anderen Profil zu öffnen, legen Sie das gewünschte Profil als Standard fest.  
-    >   
-    >  Wenn die Option *Gesamten Netzwerkdatenverkehr über die VPN-Verbindung senden* *nicht* ausgewählt ist *und* die VPN-Verbindung getrenntes Tunneln verwendet, werden VPN-Verbindungen automatisch für konfigurierte Routen oder verbindungsspezifische DNS-Suffixe geöffnet.  
-
-
-4. Wählen Sie auf der Seite **Unterstützte Plattformen** des **Assistenten zum Erstellen von VPN-Profilen** die Betriebssysteme aus, unter denen das VPN-Profil installiert wird, oder klicken Sie auf **Alle auswählen**, um das VPN-Profil unter allen verfügbaren Betriebssystemen zu installieren.  
+4. Konfigurieren Sie weitere DNS-Einstellungen (falls erforderlich).  
 
 5. Beenden Sie den Assistenten. Das neue VPN-Profil wird im Arbeitsbereich **Bestand und Kompatibilität** im Knoten **VPN-Profile** angezeigt.  
 
