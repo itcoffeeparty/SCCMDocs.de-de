@@ -3,7 +3,7 @@ title: Verwalten von Clients
 titleSuffix: Configuration Manager
 description: Erfahren Sie, wie Sie Clients in System Center Configuration Manager verwalten.
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "17"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: d62138f573745a16634e06aeb9301a248f707cae
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: ae1bc53cf15b2a1746656667f7bf546742432c11
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>Verwalten von Clients in System Center Configuration Manager
 
@@ -51,7 +51,7 @@ Beachten Sie, dass je nach Gerätetyp einige dieser Optionen möglicherweise nic
     -   **Hinzufügen des Geräts zu einer neuen oder vorhandenen Sammlung**  
 
          Fügen Sie das Gerät einer Sammlung mit einer direkten Regel hinzu.  
-         
+
     -   **Installieren und erneutes Installieren des Clients mithilfe von Clientpushinstallation**  
 
          Installieren Sie den Configuration Manager-Client und installieren Sie ihn erneut, um diesen auf Computern, auf denen Windows ausgeführt wird, zu reparieren oder zu konfigurieren. Enthält Optionen für die Websitekonfiguration und client.msi-Eigenschaften, die Sie für die Clientpushinstallation festlegen.  
@@ -185,6 +185,21 @@ Beachten Sie, dass je nach Gerätetyp einige dieser Optionen möglicherweise nic
 
          Die Clientbenachrichtigungstasks werden im Arbeitsbereich **Überwachung** unter dem Knoten **Clientvorgänge** angezeigt.  
 
+
+## <a name="restart-clients"></a>Neustarten von Clients
+Ab Version 1710 können Sie die Configuration Manager-Konsole verwenden, um Clientgeräte zu identifizieren, die einen Neustart erfordern, und diese Geräte dann mit einer Clientbenachrichtungsaktion neu starten.
+
+Um Geräte zu identifizieren, für die ein Neustart aussteht, wechseln Sie zu **Assets und Konformität** > **Geräte**, und wählen Sie eine Sammlung mit Geräten aus, die möglicherweise neu gestartet werden müssen. Nach Auswahl der Sammlung können Sie den Status für jedes Gerät im Detailbereich in einer neuen Spalte namens **Neustart steht aus** auswählen. Jedes Gerät weist entweder den Wert **Ja** oder den Wert **Nein** auf.
+
+**So erstellen Sie die Clientbenachrichtigung zum Neustarten eines Geräts**
+1.  Ermitteln Sie im Knoten „Geräte“ der Konsole das Gerät, das Sie neu starten möchten.
+2.  Klicken Sie mit der rechten Maustaste auf das Gerät, und wählen Sie **Clientbenachrichtigung** und danach **Neustart** aus. Dadurch wird ein Fenster mit Informationen zum Neustart geöffnet. Klicken Sie zum Bestätigen der Anforderung des Neustarts auf **OK** .
+
+Wenn ein Client diese Benachrichtigung empfängt, wird dort ein **Softwarecenter**-Benachrichtigungsfenster geöffnet, um den Benutzer über den Neustart zu informieren. Standardmäßig erfolgt der Neustart nach 90 Minuten. Sie können den Zeitpunkt des Neustarts durch Konfigurieren der [Clienteinstellungen](/sccm/core/clients/deploy/configure-client-settings) ändern. Sie finden die Einstellungen für das Neustartverhalten in den Standardeinstellungen auf der Registerkarte [Computerneustart](/sccm/core/clients/deploy/about-client-settings#computer-restart).
+
+
+
+
 ##  <a name="BKMK_ClientCache"></a> Konfigurieren des Clientcaches für Configuration Manager-Clients  
 Der Clientcache speichert temporäre Dateien, die beim Installieren von Anwendungen und Programmen durch Clients verwendet werden. Der Clientcache kann auch von Softwareupdates verwendet werden. Softwareupdates werden jedoch nicht von der konfigurierten Cache-Größe eingeschränkt, und es wird stets ein Herunterladen in den Cache versucht. Die Einstellungen des Clientcaches, wie z.B. Größe und Speicherort, können beim manuellen Installieren des Configuration Manager-Clients, bei Verwendung der Clientpushinstallation oder nach der Installation des Clients konfiguriert werden.
 
@@ -257,8 +272,8 @@ Weitere Informationen zur Verwendungsweise dieser Befehlszeileneigenschaften fü
 5.  Wählen Sie zum Löschen der Dateien im Cacheordner **Dateien löschen** aus.  
 
     > [!NOTE]
-    > 
-    > Der Cacheordner ist ein normaler Windows-Ordner, sodass Sie das Löschen der Ordnerinhalte mit einem Skript, einem Hilfsprogramm oder mit dem PowerShell-Cmdlet `Remove-Item` automatisieren können. 
+    >
+    > Der Cacheordner ist ein normaler Windows-Ordner, sodass Sie das Löschen der Ordnerinhalte mit einem Skript, einem Hilfsprogramm oder mit dem PowerShell-Cmdlet `Remove-Item` automatisieren können.
 
 
 ### <a name="to-configure-client-cache-size-in-client-settings"></a>So konfigurieren Sie die Cachegröße des Clients in den Clienteinstellungen
@@ -273,6 +288,8 @@ Ab Version 1606 können Sie die Größe des Clientcacheordners anpassen, ohne de
  3. Klicken Sie auf **Einstellung des Clientcaches**, und wählen Sie **Ja** für **Configure client cache size** (Konfigurieren der Cachegröße des Clients) aus. Verwenden Sie dann entweder **MB** oder die Einstellung **Prozentsatz des Datenträgers**. Der Cache wird immer an die kleinere Größe angepasst.
 
      Der Configuration Manager-Client wird die Größe des Caches beim nächsten Download der Clientrichtlinie mit diesen Einstellungen konfigurieren.
+
+
 
 ##  <a name="BKMK_UninstalClient"></a> Deinstallieren des Configuration Manager-Clients  
  Sie können die Windows-Configuration Manager-Clientsoftware mithilfe von **CCMSetup.exe** mit der Eigenschaft **/Uninstall** von einem Computer deinstallieren. Führen Sie CCMSetup.exe auf einem einzelnen Computer über die Eingabeaufforderung aus, oder stellen Sie ein Paket und ein Programm bereit, um den Client von einer Sammlung von Computern zu deinstallieren.  
@@ -331,7 +348,7 @@ Ab Configuration Manager Version 1610 können Sie eine Liste der Hardware-IDs an
 Sie können den Richtlinienabruf auslösen:
 
 
-- [Clientbenachrichtigung](#initiate-client-policy-retrieval-using-client-notification) 
+- [Clientbenachrichtigung](#initiate-client-policy-retrieval-using-client-notification)
 - [Registerkarte **Aktionen** auf dem Client](#manually-initiate-client-policy-retrieval-on-the-actions-tab-of-the-configuration-manager-client)
 - [Skript](#manually-initiate-client-policy-retrieval-by-script)
 

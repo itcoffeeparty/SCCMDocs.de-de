@@ -1,33 +1,32 @@
 ---
-title: Einrichten des Cloudverwaltungsgateways | Microsoft Docs
+title: Einrichten von Cloud Management Gateway
+titleSuffix: Configuration Manager
 description: 
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.date: 05/01/2017
+ms.date: 09/26/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 84b617b3e83636ab4578174ef40e786dcf1178cd
-ms.sourcegitcommit: 06aef618f72c700f8a716a43fb8eedf97c62a72b
+ms.openlocfilehash: 7463cd7199098b21843fd5b99ed284a12ff91e00
+ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Einrichten des Cloudverwaltungsgateways für Configuration Manager
+# <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Einrichten von Cloud Management Gateway für Configuration Manager
 
-*Gilt für: System Center Configuration Manager (Current Branch)*
-
-Ab Version 1610 umfasst der Prozess zum Einrichten des Cloudverwaltungsgateways in Configuration Manager die folgenden Schritte:
+*Gilt für: System Center Configuration Manager (Current Branch)* Der Prozess zum Einrichten von Cloud Management Gateway in Configuration Manager umfasst die folgenden Schritte:
 
 ## <a name="step-1-configure-required-certificates"></a>Schritt 1: Konfigurieren der erforderlichen Zertifikate
 
 > [!TIP]  
 > Bevor Sie ein Zertifikat anfordern, bestätigen Sie, dass der gewünschte Azure-Domänenname (z.B. GraniteFalls.CloudApp.Net) eindeutig ist. Melden Sie sich hierzu beim [Microsoft Azure-Portal](https://manage.windowsazure.com) an, klicken Sie auf **Neu**, wählen Sie **Clouddienst** und dann **Benutzerdefiniert erstellen**. Geben Sie im Feld **URL** den gewünschten Domänennamen ein (klicken Sie nicht auf das Häkchen, um den Dienst zu erstellen). Das Portal spiegelt wider, ob der Domänenname verfügbar ist oder bereits durch einen anderen Dienst verwendet wird.
 
-## <a name="option-1-preferred---use-the-server-authentication-certificate-from-a-public-and-globally-trusted-certificate-provider-like-verisign"></a>Option 1 (bevorzugt) – Verwenden Sie das Serverauthentifizierungszertifikat von einem öffentlichen und global vertrauenswürdigen Zertifikatanbieter (z.B. VeriSign).
+### <a name="option-1-preferred---use-the-server-authentication-certificate-from-a-public-and-globally-trusted-certificate-provider-like-verisign"></a>Option 1 (bevorzugt) – Verwenden Sie das Serverauthentifizierungszertifikat von einem öffentlichen und global vertrauenswürdigen Zertifikatanbieter (z.B. VeriSign).
 
 Wenn Sie diese Methode verwenden, vertrauen Clients automatisch dem Zertifikat, und Sie müssen benutzerdefinierte SSL-Zertifikate nicht selbst erstellen.
 
@@ -50,7 +49,7 @@ Sie können ein benutzerdefiniertes SSL-Zertifikat für das Cloudverwaltungsgate
 
 Die einfachste Möglichkeit zum Export der Clientstammzertifikate im Netzwerk ist, ein Clientzertifikat auf einem Computer zu öffnen und zu kopieren, der einer Domäne angehört, und der über eines verfügt.
 
-> [!NOTE] 
+> [!NOTE]
 >
 > Clientzertifikate sind auf jedem Computer erforderlich, den Sie mit dem Cloudverwaltungsgateway verwalten möchten, und auf jedem Standortsystemserver, der den Cloudverwaltungsgateway-Connectorpunkt hostet. Wenn Sie jedem dieser Computer ein Clientzertifikat hinzufügen müssen, finden Sie mehr Informationen unter [Bereitstellen des Clientzertifikats für Windows-Computer](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).
 
@@ -58,7 +57,7 @@ Die einfachste Möglichkeit zum Export der Clientstammzertifikate im Netzwerk is
 
 2.  Klicken Sie im Menü „Datei“ auf **Snap-In hinzufügen/entfernen**.
 
-3.  Wählen Sie im Dialogfeld „Snap-In hinzufügen/entfernen“ **Zertifikate** > **Hinzufügen &gt;** > **Computerkonto** > **Weiter** > **Lokaler Computer** > **Fertig stellen** aus. 
+3.  Wählen Sie im Dialogfeld „Snap-In hinzufügen/entfernen“ **Zertifikate** > **Hinzufügen &gt;** > **Computerkonto** > **Weiter** > **Lokaler Computer** > **Fertig stellen** aus.
 
 4.  Wechseln Sie zu **Zertifikate**&gt;**Privat**&gt;**Zertifikate**.
 
@@ -66,7 +65,7 @@ Die einfachste Möglichkeit zum Export der Clientstammzertifikate im Netzwerk is
 
 6.  Wählen Sie auf der Registerkarte „Details“ die Option **In Datei kopieren** aus.
 
-7.  Schließen Sie den Zertifikatexportassistenten ab, indem Sie das Standardzertifikatformat verwenden. Notieren Sie sich den Namen und den Speicherort des Stammzertifikats, das Sie erstellen. Sie benötigen es in einem [späteren Schritt](#step-4-set-up-cloud-management-gateway) zum Konfigurieren des Cloudverwaltungsgateways.
+7.  Schließen Sie den Zertifikatexportassistenten ab, indem Sie das Standardzertifikatformat verwenden. Notieren Sie sich den Namen und den Speicherort des Stammzertifikats, das Sie erstellen. Sie benötigen es in einem [späteren Schritt](#step-4-set-up-cloud-management-gateway) zum Konfigurieren von Cloud Management Gateway.
 
 >[!NOTE]
 >Wenn das Clientzertifikat von einer untergeordneten Zertifizierungsstelle ausgestellt wurde, müssen Sie diesen Schritt für jedes Zertifikat in der Kette wiederholen.
@@ -122,7 +121,7 @@ Ein Azure-Verwaltungszertifikat ist für Configuration Manager erforderlich, um 
 
 5. Wenn Sie den Cloudverwaltungsgateway-Datenverkehr mit einem Schwellenwert von 14 Tagen überwachen möchten, aktivieren Sie Kontrollkästchen für Schwellenwertwarnungen. Legen Sie dann die Schwellenwerte und Prozentsätze für die verschiedenen Warnungsebenen fest. Klicken Sie auf **Weiter**, wenn Sie fertig sind.
 
-6. Überprüfen Sie die Einstellungen, und klicken Sie auf **Weiter**. Configuration Manager beginnt mit der Einrichtung des Diensts. Nach dem Schließen des Assistenten dauert es 5 bis 15 Minuten, bis der Dienst vollständig in Azure bereitgestellt wird. Überprüfen Sie die Spalte **Status** für das neu eingerichtete Cloudverwaltungsgateway, um zu bestimmen, wann der Dienst bereit ist.
+6. Überprüfen Sie die Einstellungen, und klicken Sie auf **Weiter**. Configuration Manager beginnt mit der Einrichtung des Diensts. Nach dem Schließen des Assistenten dauert es 5 bis 15 Minuten, bis der Dienst vollständig in Azure bereitgestellt ist. Überprüfen Sie die Spalte **Status** für das neue Cloud Management Gateway, um zu bestimmen, wann der Dienst bereit ist.
 
 ## <a name="step-5-configure-primary-site-for-client-certification-authentication"></a>Schritt 5: Konfigurieren des primären Standorts für die Clientzertifikatauthentifizierung
 
@@ -141,7 +140,7 @@ Der Cloudverwaltungsgateway-Connectorpunkt ist eine neue Standortsystemrolle fü
 
 ## <a name="step-7-configure-roles-for-cloud-management-gateway-traffic"></a>Schritt 7: Konfigurieren von Rollen für Cloudverwaltungsgateway-Datenverkehr
 
-Der letzte Schritt bei der Einrichtung des Cloudverwaltungsgateways ist das Konfigurieren der Standortsystemrollen zum Akzeptieren des Cloudverwaltungsgateway-Datenverkehrs. Nur die Rollen „Verwaltungspunkt“ und „Softwareupdatepunkt“ werden für das Cloudverwaltungsgateway unterstützt. Sie müssen jede Rolle einzeln konfigurieren.
+Der letzte Schritt bei der Einrichtung des Cloudverwaltungsgateways ist das Konfigurieren der Standortsystemrollen zum Akzeptieren des Cloudverwaltungsgateway-Datenverkehrs. Nur die Rollen „Verwaltungspunkt“ und „Softwareupdatepunkt“ werden für das Cloudverwaltungsgateway unterstützt. Sie konfigurieren jede Rolle einzeln.
 
 1. Wechseln Sie in der Configuration Manager-Konsole zu **Verwaltung** > **Standortkonfiguration** > **Server und Standortsystemrollen**.
 
@@ -155,7 +154,7 @@ Der letzte Schritt bei der Einrichtung des Cloudverwaltungsgateways ist das Konf
 
 Nachdem das Cloudverwaltungsgateway und die Standortsystemrollen vollständig konfiguriert sind und ausgeführt werden, erhalten Clients den Speicherort des Cloudverwaltungsgateway-Diensts automatisch bei der nächsten Anforderung des Speicherorts. Clients müssen sich im Unternehmensnetzwerk befinden, um den Speicherort des Cloudverwaltungsgateway-Diensts zu erhalten. Der Abfragezyklus für Standortanfragen beträgt 24 Stunden. Wenn Sie nicht auf die normal geplante Standortanfragen warten möchten, können Sie sie erzwingen, indem Sie den SMS-Agent-Hostdienst (ccmexec.exe) auf dem Computer neustarten.
 
-Ist der Speicherort des Cloudverwaltungsgateway-Diensts auf dem Client konfiguriert, kann dieser automatisch bestimmen, ob er sich im Intranet oder im Internet befindet. Wenn der Client den Domänencontroller oder den lokalen Verwaltungspunkt kontaktieren kann, verwendet er diesen für die Kommunikation mit Configuration Manager. Andernfalls geht er davon aus, dass er sich im Internet befindet, und verwendet den Speicherort des Cloudverwaltungsgateway-Diensts für die Kommunikation.
+Ist der Speicherort des Cloudverwaltungsgateway-Diensts auf dem Client konfiguriert, kann dieser automatisch bestimmen, ob er sich im Intranet oder im Internet befindet. Wenn der Client den Domänencontroller oder lokalen Verwaltungspunkt kontaktieren kann, nutzt er ihn für die Kommunikation mit Configuration Manager. Andernfalls geht er davon aus, dass er sich im Internet befindet und nutzt den Standort des Cloud Management Gateway-Diensts für die Kommunikation.
 
 >[!NOTE]
 > Sie können erzwingen, dass der Client immer das Cloudverwaltungsgateway verwendet, und zwar unabhängig davon, ob er sich im Intranet oder im Internet befindet. Dazu legen Sie den folgenden Registrierungsschlüssel auf dem Clientcomputer fest:

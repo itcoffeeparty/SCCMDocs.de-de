@@ -15,11 +15,11 @@ caps.latest.revision: "5"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 7d63aa43062b331dde993ae5f59f1d2a7e846482
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 20a8f91d10d98542f08e440bcfbc1a6f98a51932
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-client-settings-in-system-center-configuration-manager"></a>Konfigurieren von Clienteinstellungen in System Center Configuration Manager
 
@@ -66,6 +66,19 @@ Wenn Sie diese benutzerdefinierten Einstellungen bereitstellen, setzen sie die C
 10. Zeigen Sie die Reihenfolge der neu erstellten benutzerdefinierten Clienteinstellung an. Wenn mehrere benutzerdefinierte Clienteinstellungen vorhanden sind, werden diese nach der Reihenfolgennummer angewendet. Bei Konflikten setzt die Einstellung mit der niedrigsten Reihenfolgennummer die anderen Einstellungen außer Kraft. Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Clienteinstellungen** auf **Priorität erhöhen** oder **Priorität verringern**, um die Reihenfolgennummer zu ändern.  
 
  Die Clientcomputer werden beim nächsten Clientrichtliniendownload mit diesen Einstellungen konfiguriert. Informationen zum Initiieren des Richtlinienabrufs für einen einzelnen Client finden Sie unter [Initiieren des Richtlinienabrufs für einen Configuration Manager-Client](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) in [Verwalten von Clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md).  
+
+## <a name="limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health"></a>Begrenzen der erweiterten Telemetrie von Windows 10, um nur wichtige Daten an Windows Analytics Device Health zu senden
+<!-- 1356148 -->
+
+Ab dem Update 1710 können Sie die Stufe der Windows 10-Telemetriedatensammlung auf **Enhanced (Limited)** (Erweitert [Begrenzt]) festlegen. Mit dieser Einstellung können Sie wertvolle Einblicke zu Geräten in Ihrer Umgebung gewinnen, ohne dass alle Daten in der Telemetriestufe **Enhanced** an Windows 10-Version 1709 oder höher berichtet werden.
+
+Die Telemetriestufe „Enhanced (Limited)“ enthält grundlegende Metriken und eine Teilmenge von Daten, die auf der **erweiterten** Stufe in Windows Analytics gesammelt werden. Weitere Informationen zu Telemetriestufen finden Sie im Artikel zu [Telemetriestufen](https://docs.microsoft.com/windows/configuration/configure-windows-telemetry-in-your-organization#telemetry-levels).
+
+1.  Wählen Sie in der Configuration Manager-Konsole die Optionen **Verwaltung** > **Clienteinstellungen** > **Clientstandardeinstellungen** aus.  
+
+2.  Wählen Sie auf der Registerkarte **Startseite** die Option **Eigenschaften** aus.  
+
+3.  Öffnen Sie **Clouddienste**, und legen Sie die Windows 10-Telemetrie auf **Enhanced** (Erweitert) fest.
 
 ##  <a name="view-client-settings"></a>Anzeigen der Clienteinstellungen  
  Wenn dem gleichen Gerät oder Benutzer bzw. der gleichen Benutzergruppe Einstellungen für mehrere Clients bereitgestellt wurden, kann sich die Priorisierung und Kombination der Einstellungen zu einer komplexen Angelegenheit auswachsen. So zeigen Sie die Clienteinstellungen an  

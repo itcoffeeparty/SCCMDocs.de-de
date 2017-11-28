@@ -1,21 +1,22 @@
 ---
-title: Konfigurieren der zu synchronisierenden Klassifizierungen und Produkte | Microsoft-Dokumentation
+title: Konfigurieren der zu synchronisierenden Klassifizierungen und Produkte
+titleSuffix: Configuration Manager
 description: "Führen Sie diese Schritte zum Konfigurieren von Klassifizierungen und Produkten in der Configuration Manager-Konsole durch."
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: 2da61e6e06850b36543b9fd41bd9a7d2368006fb
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: f36ff74b794e57b51742c40d10bd25a9cb4a13a5
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/21/2017
 ---
 #  <a name="configure-classifications-and-products-to-synchronize"></a>Konfigurieren der zu synchronisierenden Klassifizierungen und Produkte  
 
@@ -52,16 +53,16 @@ ms.lasthandoff: 08/07/2017
     >       
 
     > [!NOTE]    
-    > Ab Version 1706 von Configuration Manager steht Ihnen auch die Option **Microsoft Surface-Treiber und Firmwareupdates einbeziehen** für die Synchronisierung von Microsoft-Surface-Treibern zur Verfügung. Voraussetzung hierfür ist die Installation von Windows Server 2016 auf allen Softwareupdatepunkten.     
-    >    
-    > Hierbei handelt es sich um ein vorab veröffentlichtes Feature. Vorab veröffentlichte Features werden in das Produkt aufgenommen, um sie in einem frühen Stadium in einer Produktionsumgebung zu testen. Sie sollten nicht als für den Produktivbetrieb geeignet betrachtet werden. Aktivieren Sie dieses Feature, um es verfügbar zu machen. Weitere Informationen finden Sie unter [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease) (Verwenden von Vorabfeatures aus Updates).
+    > Ab Version 1706 von Configuration Manager steht Ihnen die Option **Microsoft Surface-Treiber und Firmwareupdates einbeziehen** für die Synchronisierung von Microsoft Surface-Treibern zur Verfügung. Voraussetzung hierfür ist die Installation von Windows Server 2016 auf allen Softwareupdatepunkten. Wenn Sie einen Softwareupdatepunkt auf einem Computer mit Windows Server 2012 aktivieren, nachdem Sie Surface-Treiber aktiviert haben, sind die Suchergebnisse für die Treiberupdates ungenau. Dies führt zu fehlerhaften Konformitätsdaten, die in der Configuration Manager-Konsole und in Configuration Manager-Berichten angezeigt werden.  
+    > 
+    > In Version 1710 von Configuration Manager steht Ihnen das Kontrollkästchen **Microsoft Surface-Treiber und Firmwareupdates einbeziehen** stets zur Verfügung. Dies ist jedoch eine Vorabfunktion in der Configuration Manager-Version 1706, das Sie aktivieren müssen, damit sie verfügbar ist. Features der Vorabversion sind Features, die in Current Branch enthalten sind, um sie in einem frühen Stadium in einer Produktionsumgebung zu testen. Diese Features werden vollständig unterstützt, unterliegen aber noch der Entwicklung und könnten möglicherweise geändert werden, bis sie die Vorabversionskategorie verlassen. Weitere Informationen finden Sie unter [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease) (Verwenden von Vorabfeatures aus Updates).
 
 5.  Geben Sie auf der Seite **Produkte** die Produkte an, für die Sie Softwareupdates synchronisieren möchten. Klicken Sie dann auf **Schließen**.  
 
     > [!NOTE]  
-    >  Die Produkte, für die ein Update gilt, werden anhand der Metadaten für die einzelnen Softwareupdates definiert. Ein Produkt ist eine bestimmte Edition eines Betriebssystems oder einer Anwendung, z. B. Microsoft Windows Server 2012. Eine Produktfamilie ist das Basisbetriebssystem bzw. die Basisanwendung, von dem bzw. der die einzelnen Produkte abgeleitet sind. Ein Beispiel für eine Produktfamilie ist Windows. Windows Server 2012 ist ein Mitglied dieser Produktfamilie. Sie können eine Produktfamilie oder einzelne Produkte innerhalb einer Produktfamilie angeben. Je mehr Produkte Sie auswählen, desto länger dauert die Synchronisierung der Softwareupdates.  
+    >  Die Produkte, für die ein Update gilt, werden anhand der Metadaten für die einzelnen Softwareupdates definiert. Ein Produkt ist eine bestimmte Edition eines Betriebssystems oder einer Anwendung, z. B. Microsoft Windows Server 2012. Eine Produktfamilie ist das Basisbetriebssystem bzw. die Basisanwendung, von dem bzw. der die einzelnen Produkte abgeleitet sind. Ein Beispiel für eine Produktfamilie ist Windows. Windows Server 2012 ist ein Mitglied dieser Produktfamilie. Sie können eine Produktfamilie oder einzelne Produkte innerhalb einer Produktfamilie angeben. Je mehr Produkte Sie auswählen, desto länger dauert die Synchronisierung von Softwareupdates.  
     >   
-    >  Wenn Softwareupdates auf mehrere Produkte anwendbar sind und mindestens eines der Produkte für die Synchronisierung ausgewählt wurde, werden sämtliche Produkte in der Configuration Manager-Konsole angezeigt, auch wenn einige Produkte nicht ausgewählt wurden. Wenn z.B. Windows Server 2012 das einzige Betriebssystem ist, das Sie ausgewählt haben, und ein Softwareupdate auf Windows 8 und auf Windows Server 2012 anwendbar ist, werden beide Produkte in der Configuration Manager-Konsole angezeigt.  
+    >  Wenn Softwareupdates auf mehrere Produkte anwendbar sind und mindestens eines der Produkte für die Synchronisierung ausgewählt wurde, werden sämtliche Produkte in der Configuration Manager-Konsole angezeigt, auch wenn einige Produkte nicht ausgewählt wurden. Wenn z. B. Windows Server 2012 das einzige Betriebssystem ist, das Sie ausgewählt haben, und ein Softwareupdate auf Windows 8 und auf Windows Server 2012 anwendbar ist, werden beide Produkte in der Configuration Manager-Konsole angezeigt.  
 
     > [!IMPORTANT]  
     >  Configuration Manager speichert eine Liste der Produkte und Produktfamilien, aus denen Sie bei der Erstinstallation des Softwareupdatepunkts auswählen können. Produkte und Produktfamilien, die nach der Veröffentlichung von Configuration Manager freigegeben werden, können möglicherweise erst ausgewählt werden, nachdem Sie die Softwareupdatesynchronisierung abgeschlossen haben. Dabei wird die Liste der verfügbaren Produkte und Produktfamilien, aus denen Sie auswählen können, aktualisiert.  

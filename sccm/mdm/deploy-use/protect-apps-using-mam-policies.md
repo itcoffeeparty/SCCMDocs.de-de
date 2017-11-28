@@ -3,7 +3,7 @@ title: "Schützen von Apps mit Verwaltungsrichtlinien für mobile Anwendungen"
 titleSuffix: Configuration Manager
 description: "Ändern der Funktionalität von bereitgestellten Apps, damit sie den Kompatibilitäts- und Sicherheitsrichtlinien Ihres Unternehmens entsprechen."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 4eedd96fd399cf9577da8069bd0c8d5702f50d7b
-ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
+ms.openlocfilehash: 3365f46026178d30c9bffa5078d251186d0ffba3
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>Schützen von Apps mithilfe von Verwaltungsrichtlinien für mobile Anwendungen in System Center Configuration Manager
 
@@ -134,6 +134,8 @@ Zum Anwenden von Einschränkungen auf eine App muss die App das Microsoft Intune
 |**Überprüfen der Zugriffsanforderungen nach (Minuten)**|Gibt (im Feld **Timeout**) den Zeitraum an, bevor die Zugriffsanforderungen für die App nach dem Starten der App erneut geprüft werden müssen.<br /><br /> Wenn das Gerät offline ist, wird im Feld **Offlinetoleranzperiode** der Zeitraum angegeben, bevor die Zugriffsanforderungen für die App erneut geprüft werden.|  
 |**App-Daten verschlüsseln**|Gibt an, dass alle mit dieser App verknüpften Daten verschlüsselt werden, einschließlich extern gespeicherter Daten (wie z.B. Daten auf SD-Karten).<br /><br /> **Verschlüsselung für iOS**<br /><br /> Bei Apps, die einer Configuration Manager-Verwaltungsrichtlinie für mobile Anwendungen zugeordnet sind, werden Daten im Ruhezustand mit vom Betriebssystem bereitgestellter Verschlüsselung auf Geräteebene verschlüsselt. Dies wird durch eine Geräte-PIN-Richtlinie aktiviert, die vom IT-Administrator festgelegt werden muss. Wenn eine PIN erforderlich ist, werden die Daten gemäß den Einstellungen in der Richtlinie für die Verwaltung mobiler Anwendungen verschlüsselt. Wie in der Apple-Dokumentation angegeben, [sind die von iOS 7 verwendeten Module FIPS 140-2-zertifiziert](http://support.apple.com/en-us/HT202739).<br /><br /> **Verschlüsselung für Android**<br /><br /> Bei Apps, die einer Configuration Manager-Verwaltungsrichtlinie für mobile Anwendungen zugeordnet sind, wird die Verschlüsselung von Microsoft bereitgestellt. Daten werden während der E/A-Dateivorgänge gemäß der Einstellung in der mobilen Anwendungsverwaltungsrichtlinie synchron verschlüsselt. Verwaltete Apps auf Android verwenden AES-128-Verschlüsselung im CBC-Modus mit den Plattform-Kryptografie-Bibliotheken. Die Verschlüsselungsmethode ist nicht FIPS 140-2-zertifiziert. Inhalt im Speicher des Geräts wird immer verschlüsselt.|  
     |**Blockieren von Bildschirmaufnahmen** (nur Android-Geräte)|Gibt an, dass die Screen Capture-Funktionen des Geräts blockiert werden, wenn Sie diese App verwenden.|  
+    |**Kontaktsynchronisierung deaktivieren**| Ab Version 1710 verhindert diese Option, dass die App Daten in der nativen App „Kontakte“ auf dem Gerät speichert. Wenn Sie „Nein“ wählen, kann die App Daten in der nativen App „Kontakte“ auf dem Gerät speichern.|  
+    |**Drucken deaktivieren**| Ab Version 1710 verhindert diese Option, dass die App Geschäfts-, Schul- oder Unidaten druckt. |  
 
 6)  Wählen Sie auf der Seite **Managed Browser** aus, ob der Managed Browser nur URLs in der Liste öffnen darf oder ob das Öffnen der URLs in der Liste durch den Managed Browser blockiert ist. Wählen Sie dann **Weiter** aus.  
 Weitere Informationen finden Sie unter [Manage Internet access using managed browser policies (Verwalten des Internetzugriffs mit Richtlinien für Managed Browser)](manage-internet-access-using-managed-browser-policies.md).  

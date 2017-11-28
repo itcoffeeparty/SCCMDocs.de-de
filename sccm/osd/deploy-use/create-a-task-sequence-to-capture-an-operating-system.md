@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 98f9f44373b854b61714c21105a28b3240b4a7f7
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 48530c177a03b66dbc126025ca61e0078bc89d9f
+ms.sourcegitcommit: 5ec9f8c312688bf7f4de4d6007b121d743b80c4d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="create-a-task-sequence-to-capture-an-operating-system-in-system-center-configuration-manager"></a>Erstellen einer Tasksequenz zum Erfassen eines Betriebssystems in System Center Configuration Manager
 
@@ -171,6 +171,9 @@ Wenn Sie zum Bereitstellen eines Betriebssystems auf einem Computer in System Ce
 9. Verwenden Sie diesen Schritt nur, wenn der Configuration Manager-Client auf dem Referenzcomputer installiert ist.  
 
      Klicken Sie nacheinander auf **Hinzufügen**, **Images**, und [ConfigMgr-Client für Erfassung vorbereiten](../understand/task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture). In diesem Tasksequenzschritt wird der Configuration Manager-Client auf dem Referenzcomputer ausgewählt und im Rahmen des Imageerstellungsprozesses für die Erfassung vorbereitet.  
+
+    > [!Note]  
+    >  Diese Tasksequenz unterstützt nicht das Deinstallieren des Configuration Manager-Clients.
 
 10. Klicken Sie nacheinander auf **Hinzufügen**, **Images**, und [Windows für die Erfassung vorbereiten](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture). Mit dieser Tasksequenzaktion wird Sysprep ausgeführt. Der Computer wird anschließend über das für die Tasksequenz angegebene Windows PE-Startabbild neu gestartet. Damit diese Aktion erfolgreich abgeschlossen werden kann, darf der Referenzcomputer keiner Domäne angehören.  
 

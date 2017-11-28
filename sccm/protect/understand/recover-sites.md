@@ -3,7 +3,7 @@ title: Standortwiederherstellung
 titleSuffix: Configuration Manager
 description: Erfahren Sie, wie Sie Ihre Standorte in System Center Configuration Manager wiederherstellen.
 ms.custom: na
-ms.date: 6/5/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 96785ea5abcb4ae67952ad8243c36bf6b238daca
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 497860c9b5698271d7ca6e4683e99350100f596f
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 #  <a name="recover-a-configuration-manager-site"></a>Wiederherstellen eines Configuration Manager-Standorts
 
@@ -30,6 +30,12 @@ Führen Sie nach einem Standortausfall oder bei einem Datenverlust in der Stando
 Die Abschnitte in diesem Thema helfen Ihnen bei der Wiederherstellung eines Configuration Manager-Standorts. Informationen zum Erstellen einer Sicherung finden Sie unter [Sichern eines Configuration Manager-Standorts](/sccm/protect/understand/backup-and-recovery).
 
 ## <a name="considerations-before-recovering-a-site"></a>Überlegungen vor dem Wiederherstellen eines Standorts
+> [!Important]  
+> Diese Informationen gelten nur für Szenarien zur Standortwiederherstellung.  Wenn Sie Ihre lokale Infrastruktur aktualisieren und einen ausgefallenen Standort nicht aktiv wiederherstellen, lesen Sie die Informationen in den folgenden Themen:
+> - [Ausführen eines Upgrades für die lokale Infrastruktur](/sccm/core/servers/manage/upgrade-on-premises-infrastructure)
+> - [Ändern der Infrastruktur](/sccm/core/servers/manage/modify-your-infrastructure)
+
+
 **Sie müssen die gleiche Version und Edition von SQL Server verwenden:** Das Wiederherstellen einer in SQL Server 2014 ausgeführten Datenbank in SQL Server 2016 wird beispielsweise nicht unterstützt. Gleichermaßen kann eine Standortdatenbank, die mit einer Standard Edition von SQL Server 2016 ausgeführt wurde, nicht mit einer Enterprise Edition von SQL Server 2016 wiederhergestellt werden.
 -   SQL Server darf nicht auf den **Einzelbenutzermodus**festgelegt werden.
 -   Stellen Sie sicher, dass die MDF- und. LDF-Dateien gültig sind. Wenn Sie einen Standort wiederherstellen, wird der Status der Dateien, die Sie wiederherstellen möchten, nicht überprüft.
@@ -124,7 +130,7 @@ Nach der Wiederherstellung einer Standortdatenbank anhand einer Sicherung wird v
 Wenden Sie eines der folgenden Verfahren an, um Standortserver und Standortdatenbank wiederherzustellen.
 
 ### <a name="to-start-a-site-recovery-in-the-setup-wizard"></a>So starten Sie eine Standortwiederherstellung im Setup-Assistenten
-1.  Kopieren Sie den Ordner [CD.Latest](/sccm/core/servers/manage/the-cd.latest-folde) an einen Speicherort außerhalb des Configuration Manager-Installationsordners.
+1.  Kopieren Sie den Ordner [CD.Latest](/sccm/core/servers/manage/the-cd.latest-folder) an einen Speicherort außerhalb des Configuration Manager-Installationsordners.
 Führen Sie von der Kopie des Ordners „CD.Latest“ aus den Configuration Manager-Setup-Assistenten aus.
 
 2.  Wählen Sie auf der Seite **Erste Schritte** die Option **Standort wiederherstellen**aus, und klicken Sie dann auf **Weiter**.

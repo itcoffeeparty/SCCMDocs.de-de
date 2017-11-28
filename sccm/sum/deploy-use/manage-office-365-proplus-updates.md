@@ -1,21 +1,22 @@
 ---
-title: Verwalten von Office 365 ProPlus-Updates | Microsoft-Dokumentation
+title: Verwalten von Office 365 ProPlus-Updates
+titleSuffix: Configuration Manager
 description: "Configuration Manager synchronisiert Office 365-Clientupdates aus dem WSUS-Katalog auf den Standortserver, um Updates zur Bereitstellung für den Client zur Verfügung zu stellen."
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 05/31/2017
+ms.date: 10/04/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 902d7f7216ca7bb585afae587a6706e2332da9d3
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: a1ac97e60bc35ee3e98212cf17e33ed2b73301b9
+ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Verwalten von Office 365 ProPlus mit Configuration Manager
 
@@ -46,7 +47,7 @@ Das Office 365-Clientverwaltungsdashboard enthält Diagramme für die folgenden 
 Wechseln Sie in der Configuration Manager-Konsole zu **Softwarebibliothek** > **Übersicht** > **Office 365-Clientverwaltung**, um das Office 365-Clientverwaltungsdashboard anzuzeigen. Verwenden Sie am oberen Rand des Dashboards die Dropdowneinstellung **Sammlung**, um die Dashboarddaten nach Mitgliedern einer bestimmten Sammlung zu filtern.
 
 ### <a name="display-data-in-the-office-365-client-management-dashboard"></a>Anzeigen von Daten im Office 365-Clientverwaltungsdashboard
-Die im Office 365-Clientverwaltungsdashboard angezeigten Daten kommen aus der Hardwareinventur. Sie müssen die Hardwareinventur aktivieren und die **Office 365 ProPlus Configurations**-Hardwareinventurklasse auswählen, damit Daten im Dashboard angezeigt werden.
+Die im Office 365-Clientverwaltungsdashboard angezeigten Daten kommen aus der Hardwareinventur. Aktivieren Sie die Hardwareinventur, und wählen Sie die Hardwareinventurklasse **Office 365 ProPlus Configurations** aus, damit Daten im Dashboard angezeigt werden.
 #### <a name="to-display-data-in-the-office-365-client-management-dashboard"></a>So zeigen Sie Daten im Office 365-Clientverwaltungsdashboard an
 1. Aktivieren Sie die Hardwareinventur, falls diese noch nicht aktiviert ist. Weitere Informationen finden Sie unter [Konfigurieren der Hardwareinventur](\sccm\core\clients\manage\configure-hardware-inventory).
 2. Wählen Sie in der Configuration Manager-Konsole die Optionen **Verwaltung** > **Clienteinstellungen** > **Clientstandardeinstellungen** aus.  
@@ -80,7 +81,7 @@ Bei früheren Versionen von Configuration Manager müssen Sie beim ersten Instal
 3. Geben Sie auf der Seite **Anwendungseinstellungen** einen Namen und eine Beschreibung für die App an, geben Sie den Downloadpfad für die Dateien ein, und klicken Sie anschließend auf **Weiter**. Der Speicherort muss in Form von &#92;&#92;*Server*&#92;*Freigabe* angegeben werden.
 4. Wählen Sie auf der Seite **Import Client Settings** (Clienteinstellungen importieren) aus, ob Sie die Office 365-Clienteinstellungen von einer vorhandenen XML-Konfigurationsdatei importieren oder die Einstellungen manuell angeben möchten, und klicken Sie anschließend auf **Weiter**.  
 
-    Wenn Sie über eine vorhandene Konfigurationsdatei verfügen, geben Sie den Speicherort für die Datei an, und fahren Sie mit Schritt 7 fort. Beachten Sie, dass der Speicherort im folgenden Format angegeben werden muss: &#92;&#92;*Server*&#92;*Freigabe*&#92;*Dateiname*.XML.
+    Wenn Sie über eine vorhandene Konfigurationsdatei verfügen, geben Sie den Speicherort für die Datei an, und fahren Sie mit Schritt 7 fort. Der Speicherort muss im folgenden Format angegeben werden: &#92;&#92;*Server*&#92;*Freigabe*&#92;*Dateiname*.XML.
     > [!IMPORTANT]    
     > Die XML-Konfigurationsdatei darf nur [vom Office 365 ProPlus-Client unterstützte Sprachen](https://technet.microsoft.com/library/cc179219&#40;v=office.16&#41;.aspx) enthalten.
 
@@ -104,7 +105,7 @@ Befolgen Sie die folgenden Schritte, um Office 365-Updates mit Configuration Man
 1.  [Überprüfen Sie die Anforderungen](https://technet.microsoft.com/library/mt628083.aspx) für die Verwendung von Configuration Manager zum Verwalten von Office 365-Client-Updates im Abschnitt **Anforderungen für die Verwendung von Configuration Manager zum Verwalten von Office 365-Clientupdates** des verlinkten Themas.  
 
 2.  [Konfigurieren Sie Softwareupdatepunkte](../get-started/configure-classifications-and-products.md), um die Office 365-Clientupdates zu synchronisieren. Legen Sie als Klassifizierung **Updates** fest, und wählen Sie **Office 365-Client** als Produkt aus. Synchronisieren Sie Softwareupdates nach dem Konfigurieren von Softwareupdatepunkten, um die Klassifizierung **Updates** zu verwenden.
-3.  Aktivieren Sie die Office 365-Clients, damit sie Updates von Configuration Manager erhalten können. Sie können dies mithilfe von Configuration Manager-Clienteinstellungen oder Gruppenrichtlinien tun. Verwenden Sie eine der nachfolgenden Methoden, um den Client zu aktivieren:   
+3.  Aktivieren Sie die Office 365-Clients, damit sie Updates von Configuration Manager erhalten können. Sie können den Client mithilfe von Configuration Manager-Clienteinstellungen oder Gruppenrichtlinien aktivieren.   
 
     **Methode 1**: Ab der Version 1606 von Configuration Manager können Sie die Configuration Manager-Clienteinstellung zum Verwalten des Office 365-Client-Agents nutzen. Nachdem Sie diese Einstellung konfiguriert und Updates für Office 365 bereitgestellt haben, kommuniziert der Configuration Manager-Client-Agent mit dem Office 365-Client-Agent, um Office 365-Updates von einem Verteilungspunkt herunterzuladen und zu installieren. Configuration Manager macht eine Bestandsaufnahme der Office 365 ProPlus-Clienteinstellungen.    
 
@@ -122,14 +123,27 @@ Befolgen Sie die folgenden Schritte, um Office 365-Updates mit Configuration Man
 > Sie müssen Updates in der gleichen Sprache herunterladen und bereitstellen, in der die Office 365-Clients konfiguriert sind. Nehmen wir z.B. an, Sie haben einen Office 365-Client, der mit den Sprachen en-US und de-DE konfiguriert ist. Auf dem Standortserver laden Sie nur den en-US-Inhalt für ein zutreffendes Office 365-Update herunter und stellen ihn bereit. Wenn der Benutzer die Installation für dieses Updates aus dem Softwarecenter startet, hängt das Update beim Herunterladen des Inhalts.   
 
 ## <a name="restart-behavior-and-client-notifications-for-office-365-updates"></a>Verhalten bei Neustart und Client-Benachrichtigungen für Office 365-Updates
-Wenn Sie ein Update für einen Office 365-Client bereitstellen, unterscheiden sich das Verhalten bei Neustart und die Client-Benachrichtigungen je nachdem, welche Version von Configuration Manager Sie verwenden. In der folgenden Tabelle finden Sie Informationen darüber, welche Aktionen beim Endnutzer ausgeführt werden, wenn der Client ein Update für Office 365 empfängt:
+Wenn Sie ein Update für einen Office 365-Client bereitstellen, unterscheiden sich das Verhalten bei Neustart und die Client-Benachrichtigungen je nachdem, welche Version von Configuration Manager Sie verwenden. In der folgenden Tabelle finden Sie Informationen dazu, welche Aktionen beim Endnutzer erfolgen, wenn der Client ein Update für Office 365 empfängt:
 
-|Configuration Manager-Version |Endbenutzererfahrung|  
+|Configuration Manager-Version |Ablauf für Endbenutzer|  
 |----------------|---------------------|
 |Vor 1610|Ein Neustart-Flag wird festgelegt, und das Update wird nach dem Neustart des Computers installiert.|
 |1610|Office 365-Apps werden ohne Vorwarnung vor der Installation des Updates geschlossen.|
 |1610 mit Update <br/>1702|Ein Neustart-Flag wird festgelegt, und das Update wird nach dem Neustart des Computers installiert.|
 |1706|Der Client empfängt Popup- und In-App-Benachrichtigungen. Vor der Installation des Updates wird außerdem ein Countdown-Dialog angezeigt.|
+
+> [!Important]
+> Beachten Sie in der Configuration Manager-Version 1706 die folgenden Details:
+>
+>- Ein Benachrichtigungssymbol wird im Infobereich in der Taskleiste für erforderliche Anwendungen angezeigt, wenn die Frist innerhalb von 48 Stunden in der Zukunft liegt und der Inhalt des Updates heruntergeladen wurde. 
+>- Ein Countdown-Dialogfeld wird für benötigte Apps angezeigt, bei denen die Frist innerhalb von 7,5 Stunden in der Zukunft liegt und das Update heruntergeladen wurde. Der Benutzer kann den Countdown-Dialog vor Ablauf der Frist maximal dreimal zurückstellen. Bei einer Zurückstellung wird der Countdown nach zwei Stunden wieder angezeigt. Wenn keine Zurückstellung erfolgt, gibt es einen 30-minütigen Countdown, und das Update wird installiert, wenn der Countdown abläuft.
+>- Eine Popupbenachrichtigung wird möglicherweise erst angezeigt, nachdem der Benutzer auf das Symbol im Infobereich geklickt hat. Wenn darüber hinaus im Infobereich nur wenig Platz zur Verfügung steht, ist das Benachrichtigungssymbol möglicherweise nicht sichtbar, es sei denn, der Benutzer öffnet oder erweitert den Infobereich. 
+>- Das Benachrichtigungs- und Countdown-Dialogfeld könnte gestartet werden, während der Benutzer nicht aktiv am Gerät arbeitet, z.B. wenn das Gerät über Nacht gesperrt ist. Es ist also möglich, dass Office-Anwendungen, die auf dem Gerät ausgeführt werden, zum Schließen gezwungen werden, um das Update zu installieren. Vor dem Schließen der App speichert Office App-Daten, um Datenverlust zu vermeiden. 
+>- Wenn die Frist in der Vergangenheit liegt oder so konfiguriert ist, dass sie so schnell wie möglich beginnt, können ausgeführte Office-Anwendungen gezwungen sein, ohne Benachrichtigung geschlossen zu werden. 
+>- Wenn der Benutzer ein Office-Update vor Ablauf der Frist installiert, überprüft Configuration Manager, ob das Update nach Ablauf der Frist installiert wird. Wenn das Update nicht auf dem Gerät erkannt wird, wird das Update installiert. 
+>- Die In-App-Benachrichtigungsleiste wird in einer Office-Anwendung, die vor dem Herunterladen des Updates ausgeführt wird, nicht angezeigt. Nach dem Herunterladen des Updates wird die In-App-Benachrichtigung nur für neu geöffnete Anwendungen angezeigt.
+>- Bei Office-Updates, die im Rahmen eines Wartungsfensters oder außerhalb der Geschäftszeiten ausgelöst werden, kann es vorkommen, dass ausgeführte Office-Anwendungen zum Schließen gezwungen werden, um das Update ohne Benachrichtigungen zu installieren. 
+
 
 
 ## <a name="add-languages-for-office-365-update-downloads"></a>Hinzufügen von Sprachen für Downloads des Office 365-Updates

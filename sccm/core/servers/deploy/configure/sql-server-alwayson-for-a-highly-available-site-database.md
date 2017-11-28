@@ -3,7 +3,7 @@ title: SQL Server Always On
 titleSuffix: Configuration Manager
 description: "Planen Sie die Verwendung einer SQL Server-AlwaysOn-Verfügbarkeitsgruppe mit SCCM."
 ms.custom: na
-ms.date: 09/22/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "16"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 24eaa33f1f9b333894817f089149e2cbed35df75
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 93aec5773f56ad28950ae75db54739d04124794f
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Vorbereiten der Verwendung von SQL Server AlwaysOn-Verfügbarkeitsgruppen mit Configuration Manager
 
@@ -216,6 +216,11 @@ Die folgenden Einschränkungen gelten für alle Szenarien.
   [Basis-Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/mt614935.aspx) wurden mit SQL Server 2016 Standard Edition eingeführt und unterstützen den Lesezugriff auf sekundäre Replikate – und somit eine Voraussetzung für die Verwendung mit Configuration Manager – nicht.
 - **Failoverclusterinstanz**  
   [Failoverclusterinstanzen](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server) werden für ein Replikat, das Sie mit Configuration Manager verwenden, nicht unterstützt.
+
+- **MultiSubnetFailover**    
+    Das Verwenden einer Verfügbarkeitsgruppe in einer Konfiguration mit mehreren Subnetzen oder des Schlüsselworts [MultiSubnetFailover](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in einer Verbindungszeichenfolge wird nicht unterstützt.
+
+
 
 **SQL-Server, die zusätzliche Verfügbarkeitsgruppen hosten:**   
 Vor Configuration Manager, Version 1610, galt: Wenn eine Verfügbarkeitsgruppe auf einer SQL Server-Instanz neben der Gruppe für Configuration Manager eine oder mehrere Verfügbarkeitsgruppen hostet, muss jedes Replikat in jeder zusätzlichen Verfügbarkeitsgruppe zum Zeitpunkt der Ausführung des Configuration Manager-Setups oder der Installation eines Updates für Configuration Manager die folgenden Konfigurationen aufweisen:

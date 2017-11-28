@@ -3,7 +3,7 @@ title: 'Erstellen von VPN-Profilen '
 titleSuffix: Configuration Manager
 description: Erfahren Sie, wie Sie VPN-Profile in System Center Configuration Manager erstellen.
 ms.custom: 
-ms.date: 4/19/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ author: lleonard-msft
 caps.handback.revision: "0"
 ms.author: alleonar
 ms.manager: angrobe
-ms.openlocfilehash: 4e8a082bff8b0f734da620669ddf403c0fe3eca6
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 21fc286cdcc05244e1895ded5623d346e6cb8ebe
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-vpn-profiles-in-system-center-configuration-manager"></a>Erstellen von VPN-Profilen in System Center Configuration Manager
 
@@ -34,16 +34,19 @@ Verteilen Sie die VPN-App für Drittanbieter-VPN-Verbindungen vor der Bereitstel
 
 1.  Wählen Sie in der Configuration Manager-Konsole die Optionen **Assets and Compliance** (Bestand und Konformität) > **Compliance Settings** (Konformitätseinstellungen) > **Company Resource Access** (Zugriff auf Unternehmensressourcen) > **VPN-Profiles** (VPN-Profile) aus.  
 
-3.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** die Option **Create VPN Profile** (VPN-Profil erstellen) aus.  
+2.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** die Option **Create VPN Profile** (VPN-Profil erstellen) aus.  
 
 
-1.  Schließen Sie die Seite **Allgemein** ab. Beachten Sie dabei Folgendes:  
+3.  Schließen Sie die Seite **Allgemein** ab. Beachten Sie dabei Folgendes:  
+
+    - Wählen Sie die entsprechende **Plattform**.
+
+       - Wenn Sie die Plattform Windows 8.1 auswählen, haben Sie die Möglichkeit **Import an existing VPN profile item from a file** (Vorhandenes VPN-Profilelement aus einer Datei importieren) zu wählen, um Informationen eines VPN-Profils zu importieren, das in eine XML-Datei exportiert wurde.
 
     - Verwenden Sie im Namen des VPN-Profils keines der Zeichen \\/:*?&lt;>&#124; und auch keine Leerzeichen. Diese Zeichen werden vom Windows Server-VPN-Profil nicht unterstützt.  
 
-     -   Wählen Sie **Import an existing VPN profile item from a file** (Vorhandenes VPN-Profilelement aus einer Datei importieren) aus, um Informationen eines VPN-Profils zu importieren, das in eine XML-Datei exportiert wurde (nur Windows 8.1 oder Windows RT).  
 
-1.  Geben Sie auf der Seite **Verbindung** Folgendes an:  
+4.  Geben Sie auf der Seite **Verbindung** Folgendes an:  
 
     -   **Verbindungstyp**: Wählen Sie den VPN-Verbindungstyp aus. Sie können aus den Verbindungstypen in der folgenden Tabelle wählen.  
 

@@ -72,6 +72,7 @@
 
 ## [Verwalten des bedingten Zugriffs](deploy-use/manage-access-to-services.md)
 ### [Kompatibilitätsrichtlinie für Geräte](deploy-use/device-compliance-policies.md)
+#### [Aktionen bei Nichtkonformität](deploy-use/actions-for-noncompliance.md)
 ### [Erstellen einer Kompatibilitätsrichtlinie für Geräte](deploy-use/create-compliance-policy.md)
 ### [Verwalten des E-Mail-Zugriffs](deploy-use/manage-email-access.md)
 ### [Verwalten des Zugriffs auf SharePoint Online](deploy-use/manage-sharepoint-online-access.md)

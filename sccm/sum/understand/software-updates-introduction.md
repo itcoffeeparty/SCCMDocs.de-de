@@ -1,21 +1,22 @@
 ---
-title: "Einführung in Softwareupdates | Microsoft Docs"
+title: "Einführung zu Softwareupdates"
+titleSuffix: Configuration Manager
 description: Hier erhalten Sie grundlegende Informationen zu Softwareupdates in System Center Configuration Manager.
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 10/30/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-ms.openlocfilehash: 2904b904bbaf155f016f55fbd36af80308a42d76
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 66aa73e5c1aae68feeacb0eabe6233845289d104
+ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="introduction-to-software-updates-in-system-center-configuration-manager"></a>Einführung zu Softwareupdates in System Center Configuration Manager
 
@@ -254,7 +255,7 @@ Ein Beispielszenario für die Bereitstellung von Softwareupdates in Ihrer Umgebu
 ##  <a name="BKMK_DeploymentProcess"></a> Vorgang der Softwareupdatebereitstellung  
  Nachdem Sie Softwareupdates bereitgestellt haben oder wenn bei der Ausführung einer automatischen Bereitstellungsregel Softwareupdates bereitgestellt werden, wird der Computerrichtlinie des Standorts eine Bereitstellungszuweisungsrichtlinie hinzugefügt. Die Softwareupdates werden vom Downloadort, aus dem Internet oder aus einem freigegebenen Netzwerkordner in die Paketquelle heruntergeladen. Dann werden die Softwareupdates aus der Paketquelle in die Inhaltsbibliothek auf dem Standortserver und anschließend in die Inhaltsbibliothek am Verteilungspunkt kopiert.  
 
- Wenn die Computerrichtlinie bei einem Clientcomputer in der Zielsammlung der Bereitstellung eingeht, wird vom Softwareupdateclient-Agent eine Bewertungsüberprüfung gestartet. Der Inhalt für erforderliche Softwareupdates wird vom Client-Agent von einem Verteilungspunkt in den lokalen Clientcache heruntergeladen. Dieser Vorgang wird kurz nach dem Empfang der Bereitstellung ausgeführt, aber erst nach dem unter **Zeitpunkt der Verfügbarkeit der Software** für die Bereitstellung angegebenen Zeitpunkt, zu dem die Softwareupdates für die Installation verfügbar sind. Die Softwareupdates in optionalen Bereitstellungen (d. h. Bereitstellungen ohne Installationsstichtag) werden erst heruntergeladen, wenn ein Benutzer die Installation manuell startet.  
+ Wenn die Computerrichtlinie bei einem Clientcomputer in der Zielsammlung der Bereitstellung eingeht, wird vom Softwareupdateclient-Agent eine Bewertungsüberprüfung gestartet. Der Inhalt für erforderliche Softwareupdates wird vom Client-Agent von einem Verteilungspunkt in den lokalen Clientcache heruntergeladen. Dies erfolgt gemäß der Einstellung **Zeitpunkt der Verfügbarkeit der Software** für die Bereitstellung, zu dem die Softwareupdates für die Installation verfügbar sind. Die Softwareupdates in optionalen Bereitstellungen (d. h. Bereitstellungen ohne Installationsstichtag) werden erst heruntergeladen, wenn ein Benutzer die Installation manuell startet.  
 
  Wenn der konfigurierte Stichtag verstrichen ist, wird vom Softwareupdateclient-Agent im Rahmen einer Überprüfung bestätigt, dass die Softwareupdates noch erforderlich sind. Anschließend wird im lokalen Cache auf dem Clientcomputer überprüft, ob die Quelldateien für die Softwareupdates noch verfügbar sind. Schließlich werden die Softwareupdates vom Client installiert. Wurde der Inhalt aus dem Clientcache gelöscht, um für eine andere Bereitstellung Platz zu machen, werden die Softwareupdates vom Client erneut vom Verteilungspunkt in den Clientcache heruntergeladen. Softwareupdates werden unabhängig von der konfigurierten maximalen Größe des Clientcaches immer in den Clientcache heruntergeladen. Nach Abschluss der Installation wird vom Client-Agent im Rahmen einer Überprüfung bestätigt, dass die Softwareupdates nicht mehr erforderlich sind. Dann wird an den Verwaltungspunkt eine Zustandsmeldung gesendet, aus der hervorgeht, dass die Softwareupdates jetzt auf dem Client installiert sind.  
 

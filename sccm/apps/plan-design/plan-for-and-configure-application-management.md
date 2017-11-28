@@ -3,7 +3,7 @@ title: "Planen für die und Konfigurieren der Anwendungsverwaltung"
 titleSuffix: Configuration Manager
 description: "Implementieren und konfigurieren Sie die erforderlichen Abhängigkeiten für die Bereitstellung von Anwendungen in System Center Configuration Manager."
 ms.custom: na
-ms.date: 02/09/2017
+ms.date: 11/07/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "13"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 66317bea84adbddf2d2e94c30a4a72e19229439b
-ms.sourcegitcommit: 18ac58374d2d513fe2a197c80f7c8c6890a7d612
+ms.openlocfilehash: cd06d3ee2ea14c9ff1b9cf09980c2b25a5263db9
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="plan-for-and-configure-application-management-in-system-center-configuration-manager"></a>Planen und Konfigurieren der Anwendungsverwaltung in System Center Configuration Manager
 
@@ -185,6 +185,26 @@ Benutzerdefiniertes Branding für das Softwarecenter wird gemäß den folgenden 
 1. Wenn die Standortserverrolle „Anwendungskatalog-Websitepunkt“ nicht installiert ist, wird im Softwarecenter der Organisationsname angezeigt, der in der **Computer-Agent**-Clienteinstellung **Im Softwarecenter angezeigter Organisationsname** angegeben ist. Eine Anleitung hierzu finden Sie unter [Konfigurieren von Clienteinstellungen](https://docs.microsoft.com/sccm/core/clients/deploy/configure-client-settings).
 2. Wenn die Standortserverrolle „Anwendungskatalog-Websitepunkt“ installiert ist, zeigt Software Center den Organisationsnamen und die Farbe an, der bzw. die in den Eigenschaften der Standortserverrolle „Anwendungskatalog-Websitepunkt“ angegeben sind. Weitere Informationen finden Sie unter [Konfigurationsoptionen für den Anwendungskatalog-Websitepunkt](https://docs.microsoft.com/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website).
 3. Wenn ein Microsoft Intune-Abonnement konfiguriert und mit Configuration Manager verbunden wurde, werden im Softwarecenter der Organisationsname, die Farbe und das Unternehmenslogo entsprechend den Angaben in den Eigenschaften des Intune-Abonnements angezeigt. Weitere Informationen finden Sie unter [Configuring the Microsoft Intune subscription](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription).
+
+#### <a name="to-manually-set-software-center-branding"></a>So legen Sie das Branding für das Softwarecenter manuell fest
+<!-- 1351224 -->
+Ab Version 1710 können Sie im Softwarecenter Brandingelemente Ihres Unternehmens manuell hinzufügen und die Sichtbarkeit von Registerkarten festlegen. Sie können den im Softwarecenter verwendeten Namen Ihres Unternehmens hinzufügen sowie ein Farbschema für die Softwarecenter-Konfiguration, ein Unternehmenslogo und die sichtbaren Registerkarten für Clientgeräte festlegen.
+
+1. Wählen Sie in der **Configuration Manager**-Konsole **Verwaltung** > **Clienteinstellungen** aus. Klicken Sie auf die gewünschte Clienteinstellungsinstanz.
+2. Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Eigenschaften** die Option **Eigenschaften** aus.
+3. Wählen Sie im Dialogfeld **Standardeinstellungen** die Option **Softwarecenter** aus.
+4. Klicken Sie bei **Neue Einstellungen zum Angeben von Unternehmensinformationen auswählen** die Option **Ja** aus, um die Einstellungen für die Softwarecenter-Anpassung zu aktivieren.
+5. Geben Sie den **Namen Ihres Unternehmens** ein.
+6. Wählen Sie das gewünschte **Farbschema für Softwarecenter** aus.
+7. Klicken Sie auf **Durchsuchen**, um zu Ihrem Logo für Softwarecenter zu navigieren. Das Logo muss eine JPEG- oder PNG-Datei mit 400 × 100 Pixeln und einer Größe von maximal 750 KB sein.
+8. Wählen Sie **Ja**, damit die Registerkarten im Softwarecenter für Clientgeräte sichtbar werden. Mindestens eine Registerkarte muss sichtbar sein:
+
+    -  Registerkarte „Anwendungen“ aktivieren
+    -  Registerkarte „Updates“ aktivieren
+    -  Registerkarte „Betriebssysteme“ aktivieren
+    -  Registerkarte „Installationsstatus“ aktivieren
+    -  Registerkarte Gerätekonformität“ aktivieren
+    -  Registerkarte „Optionen“ aktivieren
 
 > [!IMPORTANT]  
 >  Das Branding des Softwarecenters wird alle 14 Tage mit Intune synchronisiert. Aus diesem Grund kann es zu Verzögerungen kommen, bevor vorgenommene Änderungen in Intune in Configuration Manager angezeigt werden.

@@ -3,9 +3,9 @@ title: Verwalten von Tasksequenzen zum Automatisieren von Tasks
 titleSuffix: Configuration Manager
 description: "Sie können Tasksequenzen erstellen, bearbeiten, bereitstellen, importieren und exportieren, um sie in Ihrer System Center Configuration Manager-Umgebung zu verwalten."
 ms.custom: na
-ms.date: 03/24/2017
+ms.date: 11/15/2017
 ms.prod: configuration-manager
-ms.reviewer: na
+ms.reviewer: nac
 ms.suite: na
 ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
@@ -15,11 +15,11 @@ caps.latest.revision: "10"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 0174a95f1d3a487cab66d8152a3de70d91b07635
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 44e6afbfac3ef1e8318991854c8fdd22ead4c6ed
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>Verwalten von Tasksequenzen zum Automatisieren von Aufgaben in System Center Configuration Manager
 
@@ -446,6 +446,22 @@ Sie können computerspezifische Variablen an einem primären Standort oder an ei
 5.  Geben Sie optional die Priorität an, die bei der Auswertung der Tasksequenzvariablen durch Configuration Manager gelten soll.  
 
 6.  Klicken Sie auf **OK**, nachdem Sie der Sammlung alle Variablen hinzugefügt haben.  
+
+## <a name="add-child-task-sequences-to-a-task-sequence"></a>Hinzufügen von untergeordneten Tasksequenzen zu einer Tasksequenz
+
+Ab Configuration Manager-Version 1710 können Sie einen neuen Tasksequenzschritt hinzufügen, der eine andere Tasksequenz ausführt. Dies erstellt eine Über-/Unterordnungsbeziehung zwischen den Tasksequenzen. Dadurch können Sie modularere Tasksequenzen erstellen, die Sie wiederverwenden können.
+
+Berücksichtigen Sie Folgendes, wenn Sie eine untergeordnete Tasksequenz einer Tasksequenz hinzufügen:
+
+ - Die über- und untergeordneten Tasksequenzen werden effektiv in einer einzigen Richtlinie kombiniert, die der Client ausführt.
+ - Die Umgebung ist global. Wenn eine Variable beispielsweise von der übergeordneten Tasksequenz festgelegt und dann von der untergeordneten Tasksequenz geändert wird, bleibt die Änderung der Variablen im weiteren Verlauf bestehen. Wenn die untergeordnete Tasksequenz eine neue Variable erstellt, ist die Variable ebenso für die restlichen Schritte in der übergeordneten Tasksequenz verfügbar.
+ - Statusmeldungen werden in der Regel für einen einzelnen Tasksequenzvorgang gesendet.
+ - Die Tasksequenzen schreiben Einträge in die Datei „smsts.log“, mit neuen Protokolleinträgen, die den Start einer untergeordneten Tasksequenz deutlich machen.
+
+### <a name="to-add-a-child-task-sequence-to-a-task-sequence"></a>So fügen Sie eine untergeordnete Tasksequenz einer Tasksequenz hinzu
+
+1. Klicken Sie im Tasksequenz-Editor auf **Hinzufügen**, wählen Sie **Allgemein** aus, und klicken Sie auf **Tasksequenz ausführen**.
+2. Klicken Sie auf **Durchsuchen**, um die untergeordnete Tasksequenz auszuwählen.  
 
 ##  <a name="BKMK_AdditionalActionsTS"></a> Zusätzliche Aktionen zum Verwalten von Tasksequenzen  
  Für die Verwaltung von Tasksequenzen können Sie zusätzliche Aktionen verwenden, wenn Sie die Tasksequenz auswählen.  

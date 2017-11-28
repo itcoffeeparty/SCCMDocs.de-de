@@ -3,7 +3,7 @@ title: Current Branch-Versionen
 titleSuffix: Configuration Manager
 description: "Überprüfen Sie den Versionsverlauf von System Center Configuration Manager, und erfahren Sie mehr über die Phasen des angebotenen Diensts."
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,32 +16,37 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: 3907a8f764ddd4dcea992875d0181b93d4760b42
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 628c01d3f746155076e5bab68a38c0a50c73697d
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="support-for-system-center-configuration-manager-current-branch-versions"></a>Support für die Current Branch-Versionen von System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Microsoft plant mehrmals jährlich die Veröffentlichung von Updates für die Current Branch-Version von System Center Configuration Manager. Jede Updateversion wird dabei 12 Monate lang ab dem Datum der allgemeinen Verfügbarkeit unterstützt. Technischer Support wird für die gesamten 12 Monate zur Verfügung gestellt. Unsere Supportstruktur ist jetzt dynamisch und folgt zwei unterschiedlichen Wartungsphasen, die von der Verfügbarkeit der neuesten Current Branch-Version abhängig sind.  
+Microsoft plant mehrmals jährlich die Veröffentlichung von Updates für die Current Branch-Version von System Center Configuration Manager. Für Versionen von Configuration Manager, die vor 1710 veröffentlicht wurden, wird 12 Monate Support geboten. Ab Version 1710 wird jede Updateversion ab dem Datum der allgemeinen Verfügbarkeit 18 Monate unterstützt. Technischer Support wird für den gesamten Supportzeitraum geboten. Unsere Supportstruktur ist jedoch dynamisch und folgt zwei unterschiedlichen Wartungsphasen, die von der Verfügbarkeit der neuesten Current Branch-Version abhängig sind.  
 
 -   Wartungsphase mit wichtigen Updates und Sicherheitsupdates: Wenn Sie die neueste Current Branch-Version von Configuration Manager ausführen, erhalten Sie Updates der Kategorien „Sicherheit“ und „Wichtig“.  
 
--   Wartungsphase nur mit Sicherheitsupdates: Nach der Veröffentlichung der neuesten Current Branch-Version beschränkt sich der Support für ältere Versionen über den verbleibenden Zeitraum des 12-monatigen Produktlebenszyklus (siehe Abb. 1) auf Sicherheitsupdates.  
+-   Wartungsphase nur mit Sicherheitsupdates: Nach der Veröffentlichung der neuesten Current Branch-Version beschränkt sich der Support für ältere Versionen über den verbleibenden Zeitraum des 1-monatigen Produktlebenszyklus (siehe Abb. 1) auf Sicherheitsupdates.  
 
- ![CM_Servicing_support_timeline](../../../core/servers/manage/media/CM_Servicing_support_timeline.png "CM_Servicing_support_timeline")  
-Abbildung 1: Beispiel für die Überschneidung von Versionszyklen für die Current Branch-Wartungsunterstützung.
+ ![CM_Servicing_support_timeline](media/CM_Servicing_support_timeline1.png "CM_Servicing_support_timeline")  
+Abbildung 1: Beispiel für die Überschneidung von Versionszyklen für die Current Branch-Wartungsunterstützung. Dieses Beispiel dient zur Veranschaulichung des Zyklus und stellt keine tatsächlichen oder erwarteten Veröffentlichungstermine dar.
 
 > [!NOTE]  
->  Die neueste Current Branch-Version befindet sich immer in der Wartungsphase für Sicherheitsupdates und wichtige Updates. Das bedeutet, dass im Fall eines Codefehlers, der ein kritisches Update erfordert, die neueste Current Branch-Version installiert sein muss, damit Sie eine Problembehebung erhalten. Bei allen anderen unterstützten Current Branch-Versionen haben Sie lediglich Anspruch auf Sicherheitsupdates. Nach Ablauf des 12-monatigen Lebenszyklus der aktuellen Current Branch-Version endet jeglicher Support. Dann müssen Kunden auf eine unterstützte Current Branch-Version aktualisieren.  
+>  Die neueste Current Branch-Version befindet sich immer in der Wartungsphase für Sicherheitsupdates und wichtige Updates. Dieser Supporthinweis bedeutet, dass bei einem Codefehler, der ein kritisches Update erfordert, die neueste Current Branch-Version installiert sein muss, damit Sie eine Problembehebung erhalten. Bei allen anderen unterstützten Current Branch-Versionen haben Sie lediglich Anspruch auf Sicherheitsupdates.
+> - Für Versionen ab 1710 endet nach Ablauf des 18-monatigen Lebenszyklus der aktuellen Current Branch-Version jeglicher Support.
+> - Für Versionen vor 1710 endet der Support nach Ablauf des Lebenszyklus von 12 Monaten.
+
+> Wir empfehlen Ihnen, Ihre Bereitstellung von Configuration Manager auf die neueste Version zu aktualisieren, bevor der Support für Ihre aktuelle Version ausläuft.
 
  **Versionsverlauf**  
 
 |Version|Verfügbarkeitsdatum|Supportenddatum|  
 |-------------|-----------------------|----------------------|  
+|1710|20. November 2017|20. November 2018|
 |1706|31. Juli 2017|31. Juli 2018|
 |1702|27. März 2017|27. März 2018|
 |1610|18. November 2016|18. November 2017|

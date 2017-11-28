@@ -3,7 +3,7 @@ title: Technical Preview 1710 | Microsoft-Dokumentation
 titleSuffix: Configuration Manager
 description: "Erfahren Sie mehr über die Funktionen, die in der Technical Preview-Version 1710 für System Center Configuration Manager zur Verfügung stehen."
 ms.custom: na
-ms.date: 10/30/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.reviewer: na
@@ -14,11 +14,11 @@ ms.assetid: f4706a58-1f11-4eab-b1eb-3d1a0da02d0f
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 813fdc40c4a0eb7c2dd3c1831bac1ba1667fe247
-ms.sourcegitcommit: 5437b2823bada8f8c9e67940f584953b9d190628
+ms.openlocfilehash: 309d677c0b8c692548d649346bb35bfa9d2a81f3
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="capabilities-in-technical-preview-1710-for-system-center-configuration-manager"></a>Funktionen in der Technical Preview-Version 1710 für System Center Configuration Manager
 
@@ -52,6 +52,19 @@ In diesem Artikel werden die Funktionen vorgestellt, die in der Technical Previe
  -  Task 1
  -  Task 2              
 -->
+
+## <a name="improvements-for-deploying-powershell-scripts-from-configuration-manager"></a>Verbesserungen für die Bereitstellung von PowerShell-Skripts aus Configuration Manager
+Ab dieser Version unterstützen PowerShell-Skripts, die Sie bereitstellen, die folgenden Verbesserungen: 
+- **Sicherheitsbereiche**.  Skripts verwenden jetzt Sicherheitsbereiche, um die Erstellung und Ausführung von Skripts zu steuern. Dies erfolgt durch Zuweisen von Tags, die Benutzergruppen darstellen. Weitere Informationen zu Sicherheitsbereichen finden Sie unter [Konfigurieren der rollenbasierten Verwaltung für System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
+- **Echtzeitüberwachung**. Wenn Sie die Ausführung eines Skripts überwachen, erfolgt dies nun in Echtzeit, während das Skript ausgeführt wird.
+- **Validierung von Parametern**. Für jeden Parameter in Ihrem Skript gibt es das Dialogfeld **Skriptparameter – Eigenschaften**, in dem Sie eine Validierung für den jeweiligen Parameter hinzufügen können. Nach dem Hinzufügen der Validierung sollten Sie Fehlermeldungen erhalten, wenn Sie einen Wert für einen Parameter eingeben, der nicht dessen Validierung entspricht.
+
+Die Bereitstellung von PowerShell-Skripts wurde erstmals in die [Technical Preview-Version 1706](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console) eingeführt. Zusätzliche Verbesserungen wurden von den Technical Preview-Versionen [1707](/sccm/core/get-started/capabilities-in-technical-preview-1707#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager) und [1708](/sccm/core/get-started/capabilities-in-technical-preview-1708#improvements-for-specifying-script-parameters-when-you-deploy-powershell-scripts-from-configuration-manager) geboten.
+
+
+### <a name="try-it-out"></a>Probieren Sie es aus!
+
+Informationen zur Funktion „Skripts ausführen“ finden Sie unter [Erstellen und Ausführen von Skripts](../../apps/deploy-use/create-deploy-scripts.md).
 
 
 
@@ -116,7 +129,7 @@ Auf verwalteten Geräten muss das Windows 10 1709 Fall Creators Update oder höh
 Nach der Erstellung der Exploit Guard-Richtlinien stellen Sie sie mithilfe des Assistenten zum Bereitstellen von Exploit Guard-Richtlinien bereit. Wechseln Sie dazu in der Configuration Manager-Konsole zu **Assets und Konformität** > **Endpoint Protection**, und klicken Sie dann auf **Deploy Exploit Guard Policy** (Exploit Guard-Richtlinie bereitstellen).
 
 ## <a name="limited-support-for-cng-certificates"></a>Eingeschränkte Unterstützung für CNG-Zertifikate
-<!-- 1356191 --> 
+<!-- 1356191 -->
 Seit diesem Release können Sie Zertifikatvorlagen der [Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) für die folgenden Szenarios verwenden:
 
 - Clientregistrierung und Kommunikation mit einem HTTPS-Verwaltungspunkt   
@@ -184,13 +197,13 @@ Damit ein Gerät mit Windows Defender SmartScreen vertrauenswürdige Software au
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies----1351960---"></a>Konfigurieren und Bereitstellen von Windows Defender Application Guard-Richtlinien <!-- 1351960 -->
 
 [Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) ist eine neue Windows-Funktion zum Schutz Ihrer Benutzer, indem nicht vertrauenswürdige Websites in einem sicheren isolierten Container geöffnet werden, auf den andere Teile des Betriebssystems keinen Zugriff haben. In dieser Technical Preview haben wir Unterstützung für diese Funktion mithilfe von Configuration Manager-Konformitätseinstellungen hinzugefügt, die Sie konfigurieren und einer Sammlung bereitstellen. Diese Funktion wird als Vorschau für die 64-Bit-Version von Windows 10 Creator Update (Codename: RS2) veröffentlicht. Um diese Funktion jetzt zu testen, müssen Sie eine Preview-Version dieses Updates verwenden.
- 
+
 ### <a name="before-you-start"></a>Vorbereitung
 Zum Erstellen und Bereitstellen von Windows Defender Application Guard-Richtlinien müssen die Windows 10-Geräte, auf denen Sie die Richtlinie bereitstellen, mit einer Netzwerkisolationsrichtlinie konfiguriert werden. Weitere Informationen finden Sie im Blogbeitrag, auf den später verwiesen wird. Diese Funktion funktioniert nur mit aktuellen Windows 10 Insider-Builds. Um sie zu testen, muss auf Ihren Clients ein aktueller Windows 10 Insider-Build ausgeführt werden.
 
 ### <a name="try-it-out"></a>Probieren Sie es aus!
 
-Um sich mit den Grundlagen von Windows Defender Application Guard vertraut zu machen, lesen Sie den [Blogbeitrag]((https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97)).
+Um sich mit den Grundlagen von Windows Defender Application Guard vertraut zu machen, lesen Sie den [Blogbeitrag](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97).
 
 So erstellen Sie eine Richtlinie und durchsuchen die verfügbaren Einstellungen
 1. Wählen Sie in der **Configuration Manager**-Konsole **Assets und Konformität** aus.
@@ -202,7 +215,7 @@ So erstellen Sie eine Richtlinie und durchsuchen die verfügbaren Einstellungen
     > [!NOTE]
     > PCs unter Windows 10 speichern nur eine Netzwerkisolationsliste auf dem Client. In dieser Version können Sie zwei unterschiedliche Arten von Netzwerkisolationslisten erstellen (eine von Windows Information Protection und eine von Windows Defender Application Guard) und diese dem Client bereitstellen. Wenn Sie beide Richtlinien bereitstellen, müssen diese Netzwerkisolationlisten übereinstimmen. Wenn Sie Listen bereitstellen, die nicht mit dem gleichen Client übereinstimmen, schlägt die Bereitstellung fehl.
 
-    Weitere Informationen über das Angeben von Netzwerkdefinition finden Sie in der [Dokumentation zu Windows Information Protection](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-sccm). 
+    Weitere Informationen über das Angeben von Netzwerkdefinition finden Sie in der [Dokumentation zu Windows Information Protection](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-sccm).
 
 6. Wenn Sie fertig sind, schließen Sie den Assistenten ab, und stellen Sie die Richtlinie auf einem oder mehreren Windows 10-Geräten bereit.
 

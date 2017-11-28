@@ -3,7 +3,7 @@ title: Clienteinstellungen
 titleSuffix: Configuration Manager
 description: Auswahl von Clienteinstellungen mithilfe der Verwaltungskonsole in System Center Configuration Manager.
 ms.custom: na
-ms.date: 08/01/2017
+ms.date: 11/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: f34479d6cf0c1153615c612480f204b71a8d84cb
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 46429a02debaaaa90562b9586af57e43a9aab92c
+ms.sourcegitcommit: b74c1beaabbb628fdf5d6948fa9a6ad719fd5035
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>Informationen zu Clienteinstellungen in System Center Configuration Manager
 
@@ -71,7 +71,7 @@ aktiviert BranchCache auf Clientcomputern.
 - **Konfigurieren der Cachegröße des Clients**
 
   Der Clientcache auf Windows-Computern speichert temporäre Dateien, die zum Installieren von Anwendungen und Programmen verwendet werden. Klicken Sie auf **Ja** und geben Sie Folgendes an:
-    - **Maximale Cachegröße** (MB) 
+    - **Maximale Cachegröße** (MB)
     - **Maximale Cachegröße** (Prozentsatz des Datenträgers)
 Die Cachegröße kann auf die maximale Größe in MB oder den Prozentsatz des Datenträgers erweitern werden, je nach dem, **welcher Wert kleiner ist**. Wenn die Option **Nein** festgelegt ist, beträgt die Standardgröße 5.120 MB.
 
@@ -288,6 +288,8 @@ Aktiviert den Peercache für Configuration Manager-Clients. Geben Sie dann die P
  Weitere Informationen zu Wartungsfenstern finden Sie unter [Verwenden von Wartungsfenstern in System Center Configuration Manager](../../../core/clients/manage/collections/use-maintenance-windows.md).  
 
 ##  <a name="endpoint-protection"></a>Endpoint Protection  
+>  [!Tip]   
+> Im [Beispielszenario: Verwenden von System Center Endpoint Protection zum Schutz von Computern vor Schadsoftware in System Center Configuration Manager](/sccm/protect/deploy-use/scenarios-endpoint-protection) finden Sie zusätzlich zu den folgenden Informationen weitere Informationen zur Verwendung der Endpoint Protection-Clienteinstellungen.
 
 -   **Verwalten des Endpoint Protection-Clients auf Clientcomputern**  
 

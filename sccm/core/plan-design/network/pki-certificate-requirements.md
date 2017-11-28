@@ -3,7 +3,7 @@ title: PKI-Zertifikatanforderungen
 titleSuffix: Configuration Manager
 description: "Suchen Sie Anforderungen für die PKI-Zertifikate, die Sie möglicherweise für System Center Configuration Manager benötigen."
 ms.custom: na
-ms.date: 04/24/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,21 +15,26 @@ caps.latest.revision: "17"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: f5afa9fd9823cfbaa305b4d4e88f89be7004bd60
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: c9d95f6282820a41db762c143b3aa2f6d4fadf3e
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="pki-certificate-requirements-for-system-center-configuration-manager"></a>PKI-Zertifikatanforderungen für System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Die für System Center Configuration Manager erforderlichen PKI-Zertifikate (Public Key-Infrastruktur) sind in den folgenden Tabellen aufgeführt. Für diese Informationen wird ein grundlegendes Verständnis von PKI-Zertifikaten vorausgesetzt. Detaillierte Anleitungen für die Bereitstellung finden Sie unter [Beispiel für die schrittweise Bereitstellung der PKI-Zertifikate für Configuration Manager: Windows Server 2008-Zertifizierungsstelle](/sccm/core/plan-design/network/example-deployment-of-pki-certificates). Weitere Informationen zu Active Directory-Zertifikatdiensten finden Sie in der folgenden Dokumentation:  
+Die für System Center Configuration Manager erforderlichen PKI-Zertifikate (Public Key-Infrastruktur) sind in den folgenden Tabellen aufgeführt. Für diese Informationen wird ein grundlegendes Verständnis von PKI-Zertifikaten vorausgesetzt. Detaillierte Anleitungen für die Bereitstellung finden Sie unter [Beispiel für die schrittweise Bereitstellung der PKI-Zertifikate für Configuration Manager: Windows Server 2008-Zertifizierungsstelle](/sccm/core/plan-design/network/example-deployment-of-pki-certificates). 
+
+Weitere Informationen zu Active Directory-Zertifikatdiensten finden Sie in der folgenden Dokumentation:  
 
 -   Für Windows Server 2012: [Übersicht über Active Directory-Zertifikatdienste](http://go.microsoft.com/fwlink/p/?LinkId=286744)  
 
--   Für Windows Server 2008: [Active Directory-Zertifikatdienste in Windows Server 2008](http://go.microsoft.com/fwlink/p/?LinkId=115018)  
+-   Für Windows Server 2008: [Active Directory-Zertifikatdienste in Windows Server 2008](http://go.microsoft.com/fwlink/p/?LinkId=115018)
+
+Informationen zur Verwendung von CNG-Zertifikaten (Cryptografy API: Next Generation) mit Configuration Manager finden Sie unter [CNG-Zertifikate: Übersicht](cng-certificates-overview.md).
+
 
 > [!IMPORTANT]  
 > System Center Configuration Manager unterstützt SHA-2-Zertifikate (Secure Hash Algorithm 2). SHA-2-Zertifikate bringen einen entscheidenden Sicherheitsvorteil. Daher wird Folgendes empfohlen:

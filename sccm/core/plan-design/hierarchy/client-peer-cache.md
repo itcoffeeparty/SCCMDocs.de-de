@@ -3,7 +3,7 @@ title: Client-Peercache
 titleSuffix: Configuration Manager
 description: "Verwenden Sie Peercache für Quellspeicherorte für Clientinhalte beim Bereitstellen von Inhalten mit System Center Configuration Manager."
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 11/20/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,11 +15,11 @@ caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 20438f51a67fb29da21c879620870caf3328121d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 2bf8f0e5a2636ffd92f8ba1898cc4f1b250f925f
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Peercache für Configuration Manager-Clients
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 10/12/2017
 Ab Version 1610 von System Center Configuration Manager können Sie **Peercache** zum Verwalten der Bereitstellung von Inhalten für Clients an Remotestandorten verwenden. Peercache ist eine integrierte Configuration Manager-Lösung, mit deren Hilfe Clients Inhalte für andere Clients direkt aus ihrem lokalen Cache freigeben können.   
 
 > [!TIP]  
-> Peercache und das Dashboard „Clientdatenquellen“ sind vorab veröffentlichte Funktionen, die mit Version 1610 eingeführt wurden. Informationen zum Aktivieren dieser Funktionen finden Sie unter [Verwenden von vorab veröffentlichten Features von Updates](/sccm/core/servers/manage/pre-release-features).
+> Diese Funktion wurde erstmals in Version 1610 als [Vorabfunktion](/sccm/core/servers/manage/pre-release-features) eingeführt. Ab Version 1710 können ist diese Funktion keine Vorabfunktion mehr.
 
 ## <a name="overview"></a>Übersicht
 Ein Peercacheclient ist ein Configuration Manager-Client, der für die Verwendung von Peercache aktiviert ist. Ein Peercacheclient, der über Inhalte verfügt, die für weitere Clients freigegeben werden können, ist eine Peercachequelle.

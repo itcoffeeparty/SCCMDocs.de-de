@@ -3,7 +3,7 @@ title: Tasksequenzschritte
 titleSuffix: Configuration Manager
 description: "Erfahren Sie mehr über die Tasksequenzschritte, die einer Configuration Manager-Tasksequenz hinzugefügt werden können."
 ms.custom: na
-ms.date: 03/26/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,17 +16,20 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 8bc73b8aaafa9af4e12589b2d2a742bfc18afd0e
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 02d3ca5ed494c20266125686f26b66cebcc7c2a2
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>Tasksequenzschritte in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 Die folgenden Tasksequenzschritte können einer Configuration Manager-Tasksequenz hinzugefügt werden. Weitere Informationen zum Bearbeiten einer Tasksequenz finden Sie unter [Edit a task sequence](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
+
+> [!TIP]  
+> **Unterstützung für Windows 10-Version 1709 (auch Fall Creators Update genannt)**.  Ab diesem Windows-Release umfassen Windows-Medien mehrere Editionen. Achten Sie beim Konfigurieren einer Tasksequenz für ein Betriebssystem-Upgradepaket oder ein Betriebssystemimage darauf, eine [Edition auszuwählen, die für Configuration Manager unterstützt wird](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
 
 
 ##  <a name="BKMK_ApplyDataImage"></a> Anwenden eines Tasksequenzschritts „Datenimage anwenden“  
@@ -536,6 +539,22 @@ Dieser Tasksequenzschritt wird nur in Windows PE ausgeführt. Er wird nicht in e
  **Aktuelles Betriebssystem, das aktualisiert wird**  
  Wählen Sie diese Einstellung aus, um zu überprüfen, ob das auf dem Zielcomputer installierte Betriebssystem die angegebene Anforderung erfüllt. Standardmäßig ist diese Einstellung aktiviert und auf **CLIENT**festgelegt.  
 
+##  <a name="child-task-sequence"></a>Untergeordnete Tasksequenz
+
+Ab Configuration Manager-Version 1710 können Sie einen neuen Tasksequenzschritt hinzufügen, der eine andere Tasksequenz ausführt. Dies erstellt eine Über-/Unterordnungsbeziehung zwischen den Tasksequenzen. Mithilfe einer untergeordneten Tasksequenz können Sie modular aufgebaute, wiederverwendbare Tasksequenzen erstellen.
+
+Berücksichtigen Sie Folgendes, wenn Sie eine untergeordnete Tasksequenz einer Tasksequenz hinzufügen:
+
+ - Die über- und untergeordneten Tasksequenzen werden effektiv in einer einzigen Richtlinie kombiniert, die der Client ausführt.
+ - Die Umgebung ist global. Wenn eine Variable beispielsweise von der übergeordneten Tasksequenz festgelegt und dann von der untergeordneten Tasksequenz geändert wird, bleibt die Änderung der Variablen im weiteren Verlauf bestehen. Wenn die untergeordnete Tasksequenz eine neue Variable erstellt, ist die Variable ebenso für die restlichen Schritte in der übergeordneten Tasksequenz verfügbar.
+ - Statusmeldungen werden in der Regel für einen einzelnen Tasksequenzvorgang gesendet.
+ - Die Tasksequenzen schreiben Einträge in die Datei „smsts.log“, mit neuen Protokolleinträgen, die den Start einer untergeordneten Tasksequenz deutlich machen.
+
+### <a name="details"></a>Details
+
+1. Klicken Sie im Tasksequenz-Editor auf **Hinzufügen**, wählen Sie **Allgemein** aus, und klicken Sie auf **Tasksequenz ausführen**.
+2. Klicken Sie auf **Durchsuchen**, um die untergeordnete Tasksequenz auszuwählen.  
+
 ##  <a name="BKMK_ConnectToNetworkFolder"></a> Verbindung mit Netzwerkordner herstellen  
  Verwenden Sie die Tasksequenzaktion **Verbindung mit Netzwerkordner herstellen** , um eine Verbindung mit einem freigegebenen Netzwerkordner herzustellen.  
 
@@ -745,7 +764,7 @@ Dieser Schritt wird entweder in einem Standardbetriebssystem oder in Windows PE 
  Die Nummer des physischen Datenträgers, der formatiert wird Die Nummer basiert auf der Reihenfolge der Datenträgerenumeration in Windows.  
 
  **Datenträgertyp**  
- Typ des Datenträgers, der formatiert wird In der Dropdownliste stehen zwei Optionen zur Auswahl zur Verfügung:  
+ Typ des Datenträgers, der formatiert wird In der Dropdownliste stehen zwei Optionen zur Auswahl zur Verfügung: 
 
 -   Standard (MBR) – Master Boot Record.  
 
