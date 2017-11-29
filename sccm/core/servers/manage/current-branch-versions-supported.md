@@ -3,7 +3,7 @@ title: Current Branch-Versionen
 titleSuffix: Configuration Manager
 description: "Überprüfen Sie den Versionsverlauf von System Center Configuration Manager, und erfahren Sie mehr über die Phasen des angebotenen Diensts."
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 11/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: 628c01d3f746155076e5bab68a38c0a50c73697d
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: 8909c4de81ef0ca914120a67be1634380dc50c53
+ms.sourcegitcommit: 29196ffba45b16b2b6a2dc71de981dead850c41c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="support-for-system-center-configuration-manager-current-branch-versions"></a>Support für die Current Branch-Versionen von System Center Configuration Manager
 
@@ -44,9 +44,9 @@ Abbildung 1: Beispiel für die Überschneidung von Versionszyklen für die Curre
 
  **Versionsverlauf**  
 
-|Version|Verfügbarkeitsdatum|Supportenddatum|  
+|Version |Verfügbarkeitsdatum |Supportenddatum|  
 |-------------|-----------------------|----------------------|  
-|1710|20. November 2017|20. November 2018|
+|1710|20. November 2017|Mai 20, 2019 |
 |1706|31. Juli 2017|31. Juli 2018|
 |1702|27. März 2017|27. März 2018|
 |1610|18. November 2016|18. November 2017|
