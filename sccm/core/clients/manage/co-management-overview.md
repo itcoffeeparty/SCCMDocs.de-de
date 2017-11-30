@@ -10,15 +10,15 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: 
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: e05c82be9bffd213d0452565e5c91cb008cbb5ff
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: c0a577c6076630f0615f953091f35c4f3c2d0a7d
+ms.sourcegitcommit: 536f7295e9ea361f1f9ead6c25f3685deb041ad8
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="co-management-for-windows-10-devices"></a>Co-Verwaltung für Windows 10-Geräte    
 <!-- 1350871 -->
-Viele Kunden möchten Windows 10-Geräte genauso verwalten wie mobile Geräte: mit einer einfachen, kostengünstigen und cloudbasierten Lösung. Der Übergang von einer herkömmlichen zu einer modernen Verwaltungslösung kann jedoch eine Herausforderung sein. Ab Windows 10-Version 1607 (auch Anniversary Update genannt) können Sie ein Windows 10-Gerät gleichzeitig in eine lokale Active Directory-Installation (AD) und eine cloudbasierte Azure AD-Infrastruktur einbinden (Hybrid Azure AD). Ab der Configuration Manager-Version 1710 nutzt die Co-Verwaltung diese Verbesserung und ermöglicht Ihnen, Windows 10-Geräte gleichzeitig mit Configuration Manager und Intune zu verwalten. Diese Lösung schlägt eine Brücke von der herkömmlichen zur modernen Verwaltung und bietet Ihnen die Möglichkeit, die Umstellung Schritt für Schritt durchzuführen. 
+Viele Kunden möchten Windows 10-Geräte genauso verwalten wie mobile Geräte: mit einer einfachen, kostengünstigen und cloudbasierten Lösung. Der Übergang von einer herkömmlichen zu einer modernen Verwaltungslösung kann jedoch eine Herausforderung sein. In Windows 10-Version 1709 (auch Fall Creators Update genannt) und höher können Sie ein Windows 10-Gerät gleichzeitig in eine lokale Active Directory-Installation (AD) und eine cloudbasierte Azure AD-Infrastruktur einbinden (Hybrid Azure AD). Ab der Configuration Manager-Version 1710 nutzt die Co-Verwaltung diese Verbesserung und ermöglicht Ihnen, Windows 10-Geräte gleichzeitig mit Configuration Manager und Intune zu verwalten. Diese Lösung schlägt eine Brücke von der herkömmlichen zur modernen Verwaltung und bietet Ihnen die Möglichkeit, die Umstellung Schritt für Schritt durchzuführen. 
 
 Die Co-Verwaltung kann auf zwei Weisen realisiert werden.  Eine davon ist die von Configuration Manager bereitgestellte Co-Verwaltung, bei der Windows 10-Geräte, die mit Configuration Manager verwaltet werden und in hybrides Azure AD eingebunden sind, bei Intune registriert werden. Die andere sieht von Intune bereitgestellte Geräte vor, die bei Intune angemeldet und dann mit dem Configuration Manager-Client installiert werden, um einen Co-Verwaltungsstatus zu erreichen.  
 
@@ -64,7 +64,7 @@ Die folgende Abbildung bietet eine Architekturübersicht über die Co-Verwaltung
 ![Architekturabbildung der Co-Verwaltung](./media/co-management-arch.svg)
 
 ## <a name="scenarios-to-enable-co-management"></a>Szenarios zum Aktivieren der Co-Verwaltung  
-Sie können die Co-Verwaltung sowohl für Windows 10-Geräte, die in Microsoft Intune registriert sind, als auch für vorhandene Windows 10-Configuration Manager-Clients aktivieren. In beiden Szenarien werden Windows 10-Geräte gleichzeitig von Configuration Manager und Intune verwaltet und in AD und Azure AD eingebunden.  
+Sie können die Co-Verwaltung sowohl für Windows 10-Geräte, die in Microsoft Intune registriert sind, als auch für vorhandene Windows 10-Configuration Manager-Clients aktivieren. In beiden Szenarios werden Windows 10-Geräte gleichzeitig von Configuration Manager und Intune verwaltet und in AD und Azure AD eingebunden.  
 
 ### <a name="devices-enrolled-in-intune"></a>Bei Intune registrierte Geräte  
 Wenn Windows 10-Geräte bei Intune registriert sind, können Sie den Configuration Manager-Client auf den Geräten (mit einem bestimmten Befehlszeilenargument) installieren, um die Clients für die Co-Verwaltung vorzubereiten. Anschließend aktivieren Sie die Co-Verwaltung über die Configuration Manager-Konsole, um bestimmte Workloads für bestimmte Windows 10-Geräte in Intune zu verschieben.  
