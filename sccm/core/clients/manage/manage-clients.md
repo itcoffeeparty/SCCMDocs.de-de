@@ -15,11 +15,11 @@ caps.latest.revision: "17"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: ae1bc53cf15b2a1746656667f7bf546742432c11
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: 8afb217524d5c2236fb07b13cb42ca50ae200183
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>Verwalten von Clients in System Center Configuration Manager
 
@@ -269,12 +269,7 @@ Weitere Informationen zur Verwendungsweise dieser Befehlszeileneigenschaften fü
 
 2.  Legen Sie auf der Registerkarte **Cache** die Eigenschaften für Speicherplatz und Speicherort fest. Der Standardspeicherort lautet *%windir%*\ccmcache.  
 
-5.  Wählen Sie zum Löschen der Dateien im Cacheordner **Dateien löschen** aus.  
-
-    > [!NOTE]
-    >
-    > Der Cacheordner ist ein normaler Windows-Ordner, sodass Sie das Löschen der Ordnerinhalte mit einem Skript, einem Hilfsprogramm oder mit dem PowerShell-Cmdlet `Remove-Item` automatisieren können.
-
+3.  Wählen Sie zum Löschen der Dateien im Cacheordner **Dateien löschen** aus.  
 
 ### <a name="to-configure-client-cache-size-in-client-settings"></a>So konfigurieren Sie die Cachegröße des Clients in den Clienteinstellungen
 

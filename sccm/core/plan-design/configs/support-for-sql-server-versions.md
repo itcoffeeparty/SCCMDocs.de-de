@@ -3,7 +3,7 @@ title: "Unterstützte Versionen von SQL Server"
 titleSuffix: Configuration Manager
 description: Abrufen der SQL Server-Version und Konfigurationsanforderungen zum Hosten einer System Center Configuration Manager-Standortdatenbank.
 ms.custom: na
-ms.date: 10/10/2017
+ms.date: 11/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 caps.latest.revision: "21"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 740a37478b4159fb9dcbfd9eaceeeaa307edd745
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 7006d6cd03da53daf0f6cb59cc4ef83e7e800a1e
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>Unterstützte SQL Server-Versionen für System Center Configuration Manager
 
@@ -95,8 +95,6 @@ Sie können diese Version von SQL Server ohne minimale kumulative Updateversion 
 -   Primären Standort  
 -   Sekundären Standort
 
-
-
 ### <a name="sql-server-2014-sp1-standard-enterprise"></a>SQL Server 2014 SP1: Standard, Enterprise  
  Sie können diese Version von SQL Server ohne minimale kumulative Updateversion für Folgendes verwenden:  
 
@@ -136,8 +134,6 @@ Wenn dies von Ihrer Version von Configuration Manager unterstützt wird, können
 -   Ein Standort der zentralen Verwaltung  
 -   Primären Standort
 -   Sekundären Standort
-
-
 
 ### <a name="sql-server-2016-express-sp1"></a>SQL Server 2016 Express SP1  
 Sie können diese Version von SQL Server ohne minimale kumulative Updateversion für Folgendes verwenden:
