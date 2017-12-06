@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7341cc6e-9e08-41e4-bcc6-6c1ff12e85ca
 caps.latest.revision: "10"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 690709c0067099a022f4a29de4e7d935952e4260
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 37ad3eb2d7e6796dcd88b2b01b8b0cea97bb41fe
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="use-alerts-and-the-status-system-for-system-center-configuration-manager"></a>Verwenden von Benachrichtigungen und des Statussystems für System Center Configuration Manager
 
@@ -165,7 +165,7 @@ Da im Statussystem getrennte Konfigurationen für jeden Standort verwaltet werde
 
 |Knoten|Weitere Informationen|  
 |----------|----------------------|  
-|Standortstatus|Verwenden Sie diesen Knoten, um einen Statusrollup für jedes Standortsystem anzuzeigen und die Integrität jedes Standortsystemservers zu überprüfen. Die Integrität von Standortsystemen wird bestimmt durch Schwellenwerte, die Sie für jeden Standort unter **Standortsystemstatus – Zusammenfassung**konfigurieren können.<br /><br /> Mithilfe des Dienst-**Managers für Configuration Managerkönnen** Sie Statusmeldungen für jedes Standortsystem anzeigen, Schwellenwerte für Statusmeldungen festlegen und den Betrieb der Komponenten auf Standortsystemen verwalten.|  
+|Standortstatus|Verwenden Sie diesen Knoten, um einen Statusrollup für jedes Standortsystem anzuzeigen und die Integrität jedes Standortsystemservers zu überprüfen. Die Integrität von Standortsystemen wird bestimmt durch Schwellenwerte, die Sie für jeden Standort unter **Standortsystemstatus – Zusammenfassung**konfigurieren können.<br /><br /> Mithilfe des Dienst-**Managers für Configuration Manager** können Sie Statusmeldungen für jedes Standortsystem anzeigen, Schwellenwerte für Statusmeldungen festlegen und den Betrieb der Komponenten auf Standortsystemen verwalten.|  
 |Komponentenstatus|Verwenden Sie diesen Knoten, um einen Statusrollup für jede Configuration Manager-Komponente anzuzeigen und die Betriebsintegrität der Komponente zu überprüfen. Die Integrität von Komponenten wird bestimmt durch Schwellenwerte, die Sie für jeden Standort unter **Statuszusammenfasser für Komponenten**konfigurieren können.<br /><br /> Mithilfe des Dienst-**Managers für Configuration Manager** können Sie Statusmeldungen für jede Komponente anzeigen, Schwellenwerte für Statusmeldungen festlegen und den Betrieb der Komponenten verwalten.|  
 |In Konflikt stehende Datensätze|Verwenden Sie diesen Knoten, um Statusmeldungen für Clients mit Datensatzkonflikten anzuzeigen.<br /><br /> Configuration Manager identifiziert mithilfe der Hardware-ID Clients, bei denen es sich um Duplikate handeln könnte. Sie werden über in Konflikt stehende Datensätze informiert. Wenn Sie z.B. einen Computer erneut installieren müssen, bleibt die Hardware-ID unverändert, während sich die von Configuration Manager verwendete GUID ändern kann.|  
 |Statusmeldungsabfragen|Verwenden Sie diesen Knoten, um Statusmeldungen für bestimmte Ereignisse und entsprechende Details abzufragen. Mithilfe von Statusmeldungsabfragen können Sie die Statusmeldungen zu bestimmten Ereignissen finden.<br /><br /> Statusmeldungsabfragen bieten sich an, um zu ermitteln, wann eine bestimmte Komponente, ein Vorgang oder ein Configuration Manager-Objekt geändert wurde und von welchem Konto die Änderung ausgeführt wurde. Zum Beispiel können Sie die integrierte Abfrage **Erstellte, geänderte oder gelöschte Sammlungen** ausführen, um herauszufinden, wann eine bestimmte Sammlung von welchem Benutzerkonto erstellt wurde.|  
