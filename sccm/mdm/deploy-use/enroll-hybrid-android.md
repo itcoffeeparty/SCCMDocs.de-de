@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 4b638b0325aa5f75d60a008ea60531a818ec76c2
-ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
+ms.openlocfilehash: c9b35122f6afbb4fffbbff48b919fd696939c897
+ms.sourcegitcommit: 51cfce302fa8ddf633ad1f379b1161c0617089b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 12/11/2017
 ---
 # <a name="set-up-android-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Einrichten einer hybriden Geräteverwaltung für Android mit System Center Configuration Manager und Microsoft Intune
 
@@ -60,7 +60,7 @@ Mit den folgenden Schritten kann Configuration Manager Android-Geräte ohne Arbe
 > Ein bekanntes Problem verhindert, dass die Option **Unterstützte Geräte nur für Benutzer dieser Gruppen als Android for Work verwalten** ordnungsgemäß ausgeführt wird. Geräte von Benutzern in den angegebenen Azure AD-Gruppen werden als Android anstelle von Android for Work registriert. Für die Aktivierung von Android for Work müssen Sie die Option **Verwalten aller unterstützter Geräte als Android for Work** verwenden.
 
 
-Nachdem Sie die Einrichtung abgeschlossen haben, müssen Sie Ihre Benutzer darüber informieren, wie diese ihre Geräte registrieren sollen. Informationen hierzu finden Sie unter [Informieren der Benutzer über den Einsatz von Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune). Diese Informationen gelten für mobile Geräte, die mit Microsoft Intune und Configuration Manager verwaltet werden.
+Nachdem Sie die Einrichtung abgeschlossen haben, müssen Sie Ihre Benutzer darüber informieren, wie diese ihre Geräte registrieren sollen. Informationen hierzu finden Sie unter [Informieren der Benutzer über den Einsatz von Microsoft Intune](https://docs.microsoft.com/en-us/intune/end-user-educate). Diese Informationen gelten für mobile Geräte, die mit Microsoft Intune und Configuration Manager verwaltet werden.
 
 Sobald die Bindung abgeschlossen ist, finden Sie den Namen des Kontos und der Organisation im Intune-Portal. An dieser Stelle können Sie beide Browser schließen.
 
