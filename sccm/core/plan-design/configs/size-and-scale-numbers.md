@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 caps.latest.revision: "4"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: c0277fed7db5803aa2b2246ca879640136dce02a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: bda1ab737a3af5e13f180771cc17c9850165906c
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>Größe und Skalierung von Zahlen für System Center Configuration Manager
 
@@ -147,7 +147,10 @@ Ein Standort der zentralen Verwaltung unterstützt eine Gesamtanzahl an Geräten
  In einer Hierarchie können beispielsweise 700.000 Desktops, bis zu 25.000 Clients für Macintosh und Windows CE 7.0 sowie bis zu 300.000 cloudbasierte Geräte bei der Integration von Microsoft Intune unterstützt werden. Das sind insgesamt 1.025.000 Geräte. Wenn mithilfe der lokalen Verwaltung mobiler Geräte verwaltete Geräte unterstützt werden, können in der Hierarchie insgesamt 825.000 Geräte unterstützt werden.  
 
 > [!IMPORTANT]  
->  In einer Hierarchie, in der für den Standort der zentralen Verwaltung eine Standardedition von SQL Server verwendet wird, werden in der Hierarchie bis zu 50.000 Desktops und Geräte unterstützt. Die an einem eigenständigen primären Standort eingesetzte Edition von SQL Server beschränkt nicht die Kapazität dieses Standorts zur Unterstützung der angegebenen maximalen Anzahl von Clients.  
+>  In einer Hierarchie, in der für den Standort der zentralen Verwaltung eine Standardedition von SQL Server verwendet wird, werden in der Hierarchie bis zu 50.000 Desktops und Geräte unterstützt. Um mehr als 50.000 Desktop-PCs und Geräte zu unterstützen, müssen Sie eine Enterprise-Edition von SQL Server verwenden. Diese Anforderung gilt nur für einen Standort der zentralen Verwaltung und nicht für einen eigenständigen primären Standort oder einen untergeordneten Standort, bei dem die von Ihnen verwendete Edition von SQL Server die Kapazität des Standorts zur Unterstützung der angegebenen Anzahl von Clients nicht einschränkt.   
+
+
+ Die an einem eigenständigen primären Standort eingesetzte Edition von SQL Server beschränkt nicht die Kapazität dieses Standorts zur Unterstützung der angegebenen maximalen Anzahl von Clients.  
 
 
 ###  <a name="bkmk_chipri"></a> Untergeordneter primärer Standort  

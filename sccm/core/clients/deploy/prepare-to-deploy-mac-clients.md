@@ -3,7 +3,7 @@ title: Vorbereiten der Bereitstellung von Clientsoftware auf Macs
 titleSuffix: Configuration Manager
 description: Konfigurationsaufgaben vor dem Bereitstellen des Configuration Manager-Clients auf Mac-Computern.
 ms.custom: na
-ms.date: 05/04/2017
+ms.date: 11/28/2017
 ms.prod: configuration-manager
 ms.reviewer: aaroncz
 ms.suite: na
@@ -15,17 +15,17 @@ caps.latest.revision: "12"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: b878c7b0328e89ff7b12bf44167fd12444a0cba4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 1d096111250af4061c94e71f8dc602ccae2d4607
+ms.sourcegitcommit: 1dd051d8548a19b724bb8f9e6a2278a4901ed916
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="prepare-to-deploy-client-software-to-macs"></a>Vorbereiten der Bereitstellung von Clientsoftware auf Macs
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Führen Sie die folgenden Schritte aus, um sicherzustellen, dass Sie zum [Bereitstellen des Configuration Manager-Clients auf Mac-Computern](/sccm/core/clients/deploy/deploy-clients-to-macs) bereit sind. 
+Führen Sie die folgenden Schritte aus, um sicherzustellen, dass Sie zum [Bereitstellen des Configuration Manager-Clients auf Mac-Computern](/sccm/core/clients/deploy/deploy-clients-to-macs) bereit sind.
 
 ## <a name="mac-prerequisites"></a>Voraussetzungen für Mac-Computer
 
@@ -33,9 +33,9 @@ Das Macintosh-Clientinstallationspaket wird nicht mit den Configuration Manager-
 
 **Unterstützte Versionen:**  
 
--   **Mac OS X 10.6** (Snow Leopard) 
+-   **Mac OS X 10.6** (Snow Leopard)
 
--   **Mac OS X 10.7** (Lion) 
+-   **Mac OS X 10.7** (Lion)
 
 -   **Mac OS X 10.8** (Mountain Lion)
 
@@ -49,11 +49,13 @@ Das Macintosh-Clientinstallationspaket wird nicht mit den Configuration Manager-
 
 -   **Mac OS X 10.12** (macOS Sierra)  
 
+-   **Mac OS X 10.13** (macOS High Sierra)  
+
 ## <a name="certificate-requirements"></a>Zertifikatanforderungen
 Die Clientinstallation und -verwaltung für Macintosh-Computer erfordert PKI-Zertifikate (Public Key-Infrastruktur). Durch PKI-Zertifikate wird die Kommunikation zwischen den Macintosh-Computern und dem Configuration Manager-Standort mithilfe gegenseitiger Authentifizierung und verschlüsselter Datenübertragungen gesichert. Configuration Manager kann ein Benutzerclientzertifikat mithilfe der Microsoft-Zertifikatdienste mit einer Unternehmenszertifizierungsstelle (CA) sowie den Configuration Manager-Standortsystemrollen für Registrierungsspunkt und Registrierungsproxypunkt anfordern und installieren. Sie können auch unabhängig von Configuration Manager ein Computerzertifikat anfordern und installieren, sofern das Zertifikat die Anforderungen für Configuration Manager erfüllt.   
-  
+
 Von Configuration Manager Mac-Clients wird stets eine Zertifikatsperrprüfung durchgeführt. Sie können diese Funktion nicht deaktivieren.  
-  
+
 Wenn Mac-Clients den Zertifikatsperrstatus für ein Serverzertifikat nicht bestätigen können, weil die Zertifikatsperrliste nicht gefunden werden kann, ist keine erfolgreiche Verbindung mit Configuration Manager-Standortsystemen möglich. Überprüfen Sie den Entwurf der Zertifikatsperrliste insbesondere für Mac-Clients, die sich in einer anderen Gesamtstruktur als die ausstellende Zertifizierungsstelle befinden, um sicherzustellen, dass ein Sperrlisten-Verteilungspunkt für die Verbindung mit Standortsystemservern von den Mac-Clients gefunden und eine Verbindung damit hergestellt werden kann.  
 
 Legen Sie vor dem Installieren des Configuration Manager-Clients auf einem Macintosh-Computer fest, wie das Clientzertifikat installiert werden soll:  
@@ -83,7 +85,7 @@ Wenn diese Standortsysteme nicht darüber verfügen, stellen Sie ein Webserverze
 
 Im Webserverzertifikat muss der Internet-FQDN, der in den Eigenschaften des Standortsystems angegeben ist, enthalten sein. Auf den Server muss kein Zugriff über das Internet möglich sein, um Mac-Computer zu unterstützen. Wenn Sie keine internetbasierte Clientverwaltung benötigen, können Sie den Wert des Intranet-FQDN für den Internet-FQDN angeben.  
 
-Geben Sie den Wert des Internet-FQDN für das Standortsystem im Webserverzertifikat für den Verwaltungspunkt, den Verteilungspunkt und den Registrierungsproxypunkt an. 
+Geben Sie den Wert des Internet-FQDN für das Standortsystem im Webserverzertifikat für den Verwaltungspunkt, den Verteilungspunkt und den Registrierungsproxypunkt an.
 
 Eine Beispielbereitstellung, bei der dieses Webserverzertifikat erstellt und installiert wird, finden Sie unter [Bereitstellen des Webserverzertifikats für Standortsysteme, von denen IIS ausgeführt werden](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_webserver2008_cm2012).  
 
@@ -119,10 +121,10 @@ Eine Beispielbereitstellung, bei der dieses Webserverzertifikat erstellt und ins
 
  Verteilungspunkte sind zum Installieren des Clients nicht erforderlich. Sie müssen jedoch Verteilungspunkte konfigurieren, um Clientverbindungen aus dem Internet zuzulassen, wenn Sie nach der Installation des Clients auf diesen Computern Software bereitstellen möchten.  
 
- 
+
 ### <a name="to-configure-management-points-and-distribution-points-to-support-macs"></a>So konfigurieren Sie Verwaltungspunkte und Verteilungspunkte für die Unterstützung von Macintosh-Computern  
 
-Bevor Sie das Verfahren anwenden, vergewissern Sie sich, dass der Standortsystemserver, auf dem der Verwaltungspunkt und der Verteilungspunkt ausgeführt werden, mit einem Internet-FQDN konfiguriert ist. Wenn von diesen Servern keine internetbasierte Clientverwaltung unterstützt wird, können Sie den Intranet-FQDN als Wert des Internet-FQDN angeben. 
+Bevor Sie das Verfahren anwenden, vergewissern Sie sich, dass der Standortsystemserver, auf dem der Verwaltungspunkt und der Verteilungspunkt ausgeführt werden, mit einem Internet-FQDN konfiguriert ist. Wenn von diesen Servern keine internetbasierte Clientverwaltung unterstützt wird, können Sie den Intranet-FQDN als Wert des Internet-FQDN angeben.
 
 Die Standortsystemrollen müssen sich an einem primären Standort befinden.  
 

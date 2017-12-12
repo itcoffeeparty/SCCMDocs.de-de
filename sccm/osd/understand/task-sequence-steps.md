@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 02d3ca5ed494c20266125686f26b66cebcc7c2a2
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: 40a2d91baf8c02cdda96e9520ce155032272ebdd
+ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>Tasksequenzschritte in System Center Configuration Manager
 
@@ -538,22 +538,6 @@ Dieser Tasksequenzschritt wird nur in Windows PE ausgeführt. Er wird nicht in e
 
  **Aktuelles Betriebssystem, das aktualisiert wird**  
  Wählen Sie diese Einstellung aus, um zu überprüfen, ob das auf dem Zielcomputer installierte Betriebssystem die angegebene Anforderung erfüllt. Standardmäßig ist diese Einstellung aktiviert und auf **CLIENT**festgelegt.  
-
-##  <a name="child-task-sequence"></a>Untergeordnete Tasksequenz
-
-Ab Configuration Manager-Version 1710 können Sie einen neuen Tasksequenzschritt hinzufügen, der eine andere Tasksequenz ausführt. Dies erstellt eine Über-/Unterordnungsbeziehung zwischen den Tasksequenzen. Mithilfe einer untergeordneten Tasksequenz können Sie modular aufgebaute, wiederverwendbare Tasksequenzen erstellen.
-
-Berücksichtigen Sie Folgendes, wenn Sie eine untergeordnete Tasksequenz einer Tasksequenz hinzufügen:
-
- - Die über- und untergeordneten Tasksequenzen werden effektiv in einer einzigen Richtlinie kombiniert, die der Client ausführt.
- - Die Umgebung ist global. Wenn eine Variable beispielsweise von der übergeordneten Tasksequenz festgelegt und dann von der untergeordneten Tasksequenz geändert wird, bleibt die Änderung der Variablen im weiteren Verlauf bestehen. Wenn die untergeordnete Tasksequenz eine neue Variable erstellt, ist die Variable ebenso für die restlichen Schritte in der übergeordneten Tasksequenz verfügbar.
- - Statusmeldungen werden in der Regel für einen einzelnen Tasksequenzvorgang gesendet.
- - Die Tasksequenzen schreiben Einträge in die Datei „smsts.log“, mit neuen Protokolleinträgen, die den Start einer untergeordneten Tasksequenz deutlich machen.
-
-### <a name="details"></a>Details
-
-1. Klicken Sie im Tasksequenz-Editor auf **Hinzufügen**, wählen Sie **Allgemein** aus, und klicken Sie auf **Tasksequenz ausführen**.
-2. Klicken Sie auf **Durchsuchen**, um die untergeordnete Tasksequenz auszuwählen.  
 
 ##  <a name="BKMK_ConnectToNetworkFolder"></a> Verbindung mit Netzwerkordner herstellen  
  Verwenden Sie die Tasksequenzaktion **Verbindung mit Netzwerkordner herstellen** , um eine Verbindung mit einem freigegebenen Netzwerkordner herzustellen.  
@@ -1423,6 +1407,22 @@ Vor der Configuration Manager-Version 1610 werden bei diesem Schritt folgende Au
 
 > [!IMPORTANT]  
 >  Die Ausführungsrichtlinien „Undefiniert“ und „Umgehung“ werden von PowerShell 1.0 nicht unterstützt.  
+
+##  <a name="child-task-sequence"></a> Ausführen einer Tasksequenz
+
+Ab Configuration Manager-Version 1710 können Sie einen neuen Tasksequenzschritt hinzufügen, der eine andere Tasksequenz ausführt. Dies erstellt eine Über-/Unterordnungsbeziehung zwischen den Tasksequenzen. Mithilfe einer untergeordneten Tasksequenz können Sie modular aufgebaute, wiederverwendbare Tasksequenzen erstellen.
+
+Berücksichtigen Sie Folgendes, wenn Sie eine untergeordnete Tasksequenz einer Tasksequenz hinzufügen:
+
+ - Die über- und untergeordneten Tasksequenzen werden effektiv in einer einzigen Richtlinie kombiniert, die der Client ausführt.
+ - Die Umgebung ist global. Wenn eine Variable beispielsweise von der übergeordneten Tasksequenz festgelegt und dann von der untergeordneten Tasksequenz geändert wird, bleibt die Änderung der Variablen im weiteren Verlauf bestehen. Wenn die untergeordnete Tasksequenz eine neue Variable erstellt, ist die Variable ebenso für die restlichen Schritte in der übergeordneten Tasksequenz verfügbar.
+ - Statusmeldungen werden in der Regel für einen einzelnen Tasksequenzvorgang gesendet.
+ - Die Tasksequenzen schreiben Einträge in die Datei „smsts.log“, mit neuen Protokolleinträgen, die den Start einer untergeordneten Tasksequenz deutlich machen.
+
+### <a name="details"></a>Details
+
+1. Klicken Sie im Tasksequenz-Editor auf **Hinzufügen**, wählen Sie **Allgemein** aus, und klicken Sie auf **Tasksequenz ausführen**.
+2. Klicken Sie auf **Durchsuchen**, um die untergeordnete Tasksequenz auszuwählen.  
 
 ##  <a name="BKMK_SetDynamicVariables"></a> Dynamische Variablen festlegen  
  Verwenden Sie den Tasksequenzschritt **Dynamische Variablen festlegen** zum Ausführen der folgenden Aufgaben:  

@@ -10,14 +10,14 @@ ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 33a5bff1e202822ce3ec5755958d34af461957e9
-ms.sourcegitcommit: 536f7295e9ea361f1f9ead6c25f3685deb041ad8
+ms.openlocfilehash: 83bd5fc972bc0bef07b206e160463db71837e827
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>Neuerungen in Version 1710 von System Center Configuration Manager
 
@@ -28,8 +28,8 @@ Das Update 1710 für System Center Configuration Manager (Current Branch) ist al
 > [!TIP]  
 > Sie müssen eine Baselineversion von Configuration Manager verwenden, um einen neuen Standort zu installieren.  
 >  Weitere Informationen:    
->   - [Installieren von neuen Standorten](https://technet.microsoft.com/library/mt590197.aspx)  
->   - [Installieren von Updates an Standorten](https://technet.microsoft.com/library/mt607046.aspx)  
+>   - [Installieren von neuen Standorten](/sccm/core/servers/deploy/install/installing-sites)  
+>   - [Installieren von Updates an Standorten](/sccm/core/servers/manage/updates)  
 >   - [Baseline- und Updateversionen](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
 
 Die folgenden Abschnitte enthalten Details zu Änderungen und neuen Funktionen, die in Version 1710 von Configuration Manager eingeführt wurden.  
@@ -60,13 +60,13 @@ Sie können jetzt [cloudbasierte Verteilungspunkte](/sccm/core/plan-design/hiera
 <!-- 1350871 -->
 Ab Windows 10-Version 1607 (auch Anniversary Update genannt) können Sie ein Windows 10-Gerät gleichzeitig in eine lokale Active Directory-Installation (AD) und eine cloudbasierte Azure AD-Infrastruktur einbinden (Hybrid Azure AD). Co-Verwaltung nutzt diese Verbesserung und ermöglicht es Ihnen, Windows 10-Geräte gleichzeitig mit Configuration Manager und Intune zu verwalten. Diese Lösung schlägt eine Brücke von der herkömmlichen zur modernen Verwaltung und bietet Ihnen die Möglichkeit, die Umstellung Schritt für Schritt durchzuführen. Weitere Informationen finden Sie unter [Co-Verwaltung für Windows 10-Geräte](/sccm/core/clients/manage/co-management-overview).
 
-### <a name="restart-computers-form-the-configuration-manager-console-----1356283---"></a>Neustarten von Computern über die Configuration Manager-Konsole <!-- 1356283 -->
+### <a name="restart-computers-from-the-configuration-manager-console-----1356283---"></a>Neustarten von Computern über die Configuration Manager-Konsole  <!-- 1356283 -->
 Ab diesem Release können Sie die Configuration Manager-Konsole verwenden, um Clientgeräte zu identifizieren, die einen Neustart erfordern, und diese Geräte dann mit einer Clientbenachrichtungsaktion neu starten.
 
 Siehe [Verwalten von Clients in System Center Configuration Manager](/sccm/core/clients/manage/manage-clients#restart-clients).
 
 
-<!--  ## Compliance settings  -->
+<!-- ## Compliance settings -->
 
 
 ## <a name="application-management"></a>Anwendungsverwaltung
@@ -130,6 +130,10 @@ Weitere Informationen finden Sie unter [Konfigurieren von Clienteinstellungen in
 
 
 ## <a name="mobile-device-management"></a>Verwaltung mobiler Geräte
+
+### <a name="actions-for-non-compliance"></a>Aktionen bei Nichtkonformität 
+<!--1321366 -->    
+Sie können nun eine zeitlich geordnete Abfolge von Aktionen konfigurieren, die auf Geräte angewendet werden, die nicht konform sind. Beispielsweise können Sie Endbenutzer nicht konformer Geräte per E-Mail benachrichtigen oder diese Geräte als nicht konform kennzeichnen. Einzelheiten finden Sie unter [Einrichten von Aktionen bei Nichtkonformität](/sccm/mdm/deploy-use/actions-for-noncompliance).
 
 ### <a name="windows-10-arm64-device-support"></a>Unterstützung für Windows 10 ARM64-Geräte
 <!-- 1355000 -->

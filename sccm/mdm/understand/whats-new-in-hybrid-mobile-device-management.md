@@ -1,9 +1,9 @@
 ---
-title: "Neuerungen bei der hybriden Verwaltung mobiler Geräte"
+title: "Neues bei der hybride Verwaltung mobiler Geräte"
 titleSuffix: Configuration Manager
 description: "Erfahren Sie mehr über die neuen Funktionen der Verwaltung mobiler Geräte, die für Hybridbereitstellungen mit Configuration Manager und Intune verfügbar sind."
 ms.custom: na
-ms.date: 11/12/2017
+ms.date: 11/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 4877d05004bd883a3ae0ad353a78643cf559275e
-ms.sourcegitcommit: 536f7295e9ea361f1f9ead6c25f3685deb041ad8
+ms.openlocfilehash: 189e737eca5dee5bca3f0748cd1b4d944f868565
+ms.sourcegitcommit: 4af1da9c18f5bdff31426cf1d58c7d949372292d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Neuheiten bei der hybriden Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune
 
@@ -46,38 +46,52 @@ Jeder Abschnitt dieses Artikels listet Hybridfeatures in drei verschiedenen Kate
 
 ### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
 
-- **Unternehmensportal-App für macOS verfügbar** <!--1541700--> Das Intune-Unternehmensportal unter macOS hat eine optimierte Benutzeroberfläche, auf der alle Informationen und Konformitätsbenachrichtigungen, die Ihre Benutzer für alle registrierten Geräte benötigen, übersichtlich angezeigt werden. Und sobald das Intune-Unternehmensportal auf einem Gerät bereitgestellt wurde, werden Updates von Microsoft AutoUpdate für macOS bereitgestellt. Sie können das neue Intune-Unternehmensportal für macOS herunterladen, indem Sie sich auf einem macOS-Gerät bei der Website des Intune-Unternehmensportals anmelden.
+- **Textprotokoll aus verwalteten Apps zulässig** <!-- 1414050  -->    
+  Apps, die vom Intune App SDK verwaltet werden, können SMS-Nachrichten senden.
 
-- **Microsoft Planner ist jetzt Teil der MAM-Liste (Mobile App Management, Verwaltung mobiler Apps) mit genehmigten Apps** <!-- 1248473 --> Die Microsoft Planner-App für iOS und Android ist nun Teil der genehmigten Apps für die Verwaltung mobiler Apps (Mobile App Management, MAM). Die App kann im Azure-Portal auf dem Blatt „Intune-App-Schutz“ für alle Mandanten konfiguriert werden. Weitere Informationen finden Sie unter [MAM-Liste der genehmigten Apps](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
+- **Unternehmensportal-App für macOS verfügbar** <!--1541700-->    
+  Das Intune-Unternehmensportal unter macOS hat eine optimierte Benutzeroberfläche, auf der alle Informationen und Konformitätsbenachrichtigungen, die Ihre Benutzer für alle registrierten Geräte benötigen, übersichtlich angezeigt werden. Und sobald das Intune-Unternehmensportal auf einem Gerät bereitgestellt wurde, werden Updates von Microsoft AutoUpdate für macOS bereitgestellt. Sie können das neue Intune-Unternehmensportal für macOS herunterladen, indem Sie sich auf einem macOS-Gerät bei der Website des Intune-Unternehmensportals anmelden.
 
-- **Zugriff auf Protokolle von verwalteten Apps für iOS** <!-- 1469920 --> Endbenutzer, auf deren Geräten der Managed Browser installiert ist, können jetzt auf den Verwaltungsstatus aller von Microsoft veröffentlichten Apps zugreifen und Protokolle für die Problembehandlung ihrer verwalteten iOS-Apps senden.
+- **Microsoft Planner ist jetzt Teil der MAM-Liste (Mobile App Management, Verwaltung mobiler Apps) mit genehmigten Apps**  <!-- 1248473 -->    
+  Die Microsoft Planner-App für iOS und Android ist nun Teil der genehmigten Apps für die Verwaltung mobiler Apps (Mobile App Management, MAM). Die App kann im Azure-Portal auf dem Blatt „Intune-App-Schutz“ für alle Mandanten konfiguriert werden. Weitere Informationen finden Sie unter [MAM-Liste der genehmigten Apps](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
+
+- **Zugriff auf Protokolle von verwalteten Apps für iOS** <!-- 1469920 -->    
+  Endbenutzer, auf deren Geräten der Managed Browser installiert ist, können jetzt auf den Verwaltungsstatus aller von Microsoft veröffentlichten Apps zugreifen und Protokolle für die Problembehandlung ihrer verwalteten iOS-Apps senden.
   
   Wie Sie den Problembehandlungsmodus im Managed Browser auf einem iOS-Gerät aktivieren, erfahren Sie unter [Zugreifen auf Protokolle von verwalteten Apps mithilfe des Managed Browsers unter iOS](https://docs.microsoft.com/intune/app-configuration-managed-browser#how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios).
 
-- **Verbesserungen am Workflow für die Geräteeinrichtung im Unternehmensportal für iOS in der Version 2.9.0** Wir haben in der Unternehmensportal-App für iOS den Workflow zur Geräteeinrichtung verbessert. Die Sprache ist nun benutzerfreundlicher, und wir haben Bildschirme nach Möglichkeit zusammengeführt. Wir haben außerdem die Sprache für Ihr Unternehmen spezifischer gestaltet, indem wir Ihren Unternehmensnamen im gesamten Text des Setups verwendet haben. Dieser aktualisierte Workflow wird auf der Seite zu den [Neuerungen auf der App-Benutzeroberfläche](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-november-13-2017) beschrieben.
+- **Verbesserungen am Workflow für die Geräteeinrichtung im Unternehmensportal für iOS 2.9.0**    
+  Der Workflow für die Geräteeinrichtung in der Unternehmensportal-App für iOS wurde verbessert. Die Sprache ist nun benutzerfreundlicher, und wir haben Bildschirme nach Möglichkeit zusammengeführt. Wir haben außerdem die Sprache für Ihr Unternehmen spezifischer gestaltet, indem wir Ihren Unternehmensnamen im gesamten Text des Setups verwendet haben. Dieser aktualisierte Workflow wird auf der Seite zu den [Neuerungen auf der App-Benutzeroberfläche](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-november-13-2017) beschrieben.
 
-- **Anforderungen von Feedback für die Unternehmensportal-App für Android** <!--1165249--> Die Unternehmensportal-App für Android fordert von den Endbenutzern nun Feedback an. Dieses Feedback wird direkt an Microsoft gesendet und gibt Endbenutzern die Möglichkeit, die App im öffentlichen Google Play Store zu prüfen. Feedback ist nicht unbedingt erforderlich und kann problemlos abgelehnt werden, sodass die Benutzer die App weiterhin verwenden können. 
+- **Aufforderungen zum Geben von Feedback zur Unternehmensportal-App für Android** <!--1165249-->    
+Die Unternehmensportal-App fordert Android-Endbenutzer nun auf, Feedback zu geben. Dieses Feedback wird direkt an Microsoft gesendet und gibt Endbenutzern die Möglichkeit, die App im öffentlichen Google Play Store zu prüfen. Feedback ist nicht unbedingt erforderlich und kann problemlos abgelehnt werden, sodass die Benutzer die App weiterhin verwenden können. 
 
-- **Informieren der Endbenutzer, welche Geräteinformationen für Windows 10-Geräte angezeigt werden können** <!--1337920--> Wir haben in der Unternehmensportal-App für Windows 10 den Bildschirm „Gerätedetails“ um **Besitztyp** erweitert. So können Benutzer weitere Informationen zum Datenschutz direkt von dieser Seite aus der Intune-Endbenutzerdokumentation erhalten. Sie finden diese Informationen auch auf dem Bildschirm **Info**.
+- **Informieren der Endbenutzer, welche Geräteinformationen für Windows 10-Geräte angezeigt werden** <!--1337920-->    
+Auf dem Bildschirm „Gerätedetails“ der Unternehmensportal-App für Windows 10 wurde **Besitztyp** hinzugefügt. So können Benutzer weitere Informationen zum Datenschutz direkt von dieser Seite aus der Intune-Endbenutzerdokumentation erhalten. Sie finden diese Informationen auch auf dem Bildschirm **Info**.
 
-- **Neue Aktion „Auflösen“ für Android-Geräte verfügbar** <!--1583480--> Die Unternehmensportal-App für Android bietet auf der Seite _Geräteeinstellungen aktualisieren_ nun die Aktion „Auflösen“. Bei Auswahl dieser Option gelangt der Endbenutzer direkt zu der Einstellung, die dazu führt, dass sein Gerät nicht konform ist. Die Unternehmensportal-App für Android unterstützt derzeit diese Aktion für die Einstellungen [Gerätekennung](https://docs.microsoft.com/intune-user-help/set-your-pin-or-password-android), [Geräteverschlüsselung](https://docs.microsoft.com/intune-user-help/encrypt-your-device-android), [USB-Debuggen](https://docs.microsoft.com/intune-user-help/you-need-to-turn-off-usb-debugging-android) und [Unbekannte Quellen](https://docs.microsoft.com/intune-user-help/you-need-to-turn-off-unknown-sources-android). 
+- **Neue Aktion „Auflösen“ für Android-Geräte verfügbar** <!--1583480-->    
+  Die Unternehmensportal-App für Android bietet auf der Seite _Geräteeinstellungen aktualisieren_ nun die Aktion „Auflösen“. Bei Auswahl dieser Option gelangt der Endbenutzer direkt zu der Einstellung, die dazu führt, dass sein Gerät nicht konform ist. Die Unternehmensportal-App für Android unterstützt derzeit diese Aktion für die Einstellungen [Gerätekennung](https://docs.microsoft.com/intune-user-help/set-your-pin-or-password-android), [Geräteverschlüsselung](https://docs.microsoft.com/intune-user-help/encrypt-your-device-android), [USB-Debuggen](https://docs.microsoft.com/intune-user-help/you-need-to-turn-off-usb-debugging-android) und [Unbekannte Quellen](https://docs.microsoft.com/intune-user-help/you-need-to-turn-off-unknown-sources-android). 
 
 
-### <a name="new-in-configuration-manager-current-branch"></a>Neuerungen in Configuration Manager (Current Branch)
+### <a name="new-in-configuration-manager-current-branch"></a>Neuheiten in Configuration Manager (Current Branch)
 
-- **Neue Richtlinieneinstellungen für die Verwaltung mobiler Anwendungen** <!-- 1324760 --> Die folgenden Einstellungen wurden den Richtlinieneinstellungen zur Verwaltung mobiler Anwendungen hinzugefügt:
+- **Aktionen bei Nichtkonformität** <!--1321366 -->    
+  Sie können nun eine zeitlich geordnete Abfolge von Aktionen konfigurieren, die auf Geräte angewendet werden, die nicht konform sind. Beispielsweise können Sie Endbenutzer nicht konformer Geräte per E-Mail benachrichtigen oder diese Geräte als nicht konform kennzeichnen. Einzelheiten finden Sie unter [Einrichten von Aktionen bei Nichtkonformität](/sccm/mdm/deploy-use/actions-for-noncompliance).
+
+- **Neue Richtlinieneinstellungen für die Verwaltung mobiler Anwendungen** <!-- 1324760 -->    
+  Die folgenden Einstellungen wurden den Richtlinieneinstellung zur Verwaltung mobiler Anwendungen hinzugefügt:
   - **Kontaktsynchronisierung deaktivieren:** Verhindert, dass die App Daten in der nativen App „Kontakte“ auf dem Gerät speichert.
   - **Drucken deaktivieren:** Verhindert, dass die App Geschäfts-, Schul- oder Unidaten druckt.
 
   Unter [Schützen von Apps mithilfe von App-Schutzrichtlinien in Configuration Manager](/sccm/mdm/deploy-use/protect-apps-using-mam-policies) finden Sie Informationen zu den neuen Richtlinieneinstellungen zum Schutz von Apps.
 
-- **Unterstützung für Windows 10 ARM64-Geräte** <!-- 1355000 --> Hybridszenarien für die Verwaltung mobiler Geräte (Mobile Device Management, MDM) werden auf ARM64-Geräten mit Windows 10 unterstützt, sobald diese Geräte verfügbar sind. Weitere Informationen finden Sie unter [Unterstützung für Windows 10 ARM64-Geräte](/sccm/core/plan-design/changes/whats-new-in-version-1710#windows-10-arm64-device-support).
+- **Unterstützung für Windows 10 ARM64-Geräte** <!-- 1355000 -->    
+  Hybridszenarien für die Verwaltung mobiler Geräte (Mobile Device Management, MDM) werden auf ARM64-Geräte mit Windows 10 unterstützt, sobald diese Geräte verfügbar sind. Weitere Informationen finden Sie unter [Unterstützung für Windows 10 ARM64-Geräte](/sccm/core/plan-design/changes/whats-new-in-version-1710#windows-10-arm64-device-support).
 
-- **Verbesserte Benutzeroberfläche für VPN-Profile in der Configuration Manager-Konsole** <!-- 1318232 --> In dieser Version haben wir den Assistenten zum Erstellen von VPN-Profilen und die VPN-Eigenschaftenseiten aktualisiert, sodass die Einstellungen der ausgewählten Plattform entsprechend angezeigt werden. Diese Funktion war zuvor in der Configuration Manager Technical Preview-Version 1709 verfügbar und steht nun in Hybridbereitstellungen mit Intune und Configuration Manager (Current Branch) der Version 1710 zur Verfügung:
+- **Verbesserte Benutzeroberfläche für VPN-Profile in der Configuration Manager-Konsole** <!-- 1318232 -->    
+  Mit diesem Release haben wir den Assistenten zum Erstellen von VPN-Profilen und die VPN-Eigenschaftenseiten aktualisiert, sodass die Einstellungen der ausgewählten Plattform entsprechend angezeigt werden. Diese Funktion war zuvor in der Configuration Manager Technical Preview-Version 1709 verfügbar und steht nun in Hybridbereitstellungen mit Intune und Configuration Manager (Current Branch) der Version 1710 zur Verfügung:
   - [Verbesserte Benutzeroberfläche für VPN-Profile in der Configuration Manager-Konsole](/sccm/core/plan-design/changes/whats-new-in-version-1710#improved-vpn-profile-experience-in-configuration-manager-console).
 
-
-Verbesserte Benutzeroberfläche für VPN-Profile in der Configuration Manager-Konsole
 
 ### <a name="new-in-configuration-manger-technical-preview-1711"></a>Neuerungen in Configuration Manager Technical Preview 1711
 
@@ -94,7 +108,11 @@ Verbesserte Benutzeroberfläche für VPN-Profile in der Configuration Manager-Ko
 
 ### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune  
 
-- **Unterstützung für die zertifikatbasierte Authentifizierung im Unternehmensportal für iOS** <!--1029830--> Die zertifikatbasierte Authentifizierung (Certificate-Based Authentication, CBA) wird nun in der Unternehmensportal-App für iOS unterstützt. Benutzer mit CBA geben ihren Benutzernamen ein und tippen dann auf den Link „Sign in with a certificate“ (Mit einem Zertifikat anmelden). CBA wird in den Unternehmensportal-Apps für Android und Windows bereits unterstützt. Weitere Informationen dazu finden Sie auf der Seite zur [Anmeldung bei der Unternehmensportal-App](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal).
+- **Statusanzeige für die Geräteeinrichtung im Android-Unternehmensportal** <!--1565657-->    
+  Die Unternehmensportal-App für Android zeigt eine Statusanzeige für die Geräteeinrichtung, wenn ein Benutzer sein Gerät registriert. Die Anzeige zeigt neue Zustände an beginnend mit „Ihr Gerät wird eingerichtet...“, dann „Ihr Gerät wird registriert...“, danach „Die Registrierung Ihres Geräts wird abgeschlossen...“ und schließlich „Die Einrichtung Ihres Geräts wird abgeschlossen...“.  
+
+- **Unterstützung der zertifikatbasierten Authentifizierung im Unternehmensportal für iOS** <!--1029830-->    
+  Die zertifikatbasierte Authentifizierung wird nun in der Unternehmensportal-App für iOS unterstützt. Benutzer mit CBA geben ihren Benutzernamen ein und tippen dann auf den Link „Sign in with a certificate“ (Mit einem Zertifikat anmelden). CBA wird in den Unternehmensportal-Apps für Android und Windows bereits unterstützt. Weitere Informationen dazu finden Sie auf der Seite zur [Anmeldung bei der Unternehmensportal-App](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal).
 
 - **Verbesserungen am Workflow für die Geräteeinrichtung im Unternehmensportal** <!--1490692-->    
   Der Workflow für die Geräteeinrichtung in der Unternehmensportal-App für Android wurde verbessert. Die Sprache ist nun benutzerfreundlicher und spezifisch für unser Unternehmen. Zudem haben wir – wo es möglich war – Bildschirme vereint. Diese Änderungen werden auf der Seite zu den [Neuerungen in der App-Benutzeroberfläche](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-october-2-2017) beschrieben.

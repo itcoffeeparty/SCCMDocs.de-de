@@ -15,11 +15,11 @@ caps.latest.revision: "15"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: de813a38d6278a60189667165bf4911bd314f14a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: a3fb0bc39f1606f1a65b5623c9567819b1a0c52e
+ms.sourcegitcommit: 5d46ed593b1cc461ea3f6ff6917bcd272b095ed7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection – von Kunden häufig gestellte Fragen
 
@@ -63,7 +63,7 @@ Diese häufig gestellten Fragen sind für Computerbenutzer vorgesehen, deren IT-
     |Datei- und Programmaktivität auf Ihrem Computer überwachen| Mit dieser Option wird überwacht, wenn Dateien und Programme auf Ihrem Computer ausgeführt werden. Sie werden dann über alle von ihnen ausgeführten bzw. an ihnen vorgenommenen Aktionen benachrichtigt. Dies ist wichtig, da Schadsoftware Schwachstellen in Programmen ausnutzen kann, die Sie installiert haben, um ohne Ihr Wissen Schadsoftware oder unerwünschte Software auszuführen. So kann beispielsweise Spyware von selbst im Hintergrund ausgeführt werden, wenn Sie ein Programm starten, das Sie häufig verwenden. Windows Defender überwacht Ihre Programme und benachrichtigt Sie, sobald eine verdächtige Aktivität erfolgt.|  
     |Verhaltensüberwachung aktivieren| Diese Option dient zum Überwachen von Verhaltenssammlungen für verdächtige Muster, die von herkömmlichen Antiviren-Schutzmethoden unter Umständen nicht erkannt werden.|  
 
-    |Netzwerkinspektionssystem aktivieren| Mithilfe dieser Option wird der Computer gegen sog. „Zero Day“-Exploits bekannter Schwachstellen geschützt. Hierzu wird das Zeitfenster zwischen dem Zeitpunkt, an dem eine Schwachstelle entdeckt wird, und einem Update verringert.|  
+    |Netzwerkinspektionssystem aktivieren| Mithilfe dieser Option wird der Computer gegen sog. „Zero Day“-Exploits bekannter Schwachstellen geschützt. Hierzu wird das Zeitfenster zwischen dem Zeitpunkt, zu dem eine Schwachstelle entdeckt wird, und der Anwendung eines Updates verringert.|  
 
 -   **Überprüfungsoptionen** – Sie können Windows Defender verwenden, um Ihren Computer auf potenzielle Bedrohungen wie Viren, Spyware und andere Schadsoftware zu überprüfen, die möglicherweise ein Risiko für Ihren Computer darstellen. Sie können außerdem regelmäßige Scans planen und automatisch schädliche Software, die während eines Scanvorgangs ermittelt wurde, löschen.  
 

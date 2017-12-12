@@ -13,14 +13,14 @@ ms.topic: get-started-article
 ms.assetid: d8c8b44c-1e8a-42b6-bab4-23c72a0a6169
 caps.latest.revision: "15"
 caps.handback.revision: "0"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 7a87e03cdade6339bc0ea0055edf8791e197e6f1
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 95df27d4bf21a2cb1b6d613415a3eff4c3a73552
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="removed-and-deprecated-features-for-system-center-configuration-manager"></a>Entfernte und veraltete Features für System Center Configuration Manager
 
@@ -55,7 +55,7 @@ Weitere Informationen finden Sie in folgenden Quellen:
 |Windows Server 2008|10. Juli 2015|Version 1511 </br></br>Unterstützung als Standortsystem wird entfernt. (Siehe Hinweis 1).|  
 |Windows Server 2008 R2|10. Juli 2015| Version 1702 (siehe Hinweis 2)|  
 
--   Hinweis 1: Dieses Betriebssystem wird für Standortserver oder Standortsystemrollen mit Ausnahme des Verteilungspunkts und des Pullverteilungspunkts nicht unterstützt. Sie können dieses Betriebssystem weiterhin als Verteilungspunkt verwenden, bis die Einstellung dieses Supports angekündigt wird oder der erweiterte Support für dieses Betriebssystem abläuft. Weitere Informationen finden Sie unter [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008 (Bei der Installation von System Center Configuration Manager CB und LTSB auf Windows Server 2008 tritt ein Fehler auf)](https://support.microsoft.com/help/4015095).
+-   Hinweis 1: Dieses Betriebssystem wird für Standortserver- oder Standortsystemrollen mit Ausnahme des Verteilungspunkts und des Pullverteilungspunkts nicht unterstützt. Sie können dieses Betriebssystem weiterhin als Verteilungspunkt verwenden, bis die Einstellung dieses Supports angekündigt wird oder der erweiterte Support für dieses Betriebssystem abläuft. Weitere Informationen finden Sie unter [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008 (Bei der Installation von System Center Configuration Manager CB und LTSB auf Windows Server 2008 tritt ein Fehler auf)](https://support.microsoft.com/help/4015095).
 
 -   Hinweis 2: Ab Version 1702 wird dieses Betriebssystem für Standortserver und die meisten Standortsystemrollen nicht unterstützt. Alle Versionen vor 1702 unterstützen das Betriebssystem auch weiterhin. Dieses Betriebssystem wird jedoch weiterhin für die Verwendung der Standortsystemrolle „Verteilungspunkt“ unterstützt (einschließlich „Pullverteilungspunkt“, PXE und Multicast), bis der Support eingestellt wird oder der erweiterte Supportzeitraum für dieses Betriebssystem abläuft. Ab Version 1602 können Sie ein direktes Upgrade des Betriebssystems eines Standortservers von Windows Server 2008 R2 auf Windows Server 2012 R2 durchführen.  
 
@@ -89,7 +89,7 @@ Weitere Informationen finden Sie in folgenden Quellen:
 
 Wenn Sie Ihre Version von SQL Server aktualisieren müssen, werden folgende Methoden in der Reihenfolge ihrer Komplexität empfohlen.
 1. [Direktes Upgrade von SQL Server](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (empfohlen).
-2. Installieren Sie eine neue Version von SQL Server auf einem neuen Computer, und [verwenden Sie die Option Datenbankverschiebung](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration) vom Configuration Manager-Setup, um Ihren Standortserver auf den neuen SQL Server auszurichten.
+2. Installieren Sie auf einem neuen Computer eine neue Version von SQL Server. [Verwenden Sie anschließend die Option zur Datenbankverschiebung](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration) im Configuration Manager-Setup, um Ihren Standortserver auf den neuen Computer mit SQL Server zu verweisen.
 3. Verwenden Sie [Sicherung und Wiederherstellung](/sccm/protect/understand/backup-and-recovery).
 
 
@@ -104,7 +104,7 @@ Wenn Sie Ihre Version von SQL Server aktualisieren müssen, werden folgende Meth
 |Das Softwarecenter weist einen neuen, modernen Look auf. In den kommenden Monaten wird die vorherige Version des Softwarecenters nicht länger zur Verfügung stehen.<br><br>Sie können Clients für die Verwendung des neuen Softwarecenters konfigurieren, indem Sie die Clienteinstellung **Computer-Agent** > **Neues Softwarecenter verwenden** aktivieren.<br><br>Weitere Informationen zum Softwarecenter finden Sie unter [Planen und Konfigurieren der Anwendungsverwaltung in System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management).|13. Dezember 2016|Die Unterstützung der vorherigen Version des Softwarecenters endet mit dem ersten Update, das nach dem 1. Januar 2018 veröffentlicht wird.|
 |Mit der Einführung der neuen Softwarecenter-Benutzeroberfläche in Version 1511 werden Apps, die bisher nur im Anwendungskatalog angezeigt wurden (für Benutzer verfügbare Apps), jetzt im Softwarecenter angezeigt. </br></br>Da diese primäre Funktionalität des Anwendungskatalogs jetzt im Softwarecenter enthalten ist, wird die internetbasierte Anwendungskatalog-Benutzeroberfläche in den nächsten Monaten nicht mehr verfügbar sein.|11. August 2017| Unterstützung für die Anwendungskatalog-Website-Benutzeroberfläche endet mit dem ersten Update, das nach dem 1. Juni 2018 veröffentlicht wird.|
 |Verwaltung von virtuellen Festplatten (VHDs) mit Configuration Manager. </br></br>Dies schließt das Entfernen von Optionen zum Erstellen einer neuen virtuellen Festplatte oder Verwalten einer virtuellen Festplatte mithilfe einer Tasksequenz und das Entfernen des Knotens „Virtuelle Festplatten“ über die Configuration Manager-Konsole ein. </br></br>Wenn dieser Support eingestellt wird, werden vorhandene virtuelle Festplatten nicht gelöscht, es kann aber nicht mehr in der Configuration Manager-Konsole darauf zugegriffen werden.  |6. Januar 2017 |Der Support für virtuelle Festplatten endet mit dem ersten Update, das nach dem 1. Juni 2017 veröffentlicht wird.|
-|System Center Configuration Manager-Upgradebewertungstool </br></br>Das Upgradebewertungstool ist sowohl von System Center Configuration Manager als auch vom Anwendungskompatibilitäts-Toolkit (Application Compatibility Toolkit, ACT) 6.x abhängig. Die letzte Version von ACT war im Windows 10 v1511 ADK enthalten. Da es keine weiteren Updates für ACT geben wird, wird auch der entsprechende Support für das Upgradebewertungstool eingestellt. </br></br>Das Upgradebewertungstool wird durch das Feature [Upgradebereitschaft](/sccm/core/clients/manage/upgrade/upgrade-analytics) ersetzt. Hinweise zu veralteten Funktionen wurden am 9. Dezember 2016 auf der [Downloadseite des Upgradebewertungstools](https://www.microsoft.com/download/details.aspx?id=37145) hinzugefügt. |9. Dezember 2016  | 11. Juli 2017 |
+|System Center Configuration Manager-Upgradebewertungstool </br></br>Das Upgradebewertungstool ist sowohl von System Center Configuration Manager als auch vom Anwendungskompatibilitäts-Toolkit (Application Compatibility Toolkit, ACT) 6.x abhängig. Die letzte Version von ACT war im Windows 10 v1511 ADK enthalten. Da es keine weiteren Updates für ACT geben wird, wird auch der entsprechende Support für das Upgradebewertungstool eingestellt. </br></br>Das Upgradebewertungstool wird durch das Feature [Upgradebereitschaft](/sccm/core/clients/manage/upgrade/upgrade-analytics) ersetzt. Hinweise zu veralteten Funktionen wurden am 12. September 2016 auf der [Downloadseite des Upgradebewertungstools](https://www.microsoft.com/download/details.aspx?id=37145) hinzugefügt. | 12. September 2016  | 11. Juli 2017 |
 
 
 <br></br>

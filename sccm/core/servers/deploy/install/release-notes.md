@@ -3,7 +3,7 @@ title: 'Anmerkungen zu dieser Version '
 titleSuffix: Configuration Manager
 description: In diesen Anmerkungen finden Sie Informationen zu dringenden Problemen, die im Produkt noch nicht behoben oder bisher in keinem Microsoft Knowledge Base-Artikel beschrieben wurden.
 ms.custom: na
-ms.date: 08/23/2017
+ms.date: 11/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,14 +13,14 @@ ms.topic: get-started-article
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 caps.latest.revision: "41"
 caps.handback.revision: "0"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 2571cfbff1373db05279918af776d8be81a5c322
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 8030ce7f98ebb34d9581ad036513b9b1c879c0ad
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="release-notes-for-system-center-configuration-manager"></a>Anmerkungen zu dieser Version von System Center Configuration Manager
 
@@ -37,30 +37,10 @@ Informationen zu den neuen, in den verschiedenen Versionen eingeführten Feature
 - [Neues in Version 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)  
 - [Neuigkeiten in Version 1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)
 - [Neuigkeiten in Version 1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)
-   
+
 
 
 ## <a name="setup-and-upgrade"></a>Setup und Upgrade  
-
-### <a name="after-you-update-a-configuration-manager-console-using-consolesetupexe-from-the-site-server-folder-recent-language-pack-changes-are-not-available"></a>Nachdem Sie eine Configuration Manager-Konsole mithilfe von „ConsoleSetup.exe“ aus dem Ordner des Standortservers aktualisiert haben, sind neuere Änderungen des Sprachpakets nicht verfügbar
-<!--  SMS 486420  Applicability should be 1610 and 1702.  -->
-*Folgendes gilt für die Versionen 1610 und 1702.*   
-Nachdem Sie ein direktes Update einer Konsole mithilfe von „ConsoleSetup.exe“ aus dem Installationsordner eines Standortservers durchgeführt haben, sind kürzlich installierte Sprachpakete möglicherweise nicht verfügbar. Dies hat folgende Gründe:
-- An Ihrem Standort wird Version 1610 oder 1702 ausgeführt.
-- Die Konsole wurde direkt mithilfe von „ConsoleSetup.exe“ aus dem Installationsordner des Standortservers aktualisiert.
-
-Wenn dieses Problem auftritt, verwendet die neu installierte Konsole nicht die aktuellsten Sprachpakete, die konfiguriert wurden. Es werden keine Fehler zurückgegeben, aber die für die Konsole verfügbaren Sprachpakete haben sich nicht geändert.  
-
-**Problembehebung:** Deinstallieren Sie die aktuelle Konsole, und installieren Sie anschließend die Konsole erneut als neue Installation. Sie können „ConsoleSetup.exe“ aus dem Installationsordner des Standortservers verwenden. Stellen Sie sicher, dass Sie während der Installation die Sprachpaketdateien auswählen, die Sie verwenden möchten.
-
-
-### <a name="with-version-1702-the-default-site-boundary-group-is-configured-for-use-for-site-assignment"></a>Ab Version 1702 ist die Standardbegrenzungsgruppe für die Standortzuweisung konfiguriert
-<!--  SMS 486380   Applicability should only be to 1702. -->
-*Folgendes gilt für Version 1702.*  
-Die Option **Diese Begrenzungsgruppe für die Standortzuweisung verwenden** ist auf der Registerkarte „Referenz“ der Begrenzungsgruppe aktiviert; außerdem ist dort der Standort als **Zugewiesener Standort** aufgelistet. Die Option ist ausgeblendet, damit die Konfiguration nicht bearbeitet oder entfernt werden kann.
-
-**Problemumgehung:** Keiner Sie können diese Einstellung ignorieren. Die Standard-Standortbegrenzungsgruppe wird nicht für die Standortzuweisung verwendet, obwohl die Standortzuweisung für diese aktiviert ist. Ab Version 1702 stellt diese Konfiguration sicher, dass die Standard-Standortbegrenzungsgruppe dem richtigen Standort zugeordnet ist.
-
 
 
 ### <a name="when-installing-a-long-term-service-branch-site-using-version-1606-a-current-branch-site-is-installed"></a>Wenn Sie einen Long-Term Servicing Branch-Standort (LTSB) mit Version 1606 installieren, wird ein aktueller Current Branch-Standort installiert
@@ -112,29 +92,6 @@ Fehler beim Ausführen von Setup mit den folgenden Fehlermeldungen im Setup-Prot
  - Löschen Sie den Ordner *cd.latest\redist\languagepack\zhh*, und führen Sie anschließend Setup erneut aus.
 
 
-### <a name="service-connection-tool-throws-an-exception-when-sql-server-is-remote-or-when-shared-memory-is-disabled"></a>Das Dienstverbindungstool löst eine Ausnahme aus, wenn SQL Server remote verfügbar ist oder Shared Memory deaktiviert ist
-<!-- 479223   Fixed in 1702 and later   -->
-*Folgendes gilt für Version 1610 und früher.*  
-Das Dienstverbindungstool generiert eine Ausnahme, wenn eine der folgenden Bedingungen zutrifft:  
- -  Die Standortdatenbank befindet sich nicht auf dem Computer, der den Dienstverbindungspunkt hostet, und verwendet einen nicht standardmäßigen Port (nicht Port 1433)
- -  Die Standortdatenbank ist auf demselben Server wie der Dienstverbindungspunkt, aber das SQL-Protokoll **Shared Memory** ist deaktiviert
-
-Die Ausnahme ist ähnlich der folgenden:
- - *Nicht behandelte Ausnahme: System.Data.SqlClient.SqlException: Netzwerkbezogener oder instanzspezifischer Fehler beim Herstellen einer Verbindung mit SQL Server. Der Server wurde nicht gefunden oder war nicht zugänglich. Stellen Sie sicher, dass der Instanzname richtig ist und dass SQL Server für das Zulassen von Remoteverbindungen konfiguriert ist. (Anbieter: Named Pipes-Provider, Fehler: 40 – Verbindung mit SQL Server konnte nicht geöffnet werden) --*
-
-**Problemumgehung**: Bei Verwendung des Tools müssen Sie die Registrierung des Servers, der den Dienstverbindungspunkt hostet, mit Informationen zum SQL Server-Port ändern:
-
-   1.   Bearbeiten Sie vor der Verwendung des Tools den folgenden Registrierungsschlüssel, und fügen Sie die Nummer des verwendeten Ports dem Namen des SQL Servers hinzu:
-    - Schlüssel: HKLM\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\
-      - Wert: &lt;SQL Server-Name>
-    - Hinzufügen: **,&lt;PORT>**
-
-    Z.B. bei Hinzufügen des Ports *15001* zu einem Server namens *testserver.test.net* wäre der resultierende Schlüssel: ***HKLM\Software\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\testserver.test.net,15001***
-
-   2.   Nachdem Sie den Port in der Registrierung hinzufügen, sollte das Tool normal funktionieren.  
-
-   3.   Nachdem Sie das Tool verwendet haben, ändern Sie für die Schritte **Verbindung** und **Import** den Registrierungsschlüssel auf den ursprünglichen Wert zurück.  
-
 
 <!-- ## Backup and recovery  -->
 
@@ -157,15 +114,6 @@ Der Assistent zum Erstellen eines Wartungsplans wird zurzeit standardmäßig nac
 Nachdem Sie einen Wartungsplan erstellt haben, öffnen Sie die Eigenschaften des Plans, wechseln Sie zur Registerkarte **Auswertungszeitplan**, wählen Sie **Regel nach Zeitplan ausführen** aus, klicken Sie auf **Anpassen**, und erstellen Sie einen benutzerdefinierten Zeitplan. Sie können den Wartungsplan beispielsweise alle 60 Tage ausführen.  
 
 
-### <a name="when-a-high-risk-deployment-dialog-is-visible-to-a-user-subsequent-high-risk-dialogs-with-a-sooner-deadline-are-not-displayed"></a>Wenn einem Benutzer ein Dialogfeld über eine risikoreiche Bereitstellung angezeigt wird, werden keine nachfolgenden Dialogfelder über risikoreiche Bereitstellungen mit einem früheren Stichtag angezeigt.
-<!-- Fixed in 1702 and later -->
-*Folgendes gilt für Version 1610 und früher.*   
-Nachdem Sie eine risikoreiche Taskbereitstellung für Benutzer erstellt und bereitgestellt haben, wird dem Benutzer ein Dialogfeld über eine risikoreiche Bereitstellung angezeigt. Wenn der Benutzer das Dialogfeld nicht schließt und Sie eine weitere risikoreiche Bereitstellung mit einem früheren Stichtag erstellen, wird dem Benutzer das aktualisierte Dialogfeld nicht angezeigt, weil er das erste Dialogfeld nicht geschlossen hat. Die Bereitstellungen werden dennoch am konfigurierten Stichtag ausgeführt.
-
-**Problemumgehung**:  
-Der Benutzer muss das Dialogfeld für die erste risikoreiche Bereitstellung schließen, damit das Dialogfeld für die nächste risikoreiche Bereitstellung angezeigt wird.
-
-
 
 ## <a name="software-updates"></a>Softwareupdates
 
@@ -180,6 +128,12 @@ Verwenden Sie in der XML-Konfigurationsdatei nur [vom Office 365 ProPlus-Client 
 
 
 ## <a name="mobile-device-management"></a>Verwaltung mobiler Geräte  
+
+### <a name="beginning-with-version-1710-you-can-no-longer-deploy-windows-phone-81-vpn-profiles-to-windows-10------503274--should-be-fixed-by-1802-if-not-sooner---"></a>Ab Version 1710 können Sie Windows Phone 8.1 VPN-Profile nicht mehr unter Windows 10 bereitstellen   <!-- 503274  Should be fixed by 1802, if not sooner -->
+In Version 1710 ist es nicht mehr möglich, ein VPN-Profil mit dem Windows Phone 8.1-Workflow zu erstellen, der auch für Windows 10-Geräte gilt. Bei diesen Profilen wird im Erstellungs-Assistenten die Seite „Unterstützte Plattformen“ nicht mehr angezeigt, und Windows Phone 8.1 wird automatisch im Back-End ausgewählt. Auf den Eigenschaftsseiten ist die Seite „Unterstützte Plattformen“ verfügbar, aber die Windows 10-Optionen werden nicht angezeigt.
+
+**Problemumgehung**: Verwenden Sie für Windows 10-Geräte den Workflow für Windows 10-VPN-Profile. Falls dies für Ihre Umgebung nicht möglich ist, wenden Sie sich an den Support. Der Support kann Ihnen bei Bedarf helfen, Unterstützung für Windows 10 hinzuzufügen.
+
 
 ### <a name="full-wipe-disables-windows-10-devices-with-less-than-4-gb-ram"></a>Das vollständige Zurücksetzen deaktiviert Windows 10-Geräte mit weniger als 4 GB RAM.
 Eine vollständige Zurücksetzung von Windows 10 RTM-Geräten (frühere Versionen als Version 1511) mit weniger als 4 GB RAM machen das Gerät unbrauchbar. Nach dem versuchten Zurücksetzen des Geräts startet oder reagiert es nicht mehr.
@@ -204,20 +158,4 @@ Bei der Erstellung eines Android for Work-E-Mail-Profils stehen zwei Authentifiz
 
 <!-- ## Reports and monitoring    -->
 <!-- ## Conditional access   -->
-
-
-## <a name="endpoint-protection"></a>Endpoint Protection
-
-### <a name="antimalware-policy-fails-to-apply-on-windows-server-2016-core"></a>Richtlinie für Antischadsoftware kann unter Windows Server 2016 Core nicht angewendet werden
-<!--  Product Studio bug 485370 added 04 19 2017   Fixed in 1702 -->
-*Folgendes gilt für Version 1610 und früher.*  
-Die Richtlinie für Antischadsoftware kann unter Windows Server 2016 Core nicht angewendet werden.  Der Fehlercode lautet 0x80070002.  Fehlende Abhängigkeit für ConfigSecurityPolicy.exe.
-
-**Problemumgehung**: Dieses Problem wird mit dem Update im [Knowledge Base-Artikel 4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) behoben, der am 9. Mai 2017 veröffentlicht wurde.
-
-
-### <a name="windows-defender-advanced-threat-protection-policies-fail-on-older-client-agents"></a>Windows Defender Advanced Threat Protection-Richtlinien schlagen auf älteren Client-Agents fehl
-<!-- Product Studio bug 462286 added  05 25 2017 and valid until July 2017 GA release      Fixed in 1610 -->
-Windows Defender Advanced Threat Protection-Richtlinien, die über einen Standortserver mit Configuration Manager, Version 1610 oder höher, erstellt wurden, können auf Clients mit Configuration Manager, Version 1606 und früher, nicht angewendet werden.  Die Clients wurden nicht integriert, und bei der Richtlinienauswertung wird ein Fehler gemeldet. Der **Bereitstellungszustand** in der Windows Defender Advanced Threat Protection-Konfiguration zeigt **Fehler** an.
-
-**PROBLEMUMGEHUNG**: Aktualisieren Sie den Configuration Manager-Client auf Version 1610 oder höher.
+<!-- ## Endpoint Protection -->
