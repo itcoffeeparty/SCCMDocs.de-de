@@ -15,11 +15,11 @@ caps.latest.revision: "5"
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 34886a38ed4b797b254e3fb83eb66588c7e1d116
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 2c87cf0e63e4b95f5b94b6cda9e2aa40c4389184
+ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="site-and-site-system-prerequisites-for-system-center-configuration-manager"></a>Voraussetzungen für Standorte und Standortsysteme für System Center Configuration Manager
 
@@ -258,8 +258,9 @@ ms.lasthandoff: 12/04/2017
     > [!NOTE]  
     >  WDS wird automatisch installiert und konfiguriert, wenn Sie einen Verteilungspunkt zur Unterstützung von PXE oder Multicast auf einem Server konfigurieren, der Windows Server 2012 oder höher ausführt.  
 
+<!--sms.503672 -Clarified BITS use-->
 > [!NOTE]  
-> Die Standortsystemrolle „Verteilungspunkt“ erfordert keinen intelligenten Hintergrundübertragungsdienst (Background Intelligent Transfer Service, BITS). Wenn BITS auf dem Verteilungspunktcomputer konfiguriert ist, wird BITS auf diesem Computer nicht verwendet, um BITS-Clients den Download von Inhalten zu erleichtern.  
+> Wenn der Verteilungspunkt Inhalte überträgt, erfolgt die Übertragung über den in das Windows-Betriebssystem integrierten **Background Intelligent Transfer Service** (BITS). Für die Verteilungspunktrolle muss nicht das optionale BITS-IIS-Servererweiterungsfeature installiert werden, da der Client keine Informationen in die Rolle hochlädt.  
 
 ###  <a name="bkmk_2012EPPpreq"></a> Endpoint Protection-Punkt  
 **Windows Server-Rollen und -Features:**  
@@ -626,8 +627,9 @@ Wenn Sie eine benutzerdefinierte IIS-Konfiguration verwenden, können Sie nicht 
     > [!NOTE]  
     >  WDS wird automatisch installiert und konfiguriert, wenn Sie einen Verteilungspunkt zur Unterstützung von PXE oder Multicast auf einem Server konfigurieren, der Windows Server 2012 oder höher ausführt.  
 
+<!--sms.503672 -Clarified BITS use-->
 > [!NOTE]  
-> Die Standortsystemrolle „Verteilungspunkt“ erfordert keinen intelligenten Hintergrundübertragungsdienst (Background Intelligent Transfer Service, BITS). Wenn BITS auf dem Verteilungspunktcomputer konfiguriert ist, wird BITS auf diesem Computer nicht verwendet, um BITS-Clients den Download von Inhalten zu erleichtern.  
+> Wenn der Verteilungspunkt Inhalte überträgt, erfolgt die Übertragung über den in das Windows-Betriebssystem integrierten **Background Intelligent Transfer Service** (BITS). Für die Verteilungspunktrolle muss nicht das optionale BITS-IIS-Servererweiterungsfeature installiert werden, da der Client keine Informationen in die Rolle hochlädt.   
 
 
 ###  <a name="bkmk_2008EPPpreq"></a> Endpoint Protection-Punkt  

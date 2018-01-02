@@ -15,11 +15,11 @@ caps.latest.revision: "9"
 author: aaroncz
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: ea8eead4706472a02f216b432ea9f2e6bdf23f66
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: f0feba771dcc75d84cd1233fea562472ff6c1158
+ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="use-a-pull-distribution-point-with-system-center-configuration-manager"></a>Verwenden eines Pullverteilungspunkts mit System Center Configuration Manager
 
@@ -105,8 +105,10 @@ Wenn von einem Pullverteilungspunkt Inhalt von einem Quellverteilungspunkt herun
 -   Dieses Framework wird von **Pulldp.msi** installiert, wenn Sie den Verteilungspunkt als Pullverteilungspunkt konfigurieren. Der Configuration Manager-Client ist für das Framework nicht erforderlich.  
 
 -   Nach der Installation des Pullverteilungspunkts muss der Dienst „CCMExec“ auf dem Verteilungspunktcomputer funktionstüchtig sein, damit der Pullverteilungspunkt eingesetzt werden kann.  
+<!--sms.503672 -Clarified BITS use-->
+-   Wenn der Pullverteilungspunkt Inhalte überträgt, erfolgt die Übertragung mithilfe des in das Windows-Betriebssystem integrierten **Background Intelligent Transfer Service** (BITS). Für einen Pullverteilungspunkt muss nicht das optionale BITS-IIS-Servererweiterungsfeature installiert werden.
 
--   Der Vorgang der Inhaltsübertragung wird vom Pullverteilungspunkt mithilfe der **intelligenten Hintergrundübertragung** (Background Intelligent Transfer Service, BITS) ausgeführt und auf dem Verteilungspunktcomputer in **datatransferservice.log** und **pulldp.log** protokolliert.  
+-  Der Pullverteilungspunkt protokolliert den Vorgang in den Dateien **datatransferservice.log** und **pulldp.log** auf dem Verteilungspunktcomputer.
 
 ## <a name="see-also"></a>Weitere Informationen:  
  [Grundlegende Konzepte für die Inhaltsverwaltung in System Center Configuration Manager](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)   

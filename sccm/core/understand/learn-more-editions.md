@@ -3,7 +3,7 @@ title: Weitere Informationen zu Lizenzierung und Branches
 titleSuffix: Configuration Manager
 description: "In diesem Thema erfahren Sie mehr zu den Lizenzanforderungen für die Installationsoptionen, die mit dem System Center Configuration Manager-Release vom Oktober 2016 zur Verfügung stehen. Dieses Release beinhaltet die Current Branch-Version 1606, Long-Term Servicing Branch (LTSB) und die Evaluierungsinstallation von Current Branch."
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 12/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: aaroncz
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 0890b25f4b5b96a8d39b0dcf6f0aa659c07265db
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: bcb25fc6faad3d5f7162ae4ceb200c6de1c1c25b
+ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="licensing-and-branches-for-system-center-configuration-manager"></a>Lizenzierung und Branches für System Center Configuration Manager
 
@@ -42,7 +42,7 @@ In diesem Thema wird auf den Software Assurance-Vertrag (oder die entsprechenden
 
 |Zweig|Lizenzierung|Details|
 |----------------|---------------------|--------------------|
-|Current Branch | Erfordert eine aktive Software Assurance-Vereinbarung (oder entsprechende Rechte) für Configuration Manager </br></br> Lesen Sie hierzu auch den Abschnitt [Software Assurance und Current Branch](#software-assurance-and-the-current-Branch) in diesem Thema.| Unterstützung für die Verwendung in Produktionsumgebungen, die regelmäßig Qualitäts- und Featureupdates von Microsoft erhalten möchten. </br></br> Dieser Branch stellt Zugriff auf alle Features und Verbesserungen bereit. </br></br> Jedes Versionsupdate wird nach seiner Veröffentlichung ein (1) Jahr lang unterstützt. Innerhalb dieses Zeitraums müssen Sie ein Update auf eine neuere Version durchführen, die weiterhin [unterstützt wird](/sccm/core/servers/manage/current-branch-versions-supported).|
+|Current Branch | Erfordert eine aktive Software Assurance-Vereinbarung (oder entsprechende Rechte) für Configuration Manager </br></br> Lesen Sie hierzu auch den Abschnitt [Software Assurance und Current Branch](#software-assurance-and-the-current-Branch) in diesem Thema.| Unterstützung für die Verwendung in Produktionsumgebungen, die regelmäßig Qualitäts- und Featureupdates von Microsoft erhalten möchten. </br></br> Dieser Branch stellt Zugriff auf alle Features und Verbesserungen bereit. </br></br> Für Versionen von Configuration Manager, die vor 1710 veröffentlicht wurden, wird 12 Monate Support geboten. Ab Version 1710 wird jede Updateversion ab dem Veröffentlichungsdatum der allgemeinen Verfügbarkeit 18 Monate lang unterstützt. Weitere Informationen finden Sie unter [Support für die Current Branch-Versionen von System Center Configuration Manager](/sccm/core/servers/manage/current-branch-versions-supported).|
 |Long-Term Servicing Branch (LTSB)| Erfordert zum Zeitpunkt der Veröffentlichung (1. Oktober 2016) einen aktuellen Software Assurance-Vertrag mit Microsoft </br></br> Lesen Sie hierzu auch den Abschnitt [Software Assurance und der LTSB](#software-assurance-and-the-ltsb) in diesem Thema. | Unterstützung für die Verwendung in Produktionsumgebungen. Vorgesehen für Kunden, die ihre Software Assurance oder entsprechenden Abonnementrechte für Configuration Manager nach dem 1. Oktober 2016 haben ablaufen lassen </br></br> Dieser Branch hat Einschränkungen im Vergleich zu Current Branch. </br></br> Kritische Sicherheitsupdates für Configuration Manager sind für diesen Branch verfügbar, allerdings stehen keine neuen Features zur Verfügung. |
 |Evaluierungsinstallation von Current Branch| Erfordert keinen Software Assurance-Vertrag mit Microsoft | [Evaluierungsinstallationen](https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) sind immer Teil von Current Branch und können 180 Tage lang verwendet werden. </br></br> Die Evaluierungsversion kann auf eine vollständige Installation von Current Branch upgegradet werden. Sie können keine Evaluierungsinstallation auf Long-Term Servicing Branch upgraden.|
 

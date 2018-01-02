@@ -3,7 +3,7 @@ title: "Erstellen und Ausführen von Skripts"
 titleSuffix: Configuration Manager
 description: "Erfahren Sie, wie PowerShell-Skripts erstellt und auf Clientgeräten ausgeführt werden."
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 11/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,31 +16,31 @@ caps.handback.revision: "0"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: angrobe
-ms.openlocfilehash: 964f6d39c4c1afc82ff4336821740923d27cd569
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: 1472f697ae8b82e6268433aa6398fcc10a429994
+ms.sourcegitcommit: 5f4a584d4a833b0cc22bd8c47da7dd55aced97fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Erstellen und Ausführen von PowerShell-Skripts über die Configuration Manager-Konsole
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Wir haben jetzt die Möglichkeit zum Ausführen von PowerShell-Skripts besser in System Center Configuration Manager integriert. PowerShell bietet den Vorteil der Erstellung ausgeklügelter, automatisierter Skripts, die von einer größeren Community verstanden und geteilt werden. Die Skripts vereinfachen die Erstellung benutzerdefinierter Tools zur Verwaltung von Software und ermöglichen Ihnen, alltägliche Aufgaben schnell zu erledigen, sodass Sie große Aufträge einfacher und konsistenter bewältigen können.
+>[!TIP]
+>Die bei Version 1706 eingeführte Option zum Ausführen von PowerShell-Skripts ist ein Vorabfeature. Informationen zum Aktivieren von Skripts finden Sie unter [Features der Vorabversion in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
+
+Wir haben nun die Möglichkeit zum Ausführen von PowerShell-Skripts besser in System Center Configuration Manager integriert. PowerShell bietet den Vorteil der Erstellung ausgeklügelter, automatisierter Skripts, die von einer größeren Community verstanden und geteilt werden. Die Skripts vereinfachen die Erstellung benutzerdefinierter Tools zur Verwaltung von Software und ermöglichen Ihnen, alltägliche Aufgaben schnell zu erledigen, sodass Sie große Aufträge einfacher und konsistenter bewältigen können.
 
 Durch diese Integration in System Center Configuration Manager können Sie die Funktion *Skripts ausführen* verwenden, um Folgendes zu tun:
 
-- Erstellen und Bearbeiten von Skripts für die Verwendung mit Configuration Manager
-- Verwalten der Skriptnutzung mithilfe von Rollen und Sicherheitsbereichen  
+- Erstellen und Bearbeiten von Skripts für die Verwendung mit System Center Configuration Manager
+- Verwalten der Skriptnutzung mithilfe von Rollen und Sicherheitsbereichen 
 - Anwenden von Skripts auf Sammlungen einzelner lokal verwalteter Windows-PCs
 - Abrufen schnell aggregierter Skriptergebnisse von Clientgeräten
 - Überwachen der Skriptausführung und Anzeigen von Berichtsergebnissen in der Skriptausgabe
 
->[!IMPORTANT]
+>[!WARNING]
 >Angesichts der Leistungsfähigkeit von Skripts möchten wir Sie daran erinnern, diese bewusst und sorgfältig einzusetzen. Wir haben zusätzliche Sicherheitsvorkehrungen eingebaut, um Sie zu unterstützen: getrennte Rollen und Bereiche. Stellen Sie die Fehlerfreiheit von Skripts sicher, bevor Sie sie ausführen. Bestätigen Sie außerdem, dass sie aus einer vertrauenswürdigen Quelle stammen, um eine unbeabsichtigte Ausführung von Skripts zu verhindern. Achten Sie auf Sonderzeichen oder sonstige Obfuskation, und informieren Sie sich über die Absicherung von Skripts.
-
->[!TIP]
->Ab Version 1706 sind PowerShell-Skripts eine Vorabfunktion. Informationen zum Aktivieren von Skripts finden Sie unter [Features der Vorabversion in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -49,7 +49,7 @@ Durch diese Integration in System Center Configuration Manager können Sie die F
 - Um Skripts zu verwenden, müssen Sie Mitglied der entsprechenden Configuration Manager-Sicherheitsrolle sein.
 - Importieren und Erstellen von Skripts: Ihr Konto benötigt in der Sicherheitsrolle **Hauptadministrator** die Berechtigung **Erstellen** für **SMS-Skripts**.
 - Genehmigen und Ablehnen von Skripts: Ihr Konto benötigt in der Sicherheitsrolle **Hauptadministrator** die Berechtigung **Genehmigen** für **SMS-Skripts**.
-- Ausführen von Skripts: Ihr Konto benötigt in der Sicherheitsrolle **Konformitätseinstellungs-Manager** die Berechtigung **Skript ausführen** für **Sammlungen**.
+- Ausführen von Skripts: Ihr Konto benötigt in der Sicherheitsrolle **Hauptadministrator** die Berechtigung **Skript ausführen** für **Sammlungen**.
 
 Weitere Informationen zu Configuration Manager-Sicherheitsrollen finden Sie unter [Grundlagen der rollenbasierten Verwaltung für System Center Configuration Manager](/sccm/core/understand/fundamentals-of-role-based-administration).
 
@@ -58,7 +58,7 @@ Weitere Informationen zu Configuration Manager-Sicherheitsrollen finden Sie unte
 Von der Funktion „Skripts ausführen“ wird derzeit Folgendes unterstützt:
 
 - Skriptsprachen: PowerShell
-- Parametertypen: Integer und String
+- Parametertypen: „integer“, „string“ und „list“
 
 ## <a name="run-script-authors-and-approvers"></a>Skript ausführen: Ersteller und Genehmiger
 
@@ -91,7 +91,7 @@ Diese Genehmigung erfolgt in erster Linie in der Testphase der Skriptentwicklung
 >[!IMPORTANT]
 >Als bewährte Methode sollten Sie nicht zulassen, dass Skriptautoren ihre eigenen Skripts genehmigen können. Dies sollte nur in einer Testumgebung gestattet sein. Bedenken Sie die möglichen Auswirkungen, die eine Änderung dieser Einstellung in einer Produktionsumgebung mit sich bringt.
 
-## <a name="security-scopes"></a>Sicherheitsbereiche
+## <a name="security-scopes"></a>Sicherheitsbereichen
 *(Mit Version 1710 eingeführt)*  
 Die Funktion „Skripts ausführen“ arbeitet mit Sicherheitsbereichen, einer bereits vorhandenen Configuration Manager-Funktion, um die Erstellung und Ausführung von Skripts zu steuern, indem Kategorien zugewiesen werden, die Benutzergruppen darstellen. Weitere Informationen zu Sicherheitsbereichen finden Sie unter [Konfigurieren der rollenbasierten Verwaltung für System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
 
@@ -120,79 +120,83 @@ Jeder Parameter Ihres Skripts hat ein eigenes Dialogfeld, in dem Sie weitere Det
 
 Für jeden Parameter in Ihrem Skript gibt es das Dialogfeld **Skriptparameter – Eigenschaften**, in dem Sie eine Validierung für den jeweiligen Parameter hinzufügen können. Nach dem Hinzufügen der Validierung sollten Sie Fehlermeldungen erhalten, wenn Sie einen Wert für einen Parameter eingeben, der nicht dessen Validierung entspricht.
 
-#### <a name="example-firstname"></a>Beispiel: FirstName
+#### <a name="example-firstname"></a>Beispiel: *FirstName*
 
-In diesem Beispiel können Sie die Eigenschaften des Zeichenfolgenparameters *FirstName* festlegen. Beachten Sie das optionale Feld für **Benutzerdef. Fehler**. Mithilfe dieses nützlichen Felds können Sie für die Benutzer eine Anleitung für die Interaktion mit dem Zeichenfolgenparameter, in diesem Fall *FirstName*, hinzufügen.
+In diesem Beispiel können Sie die Eigenschaften des Zeichenfolgenparameters *FirstName* festlegen.
 
 ![Skriptparameter: String](./media/run-scripts/RS-parameters-string.png)
+
+
+Der Abschnitt „Überprüfung“ des Dialogfelds **Skriptparametereigenschaften** enthält die folgenden Felder, die Sie verwenden können:
+
+- **Mindestlänge**: Minimale Anzahl von Zeichen im Feld *FirstName*.
+- **Maximale Länge**: Maximale Anzahl von Zeichen im Feld *FirstName*.
+- **RegEx**: Kofferwort für *Regular Expression*, d.h. regulärer Ausdruck. Weitere Informationen zur Verwendung von regulären Ausdrücken finden Sie im nächsten Abschnitt *Durchführen der Überprüfung von regulären Ausdrücken*.
+- **Benutzerdef. Fehler**: Nützlich zum Hinzufügen einer eigenen benutzerdefinierten Fehlermeldung, die alle Fehlermeldungen im Rahmen der Systemüberprüfung ersetzt.
+
+#### <a name="using-regular-expression-validation"></a>Durchführen der Überprüfung von regulären Ausdrücken
+
+Ein regulärer Ausdruck stellt eine kompakte Programmiermethode dar, um eine Zeichenfolge anhand einer codierten Überprüfung zu überprüfen. Sie können z.B. im Feld *FirstName* nach einem fehlenden Großbuchstaben suchen, indem Sie `[^A-Z]` in das Feld *RegEx* eingeben.
+
+Die Verarbeitung regulärer Ausdrücke für dieses Dialogfeld wird vom .NET Framework unterstützt. Hinweise zur Verwendung von regulären Ausdrücken finden Sie unter [Reguläre Ausdrücke von .NET](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions). 
+
 
 ## <a name="script-examples"></a>Beispiele für Skripts
 
 Hier finden Sie einige Beispiele, die Skripts veranschaulichen, die sich mit dieser Funktion verwenden lassen.
 
-### <a name="create-a-folder"></a>Erstellen eines Ordners
+### <a name="create-a-new-folder-and-file"></a>Erstellen eines neuen Ordners und einer neuen Datei
+
+Dieses Skript erstellt basierend auf Ihrer Namenseingabe einen neuen Ordner und eine Datei in diesem Ordner.
 
 ``` powershell
-New-Item "c:\scripts" -type folder name
-```
-
-### <a name="create-a-file"></a>Erstellen einer Datei
-
-```powershell
-New-Item "c:\scripts\new_file.txt" -type file name
-```
-
-### <a name="ping-a-given-computer"></a>Pingen eines bestimmten Computers
-
-Dieses Skript verwendet eine Zeichenfolge als Parameter für einen *ping*-Vorgang.
-
-``` powershell
-Param
-(
- [String][Parameter(Mandatory=$True, Position=1)] $Computername
+Param(
+[Parameter(Mandatory=$True)]
+[string]$FolderName,
+[Parameter(Mandatory=$True)]
+[string]$FileName,
 )
 
-Ping $Computername
+New-Item $FolderName -type directory
+New-Item $FileName -type file
 ```
 
-### <a name="get-battery-status"></a>Abrufen des Akkustatus
+### <a name="get-os-version"></a>Abrufen der Betriebssystemversion
 
-Dieses Skript verwendet WMI, um den Akkustatus des Computers abzufragen.
+Dieses Skript verwendet WMI, um die Betriebssystemversion des Computers abzufragen.
 
 ``` powershell
-Write-Output (Get-WmiObject -Class Win32_Battery).BatteryStatus
-
+Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 ```
 
 ## <a name="run-a-script"></a>Ausführen eines Skripts
 
-Nachdem ein Skript genehmigt wurde, kann es für die von Ihnen gewählte Sammlung ausgeführt werden. Sobald die Ausführung Ihres Skripts beginnt, wird es schnell in einem System mit hoher Priorität gestartet und binnen einer Stunde ausgeführt. Die Ergebnisse des Skripts werden über ein langsameres Zustandsmeldungssystem zurückgegeben.
+Nachdem ein Skript genehmigt wurde, kann es für ein einzelnes Gerät oder eine Sammlung ausgeführt werden. Sobald die Ausführung Ihres Skripts beginnt, wird es schnell in einem System mit hoher Priorität gestartet, bei dem binnen einer Stunde ein Timeout auftritt. Die Ergebnisse des Skripts werden dann über ein Zustandsmeldungssystem zurückgegeben.
+
+So wählen Sie eine Sammlung von Zielen für Ihr Skript aus
 
 1. Klicken Sie in der Configuration Manager-Konsole auf **Bestand und Kompatibilität**.
 2. Klicken Sie im Arbeitsbereich Bestand und Kompatibilität auf **Gerätesammlungen**.
 3. Klicken Sie in der Liste **Gerätesammlungen** auf die Sammlung von Geräten, auf denen das Skript ausgeführt werden soll.
-4. Klicken Sie auf der Registerkarte **Start** in der Gruppe **Alle Systeme** auf **Skript ausführen**.
+4. Wählen Sie eine Sammlung Ihrer Wahl aus, und klicken Sie auf **Skript ausführen**.
 5. Wählen Sie im Assistenten **Skript ausführen** auf der Seite **Skript** ein Skript in der Liste aus. Es werden nur genehmigte Skripts angezeigt.
 6. Klicken Sie auf **Weiter**, und schließen Sie den Assistenten ab.
 
 >[!IMPORTANT]
->Wenn ein Skript nicht ausgeführt wird, z. B. weil ein Zielclient ausgeschaltet ist, müssen Sie es innerhalb des einstündigen Zeitraums erneut ausführen.
+>Wenn ein Skript nicht ausgeführt wird, weil ein Zielgerät beispielsweise während des einstündigen Zeitraums ausgeschaltet ist, müssen Sie es erneut ausführen.
 
 ### <a name="target-machine-execution"></a>Ausführung auf dem Zielcomputer
+
 Das Skript wird mit dem Konto *System* oder *Computer* auf den entsprechenden Zielclients ausgeführt. Dieses Konto hat begrenzten Netzwerkzugriff. Jeder Zugriff auf Remotesysteme und -standorte durch das Skript muss entsprechend eingerichtet werden.
 
-## <a name="work-flow-and-monitoring"></a>Workflow und Überwachung
+## <a name="script-monitoring"></a>Skriptüberwachung
 
-So sieht der Workflow von „Skripts ausführen“ aus: Erstellen, Genehmigen, Ausführen und Überwachen.
+Nachdem Sie mit der Anwendung eines Skripts auf eine Sammlung von Geräten begonnen haben, gehen Sie wie folgt vor, um den Vorgang zu überwachen. Ab Version 1710 können Sie ein Skript in Echtzeit überwachen, während es ausgeführt wird, und Sie können auch zu einem Bericht für eine bestimmte Ausführung von „Skript ausführen“ zurückkehren. <br>
 
-![Skripts ausführen: Workflow](./media/run-scripts/RS-run-scripts-work-flow.png)
-
-### <a name="script-monitoring"></a>Skriptüberwachung
-
-Nachdem Sie mit der Anwendung eines Skripts auf eine Sammlung von Geräten begonnen haben, gehen Sie wie folgt vor, um den Vorgang zu überwachen. Ab Version 1710 können Sie ein Skript in Echtzeit überwachen, während es ausgeführt wird, und Sie können auch zu einem Bericht für eine bestimmte Ausführung von „Skript ausführen“ zurückkehren.
+![Skriptüberwachung: Status der Skriptausführung](./media/run-scripts/RS-monitoring-three-bar.png)
 
 1. Klicken Sie in der Configuration Manager-Konsole auf **Überwachung**.
-2. Klicken Sie im Arbeitsbereich **Überwachung** auf **Skriptstatus**. ![Skriptüberwachung: Status der Skriptausführung](./media/run-scripts/RS-monitoring-three-bar.png)
+2. Klicken Sie im Arbeitsbereich **Überwachung** auf **Skriptstatus**.
 3. In der Liste **Skriptstatus** sehen Sie die Ergebnisse für jedes Skript, das Sie auf Clientgeräten ausgeführt haben. Der Exitcode **0** eines Skripts bedeutet im Allgemeinen, dass das Skript erfolgreich ausgeführt wurde.
 
 ## <a name="see-also"></a>Siehe auch

@@ -13,11 +13,11 @@ ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 83bd5fc972bc0bef07b206e160463db71837e827
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 8431ebffc6d1aa463c5622bd67db8a140c0cfe69
+ms.sourcegitcommit: 2dc9c83e57e9734ffc4a93f79cd71285036eeb8b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>Neuerungen in Version 1710 von System Center Configuration Manager
 
@@ -58,7 +58,7 @@ Sie können jetzt [cloudbasierte Verteilungspunkte](/sccm/core/plan-design/hiera
 
 ### <a name="co-management-for-windows-10-devices"></a>Co-Verwaltung für Windows 10-Geräte    
 <!-- 1350871 -->
-Ab Windows 10-Version 1607 (auch Anniversary Update genannt) können Sie ein Windows 10-Gerät gleichzeitig in eine lokale Active Directory-Installation (AD) und eine cloudbasierte Azure AD-Infrastruktur einbinden (Hybrid Azure AD). Co-Verwaltung nutzt diese Verbesserung und ermöglicht es Ihnen, Windows 10-Geräte gleichzeitig mit Configuration Manager und Intune zu verwalten. Diese Lösung schlägt eine Brücke von der herkömmlichen zur modernen Verwaltung und bietet Ihnen die Möglichkeit, die Umstellung Schritt für Schritt durchzuführen. Weitere Informationen finden Sie unter [Co-Verwaltung für Windows 10-Geräte](/sccm/core/clients/manage/co-management-overview).
+In den vorherigen Windows 10-Updates können Sie bereits ein Windows 10-Gerät gleichzeitig in eine lokale Active Directory-Installation (AD) und eine cloudbasierte Azure AD-Infrastruktur einbinden (Hybrid-Azure AD). Ab der Configuration Manager-Version 1710 nutzt die Co-Verwaltung diese Verbesserung und ermöglicht Ihnen, Windows 10-Geräte mit der Version 1709 (auch als „Fall Creators Update“ bezeichnet) gleichzeitig mit Configuration Manager und Intune zu verwalten. Diese Lösung schlägt eine Brücke von der herkömmlichen zur modernen Verwaltung und bietet Ihnen die Möglichkeit, die Umstellung Schritt für Schritt durchzuführen. Weitere Informationen finden Sie unter [Co-Verwaltung für Windows 10-Geräte](/sccm/core/clients/manage/co-management-overview).
 
 ### <a name="restart-computers-from-the-configuration-manager-console-----1356283---"></a>Neustarten von Computern über die Configuration Manager-Konsole  <!-- 1356283 -->
 Ab diesem Release können Sie die Configuration Manager-Konsole verwenden, um Clientgeräte zu identifizieren, die einen Neustart erfordern, und diese Geräte dann mit einer Clientbenachrichtungsaktion neu starten.
@@ -165,7 +165,6 @@ In dieser Version haben wir den Assistenten zum Erstellen von VPN-Profilen und d
 - Wenn die Plattform auf **Android**, **Android for Work** oder **Windows Phone 8.1** festgelegt wird, ist die Seite **Unterstützte Plattformen** nicht erforderlich und wird nicht angezeigt.
 - Der auf dem Configuration Manager-Client basierende Workflow wurde mit den Workflows aus Windows 10 kombiniert, die auf dem Client für hybrid verwaltete mobile Geräte (MDM) basieren. Diese unterstützen alle dieselben Einstellungen.
 - Jeder Plattformworkflow enthält nur die für diesen Workflow geeigneten Einstellungen.  Beispiel: Der Android-Workflow enthält die für Android geeigneten Einstellungen. Die Einstellungen für iOS oder Windows 10 Mobile werden nicht länger im Android-Workflow angezeigt.
-- Bei Windows 8.1-Geräten werden Verbindungstypen, die ausschließlich vom Configuration Manager-Client verwaltet (und nicht von Intune unterstützt) werden, eindeutig gekennzeichnet.
 - Die Seite „Automatisches VPN“ ist veraltet und wurde entfernt.
 
 Diese Änderungen gelten für neue VPN-Profile.  

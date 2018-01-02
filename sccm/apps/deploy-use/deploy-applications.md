@@ -3,7 +3,7 @@ title: Bereitstellen von Anwendungen
 titleSuffix: Configuration Manager
 description: "Erstellen Sie einen Bereitstellungstyp, oder simulieren Sie die Bereitstellung für eine Anwendung mithilfe von System Center Configuration Manager."
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 12/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 31c8a2e212de8c112b68d68e108db3463516142f
-ms.sourcegitcommit: b36f8c8b06e4b2e13f8c1500a82af79a071ab4f6
+ms.openlocfilehash: 97d1ac775a3b38f63372f0ab01243dfdfeb4edb5
+ms.sourcegitcommit: 52b956cfe32c3f06ae68d6ba6fc3244ce5a66325
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="deploy-applications-with-system-center-configuration-manager"></a>Bereitstellen von Anwendungen mit System Center Configuration Manager
 
@@ -171,8 +171,7 @@ Darüber hinaus fällt bei Bereitstellungen mit hohem Risiko, z.B. einer Taskseq
 ## <a name="how-to-check-for-running-executable-files-before-installing-an-application"></a>So prüfen Sie auf ausgeführte ausführbare Dateien, bevor Sie eine Anwendung installieren
 
 >[!Tip]
->Seit Version 1702 ist dies ein vorab veröffentlichtes Feature. Informationen zur Aktivierung finden Sie unter [Features der Vorabversion in System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/manage/pre-release-features).
-> Ab Version 1706 können ist diese Funktion kein vorab veröffentlichtes Feature mehr.
+> Dieses Feature wurde erstmals in Version 1702 als [Vorabfeature](/sccm/core/servers/manage/pre-release-features) eingeführt. Ab Version 1706 können ist diese Funktion kein vorab veröffentlichtes Feature mehr.
 
 Sie können auf der Registerkarte **Installationsverhalten** im Dialogfeld **Eigenschaften** eines Bereitstellungstyps eine von mehreren ausführbaren Dateien festlegen, die die Installation des Bereitstellungstyps verhindert, wenn sie ausgeführt wird. Der Benutzer muss die ausgeführte ausführbare Datei schließen bevor der Bereitstellungstyp installiert werden kann – die Datei kann aber auch automatisch für Bereitstellungen mit dem Zweck „Erforderlich“ geschlossen werden. So konfigurieren Sie dies:
 

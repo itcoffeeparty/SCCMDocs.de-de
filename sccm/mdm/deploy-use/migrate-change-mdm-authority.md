@@ -5,16 +5,16 @@ description: "Erfahren Sie, wie die MDM-Autorität von Configuration Manager (hy
 keywords: 
 author: dougeby
 manager: angrobe
-ms.date: 09/14/2017
+ms.date: 12/05/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
-ms.openlocfilehash: 746bf7d7ef7dd411c47840731edfe664510e5a77
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 8884883c6e4e82cf38d83b9b7843002be3742bf1
+ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="change-your-mdm-authority-to-intune-standalone"></a>Umstellen der MDM-Autorität auf Intune standalone
 
@@ -25,7 +25,7 @@ Sie können einen vorhandenen Microsoft Intune-Mandanten, der über die Configur
 > [!Important]    
 > Informationen zum Umstellen der MDM-Autorität, ohne zuvor hybride MDM-Benutzer zu Intune zu migrieren, finden Sie unter [Umstellen der MDM-Autorität](change-mdm-authority.md).
 
-Mit den Schritten in diesem Thema stellen Sie die MDM-Autorität für einen Mandanten auf Intune um und migrieren alle Geräte, die bisher noch nicht migriert wurden, zu Intune standalone. Dieses Thema bietet Informationen dazu, wie Sie einen vorhandenen, über die Configuration Manager-Konsole (hybrid) konfigurierten Microsoft Intune-Mandanten auf Intune standalone umstellen. Dabei wird vorausgesetzt, dass Sie die folgenden Schritte bereits ausgeführt haben:
+Dieser Artikel enthält Informationen dazu, wie Sie einen vorhandenen, über die Configuration Manager-Konsole konfigurierten Microsoft Intune-Mandanten (hybrid) auf die eigenständige Intune-Version umstellen. Dabei wird vorausgesetzt, dass Sie die folgenden Schritte bereits ausgeführt haben:
 - Sie haben das [Intune-Datenimporttool](migrate-import-data.md) verwendet, um Configuration Manager-Objekte in Intune zu importieren. 
 - Sie haben [Intune für die Benutzermigration vorbereitet](migrate-prepare-intune.md), um sicherzustellen, dass Benutzer und ihre Geräte nach der Migration weiterhin verwaltet werden.
 - Sie haben die [MDM-Autorität für bestimmte Benutzer umgestellt (gemischte MDM-Autorität)](migrate-mixed-authority.md), um damit zu beginnen, Benutzergeräte über das Azure-Portal zu verwalten.
@@ -44,7 +44,7 @@ Sie haben bereits viele Benutzer migriert und die Intune-Funktionen getestet, um
 - Stellen Sie sicher, dass allen Benutzern, die momentan durch hybrides MDM verwaltet werden, eine Intune-/EMS-Lizenz zugewiesen wurde, bevor Sie die MDM-Autorität umstellen. Mit diesen Lizenzen wird sichergestellt, dass die Benutzer und ihre Geräte nach der Umstellung der MDM-Autorität von Intune standalone verwaltet werden. Weitere Informationen finden Sie unter [Zuweisen von Intune-Lizenzen zu Benutzerkonten](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4).
 - Stellen Sie sicher, dass dem Konto des Administratorbenutzers eine Intune-/EMS-Lizenz zugewiesen wurde.
 
-### <a name="change-the-mdm-authority-to-intune"></a>Umstellen der MDM-Autorität auf Intune
+## <a name="change-the-mdm-authority-to-intune"></a>Umstellen der MDM-Autorität auf Intune
 Verwenden Sie das folgende Verfahren, um die MDM-Autorität auf Mandantenebene auf Intune umzustellen.
 
 1.  Wechseln Sie in der Configuration Manager-Konsole zu **Verwaltung** &gt; **Übersicht** &gt; **Clouddienste** &gt; **Microsoft Intune-Abonnement**, und löschen Sie Ihr vorhandenes Intune-Abonnement.
@@ -72,10 +72,10 @@ Sobald die Umstellung der MDM-Autorität abgeschlossen ist, überprüfen Sie die
 - Wenn Sie Probleme mit bestimmten Geräten haben, können Sie die Registrierung der Geräte aufheben und sie erneut registrieren, damit sie so schnell wie möglich mit der neuen Autorität verbunden und von ihr verwaltet werden.
 - Für nicht migrierte Benutzer und Geräte gilt Folgendes:
     - Stellen Sie sicher, dass die Geräte jetzt auf dem Blatt **Geräte** als verwaltete Geräte angezeigt werden. Bevor diese Geräte nach der Umstellung der MDM-Autorität angezeigt werden, müssen sie beim Dienst eingecheckt und synchronisiert werden. 
-    - Wenn der Intune-Dienst erkennt, dass die MDM-Autorität eines Mandanten umgestellt wurde, sendet er eine Benachrichtigung an alle registrierten Geräte, damit sie beim Dienst eingecheckt und synchronisiert werden (außerhalb der regelmäßigen geplanten Eincheckvorgänge). Nach der Umstellung der MDM-Autorität für den Mandanten von hybrid auf Intune standalone stellen daher alle Geräte, die eingeschaltet und online sind, eine Verbindung mit dem Dienst her, erhalten die neue MDM-Autorität und werden ab diesem Zeitpunkt von Intune standalone verwaltet. Es gibt keine Unterbrechung bei Verwaltung und Schutz dieser Geräte.
+    - Wenn der Intune-Dienst erkennt, dass die MDM-Autorität eines Mandanten umgestellt wurde, sendet er eine Benachrichtigung an alle registrierten Geräte, damit sie beim Dienst eingecheckt und synchronisiert werden (außerhalb der regelmäßigen geplanten Eincheckvorgänge). Nach der Umstellung der MDM-Autorität für den Mandanten von der hybriden Version auf die eigenständige Intune-Version stellen daher alle Geräte, die eingeschaltet und online sind, eine Verbindung mit dem Dienst her, erhalten die neue MDM-Autorität und werden ab diesem Zeitpunkt von der eigenständigen Intune-Version verwaltet. Es gibt keine Unterbrechung bei der Verwaltung und bei dem Schutz dieser Geräte.
     - Geräte, die während (oder kurz nach) der Umstellung der MDM-Autorität ausgeschaltet oder offline sind, stellen unter der neuen MDM-Autorität eine Verbindung mit dem Dienst her und werden synchronisiert, sobald sie eingeschaltet werden und online sind.  
     - Benutzer können schnell auf die neue MDM-Autorität umstellen, indem sie manuell einen Eincheckvorgang des Geräts beim Dienst starten. Benutzer können den Eincheckvorgang problemlos durchführen, indem sie die Unternehmensportal-App verwenden und eine Überprüfung der Gerätekonformität initiieren.
-    - Es gibt eine Übergangszeit, bis ein Gerät beim Dienst eingecheckt wird, wenn das Gerät während der Umstellung der MDM-Autorität offline war. Um sicherzustellen, dass das Gerät während dieser Übergangszeit geschützt und funktionsfähig bleibt, verbleiben die folgenden Profile bis zu sieben Tage lang (oder bis das Gerät eine Verbindung mit der neuen MDM-Autorität herstellt und die neuen Einstellungen empfängt, die die vorhandenen überschreiben) auf dem Gerät:
+    - Es gibt eine Übergangszeit, bis ein Gerät beim Dienst eingecheckt wird, wenn das Gerät während der Umstellung der MDM-Autorität offline war. Um sicherzustellen, dass das Gerät während dieser Übergangszeit geschützt und funktionsfähig bleibt, verbleiben die folgenden Profile bis zu sieben Tage lang auf dem Gerät (oder bis das Gerät eine Verbindung mit der neuen MDM-Autorität herstellt und die neuen Einstellungen empfängt, die die vorhandenen überschreiben):
         - E-Mail-Profil
         - VPN-Profil
         - Zertifikatprofil

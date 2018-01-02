@@ -3,23 +3,21 @@ title: "Technische Referenz für kryptografische Steuerelemente"
 titleSuffix: Configuration Manager
 description: "Erfahren Sie mehr darüber, wie die Signierung und Verschlüsselung Sie vor Angriffen schützen kann, die Daten in System Center Configuration Manager lesen."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/5/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
 ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 0c63dcc5-a1bd-4037-959a-2e6ba0fd1b2c
-caps.latest.revision: "6"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 616a781ee40fc3cde7f6c4c6525da74560a9072f
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: ebaff93d346b53afea8770fbe0634112bcecf82d
+ms.sourcegitcommit: 372171a5cd8d143d6d47b651018cda0c91cad67c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Technische Referenz für kryptografische Steuerelemente
 
@@ -279,5 +277,14 @@ System Center Configuration Manager verwendet die Signierung und Verschlüsselun
 
  Bei der ersten Authentifizierung eines Clients von einem Verwaltungspunkt mithilfe des selbstsignierten Clientzertifikats bietet dieses Verfahren nur minimale Sicherheit, da selbstsignierte Zertifikate von jedem beliebigen Computer generiert werden können. In diesem Szenario muss die Identifizierung des Clients durch eine Genehmigung ergänzt werden. Die Genehmigung darf nur für vertrauenswürdige Computer und entweder automatisch durch Configuration Manager oder manuell durch einen Administrator erfolgen. Weitere Informationen finden Sie im Genehmigungsabschnitt unter [Datenübertragungen zwischen Endpunkten in System Center Configuration Manager](../../core/plan-design/hierarchy/communications-between-endpoints.md).  
 
-##  <a name="about-ssl-vulnerabilities"></a>Über SSL-Sicherheitsrisiken  
- Zur Verbesserung der Sicherheit von Configuration Manager-Servern wird empfohlen, SSL 3.0 zu deaktivieren, TLS 1.1 und 1.2 zu aktivieren und TLS-bezogene Verschlüsselungssuites neu zu ordnen. Informationen zum Ausführen dieser Aktionen finden Sie in [diesem KB-Artikel](https://support.microsoft.com/en-us/kb/245030/). Diese Aktion hat keine Auswirkungen auf die Configuration Manager-Funktionalität.  
+## <a name="to-make-configuration-manager-servers-more-secure"></a>So wird der Schutz von Configuration Manager-Servern erhöht  
+Um den Schutz von Configuration Manager-Servern zu erhöhen, gehen Sie wie folgt vor:
+
+-   Aktivieren von TLS 1.2
+
+    Informationen zum Aktivieren von TLS 1.2 für Configuration Manager finden Sie im folgenden Wissensdatenbankartikel: [Aktivieren von TLS 1.2 für Configuration Manager]( https://support.microsoft.com/en-us/help/4040243/how-to-enable-tls-1-2-for-configuration-manager).
+-   Deaktivieren von SSL 3.0, TLS 1.0 und TLS 1.1 
+-   Neuanordnen der TLS-bezogenen Verschlüsselungssammlungen 
+
+Weitere Informationen finden Sie im folgenden Wissensdatenbankartikel: [Beschränken der Verwendung bestimmter kryptografischer Algorithmen und Protokolle in „Schannel.dll“](https://support.microsoft.com/en-us/kb/245030/). Diese Verfahren haben keine Auswirkungen auf die Configuration Manager-Funktionalität.
+

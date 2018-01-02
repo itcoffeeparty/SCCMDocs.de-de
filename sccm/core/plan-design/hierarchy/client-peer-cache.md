@@ -3,7 +3,7 @@ title: Client-Peercache
 titleSuffix: Configuration Manager
 description: "Verwenden Sie Peercache für Quellspeicherorte für Clientinhalte beim Bereitstellen von Inhalten mit System Center Configuration Manager."
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 12/07/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,11 +15,11 @@ caps.latest.revision: "3"
 author: aaroncz
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 60f70d3e24f6290fb022b9bd8ca1512b0ed3d719
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: cadc62ab21ac8cd43120a5baa79dd635a12b4069
+ms.sourcegitcommit: 2dc9c83e57e9734ffc4a93f79cd71285036eeb8b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Peercache für Configuration Manager-Clients
 
@@ -36,7 +36,7 @@ Ein Peercacheclient ist ein Configuration Manager-Client, der für die Verwendun
  -  Zum Freigeben von Inhalten als Peercachequelle muss ein Peercacheclient folgende Voraussetzungen erfüllen:
     -  Muss in eine Domäne eingebunden sein. Ein Client, der nicht in eine Domäne eingebunden ist, kann jedoch Inhalte von einer in eine Domäne eingebundenen Peercachequelle abrufen.
     -  Muss Mitglied der aktuellen Begrenzungsgruppe des Clients sein, der die Inhalte sucht. Ein Peercacheclient in einer benachbarten Begrenzungsgruppe ist im Pool der verfügbaren Quellspeicherorte für Inhalt nicht enthalten, wenn ein Client eine Ausweichaktion verwendet, um nach Inhalten in einer benachbarten Begrenzungsgruppe zu suchen. Weitere Informationen zu aktuellen und benachbarten Begrenzungsgruppen finden Sie unter [Begrenzungsgruppen](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups).
- - Jede Art von Inhalten, die im Cache eines Configuration Manager-Clients gespeichert sind, kann mithilfe von Peercache für andere Clients bereitgestellt werden.
+ - Jede Art von Inhalt, der im Cache eines Configuration Manager-Clients gespeichert ist, kann mithilfe von Peercache für andere Clients verarbeitet werden. Dies umfasst u.a. Office 365-Dateien und Expressinstallationsdateien.<!--SMS.500850-->
  -  Peercache ersetzt nicht die Verwendung anderer Lösungen wie BranchCache, sondern wird parallel eingesetzt, um Ihnen weitere Optionen bereitzustellen und herkömmliche Lösungen für die Inhaltsbereitstellung (z.B. Verteilungspunkte) zu erweitern. Da diese benutzerdefinierte Lösung nicht von BranchCache abhängig ist, funktioniert sie auch, wenn Sie Windows BranchCache nicht aktivieren oder verwenden.
 
 ### <a name="operations"></a>Vorgänge

@@ -12,7 +12,7 @@
         > [!TIP]  
         >  Klicken Sie auf **Kriterien hinzufügen** , um die im Knoten **Alle Softwareupdates** angezeigten Softwareupdates zu filtern. Speichern Sie Suchkriterien, die Sie häufig verwenden, und verwalten Sie die gespeicherten Suchvorgänge auf der Registerkarte **Suchen** .  
 
-         Der Assistent zum Herunterladen von Softwareupdates ****  wird geöffnet.  
+         Der **Assistent zum Herunterladen von Softwareupdates wird** geöffnet.  
 
 3.  Konfigurieren Sie auf der Seite **Bereitstellungspaket** die folgenden Einstellungen:  
 

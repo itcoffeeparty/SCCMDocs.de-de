@@ -3,7 +3,7 @@ title: "Überwachen von Inhalt"
 titleSuffix: Configuration Manager
 description: "Hier finden Sie Informationen zur Überwachung von verteiltem Inhalt mithilfe der Configuration Manager-Konsole."
 ms.custom: na
-ms.date: 4/17/2017
+ms.date: 12/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "5"
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 5b1c0401c0b1ce2aa8765ccfb8898b90cf7a5c93
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 62d783735e64b6f3f11dae9af6ac5a7584d689ef
+ms.sourcegitcommit: 52b956cfe32c3f06ae68d6ba6fc3244ce5a66325
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="monitor-content-you-have-distributed-with-system-center-configuration-manager"></a>Überwachen von mit System Center Configuration Manager verteilten Inhalten
 
@@ -155,7 +155,8 @@ Gehen Sie wie folgt vor, um den Status einer Verteilungspunktkonfiguration anzuz
 Ab Version 1610 können Sie auch das Dashboard **Clientdatenquellen** verwenden, um mehr über die Verwendung des [Peercaches](/sccm/core/plan-design/hierarchy/client-peer-cache) in Ihrer Umgebung zu erfahren. Das Dashboard zeigt Daten an, nachdem Clients Inhalt heruntergeladen haben und diese Informationen dem Standort gemeldet wurden. Dies kann bis zu 24 Stunden dauern.
 
 > [!TIP]  
-> **Clientpeercache** und das Dashboard **Clientdatenquellen** sind vorab veröffentlichte Funktionen, die mit Version 1610 eingeführt wurden. Sie müssen Clientpeercache aktivieren, bevor das Dashboard „Clientdatenquellen“ in der Konsole angezeigt wird. Informationen zum Aktivieren von Clientpeercache finden Sie unter [Verwenden von vorab veröffentlichten Features von Updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease). Es kann bis zu 24 Stunde nach der Aktivierung dauern, bis Daten angezeigt werden.
+> **Clientpeercache** und das Dashboard **Clientdatenquellen** wurden erstmals in Version 1610 als [Vorabfeatures](/sccm/core/servers/manage/pre-release-features) eingeführt wurden. Ab Version 1710 sind diese Features keine Vorabfeatures mehr. Sie müssen Clientpeercache aktivieren, bevor das Dashboard „Clientdatenquellen“ in der Konsole angezeigt wird.
+
 
 Wechseln Sie in der Konsole zu **Überwachung** > **Verteilungsstatus** > **Clientdatenquellen**. Hier können Sie einen Zeitraum auswählen, der auf das Dashboard angewendet werden soll. Anschließend können Sie in der Anzeige die Begrenzungsgruppe oder das Paket auswählen, für die bzw. das Sie Informationen anzeigen möchten. Beim Anzeigen der Informationen können Sie Ihre Maus über der Oberfläche bewegen, um weitere Details zu den verschiedenen Inhalts- oder Richtlinienquellen zu erhalten.
 
