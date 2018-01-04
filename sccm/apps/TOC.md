@@ -31,7 +31,7 @@
 ## Verwalten von Anwendungen
 ### [Verwaltungsaufgaben](deploy-use/management-tasks-applications.md)
 ### [Affinität zwischen Benutzer und Gerät](deploy-use/link-users-and-devices-with-user-device-affinity.md)
-### [Per Volumenlizenz erworbene Apps aus dem Windows Store für Unternehmen](deploy-use/manage-apps-from-the-windows-store-for-business.md)
+### [Per Volumenlizenz erworbene Apps aus Microsoft Store für Unternehmen](deploy-use/manage-apps-from-the-windows-store-for-business.md)
 ### [Virtuelle App-V-Umgebungen](deploy-use/create-app-v-virtual-environments.md)
 
 ## Aktualisieren und Außerkraftsetzen von Anwendungen
