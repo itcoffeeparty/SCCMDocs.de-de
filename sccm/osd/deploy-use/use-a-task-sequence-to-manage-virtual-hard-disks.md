@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0212b023-804a-4f84-b880-7a59cdb49c67
 caps.latest.revision: "5"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 586eec745bdf86a42a9d33fb9e1163f03efa1c59
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 89e30f81648aff16de2f7db55cbdda06cf69551d
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="use-a-task-sequence-to-manage-virtual-hard-disks-in-system-center-configuration-manager"></a>Verwenden einer Tasksequenz zum Verwalten virtueller Festplatten in System Center Configuration Manager
 
@@ -29,7 +29,7 @@ In System Center Configuration Manager können Sie virtuelle Festplatten (Virtua
 
  In den folgenden Abschnitten erfahren Sie, wie Sie virtuelle Festplatten in Configuration Manager verwalten:
 
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  Überprüfen Sie die folgenden Voraussetzungen, bevor Sie beginnen:  
 
 -   Auf dem Computer, auf dem Sie virtuelle Festplatten verwalten, muss eines der folgenden Betriebssysteme ausgeführt werden:  

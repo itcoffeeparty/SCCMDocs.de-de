@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d9a1c545-8301-492c-832f-2c108ff93c77
 caps.latest.revision: "12"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 5835bde38cb940d2e38df4a38146753a6842f1d7
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 31f18ce9df3fcdb133589ce5214cef96372ee1b0
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="introduction-to-operating-system-deployment-in-system-center-configuration-manager"></a>Einführung in die Betriebssystembereitstellung in System Center Configuration Manager
 
@@ -82,7 +82,7 @@ Sie können Configuration Manager dazu verwenden, Betriebssysteme auf vielen ver
  Ein Startimage in Configuration Manager ist ein Windows PE-Image (WinPE), das während einer Betriebssystembereitstellung verwendet wird. Startimages dienen zum Starten eines Computers in Windows PE, einem minimalen Betriebssystem mit begrenzten Komponenten und Diensten zur Vorbereitung des Zielcomputers für die Windows-Installation. Configuration Manager stellt zwei Startimages bereit: eines zur Unterstützung von x86-Plattformen und eines zur Unterstützung von x64-Plattformen. Diese werden als Standardstartimages bezeichnet. Startimages, die Sie erstellen und zu Configuration Manager hinzufügen, werden als benutzerdefinierte Images bezeichnet. Standardstartimages können bei einem Update von Configuration Manager automatisch ersetzt werden. Weitere Informationen zu Startabbildern finden Sie im Thema [Verwalten von Startabbildern (Startimages)](../get-started/manage-boot-images.md).  
 
 ##  <a name="BKMK_OSImages"></a> Betriebssystemimages  
- Betriebssystemabbilder in Configuration Manager werden im WIM-Dateiformat (Windows Imaging) gespeichert. Sie stellen eine komprimierte Sammlung von Verweisdateien und -ordnern dar, die für die erfolgreiche Installation und Konfiguration eines Betriebssystems auf einem Computer erforderlich sind. Bei allen Szenarien für die Betriebssystembereitstellung müssen Sie ein Betriebssystemabbild auswählen. Sie können das Standardimage des Betriebssystems verwenden oder das Betriebssystemimage von einem von Ihnen konfigurierten Referenzcomputer erstellen. Weitere Informationen finden Sie unter [Verwalten von Betriebssystemimages](../get-started/manage-operating-system-images.md).  
+ Betriebssystemabbilder in Configuration Manager werden im WIM-Dateiformat (Windows Imaging) gespeichert. Sie stellen eine komprimierte Sammlung von Verweisdateien und -ordnern dar, die für die erfolgreiche Installation und Konfiguration eines Betriebssystems auf einem Computer erforderlich sind. Bei allen Szenarien für die Betriebssystembereitstellung müssen Sie ein Betriebssystemabbild auswählen. Sie können das Standardimage des Betriebssystems verwenden oder das Betriebssystemimage von einem von Ihnen konfigurierten Referenzcomputer erstellen. Weitere Informationen finden Sie unter [Manage operating system images (Verwalten von Betriebssystemimages)](../get-started/manage-operating-system-images.md).  
 
 ##  <a name="BKMK_OSUpgradePackages"></a> Betriebssystem-Upgradepakete  
  Betriebssystem-Upgradepakete werden zum Aktualisieren eines Betriebssystems verwendet und sind von Setup initiierte Betriebssystembereitstellungen. Sie importieren Betriebssystem-Upgradepakete von einer DVD oder einem bereitgestellten ISO-Image in Configuration Manager. Weitere Informationen finden Sie unter [Manage operating system upgrade packages (Verwalten von Betriebssystem-Upgradepaketen)](../get-started/manage-operating-system-upgrade-packages.md).  

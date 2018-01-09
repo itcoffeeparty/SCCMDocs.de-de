@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b7bff8a0-fe76-4d3b-aac6-065290888bea
 caps.latest.revision: "10"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: f1e3bd4c472d7a90c1d4dc47deb32722f14db462
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 74b8eb59f9e0156d370281d6105df15701253093
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="security-best-practices-and-privacy-information-for-system-center-configuration-manager"></a>Bewährte Sicherheitsmethoden und Datenschutzinformationen für System Center Configuration Manager
 
@@ -39,7 +39,7 @@ Verwenden Sie die nachfolgenden Informationen, um bewährte Sicherheitsmethoden 
 
 -   [Security and privacy for content management for System Center Configuration Manager (Sicherheit und Datenschutz für das Content Management für System Center Configuration Manager)](../../../core/plan-design/hierarchy/security-and-privacy-for-content-management.md)  
 
--   [Security and privacy for application management in System Center Configuration Manager (Sicherheit und Datenschutz für die Anwendungsverwaltung in System Center Configuration Manager)](../../../apps/plan-design/security-and-privacy-for-application-management.md)  
+-   [Sicherheit und Datenschutz für die Anwendungsverwaltung in System Center Configuration Manager](../../../apps/plan-design/security-and-privacy-for-application-management.md)  
 
 -   [Security and privacy for software updates in System Center Configuration Manager (Sicherheit und Datenschutz für Softwareupdates in System Center Configuration Manager)](../../../sum/plan-design/security-and-privacy-for-software-updates.md)  
 

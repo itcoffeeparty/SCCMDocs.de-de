@@ -14,11 +14,11 @@ ms.assetid: 2e68dc12-6776-437a-9138-45cd7d4bf9cf
 author: erikje
 ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: e970dff4ea295694fcc5cf80e238baf2c9d081b5
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: b740c422a71e625ccc110a043028cf986cdffb20
+ms.sourcegitcommit: ed8b2438ef85c9160741ef61f9171be41dd1ae0a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/17/2017
 ---
 # <a name="capabilities-in-technical-preview-1711-for-system-center-configuration-manager"></a>Funktionen in der Technical Preview 1711 für System Center Configuration Manager
 
@@ -42,7 +42,7 @@ In diesem Artikel werden die Funktionen vorgestellt, die in der Technical Previe
   3. Klicken Sie mit der rechten Maustaste auf den Standortserver im passiven Modus, und wählen Sie dann **Löschen**.
   4. Starten Sie nach dem Deinstallieren des Standortservers auf dem aktiven primären Standortserver den Dienst **CONFIGURATION_MANAGER_UPDATE** neu.
 
-**Im Folgenden werden neue Funktionen aufgelistet, die Sie mit dieser Version ausprobieren können.**  
+**Im Folgenden werden neue Features aufgelistet, die Sie mit dieser Version ausprobieren können.**  
 
 <!--  Section Template
 ##  FEATURE
@@ -109,20 +109,6 @@ Sie können diese Funktion auch verwenden, wenn Sie eine Anwendung mithilfe des 
 1. Erstellen oder bearbeiten Sie eine Anwendung.
 2. Stellen Sie die Anwendung einem Client bereit.
 3. Installieren Sie die Anwendung über das Softwarecenter. Die Oberfläche für die Installation der Anwendung sollte angezeigt werden. Wenn der Endbenutzer dem Installations-Assistenten der Anwendung folgt, wird die Anwendung erfolgreich installiert.
-
-## <a name="new-compliance-policy-options-for-windows-10"></a>Neue Konformitätsrichtlinienoptionen für Windows 10
-Es folgen neue Konformitätsrichtlinien, die Sie für Windows 10-Geräte konfigurieren können.
-- **Require Firewall** (Firewall anfordern).  Geben Sie an, ob für ein Gerät eine Firewall aktiviert sein muss, die alle Netzwerke überwacht.
-- **Require User Account Control** (Benutzerkontensteuerung anfordern). Geben Sie an, ob für ein Gerät die Benutzerkontensteuerung aktiviert sein muss.
-- **Defender**:
-  - **Require Windows Defender Antivirus** (Windows Defender Antivirus anfordern).  Fordern Sie an, dass auf einem Gerät Windows Defender Antivirus aktiviert sein muss.
-  - **Windows Defender Antivirus-Version**.  Geben Sie die Mindestversion von Spywaredefinitionen an, die auf einem Gerät installiert sein müssen.
-  - **Require current Windows Defender Antivirus signature** (Aktuelle Windows Defender Antivirus-Signatur anfordern). Überprüfen Sie, ob die Windows Defender Antivirus-Signatur eines Geräts auf dem neuesten Stand ist.
-  - **Echtzeitschutz anfordern**.  Geben Sie an, ob auf den Geräten der Echtzeitschutz von Windows Defender Antivirus aktiviert sein muss.
-- **Valid operating system builds** (Gültige Betriebssystembuilds).  Geben Sie die minimalen und maximalen Anforderungen für den Betriebssystembuild an.  
-
-Verwenden Sie den Assistenten für die Erstellung von Konformitätsrichtlinien, um diese Richtlinien zu konfigurieren. Wählen Sie diese neuen Optionen aus, wenn Sie der Richtlinie, die Sie konfigurieren, eine Regel hinzufügen.  
-Erfahren Sie, wie Sie Konformitätsrichtlinien [erstellen](/sccm/mdm/deploy-use/create-compliance-policy#create-a-compliance-policy) und [bereitstellen](/sccm/mdm/deploy-use/create-compliance-policy#deploy-a-compliance-policy).
 
 
 
