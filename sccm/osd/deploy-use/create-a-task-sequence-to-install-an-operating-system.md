@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 217c8a0e-5112-420e-a325-2a6d75326290
 caps.latest.revision: "13"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 47210939c66bb31d173c7e406a66c764d5008879
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 433a1778213b357c6c41eb20e4b975b2e682050d
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="create-a-task-sequence-to-install-an-operating-system-in-system-center-configuration-manager"></a>Erstellen einer Tasksequenz zum Installieren eines Betriebssystems in System Center Configuration Manager
 
@@ -128,7 +128,7 @@ Verwenden Sie Tasksequenzen in System Center Configuration Manager, um automatis
 |Benutzerzustandsspeicher anfordern|Zustandsspeicher anfordern|  
 |Benutzerdateien und Einstellungen erfassen|Benutzerzustand erfassen|  
 |Benutzerzustandsspeicher freigeben|Zustandsspeicher freigeben|  
-|Neustart mit Windows PE ausführen|Neustart mit Windows PE oder Festplatte ausführen|  
+|Neustart mit Windows PE|Neustart mit Windows PE oder Festplatte ausführen|  
 |Festplatte 0 partitionieren|Datenträger formatieren und partitionieren|  
 |Benuterzdateien und -einstellungen wiederherstellen|Benutzerzustand wiederherstellen|  
 

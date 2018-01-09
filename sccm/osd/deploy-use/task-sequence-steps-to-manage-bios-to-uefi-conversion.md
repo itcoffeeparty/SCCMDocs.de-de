@@ -11,14 +11,14 @@ ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 58a5c60e2d8b819051916b49911a236a9c5ac4ee
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: f2d53b7f525d4f827b78840a7f0d9482d203c08d
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>Tasksequenzschritte für das Verwalten einer Konvertierung von BIOS zu UEFI
 Windows 10 bietet viele neue Sicherheitsfunktionen, die UEFI-fähige Geräte erfordern. Möglicherweise verfügen Sie über moderne Windows-PCs, die UEFI unterstützen, aber das Legacy-BIOS verwenden. Wenn Sie ein Geräte zu UEFI konvertieren wollten, mussten Sie auf jedem PC die Festplatte neu formatieren und die Firmware neu konfigurieren. Mithilfe von Tasksequenzen in Configuration Manager können Sie eine Festplatte für die BIOS UEFI-Konvertierung vorbereiten, von BIOS in UEFI als Teil des direkten Upgrades konvertieren und UEFI-Informationen als Teil der Hardwareinventur sammeln.

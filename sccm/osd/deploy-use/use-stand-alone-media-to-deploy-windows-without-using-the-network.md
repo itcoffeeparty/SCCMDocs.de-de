@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 58a0d2ae-de76-401f-b854-7a5243949033
 caps.latest.revision: "16"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 1da213763c99af69963b12b15fa8413f9e1965dc
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 02f7c1d549b38c6bddb31fef91de49b0aa1d7969
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="use-stand-alone-media-to-deploy-windows-without-using-the-network-in-system-center-configuration-manager"></a>Verwenden eigenständiger Medien zum Bereitstellen von Windows ohne Verwendung des Netzwerks in System Center Configuration Manager
 
@@ -37,7 +37,7 @@ Sie können eigenständige Medien in folgenden Szenarien für die Betriebssystem
 
 -   [Installieren einer neuen Version von Windows auf einem neuen Computer (Bare-Metal)](install-new-windows-version-new-computer-bare-metal.md)  
 
--   [Upgrade von Windows auf die neueste Version](upgrade-windows-to-the-latest-version.md)  
+-   [Upgraden von Windows auf die neueste Version](upgrade-windows-to-the-latest-version.md)  
 
  Führen Sie die Schritte in einem der Betriebssystembereitstellungsszenarien aus, und lesen Sie dann die folgenden Abschnitte, um die eigenständigen Medien vorzubereiten und zu erstellen.  
 

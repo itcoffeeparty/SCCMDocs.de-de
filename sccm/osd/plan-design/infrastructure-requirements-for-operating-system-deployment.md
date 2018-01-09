@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 caps.latest.revision: "24"
-author: mattbriggs
-ms.author: mabrigg
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 0b90cb20707340bec6fc7d5ddbab6f39d78e10bf
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 30b6a4e009d1e44fff124dc5814bdd2e6445a63a
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="infrastructure-requirements-for-operating-system-deployment-in-system-center-configuration-manager"></a>Anforderungen an die Infrastruktur für die Betriebssystembereitstellung in System Center Configuration Manager
 
@@ -91,7 +91,7 @@ Eine Liste der Versionen des Windows 10 ADK, die Sie mit verschiedenen Versionen
 ### <a name="windows-server-update-services-wsus"></a>Windows Server Update Services (WSUS)  
 Sie müssen die folgenden WSUS 4.0-Hotfixes installieren:
   - [Hotfix 3095113](https://support.microsoft.com/kb/3095113) ist für die Wartung von Windows 10 erforderlich, für die die Infrastruktur für Softwareupdates verwendet wird, um Upgrades für Windows 10-Features abzurufen. Wenn Sie über WSUS 3.2 verfügen, müssen Sie für Windows 10-Upgrades Tasksequenzen verwenden. Weitere Informationen finden Sie unter [Verwalten von Windows als Dienst](../deploy-use/manage-windows-as-a-service.md).  
-  - [Hotfix 3159706](https://support.microsoft.com/kb/3159706) ist erforderlich, um über die Windows 10-Wartung ein Upgrade von Computern auf Windows 10 Anniversary Update sowie Unterversionen durchzuführen. Im Support-Artikel werden manuelle Schritte beschrieben, die Sie ausführen müssen, um diesen Hotfix zu installieren. Weitere Informationen finden Sie unter [Verwalten von Windows als Dienst](../deploy-use/manage-windows-as-a-service.md).
+  - [Hotfix 3159706](https://support.microsoft.com/kb/3159706) ist erforderlich, um über die Windows 10-Wartung ein Upgrade von Computern auf Windows 10 Anniversary Update sowie Unterversionen durchzuführen. Im Support-Artikel werden manuelle Schritte beschrieben, die Sie ausführen müssen, um diesen Hotfix zu installieren. Weitere Informationen finden Sie unter [Manage Windows as a service (Verwalten von Windows as a Service)](../deploy-use/manage-windows-as-a-service.md).
 
 
 ### <a name="internet-information-services-iis-on-the-site-system-servers"></a>Internetinformationsdienste (IIS) auf den Standortsystemservern  
@@ -142,7 +142,7 @@ Sie müssen die folgenden WSUS 4.0-Hotfixes installieren:
  Informationen zum Erfassen und Wiederherstellen des Benutzerzustands finden Sie unter [Verwalten des Benutzerzustands](../get-started/manage-user-state.md).  
 
 ### <a name="service-connection-point"></a>Dienstverbindungspunkt  
- Wenn Sie Windows als Dienst (WaaS) zum Bereitstellen des aktuellen Branch von Windows 10 verwenden, muss der Dienstverbindungspunkt installiert sein. Weitere Informationen finden Sie unter [Verwalten von Windows als Dienst](../deploy-use/manage-windows-as-a-service.md).  
+ Wenn Sie Windows als Dienst (WaaS) zum Bereitstellen des aktuellen Branch von Windows 10 verwenden, muss der Dienstverbindungspunkt installiert sein. Weitere Informationen finden Sie unter [Manage Windows as a service (Verwalten von Windows as a Service)](../deploy-use/manage-windows-as-a-service.md).  
 
 ### <a name="reporting-services-point"></a>Reporting Services-Punkt  
  Zur Verwendung von Configuration Manager-Berichten für Betriebssystembereitstellungen müssen Sie einen Reporting Services-Punkt installieren und konfigurieren. Weitere Informationen finden Sie unter [Berichterstattung](../../core/servers/manage/reporting.md).  

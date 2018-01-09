@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 caps.latest.revision: "21"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 533b3942136255dd396df81529dad100d4db0a95
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: ef9ee10c94cea3e9d8437a8d8b3df8427d0cc524
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="create-stand-alone-media-with-system-center-configuration-manager"></a>Erstellen eigenständiger Medien mit System Center Configuration Manager
 
@@ -32,7 +32,7 @@ Eigenständige Medien in Configuration Manager enthalten alles, was zur Bereitst
 
 -   [Installieren einer neuen Version von Windows auf einem neuen Computer (Bare-Metal)](install-new-windows-version-new-computer-bare-metal.md)  
 
--   [Upgrade von Windows auf die neueste Version](upgrade-windows-to-the-latest-version.md)  
+-   [Upgraden von Windows auf die neueste Version](upgrade-windows-to-the-latest-version.md)  
 
 Eigenständige Medien enthalten die Tasksequenz, mit der die Schritte zum Installieren des Betriebssystems und aller anderen erforderlichen Inhalte, einschließlich Startimage, Betriebssystemimage und Gerätetreiber, automatisiert werden. Da alle Komponenten für die Bereitstellung des Betriebssystems auf den eigenständigen Medien gespeichert sind, ist der Speicherplatzbedarf für eigenständige Medien wesentlich größer als für andere Medientypen. Wenn Sie an einem Standort der zentralen Verwaltung eigenständige Medien erstellen, ruft der Client seinen zugewiesenen Standortcode aus Active Directory ab. An einem untergeordneten Standort erstellte eigenständige Medien werden automatisch dem Client und dem Standortcode für diesen Standort zugewiesen.  
 

@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2e27b0b7-7bd3-45cd-bc99-9c991606c637
 caps.latest.revision: "6"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: a7e04e1bee4798e407f08084809a50076abbad56
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: f45685c669d70ae057fb57b6e9bfb50d5494e79e
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="plan-a-client-migration-strategy-in-system-center-configuration-manager"></a>Planen einer Strategie für die Clientmigration in System Center Configuration Manager
 
@@ -33,7 +33,7 @@ Sie müssen zwei Tasks ausführen, um Clients aus einer Quellhierarchie zu einer
 
 -   [Planen der Behandlung von auf Clients hinterlegten Daten während der Migration](#Planning_for_Client_Data_Migration)  
 
--   [Planen der Inventur- und Kompatibilitätsdaten während der Migration](#Planning_for_Inventory_data_migration)  
+-   [Planen der Inventur- und Konformitätsdaten während der Migration](#Planning_for_Inventory_data_migration)  
 
 ##  <a name="Planning_for_Client_Agent_Migration"></a> Planen der Migration von Clients in die Zielhierarchie  
  Wenn Sie Clients von einer Quellhierarchie migrieren, wird für die Clientsoftware auf dem Clientcomputer ein Upgrade durchgeführt, sodass sie mit der Produktversion der Zielhierarchie übereinstimmt.  

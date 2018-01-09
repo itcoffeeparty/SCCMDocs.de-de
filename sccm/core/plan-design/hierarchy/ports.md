@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 caps.latest.revision: "8"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: bc3237b701a49aa176c924323710beea3dcc6fa9
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 0b6fa22a7bc3de7bb5bc0d26f8e35b51d55c5e72
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="ports-used-in-system-center-configuration-manager"></a>In System Center Configuration Manager verwendete Ports
 
@@ -578,7 +578,7 @@ Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/s
  In den folgenden Abschnitten finden Sie zusätzliche Informationen zu von Configuration Manager verwendeten Ports.  
 
 ###  <a name="BKMK_ClientShares"></a> Client-zu-Server-Freigaben  
- Von Clients wird SMB (Server Message Block) verwendet, wenn eine Verbindung zu UNC-Freigaben hergestellt wird. Beispiel:  
+ Von Clients wird SMB (Server Message Block) verwendet, wenn eine Verbindung zu UNC-Freigaben hergestellt wird. Zum Beispiel:  
 
 -   Manuelle Clientinstallation, bei der die Befehlszeileneigenschaft CCMSetup.exe **/source:** angegeben wird  
 

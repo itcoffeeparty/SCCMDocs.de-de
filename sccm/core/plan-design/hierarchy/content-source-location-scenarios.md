@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 70b5cbc0-64ba-49bd-8b34-fb4c09b2b95b
 caps.latest.revision: "3"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 2d10fb670ae8d13a8a25d7e049d278e55a887fdd
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 03eb4d1fb08bfe8bf69af2c3e9ee035c8e2f8ab6
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="content-source-location-scenarios-in-system-center-configuration-manager"></a>Szenarios für Quellspeicherorte für Inhalt in System Center Configuration Manager
 
@@ -221,7 +221,7 @@ System Center Configuration Manager unterstützt vor Version 1610 mehrere Einste
 
 3.  Der Inhalt wird nicht heruntergeladen, weil die Bereitstellungseigenschaft bei Verwendung eines Fallbackverteilungspunkts mit dem Wert **Nicht herunterladen**festgelegt ist. Es tritt ein Clientfehler auf, die Fehlermeldung **Inhalt ist nicht verfügbar** wird angezeigt, und vom Client wird in den Wiederholungsmodus gewechselt. Jede Stunde wird eine neue Inhaltsanforderung gesendet.  
 
-4.  Vom Verwaltungspunkt wird ein Trigger erstellt, mit dem der Verteilungs-Manager zur Verteilung des Inhalts an alle bevorzugten Verteilungspunkte des Clients, von dem die Inhaltsanforderung erfolgt ist, aufgefordert wird.  
+4.  Vom Verwaltungspunkt wird ein Trigger erstellt, mit dem der Verteilungs-Manager zur Verteilung des Inhalts an alle bevorzugten Verteilungspunkte des Clients aufgefordert wird, von dem die Inhaltsanforderung erfolgt ist.  
 
 5.  Der Inhalt wird vom Verteilungs-Manager an alle bevorzugten Verteilungspunkte verteilt. In den meisten Fällen wird der Inhalt innerhalb einer Stunde erfolgreich an die bevorzugten Verteilungspunkte verteilt.  
 

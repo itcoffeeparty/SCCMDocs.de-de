@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 caps.latest.revision: "23"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 1f169dbf645096777f3fd244d24ca5be92efa180
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 21cd2d2f8087cb39dc47fbcca01ec700d79f41d0
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="manage-boot-images-with-system-center-configuration-manager"></a>Verwalten von Startimages mit System Center Configuration Manager
 
@@ -64,7 +64,7 @@ Ab Version 1706 des Configuration Manager können Sie wahlweise die neueste Vers
 
  Bei einer Standortinstallation fügt Configuration Manager automatisch Startimages hinzu, die auf einer WinPE-Version aus der unterstützten Version von Windows ADK basieren. Abhängig von der Configuration Manager-Version können Sie möglicherweise Startimages hinzufügen, die auf einer anderen WinPE-Version aus der unterstützten Version von Windows ADK basieren.  Es tritt ein Fehler auf, wenn Sie versuchen, ein Startabbild hinzuzufügen, das eine nicht unterstützte Version von WinPE enthält.  
 
- Im Folgenden finden Sie die jeweils unterstützte Version des Windows ADK, die Windows PE-Version, auf der das Startimage basiert, das über die Configuration Manager-Konsole angepasst werden kann, und die Windows PE-Versionen, auf denen das Startimage basiert, das Sie mithilfe von DISM anpassen und anschließend Configuration Manager hinzufügen können.  
+ Im Folgenden finden Sie die jeweils unterstützte Version von Windows ADK, die Windows PE-Version, auf der das Startimage basiert, das über die Configuration Manager-Konsole angepasst werden kann, und die Windows PE-Versionen, auf denen das Startimage basiert, das Sie mithilfe von DISM anpassen und anschließend zu Configuration Manager hinzufügen können.  
 
 -   **Windows ADK-Version**  
 

@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 caps.latest.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 60e4123212d8a9def7357c277d6e4e566d5478c6
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: e634ade367375dd092cea0381fe976109c4936df
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Unterstützte Konfigurationen für LTSB (Long-Term Servicing Branch) von System Center Configuration Manager
 
@@ -176,7 +176,7 @@ Unterstützung für Linux- und UNIX-Betriebssysteme ist auf die in diesem Abschn
 Die folgenden Versionen werden mit der angegebenen TAR-Datei unterstützt.  
 ### <a name="aix"></a>AIX  
 
-|Version|Datei|  
+|-Version|Datei|  
 |-|-|  
 |Version 5.3 (Power)|ccm-Aix53ppc.&lt;build\>.tar|  
 |Version 6.1 (Power)|ccm-Aix61ppc.&lt;build\>.tar|  
@@ -184,7 +184,7 @@ Die folgenden Versionen werden mit der angegebenen TAR-Datei unterstützt.
 
 ### <a name="centos"></a>CentOS  
 
-|Version|Datei|  
+|-Version|Datei|  
 |-|-|  
 |Version 5 x86|ccm-Universalx86.&lt;build\>.tar|  
 |Version 5 x64|ccm-Universalx64.&lt;build\>.tar|  
@@ -194,7 +194,7 @@ Die folgenden Versionen werden mit der angegebenen TAR-Datei unterstützt.
 
 ### <a name="debian"></a>Debian  
 
-|Version|Datei|    
+|-Version|Datei|    
 |-|-|  
 |Version 5 x86|ccm-Universalx86.&lt;build\>.tar|  
 |Version 5 x64|ccm-Universalx64.&lt;build\>.tar|  
@@ -207,7 +207,7 @@ Die folgenden Versionen werden mit der angegebenen TAR-Datei unterstützt.
 
 ### <a name="hp-ux"></a>HP-UX  
 
-|Version|Datei|  
+|-Version|Datei|  
 |-|-|  
 |Version 11iv2 IA64|ccm-HpuxB.11.23i64.&lt;build\>.tar|  
 |Version 11iv2 PA-RISC|ccm-HpuxB.11.23PA.&lt;build\>.tar|  
@@ -216,7 +216,7 @@ Die folgenden Versionen werden mit der angegebenen TAR-Datei unterstützt.
 
 ### <a name="oracle-linux"></a>Oracle Linux  
 
-|Version|Datei|    
+|-Version|Datei|    
 |-|-|  
 |Version 5 x86|ccm-Universalx86.&lt;build\>.tar|  
 |Version 5 x64|ccm-Universalx64.&lt;build\>.tar|  
@@ -226,7 +226,7 @@ Die folgenden Versionen werden mit der angegebenen TAR-Datei unterstützt.
 
 ### <a name="red-hat-enterprise-linux-rhel"></a>Red Hat Enterprise Linux (RHEL)  
 
-|Version|Datei|  
+|-Version|Datei|  
 |-|-|  
 |Version 4 x86|ccm-RHEL4x86.&lt;build\>.tar|  
 |Version 4 x64|ccm-RHEL4x64.&lt;build\>.tar|  
@@ -238,7 +238,7 @@ Die folgenden Versionen werden mit der angegebenen TAR-Datei unterstützt.
 
 ### <a name="solaris"></a>Solaris  
 
-|Version|Datei|   
+|-Version|Datei|   
 |-|-|  
 |Version 9 SPARC|ccm-Sol9sparc.&lt;build\>.tar|  
 |Version 10 x86|ccm-Sol10x86.&lt;build\>.tar|  
@@ -248,7 +248,7 @@ Die folgenden Versionen werden mit der angegebenen TAR-Datei unterstützt.
 
 ### <a name="suse-linux-enterprise-server-sles"></a>SUSE Linux Enterprise Server (SLES)  
 
-|Version|Datei|  
+|-Version|Datei|  
 |-|-|  
 |Version 9 x86|ccm-SLES9x86.&lt;build\>.tar|  
 |Version 10 SP1 x86|ccm-Universalx86.&lt;build\>.tar|  
@@ -259,7 +259,7 @@ Die folgenden Versionen werden mit der angegebenen TAR-Datei unterstützt.
 
 ### <a name="ubuntu"></a>Ubuntu  
 
-|Version|Datei|    
+|-Version|Datei|    
 |-|-|  
 |Version 10.04 LTS x86|ccm-Universalx86.&lt;build\>.tar|  
 |Version 10.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
@@ -323,7 +323,7 @@ Alle LTSB-Standortsysteme müssen Mitglieder einer unterstützten Windows Active
 - Windows Server 2008
 - Windows Server 2008 R2
 - Windows Server 2012
-- Windows Server 2012 R2
+- Windows Server 2012 R2
 
 ## <a name="additional-support-topics-that-apply-to-the-long-term-servicing-branch"></a>Weitere Themen zur Unterstützung, die für Long-Term Servicing Branch gelten
 Die Informationen in den folgenden Current Branch-Themen gelten für den LTSB:

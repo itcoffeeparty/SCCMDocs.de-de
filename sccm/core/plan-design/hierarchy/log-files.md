@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 caps.latest.revision: "9"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 1463aa5a64de50b31ad0fc94709e2b41fd1c3bb0
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: c310e23b543e8767a393ca5bf87a224a9269e359
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="log-files-in-system-center-configuration-manager"></a>Protokolldateien in System Center Configuration Manager
 
@@ -518,7 +518,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 - Verwenden Sie für die Problembehandlung des Client-Datenverkehrs **CMGHttpHandler.log**, **CMGService.log** und **SMS_Cloud_ProxyConnector.log**.
 
 ###  <a name="BKMK_CompSettingsLog"></a> Konformitätseinstellungen und Zugriff auf Unternehmensressourcen  
- In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit Kompatibilitätseinstellungen und dem Zugriff auf Unternehmensressourcen enthalten.  
+ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit Konformitätseinstellungen und dem Zugriff auf Unternehmensressourcen enthalten.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
 |--------------|-----------------|----------------------------|  

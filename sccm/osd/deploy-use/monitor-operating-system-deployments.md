@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 08085d94-295c-432f-b5e3-9736bce0193b
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 2e738b0ae9bd16829857edfaae0fb7e398979627
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 2540bc214530318c7efa75020ea0ea59ca5f6b85
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="monitor-operating-system-deployments-in-system-center-configuration-manager"></a>Überwachen von Betriebssystembereitstellungen in System Center Configuration Manager
 
@@ -30,7 +30,7 @@ Die Configuration Manager-Konsole bietet die folgenden Möglichkeiten zum Überw
 
 
 ##  <a name="BKMK_OSDAlerts"></a> Benachrichtigungen zu Betriebssystembereitstellungen  
- Sie können eine Benachrichtigung in den Bereitstellungseinstellungen der Tasksequenz konfigurieren, um Administratoren zu informieren, dass die Kompatibilitätsstufen für die Bereitstellung unter dem konfigurierten Prozentsatz liegen.  
+ Sie können eine Benachrichtigung in den Bereitstellungseinstellungen der Tasksequenz konfigurieren, um Administratoren zu informieren, dass die Konformitätsstufen für die Bereitstellung unter dem konfigurierten Prozentsatz liegen.  
 
  Nachdem Sie die Warnungseinstellungen konfiguriert haben, wird von Configuration Manager eine Warnung ausgegeben, wenn die angegebenen Bedingungen erfüllt sind. Sie können Bereitstellungsbenachrichtigungen für die Tasksequenz an den folgenden Stellen überprüfen:  
 
