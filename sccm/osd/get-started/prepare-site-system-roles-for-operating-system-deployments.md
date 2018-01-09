@@ -13,14 +13,14 @@ ms.topic: get-started-article
 ms.assetid: 0ef5f3ce-b0e4-4775-b5c2-b245e45b4194
 caps.latest.revision: "11"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: c07172bec1032b021c2d7b7ccaabe33c96b930d2
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 379a77ad83916a4a4660aea8816b353dd8c11c60
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="prepare-site-system-roles-for-operating-system-deployments-with-system-center-configuration-manager"></a>Vorbereiten von Standortsystemrollen für Betriebssystembereitstellungen mit System Center Configuration Manager
 
@@ -40,11 +40,11 @@ Zum Bereitstellen von Betriebssystemen in System Center Configuration Manager m�
 
      Configuration Manager unterscheidet nicht zwischen Standortservern und anderen Zielcomputern in einer Sammlung. Wenn Sie eine erforderliche Tasksequenz für eine Sammlung bereitstellen, die einen Standortserver enthält, wird die Tasksequenz auf dem Standortserver genauso wie auf allen anderen Computern in der Sammlung ausgeführt. Stellen Sie sicher, dass die Betriebssystembereitstellung eine Sammlung mit den Clients verwendet, für die die Bereitstellung ausgeführt werden soll.  
 
-     Sie können das Verhalten für Tasksequenzbereitstellungen mit hohem Risiko verwalten. Eine Bereitstellung mit hohem Risiko wird automatisch auf einem Client installiert und kann zu unerwünschten Ergebnissen führen. Ein Beispiel ist eine Tasksequenz, die als Zweck „Erforderlich“ aufweist und ein Betriebssystem bereitstellt. Um das Risiko einer unbeabsichtigten Bereitstellung mit hohem Risiko zu reduzieren, können Sie Einstellungen zur Bereitstellungsüberprüfung konfigurieren. Weitere Informationen finden Sie unter [Einstellungen zum Verwalten risikoreicher Bereitstellungen](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
+     Sie können das Verhalten für Tasksequenzbereitstellungen mit hohem Risiko verwalten. Eine Bereitstellung mit hohem Risiko wird automatisch auf einem Client installiert und kann zu unerwünschten Ergebnissen führen. Ein Beispiel ist eine Tasksequenz, die als Zweck „Erforderlich“ aufweist und ein Betriebssystem bereitstellt. Um das Risiko einer unbeabsichtigten Bereitstellung mit hohem Risiko zu reduzieren, können Sie Einstellungen zur Bereitstellungsüberprüfung konfigurieren. Weitere Informationen finden Sie unter [Settings to manage high-risk deployments (Einstellungen zum Verwalten risikoreicher Bereitstellungen)](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
 
 -   **Wie viele Computer können gleichzeitig ein Betriebssystemabbild von einem einzelnen Verteilungspunkt empfangen?**  
 
-     Um die benötigte Anzahl von Verteilungspunkten zu schätzen, müssen die Verarbeitungsgeschwindigkeit und die E/A-Kapazität des Datenträgers am Verteilungspunkt, die verfügbare Netzwerkbandbreite sowie die Auswirkungen der Abbildpaketgröße auf diese Ressourcen berücksichtigt werden. Beispiel: In einem Ethernet-Netzwerk mit einer Übertragungsrate von 100 Megabit/s kann ein 4 GB großes Abbildpaket in einer Stunde theoretisch von maximal 11 Computern verarbeitet werden. Bei diesem Wert sind jedoch keine anderen Serverressourcenfaktoren berücksichtigt.  
+     Um die benötigte Anzahl von Verteilungspunkten zu schätzen, müssen die Verarbeitungsgeschwindigkeit und die E/A-Kapazität des Datenträgers am Verteilungspunkt, die verfügbare Netzwerkbandbreite sowie die Auswirkungen der Abbildpaketgröße auf diese Ressourcen berücksichtigt werden. Beispiel: In einem Ethernet-Netzwerk mit einer Übertragungsrate von 100 Megabit/s kann ein 4 GB großes Imagepaket in einer Stunde theoretisch von maximal 11 Computern verarbeitet werden. Bei diesem Wert sind jedoch keine anderen Serverressourcenfaktoren berücksichtigt.  
 
      `100 Megabits/sec = 12.5 Megabytes/sec = 750 Megabytes/min = 45 Gigabytes/hour = 11 images @ 4GB per image.`  
 
