@@ -46,7 +46,7 @@ Verwenden Sie VPN-Profile in System Center Configuration Manager (auch als Confi
 |**Pulse Secure**|Ja|Nein|Ja|Ja|  
 |**F5 Edge Client**|Ja|Nein|Ja|Ja|  
 |**Dell SonicWALL Mobile Connect**|Ja|Nein|Ja|Ja|  
-|**Prüfpunkt für mobiles VPN**|Ja|Nein|Ja|Ja|  
+|**Checkpoint Mobile VPN**|Ja|Nein|Ja|Ja|  
 |**Microsoft SSL (SSTP)**|Ja|Ja|Ja|Nein|  
 |**Microsoft Automatic**|Ja|Ja|Ja|Nein|  
 |**IKEv2**|Ja|Ja|Ja|Nein|  
