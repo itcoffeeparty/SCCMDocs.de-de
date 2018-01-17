@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 55d49c388b4ea60627f72ffe61796c70de6f9416
-ms.sourcegitcommit: a5f8b5cfdabf0298e4302e24210e725a06a9de82
+ms.openlocfilehash: e8121480f3a9d61ba0a04667407a305119d80e12
+ms.sourcegitcommit: ba23ff90709a5fde1a63c650ab0d848f441afc43
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-system-center-configuration-manager"></a>Schützen von Daten mit Remotezurücksetzung, Remotesperre oder Zurücksetzen der Kennung mithilfe von System Center Configuration Manager
 
@@ -76,7 +76,7 @@ Veranlassen Sie ein **selektives Zurücksetzen** , um beim Gerät nur die Firmen
 |Unternehmens-Apps und die entsprechenden Daten, die mit Configuration Manager und Intune installiert wurden|Apps und Daten bleiben installiert.|Apps werden deinstalliert.|  
 |VPN- und WLAN-Profile|Entfernt.|Entfernt.|  
 |Zertifikate|Gesperrt.|Gesperrt.|  
-|Einstellung|Anforderungen werden entfernt.|Anforderungen werden entfernt.|  
+|Einstellungen|Anforderungen werden entfernt.|Anforderungen werden entfernt.|  
 |Verwaltungs-Agent|Die Berechtigung „Geräteadministrator“ wird gesperrt.|Die Berechtigung „Geräteadministrator“ wird gesperrt.|  
 |E-Mail-Profile|Nicht zutreffend.|Für E-Mail-Profile, die von Intune konfiguriert wurden, werden das E-Mail-Konto und die E-Mails entfernt.|  
 
@@ -91,7 +91,7 @@ Durch das selektive Zurücksetzen eines Android for Work-Geräts wird das Arbeit
 |Unternehmens-Apps und die entsprechenden Daten, die mit Configuration Manager und Intune installiert wurden|Anwendungen werden deinstalliert, und Sideload-Schlüssel werden entfernt. Bei Anwendungen, die die selektive Zurücksetzung von Windows verwenden, wird der Verschlüsselungsschlüssel gesperrt, und die Daten sind nicht mehr verfügbar.|  
 |VPN- und WLAN-Profile|Entfernt.|  
 |Zertifikate|Entfernt und gesperrt.|  
-|Einstellung|Anforderungen werden entfernt.|
+|Einstellungen|Anforderungen werden entfernt.|
 |Verwaltungs-Agent|Nicht zutreffend. Der Verwaltungs-Agent ist integriert.|  
 |E-Mail-Profile|EFS-aktivierte E-Mails werden entfernt, darunter die E-Mail-App für Windows-E-Mails und -Anlagen.|  
 
@@ -171,17 +171,17 @@ Folgende Daten und Apps unterstützen derzeit das selektive Zurücksetzen mit EF
 ##  <a name="passcode-reset"></a>Zurücksetzen der Kennung  
 Wenn ein Benutzer seine Kennung vergisst, können Sie die Kennung von einem Gerät entfernen oder eine neue temporäre Kennung auf einem Gerät erzwingen. In der folgenden Tabelle ist die Funktionsweise des Zurücksetzens der Kennung auf verschiedenen mobilen Plattformen aufgeführt.  
 
-|Plattform|Zurücksetzen der Kennung|  
-|--------------|--------------------|  
-|iOS|Wird für das Löschen der Kennung von einem Gerät unterstützt. Es wird keine neue temporäre Kennung erstellt.|
-|macOS| Nicht unterstützt.|
-|Android|Wird unterstützt. Zudem wird eine temporäre Kennung erstellt.|
-|Android for Work | Nicht unterstützt.|
-|Windows 10-PCs|Nicht unterstützt.|  
-|Windows 10 Mobile|Wird unterstützt, mit Ausnahme von in Azure AD eingebundenen Geräten.|
-|Windows Phone 8.1|Unterstützt.|  
-|Windows RT 8.1 |Nicht unterstützt.|  
-|Windows 8.1-PCs |Nicht unterstützt.|  
+| Plattform                              | Zurücksetzen der Kennung                                                                               |
+|---------------------------------------|----------------------------------------------------------------------------------------------|
+| iOS                                   | Wird für das Löschen der Kennung von einem Gerät unterstützt. Es wird keine neue temporäre Kennung erstellt. |
+| macOS                                 | Nicht unterstützt.                                                                               |
+| Android                               | Wird für Versionen vor Android 7.0 unterstützt. Erstellt eine temporäre Kennung.                |
+| Android for Work                      | Nicht unterstützt.                                                                               |
+| Windows 10-PCs                        | Nicht unterstützt.                                                                               |
+| Windows 10 Mobile                     | Wird unterstützt, mit Ausnahme von in Azure AD eingebundenen Geräten.  |
+| Windows Phone 8 und Windows Phone 8.1 | Unterstützt.                                                                                   |
+| Windows RT 8.1                        | Nicht unterstützt.                                                                               |
+| Windows 8.1-PCs                       | Nicht unterstützt.                                                                               |
 
 > [!Note]    
 > Sie müssen die Kennung am Standort der obersten Ebene in Ihrer Umgebung zurücksetzen. Beispiel: Wenn Sie einen Standort der zentralen Verwaltung verwenden, können Sie die Aktion nur an diesem Standort ausführen. Wenn Sie einen eigenständigen primären Standort verwenden, können Sie die Aktion auch nur dort ausführen.

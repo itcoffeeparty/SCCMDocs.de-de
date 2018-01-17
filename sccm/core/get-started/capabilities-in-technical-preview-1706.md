@@ -14,11 +14,11 @@ ms.assetid: ca3b4714-2a16-495e-8a17-1d87991d5556
 author: erikje
 ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: d7819dd71a37bc581b629ac180f657134495f50c
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: cfb14ebb7b4f7eb9a008ad4464978778e57514a6
+ms.sourcegitcommit: d029b373113051634ed030545348a458eb7b25f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="capabilities-in-technical-preview-1706-for-system-center-configuration-manager"></a>Funktionen in der Technical Preview-Version 1706 von System Center Configuration Manager
 
@@ -42,7 +42,7 @@ In diesem Artikel werden die Funktionen erläutert, die in der Technical Preview
 
         Wenn Administratoren beispielsweise **USB-Debugging auf Gerät blockieren** auf **TRUE** festlegen, werden alle Geräte, für die USB-Debuggen nicht aktiviert ist, als nicht konform markiert.
 
-**Im Folgenden werden neue Funktionen aufgelistet, die Sie mit dieser Version ausprobieren können.**  
+**Im Folgenden werden neue Features aufgelistet, die Sie mit dieser Version ausprobieren können.**  
 
 <!--  Rough Section Template
 ##  FEATURE
@@ -325,7 +325,7 @@ In Configuration Manager können Sie mithilfe von Paketen und Programmen Skripts
 - Überprüfen der Ergebnisse, die vom Skript in der Configuration Manager-Konsole zurückgegeben werden
 
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 
 Um Skripts zu verwenden, müssen Sie Mitglied der entsprechenden Configuration Manager-Sicherheitsrolle sein.
 
@@ -405,7 +405,7 @@ Gehen Sie wie folgt vor, um die IPv6-Unterstützung für PXE zu aktivieren.
 <!-- 1098490 -->
 Sie können Configuration Manager jetzt zum Verwalten von Microsoft Surface-Treiberupdates verwenden.
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 Auf allen Softwareupdatepunkten muss Windows Server 2016 ausgeführt werden.
 
 ### <a name="try-it-out"></a>Probieren Sie es aus!
@@ -418,7 +418,7 @@ Versuchen Sie, die folgenden Aufgaben auszuführen, und senden Sie uns dann **Fe
 <!-- 1290890 -->
 Sie können jetzt Zurückstellungsrichtlinien für Funktions- oder Qualitätsupdates für Windows 10 für Windows 10-Geräte konfigurieren, die von Windows Update for Business direkt verwaltet werden. Sie können die Zurückstellungsrichtlinien im neuen Knoten **Windows Update for Business-Richtlinien** unter **Softwarebibliothek** > **Windows 10-Wartung** verwalten.
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 Windows 10-Geräte, die von Windows Update for Business verwaltet werden, benötigen Internetzugriff.
 
 #### <a name="to-create-a-windows-update-for-business-deferral-policy"></a>Sie erstellen Sie eine Windows Update for Business-Zurückstellungsrichtlinie
@@ -462,10 +462,10 @@ Sie können Entrust als Zertifizierungsstelle konfigurieren, wenn Sie in Configu
 **Bekanntes Problem**: In der Technical Preview 1706 werden für Microsoft-Zertifizierungsstellen keine PFX-Zertifikate ausgestellt. Dies wirkt sich nicht auf importierte PFX-Zertifikate oder SCEP-Profile aus.
 
 
-## <a name="cisco-ipsec-support-for-macos-vpn-profiles"></a>Cisco (IPsec)-Unterstützung für macOS-VPN-Profile
+## <a name="cisco-ipsec-support-for-ios-vpn-profiles"></a>Cisco-Unterstützung (IPsec) für iOS-VPN-Profile
 <!-- 1321367 -->
 
-Sie können ein macOS-VPN-Profil mit Cisco (IPsec) als Verbindungstyp erstellen. Weitere Informationen finden Sie unter [Erstellen von VPN-Profilen](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles).
+Sie können ein iOS-VPN-Profil mit Cisco (IPsec) als Verbindungstyp erstellen. Weitere Informationen finden Sie unter [Erstellen von VPN-Profilen](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles).
 
 
 ## <a name="new-windows-configuration-item-settings"></a>Neue Einstellungen für Windows-Konfigurationselemente

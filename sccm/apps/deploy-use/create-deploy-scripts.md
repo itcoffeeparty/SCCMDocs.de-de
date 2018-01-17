@@ -3,7 +3,7 @@ title: "Erstellen und Ausführen von Skripts"
 titleSuffix: Configuration Manager
 description: "Erfahren Sie, wie PowerShell-Skripts erstellt und auf Clientgeräten ausgeführt werden."
 ms.custom: na
-ms.date: 11/29/2017
+ms.date: 01/05/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 caps.latest.revision: "14"
 caps.handback.revision: "0"
-author: BrucePerlerMS
-ms.author: bruceper
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 1472f697ae8b82e6268433aa6398fcc10a429994
-ms.sourcegitcommit: 5f4a584d4a833b0cc22bd8c47da7dd55aced97fa
+ms.openlocfilehash: b00dfb875ca032032a9782e9950247eb3fceb124
+ms.sourcegitcommit: 9de3d74030b7c3313c34b5cbe2dbe6e18a48c043
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Erstellen und Ausführen von PowerShell-Skripts über die Configuration Manager-Konsole
 
@@ -42,7 +42,7 @@ Durch diese Integration in System Center Configuration Manager können Sie die F
 >[!WARNING]
 >Angesichts der Leistungsfähigkeit von Skripts möchten wir Sie daran erinnern, diese bewusst und sorgfältig einzusetzen. Wir haben zusätzliche Sicherheitsvorkehrungen eingebaut, um Sie zu unterstützen: getrennte Rollen und Bereiche. Stellen Sie die Fehlerfreiheit von Skripts sicher, bevor Sie sie ausführen. Bestätigen Sie außerdem, dass sie aus einer vertrauenswürdigen Quelle stammen, um eine unbeabsichtigte Ausführung von Skripts zu verhindern. Achten Sie auf Sonderzeichen oder sonstige Obfuskation, und informieren Sie sich über die Absicherung von Skripts.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - Um PowerShell-Skripts ausführen zu können, muss auf dem Client PowerShell 3.0 installiert sein. Wenn ein Skript jedoch Funktionen aus einer neueren PowerShell-Version enthält, muss diese auch auf dem Client installiert sein, der diese Version von PowerShell ausführt.
 - Das Ausführen von Skripts ist nur auf Clients mit Configuration Manager 1706 oder neuer möglich.
@@ -75,9 +75,9 @@ Skripts müssen von der Rolle *Skriptgenehmiger* genehmigt werden, bevor sie aus
 1. Klicken Sie in der Configuration Manager-Konsole auf **Softwarebibliothek**.
 2. Klicken Sie im Arbeitsbereich **Softwarebibliothek** auf **Skripts**.
 3. Wählen Sie in der Liste **Skript** das Skript, das Sie genehmigen oder ablehnen möchten. Klicken Sie dann in der Gruppe **Skript** auf der Registerkarte **Start** auf **Genehmigen/Ablehnen**.
-4. Wählen Sie im Dialogfeld **Skript genehmigen oder ablehnen** für das Skript entweder **Genehmigen** oder **Ablehnen** aus, und geben Sie optional einen Kommentar zu Ihrer Entscheidung ein.  Wenn Sie ein Skript ablehnen, kann es nicht auf Clientgeräten ausgeführt werden. <br>
+4. Wählen Sie im Dialogfeld **Skript genehmigen oder ablehnen** für das Skript entweder **Genehmigen** oder **Ablehnen** aus. Geben Sie optional einen Kommentar zu Ihrer Entscheidung ein.  Wenn Sie ein Skript ablehnen, kann es nicht auf Clientgeräten ausgeführt werden. <br>
 ![Skript: Genehmigung](./media/run-scripts/RS-approval.png)
-5. Schließen Sie den Assistenten ab. In der Liste **Skript** ändert sich die Spalte **Genehmigungsstatus** abhängig von der Aktion, die Sie ausgeführt haben.
+1. Schließen Sie den Assistenten ab. In der Liste **Skript** ändert sich die Spalte **Genehmigungsstatus** abhängig von der Aktion, die Sie ausgeführt haben.
 
 ### <a name="allow-users-to-approve-their-own-scripts"></a>Benutzern erlauben, eigene Skripts zu genehmigen
 
@@ -106,7 +106,11 @@ Die Funktion „Skripts ausführen“ arbeitet mit Sicherheitsbereichen, einer b
     - **Importieren**: Importieren Sie ein PowerShell-Skript in die Konsole. Das Skript wird im Feld **Skript** angezeigt.
     - **Löschen**: Entfernt das aktuelle Skript aus dem Feld „Skript“
     - **Skript**: Zeigt das gerade importierte Skript. Sie können das Skript in diesem Feld nach Bedarf bearbeiten.
-1. Schließen Sie den Assistenten ab. Das neue Skript wird in der Liste **Skript** mit dem Status **Warten auf Genehmigung** angezeigt. Bevor Sie dieses Skript auf Clientgeräten ausführen können, müssen Sie es genehmigen.
+5. Schließen Sie den Assistenten ab. Das neue Skript wird in der Liste **Skript** mit dem Status **Warten auf Genehmigung** angezeigt. Bevor Sie dieses Skript auf Clientgeräten ausführen können, müssen Sie es genehmigen. 
+
+> [!IMPORTANT]
+    >  Vermeiden Sie im Skript einen Neustart des Geräts oder einen Neustart des Configuration Manager-Agents, wenn Sie das Feature „Skripts ausführen“ verwenden. Dies könnte zu einem kontinuierlichen Neustartzustand führen. Bei Bedarf stehen ab Configuration Manager, Version 1710, Erweiterungen für das Clientbenachrichtigungsfeature zur Verfügung, die das Neustarten von Geräten ermöglichen. Anhand der Spalte [Neustart steht aus](/sccm/core/clients/manage/manage-clients#Restart-clients) können Sie Geräte identifizieren, für die ein Neustart erforderlich ist. 
+<!--SMS503978--Script reboot warning-->
 
 ## <a name="script-parameters"></a>Skriptparameter
 *(Mit Version 1710 eingeführt)*  
