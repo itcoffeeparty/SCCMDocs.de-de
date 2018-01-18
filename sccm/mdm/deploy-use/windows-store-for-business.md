@@ -1,7 +1,7 @@
 ---
-title: "Verwenden des Windows Store für Unternehmen"
+title: "Verwenden von Microsoft Store für Unternehmen"
 titleSuffix: Configuration Manager
-description: WSfB in System Center Configuration Manager.
+description: "Microsoft Store für Unternehmen in System Center Configuration Manager"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -16,16 +16,16 @@ caps.handback.revision: "0"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 276d2c18b41cc0303c9eee4ba852c05b8415a300
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: ab10978967074b935b940479d6bba90108e6f44e
+ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="wsfb-in-system-center-configuration-manager"></a>WSfB in System Center Configuration Manager
+# <a name="microsoft-store-for-business-in-system-center-configuration-manager"></a>Microsoft Store für Unternehmen in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Configuration Manager unterstützt die Verwaltung von Apps aus dem Windows Store für Unternehmen auf Windows 10-Geräten, die bei Microsoft Intune (Hybridkonfiguration) registriert sind, zusätzlich zu Windows 10-Geräten, auf denen der Configuration Manager-Client ausgeführt wird.
+Configuration Manager unterstützt die Verwaltung von Apps aus dem Microsoft Store für Unternehmen auf Windows 10-Geräten, die bei Microsoft Intune (Hybridkonfiguration) registriert sind, zusätzlich zu Windows 10-Geräten, auf denen der Configuration Manager-Client ausgeführt wird.
 
-Weitere Informationen zu den Funktionen, die Configuration Manager für Online- und Offline-Apps bietet, und zum Einrichten der Synchronisierung mit Windows Store für Unternehmen, finden Sie unter [Verwalten von Apps aus dem Windows Store für Unternehmen mit System Center Configuration Manager](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
+Weitere Informationen zu den Funktionen, die Configuration Manager für Online- und Offline-Apps bietet, und zum Einrichten der Synchronisierung mit Microsoft Store für Unternehmen, finden Sie unter [Verwalten von Apps aus dem Microsoft Store für Unternehmen mit System Center Configuration Manager](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).

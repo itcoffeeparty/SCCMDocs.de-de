@@ -3,7 +3,7 @@ title: "Neues bei der hybride Verwaltung mobiler Geräte"
 titleSuffix: Configuration Manager
 description: "Erfahren Sie mehr über die neuen Funktionen der Verwaltung mobiler Geräte, die für Hybridbereitstellungen mit Configuration Manager und Intune verfügbar sind."
 ms.custom: na
-ms.date: 11/29/2017
+ms.date: 01/04/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 189e737eca5dee5bca3f0748cd1b4d944f868565
-ms.sourcegitcommit: 4af1da9c18f5bdff31426cf1d58c7d949372292d
+ms.openlocfilehash: 243daf8626e329214ce1b94f109d19773bbc57c5
+ms.sourcegitcommit: 2da6b06818371e93f28e36cadf3a154d50ce5bf4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Neuheiten bei der hybriden Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune
 
@@ -40,6 +40,13 @@ Jeder Abschnitt dieses Artikels listet Hybridfeatures in drei verschiedenen Kate
 |**Neuheiten in Microsoft Intune** | Im Allgemeinen sollten alle in dieser Kategorie aufgeführten Features in allen Configuration Manager-Releases funktionieren. Dies umfasst auch Configuration Manager-Releases von System Center 2012 R2, da für diese Features nur der Intune-Dienst erforderlich ist und keine zusätzlichen Funktionen in Configuration Manager benötigt werden.|
 |**Neuheiten in Configuration Manager Technical Preview**| Alle in dieser Kategorie aufgelisteten Features können nur mit dem angegebenen Technical Preview-Release verwendet werden. Um diese Features zu testen, müssen Sie die in der Featurebeschreibung angegebene Technical Preview-Version installieren. Weitere Informationen finden Sie unter [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md).|
 |**Neuheiten in Configuration Manager (Current Branch)**| Alle in dieser Kategorie aufgelisteten Features können nur mit der angegebenen Version von Configuration Manager (Current Branch) verwendet werden, z.B. Version 1511 oder 1602. Wenn Sie eine ältere Version von Configuration Manager für die Hybridbereitstellung verwenden, müssen Sie ein Upgrade auf die in der Featurebeschreibung angegebene Configuration Manager-Version (Current Branch) ausführen. Weitere Informationen finden Sie unter [Upgrade auf System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|
+
+## <a name="december-2017"></a>Dezember 2017
+
+### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
+
+- **Verfügbare Anwendungsbereitstellungen werden jetzt für Android Enterprise unterstützt**    
+  Sie können Android Enterprise-Apps (vorher unter dem Namen „Android for Work“ bekannt) neben der Option **Erforderlich** jetzt auch als **Verfügbar** bereitstellen. Weitere Informationen finden Sie unter [Erstellen von Android-Apps mit System Center Configuration Manager](/sccm/mdm/deploy-use/creating-android-applications).
 
 
 ## <a name="november-2017"></a>November 2017
@@ -374,9 +381,9 @@ Die folgenden zusätzlichen Hybridfeatures sind auch in Version 1702 von Configu
 
   Weitere Informationen zu iOS-Apps, die über ein Volumenprogramm erworben wurden, finden Sie unter [Verwalten von iOS-Apps, die über ein Volumenprogramm erworben wurden](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
 
-- **Support für branchenspezifische Apps im Windows Store für Unternehmen**
+- **Support für branchenspezifische Apps im Microsoft Store für Unternehmen**
 
-  Sie können jetzt benutzerdefinierte branchenspezifische Apps aus dem Windows Store für Unternehmen synchronisieren.
+  Sie können jetzt benutzerdefinierte branchenspezifische Apps aus dem Microsoft Store für Unternehmen synchronisieren.
 
 - **Neue Überwachungstools für Mobile Threat Defense**
 

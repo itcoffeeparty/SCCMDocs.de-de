@@ -15,11 +15,11 @@ caps.latest.revision: "9"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: dd62748f853915d71fcbad1964f5a67785aaf3f6
-ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
+ms.openlocfilehash: 95808d4fd743d5cc18cacb69bb38bc729acdda25
+ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="set-up-windows-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Einrichten einer hybriden Windows-Geräteverwaltung mit System Center Configuration Manager und Microsoft Intune
 
@@ -35,7 +35,7 @@ Um die Windows-Geräteverwaltung entweder für PCs oder mobile Geräte zu aktivi
 3.  Klicken Sie im Menüband auf **Plattformen konfigurieren**, und wählen Sie anschließend die Windows-Plattform aus:
     - **Windows** für Windows-PCs und -Laptops, führen Sie dann die folgenden Schritte aus:
       1. Klicken Sie auf der Registerkarte **Allgemeine** auf das Kontrollkästchen **Windows-Registrierung aktivieren**.
-      2. Wenn Sie ein Zertifikat zur Codesignatur verwenden und die Unternehmensportal-App bereitstellen, navigieren Sie zum **Codesignaturzertifikat**. Gerätebenutzer können auch die Unternehmensportal-App aus dem Windows Store installieren, oder Sie können die App aus dem Windows Store für Unternehmen ohne Codesignatur bereitstellen.
+      2. Wenn Sie ein Zertifikat zur Codesignatur verwenden und die Unternehmensportal-App bereitstellen, navigieren Sie zum **Codesignaturzertifikat**. Gerätebenutzer können auch die Unternehmensportal-App aus dem Microsoft Store installieren, oder Sie können die App aus dem Microsoft Store für Unternehmen ohne Codesignatur bereitstellen.
       3. Sie können auch die [Windows Hello for Business-Einstellungen](windows-hello-for-business-settings.md) konfigurieren.
     - **Windows Phone** für Windows-Telefone und -Tablets, führen Sie dann die folgenden Schritte aus:
       1. Klicken Sie auf der Registerkarte **Allgemein** auf das Kontrollkästchen **Windows Phone 8.1 und Windows 10 Mobile**. Windows Phone 8.0 wird nicht mehr unterstützt.
@@ -107,13 +107,13 @@ Erstellen Sie CNAME DNS-Ressourceneinträge für die Domäne des Unternehmens. W
 
 Obwohl das Erstellen eines CNAME-DNS-Eintrags optional ist, ist die Registrierung mit einem CNAME-Eintrag für den Benutzer leichter. Wenn kein CNAME-Eintrag für die Registrierung gefunden wurde, werden Benutzer aufgefordert, manuell den MDM-Servernamen „enrollment.manage.microsoft.com“ einzugeben.
 
-|Typ|Hostname|Verweist auf|TTL|  
+|Geben Sie|Hostname|Verweist auf|TTL|  
 |----------|---------------|---------------|---|
 |CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 Stunde|
 
 Wenn Sie mehr als ein UPN-Suffix haben, müssen Sie einen CNAME für jeden Domänennamen erstellen und jeden auf EnterpriseEnrollment-s.manage.microsoft.com zeigen. Wenn z.B. Benutzer bei Contoso name@contoso.com aber auch name@us.contoso.com und name@eu.constoso.com als ihre E-Mail/UPN verwenden, muss der Contoso-DNS-Administrator die folgenden CNAMEs erstellen.
 
-|Typ|Hostname|Verweist auf|TTL|  
+|Geben Sie|Hostname|Verweist auf|TTL|  
 |----------|---------------|---------------|---|
 |CNAME|EnterpriseEnrollment.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 Stunde|
 |CNAME|EnterpriseEnrollment.us.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 Stunde|

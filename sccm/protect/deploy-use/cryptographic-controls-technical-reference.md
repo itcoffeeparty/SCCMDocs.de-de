@@ -3,21 +3,21 @@ title: "Technische Referenz für kryptografische Steuerelemente"
 titleSuffix: Configuration Manager
 description: "Erfahren Sie mehr darüber, wie die Signierung und Verschlüsselung Sie vor Angriffen schützen kann, die Daten in System Center Configuration Manager lesen."
 ms.custom: na
-ms.date: 12/5/2017
+ms.date: 12/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
 ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
-author: arob98
-ms.author: angrobe
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: ebaff93d346b53afea8770fbe0634112bcecf82d
-ms.sourcegitcommit: 372171a5cd8d143d6d47b651018cda0c91cad67c
+ms.openlocfilehash: 2c1ed6f4c93f74719ab3fe5d723f7dc01eb1ede7
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Technische Referenz für kryptografische Steuerelemente
 
@@ -277,8 +277,8 @@ System Center Configuration Manager verwendet die Signierung und Verschlüsselun
 
  Bei der ersten Authentifizierung eines Clients von einem Verwaltungspunkt mithilfe des selbstsignierten Clientzertifikats bietet dieses Verfahren nur minimale Sicherheit, da selbstsignierte Zertifikate von jedem beliebigen Computer generiert werden können. In diesem Szenario muss die Identifizierung des Clients durch eine Genehmigung ergänzt werden. Die Genehmigung darf nur für vertrauenswürdige Computer und entweder automatisch durch Configuration Manager oder manuell durch einen Administrator erfolgen. Weitere Informationen finden Sie im Genehmigungsabschnitt unter [Datenübertragungen zwischen Endpunkten in System Center Configuration Manager](../../core/plan-design/hierarchy/communications-between-endpoints.md).  
 
-## <a name="to-make-configuration-manager-servers-more-secure"></a>So wird der Schutz von Configuration Manager-Servern erhöht  
-Um den Schutz von Configuration Manager-Servern zu erhöhen, gehen Sie wie folgt vor:
+## <a name="about-ssl-vulnerabilities"></a>Über SSL-Sicherheitsrisiken
+Führen Sie folgende Schritte aus, um die Sicherheit Ihrer Konfigurations-Manager-Clients und -Server zu verbessern:
 
 -   Aktivieren von TLS 1.2
 
@@ -286,5 +286,5 @@ Um den Schutz von Configuration Manager-Servern zu erhöhen, gehen Sie wie folgt
 -   Deaktivieren von SSL 3.0, TLS 1.0 und TLS 1.1 
 -   Neuanordnen der TLS-bezogenen Verschlüsselungssammlungen 
 
-Weitere Informationen finden Sie im folgenden Wissensdatenbankartikel: [Beschränken der Verwendung bestimmter kryptografischer Algorithmen und Protokolle in „Schannel.dll“](https://support.microsoft.com/en-us/kb/245030/). Diese Verfahren haben keine Auswirkungen auf die Configuration Manager-Funktionalität.
+Weitere Informationen finden Sie unter [Beschränken der Verwendung bestimmter kryptografischer Algorithmen und Protokolle in „Schannel.dll“](https://support.microsoft.com/en-us/kb/245030/) und [Prioritizing Schannel Cipher Suites (Priorisieren von Schannel-Cipher-Suites)](https://msdn.microsoft.com/en-us/library/windows/desktop/bb870930.aspx). Diese Verfahren haben keine Auswirkungen auf die Configuration Manager-Funktionalität.
 

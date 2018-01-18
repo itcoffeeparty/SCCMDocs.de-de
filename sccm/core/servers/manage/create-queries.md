@@ -3,7 +3,7 @@ title: Erstellen von Abfragen
 titleSuffix: Configuration Manager
 description: "Erfahren Sie, wie Sie in System Center Configuration Manager Abfragen erstellen und importieren. Enthält Beispiele für Abfragen und Tipps."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 caps.latest.revision: "5"
 caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: cbd9710cec365323e754d2109c8c61c29a4c301f
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 32400ebcd834e3b98bf0f1ff6a1f6b41d8e12076
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="how-to-create-queries-in-system-center-configuration-manager"></a>Erstellen von Abfragen in System Center Configuration Manager
 
@@ -54,7 +54,7 @@ Sie können dieses Thema verwenden, um in System Center Configuration Manager Ab
 7.  Geben Sie auf der Registerkarte **Allgemein** im Dialogfeld *Eigenschaften der &lt;Abfragename\>***-Anweisung** die Attribute, die von dieser Abfrage zurückgegeben werden, sowie die Anzeigeart an. Wählen Sie das Symbol **Neu** aus, um ein neues Attribut hinzuzufügen. Sie können auch **Abfragesprache anzeigen** auswählen, um die Abfrage direkt in der WMI-Abfragesprache (WMI Query Language, WQL) einzugeben oder zu ändern. Beispiele für WMI-Abfragen finden Sie im Abschnitt [Example WQL queries](#BKMK_Example) in diesem Thema.  
 
     > [!TIP]  
-    > Die folgende MSDN-Referenzdokumentation enthält Informationen zum Erstellen eigener WQL-Abfragen:  
+    > Die folgenden MSDN-Referenzdokumentation können Sie Ihre eigenen WQL-Abfragen zu erstellen:  
     >   
     > -   [WQL (SQL für WMI)](http://go.microsoft.com/fwlink/p/?LinkId=256653)  
     > -   [WHERE-Klausel](http://go.microsoft.com/fwlink/p/?LinkId=256654)  
@@ -178,6 +178,10 @@ Verwenden Sie einen der folgenden Werte für *&lt;Geräte-ID\>*:
 |Android|11|  
 |Intel-System auf einem Chip|12|  
 |UNIX- und Linux-Server|13|  
+|Apple macOS (MDM)|14|
+|Microsoft HoloLens (MDM)|15|
+|Microsoft Surface Hub (MDM)|16|
+|Android for Work|17|
 
  Wenn die Abfrage z. B. nur Macintosh-Computer zurückgeben soll, verwenden Sie die folgende Abfrage:  
 
@@ -186,4 +190,4 @@ Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdi
 ```  
 
 ## <a name="see-also"></a>Weitere Informationen:  
- [Vorgänge und Wartungstasks für Abfragen in System Center Configuration Manager](../../../core/servers/manage/operations-and-maintenance-for-queries.md)
+ [Operations and maintenance for queries in System Center Configuration Manager (Vorgänge und Wartungstasks für Abfragen in System Center Configuration Manager)](../../../core/servers/manage/operations-and-maintenance-for-queries.md)

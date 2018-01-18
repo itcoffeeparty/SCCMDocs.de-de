@@ -15,11 +15,11 @@ caps.latest.revision: "9"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 166f7c73f2050657a85bd5160f74c40cfd87fd7f
-ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
+ms.openlocfilehash: bfe500c160bf2ddffd060baabb44cda81337e1cc
+ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 01/02/2018
 ---
 #  <a name="sync-data-from-configuration-manager-to-the-microsoft-operations-management-suite"></a>Synchronisieren von Daten von System Center Configuration Manager mit der Microsoft Operations Management Suite
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 11/13/2017
 
 Sie können den **Assistenten für Azure-Dienste** zum Konfigurieren der Verbindung zwischen Configuration Manager und dem Clouddienst Operations Management Suite (OMS) verwenden. Ab Version 1706 ersetzt der Assistent vorherige Workflows zum Konfigurieren dieser Verbindung. Informationen zu früheren Versionen finden Sie unter [Sync data from Configuration Manager to the Microsoft Operations Management Suite (1702 and earlier) (Synchronisieren von Daten von System Center Configuration Manager mit der Microsoft Operations Management Suite (1702 und früher))](#Sync-data-from-Configuration-Manager-to-the-Microsoft-Operations-Management-Suite-(1702-and-earlier)).
 
--   Der Assistent dient zum Konfigurieren von Clouddiensten für Configuration Manager wie OMS, Windows Store für Unternehmen (WSfB) und Azure Active Directory (Azure AD).  
+-   Der Assistent dient zum Konfigurieren von Clouddiensten für Configuration Manager wie OMS, Microsoft Store für Unternehmen und Azure Active Directory (Azure AD).  
 
 -   Configuration Manager verbindet sich mit OMS für Funktionen wie [Log Analytics](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) oder [Upgradebereitschaft](/sccm/core/clients/manage/upgrade/upgrade-analytics).
 
@@ -75,7 +75,7 @@ Sie können nun mit dem Microsoft Operations Management Suite-Connector (OMS) Da
 
 Ab Version 1702 können Sie den OMS-Connector für die Verbindung mit einem OMS-Arbeitsbereich verwenden, der sich in der Microsoft Azure Government-Cloud befindet. Dazu müssen Sie eine Konfigurationsdatei ändern, bevor Sie den OMS-Connector installieren. Weitere Informationen finden Sie unter [Verwenden des OMS-Connectors mit der Azure Government-Cloud](#fairfaxconfig) in diesem Thema.
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 - Bevor Sie den OMS-Connector in Configuration Manager installieren, müssen Sie Configuration Manager mit Berechtigungen für OMS bereitstellen. Sie müssen insbesondere den *Zugriff als Mitwirkender* in der Azure-*Ressourcengruppe* gewähren, die den OMS-Protokollanalyse-Arbeitsbereich enthält. Die Vorgehensweisen dazu werden im Protokollanalysen-Inhalt dokumentiert. Informationen finden Sie in der OMS-Dokumentation unter [Bereitstellen von Configuration Manager mit Berechtigungen für OMS](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms).
 
 - Der OMS-Connector muss auf dem Computer installiert werden, der einen [Dienstverbindungspunkt](/sccm/core/servers/deploy/configure/about-the-service-connection-point) hostet, der sich in [Onlinemodus](/sccm/core/servers/deploy/configure/about-the-service-connection-point#a-namebkmkmodesa-modes-of-operation) befindet.

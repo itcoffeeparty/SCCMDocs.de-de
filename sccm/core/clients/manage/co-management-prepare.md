@@ -10,11 +10,11 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: 
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: b336b56cc34119a4acec8e798b8c59970f5c7dbf
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: d605dd4770be6878b08f4ac61da6ab27e3b6d61f
+ms.sourcegitcommit: ac9268e31440ffe91b133c2ba8405d885248d404
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>Vorbereiten von Windows 10-Geräten für die Co-Verwaltung
 Sie können die Co-Verwaltung auf Windows 10-Geräten aktivieren, die in AD und Azure AD eingebunden, bei Intune registriert und ein Client in Configuration Manager sind. Installieren Sie den Configuration Manager-Client auf neuen Windows 10- und bereits in Intune registrierten Geräten jedoch vor der Aktivierung der Co-Verwaltung. Windows 10-Geräte, die Configuration Manager-Clients sind, können Sie bei Intune registrieren und die Co-Verwaltung über die Configuration Manager-Konsole aktivieren.
@@ -22,7 +22,7 @@ Sie können die Co-Verwaltung auf Windows 10-Geräten aktivieren, die in AD und 
 ## <a name="command-line-to-install-configuration-manager-client"></a>Befehlszeile zum Installieren von Configuration Manager-Clients
 Sie müssen in Intune eine App für Windows 10-Geräte erstellen, die noch keine Configuration Manager-Clients sind. Wenn Sie in den nächsten Abschnitten eine App erstellen, verwenden Sie die folgende Befehlszeile:
 
-```ccmsetup.msi CCMSETUPCMD="/mp:&#60;*URL of cloud management gateway mutual auth endpoint*&#62;/ CCMHOSTNAME=&#60;*URL of cloud management gateway mutual auth endpoint*&#62; SMSSiteCode=&#60;*Sitecode*&#62; SMSMP=https:&#47;/&#60;*FQDN of MP*&#62; AADTENANTID=&#60;*AAD tenant ID*&#62; AADTENANTNAME=&#60;*Tenant name*&#62; AADCLIENTAPPID=&#60;*Server AppID for AAD Integration*&#62; AADRESOURCEURI=https:&#47;/&#60;*Resource ID*&#62;”```
+ccmsetup.msi CCMSETUPCMD="/mp:&#60;*URL des Cloudverwaltungsgateway-Endpunkts für die gegenseitige Authentifizierung*&#62;/ CCMHOSTNAME=&#60;*URL des Cloudverwaltungsgateway-Endpunkts für die gegenseitige Authentifizierung*&#62; SMSSiteCode=&#60;*Standortcode*&#62; SMSMP=https:&#47;/&#60;*FQDN des MPs*&#62; AADTENANTID=&#60;*AAD-Mandanten-ID*&#62; AADTENANTNAME=&#60;*Mandantenname*&#62; AADCLIENTAPPID=&#60;*Server-App-ID für die AAD-Integration*&#62; AADRESOURCEURI=https:&#47;/&#60;*Ressourcen-ID*&#62;”
 
 Angenommen, Sie haben die folgenden Werte:
 
@@ -43,15 +43,19 @@ Angenommen, Sie haben die folgenden Werte:
 
 Daraus ergibt sich die folgende Befehlszeile:
 
-```ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=PS1 SMSMP=https:/&#47;sccmmp.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI=https:/&#47;ConfigMgrServer”```
+ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=PS1 SMSMP=https:/&#47;sccmmp.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI=https:/&#47;ConfigMgrServer”
 
 > [!Tip]
->Die Befehlszeilenparameter für Ihren Standort finden Sie anhand der folgenden Schritte:     
+> Die Befehlszeilenparameter für Ihren Standort finden Sie anhand der folgenden Schritte:     
 > 1. Navigieren Sie in der Configuration Manager-Konsole zu **Verwaltung** > **Übersicht** > **Clouddienste** > **Co-management** (Co-Verwaltung).  
 > 2. Klicken Sie auf der Registerkarte „Home“ (Startseite) in der Gruppe „Manage“ (Verwalten) auf  **Configure co-management** (Co-Verwaltung konfigurieren), um den Registrierungs-Assistenten für die Co-Verwaltung zu öffnen.    
 > 3. Klicken Sie auf der Seite „Subscriptions“ (Abonnement) auf **Sign In** (Anmelden), melden Sie sich bei Ihrem Intune-Mandanten an, und klicken Sie dann auf **Next** (Weiter).    
 > 4. Klicken Sie auf der Seite „Enablement“ (Aktivierung) im Abschnitt **Devices enrolled in Intune** (Bei Intune registrierte Geräte) auf **Copy** (Kopieren), um die Befehlszeile in die Zwischenablage zu kopieren. Speichern Sie sie anschließend, um die Befehlszeile bei der Erstellung einer App zu verwenden.  
 > 5. Klicken Sie auf **Cancel** (Schließen), um den Assistenten zu beenden.
+
+> [!Important]    
+> Wenn Sie die Befehlszeile anpassen, um den Konfigurations-Manager-Client zu installieren, achten Sie darauf, dass die Befehlszeile nicht mehr als 1024 Zeichen umfasst. Wenn die Befehlszeile aus mehr als 1024 Zeichen besteht, schlägt die Clientinstallation fehl.
+
 
 ## <a name="new-windows-10-devices"></a>Neue Windows 10-Geräte
 Auf neuen Windows 10-Geräten können Sie mit dem Dienst „AutoPilot“ den Eindruck beim ersten Ausführen konfigurieren, der die Einbindung des Geräts in AD und Azure AD sowie die Registrierung bei Intune umfasst. Erstellen Sie anschließend eine App in Intune, um den Configuration Manager-Client bereitzustellen.  

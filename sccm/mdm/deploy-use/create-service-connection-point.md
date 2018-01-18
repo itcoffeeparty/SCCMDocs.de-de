@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 9ae26c55cf92c954a54311e2e698353bbe359a83
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: ee038d8579d63f2afbf0b677181dd06751403ba0
+ms.sourcegitcommit: 0a6b2c53ff4445b5d4f3638fdb0b489d54e333d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="create-a-service-connection-point-with-system-center-configuration-manager-and-microsoft-intune"></a>Erstellen eines Dienstverbindungspunkts mit System Center Configuration Manager und Microsoft Intune
 
@@ -38,7 +38,7 @@ Nachdem Sie Ihr Abonnement erstellt haben, können Sie die Standortsystemrolle �
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung**.
 
-2.  Erweitern Sie im Arbeitsbereich **Verwaltung** den Bereich **Standorte**, und klicken Sie dann auf **Server und Standortsystemrollen**.
+2.  Erweitern Sie im Arbeitsbereich **Verwaltung** den Bereich **Standortkonfiguration**, und klicken Sie dann auf **Server und Standortsystemrollen**.
 
 3.  Fügen Sie einem neuen oder vorhandenen Standortsystemserver die Rolle **Dienstverbindungspunkt** wie folgt hinzu:
 

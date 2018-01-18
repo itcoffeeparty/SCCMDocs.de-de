@@ -3,7 +3,7 @@ title: "Checkliste für Version 1706"
 titleSuffix: Configuration Manager
 description: "Erfahren Sie mehr über Aktionen, die Sie durchführen müssen, bevor Sie eine Aktualisierung auf System Center Configuration Manager Version 1706 vornehmen."
 ms.custom: na
-ms.date: 07/31/2017
+ms.date: 12/19/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,11 +15,11 @@ caps.latest.revision:
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 7a3d3f127fe9555852d51981b16295dbd0b38903
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: b9acbf4a80bed52f0c720f70ee62042d1e90dd62
+ms.sourcegitcommit: 2867fd119256ec670fc5ae65cdc8a80d39f9b4d4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="checklist-for-installing-update-1706-for-system-center-configuration-manager"></a>Checkliste für die Installation des Updates 1706 für System Center Configuration Manager
 
@@ -126,6 +126,8 @@ Bevor Sie das Update installieren, deaktivieren Sie alle Standortwartungstasks, 
 Wenn ein Standortdatenbank-Wartungstask während der Updateinstallation ausgeführt wird, kann bei der Updateinstallation ein Fehler auftreten. Bevor Sie einen Task deaktivieren, zeichnen Sie den Zeitplan des Tasks auf, sodass Sie die Konfiguration nach Abschluss des Updates wiederherstellen können.
 
 Weitere Informationen finden Sie unter [Wartungstasks für System Center Configuration Manager](/sccm/core/servers/manage/maintenance-tasks) und [Referenz für Wartungstasks für System Center Configuration Manager](/sccm/core/servers/manage/reference-for-maintenance-tasks).
+
+**Vorübergehendes Beenden der Antivirensoftware auf den Servern von System Center Configuration Manager:** Stellen Sie vor dem Update eines Standorts sicher, dass Sie die Antivirensoftware auf den Servern von Configuration Manager beendet haben. <!--SMS.503481--> 
 
 **Erstellen Sie eine Sicherung der Standortdatenbank am Standort der zentralen Verwaltung und an den primären Standorten:** Sichern Sie vor dem Update eines Standorts die Standortdatenbank, um sicherzustellen, dass Sie eine erfolgreiche Sicherung für die Notfallwiederherstellung besitzen.
 

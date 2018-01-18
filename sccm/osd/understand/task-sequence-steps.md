@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 caps.latest.revision: "26"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 40a2d91baf8c02cdda96e9520ce155032272ebdd
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 77ce50cf363c9429f9ef38aa2acf5b898bc8052d
+ms.sourcegitcommit: b97aa456b392d817bc9723cbd5c0ce6602e7ae34
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/28/2017
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>Tasksequenzschritte in System Center Configuration Manager
 
@@ -946,7 +946,7 @@ Dieser Schritt wird entweder in einem Standardbetriebssystem oder in Windows PE 
  > Verwenden Sie die integrierten Variablen SMSTSMPListRequestTimeoutEnabled und SMSTSMPListRequestTimeout, um anzugeben, wie viele Millisekunden eine Tasksequenz nach dem erfolglosen Abrufen der Verwaltungspunktliste von Standortdiensten warten soll, bevor sie erneut versucht, eine Anwendung oder einen Softwareupdate zu installieren. Weitere Informationen finden Sie unter [Task sequence built-in variables (Integrierte Tasksequenzvariablen)](task-sequence-built-in-variables.md).
 
 > [!NOTE]
->Auf der Registerkarte „Optionen“ können Sie diese Tasksequenz so konfigurieren, dass eine Wiederholung erfolgt, wenn der Computer unerwartet neu gestartet wird. Beispiel: Die Installation eines Softwareupdates startet den Computer automatisch neu. Ab Configuration Manager 1602 können Sie die Variable SMSTSWaitForSecondReboot konfigurieren, um anzugeben, wie lang (in Sekunden) die Tasksequenz beim Installieren von Softwareupdates nach den Computerneustarts anhalten sollte. Weitere Informationen finden Sie unter [Integrierte Tasksequenzvariablen](task-sequence-built-in-variables.md).
+>Auf der Registerkarte „Optionen“ können Sie diese Tasksequenz so konfigurieren, dass eine Wiederholung erfolgt, wenn der Computer unerwartet neu gestartet wird. Beispiel: Die Installation eines Softwareupdates startet den Computer automatisch neu. Ab Configuration Manager 1602 können Sie die Variable SMSTSWaitForSecondReboot konfigurieren, um anzugeben, wie lang (in Sekunden) die Tasksequenz beim Installieren von Softwareupdates nach den Computerneustarts anhalten sollte. Weitere Informationen finden Sie unter [Task sequence built-in variables (Integrierte Tasksequenzvariablen)](task-sequence-built-in-variables.md).
 
 ### <a name="details"></a>Details  
  Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
@@ -1194,7 +1194,7 @@ Vor der Configuration Manager-Version 1610 werden bei diesem Schritt folgende Au
 ##  <a name="BKMK_RestartComputer"></a> Computer neu starten  
  Verwenden Sie den Tasksequenzschritt **Computer neu starten** , um den Computer, auf dem die Tasksequenz ausgeführt wird, neu zu starten. Nach dem Neustart wird automatisch der nächste Schritt der Tasksequenz verarbeitet.  
 
- Dieser Schritt kann entweder in einem Standardbetriebssystem oder in Windows PE ausgeführt werden. Weitere Informationen zu den Tasksequenzvariablen für diese Tasksequenzaktion finden Sie unter [Variablen der Tasksequenzaktion „Computer neu starten“](task-sequence-action-variables.md#BKMK_RestartComputer).  
+ Dieser Schritt kann entweder in einem Standardbetriebssystem oder in Windows PE ausgeführt werden. Weitere Informationen zu den Tasksequenzvariablen für diese Tasksequenzaktion finden Sie unter [Variablen der Tasksequenzaktion „Computer neu starten“](task-sequence-action-variables.md#BKMK_RestartComputer).  
 
 ### <a name="details"></a>Details  
  Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
@@ -1280,7 +1280,7 @@ Vor der Configuration Manager-Version 1610 werden bei diesem Schritt folgende Au
 ##  <a name="BKMK_RunCommandLine"></a> Befehlszeile ausführen  
  Mit dem Tasksequenzschritt **Befehlszeile ausführen** können Sie eine angegebene Befehlszeile ausführen.  
 
- Dieser Schritt kann in einem Standardbetriebssystem oder in Windows PE ausgeführt werden. Weitere Informationen zu Tasksequenzvariablen für diese Tasksequenzaktion finden Sie unter [Run Command Line Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_RunCommand).  
+ Dieser Schritt kann in einem Standardbetriebssystem oder in Windows PE ausgeführt werden. Weitere Informationen zu Tasksequenzvariablen für diese Tasksequenzaktion finden Sie unter [Run Command Line Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_RunCommand).  
 
 ### <a name="details"></a>Details  
  Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
@@ -1354,7 +1354,7 @@ Vor der Configuration Manager-Version 1610 werden bei diesem Schritt folgende Au
 ##  <a name="BKMK_RunPowerShellScript"></a> PowerShell-Skript ausführen  
  Verwenden Sie den Tasksequenzschritt **PowerShell-Skript ausführen** zum Ausführen eines angegebenen PowerShell-Skripts.  
 
- Dieser Schritt kann in einem Standardbetriebssystem oder in Windows PE ausgeführt werden. Um diesen Schritt in Windows PE auszuführen, muss PowerShell im Startabbild aktiviert sein. Sie können Windows PowerShell (WinPE-PowerShell) auf der Registerkarte **Optionale Komponenten** in den Eigenschaften des Startabbilds aktivieren. Weitere Informationen dazu, wie ein Startimage geändert wird, finden Sie unter [Verwalten von Startimages](../get-started/manage-boot-images.md).  
+ Dieser Schritt kann in einem Standardbetriebssystem oder in Windows PE ausgeführt werden. Um diesen Schritt in Windows PE auszuführen, muss PowerShell im Startabbild aktiviert sein. Sie können Windows PowerShell (WinPE-PowerShell) auf der Registerkarte **Optionale Komponenten** in den Eigenschaften des Startabbilds aktivieren. Weitere Informationen dazu, wie ein Startimage geändert wird, finden Sie unter [Verwalten von Startimages](../get-started/manage-boot-images.md).  
 
 > [!NOTE]  
 >  PowerShell ist unter Windows Embedded-Betriebssystemen nicht standardmäßig aktiviert.  
@@ -1477,7 +1477,7 @@ Berücksichtigen Sie Folgendes, wenn Sie eine untergeordnete Tasksequenz einer T
 
 -   **Hersteller und Modell**: Verwenden Sie diese Regelkategorie, um Werte für den Hersteller und das Modell eines Computers auszuwerten. Sowohl Hersteller als auch Modell müssen als „Wahr“ ausgewertet werden, damit die Regel als „Wahr“ ausgewertet wird.   
 
-    Ab Version 1610 von Configuration Manager können Sie ein Sternchen (*****) und ein Fragezeichen (**?**) als Platzhalter an der Stelle angeben, an der ***** mehreren Zeichen und **?** entspricht. entspricht einem einzelnen Zeichen. Zum Beispiel die Zeichenfolge „DELL*900?“ wird „DELL-ABC-9001“ und „DELL9009“ entsprechen.
+    Ab Version 1610 von Configuration Manager können Sie ein Sternchen (*****) und ein Fragezeichen (**?**) als Platzhalter an der Stelle angeben, an der ***** mehreren Zeichen und **?** entspricht. entspricht einem einzelnen Zeichen. Zum Beispiel die Zeichenfolge „DELL*900?“ wird „DELL-ABC-9001“ und „DELL9009“ entsprechen. 
 
 -   **Tasksequenzvariable**: Verwenden Sie diese Regelkategorie, um eine Tasksequenzvariable, eine Bedingung und einen Wert zum Auswerten anzugeben. Die Regel wird als „Wahr“ ausgewertet, wenn der für die Variable festgelegte Wert die angegebene Bedingung erfüllt.  
 

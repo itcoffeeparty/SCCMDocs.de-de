@@ -11,11 +11,11 @@ ms.prod: configmgr-hybrid
 ms.service: 
 ms.technology: 
 ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
-ms.openlocfilehash: 643b33810c2862e2d1c602bfe941c36605ad2631
-ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
+ms.openlocfilehash: 59fb06d14002f781e0448a64bb0064b4add2f087
+ms.sourcegitcommit: ac9268e31440ffe91b133c2ba8405d885248d404
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="change-the-mdm-authority-for-specific-users-mixed-mdm-authority"></a>Umstellen der MDM-Autorität für bestimmte Benutzer (gemischte MDM-Autorität) 
 
@@ -49,6 +49,7 @@ Migrierte Benutzer und ihre Geräte werden in Intune verwaltet. Andere Geräte w
       
   > [!Important]    
   > Bearbeiten Sie die Richtlinien auf Mandantenebene weiterhin in der Configuration Manager-Konsole. Nachdem Sie [Ihre MDM-Autorität auf Mandantenebene](change-mdm-authority.md) auf Intune umgestellt haben, verwalten Sie diese Richtlinien in Intune in Azure. 
+-   Wenn Sie Zertifikate zur Codesignierung verwenden, wird empfohlen, dass Sie die Benutzer in Phasen migrieren. Sobald ein mobiles Gerät migriert wurde, sendet es eine Anforderung für neue Zertifikate an die Zertifizierungsstelle. Wenn Sie die Benutzer (und deren Geräte) in Phasen migrieren, wird die Anzahl gleichzeitiger Anforderungen an die Zertifizierungsstelle eingeschränkt.
 - Wir empfehlen, keine Benutzerkonten zu migrieren, die in Configuration Manager als Geräteregistrierungs-Manager hinzugefügt wurden. Wenn Sie später Ihre MDM-Autorität auf Mandantenebene auf Intune umstellen, werden diese Benutzerkonten ordnungsgemäß migriert. Wenn Sie das Benutzerkonto des Geräteregistrierungs-Managers vor der Umstellung der MDM-Autorität auf Mandantenebene migrieren, müssen Sie den Benutzer manuell als Geräteregistrierungs-Manager in Intune in Azure hinzufügen. Geräte, die mit einem Geräteregistrierungs-Manager registriert werden, lassen sich jedoch nicht erfolgreich migrieren. Sie müssen den Support bitten, diese Geräte zu migrieren. Weitere Informationen finden Sie unter [Hinzufügen eines Geräteregistrierungs-Managers](https://docs.microsoft.com/en-us/intune/device-enrollment-manager-enroll#add-a-device-enrollment-manager).
 - Geräte, die mit einem Geräteregistrierungs-Manager registriert wurden, und Geräte ohne [Benutzeraffinität](/sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices) werden nicht automatisch zur neuen MDM-Autorität migriert. Informationen zum Wechseln der Verwaltungsautorität für diese MDM-Geräte finden Sie unter [Migrieren von Geräten ohne Benutzeraffinität](#migrate-devices-without-user-affinity).
 

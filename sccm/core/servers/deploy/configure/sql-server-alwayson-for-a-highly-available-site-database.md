@@ -3,7 +3,7 @@ title: SQL Server Always On
 titleSuffix: Configuration Manager
 description: "Planen Sie die Verwendung einer SQL Server-AlwaysOn-Verfügbarkeitsgruppe mit SCCM."
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 12/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "16"
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 42d5a059e11dffc7890ec78ce7361ebfe905a050
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 7efd0c76a0723a98661b0861eb16298eee524f35
+ms.sourcegitcommit: f1535281b2c3fecff773b722c3f7590bf6ba10a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Vorbereiten der Verwendung von SQL Server AlwaysOn-Verfügbarkeitsgruppen mit Configuration Manager
 
@@ -47,7 +47,7 @@ Die folgenden Szenarios werden für die Verwendung von Verfügbarkeitsgruppen mi
 -     [Verschieben einer Standortdatenbank aus einer Verfügbarkeitsgruppe in eine Standardinstanz oder eine benannte Instanz einer eigenständigen SQL Server-Instanz](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group).
 
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 Die folgenden Voraussetzungen gelten für alle Szenarien. Wenn zusätzliche Voraussetzungen für ein bestimmtes Szenario gelten, werden sie für das Szenario angegeben.   
 
 ### <a name="configuration-manager-accounts-and-permissions"></a>Konten und Berechtigungen in Configuration Manager
@@ -78,7 +78,7 @@ Weitere Informationen finden Sie unter [Erstellen eines Endpunkts für die Daten
 
 -   Seit Version 1706 können Sie ein Replikat mit asynchronem Commit zum Wiederherstellen Ihres synchronen Replikats verwenden. Unter [Wiederherstellungsoptionen für die Standortdatenbank]( /sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) finden Sie im Thema zu Sicherung und Wiederherstellung weiterführende Informationen dazu.
     > [!CAUTION]  
-    > Configuration Manager unterstützt kein Failover, um das Replikat mit asynchronem Commit als Standortdatenbank zu verwenden.
+    > Configuration Manager unterstützt nicht, dass [Failovers](https://go.microsoft.com/fwlink/?linkid=626885) Replikate mit asynchronem Commit als Standortdatenbank verwenden.
 Da Configuration Manager nicht den Status des Replikats mit asynchronem Commit dahingehend überprüft, ob es aktuell ist, und [ein solches Replikat asynchron sein kann]( https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes), kann das Verwenden eines Replikats mit asynchronem Commit als Standortdatenbank die Integrität Ihres Standorts und Ihrer Daten gefährden.
 
 Jedes Replikationsmitglied muss:

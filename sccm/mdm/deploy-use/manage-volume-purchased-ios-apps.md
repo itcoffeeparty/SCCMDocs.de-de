@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: c5ce168afe8668c67d7a66aaf79fce91d082afd5
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 1411675b11074b610d7370f93eafd7359cfb46ee
+ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="manage-volume-purchased-ios-apps-with-system-center-configuration-manager"></a>Verwalten von iOS-Apps, die über ein Volumenprogramm erworben wurden, mit System Center Configuration Manager
 
@@ -104,7 +104,7 @@ Die von Apple gespeicherten Daten können jederzeit mit Configuration Manager vo
 1.  Wählen Sie in der Configuration Manager-Konsole **Softwarebibliothek** > **Anwendungsverwaltung** > **License Information for Store Apps** (Lizenzinformationen für Store-Apps) aus.  
 
 3.  Wählen Sie zunächst die App aus, die Sie bereitstellen möchten. Klicken Sie anschließend auf der Registerkarte **Start** in der Gruppe **Erstellen** auf **Anwendung erstellen**.
-Die Configuration Manager-Anwendung, die erstellt wird, enthält die App „Windows Store für Unternehmen“. Sie können diese Anwendung wie jede andere Configuration Manager-Anwendung bereitstellen und überwachen.
+Die Configuration Manager-Anwendung, die erstellt wird, enthält die App „Microsoft Store für Unternehmen“. Sie können diese App dann wie jede andere Configuration Manager-App bereitstellen und überwachen.
 
     > [!IMPORTANT]  
     > Wählen Sie als Bereitstellungszweck **Erforderlich** aus. Verfügbare Installationen werden derzeit nicht unterstützt.

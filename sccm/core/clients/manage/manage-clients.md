@@ -3,7 +3,7 @@ title: Verwalten von Clients
 titleSuffix: Configuration Manager
 description: Erfahren Sie, wie Sie Clients in System Center Configuration Manager verwalten.
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 12/21/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,31 +12,33 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 caps.latest.revision: "17"
-author: arob98
-ms.author: angrobe
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 8afb217524d5c2236fb07b13cb42ca50ae200183
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 2065fd0910b1d89df3f8296c87ede15b89331568
+ms.sourcegitcommit: 528b1ce79803fecd34937a790e9b5cde282d4caa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>Verwalten von Clients in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Wenn ein System Center Configuration Manager-Client installiert und erfolgreich einem Configuration Manager-Standort zugewiesen wurde, wird Ihnen das Gerät im Arbeitsbereich **Bestand und Kompatibilität** im Knoten **Geräte** sowie in mindestens einer Sammlung im Knoten **Gerätesammlungen** angezeigt. Wenn Sie das Gerät oder eine Sammlung auswählen, können Sie verschiedene Verwaltungsvorgänge durchführen. Sie haben jedoch auch andere Möglichkeiten, den Client zu verwalten. Hierbei können andere Arbeitsbereiche der Konsole oder Tasks, von denen die Configuration Manager-Konsole nicht verwendet wird, relevant sein.  
+Wenn der Konfigurations-Manager-Client auf einem Gerät installiert und erfolgreich einem Standort zugewiesen wurde, wird Ihnen das Gerät im Arbeitsbereich **Bestand und Kompatibilität** im Knoten **Geräte** angezeigt sowie in mindestens einer Sammlung im Knoten **Gerätesammlungen**. Wenn Sie das Gerät oder eine Sammlung auswählen, können Sie verschiedene Verwaltungsvorgänge durchführen. Es gibt jedoch andere Möglichkeiten, um den Client zu verwalten. Hierfür können andere Arbeitsbereiche in der Konsole oder Aufgaben außerhalb der Konsole verwendet werden.  
 
 > [!NOTE]  
->  Ein Configuration Manager-Client ist möglicherweise installiert, wird jedoch nicht in der Configuration Manager-Konsole angezeigt. Dies kann vorkommen, wenn der Client noch nicht erfolgreich einem Standort zugeordnet wurde, wenn die Konsole aktualisiert werden muss oder wenn ein Update auf eine Sammlungsmitgliedschaft angewendet werden muss.  
+>  Wenn der Konfigurations-Manager-Client installiert wurde, aber noch nicht erfolgreich einem Standort zugewiesen wurde, wird dieser möglicherweise nicht in der Konsole angezeigt. Nachdem der Client einem Standort zugewiesen wurde, aktualisieren Sie die Sammlungsmitgliedschaft und die Konsolenansicht.  
 >   
->  Es ist außerdem möglich, dass ein Gerät in der Konsole angezeigt wird, wenn der Configuration Manager-Client nicht installiert ist. Dies ist möglich, wenn das Gerät zwar ermittelt wurde, der Configuration Manager-Client jedoch nicht installiert und zugewiesen wurde. Von mobilen Geräten, die mithilfe des Exchange Server-Connectors verwaltet werden, sowie von Geräten, die von Microsoft Intune registriert werden, wird der Configuration Manager-Client nicht installiert.  
+>  Es ist außerdem möglich, dass ein Gerät in der Konsole angezeigt wird, wenn der Configuration Manager-Client nicht installiert ist. Dieses Verhalten kann auftreten, wenn das Gerät ermittelt, aber der Client nicht installiert und zugewiesen wurde. 
+>
+> Bei mobilen Geräten, die mithilfe des Exchange Server-Connectors verwaltet werden sowie bei Geräten, die in Microsoft Intune registriert wurden, wird der Konfigurations-Manager-Client nicht installiert.  
 >   
->  Verwenden Sie die Spalte **Client** in der Configuration Manager-Konsole, um zu bestimmen, ob der Configuration Manager-Client installiert ist, und um ihn mithilfe der Configuration Manager-Konsole verwalten zu können.  
+>  Verwenden Sie die Spalte **Client** in der Configuration Manager-Konsole, um zu bestimmten, ob der Client installiert ist, damit Sie diesen über die Konsole verwalten können.  
 
 ##  <a name="BKMK_ManagingClients_DevicesNode"></a> Verwalten von Clients mithilfe des Knotens „Geräte“  
 
-Beachten Sie, dass je nach Gerätetyp einige dieser Optionen möglicherweise nicht verfügbar sind.  
+Je nach Typ des Geräts sind einige dieser Optionen möglicherweise nicht verfügbar.  
 
 1.  Wählen Sie in der Configuration Manager-Konsole **Bestand und Konformität** >  **Geräte** aus.  
 
@@ -54,7 +56,7 @@ Beachten Sie, dass je nach Gerätetyp einige dieser Optionen möglicherweise nic
 
     -   **Installieren und erneutes Installieren des Clients mithilfe von Clientpushinstallation**  
 
-         Installieren Sie den Configuration Manager-Client und installieren Sie ihn erneut, um diesen auf Computern, auf denen Windows ausgeführt wird, zu reparieren oder zu konfigurieren. Enthält Optionen für die Websitekonfiguration und client.msi-Eigenschaften, die Sie für die Clientpushinstallation festlegen.  
+         Installieren Sie den Konfigurations-Manager-Client, und installieren Sie ihn dann erneut, um ihn zu reparieren oder zu konfigurieren. Diese Option enthält Konfigurationseinstellungen und client.msi-Eigenschaften für den Standort. Diese Einstellungen legen Sie für die Clientpushinstallation fest.  
 
         > [!TIP]  
         >  Es gibt viele verschiedene Möglichkeiten, den Configuration Manager-Client zu installieren (und erneut zu installieren). Die Clientpushinstallation ist eine praktische Methode zur Clientinstallation, da sie mithilfe der Konsole ausgeführt werden kann. Allerdings hat diese Installationsmethode zahlreiche Abhängigkeiten und ist nicht für alle Umgebungen geeignet. Weitere Informationen zu den Abhängigkeiten finden Sie unter [Prerequisites for deploying clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md) (Voraussetzungen für die Bereitstellung von Clients auf Windows-PCs in System Center Configuration Manager). Weitere Informationen zu den anderen Clientinstallationsmethoden finden Sie unter [Clientinstallationsmethoden in System Center Configuration Manager](../../../core/clients/deploy/plan/client-installation-methods.md).  
@@ -67,11 +69,11 @@ Beachten Sie, dass je nach Gerätetyp einige dieser Optionen möglicherweise nic
 
     -   **Remotes Verwalten des Clients**  
 
-         Sie können den Ressourcen-Explorer ausführen, um Informationen zu Hard- und Softwareinventar eines Windows-Clients anzuzeigen, und Sie können den Client per Remotesteuerung, Remoteunterstützung oder Remotedesktop remote verwalten.  
+         Führen Sie Ressourcen-Explorer aus, um die Informationen zur Hardware- und Softwareinventur eines Windows-Clients anzuzeigen. Verwalten Sie das Gerät remote, indem Sie die Remotesteuerung, die Remoteunterstützung oder Remotedesktop verwenden.  
 
-         Informationen hierzu finden Sie unter [Anzeigen des Hardwareinventars mit dem Ressourcen-Explorer in System Center Configuration Manager](../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md) und [Anzeigen des Softwareinventars mit dem Ressourcen-Explorer in System Center Configuration Manager](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md).  
+         Weitere Informationen finden Sie unter [Anzeigen des Hardwareinventars mit Ressourcen-Explorer](../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md) und [Anzeigen des Softwareinventars mit Ressourcen-Explorer](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md).  
 
-         Informationen hierzu finden Sie unter [Remoteverwaltung eines Windows-Clientcomputers mithilfe von System Center Configuration Manager](../../../core/clients/manage/remote-control/remotely-administer-a-windows-client-computer.md).  
+         Weitere Informationen finden Sie unter [Remoteverwaltung eines Windows-Clientcomputers](../../../core/clients/manage/remote-control/remotely-administer-a-windows-client-computer.md).  
 
     -   **Genehmigen eines Clients**  
 
@@ -84,12 +86,12 @@ Beachten Sie, dass je nach Gerätetyp einige dieser Optionen möglicherweise nic
 
     -   **Blockieren und Zulassen eines Clients**  
 
-         Blockieren Sie Clients, die Sie nicht mehr als vertrauenswürdig einstufen, um ein Übermitteln der Clientrichtlinie an die Clients und eine Kommunikation zwischen Configuration Manager-Standortsystemen und den Clients zu verhindern.  
+         Blockieren Sie einen Client, den Sie nicht mehr als vertrauenswürdig einstufen. Durch das Blockieren wird verhindert, dass der Client Richtlinien empfängt und dass die Standortsysteme mit diesem kommunizieren.  
 
         > [!WARNING]  
         >  Durch das Blockieren eines Clients wird nur die Kommunikation vom Client an die Configuration Manager-Standortsysteme verhindert. Die Kommunikation mit anderen Geräten wird nicht verhindert. Zusätzlich gibt es aus Sicherheitsgründen einige Einschränkungen, wenn die Kommunikation vom Client mit den Standortsystemen über HTTP anstatt HTTPS erfolgt.  
 
-         Sie können blockierte Clients wieder zulassen. Wenn Sie jedoch einen blockierten Intel AMT-basierten Client zulassen, der für AMT bereitgestellt wurde, während er blockiert war, müssen Sie zusätzliche Schritte ausführen, bevor bei diesem Computer wieder eine Out-of-Band-Verwaltung möglich ist.  
+         Sie können die Blockierung blockierter Clients wieder aufheben. 
 
          Informationen hierzu finden Sie unter [Bestimmen, ob Clients blockiert werden sollen, in System Center Configuration Manager](../../../core/clients/deploy/plan/determine-whether-to-block-clients.md).  
 
@@ -108,7 +110,7 @@ Beachten Sie, dass je nach Gerätetyp einige dieser Optionen möglicherweise nic
         > [!WARNING]  
         >  Löschen Sie einen Client nicht, wenn Sie den Configuration Manager-Client deinstallieren oder aus einer Sammlung entfernen möchten.  
 
-         Mit der Aktion **Löschen** wird der Clientdatensatz manuell aus der Configuration Manager-Datenbank gelöscht. Normalerweise sollten Sie diese Aktion nicht ausführen, sofern dies nicht zur Problembehandlung erforderlich ist. Wenn Sie den Clientdatensatz löschen, während der Client weiterhin installiert ist und Kommunikation zwischen ihm und Configuration Manager erfolgt, wird der Clientdatensatz von der Frequenzermittlung neu erstellt und wieder in der Configuration Manager-Konsole angezeigt, obwohl der Clientverlauf sowie alle bisherigen Zuordnungen verloren gehen.  
+         Mit der Aktion **Löschen** wird der Clientdatensatz manuell aus der Configuration Manager-Datenbank gelöscht. Normalerweise sollten Sie diese Aktion nicht ausführen, sofern dies nicht zur Problembehandlung erforderlich ist. Wenn Sie den Clientdatensatz löschen, der Client aber weiterhin installiert ist und mit dem Standort kommuniziert, erstellt die Frequenzermittlung den Clientdatensatz erneut. Der Clientdatensatz wird erneut in der Configuration Manager-Konsole angezeigt, obwohl der Clientverlauf und bisherige Zuordnungen nicht mehr vorhanden sind.  
 
         > [!NOTE]  
         >  Wenn Sie ein mobiles Gerät löschen, das von Configuration Manager angemeldet wurde, wird dadurch auch das ausgestellte PKI-Zertifikat gesperrt, und dieses Zertifikat wird auch dann vom Verwaltungspunkt zurückgewiesen, wenn die Zertifikatsperrliste nicht von IIS geprüft wird. Zertifikate auf Legacyclients bei mobilen Geräten werden nicht gesperrt, wenn Sie diese Clients löschen.  
@@ -123,7 +125,7 @@ Beachten Sie, dass je nach Gerätetyp einige dieser Optionen möglicherweise nic
 
          Sie können mobile Geräte zurücksetzen, die den betreffenden Befehl unterstützen.  
 
-         Durch diese Aktion werden alle Daten auf den mobilen Geräten endgültig gelöscht. Hiervon sind auch die persönlichen Einstellungen und Daten betroffen. Normalerweise wird das mobile Gerät durch diese Aktion auf die Werkseinstellungen zurückgesetzt. Setzen Sie ein mobiles Gerät zurück, wenn Sie es nicht mehr als vertrauenswürdig einstufen, beispielsweise nach Verlust oder Diebstahl.  
+         Durch diese Aktion werden alle Daten auf den mobilen Geräten endgültig gelöscht. Hiervon sind auch die persönlichen Einstellungen und Daten betroffen. Normalerweise wird das mobile Gerät durch diese Aktion auf die Werkseinstellungen zurückgesetzt. Setzen Sie ein mobiles Gerät zurück, wenn dieses nicht mehr als vertrauenswürdig eingestuft wird. Dies wird beispielsweise empfohlen, wenn das Gerät verloren geht oder gestohlen wird.  
 
         > [!TIP]  
         >  Lesen Sie die Dokumentation des Herstellers, um sich darüber zu informieren, wie ein Befehl zum Remotezurücksetzen vom Gerät verarbeitet wird.  
@@ -138,13 +140,13 @@ Beachten Sie, dass je nach Gerätetyp einige dieser Optionen möglicherweise nic
 
     -   **Außerkraftsetzen eines mobilen Geräts**  
 
-         Die Option **Außerkraftsetzen** wird nur von mobilen Geräten unterstützt, die mit Intune oder lokaler Verwaltung mobiler Geräte angemeldet werden.  
+         Die Option **Außerkraftsetzen** wird nur von mobilen Geräten unterstützt, die mit Microsoft Intune oder mit der lokalen Verwaltung mobiler Geräte angemeldet werden.  
 
          Weitere Informationen finden Sie unter [Schützen Ihrer Daten mit Remotezurücksetzen, Remotesperre und Kennungszurücksetzung mit System Center Configuration Manager](../../../mdm/deploy-use/wipe-lock-reset-devices.md).  
 
     -   **Ändern des Besitzers eines Geräts**  
 
-         Sie können den Besitz von Geräten in **Firma** oder **Persönlich** ändern, wenn ein Gerät in keine Domäne eingebunden ist und der Configuration Manager-Client nicht darauf installiert ist.  
+         Wenn ein Gerät nicht mit einer Domäne verknüpft ist oder über eine Installation des Konfigurations-Manager-Clients verfügt, verwenden Sie diese Option, um den Besitz von **Unternehmen** in **Persönlich** zu ändern.  
 
          Sie können diesen Wert in Anwendungsanforderungen zum Steuern von Bereitstellungen verwenden und auch die Menge der Inventurinformationen steuern, die von Geräten von Benutzern gesammelt werden.  
 
@@ -153,9 +155,12 @@ Beachten Sie, dass je nach Gerätetyp einige dieser Optionen möglicherweise nic
          Weitere Informationen finden Sie unter [Hybride Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md).  
 
 ##  <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> Verwalten von Clients mithilfe des Knotens „Gerätesammlungen“  
-  Viele der Tasks, die Sie im Knoten **Geräte** für ein einzelnes Gerät oder mehrere Geräte ausführen können, können für Sammlungen ausgeführt werden. Dadurch wird der Vorgang automatisch auf für alle entsprechenden Geräte in der Sammlung angewendet. Beachten Sie, dass dadurch viele Netzwerkpakete generiert werden und die CPU-Nutzung auf dem Standortserver steigt.  
+  Viele der Aufgaben, die im Knoten **Geräte** für Geräte verfügbar sind, sind ebenfalls für Sammlungen verfügbar. Die Konsole führt den Vorgang automatisch für alle qualifizierten Geräte in der Sammlung aus. Wenn eine Aktion für eine gesamte Sammlung ausgeführt wird, werden zusätzliche Netzwerkpakete generiert und die CPU-Nutzung auf dem Standortserver steigt.  
 
-  Bevor Sie Clientverwaltungstasks auf Sammlungsebene ausführen, berücksichtigen Sie, wie viele Geräte in der Sammlung enthalten sind, ob die Geräte nur über Netzwerkverbindungen mit niedriger Bandbreite verbunden sind, und wie lange es dauern wird, bis der Task für alle Geräte ausgeführt ist. Nach dem Start kann der Task nicht mehr in der Konsole beendet werden.  
+  Beachten Sie Folgendes, bevor Sie Aufgaben auf Sammlungsebene ausführen. Nach dem Start kann der Task nicht mehr in der Konsole beendet werden. 
+ - Wie viele Geräte befinden sich in der Sammlung?
+ - Sind die Geräte über Netzwerkverbindungen mit geringer Bandbreite verbunden?
+ - Wie viel Zeit muss aufgewendet werde, um diese Aufgabe für alle Geräte auszuführen?
 
 #### <a name="to-manage-clients-from-the-device-collections-node"></a>So verwalten Sie Clients mithilfe des Knotens „Gerätesammlungen“  
 
@@ -187,21 +192,27 @@ Beachten Sie, dass je nach Gerätetyp einige dieser Optionen möglicherweise nic
 
 
 ## <a name="restart-clients"></a>Neustarten von Clients
-Ab Version 1710 können Sie die Configuration Manager-Konsole verwenden, um Clientgeräte zu identifizieren, die einen Neustart erfordern, und diese Geräte dann mit einer Clientbenachrichtungsaktion neu starten.
+Ab Version 1710 können Sie die Configuration Manager-Konsole verwenden, um Clients zu identifizieren, für die ein Neustart erforderlich ist. Verwenden Sie eine Aktion zur Clientbenachrichtigung, um diese neu zu starten.
 
-Um Geräte zu identifizieren, für die ein Neustart aussteht, wechseln Sie zu **Assets und Konformität** > **Geräte**, und wählen Sie eine Sammlung mit Geräten aus, die möglicherweise neu gestartet werden müssen. Nach Auswahl der Sammlung können Sie den Status für jedes Gerät im Detailbereich in einer neuen Spalte namens **Neustart steht aus** auswählen. Jedes Gerät weist entweder den Wert **Ja** oder den Wert **Nein** auf.
+> [!Tip]
+> Sie müssen die Clients ebenfalls auf Version 1710 upgraden, damit diese Funktion verwendet werden kann. Es wird empfohlen, automatische Clientupgrades zu aktivieren, damit Ihre Clients mit minimalem Verwaltungsaufwand auf dem neuesten Stand bleiben. Weitere Informationen finden Sie unter [Verwenden des automatischen Clientupgrades](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade).
+
+Wechseln Sie zum Arbeitsbereich **Bestand und Kompatibilität** in der Configuration Manager-Konsole, und klicken Sie auf den Knoten **Geräte**, um Geräte zu identifizieren, für die ein Neustart aussteht. Zeigen Sie dann im Bereich „Details“ den Status für jedes Gerät in einer neuen Spalte namens **Neustart ausstehend** an. Jedes Gerät besitzt mindestens einen der folgenden Werte: 
+ - **Nein:** Es steht kein Neustart aus.
+ - **Configuration Manager:** Dieser Wert stammt aus der Koordinierungskomponente für den Neustart des Clients (RebootCoordinator.log).
+ - **Datei umbenennen:** Dieser Wert stammt aus einem Bericht von Windows für einen ausstehenden Umbenennungsvorgang für eine Datei (HKLM\SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations).
+ - **Windows Update:** Dieser Wert stammt vom Windows Update-Agent, der meldet, dass ein ausstehender Neustart für mindestens ein Update erforderlich ist (HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired).
+ - **Feature hinzufügen oder entfernen:** Dieser Wert stammt von einem komponentenbasierten Windows-Dienst und gibt an, dass das Hinzufügen oder Entfernen eines Windows-Features einen Neustart erfordert (HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Reboot Pending).
 
 **So erstellen Sie die Clientbenachrichtigung zum Neustarten eines Geräts**
-1.  Ermitteln Sie im Knoten „Geräte“ der Konsole das Gerät, das Sie neu starten möchten.
+1.  Suchen Sie das Gerät, das Sie neu starten möchten, in der Sammlung im Knoten **Gerätesammlungen** der Konsole.
 2.  Klicken Sie mit der rechten Maustaste auf das Gerät, und wählen Sie **Clientbenachrichtigung** und danach **Neustart** aus. Dadurch wird ein Fenster mit Informationen zum Neustart geöffnet. Klicken Sie zum Bestätigen der Anforderung des Neustarts auf **OK** .
 
 Wenn ein Client diese Benachrichtigung empfängt, wird dort ein **Softwarecenter**-Benachrichtigungsfenster geöffnet, um den Benutzer über den Neustart zu informieren. Standardmäßig erfolgt der Neustart nach 90 Minuten. Sie können den Zeitpunkt des Neustarts durch Konfigurieren der [Clienteinstellungen](/sccm/core/clients/deploy/configure-client-settings) ändern. Sie finden die Einstellungen für das Neustartverhalten in den Standardeinstellungen auf der Registerkarte [Computerneustart](/sccm/core/clients/deploy/about-client-settings#computer-restart).
 
 
-
-
 ##  <a name="BKMK_ClientCache"></a> Konfigurieren des Clientcaches für Configuration Manager-Clients  
-Der Clientcache speichert temporäre Dateien, die beim Installieren von Anwendungen und Programmen durch Clients verwendet werden. Der Clientcache kann auch von Softwareupdates verwendet werden. Softwareupdates werden jedoch nicht von der konfigurierten Cache-Größe eingeschränkt, und es wird stets ein Herunterladen in den Cache versucht. Die Einstellungen des Clientcaches, wie z.B. Größe und Speicherort, können beim manuellen Installieren des Configuration Manager-Clients, bei Verwendung der Clientpushinstallation oder nach der Installation des Clients konfiguriert werden.
+Der Clientcache speichert temporäre Dateien, die beim Installieren von Anwendungen und Programmen durch Clients verwendet werden. Softwareupdates verwenden ebenfalls den Clientcache. Diese versuchen jedoch unabhängig von der Größeneinstellung stets, Downloads in den Cache durchzuführen. Konfigurieren Sie die Cacheeinstellungen (z.B. Größe und Speicherort), wenn Sie den Client installieren, die Clientpushinstallation verwenden oder die Installation abgeschlossen haben.
 
 Ab Configuration Manager Version 1606 können Sie die Größe des Cacheordners mithilfe von Clienteinstellungen in der Configuration Manager-Konsole angeben.   
 
@@ -212,16 +223,16 @@ Ab Configuration Manager Version 1606 können Sie die Größe des Cacheordners m
 
 ### <a name="about-client-cache"></a>Informationen zum Clientcache  
 
-Der Configuration Manager-Client lädt den Inhalt für erforderliche Software unmittelbar nach Erhalt der Bereitstellung herunter, führt ihn jedoch erst zum geplanten Bereitstellungszeitpunkt aus. Zum geplanten Zeitpunkt überprüft der Configuration Manager-Client, ob der Inhalt im Cache verfügbar ist. Wenn Inhalte im Cache verfügbar sind und in der richtigen Version vorliegen, werden diese Cacheinhalte verwendet. Wenn die erforderliche Version der Inhalte geändert wurde oder die Inhalte gelöscht wurden, um das Einstellen eines anderen Pakets zu ermöglichen, werden die Inhalte erneut in den Cache heruntergeladen.  
+Der Configuration Manager-Client lädt den Inhalt für erforderliche Software unmittelbar nach Erhalt der Bereitstellung herunter, führt ihn jedoch erst zum geplanten Bereitstellungszeitpunkt aus. Zum geplanten Zeitpunkt überprüft der Configuration Manager-Client, ob der Inhalt im Cache verfügbar ist. Wenn Inhalte im Cache verfügbar sind und in der richtigen Version vorliegen, werden diese Cacheinhalte verwendet. Wenn die erforderliche Version des Inhalts geändert wird oder der Client den Inhalt löscht, um Speicherplatz für ein anderes Paket freizugeben, lädt der Client den Inhalt erneut in den Cache herunter.  
 
-Wenn der Client versucht, Inhalt für ein Programm oder eine Anwendung herunterzuladen, dessen Größe die Cachegröße überschreitet, tritt bei der Bereitstellung wegen unzureichender Cachegröße ein Fehler auf, und Configuration Manager generiert die Statusmeldungs-ID 10050. Wenn die Cachegröße später erhöht wird, ist das Ergebnis:  
+Wenn versucht wird, Inhalte für ein Programm oder eine Anwendung herunterzuladen, deren Größe die Cachegröße überschreitet, tritt bei der Bereitstellung wegen unzureichender Cachegröße ein Fehler auf. Der Client generiert die Statusmeldung 10050 für unzureichende Cachegröße. Das spätere Erhöhen der Cachegröße führt zu folgendem Ergebnis:  
 
--   Erforderliches Programm: Es wird nicht automatisch erneut versucht, die Inhalte herunterzuladen. Sie müssen das Paket und das Programm erneut auf dem Client bereitstellen.  
+-   Erforderliches Programm: Es wird nicht automatisch erneut versucht, die Inhalte herunterzuladen. Stellen Sie das Paket und das Programm erneut für den Client bereit.  
 -   Erforderliche Anwendung: Der Client versucht beim Herunterladen der Clientrichtlinie erneut automatisch, die Inhalte herunterzuladen.  
 
-Wenn versucht wird, ein Paket herunterzuladen, dessen Größe die Cachegröße unterschreitet, der Cache jedoch voll ist, werden Bereitstellungsversuche für alle erforderlichen Bereitstellungen so lange wiederholt, bis ausreichend Cachespeicher verfügbar ist oder bis das Zeitlimit bzw. die maximale Anzahl von Wiederholungen erreicht ist. Wird die Cachegröße später erweitert, wird vom Configuration Manager-Client im nächsten Wiederholungsintervall erneut versucht, das Paket herunterzuladen. Der Client startet alle vier Stunden einen neuen Versuch, um die Inhalte herunterzuladen. Maximal werden 18 Wiederholungen ausgeführt.  
+Wenn der Client versucht, ein Paket herunterzuladen, das die Cachegröße unterschreitet, der Cache jedoch voll ist, werden alle erforderlichen Bereitstellungsversuche so lange wiederholt, bis ausreichend Cachespeicher verfügbar ist, bis das Zeitlimit für den Download erreicht ist, oder die Grenze für die Anzahl von Wiederholungen erreicht ist. Wird die Cachegröße später erweitert, wird vom Configuration Manager-Client im nächsten Wiederholungsintervall erneut versucht, das Paket herunterzuladen. Der Client startet alle vier Stunden einen neuen Versuch, um die Inhalte herunterzuladen. Maximal werden 18 Wiederholungen ausgeführt.  
 
-Cacheinhalte werden nicht automatisch gelöscht. Sie verbleiben nach der Verwendung der Inhalte durch den Client mindestens einen Tag lang im Cache. Wenn Sie die Paketeigenschaften so konfigurieren, dass Inhalte dauerhaft im Clientcache gespeichert werden, werden die Paketinhalte nicht automatisch aus dem Cache gelöscht. Wenn der Speicherplatz des Clientcaches mit Paketen belegt ist, die in den letzten 24 Stunden heruntergeladen wurden, und weitere Pakete heruntergeladen werden müssen, können Sie entweder die Cachegröße erweitern oder die Option zum Löschen von persistent im Cache gespeicherten Inhalten auswählen.  
+Cacheinhalte werden nicht automatisch gelöscht. Sie verbleiben nach der Verwendung der Inhalte durch den Client mindestens einen Tag lang im Cache. Wenn Sie die Paketeigenschaften so konfigurieren, dass Inhalte dauerhaft im Clientcache gespeichert werden, werden die Paketinhalte nicht automatisch aus dem Cache gelöscht. Wenn der Cachespeicher von Paketen verwendet wird, die innerhalb der letzten 24 Stunden heruntergeladen wurden, und der Client neue Pakete herunterladen muss, können Sie entweder den Cachespeicher erhöhen oder die Option zum Löschen von gespeicherten Cacheinhalten auswählen.  
 
  Gehen Sie wie folgt vor, um den Clientcache während der manuellen Clientinstallation oder nach der Installation des Clients zu konfigurieren.  
 
@@ -238,9 +249,9 @@ Führen Sie den Befehl CCMSetup.exe vom Installationsquellspeicherort aus. Geben
     -   SMSCACHESIZE  
 
         > [!NOTE]
-        > Verwenden Sie für Version 1606 die Einstellungen für die Cachegröße, die in den **Clienteinstellungen** in der Configuration Manager-Konsole statt in SMSCACHESIZE verfügbar sind. Weitere Informationen finden Sie unter [Informationen zu Clienteinstellungen in System Center Configuration Manager](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)
+        > Verwenden Sie für Version 1606 die Einstellungen für die Cachegröße, die in den **Clienteinstellungen** in der Configuration Manager-Konsole statt in SMSCACHESIZE verfügbar sind. Weitere Informationen finden Sie unter [Einstellungen des Clientcaches](../../../core/clients/deploy/about-client-settings.md#client-cache-settings).
 
-Weitere Informationen zur Verwendungsweise dieser Befehlszeileneigenschaften für „CCMSetup.exe“ finden Sie unter [Informationen zu Clientinstallationseigenschaften in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
+Weitere Informationen zum Verwenden dieser Befehlszeileneigenschaften für „CCMSetup.exe“ finden Sie unter [Informationen zu Clientinstallationseigenschaften](../../../core/clients/deploy/about-client-installation-properties.md).  
 
 ### <a name="to-configure-the-client-cache-folder-when-you-install-clients-by-using-client-push-installation"></a>So konfigurieren Sie den Clientcacheordner während der Installation von Clients mithilfe der Clientpushinstallation  
 
@@ -259,9 +270,9 @@ Weitere Informationen zur Verwendungsweise dieser Befehlszeileneigenschaften fü
     -   SMSCACHESIZE  
 
         > [!NOTE]
-        > Verwenden Sie für Version 1606 die Einstellungen für die Cachegröße, die in den **Clienteinstellungen** in der Configuration Manager-Konsole statt in SMSCACHESIZE verfügbar sind. Weitere Informationen finden Sie unter [Informationen zu Clienteinstellungen in System Center Configuration Manager](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)
+        > Verwenden Sie für Version 1606 die Einstellungen für die Cachegröße, die in den **Clienteinstellungen** in der Configuration Manager-Konsole statt in SMSCACHESIZE verfügbar sind. Weitere Informationen finden Sie unter [Einstellungen des Clientcaches](../../../core/clients/deploy/about-client-settings.md#client-cache-settings).
 
-       Weitere Informationen zur Verwendungsweise dieser Befehlszeileneigenschaften für „CCMSetup.exe“ finden Sie unter [Informationen zu Clientinstallationseigenschaften in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
+       Weitere Informationen zum Verwenden dieser Befehlszeileneigenschaften für „CCMSetup.exe“ finden Sie unter [Informationen zu Clientinstallationseigenschaften](../../../core/clients/deploy/about-client-installation-properties.md).  
 
 ### <a name="to-configure-the-client-cache-folder-on-the-client-computer"></a>So konfigurieren Sie den Clientcacheordner auf dem Clientcomputer  
 
@@ -273,7 +284,7 @@ Weitere Informationen zur Verwendungsweise dieser Befehlszeileneigenschaften fü
 
 ### <a name="to-configure-client-cache-size-in-client-settings"></a>So konfigurieren Sie die Cachegröße des Clients in den Clienteinstellungen
 
-Ab Version 1606 können Sie die Größe des Clientcacheordners anpassen, ohne den Client neu installieren zu müssen. Konfigurieren Sie dazu die Cachegröße des Clients in der Configuration Manager-Konsole über die Clienteinstellungen.  
+Passen Sie die Größe des Clientcaches an, ohne den Client neu installieren zu müssen, indem Sie die Cachegröße in der Configuration Manager-Konsole mithilfe der Cacheeinstellungen konfigurieren.  
 
 1. Navigieren Sie in der Configuration Manager-Konsole zu **Verwaltung**  >  **Clienteinstellungen**.
 
@@ -302,9 +313,9 @@ Ab Version 1606 können Sie die Größe des Clientcacheordners anpassen, ohne de
 >  Bei der Deinstallation werden keine Ergebnisse auf dem Bildschirm angezeigt. Zur Sicherstellung, dass die Clientdeinstallation erfolgreich war, überprüfen Sie die Protokolldatei **CCMSetup.log** im Ordner *%windir%\ccmsetup* auf dem Clientcomputer.  
 
 ##  <a name="BKMK_ConflictingRecords"></a> Verwalten von in Konflikt stehenden Datensätzen bei Configuration Manager-Clients  
- Configuration Manager identifiziert mithilfe der Hardware-ID Clients, bei denen es sich um Duplikate handeln könnte. Sie werden über in Konflikt stehende Datensätze informiert. Wenn Sie z.B. einen Computer erneut installieren, bleibt die Hardware-ID unverändert, während die von Configuration Manager verwendete GUID sich ändern kann.  
+ Configuration Manager verwendet Hardware-IDs, um Clients zu identifizieren, bei denen es sich um Duplikate handeln könnte, und informiert Sie über in Konflikt stehende Datensätze. Wenn Sie z.B. einen Computer erneut installieren, bleibt die Hardware-ID unverändert, während die von Configuration Manager verwendete GUID sich ändern kann.  
 
- Wenn ein Konflikt von Configuration Manager mithilfe der Windows-Authentifizierung des Computerkontos oder mithilfe eines PKI-Zertifikats aus einer vertrauenswürdigen Quelle aufgelöst werden kann, geschieht dies automatisch. Wenn Configuration Manager den Konflikt dagegen nicht auflösen kann, wird eine Hierarchieeinstellung verwendet, um entweder beim Erkennen doppelter Hardware-IDs automatisch neue Datensätze zu erstellen (dies ist die Standardeinstellung) oder die Entscheidung über eine Zusammenführung, Sperrung oder Erstellung neuer Clientdatensätze Ihnen zu überlassen. Wenn Sie sich für das manuelle Verwalten duplizierter Datensätze entscheiden, müssen Sie die in Konflikt stehenden Datensätze in der Configuration Manager-Konsole manuell bearbeiten, um den Konflikt aufzulösen.  
+ Configuration Manager löst Konflikte automatisch mithilfe der Windows-Authentifizierung des Computerkontos oder eines PKI-Zertifikats aus einer vertrauenswürdigen Quelle. Wenn Configuration Manager Konflikte durch doppelte Hardware-IDs jedoch nicht lösen kann, bestimmt eine Hierarchieeinstellung, ob die Datensätze automatisch zusammengeführt werden oder ob Sie das Verhalten bestimmen können. Wenn Sie sich für das manuelle Verwalten duplizierter Datensätze entscheiden, müssen Sie die in Konflikt stehenden Datensätze in der Configuration Manager-Konsole manuell bearbeiten, um den Konflikt aufzulösen.  
 
 
 #### <a name="to-change-the-hierarchy-setting-for-managing-conflicting-records"></a>So ändern Sie die Hierarchieeinstellung zum Verwalten von in Konflikt stehenden Datensätzen  
@@ -318,7 +329,7 @@ Ab Version 1606 können Sie die Größe des Clientcacheordners anpassen, ohne de
 
 3.  Wählen Sie mindestens einen in Konflikt stehenden Datensatz aus, und klicken Sie dann auf **In Konflikt stehende Datensätze**.  
 
-4.  Wählen Sie eine der folgenden Einstellungen aus:  
+4.  Wählen Sie eine der folgenden Optionen aus:  
 
     -   **Zusammenführen**: Hiermit kombinieren Sie den neu erkannten Datensatz mit dem vorhandenen Clientdatensatz.  
 
@@ -327,10 +338,10 @@ Ab Version 1606 können Sie die Größe des Clientcacheordners anpassen, ohne de
     -   **Sperren** : Hiermit erstellen Sie einen neuen Datensatz für den in Konflikt stehenden Clientdatensatz, markieren ihn jedoch als gesperrt.  
 
 ## <a name="manage-duplicate-hardware-identifiers"></a>Verwalten von in Konflikt stehenden Datensätzen bei Configuration Manager-Clients
-Ab Configuration Manager Version 1610 können Sie eine Liste der Hardware-IDs angeben, die Configuration Manager für den PXE-Start und die Clientregistrierung ignoriert. Es gibt zwei häufige Probleme, die dadurch behandelt werden können.
+Das Bereitstellen einer Liste von Hardware-IDs, die Configuration Manager für den PXE-Start und die Clientregistrierung ignoriert, ist für das Beheben von zwei häufigen Problemen hilfreich.
 
-1. Viele neue Geräte wie Surface Pro 3 haben keinen integrierten Ethernet-Anschluss. Ein USB-zu-Ethernet-Adapter wird im Allgemeinen verwendet, um eine Kabelverbindung für die Bereitstellung des Betriebssystems einzurichten. Allerdings handelt es sich hierbei aus Kostengründen und Gründen der allgemeinen Nutzbarkeit oft um gemeinsame Adapter. Nachdem die MAC-Adresse des Adapters zur Identifizierung des Geräts verwendet wird, ist es problematisch, den Adapter ohne zusätzliche Aktionen eines Administrators zwischen den Bereitstellungen wiederzuverwenden. Ab Version 1610 können Sie die MAC-Adresse dieses Adapters ausschließen, sodass er in diesem Szenario wiederverwendet werden kann.
-2. Während es sich bei SMBIOS-ID um eine eindeutige Hardware-ID handeln sollte, werden einige spezielle Hardwaregeräte mit doppelten IDs gebaut. Obwohl es nicht so häufig ist wie das oben beschriebene USB-zu-Ethernet-Adapter-Szenario, kann die Liste von Hardware-IDs ebenfalls dazu verwendet werden, das Problem zu behandeln.
+1. Viele neue Geräte wie Surface Pro 3 haben keinen integrierten Ethernet-Anschluss. Techniker verwenden einen USB-zu-Ethernet-Adapter zum Einrichten einer Kabelverbindung für die Bereitstellung eines Betriebssystems. Diese Adapter werden aus Kostengründen und wegen der allgemeinen Nutzbarkeit häufig gemeinsam genutzt. Nachdem die MAC-Adresse des Adapters zur Identifizierung des Geräts verwendet wird, ist es problematisch, den Adapter ohne zusätzliche Aktionen eines Administrators zwischen den Bereitstellungen wiederzuverwenden. Schließen Sie die MAC-Adresse des Adapters aus, um diesen für ein solches Szenario wiederzuverwenden.
+2. Während das SMBIOS-Attribut eindeutig sein sollte, verfügen einige spezielle Hardwaregeräte über doppelte IDs. Schließen Sie diese doppelten ID aus, und verwenden Sie die eindeutige MAC-Adresse jedes Geräts.
 
 #### <a name="to-add-hardware-identifiers-for-configuration-manager-to-ignore"></a>So fügen Sie von Hardware-IDs hinzu, die Configuration Manager ignorieren soll  
 1. Navigieren Sie in der Configuration Manager-Konsole zu **Verwaltung** > **Übersicht** > **Standortkonfiguration** > **Standorte**.
@@ -338,7 +349,7 @@ Ab Configuration Manager Version 1610 können Sie eine Liste der Hardware-IDs an
 3. Wählen Sie auf der Registerkarte **Clientgenehmigung und in Konflikt stehende Datensätze** im Abschnitt **Doppelte Hardware-IDs** die Option **Hinzufügen** aus, um neue Hardware-IDs hinzuzufügen.
 
 ##  <a name="BKMK_PolicyRetrieval"></a> Initiieren des Richtlinienabrufs für einen Configuration Manager-Client  
- Clientrichtlinien werden von Windows-Configuration Manager-Clients nach einem als Clienteinstellung konfigurierten Zeitplan heruntergeladen. Es kann jedoch vorkommen, dass Sie Richtlinien ad hoc vom Client abrufen möchten, z.B. zur Problembehandlung oder während eines Tests.  
+ Clientrichtlinien werden von Windows-Configuration Manager-Clients nach einem als Clienteinstellung konfigurierten Zeitplan heruntergeladen. Es kann jedoch vorkommen, dass Sie Richtlinien lokal vom Client abrufen möchten, z.B. zur Problembehandlung oder während eines Tests.  
 
 Sie können den Richtlinienabruf auslösen:
 
@@ -374,7 +385,7 @@ Sie können den Richtlinienabruf auslösen:
 
 1.  Öffnen Sie einen Text-Editor, z. B. Notepad.  
 
-2.  Kopieren Sie Folgendes, und fügen Sie es in die Datei ein:  
+2.  Kopieren Sie folgendes Beispiel für Visual Basic Scripting Edition-Code, und fügen Sie dieses in die Datei ein:  
 
     ```  
     on error resume next  

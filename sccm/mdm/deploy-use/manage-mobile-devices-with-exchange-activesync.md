@@ -15,11 +15,11 @@ caps.latest.revision: "8"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: d8f3a963d0fccb3469e751e1ca3319368ae92506
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: ff7fef664780730510f17d723a1d13ca691405af
+ms.sourcegitcommit: 0a6b2c53ff4445b5d4f3638fdb0b489d54e333d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="manage-mobile-devices-with-system-center-configuration-manager-and-exchange"></a>Verwalten von mobilen Geräten mit System Center Configuration Manager und Exchange
 
@@ -89,7 +89,9 @@ Verwenden Sie den Exchange Server-Connector in System Center Configuration Manag
     -   **Get-ActiveSyncOrganizationSettings**  
 
     -   **Get-ExchangeServer**  
-
+    
+    -   **Get-Mailbox**
+    
     -   **Get-Recipient**  
 
     -   **Set-ADServerSettings**  

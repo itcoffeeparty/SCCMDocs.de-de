@@ -16,11 +16,11 @@ author: mestew
 ms.author: mstewart
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 6c13a6b2d1413788cef2796af322a777b2a4682c
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: deef7ed1bbfef5c388d9fe00fbfc5c839e108527
+ms.sourcegitcommit: 2867fd119256ec670fc5ae65cdc8a80d39f9b4d4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="checklist-for-installing-update-1602-for-system-center-configuration-manager"></a>Checkliste für die Installation von Update 1602 für System Center Configuration Manager
 
@@ -92,7 +92,9 @@ Weitere Informationen finden Sie unter [Datenbankreplikate für Verwaltungspunkt
 
 Wenn ein Standortdatenbank-Wartungstask während der Updateinstallation ausgeführt wird, kann bei der Updateinstallation ein Fehler auftreten. Bevor Sie einen Task deaktivieren, zeichnen Sie den Zeitplan des Tasks auf, sodass Sie die Konfiguration nach Abschluss des Updates wiederherstellen können.  
 
- Weitere Informationen finden Sie unter [Wartungstasks für System Center Configuration Manager](../../../core/servers/manage/maintenance-tasks.md) und [Referenz für Wartungstasks für System Center Configuration Manager](../../../core/servers/manage/reference-for-maintenance-tasks.md).  
+ Weitere Informationen finden Sie unter [Wartungstasks für System Center Configuration Manager](../../../core/servers/manage/maintenance-tasks.md) und [Referenz für Wartungstasks für System Center Configuration Manager](../../../core/servers/manage/reference-for-maintenance-tasks.md). 
+
+**Vorübergehendes Beenden der Antivirensoftware auf den Servern von System Center Configuration Manager:** Stellen Sie vor dem Update eines Standorts sicher, dass Sie die Antivirensoftware auf den Servern von Configuration Manager beendet haben. <!--SMS.503481--> 
 
  **Erstellen Sie eine Sicherung der Standortdatenbank am Standort der zentralen Verwaltung und an den primären Standorten:** Sichern Sie vor dem Update eines Standorts die Standortdatenbank, um sicherzustellen, dass Sie eine erfolgreiche Sicherung für die Notfallwiederherstellung besitzen.   
 

@@ -33,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: ce5239340032db7deb5bcb20d00aba77c9b140e2
-ms.sourcegitcommit: da27d37cc4e4e06cf23758846cdd7acb617f744b
+ms.openlocfilehash: 1129da43f9c50d21f2ce8392721c77a4e614e410
+ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1710-of-system-center-configuration-manager"></a>Ebenen der Sammlung von Nutzungsdaten zu Diagnosezwecken für System Center Configuration Manager-Version 1710
 
@@ -168,7 +168,7 @@ Bei der Version 1710 von System Center Configuration Manager enthält diese Eben
 
    - Anzahl der Windows Installer-Bereitstellungstypen pro Einstellung für die Deinstallation von Inhalten
 
-   - Anzahl der Apps im Windows Store für Unternehmen und Synchronisierungsstatistiken (einschließlich zusammengefasste App-Typen, Status lizenzierter Apps und Anzahl der Online- und Offline-lizenzierten Apps)  
+   - Anzahl der Apps im Microsoft Store für Geschäftsanwendungen und Synchronisierungsstatistiken (einschließlich zusammengefasste App-Typen, Status lizenzierter Apps und Anzahl der Online- und Offline-lizenzierten Apps)  
 
    - Wartungsfenstertyp und -dauer  
 
@@ -519,4 +519,4 @@ Bei der Version 1710 von System Center Configuration Manager enthält diese Eben
 
 - Typ der EAS-Richtlinien für den bedingten Zugriff (blockiert oder in Quarantäne) für mit Intune verwaltete Geräte
 
-- Anwendungsdetails zu Windows Store für Unternehmen (nicht-aggregierte Liste synchronisierter Anwendungen, darunter App-ID, Online- oder Offlinestatus und die Gesamtzahl erworbener Lizenzen)
+- Anwendungsdetails zu Microsoft Store für Geschäftsanwendungen (nicht-aggregierte Liste synchronisierter Anwendungen, darunter App-ID, Online- oder Offlinestatus und die Gesamtzahl erworbener Lizenzen)

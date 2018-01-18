@@ -3,7 +3,7 @@ title: Verwalten des Zugriffs auf Skype for Business Online
 titleSuffix: Configuration Manager
 description: "Enthält Informationen zum Verwenden der Richtlinie für bedingten Zugriff, um Skype for Business Online zu verwalten."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 12/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,67 +15,66 @@ caps.latest.revision: "6"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: b7886d3e8f181d6d9316c5438dd948b21a658648
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 3c1d0c84dc28fb886048cf8d7ea310c2b4dfc4aa
+ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="manage-skype-for-business-online-access"></a>Verwalten des Zugriffs auf Skype for Business Online
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 
-Verwenden Sie die Richtlinie für bedingten Zugriff für  **Skype for Business Online** zum Verwalten des Zugriffs auf Skype for Business Online anhand der Bedingungen, die Sie angeben.  
+Verwenden Sie die Richtlinie für bedingten Zugriff für Skype for Business Online zum Verwalten des Zugriffs auf Skype for Business Online anhand der Bedingungen, die Sie angeben.  
 
 
  Wenn ein Zielbenutzer versucht, Skype for Business Online auf seinem Gerät zu verwenden, wird folgende Bewertung durchgeführt:![ConditionalAccess&#95;SFBFlow](media/ConditionalAccess_SFBFlow.png)  
 
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
 
--   Aktivieren Sie die moderne Authentifizierung für Skype for Business Online. Füllen Sie dieses [Anmeldeformular](https://connect.microsoft.com/office/Survey/NominationSurvey.aspx?SurveyID=17299&ProgramID=8715) aus, um sich für die moderne Authentifizierung zu registrieren.  
+-   Aktivieren Sie die [moderne Authentifizierung](https://aka.ms/SkypeModernAuth) für Skype for Business Online.   
 
--   Alle Ihre Endbenutzer müssen Skype for Business Online verwenden. Wenn Sie eine Bereitstellung sowohl mit Skype for Business Online als auch Skype for Business haben, wird die Richtlinie für bedingten Zugriff nicht für Endbenutzer angewendet.  
+-   Alle Benutzer müssen Skype for Business Online verwenden. Wenn Sie eine Bereitstellung sowohl mit Skype for Business Online als auch Skype for Business On-Premises (Lokal) haben, wird die Richtlinie für bedingten Zugriff nicht für lokale Benutzer angewendet.  
 
 -   Das Gerät, das Zugriff auf Skype for Business Online benötigt, muss folgende Voraussetzungen erfüllen:  
 
-    -   Es muss ein Android- oder iOS-Gerät sein.  
+    -   Es muss ein Android- oder iOS-Gerät sein
 
-    -   Es muss bei Intune registriert sein.  
+    -   Es muss bei Microsoft Intune registriert sein
 
-    -   Es muss mit allen bereitgestellten Konformitätsrichtlinien kompatibel sein.  
+    -   Es muss mit allen bereitgestellten Microsoft Intune-Konformitätsrichtlinien übereinstimmen
 
- Der Gerätestatus wird in Azure Active Directory gespeichert. Die Anwendung gewährt oder blockiert den Zugriff entsprechend den von Ihnen angegebenen Bedingungen.  
-Wenn eine Bedingung nicht erfüllt wird, erhält der Benutzer bei der Anmeldung die folgenden Meldungen:  
+ Azure Active Directory speichert den Gerätestatus, der den Zugriff, entsprechend den von Ihnen angegebenen Bedingungen, gewährt oder blockiert.  
+Wenn eine Bedingung nicht erfüllt wird, werden dem Benutzer bei der Anmeldung die folgenden Meldungen angezeigt:  
 
--   Wenn das Gerät nicht bei Intune oder in Azure Active Directory registriert ist, wird eine Meldung mit Anweisungen zum Installieren der Unternehmensportal-App und zum Registrieren des Geräts angezeigt.  
+-   Wenn das Gerät nicht bei Microsoft Intune oder in Azure Active Directory registriert ist, werden dem Benutzer Anweisungen zum Installieren der Unternehmensportal-App und zum Registrieren des Geräts angezeigt.  
 
--   Wenn das Gerät nicht kompatibel ist, wird eine Meldung angezeigt, die den Benutzer zum Intune-Unternehmensportal oder der Unternehmensportal-App weiterleitet. Hier finden sie Informationen zum Problem und zu dessen Lösung.  
+-   Wenn das Gerät nicht konform ist, wird dem Benutzer eine Nachricht angezeigt, die auf die Unternehmensportal-Website oder die Unternehmensportal-App weiterleitet. Auf dem Unternehmensportal gibt es Informationen zu dem Problem und dessen Behebung.  
 
 ## <a name="configure-conditional-access-for-skype-for-business-online"></a>Konfigurieren des bedingten Zugriffs für Skype for Business Online  
 
-### <a name="step-1-configure-active-directory-security-groups"></a>Schritt 1: Konfigurieren von Active Directory-Sicherheitsgruppen  
- Bevor Sie beginnen, konfigurieren Sie Azure Active Directory-Sicherheitsgruppen für die bedingte Zugriffsichtlinie. Sie können diese Gruppen im Office 365 Admin Center konfigurieren. Die Gruppen beinhalten die Benutzer, für die die Richtlinie gelten soll oder die davon ausgeschlossen sind. Bei Benutzern, für die eine Richtlinie gelten soll, muss jedes von ihnen verwendete Gerät die Richtlinie erfüllen, damit sie auf Ressourcen zugreifen können.  
+### <a name="step-1-configure-active-directory-security-groups"></a>Schritt 1: Konfigurieren von Active Directory-Sicherheitsgruppen  
+ Bevor Sie beginnen, konfigurieren Sie Azure Active Directory-Sicherheitsgruppen für die bedingte Zugriffsichtlinie. Konfigurieren Sie diese Gruppen im Office 365 Admin Center. Diese Gruppen enthalten die Benutzer, die von der Richtlinie beinhaltet oder ausgenommen werden. Bei Benutzern, für die eine Richtlinie gelten soll, muss jedes von ihnen verwendete Gerät die Richtlinie erfüllen, damit sie auf Ressourcen zugreifen können.  
 
  Sie können zwei Typen von Gruppen angeben, die für die Skype for Business-Richtlinie verwendet werden sollen:  
 
--   Zielgruppen – Gruppen von Benutzern, für die die Richtlinie gelten soll  
+-   **Zielgruppen** beinhalten Benutzer, für die die Richtlinie gelten soll  
 
--   Ausgenommene Gruppen – Gruppen von Benutzern, die von der Richtlinie ausgenommen sind (optional)  
-    Benutzer, die in beiden Gruppen enthalten sind, werden von der Richtlinie ausgenommen.  
+-   **Ausgenommene Gruppen** beinhalten Benutzer, die von der Richtlinie nicht gelten soll  
+    Wenn ein Benutzer in beiden Gruppen ist, wird er von der Richtlinie ausgenommen.  
 
 ### <a name="step-2-configure-and-deploy-a-compliance-policy"></a>Schritt 2: Konfigurieren und Bereitstellen einer Kompatibilitätsrichtlinie  
- Wichtig ist, dass Sie für alle Geräte, für die die Skype for Business Online-Richtlinie gelten soll, eine Kompatibilitätsrichtlinie erstellen und bereitstellen.  
+ Erstellen Sie für alle Geräte, für die die Skype for Business Online-Richtlinie gelten soll, eine Konformitätsrichtlinie und stellen sie bereit.  
 
- Ausführliche Informationen zum Konfigurieren der Kompatibilitätsrichtlinie finden Sie unter [Verwalten von Kompatibilitätsrichtlinien für Geräte in System Center Configuration Manager](../../protect/deploy-use/device-compliance-policies.md).  
+ Ausführliche Informationen zum Konfigurieren der Konformitätsrichtlinie finden Sie unter [Konfigurieren der Konformitätsrichtlinien für Geräte](../../protect/deploy-use/device-compliance-policies.md).  
 
 > [!NOTE]  
->  Wenn Sie keine Kompatibilitätsrichtlinie bereitgestellt haben und dann die Skype for Business Online-Richtlinie aktivieren, wird allen Zielgeräten der Zugriff erlaubt, sofern sie bei Intune registriert sind.  
+>  Wenn Sie keine Konformitätsrichtlinie bereitgestellt haben und dann die Skype for Business Online-Richtlinie aktivieren, ist allen Zielgeräten der Zugriff erlaubt, sofern sie bei Microsoft Intune registriert sind.  
 
- Fahren Sie mit Schritt 3 fort.  
 
 ### <a name="step-3-configure-the-skype-for-business-online-policy"></a>Schritt 3: Konfigurieren der Skype for Business Online-Richtlinie  
- Anschließend konfigurieren Sie die Richtlinie so, dass nur verwaltete und kompatible Geräte auf Skype for Business Online zugreifen dürfen. Diese Richtlinie wird in Azure Active Directory gespeichert.  
+ Konfigurieren Sie die Richtlinie so, dass nur verwaltete und konforme Geräte auf Skype for Business Online zugreifen dürfen. Diese Richtlinie ist in Azure Active Directory gespeichert.  
 
 1.  Klicken Sie in der [Microsoft Intune-Verwaltungskonsole](https://manage.microsoft.com)auf **Richtlinie** > **Bedingter Zugriff** > **Skype for Business Online Richtlinie**.  
 
@@ -89,7 +88,7 @@ Wenn eine Bedingung nicht erfüllt wird, erhält der Benutzer bei der Anmeldung 
 
     -   Android  
 
-4.  Klicken Sie unter **Zielgruppen**auf **Ändern** , um die Active Directory-Sicherheitsgruppen auszuwählen, für die die Richtlinie gelten soll. Sie können dies für alle Benutzer oder nur für ausgewählte Benutzergruppen festlegen.  
+4.  Klicken Sie unter **Zielgruppen** auf **Ändern**, um die Active Directory-Sicherheitsgruppen auszuwählen, für die die Richtlinie gelten soll. Sie können diese Richtlinie für alle Benutzer oder nur für ausgewählte Benutzergruppen festlegen.  
 
 5.  Klicken Sie unter **Ausgenommene Gruppen**optional auf **Ändern** , um die Active Directory-Sicherheitsgruppen auszuwählen, die von dieser Richtlinie ausgenommen werden.  
 
@@ -102,11 +101,11 @@ Wenn eine Bedingung nicht erfüllt wird, erhält der Benutzer bei der Anmeldung 
 
  Wählen Sie eine beliebige Gruppe von Mobilgeräten und anschließend auf der Registerkarte **Geräte** einen der folgenden **Filter**aus:  
 
--   **Geräte, die nicht bei AAD registriert sind** – Diese Geräte werden für Skype for Business Online blockiert.  
+-   **Geräte, die nicht bei AAD registriert sind** werden für Skype for Business Online blockiert
 
--   **Geräte, die nicht kompatibel sind** – Diese Geräte werden für Skype for Business Online blockiert.  
+-   **Geräte, die nicht konform sind** werden für Skype for Business Online blockiert  
 
--   **Geräte, die bei AAD registriert und kompatibel sind** – Diese Geräte können auf Skype for Business Online zugreifen.  
+-   **Geräte, die bei AAD registriert und konform sind**, können auf Skype for Business Online zugreifen  
 
 ### <a name="see-also"></a>Weitere Informationen:  
 
