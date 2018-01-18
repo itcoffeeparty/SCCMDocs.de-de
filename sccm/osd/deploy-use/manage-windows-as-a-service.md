@@ -35,7 +35,7 @@ ms.lasthandoff: 12/12/2017
 ##  <a name="BKMK_Prerequisites"></a> Voraussetzungen  
  Um Daten im Windows 10-Wartungsdashboard anzuzeigen, gehen Sie wie folgt vor:  
 
--   Auf Windows 10-Computern müssen Configuration Manager-Softwareupdates mit Windows Server Update Services (WSUS) für die Verwaltung von Softwareupdates verwendet werden. Wenn auf Computern Windows Update für Unternehmen (oder Windows-Insider) für die Verwaltung von Softwareupdates verwendet wird, erfolgt in Windows 10-Wartungsplänen keine Auswertung des Computers. Weitere Informationen finden Sie unter [Integration with Windows Update for Business in Windows 10](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md).  
+-   Auf Windows 10-Computern müssen Configuration Manager-Softwareupdates mit Windows Server Update Services (WSUS) für die Verwaltung von Softwareupdates verwendet werden. Wenn auf Computern Windows Update für Unternehmen (oder Windows-Insider) für die Verwaltung von Softwareupdates verwendet wird, erfolgt in Windows 10-Wartungsplänen keine Auswertung des Computers. Weitere Informationen finden Sie unter [Integration mit Windows Update für Unternehmen in Windows 10](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md).  
 
 -   Auf den Softwareupdatepunkten und Standortservern muss WSUS 4.0 mit [Hotfix 3095113](https://support.microsoft.com/kb/3095113) installiert sein. Dadurch wird die Softwareupdateklassifizierung **Upgrades** hinzugefügt. Weitere Informationen finden Sie unter [Prerequisites for software updates (Voraussetzungen für Softwareupdates)](../../sum/plan-design/prerequisites-for-software-updates.md).  
 
