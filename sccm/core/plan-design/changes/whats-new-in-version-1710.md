@@ -3,7 +3,7 @@ title: Neue Version 1710 | Microsoft-Dokumentation
 titleSuffix: Configuration Manager
 description: "Erfahren Sie mehr über Änderungen und neue Funktionen, die in Version 1710 von System Center Configuration Manager eingeführt wurden."
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 1/08/2018
 ms.reviewer: na
 ms.suite: na
 ms.technology: configmgr-other
@@ -13,11 +13,11 @@ ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 8431ebffc6d1aa463c5622bd67db8a140c0cfe69
-ms.sourcegitcommit: 2dc9c83e57e9734ffc4a93f79cd71285036eeb8b
+ms.openlocfilehash: f944d4625e2e67a82098bf3b4373ea5f0ed70619
+ms.sourcegitcommit: 9de3d74030b7c3313c34b5cbe2dbe6e18a48c043
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>Neuerungen in Version 1710 von System Center Configuration Manager
 
@@ -49,6 +49,9 @@ Ab dieser Version ist der Peercache keine Vorabfunktion mehr.  In dieser Version
 
 ### <a name="cloud-distribution-point-support-for-azure-government-cloud------sms491428---"></a>Unterstützung für Cloudverteilungspunkt für Azure Government Cloud   <!-- sms491428 -->
 Sie können jetzt [cloudbasierte Verteilungspunkte](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) in der Azure Government Cloud nutzen.   
+
+### <a name="inventory-default-unit-revision----sms503697---"></a>Revision der Standardlagereinheit <!-- sms503697 -->
+Da Geräte heutzutage über Festplatten verfügen, deren Größe in Gigabyte (GB), Terabyte (TB) oder noch größeren Einheiten angegeben werden, wird mit diesem Release die Standardeinheit (SMS_Units), die in vielen Ansichten verwendet wird, von Megabyte (MB) in GB geändert. Beispielsweise gibt der v_gs_LogicalDisk.FreeSpace-Wert jetzt GB-Einheiten zurück.
 
 
 <!-- ## Migration  -->
@@ -145,7 +148,7 @@ Unterstützte Szenarien:
 - [Registrieren von Geräten](../../../mdm/deploy-use/enroll-hybrid-windows.md)
 - [Remotezurücksetzung auf die Werkseinstellungen und selektives Zurücksetzen](../../../mdm/deploy-use/wipe-lock-reset-devices.md)
 - [Verwalten von Einstellungen mithilfe von Konfigurationselementen und -baselines](../../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)
-- [Verwalten von Konformitätsrichtlinien](../../../mdm/deploy-use/device-compliance-policies.md)
+- [Verwalten von Konformitätsrichtlinien](../../../mdm/deploy-use/device-compliance-policies.md) und [Bedingter Zugriff](../../../protect/deploy-use/manage-access-to-services.md)
 - Verwalten des Zugriffs auf Unternehmensressourcen über:
    - [Zertifikatprofile](../../../mdm/deploy-use/create-pfx-certificate-profiles.md)
    - [VPN-Profile](../../../mdm/deploy-use/create-vpn-profiles.md)
@@ -153,6 +156,9 @@ Unterstützte Szenarien:
    - [E-Mail-Profile](../../../mdm/deploy-use/create-exchange-activesync-profiles.md)
 - [Konfigurieren einer Windows Hello for Business-Richtlinie](../../../mdm/deploy-use/windows-hello-for-business-settings.md)
 - [Verwalten von Anwendungen](../../../mdm/deploy-use/management-tasks-applications.md)
+
+> [!NOTE]
+> Das Bereitstellen von „.appxbundle“-Anwendungen, die für mehrere Architekturen erstellt wurden, funktioniert möglicherweise nicht auf diesen Geräten, und dieses Szenario wird derzeit nicht unterstützt.
 
 ### <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>Verbesserte Benutzeroberfläche für VPN-Profile in der Configuration Manager-Konsole 
 <!-- 1318232 -->
