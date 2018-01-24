@@ -29,7 +29,7 @@ ms.lasthandoff: 01/04/2018
 
 Das Tool wirkt sich nur auf den Inhalt auf dem Verteilungspunkt aus, den Sie angeben, wenn Sie das Tool ausführen. Das Tool kann keinen Inhalt aus der Inhaltsbibliothek auf dem Standortserver entfernen.
 
-Sie können **ContentLibraryCleanup.exe** im Ordner *%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* auf dem Standortserver an einem Standort der zentralen Verwaltung oder einem primären Standort finden.
+Sie können **ContentLibraryCleanup.exe** im Ordner \*%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* auf dem Standortserver an einem Standort der zentralen Verwaltung oder einem primären Standort finden.
 
 ## <a name="requirements"></a>Anforderungen  
  Das Tool kann jeweils immer nur für einen einzelnen Verteilungspunkt ausgeführt werden.  
