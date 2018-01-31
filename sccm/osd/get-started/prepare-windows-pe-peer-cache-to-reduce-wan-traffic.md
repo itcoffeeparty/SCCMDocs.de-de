@@ -7,11 +7,12 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-osd
+ms.technology:
+- configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 6c64f276-b88c-4b1e-8073-331876a03038
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
@@ -74,7 +75,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie Peercache verwalten.
         > [!TIP]  
         >  Die Clients werden HTTPS zum Herunterladen von Inhalten verwenden, wenn es verfügbar ist. Allerdings wird für HTTP oder HTTPS dieselbe Portnummer verwendet.  
 
--   [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) auf Clients, um sicherzustellen, dass ausreichend Speicherplatz für die bereitzustellenden Images verfügbar ist. Windows PE-Peercache wirkt sich nicht auf die Konfiguration oder das Verhalten des Clientcaches aus.  
+-   [Konfigurieren des Clientcaches für Configuration Manager-Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) auf Clients, um sicherzustellen, dass ausreichend Speicherplatz für die bereitzustellenden Images verfügbar ist. Windows PE-Peercache wirkt sich nicht auf die Konfiguration oder das Verhalten des Clientcaches aus.  
 
 -   Die Bereitstellungsoptionen für die Bereitstellung der Tasksequenz müssen als „Inhalt lokal herunterladen, wenn er von der Tasksequenz benötigt wird“ konfiguriert werden.  
 
