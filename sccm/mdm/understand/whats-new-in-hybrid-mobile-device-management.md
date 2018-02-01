@@ -7,18 +7,19 @@ ms.date: 01/04/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 243daf8626e329214ce1b94f109d19773bbc57c5
-ms.sourcegitcommit: 2da6b06818371e93f28e36cadf3a154d50ce5bf4
+ms.openlocfilehash: 04ed2ac1abe54c3b8c7c86f210b35f5f52d80ef6
+ms.sourcegitcommit: c432624b8816f59d51a3c8ef68960ed4099d9124
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Neuheiten bei der hybriden Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune
 
@@ -40,6 +41,17 @@ Jeder Abschnitt dieses Artikels listet Hybridfeatures in drei verschiedenen Kate
 |**Neuheiten in Microsoft Intune** | Im Allgemeinen sollten alle in dieser Kategorie aufgeführten Features in allen Configuration Manager-Releases funktionieren. Dies umfasst auch Configuration Manager-Releases von System Center 2012 R2, da für diese Features nur der Intune-Dienst erforderlich ist und keine zusätzlichen Funktionen in Configuration Manager benötigt werden.|
 |**Neuheiten in Configuration Manager Technical Preview**| Alle in dieser Kategorie aufgelisteten Features können nur mit dem angegebenen Technical Preview-Release verwendet werden. Um diese Features zu testen, müssen Sie die in der Featurebeschreibung angegebene Technical Preview-Version installieren. Weitere Informationen finden Sie unter [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md).|
 |**Neuheiten in Configuration Manager (Current Branch)**| Alle in dieser Kategorie aufgelisteten Features können nur mit der angegebenen Version von Configuration Manager (Current Branch) verwendet werden, z.B. Version 1511 oder 1602. Wenn Sie eine ältere Version von Configuration Manager für die Hybridbereitstellung verwenden, müssen Sie ein Upgrade auf die in der Featurebeschreibung angegebene Configuration Manager-Version (Current Branch) ausführen. Weitere Informationen finden Sie unter [Upgrade auf System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|
+
+
+## <a name="january-2018"></a>Januar 2018
+
+### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
+
+- **Remote-Sperre in der Unternehmensportal-App für Windows 10 verfügbar** <!--676506-->    
+  Endbenutzer können Ihre Geräte jetzt über die Unternehmensportal-App für Windows 10 über eine Remoteverbindung sperren. Dies wird nicht für das lokale Gerät angezeigt, dass sie aktiv verwenden.
+
+- **Einfachere Behebung von Konformitätsproblemen in der Unternehmensportal-App für Windows 10** <!--676546-->    
+  Endbenutzer mit Windows-Geräten können in der Unternehmensportal-App auf den Grund für die Nichtkonformität tippen. Falls möglich, werden sie direkt zu den richtigen Einstellungen in der Einstellungs-App weitergeleitet, wo Sie das Problem beheben können.
 
 ## <a name="december-2017"></a>Dezember 2017
 
@@ -114,6 +126,11 @@ Auf dem Bildschirm „Gerätedetails“ der Unternehmensportal-App für Windows 
 
 
 ### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune  
+
+- **Benutzerhilfe für die eigenständige Problembehandlung bei der Unternehmensportal-App für Android** <!-- 1573324, 1573150, 1558616, 1564878 -->      
+  Die Unternehmensportal-App für Android enthält nun Anweisungen für Endbenutzer, damit sie neue Anwendungsfälle verstehen und, sofern möglich, selbst lösen.
+    - Endbenutzer werden auf das [Azure Active Directory-Portal](https://account.activedirectory.windowsazure.com/r/#/profile) verwiesen, um ein Gerät zu entfernen, wenn sie die maximal erlaubte Anzahl von Geräten erreicht haben.
+    - Endbenutzer erhalten schrittweise Anweisungen zum [Behandeln von Aktivierungsfehlern auf Samsung Knox-Geräten](https://go.microsoft.com/fwlink/?linkid=859718) oder zum [Ausschalten des Stromsparmodus](https://docs.microsoft.com/intune-user-help/power-saving-mode-android). Wenn keine dieser Lösungen das Problem behebt, erhalten die Endbenutzer eine Erklärung der Vorgehensweise zum [Senden von Protokollen an Microsoft](https://docs.microsoft.com/intune-user-help/send-logs-to-microsoft-android).
 
 - **Statusanzeige für die Geräteeinrichtung im Android-Unternehmensportal** <!--1565657-->    
   Die Unternehmensportal-App für Android zeigt eine Statusanzeige für die Geräteeinrichtung, wenn ein Benutzer sein Gerät registriert. Die Anzeige zeigt neue Zustände an beginnend mit „Ihr Gerät wird eingerichtet...“, dann „Ihr Gerät wird registriert...“, danach „Die Registrierung Ihres Geräts wird abgeschlossen...“ und schließlich „Die Einrichtung Ihres Geräts wird abgeschlossen...“.  
