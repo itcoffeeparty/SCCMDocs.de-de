@@ -7,20 +7,21 @@ ms.date: 11/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-app
+ms.technology:
+- configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
-caps.latest.revision: "14"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: f680b692f3ae92fb8a5e8b6640ed053ceedba436
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: d7073b397cdf7b233f8264bd07019303a77a610f
+ms.sourcegitcommit: 2f6a13d208dcd8aa59c88f107791f9c4388e78e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-applications-with-system-center-configuration-manager"></a>Erstellen von Anwendungen mit System Center Configuration Manager
 
@@ -337,7 +338,16 @@ In der folgenden Tabelle sind Beispielskripte für Microsoft Visual Basic (VB) a
         > [!IMPORTANT]  
         >  Wenn der Zeitraum für **Maximal zulässige Laufzeit** länger ist als das geplante Wartungsfenster, kann dies zu einem Problem führen. Wird die maximale Laufzeit vom Benutzer auf einen Wert festgelegt, der die Länge der verfügbaren Wartungsfenster überschreitet, wird dieser Bereitstellungstyp nicht ausgeführt.  
 
-2.  **Geschätzte Installationszeit (Minuten)**: Geben Sie an, wie lange die Installation des Bereitstellungstyps voraussichtlich dauert. Dies wird Benutzern des Softwarecenters angezeigt.  
+    -   **Geschätzte Installationszeit (Minuten)**: Geben Sie an, wie lange die Installation des Bereitstellungstyps voraussichtlich dauert. Dies wird Benutzern des Softwarecenters angezeigt.  
+
+    -   **Angeben des spezifischen Neustartverhaltens:** Geben Sie an, welche Aktion nach der Installation durchgeführt werden soll. Die folgenden Optionen sind verfügbar:  
+
+        -   **Bestimmen des Verhaltens basierend auf Rückgabecodes:** Handhaben von Neustarts basierend auf den Codes, die in der Registerkarte „Rückgabecodes“ eingestellt sind.  Das Softwarecenter zeigt **Möglicherweise ist ein Neustart notwendig** an.  Wenn ein Benutzer während der Installation angemeldet ist, erhält er, je nach den Einstellungen zur Benutzerfreundlichkeit der Bereitstellung, eine Aufforderung.  
+
+        -   **Keine bestimmte Aktion:** Es ist kein Neustart nach der Installation erforderlich.  Das Software Center meldet, dass kein Neustart erforderlich ist.  
+        -   **Das Installationsprogramm der Software erzwingt möglicherweise einen Neustart des Geräts:** Configuration Manager steuert oder startet keinen Neustart, die tatsächliche Installation tut es jedoch möglicherweise ohne Warnung.  Verwenden Sie diese Einstellung, um zu verhindern, dass Configuration Manager Installationsfehler meldet, wenn das Installationsprogramm einen Neustart initiiert.  Das Softwarecenter zeigt **Möglicherweise ist ein Neustart notwendig** an.  
+
+        -   **Ein verbindlicher Geräteneustart wird von Configuration Manager erzwungen:** Configuration Manager erzwingt nach erfolgreicher Installation einen Neustart des Geräts.  Das Software Center meldet, dass ein Neustart erforderlich ist.  Wenn ein Benutzer während der Installation angemeldet ist, erhält er, je nach den Einstellungen zur Benutzerfreundlichkeit der Bereitstellung, eine Aufforderung.
 
 ## <a name="specify-requirements-for-the-deployment-type"></a>Angeben von Anforderungen für den Bereitstellungstyp  
 

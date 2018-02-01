@@ -3,32 +3,35 @@ title: "Verwalten des Zugriffs auf Office 365-Dienste für verwaltete PCs"
 titleSuffix: Configuration Manager
 description: "Erfahren Sie, wie Sie den bedingten Zugriff für PCs konfigurieren, die von System Center Configuration Manager verwaltet werden."
 ms.custom: na
-ms.date: 12/19/2017
+ms.date: 01/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: bf38358d12c2617d924fe59bf7bf7457dfa95143
-ms.sourcegitcommit: 6c2aa79924c0e7fc64ef5e9003498fc00c349db9
+ms.openlocfilehash: e1f50ea65236473f059ded6ef85c37646e929e53
+ms.sourcegitcommit: e121d8d3dd82b9f2dde2cb5206cbee602ab8e107
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Verwalten des Zugriffs auf Office 365-Dienste für PCs, die von System Center Configuration Manager verwaltet werden
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Ab Version 1602 von Configuration Manager können Sie einen bedingten Zugriff für PCs konfigurieren, die von System Center Configuration Manager verwaltet werden.  
+In diesem Artikel wird beschrieben, wie Sie den bedingten Zugriff für PCs konfigurieren, die von Configuration Manager verwaltet werden.  
 
-> [!Tip]  
-> Diese Funktion wurde erstmals in Version 1602 als [Vorabfunktion](/sccm/core/servers/manage/pre-release-features) eingeführt. Ab Version 1702 ist diese Funktion keine Vorabfunktion mehr.
+<!--
+ >> [!Tip]  
+> This feature was first introduced in version 1602 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1702, this feature is no longer a pre-release feature.
+-->
 
 Informationen zum Konfigurieren des bedingten Zugriffs für Geräte, die über Microsoft Intune registriert und verwaltet werden, finden Sie unter [Verwalten des Zugriffs auf Dienste in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md). Dieser Artikel behandelt auch Geräte, die in eine Domäne eingebunden sind und nicht als konform ausgewertet werden.
 
@@ -45,16 +48,16 @@ Informationen zum Konfigurieren des bedingten Zugriffs für Geräte, die über M
 
 ## <a name="supported-windows-servers"></a>Unterstützte Windows Server-Versionen
 
--   2008 R2
--   2012
--   2012 R2
--   2016
+-   Windows Server 2008 R2
+-   Windows Server 2012
+-   Windows Server 2012 R2
+-   Windows Server 2016
 
     > [!IMPORTANT]
-    > Bei Windows Server-Versionen, bei denen mehrere Benutzer gleichzeitig angemeldet sein können, müssen für alle angemeldeten Benutzer die gleichen Richtlinien für den bedingten Zugriff bereitgestellt werden.
+    > Für Windows Server-Versionen, bei denen mehrere Benutzer gleichzeitig angemeldet sein können, werden für diese Benutzer die gleichen Richtlinien für den bedingten Zugriff bereitgestellt.
 
 ## <a name="configure-conditional-access"></a>Konfigurieren des bedingten Zugriffs  
- Bevor Sie den bedingten Zugriff einrichten können, müssen Sie zunächst eine Konformitätsrichtlinie erstellen und eine Richtlinie für bedingten Zugriff konfigurieren. Wenn Sie Richtlinien für bedingten Zugriff für PCs konfigurieren, können Sie verlangen, dass die PCs der Konformitätsrichtlinie entsprechen müssen, damit sie auf Exchange Online- und SharePoint Online-Dienste zugreifen können.  
+ Bevor Sie den bedingten Zugriff einrichten können, müssen Sie zunächst eine Konformitätsrichtlinie erstellen und eine Richtlinie für bedingten Zugriff konfigurieren. Wenn Sie Richtlinien für bedingten Zugriff für PCs konfigurieren, können Sie verlangen, dass die PCs konform sind, damit sie auf Exchange Online- und SharePoint Online-Dienste zugreifen können.  
 
 ### <a name="prerequisites"></a>Erforderliche Komponenten  
 
@@ -81,7 +84,7 @@ Informationen zum Konfigurieren des bedingten Zugriffs für Geräte, die über M
 
 -   **Registrierung in Azure Active Directory erforderlich:** Diese Regel prüft, ob das Gerät des Benutzers in Azure AD eingebunden ist. Falls nicht, wird es automatisch in Azure AD registriert. Die automatische Registrierung wird nur unter Windows 8.1 unterstützt. Stellen Sie für Windows 7-PCs eine MSI-Datei bereit, um die automatische Registrierung durchzuführen. Weitere Informationen finden Sie unter [Automatische Geräteregistrierung bei Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
 
--   **Alle mit einem Stichtag älter als X Tage installierten benötigten Updates:** Diese Regel überprüft, ob das Gerät des Benutzers gemäß dem Stichtag und der Toleranzperiode, die Sie festgelegt haben, über alle erforderlichen Updates verfügt (entsprechend der Angabe in der Regel „Erforderliche automatische Updates“) und installiert automatisch alle ausstehenden Updates.  
+-   **Alle erforderlichen Updates mit einer Frist, die schon vor einer bestimmte Anzahl von Tagen abgelaufen ist:** Legen Sie den Wert für die Toleranzperiode für die Bereitstellungsfrist für erforderliche Updates auf dem Gerät des Benutzers fest. Wenn Sie diese Regel hinzufügen, werden gleichzeitig sämtliche ausstehenden erforderlichen Updates installiert. Geben Sie die erforderlichen Updates in der Regel **Erforderliche automatische Updates** an.   
 
 -   **BitLocker-Laufwerkverschlüsselung erfordern:** Diese Regel prüft, ob das primäre Laufwerk (z.B. C:\\) auf dem Gerät mit BitLocker verschlüsselt ist. Wenn die Bitlocker-Verschlüsselung auf dem primären Gerät nicht aktiviert ist, wird der Zugriff auf E-Mail- und SharePoint-Dienste blockiert.  
 
@@ -134,7 +137,7 @@ Informationen zum Konfigurieren des bedingten Zugriffs für Geräte, die über M
 
 5.  Legen Sie die Anforderung für Windows-PCs auf die Option**Geräte müssen kompatibel sein**fest.  
 
-6.  Klicken Sie unter **Zielgruppen**auf **Ändern** , um die Active Directory-Sicherheitsgruppen auszuwählen, für die die Richtlinie gelten soll.  
+6.  Klicken Sie unter **Zielgruppen** auf **Ändern**, um die Active Directory-Sicherheitsgruppen auszuwählen, für die die Richtlinie gelten soll.  
 
     > [!NOTE]  
     >  Die gleiche Sicherheitsbenutzergruppe sollte für die Bereitstellung von Konformitätsrichtlinien und die Zielgruppe für bedingte Zugriffsrichtlinien verwendet werden.  

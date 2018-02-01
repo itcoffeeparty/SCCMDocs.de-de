@@ -3,24 +3,25 @@ title: Tasksequenzschritte
 titleSuffix: Configuration Manager
 description: "Erfahren Sie mehr über die Tasksequenzschritte, die einer Configuration Manager-Tasksequenz hinzugefügt werden können."
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 01/12/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-osd
+ms.technology:
+- configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
-caps.latest.revision: "26"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 77ce50cf363c9429f9ef38aa2acf5b898bc8052d
-ms.sourcegitcommit: b97aa456b392d817bc9723cbd5c0ce6602e7ae34
+ms.openlocfilehash: 695d21eb065f4d89143644dad28bfdb711392ab9
+ms.sourcegitcommit: e121d8d3dd82b9f2dde2cb5206cbee602ab8e107
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/28/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>Tasksequenzschritte in System Center Configuration Manager
 
@@ -28,233 +29,200 @@ ms.lasthandoff: 12/28/2017
 
 Die folgenden Tasksequenzschritte können einer Configuration Manager-Tasksequenz hinzugefügt werden. Weitere Informationen zum Bearbeiten einer Tasksequenz finden Sie unter [Edit a task sequence](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
 
-> [!TIP]  
-> **Unterstützung für Windows 10-Version 1709 (auch Fall Creators Update genannt)**.  Ab diesem Windows-Release umfassen Windows-Medien mehrere Editionen. Achten Sie beim Konfigurieren einer Tasksequenz für ein Betriebssystem-Upgradepaket oder ein Betriebssystemimage darauf, eine [Edition auszuwählen, die für Configuration Manager unterstützt wird](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
+Folgende Einstellungen gelten für alle Tasksequenzschritte:
+
+Auf der Registerkarte **Eigenschaften**:
+ - **Name:** Der Tasksequenz-Editor erfordert, dass Sie einen kurzen Namen zur Beschreibung dieses Schritts angeben. Wenn Sie einen neuen Schritt hinzufügen, legt der Tasksequenz-Editor den Namen standardmäßig auf den Typ fest. Der **Name** darf nicht länger als 50 Zeichen sein.
+ - **Beschreibung:** Geben Sie optional ausführlichere Informationen zu diesem Schritt an. Die **Beschreibung** darf nicht länger als 256 Zeichen sein.
+Im weiteren Verlauf dieses Artikels werden andere Einstellungen der Registerkarte **Eigenschaften** für jeden Tasksequenzschritt beschrieben.
+
+Auf der Registerkarte **Optionen**:  
+-   **Diesen Schritt deaktivieren:** Die Tasksequenz überspringt diesen Schritt, wenn sie auf einem Computer ausgeführt wird. Das Symbol für diesen Schritt wird im Tasksequenz-Editor abgeblendet. 
+-   **Bei Fehler fortsetzen:** Die Tasksequenz wird fortgeführt, wenn bei der Ausführung dieses Schritts ein Fehler auftritt.  
+-   **Bedingung hinzufügen:** Die Tasksequenz wertet diese bedingten Anweisungen aus, um zu bestimmen, ob der Schritt ausgeführt wird.   
+In den folgenden Abschnitten werden andere mögliche Einstellungen für bestimmte Tasksequenzschritte auf der Registerkarte **Optionen** beschrieben.
 
 
-##  <a name="BKMK_ApplyDataImage"></a> Anwenden eines Tasksequenzschritts „Datenimage anwenden“  
- Mithilfe des Tasksequenzschritts **Datenabbild anwenden** können Sie das Datenabbild auf die angegebene Zielpartition kopieren.  
 
- Dieser Schritt wird nur in Windows PE ausgeführt. Er wird nicht in einem Standardbetriebssystem ausgeführt. Weitere Informationen zu Tasksequenzvariablen für diese Aktion finden Sie unter [Tasksequenz-Aktionsvariablen](task-sequence-action-variables.md).  
+##  <a name="BKMK_ApplyDataImage"></a> Anwenden von Datenimages   
+ Mithilfe dieses Schritts können Sie das Datenimage auf die angegebene Zielpartition kopieren.  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+ Dieser Schritt wird nur in Windows PE ausgeführt. Er wird nicht in einem Standardbetriebssystem ausgeführt. Weitere Informationen zu Tasksequenzvariablen finden Sie unter [Tasksequenz-Aktionsvariablen](task-sequence-action-variables.md).  
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
+Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Images** > **Apply Data Image** (Datenimage anwenden), um diesen Schritt hinzuzufügen. 
 
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Imagepaket**  
- Gibt das **Abbildpaket** an, das von diesem Tasksequenzschritt verwendet wird. Klicken Sie dazu auf **Durchsuchen**. Wählen Sie das zu installierende Paket im Dialogfeld **Paket auswählen** aus. Die zugeordneten Eigenschaftsinformationen für jedes vorhandene Abbildpaket werden unten im Dialogfeld **Paket auswählen** angezeigt. Wählen Sie mithilfe der Dropdownliste das zu installierende **Abbild** aus dem ausgewählten **Abbildpaket**aus.  
+ Klicken Sie auf **Durchsuchen**, um das **Imagepaket** festzulegen, das von dieser Tasksequenz verwendet wird. Wählen Sie das zu installierende Paket im Dialogfeld **Paket auswählen** aus. Die zugeordneten Eigenschaftsinformationen für jedes vorhandene Abbildpaket werden unten im Dialogfeld **Paket auswählen** angezeigt. Wählen Sie mithilfe der Dropdownliste das zu installierende **Abbild** aus dem ausgewählten **Abbildpaket**aus.  
 
 > [!NOTE]  
->  Bei dieser Tasksequenzaktion wird das Abbild wie eine Datendatei behaltet; es werden keine der erforderlichen Konfigurationsmaßnahmen ergriffen, damit das Abbild als Betriebssystem gestartet werden kann.  
+>  In dieser Tasksequenzaktion wird das Image als Datendatei behandelt. Diese Aktion führt kein Setup aus, um das Image als Betriebssystem zu starten.  
 
  **Ziel**  
- Gibt eine vorhandene formatierte Partition und Festplatte, einen bestimmten Buchstaben für ein logisches Laufwerk oder den Namen einer Tasksequenzvariablen an, die den Buchstaben für das logische Laufwerk enthält.  
+ Konfigurieren Sie eine der folgenden Optionen:
 
--   **Nächste verfügbare Partition**: Verwendet die nächste verfügbare Partition, die in dieser Tasksequenz nicht bereits für eine Aktion „Betriebssystem anwenden“ oder „Datenimage anwenden“ verwendet wurde.  
+-   **Nächste verfügbare Partition:** Verwendet die nächste verfügbare Partition, die in dieser Tasksequenz nicht bereits für eine Aktion **Betriebssystem anwenden** oder **Datenimage anwenden** verwendet wurde.  
 
--   **Bestimmter Datenträger und Partition**: Wählen Sie die Nummer des **Datenträgers** (beginnend mit 0) und die Nummer der **Partition** (beginnend mit 1) aus.  
+-   **Bestimmter Datenträger und Partition:** Wählen Sie die Nummer des **Datenträgers** (beginnend mit 0) und die Nummer der **Partition** (beginnend mit 1) aus.  
 
--   **Bestimmter Buchstabe für logisches Laufwerk**: Geben Sie den **Laufwerkbuchstaben** ein, der der Partition von Windows PE zugewiesen wurde. Beachten Sie, dass sich dieser Laufwerkbuchstabe von dem Laufwerkbuchstaben unterscheiden kann, der von dem neu bereitgestellten Betriebssystem zugewiesen wird.  
+-   **Bestimmter Buchstabe für logisches Laufwerk:** Geben Sie den **Laufwerkbuchstaben** ein, der der Partition von Windows PE zugewiesen wurde. Dieser Laufwerkbuchstabe kann sich von dem Laufwerkbuchstaben unterscheiden, der von dem neu bereitgestellten Betriebssystem zugewiesen wird.  
 
--   **In Variable gespeicherter Buchstabe für logisches Laufwerk**: Geben Sie die Tasksequenzvariable an, die den der Partition von Windows PE zugewiesenen Laufwerksbuchstaben enthält. Diese Variable wurde in der Regel im Bereich „Erweitert“ des Dialogfelds **Partitionseigenschaften** für die Tasksequenzaktion **Datenträger formatieren und partitionieren** eingestellt.  
+-   **In Variable gespeicherter Buchstabe für logisches Laufwerk:** Geben Sie die Tasksequenzvariable an, die den der Partition von Windows PE zugewiesenen Laufwerksbuchstaben enthält. Diese Variable wird in der Regel im Bereich „Erweitert“ des Dialogfelds **Partitionseigenschaften** für die Tasksequenzaktion **Datenträger formatieren und partitionieren** festgelegt.  
 
- **Vor dem Anwenden des Images den gesamten Inhalt der Partition löschen**  
- Gibt an, dass alle Dateien in der Zielpartition gelöscht werden, bevor das Abbild installiert wird. Indem der Inhalt dieser Partition nicht gelöscht wird, kann mit diesem Schritt einer zuvor eingerichteten Partition weiterer Inhalt zugewiesen werden.  
+**Vor dem Anwenden des Images den gesamten Inhalt der Partition löschen**  
+ Legt fest, dass die Tasksequenz alle Dateien auf der Zielpartition löscht, bevor das Image installiert wird. Indem der Inhalt dieser Partition nicht gelöscht wird, kann mit diesem Schritt einer zuvor eingerichteten Partition weiterer Inhalt zugewiesen werden.  
+
+
 
 ##  <a name="BKMK_ApplyDriverPackage"></a> Treiberpaket anwenden  
- Mithilfe des Tasksequenzschritts **Treiberpaket anwenden** können Sie alle Treiber im Treiberpaket herunterladen und auf dem Windows-Betriebssystem installieren.
+ Mithilfe dieses Schritts können Sie alle Treiber im Treiberpaket herunterladen und auf dem Windows-Betriebssystem installieren.
 
- Mit dem Tasksequenzschritt **Treiberpaket anwenden** können Sie alle Gerätetreiber eines Treiberpakets zur Verwendung in Windows bereitstellen. Dieser Schritt kann in einer Tasksequenz zwischen den Schritten **Betriebssystem anwenden**  und **Windows und ConfigMgr einrichten** eingefügt werden, um Windows die im Treiberpaket enthaltenen Gerätetreiber zur Verfügung zu stellen. Der Schritt **Treiberpaket anwenden** wird in der Regel hinter dem Schritt **Treiber automatisch anwenden** eingefügt. Der Tasksequenzschritt **Treiberpaket anwenden** ist auch für die Bereitstellung mithilfe eigenständiger Medien nützlich.  
+ Mit dem Tasksequenzschritt **Treiberpaket anwenden** können Sie alle Gerätetreiber eines Treiberpakets zur Verwendung in Windows bereitstellen. Fügen Sie diesen Schritt zwischen den Schritten **Betriebssystem anwenden** und **Windows und ConfigMgr einrichten** hinzu, um die Treiber in diesem Paket für Windows zur Verfügung zu stellen. Der Schritt **Treiberpaket anwenden** wird in der Regel hinter dem Schritt **Treiber automatisch anwenden** eingefügt. Der Tasksequenzschritt **Treiberpaket anwenden** ist auch für die Bereitstellung mithilfe eigenständiger Medien nützlich.  
 
- Stellen Sie sicher, dass ähnliche Gerätetreiber in einem Treiberpaket zusammengestellt werden, und verteilen Sie diese auf die entsprechenden Verteilungspunkte. Nachdem die Treiber verteilt sind, können sie von Configuration Manager-Clientcomputern installiert werden. Beispiel: Sie können alle Gerätetreiber eines Herstellers in einem Treiberpaket zusammenstellen und das Paket dann an Verteilungspunkte verteilen, an denen die zugeordneten Computer auf das Paket zugreifen können.
+ Stellen Sie sicher, dass ähnliche Gerätetreiber in einem Treiberpaket zusammengestellt werden, und verteilen Sie diese auf die entsprechenden Verteilungspunkte. Nachdem die Treiber verteilt sind, können sie von Configuration Manager-Clientcomputern installiert werden. Packen Sie beispielsweise alle Treiber eines Herstellers in ein Treiberpaket. Verteilen Sie das Paket anschließend an Verteilungspunkte, auf die die entsprechenden Computer zugreifen können.
 
- Dieser Schritt unterstützt eigenständige Medien und Administratoren, die bestimmte Treiber installieren möchten, darunter Treiber für Geräte, die im Rahmen einer Plug-and-Play-Prüfung nicht erkannt würden (beispielsweise Netzwerkdrucker).  
+ Der Schritt **Treiberpaket anwenden** ist für eigenständige Medien nützlich. Dieser Schritt ist ebenfalls nützlich, wenn Sie eine bestimmte Gruppe von Treibern installieren möchten. Hierzu zählen die Treiber für Geräte, die nicht durch eine Plug & Play-Überprüfung erkannt werden, z.B. Netzwerkdrucker.  
 
  Dieser Tasksequenzschritt wird nur in Windows PE ausgeführt. Er wird nicht in einem Standardbetriebssystem ausgeführt. Weitere Informationen zu Tasksequenzvariablen für diese Aktion finden Sie unter [Apply Driver Package Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyDriverPackage).  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Treiber** > **Treiberpaket anwenden**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Treiberpaket**  
  Klicken Sie auf **Durchsuchen** , und öffnen Sie das Dialogfeld **Paket auswählen** , um das Treiberpaket anzugeben, das die erforderlichen Gerätetreiber enthält. Geben Sie ein vorhandenes Paket an, das verfügbar gemacht werden soll. Die zugehörigen Paketeigenschaften werden unten im Dialogfeld angezeigt.  
 
  **Wählen Sie den Massenspeichertreiber im Paket aus, der bei allen Betriebssystemen vor Vista vor dem Setup installiert werden muss**  
- Geben Sie alle Massenspeichertreiber an, die für die Installation von Betriebssystemen vor Windows Vista erforderlich sind.  
+ Geben Sie alle Massenspeichertreiber an, die für die Installation eines klassischen Betriebssystems erforderlich sind.  
 
  **Treiber**  
- Wählen Sie die Massenspeicher-Treiberdatei aus, die installiert werden muss, bevor das Setup auf Bereitstellungen von Betriebssystemen vor Windows Vista durchgeführt werden kann. Die Dropdownliste wird mit den Treibern aus dem angegebenen Paket aufgefüllt.  
+ Wählen Sie die Datei für die Installation der Massenspeichertreiber aus, bevor Sie ein klassisches Betriebssystem einrichten. Die Dropdownliste wird mit den Treibern aus dem angegebenen Paket aufgefüllt.  
 
  **Modell**  
  Geben Sie das für den Systemstart erforderliche Gerät an, das für Bereitstellungen von Betriebssystemen vor Windows Vista erforderlich ist.  
 
  **Unbeaufsichtigte Installation von nicht signierten Treibern bei Windows-Versionen ausführen, wenn zulässig**  
- Wählen Sie diese Option aus, um Windows die Installation von nicht signierten Treibern auf dem Referenzcomputer zu gewähren.  
+ Durch diese Option können Sie unter Windows Treiber ohne digitale Signatur installieren.  
 
-##  <a name="BKMK_ApplyNetworkSettings"></a> Schritt „Netzwerkeinstellungen anwenden“  
- Mithilfe des Tasksequenzschritts **Netzwerkeinstellungen anwenden** können Sie die Konfigurationsinformationen für das Netzwerk oder die Arbeitsgruppe des Zielcomputers angeben. Die angegebenen Werte werden im entsprechenden Antwortdateiformat gespeichert und für die Verwendung durch Windows-Setup beim Ausführen des Tasksequenzschritts **Windows und ConfigMgr einrichten** zur Verfügung gestellt.  
+
+
+##  <a name="BKMK_ApplyNetworkSettings"></a> Anwenden von Netzwerkeinstellungen   
+ Mithilfe dieses Schritts können Sie die Konfigurationsinformationen für das Netzwerk oder die Arbeitsgruppe des Zielcomputers angeben. Die Tasksequenz speichert diese Werte in der entsprechenden Antwortdatei. Windows Setup verwendet diese Antwortdatei während der Aktion **Windows und ConfigMgr einrichten**.  
 
  Dieser Tasksequenzschritt wird entweder in einem Standardbetriebssystem oder in Windows PE ausgeführt. Weitere Informationen zu Tasksequenzvariablen für diese Aktion finden Sie unter [Apply Network Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyNetworkSettings).  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+ Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Einstellungen** > **Netzwerkeinstellungen anwenden**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Einer Arbeitsgruppe beitreten**  
  Wählen Sie diese Option aus, um den Zielcomputer einer angegebenen Arbeitsgruppe hinzuzufügen. Geben Sie den Namen der Arbeitsgruppen in die Zeile **Arbeitsgruppe** ein. Dieser Wert kann durch den Wert überschrieben werden, der mit dem Tasksequenzschritt **Netzwerkeinstellungen erfassen** erfasst wird.  
 
  **Einer Domäne beitreten**  
- Wählen Sie diese Option aus, um den Zielcomputer einer angegebenen Domäne hinzuzufügen. Geben Sie die Domäne an, oder klicken Sie auf "Durchsuchen", um die Domäne auszuwählen, z. B. *fabricam.com*. Geben Sie einen LDAP-Pfad (Lightweight Directory Access Protocol) für eine Organisationseinheit an, oder suchen Sie nach dem LDAP-Pfad (LDAP//OU=computers, DC=Fabricam.com, C=com).  
+ Wählen Sie diese Option aus, um den Zielcomputer einer angegebenen Domäne hinzuzufügen. Geben Sie die Domäne an, oder klicken Sie auf "Durchsuchen", um die Domäne auszuwählen, z. B. *fabricam.com*. Geben Sie einen LDAP-Pfad (Lightweight Directory Access Protocol) für eine Organisationseinheit an, oder suchen Sie nach einem LDAP-Pfad. Beispiel: *LDAP//OU=computers, DC=Fabricam.com, C=com*  
 
  **Konto**  
- Klicken Sie auf **Festlegen** , um ein Konto anzugeben, das die für den Beitritt zur Domäne erforderlichen Berechtigungen aufweist. Im Dialogfeld **Windows-Benutzerkonto** können Sie den Benutzernamen in folgendem Format eingeben: **Domäne\Benutzer** .  
+ Klicken Sie auf **Festlegen** , um ein Konto anzugeben, das die für den Beitritt zur Domäne erforderlichen Berechtigungen aufweist. Im Dialogfeld **Windows-Benutzerkonto** können Sie den Benutzernamen in folgendem Format eingeben: **Domäne\Benutzer**.  
 
  **Netzwerkkarteneinstellungen**  
- Geben Sie die Netzwerkkonfigurationen für alle Netzwerkadapter auf dem Computer an. Klicken Sie auf **Neu** , um das Dialogfeld **Netzwerkeinstellungen** zu öffnen, und geben Sie dann die Netzwerkeinstellungen an. Wenn die Netzwerkeinstellungen in einem vorherigen Tasksequenzschritt **Netzwerkeinstellungen erfassen** erfasst wurden, werden die vorherigen Einstellungen auf den Netzwerkadapter angewendet und die in diesem Schritt angegebenen Einstellungen werden ignoriert. Wenn zuvor noch keine Netzwerkeinstellungen erfasst wurden, werden die im Schritt **Netzwerkeinstellungen anwenden** angegebenen Einstellungen in der Reihenfolge der Windows-Geräteaufzählung auf Netzwerkadapter angewendet.  
+ Geben Sie die Netzwerkkonfigurationen für alle Netzwerkadapter auf dem Computer an. Klicken Sie auf **Neu** , um das Dialogfeld **Netzwerkeinstellungen** zu öffnen, und geben Sie dann die Netzwerkeinstellungen an. Wenn Sie ebenfalls den Schritt **Netzwerkeinstellungen erfassen** verwenden, wendet die Tasksequenz die zuvor erfassten Einstellungen auf den Netzwerkadapter an. Die Tasksequenz wendet nicht die Einstellungen an, die Sie in diesem Schritt festlegen. Wenn die Tasksequenz zuvor keine Netzwerkeinstellungen erfasst hat, werden die im Schritt **Netzwerkeinstellungen anwenden** festgelegten Einstellungen angewendet. Die Tasksequenz wendet diese Einstellungen in der Reihenfolge der Windows-Gerätenummern auf Netzwerkadapter an.  
+
+
 
 ##  <a name="BKMK_ApplyOperatingSystemImage"></a> Betriebssystemimage anwenden  
- Mithilfe des Tasksequenzschritts **Betriebssystemabbild anwenden** können Sie ein Betriebssystem auf dem Zielcomputer installieren. Bei dieser Tasksequenzaktion wird eine Reihe von Aktionen ausgeführt, die davon abhängen, ob ein Betriebssystemabbild oder ein Installationspaket für ein Betriebssystem verwendet wird.  
 
- Wenn ein Betriebssystemabbild verwendet wird, werden mit dem Schritt **Betriebssystemabbild anwenden** die folgenden Aktionen ausgeführt:  
+> [!TIP]  
+> Ab Windows 10 (Version 1709) enthalten Medien mehrere Editionen. Wenn Sie eine Tasksequenz konfigurieren, um ein Betriebssystemupgradepaket oder ein Betriebssystemimage zu verwenden, achten Sie darauf, eine [unterstützte Edition](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client) auszuwählen.
 
-1.  Mit Ausnahme der Dateien in dem mit der Tasksequenzvariablen &#95;SMSTSUserStatePath angegebenen Ordner wird der gesamte Inhalt auf dem Zielvolumen gelöscht.  
+ Verwenden Sie diesen Schritt, um ein Betriebssystem auf dem Zielcomputer zu installieren. Die Aktionen dieses Schritts hängen davon ob, ein Betriebssystemimage oder ein Betriebssystemupgradepaket verwendet wird.  
 
-2.  Extrahiert den Inhalt der angegebenen WIM-Datei in die angegebene Zielpartition.  
+ Wenn ein Betriebssystemimage verwendet wird, werden mit dem Schritt **Betriebssystemimage anwenden** folgende Aktionen ausgeführt:  
 
-3.  Bereitet die Antwortdatei vor:  
+1.  Alle Inhalte auf dem Zielvolume werden gelöscht, außer die Dateien in dem Ordner, der von der Variable „_SMSTSUserStatePath“ angegeben wird.
 
-    1.  Eine neue Standardantwortdatei für Windows Setup (sysprep.inf oder unattend.xml) wird für das bereitzustellende Betriebssystem erstellt.  
+2.  Alle Inhalte der angegebenen WIM-Datei werden in die angegebene Zielpartition extrahiert.  
 
-    2.  Übernimmt alle Werte aus der vom Benutzer bereitgestellten Antwortdatei.  
+3.  Die Antwortdatei wird vorbereitet:  
 
-4.  Kopiert Windows-Startladeprogramme in die aktive Partition.  
+    1.  Eine neue Standardantwortdatei für Windows Setup („sysprep.inf“ oder „unattend.xml“) wird für das bereitzustellende Betriebssystem erstellt.  
 
-5.  Konfiguriert die Datei „boot.ini“ bzw. die Startkonfigurationsdaten (Boot Configuration Data, BCD) mit einem Verweis auf das neu installierte Betriebssystem.  
+    2.  Alle Werte aus der vom Benutzer bereitgestellten Antwortdatei werden zusammengeführt.  
 
- Wenn ein Installationspaket für das Betriebssystemabbild verwendet wird, werden mit dem Schritt **Betriebssystemabbild anwenden** die folgenden Aktionen ausgeführt:  
+4.  Windows-Startladeprogramme werden in die aktive Partition kopiert.  
 
-1.  Mit Ausnahme der Dateien in dem mit der Tasksequenzvariablen &#95;SMSTSUserStatePath angegebenen Ordner wird der gesamte Inhalt auf dem Zielvolumen gelöscht.  
+5.  Legen Sie die Datei „boot.ini“ bzw. die Startkonfigurationsdaten (Boot Configuration Data, BCD) so fest, dass sie auf das neu installierte Betriebssystem verweist.  
 
-2.  Bereitet die Antwortdatei vor:  
+ Wenn ein Betriebssystemupgradepaket verwendet wird, werden mit dem Schritt **Betriebssystemimage anwenden** folgende Aktionen ausgeführt:  
 
-    1.  Erstellt eine neue Antwortdatei mit von Configuration Manager erstellten Standardwerten.  
+1.  Alle Inhalte auf dem Zielvolume werden gelöscht, außer die Dateien in dem Ordner, der von der Variable „_SMSTSUserStatePath“ angegeben wird.  
 
-    2.  Übernimmt alle Werte aus der vom Benutzer bereitgestellten Antwortdatei.  
+2.  Die Antwortdatei wird vorbereitet:  
+
+    1.  Eine neue Antwortdatei mit von Configuration Manager erstellten Standardwerten wird erstellt.  
+
+    2.  Alle Werte aus der vom Benutzer bereitgestellten Antwortdatei werden zusammengeführt.  
 
 > [!NOTE]  
->  Die eigentliche Windows-Installation wird vom Tasksequenzschritt **Windows und ConfigMgr einrichten** gestartet. Nach Ausführung der Tasksequenzaktion **Betriebssystem anwenden** wird die Tasksequenzvariable „OSDTargetSystemDrive“ auf den Laufwerksbuchstaben der Partition gesetzt, in der sich die Betriebssystemdateien befinden.  
+>  Der Schritt **Windows und ConfigMgr einrichten** startet die Installation von Windows. 
+
+ Nach Ausführung der Aktion **Betriebssystem anwenden** wird die Variable „OSDTargetSystemDrive“ auf den Laufwerksbuchstaben der Partition festgelegt, in der sich die Betriebssystemdateien befinden.  
 
  Dieser Tasksequenzschritt wird nur in Windows PE ausgeführt. Er wird nicht in einem Standardbetriebssystem ausgeführt. Weitere Informationen zu Tasksequenzvariablen für diese Aktion finden Sie unter [Apply Operating System Image Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyOperatingSystem).  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+ Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Images** > **Apply Operating System Image** (Betriebssystemimage anwenden), um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   **Auf Inhalt direkt vom Verteilungspunkt aus zugreifen**:  
-
-     Verwenden Sie diese Option, um anzugeben, ob die Tasksequenz direkt vom Verteilungspunkt aus auf das Betriebssystemabbild zugreifen soll. Sie können diese Option z. B. verwenden, wenn Sie Betriebssysteme für eingebettete Geräte mit begrenzter Speicherkapazität bereitstellen. Wenn diese Option aktiviert ist, müssen Sie auch die Einstellungen für die Paketfreigabe auf der Registerkarte **Datenzugriff** der Paketeigenschaften konfigurieren.  
-
-    > [!NOTE]  
-    >  Mit dieser Einstellung wird die auf der Seite **Verteilungspunkte** im **Assistenten zum Bereitstellen von Software** abgegebene Bereitstellungsoption nur für das Betriebssystemabbild überschrieben, das in diesem Tasksequenzschritt angegeben ist, nicht jedoch für den ganzen Inhalt der gesamten Tasksequenz.  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Betriebssystem von einem erfassten Image übernehmen**  
- Installiert ein zuvor erfasstes Betriebssystemabbild. Klicken Sie auf **Durchsuchen** , um das Dialogfeld **Paket auswählen** zu öffnen, und wählen Sie dann das vorhandene Abbildpaket aus, das Sie installieren möchten. Wenn mehrere Abbilder mit dem angegebenen **Abbildpaket**verknüpft sind, geben Sie das zugehörige Abbild für diese Bereitstellung mithilfe der Dropdownliste an. Sie können zu jedem vorhandenen Abbild grundlegende Informationen anzeigen, indem Sie auf das Abbild klicken.  
+ Installiert ein zuvor erfasstes Betriebssystemabbild. Klicken Sie auf **Durchsuchen** , um das Dialogfeld **Paket auswählen** zu öffnen, und wählen Sie dann das vorhandene Abbildpaket aus, das Sie installieren möchten. Wenn mehrere Images mit dem angegebenen **Imagepaket**verknüpft sind, geben Sie das zugehörige Image für diese Bereitstellung mithilfe der Dropdownliste an. Sie können zu jedem vorhandenen Abbild grundlegende Informationen anzeigen, indem Sie auf das Abbild klicken.  
 
  **Betriebssystem von einer ursprünglichen Installationsquelle übernehmen**  
- Installiert ein Betriebssystem mithilfe einer ursprünglichen Installationsquelle. Klicken Sie auf **Durchsuchen** , um das Dialogfeld **Betriebssysteminstallationspaket auswählen** zu öffnen, und wählen Sie dann das Betriebssysteminstallationspaket aus, das Sie verwenden möchten. Sie können zu jeder vorhandenen Abbildquelle grundlegende Informationen anzeigen, indem Sie auf die Abbildquelle klicken. Die zugeordneten Eigenschaften der Abbildquelle werden unten im Dialogfeld im Ergebnisbereich angezeigt. Falls dem angegebenen Paket mehrere Editionen zugeordnet sind, geben Sie die verwendete zugeordnete **Edition** in der Dropdownliste an.  
+ Installiert ein Betriebssystem mithilfe einer ursprünglichen Installationsquelle. Klicken Sie auf **Durchsuchen**, um das Dialogfeld **Betriebssysteminstallationspaket auswählen** zu öffnen. Wählen Sie dann das vorhandene Betriebssystemupgradepaket aus, das Sie verwenden möchten. Sie können zu jeder vorhandenen Abbildquelle grundlegende Informationen anzeigen, indem Sie auf die Abbildquelle klicken. Die zugeordneten Eigenschaften der Abbildquelle werden unten im Dialogfeld im Ergebnisbereich angezeigt. Falls dem angegebenen Paket mehrere Editionen zugeordnet sind, geben Sie die verwendete zugeordnete **Edition** in der Dropdownliste an.  
 
  **Datei für unbeaufsichtigte Installation oder Antwortdatei für Systemvorbereitung bei benutzerdefinierter Installation verwenden**  
- Stellen Sie mit dieser Option je nach Betriebssystemversion und Installationsmethode eine Windows Setup-Antwortdatei (**unattend.xml**, **unattend.txt**oder **sysprep.inf**) bereit. Die von Ihnen angegebene Datei kann alle Standardkonfigurationsoptionen enthalten, die von Windows-Antwortdateien unterstützt werden. Sie können damit beispielsweise die Standardstartseite im Internet Explorer angeben. Sie müssen das Paket mit der Antwortdatei sowie den entsprechenden Pfad zu der Datei im Paket angeben.  
+ Stellen Sie mit dieser Option je nach Betriebssystemversion und Installationsmethode eine Windows Setup-Antwortdatei (**unattend.xml**, **unattend.txt**oder **sysprep.inf**) bereit. Die von Ihnen angegebene Datei kann alle Standardkonfigurationsoptionen enthalten, die von Windows-Antwortdateien unterstützt werden. Sie können damit beispielsweise die Standardstartseite im Internet Explorer angeben. Geben Sie das Paket mit der Antwortdatei sowie den entsprechenden Pfad zu der Datei im Paket an.  
 
 > [!NOTE]  
->  Die angegebene Windows Setup-Antwortdatei kann eingebettete Tasksequenzvariablen im Format %*varname*% enthalten, wobei „varname“ der Name der Variable ist. Die Zeichenfolge %*varname*% wird in der Tasksequenzaktion **Windows und ConfigMgr einrichten** durch die richtigen Variablenwerte ersetzt. Beachten Sie jedoch, dass diese eingebetteten Tasksequenzvariablen in den Antwortdateien „unattend.xml“ nicht in rein numerischen Feldern verwendet werden können.  
+>  Die angegebene Windows Setup-Antwortdatei kann eingebettete Tasksequenzvariablen im Format %*varname*% enthalten, wobei *varname* den Namen der Variable darstellt. Der Schritt **Windows und ConfigMgr einrichten** ersetzt die Zeichenfolge %*varname*% durch die richtigen Variablenwerte. Diese eingebetteten Tasksequenzvariablen können nicht in den rein numerischen Feldern in der Antwortdatei „unattend.xml“ verwendet werden.  
 
  Wenn Sie keine Windows Setup-Antwortdatei angeben, generiert diese Tasksequenzaktion automatisch eine Antwortdatei.  
 
  **Ziel**  
- Gibt eine vorhandene formatierte Partition und Festplatte, einen bestimmten Buchstaben für ein logisches Laufwerk oder den Namen einer Tasksequenzvariablen an, die den Buchstaben für das logische Laufwerk enthält.  
+ Konfigurieren Sie eine der folgenden Optionen:  
 
--   **Nächste verfügbare Partition**: Verwendet die nächste verfügbare Partition, die in dieser Tasksequenz nicht bereits für eine Aktion „Betriebssystem anwenden“ oder „Datenimage anwenden“ verwendet wurde.  
+-   **Nächste verfügbare Partition:** Verwendet die nächste verfügbare Partition, die in dieser Tasksequenz nicht bereits für eine Aktion **Betriebssystem anwenden** oder **Datenimage anwenden** verwendet wurde. 
 
--   **Bestimmter Datenträger und Partition**: Wählen Sie die Nummer des **Datenträgers** (beginnend mit 0) und die Nummer der **Partition** (beginnend mit 1) aus.  
+-   **Bestimmter Datenträger und Partition:** Wählen Sie die Nummer des **Datenträgers** (beginnend mit 0) und die Nummer der **Partition** (beginnend mit 1) aus.  
 
--   **Bestimmter Buchstabe für logisches Laufwerk**: Geben Sie den **Laufwerkbuchstaben** ein, der der Partition von Windows PE zugewiesen wurde. Beachten Sie, dass sich dieser Laufwerkbuchstabe von dem Laufwerkbuchstaben unterscheiden kann, der von dem neu bereitgestellten Betriebssystem zugewiesen wird.  
+-   **Bestimmter Buchstabe für logisches Laufwerk:** Geben Sie den **Laufwerkbuchstaben** ein, der der Partition von Windows PE zugewiesen wurde. Dieser Laufwerkbuchstabe kann sich von dem Laufwerkbuchstaben unterscheiden, der von dem neu bereitgestellten Betriebssystem zugewiesen wird.  
 
--   **In Variable gespeicherter Buchstabe für logisches Laufwerk**: Geben Sie die Tasksequenzvariable an, die den der Partition von Windows PE zugewiesenen Laufwerksbuchstaben enthält. Diese Variable wurde in der Regel im Bereich „Erweitert“ des Dialogfelds **Partitionseigenschaften** für die Tasksequenzaktion **Datenträger formatieren und partitionieren** eingestellt.  
+-   **In Variable gespeicherter Buchstabe für logisches Laufwerk:** Geben Sie die Tasksequenzvariable an, die den der Partition von Windows PE zugewiesenen Laufwerksbuchstaben enthält. Diese Variable wird in der Regel im Bereich „Erweitert“ des Dialogfelds **Partitionseigenschaften** für die Tasksequenzaktion **Datenträger formatieren und partitionieren** festgelegt.  
+
+### <a name="options"></a>Optionen  
+ Konfigurieren Sie neben den Standardoptionen auch folgende zusätzliche Einstellungen auf der Registerkarte **Optionen** dieses Tasksequenzschritts:  
+
+-   **Auf Inhalt direkt vom Verteilungspunkt aus zugreifen**  
+     Konfigurieren Sie die Tasksequenz so, dass sie direkt vom Verteilungspunkt aus auf das Betriebssystemimage zugreift. Verwenden Sie diese Option, wenn Sie beispielsweise Betriebssysteme für eingebettete Geräte mit begrenzter Speicherkapazität bereitstellen. Wenn Sie diese Option aktivieren, müssen Sie auch die Einstellungen für die Paketfreigabe auf der Registerkarte **Datenzugriff** der Paketeigenschaften konfigurieren.  
+
+    > [!NOTE]  
+    >  Diese Einstellung setzt die Bereitstellungsoption außer Kraft, die Sie auf der Seite **Verteilungspunkte** des **Assistenten zum Bereitstellen von Software** konfigurieren. Diese Außerkraftsetzung gilt nur für das von diesem Schritt angegebene Betriebssystemimage, nicht für alle Inhalte der Tasksequenz.  
+
+
 
 ##  <a name="BKMK_ApplyWindowsSettings"></a> Windows-Einstellungen anwenden  
- Mithilfe des Tasksequenzschritts **Windows-Einstellungen anwenden** können Sie die Windows-Einstellungen für den Zielcomputer konfigurieren. Die angegebenen Werte werden im entsprechenden Antwortdateiformat gespeichert und für die Verwendung durch Windows-Setup beim Ausführen des Tasksequenzschritts **Windows und ConfigMgr einrichten** zur Verfügung gestellt.  
+ Mithilfe dieses Schritts können Sie die Windows-Einstellungen für den Zielcomputer konfigurieren. Die Tasksequenz speichert diese Werte in der entsprechenden Antwortdatei. Windows Setup verwendet diese Antwortdatei während der Aktion **Windows und ConfigMgr einrichten**.  
 
  Dieser Tasksequenzschritt wird nur in Windows PE ausgeführt. Er wird nicht in einem Standardbetriebssystem ausgeführt. Weitere Informationen zu Tasksequenzvariablen für diese Aktion finden Sie unter [Apply Windows Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyWindowsSettings).  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+ Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Einstellungen** > **Windows-Einstellungen anwenden**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Benutzername**  
  Geben Sie den registrierten Benutzernamen an, der dem Zielcomputer zugeordnet ist. Dieser Wert kann durch den Wert überschrieben werden, der mit der Tasksequenzaktion **Windows-Einstellungen erfassen** erfasst wird.  
@@ -266,100 +234,80 @@ Die folgenden Tasksequenzschritte können einer Configuration Manager-Tasksequen
  Geben Sie den Product Key an, der für die Windows-Installation auf dem Bereitstellungszielcomputer verwendet wird.  
 
  **Serverlizenzierung**  
- Geben Sie den Serverlizenzierungsmodus an. Sie können als Lizenzierungsmodus **Pro Server** oder **Pro Benutzer** auswählen. Wenn Sie „Pro Server“ als Lizenzierungsmodus auswählen, müssen Sie auch die maximale Anzahl der Verbindungen angeben, die gemäß Ihrem Lizenzvertrag zulässig sind. Falls der Bereitstellungszielcomputer kein Server ist oder Sie den Lizenzierungsmodus nicht angeben möchten, wählen Sie **Nicht angeben** aus.  
+ Geben Sie den Serverlizenzierungsmodus an. Sie können als Lizenzierungsmodus **Pro Server** oder **Pro Benutzer** auswählen. Wenn Sie **Pro Server** auswählen, geben Sie ebenfalls die maximale Anzahl von Verbindungen an, die gemäß Ihrem Lizenzvertrag zulässig ist. Falls der Bereitstellungszielcomputer kein Server ist oder Sie den Lizenzierungsmodus nicht angeben möchten, wählen Sie **Nicht angeben** aus.  
 
  **Maximale Verbindungen**  
  Geben Sie die maximale Anzahl der Verbindungen an, die für diesen Computer gemäß Ihrem Lizenzvertrag zulässig sind.  
 
  **Lokales Administratorkennwort zufällig erstellen und das Konto auf allen unterstützten Plattformen deaktivieren (empfohlen)**  
- Wählen Sie diese Option aus, um ein lokales Administratorkennwort zufällig zu generieren. Hiermit wird ein lokales Administratorkennwort erstellt und veranlasst, dass das Konto auf unterstützten Plattformen deaktiviert wird.  
+ Wählen Sie diese Option aus, um das lokale Administratorkennwort auf eine zufällig generierte Zeichenfolge festzulegen. Diese Option deaktiviert das lokale Administratorkonto auf allen Plattformen, die diese Funktion unterstützen.  
 
  **Konto aktivieren und lokales Administratorkennwort angeben**  
- Wählen Sie diese Option aus, wenn Sie das lokale Administratorkonto aktivieren und das lokale Administratorkennwort erstellen möchten. Geben Sie das Kennwort in der Zeile **Kennwort** ein, und bestätigen Sie es in der Zeile **Kennwort bestätigen** .  
+ Wählen Sie diese Option aus, um das lokale Administratorkonto mithilfe des angegebenen Kennworts zu aktivieren. Geben Sie das Kennwort in der Zeile **Kennwort** ein, und bestätigen Sie es in der Zeile **Kennwort bestätigen** .  
 
  **Zeitzone**  
  Geben Sie die zu konfigurierende Zeitzone auf dem Zielcomputer an. Dieser Wert kann durch den Wert überschrieben werden, der mit dem Tasksequenzschritt **Windows-Einstellungen erfassen** erfasst wird.  
 
+
+
 ##  <a name="BKMK_AutoApplyDrivers"></a> Treiber automatisch anwenden  
- Mithilfe des Tasksequenzschritts **Treiber automatisch anwenden** können Sie die geeigneten Treiber als Teil einer Betriebssystembereitstellung auswählen und installieren.  
+ Verwenden Sie diesen Schritt, um Gerätetreiber anzupassen und als Teil der Betriebssystembereitstellung zu installieren.  
 
  Mit dem Tasksequenzschritt **Treiber automatisch anwenden** werden folgende Aktionen ausgeführt:  
 
-1.  Überprüft die Hardware und ermittelt die Plug-and-Play-IDs für alle auf dem System vorhandenen Geräte.  
+1.  Überprüft die Hardware und ermittelt die Plug & Play-IDs für alle auf dem System vorhandenen Geräte.  
 
-2.  Sendet die Liste mit den Geräten und den ihnen zugeordneten Plug-and-Play-IDs an den Verwaltungspunkt. Der Verwaltungspunkt gibt für jedes Gerät eine Liste mit kompatiblen Treibern aus dem Treiberkatalog zurück. Der Verwaltungspunkt berücksichtigt alle Treiber unabhängig davon, in welchem Treiberpaket sie enthalten sind. Nur mit der angegebenen Treiberkategorie gekennzeichnete Treiber und Treiber, die nicht als deaktiviert gekennzeichnet sind, werden berücksichtigt.  
+2.  Sendet die Liste mit den Geräten und den ihnen zugeordneten Plug & Play-IDs an den Verwaltungspunkt. Der Verwaltungspunkt gibt für jedes Hardwaregerät eine Liste mit kompatiblen Treibern aus dem Treiberkatalog zurück. Die Liste enthält alle Treiber, unabhängig von dem Treiberpaket, in dem sie sich befinden, sowie Treiber, die mit der angegebenen Treiberkategorie markiert sind, und nicht deaktivierte Treiber.  
 
-3.  Der Client wählt für jedes Gerät den Treiber aus, der sich für das Betriebssystem, auf dem er installiert wird, am besten eignet, und der sich auf einem verfügbaren Verteilungspunkt befindet.  
+3.  Die Tasksequenz wählt für jedes Hardwaregerät den besten Treiber aus. Dieser Treiber ist für das bereitgestellte Betriebssystem geeignet und befindet sich auf einem verfügbaren Verteilungspunkt.  
 
-4.  Die ausgewählten Treiber werden von einem Verteilungspunkt heruntergeladen und auf dem Zielbetriebssystem bereitgestellt.  
+4.  Die Tasksequenz lädt die ausgewählten Treiber von einem Verteilungspunkt herunter und stellt diese auf dem Zielbetriebssystem bereit.  
 
-    1.  Für abbildbasierte Installationen werden die Treiber im Treiberspeicher des Betriebssystems abgelegt.  
+    1.  Bei imagebasierten Installationen legt die Tasksequenz die Treiber im Treiberspeicher des Betriebssystems ab.  
 
-    2.  Bei setupbasierten Installationen wird im Windows-Setup festgelegt, wo die Treiber zu finden sind.  
+    2.  Bei setupbasierten Installation konfiguriert die Tasksequenz Windows Setup mit dem Speicherort des Treibers.  
 
-5.  Wenn die Tasksequenzaktion **Windows und ConfigMgr einrichten** ausgeführt wird, werden die von dieser Aktion bereitgestellten Treiber beim ersten Windows-Start gefunden.  
+5.  Während der Schritt **Windows und ConfigMgr einrichten** in der Tasksequenz ausgeführt wird, sucht Windows Setup nach den von dieser Aktion bereitgestellten Treibern.  
 
 > [!IMPORTANT]
->  Der Tasksequenzschritt **Treiber automatisch anwenden** kann nicht auf eigenständigen Medien verwendet werden, da Windows Setup in diesem Fall nicht über eine Verbindung mit dem Configuration Manager-Standort verfügt.
+>  Eigenständige Medien können den Schritt **Treiber automatisch anwenden** nicht verwenden. Windows Setup besitzt in diesem Szenario keine Verbindung zum Configuration Manager-Standort.
 
 Dieser Tasksequenzschritt wird nur in Windows PE ausgeführt. Er wird nicht in einem Standardbetriebssystem ausgeführt. Weitere Informationen zu Tasksequenzvariablen für diese Aktion finden Sie unter [Auto Apply Drivers Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_AutoApplyDrivers).  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+ Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Treiber** > **Treiber automatisch anwenden**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Nur Treiber mit der höchsten Kompatibilität installieren**  
  Hiermit wird angegeben, dass vom Tasksequenzschritt nur der am besten geeignete Treiber für das jeweilige erkannte Hardwaregerät installiert wird.  
 
  **Alle kompatiblen Treiber installieren**  
- Hiermit wird angegeben, dass vom Tasksequenzschritt alle kompatiblen Treiber für das jeweilige erkannte Hardwaregerät installiert werden und der beste Treiber von Windows Setup ausgewählt werden kann. Von dieser Option werden mehr Netzwerkbandbreite und Speicherplatz beansprucht, da mit ihr mehr Treiber heruntergeladen werden. Möglicherweise wird dadurch jedoch ein besserer Treiber ausgewählt.  
+ Die Tasksequenz installiert alle Treiber, die mit dem jeweiligen ermittelten Hardwaregerät kompatibel sind. Windows Setup wählt anschließend den besten Treiber aus. Diese Option beansprucht mehr Netzwerkbandbreite und Festplattenspeicher. Die Tasksequenz lädt mehr Treiber herunter, wodurch Windows jedoch einen besseren Treiber auswählen kann.  
 
  **Treiber aller Kategorien berücksichtigen**  
- Hiermit wird angegeben, dass von der Tasksequenzaktion in allen verfügbaren Treiberkategorien nach den geeigneten Gerätetreibern gesucht wird.  
+ Die Tasksequenz durchsucht alle verfügbaren Treiberkategorien nach den geeigneten Gerätetreibern.  
 
  **Nur Treiber in bestimmten Kategorien berücksichtigen**  
- Hiermit wird angegeben, dass von der Tasksequenzaktion in angegebenen Treiberkategorien nach den geeigneten Gerätetreibern gesucht wird.  
+ Die Tasksequenz durchsucht die angegebenen Treiberkategorien nach den geeigneten Gerätetreibern.  
 
  **Unbeaufsichtigte Installation von nicht signierten Treibern bei Windows-Versionen ausführen, wenn zulässig**  
- Ermöglicht dieser Tasksequenzaktion, nicht signierte Windows-Gerätetreiber zu installieren.  
+ Durch diese Option können Sie unter Windows Treiber ohne digitale Signatur installieren.   
 
-> [!IMPORTANT]  
->  Diese Option gilt nicht für Betriebssysteme, deren Richtlinie für Treibersignierung nicht konfiguriert werden kann.  
+  > [!IMPORTANT]  
+  >  Diese Option gilt nicht für Betriebssysteme, deren Richtlinie für Treibersignierung nicht konfiguriert werden kann.  
+
+
 
 ##  <a name="BKMK_CaptureNetworkSettings"></a> Netzwerkeinstellungen erfassen  
- Verwenden Sie den Tasksequenzschritt **Netzwerkeinstellungen erfassen** zum Erfassen der Microsoft-Netzwerkeinstellungen des Computers, auf dem die Tasksequenz ausgeführt wird. Die Einstellungen werden in Tasksequenzvariablen gespeichert, die die im Tasksequenzschritt **Netzwerkeinstellungen anwenden** konfigurierten Standardeinstellungen außer Kraft setzen.  
+ Verwenden Sie diesen Schritt zum Erfassen der Microsoft-Netzwerkeinstellungen des Computers, auf dem die Tasksequenz ausgeführt wird. Die Tasksequenz speichert diese Einstellungen in Tasksequenzvariablen. Diese Einstellungen setzen die Standardeinstellungen außer Kraft, die Sie im Schritt **Netzwerkeinstellungen anwenden** konfigurieren.  
 
  Dieser Tasksequenzschritt wird nur in einem Standardbetriebssystem ausgeführt. Er wird nicht in Windows PE ausgeführt. Weitere Informationen zu Tasksequenzvariablen für diese Aktion finden Sie unter [Capture Network Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_CaptureNetworkSettings).  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Einstellungen** > **Netzwerkeinstellungen erfassen**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Gibt einen kurzen benutzerdefinierten Namen an, der die in diesem Schritt vorgenommene Aktion beschreibt.  
-
- **Beschreibung**  
- Bietet ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Domänen- und Arbeitsgruppenmitgliedschaft migrieren**  
  Hiermit werden Informationen zur Domänen- und Arbeitsgruppenmitgliedschaft des Zielcomputers erfasst.  
@@ -367,33 +315,23 @@ Dieser Tasksequenzschritt wird nur in Windows PE ausgeführt. Er wird nicht in e
  **Netzwerkkartenkonfiguration migrieren**  
  Hiermit wird die Netzwerkadapterkonfiguration des Zielcomputers erfasst. Diese Informationen umfassen die globalen Netzwerkeinstellungen, die Anzahl der Netzwerkkarten und die den Karten zugeordneten Netzwerkeinstellungen. Diese Einstellungen umfassen auch DNS-, WINS-, IP- und Portfiltereinstellungen.  
 
+
+
 ##  <a name="BKMK_CaptureOperatingSystemImage"></a> Betriebssystemabbild erfassen  
- Mithilfe des Tasksequenzschritts **Betriebssystemabbild erfassen** können Sie Abbilder von einem Referenzcomputer erfassen und in einer WIM-Datei auf der angegebenen Netzwerkfreigabe speichern. Diese WIM-Datei kann dann mithilfe des Assistenten zum Hinzufügen eines Betriebssystemimages in Configuration Manager importiert werden, damit sie für imagebasierte Betriebssystembereitstellungen genutzt werden kann.  
+ Dieser Schritt erfasst mindestens ein Image von einem Referenzcomputer. Diese Tasksequenz erstellt eine Windows-Imagedatei (WIM) auf der angegebenen Netzwerkfreigabe. Verwenden Sie anschließend den Assistenten **Add Operating System Image Package** (Betriebssystemimagepaket hinzufügen), um dieses Image in Configuration Manager zu importieren, damit imagebasierte Betriebssystembereitstellungen verwendet werden können.  
 
- Jedes Volume (Laufwerk) auf dem Referenzcomputer wird als ein separates Abbild in der WIM-Datei erfasst. Wenn der Referenzcomputer über mehrere Volumes verfügt, enthält die erstellte WIM-Datei für jedes Volume ein separates Abbild. Es werden nur als NTFS oder FAT32 formatierte Volumes erfasst. Volumes in anderen Formaten sowie USB-Volumes werden nicht berücksichtigt.  
+ Configuration Manager erfasst jedes Volume (Laufwerk) des Referenzcomputers in einem separaten Image innerhalb der WIM-Datei. Wenn der Referenzcomputer über mehrere Volumes verfügt, enthält die erstellte WIM-Datei für jedes Volume ein separates Image. Es werden nur als NTFS oder FAT32 formatierte Volumes erfasst. Volumes in anderen Formaten sowie USB-Volumes werden nicht berücksichtigt.  
 
- Das auf dem Referenzcomputer installierte Betriebssystem muss in einer von Configuration Manager unterstützten Windows-Version vorliegen und mithilfe des SysPrep-Tools vorbereitet worden sein. Bei dem Volume mit dem installierten Betriebssystem und dem Startvolume muss es sich um dasselbe Volume handeln.  
+ Das auf dem Referenzcomputer installierte Betriebssystem muss in einer von Configuration Manager unterstützten Windows-Version vorliegen. Verwenden Sie das SysPrep-Tool, um das Betriebssystem des Referenzcomputers vorzubereiten. Bei dem Volume mit dem installierten Betriebssystem und dem Startvolume muss es sich um dasselbe Volume handeln.  
 
- Sie müssen außerdem ein Windows-Konto eingeben, das über Schreibberechtigung für die von Ihnen ausgewählte Netzwerkfreigabe verfügt.  
+ Geben Sie ein Konto mit Schreibberechtigungen für die ausgewählte Netzwerkfreigabe an.  
 
  Dieser Tasksequenzschritt wird nur in Windows PE ausgeführt. Er wird nicht in einem Standardbetriebssystem ausgeführt. Weitere Informationen zu Tasksequenzvariablen für diese Aktion finden Sie unter [Capture Operating System Image Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_CaptureOperatingSystemImage).  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+ Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Images** > **Capture Operating System Image** (Betriebssystemimage erfassen), um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Ziel**  
  Dies ist der Name des Dateisystempfads, der von Configuration Manager zum Speichern des erfassten Betriebssystemimages verwendet wird.  
@@ -410,153 +348,136 @@ Dieser Tasksequenzschritt wird nur in Windows PE ausgeführt. Er wird nicht in e
  **Konto für die Erfassung des Betriebssystemimages**  
  Sie müssen das Windows-Konto eingeben, das über Berechtigungen für den Zugriff auf die von Ihnen ausgewählte Netzwerkfreigabe verfügt. Klicken Sie auf **Festlegen** , um den Namen dieses Windows-Kontos anzugeben.  
 
+
+
 ##  <a name="BKMK_CaptureUserState"></a> Benutzerzustand erfassen  
- Verwenden Sie den Tasksequenzschritt **Benutzerzustand erfassen** , um mithilfe von Windows-EasyTransfer bzw. USMT den Benutzerzustand und die Benutzereinstellungen des Computers zu erfassen, auf dem die Tasksequenz ausgeführt wird. Dieser Tasksequenzschritt wird in Verbindung mit dem Tasksequenzschritt **Benutzerzustand wiederherstellen** verwendet. In USMT 3.0.1 und höher wird der USMT-Zustandsspeicher mit dieser Option stets mit einem von Configuration Manager generierten und verwalteten Verschlüsselungsschlüssel verschlüsselt.  
+ Verwenden Sie diesen Schritt, um das Migrationstool für den Benutzerstatus (User State Migration Tool, USMT) zum Erfassen des Benutzerzustands und der Benutzereinstellungen des Computers zu verwenden, der die Tasksequenz ausführt. Dieser Tasksequenzschritt wird in Verbindung mit dem Tasksequenzschritt **Benutzerzustand wiederherstellen** verwendet. In USMT 3.0.1 und höher wird der USMT-Zustandsspeicher mit dieser Option stets mit einem von Configuration Manager generierten und verwalteten Verschlüsselungsschlüssel verschlüsselt.  
 
  Weitere Informationen zum Verwalten des Benutzerzustands beim Bereitstellen von Betriebssystemen finden Sie unter [Verwalten des Benutzerzustands](../get-started/manage-user-state.md).  
 
- Sie können auch den Tasksequenzschritt **Benutzerzustand erfassen** zusammen mit den Tasksequenzschritten **Zustandsspeicher anfordern** und **Zustandsspeicher freigeben** verwenden, wenn Sie die Zustandseinstellungen in einem Zustandsmigrationspunkt am Configuration Manager-Standort speichern oder von dort aus wiederherstellen möchten.  
+ Wenn Sie die Einstellungen für den Benutzerstatus von einem Zustandsmigrationspunkt aus speichern und wiederherstellen möchten, verwenden Sie den Schritt **Benutzerzustand erfassen** mit den Schritten **Zustandsspeicher anfordern** und **Zustandsspeicher freigeben**.  
 
  Mit dem Tasksequenzschritt **Benutzerzustand erfassen** kann eine begrenzte Teilmenge der am häufigsten verwendeten USMT-Optionen gesteuert werden. Zusätzliche Befehlszeilenoptionen können mithilfe der Tasksequenzvariablen „OSDMigrateAdditionalCaptureOptions“ angegeben werden.  
 
  Dieser Tasksequenzschritt wird nur in Windows PE ausgeführt. Er wird nicht in einem Standardbetriebssystem ausgeführt. Weitere Informationen zu Tasksequenzvariablen für diese Aktion finden Sie unter [Capture User State Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_CaptureUserState).  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+ Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Benutzerzustand** > **Benutzerzustand erfassen**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **USMT-Paket (Migrationsprogramm für den Benutzerzustand)**  
- Geben Sie das Configuration Manager-Paket ein, das die USMT-Version enthält, die von diesem Tasksequenzschritt beim Erfassen des Benutzerzustands und der Einstellungen verwendet werden soll. Für dieses Paket ist kein Programm erforderlich. Beim Ausführen des Tasksequenzschritts wird die USMT-Version im angegebenen Paket ausgeführt. Geben Sie je nach Architektur des Betriebssystems, von dem Sie den Zustand erfassen, ein Paket an, das die 32-Bit-Version oder die x64-Version von USMT enthält.  
+ Geben Sie das Paket an, das das Migrationstool für den Benutzerstatus (USMT) enthält. Die Tasksequenz verwendet diese Version von USMT, um den Benutzerzustand und die Benutzereinstellungen zu erfassen. Für dieses Paket ist kein Programm erforderlich. Geben Sie ein Paket an, das die 32-Bit- oder 64-Bit-Version von USMT enthält. Die Architektur von USMT richtet sich nach der Architektur des Betriebssystems, dessen Zustand die Tasksequenz erfasst.  
 
  **Alle Benutzerprofile mit Standardoptionen erfassen**  
- Wählen Sie diese Option aus, um alle Benutzerprofilinformationen zu migrieren. Diese Option ist standardmäßig ausgewählt.  
+ Migrieren Sie alle Benutzerprofilinformationen. Dies ist die Standardoption.  
 
- Wenn Sie diese Option auswählen, nicht jedoch die Option zum Wiederherstellen der lokalen Benutzerprofile im Tasksequenzschritt „Benutzerzustand wiederherstellen“, tritt ein Fehler in der Tasksequenz auf, da die neuen Konten nicht von Configuration Manager migriert werden können, ohne dass ihnen Kennwörter zugewiesen werden. Zusätzlich gilt: Wenn Sie im Tasksequenzerstellungs-Assistenten eine Tasksequenz erstellen, um ein bestehendes Abbildpaket zu installieren, wird für die Tasksequenz standardmäßig die Option **Alle Benutzerprofile mit Standardoptionen erfassen** ausgewählt, nicht jedoch die Option **Lokale Computerbenutzerprofile wiederherstellen**(d. h. Nicht-Domänenkontos).  
+ Wenn Sie diese Option auswählen, jedoch im Schritt **Benutzerzustand wiederherstellen** nicht **Lokale Computerbenutzerprofile wiederherstellen** ausgewählt haben, schlägt die Tasksequenz fehl. Configuration Manager kann neue Konten nicht migrieren, ohne diesen Kennwörter zuzuweisen. 
+
+ Wenn Sie die Option **Install an existing image package** (Bestehendes Imagepaket installieren) des Assistenten **Neue Tasksequenz** verwenden, wird die resultierende Tasksequenz standardmäßig auf **Alle Benutzerprofile mit Standardoptionen erfassen** festgelegt. Diese Standardtasksequenz legt die Option nicht auf **Lokale Computerbenutzerprofile wiederherstellen** (d.h. Benutzerkonten außerhalb der Domäne) fest.  
 
  Wählen Sie **Lokale Computerbenutzerprofile wiederherstellen** aus, und geben Sie für das zu migrierende Konto ein Kennwort ein. In einer manuell erstellten Tasksequenz finden Sie diese Einstellung im Schritt „Benutzerzustand wiederherstellen“. Wird die Tasksequenz vom **Tasksequenzerstellungs-Assistenten** erstellt, befindet sich diese Einstellung auf der Seite **Benutzerdateien und -einstellungen wiederherstellen** des Assistenten.  
 
- Wenn Sie über keine lokalen Benutzerkonten verfügen, ist dies nicht relevant.  
+ Wenn Sie nicht über lokale Benutzerkonten verfügen, ist diese Einstellung nicht relevant.  
 
  **Erfassung der Benutzerprofile anpassen**  
- Wählen Sie diese Option aus, um eine benutzerdefinierte Profildateimigration anzugeben. Klicken Sie auf **Dateien** , um die von USMT bei diesem Schritt zu verwendenden Konfigurationsdateien auszuwählen. Sie müssen eine benutzerdefinierte XML-Datei angeben, die Rollen zur Definition der zu migrierenden Benutzerzustandsdateien enthält.  
+ Wählen Sie diese Option aus, um eine benutzerdefinierte Profildateimigration anzugeben. Klicken Sie auf **Dateien** , um die von USMT bei diesem Schritt zu verwendenden Konfigurationsdateien auszuwählen. Geben Sie eine benutzerdefinierte XML-Datei an, die Regeln zur Definition der zu migrierenden Benutzerzustandsdateien enthält.  
 
  **Klicken Sie zum Auswählen der Konfigurationsdateien auf diese Schaltfläche:**  
  Wählen Sie diese Option aus, um im USMT-Paket die Konfigurationsdateien auszuwählen, die Sie zum Erfassen von Benutzerprofilen verwenden möchten. Klicken Sie auf die Schaltfläche **Dateien** , um das Dialogfeld **Konfigurationsdateien** zu öffnen. Zum Angeben einer Konfigurationsdatei geben Sie in die Zeile **Dateiname** den Dateinamen ein und klicken auf die Schaltfläche **Hinzufügen** .  
 
  **Ausführliche Protokollierung aktivieren**  
- Aktivieren Sie diese Option, um ausführlichere Protokolldateiinformationen zu generieren. Beim Erfassen des Zustands wird das Protokoll „Scanstate.log“ generiert und standardmäßig im Tasksequenzprotokoll im Ordner „\windows\system32\ccm\Logs “ gespeichert.  
+ Aktivieren Sie diese Option, um ausführlichere Protokolldateiinformationen zu generieren. Wenn der Zustand erfasst wird, generiert die Tasksequenz standardmäßig die Datei „ScanState.log“ im Protokollordner der Tasksequenz (\windows\system32\ccm\logs).   
 
  **Dateien mit EFS (Encrypted File System) überspringen**  
- Aktivieren Sie diese Option, wenn Sie mit Encrypted File System (EFS) verschlüsselte Dateien (einschließlich Profildateien) beim Erfassen überspringen möchten. Je nach Betriebssystem und USMT-Version sind verschlüsselte Dateien nach der Wiederherstellung möglicherweise nicht lesbar. Weitere Informationen finden Sie in der USMT-Dokumentation.  
+ Aktivieren Sie diese Option, um das Erfassen von Dateien zu überspringen, die mit EFS (Encrypted File System, verschlüsselndes Dateisystem) verschlüsselt wurden. Diese Dateien enthalten Benutzerprofildateien. Je nach Betriebssystem und USMT-Version sind verschlüsselte Dateien nach der Wiederherstellung möglicherweise nicht lesbar. Weitere Informationen finden Sie in der USMT-Dokumentation.  
 
  **Mithilfe des normalen Dateisystemzugriffs kopieren**  
  Aktivieren Sie diese Option, um alle oder einige der folgenden Einstellungen anzugeben:  
 
--   **Fortsetzen, wenn einige Dateien nicht erfasst werden können**: Aktivieren Sie diese Einstellung, um den Migrationsprozess auch dann fortzusetzen, wenn einige Dateien nicht erfasst werden können. Wenn Sie diese Option deaktivieren und eine Datei nicht erfasst werden kann, kann der Tasksequenzschritt nicht ausgeführt werden. Diese Option ist standardmäßig aktiviert.  
+-   **Fortsetzen, wenn einige Dateien nicht erfasst werden können**: Aktivieren Sie diese Einstellung, um den Migrationsprozess auch dann fortzusetzen, wenn einige Dateien nicht erfasst werden können. Wenn Sie diese Option deaktivieren und eine Datei nicht erfasst werden kann, kann dieser Schritt nicht ausgeführt werden. Diese Option ist standardmäßig aktiviert.  
 
 -   **Lokal erfassen mithilfe von Links statt durch Kopieren von Dateien**: Aktivieren Sie diese Einstellung, um feste NTFS-Links zum Erfassen von Dateien zu verwenden.  
 
      Weitere Informationen zum Migrieren von Daten mithilfe von festen Links finden Sie unter [Migrationsspeicher mit festem Link](http://go.microsoft.com/fwlink/p/?LinkId=240222).  
 
 -   **Im Offlinemodus erfassen (nur Windows PE)**: Aktivieren Sie diese Einstellung, um den Benutzerzustand nicht im vollständigen Betriebssystem, sondern in Windows PE zu erfassen.  
-
- **Mithilfe des Volumeschattenkopie-Diensts (VSS) erfassen**  
+    
+**Mithilfe des Volumeschattenkopie-Diensts (VSS) erfassen**  
  Mithilfe dieser Option können Sie Dateien sogar dann erfassen, wenn sie durch eine andere Anwendung für die Bearbeitung gesperrt sind.  
 
+
+
 ##  <a name="BKMK_CaptureWindowsSettings"></a> Windows-Einstellungen erfassen  
- Verwenden Sie den Tasksequenzschritt **Windows-Einstellungen erfassen** zum Erfassen der Windows-Einstellungen des Computers, auf dem die Tasksequenz ausgeführt wird. Die Einstellungen werden in Tasksequenzvariablen gespeichert, die die im Tasksequenzschritt **Windows-Einstellungen anwenden** konfigurierten Standardeinstellungen außer Kraft setzen.  
+ Verwenden Sie diesen Schritt zum Erfassen der Windows-Einstellungen des Computers, auf dem die Tasksequenz ausgeführt wird. Die Tasksequenz speichert diese Einstellungen in Tasksequenzvariablen. Diese erfassten Einstellungen setzen die Standardeinstellungen außer Kraft, die Sie im Schritt **Windows-Einstellungen anwenden** konfigurieren.  
 
  Dieser Tasksequenzschritt wird entweder in Windows PE oder in einem Standardbetriebssystem ausgeführt. Weitere Informationen zu Tasksequenzvariablen für diese Aktion finden Sie unter [Capture Windows Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_CaptureWindowsSettings).  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+ Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Einstellungen** > **Windows-Einstellungen erfassen**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Computernamen migrieren**  
- Wählen Sie diese Option aus, um den NetBIOS-Computernamen des Computers zu erfassen.  
+ Erfassen Sie den NetBIOS-Computernamen des Computers.  
 
  **Registrierte Benutzer- und Organisationsnamen migrieren**  
- Wählen Sie diese Option aus, um auf dem Computer die Namen registrierter Benutzer und Organisationen zu erfassen.  
+ Erfassen Sie auf dem Computer die Namen registrierter Benutzer und Organisationen.  
 
  **Zeitzone migrieren**  
- Mit dieser Option werden die Zeitzoneneinstellungen auf dem Computer erfasst.  
+ Erfassen Sie die Zeitzoneneinstellungen auf dem Computer.  
+
+
 
 ##  <a name="BKMK_CheckReadiness"></a> Bereitschaft überprüfen  
- Mit dem Tasksequenzschritt **Bereitschaft überprüfen** können Sie überprüfen, ob der Zielcomputer die angegebenen Bereitstellungsvoraussetzungen erfüllt.  
+ Verwenden Sie diesen Schritt, um zu überprüfen, ob der Zielcomputer die Voraussetzungen für die Bereitstellung erfüllt.  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Allgemein** > **Bereitschaft überprüfen**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt Wählen Sie diese Einstellung für diesen Schritt nicht aus, da der Schritt andernfalls lediglich die Bereitschaftsprüfungen protokolliert, die Tasksequenz bei einem Überprüfungsfehler aber nicht beendet wird.  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Mindestens erforderlicher Arbeitsspeicher (MB)**  
- Wählen Sie diese Einstellung, um zu überprüfen, ob der auf dem Zielcomputer installierte Arbeitsspeicher (in Megabytes) dem angegebenen Speicherplatz entspricht oder diesen übersteigt. Diese Einstellung ist standardmäßig aktiviert.  
+ Stellen Sie sicher, dass die Größe des Arbeitsspeichers (in Megabyte bzw. MB) der angegebenen Größe entspricht oder diese übersteigt. Der Schritt aktiviert diese Einstellung standardmäßig.  
 
  **Mindestens erforderliche Prozessorgeschwindigkeit (MHz)**  
- Wählen Sie diese Einstellung, um zu überprüfen, ob die Geschwindigkeit des im Zielcomputer installierten Prozessors in Megahertz (MHz) dem angegebenen Wert entspricht oder diesen übersteigt. Diese Einstellung ist standardmäßig aktiviert.  
+ Überprüfen Sie, dass die Geschwindigkeit des Prozessors (in Megahertz bzw. MHz) der angegebenen Geschwindigkeit entspricht oder diese übersteigt. Der Schritt aktiviert diese Einstellung standardmäßig.  
 
  **Mindestens erforderlicher freier Speicherplatz (MB)**  
- Wählen Sie diese Einstellung aus, um zu überprüfen, ob der auf dem Zielcomputer freie Speicherplatz in Megabytes dem angegebenen Wert entspricht oder diesen übersteigt.  
+ Stellen Sie sicher, dass die Größe des freien Speicherplatzes auf dem Datenträger (in Megabyte bzw. MB) der angegebenen Größe entspricht oder diese übersteigt.  
 
  **Aktuelles Betriebssystem, das aktualisiert wird**  
- Wählen Sie diese Einstellung aus, um zu überprüfen, ob das auf dem Zielcomputer installierte Betriebssystem die angegebene Anforderung erfüllt. Standardmäßig ist diese Einstellung aktiviert und auf **CLIENT**festgelegt.  
+ Stellen Sie sicher, dass das auf dem Zielcomputer installierte Betriebssystem die angegebene Anforderung erfüllt. Der Schritt legt dies standardmäßig auf **CLIENT** fest.  
+
+### <a name="options"></a>Optionen
+ > [!NOTE]  
+ > Wenn Sie die Einstellung **Bei Fehler fortsetzen** auf der Registerkarte **Optionen** dieses Schritts aktivieren, werden nur die Ergebnisse der Überprüfung auf Bereitschaft protokolliert. Wenn eine Überprüfung fehlschlägt, wird die Tasksequenz nicht beendet.
+
+
 
 ##  <a name="BKMK_ConnectToNetworkFolder"></a> Verbindung mit Netzwerkordner herstellen  
- Verwenden Sie die Tasksequenzaktion **Verbindung mit Netzwerkordner herstellen** , um eine Verbindung mit einem freigegebenen Netzwerkordner herzustellen.  
+ Verwenden Sie diesen Schritt, um eine Verbindung mit einem freigegebenen Netzwerkordner herzustellen.  
 
  Dieser Tasksequenzschritt wird in einem Standardbetriebssystem oder in Windows PE ausgeführt. Weitere Informationen zu Tasksequenzvariablen für diese Aktion finden Sie unter [Connect to Network Folder Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ConnecttoNetworkFolder).  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+ Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Allgemein** > **Verbindung mit Netzwerkordner herstellen**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
--   Schritt deaktivieren  
+ **Pfad**  
+ Klicken Sie auf **Durchsuchen**, um den Netzwerkordnerpfad anzugeben. Verwenden Sie das Format *\\\server\share*.
 
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
+ **Laufwerk**  
+ Wählen Sie den Buchstaben des lokalen Laufwerks aus, das Sie dieser Verbindung zuweisen möchten. 
 
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
+ **Konto**  
+ Klicken Sie auf **Festlegen**, um das Benutzerkonto mit den Berechtigungen zum Herstellen einer Verbindung mit diesem Netzwerkordner anzugeben.
+
+
 
 ##  <a name="BKMK_DisableBitLocker"></a> BitLocker deaktivieren  
- Mit dem Tasksequenzschritt **BitLocker deaktivieren** können Sie die BitLocker-Verschlüsselung auf dem aktuellen Betriebssystemlaufwerk oder einem bestimmten Laufwerk deaktivieren. Nach dieser Aktion sind die Schlüsselschutzkomponenten im Klartext auf der Festplatte sichtbar, die Inhalte des Laufwerks werden jedoch nicht entschlüsselt. Dieser Vorgang ist daher praktisch sofort beendet.  
+ Verwenden Sie diesen Schritt, um die BitLocker-Verschlüsselung auf dem aktuellen Betriebssystemlaufwerk oder auf einem bestimmten Laufwerk zu deaktivieren. Nach dieser Aktion sind die Schlüsselschutzkomponenten im Klartext auf der Festplatte sichtbar, die Inhalte des Laufwerks werden jedoch nicht entschlüsselt. Dieser Vorgang ist daher praktisch sofort beendet.  
 
 > [!NOTE]  
 >  BitLocker-Laufwerkverschlüsselung bietet eine niedrige Verschlüsselungsstufe der Inhalte eines Datenträgervolumes.  
@@ -565,22 +486,10 @@ Dieser Tasksequenzschritt wird nur in Windows PE ausgeführt. Er wird nicht in e
 
  Dieser Schritt wird nur in Standardbetriebssystemen ausgeführt. Er wird nicht in Windows PE ausgeführt.  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+ Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Datenträger** > **BitLocker deaktivieren**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Gibt einen kurzen benutzerdefinierten Namen an, der die in diesem Schritt vorgenommene Aktion beschreibt.  
-
- **Beschreibung**  
- Bietet ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Aktuelles Betriebssystemlaufwerk**  
  Deaktiviert BitLocker auf dem aktuellen Betriebssystemlaufwerk.  
@@ -588,8 +497,10 @@ Dieser Tasksequenzschritt wird nur in Windows PE ausgeführt. Er wird nicht in e
  **Bestimmtes Laufwerk**  
  Deaktiviert BitLocker auf einem bestimmten Laufwerk. Geben Sie in der Dropdownliste das Laufwerk an, auf dem BitLocker deaktiviert ist.  
 
+
+
 ##  <a name="BKMK_DownloadPackageContent"></a> Paketinhalt herunterladen  
- Verwenden Sie den Tasksequenzschritt **Paketinhalt herunterladen** , um die folgenden Pakettypen herunterzuladen:  
+ Verwenden Sie diesen Schritt, um einen der folgenden Pakettypen herunterzuladen:  
 
 -   Betriebssystemabbilder  
 
@@ -598,34 +509,22 @@ Dieser Tasksequenzschritt wird nur in Windows PE ausgeführt. Er wird nicht in e
 -   Treiberpakete  
 
 -   Pakete  
+    
+Dieser Schritt funktioniert gut in einer Tasksequenz zum Aktualisieren eines Betriebssystems in den folgenden Szenarien:  
 
- Dieser Schritt funktioniert gut in einer Tasksequenz zum Aktualisieren eines Betriebssystems in den folgenden Szenarien:  
+-   Zum Verwenden einer einzigen Upgradetasksequenz für x86- und x64-Plattformen. Fügen Sie der Gruppe **Vorbereitung auf das Upgrade** zwei **Paketinhalt herunterladen**-Schritte hinzu. Legen Sie auf der Registerkarte **Optionen** Bedingungen fest, um die Clientarchitektur zu ermitteln und nur das entsprechende Betriebssystemupgradepaket herunterzuladen. Konfigurieren Sie jeden **Paketinhalt herunterladen**-Schritt, sodass dieselbe Variable verwendet wird. Verwenden Sie die Variable für den Medienpfad im Schritt **Betriebssystem aktualisieren**.  
 
--   Zum Verwenden einer einzigen Upgradetasksequenz für x86- und x64-Plattformen. Um dies zu erreichen, fügen Sie zwei **Paketinhalt herunterladen** -Schritte zur Gruppe **Vorbereitung auf das Upgrade** hinzu, und geben Sie Bedingungen an, um die Clientarchitektur zu ermitteln und nur das entsprechende Betriebssystemupgradepaket herunterzuladen. Konfigurieren Sie jeden **Paketinhalt herunterladen** -Schritt zur Verwendung derselben Variablen, und verwenden Sie die Variable für den Medienpfad im Schritt **Betriebssystem aktualisieren** .  
-
--   Um dynamisch ein passendes Treiberpaket herunterzuladen, verwenden Sie zwei **Paketinhalt herunterladen** -Schritte mit Bedingungen zum Ermitteln des geeigneten Hardwaretyps für jedes Treiberpaket. Konfigurieren Sie jeden **Paketinhalt herunterladen** -Schritt zur Verwendung derselben Variablen, und verwenden Sie die Variable für den **Bereitgestellter Inhalt** -Wert im Bereich „Treiber“ im Schritt **Betriebssystem aktualisieren** .  
+-   Um dynamisch ein passendes Treiberpaket herunterzuladen, verwenden Sie zwei **Paketinhalt herunterladen** -Schritte mit Bedingungen zum Ermitteln des geeigneten Hardwaretyps für jedes Treiberpaket. Konfigurieren Sie jeden **Paketinhalt herunterladen**-Schritt, sodass dieselbe Variable verwendet wird. Verwenden Sie die Variable für den Wert **Bereitgestellter Inhalt** im Abschnitt „Treiber“ des Schritts **Betriebssystem aktualisieren**.  
 
 > [!NOTE]    
-> Wenn Sie eine Tasksequenz bereitstellen, die den Schritt „Paketinhalt herunterladen“ enthält, aktivieren Sie im Assistenten zum Bereitstellen von Software auf der Seite **Verteilungspunkte** für **Bereitstellungsoptionen** nicht **Alle Inhalte vor dem Start der Tasksequenz lokal herunterladen**.  
+> Wenn Sie eine Tasksequenz bereitstellen, die den Schritt „Paketinhalt herunterladen“ enthält, aktivieren Sie im Assistenten zum Bereitstellen von Software auf der Seite **Verteilungspunkte** für **Bereitstellungsoptionen** nicht **Alle Inhalte vor dem Start der Tasksequenz lokal herunterladen** oder **Auf Inhalt direkt vom Verteilungspunkt aus zugreifen**.  
 
 Dieser Schritt wird entweder in einem Standardbetriebssystem oder in Windows PE ausgeführt. WinPE unterstützt die Option, die Pakete im Clientcache des Configuration Manager zu speichern, jedoch nicht.
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+ Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Software** > **Paketinhalt herunterladen**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Gibt einen kurzen benutzerdefinierten Namen an, der die in diesem Schritt vorgenommene Aktion beschreibt.  
-
- **Beschreibung**  
- Bietet ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Paket auswählen** -Symbol  
  Klicken Sie auf das Symbol, um das Paket zum Herunterladen auszuwählen. Nachdem Sie ein Paket ausgewählt haben, können Sie erneut auf das Symbol klicken, um ein anderes Paket auszuwählen.  
@@ -635,68 +534,53 @@ Dieser Schritt wird entweder in einem Standardbetriebssystem oder in Windows PE 
 
  -   **Tasksequenz-Arbeitsverzeichnis**  
 
- -   **Configuration Manager-Clientcache**: Sie verwenden diese Option, um den Inhalt im Clientcache zu speichern. Dadurch kann der Client als Peercachequelle für andere Peercacheclients fungieren. Weitere Informationen finden Sie unter [Vorbereiten des Windows PE-Peercache zum Reduzieren des WAN-Datenverkehrs](../get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md).  
+ -   **Configuration Manager-Clientcache**: Verwenden Sie diese Option, um den Inhalt im Clientcache zu speichern. Der Client fungiert als Peercachequelle für andere Peercacheclients. Weitere Informationen finden Sie unter [Vorbereiten des Windows PE-Peercache zum Reduzieren des WAN-Datenverkehrs](../get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md).  
 
  -   **Benutzerdefinierter Pfad**  
+   
+**Pfad als Variable speichern**  
+ Sie können den Pfad als Variable speichern, die in einem anderen Tasksequenzschritt verwendet werden kann. Configuration Manager fügt dem Variablennamen ein numerisches Suffix hinzu. Wenn Sie z.B. eine Variable von %*mycontent*% als benutzerdefinierte Variable festlegen, stellt diese das Stammverzeichnis dar, in dem die Tasksequenz alle Inhalte speichert, auf die verwiesen wird. Diese Inhalte können mehrere Pakete enthalten. Wenn Sie dann auf die Variable verweisen, fügen Sie ein numerisches Suffix hinzu. Beispielsweise verweisen Sie für das erste Paket auf %*mycontent01*%. Wenn Sie auf die Variable in einem Untersequenzschritt verweisen, z.B. **Betriebssystem aktualisieren**, verwenden Sie %*mycontent02*% oder %*mycontent03*%, wobei die Anzahl der Reihenfolge entspricht, in der der Schritt **Paketinhalt herunterladen** die Pakete auflistet.  
 
- **Pfad als Variable speichern**  
- Sie können den Pfad als Variable speichern, die in einem anderen Tasksequenzschritt verwendet werden kann. Configuration Manager fügt dem Variablennamen ein numerisches Suffix hinzu. Wenn Sie beispielsweise eine Variable %*mycontent*% als eine benutzerdefinierte Variable angeben, ist dies das Stammverzeichnis, in dem alle referenzierten Inhalte gespeichert werden (dies können mehrere Pakete sein). Wenn Sie auf die Variable verweisen, fügen Sie der Variablen ein numerisches Suffix hinzu. Beispielsweise verweisen Sie für das erste Paket auf die Variable %*mycontent01*% Wenn Sie auf die Variable in einem Untersequenzschritt verweisen, z.B. „Betriebssystem aktualisieren“, verwenden Sie %*mycontent02*% oder %*mycontent03*%, wobei die Anzahl der Reihenfolge entspricht, in dem das Paket im Schritt aufgelistet wird.  
+**Wenn ein Fehler bei einem Paketdownload auftritt, mit anderen Paketen in der Liste fortfahren**  
+ Wenn die Tasksequenz ein Paket nicht herunterladen kann, startet es den Download des nächsten Pakets in der Liste.  
 
- **Wenn ein Fehler bei einem Paketdownload auftritt, mit anderen Paketen in der Liste fortfahren**  
- Gibt an, dass im Falle eines Fehlers beim Paketdownload zum nächsten Paket in der Liste gewechselt und der Download gestartet wird.  
+
 
 ##  <a name="BKMK_EnableBitLocker"></a> BitLocker aktivieren  
- Verwenden Sie den Tasksequenzschritt **BitLocker aktivieren** , um die BitLocker-Verschlüsselung auf mindestens zwei Partitionen auf der Festplatte zu aktivieren. Die erste aktive Partition enthält den Windows-Bootstrap-Code. Eine weitere Partition beinhaltet das Betriebssystem. Die Bootstrap-Partition muss unverschlüsselt bleiben.  
+Verwenden Sie diesen Schritt, um die BitLocker-Verschlüsselung auf mindestens zwei Partitionen auf der Festplatte zu aktivieren. Die erste aktive Partition enthält den Windows-Bootstrap-Code. Eine weitere Partition beinhaltet das Betriebssystem. Die Bootstrap-Partition muss unverschlüsselt bleiben.  
 
- Verwenden Sie den Tasksequenzschritt **BitLocker vorab bereitstellen** zum Aktivieren von BitLocker auf einem Laufwerk in Windows PE. Weitere Informationen finden Sie im Abschnitt [BitLocker vorab bereitstellen](#BKMK_PreProvisionBitLocker) in diesem Thema.  
+Verwenden Sie den Tasksequenzschritt **BitLocker vorab bereitstellen** zum Aktivieren von BitLocker auf einem Laufwerk in Windows PE. Weitere Informationen finden Sie im Abschnitt [BitLocker vorab bereitstellen](#BKMK_PreProvisionBitLocker).  
 
 > [!NOTE]  
 >  BitLocker-Laufwerkverschlüsselung bietet eine niedrige Verschlüsselungsstufe der Inhalte eines Datenträgervolumes.  
 
- Der Schritt **BitLocker aktivieren** wird nur in Standardbetriebssystemen ausgeführt. Er wird nicht in Windows PE ausgeführt. Weitere Informationen zu Tasksequenzvariablen für diese Aktion finden Sie unter [Enable BitLocker Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_EnableBitLocker).  
+Der Schritt **BitLocker aktivieren** wird nur in Standardbetriebssystemen ausgeführt. Er wird nicht in Windows PE ausgeführt. Weitere Informationen zu Tasksequenzvariablen für diese Aktion finden Sie unter [Enable BitLocker Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_EnableBitLocker).  
 
- Das Trusted Platform Module (TPM) muss bei Angabe von **Nur TPM**, **TPM &amp; Schlüssel zum Systemstart auf USB** oder **TPM-und-PIN**den folgende Zustand aufweisen, bevor Sie den Schritt **BitLocker aktivieren** ausführen können:  
-
--   Aktiviert  
+Wenn Sie **Nur TPM**, **TPM und Schlüssel zum Systemstart auf USB** oder **TPM-und-PIN** angeben, muss das Trusted Platform Module (TPM) sich in folgendem Zustand befinden, bevor Sie den Schritt **BitLocker aktivieren** ausführen können:  
 
 -   Aktiviert  
-
+-   Aktiviert  
 -   Besitz zulässig  
-
- Mit dem Tasksequenzschritt kann jegliche verbleibende TPM-Initialisierung abgeschlossen werden, da für die restlichen Schritte keine physische Präsenz und keine Neustarts erforderlich sind. Zu den verbleibenden TPM-Initialisierungsschritten, die bei Bedarf transparent über **BitLocker aktivieren** abgeschlossen werden können, gehören:  
+   
+Dieser Schritt schließt alle verbleibenden TPM-Initialisierungen ab. Die verbleibenden Schritte erfordern keine physische Präsenz und keine Neustarts. Der Schritt **BitLocker aktivieren** schließt die verbleibenden Schritte für die TPM-Initialisierung bei Bedarf transparent ab:  
 
 -   Endorsement Key-Paar erstellen  
-
 -   Besitzerauthentifizierungswert erstellen und in Active Directory hinterlegen, welches zur Unterstützung dieses Werts erweitert worden sein muss  
-
 -   Besitz übernehmen  
-
 -   Storage Root Key (SRK, Speicherstammschlüssel) erstellen bzw. zurücksetzen, falls bereits einer vorhanden ist, der jedoch inkompatibel ist  
+   
+Wenn die Tasksequenz auf den Schritt **BitLocker aktivieren** warten soll, bevor der Vorgang der Laufwerkverschlüsselung abgeschlossen wird, aktivieren Sie die Option **Warten**. Wenn Sie die Option **Warten** nicht aktivieren, wird der Vorgang der Laufwerkverschlüsselung im Hintergrund ausgeführt. Die Tasksequenz fährt sofort mit dem nächsten Schritt fort.  
 
- Wenn der Schritt **BitLocker aktivieren** verzögert werden soll, bis der Laufwerksverschlüsselungsvorgang abgeschlossen ist, bevor mit dem nächsten Schritt in der Tasksequenz fortgefahren wird, aktivieren Sie das Kontrollkästchen **Warten** . Wenn Sie das Kontrollkästchen **Warten** nicht aktivieren, wird die Laufwerksverschlüsselung im Hintergrund ausgeführt und in der Tasksequenzausführung sofort der nächste Schritt aufgerufen.  
+Mithilfe von BitLocker können mehrere Laufwerke in einem Computersystem (sowohl Betriebssystem- als auch Datenlaufwerke) verschlüsselt werden. Verschlüsseln Sie zum Verschlüsseln eines Datenlaufwerks zunächst das Betriebssystemlaufwerk, und schließen Sie den Verschlüsselungsvorgang ab. Diese Anforderung besteht, da das Betriebssystemlaufwerk die Schlüsselschutzvorrichtungen für die Datenlaufwerke speichert. Wenn Sie das Betriebssystem und die Datenlaufwerke in derselben Tasksequenz verschlüsseln, aktivieren Sie die Option **Warten** des Schritts **BitLocker aktivieren** für das Betriebssystemlaufwerk.  
 
- Mithilfe von BitLocker können mehrere Laufwerke in einem Computersystem (sowohl Betriebssystem- als auch Datenlaufwerke) verschlüsselt werden. Zur Verschlüsselung eines Datenlaufwerks muss das Betriebssystem bereits verschlüsselt und der Verschlüsselungsvorgang abgeschlossen sein, da die Schlüsselschutzvorrichtungen für Datenlaufwerke auf dem Betriebssystemlaufwerk gespeichert werden. Wenn Sie also das Betriebssystemlaufwerk und das Datenlaufwerk im Rahmen desselben Vorgangs verschlüsseln, muss für den Schritt, bei dem BitLocker für das Betriebssystemlaufwerk aktiviert wird, die Option „Warten“ aktiviert werden.  
+Wenn die Festplatte bereits verschlüsselt, aber BitLocker deaktiviert ist, aktiviert der Schritt **BitLocker aktivieren** die Schlüsselschutzvorrichtungen erneut und wird schnell abgeschlossen. Eine erneute Verschlüsselung des Laufwerks ist in diesem Fall nicht notwendig.  
 
- Wenn die Festplatte bereits verschlüsselt, BitLocker jedoch deaktiviert ist, werden durch „Bitlocker aktivieren“ die Schlüsselschutzvorrichtung(en) erneut aktiviert, und der Schritt wird nahezu umgehend abgeschlossen. Eine erneute Verschlüsselung des Laufwerks ist in diesem Fall nicht notwendig.  
+Weitere Informationen zu Tasksequenzvariablen für diese Aktion finden Sie unter [Enable BitLocker Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_EnableBitLocker).  
 
- Weitere Informationen zu Tasksequenzvariablen für diese Aktion finden Sie unter [Enable BitLocker Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_EnableBitLocker).  
+Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Datenträger** > **BitLocker aktivieren**, um diesen Schritt hinzuzufügen. 
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
-
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Gibt einen beschreibenden Namen für diesen Tasksequenzschritt an.  
-
- **Beschreibung**  
- Hiermit können Sie optional eine Beschreibung für diesen Tasksequenzschritt eingeben.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Wählen Sie das zu verschlüsselnde Laufwerk aus**  
  Gibt das zu verschlüsselnde Laufwerk an. Um das aktuelle Betriebssystemlaufwerk zu verschlüsseln, wählen Sie **Aktuelles Betriebssystemlaufwerk** aus und konfigurieren anschließend eine der folgenden Optionen für die Schlüsselverwaltung.  
@@ -708,74 +592,63 @@ Dieser Schritt wird entweder in einem Standardbetriebssystem oder in Windows PE 
 -   **TPM &amp; Schlüssel zum Systemstart auf USB**: Wählen Sie diese Option, um TPM und einen auf einem USB-Flashlaufwerk gespeicherten Systemstartschlüssel zu verwenden. Wenn Sie diese Option auswählen, sperrt BitLocker den normalen Startvorgang, bis ein USB-Gerät mit einem BitLocker-Systemstartschlüssel an den Computer angeschlossen wird.  
 
 -   **TPM-und-PIN**: Wählen Sie diese Option, um TPM und eine persönliche Identifikationsnummer (PIN) zu verwenden. Wenn Sie diese Option auswählen, sperrt BitLocker den normalen Startvorgang, bis der Benutzer die PIN eingibt.  
+   
+Um ein bestimmtes Datenlaufwerk (kein Betriebssystemlaufwerk) zu verschlüsseln, wählen Sie **Bestimmtes Laufwerk**, und wählen Sie dann das Laufwerk in der Liste aus.  
 
- Um ein bestimmtes Datenlaufwerk (kein Betriebssystemlaufwerk) zu verschlüsseln, wählen Sie **Bestimmtes Laufwerk**, und wählen Sie dann das Laufwerk in der Liste aus.  
+**Wählen Sie aus, wo der Wiederherstellungsschlüssel erstellt werden soll**  
+ Wählen Sie **In Active Directory** aus, um festzulegen, wo BitLocker das Wiederherstellungskennwort erstellt und um dieses in Active Directory zu hinterlegen. Wenn Sie diese Option auswählen, müssen Sie Active Directory für den Standort erweitern. BitLocker kann die zugehörigen Wiederherstellungsinformationen dann in Active Directory speichern. Wählen Sie **Do not create recovery key** (Keinen Wiederherstellungsschlüssel erstellen) aus, um kein Kennwort zu erstellen. Das Erstellen eines Kennworts ist jedoch eine bewährte Methode.  
 
- **Wählen Sie aus, wo der Wiederherstellungsschlüssel erstellt werden soll**  
- Wählen Sie **In Active Directory** aus, um anzugeben, wo das Wiederherstellungskennwort erstellt werden soll, und um das Kennwort in Active Directory zu hinterlegen. Wenn Sie diese Option auswählen, müssen Sie Active Directory für den Standort erweitern, sodass die zugeordneten BitLocker-Wiederherstellungsinformationen gespeichert werden. Sie können auch beschließen, gar kein Kennwort zu erstellen, indem Sie **Keinen Wiederherstellungsschlüssel erstellen**auswählen. Das Erstellen eines Kennworts ist jedoch eine bewährte Methode.  
+**Vor dem Fortsetzen der Tasksequenzausführung warten, bis BitLocker den Laufwerkverschlüsselungsvorgang auf allen Laufwerken abgeschlossen hat**  
+ Wählen Sie diese Option aus, damit die BitLocker-Laufwerkverschlüsselung abgeschlossen wird, bevor der nächste Schritt in der Tasksequenz ausgeführt wird. Wenn Sie diese Option auswählen, verschlüsselt BitLocker das gesamte Datenträgervolume, bevor der Benutzer sich beim Computer anmelden kann.  
 
- **Vor dem Fortsetzen der Tasksequenzausführung warten, bis BitLocker den Laufwerkverschlüsselungsvorgang auf allen Laufwerken abgeschlossen hat**  
- Wählen Sie diese Option aus, damit die BitLocker-Laufwerkverschlüsselung abgeschlossen wird, bevor der nächste Schritt in der Tasksequenz ausgeführt wird. Wenn diese Option ausgewählt ist, wird das gesamte Datenträgervolume verschlüsselt, bevor sich der Benutzer beim Computer anmelden kann.  
+Beim Verschlüsseln einer großen Festplatte kann der Verschlüsselungsvorgang mehrere Stunden andauern. Wenn diese Option nicht ausgewählt wird, kann die Tasksequenz sofort fortgesetzt werden.  
 
- Bei Verschlüsselung eines umfangreichen Festplattenlaufwerks kann es Stunden dauern, bevor der Verschlüsselungsvorgang abgeschlossen ist. Wenn diese Option nicht ausgewählt wird, kann die Tasksequenz sofort fortgesetzt werden.  
+
 
 ##  <a name="BKMK_FormatandPartitionDisk"></a> Datenträger formatieren und partitionieren  
- Mit dem Tasksequenzschritt **Datenträger formatieren und partitionieren** können Sie einen angegebenen Datenträger auf einem Zielcomputer formatieren und partitionieren.  
+ Mit diesem Schritt können Sie einen angegebenen Datenträger auf einem Zielcomputer formatieren und partitionieren.  
 
 > [!IMPORTANT]  
->  Jede von Ihnen für diesen Tasksequenzschritt angegebene Einstellung gilt nur für einen angegebenen Datenträger. Wenn Sie einen anderen Datenträger auf dem Zielcomputer formatieren und partitionieren möchten, müssen Sie der Tasksequenz einen weiteren Tasksequenzschritt zum **Formatieren und Partitionieren des Datenträgers** hinzufügen.  
+>  Jede von Ihnen für diesen Tasksequenzschritt angegebene Einstellung gilt nur für einen angegebenen Datenträger. Wenn Sie einen anderen Datenträger auf dem Zielcomputer formatieren und partitionieren möchten, fügen Sie der Tasksequenz den zusätzlichen Schritt **Datenträger formatieren und partitionieren** hinzu.  
 
  Dieser Tasksequenzschritt wird nur in Windows PE ausgeführt. Er wird nicht in einem Standardbetriebssystem ausgeführt. Weitere Informationen zu Tasksequenzvariablen für diese Aktion finden Sie unter [Format and Partition Disk Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_FormatPartitionDisk).  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+ Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Datenträger** > **Datenträger formatieren und partitionieren**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Datenträgernummer**  
- Die Nummer des physischen Datenträgers, der formatiert wird Die Nummer basiert auf der Reihenfolge der Datenträgerenumeration in Windows.  
+ Die Nummer des physischen Datenträgers, der formatiert werden soll Die Nummer basiert auf der Reihenfolge der Datenträgerenumeration in Windows.  
 
  **Datenträgertyp**  
  Typ des Datenträgers, der formatiert wird In der Dropdownliste stehen zwei Optionen zur Auswahl zur Verfügung: 
 
--   Standard (MBR) – Master Boot Record.  
-
+-   Standard (MBR) – Master Boot Record
 -   GPT – GUID-Partitionstabelle  
 
 > [!NOTE]  
->  Wenn Sie den Datenträgertyp von **Standard (MBR)** in **GPT**ändern und das Partitionslayout eine erweiterte Partition enthält, werden alle erweiterten und logischen Partitionen aus dem Layout entfernt. Sie werden aufgefordert, diese Aktion vor dem Ändern des Datenträgertyps zu bestätigen.  
-
- **Volume**  
- Spezielle Informationen zur Partition oder dem Volume, die/das erstellt wird, einschließlich:  
+>  Wenn Sie den Datenträgertyp von **Standard (MBR)** in **GPT** ändern und das Partitionslayout eine erweiterte Partition enthält, entfernt die Tasksequenz alle erweiterten und logischen Partitionen aus dem Layout. Der Tasksequenz-Editor fordert Sie dazu auf, diese Aktion vor dem Ändern des Datenträgertyps zu bestätigen.  
+   
+**Volume**  
+ Weitere Informationen zu der Partition oder dem Volume, die bzw. das von der Tasksequenz erstellt wird, einschließlich folgender Attribute:  
 
 -   Name  
-
 -   Verbleibender Speicherplatz  
-
- Zum Erstellen einer neuen Partition klicken Sie auf **Neu** , um das Dialogfeld **Partitionseigenschaften** aufzurufen. Sie können den Typ und die Größe der Partition angeben. Außerdem können Sie angeben, ob es sich um eine Startpartition handeln soll. Zum Ändern einer vorhandenen Partition klicken Sie auf die zu ändernde Partition und dann auf die Schaltfläche „Eigenschaften“. Weitere Informationen zum Konfigurieren von Festplattenpartitionen finden Sie in einem der folgenden Themen:  
+   
+Zum Erstellen einer neuen Partition klicken Sie auf **Neu** , um das Dialogfeld **Partitionseigenschaften** aufzurufen. Geben Sie die Größe und den Typ der Partition an und ob es sich um eine Startpartition handelt. Zum Ändern einer vorhandenen Partition klicken Sie auf die zu ändernde Partition und dann auf die Schaltfläche „Eigenschaften“. Weitere Informationen zum Konfigurieren von Festplattenpartitionen finden Sie in einem der folgenden Artikel:  
 
 -   [Konfigurieren von UEFI-/GPT-basierten Festplattenpartitionen](http://go.microsoft.com/fwlink/?LinkID=272104)  
-
 -   [Konfigurieren von BIOS-/MBR-basierten Festplattenpartitionen](http://go.microsoft.com/fwlink/?LinkId=272105)  
 
- Wählen Sie zum Löschen einer Partition die zu löschende Partition aus, und klicken Sie dann auf **Löschen**.  
+Wählen Sie zum Löschen einer Partition die zu löschende Partition aus, und klicken Sie dann auf **Löschen**.  
+
+
 
 ##  <a name="BKMK_InstallApplication"></a> Anwendung installieren  
- Mit dem Tasksequenzschritt **Anwendung installieren** können Sie Anwendungen als Teil der Tasksequenz installieren. Mit diesem Schritt können Sie einen Satz von Anwendungen installieren, die vom Tasksequenzschritt angegeben werden, oder einen Satz von Anwendungen, die von einer dynamischen Liste mit Tasksequenzvariablen angegeben werden. Wenn dieser Schritt ausgeführt wird, beginnt die Anwendungsinstallation sofort; das nächste Richtlinienabfrageintervall wird nicht abgewartet.  
+Dieser Schritt installiert die angegebenen Anwendungen oder eine von einer dynamischen Liste mit Tasksequenzvariablen definierte Anwendungsgruppe. Wenn dieser Schritt ausgeführt wird, beginnt die Anwendungsinstallation sofort; das nächste Richtlinienabfrageintervall wird nicht abgewartet.  
 
- Von Anwendungen, die installiert werden, müssen die folgenden Kriterien erfüllt werden:  
+Von Anwendungen, die installiert werden, müssen die folgenden Kriterien erfüllt werden:  
 
 -   Die Anwendung muss ein Bereitstellungstyp von Windows Installer oder des Skriptinstallationsprogramms sein. Bereitstellungstypen des Windows-App-Pakets (APPX-Datei) werden nicht unterstützt.  
 
@@ -783,127 +656,112 @@ Dieser Schritt wird entweder in einem Standardbetriebssystem oder in Windows PE 
 
 -   Es darf keine Interaktion mit dem Desktop erfolgen. Das Programm muss im Hintergrund oder in einem unbeaufsichtigten Modus ausgeführt werden.  
 
--   Es darf durch die Anwendung kein eigenständiger Computerneustart initiiert werden. Ein Computerneustart muss über den Standardneustartcode (Exitcode 3010) angefordert werden. Dadurch wird sichergestellt, dass der Neustart ordnungsgemäß ausgeführt wird. Wenn ein Exitcode 3010 von der Anwendung zurückgegeben wird, so wird der Neustart vom zugrundeliegenden Tasksequenzmodul ausgeführt. Nach dem Neustart wird die Tasksequenz automatisch fortgesetzt.  
+-   Es darf durch die Anwendung kein eigenständiger Computerneustart initiiert werden. Ein Computerneustart muss über den Standardneustartcode (Exitcode 3010) angefordert werden. Durch dieses Verhalten wird sichergestellt, dass der Tasksequenzschritt den Neustart ordnungsgemäß ausführt. Wenn ein Exitcode 3010 von der Anwendung zurückgegeben wird, so wird der Neustart vom zugrundeliegenden Tasksequenzmodul ausgeführt. Nach dem Neustart wird die Tasksequenz automatisch fortgesetzt.  
 
- Bei Ausführung des Schritts **Anwendung installieren** wird die Anwendbarkeit der Anforderungsregeln und der Ermittlungsmethode für die Bereitstellungstypen der Anwendung geprüft. Auf Basis der Ergebnisse dieser Überprüfung wird der anwendbare Bereitstellungstyp installiert. Wenn ein Bereitstellungstyp Abhängigkeiten enthält, wird der abhängige Bereitstellungstyp im Rahmen des Anwendungsinstallationsschritts ausgewertet und installiert. Abhängigkeiten von Anwendungen werden für eigenständige Medien nicht unterstützt.  
+Bei Ausführung des Schritts **Anwendung installieren** wird die Anwendbarkeit der Anforderungsregeln und der Ermittlungsmethode für die Bereitstellungstypen geprüft. Auf Basis der Ergebnisse dieser Überprüfung wird der anwendbare Bereitstellungstyp installiert. Wenn ein Bereitstellungstyp Abhängigkeiten enthält, wird der abhängige Bereitstellungstyp im Rahmen des Anwendungsinstallationsschritts ausgewertet und installiert. Abhängigkeiten von Anwendungen werden für eigenständige Medien nicht unterstützt.  
 
 > [!NOTE]  
->  Zum Installieren einer Anwendung, die eine andere Anwendung ablöst, müssen die Inhaltsdateien für die abgelöste Anwendung verfügbar sein, andernfalls tritt beim Tasksequenzschritt ein Fehler auf. Beispiel: Microsoft Visio 2010 ist auf einem Client oder in einem erfassten Abbild installiert. Beim Ausführen des Tasksequenzschritts „Anwendung installieren“ zum Installieren von Microsoft Visio 2013 müssen die Inhaltsdateien für Microsoft Visio 2010 (die abgelöste Anwendung) an einem Verteilungspunkt verfügbar sein, andernfalls tritt bei der Tasksequenz ein Fehler auf. Auf einem Client oder erfassten Abbild ohne Microsoft Visio-Installation wird die Installation von Microsoft Visio 2013 durchgeführt, ohne nach den Microsoft Visio 2010-Inhaltsdateien zu suchen.  
+>  Zum Installieren einer Anwendung, die eine andere Anwendung ablöst, müssen die Inhaltsdateien für die abgelöste Anwendung verfügbar sein. Andernfalls tritt beim Tasksequenzschritt ein Fehler auf. Beispiel: Microsoft Visio 2010 ist auf einem Client oder in einem erfassten Abbild installiert. Wenn der Schritt **Anwendung installieren** Microsoft Visio 2013 installiert, müssen die Inhaltsdateien für Microsoft Visio 2010 (die abgelöste Anwendung) an einem Verteilungspunkt verfügbar sein. Wenn Microsoft Visio auf einem Client oder einem erfassten Image nicht installiert ist, installiert die Tasksequenz Microsoft Visio 2013, ohne nach den Inhaltsdateien von Microsoft Visio 2010 zu suchen.  
 
 > [!NOTE]
-> Verwenden Sie die integrierten Variablen SMSTSMPListRequestTimeoutEnabled und SMSTSMPListRequestTimeout, um anzugeben, wie viele Millisekunden eine Tasksequenz nach dem erfolglosen Abrufen der Verwaltungspunktliste von Standortdiensten warten soll, bevor sie erneut versucht, eine Anwendung oder einen Softwareupdate zu installieren. Weitere Informationen finden Sie unter [Integrierte Tasksequenzvariablen](task-sequence-built-in-variables.md).
+> Wenn der Client die Liste der Verwaltungspunkte nicht von den Standortdiensten abrufen kann, verwenden Sie die integrierten Variablen „SMSTSMPListRequestTimeoutEnabled“ und „SMSTSMPListRequestTimeout“, um anzugeben, für wie viele Millisekunden eine Tasksequenz wartet, bevor die Installation einer Anwendung oder eines Softwareupdates erneut versucht wird. Weitere Informationen finden Sie unter [Task sequence built-in variables (Integrierte Tasksequenzvariablen)](task-sequence-built-in-variables.md).
 
  Dieser Tasksequenzschritt wird nur in einem Standardbetriebssystem ausgeführt. Er wird nicht in Windows PE ausgeführt.  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+ Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Software** > **Anwendung installieren**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Geben Sie an, dass Sie diesen Schritt wiederholen, wenn der Computer unerwartet neu gestartet wird. Sie können auch angeben, wie viele Wiederholungen nach einem Neustart erfolgen sollen.  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Folgende Anwendungen installieren**  
- Mit dieser Einstellung geben Sie die Anwendungen an, die in der Reihenfolge installiert werden, in der sie angegeben sind.  
+ Die Tasksequenz installiert diese Anwendungen in der angegebenen Reihenfolge.  
 
- Deaktivierte Anwendungen und Anwendungen mit den folgenden Einstellungen werden von Configuration Manager herausgefiltert. Diese Anwendungen erscheinen nicht im Dialogfeld **Zu installierende Anwendung auswählen** .  
+ Deaktivierte Anwendungen und Anwendungen mit den folgenden Einstellungen werden von Configuration Manager herausgefiltert:  
 
 -   Nur wenn ein Benutzer angemeldet ist  
-
 -   Mit Benutzerrechten ausführen  
 
- **Anwendungen entsprechend der dynamischen Variablenliste installieren**  
- Mit dieser Einstellung geben Sie den Basisnamen für einen Satz von Tasksequenzvariablen an, die für einen Sammlung oder einen Computer definiert sind. Von diesen Variablen werden die Anwendungen angegeben, die für die Sammlung bzw. den Computer installiert werden. Jeder Variablenname besteht aus einem allgemeinen Basisnamen sowie einem numerischen bei 01 beginnenden Suffix Der Wert jeder Variable darf nur den Namen der Anwendung und nichts anderes enthalten.  
+Diese Anwendungen erscheinen nicht im Dialogfeld **Zu installierende Anwendung auswählen**.
+  
+**Anwendungen entsprechend der dynamischen Variablenliste installieren**  
+Die Tasksequenz installiert Anwendungen mithilfe dieses Basisvariablennamens. Der Basisvariablenname gilt für eine Gruppe von Tasksequenzvariablen, die für eine Sammlung oder für einen Computer definiert wurden. Von diesen Variablen werden die Anwendungen angegeben, die von der Tasksequenz für die Sammlung bzw. für den Computer installiert werden. Jeder Variablenname besteht aus einem allgemeinen Basisnamen sowie einem numerischen bei 01 beginnenden Suffix Der Wert jeder Variable darf nur den Namen der Anwendung und nichts anderes enthalten.  
 
- Bei Anwendungen, die mithilfe einer dynamischen Variablenliste installiert werden sollen, muss im Dialogfeld **Eigenschaften** der Anwendung auf der Registerkarte **Allgemein** die folgende Einstellung aktiviert sein: **Installation dieser Anwendung durch die Tasksequenzaktion „Anwendung installieren“ ohne Bereitstellung zulassen**  
+Damit die Tasksequenz Anwendungen mithilfe einer dynamischen Variablenliste installiert, müssen Sie folgende Einstellung auf der Registerkarte **Allgemein** der Anwendung **Eigenschaften** aktivieren: **Allow this application to be installed from the Install Application task sequence action instead of deploying manually** (Installation dieser Anwendung durch die Tasksequenzaktion „Anwendung installieren“ statt durch manuelle Bereitstellung zulassen)  
 
 > [!NOTE]  
 >  Bei Bereitstellungen mit eigenständigen Medien können Sie Anwendungen nicht mithilfe einer dynamischen Variablenliste installieren.  
 
- Beispiel: Geben Sie folgende Variable an, um eine einzelne Anwendung mithilfe einer Tasksequenzvariablen namens AA01 zu installieren:  
+Beispiel: Geben Sie folgende Variable an, um eine einzelne Anwendung mithilfe einer Tasksequenzvariablen namens AA01 zu installieren:  
 
 |Variablenname|Variablenwert|  
 |-------------------|--------------------|  
 |AA01|Microsoft Office|  
 
- Bei der Installation von zwei Anwendungen sind folgende zusätzliche Variablen anzugeben:  
+Bei der Installation von zwei Anwendungen sind folgende zusätzliche Variablen anzugeben:  
 
 |Variablenname|Variablenwert|  
 |-------------------|--------------------|  
 |AA01|Microsoft Lync|  
 |AA02|Microsoft Office|  
 
- Es ist von folgenden Bedingungen abhängig, welche Komponenten installiert werden:  
+Folgende Bedingungen wirken sich auf die Anwendungen aus, die von der Tasksequenz installiert wurden:  
 
--   Der Variablenwert enthält noch andere bzw. keine anderen Informationen als den Namen der Anwendung. Diese Anwendung wird nicht installiert, und die Tasksequenz wird fortgesetzt.  
+-   Der Variablenwert enthält noch andere bzw. keine anderen Informationen als den Namen der Anwendung. Die Tasksequenz installiert die Anwendung nicht und wird fortgesetzt.  
 
--   Wenn keine Variable mit dem angegebenen Basisnamen und dem Suffix „01“ gefunden wird, werden keine Anwendungen installiert. Wenn Sie auf der Registerkarte „Optionen“ des Tasksequenzschritts die Option **Bei Fehler fortsetzen** auswählen, wird die Tasksequenz bei einem Fehler der Anwendungsinstallation fortgesetzt. Wenn die Einstellung nicht ausgewählt ist, tritt ein Fehler in der Tasksequenz auf, und die verbleibenden Anwendungen werden nicht installiert.  
+-   Wenn die Tasksequenz keine Variable mit dem angegebenen Basisnamen und dem Suffix „01“ findet, installiert diese keine Anwendungen. 
+   
+**Wenn ein Fehler bei einer Anwendungsinstallation auftritt, mit anderen Anwendungen in der Liste fortfahren**  
+ Mit dieser Einstellung geben Sie an, dass der Schritt fortgesetzt werden soll, wenn bei einer einzelnen Anwendungsinstallation ein Fehler auftritt. Wenn Sie diese Einstellungen angeben, wird die Tasksequenz unabhängig von Installationsfehlern fortgesetzt. Wenn Sie diese Einstellung nicht angeben und die Installation fehlschlägt, wird der Schritt sofort beendet.  
 
- **Wenn ein Fehler bei einer Anwendungsinstallation auftritt, mit anderen Anwendungen in der Liste fortfahren**  
- Mit dieser Einstellung geben Sie an, dass der Schritt fortgesetzt werden soll, wenn bei einer einzelnen Anwendungsinstallation ein Fehler auftritt. Wenn diese Einstellung angegeben ist, wird die Tasksequenz unabhängig davon, ob Installationsfehler zurückgegeben werden, fortgesetzt. Wenn diese Einstellung nicht angegeben ist und bei einer Installation ein Fehler auftritt, wird der Tasksequenzschritt sofort beendet.  
+### <a name="options"></a>Optionen
+ > [!NOTE] 
+ > Wenn Sie auf der Registerkarte **Optionen** dieses Schritts die Option **Bei Fehler fortsetzen** auswählen, wird die Tasksequenz bei einem Fehler der Anwendungsinstallation fortgesetzt. Wenn Sie diese Option nicht aktivieren, tritt bei der Tasksequenz ein Fehler auf und verbleibende Anwendungen werden nicht installiert.  
+ 
+Konfigurieren Sie neben den Standardoptionen auch folgende zusätzliche Einstellungen auf der Registerkarte **Optionen** dieses Tasksequenzschritts:  
+
+-   **Führen Sie diesen Schritt erneut aus, wenn der Computer unerwartet neu gestartet wird**  
+    Wenn eine der Anwendungsinstallationen den Computer unerwartet neu startet, wiederholen Sie diesen Schritt. Der Schritt aktiviert diese Einstellung standardmäßig mit zwei Wiederholungen. Sie können eine bis fünf Wiederholungen angeben.  
+
+
 
 ##  <a name="BKMK_InstallPackage"></a> Paket installieren
+Verwenden Sie diesen Schritt, um ein Softwarepaket als Teil der Tasksequenz zu installieren. Wenn dieser Schritt ausgeführt wird, beginnt die Installation sofort, und das nächste Richtlinienabfrageintervall wird nicht abgewartet.  
 
- Mit dem Tasksequenzschritt **Paket installieren** können Sie Software als Teil der Tasksequenz installieren. Wenn dieser Schritt ausgeführt wird, beginnt die Installation sofort; das nächste Richtlinienabfrageintervall wird nicht abgewartet.  
+Das Paket muss folgende Kriterien erfüllen:  
 
- Von Software, die installiert wird, müssen die folgenden Kriterien erfüllt werden:  
-
--   Es muss unter dem lokalen Systemkonto ausgeführt werden und nicht unter dem Benutzerkonto.  
+-   Es muss unter dem lokalen Systemkonto ausgeführt werden und nicht unter einem Benutzerkonto.  
 
 -   Es sollte nicht mit dem Desktop interagieren. Das Programm muss im Hintergrund oder in einem unbeaufsichtigten Modus ausgeführt werden.  
 
--   Es darf durch die Anwendung kein eigenständiger Computerneustart initiiert werden. Ein Computerneustart muss über den Standardneustartcode (Exitcode 3010) angefordert werden. Dadurch wird sichergestellt, dass der Tasksequenzschritt den Neustart ordnungsgemäß ausführt. Wenn ein Exitcode 3010 von der Software zurückgegeben wird, so wird der Neustart vom zugrundeliegenden Tasksequenzmodul ausgeführt. Nach dem Neustart wird die Tasksequenz automatisch fortgesetzt.  
+-   Es darf durch die Anwendung kein eigenständiger Computerneustart initiiert werden. Ein Computerneustart muss über den Standardneustartcode (Exitcode 3010) angefordert werden. Durch dieses Verhalten wird sichergestellt, dass der Tasksequenzschritt den Neustart ordnungsgemäß ausführt. Wenn die Software einen Exitcode 3010 zurückgibt, startet die Engine der zugrunde liegenden Tasksequenz den Computer neu. Nach dem Neustart wird die Tasksequenz automatisch fortgesetzt.  
 
- Programme, von denen die Option **Ein anderes Programm zuerst ausführen** zur Installation eines abhängigen Programms verwendet wird, werden bei der Bereitstellung eines Betriebssystems nicht unterstützt. Wenn die Option **Ein anderes Programm zuerst ausführen** für eine Software aktiviert ist und das abhängige Programm bereits auf dem Zielcomputer ausgeführt wurde, wird das abhängige Programm ausgeführt, und die Tasksequenz wird fortgesetzt. Wurde das abhängige Programm jedoch noch nicht auf dem Zielcomputer ausgeführt, tritt bei diesem Tasksequenzschritt ein Fehler auf.  
+Programme, von denen die Option **Ein anderes Programm zuerst ausführen** zur Installation eines abhängigen Programms verwendet wird, werden bei der Bereitstellung eines Betriebssystems nicht unterstützt. Wenn Sie die Paketoption **Ein anderes Programm zuerst ausführen** aktivieren und das abhängige Programm bereits auf dem Zielcomputer ausgeführt wurde, wird dieses ausgeführt und die Tasksequenz wird fortgesetzt. Wurde das abhängige Programm jedoch noch nicht auf dem Zielcomputer ausgeführt, tritt bei diesem Tasksequenzschritt ein Fehler auf.  
 
 > [!NOTE]  
->  Der Standort der zentralen Verwaltung verfügt nicht über die erforderlichen Clientkonfigurationsrichtlinien, die während der Ausführung der Tasksequenz zum Aktivieren des Softwareverteilungs-Agents benötigt werden. Wenn Sie am Standort der zentralen Verwaltung eigenständige Medien für eine Tasksequenz erstellen und die Tasksequenz den Schritt **Paket installieren** enthält, kann in der Datei "CreateTsMedia.log" der folgende Fehler enthalten sein:  
+>  Der Standort der zentralen Verwaltung verfügt nicht über die erforderlichen Clientkonfigurationsrichtlinien, die während der Tasksequenz zum Aktivieren des Softwareverteilungs-Agents erforderlich sind. Wenn Sie am Standort der zentralen Verwaltung eigenständige Medien für eine Tasksequenz erstellen und die Tasksequenz den Schritt **Paket installieren** enthält, kann in der Datei "CreateTsMedia.log" der folgende Fehler enthalten sein:  
 >   
 >  `"WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)"`  
 >   
->  Sie müssen eigenständige Medien, die über den Schritt **Paket installieren** verfügen, an einem primären Standort erstellen, für den der Softwareverteilungs-Agent aktiviert ist. Alternativ dazu können Sie den Schritt **Befehlszeile ausführen** nach dem Schritt **Windows und ConfigMgr einrichten** und vor dem ersten Schritt "Paket installieren" hinzufügen. Im Schritt **Befehlszeile ausführen** wird ein WMIC-Befehl ausgeführt, um den Softwareverteilungs-Agent vor der Ausführung des ersten Schritts "Paket installieren" zu aktivieren. Sie können im Tasksequenzschritt **Befehlszeile ausführen** Folgendes verwenden:  
+>  Bei eigenständigen Medien, die den Schritt **Paket installieren** enthalten, erstellen Sie das eigenständige Medium an einem primären Standort, bei dem der Softwareverteilungs-Agent aktiviert ist. Fügen Sie alternativ den Schritt **Befehlszeile ausführen** nach dem Schritt **Windows und ConfigMgr einrichten** und vor dem ersten **Paket installieren**-Schritt hinzu. Im Schritt **Befehlszeile ausführen** wird ein WMIC-Befehl ausgeführt, um den Softwareverteilungs-Agent vor dem ersten Schritt **Paket installieren** zu aktivieren. Verwenden Sie im Schritt **Befehlszeile ausführen** folgenden Befehl:  
 >   
->  **Command Line**: **WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE**  
+>  **Befehlszeile**: `WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`  
 >   
 >  Weitere Informationen zum Erstellen eigenständiger Medien finden Sie unter [Erstellen eigenständiger Medien](../deploy-use/create-stand-alone-media.md).  
 
- Dieser Tasksequenzschritt wird nur in einem Standardbetriebssystem ausgeführt. Er wird nicht in Windows PE ausgeführt.  
+Dieser Tasksequenzschritt wird nur in einem Standardbetriebssystem ausgeführt. Er wird nicht in Windows PE ausgeführt.  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Software** > **Paket installieren**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Einzelnes Softwarepaket installieren**  
  Diese Einstellung gibt ein Configuration Manager-Softwarepaket an. Bei diesem Schritt wird gewartet, bis die Installation abgeschlossen ist.  
 
  **Softwarepakete entsprechend der dynamischen Variablenliste installieren**  
- Mit dieser Einstellung geben Sie den Basisnamen für einen Satz von Tasksequenzvariablen an, die für einen Sammlung oder einen Computer definiert sind. Von diesen Variablen werden die Pakete angegeben, die für die Sammlung bzw. den Computer installiert werden. Jeder Variablenname besteht aus einem allgemeinen Basisnamen sowie einem numerischen bei 001 beginnenden Suffix. Der Wert jeder Variablen muss eine Paket-ID und den Namen der Software (durch einen Doppelpunkt getrennt) enthalten.  
+ Die Tasksequenz installiert Pakete mithilfe dieses Basisvariablennamens. Der Basisvariablenname gilt für eine Gruppe von Tasksequenzvariablen, die für eine Sammlung oder für einen Computer definiert wurden. Von diesen Variablen werden die Pakete angegeben, die von der Tasksequenz für die Sammlung bzw. für den Computer installiert werden. Jeder Variablenname besteht aus einem allgemeinen Basisnamen sowie einem numerischen bei 001 beginnenden Suffix. Der Wert jeder Variablen muss eine Paket-ID und den Namen der Software (durch einen Doppelpunkt getrennt) enthalten.  
 
- Bei Software, die mithilfe einer dynamischen Variablenliste installiert werden soll, muss im Dialogfeld **Eigenschaften** des Pakets auf der Registerkarte **Erweitert** die folgende Einstellung aktiviert sein: **Installation dieses Programms aus der Tasksequenz „Paket installieren“ ohne Bereitstellung zulassen**  
+ Damit die Tasksequenz Software mithilfe einer dynamischen Variablenliste installieren kann, aktivieren Sie folgende Einstellung auf der Registerkarte **Erweitert** des Pakets **Eigenschaften**: **Installation dieses Programms aus der Tasksequenz „Paket installieren“ ohne Bereitstellung zulassen**  
 
 > [!NOTE]  
 >  Bei Bereitstellungen mit eigenständigen Medien können Sie Softwarepakete nicht mithilfe einer dynamischen Variablenliste installieren.  
@@ -922,84 +780,67 @@ Dieser Schritt wird entweder in einem Standardbetriebssystem oder in Windows PE 
 |AA002|CEN00107:Install Silent|  
 |AA003|CEN00031:Install|  
 
- Es ist von folgenden Bedingungen abhängig, welche Komponenten installiert werden:  
+ Folgende Bedingungen wirken sich auf die Pakete aus, die von der Tasksequenz installiert wurden:  
 
--   Wenn der Wert einer Variablen nicht im richtigen Format erstellt wurde oder damit keine gültige Anwendungs-ID bzw. kein gültiger Anwendungsname angegeben wird, tritt bei der Installation der Software ein Fehler auf.  
+-   Wenn Sie den Wert einer Variablen nicht im richtigen Format erstellen oder dieser keine gültige Paket-ID und keinen gültigen Namen angibt, schlägt die Installation der Software fehl.  
 
--   Wenn die Paket-ID Kleinbuchstaben enthält, tritt bei der Installation der Software ein Fehler auf.  
+-   Wenn die Paket-ID Kleinbuchstaben enthält, schlägt die Installation der Software fehl.  
 
--   Wenn keine Variablen mit dem angegebenen Basisnamen und dem Suffix „001“ gefunden werden, werden keine Pakete installiert, und die Tasksequenz wird fortgesetzt.  
+-   Wenn die Tasksequenz keine Variable mit dem angegebenen Basisnamen und dem Suffix „001“ findet, installiert diese keine Pakete. Die Tasksequenz wird fortgesetzt.  
+   
+**Wenn ein Fehler bei einer Softwarepaketinstallation auftritt, mit anderen Paketen in der Liste fortfahren**  
+ Mit dieser Einstellung geben Sie an, dass der Schritt fortgesetzt werden soll, wenn bei einer einzelnen Softwarepaketinstallation ein Fehler auftritt. Wenn Sie diese Einstellungen angeben, wird die Tasksequenz unabhängig von Installationsfehlern fortgesetzt. Wenn Sie diese Einstellung nicht angeben und die Installation fehlschlägt, wird der Schritt sofort beendet.  
 
- **Wenn ein Fehler bei einer Softwarepaketinstallation auftritt, mit anderen Paketen in der Liste fortfahren**  
- Mit dieser Einstellung geben Sie an, dass der Schritt fortgesetzt werden soll, wenn bei einer einzelnen Softwarepaketinstallation ein Fehler auftritt. Wenn diese Einstellung angegeben ist, wird die Tasksequenz unabhängig davon, ob Installationsfehler zurückgegeben werden, fortgesetzt. Wenn diese Einstellung nicht angegeben ist und bei einer Installation ein Fehler auftritt, wird der Tasksequenzschritt sofort beendet.  
+
 
 ##  <a name="BKMK_InstallSoftwareUpdates"></a> Softwareupdates installieren  
- Verwenden Sie den Tasksequenzschritt **Softwareupdates installieren** zum Installieren von Softwareupdates auf einem Zielcomputer. Der Zielcomputer wird erst beim Ausführen dieses Tasksequenzschritts hinsichtlich anwendbarer Softwareupdates ausgewertet. An diesem Punkt wird der Zielcomputer wie jeder andere von Configuration Manager verwaltete Client hinsichtlich Softwareupdates ausgewertet. Insbesondere werden mit diesem Schritt nur Softwareupdates installiert, die für Sammlungen bestimmt sind, in denen der Computer derzeit Mitglied ist.  
+Verwenden Sie diesen Schritt, um Softwareupdates auf dem Zielcomputer zu installieren. Der Zielcomputer wird erst beim Ausführen dieses Tasksequenzschritts hinsichtlich anwendbarer Softwareupdates ausgewertet. An diesem Punkt wird der Zielcomputer wie jeder andere Configuration Manager-Client hinsichtlich Softwareupdates ausgewertet. Damit dieser Schritt Softwareupdates installiert, müssen Sie die Updates zunächst für eine Sammlung bereitstellen, der der Zielcomputer angehört.  
 >  [!IMPORTANT]
->Es wird empfohlen, die neueste Version des Windows Update-Agents zu installieren, da die Leistung sich so deutlich verbessert, wenn Sie den Tasksequenzschritt „Softwareupdates installieren“ verwenden.
+> Eine bewährte Methode für optimale Leistung besteht darin, die aktuelle Version des Windows Update-Agents zu installieren. 
 >* Für Windows 7 siehe [Knowledge Base-Artikel 3161647](https://support.microsoft.com/kb/3161647).
 >* Für Windows 8 siehe [Knowledge Base-Artikel 3163023](https://support.microsoft.com/kb/3163023).
 
  Dieser Tasksequenzschritt wird nur in einem Standardbetriebssystem ausgeführt. Er wird nicht in Windows PE ausgeführt. Weitere Informationen zu Tasksequenzvariablen für diese Tasksequenzaktion finden Sie unter [Install Software Updates Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_InstallSoftwareUpdates).
 
  > [!NOTE]
- > Verwenden Sie die integrierten Variablen SMSTSMPListRequestTimeoutEnabled und SMSTSMPListRequestTimeout, um anzugeben, wie viele Millisekunden eine Tasksequenz nach dem erfolglosen Abrufen der Verwaltungspunktliste von Standortdiensten warten soll, bevor sie erneut versucht, eine Anwendung oder einen Softwareupdate zu installieren. Weitere Informationen finden Sie unter [Task sequence built-in variables (Integrierte Tasksequenzvariablen)](task-sequence-built-in-variables.md).
+ > Wenn der Client die Liste der Verwaltungspunkte nicht von den Standortdiensten abrufen kann, verwenden Sie die integrierten Variablen „SMSTSMPListRequestTimeoutEnabled“ und „SMSTSMPListRequestTimeout“, um anzugeben, für wie viele Millisekunden eine Tasksequenz wartet, bevor die Installation einer Anwendung oder eines Softwareupdates erneut versucht wird. Weitere Informationen finden Sie unter [Task sequence built-in variables (Integrierte Tasksequenzvariablen)](task-sequence-built-in-variables.md).
 
-> [!NOTE]
->Auf der Registerkarte „Optionen“ können Sie diese Tasksequenz so konfigurieren, dass eine Wiederholung erfolgt, wenn der Computer unerwartet neu gestartet wird. Beispiel: Die Installation eines Softwareupdates startet den Computer automatisch neu. Ab Configuration Manager 1602 können Sie die Variable SMSTSWaitForSecondReboot konfigurieren, um anzugeben, wie lang (in Sekunden) die Tasksequenz beim Installieren von Softwareupdates nach den Computerneustarts anhalten sollte. Weitere Informationen finden Sie unter [Task sequence built-in variables (Integrierte Tasksequenzvariablen)](task-sequence-built-in-variables.md).
+ Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Software** > **Softwareupdates installieren**, um diesen Schritt hinzuzufügen. 
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
-
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Geben Sie an, dass Sie diesen Schritt wiederholen, wenn der Computer unerwartet neu gestartet wird. Sie können auch angeben, wie viele Wiederholungen nach einem Neustart erfolgen sollen.  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Installation erforderlich – Nur obligatorische Softwareupdates**  
- Wählen Sie diese Option aus, um alle Softwareupdates zu installieren, die in Configuration Manager als obligatorisch für die Tasksequenz empfangende Zielcomputer gekennzeichnet sind. Obligatorische Softwareupdates verfügen über vom Administrator definierte Installationsstichtage.  
+ Wählen Sie diese Option aus, um alle erforderlichen Softwareupdates mit einem vom Administrator definierten Installationsstichtag zu installieren.  
 
  **Bereit zur Installation – Alle Softwareupdates**  
- Wählen Sie diese Option aus, um alle Softwareupdates zu installieren, die für die Configuration Manager-Sammlung bestimmt sind, der die Tasksequenz zugewiesen wird. Alle verfügbaren Softwareupdates werden auf den Zielcomputern installiert.  
+ Wählen Sie diese Option aus, um alle verfügbaren Softwareupdates zu installieren. Sie müssen diese Updates zunächst für eine Sammlung bereitstellen, der dieser Computer angehört. Die Tasksequenz installiert alle verfügbaren Softwareupdates auf den Zielcomputern.  
 
  **Softwareupdates anhand von zwischengespeicherten Überprüfungsergebnissen auswerten**  
-Ab der Configuration Manager-Version 1606 steht Ihnen die Option zur Verfügung, eine vollständige Überprüfung für Softwareupdates durchzuführen statt die zwischengespeicherten Überprüfungsergebnisse zu verwenden. Standardmäßig verwendet die Tasksequenz zwischengespeicherte Ergebnisse. Sie können das Kontrollkästchen deaktivieren, damit der Client eine Verbindung mit dem Softwareupdatepunkt herstellen kann, um den neuesten Softwareupdatekatalog zu verarbeiten und herunterzuladen. Diese Option eignet sich, wenn Sie eine Tasksequenz zum [Erfassen und Erstellen eines Betriebssystemabbilds](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md) verwenden, und wissen, dass eine große Anzahl Softwareupdates notwendig sein wird und dass viele davon Abhängigkeiten aufweisen (X muss installiert sein, damit Y zur Verfügung steht). Wenn Sie diese Einstellung deaktivieren und die Tasksequenz für eine große Anzahl von Clients bereitstellen, werden alle zur selben Zeit eine Verbindung mit dem Softwareupdatepunkt herstellen. Dies kann während des Prozesses und dem Download des Katalogs zu Leistungsproblemen führen. Wir empfehlen in den meisten Fällen, die Standardeinstellung zu verwenden.
+ Standardmäßig verwendet die Tasksequenz zwischengespeicherte Überprüfungsergebnisse des Windows Update-Agents. Deaktivieren Sie das Kontrollkästchen, damit der Windows Update-Agent den aktuellen Katalog vom Softwareupdatepunkt herunterlädt. Wählen Sie diese Option aus, wenn Sie eine Tasksequenz dafür verwenden, [ein Betriebssystemimage zu erfassen und zu erstellen](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md). In diesem Szenario muss wahrscheinlich eine große Anzahl von Softwareupdates durchgeführt werden. Viele dieser Updates verfügen über Abhängigkeiten, beispielsweise müssen Sie ggf. X installieren, bevor Y angezeigt wird. Wenn Sie diese Einstellung deaktivieren und die Tasksequenz für viele Clients bereitstellen, werden alle zur selben Zeit eine Verbindung mit dem Softwareupdatepunkt herstellen. Dieses Verhalten kann während des Prozesses und des Downloads des Katalogs zu Leistungsproblemen führen. Eine bewährte Methode besteht im Verwenden der Standardeinstellungen, damit zwischengespeicherte Überprüfungsergebnisse verwendet werden. 
 
-Es wurde eine neue Tasksequenzvariable, SMSTSSoftwareUpdateScanTimeout, in Configuration Manager-Version 1606 eingeführt. Sie ermöglicht Ihnen, das Timeout für die Softwareupdateprüfung während des Tasksequenzschritts „Softwareupdates installieren“ zu kontrollieren. Der Standardwert beträgt 30 Minuten. Weitere Informationen finden Sie unter [Task sequence built-in variables (Integrierte Tasksequenzvariablen)](task-sequence-built-in-variables.md).
+Die Tasksequenzvariable „SMSTSSoftwareUpdateScanTimeout“ steuert während dieses Schritts die Überprüfung von Zeitüberschreitungen bei Softwareupdates. Der Standardwert beträgt 30 Minuten. Weitere Informationen finden Sie unter [Task sequence built-in variables (Integrierte Tasksequenzvariablen)](task-sequence-built-in-variables.md).
+
+### <a name="options"></a>Optionen   
+ Konfigurieren Sie neben den Standardoptionen auch folgende zusätzliche Einstellungen auf der Registerkarte **Optionen** dieses Tasksequenzschritts:  
+
+-   **Führen Sie diesen Schritt erneut aus, wenn der Computer unerwartet neu gestartet wird**  
+    Wenn eines der Updates den Computer unerwartet neu startet, wiederholen Sie diesen Schritt. Der Schritt aktiviert diese Einstellung standardmäßig mit zwei Wiederholungen. Sie können eine bis fünf Wiederholungen angeben.  
+
+    > [!NOTE]
+    > Konfigurieren Sie die Variable „SMSTSWaitForSecondReboot“, um anzugeben, für wie viele Sekunden die Tasksequenz in diesem Szenario angehalten wird, nachdem der Computer neu gestartet wurde. Weitere Informationen finden Sie unter [Task sequence built-in variables (Integrierte Tasksequenzvariablen)](task-sequence-built-in-variables.md).
+
 
 
 ##  <a name="BKMK_JoinDomainorWorkgroup"></a> Einer Domäne oder Arbeitsgruppe beitreten  
- Mithilfe des Tasksequenzschritts **Einer Domäne oder Arbeitsgruppe beitreten** können Sie den Zielcomputer einer Arbeitsgruppe oder Domäne hinzufügen.  
+ Verwenden Sie diesen Schritt, um den Zielcomputer einer Arbeitsgruppe oder einer Domäne hinzuzufügen.  
 
  Dieser Tasksequenzschritt wird nur in einem Standardbetriebssystem ausgeführt. Er wird nicht in Windows PE ausgeführt. Weitere Informationen zu Tasksequenzvariablen für diese Tasksequenzaktion finden Sie unter [Join Domain or Workgroup Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_JoinDomainWorkgroup).  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+ Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Allgemein** > **Einer Domäne oder Arbeitsgruppe beitreten**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Einer Arbeitsgruppe beitreten**  
  Wählen Sie diese Option aus, um den Zielcomputer einer angegebenen Arbeitsgruppe hinzuzufügen. Wenn der Computer derzeit Mitglied einer Domäne ist, wird er durch Auswählen dieser Option neu gestartet.  
@@ -1007,20 +848,20 @@ Es wurde eine neue Tasksequenzvariable, SMSTSSoftwareUpdateScanTimeout, in Confi
  **Einer Domäne beitreten**  
  Wählen Sie diese Option aus, um den Zielcomputer einer angegebenen Domäne hinzuzufügen.  
 
- Sie können optional eine Organisationseinheit (OU), der der Computer beitreten soll, eingeben oder in der angegebenen Domäne danach suchen. Wenn der Computer derzeit Mitglied einer anderen Domäne oder Arbeitsgruppe ist, wird er dadurch neu gestartet. Wenn der Computer bereits Mitglied einer anderen Organisationseinheit ist, lässt Active Directory-Domänendienste das Ändern der Organisationseinheit nicht zu, und die Einstellung wird ignoriert.  
+ Sie können optional eine Organisationseinheit (OU), der der Computer beitreten soll, eingeben oder in der angegebenen Domäne danach suchen. Wenn der Computer derzeit Mitglied einer anderen Domäne oder Arbeitsgruppe ist, wird er durch diese Option neu gestartet. Wenn der Computer bereits Mitglied einer anderen Organisationseinheit ist, ignoriert Windows Setup diese Einstellung, da Active Directory Domain Services das Ändern der Organisationseinheit über diese Methode nicht zulässt.  
 
  **Geben Sie das Konto ein, das zum Beitreten zur Domäne berechtigt ist**  
- Klicken Sie auf **Festlegen** , um ein Konto (und Kennwort) mit der Berechtigungen für den Domänenbeitritt einzugeben. Das Konto muss im folgenden Format eingegeben werden  
+ Klicken Sie auf **Festlegen**, um den Benutzernamen und das Kennwort für ein Konto mit der Berechtigung für den Domänenbeitritt einzugeben. Geben Sie das Konto im Format *Domain\account* ein.  
 
- *Domäne\Konto*  
+
 
 ## <a name="BKMK_PrepareConfigMgrClientforCapture"></a> ConfigMgr-Client für Erfassung vorbereiten  
-Mithilfe des Tasksequenzschritts **ConfigMgr-Client für Erfassung vorbereiten** können Sie den Configuration Manager-Client vom Referenzcomputer entfernen oder konfigurieren, um ihn im Rahmen des Imageerstellungsprozesses für die Erfassung vorzubereiten.
+Verwenden Sie diesen Schritt, um den Configuration Manager-Client auf dem Referenzcomputer zu konfigurieren oder um ihn von diesem zu entfernen. Diese Aktion bereitet den Computer auf die Erfassung im Rahmen des Imageerstellungsprozesses vor.
 
-Ab Version 1610 von Configuration Manager wird der Configuration Manager-Client im Schritt „Configuration Manager-Client vorbereiten“ vollständig entfernt, und es werden nicht nur die wichtigen Informationen entfernt. Wenn die Tasksequenz das erfasste Betriebssystemimage bereitstellt, wird jedes Mal ein neuer Configuration Manager-Client installiert.  
+Ab Version 1610 von Configuration Manager wird der Configuration Manager-Client im Schritt **ConfigMgr-Client vorbereiten** vollständig entfernt, statt nur wichtige Informationen zu entfernen. Wenn die Tasksequenz das erfasste Betriebssystemimage bereitstellt, wird jedes Mal ein neuer Configuration Manager-Client installiert.  
 
 > [!Note]  
->  Der Client wird nur während der Tasksequenz **Referenz-Betriebssystemabbild erstellen und erfassen** entfernt. Andere Erfassungsmethoden, zum Beispiel Erfassungsmedien oder eine benutzerdefinierte Tasksequenz, entfernen den Client nicht.
+>  Die Tasksequenz-Engine entfernt während der Tasksequenz **Referenz-Betriebssystemabbild erstellen und erfassen** nur den Client. Die Tasksequenz-Engine entfernt den Client nicht während anderer Erfassungsmethoden, z.B. Erfassungsmedien oder benutzerdefinierte Tasksequenzen.
 
 Vor der Configuration Manager-Version 1610 werden bei diesem Schritt folgende Aufgaben ausgeführt:  
 
@@ -1036,46 +877,24 @@ Vor der Configuration Manager-Version 1610 werden bei diesem Schritt folgende Au
 
 -   Entfernt den vertrauenswürdigen Stammschlüssel für den Configuration Manager-Client  
 
- Dieser Tasksequenzschritt wird nur in einem Standardbetriebssystem ausgeführt. Er wird nicht in Windows PE ausgeführt.  
+Dieser Tasksequenzschritt wird nur in einem Standardbetriebssystem ausgeführt. Er wird nicht in Windows PE ausgeführt.  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Images** > **ConfigMgr-Client für Erfassung vorbereiten**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
+### <a name="properties"></a>Eigenschaften  
+ Dieser Schritt erfordert keine Einstellungen auf der Registerkarte **Eigenschaften**.
 
--   Schritt deaktivieren  
 
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
 
 ##  <a name="BKMK_PrepareWindowsforCapture"></a> Windows für die Erfassung vorbereiten  
- Mithilfe des Tasksequenzschritts **Windows für die Erfassung vorbereiten** können Sie die Sysprep-Optionen angeben, die beim Erfassen eines Betriebssystemabbilds auf dem Referenzcomputer verwendet werden. Mit dieser Tasksequenzaktion wird Sysprep ausgeführt. Der Computer wird anschließend über das für die Tasksequenz angegebene Windows PE-Startabbild neu gestartet. Damit diese Aktion erfolgreich abgeschlossen werden kann, darf der Referenzcomputer keiner Domäne angehören.  
+ Verwenden Sie diesen Schritt, um die Sysprep-Optionen beim Erfassen eines Betriebssystemimages auf dem Referenzcomputer anzugeben. Diese Tasksequenzaktion führt Sysprep aus und startet dann den Computer über das für die Tasksequenz angegebene Windows PE-Startimage neu. Diese Aktion schlägt fehl, wenn der Referenzcomputer einer Domäne angehört.  
 
  Dieser Tasksequenzschritt wird nur in einem Standardbetriebssystem ausgeführt. Er wird nicht in Windows PE ausgeführt. Weitere Informationen zu Tasksequenzvariablen für diese Tasksequenzaktion finden Sie unter [Prepare Windows for Capture Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_PrepareWindowsCapture).  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+ Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Images** > **Windows für die Erfassung vorbereiten**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Automatisch Liste der Massenspeichertreiber erstellen**  
  Wählen Sie diese Option aus, damit Sysprep automatisch eine Liste der Massenspeichertreiber vom Referenzcomputer erstellt. Mit dieser Option wird die Option „Build Mass Storage Drivers“ (Massenspeichertreiber erstellen) in der Datei Sysprep.inf auf dem Referenzcomputer aktiviert. Weitere Informationen zu dieser Option finden Sie in der Sysprep-Dokumentation.  
@@ -1083,221 +902,161 @@ Vor der Configuration Manager-Version 1610 werden bei diesem Schritt folgende Au
  **Aktivierungskennzeichnung nicht zurücksetzen**  
  Wählen Sie diese Option aus, damit Sysprep das Produktaktivierungsflag nicht zurücksetzt.  
 
+
+
 ##  <a name="BKMK_PreProvisionBitLocker"></a> BitLocker vorab bereitstellen  
- Verwenden Sie den Tasksequenzschritt **BitLocker vorab bereitstellen** zum Aktivieren von BitLocker auf einem Laufwerk in Windows PE. Es wird nur der auf dem Laufwerk verwendete Speicherplatz verschlüsselt, sodass die Verschlüsselungszeit erheblich verkürzt wird. Sie wenden die Schlüsselverwaltungsoptionen an, indem Sie den Tasksequenzschritt [Aktivieren von BitLocker](#BKMK_EnableBitLocker) nach der Betriebssysteminstallation ausführen. Dieser Schritt wird nur in Windows PE ausgeführt. Er wird nicht in einem Standardbetriebssystem ausgeführt.  
+ Verwenden Sie diesen Schritt, um BitLocker auf einem Laufwerk in Windows PE zu aktivieren. Es wird nur der auf dem Laufwerk verwendete Speicherplatz verschlüsselt, sodass die Verschlüsselungszeit erheblich verkürzt wird. Sie wenden die Schlüsselverwaltungsoptionen an, indem Sie den Tasksequenzschritt [Aktivieren von BitLocker](#BKMK_EnableBitLocker) nach der Betriebssysteminstallation ausführen. Dieser Schritt wird nur in Windows PE ausgeführt. Er wird nicht in einem Standardbetriebssystem ausgeführt.  
 
 > [!IMPORTANT]  
->  Um BitLocker vorab bereitzustellen, müssen Sie Windows 7 oder höher als Betriebssystem bereitstellen, und TPM muss unterstützt werden und auf dem Computer aktiviert sein.  
+>  Für das Bereitstellen von BitLocker im Voraus ist mindestens Windows 7 erforderlich. Der Computer muss ebenfalls ein unterstütztes und aktiviertes Trusted Platform Module (TPM) enthalten.  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+ Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Datenträger** > **BitLocker vorab bereitstellen**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Geben Sie einen kurzen benutzerdefinierten Namen an, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Geben Sie ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion an.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **BitLocker auf das angegebene Laufwerk anwenden**  
  Geben Sie das Laufwerk aus, für das Sie BitLocker aktivieren möchten. Nur der verwendete Speicherplatz auf dem Laufwerk wird verschlüsselt.  
 
  **Diesen Schritt bei Computern überspringen, die nicht über ein TPM verfügen oder bei denen das TPM nicht aktiviert ist**  
- Wählen Sie diese Option, um die Laufwerkverschlüsselung zu überspringen, wenn die Computerhardware TPM nicht unterstützt oder TPM nicht aktiviert ist. Sie können diese Option beispielsweise verwenden, wenn Sie ein Betriebssystem für einen virtuellen Computer bereitstellen.  
+ Wählen Sie diese Option aus, um die Laufwerkverschlüsselung auf einem Computer zu überspringen, der kein unterstütztes oder aktiviertes TPM enthält. Sie können diese Option beispielsweise verwenden, wenn Sie ein Betriebssystem für einen virtuellen Computer bereitstellen.  
+
+
 
 ##  <a name="BKMK_ReleaseStateStore"></a> Zustandsspeicher freigeben  
- Mithilfe des Tasksequenzschritts **Zustandsspeicher freigeben** können Sie den Zustandsmigrationspunkt darüber benachrichtigen, dass die Erfassungs- oder Wiederherstellungsaktion abgeschlossen ist. Dieser Schritt wird zusammen mit den Tasksequenzschritten **Zustandsspeicher anfordern**, **Benutzerzustand erfassen**und **Benutzerzustand wiederherstellen** verwendet, um Benutzerzustandsdaten mithilfe von USMT und eines Zustandsmigrationspunkts zu migrieren.  
+ Verwenden Sie diesen Schritt, um den Zustandsmigrationspunkt darüber zu benachrichtigen, dass die Erfassungs- oder Wiederherstellungsaktion abgeschlossen ist. Verwenden Sie diesen Schritt zusammen mit den Schritten **Zustandsspeicher anfordern**, **Benutzerzustand erfassen** und **Benutzerzustand wiederherstellen**. Verwenden Sie diese Schritte, um Benutzerzustanddaten mithilfe eines Zustandsmigrationspunkts und des Migrationstools für den Benutzerstatus zu migrieren.  
 
  Weitere Informationen zum Verwalten des Benutzerzustands beim Bereitstellen von Betriebssystemen finden Sie unter [Verwalten des Benutzerzustands](../get-started/manage-user-state.md).  
 
- Wenn Sie im Tasksequenzschritt **Zustandsspeicher anfordern**  zum Erfassen des Benutzerzustands den Zugriff auf einen Zustandsmigrationspunkt angefordert haben, wird der Zustandsmigrationspunkt darüber benachrichtigt, dass der Erfassungsvorgang abgeschlossen ist und die Benutzerzustandsdaten zur Wiederherstellung zur Verfügung stehen. Der Zustandsmigrationspunkt legt die Zugriffssteuerungsberechtigungen für den erfassten Zustand so fest, dass nur der wiederherstellende Computer den (schreibgeschützten) Zugriff erhält.  
+ Wenn Sie den Schritt **Zustandsspeicher anfordern** verwenden, um Zugriff auf einen Zustandsmigrationspunkt für die *Erfassung* des Benutzerzustands anzufordern, meldet dieser Schritt dem Zustandsmigrationspunkt, dass der Erfassungsvorgang abgeschlossen ist. Der Zustandsmigrationspunkt markiert die Benutzerzustandsdaten dann als für die Wiederherstellung verfügbar. Der Zustandsmigrationspunkt legt die Zugriffssteuerungsberechtigungen für die Benutzerzustandsdaten so fest, dass nur der wiederherstellende Computer über Lesezugriff verfügt.  
 
- Wenn Sie im Tasksequenzschritt **Zustandsspeicher anfordern** zum Wiederherstellen des Benutzerzustands den Zugriff auf einen Zustandsmigrationspunkt angefordert haben, erhält der Zustandsmigrationspunkt vom Tasksequenzschritt eine Meldung, dass der Wiederherstellungsvorgang abgeschlossen ist. Zu diesem Zeitpunkt werden die von Ihnen konfigurierten Beibehaltungseinstellungen für den Zustandsmigrationspunkt aktiviert.  
+ Wenn Sie den Schritt **Zustandsspeicher anfordern** verwenden, um Zugriff auf einen Zustandsmigrationspunkt für die *Wiederherstellung* des Benutzerzustands anzufordern, meldet dieser Schritt dem Zustandsmigrationspunkt, dass der Wiederherstellungsvorgang abgeschlossen ist. Der Zustandsmigrationspunkt aktiviert anschließend die konfigurierten Einstellungen für die Datenaufbewahrung.  
 
 > [!IMPORTANT]  
->  Eine bewährte Methode besteht darin, die Option **Bei Fehler fortsetzen** für alle Tasksequenzschritte zwischen den Schritten **Zustandsspeicher anfordern** und **Zustandsspeicher freigeben** festzulegen, damit jede Tasksequenzaktion des Typs **Zustandsspeicher anfordern** über eine entsprechende Tasksequenzaktion des Typs **Zustandsspeicher freigeben** verfügt.  
+>  Eine bewährte Methode besteht darin, die Option **Bei Fehler fortsetzen** für alle Schritte zwischen **Zustandsspeicher anfordern** und **Zustandsspeicher freigeben** festzulegen. Für jeden **Zustandsspeicher anfordern**-Schritt muss ein übereinstimmender **Zustandsspeicher freigeben**-Schritt vorhanden sein.  
 
  Dieser Tasksequenzschritt wird nur in einem Standardbetriebssystem ausgeführt. Er wird nicht in Windows PE ausgeführt. Weitere Informationen zu Tasksequenzvariablen für diese Tasksequenzaktion finden Sie unter [Release State Store Sequence Action Variables](task-sequence-action-variables.md#BKMK_ReleaseStateStore).  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+ Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Benutzerzustand** > **Zustandsspeicher freigeben**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
+### <a name="properties"></a>Eigenschaften  
+ Dieser Schritt erfordert keine Einstellungen auf der Registerkarte **Eigenschaften**.
 
--   Schritt deaktivieren  
 
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
 
 ##  <a name="BKMK_RequestStateStore"></a> Zustandsspeicher anfordern  
- Fordern Sie mit dem Tasksequenzschritt **Zustandsspeicher anfordern** beim Erfassen oder Wiederherstellen eines Computerzustands Zugriff auf einen Zustandsmigrationspunkt an.  
+ Mit diesem Schritt können Sie beim Erfassen oder Wiederherstellen eines Zustands Zugriff auf einen Zustandsmigrationspunkt anfordern.  
 
  Weitere Informationen zum Verwalten des Benutzerzustands beim Bereitstellen von Betriebssystemen finden Sie unter [Verwalten des Benutzerzustands](../get-started/manage-user-state.md).  
 
- Sie können den Tasksequenzschritt **Zustandsspeicher anfordern** zusammen mit den Tasksequenzschritten **Zustandsspeicher freigeben**, **Benutzerzustand erfassen**und **Benutzerzustand wiederherstellen** verwenden, um den Computerzustand mithilfe von Windows-EasyTransfer bzw. USMT und eines Zustandsmigrationspunkts zu migrieren.  
+ Verwenden Sie diesen Schritt zusammen mit den Schritten **Zustandsspeicher freigeben**, **Benutzerzustand erfassen** und **Benutzerzustand wiederherstellen**. Verwenden Sie diese Schritte, um den Computerzustand mithilfe eines Zustandsmigrationspunkts und des Migrationstools für den Benutzerstatus zu migrieren.  
 
 > [!NOTE]  
->  Wenn Sie gerade eine neue Standortrolle für den Zustandsmigrationspunkt (State Migration Point, SMP) erstellt haben, kann es bis zu einer Stunde dauern, bis er für den Benutzerzustandsspeicher verfügbar ist. Um die Verfügbarkeit des SMP zu beschleunigen, können Sie alle SMP-Eigenschaftseinstellungen so anpassen, dass die Aktualisierung der Standortsteuerungsdatei ausgelöst wird.  
+>  Wenn Sie einen neuen Zustandsmigrationspunkt erstellen, kann es bis zu einer Stunde dauern, bis der Benutzerzustandsspeicher verfügbar ist. Für eine beschleunigte Verfügbarkeit können Sie alle Eigenschaftseinstellungen des Zustandsmigrationspunkts so einstellen, dass das Update einer Standortsteuerungsdatei ausgelöst wird.  
 
  Dieser Tasksequenzschritt wird in einem Standardbetriebssystem und in Windows PE für Offline-USMT ausgeführt. Weitere Informationen zu den Tasksequenzvariablen für diese Tasksequenzaktion finden Sie unter [Request State Store Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_RequestState).  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Benutzerzustand** > **Zustandsspeicher anfordern**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Zustand des Computers erfassen**  
- Ermittelt einen Zustandsmigrationspunkt, der die in den Einstellungen für den Zustandsmigrationspunkt konfigurierten Mindestanforderungen erfüllt (maximale Anzahl von Clients und Mindestgröße des freien Speicherplatzes). Eine Gewährleistung, dass zum Zeitpunkt der Zustandsmigration genügend Speicherplatz zur Verfügung steht, wird mit dieser Option jedoch nicht gegeben. Durch Auswählen dieser Option wird Zugriff auf den Zustandsmigrationspunkt angefordert, um den Benutzerzustand und die Einstellungen eines Computers zu erfassen.  
+ Suchen Sie einen Zustandsmigrationspunkt, der die in den Einstellungen für Zustandsmigrationspunkte konfigurierten Mindestanforderungen erfüllt. Zum Beispiel **Maximale Anzahl von Clients** und **Minimum amount of free disk space** (Mindestens erforderliche Menge an freiem Speicherplatz). Diese Option garantiert nicht, dass zum Zeitpunkt der Zustandsmigration genügend freier Speicherplatz verfügbar ist. Durch diese Option wird Zugriff auf den Zustandsmigrationspunkt angefordert, um den Benutzerzustand und die Einstellungen eines Computers zu erfassen.  
 
- Wenn am Configuration Manager-Standort mehrere Zustandsmigrationspunkte aktiviert sind, wird mit diesem Tasksequenzschritt nach einem Zustandsmigrationspunkt mit verfügbarem Speicherplatz gesucht. Zu diesem Zweck wird der Verwaltungspunkt des Standorts nach einer Liste von Zustandsmigrationspunkten abgefragt. Anschließend werden die einzelnen Punkte bewertet, bis ein Punkt gefunden wird, der die Mindestanforderungen erfüllt.  
+ Wenn der Configuration Manager-Standort über mehrere aktive Zustandsmigrationspunkte verfügt, sucht dieser Schritt einen Zustandsmigrationspunkt mit verfügbarem Speicherplatz. Die Tasksequenz fragt den Verwaltungspunkt nach einer Liste der Zustandsmigrationspunkte ab und wertet diese dann aus, bis einer davon die Mindestanforderungen erfüllt.  
 
  **Zustand von anderem Computer wiederherstellen**  
- Wählen Sie diese Option, um Zugriff auf einen Zustandsmigrationspunkt anzufordern, um einen zuvor erfassten Benutzerzustand und Einstellungen auf einem Bereitstellungszielcomputer wiederherzustellen.  
+ Fordern Sie Zugriff auf einen Zustandsmigrationspunkt an, um einen zuvor erfassten Benutzerzustand sowie Einstellungen auf einem Zielcomputer wiederherzustellen.  
 
- Wenn der Configuration Manager-Standort über mehrere Zustandsmigrationspunkte verfügt, wird mit diesem Tasksequenzschritt der Zustandsmigrationspunkt mit dem Computerzustand gesucht, der für den Bereitstellungszielcomputer gespeichert wurde.  
+ Wenn es mehrere Zustandsmigrationspunkte gibt, sucht dieser Schritt den Zustandsmigrationspunkt, dessen Zustand dem des Zielcomputers entspricht.  
 
  **Anzahl von Wiederholungen**  
- Die Anzahl der Versuche, die von diesem Tasksequenzschritt unternommen werden, um einen entsprechenden Zustandsmigrationspunkt zu suchen, bevor der Vorgang abgebrochen wird  
+ Die Anzahl der Versuche, die von diesem Schritt unternommen werden, um einen entsprechenden Zustandsmigrationspunkt zu suchen, bevor ein Fehler auftritt  
 
  **Wiederholungsverzögerung (in Sekunden)**  
  Hiermit wird die Anzahl der Sekunden angegeben, die vom Tasksequenzschritt zwischen Wiederholversuchen gewartet wird.  
 
  **Das Netzwerkzugriffskonto verwenden, falls das Computerkonto keine Verbindung mit dem Zustandsspeicher herstellen kann.**  
- Gibt an, dass mithilfe der Anmeldeinformationen des Configuration Manager-Netzwerkzugriffskontos eine Verbindung zum Zustandsmigrationspunkt hergestellt wird, wenn der Configuration Manager-Client nicht über das Computerkonto auf den SMP-Zustandsspeicher zugreifen kann. Diese Option ist weniger sicher, da von anderen Computern mithilfe des Netzwerkzugriffskontos auf Ihren gespeicherten Zustand zugegriffen werden könnte. Wenn der Zielcomputer noch keiner Domäne angehört, ist diese Option jedoch möglicherweise erforderlich.  
+ Wenn die Tasksequenz mithilfe des Computerkontos nicht auf den Zustandsmigrationspunkt zugreifen kann, werden die Anmeldeinformationen für das Netzwerkzugriffskonto verwendet, um eine Verbindung herzustellen. Diese Option ist nicht so sicher wie andere, da andere Computer das Netzwerkzugriffskonto verwenden könnten, um auf den gespeicherten Zustand zuzugreifen. Diese Option ist möglicherweise erforderlich, wenn der Zielcomputer nicht in eine Domäne eingebunden ist.  
+
+
 
 ##  <a name="BKMK_RestartComputer"></a> Computer neu starten  
- Verwenden Sie den Tasksequenzschritt **Computer neu starten** , um den Computer, auf dem die Tasksequenz ausgeführt wird, neu zu starten. Nach dem Neustart wird automatisch der nächste Schritt der Tasksequenz verarbeitet.  
+ Verwenden Sie diesen Schritt, um den Computer neu zu starten, der die Tasksequenz ausführt. Nach dem Neustart führt der Computer automatisch den nächsten Schritt der Tasksequenz aus.  
 
  Dieser Schritt kann entweder in einem Standardbetriebssystem oder in Windows PE ausgeführt werden. Weitere Informationen zu den Tasksequenzvariablen für diese Tasksequenzaktion finden Sie unter [Variablen der Tasksequenzaktion „Computer neu starten“](task-sequence-action-variables.md#BKMK_RestartComputer).  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+ Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Allgemein** > **Computer neu starten**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Der Tasksequenz zugewiesenes Startimage**  
- Wenn Sie diese Option auswählen, wird das der Tasksequenz zugewiesene Startabbild vom Zielcomputer verwendet. Das Startabbild wird zur Ausführung nachfolgender Tasksequenzschritte verwendet, die in Windows PE ausgeführt werden müssen.  
+ Wenn Sie diese Option auswählen, wird das der Tasksequenz zugewiesene Startimage vom Zielcomputer verwendet. Die Tasksequenz verwendet das Startimage, um nachfolgende Schritte in Windows PE auszuführen.  
 
  **Aktuell installiertes Standardbetriebssystem**  
  Wenn Sie diese Option auswählen, wird der Zielcomputer mit dem installierten Betriebssystem neu gestartet.  
 
  **Benutzer vor dem Neustart benachrichtigen**  
- Wenn Sie diese Option auswählen, wird dem Benutzer eine Benachrichtigung angezeigt, dass der Zielcomputer neu gestartet wird. Diese Option ist standardmäßig ausgewählt.  
+ Wenn Sie diese Option auswählen, wird dem Benutzer vor dem Neustart des Zielcomputers eine Benachrichtigung angezeigt. Der Schritt wählt diese Option standardmäßig aus.  
 
  **Benachrichtigungsmeldung**  
- Geben Sie eine Benachrichtigungsmeldung ein, die dem Benutzer vor einem Neustart des Zielcomputers angezeigt wird.  
+ Geben Sie eine Benachrichtigungsmeldung ein, die dem Benutzer vor dem Neustart des Zielcomputers angezeigt werden soll.  
 
  **Timeout der Meldungsanzeige**  
- Geben Sie den Zeitraum in Sekunden an, der einem Benutzer bis zum Neustart des Zielcomputers verbleibt. Der Standardzeitraum beträgt sechzig (60) Sekunden.  
+ Geben Sie den Zeitraum in Sekunden an, der bis zum Neustart des Zielcomputers verbleibt. Der Standardwert ist 60 Sekunden.  
+
+
 
 ##  <a name="BKMK_RestoreUserState"></a> Benutzerzustand wiederherstellen  
- Mithilfe des Tasksequenzschritts **Benutzerzustand wiederherstellen** können Sie Windows-EasyTransfer (früher USMT) initiieren, um den Benutzerzustand und die Benutzereinstellungen auf einem Zielcomputer wiederzuherstellen. Dieser Tasksequenzschritt wird in Verbindung mit dem Tasksequenzschritt **Benutzerzustand erfassen** verwendet.  
+ Mithilfe dieses Schritts können Sie das Migrationstool für den Benutzerstatus dazu initiieren, den Benutzerzustand und die Benutzereinstellungen auf einem Zielcomputer wiederherzustellen. Verwenden Sie diesen Schritt zusammen mit dem Schritt **Benutzerzustand erfassen**.  
 
  Weitere Informationen zum Verwalten des Benutzerzustands beim Bereitstellen von Betriebssystemen finden Sie unter [Verwalten des Benutzerzustands](../get-started/manage-user-state.md).  
 
- Sie können auch den Tasksequenzschritt **Benutzerzustand wiederherstellen** zusammen mit den Tasksequenzschritten **Zustandsspeicher anfordern** und **Zustandsspeicher freigeben** verwenden, wenn Sie die Zustandseinstellungen in einem Zustandsmigrationspunkt am -Standort speichern oder von dort aus wiederherstellen möchten. In USMT 3.0 und höher wird der USMT-Zustandsspeicher mit dieser Option stets mit einem von Configuration Manager generierten und verwalteten Verschlüsselungsschlüssel entschlüsselt.  
+ Verwenden Sie diesen Schritt zusammen mit den Schritten **Zustandsspeicher anfordern** und **Zustandsspeicher freigeben**, um die Zustandseinstellungen mit einem Zustandsmigrationspunkt zu speichern oder wiederherzustellen. In USMT 3.0 und höher wird der USMT-Zustandsspeicher mit dieser Option stets mit einem von Configuration Manager generierten und verwalteten Verschlüsselungsschlüssel entschlüsselt.  
 
- Mit dem Tasksequenzschritt **Benutzerzustand wiederherstellen** kann eine begrenzte Teilmenge der am häufigsten verwendeten USMT-Optionen gesteuert werden. Zusätzliche Befehlszeilenoptionen können mithilfe der Tasksequenzvariablen „OSDMigrateAdditionalRestoreOptions“ angegeben werden.  
+ Mit dem Schritt **Benutzerzustand wiederherstellen** kann eine begrenzte Teilmenge der am häufigsten verwendeten USMT-Optionen gesteuert werden. Geben Sie zusätzliche Befehlszeilenoptionen mit der Tasksequenzvariable „OSDMigrateAdditionalRestoreOptions“ an.  
 
 > [!IMPORTANT]  
->  Wenn Sie den Tasksequenzschritt **Benutzerzustand wiederherstellen** für eine Aufgabe verwenden, die nicht im Zusammenhang mit einem Szenario der Betriebssystembereitstellung steht, fügen Sie den Tasksequenzschritt [Computer neu starten](#BKMK_RestartComputer) unmittelbar nach dem Tasksequenzschritt **Benutzerzustand wiederherstellen** hinzu.  
+>  Wenn Sie diesen Schritt für eine Aufgabe verwenden, die nicht im Zusammenhang mit einem Szenario der Betriebssystembereitstellung steht, fügen Sie den Schritt [Computer neu starten](#BKMK_RestartComputer) unmittelbar nach dem Schritt **Benutzerzustand wiederherstellen** hinzu.  
 
- Dieser Tasksequenzschritt wird nur in einem Standardbetriebssystem ausgeführt. Er wird nicht in Windows PE ausgeführt. Weitere Informationen zu den Tasksequenzvariablen für diese Tasksequenzaktion finden Sie unter [Restore User State Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_RestoreUserState).  
+ Dieser Schritt wird nur in Standardbetriebssystemen ausgeführt. Er wird nicht in Windows PE ausgeführt. Weitere Informationen zu den Tasksequenzvariablen für diese Tasksequenzaktion finden Sie unter [Restore User State Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_RestoreUserState).  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+ Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Benutzerzustand** > **Benutzerzustand wiederherstellen**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Gibt einen kurzen benutzerdefinierten Namen an, der die in diesem Schritt vorgenommene Aktion beschreibt.  
-
- **Beschreibung**  
- Gibt ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion an.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **USMT-Paket (Migrationsprogramm für den Benutzerzustand)**  
- Geben Sie das Configuration Manager-Paket ein, das die von diesem Schritt beim Wiederherstellen des Benutzerzustands und der Benutzereinstellungen zu verwendende USMT-Version enthält. Für dieses Paket ist kein Programm erforderlich. Beim Ausführen des Tasksequenzschritts wird die USMT-Version im angegebenen Paket ausgeführt. Geben Sie je nach Architektur des Betriebssystems, auf dem Sie den Zustand wiederherstellen, ein Paket an, das die 32-Bit-Version oder die x64-Version von Windows-EasyTransfer bzw. USMT enthält.  
+ Geben Sie das Paket an, das die Version von USMT enthält, die für diesen Schritt verwendet werden soll. Für dieses Paket ist kein Programm erforderlich. Wenn der Schritt ausgeführt wird, verwendet die Tasksequenz die Version von USMT, die sich im angegebenen Paket befindet. Geben Sie ein Paket an, das die 32-Bit- oder 64-Bit-Version von USMT enthält. Die Architektur von USMT richtet sich nach der Architektur des Betriebssystems, dessen Zustand die Tasksequenz wiederherstellt. 
 
  **Alle erfassten Benutzerprofile mit Standardoptionen wiederherstellen**  
- Stellt die erfassten Benutzerprofile mit den Standardoptionen wieder her. Zum Anpassen der wiederherzustellenden Optionen wählen Sie **Erfassung der Benutzerprofile anpassen**aus.  
+ Stellt die erfassten Benutzerprofile mit den Standardoptionen wieder her. Wählen Sie zum Anpassen der von USMT wiederherzustellenden Optionen **Erfassung der Benutzerprofile anpassen** aus.  
 
  **Wiederherstellung von Benutzerprofilen anpassen**  
- Ermöglicht Ihnen die Anpassung der Dateien, die Sie auf dem Zielcomputer wiederherstellen möchten. Klicken Sie auf **Dateien** , um im USMT-Paket die Konfigurationsdateien anzugeben, die Sie für die Wiederherstellung der Benutzerprofile verwenden möchten. Zum Hinzufügen einer Konfigurationsdatei geben Sie einen Namen im Feld **Dateiname** an, und klicken Sie dann auf **Hinzufügen**. Die Konfigurationsdateien, die für den Vorgang verwendet werden, werden im Bereich „Dateien“ angezeigt. Die von Ihnen angegebene XML-Datei legt fest, welche Benutzerdatei wiederhergestellt wird.  
+ Ermöglicht Ihnen die Anpassung der Dateien, die Sie auf dem Zielcomputer wiederherstellen möchten. Klicken Sie auf **Dateien** , um im USMT-Paket die Konfigurationsdateien anzugeben, die Sie für die Wiederherstellung der Benutzerprofile verwenden möchten. Zum Hinzufügen einer Konfigurationsdatei geben Sie einen Namen im Feld **Dateiname** an, und klicken Sie dann auf **Hinzufügen**. Der Bereich „Dateien“ listet die Konfigurationsdateien auf, die USMT verwendet. Die von Ihnen angegebene XML-Datei legt fest, welche Benutzerdatei von USMT wiederhergestellt wird.  
 
  **Lokale Computerbenutzerprofile wiederherstellen**  
- Stellt die lokalen Computerbenutzerprofile (d. h. Nicht-Domänenbenutzer) wieder her. Sie müssen den wiederhergestellten lokalen Benutzerkonten neue Kennwörter zuweisen, da die Kennwörter der ursprünglichen lokalen Benutzerkonten nicht migriert werden können. Geben Sie das Kennwort im Feld **Kennwort** ein, und bestätigen Sie es im Feld **Kennwort bestätigen** .  
+ Stellt die lokalen Computerbenutzerprofile wieder her. Diese Profile sind nicht für Domänenbenutzer vorgesehen. Sie müssen den wiederhergestellten lokalen Benutzerkonten neue Kennwörter zuweisen. USMT kann die ursprünglichen Kennwörter nicht migrieren. Geben Sie das Kennwort im Feld **Kennwort** ein, und bestätigen Sie es im Feld **Kennwort bestätigen** .  
 
  **Fortsetzen, wenn einige Dateien nicht wiederhergestellt werden können**  
- Setzt die Wiederherstellung des Benutzerzustands und der Benutzereinstellungen auch dann fort, wenn einige Dateien nicht wiederhergestellt werden können. Diese Option ist standardmäßig aktiviert. Wenn Sie diese Option aktivieren und beim Wiederherstellen von Dateien Fehler auftreten, wird der Tasksequenzschritt sofort mit einem Fehler beendet, sodass nicht alle Dateien wiederhergestellt werden.  
+ Setzt die Wiederherstellung des Benutzerzustands und der Benutzereinstellungen auch dann fort, wenn USMT einige Dateien nicht wiederherstellen kann. Der Schritt aktiviert diese Option standardmäßig. Wenn Sie diese Option deaktivieren und beim Wiederherstellen von Dateien durch USMT Fehler auftreten, schlägt dieser Schritt sofort fehl. USMT stellt nicht alle Dateien wieder her.   
 
  **Ausführliche Protokollierung aktivieren**  
- Aktivieren Sie diese Option, um ausführlichere Protokolldateiinformationen zu generieren. Beim Wiederherstellen des Zustands wird das Protokoll „Loadstate.log“ generiert und standardmäßig im Tasksequenzprotokoll im Ordner „\windows\system32\ccm\Logs “ gespeichert.  
+ Aktivieren Sie diese Option, um ausführlichere Protokolldateiinformationen zu generieren. Wenn der Zustand wiederhergestellt wird, generiert die Tasksequenz standardmäßig die Datei „Loadstate.log“ im Protokollordner der Tasksequenz (\windows\system32\ccm\logs).  
+
+
 
 ##  <a name="BKMK_RunCommandLine"></a> Befehlszeile ausführen  
- Mit dem Tasksequenzschritt **Befehlszeile ausführen** können Sie eine angegebene Befehlszeile ausführen.  
+ Verwenden Sie diesen Schritt, um die angegebene Befehlszeile auszuführen.  
 
  Dieser Schritt kann in einem Standardbetriebssystem oder in Windows PE ausgeführt werden. Weitere Informationen zu Tasksequenzvariablen für diese Tasksequenzaktion finden Sie unter [Run Command Line Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_RunCommand).  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+ Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Allgemein** > **Befehlszeile ausführen**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Gibt einen kurzen, benutzerdefinierten Namen an, der die auszuführende Befehlszeile beschreibt.  
-
- **Beschreibung**  
- Gibt ausführlichere Informationen zur ausgeführten Befehlszeile an.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Befehlszeile**  
  Gibt die ausgeführte Befehlszeile an. Dieses Feld ist erforderlich. Die Verwendung von Dateinamenerweiterungen, wie .vbs und .exe, ist eine bewährte Methode. Sie sollten alle erforderlichen Einstellungsdateien, Befehlszeilenoptionen oder -parameter einschließen.  
@@ -1306,15 +1065,15 @@ Vor der Configuration Manager-Version 1610 werden bei diesem Schritt folgende Au
 
  Beispiele:  
 
- **setup.exe /a**  
+ `setup.exe /a`  
 
- **cmd.exe /c copy Jan98.dat c:\sales\Jan98.dat**  
+ `cmd.exe /c copy Jan98.dat c:\sales\Jan98.dat`  
 
 > [!NOTE]  
->  Befehlszeilenaktionen, wie Umleitung, Piping oder Kopieren, muss, wie im obigen Beispiel gezeigt, der Befehl **cmd.exe /c** vorangestellt werden, damit sie erfolgreich ausgeführt werden können.  
+>  Für eine erfolgreiche Ausführung sollte Befehlszeilenoptionen der Befehl **cmd.exe /c** vorausgehen. Zu den Beispielen für diese Aktionen zählen die Umleitung der Ausgabe, das Piping und das Kopieren von Befehlen.  
 
  **64-Bit-Dateisystemumleitung deaktivieren**  
- Unter einem 64-Bit-Betriebssystem wird die ausführbare Datei in der Befehlszeile standardmäßig gesucht und mithilfe des Dateisystem-Redirectors von WOW64 ausgeführt, sodass die 32-Bit-Versionen der ausführbaren Betriebssystemdateien und DLLs gefunden werden.  Wenn Sie diese deaktivieren, wird die Verwendung des Dateisystem-Redirectors von WOW64 deaktiviert, sodass die systemeigenen 64-Bit-Versionen der ausführbaren Betriebssystemdateien und DLLs gefunden werden können.  Unter einem 32-Bit-Betriebssystem hat das Auswählen dieser Option keine Auswirkungen.  
+ 64-Bit-Betriebssysteme verwenden standardmäßig den Dateisystem-Redirector von WOW64, um Befehlszeilen auszuführen. Durch dieses Verhalten können 32-Bit-Versionen von ausführbaren Betriebssystemdateien und Bibliotheken ordnungsgemäß gesucht werden. Wählen Sie diese Option aus, um die Verwendung des Dateisystem-Redirectors von WOW64 zu deaktivieren. Windows führt den Befehl mithilfe nativer 64-Bit-Versionen von ausführbaren Betriebssystemdateien und Bibliotheken aus. Unter einem 32-Bit-Betriebssystem hat diese Option keine Auswirkungen.  
 
  **Starten in**  
  Gibt den ausführbaren Ordner für das Programm mit bis zu 127 Zeichen an. Für diesen Ordner kann ein absoluter Pfad auf dem Zielcomputer oder ein relativer Pfad zum Verteilungspunktordner mit dem Paket angegeben werden. Dieses Feld ist optional.  
@@ -1326,55 +1085,45 @@ Vor der Configuration Manager-Version 1610 werden bei diesem Schritt folgende Au
  **i386**  
 
 > [!NOTE]  
->  Mithilfe der Schaltfläche **Durchsuchen** werden Dateien und Ordner auf dem lokalen Computer gesucht und ausgewählt, was bedeutet, dass sich alles, was Sie auf diese Weise auswählen, auch auf dem Zielcomputer an dem gleichen Speicherort befinden und den gleichen Datei- und Ordnernamen aufweisen muss.  
+>  Die Schaltfläche **Durchsuchen** durchsucht den lokalen Computer nach Dateien und Ordnern. Jede Auswahl muss ebenfalls auf dem Zielcomputer am selben Speicherort und mit denselben Datei- und Ordnernamen vorhanden sein.  
 
  **Paket**  
  Wenn Sie Dateien oder Programme in der Befehlszeile angeben, die sich nicht bereits auf dem Zielcomputer befinden, wählen Sie diese Option aus, um das Configuration Manager-Paket anzugeben, das die entsprechenden Dateien enthält. Für das Paket ist kein Programm erforderlich. Diese Option ist nicht erforderlich, wenn die angegebenen Dateien auf dem Zielcomputer vorhanden sind.  
 
  **Timeout**  
- Dieser Wert legt fest, wie lange Configuration Manager das Ausführen einer Befehlszeile zulässt. Dieser Wert kann aus dem Bereich von 1 bis 999 Minuten stammen. Der Standardwert beträgt 15 Minuten.  
+ Legt einen Wert fest, der angibt, wie lange Configuration Manager das Ausführen der Befehlszeile zulässt. Dieser Wert kann aus dem Bereich von 1 bis 999 Minuten stammen. Der Standardwert beträgt 15 Minuten.  
 
  Diese Option ist standardmäßig deaktiviert.  
 
 > [!IMPORTANT]  
->  Wenn Sie einen Wert festlegen, der dem Tasksequenzschritt „Befehlszeile ausführen“ nicht genug Zeit gewährt, um erfolgreich abgeschlossen zu werden, kann der Tasksequenzschritt nicht ausgeführt werden, was je nach Steuerungseinstellung möglicherweise die gesamte Tasksequenz fehlschlagen lässt. Wenn das Timeout abläuft, beendet Configuration Manager den Befehlszeilenprozess.  
+>  Wenn Sie einen Wert eingeben, der nicht genügend Zeit zum erfolgreichen Abschließen des angegebenen Befehls zur Verfügung stellt, schlägt dieser Schritt fehl. In Abhängigkeit von anderen Steuerelementeinstellungen kann die gesamte Tasksequenz fehlschlagen. Wenn das Timeout abläuft, beendet Configuration Manager den Befehlszeilenprozess.  
 
  **Diesen Schritt mit folgendem Konto ausführen**  
  Hiermit wird angegeben, dass die Befehlszeile unter einem anderen Windows-Benutzerkonto als dem lokalen Systemkonto ausgeführt wird.  
 
 > [!NOTE]  
->  Wenn Sie ein anderes Konto für diesen Schritt angeben, und dies nach einem Betriebssystem-Installationsschritt vorkommt, muss das Konto auf dem Computer hinzugefügt werden, bevor Sie einfache Skripts oder Befehle ausführen können, und das Profil für das Windows-Benutzerkonto muss für komplexere Programme, z. B. einen MSI, wiederhergestellt werden.  
+>  Wenn Sie einfache Skripts oder Befehle nach der Installation des Betriebssystems mit einem anderen Konto ausführen möchten, müssen Sie dieses Konto zunächst auf dem Computer hinzufügen. Zudem müssen Sie das Profil des Windows-Benutzerkontos wiederherstellen, damit komplexere Programme wie Windows Installer ausgeführt werden können.  
 
  **Konto**  
- Gibt das Windows-Konto „Ausführen als“ für den Befehlszeilentask in der von dieser Aktion auszuführenden Tasksequenz an. Die Befehlszeile wird mit den Berechtigungen des angegebenen Kontos ausgeführt. Klicken Sie auf **Festlegen** , um das lokale Benutzer- oder Domänenkonto anzugeben.  
+ Gibt das Windows-Benutzerkonto an, das dieser Schritt zum Ausführen der Befehlszeile verwendet. Die Befehlszeile wird mit den Berechtigungen des angegebenen Kontos ausgeführt. Klicken Sie auf **Festlegen** , um das lokale Benutzer- oder Domänenkonto anzugeben.  
 
 > [!IMPORTANT]  
->  Wenn mit der Tasksequenzaktion **Befehlszeile ausführen** ein Benutzerkonto angegeben wird, schlägt diese Aktion beim Ausführen in Windows PE fehl, da Windows PE nicht mit einer Domäne verknüpft werden kann. Der Fehler wird in der Datei „smsts.log“ aufgezeichnet.  
+>  Wenn dieser Schritt ein Benutzerkonto angibt und unter Windows PE ausgeführt wird, schlägt die Aktion fehl. Sie können Windows PE nicht mit einer Domäne verknüpfen. Die Datei „smsts.log“ zeichnet diesen Fehler auf.  
+
+
 
 ##  <a name="BKMK_RunPowerShellScript"></a> PowerShell-Skript ausführen  
- Verwenden Sie den Tasksequenzschritt **PowerShell-Skript ausführen** zum Ausführen eines angegebenen PowerShell-Skripts.  
+ Verwenden Sie diesen Schritt, um das angegebene PowerShell-Skript auszuführen.  
 
  Dieser Schritt kann in einem Standardbetriebssystem oder in Windows PE ausgeführt werden. Um diesen Schritt in Windows PE auszuführen, muss PowerShell im Startabbild aktiviert sein. Sie können Windows PowerShell (WinPE-PowerShell) auf der Registerkarte **Optionale Komponenten** in den Eigenschaften des Startabbilds aktivieren. Weitere Informationen dazu, wie ein Startimage geändert wird, finden Sie unter [Verwalten von Startimages](../get-started/manage-boot-images.md).  
 
 > [!NOTE]  
 >  PowerShell ist unter Windows Embedded-Betriebssystemen nicht standardmäßig aktiviert.  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Allgemein** > **PowerShell-Skript ausführen**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Gibt einen kurzen, benutzerdefinierten Namen an, der die auszuführende Befehlszeile beschreibt.  
-
- **Beschreibung**  
- Gibt ausführlichere Informationen zur ausgeführten Befehlszeile an.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Paket**  
  Gibt das Configuration Manager-Paket mit dem PowerShell-Skript an. Ein Paket kann mehrere PowerShell-Skripts enthalten.  
@@ -1383,279 +1132,237 @@ Vor der Configuration Manager-Version 1610 werden bei diesem Schritt folgende Au
  Gibt den Namen des auszuführenden PowerShell-Skripts an. Dieses Feld ist erforderlich.  
 
  **Parameter**  
- Gibt die an das Windows PowerShell-Skript zu übergebenden Parameter an. Konfigurieren Sie die Parameter wie beim Hinzufügen zum Windows PowerShell-Skript über die Befehlszeile.  
+ Gibt die Parameter an, die an das Windows PowerShell-Skript übergeben werden. Diese Parameter sind identisch mit den Windows PowerShell-Skriptparametern in der Befehlszeile.  
 
 > [!IMPORTANT]  
 >  Geben Sie die Parameter an, die vom Skript verwendet werden, nicht die für die Windows PowerShell-Befehlszeile.  
 >   
 >  Das folgende Beispiel enthält gültige Parameter:  
 >   
->  **-MyParameter1 MyValue1 -MyParameter2 MyValue2**  
+>  `-MyParameter1 MyValue1 -MyParameter2 MyValue2`  
 >   
->  Das folgende Beispiel enthält ungültige Parameter. Die fett formatierten Elemente sind Windows PowerShell-Befehlszeilenparameter (-nologo und -executionpolicy unrestricted) und werden vom Skript nicht verwendet.  
+>  Das folgende Beispiel enthält ungültige Parameter. Bei den ersten beiden Elementen handelt es sich um Windows PowerShell-Befehlszeilenparameter (**-NoLogo** und **-ExecutionPolicy Unrestricted**). Das Skript verarbeitet diese Parameter nicht.  
 >   
->  **-nologo-executionpolicy unrestricted-File MyScript.ps1 -MyParameter1 MyValue1 -MyParameter2 MyValue2**  
+>  `-NoLogo -ExecutionPolicy Unrestricted -File MyScript.ps1 -MyParameter1 MyValue1 -MyParameter2 MyValue2`  
 
  **PowerShell-Ausführungsrichtlinie**  
- Durch Auswahl der PowerShell-Ausführungsrichtlinie können Sie bestimmen, welche Windows PowerShell-Skripts (sofern vorhanden) auf dem Computer ausgeführt werden dürfen. Wählen Sie eine der folgenden Ausführungsrichtlinien aus:  
+ Bestimmen Sie, welche Windows PowerShell-Skripts auf dem Computer ausgeführt werden können. Wählen Sie eine der folgenden Ausführungsrichtlinien aus:  
 
--   **Alle signiert**: Nur Skripts, die von einem vertrauenswürdigen Herausgeber signiert wurden, dürfen ausgeführt werden.  
+-   **Alle signiert:** Nur Skripts, die von einem vertrauenswürdigen Herausgeber signiert wurden, werden ausgeführt.  
 
--   **Undefiniert**: Es ist keine Ausführungsrichtlinie definiert. .  
+-   **Nicht definiert:** Keine Ausführungsrichtlinie wird definiert.  
 
--   **Umgehung**: Lädt alle Konfigurationsdateien und führt alle Skripts aus. Wenn Sie ein unsigniertes Skript ausführen, das aus dem Internet heruntergeladen wurde, werden Sie nicht zur Bestätigung aufgefordert, bevor es ausgeführt wird.  
+-   **Umgehung**: Alle Konfigurationsdateien werden geladen und alle Skripts ausgeführt. Wenn Sie ein nicht signiertes Skript aus dem Internet herunterladen, fordert Windows PowerShell Sie vor der Ausführung des Skripts nicht zum Erteilen der Berechtigung auf.  
 
 > [!IMPORTANT]  
 >  Die Ausführungsrichtlinien „Undefiniert“ und „Umgehung“ werden von PowerShell 1.0 nicht unterstützt.  
 
+
+
 ##  <a name="child-task-sequence"></a> Ausführen einer Tasksequenz
 
-Ab Configuration Manager-Version 1710 können Sie einen neuen Tasksequenzschritt hinzufügen, der eine andere Tasksequenz ausführt. Dies erstellt eine Über-/Unterordnungsbeziehung zwischen den Tasksequenzen. Mithilfe einer untergeordneten Tasksequenz können Sie modular aufgebaute, wiederverwendbare Tasksequenzen erstellen.
+Ab Configuration Manager Version 1710 können Sie einen neuen Schritt hinzufügen, der eine andere Tasksequenz ausführt. Dieser Schritt erstellt eine Über-/Unterordnungsbeziehung zwischen den Tasksequenzen. Mithilfe einer untergeordneten Tasksequenz können Sie weitere modular aufgebaute, wiederverwendbare Tasksequenzen erstellen.
 
-Berücksichtigen Sie Folgendes, wenn Sie eine untergeordnete Tasksequenz einer Tasksequenz hinzufügen:
-
+Berücksichtigen Sie folgende Anweisungen, wenn Sie eine untergeordnete Tasksequenz einer Tasksequenz hinzufügen:
  - Die über- und untergeordneten Tasksequenzen werden effektiv in einer einzigen Richtlinie kombiniert, die der Client ausführt.
- - Die Umgebung ist global. Wenn eine Variable beispielsweise von der übergeordneten Tasksequenz festgelegt und dann von der untergeordneten Tasksequenz geändert wird, bleibt die Änderung der Variablen im weiteren Verlauf bestehen. Wenn die untergeordnete Tasksequenz eine neue Variable erstellt, ist die Variable ebenso für die restlichen Schritte in der übergeordneten Tasksequenz verfügbar.
+ - Die Umgebung ist global. Wenn die übergeordnete Tasksequenz eine Variable festlegt und die untergeordnete Tasksequenz diese Variable ändert, behält diese den aktuellen Wert bei. Wenn die untergeordnete Tasksequenz eine neue Variable erstellt, ist diese für den Rest der übergeordneten Tasksequenz verfügbar.
  - Statusmeldungen werden in der Regel für einen einzelnen Tasksequenzvorgang gesendet.
  - Die Tasksequenzen schreiben Einträge in die Datei „smsts.log“, mit neuen Protokolleinträgen, die den Start einer untergeordneten Tasksequenz deutlich machen.
 
-### <a name="details"></a>Details
+Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Allgemein** > **Tasksequenz ausführen**, um diesen Schritt hinzuzufügen. 
 
-1. Klicken Sie im Tasksequenz-Editor auf **Hinzufügen**, wählen Sie **Allgemein** aus, und klicken Sie auf **Tasksequenz ausführen**.
-2. Klicken Sie auf **Durchsuchen**, um die untergeordnete Tasksequenz auszuwählen.  
+### <a name="properties"></a>Eigenschaften
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
+
+**Auszuführende Tasksequenz auswählen**  
+ Klicken Sie auf **Durchsuchen**, um die untergeordnete Tasksequenz auszuwählen. Das Dialogfeld **Tasksequenz auswählen** zeigt die übergeordnete Tasksequenz nicht an.
+
+
 
 ##  <a name="BKMK_SetDynamicVariables"></a> Dynamische Variablen festlegen  
- Verwenden Sie den Tasksequenzschritt **Dynamische Variablen festlegen** zum Ausführen der folgenden Aufgaben:  
+ Verwenden Sie diesen Schritt, um folgende Aktionen durchzuführen:  
 
 1.  Sammeln von Informationen vom Computer und aus der Umgebung, in der er sich befindet, und Festlegen angegebener Tasksequenzvariablen anhand dieser Informationen.  
 
 2.  Auswerten definierter Regeln und Festlegen von Tasksequenzvariablen basierend auf den Variablen und Werten, die für als „Wahr“ ausgewertete Regeln konfiguriert wurden.  
 
- Die Tasksequenz legt automatisch die folgenden schreibgeschützten Tasksequenzvariablen fest:  
-
+Die Tasksequenz legt automatisch die folgenden schreibgeschützten Tasksequenzvariablen fest:  
  -   &#95;SMSTSMake  
-
  -   &#95;SMSTSModel  
-
  -   &#95;SMSTSMacAddresses  
-
  -   &#95;SMSTSIPAddresses  
-
  -   &#95;SMSTSSerialNumber  
-
  -   &#95;SMSTSAssetTag  
-
  -   &#95;SMSTSUUID  
 
- Dieser Schritt kann entweder in einem Standardbetriebssystem oder in Windows PE ausgeführt werden. Weitere Informationen zu Tasksequenzvariablen finden Sie unter [Tasksequenz-Aktionsvariablen](task-sequence-action-variables.md).  
+Dieser Schritt kann entweder in einem Standardbetriebssystem oder in Windows PE ausgeführt werden. Weitere Informationen zu Tasksequenzvariablen finden Sie unter [Tasksequenz-Aktionsvariablen](task-sequence-action-variables.md).  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Allgemein** > **Dynamische Variablen festlegen**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
-**Name**  
- Ein kurzer benutzerdefinierter Name für diesen Tasksequenzschritt.  
-
-**Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
 **Dynamische Regeln und Variablen**  
- Um eine dynamische Variable für die Verwendung in der Tasksequenz festzulegen, können Sie eine Regel hinzufügen und anschließend einen Wert für jede Variable angeben, die Sie für die Regel angeben, oder eine oder mehrere Variablen hinzufügen, ohne eine Regel hinzuzufügen. Wenn Sie eine Regel hinzufügen, können Sie unter den folgenden Regelkategorien wählen:  
+ Fügen Sie eine Regel hinzu, um eine dynamische Variable für die Verwenden in der Tasksequenz festzulegen. Legen Sie dann einen Wert für jede Variable fest, die in der Regel angegeben wurde. Fügen Sie zusätzlich mindestens eine Variable hinzu, ohne eine Regel hinzuzufügen. Wenn Sie eine Regel hinzufügen, können Sie aus den folgenden Kategorien auswählen:  
 
- -   **Computer**: Verwenden Sie diese Regelkategorie, um Werte für Bestandskennzeichen, UUID, Seriennummer oder Mac-Adresse auszuwerten. Sie können mehrere Werte festlegen, und wenn jeder Wert wahr ist, wird die Regel als „Wahr“ ausgewertet. Die folgende Regel wird z. B. als „Wahr“ ausgewertet, wenn die Seriennummer 5892087 lautet, unabhängig davon, ob die MAC-Adresse 26-78-13-5A-A4-22 entspricht.  
+ -   **Computer:** Werte für das Hardwarebestandskennzeichen, die UUID, Seriennummer oder MAC-Adresse werden ausgewertet. Legen Sie bei Bedarf mehrere Werte fest. Wenn ein Wert TRUE ist, wird die Regel als TRUE gewertet. Folgende Regel wird beispielsweise aus TRUE ausgewertet, wenn die Seriennummer des Geräts „5892087“ und die MAC-Adresse „22-A4-5A-13-78-26“ ist.  
 
      `IF Serial Number = 5892087 OR MAC address = 26-78-13-5A-A4-22 THEN`  
 
--   **Speicherort**: Verwenden Sie diese Regelkategorie, um Werte für das Standardgateway auszuwerten.  
+-   **Speicherort:** Werte für das Standardgateway des Netzwerks werden ausgewertet.  
 
--   **Hersteller und Modell**: Verwenden Sie diese Regelkategorie, um Werte für den Hersteller und das Modell eines Computers auszuwerten. Sowohl Hersteller als auch Modell müssen als „Wahr“ ausgewertet werden, damit die Regel als „Wahr“ ausgewertet wird.   
+-   **Typ und Modell:** Werte für den Typ und das Modell eines Computers werden ausgewertet. Sowohl Hersteller als auch Modell müssen als „Wahr“ ausgewertet werden, damit die Regel als „Wahr“ ausgewertet wird.   
+
+    <!-- for future edits: an escape code must be used for the bolded asterisk character, but may be removed somewhere along the way. Instead of five asterisk, should be bold tags with &#42; in-between -->
 
     Ab Version 1610 von Configuration Manager können Sie ein Sternchen (*****) und ein Fragezeichen (**?**) als Platzhalter an der Stelle angeben, an der ***** mehreren Zeichen und **?** entspricht. entspricht einem einzelnen Zeichen. Zum Beispiel die Zeichenfolge „DELL*900?“ wird „DELL-ABC-9001“ und „DELL9009“ entsprechen. 
 
--   **Tasksequenzvariable**: Verwenden Sie diese Regelkategorie, um eine Tasksequenzvariable, eine Bedingung und einen Wert zum Auswerten anzugeben. Die Regel wird als „Wahr“ ausgewertet, wenn der für die Variable festgelegte Wert die angegebene Bedingung erfüllt.  
+    Geben Sie ein Sternchen (**&#42;**) und ein Fragezeichen (**?**) als Platzhalter an der Stelle an, an der **&#42;** mehreren Zeichen und **?** entspricht. entspricht einem einzelnen Zeichen. Zum Beispiel die Zeichenfolge „DELL*900?“ ist identisch mit „DELL-ABC-9001“ and „DELL9009“.
 
-Sie können eine oder mehrere Variablen angeben, die für eine Regel festgelegt werden, die als „Wahr“ ausgewertet wird, oder Variablen ohne Verwendung einer Regel festlegen. Sie können eine vorhandene Variable auswählen oder eine benutzerdefinierte Variable erstellen.  
+-   **Tasksequenzvariable:** Fügt eine Tasksequenzvariable, eine Bedingung und einen Wert zum Auswerten hinzu. Die Regel wird als „Wahr“ ausgewertet, wenn der für die Variable festgelegte Wert die angegebene Bedingung erfüllt.  
 
- -   **Vorhandene Tasksequenzvariablen**: Verwenden Sie diese Einstellung, um eine oder mehrere Variablen aus einer Liste vorhandener Tasksequenzvariablen auszuwählen. Arrayvariablen stehen nicht zur Auswahl.  
+    Geben Sie eine oder mehrere Variablen an, die für eine Regel festgelegt werden sollen, die als TRUE ausgewertet wird, oder legen Sie Variablen ohne Verwendung einer Regel fest. Wählen Sie eine vorhandene Variable aus, oder erstellen Sie eine benutzerdefinierte Variable.  
 
- -   **Benutzerdefinierte Tasksequenzvariablen**: Verwenden Sie diese Einstellung, um eine benutzerdefinierte Tasksequenzvariable zu definieren. Sie können auch eine vorhandene Tasksequenzvariable angeben. Dies ist nützlich, um ein vorhandenes Variablenarray wie z. B. OSDAdapter anzugeben, da Variablenarrays nicht in der Liste der vorhandenen Tasksequenzvariablen enthalten sind.  
+     -   **Vorhandene Tasksequenzvariablen**: Eine oder mehrere Variablen werden aus einer Liste vorhandener Tasksequenzvariablen ausgewählt. Arrayvariablen stehen nicht zur Auswahl.  
+
+     -   **Benutzerdefinierte Tasksequenzvariablen**: Eine benutzerdefinierte Tasksequenzvariable wird definiert. Sie können auch eine vorhandene Tasksequenzvariable angeben. Diese Einstellung ist nützlich, um ein vorhandenes Variablenarray wie z. B. „OSDAdapter“ anzugeben, da Variablenarrays nicht in der Liste der vorhandenen Tasksequenzvariablen enthalten sind.  
 
 Nachdem Sie die Variablen für eine Regel ausgewählt haben, müssen Sie einen Wert für jede Variable angeben. Die Variable wird auf den angegebenen Wert festgelegt, wenn die Regel als „Wahr“ ausgewertet wird. Sie können für jede Variable **Geheimer Wert** auswählen, um den Wert der Variablen auszublenden. Standardmäßig werden Werte für einige vorhandene Variablen ausgeblendet, z. B. für die Tasksequenzvariable OSDCaptureAccountPassword.  
 
 > [!IMPORTANT]  
->  Wenn Sie eine Tasksequenz mit dem Schritt „Dynamische Variablen festlegen“ importieren und **Geheimer Wert** für den Wert der Variablen ausgewählt ist, wird der Wert beim Importieren der Tasksequenz entfernt. Daher müssen Sie den Wert für die dynamische Variable nach dem Import der Tasksequenz erneut eingeben.  
+>  Configuration Manager entfernt alle Variablenwerte, die als **Geheimniswert** markiert sind, wenn Sie eine Tasksequenz mit dem Schritt **Dynamische Variablen festlegen** importieren. Geben Sie den Wert für die dynamische Variable nach dem Import der Tasksequenz erneut ein.  
+
+
 
 ##  <a name="BKMK_SetTaskSequenceVariable"></a> Tasksequenzvariable festlegen  
-Mithilfe des Tasksequenzschritts **Tasksequenzvariable festlegen** können Sie den Wert einer Variablen festlegen, die für die Tasksequenz verwendet wird.  
+Verwenden Sie diesen Schritt, um den Wert einer Variablen festzulegen, die mit der Tasksequenz verwendet wird.  
 
-Dieser Schritt kann entweder in einem Standardbetriebssystem oder in Windows PE ausgeführt werden. Tasksequenzvariablen werden von Tasksequenzaktionen gelesen und definieren das Verhalten dieser Aktionen. Weitere Informationen zu bestimmten Tasksequenzvariablen finden Sie unter [Tasksequenz-Aktionsvariablen](task-sequence-action-variables.md).  
+Dieser Schritt kann entweder in einem Standardbetriebssystem oder in Windows PE ausgeführt werden. Tasksequenzvariablen werden von Tasksequenzaktionen gelesen und definieren das Verhalten dieser Aktionen. Weitere Informationen zu bestimmten Variablen für Tasksequenzaktionen finden Sie unter [Tasksequenz-Aktionsvariablen](task-sequence-action-variables.md). Weitere Informationen zu bestimmten integrierten Tasksequenzvariablen finden Sie unter [Integrierte Tasksequenzvariablen](/sccm/osd/understand/task-sequence-built-in-variables).
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Allgemein** > **Tasksequenzvariable festlegen**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name für diesen Tasksequenzschritt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Tasksequenzvariable**  
- Ein benutzerdefinierter Name für die Tasksequenzvariable.  
+ Geben Sie den Namen einer integrierten Tasksequenzvariablen oder einer Tasksequenz-Aktionsvariablen an, oder geben Sie einen benutzerdefinierten Variablennamen an.  
 
  **Wert**  
- Der Wert, der der Tasksequenzvariable zugeordnet wird. Der Wert kann eine andere Tasksequenzvariable mit der Syntax %<varname\>% sein.  
+ Die Tasksequenz legt die Variable auf diesen Wert fest. Legen Sie diese Tasksequenzvariable auf den Wert einer anderen Tasksequenzvariablen mit der Syntax „ %varname%“ fest.  
 
-## <a name="hide-task-sequence-progress"></a>Ausblenden des Tasksequenzstatus
-<!-- 1354291 -->
-Mit dem Release 1706 können Sie mithilfe einer neuen Variablen steuern, wann Endbenutzern der Tasksequenzstatus angezeigt wird. Verwenden Sie in der Tasksequenz den Schritt **Tasksequenzvariable festlegen** zum Festlegen des Werts der Variablen **TSDisableProgressUI**, um den Tasksequenzstatus ein- oder auszublenden. Den Schritt „Tasksequenzvariable festlegen“ können Sie in einer Tasksequenz mehrmals verwenden, um den Wert der Variablen zu ändern. Dadurch können Sie den Tasksequenzstatus in unterschiedlichen Abschnitten der Tasksequenz anzeigen oder ausblenden.
 
- - **So blenden Sie den Tasksequenzstatus aus**  
-Verwenden Sie im Tasksequenz-Editor den Schritt [Tasksequenzvariable festlegen](#BKMK_SetTaskSequenceVariable) zum Festlegen des Werts der Variablen **TSDisableProgressUI** auf **TRUE**, um den Tasksequenzstatus auszublenden.
-
- - **So zeigen Sie den Tasksequenzstatus an**  
-Verwenden Sie im Tasksequenz-Editor den Schritt [Tasksequenzvariable festlegen](#BKMK_SetTaskSequenceVariable) zum Festlegen des Werts der Variablen **TSDisableProgressUI** auf **FALSE**, um den Tasksequenzstatus anzuzeigen.
 
 ##  <a name="BKMK_SetupWindowsandConfigMgr"></a> Windows und ConfigMgr einrichten  
- Mithilfe des Tasksequenzschritts **Windows und ConfigMgr einrichten** können Sie den Übergang von Windows PE zum neuen Betriebssystem vollziehen. Dieser Tasksequenzschritt muss bei jeder Betriebssystembereitstellung ausgeführt werden. Mit diesem Schritt wird der Configuration Manager-Client im neuen Betriebssystem installiert und die weitere Ausführung der Tasksequenz im neuen Betriebssystem ermöglicht.  
+ Verwenden Sie diesen Schritt, um den Übergang von Windows PE zum neuen Betriebssystem durchzuführen. Dieser Tasksequenzschritt muss bei jeder Betriebssystembereitstellung ausgeführt werden. Mit diesem Schritt wird der Configuration Manager-Client im neuen Betriebssystem installiert und die weitere Ausführung der Tasksequenz im neuen Betriebssystem ermöglicht.  
 
  Dieser Schritt wird nur in Windows PE ausgeführt. Er wird nicht in einem Standardbetriebssystem ausgeführt. Weitere Informationen zu Tasksequenzvariablen für diese Tasksequenzaktion finden Sie unter [Variablen der Tasksequenzaktion „Windows und ConfigMgr einrichten“](task-sequence-action-variables.md#BKMK_SetupWindows).  
 
- Mit der Tasksequenzaktion **Windows und ConfigMgr einrichten** werden sysprep.inf- oder unattend.xml-Verzeichnisvariablen wie %WINDIR% und %ProgramFiles% durch das Windows°PE-Installationsverzeichnis „X:\Windows“ ersetzt. Mit diesen Umgebungsvariablen angegebene Tasksequenzvariablen werden ignoriert.  
+ Mit diesem Schritt werden sysprep.inf- oder unattend.xml-Verzeichnisvariablen wie „%WINDIR%“ und „%ProgramFiles%“ durch das Windows PE-Installationsverzeichnis „X:\Windows“ ersetzt. Die Tasksequenz ignoriert Variablen, die mithilfe dieser Umgebungsvariablen angegeben wurden.  
 
  Verwenden Sie diesen Tasksequenzschritt zur Durchführung der nachstehend beschriebenen Aktionen:  
 
 1.  Vorbereitende Maßnahmen: Windows°PE  
 
-    1.  Ersetzt die Tasksequenzvariable in der Datei „unattend.xml“.  
+    1.  Ersetzt Tasksequenzvariablen in der Datei „unattend.xml“.  
 
-    2.  Das Paket, das den Configuration Manager-Client enthält, wird heruntergeladen und in das bereitgestellte Image eingefügt.  
+    2.  Lädt das Paket herunter, das den Configuration Manager-Client enthält. Fügt das Paket zum bereitgestellten Image hinzu.  
 
 2.  Einrichten von Windows  
 
-    1.  Imagebasierte Installation.  
+    1.  Imagebasierte Installation  
 
-        1.  Der Configuration Manager-Client im Image wird deaktiviert (d.h. der automatische Start für den Configuration Manager-Clientdienst wird deaktiviert).  
+        1.  Deaktivieren Sie den Configuration Manager-Client im Image, falls dieser vorhanden ist. Deaktivieren Sie also den automatischen Start für den Configuration Manager-Clientdienst.  
 
-        2.  Es wird ein Update der Registrierung im bereitgestellten Abbild ausgeführt, um zu sicherzustellen, dass das bereitgestellte Betriebssystem mit demselben Laufwerksbuchstaben gestartet wird wie auf dem Referenzcomputer.  
+        2.  Aktualisieren Sie die Registrierung im bereitgestellten Image, um das bereitgestellte Betriebssystem zu starten, das den gleichen Laufwerkbuchstaben wie der Referenzcomputer besitzt.  
 
-        3.  Es wird ein Neustart im bereitgestellten Betriebssystem ausgeführt.  
+        3.  Führen Sie einen Neustart für das bereitgestellte Betriebssystem aus.  
 
-        4.  Die Windows-Miniinstallation wird unter Verwendung der zuvor angegebenen Datei sysprep.inf oder unattend.xml ausgeführt. Bei diesem Vorgang werden alle Interaktionen mit Endbenutzern unterdrückt. Hinweis: Wenn unter **Netzwerkeinstellungen anwenden** ein Domänenbeitritt angegeben wurde, wird diese Information in der Datei „sysprep.inf“ oder „unattend.xml“ gespeichert, und der Domänenbeitritt erfolgt im Rahmen der Windows-Miniinstallation.  
+        4.  Die Windows-Miniinstallation wird unter Verwendung der zuvor angegebenen Antwortdatei „sysprep.inf“ oder „unattend.xml“ ausgeführt. Bei diesem Vorgang werden alle Interaktionen mit Benutzern unterdrückt. Wenn Sie den Schritt **Netzwerkeinstellungen anwenden** verwenden, um eine Verknüpfung mit einer Domäne zu erstellen, befindet sich diese Information in der Antwortdatei. Die Windows-Miniinstallation verknüpft den Computer mit der Domäne.  
 
     2.  Setup.exe-basierte Installation.  Führt „Setup.exe“ aus. Dieser Vorgang entspricht dem normalen Windows-Installationsprozess:  
 
-        1.  Das zu einem früheren Zeitpunkt in der Tasksequenz **Betriebssystem anwenden** angegebene Betriebssystem wird auf die Festplatte kopiert.  
+        1.  Kopieren Sie das Betriebssystemupgradepaket, das im Schritt **Betriebssystem anwenden** angegeben wurde, auf das Festplattenlaufwerk.  
 
-        2.  Es wird ein Neustart im neu bereitgestellten Betriebssystem ausgeführt.  
+        2.  Führen Sie einen Neustart für das neu bereitgestellte Betriebssystem aus.  
 
-        3.  Die Windows-Miniinstallation wird unter Verwendung der zuvor angegebenen Datei sysprep.inf oder unattend.xml ausgeführt. Bei diesem Vorgang werden alle Einstellungen der Benutzeroberfläche unterdrückt. Hinweis: Wenn unter **Netzwerkeinstellungen anwenden** ein Domänenbeitritt angegeben wurde, wird diese Information in der Datei „sysprep.inf“ oder „unattend.xml“ gespeichert, und der Domänenbeitritt erfolgt im Rahmen der Windows-Miniinstallation.  
+        3.  Die Windows-Miniinstallation wird unter Verwendung der zuvor angegebenen Antwortdatei „sysprep.inf“ oder „unattend.xml“ ausgeführt. Bei diesem Vorgang werden alle Einstellungen der Benutzeroberfläche unterdrückt. Wenn Sie den Schritt **Netzwerkeinstellungen anwenden** verwenden, um eine Verknüpfung mit einer Domäne zu erstellen, befindet sich diese Information in der Antwortdatei. Die Windows-Miniinstallation verknüpft den Computer mit der Domäne.  
 
 3.  Einrichten des Configuration Manager-Clients  
 
     1.  Nachdem die Windows-Miniinstallation abgeschlossen ist, wird die Tasksequenz mithilfe von „setupcomplete.cmd“ fortgesetzt.  
 
-    2.  Das lokale Administratorkonto wird aktiviert oder deaktiviert, je nachdem, welche Option im Schritt **Windows-Einstellungen anwenden** ausgewählt wurde.  
+    2.  Aktivieren oder deaktivieren Sie das lokale Administratorkonto, je nachdem, welche Option im Schritt **Windows-Einstellungen anwenden** ausgewählt wurde.  
 
-    3.  Der Configuration Manager-Client wird mithilfe des zuvor heruntergeladenen Downloadpakets (1.b) und unter Verwendung der im Tasksequenz-Editor angegebenen Installationseigenschaften installiert. Der Client wird im Bereitstellungsmodus installiert, um zu verhindern, dass neue Richtlinienanforderungen verarbeitet werden, bevor die Tasksequenz abgeschlossen ist.  
+    3.  Installieren Sie den Configuration Manager-Client mithilfe des zuvor heruntergeladenen Downloadpakets und der in diesem Schritt angegebenen Installationseigenschaften. Der Client wird im „Bereitstellungsmodus“ installiert, um zu verhindern, dass neue Richtlinienanfragen verarbeitet werden, bevor die Tasksequenz abgeschlossen ist.  
 
-    4.  Wartet, bis der Client voll funktionstüchtig ist.  
+    4.  Warten Sie, bis der Client voll funktionstüchtig ist.  
 
-    5.  Wenn der Computer in einer Umgebung mit aktiviertem Netzwerkzugriffsschutz ausgeführt wird, führt der Client eine Überprüfung auf Updates durch und installiert alle erforderlichen Updates. Damit wird gewährleistet, dass alle erforderlichen Updates vorhanden sind, bevor die Tasksequenz weiter ausgeführt wird.  
+4.  Die Tasksequenz fährt mit der Ausführung des nächsten Schritts fort.  
 
-4.  Die Ausführung der Tasksequenz wird mit dem nächsten Schritt fortgesetzt.  
-
+<!-- Engineering confirmed that the task sequence does nothing with respect to group policy processing.
 > [!NOTE]  
->  Die Tasksequenzaktion **Windows und ConfigMgr einrichten** ist für die Ausführung des Tools „Gruppenrichtlinie“ auf dem neu installierten Computer verantwortlich. Die Gruppenrichtlinie wird nach Abschluss der Tasksequenz angewendet.  
+>  The **Setup Windows and ConfigMgr** task sequence action is responsible for running Group Policy on the newly installed computer. The Group Policy is applied after the task sequence is finished.  
+-->
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Images** > **Windows und ConfigMgr einrichten**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
-
--   Schritt deaktivieren  
-
--   Wählen Sie nicht aus, dass die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt. Bei einem Fehler wird die Tasksequenz nicht ausgeführt, und zwar unabhängig davon, ob Sie diese Einstellung auswählen oder nicht.  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Gibt einen kurzen benutzerdefinierten Namen an, der die in diesem Schritt vorgenommene Aktion beschreibt.  
-
- **Beschreibung**  
- Gibt zusätzliche Informationen zu der in diesem Schritt ausgeführten Aktion an.  
+### <a name="properties"></a>Eigenschaften  
+ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
  **Clientpaket**  
- Gibt das Configuration Manager-Clientinstallationspaket an, das von diesem Tasksequenzschritt verwendet wird. Klicken Sie auf **Durchsuchen**, und wählen Sie das Clientinstallationspaket aus, das Sie zum Installieren des Configuration Manager-Clients verwenden möchten.  
+ Klicken Sie auf **Durchsuchen**, und wählen Sie dann das Installationspaket für den Konfigurations-Manager-Client aus, das in diesem Schritt verwendet werden soll.  
 
  **Clientpaket vor der Produktion verwenden, wenn verfügbar**  
- Gibt an, dass im Tasksequenzschritt bei Verfügbarkeit eines Präproduktionsclient-Pakets dieses Paket anstelle des Produktionsclientpakets verwendet wird. Der Präproduktionsclient ist normalerweise eine neuere Version, die in der Produktionsumgebung getestet wird. Klicken Sie auf **Durchsuchen**, und wählen Sie das Präproduktions-Clientinstallationspaket aus, das Sie zum Installieren des Configuration Manager-Clients verwenden möchten.  
+ Wenn ein Präproduktions-Clientpaket verfügbar ist, verwendet die Tasksequenz dieses Paket statt dem Produktionsclientpaket. Bei einem Präproduktionsclient handelt es sich um eine neuere Version für das Testen in der Produktionsumgebung. Klicken Sie auf **Durchsuchen**, und wählen Sie dann das Präproduktions-Clientpaket aus, das in diesem Schritt verwendet werden soll.  
 
  **Installationseigenschaften**  
  Die Standortzuweisung und die Standardkonfiguration werden von der Tasksequenzaktion automatisch angegeben. Sie können in diesem Feld zusätzliche Installationseigenschaften angeben, die bei der Installation des Clients verwendet werden sollen. Wenn sie mehrere Installationseigenschaften eingeben möchten, müssen Sie sie durch ein Leerzeichen trennen.  
 
  Sie können Befehlszeilenoptionen angeben, die während der Clientinstallation verwendet werden sollen. Sie können beispielsweise **/skipprereq: silverlight.exe** eingeben, um „CCMSetup.exe“ anzuweisen, die erforderliche Komponente Microsoft Silverlight nicht zu installieren. Weitere Informationen zu diesen Befehlszeileneigenschaften für CCMSetup.exe finden Sie unter [Informationen zu Clientinstallationseigenschaften](../../core/clients/deploy/about-client-installation-properties.md).  
 
+### <a name="options"></a>Optionen
+> [!NOTE]
+> Aktivieren Sie auf der Registerkarte **Optionen** nicht **Bei Fehler fortsetzen**. Wenn während dieses Schritts ein Fehler auftritt, schlägt die Tasksequenz unabhängig davon fehl, ob diese Einstellung aktiviert ist.
+
+
+
 ##  <a name="BKMK_UpgradeOS"></a> Betriebssystem aktualisieren  
- Verwenden Sie den Tasksequenzschritt **Betriebssystem aktualisieren** zum Aktualisieren eines vorhandenen Windows 7-, Windows 8-, Windows 8.1- oder Windows 10-Betriebssystems auf Windows 10.  
+ > [!TIP]  
+ > Ab Windows 10 (Version 1709) enthalten Medien mehrere Editionen. Wenn Sie eine Tasksequenz konfigurieren, um ein Betriebssystemupgradepaket oder ein Betriebssystemimage zu verwenden, achten Sie darauf, eine [unterstützte Edition](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client) auszuwählen.
+
+ Verwenden Sie diesen Schritt, um ein Upgrade einer älteren Version von Windows auf eine neuere Version von Windows 10 durchzuführen.  
 
  Dieser Tasksequenzschritt wird nur in einem Standardbetriebssystem ausgeführt. Er wird nicht in Windows PE ausgeführt.  
 
-### <a name="details"></a>Details  
- Die in diesem Abschnitt beschriebenen Einstellungen können Sie auf der Registerkarte **Eigenschaften** für diesen Schritt konfigurieren.  
+Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Images** > **Betriebssystem aktualisieren**, um diesen Schritt hinzuzufügen. 
 
- Verwenden Sie zudem die Registerkarte **Optionen** für die folgenden Aktionen:  
+### <a name="properties"></a>Eigenschaften  
+Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Registerkarte **Eigenschaften** für diesen Schritt.  
 
--   Schritt deaktivieren  
-
--   Angeben, ob die Tasksequenz fortgesetzt wird, wenn während der Ausführung dieses Schritts ein Fehler auftritt  
-
--   Bedingungen angeben, die für die Ausführung dieses Schritts erfüllt sein müssen  
-
- **Name**  
- Ein kurzer benutzerdefinierter Name, der die in diesem Schritt ausgeführte Aktion beschreibt.  
-
- **Beschreibung**  
- Ausführlichere Informationen zu der in diesem Schritt ausgeführten Aktion.  
-
- **Upgradepaket**  
+**Upgradepaket**  
  Wählen Sie diese Option aus, um das für das Upgrade zu verwendende Windows 10-Betriebssystemupgradepaket anzugeben.  
 
- **Quellpfad**  
- Gibt einen lokalen oder Netzwerkpfad zu den zu verwendenden Windows 10-Medien an (entspricht der Befehlszeilenoption „/installFrom“). Sie können auch eine Variable angeben, z. B. %mycontentpath% oder %DPC01%. Wenn Sie eine Variable als Quellpfad verwenden, muss diese zuvor in der Tasksequenz festgelegt werden. Wenn Sie beispielsweise den Schritt [Paketinhalt herunterladen](#BKMK_DownloadPackageContent) in der Tasksequenz verwenden, können Sie eine Variable für den Speicherort des Betriebssystemupgradepakets festlegen. Anschließend können Sie die Variable in diesem Schritt als Quellpfad verwenden.  
+**Quellpfad**  
+ Gibt einen lokalen Pfad oder einen Netzwerkpfad für die Windows 10-Medien an, die Windows Setup verwendet. Diese Einstellung entspricht der Windows Setup-Befehlszeilenoption **/InstallFrom**. Sie können auch eine Variable angeben, z. B. %mycontentpath% oder %DPC01%. Wenn Sie eine Variable als Quellpfad verwenden, muss diese zuvor in der Tasksequenz festgelegt werden. Wenn Sie beispielsweise den Schritt [Paketinhalt herunterladen](#BKMK_DownloadPackageContent) in der Tasksequenz verwenden, können Sie eine Variable für den Speicherort des Betriebssystemupgradepakets festlegen. Anschließend können Sie die Variable in diesem Schritt als Quellpfad verwenden.  
 
- **Edition**  
+**Edition**  
  Geben Sie die für das Upgrade zu verwendende Edition in den Betriebssystemmedien an.  
 
- **Product Key**  
+**Product Key**  
  Geben Sie den auf den Upgradeprozess anzuwendenden Product Key an.  
 
- **Folgenden Treiberinhalt während des Upgrades für Windows Setup bereitstellen**  
- Wählen Sie diese Einstellung aus, um während des Upgradeprozesses Treiber zum Zielcomputer hinzuzufügen (entspricht der Befehlszeilenoption „/InstallDriver“). Die Treiber müssen mit Windows 10 kompatibel sein. Geben Sie eine der folgenden Optionen an:  
+**Folgenden Treiberinhalt während des Upgrades für Windows Setup bereitstellen**  
+ Fügt während des Upgradevorgangs Treiber auf dem Zielcomputer hinzu. Diese Einstellung entspricht der Windows Setup-Befehlszeilenoption **/InstallDriver**. Die Treiber müssen mit Windows 10 kompatibel sein. Geben Sie eine der folgenden Optionen an:  
 
 -   **Treiberpaket**: Klicken Sie auf **Durchsuchen** , und wählen Sie ein vorhandenes Treiberpaket aus der Liste aus.  
 
 -   **Bereitgestellter Inhalt**: Wählen Sie diese Option, um den Speicherort für das Treiberpaket anzugeben. Sie können einen lokalen Ordner, einen Netzwerkpfad oder eine Tasksequenzvariable angeben. Wenn Sie eine Variable als Quellpfad verwenden, muss diese zuvor in der Tasksequenz festgelegt werden. Zum Beispiel mithilfe des Schritts [Download Package Content](task-sequence-steps.md#BKMK_DownloadPackageContent) .  
 
- **Timeout (Minuten)**  
- Gibt an, wie lange Setup ausgeführt werden muss (in Minuten), bevor Configuration Manager für den Tasksequenzschritt einen Fehler ausgibt.  
+**Timeout (Minuten)**  
+ Gibt die Anzahl von Minuten an, bevor Configuration Manager diesen Schritt als fehlgeschlagen wertet. Diese Option ist nützlich, wenn Windows Setup die Verarbeitung nicht mehr fortsetzt, aber nicht beendet wird.  
 
- **Kompatibilitätsprüfung für Windows Setup ausführen, ohne Upgrade zu starten**  
- Gibt an, dass die Windows Setup-Kompatibilitätsüberprüfung ohne Starten des Upgradeprozesses ausgeführt werden soll (entspricht der Befehlszeilenoption „/Compat ScanOnly“). Wenn Sie diese Option verwenden, müssen Sie trotzdem die gesamte Installationsquelle bereitstellen. Setup gibt als Ergebnis der Überprüfung einen Exitcode zurück. Die folgende Tabelle enthält einige der häufigeren Exitcodes.  
+**Kompatibilitätsprüfung für Windows Setup ausführen, ohne Upgrade zu starten**  
+ Führt die Kompatibilitätsprüfung für Windows Setup durch, ohne den Upgradevorgang zu starten. Diese Einstellung entspricht der Windows Setup-Befehlszeilenoption **/Compat ScanOnly**. Wenn Sie diese Option verwenden, müssen Sie die gesamte Installationsquelle bereitstellen. Setup gibt als Ergebnis der Überprüfung einen Exitcode zurück. Die folgende Tabelle enthält einige der häufigeren Exitcodes.  
 
 |Exitcode|Details|  
 |-|-|  
@@ -1665,12 +1372,12 @@ Verwenden Sie im Tasksequenz-Editor den Schritt [Tasksequenzvariable festlegen](
 |MOSETUP_E_COMPAT_SYSREQ_BLOCK (0xC1900200)|Nicht für Windows 10 geeignet.|  
 |MOSETUP_E_COMPAT_INSTALLDISKSPACE_BLOCK (0xC190020E)|Nicht genügend freier Speicherplatz.|  
 
- Weitere Informationen zu diesem Parameter finden Sie unter [Windows Setup-Befehlszeilenoptionen](https://msdn.microsoft.com/library/windows/hardware/dn938368\(v=vs.85\).aspx).  
+Weitere Informationen zu diesem Parameter finden Sie unter [Windows Setup-Befehlszeilenoptionen](https://msdn.microsoft.com/library/windows/hardware/dn938368\(v=vs.85\).aspx).  
 
- **Alle ablehnbaren Kompatibilitätsmeldungen ignorieren**  
- Gibt an, dass Setup die Installation abschließt und dabei alle vernachlässigbaren Kompatibilitätsmeldungen ignoriert (entspricht der Befehlszeilenoption „/Compat IgnoreWarning“).  
+**Alle ablehnbaren Kompatibilitätsmeldungen ignorieren**  
+ Gibt an, dass das Setup die Installation abschließt und dabei alle vernachlässigbaren Kompatibilitätsmeldungen ignoriert. Diese Einstellung entspricht der Windows Setup-Befehlszeilenoption **/Compat IgnoreWarning**.  
 
- **Windows Setup dynamisch mit Windows Update aktualisieren**  
- Gibt an, ob Setup dynamische Updatevorgänge durchführt, z. B. Suchen, Herunterladen und Installieren von Updates (entspricht der Befehlszeilenoption „/DynamicUpdate“). Diese Einstellung ist nicht kompatibel mit Configuration Manager-Softwareupdates, kann aber aktiviert werden, wenn Sie Updates mit WSUS (eigenständig) oder Windows Update verarbeiten.  
+**Windows Setup dynamisch mit Windows Update aktualisieren**  
+ Ermöglicht, dass das Setup dynamische Updatevorgänge durchführt, z.B. das Suchen, Herunterladen und Installieren von Updates. Diese Einstellung entspricht der Windows Setup-Befehlszeilenoption **/DynamicUpdate**. Diese Einstellung ist nicht kompatibel mit den Softwareupdates in Configuration Manager. Aktivieren Sie diese Option, wenn Sie Updates mit eigenständigen Versionen von Windows Server Update Services (WSUS) oder Windows Update for Business verwalten.  
 
- **Richtlinie überschreiben und standardmäßiges Microsoft Update verwenden**: Wenn Sie diese Einstellung auswählen, wird die lokale Richtlinie vorübergehend in Echtzeit außer Kraft gesetzt, um dynamische Updatevorgänge auszuführen und den Computer Updates von Windows Update abrufen zu lassen.  
+**Richtlinie überschreiben und Standard-Microsoft Update verwenden:** Die lokale Richtlinie wird vorübergehend in Echtzeit außer Kraft gesetzt, um dynamische Updatevorgänge auszuführen und den Computer Updates von Windows Update abrufen zu lassen.

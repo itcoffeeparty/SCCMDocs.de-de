@@ -7,26 +7,27 @@ ms.date: 03/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-osd
+ms.technology:
+- configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da1e687b-28f6-43c4-b14a-ff2b76e60d24
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 3848d0d6a9f3b5d778879c598bf859fb1e8a7ac7
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+ms.openlocfilehash: a67d75f27cbc2d53cc5d8c418e25232d88b4f067
+ms.sourcegitcommit: db9978135d7a6455d83dbe4a5175af2bdeaeafd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>Verwalten von Windows als Dienst mit System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 
- In System Center Configuration Manager können Sie den Zustand von Windows as a Service in Ihrer Umgebung anzeigen, Wartungspläne zur Bildung von Bereitstellungsringen erstellen und sicherstellen, dass Windows 10 Current Branch-Systeme auf dem neuesten Stand gehalten werden, wenn neue Builds veröffentlicht werden. Außerdem können Sie Warnungen anzeigen, wenn sich Windows 10-Clients dem Ende des Supports für ihren Build von Current Branch oder von Current Branch for Business (CBB) nähern.  
+ In System Center Configuration Manager können Sie den Zustand von Windows-as-a-Service in Ihrer Umgebung anzeigen, Wartungspläne zur Bildung von Bereitstellungsringen erstellen und sicherstellen, dass Windows 10 Current Branch-Systeme auf dem neuesten Stand gehalten werden, wenn neue Builds veröffentlicht werden. Außerdem können Sie Warnungen anzeigen, wenn sich Windows 10-Clients dem Ende des Supports für ihren Build von Current Branch oder von Current Branch for Business (CBB) nähern.  
 
  Weitere Informationen zu den Windows 10-Wartungsoptionen finden Sie unter  [Windows 10-Wartungsoptionen für Updates und Upgrades](https://technet.microsoft.com/library/mt598226\(v=vs.85\).aspx).  
 
@@ -50,7 +51,7 @@ ms.lasthandoff: 12/12/2017
     -   **Betriebssystembuild**: Gibt den Betriebssystembuild an. Beispiel: **10.0.10240** (RTM) oder **10.0.10586** (Version 1511)  
 
 -   Der Dienstverbindungspunkt muss installiert und für den Modus **Online, dauerhafte Verbindung** konfiguriert werden, um Daten im Windows 10-Wartungsdashboard anzuzeigen. Wenn Sie im Offlinemodus arbeiten, werden Datenaktualisierungen erst dann im Dashboard angezeigt, wenn Sie Configuration Manager-Wartungsupdates erhalten.   
-     Weitere Informationen finden Sie unter [About the service connection point (Informationen zum Dienstverbindungspunkt)](../../core/servers/deploy/configure/about-the-service-connection-point.md).  
+      Weitere Informationen finden Sie unter [About the service connection point (Informationen zum Dienstverbindungspunkt)](../../core/servers/deploy/configure/about-the-service-connection-point.md).  
 
 
 -   Auf dem Computer, auf dem die Configuration Manager-Konsole ausgeführt wird, muss Internet Explorer 9 installiert sein.  
@@ -280,3 +281,6 @@ Wenden Sie das folgende Verfahren an, um die Eigenschaften eines Wartungsplans z
 
     > [!NOTE]  
     >  Sie können die letzten Warnungen zu Softwareupdates im Arbeitsbereich **Softwarebibliothek** im Knoten **Softwareupdates** prüfen.  
+
+**Weitere Informationen:** <br/>
+[Grundlagen zu Configuration Manager-as-a-Service und Windows-as-a-Service](/sccm/core/understand/configuration-manager-and-windows-as-service.md)

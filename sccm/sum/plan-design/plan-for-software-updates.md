@@ -10,13 +10,14 @@ ms.date: 06/27/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology: configmgr-sum
+ms.technology:
+- configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: e111d5abf263a90ac020aca863d495cb717154db
-ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
+ms.openlocfilehash: e36048141400097950a7c24733f382acacb73131
+ms.sourcegitcommit: db9978135d7a6455d83dbe4a5175af2bdeaeafd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="plan-for-software-updates-in-system-center-configuration-manager"></a>Planen von Softwareupdates in System Center Configuration Manager
 
@@ -25,7 +26,7 @@ ms.lasthandoff: 11/17/2017
 Bevor Sie Softwareupdates in einer System Center Configuration Manager-Produktionsumgebung verwenden, ist es wichtig, den Planungsprozess durchzugehen. Einen guter Plan für die Softwareupdatepunkt-Infrastruktur ist wichtig für eine erfolgreiche Softwareupdateimplementierung.
 
 ## <a name="capacity-planning-recommendations-for-software-updates"></a>Empfehlungen für die Kapazitätsplanung bei Softwareupdates  
- Die folgenden Empfehlungen können bei der Ermittlung der für Ihre Organisation geeigneten Informationen zur Kapazitätsplanung für Softwareupdates als Basislinie dienen. Die tatsächlichen Kapazitätsanforderungen können je nach der konkreten Netzwerkumgebung, der zum Hosten des Standortsystems für den Softwareupdatepunkt verwendeten Hardware, der Anzahl installierter Clients und der auf dem Server installierten Standortsystemrollen von den in diesem Thema aufgeführten Empfehlungen abweichen.  
+ Die folgenden Empfehlungen können bei der Ermittlung der für Ihre Organisation geeigneten Informationen zur Kapazitätsplanung für Softwareupdates als Basislinie dienen. Die tatsächlichen Kapazitätsanforderungen können je nach der konkreten Netzwerkumgebung, der zum Hosten des Standortsystems für den Softwareupdatepunkt verwendeten Hardware, der Anzahl installierter Clients und der auf dem Server installierten Standortsystemrollen von den in diesem Artikel aufgeführten Empfehlungen abweichen.  
 
 ###  <a name="BKMK_SUMCapacity"></a> Kapazitätsplanung für den Softwareupdatepunkt  
  Die Anzahl der unterstützten Clients hängt von der WSUS-Version (Windows Server Update Services), die auf dem Softwareupdatepunkt ausgeführt wird, sowie davon ab, ob neben der Standortsystemrolle „Softwareupdatepunkt“ noch eine weitere Standortsystemrolle existiert:  
@@ -40,7 +41,7 @@ Bevor Sie Softwareupdates in einer System Center Configuration Manager-Produktio
 
     Ausführliche Informationen zu den Hardwareanforderungen für den Softwareupdatepunkt finden Sie unter [Empfohlene Hardware für Standortsysteme](/sccm/core/plan-design/configs/recommended-hardware#a-namebkmkscalesiesystemsa-site-systems).
 
--   Die Konfiguration von Softwareupdatepunkten als NLB-Cluster wird nicht standardmäßig von Configuration Manager unterstützt. Vor Configuration Manager Version 1702 konnten Sie das Configuration Manager SDK verwenden, um bis zu vier Softwareupdatepunkte in einem NLB-Cluster zu konfigurieren. Allerdings werden ab Version 1702 des Configuration Manager Softwareupdatepunkte als NLB-Cluster nicht unterstützt, und Upgrades auf Configuration Manager Version 1702 werden blockiert, wenn diese Konfiguration erkannt wird.
+-   Die Konfiguration von Softwareupdatepunkten als NLB-Cluster wird nicht standardmäßig von Configuration Manager unterstützt. Vor Configuration Manager-Version 1702 konnten Sie das Configuration Manager SDK verwenden, um bis zu vier Softwareupdatepunkte in einem NLB-Cluster zu konfigurieren. Allerdings werden ab Version 1702 des Configuration Manager Softwareupdatepunkte als NLB-Cluster nicht unterstützt, und Upgrades auf Configuration Manager Version 1702 werden blockiert, wenn diese Konfiguration erkannt wird.
 
 ### <a name="capacity-planning-for-software-updates-objects"></a>Kapazitätsplanung für Softwareupdateobjekte  
  Verwenden Sie die folgenden Kapazitätsinformationen zur Planung von Softwareupdateobjekten.  
@@ -52,7 +53,7 @@ Bevor Sie Softwareupdates in einer System Center Configuration Manager-Produktio
      Sie müssen auch die Anzahl von Softwareupdates in einer Konfigurationsbaseline auf 1.000 begrenzen. Weitere Informationen finden Sie unter [Erstellen von Konfigurationsbaselines](../../compliance/deploy-use/create-configuration-baselines.md).
 
 ##  <a name="BKMK_SUPInfrastructure"></a> Bestimmen der Softwareupdatepunkt-Infrastruktur  
- Der Standort der zentralen Verwaltung und alle untergeordneten primären Standorte müssen über einen Softwareupdatepunkt verfügen, an dem Softwareupdates bereitgestellt werden Beim Planen der Infrastruktur von Softwareupdatepunkten müssen Sie die folgenden Abhängigkeiten festlegen:
+ Der Standort der zentralen Verwaltung und alle untergeordneten primären Standorte müssen über einen Softwareupdatepunkt verfügen, an dem Softwareupdates bereitgestellt werden. Beim Planen der Infrastruktur von Softwareupdatepunkten müssen Sie die folgenden Abhängigkeiten festlegen:
  - wo der Softwareupdatepunkt des Standorts installiert werden soll
  - welche Standorte einen Softwareupdatepunkt erfordern, der Kommunikation von internetbasierten Clients akzeptiert
  - ob Sie einen Softwareupdatepunkt an einem sekundären Standort benötigen.
@@ -77,7 +78,7 @@ Verwenden Sie die folgenden Abschnitte, um die Infrastruktur der Softwareupdatep
 
 ###  <a name="BKMK_SUPSwitching"></a> Wechseln des Softwareupdatepunkts  
 > [!NOTE]
-> Ab Version 1702 verwenden Client Begrenzungsgruppen, um einen neuen Softwareupdatepunkt zu finden, und um ein Fallback durchzuführen und einen neuen Softwareupdatepunkt zu finden, wenn auf ihren aktuellen nicht mehr zugriffen werden kann. Sie können verschiedenen Begrenzungsgruppen einzelne Softwareupdatepunkte hinzufügen, um zu steuern, welchen Server ein Client finden kann. Weitere Informationen finden Sie im Thema [Configuring Boundary Groups (Konfigurieren von Begrenzungsgruppen)](/sccm/core/servers/deploy/configure/boundary-groups) unter [Software Update Points (Softwareupdatepunkte)](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points).
+> Ab Version 1702 verwenden Client Begrenzungsgruppen, um einen neuen Softwareupdatepunkt zu finden, und um ein Fallback durchzuführen und einen neuen Softwareupdatepunkt zu finden, wenn auf ihren aktuellen nicht mehr zugriffen werden kann. Sie können verschiedenen Begrenzungsgruppen einzelne Softwareupdatepunkte hinzufügen, um zu steuern, welchen Server ein Client finden kann. Weitere Informationen finden Sie in dem Artikel [Konfigurieren von Begrenzungsgruppen](/sccm/core/servers/deploy/configure/boundary-groups) unter [Softwareupdatepunkte](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points).
 
 Wenn es an einem Standort mehrere Softwareupdatepunkte gibt und einer davon fehlerhaft oder nicht mehr verfügbar ist, wird von Clients eine Verbindung mit einem anderen Softwareupdatepunkt hergestellt und die Überprüfung auf die jüngsten Softwareupdates dort fortgesetzt. Die ursprüngliche Zuweisung eines Clients zu einem Softwareupdatepunkt bleibt solange bestehen, bis bei der Überprüfung dieses Softwareupdatepunkts auf Softwareupdates ein Fehler auftritt.  
 
@@ -97,7 +98,7 @@ Bei der Überprüfung auf Softwareupdates kann eine Reihe unterschiedlicher Wied
 
 -   Wenn der Überprüfungsprozess gestartet, aber der Client vor dessen Abschluss heruntergefahren wurde, gilt dies weder als Überprüfungsfehler noch als eine der vier Wiederholungen.  
 
-Wenn Configuration Manager die folgenden Fehlercodes des Windows Update-Agents erhält, muss der Client den Verbindungsaufbau wiederholen:  
+Wenn Configuration Manager einen der folgenden Fehlercodes des Windows Update-Agents erhält, muss der Client den Verbindungsaufbau wiederholen:  
 
 2149842970, 2147954429, 2149859352, 2149859362, 2149859338, 2149859344, 2147954430, 2147747475, 2149842974, 2149859342, 2149859372, 2149859341, 2149904388, 2149859371, 2149859367, 2149859366, 2149859364, 2149859363, 2149859361, 2149859360, 2149859359, 2149859358, 2149859357, 2149859356, 2149859354, 2149859353, 2149859350, 2149859349, 2149859340, 2149859339, 2149859332, 2149859333, 2149859334, 2149859337, 2149859336, 2149859335
 
@@ -110,7 +111,7 @@ Ab Version 1606 von Configuration Manager können Sie für Configuration Manager
 > [!IMPORTANT]    
 > Wenn Sie die Geräte wechseln, um einen neuen Server zu verwenden, verwenden die Geräte einen Fallback, um den neuen Server zu finden. Deshalb sollten Sie vor diesem Wechsel die Konfigurationen Ihrer Begrenzungsgruppen überprüfen und sicherstellen, dass sich Ihre Softwareupdatepunkte in den korrekten Begrenzungsgruppen befinden. Weitere Informationen finden Sie unter [Software update points (Softwareupdatepunkte)](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points).
 >
-> Der Wechsel zu einem neuen Softwareupdatepunkt wird zusätzlichen Netzwerkdatenverkehr generieren. Die Größe des Datenverkehrs hängt von Ihren WSUS-Konfigurationseinstellungen ab (Updateklassifizierungen, Produkte, ob die Softwareupdatepunkte eine gemeinsame WSUS-Datenbank verwenden usw.). Wenn Sie mehrere Geräte wechseln möchten, sollten Sie dies während der Wartung von Windows tun, um die Auswirkungen auf Ihr Netzwerk während der Synchronisation mit dem neuen Softwareupdatepunkt-Server zu reduzieren.
+> Der Wechsel zu einem neuen Softwareupdatepunkt generiert zusätzlichen Netzwerkdatenverkehr. Die Größe des Datenverkehrs hängt von Ihren WSUS-Konfigurationseinstellungen ab (Updateklassifizierungen, Produkte, ob die Softwareupdatepunkte eine gemeinsame WSUS-Datenbank verwenden usw.). Wenn Sie mehrere Geräte wechseln möchten, sollten Sie dies während der Wartung von Windows tun, um die Auswirkungen auf Ihr Netzwerk während der Synchronisation mit dem neuen Softwareupdatepunkt-Server zu reduzieren.
 
 #### <a name="to-enable-the-option-to-switch-software-update-points"></a>So aktivieren Sie die Option zum Wechseln von Softwareupdatepunkten  
 Aktivieren Sie diese Option auf einer Gerätesammlung oder auf einer Reihe von Geräten. Nach der Aktivierung suchen die Clients nach anderen Softwareupdatepunkten bei der nächsten Überprüfung.
@@ -176,12 +177,12 @@ Für Softwareupdates ist es erforderlich, dass eine unterstützte Version von WS
 ####  <a name="BKMK_WSUSandSSL"></a> Entscheiden, ob WSUS zur Verwendung von SSL konfiguriert werden soll  
  Zum Schutz von WSUS auf dem Softwareupdatepunkt können Sie das SSL-Protokoll verwenden. SSL wird von WSUS zur Authentifizierung von Clientcomputern und WSUS-Downstreamservern gegenüber dem WSUS-Server verwendet. SSL wird von WSUS auch zum Verschlüsseln von Metadaten für Softwareupdates verwendet. Wenn Sie sich dafür entscheiden, WSUS durch SSL zu schützen, müssen Sie den WSUS-Server vor der Installation des Softwareupdatepunkts entsprechend vorbereiten.  
 
- Beim Installieren und Konfigurieren des Softwareupdatepunkts müssen Sie die Einstellung **SSL-Kommunikation mit dem WSUS-Server erforderlich** auswählen. Andernfalls wird Configuration Manager WSUS nicht zur Verwendung von SSL konfigurieren. Wenn Sie SSL für WSUS auf einem Softwareupdatepunkt aktivieren, muss WSUS auf den Softwareupdatepunkten an allen untergeordneten Standorten ebenfalls zur Verwendung von SSL konfiguriert werden.  
+ Beim Installieren und Konfigurieren des Softwareupdatepunkts müssen Sie die Einstellung **SSL-Kommunikation mit dem WSUS-Server erforderlich** auswählen. Andernfalls konfiguriert Configuration Manager WSUS nicht zur Verwendung von SSL. Wenn Sie SSL für WSUS auf einem Softwareupdatepunkt aktivieren, muss WSUS auf den Softwareupdatepunkten an allen untergeordneten Standorten ebenfalls zur Verwendung von SSL konfiguriert werden.  
 
 ###  <a name="BKMK_ConfigureFirewalls"></a> Konfigurieren von Firewalls  
  Zwischen Softwareupdates an einem Configuration Manager-Standort der zentralen Verwaltung und WSUS auf dem Softwareupdatepunkt sowie zwischen WSUS und der Synchronisierungsquelle findet eine Kommunikation statt, um Metadaten für Softwareupdates zu synchronisieren. Softwareupdatepunkte an einem untergeordneten Standort und der Softwareupdatepunkt am übergeordneten Standort kommunizieren miteinander. Wenn es an einem primären Standort mehrere Softwareupdatepunkte gibt, muss zwischen dem ersten am Standort installierten Softwareupdatepunkt (dem Standard-Softwareupdatepunkt) und den zusätzlichen Softwareupdatepunkten eine Kommunikation stattfinden.  
 
- Unter den folgenden Umständen muss die Firewall möglicherweise so konfiguriert werden, dass die von WSUS verwendeten HTTP- bzw. HTTPS-Ports zugelassen werden: wenn sich zwischen dem Configuration Manager-Softwareupdatepunkt und dem Internet eine Unternehmensfirewall befindet, wenn es einen Softwareupdatepunkt und eine zugehörige Upstreamsynchronisierungsquelle gibt, oder wenn es zusätzliche Softwareupdatepunkte gibt. Die Verbindung mit Microsoft Update ist immer für die Verwendung von Port 80 für HTTP und von Port 443 für HTTPS konfiguriert. Für die Verbindung zwischen WSUS auf dem Softwareupdatepunkt an einem untergeordneten Standort und WSUS auf dem Softwareupdatepunkt am übergeordneten Standort können Sie einen benutzerdefinierten Port verwenden. Wenn die Verbindung aufgrund ihrer Sicherheitsrichtlinie nicht möglich ist, müssen Sie die Export-/Import-Synchronisierungsmethode verwenden. Weitere Informationen finden Sie im Abschnitt [Synchronisierungsquelle](#BKMK_SyncSource) in diesem Thema. Weitere Informationen zu den Ports, die von WSUS verwendet werden, finden Sie unter [Bestimmen der Porteinstellungen für WSUS in System Center Configuration Manager](../get-started/install-a-software-update-point.md#wsus-settings).  
+ Unter den folgenden Umständen muss die Firewall möglicherweise so konfiguriert werden, dass die von WSUS verwendeten HTTP- bzw. HTTPS-Ports zugelassen werden: wenn sich zwischen dem Configuration Manager-Softwareupdatepunkt und dem Internet eine Unternehmensfirewall befindet, wenn es einen Softwareupdatepunkt und eine zugehörige Upstreamsynchronisierungsquelle gibt, oder wenn es zusätzliche Softwareupdatepunkte gibt. Die Verbindung mit Microsoft Update ist immer für die Verwendung von Port 80 für HTTP und von Port 443 für HTTPS konfiguriert. Für die Verbindung zwischen WSUS auf dem Softwareupdatepunkt an einem untergeordneten Standort und WSUS auf dem Softwareupdatepunkt am übergeordneten Standort können Sie einen benutzerdefinierten Port verwenden. Wenn die Verbindung aufgrund ihrer Sicherheitsrichtlinie nicht möglich ist, müssen Sie die Export-/Import-Synchronisierungsmethode verwenden. Weitere Informationen finden Sie im Abschnitt [Synchronisierungsquelle](#BKMK_SyncSource) in diesem Artikel. Weitere Informationen zu den Ports, die von WSUS verwendet werden, finden Sie unter [Bestimmen der Porteinstellungen für WSUS in System Center Configuration Manager](../get-started/install-a-software-update-point.md#wsus-settings).  
 
 #### <a name="restrict-access-to-specific-domains"></a>Einschränken des Zugriffs auf bestimmte Domänen  
  Wenn es in Ihrer Organisation nicht zulässig ist, dass die Ports und Protokolle für alle Adressen der Firewall zwischen dem aktiven Softwareupdatepunkt und dem Internet offen sind, können Sie den Zugriff auf die folgenden Domänen beschränken, damit von WSUS und „Automatische Updates“ eine Verbindung mit Microsoft Update hergestellt werden kann:  
@@ -295,7 +296,7 @@ Für Softwareupdates ist es erforderlich, dass eine unterstützte Version von WS
 -   Die Bereitstellung eines ablösenden Softwareupdates wurde in Ihrer Produktionsumgebung nicht genehmigt.  
 
     > [!NOTE]  
-    > Wenn Configuration Manager ein abgelöstes Softwareupdate auf **Expired** (Abgelaufen) festlegt, wird das Update in WSUS nicht auf **Declined** (Abgelehnt) festgelegt. Wenn die WSUS-Bereinigungsaufgabe ausgeführt wird, werden jedoch die Updates, die in Configuration Manager auf **Expired** (Abgelaufen) festgelegt sind, auf dem WSUS-Server auf **Declined** (Abgelehnt) festgelegt. Dies führt dazu, dass der Windows Update-Agent auf Computern nicht mehr nach diesen Updates sucht. Dies bedeutet, dass Clients so lange nach einem abgelaufenen Update suchen, bis die Bereinigungsaufgabe ausgeführt wurde. Informationen zur WSUS-Bereinigungsaufgabe finden Sie unter [Wartung für Softwareupdates](/sccm/sum/deploy-use/software-updates-maintenance).
+    > Wenn Configuration Manager ein abgelöstes Softwareupdate auf **Expired** (Abgelaufen) festlegt, wird das Update in WSUS nicht auf **Declined** (Abgelehnt) festgelegt. Wenn die WSUS-Bereinigungsaufgabe ausgeführt wird, werden jedoch die Updates, die in Configuration Manager auf **Expired** (Abgelaufen) festgelegt sind, auf dem WSUS-Server auf **Declined** (Abgelehnt) festgelegt. Dies führt dazu, dass der Windows Update-Agent auf Computern nicht mehr nach diesen Updates sucht. Das bedeutet, dass Clients so lange nach einem abgelaufenen Update suchen, bis die Bereinigungsaufgabe ausgeführt wurde. Informationen zur WSUS-Bereinigungsaufgabe finden Sie unter [Wartung für Softwareupdates](/sccm/sum/deploy-use/software-updates-maintenance).
 
 ###  <a name="BKMK_UpdateLanguages"></a> Sprachen  
  Über die Spracheinstellungen für den Softwareupdatepunkt können Sie die Sprachen konfigurieren, für die die Übersichtsdetails (Softwareupdate-Metadaten) für Softwareupdates synchronisiert werden sollen, und die Sprachen, in denen die Softwareupdatedateien heruntergeladen werden sollen.  
@@ -317,11 +318,15 @@ Für Softwareupdates ist es erforderlich, dass eine unterstützte Version von WS
  Sie können ein für die Installation von Softwareupdates reserviertes Wartungsfenster hinzufügen. Dadurch können Sie ein allgemeines Wartungsfenster und ein anderes Wartungsfenster für Softwareupdates konfigurieren. Wenn ein allgemeines Wartungsfenster und ein Wartungsfenster für Softwareupdates konfiguriert sind, werden Softwareupdates auf Clients nur während des Wartungsfensters für Softwareupdates installiert. Weitere Informationen zu Wartungsfenstern finden Sie unter [Verwenden von Wartungsfenstern](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
 ##  <a name="BKMK_RestartOptions"></a> Neustartoptionen für Windows 10-Clients nach der Installation von Softwareupdates
-Wenn ein Softwareupdate, das einen Neustart benötigt, mit Configuration Manager bereitgestellt und auf einem Computer installiert wird, wird ein ausstehender Neustart geplant, und das Neustartdialogfeld wird angezeigt.
+Wenn ein Softwareupdate, das einen Neustart benötigt, mit Configuration Manager bereitgestellt und auf einem Computer installiert wird, wird ein ausstehender Neustart geplant, und das Dialogfeld „Neustart“ wird angezeigt.
 
 Ab Version 1606 von Configuration Manager ist die Option **Aktualisieren und neu starten**sowie **Aktualisieren und herunterfahren** für Computer unter Windows 10 in den Windows-Energieoptionen verfügbar und zwar für jeden ausstehenden Neustart eines Configuration Manager-Softwareupdates. Nach der Verwendung einer dieser Optionen, wird das Dialogfeld „Neustart“ nach dem Neustart des Computers nicht angezeigt.
 
 Wenn in früheren Versionen von Configuration Manager für die unter Windows 8 oder höher laufenden Computer ein Neustart aussteht, und wenn Sie den Computer mithilfe der Windows Power-Optionen (anstatt über den Neustartdialog) herunterfahren oder neu starten, wird der Neustartdialog auch nach dem Neustart weiterhin angezeigt. Der Computer muss trotzdem innerhalb der konfigurierten Zeitspanne neu gestartet werden.
 
+
 ## <a name="next-steps"></a>Nächste Schritte
 Lesen Sie [Vorbereiten der Softwareupdateverwaltung](../get-started/prepare-for-software-updates-management.md), sobald Sie Softwareupdates planen.
+
+**Weitere Informationen:** <br/>
+[Grundlagen zu Configuration Manager-as-a-Service und Windows-as-a-Service](/sccm/core/understand/configuration-manager-and-windows-as-service.md)
