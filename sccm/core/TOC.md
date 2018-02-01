@@ -36,8 +36,10 @@
 ###  [What's new in version 1606](plan-design/changes/whats-new-in-version-1606.md)
 ###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
 -->
-###  [Entfernte und veraltete Features](plan-design/changes/removed-and-deprecated-features.md)
-
+###  [Entfernte und veraltete Features](plan-design/changes/deprecated/removed-and-deprecated.md)
+#### [Entfernte und veraltete Features](plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)
+#### [Entfernte und veraltete Features für Standortserver](plan-design/changes/deprecated/removed-and-deprecated-server.md)
+#### [Entfernte und veraltete Features für Clients](plan-design/changes/deprecated/removed-and-deprecated-client.md)
 ##   [Unterstützte Konfigurationen](plan-design/configs/supported-configurations.md)
 ###  [Size and scale numbers](plan-design/configs/size-and-scale-numbers.md)
 ###  [Voraussetzungen für Standorte und Standortsysteme](plan-design/configs/site-and-site-system-prerequisites.md)
