@@ -7,19 +7,20 @@ ms.date: 06/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: e7606e087e2540b49e8aa23c09d09831651ee48b
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 03618b541f8f00ccab69fa4ebcef81ffc146010c
+ms.sourcegitcommit: 645cd5a324bdd299906efa27eaca5885eafc9e9c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="supported-operating-systems-for-system-center-configuration-manager-site-system-servers"></a>Unterstützte Betriebssysteme für System Center Configuration Manager-Standortsystemserver
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 12/04/2017
 In diesem Artikel wird beschrieben, welche Windows-Versionen Sie verwenden können, um einen System Center Configuration Manager-Standort oder eine entsprechende Standortsystemrolle zu hosten.
 
 
-Verwenden Sie die Informationen in diesem Thema mit den Informationen in den folgenden Artikeln:
+Verwenden Sie die Informationen in diesem Artikel mit den Informationen in den folgenden Artikeln:
 -   [Empfohlene Hardware für Configuration Manager](../../../core/plan-design/configs/recommended-hardware.md)
 -   [Site and site system prerequisites for Configuration Manager (Standort- und Standortsystemvoraussetzungen für Configuration Manager)](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)
 -   [Size and scale numbers for Configuration Manager (Größe und Skalierung von Zahlen für Configuration Manager)](../../../core/plan-design/configs/size-and-scale-numbers.md)
@@ -271,16 +272,18 @@ Dieses Betriebssystem wird für Standortserver oder Standortsystemrollen mit Aus
 
     -   Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
-## <a name="windows-8-x86-x64-professional-and-enterprise"></a>Windows 8 (x86, x64): Professional und Enterprise
-**Standortsystemserver:**  
+<!--## Windows 8 (x86, x64): Professional and Enterprise
+**Site system servers:**  
 
--   Verteilungspunkt  
+-   Distribution point  
 
-    -   Für PXE werden Verteilungspunkte unter diesem Betriebssystem nicht unterstützt.  
+    -   Distribution points on this operating system are not supported for PXE.  
 
-    -   Von Verteilungspunkten unter dieser Betriebssystemversion wird Multicast nicht unterstützt.  
+    -   Distribution points on this operating system version do not support Multicast.  
 
-    -   Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    -   Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure for System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+   
+    -  - -removed Jan 12,2018 sms505863-->
 
 ## <a name="windows-7-with-sp1-x86-x64-professional-enterprise-and-ultimate"></a>Windows 7 mit SP1 (x86, x64): Professional, Enterprise und Ultimate  
 **Standortsystemserver:**  

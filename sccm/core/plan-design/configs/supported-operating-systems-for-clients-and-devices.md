@@ -7,19 +7,20 @@ ms.date: 8/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 412bddaa604c053662a605115acdabe76a2cb03c
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: c740e9b23cb2968463e8843b5f3cdcbaba7c4d91
+ms.sourcegitcommit: 645cd5a324bdd299906efa27eaca5885eafc9e9c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>Unterstützte Betriebssysteme für Clients und Geräte für System Center Configuration Manager
 
@@ -61,7 +62,7 @@ ms.lasthandoff: 12/04/2017
 
 -   **Windows 8.1** (x86, x64): Professional, Enterprise    
 
--   **Windows 8** (x86, x64): Professional, Enterprise    
+<!---   **Windows 8** (x86, x64): Professional, Enterprise  -removed Jan 12,2018 sms505863-->
 
 -   **Windows 7 mit SP1** (x86, x64): Professional, Enterprise und Ultimate    
 
@@ -111,11 +112,11 @@ Die Dateien **WBEMDISP.DLL** und **WBEMDISP.TLB** müssen vorhanden und im Ordne
 
 -   **Windows Embedded 8.1 Industry** (x86, x64)    
 
--   **Windows Embedded 8 Industry** (x86, x64)    
+   <!----   **Windows Embedded 8 Industry** (x86, x64)  -removed Jan 12,2018 sms505863-->
 
 -   **Windows Embedded 8 Standard** (x86, x64)    
 
--   **Windows Embedded 8 Pro** (x86, x64)    
+<!---   **Windows Embedded 8 Pro** (x86, x64)    -removed Jan 12,2018 sms505863-->
 
 -   **Windows Thin PC** (x86, x64)    
 
@@ -206,7 +207,7 @@ Die folgenden Betriebssysteme basieren auf Windows XP Embedded und werden nur mi
 
 -   Für unterstützte Versionen von Linux- und UNIX-Clients schließt die aufgeführte Version alle nachfolgenden Nebenversionen ein. Beispielsweise enthält die CentOS-Version 6 CentOS 6.3. Ebenso schließt die Unterstützung für ein Betriebssystem, das Service Packs verwendet (z.B. SUSE Linux Enterprise Server 11 SP1), die Unterstützung für alle nachfolgenden Service Packs für diese Betriebssystemversion ein.  
 
--   Informationen zu Clientinstallationspaketen und dem Universal Agent finden Sie unter [Bereitstellen von Clients auf UNIX- und Linux-Servern in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md).  
+-   Informationen zu Clientinstallationspaketen und zum universellen Agent finden Sie unter [How to deploy clients to UNIX and Linux servers in System Center Configuration Manager (Bereitstellen von Clients auf UNIX- und Linux-Servern in System Center Configuration Manager)](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md).  
 
 **Unterstützte Versionen**: Die folgenden Versionen werden mit der angegebenen TAR-Datei unterstützt.  
 
@@ -300,7 +301,7 @@ Die folgenden Betriebssysteme basieren auf Windows XP Embedded und werden nur mi
 
 
 ##  <a name="mobile-devices-enrolled-by-microsoft-intune"></a>Durch Microsoft Intune registrierte mobile Geräte  
- Ausführliche Informationen über die Computer und Geräte, die Sie verwalten können, wenn Sie Microsoft Intune in Configuration Manager integrieren, finden Sie unter den folgenden beiden Themen in der Microsoft Intune-Dokumentationsbibliothek:  
+ Ausführliche Informationen zu den Computern und Geräten, die Sie verwalten können, wenn Sie Microsoft Intune in Configuration Manager integrieren, finden Sie in den folgenden beiden Themen in der Microsoft Intune-Dokumentationsbibliothek:  
 
 -   [Verwaltungsfunktionen für mobile Geräte in Microsoft Intune](https://docs.microsoft.com/intune/get-started/choose-how-to-manage-devices)  
 -   [Funktionen für die Windows-PC-Verwaltung in Microsoft Intune](https://docs.microsoft.com/intune/get-started/windows-pc-management-capabilities-in-microsoft-intune)  
