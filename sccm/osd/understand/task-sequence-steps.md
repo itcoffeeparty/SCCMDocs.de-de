@@ -17,11 +17,11 @@ caps.handback.revision:
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 695d21eb065f4d89143644dad28bfdb711392ab9
-ms.sourcegitcommit: e121d8d3dd82b9f2dde2cb5206cbee602ab8e107
+ms.openlocfilehash: 158817547d40f09fb8bd30ebedd5aea6420a8571
+ms.sourcegitcommit: aee9ac45c15f27d8cf827890edcae94c03f5fd5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>Tasksequenzschritte in System Center Configuration Manager
 
@@ -536,7 +536,7 @@ Dieser Schritt wird entweder in einem Standardbetriebssystem oder in Windows PE 
 
  -   **Configuration Manager-Clientcache**: Verwenden Sie diese Option, um den Inhalt im Clientcache zu speichern. Der Client fungiert als Peercachequelle für andere Peercacheclients. Weitere Informationen finden Sie unter [Vorbereiten des Windows PE-Peercache zum Reduzieren des WAN-Datenverkehrs](../get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md).  
 
- -   **Benutzerdefinierter Pfad**  
+ -    **Benutzerdefinierter Pfad:** Mit dieser Option lädt die Tasksequenzengine zunächst das Paket in das Tasksequenzarbeitsverzeichnis herunter und verschiebt dieses anschließend an diesen von Ihnen angegebenen Pfad. Die Tasksequenzengine hängt den Pfad mit der Paket-ID an. 
    
 **Pfad als Variable speichern**  
  Sie können den Pfad als Variable speichern, die in einem anderen Tasksequenzschritt verwendet werden kann. Configuration Manager fügt dem Variablennamen ein numerisches Suffix hinzu. Wenn Sie z.B. eine Variable von %*mycontent*% als benutzerdefinierte Variable festlegen, stellt diese das Stammverzeichnis dar, in dem die Tasksequenz alle Inhalte speichert, auf die verwiesen wird. Diese Inhalte können mehrere Pakete enthalten. Wenn Sie dann auf die Variable verweisen, fügen Sie ein numerisches Suffix hinzu. Beispielsweise verweisen Sie für das erste Paket auf %*mycontent01*%. Wenn Sie auf die Variable in einem Untersequenzschritt verweisen, z.B. **Betriebssystem aktualisieren**, verwenden Sie %*mycontent02*% oder %*mycontent03*%, wobei die Anzahl der Reihenfolge entspricht, in der der Schritt **Paketinhalt herunterladen** die Pakete auflistet.  
