@@ -51,7 +51,7 @@ Ab dieser Version ist der Peercache keine Vorabfunktion mehr.  In dieser Version
 ### <a name="cloud-distribution-point-support-for-azure-government-cloud------sms491428---"></a>Unterstützung für Cloudverteilungspunkt für Azure Government Cloud   <!-- sms491428 -->
 Sie können jetzt [cloudbasierte Verteilungspunkte](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) in der Azure Government Cloud nutzen.   
 
-### <a name="inventory-default-unit-revision----sms503697---"></a>Revision der Standardlagereinheit <!-- sms503697 -->
+### <a name="inventory-default-unit-revision----sms503697---"></a>Revision der Standardeinheit <!-- sms503697 -->
 Da Geräte heutzutage über Festplatten verfügen, deren Größe in Gigabyte (GB), Terabyte (TB) oder noch größeren Einheiten angegeben werden, wird mit diesem Release die Standardeinheit (SMS_Units), die in vielen Ansichten verwendet wird, von Megabyte (MB) in GB geändert. Beispielsweise gibt der v_gs_LogicalDisk.FreeSpace-Wert jetzt GB-Einheiten zurück.
 
 
