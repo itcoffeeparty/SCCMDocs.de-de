@@ -6,18 +6,19 @@ ms.custom: na
 ms.date: 05/02/2017
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: aa8d80cf9c036e63dc74ffe78bc8d5b060d6053e
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: cf46bb32994ddb8a1fa3b9de0dbffc94228ad7fd
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>Neues in Version 1702 von System Center Configuration Manager
 
@@ -35,13 +36,13 @@ Das Update 1702 für System Center Configuration Manager (Current Branch) ist al
 Die folgenden Abschnitte enthalten Details zu Änderungen und neuen Funktionen, die in Version 1702 von Configuration Manager eingeführt wurden.  
 
 ## <a name="deprecated-features-and-operating-systems"></a>Veraltete Features und Betriebssysteme
-Erfahren Sie mehr zu Unterstützungsänderungen, bevor Sie in [entfernten und veralteten Features](/sccm/core/plan-design/changes/removed-and-deprecated-features) implementiert werden.
+Erfahren Sie mehr zu Supportänderungen, bevor Sie in [entfernten und veralteten Elementen](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated) implementiert werden.
 
 Version 1702 löscht die Unterstützung für die folgenden Produkte:
-- **SQL Server 2008 R2**, für Standortdatenbankserver. Die Einstellung des Supports wurde [erstmals am 10. Juli 2015](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-support-for-sql-server-versions-as-a-site-database) angekündigt. Diese Version von SQL Server wird weiterhin unterstützt, wenn Sie eine Version von Configuration Manager vor Version 1702 verwenden.
-- **Windows Server 2008 R2**, für Standortsystemserver und Standortsystemrollen. Die Einstellung des Supports wurde [erstmals am 10. Juli 2015](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-operating-systems) angekündigt. Diese Version von Windows wird weiterhin unterstützt, wenn Sie eine Version von Configuration Manager vor Version 1702 verwenden.  
-- **Windows Server 2008**, für Standortsystemserver und die meisten Standortsystemrollen. Die Einstellung des Supports wurde [erstmals am 10. Juli 2015](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-operating-systems) angekündigt.
-- **Windows XP Embedded**, als Clientbetriebssystem. Die Einstellung wurde [erstmals am 10. Juli 2015](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-operating-systems) angekündigt. Diese Version von Windows wird weiterhin unterstützt, wenn Sie eine Version von Configuration Manager vor Version 1702 verwenden.
+- **SQL Server 2008 R2**, für Standortdatenbankserver. Die Einstellung des Supports wurde [erstmals am 10. Juli 2015](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-support-for-sql-server-versions-as-a-site-database) angekündigt. Diese Version von SQL Server wird weiterhin unterstützt, wenn Sie eine Version von Configuration Manager vor Version 1702 verwenden.
+- **Windows Server 2008 R2**, für Standortsystemserver und Standortsystemrollen. Die Einstellung des Supports wurde [erstmals am 10. Juli 2015](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems) angekündigt. Diese Version von Windows wird weiterhin unterstützt, wenn Sie eine Version von Configuration Manager vor Version 1702 verwenden.  
+- **Windows Server 2008**, für Standortsystemserver und die meisten Standortsystemrollen. Die Einstellung des Supports wurde [erstmals am 10. Juli 2015](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems) angekündigt.
+- **Windows XP Embedded**, als Clientbetriebssystem. Die Einstellung wurde [erstmals am 10. Juli 2015](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client#deprecated-client-operating-systems) angekündigt. Diese Version von Windows wird weiterhin unterstützt, wenn Sie eine Version von Configuration Manager vor Version 1702 verwenden.
 
 
 
@@ -189,7 +190,7 @@ Sie können jetzt zu einer vorherigen Seite zurückkehren, wenn Sie eine Taskseq
 - Wenn die abhängigen Paketinhalte beim Ausführen einer Tasksequenz an den Verteilungspunkten noch nicht verfügbar sind, kann die Tasksequenz nicht ausgeführt werden. Sie können jetzt fehlenden Inhalt (wenn dieser noch nicht verteilt wurde) verteilen oder warten, bis der Inhalt an den Verteilungspunkten verfügbar ist. Klicken Sie dann auf **Zurück**, damit die Tasksequenz wieder nach dem Inhalt sucht.
 
 ### <a name="pre-cache-content-for-available-deployments-and-task-sequences"></a>Zwischenspeichern von Inhalt für verfügbare Bereitstellungen und Tasksequenzen
-Ab Version 1702 (für verfügbare Bereitstellungen und Tasksequenzen) können Sie zwischengespeicherten Inhalt verwenden. Mit der Funktion zum Zwischenspeichern von Inhalten können Sie den Client dahingehend einschränken, dass er nur zutreffenden Inhalt herunterladen darf, wenn er die Bereitstellung empfängt. Wenn der Benutzer dann im Softwarecenter auf **Installieren** klickt, steht der Inhalt bereit, und die Installation startet sofort, da der Inhalt bereits auf der lokalen Festplatte gespeichert ist. Informationen finden Sie unter [Konfigurieren des zwischengespeicherten Inhalts](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).
+Ab Version 1702 (für verfügbare Bereitstellungen und Tasksequenzen) können Sie zwischengespeicherten Inhalt verwenden. Mit dem Zwischenspeichern von Inhalten können Sie den Client dahingehend einschränken, dass er nur zutreffenden Inhalt herunterladen darf, wenn er die Bereitstellung empfängt. Wenn der Benutzer dann im Softwarecenter auf **Installieren** klickt, steht der Inhalt bereit, und die Installation startet sofort, da der Inhalt bereits auf der lokalen Festplatte gespeichert ist. Informationen finden Sie unter [Konfigurieren des zwischengespeicherten Inhalts](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).
 
 ### <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>Konvertieren von BIOS in UEFI während eines direkten Upgrades
 Windows 10 Creators Update führt ein einfaches Konvertierungstool ein, womit der Prozess der Neupartitionierung der Festplatte für UEFI-aktivierte Hardware automatisiert werden kann und das Konvertierungstool in den direkten Upgradeprozess von Windows 7 zu Windows 10 integriert werden kann. Wenn Sie dieses Tool mit Ihrer Tasksequenz des Betriebssystemupgrades und dem OEM-Tool kombinieren, der die Firmware von BIOS zu UEFI konvertiert, können Sie Ihre Computer von BIOS zu UEFI während eines direkten Upgrades zu Windows 10 Creators Update konvertieren. Weitere Informationen finden Sie unter [Task sequence steps to manage BIOS to UEFI conversion (Tasksequenzschritte für das Verwalten einer Konvertierung von BIOS zu UEFI)](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade).

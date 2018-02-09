@@ -15,11 +15,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 04ed2ac1abe54c3b8c7c86f210b35f5f52d80ef6
-ms.sourcegitcommit: c432624b8816f59d51a3c8ef68960ed4099d9124
+ms.openlocfilehash: aca30a199e38b2d4ed38a458694d98010b5e2496
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Neuheiten bei der hybriden Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune
 
@@ -46,6 +46,9 @@ Jeder Abschnitt dieses Artikels listet Hybridfeatures in drei verschiedenen Kate
 ## <a name="january-2018"></a>Januar 2018
 
 ### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
+
+- **Neue Funktionen für die Aktion „Lösung“ für Android-Geräte**<!--1583480-->    
+  Die Unternehmensportal-App für Android erweitert die Aktion „Lösung“ für **Geräteeinstellungen aktualisieren**, um [Verschlüsselungsprobleme bei Geräten](https://docs.microsoft.com/intune-user-help/encrypt-your-device-android) zu lösen.
 
 - **Remote-Sperre in der Unternehmensportal-App für Windows 10 verfügbar** <!--676506-->    
   Endbenutzer können Ihre Geräte jetzt über die Unternehmensportal-App für Windows 10 über eine Remoteverbindung sperren. Dies wird nicht für das lokale Gerät angezeigt, dass sie aktiv verwenden.
