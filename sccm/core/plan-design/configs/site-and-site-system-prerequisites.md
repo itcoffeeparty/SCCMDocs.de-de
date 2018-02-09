@@ -7,19 +7,20 @@ ms.date: 8/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 2c87cf0e63e4b95f5b94b6cda9e2aa40c4389184
-ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
+ms.openlocfilehash: cb1b81fc0765e6754c7dea9ce421e41fcd58a70e
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="site-and-site-system-prerequisites-for-system-center-configuration-manager"></a>Voraussetzungen für Standorte und Standortsysteme für System Center Configuration Manager
 
@@ -172,7 +173,7 @@ ms.lasthandoff: 12/06/2017
 
 -   IIS 6-Verwaltungskompatibilität:  
 
-    -   IIS 6-Metabasiskompatibilität  
+    -   IIS 6-Metabasiskompatibilität  
 
 -   Anwendungsentwicklung:  
 
@@ -299,7 +300,7 @@ ms.lasthandoff: 12/06/2017
 
 -   IIS 6-Verwaltungskompatibilität:  
 
-    -   IIS 6-Metabasiskompatibilität  
+    -   IIS 6-Metabasiskompatibilität  
 
 **Arbeitsspeicher:**  
 
@@ -340,7 +341,7 @@ ms.lasthandoff: 12/06/2017
 
 -   IIS 6-Verwaltungskompatibilität:  
 
-    -   IIS 6-Metabasiskompatibilität  
+    -   IIS 6-Metabasiskompatibilität  
 
 **Arbeitsspeicher:**  
 
@@ -423,7 +424,7 @@ Die IIS-Standardkonfiguration ist erforderlich.
 Die IIS-Standardkonfiguration ist erforderlich.  
 
 ##  <a name="bkmk_2008"></a> Voraussetzungen für Windows Server 2008 R2 und Windows Server 2008  
-Windows Server 2008 und Windows Server 2008 R2 unterliegen nun dem erweiterten Support und nicht mehr dem grundlegenden Support, wie in [Microsoft Lifecycle-Richtlinie](https://support.microsoft.com/lifecycle) ausführlich erläutert. Weitere Informationen zum künftigen Support für diese Betriebssysteme als Standortsystemserver mit Configuration Manager finden Sie unter [Entfernte und veraltete Features für System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
+Windows Server 2008 und Windows Server 2008 R2 unterliegen nun dem erweiterten Support und nicht mehr dem grundlegenden Support, wie in [Microsoft Lifecycle-Richtlinie](https://support.microsoft.com/lifecycle) ausführlich erläutert. Weitere Informationen zum künftigen Support für diese Betriebssysteme als Standortsystemserver mit Configuration Manager finden Sie unter [Entfernte und veraltete Serverbetriebssysteme](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems).  
 
 **Folgendes gilt für alle .NET Framework-Anforderungen:**  
 
@@ -549,7 +550,7 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 
 -   IIS 6-Verwaltungskompatibilität:  
 
-    -   IIS 6-Metabasiskompatibilität  
+    -   IIS 6-Metabasiskompatibilität  
 
 **Arbeitsspeicher:**  
 

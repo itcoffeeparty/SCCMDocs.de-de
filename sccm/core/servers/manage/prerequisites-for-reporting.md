@@ -3,24 +3,25 @@ title: "Voraussetzungen für die Berichterstattung"
 titleSuffix: Configuration Manager
 description: "Hier finden Sie Informationen zu verschiedenen Abhängigkeiten, die sich auf die Nutzung der Berichterstellung in System Center Configuration Manager auswirken."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/29/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9cc508a5-5023-4833-b776-ae9a6971138f
-caps.latest.revision: "5"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 09f6ebd47070c63d238a74242d4b04b84c95ef49
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 3feafa8a20bedfba381c29a5d7fe80a47517b6ab
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="prerequisites-for-reporting-in-system-center-configuration-manager"></a>Voraussetzungen für die Berichterstattung in System Center Configuration Manager
 
@@ -49,17 +50,19 @@ Die Berichterstellung in System Center Configuration Manager hat externe Abhäng
  Die folgende Tabelle enthält eine Aufstellung der SQL Server-Versionen, die vom Reporting Services-Punkt unterstützt werden.  
 
 |SQL Server-Version|Reporting Services-Punkt|  
-|------------------------|------------------------------|  
-|SQL Server 2008 SP2 (mindestens mit kumulativem Update 9)<br /><br /> - Standard<br />- Enterprise<br />- Datacenter|Ja|  
-|SQL Server 2008 SP3 (mindestens mit kumulativem Update 4)<br /><br /> - Standard<br />- Enterprise<br />- Datacenter|Ja|  
-|SQL Server 2008 R2 mit SP1 (mindestens mit kumulativem Update 6)<br /><br /> - Standard<br />- Enterprise<br />- Datacenter|Ja|  
-|SQL Server 2008 R2 mit SP2<br /><br /> - Standard<br />- Enterprise<br />- Datacenter|Ja|  
-|SQL Server Express 2008 R2 mit SP1 (mindestens mit kumulativem Update 4)|Nicht unterstützt|  
-|SQL Server Express 2008 R2 mit SP2|Nicht unterstützt|  
-|SQL Server 2012 (mindestens mit kumulativem Update 2)<br /><br /> - Standard<br />- Enterprise|Ja|  
-|SQL Server 2012 mit SP1 (ohne kumulativem Update)<br /><br /> - Standard<br />- Enterprise|Ja|  
-|SQL Server 2014<br /><br /> - Standard<br />- Enterprise|Ja|
+|------------------------|------------------------------|
+|SQL Server 2017 (mindestens mit kumulativem Update 2)<br /><br /> - Standard<br />- Enterprise|Ja, ab Configuration Manager-Version 1710|  
+|SQL Server 2016 mit SP1<br /><br /> - Standard<br />- Enterprise|Ja| 
 |SQL Server 2016<br /><br /> - Standard<br />- Enterprise|Ja|
-|SQL Server 2016 mit SP1<br /><br /> - Standard<br />- Enterprise|Ja|
+|SQL Server 2014 mit SP2<br /><br /> - Standard<br />- Enterprise|Ja|
+|SQL Server 2014 mit SP1<br /><br /> - Standard<br />- Enterprise|Ja|
+|SQL Server 2012 mit SP4 <br /><br /> - Standard<br />- Enterprise|Ja|  
+|SQL Server 2012 mit SP3 <br /><br /> - Standard<br />- Enterprise|Ja|  
+|SQL Server 2008 R2 mit SP3<br /><br /> - Standard<br />- Enterprise<br />- Datacenter|Ja, für unterstützte Vorgängerversionen von Configuration Manager 1702.|  
+|SQL Server Express 2008 R2 mit SP3|Nicht unterstützt| 
+
+
+
+
 ## <a name="next-steps"></a>Nächste Schritte
 [Vorgänge und Wartungstasks für die Berichterstellung](operations-and-maintenance-for-reporting.md)

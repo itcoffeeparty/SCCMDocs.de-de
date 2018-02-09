@@ -7,20 +7,21 @@ ms.date: 2/9/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
-caps.latest.revision: "7"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 518be0c1cb4c361d8802ed70779d192725eb8feb
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 1b8248cbbade7d46d1a1ad41edd704b5ad8d49aa
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="accounts-used-in-system-center-configuration-manager"></a>In System Center Configuration Manager verwendete Konten
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 01/04/2018
 Verwenden Sie die folgenden Informationen, um die in System Center Configuration Manager verwendeten Windows-Gruppen und Konten, die Art der Verwendung sowie alle Anforderungen zu identifizieren.  
 
 ## <a name="windows-groups-that-configuration-manager-creates-and-uses"></a>Windows-Gruppen, die von Configuration Manager erstellt und verwendet werden  
- Die folgenden Windows-Gruppen werden von Configuration Manager automatisch erstellt und in vielen Fällen automatisch verwaltet.  
+ Die folgenden Windows-Gruppen werden von Configuration Manager automatisch erstellt und in vielen Fällen automatisch verwaltet:  
 
 > [!NOTE]  
 >  Wenn von Configuration Manager eine Gruppe auf einem Computer erstellt wird, der ein Domänenmitglied ist, ist die Gruppe eine lokale Sicherheitsgruppe. Wenn der Computer ein Domänencontroller ist, ist die Gruppe eine lokale Gruppe der Domäne, die von allen Domänencontrollern in der Domäne gemeinsam verwendet wird.  
@@ -72,7 +73,7 @@ In der folgenden Tabelle sind zusätzliche Informationen zu dieser Gruppe aufgel
 |------------|----------------------|  
 |Typ und Speicherort|Diese Gruppe ist eine lokale Sicherheitsgruppe, die auf jedem Computer mit SMS-Anbieter erstellt wird.<br /><br /> Wenn Sie einen Standort deinstallieren, wird diese Gruppe nicht automatisch entfernt. Sie muss manuell gelöscht werden.|  
 |Membership|Die Gruppenmitgliedschaft wird von Configuration Manager automatisch verwaltet. Standardmäßig sind alle Administratoren einer Hierarchie sowie das Computerkonto des Standortservers Mitglieder der Gruppe SMS-Administratoren auf allen SMS-Anbietercomputern an einem Standort.|  
-|Berechtigungen|Rechte und Berechtigungen von SMS Admins werden im WMI-Steuerungs-MMC-Snap-In festgelegt. Der Gruppe „SMS-Administratoren“ werden standardmäßig die Berechtigungen **Enable Account** und **Remote Enable** im Namespace „Root\SMS“ erteilt. Der Gruppe „Authentifizierte Benutzer“ sind die Berechtigungen **Methoden ausführen**, **Anbieterschreibzugriff** und **Konto aktivieren** erteilt.<br /><br /> Wenn ein Administrator eine Configuration Manager-Remotekonsole verwendet, benötigt er DCOM-Berechtigungen für eine Remoteaktivierung auf dem Standortservercomputer und dem SMS-Anbietercomputer. Eine bewährte Methode zur Vereinfachung der Verwaltung besteht darin, diese Berechtigungen nicht einzelnen Benutzern oder Gruppen, sondern der Gruppe SMS-Administratoren zu erteilen. Weitere Informationen finden Sie im Abschnitt [Configure DCOM permissions for remote Configuration Manager consoles](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole) des Themas [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md) .|  
+|Berechtigungen|Rechte und Berechtigungen von SMS Admins werden im WMI-Steuerungs-MMC-Snap-In festgelegt. Der Gruppe „SMS-Administratoren“ werden standardmäßig die Berechtigungen **Enable Account** und **Remote Enable** im Namespace „Root\SMS“ erteilt. Der Gruppe „Authentifizierte Benutzer“ sind die Berechtigungen **Methoden ausführen**, **Anbieterschreibzugriff** und **Konto aktivieren** erteilt.<br /><br /> Wenn ein Administrator eine Configuration Manager-Remotekonsole verwendet, benötigt er DCOM-Berechtigungen für eine Remoteaktivierung auf dem Standortservercomputer und dem SMS-Anbietercomputer. Eine bewährte Methode zur Vereinfachung der Verwaltung besteht darin, diese Berechtigungen nicht einzelnen Benutzern oder Gruppen, sondern der Gruppe SMS-Administratoren zu erteilen. Weitere Informationen finden Sie im Abschnitt [Konfigurieren von DCOM-Berechtigungen für Configuration Manager-Remotekonsolen](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole) des Artikels [Ändern Ihrer System Center Configuration Manager-Infrastruktur](../../../core/servers/manage/modify-your-infrastructure.md).|  
 
 ### <a name="smssitesystemtositeserverconnectionmpltsitecode"></a>SMS_SiteSystemToSiteServerConnection_MP_&lt;Standortcode\>  
  Diese Gruppe wird von Configuration Manager-Verwaltungspunkten, die sich außerhalb des Standortservers befinden, zum Herstellen einer Verbindung mit der Standortdatenbank verwendet. Mithilfe dieser Gruppe wird den Verwaltungspunkten ein Zugriff auf den Ordner Eingangsbox des Standortservers sowie der Standortdatenbank ermöglicht.  
@@ -245,6 +246,8 @@ In der folgenden Tabelle sind zusätzliche Informationen zu dieser Gruppe aufgel
 
 ### <a name="reporting-services-point-account"></a>Konto des Reporting Services-Punkts  
  Das **Konto des Reporting Services-Punkts** wird von SQL Server Reporting Services zum Abrufen der Daten für Configuration Manager-Berichte aus der Standortdatenbank verwendet. Das von Ihnen angegebene Windows-Benutzerkonto und das dazugehörende Kennwort werden verschlüsselt und in der SQL Server Reporting Services-Datenbank gespeichert.  
+>[!NOTE]
+>Das angegebene Konto muss auf dem Computer, auf dem die Reporting Services-Datenbank gehostet wird, über die Berechtigung zur lokalen Anmeldung verfügen.
 
 ### <a name="remote-tools-permitted-viewer-accounts"></a>Informationen zu Konten für zugelassene Viewer für Remotetools  
  Bei den Konten, die Sie als **Zugelassene Betrachter** für die Remotesteuerung festlegen, handelt es sich um eine Liste der Benutzer, die die Remotetoolsfunktion auf Clients verwenden dürfen.  
@@ -339,8 +342,8 @@ Dieses Konto muss ein lokaler Administrator auf dem Computer sein, auf dem WSUS 
 >   
 >  Versehen Sie das Konto niemals mit Domänenadministratorrechten.  
 >   
->  Richten Sie niemals servergespeicherte Profile für dieses Konto ein. Wenn die Tasksequenz ausgeführt wird, wird das servergespeicherte Profil für das Konto heruntergeladen. Dadurch wird das Profil für den Zugriff auf dem lokalen Computer anfällig.  
+>  Richten Sie niemals Roamingprofile für dieses Konto ein. Wenn die Tasksequenz ausgeführt wird, wird das Roamingprofil für das Konto heruntergeladen. Dadurch wird das Profil für den Zugriff auf dem lokalen Computer anfällig.  
 >   
 >  Beschränken Sie den Kontoumfang. Erstellen Sie beispielsweise für jede Tasksequenz ein unterschiedliches Tasksequenzkonto für „Ausführen als“, sodass bei Gefährdung eines Kontos nur der Clientcomputer betroffen ist, auf den dieses Konto Zugriff hat.  
 >   
->  Wenn für die Befehlszeile Administratorrechte auf dem Computer erforderlich sind, erwägen Sie die Erstellung eines lokalen Administratorkontos lediglich für das Tasksequenzkonto „Ausführen als“ auf allen Computern, um die Tasksequenz auszuführen. Wenn das Konto nicht mehr benötigt wird, kann es gelöscht werden.  
+>  Wenn für die Befehlszeile Administratorrechte auf dem Computer erforderlich sind, erwägen Sie die Erstellung eines lokalen Administratorkontos lediglich für das Tasksequenzkonto „Ausführendes Konto“ auf allen Computern, um die Tasksequenz auszuführen. Wenn das Konto nicht mehr benötigt wird, kann es gelöscht werden.  

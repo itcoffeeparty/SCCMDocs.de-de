@@ -16,11 +16,11 @@ caps.latest.revision:
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 90542085af2a1e5cf0701c5eac6d2625c23eb8c6
-ms.sourcegitcommit: db9978135d7a6455d83dbe4a5175af2bdeaeafd8
+ms.openlocfilehash: 40894c4ebb562e5c979f1226349ff91c38516618
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="keep-windows-10-up-to-date-in-the-enterprise-using-configuration-manager"></a>Halten Sie Windows 10 unternehmensweit über Configuration Manager aktuell
 
@@ -34,7 +34,7 @@ System Center Configuration Manager bietet eine umfassende Kontrolle über Featu
 | ------------- |-------------|
 |[Übersicht über Configuration Manager-as-a-Service](/sccm/core/plan-design/changes/whats-new-incremental-versions)|Kurze Zusammenfassung der wichtigsten Punkte zum neuen Servicemodell für Configuration Manager (Current Branch)|
 |[Lifecycle-Unterstützung](/sccm/core/servers/manage/current-branch-versions-supported)|Erläutert die neue Unterstützung und das Dienstmodell.|
-|[Entfernte und veraltete Features](/sccm/core/plan-design/changes/removed-and-deprecated-features)|Dies dient als frühzeitige Warnung hinsichtlich zukünftiger Änderungen, die sich auf die Verwendung von Configuration Manager auswirken können.|
+|[Entfernte und veraltete Elemente](/sccm//core/plan-design/changes/deprecated/removed-and-deprecated)|Dies dient als frühzeitige Warnung hinsichtlich zukünftiger Änderungen, die sich auf die Verwendung von Configuration Manager auswirken können.|
 |[Configuration Manager-as-a-Service](/sccm/core/servers/manage/updates)|Erläutert die einfache konsoleninterne Methode zum Anwenden von Featureupdates für Configuration Manager.|
 |[Abrufen von verfügbaren Updates](/core/servers/manage/install-in-console-updates#get-available-updates)|Erläutert die beiden verfügbaren Modi zum Abrufen neuer Featureupdates für Configuration Manager.|
 |[Updatecheckliste](/sccm/core/servers/manage/install-in-console-updates#bkmk_beforeinstall)|Versionsspezifische Updatecheckliste, falls vorhanden.| 

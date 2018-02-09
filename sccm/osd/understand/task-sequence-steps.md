@@ -17,11 +17,11 @@ caps.handback.revision:
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 158817547d40f09fb8bd30ebedd5aea6420a8571
-ms.sourcegitcommit: aee9ac45c15f27d8cf827890edcae94c03f5fd5e
+ms.openlocfilehash: 5320d7747f7e2c6164da8c1801e631b749935d6d
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>Tasksequenzschritte in System Center Configuration Manager
 
@@ -1313,7 +1313,7 @@ Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Images** > **Windows u
  Klicken Sie auf **Durchsuchen**, und wählen Sie dann das Installationspaket für den Konfigurations-Manager-Client aus, das in diesem Schritt verwendet werden soll.  
 
  **Clientpaket vor der Produktion verwenden, wenn verfügbar**  
- Wenn ein Präproduktions-Clientpaket verfügbar ist, verwendet die Tasksequenz dieses Paket statt dem Produktionsclientpaket. Bei einem Präproduktionsclient handelt es sich um eine neuere Version für das Testen in der Produktionsumgebung. Klicken Sie auf **Durchsuchen**, und wählen Sie dann das Präproduktions-Clientpaket aus, das in diesem Schritt verwendet werden soll.  
+ Wenn ein Präproduktions-Clientpaket verfügbar ist, und der Computer zur Pilotsammlung gehört, verwendet die Tasksequenz dieses Paket statt des Produktionsclientpakets. Bei einem Präproduktionsclient handelt es sich um eine neuere Version für das Testen in der Produktionsumgebung. Klicken Sie auf **Durchsuchen**, und wählen Sie dann das Präproduktions-Clientpaket aus, das in diesem Schritt verwendet werden soll.  
 
  **Installationseigenschaften**  
  Die Standortzuweisung und die Standardkonfiguration werden von der Tasksequenzaktion automatisch angegeben. Sie können in diesem Feld zusätzliche Installationseigenschaften angeben, die bei der Installation des Clients verwendet werden sollen. Wenn sie mehrere Installationseigenschaften eingeben möchten, müssen Sie sie durch ein Leerzeichen trennen.  

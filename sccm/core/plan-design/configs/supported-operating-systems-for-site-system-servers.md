@@ -16,11 +16,11 @@ caps.latest.revision:
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 03618b541f8f00ccab69fa4ebcef81ffc146010c
-ms.sourcegitcommit: 645cd5a324bdd299906efa27eaca5885eafc9e9c
+ms.openlocfilehash: 18df431f0fd1b355b1ad629a10126907187ddbbd
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="supported-operating-systems-for-system-center-configuration-manager-site-system-servers"></a>Unterstützte Betriebssysteme für System Center Configuration Manager-Standortsystemserver
 
@@ -181,7 +181,7 @@ Ab Version 1606 mit dem Hotfixrollup von KB3186654 (oder Baselineversion 1606, d
 -   Zustandsmigrationspunkt  
 
 ## <a name="windows-server-2008-r2-with-sp1-x64-standard-enterprise-and-datacenter"></a>Windows Server 2008 R2 mit SP1 (x64): Standard, Enterprise und Datacenter  
- Windows Server 2008 R2 unterliegt nun dem erweiterten Support und nicht mehr dem grundlegenden Support, wie im [Microsoft-Support-Lifecycle](https://support.microsoft.com/lifecycle) ausführlich erläutert. Weitere Informationen zum künftigen Support für diese Betriebssysteme als Standortsystemserver mit Configuration Manager finden Sie unter [Entfernte und veraltete Features für System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
+ Windows Server 2008 R2 unterliegt nun dem erweiterten Support und nicht mehr dem grundlegenden Support, wie im [Microsoft-Support-Lifecycle](https://support.microsoft.com/lifecycle) ausführlich erläutert. Weitere Informationen zum künftigen Support für diese Betriebssysteme als Standortsystemserver mit Configuration Manager finden Sie unter [Veraltete Serverbetriebssysteme](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems).  
 
  Ab der Configuration Manager-Version 1702 wird dieses Betriebssystem nicht für Standortserver oder die meisten Standortsystemrollen unterstützt. Es wird jedoch weiterhin für die Standortsystemrolle „Verteilungspunkt“ unterstützt (einschließlich „Pullverteilungspunkt“, PXE und Multicast).
 
@@ -235,7 +235,7 @@ Ab Version 1606 mit dem Hotfixrollup von KB3186654 (oder Baselineversion 1606, d
 -   Zustandsmigrationspunkt  
 
 ## <a name="windows-server-2008-with-sp2-x86-x64-standard-enterprise-and-datacenter"></a>Windows Server 2008 mit SP2 (x86, x64): Standard, Enterprise und Datacenter  
- Windows Server 2008 unterliegt nun dem erweiterten Support und nicht mehr dem grundlegenden Support, wie im [Microsoft-Support-Lifecycle](https://support.microsoft.com/lifecycle) ausführlich erläutert. Weitere Informationen zum künftigen Support für diese Betriebssysteme als Standortsystemserver mit Configuration Manager finden Sie unter [Entfernte und veraltete Features für System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
+ Windows Server 2008 unterliegt nun dem erweiterten Support und nicht mehr dem grundlegenden Support, wie im [Microsoft-Support-Lifecycle](https://support.microsoft.com/lifecycle) ausführlich erläutert. Weitere Informationen zum künftigen Support für diese Betriebssysteme als Standortsystemserver mit Configuration Manager finden Sie unter [Veraltete Serverbetriebssysteme](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems).  
 
 Dieses Betriebssystem wird für Standortserver oder Standortsystemrollen mit Ausnahme des Verteilungspunkts und des Pullverteilungspunkts nicht unterstützt. Sie können dieses Betriebssystem weiterhin als Verteilungspunkt verwenden, bis die Einstellung dieses Supports angekündigt wird oder der erweiterte Support für dieses Betriebssystem abläuft. Weitere Informationen finden Sie unter [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008 (Bei der Installation von System Center Configuration Manager CB und LTSB auf Windows Server 2008 tritt ein Fehler auf)](https://support.microsoft.com/help/4015095).
 

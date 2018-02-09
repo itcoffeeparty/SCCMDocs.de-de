@@ -7,19 +7,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 76dfa18cb7f794be9102bf045cd4212adc7ad56f
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: b63386f69ea05a610868de9bc85ff606d4ade73d
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="introduction-to-system-center-configuration-manager"></a>Einführung in System Center Configuration Manager
 
@@ -72,7 +73,7 @@ Anhand der folgenden Themen und zusätzlichen Abschnitte in diesem Thema erfahre
 -   [Grundlagen von System Center Configuration Manager](../../core/understand/fundamentals.md)  
 -   [Auswerten von System Center Configuration Manager durch Einrichtung Ihrer eigenen Laborumgebung](/sccm/core/get-started/set-up-your-lab)
 -   [Suchen nach Hilfe für die Verwendung von System Center Configuration Manager](../../core/understand/find-help.md)  
--   [Entfernte und veraltete Features für System Center Configuration Manager](../../core/plan-design/changes/removed-and-deprecated-features.md)  
+-   [Entfernte und veraltete Elemente für System Center Configuration Manager](../../core/plan-design/changes/deprecated/removed-and-deprecated.md)  
 
 ##  <a name="BKMK_Console"></a> Die Configuration Manager-Konsole  
  Nach der Installation von Configuration Manager, verwenden Sie die Configuration Manager-Konsole, um Standorte und Clients zu konfigurieren und Verwaltungstasks auszuführen und zu überwachen. Diese Konsole ist die zentrale Verwaltungsschnittstelle, über die Sie mehrere Standorte verwalten können.  
