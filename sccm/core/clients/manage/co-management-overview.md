@@ -10,20 +10,23 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: 
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 4b582d5fbd9e2e916c439b149e117f1a65da98bf
-ms.sourcegitcommit: 5f4a584d4a833b0cc22bd8c47da7dd55aced97fa
+ms.openlocfilehash: 0cc11a05013fd9c25ee98ec35adcbe822d8a21fb
+ms.sourcegitcommit: 389c4e5b4e9953b74c13b1689195f99c526fa737
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="co-management-for-windows-10-devices"></a>Co-Verwaltung für Windows 10-Geräte    
 <!-- 1350871 -->
 Viele Kunden möchten Windows 10-Geräte genauso verwalten wie mobile Geräte: mit einer einfachen, kostengünstigen und cloudbasierten Lösung. Der Übergang von einer herkömmlichen zu einer modernen Verwaltungslösung kann jedoch eine Herausforderung sein. In den vorherigen Windows 10-Updates können Sie bereits ein Windows 10-Gerät gleichzeitig in eine lokale Active Directory-Installation (AD) und eine cloudbasierte Azure AD-Infrastruktur einbinden (Hybrid-Azure AD). Ab der Configuration Manager-Version 1710 nutzt die Co-Verwaltung diese Verbesserung und ermöglicht Ihnen, Windows 10-Geräte mit der Version 1709 (auch als „Fall Creators Update“ bezeichnet) gleichzeitig mit Configuration Manager und Intune zu verwalten. Diese Lösung schlägt eine Brücke von der herkömmlichen zur modernen Verwaltung und bietet Ihnen die Möglichkeit, die Umstellung Schritt für Schritt durchzuführen. 
 
-Die Co-Verwaltung kann auf zwei Weisen realisiert werden.  Eine davon ist die von Configuration Manager bereitgestellte Co-Verwaltung, bei der Windows 10-Geräte, die mit Configuration Manager verwaltet werden und in hybrides Azure AD eingebunden sind, bei Intune registriert werden. Die andere sieht von Intune bereitgestellte Geräte vor, die bei Intune angemeldet und dann mit dem Configuration Manager-Client installiert werden, um einen Co-Verwaltungsstatus zu erreichen.  
+Die Co-Verwaltung kann auf zwei Weisen realisiert werden.  Eine davon ist die von Configuration Manager bereitgestellte Co-Verwaltung, bei der Windows 10-Geräte, die mit Configuration Manager verwaltet werden und in hybrides Azure AD eingebunden sind, bei Intune registriert werden. Die andere sieht von Intune bereitgestellte Geräte vor, die bei Intune angemeldet und dann mit dem Configuration Manager-Client installiert werden, um einen Co-Verwaltungsstatus zu erreichen.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 Bevor Sie mit der Co-Verwaltung beginnen können, müssen folgende Anforderungen erfüllt sein. Zum einen gelten allgemeine Voraussetzungen und zum anderen unterschiedliche Voraussetzungen für Geräte mit installiertem Configuration Manager-Client und für Geräte, auf denen der Client nicht installiert ist.
+
+> [!IMPORTANT]
+> Co-Verwaltung wird von Windows 10 Mobile-Geräten nicht unterstützt.
 
 ### <a name="general-prerequisites"></a>Allgemeine Voraussetzungen
 Hier finden Sie die allgemeinen Voraussetzungen für die Aktivierung der Co-Verwaltung:  
@@ -50,7 +53,7 @@ Hier finden Sie die allgemeinen Voraussetzungen für die Aktivierung der Co-Verw
 Nach der Aktivierung der Co-Verwaltung verwaltet Configuration Manager weiterhin alle Workloads. Wenn Sie dazu bereit sind, können Sie die Verwaltung aller verfügbaren Workloads auf Intune umstellen. Sie können Intune die folgenden Workloads verwalten lassen.   
 
 ### <a name="compliance-policies"></a>Kompatibilitätsrichtlinien
-Konformitätsrichtlinien definieren die Regeln und Einstellungen, die ein Gerät erfüllen muss, damit es als mit bedingten Zugriffsrichtlinien konform eingestuft wird. Kompatibilitätsrichtlinien ermöglichen Ihnen auch, Kompatibilitätsprobleme bei Geräten unabhängig von bedingten Zugriffsrechten zu überwachen und zu beheben. Weitere Informationen finden Sie unter [Kompatibilitätsrichtlinie für Geräte](/sccm/mdm/deploy-use/device-compliance-policies).  
+Konformitätsrichtlinien definieren die Regeln und Einstellungen, die ein Gerät erfüllen muss, damit es als mit bedingten Zugriffsrichtlinien konform eingestuft wird. Konformitätsrichtlinien ermöglichen Ihnen auch, Konformitätsprobleme bei Geräten unabhängig von bedingten Zugriffsrechten zu überwachen und zu beheben. Weitere Informationen finden Sie unter [Kompatibilitätsrichtlinie für Geräte](/sccm/mdm/deploy-use/device-compliance-policies).  
 
 ### <a name="windows-update-for-business-policies"></a>Windows Update for Business-Richtlinien
 Mit Windows Update for Business-Richtlinien können Sie Zurückstellungsrichtlinien für Funktionsupdates unter Windows 10 oder für Qualitätsupdates für Windows 10-Geräte konfigurieren, die direkt von Windows Update for Business verwaltet werden. Weitere Informationen finden Sie unter [Konfigurieren von Windows Update for Business-Zurückstellungsrichtlinien](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).  

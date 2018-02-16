@@ -3,7 +3,7 @@ title: "Neues bei der hybride Verwaltung mobiler Geräte"
 titleSuffix: Configuration Manager
 description: "Erfahren Sie mehr über die neuen Funktionen der Verwaltung mobiler Geräte, die für Hybridbereitstellungen mit Configuration Manager und Intune verfügbar sind."
 ms.custom: na
-ms.date: 01/04/2018
+ms.date: 02/06/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: aca30a199e38b2d4ed38a458694d98010b5e2496
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+ms.openlocfilehash: c724d9eafde6aa9abc0d3f9bfa867418046b2ecb
+ms.sourcegitcommit: 389c4e5b4e9953b74c13b1689195f99c526fa737
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Neuheiten bei der hybriden Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune
 
@@ -46,6 +46,16 @@ Jeder Abschnitt dieses Artikels listet Hybridfeatures in drei verschiedenen Kate
 ## <a name="january-2018"></a>Januar 2018
 
 ### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
+
+- **Genehmigen der Unternehmensportal-App für Android for Work** <!--1797090 -->    
+  Wenn Ihre Organisation Android for Work verwendet, müssen Sie die Unternehmensportal-App für Android manuell genehmigen, damit diese weiterhin automatische Updates vom verwalteten Google Play-Store erhält.
+
+- **Richtlinien für bedingten Zugriff für Intune sind nur über das Azure-Portal verfügbar**  <!-- 1737088 1634311 -->    
+  Ab dieser Version müssen Sie Ihre Richtlinien für bedingten Zugriff im [Azure-Portal](https://portal.azure.com) konfigurieren und verwalten. Wählen Sie hierzu im Portal **Azure Active Directory** > **Bedingter Zugriff**. Der Einfachheit halber können Sie auch aus Intune auf dieses Blatt im Azure-Portal zugreifen. Wählen Sie hierzu **Intune** > **Zugangsberechtigung**.
+
+- **Updates für Konformitäts-E-Mails** <!--1637547 -->    
+  Wenn eine E-Mail gesendet wird, um ein nicht konformes Gerät zu melden, sind darin weitere Informationen zu diesem Gerät enthalten. 
+
 
 - **Neue Funktionen für die Aktion „Lösung“ für Android-Geräte**<!--1583480-->    
   Die Unternehmensportal-App für Android erweitert die Aktion „Lösung“ für **Geräteeinstellungen aktualisieren**, um [Verschlüsselungsprobleme bei Geräten](https://docs.microsoft.com/intune-user-help/encrypt-your-device-android) zu lösen.

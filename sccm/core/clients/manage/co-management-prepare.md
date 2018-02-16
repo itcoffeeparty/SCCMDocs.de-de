@@ -10,14 +10,17 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: 
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: d605dd4770be6878b08f4ac61da6ab27e3b6d61f
-ms.sourcegitcommit: ac9268e31440ffe91b133c2ba8405d885248d404
+ms.openlocfilehash: 902787f173c714fd2a73cc657aad758bd79ce3c8
+ms.sourcegitcommit: 389c4e5b4e9953b74c13b1689195f99c526fa737
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>Vorbereiten von Windows 10-Geräten für die Co-Verwaltung
 Sie können die Co-Verwaltung auf Windows 10-Geräten aktivieren, die in AD und Azure AD eingebunden, bei Intune registriert und ein Client in Configuration Manager sind. Installieren Sie den Configuration Manager-Client auf neuen Windows 10- und bereits in Intune registrierten Geräten jedoch vor der Aktivierung der Co-Verwaltung. Windows 10-Geräte, die Configuration Manager-Clients sind, können Sie bei Intune registrieren und die Co-Verwaltung über die Configuration Manager-Konsole aktivieren.
+
+> [!IMPORTANT]
+> Co-Verwaltung wird von Windows 10 Mobile-Geräten nicht unterstützt.
 
 ## <a name="command-line-to-install-configuration-manager-client"></a>Befehlszeile zum Installieren von Configuration Manager-Clients
 Sie müssen in Intune eine App für Windows 10-Geräte erstellen, die noch keine Configuration Manager-Clients sind. Wenn Sie in den nächsten Abschnitten eine App erstellen, verwenden Sie die folgende Befehlszeile:

@@ -3,29 +3,30 @@ title: Endpoint Protection
 titleSuffix: Configuration Manager
 description: "Erfahren Sie, wie Sie Richtlinien für Antischadsoftware und die Sicherheit der Windows-Firewall für Clientcomputer in der Configuration Manager-Hierarchie verwalten."
 ms.custom: na
-ms.date: 02/6/2017
+ms.date: 02/09/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
-caps.latest.revision: "11"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: 308c69f4631a1bcc28f7d8460a4aa3abb02f0650
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+caps.latest.revision: 
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.openlocfilehash: 3f8d0d7934a539729793cd0307d6fa5d3e31bf3a
+ms.sourcegitcommit: fbde417e3c3002898bd216a7e110e725ae269893
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Mithilfe von Endpoint Protection in System Center Configuration Manager können Sie Richtlinien für Antischadsoftware und die Sicherheit der Windows-Firewall für Clientcomputer in Ihrer Configuration Manager-Hierarchie verwalten.  
+Endpoint Protection verwaltet Richtlinien für Antischadsoftware und die Sicherheit der Windows-Firewall für Clientcomputer in der Configuration Manager-Hierarchie.  
 
 > [!IMPORTANT]  
 >  Sie benötigen eine Lizenz für die Verwendung von Endpoint Protection, damit Sie Clients in der Configuration Manager-Hierarchie verwalten können.  
@@ -34,7 +35,7 @@ Mithilfe von Endpoint Protection in System Center Configuration Manager können 
 
 -   Sie können Antischadsoftware-Richtlinien und Windows-Firewall-Einstellungen erstellen und Windows Defender Advanced Threat Protection für ausgewählte Computergruppen verwalten.  
 -   Sie können mit Configuration Manager-Softwareupdates die neuesten Definitionsdateien für Antischadsoftware herunterladen, um Clientcomputer auf dem neuesten Stand zu halten.  
--   Sie können E-Mail-Benachrichtigungen senden, die Überwachung in der Konsole nutzen und Berichte anzeigen, damit Administratoren über erkannte Schadsoftware auf Clientcomputern informiert werden.  
+-   Senden Sie E-Mail-Benachrichtigungen, verwenden Sie Funktionen für eine konsoleninterne Überwachung, und zeigen Sie Berichte an. Administratoren werden durch diese Aktionen informiert, sobald Schadsoftware auf Clientcomputern erkannt wird.  
 
 Ab Windows 10 und Windows Server 2016 ist Windows Defender bereits auf den Computern installiert. Bei diesen Betriebssystemen wird bei der Installation des Configuration Manager-Clients ein Verwaltungsclient für Windows Defender installiert. Auf Computern unter Windows 8.1 und früher wird mit dem Configuration Manager-Client auch der Endpoint Protection-Client installiert. Windows Defender und der Endpoint Protection-Client verfügt über folgende Funktionen:  
 
@@ -42,18 +43,18 @@ Ab Windows 10 und Windows Server 2016 ist Windows Defender bereits auf den Compu
 -   Erkennung von Rootkits und Wiederherstellung  
 -   Bewertung kritischer Sicherheitsrisikos und automatische Definitions- und Modulupdates  
 -   Erkennung von Sicherheitslücken im Netzwerk über das Netzwerkinspektionssystem  
--   Integration mit Cloud Protection Service, um Microsoft Schadsoftware zu melden. Wenn Sie diesem Dienst beitreten, können vom Endpoint Protection-Client oder Windows Defender die neuesten Definitionen aus dem Microsoft Center zum Schutz vor Malware heruntergeladen werden, sobald nicht identifizierte Schadsoftware auf einem Computer erkannt wird.  
+-   Integration mit Cloud Protection Service, um Microsoft Schadsoftware zu melden. Wenn Sie diesem Dienst beitreten, werden vom Endpoint Protection-Client oder Windows Defender die neuesten Definitionen aus dem Microsoft Center zum Schutz vor Schadsoftware heruntergeladen, sobald nicht identifizierte Schadsoftware auf einem Computer erkannt wird.  
 
 > [!NOTE]  
 >  Der Endpoint Protection-Client kann auf einem Server, auf dem Hyper-V ausgeführt wird, sowie auf virtuellen Gastcomputern mit unterstützten Betriebssystemen installiert werden. Endpoint Protection-Aktionen weisen eine integrierte, zufällige Verzögerung auf, damit Schutzdienste nicht gleichzeitig ausgeführt werden und somit eine übermäßige CPU-Auslastung verhindert wird.  
 
- Darüber hinaus können Sie Endpoint Protection in Configuration Manager zum Verwalten von Windows-Firewalleinstellungen in der Configuration Manager-Konsole nutzen.  
+ Darüber hinaus nutzen Sie Endpoint Protection zum Verwalten von Windows-Firewalleinstellungen in der Configuration Manager-Konsole.  
 
  [Beispielszenario: Verwenden von System Center Endpoint Protection zum Schutz von Computern vor Schadsoftware in System Center Configuration Manager](scenarios-endpoint-protection.md) Endpoint Protection und Windows-Firewall  
 
 
 ## <a name="managing-malware-with-endpoint-protection"></a>Verwalten von Schadsoftware mit Endpoint Protection  
- Mit Endpoint Protection in Configuration Manager können Sie Antischadsoftware-Richtlinien erstellen, in denen Einstellungen für Endpoint Protection-Clientkonfigurationen enthalten sind. Sie können diese Antischadsoftware-Richtlinien auf Clientcomputern bereitstellen und sie im Knoten **Endpoint Protection-Status** unter **Sicherheit** im Arbeitsbereich **Überwachung** oder mithilfe von Configuration Manager-Berichten überwachen.  
+ Mit Endpoint Protection in Configuration Manager können Sie Antischadsoftware-Richtlinien erstellen, in denen Einstellungen für Endpoint Protection-Clientkonfigurationen enthalten sind. Stellen Sie diese Richtlinien für Antischadsoftware auf Clientcomputern bereit. Überwachen Sie dann die Einhaltung über den Knoten **Endpoint Protection-Status** unter **Sicherheit** im Arbeitsbereich **Überwachung**. Nutzen Sie zudem die Endpoint Protection-Berichte im Knoten **Berichterstellung**.  
 
  Weitere Informationen:  
 
@@ -77,12 +78,12 @@ Ab Windows 10 und Windows Server 2016 ist Windows Defender bereits auf den Compu
 >  Von Endpoint Protection wird nur die Verwaltung der Windows-Firewall unterstützt.  
 
 
- Weitere Informationen zur Erstellung und Bereitstellung von Windows-Firewallrichtlinien für Endpoint Protection finden Sie unter [Erstellen und Bereitstellen von Windows-Firewallrichtlinien für Endpoint Protection in System Center Configuration Manager](create-windows-firewall-policies.md).  
+ Weitere Informationen finden Sie unter [Erstellen und Bereitstellen von Windows-Firewallrichtlinien für Endpoint Protection](create-windows-firewall-policies.md).  
 
 
 ## <a name="windows-defender-advanced-threat-protection"></a>Windows Defender Advanced Threat Protection
 
-Ab Version 1606 von Configuration Manager (Current Branch) kann Endpoint Protection Windows Defender Advanced Threat Protection (ATP) verwalten und überwachen. Windows Defender ATP ist ein neuer Dienst, der Unternehmen dabei unterstützt, erweiterte Angriffe auf ihre Netzwerke zu entdecken, zu untersuchen, und darauf zu reagieren. Informationen hierzu finden Sie unter [Windows Defender Advanced Threat Protection](windows-defender-advanced-threat-protection.md).
+Endpoint Protection verwaltet und überwacht Windows Defender Advanced Threat Protection (ATP). Der Windows Defender ATP-Dienst unterstützt Unternehmen dabei, erweiterte Angriffe auf Unternehmensnetzwerke zu entdecken, zu untersuchen, und darauf zu reagieren. Weitere Informationen finden Sie unter [Windows Defender Advanced Threat Protection](windows-defender-advanced-threat-protection.md).
 
 ## <a name="endpoint-protection-workflow"></a>Endpoint Protection-Workflow  
  Das folgende Diagramm bringt Ihnen den Workflow zur Implementierung von Endpoint Protection in Ihrer Configuration Manager-Hierarchie näher.  
@@ -105,17 +106,16 @@ Ab Version 1606 von Configuration Manager (Current Branch) kann Endpoint Protect
 ### <a name="how-to-get-the-endpoint-protection-client-for-mac-computers-and-linux-servers"></a>Abrufen des Endpoint Protection-Clients für Macintosh-Computer und Linux-Server
 
 Gehen Sie folgendermaßen vor, um die Imagedatei mit der Endpoint Protection-Clientsoftware und Dokumentation für Macintosh-Computer und Linux-Server herunterzuladen.
-1. Melden Sie sich im [Microsoft Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter/default.aspx) an.
+1. Melden Sie sich beim [Microsoft Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter/default.aspx) an.
 2. Wählen Sie die Registerkarte **Downloads and Keys** (Downloads und Schlüssel) oben auf der Website aus.
 3. Filtern Sie nach dem Produkt **System Center Endpoint Protection (Current Branch)**.
 4. Klicken Sie auf den Link **Herunterladen**.
-5. Klicken Sie auf **Continue**(Weiter). Es sollten mehrere Dateien angezeigt werden, einschließlich eine mit der Bezeichnung **System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage   32/64 bit   1579 MB ISO** (System Center Endpoint Protection (Current Branch –Version 1606) für Linux- und Mac-Betriebssysteme, mehrsprachig, 32/64 Bit, 1579 MB ISO).
-6. Klicken Sie auf das Pfeilsymbol, um die Datei herunterzuladen. Der Dateiname lautet **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_-2_EptProt_Lin_Mac_MLF_X21-44498.ISO**.
+5. Klicken Sie auf **Continue**(Weiter). Es sollten mehrere Dateien angezeigt werden, einschließlich eine mit der Bezeichnung **System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage   32/64 bit   1878 MB ISO** (System Center Endpoint Protection (Current Branch –Version 1606) für Linux- und Mac-Betriebssysteme, mehrsprachig, 32/64 Bit, 1878 MB ISO).
+6. Klicken Sie zum Herunterladen der Datei auf das Pfeilsymbol. Der Dateiname lautet **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_-3_EptProt_Lin_Mac_MLF_X21-67050.ISO**.
 
-Dieses Update von Juli 2017 (X21-44498) enthält Folgendes:
+Dieses Update von Januar 2018 (X21-67050) schließt folgende Versionen ein:
 
-- System Center Endpoint Protection für Mac 4.5.28.1 (aktualisiertes Installationszertifikat)
-- System Center Endpoint Protection für Linux 4.5.18.0 (neue Sprachpakete)
-- Dokumentation zu System Center Endpoint Protection für Linux (überarbeiteter Leitfaden zum Echtzeitschutz)
+- System Center Endpoint Protection für Macintosh 4.5.32.0 (Unterstützung für macOS 10.13 High Sierra)
+- System Center Endpoint Protection für Linux 4.5.20.0 
 
- Weitere Informationen zum Installieren und Verwalten von Endpoint Protection-Clients für Linux und Macintosh-Computer finden Sie in der Dokumentation des jeweiligen Produkts im Ordner **Documentation** .
+ Weitere Informationen zum Installieren und Verwalten von Endpoint Protection-Clients für Linux- und Macintosh-Computer finden Sie in der begleitenden Dokumentation dieses Produkts. Diese Produktdokumentation ist im Ordner **Dokumentation** der ISO-Datei zu finden.
