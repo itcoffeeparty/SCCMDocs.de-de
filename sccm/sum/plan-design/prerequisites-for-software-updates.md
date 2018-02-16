@@ -3,26 +3,27 @@ title: "Voraussetzungen für Softwareupdates"
 titleSuffix: Configuration Manager
 description: "Hier finden Sie Informationen über die Voraussetzungen für Softwareupdates in System Center Configuration Manager."
 keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.date: 10/06/2016
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.date: 02/02/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology: configmgr-sum
+ms.technology:
+- configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-ms.openlocfilehash: 905ecc023dd181a8d4801860898b05aff5e4e07f
-ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
+ms.openlocfilehash: 1907ff5bf6b1146b967e64bd381915ac863b3e55
+ms.sourcegitcommit: 389c4e5b4e9953b74c13b1689195f99c526fa737
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="prerequisites-for-software-updates-in-system-center-configuration-manager"></a>Voraussetzungen für Softwareupdates in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-In diesem Thema werden die Voraussetzungen für Softwareupdates in System Center Configuration Manager beschrieben. Die externen und internen Abhängigkeiten sind jeweils in separaten Tabellen aufgeführt.  
+In diesem Artikel werden die Voraussetzungen für Softwareupdates in System Center Configuration Manager beschrieben. Die externen und internen Abhängigkeiten sind jeweils in separaten Tabellen aufgeführt.  
 
 ## <a name="software-update-dependencies-external-to-configuration-manager"></a>Externe Softwareupdateabhängigkeiten von Configuration Manager  
  In der folgenden Abschnitten sind die externen Abhängigkeiten für Softwareupdates aufgeführt.  
@@ -31,10 +32,10 @@ In diesem Thema werden die Voraussetzungen für Softwareupdates in System Center
  Die Internetinformationsdienste (Internet Information Services, IIS) müssen sich zum Ausführen von Softwareupdatepunkt, Verwaltungspunkt und Verteilungspunkt auf den Standortsystemservern befinden. Weitere Informationen finden Sie unter [Prerequisites for site system roles (Voraussetzungen für Standortsystemrollen)](../../core/plan-design/configs/site-and-site-system-prerequisites.md).  
 
 ### <a name="windows-server-update-services-wsus"></a>Windows Server Update Services (WSUS)  
- WSUS ist zur Synchronisierung von Softwareupdates und zur Überprüfung der Kompatibilität von Softwareupdates auf Clients erforderlich. Der WSUS-Server muss installiert werden, bevor Sie die Standortsystemrolle „Softwareupdatepunkt“ erstellen können. Für einen Softwareupdatepunkt werden die folgenden Versionen von WSUS unterstützt:  
+ WSUS ist zur Synchronisierung von Softwareupdates und für die Anwendbarkeit von Softwareupdates auf Clients erforderlich. Der WSUS-Server muss installiert werden, bevor Sie die Rolle „Softwareupdatepunkt“ erstellen können. Für einen Softwareupdatepunkt werden die folgenden Versionen von WSUS unterstützt:  
 
--   WSUS 4 (Rolle in Windows Server 2012 und Windows Server 2012 R2)  
-
+-   WSUS 10.0 (Rolle in Windows Server 2016)
+-   WSUS 6.2 und 6.3 (Rolle in Windows Server 2012 und Windows Server 2012 R2)  
 -   WSUS 3.2 (Rolle in Windows Server 2008 R2)  
 
  Stellen Sie bei Verwendung mehrerer Softwareupdatepunkte an einem Standort sicher, dass jeweils die gleiche WSUS-Version ausgeführt wird.  
@@ -54,7 +55,7 @@ In diesem Thema werden die Voraussetzungen für Softwareupdates in System Center
 >  Verwenden Sie nicht die WSUS-Verwaltungskonsole zum Konfigurieren der WSUS-Einstellungen. Configuration Manager stellt eine Verbindung mit WSUS auf dem Softwareupdatepunkt her, und die entsprechenden Einstellungen werden konfiguriert.  
 
 ### <a name="windows-update-agent-wua"></a>Windows Update-Agent (WUA)  
- Der WUA-Client ist auf Clients erforderlich, um das Verbinden mit dem WSUS-Server und das Abrufen der Liste von Softwareupdates zu ermöglichen, die auf ihre Kompatibilität überprüft werden müssen.  
+ Der WUA-Client ist auf Clients erforderlich, um eine Verbindung zum WSUS-Server herzustellen. WUA ruft die Liste der Softwareupdates ab, die auf Konformität überprüft werden müssen.  
 
  Während der Installation von Configuration Manager wird die aktuelle WUA-Version heruntergeladen. Nachdem der Configuration Manager-Client installiert wurde, wird für den WUA bei Bedarf ein Upgrade ausgeführt. Wenn bei der Installation jedoch Fehler auftreten, müssen Sie ein anderes Verfahren zum Ausführen des WUA-Upgrades verwenden.  
 
@@ -68,7 +69,7 @@ In diesem Thema werden die Voraussetzungen für Softwareupdates in System Center
  Sie müssen einen Softwareupdatepunkt auf dem WSUS-Server installieren, um Softwareupdates in Configuration Manager bereitzustellen. Weitere Informationen finden Sie unter [Install and configure a software update point (Installieren und Konfigurieren eines Softwareupdatepunkts)](../get-started/install-a-software-update-point.md).
 
 ### <a name="distribution-points"></a>Verteilungspunkte  
- Verteilungspunkte sind erforderlich, um den Inhalt für Softwareupdates zu speichern. Weitere Informationen zum Installieren von Verteilungspunkten und zum Verwalten von Inhalt finden Sie unter [Manage content and content infrastructure (Verwalten von Inhalt und Inhaltsinfrastruktur)](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+ Verteilungspunkte sind erforderlich, um den Inhalt für Softwareupdates zu speichern. Weitere Informationen zum Installieren von Verteilungspunkten und Verwalten von Inhalt finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 ### <a name="client-settings-for-software-updates"></a>Clienteinstellungen für Softwareupdates  
  Standardmäßig sind Softwareupdates für Clients aktiviert. Es stehen jedoch noch weitere Einstellungen zur Verfügung, mit denen gesteuert wird, wie und wann von Clients die Kompatibilität für die Softwareupdates überprüft wird und wie die Softwareupdates installiert werden.  
@@ -77,13 +78,13 @@ In diesem Thema werden die Voraussetzungen für Softwareupdates in System Center
 
 -   [Clienteinstellungen für Softwareupdates](../get-started/manage-settings-for-software-updates.md#BKMK_ClientSettings).   
 
--   [Software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates) („Softwareupdates“ im Thema „Clienteinstellungen“).  
+-   Artikel [Software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates) („Softwareupdates“ im Thema „Clienteinstellungen“).  
 
 ### <a name="reporting-services-point"></a>Reporting Services-Punkt  
- Mithilfe der Standortsystemrolle Reporting Services-Punkt können Berichte für Softwareupdates angezeigt werden. Diese Rolle ist optional. Ihre Verwendung wird jedoch empfohlen. Weitere Informationen zum Erstellen eines Reporting Services-Punkts finden Sie unter [Configuring reporting (Konfigurieren der Berichterstellung)](../../core/servers/manage/configuring-reporting.md).  
+ Mithilfe der Standortsystemrolle Reporting Services-Punkt können Berichte für Softwareupdates angezeigt werden. Diese Rolle ist optional. Ihre Verwendung wird jedoch empfohlen. Weitere Informationen zum Erstellen eines Reporting Services-Punkts finden Sie unter [Configuring reporting] (Konfigurieren der Berichterstellung).  
 
 ##  <a name="BKMK_RecoverUpgrades"></a> Wiederherstellen nach Synchronisieren der Kategorie „Upgrades“ vor der Installation von KB 3095113  
- Sie müssen [Hotfix 3095113](https://support.microsoft.com/kb/3095113) für WSUS auf Ihren Softwareupdatepunkten und Standortservern installieren, bevor Sie die Klassifikation **Upgrades** synchronisieren. Wenn der Hotfix zum Zeitpunkt der Aktivierung der Klassifizierung **Upgrades** nicht installiert ist, wird das Funktionsupgrade Windows 10 Build 1511 für WSUS angezeigt, WSUS kann die zugehörigen Pakete allerdings nicht ordnungsgemäß herunterladen und bereitstellen. Wenn Sie Upgrades synchronisieren, ohne zuerst den [Hotfix 3095113](https://support.microsoft.com/kb/3095113)installiert zu haben, füllen Sie die WSUS-Datenbank (SUSDB) mit unbrauchbaren Daten auf. Diese Daten müssen gelöscht werden, bevor Upgrades ordnungsgemäß bereitgestellt werden können.  Verwenden Sie das folgende Verfahren, um dieses Problem zu beheben.  
+ Sie müssen [Hotfix 3095113](https://support.microsoft.com/kb/3095113) für WSUS auf Ihren Softwareupdatepunkten und Standortservern installieren, bevor Sie die Klassifikation **Upgrades** synchronisieren. Wenn der Hotfix zum Zeitpunkt der Aktivierung der Klassifizierung **Upgrades** nicht installiert ist, wird das Funktionsupgrade Windows 10 Build 1511 für WSUS angezeigt, WSUS kann die zugehörigen Pakete allerdings nicht ordnungsgemäß herunterladen und bereitstellen. Wenn Sie Upgrades synchronisieren, ohne zuerst den [Hotfix 3095113](https://support.microsoft.com/kb/3095113) installiert zu haben, füllen Sie die WSUS-Datenbank (SUSDB) mit unbrauchbaren Daten auf. Diese Daten müssen gelöscht werden, bevor Upgrades ordnungsgemäß bereitgestellt werden können. Verwenden Sie das folgende Verfahren, um dieses Problem zu beheben.  
 
 #### <a name="to-recover-from-synchronizing-the-upgrades-classification-before-you-install-kb-3095113"></a>Wiederherstellen nach Synchronisieren der Klassifizierung „Upgrades“ vor der Installation von KB 3095113  
 
