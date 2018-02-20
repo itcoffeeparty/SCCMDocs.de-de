@@ -7,20 +7,21 @@ ms.date: 8/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
-caps.latest.revision: "8"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 0cc1915a73ed55403eca27021b77aab1fd1ddb03
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 91e86bd578403d17ec7e4cc9dc6284c51a57053e
+ms.sourcegitcommit: 37e990d191028160486dbca286d2ea945bd5c8c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="support-for-windows-features-and-networks-in-system-center-configuration-manager"></a>Unterstützung für Windows-Features und -Netzwerke in System Center Configuration Manager
 
@@ -65,7 +66,8 @@ Diese Clients führen auch eine Zwischenspeicherung des Inhalts durch. Auf diese
 |Windows Server 2008 mit SP2|**Erfordert BITS 4.0**: Sie können BITS 4.0 mithilfe von Softwareupdates oder Softwareverteilung auf Configuration Manager-Clients installieren. Weitere Informationen zur Version BITS 4.0 finden Sie unter [Windows Management Framework](http://go.microsoft.com/fwlink/p/?LinkId=181979).<br /><br /> Die BranchCache-Clientfunktion wird unter diesem Betriebssystem für die Softwareverteilung, die vom Netzwerk aus ausgeführt wird, oder für SMB-Dateiübertragungen nicht unterstützt. Darüber hinaus kann dieses Betriebssystem nicht die BranchCache-Funktionalität mit cloudbasierten Verteilungspunkten verwenden.|  
 |Windows Server 2008 R2|Standardmäßig unterstützt|  
 |Windows Server 2012|Standardmäßig unterstützt|  
-|Windows Server 2012 R2|Standardmäßig unterstützt|  
+|Windows Server 2012 R2|Standardmäßig unterstützt|  
+|Windows Server 2016|Standardmäßig unterstützt|  
 
  Weitere Informationen zu BranchCache finden Sie unter [BranchCache für Windows](http://go.microsoft.com/fwlink/p/?LinkId=177945) in der Dokumentation zu Windows Server.  
 
@@ -82,7 +84,7 @@ Configuration Manager stellt Unterstützung für Clients in Arbeitsgruppen berei
 Configuration Manager unterstützt die Verwendung der Datendeduplizierung mit Verteilungspunkten unter den folgenden Betriebssystemen:  
 
 -   Windows Server 2016
--   Windows Server 2012 R2  
+-   Windows Server 2012 R2  
 -   Windows Server 2012  
 
 
