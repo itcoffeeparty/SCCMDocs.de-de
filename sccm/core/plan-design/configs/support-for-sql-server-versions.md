@@ -3,7 +3,7 @@ title: "Unterstützte Versionen von SQL Server"
 titleSuffix: Configuration Manager
 description: Abrufen der SQL Server-Version und Konfigurationsanforderungen zum Hosten einer System Center Configuration Manager-Standortdatenbank.
 ms.custom: na
-ms.date: 12/18/2017
+ms.date: 02/14/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.latest.revision:
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 82df06873449d538b7efbe414a451d746d48e11f
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+ms.openlocfilehash: 5c17efa3498907fcc57d366965bec3b4198890bb
+ms.sourcegitcommit: 37e990d191028160486dbca286d2ea945bd5c8c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>Unterstützte SQL Server-Versionen für System Center Configuration Manager
 
@@ -29,8 +29,8 @@ ms.lasthandoff: 02/01/2018
 Jeder System Center Configuration Manager-Standort erfordert zum Hosten der Standortdatenbank eine unterstützte Version und Konfiguration von SQL Server.  
 
 ##  <a name="bkmk_Instances"></a> SQL Server-Instanzen und -Speicherorte  
- **Standort der zentralen Verwaltung und primäre Standorte:**  
-Die Standortdatenbank muss eine vollständige Installation von SQL Server verwenden.  
+ **Standort der zentralen Verwaltung und primäre Standorte**  
+ Die Standortdatenbank muss eine vollständige Installation von SQL Server verwenden.  
 
  SQL Server kann auf den folgenden Computern installiert sein:  
 
@@ -45,7 +45,7 @@ Die folgenden Instanzen werden unterstützt:
 -   SQL Server Always On-Verfügbarkeitsgruppe. Diese Option setzt Configuration Manager Version 1602 oder höher voraus. Weitere Informationen finden Sie unter [SQL Server Always On für eine hoch verfügbare Standortdatenbank für System Center Configuration Manager](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
 
- **Sekundäre Standorte:**  
+ **Sekundäre Standorte**  
  Die Standortdatenbank kann die Standardinstanz einer vollständigen Installation von SQL Server oder SQL Server Express verwenden.  
 
  SQL Server muss auf dem Standortservercomputer installiert sein.  
@@ -59,16 +59,16 @@ Die folgenden Instanzen werden unterstützt:
 Die SQL Server-Transaktionsreplikation wird nur für das Replizieren von Objekten an Verwaltungspunkte unterstützt, die für die Verwendung von [Datenbankreplikaten](https://technet.microsoft.com/library/mt608546.aspx) konfiguriert sind.  
 
 ##  <a name="bkmk_SQLVersions"></a> Unterstützte Versionen von SQL Server  
- In einer Hierarchie mit mehreren Standorten kann jeder Standort eine andere SQL Server-Version zum Hosten der Standortdatenbank verwenden, solange Folgendes zutrifft:
+ In einer Hierarchie mit mehreren Standorten können verschiedene Standorte verschiedene SQL Server-Versionen zum Hosten der Standortdatenbank verwenden. Dies gilt jedoch nur, wenn folgende Voraussetzungen erfüllt sind:
  -  Configuration Manager unterstützt die von Ihnen verwendeten SQL Server-Versionen.
  -  Microsoft stellt weiterhin Support für die von Ihnen verwendeten SQL Server-Versionen bereit.
  -  SQL Server unterstützt Replikationen zwischen beiden SQL Server-Versionen.  Beispielsweise [unterstützt SQL Server keine Replikation zwischen SQL Server 2008 R2 und SQL Server 2016](https://docs.microsoft.com/sql/relational-databases/replication/deprecated-features-in-sql-server-replication).
 
 
 
- Sofern nicht anders angegeben, werden die folgenden SQL Server-Versionen von allen aktiven Versionen von System Center Configuration Manager-Versionen unterstützt. Wenn der Support für eine neue Version von SQL Server oder ein Service Pack hinzugefügt wird, wird die Version von Configuration Manager, mit der der Support hinzugefügt wird, angegeben. Beachten Sie bei eingestelltem Support ebenfalls die Details zu den betroffenen Versionen von Configuration Manager.   
+ Sofern nicht anders angegeben, werden die folgenden SQL Server-Versionen von allen aktiven Versionen von System Center Configuration Manager-Versionen unterstützt. Beim Hinzufügen der Unterstützung für eine neue SQL Server-Version oder ein Service Pack wird die Configuration Manager-Version angegeben, mit der die Unterstützung hinzugefügt wird. Beachten Sie bei eingestelltem Support ebenfalls die Details zu den betroffenen Versionen von Configuration Manager.   
 
-Der Support für ein bestimmtes Service Pack von SQL Server beinhaltet kumulative Updates, sofern diese nicht gegen die Abwärtskompatibilität für die Basisversion des Service Packs verstoßen. Wenn keine Version des Service Packs angegeben ist, gilt die Unterstützung für die Version von SQL Server ohne Service Pack. Wenn künftig ein Service Pack für diese Version veröffentlicht wird, wird ein separater Supporthinweis gegeben, bevor die neue Version des Service Packs unterstützt wird.
+Der Support für ein bestimmtes Service Pack von SQL Server beinhaltet kumulative Updates, sofern diese nicht gegen die Abwärtskompatibilität für die Basisversion des Service Packs verstoßen. Wenn keine Version des Service Packs angegeben ist, gilt die Unterstützung für die Version von SQL Server ohne Service Pack. Wenn zu einem späteren Zeitpunkt ein Service Pack für diese SQL Server-Version veröffentlicht wird, wird eine separate Unterstützungsanweisung deklariert, bevor die neue Version des Service Packs unterstützt wird.
 
 
 > [!IMPORTANT]  
@@ -185,34 +185,34 @@ Sie können diese Version von SQL Server ohne mindestens erforderliche Version f
 ##  <a name="bkmk_SQLConfig"></a> Erforderliche Konfigurationen für SQL Server  
  Folgendes ist für alle Installationen von SQL Server erforderlich, die Sie für eine Standortdatenbank verwenden (einschließlich SQL Server Express). Wenn SQL Server Express von Configuration Manager als Teil einer Installation eines sekundären Standorts installiert wird, werden diese Konfigurationen für Sie automatisch erstellt.  
 
- **Version der SQL Server-Architektur:**  
+ **Version der SQL Server-Architektur**  
  Configuration Manager erfordert eine 64-Bit-Version von SQL Server, um die Standortdatenbank zu hosten.  
 
- **Datenbanksortierung:**  
+ **Datenbanksortierung**  
  An jedem Standort muss sowohl die für den Standort als auch die für die Standortdatenbank verwendete Instanz von SQL Server die folgende Sortierung verwenden: **SQL_Latin1_General_CP1_CI_AS**.  
 
  Configuration Manager unterstützt zwei Sortierungsausnahmen, um die in GB18030 für die Nutzung in China definierten Standards zu erfüllen. Weitere Informationen finden Sie unter [Internationale Unterstützung in System Center Configuration Manager](../../../core/plan-design/hierarchy/international-support.md).  
 
- **Datenbank-Kompatibilitätsgrad:** </br>
+ **Kompatibilitätsgrad der Datenbank** </br>
  Configuration Manager erfordert, dass der Kompatibilitätsgrad für die Standortdatenbank nicht kleiner als die niedrigste unterstützte SQL Server-Version für Ihre Configuration Manager-Version ist. Zum Beispiel benötigen Sie ab Version 1702 einen [Datenbank-Kompatibilitätsgrad](https://docs.microsoft.com/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database), der größer als oder gleich 110 ist. <!-- SMS.506266--> 
 
- **SQL Server-Funktionen:**  
+ **SQL Server-Funktionen**  
  Nur die Funktion **Datenbankmoduldienste** ist für jeden Standortserver erforderlich.  
 
  Für die Configuration Manager-Datenbankreplikation ist die Funktion **SQL Server-Replikation** nicht erforderlich. Diese SQL Server-Konfiguration ist jedoch erforderlich, wenn Sie [Datenbankreplikate für Verwaltungspunkte für System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md) verwenden.  
 
- **Windows-Authentifizierung:**  
+ **Windows-Authentifizierung**  
  Configuration Manager setzt die **Windows-Authentifizierung** zur Überprüfung von Verbindungen mit der Datenbank voraus.  
 
- **SQL Server-Instanz:**  
+ **SQL Server-Instanz**  
  Sie müssen für jeden Standort eine dedizierte Instanz von SQL Server verwenden. Die Instanz kann entweder eine **benannte Instanz** oder eine **Standardinstanz** darstellen.  
 
- **SQL Server-Arbeitsspeicher:**  
- Reservieren Sie Arbeitsspeicher für SQL Server mithilfe von SQL Server Management Studio durch Festlegen der Einstellung **Minimaler Serverarbeitsspeicher** unter **Arbeitsspeicheroptionen für den Server**. Weitere Informationen zum Festlegen einer festen Arbeitsspeichergröße finden Sie unter [Festlegen einer festen Arbeitsspeichergröße (SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759).  
+ **SQL Server-Arbeitsspeicher**  
+ Reservieren Sie Arbeitsspeicher für SQL Server mithilfe von SQL Server Management Studio durch Festlegen der Einstellung **Minimaler Serverarbeitsspeicher** unter **Arbeitsspeicheroptionen für den Server**. Weitere Informationen zu dieser Einstellung finden Sie unter [Vorgehensweise: Festlegen einer festen Arbeitsspeichergröße (SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759).  
 
--   **Für einen auf demselben Computer wie der Standortserver installierten Datenbankserver:** Begrenzen Sie den Arbeitsspeicher für SQL Server auf 50 bis 80 Prozent des verfügbaren adressierbaren Systemspeicherns.  
+-   **Für einen auf demselben Computer wie der Standortserver installierten Datenbankserver**: Begrenzen Sie den Arbeitsspeicher für SQL Server auf 50 bis 80 Prozent des verfügbaren adressierbaren Systemspeichers.  
 
--   **Für einen dedizierten Datenbankserver (remote vom Standortserver):** Begrenzen Sie den Arbeitsspeicher für SQL Server auf 80 bis 90 Prozent des verfügbaren adressierbaren Systemspeichers.  
+-   **Für einen dedizierten Datenbankserver (remote vom Standortserver)**: Begrenzen Sie den Arbeitsspeicher für SQL Server auf 80 bis 90 Prozent des verfügbaren adressierbaren Systemspeichers.  
 
 -   **Für eine Arbeitsspeicherreserve für den Pufferpool jeder verwendeten SQL Server-Instanz:**  
 
@@ -220,7 +220,7 @@ Sie können diese Version von SQL Server ohne mindestens erforderliche Version f
     -   Für einen primären Standort: Legen Sie mindestens 8 Gigabyte (GB) fest.  
     -   Für einen sekundären Standort: Legen Sie mindestens 4 Gigabyte (GB) fest.  
 
-**Geschachtelte SQL-Trigger:**  
+**Geschachtelte SQL-Trigger**  
  [Geschachtelte SQL-Trigger](http://go.microsoft.com/fwlink/?LinkId=528802) muss aktiviert sein.  
 
  **SQL Server-CLR-Integration**  
@@ -229,7 +229,7 @@ Sie können diese Version von SQL Server ohne mindestens erforderliche Version f
 ##  <a name="bkmk_optional"></a> Optionale Konfigurationen für SQL Server  
  Die folgenden Konfigurationen sind für jede Datenbank optional, die eine vollständige SQL Server-Installation verwendet.  
 
- **SQL Server-Dienst:**  
+ **SQL Server-Dienst**  
  Sie können den SQL Server-Dienst für die Ausführung mit den folgenden Konten konfigurieren:  
 
 -   Ein *Domänenbenutzerkonto mit geringen Rechten*:  
@@ -248,14 +248,14 @@ Informationen zu SPNs für die Standortdatenbank finden Sie unter [Manage the SP
 
 Informationen zum Ändern des vom SQL Server-Dienst verwendeten Kontos finden Sie unter [Ändern des Dienststartkontos für SQL Server (SQL Server-Konfigurations-Manager)](http://go.microsoft.com/fwlink/p/?LinkId=237661).  
 
-**SQL Server Reporting Services:**  
+**SQL Server Reporting Services**  
 SQL Server Reporting Services sind Voraussetzung für die Installation eines Reporting Services-Punkts, mit dem Sie Berichte ausführen können.  
 
 > [!IMPORTANT]  
 > Nach dem Aktualisieren von SQL Server von einer früheren Version wird möglicherweise der folgende Fehler angezeigt: *Report Builder Does Not Exist* (Berichts-Generator nicht vorhanden).    
 > Zum Beheben dieses Fehlers müssen Sie die Reporting Services-Standortsystemrolle neu installieren.
 
-**SQL Server-Ports:**  
+**SQL Server-Ports**  
 Für die Kommunikation mit dem SQL Server-Datenbankmodul und die standortübergreifende Replikation können Sie die Standardkonfigurationen für SQL Server-Ports verwenden oder benutzerdefinierte Ports angeben:  
 
 -   Die **standortübergreifende Kommunikation** erfolgt über den SQL Server Service Broker, der standardmäßig TCP-Port 4022 verwendet.  
@@ -279,4 +279,4 @@ Wie Sie SQL Server für die Verwendung eines bestimmten Ports konfigurieren, wir
 Wenn Sie ein Upgrade für Ihre Version von SQL Server durchführen müssen, werden folgende Methoden in der Reihenfolge ihrer Komplexität empfohlen.
 1. [Direktes Upgrade von SQL Server](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (empfohlen).
 2. Installieren Sie eine neue Version von SQL Server auf einem neuen Computer, und [verwenden Sie die Option Datenbankverschiebung](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration) vom Configuration Manager-Setup, um Ihren Standortserver auf den neuen SQL Server auszurichten.
-3. Verwenden Sie [Sicherung und Wiederherstellung](/sccm/protect/understand/backup-and-recovery).
+3. Verwenden Sie [Sicherung und Wiederherstellung](/sccm/protect/understand/backup-and-recovery). Die Sicherung und Wiederherstellung für ein SQL-Upgradeszenario wird unterstützt. Bei den [Überlegungen vor dem Wiederherstellen eines Standorts](/sccm/protect/understand/recover-sites.md#considerations-before-recovering-a-site) können Sie die Anforderung an die SQL-Versionsverwaltung ignorieren. 

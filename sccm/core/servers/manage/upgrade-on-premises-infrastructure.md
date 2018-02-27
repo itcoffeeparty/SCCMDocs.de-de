@@ -3,30 +3,31 @@ title: Aktualisieren der lokalen Infrastruktur
 titleSuffix: Configuration Manager
 description: "Hier erfahren Sie, wie für eine Infrastruktur wie etwa SQL Server und das Standortbetriebssystem von Standortsystemen ein Upgrade durchgeführt wird."
 ms.custom: na
-ms.date: 06/05/2017
+ms.date: 02/15/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
-caps.latest.revision: "7"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 3296fe01ebe7d3343a174ffd18483156683b69f7
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 8e17ffad2b972119c92e449bef8f086b950b106c
+ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-system-center-configuration-manager"></a>Aktualisieren der lokalen Infrastruktur, die System Center Configuration Manager unterstützt
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Verwenden Sie die Informationen in diesem Thema, um die Serverinfrastruktur zu aktualisieren, in der System Center Configuration Manager ausgeführt wird.  
+Verwenden Sie die Informationen in diesem Artikel, um die Serverinfrastruktur zu aktualisieren, in der System Center Configuration Manager ausgeführt wird.  
 
  - Informationen über das Upgrade von einer früheren Version von Configuration Manager auf System Center Configuration Manager finden Sie unter [Upgrade auf System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).
 
@@ -43,9 +44,7 @@ Verwenden Sie die Informationen in diesem Thema, um die Serverinfrastruktur zu a
     - Wenn Sie Configuration Manager Version 1602 oder höher verwenden, wird darüber hinaus auch ein Upgrade von Windows Server 2008 R2 auf Windows Server 2012 R2 unterstützt ([weitere Informationen](#bkmk_from2008r2)).
 
     > [!WARNING]  
-    >  Vor dem Upgrade auf Windows Server 2012 R2 *müssen Sie WSUS 3.2 vom Server deinstallieren* .  
-    >   
-    >  Informationen zu diesem wichtigen Schritt finden Sie im Abschnitt „Neue und geänderte Funktionalität“ in der [Übersicht über Windows Server Update Services](https://technet.microsoft.com/library/hh852345.aspx) in der Windows Server-Dokumentation.  
+    >  Bevor Sie ein Upgrade auf ein anderes Betriebssystem ausführen, *müssen Sie WSUS vom Server deinstallieren*. Sie können die SUSDB beibehalten und erneut anfügen, sobald WSUS neu installiert wurde. Informationen zu diesem wichtigen Schritt finden Sie im Abschnitt „Neue und geänderte Funktionalität“ in der [Übersicht über Windows Server Update Services](https://technet.microsoft.com/library/hh852345.aspx) in der Windows Server-Dokumentation.  
 
 Verwenden Sie für das Upgrade eines Servers die Upgradeverfahren, die von dem Betriebssystem bereitgestellt werden, auf das aktualisiert werden soll.  Weitere Informationen finden Sie in den folgenden Themen:
   -  [Upgradeoptionen für Windows Server 2012 R2](https://technet.microsoft.com/library/dn303416.aspx) in der Windows Server-Dokumentation.  
@@ -57,6 +56,7 @@ Wenn Sie Windows Server 2012 oder Windows Server 2012 R2 auf Windows Server 2016
 
 **Vor dem Upgrade:**  
 -   Entfernen Sie den SCEP-Client (System Center Endpoint Protection). In Windows Server 2016 ist Windows Defender integriert, sodass der SCEP-Client nicht mehr erforderlich ist. Durch das Vorhandensein des SCEP-Clients wird ein Upgrade auf Windows Server 2016 möglicherweise verhindert.
+-   Entfernen Sie die WSUS-Rolle vom Server, sofern sie installiert ist. Sie können die SUSDB beibehalten und erneut anfügen, sobald WSUS neu installiert wurde.
 
 **Nach dem Upgrade:**
 -   Stellen Sie sicher, dass Windows Defender aktiviert ist, automatisch gestartet und ausgeführt wird.
@@ -93,7 +93,7 @@ Nach dem Upgrade des Standortservers oder eines Servers, auf dem eine Instanz de
 ### <a name="bkmk_2012r2"></a> Windows Server 2012 auf Windows Server 2012 R2
 
 **Vor dem Upgrade:**
--  Im Gegensatz zu den anderen unterstützten Szenarios müssen bei diesem Szenario vor dem Upgrade keine weiteren Aspekte berücksichtigt werden.
+-   Entfernen Sie die WSUS-Rolle vom Server, sofern sie installiert ist. Sie können die SUSDB beibehalten und erneut anfügen, sobald WSUS neu installiert wurde.
 
 **Nach dem Upgrade:**
   - Stellen Sie sicher, dass der Windows-Bereitstellungsdienst gestartet wurde und für die folgenden Standortsystemrollen ausgeführt wird (dieser Dienst wird beim Upgrade beendet):
