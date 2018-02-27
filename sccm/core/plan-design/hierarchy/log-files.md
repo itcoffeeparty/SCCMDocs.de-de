@@ -3,24 +3,25 @@ title: Protokolldateien zur Behebung von Problemen
 titleSuffix: Configuration Manager
 description: Verwenden Sie Protokolldateien bei der Problembehandlung in einer System Center Configuration Manager-Hierarchie.
 ms.custom: na
-ms.date: 7/03/2017
+ms.date: 02/14/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
-caps.latest.revision: "9"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: c310e23b543e8767a393ca5bf87a224a9269e359
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: b0f15b0c7cf983234f41e3f202be7d46ce4954e2
+ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="log-files-in-system-center-configuration-manager"></a>Protokolldateien in System Center Configuration Manager
 
@@ -50,7 +51,9 @@ Von Client- und Standortserverkomponenten in System Center Configuration Manager
 
     -   [Protokolle für Standortserver und Standortsystemserver](#BKMK_SiteSiteServerLog)  
 
-    -   [Protokolldateien zur Standortserverinstallation](#BKMK_SiteInstallLog)  
+    -   [Protokolldateien zur Standortserverinstallation](#BKMK_SiteInstallLog) 
+
+    -   [Protokolldateien für Data Warehouse-Dienstpunkt](#BKMK_DataWarehouse)
 
     -   [Protokolldateien für den Fallbackstatuspunkt](#BKMK_FSPLog)  
 
@@ -73,6 +76,8 @@ Von Client- und Standortserverkomponenten in System Center Configuration Manager
     -   [Cloudverwaltungsgateway](#cloud-management-gateway)
 
     -   [Konformitätseinstellungen und Zugriff auf Unternehmensressourcen](#BKMK_CompSettingsLog)  
+
+    -   [Bedingter Zugriff](#BKMK_CA)
 
     -   [Configuration Manager-Konsole](#BKMK_ConsoleLog)  
 
@@ -115,14 +120,14 @@ Von Client- und Standortserverkomponenten in System Center Configuration Manager
     -   [WSUS-Server](#BKMK_WSUSLog)  
 
 ##  <a name="BKMK_AboutLogs"></a> Informationen zu Configuration Manager-Protokolldateien  
- Die meisten Prozesse in Configuration Manager schreiben Betriebsinformationen in eine spezielle Protokolldatei für den jeweiligen Prozess. Diese Protokolldateien werden durch die **.LOG** - oder **.LO_** -Erweiterung identifiziert. Configuration Manager schreibt in die LOG-Protokolldatei, bis das Protokoll die maximale Größe erreicht hat. Wenn dies eintritt, wird die LOG-Datei in eine Datei mit dem gleichen Namen, aber der Erweiterung „.LO_“ kopiert, und der Prozess oder die Komponente schreibt weiterhin in die LOG-Datei. Wenn die Größe der LOG-Datei erneut den zulässigen Maximalwert erreicht, wird die LO_-Datei überschrieben und der Prozess wiederholt. Bei einigen Komponenten wird ein Protokolldateiverlauf geführt, indem dem Namen der Protokolldatei ein Datum- und Zeitstempel hinzugefügt wird, wobei die Erweiterung „.LOG“ erhalten bleibt. Eine Ausnahme in Bezug auf die maximale Größe und Verwendung der .LO_-Datei stellt der Client für Linux und UNIX dar. Weitere Informationen darüber, wie Protokolldateien vom Client für Linux und UNIX verwendet werden, finden Sie unter [Verwalten von Protokolldateien beim Client für Linux und UNIX](#BKMK_ManageLinuxLogs) in diesem Thema.  
+ Die meisten Prozesse in Configuration Manager schreiben Betriebsinformationen in eine spezielle Protokolldatei für den jeweiligen Prozess. Diese Protokolldateien werden durch die **.LOG** - oder **.LO_** -Erweiterung identifiziert. Configuration Manager schreibt in die LOG-Protokolldatei, bis das Protokoll die maximale Größe erreicht hat. Wenn dies eintritt, wird die LOG-Datei in eine Datei mit dem gleichen Namen, aber der Erweiterung „.LO_“ kopiert, und der Prozess oder die Komponente schreibt weiterhin in die LOG-Datei. Wenn die Größe der LOG-Datei erneut den zulässigen Maximalwert erreicht, wird die LO_-Datei überschrieben und der Prozess wiederholt. Bei einigen Komponenten wird ein Protokolldateiverlauf geführt, indem dem Namen der Protokolldatei ein Datum- und Zeitstempel hinzugefügt wird, wobei die Erweiterung „.LOG“ erhalten bleibt. Eine Ausnahme in Bezug auf die maximale Größe und Verwendung der .LO_-Datei stellt der Client für Linux und UNIX dar. Informationen darüber, wie der Client für Linux und UNIX Protokolldateien verwendet, finden Sie unter [Verwalten von Protokolldateien auf dem Client für Linux und UNIX](#BKMK_ManageLinuxLogs) in diesem Artikel.  
 
  Zum Anzeigen der Protokolle können Sie das Configuration Manager-Protokollanzeigetool „CMTrace“ verwenden, das sich im Ordner \\\SMSSETUP\TOOLS\\ der Configuration Manager-Quellmedien befindet. Das CMTrace-Tool wird ebenfalls allen Startimages hinzugefügt, die in die Softwarebibliothek aufgenommen werden.  
 
 ###  <a name="BKMK_LogOptions"></a> Konfigurieren der Protokollierungsoptionen mithilfe des Dienst-Managers für Configuration Manager  
  Sie können den Speicherort und die Größe der Protokolldateien in Configuration Manager ändern.  
 
- Im folgenden Verfahren wird beschrieben, wie Sie die Größe, den Namen und den Speicherort von Protokolldateien ändern oder mehrere Komponenten für das Schreiben in die gleiche Protokolldatei konfigurieren können.  
+ Führen Sie die folgenden Schritte aus, um die Größe, den Namen und den Speicherort von Protokolldateien zu ändern oder mehrere Komponenten für das Schreiben in eine einzige Protokolldatei zu konfigurieren:  
 
 #### <a name="to-modify-logging-for-a-component"></a>So ändern Sie die Protokollierung für eine Komponente:  
 
@@ -147,7 +152,7 @@ In der folgenden Tabelle werden die Protokolldateien auf dem Configuration Manag
 |Protokollname|Beschreibung|  
 |--------------|-----------------|  
 |CAS.log|Der Content Access Service. Verwaltet den lokalen Paketcache auf dem Client.|  
-|Ccm32BitLauncher.log|Zeichnet Aktionen zum Starten von Anwendungen auf dem Client auf, die mit „Ausführen als 32-Bit“ gekennzeichnet sind.|  
+|Ccm32BitLauncher.log|Zeichnet Aktionen zum Starten von Anwendungen auf dem Client auf, die mit „im 32-Bit-Modus ausführen“ gekennzeichnet sind.|  
 |CcmEval.log|Zeichnet Auswertungsaktivitäten für den Configuration Manager-Clientstatus auf sowie Details für Komponenten, die für den Configuration Manager-Client erforderlich sind|  
 |CcmEvalTask.log|Zeichnet die Auswertungsaktivitäten für den Configuration Manager-Clientstatus auf, die vom geplanten Auswertungstask initiiert werden|  
 |CcmExec.log|Zeichnet Aktivitäten des Clients und des SMS-Agent-Hostdiensts auf. Diese Protokolldatei enthält auch Informationen zum Aktivieren und Deaktivieren des Aktivierungsproxys.|  
@@ -253,7 +258,7 @@ In der folgenden Tabelle werden die Protokolldateien auf dem Configuration Manag
 
 Unter normalen Betriebsbedingungen sollte der Protokollgrad FEHLER verwendet werden. Diese Protokollebene erstellt die kleinste Protokolldatei. Mit der Steigerung des Protokollgrads von FEHLER zu WARNUNG zu INFO zu ABLAUFVERFOLGUNG wird die Protokolldatei mit jedem Schritt größer, da mehr Daten hineingeschrieben werden.  
 
-####  <a name="BKMK_ManageLinuxLogs"></a> Verwalten von Protokolldateien für den Client für Linux und UNIX  
+####  <a name="BKMK_ManageLinuxLogs"></a> Verwalten von Protokolldateien auf dem Client für Linux und UNIX  
 Auf dem Client für Linux und UNIX wird weder eine maximale Größe der Clientprotokolldateien vorgegeben noch werden die Inhalte der .LOG-Dateien automatisch in eine andere Datei, z.B. eine .LO_-Datei kopiert: Wenn Sie die maximale Größe von Protokolldateien steuern möchten, müssen Sie unabhängig vom Configuration Manager-Client für Linux und UNIX einen Prozess zum Verwalten der Protokolldateien implementieren.  
 
 Beispielsweise können Sie den Linux- und UNIX-Standardbefehl **logrotate** verwenden, um die Größe und Rotation der Clientprotokolldateien zu verwalten. Auf dem Configuration Manager-Client für Linux und UNIX steht eine Schnittstelle zur Verfügung, mit deren Hilfe dem Client über **logrotate** signalisiert werden kann, wann die Protokollrotation abgeschlossen ist, sodass die Informationserfassung in der Protokolldatei wiederaufgenommen werden kann.  
@@ -361,6 +366,15 @@ Zusätzlich wird in der Protokolldatei „SMS_DM.log“ auf dem Standortsystemse
 |SMS_BOOTSTRAP.log|Zeichnet Informationen zum Fortschritt beim Starten der Installation des sekundären Standorts auf. Informationen zum eigentlichen Installationsvorgang sind in ConfigMgrSetup.log enthalten.|Standortserver|  
 |smstsvc.log|Zeichnet Informationen zu Installation, Nutzung und Entfernung eines Windows-Dienstes auf, der zum Testen von Netzwerkverbindungen und Berechtigungen zwischen Servern mithilfe des Computerkontos des Servers, der die Verbindung initiiert, verwendet wird.|Standortserver und Standortsystemserver|  
 
+###  <a name="BKMK_DataWarehouse"></a> Protokolldateien für Data Warehouse-Dienstpunkt  
+ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit dem Data Warehouse-Dienstpunkt enthalten.  
+
+|Protokollname|Beschreibung|Computer mit Protokolldatei|  
+|--------------|-----------------|----------------------------|  
+|DWSSMSI.log|Zeichnet Meldungen auf, die durch die Installation eines Data Warehouse-Dienstpunkts generiert werden.|Standortsystemserver|  
+|DWSSSetup.log|Zeichnet Meldungen auf, die durch die Installation eines Data Warehouse-Dienstpunkts generiert werden.|Standortsystemserver|  
+|Microsoft.ConfigMgrDataWarehouse.log|Zeichnet Informationen zur Datensynchronisierung zwischen der Standortdatenbank und der Data Warehouse-Datenbank auf.|Standortsystemserver|  
+
 ###  <a name="BKMK_FSPLog"></a> Protokolldateien für den Fallbackstatuspunkt  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit dem Fallbackstatuspunkt enthalten.  
 
@@ -389,7 +403,7 @@ Zusätzlich wird in der Protokolldatei „SMS_DM.log“ auf dem Standortsystemse
 |MP_Retry.log|Zeichnet die Wiederholungsprozesse der Hardwareinventur auf.|Standortsystemserver|  
 |MP_Sinv.log|Zeichnet Details zum Konvertieren von XML-Softwareinventurdatensätzen von Clients und zum Kopieren der Dateien auf den Standortserver auf.|Standortsystemserver|  
 |MP_SinvCollFile.log|Zeichnet Details zur Dateisammlung auf.|Standortsystemserver|  
-|MP_Status.log|Zeichnet Details zum Konvertieren von XML-Statusmeldungsdateien (SVF-Dateien) von Clients und zum Kopieren der Dateien auf den Standortserver auf.|Standortsystemserver|  
+|MP_Status.log|Zeichnet Details zum Konvertieren von XML-Statusmeldungsdateien (SVF-Dateien) von Clients und zum Kopieren der Dateien auf den Standortserver auf.|Standortsystemserver|
 |mpcontrol.log|Zeichnet die Registrierung des Verwaltungspunks in WINS auf. Zeichnet alle 10 Minuten die Verfügbarkeit des Verwaltungspunkts auf.|Standortserver|  
 |mpfdm.log|Zeichnet die Aktionen der Verwaltungspunktkomponente auf, von der Clientdateien in den entsprechenden Ordner INBOXES auf dem Standortserver verschoben werden.|Standortsystemserver|  
 |mpMSI.log|Zeichnet die Details zur Installation des Verwaltungspunkts auf.|Standortserver|  
@@ -506,12 +520,12 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |-|-|-|
 |Protokollname|Beschreibung|Computer mit Protokolldatei|
 |CloudMgr.log|Zeichnet Details zur Bereitstellung des Cloudverwaltungsgateway-Dienstes, den laufenden Dienststatus und Nutzungsdaten, die mit dem Dienst verknüpft sind, auf.<br>Sie können die Protokollierungsstufe konfigurieren, indem Sie die Registrierung **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_CLOUD_SERVICES_MANAGER\Logging level** bearbeiten.|Der Ordner *installdir* auf dem primären Standortserver oder Clientzugriffsserver.|
-|CMGSetup.log oder CMG-*RoleInstanceID*-CMGSetup.log<sup>1</sup>|Zeichnet Details über die 2. Phase der Bereitstellung des Cloudverwaltungsgateways (lokale Bereitstellung in Azure) auf.<br>Sie können die Protokollierungsstufe mithilfe der Einstellung **Ablaufverfolgungsebene** (**Informationen** (Standard), **Ausführlich**, **Fehler**) auf der Registerkarte **Azure-Portal\Konfiguration der Clouddienste** konfigurieren.|Die **%approot%\logs** auf Ihrem Azure-Server oder der Ordner „SMS/Logs“ auf dem Standortsystemserver|
+|CMGSetup.log oder CMG-*RoleInstanceID*-CMGSetup.log<sup>1</sup>|Zeichnet Details zur zweiten Phase der Bereitstellung des Cloudverwaltungsgateways (lokale Bereitstellung in Azure) auf.<br>Sie können die Protokollierungsstufe mithilfe der Einstellung **Ablaufverfolgungsebene** (**Informationen** (Standard), **Ausführlich**, **Fehler**) auf der Registerkarte **Azure-Portal\Konfiguration der Clouddienste** konfigurieren.|Die **%approot%\logs** auf Ihrem Azure-Server oder der Ordner „SMS/Logs“ auf dem Standortsystemserver|
 |CMGHttpHandler.log oder CMG-*RoleInstanceID*- CMGHttpHandler.log<sup>1</sup>|Zeichnet Details zur HTTP-Handlerbindung des Cloudverwaltungsgateways mit Internetinformationsdiensten in Azure auf.<br>Sie können die Protokollierungsstufe mithilfe der Einstellung **Ablaufverfolgungsebene** (**Informationen** (Standard), **Ausführlich**, **Fehler**) auf der Registerkarte **Azure-Portal\Konfiguration der Clouddienste** konfigurieren.|Die **%approot%\logs** auf Ihrem Azure-Server oder der Ordner „SMS/Logs“ auf dem Standortsystemserver|
 |CMGService.log oder CMG-*RoleInstanceID*- CMGService.log<sup>1</sup>|Zeichnet Details über die Kernkomponente des Cloudverwaltungsgateway-Diensts in Azure auf.<br>Sie können die Protokollierungsstufe mithilfe der Einstellung **Ablaufverfolgungsebene** (**Informationen** (Standard), **Ausführlich**, **Fehler**) auf der Registerkarte **Azure-Portal\Konfiguration der Clouddienste** konfigurieren.|Die **%approot%\logs** auf Ihrem Azure-Server oder der Ordner „SMS/Logs“ auf dem Standortsystemserver|
 |SMS_Cloud_ProxyConnector.log|Zeichnet Details zum Einrichten von Verbindungen zwischen dem Cloud-Management-Gateway-Dienst und dem Verbindungspunkt für das Cloudverwaltungsgateway auf.|Standortsystemserver|
 
-<sup>1</sup> Hierbei handelt es sich um lokale Configuration Manager-Protokolldateien, die der Clouddienst-Manager alle 5 Minuten aus dem Azure-Speicher synchronisiert. Das Cloudverwaltungsgateway wird alle 5 Minuten Protokolle zum Azure-Speicher übertragen. Daher wird die maximale Verzögerung 10 Minuten betragen. Ausführliche Switches wirken sich auf lokale und Remoteprotokolle aus.
+<sup>1</sup> Hierbei handelt es sich um lokale Configuration Manager-Protokolldateien, die der Clouddienst-Manager alle 5 Minuten aus dem Azure-Speicher synchronisiert. Das Cloudverwaltungsgateway überträgt alle Minuten Protokolle an den Azure-Speicher. Daher beträgt die maximale Verzögerung 10 Minuten. Ausführliche Switches wirken sich auf lokale und Remoteprotokolle aus.
 
 - Verwenden Sie für die Problembehandlung von Bereitstellungen **CloudMgr.log** und **CMGSetup.log**.
 - Verwenden Sie für die Problembehandlung der Dienstintegrität **CMGService.log** und **SMS_Cloud_ProxyConnector.log**.
@@ -527,6 +541,19 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |DCMAgent.log|Zeichnet detaillierte Informationen zu Auswertung, Konfliktberichterstattung und Wiederherstellung von Konfigurationselementen und Anwendungen auf.|Client|  
 |DCMReporting.log|Zeichnet Informationen zur Berichterstattung von Richtlinienplattformergebnissen in Statusmeldungen für Konfigurationselemente auf.|Client|  
 |DcmWmiProvider.log|Zeichnet Informationen im Zusammenhang mit dem Einlesen von Konfigurationselement-Synclets aus WMI auf.|Client|  
+
+###  <a name="BKMK_CA"></a> Bedingter Zugriff
+ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit dem bedingten Zugriff enthalten.  
+
+|Protokollname|Beschreibung|Computer mit Protokolldatei|  
+|--------------|-----------------|----------------------------|  
+|ADALOperationProvider.log|Zeichnet Details zum Erwerb des AAD-Tokens auf.|Client|  
+|cloudusersync.log|Zeichnet die Lizenzaktivierung für Benutzer auf.|Computer mit dem Dienstverbindungspunkt|  
+|ComplRelayAgent.log|Empfängt den gesamten Konformitätszustand von DCM, erwirbt MP- und AAD-Token und meldet die Konformität an Intune (den CA-Relaydienst).|Client|  
+|DcmWmiProvider.log|Zeichnet Informationen im Zusammenhang mit dem Einlesen von Konfigurationselement-Synclets aus WMI auf.|Client|  
+|dmpdownloader.log|Zeichnet Details zu Downloads von Microsoft Intune auf.|Computer mit dem Dienstverbindungspunkt|
+|dmpuploader.log|Zeichnet Details zum Hochladen von Datenbankänderungen in Microsoft Intune auf.|Computer mit dem Dienstverbindungspunkt|   
+|MP_Token.log|Zeichnet Tokenanforderungen von Clients auf.|Standortsystemserver|  
 
 ###  <a name="BKMK_ConsoleLog"></a> Configuration Manager-Konsole  
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen zur Configuration Manager-Konsole enthalten.  
@@ -549,7 +576,6 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |PrestageContent.log|Zeichnet die Details zur Verwendung des Tools ExtractContent.exe auf einem vorab bereitgestellten Remoteverteilungspunkt auf. Mit diesem Tool werden Inhalte extrahiert, die in eine Datei exportiert wurden.|Standortsystemrolle|  
 |SMSdpmon.log|Zeichnet Details zum geplanten Task für die Integritätsüberwachung des Verteilungspunkts auf, der auf einem Verteilungspunkt konfiguriert wurde.|Standortsystemrolle|  
 |smsdpprov.log|Zeichnet Details zur Extrahierung komprimierter Dateien auf, die von einem primären Standort stammen. Dieses Protokoll wird vom WMI-Anbieter des Remoteverteilungspunkts generiert.|Ein Verteilungspunktcomputer an einem anderen Standort als der Standortserver|  
-
 
 ###  <a name="BKMK_DiscoveryLog"></a> Ermittlung  
 In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen zur Ermittlung enthalten.  
@@ -734,7 +760,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |ddm.log|Zeichnet die Aktivitäten des Ermittlungsdaten-Managers auf.|Standortserver|  
 |distmgr.log|Zeichnet Details zu Inhaltsverteilungsanforderungen auf.|Standortserver auf oberster Ebene|  
 |Dmpdownloader.log|Zeichnet Details zu Downloads von Microsoft Intune auf.|Computer mit dem Dienstverbindungspunkt|  
-|Dmpuploader.log|Zeichnet Details für das Hochladen von Datenbankänderungen in Microsoft Intune auf.|Computer mit dem Dienstverbindungspunkt|  
+|Dmpuploader.log|Zeichnet Details zum Hochladen von Datenbankänderungen in Microsoft Intune auf.|Computer mit dem Dienstverbindungspunkt|  
 |hman.log|Zeichnet Informationen zur Meldungsweiterleitung auf.|Standortserver|  
 |objreplmgr.log|Zeichnet die Verarbeitung von Richtlinien und Zuweisung auf.|Primärer Standortserver|  
 |policypv.log|Zeichnet die Richtliniengenerierung aller Richtlinien auf.|Standortserver|  
@@ -772,7 +798,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
  In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informationen im Zusammenhang mit der Verwendung von Wake-On-LAN enthalten.  
 
 > [!NOTE]  
->  Wenn Sie Wake-On-LAN durch die Verwendung des Aktivierungsproxys ergänzen, wird diese Aktivität auf dem Client protokolliert. Siehe beispielsweise „CcmExec.log“ und SleepAgent_<*Domäne*\>@SYSTEM_0.log im Abschnitt [Clientvorgänge](#BKMK_ClientOpLogs) in diesem Thema.  
+>  Wenn Sie Wake-On-LAN durch die Verwendung des Aktivierungsproxys ergänzen, wird diese Aktivität auf dem Client protokolliert. Weitere Informationen finden Sie z.B. unter „CcmExec.log“ und „SleepAgent_<*Domäne*\>@SYSTEM_0.log“ im Abschnitt [Clientvorgänge](#BKMK_ClientOpLogs) in diesem Artikel.  
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
 |--------------|-----------------|----------------------------|  
