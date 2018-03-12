@@ -3,32 +3,36 @@ title: Bereitstellen von Softwareupdates
 titleSuffix: Configuration Manager
 description: "Wählen Sie die Softwareupdates in der Configuration Manager-Konsole aus, um den Bereitstellungsprozess manuell zu starten oder Updates manuell bereitzustellen."
 keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.date: 10/06/2016
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.date: 02/16/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology: configmgr-sum
+ms.technology:
+- configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: 7166ed594804bf615d309515c01f6f5339518d89
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: aad82bf225f7606007a5b69490e8f0e4d894b966
+ms.sourcegitcommit: 1378532fac2620ddcfd31061982f344a290c2e67
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 02/20/2018
 ---
 #  <a name="BKMK_SUMDeploy"></a> Bereitstellen von Softwareupdates  
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-In der Softwareupdate-Bereitstellungsphase werden Softwareupdates bereitgestellt. Unabhängig davon, wie Sie Softwareupdates bereitstellen, werden die Updates in der Regel zu einer Softwareupdategruppe hinzugefügt. Die Softwareupdates werden auf Verteilungspunkte heruntergeladen, und die Updategruppe wird für Clients bereitgestellt. Beim Erstellen der Bereitstellung wird eine zugehörige Softwareupdaterichtlinie an Clientcomputer gesendet. Dann werden die Inhaltsdateien für das Softwareupdate von einem Verteilungspunkt in den lokalen Cache auf Clientcomputer heruntergeladen. Die Softwareupdates sind damit für die Installation auf dem Client verfügbar. Von Clients, die sich im Internet befinden, wird Inhalt von Microsoft Update heruntergeladen.  
+In der Softwareupdate-Bereitstellungsphase werden Softwareupdates bereitgestellt. Unabhängig davon, wie Sie Softwareupdates bereitstellen, für Updates gilt in der Regel:
+- Sie sind zu einer Softwareupdategruppe hinzugefügt.
+- Sie werden in Verteilungspunkte heruntergeladen.
+- Die Updategruppe wird Clients bereitgestellt. Nach dem Erstellen der Bereitstellung wird eine verknüpfte Softwareupdaterichtlinie an Clientcomputer gesendet. Die Inhaltsdateien der Softwareupdates werden aus dem Verteilungspunkt in den lokalen Cache des Clientcomputer heruntergeladen. Die Softwareupdates sind anschließend für die Installation durch den Client verfügbar. Von Clients, die sich im Internet befinden, wird Inhalt von Microsoft Update heruntergeladen.  
 
 > [!NOTE]  
->  Sie können einen Client im Intranet zum Herunterladen von Softwareupdates von Microsoft Update für den Fall konfigurieren, dass ein Verteilungspunkt nicht verfügbar ist.  
+>  Für den Fall, dass ein Verteilungspunkt nicht verfügbar ist, können Sie einen Client im Intranet zum Herunterladen von Softwareupdates von Microsoft Update konfigurieren.  
 
 > [!NOTE]  
->  Im Gegensatz zu anderen Bereitstellungstypen werden alle Softwareupdates unabhängig von der auf dem Client festgelegten maximalen Cachegröße in den Clientcache heruntergeladen. Weitere Informationen zu den Einstellungen des Clientcaches finden Sie unter [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache).  
+>  Im Gegensatz zu anderen Bereitstellungstypen werden alle Softwareupdates in den Clientcache heruntergeladen. Dies ist unabhängig von der maximalen Cachegröße auf dem Client. Weitere Informationen zu den Einstellungen des Clientcaches finden Sie unter [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache).  
 
 Wenn Sie eine erforderliche Softwareupdatebereitstellung konfigurieren, werden die Softwareupdates automatisch am geplanten Stichtag installiert. Alternativ kann der Benutzer die Softwareupdateinstallation auf dem Clientcomputer auch vor dem Stichtag einplanen oder initiieren. Nach dem Installationsversuch werden von den Clientcomputern Zustandsmeldungen zurück an den Standortserver gesendet, aus denen hervorgeht, ob die Softwareupdateinstallation erfolgreich war. Weitere Informationen zu Softwareupdatebereitstellungen  finden Sie unter [Software update deployment workflows](../understand/software-updates-introduction.md#BKMK_DeploymentWorkflows).  
 
@@ -43,6 +47,9 @@ Sie können Softwareupdates in der Configuration Manager-Konsole auswählen und 
 4. Stellen Sie die Softwareupdategruppe manuell bereit.
 
 Ausführliche Schritte finden Sie unter [Manuelles Bereitstellen von Softwareupdates](manually-deploy-software-updates.md).
+
+>[!NOTE]
+>Ab Configuration Manager-Version 1706 wurden Office 365-Clientupdates auf den Knoten **Office 365-Clientverwaltung** >**Office 365-Updates** verschoben. Dies hat keine Auswirkungen auf die ADR-Konfiguration, aber auf die manuelle Bereitstellung von Office 365-Updates. 
 
 ## <a name="automatically-deploy-software-updates"></a>Automatisches Bereitstellen von Softwareupdates
 Die automatische Bereitstellung von Softwareupdates wird mithilfe einer automatischen Bereitstellungsregel (ADR) konfiguriert. Diese Bereitstellungsmethode eignet sich insbesondere für monatliche Softwareupdates (in der Regel bekannt als „Patch-Dienstag“) und für die Verwaltung von Definitionsupdates. Bei der Ausführung der Regel werden Softwareupdates aus der Softwareupdategruppe entfernt (bei Verwendung einer vorhandenen Updategruppe), Softwareupdates, die einem angegebenen Kriterium entsprechen (z.B. alle im letzten Monat veröffentlichten Sicherheitsupdates), zu einer Softwareupdategruppe hinzugefügt, die Inhaltsdateien für die Softwareupdates heruntergeladen und auf Verteilungspunkte kopiert und die Softwareupdates für Clients in der Zielsammlung bereitgestellt. Die folgende Liste bietet den allgemeinen Workflow, um Softwareupdates automatisch bereitzustellen:  

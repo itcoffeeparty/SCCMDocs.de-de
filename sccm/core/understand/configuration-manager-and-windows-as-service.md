@@ -16,11 +16,11 @@ caps.latest.revision:
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 6d93be3ec04396c9980b039617c673985090cdc6
-ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
+ms.openlocfilehash: 8ac078fa33e24bd1cc10ab04d6120bf5759461ff
+ms.sourcegitcommit: 1378532fac2620ddcfd31061982f344a290c2e67
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="keep-windows-10-up-to-date-in-the-enterprise-using-configuration-manager"></a>Halten Sie Windows 10 unternehmensweit über Configuration Manager aktuell
 
@@ -36,7 +36,7 @@ System Center Configuration Manager bietet eine umfassende Kontrolle über Featu
 |[Lifecycle-Unterstützung](/sccm/core/servers/manage/current-branch-versions-supported)|Erläutert die neue Unterstützung und das Dienstmodell.|
 |[Entfernte und veraltete Elemente](/sccm//core/plan-design/changes/deprecated/removed-and-deprecated)|Dies dient als frühzeitige Warnung hinsichtlich zukünftiger Änderungen, die sich auf die Verwendung von Configuration Manager auswirken können.|
 |[Configuration Manager-as-a-Service](/sccm/core/servers/manage/updates)|Erläutert die einfache konsoleninterne Methode zum Anwenden von Featureupdates für Configuration Manager.|
-|[Abrufen von verfügbaren Updates](/sccm/core/servers/manage/install-in-console-updates.md#get-available-updates)|Erläutert die beiden verfügbaren Modi zum Abrufen neuer Featureupdates für Configuration Manager.|
+|[Abrufen von verfügbaren Updates](/sccm/core/servers/manage/install-in-console-updates#get-available-updates)|Erläutert die beiden verfügbaren Modi zum Abrufen neuer Featureupdates für Configuration Manager.|
 |[Updatecheckliste](/sccm/core/servers/manage/install-in-console-updates#bkmk_beforeinstall)|Versionsspezifische Updatecheckliste, falls vorhanden.| 
 |[Installieren der neuen Featureupdates für Configuration Manager](/sccm/core/servers/manage/install-in-console-updates#bkmk_install)|Erläutert die einfachen Schritte zur Installation von Featureupdates.|
 |[Unterstützung für Windows 10](/sccm/core/plan-design/configs/support-for-windows-10)|Stellt eine Unterstützungsmatrix für Windows 10-Versionen (und ADK-Versionen) zur Verfügung.|

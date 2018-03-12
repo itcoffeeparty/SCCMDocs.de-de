@@ -15,11 +15,11 @@ ms.assetid: 4884a2d3-13ce-44e5-88c4-a66dc7ec6014
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b5e8f744573680ab55fcfff26622e312206ca1a
-ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
+ms.openlocfilehash: 162c47d867e78498650da685327c0fe296aa2eda
+ms.sourcegitcommit: b1fa7be6a6fa5bb7c49e90c0e28a21ba8b41c842
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="capabilities-in-technical-preview-1802-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1802 für System Center Configuration Manager
 
@@ -61,7 +61,7 @@ In diesem Release können Sie jetzt die Endpoint Protection-Workload von Configu
 <!-- 1324696 -->
 Sie verwenden Configuration Manager-Begrenzungsgruppen, um die Inhaltsverteilung über Ihr gesamtes Unternehmensnetzwerk und Remotebüros hinweg zu definieren und zu regulieren. [Windows-Übermittlungsoptimierung](/windows/deployment/update/waas-delivery-optimization) ist eine cloudbasierte Peer-zu-Peer-Technologie zum gemeinsamen Nutzen von Inhalten auf Windows 10-Geräten. Ab diesem Release können Sie die Übermittlungsoptimierung so konfigurieren, dass bei der Freigabe von Inhalten für Peers Ihre Begrenzungsgruppen verwendet werden. Eine neue Clienteinstellung wendet die Begrenzungsgruppen-ID als Gruppen-ID für die Übermittlungsoptimierung auf dem Client an. Wenn der Client mit dem Übermittlungsoptimierungs-Clouddienst kommuniziert, wird diese ID zum Ermitteln von Peers verwendet, auf denen sich der gewünschte Inhalt befindet. 
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 - Die Übermittlungsoptimierung ist nur auf Windows 10-Clients verfügbar.
 
 ### <a name="try-it-out"></a>Probieren Sie es aus!
@@ -196,7 +196,7 @@ Beim Upgrade des Standorts auf diese Version fügt Configuration Manager alle Ve
 
 Das Fallback bei Verwaltungspunkten in Begrenzungsgruppen ändert das Verhalten während der Clientinstallation (ccmsetup) nicht. Wenn der anfängliche Verwaltungspunkt nicht in der Befehlszeile mit dem Parameter „/MP“ angegeben wird, empfängt der neue Client die vollständige Liste aller verfügbaren Verwaltungspunkte. Für den anfänglichen Bootstrapprozess verwendet der Client den ersten Verwaltungspunkt, auf den er zugreifen kann. Sobald der Client beim Standort registriert ist, erhält er die gemäß diesem neuen Verhalten ordnungsgemäß sortierte Verwaltungspunktliste. 
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 - Aktivieren Sie [bevorzugte Verwaltungspunkte](/sccm/core/servers/deploy/configure/boundary-groups#preferred-management-points). Wechseln Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Verwaltung**. Erweitern Sie **Standortkonfiguration**, und wählen Sie **Standorte** aus. Klicken Sie im Menüband auf **Hierarchieeinstellungen**. Wählen Sie auf der Registerkarte **Allgemein** die Option **Clients bevorzugen das Verwenden von in Begrenzungsgruppen angegebenen Verwaltungspunkten**. 
 
 ### <a name="known-issues"></a>Bekannte Probleme
@@ -239,7 +239,7 @@ Configuration Manager migriert keine vorhandenen klassischen CMG-Instanzen zum A
 > [!IMPORTANT]
 > Diese Funktion aktiviert nicht die Unterstützung für Azure-Clouddienstanbieter (Cloud Service Providers, CSPs). Die CMG-Bereitstellung mit Azure Resource Manager unterstützt weiterhin den klassischen Clouddienst, der von CSPs nicht unterstützt wird. Weitere Informationen finden Sie unter [verfügbare Azure-Dienste in Azure-CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 - Integration in [Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure). Die Azure AD-Benutzerermittlung ist nicht erforderlich.
 - Die gleichen [Anforderungen für das Cloudverwaltungsgateway](/sccm/core/clients/manage/plan-cloud-management-gateway#requirements-for-cloud-management-gateway), mit Ausnahme des Azure-Verwaltungszertifikats.
 
@@ -265,7 +265,7 @@ Ab diesem Release ist der Name des Geräts jetzt Teil der Anforderung, wenn ein 
 > [!NOTE]
 > Dieses Feature ist optional. Wenn Sie ein Update auf dieses Release durchführen, aktivieren Sie dieses Feature im Update-Assistenten. Alternativ dazu können Sie das Feature auch später in der Konsole aktivieren. Weitere Informationen finden Sie unter [Enable optional features from updates (Aktivieren optionaler Features von Updates)](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 - Aktualisieren Sie den Configuration Manager-Client auf die neueste Version.
 - Aktivieren Sie die Clienteinstellung **Neues Softwarecenter verwenden** in der Gruppe [Computer-Agent](/sccm/core/clients/deploy/about-client-settings#computer-agent).
 
@@ -283,7 +283,7 @@ Ab diesem Release ist der Name des Geräts jetzt Teil der Anforderung, wenn ein 
 <!-- 1322613 -->
 Wenn Sie Anwendungen als für Benutzer verfügbar bereitstellen, können diese die Anwendungen über das Softwarecenter auf Azure Active Directory-Geräten durchsuchen und installieren.  
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 - Aktivieren Sie HTTPS auf dem Verwaltungspunkt.
 - Integrieren Sie den Standort in [Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 - Stellen Sie eine Anwendung als für eine Benutzersammlung verfügbar bereit.
@@ -305,7 +305,7 @@ Wenn Sie Anwendungen als für Benutzer verfügbar bereitstellen, können diese d
 <!-- 1351442 -->
 Windows AutoPilot ist eine moderne Lösung für das Onboarding und Konfigurieren neuer Windows 10-Geräte. Weitere Informationen finden Sie unter [Übersicht über Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot). Eine Methode, vorhandene Geräte bei Windows AutoPilot zu registrieren, ist das Hochladen von Geräteinformationen in den Microsoft Store für Unternehmen und Bildungseinrichtungen. Zu diesen Informationen gehört die Seriennummer des Geräts, der Windows-Produktbezeichner und eine Hardwarebezeichner. Verwenden Sie Configuration Manager, um diese Geräteinformationen zu erfassen und zu melden. 
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 - Die Geräteinformationen gelten nur für Clients unter Windows 10, Version 1703 und höher.
 
 ### <a name="try-it-out"></a>Probieren Sie es aus!
@@ -318,9 +318,9 @@ Windows AutoPilot ist eine moderne Lösung für das Onboarding und Konfigurieren
 
 
 
-## <a name="improvements-to-configuration-manager-policies-for-windows-device-exploit-guard"></a>Verbesserungen an Configuration Manager-Richtlinien für Windows Defender Exploit Guard
+## <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>Verbesserungen an Configuration Manager-Richtlinien für Windows Defender Exploit Guard
 <!-- 1356220 -->
-Windows Defender Exploit Guard in Configuration Manager wurden zusätzliche Richtlinieneinstellungen für die Komponenten für die Verringerung der Angriffsfläche und den überwachten Ordnerzugriff hinzugefügt.
+In Configuration Manager für [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) wurden zusätzliche Richtlinieneinstellungen für die Komponenten für die Verringerung der Angriffsfläche und den überwachten Ordnerzugriff hinzugefügt.
 
 **Neue Einstellungen für den überwachten Ordnerzugriff**<br/>
 Für die Konfiguration des überwachten Ordnerzugriffs stehen zwei zusätzliche Optionen zur Verfügung: **Nur Datenträgersektoren blockieren** und **Nur Datenträgersektoren überwachen**. Mit diesen beiden Einstellungen kann der überwachte Ordnerzugriff nur für Bootsektoren aktiviert werden, der Schutz bestimmter Ordner oder der standardmäßig geschützten Ordner wird damit nicht aktiviert. 
@@ -350,7 +350,7 @@ Kunden, die den [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb
 - **Entwicklertools zulassen**: Weitere Informationen finden Sie unter der [AllowDeveloperTools-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
 - **Erweiterungen zulassen**: Weitere Informationen finden Sie unter der [AllowExtensions-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 - In Azure Active Directory eingebundener Windows 10-Client. 
 
 ### <a name="known-issues"></a>Bekannte Probleme
@@ -411,7 +411,7 @@ Bereitstellungen in Phasen automatisieren ein koordiniertes Rollout von Software
 ### <a name="try-it-out"></a>Probieren Sie es aus!  
   Versuchen Sie, die Aufgaben fertig zu stellen. Senden Sie dann über die Registerkarte **Start** im Menüband **Feedback** zu den Funktionen.
  
-**Erstellen einer Bereitstellung in Phasen für eine Tasksequenz** </br>
+**Erstellen Sie eine Bereitstellung in Phasen für eine Tasksequenz** </br>
 1. Erweitern Sie im Arbeitsbereich **Softwarebibliothek** den Bereich **Betriebssysteme**, und klicken Sie dann auf **Tasksequenzen**.
 2. Klicken Sie mit der rechten Maustaste auf eine bereits vorhandene Tasksequenz, und klicken Sie auf **Create Phased Deployment** (Bereitstellung in Phasen). 
 3. Vergeben Sie auf der Registerkarte **Allgemein** einen Namen für die Bereitstellung in Phasen, fügen Sie (optional)eine Beschreibung hinzu, und klicken Sie auf **Standardmäßige Bereitstellung in zwei Phasen automatisch erstellen**. 
