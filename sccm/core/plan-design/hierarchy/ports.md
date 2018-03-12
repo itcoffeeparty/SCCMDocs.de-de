@@ -3,30 +3,31 @@ title: "Für Verbindungen verwendete Ports"
 titleSuffix: Configuration Manager
 description: "Erfahren Sie mehr über die erforderlichen und anpassbaren Ports, die System Center Configuration Manager für Verbindungen verwendet."
 ms.custom: na
-ms.date: 09/19/2017
+ms.date: 02/16/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
-caps.latest.revision: "8"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 0b6fa22a7bc3de7bb5bc0d26f8e35b51d55c5e72
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 8db098f69180aac3785087af6ee305b3651094e5
+ms.sourcegitcommit: 1378532fac2620ddcfd31061982f344a290c2e67
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="ports-used-in-system-center-configuration-manager"></a>In System Center Configuration Manager verwendete Ports
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager ist ein verteiltes Client-/Server-System. Aufgrund der verteilten Struktur von Configuration Manager können Verbindungen zwischen Standortservern, Standortsystemen und Clients hergestellt werden. Bei einigen Verbindungen werden nicht konfigurierbare Ports verwendet, bei anderen werden benutzerdefinierte Ports unterstützt. Bei Verwendung einer Portfilterungstechnologie, z.B. Firewalls, Router, Proxyserver oder IPsec, müssen Sie überprüfen, ob die erforderlichen Ports verfügbar sind.  
+System Center Configuration Manager ist ein verteiltes Client-/Server-System. Aufgrund der verteilten Struktur von Configuration Manager können Verbindungen zwischen Standortservern, Standortsystemen und Clients hergestellt werden. Bei einigen Verbindungen werden nicht konfigurierbare Ports verwendet, bei anderen werden benutzerdefinierte Ports unterstützt. Bei Verwendung einer Portfilterungstechnologie, z.B. Firewalls, Router, Proxyserver oder IPsec, überprüfen Sie, ob die erforderlichen Ports verfügbar sind.  
     
 > [!NOTE]  
 >  Wenn Sie internetbasierte Clients über SSL-Bridging unterstützen, müssen Sie möglicherweise zusätzlich zu den Portanforderungen bestimmten HTTP-Verben und -Headern ermöglichen, ihre Firewall zu passieren.   
@@ -205,6 +206,13 @@ Diese Kommunikation wird verwendet, um zu überprüfen, ob der andere Clientcomp
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Hypertext Transfer-Protokoll (HTTP)|--|80|  
+|Secure Hypertext Transfer-Protokoll (HTTPS)|--|443|
+
+Die Configuration Manager-Konsole benötigt für Folgendes einen Internetzugang: 
+- Herunterladen von Softwareupdates von Microsoft Update für Bereitstellungspakete
+- Das Feedbackelement im Menüband
+- Links zu Dokumentation innerhalb der Konsole
+<!--506823-->
 
 ###  <a name="BKMK_PortsConsole-RSP"></a> Configuration Manager-Konsole -- > Reporting Services-Punkt  
 
@@ -338,7 +346,7 @@ Diese Kommunikation wird verwendet, um zu überprüfen, ob der andere Clientcomp
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
 |Secure Hypertext Transfer-Protokoll (HTTPS)|--|443|
-Mehr Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls) für den Dienstverbindungspunkt.
+Weitere Informationen finden Sie unter [Internetzugriffsanforderungen](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls) für den Dienstverbindungspunkt.
 
 ###  <a name="BKMK_PortsAppCatalogWebServicePoint_SiteServer"></a> Standortserver &lt; -- > Anwendungskatalog-Webdienstpunkt  
 
@@ -689,12 +697,12 @@ Verwenden Sie IPsec zur Sicherung des Datenverkehrs zwischen dem Standortserver 
 >  Überprüfen Sie vor der Installation dieser Standortsysteme, ob der Remoteregistrierungsdienst auf dem Standortsystemserver ausgeführt wird und Sie ein Standortsystem-Installationskonto angegeben haben, falls sich das Standortsystem in einer anderen Active Directory-Gesamtstruktur ohne Vertrauensstellung befindet.  
 
 ###  <a name="BKMK_PortsClientInstall"></a> Von der Configuration Manager-Clientinstallation verwendete Ports  
-Welche Ports während der Clientinstallation verwendet werden, ist von der Clientbereitstellungsmethode abhängig. Eine Liste der für jede Clientbereitstellungsmethode verwendeten Ports finden Sie im Abschnitt **Bei der Configuration Manager-Clientbereitstellung verwendete Ports** des Themas [Windows-Firewall- und Porteinstellungen für Clientcomputer in Configuration Manager](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md). Informationen zum Konfigurieren der Windows-Firewall auf dem Client für die Clientinstallation und zur Kommunikation nach der Installation finden Sie unter [Einstellungen für Windows-Firewall und Ports für System Center Configuration Manager-Clients](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md).  
+Welche Ports während der Clientinstallation verwendet werden, ist von der Clientbereitstellungsmethode abhängig. Eine Liste der für jede Clientbereitstellungsmethode verwendeten Ports finden Sie im Abschnitt **Bei der Configuration Manager-Clientbereitstellung verwendete Ports** im Artikel [Windows-Firewall- und -Porteinstellungen für Clients in System Center Configuration Manager](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md). Informationen zum Konfigurieren der Windows-Firewall auf dem Client für die Clientinstallation und zur Kommunikation nach der Installation finden Sie unter [Einstellungen für Windows-Firewall und Ports für System Center Configuration Manager-Clients](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md).  
 
 ###  <a name="BKMK_MigrationPorts"></a> Für die Migration verwendete Ports  
 Der Standortserver, der die Migration ausführt, verwendet verschiedene Ports, um die Verbindung zu entsprechenden Standorten in der Quellhierarchie herzustellen, um Daten aus der SQL Server-Datenbank der Quellstandorte zu sammeln und Verteilungspunkte freizugeben.  
 
- Informationen zu diesen Ports finden Sie im Abschnitt [Für die Migration erforderliche Konfigurationen](../../../core/migration/prerequisites-for-migration.md#BKMK_Required_Configurations) des Themas [Voraussetzungen für die Migration in System Center Configuration Manager](../../../core/migration/prerequisites-for-migration.md).  
+ Informationen zu diesen Ports finden Sie im Abschnitt [Für die Migration erforderliche Konfigurationen](../../../core/migration/prerequisites-for-migration.md#BKMK_Required_Configurations) im Artikel [Voraussetzungen für die Migration in System Center Configuration Manager](../../../core/migration/prerequisites-for-migration.md).  
 
 ###  <a name="BKMK_ServerPorts"></a> Von Windows Server verwendete Ports  
  In der folgenden Tabelle werden die wichtigsten von Windows Server verwendeten Ports mit den entsprechenden Funktionen aufgelistet. Eine umfassende Liste der Windows Server-Dienste und Netzwerkportanforderungen finden Sie unter [Dienstübersicht und Netzwerkportanforderungen für das Windows Server-System](http://go.microsoft.com/fwlink/p/?LinkID=123652).  

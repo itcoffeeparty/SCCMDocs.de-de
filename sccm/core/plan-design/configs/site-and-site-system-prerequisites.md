@@ -3,7 +3,7 @@ title: Voraussetzungen von Standorten
 titleSuffix: Configuration Manager
 description: Erfahren Sie, wie ein Windows-Computer als System Center Configuration Manager-Standortsystemserver konfiguriert wird.
 ms.custom: na
-ms.date: 8/25/2017
+ms.date: 02/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,12 +15,12 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 caps.latest.revision: 
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: cb1b81fc0765e6754c7dea9ce421e41fcd58a70e
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+manager: dougeby
+ms.openlocfilehash: 6d1be6375dde2df51aafe076e5613647ecca3c4c
+ms.sourcegitcommit: d0fc79214bc35ca172fd2023dfa617b977ee865b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="site-and-site-system-prerequisites-for-system-center-configuration-manager"></a>Voraussetzungen für Standorte und Standortsysteme für System Center Configuration Manager
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/01/2018
  Windows-basierte Computer erfordern bestimmte Konfigurationen zur Unterstützung ihrer Verwendung als System Center Configuration Manager-Standortsystemserver.  
 
  
- Bei einigen Produkten wie Windows Server Update Services (WSUS) für den Softwareupdatepunkt finden Sie Informationen zu weiteren Voraussetzungen und Einschränkungen zur Nutzung des Produkts in der Dokumentation zum jeweiligen Produkt. Hier werden nur Konfigurationen beschrieben, die sich direkt auf die Verwendung mit Configuration Manager beziehen.   
+ Bei einigen Produkten wie Windows Server Update Services (WSUS) für den Softwareupdatepunkt finden Sie Informationen zu weiteren Voraussetzungen und Einschränkungen zur Nutzung in der Produktdokumentation. Hier werden nur Konfigurationen beschrieben, die sich direkt auf die Verwendung mit Configuration Manager beziehen.   
 
 > [!NOTE]  
 >  Im Januar 2016 ist die Unterstützung für .NET Framework 4.0, 4.5 und 4.5.1 abgelaufen. Weitere Informationen finden Sie in den [häufig gestellten Fragen zur Microsoft-Support-Lifecycle-Richtlinie für .NET Framework](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update) unter „support.microsoft.com“.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/01/2018
 
     -   Der Name des Computers.  
 
-  Um eines dieser Elemente zu ändern, müssen Sie zuerst die Standortsystemrolle vom Computer entfernen und die Rolle nach der Änderung erneut installieren. Falls sich dies auf den Standortservercomputer auswirkt, müssen Sie den Standort deinstallieren und nach der Änderung erneut installieren.  
+  Um eines dieser Elemente zu ändern, müssen Sie zuerst die Standortsystemrolle vom Computer entfernen und die Rolle nach der Änderung erneut installieren. Bei Änderungen, die sich auf den Standortservercomputer auswirken, müssen Sie den Standort deinstallieren und nach der Änderung erneut installieren.  
 
 -   Standortsystemrollen werden auf Instanzen von Windows Server-Clustern nicht unterstützt. Die einzige Ausnahme gilt für den Standortdatenbankserver.  
 
@@ -62,13 +62,13 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET Framework 3.5 SP1 (oder höher)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (oder höher)
 
 -   Remotedifferenzialkomprimierung  
 
 **Windows ADK:**  
 
--   Bevor Sie einen Standort der zentralen Verwaltung oder einen primären Standort installieren oder aktualisieren, müssen Sie die Version von Windows ADK (Assessment and Deployment Kit) installieren, die die Version von Configuration Manager erfordert, die Sie installieren oder aktualisieren. Informationen finden Sie im Clientthema zum [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) im Support für Windows 10.  
+-   Bevor Sie einen Standort der zentralen Verwaltung oder einen primären Standort installieren oder aktualisieren, müssen Sie die Version von Windows ADK (Assessment and Deployment Kit) installieren, die die Version von Configuration Manager erfordert, die Sie installieren oder aktualisieren. Informationen finden Sie im Clientartikel zum [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) im Support für Windows 10.  
 
 -   Weitere Informationen zu dieser Anforderung finden Sie unter [Anforderungen an die Infrastruktur für die Betriebssystembereitstellung](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
@@ -83,7 +83,7 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET Framework 3.5 SP1 (oder höher)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (oder höher)   
 
 -   Remotedifferenzialkomprimierung  
 
@@ -115,7 +115,7 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2012smsprovpreq"></a> SMS-Anbieterserver  
 **Windows ADK:**  
 
--   Auf dem Computer, auf dem Sie eine SMS-Anbieterinstanz installieren, muss die Windows ADK-Version installiert sein, die für die von Ihnen installierte bzw. aktualisierte Version von Configuration Manager erforderlich ist. Informationen finden Sie im Clientthema zum [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) im Support für Windows 10.
+-   Auf dem Computer, auf dem Sie eine SMS-Anbieterinstanz installieren, muss die Windows ADK-Version installiert sein, die für die von Ihnen installierte bzw. aktualisierte Version von Configuration Manager erforderlich ist. Informationen finden Sie im Clientartikel zum [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) im Support für Windows 10.
 
 -   Weitere Informationen zu dieser Anforderung finden Sie unter [Anforderungen an die Infrastruktur für die Betriebssystembereitstellung](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
@@ -124,7 +124,7 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET Framework 3.5 SP1 (oder höher)  
 
--   .NET Framework 4.5.2:  
+-   .NET Framework 4.5.2 (oder höher)  
 
     -   ASP.NET 4.5  
 
@@ -159,7 +159,7 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET Framework 3.5 SP1 (oder höher)  
 
--   .NET Framework 4.5.2:  
+-   .NET Framework 4.5.2 (oder höher)  
 
     -   ASP.NET 4.5:  
 
@@ -194,12 +194,12 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2012AIpreq"></a> Asset Intelligence-Synchronisierungspunkt  
 **Windows Server-Rollen und -Features:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (oder höher)  
 
 ###  <a name="bkmk_2012crppreq"></a> Zertifikatregistrierungspunkt  
 **Windows Server-Rollen und -Features:**  
 
--   .NET Framework 4.5.2:  
+-   .NET Framework 4.5.2 (oder höher)  
 
     -   HTTP-Aktivierung  
 
@@ -273,7 +273,7 @@ ms.lasthandoff: 02/01/2018
 
 -   Mindestens .NET Framework 3.5  
 
--   .NET Framework 4.5.2:  
+-   .NET Framework 4.5.2 (oder höher)  
 
      Bei der Installation dieser Standortsystemrolle installiert Configuration Manager automatisch .NET Framework 4.5.2. Diese Installation kann den Server in den Status „Ausstehender Neustart“ setzen. Wenn für .NET Framework ein Neustart aussteht, können .NET-Anwendungen möglicherweise erst nach dem Neustart des Servers und dem Abschluss der Installation ausgeführt werden.  
 
@@ -313,7 +313,7 @@ ms.lasthandoff: 02/01/2018
 
 -   Mindestens .NET Framework 3.5  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (oder höher) 
 
      Bei der Installation dieser Standortsystemrolle installiert Configuration Manager automatisch .NET Framework 4.5.2. Diese Installation kann den Server in den Status „Ausstehender Neustart“ setzen. Wenn für .NET Framework ein Neustart aussteht, können .NET-Anwendungen möglicherweise erst nach dem Neustart des Servers und dem Abschluss der Installation ausgeführt werden.  
 
@@ -359,7 +359,7 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 ###  <a name="bkmk_2012MPpreq"></a> Verwaltungspunkt  
 **Windows Server-Rollen und -Features:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (oder höher) 
 
 -   BITS-Servererweiterungen (und automatisch ausgewählte Optionen) oder intelligenter Hintergrundübertragungsdienst (Background Intelligent Transfer Service, BITS) (und automatisch ausgewählte Optionen)  
 
@@ -382,11 +382,11 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 ###  <a name="bkmk_2012RSpoint"></a> Reporting Services-Punkt  
 **Windows Server-Rollen und -Features:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (oder höher) 
 
 **SQL Server Reporting Services:**  
 
--   Sie müssen zur Unterstützung von SQL Server Reporting Services vor dem Installieren des Reporting Services-Punkts mindestens eine SQL Server-Instanz installieren und konfigurieren.  
+-   Installieren und konfigurieren Sie zur Unterstützung von SQL Server Reporting Services vor dem Installieren des Reporting Services-Punkts mindestens eine SQL Server-Instanz.  
 
 -   Sie können für SQL Server Reporting Services die gleiche Instanz wie für die Standortdatenbank verwenden.  
 
@@ -395,7 +395,7 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 ###  <a name="bkmk_SCPpreq"></a> Dienstverbindungspunkt  
 **Windows Server-Rollen und -Features:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (oder höher) 
 
      Bei der Installation dieser Standortsystemrolle installiert Configuration Manager automatisch .NET Framework 4.5.2. Diese Installation kann den Server in den Status „Ausstehender Neustart“ setzen. Wenn für .NET Framework ein Neustart aussteht, können .NET-Anwendungen möglicherweise erst nach dem Neustart des Servers und dem Abschluss der Installation ausgeführt werden.  
 
@@ -410,7 +410,7 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 
 -   .NET Framework 3.5 SP1 (oder höher)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (oder höher) 
 
 Die IIS-Standardkonfiguration ist erforderlich.
 
@@ -432,14 +432,14 @@ Windows Server 2008 und Windows Server 2008 R2 unterliegen nun dem erweiterten S
 
 **Folgendes gilt für alle Anforderungen zur Aktivierung von Windows Communication Foundation (WCF):**  
 
--   Sie können die WCF-Aktivierung als Bestandteil des Windows-Features .NET Framework auf dem Standortsystemserver konfigurieren. Führen Sie beispielsweise unter Windows Server 2008 R2 den **Assistenten zum Hinzufügen von Features** aus, um weitere Features auf dem Server zu installieren. Erweitern Sie auf der Seite **Features auswählen** den Knoten **.NET Framework 3.5.1-Features** und dann den Knoten **WCF-Aktivierung**. Aktivieren Sie anschließend die Kontrollkästchen für **HTTP-Aktivierung** und **Nicht-HTTP-Aktivierung**, um diese Optionen zu aktivieren.  
+-   Sie können die WCF-Aktivierung als Bestandteil des Windows-Features .NET Framework auf dem Standortsystemserver konfigurieren. Führen Sie beispielsweise unter Windows Server 2008 R2 den **Assistenten zum Hinzufügen von Features** aus, um weitere Features auf dem Server zu installieren. Erweitern Sie auf der Seite **Features auswählen** die Option **.NET Framework 3.5.1-Features**, und erweitern Sie dann **WCF-Aktivierung**. Aktivieren Sie die Kontrollkästchen für die beide Optionen **HTTP-Aktivierung** und **Nicht-HTTP-Aktivierung**, um diese zu aktivieren.  
 
 ###  <a name="bkmk_2008sspreq"></a> Standortserver: Standort der zentralen Verwaltung und primärer Standort  
 **.NET Framework:**  
 
 -   .NET Framework 3.5 SP1 (oder höher)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (oder höher) 
 
 **Windows-Feature:**  
 
@@ -447,7 +447,7 @@ Windows Server 2008 und Windows Server 2008 R2 unterliegen nun dem erweiterten S
 
 **Windows ADK:**  
 
--   Bevor Sie einen Standort der zentralen Verwaltung oder einen primären Standort installieren oder aktualisieren, müssen Sie die Version von Windows ADK installieren, die die Version von Configuration Manager erfordert, die Sie installieren oder aktualisieren.  Informationen finden Sie im Clientthema zum [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) im Support für Windows 10.  
+-   Bevor Sie einen Standort der zentralen Verwaltung oder einen primären Standort installieren oder aktualisieren, müssen Sie die Version von Windows ADK installieren, die die Version von Configuration Manager erfordert, die Sie installieren oder aktualisieren.  Informationen finden Sie im Clientartikel zum [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) im Support für Windows 10.  
 
 -   Weitere Informationen zu dieser Anforderung finden Sie unter [Anforderungen an die Infrastruktur für die Betriebssystembereitstellung](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
@@ -462,7 +462,7 @@ Windows Server 2008 und Windows Server 2008 R2 unterliegen nun dem erweiterten S
 
 -   .NET Framework 3.5 SP1 (oder höher)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (oder höher)  
 
 **Visual C++ Redistributable:**  
 
@@ -492,14 +492,14 @@ Windows Server 2008 und Windows Server 2008 R2 unterliegen nun dem erweiterten S
 ###  <a name="bkmk_2008smsprovpreq"></a> SMS-Anbieterserver  
 **Windows ADK:**  
 
--   Auf dem Computer, auf dem Sie eine SMS-Anbieterinstanz installieren, muss die Windows ADK-Version installiert sein, die für die von Ihnen installierte bzw. aktualisierte Version von Configuration Manager erforderlich ist. Informationen finden Sie im Clientthema zum [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) im Support für Windows 10.  
+-   Auf dem Computer, auf dem Sie eine SMS-Anbieterinstanz installieren, muss die Windows ADK-Version installiert sein, die für die von Ihnen installierte bzw. aktualisierte Version von Configuration Manager erforderlich ist. Informationen finden Sie im Clientartikel zum [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) im Support für Windows 10.  
 
 -   Weitere Informationen zu dieser Anforderung finden Sie unter [Anforderungen an die Infrastruktur für die Betriebssystembereitstellung](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
 ###  <a name="bkmk_2008acwspreq"></a> Anwendungskatalog-Websitepunkt  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (oder höher) 
 
 **IIS-Konfiguration:**
 
@@ -530,7 +530,7 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 
 -   .NET Framework 3.5 SP1 (oder höher)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (oder höher) 
 
 **Aktivierung von Windows Communication Foundation (WCF):**  
 
@@ -561,12 +561,12 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 ###  <a name="bkmk_2008AIpreq"></a> Asset Intelligence-Synchronisierungspunkt  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (oder höher) 
 
 ###  <a name="bkmk_2008crppreq"></a> Zertifikatregistrierungspunkt  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (oder höher) 
 
 -   HTTP-Aktivierung  
 
@@ -599,7 +599,7 @@ Sie können die IIS-Standardkonfiguration oder eine benutzerdefinierte Konfigura
 
     -   IIS 6-WMI-Kompatibilität  
 
-Wenn Sie eine benutzerdefinierte IIS-Konfiguration verwenden, können Sie nicht benötigte Optionen entfernen, darunter die folgenden:  
+Wenn Sie eine benutzerdefinierte IIS-Konfiguration verwenden, können Sie nicht benötigte Optionen entfernen, darunter die folgenden Elemente:  
 
 -   Allgemeine HTTP-Features:  
 
@@ -641,7 +641,7 @@ Wenn Sie eine benutzerdefinierte IIS-Konfiguration verwenden, können Sie nicht 
 ###  <a name="bkmk_2008Enrollpreq"></a> Anmeldungspunkt  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (oder höher) 
 
      Wenn diese Standortsystemrolle installiert wird, installiert Configuration Manager automatisch .NET Framework 4.5.2, wenn auf dem Server nicht bereits eine unterstützte Version von .NET Framework installiert ist. Diese Installation kann den Server in den Status „Ausstehender Neustart“ setzen. Wenn für .NET Framework ein Neustart aussteht, können .NET-Anwendungen möglicherweise erst nach dem Neustart des Servers und dem Abschluss der Installation ausgeführt werden.  
 
@@ -670,7 +670,7 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 ###  <a name="bkmk_2008EnrollProxpreq"></a> Anmeldungsproxypunkt  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (oder höher) 
 
      Wenn diese Standortsystemrolle installiert wird, installiert Configuration Manager automatisch .NET Framework 4.5.2, wenn auf dem Server nicht bereits eine unterstützte Version von .NET Framework installiert ist. Diese Installation kann den Server in den Status „Ausstehender Neustart“ setzen. Wenn für .NET Framework ein Neustart aussteht, können .NET-Anwendungen möglicherweise erst nach dem Neustart des Servers und dem Abschluss der Installation ausgeführt werden.  
 
@@ -708,7 +708,7 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 ###  <a name="bkmk_2008MPpreq"></a> Verwaltungspunkt  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (oder höher)
 
 **IIS-Konfiguration:**
 
@@ -734,7 +734,7 @@ Sie müssen die folgenden Optionen für IIS aktivieren, um eine benutzerdefinier
     -   IIS 6-WMI-Kompatibilität  
 
 
-Wenn Sie eine benutzerdefinierte IIS-Konfiguration verwenden, können Sie nicht benötigte Optionen entfernen, darunter die folgenden:  
+Wenn Sie eine benutzerdefinierte IIS-Konfiguration verwenden, können Sie nicht benötigte Optionen entfernen, darunter die folgenden Optionen:  
 
 -   Allgemeine HTTP-Features:  
 
@@ -749,11 +749,11 @@ Wenn Sie eine benutzerdefinierte IIS-Konfiguration verwenden, können Sie nicht 
 ###  <a name="bkmk_2008RSpoint"></a> Reporting Services-Punkt  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (oder höher)  
 
 **SQL Server Reporting Services:**  
 
--   Sie müssen zur Unterstützung von SQL Server Reporting Services vor dem Installieren des Reporting Services-Punkts mindestens eine SQL Server-Instanz installieren und konfigurieren.  
+-   Installieren und konfigurieren Sie zur Unterstützung von SQL Server Reporting Services vor dem Installieren des Reporting Services-Punkts mindestens eine SQL Server-Instanz.  
 
 -   Sie können für SQL Server Reporting Services die gleiche Instanz wie für die Standortdatenbank verwenden.  
 
@@ -762,7 +762,7 @@ Wenn Sie eine benutzerdefinierte IIS-Konfiguration verwenden, können Sie nicht 
 ###  <a name="bkmk_2008SCPpreq"></a> Dienstverbindungspunkt  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (oder höher) 
 
      Wenn diese Standortsystemrolle installiert wird, installiert Configuration Manager automatisch .NET Framework 4.5.2, wenn auf dem Server nicht bereits eine unterstützte Version von .NET Framework installiert ist. Diese Installation kann den Server in den Status „Ausstehender Neustart“ setzen. Wenn für .NET Framework ein Neustart aussteht, können .NET-Anwendungen möglicherweise erst nach dem Neustart des Servers und dem Abschluss der Installation ausgeführt werden.  
 
@@ -777,7 +777,7 @@ Wenn Sie eine benutzerdefinierte IIS-Konfiguration verwenden, können Sie nicht 
 
 -   .NET Framework 3.5 SP1 (oder höher)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (oder höher) 
 
 **IIS-Konfiguration:**
 

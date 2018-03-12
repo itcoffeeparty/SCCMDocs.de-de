@@ -7,20 +7,21 @@ ms.date: 08/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-client
+ms.technology:
+- configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 44153689-70e8-42ad-9ae8-17ae35f6a2e3
-caps.latest.revision: "9"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: d96a8aedd046e3a8dcd12e711ae19f53a901fceb
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 9df979fe98dc4d4ead18ff3cfb276612681c9bce
+ms.sourcegitcommit: b1fa7be6a6fa5bb7c49e90c0e28a21ba8b41c842
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="planning-for-client-deployment-to-linux-and-unix-computers-in-system-center-configuration-manager"></a>Planen der Clientbereitstellung auf Linux- und UNIX-Computern in System Center Configuration Manager
 
@@ -68,6 +69,13 @@ Sie können den System Center Configuration Manager-Client auf Computern install
 |Openssl|OpenSSL-Bibliotheken; SNC-Protokoll (Secure Network Communications)|1.0.0-4|  
 |PAM|Pluggable Authentication Modules|1.1.1-4|  
 
+ **Red Hat Enterprise Linux Server Release 7**  
+
+|Erforderliches Paket|Beschreibung|Mindestversion|  
+|----------------------|-----------------|---------------------|  
+|glibc|C-Standardbibliotheken|2.17|  
+|Openssl|OpenSSL-Bibliotheken; SNC-Protokoll (Secure Network Communications)|1.0.1|  
+|PAM|Pluggable Authentication Modules|1.1.1-4|  
 
  **Solaris 10 SPARC**  
 
@@ -79,7 +87,7 @@ Sie können den System Center Configuration Manager-Client auf Computern install
 |SUNWlibmsr|Math- und Microtasking-Bibliotheken (Root) (sparc)|5.10, REV=2004.11.23|  
 |SUNWcslr|Core-Solaris-Bibliotheken (Root) (sparc)|11.10.0, REV=2005.01.21.15.53|  
 |SUNWcsl|Core-Solaris-Bibliotheken (Root) (sparc)|11.10.0, REV=2005.01.21.15.53|  
-|Openssl|SUNopenssl-Bibliotheken (Usr)<br /><br /> Sun stellt die OpenSSL-Bibliotheken für Solaris 10 SPARC bereit. Diese werden zusammen mit dem Betriebssystem ausgeliefert.|11.10.0,REV=2005.01.21.15.53|  
+|OpenSSL|SUNopenssl-Bibliotheken (Usr)<br /><br /> Sun stellt die OpenSSL-Bibliotheken für Solaris 10 SPARC bereit. Diese werden zusammen mit dem Betriebssystem ausgeliefert.|11.10.0,REV=2005.01.21.15.53|  
 |PAM|Pluggable Authentication Modules<br /><br /> SUNWcsr, Core Solaris, (Root) (Sparc)|11.10.0, REV=2005.01.21.15.53|  
 
  **Solaris 10 x86**  
@@ -91,7 +99,7 @@ Sie können den System Center Configuration Manager-Client auf Computern install
 |SUNWlibmsr|Math- und Microtasking-Bibliotheken (Root) (i386)|5.10, REV=2004.12.18|  
 |SUNWcsl|Core Solaris, (Freigabebibliotheken) (i386)|11.10.0, REV=2005.01.21.16.34|  
 |SUNWcslr|Core Solaris-Bibliotheken (Root) (i386)|11.10.0, REV=2005.01.21.16.34|  
-|Openssl|SUNWopenssl-Bibliotheken; OpenSSL-Bibliotheken (Usr) (i386)|11.10.0, REV=2005.01.21.16.34|  
+|OpenSSL|SUNWopenssl-Bibliotheken; OpenSSL-Bibliotheken (Usr) (i386)|11.10.0, REV=2005.01.21.16.34|  
 |PAM|Pluggable Authentication Modules<br /><br /> SUNWcsr Core Solaris, (Root)(i386)|11.10.0, REV=2005.01.21.16.34|  
 
  **Solaris 11 SPARC**  

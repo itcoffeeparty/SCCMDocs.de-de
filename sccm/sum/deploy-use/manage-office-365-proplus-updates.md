@@ -5,18 +5,19 @@ description: "Configuration Manager synchronisiert Office 365-Clientupdates aus 
 keywords: 
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.date: 12/28/2017
+manager: dougeby
+ms.date: 02/16/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology: configmgr-sum
+ms.technology:
+- configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: b951e72635806c12bd0ec0dd66e382a767b99b43
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 2f765df84b94524cf56f6d1d9e051157f1a325ef
+ms.sourcegitcommit: 45ff3ffa040eada5656b17f47dcabd3c637bdb60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Verwalten von Office 365 ProPlus mit Configuration Manager
 
@@ -30,7 +31,7 @@ Mit dem Configuration Manager können Sie Office 365 ProPlus-Apps auf folgende W
 
 - [Bereitstellen von Office 365-Updates](#deploy-office-365-updates): Ab Configuration Manager-Version 1602 können Sie Office 365-Clientupdates mithilfe des Softwareupdateverwaltung-Workflows verwalten. Wenn Microsoft ein neues Update für Office 365-Clients im Office Content Delivery Network (CDN) veröffentlicht, veröffentlicht Microsoft auch ein Updatepaket in Windows Server Update Services (WSUS). Nachdem Configuration Manager das Office 365-Clientupdate aus dem WSUS-Katalog auf den Standortserver übertragen hat, kann das Update für Clients bereitgestellt werden.    
 
-- [Hinzufügen von Sprachen für Downloads von Office 365-Updates](#add-languages-for-office-365-update-downloads): Ab Configuration Manager-Version 1610 können Sie Unterstützung für das Herunterladen von Updates für alle Sprachen hinzufügen, die von Office 365 unterstützt werden. Das heißt, Configuration Manager muss die Sprache nicht unterstützen, wenn sie bereits von Office 365 unterstützt wird.  
+- [Hinzufügen von Sprachen für Downloads von Office 365-Updates](#add-languages-for-office-365-update-downloads): Ab Configuration Manager-Version 1610 können Sie Unterstützung für das Herunterladen von Updates für alle Sprachen hinzufügen, die von Office 365 unterstützt werden. Das heißt, Configuration Manager muss die Sprache nicht unterstützen, wenn sie bereits von Office 365 unterstützt wird. Vor der Configuration Manager-Version 1610 müssen Sie Updates in der gleichen Sprache herunterladen und bereitstellen, in der die Office 365-Clients konfiguriert sind. 
 
 - [Ändern des Updatekanals](#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager): Um den Updatekanal zu ändern, können Sie mit einer Gruppenrichtlinie die Änderung eines Registrierungsschlüsselwerts an Office 365-Clients verteilen.
 
@@ -98,6 +99,8 @@ Nachdem Sie Office 365-Anwendungen mithilfe des Office 365-Installer erstellt un
 
 
 ## <a name="deploy-office-365-updates"></a>Bereitstellen von Updates für Office 365
+Ab Configuration Manager-Version 1706 wurden Office 365-Clientupdates auf den Knoten **Office 365-Clientverwaltung** >**Office 365-Updates** verschoben. Dies hat keine Auswirkungen auf die ADR-Konfiguration. 
+
 Befolgen Sie die folgenden Schritte, um Office 365-Updates mit Configuration Manager bereitzustellen:
 
 1.  [Überprüfen Sie die Anforderungen](https://technet.microsoft.com/library/mt628083.aspx) für die Verwendung von Configuration Manager zum Verwalten von Office 365-Client-Updates im Abschnitt **Anforderungen für die Verwendung von Configuration Manager zum Verwalten von Office 365-Clientupdates** des verlinkten Artikels.  
@@ -118,7 +121,7 @@ Befolgen Sie die folgenden Schritte, um Office 365-Updates mit Configuration Man
 4. [Stellen Sie für Clients Office 365-Updates bereit](deploy-software-updates.md).   
 
 > [!Important]
-> Sie müssen Updates in der gleichen Sprache herunterladen und bereitstellen, in der die Office 365-Clients konfiguriert sind. Nehmen wir z.B. an, Sie haben einen Office 365-Client, der mit den Sprachen en-US und de-DE konfiguriert ist. Auf dem Standortserver laden Sie nur den en-US-Inhalt für ein zutreffendes Office 365-Update herunter und stellen ihn bereit. Wenn der Benutzer die Installation für dieses Updates aus dem Softwarecenter startet, hängt das Update beim Herunterladen des Inhalts.   
+> Vor der Configuration Manager-Version 1610 müssen Sie Updates in der gleichen Sprache herunterladen und bereitstellen, in der die Office 365-Clients konfiguriert sind. Nehmen wir z.B. an, Sie haben einen Office 365-Client, der mit den Sprachen en-US und de-DE konfiguriert ist. Auf dem Standortserver laden Sie nur den en-US-Inhalt für ein zutreffendes Office 365-Update herunter und stellen ihn bereit. Wenn der Benutzer die Installation für dieses Updates aus dem Softwarecenter startet, hängt das Update beim Herunterladen des Inhalts für „de-de“.   
 
 ## <a name="restart-behavior-and-client-notifications-for-office-365-updates"></a>Verhalten bei Neustart und Client-Benachrichtigungen für Office 365-Updates
 Wenn Sie ein Update für einen Office 365-Client bereitstellen, unterscheiden sich das Verhalten bei Neustart und die Client-Benachrichtigungen je nachdem, welche Version von Configuration Manager Sie verwenden. In der folgenden Tabelle finden Sie Informationen dazu, welche Aktionen beim Endnutzer erfolgen, wenn der Client ein Update für Office 365 empfängt:
@@ -131,7 +134,7 @@ Wenn Sie ein Update für einen Office 365-Client bereitstellen, unterscheiden si
 |1706|Der Client empfängt Popup- und In-App-Benachrichtigungen. Vor der Installation des Updates wird außerdem ein Countdown-Dialog angezeigt.|
 
 > [!Important]
-> Beachten Sie in der Configuration Manager-Version 1706 die folgenden Details:
+> Beachten Sie ab der Configuration Manager-Version 1706 die folgenden Details:
 >
 >- Ein Benachrichtigungssymbol wird im Infobereich in der Taskleiste für erforderliche Anwendungen angezeigt, wenn die Frist innerhalb von 48 Stunden in der Zukunft liegt und der Inhalt des Updates heruntergeladen wurde. 
 >- Ein Countdown-Dialogfeld wird für benötigte Apps angezeigt, bei denen die Frist innerhalb von 7,5 Stunden in der Zukunft liegt und das Update heruntergeladen wurde. Der Benutzer kann den Countdown-Dialog vor Ablauf der Frist maximal dreimal zurückstellen. Bei einer Zurückstellung wird der Countdown nach zwei Stunden wieder angezeigt. Wenn keine Zurückstellung erfolgt, gibt es einen 30-minütigen Countdown, und das Update wird installiert, wenn der Countdown abläuft.
