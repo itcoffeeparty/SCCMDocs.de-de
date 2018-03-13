@@ -3,23 +3,24 @@ title: Welcher Branch sollte verwendet werden?
 titleSuffix: Configuration Manager
 description: "Hier finden Sie Informationen zu den Unterschieden zwischen den verfügbaren Branches von System Center Configuration Manager."
 ms.custom: na
-ms.date: 05/02/2017
+ms.date: 03/08/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
-caps.latest.revision: "0"
+caps.latest.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 9985ff5db4357b6b18de1ef58de40bc631d6cc6b
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: d762cf5e6932e17d8dfb0dd6c442c452028b5228
+ms.sourcegitcommit: b653342fb5d69a16e71b3548a7e9a2e47e54bf88
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>Welcher Branch von Configuration Manager soll verwendet werden?
 
@@ -77,7 +78,7 @@ LTSB basiert auf Version 1606. Mit diesem Branch erhalten Sie keine konsoleninte
 Zur Installation des LTSB als neuen Standort oder als Upgrade von einem unterstützten Configuration Manager 2012-Standort verwenden Sie die [Baselinemedien](/sccm/core/servers/manage/updates#baseline-and-update-versions) von Version 1606, die Sie mit System Center 2016 oder System Center Configuration Manager (Current Branch und Long-Term Servicing Branch 1606) als DVD erhalten. Mit den Baselinemedien können Sie einen neuen Standort, an dem Version 1606 von Current Branch ausgeführt wird, oder einen neuen Standort, an dem Long-Term Servicing Branch ausgeführt wird, installieren.
 
 > [!TIP]  
-> Weitere Informationen zu System Center 2016 finden Sie in der [Dokumentation zu System Center 2016](https://technet.microsoft.com/system-center-docs/system-center). In dieser Dokumentation wird auch beschrieben, wie Sie System Center 2016 erhalten, eine Lösung, für die Sie einen Microsoft-Lizenzvertrag oder entsprechende Rechte benötigen.
+> Weitere Informationen zu System Center 2016 finden Sie in der [Dokumentation zu System Center 2016](https://docs.microsoft.com/system-center/index). In dieser Dokumentation wird auch beschrieben, wie Sie System Center 2016 erhalten, eine Lösung, für die Sie einen Microsoft-Lizenzvertrag oder entsprechende Rechte benötigen.
 
 > Wenn Sie System Center Configuration Manager Version 1606 im Volume Licensing Service Center (VLSC) suchen möchten, wechseln Sie zur Registerkarte **Downloads and Keys** (Downloads und Schlüssel) des [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), suchen Sie nach „system center config“, und wählen Sie dann **System Center Config Mgr (current branch and LTSB)** aus.
 
@@ -90,7 +91,7 @@ Zur Installation des LTSB als neuen Standort oder als Upgrade von einem unterst�
 
 **Einschränkungen**  
 Der LTSB basiert auf der Current Branch-Version 1606 und weist die folgenden Einschränkungen auf:
-- Der LTSB wird nach der allgemeinen Verfügbarkeit (Oktober 2016) 10 Jahre lang mit wichtigen Sicherheitsupdates unterstützt. Danach läuft die Unterstützung für diesen Branch ab. Weitere Informationen zum Supportlebenszyklus finden Sie unter [Microsoft Lifecycle-Richtlinie](https://support.microsoft.com/en-us/lifecycle).
+- Der LTSB wird nach der allgemeinen Verfügbarkeit (Oktober 2016) 10 Jahre lang mit wichtigen Sicherheitsupdates unterstützt. Danach läuft die Unterstützung für diesen Branch ab. Weitere Informationen zum Supportlebenszyklus finden Sie unter [Microsoft Lifecycle-Richtlinie](https://support.microsoft.com/lifecycle).
 - Unterstützt eine eingeschränkte feste Liste mit Server- und Clientbetriebssystemen und entsprechenden Technologien wie SQL Server-Versionen. Weitere Informationen dazu, was von diesem Branch unterstützt wird, finden Sie unter [Supported Configurations for the Long-Term Servicing Branch (Unterstützte Konfigurationen für Long-Term Servicing Branch)](supported-configurations-for-ltsb.md).
 - Erhält keine Updates für neue Features.
 - Unterstützt nicht das Hinzufügen eines Microsoft Intune-Abonnements, das den Gebrauch von Folgendem verhindert:
