@@ -7,19 +7,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7341cc6e-9e08-41e4-bcc6-6c1ff12e85ca
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 37ad3eb2d7e6796dcd88b2b01b8b0cea97bb41fe
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 84fe2fd0959051ea42e555cb484c95fb82ec8fb3
+ms.sourcegitcommit: 1378532fac2620ddcfd31061982f344a290c2e67
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="use-alerts-and-the-status-system-for-system-center-configuration-manager"></a>Verwenden von Benachrichtigungen und des Statussystems für System Center Configuration Manager
 
@@ -219,9 +220,9 @@ Da im Statussystem getrennte Konfigurationen für jeden Standort verwaltet werde
     |**Verschieben**|Hält die Überwachung der Warnung an, bis das angegebene Datum erreicht ist. Zu diesem Zeitpunkt wird der Zustand der Warnung aktualisiert.<br /><br /> Sie können eine Warnung nur anhalten (verschieben), wenn sie aktiviert ist.|  
     |**Abonnement erstellen**|Öffnet das Dialogfeld **Neues Abonnement** , in dem Sie ein E-Mail-Abonnement für die ausgewählte Warnung erstellen können.|  
 
-##### <a name="to-configure-endpoint-protection-alerts-for-a-collection"></a>So konfigurieren Sie Endpoint Protection-Warnungen für eine Sammlung  
+<!--##### To configure Endpoint Protection alerts for a collection  
 
-1.  Ausstehend  
+1.  pending  -->
 
 ##### <a name="to-configure-client-status-alerts-for-a-collection"></a>So konfigurieren Sie Clientstatuswarnungen für eine Sammlung  
 
