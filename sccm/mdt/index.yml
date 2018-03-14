@@ -1,0 +1,88 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: "Microsoft Deployment Toolkit – Dokumentation"
+metadata:
+  document_id: bfb05467-f6ec-4cb2-b108-254972de2d06
+  title: "Microsoft Deployment Toolkit – Dokumentation"
+  description: "Das Microsoft Deployment Toolkit stellt eine einheitliche Sammlung von Tools, Prozessen und Leitfäden für die Automatisierung von Desktop- und Serverbereitstellungen zur Verfügung."
+  keywords: freeware, tool, process, workflow, automation, deployment, automated, distribution
+  author: arob98
+  ms.author: angrobe
+  manager: angrobe
+  ms.date: 12/27/2017
+  ms.topic: landing-page
+  ms.devlang: na
+  ms.prod: configuration-manager
+  ms.openlocfilehash: 56462ae538a2336f94a1883d099ad7b45c714633
+  ms.sourcegitcommit: 32bbc006a41868a6d9a708db5f7b372d9c71d985
+  ms.translationtype: HT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 03/08/2018
+sections:
+- items:
+  - type: markdown
+    text: "Das Microsoft Deployment Toolkit stellt eine einheitliche Sammlung von Tools, Prozessen und Leitfäden für die Automatisierung von Desktop- und Serverbereitstellungen zur Verfügung."
+- items:
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 2
+    items:
+    - href: whats-new-in-mdt.md
+      html: <p>Sehen Sie sich an, was es Neues gibt.</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_whats-new.svg
+      title: Neuheiten
+    - href: release-notes.md
+      html: <p>Details zu Fixes und Bugs in diesem Release.</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_whats-new.svg
+      title: Anmerkungen zu dieser Version
+    - href: samples-guide.md
+      html: "<p>Beispiele für Konfigurationseinstellungen für bestimmte Bereitstellungsszenarien.</p>"
+      image:
+        src: https://docs.microsoft.com/media/common/i_code-samples.svg
+      title: Leitfaden mit Beispielen
+    - href: user-driven-installation-developers-guide.md
+      html: "<p>Passen Sie die benutzergesteuerte Installation für Ihre Organisation an.</p>"
+      image:
+        src: https://docs.microsoft.com/media/common/i_architecture.svg
+      title: Entwicklerhandbuch
+- title: Schnellstarts
+  items:
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: lite-touch-installation-guide.md
+      title: "Mithilfe von startfähigen Medien installieren"
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: user-driven-installation-guide.md
+      title: Mit benutzergesteuerter Installation bereitstellen
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: sccm-guide.md
+      title: Auf einem neuen Computer bereitstellen
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+- title: "Zusätzliche Ressourcen"
+  items:
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: use-the-mdt.md
+      title: "Führen Sie Bereitstellungen mit verschiedenen Installationsoptionen durch: mit wenigen Benutzereingriffen, ganz ohne Benutzereingriffe oder mit benutzergesteuerter Installation."
+      image:
+        src: https://docs.microsoft.com/media/common/i_api-reference.svg
+    - href: toolkit-reference.md
+      title: Diese Konfigurationseinstellungen helfen bei Bereitstellungen.
+      image:
+        src: https://docs.microsoft.com/media/common/i_download-install.svg
+    - href: troubleshooting-reference.md
+      title: Hier finden Sie Protokolldateien, Fehlercodes und weitere Details zur Problembehandlung.
+      image:
+        src: https://docs.microsoft.com/media/common/i_support.svg
