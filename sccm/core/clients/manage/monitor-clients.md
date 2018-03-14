@@ -7,19 +7,20 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-client
+ms.technology:
+- configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 1abd791817af5b59e850cec4d529f57d9e541674
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 2df5127f3eb5049d1a4277fd25ce04c6de05999d
+ms.sourcegitcommit: b653342fb5d69a16e71b3548a7e9a2e47e54bf88
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-monitor-clients-in-system-center-configuration-manager"></a>Überwachen von Clients in System Center Configuration Manager
 
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/12/2017
 
      Auf Computern mit Windows 7 wird die Clientüberprüfung als geplante Aufgabe ausgeführt. Bei nachfolgenden Betriebssystemen wird die Clientüberprüfung während des Windows-Wartungsfensters automatisch ausgeführt.  
 
-     Sie können die Wiederherstellung so konfigurieren, dass sie auf bestimmten Computern, beispielsweise geschäftskritischen Servern, nicht ausgeführt wird. Wenn es außerdem noch zusätzliche Objekte gibt, die Sie auswerten möchten, können Sie die Kompatibilitätseinstellungen in Configuration Manager verwenden, um eine umfassende Lösung zur Überwachung der allgemeinen Integrität, Aktivität und Kompatibilität von Computern in Ihrer Organisation zu erstellen. Weitere Informationen zu Kompatibilitätseinstellungen finden Sie unter [Planen und Konfigurieren von Kompatibilitätseinstellungen in System Center Configuration Manager](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md).  
+     Sie können die Wiederherstellung so konfigurieren, dass sie auf bestimmten Computern, beispielsweise geschäftskritischen Servern, nicht ausgeführt wird. Wenn es außerdem noch zusätzliche Objekte gibt, die Sie auswerten möchten, können Sie die Kompatibilitätseinstellungen in Configuration Manager verwenden, um eine umfassende Lösung zur Überwachung der allgemeinen Integrität, Aktivität und Kompatibilität von Computern in Ihrer Organisation zu erstellen. Weitere Informationen zu Konformitätseinstellungen finden Sie unter [Planen und Konfigurieren von Konformitätseinstellungen in System Center Configuration Manager](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md).  
 
 ##  <a name="bkmk_indStatus"></a> Überwachen des Status einzelner Clients  
 
@@ -94,7 +95,7 @@ ms.lasthandoff: 10/12/2017
 |Überprüfen Sie, ob der Dienststarttyp für Windows Update auf Automatisch oder Manuell eingestellt ist|Setzen Sie den Dienststarttyp zurück auf Automatisch|keine zusätzlichen Informationen|  
 |Überprüfen Sie, ob der Starttyp des Clientdienstes (SMS-Agent-Host) auf Automatisch eingestellt ist|Setzen Sie den Dienststarttyp zurück auf Automatisch|keine zusätzlichen Informationen|  
 |Überprüfen Sie, ob der WMI-Dienst (Windows-Verwaltungsinstrumentation) ausgeführt wird.|Starten Sie den Dienst Windows-Verwaltungsinstrumentation (WMI)|keine zusätzlichen Informationen|  
-|Überprüfen Sie die Integrität der Microsoft SQL CE-Datenbank|Installieren Sie den Configuration Manager-Client erneut.|Keine zusätzlichen Informationen|  
+|Überprüfen Sie die Integrität der Microsoft SQL CE-Datenbank|Installieren Sie den Configuration Manager-Client erneut.|keine zusätzlichen Informationen|  
 |WMI-Integritätstest der Microsoft Policy Platform|Reparieren der Microsoft Policy Platform|keine zusätzlichen Informationen|  
 |Stellen Sie sicher, dass der Microsoft Policy Platform-Dienst vorhanden ist|Reparieren der Microsoft Policy Platform|keine zusätzlichen Informationen|  
 |Überprüfen Sie, ob der Dienststarttyp der Microsoft Policy Platform auf Manuell eingestellt ist.|Setzen Sie den Dienststarttyp zurück auf Manuell|keine zusätzlichen Informationen|  
