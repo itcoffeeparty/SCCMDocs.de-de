@@ -65,7 +65,7 @@ ms.lasthandoff: 03/20/2018
 >
 > **Bei Geräten, die nur FBWF verwenden:** Legen Sie die folgenden Ausnahmen fest, um den Clientzustand und die Inventurdaten zwischen Geräteneustarts beizubehalten:  
 >   
->  -   CCMINSTALLDIR\\*.sdf  
+>  -   CCMINSTALLDIR\\\*.sdf  
 > -   CCMINSTALLDIR\ServiceData  
 > -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
 >   
