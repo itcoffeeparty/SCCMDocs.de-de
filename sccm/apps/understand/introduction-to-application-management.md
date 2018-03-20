@@ -7,19 +7,20 @@ ms.date: 12/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-app
+ms.technology:
+- configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
 ms.openlocfilehash: a8a66169f3c187f8fa0319548ddde23b399811f3
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.sourcegitcommit: 52080ef1b0f9a27c123711ef274ac3ffe070e8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="introduction-to-application-management-in-system-center-configuration-manager"></a>Einführung in die Anwendungsverwaltung in System Center Configuration Manager
 
@@ -75,9 +76,9 @@ Beim Verwalten von Geräten mit Microsoft Intune oder der lokalen Geräteverwalt
 
 
 ## <a name="state-based-applications"></a>Zustandsbasierte Anwendungen  
- Configuration Manager-Anwendungen verwenden eine zustandsbasierte Überwachung, mit deren Hilfe Sie den letzten Anwendungsbereitstellungszustand für Benutzer und Geräte nachverfolgen können. In den Zustandsmeldungen werden Informationen zu einzelnen Geräten angezeigt. Wenn beispielsweise eine Anwendung für eine Sammlung von Benutzern bereitgestellt wird, können Sie den Kompatibilitätszustand und den Zweck der Bereitstellung in der Configuration Manager-Konsole anzeigen. Sie können die Bereitstellung sämtlicher Software mithilfe des Arbeitsbereichs **Überwachung** in der Configuration Manager-Konsole überwachen. Softwarebereitstellungen umfassen Softwareupdates, Kompatibilitätseinstellungen, Anwendungen, Tasksequenzen sowie Pakete und Programme. Weitere Informationen finden Sie unter [Überwachen von Anwendungen](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
+ Configuration Manager-Anwendungen verwenden eine zustandsbasierte Überwachung, mit deren Hilfe Sie den letzten Anwendungsbereitstellungszustand für Benutzer und Geräte nachverfolgen können. In den Zustandsmeldungen werden Informationen zu einzelnen Geräten angezeigt. Wenn beispielsweise eine Anwendung für eine Sammlung von Benutzern bereitgestellt wird, können Sie den Kompatibilitätszustand und den Zweck der Bereitstellung in der Configuration Manager-Konsole anzeigen. Sie können die Bereitstellung sämtlicher Software mithilfe des Arbeitsbereichs **Überwachung** in der Configuration Manager-Konsole überwachen. Softwarebereitstellungen umfassen Softwareupdates, Konformitätseinstellungen, Anwendungen, Tasksequenzen sowie Pakete und Programme. Weitere Informationen finden Sie unter [Überwachen von Anwendungen](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
 
- Anwendungsbereitstellungen werden regelmäßig von Configuration Manager neu ausgewertet. Beispiel:  
+ Anwendungsbereitstellungen werden regelmäßig von Configuration Manager neu ausgewertet. Zum Beispiel:  
 
 -   Eine bereitgestellte Anwendung wird vom Endbenutzer deinstalliert. Im nächsten Auswertungszyklus wird von Configuration Manager festgestellt, dass die Anwendung nicht vorhanden ist, und sie wird erneut installiert.  
 
