@@ -55,7 +55,7 @@ Dieses Thema enthält die Grundlagen, die Sie vor der Arbeit mit System Center C
  Configuration Manager unterstützt die Bereitstellung folgender App-Typen:  
 
 - Windows Installer (MSI-Datei)
-- Windows-App-Paket (*.appx, *.appxbundle)
+- Windows-App-Paket (\*.appx, \*.appxbundle)
 - Windows-App-Paket (im Windows Store)
 - Microsoft Application Virtualization 4
 - Microsoft Application Virtualization 5
