@@ -33,8 +33,8 @@ Zusätzlich zu den anderen System Center Configuration Manager-Anforderungen und
 
 |Gerätetyp|Unterstützte Dateitypen|  
 |-----------------|---------------------|  
-|Windows RT und Windows RT 8.1|*.appx, \*.appxbundle|  
-|Windows 8.1 und höher, als mobiles Gerät registriert|*.appx, \*.appxbundle|  
+|Windows RT und Windows RT 8.1|\*.appx, \*.appxbundle|  
+|Windows 8.1 und höher, als mobiles Gerät registriert|\*.appx, \*.appxbundle|  
 
  Die folgenden Bereitstellungsaktionen werden unterstützt:  
 
