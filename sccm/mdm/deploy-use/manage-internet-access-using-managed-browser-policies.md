@@ -1,26 +1,27 @@
 ---
-title: "Verwalten des Internetzugriffs mittels Richtlinien für verwaltete Browser"
+title: Verwalten des Internetzugriffs mittels Richtlinien für verwaltete Browser
 titleSuffix: Configuration Manager
-description: "Stellen Sie Intune Managed Browser bereit, um den Zugriff auf das Internet zu verwalten und einzuschränken."
+description: Stellen Sie Intune Managed Browser bereit, um den Zugriff auf das Internet zu verwalten und einzuschränken.
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e25e00c-c9a8-473f-bcb7-ea989f6ca3c5
-caps.latest.revision: "6"
-caps.handback.revision: "0"
+caps.latest.revision: ''
+caps.handback.revision: ''
 author: dougeby
 ms.author: dougeby
 manager: angrobe
 ms.openlocfilehash: 3aea2a65733a52ab532d451b21ae98fbc0f122c6
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.sourcegitcommit: 52080ef1b0f9a27c123711ef274ac3ffe070e8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-system-center-configuration-manager"></a>Verwalten des Internetzugriffs mittels Richtlinien für verwaltete Browser mit System Center Configuration Manager
 
@@ -101,7 +102,7 @@ Nachfolgend wird erläutert, welche Formate und Platzhalter Sie zum Festlegen vo
 
     -   Port 443 für https  
 
-     Das Verwenden von Platzhaltern für die Portnummer wird nicht unterstützt: Beispiele: **http://www.contoso.com:\*** und **http://www.contoso.com: /\***  
+     Das Verwenden von Platzhalterzeichen für die Portnummer wird nicht unterstützt, z.B. **http://www.contoso.com:\*** und **http://www.contoso.com:/\***  
 
 -   In der folgenden Tabelle sind die zugelassenen Muster aufgeführt, die Sie zum Festlegen von URLs verwenden können:  
 
@@ -136,7 +137,7 @@ Nachfolgend wird erläutert, welche Formate und Platzhalter Sie zum Festlegen vo
 
     -   http://www.contoso.com:*  
 
-    -   http://www.contoso.com: / *  
+    -   http://www.contoso.com: /*  
 
 > [!NOTE]  
 >  *. microsoft.com ist immer zulässig.  

@@ -1,25 +1,26 @@
 ---
 title: Konsoleninterne Updates
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager wird mit dem Microsoft-Clouddienst synchronisiert, um Updates abzurufen, die in der Konsole installieren werden können."
+description: System Center Configuration Manager wird mit dem Microsoft-Clouddienst synchronisiert, um Updates abzurufen, die in der Konsole installieren werden können.
 ms.custom: na
 ms.date: 09/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
-caps.latest.revision: "36"
+caps.latest.revision: ''
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 081935ebb3ef2cc12d2023d86c0b68bbd816f2f3
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 5c202ede7be14bb60c6b28d87dfa77577597e955
+ms.sourcegitcommit: 52080ef1b0f9a27c123711ef274ac3ffe070e8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="install-in-console-updates-for-system-center-configuration-manager"></a>Installieren konsoleninterner Updates für System Center Configuration Manager
 
@@ -96,7 +97,8 @@ In der Standardeinstellung ist die Klasse **Updatepakete** (SMS_CM_Updatepackage
 
 - Aktualisierung von 1606 auf 1610: Weitere Informationen finden Sie unter [Checkliste für die Installation von Update 1610 für System Center Configuration Manager](../../../core/servers/manage/checklist-for-installing-update-1610.md).  
 
-- Aktualisierung von 1606 oder 1610 auf 1702: Weitere Informationen finden Sie unter [Checklist for installing update 1702 (Prüfliste für die Installation von Update 1702)](../../../core/servers/manage/checklist-for-installing-update-1702.md).
+- Weitere Informationen zum Update von 1610, 1702 oder 1706 auf 1710 finden Sie unter [Checkliste für die Installation von Update 1710](../../../core/servers/manage/checklist-for-installing-update-1710.md).
+
 
 <!-- Removed as update guidance 6/6/2017. The Test DB Upgrade details are no longer recommended nor required. They live on in a new topic for customers who still want to use them. -->
 

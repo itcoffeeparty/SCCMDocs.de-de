@@ -1,31 +1,32 @@
 ---
 title: Funktionen in Technical Preview 1703
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr über die Funktionen, die mit Technical Preview für System Center Configuration Manager, Version 1703, zur Verfügung stehen."
+description: Erfahren Sie mehr über die Funktionen, die mit Technical Preview für System Center Configuration Manager, Version 1703, zur Verfügung stehen.
 ms.custom: na
 ms.date: 03/24/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2e801f8c-d331-41ee-8f27-908448fc0951
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: erikje
 ms.author: erikje
 manager: angrobe
 ms.openlocfilehash: a44d6a0c9b02a529fe8776033e58e971af37e332
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.sourcegitcommit: 52080ef1b0f9a27c123711ef274ac3ffe070e8e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1703 für System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Technical Preview)*
 
-In diesem Artikel werden die Funktionen erläutert, die in Technical Preview für System Center Configuration Manager, Version 1703, zur Verfügung stehen. Sie können diese Version installieren, um neue Funktionen für Ihren Configuration Manager Technical Preview-Standort zu aktualisieren oder hinzuzufügen. Bevor Sie diese Version der Technical Preview installieren, lesen Sie das einführende Thema [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md), um sich mit den allgemeinen Anforderungen und Einschränkungen bei der Verwendung einer Technical Preview vertraut zu machen, und zu erfahren, wie Sie Updates zwischen Versionen durchführen und Feedback zu den Features in einer Technical Preview geben können.    
+In diesem Artikel werden die Funktionen erläutert, die in Technical Preview für System Center Configuration Manager, Version 1703, zur Verfügung stehen. Sie können diese Version installieren, um neue Funktionen für Ihren Configuration Manager Technical Preview-Standort zu aktualisieren oder hinzuzufügen. Bevor Sie diese Version der Technical Preview installieren, lesen Sie das einführende Thema [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md), um sich mit den allgemeinen Anforderungen und Einschränkungen bei der Verwendung einer Technical Preview vertraut zu machen, und zu erfahren, wie Sie Updates für Versionen durchführen und Feedback zu den Features in einer Technical Preview geben können.    
 
 
 **Im Folgenden werden neue Features aufgelistet, die Sie mit dieser Version ausprobieren können.**  
@@ -56,7 +57,7 @@ Sie können jetzt Endbenutzern einen direkten Link zu einer Anwendung im Softwar
 
 Verwenden Sie das folgende URL-Format, um das Softwarecenter für eine bestimmte Anwendung zu öffnen:
 
-**Softwarecenter:SoftwareId=*Application Identifier***
+**Softwarecenter:SoftwareId=Application Identifier***
 
 ### <a name="how-to-get-the-application-identifier-of-an-application"></a>So rufen Sie den Anwendungsbezeichner einer Anwendung ab
 
@@ -145,7 +146,7 @@ Ab dieser Version können Sie Clienteinstellungen für Geräte verwenden, um die
 
 Informationen zu Einstellungen für Windows-Telemetriedaten finden Sie unter [Konfigurieren der Windows-Telemetrie in Ihrem Unternehmen](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization).
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 - Sie müssen Ihren Standort zur Verwendung des Clouddiensts für die Upgradebereitschaft konfiguriert haben. Weitere Informationen finden Sie unter [Upgradebereitschaft](/sccm/core/clients/manage/upgrade/upgrade-analytics).
 
 ### <a name="configure-windows-analytics-client-settings"></a>Konfigurieren von Clienteinstellungen für Windows Analytics
