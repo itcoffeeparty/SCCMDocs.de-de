@@ -30,7 +30,7 @@
 
 # Bereitstellen und Verwenden
 ## [Szenarien für die Bereitstellung von Unternehmensbetriebssystemen](deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)
-### [Upgrade von Windows auf die neueste Version](deploy-use/upgrade-windows-to-the-latest-version.md)
+### [Upgraden von Windows auf die neueste Version](deploy-use/upgrade-windows-to-the-latest-version.md)
 ### [Aktualisieren eines vorhandenen Computers mit einer neuen Version von Windows](deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md)
 ### [Installieren einer neuen Version von Windows auf einem neuen Computer (Bare-Metal)](deploy-use/install-new-windows-version-new-computer-bare-metal.md)
 ### [Ersetzen eines vorhandenen Computers und Übertragen von Einstellungen](deploy-use/replace-an-existing-computer-and-transfer-settings.md)
@@ -46,6 +46,7 @@
 
 ## [Verwalten von Windows as a Service](deploy-use/manage-windows-as-a-service.md)
 ## [Überwachen von Betriebssystembereitstellungen](deploy-use/monitor-operating-system-deployments.md)
+## [Erstellen Sie eine Bereitstellung in Phasen für eine Tasksequenz](deploy-use/create-phased-deployment-for-task-sequence.md)
 
 ## [Verwalten von Tasksequenzen zum Automatisieren von Tasks](deploy-use/manage-task-sequences-to-automate-tasks.md)
 ### [Erstellen einer Tasksequenz zum Installieren eines Betriebssystems](deploy-use/create-a-task-sequence-to-install-an-operating-system.md)
