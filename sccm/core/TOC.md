@@ -2,6 +2,7 @@
 ##  [Einführung in Configuration Manager](understand/introduction.md)
 ### [Suchen nach Hilfe für Configuration Manager](understand/find-help.md)
 ### [Barrierefreiheitsfunktionen](understand/accessibility-features.md)
+### [Benutzerleitfaden des Softwarecenters](understand/software-center.md)
 ##  [Grundlagen von Configuration Manager](understand/fundamentals.md)
 ### [Grundlagen von Standorten und Hierarchien](understand/fundamentals-of-sites-and-hierarchies.md)
 #### [Informationen zu Upgrade, Update und Installation für einen Standort und eine Hierarchieinfrastruktur](understand/upgrade-update-install.md)
@@ -28,18 +29,19 @@
 ###  [Features und Funktionen](plan-design/changes/features-and-capabilities.md)
 ###  [Änderungen im Vergleich zu Configuration Manager 2012](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
 ###  [Neues bei inkrementellen Versionen](plan-design/changes/whats-new-incremental-versions.md)
+###  [Neues in Version 1802](plan-design/changes/whats-new-in-version-1802.md)
 ###  [Neues in Version 1710](plan-design/changes/whats-new-in-version-1710.md)
 ###  [Neues in Version 1706](plan-design/changes/whats-new-in-version-1706.md)
-###  [Neuigkeiten in Version 1702](plan-design/changes/whats-new-in-version-1702.md)
 <!--
+###  [What's new in version 1702](plan-design/changes/whats-new-in-version-1702.md)
 ###  [What's new in version 1610](plan-design/changes/whats-new-in-version-1610.md)
 ###  [What's new in version 1606](plan-design/changes/whats-new-in-version-1606.md)
 ###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
 -->
-###  [Entfernte und veraltete Features](plan-design/changes/deprecated/removed-and-deprecated.md)
+###  [Entfernte und veraltete Elemente](plan-design/changes/deprecated/removed-and-deprecated.md)
 #### [Entfernte und veraltete Features](plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)
-#### [Entfernte und veraltete Features für Standortserver](plan-design/changes/deprecated/removed-and-deprecated-server.md)
-#### [Entfernte und veraltete Features für Clients](plan-design/changes/deprecated/removed-and-deprecated-client.md)
+#### [Für Standortserver entfernt und veraltet](plan-design/changes/deprecated/removed-and-deprecated-server.md)
+#### [Für Clients entfernt und veraltet](plan-design/changes/deprecated/removed-and-deprecated-client.md)
 ##   [Unterstützte Konfigurationen](plan-design/configs/supported-configurations.md)
 ###  [Size and scale numbers](plan-design/configs/size-and-scale-numbers.md)
 ###  [Voraussetzungen für Standorte und Standortsysteme](plan-design/configs/site-and-site-system-prerequisites.md)
@@ -65,7 +67,6 @@
 #### [Inhaltsbibliothek-Bereinigungstool](plan-design/hierarchy/content-library-cleanup-tool.md)
 #### [Verwalten von Konten für den Zugriff auf Inhalt](plan-design/hierarchy/manage-accounts-to-access-content.md)
 #### [Peercache für Configuration Manager-Clients](plan-design/hierarchy/client-peer-cache.md)
-#### [Szenarios für Quellspeicherorte für Inhalt](plan-design/hierarchy/content-source-location-scenarios.md)
 #### [Paketübertragungs-Manager](plan-design/hierarchy/package-transfer-manager.md)
 #### [Verwalten von Netzwerk-Bandbreite für das Content Management in System Center Configuration Manager](plan-design/hierarchy/manage-network-bandwidth.md)
 #### [Sicherheit und Datenschutz für das Content Management](plan-design/hierarchy/security-and-privacy-for-content-management.md)
@@ -82,10 +83,11 @@
 
 ##   [Diagnose- und Verwendungsdaten](plan-design/diagnostics/diagnostics-and-usage-data.md)
 ###  [Nutzung von Diagnose- und Verwendungsdaten](plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)
+###  [Diagnosedaten für Version 1802](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1802.md)
 ###  [Diagnosedaten für Version 1710](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710.md)
 ###  [Diagnosedaten für 1706](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1706.md)
-###  [Diagnosedaten für 1702](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1702.md)
 <!--
+###  [Diagnostic data for 1702](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1702.md)
 ###  [Diagnostic data for 1610](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
 ###  [Diagnostic data for 1606](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
 ###  [Diagnostic data for 1602](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602.md)
@@ -201,6 +203,7 @@
 -->
 
 #    Verwalten der Infrastruktur
+## [Einblicke in die Verwaltung](servers/manage/management-insights.md)
 ##   [Wartungstasks](servers/manage/maintenance-tasks.md)
 ###  [Referenz für Wartungstasks](servers/manage/reference-for-maintenance-tasks.md)
 ##   [Ändern der Infrastruktur](servers/manage/modify-your-infrastructure.md)
@@ -217,10 +220,11 @@
 ###  [Verwenden des Dienstverbindungstools](servers/manage/use-the-service-connection-tool.md)
 ###  [Verwenden des Tools zur Updateregistrierung](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [Verwenden des Hotfixinstallationsprogramms](servers/manage/use-the-hotfix-installer-to-install-updates.md)
+###  [Prüfliste für die Installation von Update 1802](servers/manage/checklist-for-installing-update-1802.md)
 ###  [Prüfliste für die Installation von Update 1710](servers/manage/checklist-for-installing-update-1710.md)
 ###  [Prüfliste für die Installation von Update 1706](servers/manage/checklist-for-installing-update-1706.md)
-###  [Prüfliste für die Installation von Update 1702](servers/manage/checklist-for-installing-update-1702.md)
 <!-- Deprecated from Content - still published but out of TOC:
+###  [Checklist for installing update 1702](servers/manage/checklist-for-installing-update-1702.md)
 ###  [Checklist for installing update 1610](servers/manage/checklist-for-installing-update-1610.md)
 ###  [Checklist for installing update 1606](servers/manage/checklist-for-installing-update-1606.md)
 ###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)
@@ -274,13 +278,13 @@
 #### [Informationen zu Clienteinstellungen](clients/deploy/about-client-settings.md)
 ###  [Konfigurieren von Wake-On-LAN](clients/deploy/configure-wake-on-lan.md)
 ###  [Bereitstellen von Clients auf Windows-Computern](clients/deploy/deploy-clients-to-windows-computers.md)
+#### [Installieren von Clients mithilfe von Azure AD](clients/deploy/deploy-clients-cmg-azure.md)
 #### [Eigenschaften der Clientinstallation](clients/deploy/about-client-installation-properties.md)
 #### [In AD veröffentlichte Clientinstallationseigenschaften](clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services.md)
 ###  [Bereitstellen von Clients auf UNIX- und Linux-Servern](clients/deploy/deploy-clients-to-unix-and-linux-servers.md)
 #### [Linux- und UNIX-Client-Befehlen](clients/deploy/linux-and-unix-clients-technical-reference.md)
 ###  [Vorbereiten der Bereitstellung von Clients auf Macintosh-Computern](clients/deploy/prepare-to-deploy-mac-clients.md)
 ###  [Bereitstellen von Clients auf Macintosh-Computern](clients/deploy/deploy-clients-to-macs.md)
-###  [Install clients from the Internet using Azure AD (Installation von Client aus dem Internet mit Azure AD)](clients/deploy/deploy-clients-cmg-azure.md)
 ###  [Zuweisen von Clients zu einem Standort](clients/deploy/assign-clients-to-a-site.md)
 ###  [Konfigurieren des Clientstatus](clients/deploy/configure-client-status.md)
 ###  [Überwachen des Clientbereitstellungsstatus](clients/deploy/monitor-client-deployment-status.md)
@@ -295,15 +299,21 @@
 ###  [Verwalten von Linux- und UNIX-Clients](clients/manage/manage-clients-for-linux-and-unix-servers.md)
 ###  [Synchronisieren von Daten mit OMS](clients/manage/sync-data-microsoft-operations-management-suite.md)
 ###  [Warten von Macintosh-Clients](clients/manage/maintain-mac-clients.md)
+### [Dashboard für die Co-Verwaltung](clients/manage/co-management-dashboard.md)
+
+### [Surface-Gerätedashboard](clients/manage/surface-device-dashboard.md)
 
 ##   [Co-Verwaltung für Windows 10-Geräte](clients/manage/co-management-overview.md)
 ###  [Vorbereiten von Windows 10-Geräten für die Co-Verwaltung](clients/manage/co-management-prepare.md)
 ###  [Verschieben von Configuration Manager-Workloads zu Intune](clients/manage/co-management-switch-workloads.md)
 
 ##   [Verwalten von Clients im Internet](clients/manage/manage-clients-internet.md)
-###  [Planen des Cloudverwaltungsgateways](clients/manage/plan-cloud-management-gateway.md)
-###  [Einrichten des Cloudverwaltungsgateways](clients/manage/setup-cloud-management-gateway.md)
-###  [Überwachen von Clients über das Cloudverwaltungsgateway](clients/manage/monitor-clients-cloud-management-gateway.md)
+###  [Planen des Cloudverwaltungsgateways](clients/manage/cmg/plan-cloud-management-gateway.md)
+####  [Sicherheit und Datenschutz für Cloud Management Gateway](clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md)
+####  [FAQ zu Cloud Management Gateway](clients/manage/cmg/cloud-management-gateway-faq.md)
+####  [Zertifikate für Cloud Management Gateway](clients/manage/cmg/certificates-for-cloud-management-gateway.md)
+####  [Einrichten des Cloudverwaltungsgateways](clients/manage/cmg/setup-cloud-management-gateway.md)
+####  [Überwachen von Clients über das Cloudverwaltungsgateway](clients/manage/cmg/monitor-clients-cloud-management-gateway.md)
 ###  [Planen der internetbasierten Clientverwaltung](clients/manage/plan-internet-based-client-management.md)
 
 ##   Sammlungen
@@ -339,7 +349,7 @@
 ###  [Beispiel-Überprüfungszustandsübergänge für Asset Intelligence](clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md)
 ###  [Beispiel: allgemeine Asset Intelligence-Lizenzimportdatei](clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md)
 
-### [Verwenden des Dashboards „Produktlebenszyklus“](clients/manage/asset-intelligence/product-lifecycle-dashboard.md)
+### [Verwenden des Dashboards für das Produktlebenszyklus-Dashboard](clients/manage/asset-intelligence/product-lifecycle-dashboard.md)
 
 ##   Remotesteuerung
 ###  [Einführung in die Remotesteuerung](clients/manage/remote-control/introduction-to-remote-control.md)
