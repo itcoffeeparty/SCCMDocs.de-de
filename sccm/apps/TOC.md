@@ -40,3 +40,4 @@
 ### [Deinstallieren von Anwendungen](deploy-use/uninstall-applications.md)
 
 ## [Ausführen und Verwalten von Skripts](deploy-use/create-deploy-scripts.md)
+### [Informationen über die PowerShell-Skriptsicherheit](deploy-use/learn-script-security.md)
