@@ -1,23 +1,23 @@
 ---
 title: Planen von Softwareupdates
 titleSuffix: Configuration Manager
-description: "Ein Plan für die Softwareupdatepunkt-Infrastruktur ist wichtig, bevor Sie Softwareupdates in einer System Center Configuration Manager-Produktionsumgebung verwenden."
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.date: 06/27/2017
+description: Ein Plan für die Softwareupdatepunkt-Infrastruktur ist wichtig, bevor Sie Softwareupdates in einer System Center Configuration Manager-Produktionsumgebung verwenden.
+keywords: ''
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: configuration-manager
-ms.service: 
+ms.service: ''
 ms.technology:
 - configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: e36048141400097950a7c24733f382acacb73131
-ms.sourcegitcommit: db9978135d7a6455d83dbe4a5175af2bdeaeafd8
+ms.openlocfilehash: b57a1b584ec40d67b263959ae52f694c486481d7
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="plan-for-software-updates-in-system-center-configuration-manager"></a>Planen von Softwareupdates in System Center Configuration Manager
 
@@ -134,10 +134,10 @@ Aktivieren Sie diese Option auf einer Gerätesammlung oder auf einer Reihe von G
  Der Standort der obersten Ebene in einer Hierarchie ist in der Regel für die Synchronisierung der Metadaten für Softwareupdates mit Microsoft Update konfiguriert. Wenn der Zugriff auf das Internet vom Standort der obersten Ebene aufgrund der Sicherheitsrichtlinie Ihres Unternehmens nicht möglich ist, können Sie die Synchronisierungsquelle für den Standort der obersten Ebene konfigurieren, um einen vorhandenen WSUS-Server zu verwenden, der sich außerhalb Ihrer Configuration Manager-Hierarchie befindet. Angenommen, ein WSUS-Server ist im Umkreisnetzwerk installiert, das im Gegensatz zum Standort der obersten Ebene Zugriff auf das Internet hat. Sie können den WSUS-Server in dem Umkreisnetzwerk als Synchronisierungsquelle für die Metadaten für Softwareupdates konfigurieren. Sie müssen sicherstellen, dass der WSUS-Server im Umkreisnetzwerk Softwareupdates synchronisiert, die die in Ihrer Configuration Manager-Hierarchie erforderlichen Kriterien erfüllen. Andernfalls werden vom Standort der obersten Ebene nicht die von Ihnen erwarteten Softwareupdates synchronisiert. Konfigurieren Sie beim Erstellen des Softwareupdatepunkts ein WSUS-Verbindungskonto mit Zugriff auf den WSUS-Server in dem Umkreisnetzwerk. Bestätigen Sie außerdem, dass der Datenverkehr von der Firewall über die entsprechenden Ports zugelassen wird. Weitere Informationen finden Sie im Abschnitt zu den [Ports, die vom Softwareupdatepunkt als Synchronisierungsquelle genutzt werden](../../core/plan-design/hierarchy/ports.md#BKMK_PortsSUP-WSUS).  
 
 ###  <a name="BKMK_NLBSUPSP1"></a> Für die Verwendung eines NLB konfigurierter Softwareupdatepunkt  
- Durch den Wechsel zu einem anderen Softwareupdatepunkt dürften Ihre Anforderungen an die Fehlertoleranz erfüllt werden. Die Konfiguration von Softwareupdatepunkten als NLB-Cluster wird nicht standardmäßig von Configuration Manager unterstützt. Vor Configuration Manager Version 1702 konnten Sie das Configuration Manager SDK verwenden, um bis zu vier Softwareupdatepunkte in einem NLB-Cluster zu konfigurieren. Allerdings werden ab Version 1702 des Configuration Manager Softwareupdatepunkte als NLB-Cluster nicht unterstützt, und Upgrades auf Configuration Manager Version 1702 werden blockiert, wenn diese Konfiguration erkannt wird. Weitere Informationen zum PowerShell-Cmdlet „Set-CMSoftwareUpdatePoint“ finden Sie unter [Set-CMSoftwareUpdatePoint](http://go.microsoft.com/fwlink/?LinkId=276834).
+ Durch den Wechsel zu einem anderen Softwareupdatepunkt dürften Ihre Anforderungen an die Fehlertoleranz erfüllt werden. Die Konfiguration von Softwareupdatepunkten als NLB-Cluster wird nicht standardmäßig von Configuration Manager unterstützt. Vor Configuration Manager-Version 1702 konnten Sie das Configuration Manager SDK verwenden, um bis zu vier Softwareupdatepunkte in einem NLB-Cluster zu konfigurieren. Allerdings werden ab Version 1702 des Configuration Manager Softwareupdatepunkte als NLB-Cluster nicht unterstützt, und Upgrades auf Configuration Manager Version 1702 werden blockiert, wenn diese Konfiguration erkannt wird. Weitere Informationen zum PowerShell-Cmdlet „Set-CMSoftwareUpdatePoint“ finden Sie unter [Set-CMSoftwareUpdatePoint](http://go.microsoft.com/fwlink/?LinkId=276834).
 
 ###  <a name="BKMK_SUPSecSite"></a> Softwareupdatepunkt an sekundärem Standort  
- An sekundären Standorten ist der Softwareupdatepunkt optional. Bei der Installation eines Softwareupdatepunkts an einem sekundären Standort wird die WSUS-Datenbank als Replikat des Standard-Softwareupdatepunkts am übergeordneten primären Standort konfiguriert. An einem sekundären Standort können Sie nur einen Softwareupdatepunkt installieren. Die einem sekundären Standort zugewiesenen Geräte werden so konfiguriert, dass sie einen Softwareupdatepunkt am übergeordneten Standort verwenden, wenn am sekundären Standort kein Softwareupdatepunkt installiert ist. In der Regel installieren Sie einen Softwareupdatepunkt an einem sekundären Standort, wenn die Netzwerkbandbreite zwischen den Geräten, die dem sekundären Standort zugewiesen sind, und den Softwareupdatepunkten am übergeordneten primären Standort beschränkt ist oder wenn die Kapazität des Softwareupdatepunkts fast aufgebraucht ist. Nach der erfolgreichen Installation und Konfiguration eines Softwareupdatepunkts am sekundären Standort wird auf den Clientcomputern, die dem Standort zugewiesen sind, ein Update für eine standortweite Richtlinie durchgeführt. Der neue Softwareupdatepunkt wird danach von den Clientcomputern verwendet.  
+ An sekundären Standorten ist der Softwareupdatepunkt optional. An einem sekundären Standort können Sie nur einen Softwareupdatepunkt installieren. Die einem sekundären Standort zugewiesenen Geräte werden so konfiguriert, dass sie einen Softwareupdatepunkt am übergeordneten Standort verwenden, wenn am sekundären Standort kein Softwareupdatepunkt installiert ist. In der Regel installieren Sie einen Softwareupdatepunkt an einem sekundären Standort, wenn die Netzwerkbandbreite zwischen den Geräten, die dem sekundären Standort zugewiesen sind, und den Softwareupdatepunkten am übergeordneten primären Standort beschränkt ist oder wenn die Kapazität des Softwareupdatepunkts fast aufgebraucht ist. Nach der erfolgreichen Installation und Konfiguration eines Softwareupdatepunkts am sekundären Standort wird auf den Clientcomputern, die dem Standort zugewiesen sind, ein Update für eine standortweite Richtlinie durchgeführt. Der neue Softwareupdatepunkt wird danach von den Clientcomputern verwendet.  
 
 ##  <a name="BKMK_SUPInstallation"></a> Planen der Installation von Softwareupdatepunkten  
  Je nach Configuration Manager-Infrastruktur müssen Sie vor dem Erstellen der Standortsystemrolle „Softwareupdatepunkte“ in Configuration Manager eine Reihe von Anforderungen sorgfältig prüfen. Wenn Sie den Softwareupdatepunkt für die SSL-Kommunikation konfigurieren, ist dieser Abschnitt besonders wichtig, da Sie zusätzliche Schritte ausführen müssen, damit die Softwareupdatepunkte in der Hierarchie ordnungsgemäß verwendet werden können. Dieser Abschnitt enthält Informationen zu den Schritten, die für die erfolgreiche Planung und Vorbereitung der Installation von Softwareupdatepunkten erforderlich sind.  
@@ -172,7 +172,7 @@ Für Softwareupdates ist es erforderlich, dass eine unterstützte Version von WS
  Wenn ein WSUS-Server als Softwareupdatepunkt konfiguriert wurde, können Sie diesen nicht mehr als eigenständigen WSUS-Server verwenden. Wenn Sie einen einzelnen, eigenständigen WSUS-Server benötigen, der nicht von Configuration Manager verwaltet wird, müssen Sie diesen auf einem anderen Server konfigurieren.
 
 ####  <a name="BKMK_WSUSAsReplica"></a> Konfigurieren von WSUS als Replikatserver  
- Beim Erstellen der Standortsystemrolle „Softwareupdatepunkt“ auf einem primären Standortserver kann kein WSUS-Server verwendet werden, der als Replikat konfiguriert ist. Ist der WSUS-Server als Replikat konfiguriert, kann er nicht von Configuration Manager konfiguriert werden, und bei der WSUS-Synchronisierung tritt ebenfalls ein Fehler auf. Wenn ein Softwareupdatepunkt an einem sekundären Standort erstellt wird, wird WSUS von Configuration Manager als Replikatserver für die WSUS-Instanz konfiguriert, die auf dem Softwareupdatepunkt am übergeordneten primären Standort ausgeführt wird. Der erste Softwareupdatepunkt, den Sie an einem primären Standort installieren, ist der Standard-Softwareupdatepunkt. Weitere Softwareupdatepunkte am Standort werden als Replikate des Standard-Softwareupdatepunkts konfiguriert.  
+ Beim Erstellen der Standortsystemrolle „Softwareupdatepunkt“ auf einem primären Standortserver kann kein WSUS-Server verwendet werden, der als Replikat konfiguriert ist. Ist der WSUS-Server als Replikat konfiguriert, kann er nicht von Configuration Manager konfiguriert werden, und bei der WSUS-Synchronisierung tritt ebenfalls ein Fehler auf. Der erste Softwareupdatepunkt, den Sie an einem primären Standort installieren, ist der Standard-Softwareupdatepunkt. Weitere Softwareupdatepunkte am Standort werden als Replikate des Standard-Softwareupdatepunkts konfiguriert.  
 
 ####  <a name="BKMK_WSUSandSSL"></a> Entscheiden, ob WSUS zur Verwendung von SSL konfiguriert werden soll  
  Zum Schutz von WSUS auf dem Softwareupdatepunkt können Sie das SSL-Protokoll verwenden. SSL wird von WSUS zur Authentifizierung von Clientcomputern und WSUS-Downstreamservern gegenüber dem WSUS-Server verwendet. SSL wird von WSUS auch zum Verschlüsseln von Metadaten für Softwareupdates verwendet. Wenn Sie sich dafür entscheiden, WSUS durch SSL zu schützen, müssen Sie den WSUS-Server vor der Installation des Softwareupdatepunkts entsprechend vorbereiten.  
