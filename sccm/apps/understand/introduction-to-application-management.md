@@ -1,7 +1,7 @@
 ---
-title: "Einführung in die Anwendungsverwaltung"
+title: Einführung in die Anwendungsverwaltung
 titleSuffix: Configuration Manager
-description: "Hier finden Sie die wichtigsten Informationen über das Verwalten und Bereitstellen von System Center Configuration Manager-Anwendungen."
+description: Hier finden Sie die wichtigsten Informationen über das Verwalten und Bereitstellen von System Center Configuration Manager-Anwendungen.
 ms.custom: na
 ms.date: 12/23/2016
 ms.prod: configuration-manager
@@ -12,15 +12,15 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
 ms.openlocfilehash: a8a66169f3c187f8fa0319548ddde23b399811f3
-ms.sourcegitcommit: 52080ef1b0f9a27c123711ef274ac3ffe070e8e0
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="introduction-to-application-management-in-system-center-configuration-manager"></a>Einführung in die Anwendungsverwaltung in System Center Configuration Manager
 
@@ -55,7 +55,7 @@ Dieses Thema enthält die Grundlagen, die Sie vor der Arbeit mit System Center C
  Configuration Manager unterstützt die Bereitstellung folgender App-Typen:  
 
 - Windows Installer (MSI-Datei)
-- Windows-App-Paket (\*.appx, \*.appxbundle)
+- Windows-App-Paket (*.appx, *.appxbundle)
 - Windows-App-Paket (im Windows Store)
 - Microsoft Application Virtualization 4
 - Microsoft Application Virtualization 5
