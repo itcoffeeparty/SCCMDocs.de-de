@@ -92,7 +92,7 @@ Die neue Richtlinie wird im Knoten **Anwendungsverwaltungsrichtlinien** des Arbe
 
 Nachfolgend wird erläutert, welche Formate und Platzhalter Sie zum Festlegen von URLs in den Zulassungs- und Sperrlisten verwenden können.  
 
--   Sie können das Platzhaltersymbol '**\***"gemäß den Regeln in der nachfolgenden Liste mit zugelassenen Mustern verwenden.  
+-   Sie können das Platzhaltersymbol '**\\***"gemäß den Regeln in der nachfolgenden Liste mit zugelassenen Mustern verwenden.  
 
 -   Stellen Sie sicher, dass Sie bei der Eingabe in die Liste allen URLs **http** oder **https** voranstellen.  
 
@@ -111,7 +111,7 @@ Nachfolgend wird erläutert, welche Formate und Platzhalter Sie zum Festlegen vo
     |http://www.contoso.com<br /><br /> Entspricht einer einzelnen Seite|www.contoso.com|host.contoso.com<br /><br /> www.contoso.com/images<br /><br /> contoso.com/|  
     |http://contoso.com<br /><br /> Entspricht einer einzelnen Seite|contoso.com/|host.contoso.com<br /><br /> www.contoso.com/images<br /><br /> www.contoso.com|  
     |http://www.contoso.com/*<br /><br /> Entspricht allen URLs, die mit www.contoso.com beginnen|www.contoso.com<br /><br /> www.contoso.com/images<br /><br /> www.contoso.com/videos/tvshows|host.contoso.com<br /><br /> host.contoso.com/images|  
-    |http://*.contoso.com/\*<br /><br /> Entspricht allen Unterdomänen unter "contoso.com"|developer.contoso.com/resources<br /><br /> news.contoso.com/images<br /><br /> news.contoso.com/videos|contoso.host.com|  
+    |http://\*.contoso.com/\*<br /><br /> Entspricht allen Unterdomänen unter "contoso.com"|developer.contoso.com/resources<br /><br /> news.contoso.com/images<br /><br /> news.contoso.com/videos|contoso.host.com|  
     |http://www.contoso.com/images<br /><br /> Entspricht einem einzelnen Ordner|www.contoso.com/images|www.contoso.com/images/dogs|  
     |http://www.contoso.com:80<br /><br /> Entspricht einer einzelnen Seite mit einer Portnummer|http://www.contoso.com:80||  
     |https://www.contoso.com<br /><br /> Entspricht einer einzelnen, sicheren Seite|https://www.contoso.com|http://www.contoso.com|  
@@ -121,11 +121,11 @@ Nachfolgend wird erläutert, welche Formate und Platzhalter Sie zum Festlegen vo
 
     -   *.com  
 
-    -   *.contoso/\*  
+    -   \*.contoso/\*  
 
     -   www.contoso.com/*images  
 
-    -   www.contoso.com/*images\*Schweine  
+    -   www.contoso.com/\*images\*Schweine  
 
     -   www.contoso.com/page*  
 
