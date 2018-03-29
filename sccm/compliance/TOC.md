@@ -11,6 +11,11 @@
 ### [Erstellen und Bereitstellen von Konfigurationsbaselines](plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)
 ## [Sicherheit und Datenschutz](plan-design/security-and-privacy-for-compliance-settings.md)
 
+## [Security Content Automation Protocol (SCAP)-Erweiterungen](plan-design/scap/about-scap.md)
+### [Installieren und Konfigurieren der SCAP-Erweiterungen](plan-design/scap/install-configure-scap.md)
+### [Importieren von SCAP-Kompatibilitätseinstellungen](plan-design/scap/import-scap-compliance-settings.md)
+### [Problembehandlung bei SCAP-Erweiterungen](plan-design/scap/troubleshooting-scap.md)
+
 # Bereitstellen und Verwenden
 
 ## [Erstellen von Konfigurationselementen](deploy-use/create-configuration-items.md)
