@@ -7,20 +7,21 @@ ms.date: 07/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ab5cda93-b67c-4aa5-904d-7b63ce790aa0
-caps.latest.revision: "1"
+caps.latest.revision: 1
 author: mestew
 ms.author: mstewart
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 629e7dd98b1b5ff7f240461b61893dfc433f61dc
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: ce65e58a2c1be0420077bddded7567ff931d041f
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-updates-publisher"></a>Installieren von Updates Publisher
 
@@ -40,7 +41,7 @@ Installieren Sie Updates Publisher auf einer 64-Bit-Version von folgenden Betrie
 -   Windows 10 (Pro, Education, Pro Education, Enterprise)
 -   Windows 8.1 (Professional, Enterprise)
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 Die folgenden Voraussetzungen gelten für Computer, auf denen Updates Publisher ausgeführt wird.
 
 -   **64-Bit-Betriebssystem**: Auf dem Computer, auf dem Sie Updates Publisher installieren, muss ein 64-Bit-Betriebssystem ausgeführt werden.
@@ -109,7 +110,7 @@ Für Titel und Beschreibungen von Softwareupdates werden folgende Sprachen unter
 
 
 ## <a name="install-updates-publisher"></a>Installieren von Updates Publisher
-Rufen Sie die Datei **UpdatesPubliser.msi** zur Installation von System Center Updates Publisher über das [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=847967) ab.
+Rufen Sie die Datei **UpdatesPubliser.msi** zur Installation von System Center Updates Publisher über das [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55543) ab.
 
 Führen Sie zur Installation von Updates Publisher **UpdatesPublisher.msi** auf einem Computer aus, der die *Voraussetzungen* erfüllt. Das Installationsprogramm erstellt den folgenden Ordner, der die erforderlichen Dateien zum Ausführen von Updates Publisher enthält: *&lt;path&gt;\Program Files\Microsoft\UpdatesPublisher*.
 
