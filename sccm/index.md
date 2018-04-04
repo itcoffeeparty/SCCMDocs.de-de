@@ -1,6 +1,6 @@
 ---
 layout: HubPage
-hide_bc: 
+hide_bc: true
 title: System Center Configuration Manager-Dokumentation
 description: Erfahren Sie, wie Sie System Center Configuration Manager verwenden.
 ms.topic: hub-page
