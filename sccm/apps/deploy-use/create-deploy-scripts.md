@@ -1,37 +1,40 @@
 ---
-title: "Erstellen und Ausführen von Skripts"
+title: Erstellen und Ausführen von Skripts
 titleSuffix: Configuration Manager
-description: "Erfahren Sie, wie PowerShell-Skripts erstellt und auf Clientgeräten ausgeführt werden."
+description: Erfahren Sie, wie PowerShell-Skripts erstellt und auf Clientgeräten ausgeführt werden.
 ms.custom: na
-ms.date: 01/05/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-app
+ms.technology:
+- configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
-caps.latest.revision: "14"
-caps.handback.revision: "0"
+caps.latest.revision: 14
+caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: b00dfb875ca032032a9782e9950247eb3fceb124
-ms.sourcegitcommit: 9de3d74030b7c3313c34b5cbe2dbe6e18a48c043
+manager: dougeby
+ms.openlocfilehash: 29806161b29b87834c0cb4b1e478d92bff7a7b3c
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Erstellen und Ausführen von PowerShell-Skripts über die Configuration Manager-Konsole
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
->[!TIP]
->Die bei Version 1706 eingeführte Option zum Ausführen von PowerShell-Skripts ist ein Vorabfeature. Informationen zum Aktivieren von Skripts finden Sie unter [Features der Vorabversion in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
 
-Wir haben nun die Möglichkeit zum Ausführen von PowerShell-Skripts besser in System Center Configuration Manager integriert. PowerShell bietet den Vorteil der Erstellung ausgeklügelter, automatisierter Skripts, die von einer größeren Community verstanden und geteilt werden. Die Skripts vereinfachen die Erstellung benutzerdefinierter Tools zur Verwaltung von Software und ermöglichen Ihnen, alltägliche Aufgaben schnell zu erledigen, sodass Sie große Aufträge einfacher und konsistenter bewältigen können.
+System Center Configuration Manager verfügt über eine integrierte Funktion zum Ausführen von PowerShell-Skripts. PowerShell bietet den Vorteil der Erstellung ausgeklügelter, automatisierter Skripts, die von einer größeren Community verstanden und geteilt werden. Die Skripts vereinfachen die Erstellung benutzerdefinierter Tools zur Verwaltung von Software und ermöglichen Ihnen, alltägliche Aufgaben schnell zu erledigen, sodass Sie große Aufträge einfacher und konsistenter bewältigen können.
 
-Durch diese Integration in System Center Configuration Manager können Sie die Funktion *Skripts ausführen* verwenden, um Folgendes zu tun:
+> [!TIP]  
+> Dieses Feature wurde erstmals in Version 1706 als [Vorabfeature](/sccm/core/servers/manage/pre-release-features) eingeführt. Ab Version 1802 ist dieses Feature keine Vorabfeature mehr.
+
+
+Durch diese Integration in System Center Configuration Manager können Sie die Funktion *Skripts ausführen* verwenden, um folgende Aufgaben auszuführen:
 
 - Erstellen und Bearbeiten von Skripts für die Verwendung mit System Center Configuration Manager
 - Verwalten der Skriptnutzung mithilfe von Rollen und Sicherheitsbereichen 
@@ -40,18 +43,21 @@ Durch diese Integration in System Center Configuration Manager können Sie die F
 - Überwachen der Skriptausführung und Anzeigen von Berichtsergebnissen in der Skriptausgabe
 
 >[!WARNING]
->Angesichts der Leistungsfähigkeit von Skripts möchten wir Sie daran erinnern, diese bewusst und sorgfältig einzusetzen. Wir haben zusätzliche Sicherheitsvorkehrungen eingebaut, um Sie zu unterstützen: getrennte Rollen und Bereiche. Stellen Sie die Fehlerfreiheit von Skripts sicher, bevor Sie sie ausführen. Bestätigen Sie außerdem, dass sie aus einer vertrauenswürdigen Quelle stammen, um eine unbeabsichtigte Ausführung von Skripts zu verhindern. Achten Sie auf Sonderzeichen oder sonstige Obfuskation, und informieren Sie sich über die Absicherung von Skripts.
+>Angesichts der Leistungsfähigkeit von Skripts möchten wir Sie daran erinnern, diese bewusst und sorgfältig einzusetzen. Wir haben zusätzliche Sicherheitsvorkehrungen eingebaut, um Sie zu unterstützen: getrennte Rollen und Bereiche. Stellen Sie die Fehlerfreiheit von Skripts sicher, bevor Sie sie ausführen. Bestätigen Sie außerdem, dass sie aus einer vertrauenswürdigen Quelle stammen, um eine unbeabsichtigte Ausführung von Skripts zu verhindern. Achten Sie auf Sonderzeichen oder sonstige Obfuskation, und informieren Sie sich über die Absicherung von Skripts. Unter [Learn more about PowerShell script security (Weitere Informationen zur sicheren Verwendung von PowerShell-Skripts)](/sccm/apps/deploy-use/learn-script-security) finden Sie weiterführende Hinweise.
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - Um PowerShell-Skripts ausführen zu können, muss auf dem Client PowerShell 3.0 installiert sein. Wenn ein Skript jedoch Funktionen aus einer neueren PowerShell-Version enthält, muss diese auch auf dem Client installiert sein, der diese Version von PowerShell ausführt.
 - Das Ausführen von Skripts ist nur auf Clients mit Configuration Manager 1706 oder neuer möglich.
 - Um Skripts zu verwenden, müssen Sie Mitglied der entsprechenden Configuration Manager-Sicherheitsrolle sein.
-- Importieren und Erstellen von Skripts: Ihr Konto benötigt in der Sicherheitsrolle **Hauptadministrator** die Berechtigung **Erstellen** für **SMS-Skripts**.
-- Genehmigen und Ablehnen von Skripts: Ihr Konto benötigt in der Sicherheitsrolle **Hauptadministrator** die Berechtigung **Genehmigen** für **SMS-Skripts**.
-- Ausführen von Skripts: Ihr Konto benötigt in der Sicherheitsrolle **Hauptadministrator** die Berechtigung **Skript ausführen** für **Sammlungen**.
+- Importieren und Erstellen von Skripts: Ihr Konto benötigt die Berechtigung **Erstellen** für **SMS-Skripts**.
+- Genehmigen und Ablehnen von Skripts: Ihr Konto benötigt die Berechtigung **Genehmigen** für **SMS-Skripts**.
+- Ausführen von Skripts: Ihr Konto benötigt die Berechtigung **Skript ausführen** für **Sammlungen**.
 
-Weitere Informationen zu Configuration Manager-Sicherheitsrollen finden Sie unter [Grundlagen der rollenbasierten Verwaltung für System Center Configuration Manager](/sccm/core/understand/fundamentals-of-role-based-administration).
+Weitere Informationen zu Configuration Manager-Sicherheitsrollen finden Sie unter:</br>
+[Sicherheitsbereiche für das Ausführen von Skripts](#BKMK_Scopes)</br>
+[Sicherheitsrollen für das Ausführen von Skripts](#BKMK_ScriptRoles)</br>
+[Grundlagen der rollenbasierten Verwaltung](/sccm/core/understand/fundamentals-of-role-based-administration)
 
 ## <a name="limitations"></a>Einschränkungen
 
@@ -60,13 +66,22 @@ Von der Funktion „Skripts ausführen“ wird derzeit Folgendes unterstützt:
 - Skriptsprachen: PowerShell
 - Parametertypen: „integer“, „string“ und „list“
 
+
+>[!WARNING]
+>Beachten Sie, dass die Verwendung von Parametern das Risiko für PowerShell Injection-Angriffe erhöht. Es gibt verschiedene Möglichkeiten, dieses Risiko zu verringern. Sie können beispielsweise reguläre Ausdrücken zum Überprüfen der Parametereingabe oder vordefinierte Parameter verwenden. Als allgemeine bewährte Methode wird empfohlen, keine Geheimnisse wie Kennwörter in PowerShell-Skripts zu hinterlegen. Unter [Learn more about PowerShell script security (Weitere Informationen zur sicheren Verwendung von PowerShell-Skripts)](/sccm/apps/deploy-use/learn-script-security) finden Sie weiterführende Hinweise. <!--There are external tools available to validate your PowerShell scripts such as the [PowerShell Injection Hunter](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) tool. -->
+
+
+## <a name="group-policy-considerations-for-scripts"></a>Gruppenrichtlinien für Skripts
+<!--While running scripts on devices, Configuration Manager sets policy to allow local scripts and remote signed scripts.--> 
+Durch das Festlegen einer Ausführungsrichtlinie über die Gruppenrichtlinie können Skripts mit Configuration Manager möglicherweise nicht ausgeführt werden. Informationen zu Ausführungsrichtlinien und deren Konfiguration finden Sie unter [About Execution Policies (Ausführungsrichtlinien)](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies). <!--507185-->
+
 ## <a name="run-script-authors-and-approvers"></a>Skript ausführen: Ersteller und Genehmiger
 
-Die Funktion „Skripts ausführen“ arbeitet für die Implementierung und Ausführung eines Skripts mit dem Konzept von *Skriptautoren* und *Skriptgenehmigern* als getrennte Rollen. Die Trennung von Autor- und Genehmigerrolle ermöglicht eine wichtige Prozessüberprüfung für das überaus leistungsstarke Tool „Skripts ausführen“.
+Die Funktion „Skripts ausführen“ arbeitet für die Implementierung und Ausführung eines Skripts mit dem Konzept von *Skriptautoren* und *Skriptgenehmigern* als getrennte Rollen. Die Trennung von Autor- und Genehmigerrolle ermöglicht eine wichtige Prozessüberprüfung für das überaus leistungsstarke Tool „Skripts ausführen“. Mit der zusätzlichen Rolle *Skriptausführende* können Skripts ausgeführt aber nicht erstellt oder genehmigt werden. Weitere Informationen finden Sie unter [Erstellen von Sicherheitsrollen für Skripts](#BKMK_ScriptRoles).
 
 ### <a name="scripts-roles-control"></a>Steuerung von Skriptrollen
 
-Standardmäßig können Benutzer kein Skript genehmigen, das sie erstellt haben. Da Skripts leistungsstark und vielseitig sind und auf vielen Geräten bereitgestellt werden können, muss ein von einer Person erstelltes Skript von einer anderen Person genehmigt werden. Dies bietet Ihnen zusätzliche Sicherheit vor der unbeaufsichtigten Ausführung eines Skripts. Die sekundäre Genehmigung lässt sich deaktivieren, um das Testen zu vereinfachen.
+Standardmäßig können Benutzer kein Skript genehmigen, das sie erstellt haben. Da Skripts leistungsstark und vielseitig sind und auf vielen Geräten bereitgestellt werden können, lassen sich für das Erstellen und Genehmigen von Skripts unterschiedliche Rollen definieren. Dies bietet Ihnen zusätzliche Sicherheit vor der unbeaufsichtigten Ausführung eines Skripts. Die sekundäre Genehmigung lässt sich deaktivieren, um das Testen zu vereinfachen.
 
 ### <a name="approve-or-deny-a-script"></a>Genehmigen oder Ablehnen eines Skripts
 
@@ -75,7 +90,7 @@ Skripts müssen von der Rolle *Skriptgenehmiger* genehmigt werden, bevor sie aus
 1. Klicken Sie in der Configuration Manager-Konsole auf **Softwarebibliothek**.
 2. Klicken Sie im Arbeitsbereich **Softwarebibliothek** auf **Skripts**.
 3. Wählen Sie in der Liste **Skript** das Skript, das Sie genehmigen oder ablehnen möchten. Klicken Sie dann in der Gruppe **Skript** auf der Registerkarte **Start** auf **Genehmigen/Ablehnen**.
-4. Wählen Sie im Dialogfeld **Skript genehmigen oder ablehnen** für das Skript entweder **Genehmigen** oder **Ablehnen** aus. Geben Sie optional einen Kommentar zu Ihrer Entscheidung ein.  Wenn Sie ein Skript ablehnen, kann es nicht auf Clientgeräten ausgeführt werden. <br>
+4. Aktivieren Sie im Dialogfeld **Skript genehmigen oder ablehnen** für das Skript entweder das Optionsfeld **Genehmigen** oder **Ablehnen**. Geben Sie optional einen Kommentar zu Ihrer Entscheidung ein.  Wenn Sie ein Skript ablehnen, kann es nicht auf Clientgeräten ausgeführt werden. <br>
 ![Skript: Genehmigung](./media/run-scripts/RS-approval.png)
 1. Schließen Sie den Assistenten ab. In der Liste **Skript** ändert sich die Spalte **Genehmigungsstatus** abhängig von der Aktion, die Sie ausgeführt haben.
 
@@ -95,6 +110,54 @@ Diese Genehmigung erfolgt in erster Linie in der Testphase der Skriptentwicklung
 *(Mit Version 1710 eingeführt)*  
 Die Funktion „Skripts ausführen“ arbeitet mit Sicherheitsbereichen, einer bereits vorhandenen Configuration Manager-Funktion, um die Erstellung und Ausführung von Skripts zu steuern, indem Kategorien zugewiesen werden, die Benutzergruppen darstellen. Weitere Informationen zu Sicherheitsbereichen finden Sie unter [Konfigurieren der rollenbasierten Verwaltung für System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
 
+## <a name="bkmk_ScriptRoles"></a> Erstellen von Sicherheitsrollen für Skripts
+Die drei Sicherheitsrollen zum Ausführen von Skripts werden standardmäßig nicht in Configuration Manager erstellt. Führen Sie zum Erstellen der Rollen für die Skriptausführenden, -ersteller und -genehmiger die folgenden Schritte aus:
+
+1. Navigieren Sie in der Configuration Manager-Konsole zu **Verwaltung** >**Sicherheit** >**Sicherheitsrollen**.
+2. Klicken Sie mit der rechten Maustaste auf die Rolle und anschließend mit der linken auf **Kopieren**. Der zu kopierenden Rolle sind bereits Berechtigungen zugewiesen. Achten Sie darauf, nur die gewünschten Rollen zu nutzen. 
+3. Legen Sie für die benutzerdefinierte Rolle **Name** und **Beschreibung** fest. 
+4. Weisen Sie der Sicherheitsrolle die unten aufgeführten Berechtigungen zu. 
+
+    ### <a name="security-role-permissions"></a>**Berechtigungen für Sicherheitsrollen**
+
+     **Rollenname**: Skriptausführende
+    - **Beschreibung**: Durch die folgenden Berechtigungen können mit dieser Rolle nur Skripts ausgeführt werden, die zuvor erstellt und von anderen Rollen genehmigt wurden. 
+    - **Berechtigungen:** Legen Sie für die folgenden Berechtigungen als Status **Ja** fest.
+         |**Kategorie**|**Berechtigung**|**Status**|
+         |---|---|---|
+         |Sammlung|Skript ausführen|Ja|
+         |SMS-Skripts|Erstellen|Ja|
+         |SMS-Skripts|Siehe|Ja|
+
+     **Rollenname**: Skriptersteller
+    - **Beschreibung**: Durch die folgenden Berechtigungen können mit dieser Rolle Skripts erstellt, aber nicht genehmigt oder ausgeführt werden. 
+    - **Berechtigungen:** Legen Sie für die folgenden Berechtigungen den in der Tabelle aufgeführten Status fest.
+    - 
+         |**Kategorie**|**Berechtigung**|**Status**|
+         |---|---|---|
+         |Sammlung|Skript ausführen|Nein|
+         |SMS-Skripts|Erstellen|Ja|
+         |SMS-Skripts|Siehe|Ja|
+         |SMS-Skripts|Löschen|Ja|
+         |SMS-Skripts|Ändern|Ja|
+
+    **Rollenname**: Skriptgenehmiger
+    - **Beschreibung**: Durch die folgenden Berechtigungen können mit dieser Rolle Skripts genehmigt, aber nicht erstellt oder ausgeführt werden. 
+    - **Berechtigungen:** Legen Sie für die folgenden Berechtigungen den in der Tabelle aufgeführten Status fest.
+
+         |**Kategorie**|**Berechtigung**|**Status**|
+         |---|---|---|
+         |Sammlung|Skript ausführen|Nein|
+         |SMS-Skripts|Siehe|Ja|
+         |SMS-Skripts|Genehmigen|Ja|
+         |SMS-Skripts|Ändern|Ja|
+     
+**Beispiel für SMS-Skript-Berechtigungen für die Rolle Skriptersteller**
+
+ ![Beispiel für SMS-Skript-Berechtigungen für die Rolle Skriptersteller](./media/run-scripts/script_authors_permissions.png)
+
+   
+
 ## <a name="create-a-script"></a>Erstellen eines Skripts
 
 1. Klicken Sie in der Configuration Manager-Konsole auf **Softwarebibliothek**.
@@ -109,8 +172,8 @@ Die Funktion „Skripts ausführen“ arbeitet mit Sicherheitsbereichen, einer b
 5. Schließen Sie den Assistenten ab. Das neue Skript wird in der Liste **Skript** mit dem Status **Warten auf Genehmigung** angezeigt. Bevor Sie dieses Skript auf Clientgeräten ausführen können, müssen Sie es genehmigen. 
 
 > [!IMPORTANT]
-    >  Vermeiden Sie im Skript einen Neustart des Geräts oder einen Neustart des Configuration Manager-Agents, wenn Sie das Feature „Skripts ausführen“ verwenden. Dies könnte zu einem kontinuierlichen Neustartzustand führen. Bei Bedarf stehen ab Configuration Manager, Version 1710, Erweiterungen für das Clientbenachrichtigungsfeature zur Verfügung, die das Neustarten von Geräten ermöglichen. Anhand der Spalte [Neustart steht aus](/sccm/core/clients/manage/manage-clients#Restart-clients) können Sie Geräte identifizieren, für die ein Neustart erforderlich ist. 
-<!--SMS503978--Script reboot warning-->
+    >Vermeiden Sie im Skript einen Neustart des Geräts oder einen Neustart des Configuration Manager-Agents, wenn Sie das Feature „Skripts ausführen“ verwenden. Dies könnte zu einem kontinuierlichen Neustartzustand führen. Bei Bedarf stehen ab Configuration Manager, Version 1710, Erweiterungen für das Clientbenachrichtigungsfeature zur Verfügung, die das Neustarten von Geräten ermöglichen. Anhand der Spalte [Neustart steht aus](/sccm/core/clients/manage/manage-clients#Restart-clients) können Sie Geräte identifizieren, für die ein Neustart erforderlich ist. 
+<!--SMS503978  -->
 
 ## <a name="script-parameters"></a>Skriptparameter
 *(Mit Version 1710 eingeführt)*  
@@ -119,6 +182,10 @@ Durch Hinzufügen von Parametern zu einem Skript können Sie Ihre Arbeit flexibl
 Klicken Sie im Dialogfeld **Skript erstellen** unter **Skript** auf **Skriptparameter**.
 
 Jeder Parameter Ihres Skripts hat ein eigenes Dialogfeld, in dem Sie weitere Details und eine Validierung hinzufügen können.
+
+>[!IMPORTANT]
+> Parameterwerte dürfen keinen Apostroph enthalten. 
+
 
 ### <a name="parameter-validation"></a>Validierung von Parametern
 
@@ -151,7 +218,7 @@ Hier finden Sie einige Beispiele, die Skripts veranschaulichen, die sich mit die
 
 ### <a name="create-a-new-folder-and-file"></a>Erstellen eines neuen Ordners und einer neuen Datei
 
-Dieses Skript erstellt basierend auf Ihrer Namenseingabe einen neuen Ordner und eine Datei in diesem Ordner.
+Dieses Skript erstellt basierend auf der Namenseingabe einen neuen Ordner und eine Datei in diesem Ordner.
 
 ``` powershell
 Param(
@@ -202,6 +269,18 @@ Nachdem Sie mit der Anwendung eines Skripts auf eine Sammlung von Geräten begon
 1. Klicken Sie in der Configuration Manager-Konsole auf **Überwachung**.
 2. Klicken Sie im Arbeitsbereich **Überwachung** auf **Skriptstatus**.
 3. In der Liste **Skriptstatus** sehen Sie die Ergebnisse für jedes Skript, das Sie auf Clientgeräten ausgeführt haben. Der Exitcode **0** eines Skripts bedeutet im Allgemeinen, dass das Skript erfolgreich ausgeführt wurde.
+    - Ab der Configuration Manager-Version 1802 wird die Skriptausgabe auf 4 KB beschränkt, wodurch die Anzeige übersichtlicher wird.  <!--510013-->
+      ![Skriptmonitor: gekürztes Skript](./media/run-scripts/Script-monitoring-truncated.png) 
+
+## <a name="script-output"></a>Skriptausgabe
+
+- Ab der Configuration Manager-Version 1802 wird für die Rückgabe der Skriptausgabe JSON verwendet. Dieses Format gibt konsistent eine lesbare Skriptausgabe zurück. 
+- Skripts, für die ein unbekanntes Ergebnis oder ein Client festgestellt wird, der offline ist, werden nicht in den Diagrammen oder im Dataset angezeigt. <!--507179-->
+- Vermeiden Sie die Rückgabe einer umfassenden Skriptausgabe, da diese auf 4 KB beschränkt wird. <!--508488-->
+- Einige Funktionen im Zusammenhang mit der Skriptausgabeformatierung sind nicht verfügbar, wenn die Configuration Manager-Version 1802 (oder eine neuere Version) mit einer älteren Clientversion verwendet wird. <!--508487-->
+- Konvertieren Sie Enumerationsobjekte in Zeichenfolgenwerte, damit die JSON-Formatierung bei der Anzeige der Skripts korrekt verwendet wird. <!--508377--> ![Konvertieren eines Enumerationsobjekts in einen Zeichenfolgenwert](./media/run-scripts/enum-tostring-JSON.png)
+
+
 
 ## <a name="see-also"></a>Siehe auch
 

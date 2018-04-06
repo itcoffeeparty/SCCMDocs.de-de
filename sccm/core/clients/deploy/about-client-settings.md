@@ -1,9 +1,9 @@
 ---
 title: Clienteinstellungen
 titleSuffix: Configuration Manager
-description: Auswahl von Clienteinstellungen mithilfe der Verwaltungskonsole in System Center Configuration Manager.
+description: Informationen zu Standardeinstellungen und benutzerdefinierten Einstellungen zur Steuerung von Clientverhalten
 ms.custom: na
-ms.date: 01/05/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 15
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: dddfde242a67a0b4a9311c0fb6f0b2f0e6742cc2
-ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
+manager: dougeby
+ms.openlocfilehash: 42b9364fc88acc3f403db8d2ca9243a117fd78bf
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>Informationen zu Clienteinstellungen in System Center Configuration Manager
 
@@ -114,18 +114,19 @@ Diese Einstellung gilt für Benutzer, deren Computer mit dem Intranet und dem In
 
 Legen Sie diese Einstellung auf **Ja** fest, damit Benutzer die Benutzerrichtlinie auf internetbasierten Computern erhalten. Zudem gelten folgende Anforderungen:  
 
--   Client und Standort wurden für die internetbasierte Clientverwaltung konfiguriert.
+-   Client und Standort wurden für die [internetbasierte Clientverwaltung](/sccm/core/clients/manage/plan-internet-based-client-management) oder ein [Cloudverwaltungsgateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) konfiguriert.  
 
 -   Die Einstellung **Benutzerrichtlinie auf Clients aktivieren** wurde auf **Ja** festgelegt.  
 
--   Der Benutzer wird vom internetbasierten Verwaltungspunkt erfolgreich mithilfe der Windows-Authentifizierung (Kerberos oder NTLM) authentifiziert.  
+-   Der Benutzer wird vom internetbasierten Verwaltungspunkt erfolgreich mithilfe der Windows-Authentifizierung (Kerberos oder NTLM) authentifiziert. Weitere Informationen finden Sie unter [Considerations for client communications from the internet (Überlegungen zur Clientkommunikation über das Internet)](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
+
+-   Ab Version 1710 authentifiziert das Cloudverwaltungsgateway den Benutzer erfolgreich mithilfe von Azure Active Directory. Weitere Informationen finden Sie unter [Deploy user-available applications on Azure AD-joined devices (Bereitstellen von für Benutzer verfügbare Anwendungen auf in Azure AD eingebundenen Geräten)](\sccm\apps\deploy-use\deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).  
 
 Wenn Sie diese Option auf **Nein** festlegen oder eine der vorherigen Anforderungen nicht erfüllt ist, erhält ein internetbasierter Computer nur Computerrichtlinien. In diesem Fall können Benutzer weiterhin Anwendungen über einen internetbasierten Anwendungskatalog anzeigen, anfordern und installieren. Wenn diese Einstellung auf **Nein**, aber **Benutzerrichtlinie auf Clients aktivieren** auf **Ja** festgelegt ist, empfangen Benutzer keine Benutzerrichtlinien, bis der Computer mit dem Intranet verbunden ist.  
 
-Weitere Informationen zum Verwalten von Clients im Internet finden Sie unter [Überlegungen zur Clientkommunikation aus dem Internet oder einer nicht vertrauenswürdigen Gesamtstruktur](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
-
 > [!NOTE]  
->  Genehmigungsanforderungen für Anwendungen von Benutzern erfordern keine Benutzerrichtlinien oder Benutzerauthentifizierung.  
+>  Bei der Verwaltung internetbasierter Clients sind für Anforderungen von Benutzern zur Genehmigung von Anwendungen keine Benutzerrichtlinien und keine Benutzerauthentifizierung erforderlich. Das Cloudverwaltungsgateway unterstützt keine Anforderungen zur Genehmigung von Anwendungen.   
+
 
 
 ## <a name="cloud-services"></a>Clouddienste
@@ -228,7 +229,7 @@ Geben Sie den Namen ein, den Benutzer im Softwarecenter sehen. Diese Branding-In
 
 ### <a name="use-new-software-center"></a>Verwenden des neuen Softwarecenters
 
-Wenn Sie diese Einstellung auf **Ja** festlegen, verwenden alle Clientcomputer das Softwarecenter. Das Softwarecenter zeigt für Benutzer verfügbare Apps an, auf die vorher nur im Anwendungskatalog zugegriffen werden konnte. Der Anwendungskatalog erfordert Silverlight. Dies ist jedoch keine Voraussetzung für das Softwarecenter.   
+Wenn Sie diese Einstellung auf **Ja** festlegen, verwenden alle Clientcomputer das Softwarecenter. Das Softwarecenter zeigt für Benutzer verfügbare Apps an, auf die vorher nur im Anwendungskatalog zugegriffen werden konnte. Der Anwendungskatalog erfordert Silverlight. Dies ist jedoch keine Voraussetzung für das Softwarecenter. Ab der Configuration Manager-Version 1802 ist der Standardwert für die Einstellung **Ja**.  
 
 Die Standortsystemrollen „Anwendungskatalog-Websitepunkt“ und „Anwendungskatalog-Webdienstpunkt“ sind nach wie vor erforderlich, damit für Benutzer verfügbare Apps im Softwarecenter angezeigt werden.  
 
@@ -261,7 +262,7 @@ Konfigurieren Sie, wie Benutzer die Installation von Software, Softwareupdates u
 
 Wenn die Computer eine BitLocker-PIN-Eingabe erfordern, kann mit dieser Option die notwendige Eingabe einer PIN umgangen werden, wenn der Computer nach der Installation von Software neu gestartet wird.  
 
--   **Immer**: BitLocker wird von Configuration Manager nach der Installation von Software, für die ein Neustart erforderlich ist, und der Initiierung eines Computerneustarts vorübergehend angehalten. Diese Einstellung gilt nur, wenn der Neustart eines Computers von Configuration Manager initiiert wird. Wenn der Benutzer den Computer neu startet, ist es trotz dieser Einstellung weiterhin erforderlich, die BitLocker-PIN einzugeben. Die BitLocker-Anforderung zur Eingabe einer PIN wird nach dem Start von Windows fortgesetzt.
+-   **Immer**: BitLocker wird von Configuration Manager nach der Installation von Software, für die ein Neustart erforderlich ist, und der Initiierung eines Computerneustarts vorübergehend angehalten. Diese Einstellung gilt nur, wenn der Neustart eines Computers von Configuration Manager initiiert wird. Wenn der Benutzer den Computer neu startet, ist es trotz dieser Einstellung weiterhin erforderlich, die BitLocker-PIN einzugeben. Die BitLocker-Anforderung zur Eingabe einer PIN wird nach dem Start von Windows wieder eingesetzt.
 
 -   **Nie**: BitLocker wird von Configuration Manager nach der Installation von Software, für die ein Neustart erforderlich ist, nicht angehalten. In diesem Fall kann die Softwareinstallation erst abgeschlossen werden, wenn der Benutzer die PIN eingibt, um den Standardstartprozess abzuschließen und Windows zu laden.
 
@@ -322,6 +323,21 @@ Die folgende Einstellung muss eine kürzere Dauer als das kürzeste Wartungsfens
 
 Weitere Informationen zu Wartungsfenstern finden Sie unter [Verwenden von Wartungsfenstern in System Center Configuration Manager](../../../core/clients/manage/collections/use-maintenance-windows.md).
 
+
+
+## <a name="delivery-optimization"></a>Übermittlungsoptimierung
+
+<!-- 1324696 -->
+Sie verwenden Configuration Manager-Begrenzungsgruppen, um die Inhaltsverteilung über Ihr gesamtes Unternehmensnetzwerk und Remotebüros hinweg zu definieren und zu regulieren. [Windows-Übermittlungsoptimierung](/windows/deployment/update/waas-delivery-optimization) ist eine cloudbasierte Peer-zu-Peer-Technologie zum gemeinsamen Nutzen von Inhalten auf Windows 10-Geräten. Ab Version 1802 können Sie die Übermittlungsoptimierung so konfigurieren, dass bei der Freigabe von Inhalten für Peers Ihre Begrenzungsgruppen verwendet werden.
+
+ > [!Note]
+ > Die Übermittlungsoptimierung ist nur auf Windows 10-Clients verfügbar.
+
+### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>Verwenden von Configuration Manager-Begrenzungsgruppen zum Festlegen der Gruppen-ID für die Übermittlungsoptimierung
+ Klicken Sie auf **Ja**, um die Begrenzungsgruppen-ID als Gruppen-ID für die Übermittlungsoptimierung auf dem Client festzulegen. Wenn der Client mit dem Übermittlungsoptimierungs-Clouddienst kommuniziert, wird diese ID zum Ermitteln von Peers verwendet, auf denen sich der gewünschte Inhalt befindet. 
+
+
+
 ##  <a name="endpoint-protection"></a>Endpoint Protection  
 >  [!Tip]   
 > Im [Beispielszenario: Verwenden von System Center Endpoint Protection zum Schutz von Computern vor Schadsoftware in System Center Configuration Manager](/sccm/protect/deploy-use/scenarios-endpoint-protection) finden Sie zusätzlich zu den folgenden Informationen weitere Details zur Verwendung der Endpoint Protection-Clienteinstellungen.
@@ -330,11 +346,11 @@ Weitere Informationen zu Wartungsfenstern finden Sie unter [Verwenden von Wartun
 
 Wählen Sie **Ja** aus, wenn Sie vorhandene Endpoint Protection- und Windows Defender-Clients auf den Computern in Ihrer Hierarchie verwalten möchten.  
 
-Wählen Sie diese Option aus, wenn der Endpoint Protection-Client bereits installiert ist und Sie ihn mit Configuration Manager verwalten möchten. Diese separate Installation umfasst einen skriptgesteuerten Prozess, der eine Anwendung oder ein Paket und ein Programm von Configuration Manager verwendet.
+Wählen Sie diese Option aus, wenn der Endpoint Protection-Client bereits installiert ist und Sie ihn mit Configuration Manager verwalten möchten. Diese separate Installation umfasst einen skriptgesteuerten Prozess, der eine Anwendung oder ein Paket und ein Programm von Configuration Manager verwendet. Ab der Configuration Manager-Version 1802 muss für Windows 10-Geräte nicht mehr der Endpoint Protection-Agent installiert werden. Für diese Geräte muss jedoch weiterhin die Einstellung **Endpoint Protection-Client auf Clientcomputern verwalten** aktiviert sein. <!--503654-->
 
 ### <a name="install-endpoint-protection-client-on-client-computers"></a>Installieren des Endpoint Protection-Clients auf Clientcomputern
 
-Wählen Sie **Ja** aus, um den Endpoint Protection-Client auf Clientcomputern zu installieren und zu aktivieren, auf denen der Client noch nicht ausgeführt wird.  
+Wählen Sie **Ja** aus, um den Endpoint Protection-Client auf Clientcomputern zu installieren und zu aktivieren, auf denen der Client noch nicht ausgeführt wird. Ab der Configuration Manager-Version 1802 muss für Windows 10-Clients nicht mehr der Endpoint Protection-Agent installiert werden.  
 
 > [!NOTE]  
 >  Wenn der Endpoint Protection-Client bereits installiert ist, wird dieser durch die Auswahl von **Nein** nicht deinstalliert. Legen Sie zum Deinstallieren des Endpoint Protection-Clients die Clienteinstellung **Endpoint Protection-Client auf Clientcomputern verwalten** auf **Nein** fest. Stellen Sie dann ein Paket und Programm zum Deinstallieren des Endpoint Protection-Clients bereit.  
@@ -609,8 +625,14 @@ Geben Sie den Namen der Organisation ein, der Benutzern im Softwarecenter angeze
 - **Farbschema für Softwarecenter** </br>
 Klicken Sie auf **Farbe auswählen**, um die vom Softwarecenter verwendete primäre Farbe zu definieren.
 - **Logo für Softwarecenter auswählen** </br>
-Klicken Sie auf **Durchsuchen**, um ein Bild auszuwählen, das im Softwarecenter angezeigt werden soll. Das Logo muss eine JPEG-, PNG oder BMP-Datei mit 400 × 100 Pixeln und einer Größe von maximal 750 KB sein. Der Dateiname des Logos darf keine Leerräume enthalten. <!--SMS.503731 space in filename, noticed BMP missing as filetype-->
+Klicken Sie auf **Durchsuchen**, um ein Bild auszuwählen, das im Softwarecenter angezeigt werden soll. Das Logo muss eine JPEG-, PNG oder BMP-Datei mit 400 × 100 Pixeln und einer Größe von maximal 750 KB sein. Der Dateiname des Logos darf keine Leerräume enthalten.  
+         
+### <a name="bkmk_HideUnapproved"></a> Nicht genehmigte Anwendungen im Softwarecenter ausblenden
+Diese Option ist ab der Configuration Manager-Version 1802 verfügbar. Wenn die Option aktiviert ist, werden Anwendungen, die zwar für den Benutzer verfügbar sind, für die aber eine Genehmigung benötigt wird, im Softwarecenter ausgeblendet.   <!--1355146-->
 
+### <a name="bkmk_HideInstalled"></a> Installierte Anwendungen im Softwarecenter ausblenden
+Diese Option ist ab der Configuration Manager-Version 1802 verfügbar. Wenn die Option aktiviert ist, werden bereits installierte Anwendungen auf der Registerkarte „Anwendungen“ nicht mehr angezeigt. Diese Option ist als Standard festgelegt, wenn Sie Configuration Manager 1802 installieren oder ein Upgrade auf diese Version durchführen.  Installierte Anwendungen können weiterhin auf der Registerkarte „Installationsstatus“ überprüft werden. <!--1357592-->   
+  
 ### <a name="software-center-tab-visibility"></a>Sichtbarkeit der Registerkarten im Softwarecenter
 Legen Sie die zusätzlichen Einstellungen in dieser Gruppe auf **Ja** fest, um folgende Registerkarten im Softwarecenter anzuzeigen:
 - **Anwendungen**

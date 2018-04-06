@@ -1,26 +1,27 @@
 ---
 title: Updates
 titleSuffix: Configuration Manager
-description: "Hier finden Sie Informationen zu einer Dienstmethode in der Konsole namens **Updates und Wartung**, mit der Sie empfohlene Updates leicht finden und installieren können."
+description: Hier finden Sie Informationen zu einer konsoleninternen Dienstmethode namens **Updates und Wartung**, mit der Sie empfohlene Updates leicht finden und installieren können.
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
-caps.latest.revision: "51"
-caps.handback.revision: "0"
+caps.latest.revision: 51
+caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: a90222d16391d1e75d041c95c048a1d8d19bf278
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 8be32aa07819239820711079e4ff3637e96367db
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="updates-for-system-center-configuration-manager"></a>Updates für System Center Configuration Manager
 
@@ -47,7 +48,7 @@ Wenn Sie die Verzweigung „Technical Preview“ verwenden, finden Sie unter [Te
 
 
 ##  <a name="bkmk_Baselines"></a> Baseline- und Updateversionen  
- Die erste Version von System Center Configuration Manager Current Branch war auch als Version 1511, eine Baselineversion, bekannt. Zu den aktuelleren Baselineversionen zählen Version 1606 und 1702:
+ Die erste Version von System Center Configuration Manager Current Branch war auch als Version 1511, eine Baselineversion, bekannt. Zu den neueren Baselineversionen zählen die Versionen 1702 und 1802:
 
 -   Verwenden Sie die neueste Baselineversion, wenn Sie einen neuen Standort in einer neuen Hierarchie installieren.  
 
@@ -73,8 +74,9 @@ Einige Updates für Configuration Manager sind sowohl eine konsoleninterne Updat
 
 Die folgenden Versionen von Configuration Manager sind als Baseline- und/oder Updateversion verfügbar:  
 
-|Version |Verfügbarkeitsdatum|[Supportenddatum](/sccm/core/servers/manage/current-branch-versions-supported) |Baseline|konsoleninternes Update|  
+|-Version |Verfügbarkeitsdatum|[Supportenddatum](/sccm/core/servers/manage/current-branch-versions-supported) |Baseline|konsoleninternes Update|  
 |-------------|-----------|------------|--------------|------------------------|  
+|[1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)<br /><br /> 5.00.8634.1000|22. März 2018|22. September 2019|Ja|Ja|
 |[1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)<br /><br /> 5.00.8577.1000|20. November 2017|Mai 20, 2019|Nein|Ja|
 |[1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)<br /><br /> 5.00.8540.1000|31. Juli 2017|31. Juli 2018|Nein|Ja|
 |[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)<br /><br /> 5.00.8498.1000|27. März 2017| 27. März 2018|Ja|Ja|
@@ -85,7 +87,7 @@ Die folgenden Versionen von Configuration Manager sind als Baseline- und/oder Up
 | 1511 <br /><br /> 5.00.8325.1000|8. Dezember 2015| 8. Dezember 2016|Ja|Nein|  
 
 
-*(Hinweis 1)* Die Baselinemedien für 1606 und 1702 sind als Teil des Microsoft System Center 2016- oder des System Center Configuration Manager-Release (Current Branch und Long-Term Servicing Branch) im [Volume License Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC) verfügbar. Sie können z.B. im VLSC nach *System Center Config Mgr (current branch and LTSB)* suchen, woraufhin die Baselinemedien der Versionen 1606 und 1702 zurückgegeben werden, die zum Download zur Verfügung stehen.
+*(Hinweis 1)* Die Baselinemedien für 1802 und 1702 sind als Teil des Microsoft System Center 2016- oder des System Center Configuration Manager-Release (Current Branch und Long Term Servicing Branch) im [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC) verfügbar. Sie können z.B. im VLSC nach *System Center Config Mgr (Current Branch and LTSB)* suchen, woraufhin die Baselinemedien der Versionen 1802 und 1702 zurückgegeben werden und zum Download zur Verfügung stehen.
 
 Um die Version Ihres Configuration Manager-Standorts zu überprüfen, wechseln Sie oben links in der Konsole, wo die neue Version des Standorts und der Konsole angezeigt wird, zu **Info zu System Center Configuration Manager** .  
 
@@ -93,7 +95,7 @@ Um die Version Ihres Configuration Manager-Standorts zu überprüfen, wechseln S
  Bei Verwendung einer für die Produktionsumgebung geeigneten Installation von System Center Configuration Manager (die auch als „Current Branch“ bezeichnet wird) sind die meisten zu installierenden Updates über den Kanal „Updates und Wartung“ verfügbar. Mit dieser Methode können Sie die Updates für Ihre aktuelle Infrastrukturversion und Konfiguration ermitteln, herunterladen und zur Verfügung stellen. Dies umfasst nur Updates, die Microsoft allen Kunden empfiehlt.   
  Dazu gehören:  
 
--   neue Versionen, z.B. Version 1610, 1702 oder 1706  
+-   neue Versionen wie z.B. 1702, 1706, 1710 und 1802  
 
 -   Updates, die neue Features für die aktuelle Version enthalten
 
