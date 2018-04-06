@@ -1,20 +1,22 @@
 ---
-title: "Co-Verwaltung für Windows 10-Geräte"
-description: "Erfahren Sie, wie Sie Windows 10-Geräte mithilfe von Configuration Manager und Microsoft Intune gleichzeitig verwalten können."
-keywords: 
-author: dougeby
-manager: angrobe
-ms.date: 11/20/2017
+title: Co-Verwaltung für Windows 10-Geräte
+titleSuffix: Configuration Manager
+description: Erfahren Sie, wie Sie Windows 10-Geräte mithilfe von Configuration Manager und Microsoft Intune gleichzeitig verwalten können.
+keywords: ''
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: configuration-manager
-ms.service: 
-ms.technology: 
+ms.service: ''
+ms.technology: ''
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 0cc11a05013fd9c25ee98ec35adcbe822d8a21fb
-ms.sourcegitcommit: 389c4e5b4e9953b74c13b1689195f99c526fa737
+ms.openlocfilehash: e4b8bd58d30cd87ffc461289edbfc5da9a684cda
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="co-management-for-windows-10-devices"></a>Co-Verwaltung für Windows 10-Geräte    
 <!-- 1350871 -->
@@ -50,7 +52,7 @@ Hier finden Sie die allgemeinen Voraussetzungen für die Aktivierung der Co-Verw
 - [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) in Configuration Manager (wenn Sie den Configuration Manager-Client mit Intune installieren)
 
 ## <a name="workloads-you-can-switch-to-intune"></a>Workloads, die Sie zu Intune verschieben können
-Nach der Aktivierung der Co-Verwaltung verwaltet Configuration Manager weiterhin alle Workloads. Wenn Sie dazu bereit sind, können Sie die Verwaltung aller verfügbaren Workloads auf Intune umstellen. Sie können Intune die folgenden Workloads verwalten lassen.   
+Nach der Aktivierung der Co-Verwaltung verwaltet Configuration Manager weiterhin alle Workloads. Wenn Sie dazu bereit sind, können Sie die Verwaltung aller verfügbaren Workloads auf Intune umstellen. Sie können Intune die folgenden Workloads verwalten lassen:   
 
 ### <a name="compliance-policies"></a>Kompatibilitätsrichtlinien
 Konformitätsrichtlinien definieren die Regeln und Einstellungen, die ein Gerät erfüllen muss, damit es als mit bedingten Zugriffsrichtlinien konform eingestuft wird. Konformitätsrichtlinien ermöglichen Ihnen auch, Konformitätsprobleme bei Geräten unabhängig von bedingten Zugriffsrechten zu überwachen und zu beheben. Weitere Informationen finden Sie unter [Kompatibilitätsrichtlinie für Geräte](/sccm/mdm/deploy-use/device-compliance-policies).  
@@ -60,6 +62,10 @@ Mit Windows Update for Business-Richtlinien können Sie Zurückstellungsrichtlin
 
 ### <a name="resource-access-policies"></a>Ressourcenzugriffsrichtlinien
 Mit Ressourcenzugriffsrichtlinien werden VPN-, WLAN, E-Mail- und Zertifikateinstellungen auf Geräten konfiguriert. Weitere Informationen finden Sie unter [Bereitstellen von Ressourcenzugriffsprofilen](/sccm/protect/deploy-use/deploy-wifi-vpn-email-cert-profiles).
+
+### <a name="endpoint-protection"></a>Endpoint Protection 
+<!-- 1357365 -->
+Ab der Configuration Manager-Version 1802 kann der Endpoint Protection-Workload auf Intune umgestellt werden. Weitere Informationen finden Sie unter [Workloads able to be transitioned to Intune (Auf Intune umstellbare Workloads)](/sccm/core/clients/manage/co-management-switch-workloads.md#Workloads-able-to-be-transitioned-to-Intune) und [Endpoint Protection in Configuration Manager](/sccm/protect/deploy-use/endpoint-protection).
 
 ## <a name="architectural-overview-for-co-management"></a>Architekturübersicht für die Co-Verwaltung
 Die folgende Abbildung bietet eine Architekturübersicht über die Co-Verwaltung und ihre Rolle in der vorhandenen Configuration Manager- und Intune-Infrastruktur.

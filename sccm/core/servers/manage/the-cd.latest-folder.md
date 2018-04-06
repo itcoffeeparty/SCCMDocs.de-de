@@ -1,25 +1,26 @@
 ---
-title: "Ordner „CD.Latest“"
+title: Ordner „CD.Latest“
 titleSuffix: Configuration Manager
-description: "Enthält Informationen über den neuen Updatevorgang, in dem Updates des Produkts aus der Configuration Manager-Konsole heraus bereitstellt werden."
+description: Enthält Informationen über den neuen Updatevorgang, in dem Updates des Produkts aus der Configuration Manager-Konsole heraus bereitstellt werden.
 ms.custom: na
-ms.date: 05/02/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8db92d67-5d9c-4e9c-80d0-ae6fa0dd4817
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 1dd176f80afa4a9edc5a14d538eef7989614e814
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+manager: dougeby
+ms.openlocfilehash: 9371762a3f6acb9df7e7138c693b0a529c81a2ff
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="the-cdlatest-folder-for-system-center-configuration-manager"></a>Der Ordner „CD.Latest“ für System Center Configuration Manager
 
@@ -27,12 +28,12 @@ ms.lasthandoff: 12/04/2017
 
 In System Center Configuration Manager wird ein neuer Updatevorgang eingeführt, der Updates des Produkts aus der Configuration Manager-Konsole heraus bereitstellt. Zur Unterstützung dieser neuen Methode zur Aktualisierung von Configuration Manager wird ein neuer Ordner namens **CD.Latest** erstellt, der eine Kopie der Configuration Manager-Installationsdateien für die aktualisierte Version der Website enthält.  
 
-Ab dem Update 1606 enthält der Ordner „CD.Latest“ einen Ordner namens **Redist** , der die verteilbaren Dateien enthält, die während des Setupvorgangs heruntergeladen und verwendet werden. Diese Dateien sind der Version der Configuration Manager-Dateien zugeordnet, die sich im Ordner „CD.Latest“ befinden. Wenn Sie den Setupvorgang aus einem „CD.Latest“-Ordner ausführen, müssen Sie Dateien verwenden, die zu dieser Setup-Version passen. Dazu können sie Setup anweisen, neue und aktuelle Dateien von Microsoft herunterzuladen, oder die Dateien aus dem „Redist“-Ordner verwenden, der sich im „CD.Latest“-Ordner befindet.
+Der Ordner „CD.Latest“ enthält einen Ordner namens **Redist** , der die verteilbaren Dateien enthält, die während des Setupvorgangs heruntergeladen und verwendet werden. Diese Dateien sind der Version der Configuration Manager-Dateien zugeordnet, die sich im Ordner „CD.Latest“ befinden. Wenn Sie den Setupvorgang aus einem „CD.Latest“-Ordner ausführen, müssen Sie Dateien verwenden, die zu dieser Setup-Version passen. Dazu können sie Setup anweisen, neue und aktuelle Dateien von Microsoft herunterzuladen, oder die Dateien aus dem „Redist“-Ordner verwenden, der sich im „CD.Latest“-Ordner befindet.
 
-Baselinemedien beinhalten genau wie die Baselineversion 1606, die im Oktober 2016 herausgegeben wurde, keinen Redist-Ordner. Der Ordner „Redist“ wird nicht erstellt, bis Sie ein Update in der Konsole installieren. Verwenden Sie in der Zwischenzeit den Redist-Ordner, den Sie auch bei der Installation von Standorten mit dem Baselinemedium verwendet haben.  
+Baselinemedien beinhalten genau wie die Baselineversion 1802, die im März 2018 veröffentlicht wurde, keinen „Redist“-Ordner. Der Ordner „Redist“ wird nicht erstellt, bis Sie ein Update in der Konsole installieren. Verwenden Sie in der Zwischenzeit den Redist-Ordner, den Sie auch bei der Installation von Standorten mit dem Baselinemedium verwendet haben.  
 
 > [!TIP]
-> Wenn Sie Version 1606 noch nicht installiert haben, stellen Sie sicher, dass die von Ihnen verwendeten „Redist“-Dateien aktuell sind. Falls Sie die „Redist“-Dateien noch nicht heruntergeladen haben, weisen Sie das Setup an, diese von Microsoft herunterzuladen.   
+> Achten Sie darauf, aktuelle verteilbare Dateien zu verwenden. Falls Sie die Dateien noch nicht heruntergeladen haben, weisen Sie das Setupprogramm an, diese von Microsoft herunterzuladen.   
 
  In den folgenden Szenarien wird der Ordner „CD.Latest“ an einem Standort der zentralen Verwaltung oder auf dem primären Standortserver erstellt oder aktualisiert:  
 
@@ -40,7 +41,7 @@ Baselinemedien beinhalten genau wie die Baselineversion 1606, die im Oktober 201
 
 -   Sie führen den integrierten Configuration Manager-Sicherungstask aus: Der Ordner wird im angegebenen Sicherungsordner erstellt oder aktualisiert.  
 
--  Ab Version 1606 wird der CD.Latest-Ordner erstellt, wenn Sie mithilfe des Baselinemediums (z.B. Version 1606 oder 1702) einen neuen Standort erstellen.
+-  Der Ordner „CD.Latest“ wird erstellt, wenn Sie mithilfe des Baselinemediums (z.B. Version 1802) einen neuen Standort installieren.
 
 Die Quelldateien aus dem Ordner „CD.Latest“ werden für Folgendes unterstützt:  
 

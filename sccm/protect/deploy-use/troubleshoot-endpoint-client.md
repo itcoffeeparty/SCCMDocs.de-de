@@ -1,26 +1,27 @@
 ---
-title: "Fehlerbehebung für Windows Defender oder Endpoint Protection-Client"
+title: Fehlerbehebung für Windows Defender oder Endpoint Protection-Client
 titleSuffix: Configuration Manager
 description: Erfahren Sie, wie Sie Fehler bei Windows Defender und Endpoint Protection beheben.
 ms.custom: na
-ms.date: 01/03/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d837253e-fcc2-422a-9e2c-c78b938dfd8c
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: b667db471a16faef057f49a0a26759849e03f237
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+caps.latest.revision: 7
+caps.handback.revision: 0
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.openlocfilehash: a8460cafce15e5fb97ace76983932841ec77412f
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="troubleshooting-windows-defender-or-endpoint-protection-client"></a>Fehlerbehebung für Windows Defender oder Endpoint Protection-Client
 
@@ -153,9 +154,9 @@ Wenn bei Windows Defender oder Endpoint Protection Probleme auftreten, wenden Si
 
 ### <a name="step-6-manually-install-the-virus-and-spyware-definition-updates"></a>Schritt 6: Manuelles Installieren der Virus- und Spyware-Definitionsupdates  
 
--   Wenn Sie mit einem 32-Bit-Windows-Betriebssystem arbeiten, laden Sie die neuesten Updates unter [http://go.microsoft.com/fwlink/?LinkID=87342](http://go.microsoft.com/fwlink/?LinkID=87342) (http://go.microsoft.com/fwlink/?LinkID=87342) manuell herunter.  
+-   Wenn Sie eine 32-Bit-Version eines Windows-Betriebssystems ausführen, laden Sie die neuesten Updates manuell unter [http://go.microsoft.com/fwlink/?LinkID=87342](http://go.microsoft.com/fwlink/?LinkID=87342) (http://go.microsoft.com/fwlink/?LinkID=87342) herunter.  
 
--   Wenn Sie mit einem 64-Bit-Windows-Betriebssystem arbeiten, laden Sie die neuesten Updates unter [http://go.microsoft.com/fwlink/?LinkID=87341](http://go.microsoft.com/fwlink/?LinkID=87341) (http://go.microsoft.com/fwlink/?LinkID=87341) manuell herunter.  
+-   Wenn Sie eine 64-Bit-Version eines Windows-Betriebssystems ausführen, laden Sie die neuesten Updates manuell unter [http://go.microsoft.com/fwlink/?LinkID=87341](http://go.microsoft.com/fwlink/?LinkID=87341) (http://go.microsoft.com/fwlink/?LinkID=87341) herunter.  
 
 -   Klicken Sie auf **Ausführen**. Die neuesten Updates werden manuell auf dem Computer installiert.  
 
@@ -238,8 +239,7 @@ Wenn bei Windows Defender oder Endpoint Protection Probleme auftreten, wenden Si
 3.  Wenn Sie ein Kabelmodem oder einen DSL-Router verwenden, stellen Sie sicher, dass die Verbindungen zum Router und zum Computer ordnungsgemäß funktionieren. Trennen Sie die Verbindung mit dem Router oder Modem, und schalten Sie beide aus. Warten Sie einige Minuten, schließen Sie zuerst das Modem wieder an. Warten Sie einen Moment, schließen Sie dann den Router an, und starten Sie den Computer erneut.  
 
 ##  <a name="detected-threat-cant-be-remediated"></a>Erkannte Bedrohung kann nicht beseitigt werden  
- Wenn von Windows Defender oder  
-      Endpoint Protection eine potenzielle Bedrohung in einer komprimierten Datei mit der Dateinamenerweiterung „.zip“ oder auf einer Netzwerkfreigabe ermittelt wird, wird versucht, die Bedrohung zu behandeln, indem das entsprechende Element unter Quarantäne gestellt oder entfernt wird.  
+ Wenn von Windows Defender oder Endpoint Protection eine potenzielle Bedrohung in einer komprimierten Datei mit der Dateinamenerweiterung „*.zip“ oder auf einer Netzwerkfreigabe ermittelt wird, wird versucht, die Bedrohung zu behandeln, indem das entsprechende Element unter Quarantäne gestellt oder entfernt wird.  
 
 ### <a name="remove-or-scan-the-file"></a>Entfernen oder scannen Sie die Datei.  
 

@@ -1,20 +1,21 @@
 ---
-title: "Vorbereiten von Windows 10-Geräten für die Co-Verwaltung"
-description: "Erfahren Sie, wie sie Windows 10-Geräte für die Co-Verwaltung vorbereiten."
-keywords: 
-author: dougeby
-manager: angrobe
-ms.date: 11/20/2017
+title: Vorbereiten von Windows 10-Geräten für die Co-Verwaltung
+description: Erfahren Sie, wie sie Windows 10-Geräte für die Co-Verwaltung vorbereiten.
+keywords: ''
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: configuration-manager
-ms.service: 
-ms.technology: 
+ms.service: ''
+ms.technology: ''
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 902787f173c714fd2a73cc657aad758bd79ce3c8
-ms.sourcegitcommit: 389c4e5b4e9953b74c13b1689195f99c526fa737
+ms.openlocfilehash: 61aef0351e32ef6cf31911a8dfd27e86de82f38c
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>Vorbereiten von Windows 10-Geräten für die Co-Verwaltung
 Sie können die Co-Verwaltung auf Windows 10-Geräten aktivieren, die in AD und Azure AD eingebunden, bei Intune registriert und ein Client in Configuration Manager sind. Installieren Sie den Configuration Manager-Client auf neuen Windows 10- und bereits in Intune registrierten Geräten jedoch vor der Aktivierung der Co-Verwaltung. Windows 10-Geräte, die Configuration Manager-Clients sind, können Sie bei Intune registrieren und die Co-Verwaltung über die Configuration Manager-Konsole aktivieren.
@@ -23,7 +24,7 @@ Sie können die Co-Verwaltung auf Windows 10-Geräten aktivieren, die in AD und 
 > Co-Verwaltung wird von Windows 10 Mobile-Geräten nicht unterstützt.
 
 ## <a name="command-line-to-install-configuration-manager-client"></a>Befehlszeile zum Installieren von Configuration Manager-Clients
-Sie müssen in Intune eine App für Windows 10-Geräte erstellen, die noch keine Configuration Manager-Clients sind. Wenn Sie in den nächsten Abschnitten eine App erstellen, verwenden Sie die folgende Befehlszeile:
+Erstellen Sie eine App in Intune für Windows 10-Geräte, die noch keine Configuration Manager-Clients sind. Wenn Sie in den nächsten Abschnitten eine App erstellen, verwenden Sie die folgende Befehlszeile:
 
 ccmsetup.msi CCMSETUPCMD="/mp:&#60;*URL des Cloudverwaltungsgateway-Endpunkts für die gegenseitige Authentifizierung*&#62;/ CCMHOSTNAME=&#60;*URL des Cloudverwaltungsgateway-Endpunkts für die gegenseitige Authentifizierung*&#62; SMSSiteCode=&#60;*Standortcode*&#62; SMSMP=https:&#47;/&#60;*FQDN des MPs*&#62; AADTENANTID=&#60;*AAD-Mandanten-ID*&#62; AADTENANTNAME=&#60;*Mandantenname*&#62; AADCLIENTAPPID=&#60;*Server-App-ID für die AAD-Integration*&#62; AADRESOURCEURI=https:&#47;/&#60;*Ressourcen-ID*&#62;”
 
@@ -62,7 +63,11 @@ ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualA
 
 ## <a name="new-windows-10-devices"></a>Neue Windows 10-Geräte
 Auf neuen Windows 10-Geräten können Sie mit dem Dienst „AutoPilot“ den Eindruck beim ersten Ausführen konfigurieren, der die Einbindung des Geräts in AD und Azure AD sowie die Registrierung bei Intune umfasst. Erstellen Sie anschließend eine App in Intune, um den Configuration Manager-Client bereitzustellen.  
-1. Aktivieren Sie AutoPilot für die neuen Windows 10-Geräte. Weitere Informationen finden Sie unter [Übersicht über Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot).  
+1. Aktivieren Sie AutoPilot für die neuen Windows 10-Geräte. Weitere Informationen finden Sie unter [Übersicht über Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot).    
+
+   > [!NOTE]   
+   > Ab Version 1802 können Sie mit Configuration Manager Geräteinformationen erfassen und melden, die vom Microsoft Store für Unternehmen und Bildungseinrichtungen benötigt werden. Zu diesen Informationen gehört die Seriennummer des Geräts, der Windows-Produktbezeichner und eine Hardwarebezeichner. Erweitern Sie in der Configuration Manager-Konsole im Arbeitsbereich **Überwachung** nacheinander die Knoten **Berichterstellung** und **Berichte**, und wählen Sie den Knoten **Hardware – allgemein** aus. Führen Sie den neuen Bericht **Windows AutoPilot-Geräteinformationen** aus, und sehen Sie sich die Ergebnisse an. Klicken Sie in der Berichtsanzeige auf das Symbol **Exportieren**, und aktivieren Sie die Option **CSV (Komma-getrennt)**. Nachdem Sie die Datei gespeichert haben, laden Sie die Daten in den Microsoft Store für Unternehmen und Bildungseinrichtungen hoch. Weitere Informationen finden Sie unter [Hinzufügen von Geräten zum Microsoft Store für Unternehmen und Bildungseinrichtungen](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#add-devices-and-apply-autopilot-deployment-profile).
+
 2. Konfigurieren Sie die automatische Registrierung in Azure AD für Ihre Geräte, damit sie automatisch in Intune registriert werden. Weitere Informationen finden Sie unter  [Windows-Geräte registrieren](https://docs.microsoft.com/intune/windows-enroll).
 3. Erstellen Sie eine App in Intune mit dem Configuration Manager-Clientpaket, und stellen Sie die App für Windows 10-Geräte bereit, die Sie co-verwalten möchten. Verwenden Sie die [Befehlszeile, um den Configuration Manager-Client zu installieren](#command-line-to-install-configuration-manager-client), während Sie die Schritte zum [Installieren von Clients über das Internet mithilfe von Azure AD](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure) ausführen.   
 
