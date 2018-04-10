@@ -12,7 +12,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
-caps.latest.revision: ''
+caps.latest.revision: 8
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
@@ -34,7 +34,7 @@ Zusätzlich zu den anderen System Center Configuration Manager-Anforderungen und
 |Gerätetyp|Unterstützte Dateitypen|  
 |-----------------|---------------------|  
 |Windows RT und Windows RT 8.1|\*.appx, \*.appxbundle|  
-|Windows 8.1 und höher, als mobiles Gerät registriert|*.appx, \*.appxbundle|  
+|Windows 8.1 und höher, als mobiles Gerät registriert|\*.appx, \*.appxbundle|  
 
  Die folgenden Bereitstellungsaktionen werden unterstützt:  
 
