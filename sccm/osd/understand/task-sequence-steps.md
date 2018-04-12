@@ -3,7 +3,7 @@ title: Tasksequenzschritte
 titleSuffix: Configuration Manager
 description: Erfahren Sie mehr über die Schritte, die Sie einer Configuration Manager-Tasksequenz hinzufügen können.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 03/30/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,11 +17,11 @@ caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ad68209784b78da5c6e75745094ba8e6bc002c44
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 53929400b983a2191e60a7d42ae84062afd44e3a
+ms.sourcegitcommit: d8a4a53630351b3d677bbdc5d203e7d330472cba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>Tasksequenzschritte in System Center Configuration Manager
 
@@ -711,6 +711,10 @@ Folgende Bedingungen wirken sich auf die Anwendungen aus, die von der Tasksequen
 -   Der Variablenwert enthält noch andere bzw. keine anderen Informationen als den Namen der Anwendung. Die Tasksequenz installiert die Anwendung nicht und wird fortgesetzt.  
 
 -   Wenn die Tasksequenz keine Variable mit dem angegebenen Basisnamen und dem Suffix „01“ findet, installiert diese keine Anwendungen. 
+    
+> [!Important]  
+> Bei diesen Werten ist die Groß-/Kleinschreibung relevant. Beispielsweise unterscheidet sich „install“ von „Install“. Wenn Sie den Wert ändern müssen, wird eine Änderung der Groß-/Kleinschreibung vom Tasksequenz-Editor nicht erkannt. Sie müssen gleichzeitig eine weitere Bearbeitung vornehmen, z. B. die Schrittbeschreibung ändern.<!--509714-->   
+
    
 **Wenn ein Fehler bei einer Anwendungsinstallation auftritt, mit anderen Anwendungen in der Liste fortfahren**  
  Mit dieser Einstellung geben Sie an, dass der Schritt fortgesetzt werden soll, wenn bei einer einzelnen Anwendungsinstallation ein Fehler auftritt. Wenn Sie diese Einstellungen angeben, wird die Tasksequenz unabhängig von Installationsfehlern fortgesetzt. Wenn Sie diese Einstellung nicht angeben und die Installation fehlschlägt, wird der Schritt sofort beendet.  
@@ -789,6 +793,10 @@ Klicken Sie im Tasksequenz-Editor auf **Hinzufügen** > **Software** > **Paket i
 -   Wenn die Paket-ID Kleinbuchstaben enthält, schlägt die Installation der Software fehl.  
 
 -   Wenn die Tasksequenz keine Variable mit dem angegebenen Basisnamen und dem Suffix „001“ findet, installiert diese keine Pakete. Die Tasksequenz wird fortgesetzt.  
+    
+> [!Important]  
+> Bei diesen Werten ist die Groß-/Kleinschreibung relevant. Beispielsweise unterscheidet sich „install“ von „Install“. Wenn Sie den Wert ändern müssen, wird eine Änderung der Groß-/Kleinschreibung vom Tasksequenz-Editor nicht erkannt. Sie müssen gleichzeitig eine weitere Bearbeitung vornehmen, z. B. die Schrittbeschreibung ändern.<!--509714-->   
+
    
 **Wenn ein Fehler bei einer Softwarepaketinstallation auftritt, mit anderen Paketen in der Liste fortfahren**  
  Mit dieser Einstellung geben Sie an, dass der Schritt fortgesetzt werden soll, wenn bei einer einzelnen Softwarepaketinstallation ein Fehler auftritt. Wenn Sie diese Einstellungen angeben, wird die Tasksequenz unabhängig von Installationsfehlern fortgesetzt. Wenn Sie diese Einstellung nicht angeben und die Installation fehlschlägt, wird der Schritt sofort beendet.  

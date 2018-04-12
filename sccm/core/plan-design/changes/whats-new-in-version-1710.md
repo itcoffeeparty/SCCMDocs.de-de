@@ -1,7 +1,7 @@
 ---
 title: Neue Version 1710 | Microsoft-Dokumentation
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr über Änderungen und neue Funktionen, die in Version 1710 von System Center Configuration Manager eingeführt wurden."
+description: Erfahren Sie mehr über Änderungen und neue Funktionen, die in Version 1710 von System Center Configuration Manager eingeführt wurden.
 ms.custom: na
 ms.date: 1/08/2018
 ms.reviewer: na
@@ -14,17 +14,23 @@ ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: c75ed431c6a786759e2ddcd6dc6b55d5b55412c7
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+ms.openlocfilehash: e9d1ac44bf0455ff0b1caec94d07cfa734dfbeb0
+ms.sourcegitcommit: d8a4a53630351b3d677bbdc5d203e7d330472cba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>Neuerungen in Version 1710 von System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 Das Update 1710 für System Center Configuration Manager (Current Branch) ist als konsoleninternes Update für zuvor installierte Standorte verfügbar, die Version 1610, 1702 oder 1706 ausführen.
+
+Neben neuen Features umfasst dieses Release auch weitere Änderungen, beispielsweise Fehlerbehebungen. Weitere Informationen finden Sie unter [Zusammenfassung der Änderungen im aktuellen Branch von System Center Configuration Manager, Version 1710](https://support.microsoft.com/help/4056470/summary-of-changes-in-system-center-configuration-manager-current-bran).
+
+Die folgenden zusätzlichen Updates dieses Release sind jetzt ebenfalls verfügbar:
+- [Updaterollup für den aktuellen Branch von System Center Configuration Manager, Version 1710](https://support.microsoft.com/help/4057517/update-rollup-for-system-center-configuration-manager-current-branch-v)
+- [Updaterollup 2 für den aktuellen Branch von System Center Configuration Manager, Version 1710](https://support.microsoft.com/en-us/help/4086143/update-rollup-2-for-system-center-configuration-manager-current-branch)
 
 > [!TIP]  
 > Sie müssen eine Baselineversion von Configuration Manager verwenden, um einen neuen Standort zu installieren.  
