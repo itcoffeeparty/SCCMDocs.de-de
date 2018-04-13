@@ -1,9 +1,9 @@
 ---
 title: CEIP
 titleSuffix: Configuration Manager
-description: "Lernen Sie die Einstellungen für das Programm zur Verbesserung der Benutzerfreundlichkeit (Customer Experience Improvement Program, CEIP) für System Center Configuration Manager kennen."
+description: In diesem Artikel erhalten Sie Informationen zum Programm zur Verbesserung der Benutzerfreundlichkeit.
 ms.custom: na
-ms.date: 02/22/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,19 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bd5b34c9-7304-4743-81c3-96f1e0c80702
-caps.latest.revision: 
+caps.latest.revision: 4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5d49c3bc6080bd9a507c19a9504ccc802c75dacd
-ms.sourcegitcommit: be939893f0ceca4add8655ae2c24e42aa16aec38
+ms.openlocfilehash: d1cb071e780f2e1552495f3a0fa89c71bbef3cc0
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="customer-experience-improvement-program-ceip-for-system-center-configuration-manager"></a>Programm zur Verbesserung der Benutzerfreundlichkeit (Customer Experience Improvement Program, CEIP) für System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
+
+> [!Note]  
+> Ab Configuration Manager Version 1802 ist das CEIP-Feature nicht mehr im Produkt enthalten.
 
 Während der Installation der Configuration Manager-Konsole können Sie wählen, ob Sie am **Programm zur Verbesserung der Benutzerfreundlichkeit** (Customer Experience Improvement Program; CEIP) teilnehmen möchten. CEIP ist standardmäßig deaktiviert. Wenn sie zuvor aktiviert war, bleibt diese Option aktiviert.  
 

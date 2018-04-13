@@ -1,9 +1,9 @@
 ---
 title: Setup-Befehlszeilenoptionen
 titleSuffix: Configuration Manager
-description: "Verwenden Sie die Informationen in diesem Artikel, um Skripts zu konfigurieren oder System Center Configuration Manager über die Befehlszeile zu installieren."
+description: Erstellen Sie Automatisierungsskripts, um System Center Configuration Manager über die Befehlszeile zu installieren.
 ms.custom: na
-ms.date: 03/27/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,15 +12,15 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0da167f1-52cf-4dfd-8f73-833ca3eb8478
-caps.latest.revision: 
+caps.latest.revision: 3
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 3b2076087e13958be15dd5151961fa825e22a433
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+manager: dougeby
+ms.openlocfilehash: fede359c884ef8b4027935b2e3fb48a5b7543d26
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="command-line-options-for-setup-in-system-center-configuration-manager"></a>Befehlszeilenoptionen für das Setup in System Center Configuration Manager
 
@@ -29,15 +29,15 @@ ms.lasthandoff: 12/04/2017
 
  Verwenden Sie die folgenden Informationen, um Skripts zu konfigurieren oder System Center Configuration Manager über die Befehlszeile zu installieren.  
 
-##  <a name="bkmk_setup"></a> Befehlszeilenoptionen für Setup  
+##  <a name="bkmk_setup"></a> Befehlszeilenoptionen für das Setup  
  **/DEINSTALL**  
- Damit wird der Standort deinstalliert. Sie müssen Setup vom Standortservercomputer ausführen.  
+ Damit wird der Standort deinstalliert. Führen Sie das Setup vom Standortservercomputer aus.  
 
  **/DONTSTARTSITECOMP**  
  Installiert einen Standort, ohne dass der Standortkomponenten-Manager-Dienst gestartet wird. Der Standort wird erst beim Start des Standortkomponenten-Manager-Diensts aktiv. Der Standortkomponenten-Manager ist für die Installation und den Start des Diensts SMS_Executive und für weitere Prozesse am Standort verantwortlich. Wenn Sie den Standortkomponenten-Manager-Dienst nach Abschluss der Standortinstallation starten, werden der Dienst SMS_Executive sowie weitere Prozesse installiert, die für den Betrieb des Standorts erforderlich sind.  
 
  **/HIDDEN**  
- Blendet die Benutzeroberfläche beim Setup aus. Verwenden Sie diese Option nur in Verbindung mit der Option **/SCRIPT**. Die Skriptdatei zur unbeaufsichtigten Installation muss alle erforderlichen Optionen bereitstellen, oder das Setup schlägt fehl.  
+ Damit wird die Benutzeroberfläche beim Setup ausgeblendet. Verwenden Sie diese Option nur in Verbindung mit der Option **/SCRIPT**. Die Skriptdatei zur unbeaufsichtigten Installation muss alle erforderlichen Optionen bereitstellen, oder das Setup schlägt fehl.  
 
  **/NOUSERINPUT**  
  Deaktiviert die Benutzereingabe während des Setups, zeigt aber den Setup-Assistenten an. Verwenden Sie diese Option nur in Verbindung mit der Option **/SCRIPT**. Die Skriptdatei zur unbeaufsichtigten Installation muss alle erforderlichen Optionen bereitstellen, oder das Setup schlägt fehl.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/04/2017
  Damit wird eine Standortrücksetzung ausgeführt, wobei auch die Datenbank und Dienstkonten des Standorts zurückgesetzt werden. Sie müssen das Setup über **<*Configuration Manager-Installationspfad*>\BIN\X64** auf dem Standortserver ausführen. Weitere Informationen zum Zurücksetzen des Standorts finden Sie im Abschnitt [Ausführen einer Standortrücksetzung](../../../../core/servers/manage/modify-your-infrastructure.md#bkmk_reset) des Themas [Ändern Ihrer System Center Configuration Manager-Infrastruktur](../../../../core/servers/manage/modify-your-infrastructure.md).  
 
  **/TESTDBUPGRADE <*Instanzname*>\\<*Datenbankname*>**  
- Testet eine Sicherung der Standortdatenbank daraufhin, ob für die Datenbank ein Upgrade durchgeführt werden kann. Sie müssen den Instanznamen und den Datenbanknamen der Standortdatenbank angeben. Wenn Sie nur den Datenbanknamen angeben, wird automatisch der Standardinstanzname verwendet.  
+ Testet eine Sicherung der Standortdatenbank daraufhin, ob für die Datenbank ein Upgrade durchgeführt werden kann. Stellen Sie den Instanznamen und den Datenbanknamen der Standortdatenbank bereit. Wenn Sie nur den Datenbanknamen angeben, wird automatisch der Standardinstanzname verwendet.  
 
 > [!IMPORTANT]  
 >  Führen Sie diese Befehlszeilenoption nicht für die Datenbank des Produktionsstandorts aus. Wenn Sie diese Befehlszeilenoption für die Datenbank des Produktionsstandorts ausführen, wird ein Upgrade auf die Standortdatenbank durchgeführt und Ihr Standort kann außer Funktion gesetzt werden.  
@@ -56,19 +56,19 @@ ms.lasthandoff: 12/04/2017
 
  Beispiel: `setupwpf.exe /UPGRADE xxxxx-xxxxx-xxxxx-xxxxx-xxxxx <path to external component files>`  
 
- Weitere Informationen zu den für das Setup erforderlichen Dateien finden Sie unter  [Setup-Downloadprogramm](setup-downloader.md).  
+ Weitere Informationen zu den für das Setup erforderlichen Dateien finden Sie unter [Setup-Downloadprogramm](setup-downloader.md).  
 
  **/SCRIPT <*Pfad zum Setupskript*>**  
- Damit werden unbeaufsichtigte Installationen ausgeführt. Bei Verwendung der Option **/SCRIPT** ist eine Initialisierungsdatei für Setup erforderlich. Weitere Informationen zur unbeaufsichtigten Ausführung des Setups finden Sie unter [Install sites using a command line (Installieren von Standorten unter Verwendung einer Befehlszeile)](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md).  
+ Damit werden unbeaufsichtigte Installationen ausgeführt. Bei Verwendung der Option **/SCRIPT** ist eine Setup-Initialisierungsdatei erforderlich. Weitere Informationen zur unbeaufsichtigten Installation finden Sie unter [Verwenden einer Befehlszeile zum Installieren von System Center Configuration Manager-Standorten](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md).  
 
  **/SDKINST <*FQDN des SMS-Anbieters*>**  
- Damit wird der SMS-Anbieter auf dem angegebenen Computer installiert. Sie müssen den vollqualifizierten Domänennamen (FQDN) für den SMS-Anbietercomputer bereitstellen. Weitere Informationen zum SMS-Anbieter finden Sie im Abschnitt [Planen des SMS-Anbieters für System Center Configuration Manager](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
+ Damit wird der SMS-Anbieter auf dem angegebenen Computer installiert. Stellen Sie den vollqualifizierten Domänennamen (Fully Qualified Domain Name, FQDN) für den SMS-Anbietercomputer bereit. Weiter Informationen zum SMS-Anbieter finden Sie unter [Planen des SMS-Anbieters](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
  **/SDKDEINST <*FQDN des SMS-Anbieters*>**  
- Damit wird der SMS-Anbieter auf dem angegebenen Computer deinstalliert. Sie müssen den FQDN für den SMS-Anbietercomputer bereitstellen.  
+ Damit wird der SMS-Anbieter auf dem angegebenen Computer deinstalliert. Stellen Sie den FQDN für den SMS-Anbietercomputer bereit.  
 
  **/MANAGELANGS <*Pfad zum Sprachskript*>**  
- Damit werden die Sprachen verwaltet, die an einem zuvor installierten Standort installiert wurden. Zur Verwendung dieser Option müssen Sie das Setup über **<*Configuration Manager-Installationspfad*>\BIN\X64** auf dem Standortserver ausführen und den Speicherort der Sprachskriptdatei angeben, die die Spracheinstellungen enthält. Weitere Informationen zu den in der Skriptdatei für das Sprachsetup verfügbaren Sprachoptionen finden Sie unter [Befehlszeilenoptionen zum Verwalten von Sprachen](#bkmk_Lang) in diesem Thema.  
+ Damit werden die Sprachen verwaltet, die an einem zuvor installierten Standort installiert wurden. Um diese Option zu verwenden, müssen Sie das Setup über **<*Configuration Manager-Installationspfad*>\BIN\X64** auf dem Standortserver ausführen. Stellen Sie den Speicherort der Sprachskriptdatei bereit, die die Spracheinstellungen enthält. Weitere Informationen zu den in der Skriptdatei für das Sprachsetup verfügbaren Sprachoptionen finden Sie unter [Befehlszeilenoptionen zum Verwalten von Sprachen](#bkmk_Lang) in diesem Thema.  
 
 ##  <a name="bkmk_Lang"></a> Befehlszeilenoptionen zum Verwalten von Sprachen  
  **Identification**  
@@ -137,21 +137,21 @@ ms.lasthandoff: 12/04/2017
 
          1 = Bereits heruntergeladen  
 
-    -   **Details:** Hiermit wird angegeben, ob die für Setup erforderlichen Dateien bereits heruntergeladen wurden. Wenn Sie beispielsweise den Wert **0**angeben, werden die Dateien von Setup heruntergeladen.  
+    -   **Details:** Hiermit wird angegeben, ob die für das Setup erforderlichen Dateien bereits heruntergeladen wurden. Wenn Sie beispielsweise den Wert **0** angeben, werden die Dateien beim Setup heruntergeladen.  
 
 -   **Schlüsselname:** PrerequisitePath  
 
     -   **Erforderlich:** Ja  
 
-    -   **Werte:** <*Pfad zu erforderlichen Setup-Dateien*>  
+    -   **Werte:** <*Pfad zu den für das Setup erforderlichen Dateien*>  
 
-    -   **Details:** Über diesen Schlüssel wird der Pfad zu den für Setup erforderlichen Dateien angegeben. Je nach dem Wert unter **PrerequisiteComp** wird dieser Pfad von Setup zum Speichern heruntergeladener Dateien oder zum Suchen der zuvor heruntergeladenen Dateien verwendet.  
+    -   **Details:** Über diesen Schlüssel wird der Pfad zu den für das Setup erforderlichen Dateien angegeben. Je nach **PrerequisiteComp**-Wert wird dieser Pfad beim Setup zum Speichern heruntergeladener Dateien oder zum Suchen der zuvor heruntergeladenen Dateien verwendet.  
 
-##  <a name="bkmk_Unattended"></a> Skriptdateischlüssel für unbeaufsichtigtes Setup  
- In den folgenden Abschnitten erfahren Sie, wie Sie ein Skript für die unbeaufsichtigte Installation erstellen. In der Liste werden die verfügbaren Setupskriptschlüssel und die entsprechenden Werte aufgeführt. Außerdem wird angegeben, ob die Schlüssel erforderlich sind und für welchen Installationstyp sie verwendet werden. In der letzten Spalte finden Sie zudem eine kurze Beschreibung der einzelnen Schlüssel.  
+##  <a name="bkmk_Unattended"></a> Skriptdateischlüssel für eine unbeaufsichtigte Installation  
+ In den folgenden Abschnitten erfahren Sie, wie Sie ein Skript für die unbeaufsichtigte Installation erstellen. In den Listen werden die verfügbaren Setupskriptschlüssel und die entsprechenden Werte aufgeführt. Außerdem wird angegeben, ob die Schlüssel erforderlich sind und für welchen Installationstyp sie verwendet werden. In der letzten Spalte finden Sie zudem eine kurze Beschreibung der einzelnen Schlüssel.  
 
 ### <a name="unattended-install-for-a-central-administration-site"></a>Unbeaufsichtigtes Installieren eines Standorts der zentralen Verwaltung  
- Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Installation eines Standorts der zentralen Verwaltung mithilfe einer Skriptdatei.  
+ Im folgenden Abschnitt finden Sie Detailinformationen eines Standorts der zentralen Verwaltung mithilfe einer Skriptdatei zur unbeaufsichtigten Installation.  
 
 **Identification**  
 
@@ -223,15 +223,15 @@ ms.lasthandoff: 12/04/2017
 
          1 = Bereits heruntergeladen  
 
-    -   **Details:** Hiermit wird angegeben, ob die für Setup erforderlichen Dateien bereits heruntergeladen wurden. Wenn Sie beispielsweise den Wert **0** angeben, werden die Dateien von Setup heruntergeladen.  
+    -   **Details:** Hiermit wird angegeben, ob die für das Setup erforderlichen Dateien bereits heruntergeladen wurden. Wenn Sie beispielsweise den Wert **0** angeben, werden die Dateien beim Setup heruntergeladen.  
 
 -   **Schlüsselname:** PrerequisitePath  
 
     -   **Erforderlich:** Ja  
 
-    -   **Werte:** <*Pfad zu erforderlichen Setup-Dateien*>  
+    -   **Werte:** <*Pfad zu den für das Setup erforderlichen Dateien*>  
 
-    -   **Details:** Über diesen Schlüssel wird der Pfad zu den für Setup erforderlichen Dateien angegeben. Je nach dem Wert unter **PrerequisiteComp** wird dieser Pfad von Setup zum Speichern heruntergeladener Dateien oder zum Suchen der zuvor heruntergeladenen Dateien verwendet.  
+    -   **Details:** Über diesen Schlüssel wird der Pfad zu den für das Setup erforderlichen Dateien angegeben. Je nach **PrerequisiteComp**-Wert wird dieser Pfad beim Setup zum Speichern heruntergeladener Dateien oder zum Suchen der zuvor heruntergeladenen Dateien verwendet.  
 
 -   **Schlüsselname:** AdminConsole  
 
@@ -246,6 +246,8 @@ ms.lasthandoff: 12/04/2017
     -   **Details:** Hiermit wird angegeben, ob die Configuration Manager-Konsole installiert werden soll.  
 
 -   **Schlüsselname:** JoinCEIP  
+    > [!Note]  
+    > Ab Configuration Manager Version 1802 ist das CEIP-Feature nicht mehr im Produkt enthalten.
 
     -   **Erforderlich:** Ja  
 
@@ -317,10 +319,10 @@ ms.lasthandoff: 12/04/2017
 
     -   **Werte:** <*Standortdatenbankname*> oder <*Instanzname*>\\<*Standortdatenbankname*>  
 
-    -   **Details:** Gibt den Namen der SQL Server-Datenbank an, der bei der Installation der Datenbank für den Standort der zentralen Verwaltung erstellt oder verwendet werden soll.  
+    -   **Details:** Gibt den Namen der zu erstellenden SQL Server-Datenbank oder der SQL Server-Datenbank an, die bei der Installation der Datenbank für den Standort der zentralen Verwaltung verwendet werden soll.  
 
         > [!IMPORTANT]  
-        >  Sie müssen den Instanznamen und den Namen der Standortdatenbank angeben, falls Sie die Standardinstanz nicht verwenden.  
+        >  Falls Sie nicht die Standardinstanz verwenden, müssen Sie den Instanznamen und den Namen der Standortdatenbank angeben.  
 
 -   **Schlüsselname:** SQLSSBPort  
 
@@ -384,9 +386,9 @@ ms.lasthandoff: 12/04/2017
 
     -   **Erforderlich:** Erforderlich, wenn **UseProxy** gleich 1 ist  
 
-    -   **Werte:** <*Proxyserver-FQDN*>  
+    -   **Werte:**  <*Proxyserver-FQDN*>  
 
-    -   **Details:** Hiermit wird der FQDN des Proxyservers angegeben, der von der Standortsystemrolle „Dienstverbindungspunkt“ verwendet werden wird.  
+    -   **Details:** Hiermit wird der FQDN des Proxyservers angegeben, der von dem Dienstverbindungspunkt verwendet wird.  
 
 -   **Schlüsselname:** ProxyPort  
 
@@ -397,7 +399,7 @@ ms.lasthandoff: 12/04/2017
     -   **Details:** Gibt die für den Proxyport zu verwendende Portnummer an.  
 
 ### <a name="unattended-install-for-a-primary-site"></a>Unbeaufsichtigtes Installieren eines primären Standorts  
-Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Installation eines primären Standorts mithilfe einer Skriptdatei.  
+Im folgenden Abschnitt finden Sie Detailinformationen eines primären Standorts mithilfe einer Skriptdatei zur unbeaufsichtigten Installation.  
 
 **Identification**  
 
@@ -469,15 +471,15 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
          1 = Bereits heruntergeladen  
 
-    -   **Details:** Hiermit wird angegeben, ob die für Setup erforderlichen Dateien bereits heruntergeladen wurden. Wenn Sie beispielsweise den Wert **0** angeben, werden die Dateien von Setup heruntergeladen.  
+    -   **Details:** Hiermit wird angegeben, ob die für das Setup erforderlichen Dateien bereits heruntergeladen wurden. Wenn Sie beispielsweise den Wert **0** angeben, werden die Dateien beim Setup heruntergeladen.  
 
 -   **Schlüsselname:** PrerequisitePath  
 
     -   **Erforderlich:** Ja  
 
-    -   **Werte:** <*Pfad zu erforderlichen Setup-Dateien*>  
+    -   **Werte:** <*Pfad zu den für das Setup erforderlichen Dateien*>  
 
-    -   **Details:** Über diesen Schlüssel wird der Pfad zu den für Setup erforderlichen Dateien angegeben. Je nach dem Wert unter **PrerequisiteComp** wird dieser Pfad von Setup zum Speichern heruntergeladener Dateien oder zum Suchen der zuvor heruntergeladenen Dateien verwendet.  
+    -   **Details:** Über diesen Schlüssel wird der Pfad zu den für das Setup erforderlichen Dateien angegeben. Je nach **PrerequisiteComp**-Wert wird dieser Pfad beim Setup zum Speichern heruntergeladener Dateien oder zum Suchen der zuvor heruntergeladenen Dateien verwendet.  
 
 -   **Schlüsselname:** AdminConsole  
 
@@ -492,6 +494,8 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
     -   **Details:** Hiermit wird angegeben, ob die Configuration Manager-Konsole installiert werden soll.  
 
 -   **Schlüsselname:** JoinCEIP  
+    > [!Note]  
+    > Ab Configuration Manager Version 1802 ist das CEIP-Feature nicht mehr im Produkt enthalten.
 
     -   **Erforderlich:** Ja  
 
@@ -618,7 +622,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
     -   **Details:** Gibt den Namen der SQL Server-Datenbank an, der bei der Installation der primären Standortdatenbank erstellt oder verwendet werden soll.  
 
         > [!IMPORTANT]  
-        >  Sie müssen den Instanznamen und den Namen der Standortdatenbank angeben, falls Sie die Standardinstanz nicht verwenden.  
+        >  Falls Sie nicht die Standardinstanz verwenden, müssen Sie den Instanznamen und den Namen der Standortdatenbank angeben.  
 
 -   **Schlüsselname:** SQLSSBPort  
 
@@ -652,7 +656,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
     -   **Werte:** <*FQDN des Standorts der zentralen Verwaltung*>  
 
-    -   **Details:** Über diesen Schlüssel wird der Standort der zentralen Verwaltung angegeben, dem ein primärer Standort beim Hinzufügen zur Configuration Manager-Hierarchie zugeordnet wird. Sie müssen den Standort der zentralen Verwaltung beim Setup angeben.  
+    -   **Details:** Über diesen Schlüssel wird der Standort der zentralen Verwaltung angegeben, dem ein primärer Standort beim Hinzufügen zur Configuration Manager-Hierarchie zugeordnet wird. Geben Sie den Standort der zentralen Verwaltung beim Setup an.  
 
 -   **Schlüsselname:** CASRetryInterval  
 
@@ -660,7 +664,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
     -   **Werte:** <*Intervall*>  
 
-    -   **Details:** Über diesen Schlüssel wird das Wiederholungsintervall angegeben (in Minuten), wenn beim Herstellen der Verbindung mit dem Standort der zentralen Verwaltung ein Fehler aufgetreten ist. Wenn beispielsweise beim Herstellen der Verbindung mit dem Standort der zentralen Verwaltung ein Fehler auftritt, wird der Verbindungsversuch auf dem primären Standort nach der für den Wert für **CASRetryInterval** angegebenen Anzahl von Minuten wiederholt.  
+    -   **Details:** Über diesen Schlüssel wird das Wiederholungsintervall angegeben (in Minuten), wenn beim Herstellen der Verbindung mit dem Standort der zentralen Verwaltung ein Fehler aufgetreten ist. Wenn beispielsweise beim Herstellen der Verbindung mit dem Standort der zentralen Verwaltung ein Fehler auftritt, wird der Verbindungsversuch am primären Standort nach der für den Wert für **CASRetryInterval** angegebenen Anzahl von Minuten wiederholt.  
 
 -   **Schlüsselname:** WaitForCASTimeout  
 
@@ -710,9 +714,9 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
     -   **Erforderlich:** Erforderlich, wenn **UseProxy** gleich 1 ist  
 
-    -   **Werte:** <*Proxyserver-FQDN*>  
+    -   **Werte:**  <*Proxyserver-FQDN*>  
 
-    -   **Details:** Hiermit wird der FQDN des Proxyservers angegeben, der von der Standortsystemrolle „Dienstverbindungspunkt“ verwendet werden wird.  
+    -   **Details:** Hiermit wird der FQDN des Proxyservers angegeben, der von dem Dienstverbindungspunkt verwendet wird.  
 
 -   **Schlüsselname:** ProxyPort  
 
@@ -723,7 +727,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
     -   **Details:** Gibt die für den Proxyport zu verwendende Portnummer an.  
 
 ### <a name="unattended-recovery-for-a-central-administration-site"></a>Unbeaufsichtigtes Wiederherstellen eines Standorts der zentralen Verwaltung  
- Verwenden Sie die folgenden Details zur Wiederherstellung eines Standorts der zentralen Verwaltung mithilfe einer unbeaufsichtigten Setup-Skriptdatei.  
+ Verwenden Sie die folgenden Details zur Wiederherstellung eines Standorts der zentralen Verwaltung mithilfe einer Skriptdatei zur unbeaufsichtigten Installation.  
 
 **Identification**  
 
@@ -757,7 +761,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
          4 = nur Wiederherstellung von SQL Server  
 
-    -   **Details:** Hiermit wird angegeben, ob von Setup der Standortserver, SQL Server oder beides wiederhergestellt wird. Die zugeordneten Schlüssel sind erforderlich, wenn Sie den folgenden Wert für die Einstellung **ServerRecoveryOptions** festlegen:  
+    -   **Details:** Hiermit wird angegeben, ob der Standortserver, SQL Server oder beides beim Setup wiederhergestellt wird. Die zugeordneten Schlüssel sind erforderlich, wenn Sie den folgenden Wert für die Einstellung **ServerRecoveryOptions** festlegen:  
 
         -   Wert = 1: Sie können einen Wert für den Schlüssel **SiteServerBackupLocation** angeben, um den Standort aus einer Standortsicherung wiederherstellen zu lassen. Wenn Sie keinen Wert angeben, wird der Standort erneut installiert, ohne ihn aus einem Sicherungssatz wiederherzustellen.  
 
@@ -779,7 +783,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
          80 = Überspringen der Datenbankwiederherstellung.  
 
-    -   **Details:** Hiermit wird angegeben, wie die Standortdatenbank in SQL Server durch Setup wiederhergestellt wird.  
+    -   **Details:** Hiermit wird angegeben, wie die Standortdatenbank in SQL Server beim Setup wiederhergestellt wird.  
 
 -   **Schlüsselname:** ReferenceSite  
 
@@ -825,7 +829,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
     -   **Werte:** <*Standortcode*>  
 
-    -   **Details:** Hiermit werden drei alphanumerische Zeichen angegeben, durch die der Standort in der Hierarchie eindeutig angegeben wird. Sie müssen den Standortcode angeben, der vor dem Auftreten des Fehlers vom Standort verwendet wurde.
+    -   **Details:** Hiermit werden drei alphanumerische Zeichen angegeben, durch die der Standort in der Hierarchie eindeutig angegeben wird. Geben Sie den Standortcode an, der vor dem Auftreten des Fehlers vom Standort verwendet wurde.
 
 -   **Schlüsselname:** SiteName  
 
@@ -849,7 +853,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
     -   **Werte:** <*SMS-Anbieter-FQDN*>  
 
-    -   **Details:** Hiermit wird der FQDN des Servers angegeben, auf dem der SMS-Anbieter gehostet wird. Sie müssen den Server angeben, von dem der SMS-Anbieter vor Auftreten des Fehlers gehostet wurde.  
+    -   **Details:** Hiermit wird der FQDN des Servers angegeben, auf dem der SMS-Anbieter gehostet wird. Geben Sie den Server an, auf dem der SMS-Anbieter vor Auftreten des Fehlers gehostet wurde.  
 
          Nach der Erstinstallation können Sie zusätzliche SMS-Anbieter für den Standort konfigurieren. Weitere Informationen zum SMS-Anbieter finden Sie im Abschnitt [Planen des SMS-Anbieters für System Center Configuration Manager](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
@@ -863,15 +867,15 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
          1 = Bereits heruntergeladen  
 
-    -   **Details:** Hiermit wird angegeben, ob die für Setup erforderlichen Dateien bereits heruntergeladen wurden. Wenn Sie beispielsweise den Wert **0**angeben, werden die Dateien von Setup heruntergeladen.  
+    -   **Details:** Hiermit wird angegeben, ob die für das Setup erforderlichen Dateien bereits heruntergeladen wurden. Wenn Sie beispielsweise den Wert **0** angeben, werden die Dateien beim Setup heruntergeladen.  
 
 -   **Schlüsselname:** PrerequisitePath  
 
     -   **Erforderlich:** Ja  
 
-    -   **Werte:** <*Pfad zu erforderlichen Setup-Dateien*>  
+    -   **Werte:** <*Pfad zu den für das Setup erforderlichen Dateien*>  
 
-    -   **Details:** Über diesen Schlüssel wird der Pfad zu den für Setup erforderlichen Dateien angegeben. Je nach dem Wert unter **PrerequisiteComp** wird dieser Pfad von Setup zum Speichern heruntergeladener Dateien oder zum Suchen der zuvor heruntergeladenen Dateien verwendet.  
+    -   **Details:** Über diesen Schlüssel wird der Pfad zu den für das Setup erforderlichen Dateien angegeben. Je nach **PrerequisiteComp**-Wert wird dieser Pfad beim Setup zum Speichern heruntergeladener Dateien oder zum Suchen der zuvor heruntergeladenen Dateien verwendet.  
 
 -   **Schlüsselname:** AdminConsole  
 
@@ -886,6 +890,8 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
     -   **Details:** Hiermit wird angegeben, ob die Configuration Manager-Konsole installiert werden soll.  
 
 -   **Schlüsselname:** JoinCEIP  
+    > [!Note]  
+    > Ab Configuration Manager Version 1802 ist das CEIP-Feature nicht mehr im Produkt enthalten.
 
     -   **Erforderlich:** Ja  
 
@@ -905,7 +911,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
     -   **Werte:** <*SQL Server-Name*>  
 
-    -   **Details:** Gibt den Namen des Servers oder der gruppierten Instanz an, die SQL Server ausführen, auf dem die Standortdatenbank gehostet werden soll. Sie müssen den Server angeben, von dem die Standortdatenbank vor dem Auftreten des Fehlers gehostet wurde.  
+    -   **Details:** Gibt den Namen des Servers oder der gruppierten Instanz an, der bzw. die SQL Server ausführt und auf dem bzw. der die Standortdatenbank gehostet wird. Geben Sie denselben Server an, auf dem die Standortdatenbank vor dem Auftreten des Fehlers gehostet wurde.  
 
 -   **Schlüsselname:** DatabaseName  
 
@@ -913,10 +919,10 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
     -   **Werte:** <*Standortdatenbankname*> oder <*Instanzname*>\\<*Standortdatenbankname*>  
 
-    -   **Details:** Gibt den Namen der SQL Server-Datenbank an, der bei der Installation der Datenbank für den Standort der zentralen Verwaltung erstellt oder verwendet werden soll. Sie müssen den gleichen Datenbanknamen angeben, der vor Auftreten des Fehlers verwendet wurde.  
+    -   **Details:** Gibt den Namen der SQL Server-Datenbank an, der bei der Installation der Datenbank für den Standort der zentralen Verwaltung erstellt oder verwendet werden soll. Geben Sie denselben Datenbanknamen an, der vor Auftreten des Fehlers verwendet wurde.  
 
         > [!IMPORTANT]  
-        >  Sie müssen den Instanznamen und den Namen der Standortdatenbank angeben, falls Sie die Standardinstanz nicht verwenden.  
+        >  Falls Sie nicht die Standardinstanz verwenden, müssen Sie den Instanznamen und den Namen der Standortdatenbank angeben.  
 
 -   **Schlüsselname:** SQLSSBPort  
 
@@ -924,7 +930,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
     -   **Werte:** <*SSB-Portnummer*>  
 
-    -   **Details:** Gibt den SSB-Port an, der von SQL Server verwendet wird. SSB ist normalerweise für die Verwendung von TCP-Port 4022 konfiguriert. Sie müssen den gleichen SSB-Port angeben, der vor Auftreten des Fehlers verwendet wurde.  
+    -   **Details:** Gibt den SSB-Port an, der von SQL Server verwendet wird. SSB ist normalerweise für die Verwendung von TCP-Port 4022 konfiguriert. Geben Sie denselben SSB-Port an, der vor Auftreten des Fehlers verwendet wurde.  
 
 -   **Schlüsselname:** SQLDataFilePath  
 
@@ -980,9 +986,9 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
     -   **Erforderlich:** Erforderlich, wenn **CloudConnector** gleich 1 ist  
 
-    -   **Werte:** <*Proxyserver-FQDN*>  
+    -   **Werte:**  <*Proxyserver-FQDN*>  
 
-    -   **Details:** Hiermit wird der FQDN des Proxyservers angegeben, der von der Standortsystemrolle „Dienstverbindungspunkt“ verwendet werden wird.  
+    -   **Details:** Hiermit wird der FQDN des Proxyservers angegeben, der von dem Dienstverbindungspunkt verwendet wird.  
 
 -   **Schlüsselname:** ProxyPort  
 
@@ -993,7 +999,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
     -   **Details:** Gibt die für den Proxyport zu verwendende Portnummer an.  
 
 ### <a name="unattended-recovery-for-a-primary-site"></a>Unbeaufsichtigte Wiederherstellung eines primären Standorts  
- Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Wiederherstellung eines primären Standorts mithilfe einer Skriptdatei.  
+ Im folgenden Abschnitt finden Sie Detailinformationen Wiederherstellung eines primären Standorts mithilfe einer Skriptdatei zur unbeaufsichtigten Installation.  
 
 **Identification**  
 
@@ -1027,7 +1033,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
          4 = nur Wiederherstellung von SQL Server  
 
-    -   **Details:** Hiermit wird angegeben, ob von Setup der Standortserver, SQL Server oder beides wiederhergestellt wird. Die zugeordneten Schlüssel sind erforderlich, wenn Sie den folgenden Wert für die Einstellung **ServerRecoveryOptions** festlegen:  
+    -   **Details:** Hiermit wird angegeben, ob der Standortserver, SQL Server oder beides beim Setup wiederhergestellt wird. Die zugeordneten Schlüssel sind erforderlich, wenn Sie den folgenden Wert für die Einstellung **ServerRecoveryOptions** festlegen:  
 
         -   Wert = 1: Sie können einen Wert für den Schlüssel **SiteServerBackupLocation** angeben, um den Standort aus einer Standortsicherung wiederherstellen zu lassen. Wenn Sie keinen Wert angeben, wird der Standort erneut installiert, ohne ihn aus einem Sicherungssatz wiederherzustellen.  
 
@@ -1049,7 +1055,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
          80 = Überspringen der Datenbankwiederherstellung.  
 
-    -   **Details:** Hiermit wird angegeben, wie die Standortdatenbank in SQL Server durch Setup wiederhergestellt wird.  
+    -   **Details:** Hiermit wird angegeben, wie die Standortdatenbank in SQL Server beim Setup wiederhergestellt wird.  
 
 -   **Schlüsselname:** SiteServerBackupLocation  
 
@@ -1085,7 +1091,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
     -   **Werte:** <*Standortcode*>  
 
-    -   **Details:** Hiermit werden drei alphanumerische Zeichen angegeben, durch die der Standort in der Hierarchie eindeutig angegeben wird. Sie müssen den Standortcode angeben, der vor dem Auftreten des Fehlers vom Standort verwendet wurde.
+    -   **Details:** Hiermit werden drei alphanumerische Zeichen angegeben, durch die der Standort in der Hierarchie eindeutig angegeben wird. Geben Sie den Standortcode an, der vor dem Auftreten des Fehlers vom Standort verwendet wurde.
 
 -   **Schlüsselname:** SiteName  
 
@@ -1109,7 +1115,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
     -   **Werte:** <*SMS-Anbieter-FQDN*>  
 
-    -   **Details:** Hiermit wird der FQDN des Servers angegeben, auf dem der SMS-Anbieter gehostet wird. Sie müssen den Server angeben, von dem der SMS-Anbieter vor Auftreten des Fehlers gehostet wurde. Nach der Erstinstallation können Sie zusätzliche SMS-Anbieter für den Standort konfigurieren. Weitere Informationen zum SMS-Anbieter finden Sie im Abschnitt [Planen des SMS-Anbieters für System Center Configuration Manager](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
+    -   **Details:** Hiermit wird der FQDN des Servers angegeben, auf dem der SMS-Anbieter gehostet wird. Geben Sie den Server an, auf dem der SMS-Anbieter vor Auftreten des Fehlers gehostet wurde. Konfigurieren Sie nach der Erstinstallation zusätzliche SMS-Anbieter für den Standort. Weiter Informationen zum SMS-Anbieter finden Sie unter [Planen des SMS-Anbieters](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
 -   **Schlüsselname:** PrerequisiteComp  
 
@@ -1121,15 +1127,15 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
          1 = Bereits heruntergeladen  
 
-    -   **Details:** Hiermit wird angegeben, ob die für Setup erforderlichen Dateien bereits heruntergeladen wurden. Wenn Sie beispielsweise den Wert **0**angeben, werden die Dateien von Setup heruntergeladen.  
+    -   **Details:** Hiermit wird angegeben, ob die für das Setup erforderlichen Dateien bereits heruntergeladen wurden. Wenn Sie beispielsweise den Wert **0** angeben, werden die Dateien beim Setup heruntergeladen.  
 
 -   **Schlüsselname:** PrerequisitePath  
 
     -   **Erforderlich:** Ja  
 
-    -   **Werte:** <*Pfad zu erforderlichen Setup-Dateien*>  
+    -   **Werte:** <*Pfad zu den für das Setup erforderlichen Dateien*>  
 
-    -   **Details:** Über diesen Schlüssel wird der Pfad zu den für Setup erforderlichen Dateien angegeben. Je nach dem Wert unter **PrerequisiteComp** wird dieser Pfad von Setup zum Speichern heruntergeladener Dateien oder zum Suchen der zuvor heruntergeladenen Dateien verwendet.  
+    -   **Details:** Über diesen Schlüssel wird der Pfad zu den für das Setup erforderlichen Dateien angegeben. Je nach **PrerequisiteComp**-Wert wird dieser Pfad beim Setup zum Speichern heruntergeladener Dateien oder zum Suchen der zuvor heruntergeladenen Dateien verwendet.  
 
 -   **Schlüsselname:** AdminConsole  
 
@@ -1144,6 +1150,8 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
     -   **Details:** Hiermit wird angegeben, ob die Configuration Manager-Konsole installiert werden soll.  
 
 -   **Schlüsselname:** JoinCEIP  
+    > [!Note]  
+    > Ab Configuration Manager Version 1802 ist das CEIP-Feature nicht mehr im Produkt enthalten.
 
     -   **Erforderlich:** Ja  
 
@@ -1163,20 +1171,20 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
     -   **Werte:** <*SQL Server-Name*>  
 
-    -   **Details:** Gibt den Namen des Servers oder der gruppierten Instanz an, die SQL Server ausführen, auf dem die Standortdatenbank gehostet werden soll. Sie müssen den Server angeben, von dem die Standortdatenbank vor dem Auftreten des Fehlers gehostet wurde.  
+    -   **Details:** Gibt den Namen des Servers oder der gruppierten Instanz an, der bzw. die SQL Server ausführt und auf dem bzw. der die Standortdatenbank gehostet wird. Geben Sie denselben Server an, auf dem die Standortdatenbank vor dem Auftreten des Fehlers gehostet wurde.  
 
 -   **Schlüsselname:** DatabaseName  
 
     -   **Erforderlich:** Ja  
 
-    -   **Werte:**  <*Standortdatenbankname*> oder <*Instanzname*>\\<*Standortdatenbankname*>
+    -   **Werte:** <*Standortdatenbankname*> oder <*Instanzname*>\\<*Standortdatenbankname*>
 
     -   **Details:**  
 
-         Gibt den Namen der SQL Server-Datenbank an, der bei der Installation der Datenbank für den Standort der zentralen Verwaltung erstellt oder verwendet werden soll. Sie müssen den gleichen Datenbanknamen angeben, der vor Auftreten des Fehlers verwendet wurde.  
+         Gibt den Namen der SQL Server-Datenbank an, der bei der Installation der Datenbank für den Standort der zentralen Verwaltung erstellt oder verwendet werden soll. Geben Sie denselben Datenbanknamen an, der vor Auftreten des Fehlers verwendet wurde.  
 
         > [!IMPORTANT]  
-        >  Sie müssen den Instanznamen und den Namen der Standortdatenbank angeben, falls Sie die Standardinstanz nicht verwenden.  
+        >  Falls Sie nicht die Standardinstanz verwenden, müssen Sie den Instanznamen und den Namen der Standortdatenbank angeben.  
 
 -   **Schlüsselname:** SQLSSBPort  
 
@@ -1184,7 +1192,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
     -   **Werte:** <*SSB-Portnummer*>  
 
-    -   **Details:** Gibt den SSB-Port an, der von SQL Server verwendet wird. SSB ist normalerweise für die Verwendung von TCP-Port 4022 konfiguriert. Sie müssen den gleichen SSB-Port angeben, der vor Auftreten des Fehlers verwendet wurde.  
+    -   **Details:** Gibt den SSB-Port an, der von SQL Server verwendet wird. SSB ist normalerweise für die Verwendung von TCP-Port 4022 konfiguriert. Geben Sie denselben SSB-Port an, der vor Auftreten des Fehlers verwendet wurde.  
 
 -   **Schlüsselname:** SQLDataFilePath  
 
@@ -1210,7 +1218,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
     -   **Werte:** <*Standortcode für den Standort der zentralen Verwaltung*>  
 
-    -   **Details:** Hiermit wird der Standort der zentralen Verwaltung angegeben, dem ein primärer Standort beim Verknüpfen mit der Configuration Manager-Hierarchie zugeordnet wird. Diese Einstellung ist erforderlich, wenn der primäre Standort vor dem Fehler mit einem zentralen Verwaltungsstandort verbunden war. Sie müssen den Standortcode angeben, der vor dem Auftreten des Fehlers vom zentralen Verwaltungsstandort verwendet wurde.  
+    -   **Details:** Hiermit wird der Standort der zentralen Verwaltung angegeben, dem ein primärer Standort beim Verknüpfen mit der Configuration Manager-Hierarchie zugeordnet wird. Diese Einstellung ist erforderlich, wenn der primäre Standort vor dem Fehler mit einem zentralen Verwaltungsstandort verbunden war. Geben Sie den Standortcode an, der vor dem Auftreten des Fehlers vom Standort der zentralen Verwaltung verwendet wurde.  
 
 -   **Schlüsselname:** CASRetryInterval  
 
@@ -1266,9 +1274,9 @@ Im folgenden Abschnitt finden Sie Detailinformationen zur unbeaufsichtigten Inst
 
     -   **Erforderlich:** Erforderlich, wenn **CloudConnector** gleich 1 ist  
 
-    -   **Werte:** <*Proxyserver-FQDN*>  
+    -   **Werte:**  <*Proxyserver-FQDN*>  
 
-    -   **Details:** Hiermit wird der FQDN des Proxyservers angegeben, der von der Standortsystemrolle „Dienstverbindungspunkt“ verwendet werden wird.  
+    -   **Details:** Hiermit wird der FQDN des Proxyservers angegeben, der von dem Dienstverbindungspunkt verwendet wird.  
 
 -   **Schlüsselname:** ProxyPort  
 

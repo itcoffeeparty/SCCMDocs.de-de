@@ -1,9 +1,9 @@
 ---
 title: Data Warehouse
 titleSuffix: Configuration Manager
-description: "Data Warehouse-Dienstpunkt und -Datenbank für System Center Configuration Manager"
+description: Data Warehouse-Dienstpunkt und -Datenbank für System Center Configuration Manager
 ms.custom: na
-ms.date: 02/26/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,15 +12,15 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 954ec65bae15e087d6cf5afbcc8e0da1ebf83533
-ms.sourcegitcommit: be939893f0ceca4add8655ae2c24e42aa16aec38
+ms.openlocfilehash: 83bfc0e3d7bdf1ff8718c7c211c897e37b21a06b
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/23/2018
 ---
 #  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>Der Data Warehouse-Dienstpunkt für System Center Configuration Manager
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -88,6 +88,7 @@ Seite **Allgemein**:
      - **Datenbankname**: Geben Sie den Namen für die Data Warehouse-Datenbank an. Der Name der Datenbank darf nicht länger als 10 Zeichen sein. (Die unterstützte Länge wird in einer zukünftigen Version erhöht werden).
      Configuration Manager erstellt die Data Warehouse-Datenbank mit diesem Namen. Wenn ein Datenbankname angegeben wird, der bereits in der Instanz von SQL Server existiert, verwendet Configuration Manager diese Datenbank.
      - **Verwendeter SQL Server-Port für die Verbindung**: Geben Sie die TCP/IP-Portnummer an, die für den SQL Server konfiguriert ist, der die Data Warehouse-Datenbank hostet. Dieser Port wird vom Data Warehouse-Synchronisierungsdienst verwendet, um eine Verbindung mit der Data Warehouse-Datenbank herzustellen.  
+     - **Konto für Data Warehouse-Dienstpunkt:** Ab Version 1802 geben Sie hiermit das Konto an, das von SQL Server Reporting Services beim Herstellen einer Verbindung mit der Data Warehouse-Datenbank verwendet wird. 
 
 Seite **Synchronisierungszeitplan**:   
 - **Synchronisierungszeitplan**:
@@ -96,8 +97,12 @@ Seite **Synchronisierungszeitplan**:
          - **Täglich**: Legen Sie fest, dass die Synchronisierung täglich durchgeführt wird.
          - **Wöchentlich**: Legen Sie einen Tag in der Woche fest, an dem die Synchronisierung wöchentlich durchgeführt werden soll.
 
+
 ## <a name="reporting"></a>Berichterstellung
 Nachdem Sie einen Data Warehouse-Dienstpunkt installiert haben, sind mehrere Berichte unter dem Reporting Services-Punkt verfügbar, der am gleichen Standort installiert ist. Wenn Sie den Data Warehouse-Dienstpunkt vor der Installation eines Reporting Services-Punkts installieren, werden die Berichte automatisch mit der späteren Installation des Reporting Services-Punkt hinzugefügt.
+
+>[!WARNING]
+>Ab Configuration Manager Version 1802 werden alternative Anmeldeinformationen für den Data Warehouse-Punkt unterstützt. <!--507334-->Wenn Sie für eine frühere Version von Configuration Manager ein Upgrade durchgeführt haben, müssen Sie Anmeldeinformationen angeben, mit denen SQL Server Reporting Services eine Verbindung mit der Data Warehouse-Datenbank herstellen kann. Data Warehouse-Berichte können erst nach Angabe der Anmeldeinformationen geöffnet werden. Navigieren Sie zum Angeben eines Kontos zu **Verwaltung** >**Standortkonfiguration** >**Servers and Site System Roles** (Server und Standortsystemrollen). Klicken Sie auf den Server mit dem Data Warehouse-Dienstpunkt, und klicken Sie anschließend mit der rechten Maustaste auf die Data Warehouse-Dienstpunktrolle. Klicken Sie auf **Eigenschaften**, und geben Sie dann das **Konto für Data Warehouse-Dienstpunkt** an.
 
 Die Data Warehouse-Standortsystemrolle beinhaltet folgende Berichte in der Kategorie **Data Warehouse**:
  - **Anwendungsbereitstellungsbericht – Verlauf**: Anzeigen von Details zur Anwendungsbereitstellung für eine bestimmte Anwendung und einen bestimmten Computer

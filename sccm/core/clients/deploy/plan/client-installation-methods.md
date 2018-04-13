@@ -1,38 +1,39 @@
 ---
 title: Clientinstallationsmethoden
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr über Clientinstallationsmethoden für System Center Configuration Manager."
+description: In diesem Artikel erhalten Sie Informationen zu unterschiedlichen Installationsmethoden für den Configuration Manager-Client.
 ms.custom: na
-ms.date: 04/25/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-client
+ms.technology:
+- configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 51b5964b-374d-4abc-8619-414a9fffad2d
-caps.latest.revision: "9"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 4c600212c817e8b490e93938387b18c65baee042
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+caps.latest.revision: 9
+caps.handback.revision: 0
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 38f7d428149f4a4ac2b0bcb604031eca60a0fae5
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="client-installation-methods-in-system-center-configuration-manager"></a>Clientinstallationsmethoden in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Sie können andere Methoden verwenden, um Configuration Manager-Clientsoftware zu installieren. Sie können eine Methode oder eine Kombination von Methoden verwenden. In diesem Thema können Sie weiterlesen, um zu erfahren, welche Methode für Ihrer Organisation am besten geeignet ist.  
+Sie können unterschiedliche Methoden verwenden, um Configuration Manager-Clientsoftware zu installieren. Dabei ist sowohl eine einzelne Methode als auch eine Kombination mehrerer Methoden denkbar. In diesem Artikel werden alle Methoden beschrieben, damit Sie die für Ihre Organstation geeignete auswählen können.  
 
 ## <a name="client-push-installation"></a>Clientpushinstallation  
 
- **Unterstützte Clientplattformen:** Windows  
+**Unterstützte Clientplattform:** Windows  
 
- **Vorteile**  
+#### <a name="advantages"></a>Vorteile  
 
 -   Kann für die Installation des Clients auf einem einzelnen Computer, einer Sammlung von Computern oder den Ergebnissen einer Abfrage verwendet werden.  
 
@@ -40,7 +41,7 @@ Sie können andere Methoden verwenden, um Configuration Manager-Clientsoftware z
 
 -   Verwendet automatisch die Clientinstallationseigenschaften, die im Dialogfeld **Eigenschaften von Clientpushinstallation** auf der Registerkarte **Client** definiert sind.  
 
- **Nachteile**  
+#### <a name="disadvantages"></a>Nachteile  
 
 -   Kann beträchtlichen Netzwerkverkehr verursachen, wenn mithilfe von Push auf große Sammlungen übertragen wird.  
 
@@ -50,98 +51,141 @@ Sie können andere Methoden verwenden, um Configuration Manager-Clientsoftware z
 
 -   Es muss ein Clientpushinstallationskonto angegeben werden, das über Administratorrechte für den betreffenden Clientcomputer verfügt.  
 
--   Die Windows-Firewall muss auf Clientcomputern mit Ausnahmeregeln konfiguriert sein, damit die Clientpushinstallation abgeschlossen werden kann.  
+-   Für die Windows-Firewall müssen Ausnahmen auf den Clientcomputern konfiguriert werden.   
 
--   Sie können die Clientpushinstallation nicht abbrechen. Wenn Sie diese Clientinstallationsmethode für einen Standort verwenden, wird die Ausführung der Installation des Clients von Configuration Manager auf allen ermittelten Ressourcen versucht und beim Auftreten von Fehlern bis zu sieben Tage lang wiederholt.  
+-   Sie können die Clientpushinstallation nicht abbrechen. Configuration Manager versucht, den Client auf allen ermittelten Ressourcen zu installieren. Bei Fehlern wird bis zu sieben Tage lang versucht, die Installation durchzuführen.  
 
- Weitere Informationen zu dieser Installationsmethode finden Sie unter [Bereitstellen von Clients auf Windows-Computern in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
+Weitere Informationen finden Sie unter [Installieren von Clients mittels Clientpush](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).  
+
+
 
 ## <a name="software-update-point-based-installation"></a>Auf einem Softwareupdatepunkt basierende Installation  
- **Unterstützte Clientplattformen:** Windows  
 
- **Vorteile:**  
+**Unterstützte Clientplattform:** Windows  
+
+#### <a name="advantages"></a>Vorteile  
 
 -   Kann die vorhandene Softwareupdateinfrastruktur für die Verwaltung der Clientsoftware verwenden.  
 
--   Kann automatisch die Clientsoftware auf neuen Computern installieren, wenn WSUS (Windows Server Update Services) und Gruppenrichtlinieneinstellungen in Active Directory-Domänendienste ordnungsgemäß konfiguriert sind.  
+-   Wenn WSUS (Windows Server Update Services) und Gruppenrichtlinieneinstellungen in Active Directory Domain Services ordnungsgemäß konfiguriert sind, kann die Clientsoftware automatisch auf neuen Computern installiert werden.  
 
--   Erfordert keine Ermittlung von Computern als Voraussetzung für die Installation des Clients.  
+-   Keine Ermittlung von Computern für die Installation des Clients erforderlich.  
 
 -   Clientinstallationseigenschaften, die in Active Directory-Domänendienste veröffentlicht wurden, können von Computern gelesen werden.  
 
--   Installiert die Clientsoftware erneut, wenn sie entfernt wurde.  
+-   Wenn der Client entfernt wird, wird er durch diese Methode erneut installiert.  
 
--   Erfordert keine Konfiguration oder Wartung eines Installationskontos für den betreffenden Clientcomputer.  
+-   Keine Konfiguration oder Wartung eines Installationskontos für den betreffenden Clientcomputer erforderlich.  
 
- **Nachteile:**  
+#### <a name="disadvantages"></a>Nachteile  
 
 -   Erfordert eine funktionsfähige Softwareupdateinfrastruktur als Voraussetzung.  
 
--   Muss denselben Server für die Clientinstallation und für die Softwareupdates verwenden, und dieser Server muss sich innerhalb eines primären Standorts befinden.  
+-   Für die Clientinstallation und für Softwareupdates muss derselbe Server verwendet werden. Dieser Server muss sich an einem primären Standort befinden.  
 
--   Sie müssen ein Gruppenrichtlinienobjekt (Group Policy Object, GPO) in Active Directory-Domänendienste mit dem aktiven Softwareupdatepunkt des Clients und dem Port konfigurieren, um neue Clients zu installieren.  
+-   Sie müssen ein Gruppenrichtlinienobjekt in Active Directory Domain Services mit dem aktiven Softwareupdatepunkt des Clients und dem Port konfigurieren, um neue Clients zu installieren.  
 
 -   Wenn das Active Directory-Schema nicht für Configuration Manager erweitert wurde, müssen Sie Gruppenrichtlinieneinstellungen zur Bereitstellung von Computern mit Clientinstallationseigenschaften verwenden.  
 
- Weitere Informationen zu dieser Installationsmethode finden Sie unter [Bereitstellen von Clients auf Windows-Computern in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
+Weitere Informationen finden Sie unter [How to install clients with software update-based installation (Installieren von Clients mithilfe einer auf einem Softwareupdate basierenden Installation)](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientSUP).  
+
+
 
 ## <a name="group-policy-installation"></a>Gruppenrichtlinieninstallation  
- **Unterstützte Clientplattformen:** Windows  
 
- **Vorteile:**  
+**Unterstützte Clientplattform:** Windows  
 
--   Erfordert keine Ermittlung von Computern als Voraussetzung für die Installation des Clients.  
+#### <a name="advantages"></a>Vorteile  
+
+-   Keine Ermittlung von Computern für die Installation des Clients erforderlich.  
 
 -   Kann für neue Clientinstallationen oder für Aktualisierungen verwendet werden.  
 
 -   Clientinstallationseigenschaften, die in Active Directory-Domänendienste veröffentlicht wurden, können von Computern gelesen werden.  
 
--   Erfordert keine Konfiguration oder Wartung eines Installationskontos für den betreffenden Clientcomputer.  
+-   Keine Konfiguration oder Wartung eines Installationskontos für den betreffenden Clientcomputer erforderlich.  
 
- **Nachteile:**  
+#### <a name="disadvantages"></a>Nachteile  
 
--   Kann beträchtlichen Netzwerkverkehr verursachen, wenn eine große Anzahl an Clients installiert wird.  
+-   Wenn eine große Anzahl von Clients installiert wird, kann dies beträchtlichen Netzwerkdatenverkehr verursachen.  
 
 -   Wenn das Active Directory-Schema nicht für Configuration Manager erweitert wurde, müssen Sie die Clientinstallationseigenschaften mithilfe von Gruppenrichtlinieneinstellungen den Computern des Standorts hinzufügen.  
 
- Weitere Informationen zu dieser Installationsmethode finden Sie unter [Bereitstellen von Clients auf Windows-Computern in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
+Weitere Informationen finden Sie unter [Installieren von Clients mit einer Gruppenrichtlinie](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientGP).  
+
+
 
 ## <a name="logon-script-installation"></a>Anmeldeskriptinstallation  
- **Unterstützte Clientplattformen:** Windows  
 
- **Vorteile:**  
+**Unterstützte Clientplattform:** Windows  
 
--   Erfordert keine Ermittlung von Computern als Voraussetzung für die Installation des Clients.  
+#### <a name="advantages"></a>Vorteile  
+
+-   Keine Ermittlung von Computern für die Installation des Clients erforderlich.  
 
 -   Unterstützt die Verwendung von Befehlszeileneigenschaften für CCMSetup.  
 
- **Nachteile:**  
+#### <a name="disadvantages"></a>Nachteile  
 
--   Kann beträchtlichen Netzwerkverkehr verursachen, wenn in kurzer Zeit eine große Anzahl von Clients installiert wird.  
+-   Wenn in kurzer Zeit eine große Anzahl von Clients installiert wird, kann dies beträchtlichen Netzwerkdatenverkehr verursachen.  
 
--   Die Installation auf allen Clientcomputern kann sehr lange dauern, wenn Benutzer sich nicht regelmäßig beim Netzwerk anmelden.  
+-   Wenn Benutzer sich nicht regelmäßig beim Netzwerk anmelden, kann die Installation auf allen Clientcomputern sehr lange dauern.  
 
- Weitere Informationen zu dieser Installationsmethode finden Sie unter [Bereitstellen von Clients auf Windows-Computern in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
+Weitere Informationen finden Sie unter [Installieren von Clients mithilfe von Anmeldeskripts](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientLogonScript).  
+
+
 
 ## <a name="manual-installation"></a>Manuelle Installation  
- **Unterstützte Clientplattformen:** Windows, UNIX/Linux, Mac OS X  
 
- **Vorteile:**  
+**Unterstützte Clientplattformen:** Windows, UNIX/Linux, Mac OS X  
 
--   Erfordert keine Ermittlung von Computern als Voraussetzung für die Installation des Clients.  
+#### <a name="advantages"></a>Vorteile  
+
+-   Keine Ermittlung von Computern für die Installation des Clients erforderlich.  
 
 -   Kann zu Testzwecken verwendet werden.  
 
 -   Unterstützt die Verwendung von Befehlszeileneigenschaften für CCMSetup.  
 
- **Nachteile:**  
+#### <a name="disadvantages"></a>Nachteile  
 
 -   Keine Automatisierung, daher zeitaufwändig.  
 
- Weitere Informationen zum manuellen Installieren des Clients auf jeder Plattform finden hier:  
+Weitere Informationen zum manuellen Installieren des Clients auf unterschiedlichen Plattformen finden in den folgenden Artikeln:  
 
--   [Bereitstellen von Clients auf Windows-Computern in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)  
+-   [Bereitstellen von Clients auf Windows-Computern](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual)  
 
--   [Bereitstellen von Clients auf UNIX- und Linux-Servern in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md)  
+-   [Bereitstellen von Clients auf UNIX- und Linux-Servern](/sccm/core/clients/deploy/deploy-clients-to-unix-and-linux-servers)  
 
--   [Bereitstellen von Clients auf Macintosh-Computern in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-macs.md)  
+-   [Bereitstellen von Clients auf Macintosh-Computern](/sccm/core/clients/deploy/deploy-clients-to-macs)  
+
+
+
+## <a name="microsoft-intune-mdm-installation"></a>Installation von Microsoft Intune-MDM
+
+**Unterstützte Clientplattform:** Windows 10
+
+#### <a name="advantages"></a>Vorteile  
+
+-   Keine Ermittlung von Computern für die Installation des Clients erforderlich.  
+
+-   Keine Konfiguration oder Wartung eines Installationskontos für den betreffenden Clientcomputer erforderlich.  
+
+-   Authentifizierung mit Azure Active Directory ist möglich.  
+
+-   Computer im Internet können installiert und zugewiesen werden.  
+
+-   Automatische Verwendung mit Windows Autopilot und Microsoft Intune für die Co-Verwaltung möglich.  
+
+#### <a name="disadvantages"></a>Nachteile  
+
+-   Zusätzliche Technologien, die nicht in Configuration Manager verfügbar sind, sind erforderlich.  
+
+-   Ein Gerät muss auch dann auf das Internet zugreifen können, wenn es nicht internetbasiert ist.  
+
+Weitere Informationen finden Sie in den folgenden Artikeln:  
+
+-   [Installieren von Clients für mit Intune MDM verwaltete Windows-Geräte](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#bkmk_mdm)  
+
+-   [Installieren und Zuweisen von Windows 10-Clients in Configuration Manager mit Authentifizierung über Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure)  
+

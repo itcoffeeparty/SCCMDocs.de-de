@@ -1,34 +1,35 @@
 ---
 title: Konfigurieren des Endpoint Protection-Clients
 titleSuffix: Configuration Manager
-description: "Erfahren Sie, wie Sie benutzerdefinierte Clienteinstellungen für Endpoint Protection konfigurieren, die in der Computersammlung in Ihrer Hierarchie bereitgestellt werden können."
+description: Erfahren Sie, wie Sie benutzerdefinierte Clienteinstellungen für Endpoint Protection konfigurieren, die in der Computersammlung in Ihrer Hierarchie bereitgestellt werden können.
 ms.custom: na
-ms.date: 02/14/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
-caps.latest.revision: "21"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: de8f7411219446420a8c8bca00799d8d7d18fd2f
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+caps.latest.revision: 21
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.openlocfilehash: 22c56bac25cc6e3129f2e8478bbae9fa8782de9f
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="configure-custom-client-settings-for-endpoint-protection"></a>Konfigurieren von benutzerdefinierten Clienteinstellungen für Endpoint Protection
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Mit diesem Verfahren können benutzerdefinierte Clienteinstellungen für Endpoint Protection konfiguriert werden, die dann auf eine Computersammlung in Ihrer Hierarchie bereitgestellt werden können.
+Mit den folgenden Anweisungen konfigurieren Sie benutzerdefinierte Clienteinstellungen für Endpoint Protection, die dann auf einer Computersammlung in Ihrer Hierarchie bereitgestellt werden können.
 
 > [!IMPORTANT]
->  Konfigurieren Sie die standardmäßige Endpoint Protection-Clienteinstellungen nur, wenn Sie sicher sind, dass diese Einstellungen auf alle Computer in Ihrer Hierarchie angewendet werden sollen.
+>  Konfigurieren Sie die Endpoint Protection-Clientstandardeinstellungen nur, wenn Sie sicher sind, dass diese Einstellungen für alle Computer in Ihrer Hierarchie verwendet werden sollen. 
 
 ## <a name="to-enable-endpoint-protection-and-configure-custom-client-settings"></a>So aktivieren Sie Endpoint Protection und konfigurieren benutzerdefinierte Clienteinstellungen
 
@@ -56,12 +57,12 @@ Die Clientcomputer werden beim nächsten Clientrichtliniendownload mit diesen Ei
 ## <a name="how-to-provision-the-endpoint-protection-client-in-a-disk-image-in-configuration-manager"></a>Bereitstellen des Endpoint Protection-Clients in einem Datenträgerabbild in Configuration Manager
 Sie können den Endpoint Protection-Client auf einem Computer installieren, den Sie als Datenträgerimagequelle für die Betriebssystembereitstellung von Configuration Manager verwenden möchten. Dieser Computer wird in der Regel als Referenzcomputer bezeichnet. Nach dem Erstellen des Betriebssystemimages können Sie das Image, das Softwarepakete wie End Protection enthalten kann, mithilfe der Configuration Manager-Betriebssystembereitstellung für Ihre Clientcomputer bereitstellen.
 
-Mithilfe der Verfahren in diesem Thema können Sie den Endpoint Protection-Client auf einem Referenzcomputer installieren und konfigurieren
+Mithilfe der Anweisungen in diesem Artikel können Sie den Endpoint Protection-Client auf einem Referenzcomputer installieren und konfigurieren.
 
 ### <a name="prerequisites-for-installing-the-endpoint-protection-client-on-the-reference-computer"></a>Voraussetzungen für die Installation des Endpoint Protection-Clients auf dem Referenzcomputer
 Die folgende Liste enthält die erforderlichen Voraussetzungen für die Installation der Endpoint Protection-Clientsoftware auf einem Referenzcomputer.
 
--   Sie benötigen Zugriff auf das Endpoint Protection-Clientinstallationspaket **scepinstall.exe**. Dieses Paket befindet sich im Ordner **Client** des Microsoft System Center Configuration Manager-Installationsordners auf dem Standortserver.
+-   Sie benötigen Zugriff auf das Endpoint Protection-Clientinstallationspaket **scepinstall.exe**. Dieses Paket befindet sich im Ordner **Client** des Microsoft System Center Configuration Manager-Installationsordners auf dem Standortserver. Unter Windows 10 und Windows Server 2016 ist Windows Defender vorinstalliert. 
 
 -   Erstellen Sie eine Richtlinie für Antischadsoftware, und exportieren Sie diese, um sicherzustellen, dass der Endpoint Protection-Client mit der für Ihre Organisation erforderlichen Konfiguration bereitgestellt wird. Bei der manuellen Installation des Endpoint Protection-Clients können Sie dann die zu verwendende Richtlinie für Antischadsoftware angeben. Weitere Informationen finden Sie unter [Erstellen und Bereitstellen von Richtlinien für Antischadsoftware für Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
 
@@ -70,6 +71,8 @@ Die folgende Liste enthält die erforderlichen Voraussetzungen für die Installa
 
 -   Wenn Sie den Endpoint Protection-Client mit den aktuellsten Definitionen installieren möchten, müssen Sie diese vom [Microsoft Malware Protection Center](http://go.microsoft.com/fwlink/?LinkID=200965) herunterladen.
 
+>[!NOTE]
+> Ab Configuration Manager Version 1802 muss für Windows 10-Geräte nicht mehr der Endpoint Protection-Agent (SCEPInstall) installiert werden. Wenn dieser bereits auf Windows 10-Geräten installiert ist, wird er von Configuration Manager nicht entfernt. Administratoren können den Endpoint Protection-Agent auf Windows 10-Geräten entfernen, auf denen die Clientversion 1802 oder eine neuere Version ausgeführt wird. „SCEPInstall.exe“ ist möglicherweise immer noch unter C:\Windows\ccmsetup auf einigen Computern vorhanden, sollte aber nicht auf neue Clientinstallationen heruntergeladen werden. <!--503654-->
 ### <a name="how-to-install-the-endpoint-protection-client-software-on-the-reference-computer"></a>Installieren der Endpoint Protection-Clientsoftware auf dem Referenzcomputer
 Sie können den Endpoint Protection-Client über eine Eingabeaufforderung lokal auf dem Referenzcomputer installieren. Hierzu müssen Sie zunächst die Installationsdatei **scepinstall.exe**abrufen. Sie können den Client auch mit einer vorkonfigurierten Richtlinie für Antischadsoftware oder mit einer zuvor exportierten Richtlinie für Antischadsoftware installieren.
 
@@ -99,7 +102,7 @@ Sie können den Endpoint Protection-Client über eine Eingabeaufforderung lokal 
 4.  Wenn Sie das aktuellste Updatedefinitionspaket heruntergeladen haben, kopieren Sie das Paket auf den Clientcomputer und doppelklicken Sie darauf, um es zu installieren.
 
    > [!NOTE]
-   >  Nach dem Abschluss der Endpoint Protection-Clientinstallation führt der Client automatisch eine Definitionsupdateprüfung aus. Bei erfolgreicher Updateprüfung muss das aktuellste Definitionsupdatepaket nicht manuell installiert werden.
+   >  Nach dem Abschluss der Endpoint Protection-Clientinstallation führt der Client automatisch eine Definitionsupdateprüfung aus. Bei erfolgreicher Updateprüfung muss das aktuelle Definitionsupdate nicht manuell installiert werden.
 
 ## <a name="to-install-the-client-software-with-an-antimalware-policy-from-the-command-prompt"></a>So installieren Sie die Clientsoftware mit einer Richtlinie für Antischadsoftware über die Eingabeaufforderung
 
@@ -116,7 +119,7 @@ Sie können den Endpoint Protection-Client über eine Eingabeaufforderung lokal 
 4.  Wenn Sie das aktuellste Definitionspaket heruntergeladen haben, kopieren Sie das Paket auf den Clientcomputer und doppelklicken Sie darauf, um es zu installieren.
 
    > [!NOTE]
-   >  Nach dem Abschluss der Endpoint Protection-Clientinstallation führt der Client automatisch eine Definitionsupdateprüfung aus. Bei erfolgreicher Updateprüfung muss das aktuellste Definitionsupdatepaket nicht manuell installiert werden.
+   >  Nach dem Abschluss der Endpoint Protection-Clientinstallation führt der Client automatisch eine Definitionsupdateprüfung aus. Bei erfolgreicher Updateprüfung muss das aktuelle Definitionsupdate nicht manuell installiert werden.
 
 ## <a name="verify-that-the-endpoint-protection-client-is-installed-correctly"></a>Sicherstellen, dass der Endpoint Protection-Client ordnungsgemäß installiert wurde
 Überprüfen Sie nach der Installation des Endpoint Protection-Clients auf Ihrem Referenzcomputer, ob der Client ordnungsgemäß funktioniert.
@@ -127,7 +130,7 @@ Sie können den Endpoint Protection-Client über eine Eingabeaufforderung lokal 
 
 2.  Überprüfen Sie im Dialogfeld **System Center Endpoint Protection** auf der Registerkarte **Start**, ob die Einstellung **Ein** für den **Echtzeitschutz** festgelegt wurde.
 
-3.  Überprüfen Sie, ob für **Viren- und Spywaredefinitionen** der Status **Aktuell**angezeigt wird.
+3.  Überprüfen Sie, ob für **Virus and spyware definitions** (Viren- und Spywaredefinitionen) der Status **Aktuell**angezeigt wird.
 
 4.  Wählen Sie unter **Scanoptionen**den Eintrag **Vollständig**aus, und klicken Sie dann auf **Jetzt scannen**, um sicherzustellen, dass der Referenzcomputer für die Imageerstellung bereit ist.
 
@@ -150,7 +153,7 @@ Weitere Informationen zur Betriebssystembereitstellung in Configuration Manager 
    ```
 
    > [!IMPORTANT]
-   >  Seien Sie bei dieser Ausführung des Registrierungseditors vorsichtig. Wenn in der Datei „PsExec.exe“ die Option „-s“ festgelegt wird, wird der Registrierungseditor mit Berechtigungen des lokalen Systems ausgeführt.
+   >  Seien Sie bei dieser Ausführung des Registrierungs-Editors vorsichtig. Wenn in der Datei „PsExec.exe“ die Option „-s“ festgelegt wird, wird der Registrierungs-Editor mit LocalSystem-Berechtigungen ausgeführt.
 
 4.  Navigieren Sie im Registrierungs-Editor zu folgenden Registrierungsschlüsseln, und löschen Sie sie.
 

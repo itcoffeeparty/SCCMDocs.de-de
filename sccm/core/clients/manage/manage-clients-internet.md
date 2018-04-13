@@ -1,25 +1,26 @@
 ---
-title: 'Verwalten von Clients im Internet '
+title: Verwalten von Clients im Internet
 titleSuffix: Configuration Manager
-description: "In diesem Artikel erhalten Sie Informationen über das Verwalten von Clients mithilfe des Cloudverwaltungsgateways und über die internetbasierte Clientverwaltung in Configuration Manager."
-ms.date: 04/23/2017
+description: In diesem Artikel erhalten Sie Informationen zum Verwalten von Clients mithilfe von Cloud Management Gateway (CMG) und zur internetbasierten Clientverwaltung in Configuration Manager.
+ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.technology:
+- configmgr-client
 ms.assetid: c667d6af-80c4-485f-910c-896c0171fd00
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: c2650a2cdf7b1e6362688f48643d5ff37954d49b
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 31d43d855c1e7062e62a3d15fa5a79c4e4de915f
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="manage-clients-on-the-internet-with-configuration-manager"></a>Verwalten von Clients im Internet mit Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-In der Regel sind in Configuration Manager die meisten verwalteten Computer und Server auf demselben internen privaten oder Unternehmensnetzwerk wie die Standortsystemserver, die Verwaltungsfunktionen ausführen. Allerdings können Sie Client-Computer außerhalb des Unternehmensnetzwerks verwalten, wenn sie mit dem Internet verbunden sind, ohne dass die Clients eine Verbindung über virtuelle private Netzwerke herstellen müssen, um die Standortsystemserver zu erreichen.
+In der Regel befinden sich in Configuration Manager die meisten verwalteten Computer und Server in demselben internen Netzwerk wie die Standortsystemserver, die Verwaltungsfunktionen ausführen. Sie können jedoch auch Clients außerhalb des internen Netzwerks verwalten, wenn sie mit dem Internet verbunden sind. Hierbei müssen Clients keine VPN-Verbindung aufbauen, um mit den Standortsystemservern zu kommunizieren.
 
 Configuration Manager bietet zwei Methoden, mit dem Internet verbundene Clients zu verwalten:
 
@@ -27,46 +28,49 @@ Configuration Manager bietet zwei Methoden, mit dem Internet verbundene Clients 
 
 -   Internetbasierte Clientverwaltung
 
+
 ## <a name="cloud-management-gateway"></a>Cloudverwaltungsgateway
 
-Ab Version 1610 bietet Configuration Manager das Cloudverwaltungsgateway. Diese neue Methode bietet eine Möglichkeit zur Verwaltung von internetbasierten Clients mit einer Kombination aus einem Cloud-Dienst, der für Microsoft Azure bereitgestellt wird, und einer neuen Standortsystemrolle, die mit diesem Dienst kommuniziert. Clients verwenden dann den Dienst, um mit Configuration Manager zu kommunizieren.
+Mit Cloud Management Gateway (CMG) lassen sich internetbasierte Clients verwalten. Dabei wird eine neue Standortsystemrolle verwendet, die mit einem Microsoft Azure-Clouddienst kommuniziert. Internetbasierte Clients verwenden den Clouddienst, um mit dem lokalen Configuration Manager zu kommunizieren.
 
-Vorteile:
+#### <a name="advantages"></a>Vorteile  
 
--   Keine zusätzlichen Infrastrukturinvestitionen erforderlich.
+-   Keine zusätzlichen Infrastrukturinvestitionen erforderlich.  
 
--   Lokale Infrastruktur bleibt vom Internet getrennt.
+-   Lokale Infrastruktur bleibt vom Internet getrennt.  
 
--   Virtuelle Computer in der Cloud, auf denen der Dienst ausgeführt wird, werden vollständig von Azure verwaltet und erfordern keine Wartung.
+-   Virtuelle Computer in der Cloud, auf denen der Dienst ausgeführt wird, werden vollständig von Azure verwaltet und erfordern keine Wartung.  
 
--   Einfache Einrichtung und Konfiguration in der Configuration Manager-Konsole.
+-   Einfache Einrichtung und Konfiguration in der Configuration Manager-Konsole.  
 
-Nachteile:
+#### <a name="disadvantages"></a>Nachteile  
 
--   Cloud-Abonnement-Kosten.
+-   Cloud-Abonnement-Kosten.  
 
--   Verwaltungsdaten werden über Cloud-Dienst gesendet.
+-   Verwaltungsdaten werden über Cloud-Dienst gesendet.  
 
-Weitere Informationen finden Sie unter [Planen des Cloudverwaltungsgateways](plan-cloud-management-gateway.md).
+Weitere Informationen finden Sie unter [Planen des Cloudverwaltungsgateways](plan-cloud-management-gateway.md).  
+
+
 
 ## <a name="internet-based-client-management"></a>Internetbasierte Clientverwaltung
 
-Diese Methode beruht auf Internet-bezogenen Standortsystemservern, mit denen Clients zu Verwaltungszwecken kommunizieren. Bei dieser Methode müssen Clients und Standortsystemserver für die internetbasierte Verwaltung konfiguriert werden.
+Diese Methode beruht auf mit dem Internet verbundenen Standortsystemservern, mit denen Clients zu Verwaltungszwecken kommunizieren. Bei dieser Methode müssen Clients und Standortsystemserver für die internetbasierte Verwaltung konfiguriert werden.
 
-Vorteile:
+#### <a name="advantages"></a>Vorteile  
 
--   Keine Abhängigkeit von einem Cloud-Dienst.
+-   Keine Abhängigkeit von einem Cloud-Dienst.  
 
--   Ohne zusätzliche Kosten eines Cloud-Abonnements.
+-   Ohne zusätzliche Kosten eines Cloud-Abonnements.  
 
--   Vollständige Kontrolle von Servern und Rollen, die den Dienst bereitstellen.
+-   Vollständige Kontrolle von Servern und Rollen, die den Dienst bereitstellen.  
 
-Nachteile:
+#### <a name="disadvantages"></a>Nachteile  
 
--   Zusätzliche Infrastrukturinvestitionen erforderlich.
+-   Zusätzliche Infrastrukturinvestitionen erforderlich.  
 
--   Gemeinkosten und Betriebskosten der zusätzlichen Infrastruktur.
+-   Gemeinkosten und Betriebskosten der zusätzlichen Infrastruktur.  
 
--   Infrastruktur muss mit dem Internet verbunden sein.
+-   Infrastruktur muss mit dem Internet verbunden sein.  
 
-Weitere Informationen finden Sie unter [Planen der internetbasierten Clientverwaltung](plan-internet-based-client-management.md).
+Weitere Informationen finden Sie unter [Planen der internetbasierten Clientverwaltung](plan-internet-based-client-management.md).  

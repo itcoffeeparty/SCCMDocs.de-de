@@ -1,53 +1,60 @@
 ---
-title: "Verwenden von PXE zum Bereitstellen von Windows über das Netzwerk"
+title: Verwenden von PXE für die Betriebssystembereitstellung über das Netzwerk
 titleSuffix: Configuration Manager
-description: Verwenden Sie PXE-initiierte Betriebssystembereitstellungen, um das Betriebssystem eines Computers zu aktualisieren oder eine neue Version von Windows auf einem neuen Computer zu installieren.
+description: Verwenden Sie mit PXE initiierte Betriebssystembereitstellungen, um das Betriebssystem eines Computers zu aktualisieren oder eine neue Version von Windows auf einem neuen Computer zu installieren.
 ms.custom: na
-ms.date: 06/15/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-osd
+ms.technology:
+- configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
-caps.latest.revision: "19"
-caps.handback.revision: "0"
+caps.latest.revision: 19
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 1ae9c9385abe90a38169f5d539be944f03817007
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 310807547df9fdb2ccd4f0098eec6b0b7ccca996
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>Verwenden von PXE zum Bereitstellen von Windows über das Netzwerk mit System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Bei einer mithilfe von PXE (Pre-Boot eXecution Environment) ausgelösten Betriebssystembereitstellung in System Center Configuration Manager werden Betriebssysteme von Clientcomputern über das Netzwerk angefordert und bereitgestellt. Bei diesem Szenario werden das Betriebssystemabbild sowie die x86- und x64-Versionen der Windows PE-Startabbilds an einen Verteilungspunkt gesendet, der so konfiguriert ist, dass PXE-Startanforderungen akzeptiert werden.
+Bei einer mithilfe von PXE (Pre-Boot eXecution Environment) ausgelösten Betriebssystembereitstellung in Configuration Manager werden Betriebssysteme von Clients über das Netzwerk angefordert und bereitgestellt. In diesem Bereitstellungsszenario senden Sie das Betriebssystemimage und die Startimages an einen PXE-fähigen Verteilungspunkt.
 
 > [!NOTE]  
->  Wenn Sie eine Betriebssystembereitstellung nur für x64-BIOS-Computer erstellen, müssen das x64-Startabbild und das x86-Startabbild auf dem Verteilungspunkt verfügbar sein.
+>  Wenn Sie eine Betriebssystembereitstellung nur für x64-BIOS-Computer erstellen, müssen das x64-Startimage und das x86-Startimage auf dem Verteilungspunkt verfügbar sein.
 
-Sie können von PXE ausgelöste Betriebssystembereitstellungen in den folgenden Szenarien für die Betriebssystembereitstellung verwenden:
+Sie können über PXE initiierte Bereitstellungen in den folgenden Szenarios verwenden:
 
 -   [Aktualisieren eines vorhandenen Computers mit einer neuen Version von Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
 
 -   [Installieren einer neuen Version von Windows auf einem neuen Computer (Bare-Metal)](install-new-windows-version-new-computer-bare-metal.md)  
 
-Führen Sie die Schritte in einem der Szenarien für die Betriebssystembereitstellung aus, und verwenden Sie dann die folgenden Abschnitte, um von PXE ausgelöste Bereitstellungen vorzubereiten.
+Führen Sie die Schritte in einem der Szenarios für die Betriebssystembereitstellung aus, und bereiten Sie dann die von PXE ausgelösten Bereitstellungen anhand der Abschnitte in diesem Artikel vor.
+
+
 
 ##  <a name="BKMK_Configure"></a> Konfigurieren mindestens eines Verteilungspunkts zum Akzeptieren von PXE-Anforderungen
-Sie müssen mindestens einen zum Antworten auf PXE-Startanforderungen konfigurierten Verteilungspunkt verwenden, um Betriebssysteme auf Clients bereitzustellen, die PXE-Startanforderungen stellen. Die Schritte zum Aktivieren von PXE auf einem Verteilungspunkt finden Sie unter [Configuring distribution points to accept PXE requests (Konfigurieren von Verteilungspunkten zum Akzeptieren von PXE-Anforderungen)](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint).
+Zum Bereitstellen von Betriebssystemen für Configuration Manager-Clients, die PXE-Startanforderungen ausführen, müssen Sie mindestens einen Verteilungspunkt so konfigurieren, dass er PXE-Anforderungen akzeptiert. Sobald der Verteilungspunkt konfiguriert ist, reagiert er auf PXE-Startanforderungen und ermittelt die geeigneten Bereitstellungsaktionen. Weitere Informationen finden Sie unter [Installieren oder Modifizieren eines Verteilungspunkts](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#pxe).  
+
+
 
 ## <a name="prepare-a-pxe-enabled-boot-image"></a>Vorbereiten eines PXE-fähigen Startabbilds
-Um PXE zum Bereitstellen eines Betriebssystems zu verwenden, muss sowohl ein PXE-fähiges x86-Startabbild als auch ein PXE-fähiges x64-Startabbild an mindestens einen PXE-fähigen Verteilungspunkt verteilt sein. Verwenden Sie die Informationen zum Aktivieren von PXE in einem Startimage, verteilen Sie das Startimage an Verteilungspunkte:
+Um PXE zum Bereitstellen eines Betriebssystems zu verwenden, muss sowohl ein PXE-fähiges x86-Startimage als auch ein PXE-fähiges x64-Startimage an mindestens einen PXE-fähigen Verteilungspunkt verteilt sein. Verwenden Sie die Informationen zum Aktivieren von PXE in einem Startimage, verteilen Sie das Startimage an Verteilungspunkte:
 
 -   Um PXE für ein Startabbild zu aktivieren, wählen Sie in den Startabbildeinstellungen auf der Registerkarte **Datenquelle** die Option **Dieses Startabbild über den PXE-fähigen Verteilungspunkt bereitstellen** aus.
 
 -   Wenn Sie die Eigenschaften für das Startabbild ändern, verteilen Sie das Startabbild erneut an Verteilungspunkte. Weitere Informationen finden Sie unter [Distribute content (Verteilen von Inhalt)](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).
+
+
 
 ##  <a name="BKMK_PXEExclusionList"></a> Erstellen einer Ausschlussliste für PXE-Bereitstellungen
 Wenn Sie Betriebssysteme mit PXE bereitstellen, können Sie für jeden Verteilungspunkt eine Ausschlussliste erstellen. Fügen Sie der Ausschlussliste die MAC-Adressen der Computer hinzu, die vom Verteilungspunkt ignoriert werden sollen. Aufgeführte Computer empfangen nicht die Bereitstellungstasksequenzen, die Configuration Manager für die PXE-Bereitstellung verwendet.
@@ -69,11 +76,20 @@ Wenn Sie Betriebssysteme mit PXE bereitstellen, können Sie für jeden Verteilun
 
      Nach dieser Registrierungsänderung ist kein Neustart des Servers erforderlich.
 
+
+
+## <a name="manage-duplicate-hardware-identifiers"></a>Verwalten von in Konflikt stehenden Datensätzen bei Configuration Manager-Clients
+Configuration Manager erkennt möglicherweise mehrere Computer als ein einziges Gerät, wenn sie über doppelte SMBIOS-Attribute verfügen oder Sie einen gemeinsam genutzten Netzwerkadapter verwenden. Sie können diese Probleme lösen, indem Sie doppelte Hardware-IDs in den Hierarchieeinstellungen verwalten. Weitere Informationen finden Sie unter [Verwalten von in Konflikt stehenden Datensätzen bei Configuration Manager-Clients](/sccm/core/clients/manage/manage-clients#manage-duplicate-hardware-identifiers).
+
+
+
 ##  <a name="BKMK_RamDiskTFTP"></a>RamDisk-TFTP-Blockgröße und Fenstergröße
-Sie können die RamDisk-TFTP-Blockgröße und ab Configuration Manager Version 1606 die Fenstergröße für PXE-fähige Verteilungspunkte anpassen. Wenn Sie Ihr Netzwerk angepasst haben, kann dies wegen übermäßiger Block- oder Fenstergröße zu einem Timeout beim Herunterladen des Startimages führen. Durch Anpassen der RamDisk-TFTP-Blockgröße und der Fenstergröße können Sie den TFTP-Datenverkehr bei Verwendung von PXE für Ihre spezifischen Netzwerkanforderungen optimieren. Testen Sie die angepassten Einstellungen in Ihrer Umgebung, um die effizienteste Methode zu ermitteln. Weitere Informationen finden Sie unter [Customize the RamDisk TFTP block size and window size on PXE-enabled distribution points (Anpassen der RamDisk-TFTP-Blockgröße und der Fenstergröße auf PXE-fähigen Verteilungspunkten)](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_RamDiskTFTP).
+Sie können die Größe des RamDisk-TFTP-Blocks und des Fensters für PXE-fähige Verteilungspunkte anpassen. Wenn Sie Ihr Netzwerk angepasst haben, kann eine übermäßige Block- oder Fenstergröße zu einem Timeout beim Herunterladen des Startimages führen. Durch Anpassen der Größe des RamDisk-TFTP-Blocks und des Fensters können Sie den TFTP-Datenverkehr bei Verwendung von PXE für Ihre spezifischen Netzwerkanforderungen optimieren. Um die effizienteste Einstellung zu ermitteln, müssen Sie die benutzerdefinierten Einstellungen in Ihrer Umgebung testen. Weitere Informationen finden Sie unter [Customize the RamDisk TFTP block size and window size on PXE-enabled distribution points (Anpassen der RamDisk-TFTP-Blockgröße und der Fenstergröße auf PXE-fähigen Verteilungspunkten)](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_RamDiskTFTP).
+
+
 
 ## <a name="configure-deployment-settings"></a>Konfigurieren von Bereitstellungseinstellungen
-Zum Verwenden einer PXE-initiierten Betriebssystembereitstellung müssen Sie die Bereitstellung konfigurieren, um das Betriebssystem für PXE-Startanforderungen zur Verfügung zu stellen. Sie können verfügbare Betriebssysteme auf der Seite **Bereitstellungseinstellungen** im Assistenten zum Bereitstellen von Software oder auf der Registerkarte **Bereitstellungseinstellungen** in den Eigenschaften der Bereitstellung konfigurieren. Konfigurieren Sie eine der folgenden Optionen für die Einstellung **Verfügbar machen für** :
+Um eine PXE-initiierte Betriebssystembereitstellung zu verwenden, müssen Sie die Bereitstellung konfigurieren, um das Betriebssystem für PXE-Startanforderungen verfügbar zu machen. Konfigurieren Sie die verfügbaren Betriebssysteme in den Bereitstellungseigenschaften auf der Registerkarte **Bereitstellungseinstellungen**. Wählen Sie für die Einstellung **Verfügbar machen für** eine der folgenden Optionen aus:
 
 -   Configuration Manager-Clients, Medien und PXE
 
@@ -81,20 +97,24 @@ Zum Verwenden einer PXE-initiierten Betriebssystembereitstellung müssen Sie die
 
 -   Nur Medien und PXE (ausgeblendet)
 
+
+
 ##  <a name="BKMK_Deploy"></a> Bereitstellen der Tasksequenz
-Stellen Sie das Betriebssystem für eine Zielsammlung bereit. Weitere Informationen finden Sie unter [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS). Beim Bereitstellen von Betriebssystemen unter Verwendung von PXE können Sie konfigurieren, ob die Bereitstellung erforderlich oder verfügbar ist.
+Stellen Sie das Betriebssystem in einer Zielauflistung bereit. Weitere Informationen finden Sie unter [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS). Beim Bereitstellen von Betriebssystemen unter Verwendung von PXE können Sie konfigurieren, ob die Bereitstellung erforderlich oder verfügbar ist.
 
--   **Erforderliche Bereitstellung**: Bei erforderlichen Bereitstellungen wird PXE ohne jegliches Eingreifen des Benutzers verwendet. Der Benutzer ist nicht in der Lage, den PXE-Start zu umgehen. Wenn ein Benutzer den PXE-Startvorgang jedoch abbricht, bevor der PXE-Verteilungspunkt antwortet, wird das Betriebssystem nicht bereitgestellt.
+-   **Erforderliche Bereitstellung**: Bei erforderlichen Bereitstellungen wird PXE ohne jegliches Eingreifen des Benutzers verwendet. Der Benutzer kann den PXE-Start nicht umgehen. Wenn ein Benutzer den PXE-Startvorgang jedoch abbricht, bevor der PXE-Verteilungspunkt antwortet, wird das Betriebssystem nicht bereitgestellt.
 
--   **Verfügbare Bereitstellung**: Für verfügbare Bereitstellungen muss der Benutzer am Zielcomputer anwesend sein, damit er die Taste F12 drücken kann, um den PXE-Startvorgang fortzusetzen. Wenn der Benutzer nicht anwesend ist und die Taste F12 nicht drücken kann, wird der Computer mit dem aktuellen Betriebssystem oder vom nächsten verfügbaren Startgerät neu gestartet.
+-   **Available deployment** (Verfügbare Bereitstellung): Für verfügbare Bereitstellungen muss der Benutzer am Zielcomputer anwesend sein. Ein Benutzer muss die Taste F12 drücken, um den PXE-Startvorgang fortzusetzen Wenn der Benutzer nicht anwesend ist und die Taste F12 nicht drücken kann, startet der Computer mit dem aktuellen Betriebssystem oder vom nächsten verfügbaren Startgerät.
 
-Sie können eine erforderliche PXE-Bereitstellung erneut bereitstellen, indem Sie den Status der letzten PXE-Bereitstellung löschen, die einer Configuration Manager-Sammlung oder einem Computer zugewiesen ist. Mit dieser Aktion wird der Status der Bereitstellung zurückgesetzt, und die letzten erforderlichen Bereitstellungen werden erneut installiert.
+Sie können eine erforderliche PXE-Bereitstellung erneut bereitstellen, indem Sie den Status der letzten PXE-Bereitstellung löschen, die einer Configuration Manager-Sammlung oder einem Computer zugewiesen ist. Weitere Informationen zur Aktion **Erforderliche PXE-Bereitstellungen löschen** finden Sie unter [Verwalten von Clients](/sccm/core/clients/manage/manage-clients#BKMK_ManagingClients_DevicesNode) oder [Verwalten von Sammlungen](/sccm/core/clients/manage/collections/manage-collections#how-to-manage-device-collections). Mit dieser Aktion wird der Status der Bereitstellung zurückgesetzt, und die letzten erforderlichen Bereitstellungen werden erneut installiert.
 
 > [!IMPORTANT]
 > Das PXE-Protokoll ist nicht sicher. Stellen Sie sicher, dass der PXE-Server und der PXE-Client sich in einem physisch sicheren Netzwerk (z. B. in einem Rechenzentrum) befinden, um unbefugten Zugriff auf den Standort zu verhindern.
 
+
+
 ##  <a name="how-is-the-boot-image-selected-for-clients-booting-with-pxe"></a>Wie wird das Startimage für Clients ausgewählt, die mit PXE gestartet werden?
-Wenn ein Client mit PXE gestartet wird, stellt Configuration Manager ein Startimage für den Client bereit. Configuration Manager verwendet ab Version 1606 ein Startabbild mit einer exakten architektonischen Übereinstimmung, sofern ein entsprechendes Abbild verfügbar ist. Ist dies nicht der Fall, verwendet Configuration Manager ein Startabbild mit einer kompatiblen Architektur. In der folgenden Liste finden Sie Informationen dazu, wie ein Startimage für Clients ausgewählt wird, die mit PXE gestartet werden.
+Wenn ein Client mit PXE gestartet wird, stellt Configuration Manager ein Startimage für den Client bereit. Configuration Manager verwendet ein Startimage mit einer exakten architektonischen Übereinstimmung. Ist dies nicht der Fall, verwendet Configuration Manager ein Startabbild mit einer kompatiblen Architektur. In der folgenden Liste finden Sie Informationen dazu, wie ein Startimage für Clients ausgewählt wird, die mit PXE gestartet werden.
 1. Configuration Manager sucht in der Standortdatenbank nach dem Systemdatensatz, bei dem die MAC-Adresse oder das SMBIOS mit der MAC-Adresse oder dem SMBIOS des Clients übereinstimmt, der gestartet werden soll.  
 
     > [!NOTE]

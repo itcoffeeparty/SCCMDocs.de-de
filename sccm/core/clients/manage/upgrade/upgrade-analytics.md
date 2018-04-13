@@ -1,22 +1,23 @@
 ---
 title: Upgradebereitschaft
-titleSuffix: Configuration Manager
-description: "Integrieren Sie Upgradebereitschaft in Configuration Manager. Greifen Sie auf Daten zur Upgradekompatibilität in Ihrer Administratorkonsole zu. Führen Sie Upgrades oder Wartungen von Geräten aus."
-keywords: 
-author: mattbriggs
-ms.author: mabrigg
-manager: angerobe
-ms.date: 7/31/2017
+titleSuffix: System Center Configuration Manager
+description: Integrieren Sie Upgrade Readiness mit Configuration Manager. Greifen Sie auf Daten zur Upgradekompatibilität in Ihrer Administratorkonsole zu. Führen Sie Upgrades oder Wartungen von Geräten aus.
+keywords: ''
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: configuration-manager
-ms.service: 
-ms.technology: configmgr-client
+ms.service: ''
+ms.technology:
+- configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
-ms.openlocfilehash: df2950551e527788aeb01d57cdbf01ad19817ccd
-ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
+ms.openlocfilehash: 96f20c3559ac08cb4c5a16d1d33b74c63a02e4b7
+ms.sourcegitcommit: f0bfd9fa0ec5b416f0ea2beee889b94e2ad9c97d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="integrate-upgrade-readiness-with-system-center-configuration-manager"></a>Integrieren von Upgrade Readiness mit System Center Configuration Manager
 
@@ -25,6 +26,12 @@ ms.lasthandoff: 11/17/2017
 Upgradebereitschaft (früher Upgrade Analytics) ist ein Bestandteil von [Windows Analytics](https://www.microsoft.com/WindowsForBusiness/windows-analytics), mit dem Sie die Bereitschaft von Geräten in Ihrer Umgebung für ein Upgrade auf Windows 10 ermitteln und analysieren können. Sie können die betreffende Version konfigurieren. Upgradebereitschaft kann in Configuration Manager integriert werden, um auf Daten zur Konformität von Clientupgrades in der Configuration Manager-Verwaltungskonsole zuzugreifen. Mithilfe dynamischer Sammlungen, die auf der Grundlage dieser Daten erstellt wurden, können Sie Geräte für Upgrades oder Abhilfemaßnahmen gezielt auswählen.
 
 Upgradebereitschaft ist eine Lösung in der [Microsoft Operations Management Suite (OMS)](/azure/operations-management-suite/operations-management-suite-overview). Erfahren Sie mehr über Upgradebereitschaft in [Manage Windows upgrades with Upgrade Readiness (Verwalten von Upgrades mit Upgradebereitschaft)](/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-readiness).
+
+<!--
+>[!WARNING]
+>For Upgrade Readiness to function within Configuration Manager, you must upgrade to Configuration Manager version 1802. The Upgrade Readiness Connector will no longer function in Configuration Manager versions earlier than 1802. 
+SMS.507205 Pulled 4/5/18 -->
+
 
 ## <a name="configure-clients"></a>Konfigurieren von Clients
 
@@ -37,14 +44,14 @@ Upgradebereitschaft arbeitet wie alle Windows Analytics-Lösungen mit Windows-Te
 Kommerzielle ID-Schlüssel und Windows-Telemetrie können in **Clienteinstellungen** konfiguriert werden. Mehr erfahren Sie unter [Verwenden von Windows Analytics mit Configuration Manager](../monitor-windows-analytics.md).
 
 >[!NOTE]
->Wenn Probleme dahingehend auftreten sollten, dass Upgradebereitschaft nicht wie erwartet Telemetriedaten von Geräten in Ihrer Umgebung empfängt, können einige dieser Probleme durch Verwendung des [Bereitstellungsskripts für Upgradebereitschaft](/windows/deployment/upgrade/upgrade-readiness-deployment-script) behoben werden. Doch in den meisten Umgebungen, in denen die richtigen KB-Artikel bereitgestellt werden, sollte die Konfiguration des kommerziellen ID-Schlüssels und der Telemetrie in **Clienteinstellungen** ausreichen.
+>Wenn Probleme dahingehend auftreten sollten, dass Upgradebereitschaft nicht wie erwartet Telemetriedaten von Geräten in Ihrer Umgebung empfängt, können einige dieser Probleme durch Verwendung des [Bereitstellungsskripts für Upgradebereitschaft](/windows/deployment/upgrade/upgrade-readiness-deployment-script) behoben werden. In den meisten Umgebungen, in denen die richtigen KB bereitgestellt werden, sollte die Konfiguration des kommerziellen ID-Schlüssels und der Telemetrie unter **Clienteinstellungen** ausreichen.
 
 ## <a name="connect-configuration-manager-to-upgrade-readiness"></a>Verbinden von Configuration Manager mit Upgradebereitschaft
 
 Ab der Current Branch-Version 1706 kommt der [Assistent für Azure-Dienste](../../../servers/deploy/configure/azure-services-wizard.md) zum Einsatz, um die Konfiguration der von Ihnen verwendeten Azure-Dienste mit Configuration Manager zu vereinfachen. Ehe Sie Configuration Manager mit Upgradebereitschaft verbinden können, muss eine App-Registrierung bei Azure AD des Typs *Web-App/API* im [Azure-Portal](https://portal.azure.com) erstellt werden. Weitere Informationen zum Erstellen einer App-Registrierung finden Sie unter [Registrieren Ihrer Anwendung bei Ihrem Azure Active Directory-Mandanten](/azure/active-directory/active-directory-app-registration). Im **Azure-Portal** müssen Sie außerdem Ihrer neu registrierten Web-App die Berechtigung *Mitwirkender* für die Ressourcengruppe erteilen, die den OMS-Arbeitsbereich enthält, in dem sich Ihre Upgradebereitschaft-Daten befinden. Der **Assistent für Azure-Dienste** verwendet diese App-Registrierung, um Configuration Manager die sichere Kommunikation mit Azure AD zu ermöglichen und Ihre Infrastruktur mit Ihren Upgradebereitschaft-Daten zu verbinden.
 
 >[!IMPORTANT]
->Die Berechtigung *Mitwirkender* muss der App selbst und nicht einer Azure AD-Benutzeridentität erteilt werden. Dies liegt daran, dass es die registrierte App und kein Azure AD-Benutzer ist, die im Auftrag Ihrer Configuration Manager-Infrastruktur auf die Daten zugreift. Dazu müssen Sie beim Zuweisen der Berechtigungen auf dem Blatt **Benutzer hinzufügen** nach dem Namen der App-Registrierung suchen. Beim [Bereitstellen von OMS-Berechtigungen für Configuration Manager](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms) für Verbindungen mit [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm) wenden Sie das gleiche Verfahren an. Diese Schritte müssen ausgeführt werden, bevor die App-Registrierung mit dem *Assistenten für Azure-Dienste* in Configuration Manager importiert wird.
+>Die Berechtigung *Mitwirkender* muss der App selbst und nicht einer Azure AD-Benutzeridentität erteilt werden. Dies liegt daran, dass es die registrierte App und kein Azure AD-Benutzer ist, die im Auftrag Ihrer Configuration Manager-Infrastruktur auf die Daten zugreift. Beim Zuweisen von Berechtigungen müssen Sie im Bereich **Benutzer hinzufügen** nach dem Namen der App-Registrierung suchen, wenn Sie die Berechtigungen erteilen möchten. Beim [Bereitstellen von Configuration Manager mit Berechtigungen für OMS](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms) für Verbindungen mit [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm) gehen Sie genauso vor. Diese Schritte müssen ausgeführt werden, bevor die App-Registrierung mit dem *Assistenten für Azure-Dienste* in Configuration Manager importiert wird.
 
 ### <a name="use-the-azure-wizard-to-create-the-connection"></a>Verwenden des Assistenten für Azure-Dienste zum Erstellen der Verbindung
 
@@ -55,7 +62,7 @@ Auf der Seite *Konfiguration* werden die folgenden Werte vorab ausgefüllt, wenn
 -  Azure-Ressourcengruppe
 -  Windows Analytics-Arbeitsbereich
 
-Mehr als eine Ressourcengruppe oder ein Arbeitsbereich sind nur verfügbar, wenn die registrierte Azure AD-Web-App die Berechtigung *Mitwirkender* für mehr als eine Ressourcengruppe hat oder wenn die ausgewählte Ressourcengruppe mehr als einen OMS-Arbeitsbereich enthält.
+Mehr als eine Ressourcengruppe oder ein Arbeitsbereich sind nur verfügbar, wenn die registrierte Azure AD-Web-App über die Berechtigung *Mitwirkender* für mehr als eine Ressourcengruppe verfügt oder wenn die ausgewählte Ressourcengruppe mehr als einen OMS-Arbeitsbereich enthält.
  
 ## <a name="view-and-use-upgrade-readiness-information-in-configuration-manager"></a>Anzeigen und Verwenden der Informationen zur Upgradebereitschaft in Configuration Manager
 
@@ -70,7 +77,7 @@ Nachdem Sie Upgradebereitschaft und Configuration Manager integriert haben, kön
 
 In Configuration Manager-Versionen bis 1702 müssen andere Schrittfolgen ausgeführt und Voraussetzungen erfüllt werden, um eine Verbindung mit Upgradebereitschaft herzustellen.
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 
 - Um der Configuration Manager-Umgebung eine Verbindung hinzuzufügen, müssen Sie zunächst einen [Dienstverbindungspunkt](/sccm/core/servers/deploy/configure/about-the-service-connection-point) in einem [Onlinemodus](https://azure.microsoft.com/documentation/articles/resource-group-create-service-principal-portal/) konfigurieren. Wenn Sie Ihrer Umgebung eine Verbindung hinzufügen, wird auch der Microsoft Monitoring Agent auf dem Computer installiert, auf dem die Standortsystemrolle ausgeführt wird.
 - Registrieren Sie Configuration Manager als „Webanwendung und/oder Web-API”-Verwaltungstool, und rufen Sie die [Client-ID dieser Registrierung](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/) ab.

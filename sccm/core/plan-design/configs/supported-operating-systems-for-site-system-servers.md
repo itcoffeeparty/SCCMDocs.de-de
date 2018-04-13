@@ -1,9 +1,9 @@
 ---
-title: "Unterstützte Standortsystemserver"
+title: Unterstützte Standortsystemserver
 titleSuffix: Configuration Manager
-description: "Erfahren Sie, welche Windows-Versionen Sie verwenden können, um einen System Center Configuration Manager-Standort oder eine entsprechende Standortsystemrolle zu hosten."
+description: Erfahren Sie, welche Windows-Versionen Sie verwenden können, um einen System Center Configuration Manager-Standort oder eine entsprechende Standortsystemrolle zu hosten.
 ms.custom: na
-ms.date: 06/27/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,15 +12,15 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
-caps.latest.revision: 
+caps.latest.revision: 44
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 18df431f0fd1b355b1ad629a10126907187ddbbd
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+manager: dougeby
+ms.openlocfilehash: 5bcaddb38ea6ecf1c3b5e0543c676c6a99e06101
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="supported-operating-systems-for-system-center-configuration-manager-site-system-servers"></a>Unterstützte Betriebssysteme für System Center Configuration Manager-Standortsystemserver
 
@@ -38,7 +38,7 @@ Verwenden Sie die Informationen in diesem Artikel mit den Informationen in den f
 
 
 ## <a name="windows-server-2016-standard-and-datacenter"></a>Windows Server 2016: Standard und Datacenter
-Ab Version 1606 mit dem Hotfixrollup von KB3186654 (oder Baselineversion 1606, die im Oktober 2016 veröffentlicht wurde) wird dieses Betriebssystem für folgende Komponenten unterstützt:
+Mit dem Hotfixrollup aus KB3186654 wird dieses Betriebssystem für die folgenden Rollen unterstützt:
 
 **Standortserver:**  
 
@@ -60,7 +60,7 @@ Ab Version 1606 mit dem Hotfixrollup von KB3186654 (oder Baselineversion 1606, d
 
 -   Verteilungspunkt  
 
-     Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+     Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den Optionen, die für Verteilungspunkte verfügbar sind, finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 -   Endpoint Protection-Punkt  
 
@@ -78,13 +78,15 @@ Ab Version 1606 mit dem Hotfixrollup von KB3186654 (oder Baselineversion 1606, d
 
 -   Standortdatenbankserver  
 
-     Standortdatenbankserver werden auf einem Domänencontroller ohne Schreibzugriff (Read-Only Domain Controller, RODC) nicht unterstützt. Weitere Informationen finden Sie unter [You may encounter problems when installing SQL Server on a domain controller (Beim Installieren eines SQL Servers auf einem Domänencontroller treten möglicherweise Probleme auf)](http://go.microsoft.com/fwlink/p/?LinkId=264856) in der Microsoft Knowledge Base. Darüber hinaus werden sekundäre Standortserver nicht auf jedem Domänencontroller unterstützt.  
+     Standortdatenbankserver werden auf einem Domänencontroller ohne Schreibzugriff (Read-Only Domain Controller, RODC) nicht unterstützt. Weitere Informationen finden Sie unter [You may encounter problems when installing SQL Server on a domain controller (Beim Installieren eines SQL Servers auf einem Domänencontroller treten möglicherweise Probleme auf)](https://go.microsoft.com/fwlink/p/?LinkId=264856) in der Microsoft Knowledge Base. Darüber hinaus werden sekundäre Standortserver nicht auf jedem Domänencontroller unterstützt.  
 
 -   SMS-Anbieter  
 
 -   Softwareupdatepunkt  
 
 -   Zustandsmigrationspunkt
+
+
 
 ## <a name="windows-server-2012-r2-x64-standard-and-datacenter"></a>Windows Server 2012 R2 (x64): Standard und Datacenter  
 **Standortserver:**  
@@ -107,7 +109,7 @@ Ab Version 1606 mit dem Hotfixrollup von KB3186654 (oder Baselineversion 1606, d
 
 -   Verteilungspunkt  
 
-     Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+     Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den Optionen, die für Verteilungspunkte verfügbar sind, finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 -   Endpoint Protection-Punkt  
 
@@ -125,7 +127,7 @@ Ab Version 1606 mit dem Hotfixrollup von KB3186654 (oder Baselineversion 1606, d
 
 -   Standortdatenbankserver  
 
-     Standortdatenbankserver werden auf einem Domänencontroller ohne Schreibzugriff (Read-Only Domain Controller, RODC) nicht unterstützt. Weitere Informationen finden Sie unter [You may encounter problems when installing SQL Server on a domain controller (Beim Installieren eines SQL Servers auf einem Domänencontroller treten möglicherweise Probleme auf)](http://go.microsoft.com/fwlink/p/?LinkId=264856) in der Microsoft Knowledge Base. Darüber hinaus werden sekundäre Standortserver nicht auf jedem Domänencontroller unterstützt.  
+     Standortdatenbankserver werden auf einem Domänencontroller ohne Schreibzugriff (Read-Only Domain Controller, RODC) nicht unterstützt. Weitere Informationen finden Sie unter [You may encounter problems when installing SQL Server on a domain controller (Beim Installieren eines SQL Servers auf einem Domänencontroller treten möglicherweise Probleme auf)](https://go.microsoft.com/fwlink/p/?LinkId=264856) in der Microsoft Knowledge Base. Darüber hinaus werden sekundäre Standortserver nicht auf jedem Domänencontroller unterstützt.  
 
 -   SMS-Anbieter  
 
@@ -154,7 +156,7 @@ Ab Version 1606 mit dem Hotfixrollup von KB3186654 (oder Baselineversion 1606, d
 
 -   Verteilungspunkt  
 
-     Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+     Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den Optionen, die für Verteilungspunkte verfügbar sind, finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 -   Endpoint Protection-Punkt  
 
@@ -172,81 +174,45 @@ Ab Version 1606 mit dem Hotfixrollup von KB3186654 (oder Baselineversion 1606, d
 
 -   Standortdatenbankserver  
 
-     Standortdatenbankserver werden auf einem Domänencontroller ohne Schreibzugriff (Read-Only Domain Controller, RODC) nicht unterstützt. Weitere Informationen finden Sie unter [You may encounter problems when installing SQL Server on a domain controller (Beim Installieren eines SQL Servers auf einem Domänencontroller treten möglicherweise Probleme auf)](http://go.microsoft.com/fwlink/p/?LinkId=264856) in der Microsoft Knowledge Base. Darüber hinaus werden sekundäre Standortserver nicht auf jedem Domänencontroller unterstützt.  
+     Standortdatenbankserver werden auf einem Domänencontroller ohne Schreibzugriff (Read-Only Domain Controller, RODC) nicht unterstützt. Weitere Informationen finden Sie unter [You may encounter problems when installing SQL Server on a domain controller (Beim Installieren eines SQL Servers auf einem Domänencontroller treten möglicherweise Probleme auf)](https://go.microsoft.com/fwlink/p/?LinkId=264856) in der Microsoft Knowledge Base. Darüber hinaus werden sekundäre Standortserver nicht auf jedem Domänencontroller unterstützt.  
 
 -   SMS-Anbieter  
 
 -   Softwareupdatepunkt  
 
 -   Zustandsmigrationspunkt  
+
+
 
 ## <a name="windows-server-2008-r2-with-sp1-x64-standard-enterprise-and-datacenter"></a>Windows Server 2008 R2 mit SP1 (x64): Standard, Enterprise und Datacenter  
  Windows Server 2008 R2 unterliegt nun dem erweiterten Support und nicht mehr dem grundlegenden Support, wie im [Microsoft-Support-Lifecycle](https://support.microsoft.com/lifecycle) ausführlich erläutert. Weitere Informationen zum künftigen Support für diese Betriebssysteme als Standortsystemserver mit Configuration Manager finden Sie unter [Veraltete Serverbetriebssysteme](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems).  
 
- Ab der Configuration Manager-Version 1702 wird dieses Betriebssystem nicht für Standortserver oder die meisten Standortsystemrollen unterstützt. Es wird jedoch weiterhin für die Standortsystemrolle „Verteilungspunkt“ unterstützt (einschließlich „Pullverteilungspunkt“, PXE und Multicast).
-
- Versionen vor 1702 unterstützen weiterhin dessen Verwendung für Folgendes:
-
-
-**Standortserver:**  
-
--   Standort der zentralen Verwaltung  
-
--   Primärer Standort  
-
--   Sekundärer Standort  
+ Dieses Betriebssystem wird von Standortservern und den meisten Standortsystemrollen nicht unterstützt. Es wird allerdings weiterhin von den Verteilungspunkt-Standortsystemrollen, einschließlich Pullverteilungspunkten, und von PXE und Multicast unterstützt.
 
 **Standortsystemserver:**  
-
--   Anwendungskatalog-Webdienstpunkt  
-
--   Anwendungskatalog-Websitepunkt  
-
--   Asset Intelligence-Synchronisierungspunkt  
-
--   Zertifikatregistrierungspunkt  
-
 -   Verteilungspunkt  
 
-     Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    -   Von Verteilungspunkten auf diesem Betriebssystem wird Multicast nicht unterstützt.  
 
--   Endpoint Protection-Punkt  
+    -   Von Verteilungspunkten auf diesem Betriebssystem wird PXE unterstützt.
 
--   Anmeldungspunkt  
+    -   Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den Optionen, die für Verteilungspunkte verfügbar sind, finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
--   Anmeldungsproxypunkt  
 
--   Fallbackstatuspunkt  
-
--   Verwaltungspunkt
-
--   Reporting Services-Punkt  
-
--   Dienstverbindungspunkt  
-
--   Standortdatenbankserver  
-
-     Standortdatenbankserver werden auf einem Domänencontroller ohne Schreibzugriff (Read-Only Domain Controller, RODC) nicht unterstützt. Weitere Informationen finden Sie unter [You may encounter problems when installing SQL Server on a domain controller (Beim Installieren eines SQL Servers auf einem Domänencontroller treten möglicherweise Probleme auf)](http://go.microsoft.com/fwlink/p/?LinkId=264856) in der Microsoft Knowledge Base. Darüber hinaus werden sekundäre Standortserver nicht auf jedem Domänencontroller unterstützt.  
-
--   SMS-Anbieter  
-
--   Softwareupdatepunkt  
-
--   Zustandsmigrationspunkt  
 
 ## <a name="windows-server-2008-with-sp2-x86-x64-standard-enterprise-and-datacenter"></a>Windows Server 2008 mit SP2 (x86, x64): Standard, Enterprise und Datacenter  
  Windows Server 2008 unterliegt nun dem erweiterten Support und nicht mehr dem grundlegenden Support, wie im [Microsoft-Support-Lifecycle](https://support.microsoft.com/lifecycle) ausführlich erläutert. Weitere Informationen zum künftigen Support für diese Betriebssysteme als Standortsystemserver mit Configuration Manager finden Sie unter [Veraltete Serverbetriebssysteme](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems).  
 
-Dieses Betriebssystem wird für Standortserver oder Standortsystemrollen mit Ausnahme des Verteilungspunkts und des Pullverteilungspunkts nicht unterstützt. Sie können dieses Betriebssystem weiterhin als Verteilungspunkt verwenden, bis die Einstellung dieses Supports angekündigt wird oder der erweiterte Support für dieses Betriebssystem abläuft. Weitere Informationen finden Sie unter [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008 (Bei der Installation von System Center Configuration Manager CB und LTSB auf Windows Server 2008 tritt ein Fehler auf)](https://support.microsoft.com/help/4015095).
+Dieses Betriebssystem wird von Standortserver- oder Standortsystemrollen mit Ausnahme des Verteilungspunkts und des Pullverteilungspunkts nicht unterstützt. Sie können dieses Betriebssystem weiterhin als Verteilungspunkt verwenden, bis die Einstellung dieses Supports angekündigt wird oder der erweiterte Support für dieses Betriebssystem abläuft. Weitere Informationen finden Sie unter [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008 (Bei der Installation von System Center Configuration Manager CB und LTSB auf Windows Server 2008 tritt ein Fehler auf)](https://support.microsoft.com/help/4015095).
 
 **Standortsystemserver:**  
 -   Verteilungspunkt  
 
-    -   Von Verteilungspunkten unter diesem Betriebssystem wird Multicast nicht unterstützt.  
+    -   Von Verteilungspunkten auf diesem Betriebssystem wird Multicast nicht unterstützt.  
 
-    -   Verteilungspunkte unter dieser Betriebssystemversion werden für PXE unterstützt, sie unterstützen jedoch keinen Netzwerkstart von Clientcomputern im EFI-Modus. Clientcomputer mit BIOS oder EFI-Start im Legacymodus werden unterstützt.  
+    -   Von Verteilungspunkten auf diesem Betriebssystem wird PXE, jedoch kein Netzwerkstart von Clientcomputern im EFI-Modus unterstützt. Clientcomputer mit BIOS oder EFI-Start im Legacymodus werden unterstützt.  
 
-    -   Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    -   Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den Optionen, die für Verteilungspunkte verfügbar sind, finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 
 
@@ -255,64 +221,59 @@ Dieses Betriebssystem wird für Standortserver oder Standortsystemrollen mit Aus
 
 -   Verteilungspunkt  
 
-    -   Für PXE werden Verteilungspunkte unter diesem Betriebssystem nicht unterstützt.  
+    -   Von Verteilungspunkten auf diesem Betriebssystem wird PXE nicht unterstützt. 
 
     -   Von Verteilungspunkten unter dieser Betriebssystemversion wird Multicast nicht unterstützt.  
 
-    -   Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    -   Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den Optionen, die für Verteilungspunkte verfügbar sind, finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+
+
 
 ## <a name="windows-81-x86-x64-professional-and-enterprise"></a>Windows 8.1 (x86, x64): Professional und Enterprise  
 **Standortsystemserver:**  
 
 -   Verteilungspunkt  
 
-    -   Für PXE werden Verteilungspunkte unter diesem Betriebssystem nicht unterstützt.  
+    -   Von Verteilungspunkten auf diesem Betriebssystem wird PXE nicht unterstützt.  
 
     -   Von Verteilungspunkten unter dieser Betriebssystemversion wird Multicast nicht unterstützt.  
 
-    -   Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    -   Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den Optionen, die für Verteilungspunkte verfügbar sind, finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
-<!--## Windows 8 (x86, x64): Professional and Enterprise
-**Site system servers:**  
 
--   Distribution point  
-
-    -   Distribution points on this operating system are not supported for PXE.  
-
-    -   Distribution points on this operating system version do not support Multicast.  
-
-    -   Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure for System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
-   
-    -  - -removed Jan 12,2018 sms505863-->
 
 ## <a name="windows-7-with-sp1-x86-x64-professional-enterprise-and-ultimate"></a>Windows 7 mit SP1 (x86, x64): Professional, Enterprise und Ultimate  
 **Standortsystemserver:**  
 
 -   Verteilungspunkt  
 
-    -   Für PXE werden Verteilungspunkte unter diesem Betriebssystem nicht unterstützt.  
+    -   Von Verteilungspunkten auf diesem Betriebssystem wird PXE nicht unterstützt.  
 
     -   Von Verteilungspunkten unter dieser Betriebssystemversion wird Multicast nicht unterstützt.  
 
-    -   Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den für Verteilungspunkte verfügbaren Optionen finden Sie unter [Manage content and content infrastructure for System Center Configuration Manager (Verwalten von Inhalt und Inhaltsinfrastruktur für System Center Configuration Manager)](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    -   Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den Optionen, die für Verteilungspunkte verfügbar sind, finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+
 
 
 ## <a name="the-server-core-installation-of-windows-server-2016"></a>Die Server Core-Installation von Windows Server 2016
-Ab Version 1606 mit dem Hotfixrollup von KB3186654 (oder Baselineversion 1606, die im Oktober 2016 veröffentlicht wurde) wird die Verwendung dieses Betriebssystems als Verteilungspunkt mit folgenden Einschränkungen unterstützt:  
+Dieses Betriebssystem wird durch das Hotfixrollup aus KB3186654 als Verteilungspunkt unterstützt. Dabei bestehen folgende Einschränkungen:  
   -   Nur die x64-Bit-Version wird unterstützt.
-  -   Verteilungspunkte unter diesem Betriebssystem unterstützen PXE oder Multicast nicht.  
+  -   Von Verteilungspunkten auf diesem Betriebssystem werden PXE und Multicast nicht unterstützt.  
+
 
 
 ## <a name="the-server-core-installation-of-windows-server-2012-r2"></a>Die Server Core-Installation von Windows Server 2012 R2  
- Zusätzlich zu den oben aufgeführten Betriebssystemen wird die Server Core-Installation von Windows Server 2012 R2 mit folgenden Einschränkungen für die Verwendung als Verteilungspunkt unterstützt:  
+ Die Server Core-Installation von Windows Server 2012 R2 wird mit folgenden Einschränkungen für die Verwendung als Verteilungspunkte unterstützt:  
 
 -   Nur die x64-Bit-Version wird unterstützt.
 
--   Verteilungspunkte unter diesem Betriebssystem unterstützen PXE oder Multicast nicht.  
+-   Von Verteilungspunkten auf diesem Betriebssystem werden PXE und Multicast nicht unterstützt.  
+
+
 
 ## <a name="the-server-core-installation-of-windows-server-2012"></a>Die Server Core-Installation von Windows Server 2012  
- Zusätzlich zu den oben aufgeführten Betriebssystemen wird die Server Core-Installation von Windows Server 2012 mit folgenden Einschränkungen für die Verwendung als Verteilungspunkt unterstützt:  
+ Die Server Core-Installation von Windows Server 2012 wird mit folgenden Einschränkungen für die Verwendung als Verteilungspunkte unterstützt:  
 
 -   Nur die 64-Bit-Version wird unterstützt.  
 
--   Verteilungspunkte unter diesem Betriebssystem unterstützen PXE oder Multicast nicht.
+-   Von Verteilungspunkten auf diesem Betriebssystem werden PXE und Multicast nicht unterstützt.

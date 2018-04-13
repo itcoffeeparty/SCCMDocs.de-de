@@ -1,31 +1,32 @@
 ---
 title: Konfigurieren von Endpoint Protection
 titleSuffix: Configuration Manager
-description: "Erfahren Sie, wie Sie Configuration Manager einrichten, sodass Schadsoftwaredefinitionen für Windows Defender aktualisiert und verteilt werden."
+description: Erfahren Sie, wie Sie Configuration Manager einrichten, sodass Schadsoftwaredefinitionen für Windows Defender aktualisiert und verteilt werden.
 ms.custom: na
-ms.date: 02/14/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
-caps.latest.revision: "21"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: 5f005e7cd9c396fcf7e02aafefcb34c37ddab901
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+caps.latest.revision: 21
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.openlocfilehash: 9e54b433224b86650178b4df0cd6d0f2ab827b6c
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="configure-endpoint-protection"></a>Konfigurieren von Endpoint Protection
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Bevor Sie Endpoint Protection zum Verwalten von Sicherheit und Schadsoftware auf Configuration Manager-Clientcomputern verwenden können, müssen Sie die Konfigurationsschritte ausführen, die in diesem Thema erläutert werden.  
+Bevor Sie Endpoint Protection zum Verwalten von Sicherheits- und Antischadsoftware auf Configuration Manager-Clientcomputern verwenden können, müssen Sie die Konfigurationsschritte ausführen, die in diesem Artikel erläutert werden.  
 
 ## <a name="how-to-configure-endpoint-protection-in-configuration-manager"></a>Konfigurieren von Endpoint Protection in Configuration Manager  
  Endpoint Protection in Configuration Manager hat externe Abhängigkeiten sowie Abhängigkeiten innerhalb des Produkts.  
@@ -34,7 +35,8 @@ Bevor Sie Endpoint Protection zum Verwalten von Sicherheit und Schadsoftware auf
  In der folgenden Tabelle finden Sie die Schritte, Details und weitere Informationen zum Konfigurieren von Endpoint Protection.  
 
 > [!IMPORTANT]  
->  Wenn Sie Endpoint Protection für Windows 10-Computer verwalten, müssen Sie Configuration Manager so konfigurieren, dass Schadsoftwaredefinitionen für Windows Defender aktualisiert und bereitgestellt werden. Windows Defender ist in Windows 10 enthalten, aber SCEPInstall muss weiterhin installiert werden, und benutzerdefinierte Clienteinstellungen für Endpoint Protection (**Schritt 5** unten) sind weiterhin erforderlich.  
+>  Wenn Sie Endpoint Protection für Windows 10-Computer verwalten, müssen Sie Configuration Manager so konfigurieren, dass Schadsoftwaredefinitionen für Windows Defender aktualisiert und bereitgestellt werden. Windows Defender ist in Windows 10 enthalten, aber SCEPInstall muss weiterhin installiert werden, und benutzerdefinierte Clienteinstellungen für Endpoint Protection (**Schritt 5** unten) sind weiterhin erforderlich. </br> </br>
+> Ab Configuration Manager Version 1802 muss für Windows 10-Geräte nicht mehr der Endpoint Protection-Agent (SCEPInstall) installiert werden. Wenn dieser bereits auf Windows 10-Geräten installiert ist, wird er von Configuration Manager nicht entfernt. Administratoren können den Endpoint Protection-Agent auf Windows 10-Geräten entfernen, auf denen die Clientversion 1802 oder eine neuere Version ausgeführt wird. „SCEPInstall.exe“ ist möglicherweise immer noch unter C:\Windows\ccmsetup auf einigen Computern vorhanden, sollte aber nicht auf neue Clientinstallationen heruntergeladen werden. Benutzerdefinierte Clienteinstellungen sind für Endpoint Protection (siehe **Schritt 5** unten) nach wie vor erforderlich. <!--503654-->
 
 |Schritte|Details|  
 |-----------|-------------|  

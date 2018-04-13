@@ -1,34 +1,37 @@
 ---
-title: "Erste Schritte mit Konformitätseinstellungen"
+title: Erste Schritte mit Konformitätseinstellungen
 titleSuffix: Configuration Manager
-description: "Erfahren Sie, wie Sie Kompatibilitätseinstellungen in System Center Configuration Manager verwenden. Lernen Sie außerdem wichtige Konzepte kennen, über die Sie Bescheid wissen müssen."
+description: Lernen Sie wichtige Konzepte kennen, und erfahren Sie mehr zur Funktionsweise von Konformitätseinstellungen
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
-caps.latest.revision: "11"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: b1171f806d1bda9671fd5817362285a461ee2d44
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+caps.latest.revision: 11
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: a8f672d4d92db8f1bd6e19c4a483b5b3107ad703
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="get-started-with-compliance-settings-in-system-center-configuration-manager"></a>Erste Schritte mit Kompatibilitätseinstellungen in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Bevor Sie beginnen, System Center Configuration Manager-Konfigurationselemente zu erstellen, sollten Sie dieses Thema lesen, damit Sie verstehen, wie Kompatibilitätseinstellungen funktionieren, und etwas über die grundlegenden Konzepte erfahren, die Sie kennen müssen.  
+Bevor Sie Configuration Manager-Konformitätseinstellungen erstellen, sollten sie erst die grundlegenden Konzepte kennen und ihre Funktionsweise verstehen.  
 
-## <a name="how-compliance-settings-works"></a>So funktionieren Kompatibilitätseinstellungen  
- Mit den Kompatibilitätseinstellungen können Sie die Konfiguration und Kompatibilität von Servern, Laptops, Desktopcomputern und mobilen Geräten in Ihrer Organisation verwalten.  
+
+
+## <a name="how-compliance-settings-work"></a>So funktionieren Konformitätseinstellungen  
+ Mit den Kompatibilitätseinstellungen können Sie die Clients in Ihrer Organisation verwalten.  
 
  Konfigurationselemente werden in zwei Hauptkategorien unterteilt:  
 
@@ -36,50 +39,83 @@ Bevor Sie beginnen, System Center Configuration Manager-Konfigurationselemente z
 
 -   **Einstellungen für Geräte, die ohne den Configuration Manager-Client verwaltet werden**: Diese Geräte sind üblicherweise Geräte, die mit Microsoft Intune oder lokaler Configuration Manager-Geräteverwaltung verwaltet werden.  
 
+
+
 ## <a name="what-devices-are-supported"></a>Welche Geräte werden unterstützt?  
 
-
-|Gerätetyp|Weitere Informationen|  
+| Gerätetyp | Weitere Informationen |  
 |------------|----------------------|  
-|Windows-PCs (mit dem Configuration Manager-Client)|Ermöglicht es Ihnen, benutzerdefinierte Konfigurationselemente zu erstellen, mit denen Sie Elemente wie Registrierungsschlüssel, Dateien und Active Directory-Attribute bewerten können.<br /><br /> Wenn Sie den Windows 10-Konfigurationselementtyp verwenden, wählen Sie die gewünschten Einstellungen in einer vordefinierten Liste aus.|  
-|Windows PCs (bei Microsoft Intune registriert)|Wählen Sie die gewünschten Einstellungen in einer vordefinierten Liste aus.|  
-|iOS-Geräte (bei Microsoft Intune registriert)|Wählen Sie die gewünschten Einstellungen in einer vordefinierten Liste aus.|  
-|Android-Geräte (bei Microsoft Intune registriert)|Wählen Sie die gewünschten Einstellungen in einer vordefinierten Liste aus.|  
-|Windows Phone-Geräte (bei Microsoft Intune registriert)|Wählen Sie die gewünschten Einstellungen in einer vordefinierten Liste aus.|  
-|Macintosh-Computer (mit dem Configuration Manager-Client)|Ermöglicht es Ihnen, benutzerdefinierte Konfigurationselemente zu erstellen, mit denen Sie Elemente wie Werte für Einstellungen für Mac OS X (Eigenschaftenliste) sowie die Ergebnisse beurteilen können, die von einem Skript zurückgegeben werden.|  
-|Macintosh-Computer (bei Microsoft Intune registriert)|Wählen Sie die gewünschten Einstellungen in einer vordefinierten Liste aus.|  
+| Windows-PCs (mit dem Configuration Manager-Client) | Erstellen Sie benutzerdefinierte Konfigurationselemente, um Objekte wie Registrierungsschlüssel, Dateien und Active Directory-Attribute zu bewerten.<br /><br /> Wenn Sie den Windows 10-Konfigurationselementtyp verwenden, wählen Sie Einstellungen aus einer vordefinierten Liste aus. |  
+| Windows PCs (bei Microsoft Intune registriert) | Sie wählen Einstellungen aus einer vordefinierten Liste aus. |  
+| iOS-Geräte (bei Microsoft Intune registriert) | Sie wählen Einstellungen aus einer vordefinierten Liste aus. |  
+| Android-Geräte (bei Microsoft Intune registriert) | Sie wählen Einstellungen aus einer vordefinierten Liste aus. |  
+| Windows Phone-Geräte (bei Microsoft Intune registriert) | Sie wählen Einstellungen aus einer vordefinierten Liste aus. |  
+| Macintosh-Computer (mit dem Configuration Manager-Client) | Erstellen Sie Konfigurationselemente, um Objekte wie macOS-Einstellungen und von einem Skript zurückgegebene Ergebnisse zu bewerten. |  
+| Macintosh-Computer (bei Microsoft Intune registriert) | Sie wählen Einstellungen aus einer vordefinierten Liste aus. |  
+
+
 
 ## <a name="what-is-a-configuration-item"></a>Was ist ein Konfigurationselement?  
- Ein Konfigurationselement können Sie sich als Container vorstellen, in dem folgende Informationen gespeichert sind (die Informationen, die Sie konfigurieren, hängen vom Konfigurationselementtyp ab):  
+ Ein Konfigurationselement ist ein Container, der bestimmte Informationen speichert. Die von Ihnen festgelegte Konfiguration hängt vom Konfigurationselementtyp ab. Folgende Konfigurationselemente können die folgenden Informationen enthalten:
 
--   **Informationen zur Erkennungsmethode** (für Windows-Konfigurationselemente, die nur Anwendungseinstellungen enthalten): Hieran können Sie feststellen, ob eine Anwendung durch Erkennen der Windows-Installationsdatei für die Anwendung oder mithilfe eines benutzerdefinierten Skripts installiert wird.  
+-   **Informationen zur Erkennungsmethode** steht nur für Windows-Konfigurationselemente zur Verfügung, die Anwendungseinstellungen enthalten. Dabei wird erkannt, ob eine Anwendung installiert ist. Diese Erkennung verwendet die Windows Installer-Datei der Anwendung oder ein benutzerdefiniertes Skript.  
 
--   **Einstellungen** : Einstellungen stellen die geschäftlichen oder technischen Bedingungen dar, die verwendet werden, um die Kompatibilität von Clientgeräten zu bewerten. Sie können eine neue Einstellung konfigurieren oder eine bestehende Einstellung auf einem Referenzcomputer verwenden.  
+-   **Einstellungen** repräsentiert die geschäftlichen oder technischen Maßnahmen, die zur Bewertung der Kompatibilität auf Clientcomputern verwendet werden. Konfigurieren Sie eine neue Einstellung, oder navigieren Sie zu einer bestehenden Einstellung auf einem Referenzcomputer.  
 
--   **Kompatibilitätsregeln** : Mit Kompatibilitätsregeln werden die Bedingungen angegeben, mit denen die Kompatibilität einer Konfigurationselementeinstellung definiert wird. Damit eine Einstellung auf Kompatibilität bewertet werden kann, muss sie über mindestens eine Kompatibilitätsregel verfügen. Einige Einstellungen ermöglichen es Ihnen, Werte zu korrigieren, die als nicht kompatibel ermittelt wurden. Sie können neue Regeln erstellen oder eine vorhandene Einstellung innerhalb eines beliebigen Konfigurationselements suchen, um darin enthaltene Regeln auszuwählen.  
+-   Mit **Konformitätsregeln** werden die Bedingungen angegeben, mit denen die Konformität einer Konfigurationselementeinstellung definiert wird. Damit ein Client eine Einstellung auf Kompatibilität prüfen kann, muss sie über mindestens eine Kompatibilitätsregel verfügen. Einige Einstellungen korrigieren nicht kompatible Werte. Erstellen Sie neue Regeln, oder navigieren Sie zu einer vorhandenen Einstellung innerhalb eines beliebigen Konfigurationselements, und wählen Sie dort Regeln aus.  
 
--   **Unterstützte Plattformen** : Dies sind die von Ihnen definierten Geräteplattformen, auf denen das Konfigurationselement auf Kompatibilität ausgewertet wird. Wenn Sie ein Konfigurationselement auf einem Gerät bereitstellen, das nicht in der Liste der unterstützten Plattformen enthalten ist, wird das Gerät nicht auf Kompatibilität bewertet.  
+-   **Unterstützte Plattformen** sind die von Ihnen definierten Geräteplattformen, auf denen das Konfigurationselement auf Kompatibilität geprüft wird. Wenn Sie ein Konfigurationselement auf einem Gerät bereitstellen, das nicht in der Liste der unterstützten Plattformen enthalten ist, wird das Gerät nicht auf Kompatibilität bewertet.  
+
+
 
 ## <a name="what-is-a-configuration-baseline"></a>Was ist eine Konfigurationsbasislinie?  
- Kompatibilität wird durch Definieren einer Konfigurationsbasislinie bewertet, die die zu bewertenden Konfigurationselemente sowie Einstellungen und Regeln enthält, in denen die erforderliche Kompatibilitätsstufe beschrieben wird. Sie können diese Konfigurationsdaten aus dem Internet in Microsoft System Center Configuration Manager-Konfigurationspaketen importieren, bewährte Verfahren, die von Microsoft und anderen Herstellern in Configuration Manager definiert sind, und anschließend in Configuration Manager importieren. Alternativ können Sie neue Konfigurationselemente und Konfigurationsbasislinien erstellen.  
+ Definieren Sie eine Konfigurationsbaseline, die die zu prüfenden Konfigurationselemente einbezieht. Beziehen Sie außerdem die Einstellungen und Regeln ein, die den erforderlichen Konformitätsgrad beschreiben. Importieren Sie diese Konfigurationsdaten aus den Configuration Manager-Konfigurationspaketen. Diese Konfigurationspakete werden von Microsoft und anderen Vendoren festgelegt. Alternativ können Sie neue Konfigurationselemente und Konfigurationsbaselines erstellen.  
 
- Nachdem eine Konfigurationsbasislinie definiert ist, kann sie über Sammlungen für Benutzer und Geräte bereitgestellt und entsprechend einem Zeitplan auf Kompatibilität ausgewertet werden. Es ist möglich, mehrere Konfigurationsbasislinien auf einem Gerät bereitzustellen. Dies bietet Ihnen ein hohes Maß an Kontrolle.  
+ Nachdem Sie eine Konfigurationsbaseline definiert haben, können Sie sie in Benutzer- und Gerätesammlungen bereitstellen. Dann prüft der Client gemäß eines Zeitplans die Baselineeinstellungen auf Konformität. Sie können auf einem Gerät mehrere Konfigurationsbaselines bereitstellen. Diese Granularität führt zu einer höheren Steuerbarkeit der Konformität. 
 
- Von Clientgeräten wird die Kompatibilität anhand jeder zugewiesenen Konfigurationsbasislinie ausgewertet. Die Ergebnisse werden dem Standort sofort über Zustands- und Statusmeldungen gemeldet. Wenn ein Clientgerät derzeit nicht mit einem Netzwerk verbunden ist, aber die Konfigurationselemente, auf die in den bereitgestellten Konfigurationsbasislinien verwiesen wird, bereits heruntergeladen wurden, wird die Konfigurationsbasislinie auf Kompatibilität bewertet. Die Kompatibilitätsinformationen werden beim erneuten Herstellen einer Verbindung gesendet.  
+ Von Clientgeräten wird die Konformität anhand jeder zugewiesenen Konfigurationsbasislinie ausgewertet. Die Ergebnisse werden dem Standort sofort über Zustands- und Statusmeldungen gemeldet. Wenn ein Gerät aktuell nicht mit dem Netzwerk verbunden ist, darauf aber die Konfigurationsbaseline heruntergeladen wurde, wird die Konformität der Konfigurationselemente trotzdem geprüft. Sobald das Gerät wieder über eine Verbindung zum Netzwerk verfügt, sendet es die Konformitätsinformationen.  
 
- Im Knoten **Bereitstellungen** des Arbeitsbereichs **Überwachung** in der Configuration Manager-Konsole können Sie die Ergebnisse der Kompatibilitätsbewertung der Konfigurationsbasislinie überwachen. Darin werden die häufigsten Ursachen für Nichtkompatibilität, Fehler und die Anzahl der betroffenen Benutzer und Geräte angezeigt. Sie können auch Berichte für Kompatibilitätseinstellungen ausführen, um zusätzliche Informationen anzuzeigen, z. B. welche Geräte kompatibel bzw. nicht kompatibel sind und welches Element der Konfigurationsbasislinie dazu führt, dass ein Computer nicht kompatibel ist. Sie können die Ergebnisse einer Kompatibilitätsbewertung auch auf Windows-Computern anzeigen, auf denen die Configuration Manager-Clientsoftware ausgeführt wird. Dazu verwenden Sie die Registerkarte **Konfigurationen** in **Configuration Manager** in der Systemsteuerung.  
+### <a name="monitoring-configuration-baselines"></a>Überwachen von Konfigurationsbaselines
+- Überwachen Sie die Ergebnisse der Konformitätsprüfung in der Configuration Manager-Konsole (unter **Bereitstellungen** > **Überwachung**). Zum Beispiel:
+    - Häufige Gründe für eine Nicht-Konformität
+    - Fehler
+    - Die Zahl der betroffenen Benutzer und Geräte
+- Führen Sie Berichte zu Konformitätseinstellungen mit zusätzlichen Informationen durch. Zum Beispiel:
+    - Welche Geräte sind konform bzw. nicht konform?
+    - Welches Element der Konfigurationsbaseline verursacht die Nicht-Konformität eines Computers?
+- Sehen Sie sich die Ergebnisse der Konformitätsprüfung von Windows-Computern an, auf denen der Configuration Manager-Client ausgeführt wird. Öffnen Sie die **Configuration Manager**-Einstellungen, und wechseln Sie zur Registerkarte **Konfiguration**.  
+
+
 
 ## <a name="user-data-and-profiles-configuration-items"></a>Konfigurationselemente für Benutzerdaten und Profile  
- Konfigurationselemente für Benutzerdaten und Profile enthalten Einstellungen, mit denen gesteuert wird, wie Benutzer in einer Hierarchie die Ordnerumleitung, Offlinedateien und servergespeicherten Profile auf Computern mit Windows 8 und höher verwalten. Sie können diese Konfigurationselemente für Benutzersammlungen bereitstellen und dann deren Kompatibilität in der Configuration Manager-Konsole im Knoten **Überwachung** überwachen. Im Gegensatz zu anderen Konfigurationselementen fügen Sie diese nicht zu Konfigurationsbasislinien hinzu, bevor Sie sie bereitstellen. Sie können die Konfigurationselemente direkt über das Dialogfeld **Konfigurationselemente für Benutzerdaten und Profile bereitstellen** bereitstellen.  
+ Konfigurationselemente für Benutzerdaten und -profile enthalten Einstellungen, die die Verwaltung von Folgendem auf Windows 8-Computern steuern:  
+   - Umleitung des Ordners
+   - Offlinedateien
+   - Roamingprofile  
+
+Stellen Sie diese Konfigurationselement in Benutzersammlungen bereit. Überwachen Sie die Konformität in der Configuration Manager-Konsole im Knoten **Überwachung**. Im Gegensatz zu anderen Konfigurationselementen fügen Sie diese nicht zu Konfigurationsbaselines hinzu, bevor Sie sie bereitstellen. Stellen Sie sie über **Bereitstellen** im Menüband direkt bereit.  
 
  Ausführlichere Informationen finden Sie unter [Erstellen von Konfigurationselementen für Benutzerdaten und -profile](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items).  
 
-## <a name="remote-connection-profiles"></a>Remoteverbindungsprofile  
- Remoteverbindungsprofile stellen eine Reihe von Tools und Ressourcen zur Verfügung, mit deren Hilfe Sie Remoteverbindungeinstellungen für Geräte in Ihrer Organisation erstellen, bereitstellen und überwachen können. Durch Bereitstellen dieser Einstellungen erleichtern Sie den Endbenutzern das Herstellen einer Verbindung mit dem Unternehmensnetzwerk.  
 
-Ausführlichere Informationen finden Sie unter [Erstellen von Remoteverbindungsprofilen](/sccm/compliance/deploy-use/create-remote-connection-profiles).  
+
+## <a name="remote-connection-profiles"></a>Remoteverbindungsprofile  
+ Remoteverbindungsprofile stellen eine Reihe von Tools und Ressourcen zur Verfügung, mit deren Hilfe Sie Remoteverbindungeinstellungen erstellen, bereitstellen und überwachen können. Durch Bereitstellen dieser Einstellungen auf Geräten erleichtern Sie den Endbenutzern das Herstellen einer Verbindung mit dem Unternehmensnetzwerk.  
+
+Weitere Informationen finden Sie unter [Erstellen von Remoteverbindungsprofilen](/sccm/compliance/deploy-use/create-remote-connection-profiles).  
+
+
 
 ## <a name="windows-edition-upgrade"></a>Upgrade von Windows-Edition
-Die Upgraderichtlinie für die Edition ermöglicht das automatische Upgrade von Geräten, die bestimmte Versionen von Windows 10 ausführen, auf eine neuere Version durch Bereitstellung eines neuen Produktschlüssels oder einer Lizenzdatei.
+Die Upgraderichtlinie für die Edition ermöglicht das automatische Upgrade von Geräten, die bestimmte Versionen von Windows 10 ausführen, auf eine neuere Version. Diese Richtlinie stellt einen neuen Product Key oder eine neue Lizenzdatei zur Verfügung, die vom Gerät für das Upgrade verwendet wird.
 
-Ausführlichere Informationen finden Sie unter [Upgrade Windows devices with the edition upgrade policy (Einstellungen der Upgraderichtlinie für die Windows-Edition in Microsoft Intune)](/sccm/compliance/deploy-use/upgrade-windows-version)
+Ausführlichere Informationen finden Sie unter [Aktualisieren von Windows-Geräten mit der Editionsupgraderichtlinie in System Center Configuration Manager](/sccm/compliance/deploy-use/upgrade-windows-version).
+
+
+
+## <a name="microsoft-edge-browser-profiles"></a>Microsoft Edge-Profile
+<!-- 1357310 -->
+Erstellen Sie als [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256)-Benutzer auf Windows 10-Clients ab Version 1802 eine Richtlinie für Configuration Manager-Konformitätseinstellungen, um verschiedene Microsoft Edge-Einstellungen zu konfigurieren. 
+
+Weitere Informationen finden Sie unter [Create Microsoft Edge browser profile (Microsoft Edge-Profile)](/sccm/compliance/deploy-use/browser-profiles).
+

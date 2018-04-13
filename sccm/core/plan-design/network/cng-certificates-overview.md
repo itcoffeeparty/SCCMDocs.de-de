@@ -1,24 +1,25 @@
 ---
-title: "CNG-Zertifikate: Übersicht"
+title: 'CNG-Zertifikate: Übersicht'
 titleSuffix: Configuration Manager
-description: "Eine Übersicht über CNG-Zertifikate in Configuration Manager"
+description: In diesem Artikel erhalten Sie Informationen zur Unterstützung von CNG-Zertifikaten (Cryptography Next Generation) für Configuration Manager-Clients und -Server.
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
-ms.assetid: 
-author: vhorne
-ms.author: victorh
-manager: angrobe
-ms.openlocfilehash: f5f5138270d4f14b76b2c41e41ec034a0c12a932
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.assetid: ''
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 271cc0e2753f1a65740187a4faf6875c1a018014
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="cng-certificates-overview"></a>CNG-Zertifikate: Übersicht
 <!-- 1356191 --> 
@@ -31,25 +32,35 @@ Sie können Zertifikatvorlagen des Typs [Cryptography API: Next Generation (CNG)
 - Clientregistrierung und Kommunikation mit einem HTTPS-Verwaltungspunkt   
 - Softwareverteilung und Anwendungsbereitstellung mit einem HTTPS-Verteilungspunkt   
 - Betriebssystembereitstellung  
-- Client messaging SDK (mit dem aktuellen Update) und ISV-Proxy   
+- Client Messaging SDK (mit dem aktuellen Update) und ISV-Proxy   
 - Cloud Management Gateway-Konfiguration  
+
+Ab Version 1802 können Sie CNG-Zertifikate für die folgenden HTTPS-fähigen Serverrollen verwenden: <!-- 1357314 -->   
+- Verwaltungspunkt
+- Verteilungspunkt
+- Softwareupdatepunkt
+- Zustandsmigrationspunkt     
 
 > [!NOTE]
 > CNG ist mit Crypto API (CAPI) abwärtskompatibel. CAPI-Zertifikate werden weiterhin unterstützt, auch wenn die CNG-Unterstützung auf dem Client aktiviert ist.
 
 ## <a name="unsupported-scenarios"></a>Nicht unterstützte Szenarien
 
-Die folgenden Szenarien werden derzeit nicht unterstützt:
+Die folgenden Szenarios werden derzeit nicht unterstützt:
 
-- Die Rollen „Anwendungskatalog-Webdienst“, „Anwendungskatalog-Website“, „Anmeldungspunkt“ und „Anmeldungsproxypunkt“ funktionieren nicht bei Installation im HTTPS-Modus, wenn ein CNG-Zertifikat in Internetinformationsdienste (IIS) an die Website gebunden ist. Softwarecenter zeigt keine Anwendungen und Pakete als verfügbar an, die für Benutzer- oder Benutzergruppensammlungen bereitgestellt werden.
+- Die folgenden Serverrollen sind nicht betriebsbereit, wenn sie im HTTPS-Modus installiert werden und ein CNG-Zertifikat an die Website auf IIS (Internetinformationsdienste) gebunden ist: 
+    - Anwendungskatalog-Webdienst
+    - Anwendungskatalog-Website
+    - Anmeldungspunkt  
+    - Anmeldungsproxypunkt  
 
-- Wenn bei Installation im HTTPS-Modus ein CNG-Zertifikat an die Website in IIS gebunden ist, ist der Zustandsmigrationspunkt nicht betriebsbereit.
+- Softwarecenter zeigt keine Anwendungen und Pakete als verfügbar an, die für Benutzer- oder Benutzergruppensammlungen bereitgestellt werden.
 
 - Mithilfe von CNG-Zertifikaten kann kein Cloudverteilungspunkt erstellt werden.
 
-- Die Kommunikation zwischen dem Richtlinienmodul des Registrierungsdiensts für Netzwerkgeräte (NDES) und dem Zertifikatregistrierungspunkt misslingt, wenn das NDES-Richtlinienmodul als Zertifikat für die Clientauthentifizierung ein CNG-Zertifikat nutzt.
+- Wenn das NDES-Richtlinienmodul ein CNG-Zertifikat für die Clientauthentifizierung nutzt, schlägt die Kommunikation mit dem Zertifikatregistrierungspunkt fehl.
 
-- Bei Angabe eines CNG-Zertifikats kann mithilfe der Tasksequenz zur Medienerstellung kein startfähiges Medium erstellt werden.
+- Wenn Sie beim Erstellen von Tasksequenzmedien ein CNG-Zertifikat angeben, schlägt der Assistent beim Erstellen startbarer Medien fehl.
 
 ## <a name="to-use-cng-certificates"></a>So verwenden Sie CNG-Zertifikate
 
