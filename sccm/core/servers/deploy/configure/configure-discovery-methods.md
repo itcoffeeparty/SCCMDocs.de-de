@@ -1,50 +1,52 @@
 ---
 title: Konfigurieren der Ermittlung
 titleSuffix: Configuration Manager
-description: "Konfigurieren Sie Ermittlungsmethoden zur Ausführung auf einem Configuration Manager-Standort, um Ressourcen zu suchen, die Sie von der Netzwerkinfrastruktur und Active Directory verwalten können."
+description: Konfigurieren von Ermittlungsmethoden zum Finden von Ressourcen, die Sie von Ihrem Netzwerk, Active Directory und Azure Active Directory verwalten
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: f2d928e066702190eba32b2a2c06fe89636d59f6
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+manager: dougeby
+ms.openlocfilehash: 825b9b250000e8353b1428cbee45f8fda9a30c35
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="configure-discovery-methods-for-system-center-configuration-manager"></a>Konfigurieren von Ermittlungsmethoden für System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 
-Sie konfigurieren Ermittlungsmethoden zur Ausführung auf einem System Center Configuration Manager-Standort, um Ressourcen zu suchen, die Sie von der Netzwerkinfrastruktur und Active Directory verwalten können. Dazu müssen Sie jede Methode aktivieren und anschließend konfigurieren, die Sie zum Suchen in Ihrer Umgebung verwenden möchten. (Sie können außerdem jede Methode mit den gleichen Schritten deaktivieren, mit denen sie aktiviert wird.)  Die einzigen Ausnahmen hiervon sind Frequenzermittlung und Serverermittlung:  
+Konfigurieren Sie Ermittlungsmethoden zum Finden von Ressourcen, die Sie von Ihrem Netzwerk, Active Directory und Azure Active Directory (Azure AD) verwalten. Aktivieren und konfigurieren Sie zunächst jede Methode, die Sie zum Suchen in Ihrer Umgebung verwenden möchten. Sie können außerdem jede Methode mit den gleichen Schritten deaktivieren, mit denen sie aktiviert wird. Die einzigen Ausnahmen hiervon sind Frequenzermittlung und Serverermittlung:  
 
--   In der Standardeinstellung ist die Frequenzermittlung bereits aktiviert, wenn Sie einen primären Standort von Configuration Manager installieren, und für die Ausführung nach einem einfachen Zeitplan konfiguriert. Es wird empfohlen, die Frequenzermittlung aktiviert zu lassen, da dadurch sichergestellt wird, dass die Discovery Data Records (DDRs) für Geräte aktuell sind. Weitere Informationen zur Frequenzermittlung finden Sie unter [Informationen zur Frequenzermittlung](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutHeartbeat).  
+-   Die **Frequenzermittlung** ist standardmäßig aktiviert, wenn Sie einen primären Configuration Manager-Standort installieren. Sie wird so konfiguriert, dass sie nach einem Zeitplan ausgeführt wird. Lassen Sie die Frequenzermittlung aktiviert. Durch diese Methode wird sichergestellt, dass die Discovery Data Records (DDRs) für Geräte aktuell sind. Weitere Informationen zur Frequenzermittlung finden Sie unter [Informationen zur Frequenzermittlung](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutHeartbeat).  
 
--   Die Serverermittlung ist eine automatische Erkennungsmethode, die Computer findet, die Sie als Standortsystem verwenden. Sie können sie nicht konfigurieren oder deaktivieren.  
+-   Die **Serverermittlung** ist eine Methode für die automatische Ermittlung. Sie sucht nach Computern, die Sie als Standortsysteme verwenden. Sie können sie nicht konfigurieren oder deaktivieren.  
 
-**So aktivieren Sie eine konfigurierbare Ermittlungsmethode:**  
+### <a name="enable-a-configurable-discovery-method"></a>Aktivieren einer konfigurierbaren Ermittlungsmethode  
  > [!NOTE]  
- > Die folgenden Informationen treffen nicht auf die Azure Active Directory-Benutzerermittlung zu. Informationen hierzu finden Sie unter [Konfigurieren der Azure AD-Benutzerermittlung](#azureaadisc) weiter unten in diesem Thema.
+ > Die folgenden Informationen treffen nicht auf die Azure AD-Benutzerermittlung zu. Informationen hierzu finden Sie unter [Konfigurieren der Azure AD-Benutzerermittlung](#azureaadisc) weiter unten in diesem Artikel.
 
-1.  Wählen Sie in der Configuration Manager-Konsole **Verwaltung** > **Hierarchiekonfiguration** und anschließend **Ermittlungsmethoden** aus.  
+1.  Navigieren Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Verwaltung**, erweitern Sie die Option **Hierarchiekonfiguration**, und klicken Sie auf **Ermittlungsmethoden**.  
 
 2.  Wählen Sie die Ermittlungsmethode für den Standort aus, an dem die Ermittlung aktiviert werden soll.  
 
-3.  Wählen Sie in der Gruppe **Eigenschaften** auf der Registerkarte **Startseite** die Option **Eigenschaften** aus, und aktivieren Sie dann auf der Registerkarte **Allgemein** das Kontrollkästchen **Ermittlungsmethode&lt; aktivieren\>**.  
+3.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Eigenschaften** die Option **Eigenschaften** aus. Aktivieren Sie auf der Registerkarte **Allgemein** das Kontrollkästchen **&lt;Ermittlungsmethode\> aktivieren**.  
 
      Wenn dieses Kontrollkästchen bereits aktiviert ist, können Sie die Ermittlungsmethode deaktivieren, indem Sie das Kontrollkästchen deaktivieren.  
 
 4.  Wählen Sie **OK** aus, um die Konfiguration zu speichern.  
+
 
 
 ##  <a name="BKMK_ConfigADForestDisc"></a> Konfigurieren der Active Directory-Gesamtstrukturermittlung  
@@ -101,12 +103,14 @@ Wenden Sie die folgenden Verfahren an, um die Active Directory-Gesamtstrukturerm
 
 4.  Wenn Sie die Konfiguration dieser Gesamtstruktur zur Verwendung mit der Active Directory-Gesamtstrukturermittlung abgeschlossen haben, wählen Sie **OK** aus, um die Konfiguration zu speichern.  
 
+
+
 ##  <a name="BKMK_ConfigADDiscGeneral"></a> Konfigurieren der Active Directory-Ermittlung für Computer, Benutzer oder Gruppen  
- Verwenden Sie die Informationen in den folgenden Abschnitten, um für Computer, Benutzer oder Gruppen zu konfigurieren. Sie verwenden diese Ermittlungsmethoden:  
+ Verwenden Sie die Informationen in den folgenden Abschnitten, um für Computer, Benutzer oder Gruppen eine der folgenden Ermittlungsmethoden zu konfigurieren:  
 
 -   Active Directory-Gruppenermittlung  
 
--   Active Directory-Systemermittlung  
+-   Active Directory-Systemermittlung  
 
 -   Active Directory-Benutzerermittlung  
 
@@ -146,7 +150,7 @@ Wenden Sie die folgenden Verfahren an, um die Active Directory-Gesamtstrukturerm
 
 7.  Konfigurieren Sie auf der Registerkarte **Abfragezeitplan** den Zeitplan für die vollständige Ermittlungsabfrage sowie die Deltaermittlung.  
 
-8.  Optional können Sie auf der Registerkarte **Option** Optionen zum Herausfiltern oder Ausschließen veralteter Computerdatensätze von der Ermittlung sowie zum Ermitteln der Mitgliedschaft von Verteilergruppen konfigurieren.  
+8.  Konfigurieren Sie optional auf der Registerkarte **Option** Optionen zum Herausfiltern oder Ausschließen veralteter Computerdatensätze von der Ermittlung. Konfigurieren Sie auch die Ermittlung der Mitgliedschaft von Verteilergruppen.  
 
     > [!NOTE]  
     >  Von der Active Directory-Gruppenermittlung wird standardmäßig nur die Mitgliedschaft von Sicherheitsgruppen ermittelt.  
@@ -172,7 +176,7 @@ Wenden Sie die folgenden Verfahren an, um die Active Directory-Gesamtstrukturerm
     3.  Geben Sie für jeden Speicherort ein Konto an, das als **Active Directory-Ermittlungskonto**verwendet werden soll.  
 
         > [!TIP]  
-        >  Sie können für jeden Speicherort, den Sie angeben, einen Satz von Ermittlungsoptionen und ein eindeutiges Active Directory-Ermittlungskonto konfigurieren.  
+        >  Sie können für jeden angegebenen Speicherort einen Satz von Ermittlungsoptionen und ein eindeutiges Active Directory-Ermittlungskonto konfigurieren.  
 
     4.  Wählen Sie **OK** aus, um die Konfiguration des Active Directory-Containers zu speichern.  
 
@@ -203,7 +207,7 @@ Wenden Sie die folgenden Verfahren an, um die Active Directory-Gesamtstrukturerm
     3.  Geben Sie für jeden Speicherort ein Konto an, das als **Active Directory-Ermittlungskonto**verwendet werden soll.  
 
         > [!NOTE]  
-        >  Sie können für jeden Speicherort, den Sie angeben, einen eindeutigen Satz von Ermittlungsoptionen und ein eindeutiges Active Directory-Ermittlungskonto konfigurieren.  
+        >  Sie können für jeden angegebenen Speicherort einen eindeutigen Satz von Ermittlungsoptionen und ein eindeutiges Active Directory-Ermittlungskonto konfigurieren.  
 
     4.  Wählen Sie **OK** aus, um die Konfiguration des Active Directory-Containers zu speichern.  
 
@@ -213,11 +217,29 @@ Wenden Sie die folgenden Verfahren an, um die Active Directory-Gesamtstrukturerm
 
 8.  Wenn Sie mit dem Konfigurieren der Active Directory-Benutzerermittlung fertig sind, wählen Sie **OK** aus, um die Konfiguration zu speichern.  
 
+
+
 ## <a name="azureaadisc"></a> Konfigurieren der Azure AD-Benutzerermittlung
-Ab Version 1706 können Sie die Azure Active Directory-Benutzerermittlung konfigurieren, wenn Sie Configuration Manager mit Ihrem [Azure-Abonnement und Azure Active Directory](/sccm/core/servers/deploy/configure/azure-services-wizard) verbinden.
+Die Aktivierung der Azure AD-Benutzerermittlung unterscheidet sich von der Aktivierung anderer Ermittlungsmethoden. Konfigurieren Sie sie, wenn Sie den Configuration Manager-Standort in Azure AD integrieren. Wenn Sie [Konfigurieren von Azure-Diensten](/sccm/core/servers/deploy/configure/azure-services-wizard) für **Cloud Management** konfigurieren, können Sie ebenso diese Ermittlungsmethode aktivieren und konfigurieren. 
 
-Die Azure AD-Benutzerermittlung wird als Teil der *Cloudverwaltung* konfiguriert. Das entsprechende Verfahren hierfür finden Sie unter [Erstellen der Azure-Web-App für die Verwendung mit Configuration Manager](/sccm/core/servers/deploy/configure/Azure-services-wizard#webapp) im Thema *Konfigurieren von Azure-Diensten für die Verwendung mit Configuration Manager*.
+Führen Sie beim Konfigurieren des Azure-Diensts **Cloud Management** Folgendes durch: 
+- Klicken Sie auf der Seite **Discovery** (Ermittlung) des Assistenten auf **Enable Azure Active Directory User Discovery** (Azure Active Directory-Benutzerermittlung aktivieren). 
+- Klicken Sie auf **Einstellungen**. 
+- Konfigurieren Sie im Dialogfeld „Einstellungen der Azure AD-Benutzerermittlung“ einen Zeitplan für die Ermittlung. Sie können auch die Deltaermittlung aktivieren, bei der nur eine Überprüfung auf neue oder geänderte Konten in Azure AD erfolgt. 
 
+Weitere Informationen finden Sie unter [Azure AD-Benutzerermittlung](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
+
+ > [!Important]  
+ > Vor dem *Importieren* der Azure AD-App in Configuration Manager müssen Sie der Serveranwendung die Berechtigung erteilen, Verzeichnisdaten von Azure AD zu lesen. 
+ >  - Navigieren Sie im [Azure-Portal](https://portal.azure.com) zum Blatt **Azure Active Directory**. 
+ >  - Klicken Sie auf **App-Registrierungen**, und wechseln Sie ggf. zu **Alle Apps**. 
+ >  - Wählen Sie die Server-App des Typs *Web-App/API* aus, und klicken Sie auf **Einstellungen**. 
+ >  - Klicken Sie auf **Erforderliche Berechtigungen**, und klicken Sie dann auf **Berechtigungen erteilen**.
+ >  
+ > Wenn Sie die Server-App von Configuration Manager aus *erstellen*, erstellt Azure AD automatisch die Berechtigungen mit der Anwendung. Sie müssen im Azure-Portal der Anwendung weiterhin Ihre Zustimmung erteilen.
+
+ > [!Note]  
+ > Wenn der Benutzer eine Verbundsidentität oder synchronisierte Identität ist, müssen Sie in Configuration Manager die [Active Directory-Benutzerermittlung](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser) und die Azure AD-Benutzerermittlung verwenden. Weitere Informationen zu Hybrididentitäten finden Sie unter [Define a hybrid identity adoption strategy (Festlegen einer Strategie zur Einführung von Hybrididentitäten)](/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->
 
 
 
@@ -237,11 +259,13 @@ Die Azure AD-Benutzerermittlung wird als Teil der *Cloudverwaltung* konfiguriert
 
 4.  Konfigurieren Sie die Häufigkeit, mit der Discovery Data Records der Frequenzermittlung von den Clients übermittelt werden sollen, und wählen Sie **OK** aus, um die Konfiguration zu speichern.  
 
+
+
 ##  <a name="BKMK_ConfigNetworkDisc"></a> Konfigurieren einer Netzwerkermittlung  
- Verwenden Sie die Informationen in den folgenden Abschnitten zum Konfigurieren der Netzwerkermittlung.  
+ Verwenden Sie die Informationen in diesen Abschnitten, die Ihnen bei der Konfiguration der Netzwerkermittlung helfen.  
 
 ###  <a name="BKMK_AboutConfigNetworkDisc"></a> Informationen zum Konfigurieren der Netzwerkermittlung  
- Zum Konfigurieren der Netzwerkermittlung benötigen Sie die folgenden Informationen:  
+ Bevor Sie die Netzwerkermittlung konfigurieren können, müssen Sie die folgenden Themen verstehen:  
 
 -   Verfügbare Ebenen der Netzwerkermittlung  
 
@@ -299,7 +323,7 @@ Weitere Informationen finden Sie in [Informationen zur Netzwerkermittlung](../..
  Wenn im Dialogfeld **Netzwerkermittlung Eigenschaften** auf der Registerkarte **SNMP** mehrere SNMP-Communitys angezeigt werden, werden sie von der Netzwerkermittlung in der angezeigten Reihenfolge durchsucht. Sorgen Sie dafür, dass die meistverwendeten Namen sich oben auf der Liste befinden, um die Netzwerkauslastung durch Versuche, den Kontakt zu einem Gerät mithilfe verschiedener Namen herzustellen, möglichst gering zu halten.  
 
 > [!NOTE]  
->  Zusätzlich zum SNMP-Communitynamen können Sie auch die IP-Adresse oder den auflösbaren Namen eines bestimmten SNMP-Geräts verwenden. Dies erfolgt im Dialogfeld **Eigenschaften der Netzwerkermittlung** auf der Registerkarte **SNMP-Geräte**.  
+>  Zusätzlich zum SNMP-Communitynamen können Sie auch die IP-Adresse oder den auflösbaren Namen eines bestimmten SNMP-Geräts verwenden. Diese Aktion erfolgt im Dialogfeld **Eigenschaften der Netzwerkermittlung** auf der Registerkarte **SNMP-Geräte**.  
 
 ####  <a name="BKMK_SearchByDHCP"></a> Durchsuchen eines bestimmten DHCP-Servers  
  Sie können die Netzwerkermittlung zur Verwendung eines oder mehrerer bestimmter DHCP-Server zum Ermitteln der DHCP-Clients konfigurieren.  
@@ -325,7 +349,7 @@ Weitere Informationen finden Sie in [Informationen zur Netzwerkermittlung](../..
     -   Aktivieren Sie auf der Registerkarte **Subnetze** das Kontrollkästchen **Lokale Subnetze durchsuchen**.  
 
         > [!TIP]  
-        >  Wenn Ihnen die speziellen Subnetze des Netzwerks bekannt sind, können Sie das Kontrollkästchen **Lokale Subnetze durchsuchen** deaktivieren und über das Symbol **Neu** ![Symbol „Neu“](media/Disc_new_Icon.gif) die Subnetze hinzufügen, die durchsucht werden sollen. Bei großen Netzwerken ist es oft sinnvoll, nur ein oder zwei Subnetze auf einmal zu durchsuchen, um die Netzwerkauslastung zu minimieren.  
+        >  Wenn Sie die Subnetze kennen, aus denen Ihr Netzwerk besteht, deaktivieren Sie das Kontrollkästchen **Lokale Subnetze durchsuchen**. Klicken Sie anschließend auf das Symbol **Neu** ![Symbol „Neu“](media/Disc_new_Icon.gif), um die bestimmten Subnetze, die Sie durchsuchen möchten, hinzuzufügen. Bei großen Netzwerken ist es oft sinnvoll, nur ein oder zwei Subnetze auf einmal zu durchsuchen, um die Netzwerkauslastung zu minimieren.  
 
     -   Aktivieren Sie auf der Registerkarte **Domänen** das Kontrollkästchen **Lokale Domäne durchsuchen**.  
 
@@ -399,7 +423,7 @@ Weitere Informationen finden Sie in [Informationen zur Netzwerkermittlung](../..
 
 10. Zum Konfigurieren der Ermittlung für die Abfrage bestimmter DHCP-Server für DHCP-Clients wählen Sie die Registerkarte **DHCP** aus und konfigurieren dann eine oder mehrere der folgenden Optionen:  
 
-    -   Wenn der DHCP-Server auf dem Computer, auf dem die Ermittlung ausgeführt wird, abgefragt werden soll, aktivieren Sie das Kontrollkästchen **Immer den DHCP-Server des Standortservers verwenden**.  
+    -   Wenn der DHCP-Server auf dem Computer, auf dem die Ermittlung ausgeführt wird, abgefragt werden soll, wählen Sie **Immer den DHCP-Server des Standortservers verwenden** aus.  
 
         > [!NOTE]  
         >  Dabei ist es erforderlich, dass die IP-Adresse durch den Server von einem DHCP-Server geleast wird. Es kann keine statische IP-Adresse verwendet werden.  
@@ -414,12 +438,12 @@ Weitere Informationen finden Sie in [Informationen zur Netzwerkermittlung](../..
      Sie können mehrere wiederkehrende und nicht wiederkehrende Zeitpläne konfigurieren.  
 
     > [!NOTE]  
-    >  Wenn auf der Registerkarte **Zeitplan** mehrere Zeitpläne zugleich angezeigt werden, werden die Netzwerkermittlungen zu den darin angegebenen Zeiten entsprechend den Konfigurationen ausgeführt. Dies gilt auch für Zeitpläne mit Wiederholung.  
+    >  Wenn auf der Registerkarte **Zeitplan** mehrere Zeitpläne zugleich angezeigt werden, werden die Netzwerkermittlungen zu den darin angegebenen Zeiten entsprechend den Konfigurationen ausgeführt. Dieses Verhalten gilt auch für Zeitpläne mit Wiederholung.  
 
 12. Wählen Sie **OK** aus, um die Konfigurationen zu speichern.  
 
 ###  <a name="BKMK_HowToVerifyNetDisc"></a> Überprüfen, ob die Netzwerkermittlung abgeschlossen ist  
- Die Zeit, die für die Netzwerkermittlung erforderlich ist, wird von zahlreichen Faktoren beeinflusst. Folgende Faktoren können die Dauer beeinflussen:  
+ Die Zeit, die für die Netzwerkermittlung erforderlich ist, wird von mindestens einem der folgenden Faktoren beeinflusst:  
 
 -   Die Größe des Netzwerks  
 

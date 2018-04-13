@@ -1,24 +1,25 @@
 ---
 title: Upgrade auf System Center Configuration Manager
-description: "Erfahren Sie die Schritte für die Ausführung eines direkten Upgrades an einem Standort und einer Hierarchie, wo System Center 2012 Configuration Manager ausgeführt wird."
+description: Erfahren Sie die Schritte für die Ausführung eines direkten Upgrades an einem Standort und einer Hierarchie, wo System Center 2012 Configuration Manager ausgeführt wird.
 ms.custom: na
-ms.date: 6/6/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 770976309fbd5e8884dfec4bdaa29630ef1c02d0
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 72e11a04eb64d649749f2001ac4e3550c784132c
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="upgrade-to-system-center-configuration-manager"></a>Upgrade auf System Center Configuration Manager
 
@@ -32,6 +33,14 @@ Sie können ein direktes Upgrade zur Aktualisierung auf System Center Configurat
  > Beim Verwalten des System Center Configuration Manager-Standorts und der Hierarchieinfrastruktur werden die Begriffe *Upgrade*, *Update* und *Installation* verwendet, um drei verschiedene Konzepte zu beschreiben. Erfahren Sie mehr über die Verwendung der Begriffe unter [Informationen zu Upgrade, Update und Installation für einen Standort und eine Hierarchieinfrastruktur](/sccm/core/understand/upgrade-update-install).
 
 ##  <a name="bkmk_path"></a> Pfade für ein direktes Upgrade  
+
+**Upgrade auf Version 1802**   
+Wenn Sie über das Baselinemedium für Version 1702 verfügen, können Sie die folgenden Versionen und Installationen auf eine vollständig lizenzierte Version von System Center Configuration Manager Version 1802 aktualisieren:   
+-     Eine Evaluierungsinstallation von System Center Configuration Manager Version 1802
+-     System Center 2012 Configuration Manager mit Service Pack 1
+-     System Center 2012 Configuration Manager mit Service Pack 2
+-     System Center 2012 R2 – Configuration Manager
+-     System Center 2012 R2 Configuration Manager mit Service Pack 1
 
 **Upgrade auf Version 1702**   
 Wenn Sie über das Baselinemedium für Version 1702 verfügen, können Sie die folgenden Versionen und Installationen auf eine vollständig lizenzierte Version von System Center Configuration Manager Version 1702 aktualisieren:   

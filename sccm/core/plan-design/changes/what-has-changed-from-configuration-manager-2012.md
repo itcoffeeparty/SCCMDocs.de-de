@@ -1,8 +1,8 @@
 ---
-title: "Änderungen gegenüber Configuration Manager 2012 "
-description: "Identifizieren Sie die Änderungen und neuen Funktionen in System Center Configuration Manager im Vergleich zu System Center 2012 Configuration Manager."
+title: 'Änderungen gegenüber Configuration Manager 2012 '
+description: Identifizieren Sie die Änderungen und neuen Funktionen in System Center Configuration Manager im Vergleich zu System Center 2012 Configuration Manager.
 ms.custom: na
-ms.date: 05/02/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,15 +11,15 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 3ae68fa6-8b30-45dd-9d12-50bb67cb4a9d
-caps.latest.revision: 
+caps.latest.revision: 51
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 6e0da4f8c42bb0b2275566eba35b1e06b2028c1b
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+manager: dougeby
+ms.openlocfilehash: 70f6604e6f1b6731d6d2685e20262552f2b80590
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="what39s-changed-in-system-center-configuration-manager-from-system-center-2012-configuration-manager"></a>Änderungen in System Center Configuration Manager im Vergleich zu System Center 2012 Configuration Manager
 
@@ -36,8 +36,8 @@ ms.lasthandoff: 02/01/2018
 
 -   Im Produktnamen wird, anders als bei früheren Versionen wie Configuration Manager 2007 oder System Center 2012 Configuration Manager, kein Jahr und keine Produkt-ID verwendet.
 
--   Inkrementelle produktinterne Updates, sogenannte Updateversionen werden unterstützt. Das erste Release war Version 1511. Nachfolgende Versionen werden mehrmals im Jahr als konsoleninterne Updates veröffentlicht, z.B. Version 1610.
--   Wird mithilfe einer Baselineversion installiert. Während 1511 die ursprüngliche Baselineversion war, werden neue Baselineversionen auch von Zeit zu Zeit veröffentlicht, wie z.B. 1702. Baselineversionen können zur Installation eines neuen System Center Configuration Manager-Standorts und einer neuen Hierarchie oder zum Upgrade von einer unterstützten Version von Configuration Manager 2012 verwendet werden.
+-   Inkrementelle produktinterne Updates, sogenannte Updateversionen werden unterstützt. Das erste Release war Version 1511. Nachfolgende Versionen wie Version 1710 werden mehrmals im Jahr als konsoleninterne Updates veröffentlicht.
+-   Wird mithilfe einer Baselineversion installiert. Während 1511 die ursprüngliche Baselineversion war, werden neue Baselineversionen wie z.B. 1802 ebenfalls von Zeit zu Zeit veröffentlicht. Baselineversionen können zur Installation eines neuen System Center Configuration Manager-Standorts und einer neuen Hierarchie oder zum Upgrade von einer unterstützten Version von Configuration Manager 2012 verwendet werden.
 
 
 
@@ -46,9 +46,9 @@ ms.lasthandoff: 02/01/2018
  System Center Configuration Manager verwendet eine konsoleninterne Wartungsmethode namens **Updates und Wartung**, mit der Sie empfohlene Updates leicht finden und installieren können.  
 
  Einige Versionen stehen nur als Updates für vorhandene Standorte (innerhalb der Configuration Manager-Konsole) zur Verfügung und können nicht zur Installation neuer Configuration Manager-Standorte verwendet werden.   
-Das Update 1610 beispielsweise ist nur in der Configuration Manager-Konsole verfügbar. Es wird verwendet, um einen Standort zu aktualisieren, der bereits eine Version von System Center Configuration Manager ausführt.
+Beispielsweise ist das Update 1710 nur in der Configuration Manager-Konsole verfügbar. Es wird verwendet, um einen Standort zu aktualisieren, der bereits eine Version von System Center Configuration Manager ausführt.
 
-Eine Updateversion wird in regelmäßigen Abständen als neue Baselineversion (z.B. Update 1702) veröffentlicht. Diese Art von Update kann zur Installation einer neuen Hierarchie verwendet werden, sodass Sie nicht mit einer älteren Baselineversion (z.B. 1511) beginnen und viele Upgrades bis hin zur neuesten Version durchführen müssen.
+Eine Updateversion wird in regelmäßigen Abständen als neue Baselineversion (z.B. Update 1802) veröffentlicht. Diese Art von Update kann zur Installation einer neuen Hierarchie verwendet werden, sodass Sie nicht mit einer älteren Baselineversion (z.B. 1511) beginnen und viele Upgrades bis hin zur neuesten Version durchführen müssen.
 
 
 Weitere Informationen zum Verwenden von Updates finden Sie unter [Updates für System Center Configuration Manager](../../../core/servers/manage/updates.md).  

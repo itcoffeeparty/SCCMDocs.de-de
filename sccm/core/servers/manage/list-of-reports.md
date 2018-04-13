@@ -1,56 +1,62 @@
 ---
 title: Liste der Berichte
 titleSuffix: Configuration Manager
-description: "Prüfen Sie eine Liste von Berichten, die im Lieferumfang von Configuration Manager enthalten sind. Die Berichte werden in verschiedenen Kategorien angezeigt."
+description: Prüfen Sie eine Liste von Berichten, die im Lieferumfang von Configuration Manager enthalten sind. Die Berichte werden in verschiedenen Kategorien angezeigt.
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
-caps.latest.revision: "10"
-caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 9657634621b200b0fcda3fea2785a6ceaa68f8ca
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+caps.latest.revision: 10
+caps.handback.revision: 0
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b15726b2551464c178774dc2c87a6a2f41a37c07
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="list-of-reports-in-system-center-configuration-manager"></a>Liste der System Center Configuration Manager-Berichte
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Mit System Center Configuration Manager werden viele integrierte Berichte bereitgestellt, die zahlreiche Berichtstasks abdecken, die Sie möglicherweise ausführen möchten. Sie können die SQL-Anweisungen in diesen Berichten auch zur Unterstützung beim Erstellen eigener Berichte verwenden. Verwenden Sie die Informationen in diesem Thema, um die mit Configuration Manager bereitgestellten Berichte kennenzulernen.  
+Configuration Manager stellt viele integrierte Berichte bereit, die einige der Berichtstasks abdecken, die Sie möglicherweise ausführen möchten. Sie können die SQL-Anweisungen in diesen Berichten auch zur Unterstützung beim Erstellen eigener Berichte verwenden.   
 
-## <a name="list-of-built-in-configuration-manager-reports"></a>Liste der integrierten Configuration Manager-Berichte  
- Die folgenden Berichte sind in Configuration Manager enthalten. Die Berichte werden in verschiedenen Kategorien angezeigt.  
+Die folgenden Berichte sind in Configuration Manager enthalten. Die Berichte werden in verschiedenen Kategorien angezeigt.  
 
-### <a name="administrative-security"></a>Administrative Sicherheit  
+
+
+## <a name="administrative-security"></a>Administrative Sicherheit  
  Die folgenden Berichte sind unter der Kategorie **Administrative Sicherheit** aufgeführt.  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
 |**Verwaltungsaktivitätsprotokoll**|Zeigt einen Datensatz der für Administratoren, Sicherheitsrollen, Sicherheitsbereiche und Sammlungen vorgenommenen administrativen Änderungen an.|  
 |**Sicherheitszuweisungen für Administratoren**|Zeigt Administratoren, deren zugeordneten Sicherheitsrollen und die jeder Sicherheitsrolle für die jeweiligen Benutzer zugeordneten Sicherheitsbereiche an.|  
-|**Objekte, die von einem einzelnen Sicherheitsbereich gesichert sind**|Zeigt Objekte an, die durch einen angegebenen Sicherheitsbereich gesichert werden und nur diesem Sicherheitsbereich zugewiesen sind. Dieser Bericht zeigt keine Objekte an, die mehr als einem Sicherheitsbereich zugeordnet sind.|  
+|**Objekte, die von einem einzelnen Sicherheitsbereich gesichert sind**|Zeigt Objekte an, die ein Administrator nur einem angegebenen Sicherheitsbereich zugewiesen hat. Dieser Bericht zeigt keine Objekte an, die ein Administrator mehreren Sicherheitsbereichen zugeordnet hat.|  
 |**Sicherheit für ein bestimmtes oder mehrere Configuration Manager-Objekte**|Zeigt sicherungsfähige Objekte, die diesen Objekten zugeordneten Sicherheitsbereiche sowie die Administratoren an, die über Zugriffsrechte für diese Objekte verfügen.|  
 |**Zusammenfassung der Sicherheitsrollen**|Zeigt die Sicherheitsrollen und die Configuration Manager-Administratoren an, die den jeweiligen Rollen zugeordnet sind|  
 |**Zusammenfassung der Sicherheitsbereiche**|Zeigt die Sicherheitsbereiche und Configuration Manager-Administratoren sowie die jedem Bereich zugeordneten Sicherheitsgruppen an|  
 
-### <a name="alerts"></a>Warnungen  
+
+
+## <a name="alerts"></a>Warnungen  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
 |**Warnungs-Scorecard**|Zeigt eine Zusammenfassung aller zurückgestellten Warnungen an, die zwischen dem angegebenen Start- und Enddatum generiert wurden.|  
 |**Meisterzeugte Warnungen**|Zeigt eine Zusammenfassung der Warnungen an, die vom heutigen Datum bis zurück zum angegebenen Datum für den angegebenen Featurebereich am häufigsten generiert wurden.|  
 
-### <a name="asset-intelligence"></a>Asset Intelligence  
+
+
+## <a name="asset-intelligence"></a>Asset Intelligence  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -65,14 +71,14 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Hardware 07C – Computer mit einem bestimmten USB-Gerät**|Zeigt alle Computer mit einem angegebenen USB-Gerät an.|  
 |**Hardware 07D – USB-Geräte auf einem bestimmten Computer**|Zeigt alle USB-Geräte auf einem angegebenen Computer an.|  
 |**Hardware 08A – Hardware, die für ein Softwareupdate nicht bereit ist**|Zeigt die Hardware an, die die Mindestanforderungen nicht erfüllt.|  
-|**Hardware 09A – Suche nach Computern**|Zeigt eine Asset-Manager-Zusammenfassung von Computern an, die durch eine Schlüsselwortsuche nach Computername, Configuration Manager-Standort, Domäne, Hauptkonsolenbenutzer, Betriebssystem, Hersteller oder Modell gefunden wurden|  
+|**Hardware 09A – Suche nach Computern**|Zeigt eine Zusammenfassung von Computern an, die mit Schlüsselwortfiltern übereinstimmen. Zu diesen Filtern zählen Computername, Configuration Manager-Standort, Domäne, Hauptkonsolenbenutzer, Betriebssystem, Hersteller oder Modell.|  
 |**Hardware 10A – Computer in einer angegebenen Sammlung mit Änderungen während eines angegebenen Zeitraums**|Zeigt eine Liste der Computer in einer angegebenen Sammlung an, in der während eines angegebenen Zeitraums eine Hardwareklasse geändert wurde.|  
 |**Hardware 10B – Änderungen auf einem angegebenen Computer während eines angegebenen Zeitraums**|Zeigt die Klassen an, die auf einem angegebenen Computer während eines angegebenen Zeitraums geändert wurden.|  
 |**Lizenz 01A – Microsoft-Volumenlizenzregister für Microsoft-Lizenzzusammenfassungen**|Zeigt ein Inventar aller Microsoft-Softwaretitel an, die im Microsoft-Volumenlizenzprogramm verfügbar sind.|  
 |**Lizenz 01B – Microsoft-Volumenlizenzregisterprodukte nach Vertriebskanal**|Identifiziert den Vertriebskanal für inventarisierte Microsoft-Volumenlizenzsoftware und zeigt diesen an.|  
 |**Lizenz 01C – Computer mit einem bestimmten Microsoft-Volumenlizenzregisterprodukt und Vertriebskanal**|Identifiziert Computer und zeigt diese an, die ein angegebenes Produkt aus dem Microsoft-Volumenlizenzregister aufweisen.|  
 |**Lizenz 01D – Microsoft-Volumenlizenzregisterprodukte auf einem bestimmten Computer**|Identifiziert alle Microsoft-Volumenlizenzregisterprodukte auf einem angegebenen Computer und zeigt diese an.|  
-|**Lizenz 02A – Anzahl der Lizenzen, die demnächst ablaufen, nach Zeitabschnitten**|Zeigt die Anzahl der Lizenzen, die demnächst ablaufen, nach einem angegebenen Zeitabschnitt an. Es werden die Produkte angezeigt, deren Lizenzen vom Softwarelizenzierungsdienst verwaltet werden.|  
+|**Lizenz 02A – Anzahl der Lizenzen, die demnächst ablaufen, nach Zeitabschnitten**|Zeigt die Anzahl der Lizenzen, die demnächst ablaufen, nach einem angegebenen Zeitabschnitt an. Bei den angezeigten Produkten werden die Lizenzen vom Softwarelizenzierungsdienst verwaltet.|  
 |**Lizenz 02B – Computer mit ablaufenden Lizenzen**|Zeigt die angegebenen Computer mit Lizenzen an, die demnächst ablaufen.|  
 |**Lizenz 02C – Lizenzinformationen für einen bestimmten Computer**|Zeigt Produkte auf einem angegebenen Computer an, deren Lizenzen vom Softwarelizenzierungsdienst verwaltet werden.|  
 |**Lizenz 03A – Anzahl der Lizenzen, geordnet nach Lizenzstatus**|Zeigt Produkte nach Lizenzstatus an, deren Lizenzen vom Softwarelizenzierungsdienst verwaltet werden.|  
@@ -98,17 +104,17 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Software 04C – Software, die für die automatische Ausführung auf einem bestimmten Computer konfiguriert ist**|Zeigt die installierte Software an, die für die automatische Ausführung auf einem angegebenen Computer konfiguriert ist.|  
 |**Software 05A – Browserhilfsobjekte**|Zeigt die Browserhilfsobjekte an, die auf Computern in einer angegebenen Sammlung installiert sind.|  
 |**Software 05B – Computer mit einem bestimmten Browserhilfsobjekt**|Zeigt alle Computer mit einem angegebenen Browserhilfsobjekt an.|  
-|**Software 05C – Browserhilfsobjekte auf einem bestimmten Computer**|Zeigt alle Browserhilfsobjekte auf einem angegebenen Computer an.|  
-|**Software 06A – Suche nach installierter Software**|Dieser Bericht enthält eine Zusammenfassung der installierten Software, geordnet nach der Anzahl von Instanzen, basierend auf Suchkriterien für Produktnamen, Herausgeber oder Version.|  
-|**Software 06B – Software nach Produktname**|Zeigt eine Zusammenfassung der installierten Software, geordnet nach Anzahl der Instanzen, basierend auf einem angegebenen Produktnamen an.|  
-|**Software 07A – Zuletzt verwendete ausführbare Programme, geordnet nach Anzahl von Computern**|Zeigt zuletzt verwendete ausführbare Programme und die Anzahl der Computer an, auf denen sie verwendet wurden. Damit diese Website diesen Bericht anzeigen kann, muss die Softwaremessung aktiviert sein.|  
-|**Software 07B – Computer, auf denen ein angegebenes ausführbares Programm zuletzt verwendet wurde**|Wenn Sie die Einstellung für den Softwaremessungsclient aktivieren, werden die Computer angezeigt, auf denen ein angegebenes ausführbares Programm zuletzt verwendet wurde.|  
-|**Software 07C – Zuletzt verwendete ausführbare Programme auf einem bestimmten Computer**|Wenn Sie die Einstellung für den Softwaremessungsclient aktivieren, werden die ausführbaren Dateien angezeigt, die auf einem angegebenen Computer zuletzt verwendet wurden.|  
-|**Software 08A – Zuletzt verwendete ausführbare Programme, geordnet nach Anzahl von Benutzern**|Wenn Sie die Einstellung für den Softwaremessungsclient aktivieren, werden die zuletzt verwendeten ausführbaren Programme sowie die Anzahl der sie ausführenden Benutzer angezeigt.|  
-|**Software 08B – Benutzer, die ein angegebenes ausführbares Programm zuletzt verwendet haben**|Wenn Sie die Einstellung für den Softwaremessungsclient aktivieren, werden die Benutzer angezeigt, die ein angegebenes ausführbares Programm zuletzt verwendet haben.|  
-|**Software 08C – Zuletzt verwendete ausführbare Programme, geordnet nach angegebenem Benutzer**|Wenn Sie die Einstellung für den Softwaremessungsclient aktivieren, werden die ausführbaren Programme angezeigt, die von einem angegebenen Benutzer zuletzt verwendet wurden.|  
-|**Software 09A – Selten verwendete Software**|Zeigt die Softwaretitel an, die innerhalb eines angegebenen Zeitraums nicht verwendet wurden.|  
-|**Software 09B – Computer, auf denen selten verwendete Software installiert ist**|Zeigt Computer mit installierter Software an, die innerhalb eines angegebenen Zeitraums nicht verwendet wurde. Der angegebene Zeitraum basiert auf dem im Bericht „Software 09A – Selten verwendete Software“ angegebenen Wert.|  
+|**Software 05C – Browserhilfsobjekte auf einem bestimmten Computer**|Zeigt alle Browserhilfsobjekte auf dem angegebenen Computer an.|  
+|**Software 06A – Suche nach installierter Software**|Dieser Bericht enthält eine Zusammenfassung der installierten Software. Die Suche wird basierend auf folgenden Kriterien durchgeführt: Produktname, Herausgeber oder Version.|  
+|**Software 06B – Software nach Produktname**|Zeigt eine Zusammenfassung der installierten Software basierend auf einem angegebenen Produktnamen an.|  
+|**Software 07A – Zuletzt verwendete ausführbare Programme, geordnet nach Anzahl von Computern**|Zeigt ausführbare Programme an, die zuletzt von Benutzern verwendet wurden. Enthält zudem die Anzahl der Computer, auf denen Benutzer das Programm verwendet haben. Damit diese Website diesen Bericht anzeigen kann, muss die Softwaremessung aktiviert sein.|  
+|**Software 07B – Computer, auf denen ein angegebenes ausführbares Programm zuletzt verwendet wurde**|Zeigt die Computer an, auf denen Benutzer zuletzt ein angegebenes ausführbares Programm verwendet haben. Für diesen Bericht muss die Einstellung für den Softwaremessungsclient aktiviert sein.|  
+|**Software 07C – Zuletzt verwendete ausführbare Programme auf einem bestimmten Computer**|Zeigt ausführbare Dateien an, die Benutzer zuletzt auf einem angegebenen Computer verwendet haben. Für diesen Bericht muss die Einstellung für den Softwaremessungsclient aktiviert sein.|  
+|**Software 08A – Zuletzt verwendete ausführbare Programme, geordnet nach Anzahl von Benutzern**|Zeigt ausführbare Programme an, die zuletzt von Benutzern verwendet wurden. Enthält zudem eine Anzahl der Benutzer, die das Programm zuletzt verwendet haben. Für diesen Bericht muss die Einstellung für den Softwaremessungsclient aktiviert sein.|  
+|**Software 08B – Benutzer, die ein angegebenes ausführbares Programm zuletzt verwendet haben**|Zeigt die Benutzer an, die ein angegebenes ausführbares Programm zuletzt ausgeführt haben. Für diesen Bericht muss die Einstellung für den Softwaremessungsclient aktiviert sein.|  
+|**Software 08C – Zuletzt verwendete ausführbare Programme, geordnet nach angegebenem Benutzer**|Zeigt ausführbare Programme an, die der angegebene Benutzer zuletzt verwendet hat. Für diesen Bericht muss die Einstellung für den Softwaremessungsclient aktiviert sein.|  
+|**Software 09A – Selten verwendete Software**|Zeigt die Softwaretitel an, die Benutzer innerhalb eines angegebenen Zeitraums nicht verwendet haben.|  
+|**Software 09B – Computer, auf denen selten verwendete Software installiert ist**|Zeigt Computer mit installierter Software an, die Benutzer innerhalb eines angegebenen Zeitraums nicht verwendet haben. Der angegebene Zeitraum basiert auf dem im Bericht „Software 09A – Selten verwendete Software“ angegebenen Wert.|  
 |**Software 10A – Softwaretitel mit mehreren spezifischen benutzerdefinierten Bezeichnungen**|Zeigt Softwaretitel an, bei denen alle Kriterien für die ausgewählten benutzerdefinierten Bezeichnungen übereinstimmen. Zum Verfeinern der Suche nach Softwaretiteln können drei benutzerdefinierte Bezeichnungen ausgewählt werden.|  
 |**Software 10B – Computer, auf denen Softwaretitel mit einer bestimmten benutzerdefinierten Bezeichnung installiert sind**|Zeigt alle Computer in dieser Sammlung an, auf denen Softwaretitel mit den angegebenen benutzerdefinierten Bezeichnungen installiert sind.|  
 |**Software 11A – Softwaretitel, bei denen eine bestimmte benutzerdefinierte Bezeichnung definiert ist**|Zeigt Softwaretitel an, bei denen mindestens ein Kriterium für die ausgewählten benutzerdefinierten Bezeichnungen übereinstimmt.|  
@@ -117,7 +123,9 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Software 14B – Computer, auf denen eine bestimmte softwareerkennungstagfähige Software installiert ist**|Zeigt alle Computer an, auf denen Software mit angegebenem aktivierten Softwareerkennungstag installiert ist.|  
 |**Software 14C – Installierte softwareerkennungstagfähige Software auf einem bestimmten Computer**|Zeigt sämtliche installierte Software mit einem angegebenem aktivierten Softwareerkennungstag auf einem angegebenen Computer an.|  
 
-### <a name="client-push"></a>Clientpush  
+
+
+## <a name="client-push"></a>Clientpush  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -126,7 +134,9 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Zusammenfassung des Clientpushinstallationsstatus**|Zeigt eine Zusammenfassungsansicht des Clientpushinstallationsstatus für alle Standorte an.|  
 |**Zusammenfassung des Clientpushinstallationsstatus für einen bestimmten Standort**|Zeigt eine Zusammenfassungsansicht des Clientpushinstallationsstatus für einen angegebenen Standort an.|  
 
-### <a name="client-status"></a>Clientstatus  
+
+
+## <a name="client-status"></a>Clientstatus  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -134,11 +144,13 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Clientwiederherstellungs-Zusammenfassung**|Zeigt eine Zusammenfassung zu den Clientwiederherstellungsaktionen für eine angegebene Sammlung an.|  
 |**Clientstatus – Verlauf**|Zeigt eine Verlaufsansicht über den Clientstatus insgesamt am Standort an.|  
 |**Clientstatus – Zusammenfassung**|Zeigt die Ergebnisse der Clientüberprüfung von aktiven Clients für eine angegebene Sammlung an.|  
-|**Clientzeit zum Anfordern einer Richtlinie**|Zeigt den Prozentsatz der Clients an, von denen mindestens einmal innerhalb der letzten 30 Tage eine Richtlinie angefordert wurde. Jeder Tag stellt einen Prozentsatz der Gesamtanzahl der Clients dar, die seit dem ersten Zyklustag eine Richtlinie anforderten.|  
+|**Clientzeit zum Anfordern einer Richtlinie**|Zeigt den Prozentsatz der Clients an, von denen mindestens einmal innerhalb der letzten 30 Tage eine Richtlinie angefordert wurde. Jeder Tag stellt einen Prozentsatz der Gesamtanzahl der Clients dar, die seit dem ersten Zyklustag eine Richtlinie angefordert haben.|  
 |**Details zu Clients mit Fehlern bei Clientprüfung**|Zeigt Details zu den Clients an, bei deren Clientüberprüfung für eine bestimmte Sammlung ein Fehler aufgetreten ist.|  
 |**Details zu inaktiven Clients**|Zeigt eine detaillierte Liste der inaktiven Clients für eine angegebene Sammlung an.|  
 
-### <a name="company-resource-access"></a>Zugriff auf Unternehmensressourcen  
+
+
+## <a name="company-resource-access"></a>Zugriff auf Unternehmensressourcen  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -146,72 +158,82 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Liste von Beständen nach Zertifikatausstellungsstatus**|Zeigt die Geräte oder Benutzer in einem angegebenen Zertifikatausstellungsstatus nach der Auswertung eines angegebenen Zertifikatprofils an.|  
 |**Liste von Beständen mit Zertifikaten, die demnächst ablaufen**|Zeigt die Geräte oder Benutzer mit Zertifikaten an, die am oder vor dem angegebenen Datum ablaufen.|  
 
-### <a name="compliance-and-settings-management"></a>Kompatibilitäts- und Einstellungsverwaltung  
+
+
+## <a name="compliance-and-settings-management"></a>Kompatibilitäts- und Einstellungsverwaltung  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
-|**Kompatibilitätsverlauf einer Konfigurationsbaseline**|Zeigt den Kompatibilitätsverlauf einer Konfigurationsbasislinie für den angegebenen Datumsbereich an.|  
+|**Kompatibilitätsverlauf einer Konfigurationsbaseline**|Zeigt den Konformitätsverlauf einer Konfigurationsbasislinie für den angegebenen Datumsbereich an.|  
 |**Kompatibilitätsverlauf eines Konfigurationselements**|Zeigt den Kompatibilitätsverlauf eines Konfigurationselements für den angegebenen Datumsbereich an.|  
+|**Kompatibilität mit bedingtem Zugriff für Benutzer**|Zeigt detaillierte Informationen zur Konformität mit bedingtem Zugriff für einen bestimmten Benutzer an.|
+|**Bericht zur Konformität mit bedingtem Zugriff**|Ein Bericht zur Konformität mit bedingtem Zugriff für jede Konformitätsrichtlinie.|
 |**Details zu kompatiblen Regeln von Konfigurationselementen in einer Konfigurationsbaseline für einen Bestand**|Zeigt Informationen zu den Regeln an, die als kompatibel mit einem angegebenen Konfigurationselement für ein angegebenes Gerät oder einen angegebenen Benutzer ausgewertet wurden.|  
-|**Details zu konfliktverursachenden Regeln von Konfigurationselementen in einer Konfigurationsbaseline für einen Bestand**|Zeigt Informationen zu Regeln in einem Konfigurationselement an, die für einen angegebenen Benutzer oder auf einem angegebenen Gerät bereitgestellt wurden, und die mit anderen Regeln im gleichen oder einem anderen bereitgestellten Konfigurationselement in Konflikt stehen.|  
+|**Details zu konfliktverursachenden Regeln von Konfigurationselementen in einer Konfigurationsbaseline für einen Bestand**|Zeigt Informationen zu Regeln in einem bereitgestellten Konfigurationselement an, die mit anderen Regeln in Konflikt stehen. Die anderen Regeln können im selben oder in einem anderen bereitgestellten Konfigurationselement enthalten sein.|  
 |**Details zu Fehlern von Konfigurationselementen in einer Konfigurationsbaseline für einen Bestand**|Zeigt Informationen zu Fehlern an, die durch ein angegebenes Konfigurationselement für ein angegebenes Gerät oder einen angegebenen Benutzer generiert wurden.|  
 |**Details zu inkompatiblen Regeln von Konfigurationselementen in einer Konfigurationsbaseline für einen Bestand**|Zeigt Informationen zu Regeln an, die als nicht kompatibel mit einem angegebenen Konfigurationselement, einem angegebenen Gerät oder einem angegebenen Benutzer ausgewertet wurden.|  
 |**Details zu wiederhergestellten Regeln von Konfigurationselementen in einer Konfigurationsbaseline für einen Bestand**|Zeigt Informationen zu Regeln an, die durch ein angegebenes Konfigurationselement für ein angegebenes Gerät oder einen angegebenen Benutzer wiederhergestellt wurden.|  
+|**Liste von Beständen nach Kompatibilitätszustand für eine Konfigurationsbaseline**|Zeigt die Geräte oder Benutzer an, die sich nach der Auswertung einer angegebenen Konfigurationsbasislinie in einem angegebenen Konformitätszustand befinden.|  
 |**Liste von Beständen nach Kompatibilitätszustand für ein Konfigurationselement in einer Konfigurationsbaseline**|Zeigt die Geräte oder Benutzer an, die sich nach der Auswertung eines angegebenen Konfigurationselements in einem angegebenen Kompatibilitätszustand befinden.|  
-|**Liste von Beständen nach Kompatibilitätszustand für eine Konfigurationsbaseline**|Zeigt die Geräte oder Benutzer an, die sich nach der Auswertung einer angegebenen Konfigurationsbasislinie in einem angegebenen Kompatibilitätszustand befinden.|  
-|**Liste der Regeln, die mit einer angegebenen Regel für einen Bestand in Konflikt stehen**|Zeigt eine Liste der Regeln an, die mit einer angegebenen Regel für ein auf einem angegebenen Gerät bereitgestelltes Konfigurationselement in Konflikt stehen.|  
+|**Liste der nicht kompatiblen Apps und Geräte für einen angegebenen Benutzer**|Zeigt Informationen zu Benutzern und Geräten an, die Apps installiert haben, die mit einer von Ihnen angegebenen Richtlinie nicht konform sind.|  
+|**Liste der Regeln, die mit einer angegebenen Regel für einen Bestand in Konflikt stehen**|Zeigt eine Liste der Regeln an, die mit einer angegebenen Regel für ein bereitgestelltes Konfigurationselement in Konflikt stehen.|  
 |**Liste unbekannter Bestände für eine Konfigurationsbaseline**|Zeigt eine Liste der Geräte oder Benutzer an, von denen bisher noch keine Kompatibilitätsinformationen für eine angegebene Konfigurationsbasislinie angegeben wurden.|  
 |**Liste unbekannter Bestände für ein Konfigurationselement**|Zeigt eine Liste der Geräte oder Benutzer an, von denen bisher noch keine Kompatibilitätsinformationen für ein angegebenes Konfigurationselement angegeben wurden.|  
-|**Zusammenfassung der Regeln und Fehler von Konfigurationselementen in einer Konfigurationsbaseline für einen Bestand**|Zeigt eine Zusammenfassung der Kompatibilitätszustände der Regeln und jeglicher Einstellungsfehler für ein angegebenes Konfigurationselement eines angegebenen Geräts oder Benutzers an.|  
-|**Zusammenfassung zur Kompatibilität nach Konfigurationsbaseline**|Zeigt eine Zusammenfassung der Gesamtkompatibilität bereitgestellter Konfigurationsbasislinien in der Hierarchie an.|  
-|**Zusammenfassung der Kompatibilität nach Konfigurationselementen für eine Konfigurationsbaseline**|Zeigt eine Zusammenfassung der Kompatibilität der Konfigurationselemente in einer angegebenen Konfigurationsbasislinie an.|  
+|**Zusammenfassung der Regeln und Fehler von Konfigurationselementen in einer Konfigurationsbaseline für einen Bestand**|Zeigt eine Zusammenfassung der Kompatibilitätszustände der Regeln und jeglicher Einstellungsfehler für ein angegebenes Konfigurationselement an. Das Konfigurationselement muss für ein Gerät oder einen Benutzer bereitgestellt werden.|  
+|**Zusammenfassung zur Kompatibilität nach Konfigurationsbaseline**|Zeigt eine Zusammenfassung der Gesamtkonformität bereitgestellter Konfigurationsbasislinien in der Hierarchie an.|  
+|**Zusammenfassung der Kompatibilität nach Konfigurationselementen für eine Konfigurationsbaseline**|Zeigt eine Zusammenfassung der Konformität der Konfigurationselemente in einer angegebenen Konfigurationsbasislinie an.|  
 |**Zusammenfassung zur Kompatibilität nach Konfigurationsrichtlinien**|Zeigt eine Zusammenfassung der Kompatibilität von Konfigurationsrichtlinien an.|  
-|**Zusammenfassung zur Kompatibilität einer Konfigurationsbaseline für eine Sammlung**|Zeigt eine Zusammenfassung der Gesamtkompatibilität einer angegebenen Konfigurationsbasislinie an, die für eine bestimmte Sammlung bereitgestellt wird.|  
-|**Liste der nicht kompatiblen Apps und Geräte für einen angegebenen Benutzer**|Zeigt Informationen zu Benutzern und Geräten an, die Apps installiert haben, die mit einer von Ihnen angegebenen Richtlinie nicht konform sind.|  
+|**Zusammenfassung zur Kompatibilität einer Konfigurationsbaseline für eine Sammlung**|Zeigt eine Zusammenfassung der Gesamtkompatibilität einer angegebenen Konfigurationsbaseline an. Das Konfigurationselement muss für die angegebene Sammlung bereitgestellt werden.|  
 |**Zusammenfassung der Benutzer mit nicht kompatiblen Apps**|Zeigt Informationen zu Benutzern an, die Apps installiert haben, die mit einer von Ihnen angegebenen Richtlinie nicht konform sind.|  
 |**Akzeptanz von Nutzungsbedingungen**|Zeigt Nutzungsbedingungen und die vom Benutzer akzeptierte Version hat.|  
 
-### <a name="device-management"></a>-Geräteverwaltung  
+
+
+## <a name="device-management"></a>-Geräteverwaltung  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
+|**Alle mobilen Geräte in Unternehmensbesitz**|Zeigt alle mobilen Geräte in Unternehmensbesitz an.|
 |**Alle Clients der mobilen Geräte**|Zeigt Informationen zu allen Clients für mobile Geräte an. Geräte, die vom Exchange Server-Connector verwaltet werden, sind nicht eingeschlossen.|  
 |**Zertifikatsprobleme auf nicht fehlerfreien mobilen Geräten, die vom Configuration Manager-Client für Windows CE verwaltet werden**|Zeigt detaillierte Informationen zu Zertifikatsproblemen auf mobilen Geräten an, die vom Configuration Manager-Client für Windows CE verwaltet werden.|  
 |**Client-Bereitstellungsfehler auf mobilen Geräten, die vom Configuration Manager-Client für Windows CE verwaltet werden**|Zeigt detaillierte Informationen zu Bereitstellungsfehlern auf mobilen Geräten an, die vom Configuration Manager-Client für Windows CE verwaltet werden|  
 |**Details zum Status der Client-Bereitstellung auf mobilen Geräten, die vom Configuration Manager-Client für Windows CE verwaltet werden**|Zeigt Informationen zum Status der mobilen Geräte an, die vom Configuration Manager-Client für Windows CE verwaltet werden|  
 |**Erfolgreiche Client-Bereitstellung auf mobilen Geräten, die vom Configuration Manager-Client für Windows CE verwaltet werden**|Zeigt detaillierte Informationen zur erfolgreichen Bereitstellung auf mobilen Geräten an, die vom Configuration Manager-Client für Windows CE verwaltet werden|  
 |**Kommunikationsprobleme auf nicht fehlerfreien mobilen Geräten, die vom Configuration Manager-Client für Windows CE verwaltet werden**|Dieser Bericht enthält detaillierte Informationen zu Kommunikationsproblemen auf mobilen Geräten, die vom Configuration Manager-Client für Windows CE verwaltet werden.|  
-|**Kompatibilitätsstatus für mobile Geräte, die vom Exchange Server-Connector verwaltet werden**|Zeigt eine Zusammenfassung des Kompatibilitätsstatus mit der Standard-Exchange ActiveSync-Postfachrichtlinie für mobile Geräte an, die vom Exchange Server-Connector verwaltet werden.|  
+|**Konformitätsstatus der ActiveSync-Standard-Postfachrichtlinie für vom Exchange Server-Connector verwaltete mobile Geräte**|Zeigt eine Zusammenfassung des Kompatibilitätsstatus mit der Standard-Exchange ActiveSync-Postfachrichtlinie für mobile Geräte an, die vom Exchange Server-Connector verwaltet werden.|  
 |**Anzahl von mobilen Geräten nach Anzeigekonfigurationen**|Dieser Bericht enthält die Anzahl der mobilen Geräte nach Anzeigeeinstellungen.|  
 |**Anzahl von mobilen Geräten nach Betriebssystem**|Zeigt die Anzahl der mobilen Geräte nach Betriebssystem an.|  
 |**Anzahl von mobilen Geräten nach Programmspeicher**|Zeigt die Anzahl der mobilen Geräte nach Programmspeicher an.|  
 |**Anzahl von mobilen Geräte nach Konfiguration des Wechselmedienspeichers**|Anzahl der mobilen Geräte nach Konfiguration des Wechselmedienspeichers|  
 |**Integritätsinformationen für mobile Geräte, die vom Configuration Manager-Client für Windows CE verwaltet werden**|Zeigt Integritätsinformationen für mobile Geräte an, die vom Configuration Manager-Client für Windows CE verwaltet werden|  
 |**Integritätszusammenfassung für mobile Geräte, die vom Configuration Manager-Client für Windows CE verwaltet werden**|Zeigt Integritätsinformationen für mobile Geräte an, die vom Configuration Manager-Client für Windows CE verwaltet werden|  
-|**Inaktive mobile Geräte, die vom Exchange Server-Connector verwaltet werden**|Zeigt eine Liste der von Exchange Server-Connector verwalteten mobilen Geräte an, von denen in der angegebenen Anzahl von Tagen keine Verbindung mit Exchange Server hergestellt wurde.|  
+|**Inaktive mobile Geräte, die vom Exchange Server-Connector verwaltet werden**|Zeigt die von Exchange Server-Connector verwalteten mobilen Geräte an, von denen in einer bestimmten Anzahl von Tagen keine Verbindung mit Exchange Server hergestellt wurde.|  
+|**Liste der Geräte nach bedingtem Zugriffsstatus**|Zeigt Informationen zum aktuellen Konformitätszustand und bedingten Zugriffsstatus von Geräten an. Sie können diesen Bericht mit Richtlinien für den bedingten Zugriff verwenden. Dieser Bericht steht ab Version 1602 von Configuration Manager zur Verfügung.|  
+|**Liste der Geräte nach Integritätsnachweisstatus**|Zeigt eine Liste der Geräte mit Attributen an, die vom Integritätsnachweisdienst gemeldet werden|
 |**Liste der pro Benutzer in Microsoft Intune registrierten Geräte**|Zeigt alle Geräte an, die ein Benutzer mit Microsoft Intune registriert hat|  
-|**Liste der Geräte nach bedingtem Zugriffsstatus**|Zeigt Informationen zum aktuellen Kompatibilitätszustand und bedingten Zugriffsstatus von Geräten an. Sie können diesen Bericht mit Richtlinien für den bedingten Zugriff verwenden. Dieser Bericht steht ab Version 1602 von Configuration Manager zur Verfügung.|  
-|**Kompatibilität mit bedingtem Zugriff für Benutzer**|Stellt detaillierte Kompatibilitätsinformationen zum bedingten Zugriff für einen bestimmten Benutzer bereit, einschließlich Gerätename und Plattform, ob das Gerät kompatibel ist und wann das Gerät zuletzt bewertet wurde. Dieser Bericht steht ab Version 1602 von Configuration Manager zur Verfügung.|  
+|**Liste der Geräte in einer bestimmten Gerätekategorie**|Zeigt Informationen zu allen Geräten innerhalb einer bestimmten Gerätekategorie an.|
 |**Probleme lokaler Clients auf nicht fehlerfreien mobilen Geräten, die vom Configuration Manager-Client für Windows CE verwaltet werden**|Dieser Bericht enthält detaillierte Informationen zu Problemen lokaler Clients auf mobilen Geräten, die vom Configuration Manager-Client für Windows CE verwaltet werden.|  
 |**Clientinformationen des mobilen Geräts**|Zeigt Informationen zu mobilen Geräten an, auf denen der Configuration Manager-Client installiert ist Sie können mithilfe dieses Berichts überprüfen, welche mobilen Geräte erfolgreich mit einem Verwaltungspunkt kommunizieren können.|  
-|**Kompatibilitätsdetails der mobilen Geräte für den Exchange Server-Connector**|Zeigt die Kompatibilitätsdetails der mobilen Geräte für eine Standard-Exchange ActiveSync-Postfachrichtlinie an, die mithilfe des Exchange Server-Connectors konfiguriert wurde.|  
+|**Kompatibilitätsdetails der mobilen Geräte für den Exchange Server-Connector**|Zeigt die Konformitätsdetails der mobilen Geräte für eine Standard-Exchange ActiveSync-Postfachrichtlinie an, die mithilfe des Exchange Server-Connectors konfiguriert wurde.|  
 |**Mobile Geräte nach Betriebssystem**|Zeigt die mobilen Geräte nach Betriebssystem an.|  
 |**Mobile Geräte, die ein Jailbreak aufweisen oder ein Stammgerät sind**|Zeigt die mobilen Geräte an, die ein Jailbreak aufweisen oder ein Stammgerät sind.|  
-|**Nicht verwaltete mobile Geräte, die zwar angemeldet sind, aber keinem Standort zugewiesen wurden**|Zeigt die mobilen Geräte an, deren Registrierung bei Configuration Manager abgeschlossen ist und die über ein Zertifikat verfügen, bei deren Standortzuweisung jedoch ein Fehler aufgetreten ist|  
+|**Nicht verwaltete mobile Geräte, die zwar angemeldet sind, aber keinem Standort zugewiesen wurden**|Zeigt die mobilen Geräte an, deren Registrierung bei Configuration Manager abgeschlossen ist und die über ein Zertifikat verfügen, bei deren Standortzuweisung jedoch ein Fehler aufgetreten ist.|  
 |**Mobile Geräte, die über den angegebenen freien Programmspeicher verfügen**|Zeigt alle mobilen Geräte mit ihren angegebenem freien Programmspeicher an.|  
 |**Mobile Geräte, die über den angegebenen freien Wechselmedienspeicher verfügen**|Zeigt alle mobilen Geräte mit dem angegebenen freien Wechselmedienspeicher an.|  
-|**Mobile Geräte mit Problemen bei der Zertifikatserneuerung**|Zeigt die Liste angemeldeter mobiler Geräte mit Fehlern bei der Zertifikatserneuerung an. Wenn das Zertifikat nicht vor dem Ablaufdatum erneuert wird, werden die mobilen Geräte nicht verwaltet.|  
+|**Mobile Geräte mit Problemen bei der Zertifikatserneuerung**|Zeigt die Liste angemeldeter mobiler Geräte mit Fehlern bei der Zertifikatserneuerung an. Wenn Sie das Zertifikat nicht vor dem Ablaufdatum erneuern, werden die mobilen Geräte nicht mehr verwaltet.|  
 |**Mobile Geräte mit nicht genügend verfügbarem Programmspeicher (weniger freie KB als angegeben)**|Zeigt eine Liste mobiler Geräte an, deren Programmspeicher kleiner als die in KB angegebene Größe ist.|  
 |**Mobile Geräte mit nicht genügend verfügbarem Wechselmedienspeicher (weniger freie KB als angegeben)**|Zeigt eine Liste mobiler Geräte an, deren Wechselmedienspeicher kleiner als die in KB angegebene Größe ist.|  
-|**Anzahl der pro Benutzer in Windows Intune registrierten Geräte**|Dieser Bericht enthält die Benutzer mit Microsoft Intune-Abonnement und die Anzahl der pro Benutzer insgesamt registrierten Geräte.|  
-|**Ausstehende Anforderungen zum Zurücksetzen mobiler Geräte**|Zeigt die Anforderungen zum Zurücksetzen an, die für mobile Geräte ausstehen.|  
+|**Anzahl der pro Benutzer in Microsoft Intune registrierten Geräte**|Zeigt die Benutzer an, die für das Microsoft Intune-Abonnement aktiviert sind. Enthält zudem die Gesamtzahl der Geräte, die für die einzelnen Benutzer registriert sind.|  
+|**Ausstehende Anforderung zum Abkoppeln und Zurücksetzen für mobile Geräte**|Zeigt die Anforderungen zum Zurücksetzen an, die für mobile Geräte ausstehen.|  
 |**Vor Kurzem angemeldete und zugewiesene mobile Geräte**|Zeigt eine Liste mobiler Geräte an, die kürzlich bei Configuration Manager angemeldet und einem Standort erfolgreich zugewiesen wurden|  
 |**Zuletzt zurückgesetzte mobile Geräte**|Zeigt die Liste der mobilen Geräte an, die zuletzt erfolgreich zurückgesetzt wurden.|  
-|**Zusammenfassung der Einstellungen für mobile Geräte, die vom Exchange Server-Connector verwaltet werden**|Zeigt die Anzahl der mobilen Geräte an, von denen die Einstellungen für jede vom Exchange Server-Connector verwaltete Standard-ActiveSync-Postfachrichtlinie angewendet werden.|  
+|**Zusammenfassung der Einstellungen für mobile Geräte, die vom Exchange Server-Connector verwaltet werden**|Zeigt die Anzahl der mobilen Geräte an, von denen die Einstellungen für jede vom Exchange Server-Connector verwaltete Exchange ActiveSync-Standardpostfachrichtlinie angewendet werden.|  
 |**Statusdetails zu Windows RT-Sideload-Schlüsseln**|Zeigt ausführliche Statusinformationen für einen angegebenen Windows RT-Sideload-Schlüssel an.|  
 |**Zusammenfassung zu Windows RT-Sideload-Schlüsseln**|Zeigt den Status von Windows RT-Sideload-Schlüsseln an.|  
 
-### <a name="driver-management"></a>Treiberverwaltung  
+
+
+## <a name="driver-management"></a>Treiberverwaltung  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -229,7 +251,9 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Treiber, die auf einem bestimmten Computer nicht installiert werden konnten**|Zeigt Treiber an, die auf einem angegebenen Computer nicht installiert werden konnten.|  
 |**Unterstützte Plattformen für einen bestimmten Treiber**|Zeigt unterstützte Plattformen für einen angegebenen Treiber an.|  
 
-### <a name="endpoint-protection"></a>Endpoint Protection  
+
+
+## <a name="endpoint-protection"></a>Endpoint Protection  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -240,7 +264,9 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Benutzer nach häufigsten Bedrohungen**|Zeigt die Liste der Benutzer mit der höchsten Anzahl an erkannten Bedrohungen an.|  
 |**Benutzerspezifische Bedrohungsliste**|Zeigt die Liste der erkannten Bedrohungen für ein angegebenes Benutzerkonto an.|  
 
-### <a name="hardware---cd-rom"></a>Hardware – CD-ROM  
+
+
+## <a name="hardware---cd-rom"></a>Hardware – CD-ROM  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -249,7 +275,9 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Anzahl von CD-ROM-Laufwerken nach Hersteller**|Zeigt die Anzahl der pro Hersteller inventarisierten CD-ROM-Laufwerke an.|  
 |**Verlauf – CD-ROM-Verlauf für einen bestimmten Computer**|Zeigt den Inventarverlauf für CD-ROM-Laufwerke eines angegebenen Computers an.|  
 
-### <a name="hardware---disk"></a>Hardware – Datenträger  
+
+
+## <a name="hardware---disk"></a>Hardware – Datenträger  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -262,7 +290,9 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Datenträgerinformationen für einen bestimmten Computer – physische Datenträger**|Zeigt zusammenfassende Informationen zu den physischen Datenträgern auf einem angegebenen Computer an.|  
 |**Verlauf – Verlauf des Speicherplatzes auf logischen Datenträgern für einen bestimmten Computer**|Zeigt den Inventarverlauf für logische Datenträger eines angegebenen Computers an.|  
 
-### <a name="hardware---general"></a>Hardware – Allgemein  
+
+
+## <a name="hardware---general"></a>Hardware – Allgemein  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -270,8 +300,11 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Computer in einer bestimmten Arbeitsgruppe oder Domäne**|Zeigt eine Liste der Computer in einer angegebenen Arbeitsgruppe oder Domäne an.|  
 |**Einer bestimmten Sammlung zugewiesene Inventarklassen**|Zeigt die Inventarklassen an, die einer angegebenen Sammlung zugewiesen sind.|  
 |**Für einen bestimmten Computer aktivierte Inventarklassen**|Zeigt die Inventarklassen an, die auf einem angegebenen Computer aktiviert sind.|  
+|**Windows AutoPilot-Geräteinformationen**|Zeigt Informationen zu Clientgeräten an, die für die Windows AutoPilot-Registrierung erforderlich sind.|
 
-### <a name="hardware---memory"></a>Hardware – Arbeitsspeicher  
+
+
+## <a name="hardware---memory"></a>Hardware – Arbeitsspeicher  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -281,7 +314,9 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Arbeitsspeicherkonfigurationen zählen**|Zeigt die Anzahl der inventarisierten Computer nach Größe des Arbeitsspeichers an.|  
 |**Arbeitsspeicherinformationen für einen bestimmten Computer**|Zeigt zusammenfassende Informationen zum Arbeitsspeicher auf einem angegebenen Computer an.|  
 
-### <a name="hardware---modem"></a>Hardware – Modem  
+
+
+## <a name="hardware---modem"></a>Hardware – Modem  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -289,7 +324,9 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Modems nach Hersteller zählen**|Zeigt die Anzahl der für jeden Modemhersteller inventarisierten Modems an.|  
 |**Modeminformationen für einen bestimmten Computer**|Zeigt zusammenfassende Informationen zum Modem auf einem angegebenen Computer an.|  
 
-### <a name="hardware---network-adapter"></a>Hardware – Netzwerkkarte  
+
+
+## <a name="hardware---network-adapter"></a>Hardware – Netzwerkkarte  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -297,7 +334,9 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Netzwerkkarten nach Typ zählen**|Zeigt die Anzahl der inventarisierten Netzwerkkarten für die einzelnen Typen an.|  
 |**Netzwerkkarteninformationen für einen bestimmten Computer**|Zeigt Informationen zu den in einem angegebenen Computer installierten Netzwerkkarten an.|  
 
-### <a name="hardware---processor"></a>Hardware – Prozessor  
+
+
+## <a name="hardware---processor"></a>Hardware – Prozessor  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -307,7 +346,9 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Prozessorgeschwindigkeiten zählen**|Zeigt die Anzahl von inventarisierten Computern nach Prozessorgeschwindigkeit an.|  
 |**Prozessorinformationen für einen bestimmten Computer**|Zeigt Informationen zu den in einem angegebenen Computer installierten Prozessoren an.|  
 
-### <a name="hardware---scsi"></a>Hardware – SCSI  
+
+
+## <a name="hardware---scsi"></a>Hardware – SCSI  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -315,7 +356,17 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**SCSI-Kartentypen zählen**|Zeigt die Anzahl der inventarisierten SCSI-Karten nach Kartentyp an.|  
 |**SCSI-Karteninformationen für einen bestimmten Computer**|Zeigt Informationen zu den in einem angegebenen Computer installierten SCSI-Karten an.|  
 
-### <a name="hardware---sound-card"></a>Hardware – Soundkarte  
+
+
+## <a name="hardware---security"></a>Hardware – Sicherheit
+
+|Berichtsname|Beschreibung|  
+|-----------------|-----------------|  
+|**Details des Firmwarestatus auf Geräten**|Zeigt die Details des UEFI-, SecureBoot- und TPM-Status an|  
+
+
+
+## <a name="hardware---sound-card"></a>Hardware – Soundkarte  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -323,15 +374,19 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Soundkarten zählen**|Zeigt die Anzahl von inventarisierten Computern nach Soundkartentyp an.|  
 |**Soundkarteninformationen für einen bestimmten Computer**|Zeigt zusammenfassende Informationen zur Soundkarte eines angegebenen Computers an.|  
 
-### <a name="hardware---video-card"></a>Hardware – Grafikkarte  
+
+
+## <a name="hardware---video-card"></a>Hardware – Grafikkarte  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
 |**Computer mit einer bestimmten Grafikkarte**|Zeigt eine Liste von Computern an, die mit einer angegebenen Grafikkarte ausgestattet sind.|  
-|**Grafikkarten nach Typ zählen**|Zeigt eine Liste aller in Computern installierter Grafikkarten sowie die Anzahl der einzelnen Grafikkartentypen an.|  
+|**Grafikkarten nach Typ zählen**|Zeigt eine Liste aller auf Computern installierten Grafikkarten an. Enthält zudem die Anzahl der einzelnen Grafikkartentypen.|  
 |**Grafikkarteninformationen für einen bestimmten Computer**|Zeigt Informationen zu den in einem angegebenen Computer installierten Grafikkarten an.|  
 
-### <a name="migration"></a>Migration  
+
+
+## <a name="migration"></a>Migration  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -341,7 +396,9 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Migrationsaufträge**|Dieser Bericht zeigt die Liste der Migrationsaufträge an.|  
 |**Objekte mit Fehlern beim Migrieren**|Zeigt die Liste der Objekte an, die beim letzten Versuch nicht migriert werden konnten.|  
 
-### <a name="network"></a>Netzwerk  
+
+
+## <a name="network"></a>Netzwerk  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -352,25 +409,9 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**IP – Informationen für eine bestimmte IP-Adresse**|Zeigt zusammenfassende Informationen zu einer angegebenen IP-Adresse an.|  
 |**MAC – Computer für eine bestimmte MAC-Adresse**|Zeigt den Computernamen und die IP-Adresse der Computer mit der angegebenen MAC-Adresse an.|  
 
-### <a name="network-access-protection"></a>Netzwerkzugriffsschutz  
 
-|Berichtsname|Beschreibung|  
-|-----------------|-----------------|  
-|**Vergleich der installierten Softwareupdates, geordnet nach Softwareupdatebereitstellung und NAP-Wiederherstellung**|Zeigt eine vergleichende Zusammenfassung über die von der Softwareupdatebereitstellung und der NAP-Wiederherstellung installierten Softwareupdates an.|  
-|**Anzahl der an einem Computer durchgeführten Wiederherstellungen innerhalb eines bestimmten Zeitraums**|In diesem Bericht wird angegeben, wie häufig ein Computer in einem angegebenen Zeitraum wiederhergestellt wurde.|  
-|**Liste der Computer, auf denen innerhalb eines bestimmten Zeitraums im Rahmen der Wiederherstellung ein bestimmtes Softwareupdate installiert wurde**|Zeigt die Computer an, auf denen innerhalb eines bestimmten Zeitraums (Tage) im Rahmen der Wiederherstellung ein angegebenes Softwareupdate installiert wurde.|  
-|**Liste der Computer, die basierend auf den ausgewählten Softwareupdates als nicht kompatibel zu betrachten sind**|Zeigt die einzelnen Computer an, die basierend auf den ausgewählten Softwareupdates als nicht kompatibel zu betrachten sind.|  
-|**Liste von Computern, auf denen der NAP-Dienst nicht erkannt wurde**|Zeigt eine Liste von Computern an, auf denen der NAP-Dienst nicht erkannt wurde.|  
-|**Liste von Computern, die NAP unterstützen**|Zeigt eine Liste der Computer an, auf denen der NAP-Dienst nicht ausgeführt wird oder auf denen sein Status unbekannt ist.|  
-|**Liste der NAP-Richtlinien**|Zeigt eine Liste von NAP-Richtlinien mit ihren Gültigkeitsdaten an.|  
-|**Liste der nicht kompatiblen Computer, die seit dem letzten Abrufintervall wiederhergestellt wurden**|Zeigt eine Liste nicht kompatibler, wiederhergestellter Computer mit dem Zeitpunkt der jeweils letzten bekannten Auswertung an.|  
-|**Liste der nicht kompatiblen Computer, die innerhalb eines angegebenen Zeitraums wiederhergestellt wurden**|Zeigt eine Liste von nicht kompatiblen Computern an, die innerhalb eines angegebenen Zeitraums wiederhergestellt wurden.|  
-|**Liste der Fehler bei der Wiederherstellung innerhalb eines bestimmten Zeitraums**|Zeigt eine Liste der Fehler bei der Wiederherstellung für eine angegebene Anzahl von Tagen an.|  
-|**Liste der im Rahmen der Wiederherstellung installierten Softwareupdates**|Zeigt die Softwareupdates an, die im Rahmen der Wiederherstellung für einen angegebenen Zeitraum installiert wurden.|  
-|**Zusammenfassung der nicht kompatiblen Computer, die seit dem letzten Abrufintervall wiederhergestellt wurden**|Zeigt eine Zusammenfassung von nicht kompatiblen Computern an, die seit dem letzten Abrufintervall wiederhergestellt wurden.|  
-|**Zusammenfassung der nicht kompatiblen Computer, die innerhalb eines bestimmten Zeitraums wiederhergestellt wurden**|Zeigt eine Zusammenfassung der nicht kompatiblen Computer an, die innerhalb eines angegebenen Zeitraums wiederhergestellt wurden.|  
 
-### <a name="operating-system"></a>Betriebssystem  
+## <a name="operating-system"></a>Betriebssystem  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -382,24 +423,19 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Dienste – Computer, auf denen ein bestimmter Dienst ausführt wird**|Zeigt eine Liste der Computer an, auf denen ein angegebener Dienst ausgeführt wird.|  
 |**Dienste – Computer, auf denen RAS-Server ausgeführt wird**|Zeigt eine Liste der Computer an, auf denen RAS-Server ausführt wird.|  
 |**Dienste – Diensteinformationen für einen bestimmten Computer**|Zeigt zusammenfassende Informationen zu den Diensten auf einem angegebenen Computer an.|  
+|**Bericht „Windows 10-Wartungsdetails für eine bestimmte Sammlung“**|Zeigt allgemeine Informationen zur Windows 10-Wartung für eine bestimmte Sammlung an.|
 |**Windows Server-Computer**|Zeigt eine Liste der Computer an, auf denen Windows Server-Betriebssysteme ausgeführt werden.|  
 
-### <a name="out-of-band-management"></a>Out-of-Band-Verwaltung  
+
+
+## <a name="power-management"></a>Energieverwaltung  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
-|**Computer mit Out-of-Band-Verwaltungscontrollern**|Zeigt eine Liste von Computern an, auf denen sich Out-of-Band-Verwaltungscontroller befinden.|  
-|**Aktivität der Out-of-Band-Verwaltungskonsole**|Zeigt eine Liste von Statusmeldungen für die Aktivität der Out-of-Band-Verwaltungskonsole an.|  
-|**Bereitstellungsstatus zur Out-of-Band-Verwaltung von Clients**|Zeigt eine Liste von Computern an, die für die Out-of-Band-Verwaltung bereitgestellt wurden.|  
-
-### <a name="power-management"></a>Energieverwaltung  
-
-|Berichtsname|Beschreibung|  
-|-----------------|-----------------|  
-|**Energieverwaltung – Computeraktivität**|Zeigt die Monitor-, Computer- und Benutzeraktivität einer angegebenen Sammlung innerhalb eines angegebenen Zeitraums in Diagrammform an.|  
-|**Energieverwaltung – Computeraktivität nach Computer**|Zeigt die Monitor-, Computer und Benutzeraktivität für einen angegebenen Computer an einem angegebenen Datum in Diagrammform an.|  
+|**Energieverwaltung – Computeraktivität**|Zeigt die Überwachungs-, Computer- und Benutzeraktivität für eine angegebene Sammlung innerhalb eines angegebenen Zeitraums in Diagrammform an.|  
+|**Energieverwaltung – Computeraktivität nach Computer**|Zeigt die Überwachungs-, Computer und Benutzeraktivität für einen angegebenen Computer an einem angegebenen Datum in Diagrammform an.|  
 |**Energieverwaltung – Computeraktivitätsdetails**|Zeigt eine Liste der Standby- und Aktivierungsfunktionen von Computern einer angegebenen Sammlung zu einem angegebenen Zeitpunkt (Datum und Uhrzeit) an.|  
-|**Energieverwaltung – Computerdetails**|Zeigt detaillierte Informationen zu Energiesparfunktionen, -einstellungen und -plänen eines angegebenen Computers an.|  
+|**Energieverwaltung – Computerdetails**|Zeigt detaillierte Informationen zu Energiesparfunktionen, -einstellungen und -plänen für einen angegebenen Computer an.|  
 |**Energieverwaltung – Computer meldet keine Details**|Zeigt eine Liste von Computern ohne jegliche Energieaktivität für einen angegebenen Zeitpunkt (Datum und Uhrzeit) an.|  
 |**Energieverwaltung – Ausgeschlossene Computer**|Zeigt eine Liste von Computern an, die vom Energiesparplan ausgeschlossen wurden.|  
 |**Energieverwaltung – Computer mit mehreren Energiesparplänen**|Zeigt eine Liste von Computern an, auf denen mehrere in Konflikt stehende Energieeinstellungen angewendet werden.|  
@@ -410,12 +446,14 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Energieverwaltung – Umweltbelastung**|Zeigt die durch eine bestimmte Sammlung während eines bestimmten Zeitraums erzeugte Kohlendioxidemission (CO2) in Form eines Diagramms an.|  
 |**Energieverwaltung – Umweltbelastung nach Tag**|Zeigt die durch eine bestimmte Sammlung während der letzten 31 Tage erzeugte Kohlendioxidemission (CO2) in Form eines Diagramms an.|  
 |**Energieverwaltung – Störungsdetails für Computer**|Zeigt detaillierte Informationen zu Computern an, für die während eines bestimmten Zeitraums weder Standbymodus noch Ruhezustand aktiviert wurde.|  
-|**Energieverwaltung – Störungsbericht**|Zeigt eine Liste der häufigsten Ursachen an, deretwegen für Computer weder der Standbymodus noch der Ruhezustand aktiviert werden konnte, sowie die Anzahl von Computern, die für einen angegebenen Zeitraum von den jeweiligen Ursachen betroffen waren.|  
+|**Energieverwaltung – Störungsbericht**|Zeigt eine Liste der häufigsten Ursachen dafür an, dass Computer nicht in den Energiesparmodus oder den Ruhezustand versetzt werden konnten. Enthält zudem die Anzahl der Computer, die über einen bestimmten Zeitraum von den einzelnen Ursachen betroffen waren.|  
 |**Energieverwaltung – Energiefunktionen**|Zeigt die Energieverwaltungsfunktionen von Computern in der angegebenen Sammlung an.|  
 |**Energieverwaltung – Energieeinstellungen**|Zeigt eine aggregierte Liste aller Energieeinstellungen an, die von Computern in einer angegebenen Sammlung verwendet werden.|  
 |**Energieverwaltung – Energieeinstellungsdetails**|Zeigt weitere Informationen zu Computern an, die im Bericht **Energieverwaltung – Energieeinstellungen** angegeben wurden.|  
 
-### <a name="replication-traffic"></a>Replikationsdatenverkehr  
+
+
+## <a name="replication-traffic"></a>Replikationsdatenverkehr  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -430,7 +468,9 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Replikationsdatenverkehr in der Hierarchie gesamt (Liniendiagramm)**|Zeigt die summierte globale und standortbezogene Datenreplikation für jede Richtung und für jede Verbindung in der Hierarchie für eine angegebene Anzahl von Tagen an.|  
 |**Replikationsdatenverkehr in der Hierarchie gesamt (Kreisdiagramm)**|Zeigt die summierte globale und standortbezogene Datenreplikation für jede Richtung und für jede Verbindung in der Hierarchie für eine angegebene Anzahl von Tagen an.|  
 
-### <a name="site---client-information"></a>Standort – Clientinformationen  
+
+
+## <a name="site---client-information"></a>Standort – Clientinformationen  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -441,35 +481,39 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Bericht über Fehler bei der Clientbereitstellung**|Zeigt detaillierte Informationen für Clients an, die nicht bereitgestellt werden konnten.|  
 |**Details zum Clientbereitstellungsstatus**|Zeigt zusammenfassende Informationen zum Status von Clientinstallationen an.|  
 |**Bericht zur erfolgreichen Clientbereitstellung**|Zeigt ausführliche Informationen für Clients an, die erfolgreich bereitgestellt wurden.|  
-|**Clients, die die HTTPS-Kommunikation nicht unterstützen**|Zeigt detaillierte Informationen zu jedem Client eines Standorts an, von dem nach dem Ausführen des Programms zur Überprüfung der HTTPS-Kommunikation gemeldet wurde, dass die Kommunikation über HTTPS nicht unterstützt wird.|  
-|**Computer, die einem bestimmten Standort zugeordnet, aber nicht dort installiert sind**|Zeigt eine Liste von Computern an, die einem bestimmten Standort zugewiesen wurden, aber nicht an den Standort berichten.|  
+|**Clients, die die HTTPS-Kommunikation nicht unterstützen**|Zeigt detaillierte Informationen zu jedem Client eines Standorts an, der die Kommunikation über HTTPS ausführt und meldet, dass die Kommunikation über HTTPS nicht unterstützt wird.|  
+|**Computer, die einem bestimmten Standort zugeordnet, aber nicht dort installiert sind**|Zeigt eine Liste der Computer an, die einem bestimmten Standort zugewiesen wurden, aber nicht an den Standort berichten.|  
 |**Computer mit einer bestimmten Configuration Manager-Clientversion**|Zeigt eine Liste von Computern an, auf denen eine einzelne angegebene Version der Configuration Manager-Clientsoftware ausgeführt wird.|  
 |**Anzahl der Clients und für die Kommunikation verwendeten Protokolle**|Zeigt eine Zusammenfassung der von Clients verwendeten Kommunikationsmethoden (HTTP oder HTTPS) an.|  
 |**Anzahl der zugeordneten und installierten Clients für jeden Standort**|Zeigt die Anzahl der zugeordneten und installierten Computer für jeden Standort an. Clients mit einem Netzwerkpfad, der mehreren Standorten zugeordnet ist, werden nur als installiert gezählt, wenn von ihnen an den betreffenden Standort Bericht erstattet wird.|  
-|**Anzahl der Clients, die die Kommunikation über HTTPS unterstützen**|Zeigt detaillierte Informationen zu jedem Client eines Standorts an, von dem nach dem Ausführen des Programms zur Überprüfung der HTTPS-Kommunikation gemeldet wurde, ob die Kommunikation über HTTPS unterstützt wird.|  
+|**Anzahl der Clients, die die Kommunikation über HTTPS unterstützen**|Zeigt detaillierte Informationen zu jedem Client eines Standorts an, der die Kommunikation über HTTPS ausführt und meldet, dass die Kommunikation über HTTPS unterstützt bzw. nicht unterstützt wird.|  
 |**Anzahl der Clients für jeden Standort**|Zeigt die Anzahl von installierten Configuration Manager-Clients nach Standortcode an|  
 |**Anzahl der Configuration Manager-Clients nach Clientversionen**|Zeigt die Anzahl der ermittelten Computer nach Configuration Manager-Clientversion an|  
-|**Details zu Problemen einer bestimmten Sammlung, die dem Fallbackstatuspunkt gemeldet wurden**|Zeigt detaillierte Informationen über die Probleme an, die von Clients in einer bestimmten Sammlung gemeldet wurden, wenn diese einem Fallbackstatuspunkt zugewiesen wurden.|  
-|**Details zu Problemen eines bestimmten Standorts, die dem Fallbackstatuspunkt gemeldet wurden**|Zeigt detaillierte Informationen über die Probleme an, die von Clients eines bestimmten Standorts gemeldet wurden, wenn diese einem Fallbackstatuspunkt zugewiesen wurden.|  
-|**Zusammenfassung der Probleme, die dem Fallbackstatuspunkt gemeldet wurden**|Zeigt Informationen über alle Probleme an, die von Clients gemeldet wurden, wenn diese einem Fallbackstatuspunkt zugewiesen wurden.|  
-|**Zusammenfassung der Probleme einer bestimmten Sammlung, die dem Fallbackstatuspunkt gemeldet wurden**|Zeigt zusammenfassende Informationen über die Probleme an, die von Clients in einer bestimmten Sammlung gemeldet wurden, wenn diese einem Fallbackstatuspunkt zugewiesen wurden.|  
+|**Details zu Problemen einer bestimmten Sammlung, die dem Fallbackstatuspunkt gemeldet wurden**|Zeigt detaillierte Informationen zu den Problemen an, die von Clients in einer bestimmten Sammlung gemeldet wurden. Diesen Clients muss ein Fallbackstatuspunkt zugewiesen sein.|  
+|**Details zu Problemen eines bestimmten Standorts, die dem Fallbackstatuspunkt gemeldet wurden**|Zeigt detaillierte Informationen zu den Problemen an, die von Clients an einem bestimmten Standort gemeldet wurden. Diesen Clients muss ein Fallbackstatuspunkt zugewiesen sein.|  
+|**Zusammenfassung der Probleme, die dem Fallbackstatuspunkt gemeldet wurden**|Zeigt Informationen zu sämtlichen Problemen an, die von Clients gemeldet wurden. Diesen Clients muss ein Fallbackstatuspunkt zugewiesen sein.|  
+|**Zusammenfassung der Probleme einer bestimmten Sammlung, die dem Fallbackstatuspunkt gemeldet wurden**|Zeigt Zusammenfassungsinformationen zu Problemen an, die von Clients in einer bestimmten Sammlung gemeldet wurden. Diesen Clients muss ein Fallbackstatuspunkt zugewiesen sein.|  
 
-### <a name="site---discovery-and-inventory-information"></a>Standort – Ermittlungs- und Inventarinformationen  
+
+
+## <a name="site---discovery-and-inventory-information"></a>Standort – Ermittlungs- und Inventarinformationen  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
 |**Clients, von denen in letzter Zeit (innerhalb einer angegebenen Anzahl von Tagen) kein Bericht gesendet wurde**|Zeigt eine Liste von Clients an, für die in der angegebenen Anzahl von Tagen keine Ermittlungsdaten oder Hardware- und Softwareinventuren gemeldet wurden.|  
-|**Ermittelte Computer nach bestimmtem Standort**|Zeigt eine Liste aller von einem bestimmten Standort ermittelten Computer und das Datum der letzten Ermittlung an.|  
-|**Computer, die vor Kurzem ermittelt wurden, nach Ermittlungsmethode**|Zeigt eine Liste von Computern an, die in der angegebenen Anzahl von Tagen ermittelt wurden, zusammen mit den Agents, durch die sie ermittelt wurden. Wenn ein Computer von mehreren Agents ermittelt wurde, wird er möglicherweise mehrmals in der Liste angezeigt.|  
-|**Computer, die in letzter Zeit nicht ermittelt wurden (Anzahl von Tagen)**|Zeigt eine Liste von Computern an, die in letzter Zeit nicht ermittelt worden sind, sowie die Anzahl der Tage seit ihrer letzten Ermittlung.|  
-|**Computer, die in letzter Zeit nicht inventarisiert wurden (Anzahl von Tagen)**|Zeigt eine Liste von Computern an, die in letzter Zeit nicht inventarisiert worden sind, sowie die Zeitpunkte ihrer letzten Inventarisierung.|  
+|**Ermittelte Computer nach bestimmtem Standort**|Zeigt eine Liste aller Computer an, die der angegebene Standort ermittelt hat. Zeigt zudem das Datum der aktuellen Ermittlung an.|  
+|**Computer, die vor Kurzem ermittelt wurden, nach Ermittlungsmethode**|Zeigt eine Liste der Computer an, die der Standort in der angegebenen Anzahl von Tagen ermittelt hat. Listet zudem die ermittelnden Agenten auf. Wenn ein Computer von mehreren Agents ermittelt wurde, wird er möglicherweise mehrmals in der Liste angezeigt.|  
+|**Computer, die in letzter Zeit nicht ermittelt wurden (Anzahl von Tagen)**|Zeigt eine Liste der Computer an, die in letzter Zeit nicht vom Standort ermittelt wurden. Zeigt zudem die Anzahl von Tagen an, seit der Standort den Computer erkannt hat.|  
+|**Computer, die in letzter Zeit nicht inventarisiert wurden (Anzahl von Tagen)**|Zeigt eine Liste der Computer an, die am Standort in letzter Zeit nicht inventarisiert wurden. Zeigt zudem den Zeitpunkt an, zu dem der Client den Computer zuletzt inventarisiert hat.|  
 |**Computer, deren eindeutige Configuration Manager-Kennungen möglicherweise übereinstimmen**|Zeigt eine Liste von Computern an, deren Namen geändert wurden. Eine Namensänderung kann z.B. bedeuten, dass die eindeutigen Configuration Manager-Bezeichner für zwei Computer übereinstimmen.|  
 |**Computer mit doppelten MAC-Adressen**|Zeigt Computer an, die sich eine MAC-Adresse teilen.|  
 |**Anzahl von Computern in Ressourcendomänen oder Arbeitsgruppen**|Zeigt die Anzahl der Computer in den einzelnen Ressourcendomänen oder Arbeitsgruppen an.|  
 |**Ermittlungsinformationen für einen bestimmten Computer**|Zeigt eine Liste aller Agents und Standorte an, die einen angegebenen Computer ermittelt haben.|  
 |**Inventurdaten für einen bestimmten Computer**|Zeigt das Datum und die Uhrzeit für die letzte Ausführung einer Inventur auf einem angegebenen Computer an.|  
 
-### <a name="site---general"></a>Standort – Allgemein  
+
+
+## <a name="site---general"></a>Standort – Allgemein  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -477,19 +521,23 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Standortstatus für die Hierarchie**|Zeigt die Liste der Standorte in der Hierarchie mit Standortversion und Standortstatusinformationen an.|  
 |**Status des Configuration Manager-Updates innerhalb der Hierarchie**|Zeigt Informationen zu Configuration Manager-Standortupdates für die Hierarchie an|  
 
-### <a name="site---server-information"></a>Standort – Serverinformationen  
+
+
+## <a name="site---server-information"></a>Standort – Serverinformationen  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
 |**Standortsystemrollen und -server für einen bestimmten Standort**|Zeigt eine Liste der Standortsystemserver und ihrer Standortsystemrollen für einen angegebenen Standort an.|  
 
-### <a name="software---companies-and-products"></a>Software – Unternehmen und Produkte  
+
+
+## <a name="software---companies-and-products"></a>Software – Unternehmen und Produkte  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
 |**Alle inventarisierten Produkte für ein bestimmtes Softwareunternehmen**|Zeigt eine Liste der inventarisierten Softwareprodukte und -versionen für ein angegebenes Softwareunternehmen an.|  
 |**Alle Softwareunternehmen**|Zeigt eine Liste aller Herstellerunternehmen der inventarisierten Software an.|  
-|**Alle Windows-Apps**|Zeigt eine Zusammenfassung der installierten Windows-Apps an, geordnet nach der Anzahl von Instanzen, basierend auf Suchkriterien für Anwendungsnamen, Architektur oder Herausgeber.|  
+|**Alle Windows-Apps**|Zeigt eine Zusammenfassung der installierten Windows-Apps an. Die Suche wird anhand der folgenden Kriterien durchgeführt: Anwendungsname, Architektur oder Herausgeber.|  
 |**Computer mit einem bestimmten Produkt**|Zeigt eine Liste von Computern an, auf denen ein angegebenes Produkt inventarisiert ist, sowie die Versionen des Produkts.|  
 |**Computer mit bestimmten Produktnamen und bestimmter Produktversion**|Zeigt eine Liste von Computern an, auf denen eine angegebene Version eines Produkts inventarisiert ist.|  
 |**Computer, bei denen eine bestimmte Software unter „Software“ registriert ist**|Zeigt eine Zusammenfassung aller Computer mit der angegebenen Software an, die unter „Software“ oder „Programme und Features“ registriert ist.|  
@@ -497,12 +545,15 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Inventarisierte Produkte und Versionen für ein bestimmtes Produkt zählen**|Zeigt eine Liste von inventarisierten Versionen eines angegebenen Produkts sowie die Anzahl von Computern an, auf denen sie jeweils installiert sind.|  
 |**Alle Instanzen der Software zählen, die unter „Software“ registriert ist**|Zeigt eine Zusammenfassung aller Instanzen, der mit „Software“ oder „Programme und Features“ installierten und registrierten Software auf Computern in der angegebenen Sammlung an.|  
 |**Instanzen einer bestimmten Software zählen, die unter „Software“ registriert ist**|Zeigt die Anzahl der Instanzen für die angegebenen Softwarepakete an, die über „Software“ oder „Programme und Features“ installiert und registriert wurden.|  
+|**Anzahl von Standardbrowsern**|Zeigt die Anzahl der Clients an, auf denen ein bestimmter Webbrowser als Windows-Standardeinstellung festgelegt ist. </br>Verwenden Sie für allgemeine BrowserProgIDs die folgende Referenz:</br> – AppXq0fevzme2pys62n3e0fbqa7peapykr8v: Microsoft Edge</br> – IE.HTTP: Microsoft Internet Explorer</br> – ChromeHTML: Google Chrome</br> – OperaStable: Opera Software</br> – FirefoxURL-308046B0AF4A39CB: Mozilla Firefox</br> – Unbekannt: Das Clientbetriebssystem unterstützt die Abfrage nicht, die Abfrage wurde nicht durchgeführt oder ein Benutzer hat sich nicht angemeldet|
 |**Installationen bestimmter Windows-Apps**|Dieser Bericht listet alle Computer mit einer angegebenen Windows-App auf.|  
 |**Produkte auf einem bestimmten Computer**|Zeigt eine Zusammenfassung der inventarisierten Softwareprodukte und ihrer Hersteller auf einem angegebenen Computer an.|  
 |**Software, die unter „Software“ auf einem bestimmten Computer registriert ist**|Zeigt eine Zusammenfassung der auf einem angegebenen Computer installierten Software an, die über „Software“ oder „Programme und Features“ registriert wurde.|  
 |**Für den angegebenen Benutzer installierte Windows-Apps**|Zeigt alle für den angegebenen Benutzer installierten Windows-Apps an.|  
 
-### <a name="software---files"></a>Software – Dateien  
+
+
+## <a name="software---files"></a>Software – Dateien  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -512,7 +563,9 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Computer mit einer bestimmten Datei**|Zeigt eine Liste von Computern an, die Softwareinventar für einen angegebenen Dateinamen erfasst haben. Wenn ein Computer mehrere Kopien der Datei enthält, wird er möglicherweise mehrmals in der Liste angezeigt.|  
 |**Computer mit einem bestimmten Dateinamen zählen**|Zeigt eine Liste von Computern an, die Softwareinventar für eine angegebene Datei erfasst haben.|  
 
-### <a name="software-distribution---application-monitoring"></a>Softwareverteilung – Anwendungsüberwachung  
+
+
+## <a name="software-distribution---application-monitoring"></a>Softwareverteilung – Anwendungsüberwachung  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -520,14 +573,16 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Alle Anwendungsbereitstellungen (Standard)**|Zeigt eine Zusammenfassung für alle Anwendungsbereitstellungen an.|  
 |**Anwendungskompatibilität**|Zeigt Kompatibilitätsinformationen für die angegebene Anwendung in der angegebenen Sammlung an.|  
 |**Anwendungsbereitstellungen pro Bestand**|Zeigt Anwendungen an, die auf einem angegebenen Gerät oder für einen angegebenen Benutzer bereitgestellt wurden.|  
-|**Anwendungsinfrastrukturfehler**|Zeigt Anwendungsinfrastrukturfehler an.  Diese können interne Infrastrukturfehler sowie Fehler aufgrund ungültiger Anforderungsregeln umfassen.|  
+|**Anwendungsinfrastrukturfehler**|Zeigt Anwendungsinfrastrukturfehler an. Zu diesen Fehlern zählen interne Infrastrukturprobleme oder Fehler durch ungültige Anforderungsregeln.|  
 |**Detaillierter Status der Anwendungsverwendung**|Zeigt Nutzungsdetails zu installierten Anwendungen an.|  
 |**Statusübersicht der Anwendungsverwendung**|Zeigt eine Nutzungszusammenfassung für installierte Anwendungen an.|  
+|**iOS-Apps mit Bereitstellungsfehlern (App bereits installiert)**|Zeigt Konformitätsinformationen für die ausgewählte iOS-App an. Sie haben diese App als „App-Paket für iOS aus dem App-Store“ bereitgestellt, das auch mit einer Verwaltungsrichtlinie für mobile Anwendungen verknüpft wurde. In diesem Bericht werden Benutzer und Geräte angezeigt, für die die App nicht installiert werden konnte, weil sie vom Benutzer bereits manuell installiert wurde.|  
 |**Tasksequenzbereitstellungen mit Anwendung**|Zeigt Tasksequenzbereitstellungen an, die eine angegebene Anwendung installieren.|  
 |**Android-Anwendungsanforderungen durch Benutzer**|Zeigt die Benutzer an, die die Installation einer Android-Anwendung angefordert haben.|  
-|**iOS-Apps mit Bereitstellungsfehlern (App bereits installiert)**|Zeigt Kompatibilitätsinformationen für die ausgewählte iOS-App an, die Sie als "App-Paket für iOS aus dem App-Store" bereitgestellt haben, das mit einer Verwaltungsrichtlinie für mobile Anwendungen verknüpft wurde. In diesem Bericht werden Benutzer und Geräte angezeigt, für die die App nicht installiert werden konnte, weil sie vom Benutzer bereits manuell installiert wurde.|  
 
-### <a name="software-distribution---collections"></a>Softwareverteilung – Sammlungen  
+
+
+## <a name="software-distribution---collections"></a>Softwareverteilung – Sammlungen  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -535,7 +590,9 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Alle Ressourcen in einer bestimmten Sammlung**|Zeigt alle Ressourcen in einer angegebenen Sammlung an.|  
 |**Für einen angegebenen Client verfügbare Wartungsfenster**|Zeigt alle Wartungsfenster an, die für den angegebenen Client gelten.|  
 
-### <a name="software-distribution---content"></a>Softwareverteilung – Inhalt  
+
+
+## <a name="software-distribution---content"></a>Softwareverteilung – Inhalt  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -552,8 +609,13 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Verteilungsstatus des angegebenen Pakets**|Zeigt den Verteilungsstatus des angegebenen Paketinhalts für die einzelnen Verteilungspunkte an.|  
 |**Pakete, die auf die Verteilungspunktgruppe gerichtet sind**|Zeigt Informationen zu Paketen an, die auf eine angegebene Verteilungspunktgruppe ausgerichtet sind.|  
 |**Nicht mit der angegebenen Verteilungspunktgruppe synchronisierte Pakete**|Zeigt Pakete an, für die zugehörige Inhaltsdateien auf einer angegebenen Verteilungspunktgruppe nicht mit der neuesten Version aktualisiert wurden.|  
+|**Ablehnen von Inhalt einer Peercachequelle**|Zeigt die Anzahl der Ablehnungen von Inhalten einer Peercachequelle pro Begrenzungsgruppe an.|
+|**Ablehnen von Inhalt einer Peercachequelle durch eine Bedingung**|Zeigt die Peercachequellen an, die basierend auf einer Bedingung eine Inhaltsverarbeitung abgelehnt haben.|
+|**Angaben zur Ablehnung von Inhalt einer Peercachequelle**|Zeigt den Namen des Inhalts an, der von einer Peerquelle abgelehnt wurde.|
 
-### <a name="software-distribution---package-and-program-deployment"></a>Softwareverteilung – Paket- und Programmbereitstellung  
+
+
+## <a name="software-distribution---package-and-program-deployment"></a>Softwareverteilung – Paket- und Programmbereitstellung  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -563,61 +625,71 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Alle Paket- und Programmbereitstellungen für einen angegebenen Computer**|Zeigt alle Paket- und Programmbereitstellungen an, die für einen angegebenen Computer gelten.|  
 |**Alle Paket- und Programmbereitstellungen des angegebenen Benutzers**|Zeigt alle Paket- und Programmbereitstellungen des angegebenen Benutzers an.|  
 
-### <a name="software-distribution---package-and-program-deployment-status"></a>Softwareverteilung – Status der Paket- und Programmbereitstellung  
+
+
+## <a name="software-distribution---package-and-program-deployment-status"></a>Softwareverteilung – Status der Paket- und Programmbereitstellung  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
 |**Alle Paket- und Programmbereitstellungen für Systemressourcen mit Status**|Zeigt alle Paket- und Programmbereitstellungen für den Standort mit einer Statusübersicht für die einzelnen Bereitstellungen an.|  
 |**Alle Systemressourcen für eine angegebene Paket- und Programmbereitstellung in einem angegebenen Zustand**|Zeigt eine Liste von Ressourcen an, die einen angegebenen Zustand für eine angegebene Paket- und Programmbereitstellung aufweisen.|  
-|**Diagramm – Status über abgeschlossene stündliche Paket- und Programmbereitstellungen**|Zeigt den Prozentsatz der Computer an, die das Paket in jeder Stunde seit der Erstellung der Paket- und Programmbereitstellung erfolgreich installiert haben. Dieser kann dazu verwendet werden, die durchschnittliche Zeit für eine Paket- und Programmbereitstellung zu verfolgen.|  
+|**Diagramm – Status über abgeschlossene stündliche Paket- und Programmbereitstellungen**|Zeigt den Prozentsatz der Computer an, auf denen das Paket erfolgreich installiert wurde. Die Liste wird für jede Stunde organisiert, da ein Administrator das Paket und die Programmbereitstellung erstellt. Dieser kann dazu verwendet werden, die durchschnittliche Zeit für eine Paket- und Programmbereitstellung zu verfolgen.|  
 |**Status der Paket- und Programmbereitstellung für einen angegebenen Client und eine angegebene Bereitstellung**|Zeigt die Statusmeldungen an, die für einen angegebenen Computer und eine angegebene Paket- und Programmbereitstellung gemeldet wurden.|  
 |**Status einer angegebenen Paket- und Programmbereitstellung**|Zeigt die Statusübersicht für eine angegebene Paket- und Programmbereitstellung an.|  
 
-### <a name="software-metering"></a>Softwaremessung  
+
+
+## <a name="software-metering"></a>Softwaremessung  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
 |**Alle auf diesen Standort angewendeten Softwaremessungsregeln**|Zeigt eine Liste aller auf diesen Standort angewendeten Softwaremessungsregeln an.|  
-|**Computer, auf denen ein gemessenes Programm installiert ist, das aber seit dem angegebenen Datum nicht mehr ausgeführt wurde**|Zeigt alle Computer an, auf denen gemäß der Meldung des Softwareinventars eine gemessene Anwendung installiert ist, die aber seit dem angegebenen Datum nicht ausgeführt wurde.|  
+|**Computer, auf denen ein gemessenes Programm installiert ist, das aber seit dem angegebenen Datum nicht mehr ausgeführt wurde**|Zeigt alle Computer mit der angegebenen gemessenen Anwendung an. Das Programm wurde jedoch seit dem angegebenen Datum von keinem Benutzer ausgeführt.|  
 |**Computer, die ein bestimmtes gemessenes Softwareprogramm ausgeführt haben**|Zeigt eine Liste von Computern an, die Programme innerhalb des angegebenen Monats und Jahrs ausgeführt haben, die der angegebenen Softwaremessungsregel entsprechen.|  
 |**Gleichzeitige Verwendung für alle gemessenen Softwareprogramme**|Zeigt die maximale Anzahl von Benutzern an, die während des angegebenen Monats und Jahrs das jeweilige gemessene Softwareprogramm gleichzeitig ausgeführt haben.|  
 |**Trendanalyse der gleichzeitigen Verwendung eines bestimmten gemessenen Softwareprogramms**|Zeigt die maximale Anzahl von Benutzern an, die in jedem Monat des vergangenen Jahres das angegebene gemessene Softwareprogramm gleichzeitig ausgeführt haben.|  
-|**Installationsbasis für alle gemessenen Softwareprogramme**|Zeigt die Anzahl der Computer an, auf denen gemäß des Softwareinventars gemessene Softwareprogramme installiert sind. Dieser Bericht setzt voraus, dass das Softwareinventar auf den gemessenen Computern erfasst wird.|  
-|**Status des Zusammenfassungsvorgangs der Softwaremessung**|Zeigt den Zeitpunkt an, an dem die zuletzt zusammengefassten Messungsdaten auf dem Standortserver verarbeitet wurden.  Nur die vor diesen Datumsangaben verarbeiteten Messungsdaten werden in den Berichten zur Softwaremessung berücksichtigt.|  
+|**Installationsbasis für alle gemessenen Softwareprogramme**|Zeigt die Anzahl der Computer an, auf denen gemäß des Softwareinventars gemessene Softwareprogramme installiert sind. Für diesen Bericht ist erforderlich, dass der Computer die Softwareinventur sammelt.|  
+|**Status des Zusammenfassungsvorgangs der Softwaremessung**|Zeigt den Zeitpunkt an, an dem die zuletzt zusammengefassten Messungsdaten auf dem Standortserver verarbeitet wurden. In den Berichten zur Softwaremessung werden die vor diesen Datumsangaben verarbeiteten Messungsdaten berücksichtigt.|  
 |**Zusammenfassung Tageszeit der Verwendung eines bestimmten gemessenen Softwareprogramms**|Zeigt die durchschnittliche Anzahl von Verwendungen eines bestimmten Programms in den vergangenen 90 Tagen an, aufgeschlüsselt nach Stunde und Tag.|  
-|**Gesamtverwendung für alle gemessenen Softwareprogramme**|Zeigt die Anzahl von Benutzern an, die während des angegebenen Monats und Jahrs Programme lokal oder über Terminaldienste ausgeführt haben, die allen Softwaremessungsregeln entsprechen.|  
+|**Gesamtverwendung für alle gemessenen Softwareprogramme**|Zeigt die Anzahl der Benutzer an, die innerhalb des angegebenen Monats und Jahrs Programme ausgeführt haben, die allen Softwaremessungsregeln entsprechen. Diese Regeln sind für lokal installierte Software oder für die Verwendung von Terminaldiensten bestimmt.|  
 |**Gesamtverwendung für alle gemessenen Softwareprogramme auf Windows-Terminalservern**|Zeigt die Anzahl von Benutzern an, die während des angegebenen Monats und Jahrs Programme über Terminaldienste ausgeführt haben, die allen Softwaremessungsregeln entsprechen.|  
-|**Trendanalyse der Gesamtverwendung eines bestimmten gemessenen Softwareprogramms**|Zeigt die Anzahl von Benutzern an, die jeden Monat während des vergangenen Jahrs Programme lokal oder über Terminaldienste ausgeführt haben, die der angegebenen Softwaremessungsregel entsprechen.|  
-|**Trendanalyse der Gesamtverwendung eines bestimmten gemessenen Softwareprogramms auf Windows-Terminalservern**|Zeigt die Anzahl von Benutzern an, die jeden Monat während des vergangenen Jahrs Programme über Terminaldienste ausgeführt haben, die der angegebenen Softwaremessungsregel entsprechen.|  
-|**Benutzer, die ein bestimmtes gemessenes Softwareprogramm ausgeführt haben**|Zeigt eine Liste von Benutzern an, die Programme innerhalb des angegebenen Monats und Jahrs ausgeführt haben, die der angegebenen Softwaremessungsregel entsprechen.|  
+|**Trendanalyse der Gesamtverwendung eines bestimmten gemessenen Softwareprogramms**|Zeigt die Anzahl der Benutzer an, die jeden Monat während des vergangenen Jahrs Programme ausgeführt haben, die der angegebenen Softwaremessungsregel entsprechen. Diese Regeln sind für lokal installierte Software oder für die Verwendung von Terminaldiensten bestimmt.|  
+|**Trendanalyse der Gesamtverwendung eines bestimmten gemessenen Softwareprogramms auf Windows-Terminalservern**|Zeigt die Anzahl der Benutzer an, die jeden Monat während des vergangenen Jahrs Programme ausgeführt haben, die der angegebenen Softwaremessungsregel entsprechen. Diese Regeln sind für die Verwendung von Terminaldiensten bestimmt.|  
+|**Benutzer, die ein bestimmtes gemessenes Softwareprogramm ausgeführt haben**|Zeigt eine Liste der Benutzer an, die Programme innerhalb des angegebenen Monats und Jahrs ausgeführt haben, die der angegebenen Softwaremessungsregel entsprechen.|  
 
-### <a name="software-updates---a-compliance"></a>Softwareupdates – A Kompatibilität  
+
+
+## <a name="software-updates---a-compliance"></a>Softwareupdates – A Kompatibilität  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
-|**Kompatibilität 1 – Gesamtkompatibilität**|Zeigt die Gesamtkompatibilitätsinformationen zu einer Softwareupdategruppe an.|  
-|**Kompatibilität 2 – Bestimmtes Softwareupdate**|Zeigt die Kompatibilitätsinformationen bezüglich eines angegebenen Softwareupdates an.|  
+|**Kompatibilität 1 – Gesamtkompatibilität**|Zeigt die Gesamtkonformitätsinformationen zu einer Softwareupdategruppe an.|  
+|**Kompatibilität 2 – Bestimmtes Softwareupdate**|Zeigt die Konformitätsinformationen bezüglich eines angegebenen Softwareupdates an.|  
 |**Kompatibilität 3 – Updategruppe (pro Update)**|Zeigt die Kompatibilitätsinformationen bezüglich eines in einer Softwareupdategruppe definierten Softwareupdates an.|  
 |**Kompatibilität 4 – Updates geordnet nach Hersteller/Monat/Jahr**|Zeigt die Kompatibilitätsdaten für Softwareupdates an, die von einem Hersteller in einem angegebenen Monat und Jahr veröffentlicht wurden.|  
-|**Kompatibilität 5 – Bestimmter Computer**|In diesem Bericht werden die Kompatibilitätsdaten eines Softwareupdates für einen angegebenen Computer angezeigt.  Wenn Sie die Anzahl der angezeigten Informationen begrenzen möchten, können Sie die Hersteller- und Softwareupdateklassifikation angeben.|  
+|**Kompatibilität 5 – Bestimmter Computer**|In diesem Bericht werden die Konformitätsdaten eines Softwareupdates für einen angegebenen Computer angezeigt. Wenn Sie die Anzahl der angezeigten Informationen begrenzen möchten, können Sie die Hersteller- und Softwareupdateklassifikation angeben.|  
 |**Kompatibilität 6 – Bestimmte Softwareupdatezustände (sekundär)**|Zeigt die Anzahl und den Prozentsatz aller Computer für die jeweiligen Kompatibilitätszustände für das angegebene Softwareupdate an.|  
 |**Kompatibilität 7 – Computer in einem bestimmten Kompatibilitätszustand für eine Updategruppe (sekundär)**|Zeigt alle Computer in einer Sammlung an, die einen angegebenen Gesamtkompatibilitätszustand für eine Softwareupdategruppe aufweisen.|  
-|**Kompatibilität 8 – Computer in einem bestimmten Kompatibilitätszustand bezüglich eines Updates (sekundär)**|Zeigt alle Computer in einer Sammlung an, die einen angegebenen Kompatibilitätszustand für ein Softwareupdate aufweisen.|  
+|**Kompatibilität 8 – Computer in einem bestimmten Kompatibilitätszustand bezüglich eines Updates (sekundär)**|Zeigt alle Computer in einer Sammlung an, die einen angegebenen Konformitätszustand für ein Softwareupdate aufweisen.|  
 
-### <a name="software-updates---b-deployment-management"></a>Softwareupdates – B Bereitstellungsverwaltung  
+
+
+## <a name="software-updates---b-deployment-management"></a>Softwareupdates – B Bereitstellungsverwaltung  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
 |**Verwaltung 1 – Bereitstellungen einer Updategruppe**|Zeigt alle Bereitstellungen an, die alle in einer angegebenen Softwareupdategruppe definierten Softwareupdates enthalten.|  
-|**Verwaltung 2 – Erforderliche, aber nicht bereitgestellte Updates**|Zeigt alle herstellerspezifischen Softwareupdates an, die auf Clients als erforderlich ermittelt, jedoch nicht für eine angegebene Sammlung bereitgestellt wurden.|  
+|**Verwaltung 2 – Erforderliche, aber nicht bereitgestellte Updates**|Zeigt alle herstellerspezifischen Softwareupdates an, die auf Clients als erforderlich ermittelt wurden, die von einem Administrator jedoch nicht für eine angegebene Sammlung bereitgestellt wurden.|  
 |**Verwaltung 3 – Updates in einer Bereitstellung**|Zeigt die Softwareupdates an, die in einer angegebenen Bereitstellung enthalten sind.|  
 |**Verwaltung 4 – Bereitstellungen für eine Sammlung**|Zeigt alle Softwareupdatebereitstellungen an, die auf eine angegebene Sammlung ausgerichtet sind.|  
 |**Verwaltung 5 – Bereitstellungen für einen Computer**|Zeigt alle Softwareupdatebereitstellungen an, die auf einem angegebenen Computer bereitgestellt werden.|  
 |**Verwaltung 6 – Bereitstellungen mit einem bestimmten Update**|Zeigt alle Bereitstellungen an, die ein angegebenes Softwareupdate und die zugehörige Zielsammlung für die Bereitstellung enthalten.|  
-|**Verwaltung 7 – Updates in einer Bereitstellung mit fehlendem Inhalt**|Zeigt die Softwareupdates in einer angegebenen Bereitstellung an, für die nicht alle erforderlichen Inhalte abgerufen wurden, sodass Clients das Update nicht installieren konnten und somit keine hundertprozentige Kompatibilität für die Bereitstellung erreicht wurde.|  
-|**Verwaltung 8 – Computer mit fehlendem Inhalt (sekundär)**|Zeigt alle Computer an, die ein angegebenes Softwareupdate erfordern, das in einer bestimmten Bereitstellung enthalten ist, die an einem Verteilungspunkt nicht bereitgestellt wurde.|  
+|**Verwaltung 7 – Updates in einer Bereitstellung mit fehlendem Inhalt**|Zeigt die Softwareupdates in einer bestimmten Bereitstellung an, in denen nicht alle erforderlichen Inhalte abgerufen werden können. Dieser Status verhindert, dass Clients das Update installieren, wodurch bei der Bereitstellung keine Konformität in Höhe von 100 % erreicht werden kann.|  
+|**Verwaltung 8 – Computer mit fehlendem Inhalt (sekundär)**|Zeigt alle Computer an, für die das angegebene Softwareupdate erforderlich ist, bei denen der zugehörige Inhalt jedoch noch nicht an einen Verteilungspunkt verteilt wurde.|  
 
-### <a name="software-updates---c-deployment-states"></a>Softwareupdates – C Bereitstellungszustände  
+
+
+## <a name="software-updates---c-deployment-states"></a>Softwareupdates – C Bereitstellungszustände  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -628,16 +700,20 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Zustände 5 – Zustände für ein Update in einer Bereitstellung (sekundär)**|Zeigt eine Zustandszusammenfassung für ein bestimmtes Softwareupdate an, das für eine angegebene Bereitstellung vorgesehen ist.|  
 |**Zustände 6 – Computer in einem bestimmten Erzwingungszustand für ein Update (sekundär)**|Zeigt alle Computer in einem angegebenen Erzwingungszustand für ein angegebenes Softwareupdate an.|  
 
-### <a name="software-updates---d-scan"></a>Softwareupdates – D Überprüfung  
+
+
+## <a name="software-updates---d-scan"></a>Softwareupdates – D Überprüfung  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
-|**Überprüfung 1 – Letzte Überprüfungszustände, geordnet nach Sammlung**|Zeigt die Anzahl der Computer für eine angegebene Sammlung in den jeweiligen Kompatibilitätsüberprüfungszuständen an, die von Clients während der letzten Kompatibilitätsüberprüfung zurückgegeben wurden.|  
-|**Überprüfung 2 – Letzte Überprüfungszustände, geordnet nach Standort**|Zeigt die einem Standort zugeordnete Anzahl der Computer in den jeweiligen Kompatibilitätsüberprüfungszuständen an, die von Clients während der letzten Kompatibilitätsüberprüfung zurückgegeben wurden.|  
+|**Überprüfung 1 – Letzte Überprüfungszustände, geordnet nach Sammlung**|Gibt eine Sammlung an, in der die Anzahl der Computer im jeweiligen Konformitätsüberprüfungszustand angezeigt wird. Die Clients geben den Status während der letzten Konformitätsüberprüfung zurück.|  
+|**Überprüfung 2 – Letzte Überprüfungszustände, geordnet nach Standort**|Gibt einen Standort an, an dem die Anzahl der Computer im jeweiligen Konformitätsüberprüfungszustand angezeigt wird. Die Clients geben den Status während der letzten Konformitätsüberprüfung zurück.|  
 |**Überprüfung 3 – Clients einer Sammlung, die einen bestimmten Zustand melden (sekundär)**|Zeigt alle Computer für eine angegebene Sammlung und einen angegebenen Kompatibilitätsüberprüfungszustand während der letzten Kompatibilitätsüberprüfung an.|  
-|**Überprüfung 4 – Clients eines Standorts, die einen bestimmten Zustand melden (sekundär)**|Zeigt alle einem angegebenen Standort zugeordneten Computer mit einem angegebenen Kompatibilitätsüberprüfungszustand während der letzten Kompatibilitätsüberprüfung an.|  
+|**Überprüfung 4 – Clients eines Standorts, die einen bestimmten Zustand melden (sekundär)**|Gibt einen Standort an, an dem alle Computer mit einem angegebenen Konformitätsüberprüfungszustand angegeben werden. Die Clients geben den Status während ihrer letzten Konformitätsüberprüfung zurück.|  
 
-### <a name="software-updates---e-troubleshooting"></a>Softwareupdates – E Problembehandlung  
+
+
+## <a name="software-updates---e-troubleshooting"></a>Softwareupdates – E Problembehandlung  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -646,7 +722,9 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Problembehandlung 3 – Computer mit einem bestimmten Überprüfungsfehler (sekundär)**|Zeigt eine Liste der Computer an, bei denen eine Überprüfung aufgrund eines angegebenen Fehlers nicht erfolgreich ausgeführt werden konnte.|  
 |**Problembehandlung 4 – Computer mit einem bestimmten Bereitstellungsfehler (sekundär)**|Zeigt eine Liste der Computer an, auf denen die Bereitstellung des Updates aufgrund einer angegebenen Fehlers nicht erfolgreich ausgeführt werden konnte.|  
 
-### <a name="state-migration"></a>Zustandsmigration  
+
+
+## <a name="state-migration"></a>Zustandsmigration  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -654,14 +732,16 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Zustandsmigrationsinformationen für einen bestimmten Zustandsmigrationspunkt**|Zeigt Zustandsmigrationsinformationen für einen angegebenen Zustandsmigrationspunkt an.|  
 |**Zustandsmigrationspunkte für einen bestimmten Standort**|Zeigt Zustandsmigrationspunkte für einen angegebenen Standort an.|  
 
-### <a name="status-messages"></a>Statusmeldungen  
+
+
+## <a name="status-messages"></a>Statusmeldungen  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
 |**Alle Meldungen mit einer bestimmten Meldungs-ID**|Zeigt eine Liste der Statusmeldungen an, die eine angegebene Meldungs-ID aufweisen.|  
 |**Clients, die in letzten 12 Stunden Fehler für einen bestimmten Standort gemeldet haben**|Zeigt eine Liste von Computern und Komponenten, die in den letzten 12 Stunden Fehler gemeldet haben, und die Anzahl der gemeldeten Fehler an.|  
 |**Komponentenmeldungen der letzten 12 Stunden**|Zeigt eine Liste der Komponentenmeldungen der letzten 12 Stunden für einen angegebenen Standortcode, einen Computer und eine Komponente an.|  
-|**Komponentenmeldungen in der letzten Stunde**|Zeigt eine Liste der Statusmeldungen an, die in der letzten Stunde durch eine angegebene Komponente auf einem angegebenen Computer an einem angegebenen Configuration Manager-Standort erstellt wurden|  
+|**Komponentenmeldungen in der letzten Stunde**|Zeigt eine Liste der in der letzten Stunde durch eine angegebene Komponente auf einem angegebenen Computer an einem angegebenen Standort erstellten Statusmeldungen an.|  
 |**Komponentenmeldungen in der letzten Stunde für einen bestimmten Standort zählen**|Zeigt die Anzahl der in der letzten Stunde an einem angegebenen Standort gemeldeten Komponentenmeldungen nach Komponente sowie den Schweregrad an.|  
 |**Fehler der letzten 12 Stunden zählen**|Zeigt die Anzahl von Fehlerstatusmeldungen für Serverkomponenten in den letzten 12 Stunden an.|  
 |**Schwerwiegende Fehler (nach Komponente)**|Zeigt eine nach Komponenten sortierte Liste von Computern mit schwerwiegenden Fehlern an.|  
@@ -671,7 +751,9 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Die letzten 1000 Meldungen für einen bestimmten Computer (Fehler)**|Zeigt eine Zusammenfassung der letzten 1000 Statusmeldungen (Fehler) der Serverkomponente für einen angegebenen Computer an.|  
 |**Die letzten 1000 Meldungen für eine bestimmte Serverkomponente**|Zeigt eine Zusammenfassung der letzten 1000 Statusmeldungen für eine angegebene Serverkomponente an.|  
 
-### <a name="status-messages---audit"></a>Status Messages – Überwachung  
+
+
+## <a name="status-messages---audit"></a>Status Messages – Überwachung  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -679,7 +761,9 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Remotesteuerung – Alle Computer, die von einem bestimmten Benutzer remote gesteuert werden**|Zeigt eine Zusammenfassung der Statusmeldungen an, die eine Remotesteuerung von Clientcomputern durch einen angegebenen Benutzer anzeigen.|  
 |**Remotesteuerung – Alle Remotesteuerungsinformationen**|Zeigt eine Zusammenfassung der Statusmeldungen an, die sich auf die Remotesteuerung von Clientcomputern beziehen.|  
 
-### <a name="task-sequence---deployment-status"></a>Tasksequenz – Bereitstellungsstatus  
+
+
+## <a name="task-sequence---deployment-status"></a>Tasksequenz – Bereitstellungsstatus  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -693,9 +777,11 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Status einer bestimmten Tasksequenzbereitstellung für einen bestimmten Computer**|Zeigt die Statuszusammenfassung für eine angegebene Tasksequenzbereitstellung auf einem angegebenen Computer an.|  
 |**Status einer Tasksequenzbereitstellung auf einem unbekannten Zielcomputer**|Zeigt den Status der angegebenen Tasksequenzbereitstellung auf dem angegebenen unbekannten Zielcomputer an.|  
 |**Statuszusammenfassung für eine bestimmte Tasksequenzbereitstellung**|Zeigt eine Statuszusammenfassung für alle Ressourcen an, die Ziel einer Bereitstellung sind.|  
-|**Statuszusammenfassung einer bestimmten Tasksequenzbereitstellung, die für unbekannte Computer verfügbar ist**|Zeigt die Statuszusammenfassung für alle Ressourcen an, die Ziel einer angegebenen Bereitstellung sind, die für eine Sammlung zur Verfügung steht, die unbekannte Computer enthält.|  
+|**Statuszusammenfassung einer bestimmten Tasksequenzbereitstellung, die für unbekannte Computer verfügbar ist**|Zeigt die Statuszusammenfassung für alle Ressourcen an, die Ziel einer angegebenen Bereitstellung sind, die für eine Sammlung mit unbekannten Computern zur Verfügung steht.|  
 
-### <a name="task-sequence---deployments"></a>Tasksequenz – Bereitstellungen  
+
+
+## <a name="task-sequence---deployments"></a>Tasksequenz – Bereitstellungen  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -711,7 +797,9 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Status alle Bereitstellungen für eine bestimmte Tasksequenz**|Zeigt den Status aller Bereitstellungen für die angegebene Tasksequenz an.|  
 |**Zusammenfassung zu einer Tasksequenzbereitstellung**|Zeigt die zusammenfassenden Informationen für die angegebene Tasksequenzbereitstellung an.|  
 
-### <a name="task-sequence---progress"></a>Tasksequenz – Status  
+
+
+## <a name="task-sequence---progress"></a>Tasksequenz – Status  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -721,45 +809,57 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Status von Tasksequenzen für Betriebssystembereitstellungen**|Zeigt den Status aller Tasksequenzen an, die Betriebssysteme bereitstellen.|  
 |**Status aller unbekannten Computer**|Zeigt eine Liste der zum Zeitpunkt der Ausführung einer Tasksequenzbereitstellung unbekannten Computer sowie die Information an, ob es sich jetzt um bekannte Computer handelt.|  
 
-### <a name="task-sequences---references"></a>Tasksequenzen – Verweise  
+
+
+## <a name="task-sequences---references"></a>Tasksequenzen – Verweise  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
 |**Inhalt, auf den von einer bestimmten Tasksequenz verwiesen wird**|Zeigt Inhalt an, auf den von einer angegebenen Tasksequenz verwiesen wird.|  
 
-### <a name="upgrade-assessment"></a>Upgradebewertung  
 
-|Berichtsname|Beschreibung|  
+
+<!--
+## Upgrade Assessment  
+
+|Report name|Description|  
 |-----------------|-----------------|  
-|**Anwendungsstatus für einen bestimmten Computer**|Zeigt die Kompatibilität von Anwendungen, die für ein angegebenes Betriebssystem auf einem Computer installiert werden.|  
-|**Anwendungsstatus für Computer in einer bestimmten Sammlung**|Zeigt den Gesamtstatus für Computer in einer Sammlung an. Hiermit können Sie basierend auf den Anwendungen auf den jeweiligen Computern bewerten, wie für diese Computer ein Upgrade durchgeführt werden soll. Mithilfe des Berichts können Sie ermitteln, auf welchen Computern kompatible Anwendungen vorhanden sind, bevor Sie ein Betriebssystem bereitstellen.|  
-|**Anwendungsstatuszusammenfassung**|Zeigt eine Zusammenfassung des Anwendungsstatus für ein angegebenes Betriebssystem an. Mithilfe dieses Berichts können Sie die Anwendungskompatibilität ermitteln, bevor Sie ein Betriebssystem bereitstellen.|  
-|**Computer, auf denen eine bestimmte Anwendung installiert ist**|Zeigt Computer an, auf denen eine bestimmte Anwendung installiert ist.|  
-|**Computer mit einem bestimmten Hardwaregerät**|Zeigt Computer mit einem angegebenen Hardwaregerät an.|  
-|**Hardwaregerätestatus für einen bestimmten Computer**|Zeigt den Kompatibilitätsstatus von Hardwaregeräten für ein angegebenes Betriebssystem an, die auf einem angegebenen Computer gefunden werden.|  
-|**Hardwaregerätestatus für Computer in einer bestimmten Sammlung**|Zeigt den Gesamtstatus für Hardwaregeräte für ein angegebenes Betriebssystem für Computer in einer angegebenen Sammlung an. Sie können mithilfe dieses Berichts die Hardwarekompatibilität ermitteln, bevor Sie ein Betriebssystem bereitstellen.|  
-|**Statuszusammenfassung für Hardwaregeräte**|Zeigt eine Statuszusammenfassung für Hardwaregeräte für ein angegebenes Betriebssystem an. Sie können mithilfe dieses Berichts die Kompatibilität von Hardwaregeräten ermitteln, bevor Sie ein Betriebssystem bereitstellen.|  
-|**Hardwareanforderungen für Betriebssysteme**|Zeigt die minimalen und empfohlenen Hardwarekriterien für Betriebssysteme an.|  
-|**Status der Betriebssystemanforderungen für Computer in einer bestimmten Sammlung**|Zeigt den Status von Betriebssystemanforderungen für das angegebene Betriebssystem für Computer in einer angegebenen Sammlung an. Sie können mithilfe dieses Berichts ermitteln, ob die Anforderungen des angegebenen Betriebssystems hinsichtlich CPU-Prozessorgeschwindigkeit, Arbeitsspeichergröße und Festplattengröße eines Computers erfüllt werden.|  
-|**Zusammenfassung zur Upgradebewertung**|Zeigt die Zusammenfassung zur Upgradebewertung an. Sie können mithilfe dieses Berichts den Gesamtstatus für die Upgradekompatibilität bewerten.|  
+|**Application status for a specific computer**|Displays the compatibility of applications that are installed on a computer for a specified operating system.|  
+|**Application status for computers in a specific collection**|Displays the overall status for computers in a collection to let you assess them for upgrade to a specified operating system based on the applications on each computer. Use this report to determine which computers have compatible applications before you deploy an operating system.|  
+|**Application status summary**|Displays a summary of the application status for a specified operating system. Use this report to determine application compatibility before you deploy an operating system.|  
+|**Computers with a specific application installed**|Displays computers with a specified application installed.|  
+|**Computers with a specific hardware device**|Displays computers that have a specific hardware device.|  
+|**Hardware device status for a specific computer**|Displays the compatibility status of hardware devices for a specified operating system that are found on a specified computer.|  
+|**Hardware device status for computers in a specific collection**|Displays the overall status for hardware devices for a specified operating system for computers in a specified collection. Use this report to determine hardware compatibility before you deploy an operating system.|  
+|**Hardware device status summary**|Displays a summary of hardware device status for a specified operating system. You can use this report to determine hardware device compatibility before you deploy an operating system.|  
+|**Operating system hardware requirements**|Displays the minimum and recommended hardware criteria for operating systems.|  
+|**Operating system requirement status for computers in a specific collection**|Displays the status of operating system requirements for the specified operating system for computers in a specified collection. Use this report to determine if a computer meets the specified operating system requirements for CPU processor speed, memory size, and hard disk space.|  
+|**Upgrade assessment summary**|Displays the upgrade assessment summary. You can use this report to assess the overall status for upgrade compatibility.|  
+-->
 
-### <a name="user---device-affinity"></a>Affinität zwischen Benutzer und Gerät  
+
+
+## <a name="user---device-affinity"></a>Affinität zwischen Benutzer und Gerät  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
 |**Ausstehende Affinitätszuordnungen zwischen Benutzer und Gerät nach Sammlung**|Dieser Bericht enthält alle ausstehenden Affinitätszuordnungen zwischen Benutzer und Gerät für Mitglieder einer Sammlung basierend auf den Nutzungsdaten.|  
-|**Affinitätszuordnungen zwischen Benutzer und Gerät pro Sammlung**|Zeigt alle Zuordnungen zwischen Benutzer und Gerät für die angegebene Sammlung an und gruppiert die Ergebnisse nach Sammlungstyp (z. B. Benutzer oder Gerät).|  
+|**Affinitätszuordnungen zwischen Benutzer und Gerät pro Sammlung**|Zeigt alle Zuordnungen zwischen Benutzer und Gerät für die angegebene Sammlung an und gruppiert die Ergebnisse nach Sammlungstyp (z.B. Benutzer oder Gerät).|  
 
-### <a name="user-data-and-profiles-health"></a>Integrität von Benutzerdaten und Profilen  
+
+
+## <a name="user-data-and-profiles-health"></a>Integrität von Benutzerdaten und Profilen  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
-|**Bericht zur Integrität der Ordnerumleitung – Details**|Zeigt die Details des Integritätszustands der Ordnerumleitung für jeden umgeleiteten Ordner eines gegebenen Benutzers an.|  
-|**Bericht zur Integrität servergespeicherter Benutzerprofile – Details**|Zeigt Details zum Integritätszustand für servergespeicherte Benutzerprofile für einen angegebenen Benutzer an.|  
-|**Bericht zur Integrität von Benutzerdaten und Profilen – Details**|Zeigt die Details zu Fehlern oder Warnungen für die Ordnerumleitung oder das servergespeicherte Benutzerprofil an, wenn Detailinformationen zur Anzahl aus dem Zusammenfassungsbericht angezeigt werden.|  
+|**Bericht zur Integrität der Ordnerumleitung – Details**|Zeigt die Details des Integritätszustands der Ordnerumleitung für jeden umgeleiteten Ordner eines angegebenen Benutzers an.|  
+|**Bericht zur Integrität servergespeicherter Benutzerprofile – Details**|Zeigt Details zum Integritätszustand des servergespeicherten Benutzerprofils für einen angegebenen Benutzer an.|  
+|**Bericht zur Integrität von Benutzerdaten und Profilen – Details**|Zeigt Details zu dem Fehler oder der Warnung bei der Ordnerumleitung oder servergespeicherten Benutzerprofilen an. Dieser Bericht enthält die Zieldetails aus dem Zusammenfassungsbericht.|  
 |**Bericht zur Integrität von Benutzerdaten und Profilen – Zusammenfassung**|Zeigt die Zusammenfassung zu den Integritätszuständen für die Ordnerumleitung und für servergespeicherte Benutzerprofile an.|  
 
-### <a name="users"></a>-Benutzer  
+
+
+## <a name="users"></a>-Benutzer  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
@@ -767,23 +867,43 @@ Mit System Center Configuration Manager werden viele integrierte Berichte bereit
 |**Benutzer pro Domäne zählen**|Zeigt die Anzahl der Benutzer in den einzelnen Domänen an.|  
 |**Benutzer in einer bestimmten Domäne**|Zeigt eine Liste der Benutzer und ihrer Computer in einer angegebenen Domäne an.|  
 
-### <a name="virtual-applications"></a>Virtuelle Anwendungen  
+
+
+## <a name="virtual-applications"></a>Virtuelle Anwendungen  
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
 |**Ergebnisse zur virtuellen App-V-Umgebung**|Zeigt Informationen zu einer angegebenen virtuellen Umgebung an, die sich für eine angegebene Sammlung in einem angegebenen Zustand befindet.|  
-|**Ergebnisse zur virtuellen App-V-Umgebung für Bestand**|Zeigt Informationen zu einer angegebenen virtuellen Umgebung für einen angegebenen Bestand sowie sämtliche Bereitstellungstypen für die angegebene virtuelle Umgebung an.|  
+|**Ergebnisse zur virtuellen App-V-Umgebung für Bestand**|Zeigt Informationen zu einer angegebenen virtuellen Umgebung für ein angegebenes Asset an. Zeigt zudem alle Bereitstellungstypen der angegebenen virtuellen Umgebung an.|  
 |**Status der virtuellen App-V-Umgebung**|Zeigt Kompatibilitätsinformationen für eine angegebene virtuelle Umgebung für eine angegebene Sammlung an.|  
 |**Computer mit einer bestimmten virtuellen Anwendung**|Zeigt eine Zusammenfassung der Computer mit der angegebenen App-V-Verknüpfung an, die mit dem Application Virtualization Management Sequencer erstellt wurde.|  
 |**Computer mit einem bestimmten virtuellen Anwendungspaket**|Zeigt eine Zusammenfassung der Computer an, auf denen das angegebene App-V-Anwendungspaket installiert ist.|  
 |**Anzahl aller Instanzen von virtuellen Anwendungspaketen**|Zeigt die Anzahl der erkannten App-V-Anwendungspakete an.|  
 |**Anzahl aller Instanzen virtueller Anwendungen**|Zeigt die Anzahl der erkannten App-V-Anwendungen an.|  
 
-### <a name="wake-on-lan"></a>-Wake-On-LAN  
+
+
+## <a name="volume-purchase-programs---apple"></a>Volume Purchase Program – Apple
 
 |Berichtsname|Beschreibung|  
 |-----------------|-----------------|  
-|**Alle für Wake-On-LAN-Aktivitäten vorgesehenen Computer**|Zeigt eine Liste von Computern an, die während der Bereitstellung mit dem von Ihnen angegebenen Typ für eine Wake-On-LAN-Aktivität vorgesehen sind.|  
+|**Apple Volume Purchase Program-Apps für iOS mit Lizenzanzahl**|Zeigt alle iPhone-, iPad- und iPod Touch-Anwendungen an, die über das Apple Volume Purchase Program lizenziert wurden. Zudem enthält dieser Bericht die Gesamtzahl der erworbenen Lizenzen sowie die Anzahl der pro Anwendung verwendeten Lizenzen.|  
+
+
+
+## <a name="vulnerability-assessment"></a>Sicherheitsrisikobewertung
+
+|Berichtsname|Beschreibung|  
+|-----------------|-----------------|  
+|**Sicherheitsrisikobewertung – Gesamtbericht**|Identifiziert Risiken in Bezug auf Sicherheit, Verwaltung und Konformität für einen bestimmten Computer|  
+
+
+
+## <a name="wake-on-lan"></a>-Wake-On-LAN  
+
+|Berichtsname|Beschreibung|  
+|-----------------|-----------------|  
+|**Alle für Wake-On-LAN-Aktivitäten vorgesehenen Computer**|Gibt den Bereitstellungstyp für die Anzeige einer Liste mit Computern an, der auf eine Wake-On-LAN-Aktivität ausgerichtet ist.|  
 |**Alle Objekte, die auf Reaktivierungsaktivitäten warten**|Zeigt Objekte an, die für die Reaktivierung geplant sind.|  
 |**Alle Standorte, die für Wake-On-LAN aktiviert sind**|Zeigt eine Liste aller Standorte in der Hierarchie an, die für Wake-On-LAN aktiviert sind.|  
 |**Fehlermeldungen, die innerhalb eines bestimmten Zeitraums während des Sendens von Reaktivierungspaketen empfangen wurden**|Zeigt Fehlermeldungen an, die innerhalb eines definierten Zeitraums während des Sendens von Reaktivierungspaketen empfangen wurden.|  

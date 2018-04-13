@@ -1,9 +1,9 @@
 ---
 title: Empfohlene Hardware
 titleSuffix: Configuration Manager
-description: "Hier finden Sie Informationen über empfohlene Hardware, mit deren Hilfe Sie Ihre System Center Configuration Manager-Umgebung über eine einfache Bereitstellung hinaus skalieren können."
+description: Hier finden Sie Informationen über empfohlene Hardware, mit deren Hilfe Sie Ihre System Center Configuration Manager-Umgebung über eine einfache Bereitstellung hinaus skalieren können.
 ms.custom: na
-ms.date: 05/04/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5267f0af-34d3-47a0-9ab8-986c41276e6c
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 26
+caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 5def3fdef8e9182cb624640fa54ff2eae224e6a1
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 8d0883c7c2a735a2e651d61083d4d45570408ebb
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="recommended-hardware-for-system-center-configuration-manager"></a>Empfohlene Hardware für System Center Configuration Manager
 
@@ -104,7 +104,7 @@ Verwenden Sie zur Leistungsoptimierung RAID 10-Konfigurationen für alle Datenla
 
 -   Die temporäre Datenbank für einen Standort der zentralen Verwaltung ist in der Regel deutlich kleiner als die Datenbank für einen primären Standort.  
 
--   Die Datenbankgröße für den sekundären Standort ist durch folgende Faktoren eingeschränkt:  
+-   Die Datenbankgröße für den sekundären Standort ist wie folgt eingeschränkt:  
 
     -   SQL Server 2012 Express: 10 GB  
 
@@ -120,7 +120,7 @@ Verwenden Sie zur Leistungsoptimierung RAID 10-Konfigurationen für alle Datenla
 
 -   **Speicherplatz:** 500 MB verfügbarer Speicherplatz (5 GB empfohlen) für den Configuration Manager-Clientcache. Weniger Speicherplatz ist erforderlich, wenn Sie benutzerdefinierte Einstellungen zur Installation des Configuration Manager-Clients verwenden:  
 
-    -   Verwenden Sie die CCMSetup-Befehlszeileneigenschaft „/skipprereq“, um die Installation von Dateien zu vermeiden, die vom Client nicht benötigt werden. Beispiel: **CCMSetup.exe /skipprereq:silverlight.exe**, falls der Client den Anwendungskatalog nicht verwendet.  
+    -   Verwenden Sie die CCMSetup-Befehlszeileneigenschaft „/skipprereq“, um die Installation von Dateien zu vermeiden, die vom Client nicht benötigt werden. Beispiel: **CCMSetup.exe /skipprereq:silverlight.exe**, falls der Client den Anwendungskatalog nicht verwendet. Ab Configuration Manager Version 1802 wird Silverlight nicht mehr automatisch installiert.  
 
     -   Verwenden Sie die Client.msi-Eigenschaft SMSCACHESIZE, um eine Cachedatei festzulegen, die kleiner als die Standardgröße von 5.120 MB ist. Die Mindestgröße beträgt 1 MB. Beispiel: Durch **CCMSetup.exe SMSCachesize=2** wird ein Cache von 2 MB erstellt.  
 

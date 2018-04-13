@@ -1,31 +1,32 @@
 ---
 title: Verwalten von Verteilungspunkten
 titleSuffix: Configuration Manager
-description: "Hosten Sie den Inhalt (Dateien und Software), den Sie für Geräte und Benutzer bereitstellen, mithilfe von Verteilungspunkten. In diesem Artikel erhalten Sie eine Installations- und Konfigurationsanleitung."
+description: Den Inhalt, den Sie für Geräte und Benutzer bereitstellen, mithilfe von Verteilungspunkten hosten
 ms.custom: na
-ms.date: 09/18/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
-caps.latest.revision: "5"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: e7eab46d423ed37bde7ac5f325d6cd8175806302
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+caps.latest.revision: 5
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 1010e339c586922f818e1af1e193abba95dace7b
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="install-and-configure-distribution-points-for-system-center-configuration-manager"></a>Installieren und Konfigurieren von Verteilungspunkten für System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Verteilungspunkte in System Center Configuration Manager werden installiert, um den Inhalt (Dateien und Software) zu hosten, den Sie für Geräte und Benutzer bereitstellen. Sie können auch Verteilungspunktgruppen erstellen, die die Verwaltung von Verteilungspunkten und die Verteilung von Inhalt an die Verteilungspunkte erleichtern.  
+Um die Inhaltsdateien die Inhaltsdateien zu hosten, die Sie für Geräte und Benutzer bereitstellen, können Sie Configuration Manager-Verteilungspunkte installieren. Die Erstellung von Verteilungspunktgruppen erleichtert die Verwaltung von Verteilungspunkten und die Verteilung von Inhalt an die Verteilungspunkte.  
 
  Wenn Sie *einen neuen Verteilungspunkt installieren* (mithilfe des Installations-Assistenten) oder *die Eigenschaften eines vorhandenen Verteilungspunkts verwalten* (durch Bearbeiten der Verteilungspunkteigenschaften), können Sie einen Großteil der Einstellungen des Verteilungspunkts konfigurieren. Es gibt jedoch einige Einstellungen, die entweder bei der Installation oder bei der Bearbeitung, aber nicht gleichzeitig verfügbar sind:  
 
@@ -46,10 +47,10 @@ Verteilungspunkte in System Center Configuration Manager werden installiert, um 
     -   **Konfigurieren der Zeitpläne für Datenübertragungen an Verteilungspunkte**  
 
 ##  <a name="bkmk_install"></a> Installieren eines Verteilungspunkts  
-Sie müssen einen Standortsystemserver als Verteilungspunkt festlegen, bevor Inhalt für Clientcomputer verfügbar gemacht werden kann. Sie müssen auch mindestens einer [Begrenzungsgruppe](/sccm/core/servers/deploy/configure/boundary-groups#distribution-points) einen Verteilungspunkt zuweisen, bevor lokale Clientcomputer diesen Verteilungspunkt als Quellspeicherort für Inhalt verwenden können. Sie können die Standortrolle „Verteilungspunkt“ einem neuen oder einem vorhandenen Standortsystemserver hinzufügen.
+Legen Sie einen Standortsystemserver als Verteilungspunkt fest, bevor Inhalt für Clientcomputer verfügbar gemacht werden kann. Weisen Sie auch mindestens einer [Begrenzungsgruppe](/sccm/core/servers/deploy/configure/boundary-groups#distribution-points) einen Verteilungspunkt zu, bevor lokale Clientcomputer diesen Verteilungspunkt als Quellspeicherort für Inhalt verwenden können. Fügen Sie die Standortrolle für Verteilungspunkte einem neuen oder einem vorhandenen Standortsystemserver hinzu.
 
 
- Wenn Sie einen neuen Verteilungspunkt installieren, verwenden Sie einen Installations-Assistenten, der mit Ihnen die verfügbaren Einstellungen durchgeht. Bevor Sie beginnen, beachten Sie Folgendes:  
+ Wenn Sie einen neuen Verteilungspunkt installieren, verwenden Sie einen Installations-Assistenten, der mit Ihnen die verfügbaren Einstellungen durchgeht. Bevor Sie beginnen, beachten Sie die folgenden Voraussetzungen:  
 
 -   Sie benötigen die folgenden Sicherheitsberechtigungen, um einen Verteilungspunkt zu erstellen und zu konfigurieren:  
 
@@ -61,7 +62,7 @@ Sie müssen einen Standortsystemserver als Verteilungspunkt festlegen, bevor Inh
 
     -   **Zertifikate für Betriebssystembereitstellung verwalten** für das Objekt **Standort**  
 
--   Internet Information Services (IIS) muss auf dem Server installiert werden, der den Verteilungspunkt hostet. Bei der Installation der Standortsystemrolle kann Configuration Manager IIS für Sie installieren und konfigurieren.  
+-   Installieren Sie Internetinformationsdienste (IIS) auf dem Server, der den Verteilungspunkt hostet. Bei der Installation der Standortsystemrolle kann Configuration Manager IIS für Sie installieren und konfigurieren.  
 
 Verwenden Sie die folgenden grundlegenden Verfahren zum Installieren oder Ändern eines Verteilungspunkts. Weitere Informationen zu den verfügbaren Konfigurationsoptionen finden Sie unter dem Abschnitt [Konfigurieren eines Verteilungspunkts](#bkmk_configs) dieses Themas.  
 
@@ -98,7 +99,7 @@ Verwenden Sie die folgenden grundlegenden Verfahren zum Installieren oder Änder
 4.  Nachdem Sie die gewünschten Änderungen vorgenommen haben, speichern Sie Ihre Einstellungen, und schließen Sie die Verteilungspunkteigenschaften.  
 
 ##  <a name="bkmk_manage"></a> Verwalten von Verteilungspunktgruppen  
- Verteilungspunktgruppen stellen eine logische Gruppierung von Verteilungspunkten für die Inhaltsverteilung dar. Mithilfe dieser Gruppen können Sie Inhalte von einem zentralen Speicherort für Verteilungspunkte, die mehrere Standorte umfassen, verwalten und überwachen. Beachten Sie die folgenden Punkte:
+ Verteilungspunktgruppen stellen eine logische Gruppierung von Verteilungspunkten für die Inhaltsverteilung dar. Mithilfe dieser Gruppen können Sie Inhalte von einem zentralen Speicherort für Verteilungspunkte, die mehrere Standorte umfassen, verwalten und überwachen. Beachten Sie Folgendes:
 
 -   Sie können der Verteilungspunktgruppe von beliebigen Standorten innerhalb einer Hierarchie Verteilungspunkte hinzufügen.  
 
@@ -161,6 +162,42 @@ Verwenden Sie die folgenden grundlegenden Verfahren zum Installieren oder Änder
 
 3.  Wählen Sie unter **Verfügbare Verteilungspunktgruppen**die Verteilungspunktgruppen aus, denen die ausgewählten Verteilungspunkte als Mitglieder hinzugefügt werden sollen, und wählen Sie dann **OK** aus.  
 
+
+
+## <a name="reassign-a-distribution-point"></a>Neuzuweisen eines Verteilungspunkts
+<!-- 1306937 -->
+Viele Kunden verfügen über eine ausgeprägte Configuration Manager-Infrastruktur und verringern die Anzahl von primären und sekundären Standorten, um ihre Umgebung einfacher zu gestalten. Sie benötigen allerdings weiterhin Verteilungspunkte für die Standorte ihrer Zweigstellen, um Inhalte für verwaltete Clients bereitzustellen. Diese Verteilungspunkte enthalten häufig mehrere Terabytes an Inhalt. Dieser Inhalt nimmt viel Zeit in Anspruch, und es wird eine hohe Netzwerk-Bandbreite benötigt, um die Daten an die Remoteserver zu übermitteln. 
+
+Ab Version 1802 können Sie mithilfe dieses Features einen Verteilungspunkt einem anderen primären Standort neu zuweisen, ohne dabei den Inhalt neu verteilen zu müssen. Über diese Aktion wird ein Update für die Standortsystemzuweisung ausgeführt. Gleichzeitig wird der gesamte Inhalt dauerhaft auf dem Server gespeichert. Wenn Sie mehrere Verteilungspunkte neu zuweisen müssen, führen Sie zunächst diese Aktion auf einem einzelnen Verteilungspunkt aus, und fügen Sie anschließend einen Server nach dem anderen hinzu.
+
+> [!IMPORTANT]
+> Der Zielserver kann nur die Rolle für den Verteilungspunkt hosten. Wenn der Standortsystemserver eine andere Serverrolle von Configuration Manager hostet (z.B. den Zustandsmigrationspunkt), können Sie den Verteilungspunkt nicht neu zuweisen. Außerdem können Sie keinen Verteilunspunkt für die Cloud neu zuweisen. 
+
+Fügen Sie das Computerkonto des Zielstandortservers vor dem Neuzuweisen eines Verteilungspunkts der lokalen Administratorgruppe auf dem Zielserver mit dem Verteilungspunkt hinzu. 
+
+Führen Sie diese Schritte aus, um einen Verteilungspunkt neu zuzuweisen:
+1. Stellen Sie in der Configuration Manager-Konsole eine Verbindung zum Standort der zentralen Verwaltung her. 
+2. Gehen Sie zum Arbeitsbereich **Verwaltung**, und klicken Sie dann auf den Knoten **Verteilungspunkte**.
+3. Klicken Sie mit der rechten Maustaste auf den Zielverteilungspunkt, und klicken Sie anschließend auf **Verteilungspunkt neu zuweisen**. 
+4. Wählen Sie den Zielstandortserver und den Standortcode aus, denen Sie diesen Verteilungspunkt neu zuweisen möchten. 
+
+Überwachen Sie die Neuzuweisung so wie beim Hinzufügen einer neuen Rolle. Die einfachste Methode dafür ist das Aktualisieren der Konsolenansicht nach einigen Minuten. Fügen Sie der Ansicht die Standortcodespalte hinzu. Dieser Wert ändert sich, wenn Configuration Manager den Server neu zuweist. Wenn Sie versuchen, eine andere Aktion auf dem Zielserver auszuführen, bevor Sie die Konsolenansicht aktualisieren, tritt der Fehler „Objekt nicht gefunden“ auf. Stellen Sie sicher, dass der Prozess abgeschlossen ist, und aktualisieren Sie die Konsolenansicht, bevor Sie eine andere Aktion auf dem Server ausführen.
+
+Aktualisieren Sie das Serverzertifikat nach dem Neuzuweisen eines Verteilungspunkts. Der neue Standortserver muss dieses Zertifikat mit dem öffentlichen Schlüssel neu verschlüsseln und es in der Standortdatenbank speichern. Weitere Informationen finden Sie auf der Registerkarte [Allgemein](#general) der Eigenschaften des Verteilungspunkts in der Einstellung **Create a self-signed certificate or import a public key infrastructure (PKI) client certificate for the distribution point** (Selbstsigniertes Zertifikat erstellen oder ein PKI-Clientzertifikat für den Verteilungspunkt importieren). 
+- Für PKI-Zertifikate müssen Sie kein neues Zertifikat erstellen. Importieren Sie dieselbe PFX-Datei, und geben Sie das Kennwort ein.
+- Passen Sie für selbstsignierte Zertifikate das Ablaufdatum oder den Updatezeitpunkt an.
+Wenn Sie das Zertifikat nicht aktualisieren, liefert der Verteilungspunkt weiterhin Inhalt, jedoch schlagen die folgenden Funktionen fehl:
+    - Nachrichten zur Inhaltsprüfung (die Datei „distmgr.log“ zeigt an, dass das Zertifikat nicht entschlüsselt werden kann)
+    - PXE-Unterstützung für Clients 
+
+### <a name="tips"></a>Tipps
+- Führen Sie diese Aktion am Standort der zentralen Verwaltung aus. Dieses Vorgehen hilft bei der Replikation an den primären Standort.
+- Verteilen Sie den Inhalt nicht an den Zielserver, um anschließend zu versuchen, ihn neu zuzuweisen. Verteilte Inhaltstasks, die ausgeführt werden, können bei der Neuzuweisung fehlschlagen, werden jedoch wie normal erneut ausgeführt.
+- Wenn der Server auch ein Configuration Manager-Client ist, achten Sie darauf, auch den Client dem neuen primären Standort neu zuzuweisen. Dieser Schritt ist besonders wichtig für Pullverteilungspunkte, die Inhalt mithilfe von Clientkomponenten herunterladen.
+- Dieser Prozess entfernt den Verteilungspunkt aus der alten Standardbegrenzungsgruppe des Standorts. Falls erforderlich, müssen Sie ihn manuell zur Standardbegrenzungsgruppe des neuen Standorts hinzufügen. Alle anderen Begrenzungsgruppenzuweisungen bleiben unverändert.
+
+
+
 ##  <a name="bkmk_configs"></a> Konfigurieren eines Verteilungspunkts  
  Einzelne Verteilungspunkte unterstützen viele verschiedene Konfigurationen. Allerdings unterstützen nicht alle Verteilungspunkttypen alle Konfigurationen. Cloudbasierte Verteilungspunkte unterstützen beispielsweise keine Inhaltsbereitstellungen, die für PXE oder Multicast aktiviert sind. Informationen zu den spezifischen Einschränkungen finden in den folgenden Themen:  
 
@@ -182,7 +219,7 @@ In den folgenden Abschnitten sind die Konfigurationen beschrieben, die Sie beim 
 
 -   **Konfigurieren, wie der Clientgeräte mit dem Verteilungspunkt kommunizieren:** Die Verwendung von HTTP und HTTPS hat Vor- und Nachteile. Weitere Informationen finden Sie unter „Bewährte Sicherheitsmethoden für die Inhaltsverwaltung“ im Thema [Sicherheit und Datenschutz für die Inhaltsverwaltung in Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
 
--   **Clients gestatten, eine anonyme Verbindung herzustellen:** Mit dieser Einstellung geben Sie an, ob vom Verteilungspunkt anonyme Verbindungen von Configuration Manager-Clients mit der Inhaltsbibliothek zugelassen werden sollen.  
+-   **Allow clients to connect anonymously** (Zulassen, dass Clients eine anonyme Verbindung herstellen): Mit dieser Einstellung geben Sie an, ob vom Verteilungspunkt anonyme Verbindungen von Configuration Manager-Clients mit der Inhaltsbibliothek zugelassen werden.  
 
     > [!IMPORTANT]  
     >  Wenn Sie diese Einstellung nicht verwenden, kann die Reparatur einer Windows Installer-Anwendung auf einem Client fehlschlagen.  
@@ -207,7 +244,7 @@ In den folgenden Abschnitten sind die Konfigurationen beschrieben, die Sie beim 
 
     -   Die Clientauthentifizierung muss zur Verwendung vorgesehen sein.  
 
-    -   Der private Schlüssel muss für den Export aktiviert sein.  
+    -   Lassen Sie zu, dass der private Schlüssel exportiert werden kann.  
 
     > [!TIP]  
     >  Es gibt keine speziellen Anforderungen für den Zertifikatantragsteller oder den alternativen Antragstellernamen (SAN). Sie können ein Zertifikat für mehrere Verteilungspunkte verwenden.  
@@ -216,7 +253,7 @@ In den folgenden Abschnitten sind die Konfigurationen beschrieben, die Sie beim 
 
      Eine Beispielbereitstellung dieses Zertifikats finden Sie im Abschnitt „Bereitstellen des Clientzertifikats für Verteilungspunkte“ des Themas [Beispiel für die schrittweise Bereitstellung der PKI-Zertifikate für System Center Configuration Manager: Windows Server 2008-Zertifizierungsstelle](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
--   **Diesen Verteilungspunkt für vorab bereitgestellten Inhalt aktivieren:** Mit dieser Einstellung können Sie den Verteilungspunkt für vorab bereitgestellten Inhalt aktivieren. Ist diese Einstellung ausgewählt, können Sie das Verteilungsverhalten bei der Inhaltsverteilung konfigurieren. Sie können immer eine der folgenden Optionen wählen:
+-   **Diesen Verteilungspunkt für vorab bereitgestellten Inhalt aktivieren:** Mit dieser Einstellung können Sie den Verteilungspunkt für vorab bereitgestellten Inhalt aktivieren. Ist diese Einstellung ausgewählt, können Sie das Verteilungsverhalten bei der Inhaltsverteilung konfigurieren. Sie können immer eine der folgenden Aktionen ausführen:
 
  - Inhalt wird vorab auf dem Verteilungspunkt bereitgestellt.
  - Der Anfangsinhalt des Pakets wird vorab bereitgestellt, Inhaltsaktualisierungen erfolgen mithilfe des regulären Inhaltsverteilungsvorgangs.
@@ -248,13 +285,18 @@ Für jeden Pullverteilungspunkt, den Sie konfigurieren, müssen Sie mindestens e
 -   Mit den Pfeiltasten können Sie die Reihenfolge anpassen, in der die Quellverteilungspunkte vom Pullverteilungspunkt kontaktiert werden, wenn vom Pullverteilungspunkt Inhalt übertragen werden soll. Verteilungspunkte mit dem niedrigsten Wert werden zuerst angesprochen.  
 
 ### <a name="pxe"></a>PXE  
-Geben Sie an, ob PXE auf dem Verteilungspunkt aktiviert werden soll. Wenn Sie PXE aktivieren, installiert Configuration Manager bei Bedarf die Windows-Bereitstellungsdienste auf dem Server. Der Windows-Bereitstellungsdienst ist der Dienst, von dem der PXE-Start zur Installation von Betriebssystemen ausgeführt wird. Wenn Sie den Assistenten zum Erstellen des Verteilungspunkts abgeschlossen haben, installiert Configuration Manager einen Anbieter in den Windows-Bereitstellungsdiensten, der die PXE-Startfunktionen verwendet.  
+Geben Sie an, ob PXE auf dem Verteilungspunkt aktiviert werden soll. Wenn Sie PXE aktivieren, installiert Configuration Manager bei Bedarf die Windows-Bereitstellungsdienste (Windows Deployment Services, WDS) auf dem Server. WDS ist der Dienst, der den PXE-Start zur Installation von Betriebssystemen ausgeführt. Wenn Sie den Assistenten zum Erstellen des Verteilungspunkts abgeschlossen haben, installiert Configuration Manager einen Anbieter in den Windows-Bereitstellungsdiensten, der die PXE-Startfunktionen verwendet. 
 
 Wenn Sie die Option **PXE-Unterstützung für Clients aktivieren** auswählen, konfigurieren Sie die folgenden Einstellungen:  
 
--   **Antwort auf eingehende PXE-Anforderungen durch diesen Verteilungspunkt zulassen**: Hiermit wird angegeben, ob die Windows-Bereitstellungsdienste aktiviert werden sollen, damit auf PXE-Dienstanforderungen geantwortet werden kann. Mithilfe dieses Kontrollkästchens können Sie den Dienst aktivieren oder deaktivieren, ohne die PXE-Funktionalität vom Verteilungspunkt zu entfernen.  
+ > [!Note]  
+ > Aktivieren Sie unter **Für PXE erforderliche Ports überprüfen** das Kontrollkästchen **Ja**, um zu bestätigen, dass Sie PXE aktivieren möchten. Configuration Manager konfiguriert automatisch die Standardports der Windows-Firewall. Sie müssen die Ports manuell konfigurieren, wenn Sie eine andere Firewall verwenden.  
+ >   
+ > Wenn WDS und DHCP auf demselben Server installiert sind, müssen Sie WDS für das Lauschen an einem anderen Port konfigurieren. DHCP lauscht standardmäßig auf demselben Port. Weitere Informationen finden Sie unter [Aspekte, wenn sich der Windows-Bereitstellungsdienst und DHCP auf demselben Server befinden](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment#BKMK_WDSandDHCP).  
 
--   **Unterstützung für unbekannte Computer aktivieren:** Hiermit wird angegeben, ob die Unterstützung für Computer aktiviert werden soll, die nicht von Configuration Manager verwaltet werden.  
+-   **Allow this distribution point to respond to incoming PXE requests** (Antwort auf eingehende PXE-Anforderungen durch diesen Verteilungspunkt zulassen): Gibt an, ob WDS aktiviert werden soll, sodass eingehende PXE-Dienstanforderungen beantwortet werden. Mithilfe dieses Kontrollkästchens können Sie den Dienst aktivieren oder deaktivieren, ohne die PXE-Funktionalität vom Verteilungspunkt zu entfernen.  
+
+-   **Unterstützung für unbekannte Computer aktivieren:** Hiermit wird angegeben, ob die Unterstützung für Computer aktiviert werden soll, die nicht von Configuration Manager verwaltet werden. 
 
 -   **Kennwort erforderlich, wenn PXE von Computern verwendet wird**: Geben Sie ein sicheres Kennwort an, um die Sicherheit für Ihre PXE-Bereitstellungen zusätzlich zu erhöhen.  
 
@@ -279,9 +321,9 @@ Wenn Sie die Option **PXE-Unterstützung für Clients aktivieren** auswählen, k
 > 2. Interagieren mit der Configuration Manager-Infrastruktur zur Ermittlung der geeigneten Bereitstellungsaktionen.  
 
 ### <a name="multicast"></a>Multicast  
-Geben Sie an, ob Multicast auf dem Verteilungspunkt aktiviert werden soll. Wenn Sie Multicast aktivieren, installiert Configuration Manager bei Bedarf die Windows-Bereitstellungsdienste auf dem Server.  
+Geben Sie an, ob Multicast auf dem Verteilungspunkt aktiviert werden soll. Wenn Sie Multicast aktivieren, installiert Configuration Manager bei Bedarf die Windows-Bereitstellungsdienste (Windows Deployment Services, WDS) auf dem Server.  
 
-Wenn Sie das Kontrollkästchen **Multicast aktivieren, um gleichzeitig Daten an mehrere Clients zu senden** aktivieren, konfigurieren Sie die folgenden Einstellungen:  
+Wenn Sie die Einstellung **Enable multicast to simultaneously send data to multiple clients** (Multicast aktivieren, um gleichzeitig Daten an mehrere Clients zu senden) aktivieren, konfigurieren Sie die folgenden Einstellungen:  
 
 -   **Multicastverbindungskonto:** Geben Sie das Konto an, das verwendet werden soll, wenn Sie Configuration Manager-Datenbankverbindungen für Multicast konfigurieren.  
 
@@ -307,6 +349,8 @@ Wenn Sie das Kontrollkästchen **Multicast aktivieren, um gleichzeitig Daten an 
 
 > [!NOTE]  
 >  Bei Multicastbereitstellungen wird die Netzwerkbandbreite beibehalten, indem gleichzeitig Daten an mehrere Configuration Manager-Clients gesendet werden, anstatt dass eine Kopie der Daten über eine separate Verbindung an jeden Client einzeln gesendet wird. Weitere Informationen zur Verwendung von Multicast zum Bereitstellen von Betriebssystemen finden Sie unter [Verwenden von Multicast zum Bereitstellen von Windows über das Netzwerk mit System Center Configuration Manager](../../../../osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md).  
+
+
 
 ### <a name="group-relationships"></a>Gruppenbeziehungen  
 
@@ -343,11 +387,7 @@ Zum Anzeigen der Ergebnisse der Inhaltsprüfung erweitern Sie im Arbeitsbereich 
 ### <a name="boundary-group"></a>Begrenzungsgruppe  
 Verwalten Sie die Begrenzungsgruppen, denen dieser Verteilungspunkt zugeordnet ist. Planen Sie, den Verteilungspunkt mindestens einer Begrenzungsgruppe hinzuzufügen. Bei der Inhaltsbereitstellung müssen sich die Clients in einer Begrenzungsgruppe befinden, die einem Verteilungspunkt zugeordnet ist, damit dieser Verteilungspunkt als Quellspeicherort für Inhalt verwendet werden kann.
 
-Darüber hinaus gilt:
-
-- Vor Version 1610 können Sie das Kontrollkästchen **Die Verwendung eines Fallbackquellpfads für den Inhalt durch Clients zulassen** aktivieren, um für Clients außerhalb dieser Begrenzungsgruppen ein Ausweichen auf den Verteilungspunkt als Quellort für Inhalt zu ermöglichen, wenn keine anderen Verteilungspunkte verfügbar sind. Weitere Informationen zu Begrenzungsgruppen finden Sie unter [Begrenzungsgruppen für Version 1511, 1602 und 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606). Informationen zu bevorzugten Verteilungspunkten finden Sie unter [Grundlegende Konzepte für die Inhaltsverwaltung in System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).
-
-- Mit Version 1610 oder höher können Sie *Beziehungen* für Begrenzungsgruppen definieren, um festzulegen, wann und auf welche Begrenzungsgruppen ein Client ausweichen kann, um nach Inhalten zu suchen. Weitere Informationen finden Sie unter [Begrenzungsgruppen](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+Konfigurieren Sie *Beziehungen* für Begrenzungsgruppen, die definieren, wann und auf welche Begrenzungsgruppen ein Client ausweichen kann, um nach Inhalten zu suchen. Weitere Informationen finden Sie unter [Begrenzungsgruppen](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
 
 
 ### <a name="schedule"></a>Zeitplan  
