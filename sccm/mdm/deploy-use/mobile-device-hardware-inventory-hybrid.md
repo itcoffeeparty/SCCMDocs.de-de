@@ -1,25 +1,26 @@
 ---
-title: "Konfigurieren der Hardwareinventur für mobile Geräte"
+title: Konfigurieren der Hardwareinventur für mobile Geräte
 titleSuffix: Configuration Manager
-description: "Konfigurieren von Hardwareinventur für mobile Geräte, die von Microsoft Intune und System Center Configuration Manager registriert werden."
+description: Konfigurieren von Hardwareinventur für mobile Geräte, die von Microsoft Intune und System Center Configuration Manager registriert werden.
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 78a0aecc-f775-451e-aa05-56377ec91b1f
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: c176955c3fcfe40f2089b84c50a982906b59f04d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: c3dcb39b50293d5c221a1b8b13fcfbf8aa53ad83
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-configure-hardware-inventory-for-mobile-devices-enrolled-by-microsoft-intune-and-system-center-configuration-manager"></a>Konfigurieren von Hardwareinventur für mobile Geräte, die von Microsoft Intune und System Center Configuration Manager registriert werden
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 10/12/2017
 
 In Configuration Manager können Sie die Hardwareinventur auf iOS-, Android- und Windows-Geräten mithilfe des Microsoft Intune-Connectors erfassen. Informationen zum Konfigurieren der Hardwareinventur finden Sie unter [Erweitern der Hardwareinventur in System Center Configuration Manager](../../core/clients/manage/inventory/extend-hardware-inventory.md).  
 
- Informationen zum Registrieren von Geräten bei Microsoft Intune finden Sie unter [Registrieren von Geräten für die Verwaltung in Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).  
+ Informationen zum Registrieren von Geräten bei Microsoft Intune finden Sie unter [Registrieren von Geräten für die Verwaltung in Intune](https://technet.microsoft.com/library/dn646962.aspx).  
 
 ## <a name="hardware-inventory-for-mobile-devices"></a>Hardwareinventur für mobile Geräte  
  In den folgenden Tabellen sind die für die Hardwareinventur auf häufig verwendeten mobilen Plattformen verfügbaren Inventurklassen aufgelistet.  

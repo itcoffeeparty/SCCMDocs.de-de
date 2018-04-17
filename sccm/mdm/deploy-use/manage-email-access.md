@@ -7,19 +7,20 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fa648e73-5fb8-4818-ab57-7466ffaf888e
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: a83c2030de8a146dad7bf2258e8a983c8ab6c45e
-ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
+ms.openlocfilehash: e36674d27757daab9ced4e7e8b51942a4929b5ff
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-email-access-in-system-center-configuration-manager"></a>Verwalten des E-Mail-Zugriffs in System Center Configuration Manager
 
@@ -47,7 +48,7 @@ Sie können den Zugriff auf Exchange Online und Exchange On-Premises über den i
 
 Office-Desktopanwendungen können auf PCs, auf denen Folgendes ausgeführt wird, auf Exchange Online zugreifen:  
 
--   Office-Desktop 2013 und höher mit aktivierter [moderner Authentifizierung](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) .  
+-   Office-Desktop 2013 und höher mit aktivierter [moderner Authentifizierung](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) .  
 
 -   Windows 7.0 oder Windows 8.1  
 
@@ -85,7 +86,7 @@ Nicht unterstützte Browser werden blockiert. Die OWA-Apps für iOS und Android 
 
  **Für PCs:**  
 
--   Wenn die Richtlinienanforderung für bedingten Zugriff das Zulassen von **In die Domäne eingebunden** oder **Kompatibel**vorsieht, wird eine Meldung mit Anweisungen zum Registrieren des Geräts angezeigt. Wenn der PC keine der Anforderungen erfüllt, wird der Benutzer aufgefordert, das Gerät bei Intune zu registrieren.  
+-   Wenn die Richtlinienanforderung für bedingten Zugriff das Zulassen von **In die Domäne eingebunden** oder **Konform**vorsieht, wird eine Meldung mit Anweisungen zum Registrieren des Geräts angezeigt. Wenn der PC keine der Anforderungen erfüllt, wird der Benutzer aufgefordert, das Gerät bei Intune zu registrieren.  
 
 -   Wenn die Richtlinienanforderung für bedingten Zugriff nur das Zulassen von in die Domäne eingebundenen Windows-Geräten vorsieht, wird das Gerät blockiert und die Meldung angezeigt, dass der IT-Administrator kontaktiert werden sollte.  
 
@@ -142,7 +143,7 @@ Nicht unterstützte Browser werden blockiert. Die OWA-Apps für iOS und Android 
 ### <a name="step-2-configure-user-groups-or-collections-for-the-conditional-access-policy"></a>Schritt 2: Konfigurieren von Benutzergruppen oder Sammlungen für die Richtlinie für bedingten Zugriff  
  Je nach Art der Richtlinie weisen Sie unterschiedlichen Benutzergruppen oder -sammlungen spezielle Richtlinien für den bedingten Zugriff zu. Die Gruppen beinhalten die Benutzer, für die die Richtlinie gelten soll oder die davon ausgeschlossen sind. Bei Benutzern, für die eine Richtlinie gelten soll, muss jedes von ihnen verwendete Gerät die Richtlinie erfüllen, damit sie auf ihre E-Mails zugreifen können.  
 
--   **Richtlinie für Exchange Online** – Richtet sich an Azure Active Directory-Sicherheitsbenutzergruppen. Sie können diese Gruppen in der **Office 365 Admin Center**oder im **Intune-Kontenportal**konfigurieren.  
+-   **Richtlinie für Exchange Online** – Richtet sich an Azure Active Directory-Sicherheitsbenutzergruppen. Sie können diese Gruppen im **Office 365 Admin Center**oder **Intune-Kontenportal**konfigurieren.  
 
 -   **Richtlinie für lokales Exchange** – Richtet sich an Configuration Manager-Benutzersammlungen. Diese können im Arbeitsbereich **Bestand und Kompatibilität** konfiguriert werden.  
 
@@ -171,7 +172,7 @@ Nicht unterstützte Browser werden blockiert. Die OWA-Apps für iOS und Android 
 #### <a name="for-exchange-online-and-tenants-in-the-new-exchange-online-dedicated-environment"></a>Für Exchange Online (und Mandanten in der neuen Exchange Online Dedicated-Umgebung)
 
 >[!NOTE]
->Richtlinien für den bedingten Zugriff können auch in der Azure AD-Verwaltungskonsole erstellt werden. Mithilfe der Azure AD-Verwaltungskonsole können neben den anderen Richtlinien für den bedingten Zugriff wie die Multi-Factor Authentication auch die Richtlinien für den bedingten Zugriff für Intune-Geräte (als Richtlinie für den gerätebasierten bedingten Zugriff in Azure AD bezeichnet) erstellt werden. Es können auch Richtlinien für den bedingten Zugriff für von Azure AD unterstützte Unternehmensanwendungen von Drittanbietern wie Salesforce und Box festgelegt werden. Weitere Informationen finden Sie unter [How to set Azure Active Directory device-based conditional access policy for access control to Azure Active Directory connected applications (Festlegen von Azure Active Directory-Richtlinien für den gerätebasierten bedingten Zugriff zur Zugriffssteuerung bei Anwendungen, die mit Azure Active Directory verbunden sind)](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
+>Richtlinien für den bedingten Zugriff können auch in der Azure AD-Verwaltungskonsole erstellt werden. Mithilfe der Azure AD-Verwaltungskonsole können neben den anderen Richtlinien für den bedingten Zugriff wie die Multi-Factor Authentication auch die Richtlinien für den bedingten Zugriff für Intune-Geräte (als Richtlinie für den gerätebasierten bedingten Zugriff in Azure AD bezeichnet) erstellt werden. Es können auch Richtlinien für den bedingten Zugriff für von Azure AD unterstützte Unternehmensanwendungen von Drittanbietern wie Salesforce und Box festgelegt werden. Weitere Informationen finden Sie unter [How to set Azure Active Directory device-based conditional access policy for access control to Azure Active Directory connected applications (Festlegen von Azure Active Directory-Richtlinien für den gerätebasierten bedingten Zugriff zur Zugriffssteuerung bei Anwendungen, die mit Azure Active Directory verbunden sind)](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
 
  Bei Richtlinien für bedingten Zugriff wird für Exchange Online mithilfe des folgenden Ablaufs bewertet, ob Geräte Zugriff erhalten.  
 
@@ -185,11 +186,11 @@ Nicht unterstützte Browser werden blockiert. Die OWA-Apps für iOS und Android 
 
 -   Das Gerät muss in Azure Active Directory registriert sein (dies erfolgt automatisch bei der Registrierung des Geräts in Intune).  
 
-     Für in die Domäne eingebundene PCs müssen Sie [das Gerät für eine automatische Registrierung](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/) bei Azure Active Directory einrichten.  
+     Für in die Domäne eingebundene PCs müssen Sie [das Gerät für eine automatische Registrierung](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) bei Azure Active Directory einrichten.  
 
 -   Ihr E-Mail-Dienst muss aktiviert sein, damit die Exchange ActiveSync-ID des Geräts mit dem Gerätedatensatz in Azure Active Directory verknüpft wird (gilt nur für iOS- und Android-Geräte).  
 
--   Sie müssen mit allen bereitgestellten Kompatibilitätsrichtlinien kompatibel sein.  
+-   Sie müssen mit allen bereitgestellten Konformitätsrichtlinien konform sein.  
 
  Der Gerätestatus wird in Azure Active Directory gespeichert. Die Anwendung gewährt oder blockiert den Zugriff auf E-Mails entsprechend den ausgewerteten Bedingungen.  
 

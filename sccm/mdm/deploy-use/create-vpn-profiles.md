@@ -17,11 +17,11 @@ caps.handback.revision: 0
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 1d98cd234b2444873f1ffa5819af74d507dfa9c1
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: a66212537c9e6829965f81d7622ae825ca6b80bb
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>VPN-Profile für mobile Geräte in System Center Configuration Manager
 
@@ -35,7 +35,7 @@ Verwenden Sie VPN-Profile in System Center Configuration Manager, um Benutzern m
 
  ## <a name="vpn-profiles-when-using-configuration-manager-together-with-intune"></a>VPN-Profile bei der Verwendung von Configuration Manager mit Intune
 
- Um Profile für Android-, iOS-, Windows Phone- und Windows 8.1-Geräte bereitzustellen, müssen diese Geräte bei Microsoft Intune registriert werden. Geräte auf anderen Plattformen können ebenfalls bei Intune registriert werden. Informationen zum Registrieren finden Sie unter [Verwalten von Geräten für die Verwaltung in Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx). Diese Tabelle zeigt, welcher Verbindungstyp für jede Geräteplattform unterstützt wird:  
+ Um Profile für Android-, iOS-, Windows Phone- und Windows 8.1-Geräte bereitzustellen, müssen diese Geräte bei Microsoft Intune registriert werden. Geräte auf anderen Plattformen können ebenfalls bei Intune registriert werden. Informationen zum Registrieren finden Sie unter [Verwalten von Geräten für die Verwaltung in Intune](https://technet.microsoft.com/library/dn646962.aspx). Diese Tabelle zeigt, welcher Verbindungstyp für jede Geräteplattform unterstützt wird:  
 
  |Verbindungstyp|iOS und macOS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop und Mobile|  
  |---------------------|----------------------|-------------|-----------------|----------------|--------------------|-----------------------|-----------------------------------|  
@@ -103,11 +103,11 @@ Allgemeine Informationen zum Erstellen von VPN-Profilen finden Sie unter [Erstel
             >  Geräte unter iOS unterstützen nur RSA SecurID und MSCHAP v2 als Authentifizierungsmethode, wenn der Verbindungstyp PPTP lautet. Um die Ausgabe von Fehlern zu vermeiden, stellen Sie auf Geräten unter IOS ein separates PPTP-VPN-Profil bereit.  
 
         - **Bedingter Zugriff**
-            - Wählen Sie **Enable conditional access for this VPN connection** (Bedingten Zugriff für diese VPN-Verbindung aktivieren) aus, um sicherzustellen, dass Geräte, die eine Verbindung mit dem VPN herstellen, vor der Verbindung auf Konformität mit bedingtem Zugriff getestet werden. Weitere Informationen zu Kompatibilitätsrichtlinien finden Sie unter [Richtlinien zur Gerätekompatibilität in System Center Configuration Manager](https://docs.microsoft.com/en-us/sccm/protect/deploy-use/device-compliance-policies.md).
+            - Wählen Sie **Enable conditional access for this VPN connection** (Bedingten Zugriff für diese VPN-Verbindung aktivieren) aus, um sicherzustellen, dass Geräte, die eine Verbindung mit dem VPN herstellen, vor der Verbindung auf Konformität mit bedingtem Zugriff getestet werden. Weitere Informationen zu Kompatibilitätsrichtlinien finden Sie unter [Richtlinien zur Gerätekompatibilität in System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/device-compliance-policies.md).
             - Wählen Sie **Einmaliges Anmelden (SSO) mit alternativem Zertifikat aktivieren** aus, um ein anderes Zertifikat als das Zertifikat für die VPN-Authentifizierung für die Gerätekompatibilität auszuwählen. Wenn Sie diese Option auswählen, geben Sie die **EKU** (durch Trennzeichen getrennte Liste) und den **Ausstellerhash** an, um das richtige Zertifikat auszuwählen, das der VPN-Client suchen soll.
 
          - Geben Sie unter **Windows Information Protection** die vom Unternehmen verwaltete Unternehmensidentität an. Dies ist normalerweise die primäre Domäne Ihres Unternehmens, z.B. *contoso.com*. Sie können mehrere Domänen angeben, die Ihrer Organisation gehören, indem Sie sie durch das Zeichen „|“ trennen. Beispiel: *contoso.com|newcontoso.com*.   
-            Weitere Informationen zu Windows Information Protection finden Sie unter [Erstellen einer Windows Information Protection-Richtlinie (WIP) mit Microsoft Intune](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/create-wip-policy-using-intune).   
+            Weitere Informationen zu Windows Information Protection finden Sie unter [Erstellen einer Windows Information Protection-Richtlinie (WIP) mit Microsoft Intune](https://technet.microsoft.com/itpro/windows/keep-secure/create-wip-policy-using-intune).   
 
          ![Konfigurieren des bedingten Zugriffs für VPN](media/vpn-conditional-access.png)
 

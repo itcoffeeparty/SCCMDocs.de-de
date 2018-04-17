@@ -1,26 +1,27 @@
 ---
-title: "Konfigurieren von Android for Work-Apps mit Konfigurationsrichtlinien für Apps"
+title: Konfigurieren von Android for Work-Apps mit Konfigurationsrichtlinien für Apps
 titleSuffix: Configuration Manager
-description: "Vermeiden Sie Konfigurationsprobleme auf Geräten, die Android for Work ausführen, indem Sie Benutzern Richtlinien zur Konfiguration von Apps bereitstellen, bevor die Benutzer Apps ausführen."
+description: Vermeiden Sie Konfigurationsprobleme auf Geräten, die Android for Work ausführen, indem Sie Benutzern Richtlinien zur Konfiguration von Apps bereitstellen, bevor die Benutzer Apps ausführen.
 ms.custom: na
 ms.date: 09/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9126d188-7780-45a4-b21d-7fcf4fad7da2
-caps.latest.revision: "0"
-caps.handback.revision: "0"
+caps.latest.revision: 0
+caps.handback.revision: 0
 author: NathBarn
 ms.author: NathBarn
 manager: angrobe
-ms.openlocfilehash: 79d1b3fed3baa74c8ad195925ccda35713cb8865
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 0b1d4993e6ddb2301121a1e32b1672425e919dea
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="apply-settings-to-android-for-work-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>Anwenden von Einstellungen für Android for Work-Apps mit App-Konfigurationsrichtlinien in System Center Configuration Manager
 
@@ -35,7 +36,7 @@ Sie können Konfigurationsrichtlinien für Apps in System Center Configuration M
 Wenn der Benutzer die Einstellungen falsch eingibt, liegt die Last, sie zu beheben, auf Ihrem Help Desk, und die App-Bereitstellung ist langsam. Zur Vermeidung dieser Probleme können Sie App-Konfigurationsrichtlinien verwenden, um erforderliche Einstellungen für Benutzer bereitzustellen, bevor sie die App ausführen. Die Einstellungen werden automatisch einem Benutzer zugeordnet. Der Benutzer muss keine Maßnahmen ergreifen.
 Anstatt Konfigurationsrichtlinien direkt für Benutzer und Geräte bereitzustellen, verknüpfen Sie eine Richtlinie mit einem Bereitstellungstyp, wenn Sie die App bereitstellen. Die Richtlinieneinstellungen werden immer dann angewendet wenn die App danach sucht – in der Regel beim ersten Ausführen der App.
 
-Konfigurationsrichtlinien für Android-Apps stehen nur auf Geräten zur Verfügung, die Android for Work ausführen. App-Konfigurationsrichtlinien gelten für genehmigte Apps aus dem Play for Work-Store. Informationen zu Android-Apps, die per Volumenlizenz erworben wurden, finden Sie unter [Bereitstellen von Apps für Android for Work-Geräte](https://docs.microsoft.com/en-us/intune/deploy-use/android-for-work-apps).
+Konfigurationsrichtlinien für Android-Apps stehen nur auf Geräten zur Verfügung, die Android for Work ausführen. App-Konfigurationsrichtlinien gelten für genehmigte Apps aus dem Play for Work-Store. Informationen zu Android-Apps, die per Volumenlizenz erworben wurden, finden Sie unter [Bereitstellen von Apps für Android for Work-Geräte](https://docs.microsoft.com/intune/deploy-use/android-for-work-apps).
 
 Weitere Informationen zu App-Installationstypen finden Sie unter [Einführung in die Anwendungsverwaltung](/sccm/apps/understand/introduction-to-application-management).
 
