@@ -1,5 +1,5 @@
 ---
-title: "Unterstützte Versionen von SQL Server"
+title: Unterstützte Versionen von SQL Server
 titleSuffix: Configuration Manager
 description: Abrufen der SQL Server-Version und Konfigurationsanforderungen zum Hosten einer System Center Configuration Manager-Standortdatenbank.
 ms.custom: na
@@ -12,15 +12,15 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
-caps.latest.revision: 
+caps.latest.revision: 21
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5c17efa3498907fcc57d366965bec3b4198890bb
-ms.sourcegitcommit: 37e990d191028160486dbca286d2ea945bd5c8c3
+ms.openlocfilehash: 0e1cafc9b1900dd370cb8dac80f5a02fbb3d12dc
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>Unterstützte SQL Server-Versionen für System Center Configuration Manager
 
@@ -75,7 +75,7 @@ Der Support für ein bestimmtes Service Pack von SQL Server beinhaltet kumulativ
 >  Wenn Sie SQL Server Standard für die Datenbank am Standort der zentralen Verwaltung verwenden, ist die Gesamtanzahl der Clients begrenzt, die eine Hierarchie unterstützen kann. Informationen hierzu finden Sie unter [Size and scale numbers for System Center Configuration Manager](../../../core/plan-design/configs/size-and-scale-numbers.md) (Anpassen und Skalieren von Zahlen für System Center Configuration Manager).
 
 ### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017: Standard, Enterprise  
-Sie können diese Version von SQL Server verwenden, wenn Sie mindestens [Version 2 der kumulativen Updates](https://support.microsoft.com/help/4052574) (ab [Configuration Manager Version 1710](https://docs.microsoft.com/en-us/sccm/core/plan-design/changes/whats-new-in-version-1710)) für folgende Standorte verwenden: 
+Sie können diese Version von SQL Server verwenden, wenn Sie mindestens [Version 2 der kumulativen Updates](https://support.microsoft.com/help/4052574) (ab [Configuration Manager Version 1710](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1710)) für folgende Standorte verwenden: 
 
 -   Ein Standort der zentralen Verwaltung  
 -   Primären Standort  
@@ -145,7 +145,7 @@ Wenn dies von der Version von Configuration Manager unterstützt wird, können S
 -   Sekundären Standort
 
 ### <a name="sql-server-2017-express"></a>SQL Server 2017 Express   
-Sie können diese Version von SQL Server verwenden, wenn Sie mindestens [Version 2 der kumulativen Updates](https://support.microsoft.com/help/4052574) (ab [Configuration Manager Version 1710](https://docs.microsoft.com/en-us/sccm/core/plan-design/changes/whats-new-in-version-1710)) für folgende Standorte verwenden:
+Sie können diese Version von SQL Server verwenden, wenn Sie mindestens [Version 2 der kumulativen Updates](https://support.microsoft.com/help/4052574) (ab [Configuration Manager Version 1710](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1710)) für folgende Standorte verwenden:
 -   Sekundären Standort
 <!--SMS.498506-->
 

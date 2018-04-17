@@ -1,26 +1,27 @@
 ---
 title: Funktionen in Technical Preview 1601
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr zu den Features, die in Technical Preview für System Center Configuration Manager 1601 zur Verfügung stehen."
+description: Erfahren Sie mehr zu den Features, die in Technical Preview für System Center Configuration Manager 1601 zur Verfügung stehen.
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aae1cf2f-2c04-4f68-a03a-f4a925433c09
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: erikje
 ms.author: erikje
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: 70efb483ac15ba14497b884ed753032e8e48a4b5
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: b17a89ab08c99a1c3cd8a501e7d58d5b42a110a3
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1601 für System Center Configuration Manager
 
@@ -79,11 +80,11 @@ In der Technical Preview-Version 1601 haben wir Unterstützung für die folgende
 
     -   Microsoft Intune-Abonnement. Das Microsoft Intune-Abonnement muss in der Configuration Manager-Konsole konfiguriert werden.  
 
-    -   [Voraussetzungen für die automatische Azure AD-Registrierung](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)  
+    -   [Voraussetzungen für die automatische Azure AD-Registrierung](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)  
 
     Zum Verwenden dieser Option müssen Sie in Configuration Manager eine Kompatibilitätsrichtlinie mit den nachstehend beschriebenen spezifischen Regeln erstellen und eine Richtlinie für den bedingten Zugriff in der Intune-Konsole festlegen.  Um außerdem sicherzustellen, dass nur kompatible PCs Zugriff haben, müssen Sie die Anforderung für Windows-PCs auf die Option **Geräte müssen kompatibel sein** festlegen. Es folgen die Regeln der Kompatibilitätsrichtlinie, die für von System Center Configuration Manager verwaltete PCs gelten.  
 
-    -   **Registrierung in Azure Active Directory erfordern:** Dieser Regel überprüft, ob die Arbeitsplätze des Benutzergeräts und Azure AD miteinander verknüpft sind, und falls nicht, wird das Gerät automatisch in Azure AD registriert. Die automatische Registrierung wird nur unter Windows 8.1 unterstützt. Stellen Sie für Windows 7-PCs eine MSI-Datei bereit, um die automatische Registrierung durchzuführen. Weitere Informationen finden Sie [hier](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
+    -   **Registrierung in Azure Active Directory erfordern:** Dieser Regel überprüft, ob die Arbeitsplätze des Benutzergeräts und Azure AD miteinander verknüpft sind, und falls nicht, wird das Gerät automatisch in Azure AD registriert. Die automatische Registrierung wird nur unter Windows 8.1 unterstützt. Stellen Sie für Windows 7-PCs eine MSI-Datei bereit, um die automatische Registrierung durchzuführen. Weitere Informationen finden Sie [hier](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
 
     -   **Alle mit einem Stichtag älter als X Tage installierten benötigten Updates:** Diese Regel überprüft, ob das Gerät des Benutzers gemäß dem Stichtag und der Toleranzperiode, die Sie festgelegt haben, über alle erforderlichen Updates verfügt (entsprechend der Angabe in der Regel **Required automatic updates** (Erforderliche automatische Updates)), und installiert automatisch alle ausstehenden Updates.  
 
@@ -140,7 +141,7 @@ Ein Client ist online, wenn er aktuell mit einer Standortsystemrolle des Typs �
 |![Symbol für den Offlinestatus des Clients](media/offline-status-icon.png)|Client ist offline.|  
 |![Symbol für den unbekannten Status des Clients](media/unknown-status-icon.png)|Clientstatus ist unbekannt.|  
 
-### <a name="prerequisites"></a>Voraussetzungen  
+### <a name="prerequisites"></a>Erforderliche Komponenten  
  Für den Onlinestatus eines Clients gelten keine Voraussetzungen. Sie können mit seiner Nutzung beginnen, sobald Configuration Manager Technical Preview 1601 installiert ist.  
 
 ### <a name="limitations"></a>Einschränkungen  

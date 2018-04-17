@@ -1,26 +1,27 @@
 ---
-title: "Auswählen der zu migrierenden Elemente"
+title: Auswählen der zu migrierenden Elemente
 titleSuffix: Configuration Manager
-description: "Erfahren Sie, welche Daten migriert werden können und welche Daten Sie nicht zu System Center Configuration Manager migrieren können."
+description: Erfahren Sie, welche Daten migriert werden können und welche Daten Sie nicht zu System Center Configuration Manager migrieren können.
 ms.custom: na
 ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 99222dc8-0e1e-4513-8302-7a1acf671e9b
-caps.latest.revision: "6"
-caps.handback.revision: "0"
+caps.latest.revision: 6
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 822bc5b4e17bdc611243fadfb13c551b0a8237a8
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 0718b7863c45f7b7e56380d4a2fa74e8d1a17b54
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="determine-whether-to-migrate-data-to-system-center-configuration-manager"></a>Bestimmen, ob Daten zu System Center Configuration Manager migriert werden sollen
 
@@ -59,8 +60,6 @@ Diese Änderungen haben keine Auswirkungen auf die Daten in der Datenbank des Qu
 
 ### <a name="objects-that-you-can-migrate-from-system-center-2012-configuration-manager-or-system-center-configuration-manager-current-branch"></a>Folgende Objekte können Sie von System Center 2012 Configuration Manager oder Current Branch von System Center Configuration Manager migrieren:
 
--   Ankündigungen  
-
 -   Anwendungen für System Center 2012 Configuration Manager und höhere Versionen  
 
 -   Virtuelle App-V-Umgebung für System Center 2012 Configuration Manager und höhere Versionen  
@@ -76,6 +75,8 @@ Diese Änderungen haben keine Auswirkungen auf die Daten in der Datenbank des Qu
     -   Konfigurationsbasislinien  
 
     -   Konfigurationselemente  
+
+-   Bereitstellungen  
 
 -   Betriebssystembereitstellung:  
 

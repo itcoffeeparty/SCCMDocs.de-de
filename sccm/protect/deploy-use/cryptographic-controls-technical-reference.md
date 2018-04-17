@@ -1,23 +1,24 @@
 ---
-title: "Technische Referenz für kryptografische Steuerelemente"
+title: Technische Referenz für kryptografische Steuerelemente
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr darüber, wie die Signierung und Verschlüsselung Sie vor Angriffen schützen kann, die Daten in System Center Configuration Manager lesen."
+description: Erfahren Sie mehr darüber, wie die Signierung und Verschlüsselung Sie vor Angriffen schützen kann, die Daten in System Center Configuration Manager lesen.
 ms.custom: na
 ms.date: 12/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 2c1ed6f4c93f74719ab3fe5d723f7dc01eb1ede7
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+ms.openlocfilehash: 3057d3d78dbb67e0b1b061a6845a6885570b239a
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Technische Referenz für kryptografische Steuerelemente
 
@@ -286,5 +287,5 @@ Führen Sie folgende Schritte aus, um die Sicherheit Ihrer Konfigurations-Manage
 -   Deaktivieren von SSL 3.0, TLS 1.0 und TLS 1.1 
 -   Neuanordnen der TLS-bezogenen Verschlüsselungssammlungen 
 
-Weitere Informationen finden Sie unter [Beschränken der Verwendung bestimmter kryptografischer Algorithmen und Protokolle in „Schannel.dll“](https://support.microsoft.com/en-us/kb/245030/) und [Prioritizing Schannel Cipher Suites (Priorisieren von Schannel-Cipher-Suites)](https://msdn.microsoft.com/en-us/library/windows/desktop/bb870930.aspx). Diese Verfahren haben keine Auswirkungen auf die Configuration Manager-Funktionalität.
+Weitere Informationen finden Sie unter [Beschränken der Verwendung bestimmter kryptografischer Algorithmen und Protokolle in „Schannel.dll“](https://support.microsoft.com/en-us/kb/245030/) und [Prioritizing Schannel Cipher Suites (Priorisieren von Schannel-Cipher-Suites)](https://msdn.microsoft.com/library/windows/desktop/bb870930.aspx). Diese Verfahren haben keine Auswirkungen auf die Configuration Manager-Funktionalität.
 

@@ -1,25 +1,26 @@
 ---
 title: Neues in Version 1606
 titleSuffix: Configuraton Manager
-description: "Enthält Details zu Änderungen und neuen Funktionen, die in Version 1606 von System Center Configuration Manager eingeführt wurden."
+description: Enthält Details zu Änderungen und neuen Funktionen, die in Version 1606 von System Center Configuration Manager eingeführt wurden.
 ms.custom: na
 ms.date: 12/30/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: e26519de8ce0b905fd52ca6ab0762a406d2f1e2c
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 9c948e0ff84c4741d77b9096e52d3abd765aba7b
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>Neues in Version 1606 von System Center Configuration Manager
 
@@ -89,9 +90,9 @@ Zum Navigieren zwischen den verschiedenen Knoten eines Arbeitsbereichs können S
 Im folgenden finden Sie Änderungen an der Verwaltung in der Configuration Manager-Konsole:
 ### <a name="oms-connector"></a>OMS-Connector
 
-Sie können jetzt Configuration Manager als Sammlungen von System Center Configuration Manager aus mit [Microsoft Operations Management Suite (OMS)](https://azure.microsoft.com/en-us/documentation/articles/operations-management-suite-overview/) verbinden. Dadurch werden Daten, wie z.B. Sammlungen von Configuration Manager in OMS sichtbar dargestellt. Weitere Informationen finden Sie unter [Synchronisieren von Daten von System Center Configuration Manager mit der Microsoft Operations Management Suite](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md).
+Sie können jetzt Configuration Manager als Sammlungen von System Center Configuration Manager aus mit [Microsoft Operations Management Suite (OMS)](https://azure.microsoft.com/documentation/articles/operations-management-suite-overview/) verbinden. Dadurch werden Daten, wie z.B. Sammlungen von Configuration Manager in OMS sichtbar dargestellt. Weitere Informationen finden Sie unter [Synchronisieren von Daten von System Center Configuration Manager mit der Microsoft Operations Management Suite](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md).
 
-Der OMS-Connector ist ein vorab veröffentlichtes Feature. Wie Sie es aktivieren, erfahren Sie unter [Use pre-release features from updates (Verwenden von vorab veröffentlichten Features von Updates)](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
+Der OMS-Connector ist ein vorab veröffentlichtes Feature. Wie Sie es aktivieren, erfahren Sie unter [Features der Vorabversion in System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
 
 ### <a name="support-for-cache-size-in-client-settings"></a>Unterstützen der Cachegröße in den Clienteinstellungen
 
@@ -108,7 +109,7 @@ Die lokale Verwaltung mobiler Geräte (On-premises Mobile Device Management, MDM
 
 ### <a name="manage-apps-from-the-windows-store-for-business"></a>Verwalten von Apps aus dem Windows Store für Unternehmen
 
-Im [Windows Store für Unternehmen](https://www.microsoft.com/business-store) können Sie Windows-Apps für Ihre Organisation finden und entweder einzeln oder per Volumenlizenz kaufen. Durch Herstellen einer Verbindung des Store mit Configuration Manager können Sie die Liste der Apps, die Sie erworben haben, mit Configuration Manager synchronisieren, sie in der Configuration Manager-Konsole anzeigen, und wie jede andere App auch bereitstellen.
+Im [Windows Store für Unternehmen](https://www.microsoft.com/business-store) können Sie Windows-Apps für Ihre Organisation finden und entweder einzeln oder per Volumenlizenz kaufen. Durch Herstellen einer Verbindung des Store mit Configuration Manager können Sie die Liste der Apps, die Sie erworben haben, mit Configuration Manager synchronisieren, sie in der Configuration Manager-Konsole anzeigen und wie jede andere App auch bereitstellen.
 
 Einzelheiten finden Sie unter [ (Verwalten von Apps aus dem Windows Store für Unternehmer mit System Center Configuration Manager)](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 

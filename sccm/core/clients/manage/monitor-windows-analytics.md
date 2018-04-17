@@ -1,25 +1,26 @@
 ---
-title: "Überwachen von Clients mit Windows Analytics"
+title: Überwachen von Clients mit Windows Analytics
 titleSuffix: Configuration Manager
-description: "Windows Analytics umfasst Lösungen, die Teil der Operations Management Suite sind und Ihnen wertvolle Einblicke in den aktuellen Status Ihrer Umgebung geben. Dies geschieht durch die Nutzung von Windows-Telemetriedaten, die von Geräten in Ihrer Umgebung gesendet werden."
+description: Windows Analytics umfasst Lösungen, die Teil der Operations Management Suite sind und Ihnen wertvolle Einblicke in den aktuellen Status Ihrer Umgebung geben. Dies geschieht durch die Nutzung von Windows-Telemetriedaten, die von Geräten in Ihrer Umgebung gesendet werden.
 ms.custom: na
 ms.date: 01/02/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-client
+ms.technology:
+- configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: CF35CE87-3BA8-4A84-9BC8-ABCEA4666212
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 6e0b6ec99755b89213b540f22315038911b8eb29
-ms.sourcegitcommit: f1535281b2c3fecff773b722c3f7590bf6ba10a0
+ms.openlocfilehash: 15b1d07f35f774f3ec8f082a86c90ecb989a438e
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-windows-analytics-with-configuration-manager"></a>Verwenden von Windows Analytics mit Configuration Manager
 
@@ -64,6 +65,6 @@ Weitere Informationen und Details zum Konfigurieren und Verbinden mit Upgradeber
 
 ## <a name="use-windows-analytics-to-identify-gaps-in-windows-information-protection-policies"></a>Verwenden von Windows Analytics zur Identifizierung von Lücken in Windows Information Protection-Richtlinien
 
-Geräte unter Windows 10 Version 1703 und höher, die mit den [Windows Information Protection-Richtlinien](https://docs.microsoft.com/en-us/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip) (WIP) konfiguriert sind, senden Telemetriedaten über Anwendungen, die zwar Zugriff auf Unternehmensdaten in Ihrer Umgebung haben, jedoch nicht in den Anwendungsregeln der WIP-Richtlinien berücksichtigt werden. WIP blockiert diese Anwendungen, die Benutzer möglicherweise benötigen, um produktiv zu bleiben. Das Wissen, dass Benutzer auf Unternehmensdaten zugreifen, ist bei der Wartung ihrer Windows Information Protection-Richtlinien in Configuration Manager nützlich. 
+Geräte unter Windows 10 Version 1703 und höher, die mit den [Windows Information Protection-Richtlinien](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip) (WIP) konfiguriert sind, senden Telemetriedaten über Anwendungen, die zwar Zugriff auf Unternehmensdaten in Ihrer Umgebung haben, jedoch nicht in den Anwendungsregeln der WIP-Richtlinien berücksichtigt werden. WIP blockiert diese Anwendungen, die Benutzer möglicherweise benötigen, um produktiv zu bleiben. Das Wissen, dass Benutzer auf Unternehmensdaten zugreifen, ist bei der Wartung ihrer Windows Information Protection-Richtlinien in Configuration Manager nützlich. 
 
 Greifen Sie über die [Operations Management Suite-Abfrage](https://go.microsoft.com/fwlink/?linkid=849952) auf die Windows Information Protection-Daten zu.

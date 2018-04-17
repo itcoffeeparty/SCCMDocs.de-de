@@ -16,11 +16,11 @@ caps.latest.revision: 5
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: faa1a50b29fe4ba966812441243b81ee2d31b024
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 3f122dc7ba1bce5aaf8fe0ac6e4c75165a9b5a0b
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>Erstellen und Bereitstellen einer Windows Defender Application Guard-Richtlinie 
 *Gilt für: System Center Configuration Manager (Current Branch)*
@@ -29,7 +29,7 @@ Sie können [Windows Defender Application Guard](https://docs.microsoft.com/wind
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Wenn Sie eine Windows Defender Application Guard-Richtlinie erstellen möchten, müssen Sie das Windows 10 Fall Creators Update (1709) verwenden. Außerdem müssen die Windows 10-Geräte, auf denen Sie die Richtlinie bereitstellen, mit einer Netzwerkisolationsrichtlinie konfiguriert werden. Weitere Informationen finden Sie in der [Übersicht über Windows Defender Application Guard](https://docs.microsoft.com/en-us/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview). 
+Wenn Sie eine Windows Defender Application Guard-Richtlinie erstellen möchten, müssen Sie das Windows 10 Fall Creators Update (1709) verwenden. Außerdem müssen die Windows 10-Geräte, auf denen Sie die Richtlinie bereitstellen, mit einer Netzwerkisolationsrichtlinie konfiguriert werden. Weitere Informationen finden Sie in der [Übersicht über Windows Defender Application Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview). 
 
 
 ## <a name="create-a-policy-and-to-browse-the-available-settings"></a>Erstellen Sie eine Richtlinie, und durchsuchen Sie die verfügbaren Einstellungen:
@@ -58,7 +58,7 @@ Mit diesen werden Interaktionen zwischen Hostgeräten und dem Application Guard-
 - **Zwischenablage:** Vor Version 1802 von Configuration Manager befand sich diese Einstellung unter „Einstellungen“.
     - Zulässiger Inhaltstyp:
         - Text
-        - Bilder
+        - Abbilder
 - **Druckausgabe läuft:**
     - Drucken in XPS aktivieren
     - Drucken in PDF aktivieren

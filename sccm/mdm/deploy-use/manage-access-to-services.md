@@ -1,25 +1,26 @@
 ---
 title: Bedingter Zugriff
 titleSuffix: Configuration Manager
-description: "Erfahren Sie, wie Sie den bedingten Zugriff in System Center Configuration Manager verwenden, um Ihre E-Mails und andere Dienste zu schützen."
+description: Erfahren Sie, wie Sie den bedingten Zugriff in System Center Configuration Manager verwenden, um Ihre E-Mails und andere Dienste zu schützen.
 ms.custom: na
 ms.date: 12/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b04727b-d563-422f-8d59-4dd66215d0b3
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: f215e1c22d40e1fe402084b665ae624bc0c21d97
-ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
+ms.openlocfilehash: 7fea8d0e47fff5288a58232eb9bd17171481b3a3
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-access-to-services-in-system-center-configuration-manager"></a>Verwalten des Zugriffs auf Dienste in System Center Configuration Manager
 
@@ -163,7 +164,7 @@ Bedingter Zugriff auf SharePoint Online unterstützt Geräte, die Folgendes ausf
 
  Damit der PC konform ist, muss er bei Microsoft Intune registriert sein und den Richtlinien entsprechen.
 
- Für in die Domäne eingebundene PCs müssen Sie [das Gerät für eine automatische Registrierung](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/) bei Azure Active Directory einrichten.
+ Für in die Domäne eingebundene PCs müssen Sie [das Gerät für eine automatische Registrierung](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) bei Azure Active Directory einrichten.
  -   [Die moderne Authentifizierung von Office 365 muss aktiviert sein](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/)und alle neuesten Office-Updates enthalten.<br />     Die moderne Authentifizierung ermöglicht Windows-Clients mit Office 2013 eine Active Directory Authentication Library-basierte Anmeldung (ADAL) und bietet größere Sicherheit wie mehrstufige Authentifizierung und zertifikatbasierte Authentifizierung.
  -   Setup-ADFS beansprucht Regeln zum Blockieren von nicht moderner Authentifizierungsprotokolle.  
 

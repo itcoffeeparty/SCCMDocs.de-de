@@ -1,27 +1,28 @@
 ---
 title: Schemaerweiterungen
 titleSuffix: Configuration Manager
-description: "Erweitern des Active Directory-Schemas für System Center Configuration Manager."
+description: Erweitern des Active Directory-Schemas für System Center Configuration Manager.
 ms.custom: na
 ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
-caps.latest.revision: "8"
-caps.handback.revision: "0"
+caps.latest.revision: 8
+caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: angrobe
 robots: noindex
-ms.openlocfilehash: 1fa1e3be3d08c9aa1f9271868f6b01e20b63e444
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: cc658166a7094f716db0ee495bc2338b52303b50
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="schema-extensions-for-system-center-configuration-manager"></a>Schemaerweiterungen für System Center Configuration Manager
 
@@ -31,7 +32,7 @@ Sie können das Active Directory-Schema so erweitern, dass es Configuration Mana
 
 -   Es ist ratsam, das Active Directory-Schema zu erweitern, aber es ist nicht erforderlich.  
 
-Bevor Sie [das Active Directory-Schema erweitern](https://docs.microsoft.com/en-us/sccm/core/plan-design/network/extend-the-active-directory-schema), sollten Sie mit Active Directory-Domänendienste vertraut sein und wissen, wie ein [Ändern des Active Directory-Schemas](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx)vorgenommen wird.  
+Bevor Sie [das Active Directory-Schema erweitern](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema), sollten Sie mit Active Directory-Domänendienste vertraut sein und wissen, wie ein [Ändern des Active Directory-Schemas](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx)vorgenommen wird.  
 
 ## <a name="considerations-for-extending-the-active-directory-schema-for-configuration-manager"></a>Überlegungen zum Erweitern des Active Directory-Schemas für Configuration Manager  
 
@@ -142,7 +143,7 @@ Wenn Sie das Schema für System Center Configuration Manager erweitern, werden d
 
 > [!NOTE]  
 
->  Die Schemaerweiterungen können Attribute und Klassen enthalten, die aus vorherigen Versionen des Produkts übernommen wurden, aber von System Center Configuration Manager nicht verwendet werden. Beispiel:  
+>  Die Schemaerweiterungen können Attribute und Klassen enthalten, die aus vorherigen Versionen des Produkts übernommen wurden, aber von System Center Configuration Manager nicht verwendet werden. Zum Beispiel:  
 
 >   
 >  -   Attribut: cn=MS-SMS-Site-Boundaries  

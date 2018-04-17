@@ -7,20 +7,21 @@ ms.date: 07/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 120442be-179e-450c-a0c4-284046895da3
-caps.latest.revision: "4"
-caps.handback.revision: "0"
+caps.latest.revision: 4
+caps.handback.revision: 0
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 5fc0d5e68e27b3bde9ed3aa45a439c8b333da1d6
-ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
+ms.openlocfilehash: ab429e2702ab1595b035c8e2895dad584be4061a
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exchange-activesync-email-profiles-in-system-center-configuration-manager"></a>Erstellen von Exchange ActiveSync-E-Mail-Profilen in System Center Configuration Manager
 
@@ -37,7 +38,7 @@ Mit Microsoft Intune und Exchange ActiveSync können Sie Geräte mit E-Mail-Prof
 - Samsung KNOX Standard (4 und höher)
 - Android for Work
 
-Um E-Mail-Profile für Geräte bereitzustellen, müssen Sie die Geräte in Intune registrieren. Informationen zum Registrieren von Geräten finden Sie unter [Verwalten mobiler Geräte mit Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).
+Um E-Mail-Profile für Geräte bereitzustellen, müssen Sie die Geräte in Intune registrieren. Informationen zum Registrieren von Geräten finden Sie unter [Verwalten mobiler Geräte mit Microsoft Intune](https://technet.microsoft.com/library/dn646962.aspx).
 
 > [!NOTE]
 > Intune stellt zwei Android for Work-E-Mail-Profile bereit: eines für die Gmail-E-Mail-App und eines für die Nine Work-E-Mail-App. Diese Apps sind im Google Play Store erhältlich und unterstützen Verbindungen mit Exchange. Stellen Sie auf den Geräten der Benutzer eine dieser E-Mail-Apps bereit, erstellen Sie das entsprechende Profil, und stellen Sie dieses bereit, um die E-Mail-Konnektivität zu aktivieren. E-Mail-Apps wie Nine Work sind möglicherweise nicht frei. Lesen Sie dazu die Details der App-Lizenzierung, oder wenden Sie sich mit Ihren Fragen an das App-Unternehmen.
@@ -50,7 +51,7 @@ Um E-Mail-Profile für Geräte bereitzustellen, müssen Sie die Geräte in Intun
 
 Zum Erstellen eines Profils verwenden Sie den Assistenten zum Erstellen von Exchange ActiveSync-E-Mail-Profilen. 
 
-1.  Wählen Sie in der Configuration Manager-Konsole **Bestand und Kompatibilität** aus.  
+1.  Wählen Sie in der Configuration Manager-Konsole **Assets und Konformität** aus.  
 
 2.  Erweitern Sie im Arbeitsbereich **Bestand und Kompatibilität** die **Kompatibilitätseinstellungen**, dann den **Zugriff auf Unternehmensressourcen**, und wählen Sie anschließend **E-Mail-Profile** aus.  
 
