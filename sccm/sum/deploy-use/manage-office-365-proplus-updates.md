@@ -6,18 +6,18 @@ keywords: ''
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 03/26/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: ''
 ms.technology:
 - configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 5bd1a3afd7957e4db1b43e344a7b88e18de50695
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 4fbbe4b6792c51cd7adeeae3a96f81927153362c
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Verwalten von Office 365 ProPlus mit Configuration Manager
 
@@ -174,6 +174,17 @@ Gehen Sie am Softwareupdatepunkt des Standorts der zentralen Verwaltung oder an 
 11. Beim Herunterladen von Updates für Office 365 werden die Updates jetzt in der Sprache heruntergeladen, die Sie im Assistenten auswählen und in diesem Verfahren konfiguriert haben. Um zu überprüfen, ob die Updates in den richtigen Sprachen heruntergeladen wurden, wechseln Sie zur Paketquelle für das Update, und suchen Sie nach Dateien mit dem Sprachcode im Dateinamen.  
 ![Dateinamen mit zusätzlichen Sprachen](..\media\5-verification.png)
 
+## <a name="updating-office-365-during-task-sequences-when-office-365-is-installed-in-the-base-image"></a>Aktualisieren von Office 365 während der Tasksequenzen, wenn Office 365 im Basisimage installiert ist
+Wenn Sie ein Betriebssystem installieren, wenn Office 365 bereits im Image installiert ist, ist es möglich, dass der Registrierungsschlüsselwert des Updatekanals am ursprünglichen Installationsspeicherort verfügbar ist. In diesem Fall zeigt die Updateüberprüfung keine anwendbaren Office 365-Clientupdates an. Es gibt ein geplantes, automatisches Office-Update, das mehrere Male pro Woche ausgeführt wird. Sobald diese Aufgabe ausgeführt wird, zeigt der Updatekanal auf den konfigurierten Office CDN-URL, und die Überprüfung zeigt diese Updates als anwendbar an. <!--510452-->
+
+Um sicherzustellen, dass der Updatekanal so festgelegt ist, damit anwendbare Updates gefunden werden, führen Sie die folgenden Schritte aus:
+1. Öffnen Sie auf einem Computer mit der gleichen Version von Office 365 wie das Basisimage des Betriebssystems die Aufgabenplanung (taskschd.msc), und identifizieren Sie die automatische Office 365 -Updateaufgabe. In der Regel befindet sie sich unter **Aufgabenplanungsbibliothek** >**Microsoft**>**Office**.
+2. Klicken Sie mit der rechten Maustaste auf die automatischen Updates, und wählen Sie **Eigenschaften** aus.
+3. Wechseln Sie zur Registerkarte **Aktionen**, und klicken Sie auf **Bearbeiten**. Kopieren Sie den Befehl und alle Argumente. 
+4. Bearbeiten Sie Ihre Tasksequenzen in der Configuration Manager-Konsole.
+5. Fügen Sie einen neuen Schritt **Befehlszeile ausführen** vor dem Schritt **Updates installieren** in der Tasksequenz hinzu. 
+6. Kopieren Sie den Befehl und die Argumente, die Sie aus der geplanten Aufgabe für automatische Office-Updates gesammelt haben. 
+7. Klicken Sie auf **OK**. 
 
 ## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a>Ändern des Updatekanals nach dem Aktivieren des Erhalts von Updates für Office 365-Clients über Configuration Manager
 Um den Updatekanal zu ändern, nachdem Sie Office 365-Clients den Erhalt von Updates von Configuration Manager ermöglicht haben, verteilen Sie mithilfe von Gruppenrichtlinien die Änderung eines Registrierungsschlüsselwerts an Office 365-Clients . Ändern Sie den Registrierungsschlüssel **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** auf einen der folgenden Werte:

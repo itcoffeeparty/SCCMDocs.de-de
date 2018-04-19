@@ -1,7 +1,7 @@
 ---
-title: "Schützen von Apps mit Verwaltungsrichtlinien für mobile Anwendungen"
+title: Schützen von Apps mit Verwaltungsrichtlinien für mobile Anwendungen
 titleSuffix: Configuration Manager
-description: "Ändern der Funktionalität von bereitgestellten Apps, damit sie den Kompatibilitäts- und Sicherheitsrichtlinien Ihres Unternehmens entsprechen."
+description: Ändern der Funktionalität von bereitgestellten Apps, damit sie den Kompatibilitäts- und Sicherheitsrichtlinien Ihres Unternehmens entsprechen.
 ms.custom: na
 ms.date: 11/20/2017
 ms.prod: configuration-manager
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 28115475-e563-4e16-bf30-f4c9fe704754
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 18
+caps.handback.revision: 0
 author: dougeby
 ms.author: dougeby
 manager: angrobe
 ms.openlocfilehash: 3365f46026178d30c9bffa5078d251186d0ffba3
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>Schützen von Apps mithilfe von Verwaltungsrichtlinien für mobile Anwendungen in System Center Configuration Manager
 
@@ -56,7 +56,7 @@ Zum Anwenden von Einschränkungen auf eine App muss die App das Microsoft Intune
 
 -   **So rufen Sie einen Link zu einer richtlinienverwalteten App ab**: Suchen Sie im App Store die URL der richtlinienverwalteten App, die Sie bereitstellen möchten, und notieren Sie sie.  
 
-     Die URL der Microsoft Word für iPad-App ist beispielsweise **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.  
+     Die URL der Microsoft Word für iPad-App lautet beispielsweise **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**  
 
 -   **So erstellen Sie eine umschlossene App**: Verwenden Sie die Informationen in den Themen [Vorbereiten von iOS-Apps für die Verwaltung mobiler Anwendungen mit dem Intune App Wrapping Tool](https://technet.microsoft.com/library/dn878028.aspx) und [Vorbereiten von Android-Apps für die Verwaltung von mobilen Anwendungen mit dem Intune App Wrapping Tool](https://technet.microsoft.com/library/mt147413.aspx), um eine umschlossene App zu erstellen.  
 

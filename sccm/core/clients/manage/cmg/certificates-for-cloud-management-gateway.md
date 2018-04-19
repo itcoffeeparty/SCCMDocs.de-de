@@ -10,11 +10,11 @@ ms.prod: configuration-manager
 ms.technology:
 - configmgr-other
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 1c7adec8f8919736c61859791802a96766af31bb
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 0e4d2add8ece7f548955064a479d9545a1fc64e1
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Zertifikate für das Cloudverwaltungsgateway
 
@@ -136,7 +136,7 @@ Nachdem Sie ein Clientauthentifizierungszertifikat für einen Computer ausgestel
 *Zertifikatanforderungen*
 - Beim Verwalten von herkömmlichen Clients mit einer lokalen Identität und einem Clientauthentifizierungszertifikat wird in den Versionen 1706 und 1710 dieses Zertifikat empfohlen, auch wenn es nicht erforderlich ist.
 - Beim Verwalten von Windows 10-Clients, die in Azure AD eingebunden sind, wird in der Version 1710 dieses Zertifikat für Verwaltungspunkte benötigt. 
-- Ab Version 1802 ist dieses Zertifikat für alle Szenarios erforderlich. 
+- Ab Version 1802 ist dieses Zertifikat für alle Szenarios erforderlich. Nur bei für das CMG aktivierten Verwaltungspunkten muss das HTTPS-Protokoll verwendet werden. Durch diese Verhaltensänderung wird eine bessere Unterstützung für die auf Azure AD-Tokens basierende Authentifizierung geboten. 
 
 Stellen Sie dieses Zertifikat außerhalb des Configuration Manager-Kontexts bereit. Beispielsweise können Sie mit Active Directory-Zertifikatdiensten und einer Gruppenrichtlinie ein Webserverzertifikat ausstellen. Weitere Informationen finden Sie unter [PKI-Zertifikatanforderungen](/sccm/core/plan-design/network/pki-certificate-requirements) und [Deploy the web server certificate for site systems that run IIS (Bereitstellen des Webserverzertifikats für Standortsysteme, auf denen IIS ausgeführt wird)](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).
 

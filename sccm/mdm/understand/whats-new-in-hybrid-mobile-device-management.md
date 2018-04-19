@@ -1,9 +1,9 @@
 ---
-title: "Neuigkeiten bei der hybriden Verwaltung mobiler Geräte"
+title: Neues bei der hybride Verwaltung mobiler Geräte
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr über die neuen Funktionen der Verwaltung mobiler Geräte, die für Hybridbereitstellungen mit Configuration Manager und Intune verfügbar sind."
+description: Erfahren Sie mehr über die neuen Funktionen der Verwaltung mobiler Geräte, die für Hybridbereitstellungen mit Configuration Manager und Intune verfügbar sind.
 ms.custom: na
-ms.date: 03/01/2018
+ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3b48c5296caecd66b5abb6d40578af2009ef0f11
-ms.sourcegitcommit: 6e4fca19083b5dbdcd841012f6e1051bb7c00eb8
+ms.openlocfilehash: 3c3d1c813c307e520b3a9709187937f0d3f732c7
+ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Neuigkeiten bei der hybriden Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit Configuration Manager und Microsoft Intune
 
@@ -41,6 +41,16 @@ Jeder Abschnitt dieses Artikels listet Hybridfeatures in drei verschiedenen Kate
 |**Neuheiten in Microsoft Intune** | Im Allgemeinen sollten alle in dieser Kategorie aufgeführten Features in allen Configuration Manager-Releases funktionieren. Dies umfasst auch Configuration Manager-Releases von System Center 2012 R2, da für diese Features nur der Intune-Dienst erforderlich ist und keine zusätzlichen Funktionen in Configuration Manager benötigt werden.|
 |**Neuheiten in Configuration Manager Technical Preview**| Alle in dieser Kategorie aufgelisteten Features können nur mit dem angegebenen Technical Preview-Release verwendet werden. Um diese Features zu testen, müssen Sie die in der Featurebeschreibung angegebene Technical Preview-Version installieren. Weitere Informationen finden Sie unter [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md).|
 |**Neuheiten in Configuration Manager (Current Branch)**| Alle in dieser Kategorie aufgelisteten Features können nur mit der angegebenen Version von Configuration Manager (Current Branch) verwendet werden, z.B. Version 1511 oder 1602. Wenn Sie eine ältere Version von Configuration Manager für die Hybridbereitstellung verwenden, müssen Sie ein Upgrade auf die in der Featurebeschreibung angegebene Configuration Manager-Version (Current Branch) ausführen. Weitere Informationen finden Sie unter [Upgrade auf System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|
+
+
+
+## <a name="march-2018"></a>März 2018
+
+### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
+
+#### <a name="azure-active-directory-web-sites-can-require-the-intune-managed-browser-app-and-support-single-sign-on-for-the-managed-browser-public-preview"></a>Azure Active Directory-Websites können die Intune Managed Browser-App erfordern und einmaliges Anmelden für den Managed Browser (öffentliche Vorschau) unterstützen
+<!-- 710595 --> 
+Mithilfe von Azure Active Directory (Azure AD) können Sie jetzt den Zugriff auf Websites auf mobilen Geräten auf der Intune Managed Browser-App beschränken. Im verwalteten Browser sind Websitedaten sicher und von persönlichen Daten der Endbenutzer getrennt. Darüber hinaus unterstützt Managed Browser die einmalige Anmeldefunktion für Websites, die von Azure AD geschützt sind. Die Anmeldung zum Managed Browser oder die Verwendung des Managed Browser auf einem Gerät mit einer anderen, von Intune verwalteten App, ermöglicht es dem Managed Browser, auf die durch Azure AD geschützten Unternehmenswebsites zuzugreifen, ohne dass der Benutzer Anmeldeinformationen eingeben muss. Diese Funktionalität gilt für Websites wie Outlook Web Access (OWA) und SharePoint Online sowie andere Unternehmenswebsites wie Intranetressourcen, auf die über den Proxy der Azure-App zugegriffen wird.
 
 
 
@@ -456,6 +466,35 @@ Die folgenden zusätzlichen Hybridfeatures sind auch in Version 1702 von Configu
 
 
 ## <a name="notices"></a>Benachrichtigungen
+
+### <a name="windows-company-portal-send-feedback-option-may-no-longer-work"></a>Die Option „Feedback senden“ des Windows-Unternehmensportals funktioniert möglicherweise nicht mehr.
+
+Die Windows-Unternehmensportal-App verfügt über eine Option namens „Feedback senden“, mit der Benutzer Feedback zur App an Microsoft senden können. Ab dem 30. April 2018 wird diese Option nur in der Unternehmensportal-App von Windows 10, Version 1607 und höher unterstützt.   
+
+#### <a name="how-does-this-affect-me"></a>Wie wirkt sich das auf mich aus?
+
+Ignorieren Sie diese Meldung, wenn Sie keine Windows-Unternehmensportal-App für Endbenutzer installiert haben.
+
+Wenn einer Ihrer Endbenutzer über die Unternehmensportal-App verfügt, beachten Sie, dass die Schaltfläche „Feedback senden“ ab dem 30. April in den folgenden Szenarios nicht mehr für die App funktioniert:  
+
+ - Windows 10-Unternehmensportal-App Version 1507 und Version 1511  
+
+ - Windows Phone 8.1-Unternehmensportal-App  
+
+Die Option „Feedback senden“ schlägt auf betroffenen Geräten fehl, und ist sogar bei einer Wiederholung nicht erfolgreich. Es gibt alternative Feedbackkanäle, mit denen Sie Feedback zu Ihren Erfahrungen auf diesen Plattformen an Microsoft senden können. Diese sind unten aufgelistet.
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Was muss ich als Vorbereitung auf diese Veränderung tun?
+
+Bitte informieren Sie die Endbenutzer von dieser Änderung, und aktualisieren Sie bei Bedarf die Benutzeranleitungen. 
+
+Informieren Sie die Endbenutzer, die das Unternehmensportal auf Windows Phone 8.1, Windows 10 Version 1507 und Windows 10 Version 1511 verwenden, dass zwei alternative Feedbackkanäle verfügbar sind. Sie können:  
+
+- Die Feedback Hub-App unter Windows 10 verwenden  
+- Eine E-Mail an WinCPfeedback@microsoft.com senden   
+
+Bitten Sie Endbenutzer auf Windows 10 Version 1607 oder höher, auf die neueste, im Microsoft Store verfügbare Version des Windows-Unternehmensportals zu aktualisieren.
+
+
 
 ### <a name="company-portal-for-windows-81-and-windows-phone-81-moving-to-sustaining-mode"></a>Unternehmensportal für Windows 8.1 und Windows Phone 8.1 in den nachhaltigen Modus verschieben 
 <!--1428681-->

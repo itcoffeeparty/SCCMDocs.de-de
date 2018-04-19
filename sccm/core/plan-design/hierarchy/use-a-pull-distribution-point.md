@@ -1,25 +1,26 @@
 ---
 title: Pullverteilungspunkt
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr über Konfigurationen und Einschränkungen zur Verwendung eines Pullverteilungspunkts mit System Center Configuration Manager."
+description: Erfahren Sie mehr über Konfigurationen und Einschränkungen zur Verwendung eines Pullverteilungspunkts mit System Center Configuration Manager.
 ms.custom: na
 ms.date: 2/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7d8f530b-1a39-4a9d-a2f0-675b516da7e4
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: b4acf5753c8629bcd0f4e2ef5a97bfcb570e9d24
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 3ef93ae505c2af709a3bd1e6a0e7a278993a77ff
+ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="use-a-pull-distribution-point-with-system-center-configuration-manager"></a>Verwenden eines Pullverteilungspunkts mit System Center Configuration Manager
 
@@ -45,14 +46,37 @@ Von Pullverteilungspunkten werden die gleichen Konfigurationen und Funktionen wi
 
 -   Sobald Inhalt an einen Pullverteilungspunkt verteilt wird, wird vom Paketübertragungs-Manager auf dem Standortserver die Standortdatenbank überprüft, um zu ermitteln, ob der Inhalt auf einem Quellverteilungspunkt verfügbar ist. Wenn der Inhalt auf keinem Quellverteilungspunkt für den Pullverteilungspunkt verfügbar ist, wird diese Überprüfung alle 20 Minuten wiederholt, bis der Inhalt verfügbar ist.  
 
--   Wenn vom Paketübertragungs-Manager die Verfügbarkeit des Inhalts bestätigt wird, wird der Pullverteilungspunkt benachrichtigt, damit der Inhalt heruntergeladen wird. Nach Eingang dieser Benachrichtigung auf dem Pullverteilungspunkt wird versucht, den Inhalt von den Quellverteilungspunkten herunterzuladen.  
+-   Wenn vom Paketübertragungs-Manager die Verfügbarkeit des Inhalts bestätigt wird, wird der Pullverteilungspunkt benachrichtigt, damit der Inhalt heruntergeladen wird. Wenn bei dieser Benachrichtigung ein Fehler auftritt, wird sie auf Grundlage der **Wiederholungseinstellungen** der Softwareverteilungskomponenten für Pullverteilungspunkte wiederholt. Nach Eingang dieser Benachrichtigung auf dem Pullverteilungspunkt wird versucht, den Inhalt von den Quellverteilungspunkten herunterzuladen.  
 
--   Sobald das Herunterladen auf den Pullverteilungspunkt abgeschlossen ist, wird dieser Status an den Verwaltungspunkt übermittelt. Wenn dieser Status allerdings nach 60 Minuten nicht empfangen wurde, wird der Paketübertragungs-Manager aktiviert, um auf dem Pullverteilungspunkt zu überprüfen, ob der Inhalt heruntergeladen wurde. Ist das Herunterladen des Inhalts noch nicht abgeschlossen, wird der Paketübertragungs-Manager für 60 Minuten deaktiviert, bevor der Pullverteilungspunkt erneut überprüft wird. Dieser Zyklus wird bis zum Abschluss der Inhaltsübertragung an den Pullverteilungspunkt fortgesetzt.  
+-   Während der Pullverteilungspunkt den Inhalt herunterlädt, ruft der Paketübertragungs-Manager den Status basierend auf dem **Status der Abrufeinstellungen** der Softwareverteilungskomponente für Pullverteilungspunkte ab.  Sobald das Herunterladen auf den Pullverteilungspunkt abgeschlossen ist, wird dieser Status an den Verwaltungspunkt übermittelt.
 
 **Ein Pullverteilungspunkt kann bei der Installation des Verteilungspunkts bzw. danach konfiguriert werden** , indem Sie die Eigenschaften der Standortsystemrolle „Verteilungspunkt“ bearbeiten.  
 
 **Die Konfiguration als Pullverteilungspunkt kann durch Bearbeiten der Eigenschaften des Verteilungspunkts entfernt werden**. Wenn Sie die Konfiguration als Pullverteilungspunkt entfernen, wird der normale Betrieb vom Verteilungspunkt wiederaufgenommen. Nachfolgende Inhaltsübertragungen an den Verteilungspunkt werden vom Standortserver verwaltet.  
 
+## <a name="to-configure-software-distribution-component-for-pull-distribution-points"></a>So konfigurieren Sie Softwareverteilungskomponente für Pullverteilungspunkte
+
+1.  Wählen Sie in der Configuration Manager-Konsole **Verwaltung** > **Standorte** aus.  
+
+2.  Wählen Sie die gewünschte Website aus, und wählen Sie **Standortkomponenten konfigurieren** > **Softwareverteilung** aus.
+
+3. Wählen Sie die Registerkarte **Pullverteilungspunkt** aus.  
+
+4.  Konfigurieren Sie in der Liste **Wiederholungseinstellungen** die folgenden Werte:  
+
+    -   **Anzahl der Wiederholungen**: Die Anzahl der Versuche des Paketübertragungs-Managers, den Pullverteilungspunkt zum Herunterladen des Inhalts zu benachrichtigen.  Wenn diese Anzahl überschritten wird, bricht der Paketübertragungs-Manager die Übertragung ab.
+
+    -   **Verzögerung vor Neuversuchen (Minuten)**: Die Anzahl der Minuten, die zwischen den Versuchen des Paketübertragungs-Managers verstreichen. 
+
+5.  Konfigurieren Sie in der Liste **Status der Abrufeinstellungen** die folgenden Werte:  
+
+    -   **Anzahl der Abrufe**: Die Anzahl der Kontakte zwischen dem Paketübertragungs-Manager und dem Pullverteilungspunkt zum Abrufen des Auftragsstatus.  Wenn diese Anzahl vor dem Auftragsabschluss überschritten wird, bricht der Paketübertragungs-Manager die Übertragung ab.
+
+    -   **Verzögerung vor Neuversuchen (Minuten)**: Die Anzahl der Minuten, die zwischen den Versuchen des Paketübertragungs-Managers verstreichen. 
+    
+    > [!NOTE]  
+    >  Wenn der Paketübertragungs-Manager einen Auftrag abbricht, weil die Anzahl der Statusabfragen überschritten wurde, wird der Pullverteilungspunkt den Inhalt weiterhin herunterladen.  Nach dem Abschluss wird die entsprechende Statusmeldung an den Paketübertragungs-Manager gesendet, und die Konsole spiegelt den neuen Status wider.
+    
 ## <a name="limitations-for-pull-distribution-points"></a>Einschränkungen für Pullverteilungspunkte  
 
 -   Ein cloudbasierter Verteilungspunkt kann nicht als Pullverteilungspunkt konfiguriert werden.  
@@ -61,12 +85,12 @@ Von Pullverteilungspunkten werden die gleichen Konfigurationen und Funktionen wi
 
 -   **Mit der Konfiguration für vorab bereitgestellte Inhalte wird die Konfiguration des Pullverteilungspunkts überschrieben**. Von einem für vorab bereitgestellten Inhalt konfigurierten Verteilungspunkt wird auf den Inhalt gewartet. Der Inhalt wird nicht vom Quellverteilungspunkt mithilfe von Pull übertragen, und gleichermaßen wird auf einem Standardverteilungspunkt mit der Konfiguration für vorab bereitgestellten Inhalt kein Inhalt vom Standortserver empfangen.  
 
--   **Bei der Inhaltsübertragung werden von einem Pullverteilungspunkt keine Konfigurationen für die Begrenzung der Datenübertragungsrate verwendet** . Wenn Sie einen bereits installierten Verteilungspunkt als Pullverteilungspunkt konfigurieren, werden Konfigurationen für die Begrenzung der Datenübertragungsrate zwar gespeichert, aber nicht verwendet. Wenn Sie die Konfiguration des Pullverteilungspunkts zu einem späteren Zeitpunkt entfernen, werden die Konfigurationen für die Begrenzung der Datenübertragungsrate wie vorgesehen implementiert.  
+-   **Bei der Inhaltsübertragung werden von einem Pullverteilungspunkt keine Konfigurationen für die Planung oder Begrenzung der Datenübertragungsrate verwendet** . Wenn Sie einen bereits installierten Verteilungspunkt als Pullverteilungspunkt konfigurieren, werden Konfigurationen für die Planung und Begrenzung der Datenübertragungsrate zwar gespeichert, aber nicht verwendet. Wenn Sie die Konfiguration des Pullverteilungspunkts zu einem späteren Zeitpunkt entfernen, werden die Konfigurationen für die Planung und Begrenzung der Datenübertragungsrate wie vorgesehen implementiert.  
 
     > [!NOTE]  
-    >  Wenn ein Verteilungspunkt als Pullverteilungspunkt konfiguriert ist, wird die Registerkarte **Begrenzung der Datenübertragungsrate** in den Eigenschaften des Verteilungspunkts nicht angezeigt.  
+    >  Wenn ein Verteilungspunkt als Pullverteilungspunkt konfiguriert ist, werden die Registerkarten **Zeitplan** und **Begrenzung der Datenübertragungsrate** nicht in den Eigenschaften des Verteilungspunkts angezeigt.  
 
--   Bei der Inhaltsverteilung werden von einem Verteilungspunkt die **Wiederholungseinstellungen** nicht verwendet. **Wiederholungseinstellungen** können als Teil der **Eigenschaften der Softwareverteilungskomponente** für jeden Standort konfiguriert werden. Sie können diese Einstellungen konfigurieren, indem Sie im Arbeitsbereich **Verwaltung** der Configuration Manager-Konsole **Standortkonfiguration** erweitern und anschließend **Standorte** auswählen. Wählen Sie im Ergebnisbereich einen Standort aus, und wählen Sie dann auf der Registerkarte **Startseite** die Option **Standortkomponenten konfigurieren** aus. Abschließend wählen Sie **Softwareverteilung** aus.  
+-   Pullverteilungspunkte verwenden die Einstellungen in der Registerkarte **Allgemein** der **Eigenschaften der Softwareverteilungskomponente** nicht für jeden Standort.  Dies schließt die Einstellungen **Gleichzeitige Verteilung** und **Multicast-Wiederholung** ein.  Verwenden Sie die Registerkarte **Pullverteilungspunkt**, um die Einstellungen für Pullverteilungspunkte zu konfigurieren.
 
 -   Zur Übertragung von Inhalt von einem Quellverteilungspunkt in einer Remotegesamtstruktur muss auf dem Computer, auf dem der Pullverteilungspunkt gehostet wird, ein Configuration Manager-Client installiert sein. Außerdem muss ein Netzwerkzugriffskonto konfiguriert sein, über das der Zugriff auf den Quellverteilungspunkt möglich ist.  
 

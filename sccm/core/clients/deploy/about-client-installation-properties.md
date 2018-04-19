@@ -3,7 +3,7 @@ title: Eigenschaften der Clientinstallation
 titleSuffix: Configuration Manager
 description: Dieser Abschnitt enthält Informationen zu den ccmsetup-Befehlszeileneigenschaften für die Installation des Configuration Manager-Clients.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.latest.revision: 15
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 057b078767a08574a806cb6af1cdb3812148a457
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 40e844fbb15a101574d9628648dde0db59c855c4
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="about-client-installation-properties-in-system-center-configuration-manager"></a>Informationen zu Clientinstallationseigenschaften in System Center Configuration Manager
 
@@ -250,6 +250,20 @@ Beispiel: `CCMSetup.exe /ExcludeFeatures:ClientUI` installiert das Softwarecente
 
 
 
+## <a name="ccmsetupMsiProps"></a> Eigenschaften der Datei „Ccmsetup.msi“  
+ Mit den folgenden Eigenschaften können Sie das Installationsverhalten von „ ccmsetup.msi“ ändern.
+
+### <a name="ccmsetupcmd"></a>CCMSETUPCMD 
+
+Gibt Befehlszeileneigenschaften an, die nach der Installation von ccmsetup.msi an ccmsetup.exe übergeben werden. Schließen Sie andere Eigenschaften in Anführungszeichen ein. Verwenden Sie diese Eigenschaft, wenn der Bootstrap des Konfigurations-Manager-Clients mithilfe der Intune-MDM-Installationsmethode abgeschlossen wurde. 
+
+Beispiel: `ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.contoso.com"`
+
+ > [!Tip]
+ > Microsoft Intune beschränkt die Befehlszeile auf 1024 Zeichen. 
+
+
+
 ##  <a name="clientMsiProps"></a> Eigenschaften der Datei „Client.msi“  
  Mit den folgenden Eigenschaften können Sie das Installationsverhalten von „client.msi“ ändern. Wenn Sie die Clientpushinstallationsmethode verwenden, können Sie außerdem die Eigenschaften im Dialogfeld **Eigenschaften von Clientpushinstallation** auf der Registerkarte **Client** angeben.  
 
@@ -282,16 +296,16 @@ Gibt die ID des Azure AD-Mandanten an. Dieser Mandant wird bei der [Konfiguratio
 
 Beispiel: `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
+<!-- 
+### AADTENANTNAME
 
-### <a name="aadtenantname"></a>AADTENANTNAME
+Specifies the Azure AD tenant name. This tenant is linked to Configuration Manager when you [configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard) for Cloud Management. To obtain the value for this property, use the following steps:
+- On a Windows 10 device that is joined to the same Azure AD tenant, open a command prompt.
+- Run the following command: `dsregcmd.exe /status`
+- In the Device State section, find the **TenantName** value. For example, `TenantName : Contoso`
 
-Gibt den Namen des Azure AD-Mandanten an. Dieser Mandant wird bei der [Konfiguration der Azure-Dienste](/sccm/core/servers/deploy/configure/azure-services-wizard) für Cloud Management mit Configuration Manager verknüpft. Führen Sie die folgenden Schritte aus, um den Wert für diese Eigenschaft abzurufen:
-- Öffnen Sie auf einem Windows 10-Gerät, das mit demselben Azure AD-Mandanten verknüpft ist, eine Eingabeaufforderung.
-- Führen Sie den folgenden Befehl aus: `dsregcmd.exe /status`
-- Suchen Sie im Abschnitt „Gerätestatus“ nach dem Wert **TenantName**. Beispiel: `TenantName : Contoso`
-
-Beispiel: `ccmsetup.exe AADTENANTNAME=Contoso`
-
+Example: `ccmsetup.exe AADTENANTNAME=Contoso`
+-->
 
 ### <a name="ccmadmins"></a>CCMADMINS  
 

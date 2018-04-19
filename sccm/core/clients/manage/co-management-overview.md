@@ -6,17 +6,17 @@ keywords: ''
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: ''
 ms.technology: ''
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: e4b8bd58d30cd87ffc461289edbfc5da9a684cda
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: cda2ef22bbfb86d0c25c44d5b97b0e1551010374
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="co-management-for-windows-10-devices"></a>Co-Verwaltung für Windows 10-Geräte    
 <!-- 1350871 -->
@@ -41,7 +41,7 @@ Hier finden Sie die allgemeinen Voraussetzungen für die Aktivierung der Co-Verw
 
 
    > [!Note]  
-   > In einer hybriden MDM-Umgebung (Intune integriert in Configuration Manager) ist keine Co-Verwaltung möglich. Informationen zur Migration zu Intune Standalone finden Sie unter [Migrate hybrid MDM users and devices to Intune standalone (Migrieren hybrider MDM-Benutzer und -Geräte zu Intune Standalone)](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
+   > In einer hybriden MDM-Umgebung (Intune integriert in Configuration Manager) ist keine Co-Verwaltung möglich. Sie können jedoch mit der Migration von Benutzern zum eigenständigen Intune beginnen und anschließend die zugehörigen Windows 10-Geräte für die Co-Verwaltung aktivieren. Informationen zur Migration zum eigenständigen Intune finden Sie unter [Beginnen der Migration hybrider MDM-Benutzer und -Geräte zum eigenständigen Intune](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
 
 ### <a name="additional-prerequisites-for-devices-with-the-configuration-manager-client"></a>Zusätzliche Anforderungen an Geräte mit dem Configuration Manager-Client
 - Windows 10, Version 1709 (auch Fall Creators Update genannt) und höher

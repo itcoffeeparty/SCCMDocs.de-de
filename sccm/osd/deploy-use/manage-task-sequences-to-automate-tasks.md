@@ -16,11 +16,11 @@ caps.latest.revision: 10
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 5ec9266f33b318ac9c42f86840ebd7ac59713bdf
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 262bfa3991bbd95fad779da9520358d527a42b07
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>Verwalten von Tasksequenzen zum Automatisieren von Aufgaben in System Center Configuration Manager
 
@@ -166,7 +166,7 @@ Verwenden Sie die folgende Prozedur, um eine benutzerdefinierte Benachrichtigung
   **Nachrichtenrest der Benutzerbenachrichtigung**: Es gibt drei Textfelder, die den Text der benutzerdefinierten Benachrichtigungen enthalten. Sie müssen in jedes Textfeld Text eingeben.
   - Erstes Textfeld: gibt den Hauptteil des Texts an, der üblicherweise Anweisungen an den Benutzer enthält. In der Standardbenutzerbenachrichtigung enthält dieser Abschnitt den folgenden Text: „Upgrading the operating system takes time and your computer might restart several times.“ (Das Upgrade des Betriebssystems kann einige Zeit dauern und mehrere Neustarts des Computers erfordern.).
   - Zweites Textfeld: gibt den fetten Text unterhalb des Hauptteils an. In der Standardbenutzerbenachrichtigung enthält dieser Abschnitt den folgenden Text: „Dieses direkte Upgrade installiert das neue Betriebssystem und führt eine automatische Migration Ihrer Apps, Daten und Einstellungen durch.“.
-  - Drittes Textfeld: gibt die letzte Textzeile unterhalb des fetten Texts an. In der Standardbenutzerbenachrichtigung enthält dieser Abschnitt den folgenden Text: „Klicken Sie zum Beginnen auf „Installieren“. Klicken Sie andernfalls auf „Abbrechen“.“.   
+  - Drittes Textfeld: gibt die letzte Textzeile unterhalb des fetten Texts an. In der Standardbenutzerbenachrichtigung enthält dieser Abschnitt den folgenden Text: „Klicken Sie zum Beginnen auf „Installieren“. Klicken Sie andernfalls auf Abbrechen.“   
     
 Angenommen, Sie konfigurieren folgende benutzerdefinierte Benachrichtigung in den Eigenschaften.
 
@@ -251,7 +251,14 @@ Folgende Benachrichtigung wird angezeigt, wenn der Endbenutzer die Installation 
         >     - Wenn die Sammlung einen Server enthält.  
 
     -   **Kommentare (optional)**: Geben Sie zusätzliche Informationen zur Beschreibung dieser Tasksequenzbereitstellung an.  
-    - **Bereitstellungsvorlage auswählen**: Ab der Configuration Manager-Version 1802 können Sie eine Bereitstellungsvorlage für eine Tasksequenz speichern und angeben. <!--1357391-->
+    - **Bereitstellungsvorlage auswählen**: Ab der Configuration Manager-Version 1802<!--1357391--> können Sie eine Bereitstellungsvorlage für eine Tasksequenz speichern und angeben.     
+
+         > [!IMPORTANT]
+         > In Configuration Manager-Version 1802 werden einige Elemente nicht in der Vorlage gespeichert.  <!--510610--> Stellen Sie sicher, dass Sie beim Ausführen des Bereitstellungs-Assistenten die folgenden Elemente anwenden:
+         > - Softwareinstallation 
+         > - Planung 
+         > - Inhalt vorab laden
+ 
 6.  Geben Sie auf der Seite **Bereitstellungseinstellungen** die folgenden Informationen an, und klicken Sie dann auf **Weiter**.  
 
     -   **Zweck**: Wählen Sie in der Dropdownliste eine der folgenden Optionen aus:  

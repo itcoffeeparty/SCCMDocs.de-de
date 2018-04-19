@@ -17,11 +17,11 @@ caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 29806161b29b87834c0cb4b1e478d92bff7a7b3c
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 19bb8b2c4e47dcc8a75db568e7f93541544a4566
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Erstellen und Ausführen von PowerShell-Skripts über die Configuration Manager-Konsole
 
@@ -70,10 +70,6 @@ Von der Funktion „Skripts ausführen“ wird derzeit Folgendes unterstützt:
 >[!WARNING]
 >Beachten Sie, dass die Verwendung von Parametern das Risiko für PowerShell Injection-Angriffe erhöht. Es gibt verschiedene Möglichkeiten, dieses Risiko zu verringern. Sie können beispielsweise reguläre Ausdrücken zum Überprüfen der Parametereingabe oder vordefinierte Parameter verwenden. Als allgemeine bewährte Methode wird empfohlen, keine Geheimnisse wie Kennwörter in PowerShell-Skripts zu hinterlegen. Unter [Learn more about PowerShell script security (Weitere Informationen zur sicheren Verwendung von PowerShell-Skripts)](/sccm/apps/deploy-use/learn-script-security) finden Sie weiterführende Hinweise. <!--There are external tools available to validate your PowerShell scripts such as the [PowerShell Injection Hunter](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) tool. -->
 
-
-## <a name="group-policy-considerations-for-scripts"></a>Gruppenrichtlinien für Skripts
-<!--While running scripts on devices, Configuration Manager sets policy to allow local scripts and remote signed scripts.--> 
-Durch das Festlegen einer Ausführungsrichtlinie über die Gruppenrichtlinie können Skripts mit Configuration Manager möglicherweise nicht ausgeführt werden. Informationen zu Ausführungsrichtlinien und deren Konfiguration finden Sie unter [About Execution Policies (Ausführungsrichtlinien)](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies). <!--507185-->
 
 ## <a name="run-script-authors-and-approvers"></a>Skript ausführen: Ersteller und Genehmiger
 
@@ -129,7 +125,7 @@ Die drei Sicherheitsrollen zum Ausführen von Skripts werden standardmäßig nic
          |SMS-Skripts|Erstellen|Ja|
          |SMS-Skripts|Siehe|Ja|
 
-     **Rollenname**: Skriptersteller
+     **Rollenname**: Skriptgenehmiger
     - **Beschreibung**: Durch die folgenden Berechtigungen können mit dieser Rolle Skripts erstellt, aber nicht genehmigt oder ausgeführt werden. 
     - **Berechtigungen:** Legen Sie für die folgenden Berechtigungen den in der Tabelle aufgeführten Status fest.
     - 
@@ -275,9 +271,13 @@ Nachdem Sie mit der Anwendung eines Skripts auf eine Sammlung von Geräten begon
 ## <a name="script-output"></a>Skriptausgabe
 
 - Ab der Configuration Manager-Version 1802 wird für die Rückgabe der Skriptausgabe JSON verwendet. Dieses Format gibt konsistent eine lesbare Skriptausgabe zurück. 
-- Skripts, für die ein unbekanntes Ergebnis oder ein Client festgestellt wird, der offline ist, werden nicht in den Diagrammen oder im Dataset angezeigt. <!--507179-->
+- Skripts mit unbekanntem Ergebnis oder einem Client, der offline war, werden nicht in den Diagrammen oder Datasets angezeigt. <!--507179-->
 - Vermeiden Sie die Rückgabe einer umfassenden Skriptausgabe, da diese auf 4 KB beschränkt wird. <!--508488-->
 - Einige Funktionen im Zusammenhang mit der Skriptausgabeformatierung sind nicht verfügbar, wenn die Configuration Manager-Version 1802 (oder eine neuere Version) mit einer älteren Clientversion verwendet wird. <!--508487-->
+    - Bei einer Konfigurations-Manager-Clientversion, die neuer als Version 1802 ist, erhalten Sie eine Zeichenfolgeausgabe.
+    -  Für die Konfigurations-Manager-Clientversion 1802 und höher erhalten Sie die JSON-Formatierung.
+        - Sie erhalten z.B. möglicherweise Ergebnisse mit TEXT auf einer Clientversion und „TEXT“ (die Ausgabe ist in doppelte Anführungszeichen eingeschlossen) auf einer anderen Version, die im Diagramm als zwei verschiedene Kategorien angezeigt werden.
+        - Wenn Sie dieses Verhalten umgehen möchten, führen Sie das Skript ggf. für zwei verschiedene Sammlungen aus. Eines mit der Clientversion, die älter als Version 1802 ist, und ein anderes mit der Clientversion 1802 und höher. Oder Sie konvertieren ein Enumerationsobjekt in einen Zeichenfolgenwert, damit die JSON-Formatierung bei der Anzeige der Skripts korrekt verwendet wird. 
 - Konvertieren Sie Enumerationsobjekte in Zeichenfolgenwerte, damit die JSON-Formatierung bei der Anzeige der Skripts korrekt verwendet wird. <!--508377--> ![Konvertieren eines Enumerationsobjekts in einen Zeichenfolgenwert](./media/run-scripts/enum-tostring-JSON.png)
 
 
