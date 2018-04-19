@@ -1,9 +1,9 @@
 ---
-title: 'Verwalten von Windows as a Service '
+title: Verwalten von Windows as a Service
 titleSuffix: Configuration Manager
-description: "Lassen Sie sich mit Configuration Manager den Status von Windows as a Service anzeigen, erstellen Sie Wartungspläne, um Bereitstellungsringe zu bilden, und lassen Sie sich Warnungen anzeigen, wenn Windows 10-Clients das Supportende erreichen."
+description: Lassen Sie sich mit Configuration Manager den Status von Windows as a Service (WaaS) anzeigen, erstellen Sie Wartungspläne, um Bereitstellungsringe zu bilden, und lassen Sie sich Warnungen anzeigen, wenn Windows 10-Clients das Ende des Supports erreichen.
 ms.custom: na
-ms.date: 03/26/2017
+ms.date: 10/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,46 +12,47 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da1e687b-28f6-43c4-b14a-ff2b76e60d24
-caps.latest.revision: 
+caps.latest.revision: 26
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: a67d75f27cbc2d53cc5d8c418e25232d88b4f067
-ms.sourcegitcommit: db9978135d7a6455d83dbe4a5175af2bdeaeafd8
+manager: dougeby
+ms.openlocfilehash: 71f31b7adbffea0eb74983960a8b50c4d9b37033
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>Verwalten von Windows als Dienst mit System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 
- In System Center Configuration Manager können Sie den Zustand von Windows-as-a-Service in Ihrer Umgebung anzeigen, Wartungspläne zur Bildung von Bereitstellungsringen erstellen und sicherstellen, dass Windows 10 Current Branch-Systeme auf dem neuesten Stand gehalten werden, wenn neue Builds veröffentlicht werden. Außerdem können Sie Warnungen anzeigen, wenn sich Windows 10-Clients dem Ende des Supports für ihren Build von Current Branch oder von Current Branch for Business (CBB) nähern.  
+ In Configuration Manager können Sie nun den Zustand von Windows as a Service (WaaS) in Ihrer Umgebung anzeigen. Erstellen Sie Wartungspläne, um Bereitstellungsringe zu bilden und sicherzustellen, dass Windows 10-Systeme auf dem neuesten Stand gehalten werden, wenn neue Builds veröffentlicht werden. Sie können auch Warnungen anzeigen, wenn der Support für den halbjährlichen Kanalbuild für Windows 10-Clients sich dem Ende nähert.  
 
- Weitere Informationen zu den Windows 10-Wartungsoptionen finden Sie unter  [Windows 10-Wartungsoptionen für Updates und Upgrades](https://technet.microsoft.com/library/mt598226\(v=vs.85\).aspx).  
+ Weitere Informationen zu Windows 10-Wartungsoptionen finden Sie unter [Übersicht über Windows as a Service](/windows/deployment/update/waas-overview#servicing-channels).  
 
  Gehen Sie wie in den folgenden Abschnitten beschrieben vor, um Windows als Dienst zu verwalten.
 
+
+
 ##  <a name="BKMK_Prerequisites"></a> Voraussetzungen  
- Um Daten im Windows 10-Wartungsdashboard anzuzeigen, gehen Sie wie folgt vor:  
+ Um Daten im Windows 10-Wartungsdashboard anzuzeigen, führen Sie die folgenden Aktionen aus:  
 
--   Auf Windows 10-Computern müssen Configuration Manager-Softwareupdates mit Windows Server Update Services (WSUS) für die Verwaltung von Softwareupdates verwendet werden. Wenn auf Computern Windows Update für Unternehmen (oder Windows-Insider) für die Verwaltung von Softwareupdates verwendet wird, erfolgt in Windows 10-Wartungsplänen keine Auswertung des Computers. Weitere Informationen finden Sie unter [Integration mit Windows Update für Unternehmen in Windows 10](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md).  
+-   Auf Windows 10-Computern müssen Configuration Manager-Softwareupdates mit Windows Server Update Services (WSUS) für die Verwaltung von Softwareupdates verwendet werden. Wenn auf Computern Windows Update for Business (oder Windows Insider) für die Verwaltung von Softwareupdates verwendet wird, erfolgt in Windows 10-Wartungsplänen keine Auswertung des Computers. Weitere Informationen finden Sie unter [Integration mit Windows Update für Unternehmen in Windows 10](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md).  
 
--   Auf den Softwareupdatepunkten und Standortservern muss WSUS 4.0 mit [Hotfix 3095113](https://support.microsoft.com/kb/3095113) installiert sein. Dadurch wird die Softwareupdateklassifizierung **Upgrades** hinzugefügt. Weitere Informationen finden Sie unter [Prerequisites for software updates (Voraussetzungen für Softwareupdates)](../../sum/plan-design/prerequisites-for-software-updates.md).  
+-   Auf den Softwareupdatepunkten und Standortservern muss WSUS 4.0 mit [Hotfix 3095113](https://support.microsoft.com/kb/3095113) installiert sein. Dieser Hotfix fügt die Softwareupdateklassifizierung **Upgrades** hinzu. Weitere Informationen finden Sie unter [Prerequisites for software updates (Voraussetzungen für Softwareupdates)](../../sum/plan-design/prerequisites-for-software-updates.md).  
 
 -   WSUS 4.0 mit dem [Hotfix 3159706](https://support.microsoft.com/kb/3159706) muss auf Ihren Softwareupdatepunkten und Standortservern installiert sein, um ein Upgrade von Computern auf Windows 10 Anniversary Update sowie Unterversionen durchzuführen. Im Support-Artikel werden manuelle Schritte beschrieben, die Sie ausführen müssen, um diesen Hotfix zu installieren. Weitere Informationen finden Sie im Blog [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/05/update-your-configmgr-1606-sup-servers-to-deploy-the-windows-10-anniversary-update/).
 
 -   Aktivieren Sie die Frequenzermittlung. Die im Windows 10-Wartungsdashboard angezeigten Daten werden mithilfe der Ermittlung gesammelt. Weitere Informationen finden Sie unter [Configure Heartbeat Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#BKMK_ConfigHBDisc).  
 
-     Die folgenden Branch- und Buildinformationen zu Windows 10 werden ermittelt und in den folgenden Attributen gespeichert:  
+     Die folgenden Kanal- und Buildinformationen zu Windows 10 werden ermittelt und in den folgenden Attributen gespeichert:  
 
-    -   **Bereitstellungsoption für Betriebssystem**: Gibt die Betriebssystem-Verzweigung an. Beispiel: **0** = CB (keine Upgrades zum Aufschieben), **1** = CBB (Upgrades aufschieben), **2** = Long Term Servicing Branch (LTSB)
+    -   **Bereitstellungsoption für Betriebssystem**: Gibt den Betriebssystemkanal an. Beispielsweise **0** = Halbjährlicher Kanal - Ziel (Updates nicht verzögern), **1** = Halbjährlicher Kanal (Updates verzögern), **2** = Langfristiger Wartungskanal (LTSC)
 
     -   **Betriebssystembuild**: Gibt den Betriebssystembuild an. Beispiel: **10.0.10240** (RTM) oder **10.0.10586** (Version 1511)  
 
--   Der Dienstverbindungspunkt muss installiert und für den Modus **Online, dauerhafte Verbindung** konfiguriert werden, um Daten im Windows 10-Wartungsdashboard anzuzeigen. Wenn Sie im Offlinemodus arbeiten, werden Datenaktualisierungen erst dann im Dashboard angezeigt, wenn Sie Configuration Manager-Wartungsupdates erhalten.   
-      Weitere Informationen finden Sie unter [About the service connection point (Informationen zum Dienstverbindungspunkt)](../../core/servers/deploy/configure/about-the-service-connection-point.md).  
+-   Der Dienstverbindungspunkt muss installiert und für den Modus **Online, dauerhafte Verbindung** konfiguriert werden, um Daten im Windows 10-Wartungsdashboard anzuzeigen. Wenn Sie im Offlinemodus arbeiten, werden Datenaktualisierungen erst dann im Dashboard angezeigt, wenn Sie Configuration Manager-Wartungsupdates erhalten. Weitere Informationen finden Sie unter [About the service connection point (Informationen zum Dienstverbindungspunkt)](../../core/servers/deploy/configure/about-the-service-connection-point.md).  
 
 
 -   Auf dem Computer, auf dem die Configuration Manager-Konsole ausgeführt wird, muss Internet Explorer 9 installiert sein.  
@@ -63,17 +64,17 @@ ms.lasthandoff: 01/22/2018
 
 -   **Kachel „Windows 10-Verwendung“**: Enthält eine Aufschlüsselung der öffentlichen Builds von Windows 10. Windows Insider-Builds sind unter **Sonstige** aufgelistet, genau wie alle Builds, die Ihrem Standort noch nicht bekannt sind. Der Dienstverbindungspunkt lädt die Metadaten herunter, mit denen er über die Windows-Builds informiert wird. Anschließend werden diese Daten mit Ermittlungsdaten verglichen.  
 
--   **Kachel “Windows 10-Ringe“**: Enthält eine Aufschlüsselung von Windows 10 nach Branch und Bereitschaftsstatus. Das Segment „LTSB“ umfasst alle LTSB-Versionen (während auf der ersten Kachel eine Aufschlüsselung in die verschiedenen Versionen erfolgt. Beispiel: Windows 10 LTSB 2015. Das Segment **Release Ready** entspricht CB, und das Segment **Business Ready** entspricht CBB.  
+-   **Kachel „Windows 10-Ringe“**: Enthält eine Aufschlüsselung von Windows 10 nach Kanal und Bereitschaftsstatus. Das LTSC-Segment enthält alle LTSC-Versionen. Die erste Kachel gliedert die bestimmten Versionen, z.B. Windows 10 LTSC 2015.   
 
--   **Kachel „Wartungsplan erstellen“**: Bietet eine schnelle Möglichkeit zum Erstellen eines Wartungsplans. Sie geben den Namen, die Sammlung (angezeigt werden nur die zehn kleinsten Sammlungen), das Bereitstellungspaket (angezeigt werden nur die zehn Pakete, die zuletzt geändert wurden) und den Bereitschaftsstatus an. Für die anderen Einstellungen werden Standardwerte verwendet. Klicken Sie auf **Erweiterte Einstellungen** , um den Assistenten zum Erstellen eines Wartungsplans zu starten, in dem Sie alle Einstellungen für den Wartungsplan konfigurieren können.  
+-   **Kachel „Wartungsplan erstellen“**: Bietet eine schnelle Möglichkeit zum Erstellen eines Wartungsplans. Sie geben den Namen, die Sammlung (angezeigt werden nur die 10 kleinsten Sammlungen), das Bereitstellungspaket (angezeigt werden nur die 10 Pakete, die zuletzt geändert wurden) und den Bereitschaftsstatus an. Für die anderen Einstellungen werden Standardwerte verwendet. Klicken Sie auf **Erweiterte Einstellungen** , um den Assistenten zum Erstellen eines Wartungsplans zu starten, in dem Sie alle Einstellungen für den Wartungsplan konfigurieren können.  
 
--   **Kachel „Abgelaufen“**: Zeigt den Prozentsatz der Geräte mit einem abgelaufenen Build von Windows 10 an. Configuration Manager ermittelt den Prozentsatz anhand der Metadaten, die der Dienstverbindungspunkt herunterlädt, und vergleicht ihn mit Ermittlungsdaten. Ein Build, das nach Ablauf seiner Lebensdauer keine monatlichen kumulativen Updates, einschließlich Sicherheitsupdates, erhält. Die Computer in dieser Kategorie sollte auf die nächste Buildversion aktualisiert werden. Configuration Manager rundet auf die nächste ganze Zahl auf. Wenn Sie z. B. über rund 10.000 Computer verfügen, aber nur einen mit einem abgelaufenen Build, zeigt die Kachel 1 % an.  
+-   **Kachel „Abgelaufen“**: Zeigt den Prozentsatz der Geräte mit einem abgelaufenen Build von Windows 10 an. Configuration Manager ermittelt den Prozentsatz anhand der Metadaten, die der Dienstverbindungspunkt herunterlädt, und vergleicht ihn mit Ermittlungsdaten. Ein Build erhält nach Ablauf seiner Lebensdauer keine monatlichen kumulativen Updates, einschließlich Sicherheitsupdates, mehr. Die Computer in dieser Kategorie sollte auf die nächste Buildversion aktualisiert werden. Configuration Manager rundet auf die nächste ganze Zahl auf. Wenn Sie z.B. über rund 10.000 Computer verfügen, aber nur einen mit einem abgelaufenen Build, zeigt die Kachel 1 % an.  
 
 -   **Kachel „Bald ablaufend“**: Zeigt, ähnlich wie die Kachel **Abgelaufen** , den Prozentsatz der Computer mit einem Build an, dessen Lebensdauer in Kürze abläuft (innerhalb von ca. vier Monaten). Configuration Manager rundet auf die nächste ganze Zahl auf.  
 
 -   **Kachel „Warnungen“**: Zeigt aktive Warnungen an.  
 
--   **Kachel „Wartungsplanüberwachung“**: Zeigt die Wartungspläne, die Sie erstellt haben, zusammen mit einem entsprechenden Kompatibilitätsdiagramm an. Dadurch erhalten Sie einen schnellen Überblick über den aktuellen Zustand der Wartungsplanbereitstellungen. Wenn ein früherer Bereitstellungsring Ihre Erwartungen hinsichtlich der Kompatibilität erfüllt hat, können Sie einen späteren Wartungsplan (Bereitstellungsring) auswählen und auf **Jetzt bereitstellen** klicken, anstatt zu warten, bis die Wartungsplanregeln automatisch ausgelöst werden.  
+-   **Kachel „Wartungsplanüberwachung“**: Zeigt die Wartungspläne, die Sie erstellt haben, zusammen mit einem entsprechenden Kompatibilitätsdiagramm an. Diese Kachel gibt Ihnen einen schnellen Überblick über den aktuellen Zustand der Wartungsplanbereitstellungen. Wenn ein früherer Bereitstellungsring Ihre Erwartungen hinsichtlich der Kompatibilität erfüllt hat, können Sie einen späteren Wartungsplan (Bereitstellungsring) auswählen und auf **Jetzt bereitstellen** klicken, anstatt zu warten, bis die Wartungsplanregeln automatisch ausgelöst werden.  
 
 -   **Kachel „Windows 10-Builds“**: Die Anzeige ist eine feste Imagezeitachse mit einer Übersicht der bisher veröffentlichten Windows 10-Builds. Sie bietet Ihnen einen allgemeinen Überblick darüber, wann Builds in die verschiedenen Zustände übergehen.  
 
@@ -87,21 +88,20 @@ ms.lasthandoff: 01/22/2018
 
 -   **Bereitschaftsstatus**: Der im Wartungsplan definierte Bereitschaftsstatus wird mit dem Bereitschaftsstatus für das Upgrade verglichen. Die Metadaten für das Upgrade werden abgerufen, wenn der Dienstverbindungspunkt nach Updates sucht.  
 
--   **Zeitverzögerung**: Die Anzahl der Tage, die Sie im Wartungsplan für **Wie viele Tage möchten Sie nach der Veröffentlichung eines neuen Upgrades durch Microsoft warten, bevor Sie es in Ihrer Umgebung bereitstellen?** angegeben haben. Configuration Manager wird ausgewertet, ob ein Upgrade in die Bereitstellung eingeschlossen werden soll, und zwar, wenn das aktuelle Datum nach dem Veröffentlichungsdatum plus der konfigurierten Anzahl von Tagen liegt.  
+-   **Zeitverzögerung**: Die Anzahl der Tage, die Sie im Wartungsplan für **Wie viele Tage möchten Sie nach der Veröffentlichung eines neuen Upgrades durch Microsoft warten, bevor Sie es in Ihrer Umgebung bereitstellen?** angegeben haben. Configuration Manager wertet aus, ob ein Upgrade in die Bereitstellung eingeschlossen werden soll, und zwar, wenn das aktuelle Datum nach dem Veröffentlichungsdatum plus der konfigurierten Anzahl von Tagen liegt.  
 
- Wenn ein Upgrade die Kriterien erfüllt, fügt der Wartungsplan das Upgrade zum Bereitstellungspaket hinzu, verteilt das Paket an Verteilungspunkte und stellt der Sammlung das Upgrade basierend auf den im Wartungsplan konfigurierten Einstellungen bereit.  Sie können die Bereitstellungen über die Kachel „Wartungsplanüberwachung“ im Windows 10-Wartungsdashboard überwachen. Weitere Informationen finden Sie unter [Monitor software updates (Überwachen von Softwareupdates)](../../sum/deploy-use/monitor-software-updates.md).  
+ Wenn ein Upgrade die Kriterien erfüllt, fügt der Wartungsplan das Upgrade zum Bereitstellungspaket hinzu, verteilt das Paket an Verteilungspunkte und stellt der Sammlung das Upgrade basierend auf den im Wartungsplan konfigurierten Einstellungen bereit. Sie können die Bereitstellungen über die Kachel „Wartungsplanüberwachung“ im Windows 10-Wartungsdashboard überwachen. Weitere Informationen finden Sie unter [Monitor software updates (Überwachen von Softwareupdates)](../../sum/deploy-use/monitor-software-updates.md).  
 
 ##  <a name="BKMK_ServicingPlan"></a> Windows 10-Wartungsplan  
- Bei der Bereitstellung von Windows 10 CB können Sie einen oder mehrere Wartungspläne erstellen, um die Bereitstellungsringe für Ihre Umgebung zu definieren, und sie dann im Windows 10-Wartungsdashboard überwachen.   
-Wartungspläne verwenden nur die Softwareupdateklassifizierung **Upgrades** und keine kumulativen Updates für Windows 10. Für diese Updates müssen Sie Bereitstellungen weiterhin mit dem Softwareupdateworkflow vornehmen.  Die Endbenutzerumgebung mit einem Wartungsplan entspricht derjenigen mit Softwareupdates, einschließlich der Einstellungen, die Sie im Wartungsplan konfigurieren.  
+ Bei der Bereitstellung des halbjährlichen Kanals von Windows 10 können Sie einen oder mehrere Wartungspläne erstellen, um die Bereitstellungsringe für Ihre Umgebung zu definieren, und sie dann im Windows 10-Wartungsdashboard überwachen. Wartungspläne verwenden nur die Softwareupdateklassifizierung **Upgrades** und keine kumulativen Updates für Windows 10. Für diese Updates müssen Sie Bereitstellungen weiterhin mit dem Softwareupdateworkflow vornehmen. Die Endbenutzerumgebung mit einem Wartungsplan entspricht derjenigen mit Softwareupdates, einschließlich der Einstellungen, die Sie im Wartungsplan konfigurieren.  
 
 > [!NOTE]  
 >  Sie können eine Tasksequenz zum Bereitstellen eines Upgrades für jeden Windows 10-Build verwenden, dazu ist jedoch mehr manuelle Arbeit erforderlich. Sie müssten die aktualisierten Quelldateien als Upgradepaket für Betriebssysteme importieren, die Tasksequenz erstellen und dann in der entsprechenden Gruppe von Computern bereitstellen. Eine Tasksequenz bietet jedoch zusätzliche benutzerdefinierte Optionen, wie z. B. die Aktionen vor und nach der Bereitstellung.  
 
- Sie können einen grundlegenden Wartungsplan über das Windows 10-Wartungsdashboard erstellen. Nachdem Sie den Namen, die Sammlung (angezeigt werden nur die zehn kleinsten Sammlungen), das Bereitstellungspaket (angezeigt werden nur die zehn Pakete, die zuletzt geändert wurden) und den Bereitschaftsstatus an gegeben haben, erstellt Configuration Manager den Wartungsplan mit Standardwerten für die übrigen Einstellungen. Sie können auch den Assistenten zum Erstellen eines Wartungsplans starten, um alle Einstellungen zu konfigurieren. Verwenden Sie das folgende Verfahren zum Erstellen eines Wartungsplans mit dem Assistenten zum Erstellen eines Wartungsplans.  
+ Sie können einen grundlegenden Wartungsplan über das Windows 10-Wartungsdashboard erstellen. Nachdem Sie den Namen, die Sammlung (angezeigt werden nur die 10 kleinsten Sammlungen), das Bereitstellungspaket (angezeigt werden nur die 10 Pakete, die zuletzt geändert wurden) und den Bereitschaftsstatus angegeben haben, erstellt Configuration Manager den Wartungsplan mit Standardwerten für die übrigen Einstellungen. Sie können auch den Assistenten zum Erstellen eines Wartungsplans starten, um alle Einstellungen zu konfigurieren. Verwenden Sie das folgende Verfahren zum Erstellen eines Wartungsplans mit dem Assistenten zum Erstellen eines Wartungsplans.  
 
 > [!NOTE]  
->  Ab Version 1602 von Configuration Manager können Sie das Verhalten für Bereitstellungen mit hohem Risiko verwalten. Bei einer Bereitstellung mit hohem Risiko handelt es sich um eine Bereitstellung, die automatisch installiert wird und zu unerwünschten Ergebnissen führen kann. Beispielsweise wird eine Tasksequenz, die als Zweck **Erforderlich** aufweist und Windows 10 bereitstellt, als eine Bereitstellung mit hohem Risiko betrachtet. Weitere Informationen finden Sie unter [Settings to manage high-risk deployments (Einstellungen zum Verwalten risikoreicher Bereitstellungen)](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
+>  Sie können das Verhalten für Bereitstellungen mit hohem Risiko verwalten. Bei einer Bereitstellung mit hohem Risiko handelt es sich um eine Bereitstellung, die automatisch installiert wird und zu unerwünschten Ergebnissen führen kann. Beispielsweise wird eine Tasksequenz, die als Zweck **Erforderlich** aufweist und Windows 10 bereitstellt, als eine Bereitstellung mit hohem Risiko betrachtet. Weitere Informationen finden Sie unter [Settings to manage high-risk deployments (Einstellungen zum Verwalten risikoreicher Bereitstellungen)](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
 
 #### <a name="to-create-a-windows-10-servicing-plan"></a>So erstellen Sie einen Windows 10-Wartungsplan  
 
@@ -122,7 +122,7 @@ Wartungspläne verwenden nur die Softwareupdateklassifizierung **Upgrades** und 
     -   **Zielsammlung**: Gibt den für die Bereitstellung zu verwendenden Wartungsplan an. Mitglieder dieser Sammlung erhalten die im Wartungsplan definierten Windows 10-Upgrades.  
 
         > [!NOTE]  
-        >  Ab Version 1602 von Configuration Manager werden bei einer Bereitstellung mit hohem Risiko, wie z.B. einem Wartungsplan, im Fenster **Sammlung auswählen** nur die benutzerdefinierten Sammlungen angezeigt, die den in den Eigenschaften des Standorts konfigurierten Einstellungen zur Bereitstellungsüberprüfung entsprechen.
+        >  Bei einer Bereitstellung mit hohem Risiko wie z.B. einem Wartungsplan werden im Fenster **Sammlung auswählen** nur die benutzerdefinierten Sammlungen angezeigt, die den in den Eigenschaften des Standorts konfigurierten Einstellungen zur Bereitstellungsüberprüfung entsprechen.
         >    
         > Bereitstellungen mit hohem Risiko sind immer auf benutzerdefinierte Sammlungen, von Ihnen erstellte Sammlungen und die integrierte Sammlung **Unbekannte Computer** beschränkt. Beim Erstellen einer Bereitstellung mit hohem Risiko können Sie keine integrierte Sammlung auswählen, wie z. B. **Alle Systeme**. Deaktivieren Sie die Einstellung **Hide collections with a member count greater than the site's minimum size configuration** (Sammlungen mit einer Anzahl der Mitglieder ausblenden, die größer als die minimale Größenkonfiguration des Standorts ist), um alle benutzerdefinierten Sammlungen anzuzeigen, die weniger Clients als die konfigurierte maximale Größe enthalten. Weitere Informationen finden Sie unter [Settings to manage high-risk deployments (Einstellungen zum Verwalten risikoreicher Bereitstellungen)](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
         >  
@@ -130,7 +130,7 @@ Wartungspläne verwenden nur die Softwareupdateklassifizierung **Upgrades** und 
         >  
         > Angenommen, Sie legen **Standardgröße** auf 100 und **Maximale Größe** auf 1000 fest. Wenn Sie eine Bereitstellung mit hohem Risiko erstellen, werden im Fenster **Sammlung auswählen** nur die Sammlungen angezeigt, die weniger als 100 Clients enthalten. Wenn Sie die Einstellung **Hide collections with a member count greater than the site's minimum size configuration** (Sammlungen mit einer Anzahl der Mitglieder ausblenden, die größer als die minimale Größenkonfiguration des Standorts ist) deaktivieren, werden im Fenster Sammlungen angezeigt, die weniger als 1.000 Clients enthalten.  
         >
-        > Wenn Sie eine Sammlung auswählen, die eine Standortrolle enthält, gilt Folgendes:    
+        > Wenn Sie eine Sammlung auswählen, die eine Standortrolle enthält, gelten folgende Kriterien:    
         >   
         >    - Wenn die Sammlung einen Standortsystemserver enthält und Sie die Einstellungen zur Bereitstellungsüberprüfung so konfigurieren, dass Sammlungen mit Standortsystemservern blockiert werden, tritt ein Fehler auf, und Sie können nicht fortfahren.    
         >    - Wenn die Sammlung einen Standortsystemserver enthält und Sie die Einstellungen zur Bereitstellungsüberprüfung so konfigurieren, dass Sie im Fall von Sammlungen mit Standortsystemservern gewarnt werden, wird im Assistenten zum Bereitstellen von Software eine Warnung über ein hohes Risiko angezeigt, falls die Sammlung den Standardwert für die Größe überschreitet oder falls die Sammlung einen Server enthält. Sie müssen der Erstellung einer Bereitstellung mit hohem Risiko zustimmen, und eine Überwachungsstatusmeldung wird erstellt.  
@@ -139,18 +139,19 @@ Wartungspläne verwenden nur die Softwareupdateklassifizierung **Upgrades** und 
 
     -   **Geben Sie den Windows-Bereitschaftsstatus an, für den dieser Wartungsplan gelten soll**: Wählen Sie eine der folgenden Optionen aus:  
 
-        -   **Sofortige Bereitstellung (Current Branch):** Beim CB Servicing-Modell sind Funktionsupdates verfügbar, sobald sie von Microsoft veröffentlicht werden.
+        -   **Halbjährlicher Kanal (Ziel):** In diesem Wartungsmodell sind Featureupdates verfügbar, sobald sie von Microsoft veröffentlicht werden.
 
-        -   **Bereitstellung zum Testen (Current Branch for Business):** Der CBB Servicing Branch wird normalerweise für die umfassende Bereitstellung verwendet. Windows 10-Clients im CBB Servicing Branch erhalten denselben Build von Windows 10 wie Clients im CB Servicing Branch, allerdings zu einem späteren Zeitpunkt.
+        -   **Halbjährlicher Kanal**: Dieser Wartungskanal wird in der Regel für die allgemeine Bereitstellung verwendet. Windows 10-Clients im halbjährlichen Kanal empfangen denselben Build von Windows 10 wie die Geräte im gezielten Kanal, nur zu einem späteren Zeitpunkt.
 
-        Weitere Informationen zu Servicing Branches und die für Sie am besten geeignete Option finden Sie unter [Servicing Branches](https://technet.microsoft.com/itpro/windows/manage/waas-overview#servicing-branches).
+        Weitere Informationen zu Wartungskanälen und die für Sie am besten geeignete Option finden Sie unter [Wartungskanäle](/windows/deployment/update/waas-overview#servicing-channels).
 
-    -   **Anzahl der Tage nach der Veröffentlichung eines neuen Updates durch Microsoft, nach der Sie die Bereitstellung in Ihrer Umgebung vornehmen möchten:** In Configuration Manager wird ausgewertet, ob ein Upgrade in die Bereitstellung eingeschlossen werden soll, und zwar, wenn das aktuelle Datum nach dem Veröffentlichungsdatum plus der Anzahl der für diese Einstellung konfigurierten Tage liegt.
+    -   **Anzahl der Tage nach der Veröffentlichung eines neuen Updates durch Microsoft, nach der Sie die Bereitstellung in Ihrer Umgebung vornehmen möchten:** In Configuration Manager wertet aus, ob ein Upgrade in die Bereitstellung eingeschlossen werden soll, und zwar, wenn das aktuelle Datum nach dem Veröffentlichungsdatum plus der Anzahl der für diese Einstellung konfigurierten Tage liegt.
 
-    -   Klicken Sie in Configuration Manager vor Version 1602 auf **Vorschau**, um die Windows 10-Updates anzuzeigen, die dem Bereitschaftsstatus zugeordnet sind.  
 
-    Weitere Informationen finden Sie unter [Servicing Branches](https://technet.microsoft.com/itpro/windows/manage/waas-overview#servicing-branches).
-7.  Konfigurieren Sie ab Version 1602 von Configuration Manager auf der Seite „Upgrades“ die Suchkriterien zum Filtern der Upgrades, die dem Wartungsplan hinzugefügt werden. Nur Upgrades, die die angegebenen Kriterien erfüllen, werden der entsprechenden Bereitstellung hinzugefügt.  
+7.  Konfigurieren Sie auf der Seite „Upgrades“ die Suchkriterien zum Filtern der Upgrades, die dem Wartungsplan hinzugefügt werden. Nur Upgrades, die die angegebenen Kriterien erfüllen, werden der entsprechenden Bereitstellung hinzugefügt.   
+
+     > [!Important]    
+     > Es wird empfohlen, das Feld **Erforderlich** als Teil Ihrer Suchkriterien mit einem Wert von **> = 1** festzulegen. Mit diesem Kriterium wird sichergestellt, dass nur anwendbare Updates zum Wartungsplan hinzugefügt werden.
 
      Klicken Sie auf **Vorschau** , um die Upgrades anzeigen, die die angegebenen Kriterien erfüllen.  
 
@@ -197,7 +198,7 @@ Wartungspläne verwenden nur die Softwareupdateklassifizierung **Upgrades** und 
 
     2.  **Beschreibung**: Geben Sie eine Beschreibung mit Informationen zum Bereitstellungspaket an. Die Beschreibung ist auf 127 Zeichen begrenzt.  
 
-    3.  **Paketquelle**: Gibt den Speicherort der Quelldateien der Softwareupdates an.  Geben Sie für den Quellspeicherort einen Netzwerkpfad wie **\\\Server\Freigabename\Pfad**ein. Alternativ können Sie auf **Durchsuchen** klicken, um den Netzwerkpfad zu suchen. Sie müssen den freigegebenen Ordner für die Quelldateien des Bereitstellungspakets erstellen, bevor Sie mit der nächsten Seite fortfahren.  
+    3.  **Paketquelle**: Gibt den Speicherort der Quelldateien der Softwareupdates an. Geben Sie für den Quellspeicherort einen Netzwerkpfad wie **\\\Server\Freigabename\Pfad**ein. Alternativ können Sie auf **Durchsuchen** klicken, um den Netzwerkpfad zu suchen. Erstellen Sie den freigegebenen Ordner für die Quelldateien des Bereitstellungspakets, bevor Sie mit der nächsten Seite fortfahren.  
 
         > [!NOTE]  
         >  Der von Ihnen angegebene Quellspeicherort des Bereitstellungspakets kann von keinem anderen Softwarebereitstellungspaket verwendet werden.  
@@ -254,6 +255,7 @@ Wenden Sie das folgende Verfahren an, um die Eigenschaften eines Wartungsplans z
 
         > [!NOTE]  
         >  Eine als **Erforderlich** bereitgestellte Softwareupdategruppe wird im Hintergrund heruntergeladen und berücksichtigt BITS-Einstellungen (sofern konfiguriert).  
+        >  
         > Als **Verfügbar** bereitgestellte Softwareupdategruppen werden jedoch im Vordergrund heruntergeladen und ignorieren BITS-Einstellungen.  
 
     -   **Wake-on-LAN verwenden, um Clients für erforderliche Bereitstellungen zu aktivieren**: Geben Sie an, ob Wake-On-LAN am Stichtag aktiviert werden soll, damit Aktivierungspakete an Computer gesendet werden, für die mindestens eines der in der Bereitstellung enthaltenen Softwareupdates erforderlich ist. Alle Computer, die sich am Installationsstichtag im Energiesparmodus befinden, werden aktiviert, damit die Softwareupdateinstallation initiiert werden kann. Clients, die sich im Energiesparmodus befinden und für die keine der in der Bereitstellung enthaltenen Softwareupdates erforderlich sind, werden nicht gestartet. Diese Einstellung ist standardmäßig deaktiviert und nur verfügbar, wenn unter **Bereitstellungstyp** die Einstellung **Erforderlich**ausgewählt wurde.  

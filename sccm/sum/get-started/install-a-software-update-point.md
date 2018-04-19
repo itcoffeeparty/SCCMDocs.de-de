@@ -1,22 +1,23 @@
 ---
 title: Installieren und Konfigurieren eines Softwareupdatepunkts
 titleSuffix: Configuration Manager
-description: "Primäre Standorte setzen einen Softwareupdatepunkt am Standort der zentralen Verwaltung voraus, da damit die Bewertung der Kompatibilität von Softwareupdates und die Bereitstellung von Softwareupdates an Clients durchgeführt werden können."
-keywords: 
+description: Primäre Standorte setzen einen Softwareupdatepunkt am Standort der zentralen Verwaltung voraus, da damit die Bewertung der Konformität von Softwareupdates und die Bereitstellung von Softwareupdates an Clients durchgeführt werden können.
+keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: angrobe
 ms.date: 05/30/2017
 ms.topic: article
 ms.prod: configuration-manager
-ms.service: 
-ms.technology: configmgr-sum
+ms.service: ''
+ms.technology:
+- configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-ms.openlocfilehash: c17dd40175bac5ecc4361e905f009f1ed5c2f5a4
-ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
+ms.openlocfilehash: 19cc49355d931595f08f81685ca0549ad9cba4e5
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-and-configure-a-software-update-point"></a>Installieren und Konfigurieren eines Softwareupdatepunkts  
 
@@ -24,9 +25,9 @@ ms.lasthandoff: 11/17/2017
 
 
 > [!IMPORTANT]  
->  Installieren Sie die Standortsystemrolle „Softwareupdatepunkt“ erst, nachdem Sie überprüft haben, ob der Server die erforderlichen Abhängigkeiten aufweist, und nachdem Sie die Infrastruktur der Softwareupdatepunkte am Standort bestimmt haben. Weitere Informationen zum Planen von Softwareupdates und zum Bestimmen der Infrastruktur der Softwareupdatepunkte finden Sie unter [Planen von Softwareupdates](../plan-design/plan-for-software-updates.md).  
+>  Installieren Sie die Standortsystemrolle „Softwareupdatepunkt“ (SUP) erst, nachdem Sie überprüft haben, ob der Server die erforderlichen Abhängigkeiten aufweist, und nachdem Sie die Infrastruktur der Softwareupdatepunkte am Standort bestimmt haben. Weitere Informationen zum Planen von Softwareupdates und zum Bestimmen der Infrastruktur der Softwareupdatepunkte finden Sie unter [Planen von Softwareupdates](../plan-design/plan-for-software-updates.md).  
 
- Der Softwareupdatepunkt ist am Standort der zentralen Verwaltung und an primären Standorten erforderlich, da andernfalls die Bewertung der Kompatibilität von Softwareupdates und die Bereitstellung von Softwareupdates an Clients nicht möglich wären. An sekundären Standorten ist der Softwareupdatepunkt optional. Die Standortsystemrolle „Softwareupdatepunkt“ muss auf einem Computer erstellt werden, auf dem WSUS installiert ist. Durch die Interaktion mit WSUS werden vom Softwareupdatepunkt die Softwareupdateeinstellungen konfiguriert, und die Synchronisierung von Metadaten für Softwareupdates wird angefordert. Wenn Sie über eine Configuration Manager-Hierarchie verfügen, installieren und konfigurieren Sie den Softwareupdatepunkt zuerst am Standort der zentralen Verwaltung, dann an untergeordneten primären Standorten und schließlich optional an sekundären Standorten. Wenn Sie über einen eigenständigen primären Standort verfügen (nicht über einen Standort der zentralen Verwaltung), installieren und konfigurieren Sie den Softwareupdatepunkt zuerst am primären Standort und dann optional an sekundären Standorten. Einige Einstellungen sind nur verfügbar, wenn Sie den Softwareupdatepunkt an einem Standort der obersten Ebene konfigurieren. Je nachdem, wo Sie den Softwareupdatepunkt installiert haben, müssen Sie unterschiedliche Optionen in Erwägung ziehen.  
+ Der Softwareupdatepunkt ist am Standort der zentralen Verwaltung und an primären Standorten erforderlich, da andernfalls die Bewertung der Konformität von Softwareupdates und die Bereitstellung von Softwareupdates an Clients nicht möglich wären. An sekundären Standorten ist der Softwareupdatepunkt optional. Die Standortsystemrolle „Softwareupdatepunkt“ muss auf einem Computer erstellt werden, auf dem WSUS installiert ist. Durch die Interaktion mit WSUS werden vom Softwareupdatepunkt die Softwareupdateeinstellungen konfiguriert, und die Synchronisierung von Metadaten für Softwareupdates wird angefordert. Wenn Sie über eine Configuration Manager-Hierarchie verfügen, installieren und konfigurieren Sie den Softwareupdatepunkt zuerst am Standort der zentralen Verwaltung, dann an untergeordneten primären Standorten und schließlich optional an sekundären Standorten. Wenn Sie über einen eigenständigen primären Standort verfügen (nicht über einen Standort der zentralen Verwaltung), installieren und konfigurieren Sie den Softwareupdatepunkt zuerst am primären Standort und dann optional an sekundären Standorten. Einige Einstellungen sind nur verfügbar, wenn Sie den Softwareupdatepunkt an einem Standort der obersten Ebene konfigurieren. Je nachdem, wo Sie den Softwareupdatepunkt installiert haben, müssen Sie unterschiedliche Optionen in Erwägung ziehen.  
 
 > [!IMPORTANT]  
 >  Sie können an einem Standort mehrere Softwareupdatepunkte installieren. Der zuerst installierte Softwareupdatepunkt wird als Synchronisierungsquelle konfiguriert. Er dient zur Synchronisierung der Updates von Microsoft Update oder von der Upstreamsynchronisierungsquelle. Die übrigen Softwareupdatepunkte am Standort werden als Replikate des ersten Softwareupdatepunkts konfiguriert. Daher sind einige Einstellungen nach der Installation und Konfiguration des ersten Softwareupdatepunkts nicht verfügbar.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  Die Installation der Standortsystemrolle „Softwareupdatepunkt“ auf einem Server, der als eigenständiger WSUS-Server konfiguriert und verwendet wird, oder die Verwendung eines Softwareupdatepunkts für die direkte Verwaltung von WSUS-Clients wird nicht unterstützt. Vorhandene WSUS-Server werden nur als Upstreamsynchronisierungsquellen für den aktiven Softwareupdatepunkt unterstützt. Siehe [Über eine Upstreamdatenquelle synchronisieren](#BKMK_wsussync).
 
- Sie können die Standortsystemrolle „Softwareupdatepunkt“ einem vorhandenen Standortsystemserver hinzufügen oder einen neuen erstellen. Je nachdem, ob Sie die Standortsystemrolle einem neuen oder einem vorhandenen Standortserver hinzufügen, wählen Sie im **Assistenten zum Erstellen von Standortsystemservern** oder im **Assistenten zum Hinzufügen von Standortsystemrollen** auf der Seite **Systemrollenauswahl** die Option **Softwareupdatepunkt**. Konfigurieren Sie dann die Einstellungen für den Softwareupdatepunkt im Assistenten. Die Einstellungen sind je nach der von Ihnen verwendeten Version von Configuration Manager unterschiedlich. Weitere Informationen zum Installieren einer Standortsystemrolle finden Sie unter [Installieren von Standortsystemrollen](../../core/servers/deploy/configure/install-site-system-roles.md).  
+ Sie können die Standortsystemrolle „Softwareupdatepunkt“ einem vorhandenen Standortsystemserver hinzufügen oder einen neuen erstellen. Je nachdem, ob Sie die Standortsystemrolle einem neuen oder einem vorhandenen Standortserver hinzufügen, wählen Sie im **Assistenten zum Erstellen von Standortsystemservern** oder im **Assistenten zum Hinzufügen von Standortsystemrollen auf der Seite **Systemrollenauswahl** die Option **Softwareupdatepunkt** aus. Konfigurieren Sie dann die Einstellungen für den Softwareupdatepunkt im Assistenten. Die Einstellungen sind je nach der von Ihnen verwendeten Version von Configuration Manager unterschiedlich. Weitere Informationen zum Installieren einer Standortsystemrolle finden Sie unter [Installieren von Standortsystemrollen](../../core/servers/deploy/configure/install-site-system-roles.md).  
 
  In den folgenden Abschnitten finden Sie Informationen über die Einstellungen für Softwareupdatepunkte an einem Standort.  
 
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/17/2017
  Weitere Informationen zu Paketzugriffskonten finden Sie unter [In System Center Configuration Manager verwendete Konten](../../core/plan-design/hierarchy/accounts.md).  
 
 ## <a name="synchronization-source"></a>Synchronisierungsquelle  
- Sie können die Upstreamsynchronisierungsquelle für die Synchronisierung von Softwareupdates im Assistenten auf der Seite **Synchronisierungsquelle** oder in "Eigenschaften der Softwareupdatepunktkomponente" auf der Registerkarte **Synchronisierungseinstellungen** konfigurieren. Die Optionen für die Synchronisierungsquelle variieren je nach Standort.  
+ Sie können die Upstreamsynchronisierungsquelle für die Synchronisierung von Softwareupdates im Assistenten auf der Seite **Synchronisierungsquelle** oder in „Eigenschaften der Softwareupdatepunktkomponente“ auf der Registerkarte **Synchronisierungseinstellungen** konfigurieren. Die Optionen für die Synchronisierungsquelle variieren je nach Standort.  
 
  In der folgenden Tabelle finden Sie eine Übersicht über die Optionen, die beim Konfigurieren des Softwareupdatepunkts an einem Standort verfügbar sind.  
 
@@ -101,7 +102,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Wenn es zwischen dem Softwareupdatepunkt und dem Internet eine Firewall gibt, muss die Firewall möglicherweise zum Akzeptieren der für die WSUS-Website verwendeten HTTP- und HTTPS-Ports konfiguriert werden. Nach Wunsch können Sie den Zugriff auf der Firewall auf bestimmte Domänen einschränken. Weitere Informationen zum Planen einer Firewall, von der Softwareupdates unterstützt werden, finden Sie unter [Configure firewalls](../plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls).  
 
- Sie können im Assistenten auf der Seite **Synchronisierungsquelle** oder in "Eigenschaften der Softwareupdatepunktkomponente" auf der Registerkarte **Synchronisierungseinstellungen** auch festlegen, ob WSUS-Berichterstattungsereignisse erstellt werden sollen. Da Configuration Manager diese Ereignisse nicht verwendet, wählen Sie in der Regel die Standardeinstellung **Keine WSUS-Berichterstattungsereignisse erstellen**.  
+ Sie können im Assistenten auf der Seite **Synchronisierungsquelle** oder in „Eigenschaften der Softwareupdatepunktkomponente“ auf der Registerkarte **Synchronisierungseinstellungen** auch festlegen, ob WSUS-Berichterstattungsereignisse erstellt werden sollen. Da Configuration Manager diese Ereignisse nicht verwendet, wählen Sie in der Regel die Standardeinstellung **Keine WSUS-Berichterstattungsereignisse erstellen**.  
 
 ## <a name="synchronization-schedule"></a>Synchronisierungszeitplan  
  Konfigurieren Sie den Synchronisierungszeitplan im Assistenten auf der Seite **Synchronisierungszeitplan** oder in "Eigenschaften der Softwareupdatepunktkomponente". Diese Einstellung wird nur auf dem Softwareupdatepunkt am Standort der obersten Ebene konfiguriert.  
@@ -123,7 +124,7 @@ ms.lasthandoff: 11/17/2017
 >  Die Seite **Ablösungsregeln** ist im Assistenten nur verfügbar, wenn Sie den ersten Softwareupdatepunkt am Standort konfigurieren. Bei der Installation weiterer Softwareupdatepunkte wird diese Seite nicht angezeigt.  
 
 ## <a name="classifications"></a>Klassifizierungen  
- Konfigurieren Sie die Klassifizierungseinstellungen im Assistenten auf der Seite **Klassifizierungen** oder in "Eigenschaften der Softwareupdatepunktkomponente" auf der Registerkarte **Klassifizierungen** . Weitere Informationen zu Softwareupdateklassifizierungen finden Sie unter [Update classifications](../plan-design/plan-for-software-updates.md#BKMK_UpdateClassifications).  
+ Konfigurieren Sie die Klassifizierungseinstellungen im Assistenten auf der Seite **Klassifizierungen** oder in den „Eigenschaften der Softwareupdatepunktkomponente“ auf der Registerkarte **Klassifizierungen** . Weitere Informationen zu Softwareupdateklassifizierungen finden Sie unter [Update classifications](../plan-design/plan-for-software-updates.md#BKMK_UpdateClassifications).  
 
 > [!NOTE]  
 >  Die Seite **Klassifizierungen** ist im Assistenten nur verfügbar, wenn Sie den ersten Softwareupdatepunkt am Standort konfigurieren. Bei der Installation weiterer Softwareupdatepunkte wird diese Seite nicht angezeigt.  
@@ -132,7 +133,7 @@ ms.lasthandoff: 11/17/2017
 >  Deaktivieren Sie bei der Erstinstallation des Softwareupdatepunkts am Standort der obersten Ebene alle Klassifizierungen für Softwareupdates. Nach der Erstsynchronisierung der Softwareupdates konfigurieren Sie die Klassifizierungen anhand einer aktualisierten Liste, und initiieren Sie dann die Synchronisierung erneut. Diese Einstellung wird nur auf dem Softwareupdatepunkt am Standort der obersten Ebene konfiguriert.  
 
 ## <a name="products"></a>Produkte  
- Konfigurieren Sie die Produkteinstellungen im Assistenten auf der Seite **Produkte** oder in "Eigenschaften der Softwareupdatepunktkomponente" auf der Registerkarte **Produkte** .  
+ Konfigurieren Sie die Produkteinstellungen im Assistenten auf der Seite **Produkte** oder in den „Eigenschaften der Softwareupdatepunktkomponente“ auf der Registerkarte **Produkte** .  
 
 > [!NOTE]  
 >  Die Seite **Produkte** ist im Assistenten nur verfügbar, wenn Sie den ersten Softwareupdatepunkt am Standort konfigurieren. Bei der Installation weiterer Softwareupdatepunkte wird diese Seite nicht angezeigt.  
@@ -141,12 +142,15 @@ ms.lasthandoff: 11/17/2017
 >  Deaktivieren Sie bei der Erstinstallation des Softwareupdatepunkts am Standort der obersten Ebene alle Produkte. Nach der Erstsynchronisierung der Softwareupdates konfigurieren Sie die Produkte anhand einer aktualisierten Liste, und initiieren Sie dann die Synchronisierung erneut. Diese Einstellung wird nur auf dem Softwareupdatepunkt am Standort der obersten Ebene konfiguriert.  
 
 ## <a name="languages"></a>Sprachen  
- Konfigurieren Sie die Spracheinstellungen im Assistenten auf der Seite **Sprachen** oder in "Eigenschaften der Softwareupdatepunktkomponente" auf der Registerkarte **Sprachen** . Geben Sie die Sprachen an, für die Sie Softwareupdatedateien und Übersichtsdetails synchronisieren möchten. Die Einstellung **Softwareupdatedatei** wird auf jedem Softwareupdatepunkt in der Configuration Manager-Hierarchie konfiguriert. Die Einstellung **Übersichtsdetails** wird nur auf dem Softwareupdatepunkt am Standort der obersten Ebene konfiguriert. Weitere Informationen finden Sie unter [Languages](../plan-design/plan-for-software-updates.md#BKMK_UpdateLanguages).  
+ Konfigurieren Sie die Spracheinstellungen im Assistenten auf der Seite **Sprachen** oder in den „Eigenschaften der Softwareupdatepunktkomponente“ auf der Registerkarte **Sprachen** . Geben Sie die Sprachen an, für die Sie Softwareupdatedateien und Übersichtsdetails synchronisieren möchten. Die Einstellung **Softwareupdatedatei** wird auf jedem Softwareupdatepunkt in der Configuration Manager-Hierarchie konfiguriert. Die Einstellung **Übersichtsdetails** wird nur auf dem Softwareupdatepunkt am Standort der obersten Ebene konfiguriert. Weitere Informationen finden Sie unter [Languages](../plan-design/plan-for-software-updates.md#BKMK_UpdateLanguages).  
 
 > [!NOTE]  
 >  Die Seite **Sprachen** ist im Assistenten nur verfügbar, wenn Sie den ersten Softwareupdatepunkt am Standort der zentralen Verwaltung installieren. Sie können die Sprachen für die Softwareupdatedatei an untergeordneten Standorten über die Registerkarte **Sprachen** in "Eigenschaften der Softwareupdatepunktkomponente" konfigurieren.  
 
+## <a name="third-party-updates"></a>Updates von Drittanbietern
+Ab Configuration Manager Version 1802 können Sie Updates von Drittanbietern für Konfigurations-Manager-Clients aktivieren. Wenn Sie Softwareupdates von Drittanbietern für die SUP-Komponenteneigenschaften aktivieren, wird der SUP das Signaturzertifikat herunterladen, das von WSUS für Updates von Drittanbietern verwendet wird. Diese Option ist während der Installation der Softwareupdatepunkte nicht verfügbar und muss nach der SUP-Installation konfiguriert werden. Informationen zur Aktivierung der Clienteinstellungen für Updates von Drittanbietern finden Sie im Artikel [Informationen zu Clienteinstellungen](/sccm/core/clients/deploy/about-client-settings#Enable-third-party-software-updates).
+
 ## <a name="next-steps"></a>Nächste Schritte
-Sie haben den Softwareupdatepunkt ausgehend vom obersten Standort in der Configuration Manager-Hierarchie installiert. Wiederholen Sie die Verfahren in diesem Thema zum Installieren des Softwareupdatepunkts an untergeordneten Standorten.
+Sie haben den Softwareupdatepunkt ausgehend vom obersten Standort in der Configuration Manager-Hierarchie installiert. Wiederholen Sie die Verfahren in diesem Artikel zum Installieren des Softwareupdatepunkts an untergeordneten Standorten.
 
 Nachdem Sie die Softwareupdatepunkte installiert haben, wechseln Sie zu [Synchronisieren von Softwareupdates](synchronize-software-updates.md).

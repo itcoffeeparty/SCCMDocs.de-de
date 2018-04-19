@@ -17,11 +17,11 @@ caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 42b9364fc88acc3f403db8d2ca9243a117fd78bf
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: bd03457abdd5cc4464c10227626ba72637c96f90
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>Informationen zu Clienteinstellungen in System Center Configuration Manager
 
@@ -801,8 +801,9 @@ Diese Einstellung konfiguriert den lokalen Port dafür, dass Expressinhalte durc
 
 Wenn diese Einstellung auf **Ja** festgelegt ist, ermöglicht sie die Konfiguration von Office 365-Installationseinstellungen. Sie ermöglicht zudem das Herunterladen von Dateien aus Office Content Delivery Networks (CDNs) und das Bereitstellen der Dateien als Anwendung in Configuration Manager. Weitere Informationen finden Sie unter [Verwalten von Office 365 ProPlus](/sccm/sum/deploy-use/manage-office-365-proplus-updates).
 
+### <a name="enable-third-party-software-updates"></a>Aktivieren von Softwareupdates von Drittanbietern 
 
-
+Wenn Sie dies auf **Ja** festlegen, wird die Richtlinie für „Zulassen signierter Updates für einen Intranet-Speicherort für den Microsoft-Updatedienst“ festgelegt, und das Signaturzertifikat im Speicher für vertrauenswürdige Herausgeber auf dem Client installiert. Diese Clienteinstellung wurde in der Configuration Manager-Version 1802 hinzugefügt.
 ## <a name="state-messaging"></a>Zustandsmeldung
 
 ### <a name="state-message-reporting-cycle-minutes"></a>Zustandsmeldungs-Berichtszyklus (Minuten)

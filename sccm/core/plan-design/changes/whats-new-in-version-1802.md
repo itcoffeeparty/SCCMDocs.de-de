@@ -15,11 +15,11 @@ ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4582d1105f2465c37e001570227112bfca3bad1c
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 9c9ff975a58e7c56375fa7740a0a5bb6ebfa6341
+ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>Neuerungen in Version 1802 von System Center Configuration Manager
 
@@ -149,8 +149,8 @@ Das Gerätedashboard von Surface enthält Informationen zu den Surface-Geräten 
 Weitere Einzelheiten finden Sie im Artikel [Surface dashboard (Surface-Dashboard)](/sccm/core/clients/manage/surface-device-dashboard).
 
 ### <a name="change-in-the-configuration-manager-client-install"></a>Ändern im Configuration Manager Client Install
-<!--1356195-->|
-Ab diesem Release wird Silverlight nicht mehr automatisch auf Clientgeräten installiert. Weitere Informationen finden Sie unter [Voraussetzungen für die Bereitstellung von Clients auf Windows-Computern](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.#BKMK_ExternalDependencies)
+<!--1356195-->
+Ab diesem Release wird Silverlight nicht mehr automatisch auf Clientgeräten installiert. Weitere Informationen finden Sie unter [Voraussetzungen für die Bereitstellung von Clients auf Windows-Computern](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers#bkmk_ExternalDependencies).
 
 ## <a name="co-management"></a>Co-Verwaltung
 

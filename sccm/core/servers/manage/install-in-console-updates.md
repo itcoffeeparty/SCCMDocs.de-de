@@ -3,7 +3,7 @@ title: Konsoleninterne Updates
 titleSuffix: Configuration Manager
 description: Installieren von Configuration Manager-Updates über die Microsoft-Cloud
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.latest.revision: 36
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5d364e35c8777c782499da978f0d1a31694278cc
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 054bbd8e7b1dd3f5d565afe60eb7e3379cc7a9ee
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="install-in-console-updates-for-system-center-configuration-manager"></a>Installieren konsoleninterner Updates für System Center Configuration Manager
 
@@ -210,13 +210,17 @@ Nach dem Abschluss der Installation des ersten Standortupdates:
 #### <a name="5-update-configuration-manager-consoles"></a>5. Aktualisieren von Configuration Manager-Konsolen  
 Nach dem Update eines Standorts der zentralen Verwaltung oder eines primären Standorts muss jede Configuration Manager-Konsole, die mit diesem Standort eine Verbindung herstellt, ebenfalls aktualisiert werden. In folgenden Fällen werden Sie zum Aktualisieren einer Konsole aufgefordert:  
 
--   Sie öffnen die Konsole.
+-   Wenn Sie die Konsole öffnen.
 
 -   Sie navigieren in einer geöffneten Konsole zu einem neuen Knoten.
 
 Es wird empfohlen, das Update sofort und ohne Verzögerung zu installieren.  
 
 Nach Abschluss des Konsolenupdates können Sie überprüfen, ob die Version von Konsole und Standort korrekt ist. Gehen Sie oben links in der Konsole zu **Info zu System Center Configuration Manager**.  
+
+ > [!Note]  
+ > Ab Version 1802 ist die Konsolenversion jetzt etwas anders als die Standortversion. Die Nebenversion der Konsole entspricht nun der endgültigen Release-Version von Configuration Manager. In Configuration Manager Version 1802 ist die anfängliche Standortversion beispielsweise 5.0.8634.1000, und die erste Konsolenversion ist 5.**1802**.1082.1700. Die Build- (1082) und Revisionsnummern (1700) können sich mit zukünftigen Hotfixes zum Release von 1802 ändern.
+
 
 
 ###  <a name="bkmk_toptier"></a> So starten Sie die Updateinstallation am Standort der obersten Ebene  

@@ -1,45 +1,46 @@
 ---
-title: Vorbereiten von Windows 10-Geräten für die Co-Verwaltung
+title: Vorbereiten von Windows 10 für die Co-Verwaltung
+titleSuffix: Configuration Manager
 description: Erfahren Sie, wie sie Windows 10-Geräte für die Co-Verwaltung vorbereiten.
-keywords: ''
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: ''
 ms.technology: ''
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 61aef0351e32ef6cf31911a8dfd27e86de82f38c
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: a45ded0f3824c148f64f9578e51cc112c05d9f78
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>Vorbereiten von Windows 10-Geräten für die Co-Verwaltung
-Sie können die Co-Verwaltung auf Windows 10-Geräten aktivieren, die in AD und Azure AD eingebunden, bei Intune registriert und ein Client in Configuration Manager sind. Installieren Sie den Configuration Manager-Client auf neuen Windows 10- und bereits in Intune registrierten Geräten jedoch vor der Aktivierung der Co-Verwaltung. Windows 10-Geräte, die Configuration Manager-Clients sind, können Sie bei Intune registrieren und die Co-Verwaltung über die Configuration Manager-Konsole aktivieren.
+Sie können die Co-Verwaltung auf Windows 10-Geräten aktivieren, die in AD und Azure AD eingebunden, bei Microsoft Intune registriert und ein Client in Configuration Manager sind. Installieren Sie den Configuration Manager-Client auf neuen Windows 10- und bereits in Intune registrierten Geräten jedoch vor der Aktivierung der Co-Verwaltung. Windows 10-Geräte, die Configuration Manager-Clients sind, können Sie bei Intune registrieren und die Co-Verwaltung über die Configuration Manager-Konsole aktivieren.
 
 > [!IMPORTANT]
 > Co-Verwaltung wird von Windows 10 Mobile-Geräten nicht unterstützt.
 
+
+
 ## <a name="command-line-to-install-configuration-manager-client"></a>Befehlszeile zum Installieren von Configuration Manager-Clients
 Erstellen Sie eine App in Intune für Windows 10-Geräte, die noch keine Configuration Manager-Clients sind. Wenn Sie in den nächsten Abschnitten eine App erstellen, verwenden Sie die folgende Befehlszeile:
 
-ccmsetup.msi CCMSETUPCMD="/mp:&#60;*URL des Cloudverwaltungsgateway-Endpunkts für die gegenseitige Authentifizierung*&#62;/ CCMHOSTNAME=&#60;*URL des Cloudverwaltungsgateway-Endpunkts für die gegenseitige Authentifizierung*&#62; SMSSiteCode=&#60;*Standortcode*&#62; SMSMP=https:&#47;/&#60;*FQDN des MPs*&#62; AADTENANTID=&#60;*AAD-Mandanten-ID*&#62; AADTENANTNAME=&#60;*Mandantenname*&#62; AADCLIENTAPPID=&#60;*Server-App-ID für die AAD-Integration*&#62; AADRESOURCEURI=https:&#47;/&#60;*Ressourcen-ID*&#62;”
+`ccmsetup.msi CCMSETUPCMD="/mp:<URL of cloud management gateway mutual auth endpoint> CCMHOSTNAME=<URL of cloud management gateway mutual auth endpoint> SMSSiteCode=<Sitecode> SMSMP=https://<FQDN of MP> AADTENANTID=<AAD tenant ID> AADCLIENTAPPID=<Server AppID for AAD Integration> AADRESOURCEURI=https://<Resource ID>"`
 
 Angenommen, Sie haben die folgenden Werte:
 
-- **URL des Cloudverwaltungsgateway-Endpunkts für die gegenseitige Authentifizierung**: https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    
+- **URL des Cloudverwaltungsgateway-Endpunkts für die gegenseitige Authentifizierung**: https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500    
 
    >[!Note]    
    >Verwenden Sie den Wert von **MutualAuthPath** in der SQL-Ansicht **vProxy_Roles** als Wert für die **URL des Cloudverwaltungsgateway-Endpunkts für die gegenseitige Authentifizierung**.
 
-- **FQDN des Verwaltungspunkts (Management Point, MP)**: sccmmp.corp.contoso.com    
+- **FQDN des Verwaltungspunkts (Management Point, MP)**: mp1.contoso.com    
 - **Standortcode**: PS1    
-- **Azure AD-Mandanten-ID**: 72F988BF-86F1-41AF-91AB-2D7CD011XXXX    
-- **Name des Azure AD-Mandanten**: contoso    
-- **ID der Azure AD-Client-App**: bef323b3-042f-41a6-907a-f9faf0d1XXXX     
+- **Azure AD-Mandanten-ID**: daf4a1c2-3a0c-401b-966f-0b855d3abd1a    
+- **Azure AD-Client-App-ID**: 7506ee10-f7ec-415a-b415-cd3d58790d97     
 - **URI der AAD-Ressourcen-ID**: ConfigMgrServer    
 
   > [!Note]    
@@ -47,7 +48,7 @@ Angenommen, Sie haben die folgenden Werte:
 
 Daraus ergibt sich die folgende Befehlszeile:
 
-ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=PS1 SMSMP=https:/&#47;sccmmp.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI=https:/&#47;ConfigMgrServer”
+`ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=PS1 SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://ConfigMgrServer"`
 
 > [!Tip]
 > Die Befehlszeilenparameter für Ihren Standort finden Sie anhand der folgenden Schritte:     

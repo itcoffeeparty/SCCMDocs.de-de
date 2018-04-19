@@ -1,39 +1,40 @@
 ---
 title: Windows Defender Advanced Threat Protection
 titleSuffix: Configuration Manager
-description: "Erfahren Sie, wie Sie Windows Defender Advanced Threat Protection, einen neuen Dienst, der Unternehmen dabei hilft, auf erweiterte Angriffe zu reagieren, verwalten und überwachen können."
+description: Erfahren Sie, wie Sie Windows Defender Advanced Threat Protection, einen neuen Dienst, der Unternehmen dabei hilft, auf erweiterte Angriffe zu reagieren, verwalten und überwachen können.
 ms.custom: na
 ms.date: 03/07/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 561a03c7046accaa8e6d36407c75cbd4248188ce
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 84786d741eda2be24a7deb39478e68c68adc38fe
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="windows-defender-advanced-threat-protection"></a>Windows Defender Advanced Threat Protection
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Ab Version 1606 von Configuration Manager (Current Branch) kann Endpoint Protection Windows Defender Advanced Threat Protection (ATP) verwalten und überwachen. Windows Defender ATP ist ein neuer Dienst, der Unternehmen dabei unterstützt, erweiterte Angriffe auf ihre Netzwerke zu entdecken, zu untersuchen, und darauf zu reagieren.  Weitere Informationen finden Sie unter [Windows Defender ATP](http://aka.ms/technet-wdatp). Richtlinien von Configuration Manager können Sie dabei unterstützen, verwaltetes Windows 10, Version 1607, (Build 14328) oder höher zu integrieren und zu verwalten.
+Ab Version 1606 von Configuration Manager (Current Branch) kann Endpoint Protection [Windows Defender Advanced Threat Protection (ATP)](http://aka.ms/technet-wdatp) verwalten und überwachen. Windows Defender ATP unterstützt Unternehmen dabei, erweiterte Angriffe auf ihre Netzwerke zu entdecken, zu untersuchen, und darauf zu reagieren.  Richtlinien von Configuration Manager oder Microsoft Intune können Sie dabei unterstützen, verwaltetes Windows 10, Version 1607, (Build 14328) oder höher zu integrieren und zu verwalten.
 
-Windows Defender ATP ist ein Dienst im [Windows-Sicherheitscenter](https://securitycenter.windows.com). Durch Hinzufügen und Bereitstellen einer Client-Onboardingkonfigurationsdatei kann Configuration Manager den Bereitstellungsstatus und die Windows Defender ATP-Agent-Integrität überwachen. Windows Defender ATP wird nur auf PCs mit Configuration Manager-Client unterstützt. Die lokale Verwaltung von Mobilgeräten und Computer, die mithilfe der hybriden Verwaltung mobiler Geräte verwaltet werden, werden nicht unterstützt.
+Windows Defender ATP ist ein Dienst im [Windows Defender Security Center](https://securitycenter.windows.com). Durch Hinzufügen und Bereitstellen einer Client-Onboardingkonfigurationsdatei kann Configuration Manager den Bereitstellungsstatus und die Windows Defender ATP-Agent-Integrität überwachen. Windows Defender ATP wird von Computern unterstützt, die den Konfigurations-Manager-Client ausführen oder von Microsoft Intune verwaltet werden, aber hybride, MDM-verwaltete Intune-Computer werden nicht unterstützt.
 
  **Voraussetzungen**  
 
--   Abonnement für den Onlinedienst Windows Defender Advanced Threat Protection  
+-   Abonnement für den Windows Defender Advanced Threat Protection-Onlinedienst  
 -   Clientcomputer unter Windows 10, Version 1607 und höher  
--   Clientcomputer, auf denen ein Client-Agent der Configuration Manager-Version 1610 oder höher ausgeführt wird
+-   Clientcomputer, auf denen ein Client-Agent der Configuration Manager-Version 1610 oder höher ausgeführt wird oder die von Microsoft Intune verwaltet werden
 
 ## <a name="how-to-create-an-onboarding-configuration-file"></a>So erstellen Sie eine Onboardingkonfigurationsdatei  
 

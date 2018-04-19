@@ -1,25 +1,26 @@
 ---
 title: Bereitstellen von Mac-Clients
 titleSuffix: Configuration Manager
-description: "Erfahren Sie, wie Sie Clients auf Macintosh-Computern in System Center Configuration Manager bereitstellen können."
+description: Erfahren Sie, wie Sie Clients auf Macintosh-Computern in System Center Configuration Manager bereitstellen können.
 ms.custom: na
 ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: aaroncz
 ms.suite: na
-ms.technology: configmgr-client
+ms.technology:
+- configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e46ad501-5d73-44ac-92de-0de14ef72b83
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: arob98
 ms.author: angrobe
 manager: angrobe
 ms.openlocfilehash: 1b7f20a48e0e7219d933c367fb9f0315fc287dfd
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="how-to-deploy-clients-to-macs"></a>How to deploy clients to Macs
 
@@ -80,7 +81,7 @@ In diesen Verfahren haben Sie zwei Optionen zum Installieren von Clientzertifika
 
 -   **Hardwareinventur**: Aktivieren und konfigurieren Sie dies, wenn Sie Hardwareinventurdaten von Macintosh- und Windows-Clientcomputern sammeln möchten. Weitere Informationen finden Sie unter [Erweitern der Hardwareinventur in System Center Configuration Manager](../../../core/clients/manage/inventory/extend-hardware-inventory.md).  
 
--   **Konformitätseinstellungen**: Aktivieren und konfigurieren Sie dies, wenn Sie Einstellungen von Macintosh- und Windows-Clientcomputern auswerten und wiederherstellen möchten. Weitere Informationen finden Sie unter [Planen und Konfigurieren von Kompatibilitätseinstellungen](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md).  
+-   **Konformitätseinstellungen**: Aktivieren und konfigurieren Sie dies, wenn Sie Einstellungen von Macintosh- und Windows-Clientcomputern auswerten und wiederherstellen möchten. Weitere Informationen finden Sie unter [Planen und Konfigurieren von Konformitätseinstellungen](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md).  
 
 > [!NOTE]  
 >  Weitere Informationen zu Configuration Manager-Clienteinstellungen finden Sie unter [Konfigurieren von Clienteinstellungen in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md).  
@@ -198,7 +199,7 @@ Verwenden Sie dieses Verfahren für die Automatisierung der Installation des Cli
 > -   Die BOM-Datei (Bill of Materials) und die Eigenschaftenlistendatei (PLIST-Datei), die im Rahmen der Configuration Manager-Clientinstallation erstellt wurden  
 > -   Der Inhalt des Ordners /Library/Application Support/Microsoft/CCM/Logs  
 >   
->  Die von CmDiagnostics gesammelten Informationen werden einer ZIP-Datei hinzugefügt, die auf dem Desktop des Computers gespeichert und den Namen„cmdiag-*<Hostname\>***-***&gt;Datum und Uhrzeit\>*.zip“ erhält.***
+>  Die von CmDiagnostics gesammelten Informationen werden zu einer ZIP-Datei hinzugefügt, die auf dem Desktop des Computers gespeichert und den Namen„cmdiag-*<Hostname\>***-***&gt;Datum und Uhrzeit\>*.zip“ erhält.***
 
 
 ##  <a name="use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager"></a>Verwenden einer von Configuration Manager unabhängigen Zertifikatanforderungs- und -installationsmethode  

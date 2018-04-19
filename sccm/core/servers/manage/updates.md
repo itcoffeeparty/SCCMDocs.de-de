@@ -1,9 +1,9 @@
 ---
-title: Updates
+title: Updates und Wartung
 titleSuffix: Configuration Manager
-description: Hier finden Sie Informationen zu einer konsoleninternen Dienstmethode namens **Updates und Wartung**, mit der Sie empfohlene Updates leicht finden und installieren können.
+description: Hier finden Sie Informationen zu einer konsoleninternen Dienstmethode namens „Updates und Wartung“, mit der Sie empfohlene Updates leicht finden und installieren können.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,12 @@ caps.latest.revision: 51
 caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 8be32aa07819239820711079e4ff3637e96367db
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+manager: dougeby
+ms.openlocfilehash: 7660736dbacebb7167cb6bd19d7590d7f774e17c
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="updates-for-system-center-configuration-manager"></a>Updates für System Center Configuration Manager
 
@@ -90,6 +90,10 @@ Die folgenden Versionen von Configuration Manager sind als Baseline- und/oder Up
 *(Hinweis 1)* Die Baselinemedien für 1802 und 1702 sind als Teil des Microsoft System Center 2016- oder des System Center Configuration Manager-Release (Current Branch und Long Term Servicing Branch) im [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC) verfügbar. Sie können z.B. im VLSC nach *System Center Config Mgr (Current Branch and LTSB)* suchen, woraufhin die Baselinemedien der Versionen 1802 und 1702 zurückgegeben werden und zum Download zur Verfügung stehen.
 
 Um die Version Ihres Configuration Manager-Standorts zu überprüfen, wechseln Sie oben links in der Konsole, wo die neue Version des Standorts und der Konsole angezeigt wird, zu **Info zu System Center Configuration Manager** .  
+
+ > [!Note]  
+ > Ab Version 1802 ist die Konsolenversion jetzt etwas anders als die Standortversion. Die Nebenversion der Konsole entspricht nun der endgültigen Produktversion von Configuration Manager. In Configuration Manager Version 1802 lautet die anfängliche Standortversion beispielsweise 5.0.8634.1000 und die erste Konsolenversion 5.**1802**.1082.1700. Die Build- (1082) und Revisionsnummern (1700) können sich mit zukünftigen Hotfixes zum Release von 1802 ändern.
+
 
 ##  <a name="bkmk_inconsole"></a> Konsoleninterne Updates und Wartung  
  Bei Verwendung einer für die Produktionsumgebung geeigneten Installation von System Center Configuration Manager (die auch als „Current Branch“ bezeichnet wird) sind die meisten zu installierenden Updates über den Kanal „Updates und Wartung“ verfügbar. Mit dieser Methode können Sie die Updates für Ihre aktuelle Infrastrukturversion und Konfiguration ermitteln, herunterladen und zur Verfügung stellen. Dies umfasst nur Updates, die Microsoft allen Kunden empfiehlt.   

@@ -10,11 +10,11 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 614c5ba3acb81f90a75726e8783125fb53a39a93
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: dabc248c1788ecad4d7b25c0a1f592e0ddeef826
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planen von Cloud Management Gateway in Configuration Manager
 
@@ -155,7 +155,7 @@ Gleichermaßen kommunizieren Clients aus Paris, wenn sich diese im Internet bewe
 
 - Abhängig von der Betriebssystemversion Ihres Clients und dem Authentifizierungsmodell sind möglicherweise **weitere Zertifikate** erforderlich. Weitere Informationen finden Sie unter [CMG-Zertifikate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway).  
 
-    - Ab Version 1802 müssen Sie alle [**Verwaltungspunkte für die Verwendung von HTTPS**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https) konfigurieren.  
+    - Ab Version 1802 müssen Sie alle für das CMG aktivierten [**Verwaltungspunkte für die Verwendung von HTTPS**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https) konfigurieren.  
 
 - Bei Windows 10-Clients ist möglicherweise eine Integration in **Azure AD** erforderlich. Weitere Informationen finden Sie unter [Konfigurieren von Azure-Diensten](/sccm/core/servers/deploy/configure/azure-services-wizard).  
 

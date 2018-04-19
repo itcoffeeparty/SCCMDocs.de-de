@@ -7,20 +7,21 @@ ms.date: 07/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
-caps.latest.revision: "7"
-caps.handback.revision: "0"
+caps.latest.revision: 7
+caps.handback.revision: 0
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
 ms.openlocfilehash: 9ef62bbf6269a6090f2345b10c24cc4df16c1e3b
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="configure-certificate-infrastructure"></a>Konfigurieren der Zertifikatinfrastruktur
 
@@ -130,7 +131,7 @@ Sie müssen mindestens einen Zertifikatregistrierungspunkt in der System Center 
     -   Wenn Sie **SCEP-Zertifikatanforderungen verarbeiten** ausgewählt haben, nehmen Sie folgende Konfiguration vor:
         -   **Websitename**, **HTTPS-Portnummer** und **Name der virtuellen Anwendung** für den Zertifikatregistrierungspunkt. Diese Felder werden automatisch mit Standardwerten ausgefüllt. 
         -   **URL für Registrierungsdienst für Netzwerkgeräte und Zertifikat der Stammzertifizierungsstelle**: Klicken Sie auf **Hinzufügen**, und geben Sie anschließend im Dialogfeld **URL und Zertifikat der Stammzertifizierungsstelle hinzufügen** Folgendes an:
-            - **URL für den Registrierungsdienst für Netzwerkgeräte:** Geben Sie die URL im folgenden Format an: https://*<FQDN des Servers>*/certsrv/mscep/mscep.dll. Beispiel: Wenn der FQDN des Servers mit dem Registrierungsdienst für Netzwerkgeräte server1.contoso.com ist, geben Sie **https://server1.contoso.com/certsrv/mscep/mscep.dll**ein.
+            - **URL für den Registrierungsdienst für Netzwerkgeräte:** Geben Sie die URL im folgenden Format an: https://*<FQDN des Servers>*/certsrv/mscep/mscep.dll. Beispiel: Wenn der FQDN des Servers, der den Registrierungsdienst für Netzwerkgeräte ausführt, „server1.contoso.com“ lautet, geben Sie **https://server1.contoso.com/certsrv/mscep/mscep.dll** ein.
             - **Zertifikat der Stammzertifizierungsstelle**: Navigieren Sie zur CER-Zertifikatdatei, die Sie in **Schritt 1: Installieren und Konfigurieren des Registrierungsdiensts für Netzwerkgeräte und der Abhängigkeiten**erstellt und gespeichert haben, und wählen Sie sie aus. Mit diesem Zertifikat der Stammzertifizierungsstelle kann das Clientauthentifizierungszertifikat, das vom System Center Configuration Manager-Richtlinienmodul verwendet wird, durch den Zertifikatregistrierungspunkt überprüft werden.  
 
     - Wenn Sie **PFX-Zertifikatanforderungen verarbeiten** ausgewählt haben, konfigurieren Sie die Verbindungsdetails und die Anmeldeinformationen für die ausgewählte Zertifizierungsstelle.
@@ -190,7 +191,7 @@ Sie müssen das System Center Configuration Manager-Richtlinienmodul auf jedem S
 
 4.  Übernehmen Sie auf der Seite **Installationsordner** den standardmäßigen Installationsordner für das Richtlinienmodul, oder geben Sie einen anderen Ordner an, und klicken Sie dann auf **Weiter**.  
 
-5.  Geben Sie auf der Seite **Zertifikatregistrierungspunkt** die URL des Zertifikatregistrierungspunkts an, indem Sie den FQDN des Standortsystemservers und den Namen der virtuellen Anwendung verwenden, der in den Eigenschaften des Zertifikatregistrierungspunkts aufgeführt ist. Der Standardname der virtuellen Anwendung lautet „CMCertificateRegistration“. Beispiel: Wenn der Standortsystemserver den FQDN server1.contoso.com aufweist und Sie den Standardnamen der virtuellen Anwendung verwendet haben, geben Sie **https://server1.contoso.com/CMCertificateRegistration**an.  
+5.  Geben Sie auf der Seite **Zertifikatregistrierungspunkt** die URL des Zertifikatregistrierungspunkts an, indem Sie den FQDN des Standortsystemservers und den Namen der virtuellen Anwendung verwenden, der in den Eigenschaften des Zertifikatregistrierungspunkts aufgeführt ist. Der Standardname der virtuellen Anwendung lautet „CMCertificateRegistration“. Beispiel: Wenn der Standortsystemserver den FQDN „server1.contoso.com“ aufweist und Sie den Standardnamen der virtuellen Anwendung verwendet haben, geben Sie **https://server1.contoso.com/CMCertificateRegistration** an.  
 
 6.  Übernehmen Sie den Standardport **443** , oder geben Sie die alternative Portnummer an, die vom Zertifikatregistrierungspunkt verwendet wird. Klicken Sie dann auf **Weiter**.  
 
