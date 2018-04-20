@@ -3,7 +3,7 @@ title: Windows Hello for Business-Einstellungen
 titleSuffix: Configuration Manager
 description: Erfahren Sie, wie Sie Windows Hello for Business in System Center Configuration Manager integrieren.
 ms.custom: na
-ms.date: 09/21/2017
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,25 +12,31 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a95bc292-af10-4beb-ab56-2a815fc69304
-caps.latest.revision: 
-author: lleonard-msft
-ms.author: alleonar
-manager: angrobe
-ms.openlocfilehash: 195a5f8e595b6a8597e8c8c8d9046c5864f46526
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+caps.latest.revision: 17
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 0d5e0f5e1d47441bd105fb5cae2e8f3f313dfa54
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="windows-hello-for-business-settings-in-system-center-configuration-manager"></a>Windows Hello for Business-Einstellungen in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
+<!--1245704-->
 Mit System Center Configuration Manager können Sie die Integration in Windows Hello for Business (früher Microsoft Passport für Windows) durchführen, eine alternative Anmeldemethode für Windows 10-Geräte. Hello for Business verwendet Active Directory oder ein Azure Active Directory-Konto, um ein Kennwort, eine Smartcard oder eine virtuelle Smartcard zu ersetzen.  
 
 Mit Hello for Business können Sie anstelle eines Kennworts eine **Benutzeraktion** zur Anmeldung verwenden. Eine Benutzeraktion kann eine einfache PIN, eine biometrische Authentifizierung oder ein externes Gerät wie ein Fingerabdruckleser sein.
 
-[Erfahren Sie mehr über Windows Hello for Business](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification).
+Weitere Informationen finden Sie unter [Windows Hello for Business](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification).
+
+
+> [!Note]  
+> Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen diese Feature aktivieren, bevor Sie es verwenden. Weitere Informationen finden Sie unter [Enable optional features from updates (Aktivieren optionaler Features von Updates)](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+
 
  Configuration Manager kann auf zwei Wegen in Windows Hello for Business integriert werden:  
 
@@ -38,10 +44,10 @@ Mit Hello for Business können Sie anstelle eines Kennworts eine **Benutzeraktio
 
 -   Sie können Authentifizierungszertifikate im Windows Hello for Business-Schlüsselspeicheranbieter (Key Storage Provider; KSP) speichern. Weitere Informationen finden Sie unter [Zertifikatprofile](introduction-to-certificate-profiles.md).  
 
-- Sie können Richtlinien von „Windows Hello for Business“ für Windows 10-Geräte bereitstellen, die in eine Domäne eingebunden sind und auf denen der Configuration Manager-Client ausgeführt wird. Diese Konfiguration wird unter [Konfigurieren von Windows Hello for Business auf einer Domäne angehörenden Windows 10-Geräten](#configure-windows-hello-for-business-on-domain-joined-windows-10-devices) weiter unten beschrieben. Wenn Sie Configuration Manager mit Microsoft Intune (hybrid) verwenden, können Sie diese Einstellungen auf Windows 10- sowie Windows 10 Mobile-Geräten konfigurieren. Weitere Informationen finden Sie unter [Configure Windows Hello for Business settings (hybrid) (So konfigurieren Sie Windows Hello for Business-Einstellungen (hybrid))](../../mdm/deploy-use/windows-hello-for-business-settings.md).
+- Sie können Richtlinien von „Windows Hello for Business“ für Windows 10-Geräte bereitstellen, die in eine Domäne eingebunden sind und auf denen der Configuration Manager-Client ausgeführt wird. Diese Konfiguration wird im Abschnitt [Konfigurieren von Windows Hello for Business auf einer Domäne angehörenden Windows 10-Geräten](#configure-windows-hello-for-business-on-domain-joined-windows-10-devices) beschrieben. Wenn Sie Configuration Manager mit Microsoft Intune (hybrid) verwenden, können Sie diese Einstellungen auf Windows 10- sowie Windows 10 Mobile-Geräten konfigurieren. Weitere Informationen finden Sie unter [Configure Windows Hello for Business settings (hybrid) (Konfigurieren von Windows Hello for Business-Einstellungen (hybrid))](../../mdm/deploy-use/windows-hello-for-business-settings.md).
 
 ## <a name="configure-windows-hello-for-business-on-domain-joined-windows-10-devices"></a>Konfigurieren von Windows Hello for Business auf einer Domäne angehörenden Windows 10-Geräten
-Sie können Windows Hello for Business-Einstellungen auf in eine Domäne eingebundenen Windows 10-Geräten durch Erstellen und Bereitstellen eines Windows Hello for Business-Profils steuern. Dies ist die empfohlene Option.
+Sie können Windows Hello for Business-Einstellungen auf in eine Domäne eingebundenen Windows 10-Geräten durch Erstellen und Bereitstellen eines Windows Hello for Business-Profils steuern. Dieser Ansatz wird empfohlen.
 
 
 Wenn Sie zertifikatbasierte Authentifizierung verwenden, müssen Sie auch, wie unter [Configure a certificate profile](#configure-a-certificate-profile) (Konfigurieren eines Zertifikatprofils) beschrieben, ein Zertifikatprofil bereitstellen. Wenn Sie schlüsselbasierte Authentifizierung verwenden, müssen Sie kein Zertifikatprofil bereitstellen.
@@ -50,10 +56,10 @@ Wenn Sie zertifikatbasierte Authentifizierung verwenden, müssen Sie auch, wie u
 
 Klicken Sie in der Configuration Manager-Konsole mit der rechten Maustaste unter **Zugriff auf Unternehmensressourcen** auf **Profile für Windows Hello für Unternehmen**, und wählen Sie **Neu** aus, um den Profilassistenten zu starten. Stellen Sie die Einstellungen bereit, die der Assistent anfordert, überprüfen und bestätigen Sie die Einstellungen auf der letzten Seite, und klicken Sie auf **Schließen**. Beispiel von möglichen Einstellungen:  
 
-![Windows Hello for Business-Einstellungen](../media/Hello-for-Business-settings.png)
+![Der Assistent für die Windows Hello for Business-Richtlinie, der die Liste verfügbarer Einstellungen anzeigt.](../media/Hello-for-Business-settings.png)
 
 ## <a name="configure-a-certificate-profile-to-enroll-the-windows-hello-for-business-enrollment-certificate-in-configuration-manager"></a>Konfigurieren eines Zertifikatprofils für die Registrierung des Windows Hello for Business-Registrierungszertifikats in Configuration Manager  
- Wenn Sie die zertifikatbasierte Anmeldung für Windows Hello for Business verwenden möchten, konfigurieren Sie Folgendes:  
+ Wenn Sie die zertifikatbasierte Anmeldung für Windows Hello for Business verwenden möchten, konfigurieren Sie folgende Komponenten:  
 
 -   Ein Configuration Manager-Zertifikatprofil.  
 
@@ -64,9 +70,8 @@ Vorher müssen Sie die Gruppe **Schlüsseladministratoren** erstellt und alle Ve
 
 Für einige Konfigurationen müssen Sie möglicherweise keine Berechtigungen konfigurieren, oder sie erfordern möglicherweise weitere Konfigurationen. Weitere Hilfe finden Sie in der folgenden Tabelle:
 
-|||||
-|-|-|-|-|
 |Windows-Clientversion|Configuration Manager 1602 oder 1606|Configuration Manager 1610|Configuration Manager 1702 oder höher|
+|-|-|-|-|
 |Windows 10 Anniversary Update|Kein Hotfix erforderlich<br><br>Keine Berechtigungen erforderlich<br><br>Kein Windows-Schemaupdate erforderlich|Kein Hotfix erforderlich (siehe **Warnung**)<br><br>Keine Berechtigungen erforderlich<br><br>Kein Windows-Schemaupdate erforderlich|Berechtigungen konfigurieren<br><br>Windows Server 2016-Schema auf Active Directory anwenden|
 |Windows 10 Creators Update oder höher|Nicht unterstützt|[Dieses Hotfix](https://support.microsoft.com/help/4010155/update-rollup-for-system-center-configuration-manager-current-branch-v) installieren<br><br>Berechtigungen konfigurieren<br><br>Windows Server 2016-Schema auf Active Directory anwenden|Berechtigungen konfigurieren<br><br>Windows Server 2016-Schema auf Active Directory anwenden|
 
@@ -81,7 +86,7 @@ Für einige Konfigurationen müssen Sie möglicherweise keine Berechtigungen kon
 4.  Klicken Sie auf der Registerkarte **Sicherheit** des Dialogfelds *<domain name>* **Eigenschaften** auf **Erweitert**. Wenn die Registerkarte **Sicherheit** nicht angezeigt wird, aktivieren Sie **Erweiterte Funktionen** im Menü **Ansicht** von **Active Directory-Benutzer und -Computer**.
 5.  Klicken Sie auf **Hinzufügen**.
 6.  Klicken Sie im Dialogfeld **Permission Entry for** (Berechtigungseintrag für) *<domain name>* auf **Prinzipal auswählen**.
-7.  Geben Sie im Dialogfeld **Select User, Computer, Service Account, or Group (Benutzer, Computer, Dienstkonto oder Gruppe auswählen** **Schlüsseladministratoren** in das Textfeld **Enter the object name to select (Geben Sie den auszuwählenden Objektnamen ein)** ein.  Klicken Sie auf **OK**.
+7.  Geben Sie im Dialogfeld **Select User, Computer, Service Account, or Group (Benutzer, Computer, Dienstkonto oder Gruppe auswählen** **Schlüsseladministratoren** in das Textfeld **Enter the object name to select (Geben Sie den auszuwählenden Objektnamen ein)** ein. Klicken Sie auf **OK**.
 8.  Wählen Sie aus der Liste **Gilt für** **Descendant User objects (Nachfolgerbenutzerobjekte)** aus.
 9.  Scrollen Sie bis ans Ende der Seite und klicken Sie auf **Auswahl aufheben**.
 10. Wählen Sie im Bereich **Eigenschaften** **Read msDS-KeyCredentialLink (msDS-KeyCredentialLink lesen)** aus.

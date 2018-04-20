@@ -13,11 +13,11 @@ ms.service: ''
 ms.technology:
 - configmgr-other
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: c39798573966037b6d27afe6844a7f88450a4528
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 8c9171ed5b239091b7f77b534368422575c0f2f4
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="surface-device-dashboard-in-system-center-configuration-manager"></a>Dashboard für Surface-Geräte in System Center Configuration Manager
 
@@ -62,6 +62,8 @@ Im Dashboard für Surface-Geräte werden drei Diagramme für Ihre Umgebung angez
 Weitere Informationen zu Surface-Geräten finden Sie auf der
  - [Surface-Website]( https://go.microsoft.com/fwlink/?linkid=861998).
     
+Weitere Informationen zur Bereitstellung von Surface-Firmwareupdates in Configuration Manger finden Sie unter
+ - [How to manage Surface driver updates in Configuration Manager (Verwalten von Surface-Treiberupdates in Configuration Manger)]( https://support.microsoft.com/help/4098906).
 
 
 

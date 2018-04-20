@@ -1,26 +1,27 @@
 ---
-title: "Überwachen von Zertifikatprofilen"
+title: Überwachen von Zertifikatprofilen
 titleSuffix: Configuration Manager
-description: "Enthält das Überwachen des Kompatibilitätsstatus von Zertifikatprofilen in System Center Configuration Manager."
+description: Enthält das Überwachen des Kompatibilitätsstatus von Zertifikatprofilen in System Center Configuration Manager.
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 98feaa06-64b1-4e86-a122-93017c97cd4f
-caps.latest.revision: "7"
-caps.handback.revision: "0"
+caps.latest.revision: 7
+caps.handback.revision: 0
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: eaefae0c51af91e4419ef15cf02b8250c3d2efd8
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 6b0ae2042c1c463bce53c0c1a7438cc7102cd66e
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-monitor-certificate-profiles-in-system-center-configuration-manager"></a>Überwachen von Zertifikatprofilen in System Center Configuration Manager
 
@@ -61,7 +62,7 @@ Zum Überwachen der SCEP-Zertifikatkonformität verwenden Sie nicht die Konsole,
     |0x00000004|Die Anmeldung muss verschoben werden.|  
     |0x00000010|Ein Fehler ist aufgetreten.|  
     |0x00000020|Der Anmeldungsstatus ist unbekannt.|  
-    |0x00000040|Die Statusinformationen wurden übersprungen. Dies kann vorkommen, wenn eine HYPERLINK "http://msdn.microsoft.com/en-us/windows/ms721572" \l "_security_certification_authority_gly" Zertifizierungsstelle ungültig ist oder nicht zur Überwachung ausgewählt wurde.|  
+    |0x00000040|Die Statusinformationen wurden übersprungen. Dies kann vorkommen, wenn eine HYPERLINK "http://msdn.microsoft.com/windows/ms721572" \l "_security_certification_authority_gly"-Zertifizierungsstelle ungültig ist oder nicht zur Überwachung ausgewählt wurde.|  
     |0x00000100|Die Anmeldung wurde abgewiesen.|  
 
 ##  <a name="view-compliance-results-by-using-reports"></a>Anzeigen von Konformitätsergebnissen mithilfe von Berichten

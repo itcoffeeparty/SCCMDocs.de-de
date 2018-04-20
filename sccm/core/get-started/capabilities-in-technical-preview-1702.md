@@ -1,7 +1,7 @@
 ---
 title: Funktionen in Technical Preview 1702
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr über die Funktionen, die in Technical Preview für System Center Configuration Manager, Version 1702, zur Verfügung stehen."
+description: Erfahren Sie mehr über die Funktionen, die in Technical Preview für System Center Configuration Manager, Version 1702, zur Verfügung stehen.
 ms.custom: na
 ms.date: 02/24/2017
 ms.prod: configuration-manager
@@ -12,21 +12,21 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aedd608d-6db3-4ea5-851d-70f2dcda6bb5
-caps.latest.revision: 
+caps.latest.revision: 5
 author: erikje
 ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: ed2a858c55cbf389a0e974f4699b5a9c548953ef
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 94c025a75cd0aef62ee00c11b8ee5a113fba2bb1
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1702 für System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Technical Preview)*
 
-In diesem Artikel werden die Funktionen erläutert, die in Technical Preview für System Center Configuration Manager, Version 1702, zur Verfügung stehen. Sie können diese Version installieren, um neue Funktionen für Ihren Configuration Manager Technical Preview-Standort zu aktualisieren oder hinzuzufügen. Bevor Sie diese Version der Technical Preview installieren, lesen Sie das einführende Thema [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md), um sich mit den allgemeinen Anforderungen und Einschränkungen bei der Verwendung einer Technical Preview vertraut zu machen, und zu erfahren, wie Sie Updates zwischen Versionen durchführen und Feedback zu den Features in einer Technical Preview geben können.    
+In diesem Artikel werden die Funktionen erläutert, die in Technical Preview für System Center Configuration Manager, Version 1702, zur Verfügung stehen. Sie können diese Version installieren, um neue Funktionen für Ihren Configuration Manager Technical Preview-Standort zu aktualisieren oder hinzuzufügen. Bevor Sie diese Version der Technical Preview installieren, lesen Sie das einführende Thema [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md), um sich mit den allgemeinen Anforderungen und Einschränkungen bei der Verwendung einer Technical Preview vertraut zu machen, und zu erfahren, wie Sie Updates für Versionen durchführen und Feedback zu den Features in einer Technical Preview geben können.    
 
 
 **Im Folgenden werden neue Features aufgelistet, die Sie mit dieser Version ausprobieren können.**  
@@ -42,7 +42,7 @@ Diese Vorschau stellt neue Feedbackoptionen der Configuration Manager-Konsole vo
 -  Wenn Sie mit der rechten Maustaste auf ein beliebiges Objekt in der Konsole klicken.   
     ![Rechtsklick](./media/feedback-option.png)   
 
-Wenn Sie **Feedback** auswählen, öffnet sich die UserVoice-Feedback-Website in Ihrem Browser unter https://configurationmanager.uservoice.com/forums/300492-ideas.
+Wenn Sie auf **Feedback** klicken, öffnet sich die Configuration Manager UserVoice-Feedback-Website unter https://configurationmanager.uservoice.com/forums/300492-ideas.
 ##  <a name="changes-for-updates-and-servicing"></a>Änderungen an Updates und Wartung
 Folgendes wird mit dieser Vorschau eingeführt.
 
@@ -104,7 +104,7 @@ Azure AD speichert Geräte unter der Organisationseinheit **AADDC-Computer**.  K
 Azure AD hat keine Organisationseinheit, die Gruppen speichert. Verwenden Sie stattdessen die gleiche allgemeine Struktur wie für die Abfragen von Systemen und Benutzern, und konfigurieren Sie die LDAP-Abfrage so, dass diese auf die Organisationseinheit zeigt, die die Gruppe enthält, die Sie ermitteln möchten.
 
 Weitere Informationen zu Azure AD finden Sie in den folgenden Themen:  
- - [Azure Active Directory Domain Services](https://azure.microsoft.com/en-us/services/active-directory-ds) auf azure.microsoft.com.
+ - [Azure Active Directory Domain Services](https://azure.microsoft.com/services/active-directory-ds) auf azure.microsoft.com.
  - [Active Directory Domain Services Documentation (Dokumentation von Active Directory Domain Services)](https://docs.microsoft.com/azure/active-directory-domain-services) auf docs.microsoft.com.
 
 ## <a name="conditional-access-device-compliance-policy-improvements"></a>Verbesserungen bei Gerätekompatibilitätsrichtlinien für bedingten Zugriff
@@ -151,11 +151,11 @@ Die neue Richtlinie wird im Knoten **Kompatibilitätsrichtlinien** im Arbeitsber
 1. Gehen Sie in der Configuration Manager-Konsole zu **Bestand und Kompatibilität** > **Kompatibilitätseinstellungen**, und klicken Sie anschließend auf **Kompatibilitätsrichtlinien**.
 2. Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Bereitstellung** auf **Bereitstellen**.
 3. Klicken Sie im Dialogfeld **Kompatibilitätsrichtlinien bereitstellen** auf **Durchsuchen** , um die Benutzersammlung auszuwählen, für die Sie die Richtlinie bereitstellen möchten.
-   Darüber hinaus können Sie Optionen auswählen, um Warnungen zu generieren, wenn die Richtlinie nicht befolgt wird. Sie können auch den Zeitplan konfigurieren, gemäß dem diese Richtlinie auf Kompatibilität ausgewertet wird.
+   Darüber hinaus können Sie Optionen auswählen, um Warnungen zu generieren, wenn die Richtlinie nicht befolgt wird. Sie können auch den Zeitplan konfigurieren, gemäß dem diese Richtlinie auf Konformität ausgewertet wird.
 4. Klicken Sie abschließend auf **OK**.
 
 ### <a name="monitor-the-compliance-policy"></a>Überwachen der Konformitätsrichtlinie
-Nachdem Sie die Kompatibilitätsrichtlinie erstellt haben, können Sie die Kompatibilitätsergebnisse in der Configuration Manager-Konsole überwachen. Weitere Informationen finden Sie unter [Überwachen der Konformitätsrichtlinie](https://docs.microsoft.com/en-us/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy).
+Nachdem Sie die Kompatibilitätsrichtlinie erstellt haben, können Sie die Kompatibilitätsergebnisse in der Configuration Manager-Konsole überwachen. Weitere Informationen finden Sie unter [Überwachen der Konformitätsrichtlinie](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy).
 
 
 ## <a name="improvements-to-software-center-settings-and-notification-messages-for-high-impact-task-sequences"></a>Verbesserungen bei den Einstellungen und Benachrichtigungen für Tasksequenzen mit schwerwiegenden Auswirkungen im Softwarecenter
@@ -326,7 +326,7 @@ Den Namen des Kontos und der Organisation finden Sie im Intune-Portal, wenn die 
 #### <a name="approve-and-deploy-android-for-work-apps"></a>Genehmigen und Bereitstellen von Android for Work Apps
 Gehen Sie wie folgt vor, um Apps im Play for Work-Store zu genehmigen, diese mit der Configuration Manager-Konsole zu synchronisieren und sie anschließend in verwalteten Android for Work-Geräten bereitzustellen. Um Apps in die Arbeitsprofile von Benutzern bereitzustellen, müssen Sie die Apps zunächst in Play for Work genehmigen und anschließend mit der Configuration Manager-Konsole synchronisieren.
 
-1. Öffnen Sie einen Browser und navigieren Sie zu https://play.google.com/work.
+1. Öffnen Sie einen Browser, und navigieren Sie zu https://play.google.com/work.
 2. Melden Sie sich mit dem Google-Administratorkonto an, das Sie an Ihren Intune-Mandanten gebunden haben.
 3. Suchen Sie nach Apps, die Sie in Ihrer Umgebung bereitstellen möchten, und klicken Sie jeweils auf **Genehmigen**.
 4. Gehen Sie in der Configuration Manager-Konsole zu **Adminisitrator** > **Übersicht** > **Cloud Services** > **Android for Work**, und klicken Sie dann auf **Synchronisierung**.

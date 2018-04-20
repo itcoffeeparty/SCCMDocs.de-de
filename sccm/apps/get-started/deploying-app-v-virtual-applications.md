@@ -1,26 +1,27 @@
 ---
 title: Bereitstellen von virtuellen App-V-Anwendungen
 titleSuffix: Configuration Manager
-description: "Hier erfahren Sie, was Sie beim Erstellen und Bereitstellen von virtuellen Anwendungen beachten müssen."
+description: Hier erfahren Sie, was Sie beim Erstellen und Bereitstellen von virtuellen Anwendungen beachten müssen.
 ms.custom: na
-ms.date: 02/16/2017
+ms.date: 03/12/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-app
+ms.technology:
+- configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
-caps.latest.revision: "11"
-caps.handback.revision: "0"
+caps.latest.revision: 11
+caps.handback.revision: 0
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: bf324f458c37fa137e24179eb4455fcbe75c855d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 99c259a20a7e9c9f34d7b355e6fea5d4c6861392
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-app-v-virtual-applications-with-system-center-configuration-manager"></a>Bereitstellen virtueller App-V-Anwendungen mit System Center Configuration Manager
 
@@ -46,7 +47,7 @@ Zusätzlich zu den anderen System Center Configuration Manager-Anforderungen und
 
 -   Wenn Sie eine Anwendung sequenzieren, müssen Sie das Paket an einem Speicherort speichern, auf den Configuration Manager zugreifen kann. Sie können dann eine Anwendungsbereitstellung erstellen, die diese virtuelle Anwendung enthält.  
 
--   Die Verwendung der App-V-Funktion für freigegebenen, schreibgeschützten Cache wird von Configuration Manager nicht unterstützt.  
+-   Die Verwendung des App-V 4.6-Features für freigegebenen, schreibgeschützten Cache wird von Configuration Manager nicht unterstützt.  
 
 -   Configuration Manager unterstützt die SCS-Funktion (Shared Content Store) in App-V 5.  
 
@@ -66,7 +67,7 @@ Zusätzlich zu den anderen System Center Configuration Manager-Anforderungen und
      Sie müssen für den App-V 4.6 SP1-Client außerdem ein Update mit dem im Knowledge Base-Artikel [2645225](http://go.microsoft.com/fwlink/p/?LinkId=237322) beschriebenen Hotfix durchführen, damit Sie virtuelle Anwendungen erfolgreich bereitstellen können.  
 
 -   **App-V 5, App-V 5.0 SP1, App-V 5.0 SP2, App-V 5.0 SP3 und App-V 5.1:** Für App-V 5.0 SP2 müssen Sie [Hotfixpaket 5](https://support.microsoft.com/en-us/kb/2963211) installieren oder App-V 5.0 SP3 verwenden.  
--   **App-V-5.2**: Dies ist in Windows 10 (Anniversary Update und höher) integriert.
+-   **App-V 5.2**: Diese Version ist in Windows 10 Education (1607 und höher), Windows 10 Enterprise (1607 und höher) und Windows Server 2016 integriert.
 
 Weitere Informationen zu App-V in Windows 10 finden Sie in den folgenden Themen:
 
@@ -83,7 +84,7 @@ Weitere Informationen zu App-V in Windows 10 finden Sie in den folgenden Themen:
 
 3.   **Verteilen:** Bei der Verteilung werden App-V-Anwendungen auf Configuration Manager-Verteilungspunkten verfügbar gemacht.
 
-4.   **Bereitstellen:** Bei der Bereitstellung wird die Anwendung auf Clientcomputern verfügbar gemacht. Dies wird in einer vollständigen App-V-Infrastruktur als Streaming bezeichnet.  
+4.   **Bereitstellen:** Bei der Bereitstellung wird die Anwendung auf Clientcomputern verfügbar gemacht. Dies wird in einer vollständigen App-V-Infrastruktur als „Publishing and Streaming“ (Veröffentlichen und Streamen) bezeichnet.  
 
 ##  <a name="configuration-manager-virtual-application-delivery-methods"></a>Methoden zur Übermittlung virtueller Anwendungen mit Configuration Manager  
 In Configuration Manager werden zwei Methoden zur Übermittlung virtueller Anwendungen an Clients unterstützt: Übermittlung durch Streaming und lokale Übermittlung (herunterladen und ausführen).
@@ -100,7 +101,7 @@ Anhand der Informationen in der folgenden Tabelle können Sie feststellen, ob di
 |Bei dieser Methode wird der Paketinhalt mithilfe von Standardnetzwerkprotokollen von Verteilungspunkten gestreamt.<br /><br /> Über Programmverknüpfungen für virtuelle Anwendungen wird eine Verbindung mit dem Verteilungspunkt aufgerufen, damit die virtuelle Anwendung bei Bedarf übermittelt werden kann.<br /><br /> Diese Methode eignet sich insbesondere für Clients, deren Verbindungen mit den Verteilungspunkten eine hohe Bandbreite aufweisen.<br /><br /> Updates für die im gesamten Unternehmen verteilten virtuellen Anwendungen sind verfügbar, wenn Clients über eine Richtlinie darüber informiert werden, dass die aktuelle Version abgelöst wurde. Nur die Änderungen gegenüber der vorherigen Version werden von den Clients heruntergeladen.<br /><br /> Am Verteilungspunkt werden Zugriffsberechtigungen definiert, um den Zugriff Unbefugter auf Anwendungen oder Pakete zu verhindern.|Virtuelle Anwendungen werden erst gestreamt, wenn der Benutzer die Anwendung zum ersten Mal ausführt. Angenommen, ein Benutzer erhält Programmverknüpfungen für virtuelle Anwendungen und trennt dann die Verbindung mit dem Netzwerk, bevor er die virtuellen Anwendungen zum ersten Mal ausführt. Wenn der Benutzer nun versucht, die virtuelle Anwendung auszuführen, während der Client offline ist, wird ein Fehler angezeigt. Die virtuelle Anwendung kann nicht ausgeführt werden, da kein Configuration Manager-Verteilungspunkt zum Streamen der Anwendung verfügbar ist. Die Anwendung wird erst verfügbar, wenn der Benutzer die Verbindung mit dem Netzwerk wiederherstellt und die Anwendung ausführt.<br /><br /> Um dies zu vermeiden, können Sie virtuelle Anwendungen mithilfe der lokalen Übermittlungsmethode an Clients übermitteln. Alternativ können Sie die internetbasierte Clientverwaltung für die Übermittlung per Streaming aktivieren.|  
 
 ###  <a name="local-delivery-download-and-execute"></a>Lokale Übermittlung (herunterladen und ausführen)  
-Bei Verwendung der lokalen Übermittlungsmethode wird auf dem Configuration Manager-Client zunächst das gesamte virtuelle Anwendungspaket in den Configuration Manager-Clientcache heruntergeladen. In Configuration Manager wird der App-V-Client anschließend angewiesen, die Anwendung aus dem Configuration Manager-Cache in den App-V-Cache zu streamen. Wenn Sie eine virtuelle Anwendung für Clientcomputer bereitstellen und der Inhalt sich nicht im App-V-Cache befindet, wird der Anwendungsinhalt vom App-V-Client aus dem Configuration Manager-Clientcache in den App-V-Cache gestreamt und anschließend ausgeführt. Wenn die Anwendung erfolgreich ausgeführt wird, können Sie den Configuration Manager-Client so einrichten, dass ältere Versionen des Pakets beim nächsten Löschzyklus gelöscht oder dauerhaft im Configuration Manager-Clientcache gespeichert werden.  
+Das Herunterladen und Ausführen ist die gängigste Methode bei der Verwendung von Configuration Manager, da diese imitiert, wie andere Anwendungsformate mit Configuration Manager dargestellt werden. Bei Verwendung der lokalen Übermittlungsmethode wird auf dem Configuration Manager-Client zunächst das gesamte virtuelle Anwendungspaket in den Configuration Manager-Clientcache heruntergeladen. In Configuration Manager wird der App-V-Client anschließend angewiesen, die Anwendung aus dem Configuration Manager-Cache in den App-V-Cache zu streamen. Wenn Sie eine virtuelle Anwendung für Clientcomputer bereitstellen und der Inhalt sich nicht im App-V-Cache befindet, wird der Anwendungsinhalt vom App-V-Client aus dem Configuration Manager-Clientcache in den App-V-Cache gestreamt und anschließend ausgeführt. Wenn die Anwendung erfolgreich ausgeführt wird, können Sie den Configuration Manager-Client so einrichten, dass ältere Versionen des Pakets beim nächsten Löschzyklus gelöscht oder dauerhaft im Configuration Manager-Clientcache gespeichert werden. Die dauerhafte lokale Beibehaltung kann die Vorteile der Methoden für die Optimierung von Paketinhaltslieferungen, z.B. BranchCache und PeerCache, nutzen.
 
 Anhand der Informationen in der folgenden Tabelle können Sie feststellen, ob die lokale Übermittlung die für Sie am besten geeignete Übermittlungsmethode ist:   
 
@@ -117,12 +118,12 @@ Wenn Sie eine Migration aus einer vorhandenen App-V-Infrastruktur zu einer virtu
 
 |Schritt|Weitere Informationen|  
 |----------|----------------------|  
-|Wählen Sie unter den aktuellen virtuellen Anwendungen die Anwendungen aus, die Sie in die Configuration Manager-Infrastruktur migrieren möchten.|keine zusätzlichen Informationen|  
+|Wählen Sie unter den aktuellen virtuellen Anwendungen die Anwendungen aus, die Sie in die Configuration Manager-Infrastruktur migrieren möchten.|Keine zusätzlichen Informationen|  
 |Bewerten Sie die Benutzer und Geräte, für die die virtuellen Anwendungen bereitgestellt werden.|Erstellen Sie Configuration Manager-Sammlungen, um die Benutzer und Geräte zu gruppieren, für die Sie die virtuellen Anwendungen bereitstellen möchten. Siehe [Einführung in Sammlungen](/sccm/core/clients/manage/collections/introduction-to-collections).|  
 |Migrieren Sie App-V 5-Verbindungsgruppen in virtuelle Umgebungen von Configuration Manager.|Siehe den Abschnitt [Migrieren von App-V 5-Verbindungsgruppen zu virtuellen Umgebungen in Configuration Manager](/sccm/apps/get-started/deploying-app-v-virtual-applications#migrate-app-v-5-connection-groups-to-configuration-manager-virtual-environments) in diesem Thema.|  
 |Stellen Sie fest, ob eine der virtuellen Anwendungen in der Configuration Manager-Infrastruktur als vollständige Anwendung vorhanden ist.|Zur einfacheren Verwaltung können Sie die virtuelle Anwendung der vorhandenen vollständigen Anwendung als neuen Bereitstellungstyp hinzufügen. Siehe [Erstellen von Anwendungen](../../apps/deploy-use/create-applications.md).|  
 |Erstellen Sie Anwendungen, durch die die vorhandenen App-V-Pakete ersetzt werden.|Siehe [Einführung in die Anwendungsverwaltung](/sccm/apps/understand/introduction-to-application-management) und [Erstellen von Anwendungen](../../apps/deploy-use/create-applications.md).|  
-|Die Verwaltung virtueller Anwendungen auf einem Client durch Configuration Manager beginnt nach der ersten Bereitstellung einer virtuellen Anwendung. Danach müssen alle App-V-Anwendungen auf dem Computer in Configuration Manager verwaltet werden.|keine zusätzlichen Informationen|  
+|Die Verwaltung virtueller Anwendungen auf einem Client durch Configuration Manager beginnt nach der ersten Bereitstellung einer virtuellen Anwendung. Danach müssen alle App-V-Anwendungen auf dem Computer in Configuration Manager verwaltet werden.|Keine zusätzlichen Informationen|  
 |Verteilen Sie den Inhalt an die entsprechenden Verteilungspunkte, um die lokale Übermittlung von Anwendungen zu ermöglichen.|Siehe [Verwalten von Inhalt und Inhaltsinfrastruktur](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).|  
 |Stellen Sie die Anwendung für Configuration Manager-Clients bereit.<br /><br /> Wenn die App-V-Anwendung mit einer früheren Sequencer-Version erstellt wurde, von der keine Manifestdatei im XML-Format erstellt wird, können Sie die Anwendung öffnen und in einer neueren Sequencer-Version speichern, um die Datei zu erstellen. Diese Datei ist bei der Bereitstellung virtueller Anwendungen mit Configuration Manager erforderlich.<br /><br /> Die in der Sequencer-Version SoftGrid 4.1 SP1 oder 4.2 erstellten virtuellen Anwendungspakete werden von App-V unterstützt.<br /><br /> Wenn die Anwendungen zuvor lokal installiert waren, müssen Sie sie deinstallieren, bevor Sie eine virtuelle Version der Anwendung bereitstellen.|Siehe [Bereitstellen von Anwendungen](../../apps/deploy-use/deploy-applications.md).|  
 |In System Center Configuration Manager werden Pakete und Programme, die virtuelle Anwendungen enthalten, nicht mehr unterstützt. Bei der Migration von Configuration Manager 2007 zu System Center Configuration Manager werden diese Pakete von Configuration Manager in Anwendungen konvertiert.<br /><br /> Configuration Manager 2007-Ankündigungen werden in die folgenden Bereitstellungstypen konvertiert:<br /><br /> - Migrieren von App-V-Paketen ohne Ankündigung: ein Bereitstellungstyp, der die Standardeinstellungen verwendet.<br /><br /> - Migrieren von App-V-Paketen mit einer Ankündigung: Ein Bereitstellungstyp, der die Einstellungen der <br />                Configuration Manager 2007-Ankündigung verwendet.<br /><br /> - Migrieren von App-V-Paketen mit mehreren Ankündigungen: ein Bereitstellungstyp pro <br />                Configuration Manager 2007-Ankündigung. Es werden die Einstellungen für diese Ankündigung verwendet.|Siehe [Planen der Migration von Configuration Manager-Objekten zu System Center Configuration Manager](../../core/migration/planning-for-the-migration-of-objects.md).|  

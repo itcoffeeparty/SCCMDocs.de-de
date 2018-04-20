@@ -1,25 +1,26 @@
 ---
 title: PKI-Zertifikatanforderungen
 titleSuffix: Configuration Manager
-description: "Suchen Sie Anforderungen für die PKI-Zertifikate, die Sie möglicherweise für System Center Configuration Manager benötigen."
+description: Suchen Sie Anforderungen für die PKI-Zertifikate, die Sie möglicherweise für System Center Configuration Manager benötigen.
 ms.custom: na
 ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: c9d95f6282820a41db762c143b3aa2f6d4fadf3e
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: 1fcc05d1487f9b9809d3f476b3b80d67a0cc2698
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pki-certificate-requirements-for-system-center-configuration-manager"></a>PKI-Zertifikatanforderungen für System Center Configuration Manager
 
@@ -81,7 +82,7 @@ Informationen zur Verwendung von CNG-Zertifikaten (Cryptografy API: Next Generat
 
 ##  <a name="BKMK_PKIcertificates_for_clients"></a> PKI-Zertifikate für Clients  
 
-|System Center Configuration Manager-Komponente|Zertifikatzweck|Zu verwendende Microsoft-Zertifikatvorlage|Spezifische Informationen im Zertifikat|Verwendung des Zertifikats in System Center Configuration Manager|  
+|System Center Configuration Manager-Komponente|Zertifikatzweck|Zu verwendende Microsoft-Zertifikatvorlage|Spezifische Informationen im Zertifikat|Verwendung des Zertifikats im System Center Configuration Manager|  
 |-------------------------------------|-------------------------|-------------------------------------------|---------------------------------------------|----------------------------------------------------------|  
 |Windows-Clientcomputer|Clientauthentifizierung|**Arbeitsstationsauthentifizierung**|**Der Wert „Erweiterte Schlüsselverwendung“** muss **Clientauthentifizierung (136155732)**<br /><br /> Clientcomputer müssen einen eindeutigen Wert im Feld Antragstellername oder Alternativer Antragstellername aufweisen.<br /><br /> **Hinweis:** Wenn Sie mehrere Werte für den alternativen Antragstellernamen verwenden, wird nur der erste Wert verwendet.<br /><br /> Der SHA-2-Hashalgorithmus wird unterstützt.<br /><br /> Es wird eine maximale Schlüssellänge von 2.048 Bits unterstützt.|System Center Configuration Manager sucht standardmäßig im privaten Speicher des Computerzertifikatspeichers nach Computerzertifikaten.<br /><br /> Mit Ausnahme des Softwareupdatepunkts und des Anwendungskatalog-Websitepunkts wird der Client über dieses Zertifikat bei Standortsystemservern authentifiziert, auf denen IIS ausgeführt wird und die zur Verwendung von HTTPS konfiguriert sind.|  
 |Clients für mobile Geräte|Clientauthentifizierung|**Authentifizierte Sitzung**|**Der Wert „Erweiterte Schlüsselverwendung“** muss **Clientauthentifizierung (136155732)**<br /><br /> SHA-1<br /><br /> Es wird eine maximale Schlüssellänge von 2.048 Bits unterstützt.<br /><br /> **Hinweise:**<br /><br /><ul><li>Diese Zertifikate müssen das Format „DER-codiertes binäres X.509“ (Distinguished Encoding Rules) aufweisen.</li><li>Das Format „Base64-codiertes X.509“ wird nicht unterstützt.</li></ul>|Über dieses Zertifikat wird der Client für mobile Geräte bei den Standortsystemservern authentifiziert, mit denen die Kommunikation stattfindet, wie z.B. Verwaltungs- und Verteilungspunkte.|  
