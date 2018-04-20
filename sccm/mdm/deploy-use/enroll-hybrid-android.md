@@ -1,26 +1,27 @@
 ---
-title: "Einrichten der hybriden Android-Geräteverwaltung mit Microsoft Intune"
+title: Einrichten der hybriden Android-Geräteverwaltung mit Microsoft Intune
 titleSuffix: Configuration Manager
-description: "Bereiten Sie die Verwaltung mobiler Android-Geräte mit Configuration Manager und Intune vor."
+description: Bereiten Sie die Verwaltung mobiler Android-Geräte mit Configuration Manager und Intune vor.
 ms.custom: na
 ms.date: 08/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c517fe34-0130-465b-a020-bdb555878778
-caps.latest.revision: "9"
-caps.handback.revision: "0"
+caps.latest.revision: 9
+caps.handback.revision: 0
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: c9b35122f6afbb4fffbbff48b919fd696939c897
-ms.sourcegitcommit: 51cfce302fa8ddf633ad1f379b1161c0617089b8
+ms.openlocfilehash: c75979e8485fa3ece2178af6d21ff06282206569
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-android-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Einrichten einer hybriden Geräteverwaltung für Android mit System Center Configuration Manager und Microsoft Intune
 
@@ -60,7 +61,7 @@ Mit den folgenden Schritten kann Configuration Manager Android-Geräte ohne Arbe
 > Ein bekanntes Problem verhindert, dass die Option **Unterstützte Geräte nur für Benutzer dieser Gruppen als Android for Work verwalten** ordnungsgemäß ausgeführt wird. Geräte von Benutzern in den angegebenen Azure AD-Gruppen werden als Android anstelle von Android for Work registriert. Für die Aktivierung von Android for Work müssen Sie die Option **Verwalten aller unterstützter Geräte als Android for Work** verwenden.
 
 
-Nachdem Sie die Einrichtung abgeschlossen haben, müssen Sie Ihre Benutzer darüber informieren, wie diese ihre Geräte registrieren sollen. Informationen hierzu finden Sie unter [Informieren der Benutzer über den Einsatz von Microsoft Intune](https://docs.microsoft.com/en-us/intune/end-user-educate). Diese Informationen gelten für mobile Geräte, die mit Microsoft Intune und Configuration Manager verwaltet werden.
+Nachdem Sie die Einrichtung abgeschlossen haben, müssen Sie Ihre Benutzer darüber informieren, wie diese ihre Geräte registrieren sollen. Informationen hierzu finden Sie unter [Informieren der Benutzer über den Einsatz von Microsoft Intune](https://docs.microsoft.com/intune/end-user-educate). Diese Informationen gelten für mobile Geräte, die mit Microsoft Intune und Configuration Manager verwaltet werden.
 
 Sobald die Bindung abgeschlossen ist, finden Sie den Namen des Kontos und der Organisation im Intune-Portal. An dieser Stelle können Sie beide Browser schließen.
 
