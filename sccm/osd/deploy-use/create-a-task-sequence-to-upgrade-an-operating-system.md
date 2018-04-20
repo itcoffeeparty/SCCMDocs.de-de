@@ -1,9 +1,9 @@
 ---
-title: Erstellen einer Tasksequenz zum Durchführen eines Upgrades für ein Betriebssystem
+title: Erstellen einer Upgradetasksequenz für ein Betriebssystem
 titleSuffix: Configuration Manager
 description: Automatisches Upgrade von Windows 7 oder höher auf Windows 10 mithilfe einer Tasksequenz
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.latest.revision: 12
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 91d3bf5b1488eb7eac52c7426e4bdeeb92ff43b8
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 48a5e7aa381924e3c0ad052833c9588e3dffa4f5
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-operating-system-in-system-center-configuration-manager"></a>Erstellen einer Tasksequenz zum Durchführen eines Upgrades für ein Betriebssystem in System Center Configuration Manager
 
@@ -87,9 +87,16 @@ Verwenden Sie Tasksequenzen in Configuration Manager, um automatisch ein Upgrade
 
 
 ## <a name="configure-pre-cache-content"></a>Konfigurieren des zwischengespeicherten Inhalts
-Clients können mithilfe des Features zum Vorabzwischenspeichern für verfügbare Bereitstellungen von Tasksequenzen relevante Betriebssystem-Upgradepakete herunterladen, bevor der Benutzer die Tasksequenz installiert.
+<!--1021244-->
+Clients können mithilfe des Features zum Vorabzwischenspeichern für verfügbare Bereitstellungen von Tasksequenzen relevante Betriebssystem-Upgradepakete herunterladen, bevor der Benutzer die Tasksequenz installiert.  
+
 > [!TIP]  
-> Dieses Feature wurde erstmals in Version 1702 als [Vorabfeature](/sccm/core/servers/manage/pre-release-features) eingeführt. Ab Version 1706 können ist diese Funktion kein vorab veröffentlichtes Feature mehr.
+> Dieses Feature wurde erstmals in Version 1702 als [Vorabfeature](/sccm/core/servers/manage/pre-release-features) eingeführt. Ab Version 1706 können ist diese Funktion kein vorab veröffentlichtes Feature mehr.  
+
+
+> [!Note]  
+> Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen diese Feature aktivieren, bevor Sie es verwenden. Weitere Informationen finden Sie unter [Enable optional features from updates (Aktivieren optionaler Features von Updates)](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+
 
 Beispiel: Alle Benutzer sollen über eine einzige direkte Upgradetasksequenz verfügen, und es stehen viele verschiedene Architekturen und Sprachen zur Verfügung. In Vorgängerversionen startet der Download von Inhalten, wenn der Benutzer eine bereitgestellte Tasksequenz im Softwarecenter herunterlädt. Durch diese Verzögerung verzögert sich auch der Installationsstart. Alle Inhalte, auf die in der Tasksequenz verwiesen wird, werden heruntergeladen. Dieser Inhalt schließt das Ugradepaket für das Betriebssystem für alle Sprachen und Architekturen mit ein. Wenn jedes Upgradepaket in etwa eine Größe von 3 GB hat, ist der Gesamtinhalt sehr groß.
 

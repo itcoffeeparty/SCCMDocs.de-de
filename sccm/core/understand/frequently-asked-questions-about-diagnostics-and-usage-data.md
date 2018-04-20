@@ -1,59 +1,62 @@
 ---
-title: FAQ zu Diagnosedaten
+title: Häufig gestellte Fragen zu Diagnose- und Nutzungsdaten
 titleSuffix: Configuration Manager
-description: "In diesem Artikel finden Sie häufig gestellte Fragen zu Diagnose- und Verwendungsdaten für System Center Configuration Manager."
+description: In diesem Artikel finden Sie häufig gestellte Fragen zu Diagnose- und Verwendungsdaten für System Center Configuration Manager.
 ms.custom: na
-ms.date: 2/8/2017
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3fe32aa2-d594-4ad0-a291-b8f5395ac50b
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 91be283558f051f90080ac2e2f7abc09317eac4a
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 5a8a34e14d0e4f187e520faf9b2e520945087097
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="frequently-asked-questions-about-diagnostics-and-usage-data-for-system-center-configuration-manager"></a>Häufig gestellte Fragen zu Diagnose- und Verwendungsdaten für System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Nachstehend finden Sie häufig gestellte Fragen zu Diagnose- und Verwendungsdaten für System Center Configuration Manager:  
+In diesem Artikel erhalten Sie Antworten zu häufig gestellten Fragen zu Diagnose- und Nutzungsdaten in Configuration Manager.
+
+## <a name="faqs"></a>Häufig gestellte Fragen
 
 ###  <a name="bkmk_off"></a> Wie schalte ich Telemetrie aus?  
-Telemetriedaten können nicht deaktiviert werden. Sie können jedoch die Ebene der erfassten Telemetriedaten wählen. Sie können auch einen Dienstverbindungspunkt im Offlinemodus verwenden, um den Zeitpunkt der Übermittlung von Telemetriedaten zu verwalten.
+Telemetriedaten können nicht deaktiviert werden. Sie können jedoch die Ebene der erfassten Telemetriedaten wählen. Verwenden Sie einen Dienstverbindungspunkt im Offlinemodus, um den Zeitpunkt der Übermittlung von Telemetriedaten zu verwalten.
 
-Der aktuelle Branch von Configuration Manager muss in regelmäßigen Abständen aktualisiert werden, um neue Versionen von Windows 10 und Microsoft Intune zu unterstützen. Microsoft erfordert mindestens die Basisebene der Diagnose- und Verwendungsdaten, um das Produkt auf dem neuesten Stand zu halten, den Updateprozess zu optimieren sowie die Qualität und Sicherheit des Produkts zu verbessern.
+Der aktuelle Branch von Configuration Manager muss in regelmäßigen Abständen aktualisiert werden, um neue Versionen von Windows 10 und Microsoft Intune zu unterstützen. Für Microsoft ist zumindest ein grundlegendes Verständnis von Diagnose- und Nutzungsdaten erforderlich. Dieses Daten werden verwendet, um das Produkt auf dem neuesten Stand zu halten, den Updateprozess zu optimieren sowie die Qualität und Sicherheit des Produkts zu verbessern.
 
 ###  <a name="bkmk_retention"></a> Wie lange ist der Datenaufbewahrungszeitraum?  
- Diagnose- und Nutzungsdaten werden ein Jahr aufbewahrt.  
+ Diagnose- und Nutzungsdaten werden ein Jahr lang gespeichert.  
 
 ###  <a name="bkmk_update"></a> Werden Diagnose- und Verwendungsdaten beim Installieren oder Aktualisieren des Produkts gesendet?  
  Nein. Diagnose- und Verwendungsdaten erst nur gesendet, sobald der Standort installiert wurde und betriebsbereit ist.  
 
 ###  <a name="bkmk_frequency"></a> Wie oft werden die Daten gesendet?  
- Die gespeicherten SQL-Prozeduren werden alle sieben Tage (ab dem Datum der Installation des Standorts) ausgeführt. Im Onlinemodus ist der Dienstverbindungspunkt so konfiguriert, dass die Daten nach Ausführen der Abfragen hochgeladen werden. Im Offlinemodus verwendet der Administrator das Dienstverbindungstool zum Hochladen der Daten. (Beachten Sie, dass die Daten erst sieben Tage nach der Installation des Standorts für die Offlineverwendung verfügbar sind.)  
+ Die gespeicherten SQL-Prozeduren werden alle sieben Tage (ab dem Datum der Installation des Standorts) ausgeführt. Im Onlinemodus ist der Dienstverbindungspunkt so konfiguriert, dass die Daten nach Ausführen der Abfragen hochgeladen werden. Im Offlinemodus verwendet der Administrator das Dienstverbindungstool zum Hochladen der Daten. (Die Daten sind erst sieben Tage nach der Installation des Standorts für die Offlineverwendung verfügbar.)  
 
 ###  <a name="bkmk_network"></a> Können die Daten zum Erstellen einer Netzwerkübersicht verwendet werden?  
- So wie in der Beschreibung der Ebenen bei der Sammlung von Nutzungsdaten zu Diagnosezwecken für System Center Configuration Manager gezeigt, enthalten Standortdetails Zeitzoneninformationen jedes Standorts. So erhalten Sie Einblicke in die allgemeine geografische und globale Verteilung von Standorten in einer Hierarchie. Es werden allerdings keine Netzwerkdetails wie IP-Adressen oder detaillierte geografische Informationen erfasst.
- - [Diagnosedaten für 1511](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511)
- - [Diagnosedaten für 1602](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602)
- - [Diagnosedaten für 1606](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606)
- - [Diagnosedaten für 1610](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610)
+ So wie in der Beschreibung der Ebenen von Diagnose- und Nutzungsdaten gezeigt, enthalten Standortdetails Zeitzoneninformationen jedes Standorts. So erhalten Sie Einblicke in die allgemeine geografische und globale Verteilung von Standorten in einer Hierarchie. In diesen Daten sind jedoch keine Netzwerkdetails wie IP-Adressen oder detaillierte geografische Informationen enthalten. Weitere Informationen finden Sie in den [Artikeln zu Diagnose- und Nutzungsdaten](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data#articles). Die Ebenen der Diagnose- und Nutzungsdatensammlung für die Version, die Sie verwenden, finden Sie ebenfalls in diesen Artikeln.
 
 
 ###  <a name="bkmk_tables"></a> Können Daten in benutzerdefinierten Tabellen angezeigt werden?  
- Nein. Diagnose- und Verwendungsdaten werden mithilfe gespeicherter SQL-Prozeduren gesammelt, die auf Standardprodukttabellen in der Datenbank angewendet werden, die alle das Präfix **TEL_** haben. Als Teil der SQL-Abfrage zur Erkennung des Schemas werden alle Tabellennamen für den Vergleich mit bekannten Standardwerten hashcodiert. Dies dient zum Bestimmen, ob benutzerdefinierte Tabellen in den Daten vorhanden sind (d. h., ob das Datenbankschema abweichend vom Standard erweitert wurde), aber nicht der Daten, die in diesen Tabellen vorhanden waren.  
+ Nein. Configuration Manager erfasst Diagnose- und Nutzungsdaten über in SQL gespeicherte Prozeduren. Diese gespeicherten Prozeduren werden für die Standardprodukttabellen in der Datenbank ausgeführt. Diese gesamten SQL-Tabellen werden mit dem Präfix **TEL_** versehen. Als Teil der SQL-Abfrage zur Erkennung des Schemas werden alle Tabellennamen für den Vergleich mit bekannten Standardwerten hashcodiert. Durch dieses Verhalten wird festgelegt, dass benutzerdefinierte Tabellen in der Datenbank vorhanden sind. Benutzerdefinierte Tabellen informieren darüber, dass das Datenbankschema abweichend vom Standard erweitert wurde. Es enthält keine Daten, die in diesen Tabellen gespeichert sind.  
 
-###  <a name="bkmk_databases"></a> Können die Namen anderer Datenbanken oder Daten in anderen Datenbanken angezeigt werden?  
+###  <a name="bkmk_databases"></a> Können die Namen anderer Datenbanken oder Daten in anderen Datenbanken angezeigt werden? 
  Nein. Die gespeicherten Prozeduren zum Sammeln von Daten sind auf die Standortdatenbank beschränkt.  
 
+### <a name="bkmk_gdpr"></a> Unterliegt Configuration Manager der Datenschutz-Grundverordnung (DSGVO)?
+ Nein. Configuration Manager unterliegt nicht der Kontrolle durch die GSGVO. Es handelt sich um ein lokales Produkt, das direkt von Ihnen bereitgestellt, verwaltet und ausgeführt wird. Die Diagnose- und Nutzungsdaten, die von Microsoft gesammelt werden, verbessern die Anwendungsinstallation, Qualität sowie die Sicherheit zukünftiger Releases. Diese Daten unterliegen der Kontrolle durch die GSGVO. Es werden keine Informationen zur Endbenutzeridentifizierung oder pseudonyme Identifizierungsmerkmale von Endbenutzern gesammelt und an Microsoft übermittelt. Weitere Informationen zur GSGVO erhalten Sie im [Microsoft Trust Center zur EU-Datenschutz-Grundverordnung](https://microsoft.com/gdpr). Weitere Informationen zu Configuration Manager-Daten finden Sie unter [Diagnose- und Nutzungsdaten für System Center Configuration Manager](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).
+
+
 ## <a name="see-also"></a>Weitere Informationen:  
- [Diagnose- und Nutzungsdaten für System Center Configuration Manager](../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)
+ [Diagnose- und Verwendungsdaten](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data)

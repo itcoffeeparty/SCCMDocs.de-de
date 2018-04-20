@@ -1,25 +1,26 @@
 ---
-title: "Verwalten von Apps aus dem Microsoft Store für Unternehmen"
+title: Verwalten von Apps aus dem Microsoft Store für Unternehmen
 titleSuffix: Configuration Manager
-description: "Verwalten Sie Apps aus dem Microsoft Store für Unternehmen, und stellen Sie sie mithilfe von System Center Configuration Manager bereit."
+description: Verwalten Sie Apps aus dem Microsoft Store für Unternehmen, und stellen Sie sie mithilfe von System Center Configuration Manager bereit.
 ms.custom: na
 ms.date: 12/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-app
+ms.technology:
+- configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 15644a8c1acdbde85c7ca194a72a10c3cc2c0fcc
-ms.sourcegitcommit: f1535281b2c3fecff773b722c3f7590bf6ba10a0
+ms.openlocfilehash: 89bb52b806c99395bca14be34d06611174823a3c
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-with-system-center-configuration-manager"></a>Verwalten von Apps aus dem Microsoft Store für Unternehmen mit System Center Configuration Manager
 Im [Microsoft Store für Unternehmen](https://www.microsoft.com/business-store) können Sie Windows-Apps für Ihre Organisation finden und entweder einzeln oder per Volumenlizenz erwerben. Indem Sie den Store mit Configuration Manager verbinden, können Sie die Liste der erworbenen Apps mit Configuration Manager synchronisieren. Sie können anschließend diese Apps in der Configuration Manager-Konsole anzeigen und sie bereitstellen, wie Sie jede andere App bereitstellen würden.
@@ -88,7 +89,7 @@ Durch das Synchronisieren der Liste der Apps, die von Ihrem Unternehmen erworben
 ### <a name="for-configuration-manager-versions-prior-to-1706"></a>Für Versionen des Configuration Manager vor 1706
 
 **Registrieren Sie Configuration Manager als „Webanwendung und/oder Web-API“-Verwaltungstool in Azure Active Directory. Durch diese Aktion erhalten Sie eine Client-ID, die Sie später benötigen.**
-1. Wählen Sie im Active Directory-Knoten, [https://manage.windowsazure.com](https://manage.windowsazure.com), Ihr Azure Active Directory aus, und klicken Sie anschließend auf **Anwendungen** > **Hinzufügen**.
+1. Wählen Sie im Active Directory-Knoten von [https://manage.windowsazure.com](https://manage.windowsazure.com) Ihr Azure Active Directory aus, und klicken Sie dann auf **Anwendungen** > **Hinzufügen**.
 2.  Klicken Sie auf **Eine von meinem Unternehmen entwickelte Anwendung hinzufügen**.
 3.  Geben Sie einen Namen für die Anwendung ein, wählen Sie **Webanwendung** und/oder **Web-API** aus, und klicken Sie anschließend auf den Pfeil **Weiter**.
 4.  Geben Sie die gleiche URL für die **Registrierungs-URL** und die **App-ID-URI** ein. Dabei kann es sich um eine beliebige URL handeln, die nicht in eine reale Adresse aufgelöst werden muss. Sie können z.B. *https://yourdomain/sccm* eingeben.
@@ -99,7 +100,7 @@ Durch das Synchronisieren der Liste der Apps, die von Ihrem Unternehmen erworben
 2.  Wählen Sie unter **Schlüssel** eine Dauer aus der Liste aus, und klicken Sie anschließend auf **Speichern**. Diese Aktion erstellt einen neuen Clientschlüssel. Verlassen Sie diese Seite nicht, bevor Sie Microsoft Store für Unternehmen erfolgreich in Configuration Manager eingebunden haben.
 
 **Konfigurieren Sie im Microsoft Store für Unternehmen Configuration Manager als Speicherverwaltungstool**
-1.  Öffnen Sie [https://businessstore.microsoft.com/de-de/managementtools](https://businessstore.microsoft.com/en-us/managementtools), und melden Sie sich nach entsprechender Aufforderung an.
+1.  Öffnen Sie [https://businessstore.microsoft.com/managementtools](https://businessstore.microsoft.com/managementtools), und melden Sie sich an, wenn Sie dazu aufgefordert werden.
 2.  Akzeptieren Sie gegebenenfalls die Nutzungsbedingungen.
 3.  Klicken Sie unter **Verwaltungstools** auf **Verwaltungstool hinzufügen**.
 4.  Geben Sie unter **Tool nach Namen suchen** den Namen der App ein, die Sie zuvor in AAD erstellt haben, und klicken Sie anschließend auf **Hinzufügen**.
@@ -151,6 +152,6 @@ Sie können die Informationen für jede Store-App anzeigen, die Sie verwalten. Z
 
 Nach der Bereitstellung von Online-Apps stammen sämtliche Updates für diese App direkt von Microsoft Store. Darüber hinaus überprüft Configuration Manager nicht die Versionskompatibilität von Online-Apps, sondern nur, ob Windows die App als installiert meldet.  
 
-Wenn Sie Offline-Apps für Windows 10-Geräte mit dem Konfigurations-Manager-Client bereitstellen, sollten Sie es den Benutzern nicht ermöglichen, Anwendungen über externe Quellen zu aktualisieren, bei denen es sich nicht um Bereitstellungen von Configuration Manager handelt. Die Steuerung der Updates von Offline-Apps ist in Umgebungen mit mehreren Benutzern (z.B. Kursräumen) besonders wichtig. [Gruppenrichtlinien](https://docs.microsoft.com/en-us/windows/configuration/stop-employees-from-using-microsoft-store#a-href-idblock-store-group-policyablock-microsoft-store-using-group-policy) sind eine Möglichkeit zum Deaktivieren von Microsoft Store. 
+Wenn Sie Offline-Apps für Windows 10-Geräte mit dem Konfigurations-Manager-Client bereitstellen, sollten Sie es den Benutzern nicht ermöglichen, Anwendungen über externe Quellen zu aktualisieren, bei denen es sich nicht um Bereitstellungen von Configuration Manager handelt. Die Steuerung der Updates von Offline-Apps ist in Umgebungen mit mehreren Benutzern (z.B. Kursräumen) besonders wichtig. [Gruppenrichtlinien](https://docs.microsoft.com/windows/configuration/stop-employees-from-using-microsoft-store#a-href-idblock-store-group-policyablock-microsoft-store-using-group-policy) sind eine Möglichkeit zum Deaktivieren von Microsoft Store. 
 
 Wenn der Administrator von Microsoft Store für Unternehmen eine Offline-App erworben hat, veröffentlichen Sie diese nicht für Benutzer über den Store. Durch diese Konfiguration wird sichergestellt, dass Benutzer die App nicht installieren oder online aktualisieren können. Die Benutzer erhalten ausschließlich Offlineupdates für die App über Configuration Manager. 

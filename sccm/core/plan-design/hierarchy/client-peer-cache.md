@@ -1,9 +1,9 @@
 ---
 title: Client-Peercache
 titleSuffix: Configuration Manager
-description: "Verwenden Sie Peercache für Quellspeicherorte für Clientinhalte beim Bereitstellen von Inhalten mit System Center Configuration Manager."
+description: Verwenden Sie Peercache für Quellspeicherorte für Clientinhalte beim Bereitstellen von Inhalten mit System Center Configuration Manager.
 ms.custom: na
-ms.date: 12/07/2017
+ms.date: 04/10/2018
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -12,24 +12,30 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
-caps.latest.revision: 
+caps.latest.revision: 3
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 424f4030f2dd2a337a29d48ca831fa3a791de610
-ms.sourcegitcommit: e121d8d3dd82b9f2dde2cb5206cbee602ab8e107
+manager: dougeby
+ms.openlocfilehash: 99eef9faf6ac66f65d16020b703e3a64d9beb9d0
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Peercache für Configuration Manager-Clients
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Ab Version 1610 von System Center Configuration Manager können Sie **Peercache** zum Verwalten der Bereitstellung von Inhalten für Clients an Remotestandorten verwenden. Peercache ist eine integrierte Configuration Manager-Lösung, mit deren Hilfe Clients Inhalte für andere Clients direkt aus ihrem lokalen Cache freigeben können.   
+<!--1101436-->
+Verwenden Sie den **Peercache**, der Sie beim Verwalten von Bereitstellungen von Inhalten an Clients an Remotestandorten unterstützt. Peercache ist eine integrierte Configuration Manager-Lösung, mit deren Hilfe Clients Inhalte für andere Clients direkt aus ihrem lokalen Cache freigeben können.   
 
 > [!TIP]  
-> Diese Funktion wurde erstmals in Version 1610 als [Vorabfunktion](/sccm/core/servers/manage/pre-release-features) eingeführt. Ab Version 1710 können ist diese Funktion keine Vorabfunktion mehr.
+> Diese Funktion wurde erstmals in Version 1610 als [Vorabfunktion](/sccm/core/servers/manage/pre-release-features) eingeführt. Ab Version 1710 können ist diese Funktion keine Vorabfunktion mehr.  
+
+
+> [!Note]  
+> Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen diese Feature aktivieren, bevor Sie es verwenden. Weitere Informationen finden Sie unter [Enable optional features from updates (Aktivieren optionaler Features von Updates)](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+
 
 ## <a name="overview"></a>Übersicht
 Ein Peercacheclient ist ein Configuration Manager-Client, der für die Verwendung von Peercache aktiviert ist. Ein Peercacheclient, der über Inhalte verfügt, die für weitere Clients freigegeben werden können, ist eine Peercachequelle.
@@ -38,7 +44,7 @@ Ein Peercacheclient ist ein Configuration Manager-Client, der für die Verwendun
     -  Muss in eine Domäne eingebunden sein. Ein Client, der nicht in eine Domäne eingebunden ist, kann jedoch Inhalte von einer in eine Domäne eingebundenen Peercachequelle abrufen.
     -  Muss Mitglied der aktuellen Begrenzungsgruppe des Clients sein, der die Inhalte sucht. Wenn ein Client einen Fallback ausführt, um den Inhalt einer benachbarten Begrenzungsgruppe zu suchen, werden in der Liste von Quellspeicherorten keine Peercacheclients in benachbarten Begrenzungsgruppen beinhaltet. Weitere Informationen zu aktuellen und benachbarten Begrenzungsgruppen finden Sie unter [Begrenzungsgruppen](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups).
  - Alle Inhaltstypen, die im Cache eines Configuration Manager-Clients gespeichert sind, können mithilfe von Peercache für andere Clients bereitgestellt werden. Dies umfasst Office 365-Dateien und drückt Installationsdateien aus.<!--SMS.500850-->
- -  Der Peercache ersetzt nicht die Verwendung anderer Lösungen wie BranchCache. Zusammen mit anderen Lösungen bietet der Peercache mehr Optionen für das Erweitern herkömmlicher Lösungen für die Inhaltsbereitstellung, wie z.B. Verteilungspunkte. Der Peercache ist eine benutzerdefinierte Lösung, die nicht von BranchCache abhängig ist.  Wenn Sie Windows BranchCache nicht aktivieren oder nutzen, funktioniert der Peercache trotzdem.
+ -  Der Peercache ersetzt nicht die Verwendung anderer Lösungen wie BranchCache. Zusammen mit anderen Lösungen bietet der Peercache mehr Optionen für das Erweitern herkömmlicher Lösungen für die Inhaltsbereitstellung, wie z.B. Verteilungspunkte. Der Peercache ist eine benutzerdefinierte Lösung, die nicht von BranchCache abhängig ist. Wenn Sie Windows BranchCache nicht aktivieren oder nutzen, funktioniert der Peercache trotzdem.
 
 ### <a name="operations"></a>Vorgänge
 
@@ -82,7 +88,7 @@ Erfahren Sie mithilfe dieses Berichts, wie Sie Angaben zur Ablehnung einer angeg
 3. **Angaben zur Ablehnung von Inhalt einer Peercachequelle**:   
   Erfahren Sie mithilfe dieses Berichts, welchen Inhalt der Client angefordert hat, wenn die Anforderung abgelehnt wird.
 
- - **Bekannte Probleme:** Sie können nicht aus verfügbaren Parametern wählen, sondern müssen diese manuell eingeben. Geben Sie den Wert für *Rejection Type* (Ablehnungstyp) ein, wie im Bericht **Ablehnen von Inhalt einer Peercachequelle** gezeigt wird. Geben Sie dann die *Ressourcen-ID* für die Inhaltsquelle ein, über die Sie mehr Informationen sehen möchten.  So finden Sie die Resource ID der Quelle des Inhalts heraus:  
+ - **Bekannte Probleme:** Sie können nicht aus verfügbaren Parametern wählen, sondern müssen diese manuell eingeben. Geben Sie den Wert für *Rejection Type* (Ablehnungstyp) ein, wie im Bericht **Ablehnen von Inhalt einer Peercachequelle** gezeigt wird. Geben Sie dann die *Ressourcen-ID* für die Inhaltsquelle ein, über die Sie mehr Informationen sehen möchten. So finden Sie die Resource ID der Quelle des Inhalts heraus:  
 
     1. Machen Sie den Namen des Computers ausfindig, der als *Peercachequelle* in den Ergebnissen des Berichts **Ablehnen von Inhalt einer Peercachequelle durch eine Bedingung** angezeigt wird.  
     2. Navigieren Sie anschließend zu **Bestand und Kompatibilität** > **Geräte**, und suchen Sie nach dem Namen des Computers. Verwenden Sie den Wert aus der Spalte „Resource ID“.  
@@ -93,7 +99,7 @@ Erfahren Sie mithilfe dieses Berichts, wie Sie Angaben zur Ablehnung einer angeg
 
 -   Clients können nur Inhalte von Peercacheclients übertragen, die sich in ihrer aktuellen Begrenzungsgruppe befinden.
 
--   Vor Version 1706 muss jeder Standort, an dem Clients Peer Cache verwenden, mit einem [Netzwerkzugriffskonto](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account) konfiguriert sein. Mit einer Ausnahme ist der Account ab Version 1706 nicht mehr erforderlich.  Das Ausnahmeszenario tritt ein, wenn ein Peercache-fähiger Client eine Tasksequenz aus dem Softwarecenter ausführt, die als Startimage neu startet. In diesem Szenario benötigt der Client weiterhin das Netzwerkzugriffskonto. Wenn sich der Client in Windows PE befindet, verwendet er das Netzwerkzugriffskonto, um Inhalte aus der Peercachequelle abzurufen.
+-   Vor Version 1706 muss jeder Standort, an dem Clients Peer Cache verwenden, mit einem [Netzwerkzugriffskonto](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account) konfiguriert sein. Mit einer Ausnahme ist der Account ab Version 1706 nicht mehr erforderlich. Das Ausnahmeszenario tritt ein, wenn ein Peercache-fähiger Client eine Tasksequenz aus dem Softwarecenter ausführt, die als Startimage neu startet. In diesem Szenario benötigt der Client weiterhin das Netzwerkzugriffskonto. Wenn sich der Client in Windows PE befindet, verwendet er das Netzwerkzugriffskonto, um Inhalte aus der Peercachequelle abzurufen.
 
     Wenn erforderlich, verwendet der Peercache-Quellcomputer das Netzwerkzugriffskonto, um Downloadanforderungen von Peers zu authentifizieren. Dieses Konto benötigt zu diesem Zweck nur Domänenbenutzerberechtigungen.
 

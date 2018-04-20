@@ -1,9 +1,9 @@
 ---
 title: VPN-Profile
 titleSuffix: Configuration Manager
-description: "So verwenden Sie VPN-Profile in System Center Configuration Manager, um Benutzern in Ihrer Organisation Einstellungen für VPN bereitzustellen."
+description: So verwenden Sie VPN-Profile in System Center Configuration Manager, um Benutzern in Ihrer Organisation Einstellungen für VPN bereitzustellen.
 ms.custom: na
-ms.date: 11/27/2016
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,29 +12,31 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c0f094f1-852e-4606-91db-97846d8f0772
-caps.latest.revision: 
-caps.handback.revision: 
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 02d9178dbfe8cb00d38367d0dfcb2f521d4c26a0
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+caps.latest.revision: 6
+caps.handback.revision: 0
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: d30e7cc834f1693f2cbcf2db840d650421062a19
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="vpn-profiles-in-system-center-configuration-manager"></a>VPN-Profile in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
+<!--1283610-->
+Verwenden Sie VPN-Profile in Configuration Manager, um Benutzern in Ihrer Organisation Einstellungen für VPN bereitzustellen. Durch Bereitstellen dieser Einstellungen erleichtern Sie dem Endbenutzer das Verbinden mit Ressourcen im Unternehmensnetzwerk.  
 
-Verwenden Sie VPN-Profile in System Center Configuration Manager (auch als ConfigMgr oder SCCM bekannt), um Benutzern in Ihrer Organisation Einstellungen für VPN bereitzustellen. Durch Bereitstellen dieser Einstellungen erleichtern Sie dem Endbenutzer das Verbinden mit Ressourcen im Unternehmensnetzwerk.  
+ Möglicherweise möchten Sie z.B. alle Windows 10-Geräte mit den Einstellungen konfigurieren, die zum Verbinden mit einer Dateifreigabe im Unternehmensnetzwerk erforderlich sind. Sie können ein VPN-Profil mit den Einstellungen erstellen, die zum Herstellen einer Verbindung mit dem Unternehmensnetzwerk erforderlich sind. Stellen Sie dieses Profil anschließend für alle Benutzer bereit, die über Windows 10-Geräte verfügen. Diese Benutzer sehen die VPN-Verbindung in der Liste der verfügbaren Netzwerke und können mit geringem Aufwand eine Verbindung herstellen.  
 
- Sie möchten z.B. allen Geräten, auf denen das Windows RT-Betriebssystem ausgeführt wird, die Einstellungen zur Verfügung stellen, die zum Verbinden mit einer Dateifreigabe im Unternehmensnetzwerk erforderlich sind. Sie können ein VPN-Profil mit den zum Verbinden mit dem Unternehmensnetzwerk erforderlichen Einstellungen erstellen und dieses Profil dann für alle Benutzer mit Geräten unter Windows RT in der Hierarchie bereitstellen. Benutzer von Windows RT-Geräten sehen die VPN-Verbindung in der Liste der verfügbaren Netzwerke und können sich mühelos mit diesem Netzwerk verbinden.  
+ Wenn Sie ein VPN-Profil erstellen, können Sie eine Vielzahl von Sicherheitseinstellungen einrichten. Zu diesen Einstellungen gehören Zertifikate für die Serverüberprüfung und die Clientauthentifizierung, die mithilfe von Configuration Manager-Zertifikatprofilen bereitgestellt wurden. Weitere Informationen finden Sie unter [Zertifikatprofile](introduction-to-certificate-profiles.md).  
 
- Wenn Sie ein VPN-Profil erstellen, können Sie eine Vielzahl von Sicherheitseinstellungen aufnehmen, darunter auch Zertifikate für die Serverüberprüfung und Clientauthentifizierung, die mit System Center Configuration Manager-Zertifikatprofilen bereitgestellt wurden. Weitere Informationen zu Zertifikatprofilen finden Sie unter [Zertifikatprofile in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
+> [!Note]  
+> Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen dieses Feature aktivieren, bevor Sie es verwenden können. Weitere Informationen finden Sie unter [Aktivieren optionaler Features von Updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
- In diesem Abschnitt wird erklärt, welche Geräte Sie mit VPN-Profilen konfigurieren können, wenn Sie Configuration Manager verwenden.
 
  Unter [VPN profiles on mobile devices (VPN-Profile auf mobilen Geräten)](/sccm/mdm/deploy-use/create-vpn-profiles) finden Sie Informationen dazu, wie Sie Geräte überprüfen, die Sie unter Verwendung von Configuration Manager mit Microsoft Intune konfigurieren können.  
 
@@ -47,7 +49,7 @@ Verwenden Sie VPN-Profile in System Center Configuration Manager (auch als Confi
 |**Pulse Secure**|Ja|Nein|Ja|Ja|  
 |**F5 Edge Client**|Ja|Nein|Ja|Ja|  
 |**Dell SonicWALL Mobile Connect**|Ja|Nein|Ja|Ja|  
-|**Check Point Mobile VPN**|Ja|Nein|Ja|Ja|  
+|**Prüfpunkt für mobiles VPN**|Ja|Nein|Ja|Ja|  
 |**Microsoft SSL (SSTP)**|Ja|Ja|Ja|Nein|  
 |**Microsoft Automatic**|Ja|Ja|Ja|Nein|  
 |**IKEv2**|Ja|Ja|Ja|Nein|  

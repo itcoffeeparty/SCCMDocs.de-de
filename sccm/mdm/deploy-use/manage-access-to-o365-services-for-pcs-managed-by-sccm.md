@@ -1,9 +1,9 @@
 ---
-title: "Verwalten des Zugriffs auf Office 365-Dienste für verwaltete PCs"
+title: Verwalten des Zugriffs auf O365-Dienste
 titleSuffix: Configuration Manager
-description: "Erfahren Sie, wie Sie den bedingten Zugriff für PCs konfigurieren, die von System Center Configuration Manager verwaltet werden."
+description: Erfahren Sie, wie Sie den bedingten Zugriff auf Office 365-Dienste für PCs konfigurieren, die von System Center Configuration Manager verwaltet werden.
 ms.custom: na
-ms.date: 01/10/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,26 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
-caps.latest.revision: 
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: e1f50ea65236473f059ded6ef85c37646e929e53
-ms.sourcegitcommit: e121d8d3dd82b9f2dde2cb5206cbee602ab8e107
+caps.latest.revision: 15
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 1e02cb911397d5f1f837996318b12049d328c9c3
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Verwalten des Zugriffs auf Office 365-Dienste für PCs, die von System Center Configuration Manager verwaltet werden
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-In diesem Artikel wird beschrieben, wie Sie den bedingten Zugriff für PCs konfigurieren, die von Configuration Manager verwaltet werden.  
+<!--1191496-->
+Konfigurieren des bedingten Zugriffs auf Office 365-Dienste für PCs, die von Configuration Manager verwaltet werden.  
 
-<!--
- >> [!Tip]  
-> This feature was first introduced in version 1602 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1702, this feature is no longer a pre-release feature.
--->
+> [!Note]  
+> Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen dieses Feature aktivieren, bevor Sie es verwenden können. Weitere Informationen finden Sie unter [Aktivieren optionaler Features von Updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+
 
 Informationen zum Konfigurieren des bedingten Zugriffs für Geräte, die über Microsoft Intune registriert und verwaltet werden, finden Sie unter [Verwalten des Zugriffs auf Dienste in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md). Dieser Artikel behandelt auch Geräte, die in eine Domäne eingebunden sind und nicht als konform ausgewertet werden.
 
@@ -95,15 +95,18 @@ Informationen zum Konfigurieren des bedingten Zugriffs für Geräte, die über M
     - **BitLocker muss auf dem Gerät aktiviert sein**
     - **Sicherer Start muss auf dem Gerät aktiviert sein** 
     - **Codeintegrität muss auf dem Gerät aktiviert sein**
-    - **Antischadsoftware-Frühstart muss auf dem Gerät aktiviert sein**
+    - **Antischadsoftware-Frühstart muss auf dem Gerät aktiviert sein**  
 
->[!Tip]
-> Mit Version 1710 wurden die bedingten Zugangsberechtigungskriterien für die Geräteintegritätsprüfung als vorab veröffentlichtes Feature eingeführt. Informationen zum Aktivieren dieses Features finden Sie unter [Funktionen des Vorabreleases](/sccm/core/servers/manage/pre-release-features). 
+    >[!Tip]  
+    > Mit Version 1710 wurden die bedingten Zugangsberechtigungskriterien für die Geräteintegritätsprüfung als [Vorabfeature](/sccm/core/servers/manage/pre-release-features) eingeführt. Ab Version 1802 ist dieses Feature kein Vorabfeature mehr.<!--1235616-->  
+
+    > [!Note]  
+    > Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen dieses Feature aktivieren, bevor Sie es verwenden können. Weitere Informationen finden Sie unter [Aktivieren optionaler Features von Updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
 ### <a name="step-2-evaluate-the-effect-of-conditional-access"></a>Schritt 2: Bewerten der Auswirkungen des bedingten Zugriffs  
- Führen Sie den „Bericht zur Kompatibilität mit bedingtem Zugriff“ aus. Sie finden ihn im Abschnitt „Überwachung“ unter „Berichte“ > „Konformitäts- und Einstellungsverwaltung“. Dieser Bericht zeigt den Konformitätsstatus für alle Geräte an.  Geräten, die als nicht konform gemeldet werden, wird der Zugriff auf Exchange Online und SharePoint Online blockiert.  
+ Führen Sie den **Bericht zur Konformität mit bedingtem Zugriff** aus. Sie finden ihn im Arbeitsbereich **Überwachung** unter **Berichte** > **Konformitäts- und Einstellungsverwaltung**. Dieser Bericht zeigt den Konformitätsstatus für alle Geräte an. Geräten, die als nicht konform gemeldet werden, wird der Zugriff auf Exchange Online und SharePoint Online blockiert.  
 
- ![CA&#95;compliance&#95;report](media/CA_compliance_report.png)  
+ ![Configuration Manager-Konsole, Arbeitsbereich „Überwachung“, Berichterstellung, Berichte, Konformitäts- und Einstellungsverwaltung: Bericht zur Konformität mit bedingtem Zugriff](media/CA_compliance_report.png)  
 
 ### <a name="configure-active-directory-security-groups"></a>Konfigurieren von Active Directory-Sicherheitsgruppen  
  Je nach Art der Richtlinie weisen Sie Benutzergruppen spezielle Richtlinien für bedingten Zugriff zu. Die Gruppen beinhalten die Benutzer, für die die Richtlinie gelten soll oder die von ihr ausgeschlossen sind. Wenn eine Richtlinie für einen Benutzer gilt, muss jedes von ihm verwendete Gerät die Richtlinie erfüllen, um auf den Dienst zugreifen zu können.  
@@ -114,12 +117,12 @@ Informationen zum Konfigurieren des bedingten Zugriffs für Geräte, die über M
 
 -   **Zielgruppen:** Benutzergruppen, auf die die Richtlinie angewendet wird Die gleiche Gruppe sollte sowohl für Konformität und die Richtlinie für bedingten Zugriff verwendet werden.  
 
--   **Ausgenommene Gruppen:** Benutzergruppen, die von der Richtlinie ausgenommen sind (optional)  
+-   **Ausgenommene Gruppen:** Benutzergruppen, die von der Richtlinie ausgenommen sind (optional).  
     Benutzer die in beiden Gruppen sind, werden von der Richtlinie ausgenommen.  
 
      Es werden nur die Gruppen ausgewertet, für die die Richtlinie für bedingten Zugriff gilt.  
 
-### <a name="step-3--create-a-conditional-access-policy-for-exchange-online-and-sharepoint-online"></a>Schritt 3:  Erstellen einer Richtlinie für bedingten Zugriff für Exchange Online und SharePoint Online  
+### <a name="step-3-create-a-conditional-access-policy-for-exchange-online-and-sharepoint-online"></a>Schritt 3: Erstellen einer Richtlinie für bedingten Zugriff für Exchange Online und SharePoint Online  
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Bestand und Kompatibilität**.  
 

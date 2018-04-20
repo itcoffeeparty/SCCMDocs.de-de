@@ -1,22 +1,23 @@
 ---
-title: Konfigurieren der zu synchronisierenden Klassifizierungen und Produkte
+title: Konfigurieren von Klassifizierungen und Produkten
 titleSuffix: Configuration Manager
-description: "Führen Sie diese Schritte zum Konfigurieren von Klassifizierungen und Produkten in der Configuration Manager-Konsole durch."
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.date: 11/20/2017
+description: Führen Sie diese Schritte zum Konfigurieren von Softwareupdateklassifizierungen und Produkten in der Configuration Manager-Konsole durch.
+keywords: ''
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.date: 04/10/2018
 ms.topic: article
 ms.prod: configuration-manager
-ms.service: 
-ms.technology: configmgr-sum
+ms.service: ''
+ms.technology:
+- configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: f36ff74b794e57b51742c40d10bd25a9cb4a13a5
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: 9ba0872b1d2e4ef5dd027df3f7c16a6b3a94e9ac
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 #  <a name="configure-classifications-and-products-to-synchronize"></a>Konfigurieren der zu synchronisierenden Klassifizierungen und Produkte  
 
@@ -53,9 +54,11 @@ ms.lasthandoff: 11/21/2017
     >       
 
     > [!NOTE]    
-    > Ab Version 1706 von Configuration Manager steht Ihnen die Option **Microsoft Surface-Treiber und Firmwareupdates einbeziehen** für die Synchronisierung von Microsoft Surface-Treibern zur Verfügung. Voraussetzung hierfür ist die Installation von Windows Server 2016 auf allen Softwareupdatepunkten. Wenn Sie einen Softwareupdatepunkt auf einem Computer mit Windows Server 2012 aktivieren, nachdem Sie Surface-Treiber aktiviert haben, sind die Suchergebnisse für die Treiberupdates ungenau. Dies führt zu fehlerhaften Konformitätsdaten, die in der Configuration Manager-Konsole und in Configuration Manager-Berichten angezeigt werden.  
-    > 
-    > In Version 1710 von Configuration Manager steht Ihnen das Kontrollkästchen **Microsoft Surface-Treiber und Firmwareupdates einbeziehen** stets zur Verfügung. Dies ist jedoch eine Vorabfunktion in der Configuration Manager-Version 1706, das Sie aktivieren müssen, damit sie verfügbar ist. Features der Vorabversion sind Features, die in Current Branch enthalten sind, um sie in einem frühen Stadium in einer Produktionsumgebung zu testen. Diese Features werden vollständig unterstützt, unterliegen aber noch der Entwicklung und könnten möglicherweise geändert werden, bis sie die Vorabversionskategorie verlassen. Weitere Informationen finden Sie unter [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease) (Verwenden von Vorabfeatures aus Updates).
+    > Ab Version 1706 von Configuration Manager steht Ihnen die Option **Microsoft Surface-Treiber und Firmwareupdates einbeziehen** für die Synchronisierung von Microsoft Surface-Treibern zur Verfügung.<!--1098490--> Voraussetzung hierfür ist die Installation von Windows Server 2016 auf allen Softwareupdatepunkten. Wenn Sie einen Softwareupdatepunkt auf einem Computer mit Windows Server 2012 aktivieren, nachdem Sie Surface-Treiber aktiviert haben, sind die Suchergebnisse für die Treiberupdates ungenau. Dies führt zu fehlerhaften Konformitätsdaten, die in der Configuration Manager-Konsole und in Configuration Manager-Berichten angezeigt werden.  
+    >  
+    > Dieses Feature wurde erstmals in Version 1706 als [Vorabfeature](/sccm/core/servers/manage/pre-release-features) eingeführt. Ab Version 1710 können ist diese Funktion keine Vorabfunktion mehr.  
+    >  
+    > Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen diese Feature aktivieren, bevor Sie es verwenden. Weitere Informationen finden Sie unter [Enable optional features from updates (Aktivieren optionaler Features von Updates)](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
 5.  Geben Sie auf der Seite **Produkte** die Produkte an, für die Sie Softwareupdates synchronisieren möchten. Klicken Sie dann auf **Schließen**.  
 

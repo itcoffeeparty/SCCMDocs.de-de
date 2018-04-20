@@ -1,26 +1,27 @@
 ---
-title: "Referenz für Wartungstasks"
+title: Referenz für Wartungstasks
 titleSuffix: Configuration Manager
-description: "Hier finden Sie ausführliche Informationen zu den einzelnen Wartungstasks für System Center Configuration Manager-Standorte sowie dazu, ob diese Tasks standardmäßig aktiviert sind."
+description: Hier finden Sie ausführliche Informationen zu den einzelnen Wartungstasks für System Center Configuration Manager-Standorte sowie dazu, ob diese Tasks standardmäßig aktiviert sind.
 ms.custom: na
 ms.date: 3/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
-caps.latest.revision: "16"
-caps.handback.revision: "0"
+caps.latest.revision: 16
+caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 3f67bddcb7233b62769271871354c86c5440e320
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 21b5e47efd2678f78fe7b7c0e10524ec7141634d
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reference-for-maintenance-tasks-for-system-center-configuration-manager"></a>Referenz für Wartungstasks für System Center Configuration Manager
 
@@ -105,7 +106,7 @@ Dieses Thema enthält eine Liste der Details zu jedem Wartungstask für System C
 -   **Primärer Standort**: Aktiviert    
 -   Sekundärer Standort: Nicht verfügbar  
 
-**Veraltete Ermittlungsdaten löschen**: Verwenden Sie diesen Task, um veraltete Ermittlungsdaten aus der Datenbank zu löschen. Dabei kann es sich um Daten aus der Frequenzermittlung, aus der Netzwerkermittlung und aus Ermittlungsmethoden von Active Directory Domain Services (System, Benutzer und Gruppe) handeln. Bei Ausführung dieses Tasks an einem Standort werden mit diesem Standort verknüpfte Daten gelöscht. Die Änderungen werden anschließend an andere Standort repliziert. Informationen zur Ermittlung finden Sie unter [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md).  
+**Veraltete Ermittlungsdaten löschen**: Verwenden Sie diesen Task, um veraltete Ermittlungsdaten aus der Datenbank zu löschen. Dabei kann es sich um Daten aus der Frequenzermittlung, aus der Netzwerkermittlung und aus Ermittlungsmethoden von Active Directory Domain Services (System, Benutzer und Gruppe) handeln. Über diesen Task werden außerdem veraltete Geräte mit „Außer Betrieb“ markiert. Bei Ausführung dieses Tasks an einem Standort werden mit diesem Standort verknüpfte Daten gelöscht. Die Änderungen werden anschließend an andere Standort repliziert. Informationen zur Ermittlung finden Sie unter [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md).  
 
 -   Standortserver der zentralen Verwaltung: Nicht verfügbar    
 -   **Primärer Standort**: Aktiviert    
@@ -213,7 +214,7 @@ Dieser Task gilt für Geräte, die über Microsoft Intune (hybrid) oder über di
 
 **Inaktive Clientermittlungsdaten löschen**: Verwenden Sie diesen Task, um Ermittlungsdaten für inaktive Clients aus der Datenbank zu löschen. Clients werden als inaktiv gekennzeichnet, wenn der Client als veraltet markiert wird, sowie durch für den Clientstatus vorgenommene Konfigurationen.
 
-Dieser Task kann nur für Ressourcen ausgeführt werden, bei denen es sich um Configuration Manager-Clients handelt. Er unterscheidet sich vom Task **Veraltete Ermittlungsdaten löschen**, über den alle veralteten Ermittlungsdatensätze gelöscht werden. Wenn dieser Task an einem Standort ausgeführt wird, werden Daten auf allen Standorten in der Hierarchie aus der Datenbank gelöscht. Weitere Informationen finden Sie unter [Konfigurieren des Clientstatus in System Center Configuration Manager](../../../core/clients/deploy/configure-client-status.md).  
+Dieser Task kann nur für Ressourcen ausgeführt werden, bei denen es sich um Configuration Manager-Clients handelt. Er unterscheidet sich vom Task **Veraltete Ermittlungsdaten löschen**, über den alle veralteten Ermittlungsdatensätze gelöscht werden. Wenn dieser Task an einem Standort ausgeführt wird, werden Daten auf allen Standorten in der Hierarchie aus der Datenbank gelöscht. Weitere Informationen finden Sie unter [How to configure client status in System Center Configuration Manager](../../../core/clients/deploy/configure-client-status.md).  
 
 > [!IMPORTANT]  
 > Wenn Sie diesen Task aktivieren, legen Sie als Ausführungsintervall einen höheren Wert fest als beim Zeitplan für die **Frequenzermittlung**. Dadurch können aktive Clients einen Frequenzermittlungsdatensatz senden, um Ihre Clientdatensätze als aktiv zu kennzeichnen, sodass sie von diesem Task nicht gelöscht werden.  
@@ -237,7 +238,7 @@ Dieser Task kann nur für Ressourcen ausgeführt werden, bei denen es sich um Co
 -   **Primärer Standort**: Nicht aktiviert    
 -   Sekundärer Standort: Nicht verfügbar  
 
-**Veraltete Standorte und Subnetze der Gesamtstrukturermittlung löschen**: Verwenden Sie diesen Task, um Daten zu Active Directory-Standorten, -Subnetzen und -Domänen zu löschen, die innerhalb der letzten 30 Tage nicht mithilfe der Active Directory-Gesamtstrukturermittlung ermittelt wurden. Dadurch werden zwar die Ermittlungsdaten gelöscht, jedoch werden mithilfe dieser Ermittlungsdaten erstellte Grenzen nicht beeinträchtigt. Weitere Informationen finden Sie unter [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md).  
+**Veraltete Standorte und Subnetze der Gesamtstrukturermittlung löschen**: Verwenden Sie diesen Task, um Daten zu Active Directory-Standorten, -Subnetzen und -Domänen zu löschen, die innerhalb der letzten 30 Tage nicht mithilfe der Active Directory-Gesamtstrukturermittlung ermittelt wurden. Dadurch werden zwar die Ermittlungsdaten gelöscht, jedoch werden mithilfe dieser Ermittlungsdaten erstellte Grenzen nicht beeinträchtigt. Weitere Informationen finden Sie unter [Ausführen der Ermittlung für System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md).  
 
 -   **Standort der zentralen Verwaltung**: Aktiviert    
 -   **Primärer Standort**: Aktiviert    

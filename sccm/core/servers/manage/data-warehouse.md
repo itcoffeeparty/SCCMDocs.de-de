@@ -3,7 +3,7 @@ title: Data Warehouse
 titleSuffix: Configuration Manager
 description: Data Warehouse-Dienstpunkt und -Datenbank für System Center Configuration Manager
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,22 +13,28 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
 caps.latest.revision: ''
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 83bfc0e3d7bdf1ff8718c7c211c897e37b21a06b
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 02a3c672c95587aeecd41e804b32981104896923
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 #  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>Der Data Warehouse-Dienstpunkt für System Center Configuration Manager
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Ab Version 1702 können Sie den Data Warehouse-Dienstpunkt verwenden, um langfristige Verlaufsdaten zur Bereitstellung für Configuration Manager zu speichern und hierfür Berichte zu erstellen.
+<!--1277922-->
+Verwenden Sie den Data Warehouse-Dienstpunkt, um langfristige Verlaufsdaten zur Bereitstellung für Configuration Manager zu speichern und hierfür Berichte zu erstellen.
 
 > [!TIP]
-> Dieses Feature wurde erstmals in Version 1702 als [Vorabfeature](/sccm/core/servers/manage/pre-release-features) eingeführt. Ab Version 1706 können ist diese Funktion kein vorab veröffentlichtes Feature mehr.
+> Dieses Feature wurde erstmals in Version 1702 als [Vorabfeature](/sccm/core/servers/manage/pre-release-features) eingeführt. Ab Version 1706 können ist diese Funktion kein vorab veröffentlichtes Feature mehr.  
+
+
+> [!Note]  
+> Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen dieses Feature aktivieren, bevor Sie es verwenden können. Weitere Informationen finden Sie unter [Aktivieren optionaler Features von Updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+
 
 Das Data Warehouse unterstützt ein Datenvolumen von bis zu 2 TB, inklusive der Zeitstempel für Änderungsnachverfolgung. Die Speicherung der Daten wird durch die automatisierte Synchronisierung der Configuration Manager-Standortdatenbank mit der Data Warehouse-Datenbank erreicht. Auf diese Informationen kann dann vom Reporting services-Punkt aus zugegriffen werden. Mit der Data Warehouse-Datenbank synchronisierte Daten werden drei Jahre lang aufbewahrt. Daten, die älter als drei Jahre sind, werden in regelmäßigen Abständen mithilfe einer eingebauten Aufgabe entfernt.
 
@@ -168,7 +174,7 @@ Beim Öffnen eines Data Warehouse-Berichts wird folgender Fehler zurückgegeben:
 
 
 ## <a name="data-warehouse-dataflow"></a>Data Warehouse-Datenfluss   
-![Datawarehouse_flow](./media/datawarehouse.png)
+![Diagramm, auf dem der logische Datenfluss zwischen den Standortkomponenten für das Data Warehouse dargestellt wird](./media/datawarehouse.png)
 
 **Datenspeicher und Synchronisierung**
 
