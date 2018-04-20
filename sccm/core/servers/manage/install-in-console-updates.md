@@ -3,7 +3,7 @@ title: Konsoleninterne Updates
 titleSuffix: Configuration Manager
 description: Installieren von Configuration Manager-Updates über die Microsoft-Cloud
 ms.custom: na
-ms.date: 03/28/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,14 +13,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 caps.latest.revision: 36
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 054bbd8e7b1dd3f5d565afe60eb7e3379cc7a9ee
-ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
+ms.openlocfilehash: 9924346ccbd862aa4462075a3307b4ec40b955bc
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-in-console-updates-for-system-center-configuration-manager"></a>Installieren konsoleninterner Updates für System Center Configuration Manager
 
@@ -219,7 +219,7 @@ Es wird empfohlen, das Update sofort und ohne Verzögerung zu installieren.
 Nach Abschluss des Konsolenupdates können Sie überprüfen, ob die Version von Konsole und Standort korrekt ist. Gehen Sie oben links in der Konsole zu **Info zu System Center Configuration Manager**.  
 
  > [!Note]  
- > Ab Version 1802 ist die Konsolenversion jetzt etwas anders als die Standortversion. Die Nebenversion der Konsole entspricht nun der endgültigen Release-Version von Configuration Manager. In Configuration Manager Version 1802 ist die anfängliche Standortversion beispielsweise 5.0.8634.1000, und die erste Konsolenversion ist 5.**1802**.1082.1700. Die Build- (1082) und Revisionsnummern (1700) können sich mit zukünftigen Hotfixes zum Release von 1802 ändern.
+ > Ab Version 1802 ist die Konsolenversion jetzt etwas anders als die Standortversion. Die Nebenversion der Konsole entspricht nun der endgültigen Release-Version von Configuration Manager. In Configuration Manager Version 1802 lautet die anfängliche Standortversion beispielsweise 5.0.8634.1000 und die erste Konsolenversion 5.**1802**.1082.1700. Die Build- (1082) und Revisionsnummern (1700) können sich mit zukünftigen Hotfixes zum Release von 1802 ändern.
 
 
 
@@ -369,10 +369,36 @@ Wenn ein Update ein oder mehrere optionale Features enthält, haben Sie die Mög
 
 Wechseln Sie in der Konsole zu **Verwaltung** > **Updates und Wartung** > **Features**, um verfügbare Funktionen und deren Status anzuzeigen.
 
-Wenn ein Feature nicht optional ist, wird es automatisch installiert und nicht im Knoten **Features** aufgeführt.  
+Wenn ein Feature nicht optional ist, wird es automatisch installiert. Es wird nicht im Knoten **Features** angezeigt.  
+
+> [!Important]  
+> In einer Hierarchie mit mehreren Standorten können Sie nur optionale Features oder Features der Vorabversion vom Standort der zentralen Verwaltung aus aktivieren. Dieses Verhalten stellt sicher, dass keine Konflikte in der Hierarchie auftreten. <!--507197-->
+ 
+
+Wenn Sie ein neues Features oder ein Feature der Vorabversion aktivieren, muss der Hierarchie-Manager von Configuration Manager (HMAN) die Änderung verarbeiten, bevor Sie das Feature nutzen können. Das Verarbeiten der Änderung wird oftmals direkt abgeschlossen; es kann aber bis zu 30 Minuten in Anspruch nehmen, abhängig vom Verarbeitungszyklus des HMAN. Nachdem die Änderung verarbeitet wurde, müssen Sie Ihre Konsole neu starten, bevor die zu diesem Feature gehörige Knoten angezeigt werden.
+
+#### <a name="list-of-optional-features"></a>Liste der optionalen Features
+Die folgenden Features sind in der neuesten Version von Configuration Manager optional:<!--505213-->  
+- [Bedingter Zugriff für verwaltete PCs](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1191496-->
+- [„Passport for Work](/sccm/protect/deploy-use/windows-hello-for-business-settings) (auch *Windows Hello for Business* genannt)<!--1245704-->
+- [VPN für Windows 10](/sccm/protect/deploy-use/vpn-profiles) <!--1283610-->
+- [Windows Defender Exploit Guard-Richtlinie](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468-->
+- [Microsoft OMS-Connector (Operations Management Suite)](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) <!--1258052-->
+- [PFX erstellen](/sccm/protect/deploy-use/introduction-to-certificate-profiles) <!--1321368-->
+- [Client-Peercache](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436-->
+- [Data Warehouse-Dienstpunkt](/sccm/core/servers/manage/data-warehouse) <!--1277922-->
+- [Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) <!--1101764-->
+- [Surface-Treiberupdates](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490-->
+- [Speichern von Tasksequenzinhalten in vorgeschaltetem Cache](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244-->
+- [Schritt „Tasksequenz ausführen“](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence) <!--1261338-->
+- [Erstellen und Ausführen von Skripts](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459-->
+- [Bewertung des Integritätsnachweises für Geräte für Konformitätsrichtlinien für bedingten Zugriff](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616-->
+- [Genehmigen von Anwendungsanforderungen für Benutzer pro Gerät](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings) <!--1357015-->  
 
 
-Wenn Sie ein neues Features oder ein Feature der Vorabversion aktivieren, muss der Hierarchie-Manager von Configuration Manager (HMAN) die Änderung verarbeiten, bevor Sie das Feature nutzen können. Das Verarbeiten der Änderung wird oftmals direkt abgeschlossen; es kann aber bis zu 30 Minuten in Anspruch nehmen, abhängig vom Verarbeitungszyklus des HMAN. Nachdem die Änderung verarbeitet wurde, müssen Sie Ihre Konsole neu starten, bevor die zu diesem Feature gehörige UI angezeigt wird.
+> [!Tip]  
+> Weitere Informationen zu Features, die Zustimmung für die Aktivierung erfordern, finden Sie in den [Features der Vorabversion](/sccm/core/servers/manage/pre-release-features).  
+> Weitere Informationen zu Features, die nur im Technical Preview-Branch verfügbar sind, finden Sie unter [Technical Preview](/sccm/core/get-started/technical-preview).
 
 
 
