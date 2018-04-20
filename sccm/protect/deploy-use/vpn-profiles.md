@@ -1,4 +1,4 @@
----
+﻿---
 title: VPN-Profile
 titleSuffix: Configuration Manager
 description: So verwenden Sie VPN-Profile in System Center Configuration Manager, um Benutzern in Ihrer Organisation Einstellungen für VPN bereitzustellen.
@@ -22,6 +22,7 @@ ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/16/2018
+
 ---
 # <a name="vpn-profiles-in-system-center-configuration-manager"></a>VPN-Profile in System Center Configuration Manager
 
@@ -62,3 +63,4 @@ Verwenden Sie VPN-Profile in Configuration Manager, um Benutzern in Ihrer Organi
 -   [Prerequisites for VPN profiles in System Center Configuration Manager (Voraussetzungen für VPN-Profile in System Center Configuration Manager)](../plan-design/prerequisites-for-wifi-vpn-profiles.md)  
 
 -   [Security and privacy for VPN profiles in System Center Configuration Manager (Sicherheit und Datenschutz für VPN-Profile in System Center Configuration Manager)](../plan-design/security-and-privacy-for-wifi-vpn-profiles.md)
+
