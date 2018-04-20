@@ -3,7 +3,7 @@ title: Verwalten von Tasksequenzen
 titleSuffix: Configuration Manager
 description: Sie können Tasksequenzen erstellen, bearbeiten, bereitstellen, importieren und exportieren, um sie zu verwalten und Tasks in Ihrer Umgebung zu automatisieren.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: nac
 ms.suite: na
@@ -15,12 +15,12 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 caps.latest.revision: 10
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 262bfa3991bbd95fad779da9520358d527a42b07
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+manager: dougeby
+ms.openlocfilehash: 9ed5a94d644aa0bdb7d63c3b976da7dd566dfedd
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>Verwalten von Tasksequenzen zum Automatisieren von Aufgaben in System Center Configuration Manager
 
@@ -483,8 +483,12 @@ Sie können computerspezifische Variablen an einem primären Standort oder an ei
 6.  Klicken Sie auf **OK**, nachdem Sie der Sammlung alle Variablen hinzugefügt haben.  
 
 ## <a name="add-child-task-sequences-to-a-task-sequence"></a>Hinzufügen von untergeordneten Tasksequenzen zu einer Tasksequenz
+<!--1261338-->
+Ab Configuration Manager-Version 1710 können Sie einen neuen Tasksequenzschritt hinzufügen, der eine andere Tasksequenz ausführt. Dieser Schritt erstellt eine Über-/Unterordnungsbeziehung zwischen den Tasksequenzen. Dadurch können Sie modularere Tasksequenzen erstellen, die Sie wiederverwenden können.  
 
-Ab Configuration Manager-Version 1710 können Sie einen neuen Tasksequenzschritt hinzufügen, der eine andere Tasksequenz ausführt. Dieser Schritt erstellt eine Über-/Unterordnungsbeziehung zwischen den Tasksequenzen. Dadurch können Sie modularere Tasksequenzen erstellen, die Sie wiederverwenden können.
+> [!Note]  
+> Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen dieses Feature aktivieren, bevor Sie es verwenden. Weitere Informationen finden Sie unter [Enable optional features from updates (Aktivieren optionaler Features von Updates)](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+
 
 Berücksichtigen Sie Folgendes, wenn Sie eine untergeordnete Tasksequenz einer Tasksequenz hinzufügen:
 

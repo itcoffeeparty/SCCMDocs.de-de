@@ -15,11 +15,11 @@ ms.assetid: 56dc4b07-5aa4-43e2-9be8-d26ae5ff5613
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ac96927b563673311e9ca55d1f2d4edaac30adbe
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+ms.openlocfilehash: f3c200fe699f85c195e41fc2b395a3d710b1788a
+ms.sourcegitcommit: d3863a9b34f9925515cabe9a290a6c733e10108b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="capabilities-in-technical-preview-1803-for-system-center-configuration-manager"></a>Funktionen in der Technical Preview-Version 1803 für System Center Configuration Manager
 
@@ -146,7 +146,7 @@ Das Aktivieren von **Enable third party software updates** (Drittanbietersoftwar
 Dank Ihres [Benutzerfeedbacks](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/20234866-allow-us-to-copy-information-out-of-the-asset-det) können Sie nun die Funktion „Kopieren/Einfügen“ im Bereich „Bestandsdetails“ in den Statusüberwachungsansichten für die Bereitstellung und Verteilung aktivieren.  <!--1357552-->
 
 ## <a name="scap-extensions"></a>SCAP-Erweiterungen
-Die Vorabversion von SCAP-Erweiterungen ist im Ordner „Cd.latest“ unter SMSSETUP\TOOLS\ConfigMgrSCAPExtension\ConfigMgrExtensionsForSCAP.msi verfügbar. Diese Vorabversion der SCAP-Erweiterungen kann unter allen derzeit unterstützten Versionen von Configuration Manager Current Branch und LTSB 1606 installiert werden.
+Die Vorabversion von SCAP-Erweiterungen ist im Ordner „Cd.latest“ unter SMSSETUP\TOOLS\ConfigMgrSCAPExtension\ConfigMgrExtensionsForSCAP.msi verfügbar. Diese Vorabversion der SCAP-Erweiterungen kann unter allen derzeit unterstützten Versionen von Configuration Manager Current Branch und LTSB 1606 installiert werden. Weitere Informationen finden Sie unter [Informationen zu Security Content Automation Protocol-Erweiterungen (SCAP)](/sccm/compliance/plan-design/scap/about-scap).
 
 
 

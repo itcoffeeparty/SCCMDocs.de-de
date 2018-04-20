@@ -2,7 +2,7 @@
 title: Planen des Cloudverwaltungsgateways
 titleSuffix: Configuration Manager
 description: Planen und Entwerfen des Cloudverwaltungsgateways (Cloud Management Gateway, CMG) zur Vereinfachung der Verwaltung internetbasierter Clients.
-ms.date: 03/22/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-client
@@ -10,20 +10,26 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dabc248c1788ecad4d7b25c0a1f592e0ddeef826
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+ms.openlocfilehash: 2b207ffe95a078c955817d9251da3adbdf4de10d
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planen von Cloud Management Gateway in Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
-
+ 
+<!--1101764-->
 Das Cloudverwaltungsgateway (Cloud Management Gateway, CMG) bietet eine einfache Möglichkeit zum Verwalten von Configuration Manager-Clients im Internet. Durch die Bereitstellung des CMG als Clouddienst in Microsoft Azure können Sie herkömmliche Clients verwalten, die sich ohne zusätzliche Infrastruktur im Internet bewegen. Zudem müssen Sie Ihre lokale Infrastruktur nicht im Internet verfügbar machen. 
 
 > [!Tip]  
-> Diese Funktion wurde erstmals in Version 1610 als [Vorabfunktion](/sccm/core/servers/manage/pre-release-features) eingeführt. Ab Version 1802 ist dieses Feature keine Vorabfeature mehr.
+> Diese Funktion wurde erstmals in Version 1610 als [Vorabfunktion](/sccm/core/servers/manage/pre-release-features) eingeführt. Ab Version 1802 ist dieses Feature kein Vorabfeature mehr.  
+
+
+> [!Note]  
+> Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen dieses Feature aktivieren, bevor Sie es verwenden. Weitere Informationen finden Sie unter [Enable optional features from updates (Aktivieren optionaler Features von Updates)](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+
 
 Nachdem die Voraussetzungen geschaffen wurden, müssen für die Erstellung des CMG die folgenden drei Schritte in der Configuration Manager-Konsole ausgeführt werden:
 1. Bereitstellen des CMG-Clouddiensts in Azure.
@@ -186,6 +192,7 @@ Die folgende Tabelle enthält die CMG-Unterstützung für Configuration Manager-
 | Endpoint Protection     | ![Unterstützt](media/green_check.png) |
 | Hardware- und Softwareinventur     | ![Unterstützt](media/green_check.png) |
 | Clientstatus und Benachrichtigungen     | ![Unterstützt](media/green_check.png) |
+| Skripts ausführen     | ![Unterstützt](media/green_check.png) |
 | Kompatibilitätseinstellungen     | ![Unterstützt](media/green_check.png) |
 | Clientinstallation</br>(mit Azure AD-Integration)     | ![Unterstützt](media/green_check.png)  (1706) |
 | Softwareverteilung (geräteorientiert)     | ![Unterstützt](media/green_check.png) |
@@ -347,6 +354,6 @@ Das CMG-Verbindungspunktstandortsystem unterstützt die Verwendung eines Web-Pro
 
 - [Zertifikate für Cloud Management Gateway](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway)
 - [Sicherheit und Datenschutz für Cloud Management Gateway](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway)
-- [Größe und Skalierungszahlen des Cloudverwaltungsgateways](/sccm/core/plan-design/configs/size-and-scale-numbers#bkmk_cmg)
-- [Häufig gestellte Fragen zum Cloudverwaltungsgateway](/sccm/core/clients/manage/cmg/cloud-management-gateway-faq)
+- [Größe und Skalierungszahlen für das Cloudverwaltungsgateway](/sccm/core/plan-design/configs/size-and-scale-numbers#bkmk_cmg)
+- [Frequently asked questions about the cloud management gateway (Häufig gestellte Fragen zu Cloud Management Gateway)](/sccm/core/clients/manage/cmg/cloud-management-gateway-faq)
 - [Einrichten des Cloudverwaltungsgateways](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway)

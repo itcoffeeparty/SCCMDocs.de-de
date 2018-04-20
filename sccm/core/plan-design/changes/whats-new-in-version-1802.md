@@ -3,7 +3,7 @@ title: Neues in Version 1802
 titleSuffix: Configuration Manager
 description: Erfahren Sie mehr über Änderungen und neue Funktionen, die in Version 1802 von Configuration Manager eingeführt wurden.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/11/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,20 +12,27 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9c9ff975a58e7c56375fa7740a0a5bb6ebfa6341
-ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
+ms.openlocfilehash: a667c34dc39ef0578ff840e5603080b09c67c63c
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>Neuerungen in Version 1802 von System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 Update 1802 für Configuration Manager (Current Branch) ist als konsoleninternes Update verfügbar. Wenden Sie dieses Update auf Standorte an, an denen Version 1702, 1706 oder 1710 ausgeführt wird. <!-- baseline only statement: -->Beim Installieren eines neuen Standorts steht das Update auch als Baselineversion zur Verfügung.
+
+Neben neuen Features umfasst dieses Release auch weitere Änderungen, beispielsweise Fehlerbehebungen. Weitere Informationen finden Sie unter [Zusammenfassung der Änderungen im aktuellen Branch von System Center Configuration Manager, Version 1802](https://support.microsoft.com/help/4101375).
+
+<!--
+The following additional updates to this release are also now available:
+- [Update rollup for System Center Configuration Manager current branch, version 1710](https://support.microsoft.com/help/4057517)
+-->
 
 > [!TIP]  
 > Sie müssen eine Baselineversion von Configuration Manager verwenden, um einen neuen Standort zu installieren.  
@@ -84,7 +91,7 @@ Mit der Standortaffinität für Cloudverteilungspunkte empfängt ein internetbas
 
 ## <a name="management-insights"></a>Einblicke für die Verwaltung
 <!-- 1353967 -->
-Einblicke für die Verwaltung in System Center Configuration Manager bieten Informationen zum aktuellen Zustand Ihrer Umgebung. Die Informationen basieren auf der Analyse von Daten aus der Standortdatenbank. Diese Einblicke vermitteln Ihnen ein genaueres Verständnis Ihrer Umgebung, sodass Sie entsprechende Maßnahmen ergreifen können. Weitere Einzelheiten finden Sie unter [Management Insights](/sccm/core/servers/manage/management-insights)
+Das Feature „Einblicke für die Verwaltung“ in System Center Configuration Manager stellt Informationen zum aktuellen Zustand Ihrer Umgebung bereit. Die Informationen basieren auf der Analyse von Daten aus der Standortdatenbank. Diese Einblicke vermitteln Ihnen ein genaueres Verständnis Ihrer Umgebung, sodass Sie entsprechende Maßnahmen ergreifen können. Weitere Einzelheiten finden Sie unter [Management Insights](/sccm/core/servers/manage/management-insights)
 
 In Configuration Manager 1802 sind folgende Einblicke verfügbar:
 - Anwendungen:
@@ -124,9 +131,9 @@ Beim Erstellen einer Instanz des [Cloudverwaltungsgateways](/sccm/core/clients/m
 
 - Die Featuredokumentation wurde überarbeitet und verbessert. Weitere Informationen finden Sie in den folgenden Artikeln:
     - [Planen des Cloudverwaltungsgateways](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)
-    - [Größe und Skalierungszahlen des Cloudverwaltungsgateways](/sccm/core/plan-design/configs/size-and-scale-numbers#bkmk_cmg)
+    - [Größe und Skalierungszahlen für das Cloudverwaltungsgateway](/sccm/core/plan-design/configs/size-and-scale-numbers#bkmk_cmg)
     - [Sicherheit und Datenschutz für Cloud Management Gateway](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway)
-    - [Häufig gestellte Fragen zum Cloudverwaltungsgateway](/sccm/core/clients/manage/cmg/cloud-management-gateway-faq)
+    - [Frequently asked questions about the cloud management gateway (Häufig gestellte Fragen zu Cloud Management Gateway)](/sccm/core/clients/manage/cmg/cloud-management-gateway-faq)
     - [Zertifikate für Cloud Management Gateway](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway)
     - [Einrichten des Cloudverwaltungsgateways](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway)  
 
