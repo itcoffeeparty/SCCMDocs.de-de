@@ -1,18 +1,19 @@
 ---
-title: "Erstellen von Konfigurationselementen für Windows 8.1 und Windows 10-Geräte, die mit Intune verwaltet werden"
+title: Erstellen von Konfigurationselementen für Windows 8.1 und Windows 10-Geräte, die mit Intune verwaltet werden
 titleSuffix: Configuration Manager
-description: "Verwenden Sie das Windows 10-Konfigurationselement von System Center Configuration Manager, um die Einstellungen für Windows 10-Computer zu verwalten."
+description: Verwenden Sie das Windows 10-Konfigurationselement von System Center Configuration Manager, um die Einstellungen für Windows 10-Computer zu verwalten.
 ms.custom: na
 ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
-caps.latest.revision: "20"
-caps.handback.revision: "0"
+caps.latest.revision: 20
+caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
@@ -370,16 +371,16 @@ Diese Einstellungen gelten für Geräte unter Windows 10 und höher.
 |**SmartScreen aktivieren**|Verwenden Sie SmartScreen, um von den Benutzern heruntergeladene Dateien auf Schadsoftware zu überprüfen.|  
 |**Popups zulassen**|Mit dieser Option werden Browser-Popups zugelassen oder deaktiviert.|  
 |**Cookies zulassen**|Mit dieser Option werden Cookies zugelassen oder deaktiviert.|  
-|**AutoAusfüllen zulassen**|Mit dieser Option wird das AutoAusfüllen-Feature des Edge-Browsers zugelassen.|  
-|**Kennwort-Manager zulassen**|Mit dieser Option wird die Kennwort-Manager-Feature des Edge-Browsers zugelassen.|  
+|**AutoAusfüllen zulassen**|Mit dieser Option wird das AutoAusfüllen-Feature des Microsoft Edge-Browsers zugelassen.|  
+|**Kennwort-Manager zulassen**|Mit dieser Option wird die Kennwort-Manager-Feature des Microsoft Edge-Browsers zugelassen.|  
 |**Speicherort der Standortliste für Enterprise-Modus**|Gibt an, wo Sie die Liste der Websites finden, die im Unternehmensmodus geöffnet werden. Benutzer können diese Liste nicht bearbeiten.|
-|**Zugriff auf about:flags-Seite blockieren**|Verhindern, dass Benutzer in Edge Zugriff auf die Seite about:flags erhalten, die Entwicklereinstellungen und experimentellen Einstellungen enthält.|
+|**Zugriff auf about:flags-Seite blockieren**|Verhindern, dass Benutzer in Microsoft Edge Zugriff auf die Seite about:flags erhalten, die Entwicklereinstellungen und experimentellen Einstellungen enthält.|
 |**Außerkraftsetzen von SmartScreen-Aufforderung verhindern**|Zulassen dass Benutzer Warnungen des SmartScreen-Filters umgehen, mit denen sie vor potenziell schädlichen Websites gewarnt werden.|
 |**Außerkraftsetzen von SmartScreen-Aufforderung für Dateien verhindern**|Zulassen dass Benutzer Warnungen des SmartScreen-Filters umgehen, mit denen sie vor dem Download potenziell schädlicher Dateien gewarnt werden.|
 |**WebRTC-LocalHost-IP-Adresse**|Blockieren Sie die Anzeige der localhost-IP-Adresse der Benutzer beim Telefonieren über das Protokoll WebRTC.|
 |**Standardsuchmodul**|Geben Sie die standardmäßige Suchmaschine an. Die Benutzer können dies jedoch jederzeit ändern.|
 |**OpenSearch-XML-URL**|Sie können eine OpenSearch XML-Datei verwenden, um einen Suchdienst für Microsoft Edge zu erstellen.<br>Weitere Informationen finden Sie im Artikel [OpenSearch](https://msdn.microsoft.com/library/windows/desktop/dd940337)|
-|**Homepages (nur Desktop)**|Fügen Sie eine Liste der Seiten hinzu, die in Edge als Startseiten verwendet werden sollen (nur für Desktopcomputer).|  
+|**Homepages (nur Desktop)**|Fügen Sie eine Liste der Seiten hinzu, die in Microsoft Edge als Startseiten verwendet werden sollen (nur für Desktopcomputer).|  
 
 
 ### <a name="windows-defender"></a>Windows Defender

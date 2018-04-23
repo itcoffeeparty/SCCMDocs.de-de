@@ -1,17 +1,18 @@
 ---
-title: "Suchen eines Paketfamiliennamens (PFN) für Pro-App-VPN"
+title: Suchen eines Paketfamiliennamens (PFN) für Pro-App-VPN
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr über die zwei Methoden, einen Paketfamiliennamen zu suchen, sodass Sie ein Pro-App-VPN konfigurieren können."
+description: Erfahren Sie mehr über die zwei Methoden, einen Paketfamiliennamen zu suchen, sodass Sie ein Pro-App-VPN konfigurieren können.
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 47118499-3d26-4c25-bfde-b129de7eaa59
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Nbigman
 ms.author: nbigman
 manager: angrobe
@@ -78,7 +79,7 @@ Hier sind die abgerufenen Informationen für OneNote:
 3.  Klicken Sie auf den Link zur App. Beachten Sie, dass die URL, auf die Sie zugreifen, eine Reihe von Buchstaben am Ende hat. In unserem Beispiel sieht die URL folgendermaßen aus: `https://www.microsoft.com/en-us/store/apps/onenote/9wzdncrfhvjl`
 4.  Fügen Sie in einer anderen Registerkarte die folgende URL ein, `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`, und ersetzen Sie dabei `<app id>` mit der App-ID, die Sie von https://www.microsoft.com/en-us/store/apps erhalten haben - Reihe von Buchstaben am Ende der URL aus Schritt 3. In unserem Beispiel, das Beispiel OneNote, fügen Sie ein: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
 
-Die gewünschten Informationen werden in Edge angezeigt. Klicken Sie in Internet Explorer auf **Öffnen**, um die Informationen zu sehen. Der PFN-Wert erscheint in der ersten Zeile. Hier ist das Ergebnis in unserem Beispiel:
+Die gewünschten Informationen werden in Microsoft Edge angezeigt. Klicken Sie in Internet Explorer auf **Öffnen**, um die Informationen zu sehen. Der PFN-Wert erscheint in der ersten Zeile. Hier ist das Ergebnis in unserem Beispiel:
 
 
 `{`
