@@ -1,17 +1,18 @@
 ---
-title: "Erstellen eines Images für ein OEM-Vorinstallations- oder lokales Depot"
+title: Erstellen eines Images für ein OEM-Vorinstallations- oder lokales Depot
 titleSuffix: Configuration Manager
-description: "Verwenden Sie vorab bereitgestellte Medienbereitstellungen zum Reduzieren des Netzwerkverkehrs, während Sie ein Betriebssystem für Computer bereitstellen, die nicht vollständig bereitgestellt sind."
+description: Verwenden Sie vorab bereitgestellte Medienbereitstellungen zum Reduzieren des Netzwerkverkehrs, während Sie ein Betriebssystem für Computer bereitstellen, die nicht vollständig bereitgestellt sind.
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-osd
+ms.technology:
+- configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a7d3df90-062d-4d57-9e9d-e137d3e7cd7f
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
@@ -48,7 +49,7 @@ Durch diese Bereitstellungsmethode wird der Netzwerkdatenverkehr reduziert, da d
 -   **Nur Medien und PXE (ausgeblendet)**  
 
 ## <a name="create-the-prestaged-media"></a>Erstellen der vorab bereitgestellten Medien  
- Erstellen der vorab bereitgestellten Mediendatei zum Versand an den OEM oder Ihr lokales Depot. Weitere Informationen finden Sie unter [Create prestaged media with System Center Configuration Manager](create-prestaged-media.md).  
+ Erstellen der vorab bereitgestellten Mediendatei zum Versand an den OEM oder Ihr lokales Depot. Weitere Informationen finden Sie unter [Erstellen von vorab bereitgestellten Medien mit System Center Configuration Manager](create-prestaged-media.md).  
 
 ## <a name="send-the-prestaged-media-file-to-the-oem-or-local-depot"></a>Senden der vorab bereitgestellten Mediendatei an den OEM oder Ihr lokales Depot  
  Senden Sie die Medien an den OEM oder Ihr lokales Depot, um die Computer vorab bereitzustellen. Die vorab bereitgestellte Mediendatei wird auf einer formatierten Festplatte auf dem Computer installiert.  

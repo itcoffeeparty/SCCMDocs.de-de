@@ -7,12 +7,13 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: dudeso
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
-caps.latest.revision: "4"
-caps.handback.revision: "0"
+caps.latest.revision: 4
+caps.handback.revision: 0
 author: arob98
 ms.author: angrobe
 manager: angrobe
@@ -42,7 +43,7 @@ Für die Verwendung der Remoteunterstützung oder des Remotedesktops müssen sie
 
     Sie können den Firmennamen ändern, der im Dialogfeld **ConfigMgr-Remotesteuerung** angezeigt wird, indem Sie in den Clienteinstellungen **Computer-Agent** einen Wert für **Im Softwarecenter angezeigter Organisationsname** konfigurieren.  
 
- Die Clientcomputer werden beim nächsten Download der Clientrichtlinien mit diesen Einstellungen konfiguriert. Informationen zum Initiieren des Abrufens von Richtlinien für einen einzelnen Client finden Sie unter [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
+ Die Clientcomputer werden beim nächsten Download der Clientrichtlinien mit diesen Einstellungen konfiguriert. Informationen zum Initiieren des Abrufens von Richtlinien für einen einzelnen Client finden Sie unter [Verwalten von Clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
 
 #### <a name="enable-keyboard-translation"></a>Aktivieren der Tastaturübersetzung
 

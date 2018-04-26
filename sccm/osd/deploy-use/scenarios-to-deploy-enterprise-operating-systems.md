@@ -1,17 +1,18 @@
 ---
-title: "Szenarien für die Bereitstellung von Unternehmensbetriebssystemen"
+title: Szenarien für die Bereitstellung von Unternehmensbetriebssystemen
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr über Szenarios zur Bereitstellung von Unternehmensbetriebssystemen mit System Center Configuration Manager."
+description: Erfahren Sie mehr über Szenarios zur Bereitstellung von Unternehmensbetriebssystemen mit System Center Configuration Manager.
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-osd
+ms.technology:
+- configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f74fdb86-c7c2-447f-91f6-b42df6370d7f
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
@@ -50,7 +51,7 @@ Die folgenden Szenarios für die Betriebssystembereitstellung sind in System Cen
 
  Der Standardcache auf Configuration Manager-Clients ist möglicherweise für die meisten Betriebssystemimage-Bereitstellungen nicht groß genug. Wenn Sie das vollständige Image in den Clientcache herunterladen möchten, müssen Sie die Größe des Configuration Manager-Clientcaches auf den Zielcomputern so anpassen, dass das bereitzustellende Image darin aufgenommen werden kann.  
 
- Weitere Informationen finden Sie unter [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache).  
+ Weitere Informationen finden Sie unter [Konfigurieren des Clientcaches für Configuration Manager-Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache).  
 
 ## <a name="task-sequence-deployments"></a>Tasksequenzbereitstellungen  
  Mit der von Ihnen erstellten Tasksequenz kann das Betriebssystemimage auf eine der folgenden Weisen auf einem Configuration Manager-Clientcomputer bereitgestellt werden:  

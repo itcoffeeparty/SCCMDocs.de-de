@@ -1,18 +1,19 @@
 ---
-title: "Voraussetzungen für die Migration"
+title: Voraussetzungen für die Migration
 titleSuffix: Configuration Manager
-description: "Hier erhalten Sie Informationen zu den unterstützten Versionen von Configuration Manager, zu den unterstützten Quellstandortsprachen sowie zu den erforderlichen Konfigurationen für die Migration."
+description: Hier erhalten Sie Informationen zu den unterstützten Versionen von Configuration Manager, zu den unterstützten Quellstandortsprachen sowie zu den erforderlichen Konfigurationen für die Migration.
 ms.custom: na
 ms.date: 3/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ec976930-7467-4d3c-b33c-991bf408a74a
-caps.latest.revision: "10"
-caps.handback.revision: "0"
+caps.latest.revision: 10
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
@@ -87,7 +88,7 @@ Folgende Konfigurationen sind für Migration und Migrationsvorgänge erforderlic
 
         -   Für einen Configuration Manager 2007 SP2-Quellstandort benötigt dieses Konto die Berechtigung **Lesen** für alle Quellstandortsobjekte.  
 
-        -   Für einen System Center 2012 Configuration Manager- oder System Center Configuration Manager-Quellstandort muss dieses Konto über die Berechtigung **Lesen** für alle Quellstandortobjekte verfügen. Sie weisen dem Konto diese Berechtigung über die rollenbasierte Verwaltung zu. Informationen zur Verwendung der rollenbasierten Verwaltung finden Sie unter [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
+        -   Für einen System Center 2012 Configuration Manager- oder System Center Configuration Manager-Quellstandort muss dieses Konto über die Berechtigung **Lesen** für alle Quellstandortobjekte verfügen. Sie weisen dem Konto diese Berechtigung über die rollenbasierte Verwaltung zu. Informationen zur Verwendung der rollenbasierten Verwaltung finden Sie unter [Grundlagen der rollenbasierten Verwaltung für System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
 
     -   **Konto der Datenbank des Quellstandorts:** Dieses Konto wird für den Zugriff auf die SQL Server-Datenbank des Quellstandorts verwendet und muss über die Berechtigungen **Connect**, **Execute**und **Select** für die Datenbank des Quellstandorts verfügen.  
 
@@ -114,7 +115,7 @@ Folgende Konfigurationen sind für Migration und Migrationsvorgänge erforderlic
 
      Für jeden Quellstandort werden nur Verteilungspunkte freigegeben, die auf den mit einem FQDN konfigurierten Servern des Standortsystems installiert sind.  
 
-     Außerdem muss das **Konto des Quellstandorts** (über das auf den SMS-Anbieter für den Quellstandortserver zugegriffen wird) über die Berechtigung **Ändern** für das Objekt **Standort** am Quellstandort verfügen, um einen Verteilungspunkt von einem System Center 2012 Configuration Manager- oder System Center Configuration Manager-Quellstandort freizugeben. Sie erteilen dem Konto diese Berechtigung mithilfe der rollenbasierten Verwaltung. Informationen zur Verwendung der rollenbasierten Verwaltung finden Sie unter [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
+     Außerdem muss das **Konto des Quellstandorts** (über das auf den SMS-Anbieter für den Quellstandortserver zugegriffen wird) über die Berechtigung **Ändern** für das Objekt **Standort** am Quellstandort verfügen, um einen Verteilungspunkt von einem System Center 2012 Configuration Manager- oder System Center Configuration Manager-Quellstandort freizugeben. Sie erteilen dem Konto diese Berechtigung mithilfe der rollenbasierten Verwaltung. Informationen zur Verwendung der rollenbasierten Verwaltung finden Sie unter [Grundlagen der rollenbasierten Verwaltung für System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
 
 
 -   **Aktualisieren oder erneutes Zuweisen von Verteilungspunkten:**  
@@ -123,6 +124,6 @@ Folgende Konfigurationen sind für Migration und Migrationsvorgänge erforderlic
 
     -   Für das Aktualisieren eines Verteilungspunkts von Configuration Manager 2007 müssen für das Konto die Berechtigungen **Lesen**, **Ausführen** und **Löschen** der **Standort**-Klasse auf dem Standortserver von Configuration Manager 2007 vorliegen, um den Verteilungspunkt erfolgreich vom Configuration Manager 2007-Quellstandort entfernen zu können.  
 
-    -   Damit ein System Center 2012 Configuration Manager- oder System Center Configuration Manager-Verteilungspunkt neu zugewiesen werden kann, muss das Konto über die Berechtigung **Ändern** für das **Website**-Objekt am Quellstandort verfügen. Sie erteilen dem Konto diese Berechtigung mithilfe der rollenbasierten Verwaltung. Informationen zur Verwendung der rollenbasierten Verwaltung finden Sie unter [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
+    -   Damit ein System Center 2012 Configuration Manager- oder System Center Configuration Manager-Verteilungspunkt neu zugewiesen werden kann, muss das Konto über die Berechtigung **Ändern** für das **Website**-Objekt am Quellstandort verfügen. Sie erteilen dem Konto diese Berechtigung mithilfe der rollenbasierten Verwaltung. Informationen zur Verwendung der rollenbasierten Verwaltung finden Sie unter [Grundlagen der rollenbasierten Verwaltung für System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
 
      Soll ein Verteilungspunkt erfolgreich aktualisiert oder einer neuen Hierarchie zugewiesen werden, müssen die für Clientanforderungen konfigurierten Ports am Standort, an dem der Verteilungspunkt in der Quellhierarchie verwaltet wird, den für Clientanforderungen konfigurierten Ports am Zielstandort entsprechen, an dem der Verteilungspunkt verwaltet wird. Weitere Informationen zu Clientanforderungsports finden Sie unter [Konfigurieren von Clientkommunikationsports in System Center Configuration Manager](../../core/clients/deploy/configure-client-communication-ports.md).  
