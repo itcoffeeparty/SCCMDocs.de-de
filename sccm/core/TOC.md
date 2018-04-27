@@ -292,13 +292,13 @@
 ###  [Verwalten von Linux- und UNIX-Clients](clients/manage/manage-clients-for-linux-and-unix-servers.md)
 ###  [Synchronisieren von Daten mit OMS](clients/manage/sync-data-microsoft-operations-management-suite.md)
 ###  [Warten von Macintosh-Clients](clients/manage/maintain-mac-clients.md)
-### [Dashboard für die Co-Verwaltung](clients/manage/co-management-dashboard.md)
 
 ### [Surface-Gerätedashboard](clients/manage/surface-device-dashboard.md)
 
 ##   [Co-Verwaltung für Windows 10-Geräte](clients/manage/co-management-overview.md)
 ###  [Vorbereiten von Windows 10-Geräten für die Co-Verwaltung](clients/manage/co-management-prepare.md)
 ###  [Verschieben von Configuration Manager-Workloads zu Intune](clients/manage/co-management-switch-workloads.md)
+### [Dashboard für die Co-Verwaltung](clients/manage/co-management-dashboard.md)
 
 ##   [Verwalten von Clients im Internet](clients/manage/manage-clients-internet.md)
 ###  [Planen des Cloudverwaltungsgateways](clients/manage/cmg/plan-cloud-management-gateway.md)

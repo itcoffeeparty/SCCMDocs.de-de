@@ -7,19 +7,20 @@ ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: d0cbaf0b9f10926015cf203dbb28633976034162
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 76d9d486bf0c07da3d81596b1b065fe6532b29fe
+ms.sourcegitcommit: e4ca9fb1fad2caaf61bb46e0a12f4d6b96f15513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-system-center-configuration-manager"></a>Erfahren Sie, wie Clients Standortressourcen und -dienste für System Center Configuration Manager suchen.
 
@@ -61,8 +62,8 @@ Wenn ein Client erstmals einem primären Standort zugewiesen wird, wählt er ein
 
 Ein Client wählt einen Verwaltungspunkt für die Kommunikation basierend auf seiner aktuellen Konfiguration der Netzwerkadresse und Begrenzungsgruppe aus. Auch wenn ein Client einen zugewiesenen Verwaltungspunkt hat, ist dies ggf. nicht der Verwaltungspunkt, den der Client verwendet.  
 
-    > [!NOTE]  
-    >  A client always uses the assigned management point for registration messages and certain policy messages, even when other communications are sent to a proxy or local management point.  
+   > [!NOTE]  
+   >  Ein Client verwendet immer den zugewiesenen Verwaltungspunkt für Registrierungs- und bestimmte Richtlinienmeldungen, selbst wenn andere Mitteilungen an einen Proxy oder lokalen Verwaltungspunkt gesendet werden.
 
 Sie können bevorzugte Verwaltungspunkte verwenden. Bevorzugte Verwaltungspunkte sind Verwaltungspunkte vom zugewiesenen Standort eines Clients, die einer Begrenzungsgruppe zugeordnet sind, die vom Client verwendet wird, um Standortsystemserver zu finden. Die Zuordnung eines bevorzugten Verwaltungspunkts zu einer Begrenzungsgruppe als Standortsystemserver ist ähnlich der Zuordnung von Verteilungspunkten oder Zustandsmigrationspunkten zu einer Begrenzungsgruppe. Wenn Sie bevorzugte Verwaltungspunkte für die Hierarchie aktivieren, versucht ein Client einen bevorzugten Verwaltungspunkt zu verwenden, wenn er einen Verwaltungspunkt von seinem zugewiesenen Standort verwendet, bevor andere Verwaltungspunkte des zugewiesenen Standorts verwendet werden.  
 
