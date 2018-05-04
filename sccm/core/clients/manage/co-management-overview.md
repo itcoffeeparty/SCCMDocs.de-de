@@ -12,85 +12,81 @@ ms.prod: configuration-manager
 ms.service: ''
 ms.technology: ''
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: cda2ef22bbfb86d0c25c44d5b97b0e1551010374
-ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
+ms.openlocfilehash: 1657cbacde468ef7c54f95524e0fa9607a1a0186
+ms.sourcegitcommit: e23350fe65ff99228274e465b24b5e163769f38f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="co-management-for-windows-10-devices"></a>Co-Verwaltung für Windows 10-Geräte    
-<!-- 1350871 -->
-Viele Kunden möchten Windows 10-Geräte genauso verwalten wie mobile Geräte: mit einer einfachen, kostengünstigen und cloudbasierten Lösung. Der Übergang von einer herkömmlichen zu einer modernen Verwaltungslösung kann jedoch eine Herausforderung sein. In den vorherigen Windows 10-Updates können Sie bereits ein Windows 10-Gerät gleichzeitig in eine lokale Active Directory-Installation (AD) und eine cloudbasierte Azure AD-Infrastruktur einbinden (Hybrid-Azure AD). Ab der Configuration Manager-Version 1710 nutzt die Co-Verwaltung diese Verbesserung und ermöglicht Ihnen, Windows 10-Geräte mit der Version 1709 (auch als „Fall Creators Update“ bezeichnet) gleichzeitig mit Configuration Manager und Intune zu verwalten. Diese Lösung schlägt eine Brücke von der herkömmlichen zur modernen Verwaltung und bietet Ihnen die Möglichkeit, die Umstellung Schritt für Schritt durchzuführen. 
+ Bei den vorherigen Windows 10-Updates können Sie bereits ein Windows 10-Gerät gleichzeitig in eine lokale Active Directory-Installation (AD) und eine cloudbasierte Azure AD-Infrastruktur einbinden (Hybrid-Azure AD). Ab der Configuration Manager-Version 1710 nutzt die Co-Verwaltung diese Verbesserung und ermöglicht Ihnen, Geräte mit Windows 10-Version 1709 gleichzeitig mit Configuration Manager und Intune zu verwalten. <!-- 1350871 -->
+## <a name="why-co-management"></a>Gründe für die Co-Verwaltung
+Viele Kunden möchten Windows 10-Geräte genauso verwalten wie mobile Geräte: mit einer einfachen, kostengünstigen und cloudbasierten Lösung. Der Übergang von einer herkömmlichen zu einer modernen Verwaltungslösung kann jedoch eine Herausforderung sein.  
+## <a name="what-is-co-management"></a>Was ist Co-Verwaltung?
+Über die Co-Verwaltung können Sie Windows 10-Geräte mithilfe von Configuration Manager und Intune gleichzeitig verwalten. Diese Lösung schlägt eine Brücke von der herkömmlichen zur modernen Verwaltung und bietet Ihnen die Möglichkeit, die Umstellung Schritt für Schritt durchzuführen.
 
-Die Co-Verwaltung kann auf zwei Weisen realisiert werden.  Eine davon ist die von Configuration Manager bereitgestellte Co-Verwaltung, bei der Windows 10-Geräte, die mit Configuration Manager verwaltet werden und in hybrides Azure AD eingebunden sind, bei Intune registriert werden. Die andere sieht von Intune bereitgestellte Geräte vor, die bei Intune angemeldet und dann mit dem Configuration Manager-Client installiert werden, um einen Co-Verwaltungsstatus zu erreichen.
+## <a name="benefits"></a>Vorteile 
+- Unmittelbare Verwendung von Intune-Features 
+    - Remoteaktionen
+        - [Zurücksetzen auf Werkseinstellungen](https://docs.microsoft.com/intune/devices-wipe#factory-reset)
+        - [Selektives Zurücksetzen](https://docs.microsoft.com/intune/apps-selective-wipe)
+        - [Geräte löschen](https://docs.microsoft.com/intune/devices-wipe#delete-devices-from-the-azure-active-directory-portal)
+        - [Geräte neu starten](https://docs.microsoft.com/intune/device-restart)
+        - [Sauber starten](https://docs.microsoft.com/intune/device-fresh-start)
+    - Orchestrierung mit Intune für die folgenden Workloads:
+        - [Kompatibilitätsrichtlinien](https://docs.microsoft.com/intune/device-compliance-get-started)
+        - [Ressourcenzugriffsrichtlinien](https://docs.microsoft.com/intune/device-profiles)
+        - [Windows Update-Richtlinien](https://docs.microsoft.com/intune/windows-update-for-business-configure)
+        - [Endpoint Protection](https://docs.microsoft.com/en-us/intune/endpoint-protection-windows-10) (ab Configuration Manager 1802) <!-- 1357365 -->
+    
+## <a name="how-to-configure-co-management"></a>Konfigurieren der Co-Verwaltung
+Die Co-Verwaltung kann auf zwei Weisen realisiert werden. Eine davon ist die von Configuration Manager bereitgestellte Co-Verwaltung, bei der Windows 10-Geräte, die mit Configuration Manager verwaltet werden und in hybrides Azure AD eingebunden sind, bei Intune registriert werden. Die andere sieht von Intune bereitgestellte Geräte vor, die bei Intune angemeldet und dann mit dem Configuration Manager-Client installiert werden, um einen Co-Verwaltungsstatus zu erreichen.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
-Bevor Sie mit der Co-Verwaltung beginnen können, müssen folgende Anforderungen erfüllt sein. Zum einen gelten allgemeine Voraussetzungen und zum anderen unterschiedliche Voraussetzungen für Geräte mit installiertem Configuration Manager-Client und für Geräte, auf denen der Client nicht installiert ist.
-
-> [!IMPORTANT]
-> Co-Verwaltung wird von Windows 10 Mobile-Geräten nicht unterstützt.
-
-### <a name="general-prerequisites"></a>Allgemeine Voraussetzungen
-Hier finden Sie die allgemeinen Voraussetzungen für die Aktivierung der Co-Verwaltung:  
-
-- Configuration Manager, Version 1710 oder höher
-- Azure AD
-- EMS- oder Intune-Lizenzen für alle Benutzer
-- [Automatische Registrierung bei Azure AD](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) aktiviert
-- Intune-Abonnement &#40;die MDM-Autorität muss in Intune auf **Intune** festgelegt sein&#41;
-
-
-   > [!Note]  
-   > In einer hybriden MDM-Umgebung (Intune integriert in Configuration Manager) ist keine Co-Verwaltung möglich. Sie können jedoch mit der Migration von Benutzern zum eigenständigen Intune beginnen und anschließend die zugehörigen Windows 10-Geräte für die Co-Verwaltung aktivieren. Informationen zur Migration zum eigenständigen Intune finden Sie unter [Beginnen der Migration hybrider MDM-Benutzer und -Geräte zum eigenständigen Intune](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
-
-### <a name="additional-prerequisites-for-devices-with-the-configuration-manager-client"></a>Zusätzliche Anforderungen an Geräte mit dem Configuration Manager-Client
-- Windows 10, Version 1709 (auch Fall Creators Update genannt) und höher
-- [In Azure AD eingebundene Hybridgeräte](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (in AD und Azure AD eingebunden)
-
-### <a name="additional-prerequisites-for-devices-without-the-configuration-manager-client"></a>Zusätzliche Anforderungen an Geräte ohne Configuration Manager-Client
-- Windows 10, Version 1709 (auch Fall Creators Update genannt) und höher
-- [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) in Configuration Manager (wenn Sie den Configuration Manager-Client mit Intune installieren)
-
-## <a name="workloads-you-can-switch-to-intune"></a>Workloads, die Sie zu Intune verschieben können
-Nach der Aktivierung der Co-Verwaltung verwaltet Configuration Manager weiterhin alle Workloads. Wenn Sie dazu bereit sind, können Sie die Verwaltung aller verfügbaren Workloads auf Intune umstellen. Sie können Intune die folgenden Workloads verwalten lassen:   
-
-### <a name="compliance-policies"></a>Kompatibilitätsrichtlinien
-Konformitätsrichtlinien definieren die Regeln und Einstellungen, die ein Gerät erfüllen muss, damit es als mit bedingten Zugriffsrichtlinien konform eingestuft wird. Konformitätsrichtlinien ermöglichen Ihnen auch, Konformitätsprobleme bei Geräten unabhängig von bedingten Zugriffsrechten zu überwachen und zu beheben. Weitere Informationen finden Sie unter [Kompatibilitätsrichtlinie für Geräte](/sccm/mdm/deploy-use/device-compliance-policies).  
-
-### <a name="windows-update-for-business-policies"></a>Windows Update for Business-Richtlinien
-Mit Windows Update for Business-Richtlinien können Sie Zurückstellungsrichtlinien für Funktionsupdates unter Windows 10 oder für Qualitätsupdates für Windows 10-Geräte konfigurieren, die direkt von Windows Update for Business verwaltet werden. Weitere Informationen finden Sie unter [Konfigurieren von Windows Update for Business-Zurückstellungsrichtlinien](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).  
-
-### <a name="resource-access-policies"></a>Ressourcenzugriffsrichtlinien
-Mit Ressourcenzugriffsrichtlinien werden VPN-, WLAN, E-Mail- und Zertifikateinstellungen auf Geräten konfiguriert. Weitere Informationen finden Sie unter [Bereitstellen von Ressourcenzugriffsprofilen](/sccm/protect/deploy-use/deploy-wifi-vpn-email-cert-profiles).
-
-### <a name="endpoint-protection"></a>Endpoint Protection 
-<!-- 1357365 -->
-Ab der Configuration Manager-Version 1802 kann der Endpoint Protection-Workload auf Intune umgestellt werden. Weitere Informationen finden Sie unter [Workloads able to be transitioned to Intune (Auf Intune umstellbare Workloads)](/sccm/core/clients/manage/co-management-switch-workloads.md#Workloads-able-to-be-transitioned-to-Intune) und [Endpoint Protection in Configuration Manager](/sccm/protect/deploy-use/endpoint-protection).
-
-## <a name="architectural-overview-for-co-management"></a>Architekturübersicht für die Co-Verwaltung
-Die folgende Abbildung bietet eine Architekturübersicht über die Co-Verwaltung und ihre Rolle in der vorhandenen Configuration Manager- und Intune-Infrastruktur.
-
-![Architekturabbildung der Co-Verwaltung](./media/co-management-arch.svg)
-
-## <a name="scenarios-to-enable-co-management"></a>Szenarios zum Aktivieren der Co-Verwaltung  
-Sie können die Co-Verwaltung sowohl für Windows 10-Geräte, die in Microsoft Intune registriert sind, als auch für vorhandene Windows 10-Configuration Manager-Clients aktivieren. In beiden Szenarios werden Windows 10-Geräte gleichzeitig von Configuration Manager und Intune verwaltet und in AD und Azure AD eingebunden.  
-
-### <a name="devices-enrolled-in-intune"></a>Bei Intune registrierte Geräte  
-Wenn Windows 10-Geräte bei Intune registriert sind, können Sie den Configuration Manager-Client auf den Geräten (mit einem bestimmten Befehlszeilenargument) installieren, um die Clients für die Co-Verwaltung vorzubereiten. Anschließend aktivieren Sie die Co-Verwaltung über die Configuration Manager-Konsole, um bestimmte Workloads für bestimmte Windows 10-Geräte in Intune zu verschieben.  
-
-Windows 10-Geräte, die noch nicht bei Intune registriert sind, können Sie automatisch bei Azure registrieren. Bei neuen Windows 10-Geräten können Sie den Eindruck beim ersten Ausführen, der die automatische Registrierung von Geräten in Intune enthält, mit [Windows AutoPilot](https://docs.microsoft.com/intune/enrollment-autopilot) konfigurieren.  
-
-### <a name="configuration-manager-clients"></a>Configuration Manager-Clients
-Wenn einige Ihrer Windows 10-Geräte Configuration Manager-Clients sind, können Sie diese Geräte registrieren und die Co-Verwaltung über die Configuration Manager-Konsole aktivieren. Configuration Manager registriert Geräte automatisch anhand der Azure AD-Mandanteninformationen bei Intune.  
+### <a name="configuration-manager"></a>**Configuration Manager**
+ -  Aktualisieren auf Configuration Manager, Version 1710 oder höher
 
 
-## <a name="remote-actions-available-in-intune-on-azure-for-co-managed-devices"></a>Remoteaktionen, die in Intune in Azure für co-verwaltete Geräte verfügbar sind
-Wenn ein Windows 10-Gerät für die Co-Verwaltung aktiviert ist, stehen Ihnen die folgenden Remoteaktionen aus Intune in Azure zur Verfügung:  
-- [Zurücksetzen auf Werkseinstellungen](https://docs.microsoft.com/intune/devices-wipe#factory-reset)
-- [Selektives Zurücksetzen](https://docs.microsoft.com/intune/apps-selective-wipe)
-- [Geräte löschen](https://docs.microsoft.com/intune/devices-wipe#delete-devices-from-the-azure-active-directory-portal)
-- [Geräte neu starten](https://docs.microsoft.com/intune/device-restart)
-- [Sauber starten](https://docs.microsoft.com/intune/device-fresh-start)
+### <a name="azure-active-directory"></a>**Azure Active Directory**
+  - [In Azure AD eingebundene Hybridgeräte](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (in AD und Azure AD eingebunden)
+  - [Aktivieren der automatischen Registrierung von Windows 10](https://docs.microsoft.com/intune/windows-enroll)
+
+
+### <a name="intune"></a>**Intune**
+ - [Einrichten des Intune-Abonnements](/sccm/mdm/deploy-use/configure-intune-subscription) oder https://docs.microsoft.com/en-us/intune/setup-steps
+ - [Beginnen der Migration hybrider MDM-Benutzer und -Geräte zum eigenständigen Intune](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)
+
+
+### <a name="enable-co-management"></a>Aktivieren der Co-Verwaltung 
+ Navigieren Sie in der Configuration Manager-Konsole zu **Verwaltung** > **Übersicht** > **Clouddienste** > **Co-management** (Co-Verwaltung). Wählen Sie im Menüband  **Configure co-management** (Co-Verwaltung konfigurieren) aus, um den **Registrierungs-Assistenten für die Co-Verwaltung** zu öffnen. 
+   
+1. Klicken Sie auf der Seite **Subscription** (Abonnement) auf **Sign In** (Anmelden), melden Sie sich bei Ihrem Intune-Mandanten an, und klicken Sie dann auf **Next** (Weiter).    
+2. Wählen Sie auf der Seite **Enablement** (Aktivierung) Ihre Einstellung für **Automatic enrollment into Intune** (Automatische Registrierung bei Intune) aus. Kopieren Sie die Befehlszeile ggf. für Geräte, die bereits bei Intune registriert sind. 
+3. Wählen Sie auf der Seite **Workloads** für die einzelnen Workloads aus, welche Gerätegruppe Sie mit Intune verwalten möchten.
+4. Wählen Sie auf der Seite **Staging** eine Gerätesammlung als **Pilotsammlung** aus. Überprüfen Sie die **Zusammenfassung**, und schließen Sie den Assistenten ab. 
+
+### <a name="upgrade-windows-10-client"></a>Aktualisieren eines Windows 10-Clients
+- Upgrade auf [Windows 10, Version 1709 (auch Fall Creators Update genannt) und höher](/sccm/osd/deploy-use/manage-windows-as-a-service)
+
+### <a name="configure-workloads-to-switch-to-intune"></a>Konfigurieren von Workloads für den Wechsel zu Intune 
+Der Artikel [Verschieben von Configuration Manager-Workloads zu Intune](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune) erläutert, wie Sie bestimmte Configuration Manager-Workloads zu Intune verschieben. Der Artikel enthält auch Anweisungen zum Ändern der Gerätegruppen, für die Workloads umgestellt werden.
+
+- **Konformitätsrichtlinien:** Konformitätsrichtlinien definieren die Regeln und Einstellungen, die ein Gerät erfüllen muss, damit es als mit bedingten Zugriffsrichtlinien konform eingestuft wird. Konformitätsrichtlinien ermöglichen Ihnen auch, Konformitätsprobleme bei Geräten unabhängig von bedingten Zugriffsrechten zu überwachen und zu beheben. Weitere Informationen finden Sie unter [Kompatibilitätsrichtlinie für Geräte](https://docs.microsoft.com/intune/device-compliance-get-started).  
+
+- **Windows Update-Richtlinien:** Mit Windows Update for Business-Richtlinien können Sie Zurückstellungsrichtlinien für Funktionsupdates unter Windows 10 oder für Qualitätsupdates für Windows 10-Geräte konfigurieren, die direkt von Windows Update for Business verwaltet werden. Weitere Informationen finden Sie unter [Konfigurieren von Windows Update for Business-Zurückstellungsrichtlinien](https://docs.microsoft.com/intune/windows-update-for-business-configure).  
+
+- **Ressourcenzugriffsrichtlinien:** Mit Ressourcenzugriffsrichtlinien werden VPN-, WLAN, E-Mail- und Zertifikateinstellungen auf Geräten konfiguriert. Weitere Informationen finden Sie unter [Bereitstellen von Ressourcenzugriffsprofilen](https://docs.microsoft.com/intune/device-profiles).
+
+- **Endpoint Protection:** Ab der Configuration Manager-Version 1802 kann die Endpoint Protection-Workload auf Intune umgestellt werden. Weitere Informationen finden Sie unter [Endpoint Protection für Microsoft Intune](https://docs.microsoft.com/en-us/intune/endpoint-protection-windows-10)<!-- 1357365 --> und [Verschieben von Configuration Manager-Workloads zu Intune](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune)
+
+
+### <a name="install-configuration-manager-client-to-the-devices-enrolled-in-intune"></a>Installieren des Configuration Manager-Clients auf den Geräten, die in Intune registriert sind
+Wenn Windows 10-Geräte bei Intune registriert sind, können Sie den Configuration Manager-Client auf den Geräten ([mit einem bestimmten Befehlszeilenargument](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client)) installieren, um die Clients für die Co-Verwaltung vorzubereiten. Anschließend aktivieren Sie die Co-Verwaltung über die Configuration Manager-Konsole, um bestimmte Workloads für bestimmte Windows 10-Geräte in Intune zu verschieben.
+Windows 10-Geräte, die noch nicht bei Intune registriert sind, können Sie automatisch bei Azure registrieren. Bei neuen Windows 10-Geräten können Sie den Eindruck beim ersten Ausführen, der die automatische Registrierung von Geräten in Intune enthält, mit [Windows AutoPilot](https://docs.microsoft.com/intune/enrollment-autopilot) konfigurieren.
+ - Aktivieren Sie [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) in Configuration Manager (nur wenn Sie den Configuration Manager-Client mit Intune installieren).
+
+## <a name="monitor-co-management"></a>Überwachen der Co-Verwaltung
+[Mithilfe des Dashboards für die Co-Verwaltung](/sccm/core/clients/manage/co-management-dashboard) können Sie die Computer überprüfen, die in Ihrer Umgebung gemeinsam verwaltet werden. Mithilfe der Diagramme können Geräte identifiziert werden, bei denen möglicherweise ein Eingriff erforderlich ist.
+
 
 ## <a name="next-steps"></a>Nächste Schritte
 [Vorbereiten von Windows 10-Geräten für die Co-Verwaltung](co-management-prepare.md)

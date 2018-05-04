@@ -13,11 +13,11 @@ ms.date: 03/22/2018
 ms.topic: article
 ms.service: ''
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: cdfe52768499b929db473ac08d42207059965ffd
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: d0cee0eb242011d6cc7b3085b4ae9df908604fa8
+ms.sourcegitcommit: ac06e034cc60db7b1acade1f541e26b6cc50506e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="switch-configuration-manager-workloads-to-intune"></a>Verschieben von Configuration Manager-Workloads zu Intune
 In [Vorbereiten von Windows 10-Geräten für die Co-Verwaltung](co-management-prepare.md) haben Sie Windows 10-Geräte für die Co-Verwaltung vorbereitet. Diese Geräte sind in AD und Azure AD eingebunden, bei Intune registriert und verwenden den Configuration Manager-Client. Wahrscheinlich sind aber noch nicht alle Ihrer Windows 10-Geräte, die in AD eingebunden und mit dem Configuration Manager-Client versehen sind, auch in Azure AD eingebunden oder bei Intune registriert. Das folgende Verfahren enthält eine Anleitung für die Aktivierung der Co-Verwaltung und die Vorbereitung Ihrer restlichen Windows 10-Geräte (Configuration Manager-Clients ohne Intune-Registrierung) für die Co-Verwaltung. Außerdem können Sie damit beginnen, bestimmte Configuration Manager-Workloads zu Intune zu verschieben.
@@ -43,10 +43,13 @@ Wählen Sie das entsprechende Co-Verwaltungsobjekt aus, und klicken Sie dann auf
 ## <a name="workloads-able-to-be-transitioned-to-intune"></a>Auf Intune umstellbare Workloads
 Bestimmte Workloads können auf Intune umgestellt werden. Die folgende Liste wird kontinuierlich um die neuesten Workloads ergänzt, die auf Intune umgestellt werden können:
 1. Konformitätsrichtlinien für Geräte
-2. Ressourcenzugriffsrichtlinien
+2. Ressourcenzugriffsrichtlinien: Mit Ressourcenzugriffsrichtlinien werden VPN-, WLAN, E-Mail- und Zertifikateinstellungen auf Geräten konfiguriert. Weitere Informationen finden Sie unter [Bereitstellen von Ressourcenzugriffsprofilen](https://docs.microsoft.com/intune/device-profiles).
+      - E-Mail-Profil
+      - WLAN-Profil
+      - VPN-Profil
+      - Zertifikatprofil
 3. Windows Update-Richtlinien
 4. Endpoint Protection (ab Configuration Manager Version 1802)
-      - Windows Defender Antivirus
       - Windows Defender Application Guard
       - Windows Defender Firewall
       - Windows Defender-SmartScreen
@@ -60,6 +63,8 @@ Bestimmte Workloads können auf Intune umgestellt werden. Die folgende Liste wir
 
 ## <a name="monitor-co-management"></a>Überwachen der Co-Verwaltung
 Nachdem Sie die Co-Verwaltung aktiviert haben, können Sie der Co-Verwaltung unterliegende Geräte mithilfe der folgenden Methoden überwachen:
+
+- [Das Dashboard für die Co-Verwaltung](/sccm/core/clients/manage/co-management-dashboard)
 - **SQL-Sicht und WMI-Klasse**: Sie können die SQL-Sicht **v&#95;ClientCoManagementState** in der Configuration Manager-Standortdatenbank oder die WMI-Klasse **SMS&#95;Client&#95;ComanagementState** abfragen. Anhand der Informationen in der WMI-Klasse können Sie in Configuration Manager benutzerdefinierte Sammlungen erstellen, um den Bereitstellungsstatus Ihrer Co-Verwaltung zu ermitteln. Weitere Informationen finden Sie unter [Erstellen von Sammlungen in System Center Configuration Manager](/sccm/core/clients/manage/collections/create-collections). Die folgenden Felder sind in der SQL-Sicht und WMI-Klasse verfügbar: 
     - **MachineId**: Gibt eine eindeutige Geräte-ID für den Configuration Manager-Client an.
     - **MDMEnrolled**: Gibt an, ob das Gerät bei MDM registriert ist. 

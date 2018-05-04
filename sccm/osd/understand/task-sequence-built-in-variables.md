@@ -1,9 +1,9 @@
 ---
 title: Integrierte Tasksequenzvariablen
 titleSuffix: Configuration Manager
-description: "Mithilfe integrierter Tasksequenzvariablen werden Informationen über die Umgebung bereitgestellt, in der die zugehörige Tasksequenz ausgeführt wird. Sie sind in der gesamten Tasksequenz verfügbar."
+description: Mithilfe integrierter Tasksequenzvariablen werden Informationen über die Umgebung bereitgestellt, in der die zugehörige Tasksequenz ausgeführt wird. Sie sind in der gesamten Tasksequenz verfügbar.
 ms.custom: na
-ms.date: 02/09/2018
+ms.date: 04/18/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 02bc6bd4-ca53-4e22-8b80-d8ee5fe72567
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 15
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 673f29189fe03df706d9f277afc7bde5fc8e72b0
-ms.sourcegitcommit: fbde417e3c3002898bd216a7e110e725ae269893
+ms.openlocfilehash: fe26982195e7cae639cc457dbba31e3dbd45b6d3
+ms.sourcegitcommit: e23350fe65ff99228274e465b24b5e163769f38f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="task-sequence-built-in-variables-in-system-center-configuration-manager"></a>Integrierte Tasksequenzvariablen in System Center Configuration Manager
 
@@ -78,6 +78,7 @@ ms.lasthandoff: 02/12/2018
 |SMSTSDriverReceiveTimeOut|Die Anzahl der Sekunden bis zum Ablauf des Timeouts der Verbindung mit dem Server.|
 |SMSTSErrorDialogTimeout|Sobald ein Fehler in einer Tasksequenz auftritt, wird ein Dialogfeld mit der Fehlermeldung angezeigt. Nach Ablauf der Sekunden, die durch diese Variable festgelegt sind, wird diese Meldung automatisch von der Tasksequenz verworfen. Der Standardwert beträgt **900** Sekunden (15 Minuten).|  
 | TSDisableProgressUI | <!-- 1354291 --> Verwenden Sie diese Variable ab Version 1706 von Configuration Manager, um zu steuern, wann die Tasksequenz den Benutzern ihren Status anzeigt. Um den Status zu verschiedenen Zeitpunkten auszublenden oder anzuzeigen, legen Sie die Variable mehrmals innerhalb einer Tasksequenz fest. Legen Sie den Wert dieser Variable auf **TRUE** fest, um den Status der Tasksequenz auszublenden. Legen Sie den Wert dieser Variable auf **FALSE** fest, um den Status der Tasksequenz anzuzeigen. | 
+| SMSTSDisableStatusRetry | <!--512358--> In getrennten Szenarien versucht das Tasksequenzmodul wiederholt, Statusmeldungen an den Verwaltungspunkt zu senden. Dieses Verhalten in diesem Szenario führt zu Verzögerungen bei der Verarbeitung von Tasksequenzen. Legen Sie ab Configuration Manager, Version 1802, diese Variable auf **True** fest. Dann versucht das Tasksequenzmodul nicht, nach dem ersten Fehler Statusmeldungen zu senden. Dieses Verhalten dauert bis zum nächsten Neustart oder, bis der Wert dieser Variablen auf **False** festgelegt wird. HINWEIS: Die [Tasksequenz-Statusberichterstattung](/sccm/core/servers/manage/list-of-reports#task-sequence---deployment-status) benötigt diese Statusmeldungen, um Fortschritt, Verlauf und Details der einzelnen Schritte anzuzeigen. | 
 |SMSTSLanguageFolder|Verwenden Sie diese Variable, um die Anzeigesprache eines sprachneutralen Startimage zu ändern.|  
 |SMSTSLocalDataDrive|Gibt an, wo temporäre Dateien während der Ausführung der Tasksequenz auf dem Zielcomputer gespeichert werden.<br /><br /> Diese Variable muss festgelegt werden, bevor die Tasksequenz gestartet wird, z. B. durch Festlegen einer Sammlungsvariablen. Sobald die Tasksequenz gestartet wird, definiert Configuration Manager die Variable „_SMSTSMDataPath“.|  
 |SMSTSMP|Verwenden Sie diese Variable zum Angeben der URL oder der IP-Adresse eines Configuration Manager-Verwaltungspunkts|  
@@ -89,7 +90,7 @@ ms.lasthandoff: 02/12/2018
 |SMSTSPreserveContent|Diese Variable kennzeichnet den Inhalt in der Tasksequenz, der im Configuration Manager-Clientcache nach der Bereitstellung erhalten bleiben soll. Diese Variable unterscheidet sich von „SMSTSPersistContent“, die den Inhalt nur für die Dauer der Tasksequenz beibehält. „SMSTSPersistContent “ verwendet den Tasksequenzcache, während „SMSTSPreserveContent“ auf den Cache des Configuration Manager-Clients zugreift.<br /><br /> Beispiel:<br /><br /> SMSTSPreserveContent = **TRUE** ermöglicht diese Funktion.|  
 |SMSTSRebootDelay|Gibt an, nach wie vielen Sekunden der Computer neu gestartet wird. Sofern die Variable auf „0“ festgelegt ist, zeigt der Tasksequenz-Manager vor dem Neustart ein Benachrichtigungsdialogfeld an.<br /><br /> Beispiele:<br /><br /> **0**: keine Benachrichtigung anzeigen<br /><br /> **60**: Benachrichtigung für eine Minute anzeigen|  
 |SMSTSRebootMessage|Legt die Meldung fest, die im Benachrichtigungsdialogfeld beim Neustart angezeigt wird. Wenn diese Variable nicht festgelegt ist, wird eine Standardmeldung angezeigt.<br /><br /> Beispiel:<br /><br /> **Dieser Computer wird im Rahmen der Tasksequenz neu gestartet.**|  
-|SMSTSRebootRequested|Gibt an, dass nach Abschluss des aktuellen Tasksequenzschritts ein Neustart erforderlich ist. Falls ein Neustart erforderlich ist, legen Sie für diese Variable einfach den Wert **true** fest. Der Computer wird dann nach diesem Tasksequenzschritt vom Tasksequenz-Manager neu gestartet. Wenn der Tasksequenzschritt einen Neustart zum Abschließen der Aktion erfordert, legen Sie diese Variable fest. Nach dem Neustart des Computers wird die Tasksequenz mit dem nächsten Tasksequenzschritt fortgesetzt.|  
+|SMSTSRebootRequested|Gibt an, dass nach Abschluss des aktuellen Tasksequenzschritts ein Neustart erforderlich ist. Falls ein Neustart erforderlich ist, legen Sie für diese Variable einfach den Wert **true**fest. Der Computer wird dann nach diesem Tasksequenzschritt vom Tasksequenz-Manager neu gestartet. Wenn der Tasksequenzschritt einen Neustart zum Abschließen der Aktion erfordert, legen Sie diese Variable fest. Nach dem Neustart des Computers wird die Tasksequenz mit dem nächsten Tasksequenzschritt fortgesetzt.|  
 |SMSTSRetryRequested|Fordert eine Wiederholung an, nachdem der aktuelle Tasksequenzschritt abgeschlossen ist. Wenn diese Tasksequenzvariable festgelegt wird, muss für die Variable **SMSTSRebootRequested** ebenfalls der Wert **true**festgelegt werden. Nach dem Neustart des Computers wird der gleiche Tasksequenzschritt vom Tasksequenz-Manager erneut ausgeführt.|  
 |SMSTSUDAUsers|Gibt die primären Benutzer des Zielcomputers in folgendem Format an:<br /><br /> Beispiel:<br /><br /> **Domäne\Benutzer1, Domäne\Benutzer2, Domäne\Benutzer3**<br /><br /> Trennen Sie mehrere Benutzer durch ein Komma (,). Weitere Informationen finden Sie unter [Zuordnen von Benutzern zu einem Zielcomputer](../get-started/associate-users-with-a-destination-computer.md).|  
  

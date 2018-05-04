@@ -3,7 +3,7 @@ title: Unterstützte Standortsystemserver
 titleSuffix: Configuration Manager
 description: Erfahren Sie, welche Windows-Versionen Sie verwenden können, um einen System Center Configuration Manager-Standort oder eine entsprechende Standortsystemrolle zu hosten.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/17/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,21 +13,21 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
 caps.latest.revision: 44
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5bcaddb38ea6ecf1c3b5e0543c676c6a99e06101
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 092fc9d47e0dc7bb7afe0e078bd835dd2d091226
+ms.sourcegitcommit: e23350fe65ff99228274e465b24b5e163769f38f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="supported-operating-systems-for-system-center-configuration-manager-site-system-servers"></a>Unterstützte Betriebssysteme für System Center Configuration Manager-Standortsystemserver
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 
-In diesem Artikel wird beschrieben, welche Windows-Versionen Sie verwenden können, um einen System Center Configuration Manager-Standort oder eine entsprechende Standortsystemrolle zu hosten.
+In diesem Artikel wird beschrieben, welche Windows-Versionen Sie verwenden können, um einen Configuration Manager-Standort oder eine entsprechende Standortsystemrolle zu hosten.
 
 
 Verwenden Sie die Informationen in diesem Artikel mit den Informationen in den folgenden Artikeln:
@@ -85,6 +85,14 @@ Mit dem Hotfixrollup aus KB3186654 wird dieses Betriebssystem für die folgenden
 -   Softwareupdatepunkt  
 
 -   Zustandsmigrationspunkt
+
+
+
+## <a name="windows-storage-server-2016"></a>Windows Storage Server 2016
+
+**Standortsystemserver:**  
+
+-   Verteilungspunkt  
 
 
 
@@ -253,7 +261,10 @@ Dieses Betriebssystem wird von Standortserver- oder Standortsystemrollen mit Aus
 
     -   Verteilungspunkte unterstützen mehrere unterschiedliche Konfigurationen mit unterschiedlichen Anforderungen. In einigen Fällen unterstützen diese Konfigurationen die Installation nicht nur auf Servern, sondern auch auf Clientbetriebssystemen. Weitere Informationen zu den Optionen, die für Verteilungspunkte verfügbar sind, finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
-
+## <a name="the-server-core-installation-of-windows-server-version-1709"></a>Die Server Core-Installation von Windows Server, Version 1709
+Ab Configuration Manager 1710 wird [Windows Server, Version 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709), mit folgenden Einschränkungen für die Verwendung als Verteilungspunkt unterstützt:  
+  -   Nur die x64-Bit-Version wird unterstützt.
+  -   Von Verteilungspunkten auf diesem Betriebssystem werden PXE und Multicast nicht unterstützt.  
 
 ## <a name="the-server-core-installation-of-windows-server-2016"></a>Die Server Core-Installation von Windows Server 2016
 Dieses Betriebssystem wird durch das Hotfixrollup aus KB3186654 als Verteilungspunkt unterstützt. Dabei bestehen folgende Einschränkungen:  

@@ -16,11 +16,11 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: 7810191f270fde70cc573cb73af9b5ca23a6bfcb
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: 856f23aaf64686b3e895d43e768350ea2ddc405c
+ms.sourcegitcommit: e23350fe65ff99228274e465b24b5e163769f38f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/20/2018
 ---
 <!-- 
 TFS 1357546
@@ -29,6 +29,10 @@ This page displays in-console, under the Support workspace, Documentation node.
 
 
 # <a name="configuration-manager-documentation"></a>Configuration Manager-Dokumentation
+Die Links auf dieser Seite bilden zusammengestellte Inhalte, die Ihnen beim Kennenlernen und Unterstützen von Configuration Manager helfen. 
+
+[Configuration Manager-Dokumentationsbibliothek](https://docs.microsoft.com/sccm)
+
 
 </br>
 
@@ -40,7 +44,7 @@ This page displays in-console, under the Support workspace, Documentation node.
 > - [Kürzlich aktualisiert](#bkmk_update)
 
 ### <a name="recommended"></a>Empfohlen 
-Eine manuell zusammengestellte Liste mit wichtigen Artikeln:
+Eine manuell zusammengestellte Liste mit wichtigen Artikeln.
 
 - [Co-Verwaltung für Windows 10-Geräte](/sccm/core/clients/manage/co-management-overview)
 - [Grundlagen zu Configuration Manager-as-a-Service und Windows-as-a-Service](/sccm/core/understand/configuration-manager-and-windows-as-service)
@@ -66,7 +70,7 @@ Eine manuell zusammengestellte Liste mit wichtigen Artikeln:
 > - [Kürzlich aktualisiert](#bkmk_update)
 
 ### <a name="trending"></a>Populär
-Die beliebtesten Artikel im letzten Monat:
+Die beliebtesten Artikel im letzten Monat.
 
 - [Neue Version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)
 - [Protokolldateien zur Behebung von Problemen](/sccm/core/plan-design/hierarchy/log-files)
@@ -94,7 +98,7 @@ Die beliebtesten Artikel im letzten Monat:
 > - [Kürzlich aktualisiert](#bkmk_update)
 
 ### <a name="recently-updated"></a>Kürzlich aktualisiert
-Artikel, die letzten Monat aktualisiert wurden:
+Artikel, die letzten Monat aktualisiert wurden.
 
 - [Voraussetzungen für Standorte](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)
 - [Data Warehouse](/sccm/core/servers/manage/data-warehouse)
@@ -108,3 +112,37 @@ Artikel, die letzten Monat aktualisiert wurden:
 - [Protokolldateien zur Behebung von Problemen](/sccm/core/plan-design/hierarchy/log-files)
 
 
+
+</br>
+
+</br>
+
+</br>
+
+### <a name="troubleshooting-articles"></a>Artikel zur Problembehandlung
+Exemplarische Vorgehensweisen mit Anleitungen, die Ihnen bei der Problembehandlung von Configuration Manager-Komponenten und -Features helfen.
+
+- Problembehandlung beim PXE-Start  
+- Problembehandlung bei der Softwareupdatesynchronisierung  
+- Grundlegendes und Problembehandlung für die Inhaltsverteilung  
+- Grundlegendes und Problembehandlung für Microsoft Store für die Unternehmensintegration  
+- Problembehandlung bei der Softwareupdateverwaltung  
+- Problembehandlung beim Tasksequenzschritt „Anwendung installieren“  
+
+
+</br>
+
+</br>
+
+</br>
+
+### <a name="new-and-updated-support-articles"></a>Neue und aktualisierte Supportartikel
+Supportartikel, die neu sind oder in den letzten zwei Monaten aktualisiert wurden.
+
+- Configuration Manager-Clients erhalten nach der Wiederherstellung eines primären Standorts über einen CAS keine Richtliniendaten  
+- Updaterollup 2 für den aktuellen Branch von System Center Configuration Manager, Version 1710  
+- Fehler bei der automatischen Registrierung für ein gemeinsam verwaltetes Gerät im aktuellen Branch von System Center Configuration Manager, Version 1710  
+- Bei Windows 10-Bereitstellungen muss die Sprache in Configuration Manager ausgewählt werden  
+
+> [!Tip]  
+> Informationen zum Abonnieren von Atom- oder RSS-Benachrichtigungen für neue Configuration Manager-Supportartikel finden Sie unter [Updates für Supportinhalte](https://support.microsoft.com/help/4089498/). Wählen Sie **System Center Configuration Manager** aus.  

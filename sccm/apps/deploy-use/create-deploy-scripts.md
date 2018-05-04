@@ -17,11 +17,11 @@ caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b9699b2f4bd1f18890d25582be9a8d20778b64be
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: 7cfb969ab70c27859788732839f4715541e1b91e
+ms.sourcegitcommit: e4ca9fb1fad2caaf61bb46e0a12f4d6b96f15513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Erstellen und Ausführen von PowerShell-Skripts über die Configuration Manager-Konsole
 
@@ -72,7 +72,7 @@ Von der Funktion „Skripts ausführen“ wird derzeit Folgendes unterstützt:
 
 
 >[!WARNING]
->Beachten Sie, dass die Verwendung von Parametern das Risiko für PowerShell Injection-Angriffe erhöht. Es gibt verschiedene Möglichkeiten, dieses Risiko zu verringern. Sie können beispielsweise reguläre Ausdrücken zum Überprüfen der Parametereingabe oder vordefinierte Parameter verwenden. Als allgemeine bewährte Methode wird empfohlen, keine Geheimnisse wie Kennwörter in PowerShell-Skripts zu hinterlegen. Unter [Learn more about PowerShell script security (Weitere Informationen zur sicheren Verwendung von PowerShell-Skripts)](/sccm/apps/deploy-use/learn-script-security) finden Sie weiterführende Hinweise. <!--There are external tools available to validate your PowerShell scripts such as the [PowerShell Injection Hunter](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) tool. -->
+>Beachten Sie, dass die Verwendung von Parametern das Risiko für PowerShell Injection-Angriffe erhöht. Es gibt verschiedene Möglichkeiten, dieses Risiko zu verringern. Sie können beispielsweise reguläre Ausdrücken zum Überprüfen der Parametereingabe oder vordefinierte Parameter verwenden. Als allgemeine bewährte Methode wird empfohlen, keine Geheimnisse wie Kennwörter in PowerShell-Skripts zu hinterlegen. [Weitere Informationen zur sicheren Verwendung von PowerShell-Skripts](/sccm/apps/deploy-use/learn-script-security) <!--There are external tools available to validate your PowerShell scripts such as the [PowerShell Injection Hunter](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) tool. -->
 
 
 ## <a name="run-script-authors-and-approvers"></a>Skript ausführen: Ersteller und Genehmiger
@@ -184,7 +184,8 @@ Klicken Sie im Dialogfeld **Skript erstellen** unter **Skript** auf **Skriptpara
 Jeder Parameter Ihres Skripts hat ein eigenes Dialogfeld, in dem Sie weitere Details und eine Validierung hinzufügen können.
 
 >[!IMPORTANT]
-> Parameterwerte dürfen keinen Apostroph enthalten. 
+> Parameterwerte dürfen keinen Apostroph enthalten. </br></br>
+> Es gibt ein bekanntes Problem in Configuration Manager, Version 1802: Parameter mit Leerzeichen werden nicht ordnungsgemäß an das Skript übergeben. Wenn ein Leerzeichen im Parameter verwendet wird, wird nur das erste Element im Parameter an das Skript übergeben, alles nach dem Leerzeichen wird nicht übergeben. Administratoren können dieses Problem in Skripts umgehen, indem sie Leerzeichen durch alternative Zeichen ersetzen und sie konvertieren oder indem sie andere Methoden nutzen.
 
 
 ### <a name="parameter-validation"></a>Validierung von Parametern

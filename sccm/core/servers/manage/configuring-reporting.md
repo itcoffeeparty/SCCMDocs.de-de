@@ -1,25 +1,26 @@
 ---
 title: Konfigurieren der Berichterstellung
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr über das Einrichten der Berichterstellung in der Configuration Manager-Hierarchie, einschließlich Informationen zu SQL Server Reporting Services."
+description: Erfahren Sie mehr über das Einrichten der Berichterstellung in der Configuration Manager-Hierarchie, einschließlich Informationen zu SQL Server Reporting Services.
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: be8c36c73478e232254185681546f5f52c7d701f
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 6d50a35dc86b80ea135c79fc2f9825162115b764
+ms.sourcegitcommit: f65d4d24f0533e5e196ece0d8a4df0fb3e30eba1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-reporting-in-system-center-configuration-manager"></a>Konfigurieren der Berichterstellung in System Center Configuration Manager
 
@@ -232,7 +233,7 @@ Sie können in der System Center Configuration Manager-Konsole nur dann Berichte
 
     7.  Klicken Sie mit der rechten Maustaste auf das Zertifikat mit dem Anzeigenamen &lt;*FQDN des Standortservers*>, klicken Sie auf **Alle Tasks**, und wählen Sie anschließend **Exportieren** aus.  
 
-    8.  Schließen Sie den **Assistenten zum Exportieren** von Zertifikaten mit den Standardoptionen ab, und speichern Sie das Zertifikat mit der Dateinamenerweiterung **.cer**.  
+    8.  Schließen Sie den **Assistenten zum Exportieren** von Zertifikaten mit den Standardoptionen ab, und speichern Sie das Zertifikat mit der Dateinamenerweiterung **.cer** .  
 
 2.  Führen Sie die folgenden Schritte auf dem Computer aus, auf dem die Configuration Manager-Konsole ausgeführt wird, um das selbstsignierte Zertifikat dem Zertifikatspeicher „Vertrauenswürdige Personen“ hinzuzufügen:  
 

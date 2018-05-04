@@ -11,11 +11,11 @@ ms.prod: configuration-manager
 ms.service: ''
 ms.technology: ''
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: a45ded0f3824c148f64f9578e51cc112c05d9f78
-ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
+ms.openlocfilehash: 93a991cb3fd78e44f5ae4434a9845a57450e1025
+ms.sourcegitcommit: e4ca9fb1fad2caaf61bb46e0a12f4d6b96f15513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>Vorbereiten von Windows 10-Geräten für die Co-Verwaltung
 Sie können die Co-Verwaltung auf Windows 10-Geräten aktivieren, die in AD und Azure AD eingebunden, bei Microsoft Intune registriert und ein Client in Configuration Manager sind. Installieren Sie den Configuration Manager-Client auf neuen Windows 10- und bereits in Intune registrierten Geräten jedoch vor der Aktivierung der Co-Verwaltung. Windows 10-Geräte, die Configuration Manager-Clients sind, können Sie bei Intune registrieren und die Co-Verwaltung über die Configuration Manager-Konsole aktivieren.
@@ -23,6 +23,32 @@ Sie können die Co-Verwaltung auf Windows 10-Geräten aktivieren, die in AD und 
 > [!IMPORTANT]
 > Co-Verwaltung wird von Windows 10 Mobile-Geräten nicht unterstützt.
 
+
+## <a name="prerequisites"></a>Erforderliche Komponenten
+Bevor Sie mit der Co-Verwaltung beginnen können, müssen folgende Anforderungen erfüllt sein. Zum einen gelten allgemeine Voraussetzungen und zum anderen unterschiedliche Voraussetzungen für Geräte mit installiertem Configuration Manager-Client und für Geräte, auf denen der Client nicht installiert ist.
+### <a name="general-prerequisites"></a>Allgemeine Voraussetzungen
+Hier finden Sie die allgemeinen Voraussetzungen für die Aktivierung der Co-Verwaltung:  
+
+- Configuration Manager, Version 1710 oder höher
+- Azure AD
+- EMS- oder Intune-Lizenzen für alle Benutzer
+- [Automatische Registrierung bei Azure AD](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) aktiviert
+- Intune-Abonnement &#40;die MDM-Autorität muss in Intune auf **Intune** festgelegt sein&#41;
+
+
+   > [!Note]  
+   > In einer hybriden MDM-Umgebung (Intune integriert in Configuration Manager) ist keine Co-Verwaltung möglich. Sie können jedoch mit der Migration von Benutzern zum eigenständigen Intune beginnen und anschließend die zugehörigen Windows 10-Geräte für die Co-Verwaltung aktivieren. Informationen zur Migration zum eigenständigen Intune finden Sie unter [Beginnen der Migration hybrider MDM-Benutzer und -Geräte zum eigenständigen Intune](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
+
+### <a name="additional-prerequisites-for-devices-with-the-configuration-manager-client"></a>Zusätzliche Anforderungen an Geräte mit dem Configuration Manager-Client
+- Windows 10, Version 1709 oder höher
+- [In Azure AD eingebundene Hybridgeräte](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (in AD und Azure AD eingebunden)
+
+### <a name="additional-prerequisites-for-devices-without-the-configuration-manager-client"></a>Zusätzliche Anforderungen an Geräte ohne Configuration Manager-Client
+- Windows 10, Version 1709 oder höher
+- [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) in Configuration Manager (wenn Sie den Configuration Manager-Client mit Intune installieren)
+
+> [!IMPORTANT]
+> Co-Verwaltung wird von Windows 10 Mobile-Geräten nicht unterstützt.
 
 
 ## <a name="command-line-to-install-configuration-manager-client"></a>Befehlszeile zum Installieren von Configuration Manager-Clients
@@ -39,8 +65,8 @@ Angenommen, Sie haben die folgenden Werte:
 
 - **FQDN des Verwaltungspunkts (Management Point, MP)**: mp1.contoso.com    
 - **Standortcode**: PS1    
-- **Azure AD-Mandanten-ID**: daf4a1c2-3a0c-401b-966f-0b855d3abd1a    
-- **Azure AD-Client-App-ID**: 7506ee10-f7ec-415a-b415-cd3d58790d97     
+- **Azure AD-Mandanten-ID**: 60a413f4-c606-4744-8adb-9476ae3XXXXX    
+- **Azure AD-Client-App-ID**: 9fb9315f-4c42-405f-8664-ae63283XXXXX     
 - **URI der AAD-Ressourcen-ID**: ConfigMgrServer    
 
   > [!Note]    
@@ -48,7 +74,7 @@ Angenommen, Sie haben die folgenden Werte:
 
 Daraus ergibt sich die folgende Befehlszeile:
 
-`ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=PS1 SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://ConfigMgrServer"`
+`ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=PS1 SMSMP=https://mp1.contoso.com AADTENANTID=60a413f4-c606-4744-8adb-9476ae3XXXXX AADCLIENTAPPID=9fb9315f-4c42-405f-8664-ae63283XXXXX AADRESOURCEURI=https://ConfigMgrServer"`
 
 > [!Tip]
 > Die Befehlszeilenparameter für Ihren Standort finden Sie anhand der folgenden Schritte:     

@@ -15,11 +15,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6918983bca3e598fd99a8f7670ada3f7e43cfa6
-ms.sourcegitcommit: d8a4a53630351b3d677bbdc5d203e7d330472cba
+ms.openlocfilehash: 6a47569ee56931d76a41e5f14ed56f8276d264fb
+ms.sourcegitcommit: e4ca9fb1fad2caaf61bb46e0a12f4d6b96f15513
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Neuigkeiten bei der hybriden Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit Configuration Manager und Microsoft Intune
 
@@ -47,6 +47,24 @@ Jeder Abschnitt dieses Artikels listet Hybridfeatures in drei verschiedenen Kate
 ## <a name="april-2018"></a>April 2018
 
 ### <a name="new-in-microsoft-intune"></a>Neuheiten in Microsoft Intune
+
+#### <a name="updated-help-experience-on-company-portal-app-for-android"></a>Aktualisierte Hilfe in der Unternehmensportal-App für Android 
+<!--1631531-->
+Wir haben die Hilfe in der Unternehmensportal-App für Android aktualisiert, sodass sie bewährten Methoden für die Android-Plattform entspricht. Wenn jetzt ein Benutzer ein Problem in der App hat, kann er auf **Menü** > **Hilfe** tippen und folgende Aktionen ausführen:
+- Diagnoseprotokolle für Microsoft hochladen.
+- Eine E-Mail, die das Problem beschreibt, und eine Incident-ID an einen Supportmitarbeiter des Unternehmens senden.
+
+
+#### <a name="update-where-to-configure-your-app-protection-policies"></a>Aktualisieren, wo Ihre App-Schutzrichtlinien konfiguriert werden 
+<!--2144597-->
+Im Azure-Portal im Microsoft Intune-Dienst leiten wir Sie vorübergehend vom Dienstblatt **Intune-App-Schutz** zum Blatt **Mobile App** um. Beachten Sie, dass alle Ihre App-Schutzrichtlinien bereits auf dem Blatt **Mobile App** in Intune unter der App-Konfiguration vorhanden sind. Statt Intune-App-Schutz aufzurufen, verwenden Sie einfach Intune. Im April 2018 beenden wir die Umleitung und entfernen das Dienstblatt **Intune-App-Schutz** vollständig, sodass es nur einen Ort für App-Richtlinien in Intune gibt. 
+
+**Wie wirkt sich das auf mich aus?** Sowohl eigenständige Intune-Kunden als auch hybride Kunden (die Intune mit Configuration Manager verwenden) sind von dieser Änderung betroffen. Diese Integration soll Ihre Cloudverwaltung vereinfachen.
+
+**Was muss ich als Vorbereitung auf diese Änderung tun?** Markieren Sie **Intune** und nicht das Dienstblatt **Intune-App-Schutz** als Favorit, und machen Sie sich in Intune mit dem Workflow für App-Schutzrichtlinien auf dem Blatt **Mobile App** vertraut. Es wird für einen kurzen Zeitraum eine Umleitung eingerichtet, danach wird das Blatt **App-Schutz** entfernt. Beachten Sie, dass alle Richtlinien zum App-Schutz bereits in Intune verschoben wurden und Sie Ihre Richtlinien für den bedingten Zugriff ändern können. Weitere Informationen zum Ändern von Richtlinien für bedingten Zugriff finden Sie unter [Bedingter Zugriff in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal). Weitere Informationen finden Sie unter [Was sind App-Schutzrichtlinien?](/intune/app-protection-policy) 
+
+
+
 
 #### <a name="user-experience-update-for-the-company-portal-app-for-ios"></a>Update für die Benutzeroberfläche für die Unternehmensportal-App für iOS 
 <!--1412866-->

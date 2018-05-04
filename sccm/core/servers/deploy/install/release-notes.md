@@ -3,7 +3,7 @@ title: Anmerkungen zu dieser Version
 titleSuffix: Configuration Manager
 description: In diesem Artikel erhalten Sie Informationen zu dringenden Problemen, die im Produkt noch nicht behoben oder bisher in keinem Microsoft Knowledge Base-Artikel beschrieben wurden.
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/18/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,11 +17,11 @@ caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e22bc4818f10a1f60fdb2135eb705e46dbaa10a4
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 2eabcba6e56bd2a0a9977ab31610a9d747ab6207
+ms.sourcegitcommit: e23350fe65ff99228274e465b24b5e163769f38f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="release-notes-for-system-center-configuration-manager"></a>Anmerkungen zu dieser Version von System Center Configuration Manager
 
@@ -101,6 +101,21 @@ Der Assistent zum Erstellen eines Wartungsplans wird zurzeit standardmäßig nac
 
 #### <a name="workaround"></a>Problemumgehung
  Nachdem Sie einen Wartungsplan erstellt haben, öffnen Sie die Eigenschaften des Plans, wechseln Sie zur Registerkarte **Auswertungszeitplan**, wählen Sie **Regel nach Zeitplan ausführen** aus, klicken Sie auf **Anpassen**, und erstellen Sie einen benutzerdefinierten Zeitplan. Sie können den Wartungsplan beispielsweise alle 60 Tage ausführen.  
+
+
+### <a name="changing-office-365-client-setting-doesnt-apply"></a>Das Ändern einer Office 365-Clienteinstellung wird nicht übernommen 
+<!--511551-->
+*Gilt für: Configuration Manager, Version 1802*  
+
+Stellen Sie eine [Clienteinstellung](/sccm/core/clients/deploy/about-client-settings#enable-management-of-the-office-365-client-agent) mit **Verwaltung des Office 365-Client-Agents aktivieren** als `Yes` bereit. Ändern Sie diese Einstellung in `No` oder `Not Configured`. Nach dem Aktualisieren der Richtlinie auf Zielclients werden Office 365-Updates weiterhin von Configuration Manager verwaltet. 
+
+#### <a name="workaround"></a>Problemumgehung
+Ändern Sie den folgenden Registrierungswert in `0`, und starten Sie den **Microsoft Office-Klick-und-Los-Dienst** (ClickToRunSvc) neu:
+
+```
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\office\16.0\Common\officeupdate]
+"OfficeMgmtCOM"=dword:00000000
+```
 
 
 

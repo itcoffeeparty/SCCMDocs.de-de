@@ -12,15 +12,15 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
-caps.latest.revision: 
+caps.latest.revision: 5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6d1be6375dde2df51aafe076e5613647ecca3c4c
-ms.sourcegitcommit: d0fc79214bc35ca172fd2023dfa617b977ee865b
+ms.openlocfilehash: ae0a36acf4203fb5c7601a2960c0b5bb0a52082e
+ms.sourcegitcommit: ac06e034cc60db7b1acade1f541e26b6cc50506e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="site-and-site-system-prerequisites-for-system-center-configuration-manager"></a>Voraussetzungen für Standorte und Standortsysteme für System Center Configuration Manager
 
@@ -62,7 +62,8 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5 SP1 (oder höher)  
 
--   .NET Framework 4.5.2 (oder höher)
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1
+    - Weitere Informationen zu .NET Framework-Versionen finden Sie unter [.NET Framework-Versionen und -Abhängigkeiten](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
 
 -   Remotedifferenzialkomprimierung  
 
@@ -83,7 +84,8 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5 SP1 (oder höher)  
 
--   .NET Framework 4.5.2 (oder höher)   
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1
+    - Weitere Informationen zu .NET Framework-Versionen finden Sie unter [.NET Framework-Versionen und -Abhängigkeiten](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
 
 -   Remotedifferenzialkomprimierung  
 
@@ -124,9 +126,12 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5 SP1 (oder höher)  
 
--   .NET Framework 4.5.2 (oder höher)  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1
+    - ASP.NET 4.5 
 
-    -   ASP.NET 4.5  
+    - Weitere Informationen zu .NET Framework-Versionen finden Sie unter [.NET Framework-Versionen und -Abhängigkeiten](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)  
+
+    
 
 **IIS-Konfiguration:**  
 
@@ -159,7 +164,7 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5 SP1 (oder höher)  
 
--   .NET Framework 4.5.2 (oder höher)  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1:  
 
     -   ASP.NET 4.5:  
 
@@ -194,12 +199,12 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_2012AIpreq"></a> Asset Intelligence-Synchronisierungspunkt  
 **Windows Server-Rollen und -Features:**  
 
--   .NET Framework 4.5.2 (oder höher)  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1 
 
 ###  <a name="bkmk_2012crppreq"></a> Zertifikatregistrierungspunkt  
 **Windows Server-Rollen und -Features:**  
 
--   .NET Framework 4.5.2 (oder höher)  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1:  
 
     -   HTTP-Aktivierung  
 
@@ -273,7 +278,7 @@ ms.lasthandoff: 02/28/2018
 
 -   Mindestens .NET Framework 3.5  
 
--   .NET Framework 4.5.2 (oder höher)  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1:  
 
      Bei der Installation dieser Standortsystemrolle installiert Configuration Manager automatisch .NET Framework 4.5.2. Diese Installation kann den Server in den Status „Ausstehender Neustart“ setzen. Wenn für .NET Framework ein Neustart aussteht, können .NET-Anwendungen möglicherweise erst nach dem Neustart des Servers und dem Abschluss der Installation ausgeführt werden.  
 
@@ -313,7 +318,7 @@ ms.lasthandoff: 02/28/2018
 
 -   Mindestens .NET Framework 3.5  
 
--   .NET Framework 4.5.2 (oder höher) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1 
 
      Bei der Installation dieser Standortsystemrolle installiert Configuration Manager automatisch .NET Framework 4.5.2. Diese Installation kann den Server in den Status „Ausstehender Neustart“ setzen. Wenn für .NET Framework ein Neustart aussteht, können .NET-Anwendungen möglicherweise erst nach dem Neustart des Servers und dem Abschluss der Installation ausgeführt werden.  
 
@@ -359,7 +364,7 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 ###  <a name="bkmk_2012MPpreq"></a> Verwaltungspunkt  
 **Windows Server-Rollen und -Features:**  
 
--   .NET Framework 4.5.2 (oder höher) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1 
 
 -   BITS-Servererweiterungen (und automatisch ausgewählte Optionen) oder intelligenter Hintergrundübertragungsdienst (Background Intelligent Transfer Service, BITS) (und automatisch ausgewählte Optionen)  
 
@@ -382,7 +387,7 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 ###  <a name="bkmk_2012RSpoint"></a> Reporting Services-Punkt  
 **Windows Server-Rollen und -Features:**  
 
--   .NET Framework 4.5.2 (oder höher) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1 
 
 **SQL Server Reporting Services:**  
 
@@ -395,7 +400,7 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 ###  <a name="bkmk_SCPpreq"></a> Dienstverbindungspunkt  
 **Windows Server-Rollen und -Features:**  
 
--   .NET Framework 4.5.2 (oder höher) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1 
 
      Bei der Installation dieser Standortsystemrolle installiert Configuration Manager automatisch .NET Framework 4.5.2. Diese Installation kann den Server in den Status „Ausstehender Neustart“ setzen. Wenn für .NET Framework ein Neustart aussteht, können .NET-Anwendungen möglicherweise erst nach dem Neustart des Servers und dem Abschluss der Installation ausgeführt werden.  
 
@@ -410,7 +415,7 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 
 -   .NET Framework 3.5 SP1 (oder höher)  
 
--   .NET Framework 4.5.2 (oder höher) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1 
 
 Die IIS-Standardkonfiguration ist erforderlich.
 
@@ -439,7 +444,7 @@ Windows Server 2008 und Windows Server 2008 R2 unterliegen nun dem erweiterten S
 
 -   .NET Framework 3.5 SP1 (oder höher)  
 
--   .NET Framework 4.5.2 (oder höher) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1 
 
 **Windows-Feature:**  
 
@@ -462,7 +467,7 @@ Windows Server 2008 und Windows Server 2008 R2 unterliegen nun dem erweiterten S
 
 -   .NET Framework 3.5 SP1 (oder höher)  
 
--   .NET Framework 4.5.2 (oder höher)  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1 
 
 **Visual C++ Redistributable:**  
 
@@ -499,7 +504,7 @@ Windows Server 2008 und Windows Server 2008 R2 unterliegen nun dem erweiterten S
 ###  <a name="bkmk_2008acwspreq"></a> Anwendungskatalog-Websitepunkt  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (oder höher) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1
 
 **IIS-Konfiguration:**
 
@@ -530,7 +535,7 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 
 -   .NET Framework 3.5 SP1 (oder höher)  
 
--   .NET Framework 4.5.2 (oder höher) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1 
 
 **Aktivierung von Windows Communication Foundation (WCF):**  
 
@@ -561,12 +566,12 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 ###  <a name="bkmk_2008AIpreq"></a> Asset Intelligence-Synchronisierungspunkt  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (oder höher) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1
 
 ###  <a name="bkmk_2008crppreq"></a> Zertifikatregistrierungspunkt  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (oder höher) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1 
 
 -   HTTP-Aktivierung  
 
@@ -641,7 +646,7 @@ Wenn Sie eine benutzerdefinierte IIS-Konfiguration verwenden, können Sie nicht 
 ###  <a name="bkmk_2008Enrollpreq"></a> Anmeldungspunkt  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (oder höher) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1 
 
      Wenn diese Standortsystemrolle installiert wird, installiert Configuration Manager automatisch .NET Framework 4.5.2, wenn auf dem Server nicht bereits eine unterstützte Version von .NET Framework installiert ist. Diese Installation kann den Server in den Status „Ausstehender Neustart“ setzen. Wenn für .NET Framework ein Neustart aussteht, können .NET-Anwendungen möglicherweise erst nach dem Neustart des Servers und dem Abschluss der Installation ausgeführt werden.  
 
@@ -670,7 +675,7 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 ###  <a name="bkmk_2008EnrollProxpreq"></a> Anmeldungsproxypunkt  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (oder höher) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1
 
      Wenn diese Standortsystemrolle installiert wird, installiert Configuration Manager automatisch .NET Framework 4.5.2, wenn auf dem Server nicht bereits eine unterstützte Version von .NET Framework installiert ist. Diese Installation kann den Server in den Status „Ausstehender Neustart“ setzen. Wenn für .NET Framework ein Neustart aussteht, können .NET-Anwendungen möglicherweise erst nach dem Neustart des Servers und dem Abschluss der Installation ausgeführt werden.  
 
@@ -708,7 +713,7 @@ Die IIS-Standardkonfiguration mit den folgenden Ergänzungen ist erforderlich:
 ###  <a name="bkmk_2008MPpreq"></a> Verwaltungspunkt  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (oder höher)
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1
 
 **IIS-Konfiguration:**
 
@@ -749,7 +754,7 @@ Wenn Sie eine benutzerdefinierte IIS-Konfiguration verwenden, können Sie nicht 
 ###  <a name="bkmk_2008RSpoint"></a> Reporting Services-Punkt  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (oder höher)  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1 
 
 **SQL Server Reporting Services:**  
 
@@ -762,7 +767,7 @@ Wenn Sie eine benutzerdefinierte IIS-Konfiguration verwenden, können Sie nicht 
 ###  <a name="bkmk_2008SCPpreq"></a> Dienstverbindungspunkt  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (oder höher) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1 
 
      Wenn diese Standortsystemrolle installiert wird, installiert Configuration Manager automatisch .NET Framework 4.5.2, wenn auf dem Server nicht bereits eine unterstützte Version von .NET Framework installiert ist. Diese Installation kann den Server in den Status „Ausstehender Neustart“ setzen. Wenn für .NET Framework ein Neustart aussteht, können .NET-Anwendungen möglicherweise erst nach dem Neustart des Servers und dem Abschluss der Installation ausgeführt werden.  
 
@@ -777,7 +782,7 @@ Wenn Sie eine benutzerdefinierte IIS-Konfiguration verwenden, können Sie nicht 
 
 -   .NET Framework 3.5 SP1 (oder höher)  
 
--   .NET Framework 4.5.2 (oder höher) 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 oder 4.7.1 
 
 **IIS-Konfiguration:**
 
