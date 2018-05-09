@@ -1,26 +1,20 @@
 ---
 title: Bereitstellen von Windows To Go
 titleSuffix: Configuration Manager
-description: "Erfahren Sie, wie Sie Windows To Go in System Center Configuration Manager bereitstellen, um einen Arbeitsbereich in Windows To Go zu erstellen, der über eine externe Festplatte neu startet."
-ms.custom: na
+description: Erfahren Sie, wie Sie Windows To Go in System Center Configuration Manager bereitstellen, um einen Arbeitsbereich in Windows To Go zu erstellen, der über eine externe Festplatte neu startet.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
-caps.latest.revision: "8"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 9d902f75911b484d22d38b07cea40e1c00ea0d93
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 12b7a28ff5ea0e2e1870c0c37edd8e056930b09f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-windows-to-go-with-system-center-configuration-manager"></a>Bereitstellen von Windows to Go mit System Center Configuration Manager.
 
@@ -382,7 +376,7 @@ In diesem Thema finden Sie die Schritte zum Bereitstellen von Windows To Go in S
 
     -   **Systemneustart (falls dieser zum Abschluss der Installation erforderlich ist)**: Ermöglicht das Neustarten eines Geräts außerhalb konfigurierter Wartungsfenster, wenn dies bei der Softwareinstallation erforderlich ist.  
 
-    -   **Eingebettete Geräte:**Beim Bereitstellen von Paketen und Programmen für Windows Embedded-Geräte mit Schreibfilteraktivierung können Sie angeben, dass die Pakete und Programme auf dem temporären Overlay gespeichert und die Änderungen später ausgeführt werden oder dass sie am Installationsstichtag oder während eines Wartungsfensters ausgeführt werden sollen. Falls die Änderungen am Installationsstichtag oder während eines Wartungsfensters ausgeführt werden, ist ein Neustart erforderlich, und die Änderungen werden auf dem Gerät beibehalten.  
+    -   **Eingebettete Geräte:** Beim Bereitstellen von Paketen und Programmen für Windows Embedded-Geräte mit Schreibfilteraktivierung können Sie angeben, dass die Pakete und Programme auf dem temporären Overlay gespeichert und die Änderungen später ausgeführt werden oder dass sie am Installationsstichtag oder während eines Wartungsfensters ausgeführt werden sollen. Falls die Änderungen am Installationsstichtag oder während eines Wartungsfensters ausgeführt werden, ist ein Neustart erforderlich, und die Änderungen werden auf dem Gerät beibehalten.  
 
 11. Geben Sie auf der Seite **Verteilungspunkte** die folgenden Informationen an:  
 
@@ -438,7 +432,7 @@ In diesem Thema finden Sie die Schritte zum Bereitstellen von Windows To Go in S
 
     -   **Systemneustart (falls dieser zum Abschluss der Installation erforderlich ist)**: Ermöglicht das Neustarten eines Geräts außerhalb konfigurierter Wartungsfenster, wenn dies bei der Softwareinstallation erforderlich ist.  
 
-    -   **Eingebettete Geräte:**Beim Bereitstellen von Paketen und Programmen für Windows Embedded-Geräte mit Schreibfilteraktivierung können Sie angeben, dass die Pakete und Programme auf dem temporären Overlay gespeichert und die Änderungen später ausgeführt werden oder dass sie am Installationsstichtag oder während eines Wartungsfensters ausgeführt werden sollen. Falls die Änderungen am Installationsstichtag oder während eines Wartungsfensters ausgeführt werden, ist ein Neustart erforderlich, und die Änderungen werden auf dem Gerät beibehalten.  
+    -   **Eingebettete Geräte:** Beim Bereitstellen von Paketen und Programmen für Windows Embedded-Geräte mit Schreibfilteraktivierung können Sie angeben, dass die Pakete und Programme auf dem temporären Overlay gespeichert und die Änderungen später ausgeführt werden oder dass sie am Installationsstichtag oder während eines Wartungsfensters ausgeführt werden sollen. Falls die Änderungen am Installationsstichtag oder während eines Wartungsfensters ausgeführt werden, ist ein Neustart erforderlich, und die Änderungen werden auf dem Gerät beibehalten.  
 
     -   **Internetbasierte Clients**: Geben Sie an, ob die Tasksequenz auf einem internetbasierten Client ausgeführt werden darf. Vorgänge, mit denen Software wie ein Betriebssystem installiert wird, werden von dieser Einstellung nicht unterstützt. Verwenden Sie diese Option nur für generische skriptbasierte Tasksequenzen, mit denen Vorgänge im Standardbetriebssystem ausgeführt werden.  
 

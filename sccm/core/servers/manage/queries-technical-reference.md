@@ -1,25 +1,20 @@
 ---
-title: "Abfragen – Technische Referenz"
+title: Abfragen – Technische Referenz
 titleSuffix: Configuration Manager
-description: "Hier finden Sie eine Liste mit Themen, mit deren Hilfe Sie Abfragen zum Abrufen von Informationen zu Ressourcen an Ihrem Standort verwenden können."
-ms.custom: na
+description: Hier finden Sie eine Liste mit Themen, mit deren Hilfe Sie Abfragen zum Abrufen von Informationen zu Ressourcen an Ihrem Standort verwenden können.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 727bca0d-6458-48dc-9a63-3b66d9799ddb
-caps.latest.revision: "4"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 745148bb84b5090b2c8d46100fc374cc6c341557
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 46f6bdefa2bd59ee1488c00dc1c2150608d0575d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="queries-technical-reference-for-system-center-configuration-manager"></a>Abfragen – Technische Referenz für System Center Configuration Manager
 

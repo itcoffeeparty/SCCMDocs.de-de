@@ -2,26 +2,19 @@
 title: Konfigurieren der Zertifikatinfrastruktur
 titleSuffix: Configuration Manager
 description: Erfahren Sie mehr zum Konfigurieren der Zertifikatregistrierung in System Center Configuration Manager.
-ms.custom: na
 ms.date: 07/25/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: lleonard-msft
-ms.author: alleonar
-manager: angrobe
-ms.openlocfilehash: 9ef62bbf6269a6090f2345b10c24cc4df16c1e3b
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: c27f92374470c7d87d49661b20996a3f0c47f8a4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-certificate-infrastructure"></a>Konfigurieren der Zertifikatinfrastruktur
 
@@ -161,11 +154,11 @@ Sie müssen mindestens einen Zertifikatregistrierungspunkt in der System Center 
 
     -   Erweitern Sie im Arbeitsbereich **Überwachung** die Option **Systemstatus**, klicken Sie auf **Komponentenstatus**, und suchen Sie nach Statusmeldungen der Komponente **SMS_CERTIFICATE_REGISTRATION_POINT** .  
 
-    -   Verwenden Sie auf dem Standortsystemserver die Datei „*<Configuration Manager-Installationspfad\>*\Logs\crpsetup.log“ und die Datei „*<Configuration Manager-Installationspfad\>*\Logs\crpmsi.log“. Bei einer erfolgreichen Installation wird der Exitcode 0 zurückgegeben.  
+    -   Verwenden Sie auf dem Standortsystemserver die Datei „*<Configuration Manager-Installationspfad\>* \Logs\crpsetup.log“ und die Datei „*<Configuration Manager-Installationspfad\>* \Logs\crpmsi.log“. Bei einer erfolgreichen Installation wird der Exitcode 0 zurückgegeben.  
 
     -   Überprüfen Sie mit einem Browser, ob Sie eine Verbindung mit der URL des Zertifikatregistrierungspunkts herstellen können. Beispiel: https://server1.contoso.com/CMCertificateRegistration. Es sollte eine Seite mit einem **Serverfehler** für den Anwendungsnamen mit einer HTTP 404-Beschreibung angezeigt werden.  
 
-11. Suchen Sie nach der exportierten Zertifikatdatei für die Stammzertifizierungsstelle, die vom Zertifikatregistrierungspunkt automatisch im folgenden Ordner auf dem primären Standortservercomputer erstellt wurde: *<Configuration Manager-Installationspfad\>*\inboxes\certmgr.box. Speichern Sie diese Datei an einem sicheren Speicherort, auf den Sie zu einem späteren Zeitpunkt während der Installation des System Center Configuration Manager-Richtlinienmoduls auf dem Server mit dem Registrierungsdienst für Netzwerkgeräte sicher zugreifen können.  
+11. Suchen Sie nach der exportierten Zertifikatdatei für die Stammzertifizierungsstelle, die vom Zertifikatregistrierungspunkt automatisch im folgenden Ordner auf dem primären Standortservercomputer erstellt wurde: *<Configuration Manager-Installationspfad\>* \inboxes\certmgr.box. Speichern Sie diese Datei an einem sicheren Speicherort, auf den Sie zu einem späteren Zeitpunkt während der Installation des System Center Configuration Manager-Richtlinienmoduls auf dem Server mit dem Registrierungsdienst für Netzwerkgeräte sicher zugreifen können.  
 
     > [!TIP]  
     >  Dieses Zertifikat steht nicht sofort in diesem Ordner zur Verfügung. Möglicherweise müssen Sie eine Weile warten (beispielsweise eine halbe Stunde), bis System Center Configuration Manager die Datei in diesen Speicherort kopiert.  

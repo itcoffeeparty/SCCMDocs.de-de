@@ -1,26 +1,20 @@
 ---
 title: Bereitstellen von Inhalten
 titleSuffix: Configuration Manager
-description: "Hier finden Sie eine Anleitung zur Bereitstellung von Inhalten, nachdem Sie Verteilungspunkte für System Center Configuration Manager installiert haben."
-ms.custom: na
+description: Hier finden Sie eine Anleitung zur Bereitstellung von Inhalten, nachdem Sie Verteilungspunkte für System Center Configuration Manager installiert haben.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 14d2d9cfc25f7445ad6e873f1969e1ffcd522737
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: c6a2a69047a8fee5ab0c1f4f0f13197178334f05
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-and-manage-content-for-system-center-configuration-manager"></a>Bereitstellen und Verwalten von Inhalt mit System Center Configuration Manager
 

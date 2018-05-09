@@ -1,25 +1,20 @@
 ---
-title: "Registrieren von iOS-Geräten mit Apple Configurator "
+title: 'Registrieren von iOS-Geräten mit Apple Configurator '
 titleSuffix: Configuration Manager
 descriptions: Pre-enroll iOS devices by using Apple Configurator with Configuration Manager.
-ms.custom: na
 ms.date: 08/15/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 61a19d95-83ff-4ad8-9a67-f304d2ba54f2
-caps.latest.revision: "5"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: e5f7356e2cfe003071a0f090add67cd66acfe062
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4c3dea67cd16c8efe272038894aa4f958f4ef160
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ios-hybrid-enrollment-using-apple-configurator-with-configuration-manager"></a>iOS-Hybridregistrierung mithilfe von Apple Configurator mit Configuration Manager
 
@@ -29,7 +24,7 @@ Unternehmen, die iOS-Geräte kaufen, die von Mitarbeitern verwendet werden, kön
 
 Das folgende Verfahren empfiehlt sich für dedizierte iOS-Geräte, die einen einzelnen Benutzer haben, der das Gerät verwendet, um auf Firmen-E-Mails und Unternehmensressourcen wie Apps und Daten zuzugreifen.  
 
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
 
 -   Physischer Zugriff auf iOS-Geräte  
 
@@ -51,7 +46,7 @@ Das folgende Verfahren empfiehlt sich für dedizierte iOS-Geräte, die einen ein
 
     -   **Benutzeraffinität:** Gibt an, wie Geräte registriert werden. Verwenden Sie in den meisten Szenarios mit dem Setup-Assistenten **Benutzeraffinität anfordern**.  
 
-        -   **Eingabeaufforderung für Benutzeraffinität:**Das Gerät muss während der ersten Setup einem Benutzer zugewiesen werden und kann dann berechtigt sein, im Namen dieses Benutzers auf Unternehmensdaten und E-Mails zuzugreifen.  
+        -   **Eingabeaufforderung für Benutzeraffinität:** Das Gerät muss während der ersten Setup einem Benutzer zugewiesen werden und kann dann berechtigt sein, im Namen dieses Benutzers auf Unternehmensdaten und E-Mails zuzugreifen.  
 
         -   **Keine Benutzeraffinität**: Das Gerät ist keinem Benutzer zugeordnet. Verwenden Sie diese Zuweisung für Geräte, die Aufgaben ohne den Zugriff auf lokale Benutzerdaten ausführen. Apps, die eine Benutzerzuweisung erfordern, funktionieren nicht.
 

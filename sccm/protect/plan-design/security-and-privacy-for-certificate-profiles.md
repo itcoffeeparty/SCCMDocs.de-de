@@ -2,26 +2,19 @@
 title: Sicherheit und Datenschutz für Zertifikatprofile
 titleSuffix: Configuration Manager
 description: Erfahren Sie mehr über bewährte Sicherheitsmethoden für die Verwaltung von Zertifikatprofilen für Benutzer und Geräte in System Center Configuration Manager.
-ms.custom: na
 ms.date: 12/28/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 3393db41-900a-44c5-b950-2d46a35a198c
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: Nbigman
-ms.author: nbigman
-manager: angrobe
-ms.openlocfilehash: e36df89f86afe95e922b7afa3bb1e6029b832b4d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: d5e9d10844a344ea56eaebb315c92675a760c983
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-certificate-profiles-in-system-center-configuration-manager"></a>Sicherheit und Datenschutz für Zertifikatprofile in System Center Configuration Manager
 
@@ -39,7 +32,7 @@ ms.lasthandoff: 10/12/2017
 |Fügen Sie den Zertifikatvorlagen nicht die Berechtigungen Lesen und Anmelden für Benutzer hinzu, oder konfigurieren Sie den Zertifikatregistrierungspunkt so, dass die Überprüfung von Zertifikatvorlagen übersprungen wird.|Obwohl Configuration Manager die zusätzliche Überprüfung unterstützt, wenn Sie die Sicherheitsberechtigungen zum Lesen und Registrieren für Benutzer hinzufügen, und Sie den Zertifikatregistrierungspunkt so konfigurieren können, dass die Überprüfung übersprungen wird, wenn keine Authentifizierung möglich ist, ist keine dieser Konfigurationen eine bewährte Sicherheitsmethode. Weitere Informationen finden Sie unter [Planen der Berechtigungen von Zertifikatvorlagen für Zertifikatprofile in System Center Configuration Manager](../../protect/plan-design/planning-for-certificate-template-permissions.md).|  
 
 ## <a name="privacy-information-for-certificate-profiles"></a>Informationen zum Datenschutz für Zertifikatprofile  
- Sie können Zertifikatprofile verwenden, um Zertifikate der Stammzertifizierungsstelle und Clientzertifikate bereitzustellen, und dann auswerten, ob die Geräte nach der Anwendung der Profile Kompatibilität erreichen. Der Verwaltungspunkt sendet Kompatibilitätsinformationen an den Standortserver, die dann von System Center Configuration Manager in der Standortdatenbank gespeichert werden. Zu den Kompatibilitätsinformationen zählen Zertifikateigenschaften wie Antragstellername und Fingerabdruck. Die Informationen werden verschlüsselt, wenn sie von Geräten an den Verwaltungspunkt gesendet werden, sie werden aber nicht in einem verschlüsselten Format in der Standortdatenbank gespeichert. Die Informationen verbleiben in der Datenbank, bis sie mit dem Standortwartungstask **Veraltete Konfigurationsverwaltungsdaten löschen** nach dem Standardintervall von 90 Tagen gelöscht werden. Sie können das Löschintervall konfigurieren. Die Kompatibilitätsinformationen werden nicht an Microsoft gesendet.  
+ Sie können Zertifikatprofile verwenden, um Zertifikate der Stammzertifizierungsstelle und Clientzertifikate bereitzustellen, und dann auswerten, ob die Geräte nach der Anwendung der Profile Konformität erreichen. Der Verwaltungspunkt sendet Kompatibilitätsinformationen an den Standortserver, die dann von System Center Configuration Manager in der Standortdatenbank gespeichert werden. Zu den Kompatibilitätsinformationen zählen Zertifikateigenschaften wie Antragstellername und Fingerabdruck. Die Informationen werden verschlüsselt, wenn sie von Geräten an den Verwaltungspunkt gesendet werden, sie werden aber nicht in einem verschlüsselten Format in der Standortdatenbank gespeichert. Die Informationen verbleiben in der Datenbank, bis sie mit dem Standortwartungstask **Veraltete Konfigurationsverwaltungsdaten löschen** nach dem Standardintervall von 90 Tagen gelöscht werden. Sie können das Löschintervall konfigurieren. Die Kompatibilitätsinformationen werden nicht an Microsoft gesendet.  
 
  In Zertifikatprofilen werden Informationen verwendet, die von Configuration Manager mithilfe der Ermittlung gesammelt werden. Weitere Informationen zu Datenschutzinformationen zur Ermittlung finden Sie im Abschnitt **Datenschutzinformationen zur Ermittlung** unter [Sicherheit und Datenschutz für System Center Configuration Manager](../../core/plan-design/security/security-and-privacy.md).  
 

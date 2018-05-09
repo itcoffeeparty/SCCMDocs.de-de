@@ -1,27 +1,20 @@
 ---
 title: Verwenden von Asset Intelligence
 titleSuffix: Configuration Manager
-description: "Führen Sie allgemeine Asset Intelligence-Aufgaben in System Center Configuration Manager aus."
-ms.custom: na
+description: Führen Sie allgemeine Asset Intelligence-Aufgaben in System Center Configuration Manager aus.
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: e8159bd9-5c2b-4d25-82f9-78fcfd732ba9
-caps.latest.revision: 
-caps.handback.revision: 
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 7838f087c18a2cfad6ff487ff987e638906faf6a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7d12fb7f3c7e14df57ec23074de23bfcf53e6c4b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-use-asset-intelligence-in-system-center-configuration-manager"></a>So verwenden Sie Asset Intelligence in System Center Configuration Manager
 
@@ -267,7 +260,7 @@ Dieses Thema enthält Informationen zum Verwalten typischer Asset Intelligence-T
 6.  Wenn Sie Kategorisierungsinformationen für Software wiederherstellen, die sich im Asset Intelligence-Katalog befindet, ändert sich der Überprüfungszustand von **Benutzerdefiniert** in **Überprüft**. Wenn Sie Software wiederherstellen, die sich nicht im Katalog befindet, ändert sich der Überprüfungszustand von **Benutzerdefiniert** in **Nicht kategorisiert**.  
 
 ##  <a name="BKMK_RequestCatalogUpdate"></a> Anfordern eines Katalogupdates für nicht kategorisierte Softwaretitel  
- Informationen zu nicht kategorisierten Softwaretiteln können zu Recherche- und Kategorisierungszwecken an System Center Online übermittelt werden. Nach der Übermittlung eines nicht kategorisierten Softwaretitels identifizieren und kategorisieren Entwicklungsmitarbeiter den Softwaretitel und stellen die Informationen zur Softwaretitelkategorisierung dann über System Center Online für alle Kunden zur Verfügung. Voraussetzung ist allerdings, dass mindestens vier Kategorisierungsanforderungen von Kunden für diesen Softwaretitel vorliegen. Microsoft verleiht den Softwaretiteln die höchste Priorität, deren Kategorisierung am häufigsten angefordert wurde. Benutzerdefinierte Software und Branchenanwendungen erhalten i. d. R. keine Kategorie. Es empfiehlt sich daher, diese Softwaretitel nicht zur Kategorisierung an Microsoft zu senden.  
+ Informationen zu nicht kategorisierten Softwaretiteln können zu Recherche- und Kategorisierungszwecken an System Center Online übermittelt werden. Nach der Übermittlung eines nicht kategorisierten Softwaretitels identifizieren und kategorisieren Entwicklungsmitarbeiter den Softwaretitel und stellen die Informationen zur Softwaretitelkategorisierung dann über System Center Online für alle Kunden zur Verfügung. Voraussetzung ist allerdings, dass mindestens vier Kategorisierungsanforderungen von Kunden für diesen Softwaretitel vorliegen. Microsoft verleiht den Softwaretiteln die höchste Priorität, deren Kategorisierung am häufigsten angefordert wurde. Benutzerdefinierte Software und Branchenanwendungen erhalten i. d. R. keine Kategorie. Es empfiehlt sich daher, diese Softwaretitel nicht zur Kategorisierung an Microsoft zu senden.  
 
  Wenn Informationen zu nicht kategorisierten Softwaretiteln an System Center Online übermittelt werden, gelten die folgenden Bedingungen.  
 

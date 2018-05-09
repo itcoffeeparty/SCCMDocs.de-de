@@ -1,28 +1,20 @@
-﻿---
+---
 title: VPN-Profile
 titleSuffix: Configuration Manager
 description: So verwenden Sie VPN-Profile in System Center Configuration Manager, um Benutzern in Ihrer Organisation Einstellungen für VPN bereitzustellen.
-ms.custom: na
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: c0f094f1-852e-4606-91db-97846d8f0772
-caps.latest.revision: 6
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d30e7cc834f1693f2cbcf2db840d650421062a19
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: 7a9095ea946e024dcd633aa6457b21fe71988c85
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
-
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vpn-profiles-in-system-center-configuration-manager"></a>VPN-Profile in System Center Configuration Manager
 
@@ -36,7 +28,7 @@ Verwenden Sie VPN-Profile in Configuration Manager, um Benutzern in Ihrer Organi
  Wenn Sie ein VPN-Profil erstellen, können Sie eine Vielzahl von Sicherheitseinstellungen einrichten. Zu diesen Einstellungen gehören Zertifikate für die Serverüberprüfung und die Clientauthentifizierung, die mithilfe von Configuration Manager-Zertifikatprofilen bereitgestellt wurden. Weitere Informationen finden Sie unter [Zertifikatprofile](introduction-to-certificate-profiles.md).  
 
 > [!Note]  
-> Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen dieses Feature aktivieren, bevor Sie es verwenden können. Weitere Informationen finden Sie unter [Aktivieren optionaler Features von Updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+> Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen dieses Feature aktivieren, bevor Sie es verwenden. Weitere Informationen finden Sie unter [Enable optional features from updates (Aktivieren optionaler Features von Updates)](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
 
  Unter [VPN profiles on mobile devices (VPN-Profile auf mobilen Geräten)](/sccm/mdm/deploy-use/create-vpn-profiles) finden Sie Informationen dazu, wie Sie Geräte überprüfen, die Sie unter Verwendung von Configuration Manager mit Microsoft Intune konfigurieren können.  
@@ -63,4 +55,3 @@ Verwenden Sie VPN-Profile in Configuration Manager, um Benutzern in Ihrer Organi
 -   [Prerequisites for VPN profiles in System Center Configuration Manager (Voraussetzungen für VPN-Profile in System Center Configuration Manager)](../plan-design/prerequisites-for-wifi-vpn-profiles.md)  
 
 -   [Security and privacy for VPN profiles in System Center Configuration Manager (Sicherheit und Datenschutz für VPN-Profile in System Center Configuration Manager)](../plan-design/security-and-privacy-for-wifi-vpn-profiles.md)
-

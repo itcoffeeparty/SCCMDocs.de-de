@@ -1,25 +1,20 @@
 ---
 title: Erstellen von Android-Anwendungen
 titleSuffix: Configuration Manager
-description: "Was Sie beim Erstellen und Bereitstellen von Apps für Android-Geräte berücksichtigen müssen."
-ms.custom: na
+description: Was Sie beim Erstellen und Bereitstellen von Apps für Android-Geräte berücksichtigen müssen.
 ms.date: 07/31/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e025c48c-1514-4ab7-836c-e0635aaa993a
-caps.latest.revision: "6"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: c512cba550e405c866204af981aba75639665de2
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4c09216744b33412bf1840c20aad659c59b0f52b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-android-applications-with-system-center-configuration-manager"></a>Erstellen von Android-Apps mit System Center Configuration Manager
 
@@ -55,7 +50,7 @@ Als ein Configuration Manager-Administrator können Sie Apps auch auf der [Play 
 
 Gehen Sie wie folgt vor, um Apps im Play for Work-Store zu genehmigen, diese mit der Configuration Manager-Konsole zu synchronisieren und sie anschließend in verwalteten Android for Work-Geräten bereitzustellen. Um Apps in den Arbeitsprofilen von Benutzern bereitzustellen, müssen Sie die Apps zunächst in Play for Work genehmigen und anschließend mit der Configuration Manager-Konsole synchronisieren.
 
-1. Öffnen Sie einen Browser und navigieren Sie zu https://play.google.com/work.
+1. Öffnen Sie einen Browser, und navigieren Sie zu https://play.google.com/work.
 2. Melden Sie sich mit dem Google-Administratorkonto an, das Sie an Ihren Intune-Mandanten gebunden haben.
 3. Suchen Sie nach Apps, die Sie in Ihrer Umgebung bereitstellen möchten, und wählen Sie jeweils **Approve** (Genehmigen), um die App für Android for Work zur Verfügung zu stellen.
 4. Gehen Sie in der Configuration Manager-Konsole zu **Administrator** > **Übersicht** > **Cloud Services** > **Android for Work**, und klicken Sie dann auf **Synchronisierung**.

@@ -1,26 +1,21 @@
 ---
-title: "Checkliste für Version 1602"
+title: Checkliste für Version 1602
 titleSuffix: Configuration Manager
-description: "Erhalten Sie mehr über Aktionen, die Sie durchführen müssen, bevor Sie eine Aktualisierung von System Center Configuration Manager Version 1511 auf Version 1602 ausführen."
-ms.custom: na
+description: Erhalten Sie mehr über Aktionen, die Sie durchführen müssen, bevor Sie eine Aktualisierung von System Center Configuration Manager Version 1511 auf Version 1602 ausführen.
 ms.date: 2/7/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b63ef197-01f0-4894-b929-5ef8403c5195
-caps.latest.revision: "13"
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: deef7ed1bbfef5c388d9fe00fbfc5c839e108527
-ms.sourcegitcommit: 2867fd119256ec670fc5ae65cdc8a80d39f9b4d4
+ms.openlocfilehash: 466ae69feb94ae70cf1e75f92e72e74f163a8368
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="checklist-for-installing-update-1602-for-system-center-configuration-manager"></a>Checkliste für die Installation von Update 1602 für System Center Configuration Manager
 

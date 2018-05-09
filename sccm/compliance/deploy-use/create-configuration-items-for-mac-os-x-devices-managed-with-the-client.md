@@ -1,26 +1,20 @@
 ---
-title: "Erstellen von Konfigurationselementen für von Clients verwaltete Mac-Geräte "
+title: 'Erstellen von Konfigurationselementen für von Clients verwaltete Mac-Geräte '
 titleSuffix: Configuration Manager
-description: "Verwenden Sie das System Center Configuration Manager-Konfigurationselement für Max OS X, um Einstellungen für Mac OS X-Geräte zu verwalten."
-ms.custom: na
+description: Verwenden Sie das System Center Configuration Manager-Konfigurationselement für Max OS X, um Einstellungen für Mac OS X-Geräte zu verwalten.
 ms.date: 03/28/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 722d5bf5-bedc-4dfc-b324-6eeb773874e9
-caps.latest.revision: "8"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 1947bc8907d00a2f6d78acee5f563fa9b7f6cf78
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: e6358c8e84d12c37418d7a1af459e775783efaa2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-for-mac-os-x-devices-managed-with-the-system-center-configuration-manager-client"></a>Erstellen von Konfigurationselementen für Mac OS X-Geräte, die mit dem System Center Configuration Manager-Client verwaltet werden
 Verwenden Sie das System Center Configuration Manager-Konfigurationselement **Mac OS X (benutzerdefiniert)**, um Einstellungen für Mac OS X-Geräte zu verwalten, die mit dem Configuration Manager-Client verwaltet werden.  
@@ -37,7 +31,7 @@ Verwenden Sie das System Center Configuration Manager-Konfigurationselement **Ma
   
 4.  Geben Sie auf der Seite **Allgemein** des **Assistenten zum Erstellen von Konfigurationselementen**einen Namen und optional eine Beschreibung für das Konfigurationselement an.  
   
-5.  Wählen Sie unter **Typ des zu erstellenden Konfigurationselements angeben**den Typ **Mac OS X (benutzerdefiniert)**aus.  
+5.  Wählen Sie unter **Typ des zu erstellenden Konfigurationselements angeben**den Typ **Mac OS X (benutzerdefiniert)** aus.  
   
 6.  Klicken Sie auf **Kategorien**, wenn Sie Kategorien erstellen und zuweisen, um das Durchsuchen und Filtern von Konfigurationselementen in der Configuration Manager-Konsole zu erleichtern.  
   
@@ -62,7 +56,7 @@ Verwenden Sie das System Center Configuration Manager-Konfigurationselement **Ma
   
     -   **Skript** -  
   
-        -   **Ermittlungsskript** : Klicken Sie auf **Skript hinzufügen**, und geben Sie dann ein Shellskript ein, um Einstellungen auf dem Macintosh-Computer auf Kompatibilität zu untersuchen. Verwenden Sie den Befehl **echo** im Shellskript, um Werte zur Kompatibilität an Configuration Manager zurückzugeben. Configuration Manager verwendet die in **STDOUT** zurückgegebenen Ergebnisse, um die Kompatibilität auszuwerten.  
+        -   **Ermittlungsskript** – klicken Sie auf **Skript hinzufügen**, und geben Sie dann ein Shell-Skript, um Einstellungen auf dem Macintosh-Computer auf Konformität zu bewerten. Verwenden Sie den Befehl **echo** im Shellskript, um Werte zur Kompatibilität an Configuration Manager zurückzugeben. Configuration Manager verwendet die in **STDOUT** zurückgegebenen Ergebnisse, um die Kompatibilität auszuwerten.  
   
             > [!IMPORTANT]  
             >  Fügen Sie dem Ermittlungsskript nicht den Befehl **Neu starten** hinzu. Da das Ermittlungsskript bei jedem Neustart des Clients ausgeführt wird, würde dies dazu führen, dass der Macintosh-Computer immer wieder neu gestartet wird.  
@@ -149,7 +143,7 @@ Verwenden Sie das System Center Configuration Manager-Konfigurationselement **Ma
   
             -   **Diese Einstellung darf auf Clientgeräten nicht vorhanden sein**  
   
-        -   **Schweregrad der Nichtkompatibilität für Berichte:** Geben Sie den Schweregrad, der gemeldet wird, wenn es sich bei dieser Kompatibilitätsregel ein Fehler auftritt. Die folgenden Schweregrade sind verfügbar:  
+        -   **Schweregrad der Nichtkonformität für Berichte:** Geben Sie den Schweregrad, der gemeldet wird, wenn es sich bei dieser Konformitätsregel ein Fehler auftritt. Die folgenden Schweregrade sind verfügbar:  
   
             -   **Keine**: Von Computern, bei denen bei dieser Konformitätsregel ein Fehler auftritt, wird kein Fehlerschweregrad für Configuration Manager-Berichte gemeldet.  
   

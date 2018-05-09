@@ -1,26 +1,20 @@
 ---
-title: "Erstellen von Konfigurationselementen für von Clients verwaltete Windows-Computer "
+title: 'Erstellen von Konfigurationselementen für von Clients verwaltete Windows-Computer '
 titleSuffix: Configuration Manager
-description: "Verwalten Sie Windows-Computer und -Server mithilfe benutzerdefinierter Konfigurationselemente für Windows-Desktop- und -Servercomputer."
-ms.custom: na
+description: Verwalten Sie Windows-Computer und -Server mithilfe benutzerdefinierter Konfigurationselemente für Windows-Desktop- und -Servercomputer.
 ms.date: 11/18/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 1eb2fcaf-acac-4388-9b31-6cccafacaabe
-caps.latest.revision: "9"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: ed3aa1ce9e21c7c486cc40deb804a8687a1cd4f2
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b2b2af6c022d854a6c6d623e3901abac70d42c7a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-system-center-configuration-manager-client"></a>Erstellen benutzerdefinierter Konfigurationselemente für Windows-Desktop- und -Servercomputer, die mit dem System Center Configuration Manager-Client verwaltet werden
 
@@ -37,7 +31,7 @@ Verwenden Sie das System Center Configuration Manager-Konfigurationselement des 
 
 4.  Geben Sie auf der Seite **Allgemein** des **Assistenten zum Erstellen von Konfigurationselementen**einen Namen und optional eine Beschreibung für das Konfigurationselement an.  
 
-5.  Wählen Sie unter **Typ des zu erstellenden Konfigurationselements angeben**den Typ **Windows-Desktops und -Server (benutzerdefiniert)**aus.  
+5.  Wählen Sie unter **Typ des zu erstellenden Konfigurationselements angeben**den Typ **Windows-Desktops und -Server (benutzerdefiniert)** aus.  
 
     > [!TIP]  
     >  Wenn Sie Einstellungen für Erkennungsmethoden bereitstellen möchten, mit denen überprüft wird, ob eine Anwendung vorhanden ist, wählen Sie **Dieses Konfigurationselement enthält Anwendungseinstellungen**aus.  
@@ -50,7 +44,7 @@ Verwenden Sie das System Center Configuration Manager-Konfigurationselement des 
 > [!NOTE]  
 >  Gilt nur, wenn Sie ausgewählt **dieses Konfigurationselement enthält Anwendungseinstellungen** auf der **Allgemeine** Seite des Assistenten.  
 
- Eine Erkennungsmethode in Configuration Manager enthält Regeln zur Erkennung, ob eine Anwendung auf einem Computer installiert ist. Diese Erkennung erfolgt, bevor die Kompatibilität des Konfigurationselements bewertet wird. Um zu erkennen, ob eine Anwendung installiert ist, können Sie die Anwesenheit einer Windows Installer-Datei für die Anwendung prüfen, ein benutzerdefiniertes Skript verwenden oder **Immer annehmen, dass die Anwendung installiert ist** auswählen, um die Kompatibilität des Konfigurationselements unabhängig davon zu bewerten, ob die Anwendung installiert ist.  
+ Eine Erkennungsmethode in Configuration Manager enthält Regeln zur Erkennung, ob eine Anwendung auf einem Computer installiert ist. Diese Erkennung erfolgt, bevor die Kompatibilität des Konfigurationselements bewertet wird. Um zu erkennen, ob eine Anwendung installiert ist, können Sie die Anwesenheit einer Windows Installer-Datei für die Anwendung prüfen, ein benutzerdefiniertes Skript verwenden oder **Immer annehmen, dass die Anwendung installiert ist** auswählen, um die Konformität des Konfigurationselements unabhängig davon zu bewerten, ob die Anwendung installiert ist.  
 
  Verwenden Sie diese Verfahren zum Konfigurieren von Erkennungsmethoden in System Center Configuration Manager.  
 
@@ -101,7 +95,7 @@ Verwenden Sie das System Center Configuration Manager-Konfigurationselement des 
 
         -   **Active Directory-Abfrage**  
 
-             **LDAP-Präfix** : Geben Sie ein gültiges Präfix für die Active Directory-Domänendienste-Abfrage an, mit der die Kompatibilität auf Clientcomputern bewertet wird. Verwenden Sie entweder **LDAP: / /** für einen oder **GC: / /** globalen Katalog gesucht werden soll.  
+             **LDAP-Präfix** : Geben Sie ein gültiges Präfix für die Active Directory-Domänendienste-Abfrage an, mit der die Konformität auf Clientcomputern bewertet wird. Verwenden Sie entweder **LDAP: / /** für einen oder **GC: / /** globalen Katalog gesucht werden soll.  
 
              **Distinguished Name (DN)** – Geben Sie den definierten Namen des Active Directory-Domänendienste-Objekts, das auf Clientcomputern auf Kompatibilität bewertet wird.  
 
@@ -235,9 +229,9 @@ Verwenden Sie das System Center Configuration Manager-Konfigurationselement des 
 
             -   **Unterordner einschließen** – Aktivieren Sie diese Option, wenn auch Unterordner unter dem angegebenen Pfad durchsucht werden sollen.  
 
-            -   **Diese Datei ist mit einer 64-Bit-Anwendung verknüpft** – Geben Sie an, ob der Speicherort der 64-Bit-Systemdatei (*%windir%*\System32) zusätzlich zum Speicherort der 32-Bit-Systemdatei (*%windir%*\Syswow64) auf Configuration Manager-Clients durchsucht werden soll, auf denen eine 64-Bit-Version von Windows ausgeführt wird.  
+            -   **Diese Datei ist mit einer 64-Bit-Anwendung verknüpft** – Geben Sie an, ob der Speicherort der 64-Bit-Systemdatei (*%windir%* \System32) zusätzlich zum Speicherort der 32-Bit-Systemdatei (*%windir%* \Syswow64) auf Configuration Manager-Clients durchsucht werden soll, auf denen eine 64-Bit-Version von Windows ausgeführt wird.  
 
-            -   **XPath-Abfrage** – Geben Sie eine gültige vollständige XML Path Language (XPath)-Abfrage, die zur Bewertung der Kompatibilität auf Clientcomputern verwendet wird.  
+            -   **XPath-Abfrage** – Geben Sie eine gültige vollständige XML Path Language (XPath)-Abfrage, die zur Bewertung der Konformität auf Clientcomputern verwendet wird.  
 
             -   **Namespaces** – öffnet das Dialogfeld **XML-Namespaces** zum Identifizieren von Namespaces und Präfixen, die bei der XPath-Abfrage verwendet werden sollen.  
 
@@ -260,9 +254,9 @@ Verwenden Sie das System Center Configuration Manager-Konfigurationselement des 
 ##  <a name="configure-compliance-rules"></a>Konfigurieren von Kompatibilitätsregeln  
  Gehen Sie wie folgt vor, um Kompatibilitätsregeln für das Konfigurationselement zu konfigurieren.  
 
- Mit Kompatibilitätsregeln werden die Bedingungen angegeben, mit denen die Kompatibilität eines Konfigurationselements definiert wird. Damit eine Einstellung auf Kompatibilität bewertet werden kann, muss sie über mindestens eine Kompatibilitätsregel verfügen. WMI, Registrierung und skripteinstellungen können Sie die Werte zu beheben, die gefunden werden, nicht kompatibel ist. Sie können neue Regeln erstellen oder suchen Sie eine vorhandene Einstellung innerhalb eines beliebigen Konfigurationselements auf Regeln aktivieren.  
+ Mit Konformitätsregeln werden die Bedingungen angegeben, mit denen die Konformität eines Konfigurationselements definiert wird. Damit eine Einstellung auf Kompatibilität bewertet werden kann, muss sie über mindestens eine Kompatibilitätsregel verfügen. WMI, Registrierung und skripteinstellungen können Sie die Werte zu beheben, die gefunden werden, nicht kompatibel ist. Sie können neue Regeln erstellen oder suchen Sie eine vorhandene Einstellung innerhalb eines beliebigen Konfigurationselements auf Regeln aktivieren.  
 
-### <a name="to-create-a-compliance-rule"></a>So erstellen Sie eine Kompatibilitätsregel  
+### <a name="to-create-a-compliance-rule"></a>So erstellen Sie eine Konformitätsregel  
 
 1.  Klicken Sie im **Assistenten zum Erstellen von Konfigurationselementen** auf der Seite **Kompatibilitätsregeln**auf **Neu**.  
 
@@ -352,7 +346,7 @@ Verwenden Sie das System Center Configuration Manager-Konfigurationselement des 
 ##  <a name="specify-supported-platforms"></a>Angeben unterstützter Plattformen  
  Unterstützte Plattformen sind die Betriebssysteme, auf denen die Kompatibilität von Konfigurationselementen bewertet wird.  
 
-Wählen Sie aus der Liste auf der Seite **Unterstützte Plattformen** des **Assistenten zum Erstellen von Konfigurationselementen**die Windows-Versionen aus, auf denen die Kompatibilität des Konfigurationselements bewertet werden soll, oder klicken Sie auf **Alle auswählen**.  
+Wählen Sie aus der Liste auf der Seite **Unterstützte Plattformen** des **Assistenten zum Erstellen von Konfigurationselementen**die Windows-Versionen aus, auf denen die Konformität des Konfigurationselements bewertet werden soll, oder klicken Sie auf **Alle auswählen**.  
 
 ## <a name="complete-the-wizard"></a>Abschließen des Assistenten  
  Überprüfen Sie auf der Seite **Zusammenfassung** des Assistenten die auszuführenden Aktionen, und schließen Sie dann den Assistenten ab. Das neue Konfigurationselement wird angezeigt, der **Konfigurationselemente** Knoten in der **Bestand und Kompatibilität** Arbeitsbereich.  

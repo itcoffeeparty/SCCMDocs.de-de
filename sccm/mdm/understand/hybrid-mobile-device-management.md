@@ -1,26 +1,20 @@
 ---
-title: "Hybride Verwaltung mobiler Geräte (MDM) mit Microsoft Intune"
+title: Hybride Verwaltung mobiler Geräte (MDM) mit Microsoft Intune
 titleSuffix: Configuration Manager
-description: "Enthält Informationen zur hybriden Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune."
-ms.custom: na
+description: Enthält Informationen zur hybriden Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
-caps.latest.revision: "34"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: da817ac299115c1151851d302c1935ad3f956bdf
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: c8651b5a82c4e3cb4e39fac53cc5bc3357df6e47
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hybrid-mobile-device-management-mdm-with-system-center-configuration-manager-and-microsoft-intune"></a>Hybride Verwaltung mobiler Geräte (Mobile Device Management, MDM) mit System Center Configuration Manager und Microsoft Intune
 
@@ -30,7 +24,7 @@ ms.lasthandoff: 10/12/2017
 Sie können iOS, Windows und Android-Geräte mit Configuration Manager und Microsoft Intune verwalten. Alle Verwaltungsaufgaben werden aus der Configuration Manager-Konsole heraus verarbeitet, in der Sie die restlichen Verwaltungstasks ausführen, die über das Internet nahtlos in den Microsoft Intune-Onlinedienst integriert sind.  Sie können Configuration Manager so verwenden, dass Benutzer auf sichere und verwaltete Weise auf Unternehmensressourcen auf ihren Geräten zugreifen können. Mithilfe der Geräteverwaltung schützen Sie Unternehmensdaten, und ermöglichen es den Benutzern gleichzeitig, ihre privaten oder im Besitz des Unternehmens befindlichen Geräte anzumelden, um auf Unternehmensdaten zuzugreifen. Verwaltungsfunktionen auf Geräten:
 
 -   Abkoppeln und Zurücksetzen von Geräten
--   Konfigurieren von Kompatibilitätseinstellungen wie Kennwörter, Sicherheit, Roaming, Verschlüsselung und Funkkommunikation
+-   Konfigurieren von Konformitätseinstellungen wie Kennwörter, Sicherheit, Roaming, Verschlüsselung und Funkkommunikation
 -   Bereitstellen von Branchen-Apps (line-of-business, LOB) auf Geräten
 -   Bereitstellen von Apps auf Geräten, die eine Verbindung mit Windows Store, Windows Phone Store, App Store oder Google Play herstellen
 -   Erfassen der Hardwareinventur

@@ -1,26 +1,20 @@
 ---
 title: Erstellen von Abfragen
 titleSuffix: Configuration Manager
-description: "Erfahren Sie, wie Sie in System Center Configuration Manager Abfragen erstellen und importieren. Enthält Beispiele für Abfragen und Tipps."
-ms.custom: na
+description: Erfahren Sie, wie Sie in System Center Configuration Manager Abfragen erstellen und importieren. Enthält Beispiele für Abfragen und Tipps.
 ms.date: 12/11/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
-caps.latest.revision: "5"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 32400ebcd834e3b98bf0f1ff6a1f6b41d8e12076
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 6ba7adf52ce084d640bf53aef32678576d5828f5
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-queries-in-system-center-configuration-manager"></a>Erstellen von Abfragen in System Center Configuration Manager
 

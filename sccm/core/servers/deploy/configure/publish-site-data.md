@@ -1,25 +1,20 @@
 ---
-title: "Veröffentlichen von Standortdaten"
+title: Veröffentlichen von Standortdaten
 titleSuffix: Configuration Manager
-description: "Hier erfahren Sie, wie Configuration Manager-Standorte in Active Directory Domain Services veröffentlicht werden."
-ms.custom: na
+description: Hier erfahren Sie, wie Configuration Manager-Standorte in Active Directory Domain Services veröffentlicht werden.
 ms.date: 2/7/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 17cf034f-eaff-43ce-bc8e-917213c1db74
-caps.latest.revision: "8"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 7cb32ff237ac6dfb4f656d7c6bfd06af9e7fd0e2
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b7fa19ed6dbdcd745b911e235c95166a70c00f23
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="publish-site-data-for-system-center-configuration-manager"></a>Veröffentlichen von Standortdaten für System Center Configuration Manager
 

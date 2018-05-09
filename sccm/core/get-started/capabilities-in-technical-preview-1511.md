@@ -1,32 +1,27 @@
 ---
 title: Funktionen in Technical Preview 1511
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr über Funktionen, die in System Center Configuration Manager Technical Preview 1511 zur Verfügung stehen."
-ms.custom: na
+description: Erfahren Sie mehr über Funktionen, die in System Center Configuration Manager Technical Preview 1511 zur Verfügung stehen.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 69473706-21b3-498b-a67e-670fdc988f0d
-caps.latest.revision: "5"
-author: erikje
-ms.author: erikje
-manager: angrobe
+author: aczechowski
 robots: noindex,nofollow
-ms.openlocfilehash: e12e67a3b0d182a8e3abd045c89e6b2bf3183054
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 8a805d6b7075d61b0e7669200670ac8434eccdf5
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>Funktionen in System Center Configuration Manager Technical Preview 1511
 
 *Gilt für: System Center Configuration Manager (Technical Preview)*
 
-In diesem Artikel werden die Funktionen erläutert, die in System Center Configuration Manager Technical Preview 1511 verfügbar sind. Bei dieser Version handelt es sich um eine Basisinstallation für die Technical Preview, die Sie verwenden können, um einen neuen Technical Preview-Standort zu installieren oder um ein Upgrade von einer früheren Version der Technical Preview durchzuführen.   Bevor Sie diese Version der Technical Preview installieren, lesen Sie das einführende Thema [Technical Preview für System Center Configuration Manager](/sccm/core/get-started/technical-preview), um sich mit den allgemeinen Anforderungen und Einschränkungen bei der Verwendung einer Technical Preview vertraut zu machen, und zu erfahren, wie Sie Updates zwischen Versionen durchführen und Feedback zu den Features in einer Technical Preview geben können.  
+In diesem Artikel werden die Funktionen erläutert, die in System Center Configuration Manager Technical Preview 1511 verfügbar sind. Bei dieser Version handelt es sich um eine Basisinstallation für die Technical Preview, die Sie verwenden können, um einen neuen Technical Preview-Standort zu installieren oder um ein Upgrade von einer früheren Version der Technical Preview durchzuführen.   Bevor Sie diese Version der Technical Preview installieren, lesen Sie das einführende Thema [Technical Preview für System Center Configuration Manager](/sccm/core/get-started/technical-preview), um sich mit den allgemeinen Anforderungen und Einschränkungen bei der Verwendung einer Technical Preview vertraut zu machen, und zu erfahren, wie Sie Updates für Versionen durchführen und Feedback zu den Features in einer Technical Preview geben können.  
 
 Im Folgenden werden neue Funktionen aufgelistet, die Sie mit dieser Version ausprobieren können.  
 
@@ -52,7 +47,7 @@ Für Computer, die über WUfB verbunden sind, kann Configuration Manager keine M
 
 4.  Erstellen Sie eine Client-Agent-Einstellung, um den Softwareupdate-Workflow zu deaktivieren, und stellen Sie die Einstellung in der Sammlung von Computern bereit, die direkt mit WUfB verbunden sind.  
 
-5.  Die Computer, die über WUfB verwaltet werden, zeigen als Kompatibilitätsstatus **Unbekannt** an und werden im Gesamtprozentsatz der Kompatibilität nicht berücksichtigt.  
+5.  Die Computer, die über WUfB verwaltet werden, zeigen als Konformitätsstatus **Unbekannt** an und werden im Gesamtprozentsatz der Konformität nicht berücksichtigt.  
 
 ##  <a name="BKMK_Office365ProPlus"></a> Verwalten von Office 365 ProPlus-Clientupdates über den System Center Configuration Manager  
  Configuration Manager verfügt jetzt über die Möglichkeit zum Verwalten von Office 365-Desktopclientupdates mithilfe des Softwareupdateverwaltungs-Workflows von Configuration Manager.    

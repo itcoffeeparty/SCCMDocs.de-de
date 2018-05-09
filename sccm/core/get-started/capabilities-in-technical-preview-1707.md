@@ -1,24 +1,20 @@
 ---
 title: Technical Preview 1707
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr über die Funktionen, die mit der Technical Preview-Version 1707 für System Center Configuration Manager zur Verfügung stehen."
-ms.custom: na
+description: Erfahren Sie mehr über die Funktionen, die mit der Technical Preview-Version 1707 für System Center Configuration Manager zur Verfügung stehen.
 ms.date: 08/14/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cb405ba0-8792-4ab7-988b-2f835f3a9550
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: b7823ad6dc4c93eb2df935d46ac8479a0369abc2
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 375c743e1094f3b3f52090ae520ee9d8e86acbe0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1707-for-system-center-configuration-manager"></a>Funktionen in der Technical Preview-Version 1707 für System Center Configuration Manager
 
@@ -44,7 +40,7 @@ In diesem Artikel werden die Funktionen erläutert, die in der Technical Preview
 
 
 
-**Im Folgenden werden neue Funktionen aufgelistet, die Sie mit dieser Version ausprobieren können.**  
+**Im Folgenden werden neue Features aufgelistet, die Sie mit dieser Version ausprobieren können.**  
 
 <!--  Rough Section Template
 ##  FEATURE

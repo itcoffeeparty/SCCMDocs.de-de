@@ -1,26 +1,20 @@
 ---
-title: "Ermitteln von Geräte- und Benutzerressourcen"
+title: Ermitteln von Geräte- und Benutzerressourcen
 titleSuffix: Configuration Manager
-description: "Lesen Sie eine Übersicht über den Ermittlungsprozess und die Ermittlung von Datensätzen."
-ms.custom: na
+description: Lesen Sie eine Übersicht über den Ermittlungsprozess und die Ermittlung von Datensätzen.
 ms.date: 2/8/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 30844519-ce14-456f-bfb8-4318b578e9f6
-caps.latest.revision: "20"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: b380df38c4e08a04691a0bca9d46580fedf7b78a
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7d43415ce9517843490c815f7c9f2f3490e87674
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="run-discovery-for-system-center-configuration-manager"></a>Ausführen der Ermittlung für System Center Configuration Manager
 
@@ -35,7 +29,7 @@ Zum Bestimmen von Geräte- und Benutzerressourcen, die Sie verwalten können, ve
 
 -   Active Directory-Gruppenermittlung  
 
--   Active Directory-Systemermittlung  
+-   Active Directory-Systemermittlung  
 
 -   Active Directory-Benutzerermittlung  
 
@@ -56,7 +50,7 @@ Zum Bestimmen von Geräte- und Benutzerressourcen, die Sie verwalten können, ve
 
  Die der Standortdatenbank hinzugefügten Ermittlungsinformationen werden anschließend an jeden Standort in der Hierarchie repliziert, unabhängig davon, wo sie ermittelt oder verarbeitet wurden. Während Sie an verschiedenen Standorten unterschiedliche Zeitpläne und Einstellungen für Ermittlungsmethoden einrichten können, führen Sie eine bestimmte Ermittlungsmethode möglicherweise nur an einem einzigen Standort aus. Dies verringert die Nutzung der Netzwerkbandbreite durch doppelte Ermittlungsaktionen und reduziert die Verarbeitung redundanter Ermittlungsdaten an mehreren Standorten.  
 
- Anhand von Ermittlungsdaten können Sie benutzerdefinierte Sammlungen und Abfragen erstellen, mit denen Ressourcen für Verwaltungsaufgaben logisch gruppiert werden. Beispiel:  
+ Anhand von Ermittlungsdaten können Sie benutzerdefinierte Sammlungen und Abfragen erstellen, mit denen Ressourcen für Verwaltungsaufgaben logisch gruppiert werden. Zum Beispiel:  
 
 -   Pushübertragung von Clientinstallationen oder Upgrades.  
 

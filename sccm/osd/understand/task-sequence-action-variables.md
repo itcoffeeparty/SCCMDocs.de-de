@@ -1,27 +1,20 @@
 ---
 title: Tasksequenz-Aktionsvariablen
 titleSuffix: Configuration Manager
-description: "Verwenden Sie Sequenzaktionsvariablen, z.B. Variablen zur Netzwerkeinstellung, um Konfigurationseinstellungen für einen einzelnen Schritt in einer Configuration Manager-Tasksequenz anzugeben."
-ms.custom: na
+description: Verwenden Sie Sequenzaktionsvariablen, z.B. Variablen zur Netzwerkeinstellung, um Konfigurationseinstellungen für einen einzelnen Schritt in einer Configuration Manager-Tasksequenz anzugeben.
 ms.date: 02/09/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: e2269031-0977-4f01-a274-420e00630575
-caps.latest.revision: 
-caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2928ecb254d08e4ed08c5e79b55e210ce25dcb61
-ms.sourcegitcommit: fbde417e3c3002898bd216a7e110e725ae269893
+ms.openlocfilehash: 7f66203e335524fa922ec1b6ab3dd4dc5fb917b0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="task-sequence-action-variables-in-system-center-configuration-manager"></a>Tasksequenz-Aktionsvariablen in System Center Configuration Manager
 
@@ -76,8 +69,8 @@ Weitere Informationen finden Sie unter [Treiberpaket anwenden](task-sequence-ste
 
 |Name der Aktionsvariablen|Beschreibung|  
 |--------------------------|-----------------|  
-|OSDAdapter<br /><br /> (Eingabe)|Bei dieser Tasksequenzvariablen handelt es sich um die Arrayvariable. Die einzelnen Elemente im Array stellen die Einstellungen für einen einzelnen Netzwerkadapter im Computer dar. Greifen Sie auf die Einstellungen für den jeweiligen Adapter zu, indem Sie den Namen der Arrayvariablen mit dem nullbasierten Netzwerkadapterindex und dem Eigenschaftennamen kombinieren.<br /><br />Wenn in diesem Schritt mehrere Netzwerkadapter konfiguriert werden, werden die Eigenschaften für den zweiten Netzwerkadapter mithilfe des Indexes im Variablennamen definiert. Beispielsweise OSDAdapter1EnableDHCP, OSDAdapter1IPAddressList, OSDAdapter1DNSDomain, OSDAdapter1WINSServerList und OSDAdapter1EnableWINS.<br /><br />Verwenden Sie beispielsweise die folgenden Variablennamen, wenn Sie die Eigenschaften des ersten Netzwerkadapters für diesen Tasksequenzschritt definieren, um Folgendes zu konfigurieren:<br /><br /> <ul><li>**OSDAdapter0EnableDHCP**: **true** aktiviert Dynamic Host Configuration Protocol (DHCP) für den Adapter.<br />    Diese Einstellung ist erforderlich. Mögliche Werte: **true** oder **false**.</li><li>**OSDAdapter0IPAddressList**: durch Trennzeichen getrennte Liste der IP-Adressen für den Adapter; diese Eigenschaft wird ignoriert, es sei denn, **EnableDHCP** ist auf **false** festgelegt.<br />    Diese Einstellung ist erforderlich.</li><li>**OSDAdapter0SubnetMask**: durch Trennzeichen getrennte Liste der Subnetzmasken; diese Eigenschaft wird ignoriert, es sei denn, **EnableDHCP** ist auf **false** festgelegt.<br />    Diese Einstellung ist erforderlich.</li><li>**OSDAdapter0Gateways**: durch Trennzeichen getrennte Liste der IT-Gatewayadressen; diese Eigenschaft wird ignoriert, es sei denn, **EnableDHCP** ist auf **false** festgelegt.<br />    Diese Einstellung ist erforderlich.</li><li>**OSDAdapter0DNSDomain**: DNS-Domäne (Domain Name System) für den Adapter.</li><li>**OSDAdapter0DNSServerList**: durch Trennzeichen getrennte Liste der DNS-Server für den Adapter.<br />    Diese Einstellung ist erforderlich.</li><li>**OSDAdapter0EnableDNSRegistration**: **true** registriert die IP-Adresse für den Adapter in DNS.</li><li>**OSDAdapter0EnableFullDNSRegistration**: **true** registriert die IP-Adresse für den Adapter unter dem vollständigen DNS-Namen des Computers in DNS.</li><li>**OSDAdapter0EnableIPProtocolFiltering**: **true** aktiviert die IP-Protokollfilterung für den Adapter.</li><li>**OSDAdapter0IPProtocolFilterList**: durch Trennzeichen getrennte Liste der Protokolle, die über IP ausgeführt werden dürfen; diese Eigenschaft wird ignoriert, wenn **EnableIPProtocolFiltering** auf **false** festgelegt ist.</li><li>**OSDAdapter0EnableTCPFiltering**: **true** aktiviert TCP-Portfilterung für den Adapter.</li><li>**OSDAdapter0TCPFilterPortList**: durch Trennzeichen getrennte Liste der Ports, denen Zugriffsberechtigungen für TCP zu erteilen sind; diese Eigenschaft wird ignoriert, wenn **EnableTCPFiltering** auf **false** festgelegt ist.</li><li>**OSDAdapter0TcpipNetbiosOptions**: Optionen für NetBIOS über TCP/IP. Es sind folgende Werte möglich:<br /><br /> <ul><li>**0**: NetBIOS-Einstellungen von DHCP-Server verwenden</li><li>**1**: NetBIOS über TCP/IP aktivieren</li><li>**2**: NetBIOS über TCP/IP deaktivieren</li></ul></li><li>**OSDAdapter0EnableWINS**: **true** verwendet WINS für die Namensauflösung.</li><li>**OSDAdapter0WINSServerList**: durch Trennzeichen getrennte Liste der WINS-Server-IP-Adressen; diese Eigenschaft wird ignoriert, es sei denn, **EnableWINS** ist auf **true** festgelegt.</li><li>**OSDAdapter0MacAddress**: Mithilfe der MAC-Adresse werden Einstellungen des physischen Netzwerkadapters zugeordnet.</li><li>**OSDAdapter0Name**: Name der Netzwerkverbindung, der in der Systemsteuerung unter „Netzwerkverbindungen“ angezeigt wird; der Name ist zwischen 0 und 255 Zeichen lang.</li><li>**OSDAdapter0Index**: Index der Netzwerkadaptereinstellungen im Array der Einstellungen.<br /><br />     OSDAdapterCount=1<br />    OSDAdapter0EnableDHCP=FALSE<br />    OSDAdapter0IPAddressList=192.168.0.40<br />    OSDAdapter0SubnetMask=255.255.255.0<br />    OSDAdapter0Gateways=192.168.0.1<br />    OSDAdapter0DNSSuffix=contoso.com</li></ul>|  
-|OSDAdapterCount<br /><br /> (Eingabe)|Hiermit wird die Anzahl der Netzwerkadapter angegeben, die auf dem Zielcomputer installiert sind. Wenn der **OSDAdapterCount** -Wert festgelegt wird, müssen alle Konfigurationsoptionen für die einzelnen Adapter festgelegt werden. Wenn Sie z. B. den **OSDAdapterTCPIPNetbiosOptions** -Wert für einen bestimmten Adapter festlegen, müssen auch alle anderen Werte für diesen Adapter konfiguriert werden.<br /><br />Wenn dieser Wert nicht angegeben wird, werden alle **OSDAdapter** -Werte ignoriert.|  
+|OSDAdapter<br /><br /> (Eingabe)|Bei dieser Tasksequenzvariablen handelt es sich um die Arrayvariable. Die einzelnen Elemente im Array stellen die Einstellungen für eine einzelne Netzwerkkarte im Computer dar. Greifen Sie auf die Einstellungen für den jeweiligen Adapter zu, indem Sie den Namen der Arrayvariablen mit dem nullbasierten Netzwerkadapterindex und dem Eigenschaftennamen kombinieren.<br /><br />Wenn in diesem Schritt mehrere Netzwerkadapter konfiguriert werden, werden die Eigenschaften für den zweiten Netzwerkadapter mithilfe des Indexes im Variablennamen definiert. Beispielsweise OSDAdapter1EnableDHCP, OSDAdapter1IPAddressList, OSDAdapter1DNSDomain, OSDAdapter1WINSServerList und OSDAdapter1EnableWINS.<br /><br />Verwenden Sie beispielsweise die folgenden Variablennamen, wenn Sie die Eigenschaften des ersten Netzwerkadapters für diesen Tasksequenzschritt definieren, um Folgendes zu konfigurieren:<br /><br /> <ul><li>**OSDAdapter0EnableDHCP**: **true** aktiviert Dynamic Host Configuration Protocol (DHCP) für den Adapter.<br />    Diese Einstellung ist erforderlich. Mögliche Werte: **true** oder **false**.</li><li>**OSDAdapter0IPAddressList**: durch Trennzeichen getrennte Liste der IP-Adressen für den Adapter; diese Eigenschaft wird ignoriert, es sei denn, **EnableDHCP** ist auf **false**festgelegt.<br />    Diese Einstellung ist erforderlich.</li><li>**OSDAdapter0SubnetMask**: durch Trennzeichen getrennte Liste der Subnetzmasken; diese Eigenschaft wird ignoriert, es sei denn, **EnableDHCP** ist auf **false**festgelegt.<br />    Diese Einstellung ist erforderlich.</li><li>**OSDAdapter0Gateways**: durch Trennzeichen getrennte Liste der IT-Gatewayadressen; diese Eigenschaft wird ignoriert, es sei denn, **EnableDHCP** ist auf **false**festgelegt.<br />    Diese Einstellung ist erforderlich.</li><li>**OSDAdapter0DNSDomain**: DNS-Domäne (Domain Name System) für den Adapter.</li><li>**OSDAdapter0DNSServerList**: durch Trennzeichen getrennte Liste der DNS-Server für den Adapter.<br />    Diese Einstellung ist erforderlich.</li><li>**OSDAdapter0EnableDNSRegistration**: **true** registriert die IP-Adresse für den Adapter in DNS.</li><li>**OSDAdapter0EnableFullDNSRegistration**: **true** registriert die IP-Adresse für den Adapter unter dem vollständigen DNS-Namen des Computers in DNS.</li><li>**OSDAdapter0EnableIPProtocolFiltering**: **true** aktiviert die IP-Protokollfilterung für den Adapter.</li><li>**OSDAdapter0IPProtocolFilterList**: durch Trennzeichen getrennte Liste der Protokolle, die über IP ausgeführt werden dürfen; diese Eigenschaft wird ignoriert, wenn **EnableIPProtocolFiltering** auf **false**festgelegt ist.</li><li>**OSDAdapter0EnableTCPFiltering**: **true** aktiviert TCP-Portfilterung für den Adapter.</li><li>**OSDAdapter0TCPFilterPortList**: durch Trennzeichen getrennte Liste der Ports, denen Zugriffsberechtigungen für TCP zu erteilen sind; diese Eigenschaft wird ignoriert, wenn **EnableTCPFiltering** auf **false**festgelegt ist.</li><li>**OSDAdapter0TcpipNetbiosOptions**: Optionen für NetBIOS über TCP/IP. Es sind folgende Werte möglich:<br /><br /> <ul><li>**0**: NetBIOS-Einstellungen von DHCP-Server verwenden</li><li>**1**: NetBIOS über TCP/IP aktivieren</li><li>**2**: NetBIOS über TCP/IP deaktivieren</li></ul></li><li>**OSDAdapter0EnableWINS**: **true** verwendet WINS für die Namensauflösung.</li><li>**OSDAdapter0WINSServerList**: durch Trennzeichen getrennte Liste der WINS-Server-IP-Adressen; diese Eigenschaft wird ignoriert, es sei denn, **EnableWINS** ist auf **true**festgelegt.</li><li>**OSDAdapter0MacAddress**: Mithilfe der MAC-Adresse werden Einstellungen des physischen Netzwerkadapters zugeordnet.</li><li>**OSDAdapter0Name**: Name der Netzwerkverbindung, der in der Systemsteuerung unter „Netzwerkverbindungen“ angezeigt wird; der Name ist zwischen 0 und 255 Zeichen lang.</li><li>**OSDAdapter0Index**: Index der Netzwerkadaptereinstellungen im Array der Einstellungen.<br /><br />     OSDAdapterCount=1<br />    OSDAdapter0EnableDHCP=FALSE<br />    OSDAdapter0IPAddressList=192.168.0.40<br />    OSDAdapter0SubnetMask=255.255.255.0<br />    OSDAdapter0Gateways=192.168.0.1<br />    OSDAdapter0DNSSuffix=contoso.com</li></ul>|  
+|OSDAdapterCount<br /><br /> (Eingabe)|Hiermit wird die Anzahl der Netzwerkkarten angegeben, die auf dem Zielcomputer installiert sind. Wenn der **OSDAdapterCount** -Wert festgelegt wird, müssen alle Konfigurationsoptionen für die einzelnen Adapter festgelegt werden. Wenn Sie z. B. den **OSDAdapterTCPIPNetbiosOptions** -Wert für einen bestimmten Adapter festlegen, müssen auch alle anderen Werte für diesen Adapter konfiguriert werden.<br /><br />Wenn dieser Wert nicht angegeben wird, werden alle **OSDAdapter** -Werte ignoriert.|  
 |OSDDNSDomain<br /><br /> (Eingabe)|Hiermit wird der primäre DNS-Server angegeben, der vom Zielcomputer verwendet wird.|  
 |OSDDomainName<br /><br /> (Eingabe)|Hiermit wird der Name der Windows-Domäne angegeben, der der Zielcomputer hinzugefügt wird. Der angegebene Wert muss ein gültiger Active Directory-Domänendienste-Domänenname sein.|  
 |OSDDomainOUName<br /><br /> (Eingabe)|Hiermit wird der Name der Organisationseinheit, der der Zielcomputers hinzugefügt wird, im RFC 1779-Format angegeben. Wenn dieser Parameter angegeben wird, muss die Zeichenfolge einen vollständigen Pfad enthalten.<br /><br /> Beispiel:<br /><br /> **LDAP://OU=MyOu,DC=MyDom,DC=MyCompany,DC=com**|  
@@ -147,7 +140,7 @@ Weitere Informationen finden Sie unter [Treiberpaket anwenden](task-sequence-ste
 
 |Name der Aktionsvariablen|Beschreibung|  
 |--------------------------|-----------------|  
-|OSDMigrateAdapterSettings<br /><br /> (Eingabe)|Hiermit wird angegeben, ob die Konfigurationsinformationen für die Netzwerkadaptereinstellungen (TCP/IP, DNS und WINS) erfasst werden.<br /><br /> Beispiele:<br /><br /> **true** (Standard)<br /><br /> **false**|  
+|OSDMigrateAdapterSettings<br /><br /> (Eingabe)|Hiermit wird angegeben, ob die Konfigurationsinformationen für die Netzwerkkarteneinstellungen (TCP/IP, DNS und WINS) erfasst werden.<br /><br /> Beispiele:<br /><br /> **true** (Standard)<br /><br /> **false**|  
 |OSDMigrateNetworkMembership<br /><br /> (Eingabe)|Hiermit wird angegeben, ob die Informationen zur Arbeitsgruppen- oder Domänenmitgliedschaft im Rahmen der Betriebssystembereitstellung migriert werden.<br /><br /> Beispiele:<br /><br /> **true** (Standard)<br /><br /> **false**|  
 
 
@@ -169,14 +162,14 @@ Weitere Informationen finden Sie unter [Treiberpaket anwenden](task-sequence-ste
 
 
 
-###  <a name="BKMK_CaptureUserState"></a> Benutzerstatus erfassen   
+###  <a name="BKMK_CaptureUserState"></a> Benutzerzustand erfassen   
  Weitere Informationen finden Sie unter [Benutzerstatus erfassen](task-sequence-steps.md#BKMK_CaptureUserState).  
 
 #### <a name="details"></a>Details  
 
 |Name der Aktionsvariablen|Beschreibung|  
 |--------------------------|-----------------|  
-|OSDStateStorePath<br /><br /> (Eingabe)|Dies ist der UNC- oder lokale Pfadname des Ordners, in dem der Benutzerstatus gespeichert wird. Kein Standardwert.|  
+|OSDStateStorePath<br /><br /> (Eingabe)|Dies ist der UNC- oder lokale Pfadname des Ordners, in dem der Benutzerzustand gespeichert wird. Kein Standardwert.|  
 |OSDMigrateAdditionalCaptureOptions<br /><br /> (Eingabe)|Zusätzliche Befehlszeilenoptionen für Windows-EasyTransfer (früher USMT), die von der Tasksequenz zum Erfassen des Benutzerstatus verwendet werden. In dem Schritt werden diese Einstellungen im Tasksequenz-Editor nicht zur Verfügung gestellt. Geben Sie diese Optionen als Zeichenfolge an, die die Tasksequenz an die automatisch generierte USMT-Befehlszeile angehängt.<br /><br />Die USMT-Optionen, die mit dieser Tasksequenzvariablen angegeben werden, werden vor dem Ausführen dieser Tasksequenz nicht auf Genauigkeit überprüft.|  
 |OSDMigrateMode<br /><br /> (Eingabe)|Ermöglicht das Anpassen der Dateien, die mit USMT erfasst wurden. Wenn diese Variable auf **Einfach** festgelegt ist, verwendet die Tasksequenz nur die USMT-Standardkonfigurationsdateien. Wenn diese Variable auf **Erweitert** festgelegt ist, werden durch die Tasksequenzvariable „OSDMigrateConfigFiles“ die von USMT verwendeten Konfigurationsdateien angegeben.<br /><br /> Gültige Werte:<br /><br /> **Einfach**<br /><br /> **Erweitert**|  
 |OSDMigrateConfigFiles<br /><br /> (Eingabe)|Gibt die Konfigurationsdateien an, mit denen die Erfassung von Benutzerprofilen gesteuert wird. Diese Variable wird nur verwendet, wenn „OSDMigrateMode“ auf „Erweitert“ festgelegt wurde. Dieser durch Kommas getrennte Listenwert wird festgelegt, um die Migration benutzerdefinierter Benutzerprofile auszuführen.<br /><br /> Beispiel: miguser.xml, migsys.xml, migapps.xml|  
@@ -302,18 +295,18 @@ Weitere Informationen finden Sie unter [Softwareupdates installieren](task-seque
 
 
 
-###  <a name="BKMK_ReleaseStateStore"></a> Statusspeicher freigeben   
+###  <a name="BKMK_ReleaseStateStore"></a> Zustandsspeicher freigeben   
  Weitere Informationen finden Sie unter [Statusspeicher freigeben](task-sequence-steps.md#BKMK_ReleaseStateStore).  
 
 #### <a name="details"></a>Details  
 
 |Name der Aktionsvariablen|Beschreibung|  
 |--------------------------|-----------------|  
-|OSDStateStorePath<br /><br /> (Eingabe)|Dies ist der UNC- oder lokale Pfadname des Speicherorts, von dem aus der Benutzerstatus wiederhergestellt wird. Dieser Wert wird von den Tasksequenzaktionen **Benutzerstatus erfassen** und **Benutzerstatus wiederherstellen** verwendet.|  
+|OSDStateStorePath<br /><br /> (Eingabe)|Dies ist der UNC- oder lokale Pfadname des Speicherorts, von dem aus der Benutzerzustand wiederhergestellt wird. Dieser Wert wird von den Tasksequenzaktionen **Benutzerzustand erfassen** und **Benutzerzustand wiederherstellen** verwendet.|  
 
 
 
-###  <a name="BKMK_RequestState"></a> Statusspeicher anfordern   
+###  <a name="BKMK_RequestState"></a> Zustandsspeicher anfordern   
   Weitere Informationen finden Sie unter [Statusspeicher freigeben](task-sequence-steps.md#BKMK_ReleaseStateStore).  
 
 #### <a name="details"></a>Details  
@@ -321,9 +314,9 @@ Weitere Informationen finden Sie unter [Softwareupdates installieren](task-seque
 |Name der Aktionsvariablen|Beschreibung|  
 |--------------------------|-----------------|  
 |OSDStateFallbackToNAA<br /><br /> (Eingabe)|Wenn das Computerkonto keine Verbindung mit dem Statusmigrationspunkt herstellen kann, gibt diese Variable an, ob die Tasksequenz das Netzwerkzugriffskonto als Ausweichmöglichkeit verwenden soll.<br /><br /> Gültige Werte:<br /><br /> **true**<br /><br /> **false** (Standard)|  
-|OSDStateSMPRetryCount<br /><br /> (Eingabe)|Hiermit wird angegeben, wie viele Wiederholungsversuche des Tasksequenzschritts zum Suchen eines Statusmigrationspunkts ausgeführt werden, bevor der Schritt mit einem Fehler abgebrochen wird. Die angegebene Anzahl muss zwischen 0 und 600 liegen.|  
+|OSDStateSMPRetryCount<br /><br /> (Eingabe)|Hiermit wird angegeben, wie viele Wiederholungsversuche des Tasksequenzschritts zum Suchen eines Zustandsmigrationspunkts ausgeführt werden, bevor der Schritt mit einem Fehler abgebrochen wird. Die angegebene Anzahl muss zwischen 0 und 600 liegen.|  
 |OSDStateSMPRetryTime<br /><br /> (Eingabe)|Hiermit wird angegeben, wie viele Sekunden zwischen den einzelnen Versuchen des Tasksequenzschritts gewartet werden soll. Die Anzahl der Sekunden darf maximal 30 Zeichen umfassen.|  
-|OSDStateStorePath<br /><br /> (Ausgabe)|Dies ist der UNC-Pfad des Ordners auf dem Statusmigrationspunkt, in dem der Benutzerstatus gespeichert ist.|  
+|OSDStateStorePath<br /><br /> (Ausgabe)|Dies ist der UNC-Pfad des Ordners auf dem Zustandsmigrationspunkt, in dem der Benutzerzustand gespeichert ist.|  
 
 
 
@@ -339,14 +332,14 @@ Weitere Informationen finden Sie unter [Softwareupdates installieren](task-seque
 
 
 
-###  <a name="BKMK_RestoreUserState"></a> Benutzerstatus wiederherstellen   
+###  <a name="BKMK_RestoreUserState"></a> Benutzerzustand wiederherstellen   
   Weitere Informationen finden Sie unter [Benutzerstatus wiederherstellen](task-sequence-steps.md#BKMK_RestoreUserState).  
 
 #### <a name="details"></a>Details  
 
 |Name der Aktionsvariablen|Beschreibung|  
 |--------------------------|-----------------|  
-|OSDStateStorePath<br /><br /> (Eingabe)|Dies ist der UNC-Pfadname oder der lokale Pfadname des Ordners, von dem aus der Benutzerstatus wiederhergestellt wird.|  
+|OSDStateStorePath<br /><br /> (Eingabe)|Dies ist der UNC-Pfadname oder der lokale Pfadname des Ordners, von dem aus der Benutzerzustand wiederhergestellt wird.|  
 |OSDMigrateContinueOnRestore<br /><br /> (Eingabe)|Der Prozess wird fortgesetzt, auch wenn USMT einige Dateien nicht wiederherstellen konnte.<br /><br /> Gültige Werte:<br /><br /> **true** (Standard)<br /><br /> **false**|  
 |OSDMigrateEnableVerboseLogging<br /><br /> (Eingabe)|Aktiviert die ausführliche Protokollierung für USMT. Dieser Wert ist für die Aktion erforderlich.<br /><br /> Gültige Werte:<br /><br /> **true**<br /><br /> **false** (Standard)|  
 |OSDMigrateLocalAccounts<br /><br /> (Eingabe)|Hiermit wird angegeben, ob das lokale Computerkonto wiederhergestellt werden soll.<br /><br /> Gültige Werte:<br /><br /> **true**<br /><br /> **false** (Standard)|  

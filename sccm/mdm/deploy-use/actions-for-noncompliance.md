@@ -1,26 +1,20 @@
 ---
-title: "Aktionen bei Nichtkonformität"
+title: Aktionen bei Nichtkonformität
 titleSuffix: Configuration Manager
-description: "Erfahren Sie, wie Sie Aktionen bei Nichtkonformität mit Configuration Manager einrichten."
-ms.custom: na
+description: Erfahren Sie, wie Sie Aktionen bei Nichtkonformität mit Configuration Manager einrichten.
 ms.date: 11/10/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ad8fa94d-45bb-4c94-8d86-31234c5cf21c
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 1dd10d9452fae85f2ecc3d3077fba420454ef337
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: be17e1f2b5c3fec02cdd6fc5f89aee9319c4dbb4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-up-actions-for-non-compliance"></a>Einrichten von Aktionen bei Nichtkonformität
 
@@ -52,7 +46,7 @@ Unterstützt von [allen über Intune verwalteten Plattformen](https://docs.micro
 
 Configuration Manager stellt E-Mail-Vorlagen zur Verfügung, Sie können aber auch eigene Vorlagen erstellen. Die E-Mail-Vorlage wird später bei der Erstellung von Aktionen bei Nichtkonformität für die Kommunikation mit den Benutzern verwendet.
 
-1. Wählen Sie in der Configuration Manager-Konsole **Bestand und Kompatibilität** aus.
+1. Wählen Sie in der Configuration Manager-Konsole **Assets und Konformität** aus.
 
 2. Erweitern Sie im Arbeitsbereich **Bestand und Kompatibilität** die **Konformitätseinstellungen**, und wählen Sie **Konformitätsbenachrichtigungsvorlagen**.
 
@@ -74,7 +68,7 @@ Configuration Manager stellt E-Mail-Vorlagen zur Verfügung, Sie können aber au
 
 ## <a name="to-create-actions-for-non-compliance"></a>So erstellen Sie Aktionen bei Nichtkonformität
 
-1. Wählen Sie in der Configuration Manager-Konsole **Bestand und Kompatibilität** aus.
+1. Wählen Sie in der Configuration Manager-Konsole **Assets und Konformität** aus.
 
 2. Erweitern Sie im Arbeitsbereich **Bestand und Kompatibilität** die **Kompatibilitätseinstellungen**, und wählen Sie **Kompatibilitätsrichtlinien**.
 

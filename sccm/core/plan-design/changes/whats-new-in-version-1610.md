@@ -1,25 +1,20 @@
 ---
 title: Neues in Version 1610
 titleSuffix: Configuration Manager
-description: "Enthält Details zu Änderungen und neuen Funktionen, die in Version 1610 von System Center Configuration Manager eingeführt wurden."
-ms.custom: na
+description: Enthält Details zu Änderungen und neuen Funktionen, die in Version 1610 von System Center Configuration Manager eingeführt wurden.
 ms.date: 11/23/2016
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f7eb0803-3f8f-4ab6-825a-99ac11f5ba7d
-caps.latest.revision: "40"
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: e3dac4ceb08c15c1eaeef0a6006ebcc6eccff49c
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 9bb046cd08e4e9d8cff6e34ea88ce8e582e2c863
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what39s-new-in-version-1610-of-system-center-configuration-manager"></a>Neuerungen in Version 1610 von System Center Configuration Manager
 
@@ -42,7 +37,7 @@ Die folgenden Abschnitte enthalten Details zu Änderungen und neue Funktionen, d
 Ab Version 1610 gibt es eine neue Phase, wenn Sie ein Updatepaket installieren, und die Installation in der Konsole überwachen: **Post Installation** (Nach der Installation). Diese Phase enthält den Status für Aufgaben wie das Neustarten wichtiger Dienste und die Initialisierung der Replikationsüberwachung. (Diese Phase ist erst in der Konsole enthalten, wenn Ihr Standort auf Version 1610 aktualisiert wurde.) Weitere Informationen über den Updateinstallationsstatus finden Sie unter [Installieren konsoleninterner Updates](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
 
 
-## <a name="exclude-clients-from-automatic-upgrade"></a>Clients von einem automatischen Upgrade ausschließen
+## <a name="exclude-clients-from-automatic-upgrade"></a>Ausschließen von Clients von automatischen Upgrades
 Sie können Windows-Clients von der Aktualisierung mit neuen Versionen der Clientsoftware ausschließen. Fügen Sie dafür Clientcomputer zu einer Sammlung hinzu, die von Upgrades ausgeschlossen wird. Clients in der ausgeschlossenen Sammlung ignorieren Anfragen zum Aktualisieren der Clientsoftware.  Weitere Informationen finden Sie unter [Exclude Windows clients from upgrades (Ausschließen von Windows-Clients von Upgrades)](../../clients/manage/upgrade/exclude-clients-windows.md).
 
 
@@ -170,7 +165,7 @@ Nachdem Sie eine Anwendung für die Installation genehmigt haben, können Sie an
 
 Diese Aktion bewirkt nicht, dass die Anwendung auf Geräten deinstalliert wird. Allerdings werden Benutzer daran gehindert, neue Kopien der Anwendung aus Softwarecenter zu installieren.
 
-## <a name="filter-by-content-size-in-automatic-deployment-rules"></a>Filtern Sie nach Größe des Inhalts in Regeln zur automatischen Bereitstellung
+## <a name="filter-by-content-size-in-automatic-deployment-rules"></a>Filtern nach Inhaltsgröße in automatischen Bereitstellungsregeln
 Sie können jetzt nach Inhaltsgrößen für Softwareupdates in automatischen Bereitstellungsregeln filtern. Um nur Softwareupdates herunterzuladen, die kleiner als 2 MB sind, können Sie z.B. den Filter **Inhaltsgröße (KB)** auf **< 2048** festlegen. Mit diesem Filter wird verhindert, dass große Softwareupdates automatisch heruntergeladen werden. So wird die vereinfachte Windows-Wartung vorheriger Versionen unterstützt, wenn die Bandbreite eingeschränkt ist. Details finden Sie unter:
 - [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/) (Configuration Manager und vereinfachte Windows-Wartung auf vorherigen Betriebssystemen)
 - [Automatisches Bereitstellen von Softwareupdates](/sccm/sum/deploy-use/automatically-deploy-software-updates)
@@ -206,7 +201,7 @@ Sie können jetzt eine schnelle Übersicht über die gesamte Gerätekonformität
 ## <a name="lookout-integration-for-hybrid-implementations-to-protect-ios-and-android-devices"></a>Lookout-Integration für Hybridimplementierungen zum Schutz von iOS- und Android-Geräten
 Microsoft ist mit der Lösung „Lookout Mobile Threat Protection“ zum Schutz von mobilen iOS- und Android-Geräten integriert. Mit dieser Lösung werden Schadsoftware, riskante Apps und weitere Risiken auf Geräten identifiziert. Die Lösung von Lookout unterstützt Sie beim Bestimmen der Bedrohungsstufe. Dies ist konfigurierbar. Sie können eine Konformitätsrichtlinienregel in System Center Configuration Manager erstellen, um die Gerätekonformität basierend auf der Risikoeinschätzung durch Lookout einzuschätzen. Mithilfe bedingter Zugriffsrichtlinien können Sie den Zugriff auf Unternehmensressourcen basierend auf dem Konformitätsstatus des Geräts zulassen oder verweigern. Weitere Informationen über die Integration und die Funktionsweise finden Sie unter [Manage access based on device, network, and application risk (Verwalten des Zugriffs basierend auf Gerät, Netzwerk und Anwendungsrisiko)](/sccm/protect/deploy-use/manage-access-based-on-device-network-app-risk).
 
-Benutzer nicht konformer iOS-Geräte werden zur Registrierung aufgefordert. Sie müssen die Lookout for Work-App auf ihren Geräten installieren, die App aktivieren und Bedrohungen entfernen, die in der Lookout for Work-Anwendung gemeldet werden, um Zugriff auf Unternehmensdaten zu erhalten. Erfahren Sie mehr über [Configure and deploy Lookout for Work apps (Konfigurieren und Bereitstellen von Lookout for Work-Apps)](/sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps).
+Benutzer nicht konformer iOS-Geräte werden zur Registrierung aufgefordert. Sie müssen die Lookout for Work-App auf ihren Geräten installieren, die App aktivieren und Bedrohungen entfernen, die in der Lookout for Work-Anwendung gemeldet werden, um Zugriff auf Unternehmensdaten zu erhalten. Erfahren Sie mehr über das [Konfigurieren und Bereitstellen von Lookout for Work-Apps](/sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps).
 
 
 

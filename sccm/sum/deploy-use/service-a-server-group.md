@@ -1,22 +1,20 @@
 ---
 title: Bereitstellung einer Servergruppe
 titleSuffix: Configuration Manager
-description: "Die System Center Configuration Manager-Konsole stellt Warnungen und Status zum Überwachen von Updates und Kompatibilität bereit."
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: Die System Center Configuration Manager-Konsole stellt Warnungen und Status zum Überwachen von Updates und Konformität bereit.
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ms.date: 12/07/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
-ms.openlocfilehash: 12382015f2b673103c3c0d8fc9c0cbf29511a434
-ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
+ms.openlocfilehash: cefdaec6aff16f0159f9811b6deb7379ab69a4ec
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="service-a-server-group"></a>Bereitstellung einer Servergruppe
 
@@ -80,7 +78,7 @@ Die Servergruppeneinstellungen werden in den Eigenschaften für eine Gerätesamm
 Softwareupdates werden für die Servergruppensammlung mit dem üblichen Bereitstellungsprozess bereitgestellt. Nach der Bereitstellung der Softwareupdates können Sie die Softwareupdatebereitstellung in der Configuration Manager-Konsole überwachen.
 1.  [Stellen Sie Softwareupdates](manually-deploy-software-updates.md) für die Servergruppensammlung bereit.   
 
-2.  [Überwachen Sie die Softwareupdatebereitstellung](monitor-software-updates.md). Hierbei wird neben den üblichen Überwachungsansichten für die Bereitstellung von Softwareupdates auch der Status **Auf Sperre wird gewartet** angezeigt, wenn ein Client auf die Installation der Softwareupdates wartet. In der Protokolldatei „UpdatesDeployment.log“ finden Sie weitere Informationen.
+2.  [Überwachen der Softwareupdatebereitstellung](monitor-software-updates.md). Hierbei wird neben den üblichen Überwachungsansichten für die Bereitstellung von Softwareupdates auch der Status **Auf Sperre wird gewartet** angezeigt, wenn ein Client auf die Installation der Softwareupdates wartet. In der Protokolldatei „UpdatesDeployment.log“ finden Sie weitere Informationen.
 
 
 ## <a name="clear-the-deployment-locks-for-computers-in-a-server-group"></a>Löschen der Bereitstellungssperren für Computer in einer Servergruppe  

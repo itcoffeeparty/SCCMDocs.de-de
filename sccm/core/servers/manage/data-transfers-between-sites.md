@@ -1,25 +1,20 @@
 ---
-title: "Datenübertragungen"
+title: Datenübertragungen
 titleSuffix: Configuration Manager
-description: "Erfahren Sie, wie Configuration Manager Daten zwischen Standorten verschiebt, und wie Sie die Übertragung von Daten in Ihrem Netzwerk verwalten können."
-ms.custom: na
+description: Erfahren Sie, wie Configuration Manager Daten zwischen Standorten verschiebt, und wie Sie die Übertragung von Daten in Ihrem Netzwerk verwalten können.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc526e8d-fac3-4bb5-b206-03ad29b0ae11
-caps.latest.revision: "12"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 185598e9f6b0678ca1fcbe9c19ed420f37805861
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 45fb1bc31a7e888ca4caa21a710e74ec0fde422c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-transfers-between-sites-in-system-center-configuration-manager"></a>Datenübertragungen zwischen Standorten in System Center Configuration Manager
 
@@ -51,10 +46,10 @@ Folgende Einstellungen können Sie für Dateinreplikationsrouten ändern:
 -  **Begrenzung der Datenübertragungsrate**. Sie können eine Begrenzung der Datenübertragungsrate für jede Dateireplikationsroute festlegen, um die bei der Datenübertragung an den Zielstandort in Anspruch genommene Netzwerkbandbreite zu steuern:  
 
     -  Verwenden Sie den **Pulsmodus** , um die Größe der Datenblöcke anzugeben, die an den Zielstandort gesendet werden. Sie können auch eine zeitliche Verzögerung zwischen dem Senden der einzelnen Datenblöcke angeben. Wählen Sie diese Option aus, wenn Sie Daten über Netzwerke mit sehr niedriger Bandbreite an den Zielstandort senden müssen. Dies kann beispielsweise der Fall sein, wenn eine Beschränkung vorliegt, dass unabhängig von der Geschwindigkeit der Verknüpfung oder deren Auslastung zu einem bestimmten Zeitpunkt nur alle fünf Sekunden 1 KB Daten gesendet werden dürfen und nicht alle drei Sekunden.
-    -  Wählen Sie das Optionsfeld **Begrenzt auf angegebene maximale Übertragungsraten pro Stunde** aus, damit die Datenübertragung an den Zielstandort nur in dem von Ihnen angegebenen Zeitanteil erfolgt. Wenn Sie diese Option verwenden, ermittelt Configuration Manager nicht die verfügbare Netzwerkbandbreite. Stattdessen wird die Zeit, innerhalb derer Daten gesendet werden können, in Blöcke aufgeteilt. Die Daten werden dann innerhalb eines kurzen Zeitblocks gesendet. In den darauffolgenden Zeitblöcken werden keine Daten gesendet. Wenn die Höchstrate beispielsweise auf **50 %**festgelegt ist, überträgt Configuration Manager die Daten für eine bestimmte Dauer, und für eine ebenso lange Dauer werden anschließend keine Daten übertragen. Die tatsächliche Datenmenge bzw. die Größe der Datenblöcke wird nicht verwaltet. Stattdessen wird nur die Dauer der Datenübertragung verwaltet.  
+    -  Wählen Sie das Optionsfeld **Begrenzt auf angegebene maximale Übertragungsraten pro Stunde** aus, damit die Datenübertragung an den Zielstandort nur in dem von Ihnen angegebenen Zeitanteil erfolgt. Wenn Sie diese Option verwenden, ermittelt Configuration Manager nicht die verfügbare Netzwerkbandbreite. Stattdessen wird die Zeit, innerhalb derer Daten gesendet werden können, in Blöcke aufgeteilt. Die Daten werden dann innerhalb eines kurzen Zeitblocks gesendet. In den darauffolgenden Zeitblöcken werden keine Daten gesendet. Wenn die Höchstrate beispielsweise auf **50 %** festgelegt ist, überträgt Configuration Manager die Daten für eine bestimmte Dauer, und für eine ebenso lange Dauer werden anschließend keine Daten übertragen. Die tatsächliche Datenmenge bzw. die Größe der Datenblöcke wird nicht verwaltet. Stattdessen wird nur die Dauer der Datenübertragung verwaltet.  
 
         > [!CAUTION]  
-        > Von einem Standort können standardmäßig bis zu 3 **gleichzeitige Sendevorgänge** zur Datenübertragung an einen Zielstandort verwendet werden. Wenn Sie für eine Dateireplikationsroute die Begrenzung der Datenübertragungsrate aktivieren, ist die Anzahl **gleichzeitiger Sendevorgänge** an den entsprechenden Standort auf 1 begrenzt. Dies gilt auch dann, wenn für die Option **Verfügbare Bandbreite beschränken (%)** der Wert **100 %**festgelegt ist. Wenn Sie beispielsweise für den Sender die Standardeinstellungen verwenden, wird hierdurch die Übertragungsrate an den Zielstandort auf ein Drittel der Standardkapazität reduziert.  
+        > Von einem Standort können standardmäßig bis zu 3 **gleichzeitige Sendevorgänge** zur Datenübertragung an einen Zielstandort verwendet werden. Wenn Sie für eine Dateireplikationsroute die Begrenzung der Datenübertragungsrate aktivieren, ist die Anzahl **gleichzeitiger Sendevorgänge** an den entsprechenden Standort auf 1 begrenzt. Dies gilt auch dann, wenn für die Option **Verfügbare Bandbreite beschränken (%)** der Wert **100 %** festgelegt ist. Wenn Sie beispielsweise für den Sender die Standardeinstellungen verwenden, wird hierdurch die Übertragungsrate an den Zielstandort auf ein Drittel der Standardkapazität reduziert.  
 
 -  Sie können eine Dateireplikationsroute zwischen zwei sekundären Standorten zum Weiterleiten dateibasierten Inhalts zwischen diesen Standorten konfigurieren.  
 

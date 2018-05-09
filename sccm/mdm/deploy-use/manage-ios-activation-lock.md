@@ -2,24 +2,19 @@
 title: Verwalten der iOS-Aktivierungssperre
 titleSuffix: Configuration Manager
 description: Die iOS-Aktivierungssperre kann mit System Center Configuration Manager verwaltet werden.
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e2745bac-e1b4-4dac-8ac7-32f1c820bc9c
-caps.latest.revision: "9"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 3b372d9f766fa48b4b57fcd0658f66573ed02d12
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4550116bd4635e7320e9cbdf18997e2e17ae0466
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-ios-activation-lock-with-system-center-configuration-manager"></a>Verwalten der iOS-Aktivierungssperre mit System Center Configuration Manager
 
@@ -39,7 +34,7 @@ Auf **überwachten** Geräten müssen Sie die Aktivierungssperre aktivieren, ind
 > [!TIP]
 > Im überwachten Modus für iOS-Geräte können Sie mit dem Apple Configurator Tool ein Gerät sperren, um die Funktionen auf bestimmte geschäftliche Zwecke einzuschränken. Der überwachte Modus ist in der Regel nur für firmeneigene Geräte vorgesehen.
 
-Obwohl die Aktivierungssperre zum Schutz von iOS-Geräten beiträgt und die Chancen einer Wiederherstellung bei Verlust oder Diebstahl erhöht, kann diese Funktion Sie als IT-Administrator vor eine Reihe von Herausforderungen stellen. Beispiel:
+Obwohl die Aktivierungssperre zum Schutz von iOS-Geräten beiträgt und die Chancen einer Wiederherstellung bei Verlust oder Diebstahl erhöht, kann diese Funktion Sie als IT-Administrator vor eine Reihe von Herausforderungen stellen. Zum Beispiel:
 
 - Einer Ihrer Benutzer richtet die Aktivierungssperre auf einem Gerät ein. Anschließend verlässt der Benutzer das Unternehmen und gibt das Gerät zurück. Ohne die Apple-ID und das Kennwort des Benutzers gibt es keine Möglichkeit, das Gerät zu reaktivieren, auch wenn Sie es zurücksetzen.
 - Sie benötigen einen Bericht über alle Geräte, bei denen die Aktivierungssperre aktiviert ist.
@@ -70,7 +65,7 @@ Die Geschäftsvorteile für firmeneigene Geräte sind:
 
 ## <a name="enable-activation-lock-on-supervised-devices"></a>Aktivieren der Aktivierungssperre auf überwachten Geräten
 
-Sie verwenden die Kompatibilitätseinstellungen von Configuration Manager, um ein Konfigurationselement des Typs **iOS und Mac OS X** zu erstellen und bereitzustellen, um die Aktivierungssperre auf überwachten Geräten zu aktivieren:
+Sie verwenden die Konformitätseinstellungen von Configuration Manager, um ein Konfigurationselement des Typs **iOS und Mac OS X** zu erstellen und bereitzustellen, um die Aktivierungssperre auf überwachten Geräten zu aktivieren:
 
 1. Verwenden Sie die Informationen im Thema [Erstellen von Konfigurationselementen für iOS- und Mac OS X-Geräte, die ohne den System Center Configuration Manager-Client verwaltet werden](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client) zum Erstellen eines Konfigurationselements vom Typ **iOS und Mac OS X**.
 2. Konfigurieren Sie auf der Seite **System Security** (Systemsicherheit) des Assistenten zum Erstellen von Konfigurationselementen die Einstellung **Allow Activation Lock (supervised mode only)** (Aktivieren der Aktivierungssperre (ausschließlich überwachter Modus)) auf **Allowed**(Zulässig).

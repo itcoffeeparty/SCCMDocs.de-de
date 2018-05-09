@@ -1,33 +1,27 @@
 ---
 title: Erstellen von Konfigurationsbaselines
 titleSuffix: Configuration Manager
-description: "Erstellen Sie in System Center Configuration Manager Konfigurationsbaselines, die Sie in einer Sammlung bereitstellen können."
-ms.custom: na
+description: Erstellen Sie in System Center Configuration Manager Konfigurationsbaselines, die Sie in einer Sammlung bereitstellen können.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 1556594e439439ef30418d384d537d5efb6b46fc
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 1a6d09e4a5552770a71dc44f473cebd13ba0715c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-configuration-baselines-in-system-center-configuration-manager"></a>Erstellen von Konfigurationsbaselines in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 
-Konfigurationsbaselines in System Center Configuration Manager enthalten vordefinierte Konfigurationselemente und gegebenenfalls andere Konfigurationsbaselines. Nachdem eine Konfigurationsbasislinie erstellt wurde, können Sie sie für eine Sammlung bereitstellen. Auf diese Weise wird die Konfigurationsbasislinie von Geräten in dieser Sammlung heruntergeladen und deren Kompatibilität mit der Konfigurationsbasislinie ausgewertet.  
+Konfigurationsbaselines in System Center Configuration Manager enthalten vordefinierte Konfigurationselemente und gegebenenfalls andere Konfigurationsbaselines. Nachdem eine Konfigurationsbasislinie erstellt wurde, können Sie sie für eine Sammlung bereitstellen. Auf diese Weise wird die Konfigurationsbasislinie von Geräten in dieser Sammlung heruntergeladen und deren Konformität mit der Konfigurationsbasislinie ausgewertet.  
 
  Konfigurationsbaselines können in Configuration Manager bestimmte Revisionen von Konfigurationselementen enthalten, oder sie können so konfiguriert werden, dass sie immer die neueste Version eines Konfigurationselements verwenden. Weitere Informationen zu Konfigurationselementrevisionen finden Sie unter [Verwaltungstasks für Konfigurationsdaten](../../compliance/deploy-use/management-tasks-for-configuration-data.md).  
 
@@ -39,9 +33,9 @@ Konfigurationsbaselines in System Center Configuration Manager enthalten vordefi
 
  Gehen Sie wie folgt vor, um eine Konfigurationsbasislinie mithilfe des Dialogfelds **Konfigurationsbasislinie erstellen** zu erstellen.  
 
-1.  Klicken Sie in der Configuration Manager-Konsole auf **Bestand und Kompatibilität** > **Kompatibilitätseinstellungen** > **Konfigurationsbaselines**.  
+1.  Klicken Sie in der Configuration Manager-Konsole auf **Assets und Konformität** > **Konformitätseinstellungen** > **Konfigurationsbaselines**.  
 
-3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Konfigurationsbasislinie erstellen**.  
+3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Konfigurationsbaseline erstellen**.  
 
 4.  Geben Sie im Dialogfeld **Konfigurationsbasislinie erstellen** einen eindeutigen Namen und eine Beschreibung für die Konfigurationsbasislinie ein. Sie können für den Namen maximal 255 Zeichen verwenden, für die Beschreibung sind maximal 512 Zeichen zulässig.  
 

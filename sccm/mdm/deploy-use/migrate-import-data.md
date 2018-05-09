@@ -1,21 +1,19 @@
 ---
 title: Importieren von Daten in Microsoft Intune
 titleSuffix: Configuration Manager
-description: 
-keywords: 
-author: dougeby
+description: Importieren von Configuration Manager-Daten in Microsoft Intune
+author: aczechowski
 manager: dougeby
 ms.date: 12/05/2017
-ms.topic: article
-ms.prod: configmgr-hybrid
-ms.service: 
-ms.technology: 
+ms.topic: conceptual
+ms.prod: configuration-manager
+ms.technology: configmgr-hybrid
 ms.assetid: b552391d-abc0-48a2-a429-93605a13a66a
-ms.openlocfilehash: d42a5fd64b5baead8ef87d8c08a99ec659f94633
-ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
+ms.openlocfilehash: dcd84e484f55cb799953bea83be917055ca1292a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="import-configuration-manager-data-to-microsoft-intune"></a>Importieren von Configuration Manager-Daten in Microsoft Intune 
 
@@ -56,7 +54,7 @@ Das Import-Tool kann Informationen zu den folgenden Objekttypen im Configuration
 - Es gibt einige Profile, die von anderen Objekten abhängen. Wenn Sie ein Profil importieren möchten, das von einem anderen Objekt abhängt, z.B. ein E-Mail-Profil, das von einem Zertifikat abhängt, müssen Sie beide Objekte gleichzeitig importieren. Dies gilt nicht, wenn Sie das andere Objekt zuvor von demselben Computer mit demselben Benutzer importiert haben.  
 - Nachdem Sie das Tool ausgeführt haben, müssen Sie möglicherweise zusätzliche manuelle Schritte ausführen. Sie müssen beispielsweise Apps und Richtlinien zu AAD-Gruppen zuordnen. 
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 - Configuration Manager, Version 1610 oder höher. Wir empfehlen, den Standort auf oberster Ebene anzugeben und das Tool mit einem Benutzer zu starten, der Zugriff auf alle Objekte in der Standorthierarchie hat. Das Tool erkennt nur Objekte, auf die der Benutzer Zugriff hat, der das Tool ausführt. 
 - Ein globaler Administrator muss das Datenimport-Tool beim ersten Mal mit dem Parameter ***intunedataimporter.exe -GlobalConsent*** ausführen. Anschließend kann das Tool von einem globalen Administrator oder Intune-Administrator ausgeführt werden.  
 
@@ -113,7 +111,7 @@ Bei der Sammlungszuordnungsdatei handelt es sich um eine durch Trennzeichen getr
 ![Beispiel für eine CSV-Sammlungszuordnungsdatei](..\media\migrate-collectionmapping.png)
 
 #### <a name="start-the-data-importer-tool-using-collection-mapping"></a>Starten des Datenimportertools mithilfe der Sammlungszuordnung
-Um eine Sammlungszuordnungsdatei zu verwenden, müssen Sie das Datenimportertool mit dem Befehlszeilenparameter *-CollectionMappingFile* und dem vollständigen Pfad zur erstellten CSV-Sammlungszuordnungsdatei starten. Beispiel:
+Um eine Sammlungszuordnungsdatei zu verwenden, müssen Sie das Datenimportertool mit dem Befehlszeilenparameter *-CollectionMappingFile* und dem vollständigen Pfad zur erstellten CSV-Sammlungszuordnungsdatei starten. Zum Beispiel:
 
 ```IntuneDataImporter.exe -CollectionMappingFile c:\Users\myuser\Documents\collectionmapping.csv```
 

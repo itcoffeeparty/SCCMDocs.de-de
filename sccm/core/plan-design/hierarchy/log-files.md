@@ -2,26 +2,19 @@
 title: Protokolldateien zur Behebung von Problemen
 titleSuffix: Configuration Manager
 description: Verwenden von Protokolldateien bei der Behebung von Problemen, die bei Configuration Manager-Clients und -Standortsystemen auftreten
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
-caps.latest.revision: 9
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 471730e056ca512f300ead234b9a8a9e4f10a835
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: c068ea5a079d43148191e41dc9a2b4fb7a2e00c7
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="log-files-in-system-center-configuration-manager"></a>Protokolldateien in System Center Configuration Manager
 
@@ -234,7 +227,7 @@ In der folgenden Tabelle werden die Protokolldateien auf dem Configuration Manag
 |Protokollname|Details|  
 |--------------|-------------|  
 |Scxcm.log|Das ist die Protokolldatei für den Kerndienst des Configuration Manager-Clients für Linux und UNIX (ccmexec.bin). Diese Protokolldatei enthält Informationen zur Installation und zum laufenden Vorgang von ccmexec.bin.<br /><br /> Standardmäßig befindet sich diese Datei unter **/var/opt/microsoft/scxcm.log**<br /><br /> Für das Ändern des Speicherorts der Protokolldatei bearbeiten Sie **/opt/microsoft/configmgr/etc/scxcm.conf** , und ändern Sie das Feld **PATH** . Sie müssen den Clientcomputer oder den Dienst nicht neu starten, damit die Änderungen wirksam werden.<br /><br /> Für den Protokolliergrad können Sie eine von vier unterschiedlichen Einstellungen vornehmen.|  
-|Scxcmprovider.log|Das ist die Protokolldatei für den CIM-Dienst des Configuration Manager-Clients für Linux und UNIX (omiserver.bin). Diese Protokolldatei enthält Informationen zu den laufenden Vorgängen von nwserver.bin.<br /><br /> Dieses Protokoll befindet sich unter**/var/opt/microsoft/configmgr/scxcmprovider.log**<br /><br /> Für eine Änderung des Speicherorts der Protokolldatei bearbeiten Sie **/opt/microsoft/omi/etc/scxcmprovider.conf** , und ändern Sie das Feld **PATH** . Sie müssen den Clientcomputer oder den Dienst nicht neu starten, damit die Änderungen wirksam werden.<br /><br /> Für den Protokolliergrad können Sie eine von drei unterschiedlichen Einstellungen vornehmen.|  
+|Scxcmprovider.log|Das ist die Protokolldatei für den CIM-Dienst des Configuration Manager-Clients für Linux und UNIX (omiserver.bin). Diese Protokolldatei enthält Informationen zu den laufenden Vorgängen von nwserver.bin.<br /><br /> Dieses Protokoll befindet sich unter **/var/opt/microsoft/configmgr/scxcmprovider.log**<br /><br /> Für eine Änderung des Speicherorts der Protokolldatei bearbeiten Sie **/opt/microsoft/omi/etc/scxcmprovider.conf** , und ändern Sie das Feld **PATH** . Sie müssen den Clientcomputer oder den Dienst nicht neu starten, damit die Änderungen wirksam werden.<br /><br /> Für den Protokolliergrad können Sie eine von drei unterschiedlichen Einstellungen vornehmen.|  
 
  Beide Protokolldateien unterstützen mehrere Protokolliergrade:  
 

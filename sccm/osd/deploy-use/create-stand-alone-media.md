@@ -1,27 +1,20 @@
 ---
-title: "Erstellen eigenständiger Medien"
+title: Erstellen eigenständiger Medien
 titleSuffix: Configuration Manager
-description: "Verwenden Sie eigenständige Medien, um das Betriebssystem auf einem Computer ohne Netzwerkverbindung bereitzustellen."
-ms.custom: na
+description: Verwenden Sie eigenständige Medien, um das Betriebssystem auf einem Computer ohne Netzwerkverbindung bereitzustellen.
 ms.date: 02/09/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
-caps.latest.revision: 
-caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 587804b026f01f25754a10f35967d18d0b8d471d
-ms.sourcegitcommit: fbde417e3c3002898bd216a7e110e725ae269893
+ms.openlocfilehash: 35dd110c2566dab945bb0701e113becb3412d65c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-stand-alone-media-with-system-center-configuration-manager"></a>Erstellen eigenständiger Medien mit System Center Configuration Manager
 
@@ -167,8 +160,8 @@ Sie müssen für die vom Assistenten zum Erstellen von Tasksequenzmedien erstell
 |Windows-Einstellungen erfassen|Mithilfe dieses Tasksequenzschritts erfassen Sie die Windows-Einstellungen des Zielcomputers, bevor neue Images erstellt werden. Erfassen Sie so den Computernamen, Benutzer- und Unternehmensinformationen sowie Zeitzoneneinstellungen.|  
 |Netzwerkeinstellungen erfassen|Mithilfe dieses Tasksequenzschritts können Sie Netzwerkeinstellungen auf dem Computer erfassen, auf dem die Tasksequenz empfangen wird. Sie können die Domänen- oder Arbeitsgruppenmitgliedschaft des Computers sowie Informationen zur Netzwerkkarteneinstellung erfassen.|  
 |Benutzerdateien und Einstellungen erfassen – **(Neue Tasksequenz-Untergruppe)**|Erstellen Sie eine Tasksequenzgruppe innerhalb einer anderen Tasksequenzgruppe. Diese Untergruppe enthält die Schritte zum Erfassen von Benutzerstatusdaten auf dem Zielcomputer, bevor neue Images erstellt werden. Ähnlich der ersten Gruppe, die Sie hinzugefügt haben, gruppiert diese Untergruppe ähnliche Tasksequenzschritte, wodurch die Organisation verbessert und Fehler vermieden werden.|  
-|Lokalen Statusspeicherort festlegen|Mithilfe dieses Tasksequenzschritts können Sie einen lokalen Speicherort unter Verwendung der Tasksequenzvariablen für den geschützten Pfad angeben. Der Benutzerstatus wird in einem geschützten Verzeichnis auf der Festplatte gespeichert.|  
-|Benutzerstatus erfassen|Mithilfe dieses Tasksequenzschritts können Sie die Benutzerdateien und Einstellungen erfassen, die zum neuen Betriebssystem migriert werden sollen.|  
+|Lokalen Zustandsspeicherort festlegen|Mithilfe dieses Tasksequenzschritts können Sie einen lokalen Speicherort unter Verwendung der Tasksequenzvariablen für den geschützten Pfad angeben. Der Benutzerzustand wird in einem geschützten Verzeichnis auf der Festplatte gespeichert.|  
+|Benutzerzustand erfassen|Mithilfe dieses Tasksequenzschritts können Sie die Benutzerdateien und Einstellungen erfassen, die zum neuen Betriebssystem migriert werden sollen.|  
 |Betriebssystem installieren – **(Neue Tasksequenzgruppe)**|Erstellen Sie eine weitere Untergruppe der Tasksequenz. Diese Untergruppe enthält die zum Installieren des Betriebssystems erforderlichen Schritte.|  
 |Neustart mit Windows PE oder Festplatte ausführen|Mithilfe dieses Tasksequenzschritts können Sie die Neustartoptionen für den Computer angeben, auf dem diese Tasksequenz empfangen wird. In diesem Schritt wird dem Benutzer eine Meldung angezeigt, dass der Computer neu gestartet wird, um die Installation fortzusetzen.<br /><br /> In diesem Schritt wird die schreibgeschützte Tasksequenzvariable **_SMSTSInWinPE** verwendet. Wenn der Variablen der Wert **false** zugeordnet ist, wird der Tasksequenzschritt fortgesetzt.|  
 |Betriebssystem anwenden|Mithilfe dieses Tasksequenzschritts können Sie das Betriebssystemabbild auf dem Zielcomputer installieren. In diesem Schritt werden alle Dateien auf diesem Volume mit Ausnahme von Configuration Manager-spezifischen Steuerelementdateien gelöscht. Anschließend werden alle in der WIM-Datei enthaltenen Volumeimages auf das entsprechende sequenzielle Datenträgervolume angewendet. Sie können auch durch Angeben einer **sysprep**-Antwortdatei konfigurieren, welche Festplattenpartition für die Installation verwendet wird.|  
@@ -178,4 +171,4 @@ Sie müssen für die vom Assistenten zum Erstellen von Tasksequenzmedien erstell
 |Betriebssystem einrichten – **(Neue Tasksequenzgruppe)**|Erstellen Sie eine weitere Untergruppe der Tasksequenz. Diese Untergruppe enthält die zum Installieren des Configuration Manager-Clients erforderlichen Schritte.|  
 |Windows und ConfigMgr einrichten|Mit diesem Tasksequenzschritt können Sie die Configuration Manager-Clientsoftware installieren. Mit dem Configuration Manager wird die GUID des Configuration Manager-Clients installiert und registriert. Sie können die erforderlichen Installationsparameter im Fenster **Installationseinstellungen** zuweisen.|  
 |Benutzerdateien und Einstellungen wiederherstellen – **(Neue Tasksequenz-Untergruppe)**|Erstellen Sie eine weitere Untergruppe der Tasksequenz. Diese Untergruppe enthält die zum Wiederherstellen des Benutzerstatus erforderlichen Schritte.|  
-|Benutzerstatus wiederherstellen|Verwenden Sie diesen Tasksequenzschritt zum Initiieren des Migrationstools für den Benutzerstatus (USMT). USMT stellt den Benutzerstatus und Einstellungen wieder her, die zuvor mit dem Schritt zum Erfassen des Benutzerstatus auf dem Zielcomputer erfasst wurden.|  
+|Benutzerzustand wiederherstellen|Verwenden Sie diesen Tasksequenzschritt zum Initiieren des Migrationstools für den Benutzerstatus (USMT). USMT stellt den Benutzerstatus und Einstellungen wieder her, die zuvor mit dem Schritt zum Erfassen des Benutzerstatus auf dem Zielcomputer erfasst wurden.|  

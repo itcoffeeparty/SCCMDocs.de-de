@@ -1,30 +1,26 @@
 ---
 title: Funktionen in Technical Preview 1704
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr über Funktionen, die in System Center Configuration Manager Technical Preview 1704 zur Verfügung stehen."
-ms.custom: na
+description: Erfahren Sie mehr über Funktionen, die in System Center Configuration Manager Technical Preview 1704 zur Verfügung stehen.
 ms.date: 4/21/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e318e705-20f2-417d-8cde-7dfe661b2fa7
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 9151d2e60bbdc3ac4c34bde17f02fc956cb005b1
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b86b1a4b8400be29f9b4c468c280fdd0a47385c3
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1704-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1704 für System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Technical Preview)*
 
-In diesem Artikel werden die Funktionen erläutert, die in Technical Preview für System Center Configuration Manager, Version 1704, zur Verfügung stehen. Sie können diese Version installieren, um neue Funktionen für Ihren Configuration Manager Technical Preview-Standort zu aktualisieren oder hinzuzufügen. Bevor Sie diese Version der Technical Preview installieren, lesen Sie das einführende Thema [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md), um sich mit den allgemeinen Anforderungen und Einschränkungen bei der Verwendung einer Technical Preview vertraut zu machen, und zu erfahren, wie Sie Updates zwischen Versionen durchführen und Feedback zu den Features in einer Technical Preview geben können.    
+In diesem Artikel werden die Funktionen erläutert, die in Technical Preview für System Center Configuration Manager, Version 1704, zur Verfügung stehen. Sie können diese Version installieren, um neue Funktionen für Ihren Configuration Manager Technical Preview-Standort zu aktualisieren oder hinzuzufügen. Bevor Sie diese Version der Technical Preview installieren, lesen Sie das einführende Thema [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md), um sich mit den allgemeinen Anforderungen und Einschränkungen bei der Verwendung einer Technical Preview vertraut zu machen, und zu erfahren, wie Sie Updates für Versionen durchführen und Feedback zu den Features in einer Technical Preview geben können.    
 
 
 **Im Folgenden werden neue Features aufgelistet, die Sie mit dieser Version ausprobieren können.**  

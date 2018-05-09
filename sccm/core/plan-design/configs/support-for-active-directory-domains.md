@@ -1,26 +1,20 @@
 ---
-title: "Unterstützte Active Directory-Domänen"
+title: Unterstützte Active Directory-Domänen
 titleSuffix: Configuration Manager
-description: "Rufen Sie die Anforderungen für die Mitgliedschaft eines System Center Configuration Manager-Standortsystems in einer Active Directory-Domäne ab."
-ms.custom: na
+description: Rufen Sie die Anforderungen für die Mitgliedschaft eines System Center Configuration Manager-Standortsystems in einer Active Directory-Domäne ab.
 ms.date: 9/18/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8c5a13f8-42d5-4898-b7b6-e594dae8b335
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 7ec8d6f3a37f48e7dc6032af5b30fb452171d14c
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: dcb0f5e82d0ef53524e9abfdb974605e3ae73db3
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supported-active-directory-domains-for-system-center-configuration-manager"></a>Unterstützte Active Directory-Domänen für System Center Configuration Manager
 
@@ -45,7 +39,7 @@ Sie müssen die Standortsystemrolle (einschließlich des Standorts bei einem Sta
 **Domänen mit den folgenden Domänenfunktionsebenen werden unterstützt:**  
 - Windows Server 2016
 
-- Windows Server 2012 R2  
+- Windows Server 2012 R2  
 
 - Windows Server 2012
 

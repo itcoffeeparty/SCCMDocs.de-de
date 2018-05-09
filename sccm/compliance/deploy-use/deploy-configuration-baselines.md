@@ -1,26 +1,20 @@
 ---
 title: Bereitstellen von Konfigurationsbaselines
 titleSuffix: Configuration Manager
-description: "Stellen Sie Konfigurationsbaselines bereit, um Bereitstellungen von Konfigurationsbaselines zu definieren und um Konfigurationsbaselines zu Bereitstellungen hinzuzufügen oder aus diesen zu entfernen."
-ms.custom: na
+description: Stellen Sie Konfigurationsbaselines bereit, um Bereitstellungen von Konfigurationsbaselines zu definieren und um Konfigurationsbaselines zu Bereitstellungen hinzuzufügen oder aus diesen zu entfernen.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 9be8aaf3-075e-4acd-abd2-7459254e16e2
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: e61314c5c10f4a4c9eda1f0a292cb5a9c72b32bb
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: c55382bf1fc377fd7e86f433a0cb92a5240eafa1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-deploy-configuration-baselines-in-system-center-configuration-manager"></a>Bereitstellen von Konfigurationsbasislinien in System Center Configuration Manager
 

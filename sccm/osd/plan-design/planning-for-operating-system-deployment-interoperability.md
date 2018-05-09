@@ -2,31 +2,25 @@
 title: Planen der Interoperabilität der Betriebssystembereitstellung
 titleSuffix: Configuration Manager
 description: Grundlegendes zu Interoperabilitätsproblemen, wenn verschiedene System Center Configuration Manager-Standorte in einer einzelnen Hierarchie verschiedene Versionen verwenden.
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: e327ce38-6c07-4a27-b6eb-7e5bf74ed04b
-caps.latest.revision: 10
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 41c7c83602f965cd4a225d38a00b90501206de45
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 4faaae2d261837043b8b6ec208dd8b53b2a97b15
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="planning-for-operating-system-deployment-interoperability-in-system-center-configuration-manager"></a>Planen der Interoperabilität der Betriebssystembereitstellung in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Wenn verschiedene System Center Configuration Manager-Standorte in einer einzelnen Hierarchie verschiedene Versionen verwenden, sind einige Configuration Manager-Funktionen nicht verfügbar. Normalerweise sind Funktionen aus neueren Configuration Manager-Versionen für Standorte oder Clients mit einer niedrigeren Version nicht verfügbar. Weitere Informationen finden Sie unter [Interoperabilität zwischen verschiedenen Versionen von System Center Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md).  
+Wenn verschiedene System Center Configuration Manager-Standorte in einer einzelnen Hierarchie verschiedene Versionen verwenden, sind einige Configuration Manager-Funktionen nicht verfügbar. Normalerweise sind Funktionen aus neueren Configuration Manager-Versionen für Standorte oder Clients mit einer niedrigeren Version nicht verfügbar. Weitere Informationen finden Sie unter [Interoperability between different versions of System Center Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md).  
 
  Berücksichtigen Sie Folgendes beim Upgrade des Standorts der obersten Ebene in Ihrer Hierarchie, wenn andere Standorte in Ihrer Hierarchie Configuration Manager in einer niedrigeren Version ausführen:  
 

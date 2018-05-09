@@ -1,28 +1,21 @@
 ---
 title: Importieren von SCAP-Kompatibilitätseinstellungen
-titleSuffix: System Center Configuration Manager
+titleSuffix: Configuraton Manager
 description: Importieren von SCAP-Kompatibilitätseinstellungen als Konfigurationsbaselines und Exportieren der Ergebnisse
-ms.custom: na
 ms.date: 03/27/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 0bdcb018-bac2-4540-b786-6242bac73ff4
-caps.latest.revision: 1
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: 5863f8b9a79e8e22e215e9feac7744b4a6ce279d
-ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
+ms.openlocfilehash: 1f6b1fa0dd0775083eff9925a65509083b3f47d3
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="import-the-compliance-settings-compliant-cab-files-into-system-center-configuration-manager"></a>Importieren der konformen CAB-Dateien für Konformitätseinstellungen in System Center Configuration Manager
 
@@ -74,7 +67,7 @@ So weisen Sie einer Computersammlung eine Konfigurationsbaseline zu:
 
 1. Öffnen Sie die **Configuration Manager**-**Konsole**.
 
-2. Wechseln Sie in der **Configuration Manager-Konsole im Navigationsbereich zu **Bestand und Kompatibilität** > **Konformitätseinstellungen** >**Konfigurationsbaselines**.
+2. Wechseln Sie in der **Configuration Manager-Konsole im Navigationsbereich zu **Bestand und Kompatibilität** > **Konformitätseinstellungen** >** Konfigurationsbaselines**.
 3. Klicken Sie im Navigationsbereich auf &lt; **configuration\_baseline>. Dabei ist &lt;_configuration\_baseline&gt;_ der Name der Konfigurationsbaseline, die einer Computersammlung zugewiesen werden soll.
 
     Die Liste der Konfigurationselemente für die Konfigurationsbasislinie wird im Informationsbereich von Configuration Manager angezeigt.

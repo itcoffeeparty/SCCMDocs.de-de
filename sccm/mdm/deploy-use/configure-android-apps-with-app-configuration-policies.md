@@ -2,26 +2,19 @@
 title: Konfigurieren von Android for Work-Apps mit Konfigurationsrichtlinien für Apps
 titleSuffix: Configuration Manager
 description: Vermeiden Sie Konfigurationsprobleme auf Geräten, die Android for Work ausführen, indem Sie Benutzern Richtlinien zur Konfiguration von Apps bereitstellen, bevor die Benutzer Apps ausführen.
-ms.custom: na
 ms.date: 09/12/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 9126d188-7780-45a4-b21d-7fcf4fad7da2
-caps.latest.revision: 0
-caps.handback.revision: 0
-author: NathBarn
-ms.author: NathBarn
-manager: angrobe
-ms.openlocfilehash: 0b1d4993e6ddb2301121a1e32b1672425e919dea
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 79ab2548453c84cfff7450574ed46562d7c1a005
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="apply-settings-to-android-for-work-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>Anwenden von Einstellungen für Android for Work-Apps mit App-Konfigurationsrichtlinien in System Center Configuration Manager
 

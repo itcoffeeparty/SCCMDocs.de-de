@@ -1,26 +1,20 @@
 ---
 title: Hotfixinstallationsprogramm
 titleSuffix: Configuration Manager
-description: "Hier erfahren Sie, wann und wie Updates über das Hotfixinstallationsprogramm für Configuration Manager installiert werden."
-ms.custom: na
+description: Hier erfahren Sie, wann und wie Updates über das Hotfixinstallationsprogramm für Configuration Manager installiert werden.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 0ed8399c080994745f79f58818781e9d32be7e48
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 5c90889861db55a27da897e709b16b66edece08a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-system-center-configuration-manager"></a>Verwenden des Hotfixinstallationsprogramms zum Installieren von Updates für System Center Configuration Manager
 
@@ -80,10 +74,10 @@ Vom Assistenten werden auch Bereitstellungen erstellt, mit denen Sie die Updates
 
 |Datei|Details|  
 |----------|-------------|  
-|&lt;Produktversion\>-QFE-KB&lt;KB-Artikel-ID\>-&lt;Plattform\>-&lt;Sprache\>.exe|Dies ist die Updatedatei. Die Befehlszeile für diese Datei wird von Updatesetup.exe verwaltet.<br /><br /> Beispiel:<br />CM1511RTM-QFE-KB123456-X64-ENU.exe|  
+|&lt;Produktversion\>-QFE-KB&lt;KB-Artikel-ID\>-&lt;Plattform\>-&lt;Sprache\>.exe|Dies ist die Updatedatei. Die Befehlszeile für diese Datei wird von Updatesetup.exe verwaltet.<br /><br /> Zum Beispiel:<br />CM1511RTM-QFE-KB123456-X64-ENU.exe|  
 |Updatesetup.exe|Dieser MSI-Wrapper dient dazu, die Installation des Updatepakets zu verwalten.<br /><br /> Bei der Ausführung des Updates wird die Anzeigesprache des jeweiligen Computers von Updatesetup.exe erkannt. Die Benutzeroberfläche für das Update ist standardmäßig englisch. Wenn aber die Anzeigesprache unterstützt wird, wird die Benutzeroberfläche in der lokalen Sprache des Computers angezeigt.|  
 |License_&lt;Sprache\>.rtf|Jedes Update enthält mindestens eine Lizenzdatei für unterstützte Sprachen, sofern zutreffend.|  
-|&lt;Produkt&Updatetyp>-&lt;Produktversion\>-&lt;KB-Artikel-ID\>-&lt;Plattform\>.msp|Wenn das Update für die Configuration Manager-Konsole oder Clients gilt, enthält das Updatepaket separate Windows Installer-Patchdateien (MSP).<br /><br /> Beispiel:<br /><br /> **Configuration Manager-Konsolenupdate:** ConfigMgr1511-AdminUI-KB1234567-i386.msp<br /><br /> **Clientupdate:** ConfigMgr1511-client-KB1234567-i386.msp<br />ConfigMgr1511-client-KB1234567-x64.msp|  
+|&lt;Produkt&Updatetyp>-&lt;Produktversion\>-&lt;KB-Artikel-ID\>-&lt;Plattform\>.msp|Wenn das Update für die Configuration Manager-Konsole oder Clients gilt, enthält das Updatepaket separate Windows Installer-Patchdateien (MSP).<br /><br /> Zum Beispiel:<br /><br /> **Configuration Manager-Konsolenupdate:** ConfigMgr1511-AdminUI-KB1234567-i386.msp<br /><br /> **Clientupdate:** ConfigMgr1511-client-KB1234567-i386.msp<br />ConfigMgr1511-client-KB1234567-x64.msp|  
 
  Die Aktionen des Updatepakets werden standardmäßig in einer LOG-Datei auf dem Standortserver erfasst. Die Protokolldatei trägt den gleichen Namen wie das Updatepaket und wird im Ordner **%SystemRoot%/Temp** abgelegt.  
 
@@ -241,7 +235,7 @@ Beispiel: Sie können die folgende Befehlszeile für ein Update der Configuratio
 >  Das Paket für Server enthält Updates für die folgenden Komponenten:  
 >   
 >  -   Standortserver  
->  -   SMS-Anbieters  
+>  -   SMS-Anbieter  
 >  -   Standortdatenbank  
 
  Wählen Sie als Nächstes auf der Seite **Methode der Softwareupdatebereitstellung konfigurieren** des Assistenten die Option **Ich verwende die Softwareverteilung**aus. Aufgrund dieser Auswahl erstellt der Assistent die Softwarebereitstellungspakete.  

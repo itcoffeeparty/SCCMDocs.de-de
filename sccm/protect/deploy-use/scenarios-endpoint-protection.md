@@ -2,24 +2,19 @@
 title: 'Szenario: Endpoint Protection schützt Computer vor Schadsoftware'
 titleSuffix: Configuration Manager
 description: Erfahren Sie mehr über das Implementieren von Endpoint Protection in Configuration Manager, um Computer vor Angriffen durch Schadsoftware zu schützen.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 539c7a89-3c03-4571-9cb4-02d455064eeb
-caps.latest.revision: 8
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: doubeby
-ms.openlocfilehash: 36f63a585fdcdc00d6ace9ea1ac6941aead5fce2
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 40fe2c9e16c2828b2c575e8401a80f3cf2eac969
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="example-scenario-using-system-center-endpoint-protection-to-protect-computers-from-malware-in-system-center-configuration-manager"></a>Beispielszenario: Verwenden von Endpoint Protection zum Schutz von Computern vor Schadsoftware in System Center Configuration Manager
 
@@ -60,7 +55,7 @@ Dieser Artikel enthält ein Beispielszenario zur Implementierung von Endpoint Pr
 |John installiert die Endpoint Protection-Standortsystemrolle nur auf einem Standortsystemserver, der sich in der Hierarchie der Woodgrove Bank an höchster Stelle befindet.|Weitere Informationen zum Installieren der Endpoint Protection-Standortsystemrolle finden Sie unter „Voraussetzungen“ in [Konfigurieren von Endpoint Protection](configure-endpoint-protection.md).|  
 |John konfiguriert Configuration Manager für die Verwendung eines SMTP-Servers zum Senden der E-Mail-Warnungen.<br /><br /> **Hinweis**: Ein SMTP-Server muss nur konfiguriert werden, wenn Sie per E-Mail benachrichtigt werden möchten, falls eine Endpoint Protection-Warnung generiert wird.|Weitere Informationen finden Sie unter [Configure alerts in Endpoint Protection (Konfigurieren von Warnungen in Endpoint Protection)](endpoint-configure-alerts.md).|  
 |John erstellt eine Gerätesammlung, die alle Computer und Server für die Installation des Endpoint Protection-Clients enthält. Er weist dieser Sammlung den Namen **Alle durch Endpoint Protection geschützten Computer** zu.<br /><br /> **Tipp:** Es können keine Warnungen für Benutzersammlungen konfiguriert werden.|Weitere Informationen zum Erstellen von Sammlungen finden Sie unter [Erstellen von Sammlungen in System Center Configuration Manager](../../core/clients/manage/collections/create-collections.md)|  
-|Er konfiguriert die folgenden Warnungen für die Sammlung: <br /><br />1) **Schadsoftware wurde erkannt:** John konfiguriert den Warnungsschweregrad **Kritisch**. <br /><br />2) **Derselbe Schadsoftwaretyp wird auf mehreren Computern erkannt:** John konfiguriert den Warnungsschweregrad **Kritisch** und legt fest, dass die Warnung generiert wird, wenn auf mehr als fünf Prozent der Computer Schadsoftware entdeckt wurde. <br /><br />3) **Derselbe Schadsoftwaretyp wird im angegebenen Intervall wiederholt auf einem Computer erkannt:** John konfiguriert den Warnungsschweregrad **Kritisch** und legt fest, dass die Warnung generiert wird, wenn in einem Zeitraum von 24 Stunden mehr als fünfmal Schadsoftware erkannt wurde. <br /><br />4) **Verschiedene Schadsoftwaretypen wurden innerhalb eines angegebenen Intervalls auf demselben Computer erkannt:** John konfiguriert den Warnungsschweregrad **Kritisch** und legt fest, dass die Warnung generiert wird, wenn in einem Zeitraum von 24 Stunden mehr als drei Arten von Schadsoftware erkannt wurden.<br /><br /> Der Wert für **Warnungsschweregrad** gibt die Warnungsebene an, die in der Configuration Manager-Konsole und in Warnungen angezeigt wird, die er in einer E-Mail empfängt.<br /><br /> Außerdem aktiviert er die Option **Diese Sammlung im Endpoint Protection-Dashboard anzeigen**, damit er die Warnungen in der Configuration Manager-Konsole überwachen kann.|Weitere Informationen finden Sie unter „Konfigurieren von Warnungen für Endpoint Protection“ in [Konfigurieren von Endpoint Protection in System Center Configuration Manager](endpoint-configure-alerts.md).|  
+|Er konfiguriert die folgenden Warnungen für die Sammlung: <br /><br />1) **Schadsoftware wurde erkannt**: John konfiguriert den Warnungsschweregrad **Kritisch**. <br /><br />2) **Derselbe Schadsoftwaretyp wird auf mehreren Computern erkannt:** John konfiguriert den Warnungsschweregrad **Kritisch** und legt fest, dass die Warnung generiert wird, wenn auf mehr als fünf Prozent der Computer Schadsoftware entdeckt wurde. <br /><br />3) **Derselbe Schadsoftwaretyp wird im angegebenen Intervall wiederholt auf einem Computer erkannt:** John konfiguriert den Warnungsschweregrad **Kritisch** und legt fest, dass die Warnung generiert wird, wenn in einem Zeitraum von 24 Stunden mehr als fünfmal Schadsoftware erkannt wurde. <br /><br />4) **Verschiedene Schadsoftwaretypen wurden innerhalb eines angegebenen Intervalls auf demselben Computer erkannt:** John konfiguriert den Warnungsschweregrad **Kritisch** und legt fest, dass die Warnung generiert wird, wenn in einem Zeitraum von 24 Stunden mehr als drei Arten von Schadsoftware erkannt wurden.<br /><br /> Der Wert für **Warnungsschweregrad** gibt die Warnungsebene an, die in der Configuration Manager-Konsole und in Warnungen angezeigt wird, die er in einer E-Mail empfängt.<br /><br /> Außerdem aktiviert er die Option **Diese Sammlung im Endpoint Protection-Dashboard anzeigen**, damit er die Warnungen in der Configuration Manager-Konsole überwachen kann.|Weitere Informationen finden Sie unter „Konfigurieren von Warnungen für Endpoint Protection“ in [Konfigurieren von Endpoint Protection in System Center Configuration Manager](endpoint-configure-alerts.md).|  
 |John konfiguriert Configuration Manager-Softwareupdates, um drei Mal täglich mithilfe einer automatischen Bereitstellungsregel Definitionsupdates herunterzuladen und bereitzustellen.|Weitere Informationen finden Sie unter „Verwenden von Configuration Manager-Softwareupdates zum Bereitstellen von Definitionsupdates“ in [Use Configuration Manager software updates to deliver definition updates (Verwenden von Configuration Manager-Softwareupdates zum Bereitstellen von Definitionsupdates)](endpoint-definitions-configmgr.md).|  
 |John überprüft die Einstellungen in der Standardrichtlinie für Antischadsoftware, die von Microsoft empfohlene Sicherheitseinstellungen enthält. Damit Computer täglich eine schnelle Überprüfung durchführen können, ändert er die folgenden Einstellungen:<br /><br /> 1) **Täglich eine Schnellüberprüfung auf Clientcomputern ausführen**: **Ja**.<br /><br /> 2) **Geplante Zeit für tägliche Schnellüberprüfung**: **9:00 Uhr**.<br /><br /> John bemerkt, dass **Von Microsoft Update verteilte Updates** standardmäßig als Quelle von Definitionsupdates ausgewählt ist. Dies erfüllt die Unternehmensanforderung, dass Computer Definitionen von Microsoft Update herunterladen, wenn sie keine Configuration Manager-Softwareupdates empfangen können.|Siehe [Erstellen und Bereitstellen von Richtlinien für Antischadsoftware für Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).|  
 |John erstellt eine Sammlung, die nur die Woodgrove Bank-Server namens **Woodgrove Bank-Server**enthält.|Informationen hierzu finden Sie unter [Erstellen von Sammlungen in System Center Configuration Manager](../../core/clients/manage/collections/create-collections.md).|  

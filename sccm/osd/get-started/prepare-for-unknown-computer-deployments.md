@@ -1,26 +1,20 @@
 ---
-title: "Vorbereiten auf Bereitstellungen für unbekannte Computer"
+title: Vorbereiten auf Bereitstellungen für unbekannte Computer
 titleSuffix: Configuration Manager
 description: Erfahren Sie, wie Sie Betriebssysteme auf Computern bereitstellen, die nicht von Configuration Manager in der System Center Configuration Manager-Umgebung verwaltet werden.
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e447e34-0943-49ed-b6ba-3efebf3566c1
-caps.latest.revision: "10"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: e3196bede5f069ae5012624b3ecaaf68713d9fe0
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 425ab566b5ddbfaad775d61609c0a4ccd98e96d0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepare-for-unknown-computer-deployments-in-system-center-configuration-manager"></a>Vorbereiten auf Bereitstellungen für unbekannte Computer in System Center Configuration Manager
 

@@ -2,25 +2,19 @@
 title: Einführung in Zertifikatprofile
 titleSuffix: Configuration Manager
 description: Erfahren Sie, wie Zertifikatprofile in System Center Configuration Manager mit den Active Directory-Zertifikatdiensten funktionieren.
-ms.custom: na
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
-caps.latest.revision: 7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0e82c9704c0505c8c7ed9ef3d04260ca74026999
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: c4230b935b7fabc44743d57fcb2315348edb4274
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-certificate-profiles-in-system-center-configuration-manager"></a>Einführung in Zertifikatprofile in System Center Configuration Manager
 
@@ -59,7 +53,7 @@ Zertifikatprofile bieten die folgenden Verwaltungsfunktionen:
     Sie können PFX-Zertifikatprofile erstellen, indem Sie entweder aus bestehenden Zertifikaten [Anmeldeinformationen importieren](/sccm/mdm/deploy-use/import-pfx-certificate-profiles) oder für die Bearbeitung von Anfragen [eine Zertifizierungsstelle definieren](/sccm/mdm/deploy-use/create-pfx-certificate-profiles).
 
     > [!Note]  
-    > Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen diese Feature aktivieren, bevor Sie es verwenden. Weitere Informationen finden Sie unter [Enable optional features from updates (Aktivieren optionaler Features von Updates)](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+    > Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen dieses Feature aktivieren, bevor Sie es verwenden. Weitere Informationen finden Sie unter [Enable optional features from updates (Aktivieren optionaler Features von Updates)](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
     Ab Version 1706 können Sie Microsoft oder Entrust als Zertifizierungsstelle für **PFX-Zertifikate (Personal information exchange)** nutzen.
 

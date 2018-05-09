@@ -1,25 +1,20 @@
 ---
-title: "Überwachen von Anwendungen in der Konsole"
+title: Überwachen von Anwendungen in der Konsole
 titleSuffix: Configuration Manager
-description: "Überwachen Sie die Bereitstellung von Software, einschließlich Updates, Kompatibilitätseinstellungen und Anwendungen, mithilfe des Arbeitsbereichs „Überwachung“ in Configuration Manager."
-ms.custom: na
+description: Überwachen Sie die Bereitstellung von Software, einschließlich Updates, Konformitätseinstellungen und Anwendungen, mithilfe des Arbeitsbereichs „Überwachung“ in Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 784c295c-b8b8-4202-ab9f-665908d49d6d
-caps.latest.revision: "5"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 015f4410f576fac90d913abfa30064b2eecb2a5b
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 4aed4ecda35fded9314ae54b6601deb6f8e07197
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-applications-from-the-system-center-configuration-manager-console"></a>Überwachen von Anwendungen in der System Center Configuration Manager-Konsole
 
@@ -31,7 +26,7 @@ Sie können in System Center Configuration Manager die Bereitstellung der gesamt
  Für Anwendungen in Configuration Manager wird eine zustandsbasierte Überwachung unterstützt, womit Sie den letzten Anwendungsbereitstellungszustand für Benutzer und Geräte nachverfolgen können. In diesen Zustandsmeldungen werden Informationen über einzelne Geräte angegeben. Wenn beispielsweise eine Anwendung für eine Sammlung von Benutzern bereitgestellt wird, können Sie den Kompatibilitätszustand und den Zweck der Bereitstellung in der Configuration Manager-Konsole anzeigen.  
 
 ## <a name="learn-about-compliance-states-in-system-center-configuration-manager"></a>Erfahren Sie mehr über Konformitätszustände des System Center Configuration Manager
- Für einen Anwendungsbereitstellungszustand wird einer der folgenden Kompatibilitätszustände angezeigt:  
+ Für einen Anwendungsbereitstellungszustand wird einer der folgenden Konformitätszustände angezeigt:  
 
 -   **Erfolg** : Die Anwendung wurde erfolgreich bereitgestellt oder war bereits installiert.  
 
@@ -43,7 +38,7 @@ Sie können in System Center Configuration Manager die Bereitstellung der gesamt
 
 -   **Fehler** : Bei der Bereitstellung der Anwendung ist ein Fehler aufgetreten.  
 
-Sie können für jeden Konformitätszustand zusätzliche Informationen anzeigen, wie zum Beispiel Unterkategorien im Konformitätszustand oder die Anzahl der Benutzer und Geräte in dieser Kategorie. Der Kompatibilitätszustand **Fehler** enthält beispielsweise die folgenden Unterkategorien:  
+Sie können für jeden Konformitätszustand zusätzliche Informationen anzeigen, wie zum Beispiel Unterkategorien im Konformitätszustand oder die Anzahl der Benutzer und Geräte in dieser Kategorie. Der Konformitätszustand **Fehler** enthält beispielsweise die folgenden Unterkategorien:  
 
 -   Fehler beim Auswerten von Anforderungen  
 
@@ -51,7 +46,7 @@ Sie können für jeden Konformitätszustand zusätzliche Informationen anzeigen,
 
 -   Installationsfehler  
 
- Wenn auf eine Anwendungsbereitstellung mehrere Kompatibilitätszustände zutreffen, wird der aggregierte Zustand mit der geringsten Kompatibilität angezeigt. Beispiel:  
+ Wenn auf eine Anwendungsbereitstellung mehrere Kompatibilitätszustände zutreffen, wird der aggregierte Zustand mit der geringsten Kompatibilität angezeigt. Zum Beispiel:  
 
     -   Wenn ein Benutzer sich auf zwei Geräten anmeldet und die Anwendung auf einem Gerät erfolgreich ist, auf dem anderen dagegen ein Fehler auftritt, wird für diesen Benutzer der Aggregatzustand **Fehler**für die Anwendungsbereitstellung angezeigt.  
 
@@ -59,7 +54,7 @@ Sie können für jeden Konformitätszustand zusätzliche Informationen anzeigen,
 
 Der Bereitstellungszustand für Paket- und Programmbereitstellungen wird nicht aggregiert.  
 
- Mithilfe dieser Unterkategorien können Sie Probleme bei der Anwendungsbereitstellung schnell identifizieren. Sie können außerdem zusätzliche Informationen zu den Geräten anzeigen, die zu einer bestimmten Unterkategorie eines Kompatibilitätszustands gehören.  
+ Mithilfe dieser Unterkategorien können Sie Probleme bei der Anwendungsbereitstellung schnell identifizieren. Sie können außerdem zusätzliche Informationen zu den Geräten anzeigen, die zu einer bestimmten Unterkategorie eines Konformitätszustands gehören.  
 
  Die Anwendungsverwaltung in Configuration Manager umfasst mehrere integrierte Berichte, mit deren Hilfe Daten zu Anwendungen und Bereitstellungen überwacht werden können. Die Berichte gehören zur Berichtkategorie **Softwareverteilung – Anwendungsüberwachung**.  
 
@@ -69,7 +64,7 @@ Der Bereitstellungszustand für Paket- und Programmbereitstellungen wird nicht a
 
 1.  Wählen Sie in der Configuration Manager-Konsole die Optionen **Überwachung** > **Bereitstellungen** aus.  
 
-3.  Wenn Sie die Bereitstellungsdetails für jeden Konformitätszustand und die Geräte in diesem Zustand überprüfen möchten, wählen Sie eine Bereitstellung aus, und klicken Sie dann auf der Registerkarte **Startseite** in der Gruppe **Bereitstellung** auf **Status anzeigen**, um den Bereich **Bereitstellungsstatus** anzuzeigen. In diesem Bereich können Sie für alle Kompatibilitätszustände anzeigen, welche Bestände den jeweiligen Zustand aufweisen. Wählen Sie einen Bestand aus, um detaillierte Informationen zu dessen Bereitstellungsstatus anzuzeigen.  
+3.  Wenn Sie die Bereitstellungsdetails für jeden Konformitätszustand und die Geräte in diesem Zustand überprüfen möchten, wählen Sie eine Bereitstellung aus, und klicken Sie dann auf der Registerkarte **Startseite** in der Gruppe **Bereitstellung** auf **Status anzeigen**, um den Bereich **Bereitstellungsstatus** anzuzeigen. In diesem Bereich können Sie für alle Konformitätszustände anzeigen, welche Bestände den jeweiligen Zustand aufweisen. Wählen Sie einen Bestand aus, um detaillierte Informationen zu dessen Bereitstellungsstatus anzuzeigen.  
 
     > [!NOTE]  
     >  Im Bereich **Bereitstellungsstatus** können maximal 20.000 Elemente angezeigt werden. Verwenden Sie Configuration Manager-Berichte, um Anwendungsstatusdaten zu einer größeren Anzahl von Elementen anzuzeigen.  

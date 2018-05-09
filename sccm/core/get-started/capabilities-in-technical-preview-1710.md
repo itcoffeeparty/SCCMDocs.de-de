@@ -1,24 +1,20 @@
 ---
 title: Technical Preview 1710 | Microsoft-Dokumentation
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr über die Funktionen, die in der Technical Preview-Version 1710 für System Center Configuration Manager zur Verfügung stehen."
-ms.custom: na
+description: Erfahren Sie mehr über die Funktionen, die in der Technical Preview-Version 1710 für System Center Configuration Manager zur Verfügung stehen.
 ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f4706a58-1f11-4eab-b1eb-3d1a0da02d0f
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: ed5f977df79114e1209cd3cc82d2e56e8e728c3d
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 730d14c5985c088d964761bb83043f3a34924486
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1710-for-system-center-configuration-manager"></a>Funktionen in der Technical Preview-Version 1710 für System Center Configuration Manager
 
@@ -42,7 +38,7 @@ In diesem Artikel werden die Funktionen vorgestellt, die in der Technical Previe
   3. Klicken Sie mit der rechten Maustaste auf den Standortserver im passiven Modus, und wählen Sie dann **Löschen**.
   4. Starten Sie nach dem Deinstallieren des Standortservers auf dem aktiven primären Standortserver den Dienst **CONFIGURATION_MANAGER_UPDATE** neu.
 
-**Im Folgenden werden neue Funktionen aufgelistet, die Sie mit dieser Version ausprobieren können.**  
+**Im Folgenden werden neue Features aufgelistet, die Sie mit dieser Version ausprobieren können.**  
 
 <!--  Section Template
 ##  FEATURE
@@ -104,7 +100,7 @@ Konformitätsinformationen für die Bereitstellung der Exploit Guard-Richtlinie 
 
 Weitere Informationen zu Exploit Guard sowie bestimmten Komponenten und Regeln finden Sie in der Windows-Dokumentationsbibliothek unter [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard).
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 Auf verwalteten Geräten muss das Windows 10 1709 Fall Creators Update oder höher ausgeführt werden, und sie müssen je nach konfigurierten Komponenten und Regeln die folgenden Anforderungen erfüllen:
 
 |Exploit Guard-Komponente |Zusätzliche Voraussetzungen|

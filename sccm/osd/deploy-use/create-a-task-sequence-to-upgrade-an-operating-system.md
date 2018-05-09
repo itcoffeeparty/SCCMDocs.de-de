@@ -2,25 +2,19 @@
 title: Erstellen einer Upgradetasksequenz für ein Betriebssystem
 titleSuffix: Configuration Manager
 description: Automatisches Upgrade von Windows 7 oder höher auf Windows 10 mithilfe einer Tasksequenz
-ms.custom: na
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
-caps.latest.revision: 12
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 48a5e7aa381924e3c0ad052833c9588e3dffa4f5
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: d35a5ea3ebde6ce6ab0934832180223c2a634541
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-operating-system-in-system-center-configuration-manager"></a>Erstellen einer Tasksequenz zum Durchführen eines Upgrades für ein Betriebssystem in System Center Configuration Manager
 
@@ -95,7 +89,7 @@ Clients können mithilfe des Features zum Vorabzwischenspeichern für verfügbar
 
 
 > [!Note]  
-> Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen diese Feature aktivieren, bevor Sie es verwenden. Weitere Informationen finden Sie unter [Enable optional features from updates (Aktivieren optionaler Features von Updates)](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+> Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen dieses Feature aktivieren, bevor Sie es verwenden. Weitere Informationen finden Sie unter [Enable optional features from updates (Aktivieren optionaler Features von Updates)](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
 
 Beispiel: Alle Benutzer sollen über eine einzige direkte Upgradetasksequenz verfügen, und es stehen viele verschiedene Architekturen und Sprachen zur Verfügung. In Vorgängerversionen startet der Download von Inhalten, wenn der Benutzer eine bereitgestellte Tasksequenz im Softwarecenter herunterlädt. Durch diese Verzögerung verzögert sich auch der Installationsstart. Alle Inhalte, auf die in der Tasksequenz verwiesen wird, werden heruntergeladen. Dieser Inhalt schließt das Ugradepaket für das Betriebssystem für alle Sprachen und Architekturen mit ein. Wenn jedes Upgradepaket in etwa eine Größe von 3 GB hat, ist der Gesamtinhalt sehr groß.

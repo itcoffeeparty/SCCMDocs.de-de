@@ -1,32 +1,27 @@
 ---
 title: Funktionen in Technical Preview 1602
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr zu Funktionen, die in System Center Configuration Manager Technical Preview 1602 zur Verfügung stehen."
-ms.custom: na
+description: Erfahren Sie mehr zu Funktionen, die in System Center Configuration Manager Technical Preview 1602 zur Verfügung stehen.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1b9265d1-b461-47f8-b7ef-885da0fdd969
-caps.latest.revision: "6"
-author: erikje
-ms.author: erikje
-manager: angrobe
+author: aczechowski
 robots: noindex,nofollow
-ms.openlocfilehash: 7771a57323857fa47688d98af499389194972000
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: eaae10b191876915517a928a3f6ee15aafba2760
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1602-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1602 für System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Technical Preview)*
 
-In diesem Artikel werden die Funktionen erläutert, die in der Technical Preview 1602 für System Center Configuration Manager verfügbar sind. Sie können diese Version installieren, um neue Funktionen für Ihren Configuration Manager Technical Preview-Standort zu aktualisieren oder hinzuzufügen. Bevor Sie diese Version der Technical Preview installieren, lesen Sie das einführende Thema [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md), um sich mit den allgemeinen Anforderungen und Einschränkungen bei der Verwendung einer Technical Preview vertraut zu machen, und zu erfahren, wie Sie Updates zwischen Versionen durchführen und Feedback zu den Features in einer Technical Preview geben können.  
+In diesem Artikel werden die Funktionen erläutert, die in der Technical Preview 1602 für System Center Configuration Manager verfügbar sind. Sie können diese Version installieren, um neue Funktionen für Ihren Configuration Manager Technical Preview-Standort zu aktualisieren oder hinzuzufügen. Bevor Sie diese Version der Technical Preview installieren, lesen Sie das einführende Thema [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md), um sich mit den allgemeinen Anforderungen und Einschränkungen bei der Verwendung einer Technical Preview vertraut zu machen, und zu erfahren, wie Sie Updates für Versionen durchführen und Feedback zu den Features in einer Technical Preview geben können.  
 
  Im Folgenden werden neue Funktionen aufgelistet, die Sie mit dieser Version ausprobieren können.  
 

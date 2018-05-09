@@ -1,25 +1,20 @@
 ---
-title: "Hardwareinventur für Linux und UNIX"
+title: Hardwareinventur für Linux und UNIX
 titleSuffix: Configuration Manager
-description: "Erfahren Sie, wie Sie Hardwareinventur für Linux und UNIX in System Center Configuration Manager verwenden."
-ms.custom: na
+description: Erfahren Sie, wie Sie Hardwareinventur für Linux und UNIX in System Center Configuration Manager verwenden.
 ms.date: 02/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
-caps.latest.revision: "6"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 6f71478f6a2a8e5a2a41068624debfe3ac3e915d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 68e60611356cbaea3dc14a42776e89ecdc951008
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hardware-inventory-for-linux-and-unix-in-system-center-configuration-manager"></a>Hardwareinventur für Linux und UNIX in System Center Configuration Manager
 
@@ -118,7 +113,7 @@ Der System Center Configuration Manager-Client für Linux und UNIX unterstützt 
      Informationen zu **omicli** und zum Testen von benutzerdefinierten Anbietern finden Sie im Handbuch zu den ersten Schritten mit OMI.  
 
 > [!TIP]  
->  Verwenden Sie die Softwareverteilung, um benutzerdefinierte Anbieter bereitzustellen und auf jedem Linux- und UNIX-Clientcomputer zu registrieren.  
+>  Verwenden Sie die Verteilung von Software zum Bereitstellen von benutzerdefinierter Providers und benutzerdefinierte Anbieter auf jedem Linux- und UNIX-Clientcomputer zu registrieren.  
 
 ###  <a name="BKMK_AddLinuxProvidertoCM"></a> Aktivieren Sie die neue Inventurklasse in Configuration Manager:  
  Bevor Configuration Manager den Bestand melden kann, der vom neuen Anbieter auf Linux- und UNIX-Computern gemeldet wird, müssen Sie die MOF-Datei (Managed Object Format) importieren, die das Schema des benutzerdefinierten Anbieters definiert.  

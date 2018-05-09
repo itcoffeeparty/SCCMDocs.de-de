@@ -1,26 +1,20 @@
 ---
-title: "Tool zum Zurücksetzen von Updates"
+title: Tool zum Zurücksetzen von Updates
 titleSuffix: Configuration Manager
-description: "Verwenden Sie das Tool zum Zurücksetzen von Updates für konsoleninterne Updates für System Center Configuration Manager."
-ms.custom: na
+description: Verwenden Sie das Tool zum Zurücksetzen von Updates für konsoleninterne Updates für System Center Configuration Manager.
 ms.date: 7/31/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 25fa89d6-7e47-45a6-8f4e-70b77560fba6
-caps.latest.revision: "0"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: cf854b1ea571991c1f070d6b3896db7861fe020f
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: e6ae6ed46cc1db5f545182e4b4f6b46374b5c174
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="update-reset-tool"></a>Tool zum Zurücksetzen von Updates
 
@@ -35,7 +29,7 @@ Der Einsatz dieses Tools ist erforderlich, wenn ein [konsoleninternes Update](/s
 
 Wenn Sie das Tool ausführen, wird es für das Update ausgeführt, das Sie angeben. Erfolgreich installierte oder heruntergeladene Updates werden von diesem Tool standardmäßig nicht gelöscht.  
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 Das Konto, das Sie verwenden, um das Tool auszuführen, benötigt die folgenden Berechtigungen:
 -   Die Berechtigungen **Lesen** und **Schreiben** für die Standortdatenbank des Standorts der zentralen Verwaltung und jeden primären Standort in Ihrer Hierarchie Zum Festlegen dieser Berechtigungen können Sie das Benutzerkonto der Configuration Manager-Datenbank an jedem Standort als Mitglied der [festen Datenbankrollen](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles) **db_datawriter** und **db_datareader** hinzufügen. Das Tool interagiert nicht mit sekundären Standorten.
 -   **Lokaler Administrator** am Standort der obersten Ebene Ihrer Hierarchie.

@@ -1,26 +1,20 @@
 ---
 title: Features und Funktionen
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr über die primären Verwaltungsfunktionen von System Center Configuration Manager."
-ms.custom: na
+description: Erfahren Sie mehr über die primären Verwaltungsfunktionen von System Center Configuration Manager.
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5d388399-07ca-431c-a9b2-56c69771aa87
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 71e1edc178e770d7c05007c258e8085a2e3fe984
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: fadc93d1977d5d066a6c4c3884bdbaeefb2a0c90
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="features-and-capabilities-of-system-center-configuration-manager"></a>Features und Funktionen von System Center Configuration Manager
 
@@ -40,7 +34,7 @@ Im Folgenden finden Sie die primären Verwaltungsfunktionen von System Center Co
 
  **Kompatibilitätseinstellungen**  
 
- Zu dieser Funktion gehören mehrere Tools und Ressourcen, mit deren Hilfe Sie die Konfigurationskompatibilität von Clientgeräten im Unternehmen bewerten, verfolgen und korrigieren können. Darüber hinaus können Sie Kompatibilitätseinstellungen verwenden, um eine Reihe von Features und Sicherheitseinstellungen auf Geräten zu konfigurieren, die Sie verwalten. Informationen hierzu finden Sie unter [Sicherstellen der Gerätekompatibilität mit System Center Configuration Manager](../../../compliance/understand/ensure-device-compliance.md).  
+ Zu dieser Funktion gehören mehrere Tools und Ressourcen, mit deren Hilfe Sie die Konfigurationskonformität von Clientgeräten im Unternehmen bewerten, verfolgen und korrigieren können. Darüber hinaus können Sie Konformitätseinstellungen verwenden, um eine Reihe von Features und Sicherheitseinstellungen auf Geräten zu konfigurieren, die Sie verwalten. Informationen hierzu finden Sie unter [Sicherstellen der Gerätekompatibilität mit System Center Configuration Manager](../../../compliance/understand/ensure-device-compliance.md).  
 
  **Endpoint Protection**  
 

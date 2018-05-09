@@ -1,26 +1,20 @@
 ---
-title: "Sicherheit und Datenschutz bei Konformitätseinstellungen"
+title: Sicherheit und Datenschutz bei Konformitätseinstellungen
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr über bewährte Sicherheitsmethoden für Kompatibilitätseinstellungen in System Center Configuration Manager."
-ms.custom: na
+description: Erfahren Sie mehr über bewährte Sicherheitsmethoden für Kompatibilitätseinstellungen in System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 1c409244-6778-4970-a99c-d2508c9cf62b
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: cba7ceff6114e19c8bf86068c7390de8c9e505e8
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 3a8b7a98746649d430388804194e0b847788c86a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-compliance-settings-in-system-center-configuration-manager"></a>Sicherheit und Datenschutz bei Kompatibilitätseinstellungen in System Center Configuration Manager
 
@@ -39,6 +33,6 @@ ms.lasthandoff: 10/12/2017
 |Überwachen Sie die Administratoren, denen die Sicherheitsrolle im Kompatibilitätseinstellungs-Manager zugewiesen wurde, und beschränken Sie ihre Anzahl.|Administratoren mit der Rolle **Kompatibilitätseinstellungs-Manager** können Konfigurationselemente für alle Geräte und Benutzer in der Hierarchie bereitstellen. Mit Konfigurationselementen kann viel bewirkt werden, und sie können beispielsweise Skripts und Neukonfigurationen der Registrierung beinhalten.|  
 
 ## <a name="privacy-information-for-compliance-settings"></a>Datenschutzinformationen zu Kompatibilitätseinstellungen  
- Sie können Kompatibilitätseinstellungen verwenden, um herauszufinden, ob Ihre Clientcomputer kompatibel mit Konfigurationselementen sind, die Sie in Konfigurationsbasislinien bereitstellen. Einige Einstellungen können automatisch korrigiert werden, wenn sie nicht kompatibel sind. Die Kompatibilitätsinformationen werden vom Verwaltungspunkt an den Standortserver gesendet und in der Standortdatenbank gespeichert. Die Informationen werden verschlüsselt, wenn sie von Geräten an den Verwaltungspunkt gesendet werden, sie werden aber nicht in einem verschlüsselten Format in der Standortdatenbank gespeichert. Die Informationen verbleiben in der Datenbank, bis sie mit dem Standortwartungstask **Veraltete Konfigurationsverwaltungsdaten löschen** jeweils nach 90 Tagen gelöscht werden. Sie können das Löschintervall konfigurieren. Die Kompatibilitätsinformationen werden nicht an Microsoft gesendet.  
+ Sie können Konformitätseinstellungen verwenden, um herauszufinden, ob Ihre Clientcomputer konform mit Konfigurationselementen sind, die Sie in Konfigurationsbasislinien bereitstellen. Einige Einstellungen können automatisch korrigiert werden, wenn sie nicht kompatibel sind. Die Kompatibilitätsinformationen werden vom Verwaltungspunkt an den Standortserver gesendet und in der Standortdatenbank gespeichert. Die Informationen werden verschlüsselt, wenn sie von Geräten an den Verwaltungspunkt gesendet werden, sie werden aber nicht in einem verschlüsselten Format in der Standortdatenbank gespeichert. Die Informationen verbleiben in der Datenbank, bis sie mit dem Standortwartungstask **Veraltete Konfigurationsverwaltungsdaten löschen** jeweils nach 90 Tagen gelöscht werden. Sie können das Löschintervall konfigurieren. Die Kompatibilitätsinformationen werden nicht an Microsoft gesendet.  
 
  Von Geräten werden standardmäßig keine Kompatibilitätseinstellungen ausgewertet. Außerdem müssen die Konfigurationselemente und Konfigurationsbasislinien konfiguriert und dann auf Geräten bereitgestellt werden.  

@@ -2,26 +2,19 @@
 title: Clienteinstellungen
 titleSuffix: Configuration Manager
 description: Informationen zu Standardeinstellungen und benutzerdefinierten Einstellungen zur Steuerung von Clientverhalten
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
-caps.latest.revision: 15
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bd03457abdd5cc4464c10227626ba72637c96f90
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+ms.openlocfilehash: a60e54ffac3ae029f07c2df555e905b55ca7b0b5
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>Informationen zu Clienteinstellungen in System Center Configuration Manager
 
@@ -714,7 +707,7 @@ Wenn Sie Dateien von Clientcomputern sammeln möchten, klicken Sie auf **Dateien
     -   **Dateisammlung beenden, wenn die Gesamtgröße der Dateien folgenden Wert (KB) überschreitet**: Geben Sie die Dateigröße (in KB) an, ab der der Client aufhört, die angegebenen Dateien zu sammeln.  
 
     > [!NOTE]  
-    >  Der Standortserver sammelt die fünf zuletzt geänderten Versionen von gesammelten Dateien und speichert sie in diesem Verzeichnis: *&lt;ConfigMgr-Installationsverzeichnis\>*\Inboxes\Sinv.box\Filecol. Wenn eine Datei seit dem letzten Softwareinventurzyklus nicht geändert wurde, wird die Datei nicht noch einmal gesammelt.  
+    >  Der Standortserver sammelt die fünf zuletzt geänderten Versionen von gesammelten Dateien und speichert sie in diesem Verzeichnis: *&lt;ConfigMgr-Installationsverzeichnis\>* \Inboxes\Sinv.box\Filecol. Wenn eine Datei seit dem letzten Softwareinventurzyklus nicht geändert wurde, wird die Datei nicht noch einmal gesammelt.  
     >   
     >  Dateien mit mehr als 20 MB werden von der Softwareinventur nicht gesammelt.  
     >   

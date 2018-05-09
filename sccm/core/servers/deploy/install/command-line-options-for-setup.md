@@ -2,25 +2,19 @@
 title: Setup-Befehlszeilenoptionen
 titleSuffix: Configuration Manager
 description: Erstellen Sie Automatisierungsskripts, um System Center Configuration Manager über die Befehlszeile zu installieren.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 0da167f1-52cf-4dfd-8f73-833ca3eb8478
-caps.latest.revision: 3
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fede359c884ef8b4027935b2e3fb48a5b7543d26
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: fa8e3bf572ced8a2394099bbb59532502ef3b019
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="command-line-options-for-setup-in-system-center-configuration-manager"></a>Befehlszeilenoptionen für das Setup in System Center Configuration Manager
 
@@ -783,7 +777,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen eines primären Standorts 
 
          80 = Überspringen der Datenbankwiederherstellung.  
 
-    -   **Details:** Hiermit wird angegeben, wie die Standortdatenbank in SQL Server beim Setup wiederhergestellt wird.  
+    -   **Details:** Hiermit wird angegeben, wie die Standortdatenbank in SQL Server durch das Setup wiederhergestellt wird.  
 
 -   **Schlüsselname:** ReferenceSite  
 
@@ -911,7 +905,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen eines primären Standorts 
 
     -   **Werte:** <*SQL Server-Name*>  
 
-    -   **Details:** Gibt den Namen des Servers oder der gruppierten Instanz an, der bzw. die SQL Server ausführt und auf dem bzw. der die Standortdatenbank gehostet wird. Geben Sie denselben Server an, auf dem die Standortdatenbank vor dem Auftreten des Fehlers gehostet wurde.  
+    -   **Details:** Gibt den Namen des Servers oder der gruppierten Instanz an, der bzw. die SQL Server ausführt und auf dem bzw. der die Standortdatenbank gehostet wird. Geben Sie denselben Server an, auf dem die Standortdatenbank vor Auftreten des Fehlers gehostet wurde.  
 
 -   **Schlüsselname:** DatabaseName  
 
@@ -1055,7 +1049,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen eines primären Standorts 
 
          80 = Überspringen der Datenbankwiederherstellung.  
 
-    -   **Details:** Hiermit wird angegeben, wie die Standortdatenbank in SQL Server beim Setup wiederhergestellt wird.  
+    -   **Details:** Hiermit wird angegeben, wie die Standortdatenbank in SQL Server durch das Setup wiederhergestellt wird.  
 
 -   **Schlüsselname:** SiteServerBackupLocation  
 
@@ -1171,7 +1165,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen eines primären Standorts 
 
     -   **Werte:** <*SQL Server-Name*>  
 
-    -   **Details:** Gibt den Namen des Servers oder der gruppierten Instanz an, der bzw. die SQL Server ausführt und auf dem bzw. der die Standortdatenbank gehostet wird. Geben Sie denselben Server an, auf dem die Standortdatenbank vor dem Auftreten des Fehlers gehostet wurde.  
+    -   **Details:** Gibt den Namen des Servers oder der gruppierten Instanz an, der bzw. die SQL Server ausführt und auf dem bzw. der die Standortdatenbank gehostet wird. Geben Sie denselben Server an, auf dem die Standortdatenbank vor Auftreten des Fehlers gehostet wurde.  
 
 -   **Schlüsselname:** DatabaseName  
 
@@ -1218,7 +1212,7 @@ Im folgenden Abschnitt finden Sie Detailinformationen eines primären Standorts 
 
     -   **Werte:** <*Standortcode für den Standort der zentralen Verwaltung*>  
 
-    -   **Details:** Hiermit wird der Standort der zentralen Verwaltung angegeben, dem ein primärer Standort beim Verknüpfen mit der Configuration Manager-Hierarchie zugeordnet wird. Diese Einstellung ist erforderlich, wenn der primäre Standort vor dem Fehler mit einem zentralen Verwaltungsstandort verbunden war. Geben Sie den Standortcode an, der vor dem Auftreten des Fehlers vom Standort der zentralen Verwaltung verwendet wurde.  
+    -   **Details:** Hiermit wird der Standort der zentralen Verwaltung angegeben, dem ein primärer Standort beim Verknüpfen mit der Configuration Manager-Hierarchie zugeordnet wird. Diese Einstellung ist erforderlich, wenn der primäre Standort vor dem Fehler mit einem zentralen Verwaltungsstandort verbunden war. Geben Sie den Standortcode an, der vor Auftreten des Fehlers vom Standort der zentralen Verwaltung verwendet wurde.  
 
 -   **Schlüsselname:** CASRetryInterval  
 

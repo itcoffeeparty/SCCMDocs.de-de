@@ -1,22 +1,20 @@
 ---
-title: "Beispielszenario für die Bereitstellung und Überwachung von Sicherheitssoftwareupdates"
+title: Beispielszenario für die Bereitstellung und Überwachung von Sicherheitssoftwareupdates
 titleSuffix: Configuration Manager
-description: "Verwenden Sie dieses Beispielszenario zum Verwenden von Softwareupdates in Configuration Manager, um die von Microsoft monatlich veröffentlichten Sicherheitssoftwareupdates bereitzustellen und zu überwachen."
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: Verwenden Sie dieses Beispielszenario zum Verwenden von Softwareupdates in Configuration Manager, um die von Microsoft monatlich veröffentlichten Sicherheitssoftwareupdates bereitzustellen und zu überwachen.
+author: aczechowski
+manager: dougeby
 ms.date: 10/06/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.service: 
 ms.assetid: c32f757a-02da-43f2-b055-5cfd097d8c43
-ms.openlocfilehash: bec19340e9f349849d8dbc041799cece13e2f0fb
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.author: aaroncz
+ms.openlocfilehash: eadb7dc9f3f9fc4f4ccca1b27257d8f05cb19ebc
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="example-scenario-for-using-system-center-configuration-manager-to-deploy-and-monitor-the-security-software-updates-released-monthly-by-microsoft"></a>Beispielszenario für die Verwendung von System Center Configuration Manager zum Bereitstellen und Überwachen der monatlichen Sicherheitsupdates von Microsoft
 
@@ -47,7 +45,7 @@ In diesem Thema wird ein Beispielszenario angegeben, wie Sie Softwareupdates in 
 
 |Prozess|Reference|  
 |-------------|---------------|  
-|John fügt Kriterien im Knoten **Alle Softwareupdates** in der Configuration Manager-Konsole hinzu, um nur Sicherheitssoftwareupdates anzuzeigen, die im Jahr 2015 veröffentlicht oder überarbeitet wurden und folgenden Kriterien entsprechen:<br /><br /><ul><li>**Kriterien**: Veröffentlichungs- oder Überarbeitungsdatum</li><li>**Bedingung**: stimmt mit einem bestimmten Datum überein oder liegt danach<br />**Wert**: 1.1.2015</li><li>**Kriterien**: Updateklassifizierung<br />**Wert**: Sicherheitsupdates</li><li>**Kriterien**: Abgelaufen <br />**Wert**: Nein</li></ul>|Keine zusätzlichen Informationen|
+|John fügt Kriterien im Knoten **Alle Softwareupdates** in der Configuration Manager-Konsole hinzu, um nur Sicherheitssoftwareupdates anzuzeigen, die im Jahr 2015 veröffentlicht oder überarbeitet wurden und folgenden Kriterien entsprechen:<br /><br /><ul><li>**Kriterien**: Veröffentlichungs- oder Überarbeitungsdatum</li><li>**Bedingung**: stimmt mit einem bestimmten Datum überein oder liegt danach<br />**Wert**: 1.1.2015</li><li>**Kriterien**: Updateklassifizierung<br />**Wert**: Sicherheitsupdates</li><li>**Kriterien**: Abgelaufen <br />**Wert**: Nein</li></ul>|keine zusätzlichen Informationen|
 |John fügt alle gefilterten Softwareupdates zur neuen Softwareupdategruppe mit folgenden Anforderungen hinzu:<br /><br /><ul><li>**Name**: Kompatibilitätsgruppe – Microsoft-Sicherheitsupdates 2015</li><li>**Beschreibung**: Softwareupdates|[Hinzufügen von Softwareupdates zu einer Updategruppe](add-software-updates-to-an-update-group.md)|  
 
 ##  <a name="BKMK_Step2"></a> Schritt 2: Erstellen einer automatischen Bereitstellungsregel für den aktuellen Monat  
@@ -71,10 +69,10 @@ In diesem Thema wird ein Beispielszenario angegeben, wie Sie Softwareupdates in 
 |-------------|---------------|  
 |John erstellt zwei Testbereitstellungen für die neue Softwareupdategruppe. Er erwägt für jede Bereitstellung die folgenden Umgebungen:<br /><br /> **Arbeitsstation-Testbereitstellung**: John berücksichtigt Folgendes für die Testbereitstellung der Arbeitsstation:<br /><br /><ul><li>Er gibt eine Bereitstellungssammlung an, die eine Teilmenge der Arbeitsstationsclients enthält, um die Bereitstellung zu überprüfen.</li><li>Er konfiguriert die Bereitstellungseinstellungen, die für die Arbeitsstationsclients in seiner Umgebung zutreffen.</li></ul><br />**Servertestbereitstellung**: John berücksichtigt Folgendes für die Servertestbereitstellung:<br /><br /><ul><li>Er gibt eine Bereitstellungssammlung an, die eine Teilmenge der Serverclients enthält, um die Bereitstellung zu überprüfen.</li><li>Er konfiguriert die Bereitstellungseinstellungen, die für die Serverclients in seiner Umgebung zutreffen.</li></ul>|[Bereitstellen von Softwareupdates](deploy-software-updates.md)|  
 |John überprüft, ob die Testbereitstellungen erfolgreich bereitgestellt wurden.|[Status der Softwareupdatebereitstellung](monitor-software-updates.md#BKMK_SUDeployStatus)|  
-|John aktualisiert die zwei Bereitstellungen mit neuen Sammlungen, die seine Produktionsarbeitsstationen und -server beinhalten.|Keine zusätzlichen Informationen|  
+|John aktualisiert die zwei Bereitstellungen mit neuen Sammlungen, die seine Produktionsarbeitsstationen und -server beinhalten.|keine zusätzlichen Informationen|  
 
 ##  <a name="BKMK_Step5"></a> Schritt 5: Überwachen der Kompatibilität für bereitgestellte Softwareupdates  
- John überwacht die Kompatibilität seiner Softwareupdatebereitstellungen. Er führt den Schritt in der folgenden Tabelle aus.  
+ John überwacht die Konformität seiner Softwareupdatebereitstellungen. Er führt den Schritt in der folgenden Tabelle aus.  
 
 |Prozess|Reference|  
 |-------------|---------------|  
@@ -87,7 +85,7 @@ In diesem Thema wird ein Beispielszenario angegeben, wie Sie Softwareupdates in 
 |-------------|---------------|  
 |John wählt die Softwareupdates aus der monatlichen Softwareupdategruppe aus und fügt die Softwareupdates zu der Softwareupdategruppe hinzu, die er für die jährliche Kompatibilität erstellt hat. Er verfolgt die Softwareupdatekompatibilität und erstellt verschiedene Berichte für die Geschäftsleitung.|[Hinzufügen von Softwareupdates zu einer bereitgestellten Updategruppe](add-software-updates-to-an-update-group.md)|  
 
-John hat seine monatliche Bereitstellung für Sicherheitssoftwareupdates erfolgreich abgeschlossen. Er überwacht weiterhin die Kompatibilität der Softwareupdates und erstellt Meldungen dazu, um sicherzustellen, dass sich die Clients in seiner Umgebung innerhalb der zulässigen Kompatibilitätsstufen bewegen.  
+John hat seine monatliche Bereitstellung für Sicherheitssoftwareupdates erfolgreich abgeschlossen. Er überwacht weiterhin die Konformität der Softwareupdates und erstellt Meldungen dazu, um sicherzustellen, dass sich die Clients in seiner Umgebung innerhalb der zulässigen Konformitätsstufen bewegen.  
 
 ##  <a name="BKMK_MonthlyProcess"></a> Regelmäßiger monatlicher Prozess zur Bereitstellung von Softwareupdates  
  Nach dem ersten Monat, in dem John Softwareupdates bereitgestellt hat, führt er die Schritte 3 bis 6 aus, um die von Microsoft veröffentlichten Sicherheitssoftwareupdates bereitzustellen.  

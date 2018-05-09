@@ -1,26 +1,20 @@
 ---
 title: Verwalten von Konfigurationsdaten
 titleSuffix: Configuration Manager
-description: "Nachdem Sie Konfigurationselemente und Baselines in System Center Configuration Manager erstellt haben, können Sie andere Befehle verwenden, um verschiedene Aktionen ausführen."
-ms.custom: na
+description: Nachdem Sie Konfigurationselemente und Baselines in System Center Configuration Manager erstellt haben, können Sie andere Befehle verwenden, um verschiedene Aktionen ausführen.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: b48c693c-d2b0-4707-a5dd-fe92172c49fe
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 23a6bcf2e9fcb417dabde7700e09c953d436deb7
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: d4602a2dbee04259d5953873485cdbccdc58167d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-configuration-data-in-system-center-configuration-manager"></a>Verwalten von Konfigurationsdaten in System Center Configuration Manager
 
@@ -52,8 +46,8 @@ Nachdem Sie Konfigurationselemente und Konfigurationsbaselines in Configuration 
 |**Zusammenfassung planen**|Konfiguriert den Zeitplan, nach dem die im Knoten **Konfigurationsbaselines** in der Configuration Manager-Konsole angezeigten Daten mit den neuesten Informationen aus der Standortdatenbank aktualisiert werden.|  
 |**Zusammenfassung ausführen**|Durch die Zusammenfassung werden Daten im Knoten **Konfigurationsbasislinien** mit den neuesten Daten von der Standortdatenbank aktualisiert. Diese Aktion kann einige Minuten dauern. Möglicherweise müssen Sie auf **Aktualisieren** klicken, damit die neuesten Daten in der Konsole angezeigt werden.|  
 |**XML-Definition anzeigen**|Zeigt die XML-Definitionsdatei für die ausgewählte Konfigurationsbasislinie in einem neuen Fenster an. Diese Informationen können hilfreich sein, wenn Sie Konfigurationsdaten manuell erstellen möchten.|  
-|**Aktivieren**|Aktiviert eine Konfigurationsbasislinie für die Kompatibilitätsüberwachung.|  
-|**Deaktivieren**|Deaktiviert eine Konfigurationsbasislinie, sodass sie auf Clientcomputern nicht mehr auf Kompatibilität bewertet wird. Konfigurationsbasislinien, die auf diese Konfigurationsbasislinie verweisen, werden ebenfalls deaktiviert.|  
+|**Aktivieren**|Aktiviert eine Konfigurationsbasislinie für die Konformitätsüberwachung.|  
+|**Deaktivieren**|Deaktiviert eine Konfigurationsbasislinie, sodass sie auf Clientcomputern nicht mehr auf Konformität bewertet wird. Konfigurationsbasislinien, die diese Konfigurationsbasislinie verweisen werden auch deaktiviert werden.|  
 |**Exportierenieren**|Exportiert eine Konfigurationsbasislinie in eine CAB-Datei, unter der Voraussetzung, dass sie an diesem Standort erstellt wurde. Anschließend können Sie das Element in denselben oder einen anderen Configuration Manager-Standort importieren. Konfigurationsdaten werden in DCM Digest konvertiert.<br /><br /> Informationen zum Importieren von Konfigurationsdaten finden Sie unter [Importieren von Konfigurationsdaten](../../compliance/deploy-use/import-configuration-data.md).|  
 |**Kopieren**|Erstellt eine Kopie der ausgewählten Konfigurationsbasislinie mit einem von Ihnen angegebenen Namen. Von der neuen Konfigurationsbasislinie wird keine Beziehung zur ursprünglichen Konfigurationsbasislinie beibehalten.|  
 |**Löschen**|Öffnet das Dialogfeld **Konfigurationsbasislinie löschen** , in dem Sie Verweise auf diese Konfigurationsbasislinie überprüfen können.<br /><br /> Sie müssen erst alle Verweise auf eine Konfigurationsbasislinie entfernen, bevor Sie die Konfigurationsbasislinie löschen können.|  

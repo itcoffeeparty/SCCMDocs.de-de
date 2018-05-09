@@ -2,25 +2,19 @@
 title: Anforderungen an die Infrastruktur für Betriebssystembereitstellungen
 titleSuffix: Configuration Manager
 description: In diesem Artikel erhalten Sie Informationen zu den externen und produktspezifischen Abhängigkeiten und Anforderungen für die Betriebssystembereitstellung.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
-caps.latest.revision: 24
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 36e49206154a1c061fb8266e0c8ed8691cc4d4f0
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 6407344676230c12c66abb02c1394032e102e4b8
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="infrastructure-requirements-for-os-deployment-in-system-center-configuration-manager"></a>Anforderungen an die Infrastruktur für die Betriebssystembereitstellung in System Center Configuration Manager
 
@@ -118,7 +112,7 @@ Eine Liste der Versionen des Windows 10 ADK, die Sie mit verschiedenen Versionen
  Im folgenden Abschnitt finden Sie Informationen zu den Voraussetzungen für die Configuration Manager-Betriebssystembereitstellung.  
 
 
-### <a name="os-image"></a>Betriebssystemimage  
+### <a name="os-image"></a>Betriebssystemabbild  
  Betriebssystemimages in Configuration Manager werden im WIM-Dateiformat (Windows Imaging) gespeichert. Sie stellen eine komprimierte Sammlung von Verweisdateien und Ordnern dar. Diese Images sind für die erfolgreiche Installation und Konfiguration eines Betriebssystems auf einem Computer erforderlich. Weitere Informationen finden Sie unter [Manage operating system images (Verwalten von Betriebssystemimages)](../get-started/manage-operating-system-images.md).  
 
 

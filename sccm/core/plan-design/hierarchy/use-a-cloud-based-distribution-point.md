@@ -1,25 +1,20 @@
 ---
 title: Cloudbasierter Verteilungspunkt
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr über Konfigurationen und Einschränkungen zur Verwendung eines cloudbasierten Verteilungspunkts mit System Center Configuration Manager."
-ms.custom: na
+description: Erfahren Sie mehr über Konfigurationen und Einschränkungen zur Verwendung eines cloudbasierten Verteilungspunkts mit System Center Configuration Manager.
 ms.date: 3/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
-caps.latest.revision: "9"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 87c60ac597baa8726333e317f42924130dd1a685
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: fd3e8c58b358093ebf9d90478920c45e127e382e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-a-cloud-based-distribution-point-with-system-center-configuration-manager"></a>Verwenden eines cloudbasierten Verteilungspunkts mit System Center Configuration Manager
 
@@ -105,11 +100,11 @@ Bei cloudbasierten Verteilungspunkten ergeben sich die folgenden Einschränkunge
 
 **Optionen:**  
 
--   **Clienteinstellungen für die Cloud:**Sie steuern den Zugriff auf alle cloudbasierten Verteilungspunkte in einer Hierarchie über die **Clienteinstellungen**.  
+-   **Clienteinstellungen für die Cloud:** Sie steuern den Zugriff auf alle cloudbasierten Verteilungspunkte in einer Hierarchie über die **Clienteinstellungen**.  
 
      In **Clienteinstellungen**wird die Einstellung **Zugriff auf Cloudverteilungspunkte zulassen** von der Kategorie **Cloudeinstellungen**unterstützt. Standardmäßig ist die Priorität auf den Wert **Nein**eingestellt. Sie können diese Einstellung für Benutzer und Geräte aktivieren.  
 
--   **Schwellenwerte für Datenübertragungen:**Sie können Schwellenwerte für die Menge an Daten konfigurieren, die Sie auf einem Verteilungspunkt speichern möchten, sowie für die Menge an Daten, die Clients von einem Verteilungspunkt herunterladen.  
+-   **Schwellenwerte für Datenübertragungen:** Sie können Schwellenwerte für die Menge an Daten konfigurieren, die Sie auf einem Verteilungspunkt speichern möchten, sowie für die Menge an Daten, die Clients von einem Verteilungspunkt herunterladen.  
 
      Schwellenwerte für cloudbasierte Verteilungspunkte umfassen Folgendes:  
 
@@ -133,7 +128,7 @@ Bei cloudbasierten Verteilungspunkten ergeben sich die folgenden Einschränkunge
     >  Warnungen für einen cloudbasierten Verteilungspunkt hängen von den Nutzungsstatistiken aus Azure ab. Es kann bis zu 24 Stunden dauern, bis sie verfügbar sind. Weitere Informationen zu Speicheranalysen für Azure, auch wie häufig Nutzungsstatistiken von Azure aktualisiert werden, finden Sie unter [Speicheranalyse](http://go.microsoft.com/fwlink/p/?LinkID=275111) in der MSDN-Bibliothek.  
 
 
--   **Den Clouddienst nach Bedarf starten oder beenden:**Mit dieser Option können Sie einen Clouddienst jederzeit beenden, um zu verhindern, dass der Dienst ununterbrochen von Clients verwendet wird. Wenn Sie den Clouddienst beenden, werden Clients mit sofortiger Wirkung daran gehindert, zusätzliche Inhalte vom Dienst herunterzuladen. Sie können den Clouddienst erneut starten, um den Zugriff für Clients wiederherzustellen. Beispiel: Sie möchten einen Clouddienst möglicherweise beenden, wenn Datenschwellenwerte erreicht sind.  
+-   **Den Clouddienst nach Bedarf starten oder beenden:** Mit dieser Option können Sie einen Clouddienst jederzeit beenden, um zu verhindern, dass der Dienst ununterbrochen von Clients verwendet wird. Wenn Sie den Clouddienst beenden, werden Clients mit sofortiger Wirkung daran gehindert, zusätzliche Inhalte vom Dienst herunterzuladen. Sie können den Clouddienst erneut starten, um den Zugriff für Clients wiederherzustellen. Beispiel: Sie möchten einen Clouddienst möglicherweise beenden, wenn Datenschwellenwerte erreicht sind.  
 
      Wenn Sie einen Clouddienst beenden, dann wird der Inhalt vom Verteilungspunkt von diesem Clouddienst nicht gelöscht, und es wird auch nicht verhindert, dass vom Standortserver zusätzliche Inhalte an den cloudbasierten Verteilungspunkt übertragen werden.  
 
@@ -165,9 +160,9 @@ Bei cloudbasierten Verteilungspunkten ergeben sich die folgenden Einschränkunge
 
 ##  <a name="bkmk_Tasks"></a> Allgemeine Verwaltungsaufgaben für cloudbasierte Verteilungspunkte  
 
--   **Kommunikation zwischen Standortserver und cloudbasiertem Verteilungspunkt:**Beim Installieren eines cloudbasierten Verteilungspunkts müssen Sie einen primären Standort zuweisen, um die Übertragung von Inhalt an den Clouddienst zu verwalten. Diese Aktion entspricht der Installation der Standortsystemrolle „Verteilungspunkt“ an einem bestimmten Standort.  
+-   **Kommunikation zwischen Standortserver und cloudbasiertem Verteilungspunkt:** Beim Installieren eines cloudbasierten Verteilungspunkts müssen Sie einen primären Standort zuweisen, um die Übertragung von Inhalt an den Clouddienst zu verwalten. Diese Aktion entspricht der Installation der Standortsystemrolle „Verteilungspunkt“ an einem bestimmten Standort.  
 
--   **Kommunikation zwischen Client und cloudbasiertem Verteilungspunkt:**Wenn für ein Gerät oder einen Benutzer eines Geräts die Clienteinstellung für die Verwendung eines cloudbasierten Verteilungspunkts konfiguriert ist, kann das Gerät den cloudbasierten Verteilungspunkt als gültigen Inhaltsspeicherort erhalten:  
+-   **Kommunikation zwischen Client und cloudbasiertem Verteilungspunkt:** Wenn für ein Gerät oder einen Benutzer eines Geräts die Clienteinstellung für die Verwendung eines cloudbasierten Verteilungspunkts konfiguriert ist, kann das Gerät den cloudbasierten Verteilungspunkt als gültigen Inhaltsspeicherort erhalten:  
 
     -   Der cloudbasierte Verteilungspunkt wird als Remoteverteilungspunkt eingestuft, wenn ein Client die verfügbaren Inhaltsspeicherorte auswertet.  
 
@@ -189,7 +184,7 @@ Von Clients, die cloudbasierter Verteilungspunkte nutzen, befolgen bei Inhaltssp
 
   Wenn von einem Client ein cloudbasierter Verteilungspunkt als Inhaltsspeicherort verwendet wird, wird die Authentifizierung des Clients beim cloudbasierten Verteilungspunkt mithilfe eines Configuration Manager-Zugriffstokens durchgeführt. Falls das Zertifikat des cloudbasierten Verteilungspunkts von Configuration Manager für den Client vertrauenswürdig ist, kann der angeforderte Inhalt vom Client heruntergeladen werden.  
 
--   **Überwachen cloudbasierter Verteilungspunkte:**Sie können den Inhalt überwachen, den Sie auf jedem Verteilungspunkt bereitstellen, und Sie können den Clouddienst überwachen, der als Host des Verteilungspunkts dient.  
+-   **Überwachen cloudbasierter Verteilungspunkte:** Sie können den Inhalt überwachen, den Sie auf jedem Verteilungspunkt bereitstellen, und Sie können den Clouddienst überwachen, der als Host des Verteilungspunkts dient.  
 
     -   **Inhalt**: Sie überwachen Inhalte, die Sie für einen cloudbasierten Verteilungspunkt bereitstellen, auf dieselbe Weise, wie Sie Inhalte für lokale Verteilungspunkte bereitstellen.  
 
@@ -203,7 +198,7 @@ Von Clients, die cloudbasierter Verteilungspunkte nutzen, befolgen bei Inhaltssp
 
     Schließlich können Sie für jeden cloudbasierten Verteilungspunkt die Abonnement-ID, den Dienstnamen sowie andere damit verbundene Details anzeigen, die beim Installieren der cloudbasierten Verteilung angegeben werden, diese jedoch nicht bearbeiten.  
 
--   **Sicherung und Wiederherstellung von cloudbasierten Verteilungspunkten:**Wenn Sie einen cloudbasierten Verteilungspunkt in der Hierarchie verwenden, dann nutzen Sie folgende Informationen, die bei der Planung einer Sicherung oder Wiederherstellung des Verteilungspunktes hilfreich sind:  
+-   **Sicherung und Wiederherstellung von cloudbasierten Verteilungspunkten:** Wenn Sie einen cloudbasierten Verteilungspunkt in der Hierarchie verwenden, dann nutzen Sie folgende Informationen, die bei der Planung einer Sicherung oder Wiederherstellung des Verteilungspunktes hilfreich sind:  
 
     -   Wenn Sie den vordefinierten Wartungstask **Standortserver sichern** verwenden, dann werden die Konfigurationen für den cloudbasierten Verteilungspunkt automatisch von Configuration Manager berücksichtigt.  
 

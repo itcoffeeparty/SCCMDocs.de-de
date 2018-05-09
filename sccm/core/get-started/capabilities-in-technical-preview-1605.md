@@ -1,25 +1,20 @@
 ---
 title: Funktionen in Technical Preview 1605
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr zu Features, die in Technical Preview für System Center Configuration Manager-Version 1605 zur Verfügung stehen."
-ms.custom: na
+description: Erfahren Sie mehr zu Features, die in Technical Preview für System Center Configuration Manager-Version 1605 zur Verfügung stehen.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2bafd028-1923-4463-9e3e-ee41bc0c437b
-caps.latest.revision: "36"
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 795b7658f5da8f863f208f01896ae2d7823ff2a6
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 05d87b253f2387dd8428f4b9fadea3fe5f3a48e8
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1605 für System Center Configuration Manager
 
@@ -36,7 +31,7 @@ In diesem Artikel werden die Features erläutert, die in der Technical Preview f
  **Im Folgenden werden neue Features aufgelistet, die Sie mit dieser Version ausprobieren können.**  
 
 ##  <a name="BKMK_PerAppVPN"></a> VPN pro App für Windows 10-Geräte  
- Für Windows 10-Geräte, die mithilfe von Configuration Manager und Intune verwaltet werden, können Sie eine Liste von Apps hinzufügen, die automatisch eine VPN-Verbindung öffnen, die Sie über die Configuration Manager-Verwaltungskonsole konfiguriert haben. Sie haben die Möglichkeit, den VPN-Datenverkehr auf diese Apps zu beschränken, oder Sie können weiterhin den gesamten Datenverkehr über die VPN-Verbindung ermöglichen.  
+ Für Windows 10-Geräte, die mithilfe von Configuration Manager mit Intune verwaltet werden, können Sie eine Liste von Apps hinzufügen, die automatisch eine VPN-Verbindung öffnen, die Sie über die Configuration Manager-Verwaltungskonsole konfiguriert haben. Sie haben die Möglichkeit, den VPN-Datenverkehr auf diese Apps zu beschränken, oder Sie können weiterhin den gesamten Datenverkehr über die VPN-Verbindung ermöglichen.  
 
  **Anforderungen**:  
 
@@ -72,7 +67,7 @@ In diesem Artikel werden die Features erläutert, die in der Technical Preview f
  Ähnliche Optionen wurden zum Bereitstellungsassistenten für Softwareupdates, zum Assistenten für automatische Bereitstellungsregeln und den Eigenschaftenseiten hinzugefügt. Jedoch sind diese zur Zeit nicht in dieser Technical Preview implementiert.  
 
 ##  <a name="BKMK_Remote"></a> Benutzerfreundlichere Remotegeräteaktionen  
- Die Ausführung von Remotegeräteaktionen über die Configuration Manager-Konsole wurde verbessert.  
+ Die Ausführung von Remotegeräteaktionen über die Configuration Manager-Konsole wurde benutzerfreundlicher gestaltet und verbessert.  
 Häufig verwendete Aktionen, wie z.B. **Abkoppeln/Zurücksetzen**, **Kennung zurücksetzen**, **Remotesperre** und **Aktivierungssperre umgehen**, befinden sich nun im Menü **Remotegeräteaktionen**, auf das Sie über den Arbeitsbereich **Bestand und Kompatibilität** zugreifen können.  
 
  ![Screenshot, der die neuen Remotegeräteaktionen anzeigt](media/New-Remote-Device-Actions.png)  
@@ -102,7 +97,7 @@ Häufig verwendete Aktionen, wie z.B. **Abkoppeln/Zurücksetzen**, **Kennung zur
 
 1.  Registrieren Sie Configuration Manager als „Web-Anwendung und/oder Web-API“-Verwaltungstool in Azure Active Directory. Sie erhalten eine Client-ID, die Sie später benötigen.  
 
-    1.  Wählen Sie im Active Directory-Knoten von [https://manage.windowsazure.com](https://manage.windowsazure.com) Ihr Azure Active Directory aus, und klicken Sie anschließend auf **Anwendungen** > **Hinzufügen**.  
+    1.  Wählen Sie im Active Directory-Knoten von [https://manage.windowsazure.com](https://manage.windowsazure.com) Ihr Azure Active Directory aus, und klicken Sie dann auf **Anwendungen** > **Hinzufügen**.  
 
     2.  Klicken Sie auf **Eine von meinem Unternehmen entwickelte Anwendung hinzufügen**.  
 
@@ -120,7 +115,7 @@ Häufig verwendete Aktionen, wie z.B. **Abkoppeln/Zurücksetzen**, **Kennung zur
 
 3.  Konfigurieren von Configuration Manager als Speicherverwaltungstool im Windows Store für Unternehmen.  
 
-    1.  Öffnen Sie [https://businessstore.microsoft.com/de-de/managementtools](https://businessstore.microsoft.com/managementtools), und melden Sie sich nach entsprechender Aufforderung an.  
+    1.  Öffnen Sie [https://businessstore.microsoft.com/en-us/managementtools](https://businessstore.microsoft.com/managementtools), und melden Sie sich an, wenn Sie dazu aufgefordert werden.  
 
     2.  Akzeptieren Sie gegebenenfalls die Nutzungsbedingungen.  
 
@@ -164,7 +159,7 @@ Häufig verwendete Aktionen, wie z.B. **Abkoppeln/Zurücksetzen**, **Kennung zur
 
 -   Für per Volumenlizenz erworbene iOS-Apps wurde die Registerkarte Apple Volume Purchase Program aus dem Dialogfeld **App-Paket für iOS-Browser** des Assistenten zum Erstellen von Apps entfernt. Gehen Sie folgendermaßen vor, um eine per Volumenlizenz erworbene App für iOS zu erstellen:  
 
-    1.  1.  Erweitern Sie im Arbeitsbereich **Softwarebibliothek** der Configuration Manager-Konsole **App-Verwaltung**, und klicken Sie anschließend auf **Lizenzinformationen für Store-Apps**.  
+    1.  1.  Erweitern Sie im Arbeitsbereich **Softwarebibliothek** der Configuration Manager-Konsole den Eintrag **Anwendungsverwaltung**, und klicken Sie anschließend auf **Lizenzinformationen für Store-Apps**.  
 
     2.  2.  Wählen Sie zunächst die App aus, die Sie bereitstellen möchten. Klicken Sie anschließend auf der Registerkarte **Start** in der Gruppe **Erstellen** auf **Anwendung erstellen**.  
 
@@ -338,7 +333,7 @@ Wenn das Unternehmensportal in dieser Technical Preview länger als 15 Minuten g
 
 1.  Klicken Sie im Arbeitsbereich **Bestand und Kompatibilität** auf **Gerätesammlungen** und anschließend auf die Sammlung, um Bereitstellungssperren zu löschen.  
 
-2.  Klicken Sie auf der Registerkarte **Start** in der Gruppe **Bereitstellung** auf **Bereitstellungssperren für Servergruppe löschen**. Wenn Clients die Softwareupdates nicht installiert haben, und dadurch die Installation der Softwareupdates auf anderen Clients verhindert wird, können die Bereitstellungssperren manuell gelöscht werden.  
+2.  Klicken Sie auf der Registerkarte **Start** in der Gruppe **Bereitstellung** auf **Bereitstellungssperren für Servergruppe löschen**. Wenn die Softwareupdates auf einem Client nicht installiert werden konnten und dadurch die Installation der Softwareupdates auf anderen Clients verhindert wird, können die Bereitstellungssperren manuell gelöscht werden.  
 
 ##  <a name="BKMK_ATP"></a> Unterstützung für Windows Defender Advanced Threat Protection  
  Windows Defender Advanced Threat Protection (ATP) ist ein neuer Dienst, der Unternehmen dabei unterstützt, erweiterte Angriffe auf ihre Netzwerke zu entdecken, zu untersuchen und darauf zu reagieren. Weitere Informationen finden Sie unter [Windows Defender ATP](https://blogs.windows.com/windowsexperience/2016/03/01/announcing-windows-defender-advanced-threat-protection). Configuration Manager kann Sie beim Onboarding unterstützen, und verwaltete Windows 10 Anniversary Edition-Clientgeräte überwachen.  
@@ -418,10 +413,10 @@ Wenn das Unternehmensportal in dieser Technical Preview länger als 15 Minuten g
 2.  Geben Sie die **URL für lokalen Integritätsnachweisdienst**an, und klicken Sie anschließend auf **OK**.  
 
 ##  <a name="BKMK_RestartOptions"></a> Neue Neustartoptionen für Windows 10-Clients nach der Installation von Softwareupdates  
- Wenn ein Softwareupdate, das einen Neustart benötigt, mit Configuration Manager bereitgestellt und auf einem Computer installiert wird, wird ein ausstehender Neustart geplant, und das Neustartdialogfeld wird angezeigt. Wenn Sie in Versionen, die unter Windows 8 oder höher laufen, den Computer mithilfe der Windows Power-Optionen (anstatt über den Neustartdialog) herunterfahren oder neu starten, wird das Neustartdialogfeld auch nach dem Neustart weiterhin angezeigt. Der Computer muss trotzdem innerhalb der konfigurierten Zeitspanne neu gestartet werden. In dieser Technical Preview werden die Optionen **Update und Neustart** und **Update und Herunterfahren** auf Windows 10-Computern in den Windows Power-Optionen verfügbar sein, sobald es einen ausstehenden Neustart für ein Configuration Manager-Softwareupdate gibt. Nach der Verwendung einer dieser Optionen, wird das Dialogfeld „Neustart“ nach dem Neustart des Computers nicht angezeigt.  
+ Wenn ein Softwareupdate, das einen Neustart benötigt, mit Configuration Manager bereitgestellt und auf einem Computer installiert wird, wird ein ausstehender Neustart geplant, und das Dialogfeld „Neustart“ wird angezeigt. Wenn Sie in Versionen, die unter Windows 8 oder höher laufen, den Computer mithilfe der Windows Power-Optionen (anstatt über den Neustartdialog) herunterfahren oder neu starten, wird das Neustartdialogfeld auch nach dem Neustart weiterhin angezeigt. Der Computer muss trotzdem innerhalb der konfigurierten Zeitspanne neu gestartet werden. In dieser Technical Preview werden die Optionen **Update und Neustart** und **Update und Herunterfahren** auf Windows 10-Computern in den Windows Power-Optionen verfügbar sein, sobald es einen ausstehenden Neustart für ein Configuration Manager-Softwareupdate gibt. Nach der Verwendung einer dieser Optionen, wird das Dialogfeld „Neustart“ nach dem Neustart des Computers nicht angezeigt.  
 
 ##  <a name="BKMK_IMEI"></a> Vorabdeklarieren von firmeneigenen Geräten mit IMEI- oder iOS-Seriennummer  
- Sie können nun unternehmenseigene Geräte identifizieren, indem Sie deren IMEI-Nummern (International Station Mobile Equipment Identity) importieren. Sie können eine CSV-Datei (comma-separated values, durch Trennzeichen getrennte Datei) hochladen, die die IMEI-Nummern der Geräte enthält, oder Geräteinformationen manuell eingeben.  Sie können auch die Seriennummern für iOS-Geräte importieren.  Importierte Informationen legen den Besitz der registrierten Geräte auf „Unternehmen“ fest.  Dennoch wird für jeden Benutzer, der auf den Dienst zugreift, eine Intune-Lizenz benötigt.  
+ Sie können nun firmeneigene Geräte identifizieren, indem Sie deren IMEI-Nummern (International Station Mobile Equipment Identity) importieren. Sie können eine CSV-Datei (comma-separated values, durch Trennzeichen getrennte Datei) hochladen, die die IMEI-Nummern der Geräte enthält, oder Geräteinformationen manuell eingeben.  Sie können auch die Seriennummern für iOS-Geräte importieren.  Importierte Informationen legen den Besitz der registrierten Geräte auf „Unternehmen“ fest.  Für jeden Benutzer, der auf den Dienst zugreift, wird dennoch eine Intune-Lizenz benötigt.  
 
 ### <a name="try-it-out"></a>Probieren Sie es aus!  
  Versuchen Sie, die folgenden Tasks auszuführen, und lassen Sie uns dann wissen, wie es funktioniert hat, indem Sie unserer Feedbackformular auf der Seite [Configuration Manager-Feedbackprogramm](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback) auf der Microsoft Connect-Website ausfüllen:  

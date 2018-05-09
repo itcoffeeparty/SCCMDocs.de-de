@@ -2,24 +2,19 @@
 title: Verwalten von Clients
 titleSuffix: Configuration Manager
 description: Erfahren Sie, wie Sie Clients in System Center Configuration Manager verwalten.
-ms.custom: na
 ms.date: 12/21/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
-caps.latest.revision: "17"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 2065fd0910b1d89df3f8296c87ede15b89331568
-ms.sourcegitcommit: 528b1ce79803fecd34937a790e9b5cde282d4caa
+manager: dougeby
+ms.openlocfilehash: 623d7b6a048b7728e40adb3655dc1017408fb1d7
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>Verwalten von Clients in System Center Configuration Manager
 
@@ -278,7 +273,7 @@ Weitere Informationen zum Verwenden dieser Befehlszeileneigenschaften für „CC
 
 1.  Doppelklicken Sie in der Systemsteuerung des Clientcomputers auf **Configuration Manager**, um die Eigenschaften anzuzeigen.  
 
-2.  Legen Sie auf der Registerkarte **Cache** die Eigenschaften für Speicherplatz und Speicherort fest. Der Standardspeicherort lautet *%windir%*\ccmcache.  
+2.  Legen Sie auf der Registerkarte **Cache** die Eigenschaften für Speicherplatz und Speicherort fest. Der Standardspeicherort lautet *%windir%* \ccmcache.  
 
 3.  Wählen Sie zum Löschen der Dateien im Cacheordner **Dateien löschen** aus.  
 

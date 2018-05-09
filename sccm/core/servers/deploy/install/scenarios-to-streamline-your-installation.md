@@ -1,25 +1,20 @@
 ---
 title: Installationsszenarios
 titleSuffix: Configuration Manager
-description: "Lernen Sie Verfahren für die Installation einer neuen Configuration Manager-Hierarchie kennen, wenn Sie ein Update oder ein Upgrade für eine Seite durchführen."
-ms.custom: na
+description: Lernen Sie Verfahren für die Installation einer neuen Configuration Manager-Hierarchie kennen, wenn Sie ein Update oder ein Upgrade für eine Seite durchführen.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 35586a85-4af9-4c8b-925a-0e32dc8b7346
-caps.latest.revision: "6"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: c9fc7c502acca95ea19b6d7ba55f2aee79a929cd
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 77615ab53f715a5d3e5b2e21cda667e6f0a2bc0c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scenarios-to-streamline-your-installation-of-system-center-configuration-manager"></a>Szenarien für die Optimierung Ihrer Installation von System Center Configuration Manager
 
@@ -106,7 +101,7 @@ Gehen Sie wie folgt vor:
 
     Nach diesem Schritt wird an jedem primären Standort Version 1606 ausgeführt.  
 
-3.  **Legen Sie Wartungsfenster für untergeordnete primäre Standorte fest.** Nach dem Upgrade aller primären Standorte auf die Baselineversion planen Sie die Konfiguration von Wartungsfenstern, um zu steuern, wann für diese Standorte Infrastruktur-Updates installiert werden sollen. Weitere Informationen finden Sie unter [Verwenden von Wartungsfenstern in System Center Configuration Manager](../../../../core/clients/manage/collections/use-maintenance-windows.md).  (Wartungsfenster werden in Version 1606 als *Servicezeitfenster* bezeichnet.)  
+3.  **Legen Sie Wartungsfenster für untergeordnete primäre Standorte fest.** Nach dem Upgrade aller primären Standorte auf die Baselineversion planen Sie die Konfiguration von Wartungsfenstern, um zu steuern, wann für diese Standorte Infrastruktur-Updates installiert werden sollen. Weitere Informationen finden Sie unter [How to use maintenance windows in System Center Configuration Manager (Verwenden von Wartungsfenstern in System Center Configuration Manager)](../../../../core/clients/manage/collections/use-maintenance-windows.md).  (Wartungsfenster werden in Version 1606 als *Servicezeitfenster* bezeichnet.)  
 
     -   Ein untergeordneter primärer Standort installiert automatisch dieselben Updates, die Sie an einem Standort der zentralen Verwaltung installieren.  
     -   An sekundären Standorten werden neue Versionen nicht automatisch installiert. Sie müssen diese manuell aus der Konsole upgraden.  

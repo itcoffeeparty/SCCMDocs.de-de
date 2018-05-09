@@ -2,22 +2,19 @@
 title: Planen von Softwareupdates
 titleSuffix: Configuration Manager
 description: Ein Plan für die Softwareupdatepunkt-Infrastruktur ist wichtig, bevor Sie Softwareupdates in einer System Center Configuration Manager-Produktionsumgebung verwenden.
-keywords: ''
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: b57a1b584ec40d67b263959ae52f694c486481d7
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 2debedd40fbde8094c14a873235a742ccf15cc95
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-for-software-updates-in-system-center-configuration-manager"></a>Planen von Softwareupdates in System Center Configuration Manager
 

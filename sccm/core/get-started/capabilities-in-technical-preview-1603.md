@@ -1,32 +1,27 @@
 ---
 title: Funktionen in Technical Preview 1603
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr zu Funktionen, die in System Center Configuration Manager Technical Preview 1603 zur Verfügung stehen."
-ms.custom: na
+description: Erfahren Sie mehr zu Funktionen, die in System Center Configuration Manager Technical Preview 1603 zur Verfügung stehen.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f861b72-9f14-4d17-a512-4a79b660abe6
-caps.latest.revision: "8"
-author: erikje
-ms.author: erikje
-manager: angrobe
+author: aczechowski
 robots: noindex,nofollow
-ms.openlocfilehash: 9152016afe1d6333cb919f3b5eb155028dc6eae1
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 6d5ecf4e2d231a596012aa9f7d371f18ef0705a1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1603-for-system-center-configuration-manager"></a>Funktionen in Technical Preview 1603 für System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Technical Preview)*
 
-In diesem Artikel werden die Funktionen erläutert, die in der Technical Preview für System Center Configuration Manager 1603 verfügbar sind. Sie können diese Version installieren, um neue Funktionen für Ihren Configuration Manager Technical Preview-Standort zu aktualisieren oder hinzuzufügen. Bei Verwendung von System Center Technical Preview 5 wird diese Version auch als eine Baselineversion von System Center Configuration Manager Technical Preview installiert. Bevor Sie diese Version der Technical Preview installieren, lesen Sie das einführende Thema [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md), um sich mit den allgemeinen Anforderungen und Einschränkungen bei der Verwendung einer Technical Preview vertraut zu machen, und zu erfahren, wie Sie Updates zwischen Versionen durchführen und Feedback zu den Features in einer Technical Preview geben können.  
+In diesem Artikel werden die Funktionen erläutert, die in der Technical Preview für System Center Configuration Manager 1603 verfügbar sind. Sie können diese Version installieren, um neue Funktionen für Ihren Configuration Manager Technical Preview-Standort zu aktualisieren oder hinzuzufügen. Bei Verwendung von System Center Technical Preview 5 wird diese Version auch als eine Baselineversion von System Center Configuration Manager Technical Preview installiert. Bevor Sie diese Version der Technical Preview installieren, lesen Sie das einführende Thema [Technical Preview für System Center Configuration Manager](../../core/get-started/technical-preview.md), um sich mit den allgemeinen Anforderungen und Einschränkungen bei der Verwendung einer Technical Preview vertraut zu machen, und zu erfahren, wie Sie Updates für Versionen durchführen und Feedback zu den Features in einer Technical Preview geben können.  
 
  **Bekannte Probleme für diese Technical Preview:**  
 
@@ -57,9 +52,9 @@ In diesem Artikel werden die Funktionen erläutert, die in der Technical Preview
  In Technical Preview 1603 können Sie die RamDisk-TFTP-Blockgröße und die Fenstergröße für PXE-fähige Verteilungspunkte anpassen. Wenn Sie Ihr Netzwerk angepasst haben, kann dies wegen übermäßiger Block- oder Fenstergröße zu einem Timeout beim Herunterladen des Startimages führen. Durch Anpassen der RamDisk-TFTP-Blockgröße und der Fenstergröße können Sie den TFTP-Datenverkehr bei Verwendung von PXE für Ihre spezifischen Netzwerkanforderungen optimieren.   
 Sie müssen die benutzerdefinierten Einstellungen in Ihrer Umgebung testen, um die effizienteste Einstellung zu ermitteln.  
 
--   **TFTP-Blockgröße:**Die Blockgröße ist die Größe der Datenpakete, die vom Server an den Client gesendet werden, der die Datei herunterlädt (wie in RFC 2347 erörtert). Mit einer größeren Blockgröße kann der Server weniger Pakete senden, sodass weniger Roundtripverzögerungen zwischen dem Server und dem Client auftreten. Große Blöcke führen jedoch zu fragmentierten Paketen, die von den meisten PXE-Clientimplementierungen nicht unterstützt werden.  
+-   **TFTP-Blockgröße:** Die Blockgröße ist die Größe der Datenpakete, die vom Server an den Client gesendet werden, der die Datei herunterlädt (wie in RFC 2347 erörtert). Mit einer größeren Blockgröße kann der Server weniger Pakete senden, sodass weniger Roundtripverzögerungen zwischen dem Server und dem Client auftreten. Große Blöcke führen jedoch zu fragmentierten Paketen, die von den meisten PXE-Clientimplementierungen nicht unterstützt werden.  
 
--   **TFTP-Fenstergröße:**TFTP erfordert ein Bestätigungspaket (acknowledgment packet; ACK) für jeden gesendeten Datenblock. Der Server sendet den nächsten Block in der Sequenz erst, wenn er das ACK-Paket für den vorherigen Block empfangen hat. TFTP-Fenster sind ein Feature in den Windows-Bereitstellungsdiensten, mit dem Sie definieren können, wie viele Datenblöcke ein Fenster füllen. Der Server sendet die Datenblöcke nach dem Back-to-Back-Prinzip, bis das Fenster gefüllt ist. Anschließend sendet der Client ein ACK-Paket. Durch Erhöhen diese Fenstergröße reduzieren Sie die Anzahl von Roundtripverzögerungen zwischen Client und Server und verringern die Gesamtzeit, die zum Herunterladen eines Startimages erforderlich ist.  
+-   **TFTP-Fenstergröße:** TFTP erfordert ein Bestätigungspaket (acknowledgment packet; ACK) für jeden gesendeten Datenblock. Der Server sendet den nächsten Block in der Sequenz erst, wenn er das ACK-Paket für den vorherigen Block empfangen hat. TFTP-Fenster sind ein Feature in den Windows-Bereitstellungsdiensten, mit dem Sie definieren können, wie viele Datenblöcke ein Fenster füllen. Der Server sendet die Datenblöcke nach dem Back-to-Back-Prinzip, bis das Fenster gefüllt ist. Anschließend sendet der Client ein ACK-Paket. Durch Erhöhen diese Fenstergröße reduzieren Sie die Anzahl von Roundtripverzögerungen zwischen Client und Server und verringern die Gesamtzeit, die zum Herunterladen eines Startimages erforderlich ist.  
 
 ### <a name="try-it-out"></a>Probieren Sie es aus!  
  Versuchen Sie, die folgenden Aufgaben durchzuführen, und verwenden Sie dann die Feedbackinformationen oben in diesem Thema, um uns Ihre Erfahrungen mitzuteilen:  
@@ -72,10 +67,10 @@ Sie müssen die benutzerdefinierten Einstellungen in Ihrer Umgebung testen, um d
 
 -   Fügen Sie auf PXE-fähigen Verteilungspunkten den folgenden Registrierungsschlüssel hinzu, um die RamDisk-TFTP-Fenstergröße anzupassen:  
 
-     **Speicherort:**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
+     **Speicherort:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
     Name: RamDiskTFTPWindowSize  
 
-     **Typ:**REG_DWORD  
+     **Typ:** REG_DWORD  
 
      **Wert**: &lt;angepasste Fenstergröße\>  
 
@@ -85,10 +80,10 @@ Sie müssen die benutzerdefinierten Einstellungen in Ihrer Umgebung testen, um d
 
 -   Fügen Sie auf PXE-fähigen Verteilungspunkten den folgenden Registrierungsschlüssel hinzu, um die RamDisk-TFTP-Fenstergröße anzupassen:  
 
-     **Speicherort:**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
+     **Speicherort:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
     Name: RamDiskTFTPBlockSize  
 
-     **Typ:**REG_DWORD  
+     **Typ:** REG_DWORD  
 
      **Wert**: &lt;angepasste Blockgröße\>  
 

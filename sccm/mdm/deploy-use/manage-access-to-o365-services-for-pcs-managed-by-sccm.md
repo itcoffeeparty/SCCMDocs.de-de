@@ -2,25 +2,19 @@
 title: Verwalten des Zugriffs auf O365-Dienste
 titleSuffix: Configuration Manager
 description: Erfahren Sie, wie Sie den bedingten Zugriff auf Office 365-Dienste für PCs konfigurieren, die von System Center Configuration Manager verwaltet werden.
-ms.custom: na
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
-caps.latest.revision: 15
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1e02cb911397d5f1f837996318b12049d328c9c3
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: 7bf7114382c956dcac6302b3fc11617ad6b5eeec
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Verwalten des Zugriffs auf Office 365-Dienste für PCs, die von System Center Configuration Manager verwaltet werden
 
@@ -30,7 +24,7 @@ ms.lasthandoff: 04/16/2018
 Konfigurieren des bedingten Zugriffs auf Office 365-Dienste für PCs, die von Configuration Manager verwaltet werden.  
 
 > [!Note]  
-> Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen dieses Feature aktivieren, bevor Sie es verwenden können. Weitere Informationen finden Sie unter [Aktivieren optionaler Features von Updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+> Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen dieses Feature aktivieren, bevor Sie es verwenden. Weitere Informationen finden Sie unter [Enable optional features from updates (Aktivieren optionaler Features von Updates)](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
 
 Informationen zum Konfigurieren des bedingten Zugriffs für Geräte, die über Microsoft Intune registriert und verwaltet werden, finden Sie unter [Verwalten des Zugriffs auf Dienste in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md). Dieser Artikel behandelt auch Geräte, die in eine Domäne eingebunden sind und nicht als konform ausgewertet werden.
@@ -101,7 +95,7 @@ Informationen zum Konfigurieren des bedingten Zugriffs für Geräte, die über M
     > Mit Version 1710 wurden die bedingten Zugangsberechtigungskriterien für die Geräteintegritätsprüfung als [Vorabfeature](/sccm/core/servers/manage/pre-release-features) eingeführt. Ab Version 1802 ist dieses Feature kein Vorabfeature mehr.<!--1235616-->  
 
     > [!Note]  
-    > Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen dieses Feature aktivieren, bevor Sie es verwenden können. Weitere Informationen finden Sie unter [Aktivieren optionaler Features von Updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+    > Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen dieses Feature aktivieren, bevor Sie es verwenden. Weitere Informationen finden Sie unter [Enable optional features from updates (Aktivieren optionaler Features von Updates)](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
 ### <a name="step-2-evaluate-the-effect-of-conditional-access"></a>Schritt 2: Bewerten der Auswirkungen des bedingten Zugriffs  
  Führen Sie den **Bericht zur Konformität mit bedingtem Zugriff** aus. Sie finden ihn im Arbeitsbereich **Überwachung** unter **Berichte** > **Konformitäts- und Einstellungsverwaltung**. Dieser Bericht zeigt den Konformitätsstatus für alle Geräte an. Geräten, die als nicht konform gemeldet werden, wird der Zugriff auf Exchange Online und SharePoint Online blockiert.  

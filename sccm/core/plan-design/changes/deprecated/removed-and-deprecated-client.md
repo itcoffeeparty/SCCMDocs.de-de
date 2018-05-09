@@ -2,26 +2,19 @@
 title: Veraltete Elemente für Configuration Manager-Clients
 titleSuffix: Configuration Manager
 description: Hier finden Sie Informationen zu den Features, Produkten und Betriebssystemen, die von System Center Configuration Manager für Clients nicht mehr unterstützt werden.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 604ab835-bce3-4fe3-a7f3-3f059cfc0ecf
-caps.latest.revision: 15
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: a745a67e3f3f4c61b3fa3f863cdb25d74ca6cbf8
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 02cb366ecf1935c79924b3ad23882f9952fe1f78
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="removed-and-deprecated-items-for-system-center-configuration-manager-clients"></a>Entfernte und veraltete Elemente für System Center Configuration Manager-Clients
 

@@ -1,32 +1,26 @@
 ---
-title: "Konformitätsrichtlinien für Geräte"
+title: Konformitätsrichtlinien für Geräte
 titleSuffix: Configuration Manager
-description: "Erfahren Sie, wie Sie Kompatibilitätsrichtlinien in System Center Configuration Manager verwalten, damit Geräte als kompatibel mit Richtlinien für bedingten Zugriff eingestuft werden können."
-ms.custom: na
+description: Erfahren Sie, wie Sie Konformitätsrichtlinien in System Center Configuration Manager verwalten, damit Geräte als konform mit Richtlinien für bedingten Zugriff eingestuft werden können.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ad8fa94d-45bb-4c94-8d86-31234c5cf21c
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: d9811d81987e8531ee48a07a6855b337fdccb73b
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 776af7499c576f21d47dafec8a668f3c4051ad88
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="device-compliance-policies-in-system-center-configuration-manager"></a>Kompatibilitätsrichtlinien für Geräte in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-**Kompatibilitätsrichtlinien** in System Center Configuration Manager definieren die Regeln und Einstellungen, die ein Gerät erfüllen muss, damit es als kompatibel mit Richtlinien für bedingten Zugriff eingestuft wird. Kompatibilitätsrichtlinien ermöglichen Ihnen auch, Kompatibilitätsprobleme bei Geräten unabhängig von bedingten Zugriffsrechten zu überwachen und zu beheben.  
+**Kompatibilitätsrichtlinien** in System Center Configuration Manager definieren die Regeln und Einstellungen, die ein Gerät erfüllen muss, damit es als kompatibel mit Richtlinien für bedingten Zugriff eingestuft wird. Konformitätsrichtlinien ermöglichen Ihnen auch, Konformitätsprobleme bei Geräten unabhängig von bedingten Zugriffsrechten zu überwachen und zu beheben.  
 
 
 > [!IMPORTANT]  
@@ -44,7 +38,7 @@ ms.lasthandoff: 10/12/2017
 -   Apps, die auf dem Gerät nicht installiert werden können.
 
 
- Sie stellen Kompatibilitätsrichtlinien für Benutzer- und Gerätegruppen bereit. Wenn Sie eine Konformitätsrichtlinie für einen Benutzer bereitstellen, wird die Konformität aller Geräte des Benutzers überprüft.  
+ Sie stellen Konformitätsrichtlinien für Benutzer- und Gerätegruppen bereit. Wenn Sie eine Konformitätsrichtlinie für einen Benutzer bereitstellen, wird die Konformität aller Geräte des Benutzers überprüft.  
 
  Die folgende Tabelle enthält die von Konformitätsrichtlinien unterstützten Gerätetypen. Zudem ist darin angegeben, wie nicht konforme Einstellungen gehandhabt werden, wenn die Richtlinie mit einer bedingten Zugriffsrichtlinie verwendet wird.  
 

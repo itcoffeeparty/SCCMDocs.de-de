@@ -1,26 +1,20 @@
 ---
-title: "Einführung in Asset Intelligence"
+title: Einführung in Asset Intelligence
 titleSuffix: Configuration Manager
-description: "Erhalten Sie eine Einführung in Asset Intelligence in System Center Configuration Manager."
-ms.custom: na
+description: Erhalten Sie eine Einführung in Asset Intelligence in System Center Configuration Manager.
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 0bdfdef5-390f-4099-8bde-de51d9a89175
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 349f5998c0d5e96a626e901ae99fee76541d1b4e
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 0c09160e88d8a713caadfdd9a6973fd436b4cad1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-asset-intelligence-in-system-center-configuration-manager"></a>Einführung in Asset Intelligence in System Center Configuration Manager
 
@@ -146,7 +140,7 @@ Mit Asset Intelligence in System Center Configuration Manager können Sie die So
  Asset Intelligence-Softwareberichte enthalten Informationen zu Softwarefamilien, Softwarekategorien und bestimmten Softwaretiteln, die auf Computern in der Organisation installiert sind. Die Softwareberichte enthalten Informationen zu Browserhilfsobjekten, automatisch startender Software und mehr. Diese Berichte können zum Identifizieren von Adware, Spyware und anderer Schadsoftware sowie zum Identifizieren von Softwareredundanz verwendet werden, um den Softwarekauf und die Softwareunterstützung zu vereinfachen.  
 
 ###  <a name="BKMK_SoftwareIdTagReports"></a> Berichte zu Asset Intelligence-Softwarerkennungstags  
- Berichte zu Asset Intelligence-Softwarerkennungstags liefern Informationen zu Software, die ein mit ISO/IEC 19770-2 kompatibles Softwarekennungstag enthält. Softwarekennungstags stellen autoritative Informationen bereit, mit deren Hilfe die installierte Software identifiziert wird. Wenn Sie die Hardwareinventur-Berichterstellungsklasse „SMS_SoftwareTag“ aktivieren, sammelt Configuration Manager mithilfe von Softwareerkennungstags Informationen zur Software. Die folgenden Berichte stellen Informationen zur Software bereit:  
+ Berichte zu Asset Intelligence-Softwarerkennungstags liefern Informationen zu Software, die ein mit ISO/IEC 19770-2 konformes Softwarekennungstag enthält. Softwarekennungstags stellen autoritative Informationen bereit, mit deren Hilfe die installierte Software identifiziert wird. Wenn Sie die Hardwareinventur-Berichterstellungsklasse „SMS_SoftwareTag“ aktivieren, sammelt Configuration Manager mithilfe von Softwareerkennungstags Informationen zur Software. Die folgenden Berichte stellen Informationen zur Software bereit:  
 
 -   **Software 14A – Suche nach softwareerkennungstagfähiger Software**: Dieser Bericht gibt an, wie viel Software mit aktiviertem Softwareerkennungstag installiert ist.  
 
@@ -155,10 +149,10 @@ Mit Asset Intelligence in System Center Configuration Manager können Sie die So
 -   **Software 14C - Installierte softwareerkennungstagfähige Software auf einem bestimmten Computer**: Dieser Bericht listet die gesamte installierte Software mit einem bestimmten, aktivierten Softwarerkennungstag auf einem bestimmten Computer auf.  
 
 ###  <a name="BKMK_ReportingLImitations"></a> Einschränkungen bei der Asset Intelligence-Berichterstattung  
- In Asset Intelligence-Berichten können große Mengen an Informationen zu installierten Softwaretiteln sowie erworbenen und verwendeten Softwarelizenzen zusammengestellt werden. Diese Berichte sollten jedoch bei der Prüfung der erworbenen Softwarelizenzen nicht als alleinige Quelle herangezogen werden.  
+ In Asset Intelligence-Berichten können große Mengen an Informationen zu installierten Softwaretiteln sowie erworbenen und verwendeten Softwarelizenzen zusammengestellt werden. Diese Berichte sollten jedoch bei der Prüfung der Konformität der erworbenen Softwarelizenzen nicht als alleinige Quelle herangezogen werden.  
 
 ####  <a name="BKMK_ExampleDependencies"></a> Beispielabhängigkeiten  
- Die Genauigkeit, mit der die Anzahl installierter Softwaretitel und die Lizenzinformationen in den Asset Intelligence-Berichten angegeben ist, kann von den aktuellen, tatsächlich verwendeten Mengen abweichen. Diese Variation ist auf die komplexen Abhängigkeiten bei der Inventarisierung von Softwarelizenzinformationen für Softwaretitel zurückzuführen, die in Unternehmensumgebungen verwendet werden. Im Folgenden finden Sie Beispiele für Abhängigkeiten, die bei der Inventur installierter Software in Unternehmen unter Verwendung von Asset Intelligence auftreten und die Genauigkeit von Asset Intelligence-Berichten beeinflussen können:  
+ Die Genauigkeit der Menge angezeigt, die in den Asset Intelligence-Berichten für installiert Softwaretitel, und Lizenzinformationen kann variieren, von den tatsächlichen verwendeten Mengen, die derzeit verwendet. Diese Variation ist auf die komplexen Abhängigkeiten bei der Inventarisierung von Softwarelizenzinformationen für Softwaretitel zurückzuführen, die in Unternehmensumgebungen verwendet werden. Im Folgenden finden Sie Beispiele für Abhängigkeiten, die bei der Inventur installierter Software in Unternehmen unter Verwendung von Asset Intelligence auftreten und die Genauigkeit von Asset Intelligence-Berichten beeinflussen können:  
 
  **Abhängigkeiten bezüglich der Clienthardwareinventur**  
  Asset Intelligence-Berichte zu installierter Software basieren auf Daten, die von Configuration Manager-Clients durch die Erweiterung der Hardwareinventur zum Aktivieren der Asset Intelligence-Berichterstellung gesammelt wurden. Aufgrund dieser Abhängigkeit von der Hardwareinventurberichterstellung geben Asset Intelligence-Berichten nur Daten von Configuration Manager-Clients wieder, die Hardwareinventurprozesse erfolgreich mit den erforderlichen aktivierten Asset Intelligence-WMI-Berichterstellungsklassen abschließen. Darüber hinaus kann es bei der Datenberichterstattung zu einer Verzögerung mit Einfluss auf die Genauigkeit von Asset Intelligence-Berichten kommen, da die Hardwareinventurprozesse von Configuration Manager-Clients gemäß einem vom Administrator definierten Zeitplan ausgeführt werden. Beispielsweise kann ein inventarisierter lizenzierter Softwaretitel deinstalliert werden, nachdem der Client einen erfolgreichen Hardwareinventurzyklus abgeschlossen hat. Allerdings wird der Softwaretitel in Asset Intelligence-Berichten bis zum nächsten geplanten Hardwareinventur-Berichterstattungszyklus des Clients als installiert angezeigt.  
@@ -193,11 +187,11 @@ Mit Asset Intelligence in System Center Configuration Manager können Sie die So
 
 |**Status**|**Definition**|**Administratoraktion**|**Kommentar**|  
 |---------------|--------------------|------------------------------|-----------------|  
-|**Überprüft**|Das Katalogelement wurde von System Center Online-Forschern definiert.|Keine|Der optimale Zustand.|  
+|**Überprüft**|Das Katalogelement wurde von System Center Online-Forschern definiert.|Keine.|Der optimale Zustand.|  
 |**Benutzerdefiniert**|Das Katalogelement wurde nicht von System Center Online-Forschern definiert.|Die lokalen Kataloginformationen wurden angepasst.|Dieser Zustand wird in Asset Intelligence-Berichten angezeigt.|  
 |**Ausstehend**|Das Katalogelement wurde nicht von System Center Online-Forschern definiert, aber zur Kategorisierung an System Center Online übermittelt.|Die Kategorisierung durch System Center Online wurde angefordert.|Das Katalogelement bleibt in diesem Zustand, bis System Center Online-Mitarbeiter das Element kategorisieren und der Asset Intelligence-Katalog synchronisiert wird.|  
 |**Aktualisierbar**|Ein benutzerdefiniertes Katalogelement wurde von System Center Online während einer nachfolgenden Katalogsynchronisierung anders kategorisiert.|Der lokale Asset Intelligence-Katalog wurde so angepasst, dass ein Element als benutzerdefiniert kategorisiert wurde.|Sie können mithilfe der Aktion "Konflikt beheben" entscheiden, ob die neuen Kategorisierungsinformationen oder der vorherige benutzerdefinierte Wert verwendet werden sollen. Weitere Informationen zum Lösen von Konflikten finden Sie unter [Konfigurieren von Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md).|  
-|**Nicht kategorisiert**|Das Katalogelement wurde weder von System Center Online-Forschern definiert noch zur Kategorisierung an System Center Online übermittelt, und der Administrator hat ihm keinen benutzerdefinierten Wert zugewiesen.|Keine|Fordern Sie die Kategorisierung an, oder passen Sie die lokalen Kataloginformationen an.<br /><br /> Weitere Informationen zum Lösen von Konflikten finden Sie unter [Konfigurieren von Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md).<br /><br /> Weitere Informationen zum Lösen von Konflikten finden Sie unter [Vorgänge für Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md).|  
+|**Nicht kategorisiert**|Das Katalogelement wurde weder von System Center Online-Forschern definiert noch zur Kategorisierung an System Center Online übermittelt, und der Administrator hat ihm keinen benutzerdefinierten Wert zugewiesen.|Keine.|Fordern Sie die Kategorisierung an, oder passen Sie die lokalen Kataloginformationen an.<br /><br /> Weitere Informationen zum Lösen von Konflikten finden Sie unter [Konfigurieren von Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md).<br /><br /> Weitere Informationen zum Lösen von Konflikten finden Sie unter [Vorgänge für Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md).|  
 
 > [!NOTE]  
 >  Katalogelemente, die an System Center Online zur Kategorisierung übermittelt wurden, haben zwar den Überprüfungszustand **Ausstehend** am zentralen Verwaltungsstandort, werden jedoch an untergeordneten primären Standorten mit dem Überprüfungszustand **Nicht kategorisiert** angezeigt.  

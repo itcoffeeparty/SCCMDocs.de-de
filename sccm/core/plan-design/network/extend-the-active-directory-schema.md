@@ -1,26 +1,20 @@
 ---
-title: "Veröffentlichung und das Active Directory-Schema"
+title: Veröffentlichung und das Active Directory-Schema
 titleSuffix: Configuration Manager
-description: "Das Erweitern des Active Directory-Schemas für System Center Configuration Manager vereinfacht das Bereitstellen und Konfigurieren von Clients."
-ms.custom: na
+description: Das Erweitern des Active Directory-Schemas für System Center Configuration Manager vereinfacht das Bereitstellen und Konfigurieren von Clients.
 ms.date: 2/6/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: bc15ee7e-4d0a-4463-ae2c-f72d8d45d65d
-caps.latest.revision: "17"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: d495c7934b92d6042399f66fe578007c32ae10f4
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 6f0590a626cf75ed78e42235768a0d97a9fc3026
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepare-active-directory-for-site-publishing"></a>Vorbereiten von Active Directory für die Veröffentlichung eines Standorts
 
@@ -70,7 +64,7 @@ So erweitern Sie das Schema für Configuration Manager
 
 3.  Um zu prüfen, ob die Schemaerweiterung erfolgreich war, untersuchen Sie die Protokolldatei, die mithilfe der Befehlszeile aus dem vorherigen Schritt erstellt wurde.  
 
-## <a name="step-2--create-the-system-management-container-and-grant-sites-permissions-to-the-container"></a>Schritt 2.  Erstellen des System Management-Containers und Gewähren von Standortberechtigungen für den Container  
+## <a name="step-2--create-the-system-management-container-and-grant-sites-permissions-to-the-container"></a>Schritt 2:  Erstellen des System Management-Containers und Gewähren von Standortberechtigungen für den Container  
  Nach dem Erweitern des Schemas müssen Sie in Active Directory Domain Services (AD DS) einen Container **Systemverwaltung** erstellen:  
 
 -   Sie erstellen diesen Containers einmal in jeder Domäne, die über einen primären oder sekundären Standort verfügt, der Daten in Active Directory veröffentlicht.  

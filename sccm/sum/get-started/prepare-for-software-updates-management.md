@@ -1,22 +1,20 @@
 ---
 title: Vorbereiten der Softwareupdateverwaltung
 titleSuffix: Configuration Manager
-description: "Um die Updateverwaltung vorzubereiten, müssen Sie diese Tasks durchführen, um Daten zur Bewertung der Kompatibilität in der System Center Configuration Manager-Konsole anzuzeigen."
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: Um die Updateverwaltung vorzubereiten, müssen Sie diese Tasks durchführen, um Daten zur Bewertung der Konformität in der System Center Configuration Manager-Konsole anzuzeigen.
+author: aczechowski
 ms.date: 10/06/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 01907900-e28b-4cd7-9479-42906416707b
-ms.openlocfilehash: 91c6e3654375073977a50cfffb0cf784d091ef98
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: f2608d8cd46572a0fbcbafc6bc8c0f5e013356a2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepare-for-software-updates-management"></a>Vorbereiten der Softwareupdateverwaltung
 

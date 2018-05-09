@@ -1,25 +1,20 @@
 ---
 title: Konfigurieren von Standorten
 titleSuffix: Configuration Manager
-description: "Stellen Sie anhand dieser Prüfliste sicher, dass Sie die am häufigsten verwendeten Konfigurationen berücksichtigen, die Standorte und Hierarchien betreffen."
-ms.custom: na
+description: Stellen Sie anhand dieser Prüfliste sicher, dass Sie die am häufigsten verwendeten Konfigurationen berücksichtigen, die Standorte und Hierarchien betreffen.
 ms.date: 2/7/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 9efb4061-f642-48bd-8332-3357ff5b3118
-caps.latest.revision: "15"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 55daf30e3386e53f3711c07fa971750d6aa33423
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 8a74f998c7bae22d94f2471724c2d51de918dfc4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sites-and-hierarchies-for-system-center-configuration-manager"></a>Konfigurieren von Standorten und Hierarchien für System Center Configuration Manager
 
@@ -40,7 +35,7 @@ Beachten Sie die folgenden Hinweise zur Konfiguration, die für die meisten Bere
 |------------|-------------|  
 |Konfigurieren der rollenbasierten Verwaltung|Trennen Sie administrative Zuständigkeiten, um zu steuern, welche Administratoren verschiedene Objekte und Daten in Ihrer Configuration Manager-Umgebung anzeigen und verwalten können.<br /><br /> Konfigurationen der rollenbasierten Verwaltung werden von allen Standorten der Hierarchie gemeinsam genutzt.   <br/><br/>Weitere Informationen finden Sie unter [Configure role-based administration for System Center Configuration Manager (Konfigurieren der rollenbasierten Verwaltung)](../../../../core/servers/deploy/configure/configure-role-based-administration.md).|  
 |Veröffentlichen von Standortdaten in Active Directory-Domänendienste (AD DS)|Erleichtern Sie Clients das Auffinden von Diensten und das effiziente Verwenden von Standortressourcen.<br /><br /> Sie müssen [das Active Directory-Schema für System Center Configuration Manager zunächst erweitern](../../../../core/plan-design/network/extend-the-active-directory-schema.md) und anschließend jeden Standort einzeln konfigurieren, um [Standortdaten für System Center Configuration Manager zu veröffentlichen](../../../../core/servers/deploy/configure/publish-site-data.md).|  
-|Konfigurieren eines Dienstverbindungspunkts|Planen Sie die Installation und Konfiguration des Dienstverbindungspunkts auf der obersten Ebene Ihrer Hierarchie. Weitere Informationen finden Sie unter [Informationen zum Dienstverbindungspunkt in System Center Configuration Manager](../../../../core/servers/deploy/configure/about-the-service-connection-point.md).|  
+|Konfigurieren eines Dienstverbindungspunkts|Planen Sie die Installation und Konfiguration des Dienstverbindungspunkts auf der obersten Ebene Ihrer Hierarchie. Weitere Informationen finden Sie unter [About the service connection point in System Center Configuration Manager](../../../../core/servers/deploy/configure/about-the-service-connection-point.md).|  
 |Hinzufügen von Standortsystemrollen|Installieren und konfigurieren Sie für einzelne Standorte zusätzliche Standortsystemrollen.  Weitere Informationen finden Sie unter [Hinzufügen von Standortsystemrollen für System Center Configuration Manager](../../../../core/servers/deploy/configure/add-site-system-roles.md).|  
 |Konfigurieren von Grenzen und Begrenzungsgruppen für Standorte|Geben Sie Grenzen zum Definieren der Netzwerkadressen in Ihrem Intranet an, die Geräte enthalten können, die Sie verwalten möchten. Konfigurieren Sie dann Begrenzungsgruppen, sodass Clients an diesen Netzwerkadressen Configuration Manager-Ressourcen finden können. Weitere Informationen hierzu finden Sie unter [Definieren von Standortgrenzen und Begrenzungsgruppen für Configuration Manager](../../../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md).|  
 |Konfigurieren von Verteilungspunktgruppen|Konfigurieren Sie logische Gruppen von Verteilungspunkten, um das Verwalten von Bereitstellungen zu vereinfachen. Weitere Informationen hierzu finden Sie im Artikel [Installieren und Konfigurieren von Verteilungspunkten für System Center Configuration Manager](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md) im Abschnitt [Verwalten von Verteilungspunktgruppen](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage).|  

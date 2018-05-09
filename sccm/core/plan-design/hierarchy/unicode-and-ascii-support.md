@@ -1,26 +1,20 @@
 ---
-title: "Unicode- und ASCII-Unterstützung"
+title: Unicode- und ASCII-Unterstützung
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr über die Unterstützung für Unicode- und ASCII-Zeichen in System Center Configuration Manager-Objekten."
-ms.custom: na
+description: Erfahren Sie mehr über die Unterstützung für Unicode- und ASCII-Zeichen in System Center Configuration Manager-Objekten.
 ms.date: 3/1/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2bdec799-905f-48bc-aed5-2d92134739e8
-caps.latest.revision: "6"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 654d70d97adefca6801bb64b1e23797e71c75f40
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 6212a22a8ed2fbce7dda19a0b70b0336812b2827
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unicode-and-ascii-support-in-system-center-configuration-manager"></a>Unicode- und ASCII-Unterstützung in System Center Configuration Manager
 

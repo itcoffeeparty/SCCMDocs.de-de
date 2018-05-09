@@ -1,26 +1,20 @@
 ---
-title: "Windows-Firewall- und -Porteinstellungen für Clients"
+title: Windows-Firewall- und -Porteinstellungen für Clients
 titleSuffix: Configuration Manager
-description: "Wählen Sie Windows-Firewall- und -Porteinstellungen für Clients in System Center Configuration Manager aus."
-ms.custom: na
+description: Wählen Sie Windows-Firewall- und -Porteinstellungen für Clients in System Center Configuration Manager aus.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dce4b640-c92f-401a-9873-ce9aa9262014
-caps.latest.revision: "8"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: fe9f98ad6567b4f691dcfe6f70868fc63d61a63d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 193ee803fd0a6bacf043dbabc6550ef68a4a629a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-firewall-and-port-settings-for-clients-in-system-center-configuration-manager"></a>Windows-Firewall- und -Porteinstellungen für Clients in System Center Configuration Manager
 
@@ -150,7 +144,7 @@ Für Clientcomputer in System Center Configuration Manager, auf denen die Window
 
 |Beschreibung|UDP|TCP|  
 |-----------------|---------|---------|  
-|SMB-Datenverkehr (Server Message Block) zwischen dem Clientcomputer und einer Netzwerkfreigabe, über die Sie CCMSetup.exe ausführen<br /><br /> Bei der Installation von Configuration Manager werden die Quelldateien für die Clientinstallation kopiert und automatisch im Ordner *&lt;Installationspfad\>*\Client auf Verwaltungspunkten freigegeben. Allerdings können Sie diese Dateien auch kopieren und eine neue Freigabe auf einen beliebigen Computer im Netzwerk erstellen. Sie können diesen Netzwerkverkehr aber auch vermeiden, indem Sie CCMSetup.exe lokal ausführen und z. B. Wechselmedien verwenden.|--|445|  
+|SMB-Datenverkehr (Server Message Block) zwischen dem Clientcomputer und einer Netzwerkfreigabe, über die Sie CCMSetup.exe ausführen<br /><br /> Bei der Installation von Configuration Manager werden die Quelldateien für die Clientinstallation kopiert und automatisch im Ordner *&lt;Installationspfad\>* \Client auf Verwaltungspunkten freigegeben. Allerdings können Sie diese Dateien auch kopieren und eine neue Freigabe auf einen beliebigen Computer im Netzwerk erstellen. Sie können diesen Netzwerkverkehr aber auch vermeiden, indem Sie CCMSetup.exe lokal ausführen und z. B. Wechselmedien verwenden.|--|445|  
 |HTTP-Verbindung (Hypertext Transfer Protocol) vom Clientcomputer zu einem Verwaltungspunkt, wenn die CCMSetup-Befehlszeileneigenschaft **/source:&lt;Pfad\>** nicht angegeben wird.|--|80 (siehe Hinweis 1, **Alternativer Port verfügbar**)|  
 |HTTPS-Verbindung (Secure Hypertext Transfer Protocol) vom Clientcomputer zu einem Verwaltungspunkt, wenn die CCMSetup-Befehlszeileneigenschaft **/source:&lt;Pfad\>** nicht angegeben wird.|--|443 (siehe Hinweis 1, **Alternativer Port verfügbar**)|  
 |SMB-Datenverkehr (Server Message Block) zwischen dem Quellserver und dem Clientcomputer, wenn Sie die CCMSetup-Befehlszeileneigenschaft **/source:&lt;Pfad\>** festlegen.|--|445|  

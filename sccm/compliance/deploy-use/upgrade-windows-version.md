@@ -1,29 +1,22 @@
 ---
-title: "Aktualisieren von Windows-Geräten auf eine neuere Version"
+title: Aktualisieren von Windows-Geräten auf eine neuere Version
 titleSuffix: Configuration Manager
-description: "Automatisches Upgrade von Geräten, die Windows 10 Desktop oder Windows 10 Mobile ausführen, auf eine andere Edition mit Configuration Manager."
-ms.custom: na
+description: Automatisches Upgrade von Geräten, die Windows 10 Desktop oder Windows 10 Mobile ausführen, auf eine andere Edition mit Configuration Manager.
 ms.date: 01/26/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
-caps.latest.revision: 
-caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 95e3385ad9bca9c87e48d731ffeebfa387fece65
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+ms.openlocfilehash: 0c15e919978ae8458f426511dd9a0e6d7c311b4b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="upgrade-windows-devices-with-the-edition-upgrade-policy-in-system-center-configuration-manager"></a>Aktualisieren von Windows-Geräten mit der Editionsupgraderichtlinie in System Center Configuration Manager
+# <a name="upgrade-windows-devices-with-the-edition-upgrade-policy-in-system-center-configuration-manager"></a>Aktualisieren von Windows-Geräten mit der Editionsaktualisierungsrichtlinie in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -50,15 +43,15 @@ Die Geräte müssen bei Microsoft Intune registriert sein oder die Configuration
 
 - Zum Verwalten dieses Richtlinientyps muss Ihnen die Configuration Manager-Sicherheitsrolle **Hauptadministrator** zugewiesen sein.
 
-## <a name="configure-the-edition-upgrade-policy"></a>Konfigurieren der Editionsupgraderichtlinie  
+## <a name="configure-the-edition-upgrade-policy"></a>Konfigurieren der Editionsaktualisierungsrichtlinie  
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Bestand und Kompatibilität** > **Kompatibilitätseinstellungen** > **Windows 10-Editionsupgrade**.  
 
-3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Editionsupgraderichtlinie erstellen**.  
+3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Editionsaktualisierungsrichtlinie erstellen**.  
 
 4.  Klicken Sie auf **Richtlinie erstellen**.  
 
-5.  Geben Sie auf der Seite **Allgemein** des **Assistenten zum Erstellen von Editionsupgraderichtlinien**die folgenden Informationen an:  
+5.  Geben Sie auf der Seite **Allgemein** des **Assistenten zum Erstellen von Editionsaktualisierungsrichtlinien**die folgenden Informationen an:  
 
     -   **Name**: Geben Sie einen Namen für die Editionsupgraderichtlinie ein.  
 
@@ -78,11 +71,11 @@ Die Geräte müssen bei Microsoft Intune registriert sein oder die Configuration
 6.  Schließen Sie den Assistenten ab.  
 
 
-## <a name="deploy-the-edition-upgrade-policy"></a>Bereitstellen der Editionsupgraderichtlinie  
+## <a name="deploy-the-edition-upgrade-policy"></a>Bereitstellen der Editionsaktualisierungsrichtlinie  
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Bestand und Kompatibilität** > **Kompatibilitätseinstellungen** > **Windows 10-Editionsupgrade**.  
 
-3.  Wählen Sie die Windows 10-Editionsupgraderichtlinie aus, die Sie bereitstellen möchten, und klicken Sie dann auf der Registerkarte **Startseite** in der Gruppe **Bereitstellung** auf **Bereitstellen**.  
+3.  Wählen Sie die Windows 10-Editionsaktualisierungsrichtlinie aus, die Sie bereitstellen möchten, und klicken Sie dann auf der Registerkarte **Startseite** in der Gruppe **Bereitstellung** auf **Bereitstellen**.  
 
 4.  Wählen Sie zunächst im Dialogfeld **Windows 10-Editionsupgrade bereitstellen** die Sammlung aus, für die Sie die Richtlinie bereitstellen möchten. Wählen Sie den Zeitplan aus, nach dem der Client die Richtlinie bewertet, und klicken Sie dann auf **OK**. Für PCs, die mit dem Configuration Manager-Client verwaltet werden, müssen Sie die Richtlinie auf einer Gerätesammlung bereitstellen. Für PCs, die bei Intune registriert sind, können Sie die Richtlinie für eine Benutzer- oder Gerätesammlung bereitstellen. 
 

@@ -1,25 +1,20 @@
 ---
 title: Verwalten des Dynamics CRM Online-Zugriffs
 titleSuffix: Configuration Manager
-description: "Erfahren Sie, wie Sie den Zugriff auf Microsoft Dynamics CRM Online von iOS- und Android-Geräten über den bedingten Zugriff mit Microsoft Intune steuern."
-ms.custom: na
+description: Erfahren Sie, wie Sie den Zugriff auf Microsoft Dynamics CRM Online von iOS- und Android-Geräten über den bedingten Zugriff mit Microsoft Intune steuern.
 ms.date: 03/05/2017
-ms.reviewer: na
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2bfc4c51-b25c-4c70-b81e-8a3b6ddf02c8
-caps.latest.revision: "5"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 556bb29918327499cc9262a44b9810269d84822a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: d77dbcf0b8b7853153a0b2ead4b2db3affd03733
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-dynamics-crm-online-access-in-system-center-configuration-manager"></a>Verwalten des Dynamics CRM Online-Zugriffs in System Center Configuration Manager
 
@@ -37,7 +32,7 @@ Wenn Zielbenutzer versuchen, die Dynamics CRM-App auf ihrem Gerät zu verwenden,
 ![Das Diagramm zeigt, welche Entscheidungspunkte verwendet werden, um zu bestimmen, ob ein Gerät Zugriff auf einen Dienst erhält oder ob es blockiert wird.](media/mdm-ca-dynamics-crm-flow-diagram.png)
 
 Ein Gerät, das Zugriff auf Dynamics CRM Online benötigt, muss folgende Voraussetzungen erfüllen:
-* Es muss ein **Android-** oder **iOS-**Gerät sein.
+* Es muss ein **Android-** oder **iOS-** Gerät sein.
 * Es muss bei Microsoft Intune **registriert** sein.
 * Es muss mit allen bereitgestellten Microsoft Intune-Kompatibilitätsrichtlinien **kompatibel** sein.
 

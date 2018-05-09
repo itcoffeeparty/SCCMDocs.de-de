@@ -2,24 +2,19 @@
 title: Das Content Library Cleanup Tool
 titleSuffix: Configuration Manager
 description: Verwenden Sie das Inhaltsbibliothek-Bereinigungstool zum Entfernen von verwaistem Inhalt, der nicht mehr einer Bereitstellung von System Center Configuration Manager zugeordnet ist.
-ms.custom: na
 ms.date: 4/7/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 226cbbb2-9afa-4e2e-a472-be989c0f0e11
-caps.latest.revision: "4"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 334b79e675ea7804128b0feb9678de4ad06dbc93
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 5d83b23673d8eea6e98f21ea30b6b802eb7e5595
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-content-library-cleanup-tool-for-system-center-configuration-manager"></a>Das Inhaltsbibliothek-Bereinigungstool in System Center Configuration Manager
 
@@ -29,7 +24,7 @@ ms.lasthandoff: 01/04/2018
 
 Das Tool wirkt sich nur auf den Inhalt auf dem Verteilungspunkt aus, den Sie angeben, wenn Sie das Tool ausführen. Das Tool kann keinen Inhalt aus der Inhaltsbibliothek auf dem Standortserver entfernen.
 
-Sie können **ContentLibraryCleanup.exe** im Ordner \*%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* auf dem Standortserver an einem Standort der zentralen Verwaltung oder einem primären Standort finden.
+Sie können **ContentLibraryCleanup.exe** im Ordner *%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* auf dem Standortserver an einem Standort der zentralen Verwaltung oder einem primären Standort finden.
 
 ## <a name="requirements"></a>Anforderungen  
  Das Tool kann jeweils immer nur für einen einzelnen Verteilungspunkt ausgeführt werden.  

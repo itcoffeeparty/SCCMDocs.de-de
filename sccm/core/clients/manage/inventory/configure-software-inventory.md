@@ -1,26 +1,20 @@
 ---
 title: Konfigurieren der Softwareinventur
 titleSuffix: Configuration Manager
-description: "Konfigurieren Sie die Softwareinventur, und schließen Sie Ordner aus der Softwareinventur in Configuration Manager aus."
-ms.custom: na
+description: Konfigurieren Sie die Softwareinventur, und schließen Sie Ordner aus der Softwareinventur in Configuration Manager aus.
 ms.date: 01/03/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: f86559de-092a-4ce8-9b43-5d7530e0b763
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: afddcef2caab6e1af0aacdac91366fa430f21d85
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 346ff3254f4c1833f49bf256cbf5ad0c489d77e0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-configure-software-inventory-in-system-center-configuration-manager"></a>Konfigurieren der Softwareinventur in System Center Configuration Manager
 
@@ -44,7 +38,7 @@ Mithilfe dieses Verfahrens werden die Clientstandardeinstellungen für die Softw
 
 7.  Konfigurieren Sie die erforderlichen Clienteinstellungen. Im Abschnitt [Softwareinventur](../../../../core/clients/deploy/about-client-settings.md#software-inventory) des Artikels [Informationen zu Clienteinstellungen in System Center Configuration Manager](../../../../core/clients/deploy/about-client-settings.md) finden Sie eine Liste der Clienteinstellungen.  
 
- Die Clientcomputer werden beim nächsten Clientrichtliniendownload mit diesen Einstellungen konfiguriert. Informationen zum Initiieren des Abrufens von Richtlinien für einen einzelnen Client finden Sie unter [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
+ Die Clientcomputer werden beim nächsten Clientrichtliniendownload mit diesen Einstellungen konfiguriert. Informationen zum Initiieren des Abrufens von Richtlinien für einen einzelnen Client finden Sie unter [Verwalten von Clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
 
  > [!TIP]  
         >   Der Fehlercode 80041006 in der inventoryprovider.log-Datei bedeutet, dass der WMI-Anbieter über nicht genügend Arbeitsspeicher verfügt. Das bedeutet, dass die Beschränkung des Speicherkontingents für den Anbieter erreicht wurde und der Inventuranbieter nicht mehr fortgeführt werden kann.

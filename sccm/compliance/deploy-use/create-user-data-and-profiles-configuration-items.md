@@ -1,26 +1,20 @@
 ---
-title: "Erstellen von Konfigurationselementen für Benutzerdaten und -profile"
+title: Erstellen von Konfigurationselementen für Benutzerdaten und -profile
 titleSuffix: Configuration Manager
-description: "Verwenden Sie Konfigurationselemente für Benutzerdaten und -profile in System Center Configuration Manager, um Ordnerumleitung, Offlinedateien und servergespeicherte Benutzerprofile zu verwalten."
-ms.custom: na
+description: Verwenden Sie Konfigurationselemente für Benutzerdaten und -profile in System Center Configuration Manager, um Ordnerumleitung, Offlinedateien und servergespeicherte Benutzerprofile zu verwalten.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 9fcbcc81-cd6f-496e-b075-ef1afa2b8ccc
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: ab027a197ffd696fe279a464d0f30b0d224bf312
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: e7d1ee430ef07149b77a4e7b250bc3e19788582a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-user-data-and-profiles-configuration-items-in-system-center-configuration-manager"></a>Erstellen von Konfigurationselementen für Benutzerdaten und -profile in System Center Configuration Manager
 
@@ -40,7 +34,7 @@ Konfigurationselemente für Benutzerdaten und -profile in System Center Configur
 >  Sie können Konfigurationselemente für Benutzerdaten und Profile nur für Benutzersammlungen bereitstellen.  
 
 ## <a name="enable-user-data-and-profiles-for-compliance-settings"></a>Aktivieren von Benutzerdaten und Profilen für Kompatibilitätseinstellungen  
- Verwenden Sie das folgende Verfahren, um die Clientstandardeinstellung für Kompatibilitätseinstellungen der Benutzerdaten und Profile zu konfigurieren, die auf alle Computern in Ihrer Hierarchie angewendet wird. Wenn Sie diese Einstellung nur auf manche Computer anwenden möchten, erstellen Sie eine benutzerdefinierte Geräteclienteinstellung, und weisen Sie sie einer Sammlung mit den Computern zu, für die Sie Kompatibilitätseinstellungen der Benutzerdaten und Profile verwenden möchten. Weitere Informationen zum Erstellen von benutzerdefinierten Geräteeinstellungen finden Sie unter [How to configure client settings (Konfigurieren von Clienteinstellungen)](../../core/clients/deploy/configure-client-settings.md).  
+ Verwenden Sie das folgende Verfahren, um die Clientstandardeinstellung für Kompatibilitätseinstellungen der Benutzerdaten und Profile zu konfigurieren, die auf alle Computern in Ihrer Hierarchie angewendet wird. Wenn Sie diese Einstellung nur auf manche Computer anwenden möchten, erstellen Sie eine benutzerdefinierte Geräteclienteinstellung, und weisen Sie sie einer Sammlung mit den Computern zu, für die Sie Konformitätseinstellungen der Benutzerdaten und Profile verwenden möchten. Weitere Informationen zum Erstellen von benutzerdefinierten Geräteeinstellungen finden Sie unter [How to configure client settings (Konfigurieren von Clienteinstellungen)](../../core/clients/deploy/configure-client-settings.md).  
 
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung** > **Clienteinstellungen** > **Standardeinstellungen**.  
 

@@ -1,22 +1,20 @@
 ---
-title: "Überwachen von Softwareupdates"
+title: Überwachen von Softwareupdates
 titleSuffix: Configuration Manager
-description: "Die System Center Configuration Manager-Konsole stellt Warnungen und Status zum Überwachen von Updates und Kompatibilität bereit."
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: Die System Center Configuration Manager-Konsole stellt Warnungen und Status zum Überwachen von Updates und Konformität bereit.
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ms.date: 11/20/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
-ms.openlocfilehash: 7eb9acf75ef3d1ba7fa5b89536986173461b1e13
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: bc594fe6b870e1054033601a67209aa9ad72ccef
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-software-updates-in-system-center-configuration-manager"></a>Überwachen von Softwareupdates in System Center Configuration Manager
 
@@ -28,7 +26,7 @@ In der System Center Configuration Manager-Konsole stehen viele Hilfsmittel zur 
 Ab Version 1610 von Configuration Manager können Sie jetzt das Dashboard „Softwareupdatepunkt“ verwenden, um den aktuellen Konformitätsstatus von Geräten in Ihrer Organisation anzuzeigen, und schnell Daten analysieren, um anzuzeigen, welche Geräte gefährdet sind. Navigieren Sie zum Anzeigen des Dashboards zu **Überwachung** > **Überblick** > **Sicherheit** > **Software Updates Dashboard** (Dashboard „Softwareupdatepunkt“).   
 
 ##  <a name="BKMK_SUAlerts"></a> Warnungen zu Softwareupdates  
- Sie können Warnungen zu Softwareupdates konfigurieren, mit denen Administratoren benachrichtigt werden, wenn die Kompatibilitätsstufen von Softwareupdatebereitstellungen unter dem konfigurierten Prozentsatz liegen. Sie können Warnungen zu Softwareupdatebereitstellungen an den folgenden Stellen konfigurieren:  
+ Sie können Warnungen zu Softwareupdates konfigurieren, mit denen Administratoren benachrichtigt werden, wenn die Konformitätsstufen von Softwareupdatebereitstellungen unter dem konfigurierten Prozentsatz liegen. Sie können Warnungen zu Softwareupdatebereitstellungen an den folgenden Stellen konfigurieren:  
 
 -   ADR-Einstellung: Sie können die Warnungseinstellungen im Assistenten zum Erstellen automatischer Bereitstellungsregeln und in den ADR-Eigenschaften (Automatic Deployment Rule, ADR) konfigurieren.  
 
@@ -61,7 +59,7 @@ Nachdem Sie die Warnungseinstellungen konfiguriert haben, wird von Configuration
 3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Bereitstellung** auf **Status anzeigen**.  
 
 ##  <a name="BKMK_SUReports"></a> Softwareupdateberichte  
- Die Zustandsmeldungen zu Softwareupdates enthalten Informationen zur Kompatibilität von Softwareupdates sowie zu Bewertung und Erzwingungszustand von Softwareupdatebereitstellungen. Zum Anzeigen der Zustandsmeldungen können Sie Softwareupdateberichte ausführen. Mehr als 30 vordefinierte Softwareupdateberichte sind verfügbar. Sie sind in verschiedene Kategorien unterteilt und können dazu verwendet werden, Informationen zu bestimmten Aspekten von Softwareupdates und -bereitstellungen zu liefern. Zusätzlich zu den vorkonfigurierten Berichten können Sie auch benutzerdefinierte Softwareupdateberichte erstellen, die auf die Anforderungen Ihres Unternehmens zugeschnitten sind. Weitere Informationen finden Sie unter [Vorgänge und Wartungstasks für die Berichterstellung](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
+ Die Zustandsmeldungen zu Softwareupdates enthalten Informationen zur Konformität von Softwareupdates sowie zu Bewertung und Erzwingungszustand von Softwareupdatebereitstellungen. Zum Anzeigen der Zustandsmeldungen können Sie Softwareupdateberichte ausführen. Mehr als 30 vordefinierte Softwareupdateberichte sind verfügbar. Sie sind in verschiedene Kategorien unterteilt und können dazu verwendet werden, Informationen zu bestimmten Aspekten von Softwareupdates und -bereitstellungen zu liefern. Zusätzlich zu den vorkonfigurierten Berichten können Sie auch benutzerdefinierte Softwareupdateberichte erstellen, die auf die Anforderungen Ihres Unternehmens zugeschnitten sind. Weitere Informationen finden Sie unter [Vorgänge und Wartungstasks für die Berichterstellung](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
 
 ##  <a name="BKMK_MonitorContent"></a> Überwachen von Inhalt  
  Sie können den Inhalt in der Configuration Manager-Konsole überwachen, und so den Status aller Pakettypen im Zusammenhang mit den zugeordneten Verteilungspunkten prüfen. Dies kann den Inhaltsprüfungsstatus des Paketinhalts, den Status von Inhalt, der einer bestimmten Verteilungspunktgruppe zugeordnet ist, den Zustand von Inhalt, der einem Verteilungspunkt zugeordnet ist, und den Status optionaler Funktionen jedes Verteilungspunkts (Inhaltsprüfung, PXE und Multicast) umfassen.  

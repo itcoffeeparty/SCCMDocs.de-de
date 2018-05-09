@@ -1,23 +1,20 @@
 ---
 title: Verschieben von Configuration Manager-Workloads zu Intune
-titleSuffix: System Center Configuration Manager
+titleSuffix: Configuraton Manager
 description: Erfahren Sie, wie Sie Workloads, die derzeit von Configuration Manager verwaltet werden, zu Microsoft Intune verschieben.
 ms.prod: configuration-manager
-ms.suite: na
-ms.technology:
-- configmgr-client
-author: mestew
-ms.author: mstewart
+ms.technology: configmgr-client
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
-ms.service: ''
+ms.topic: conceptual
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: d0cee0eb242011d6cc7b3085b4ae9df908604fa8
-ms.sourcegitcommit: ac06e034cc60db7b1acade1f541e26b6cc50506e
+ms.openlocfilehash: 439e4e26c08b5a2710da0978ed2407d715bc86bd
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="switch-configuration-manager-workloads-to-intune"></a>Verschieben von Configuration Manager-Workloads zu Intune
 In [Vorbereiten von Windows 10-Geräten für die Co-Verwaltung](co-management-prepare.md) haben Sie Windows 10-Geräte für die Co-Verwaltung vorbereitet. Diese Geräte sind in AD und Azure AD eingebunden, bei Intune registriert und verwenden den Configuration Manager-Client. Wahrscheinlich sind aber noch nicht alle Ihrer Windows 10-Geräte, die in AD eingebunden und mit dem Configuration Manager-Client versehen sind, auch in Azure AD eingebunden oder bei Intune registriert. Das folgende Verfahren enthält eine Anleitung für die Aktivierung der Co-Verwaltung und die Vorbereitung Ihrer restlichen Windows 10-Geräte (Configuration Manager-Clients ohne Intune-Registrierung) für die Co-Verwaltung. Außerdem können Sie damit beginnen, bestimmte Configuration Manager-Workloads zu Intune zu verschieben.

@@ -2,25 +2,19 @@
 title: Vorbereiten des Windows PE-Peercache zum Reduzieren des WAN-Datenverkehrs
 titleSuffix: Configuration Manager
 description: Der Windows PE-Peercache funktioniert in der Windows PE, von wo Inhalt von einem lokalen Peer abgerufen und WAN-Datenverkehr minimiert wird, wenn kein lokaler Verteilungspunkt vorhanden ist.
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 6c64f276-b88c-4b1e-8073-331876a03038
-caps.latest.revision: 
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 24e6aaa404054f5b9ac477cc0dbdd6fa9cce1860
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 90eaaec52076e4ac4fbaddf6cc07cf20359b5a68
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepare-windows-pe-peer-cache-to-reduce-wan-traffic-in-system-center-configuration-manager"></a>Vorbereiten des Windows PE-Peercache zum Reduzieren des WAN-Datenverkehrs in System Center Configuration Manager
 
@@ -75,7 +69,7 @@ In den folgenden Abschnitten erfahren Sie, wie Sie Peercache verwalten.
         > [!TIP]  
         >  Die Clients werden HTTPS zum Herunterladen von Inhalten verwenden, wenn es verfügbar ist. Allerdings wird für HTTP oder HTTPS dieselbe Portnummer verwendet.  
 
--   [Konfigurieren des Clientcaches für Configuration Manager-Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) auf Clients, um sicherzustellen, dass ausreichend Speicherplatz für die bereitzustellenden Images verfügbar ist. Windows PE-Peercache wirkt sich nicht auf die Konfiguration oder das Verhalten des Clientcaches aus.  
+-   [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) auf Clients, um sicherzustellen, dass ausreichend Speicherplatz für die bereitzustellenden Images verfügbar ist. Windows PE-Peercache wirkt sich nicht auf die Konfiguration oder das Verhalten des Clientcaches aus.  
 
 -   Die Bereitstellungsoptionen für die Bereitstellung der Tasksequenz müssen als „Inhalt lokal herunterladen, wenn er von der Tasksequenz benötigt wird“ konfiguriert werden.  
 

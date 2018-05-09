@@ -1,25 +1,20 @@
 ---
-title: "Checkliste für Version 1702"
+title: Checkliste für Version 1702
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr über die Vorbereitungen, die Sie treffen müssen, bevor Sie eine Aktualisierung auf System Center Configuration Manager Version 1702 ausführen."
-ms.custom: na
+description: Erfahren Sie mehr über die Vorbereitungen, die Sie treffen müssen, bevor Sie eine Aktualisierung auf System Center Configuration Manager Version 1702 ausführen.
 ms.date: 06/06/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b587779e-1bd3-4ee3-8146-8e31f53499bd
-caps.latest.revision: "7"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: d7b3f6d058e17e12ca910f43f7a9cbe98d128bee
-ms.sourcegitcommit: 2867fd119256ec670fc5ae65cdc8a80d39f9b4d4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: db5ca29f093e27c2c572714dc4c85a630c774b15
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="checklist-for-installing-update-1702-for-system-center-configuration-manager"></a>Checkliste für die Installation von Update 1702 für System Center Configuration Manager
 

@@ -1,26 +1,20 @@
 ---
 title: Erstellen von Windows Phone-Anwendungen
 titleSuffix: Configuration Manager
-description: "Erfahren Sie, was Sie beim Erstellen und Bereitstellen von Anwendungen für Windows Phone-Geräte berücksichtigen müssen."
-ms.custom: na
+description: Erfahren Sie, was Sie beim Erstellen und Bereitstellen von Anwendungen für Windows Phone-Geräte berücksichtigen müssen.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 68fe11fa-5fb2-4b81-b0f5-b6f2392fb4ad
-caps.latest.revision: 
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 154cc1f6e8f16f2bfbb717cfd44fe596b9e31ac5
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: c755db47c9d3acb9c858ecb5bed14bb36055663b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-windows-phone-applications-with-system-center-configuration-manager"></a>Erstellen von Windows Phone-Anwendungen mit System Center Configuration Manager
 
@@ -64,4 +58,4 @@ Unter [Starten des Assistenten zum Erstellen von Anwendungen](../../apps/deploy-
 |**Schritt 4:** Fügen Sie die Anwendung dem Assistenten für Microsoft Intune-Abonnements hinzu.|Weitere Informationen finden Sie unter [Set up Windows Phone and Windows 10 Mobile hybrid device management with System Center Configuration Manager and Microsoft Intune (Einrichten einer hybriden Geräteverwaltung für Windows Phone und Windows 10 Mobile mit System Center Configuration Manager und Microsoft Intune)](../../mdm/deploy-use/enroll-hybrid-windows.md).|  
 |**Schritt 5:** Löschen Sie die beim Hinzufügen der Unternehmensportal-App zum Assistenten für Microsoft Intune-Abonnements automatisch erstellte Bereitstellung.|Eine automatische Bereitstellung dieser App wurde durch das Microsoft Intune-Abonnement erstellt, da eine Ablösung von dieser Bereitstellung nicht unterstützt wird.|  
 |**Schritt 6:** Erstellen Sie eine neue Bereitstellung der Anwendung. Aktivieren Sie im **Assistenten zum Bereitstellen von Software** auf der Seite **Bereitstellungseinstellungen** die Option **Automatically upgrade any superceded versions of this application** (Abgelöste Versionen dieser Anwendung automatisch upgraden).|Erstellen Sie mithilfe der Anwendung, die Sie mit der Ablösungsbeziehung erstellt haben, eine neue Bereitstellung mit Ablösung.|  
-|**Schritt 7 (optional):** Die ablösenden Apps würden standardmäßig nach 7 Tagen auf den Geräten installiert werden. Wenn Sie die Unternehmensportal-App auf zuvor bereits angemeldeten Geräten schneller bereitstellen möchten, können Sie für die Einstellung **Erneute Auswertung für Bereitstellungen planen** einen niedrigeren Wert festlegen.<br /><br /> Wenn Sie einen Wert festlegen, der niedriger als die Standardeinstellung ist, kann dies jedoch die Leistung von Netzwerk und Clientcomputern beeinträchtigen.|keine zusätzlichen Informationen|  
+|**Schritt 7 (optional):** Die ablösenden Apps würden standardmäßig nach 7 Tagen auf den Geräten installiert werden. Wenn Sie die Unternehmensportal-App auf zuvor bereits angemeldeten Geräten schneller bereitstellen möchten, können Sie für die Einstellung **Erneute Auswertung für Bereitstellungen planen** einen niedrigeren Wert festlegen.<br /><br /> Wenn Sie einen Wert festlegen, der niedriger als die Standardeinstellung ist, kann dies jedoch die Leistung von Netzwerk und Clientcomputern beeinträchtigen.|Keine zusätzlichen Informationen|  

@@ -2,25 +2,19 @@
 title: Verwalten des E-Mail-Zugriffs
 titleSuffix: Configuration Manager
 description: Hier erfahren Sie, wie mit dem bedingten Zugriff in System Center Configuration Manager der Zugriff auf Exchange-E-Mail verwaltet wird.
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: fa648e73-5fb8-4818-ab57-7466ffaf888e
-caps.latest.revision: 24
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: e36674d27757daab9ced4e7e8b51942a4929b5ff
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 52785e1f432e1a18d1e8264dc2c78134af9f006e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-email-access-in-system-center-configuration-manager"></a>Verwalten des E-Mail-Zugriffs in System Center Configuration Manager
 
@@ -253,7 +247,7 @@ Nicht unterstützte Browser werden blockiert. Die OWA-Apps für iOS und Android 
 
     -   **Geräte müssen kompatibel sein.** PCs müssen bei Intune registriert und kompatibel sein. Wenn ein PC nicht registriert ist, wird eine Meldung mit Anweisungen zur Registrierung angezeigt.  
 
-7.  Unter **Outlook Web Access (OWA)**können Sie Zugriff auf Exchange Online nur über die unterstützten Browser gewähren: Safari (iOS) und Chrome (Android). Der Zugriff über andere Browser wird blockiert. Die gleichen Plattformbeschränkungen, die Sie für den Anwendungszugriff für Outlook ausgewählt haben, gelten auch hier.
+7.  Unter **Outlook Web Access (OWA)** können Sie Zugriff auf Exchange Online nur über die unterstützten Browser gewähren: Safari (iOS) und Chrome (Android). Der Zugriff über andere Browser wird blockiert. Die gleichen Plattformbeschränkungen, die Sie für den Anwendungszugriff für Outlook ausgewählt haben, gelten auch hier.
 
     Benutzer müssen auf **Android** -Geräten den Browserzugriff aktivieren.  Der Endbenutzer muss hierzu die Option „Browserzugriff aktivieren“ wie folgt auf dem registrierten Gerät aktivieren:
      1. Starten Sie die **Unternehmensportal-App**.

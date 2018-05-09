@@ -1,25 +1,20 @@
 ---
-title: "Unterstützung für Virtualisierung"
+title: Unterstützung für Virtualisierung
 titleSuffix: Configuration Manager
-description: "Rufen Sie die Anforderungen für die Installation der System Center Configuration Manager-Client- und Standortsystemrollen in einer Virtualisierungsumgebung ab."
-ms.custom: na
+description: Rufen Sie die Anforderungen für die Installation der System Center Configuration Manager-Client- und Standortsystemrollen in einer Virtualisierungsumgebung ab.
 ms.date: 1/12/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
-caps.latest.revision: "6"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 941c0fffd351a7cc345c5bcc0529633c22c27ed5
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 374a1643c5ea439a7406bbb1f6b53322caa50871
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="support-for-virtualization-environments-for-system-center-configuration-manager"></a>Unterstützung für Virtualisierungsumgebungen für System Center Configuration Manager
 
@@ -35,7 +30,7 @@ Configuration Manager unterstützt die Installation von Client- und Standortsyst
 |Microsoft Hyper-V Server 2008 R2|  
 |Windows Server 2012|  
 |Microsoft Hyper-V Server 2012|  
-|Windows Server 2012 R2|
+|Windows Server 2012 R2|
 |Windows Server 2016 <sup>(siehe *Hinweis 1*)</sup>|
 |Microsoft Hyper-V Server 2016 <sup>(siehe *Hinweis 1*)|
 -  *Hinweis 1*: Configuration Manager unterstützt keine [geschachtelte Virtualisierung](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/what-s-new-in-hyper-v-on-windows#a-namebkmknestedanested-virtualization-new), das ist neu in Windows Server 2016.

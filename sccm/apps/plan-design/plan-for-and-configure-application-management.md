@@ -1,25 +1,20 @@
 ---
-title: "Planen für die und Konfigurieren der Anwendungsverwaltung"
+title: Planen für die und Konfigurieren der Anwendungsverwaltung
 titleSuffix: Configuration Manager
-description: "Implementieren und konfigurieren Sie die erforderlichen Abhängigkeiten für die Bereitstellung von Anwendungen in System Center Configuration Manager."
-ms.custom: na
+description: Implementieren und konfigurieren Sie die erforderlichen Abhängigkeiten für die Bereitstellung von Anwendungen in System Center Configuration Manager.
 ms.date: 11/07/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 2be84a1d-ebb9-47ae-8982-c66d5b92a52a
-caps.latest.revision: "13"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: cd06d3ee2ea14c9ff1b9cf09980c2b25a5263db9
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 18d9fe80a1c5525457579dadbfeaeafa3425202d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-for-and-configure-application-management-in-system-center-configuration-manager"></a>Planen und Konfigurieren der Anwendungsverwaltung in System Center Configuration Manager
 
@@ -40,7 +35,7 @@ Implementieren Sie anhand der Informationen in diesem Artikel die erforderlichen
 |Abhängigkeit|Weitere Informationen|  
 |------------------|----------------------|  
 |Verwaltungspunkt|Von Clients wird eine Verbindung mit einem Verwaltungspunkt hergestellt, um eine Clientrichtlinie herunterzuladen, nach Inhalten zu suchen und eine Verbindung mit dem Anwendungskatalog herzustellen.<br /><br /> Ohne Zugriff auf einen Verwaltungspunkt ist Clients die Verwendung des Anwendungskatalogs nicht möglich.|  
-|Verteilungspunkt|Damit Anwendungen auf Clients bereitgestellt werden können, muss in der Hierarchie mindestens ein Verteilungspunkt vorhanden sein. Standardmäßig wird auf dem Standortserver während einer Standardinstallation eine Verteilungspunkt-Standortrolle aktiviert. Anzahl und Standort von Verteilungspunkten richten sich nach den jeweiligen Anforderungen Ihres Unternehmens.<br /><br /> Weitere Informationen zum Installieren von Verteilungspunkten und zum Verwalten von Inhalt finden Sie unter [Manage content and content infrastructure (Verwalten von Inhalt und Inhaltsinfrastruktur)](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).|  
+|Verteilungspunkt|Damit Anwendungen auf Clients bereitgestellt werden können, muss in der Hierarchie mindestens ein Verteilungspunkt vorhanden sein. Standardmäßig wird auf dem Standortserver während einer Standardinstallation eine Verteilungspunkt-Standortrolle aktiviert. Anzahl und Standort von Verteilungspunkten richten sich nach den jeweiligen Anforderungen Ihres Unternehmens.<br /><br /> Weitere Informationen zum Installieren von Verteilungspunkten und Verwalten von Inhalt finden Sie unter [Verwalten von Inhalt und Inhaltsinfrastruktur](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).|  
 |Clienteinstellungen|Mit vielen Clienteinstellungen wird gesteuert, wie Anwendungen auf dem Client installiert werden und wie die Benutzeroberfläche auf dem Client aussieht. Diese Clienteinstellungen umfassen Folgendes:<br /><br /><ul><li>Computer-Agent</li><li>Computerneustart</li><li>Softwarebereitstellung</li><li>Affinität zwischen Benutzer und Gerät</li></ul> Weitere Informationen zu diesen Clienteinstellungen finden Sie unter [About client settings (Informationen zu Clienteinstellungen)](../../core/clients/deploy/about-client-settings.md).<br /><br /> Weitere Informationen zum Konfigurieren von Clienteinstellungen finden Sie unter [Konfigurieren von Clienteinstellungen in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md).|  
 |Ermittelte Benutzerkonten für den Anwendungskatalog |Benutzerkonten müssen zunächst von Configuration Manager ermittelt werden, bevor Benutzer Anwendungen anzeigen und aus dem Anwendungskatalog anfordern können. Weitere Informationen finden Sie unter [Run discovery (Ausführen der Ermittlung)](/sccm/core/servers/deploy/configure/run-discovery).|  
 |App-V 4.6 SP1-Client oder höher zum Ausführen von virtuellen Anwendungen|Zum Erstellen von virtuellen Anwendungen in Configuration Manager muss auf Clientcomputern der App-V 4.6 Service Pack 1 oder höher installiert sein.<br /><br /> Sie müssen den App-V-Client außerdem mit dem im [Knowledge Base-Artikel 2645225](http://go.microsoft.com/fwlink/p/?LinkId=237322) beschriebenen Hotfix aktualisieren, bevor Sie virtuelle Anwendungen bereitstellen können.|  
@@ -140,7 +135,7 @@ Implementieren Sie anhand der Informationen in diesem Artikel die erforderlichen
 
 3.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Eigenschaften** die Option **Eigenschaften** aus.  
 
-4.  Überprüfen und konfigurieren Sie die Einstellungen, die sich auf Benutzerbenachrichtigungen, Anwendungskatalog und Softwarecenter beziehen. Beispiel:  
+4.  Überprüfen und konfigurieren Sie die Einstellungen, die sich auf Benutzerbenachrichtigungen, Anwendungskatalog und Softwarecenter beziehen. Zum Beispiel:  
 
     1.  Gruppe**Computer-Agent** :  
 

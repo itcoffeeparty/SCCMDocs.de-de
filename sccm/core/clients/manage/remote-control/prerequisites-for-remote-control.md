@@ -1,26 +1,20 @@
 ---
-title: "Voraussetzungen für die Remotesteuerung"
+title: Voraussetzungen für die Remotesteuerung
 titleSuffix: Configuration Manager
-description: "Hier erhalten Sie Informationen über die Voraussetzungen für die Remotesteuerung in System Center Configuration Manager."
-ms.custom: na
+description: Hier erhalten Sie Informationen über die Voraussetzungen für die Remotesteuerung in System Center Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: c1b2057e-b74f-43fa-a293-763a8f866d3d
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: e7287ae7df68ebbcb8f251b8d001233a647596ee
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 117ad9a087151db51c4cf33112ab662f53b9134e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prerequisites-for-remote-control-in-system-center-configuration-manager"></a>Voraussetzungen für die Remotesteuerung in System Center Configuration Manager
 
@@ -39,7 +33,7 @@ Die Remotesteuerung in System Center Configuration Manager hat externe Abhängig
  Die Configuration Manager-Remotesteuerung kann nicht zur Remotesteuerung von Clientcomputern verwendet werden, auf denen Systems Management Server 2003 oder Configuration Manager 2007 ausgeführt wird.  
 
 > [!NOTE]  
->  Es sind keine Windows-Dienste als externe Abhängigkeit für die Remotesteuerung erforderlich.  
+>  Keine Windows-Dienste sind als externe Abhängigkeit für die Remotesteuerung erforderlich.  
 
 ### <a name="supported-operating-systems-for-the-remote-control-viewer"></a>Unterstützte Betriebssysteme für den Remotesteuerungsviewer  
 Der Remotesteuerungsviewer wird auf allen Betriebssystemen unterstützt, die für die Configuration Manager-Konsole unterstützt werden. Informationen finden Sie unter [Unterstützte Betriebssysteme für System Center Configuration Manager-Konsolen](../../../../core/plan-design/configs/supported-operating-systems-consoles.md).   

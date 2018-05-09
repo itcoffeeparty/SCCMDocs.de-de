@@ -5,16 +5,15 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 0e4d2add8ece7f548955064a479d9545a1fc64e1
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+ms.openlocfilehash: e62b748596aba1404d6b097e5aa0bf74266f055b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Zertifikate für das Cloudverwaltungsgateway
 
@@ -145,5 +144,5 @@ Stellen Sie dieses Zertifikat außerhalb des Configuration Manager-Kontexts bere
 ## <a name="next-steps"></a>Nächste Schritte
 
 - [Einrichten des Cloudverwaltungsgateways](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway)
-- [Häufig gestellte Fragen zum Cloudverwaltungsgateway](/sccm/core/clients/manage/cmg/cloud-management-gateway-faq)
+- [Frequently asked questions about the cloud management gateway (Häufig gestellte Fragen zu Cloud Management Gateway)](/sccm/core/clients/manage/cmg/cloud-management-gateway-faq)
 - [Sicherheit und Datenschutz für Cloud Management Gateway](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway)

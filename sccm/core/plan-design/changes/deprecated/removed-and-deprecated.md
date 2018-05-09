@@ -1,27 +1,20 @@
 ---
 title: Veraltete Elemente
 titleSuffix: Configuration Manager
-description: "Hier finden Sie Informationen zu den Features, Produkten und Betriebssystemen, die von System Center Configuration Manager nicht mehr unterstützt werden."
-ms.custom: na
+description: Hier finden Sie Informationen zu den Features, Produkten und Betriebssystemen, die von System Center Configuration Manager nicht mehr unterstützt werden.
 ms.date: 01/25/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: b0adf873-2ff4-4a7b-b5e7-6047f146511f
-caps.latest.revision: 
-caps.handback.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: a182f6de7b7227b23f63f43062f528d7c0c3b2d1
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 3381c28ef050d40fdb56ca381e47e6bccb4c638b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="removed-and-deprecated-items-for-system-center-configuration-manager"></a>Entfernte und veraltete Elemente für System Center Configuration Manager
 

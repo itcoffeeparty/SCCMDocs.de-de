@@ -1,26 +1,20 @@
 ---
 title: Erstellen von globalen Bedingungen
 titleSuffix: Configuration Manager
-description: "Erstellen Sie globale Bedingungen, die festlegen, wie eine Anwendung auf Clientgeräten bereitgestellt werden soll."
-ms.custom: na
+description: Erstellen Sie globale Bedingungen, die festlegen, wie eine Anwendung auf Clientgeräten bereitgestellt werden soll.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d5f871a-19dc-4bd3-a3ad-4230c7a69f1b
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 480e7a68308d458bc77ddb4956db2616eaaced97
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: dac47f55a1ad0d287e789d555d2f0a93b40f9376
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-global-conditions-in-system-center-configuration-manager"></a>Erstellen von globalen Bedingungen in System Center Configuration Manager
 
@@ -61,7 +55,7 @@ In System Center Configuration Manager sind globale Bedingungen Regeln für gesc
 
     -   **Active Directory-Abfrage**  
 
-        -   **LDAP-Präfix** : Geben Sie ein gültiges LDAP-Präfix für die Active Directory-Domänendiensteabfrage an, mit der die Kompatibilität auf Clientcomputern bewertet wird. Sie können **LDAP://** oder **GC://**verwenden.  
+        -   **LDAP-Präfix** : Geben Sie ein gültiges LDAP-Präfix für die Active Directory-Domänendiensteabfrage an, mit der die Kompatibilität auf Clientcomputern bewertet wird. Sie können **LDAP://** oder **GC://** verwenden.  
 
         -   **Definierter Name (DN)**: Geben Sie den Definierten Namen des Active Directory Domain Services-Diensts an, das auf Clientcomputern auf Konformität bewertet wird.  
 
@@ -71,13 +65,13 @@ In System Center Configuration Manager sind globale Bedingungen Regeln für gesc
 
             -   **Basis**: Hiermit wird nur das angegebene Objekt abgefragt.  
 
-            -   **Eine Ebene**: Diese Option wird in dieser Version von Configuration Manager nicht verwendet.  
+            -   **Eine Ebene** – Diese Option wird in dieser Version von Configuration Manager nicht verwendet.  
 
             -   **Unterstruktur**: Hiermit werden das angegebene Objekt und dessen vollständige untergeordnete Struktur im Verzeichnis abgefragt.  
 
         -   **Eigenschaft** : Geben Sie die Eigenschaft des Active Directory-Domänendiensteobjekts an, mit dem auf Clientcomputern die Kompatibilität bewertet wird.  
 
-        -   **Abfrage**: Zeigt die LDAP-Abfrage an, die aus den Einträgen unter **LDAP-Präfix**, **Definierter Name (DN)**, **Suchfilter** (falls angegeben) und **Eigenschaft**erstellt wird. Diese Abfrage wird zur Bewertung der Kompatibilität auf Clientcomputern verwendet.  
+        -   **Abfrage**: Zeigt die LDAP-Abfrage an, die aus den Einträgen unter **LDAP-Präfix**, **Definierter Name (DN)**, **Suchfilter** (falls angegeben) und **Eigenschaft**erstellt wird. Diese Abfrage wird zur Bewertung der Konformität auf Clientcomputern verwendet.  
 
     -   **Assembly**  
 
@@ -102,7 +96,7 @@ In System Center Configuration Manager sind globale Bedingungen Regeln für gesc
 
         -   **Unterordner einschließen** : Aktivieren Sie diese Option, wenn auch Unterordner unter dem angegebenen Pfad durchsucht werden sollen.  
 
-        -   **Diese Datei oder dieser Ordner ist mit einer 64-Bit-Anwendung verknüpft**: Geben Sie an, ob der Speicherort der 64-Bit-Systemdatei (*%windir%*\system32) zusätzlich zum Speicherort der 32-Bit-Systemdatei (*%windir%*\syswow64) auf Configuration Manager-Clients durchsucht werden soll, auf denen eine 64-Bit-Version von Windows ausgeführt wird.  
+        -   **Diese Datei oder dieser Ordner ist mit einer 64-Bit-Anwendung verknüpft**: Geben Sie an, ob der Speicherort der 64-Bit-Systemdatei (*%windir%* \system32) zusätzlich zum Speicherort der 32-Bit-Systemdatei (*%windir%* \syswow64) auf Configuration Manager-Clients durchsucht werden soll, auf denen eine 64-Bit-Version von Windows ausgeführt wird.  
 
             > [!NOTE]  
             >  Wenn dieselbe Datei bzw. derselbe Ordner sowohl am Speicherort der 64-Bit-Systemdatei als auch am Speicherort der 32-Bit-Systemdatei desselben 64-Bit-Computers existiert, werden von der globalen Bedingung mehrere Dateien ermittelt.  
@@ -146,7 +140,7 @@ In System Center Configuration Manager sind globale Bedingungen Regeln für gesc
         -   **Skripts durch Verwendung der Anmeldeinformationen angemeldeter Benutzer ausführen**: Wenn Sie diese Option aktivieren, wird das Skript auf Clientcomputern unter Verwendung der Anmeldeinformationen des angemeldeten Benutzers ausgeführt.  
 
             > [!NOTE]  
-            >  Der Wert, der vom Skript zurückgegeben wird, wird zur Bewertung der Kompatibilität der globalen Bedingung verwendet. Bei der Verwendung von VBScript können Sie beispielsweise den Befehl **WScript.Echo Result** verwenden, um den Wert der Variablen „Result“ der globalen Bedingung zurückzugeben.  
+            >  Der Wert, der vom Skript zurückgegeben wird, wird zur Bewertung der Konformität der globalen Bedingung verwendet. Bei der Verwendung von VBScript können Sie beispielsweise den Befehl **WScript.Echo Result** verwenden, um den Wert der Variablen „Result“ der globalen Bedingung zurückzugeben.  
             >   
             >  Wenn das Skript mehrere Werte zurückgibt, müssen sich diese Werte in einer einzigen Zeile befinden und durch ein Semikolon getrennt werden. Wenn sich jeder Wert in einer separaten Zeile befindet, kann die Auswertung nicht durchgeführt werden.  
 
@@ -181,7 +175,7 @@ In System Center Configuration Manager sind globale Bedingungen Regeln für gesc
 
         -   **Unterordner einschließen** – Aktivieren Sie diese Option, wenn auch Unterordner unter dem angegebenen Pfad durchsucht werden sollen.  
 
-        -   **Diese Datei ist mit einer 64-Bit-Anwendung verknüpft**: Geben Sie an, ob der Speicherort der 64-Bit-Systemdatei (*%windir%*\system32) zusätzlich zum Speicherort der 32-Bit-Systemdatei (*%windir%*\syswow64) auf Configuration Manager-Clients durchsucht werden soll, auf denen eine 64-Bit-Version von Windows ausgeführt wird.  
+        -   **Diese Datei ist mit einer 64-Bit-Anwendung verknüpft**: Geben Sie an, ob der Speicherort der 64-Bit-Systemdatei (*%windir%* \system32) zusätzlich zum Speicherort der 32-Bit-Systemdatei (*%windir%* \syswow64) auf Configuration Manager-Clients durchsucht werden soll, auf denen eine 64-Bit-Version von Windows ausgeführt wird.  
 
         -   **XPath-Abfrage** : Geben Sie eine gültige, vollständige XPath-Abfrage (XML Path Language) an, die für die Bewertung der Kompatibilität auf Clientcomputern verwendet wird.  
 

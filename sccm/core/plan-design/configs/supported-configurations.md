@@ -1,26 +1,20 @@
 ---
-title: "Unterstützte Konfigurationen"
+title: Unterstützte Konfigurationen
 titleSuffix: Configuration Manager
-description: "Identifizieren Sie wichtige Konfigurationen und Anforderungen, damit Sie eine funktionierende Bereitstellung von System Center Configuration Manager planen, bereitstellen und verwalten können."
-ms.custom: na
+description: Identifizieren Sie wichtige Konfigurationen und Anforderungen, damit Sie eine funktionierende Bereitstellung von System Center Configuration Manager planen, bereitstellen und verwalten können.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
-caps.latest.revision: "9"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 097a4e5b6a44aec52027f075ad002a2393ae3fb3
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: de769a24b44c5ab5e28035e96fef341aecd78006
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supported-configurations-for-system-center-configuration-manager"></a>Unterstützte Konfigurationen für System Center Configuration Manager
 
@@ -40,7 +34,7 @@ Wenn eine Configuration Manager-Funktion spezifischere Konfigurationen erfordert
  Darüber hinaus werden Produkte und Produktversionen, die in den folgenden Themen nicht aufgeführt sind, nicht von System Center Configuration Manager unterstützt, außer dies wurde im [Enterprise Mobility + Security Blog (Blog für Enterprise Mobility + Security)](https://blogs.technet.microsoft.com/enterprisemobility/) angekündigt.  Der Inhalt in diesem Blog wird von Zeit zu Zeit einer Aktualisierung an dieser Stelle der Dokumentation vorangestellt.
 
 
--  [Anpassen und Skalieren von Zahlen](../../../core/plan-design/configs/size-and-scale-numbers.md)  
+-  [Size and scale numbers (Anpassen und Skalieren von Zahlen)](../../../core/plan-design/configs/size-and-scale-numbers.md)  
 Erfahren Sie, wie viele Standorte, Standortsystemrollen pro Standort sowie Clients oder Geräte in verschiedenen Hierarchieentwürfen für Configuration Manager unterstützt werden.
 
 -  [Voraussetzungen für Standorte und Standortsysteme](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)  

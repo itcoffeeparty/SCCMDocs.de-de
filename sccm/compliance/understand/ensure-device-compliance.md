@@ -1,27 +1,22 @@
 ---
-title: "Sicherstellen der Gerätekonformität"
+title: Sicherstellen der Gerätekonformität
 titleSuffix: Configuration Manager
-description: "Mithilfe von System Center Configuration Manager verwalten Sie die Konfiguration und die Kompatibilität von Geräten in Ihrer Organisation."
-ms.custom: na
+description: Mithilfe von System Center Configuration Manager verwalten Sie die Konfiguration und die Kompatibilität von Geräten in Ihrer Organisation.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 7568c9aa-b99e-4466-bfc8-0301aa376930
-caps.latest.revision: "8"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 27738aa8587d8930781bc5f70248c8c994227851
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 42b3925fa94ae1672e4241a3cddc66cdc1774aaf
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ensure-device-compliance-with-system-center-configuration-manager"></a>Sicherstellen der Gerätekompatibilität mit System Center Configuration Manager
+# <a name="ensure-device-compliance-with-system-center-configuration-manager"></a>Sicherstellen der Gerätekonformität mit System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
@@ -43,7 +38,7 @@ Kompatibilitätseinstellungen in System Center Configuration Manager bieten Ihne
 
 
 ## <a name="get-started"></a>Erste Schritte  
- Lernen Sie die Grundlagen von Kompatibilitätseinstellungen und die Aufgaben kennen, die Sie damit ausführen können.  
+ Lernen Sie die Grundlagen von Konformitätseinstellungen und die Aufgaben kennen, die Sie damit ausführen können.  
 
  [Erste Schritte mit Kompatibilitätseinstellungen](../../compliance/get-started/get-started-with-compliance-settings.md)  
 

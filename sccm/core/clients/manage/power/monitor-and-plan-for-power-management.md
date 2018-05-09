@@ -1,27 +1,20 @@
 ---
-title: "Überwachen und Planen der Energieverwaltung"
+title: Überwachen und Planen der Energieverwaltung
 titleSuffix: Configuration Manager
-description: "Erfahren Sie, wie Sie die Energieverwaltung in System Center Configuration Manager überwachen und planen."
-ms.custom: na
+description: Erfahren Sie, wie Sie die Energieverwaltung in System Center Configuration Manager überwachen und planen.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 507bf676-2679-4e4d-8831-3ffc9cf8557e
-caps.latest.revision: 
-caps.handback.revision: 
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: ce89941550d02ef80bf9f7e9bab83850dda9e981
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 70e6f4ddfa335a08bdf7039274b388b5a468311e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-monitor-and-plan-for-power-management-in-system-center-configuration-manager"></a>Überwachen und Planen der Energieverwaltung in System Center Configuration Manager
 

@@ -1,26 +1,20 @@
 ---
-title: "Überwachen der Replikation"
+title: Überwachen der Replikation
 titleSuffix: Configuration Manager
-description: "Erfahren Sie, wie Sie Infrastruktur und Vorgänge in Configuration Manager durch Verwendung des Arbeitsbereichs „Überwachung“ in der Konsole überwachen."
-ms.custom: na
+description: Erfahren Sie, wie Sie Infrastruktur und Vorgänge in Configuration Manager durch Verwendung des Arbeitsbereichs „Überwachung“ in der Konsole überwachen.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3fab4d67-8d2a-45ce-8b06-471280102cf6
-caps.latest.revision: "11"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 459a619d08a5d38c51301e2f6cff23a5d46a9464
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 04faf92545f84fdf53c522ad9aa0c74bbd5c4aa1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-hierarchy-and-replication-infrastructure-in-system-center-configuration-manager"></a>Überwachen der Hierarchie- und Replikationsinfrastruktur in System Center Configuration Manager
 
@@ -33,7 +27,7 @@ Verwenden Sie zum Überwachen von Infrastruktur und Vorgängen in System Center 
 
  Zusätzlich zur Configuration Manager-Konsole können Sie zur Überwachung auch Configuration Manager-Berichte verwenden oder Configuration Manager-Protokolldateien für Configuration Manager-Komponenten anzeigen. Informationen zu Berichten finden Sie unter [Berichterstellung in System Center Configuration Manager](../../../core/servers/manage/reporting.md). Informationen zu Protokolldateien finden Sie unter [Protokolldateien in System Center Configuration Manager](../../../core/plan-design/hierarchy/log-files.md).  
 
- Achten Sie beim Überwachen von Standorten auf Anzeichen für Probleme, die Ihren Eingriff erfordern. Beispiel:  
+ Achten Sie beim Überwachen von Standorten auf Anzeichen für Probleme, die Ihren Eingriff erfordern. Zum Beispiel:  
 
 -   Dateirückstand auf Standortservern und Standortsystemen  
 

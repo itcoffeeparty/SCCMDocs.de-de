@@ -1,26 +1,20 @@
 ---
-title: "Verwalten von Netzwerkbandbreite für Inhalte"
+title: Verwalten von Netzwerkbandbreite für Inhalte
 titleSuffix: Configuration Manager
-description: "Konfigurieren Sie Zeitplanung, Bandbreiteneinschränkung und vorab bereitgestellten Inhalt für System Center Configuration Manager."
-ms.custom: na
+description: Konfigurieren Sie Zeitplanung, Bandbreiteneinschränkung und vorab bereitgestellten Inhalt für System Center Configuration Manager.
 ms.date: 2/6/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e80d1151-91db-4a27-8411-a957297b67d0
-caps.latest.revision: "15"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: e7f5dbd76c19e85f41987bc9053943645830e0f7
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 2d8587c0640d831a723b9ff7c3a6402d47ee2405
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-network-bandwidth-for-content"></a>Verwalten von Netzwerkbandbreite für Inhalte
 Um Ihnen die Verwaltung der Netzwerkbandbreite zu erleichtern, die für den Inhaltsverwaltungsvorgang von System Center Configuration Manager verwendet wird, können Sie die integrierten Steuerelemente für Zeitplanung und Drosselung verwenden. Sie können auch vorab bereitgestellte Inhalte nutzen. In den folgenden Abschnitten werden diese Optionen detaillierter beschrieben.

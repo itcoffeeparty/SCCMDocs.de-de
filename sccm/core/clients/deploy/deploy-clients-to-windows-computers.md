@@ -2,26 +2,19 @@
 title: Bereitstellen von Clients unter Windows
 titleSuffix: Configuration Manager
 description: Erfahren Sie, wie der Configuration Manager-Client auf Windows-Computern bereitgestellt wird.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
-caps.latest.revision: 13
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3d7c3e9c9f2af8d612ef158897c281d422692268
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 5efca393afe2fc6441d074f987549228e7d0418f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-system-center-configuration-manager"></a>Bereitstellen von Clients auf Windows-Computern in System Center Configuration Manager
 
@@ -184,7 +177,7 @@ Weitere Informationen zur Verwendung von Gruppenrichtlinien in Active Directory 
 ##  <a name="BKMK_Manual"></a> Manuelles Installieren von Clients  
  Mithilfe des Programms CCMSetup.exe können Sie die Clientsoftware manuell auf Computern in Ihrem Unternehmen installieren. Sie finden dieses Programm und die unterstützenden Dateien im Ordner **Client** des Configuration Manager-Installationsordners auf dem Standortserver und an den Verwaltungspunkten an Ihrem Standort. Dieser Ordner ist im Netzwerk freigegeben unter  
 
- \\\\*&lt;Name des Standortservers\>*\SMS_*&lt;Standortcode\>*\Client\  
+ \\\\*&lt;Name des Standortservers\>* \SMS_*&lt;Standortcode\>* \Client\  
 
  Dabei steht *&lt;Name des Standortservers\>* für den Namen eines der Server, die einen Verwaltungspunkt hosten, und *&lt;Standortcode\>* für den Code des primären Standorts, dem der Client zugewiesen ist. Zum Ausführen von „CCMSetup.exe“ in der Befehlszeile auf dem Client müssen Sie diesem Speicherort ein Netzlaufwerk zuordnen und dann den Befehl ausführen.  
 
@@ -398,7 +391,7 @@ Wenn der Configuration Manager-Standort die [internetbasierte Clientverwaltung](
 
 -   Geben Sie einen Mechanismus für diese Clients an, damit diese vorübergehend mit VPN mit dem Intranet verbunden werden. Installieren Sie anschließend den Client mit einer geeigneten Clientinstallationsmethode.  
 
--   Verwenden Sie eine von Configuration Manager unabhängige Installationsmethode. Sie können die Quelldateien für die Clientinstallation beispielsweise auf Wechselmedien bündeln und diese mit Anleitungen an Benutzer senden. Die Clientinstallationsquelldateien befinden sich im Ordner „*&lt;Installationspfad\>*\Client“ auf dem Configuration Manager Standortserver bzw. den Verwaltungspunkten. Schließen Sie ein Skript zum manuellen Kopieren des Clientordners ein, und installieren Sie den Client aus diesem Ordner mithilfe der jeweiligen CCMSetup-Befehlszeileneigenschaften.  
+-   Verwenden Sie eine von Configuration Manager unabhängige Installationsmethode. Sie können die Quelldateien für die Clientinstallation beispielsweise auf Wechselmedien bündeln und diese mit Anleitungen an Benutzer senden. Die Clientinstallationsquelldateien befinden sich im Ordner „*&lt;Installationspfad\>* \Client“ auf dem Configuration Manager Standortserver bzw. den Verwaltungspunkten. Schließen Sie ein Skript zum manuellen Kopieren des Clientordners ein, und installieren Sie den Client aus diesem Ordner mithilfe der jeweiligen CCMSetup-Befehlszeileneigenschaften.  
 
 > [!NOTE]  
 >  Configuration Manager unterstützt die direkte Installation eines Clients von einem internetbasierten Verwaltungspunkt oder von einem Internetbasierten Softwareupdatepunkt nicht.  

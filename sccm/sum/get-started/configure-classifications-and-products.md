@@ -2,22 +2,19 @@
 title: Konfigurieren von Klassifizierungen und Produkten
 titleSuffix: Configuration Manager
 description: Führen Sie diese Schritte zum Konfigurieren von Softwareupdateklassifizierungen und Produkten in der Configuration Manager-Konsole durch.
-keywords: ''
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.date: 04/10/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: 9ba0872b1d2e4ef5dd027df3f7c16a6b3a94e9ac
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: a9af39cd5f57e8b2741facde269ea81bc1b10728
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="configure-classifications-and-products-to-synchronize"></a>Konfigurieren der zu synchronisierenden Klassifizierungen und Produkte  
 
@@ -58,7 +55,7 @@ ms.lasthandoff: 04/16/2018
     >  
     > Dieses Feature wurde erstmals in Version 1706 als [Vorabfeature](/sccm/core/servers/manage/pre-release-features) eingeführt. Ab Version 1710 können ist diese Funktion keine Vorabfunktion mehr.  
     >  
-    > Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen diese Feature aktivieren, bevor Sie es verwenden. Weitere Informationen finden Sie unter [Enable optional features from updates (Aktivieren optionaler Features von Updates)](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+    > Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen dieses Feature aktivieren, bevor Sie es verwenden. Weitere Informationen finden Sie unter [Enable optional features from updates (Aktivieren optionaler Features von Updates)](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
 5.  Geben Sie auf der Seite **Produkte** die Produkte an, für die Sie Softwareupdates synchronisieren möchten. Klicken Sie dann auf **Schließen**.  
 

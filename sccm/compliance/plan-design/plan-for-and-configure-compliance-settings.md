@@ -1,33 +1,28 @@
 ---
-title: "Planen und Konfigurieren von Konformitätseinstellungen"
+title: Planen und Konfigurieren von Konformitätseinstellungen
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr zu den Voraussetzungen und Konfigurationsaufgaben für die Arbeit mit Kompatibilitätseinstellungen in System Center Configuration Manager."
-ms.custom: na
+description: Erfahren Sie mehr zu den Voraussetzungen und Konfigurationsaufgaben für die Arbeit mit Konformitätseinstellungen in System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 9ea20b01-676a-4cc2-b328-0098a41b202e
-caps.latest.revision: "8"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 970ebabc8a275f46cf005c6f3571c62d64889ea8
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 84643f38b5dd0c42a611ca50aaae6ab6d9f52405
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="plan-for-and-configure-compliance-settings-in-system-center-configuration-manager"></a>Planen und Konfigurieren von Kompatibilitätseinstellungen in System Center Configuration Manager
+# <a name="plan-for-and-configure-compliance-settings-in-system-center-configuration-manager"></a>Planen und Konfigurieren von Konformitätseinstellungen in System Center Configuration Manager
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
 Bevor Sie beginnen, mit System Center Configuration Manager-Kompatibilitätseinstellungen zu arbeiten, gibt es einige Voraussetzungen, die Sie kennen sollten, und einige Konfigurationsaufgaben, die Sie ausführen müssen.  
 
-## <a name="prerequisites-for-compliance-settings"></a>Voraussetzungen für Kompatibilitätseinstellungen  
+## <a name="prerequisites-for-compliance-settings"></a>Voraussetzungen für Konformitätseinstellungen  
 
 |Voraussetzung|Weitere Informationen|  
 |------------------|----------------------|  
@@ -37,7 +32,7 @@ Bevor Sie beginnen, mit System Center Configuration Manager-Kompatibilitätseins
 
 ##  <a name="enable-and-configure-compliance-settings-for-windows-pcs-only"></a>Aktivieren und Konfigurieren von Kompatibilitätseinstellungen (nur für Windows-PCs)  
 
-In dieser Vorgehensweise werden die Standardclienteinstellungen für Kompatibilitätseinstellungen konfiguriert und auf alle Computer in Ihrer Hierarchie angewendet. Wenn Sie diese Einstellungen nur auf manche Computer anwenden möchten, erstellen Sie eine benutzerdefinierte Geräteclienteinstellung, und weisen Sie diese einer Sammlung zu, die die Computer enthält, für die Sie die Kompatibilitätseinstellungen anwenden möchten. Weitere Informationen zum Erstellen von benutzerdefinierten Geräteeinstellungen finden Sie unter [How to configure client settings (Konfigurieren von Clienteinstellungen)](../../core/clients/deploy/configure-client-settings.md).  
+In dieser Vorgehensweise werden die Standardclienteinstellungen für Konformitätseinstellungen konfiguriert und auf alle Computer in Ihrer Hierarchie angewendet. Wenn Sie diese Einstellungen nur auf manche Computer anwenden möchten, erstellen Sie eine benutzerdefinierte Geräteclienteinstellung, und weisen Sie diese einer Sammlung zu, die die Computer enthält, für die Sie die Kompatibilitätseinstellungen anwenden möchten. Weitere Informationen zum Erstellen von benutzerdefinierten Geräteeinstellungen finden Sie unter [How to configure client settings (Konfigurieren von Clienteinstellungen)](../../core/clients/deploy/configure-client-settings.md).  
 
 > [!TIP]  
 >  Andere Gerätetypen erfordern keine besondere Konfiguration für die Auswertung von Kompatibilitätseinstellungen.  

@@ -1,25 +1,20 @@
 ---
 title: Technical Preview1709
 titleSuffix: Configuration Manager
-description: "Erfahren Sie mehr über die Funktionen, die mit der Technical Preview-Version 1709 für System Center Configuration Manager zur Verfügung stehen."
-ms.custom: na
+description: Erfahren Sie mehr über die Funktionen, die mit der Technical Preview-Version 1709 für System Center Configuration Manager zur Verfügung stehen.
 ms.date: 09/28/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: a3ef6bdc-a204-4c4c-a02f-2bd03f35183e
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: f0acc5ae0d8207dce92c56a4c80e8321faf51393
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 74ffd06f8b9786d627dc7fd9cecb15215228313d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1709-for-system-center-configuration-manager"></a>Funktionen in der Technical Preview 1709 für System Center Configuration Manager
 
@@ -43,7 +38,7 @@ In diesem Artikel werden die Features erläutert, die in der Technical Preview-V
   4. Starten Sie nach dem Deinstallieren des Standortservers auf dem aktiven primären Standortserver den Dienst **CONFIGURATION_MANAGER_UPDATE** neu.
 
 
-**Im Folgenden werden neue Funktionen aufgelistet, die Sie mit dieser Version ausprobieren können.**  
+**Im Folgenden werden neue Features aufgelistet, die Sie mit dieser Version ausprobieren können.**  
 
 ## <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>Verbesserte Benutzeroberfläche für VPN-Profile in der Configuration Manager-Konsole
 <!-- 1313282 -->
@@ -84,7 +79,7 @@ Wenn Sie unterschiedliche Plattformen auswählen, werden nur die für die ausgew
 <!-- 1350871 -->
 Viele Kunden möchten Windows 10-Geräte genauso verwalten wie mobile Geräte: mit einer einfachen, kostengünstigen und cloudbasierten Lösung. Der Übergang von einer herkömmlichen zu einer modernen Verwaltungslösung kann jedoch eine Herausforderung sein. Ab Windows 10-Version 1607 (auch Anniversary Update genannt) können Sie ein Windows 10-Gerät gleichzeitig in eine lokale Active Directory-Installation (AD) und eine cloudbasierte Azure AD-Infrastruktur einbinden (Hybrid Azure AD). Co-Verwaltung nutzt diese Verbesserung und ermöglicht es Ihnen, Windows 10-Geräte gleichzeitig mit Configuration Manager und Intune zu verwalten. Diese Lösung schlägt eine Brücke von der herkömmlichen zur modernen Verwaltung und bietet Ihnen die Möglichkeit, die Umstellung Schritt für Schritt durchzuführen. 
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 Bevor Sie mit der Co-Verwaltung beginnen können, müssen folgende Anforderungen erfüllt sein. Es gibt allgemeine Anforderungen und spezifische für vorhandene Configuration Manager-Clients und Geräte, die keine Clients sind.
 
 ### <a name="known-issues"></a>Bekannte Probleme
@@ -113,7 +108,7 @@ Hier finden Sie die allgemeinen Voraussetzungen für die Aktivierung der Co-Verw
 Nach der Aktivierung der Co-Verwaltung verwaltet Configuration Manager weiterhin alle Workloads. Wenn Sie dazu bereit sind, können Sie die Verwaltung aller verfügbaren Workloads auf Intune umstellen. In diesem Release können Sie Intune die folgenden Workloads verwalten lassen.   
 
 #### <a name="compliance-policies"></a>Kompatibilitätsrichtlinien
-Konformitätsrichtlinien definieren die Regeln und Einstellungen, die ein Gerät erfüllen muss, damit es als mit bedingten Zugriffsrichtlinien konform eingestuft wird. Kompatibilitätsrichtlinien ermöglichen Ihnen auch, Kompatibilitätsprobleme bei Geräten unabhängig von bedingten Zugriffsrechten zu überwachen und zu beheben. Weitere Informationen finden Sie unter [Kompatibilitätsrichtlinie für Geräte](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/device-compliance-policies).  
+Konformitätsrichtlinien definieren die Regeln und Einstellungen, die ein Gerät erfüllen muss, damit es als mit bedingten Zugriffsrichtlinien konform eingestuft wird. Konformitätsrichtlinien ermöglichen Ihnen auch, Konformitätsprobleme bei Geräten unabhängig von bedingten Zugriffsrechten zu überwachen und zu beheben. Weitere Informationen finden Sie unter [Kompatibilitätsrichtlinie für Geräte](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/device-compliance-policies).  
 
 #### <a name="windows-update-for-business-policies"></a>Windows Update for Business-Richtlinien
 Mit Windows Update for Business-Richtlinien können Sie Zurückstellungsrichtlinien für Funktionsupdates unter Windows 10 oder für Qualitätsupdates für Windows 10-Geräte konfigurieren, die direkt von Windows Update for Business verwaltet werden. Weitere Informationen finden Sie unter [Konfigurieren von Windows Update for Business-Zurückstellungsrichtlinien](https://docs.microsoft.com/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).  

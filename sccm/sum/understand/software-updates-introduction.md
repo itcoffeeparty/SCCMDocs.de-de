@@ -1,22 +1,20 @@
 ---
-title: "Einführung zu Softwareupdates"
+title: Einführung zu Softwareupdates
 titleSuffix: Configuration Manager
 description: Hier erhalten Sie grundlegende Informationen zu Softwareupdates in System Center Configuration Manager.
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ms.date: 10/30/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-ms.openlocfilehash: 66aa73e5c1aae68feeacb0eabe6233845289d104
-ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
+ms.openlocfilehash: d5528fc3e035cd5bed8bc92c8b65f3025d97a2d1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-software-updates-in-system-center-configuration-manager"></a>Einführung zu Softwareupdates in System Center Configuration Manager
 
@@ -32,7 +30,7 @@ Ein Beispielszenario für die Bereitstellung von Softwareupdates in Ihrer Umgebu
 > [!NOTE]  
 >  Softwareupdates sind in Clienteinstellungen standardmäßig aktiviert. Wenn Sie aber für die Clienteinstellung **Softwareupdates auf Clients aktivieren** die Option **Nein** auswählen, um Softwareupdates in einer Sammlung oder in den Standardeinstellungen zu deaktivieren, werden die zugeordneten Clients nicht darüber informiert, wo die Softwareupdatepunkte sich befinden. Ausführlichere Informationen finden Sie im Abschnitt [Software Updates](../../core/clients/deploy/about-client-settings.md#software-updates) (Softwareupdates).  
 
- Nachdem die Richtlinie beim Client eingegangen ist, wird die Softwareupdatekompatibilität überprüft. Die Informationen werden vom Client in Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI) geschrieben. Anschließend werden die Kompatibilitätsinformationen an den Verwaltungspunkt und von dort an den Standortserver gesendet. Weitere Informationen zur Compliancebewertung finden Sie im Abschnitt [Software updates compliance assessment](#BKMK_SUMCompliance) dieses Themas.  
+ Nachdem die Richtlinie beim Client eingegangen ist, wird die Softwareupdatekonformität überprüft. Die Informationen werden vom Client in Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI) geschrieben. Anschließend werden die Konformitätsinformationen an den Verwaltungspunkt und von dort an den Standortserver gesendet. Weitere Informationen zur Compliancebewertung finden Sie im Abschnitt [Software updates compliance assessment](#BKMK_SUMCompliance) dieses Themas.  
 
  Sie können an einem primären Standort mehrere Softwareupdatepunkte installieren. Der zuerst installierte Softwareupdatepunkt wird als Synchronisierungsquelle konfiguriert. Hiermit erfolgt die Synchronisierung über Microsoft Update oder über einen WSUS-Server, der der Configuration Manager-Hierarchie nicht angehört. Der erste Softwareupdatepunkt wird von den übrigen Softwareupdatepunkten am Standort als Synchronisierungsquelle verwendet.  
 
@@ -57,7 +55,7 @@ Ein Beispielszenario für die Bereitstellung von Softwareupdates in Ihrer Umgebu
 
 5.  Die Konfigurationselemente für Softwareupdates werden mithilfe der Datenbankreplikation an untergeordnete Standorte gesendet.  
 
-6.  Wenn die Synchronisierung erfolgreich abgeschlossen wurde, wird vom WSUS-Synchronisierungs-Manager die Statusmeldung 6702 ausgegeben.  
+6.  Wenn die Synchronisierung erfolgreich abgeschlossen wurde, wird vom WSUS-Synchronisierungs-Manager die Statusmeldung 6702 ausgegeben.  
 
 7.  Vom WSUS-Synchronisierungs-Manager wird eine Synchronisierungsanforderung an alle untergeordneten Standorte gesendet.  
 
@@ -81,9 +79,9 @@ Ein Beispielszenario für die Bereitstellung von Softwareupdates in Ihrer Umgebu
 7.  Vom WSUS-Synchronisierungs-Manager werden einzelne Anforderungen an WSUS auf anderen Softwareupdatepunkten des Standorts gesendet. Die WSUS-Server auf den übrigen Softwareupdatepunkten werden als Replikate von WSUS auf dem Standard-Softwareupdatepunkt am Standort konfiguriert.  
 
 ##  <a name="BKMK_SUMCompliance"></a> Software updates compliance assessment  
- Prüfen Sie vor der Bereitstellung von Softwareupdates auf Clientcomputern in Configuration Manager die Kompatibilität der Clientcomputer mit den Softwareupdates. Für jedes Softwareupdate wird eine Zustandsmeldung mit dem Kompatibilitätszustand für das Update erstellt. Die Zustandsmeldungen werden zusammen an den Verwaltungspunkt gesendet und anschließend an den Standortserver weitergeleitet, wo der Kompatibilitätszustand in die Standortdatenbank aufgenommen wird. Der Kompatibilitätszustand für Softwareupdates wird in der Configuration Manager-Konsole angezeigt. Sie können Softwareupdates auf Computern, auf denen die Updates erforderlich sind, bereitstellen und installieren. Die folgenden Abschnitte enthalten Informationen zu Kompatibilitätszuständen und eine Beschreibung des Überprüfungsprozesses der Softwareupdatekompatibilität.  
+ Prüfen Sie vor der Bereitstellung von Softwareupdates auf Clientcomputern in Configuration Manager die Konformität der Clientcomputer mit den Softwareupdates. Für jedes Softwareupdate wird eine Zustandsmeldung mit dem Konformitätszustand für das Update erstellt. Die Zustandsmeldungen werden zusammen an den Verwaltungspunkt gesendet und anschließend an den Standortserver weitergeleitet, wo der Kompatibilitätszustand in die Standortdatenbank aufgenommen wird. Der Kompatibilitätszustand für Softwareupdates wird in der Configuration Manager-Konsole angezeigt. Sie können Softwareupdates auf Computern, auf denen die Updates erforderlich sind, bereitstellen und installieren. Die folgenden Abschnitte enthalten Informationen zu Kompatibilitätszuständen und eine Beschreibung des Überprüfungsprozesses der Softwareupdatekompatibilität.  
 
-### <a name="software-updates-compliance-states"></a>Kompatibilitätszustände von Softwareupdates  
+### <a name="software-updates-compliance-states"></a>Konformitätszustände von Softwareupdates  
  Im Folgenden finden Sie eine Beschreibung der Kompatibilitätszustände, die in der Configuration Manager-Konsole für Softwareupdates angezeigt werden.  
 
 -   **Erforderlich**  
@@ -118,7 +116,7 @@ Ein Beispielszenario für die Bereitstellung von Softwareupdates in Ihrer Umgebu
 
     -   Die Überprüfung auf dem Clientcomputer wurde erfolgreich abgeschlossen, die Zustandsmeldung ist jedoch in irgendeiner Form beschädigt und konnte nicht verarbeitet werden.  
 
-### <a name="scan-for-software-updates-compliance-process"></a>Überprüfen der Softwareupdatekompatibilität  
+### <a name="scan-for-software-updates-compliance-process"></a>Überprüfen der Softwareupdatekonformität  
  Wenn der Softwareupdatepunkt installiert und synchronisiert ist, wird eine standortweite Computerrichtlinie erstellt. Mit dieser Richtlinie werden Clientcomputer darüber informiert, dass Configuration Manager-Softwareupdates für den Standort aktiviert wurden. Beim Empfang der Computerrichtlinie durch einen Client wird eine Kompatibilitätsüberprüfung geplant, die innerhalb der nächsten zwei Stunden zufällig gestartet wird. Beim Start der Überprüfung wird der Überprüfungsverlauf vom Softwareupdateclient-Agent gelöscht. Außerdem wird eine Anforderung zum Suchen des WSUS-Servers übermittelt, der für die Überprüfung verwendet werden soll, und anhand des WSUS-Serverspeicherorts wird ein Update der lokalen Gruppenrichtlinie ausgeführt.  
 
 > [!NOTE]  
@@ -145,10 +143,10 @@ Ein Beispielszenario für die Bereitstellung von Softwareupdates in Ihrer Umgebu
 -   **Nach dem Neustart des Systems**: Wenn auf einem Clientcomputer ein Systemneustart ansteht, damit die Installation des Softwareupdates abgeschlossen werden kann, wird vom Softwareupdateclient-Agent nach dem Neustart im Rahmen einer Überprüfung bestätigt, dass das Update nicht mehr erforderlich ist. Dabei wird eine neue Zustandsmeldung erstellt, aus der hervorgeht, dass das Softwareupdate installiert wurde.  
 
 #### <a name="time-to-live-value"></a>Gültigkeitsdauer  
- Die zum Überprüfen der Kompatibilität von Softwareupdates erforderlichen Metadaten für Softwareupdates werden auf dem lokalen Clientcomputer gespeichert und sind standardmäßig bis zu 24 Stunden gültig. Dieser Wert wird als Gültigkeitsdauer (Time to Live, TTL) bezeichnet.  
+ Die zum Überprüfen der Konformität von Softwareupdates erforderlichen Metadaten für Softwareupdates werden auf dem lokalen Clientcomputer gespeichert und sind standardmäßig bis zu 24 Stunden gültig. Dieser Wert wird als Gültigkeitsdauer (Time to Live, TTL) bezeichnet.  
 
 #### <a name="scan-for-software-updates-compliance-types"></a>Überprüfungstypen für Softwareupdatekompatibilität  
- Die Überprüfung der Kompatibilität von Softwareupdates durch den Client erfolgt entweder online oder offline sowie entweder erzwungenermaßen oder freiwillig. Welcher Überprüfungstyp verwendet wird, hängt davon ab, wie die Überprüfung der Kompatibilität von Softwareupdates gestartet wurde. Im Folgenden wird beschrieben, welche Methoden zum Starten der Überprüfung online oder offline ausgeführt werden und ob die Überprüfung erzwungenermaßen oder freiwillig erfolgt.  
+ Die Überprüfung der Konformität von Softwareupdates durch den Client erfolgt entweder online oder offline sowie entweder erzwungenermaßen oder freiwillig. Welcher Überprüfungstyp verwendet wird, hängt davon ab, wie die Überprüfung der Konformität von Softwareupdates gestartet wurde. Im Folgenden wird beschrieben, welche Methoden zum Starten der Überprüfung online oder offline ausgeführt werden und ob die Überprüfung erzwungenermaßen oder freiwillig erfolgt.  
 
 -   **Zeitplan für Softwareupdateprüfung** (freiwillige Onlineüberprüfung)  
 
@@ -263,7 +261,7 @@ Ein Beispielszenario für die Bereitstellung von Softwareupdates in Ihrer Umgebu
  Wenn Softwareupdates aus einer erforderlichen Bereitstellung auf einem Clientcomputer installiert werden und zum Abschluss der Installation ein Neustart des Systems erforderlich ist, wird der Systemneustart standardmäßig gestartet. Bei vor dem Stichtag installierten Softwareupdates wird der automatische Systemneustart bis zum Stichtag verschoben, sofern der Computer nicht aus einem anderen Grund vor diesem Zeitpunkt neu gestartet wird. Der Systemneustart kann für Server und Arbeitsstationen unterdrückt werden. Diese Einstellungen werden auf der Seite **Benutzerfreundlichkeit** des Assistenten zum Bereitstellen von Softwareupdates oder des Assistenten zum Erstellen automatischer Bereitstellungsregeln konfiguriert.  
 
 ### <a name="deployment-reevaluation-cycle"></a>Zyklus der erneuten Bereitstellungsbewertung  
- Von Clientcomputern wird standardmäßig alle 7 Tage ein Zyklus zur erneuten Auswertung der Bereitstellung gestartet. Während dieses Auswertungszyklus wird vom Clientcomputer nach bereits bereitgestellten und installierten Softwareupdates gesucht. Falls Softwareupdates fehlen, werden diese vom lokalen Cache aus neu installiert. Ist ein Softwareupdate nicht mehr im lokalen Cache verfügbar, wird es von einem Verteilungspunkt heruntergeladen und dann installiert. Sie können den Zeitplan für die erneute Auswertung in den Clienteinstellungen des Standorts auf der Seite **Softwareupdates** konfigurieren.  
+ Von Clientcomputern wird standardmäßig alle 7 Tage ein Zyklus zur erneuten Auswertung der Bereitstellung gestartet. Während dieses Auswertungszyklus wird vom Clientcomputer nach bereits bereitgestellten und installierten Softwareupdates gesucht. Falls Softwareupdates fehlen, werden diese vom lokalen Cache aus neu installiert. Ist ein Softwareupdate nicht mehr im lokalen Cache verfügbar, wird es von einem Verteilungspunkt heruntergeladen und dann installiert. Sie können den Zeitplan für die erneute Auswertung in den Clienteinstellungen des Standorts auf der Seite **Softwareupdates** konfigurieren.  
 
 ##  <a name="BKMK_EmbeddedDevices"></a> Unterstützung für Windows Embedded-Geräte mit Schreibfiltern  
  Beim Bereitstellen von Softwareupdates für Windows Embedded-Geräte mit aktivierten Schreibfiltern können Sie angeben, ob der Schreibfilter auf dem Gerät während der Bereitstellung deaktiviert und das Gerät nach der Bereitstellung neu gestartet werden soll. Wenn der Schreibfilter nicht deaktiviert wird, wird die Software auf einem temporären Overlay bereitgestellt und bei einem Neustart des Geräts nicht mehr installiert, es sei denn, die Beibehaltung der Änderungen wird durch eine andere Bereitstellung erzwungen.  
@@ -271,7 +269,7 @@ Ein Beispielszenario für die Bereitstellung von Softwareupdates in Ihrer Umgebu
 > [!NOTE]  
 >  Stellen Sie beim Bereitstellen eines Softwareupdates auf einem Windows Embedded-Gerät sicher, dass das Gerät Mitglied einer Sammlung ist, für die ein Wartungsfenster konfiguriert ist. So können Sie verwalten, wann der Schreibfilter deaktiviert bzw. aktiviert ist und wann das Gerät neu gestartet wird.  
 
- Das Verhalten der Schreibfilter wird über eine Einstellung der Benutzerfreundlichkeit gesteuert, bei der es sich um das Kontrollkästchen **Änderungen zum Stichtag oder während eines Wartungsfensters ausführen (erfordert Neustart)**handelt.  
+ Das Verhalten der Schreibfilter wird über eine Einstellung der Benutzerfreundlichkeit gesteuert, bei der es sich um das Kontrollkästchen **Änderungen zum Stichtag oder während eines Wartungsfensters ausführen (erfordert Neustart)** handelt.  
 
  Weitere Informationen dazu, wie Configuration Manager Embedded-Geräte verwaltet, die Schreibfilter verwenden, finden Sie unter [Planning for client deployment to Windows Embedded devices (Planen der Clientbereitstellung auf Windows Embedded-Geräten)](../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
 

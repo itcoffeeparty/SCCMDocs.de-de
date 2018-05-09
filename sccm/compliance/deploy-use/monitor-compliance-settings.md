@@ -1,26 +1,20 @@
 ---
-title: "Überwachen von Konformitätseinstellungen"
+title: Überwachen von Konformitätseinstellungen
 titleSuffix: Configuration Manager
-description: "Verwenden Sie eine oder mehrere der Verfahren aus diesem Thema, um den Kompatibilitätsstatus der Konfigurationsbaselines anzuzeigen."
-ms.custom: na
+description: Verwenden Sie eine oder mehrere der Verfahren aus diesem Thema, um den Konformitätsstatus der Konfigurationsbaselines anzuzeigen.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 92c1ccca-a748-44cd-a52e-e41d34bf981d
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 1da8bf6ab83be7c72cc95ec5e07cb9b1a17526d5
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 9920bd48ad7b953469261602c21a6664580143a2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-compliance-settings-in-system-center-configuration-manager"></a>Überwachen von Kompatibilitätseinstellungen in System Center Configuration Manager
 
@@ -91,7 +85,7 @@ Nach dem Bereitstellen von Configuration Manager-Konfigurationsbaselines auf Com
 4.  Klicken Sie auf **OK**.  
 
 ##  <a name="create-collections-based-on-configuration-baseline-compliance"></a>Erstellen von Sammlungen auf Basis der Konfigurationsbaselinekompatibilität  
- Gehen Sie wie folgt vor, um eine Configuration Manager-Sammlung auf der Grundlage von Geräten mit einer angegebenen Kompatibilität zu erstellen. Sie können Sammlungen basierend auf den folgenden Kompatibilitätszuständen erstellen:  
+ Gehen Sie wie folgt vor, um eine Configuration Manager-Sammlung auf der Grundlage von Geräten mit einer angegebenen Kompatibilität zu erstellen. Sie können Sammlungen basierend auf den folgenden Konformitätszuständen erstellen:  
 
 -   **Kompatibel**  
 
@@ -101,7 +95,7 @@ Nach dem Bereitstellen von Configuration Manager-Konfigurationsbaselines auf Com
 
 -   **Unbekannt**  
 
-1.  Klicken Sie in der Configuration Manager-Konsole auf **Bestand und Kompatibilität** > **Kompatibilitätseinstellungen** > **Konfigurationsbaselines**.  
+1.  Klicken Sie in der Configuration Manager-Konsole auf **Assets und Konformität** > **Konformitätseinstellungen** > **Konfigurationsbaselines**.  
 
 3.  Wählen Sie in der Liste **Konfigurationsbasislinien** die Konfigurationsbasislinie aus, aus der Sie eine Sammlung erstellen möchten.  
 

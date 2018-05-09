@@ -2,26 +2,19 @@
 title: Planen von lokalem MDM
 titleSuffix: Configuration Manager
 description: Planen Sie die lokale Verwaltung mobiler Geräte in System Center Configuration Manager.
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 02979fb8-ea7e-4ec6-b7e0-ecbfda73e52d
-caps.latest.revision: 9
-caps.handback.revision: 0
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: e1c6a5ccd003295d007e78f0745c30732e10c2df
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 10cddac80b9a7ea4bd912e2f52585cdcef7e70da
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Planen der lokalen Verwaltung mobiler Geräte in System Center Configuration Manager
 
@@ -105,7 +98,7 @@ Berücksichtigen Sie die folgenden Anforderungen vor der Vorbereitung der Config
 
 -   Out-of-Box-Experience (OOBE) des bereitstellenden Pakets  
 
- Weitere Informationen finden Sie unter [Richten Sie in System Center Configuration Manager Zertifikate für vertrauenswürdige Verbindungen für die lokale Verwaltung mobiler Geräte (Mobile Device Management, MDM) ein.](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)  
+ Weitere Informationen finden Sie unter [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)  
 
 ##  <a name="bkmk_enrollment"></a> Überlegungen zur Registrierung  
  Zum Aktivieren der Geräteregistrierung für die lokale Verwaltung mobiler Geräte müssen Benutzer über Registrierungsberechtigungen verfügen, und ihre Geräte müssen zur vertrauenswürdigen Kommunikation mit den Standortsystemservern in der Lage sein, auf denen die erforderlichen Standortsystemrollen gehostet werden.  
