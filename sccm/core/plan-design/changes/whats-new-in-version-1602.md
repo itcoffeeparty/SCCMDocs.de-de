@@ -61,7 +61,7 @@ Das Update 1602 für System Center Configuration Manager ist nur als konsolenint
 
 -   Verfügbare Windows 10-Upgrades werden jetzt nur im Knoten **Windows 10-Wartung** \ **Alle Windows 10-Updates** der Configuration Manager-Konsole angezeigt. Diese Updates werden im Knoten **Softwareupdates** \ **Alle Softwareupdates** der Konsole nicht mehr angezeigt.  
 
--   Ein Wartungsplan wird als Bereitstellung mit hohem Risiko eingestuft. Im Fenster **Sammlung auswählen** werden nur die benutzerdefinierten Sammlungen angezeigt, die den in den Eigenschaften des Standorts konfigurierten Einstellungen zur Bereitstellungsüberprüfung entsprechen. Weitere Informationen finden Sie unter [Settings to manage high-risk deployments for System Center Configuration Manager](../../../protect/understand/settings-to-manage-high-risk-deployments.md).  
+-   Ein Wartungsplan wird als Bereitstellung mit hohem Risiko eingestuft. Im Fenster **Sammlung auswählen** werden nur die benutzerdefinierten Sammlungen angezeigt, die den in den Eigenschaften des Standorts konfigurierten Einstellungen zur Bereitstellungsüberprüfung entsprechen. Weitere Informationen finden Sie unter [Einstellungen zum Verwalten risikoreicher Bereitstellungen für System Center Configuration Manager](../../../protect/understand/settings-to-manage-high-risk-deployments.md).  
 
 -   Benutzer, die ein Windows 10-Upgradepaket starten, erhalten nun eine Meldung, dass sie ihr Betriebssystem upgraden.  
 
