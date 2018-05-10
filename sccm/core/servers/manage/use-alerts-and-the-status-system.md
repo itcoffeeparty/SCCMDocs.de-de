@@ -1,26 +1,20 @@
 ---
 title: Benachrichtigungen und Statussystem
 titleSuffix: Configuration Manager
-description: "Konfigurieren Sie Warnungen, und verwenden Sie das Statussystem, damit Sie ständig über den Status Ihrer Configuration Manager-Bereitstellung informiert werden."
-ms.custom: na
+description: Konfigurieren Sie Warnungen, und verwenden Sie das Statussystem, damit Sie ständig über den Status Ihrer Configuration Manager-Bereitstellung informiert werden.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 7341cc6e-9e08-41e4-bcc6-6c1ff12e85ca
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 84fe2fd0959051ea42e555cb484c95fb82ec8fb3
-ms.sourcegitcommit: 1378532fac2620ddcfd31061982f344a290c2e67
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 891366f7e5fa3f4fd2b8f9a8606e823f0a48c394
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-alerts-and-the-status-system-for-system-center-configuration-manager"></a>Verwenden von Benachrichtigungen und des Statussystems für System Center Configuration Manager
 
@@ -166,7 +160,7 @@ Da im Statussystem getrennte Konfigurationen für jeden Standort verwaltet werde
 
 |Knoten|Weitere Informationen|  
 |----------|----------------------|  
-|Standortstatus|Verwenden Sie diesen Knoten, um einen Statusrollup für jedes Standortsystem anzuzeigen und die Integrität jedes Standortsystemservers zu überprüfen. Die Integrität von Standortsystemen wird bestimmt durch Schwellenwerte, die Sie für jeden Standort unter **Standortsystemstatus – Zusammenfassung**konfigurieren können.<br /><br /> Mithilfe des Dienst-**Managers für Configuration Manager** können Sie Statusmeldungen für jedes Standortsystem anzeigen, Schwellenwerte für Statusmeldungen festlegen und den Betrieb der Komponenten auf Standortsystemen verwalten.|  
+|Standortstatus|Verwenden Sie diesen Knoten, um einen Statusrollup für jedes Standortsystem anzuzeigen und die Integrität jedes Standortsystemservers zu überprüfen. Die Integrität von Standortsystemen wird bestimmt durch Schwellenwerte, die Sie für jeden Standort unter **Standortsystemstatus – Zusammenfassung**konfigurieren können.<br /><br /> Mithilfe des Dienst-**Managers für Configuration Managerkönnen** Sie Statusmeldungen für jedes Standortsystem anzeigen, Schwellenwerte für Statusmeldungen festlegen und den Betrieb der Komponenten auf Standortsystemen verwalten.|  
 |Komponentenstatus|Verwenden Sie diesen Knoten, um einen Statusrollup für jede Configuration Manager-Komponente anzuzeigen und die Betriebsintegrität der Komponente zu überprüfen. Die Integrität von Komponenten wird bestimmt durch Schwellenwerte, die Sie für jeden Standort unter **Statuszusammenfasser für Komponenten**konfigurieren können.<br /><br /> Mithilfe des Dienst-**Managers für Configuration Manager** können Sie Statusmeldungen für jede Komponente anzeigen, Schwellenwerte für Statusmeldungen festlegen und den Betrieb der Komponenten verwalten.|  
 |In Konflikt stehende Datensätze|Verwenden Sie diesen Knoten, um Statusmeldungen für Clients mit Datensatzkonflikten anzuzeigen.<br /><br /> Configuration Manager identifiziert mithilfe der Hardware-ID Clients, bei denen es sich um Duplikate handeln könnte. Sie werden über in Konflikt stehende Datensätze informiert. Wenn Sie z.B. einen Computer erneut installieren müssen, bleibt die Hardware-ID unverändert, während sich die von Configuration Manager verwendete GUID ändern kann.|  
 |Statusmeldungsabfragen|Verwenden Sie diesen Knoten, um Statusmeldungen für bestimmte Ereignisse und entsprechende Details abzufragen. Mithilfe von Statusmeldungsabfragen können Sie die Statusmeldungen zu bestimmten Ereignissen finden.<br /><br /> Statusmeldungsabfragen bieten sich an, um zu ermitteln, wann eine bestimmte Komponente, ein Vorgang oder ein Configuration Manager-Objekt geändert wurde und von welchem Konto die Änderung ausgeführt wurde. Zum Beispiel können Sie die integrierte Abfrage **Erstellte, geänderte oder gelöschte Sammlungen** ausführen, um herauszufinden, wann eine bestimmte Sammlung von welchem Benutzerkonto erstellt wurde.|  

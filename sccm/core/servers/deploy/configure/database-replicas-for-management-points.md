@@ -2,24 +2,19 @@
 title: Verwaltungspunkt-Datenbankreplikate
 titleSuffix: Configuration Manager
 description: Verwenden Sie ein Datenbankreplikat zum Verringern der CPU-Last des Standortdatenbankservers mithilfe von Verwaltungspunkten.
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
-caps.latest.revision: "9"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: f322d5dcd2f505f52e363e07801497ffa3bfdc7e
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 0893df43f7979fa3c36ba90ab400e399f96e6228
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-replicas-for-management-points-for-system-center-configuration-manager"></a>Datenbankreplikate für Verwaltungspunkte für System Center Configuration Manager
 
@@ -152,7 +147,7 @@ Verwenden Sie das folgende Verfahren als Beispiel für die Konfiguration eines D
 
     2.  Wählen Sie **ConfigMgr_MPReplica**aus, und klicken Sie dann auf **Weiter**.  
 
-    3.  Wählen Sie auf der Seite **Speicherort des Verteilungs-Agents** die Option **Jeden Agent auf seinem Abonnenten ausführen (Pullabonnements)**aus, und klicken Sie dann auf **Weiter**.  
+    3.  Wählen Sie auf der Seite **Speicherort des Verteilungs-Agents** die Option **Jeden Agent auf seinem Abonnenten ausführen (Pullabonnements)** aus, und klicken Sie dann auf **Weiter**.  
 
     4.  Führen Sie auf der Seite **Abonnenten** einen der folgenden Schritte aus:  
 
@@ -171,7 +166,7 @@ Verwenden Sie das folgende Verfahren als Beispiel für die Konfiguration eines D
 
         -   Konfigurieren Sie das Konto, unter dem der Verteilungs-Agent-Prozess ausgeführt wird (das Prozesskonto), folgendermaßen:  
 
-            -   Wenn der SQL Server-Agent als lokales System ausgeführt wird, wählen Sie **Unter dem SQL Server-Agent-Dienstkonto ausführen (dies ist keine empfohlene bewährte Sicherheitsmethode)**aus.  
+            -   Wenn der SQL Server-Agent als lokales System ausgeführt wird, wählen Sie **Unter dem SQL Server-Agent-Dienstkonto ausführen (dies ist keine empfohlene bewährte Sicherheitsmethode)** aus.  
 
             -   Wenn der SQL Server-Agent mit einem anderen Konto ausgeführt wird, wählen Sie **Unter dem folgenden Windows-Konto ausführen**, und konfigurieren Sie dann dieses Konto. Sie können ein Windows-Konto oder ein SQL Server-Konto angeben.  
 
@@ -184,7 +179,7 @@ Verwenden Sie das folgende Verfahren als Beispiel für die Konfiguration eines D
 
          Wenn Sie die Verbindungssicherheitseinstellungen konfiguriert haben, klicken Sie auf **OK** , um sie zu speichern, und dann auf **Weiter**.  
 
-    7.  Wählen Sie auf der Seite **Synchronisierungszeitplan** im ‎Listenfeld **Agentzeitplan** die Option **Zeitplan festlegen**aus, und konfigurieren Sie unter **Neuer Auftragszeitplan**einen neuen Auftragszeitplan. Legen Sie die Häufigkeit mit **Täglich**, die Wiederholung **5 Minute(n)**und die Dauer mit **Kein Enddatum**fest. Klicken Sie auf **Weiter** , um den Zeitplan zu speichern, und dann noch einmal auf **Weiter** .  
+    7.  Wählen Sie auf der Seite **Synchronisierungszeitplan** im ‎Listenfeld **Agentzeitplan** die Option **Zeitplan festlegen**aus, und konfigurieren Sie unter **Neuer Auftragszeitplan**einen neuen Auftragszeitplan. Legen Sie die Häufigkeit mit **Täglich**, die Wiederholung **5 Minute(n)** und die Dauer mit **Kein Enddatum**fest. Klicken Sie auf **Weiter** , um den Zeitplan zu speichern, und dann noch einmal auf **Weiter** .  
 
     8.  Aktivieren Sie auf der Seite **Aktionen des Assistenten** das Kontrollkästchen für **Abonnement(s) erstellen**, und klicken Sie dann auf **Weiter**.  
 
@@ -220,7 +215,7 @@ Verwenden Sie das folgende Verfahren als Beispiel für die Konfiguration eines D
 
 -   **Wenn Sie einen neuen Verwaltungspunkt konfigurieren möchten:** Wählen Sie auf der Seite **Verwaltungspunktdatenbank** des Assistenten zum Installieren des Verwaltungspunkts die Option **Datenbankreplikat verwenden**aus, und geben Sie den FQDN des Computers an, auf dem das Datenbankreplikat gehostet wird. Geben Sie dann bei **Name der ConfigMgr-Standortdatenbank**den Datenbanknamen des Datenbankreplikats auf diesem Computer an.  
 
--   **Wenn Sie einen zuvor installierten Verwaltungspunkt konfigurieren möchten:**Öffnen Sie die Eigenschaftenseite des Verwaltungspunkts, wählen Sie die Registerkarte **Verwaltungspunktdatenbank** aus, wählen Sie die Option **Datenbankreplikat verwenden**aus, und geben Sie dann den FQDN des Computers an, auf dem das Datenbankreplikat gehostet wird. Geben Sie dann bei **Name der ConfigMgr-Standortdatenbank**den Datenbanknamen des Datenbankreplikats auf diesem Computer an.  
+-   **Wenn Sie einen zuvor installierten Verwaltungspunkt konfigurieren möchten:** Öffnen Sie die Eigenschaftenseite des Verwaltungspunkts, wählen Sie die Registerkarte **Verwaltungspunktdatenbank** aus, wählen Sie die Option **Datenbankreplikat verwenden**aus, und geben Sie dann den FQDN des Computers an, auf dem das Datenbankreplikat gehostet wird. Geben Sie dann bei **Name der ConfigMgr-Standortdatenbank**den Datenbanknamen des Datenbankreplikats auf diesem Computer an.  
 
 -   **Für jeden Verwaltungspunkt, der ein Datenbankreplikat verwendet**, müssen Sie das Computerkonto des Verwaltungspunktservers zur Rolle **db_datareader** für das Datenbankreplikat hinzufügen.  
 

@@ -67,7 +67,7 @@ Tritt bei der Zuweisung des Clients ein Fehler auf, bleibt die Clientsoftware we
 > [!NOTE]  
 >  Wenn ein Configuration Manager-Client über mehrere Netzwerkadapter und somit über mehrere IP-Adressen verfügt, wird die IP-Adresse, die zum Auswerten der Clientstandortzuweisung verwendet wird, nach dem Zufallsprinzip zugewiesen.  
 
- Informationen dazu, wie Sie Begrenzungsgruppen für die Standortzuweisung konfigurieren und wie Sie einen Fallbackstandort für die automatische Standortzuweisung konfigurieren, finden Sie unter [Define site boundaries and boundary groups for System Center Configuration Manager](../../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md).  
+ Informationen dazu, wie Sie Begrenzungsgruppen für die Standortzuweisung konfigurieren und wie Sie einen Fallbackstandort für die automatische Standortzuweisung konfigurieren, finden Sie unter [Definieren von Standortgrenzen und Begrenzungsgruppen für Configuration Manager](../../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md).  
 
  Configuration Manager-Clients, die die automatische Zuweisung verwenden, versuchen, Standortbegrenzungsgruppen zu finden, die in Active Directory Domain Services veröffentlicht wurden. Tritt hierbei ein Fehler auf (z.B., wenn das Active Directory-Schema nicht für Configuration Manager erweitert ist oder es sich bei Clients um Arbeitsgruppencomputer handelt), können die Informationen zu Begrenzungsgruppen für Clients über einen Verwaltungspunkt gesucht werden.  
 

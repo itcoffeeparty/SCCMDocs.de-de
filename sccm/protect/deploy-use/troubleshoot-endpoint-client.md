@@ -2,26 +2,19 @@
 title: Fehlerbehebung für Windows Defender oder Endpoint Protection-Client
 titleSuffix: Configuration Manager
 description: Erfahren Sie, wie Sie Fehler bei Windows Defender und Endpoint Protection beheben.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: d837253e-fcc2-422a-9e2c-c78b938dfd8c
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a8460cafce15e5fb97ace76983932841ec77412f
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 2a8f0e51e5808a691251e4d9acf38d70f2874508
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshooting-windows-defender-or-endpoint-protection-client"></a>Fehlerbehebung für Windows Defender oder Endpoint Protection-Client
 
@@ -83,7 +76,7 @@ Wenn bei Windows Defender oder Endpoint Protection Probleme auftreten, wenden Si
 
 1.  Beenden Sie alle geöffneten Programme, einschließlich Internet Explorer.  
 
-2.  Klicken Sie auf **Start** , suchen Sie nach **inetcpl.cpl**, und drücken Sie dann die **EINGABETASTE.**  
+2.  Klicken Sie auf **Start** , suchen Sie nach **inetcpl.cpl**, und drücken Sie dann die **EINGABETASTE**.  
 
 3.  Klicken Sie im Dialogfeld **Internetoptionen** auf die Registerkarte **Programme** .  
 
@@ -117,7 +110,7 @@ Wenn bei Windows Defender oder Endpoint Protection Probleme auftreten, wenden Si
 
     1.  Klicken Sie auf **Start** , suchen Sie nach  **cmd**, und klicken Sie dann auf **OK**.  
 
-    2.  Geben Sie **cd %windir%**ein, und drücken Sie die **EINGABETASTE.**  
+    2.  Geben Sie **cd %windir%** ein, und drücken Sie die **EINGABETASTE.**  
 
     3.  Geben Sie **ren SoftwareDistribution SDTemp**ein, und drücken Sie die **EINGABETASTE.**  
 
