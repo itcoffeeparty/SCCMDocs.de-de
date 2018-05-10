@@ -79,7 +79,7 @@ Coho Vineyard & Winery eröffnet demnächst ein Besucherzentrum und benötigt Ki
 
      Da diese Geräte einer Active Directory-Domäne hinzugefügt werden, muss sie sie nicht manuell als vertrauenswürdige Clients genehmigen, und bestätigt über die Configuration Manager-Konsole, dass die Geräte genehmigt sind.  
 
-     Weitere Informationen finden Sie unter [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md).  
+     Weitere Informationen finden Sie unter [Verwalten von Clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md).  
 
 8.  Andrea führt den **Assistenten zum Bereitstellen von Software** aus und konfiguriert eine erforderliche Anwendung, um die Software für interaktive Präsentationen zu installieren. Auf der Seite **Benutzerfreundlichkeit** des Assistenten akzeptiert sie im Bereich **Schreibfilterverarbeitung für Windows Embedded-Geräte** die Standardoption **Änderungen zum Stichtag oder während eines Wartungsfensters ausführen (erfordert Neustart)**.  
 

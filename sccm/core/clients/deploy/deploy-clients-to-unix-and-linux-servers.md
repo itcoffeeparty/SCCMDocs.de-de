@@ -26,7 +26,7 @@ Bevor Sie einen Linux- oder UNIX-Server mit System Center Configuration Manager 
 
  Das Installationsskript für den Configuration Manager-Client für Linux und UNIX unterstützt Befehlszeileneigenschaften. Einige Befehlszeileneigenschaften sind erforderlich, während andere optional sind. Bei der Installation des Clients müssen Sie z. B. einen Verwaltungspunkt, von der Website angeben, die von Linux oder UNIX-Server für den ersten Kontakt mit dem Standort verwendet wird. Die vollständige Liste der Befehlszeileneigenschaften finden Sie unter [Befehlszeileneigenschaften zur Installation des Clients auf Linux- und UNIX-Servern](#BKMK_CmdLineInstallLnUClient).  
 
- Nach der Installation des Clients geben Sie die Clienteinstellungen in der Configuration Manager-Konsole an, um den Client-Agent auf die gleiche Weise wie Windows-basierte Clients zu konfigurieren. Weitere Informationen finden Sie unter  [Client settings for Linux and UNIX servers](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU).  
+ Nach der Installation des Clients geben Sie die Clienteinstellungen in der Configuration Manager-Konsole an, um den Client-Agent auf die gleiche Weise wie Windows-basierte Clients zu konfigurieren. Weitere Informationen finden Sie unter  [Clienteinstellungen für Linux- und UNIX-Server](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU).  
 
 ##  <a name="BKMK_AboutInstallPackages"></a> Informationen zu Clientinstallationspaketen und der universelle Agent  
  Um den Client für Linux und UNIX auf einer bestimmten Plattform zu installieren, müssen Sie das entsprechende Clientinstallationspaket für den Computer verwenden, auf dem Sie den Client installieren. Die jeweiligen Clientinstallationspakete sind in jedem Clientdownload aus dem [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184)enthalten. Zusätzlich zu den Clientinstallationspaketen umfasst das Clientdownload das **install** -Skript zur Verwaltung der Clientinstallation auf den einzelnen Computern.  
@@ -111,7 +111,7 @@ Jeder Client-Installationspaket enthält die erforderlichen Dateien zum Abschlie
 
      (Optional) Gibt an, über den FQDN der Fallbackstatuspunkt-Server, die der Client verwendet, um Status-Nachrichten zu senden.  
 
-     Weitere Informationen zum Fallbackstatuspunkt finden Sie unter [Determine Whether You Require a Fallback Status Point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point) .  
+     Weitere Informationen zum Fallbackstatuspunkt finden Sie unter [Bestimmen, ob ein Fallbackstatuspunkt erforderlich ist](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point) .  
 
 
 -   **-dir &lt;Verzeichnis\>**  
@@ -138,7 +138,7 @@ Jeder Client-Installationspaket enthält die erforderlichen Dateien zum Abschlie
 
 -   **-UsePKICert &lt;Parameter\>**  
 
-     (Optional) Gibt den vollständigen Pfad und Namen mit einem x. 509-PKI-Zertifikat im Format Public Key Certificate Standard (PKCS #12). Dieses Zertifikat wird zur Client-Authentifizierung verwendet. Wenn während der Installation kein Zertifikat angegeben wird und Sie ein Zertifikat hinzufügen oder ändern müssen, verwenden Sie das Hilfsprogramm **certutil** . Weitere Informationen zu „certutil“ finden Sie unter [How to manage certificates on the client for Linux and UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) .  
+     (Optional) Gibt den vollständigen Pfad und Namen mit einem x. 509-PKI-Zertifikat im Format Public Key Certificate Standard (PKCS #12). Dieses Zertifikat wird zur Client-Authentifizierung verwendet. Wenn während der Installation kein Zertifikat angegeben wird und Sie ein Zertifikat hinzufügen oder ändern müssen, verwenden Sie das Hilfsprogramm **certutil** . Weitere Informationen zu „certutil“ finden Sie unter [Verwalten von Zertifikaten auf dem Client für Linux und UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) .  
 
      Bei Verwendung von **-UsePKICert**müssen Sie außerdem den Befehlszeilenparameter **-certpw** verwenden, um das der PKCS#12-Datei zugeordnete Kennwort anzugeben.  
 
@@ -187,13 +187,13 @@ Jeder Client-Installationspaket enthält die erforderlichen Dateien zum Abschlie
 
 -   **-ignoreSHA256validation**  
 
-     (Optional) Gibt an, dass die Clientinstallation SHA-256-Überprüfung übersprungen. Verwenden Sie diese Option bei der Installation des Clients unter Betriebssystemen, die ohne OpenSSL-Version mit SHA-256-Unterstützung freigegeben wurden. Weitere Informationen finden Sie unter [About Linux and UNIX Operating Systems That do not Support SHA-256](../../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md#BKMK_NoSHA-256).  
+     (Optional) Gibt an, dass die Clientinstallation SHA-256-Überprüfung übersprungen. Verwenden Sie diese Option bei der Installation des Clients unter Betriebssystemen, die ohne OpenSSL-Version mit SHA-256-Unterstützung freigegeben wurden. Weitere Informationen finden Sie unter [Führen Sie über Linux und UNIX-Betriebssystemen, keine Unterstützung für SHA-256](../../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md#BKMK_NoSHA-256).  
 
 -   **-signcertpath&lt; Dateispeicherort\>**  
 
      (Optional) Gibt den vollständigen Pfad und **CER** Dateinamen des exportierten selbstsignierten Zertifikats auf dem Standortserver. Wenn die PKI-Zertifikate nicht verfügbar sind, generiert der Configuration Manager-Standortserver automatisch selbstsignierte Zertifikate.  
 
-     Diese Zertifikate werden verwendet, um sicherzustellen, dass die Clientrichtlinien vom Verwaltungspunkt heruntergeladen aus dem gewünschten Standort gesendet wurden. Wenn während der Installation kein selbstsigniertes Zertifikat angegeben wird und Sie das Zertifikat ändern müssen, verwenden Sie das Hilfsprogramm **certutil** . Weitere Informationen zu „certutil“ finden Sie unter [How to manage certificates on the client for Linux and UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) .  
+     Diese Zertifikate werden verwendet, um sicherzustellen, dass die Clientrichtlinien vom Verwaltungspunkt heruntergeladen aus dem gewünschten Standort gesendet wurden. Wenn während der Installation kein selbstsigniertes Zertifikat angegeben wird und Sie das Zertifikat ändern müssen, verwenden Sie das Hilfsprogramm **certutil** . Weitere Informationen zu „certutil“ finden Sie unter [Verwalten von Zertifikaten auf dem Client für Linux und UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) .  
 
      Dieses Zertifikat kann über den **SMS** -Zertifikatspeicher unter dem Antragstellernamen **Standortserver** und dem Anzeigenamen **Signaturzertifikat des Standortservers**abgerufen werden.  
 
@@ -232,4 +232,4 @@ Jeder Client-Installationspaket enthält die erforderlichen Dateien zum Abschlie
 
  Der Configuration Manager-Client für Linux und UNIX stellt bei der Clientinstallation eine Verbindung mit diesem Verwaltungspunkt her. Wenn der Client keine Verbindung mit dem Verwaltungspunkt herstellen kann, wiederholt die Clientsoftware den Vorgang so lange, bis die Verbindung erfolgreich hergestellt wird.  
 
- Weitere Informationen dazu, wie Clients Verwaltungspunkte suchen, finden Sie unter [Locating Management Points](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points).
+ Weitere Informationen dazu, wie Clients Verwaltungspunkte suchen, finden Sie unter [Suchen von Verwaltungspunkten](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points).

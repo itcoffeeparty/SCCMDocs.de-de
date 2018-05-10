@@ -147,7 +147,7 @@ Ab Version 1612 von Technical Preview, können Sie ein neues Befehlszeilentool v
 
 Dieses Tool beeinflusst den Inhalt des von Ihnen angegebenen Verteilungspunktes nur dann, wenn Sie das Tool ausführen, und keinen Inhalt aus der Inhaltsbibliothek des Standortservers entfernen können.
 
-Nach der Installation von Technical Preview 1612, finden Sie **ContentLibraryCleanup.exe** im Ordner *%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* auf dem Standortserver von Technical Preview.
+Nach der Installation von Technical Preview 1612, finden Sie **ContentLibraryCleanup.exe** im Ordner \*%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* auf dem Standortserver von Technical Preview.
 
 Das Tool, das mit dieser Technical Preview herausgegeben wird, soll ältere Versionen von ähnlichen Tools, die für ältere Configuration Manager-Produkte herausgegeben wurden, ersetzen. Obwohl diese Toolversion ab dem 1. März 2017 nicht mehr funktionieren wird, werden neue Versionen mit zukünftigen Technical Previews herausgegeben, bis dieses Tool als Teil von Current Branch oder einer einsatzbereiten Out-of-Band Version herausgegeben wird.
 

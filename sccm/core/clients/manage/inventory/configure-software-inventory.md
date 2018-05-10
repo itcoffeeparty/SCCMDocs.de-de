@@ -20,7 +20,7 @@ ms.lasthandoff: 05/03/2018
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Mithilfe dieses Verfahrens werden die Clientstandardeinstellungen für die Softwareinventur konfiguriert. Sie gilt für alle Computer in der Hierarchie. Wenn diese Einstellungen nur auf manche Clients angewendet werden sollen, erstellen Sie eine benutzerdefinierte Clientgeräteeinstellung, und weisen Sie diese einer Sammlung zu. Weitere Informationen zum Erstellen benutzerdefinierter Geräteeinstellungen finden Sie unter [How to configure client settings in System Center Configuration Manager (Konfigurieren von Clienteinstellungen in System Center Configuration Manager)](../../../../core/clients/deploy/configure-client-settings.md).   
+Mithilfe dieses Verfahrens werden die Clientstandardeinstellungen für die Softwareinventur konfiguriert. Sie gilt für alle Computer in der Hierarchie. Wenn diese Einstellungen nur auf manche Clients angewendet werden sollen, erstellen Sie eine benutzerdefinierte Clientgeräteeinstellung, und weisen Sie diese einer Sammlung zu. Weitere Informationen zum Erstellen benutzerdefinierter Geräteeinstellungen finden Sie unter [Konfigurieren von Clienteinstellungen in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md).   
 
 ## <a name="to-configure-software-inventory"></a>So konfigurieren Sie die Softwareinventur  
 
