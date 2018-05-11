@@ -98,7 +98,7 @@ Berücksichtigen Sie die folgenden Anforderungen vor der Vorbereitung der Config
 
 -   Out-of-Box-Experience (OOBE) des bereitstellenden Pakets  
 
- Weitere Informationen finden Sie unter [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)  
+ Weitere Informationen finden Sie unter [Richten Sie in System Center Configuration Manager Zertifikate für vertrauenswürdige Verbindungen für die lokale Verwaltung mobiler Geräte (Mobile Device Management, MDM) ein.](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)  
 
 ##  <a name="bkmk_enrollment"></a> Überlegungen zur Registrierung  
  Zum Aktivieren der Geräteregistrierung für die lokale Verwaltung mobiler Geräte müssen Benutzer über Registrierungsberechtigungen verfügen, und ihre Geräte müssen zur vertrauenswürdigen Kommunikation mit den Standortsystemservern in der Lage sein, auf denen die erforderlichen Standortsystemrollen gehostet werden.  

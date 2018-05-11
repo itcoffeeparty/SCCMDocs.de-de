@@ -20,7 +20,7 @@ ms.lasthandoff: 05/03/2018
 
 *Gilt für: System Center Configuration Manager (Current Branch)*
 
-Wenn verschiedene System Center Configuration Manager-Standorte in einer einzelnen Hierarchie verschiedene Versionen verwenden, sind einige Configuration Manager-Funktionen nicht verfügbar. Normalerweise sind Funktionen aus neueren Configuration Manager-Versionen für Standorte oder Clients mit einer niedrigeren Version nicht verfügbar. Weitere Informationen finden Sie unter [Interoperability between different versions of System Center Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md).  
+Wenn verschiedene System Center Configuration Manager-Standorte in einer einzelnen Hierarchie verschiedene Versionen verwenden, sind einige Configuration Manager-Funktionen nicht verfügbar. Normalerweise sind Funktionen aus neueren Configuration Manager-Versionen für Standorte oder Clients mit einer niedrigeren Version nicht verfügbar. Weitere Informationen finden Sie unter [Interoperabilität zwischen verschiedenen Versionen von System Center Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md).  
 
  Berücksichtigen Sie Folgendes beim Upgrade des Standorts der obersten Ebene in Ihrer Hierarchie, wenn andere Standorte in Ihrer Hierarchie Configuration Manager in einer niedrigeren Version ausführen:  
 
