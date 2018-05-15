@@ -25,7 +25,7 @@ System Center Configuration Manager ist ein verteiltes Client-/Server-System. Au
 > [!NOTE]  
 >  Wenn Sie internetbasierte Clients über SSL-Bridging unterstützen, müssen Sie möglicherweise zusätzlich zu den Portanforderungen bestimmten HTTP-Verben und -Headern ermöglichen, ihre Firewall zu passieren.   
 
- Die folgenden Portauflistungen werden von Configuration Manager verwendet und beinhalten keine Informationen für Windows-Standarddienste, wie z.B. Gruppenrichtlinieneinstellungen für Active Directory Domain Services oder Kerberos-Authentifizierung. Informationen zu Diensten und Ports für Windows Server finden Sie unter [Dienstübersicht und Netzwerkportanforderungen für das Windows Server-System](http://go.microsoft.com/fwlink/p/?LinkID=123652).  
+ Die folgenden Portauflistungen werden von Configuration Manager verwendet und beinhalten keine Informationen für Windows-Standarddienste, wie z.B. Gruppenrichtlinieneinstellungen für Active Directory Domain Services oder Kerberos-Authentifizierung. Informationen zu Diensten und Ports für Windows Server finden Sie unter [Dienstübersicht und Netzwerkportanforderungen für das Windows Server-System](https://support.microsoft.com/en-us/help/832017/service-overview-and-network-port-requirements-for-windows).  
 
 ##  <a name="BKMK_ConfigurablePorts"></a> Konfigurierbare Ports  
  Configuration Manager ermöglicht die Portkonfiguration für folgende Kommunikationsarten:  
